@@ -64,7 +64,7 @@ The private historical comparator uses upstream GCC 2.95.2 source pinned to
 located in the bounded official-source search. The untouched generic
 `mips64el-unknown-elf` target rejects explicit `-mabi` switches; it is therefore
 only an integer-leaf code-generation comparator. Its compiler frontends now
-build on macOS arm64, with host compatibility changes recorded privately and
+build on macOS arm64, with published [host compatibility changes](../toolchains/gcc-2.95.2/README.md) and
 no MIPS instruction-pattern changes. The compiler and target runtime have not
 been installed globally, and no target runtime was built.
 
@@ -85,8 +85,12 @@ the original 40. These probes add no reconstructed-source credit.
 
 The compiler emits generic MIPS3/o64 objects (`0x20002001`), distinct from the
 original EE flags (`0x20924001`). Its tested explicit `-mabi=32`, `-mabi=eabi` and
-`-fwrapv` options are rejected. This comparator is not an accepted public verifier
-profile and must not inherit modern EE assumptions about ABI or signed overflow.
+`-fwrapv` options are rejected. The restricted `historical-integer-leaf-v1`
+verifier profile preserves these flags and must not inherit modern EE assumptions about ABI or signed overflow.
+A clean isolated rebuild using the published recipe passed positive and negative
+type checks and reproduced the complete 52-byte light-removal comparison. MIPS
+target files remained unchanged; differing host compiler binaries mean this is
+recipe reproducibility, not a byte-identical toolchain build.
 
 ## GCC 3.2.3 R5900 comparison
 
@@ -110,10 +114,10 @@ already-known eight-byte getter/shift matches passed. The camera setter, four
 unsigned byte-reversal expressions and light-list removal all remained complete
 body mismatches. Correct target flags alone did not resolve code-generation or
 ABI differences. The same light-list algorithm matches 52 bytes with the private
-2.95 comparator, but that result awaits a reviewed verification profile and adds
-no public function credit.
+2.95 comparator. Experimental matches add no public function credit until a
+complete source entry passes fresh verification and independent source review.
 
-Neither historical candidate is currently an approved reconstruction compiler
-profile. The compiler experiments do not establish original compiler identity.
+Only the bounded GCC 2.95 integer-leaf profile is supported by the verifier; the
+3.2.3 experiment remains outside it. Neither establishes original compiler identity.
 Preserve mismatches and ABI limitations rather than changing object flags or
 silently declaring a generic MIPS compiler to be the original PS2 toolchain.

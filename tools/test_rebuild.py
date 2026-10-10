@@ -810,5 +810,334 @@ class RebuildTests(unittest.TestCase):
         self.assertIn('verify', result.stdout)
 
 
+class HistoricalTests(unittest.TestCase):
+    setUp = RebuildTests.setUp
+
+    def prepare(self):
+        self.root = self.root.resolve()
+        self.driver = self.root / rebuild.HIST_LAYOUT['driver_directory'] / 'xgcc'
+        self.assembler = self.root / rebuild.HIST_LAYOUT['assembler']
+        self.cpp = self.driver.parent / 'cpp'
+        self.cc1plus = self.driver.parent / 'cc1plus'
+        for path in (self.driver, self.cpp, self.cc1plus, self.assembler):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(('synthetic ' + path.name).encode())
+        self.descriptor = self.root / rebuild.HIST_DESCRIPTOR
+        self.descriptor.parent.mkdir(parents=True)
+        self.descriptor.write_text(json.dumps(rebuild.HIST_LAYOUT))
+        # Independent small branch body, not game bytes: both outcomes return.
+        self.code = struct.pack('<6I', 0x10800002, 0x24020001, 0x24020002, 0, 0x03e00008, 0)
+        self.game.write_bytes(call_elf_fixture(kind=2, code=self.code,
+            functions=[('original', BASE, len(self.code), 2, 1, 0, 1)]))
+        self.target.update(baseline_sha256=rebuild.digest(self.game.read_bytes()))
+        self.target['text']['size'] = len(self.code)
+        self.size_patch.stop()
+        self.size_patch = patch.object(rebuild, 'BASELINE_SIZE', self.game.stat().st_size)
+        self.size_patch.start(); self.addCleanup(self.size_patch.stop)
+        self.ledger['target'] = copy.deepcopy(self.target)
+        self.ledger['functions'][0].update(size=len(self.code), toolchain=rebuild.HIST_FLAVOR,
+            comparison_mode=rebuild.HIST_MODE, compiler_args=list(rebuild.HIST_FLAGS))
+
+    def object(self, code=None, **kwargs):
+        obj = bytearray(elf_fixture(code=self.code if code is None else code, pdr=True, **kwargs))
+        struct.pack_into('<I', obj, 36, rebuild.HIST_OBJECT_FLAGS)
+        return bytes(obj)
+
+    @contextlib.contextmanager
+    def fixture(self, overrides=None, mutation=None, payload=None, fail=None):
+        overrides = overrides or {}
+        calls = []
+        def run(command, **kwargs):
+            calls.append(command)
+            self.assertIn(command[0], (str(self.driver), str(self.assembler)))
+            self.assertNotIn('shell', kwargs)
+            self.assertEqual(set(kwargs['env']), {'PATH', 'LANG', 'LC_ALL', 'TMPDIR'})
+            self.assertEqual(str(kwargs['cwd']), kwargs['env']['TMPDIR'])
+            self.assertTrue(Path(kwargs['cwd']).is_dir())
+            option = command[-1]
+            if command[0] == str(self.assembler) and option == '--version':
+                output = b'GNU assembler (GNU Binutils) 2.45.1\nThis assembler was configured for mips64r5900el-ps2-elf.\n'
+            elif option == '-dumpversion': output = b'2.95.2\n'
+            elif option == '-dumpmachine': output = b'mips64el-unknown-elf\n'
+            elif option == '-print-file-name=specs': output = b'specs\n'
+            elif option == '-print-prog-name=cpp': output = str(self.cpp).encode() + b'\n'
+            elif option == '-print-prog-name=cc1plus': output = str(self.cc1plus).encode() + b'\n'
+            elif option == '-dumpspecs': output = b'synthetic builtin specs'
+            elif option == '-print-search-dirs':
+                d = self.driver.parent
+                p = self.root / rebuild.HIST_LAYOUT['configured_prefix']
+                s, t, v = p / 'lib/gcc-lib', 'mips64el-unknown-elf', '2.95.2'
+                libs = [d/t/v,d,s/t/v,Path('/usr/lib/gcc')/t/v,p/t/'lib'/t/v,p/t/'lib']
+                programs = [d/t/v,d,s/t/v,s/t,Path('/usr/lib/gcc')/t/v,Path('/usr/lib/gcc')/t,p/t/'bin'/t/v,p/t/'bin']
+                output = ('install: '+str(s/t/v)+'/\nprograms: '+':'.join(str(x)+'/' for x in programs)+
+                          '\nlibraries: '+':'.join(str(x)+'/' for x in libs)+'\n').encode()
+            elif '-dM' in command:
+                output = '\n'.join('#define '+k+' '+v for k,v in rebuild.HIST_MACROS.items()).encode()
+                option = 'macros'
+            else:
+                output = None
+            if output is not None:
+                return subprocess.CompletedProcess(command, 0, overrides.get(option, output), b'')
+            destination = Path(command[-1])
+            phase = 'model-compile' if destination.name == 'model.s' else 'compile' if destination.suffix == '.s' else 'model-as' if destination.name == 'model.o' else 'assemble'
+            if phase == fail:
+                return subprocess.CompletedProcess(command, 1, b'', b'failed')
+            if destination.suffix == '.s':
+                snapshot = Path(command[-3])
+                expected = rebuild.HIST_MODEL_SOURCE if phase == 'model-compile' else self.source.read_bytes()
+                self.assertEqual(snapshot.read_bytes(), expected)
+                self.assertIn('-nostdinc', command)
+                self.assertIn('-nostdinc++', command)
+                destination.write_bytes(b'fresh generated assembly ' + rebuild.digest(expected).encode())
+            else:
+                assembly = destination.with_suffix('.s')
+                self.assertEqual(kwargs['input'], assembly.read_bytes())
+                data = self.object(code=struct.pack('<2I', 0x03e00008, 0x24020004), symbol='historical_model_probe') if phase == 'model-as' else (payload or self.object())
+                destination.write_bytes(data)
+            if mutation: mutation(phase, command)
+            return subprocess.CompletedProcess(command, 0, b'', b'')
+        with patch.object(rebuild.subprocess, 'run', side_effect=run):
+            yield calls
+
+    def verify(self, **kwargs):
+        with self.fixture(**kwargs):
+            return rebuild.verify(self.ledger, self.game, None, self.output, self.root,
+                historical_compiler=self.driver, historical_assembler=self.assembler)
+
+    def test_fresh_two_stage_match_and_complete_record(self):
+        self.prepare()
+        report = self.verify()
+        self.assertEqual(report['functions'][0]['status'], 'matched')
+        self.assertEqual(report['schema_version'], 4)
+        self.assertEqual(len(rebuild.recorded_matches(report, self.ledger, self.root)), 1)
+        self.assertEqual(set(report['toolchains'][rebuild.HIST_FLAVOR]['components']), {'cpp','cc1plus','as'})
+        self.assertNotIn(str(self.root), json.dumps(report))
+        self.assertEqual(report['functions'][0]['object_flags'], 0x20002001)
+
+    def test_relative_compiler_and_assembler_resolve_before_private_cwd(self):
+        self.prepare()
+        previous = Path.cwd()
+        try:
+            os.chdir(self.root)
+            with self.fixture():
+                report = rebuild.verify(self.ledger, self.game, None, self.output, self.root,
+                    historical_compiler=self.driver.relative_to(self.root),
+                    historical_assembler=self.assembler.relative_to(self.root))
+            self.assertEqual(report['functions'][0]['status'], 'matched')
+        finally:
+            os.chdir(previous)
+
+    def test_all_normal_and_secondary_specs_rejected_before_probes(self):
+        self.prepare()
+        p = self.root / rebuild.HIST_LAYOUT['configured_prefix']
+        t = rebuild.HIST_TARGET; v = rebuild.HIST_VERSION; d = self.driver.parent
+        paths = [d/'specs',d/t/v/'specs',p/'lib/gcc-lib'/t/v/'specs',p/t/'lib'/t/v/'specs',
+                 p/t/'lib/specs',p/'lib/gcc-lib'/t/'specs']
+        for filename in paths:
+            filename.parent.mkdir(parents=True, exist_ok=True)
+            filename.symlink_to(filename.parent / 'absent')
+            with self.subTest(path=filename), self.fixture() as calls, self.assertRaisesRegex(ValueError,'specs'):
+                rebuild.verify(self.ledger,self.game,None,self.output,self.root,historical_compiler=self.driver,historical_assembler=self.assembler)
+            self.assertEqual(calls,[])
+            filename.unlink()
+
+    def test_shadow_component_prefix_and_macro_identity_rejected(self):
+        self.prepare()
+        for option,value in [('-dumpversion',b'3.2.3'),('-dumpmachine',b'mips-ee'),
+                ('-print-search-dirs',b'install: /unrelated\n'),('-print-prog-name=cpp',b'/outside/cpp'),
+                ('-print-prog-name=cc1plus',str(self.driver.parent/rebuild.HIST_TARGET/rebuild.HIST_VERSION/'cc1plus').encode()),
+                ('-print-file-name=specs',b'/outside/specs'),('--version',b'GNU assembler 1.0')]:
+            with self.subTest(option=option), self.assertRaises(ValueError):
+                self.verify(overrides={option:value})
+        report=self.verify(overrides={'macros':b'#define __mips_eabi 1\n'})
+        self.assertEqual(report['functions'][0]['status'],'failed')
+
+    def test_fixed_layout_symlink_and_missing_components(self):
+        self.prepare()
+        content=self.cpp.read_bytes();self.cpp.unlink();self.cpp.symlink_to(self.cc1plus)
+        with self.assertRaisesRegex(ValueError,'regular'): self.verify()
+        self.cpp.unlink()
+        with self.assertRaisesRegex(ValueError,'regular'): self.verify()
+        self.cpp.write_bytes(content)
+        with self.fixture(), self.assertRaisesRegex(ValueError,'missing historical'):
+            rebuild.verify(self.ledger,self.game,None,self.output,self.root)
+
+    def test_failed_stages_and_component_source_assembly_changes(self):
+        self.prepare()
+        for phase in ('model-compile','model-as','compile','assemble'):
+            with self.subTest(phase=phase):
+                self.assertEqual(self.verify(fail=phase)['functions'][0]['status'],'failed')
+        for path in (self.source,self.driver,self.cpp,self.cc1plus,self.assembler):
+            before=path.read_bytes()
+            def mutate(phase, command):
+                if phase=='assemble': path.write_bytes(before+b' changed')
+            report=self.verify(mutation=mutate)
+            self.assertEqual(report['functions'][0]['status'],'failed')
+            path.write_bytes(before)
+        def mutate_assembly(phase, command):
+            if phase=='assemble': Path(command[-1]).with_suffix('.s').write_bytes(b'changed')
+        report=self.verify(mutation=mutate_assembly)
+        self.assertEqual(report['functions'][0]['status'],'failed')
+        self.assertIn('assembly changed',report['functions'][0]['reason'])
+
+    def test_historical_environment_rejected_and_descriptor_protected(self):
+        self.prepare()
+        for name in ('LPATH','DEPENDENCIES_OUTPUT','SUNPRO_DEPENDENCIES','OBJCPLUS_INCLUDE_PATH','COLLECT_GCC_OPTIONS'):
+            with patch.dict(os.environ,{name:'injected'}), self.fixture() as calls, self.assertRaisesRegex(ValueError,'unset'):
+                rebuild.verify(self.ledger,self.game,None,self.output,self.root,historical_compiler=self.driver,historical_assembler=self.assembler)
+            self.assertEqual(calls,[])
+        before=self.descriptor.read_bytes()
+        with self.assertRaisesRegex(ValueError,'protected'):
+            rebuild.invalidate_report(self.descriptor,self.ledger_path,self.ledger,self.game,None,self.root)
+        self.assertEqual(self.descriptor.read_bytes(),before)
+
+    def test_historical_bad_object_has_no_credit(self):
+        self.prepare()
+        cases=[self.object(allocated_data=True),elf_fixture(code=self.code,relocation=True),
+               self.object(undefined=True),self.object(extra_function=True),self.object(symbol_size=4),
+               self.object(symbol_type=1),self.object(code=struct.pack('<2I',0x03e00008,0)),
+               elf_fixture(code=self.code),self.object()[:70]]
+        for data in cases:
+            with self.subTest(size=len(data)):
+                report=self.verify(payload=data)
+                self.assertEqual(report['functions'][0]['status'],'failed')
+                self.assertEqual(rebuild.recorded_matches(report,self.ledger,self.root),[])
+
+    def test_historical_receipt_policy_stage_and_component_tampering(self):
+        self.prepare(); report=self.verify()
+        for kind in ('schema','policy','model','assembly','assembler','flags','component','descriptor','mode','missing'):
+            bad=copy.deepcopy(report); result=bad['functions'][0]
+            if kind=='schema': bad['schema_version']=3
+            elif kind=='policy': bad['historical_policy']['dependencies']=True
+            elif kind=='model': result['data_model']['compiled']=False
+            elif kind=='assembly': result['assembly_sha256']='0'*64
+            elif kind=='assembler': result['assembler_args'].append('--other')
+            elif kind=='flags': result['object_flags']=rebuild.BASELINE_FLAGS
+            elif kind=='component': bad['toolchains'][rebuild.HIST_FLAVOR]['components']['cpp']['sha256']='0'*64
+            elif kind=='descriptor': bad['toolchains'][rebuild.HIST_FLAVOR]['descriptor_sha256']='0'*64
+            elif kind=='mode': result['comparison_mode']=rebuild.DIRECT_MODE
+            else: del result['historical_evidence_sha256']
+            with self.subTest(kind=kind),self.assertRaises(ValueError):
+                rebuild.recorded_matches(bad,self.ledger,self.root)
+
+    def test_exact_profile_cannot_be_used_as_ee_or_unmarked_leaf(self):
+        self.prepare()
+        for field,value in [('toolchain','ee-gcc'),('comparison_mode',None),('compiler_args',list(reversed(rebuild.HIST_FLAGS)))]:
+            ledger=copy.deepcopy(self.ledger); ledger['functions'][0][field]=value
+            with self.assertRaises(ValueError): rebuild.validate_ledger(ledger,self.root)
+        ledger=copy.deepcopy(self.ledger);ledger['functions'][0]['call_bindings']=[]
+        with self.assertRaises(ValueError):rebuild.validate_ledger(ledger,self.root)
+
+    def test_exact_historical_marker_metadata_only(self):
+        self.prepare()
+        funcs=[('source.cpp',0,0,4,0,0,0xfff1),('gcc2_compiled.',0,0,0,0,0,1),
+               ('__gnu_compiled_cplusplus',0,0,0,0,0,1),('candidate',0,len(self.code),2,1,0,1)]
+        obj=bytearray(call_elf_fixture(code=self.code,functions=funcs,relocations=()))
+        _, rel=rebuild.Elf32(obj).named_section('.rel.pdr')
+        struct.pack_into('<II',obj,rel[4],0,0x402)
+        struct.pack_into('<I',obj,36,rebuild.HIST_OBJECT_FLAGS)
+        obj=bytes(obj)
+        elf=rebuild.Elf32(obj)
+        elf.rebuilt('candidate')
+        elf.call_symbols(elf.function('candidate')[0],[],historical=True)
+        with self.assertRaises(ValueError): elf.call_symbols(elf.function('candidate')[0],[])
+        for changes in ({'value':4},{'size':4},{'binding':1},{'section':3},{'type':2},{'other':1}):
+            bad=change_symbol(obj,'gcc2_compiled.',**changes)
+            with self.subTest(changes=changes),self.assertRaises(ValueError):
+                altered=rebuild.Elf32(bad)
+                altered.call_symbols(altered.function('candidate')[0],[],historical=True)
+        for boundary in (0,2,3,5):
+            altered=rebuild.Elf32(change_section(obj,'.symtab',7,boundary))
+            with self.assertRaises(ValueError):altered.call_symbols(altered.function('candidate')[0],[],historical=True)
+        renamed=obj.replace(b'gcc2_compiled.',b'bad2_compiled.')
+        swapped=bytearray(obj)
+        table=elf.sections[elf.function('candidate')[0]['table']]
+        left,right=table[4]+2*16,table[4]+3*16
+        swapped[left:left+16],swapped[right:right+16]=swapped[right:right+16],swapped[left:left+16]
+        for bad in (renamed,bytes(swapped)):
+            altered=rebuild.Elf32(bad)
+            with self.assertRaises(ValueError):altered.call_symbols(altered.function('candidate')[0],[],historical=True)
+
+    def test_no_stale_or_missing_stage_outputs(self):
+        self.prepare()
+        self.output.mkdir()
+        (self.output/'fresh.o').write_bytes(self.object())
+        (self.output/'fresh.s').write_bytes(b'stale assembly')
+        for phase in ('compile','assemble'):
+            def remove_output(stage,command):
+                if stage==phase:Path(command[-1]).unlink()
+            report=self.verify(mutation=remove_output)
+            self.assertEqual(report['functions'][0]['status'],'failed')
+        def precreate_object(stage,command):
+            if stage=='model-as':Path(command[-1]).with_name('fresh.o').write_bytes(self.object())
+        report=self.verify(mutation=precreate_object)
+        self.assertEqual(report['functions'][0]['status'],'failed')
+        self.assertIn('fresh',report['functions'][0]['reason'])
+
+    def test_mixed_clang_ee_and_historical_keep_distinct_provenance(self):
+        self.prepare()
+        historic=copy.deepcopy(self.ledger['functions'][0])
+        RebuildTests.prepare_ee(self)
+        ee_source=self.root/'ee.cpp';ee_source.write_text('extern "C" int ee_leaf(){return 12;}')
+        clang_source=self.root/'clang.cpp';clang_source.write_text('extern "C" int clang_leaf(){return 13;}')
+        ee_code=CALLEE;clang_code=struct.pack('<2I',0x03e00008,0x2402000d)
+        self.ledger['functions']=[historic,
+            dict(historic,id='ee',source='ee.cpp',symbol='ee_leaf',original_symbol='ee_original',
+                 address='0x00100018',size=8,toolchain='ee-gcc',compiler_args=sorted(rebuild.EE_FLAGS)),
+            dict(historic,id='clang',source='clang.cpp',symbol='clang_leaf',original_symbol='clang_original',
+                 address='0x00100020',size=8,toolchain='clang',compiler_args=sorted(rebuild.REQUIRED_FLAGS)+['-O2'])]
+        for item in self.ledger['functions'][1:]: del item['comparison_mode']
+        self.game.write_bytes(call_elf_fixture(kind=2,code=self.code+ee_code+clang_code,functions=[
+            ('original',BASE,24,2,1,0,1),('ee_original',BASE+24,8,2,1,0,1),('clang_original',BASE+32,8,2,1,0,1)]))
+        self.target['text']['size']=40;self.target['baseline_sha256']=rebuild.digest(self.game.read_bytes())
+        self.ledger['target']=copy.deepcopy(self.target)
+        def clang_run(command,**kwargs):
+            if command[-1]=='--version':return subprocess.CompletedProcess(command,0,b'clang version 20.1.8\n',b'')
+            self.assertEqual(Path(command[-3]).read_bytes(),clang_source.read_bytes())
+            Path(command[-1]).write_bytes(elf_fixture(code=clang_code,symbol='clang_leaf'))
+            return subprocess.CompletedProcess(command,0,b'',b'')
+        with patch.object(rebuild,'BASELINE_SIZE',self.game.stat().st_size),self.fixture():
+            historic_run=rebuild.subprocess.run.side_effect
+            with RebuildTests.ee_fixture(self,source=ee_source,object_data=elf_fixture(code=ee_code,pdr=True,symbol='ee_leaf')):
+                ee_run=rebuild.subprocess.run.side_effect
+                def dispatch(command,**kwargs):
+                    run=historic_run if command[0] in (str(self.driver),str(self.assembler)) else ee_run if command[0]==str(self.ee_driver) else clang_run
+                    return run(command,**kwargs)
+                with patch.object(rebuild.subprocess,'run',side_effect=dispatch),patch.object(rebuild.shutil,'which',side_effect=str):
+                    report=rebuild.verify(self.ledger,self.game,self.compiler,self.output,self.root,ee_compiler=self.ee_driver,
+                        historical_compiler=self.driver,historical_assembler=self.assembler)
+                    with self.assertRaisesRegex(ValueError,'missing historical'):
+                        rebuild.verify(self.ledger,self.game,self.compiler,self.output,self.root,ee_compiler=self.ee_driver)
+        self.assertEqual([r['status'] for r in report['functions']],['matched']*3)
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),3)
+        self.assertEqual(len({r['toolchain_sha256'] for r in report['functions']}),3)
+        report['functions'][1]['toolchain_sha256']=report['functions'][0]['toolchain_sha256']
+        with self.assertRaisesRegex(ValueError,'toolchain identity'):
+            rebuild.recorded_matches(report,self.ledger,self.root)
+
+    def test_branch_likely_and_ordinary_delays_are_bounded(self):
+        # Independent branch fixture: delay instruction has an observable write;
+        # both taken and false paths join a final JR with its own store delay.
+        for op in (4,5,6,7,20,21,22,23):
+            code=struct.pack('<6I',(op<<26)|(4<<21)|2,0x24020001,0x24020002,0,0x03e00008,0xac820000)
+            rebuild.audit_historical_body(code)
+        # A branch may target the next ordinary branch (Light's structural case).
+        rebuild.audit_historical_body(struct.pack('<8I',0x50800002,0x24020001,0,0x50800002,0,0,0x03e00008,0))
+
+    def test_invalid_cfg_and_reserved_encodings_rejected(self):
+        good=[0x50800002,0x24020001,0x24020002,0,0x03e00008,0]
+        variants=[]
+        for word in (0x5080ffff,0x50800000,0x50800004,0x58810002,0x0c000000,0x08000000,0x45000000,
+                     0x70000000,0x279c0001,0x27bdfff0,0x26100001,0x241f0000,0x0000000c,0x0000000d):
+            changed=list(good);changed[0]=word;variants.append(changed)
+        changed=list(good);changed[1]=0x10800001;variants.append(changed)
+        changed=list(good);changed[0]=0x50800004;variants.append(changed) # JR delay slot
+        # First branch targets delay slot of a second branch.
+        variants.append([0x50800003,0,0,0x50800002,0,0,0x03e00008,0])
+        for words in variants:
+            with self.subTest(words=words),self.assertRaises(ValueError):
+                rebuild.audit_historical_body(struct.pack('<'+'I'*len(words),*words))
+
+
 if __name__ == '__main__':
     unittest.main()

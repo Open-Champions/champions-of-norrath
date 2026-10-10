@@ -27,7 +27,7 @@ and [receipt](targets/SLUS-20565/verification.json) record the narrow claim.
 The retained main-code inventory contains 5,390 function symbols; inventory
 coverage is not reconstructed-source or gameplay progress.
 
-The intake, symbol inventory, load-layout and reconstruction tools have 89 synthetic tests
+The intake, symbol inventory, load-layout and reconstruction tools have 104 synthetic tests
 requiring no game files. Public CI checks these tests and saved-record consistency;
 fresh original-byte verification runs locally with a private executable.
 
@@ -47,5 +47,6 @@ Matching a PS2 function does not establish native gameplay or compatibility betw
 the two games' data, saves, scripts or network protocols.
 
 Independent community project; not affiliated with the game's rights holders.
-Original contributions use [MIT](LICENSE). The game wordmark is excluded from that
-license; see [artwork credits](https://github.com/Open-Champions/.github/blob/main/ARTWORK.md).
+Original contributions use [MIT](LICENSE). The public GCC host patch retains its
+[upstream licensing](toolchains/gcc-2.95.2/README.md#licenses). The game wordmark
+is excluded from that license; see [artwork credits](https://github.com/Open-Champions/.github/blob/main/ARTWORK.md).

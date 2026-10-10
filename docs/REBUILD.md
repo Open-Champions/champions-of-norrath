@@ -51,6 +51,41 @@ compile. Macro and object-header checks reject the wrong target data model.
 The [toolchain build record](TOOLCHAINS.md) documents source pins and local build
 configuration. A mixed ledger requires both explicit compiler paths.
 
+### Historical integer leaves
+
+The optional `gcc-2.95.2-mips3-leaf` toolchain uses the published
+[host build recipe](../toolchains/gcc-2.95.2/README.md) and explicit
+`historical-integer-leaf-v1` mode. Its generic MIPS3/o64 object flags stay
+`0x20002001`; this mode makes no EE ABI claim. Pass both
+`--historical-compiler work/toolchains/build-gcc-2.95.2/gcc/xgcc` and
+`--historical-assembler work/toolchains/ee/bin/mips64r5900el-ps2-elf-as`
+when the ledger contains such an entry. Other entries still need their selected
+compilers. The fixed layout and configured prefix must match this checkout.
+
+The verifier binds the driver, preprocessor, C++ frontend, assembler, built-in
+specifications and layout descriptor. It rejects external specifications and
+shadow components, uses fresh private working and temporary directories, checks
+the integer/pointer model, then captures newly compiled assembly and feeds those
+same bytes directly to the assembler. Stored or hand-edited assembly cannot be
+used as source. Compiler identity and source snapshots are checked again after
+compilation and at the end of the run.
+
+A separate instruction audit permits only stackless integer leaves with forward
+conditional branches, including correctly modeled branch-likely delay slots, and
+one terminal return. It rejects calls, loops, protected registers, floating-point,
+MMI and runtime relocations. Original boundaries and executable load mappings
+remain strict. The exact two zero-sized GNU compiler markers are permitted only
+as historical object metadata, never as dependencies or reconstructed data.
+Pointer lifetimes, aliasing and source-level type contracts still need independent
+review. The old compiler has no `-fwrapv` support; undefined signed overflow cannot
+be justified by copying the modern compiler's options.
+
+Ledgers containing this mode produce schema 4 receipts binding the assembly,
+object flags, source, model, instruction policy and component identities. They
+cannot supply dependencies to the EE direct-call mode. A clean isolated rebuild
+reproduced the recipe and a 52-byte comparison, while its host binaries differed;
+this establishes neither a reproducible compiler binary nor a complete game build.
+
 ## Bounded reconstruction loop
 
 1. Check the repository status and active coordination issue before taking a
@@ -127,7 +162,7 @@ require source and caller evidence before a function is banked.
 Graph receipts use schema 3 and bind the raw body hash, relocated body hash,
 callsite evidence, policy and complete fresh callee result records. Source and
 compiler identity must remain stable through the entire graph run. Leaf-only
-ledgers continue producing schema 2 receipts. Synthetic tests exercise dependency
+ledgers without the historical profile continue producing schema 2 receipts. Synthetic tests exercise dependency
 failure, stale records and malformed objects; a separate authored two-function
 fixture has also been compiled with the reviewed EE compiler and compared with
 the GNU linker's result. Neither fixture is game reconstruction progress.

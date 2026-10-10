@@ -49,12 +49,44 @@ EE_FLAGS = {'-std=c++17', '-O2', '-march=r5900', '-mabi=eabi', '-mgp64', '-mlong
 EE_MODEL = {'__SIZEOF_INT__': '4', '__SIZEOF_LONG__': '4', '__SIZEOF_POINTER__': '4',
             '__mips_eabi': '1', '__mips64': '1', '_MIPS_ARCH_R5900': '1',
             '__mips_fpr': '32', '__mips_single_float': '1'}
+HIST_FLAVOR = 'gcc-2.95.2-mips3-leaf'
+HIST_MODE = 'historical-integer-leaf-v1'
+HIST_TARGET = 'mips64el-unknown-elf'
+HIST_VERSION = '2.95.2'
+HIST_FLAGS = ['-mips3', '-mgp64', '-mlong32', '-mno-abicalls', '-G0',
+              '-fomit-frame-pointer', '-fno-exceptions', '-fno-rtti', '-O2']
+HIST_AS_FLAGS = ['-EL', '-mips3', '-mabi=o64']
+HIST_OBJECT_FLAGS = 0x20002001
+HIST_DESCRIPTOR = 'toolchains/gcc-2.95.2/profile.json'
+HIST_LAYOUT = {'schema_version': 1, 'flavor': HIST_FLAVOR, 'version': HIST_VERSION,
+               'target': HIST_TARGET, 'driver_directory': 'work/toolchains/build-gcc-2.95.2/gcc',
+               'configured_prefix': 'work/toolchains/gcc-2.95.2-leaf-install',
+               'assembler': 'work/toolchains/ee/bin/mips64r5900el-ps2-elf-as',
+               'search_policy': 'gcc-2.95.2-cross-startfile-v1'}
+HIST_POLICY = {'mode': HIST_MODE, 'object_flags': HIST_OBJECT_FLAGS,
+               'abi_scope': 'isolated-integer-leaf-not-ee-abi',
+               'control_flow': 'stackless-forward-integer-branches-v1',
+               'runtime_relocations': False, 'dependencies': False}
+HIST_MACROS = {'__GNUC__': '2', '__GNUC_MINOR__': '95', '__GNUG__': '2',
+               '__cplusplus': '1', '__mips': '3', '__mips64': '1', '__MIPSEL__': '1',
+               '__SIZE_TYPE__': 'unsigned int', '__PTRDIFF_TYPE__': 'int'}
+HIST_MODEL_SOURCE = b'''typedef char c1[sizeof(char)==1?1:-1];
+typedef char s2[sizeof(short)==2?1:-1];
+typedef char i4[sizeof(int)==4?1:-1];
+typedef char l4[sizeof(long)==4?1:-1];
+typedef char p4[sizeof(void*)==4?1:-1];
+typedef char ll8[sizeof(long long)==8?1:-1];
+typedef char signed_char[((char)-1 < 0)?1:-1];
+extern "C" int historical_model_probe() { return sizeof(void*); }
+'''
 FIXED_FLAGS = ['-nostdinc', '-nostdinc++', '-x', 'c++']
 INJECTING_ENV = ('CCC_OVERRIDE_OPTIONS', 'CL', '_CL_', 'CPATH', 'CPLUS_INCLUDE_PATH',
                  'C_INCLUDE_PATH', 'OBJC_INCLUDE_PATH', 'COMPILER_PATH', 'GCC_EXEC_PREFIX',
                  'LIBRARY_PATH', 'SDKROOT', 'DYLD_INSERT_LIBRARIES', 'LD_PRELOAD',
                  'GCC_SPECS', 'GCC_COMPARE_DEBUG', 'GCC_COLORS', 'LD_LIBRARY_PATH',
-                 'DYLD_LIBRARY_PATH', 'DYLD_FRAMEWORK_PATH')
+                 'DYLD_LIBRARY_PATH', 'DYLD_FRAMEWORK_PATH', 'LPATH',
+                 'DEPENDENCIES_OUTPUT', 'SUNPRO_DEPENDENCIES', 'OBJCPLUS_INCLUDE_PATH',
+                 'COLLECT_GCC_OPTIONS')
 
 
 def require(condition, message):
@@ -218,7 +250,7 @@ class Elf32:
             return code, records
         return code
 
-    def call_symbols(self, candidate, bindings):
+    def call_symbols(self, candidate, bindings, historical=False):
         require(len(set(self.names)) == len(self.names), 'duplicate object section names')
         require(sum(s[1] == 2 for s in self.sections) == 1
                 and not any(s[1] == 11 for s in self.sections), 'direct calls require one symbol table')
@@ -234,7 +266,20 @@ class Elf32:
         file_split = (boundary == first_global - 1 and preceding_file['type'] == 4
                       and preceding_file['section'] == 0xfff1 and preceding_file['binding'] == 0
                       and preceding_file['other'] == preceding_file['value'] == preceding_file['size'] == 0)
-        require(0 < boundary and (boundary == first_global or file_split)
+        historical_markers = ['gcc2_compiled.', '__gnu_compiled_cplusplus']
+        markers = [s for s in self.symbols if s['name'] in historical_markers]
+        historical_split = False
+        if historical and markers:
+            require([s['name'] for s in markers] == historical_markers
+                    and all(s['type'] == 0 and s['binding'] == s['value'] == s['size'] == s['other'] == 0
+                            and s['section'] == candidate['section'] for s in markers),
+                    'invalid historical compiler marker symbols')
+            suffix = self.symbols[boundary:first_global]
+            historical_split = (len(suffix) == 3 and suffix[0]['type'] == 4
+                                and suffix[0]['section'] == 0xfff1
+                                and suffix[0]['binding'] == suffix[0]['value'] == suffix[0]['size'] == suffix[0]['other'] == 0
+                                and suffix[1:] == markers)
+        require(0 < boundary and (boundary == first_global or file_split or historical_split)
                 and all((s['binding'] == 0) == (s['index'] < first_global) for s in self.symbols),
                 'invalid local/global symbol boundary')
         undefined = {}
@@ -243,6 +288,8 @@ class Elf32:
                 require(all(s[k] == 0 for k in ('value', 'size', 'type', 'binding', 'other', 'section'))
                         and s['name'] == '', 'invalid null object symbol')
             elif s is candidate:
+                continue
+            elif historical and s in markers:
                 continue
             elif s['section'] == 0:
                 require(s['name'] and s['binding'] == 1 and s['other'] == 0 and s['type'] in (0, 2)
@@ -277,8 +324,8 @@ def call_graph(ledger):
     edges, members = {}, set()
     for item in items.values():
         mode = item.get('comparison_mode')
-        require(mode in (None, DIRECT_MODE), 'unsupported comparison mode')
-        if mode is None:
+        require(mode in (None, DIRECT_MODE, HIST_MODE), 'unsupported comparison mode')
+        if mode in (None, HIST_MODE):
             require('call_bindings' not in item, 'leaf entries cannot declare call bindings')
             edges[item['id']] = set()
             continue
@@ -324,6 +371,69 @@ def call_graph(ledger):
         for dependencies in pending.values():
             dependencies.difference_update(ready)
     return [items[key] for key in order], members
+
+
+def audit_historical_body(code):
+    """Closed stackless integer leaf CFG; likely branches annul the false delay slot.
+
+    This is a shape check, not proof of pointer lifetimes or the C++ view contract.
+    Forward-only edges plus complete reachability exclude hidden trailing bodies.
+    """
+    require(len(code) >= 8 and len(code) % 4 == 0, 'invalid historical body extent')
+    words = struct.unpack('<' + 'I' * (len(code) // 4), code)
+    end = len(words) - 2
+    require(words[end] == 0x03e00008, 'historical leaf needs terminal JR RA')
+    branches, delays = {}, {end + 1}
+    forbidden = set(range(16, 24)) | {26, 27, 28, 29, 30, 31}
+    for i, word in enumerate(words):
+        op, rs, rt, rd, sa, fn = word >> 26, (word >> 21) & 31, (word >> 16) & 31, (word >> 11) & 31, (word >> 6) & 31, word & 63
+        if i == end:
+            continue
+        if op in (4, 5, 6, 7, 20, 21, 22, 23):
+            require(op not in (6, 7, 22, 23) or rt == 0, 'reserved historical branch fields')
+            require(rs not in forbidden and rt not in forbidden, 'historical branch uses protected register')
+            displacement = word & 65535
+            if displacement & 32768:
+                displacement -= 65536
+            target = i + 1 + displacement
+            require(i + 2 <= target <= end and i + 2 <= end, 'historical branch target or continuation outside forward body')
+            branches[i] = (target, op >= 20)
+            delays.add(i + 1)
+            continue
+        # Reuse the already reviewed noncontrol integer encoding/reserved-field
+        # decoder, then impose this profile's stricter stackless register rule.
+        audit_integer_body(struct.pack('<3I', word, 0x03e00008, 0))
+        if op == 0:
+            used = {rt, rd} | ({rs} if fn not in (0, 2, 3, 0x38, 0x3a, 0x3b, 0x3c, 0x3e, 0x3f) else set())
+        else:
+            used = {rt} | ({rs} if op != 15 else set())
+        require(not used.intersection(forbidden), 'historical leaf uses protected/stack/global-pointer register')
+    controls = set(branches) | {end}
+    require(not controls.intersection(delays), 'control transfer in historical delay slot')
+    require(all(target not in delays and i + 2 not in delays for i, (target, _) in branches.items()),
+            'historical edge enters delay slot')
+    # Nodes are (instruction index, delayed continuation). Modeling delay context
+    # preserves the distinction between ordinary and branch-likely false edges.
+    pending, seen, reached = [(0, None)], set(), set()
+    while pending:
+        i, after = pending.pop()
+        if (i, after) in seen:
+            continue
+        seen.add((i, after)); reached.add(i)
+        require(0 <= i < len(words), 'historical control flow escapes body')
+        if after is not None:
+            if after != -1:
+                pending.append((after, None))
+        elif i == end:
+            pending.append((i + 1, -1))
+        elif i in branches:
+            target, likely = branches[i]
+            pending.append((i + 1, target))
+            pending.append((i + 2, None) if likely else (i + 1, i + 2))
+        else:
+            require(i not in delays, 'historical fallthrough enters an unowned delay slot')
+            pending.append((i + 1, None))
+    require(reached == set(range(len(words))), 'unreachable historical body instructions')
 
 
 def audit_integer_body(code, call_offsets=()):
@@ -454,8 +564,14 @@ def validate_ledger(ledger, root=ROOT):
         flags = item['compiler_args']
         require(isinstance(flags, list) and all(isinstance(f, str) for f in flags), 'compiler arguments must be strings')
         flavor = item.get('toolchain', 'clang')
-        require(flavor in ('clang', 'ee-gcc'), 'unsupported toolchain flavor')
-        required, allowed = (REQUIRED_FLAGS, ALLOWED_FLAGS) if flavor == 'clang' else (EE_FLAGS, EE_FLAGS)
+        require(flavor in ('clang', 'ee-gcc', HIST_FLAVOR), 'unsupported toolchain flavor')
+        if flavor == HIST_FLAVOR:
+            require(item.get('comparison_mode') == HIST_MODE and flags == HIST_FLAGS,
+                    'historical leaf requires explicit mode and exact ordered profile')
+        else:
+            require(item.get('comparison_mode') != HIST_MODE, 'historical mode requires historical compiler')
+        required, allowed = ((REQUIRED_FLAGS, ALLOWED_FLAGS) if flavor == 'clang' else
+                             (set(HIST_FLAGS), set(HIST_FLAGS)) if flavor == HIST_FLAVOR else (EE_FLAGS, EE_FLAGS))
         require(len(flags) == len(set(flags)) and required <= set(flags) <= allowed, 'unsupported or missing compiler flags')
         require(sum(f.startswith('-O') for f in flags) == 1, 'exactly one optimization setting is required')
         require(not ({'-msoft-float', '-mhard-float'} <= set(flags)) and not ({'-fomit-frame-pointer', '-fno-omit-frame-pointer'} <= set(flags)), 'conflicting compiler arguments')
@@ -483,6 +599,8 @@ def baseline_elf(path):
 
 
 def effective_args(item):
+    if item.get('toolchain') == HIST_FLAVOR:
+        return ['-B<reviewed-driver-directory>/'] + HIST_FLAGS + FIXED_FLAGS + ['-S', '<source-snapshot.cpp>', '-o', '<fresh-assembly.s>']
     return item['compiler_args'] + FIXED_FLAGS + ['-c', '<source-snapshot.cpp>', '-o', '<fresh-object.o>']
 
 
@@ -538,12 +656,138 @@ def ee_data_model(executable, flags, env):
     return macros
 
 
-def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
+def historical_layout(root):
+    root = Path(root).resolve()
+    descriptor = root / HIST_DESCRIPTOR
+    require(descriptor.is_file() and not descriptor.is_symlink(), 'missing regular historical build descriptor')
+    data = descriptor.read_bytes()
+    require(json.loads(data) == HIST_LAYOUT, 'unsupported historical build layout descriptor')
+    directory = root / HIST_LAYOUT['driver_directory']
+    prefix = root / HIST_LAYOUT['configured_prefix']
+    assembler = root / HIST_LAYOUT['assembler']
+    machine = Path(HIST_TARGET) / HIST_VERSION
+    standard = prefix / 'lib/gcc-lib'
+    # gcc.c process_command + find_a_file: startfile prefixes are NOT exec
+    # prefixes. require_machine_suffix=1 excludes raw and target-only forms.
+    libraries = [directory / machine, directory, standard / machine,
+                 Path('/usr/lib/gcc') / machine, prefix / HIST_TARGET / 'lib' / machine,
+                 prefix / HIST_TARGET / 'lib']
+    programs = [directory / machine, directory, standard / machine, standard / HIST_TARGET,
+                Path('/usr/lib/gcc') / machine, Path('/usr/lib/gcc') / HIST_TARGET,
+                prefix / HIST_TARGET / 'bin' / machine, prefix / HIST_TARGET / 'bin']
+    specs = [p / 'specs' for p in libraries] + [standard / HIST_TARGET / 'specs']
+    require(all(not os.path.lexists(p) for p in specs), 'external historical GCC specs are unsupported')
+    return directory, assembler, digest(data), {
+        'install': str(standard / machine) + '/',
+        'programs': ':'.join(str(p) + '/' for p in programs),
+        'libraries': ':'.join(str(p) + '/' for p in libraries)}
+
+
+def historical_identity(compiler, assembler, env, root):
+    directory, expected_as, descriptor_hash, searches = historical_layout(root)
+    def probe(command):
+        return compiler_output(command, env, cwd=env['TMPDIR'])
+    require(compiler is not None and assembler is not None, 'missing historical compiler or assembler')
+    expected = {'xgcc': directory / 'xgcc', 'cpp': directory / 'cpp',
+                'cc1plus': directory / 'cc1plus', 'as': expected_as}
+    require(Path(compiler).absolute() == expected['xgcc'] and Path(assembler).absolute() == expected_as,
+            'historical compiler/assembler differ from reviewed fixed layout')
+    for path in expected.values():
+        require(path.is_file() and not path.is_symlink() and path.resolve() == path,
+                'historical components must be regular files in the reviewed layout')
+    hashes = {name: digest(path.read_bytes()) for name, path in expected.items()}
+    executable = expected['xgcc']
+    command = [str(executable), '-B' + str(directory) + '/'] + HIST_FLAGS + FIXED_FLAGS
+    require(probe(command + ['-dumpversion']).decode('ascii').strip() == HIST_VERSION,
+            'unsupported historical GCC version')
+    require(probe(command + ['-dumpmachine']).decode('ascii').strip() == HIST_TARGET,
+            'unsupported historical GCC target')
+    observed = probe(command + ['-print-search-dirs']).decode('utf-8')
+    require(observed == ''.join(key + ': ' + value + '\n' for key, value in searches.items()),
+            'historical configured prefix/search paths differ from descriptor')
+    require(probe(command + ['-print-file-name=specs']).decode('utf-8').strip() == 'specs',
+            'external historical GCC specs are unsupported')
+    for name in ('cpp', 'cc1plus'):
+        selected = probe(command + ['-print-prog-name=' + name]).decode('utf-8').strip()
+        require(selected == str(expected[name]), 'historical component resolution is shadowed or outside layout')
+    specs = probe(command + ['-dumpspecs'])
+    version = probe([str(expected_as), '--version']).decode('ascii').splitlines()
+    require(version and version[0] == 'GNU assembler (GNU Binutils) 2.45.1'
+            and any(EE_TARGET in line for line in version), 'unsupported historical assembler identity')
+    require(historical_layout(root)[2:] == (descriptor_hash, searches)
+            and hashes == {name: digest(path.read_bytes()) for name, path in expected.items()},
+            'historical components or descriptor changed during identity probes')
+    return executable, {'flavor': HIST_FLAVOR, 'name': 'xgcc', 'version': HIST_VERSION,
+                        'target': HIST_TARGET, 'sha256': hashes['xgcc'],
+                        'components': {name: {'name': name, 'sha256': hashes[name]}
+                                       for name in ('cpp', 'cc1plus', 'as')},
+                        'assembler_version': version[0], 'descriptor_sha256': descriptor_hash,
+                        'specs_sha256': digest(specs), 'search_policy': HIST_LAYOUT['search_policy']}
+
+
+def historical_model_record():
+    return {'probe_sha256': digest(HIST_MODEL_SOURCE), 'macros': HIST_MACROS,
+            'assertions': 'char1-short2-int4-long4-pointer4-longlong8-signedchar', 'compiled': True}
+
+
+def historical_evidence(result):
+    return digest(canonical({key: result[key] for key in (
+        'source_sha256', 'compiler_args', 'toolchain_sha256', 'data_model',
+        'assembly_sha256', 'assembler_args', 'object_flags', 'object_sha256',
+        'comparison_mode', 'control_flow_policy', 'original_sha256', 'rebuilt_sha256', 'size')}))
+
+
+def historical_compile(executable, assembler, snapshot, obj, directory, env, model=False):
+    assembly = directory / ('model.s' if model else 'fresh.s')
+    require(not os.path.lexists(assembly) and not os.path.lexists(obj), 'historical outputs must be fresh')
+    command = [str(executable), '-B' + str(executable.parent) + '/'] + HIST_FLAGS + FIXED_FLAGS
+    compiled = subprocess.run(command + ['-S', str(snapshot), '-o', str(assembly)],
+                              cwd=directory, capture_output=True, timeout=120, check=False, env=env)
+    require(compiled.returncode == 0, 'historical source/model compilation failed')
+    require(assembly.is_file() and not assembly.is_symlink(), 'historical compiler produced no regular assembly')
+    data = assembly.read_bytes()
+    assembled = subprocess.run([str(assembler)] + HIST_AS_FLAGS + ['-o', str(obj)], input=data,
+                               cwd=directory, capture_output=True, timeout=120, check=False, env=env)
+    require(assembled.returncode == 0 and obj.is_file() and not obj.is_symlink(),
+            'historical assembly failed or produced no regular object')
+    require(assembly.read_bytes() == data, 'generated assembly changed during historical compilation')
+    return digest(data), compiled.stdout + compiled.stderr + assembled.stdout + assembled.stderr
+
+
+def historical_data_model(executable, assembler, directory, env):
+    probe = directory / 'model.cpp'
+    probe.write_bytes(HIST_MODEL_SOURCE)
+    obj = directory / 'model.o'
+    historical_compile(executable, assembler, probe, obj, directory, env, model=True)
+    require(probe.read_bytes() == HIST_MODEL_SOURCE, 'historical data-model source changed')
+    elf = Elf32(obj.read_bytes())
+    require(elf.flags == HIST_OBJECT_FLAGS, 'historical data-model object flags mismatch')
+    code = elf.rebuilt('historical_model_probe')
+    audit_historical_body(code)
+    command = [str(executable), '-B' + str(executable.parent) + '/'] + HIST_FLAGS + FIXED_FLAGS
+    output = compiler_output(command + ['-dM', '-E', '-'], env, input=b'', cwd=directory)
+    macros = {}
+    for line in output.decode('ascii').splitlines():
+        parts = line.split(maxsplit=2)
+        if len(parts) == 3 and parts[0] == '#define':
+            require(parts[1] not in ('__mips_eabi', '_MIPS_ARCH_R5900'), 'historical model unexpectedly claims EE ABI')
+            if parts[1] in HIST_MACROS:
+                require(parts[1] not in macros, 'duplicate historical model macro')
+                macros[parts[1]] = parts[2].strip()
+    require(macros == HIST_MACROS, 'historical data-model macro mismatch')
+    return historical_model_record()
+
+
+def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
+           historical_compiler=None, historical_assembler=None):
     validate_ledger(ledger, root)
     ordered, members = call_graph(ledger)
     baseline = baseline_elf(game)
     originals = {item['id']: baseline.original(item) for item in ledger['functions']}
     for item in ordered:
+        if item.get('toolchain') == HIST_FLAVOR:
+            original_graph_body(baseline, item)
+            audit_historical_body(originals[item['id']])
         if item['id'] in members:
             original_graph_body(baseline, item)
             if item.get('comparison_mode') == DIRECT_MODE:
@@ -558,16 +802,26 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
     env = {'PATH': os.defpath, 'LANG': 'C', 'LC_ALL': 'C'}
     flavors = {item.get('toolchain', 'clang') for item in ledger['functions']}
     selected = {'clang': compiler, 'ee-gcc': ee_compiler}
-    toolchains = {flavor: toolchain_identity(flavor, selected[flavor], env) for flavor in sorted(flavors)}
+    toolchains = {flavor: toolchain_identity(flavor, selected[flavor], env)
+                  for flavor in sorted(flavors) if flavor != HIST_FLAVOR}
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    report = {'schema_version': 3 if members else 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
+    if HIST_FLAVOR in flavors:
+        with tempfile.TemporaryDirectory(prefix='historical-identity-', dir=output_dir) as temporary:
+            hist_env = dict(env, TMPDIR=str(Path(temporary).resolve()))
+            toolchains[HIST_FLAVOR] = historical_identity(historical_compiler, historical_assembler, hist_env, root)
+            historical_compiler = toolchains[HIST_FLAVOR][0]
+            historical_assembler = historical_layout(root)[1]
+    report = {'schema_version': 4 if HIST_FLAVOR in flavors else 3 if members else 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
               'ledger_sha256': digest(canonical(ledger)), 'verifier_sha256': digest(Path(__file__).read_bytes()),
               'recorded_at': datetime.now(timezone.utc).isoformat(),
               'toolchains': {flavor: value[1] for flavor, value in toolchains.items()}, 'functions': []}
     if members:
         report['call_policy'] = CALL_POLICY
         report['call_policy_sha256'] = digest(canonical(CALL_POLICY))
+    if HIST_FLAVOR in flavors:
+        report['historical_policy'] = HIST_POLICY
+        report['historical_policy_sha256'] = digest(canonical(HIST_POLICY))
     snapshots = {item['id']: source_bytes(local_path(root, item['source'])) for item in ordered}
     completed = {}
     for item in ordered:
@@ -578,7 +832,7 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
         result = {'id': item['id'], 'source_sha256': digest(contents), 'compiler_args': effective_args(item),
                   'toolchain': flavor, 'toolchain_sha256': digest(canonical(identity)), 'status': 'failed'}
         with tempfile.TemporaryDirectory(prefix=item['id'] + '-', dir=output_dir) as directory:
-            directory = Path(directory)
+            directory = Path(directory).resolve()
             snapshot, obj = directory / 'source.cpp', directory / 'fresh.o'
             snapshot.write_bytes(contents)
             command = [str(executable)] + item['compiler_args'] + FIXED_FLAGS + ['-c', str(snapshot.resolve()), '-o', str(obj.resolve())]
@@ -592,7 +846,20 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
                 if flavor == 'ee-gcc':
                     require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components changed before compilation')
                     result['data_model'] = ee_data_model(executable, item['compiler_args'], env)
-                compiled = subprocess.run(command, cwd=directory, capture_output=True, timeout=120, check=False, env=env)
+                if flavor == HIST_FLAVOR:
+                    hist_env = dict(env, TMPDIR=str(directory))
+                    require(historical_identity(executable, historical_assembler, hist_env, root)[1] == identity,
+                            'historical components changed before compilation')
+                    result['data_model'] = historical_data_model(executable, historical_assembler, directory, hist_env)
+                    assembly_hash, log = historical_compile(executable, historical_assembler, snapshot, obj, directory, hist_env)
+                    result.update(comparison_mode=HIST_MODE, control_flow_policy=HIST_MODE,
+                                  assembly_sha256=assembly_hash, assembler_args=HIST_AS_FLAGS + ['-o', '<fresh-object.o>'],
+                                  object_flags=HIST_OBJECT_FLAGS)
+                    require(historical_identity(executable, historical_assembler, hist_env, root)[1] == identity,
+                            'historical components or specs changed during compilation')
+                    compiled = subprocess.CompletedProcess(command, 0, log, b'')
+                else:
+                    compiled = subprocess.run(command, cwd=directory, capture_output=True, timeout=120, check=False, env=env)
                 require(source.read_bytes() == contents and snapshot.read_bytes() == contents, 'source changed during compilation')
                 require(digest(executable.read_bytes()) == identity['sha256'], 'compiler changed during compilation')
                 if flavor == 'ee-gcc':
@@ -613,6 +880,10 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
                                                     for b in item['call_bindings']}})
                 else:
                     code = elf.rebuilt(item['symbol'])
+                    if flavor == HIST_FLAVOR:
+                        require(elf.flags == HIST_OBJECT_FLAGS, 'historical object flags differ from reviewed generic MIPS3/o64 profile')
+                        elf.call_symbols(elf.function(item['symbol'])[0], [], historical=True)
+                        audit_historical_body(code)
                     if item['id'] in members:
                         audit_integer_body(code)
                 if item['id'] in members:
@@ -622,6 +893,8 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
                 result.update({'object_sha256': digest(object_data), 'size': len(code),
                                'original_sha256': digest(original), 'rebuilt_sha256': digest(code),
                                'status': 'matched' if code == original else 'mismatched'})
+                if flavor == HIST_FLAVOR:
+                    result['historical_evidence_sha256'] = historical_evidence(result)
             except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
                 result['reason'] = str(exc) if isinstance(exc, ValueError) else type(exc).__name__
         completed[item['id']] = result
@@ -634,11 +907,21 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
         if not stable:
             for key in members:
                 completed[key].update(status='failed', reason='source or compiler changed during graph verification')
+    if HIST_FLAVOR in flavors:
+        with tempfile.TemporaryDirectory(prefix='historical-final-', dir=output_dir) as temporary:
+            hist_env = dict(env, TMPDIR=str(Path(temporary).resolve()))
+            stable = historical_identity(historical_compiler, historical_assembler, hist_env, root)[1] == toolchains[HIST_FLAVOR][1]
+        stable = stable and all(source_bytes(local_path(root, item['source'])) == snapshots[item['id']]
+                                for item in ordered if item.get('toolchain') == HIST_FLAVOR)
+        if not stable:
+            for item in ordered:
+                if item.get('toolchain') == HIST_FLAVOR:
+                    completed[item['id']].update(status='failed', reason='historical source or compiler changed during verification')
     report['functions'] = [completed[item['id']] for item in ledger['functions']]
     return report
 
 
-def validate_identity(identity, flavor):
+def validate_identity(identity, flavor, root=ROOT):
     require(isinstance(identity, dict) and isinstance(identity.get('name'), str)
             and re.fullmatch(r'[A-Za-z0-9_.+-]+', identity['name'])
             and isinstance(identity.get('sha256'), str) and HASH.fullmatch(identity['sha256'])
@@ -646,6 +929,24 @@ def validate_identity(identity, flavor):
     if flavor == 'clang':
         require(isinstance(identity.get('version'), str)
                 and re.fullmatch(r'(?:(?:Apple|Homebrew) )?clang version [A-Za-z0-9. +-]+', identity['version']), 'invalid recorded Clang version')
+    elif flavor == HIST_FLAVOR:
+        require(identity.get('target') == HIST_TARGET and identity.get('name') == 'xgcc'
+                and identity.get('version') == HIST_VERSION
+                and identity.get('assembler_version') == 'GNU assembler (GNU Binutils) 2.45.1'
+                and identity.get('search_policy') == HIST_LAYOUT['search_policy'],
+                'invalid recorded historical toolchain profile')
+        descriptor = (Path(root) / HIST_DESCRIPTOR).read_bytes()
+        require(json.loads(descriptor) == HIST_LAYOUT and identity.get('descriptor_sha256') == digest(descriptor),
+                'stale historical build descriptor')
+        components = identity.get('components')
+        require(isinstance(components, dict) and set(components) == {'cpp', 'cc1plus', 'as'},
+                'missing historical compiler components')
+        for name, component in components.items():
+            require(isinstance(component, dict) and component.get('name') == name
+                    and isinstance(component.get('sha256'), str) and HASH.fullmatch(component['sha256']),
+                    'invalid recorded historical component identity')
+        require(isinstance(identity.get('specs_sha256'), str) and HASH.fullmatch(identity['specs_sha256']),
+                'missing historical specs identity')
     else:
         require(flavor == 'ee-gcc' and identity.get('target') == EE_TARGET
                 and identity.get('name') == EE_TARGET + '-g++'
@@ -662,14 +963,18 @@ def validate_identity(identity, flavor):
 def recorded_matches(report, ledger, root=ROOT):
     validate_ledger(ledger, root)
     ordered, members = call_graph(ledger)
-    require(report.get('schema_version') in (1, 2, 3) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
+    require(report.get('schema_version') in (1, 2, 3, 4) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
     if members:
-        require(report['schema_version'] == 3 and report.get('call_policy') == CALL_POLICY
+        require(report['schema_version'] in (3, 4) and report.get('call_policy') == CALL_POLICY
                 and report.get('call_policy_sha256') == digest(canonical(CALL_POLICY)), 'missing direct-call receipt policy')
     require(report.get('target') == TARGET['id'] and report.get('baseline_sha256') == TARGET['baseline_sha256'], 'receipt targets different baseline')
     require(report.get('ledger_sha256') == digest(canonical(ledger)), 'stale receipt: ledger changed')
     require(report.get('verifier_sha256') == digest(Path(__file__).read_bytes()), 'stale receipt: verifier changed')
     flavors = {item.get('toolchain', 'clang') for item in ledger['functions']}
+    if HIST_FLAVOR in flavors:
+        require(report['schema_version'] == 4 and report.get('historical_policy') == HIST_POLICY
+                and report.get('historical_policy_sha256') == digest(canonical(HIST_POLICY)),
+                'missing historical comparison receipt policy')
     if report['schema_version'] == 1:
         require(flavors == {'clang'}, 'legacy receipts cannot claim EE GCC comparisons')
         identity = dict(report.get('compiler', {}))
@@ -679,7 +984,7 @@ def recorded_matches(report, ledger, root=ROOT):
         identities = report.get('toolchains')
         require(isinstance(identities, dict) and set(identities) == flavors, 'receipt toolchain inventory mismatch')
     for flavor, identity in identities.items():
-        validate_identity(identity, flavor)
+        validate_identity(identity, flavor, root)
     require(isinstance(report.get('recorded_at'), str), 'missing comparison time')
     datetime.fromisoformat(report['recorded_at'])
     results = report.get('functions')
@@ -697,6 +1002,15 @@ def recorded_matches(report, ledger, root=ROOT):
         if result['status'] == 'matched':
             if flavor == 'ee-gcc':
                 require(result.get('data_model') == EE_MODEL, 'missing recorded EE GCC data-model evidence')
+            if flavor == HIST_FLAVOR:
+                require(result.get('data_model') == historical_model_record()
+                        and result.get('comparison_mode') == HIST_MODE and result.get('control_flow_policy') == HIST_MODE
+                        and result.get('object_flags') == HIST_OBJECT_FLAGS
+                        and result.get('assembler_args') == HIST_AS_FLAGS + ['-o', '<fresh-object.o>']
+                        and isinstance(result.get('assembly_sha256'), str) and HASH.fullmatch(result['assembly_sha256']),
+                        'missing historical compilation/model/audit evidence')
+                require(result.get('historical_evidence_sha256') == historical_evidence(result),
+                        'inconsistent historical stage evidence')
             require(result.get('size') == item['size'] and all(isinstance(result.get(key), str) and HASH.fullmatch(result[key])
                     for key in ('object_sha256', 'original_sha256', 'rebuilt_sha256'))
                     and result['original_sha256'] == result['rebuilt_sha256'], 'inconsistent match receipt')
@@ -719,17 +1033,21 @@ def recorded_matches(report, ledger, root=ROOT):
                         and callee.get('rebuilt_sha256') == binding['body_sha256'], 'receipt dependency is not source-matched')
                 dependencies[binding['callee_id']] = digest(canonical(callee))
             require(result.get('dependencies') == dependencies, 'stale or missing dependency result binding')
+        elif item.get('comparison_mode') == HIST_MODE:
+            require('relocations' not in result and 'dependencies' not in result, 'historical leaf cannot claim linked dependencies')
         else:
             require('comparison_mode' not in result and 'relocations' not in result and 'dependencies' not in result,
                     'leaf receipt cannot claim relocated comparison')
     return matched
 
 
-def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROOT, ee_compiler=None):
+def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROOT, ee_compiler=None,
+                      historical_compiler=None, historical_assembler=None):
     destination = Path(destination)
     require(destination.suffix == '.json' and not destination.is_symlink(), 'receipt must be a regular JSON path')
     protected = {Path(ledger_path).resolve(), Path(game).resolve(), Path(__file__).resolve()}
-    for selected in (compiler, ee_compiler):
+    protected.add((Path(root) / HIST_DESCRIPTOR).resolve())
+    for selected in (compiler, ee_compiler, historical_compiler, historical_assembler):
         resolved_compiler = shutil.which(str(selected)) if selected else None
         if resolved_compiler:
             protected.add(Path(resolved_compiler).resolve())
@@ -737,7 +1055,7 @@ def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROO
     require(destination.resolve() not in protected, 'receipt path collides with a protected input')
     if destination.exists():
         previous = json.loads(destination.read_text(encoding='utf-8'))
-        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2, 3)
+        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2, 3, 4)
                 and previous.get('scope') == SCOPE, 'refusing to replace a file that is not a comparison receipt')
         destination.unlink()
 
@@ -755,20 +1073,24 @@ def main(argv=None):
             command.add_argument('--game', type=Path, required=True)
             command.add_argument('--compiler', help='Clang compiler for default/clang entries')
             command.add_argument('--ee-compiler', help='Isolated EE GCC g++ for ee-gcc entries')
+            command.add_argument('--historical-compiler', type=Path, help='Reviewed fixed-layout GCC 2.95.2 xgcc for isolated integer leaves')
+            command.add_argument('--historical-assembler', type=Path, help='Reviewed fixed-layout EE assembler for historical generated assembly')
             command.add_argument('--output-dir', type=Path, default=ROOT / 'work/verifier')
     args = parser.parse_args(argv)
     try:
         ledger = load_ledger(args.ledger)
         if args.command == 'verify':
             destination = args.report or args.output_dir / 'verification.json'
-            invalidate_report(destination, args.ledger, ledger, args.game, args.compiler, ee_compiler=args.ee_compiler)
+            invalidate_report(destination, args.ledger, ledger, args.game, args.compiler, ee_compiler=args.ee_compiler,
+                              historical_compiler=args.historical_compiler, historical_assembler=args.historical_assembler)
         if args.command == 'check':
             require(not args.require_matches or args.report is not None, '--require-matches requires --report')
             count = len(recorded_matches(json.loads(args.report.read_text()), ledger)) if args.report else 0
             require(not args.require_matches or count == len(ledger['functions']), 'receipt does not record a match for every ledger function')
             print(f'Record checks passed: {len(ledger["functions"])} candidates, {count} recorded matches; no fresh private-byte verification.')
             return 0
-        report = verify(ledger, args.game, args.compiler, args.output_dir, ee_compiler=args.ee_compiler)
+        report = verify(ledger, args.game, args.compiler, args.output_dir, ee_compiler=args.ee_compiler,
+                        historical_compiler=args.historical_compiler, historical_assembler=args.historical_assembler)
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
         count = len(recorded_matches(report, ledger))
