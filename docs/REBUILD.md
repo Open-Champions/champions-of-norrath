@@ -124,8 +124,8 @@ exact storage, source-model, metadata and review checks.
 This mode requires ledger schema 5 and receipt schema 8: exactly one byte owner,
 exactly one float-store owner, and up to two scalar-v2 owners. Its owner review
 uses schema 4; existing scalar and float review versions remain unchanged.
-Adding verifier support does not admit another source function. The current
-public count remains ten until a separate source review and admission commit.
+Adding verifier support does not itself admit another source function; source
+review and fresh comparison are separate requirements.
 Older policy lanes remain supported, but any verifier hash change invalidates
 saved receipts. Refresh them through a fresh comparison with their existing
 ledger; do not edit their recorded hashes into agreement.
@@ -234,8 +234,8 @@ code relocations. General runtime-data relocations remain unsupported. Source va
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **ten complete functions and 152 matching code bytes**,
-plus **three separately verified initialized data objects totaling twelve bytes**.
+Current source progress is **eleven complete functions and 160 matching code bytes**,
+plus **four separately verified initialized data objects totaling thirteen bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -339,3 +339,21 @@ complete compiled body still differs from the original, as does the larger
 optional-reset candidate. They receive no match credit. The original local owner
 uses an explicit external-linkage comparison adapter; full source integration
 and runtime initialization remain unfinished.
+
+The eleventh complete body, `worldSetHalfFrustumMode(int)` at `0x0017dcb8`,
+stores the argument's low byte in the independently authored clipping-mode state
+at `0x00484134`. All eight function bytes and the separate one-byte zero
+initializer match. The byte-store profile checks the full return and delay-slot
+store, one GP-relative relocation, and the fresh source owner with natural
+one-byte alignment. Coverage is eleven functions totaling 160 code bytes and
+four initialized objects totaling thirteen bytes.
+
+The [source review](../targets/SLUS-20565/half-frustum-mode-review.json) describes
+the defined int32-to-unsigned-char8 conversion modulo 256. Independent fresh
+compilation and linking reproduced the objects and complete function. Native
+ASan/UBSan and original/generated instruction checks passed 133,140 cases,
+including every signed16 input and signed32 boundaries. Another 2,048 raw64
+register cases checked only the machine store's low-byte behavior. This does not
+establish the original storage's signedness, return declaration, translation-unit
+linkage, storage lifetime or runtime GP preservation. Full camera behavior and
+PS2 execution remain unverified.

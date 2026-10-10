@@ -1,0 +1,60 @@
+{
+  "schema_version": 4,
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "owner_id": "half_frustum_mode_state",
+  "function_ids": [
+    "world_set_half_frustum_mode"
+  ],
+  "source_sha256": {
+    "reconstructed/half_frustum_mode_state.cpp": "dbb36db777b796a1b4b890ac130400638ce75cde51f9c2fb46cc82d96688d1f1",
+    "reconstructed/world_set_half_frustum_mode.cpp": "ecde3967a702dbd3f97137314a58fc89fa37a2291c91ce4e88a8a7be16e4d993"
+  },
+  "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+  "runtime": {
+    "gp_preservation": "unverified",
+    "initialization": "unverified"
+  },
+  "comparison_mode": "ee-gprel-byte-store-v1",
+  "operations": {
+    "world_set_half_frustum_mode": "store-byte-argument"
+  },
+  "value_contract": {
+    "source": "int32-to-unsigned8-modulo256",
+    "target": "store-low8-a0",
+    "memory": "exclusive-live-ordinary-unsigned-char-object",
+    "original_signedness": "unclaimed"
+  },
+  "manual_contract": {
+    "status": "independently reviewed self-contained source and byte-store verifier; fresh public comparison recorded separately",
+    "original_function": {
+      "symbol": "worldSetHalfFrustumMode__Fi",
+      "address": "0x0017dcb8",
+      "size": 8
+    },
+    "original_owner": {
+      "symbol": "halfFrustumMode",
+      "address": "0x00484134",
+      "size": 1,
+      "binding": "local",
+      "storage": "writable file-backed .sdata",
+      "initializer_hex": "00"
+    },
+    "operation": "Convert any signed32 int value to unsigned8 modulo256 and store one live exclusive ordinary byte. Actual JR RA/SB A0 GP delay slot writes only that byte and ignores higher register bits.",
+    "types": "Source unsigned-char state adapter does not establish original storage signedness or function return declaration.",
+    "linkage": "Original-local owner to unique global source adapter. Only exact one-byte extent is owned; no adjacent bytes or lifetime inferred.",
+    "validation": {
+      "fresh_full_function_and_initializer_match": true,
+      "native_and_instruction_cases": 133140,
+      "machine_only_raw64_cases": 2048,
+      "sanitizers": "ASan+UBSan",
+      "independent_source_checkpoint": "08445c5f961428bedc7784d4e4ff4463ad1f87bdcdef31dafe645a0d51904b81",
+      "independent_verifier_review": "185 repository tests; 299 malformed object, receipt and ledger/review cases; fresh 11+4, legacy 10+3 and minimal float+byte comparisons; two actual late source/review drift checks.",
+      "independent_policy_checkpoint": "dad8d0d1342b6621d8c03c8743c4c00119e11d0385293b4b060c92a25f5f56be"
+    },
+    "limits": [
+      "No PS2 execution or runtime GP, lifetime or initialization proof.",
+      "No original signedness, return declaration, full translation-unit linkage or general ABI claim.",
+      "Raw 64-bit register cases describe the machine store only; they do not extend the source int32 argument contract."
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "target": {
     "id": "SLUS-20565-sha256-9a60f13c5c31",
     "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
@@ -359,6 +359,52 @@
         "object_symbol": "norrath_global_char_light_scale",
         "operation": "store-float-argument"
       }
+    },
+    {
+      "id": "world_set_half_frustum_mode",
+      "source": "reconstructed/world_set_half_frustum_mode.cpp",
+      "symbol": "norrath_set_half_frustum_mode",
+      "original_symbol": "worldSetHalfFrustumMode__Fi",
+      "address": "0x0017dcb8",
+      "size": 8,
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G8",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "comparison_mode": "ee-gprel-byte-store-v1",
+      "data_binding": {
+        "owner_id": "half_frustum_mode_state",
+        "object_symbol": "norrath_half_frustum_mode",
+        "operation": "store-byte-argument"
+      },
+      "evidence": {
+        "behavior": "Converts the signed 32-bit argument to unsigned char modulo 256 and stores exactly one byte. The complete target body returns through RA with SB A0 in the delay slot; no reads, stack changes, calls or arithmetic.",
+        "boundary": "Complete global STT_FUNC at 0x0017dcb8, size eight, with no intersecting or alias symbol and a unique executable load mapping.",
+        "owner": "Separate source definition matches the complete zero initializer of local size-one halfFrustumMode at 0x00484134 in writable file-backed .sdata. Exact one-byte extent only; neighboring state is not owned.",
+        "interface": "Checked int32 and unsigned-char8 comparison adapter with defined modulo conversion. Original storage signedness, return declaration and translation-unit linkage remain unknown. Live ordinary exclusive storage is required.",
+        "semantic_check": "133,140 native ASan/UBSan and original/generated instruction cases passed, covering every signed16 value, signed32 boundaries and random values with two prior states. Another 2,048 raw64-register model cases check only the target low-byte store. Independent fresh builds reproduced both objects and linked ELF.",
+        "limits": "No PS2 execution, runtime GP preservation, original lifetime, initialization execution or full camera-subsystem claim."
+      }
     }
   ],
   "data_objects": [
@@ -481,6 +527,46 @@
       "linkage_adapter": "original-local-to-unique-extern",
       "review": "targets/SLUS-20565/global-char-light-scale-review.json",
       "comparison_mode": "ee-gprel-float-store-v1"
+    },
+    {
+      "id": "half_frustum_mode_state",
+      "source": "reconstructed/half_frustum_mode_state.cpp",
+      "symbol": "norrath_half_frustum_mode",
+      "original_symbol": "halfFrustumMode",
+      "address": "0x00484134",
+      "size": 1,
+      "original_binding": 0,
+      "section": ".sdata",
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G8",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "data_type": "uint8",
+      "storage": "sdata-file-zero",
+      "initializer": 0,
+      "linkage_adapter": "original-local-to-unique-extern",
+      "review": "targets/SLUS-20565/half-frustum-mode-review.json",
+      "comparison_mode": "ee-gprel-byte-store-v1"
     }
   ]
 }
