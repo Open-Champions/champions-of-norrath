@@ -139,6 +139,44 @@
         "semantic_check": "Independent host compile with undefined-behavior checks tested every signed-short value (65,536) and preserved the field and surrounding prefix sentinels. This is not PS2 execution.",
         "interface": "Authored CameraYawView comparison structure requires a valid aligned live view. Original class layout/type/lifetime, original return type, caller behavior and full ABI remain unverified."
       }
+    },
+    {
+      "id": "skill_darkness_skill_point_cost",
+      "original_symbol": "getSkillPointCost__13SkillDarknessi",
+      "address": "0x002982f0",
+      "size": 12,
+      "source": "reconstructed/skill_darkness_skill_point_cost.cpp",
+      "symbol": "norrath_darkness_skill_point_cost",
+      "language": "c++",
+      "compiler_args": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17"
+      ],
+      "evidence": {
+        "behavior": "Returns the second argument times three modulo 2^32, with signed adapter overflow defined by -fwrapv; no memory, stack changes or calls.",
+        "boundary": "Global STT_FUNC extent 12 bytes, no aliases/overlaps. Preceding function ends at 0x002982ec; following begins at 0x00298300. Four padding bytes on each side are excluded.",
+        "dispatch": "Retained SkillDarkness vtable at 0x00450e00 contains an entry pointing to this function at 0x00450e2c. Dispatch is unexecuted.",
+        "interface": "The opaque receiver and signed 32-bit parameter/return are comparison adapters. Original return type and whole-program ABI remain unknown.",
+        "semantic_check": "Independent host compilation with undefined-behavior checks and -fwrapv passed 10,015 cases including signed limits and overflow-threshold neighbors against a wide unsigned modulo reference; no PS2 runtime execution."
+      },
+      "toolchain": "ee-gcc"
     }
   ]
 }

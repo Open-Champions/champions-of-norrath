@@ -3,9 +3,9 @@
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "53382b6bc430e313241e715e1b46958eae1c83cd568e2b7d82e0b62a3cbda4b2",
+  "ledger_sha256": "40b151b458870907858b01b9f03d4376679a2af2e608630f7d160fcd7d251148",
   "verifier_sha256": "68780e10e317d86f782bd3b85ab63c5e6559053f444c25de1cd9c67f7bbc4f1a",
-  "recorded_at": "2026-10-10T08:26:56.133413+00:00",
+  "recorded_at": "2026-10-10T08:27:09.899349+00:00",
   "toolchains": {
     "clang": {
       "flavor": "clang",
@@ -187,6 +187,56 @@
       "size": 8,
       "original_sha256": "05833c85b57776fcf001ed18bfa99b1d2bf89862cbb8387a835fa4168cc4a81e",
       "rebuilt_sha256": "05833c85b57776fcf001ed18bfa99b1d2bf89862cbb8387a835fa4168cc4a81e"
+    },
+    {
+      "id": "skill_darkness_skill_point_cost",
+      "source_sha256": "7c2e27a95d9a5cd064bb735ca89396ef46f403e188ad11357efcba07c1851edf",
+      "compiler_args": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "toolchain": "ee-gcc",
+      "toolchain_sha256": "c59895b4427579def92cdbd71ed195f72317c71ed65967e44522c52a41f00545",
+      "status": "matched",
+      "data_model": {
+        "__mips_single_float": "1",
+        "__SIZEOF_INT__": "4",
+        "__mips_fpr": "32",
+        "__SIZEOF_LONG__": "4",
+        "__mips_eabi": "1",
+        "_MIPS_ARCH_R5900": "1",
+        "__SIZEOF_POINTER__": "4",
+        "__mips64": "1"
+      },
+      "object_sha256": "1ce7dae8719fc91317962de9024817409eb349179aa5528ced8ff67277b992ed",
+      "size": 12,
+      "original_sha256": "15fadbbddfdd0e0bca71520440704e48e43f2fbaa2b9f914f44ae6fb8ece7098",
+      "rebuilt_sha256": "15fadbbddfdd0e0bca71520440704e48e43f2fbaa2b9f914f44ae6fb8ece7098"
     }
   ]
 }
