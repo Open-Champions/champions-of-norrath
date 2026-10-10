@@ -1,15 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
   "ledger_sha256": "1fe50458cd99b7cce88828a0c2ffc1628ffd8777111775f5108efafe588193fc",
-  "verifier_sha256": "006edc925c5f2e01a9919f2b69865db16ef4de55402ee51c032727167aae491a",
-  "recorded_at": "2026-10-10T08:14:56.838679+00:00",
-  "compiler": {
-    "name": "clang-20",
-    "sha256": "01ac721d7f35bb9a1c74b4a17c6253fd645e1602a7322a47003eec1de00a8bd0",
-    "version": "Homebrew clang version 20.1.8"
+  "verifier_sha256": "68780e10e317d86f782bd3b85ab63c5e6559053f444c25de1cd9c67f7bbc4f1a",
+  "recorded_at": "2026-10-10T08:25:25.952901+00:00",
+  "toolchains": {
+    "clang": {
+      "flavor": "clang",
+      "name": "clang-20",
+      "sha256": "01ac721d7f35bb9a1c74b4a17c6253fd645e1602a7322a47003eec1de00a8bd0",
+      "version": "Homebrew clang version 20.1.8"
+    }
   },
   "functions": [
     {
@@ -39,6 +42,8 @@
         "-o",
         "<fresh-object.o>"
       ],
+      "toolchain": "clang",
+      "toolchain_sha256": "10e95f526e5e8961ecb37dddb5cd8994b1ce2ee5be065840226e858c8fd2221a",
       "status": "matched",
       "object_sha256": "5f08ff71b09c144f16dff84cd85b088b52d74e3a7ffff1fb75ebd389600a8347",
       "size": 8,
@@ -72,6 +77,8 @@
         "-o",
         "<fresh-object.o>"
       ],
+      "toolchain": "clang",
+      "toolchain_sha256": "10e95f526e5e8961ecb37dddb5cd8994b1ce2ee5be065840226e858c8fd2221a",
       "status": "matched",
       "object_sha256": "415b0d15cc1067f697c53aa0695415cb3b688f6ce7b9a0fd586ac2f0dc1305d5",
       "size": 8,
@@ -105,6 +112,8 @@
         "-o",
         "<fresh-object.o>"
       ],
+      "toolchain": "clang",
+      "toolchain_sha256": "10e95f526e5e8961ecb37dddb5cd8994b1ce2ee5be065840226e858c8fd2221a",
       "status": "matched",
       "object_sha256": "5da665e46ed5ddb6f26998169d147bb8e7d9d7813c01f93eadd8b71544b11124",
       "size": 8,

@@ -36,10 +36,21 @@ ALLOWED_FLAGS = REQUIRED_FLAGS | {'-O0', '-O1', '-O2', '-O3', '-Os', '-Oz',
     '-fomit-frame-pointer', '-fno-omit-frame-pointer', '-fno-builtin',
     '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-msoft-float',
     '-mhard-float', '-fno-strict-aliasing', '-fwrapv', '-std=c++17'}
+EE_TARGET = 'mips64r5900el-ps2-elf'
+EE_VERSION = '15.2.0'
+EE_FLAGS = {'-std=c++17', '-O2', '-march=r5900', '-mabi=eabi', '-mgp64', '-mlong32',
+            '-mfp32', '-msingle-float', '-ffreestanding', '-fno-pic', '-mno-abicalls',
+            '-fno-stack-protector', '-fno-exceptions', '-fno-rtti', '-fwrapv',
+            '-fno-unwind-tables', '-fno-asynchronous-unwind-tables', '-fomit-frame-pointer', '-G0'}
+EE_MODEL = {'__SIZEOF_INT__': '4', '__SIZEOF_LONG__': '4', '__SIZEOF_POINTER__': '4',
+            '__mips_eabi': '1', '__mips64': '1', '_MIPS_ARCH_R5900': '1',
+            '__mips_fpr': '32', '__mips_single_float': '1'}
 FIXED_FLAGS = ['-nostdinc', '-nostdinc++', '-x', 'c++']
 INJECTING_ENV = ('CCC_OVERRIDE_OPTIONS', 'CL', '_CL_', 'CPATH', 'CPLUS_INCLUDE_PATH',
                  'C_INCLUDE_PATH', 'OBJC_INCLUDE_PATH', 'COMPILER_PATH', 'GCC_EXEC_PREFIX',
-                 'LIBRARY_PATH', 'SDKROOT', 'DYLD_INSERT_LIBRARIES', 'LD_PRELOAD')
+                 'LIBRARY_PATH', 'SDKROOT', 'DYLD_INSERT_LIBRARIES', 'LD_PRELOAD',
+                 'GCC_SPECS', 'GCC_COMPARE_DEBUG', 'GCC_COLORS', 'LD_LIBRARY_PATH',
+                 'DYLD_LIBRARY_PATH', 'DYLD_FRAMEWORK_PATH')
 
 
 def require(condition, message):
@@ -216,7 +227,10 @@ def validate_ledger(ledger, root=ROOT):
         source_bytes(source)
         flags = item['compiler_args']
         require(isinstance(flags, list) and all(isinstance(f, str) for f in flags), 'compiler arguments must be strings')
-        require(len(flags) == len(set(flags)) and REQUIRED_FLAGS <= set(flags) <= ALLOWED_FLAGS, 'unsupported or missing compiler flags')
+        flavor = item.get('toolchain', 'clang')
+        require(flavor in ('clang', 'ee-gcc'), 'unsupported toolchain flavor')
+        required, allowed = (REQUIRED_FLAGS, ALLOWED_FLAGS) if flavor == 'clang' else (EE_FLAGS, EE_FLAGS)
+        require(len(flags) == len(set(flags)) and required <= set(flags) <= allowed, 'unsupported or missing compiler flags')
         require(sum(f.startswith('-O') for f in flags) == 1, 'exactly one optimization setting is required')
         require(not ({'-msoft-float', '-mhard-float'} <= set(flags)) and not ({'-fomit-frame-pointer', '-fno-omit-frame-pointer'} <= set(flags)), 'conflicting compiler arguments')
         ids.add(ident)
@@ -245,46 +259,102 @@ def effective_args(item):
     return item['compiler_args'] + FIXED_FLAGS + ['-c', '<source-snapshot.cpp>', '-o', '<fresh-object.o>']
 
 
-def verify(ledger, game, compiler, output_dir, root=ROOT):
+def compiler_output(command, env, **kwargs):
+    result = subprocess.run(command, capture_output=True, timeout=15, check=False, env=env, **kwargs)
+    require(result.returncode == 0, 'compiler identity probe failed')
+    return result.stdout
+
+
+def toolchain_identity(flavor, compiler, env):
+    require(compiler is not None, 'missing compiler for toolchain ' + flavor)
+    executable = shutil.which(str(compiler))
+    require(executable is not None, 'compiler not found for toolchain ' + flavor)
+    executable = Path(executable).resolve()
+    driver_hash = digest(executable.read_bytes())
+    if flavor == 'clang':
+        version = compiler_output([str(executable), '--no-default-config', '--version'], env).decode('utf-8').splitlines()
+        require(version and re.fullmatch(r'(?:(?:Apple|Homebrew) )?clang version [A-Za-z0-9. +-]+', version[0]), 'compiler identity must be a sanitized Clang version')
+        return executable, {'flavor': flavor, 'name': executable.name, 'sha256': driver_hash, 'version': version[0]}
+    require(flavor == 'ee-gcc' and executable.name == EE_TARGET + '-g++'
+            and executable.parent.name == 'bin', 'EE GCC requires the reviewed target g++ driver layout')
+    prefix = executable.parent.parent
+    version = compiler_output([str(executable), '--version'], env).decode('ascii').splitlines()
+    require(version and version[0] == EE_TARGET + '-g++ (GCC) ' + EE_VERSION, 'unsupported EE GCC version')
+    require(compiler_output([str(executable), '-dumpmachine'], env).decode('ascii').strip() == EE_TARGET, 'EE GCC target mismatch')
+    # GCC can auto-load a specs file; built-in -dumpspecs alone does not bind it.
+    require(compiler_output([str(executable), '-print-file-name=specs'], env).decode('utf-8').strip() == 'specs',
+            'external GCC specs files are unsupported')
+    components = {}
+    expected = {'cc1plus': prefix / 'libexec/gcc' / EE_TARGET / EE_VERSION / 'cc1plus',
+                'as': prefix / EE_TARGET / 'bin/as'}
+    for name, expected_path in expected.items():
+        selected = compiler_output([str(executable), '-print-prog-name=' + name], env).decode('utf-8').strip()
+        selected = Path(selected)
+        require(selected.is_absolute() and selected.resolve().is_relative_to(prefix)
+                and selected.resolve() == expected_path.resolve(), 'EE GCC component escapes its reviewed install layout')
+        components[name] = {'name': name, 'sha256': digest(selected.read_bytes())}
+    specs_hash = digest(compiler_output([str(executable), '-dumpspecs'], env))
+    require(digest(executable.read_bytes()) == driver_hash, 'compiler changed during identity probes')
+    return executable, {'flavor': flavor, 'name': executable.name, 'sha256': driver_hash, 'version': version[0],
+                        'target': EE_TARGET, 'components': components, 'specs_sha256': specs_hash}
+
+
+def ee_data_model(executable, flags, env):
+    output = compiler_output([str(executable)] + flags + FIXED_FLAGS + ['-dM', '-E', '-'], env, input=b'')
+    macros = {}
+    for line in output.decode('ascii').splitlines():
+        parts = line.split(maxsplit=2)
+        if len(parts) == 3 and parts[0] == '#define' and parts[1] in EE_MODEL:
+            require(parts[1] not in macros, 'duplicate EE data-model declaration')
+            macros[parts[1]] = parts[2]
+    require(macros == EE_MODEL, 'EE GCC data model does not match reviewed R5900/EABI leaf scope')
+    return macros
+
+
+def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
     validate_ledger(ledger, root)
     baseline = baseline_elf(game)
     originals = {item['id']: baseline.original(item) for item in ledger['functions']}
     for name in INJECTING_ENV:
         require(not os.environ.get(name), 'unset ' + name + '; unrecorded compiler environment injection is unsupported')
-    executable = shutil.which(str(compiler))
-    require(executable is not None, 'compiler not found')
-    executable = Path(executable).resolve()
-    compiler_hash = digest(executable.read_bytes())
-    # Do not inherit ambient compiler paths, config, include paths or dylib hooks.
     env = {'PATH': os.defpath, 'LANG': 'C', 'LC_ALL': 'C'}
-    probe = subprocess.run([str(executable), '--no-default-config', '--version'], capture_output=True, timeout=15, check=False, env=env)
-    require(probe.returncode == 0, 'compiler version probe failed')
-    version = probe.stdout.decode('utf-8', errors='replace').splitlines()
-    require(version and re.fullmatch(r'(?:(?:Apple|Homebrew) )?clang version [A-Za-z0-9. +-]+', version[0]), 'compiler identity must be a sanitized Clang version')
+    flavors = {item.get('toolchain', 'clang') for item in ledger['functions']}
+    selected = {'clang': compiler, 'ee-gcc': ee_compiler}
+    toolchains = {flavor: toolchain_identity(flavor, selected[flavor], env) for flavor in sorted(flavors)}
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    report = {'schema_version': 1, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
+    report = {'schema_version': 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
               'ledger_sha256': digest(canonical(ledger)), 'verifier_sha256': digest(Path(__file__).read_bytes()),
               'recorded_at': datetime.now(timezone.utc).isoformat(),
-              'compiler': {'name': executable.name, 'sha256': compiler_hash, 'version': version[0]}, 'functions': []}
+              'toolchains': {flavor: value[1] for flavor, value in toolchains.items()}, 'functions': []}
     for item in ledger['functions']:
+        flavor = item.get('toolchain', 'clang')
+        executable, identity = toolchains[flavor]
         source = local_path(root, item['source'])
         contents = source_bytes(source)
-        result = {'id': item['id'], 'source_sha256': digest(contents), 'compiler_args': effective_args(item), 'status': 'failed'}
-        # A new isolated directory prevents successful exit from reusing a stale object.
+        result = {'id': item['id'], 'source_sha256': digest(contents), 'compiler_args': effective_args(item),
+                  'toolchain': flavor, 'toolchain_sha256': digest(canonical(identity)), 'status': 'failed'}
         with tempfile.TemporaryDirectory(prefix=item['id'] + '-', dir=output_dir) as directory:
             directory = Path(directory)
             snapshot, obj = directory / 'source.cpp', directory / 'fresh.o'
             snapshot.write_bytes(contents)
             command = [str(executable)] + item['compiler_args'] + FIXED_FLAGS + ['-c', str(snapshot.resolve()), '-o', str(obj.resolve())]
             try:
+                if flavor == 'ee-gcc':
+                    require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components changed before compilation')
+                    result['data_model'] = ee_data_model(executable, item['compiler_args'], env)
                 compiled = subprocess.run(command, cwd=directory, capture_output=True, timeout=120, check=False, env=env)
                 require(source.read_bytes() == contents and snapshot.read_bytes() == contents, 'source changed during compilation')
-                require(digest(executable.read_bytes()) == compiler_hash, 'compiler changed during compilation')
+                require(digest(executable.read_bytes()) == identity['sha256'], 'compiler changed during compilation')
+                if flavor == 'ee-gcc':
+                    require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components or specs changed during compilation')
                 (output_dir / (item['id'] + '.log')).write_bytes(compiled.stdout + compiled.stderr)
                 require(compiled.returncode == 0, 'compilation failed; inspect private build log')
                 object_data = obj.read_bytes()
-                code = Elf32(object_data).rebuilt(item['symbol'])
+                elf = Elf32(object_data)
+                if flavor == 'ee-gcc':
+                    require(elf.flags == BASELINE_FLAGS, 'EE GCC object flags differ from reviewed R5900/EABI64 target')
+                code = elf.rebuilt(item['symbol'])
                 require(len(code) == item['size'], 'rebuilt extent does not match the complete original function')
                 original = originals[item['id']]
                 result.update({'object_sha256': digest(object_data), 'size': len(code),
@@ -296,16 +366,44 @@ def verify(ledger, game, compiler, output_dir, root=ROOT):
     return report
 
 
+def validate_identity(identity, flavor):
+    require(isinstance(identity, dict) and isinstance(identity.get('name'), str)
+            and re.fullmatch(r'[A-Za-z0-9_.+-]+', identity['name'])
+            and isinstance(identity.get('sha256'), str) and HASH.fullmatch(identity['sha256'])
+            and identity.get('flavor') == flavor, 'invalid recorded compiler identity')
+    if flavor == 'clang':
+        require(isinstance(identity.get('version'), str)
+                and re.fullmatch(r'(?:(?:Apple|Homebrew) )?clang version [A-Za-z0-9. +-]+', identity['version']), 'invalid recorded Clang version')
+    else:
+        require(flavor == 'ee-gcc' and identity.get('target') == EE_TARGET
+                and identity.get('name') == EE_TARGET + '-g++'
+                and identity.get('version') == EE_TARGET + '-g++ (GCC) ' + EE_VERSION,
+                'invalid recorded EE GCC target/version')
+        components = identity.get('components')
+        require(isinstance(components, dict) and set(components) == {'cc1plus', 'as'}, 'missing EE GCC components')
+        for name, component in components.items():
+            require(isinstance(component, dict) and component.get('name') == name
+                    and isinstance(component.get('sha256'), str) and HASH.fullmatch(component['sha256']), 'invalid recorded EE GCC component identity')
+        require(isinstance(identity.get('specs_sha256'), str) and HASH.fullmatch(identity['specs_sha256']), 'missing EE GCC specs identity')
+
+
 def recorded_matches(report, ledger, root=ROOT):
     validate_ledger(ledger, root)
-    require(report.get('schema_version') == 1 and report.get('scope') == SCOPE, 'unsupported comparison receipt')
+    require(report.get('schema_version') in (1, 2) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
     require(report.get('target') == TARGET['id'] and report.get('baseline_sha256') == TARGET['baseline_sha256'], 'receipt targets different baseline')
     require(report.get('ledger_sha256') == digest(canonical(ledger)), 'stale receipt: ledger changed')
     require(report.get('verifier_sha256') == digest(Path(__file__).read_bytes()), 'stale receipt: verifier changed')
-    compiler = report.get('compiler', {})
-    require(isinstance(compiler, dict) and isinstance(compiler.get('name'), str) and re.fullmatch(r'[A-Za-z0-9_.+-]+', compiler['name'])
-            and isinstance(compiler.get('sha256'), str) and HASH.fullmatch(compiler['sha256'])
-            and isinstance(compiler.get('version'), str) and re.fullmatch(r'(?:(?:Apple|Homebrew) )?clang version [A-Za-z0-9. +-]+', compiler['version']), 'invalid recorded compiler identity')
+    flavors = {item.get('toolchain', 'clang') for item in ledger['functions']}
+    if report['schema_version'] == 1:
+        require(flavors == {'clang'}, 'legacy receipts cannot claim EE GCC comparisons')
+        identity = dict(report.get('compiler', {}))
+        identity['flavor'] = 'clang'
+        identities = {'clang': identity}
+    else:
+        identities = report.get('toolchains')
+        require(isinstance(identities, dict) and set(identities) == flavors, 'receipt toolchain inventory mismatch')
+    for flavor, identity in identities.items():
+        validate_identity(identity, flavor)
     require(isinstance(report.get('recorded_at'), str), 'missing comparison time')
     datetime.fromisoformat(report['recorded_at'])
     results = report.get('functions')
@@ -313,10 +411,16 @@ def recorded_matches(report, ledger, root=ROOT):
     matched = []
     for result, item in zip(results, ledger['functions']):
         require(result.get('id') == item['id'], 'receipt function identity mismatch')
+        flavor = item.get('toolchain', 'clang')
+        if report['schema_version'] == 2:
+            require(result.get('toolchain') == flavor
+                    and result.get('toolchain_sha256') == digest(canonical(identities[flavor])), 'receipt toolchain identity mismatch')
         require(result.get('source_sha256') == digest(source_bytes(local_path(root, item['source'])))
                 and result.get('compiler_args') == effective_args(item), 'stale receipt: source or compiler args changed')
         require(result.get('status') in ('matched', 'mismatched', 'failed'), 'invalid comparison status')
         if result['status'] == 'matched':
+            if flavor == 'ee-gcc':
+                require(result.get('data_model') == EE_MODEL, 'missing recorded EE GCC data-model evidence')
             require(result.get('size') == item['size'] and all(isinstance(result.get(key), str) and HASH.fullmatch(result[key])
                     for key in ('object_sha256', 'original_sha256', 'rebuilt_sha256'))
                     and result['original_sha256'] == result['rebuilt_sha256'], 'inconsistent match receipt')
@@ -324,18 +428,19 @@ def recorded_matches(report, ledger, root=ROOT):
     return matched
 
 
-def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROOT):
+def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROOT, ee_compiler=None):
     destination = Path(destination)
     require(destination.suffix == '.json' and not destination.is_symlink(), 'receipt must be a regular JSON path')
     protected = {Path(ledger_path).resolve(), Path(game).resolve(), Path(__file__).resolve()}
-    resolved_compiler = shutil.which(str(compiler))
-    if resolved_compiler:
-        protected.add(Path(resolved_compiler).resolve())
+    for selected in (compiler, ee_compiler):
+        resolved_compiler = shutil.which(str(selected)) if selected else None
+        if resolved_compiler:
+            protected.add(Path(resolved_compiler).resolve())
     protected.update(local_path(root, item['source']) for item in ledger['functions'])
     require(destination.resolve() not in protected, 'receipt path collides with a protected input')
     if destination.exists():
         previous = json.loads(destination.read_text(encoding='utf-8'))
-        require(isinstance(previous, dict) and previous.get('schema_version') == 1
+        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2)
                 and previous.get('scope') == SCOPE, 'refusing to replace a file that is not a comparison receipt')
         destination.unlink()
 
@@ -351,21 +456,22 @@ def main(argv=None):
             command.add_argument('--require-matches', action='store_true', help='Require a receipt with every ledger function recorded as matched')
         if name == 'verify':
             command.add_argument('--game', type=Path, required=True)
-            command.add_argument('--compiler', required=True)
+            command.add_argument('--compiler', help='Clang compiler for default/clang entries')
+            command.add_argument('--ee-compiler', help='Isolated EE GCC g++ for ee-gcc entries')
             command.add_argument('--output-dir', type=Path, default=ROOT / 'work/verifier')
     args = parser.parse_args(argv)
     try:
         ledger = load_ledger(args.ledger)
         if args.command == 'verify':
             destination = args.report or args.output_dir / 'verification.json'
-            invalidate_report(destination, args.ledger, ledger, args.game, args.compiler)
+            invalidate_report(destination, args.ledger, ledger, args.game, args.compiler, ee_compiler=args.ee_compiler)
         if args.command == 'check':
             require(not args.require_matches or args.report is not None, '--require-matches requires --report')
             count = len(recorded_matches(json.loads(args.report.read_text()), ledger)) if args.report else 0
             require(not args.require_matches or count == len(ledger['functions']), 'receipt does not record a match for every ledger function')
             print(f'Record checks passed: {len(ledger["functions"])} candidates, {count} recorded matches; no fresh private-byte verification.')
             return 0
-        report = verify(ledger, args.game, args.compiler, args.output_dir)
+        report = verify(ledger, args.game, args.compiler, args.output_dir, ee_compiler=args.ee_compiler)
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
         count = len(recorded_matches(report, ledger))

@@ -27,7 +27,7 @@ Use Python 3.10 or newer. Original inputs and inventory output stay private.
 python3 -m unittest discover -s tools -p 'test_*.py' -v
 python3 tools/link_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/new-link-layout.json
 python3 tools/symbol_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/symbols/new-inventory.json
-python3 tools/rebuild.py verify --game work/private/SLUS_205.65 --compiler /absolute/path/to/clang --output-dir work/rebuild --report work/rebuild/verification.json
+python3 tools/rebuild.py verify --game work/private/SLUS_205.65 --compiler /absolute/path/to/clang --ee-compiler /absolute/path/to/ee/bin/mips64r5900el-ps2-elf-g++ --output-dir work/rebuild --report work/rebuild/verification.json
 python3 tools/rebuild.py check --report targets/SLUS-20565/verification.json --require-matches
 ```
 
@@ -37,11 +37,19 @@ game bytes. `--require-matches` additionally rejects records lacking a match for
 each banked function. Public CI runs synthetic tests and this recorded-match
 check; it does not contain or freshly compare the private game.
 
-The sanitized receipt records baseline, verifier, source, compiler, object and
+The version-2 sanitized receipt records baseline, verifier, source, compiler, object and
 complete-function hashes, plus the effective compiler arguments. The verifier
 uses a fresh source snapshot and object location, rejects source/compiler changes
 during compilation, and rejects unrecorded compiler-option injection. Receipts
 are evidence records, not signatures or independent proof of execution.
+
+Each ledger entry selects its toolchain; omitted `toolchain` means Clang.
+`ee-gcc` requires the reviewed public-source GCC 15.2.0 build layout and fixed
+R5900/EABI flags. Its identity binds the driver, C++ frontend, assembler and
+built-in specs, with external specs rejected and identities checked around every
+compile. Macro and object-header checks reject the wrong target data model.
+The [toolchain build record](TOOLCHAINS.md) documents source pins and local build
+configuration. A mixed ledger requires both explicit compiler paths.
 
 ## Bounded reconstruction loop
 

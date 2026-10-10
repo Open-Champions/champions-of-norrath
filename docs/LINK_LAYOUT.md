@@ -43,6 +43,30 @@ Original linker/script identity, initialization order, general ABI, and the role
 of nonallocated overlays remain unknown. No linker script, linked reconstruction
 or startup success is implied by this inventory. See the [completion criteria](COMPLETION.md).
 
+## Loader research boundary
+
+`zero_fill_range` describes the ELF-declared memory tail, not observed PS2 writes.
+The pinned open [PS2SDK LOADFILE implementation](https://github.com/ps2dev/ps2sdk/blob/2c670453980fcc3fe46ead6399b730b12c8556eb/iop/system/loadfile/src/eeelfloader.c)
+sorts nonempty load records by file offset and requests file-size-derived DMA
+transfers. That path does not use `p_memsz` to clear tails or parse `.reginfo`, and
+returns a zero GP value. Its [homebrew startup](https://github.com/ps2dev/ps2sdk/blob/2c670453980fcc3fe46ead6399b730b12c8556eb/ee/startup/src/crt0.c)
+separately clears linker-defined BSS and establishes GP. These sources describe an
+open replacement and homebrew startup, not the exact retail loader or Norrath's
+startup. [DMA tag rounding](https://github.com/ps2dev/ps2sdk/blob/2c670453980fcc3fe46ead6399b730b12c8556eb/iop/system/sifman/src/sifman.c)
+also means requested byte lengths alone do not establish exact hardware writes.
+
+The pinned [PCSX2 fastboot hook](https://github.com/PCSX2/pcsx2/blob/355608952714678b3c57832fb82dc6a42956ed25/pcsx2/R5900.cpp)
+substitutes the game path for EELOAD; the inspected hook does not directly copy
+or zero load segments. Its [program-header helper](https://github.com/PCSX2/pcsx2/blob/355608952714678b3c57832fb82dc6a42956ed25/pcsx2/Elfheader.cpp)
+logs headers rather than implementing a loader. A concrete BIOS/runtime trace is
+still required to establish the actual launch behavior.
+
+From interval order alone, sequential copy-and-clear of load 2 then load 3 would
+restore `.srsdtors` after the earlier clear. The overlap therefore does not by
+itself establish corruption. Preserve these headers until the actual loader and
+game startup are understood; do not delete `.reginfo` or alter the tails based
+on generic ELF assumptions.
+
 ## Reproduce privately
 
 ```sh

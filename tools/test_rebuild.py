@@ -18,15 +18,16 @@ BASE = 0x100000
 
 
 def elf_fixture(kind=1, code=CODE, symbol_size=None, symbol_type=2, extra_function=False,
-                relocation=False, pdr=False, allocated_data=False, undefined=False):
+                relocation=False, pdr=False, allocated_data=False, undefined=False,
+                symbol=None, extra_value=None, extra_size=4):
     """ELF data assembled independently from the parser; never uses original bytes."""
-    name = 'original' if kind == 2 else 'candidate'
+    name = symbol or ('original' if kind == 2 else 'candidate')
     strings = b'\0' + name.encode() + b'\0other\0'
     syms = b'\0' * 16 + struct.pack('<IIIBBH', 1, BASE if kind == 2 else 0,
                                    len(code) if symbol_size is None else symbol_size,
                                    0x10 | symbol_type, 0, 1)
     if extra_function or undefined:
-        syms += struct.pack('<IIIBBH', len(name) + 2, BASE if kind == 2 else 0, 4, 0x12, 0, 0 if undefined else 1)
+        syms += struct.pack('<IIIBBH', len(name) + 2, (BASE if kind == 2 else 0) if extra_value is None else extra_value, extra_size, 0x12, 0, 0 if undefined else 1)
     rows = [('', b'', 0, 0, 0, 0, 0, 0),
             ('.text', code, 1, 6, BASE if kind == 2 else 0, 0, 0, 0),
             ('.symtab', syms, 2, 0, 0, 3, 1, 16),
@@ -247,7 +248,7 @@ class RebuildTests(unittest.TestCase):
             elif kind == 'verifier': bad['verifier_sha256'] = '0' * 64
             elif kind == 'flags': bad['functions'][0]['compiler_args'].append('-S')
             elif kind == 'duplicate': bad['functions'].append(copy.deepcopy(bad['functions'][0]))
-            elif kind == 'compiler': bad['compiler']['sha256'] = 'bad'
+            elif kind == 'compiler': bad['toolchains']['clang']['sha256'] = 'bad'
             else: bad['functions'][0]['size'] = 4
             with self.subTest(kind=kind), self.assertRaises(ValueError):
                 rebuild.recorded_matches(bad, self.ledger, self.root)
@@ -294,6 +295,204 @@ class RebuildTests(unittest.TestCase):
                 self.assertEqual(rebuild.main(['check', '--report', str(receipt), '--require-matches']), 1)
         with patch.object(rebuild, 'load_ledger', return_value=self.ledger), contextlib.redirect_stderr(__import__('io').StringIO()):
             self.assertEqual(rebuild.main(['check', '--require-matches']), 1)
+
+    def prepare_ee(self):
+        self.ee_prefix = self.root / 'ee'
+        self.ee_driver = self.ee_prefix / ('bin/' + rebuild.EE_TARGET + '-g++')
+        self.ee_cc1plus = self.ee_prefix / ('libexec/gcc/' + rebuild.EE_TARGET + '/' + rebuild.EE_VERSION + '/cc1plus')
+        self.ee_as = self.ee_prefix / (rebuild.EE_TARGET + '/bin/as')
+        for path in (self.ee_driver, self.ee_cc1plus, self.ee_as):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(('synthetic ' + path.name).encode())
+        self.ee_specs = b'synthetic builtin specs'
+        self.ledger['functions'][0].update(toolchain='ee-gcc', compiler_args=sorted(rebuild.EE_FLAGS))
+
+    @contextlib.contextmanager
+    def ee_fixture(self, mutation=None, overrides=None, object_data=None, source=None):
+        overrides = overrides or {}
+        calls = []
+        def run(command, **kwargs):
+            calls.append(command)
+            self.assertEqual(kwargs['env'], {'PATH': os.defpath, 'LANG': 'C', 'LC_ALL': 'C'})
+            self.assertNotIn('shell', kwargs)
+            option = command[-1]
+            response = None
+            if option == '--version': response = (rebuild.EE_TARGET + '-g++ (GCC) ' + rebuild.EE_VERSION + '\n').encode()
+            elif option == '-dumpmachine': response = rebuild.EE_TARGET.encode()
+            elif option == '-print-file-name=specs': response = b'specs'
+            elif option == '-print-prog-name=cc1plus': response = str(self.ee_cc1plus).encode()
+            elif option == '-print-prog-name=as': response = str(self.ee_as).encode()
+            elif option == '-dumpspecs': response = self.ee_specs
+            elif '-dM' in command:
+                response = '\n'.join('#define ' + k + ' ' + v for k, v in rebuild.EE_MODEL.items()).encode()
+                option = 'model'
+            if response is not None:
+                return subprocess.CompletedProcess(command, 0, overrides.get(option, response), b'')
+            self.assertEqual(command[-2], '-o')
+            snapshot = Path(command[-3])
+            self.assertEqual(snapshot.read_bytes(), (source or self.source).read_bytes())
+            Path(command[-1]).write_bytes(elf_fixture(pdr=True) if object_data is None else object_data)
+            if mutation: mutation()
+            return subprocess.CompletedProcess(command, 0, b'', b'')
+        with patch.object(rebuild.shutil, 'which', return_value=str(self.ee_driver)), patch.object(rebuild.subprocess, 'run', side_effect=run):
+            yield calls
+
+    def verify_ee(self, **kwargs):
+        with self.ee_fixture(**kwargs):
+            return rebuild.verify(self.ledger, self.game, None, self.output, self.root, ee_compiler=self.ee_driver)
+
+    def test_ee_match_records_components_specs_model_and_effective_flags(self):
+        self.prepare_ee()
+        report = self.verify_ee()
+        self.assertEqual(report['functions'][0]['status'], 'matched')
+        identity = report['toolchains']['ee-gcc']
+        self.assertEqual(set(identity['components']), {'cc1plus', 'as'})
+        self.assertEqual(identity['components']['as']['sha256'], rebuild.digest(self.ee_as.read_bytes()))
+        self.assertEqual(identity['specs_sha256'], rebuild.digest(self.ee_specs))
+        self.assertEqual(report['functions'][0]['data_model'], rebuild.EE_MODEL)
+        self.assertEqual(len(rebuild.recorded_matches(report, self.ledger, self.root)), 1)
+        self.assertNotIn(str(self.root), json.dumps(report))
+
+    def test_ee_component_and_specs_changes_during_compile_fail(self):
+        self.prepare_ee()
+        for component in (self.ee_driver, self.ee_cc1plus, self.ee_as):
+            before = component.read_bytes()
+            report = self.verify_ee(mutation=lambda: component.write_bytes(before + b' changed'))
+            self.assertEqual(report['functions'][0]['status'], 'failed')
+            self.assertEqual(rebuild.recorded_matches(report, self.ledger, self.root), [])
+            component.write_bytes(before)
+        def change_specs(): self.ee_specs = b'changed specs'
+        report = self.verify_ee(mutation=change_specs)
+        self.assertEqual(report['functions'][0]['status'], 'failed')
+        self.assertIn('specs changed', report['functions'][0]['reason'])
+
+    def test_ee_external_specs_and_component_escape_rejected_before_compile(self):
+        self.prepare_ee()
+        outside = self.root / 'outside-cc1plus'
+        outside.write_bytes(b'unrelated executable')
+        for override in ({'-print-file-name=specs': b'/unrecorded/specs'},
+                         {'-print-prog-name=cc1plus': str(outside).encode()},
+                         {'-print-prog-name=as': b'as'},
+                         {'-dumpmachine': b'x86_64-linux-gnu'},
+                         {'--version': b'GCC unknown'}):
+            with self.subTest(override=override), self.ee_fixture(overrides=override) as calls, self.assertRaises(ValueError):
+                rebuild.verify(self.ledger, self.game, None, self.output, self.root, ee_compiler=self.ee_driver)
+            self.assertFalse(any('-c' in call for call in calls))
+
+    def test_ee_component_symlink_outside_prefix_rejected(self):
+        self.prepare_ee()
+        outside = self.root / 'outside'
+        outside.write_bytes(b'outside')
+        self.ee_cc1plus.unlink()
+        self.ee_cc1plus.symlink_to(outside)
+        with self.ee_fixture(), self.assertRaisesRegex(ValueError, 'escapes'):
+            rebuild.verify(self.ledger, self.game, None, self.output, self.root, ee_compiler=self.ee_driver)
+
+    def test_ee_environment_injection_rejected_before_probes(self):
+        self.prepare_ee()
+        for name in ('GCC_EXEC_PREFIX', 'COMPILER_PATH', 'GCC_SPECS', 'GCC_COMPARE_DEBUG', 'LD_LIBRARY_PATH'):
+            with patch.dict(os.environ, {name: 'private-value'}), self.ee_fixture() as calls, self.assertRaises(ValueError):
+                rebuild.verify(self.ledger, self.game, None, self.output, self.root, ee_compiler=self.ee_driver)
+            self.assertEqual(calls, [])
+
+    def test_ee_fixed_flags_forbid_plugins_specs_paths_and_other_abis(self):
+        self.prepare_ee()
+        for flag in ('-fplugin=plugin.so', '-specs=custom.specs', '-B/tmp/tools', '-I/tmp/include',
+                     '-mabi=n32', '-mlong64', '@response', '-O3'):
+            ledger = copy.deepcopy(self.ledger)
+            ledger['functions'][0]['compiler_args'].append(flag)
+            with self.subTest(flag=flag), self.assertRaises(ValueError):
+                rebuild.validate_ledger(ledger, self.root)
+        self.ledger['functions'][0]['toolchain'] = 'unreviewed-gcc'
+        with self.assertRaisesRegex(ValueError, 'flavor'):
+            rebuild.validate_ledger(self.ledger, self.root)
+
+    def test_ee_wrong_model_or_object_flags_receive_no_credit(self):
+        self.prepare_ee()
+        report = self.verify_ee(overrides={'model': b'#define __SIZEOF_POINTER__ 8'})
+        self.assertEqual(report['functions'][0]['status'], 'failed')
+        bad = bytearray(elf_fixture())
+        struct.pack_into('<I', bad, 36, 0)
+        report = self.verify_ee(object_data=bytes(bad))
+        self.assertEqual(report['functions'][0]['status'], 'failed')
+        self.assertIn('object flags', report['functions'][0]['reason'])
+
+    def test_ee_receipt_component_tampering_requires_new_function_binding(self):
+        self.prepare_ee()
+        report = self.verify_ee()
+        for kind in ('driver', 'cc1plus', 'as', 'specs', 'model', 'flavor', 'binding', 'missing'):
+            bad = copy.deepcopy(report)
+            identity = bad['toolchains']['ee-gcc']
+            if kind == 'driver': identity['sha256'] = '0' * 64
+            elif kind in ('cc1plus', 'as'): identity['components'][kind]['sha256'] = '0' * 64
+            elif kind == 'specs': identity['specs_sha256'] = '0' * 64
+            elif kind == 'model': bad['functions'][0]['data_model']['__SIZEOF_POINTER__'] = '8'
+            elif kind == 'flavor': bad['functions'][0]['toolchain'] = 'clang'
+            elif kind == 'binding': bad['functions'][0]['toolchain_sha256'] = '0' * 64
+            else: del identity['components']['as']
+            with self.subTest(kind=kind), self.assertRaises(ValueError):
+                rebuild.recorded_matches(bad, self.ledger, self.root)
+
+    def test_legacy_receipts_are_clang_only_and_remain_hash_bound(self):
+        report = self.verify()
+        legacy = copy.deepcopy(report)
+        legacy['schema_version'] = 1
+        legacy['compiler'] = legacy.pop('toolchains')['clang']
+        del legacy['compiler']['flavor']
+        for key in ('toolchain', 'toolchain_sha256'):
+            del legacy['functions'][0][key]
+        self.assertEqual(len(rebuild.recorded_matches(legacy, self.ledger, self.root)), 1)
+        legacy['verifier_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'stale receipt'):
+            rebuild.recorded_matches(legacy, self.ledger, self.root)
+        self.prepare_ee()
+        report = self.verify_ee()
+        report['schema_version'] = 1
+        with self.assertRaisesRegex(ValueError, 'legacy receipts'):
+            rebuild.recorded_matches(report, self.ledger, self.root)
+
+    def test_mixed_dispatch_uses_distinct_sources_originals_and_compiler_identities(self):
+        self.prepare_ee()
+        second_code = b'\x05\x06\x07\x08' * 2
+        second_source = self.root / 'second.cpp'
+        second_source.write_text('extern "C" int second(void*, int) { return 24; }\n')
+        second = copy.deepcopy(self.ledger['functions'][0])
+        second.update(id='second', address='0x00100008', original_symbol='other', source='second.cpp', symbol='second')
+        first = self.ledger['functions'][0]
+        del first['toolchain']
+        first['compiler_args'] = sorted(rebuild.REQUIRED_FLAGS) + ['-O2']
+        self.ledger['functions'].append(second)
+        self.game.write_bytes(elf_fixture(kind=2, code=CODE + second_code, symbol_size=8,
+                                         extra_function=True, extra_value=BASE + 8, extra_size=8))
+        self.target['text']['size'] = 16
+        self.target['baseline_sha256'] = rebuild.digest(self.game.read_bytes())
+        self.ledger['target'] = copy.deepcopy(self.target)
+        with patch.object(rebuild, 'BASELINE_SIZE', self.game.stat().st_size):
+            with self.ee_fixture(object_data=elf_fixture(code=second_code, symbol='second'), source=second_source) as ee_calls:
+                ee_run = rebuild.subprocess.run
+                with self.compiler_fixture() as clang_calls:
+                    clang_run = rebuild.subprocess.run
+                    def dispatch(command, **kwargs):
+                        return (ee_run if Path(command[0]).resolve() == self.ee_driver.resolve() else clang_run)(command, **kwargs)
+                    def which(selected):
+                        return str(self.ee_driver if Path(selected).resolve() == self.ee_driver.resolve() else self.compiler)
+                    with patch.object(rebuild.subprocess, 'run', side_effect=dispatch), patch.object(rebuild.shutil, 'which', side_effect=which):
+                        report = rebuild.verify(self.ledger, self.game, self.compiler, self.output, self.root, ee_compiler=self.ee_driver)
+                        self.assertEqual([r['status'] for r in report['functions']], ['matched', 'matched'])
+                        self.assertEqual([r['toolchain'] for r in report['functions']], ['clang', 'ee-gcc'])
+                        self.assertEqual(len(rebuild.recorded_matches(report, self.ledger, self.root)), 2)
+                        self.assertEqual(sum('-c' in call for call in clang_calls), 1)
+                        self.assertEqual(sum('-c' in call for call in ee_calls), 1)
+                        bad = copy.deepcopy(report)
+                        bad['functions'][0]['toolchain'] = 'ee-gcc'
+                        bad['functions'][0]['toolchain_sha256'] = rebuild.digest(rebuild.canonical(bad['toolchains']['ee-gcc']))
+                        with self.assertRaisesRegex(ValueError, 'toolchain identity mismatch'):
+                            rebuild.recorded_matches(bad, self.ledger, self.root)
+                        for clang, ee in ((None, self.ee_driver), (self.compiler, None)):
+                            before = (sum('-c' in call for call in clang_calls), sum('-c' in call for call in ee_calls))
+                            with self.assertRaisesRegex(ValueError, 'missing compiler'):
+                                rebuild.verify(self.ledger, self.game, clang, self.output, self.root, ee_compiler=ee)
+                            self.assertEqual(before, (sum('-c' in call for call in clang_calls), sum('-c' in call for call in ee_calls)))
 
     def test_cli_help(self):
         result = subprocess.run([sys.executable, '-I', '-B', rebuild.__file__, '--help'], capture_output=True, text=True, timeout=15)
