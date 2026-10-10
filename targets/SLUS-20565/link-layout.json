@@ -1,0 +1,2227 @@
+{
+  "allocated_section_memory_overlaps": [],
+  "executable": {
+    "class": 32,
+    "endianness": "little",
+    "entry_point": 1048584,
+    "flags": 546455553,
+    "machine": "MIPS",
+    "sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+    "size": 9249659
+  },
+  "file_load_coverage": {
+    "covered_bytes": 8354434,
+    "covered_ranges": [
+      [
+        4096,
+        2229280
+      ],
+      [
+        2229376,
+        3700702
+      ],
+      [
+        3701532,
+        3701592
+      ],
+      [
+        3705688,
+        3705716
+      ],
+      [
+        3706880,
+        7217324
+      ],
+      [
+        7221248,
+        8368640
+      ]
+    ],
+    "gaps": [
+      [
+        0,
+        4096
+      ],
+      [
+        2229280,
+        2229376
+      ],
+      [
+        3700702,
+        3701532
+      ],
+      [
+        3701592,
+        3705688
+      ],
+      [
+        3705716,
+        3706880
+      ],
+      [
+        7217324,
+        7221248
+      ],
+      [
+        8368640,
+        9249659
+      ]
+    ],
+    "uncovered_bytes": 895225
+  },
+  "hash_pinned": true,
+  "limitations": [
+    "No payload bytes are copied, linked, reconstructed or executed.",
+    "Coverage gaps can be padding, headers, metadata or unidentified content; they are not missing-source measurements.",
+    "Nonallocated sections are not PT_LOAD runtime mappings; this does not authorize discarding platform or overlay metadata.",
+    "Section flags classify declarations, not CPU architecture, data ownership or actual loader behavior.",
+    "Overlapping file and zero-fill load ranges require loader/linker investigation; load order is not simulated.",
+    "This inventory does not establish a linker script, startup behavior, whole-program ABI or a playable build."
+  ],
+  "load_file_overlaps": [],
+  "load_memory_envelope": [
+    1048576,
+    32604672
+  ],
+  "load_memory_envelope_coverage": {
+    "covered_bytes": 12966784,
+    "covered_ranges": [
+      [
+        1048576,
+        3273784
+      ],
+      [
+        3273856,
+        9357596
+      ],
+      [
+        16777216,
+        20287660
+      ],
+      [
+        31457280,
+        32604672
+      ]
+    ],
+    "gaps": [
+      [
+        3273784,
+        3273856
+      ],
+      [
+        9357596,
+        16777216
+      ],
+      [
+        20287660,
+        31457280
+      ]
+    ],
+    "uncovered_bytes": 18589312
+  },
+  "load_memory_overlaps": [
+    {
+      "bytes": 4036,
+      "first": 2,
+      "range": [
+        9349976,
+        9354012
+      ],
+      "second": 3,
+      "storage_intersections": [
+        {
+          "bytes": 28,
+          "first_storage": "zero",
+          "range": [
+            9349976,
+            9350004
+          ],
+          "second_storage": "file"
+        },
+        {
+          "bytes": 4008,
+          "first_storage": "zero",
+          "range": [
+            9350004,
+            9354012
+          ],
+          "second_storage": "zero"
+        }
+      ]
+    }
+  ],
+  "loads": [
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 2225176,
+        "covered_ranges": [
+          [
+            1048576,
+            3257608
+          ],
+          [
+            3257616,
+            3273760
+          ]
+        ],
+        "gaps": [
+          [
+            3257608,
+            3257616
+          ]
+        ],
+        "uncovered_bytes": 8
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 2225200,
+        "covered_ranges": [
+          [
+            1048576,
+            3257608
+          ],
+          [
+            3257616,
+            3273784
+          ]
+        ],
+        "gaps": [
+          [
+            3257608,
+            3257616
+          ]
+        ],
+        "uncovered_bytes": 8
+      },
+      "file_backed_memory_range": [
+        1048576,
+        3273760
+      ],
+      "file_range": [
+        4096,
+        2229280
+      ],
+      "file_size": 2225184,
+      "flags": 7,
+      "index": 0,
+      "memory_range": [
+        1048576,
+        3273784
+      ],
+      "memory_size": 2225208,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 0,
+        "covered_ranges": [],
+        "gaps": [
+          [
+            3273760,
+            3273784
+          ]
+        ],
+        "uncovered_bytes": 24
+      },
+      "offset": 4096,
+      "physical_address": 1048576,
+      "type": 1,
+      "virtual_address": 1048576,
+      "zero_fill_range": [
+        3273760,
+        3273784
+      ]
+    },
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 1471182,
+        "covered_ranges": [
+          [
+            3273856,
+            4539108
+          ],
+          [
+            4539136,
+            4716532
+          ],
+          [
+            4716544,
+            4717052
+          ],
+          [
+            4717056,
+            4731292
+          ],
+          [
+            4731392,
+            4745182
+          ]
+        ],
+        "gaps": [
+          [
+            4539108,
+            4539136
+          ],
+          [
+            4716532,
+            4716544
+          ],
+          [
+            4717052,
+            4717056
+          ],
+          [
+            4731292,
+            4731392
+          ]
+        ],
+        "uncovered_bytes": 144
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 6075870,
+        "covered_ranges": [
+          [
+            3273856,
+            4539108
+          ],
+          [
+            4539136,
+            4716532
+          ],
+          [
+            4716544,
+            4717052
+          ],
+          [
+            4717056,
+            4731292
+          ],
+          [
+            4731392,
+            4745182
+          ],
+          [
+            4745216,
+            4746740
+          ],
+          [
+            4746752,
+            9349916
+          ]
+        ],
+        "gaps": [
+          [
+            4539108,
+            4539136
+          ],
+          [
+            4716532,
+            4716544
+          ],
+          [
+            4717052,
+            4717056
+          ],
+          [
+            4731292,
+            4731392
+          ],
+          [
+            4745182,
+            4745216
+          ],
+          [
+            4746740,
+            4746752
+          ]
+        ],
+        "uncovered_bytes": 190
+      },
+      "file_backed_memory_range": [
+        3273856,
+        4745182
+      ],
+      "file_range": [
+        2229376,
+        3700702
+      ],
+      "file_size": 1471326,
+      "flags": 6,
+      "index": 1,
+      "memory_range": [
+        3273856,
+        9349916
+      ],
+      "memory_size": 6076060,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 4604688,
+        "covered_ranges": [
+          [
+            4745216,
+            4746740
+          ],
+          [
+            4746752,
+            9349916
+          ]
+        ],
+        "gaps": [
+          [
+            4745182,
+            4745216
+          ],
+          [
+            4746740,
+            4746752
+          ]
+        ],
+        "uncovered_bytes": 46
+      },
+      "offset": 2229376,
+      "physical_address": 3273856,
+      "type": 1,
+      "virtual_address": 3273856,
+      "zero_fill_range": [
+        4745182,
+        9349916
+      ]
+    },
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 60,
+        "covered_ranges": [
+          [
+            9349916,
+            9349976
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 4092,
+        "covered_ranges": [
+          [
+            9349916,
+            9350004
+          ],
+          [
+            9350008,
+            9354012
+          ]
+        ],
+        "gaps": [
+          [
+            9350004,
+            9350008
+          ]
+        ],
+        "uncovered_bytes": 4
+      },
+      "file_backed_memory_range": [
+        9349916,
+        9349976
+      ],
+      "file_range": [
+        3701532,
+        3701592
+      ],
+      "file_size": 60,
+      "flags": 6,
+      "index": 2,
+      "memory_range": [
+        9349916,
+        9354012
+      ],
+      "memory_size": 4096,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 4004,
+        "covered_ranges": [
+          [
+            9350008,
+            9354012
+          ]
+        ],
+        "gaps": [
+          [
+            9349976,
+            9350008
+          ]
+        ],
+        "uncovered_bytes": 32
+      },
+      "offset": 3701532,
+      "physical_address": 9349916,
+      "type": 1,
+      "virtual_address": 9349916,
+      "zero_fill_range": [
+        9349976,
+        9354012
+      ]
+    },
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 28,
+        "covered_ranges": [
+          [
+            9349976,
+            9350004
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 7616,
+        "covered_ranges": [
+          [
+            9349976,
+            9350004
+          ],
+          [
+            9350008,
+            9357596
+          ]
+        ],
+        "gaps": [
+          [
+            9350004,
+            9350008
+          ]
+        ],
+        "uncovered_bytes": 4
+      },
+      "file_backed_memory_range": [
+        9349976,
+        9350004
+      ],
+      "file_range": [
+        3705688,
+        3705716
+      ],
+      "file_size": 28,
+      "flags": 6,
+      "index": 3,
+      "memory_range": [
+        9349976,
+        9357596
+      ],
+      "memory_size": 7620,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 7588,
+        "covered_ranges": [
+          [
+            9350008,
+            9357596
+          ]
+        ],
+        "gaps": [
+          [
+            9350004,
+            9350008
+          ]
+        ],
+        "uncovered_bytes": 4
+      },
+      "offset": 3705688,
+      "physical_address": 9349976,
+      "type": 1,
+      "virtual_address": 9349976,
+      "zero_fill_range": [
+        9350004,
+        9357596
+      ]
+    },
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 3510444,
+        "covered_ranges": [
+          [
+            16777216,
+            20287660
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 3510444,
+        "covered_ranges": [
+          [
+            16777216,
+            20287660
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "file_backed_memory_range": [
+        16777216,
+        20287660
+      ],
+      "file_range": [
+        3706880,
+        7217324
+      ],
+      "file_size": 3510444,
+      "flags": 7,
+      "index": 4,
+      "memory_range": [
+        16777216,
+        20287660
+      ],
+      "memory_size": 3510444,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 0,
+        "covered_ranges": [],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "offset": 3706880,
+      "physical_address": 16777216,
+      "type": 1,
+      "virtual_address": 16777216,
+      "zero_fill_range": [
+        20287660,
+        20287660
+      ]
+    },
+    {
+      "alignment": 4096,
+      "compatible_file_section_coverage": {
+        "covered_bytes": 1147392,
+        "covered_ranges": [
+          [
+            31457280,
+            32604672
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "declared_section_memory_coverage": {
+        "covered_bytes": 1147392,
+        "covered_ranges": [
+          [
+            31457280,
+            32604672
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "file_backed_memory_range": [
+        31457280,
+        32604672
+      ],
+      "file_range": [
+        7221248,
+        8368640
+      ],
+      "file_size": 1147392,
+      "flags": 6,
+      "index": 5,
+      "memory_range": [
+        31457280,
+        32604672
+      ],
+      "memory_size": 1147392,
+      "nobits_zero_fill_coverage": {
+        "covered_bytes": 0,
+        "covered_ranges": [],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "offset": 7221248,
+      "physical_address": 31457280,
+      "type": 1,
+      "virtual_address": 31457280,
+      "zero_fill_range": [
+        32604672,
+        32604672
+      ]
+    }
+  ],
+  "mapping_anomalies": [
+    {
+      "issues": [
+        "file_section_overlaps_zero_fill_memory",
+        "section_not_fully_file_mapped"
+      ],
+      "section_index": 5
+    },
+    {
+      "issues": [
+        "file_offset_mismatch",
+        "file_section_overlaps_zero_fill_memory",
+        "multiple_containing_loads"
+      ],
+      "section_index": 17
+    }
+  ],
+  "other_program_headers": [],
+  "ranges": "half-open",
+  "schema_version": 1,
+  "section_file_payload_overlaps": [],
+  "sections": [
+    {
+      "address": 0,
+      "alignment": 0,
+      "classification": "null",
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 0,
+      "has_file_payload": false,
+      "index": 0,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": null,
+      "offset": 0,
+      "size": 0,
+      "type": 0
+    },
+    {
+      "address": 1048576,
+      "alignment": 64,
+      "classification": "allocated_executable",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 2209032,
+        "covered_ranges": [
+          [
+            1048576,
+            3257608
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        4096,
+        2213128
+      ],
+      "flags": 6,
+      "has_file_payload": true,
+      "index": 1,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            1048576,
+            3257608
+          ],
+          "memory_intersection": [
+            1048576,
+            3257608
+          ],
+          "permission_conflicts": [],
+          "segment_index": 0
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        1048576,
+        3257608
+      ],
+      "name": ".text",
+      "offset": 4096,
+      "size": 2209032,
+      "type": 1
+    },
+    {
+      "address": 3257616,
+      "alignment": 16,
+      "classification": "allocated_executable",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 15680,
+        "covered_ranges": [
+          [
+            3257616,
+            3273296
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        2213136,
+        2228816
+      ],
+      "flags": 6,
+      "has_file_payload": true,
+      "index": 2,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            3257616,
+            3273296
+          ],
+          "memory_intersection": [
+            3257616,
+            3273296
+          ],
+          "permission_conflicts": [],
+          "segment_index": 0
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        3257616,
+        3273296
+      ],
+      "name": ".vutext",
+      "offset": 2213136,
+      "size": 15680,
+      "type": 1
+    },
+    {
+      "address": 3273296,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 412,
+        "covered_ranges": [
+          [
+            3273296,
+            3273708
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        2228816,
+        2229228
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 3,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            3273296,
+            3273708
+          ],
+          "memory_intersection": [
+            3273296,
+            3273708
+          ],
+          "permission_conflicts": [],
+          "segment_index": 0
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        3273296,
+        3273708
+      ],
+      "name": ".ctors",
+      "offset": 2228816,
+      "size": 412,
+      "type": 1
+    },
+    {
+      "address": 3273708,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 52,
+        "covered_ranges": [
+          [
+            3273708,
+            3273760
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        2229228,
+        2229280
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 4,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            3273708,
+            3273760
+          ],
+          "memory_intersection": [
+            3273708,
+            3273760
+          ],
+          "permission_conflicts": [],
+          "segment_index": 0
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        3273708,
+        3273760
+      ],
+      "name": ".dtors",
+      "offset": 2229228,
+      "size": 52,
+      "type": 1
+    },
+    {
+      "address": 3273760,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 0,
+        "covered_ranges": [],
+        "gaps": [
+          [
+            3273760,
+            3273784
+          ]
+        ],
+        "uncovered_bytes": 24
+      },
+      "entry_size": 1,
+      "file_range": [
+        2229280,
+        2229304
+      ],
+      "flags": 2,
+      "has_file_payload": true,
+      "index": 5,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": null,
+          "memory_intersection": [
+            3273760,
+            3273784
+          ],
+          "permission_conflicts": [],
+          "segment_index": 0
+        }
+      ],
+      "mapping_issues": [
+        "file_section_overlaps_zero_fill_memory",
+        "section_not_fully_file_mapped"
+      ],
+      "memory_range": [
+        3273760,
+        3273784
+      ],
+      "name": ".reginfo",
+      "offset": 2229280,
+      "size": 24,
+      "type": 1879048198
+    },
+    {
+      "address": 3273856,
+      "alignment": 64,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 1262832,
+        "covered_ranges": [
+          [
+            3273856,
+            4536688
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        2229376,
+        3492208
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 6,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            3273856,
+            4536688
+          ],
+          "memory_intersection": [
+            3273856,
+            4536688
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        3273856,
+        4536688
+      ],
+      "name": ".data",
+      "offset": 2229376,
+      "size": 1262832,
+      "type": 1
+    },
+    {
+      "address": 4536688,
+      "alignment": 8,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 2420,
+        "covered_ranges": [
+          [
+            4536688,
+            4539108
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3492208,
+        3494628
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 7,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            4536688,
+            4539108
+          ],
+          "memory_intersection": [
+            4536688,
+            4539108
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4536688,
+        4539108
+      ],
+      "name": ".eh_frame",
+      "offset": 3492208,
+      "size": 2420,
+      "type": 1
+    },
+    {
+      "address": 4539108,
+      "alignment": 1,
+      "classification": "allocated_data",
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 3,
+      "has_file_payload": false,
+      "index": 8,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": [
+        4539108,
+        4539108
+      ],
+      "name": ".vudata",
+      "offset": 3494628,
+      "size": 0,
+      "type": 1
+    },
+    {
+      "address": 4539136,
+      "alignment": 16,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 177396,
+        "covered_ranges": [
+          [
+            4539136,
+            4716532
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3494656,
+        3672052
+      ],
+      "flags": 2,
+      "has_file_payload": true,
+      "index": 9,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            4539136,
+            4716532
+          ],
+          "memory_intersection": [
+            4539136,
+            4716532
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4539136,
+        4716532
+      ],
+      "name": ".rodata",
+      "offset": 3494656,
+      "size": 177396,
+      "type": 1
+    },
+    {
+      "address": 4716544,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 508,
+        "covered_ranges": [
+          [
+            4716544,
+            4717052
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3672064,
+        3672572
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 10,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            4716544,
+            4717052
+          ],
+          "memory_intersection": [
+            4716544,
+            4717052
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4716544,
+        4717052
+      ],
+      "name": ".gcc_except_table",
+      "offset": 3672064,
+      "size": 508,
+      "type": 1
+    },
+    {
+      "address": 4717056,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 14236,
+        "covered_ranges": [
+          [
+            4717056,
+            4731292
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3672576,
+        3686812
+      ],
+      "flags": 268435459,
+      "has_file_payload": true,
+      "index": 11,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            4717056,
+            4731292
+          ],
+          "memory_intersection": [
+            4717056,
+            4731292
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4717056,
+        4731292
+      ],
+      "name": ".lit4",
+      "offset": 3672576,
+      "size": 14236,
+      "type": 1
+    },
+    {
+      "address": 4731392,
+      "alignment": 8,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 13790,
+        "covered_ranges": [
+          [
+            4731392,
+            4745182
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3686912,
+        3700702
+      ],
+      "flags": 268435459,
+      "has_file_payload": true,
+      "index": 12,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            4731392,
+            4745182
+          ],
+          "memory_intersection": [
+            4731392,
+            4745182
+          ],
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4731392,
+        4745182
+      ],
+      "name": ".sdata",
+      "offset": 3686912,
+      "size": 13790,
+      "type": 1
+    },
+    {
+      "address": 4745216,
+      "alignment": 8,
+      "classification": "allocated_nobits",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 1524,
+        "covered_ranges": [
+          [
+            4745216,
+            4746740
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 268435459,
+      "has_file_payload": false,
+      "index": 13,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "mapped_zero_range": [
+            4745216,
+            4746740
+          ],
+          "memory_intersection": [
+            4745216,
+            4746740
+          ],
+          "overlap_with_file_backed_memory": null,
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4745216,
+        4746740
+      ],
+      "name": ".sbss",
+      "offset": 3700736,
+      "size": 1524,
+      "type": 8
+    },
+    {
+      "address": 4746752,
+      "alignment": 128,
+      "classification": "allocated_nobits",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 4603164,
+        "covered_ranges": [
+          [
+            4746752,
+            9349916
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 3,
+      "has_file_payload": false,
+      "index": 14,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "mapped_zero_range": [
+            4746752,
+            9349916
+          ],
+          "memory_intersection": [
+            4746752,
+            9349916
+          ],
+          "overlap_with_file_backed_memory": null,
+          "permission_conflicts": [],
+          "segment_index": 1
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        4746752,
+        9349916
+      ],
+      "name": ".bss",
+      "offset": 3700748,
+      "size": 4603164,
+      "type": 8
+    },
+    {
+      "address": 9349916,
+      "alignment": 1,
+      "classification": "allocated_nobits",
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 3,
+      "has_file_payload": false,
+      "index": 15,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": [
+        9349916,
+        9349916
+      ],
+      "name": ".vubss",
+      "offset": 3705628,
+      "size": 0,
+      "type": 8
+    },
+    {
+      "address": 9349916,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 60,
+        "covered_ranges": [
+          [
+            9349916,
+            9349976
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3701532,
+        3701592
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 16,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            9349916,
+            9349976
+          ],
+          "memory_intersection": [
+            9349916,
+            9349976
+          ],
+          "permission_conflicts": [],
+          "segment_index": 2
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        9349916,
+        9349976
+      ],
+      "name": ".srsctors",
+      "offset": 3701532,
+      "size": 60,
+      "type": 1
+    },
+    {
+      "address": 9349976,
+      "alignment": 4,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 28,
+        "covered_ranges": [
+          [
+            9349976,
+            9350004
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3705688,
+        3705716
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 17,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": false,
+          "mapped_file_memory_range": null,
+          "memory_intersection": [
+            9349976,
+            9350004
+          ],
+          "permission_conflicts": [],
+          "segment_index": 2
+        },
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            9349976,
+            9350004
+          ],
+          "memory_intersection": [
+            9349976,
+            9350004
+          ],
+          "permission_conflicts": [],
+          "segment_index": 3
+        }
+      ],
+      "mapping_issues": [
+        "file_offset_mismatch",
+        "file_section_overlaps_zero_fill_memory",
+        "multiple_containing_loads"
+      ],
+      "memory_range": [
+        9349976,
+        9350004
+      ],
+      "name": ".srsdtors",
+      "offset": 3705688,
+      "size": 28,
+      "type": 1
+    },
+    {
+      "address": 9350008,
+      "alignment": 8,
+      "classification": "allocated_nobits",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 7588,
+        "covered_ranges": [
+          [
+            9350008,
+            9357596
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 3,
+      "has_file_payload": false,
+      "index": 18,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": false,
+          "mapped_zero_range": [
+            9350008,
+            9354012
+          ],
+          "memory_intersection": [
+            9350008,
+            9354012
+          ],
+          "overlap_with_file_backed_memory": null,
+          "permission_conflicts": [],
+          "segment_index": 2
+        },
+        {
+          "contains_whole_section": true,
+          "mapped_zero_range": [
+            9350008,
+            9357596
+          ],
+          "memory_intersection": [
+            9350008,
+            9357596
+          ],
+          "overlap_with_file_backed_memory": null,
+          "permission_conflicts": [],
+          "segment_index": 3
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        9350008,
+        9357596
+      ],
+      "name": "COMMON",
+      "offset": 3705720,
+      "size": 7588,
+      "type": 8
+    },
+    {
+      "address": 16777216,
+      "alignment": 64,
+      "classification": "allocated_executable",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 3510444,
+        "covered_ranges": [
+          [
+            16777216,
+            20287660
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        3706880,
+        7217324
+      ],
+      "flags": 7,
+      "has_file_payload": true,
+      "index": 19,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            16777216,
+            20287660
+          ],
+          "memory_intersection": [
+            16777216,
+            20287660
+          ],
+          "permission_conflicts": [],
+          "segment_index": 4
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        16777216,
+        20287660
+      ],
+      "name": ".srs",
+      "offset": 3706880,
+      "size": 3510444,
+      "type": 1
+    },
+    {
+      "address": 31457280,
+      "alignment": 16,
+      "classification": "allocated_data",
+      "compatible_mapping_coverage": {
+        "covered_bytes": 1147392,
+        "covered_ranges": [
+          [
+            31457280,
+            32604672
+          ]
+        ],
+        "gaps": [],
+        "uncovered_bytes": 0
+      },
+      "entry_size": 0,
+      "file_range": [
+        7221248,
+        8368640
+      ],
+      "flags": 3,
+      "has_file_payload": true,
+      "index": 20,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [
+        {
+          "contains_whole_section": true,
+          "file_offset_consistent": true,
+          "mapped_file_memory_range": [
+            31457280,
+            32604672
+          ],
+          "memory_intersection": [
+            31457280,
+            32604672
+          ],
+          "permission_conflicts": [],
+          "segment_index": 5
+        }
+      ],
+      "mapping_issues": [],
+      "memory_range": [
+        31457280,
+        32604672
+      ],
+      "name": ".loadScreenSection",
+      "offset": 7221248,
+      "size": 1147392,
+      "type": 1
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_debug_metadata",
+      "entry_size": 0,
+      "file_range": null,
+      "flags": 0,
+      "has_file_payload": false,
+      "index": 21,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".mdebug.eabi64",
+      "offset": 8368640,
+      "size": 0,
+      "type": 1
+    },
+    {
+      "address": 0,
+      "alignment": 4,
+      "classification": "nonallocated_platform_metadata",
+      "entry_size": 12,
+      "file_range": [
+        8368640,
+        8368856
+      ],
+      "flags": 1,
+      "has_file_payload": true,
+      "index": 22,
+      "info": 0,
+      "link": 23,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.ovlytab",
+      "offset": 8368640,
+      "size": 216,
+      "type": 2147480608
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_platform_metadata",
+      "entry_size": 0,
+      "file_range": [
+        8368856,
+        8369551
+      ],
+      "flags": 1,
+      "has_file_payload": true,
+      "index": 23,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.ovlystrtab",
+      "offset": 8368856,
+      "size": 695,
+      "type": 3
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8369551,
+        8370167
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 24,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..0x0.1095845684.6.0",
+      "offset": 8369551,
+      "size": 616,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8370167,
+        8372215
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 25,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..0x0.1115996805.23.0",
+      "offset": 8370167,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8372215,
+        8374263
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 26,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.472.1",
+      "offset": 8372215,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8374263,
+        8376311
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 27,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.917.2",
+      "offset": 8374263,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8376311,
+        8378359
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 28,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.1359.3",
+      "offset": 8376311,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8378359,
+        8380407
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 29,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.1665.4",
+      "offset": 8378359,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8380407,
+        8382455
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 30,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.1970.5",
+      "offset": 8380407,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8382455,
+        8384503
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 31,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.2288.6",
+      "offset": 8382455,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8384503,
+        8385111
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 32,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.1115996805.2600.7",
+      "offset": 8384503,
+      "size": 608,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8385111,
+        8386751
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 33,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..0x0.1039362395.14.0",
+      "offset": 8385111,
+      "size": 1640,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8386751,
+        8388799
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 34,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..0x0.3593600256.21.0",
+      "offset": 8386751,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8388799,
+        8390847
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 35,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.494.1",
+      "offset": 8388799,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8390847,
+        8392895
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 36,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.928.2",
+      "offset": 8390847,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8392895,
+        8394943
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 37,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.1345.3",
+      "offset": 8392895,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8394943,
+        8396991
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 38,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.1763.4",
+      "offset": 8394943,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8396991,
+        8399039
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 39,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.2212.5",
+      "offset": 8396991,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8399039,
+        8401087
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 40,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.2652.6",
+      "offset": 8399039,
+      "size": 2048,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_executable",
+      "entry_size": 0,
+      "file_range": [
+        8401087,
+        8402983
+      ],
+      "flags": 5,
+      "has_file_payload": true,
+      "index": 41,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".DVP.overlay..unknvma.3593681058.3046.7",
+      "offset": 8401087,
+      "size": 1896,
+      "type": 2147480609
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_symbol_or_string_metadata",
+      "entry_size": 0,
+      "file_range": [
+        8402983,
+        8403914
+      ],
+      "flags": 0,
+      "has_file_payload": true,
+      "index": 42,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".shstrtab",
+      "offset": 8402983,
+      "size": 931,
+      "type": 3
+    },
+    {
+      "address": 0,
+      "alignment": 4,
+      "classification": "nonallocated_symbol_or_string_metadata",
+      "entry_size": 16,
+      "file_range": [
+        8405716,
+        8748356
+      ],
+      "flags": 0,
+      "has_file_payload": true,
+      "index": 43,
+      "info": 5999,
+      "link": 44,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".symtab",
+      "offset": 8405716,
+      "size": 342640,
+      "type": 2
+    },
+    {
+      "address": 0,
+      "alignment": 1,
+      "classification": "nonallocated_symbol_or_string_metadata",
+      "entry_size": 0,
+      "file_range": [
+        8748356,
+        9249659
+      ],
+      "flags": 0,
+      "has_file_payload": true,
+      "index": 44,
+      "info": 0,
+      "link": 0,
+      "load_mappings": [],
+      "mapping_issues": [],
+      "memory_range": null,
+      "name": ".strtab",
+      "offset": 8748356,
+      "size": 501303,
+      "type": 3
+    }
+  ],
+  "status": "original_layout_inventory_only",
+  "summary": {
+    "allocated_section_bytes": 12966582,
+    "allocated_section_overlap_pairs": 0,
+    "load_count": 6,
+    "load_file_union_bytes": 8354434,
+    "load_memory_overlap_pairs": 1,
+    "load_memory_union_bytes": 12966784,
+    "section_bytes_by_classification": {
+      "allocated_data": 2619150,
+      "allocated_executable": 5735156,
+      "allocated_nobits": 4612276,
+      "nonallocated_debug_metadata": 0,
+      "nonallocated_executable": 33432,
+      "nonallocated_platform_metadata": 911,
+      "nonallocated_symbol_or_string_metadata": 844874,
+      "null": 0
+    },
+    "section_classifications": {
+      "allocated_data": 13,
+      "allocated_executable": 3,
+      "allocated_nobits": 4,
+      "nonallocated_debug_metadata": 1,
+      "nonallocated_executable": 18,
+      "nonallocated_platform_metadata": 2,
+      "nonallocated_symbol_or_string_metadata": 3,
+      "null": 1
+    },
+    "section_count": 45,
+    "section_payload_overlap_pairs": 0,
+    "sections_with_mapping_issues": 2
+  }
+}

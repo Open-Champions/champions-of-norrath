@@ -25,6 +25,7 @@ Use Python 3.10 or newer. Original inputs and inventory output stay private.
 
 ```sh
 python3 -m unittest discover -s tools -p 'test_*.py' -v
+python3 tools/link_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/new-link-layout.json
 python3 tools/symbol_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/symbols/new-inventory.json
 python3 tools/rebuild.py verify --game work/private/SLUS_205.65 --compiler /absolute/path/to/clang --output-dir work/rebuild --report work/rebuild/verification.json
 python3 tools/rebuild.py check --report targets/SLUS-20565/verification.json --require-matches
@@ -61,6 +62,12 @@ Only a successful fresh comparison establishes a byte match. Public checks of a
 saved receipt establish consistency with current records, not that a fresh
 compiler run occurred. The original executable, symbol dumps, disassembly, object
 files and private research stay under ignored `work/` or outside the repository.
+
+## Whole-image layout
+
+The [load-layout inventory](LINK_LAYOUT.md) preserves the observed file and memory
+ranges, overlap diagnostics and nonallocated overlays. It accounts for layout
+requirements; it supplies neither reconstructed code nor a linker script.
 
 ## Current compiler scope
 

@@ -9,7 +9,8 @@ executable, one complete function at a time.
 **Status: ongoing source reconstruction against the hash-pinned Norrath
 executable: 3 complete functions, 24 matching bytes.** Exact retail
 revision remains unconfirmed. See the [reconstruction workflow](docs/REBUILD.md)
-and [baseline evidence](docs/BASELINE.md). Return to Arms' addresses,
+and [baseline evidence](docs/BASELINE.md). The [completion criteria](docs/COMPLETION.md)
+keep the full rebuild and runtime checks separate from intermediate milestones. Return to Arms' addresses,
 hashes, function counts and progress do not apply to this game. There is no game
 build command or playable release yet.
 
@@ -26,7 +27,7 @@ and [receipt](targets/SLUS-20565/verification.json) record the narrow claim.
 The retained main-code inventory contains 5,390 function symbols; inventory
 coverage is not reconstructed-source or gameplay progress.
 
-The intake, symbol inventory and reconstruction tools have 47 synthetic tests
+The intake, symbol inventory, load-layout and reconstruction tools have 66 synthetic tests
 requiring no game files. Public CI checks these tests and saved-record consistency;
 fresh original-byte verification runs locally with a private executable.
 

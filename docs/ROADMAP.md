@@ -1,5 +1,8 @@
 # Roadmap
 
+The goal stays active until the [full completion criteria](COMPLETION.md) are
+verified. Intermediate functions, tooling and pull requests do not complete it.
+
 | Milestone | Current state | Completion evidence |
 |---|---|---|
 | Baseline and edition | Experimental hash-pinned baseline; exact retail revision unresolved | [Private executable identity and layout](BASELINE.md); hash does not authenticate a retail pressing |
