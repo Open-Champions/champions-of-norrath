@@ -1140,41 +1140,48 @@ class HistoricalTests(unittest.TestCase):
 
 
 
-def scalar_elf_fixture(kind='original', delta=-16, extra_symbols=(), operation='set-one', two_owners=False, candidate_name='candidate', owner_name='state', float_lane=False):
+def scalar_elf_fixture(kind='original', delta=-16, extra_symbols=(), operation='set-one', two_owners=False, candidate_name='candidate', owner_name='state', float_lane=False, byte_lane=False):
     """Independent authored integer instructions and ELF records, without game bytes."""
     gp = 0x4879f0
     setup = struct.pack('<11I', *([0x3c040048] + [0x3c050000] * 4 + [0x248479f0] + [0x24a50000] * 4 + [0x0080e02d]))
     displacement = delta & 65535 if kind == 'original' else 0
     accessor = (struct.pack('<4I',0x8f820000|displacement,0x2442000a,0x03e00008,0xaf820000|displacement)
                 if operation == 'add-ten' else struct.pack('<2I',0x03e00008,0xe78c0000|displacement)
-                if operation == 'store-float-argument' else struct.pack('<3I',0x24020001,0x03e00008,0xaf820000|displacement))
+                if operation == 'store-float-argument' else struct.pack('<2I',0x03e00008,0xa3840000|displacement)
+                if operation == 'store-byte-argument' else struct.pack('<3I',0x24020001,0x03e00008,0xaf820000|displacement))
     code = setup + accessor if kind == 'original' else accessor if kind == 'consumer' else b''
     if two_owners and kind == 'original':
         code += struct.pack('<4I',0x8f820000|((delta+4)&65535),0x2442000a,0x03e00008,0xaf820000|((delta+4)&65535))
     if float_lane and kind == 'original':
         code += struct.pack('<2I',0x03e00008,0xe78c0000|((delta+8)&65535))
+    if byte_lane and kind == 'original':
+        code += struct.pack('<2I',0x03e00008,0xa3840000|((delta+12)&65535))
     symbols = ([('_start', BASE, 44, 2, 1, 0, 1), ('original', BASE+44, len(accessor), 2, 1, 0, 1),
                 ('state', gp+delta, 4, 1, 1, 0, 2), ('_gp', gp, 4, 1, 1, 0, 0xfff1)] if kind == 'original' else
                [(candidate_name, 0, len(accessor), 2, 1, 0, 1), (owner_name, 0, 0, 0, 1, 0, 0)] if kind == 'consumer' else
-               [(owner_name, 0, 4, 1, 1, 0, 2)]) + list(extra_symbols)
+               [(owner_name, 0, 1 if operation == 'store-byte-argument' else 4, 1, 1, 0, 2)]) + list(extra_symbols)
     if two_owners and kind == 'original':
         symbols += [('original_b',BASE+56,16,2,1,0,1),('state_b',gp+delta+4,4,1,1,0,2)]
     if float_lane and kind == 'original':
         symbols += [('original_f',BASE+72,8,2,1,0,1),('state_f',gp+delta+8,4,1,1,0,2)]
+    if byte_lane and kind == 'original':
+        symbols += [('original_byte',BASE+80,8,2,1,0,1),('state_byte',gp+delta+12,1,1,1,0,2)]
     strings, table = bytearray(b'\0'), bytearray(16)
     for name, value, size, typ, binding, other, section in symbols:
         offset = len(strings); strings.extend(name.encode()+b'\0')
         table.extend(struct.pack('<IIIBBH', offset, value, size, binding*16+typ, other, section))
     rows = [('', b'', 0, 0, 0, 0, 0, 0),
             ('.text', code, 1, 6, BASE if kind == 'original' else 0, 0, 0, 0),
-            ('.sdata', (bytes(8)+bytes.fromhex('0000803f') if float_lane and kind == 'original'
+            ('.sdata', (bytes(8)+bytes.fromhex('0000803f')+bytes(1) if byte_lane and kind == 'original'
+                         else bytes(1) if kind == 'owner' and operation == 'store-byte-argument'
+                         else bytes(8)+bytes.fromhex('0000803f') if float_lane and kind == 'original'
                          else bytes.fromhex('0000803f') if kind == 'owner' and operation == 'store-float-argument'
                          else bytes(8 if two_owners and kind == 'original' else 4)) if kind != 'consumer' else b'', 1, 0x10000003, gp+delta if kind == 'original' else 0, 0, 0, 0),
             ('.reginfo', struct.pack('<6I', 0, 0, 0, 0, 0, gp if kind == 'original' else 0), 0x70000006, 2 if kind == 'original' else 0, 0, 0, 0, 1),
             ('.symtab', table, 2, 0, 0, 5, 1, 16),
             ('.strtab', strings, 3, 0, 0, 0, 0, 0),
-            ('.rel.text', (struct.pack('<4I',0,0x207,12,0x207) if operation == 'add-ten' else struct.pack('<II',4 if operation == 'store-float-argument' else 8,0x207)) if kind == 'consumer' else b'', 9, 0x40, 0, 4, 1, 8)]
-    if kind != 'original' and operation == 'store-float-argument':
+            ('.rel.text', (struct.pack('<4I',0,0x207,12,0x207) if operation == 'add-ten' else struct.pack('<II',4 if operation in ('store-float-argument','store-byte-argument') else 8,0x207)) if kind == 'consumer' else b'', 9, 0x40, 0, 4, 1, 8)]
+    if kind != 'original' and operation in ('store-float-argument','store-byte-argument'):
         rows += [('.MIPS.abiflags',bytes.fromhex('000003000201000206000000000000000100000000000000'),0x7000002a,2,0,0,0,24),
                  ('.gnu.attributes',bytes.fromhex('410f000000676e750001070000000402'),0x6ffffff5,0,0,0,0,0)]
     names = b'\0'+b''.join(r[0].encode()+b'\0' for r in rows[1:])+b'.shstrtab\0'
@@ -1182,7 +1189,7 @@ def scalar_elf_fixture(kind='original', delta=-16, extra_symbols=(), operation='
     data = bytearray(148 if kind == 'original' else 52); sections = []
     for name, blob, typ, flags, addr, link, info, entry in rows:
         data.extend(bytes(-len(data)%4)); offset=len(data); data.extend(blob)
-        sections.append((names.index(name.encode()+b'\0'),typ,flags,addr,offset,len(blob),link,info,8 if name=='.MIPS.abiflags' else 1 if name=='.gnu.attributes' else 4,entry))
+        sections.append((names.index(name.encode()+b'\0'),typ,flags,addr,offset,len(blob),link,info,8 if name=='.MIPS.abiflags' else 1 if name=='.gnu.attributes' or (name=='.sdata' and kind=='owner' and operation=='store-byte-argument') else 4,entry))
     data.extend(bytes(-len(data)%4)); shoff=len(data)
     for row in sections: data.extend(struct.pack('<10I',*row))
     data[:16]=b'\x7fELF\x01\x01\x01'+bytes(9)
@@ -1191,7 +1198,7 @@ def scalar_elf_fixture(kind='original', delta=-16, extra_symbols=(), operation='
                      52,32 if kind=='original' else 0,3 if kind=='original' else 0,40,len(sections),len(sections)-1)
     if kind=='original':
         struct.pack_into('<8I',data,52,1,sections[1][4],BASE,BASE,len(code),len(code),5,4)
-        struct.pack_into('<8I',data,84,1,sections[2][4],gp+delta,gp+delta,12 if float_lane else 8 if two_owners else 4,12 if float_lane else 8 if two_owners else 4,6,4)
+        struct.pack_into('<8I',data,84,1,sections[2][4],gp+delta,gp+delta,13 if byte_lane else 12 if float_lane else 8 if two_owners else 4,13 if byte_lane else 12 if float_lane else 8 if two_owners else 4,6,4)
     return bytes(data)
 
 
@@ -1960,6 +1967,308 @@ class FloatStoreTests(unittest.TestCase):
         bad=copy.deepcopy(report);bad['functions'][2]['float_store_relocations'][0]['owner_id']='owner';variants.append(bad)
         for bad in variants:
             with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+
+
+class ByteStoreTests(unittest.TestCase):
+    def setUp(self):
+        FloatStoreTests.setUp(self)
+        self.game.write_bytes(scalar_elf_fixture(two_owners=True,float_lane=True,byte_lane=True))
+        self.target['baseline_sha256']=rebuild.digest(self.game.read_bytes());self.target['text']['size']=88
+        self.spec['baseline_sha256']=self.target['baseline_sha256']
+        mocked=patch.object(rebuild,'BASELINE_SIZE',len(self.game.read_bytes()));mocked.start();self.addCleanup(mocked.stop)
+        (self.root/rebuild.GP_CONTEXT).write_text(json.dumps(self.spec));self.ledger['schema_version']=5
+        (self.root/'owner_byte.cpp').write_text('extern "C" { unsigned char state_byte = 0; }\n')
+        (self.root/'consumer_byte.cpp').write_text('extern "C" unsigned char state_byte; extern "C" void candidate_byte(int v) { state_byte = static_cast<unsigned char>(v); }\n')
+        self.owner_byte=dict(self.owner,id='owner_byte',source='owner_byte.cpp',symbol='state_byte',original_symbol='state_byte',
+            address='0x004879ec',review='review_byte.json',comparison_mode=rebuild.BYTE_MODE,data_type='uint8',size=1,
+            compiler_args=rebuild.BYTE_STORE_FLAGS.copy())
+        self.item_byte=dict(self.item,id='consumer_byte',source='consumer_byte.cpp',symbol='candidate_byte',original_symbol='original_byte',
+            address=f'0x{BASE+80:08x}',size=8,comparison_mode=rebuild.BYTE_MODE,compiler_args=rebuild.BYTE_STORE_FLAGS.copy(),
+            data_binding={'owner_id':'owner_byte','object_symbol':'state_byte','operation':'store-byte-argument'})
+        self.ledger['functions'].append(self.item_byte);self.ledger['data_objects'].append(self.owner_byte);self.refresh_review()
+
+    def refresh_review(self):
+        if self.ledger['schema_version'] != 5:return FloatStoreTests.refresh_review(self)
+        for owner in self.ledger['data_objects']:
+            consumers=[i for i in self.ledger['functions'] if i['data_binding']['owner_id']==owner['id']]
+            byte=owner['comparison_mode']==rebuild.BYTE_MODE;flt=owner['comparison_mode']==rebuild.FLOAT_MODE
+            review={'schema_version':4 if byte else 3 if flt else 2,'comparison_mode':owner['comparison_mode'],
+                'baseline_sha256':self.target['baseline_sha256'],'owner_id':owner['id'],
+                'function_ids':sorted(i['id'] for i in consumers),'operations':{i['id']:i['data_binding']['operation'] for i in consumers},
+                'source_sha256':{i['source']:rebuild.digest((self.root/i['source']).read_bytes()) for i in [owner]+consumers},
+                'gp_context_sha256':rebuild.digest((self.root/rebuild.GP_CONTEXT).read_bytes()),'runtime':self.spec['runtime']}
+            if byte or flt:review['value_contract']=rebuild.BYTE_VALUE_CONTRACT if byte else rebuild.FLOAT_VALUE_CONTRACT
+            (self.root/owner['review']).write_text(json.dumps(review))
+
+    def float_object(self,kind):return FloatStoreTests.float_object(self,kind)
+    def byte_object(self,kind,**kw):
+        return scalar_elf_fixture(kind,operation='store-byte-argument',candidate_name='candidate_byte',owner_name='state_byte',**kw)
+
+    def verify(self,overrides=None,mutation=None):
+        payloads={'owner.cpp':scalar_elf_fixture('owner'),'consumer.cpp':scalar_elf_fixture('consumer'),
+            'owner_b.cpp':scalar_elf_fixture('owner',owner_name='state_b'),
+            'consumer_b.cpp':scalar_elf_fixture('consumer',operation='add-ten',candidate_name='candidate_b',owner_name='state_b'),
+            'owner_f.cpp':self.float_object('owner'),'consumer_f.cpp':self.float_object('consumer'),
+            'owner_byte.cpp':self.byte_object('owner'),'consumer_byte.cpp':self.byte_object('consumer')}
+        payloads.update(overrides or {});snapshots={p:(self.root/p).read_bytes() for p in payloads}
+        def run(command,**kwargs):
+            names=[p for p,data in snapshots.items() if data==Path(command[-3]).read_bytes()];self.assertEqual(len(names),1);name=names[0]
+            self.assertEqual(kwargs['env'],{'PATH':os.defpath,'LANG':'C','LC_ALL':'C'})
+            self.assertIn('-G8' if 'byte' in name else '-G4',command);self.assertNotIn('-G0',command)
+            self.assertIn('-fno-zero-initialized-in-bss',command)
+            Path(command[-1]).write_bytes(payloads[name])
+            if mutation:mutation(name)
+            return subprocess.CompletedProcess(command,0,b'',b'')
+        with patch.object(rebuild,'toolchain_identity',return_value=(self.compiler,self.identity)), \
+             patch.object(rebuild,'ee_data_model',side_effect=lambda exe,flags,env,expected=None:expected or rebuild.EE_MODEL), \
+             patch.object(rebuild.subprocess,'run',side_effect=run):
+            return rebuild.verify(self.ledger,self.game,None,self.root/'output',self.root,ee_compiler=self.compiler)
+
+    def test_four_owner_fresh_source_closure_and_distinct_receipt(self):
+        report=self.verify();self.assertEqual(report['schema_version'],8)
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),4)
+        self.assertEqual(report['byte_store_policy'],rebuild.BYTE_POLICY)
+        self.assertEqual(report['functions'][3]['byte_model'],rebuild.BYTE_MODEL)
+        self.assertEqual(report['data_objects'][3]['size'],1)
+        self.assertEqual(report['data_objects'][3]['rebuilt_sha256'],rebuild.digest(b'\0'))
+        self.assertEqual(report['functions'][3]['owner_result_sha256'],rebuild.digest(rebuild.canonical(report['data_objects'][3])))
+        self.assertEqual(report['functions'][3]['byte_store_relocations'][0]['offset'],4)
+
+    def test_float_and_byte_without_scalars_is_valid(self):
+        self.ledger['functions']=self.ledger['functions'][2:];self.ledger['data_objects']=self.ledger['data_objects'][2:];self.refresh_review()
+        report=self.verify();self.assertNotIn('scalar_policy',report)
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),2)
+
+    def test_ledger_schema_exact_lanes_and_counts(self):
+        variants=[]
+        for version in (1,2,3,4,6,True,5.0):
+            bad=copy.deepcopy(self.ledger);bad['schema_version']=version;variants.append(bad)
+        for index in (2,3):
+            bad=copy.deepcopy(self.ledger);del bad['data_objects'][index];del bad['functions'][index];variants.append(bad)
+        bad=copy.deepcopy(self.ledger);bad['data_objects'].append(copy.deepcopy(self.owner_byte));variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.validate_ledger(bad,self.root)
+
+    def test_byte_ledger_width_type_initializer_profile_and_extent(self):
+        variants=[('size',True),('size',1.0),('size',4),('size',0),('data_type','bool'),('data_type','int8'),
+            ('initializer',False),('initializer',0.0),('initializer',256),('storage','sbss-zero'),('section','.sbss'),
+            ('original_binding',True),('compiler_args',rebuild.SCALAR_FLAGS),('comparison_mode',rebuild.SCALAR_V2_MODE),
+            ('address',self.owner_f['address']),('address',self.item_byte['address'])]
+        for key,value in variants:
+            bad=copy.deepcopy(self.ledger);bad['data_objects'][3][key]=value
+            with self.subTest(key=key,value=value),self.assertRaises(ValueError):rebuild.validate_ledger(bad,self.root)
+        for mode,op in [(rebuild.BYTE_MODE,'write'),(rebuild.BYTE_MODE,'read'),(rebuild.BYTE_MODE,'add-ten'),(rebuild.FLOAT_MODE,'store-byte-argument')]:
+            bad=copy.deepcopy(self.ledger);bad['functions'][3]['comparison_mode']=mode;bad['functions'][3]['data_binding']['operation']=op
+            with self.assertRaises(ValueError):rebuild.validate_ledger(bad,self.root)
+
+    def test_cross_policy_binding_rejects_even_renamed_import(self):
+        for index in (0,1,2):
+            bad=copy.deepcopy(self.ledger);bad['functions'][3]['data_binding'].update(owner_id=bad['data_objects'][index]['id'],object_symbol=bad['data_objects'][index]['symbol'])
+            with self.assertRaises(ValueError):rebuild.validate_ledger(bad,self.root)
+
+    def test_review_schema_source_operation_contract_and_extras(self):
+        p=self.root/'review_byte.json';good=json.loads(p.read_text())
+        for key,value in [('schema_version',True),('schema_version',4.0),('schema_version',3),('value_contract',{}),
+                          ('comparison_mode',rebuild.FLOAT_MODE),('operations',{}),('source_sha256',{}),('unexpected',1)]:
+            bad=copy.deepcopy(good);bad[key]=value;p.write_text(json.dumps(bad))
+            with self.assertRaises(ValueError):rebuild.validate_ledger(self.ledger,self.root)
+        p.write_text(json.dumps(good));(self.root/'owner_byte.cpp').write_text('extern "C" { unsigned char state_byte = 1; }')
+        with self.assertRaises(ValueError):rebuild.validate_ledger(self.ledger,self.root)
+
+    def test_original_byte_identity_storage_initializer_and_alias(self):
+        good=self.game.read_bytes();elf=rebuild.Elf32(good);_,sec=elf.named_section('.sdata')
+        self.assertEqual(rebuild.scalar_owner_original(elf,self.owner_byte)['size'],1)
+        variants=[]
+        for fields in ({'size':4},{'size':0},{'type':0},{'binding':2},{'other':1},{'section':0xfff2}):variants.append(change_symbol(good,'state_byte',**fields))
+        for field,value in [(1,8),(2,2),(8,0),(8,3),(5,12)]:variants.append(change_section(good,'.sdata',field,value))
+        bad=bytearray(good);bad[sec[4]+12]=1;variants.append(bad)
+        variants.append(change_symbol(good,'state',value=0x4879ec,size=0))
+        variants.append(change_symbol(good,'state',value=0x4879eb,size=2))
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.scalar_owner_original(rebuild.Elf32(bad),self.owner_byte)
+        # A neighboring zero-size label does not become byte ownership.
+        good=change_symbol(good,'state',value=0x4879ed,size=0)
+        self.assertEqual(rebuild.scalar_owner_original(rebuild.Elf32(good),self.owner_byte)['size'],1)
+
+    def test_original_byte_load_overlap_missing_tail_and_permissions(self):
+        good=self.game.read_bytes();elf=rebuild.Elf32(good);_,sec=elf.named_section('.sdata');variants=[]
+        for field,value in [(4,12),(5,12),(6,4),(6,7),(7,3),(1,sec[4]+1)]:
+            bad=bytearray(good);struct.pack_into('<I',bad,84+field*4,value);variants.append(bad)
+        for start,size in [(0x4879ec,1),(0x4879eb,2)]:
+            bad=bytearray(good);struct.pack_into('<8I',bad,116,1,sec[4]+12,start,start,1,size,6,1);variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.scalar_owner_original(rebuild.Elf32(bad),self.owner_byte)
+
+    def test_generated_byte_owner_complete_width_alignment_and_initialization(self):
+        good=self.byte_object('owner');elf=rebuild.Elf32(good);_,sec=elf.named_section('.sdata');variants=[]
+        self.assertEqual(rebuild.scalar_owner_rebuilt(elf,self.owner_byte),b'\0')
+        for fields in ({'size':4},{'size':0},{'type':0},{'binding':2},{'other':1},{'value':1},{'section':0xfff2}):variants.append(change_symbol(good,'state_byte',**fields))
+        for field,value in [(1,8),(2,2),(3,4),(5,4),(8,4),(8,0)]:variants.append(change_section(good,'.sdata',field,value))
+        bad=bytearray(good);bad[sec[4]]=1;variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.scalar_owner_rebuilt(rebuild.Elf32(bad),self.owner_byte)
+        for owner in (self.owner,self.owner_f):
+            with self.assertRaises(ValueError):rebuild.scalar_owner_rebuilt(elf,owner)
+
+    def test_generated_alias_common_extra_payload_and_metadata(self):
+        for kind in ('owner','consumer'):
+            good=self.byte_object(kind)
+            for extra in [('alias',0,0,0,1,0,2 if kind=='owner'else 1),('common',0,1,1,1,0,0xfff2)]:
+                bad=self.byte_object(kind,extra_symbols=[extra])
+                report=self.verify(overrides={('owner_byte.cpp'if kind=='owner'else 'consumer_byte.cpp'):bad})
+                self.assertEqual(report['functions'][3]['status'],'failed')
+            elf=rebuild.Elf32(good)
+            for name in ('.MIPS.abiflags','.gnu.attributes'):
+                _,sec=elf.named_section(name)
+                for offset in range(sec[5]):
+                    bad=bytearray(good);bad[sec[4]+offset]^=1
+                    with self.assertRaises(ValueError):rebuild.float_abi(rebuild.Elf32(bad))
+            _,sec=elf.named_section('.reginfo');bad=bytearray(good);struct.pack_into('<I',bad,sec[4]+20,4)
+            report=self.verify(overrides={('owner_byte.cpp'if kind=='owner'else 'consumer_byte.cpp'):bad})
+            self.assertEqual(report['functions'][3]['status'],'failed')
+        bad=change_section(self.byte_object('consumer'),'.sdata',5,1)
+        self.assertEqual(self.verify(overrides={'consumer_byte.cpp':bad})['functions'][3]['status'],'failed')
+
+    def test_closed_byte_instruction_shape(self):
+        code=struct.pack('<2I',0x03e00008,0xa3840000)
+        self.assertEqual(rebuild.scalar_body(code,'store-byte-argument',True,rebuild.BYTE_MODE),0)
+        for bad in [code[:4],code+bytes(4),code[4:]+code[:4]]+[struct.pack('<2I',a,b)for a,b in
+            [(0x03e00009,0xa3840000),(0x03c00008,0xa3840000),(0x03e00008,0xaf840000),
+             (0x03e00008,0xa7840000),(0x03e00008,0xa3850000),(0x03e00008,0xa3a40000),
+             (0x03e00008,0x93840000),(0x03e00008,0xe7840000),(0x03e00008,0xa3840001)]]:
+            with self.assertRaises(ValueError):rebuild.scalar_body(bad,'store-byte-argument',True,rebuild.BYTE_MODE)
+        for mode in (rebuild.SCALAR_MODE,rebuild.SCALAR_V2_MODE,rebuild.FLOAT_MODE):
+            with self.assertRaises(ValueError):rebuild.scalar_body(code,'store-byte-argument',True,mode)
+
+    def test_byte_relocation_sites_types_imports_and_addends(self):
+        good=self.byte_object('consumer');elf=rebuild.Elf32(good);_,sec=elf.named_section('.rel.text')
+        for offset,info in [(0,0x207),(8,0x207),(2,0x207),(4,0x107),(4,0x202),(4,0x20a)]:
+            bad=bytearray(good);struct.pack_into('<II',bad,sec[4],offset,info)
+            with self.assertRaises(ValueError):rebuild.Elf32(bad).rebuilt('candidate_byte',scalar_binding=self.item_byte['data_binding'],scalar_mode=rebuild.BYTE_MODE)
+        for field,value in [(1,4),(2,0),(3,4),(5,0),(5,16),(6,5),(7,2),(8,8),(9,4)]:
+            with self.assertRaises(ValueError):rebuild.Elf32(change_section(good,'.rel.text',field,value)).rebuilt('candidate_byte',scalar_binding=self.item_byte['data_binding'],scalar_mode=rebuild.BYTE_MODE)
+        for fields in ({'binding':0},{'binding':2},{'type':2},{'size':1},{'value':1},{'other':1}):
+            with self.assertRaises(ValueError):rebuild.Elf32(change_symbol(good,'state_byte',**fields)).rebuilt('candidate_byte',scalar_binding=self.item_byte['data_binding'],scalar_mode=rebuild.BYTE_MODE)
+        raw=elf.function('candidate_byte')[1]
+        for delta in (-32768,-1,0,1,32767):
+            owner=dict(self.owner_byte,address=f'0x{0x4879f0+delta:08x}');original=raw[:4]+struct.pack('<I',0xa3840000|(delta&65535))
+            self.assertEqual(rebuild.relocate_scalar(raw,original,self.item_byte,owner)[0],original)
+        for delta in (-32769,32768):
+            with self.assertRaises(ValueError):rebuild.scalar_relocation_evidence(self.item_byte,dict(self.owner_byte,address=f'0x{0x4879f0+delta:08x}'))
+
+    def test_byte_model_requires_all_exact_macros(self):
+        output='\n'.join('#define '+k+' '+v for k,v in rebuild.BYTE_MODEL.items()).encode()
+        with patch.object(rebuild,'compiler_output',return_value=output):
+            self.assertEqual(rebuild.ee_data_model(self.compiler,rebuild.BYTE_STORE_FLAGS,{},rebuild.BYTE_MODEL),rebuild.BYTE_MODEL)
+        for key,value in rebuild.BYTE_MODEL.items():
+            line=('#define '+key+' '+value).encode()
+            for bad in (output.replace(line,b''),output+b'\n'+line,output.replace(line,('#define '+key+' 999').encode())):
+                with patch.object(rebuild,'compiler_output',return_value=bad),self.assertRaises(ValueError):rebuild.ee_data_model(self.compiler,rebuild.BYTE_STORE_FLAGS,{},rebuild.BYTE_MODEL)
+
+    def test_owner_failure_never_borrows_other_lane(self):
+        report=self.verify(overrides={'owner_byte.cpp':change_symbol(self.byte_object('owner'),'state_byte',size=4)})
+        self.assertEqual([r['status']for r in report['functions']],['matched']*3+['failed'])
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),3)
+
+    def test_late_byte_source_change_invalidates_all_data_owners(self):
+        def mutation(name):
+            if name=='consumer_byte.cpp':(self.root/'owner_byte.cpp').write_text('extern "C" { unsigned char state_byte = 1; }');self.refresh_review()
+        report=self.verify(mutation=mutation)
+        self.assertTrue(all(x['status']=='failed'for x in report['data_objects']+report['functions']))
+
+    def test_late_components_change_invalidates_group(self):
+        def mutation(name):
+            if name=='consumer_byte.cpp':self.identity['components']['as']['sha256']='e'*64
+        report=self.verify(mutation=mutation)
+        self.assertTrue(all(x['status']=='failed'for x in report['data_objects']+report['functions']))
+
+    def test_receipt_missing_policy_model_abi_and_numeric_types(self):
+        good=self.verify();variants=[]
+        for key in ('byte_store_policy','byte_store_policy_sha256'):
+            bad=copy.deepcopy(good);del bad[key];variants.append(bad)
+        for version in (True,8.0,7,6):
+            bad=copy.deepcopy(good);bad['schema_version']=version;variants.append(bad)
+        for collection in ('data_objects','functions'):
+            for key in ('byte_model','byte_abi','source_sha256','compiler_args'):
+                bad=copy.deepcopy(good);del bad[collection][3][key];variants.append(bad)
+            for key,value in [('size',True),('size',1.0),('byte_model',{}),('byte_abi',{}),('object_flags',True)]:
+                bad=copy.deepcopy(good);bad[collection][3][key]=value;variants.append(bad)
+        for key,value in [('size',True),('alignment',True),('addend',False),('initializer',False)]:
+            bad=copy.deepcopy(good);bad['byte_store_policy'][key]=value;bad['byte_store_policy_sha256']=rebuild.digest(rebuild.canonical(bad['byte_store_policy']));variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+
+    def test_receipt_cross_lane_relocations_and_owner_proofs(self):
+        good=self.verify();variants=[]
+        for key,value in [('offset',True),('offset',4.0),('addend',False),('displacement',-4.0),('owner_id','owner'),('object_symbol','state')]:
+            bad=copy.deepcopy(good);bad['functions'][3]['byte_store_relocations'][0][key]=value;variants.append(bad)
+        for key,value in [('float_store_relocations',[]),('scalar_relocation',{}),('scalar_relocations',[]),('float_model',rebuild.FLOAT_MODEL),('float_abi',rebuild.FLOAT_ABI)]:
+            bad=copy.deepcopy(good);bad['functions'][3][key]=value;variants.append(bad)
+        for key,value in [('size',True),('binding',True),('initializer_sha256','0'*64)]:
+            bad=copy.deepcopy(good);bad['data_objects'][3]['original'][key]=value;variants.append(bad)
+        for key,value in [('generated_binding',True),('initializer',False),('comparison_mode',rebuild.FLOAT_MODE),('data_type','uint32')]:
+            bad=copy.deepcopy(good);bad['data_objects'][3][key]=value;variants.append(bad)
+        bad=copy.deepcopy(good);bad['data_objects'][3]['status']='failed';bad['functions'][3]['owner_result_sha256']=rebuild.digest(rebuild.canonical(bad['data_objects'][3]));variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+
+    def test_receipt_byte_evidence_rejected_on_other_lanes_and_old_schema(self):
+        good=self.verify()
+        for collection in ('data_objects','functions'):
+            for index in (0,1,2):
+                for key,value in [('byte_model',rebuild.BYTE_MODEL),('byte_abi',rebuild.FLOAT_ABI),('byte_store_relocations',[])]:
+                    bad=copy.deepcopy(good);bad[collection][index][key]=value
+                    with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+        self.ledger['functions']=self.ledger['functions'][:3];self.ledger['data_objects']=self.ledger['data_objects'][:3];self.ledger['schema_version']=4;self.refresh_review()
+        old=self.verify();self.assertEqual(len(rebuild.recorded_matches(old,self.ledger,self.root)),3)
+        for key,value in [('byte_store_policy',rebuild.BYTE_POLICY),('byte_store_policy_sha256','0'*64)]:
+            bad=copy.deepcopy(old);bad[key]=value
+            with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+
+
+    def test_byte_review_allows_hashed_notes_but_rejects_wrong_note_type(self):
+        p=self.root/'review_byte.json';review=json.loads(p.read_text());review['manual_contract']={'limits':'no runtime proof'}
+        p.write_text(json.dumps(review));self.assertEqual(rebuild.validate_ledger(self.ledger,self.root),self.ledger)
+        for bad_value in ([],True,'reviewed'):
+            review['manual_contract']=bad_value;p.write_text(json.dumps(review))
+            with self.assertRaises(ValueError):rebuild.validate_ledger(self.ledger,self.root)
+
+    def test_new_receipt_replacement_and_schema_boolean_rejected(self):
+        destination=self.root/'receipt.json'
+        for version in (7,8):
+            destination.write_text(json.dumps({'schema_version':version,'scope':rebuild.SCOPE}))
+            rebuild.invalidate_report(destination,self.root/'ledger.json',self.ledger,self.game,self.compiler,self.root)
+            self.assertFalse(destination.exists())
+        for version in (True,8.0,9):
+            destination.write_text(json.dumps({'schema_version':version,'scope':rebuild.SCOPE}))
+            with self.assertRaises(ValueError):rebuild.invalidate_report(destination,self.root/'ledger.json',self.ledger,self.game,self.compiler,self.root)
+            self.assertTrue(destination.exists())
+
+    def test_byte_receipt_stale_profile_specs_review_and_failed_cross_evidence(self):
+        good=self.verify();variants=[]
+        for collection in ('data_objects','functions'):
+            bad=copy.deepcopy(good);bad[collection][3]['compiler_args']=rebuild.SCALAR_FLAGS;variants.append(bad)
+            bad=copy.deepcopy(good);bad[collection][3]['status']='failed';bad[collection][3]['float_model']=rebuild.FLOAT_MODEL;variants.append(bad)
+        bad=copy.deepcopy(good);bad['toolchains']['ee-gcc']['specs_sha256']='d'*64;variants.append(bad)
+        bad=copy.deepcopy(good);bad['data_objects'][3]['review_sha256']='d'*64;variants.append(bad)
+        for bad in variants:
+            with self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
+        for key in ('byte_store_policy','byte_store_policy_sha256'):
+            ledger=copy.deepcopy(self.ledger);ledger[key]={}
+            with self.assertRaises(ValueError):rebuild.validate_ledger(ledger,self.root)
+
+    def test_byte_width_does_not_claim_adjacent_owners_or_expand_word_policy(self):
+        good=self.game.read_bytes()
+        # Move the synthetic byte to an odd address, adjacent but outside float extent.
+        good=change_symbol(good,'state_byte',value=0x4879ed)
+        _,section=rebuild.Elf32(good).named_section('.sdata')
+        good=change_section(good,'.sdata',5,14)
+        data=bytearray(good);struct.pack_into('<II',data,84+16,14,14)
+        owner=dict(self.owner_byte,address='0x004879ed')
+        self.assertEqual(rebuild.scalar_owner_original(rebuild.Elf32(data),owner)['size'],1)
+        for index in (0,1,2):
+            bad=copy.deepcopy(self.ledger);bad['data_objects'][index]['size']=1
+            with self.assertRaises(ValueError):rebuild.validate_ledger(bad,self.root)
 
 
 if __name__ == '__main__':

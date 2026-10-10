@@ -139,3 +139,38 @@ four-byte F12 bit transfer, without arithmetic. Host observations of exponent-25
 patterns do not establish portable C++ exceptional-value behavior or PS2 hardware
 semantics. Original translation-unit ownership, general calling conventions,
 runtime GP preservation and initialization execution remain unverified.
+
+## Source-owned byte store
+
+`ee-gprel-byte-store-v1` is distinct from the four-byte integer and float policies.
+It admits only the complete eight-byte return and `SB A0,GP` delay-slot store,
+with one zero-addend `R_MIPS_GPREL16` relocation at offset four. There are no byte
+reads, arithmetic, calls or alternative register forms. The owner must be a
+separate, naturally aligned one-byte unsigned-char definition in file-backed
+`.sdata`, initially zero. Its original counterpart must have an exact size-one
+object symbol and a unique writable file mapping. Aliases, overlapping symbols
+or loads, extra payload and ownership of neighboring bytes are rejected.
+
+The fixed modern EE profile uses `-G8` and `-fno-zero-initialized-in-bss`.
+Independent macro checks establish eight-bit bytes and a 32-bit int range. The
+source contract is defined int-to-unsigned-char conversion modulo 256 into live,
+exclusive ordinary storage. It does not recover original signedness, the original
+return declaration or translation-unit linkage. Exact ELF ABI metadata is also
+checked and recorded as `byte_abi`; this is metadata evidence only, not FPU
+behavior or a general ABI proof. Runtime GP preservation, initialization and
+object lifetime remain unverified.
+
+Ledger schema 5 requires exactly one byte owner and one float owner, with zero
+to two scalar-v2 owners. Each owner names its policy and retains a separate source,
+review and address extent. Byte review schema 4 binds source hashes, consumers,
+operations and the value contract; optional descriptive review notes are hashed
+as well. Receipt schema 8 binds the byte policy, compiler profile/model, exact
+initializer, relocation and selected fresh owner result. Cross-policy evidence,
+Boolean substitutes for integer proof fields and stale source/review/component
+records are rejected. Scalar-v2 and float review versions remain 2 and 3.
+
+Older ledger and receipt policies keep their prior storage and operation rules;
+the byte lane cannot be inferred by changing an old owner's size. Schema 8 is
+paired only with ledger 5. Updating verifier code requires fresh hash-bound
+receipts even for unchanged sources and older ledgers. This tooling extension
+alone adds no function or initialized-data coverage to the public ledger.

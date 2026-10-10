@@ -110,6 +110,26 @@ single-access limits. Migration requires new operation-bound reviews and fresh
 comparison, not reinterpretation of a saved v1 receipt. See the
 [two-owner contract](GLOBAL_STATE.md#two-independent-owners-and-a-bounded-update).
 
+### Separate byte-store policy
+
+The reviewed `ee-gprel-byte-store-v1` mode accepts only a complete eight-byte
+return with an A0-to-GP byte store in its delay slot. Its separate source owner
+must be one unsigned-char byte, naturally aligned, initialized to file-backed
+zero in `.sdata`. The fixed profile uses `-G8` and
+`-fno-zero-initialized-in-bss`; existing word and float profiles remain unchanged.
+One zero-addend relocation at offset four must bind that same freshly compiled
+owner. The [byte-state contract](GLOBAL_STATE.md#source-owned-byte-store) covers
+exact storage, source-model, metadata and review checks.
+
+This mode requires ledger schema 5 and receipt schema 8: exactly one byte owner,
+exactly one float-store owner, and up to two scalar-v2 owners. Its owner review
+uses schema 4; existing scalar and float review versions remain unchanged.
+Adding verifier support does not admit another source function. The current
+public count remains ten until a separate source review and admission commit.
+Older policy lanes remain supported, but any verifier hash change invalidates
+saved receipts. Refresh them through a fresh comparison with their existing
+ledger; do not edit their recorded hashes into agreement.
+
 ## Bounded reconstruction loop
 
 1. Check the repository status and active coordination issue before taking a
