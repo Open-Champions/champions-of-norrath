@@ -7,7 +7,7 @@ Our goal is readable C++ that can be checked against a contributor's original PS
 executable, one complete function at a time.
 
 **Status: ongoing source reconstruction against the hash-pinned Norrath
-executable: 6 complete functions, 64 matching bytes.** Exact retail
+executable: 7 complete functions, 116 matching bytes.** Exact retail
 revision remains unconfirmed. See the [reconstruction workflow](docs/REBUILD.md)
 and [baseline evidence](docs/BASELINE.md). The [completion criteria](docs/COMPLETION.md)
 keep the full rebuild and runtime checks separate from intermediate milestones. Return to Arms' addresses,

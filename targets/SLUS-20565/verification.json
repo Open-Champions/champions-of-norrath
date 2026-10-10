@@ -1,11 +1,11 @@
 {
-  "schema_version": 2,
+  "schema_version": 4,
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "351706da611508edd78f103799274e4431535d3631919892a693e7faf2d58a09",
+  "ledger_sha256": "4e1a472ba719b7a68d2d7e24e666dcf1ba15c0090410f24fa8e268eb9d745750",
   "verifier_sha256": "e37ceb88556b953bebf545110bdba2ba3dc4d7299f3aaad41273741c40a5d9e7",
-  "recorded_at": "2026-10-10T09:07:12.463743+00:00",
+  "recorded_at": "2026-10-10T09:08:28.975746+00:00",
   "toolchains": {
     "clang": {
       "flavor": "clang",
@@ -30,6 +30,31 @@
         }
       },
       "specs_sha256": "360e9327fc2dd72431d826ab1854dbaf5be4bbf9661555f47f1e6811c4038942"
+    },
+    "gcc-2.95.2-mips3-leaf": {
+      "flavor": "gcc-2.95.2-mips3-leaf",
+      "name": "xgcc",
+      "version": "2.95.2",
+      "target": "mips64el-unknown-elf",
+      "sha256": "abfe0af4983a2f3a0e7e28a6d7f809d9cff1fae1a602795e71c8ea3a3269ad45",
+      "components": {
+        "cpp": {
+          "name": "cpp",
+          "sha256": "25d2119710d007fe40dad495588cac5f9182f012be74cf4126f38c36fbd14e4d"
+        },
+        "cc1plus": {
+          "name": "cc1plus",
+          "sha256": "2ae0862c44ffaf028f6e2c31e79117011b779458de8d26cd39273241ec0cb252"
+        },
+        "as": {
+          "name": "as",
+          "sha256": "4a29dce6e115b9d1591741898640d4e41818169bebe5546af0100e8cdeafa0ae"
+        }
+      },
+      "assembler_version": "GNU assembler (GNU Binutils) 2.45.1",
+      "descriptor_sha256": "7fde03eef3722281e3d5f678fa8765d8f9d66de840a85f9ba28999a0d9f3357c",
+      "specs_sha256": "f1f9bbdab6b396e2385ebd9cfd3b1882076fc7d5a26d0d30c0e3d2d7c519370c",
+      "search_policy": "gcc-2.95.2-cross-startfile-v1"
     }
   },
   "functions": [
@@ -287,6 +312,74 @@
       "size": 20,
       "original_sha256": "ec256bc70e0e2c3940d1d878a5fa97abcb7760e25276dca10239cbac8d1fcc36",
       "rebuilt_sha256": "ec256bc70e0e2c3940d1d878a5fa97abcb7760e25276dca10239cbac8d1fcc36"
+    },
+    {
+      "id": "light_deactivate",
+      "source_sha256": "40d4860e1694e8fe22825a236ef9313528b9b0851363a9a241ff2763d216b196",
+      "compiler_args": [
+        "-B<reviewed-driver-directory>/",
+        "-mips3",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-G0",
+        "-fomit-frame-pointer",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-O2",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-S",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-assembly.s>"
+      ],
+      "toolchain": "gcc-2.95.2-mips3-leaf",
+      "toolchain_sha256": "5b11d020e67ba45070de5e593c29e83726d8545aad1c91c6b180f2885c19c2ce",
+      "status": "matched",
+      "data_model": {
+        "probe_sha256": "c31d411efa34bc1b585ce1235cb49770c25eb579327c5719e74006effa7ecb44",
+        "macros": {
+          "__GNUC__": "2",
+          "__GNUC_MINOR__": "95",
+          "__GNUG__": "2",
+          "__cplusplus": "1",
+          "__mips": "3",
+          "__mips64": "1",
+          "__MIPSEL__": "1",
+          "__SIZE_TYPE__": "unsigned int",
+          "__PTRDIFF_TYPE__": "int"
+        },
+        "assertions": "char1-short2-int4-long4-pointer4-longlong8-signedchar",
+        "compiled": true
+      },
+      "comparison_mode": "historical-integer-leaf-v1",
+      "control_flow_policy": "historical-integer-leaf-v1",
+      "assembly_sha256": "0e235accb8a72e7bddb98184196ba1e4200e2e5d16e854caad580bf392fe7d82",
+      "assembler_args": [
+        "-EL",
+        "-mips3",
+        "-mabi=o64",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "object_flags": 536879105,
+      "object_sha256": "2f39903517fb9523c26533ac627bb687a4922d3d44dbaa82b3fd7369d6710237",
+      "size": 52,
+      "original_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
+      "rebuilt_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
+      "historical_evidence_sha256": "cb1e657ca5f4a1d4b087ea7baef5253051f11e331ef6960a22c377be43f03782"
     }
-  ]
+  ],
+  "historical_policy": {
+    "mode": "historical-integer-leaf-v1",
+    "object_flags": 536879105,
+    "abi_scope": "isolated-integer-leaf-not-ee-abi",
+    "control_flow": "stackless-forward-integer-branches-v1",
+    "runtime_relocations": false,
+    "dependencies": false
+  },
+  "historical_policy_sha256": "570bcfe86062bcd0a01a60bae975b09bae37582462e4ba4eb09e4974f9779d9f"
 }

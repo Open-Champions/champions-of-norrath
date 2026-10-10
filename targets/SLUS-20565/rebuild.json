@@ -215,6 +215,36 @@
         "interface": "Signed 32-bit parameter/return comparison adapter. Retained parameter name and observed integer callers support the interface; original declaration and whole-program ABI are not established.",
         "semantic_check": "65,723 directed-boundary and deterministic 32-bit cases passed a wide unsigned reference, bounded original/generated instruction interpretation, and host C++ with UBSan/-fwrapv. Not PS2 execution."
       }
+    },
+    {
+      "id": "light_deactivate",
+      "source": "reconstructed/light_deactivate.cpp",
+      "symbol": "norrath_light_deactivate",
+      "original_symbol": "lightDeactivate__FP5Light",
+      "address": "0x0013eb28",
+      "size": 52,
+      "language": "c++",
+      "toolchain": "gcc-2.95.2-mips3-leaf",
+      "comparison_mode": "historical-integer-leaf-v1",
+      "compiler_args": [
+        "-mips3",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-G0",
+        "-fomit-frame-pointer",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-O2"
+      ],
+      "evidence": {
+        "behavior": "Unlinks the node through its previous next-pointer slot, updates its successor backlink, then clears both node links. Branch-likely delay slots preserve source ordering even for self-links and shared neighbors.",
+        "boundary": "Global STT_FUNC at 0x0013eb28 has complete52-byte extent ending0x0013eb5c, no aliases or overlaps, and unique executable load mapping. Previous destructor ends0x0013eb24 and lightUpdatePosition starts0x0013eb60; four padding bytes each side excluded.",
+        "interface": "Typed eight-byte intrusive-link view, not a recovered full Light class. Offset0 is LightNode* next; offset4 is LightNode** previous_next_slot. Live writable node/slot storage and no concurrent mutation required. Standalone slot storage does not overlap nodes; self-links/shared neighbors are allowed.",
+        "callers_and_layout": "29 direct call sites observed. lightAdd and lightActivate set offset4 to a global head-slot address or predecessor next-field address. The independent4-byte head slot makes a full-previous-Light pointer model inappropriate. Actual game paths have not been executed.",
+        "semantic_check": "96,000 exhaustive three-node/standalone-head configurations compared original instruction interpretation with the native compiled function body; nulls, self-links, shared neighbors, cycles and surrounding guards checked. Only two target-width assertions removed for native pointers; ASan and UBSan passed.",
+        "compiler_scope": "Fresh restricted GCC2.95.2 generic MIPS3/o64 integer-leaf comparison with unchanged object flags0x20002001, not a general EE ABI or original compiler identification."
+      }
     }
   ]
 }
