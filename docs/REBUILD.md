@@ -27,7 +27,7 @@ Use Python 3.10 or newer. Original inputs and inventory output stay private.
 python3 -m unittest discover -s tools -p 'test_*.py' -v
 python3 tools/link_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/new-link-layout.json
 python3 tools/symbol_inventory.py work/private/SLUS_205.65 --expected-sha256 9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0 --output work/symbols/new-inventory.json
-python3 tools/rebuild.py verify --game work/private/SLUS_205.65 --compiler /absolute/path/to/clang --ee-compiler /absolute/path/to/ee/bin/mips64r5900el-ps2-elf-g++ --output-dir work/rebuild --report work/rebuild/verification.json
+python3 tools/rebuild.py verify --game work/private/SLUS_205.65 --compiler /absolute/path/to/clang --ee-compiler /absolute/path/to/ee/bin/mips64r5900el-ps2-elf-g++ --historical-compiler work/toolchains/build-gcc-2.95.2/gcc/xgcc --historical-assembler work/toolchains/ee/bin/mips64r5900el-ps2-elf-as --output-dir work/rebuild --report work/rebuild/verification.json
 python3 tools/rebuild.py check --report targets/SLUS-20565/verification.json --require-matches
 ```
 
@@ -205,7 +205,8 @@ code relocations. General runtime-data relocations remain unsupported. Source va
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **seven complete functions and 116 matching bytes**.
+Current source progress is **eight complete functions and 128 matching code bytes**,
+plus **one separately verified four-byte initialized data object**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -256,3 +257,19 @@ interpretation and native compiled source with ASan/UBSan, including self-links,
 shared neighbors, cycles and surrounding memory guards. The authored view covers
 only the eight-byte link prefix; full Light class layout, allocation lifetime,
 lighting behavior and actual game execution remain outside this function claim.
+
+The eighth complete body, `lightDisableVolumetricLighting()` at `0x0013e720`,
+sets a shared lighting flag to one. Its entire 12-byte body matches after the
+reviewed GP-relative relocation binds a separately compiled source definition
+to the original local four-byte `.sdata` object at `0x00483aa8`. The source
+owner's complete file-backed zero initializer also matches. The original local
+linkage is explicitly adapted to one external comparison definition; this is
+not a full translation-unit or subsystem reconstruction.
+
+Independent review, GNU linker comparison and 65,542 native source/original-model
+cases passed, including initial zero and a manual harness reset, with ASan/UBSan.
+The original reset function remains unreconstructed. The
+[source review](../targets/SLUS-20565/disable-volumetric-lighting-review.json) binds
+owner and consumer hashes to the fixed GP evidence. Two observed drawing callers
+have different reset conditions, so unconditional reset and runtime preservation
+are not inferred. Other state users and actual lighting behavior remain unverified.

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "target": {
     "id": "SLUS-20565-sha256-9a60f13c5c31",
     "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
@@ -245,6 +245,85 @@
         "semantic_check": "96,000 exhaustive three-node/standalone-head configurations compared original instruction interpretation with the native compiled function body; nulls, self-links, shared neighbors, cycles and surrounding guards checked. Only two target-width assertions removed for native pointers; ASan and UBSan passed.",
         "compiler_scope": "Fresh restricted GCC2.95.2 generic MIPS3/o64 integer-leaf comparison with unchanged object flags0x20002001, not a general EE ABI or original compiler identification."
       }
+    },
+    {
+      "id": "light_disable_volumetric_lighting",
+      "source": "reconstructed/light_disable_volumetric_lighting.cpp",
+      "symbol": "norrath_light_disable_volumetric_lighting",
+      "original_symbol": "lightDisableVolumetricLighting__Fv",
+      "address": "0x0013e720",
+      "size": 12,
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "comparison_mode": "ee-gprel-scalar-v1",
+      "data_binding": {
+        "owner_id": "disable_volumetric_lighting_state",
+        "object_symbol": "norrath_disable_volumetric_lighting",
+        "operation": "set-one"
+      }
+    }
+  ],
+  "data_objects": [
+    {
+      "id": "disable_volumetric_lighting_state",
+      "source": "reconstructed/disable_volumetric_lighting_state.cpp",
+      "symbol": "norrath_disable_volumetric_lighting",
+      "original_symbol": "disableVolumetricLighting",
+      "address": "0x00483aa8",
+      "size": 4,
+      "original_binding": 0,
+      "section": ".sdata",
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "data_type": "uint32",
+      "storage": "sdata-file-zero",
+      "initializer": 0,
+      "linkage_adapter": "original-local-to-unique-extern",
+      "review": "targets/SLUS-20565/disable-volumetric-lighting-review.json"
     }
   ]
 }

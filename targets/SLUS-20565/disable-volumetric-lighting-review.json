@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "owner_id": "disable_volumetric_lighting_state",
+  "function_ids": [
+    "light_disable_volumetric_lighting"
+  ],
+  "source_sha256": {
+    "reconstructed/disable_volumetric_lighting_state.cpp": "b96382be415d3af14b7979f59b44e532b489bfce8396cb487236c1504aa35851",
+    "reconstructed/light_disable_volumetric_lighting.cpp": "ec72ff6bd82615a9e17aeec3365edcf10ee29440ded9954555947afb97fac198"
+  },
+  "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+  "runtime": {
+    "gp_preservation": "unverified",
+    "initialization": "unverified"
+  },
+  "manual_contract": {
+    "status": "independently reviewed source contract; fresh production comparison recorded separately",
+    "original_function": {
+      "symbol": "lightDisableVolumetricLighting__Fv",
+      "address": "0x0013e720",
+      "size": 12
+    },
+    "original_owner": {
+      "symbol": "disableVolumetricLighting",
+      "address": "0x00483aa8",
+      "size": 4,
+      "binding": "local",
+      "section": ".sdata",
+      "storage": "PROGBITS",
+      "initial_value": 0
+    },
+    "semantic_type": "authored unsigned 32-bit flag adapter; original C++ declaration unknown",
+    "observed_users": [
+      {
+        "symbol": "lightResetOptionalParams__Fv",
+        "address": "0x0013cb88",
+        "size": 316,
+        "operation": "32-bit zero store at 0x13ccb8 before terminal return"
+      },
+      {
+        "symbol": "lightSetupForCharacter__FP6PacketG6Point3",
+        "address": "0x0013d970",
+        "size": 1240,
+        "operation": "32-bit load at 0x13dd84 then branch if nonzero; avoids worldQueryLightMap call and selects 1.0 when nonzero"
+      }
+    ],
+    "gp_evidence": {
+      "symbol": "_gp",
+      "value": "0x004879f0",
+      "size": 4,
+      "type": "STT_OBJECT",
+      "binding": "GLOBAL",
+      "section": "SHN_ABS",
+      "startup": "LUI A0, 0x48 at 0x100198; ADDIU A0, A0, 0x79f0 at 0x1001ac; DADDU GP, A0, ZERO at 0x1001c0",
+      "runtime_preservation": "unverified"
+    },
+    "limits": [
+      "Direct GP reference scan is not complete alias or user closure.",
+      "Generated extern-global owner is an explicit comparison adapter for original local symbol, not original translation-unit linkage reconstruction.",
+      "Whole original reset and lighting setup functions remain unreconstructed.",
+      "Runtime file initialization, GP preservation and lighting behavior are not executed."
+    ],
+    "validation": {
+      "complete_private_body_match": true,
+      "independent_linker_comparison": true,
+      "host_and_original_model_cases": 65542,
+      "sanitizers": "ASan+UBSan clean",
+      "host_initialization_and_manual_reset": "passed; manual harness reset is not reconstructed original reset"
+    }
+  },
+  "callers": {
+    "scope": "Aligned main .text direct JAL observations only; not runtime or all references",
+    "target": "0x13e720",
+    "callers": [
+      {
+        "caller": "drawWorldObject__FP12_worldHeaderP13PolysetHeaderi",
+        "callsite": "0x179938"
+      },
+      {
+        "caller": "drawCompass__Fv",
+        "callsite": "0x1c6cc0"
+      }
+    ]
+  },
+  "review_scope": "Authored unsigned 32-bit owner and setter with matching declarations and explicit width assertions. Source and observed original state access reviewed independently. No target execution, whole-program linkage or all-user reconstruction claim."
+}
