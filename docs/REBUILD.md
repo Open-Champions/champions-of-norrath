@@ -34,7 +34,7 @@ python3 tools/rebuild.py check --report targets/SLUS-20565/verification.json --r
 Select the existing trusted compiler explicitly. `verify` compiles and compares;
 `check` validates ledger/source/receipt fingerprints without accessing original
 game bytes. `--require-matches` additionally rejects records lacking a match for
-each banked function. Public CI runs synthetic tests and this recorded-match
+each banked function and declared data owner. Public CI runs synthetic tests and this recorded-match
 check; it does not contain or freshly compare the private game.
 
 The sanitized receipt records baseline, verifier, source, compiler, object and
@@ -80,11 +80,26 @@ Pointer lifetimes, aliasing and source-level type contracts still need independe
 review. The old compiler has no `-fwrapv` support; undefined signed overflow cannot
 be justified by copying the modern compiler's options.
 
-Ledgers containing this mode produce schema 4 receipts binding the assembly,
+Ledgers containing this mode, without scalar owners, produce schema 4 receipts binding the assembly,
 object flags, source, model, instruction policy and component identities. They
 cannot supply dependencies to the EE direct-call mode. A clean isolated rebuild
 reproduced the recipe and a 52-byte comparison, while its host binaries differed;
 this establishes neither a reproducible compiler binary nor a complete game build.
+
+### Source-backed scalar state
+
+The separately reviewed `ee-gprel-scalar-v1` mode permits a four-byte, explicitly
+initialized unsigned zero in file-backed `.sdata` and complete read, write, or
+set-to-one consumers. It requires the same-run fresh source owner, exact GP
+metadata and startup context, one zero-addend `R_MIPS_GPREL16` relocation, and
+complete original/relocated body equality. Owner storage, symbol identity, load
+mappings, source contracts and component stability are checked separately.
+
+The [global-state contract](GLOBAL_STATE.md) describes its narrow scope and
+local-to-external comparison adaptation. Ledger schema 2 records `data_objects`;
+receipt schema 5 binds their fresh results to each consumer. Function counts and
+code bytes remain separate from data objects and initialized bytes. Runtime
+initialization, GP preservation and whole-program linkage remain unverified.
 
 ## Bounded reconstruction loop
 
@@ -185,8 +200,8 @@ records equality across the entire original symbol extent, not a chosen prefix.
 The compiler emits an `R_MIPS_32` relocation in nonallocated `.pdr` procedure
 metadata. The verifier permits only that exact metadata shape, offset and
 reference to the candidate. Leaf objects are compared without rewriting code;
-the separate direct-call mode above is the only supported code relocation.
-Runtime-data relocations remain unsupported. Source validation also rejects
+the separate direct-call and scalar modes above support only their declared
+code relocations. General runtime-data relocations remain unsupported. Source validation also rejects
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 

@@ -27,7 +27,7 @@ and [receipt](targets/SLUS-20565/verification.json) record the narrow claim.
 The retained main-code inventory contains 5,390 function symbols; inventory
 coverage is not reconstructed-source or gameplay progress.
 
-The intake, symbol inventory, load-layout and reconstruction tools have 104 synthetic tests
+The intake, symbol inventory, load-layout and reconstruction tools have 124 synthetic tests
 requiring no game files. Public CI checks these tests and saved-record consistency;
 fresh original-byte verification runs locally with a private executable.
 

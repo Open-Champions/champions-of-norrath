@@ -1139,5 +1139,286 @@ class HistoricalTests(unittest.TestCase):
                 rebuild.audit_historical_body(struct.pack('<'+'I'*len(words),*words))
 
 
+
+def scalar_elf_fixture(kind='original', delta=-16, extra_symbols=()):
+    """Independent authored integer instructions and ELF records, without game bytes."""
+    gp = 0x4879f0
+    setup = struct.pack('<11I', *([0x3c040048] + [0x3c050000] * 4 + [0x248479f0] + [0x24a50000] * 4 + [0x0080e02d]))
+    accessor = struct.pack('<3I', 0x24020001, 0x03e00008, 0xaf820000 | (delta & 65535 if kind == 'original' else 0))
+    code = setup + accessor if kind == 'original' else accessor if kind == 'consumer' else b''
+    symbols = ([('_start', BASE, 44, 2, 1, 0, 1), ('original', BASE+44, 12, 2, 1, 0, 1),
+                ('state', gp+delta, 4, 1, 1, 0, 2), ('_gp', gp, 4, 1, 1, 0, 0xfff1)] if kind == 'original' else
+               [('candidate', 0, 12, 2, 1, 0, 1), ('state', 0, 0, 0, 1, 0, 0)] if kind == 'consumer' else
+               [('state', 0, 4, 1, 1, 0, 2)]) + list(extra_symbols)
+    strings, table = bytearray(b'\0'), bytearray(16)
+    for name, value, size, typ, binding, other, section in symbols:
+        offset = len(strings); strings.extend(name.encode()+b'\0')
+        table.extend(struct.pack('<IIIBBH', offset, value, size, binding*16+typ, other, section))
+    rows = [('', b'', 0, 0, 0, 0, 0, 0),
+            ('.text', code, 1, 6, BASE if kind == 'original' else 0, 0, 0, 0),
+            ('.sdata', bytes(4) if kind != 'consumer' else b'', 1, 0x10000003, gp+delta if kind == 'original' else 0, 0, 0, 0),
+            ('.reginfo', struct.pack('<6I', 0, 0, 0, 0, 0, gp if kind == 'original' else 0), 0x70000006, 2 if kind == 'original' else 0, 0, 0, 0, 1),
+            ('.symtab', table, 2, 0, 0, 5, 1, 16),
+            ('.strtab', strings, 3, 0, 0, 0, 0, 0),
+            ('.rel.text', struct.pack('<II', 8, 0x207) if kind == 'consumer' else b'', 9, 0x40, 0, 4, 1, 8)]
+    names = b'\0'+b''.join(r[0].encode()+b'\0' for r in rows[1:])+b'.shstrtab\0'
+    rows.append(('.shstrtab', names, 3, 0, 0, 0, 0, 0))
+    data = bytearray(148 if kind == 'original' else 52); sections = []
+    for name, blob, typ, flags, addr, link, info, entry in rows:
+        data.extend(bytes(-len(data)%4)); offset=len(data); data.extend(blob)
+        sections.append((names.index(name.encode()+b'\0'),typ,flags,addr,offset,len(blob),link,info,4,entry))
+    data.extend(bytes(-len(data)%4)); shoff=len(data)
+    for row in sections: data.extend(struct.pack('<10I',*row))
+    data[:16]=b'\x7fELF\x01\x01\x01'+bytes(9)
+    struct.pack_into('<HHIIIIIHHHHHH',data,16,2 if kind=='original' else 1,8,1,rebuild.BASELINE_ENTRY,
+                     52 if kind=='original' else 0,shoff,rebuild.BASELINE_FLAGS & (~1 if kind=='owner' else 0xffffffff),
+                     52,32 if kind=='original' else 0,3 if kind=='original' else 0,40,len(sections),7)
+    if kind=='original':
+        struct.pack_into('<8I',data,52,1,sections[1][4],BASE,BASE,len(code),len(code),5,4)
+        struct.pack_into('<8I',data,84,1,sections[2][4],gp+delta,gp+delta,4,4,6,4)
+    return bytes(data)
+
+
+class ScalarTests(unittest.TestCase):
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup); self.root=Path(self.temp.name)
+        self.game=self.root/'game.elf'; self.game.write_bytes(scalar_elf_fixture())
+        self.target=copy.deepcopy(rebuild.TARGET); self.target['baseline_sha256']=rebuild.digest(self.game.read_bytes())
+        self.target['text']={'address':f'0x{BASE:08x}','size':56}
+        self.spec=copy.deepcopy(rebuild.GP_SPEC); self.spec['baseline_sha256']=self.target['baseline_sha256']
+        self.spec['startup']={'symbol':'_start','address':f'0x{BASE:08x}','size':44,'context_address':f'0x{BASE:08x}','context_size':44,
+                              'context_sha256':rebuild.digest(rebuild.Elf32(self.game.read_bytes()).section_data(1)[:44])}
+        for key,value in [('TARGET',self.target),('GP_SPEC',self.spec),('BASELINE_SIZE',len(self.game.read_bytes()))]:
+            mocked=patch.object(rebuild,key,value); mocked.start(); self.addCleanup(mocked.stop)
+        env=patch.dict(os.environ,{k:'' for k in rebuild.INJECTING_ENV});env.start();self.addCleanup(env.stop)
+        descriptor=self.root/rebuild.GP_CONTEXT;descriptor.parent.mkdir(parents=True);descriptor.write_text(json.dumps(self.spec))
+        (self.root/'owner.cpp').write_text('extern "C" { unsigned state = 0; }\n')
+        (self.root/'consumer.cpp').write_text('extern "C" unsigned state; extern "C" void candidate() { state = 1; }\n')
+        self.owner={'id':'owner','source':'owner.cpp','symbol':'state','original_symbol':'state','address':'0x004879e0',
+                    'size':4,'original_binding':1,'section':'.sdata','language':'c++','toolchain':'ee-gcc',
+                    'compiler_args':rebuild.SCALAR_FLAGS.copy(),'data_type':'uint32','storage':'sdata-file-zero',
+                    'initializer':0,'linkage_adapter':'global-to-global','review':'review.json'}
+        self.item={'id':'consumer','source':'consumer.cpp','symbol':'candidate','original_symbol':'original','address':f'0x{BASE+44:08x}',
+                   'size':12,'language':'c++','toolchain':'ee-gcc','compiler_args':rebuild.SCALAR_FLAGS.copy(),
+                   'comparison_mode':rebuild.SCALAR_MODE,'data_binding':{'owner_id':'owner','object_symbol':'state','operation':'set-one'}}
+        self.ledger={'schema_version':2,'target':self.target,'functions':[self.item],'data_objects':[self.owner]}
+        self.refresh_review()
+        self.compiler=self.root/'compiler'; self.compiler.write_bytes(b'synthetic compiler')
+        self.identity={'flavor':'ee-gcc','name':rebuild.EE_TARGET+'-g++','version':rebuild.EE_TARGET+'-g++ (GCC) '+rebuild.EE_VERSION,
+                       'target':rebuild.EE_TARGET,'sha256':rebuild.digest(self.compiler.read_bytes()),'specs_sha256':'b'*64,
+                       'components':{k:{'name':k,'sha256':'c'*64} for k in ('cc1plus','as')}}
+
+    def refresh_review(self):
+        review={'schema_version':1,'baseline_sha256':self.target['baseline_sha256'],'owner_id':'owner','function_ids':['consumer'],
+                'source_sha256':{p:rebuild.digest((self.root/p).read_bytes()) for p in ('owner.cpp','consumer.cpp')},
+                'gp_context_sha256':rebuild.digest((self.root/rebuild.GP_CONTEXT).read_bytes()),'runtime':self.spec['runtime']}
+        (self.root/'review.json').write_text(json.dumps(review))
+
+    def verify(self, owner_data=None, consumer_data=None, mutation=None, identity_change_after=None):
+        def run(command,**kwargs):
+            self.assertEqual(kwargs['env'],{'PATH':os.defpath,'LANG':'C','LC_ALL':'C'})
+            source=Path(command[-3]).read_text();is_owner='state = 0' in source
+            payload = (owner_data or scalar_elf_fixture('owner')) if is_owner else (consumer_data or scalar_elf_fixture('consumer'))
+            if 'plain' in source:
+                self.assertIn('-G0',command); self.assertNotIn('-G4',command)
+                payload=elf_fixture(code=rebuild.Elf32(self.game.read_bytes()).section_data(1)[:44],symbol='plain')
+            else:
+                self.assertIn('-G4',command); self.assertNotIn('-G0',command)
+            Path(command[-1]).write_bytes(payload)
+            if mutation:mutation(is_owner)
+            return subprocess.CompletedProcess(command,0,b'',b'')
+        identity_calls=0
+        def identity(*args):
+            nonlocal identity_calls
+            identity_calls+=1
+            value=copy.deepcopy(self.identity)
+            if identity_change_after is not None and identity_calls > identity_change_after:
+                value['components']['as']['sha256']='d'*64
+            return self.compiler,value
+        with patch.object(rebuild,'toolchain_identity',side_effect=identity), \
+             patch.object(rebuild,'ee_data_model',return_value=rebuild.EE_MODEL), patch.object(rebuild.subprocess,'run',side_effect=run):
+            return rebuild.verify(self.ledger,self.game,None,self.root/'output',self.root,ee_compiler='/synthetic/compiler')
+
+    def test_fresh_owner_and_consumer_closure(self):
+        report=self.verify()
+        self.assertEqual([r['status'] for r in report['functions']+report['data_objects']],['matched','matched'])
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),1)
+        self.assertEqual(report['schema_version'],5)
+        self.assertEqual(report['data_objects'][0]['object_flags'],0x20924000)
+
+    def test_original_owner_aliases_and_adjacent_control(self):
+        for section in (2,0xfff1,0xfff2):
+            for offset,size in ((0,0),(2,0),(-4,8)):
+                data=scalar_elf_fixture(extra_symbols=[('alias',0x4879e0+offset,size,0,1,0,section)])
+                with self.subTest(section=section,offset=offset),self.assertRaises(ValueError):
+                    rebuild.scalar_owner_original(rebuild.Elf32(data),self.owner)
+        data=scalar_elf_fixture(extra_symbols=[('adjacent',0x4879e4,4,1,1,0,2)])
+        rebuild.scalar_owner_original(rebuild.Elf32(data),self.owner)
+        owner=dict(self.owner,address='0x004879f0')
+        rebuild.scalar_owner_original(rebuild.Elf32(scalar_elf_fixture(delta=0)),owner)
+
+    def test_load_partial_overlap_alignment_and_permissions(self):
+        for offset,length,flags in ((0,4,4),(2,2,4),(0,4,6)):
+            data=bytearray(self.game.read_bytes());elf=rebuild.Elf32(data)
+            struct.pack_into('<8I',data,116,1,elf.sections[2][4]+offset,0x4879e0+offset,0, length,length,flags,1)
+            with self.assertRaises(ValueError):rebuild.scalar_owner_original(rebuild.Elf32(data),self.owner)
+        for field,value in ((7,3),(7,4096),(6,5),(4,3),(5,3)):
+            data=bytearray(self.game.read_bytes());struct.pack_into('<I',data,84+field*4,value)
+            with self.subTest(field=field,value=value),self.assertRaises(ValueError):
+                rebuild.scalar_owner_original(rebuild.Elf32(data),self.owner)
+
+    def test_consumer_load_overlap_alignment_and_truncation(self):
+        elf=rebuild.Elf32(self.game.read_bytes())
+        rebuild.original_graph_body(elf,self.item,strict_intersections=True)
+        for offset,size,flags in ((0,12,4),(2,2,4),(0,12,5),(2,2,5)):
+            data=bytearray(self.game.read_bytes())
+            struct.pack_into('<8I',data,116,1,elf.sections[1][4]+44+offset,BASE+44+offset,0,size,size,flags,1)
+            with self.subTest(offset=offset,flags=flags),self.assertRaises(ValueError):
+                rebuild.original_graph_body(rebuild.Elf32(data),self.item,strict_intersections=True)
+        for field,value in ((7,3),(7,4096),(4,55),(6,4)):
+            data=bytearray(self.game.read_bytes());struct.pack_into('<I',data,52+4*field,value)
+            with self.assertRaises(ValueError):rebuild.original_graph_body(rebuild.Elf32(data),self.item,strict_intersections=True)
+
+    def test_zero_length_load_is_not_an_overlap(self):
+        for start in (BASE+46,0x4879e2):
+            data=bytearray(self.game.read_bytes());struct.pack_into('<8I',data,116,1,0,start,0,0,0,4,1)
+            elf=rebuild.Elf32(data)
+            rebuild.scalar_owner_original(elf,self.owner)
+            rebuild.original_graph_body(elf,self.item,strict_intersections=True)
+
+    def test_original_storage_and_symbol_metadata(self):
+        for changes in ({'binding':0},{'type':0},{'size':3},{'other':1},{'section':0}):
+            with self.assertRaises(ValueError):rebuild.scalar_owner_original(rebuild.Elf32(change_symbol(self.game.read_bytes(),'state',**changes)),self.owner)
+        for field,value in ((1,8),(2,3),(8,3),(5,3)):
+            with self.assertRaises(ValueError):rebuild.scalar_owner_original(rebuild.Elf32(change_section(self.game.read_bytes(),'.sdata',field,value)),self.owner)
+
+    def test_gp_symbol_reginfo_and_startup_hard_gates(self):
+        rebuild.gp_context_evidence(rebuild.Elf32(self.game.read_bytes()),self.root)
+        for changes in ({'type':0},{'size':0},{'binding':0},{'section':2},{'value':0x4879f4}):
+            with self.assertRaises(ValueError):rebuild.gp_context_evidence(rebuild.Elf32(change_symbol(self.game.read_bytes(),'_gp',**changes)),self.root)
+        for field,value in ((1,1),(2,0),(5,20),(8,8),(9,0)):
+            with self.assertRaises(ValueError):rebuild.gp_context_evidence(rebuild.Elf32(change_section(self.game.read_bytes(),'.reginfo',field,value)),self.root)
+        data=bytearray(self.game.read_bytes());e=rebuild.Elf32(data);struct.pack_into('<I',data,e.sections[3][4]+20,0)
+        with self.assertRaises(ValueError):rebuild.gp_context_evidence(rebuild.Elf32(data),self.root)
+        data=bytearray(self.game.read_bytes());data[e.sections[1][4]]=0
+        with self.assertRaises(ValueError):rebuild.gp_context_evidence(rebuild.Elf32(data),self.root)
+
+    def test_owner_generated_layout_flags_and_gp0(self):
+        data=scalar_elf_fixture('owner');rebuild.scalar_owner_rebuilt(rebuild.Elf32(data),self.owner)
+        variants=[change_symbol(data,'state',binding=0),change_symbol(data,'state',size=8),change_section(data,'.sdata',1,8),change_section(data,'.sdata',2,3)]
+        flags=bytearray(data);struct.pack_into('<I',flags,36,rebuild.BASELINE_FLAGS);variants.append(flags)
+        gp0=bytearray(data);struct.pack_into('<I',gp0,rebuild.Elf32(data).sections[3][4]+20,4);variants.append(gp0)
+        for variant in variants:
+            with self.assertRaises(ValueError):rebuild.scalar_owner_rebuilt(rebuild.Elf32(variant),self.owner)
+
+    def test_consumer_relocation_import_table_and_gp0(self):
+        data=scalar_elf_fixture('consumer');binding=self.item['data_binding']
+        rebuild.Elf32(data).rebuilt('candidate',scalar_binding=binding)
+        variants=[change_symbol(data,'state',binding=0),change_symbol(data,'state',type=3),change_symbol(data,'state',size=4),
+                  change_section(data,'.rel.text',6,5),change_section(data,'.rel.text',7,2),change_section(data,'.rel.text',9,4)]
+        elf=rebuild.Elf32(data)
+        for offset,word in ((0,4),(4,0x204),(4,0x107)):
+            v=bytearray(data);struct.pack_into('<I',v,elf.sections[6][4]+offset,word);variants.append(v)
+        v=bytearray(data);struct.pack_into('<I',v,elf.sections[3][4]+20,1);variants.append(v)
+        for variant in variants:
+            with self.assertRaises(ValueError):rebuild.Elf32(variant).rebuilt('candidate',scalar_binding=binding)
+
+    def test_closed_shapes_addends_and_signed_displacements(self):
+        for delta in (-32768,-4,0,32764):
+            owner=dict(self.owner,address=f'0x{0x4879f0+delta:08x}')
+            for operation,prefix in [('read',[0x03e00008,0x8f820000]),('write',[0x03e00008,0xaf840000]),('set-one',[0x24020001,0x03e00008,0xaf820000])]:
+                item=copy.deepcopy(self.item);item['data_binding']['operation']=operation
+                raw=struct.pack('<'+'I'*len(prefix),*prefix);prefix[-1]|=delta&65535;original=struct.pack('<'+'I'*len(prefix),*prefix)
+                self.assertEqual(rebuild.relocate_scalar(raw,original,item,owner)[0],original)
+        for delta in (-32772,32768):
+            with self.assertRaises(ValueError):rebuild.scalar_relocation_evidence(self.item,dict(self.owner,address=f'0x{0x4879f0+delta:08x}'))
+        raw=rebuild.Elf32(scalar_elf_fixture('consumer')).section_data(1)
+        for index,word in ((0,0x24020002),(1,0x0c040000),(2,0xaf820001),(2,0xaf840000)):
+            data=bytearray(raw);struct.pack_into('<I',data,index*4,word)
+            with self.assertRaises(ValueError):rebuild.scalar_body(data,'set-one',raw=True)
+
+    def test_missing_wrong_owner_profile_or_stale_review(self):
+        for change in ('missing','binding','flags','initializer','source','review'):
+            ledger=copy.deepcopy(self.ledger)
+            if change=='missing':ledger['data_objects']=[]
+            elif change=='binding':ledger['functions'][0]['data_binding']['owner_id']='other'
+            elif change=='flags':ledger['data_objects'][0]['compiler_args']=sorted(rebuild.EE_FLAGS)
+            elif change=='initializer':ledger['data_objects'][0]['initializer']=1
+            elif change=='source':ledger['data_objects'][0]['source']='consumer.cpp'
+            else:(self.root/'owner.cpp').write_text('extern "C" { unsigned state = 1; }')
+            with self.subTest(change=change),self.assertRaises(ValueError):rebuild.validate_ledger(ledger,self.root)
+
+    def test_failed_owner_never_credits_consumer(self):
+        report=self.verify(owner_data=change_symbol(scalar_elf_fixture('owner'),'state',size=8))
+        self.assertEqual(report['data_objects'][0]['status'],'failed')
+        self.assertEqual(report['functions'][0]['status'],'failed')
+        self.assertEqual(rebuild.recorded_matches(report,self.ledger,self.root),[])
+
+    def test_owner_and_consumer_receipt_tampering(self):
+        report=self.verify()
+        for key,value in [('status','failed'),('source_sha256','0'*64),('review_sha256','0'*64),('object_flags',rebuild.BASELINE_FLAGS),('object_sha256','0'*64),('data_model',{})]:
+            changed=copy.deepcopy(report);changed['data_objects'][0][key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):rebuild.recorded_matches(changed,self.ledger,self.root)
+        for key,value in [('owner_result_sha256','0'*64),('gp_context_sha256','0'*64),('scalar_relocation',{}),('comparison_mode','leaf')]:
+            changed=copy.deepcopy(report);changed['functions'][0][key]=value
+            with self.assertRaises(ValueError):rebuild.recorded_matches(changed,self.ledger,self.root)
+        for version in (1,2,3,4):
+            changed=copy.deepcopy(report);changed['schema_version']=version
+            with self.assertRaises(ValueError):rebuild.recorded_matches(changed,self.ledger,self.root)
+
+    def test_late_owner_drift_invalidates_group(self):
+        def mutate(is_owner):
+            if not is_owner:(self.root/'owner.cpp').write_text('extern "C" { unsigned state = 2; }')
+        report=self.verify(mutation=mutate)
+        self.assertTrue(all(r['status']=='failed' for r in report['functions']+report['data_objects']))
+
+    def test_mixed_existing_ee_leaf_and_g4_profile_stay_separate(self):
+        (self.root/'plain.cpp').write_text('extern "C" int plain() { return 9; }')
+        plain={'id':'plain','source':'plain.cpp','symbol':'plain','original_symbol':'_start','address':f'0x{BASE:08x}',
+               'size':44,'language':'c++','toolchain':'ee-gcc','compiler_args':sorted(rebuild.EE_FLAGS)}
+        self.ledger['functions'].append(plain)
+        report=self.verify()
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),2)
+        self.assertNotIn('comparison_mode',report['functions'][1])
+        self.ledger['functions'][1]['compiler_args']=rebuild.SCALAR_FLAGS.copy()
+        with self.assertRaises(ValueError):rebuild.validate_ledger(self.ledger,self.root)
+
+    def test_late_component_drift_invalidates_owner_and_consumer(self):
+        report=self.verify(identity_change_after=5)
+        self.assertTrue(all(r['status']=='failed' for r in report['functions']+report['data_objects']))
+
+    def test_review_change_after_compile_fails_closed(self):
+        def mutate(is_owner):
+            if not is_owner:
+                path=self.root/'review.json';review=json.loads(path.read_text());review['note']='changed';path.write_text(json.dumps(review))
+        report=self.verify(mutation=mutate)
+        self.assertTrue(all(r['status']=='failed' for r in report['functions']+report['data_objects']))
+
+    def test_consumer_flags_cannot_use_data_only_flags(self):
+        data=bytearray(scalar_elf_fixture('consumer'));struct.pack_into('<I',data,36,rebuild.BASELINE_FLAGS & ~1)
+        report=self.verify(consumer_data=data)
+        self.assertEqual(report['functions'][0]['status'],'failed')
+
+    def test_cli_explicitly_requires_all_source_owners(self):
+        report=self.verify();report['data_objects'][0]['status']='failed'
+        path=self.root/'receipt.json';path.write_text(json.dumps(report))
+        # Exercise the CLI count guard independently of the stricter receipt dependency guard.
+        with patch.object(rebuild,'load_ledger',return_value=self.ledger), \
+             patch.object(rebuild,'recorded_matches',return_value=self.ledger['functions']), \
+             contextlib.redirect_stderr(__import__('io').StringIO()):
+            self.assertEqual(rebuild.main(['check','--report',str(path),'--require-matches']),1)
+        with patch.object(rebuild,'load_ledger',return_value=self.ledger), \
+             patch.object(rebuild,'recorded_matches',return_value=self.ledger['functions']), \
+             patch.object(rebuild,'invalidate_report'), patch.object(rebuild,'verify',return_value=report), \
+             contextlib.redirect_stdout(__import__('io').StringIO()):
+            self.assertEqual(rebuild.main(['verify','--game',str(self.game),'--report',str(path)]),1)
+
+    def test_report_cannot_replace_owner_review_or_context(self):
+        for path in ('owner.cpp','review.json',rebuild.GP_CONTEXT):
+            target=self.root/path;before=target.read_bytes()
+            with self.assertRaises(ValueError):rebuild.invalidate_report(target,self.root/'ledger.json',self.ledger,self.game,None,self.root)
+            self.assertEqual(target.read_bytes(),before)
+
+
 if __name__ == '__main__':
     unittest.main()
