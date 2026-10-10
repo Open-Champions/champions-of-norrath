@@ -29,6 +29,10 @@ BASELINE_ENTRY = 0x00100008
 HASH = re.compile(r'[0-9a-f]{64}')
 IDENT = re.compile(r'[A-Za-z_][A-Za-z0-9_]*')
 SCOPE = 'recorded-complete-symbol-byte-comparison'
+DIRECT_MODE = 'ee-direct-call-v1'
+CALL_POLICY = {'mode': DIRECT_MODE, 'relocation': 'R_MIPS_26', 'addend': 0,
+               'max_dependencies': 16, 'max_sites': 64, 'closure': 'fresh-source-dag',
+               'control_flow': 'straight-line-integer-jal-terminal-jr-ra-v1'}
 REQUIRED_FLAGS = {'--no-default-config', '--target=mipsel-none-elf', '-march=mips3', '-mabi=32',
                   '-ffreestanding', '-fno-pic', '-mno-abicalls', '-fno-stack-protector',
                   '-fno-exceptions', '-fno-rtti'}
@@ -158,15 +162,30 @@ class Elf32:
                         and lo < other['value'] + other['size'])), 'original function overlaps or aliases another symbol')
         return code
 
-    def rebuilt(self, name):
+    def rebuilt(self, name, call_bindings=None):
         require(self.kind == 1, 'compiler must emit relocatable object')
         symbol, code = self.function(name)
         require(symbol['binding'] == 1 and symbol['other'] == 0, 'candidate must be one global default-visibility function')
-        functions = [s for s in self.symbols if s['type'] == 2]
+        direct = call_bindings is not None
+        functions = [s for s in self.symbols if s['type'] == 2 and (not direct or s['section'] != 0)]
         require(len(functions) == 1, 'extra object functions are unsupported')
-        require(not any(s['section'] == 0 and s['name'] for s in self.symbols), 'undefined object symbols are unsupported')
+        if direct:
+            undefined = self.call_symbols(symbol, call_bindings)
+        else:
+            require(not any(s['section'] == 0 and s['name'] for s in self.symbols), 'undefined object symbols are unsupported')
+        records = []
         for i, section in enumerate(self.sections):
             if section[1] in (4, 9) and section[5]:
+                if direct and self.names[i] == '.rel.text':
+                    require(section[1] == 9 and section[2] == 0x40 and section[3] == 0
+                            and section[9] == 8 and section[5] % 8 == 0
+                            and section[5] <= CALL_POLICY['max_sites'] * 8
+                            and section[6] == symbol['table'] and section[7] == symbol['section']
+                            and section[8] == 4, 'invalid direct-call relocation table')
+                    for offset, info in struct.iter_unpack('<II', self.section_data(i)):
+                        require(info & 255 == 4 and info >> 8 in undefined, 'unbound or unsupported call relocation')
+                        records.append({'offset': offset, 'type': 4, 'symbol': undefined[info >> 8]})
+                    continue
                 # Clang's procedure-descriptor relocation is non-runtime metadata.
                 # Permit only its exact shape, never arbitrary nonallocated relocations.
                 target_index = section[7]
@@ -190,7 +209,54 @@ class Elf32:
         # Clang rounds .text up to its alignment; accept only zero padding after the symbol.
         padding = self.section_data(symbol['section'])[len(code):]
         require(len(padding) < max(section[8], 1) and not any(padding), 'extra object code outside candidate')
+        if direct:
+            expected = sorted((offset, b['object_symbol']) for b in call_bindings for offset in b['call_offsets'])
+            require(sorted((r['offset'], r['symbol']) for r in records) == expected,
+                    'call relocation sites differ from declared bindings')
+            require(self.names[symbol['section']] == '.text' and section[2] == 6,
+                    'direct-call body requires ordinary .text')
+            return code, records
         return code
+
+    def call_symbols(self, candidate, bindings):
+        require(len(set(self.names)) == len(self.names), 'duplicate object section names')
+        require(sum(s[1] == 2 for s in self.sections) == 1
+                and not any(s[1] == 11 for s in self.sections), 'direct calls require one symbol table')
+        table = self.sections[candidate['table']]
+        require(table[2] == 0 and table[3] == 0 and table[8] == 4,
+                'invalid direct-call symbol table')
+        first_global = min(s['index'] for s in self.symbols if s['binding'] != 0)
+        # Pinned EE binutils uses the MIPS SGI split (elf32-mips.c,
+        # mips_elf_sym_is_global): a local FILE can follow the section-symbol
+        # boundary. Accept only that one precisely validated metadata position.
+        boundary = table[7]
+        preceding_file = self.symbols[first_global - 1]
+        file_split = (boundary == first_global - 1 and preceding_file['type'] == 4
+                      and preceding_file['section'] == 0xfff1 and preceding_file['binding'] == 0
+                      and preceding_file['other'] == preceding_file['value'] == preceding_file['size'] == 0)
+        require(0 < boundary and (boundary == first_global or file_split)
+                and all((s['binding'] == 0) == (s['index'] < first_global) for s in self.symbols),
+                'invalid local/global symbol boundary')
+        undefined = {}
+        for s in self.symbols:
+            if s['index'] == 0:
+                require(all(s[k] == 0 for k in ('value', 'size', 'type', 'binding', 'other', 'section'))
+                        and s['name'] == '', 'invalid null object symbol')
+            elif s is candidate:
+                continue
+            elif s['section'] == 0:
+                require(s['name'] and s['binding'] == 1 and s['other'] == 0 and s['type'] in (0, 2)
+                        and s['value'] == s['size'] == 0, 'unsupported undefined call symbol')
+                undefined[s['index']] = s['name']
+            else:
+                require(s['binding'] == 0 and s['other'] == 0 and s['value'] == s['size'] == 0
+                        and ((s['type'] == 3 and 0 < s['section'] < len(self.sections)
+                              and s['name'] in ('', self.names[s['section']]))
+                             or (s['type'] == 4 and s['section'] == 0xfff1)), 'extra object symbol is unsupported')
+        require(len(set(undefined.values())) == len(undefined)
+                and set(undefined.values()) == {b['object_symbol'] for b in bindings},
+                'undefined symbols differ from source-backed bindings')
+        return undefined
 
 
 def source_bytes(path):
@@ -203,6 +269,166 @@ def source_bytes(path):
     require(not re.search(r'\b(?:asm|__asm|__asm__|__attribute__|__declspec|__builtin\w*|incbin)\b', text), 'assembly, compiler extensions and embedded data are unsupported')
     require(not re.search(r'\b(?:import|module)\b', text), 'external source dependencies are unsupported')
     return data
+
+
+def call_graph(ledger):
+    """Validate source-backed edges and return deterministic dependency-first order."""
+    items = {item['id']: item for item in ledger['functions']}
+    edges, members = {}, set()
+    for item in items.values():
+        mode = item.get('comparison_mode')
+        require(mode in (None, DIRECT_MODE), 'unsupported comparison mode')
+        if mode is None:
+            require('call_bindings' not in item, 'leaf entries cannot declare call bindings')
+            edges[item['id']] = set()
+            continue
+        require(item.get('toolchain') == 'ee-gcc', 'direct calls require reviewed EE GCC')
+        bindings = item.get('call_bindings')
+        require(isinstance(bindings, list) and 0 < len(bindings) <= CALL_POLICY['max_dependencies'],
+                'direct calls need bounded source-backed dependencies')
+        callees, symbols, addresses, offsets = set(), set(), set(), set()
+        for binding in bindings:
+            require(isinstance(binding, dict) and set(binding) == {'callee_id', 'object_symbol', 'original_symbol',
+                    'address', 'size', 'body_sha256', 'call_offsets'}, 'invalid call binding fields')
+            callee_id = binding['callee_id']
+            require(isinstance(callee_id, str) and callee_id in items and callee_id not in callees
+                    and callee_id != item['id'], 'missing, duplicate or recursive source dependency')
+            callee = items[callee_id]
+            require(callee.get('toolchain') == 'ee-gcc' and callee['compiler_args'] == item['compiler_args'],
+                    'caller and dependency must use identical reviewed EE options')
+            require(binding['object_symbol'] == callee['symbol'] and binding['original_symbol'] == callee['original_symbol']
+                    and binding['address'] == callee['address'] and type(binding['size']) is int
+                    and binding['size'] == callee['size'], 'dependency binding differs from source ledger entry')
+            require(binding['object_symbol'] not in symbols and binding['address'] not in addresses,
+                    'aliased dependency bindings are unsupported')
+            require(isinstance(binding['body_sha256'], str) and HASH.fullmatch(binding['body_sha256']),
+                    'dependency needs complete original body hash')
+            sites = binding['call_offsets']
+            require(isinstance(sites, list) and sites and all(type(o) is int and o >= 0 and o % 4 == 0
+                    and o + 8 <= item['size'] for o in sites), 'invalid complete callsite bounds')
+            require(sites == sorted(set(sites)) and not offsets.intersection(sites), 'duplicate or unsorted callsites')
+            callees.add(callee_id); symbols.add(binding['object_symbol']); addresses.add(binding['address']); offsets.update(sites)
+        require(len(offsets) <= CALL_POLICY['max_sites'] and not any(o + 4 in offsets for o in offsets),
+                'too many or adjacent callsites')
+        edges[item['id']] = callees
+        members.update(callees | {item['id']})
+    # Iterative traversal avoids Python recursion limits on malformed deep graphs.
+    pending = {key: set(value) for key, value in edges.items()}
+    order = []
+    while pending:
+        ready = [key for key, dependencies in pending.items() if not dependencies]
+        require(ready, 'call dependency graph contains a cycle')
+        order.extend(ready)
+        for key in ready:
+            del pending[key]
+        for dependencies in pending.values():
+            dependencies.difference_update(ready)
+    return [items[key] for key in order], members
+
+
+def audit_integer_body(code, call_offsets=()):
+    """Closed, fixed-width R5900 subset: integer instructions, declared JAL, final JR RA.
+
+    No branches, indirect calls, COP/MMI encodings, traps or unknown instructions.
+    Reserved fields are checked instead of accepting whole SPECIAL opcode groups.
+    This checks control-flow shape, not memory safety or the source ABI contract.
+    """
+    require(len(code) >= 8 and len(code) % 4 == 0, 'invalid audited body extent')
+    calls = set(call_offsets)
+    require(len(calls) == len(call_offsets), 'duplicate audited callsite')
+    words = struct.unpack('<' + 'I' * (len(code) // 4), code)
+    require(words[-2] == 0x03e00008, 'audited body needs terminal JR RA and delay slot')
+    for index, word in enumerate(words):
+        offset = index * 4
+        op, rs, rt, rd, sa, fn = word >> 26, (word >> 21) & 31, (word >> 16) & 31, (word >> 11) & 31, (word >> 6) & 31, word & 63
+        if offset in calls:
+            require(op == 3 and offset + 8 <= len(code) and offset != len(code) - 8
+                    and offset - 4 not in calls, 'invalid audited JAL or delay slot')
+            continue
+        if offset == len(code) - 8:
+            require(offset - 4 not in calls, 'return cannot occupy a call delay slot')
+            continue
+        allowed = False
+        destination = None
+        if op == 0:
+            if fn in (0, 2, 3, 0x38, 0x3a, 0x3b, 0x3c, 0x3e, 0x3f) and rs == 0:
+                allowed, destination = True, rd  # fixed shifts, including zero-word NOP
+            elif fn in (4, 6, 7, 0x14, 0x16, 0x17, 0x21, 0x23, 0x24, 0x25, 0x26, 0x27, 0x2a, 0x2b, 0x2d, 0x2f) and sa == 0:
+                allowed, destination = True, rd  # variable shifts and nontrapping integer ALU
+        elif op in (9, 10, 11, 12, 13, 14, 25):
+            allowed, destination = True, rt
+        elif op == 15 and rs == 0:
+            allowed, destination = True, rt  # LUI
+        elif op in (32, 33, 35, 36, 37, 39, 55):
+            allowed, destination = True, rt  # LB/LH/LW/LBU/LHU/LWU/LD
+        elif op in (40, 41, 43, 63):
+            allowed = True  # SB/SH/SW/SD
+        require(allowed, 'instruction outside closed integer/control-flow policy')
+        require(destination != 31 or (op == 55 and rs == 29), 'unsupported write to return-address register')
+    require(all(type(o) is int and o >= 0 and o % 4 == 0 and o + 8 <= len(code) for o in calls),
+            'audited callsite outside body')
+
+
+def callsite_evidence(item):
+    evidence = []
+    origin = address(item['address'])
+    require(origin + item['size'] < 2**32, 'caller address wraps')
+    for binding in item['call_bindings']:
+        target = address(binding['address'])
+        require(target % 4 == 0 and target + binding['size'] < 2**32
+                and not origin <= target < origin + item['size'], 'invalid dependency address')
+        for offset in binding['call_offsets']:
+            pc = origin + offset
+            require(target >> 28 == (pc + 4) >> 28, 'call target outside PC+4 jump region')
+            word = 0x0c000000 | ((target >> 2) & 0x03ffffff)
+            require(((pc + 4) & 0xf0000000) | ((word & 0x03ffffff) << 2) == target, 'call target round-trip failed')
+            evidence.append({'offset': offset, 'address': f'0x{pc:08x}', 'type': 4, 'addend': 0,
+                             'raw_word': '0x0c000000', 'relocated_word': f'0x{word:08x}',
+                             'object_symbol': binding['object_symbol'], 'callee_id': binding['callee_id'],
+                             'original_symbol': binding['original_symbol'], 'target_address': binding['address'],
+                             'target_size': binding['size'], 'target_sha256': binding['body_sha256']})
+    return sorted(evidence, key=lambda row: row['offset'])
+
+
+def validate_original_calls(original, item):
+    evidence = callsite_evidence(item)
+    audit_integer_body(original, [row['offset'] for row in evidence])
+    for row in evidence:
+        word, = struct.unpack_from('<I', original, row['offset'])
+        require(word == int(row['relocated_word'], 16), 'original JAL target differs from source-backed binding')
+    return evidence
+
+
+def relocate_calls(code, original, item):
+    require(len(code) == len(original) == item['size'], 'call comparison requires complete equal extents')
+    evidence = validate_original_calls(original, item)
+    audit_integer_body(code, [row['offset'] for row in evidence])
+    relocated = bytearray(code)
+    for row in evidence:
+        word, = struct.unpack_from('<I', code, row['offset'])
+        require(word == 0x0c000000, 'call relocation requires zero-addend ordinary JAL')
+        struct.pack_into('<I', relocated, row['offset'], int(row['relocated_word'], 16))
+    return bytes(relocated), evidence
+
+
+def original_graph_body(baseline, item):
+    symbol, code = baseline.function(item['original_symbol'])
+    require(symbol['binding'] == 1 and symbol['other'] == 0, 'call graph requires unambiguous global original functions')
+    # Verify the exact file-backed executable load mapping, independently of sections.
+    phoff, = struct.unpack_from('<I', baseline.data, 28)
+    phsize, phnum = struct.unpack_from('<HH', baseline.data, 42)
+    require(phsize == 32 and 0 < phnum < 0xffff, 'call graph requires ordinary load headers')
+    headers = baseline.span(phoff, phnum * phsize)
+    section = baseline.sections[symbol['section']]
+    offset = section[4] + symbol['value'] - section[3]
+    mappings = []
+    for typ, file_offset, virtual, _, filesz, memsz, flags, _ in struct.iter_unpack('<8I', headers):
+        if typ == 1 and virtual <= symbol['value'] and symbol['value'] + len(code) <= virtual + filesz:
+            baseline.span(file_offset, filesz)
+            if flags & 1 and filesz <= memsz and virtual + memsz <= 2**32:
+                mappings.append(file_offset + symbol['value'] - virtual)
+    require(mappings == [offset], 'original function lacks unique executable load mapping')
+    return code
 
 
 def validate_ledger(ledger, root=ROOT):
@@ -238,6 +464,7 @@ def validate_ledger(ledger, root=ROOT):
         extents.append((lo, lo + size))
     extents.sort()
     require(all(a[1] <= b[0] for a, b in zip(extents, extents[1:])), 'ledger function extents overlap')
+    call_graph(ledger)
     return ledger
 
 
@@ -313,8 +540,19 @@ def ee_data_model(executable, flags, env):
 
 def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
     validate_ledger(ledger, root)
+    ordered, members = call_graph(ledger)
     baseline = baseline_elf(game)
     originals = {item['id']: baseline.original(item) for item in ledger['functions']}
+    for item in ordered:
+        if item['id'] in members:
+            original_graph_body(baseline, item)
+            if item.get('comparison_mode') == DIRECT_MODE:
+                validate_original_calls(originals[item['id']], item)
+                for binding in item['call_bindings']:
+                    require(digest(originals[binding['callee_id']]) == binding['body_sha256'],
+                            'dependency original body hash mismatch')
+            else:
+                audit_integer_body(originals[item['id']])
     for name in INJECTING_ENV:
         require(not os.environ.get(name), 'unset ' + name + '; unrecorded compiler environment injection is unsupported')
     env = {'PATH': os.defpath, 'LANG': 'C', 'LC_ALL': 'C'}
@@ -323,15 +561,20 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
     toolchains = {flavor: toolchain_identity(flavor, selected[flavor], env) for flavor in sorted(flavors)}
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    report = {'schema_version': 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
+    report = {'schema_version': 3 if members else 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
               'ledger_sha256': digest(canonical(ledger)), 'verifier_sha256': digest(Path(__file__).read_bytes()),
               'recorded_at': datetime.now(timezone.utc).isoformat(),
               'toolchains': {flavor: value[1] for flavor, value in toolchains.items()}, 'functions': []}
-    for item in ledger['functions']:
+    if members:
+        report['call_policy'] = CALL_POLICY
+        report['call_policy_sha256'] = digest(canonical(CALL_POLICY))
+    snapshots = {item['id']: source_bytes(local_path(root, item['source'])) for item in ordered}
+    completed = {}
+    for item in ordered:
         flavor = item.get('toolchain', 'clang')
         executable, identity = toolchains[flavor]
         source = local_path(root, item['source'])
-        contents = source_bytes(source)
+        contents = snapshots[item['id']]
         result = {'id': item['id'], 'source_sha256': digest(contents), 'compiler_args': effective_args(item),
                   'toolchain': flavor, 'toolchain_sha256': digest(canonical(identity)), 'status': 'failed'}
         with tempfile.TemporaryDirectory(prefix=item['id'] + '-', dir=output_dir) as directory:
@@ -340,6 +583,12 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
             snapshot.write_bytes(contents)
             command = [str(executable)] + item['compiler_args'] + FIXED_FLAGS + ['-c', str(snapshot.resolve()), '-o', str(obj.resolve())]
             try:
+                if item.get('comparison_mode') == DIRECT_MODE:
+                    for binding in item['call_bindings']:
+                        callee = completed[binding['callee_id']]
+                        require(callee['status'] == 'matched' and callee['original_sha256'] == binding['body_sha256']
+                                and callee['rebuilt_sha256'] == binding['body_sha256'],
+                                'source-backed dependency did not freshly match')
                 if flavor == 'ee-gcc':
                     require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components changed before compilation')
                     result['data_model'] = ee_data_model(executable, item['compiler_args'], env)
@@ -354,7 +603,20 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
                 elf = Elf32(object_data)
                 if flavor == 'ee-gcc':
                     require(elf.flags == BASELINE_FLAGS, 'EE GCC object flags differ from reviewed R5900/EABI64 target')
-                code = elf.rebuilt(item['symbol'])
+                direct = item.get('comparison_mode') == DIRECT_MODE
+                if direct:
+                    raw, _ = elf.rebuilt(item['symbol'], item['call_bindings'])
+                    code, evidence = relocate_calls(raw, originals[item['id']], item)
+                    result.update({'comparison_mode': DIRECT_MODE, 'link_address': item['address'],
+                                   'raw_rebuilt_sha256': digest(raw), 'relocations': evidence,
+                                   'dependencies': {b['callee_id']: digest(canonical(completed[b['callee_id']]))
+                                                    for b in item['call_bindings']}})
+                else:
+                    code = elf.rebuilt(item['symbol'])
+                    if item['id'] in members:
+                        audit_integer_body(code)
+                if item['id'] in members:
+                    result['control_flow_policy'] = DIRECT_MODE
                 require(len(code) == item['size'], 'rebuilt extent does not match the complete original function')
                 original = originals[item['id']]
                 result.update({'object_sha256': digest(object_data), 'size': len(code),
@@ -362,7 +624,17 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None):
                                'status': 'matched' if code == original else 'mismatched'})
             except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
                 result['reason'] = str(exc) if isinstance(exc, ValueError) else type(exc).__name__
-        report['functions'].append(result)
+        completed[item['id']] = result
+    if members:
+        # Dependency snapshots and compiler components must remain stable for the
+        # entire graph, including after the dependency's own compilation ended.
+        stable = all(source_bytes(local_path(root, item['source'])) == snapshots[item['id']]
+                     for item in ordered if item['id'] in members)
+        stable = stable and toolchain_identity('ee-gcc', toolchains['ee-gcc'][0], env)[1] == toolchains['ee-gcc'][1]
+        if not stable:
+            for key in members:
+                completed[key].update(status='failed', reason='source or compiler changed during graph verification')
+    report['functions'] = [completed[item['id']] for item in ledger['functions']]
     return report
 
 
@@ -389,7 +661,11 @@ def validate_identity(identity, flavor):
 
 def recorded_matches(report, ledger, root=ROOT):
     validate_ledger(ledger, root)
-    require(report.get('schema_version') in (1, 2) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
+    ordered, members = call_graph(ledger)
+    require(report.get('schema_version') in (1, 2, 3) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
+    if members:
+        require(report['schema_version'] == 3 and report.get('call_policy') == CALL_POLICY
+                and report.get('call_policy_sha256') == digest(canonical(CALL_POLICY)), 'missing direct-call receipt policy')
     require(report.get('target') == TARGET['id'] and report.get('baseline_sha256') == TARGET['baseline_sha256'], 'receipt targets different baseline')
     require(report.get('ledger_sha256') == digest(canonical(ledger)), 'stale receipt: ledger changed')
     require(report.get('verifier_sha256') == digest(Path(__file__).read_bytes()), 'stale receipt: verifier changed')
@@ -412,7 +688,7 @@ def recorded_matches(report, ledger, root=ROOT):
     for result, item in zip(results, ledger['functions']):
         require(result.get('id') == item['id'], 'receipt function identity mismatch')
         flavor = item.get('toolchain', 'clang')
-        if report['schema_version'] == 2:
+        if report['schema_version'] >= 2:
             require(result.get('toolchain') == flavor
                     and result.get('toolchain_sha256') == digest(canonical(identities[flavor])), 'receipt toolchain identity mismatch')
         require(result.get('source_sha256') == digest(source_bytes(local_path(root, item['source'])))
@@ -425,6 +701,27 @@ def recorded_matches(report, ledger, root=ROOT):
                     for key in ('object_sha256', 'original_sha256', 'rebuilt_sha256'))
                     and result['original_sha256'] == result['rebuilt_sha256'], 'inconsistent match receipt')
             matched.append(item)
+    by_id = {result['id']: result for result in results}
+    for item in ordered:
+        result = by_id[item['id']]
+        if result['status'] != 'matched':
+            continue
+        if item['id'] in members:
+            require(result.get('control_flow_policy') == DIRECT_MODE, 'missing graph control-flow audit')
+        if item.get('comparison_mode') == DIRECT_MODE:
+            require(result.get('comparison_mode') == DIRECT_MODE and result.get('link_address') == item['address']
+                    and isinstance(result.get('raw_rebuilt_sha256'), str) and HASH.fullmatch(result['raw_rebuilt_sha256'])
+                    and result.get('relocations') == callsite_evidence(item), 'inconsistent direct-call comparison evidence')
+            dependencies = {}
+            for binding in item['call_bindings']:
+                callee = by_id[binding['callee_id']]
+                require(callee['status'] == 'matched' and callee.get('original_sha256') == binding['body_sha256']
+                        and callee.get('rebuilt_sha256') == binding['body_sha256'], 'receipt dependency is not source-matched')
+                dependencies[binding['callee_id']] = digest(canonical(callee))
+            require(result.get('dependencies') == dependencies, 'stale or missing dependency result binding')
+        else:
+            require('comparison_mode' not in result and 'relocations' not in result and 'dependencies' not in result,
+                    'leaf receipt cannot claim relocated comparison')
     return matched
 
 
@@ -440,7 +737,7 @@ def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROO
     require(destination.resolve() not in protected, 'receipt path collides with a protected input')
     if destination.exists():
         previous = json.loads(destination.read_text(encoding='utf-8'))
-        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2)
+        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2, 3)
                 and previous.get('scope') == SCOPE, 'refusing to replace a file that is not a comparison receipt')
         destination.unlink()
 

@@ -15,6 +15,52 @@ import rebuild
 
 CODE = b'\x01\x02\x03\x04' * 2
 BASE = 0x100000
+CALLER = struct.pack('<8I', 0x27bdfff8, 0xffbf0000, 0x0c000000, 0, 0xdfbf0000, 0x24420001, 0x03e00008, 0x27bd0008)
+CALLEE = struct.pack('<2I', 0x03e00008, 0x2402000c)
+LINKED_CALLER = CALLER[:8] + struct.pack('<I', 0x0c040008) + CALLER[12:]
+
+
+def call_elf_fixture(kind=1, code=CALLER, functions=None, relocations=((8, 0x204),)):
+    """Independent synthetic ELF with load mapping, undefined import and both relocation tables."""
+    if functions is None:
+        functions = [('caller', 0, len(code), 2, 1, 0, 1), ('dep', 0, 0, 0, 1, 0, 0)]
+    strings, syms = bytearray(b'\0'), bytearray(16)
+    for name, value, size, typ, binding, other, section in functions:
+        at = len(strings); strings.extend(name.encode() + b'\0')
+        syms.extend(struct.pack('<IIIBBH', at, value, size, binding << 4 | typ, other, section))
+    rows = [('', b'', 0, 0, 0, 0, 0, 0),
+            ('.text', code, 1, 6, BASE if kind == 2 else 0, 0, 0, 0),
+            ('.symtab', syms, 2, 0, 0, 3, 1, 16),
+            ('.strtab', strings, 3, 0, 0, 0, 0, 0),
+            ('.pdr', bytes(32), 1, 0, 0, 0, 0, 0),
+            ('.rel.pdr', struct.pack('<II', 0, 0x102) if kind == 1 else b'', 9, 0x40, 0, 2, 4, 8),
+            ('.rel.text', b''.join(struct.pack('<II', *r) for r in relocations) if kind == 1 else b'', 9, 0x40, 0, 2, 1, 8),
+            ('.data', b'', 1, 3, 0, 0, 0, 0)]
+    names = b'\0' + b''.join(row[0].encode() + b'\0' for row in rows[1:]) + b'.shstrtab\0'
+    rows.append(('.shstrtab', names, 3, 0, 0, 0, 0, 0))
+    data, sections = bytearray(84 if kind == 2 else 52), []
+    for name, blob, typ, flags, addr, link, info, entry in rows:
+        data.extend(bytes(-len(data) % 4)); offset = len(data); data.extend(blob)
+        sections.append((names.index(name.encode()+b'\0'), typ, flags, addr, offset, len(blob), link, info, 4, entry))
+    data.extend(bytes(-len(data) % 4)); shoff = len(data)
+    for row in sections: data.extend(struct.pack('<10I', *row))
+    data[:16] = b'\x7fELF\x01\x01\x01' + bytes(9)
+    struct.pack_into('<HHIIIIIHHHHHH', data, 16, kind, 8, 1, rebuild.BASELINE_ENTRY,
+                     52 if kind == 2 else 0, shoff, rebuild.BASELINE_FLAGS, 52, 32 if kind == 2 else 0,
+                     1 if kind == 2 else 0, 40, len(sections), 8)
+    if kind == 2: struct.pack_into('<8I', data, 52, 1, sections[1][4], BASE, BASE, len(code), len(code), 5, 4)
+    return bytes(data)
+
+
+def change_symbol(data, name, **changes):
+    elf = rebuild.Elf32(data)
+    symbol, = [s for s in elf.symbols if s['name'] == name]
+    symbol.update(changes)
+    offset = elf.sections[symbol['table']][4] + symbol['index'] * 16
+    data = bytearray(data)
+    struct.pack_into('<IIBBH', data, offset + 4, symbol['value'], symbol['size'],
+                     symbol['binding'] << 4 | symbol['type'], symbol['other'], symbol['section'])
+    return bytes(data)
 
 
 def elf_fixture(kind=1, code=CODE, symbol_size=None, symbol_type=2, extra_function=False,
@@ -335,8 +381,12 @@ class RebuildTests(unittest.TestCase):
                 return subprocess.CompletedProcess(command, 0, overrides.get(option, response), b'')
             self.assertEqual(command[-2], '-o')
             snapshot = Path(command[-3])
-            self.assertEqual(snapshot.read_bytes(), (source or self.source).read_bytes())
-            Path(command[-1]).write_bytes(elf_fixture(pdr=True) if object_data is None else object_data)
+            if isinstance(source, tuple):
+                self.assertIn(snapshot.read_bytes(), [p.read_bytes() for p in source])
+            else:
+                self.assertEqual(snapshot.read_bytes(), (source or self.source).read_bytes())
+            payload = object_data(snapshot.read_bytes()) if callable(object_data) else object_data
+            Path(command[-1]).write_bytes(elf_fixture(pdr=True) if payload is None else payload)
             if mutation: mutation()
             return subprocess.CompletedProcess(command, 0, b'', b'')
         with patch.object(rebuild.shutil, 'which', return_value=str(self.ee_driver)), patch.object(rebuild.subprocess, 'run', side_effect=run):
@@ -498,6 +548,261 @@ class RebuildTests(unittest.TestCase):
                             with self.assertRaisesRegex(ValueError, 'missing compiler'):
                                 rebuild.verify(self.ledger, self.game, clang, self.output, self.root, ee_compiler=ee)
                             self.assertEqual(before, (sum('-c' in call for call in clang_calls), sum('-c' in call for call in ee_calls)))
+
+    def prepare_call_graph(self):
+        self.prepare_ee()
+        self.source.write_text('extern "C" int dep(int); extern "C" int caller(int x) { return dep(x) + 1; }\n')
+        self.dep_source = self.root / 'dep.cpp'
+        self.dep_source.write_text('extern "C" int dep(int) { return 12; }\n')
+        caller = self.ledger['functions'][0]
+        caller.update(symbol='caller', size=32, comparison_mode=rebuild.DIRECT_MODE, call_bindings=[{
+            'callee_id': 'dep', 'object_symbol': 'dep', 'original_symbol': 'original_dep',
+            'address': '0x00100020', 'size': 8, 'body_sha256': rebuild.digest(CALLEE), 'call_offsets': [8]}])
+        dep = {key: copy.deepcopy(value) for key, value in caller.items() if key not in ('comparison_mode', 'call_bindings')}
+        dep.update(id='dep', symbol='dep', original_symbol='original_dep', address='0x00100020', size=8, source='dep.cpp')
+        self.ledger['functions'].append(dep)
+        self.game.write_bytes(call_elf_fixture(kind=2, code=LINKED_CALLER + CALLEE, functions=[
+            ('original', BASE, 32, 2, 1, 0, 1), ('original_dep', BASE + 32, 8, 2, 1, 0, 1)]))
+        self.target['text']['size'] = 40
+        self.target['baseline_sha256'] = rebuild.digest(self.game.read_bytes())
+        self.ledger['target'] = copy.deepcopy(self.target)
+        self.graph_objects = {self.source.read_bytes(): call_elf_fixture(),
+                              self.dep_source.read_bytes(): call_elf_fixture(code=CALLEE, functions=[('dep', 0, 8, 2, 1, 0, 1)], relocations=())}
+
+    def verify_graph(self, mutation=None):
+        with patch.object(rebuild, 'BASELINE_SIZE', self.game.stat().st_size), \
+             self.ee_fixture(object_data=lambda contents: self.graph_objects[contents],
+                             source=tuple(self.root / item['source'] for item in self.ledger['functions']), mutation=mutation) as calls:
+            report = rebuild.verify(self.ledger, self.game, None, self.output, self.root, ee_compiler=self.ee_driver)
+            self.graph_calls = calls
+            return report
+
+    def test_direct_graph_compiles_callee_first_and_binds_complete_results(self):
+        self.prepare_call_graph()
+        report = self.verify_graph()
+        self.assertEqual(report['schema_version'], 3)
+        self.assertEqual([r['id'] for r in report['functions']], ['fixture', 'dep'])  # ledger order stays stable
+        self.assertEqual([r['status'] for r in report['functions']], ['matched', 'matched'])
+        calls = [c for c in self.graph_calls if '-c' in c]
+        self.assertEqual(len(calls), 2)
+        self.assertIn('dep-', calls[0][-3]); self.assertIn('fixture-', calls[1][-3])
+        caller, dep = report['functions']
+        self.assertNotEqual(caller['raw_rebuilt_sha256'], caller['original_sha256'])
+        self.assertEqual(caller['rebuilt_sha256'], rebuild.digest(LINKED_CALLER))
+        self.assertEqual(caller['dependencies'], {'dep': rebuild.digest(rebuild.canonical(dep))})
+        self.assertEqual(caller['relocations'][0]['relocated_word'], '0x0c040008')
+        self.assertEqual(len(rebuild.recorded_matches(report, self.ledger, self.root)), 2)
+        self.assertNotIn(str(self.root), json.dumps(report))
+
+    def test_direct_graph_missing_mixed_stale_and_recursive_bindings_fail(self):
+        self.prepare_call_graph()
+        original = copy.deepcopy(self.ledger)
+        mutations = [lambda l: l['functions'].pop(),
+            lambda l: l['functions'][1].update(toolchain='clang', compiler_args=sorted(rebuild.REQUIRED_FLAGS)+['-O2']),
+            lambda l: l['functions'][1]['compiler_args'].reverse(),
+            lambda l: l['functions'][0]['call_bindings'][0].update(callee_id='fixture'),
+            lambda l: l['functions'][0]['call_bindings'][0].update(address='0x00100024'),
+            lambda l: l['functions'][0]['call_bindings'][0].update(object_symbol='unrelated'),
+            lambda l: l['functions'][0]['call_bindings'][0].update(original_symbol='wrong'),
+            lambda l: l['functions'][0]['call_bindings'][0].update(size=True),
+            lambda l: l['functions'][0]['call_bindings'][0].update(body_sha256='bad'),
+            lambda l: l['functions'][0]['call_bindings'][0].update(call_offsets=[8,8]),
+            lambda l: l['functions'][0]['call_bindings'][0].update(call_offsets=[True]),
+            lambda l: l['functions'][0]['call_bindings'][0].update(call_offsets=[28]),
+            lambda l: l['functions'][0]['call_bindings'][0].update(unresolved=True),
+            lambda l: l['functions'][0].update(comparison_mode='retail-address-link')]
+        for change in mutations:
+            bad = copy.deepcopy(original); change(bad)
+            with self.subTest(ledger=bad), self.assertRaises((ValueError, KeyError)):
+                rebuild.validate_ledger(bad, self.root)
+        # A two-node cycle passes local edge identity but must fail DAG validation.
+        caller, dep = self.ledger['functions']
+        dep.update(comparison_mode=rebuild.DIRECT_MODE, call_bindings=[dict(callee_id='fixture', object_symbol='caller',
+            original_symbol='original', address=caller['address'], size=32, body_sha256=rebuild.digest(LINKED_CALLER), call_offsets=[0])])
+        with self.assertRaisesRegex(ValueError, 'cycle'): rebuild.validate_ledger(self.ledger, self.root)
+
+    def test_direct_graph_failed_callee_never_compiles_or_credits_caller(self):
+        self.prepare_call_graph()
+        bad_code = CALLEE[:4] + struct.pack('<I', 0x2402000d)
+        self.graph_objects[self.dep_source.read_bytes()] = call_elf_fixture(code=bad_code, functions=[('dep',0,8,2,1,0,1)],relocations=())
+        report = self.verify_graph()
+        self.assertEqual([r['status'] for r in report['functions']], ['failed','mismatched'])
+        self.assertIn('dependency did not freshly match', report['functions'][0]['reason'])
+        self.assertEqual(sum('-c' in c for c in self.graph_calls), 1)
+        self.assertEqual(rebuild.recorded_matches(report,self.ledger,self.root), [])
+        # A saved success does not enter verify(), and cannot rescue a new failure.
+        (self.output/'verification.json').write_text('{"status":"matched"}')
+        self.assertEqual(self.verify_graph()['functions'][0]['status'], 'failed')
+
+    def test_direct_graph_transitive_source_closure_is_bound_and_fresh(self):
+        self.prepare_call_graph()
+        caller, leaf = self.ledger['functions']
+        middle = copy.deepcopy(caller)
+        middle.update(id='mid', symbol='mid', original_symbol='original_mid', address='0x00100020', source='mid.cpp')
+        middle_source = self.root / 'mid.cpp'
+        middle_source.write_text('extern "C" int dep(int); extern "C" int mid(int x) { return dep(x) + 1; }\n')
+        leaf['address'] = '0x00100040'
+        middle['call_bindings'][0]['address'] = leaf['address']
+        linked_middle = CALLER[:8] + struct.pack('<I', 0x0c040010) + CALLER[12:]
+        caller['call_bindings'][0].update(callee_id='mid', object_symbol='mid', original_symbol='original_mid',
+                                         size=32, body_sha256=rebuild.digest(linked_middle))
+        self.ledger['functions'].append(middle)
+        self.source.write_text('extern "C" int mid(int); extern "C" int caller(int x) { return mid(x) + 1; }\n')
+        self.graph_objects[self.source.read_bytes()] = call_elf_fixture(functions=[('caller',0,32,2,1,0,1),('mid',0,0,0,1,0,0)])
+        self.graph_objects[middle_source.read_bytes()] = call_elf_fixture(functions=[('mid',0,32,2,1,0,1),('dep',0,0,0,1,0,0)])
+        self.game.write_bytes(call_elf_fixture(kind=2, code=LINKED_CALLER + linked_middle + CALLEE, functions=[
+            ('original',BASE,32,2,1,0,1),('original_mid',BASE+32,32,2,1,0,1),('original_dep',BASE+64,8,2,1,0,1)]))
+        self.target['text']['size']=72;self.target['baseline_sha256']=rebuild.digest(self.game.read_bytes())
+        self.ledger['target']=copy.deepcopy(self.target)
+        report=self.verify_graph();self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),3)
+        top, bottom, mid=report['functions']
+        self.assertEqual(top['dependencies'],{'mid':rebuild.digest(rebuild.canonical(mid))})
+        self.assertEqual(mid['dependencies'],{'dep':rebuild.digest(rebuild.canonical(bottom))})
+        # A valid-looking changed leaf result invalidates its parent's saved digest.
+        bottom['object_sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'dependency result'):rebuild.recorded_matches(report,self.ledger,self.root)
+        # A fresh leaf mismatch prevents BOTH callers from compiling.
+        self.graph_objects[self.dep_source.read_bytes()] = call_elf_fixture(code=CALLEE[:4]+struct.pack('<I',0x2402000d),
+            functions=[('dep',0,8,2,1,0,1)],relocations=())
+        failed=self.verify_graph()
+        self.assertEqual([r['status'] for r in failed['functions']],['failed','mismatched','failed'])
+        self.assertEqual(sum('-c' in c for c in self.graph_calls),1)
+
+    def test_direct_graph_all_sources_stay_stable_through_entire_run(self):
+        self.prepare_call_graph()
+        count = [0]
+        def late_change():
+            count[0] += 1
+            if count[0] == 2: self.dep_source.write_text(self.dep_source.read_text()+'// changed after dependency compile\n')
+        report = self.verify_graph(mutation=late_change)
+        self.assertEqual([r['status'] for r in report['functions']], ['failed','failed'])
+        self.assertTrue(all('graph verification' in r['reason'] for r in report['functions']))
+
+    def test_direct_graph_original_target_hash_and_load_mapping_fail_before_compile(self):
+        self.prepare_call_graph()
+        baseline = self.game.read_bytes()
+        wrong_target = bytearray(baseline)
+        offset = rebuild.Elf32(baseline).sections[1][4]
+        struct.pack_into('<I', wrong_target, offset+8, 0x0c040009)
+        weak_dep = change_symbol(baseline, 'original_dep', binding=2)
+        alias_dep = change_symbol(baseline, 'original_dep', value=BASE+4)
+        no_exec = bytearray(baseline); struct.pack_into('<I',no_exec,52+24,4)
+        wrong_mapping = bytearray(baseline); struct.pack_into('<I',wrong_mapping,52+4,offset+4)
+        for data in (bytes(wrong_target), weak_dep, alias_dep, bytes(no_exec), bytes(wrong_mapping)):
+            self.game.write_bytes(data); self.target['baseline_sha256']=rebuild.digest(data)
+            self.ledger['target']=copy.deepcopy(self.target)
+            with self.subTest(data_hash=rebuild.digest(data)), self.ee_fixture() as calls, \
+                 patch.object(rebuild,'BASELINE_SIZE',len(data)), self.assertRaises(ValueError):
+                rebuild.verify(self.ledger,self.game,None,self.output,self.root,ee_compiler=self.ee_driver)
+            self.assertEqual(calls,[])
+        self.game.write_bytes(baseline); self.target['baseline_sha256']=rebuild.digest(baseline); self.ledger['target']=copy.deepcopy(self.target)
+        self.ledger['functions'][0]['call_bindings'][0]['body_sha256']='0'*64
+        with self.ee_fixture() as calls, patch.object(rebuild,'BASELINE_SIZE',len(baseline)), self.assertRaisesRegex(ValueError,'body hash'):
+            rebuild.verify(self.ledger,self.game,None,self.output,self.root,ee_compiler=self.ee_driver)
+        self.assertEqual(calls,[])
+
+    def test_direct_object_relocation_table_shape_and_symbol_indices(self):
+        self.prepare_call_graph(); bindings=self.ledger['functions'][0]['call_bindings']
+        valid=call_elf_fixture()
+        mutations=[change_section(valid,'.rel.text',field,value) for field,value in
+                   ((1,4),(2,0),(3,4),(4,len(valid)+4),(5,7),(6,3),(7,4),(8,8),(9,16))]
+        mutations += [call_elf_fixture(relocations=r) for r in
+                      ((),((8,0x204),(8,0x204)),((8,0x104),),((8,0x304),),((8,0x202),),((9,0x204),),((32,0x204),))]
+        for data in mutations:
+            with self.subTest(hash=rebuild.digest(data)),self.assertRaises(ValueError):
+                rebuild.Elf32(data).rebuilt('caller',bindings)
+        code,records=rebuild.Elf32(valid).rebuilt('caller',bindings)
+        self.assertEqual(code,CALLER);self.assertEqual(records,[{'offset':8,'type':4,'symbol':'dep'}])
+        with self.assertRaises(ValueError):rebuild.Elf32(valid).rebuilt('caller')  # leaves stay closed
+
+    def test_direct_object_rejects_weak_absolute_typed_or_ambiguous_imports(self):
+        self.prepare_call_graph(); bindings=self.ledger['functions'][0]['call_bindings'];valid=call_elf_fixture()
+        for changes in ({'binding':2},{'binding':0},{'other':1},{'type':1},{'value':4},{'size':4},{'section':0xfff1},{'section':0xfff2}):
+            with self.subTest(changes=changes),self.assertRaises(ValueError):
+                rebuild.Elf32(change_symbol(valid,'dep',**changes)).rebuilt('caller',bindings)
+        # STT_FUNC undefined is a declaration, not a second defined body.
+        self.assertEqual(rebuild.Elf32(change_symbol(valid,'dep',type=2)).rebuilt('caller',bindings)[0],CALLER)
+        extra=[('caller',0,32,2,1,0,1),('dep',0,0,0,1,0,0),('dep',0,0,0,1,0,0)]
+        with self.assertRaises(ValueError):rebuild.Elf32(call_elf_fixture(functions=extra)).rebuilt('caller',bindings)
+        for section,field,value in (('.symtab',7,2),('.data',1,2),('.data',1,11),('.text',2,7),('.pdr',2,2)):
+            with self.subTest(section=section,field=field),self.assertRaises(ValueError):
+                rebuild.Elf32(change_section(valid,section,field,value)).rebuilt('caller',bindings)
+        duplicate=change_section(valid,'.data',0,rebuild.Elf32(valid).sections[6][0])
+        with self.assertRaisesRegex(ValueError,'duplicate'):rebuild.Elf32(duplicate).rebuilt('caller',bindings)
+
+    def test_direct_instruction_audit_is_closed_and_checks_delay_slots(self):
+        rebuild.audit_integer_body(CALLER,[8]);rebuild.audit_integer_body(CALLEE)
+        for word in (0x08000000,0x0c000000,0x0320f809,0x03e00008,0x10000000,0x50000000,
+                     0x42000018,0x0000000c,0x0000000d,0x70000000,0x00200000,0x00000061,0x44800000,0x241f0000):
+            bad=bytearray(CALLER);struct.pack_into('<I',bad,12,word)
+            with self.subTest(word=hex(word)),self.assertRaises(ValueError):rebuild.audit_integer_body(bytes(bad),[8])
+        with self.assertRaises(ValueError):rebuild.audit_integer_body(CALLER,[])
+        with self.assertRaises(ValueError):rebuild.audit_integer_body(CALLER,[8,8])
+        # JAL immediately before terminal JR would put a control transfer in its delay slot.
+        with self.assertRaises(ValueError):rebuild.audit_integer_body(struct.pack('<4I',0,0x0c000000,0x03e00008,0),[4])
+        with self.assertRaises(ValueError):rebuild.audit_integer_body(CALLER[:-4],[8])
+
+    def test_direct_object_accepts_only_observed_mips_section_and_file_metadata(self):
+        self.prepare_call_graph();bindings=self.ledger['functions'][0]['call_bindings']
+        rows=[('.text',0,0,3,0,0,1),('fixture.cpp',0,0,4,0,0,0xfff1),
+              ('caller',0,32,2,1,0,1),('dep',0,0,0,1,0,0)]
+        data=call_elf_fixture(functions=rows,relocations=((8,0x404),))
+        data=change_section(data,'.symtab',7,2)  # SGI split before local STT_FILE
+        elf=rebuild.Elf32(data);_,pdr=elf.named_section('.rel.pdr')
+        data=bytearray(data);struct.pack_into('<II',data,pdr[4],0,0x302);data=bytes(data)
+        self.assertEqual(rebuild.Elf32(data).rebuilt('caller',bindings)[0],CALLER)
+        self.assertEqual(rebuild.Elf32(change_section(data,'.symtab',7,3)).rebuilt('caller',bindings)[0],CALLER)
+        for change in ({'value':4},{'size':4},{'section':1},{'type':0},{'binding':1},{'other':1}):
+            with self.subTest(change=change),self.assertRaises(ValueError):
+                rebuild.Elf32(change_symbol(data,'fixture.cpp',**change)).rebuilt('caller',bindings)
+        for boundary in (0,1,4,5):
+            with self.subTest(boundary=boundary),self.assertRaises(ValueError):
+                rebuild.Elf32(change_section(data,'.symtab',7,boundary)).rebuilt('caller',bindings)
+        with self.assertRaises(ValueError):
+            rebuild.Elf32(change_symbol(data,'.text',section=4)).rebuilt('caller',bindings)
+
+    def test_direct_relocation_checks_zero_addend_original_and_all_other_bytes(self):
+        self.prepare_call_graph();item=self.ledger['functions'][0]
+        code,_=rebuild.relocate_calls(CALLER,LINKED_CALLER,item);self.assertEqual(code,LINKED_CALLER)
+        for word in (0x0c000001,0x08000000,0x00000000):
+            bad=bytearray(CALLER);struct.pack_into('<I',bad,8,word)
+            with self.subTest(word=word),self.assertRaises(ValueError):rebuild.relocate_calls(bytes(bad),LINKED_CALLER,item)
+        bad=bytearray(LINKED_CALLER);struct.pack_into('<I',bad,8,0x0c040009)
+        with self.assertRaisesRegex(ValueError,'original JAL'):rebuild.relocate_calls(CALLER,bytes(bad),item)
+        bad=bytearray(CALLER);struct.pack_into('<I',bad,20,0x24420002)
+        self.graph_objects[self.source.read_bytes()]=call_elf_fixture(code=bytes(bad))
+        report=self.verify_graph()
+        self.assertEqual(report['functions'][0]['status'],'mismatched')
+        self.assertEqual(len(rebuild.recorded_matches(report,self.ledger,self.root)),1)
+
+    def test_direct_pc_plus_four_region_and_extent_guards(self):
+        self.prepare_call_graph();item=copy.deepcopy(self.ledger['functions'][0])
+        item['address']='0x0ffffff4';item['call_bindings'][0]['address']='0x10002000'
+        self.assertEqual(rebuild.callsite_evidence(item)[0]['relocated_word'],'0x0c000800')
+        for target in ('0x0fff2000','0x10002001'):
+            item['call_bindings'][0]['address']=target
+            with self.assertRaises(ValueError):rebuild.callsite_evidence(item)
+        item['address']='0xfffffff0'
+        with self.assertRaises(ValueError):rebuild.callsite_evidence(item)
+
+    def test_direct_receipts_reject_dependency_and_policy_tampering(self):
+        self.prepare_call_graph();report=self.verify_graph()
+        for kind in ('schema','policy','policy_hash','audit','mode','link','raw','relocation','dependencies','dep_status','dep_body','dep_source','dep_compiler'):
+            bad=copy.deepcopy(report);caller,dep=bad['functions']
+            if kind=='schema':bad['schema_version']=2
+            elif kind=='policy':bad['call_policy']['addend']=4
+            elif kind=='policy_hash':bad['call_policy_sha256']='0'*64
+            elif kind=='audit':del dep['control_flow_policy']
+            elif kind=='mode':del caller['comparison_mode']
+            elif kind=='link':caller['link_address']='0x00100004'
+            elif kind=='raw':caller['raw_rebuilt_sha256']='bad'
+            elif kind=='relocation':caller['relocations'][0]['target_address']='0x00100024'
+            elif kind=='dependencies':caller['dependencies']['dep']='0'*64
+            elif kind=='dep_status':dep['status']='failed'
+            elif kind=='dep_body':dep['original_sha256']=dep['rebuilt_sha256']='0'*64
+            elif kind=='dep_source':dep['source_sha256']='0'*64
+            else:dep['toolchain_sha256']='0'*64
+            with self.subTest(kind=kind),self.assertRaises(ValueError):rebuild.recorded_matches(bad,self.ledger,self.root)
 
     def test_cli_help(self):
         result = subprocess.run([sys.executable, '-I', '-B', rebuild.__file__, '--help'], capture_output=True, text=True, timeout=15)

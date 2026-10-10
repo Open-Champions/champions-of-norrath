@@ -37,7 +37,7 @@ game bytes. `--require-matches` additionally rejects records lacking a match for
 each banked function. Public CI runs synthetic tests and this recorded-match
 check; it does not contain or freshly compare the private game.
 
-The version-2 sanitized receipt records baseline, verifier, source, compiler, object and
+The sanitized receipt records baseline, verifier, source, compiler, object and
 complete-function hashes, plus the effective compiler arguments. The verifier
 uses a fresh source snapshot and object location, rejects source/compiler changes
 during compilation, and rejects unrecorded compiler-option injection. Receipts
@@ -93,6 +93,43 @@ Do not strip these dependencies to make a comparison appear to pass.
 A function match does not provide a linked PS2 executable or playable native game.
 The shared Godot client remains a separate project with separate runtime tests.
 
+### Source-backed direct calls
+
+The optional `ee-direct-call-v1` comparison mode supports a narrow straight-line
+integer caller with ordinary `R_MIPS_26` JAL relocations. Every target must be
+another ledger function freshly compiled and matched in the same run, with the
+same reviewed EE compiler options. Dependencies must form an acyclic graph;
+an address in the original executable or an older success receipt cannot supply
+a missing reconstructed callee. No current banked game function uses this mode.
+
+A caller's `call_bindings` explicitly records each callee's ledger ID, object and
+original symbol names, address, complete size and original body hash, together
+with sorted call offsets. Original functions must have unambiguous global symbol
+boundaries and a unique executable load mapping. Each original call instruction
+must independently target the declared callee.
+
+The verifier accepts only zero-addend JAL relocations at exactly those sites,
+checks alignment and the jump region selected by PC+4, then compares every byte
+of the complete relocated body. It never masks differing bytes. Object symbols,
+relocation ownership and allocated sections remain restricted. The only extra
+symbol metadata accepted is the observed local section/file form; it cannot
+satisfy a dependency.
+
+All graph members pass a closed instruction audit allowing selected ordinary
+integer instructions, declared JAL calls, and a terminal return with its delay
+slot. Branches, indirect calls, unknown instructions, floating-point and MMI code
+remain unsupported. This checks instruction/control-flow shape, not memory safety,
+return-stack provenance, or compatible C++ declarations. Those contracts still
+require source and caller evidence before a function is banked.
+
+Graph receipts use schema 3 and bind the raw body hash, relocated body hash,
+callsite evidence, policy and complete fresh callee result records. Source and
+compiler identity must remain stable through the entire graph run. Leaf-only
+ledgers continue producing schema 2 receipts. Synthetic tests exercise dependency
+failure, stale records and malformed objects; a separate authored two-function
+fixture has also been compiled with the reviewed EE compiler and compared with
+the GNU linker's result. Neither fixture is game reconstruction progress.
+
 ## First recorded reconstruction
 
 On October 10, 2026, the complete eight-byte function at `0x002a9e50`, retained
@@ -110,8 +147,9 @@ records equality across the entire original symbol extent, not a chosen prefix.
 
 The compiler emits an `R_MIPS_32` relocation in nonallocated `.pdr` procedure
 metadata. The verifier permits only that exact metadata shape, offset and
-reference to the candidate; code and runtime-data relocations remain unsupported.
-The object is compared without rewriting its code. Source validation also rejects
+reference to the candidate. Leaf objects are compared without rewriting code;
+the separate direct-call mode above is the only supported code relocation.
+Runtime-data relocations remain unsupported. Source validation also rejects
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
