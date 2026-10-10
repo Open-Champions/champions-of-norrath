@@ -3,9 +3,9 @@
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "40b151b458870907858b01b9f03d4376679a2af2e608630f7d160fcd7d251148",
+  "ledger_sha256": "351706da611508edd78f103799274e4431535d3631919892a693e7faf2d58a09",
   "verifier_sha256": "1b4b545eae484e76e3e4b6cccfb6be1c072f22b28d16d3bdf05bfa27a1a46f30",
-  "recorded_at": "2026-10-10T08:45:39.853826+00:00",
+  "recorded_at": "2026-10-10T08:49:53.551049+00:00",
   "toolchains": {
     "clang": {
       "flavor": "clang",
@@ -237,6 +237,56 @@
       "size": 12,
       "original_sha256": "15fadbbddfdd0e0bca71520440704e48e43f2fbaa2b9f914f44ae6fb8ece7098",
       "rebuilt_sha256": "15fadbbddfdd0e0bca71520440704e48e43f2fbaa2b9f914f44ae6fb8ece7098"
+    },
+    {
+      "id": "dialog_line_to_y",
+      "source_sha256": "700ae9a9aeb57ec8688770dfee07560cf58ed71ec28b06958ea270a617af7eca",
+      "compiler_args": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "toolchain": "ee-gcc",
+      "toolchain_sha256": "c59895b4427579def92cdbd71ed195f72317c71ed65967e44522c52a41f00545",
+      "status": "matched",
+      "data_model": {
+        "__mips_single_float": "1",
+        "__SIZEOF_INT__": "4",
+        "__mips_fpr": "32",
+        "__SIZEOF_LONG__": "4",
+        "__mips_eabi": "1",
+        "_MIPS_ARCH_R5900": "1",
+        "__SIZEOF_POINTER__": "4",
+        "__mips64": "1"
+      },
+      "object_sha256": "90a725577e2c4f211b63363ab99681b6ed967b8567543bcdf38eec1b313ba926",
+      "size": 20,
+      "original_sha256": "ec256bc70e0e2c3940d1d878a5fa97abcb7760e25276dca10239cbac8d1fcc36",
+      "rebuilt_sha256": "ec256bc70e0e2c3940d1d878a5fa97abcb7760e25276dca10239cbac8d1fcc36"
     }
   ]
 }

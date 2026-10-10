@@ -153,7 +153,7 @@ Runtime-data relocations remain unsupported. Source validation also rejects
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **five complete functions and forty-four matching bytes**.
+Current source progress is **six complete functions and sixty-four matching bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -180,3 +180,11 @@ returns its second argument multiplied by three with 32-bit wrapping. Its entire
 `-fwrapv` option; 10,015 independent host cases covered signed limits and overflow
 thresholds. Four alignment bytes on each side are excluded. Its retained vtable
 pointer has been observed, but dispatch and gameplay remain unexecuted.
+
+The sixth complete body, `lineToY(int)` at `0x001d3990`, maps a dialog line to
+`18 * line + 295`, with 32-bit wrapping defined by `-fwrapv`. Its complete
+20-byte body freshly matches through EE GCC. Seven direct calls in the dialog
+paths pass 1 or 6 and use the resulting 313 or 403 for font positioning or
+scissoring. Independent review and 65,723 arithmetic checks covered signed limits,
+overflow boundaries and deterministic inputs. The surrounding four-byte alignment
+gaps are excluded; dialog rendering itself has not been executed.

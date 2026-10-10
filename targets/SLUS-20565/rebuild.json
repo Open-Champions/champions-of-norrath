@@ -177,6 +177,44 @@
         "semantic_check": "Independent host compilation with undefined-behavior checks and -fwrapv passed 10,015 cases including signed limits and overflow-threshold neighbors against a wide unsigned modulo reference; no PS2 runtime execution."
       },
       "toolchain": "ee-gcc"
+    },
+    {
+      "id": "dialog_line_to_y",
+      "original_symbol": "lineToY__Fi",
+      "address": "0x001d3990",
+      "size": 20,
+      "source": "reconstructed/dialog_line_to_y.cpp",
+      "symbol": "norrath_dialog_line_to_y",
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17"
+      ],
+      "evidence": {
+        "behavior": "Returns 18 * line + 295 modulo 2^32, with signed multiplication and addition defined by recorded -fwrapv. No memory, stack changes or calls.",
+        "boundary": "Global STT_FUNC complete 20-byte extent, no aliases/overlaps; preceding function ends at 0x001d398c and following begins at 0x001d39a8, with four padding bytes on each side. Unique executable load mapping independently checked.",
+        "callers": "Seven direct JAL sites in runDialog and drawDialog; observed arguments 1 and 6 yield 313 and 403 used by font scissoring/text positioning. These paths were inspected statically, not executed.",
+        "interface": "Signed 32-bit parameter/return comparison adapter. Retained parameter name and observed integer callers support the interface; original declaration and whole-program ABI are not established.",
+        "semantic_check": "65,723 directed-boundary and deterministic 32-bit cases passed a wide unsigned reference, bounded original/generated instruction interpretation, and host C++ with UBSan/-fwrapv. Not PS2 execution."
+      }
     }
   ]
 }
