@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "comparison_mode": "ee-gprel-scalar-v2",
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "owner_id": "interface_mode_state",
+  "function_ids": [
+    "light_disable_local_lights"
+  ],
+  "operations": {
+    "light_disable_local_lights": "add-ten"
+  },
+  "source_sha256": {
+    "reconstructed/interface_mode_state.cpp": "77a63741deff8e03375f06651405104caf3cf719e7f66818cae05e6391098eef",
+    "reconstructed/light_disable_local_lights.cpp": "c20627d31a36d5f1cc3204b341d4863b6d7f54a46fce885ac9fa99a813cec27f"
+  },
+  "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+  "runtime": {
+    "gp_preservation": "unverified",
+    "initialization": "unverified"
+  },
+  "manual_contract": {
+    "status": "independently reviewed source contract; fresh production comparison recorded separately",
+    "original_function": {
+      "symbol": "lightDisableLocalLights__Fv",
+      "address": "0x0013e808",
+      "size": 16
+    },
+    "original_owner": {
+      "symbol": "interfaceMode",
+      "address": "0x00483aac",
+      "binding": "local",
+      "size": 4,
+      "storage": "file-backed zero .sdata"
+    },
+    "operation": "Single exclusive-access unsigned 32-bit update by ten modulo 2^32. Both memory operations target the same live aligned writable source-owned word. No atomicity, volatile or synchronization claim.",
+    "types": "Unsigned storage/update comparison adapter only. Original C++ declaration and return type unknown. Other observed users apply signed positive/nonpositive and >=10 tests; their semantics are not converted to unsigned.",
+    "linkage": "Explicit local-original to external-source comparison adaptation; original translation-unit linkage not reconstructed.",
+    "observed_state_users": {
+      "direct_gp_accesses": 13,
+      "complete_function_extents": 9,
+      "scope": "Direct aligned GP LW/SW only; not all aliases or users"
+    },
+    "callers": "Two observed direct callers, compass and dome. Normal cleanup reaches a reset that subtracts ten once only when signed state >=10; arbitrary input restoration is not established.",
+    "validation": {
+      "private_full_body_match": true,
+      "independent_gnu_linker_comparison": true,
+      "host_original_model_cases": 65634,
+      "sanitizers": "ASan+UBSan clean",
+      "root_strict_original_owner_code_gp_checks": true,
+      "joint_linked_pair": "Two complete functions totaling 28 bytes and both distinct four-byte owners match under one private GNU link.",
+      "two_owner_host_interaction_cases": 65680,
+      "two_owner_host_interaction": "Separate translation units; both owners start at zero; updates preserve the other state; repeated unsigned wrap agrees with a wide integer reference; ASan+UBSan clean."
+    },
+    "limits": [
+      "No target execution or runtime initialization and GP preservation proof.",
+      "Original reset and other state users remain unreconstructed.",
+      "Void adapter does not claim incidental V0 as a return value."
+    ]
+  }
+}

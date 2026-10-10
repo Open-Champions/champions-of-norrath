@@ -214,8 +214,8 @@ code relocations. General runtime-data relocations remain unsupported. Source va
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **eight complete functions and 128 matching code bytes**,
-plus **one separately verified four-byte initialized data object**.
+Current source progress is **nine complete functions and 144 matching code bytes**,
+plus **two separately verified initialized data objects totaling eight bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -282,3 +282,20 @@ The original reset function remains unreconstructed. The
 owner and consumer hashes to the fixed GP evidence. Two observed drawing callers
 have different reset conditions, so unconditional reset and runtime preservation
 are not inferred. Other state users and actual lighting behavior remain unverified.
+
+The ninth complete body, `lightDisableLocalLights()` at `0x0013e808`, adds ten
+to the four-byte `interfaceMode` state at `0x00483aac`, preserving modulo 2^32
+behavior for every input bit pattern. Its full 16-byte body matches under the
+v2 scalar profile: both GP-relative fixups bind the same independently compiled
+owner. The separate file-backed zero initializer also matches. Four preceding
+alignment bytes are excluded; the next function begins immediately afterward.
+
+The [source review](../targets/SLUS-20565/interface-mode-review.json) records the
+unsigned storage/update adapter and its limits. Other observed users compare the
+state as signed; their push, pop and reset behavior is not redefined. Independent
+review and 65,634 native/original-model cases passed with ASan/UBSan. A combined
+GNU link matched both scalar functions and both owners, while 65,680 separate-TU
+host interaction cases checked that each update preserves the other state. The
+existing setter explicitly migrated to v2 with unchanged source and a fresh review.
+These checks do not establish original translation-unit linkage, actual caller
+sequencing, initialization execution, concurrent access or runtime lighting.

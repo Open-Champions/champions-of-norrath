@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
   "owner_id": "disable_volumetric_lighting_state",
   "function_ids": [
@@ -83,5 +83,9 @@
       }
     ]
   },
-  "review_scope": "Authored unsigned 32-bit owner and setter with matching declarations and explicit width assertions. Source and observed original state access reviewed independently. No target execution, whole-program linkage or all-user reconstruction claim."
+  "review_scope": "Authored unsigned 32-bit owner and setter with matching declarations and explicit width assertions. Source and observed original state access reviewed independently. No target execution, whole-program linkage or all-user reconstruction claim.",
+  "comparison_mode": "ee-gprel-scalar-v2",
+  "operations": {
+    "light_disable_volumetric_lighting": "set-one"
+  }
 }
