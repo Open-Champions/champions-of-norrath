@@ -51,8 +51,25 @@ table structure, not the callback bodies' behavior.
 The ordinary constructor dispatcher also registers frame information. Separately,
 `launchSRS` calls the retained `cdLoad` function with destination `0x01000000`
 before traversing `.srsctors`, then later calls the retained `srs_main` entry.
-The load's source, detailed behavior, launch frequency and destructor path remain
-unresolved. The `.srs` region must not be assumed immutable from entry onward.
+The input image and transfer size are identified below; launch frequency and the
+destructor path remain unverified. The `.srs` region must not be assumed immutable
+from entry onward.
+
+Subsequent read-only input analysis identifies the requested code image as
+`SRS.BIN`. Its 3,510,444 payload bytes on the private disc match the ELF's `.srs`
+payload exactly, with SHA-256
+`cfb21e98f60eaaad8eb2db12bea19f70a73c3b9f58547bbf25571ab24d9d2cb0`.
+The located member lies within the independently parsed primary volume. This
+comparison did not validate the full disc's trailing second-layer layout.
+
+The zero byte-count argument selects the directory entry's full file length;
+the observed read path rounds it to 1,715 sectors, or 3,512,320 bytes. The extra
+1,876 bytes were read in place and are zero in this private image. These are
+static input and transfer-path facts, not proof of a successful runtime read.
+The full rebuild therefore needs a source-generated runtime SRS image; keeping
+original code in that disc file would bypass the reconstructed ELF code during
+this launch path. The destructor dispatcher and actual launch/read execution
+remain unverified.
 
 ## Remaining requirements
 

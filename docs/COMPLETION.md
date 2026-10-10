@@ -25,6 +25,13 @@ their presence is not reconstructed-source credit. Compiler runtime and middlewa
 dependencies also need explicit provenance and verification rather than implicit
 exclusion from the target.
 
+Runtime-loaded code files are part of the source/rebuild requirement. In particular,
+the original disc's `SRS.BIN` payload is byte-identical to the ELF's `.srs` section,
+and the observed launch path reads that file into the scripting-code region.
+A source build must generate the required runtime code image as well as the ELF.
+Running a rebuilt ELF that subsequently reloads original SRS code is not proof of
+complete reconstructed-source execution. See [startup evidence](STARTUP.md).
+
 Whole-file equality is a separate claim from loaded-image equality, and both are
 separate from runtime behavior. If a future comparison checks only an identified
 subset, it must name that subset and leave the remaining completion criteria open.
