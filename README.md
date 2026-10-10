@@ -6,8 +6,9 @@ The Champions of Norrath preservation target within [Open Champions](https://git
 Our goal is readable C++ that can be checked against a contributor's original PS2
 executable, one complete function at a time.
 
-**Status: target setup. No executable baseline has been identified or verified in
-this repository, and no functions have been rebuilt.** Return to Arms' addresses,
+**Status: private executable identified and structurally validated; exact retail
+revision remains unconfirmed. No functions have been rebuilt.** See the
+[baseline evidence](docs/BASELINE.md). Return to Arms' addresses,
 hashes, function counts and progress do not apply to this game. There is no game
 build command or playable release yet.
 
@@ -17,6 +18,10 @@ build command or playable release yet.
 2. Record its hash, ELF layout, compiler evidence and function boundaries.
 3. Bring up a verifier for that target and land one independently authored C++ function.
 4. Expand only from verified evidence. Keep originals and extracted assets private.
+
+An authored local intake tool now validates executable structure and produces a
+metadata-only candidate report. Its 12 synthetic tests require no game files;
+see the [intake instructions](targets/README.md#local-executable-intake).
 
 See [baseline checklist](targets/README.md), [roadmap](docs/ROADMAP.md), and
 [contribution rules](CONTRIBUTING.md). No baseline files or proprietary tools are bundled.

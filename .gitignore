@@ -1,4 +1,4 @@
-# Only authored project metadata is allowed until a baseline is established.
+# Only authored metadata and intake tools are allowed; private inputs stay ignored.
 /*
 !/.gitignore
 !/.gitattributes
@@ -12,3 +12,11 @@
 !/targets/
 /targets/*
 !/targets/README.md
+!/tools/
+/tools/*
+!/tools/*.py
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/intake.yml

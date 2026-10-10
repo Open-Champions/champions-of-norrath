@@ -2,7 +2,7 @@
 
 | Milestone | Current state | Completion evidence |
 |---|---|---|
-| Baseline and edition | Not established | Independently verified private executable identity and layout |
+| Baseline and edition | Candidate identified; structural checks pass; exact retail revision unresolved | [Private executable identity and layout](BASELINE.md), followed by independent edition evidence |
 | Function inventory and toolchain | Not established | Reproducible addressed inventory, compiler/ABI evidence and explicit unknowns |
 | First C++ reconstruction | Not started | One complete function freshly compiled and byte-compared against that baseline |
 | Broader source reconstruction | Not started | Reviewed source, reproducible receipts and measured progress |
