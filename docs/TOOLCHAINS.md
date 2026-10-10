@@ -46,7 +46,7 @@ specifications. A driver hash alone does not identify the programs it invokes.
 Always run a fresh whole-function comparison; a successful compiler build or a
 stored receipt is not additional reconstructed-source credit.
 
-## Historical ABI evidence and next experiment
+## Historical ABI evidence and private comparator
 
 Retained names such as `GetYaw__6Camera`, `__tf8Creature`, `__ti8Creature` and
 `_vt$8Creature` fit the old GNU C++ ABI family. Upstream GCC 2.95.2's
@@ -59,17 +59,38 @@ inference, not identification of the exact release, vendor patches, or every
 translation unit's compiler. Modern compiler leaf matches do not establish that
 its class layout, mangling or RTTI can replace the original program's ABI.
 
-The next private comparator uses upstream GCC 2.95.2 source pinned to
+The private historical comparator uses upstream GCC 2.95.2 source pinned to
 `17b916df3d859b72736d537f6c2a98b2d76decf8`. No validated public 2.95 EE port was
 located in the bounded official-source search. The untouched generic
 `mips64el-unknown-elf` target rejects explicit `-mabi` switches; it is therefore
-only a possible integer-leaf code-generation comparator. Size assertions and
-actual output must verify its data model before use. Any host-build compatibility
-patches must be retained separately from target-code-generation changes.
+only an integer-leaf code-generation comparator. Its compiler frontends now
+build on macOS arm64, with host compatibility changes recorded privately and
+no MIPS instruction-pattern changes. The compiler and target runtime have not
+been installed globally, and no target runtime was built.
+
+One host failure came from the old compiler calling fixed-argument instruction
+generators through variadic function pointers. Tracing showed correct outgoing
+pointers becoming corrupted incoming arguments on Apple arm64. A host-specific
+declaration change matching the generated unprototyped table resolved the crash;
+temporary diagnostic instrumentation was removed. This is a bounded portability
+repair, not comprehensive validation of the historical compiler.
+
+Compile-time assertions confirmed 32-bit integer, long and pointer types with
+the tested options, and a class-method fixture naturally emitted the retained
+`GetYaw__6Camera` name. An independent rerun reproduced all twelve complete-body
+probes: four functions at three optimization levels. The camera getter and poison
+level requirement matched their already-verified eight-byte bodies. The camera
+setter remained a same-size mismatch, and byte reversal produced 44 bytes against
+the original 40. These probes add no reconstructed-source credit.
+
+The compiler emits generic MIPS3/o64 objects (`0x20002001`), distinct from the
+original EE flags (`0x20924001`). Its tested explicit `-mabi=32`, `-mabi=eabi` and
+`-fwrapv` options are rejected. This comparator is not an accepted public verifier
+profile and must not inherit modern EE assumptions about ABI or signed overflow.
 
 A public older [PS2 backend patch for GCC 3.2.3](https://github.com/ps2dev/ps2toolchain/blob/78deb4d3cf435f6fab76b35dbaab74ce6503a0a4/patches/gcc-3.2.3-PS2.patch)
 is another candidate experiment. It provides R5900/EABI support but does not
-restore the old C++ ABI. Neither candidate is an approved reconstruction compiler
-profile, and no historical build or match is implied by documenting these pins.
+restore the old C++ ABI. That backend has not yet been built here. Neither
+historical candidate is an approved reconstruction compiler profile.
 Preserve mismatches and ABI limitations rather than changing object flags or
 silently declaring a generic MIPS compiler to be the original PS2 toolchain.
