@@ -115,7 +115,7 @@ The object is compared without rewriting its code. Source validation also reject
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **three complete functions and twenty-four matching bytes**.
+Current source progress is **four complete functions and thirty-two matching bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -129,3 +129,9 @@ return type, caller ranges and whole-program ABI remain unverified.
 These results do not reconstruct the classes, vtables, skill systems or gameplay. Next work
 should take another independently supported function and preserve the same
 fresh-comparison and one-function-per-commit discipline.
+
+The fourth complete body, `Camera::GetYaw()` at `0x0026fc40`, is an eight-byte
+signed halfword accessor at receiver offset `0x68`. The reviewed EE GCC lane
+freshly matches its entire extent. An independent host check covered all 65,536
+signed-short values without modifying the view. `CameraYawView` is an authored
+comparison structure, not proof of the original class type or lifetime.

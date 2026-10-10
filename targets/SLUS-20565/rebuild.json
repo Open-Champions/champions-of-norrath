@@ -102,6 +102,43 @@
         "dispatch": "Retained SkillResistPoison vtable at 0x0044d918 has a function pointer at +0x34 (0x0044d94c); dispatch execution remains unverified.",
         "interface": "Unsigned 32-bit comparison parameter and return explicitly model the shift bit behavior without signed-overflow undefined behavior. Original member name has a signed integer argument; original return type, caller range and wider ABI remain unverified."
       }
+    },
+    {
+      "id": "camera_get_yaw",
+      "original_symbol": "GetYaw__6Camera",
+      "address": "0x0026fc40",
+      "size": 8,
+      "source": "reconstructed/camera_get_yaw.cpp",
+      "symbol": "norrath_camera_get_yaw",
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17"
+      ],
+      "evidence": {
+        "behavior": "Reads a signed 16-bit field at receiver offset 0x68 and returns its sign-extended value; no writes, stack changes or calls.",
+        "boundary": "Original global STT_FUNC size 8, no aliases or intersecting functions; preceding extent ends at 0x0026fc3c, then 4 padding bytes; following extent starts at 0x0026fc48.",
+        "semantic_check": "Independent host compile with undefined-behavior checks tested every signed-short value (65,536) and preserved the field and surrounding prefix sentinels. This is not PS2 execution.",
+        "interface": "Authored CameraYawView comparison structure requires a valid aligned live view. Original class layout/type/lifetime, original return type, caller behavior and full ABI remain unverified."
+      }
     }
   ]
 }
