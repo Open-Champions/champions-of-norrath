@@ -101,6 +101,15 @@ receipt schema 5 binds their fresh results to each consumer. Function counts and
 code bytes remain separate from data objects and initialized bytes. Runtime
 initialization, GP preservation and whole-program linkage remain unverified.
 
+The explicitly versioned `ee-gprel-scalar-v2` mode uses ledger schema 3, receipt
+schema 6 and per-owner review schema 2. It allows at most two distinct source
+owners and a closed unsigned add-ten body with two relocations to the same owner.
+Every owner remains independently compiled and matched; each consumer binds its
+selected owner's current result. The existing v1 mode retains its one-owner and
+single-access limits. Migration requires new operation-bound reviews and fresh
+comparison, not reinterpretation of a saved v1 receipt. See the
+[two-owner contract](GLOBAL_STATE.md#two-independent-owners-and-a-bounded-update).
+
 ## Bounded reconstruction loop
 
 1. Check the repository status and active coordination issue before taking a

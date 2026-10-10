@@ -4,8 +4,8 @@
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
   "ledger_sha256": "1a6a844d08f4818acfea7ae4d72a0986cdbf2e3958936522e49e88ab8445db5b",
-  "verifier_sha256": "94a12cc5553a32a38289f43423b7ca8c0f79c8a24076a45aad99203288914aa5",
-  "recorded_at": "2026-10-10T09:31:19.966451+00:00",
+  "verifier_sha256": "39e7d2c4c86d56a2d1480e9f31cce3ccd44cffe74140ac173c43a6d60a604641",
+  "recorded_at": "2026-10-10T09:40:02.571724+00:00",
   "toolchains": {
     "clang": {
       "flavor": "clang",
@@ -357,7 +357,7 @@
       },
       "comparison_mode": "historical-integer-leaf-v1",
       "control_flow_policy": "historical-integer-leaf-v1",
-      "assembly_sha256": "d531689158b120abfe4cc8229380814ecd1a7391c3cf4e8b47479ba779f70b57",
+      "assembly_sha256": "04987f8b71e49ab6e7fd833a6d93ae3af3586345731dd36e1725f348081881e6",
       "assembler_args": [
         "-EL",
         "-mips3",
@@ -366,11 +366,11 @@
         "<fresh-object.o>"
       ],
       "object_flags": 536879105,
-      "object_sha256": "d78637533f068fdf7e6261d45c11ed0d38d8d7d85654bad3ad3379cb474ec45f",
+      "object_sha256": "7ef943188b13eb409d285b4fb43f76d98833e1b8ae57d7760c471f0ca43696f3",
       "size": 52,
       "original_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
       "rebuilt_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
-      "historical_evidence_sha256": "dc614e431876708b7d9a24790d69be81f6e51e4ff894c3817c144cc09132a3cb"
+      "historical_evidence_sha256": "cbaa95fc4b67fd07448520cec177eb8d94dba7c88f0c93dfe2ce5b4ad3322352"
     },
     {
       "id": "light_disable_volumetric_lighting",
@@ -418,17 +418,17 @@
         "__SIZEOF_POINTER__": "4",
         "__mips64": "1"
       },
-      "comparison_mode": "ee-gprel-scalar-v1",
       "scalar_relocation": {
-        "offset": 8,
         "type": "R_MIPS_GPREL16",
         "object_symbol": "norrath_disable_volumetric_lighting",
         "owner_id": "disable_volumetric_lighting_state",
         "address": "0x00483aa8",
         "gp": "0x004879f0",
         "addend": 0,
-        "displacement": -16200
+        "displacement": -16200,
+        "offset": 8
       },
+      "comparison_mode": "ee-gprel-scalar-v1",
       "raw_rebuilt_sha256": "8f92a073158976973a963bba8856cca79e4a9083199c5cd3f0668a66f8b0b7b8",
       "owner_id": "disable_volumetric_lighting_state",
       "owner_result_sha256": "015c90363f4b046543d42485faf678fd56cdeb6461ca75b303643d5f4f66b3a4",

@@ -70,3 +70,39 @@ consumer comparison establishes only their declared dependencies. Other lighting
 users, reset paths, object lifetimes, initialization execution and full subsystem
 behavior still require reconstruction and runtime evidence. The original
 executable and raw analysis stay private.
+
+## Two independent owners and a bounded update
+
+`ee-gprel-scalar-v2` explicitly opts a ledger into one or two separate source
+owners. It retains the v1 read, write and set-to-one shapes and adds only one
+read-modify-write operation: add ten to an unsigned 32-bit word modulo 2^32.
+The complete 16-byte body must load and store the same owner, with two ordinary
+zero-addend GP-relative relocations at offsets zero and twelve. The addition,
+registers, return and delay-slot store are fixed by the reviewed instruction
+contract. Arbitrary arithmetic, cross-owner copies and combined call/data
+functions remain outside this mode.
+
+Each owner has a distinct source file, emitted name, original identity, address
+range and review record. Each consumer selects one owner explicitly. Adjacent
+owners are permitted; aliases, overlaps, interchangeable zero initializers and
+proof borrowed from the other owner are rejected. Every owner must have at least
+one consumer, and both owners compile afresh before their consumers can match.
+Source, review, GP or compiler drift invalidates the entire scalar group.
+
+V2 uses ledger schema 3, receipt schema 6 and per-owner review schema 2. Reviews
+bind the exact operation map in addition to each owner's own consumers and source
+hashes. Receipts contain an ordered relocation list and the selected owner's
+result digest. V1 remains a separate one-owner policy with ledger schema 2 and
+receipt schema 5; it cannot claim the new operation or a second owner. A scalar
+collection cannot mix the two policy versions. Migration requires explicit
+reviews and a fresh comparison, even when an existing source file is unchanged.
+
+The `interfaceMode` state at `0x00483aac` illustrates why the update contract is
+narrow. Its observed users apply signed comparisons: push changes the state only
+when the old signed value is nonpositive, pop only when it is positive, and reset
+subtracts ten once only when it is at least ten. An unsigned storage/update adapter
+can preserve the complete add-ten instruction effect for every bit pattern; it
+does not change those other users into unsigned operations or prove the original
+C++ declaration. The operation requires exclusive access to live, aligned, writable
+storage and makes no atomicity or synchronization claim. The void comparison
+adapter does not infer an original return type from an incidental result register.
