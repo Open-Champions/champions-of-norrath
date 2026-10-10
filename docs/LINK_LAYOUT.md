@@ -43,6 +43,10 @@ Original linker/script identity, initialization order, general ABI, and the role
 of nonallocated overlays remain unknown. No linker script, linked reconstruction
 or startup success is implied by this inventory. See the [completion criteria](COMPLETION.md).
 
+Subsequent [startup analysis](STARTUP.md) establishes the entry's explicit GP and
+BSS-clear ranges and separates ordinary/SRS constructor dispatch. COMMON's initial
+state and actual loader/kernel effects remain unresolved.
+
 ## Loader research boundary
 
 `zero_fill_range` describes the ELF-declared memory tail, not observed PS2 writes.
