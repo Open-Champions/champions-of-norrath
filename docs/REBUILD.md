@@ -100,7 +100,11 @@ The object is compared without rewriting its code. Source validation also reject
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Measured source progress is **one complete function and eight matching bytes**.
+Current source progress is **two complete functions and sixteen matching bytes**.
+The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
+`0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
+bytes. Its complete symbol has no aliases or overlaps; the preceding function is
+separated by four bytes of alignment padding and the next begins at its end.
 This does not reconstruct its class, vtable, skill system or gameplay. Next work
 should take another independently supported function and preserve the same
 fresh-comparison and one-function-per-commit discipline.

@@ -3,9 +3,9 @@
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "31e00fe6ffe0b4481aa9a464ec94b516095a54fa30a25e00e69291818b7748bd",
+  "ledger_sha256": "201032251552302cff181227e2b086f0c6e9a1b35e88d99f967c4d63473921a0",
   "verifier_sha256": "006edc925c5f2e01a9919f2b69865db16ef4de55402ee51c032727167aae491a",
-  "recorded_at": "2026-10-10T07:55:15.693825+00:00",
+  "recorded_at": "2026-10-10T08:12:33.952940+00:00",
   "compiler": {
     "name": "clang-20",
     "sha256": "01ac721d7f35bb9a1c74b4a17c6253fd645e1602a7322a47003eec1de00a8bd0",
@@ -44,6 +44,39 @@
       "size": 8,
       "original_sha256": "91207ce07dd0382107a7c5353e051e8e987d3b96da84e41eace4a2a06afdec69",
       "rebuilt_sha256": "91207ce07dd0382107a7c5353e051e8e987d3b96da84e41eace4a2a06afdec69"
+    },
+    {
+      "id": "skill_lightning_weapons_skill_point_cost",
+      "source_sha256": "07d8e72c867da1438f7bf730f2fd78705e1e1e91317a76d0226dec77a87afb7b",
+      "compiler_args": [
+        "--no-default-config",
+        "--target=mipsel-none-elf",
+        "-march=mips3",
+        "-mabi=32",
+        "-O2",
+        "-ffreestanding",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "status": "matched",
+      "object_sha256": "415b0d15cc1067f697c53aa0695415cb3b688f6ce7b9a0fd586ac2f0dc1305d5",
+      "size": 8,
+      "original_sha256": "5ce5ad86d452c4d2422bd63e15223d5d6b3dfb77f224a88c1f476e9fb34e359d",
+      "rebuilt_sha256": "5ce5ad86d452c4d2422bd63e15223d5d6b3dfb77f224a88c1f476e9fb34e359d"
     }
   ]
 }

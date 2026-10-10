@@ -40,6 +40,37 @@
         "dispatch": "Retained SkillLightningWeapons vtable has a pointer to this entry at 0x00451f74; dispatch execution remains unverified.",
         "interface": "Opaque receiver and integer parameter are comparison adapters; original C++ return type, whole-program ABI and runtime use are not established."
       }
+    },
+    {
+      "id": "skill_lightning_weapons_skill_point_cost",
+      "address": "0x002a9e48",
+      "size": 8,
+      "original_symbol": "getSkillPointCost__21SkillLightningWeaponsi",
+      "source": "reconstructed/skill_lightning_weapons_skill_point_cost.cpp",
+      "symbol": "norrath_lightning_weapons_skill_point_cost",
+      "language": "c++",
+      "compiler_args": [
+        "--no-default-config",
+        "--target=mipsel-none-elf",
+        "-march=mips3",
+        "-mabi=32",
+        "-O2",
+        "-ffreestanding",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer"
+      ],
+      "evidence": {
+        "behavior": "Returns integer-register value 1 for all inputs; no memory access, stack changes or calls.",
+        "boundary": "Original global STT_FUNC size 8, no intersecting or alias symbol. Preceding cast function ends at 0x002a9e44, followed by 4 bytes of alignment padding; next function begins at 0x002a9e50.",
+        "dispatch": "Retained SkillLightningWeapons vtable entry at 0x00451f6c (+0x2c) points to this function; dispatch execution remains unverified.",
+        "interface": "Opaque receiver and integer parameter are comparison adapters; original C++ return type, whole-program ABI and runtime use are not established."
+      }
     }
   ]
 }

@@ -6,8 +6,8 @@ The Champions of Norrath preservation target within [Open Champions](https://git
 Our goal is readable C++ that can be checked against a contributor's original PS2
 executable, one complete function at a time.
 
-**Status: first complete authored C++ function freshly verified against the
-hash-pinned Norrath executable: 1 function, 8 matching bytes.** Exact retail
+**Status: ongoing source reconstruction against the hash-pinned Norrath
+executable: 2 complete functions, 16 matching bytes.** Exact retail
 revision remains unconfirmed. See the [reconstruction workflow](docs/REBUILD.md)
 and [baseline evidence](docs/BASELINE.md). Return to Arms' addresses,
 hashes, function counts and progress do not apply to this game. There is no game
