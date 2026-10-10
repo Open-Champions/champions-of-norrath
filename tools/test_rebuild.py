@@ -65,6 +65,11 @@ def change_section(data, name, field, value):
 
 class RebuildTests(unittest.TestCase):
     def setUp(self):
+        # Synthetic compiler tests own their environment. Hosted Python may set
+        # LD_LIBRARY_PATH; injection cases explicitly override this clean baseline.
+        clean_environment = patch.dict(os.environ, {name: '' for name in rebuild.INJECTING_ENV})
+        clean_environment.start()
+        self.addCleanup(clean_environment.stop)
         self.temp = tempfile.TemporaryDirectory(prefix='norrath verifier ')
         self.root = Path(self.temp.name)
         self.source = self.root / 'candidate.cpp'
