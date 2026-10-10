@@ -88,9 +88,32 @@ original EE flags (`0x20924001`). Its tested explicit `-mabi=32`, `-mabi=eabi` a
 `-fwrapv` options are rejected. This comparator is not an accepted public verifier
 profile and must not inherit modern EE assumptions about ABI or signed overflow.
 
-A public older [PS2 backend patch for GCC 3.2.3](https://github.com/ps2dev/ps2toolchain/blob/78deb4d3cf435f6fab76b35dbaab74ce6503a0a4/patches/gcc-3.2.3-PS2.patch)
-is another candidate experiment. It provides R5900/EABI support but does not
-restore the old C++ ABI. That backend has not yet been built here. Neither
-historical candidate is an approved reconstruction compiler profile.
+## GCC 3.2.3 R5900 comparison
+
+The public [PS2 backend patch for GCC 3.2.3](https://github.com/ps2dev/ps2toolchain/blob/78deb4d3cf435f6fab76b35dbaab74ce6503a0a4/patches/gcc-3.2.3-PS2.patch)
+has now been built against upstream commit
+`6982b11ee31e0ba269324be02275771194ac0ca0`. One configure revision-string hunk
+was omitted because the Git source retains an unexpanded RCS token; all code and
+configuration behavior hunks were applied. Native host repairs were recorded
+separately, and all target files remained identical to the public patch content.
+The build contains compiler frontends only, with no target runtime or global
+installation.
+
+Compile-time assertions confirmed default 32-bit integers/pointers and 64-bit
+longs; the explicit comparison options select 32-bit longs. With the recorded
+modern EE assembler, all eight probe objects naturally carry the original
+`0x20924001` flags. An out-of-line class fixture emits `_ZN6Camera6GetYawEv`,
+confirming the newer C++ ABI rather than the original's retained naming family.
+
+An independent rerun reproduced all eight comparison records. Only the two
+already-known eight-byte getter/shift matches passed. The camera setter, four
+unsigned byte-reversal expressions and light-list removal all remained complete
+body mismatches. Correct target flags alone did not resolve code-generation or
+ABI differences. The same light-list algorithm matches 52 bytes with the private
+2.95 comparator, but that result awaits a reviewed verification profile and adds
+no public function credit.
+
+Neither historical candidate is currently an approved reconstruction compiler
+profile. The compiler experiments do not establish original compiler identity.
 Preserve mismatches and ABI limitations rather than changing object flags or
 silently declaring a generic MIPS compiler to be the original PS2 toolchain.
