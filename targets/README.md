@@ -1,8 +1,8 @@
 # Establishing a baseline
 
-A private SLUS-20565 candidate is now identified by SHA-256; its exact retail
-revision is unresolved. See [baseline evidence](../docs/BASELINE.md). No matching
-manifest or reconstruction verifier is populated yet. A target must independently record:
+The experimental SLUS-20565 target is identified by its exact executable SHA-256;
+its retail revision remains unresolved. See [baseline evidence](../docs/BASELINE.md)
+and the [reconstruction workflow](../docs/REBUILD.md). Every target must independently record:
 
 - Disc region, release/version and executable filename from the contributor's copy.
 - Executable SHA-256, ELF machine, entry point, section bounds and load layout.
@@ -40,6 +40,8 @@ executables are supported but cannot supply section-based evidence.
 
 A passing report is only a **structurally validated candidate**. `SYSTEM.CNF`'s
 `VER` field is recorded as boot metadata, not assumed to identify a retail revision.
-Confirm the game and disc edition independently before pinning a target. The tool
+Confirm the game and disc edition independently before claiming a retail release.
+An experimental hash-pinned target can identify exact bytes while preserving the
+retail-edition uncertainty explicitly, as this target does. The intake tool
 does not infer compiler identity, function boundaries, match percentages or native
 compatibility. Review the generated metadata before committing any baseline.

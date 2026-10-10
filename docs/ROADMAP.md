@@ -2,9 +2,9 @@
 
 | Milestone | Current state | Completion evidence |
 |---|---|---|
-| Baseline and edition | Candidate identified; structural checks pass; exact retail revision unresolved | [Private executable identity and layout](BASELINE.md), followed by independent edition evidence |
-| Function inventory and toolchain | Not established | Reproducible addressed inventory, compiler/ABI evidence and explicit unknowns |
-| First C++ reconstruction | Not started | One complete function freshly compiled and byte-compared against that baseline |
+| Baseline and edition | Experimental hash-pinned baseline; exact retail revision unresolved | [Private executable identity and layout](BASELINE.md); hash does not authenticate a retail pressing |
+| Function inventory and toolchain | Retained symbols independently checked; narrow Clang leaf verifier works; original toolchain unknown | [Inventory summary](../targets/SLUS-20565/symbol-summary.json) and [verification scope](REBUILD.md) |
+| First C++ reconstruction | Complete: one function, 8 matching bytes | [Fresh comparison receipt](../targets/SLUS-20565/verification.json) for the skill-level requirement leaf |
 | Broader source reconstruction | Not started | Reviewed source, reproducible receipts and measured progress |
 | Linked PS2 executable | Not started | Whole-image comparison with explicit layout/data scope |
 | Native game support | Shared project, not playable | Executed scenes and gameplay in the Godot client on each claimed platform |

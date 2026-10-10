@@ -18,14 +18,14 @@ no original game data belongs in Git.
 | ELF flags | `0x20924001` |
 | Layout | 6 program headers and 45 section headers |
 | Main `.text` | Address `0x00100000`, file offset `0x1000`, size 2,209,032 bytes |
-| Symbol metadata | `.symtab` and `.strtab` are present; not yet inventoried or boundary-validated |
+| Symbol metadata | 21,415 records independently inventoried; see [summary](../targets/SLUS-20565/symbol-summary.json) |
 
 The authored intake tool passed on this private executable and its `SYSTEM.CNF`.
 Its entry point, ELF flags, all 45 section records and all 6 program-header records
 were independently compared with LLVM 20.1.8 `llvm-readobj` output and agreed.
 The executable checksum also agreed with the system `shasum` utility.
-The 12 synthetic tool tests passed locally on Apple Silicon macOS.
-The new platform CI workflow has been authored but has not been run remotely.
+The initial 12 synthetic intake tests passed locally on Apple Silicon macOS.
+The reconstruction workflow adds separate inventory and verification tests.
 
 ## Interpretation and unresolved evidence
 
@@ -46,15 +46,13 @@ replacement toolchain. Additional executable sections include `.vutext` and
 filesystem and layer layout have **not** been validated. Successful executable
 extraction is not proof of complete disc or asset coverage.
 
-## Next bounded work
+## Hash-pinned reconstruction scope
 
-1. Resolve edition evidence and pin the exact input identity in a reviewed target.
-2. Inspect the retained symbol table privately; distinguish function symbols,
-   aliases, undefined entries and section coverage before reporting an inventory.
-3. Manually validate one complete candidate boundary and its ABI requirements.
-4. Adapt the shared verification design through review, then compile and compare
-   one authored function against this exact executable.
+The experimental target `SLUS-20565-sha256-9a60f13c5c31` pins the exact observed
+executable independently of its unresolved retail label. Reconstruction under
+this identity applies only to those bytes, not every release carrying this serial.
+The target [manifest](../targets/SLUS-20565/baseline.json) preserves that distinction.
 
-No C++ functions have been reconstructed in this target. There is no linked PS2
-build or playable native Norrath client. Asset, save, script and network behavior
-remain independently unverified.
+See the [reconstruction workflow](REBUILD.md) for current source and verification
+evidence. There is no linked PS2 build or playable native Norrath client. Asset,
+save, script and network behavior remain independently unverified.

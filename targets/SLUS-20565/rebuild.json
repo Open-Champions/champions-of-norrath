@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "target": {
+    "id": "SLUS-20565-sha256-9a60f13c5c31",
+    "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+    "elf_machine": 8,
+    "text": {
+      "address": "0x00100000",
+      "size": 2209032
+    }
+  },
+  "functions": [
+    {
+      "id": "skill_lightning_weapons_level_requirement",
+      "address": "0x002a9e50",
+      "size": 8,
+      "original_symbol": "getLevelRequirement__21SkillLightningWeaponsi",
+      "source": "reconstructed/skill_lightning_weapons_level_requirement.cpp",
+      "symbol": "norrath_lightning_weapons_level_requirement",
+      "language": "c++",
+      "compiler_args": [
+        "--no-default-config",
+        "--target=mipsel-none-elf",
+        "-march=mips3",
+        "-mabi=32",
+        "-O2",
+        "-ffreestanding",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer"
+      ],
+      "evidence": {
+        "behavior": "Returns integer-register value 12 for all inputs; no memory access, stack changes or calls.",
+        "boundary": "Original global STT_FUNC size 8, no intersecting or alias function; preceding symbol ends at 0x002a9e50 and following symbol begins at 0x002a9e58.",
+        "dispatch": "Retained SkillLightningWeapons vtable has a pointer to this entry at 0x00451f74; dispatch execution remains unverified.",
+        "interface": "Opaque receiver and integer parameter are comparison adapters; original C++ return type, whole-program ABI and runtime use are not established."
+      }
+    }
+  ]
+}

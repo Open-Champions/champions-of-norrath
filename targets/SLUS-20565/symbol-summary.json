@@ -1,0 +1,277 @@
+{
+  "baseline_parser_sha256": "2f691fc2f302ee9368fea3c76b968e4bde13979a895cb39415f655c2b32c0682",
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "independent_validation": {
+    "compared_fields": [
+      "value",
+      "size",
+      "binding",
+      "type",
+      "other",
+      "section_index",
+      "all retained sanitized names"
+    ],
+    "compared_symbol_records": 21415,
+    "tool": "LLVM readobj 20.1.8"
+  },
+  "inventory_sha256": "3c6439c43a7eb21bf8fdf827f6b050d3a47c32833bb387740cb2aeb64d126261",
+  "repeat_inventory_equal": true,
+  "schema_version": 1,
+  "summary": {
+    "covered_bytes_by_section": {
+      "1": 2197248,
+      "19": 2281624
+    },
+    "exact_alias_groups": 0,
+    "executable_sections": [
+      {
+        "covered_union_bytes": 2197248,
+        "exact_alias_groups": 0,
+        "function_symbols": 5390,
+        "load_mapped_function_symbols": 5390,
+        "name": ".text",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2209032,
+        "section_index": 1,
+        "unique_bounded_extents": 5390
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".vutext",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 15680,
+        "section_index": 2,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 2281624,
+        "exact_alias_groups": 0,
+        "function_symbols": 8980,
+        "load_mapped_function_symbols": 8980,
+        "name": ".srs",
+        "overlapping_extent_groups": 28,
+        "section_bytes": 3510444,
+        "section_index": 19,
+        "unique_bounded_extents": 8980
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..0x0.1095845684.6.0",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 616,
+        "section_index": 24,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..0x0.1115996805.23.0",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 25,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.472.1",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 26,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.917.2",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 27,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.1359.3",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 28,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.1665.4",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 29,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.1970.5",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 30,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.2288.6",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 31,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.1115996805.2600.7",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 608,
+        "section_index": 32,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..0x0.1039362395.14.0",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 1640,
+        "section_index": 33,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..0x0.3593600256.21.0",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 34,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.494.1",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 35,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.928.2",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 36,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.1345.3",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 37,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.1763.4",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 38,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.2212.5",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 39,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.2652.6",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 2048,
+        "section_index": 40,
+        "unique_bounded_extents": 0
+      },
+      {
+        "covered_union_bytes": 0,
+        "exact_alias_groups": 0,
+        "function_symbols": 0,
+        "load_mapped_function_symbols": 0,
+        "name": ".DVP.overlay..unknvma.3593681058.3046.7",
+        "overlapping_extent_groups": 0,
+        "section_bytes": 1896,
+        "section_index": 41,
+        "unique_bounded_extents": 0
+      }
+    ],
+    "function_extent_status": {
+      "bounded_executable_extent": 14370,
+      "undefined": 2
+    },
+    "function_symbols": 14372,
+    "function_symbols_by_section": {
+      "0": 2,
+      "1": 5390,
+      "19": 8980
+    },
+    "overlapping_extent_groups": 28,
+    "symbol_entries": 21415,
+    "undefined_nonnull_symbols": 15,
+    "undefined_symbols": 16,
+    "unique_bounded_function_extents": 14370
+  },
+  "tool_sha256": "0255377afe72cdfabbb9e30c37f615cb98090d4b6f69b47e7bf775f9497b6a84",
+  "scope": "Symbol metadata coverage; not reconstructed source, complete function proof, or gameplay progress."
+}
