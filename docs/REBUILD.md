@@ -76,6 +76,8 @@ files and private research stay under ignored `work/` or outside the repository.
 The [load-layout inventory](LINK_LAYOUT.md) preserves the observed file and memory
 ranges, overlap diagnostics and nonallocated overlays. It accounts for layout
 requirements; it supplies neither reconstructed code nor a linker script.
+The [runtime-library evidence](RUNTIME_LIBRARIES.md) records the compatible public
+reentrancy-state initializer and the remaining source-backed data requirements.
 
 ## Current compiler scope
 
