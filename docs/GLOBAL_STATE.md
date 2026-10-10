@@ -106,3 +106,36 @@ does not change those other users into unsigned operations or prove the original
 C++ declaration. The operation requires exclusive access to live, aligned, writable
 storage and makes no atomicity or synchronization claim. The void comparison
 adapter does not infer an original return type from an incidental result register.
+
+## Source-owned floating-point store
+
+`ee-gprel-float-store-v1` is a separate policy for one complete eight-byte
+function: return through RA and store F12 to a source-owned float in the return
+delay slot. It admits no floating-point arithmetic, conversions, calls or other
+accesses. One zero-addend GP-relative relocation at offset four must identify the
+same owner as the original instruction. The owner is a separate mutable,
+four-byte `.sdata` definition initialized to `1.0f`, with exact file bytes
+`0000803f`. Integer policies still require their original zero initializer.
+
+Ledger schema 4 requires exactly one float owner and permits up to two unchanged
+scalar-v2 integer owners. Every owner explicitly names its policy. Identities,
+canonical source and review paths, and address ranges remain distinct across
+both types. Cross-type bindings and interchangeable owner proofs are rejected.
+The float review uses schema 3; integer reviews remain schema 2. Receipt schema 7
+records both policies when needed, the selected owner's fresh result, and the
+complete source, relocation, compiler-model and ABI evidence. Older ledgers and
+receipts retain their existing rules.
+
+The generated float owner and consumer must both contain the reviewed natural
+R5900 single-precision ABI metadata: 64-bit general registers, 32-bit FPU
+registers, and the exact ABI and GNU attribute records. The compiler's float
+predefines are checked independently of its integer model. In particular, its
+maximum exponent is 129 and it declares no infinity or quiet-NaN support;
+ordinary desktop IEEE assumptions must not replace this target evidence.
+
+Source-level value checks cover finite values representable on both the host
+and target. The matched target store separately establishes the instruction's
+four-byte F12 bit transfer, without arithmetic. Host observations of exponent-255
+patterns do not establish portable C++ exceptional-value behavior or PS2 hardware
+semantics. Original translation-unit ownership, general calling conventions,
+runtime GP preservation and initialization execution remain unverified.

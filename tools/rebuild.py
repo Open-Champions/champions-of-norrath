@@ -82,6 +82,8 @@ extern "C" int historical_model_probe() { return sizeof(void*); }
 SCALAR_MODE = 'ee-gprel-scalar-v1'
 SCALAR_V2_MODE = 'ee-gprel-scalar-v2'
 SCALAR_MODES = (SCALAR_MODE, SCALAR_V2_MODE)
+FLOAT_MODE = 'ee-gprel-float-store-v1'
+DATA_MODES = (*SCALAR_MODES, FLOAT_MODE)
 SCALAR_FLAGS = sorted(EE_FLAGS - {'-G0'}) + ['-G4', '-fno-zero-initialized-in-bss']
 GP_CONTEXT = 'targets/SLUS-20565/gp-context.json'
 GP_SPEC = {'schema_version': 1, 'policy': 'norrath-fixed-gp-v1',
@@ -107,8 +109,57 @@ SCALAR_V2_POLICY = {'mode': SCALAR_V2_MODE, 'storage': 'sdata-file-zero', 'type'
     'owner_flags': BASELINE_FLAGS & ~1, 'consumer_flags': BASELINE_FLAGS}
 
 
+FLOAT_STORE_FLAGS = SCALAR_FLAGS.copy()
+FLOAT_MODEL = {'__SIZEOF_FLOAT__': '4', '__FLT_RADIX__': '2', '__FLT_MANT_DIG__': '24',
+    '__FLT_MIN_EXP__': '(-125)', '__FLT_MAX_EXP__': '129', '__FLT_HAS_QUIET_NAN__': '0',
+    '__FLT_HAS_INFINITY__': '0', '__FLT_HAS_DENORM__': '1'}
+FLOAT_VALUE_CONTRACT = {'source': 'finite-common-representable-float-values',
+    'target': 'store-low32-f12-object-bits', 'memory': 'exclusive-live-ordinary-float-object',
+    'exceptional_values': 'target-bits-only-no-portable-cpp-claim'}
+FLOAT_ABI_BYTES = bytes.fromhex('000003000201000206000000000000000100000000000000')
+FLOAT_ATTRIBUTES_BYTES = bytes.fromhex('410f000000676e750001070000000402')
+FLOAT_ABI = {'version': 0, 'isa_level': 3, 'isa_revision': 0, 'gpr_size': 64,
+    'cpr1_size': 32, 'cpr2_size': 0, 'fp_abi': 2, 'isa_extension': 6,
+    'ases': 0, 'flags1': 1, 'flags2': 0,
+    'abiflags_sha256': hashlib.sha256(FLOAT_ABI_BYTES).hexdigest(),
+    'attributes_sha256': hashlib.sha256(FLOAT_ATTRIBUTES_BYTES).hexdigest()}
+FLOAT_POLICY = {'mode': FLOAT_MODE, 'storage': 'sdata-file-float-one', 'data_type': 'float32',
+    'size': 4, 'initializer': '1.0f', 'initializer_hex': '0000803f', 'max_owners': 1,
+    'operations': ['store-float-argument'], 'site_offsets': {'store-float-argument': [4]},
+    'relocation': 'R_MIPS_GPREL16', 'addend': 0, 'closure': 'fresh-source-owner',
+    'compiler_args': FLOAT_STORE_FLAGS.copy(), 'float_model': FLOAT_MODEL, 'abi': FLOAT_ABI,
+    'value_contract': FLOAT_VALUE_CONTRACT, 'runtime': GP_SPEC['runtime'],
+    'owner_flags': BASELINE_FLAGS & ~1, 'consumer_flags': BASELINE_FLAGS}
+
+
+def float_owner(owner):
+    return isinstance(owner, dict) and owner.get('comparison_mode') == FLOAT_MODE
+
+
+def owner_initializer(owner):
+    # Only the explicit float policy selects these bytes. Existing scalar gates
+    # remain exact zero; no reinterpretation based on an initializer's Python type.
+    return bytes.fromhex('0000803f') if float_owner(owner) else bytes(4)
+
+
+def relocation_key(mode):
+    return ('float_store_relocations' if mode == FLOAT_MODE else
+            'scalar_relocations' if mode == SCALAR_V2_MODE else 'scalar_relocation')
+
+
+def float_abi(elf):
+    for name, typ, flags, alignment, entry, expected in (
+            ('.MIPS.abiflags', 0x7000002a, 2, 8, 24, FLOAT_ABI_BYTES),
+            ('.gnu.attributes', 0x6ffffff5, 0, 1, 0, FLOAT_ATTRIBUTES_BYTES)):
+        index, section = elf.named_section(name)
+        require((section[1], section[2], section[3], section[5], section[6], section[7], section[8], section[9])
+                == (typ, flags, 0, len(expected), 0, 0, alignment, entry)
+                and elf.section_data(index) == expected, 'unsupported float object ABI metadata')
+    return json.loads(canonical(FLOAT_ABI))
+
+
 def scalar_policy(ledger):
-    return SCALAR_V2_POLICY if ledger['schema_version'] == 3 else SCALAR_POLICY
+    return SCALAR_V2_POLICY if ledger['schema_version'] >= 3 else SCALAR_POLICY
 
 
 FIXED_FLAGS = ['-nostdinc', '-nostdinc++', '-x', 'c++']
@@ -378,8 +429,8 @@ def call_graph(ledger):
     edges, members = {}, set()
     for item in items.values():
         mode = item.get('comparison_mode')
-        require(mode in (None, DIRECT_MODE, HIST_MODE, *SCALAR_MODES), 'unsupported comparison mode')
-        if mode in (None, HIST_MODE, *SCALAR_MODES):
+        require(mode in (None, DIRECT_MODE, HIST_MODE, *DATA_MODES), 'unsupported comparison mode')
+        if mode in (None, HIST_MODE, *DATA_MODES):
             require('call_bindings' not in item, 'leaf entries cannot declare call bindings')
             edges[item['id']] = set()
             continue
@@ -611,6 +662,9 @@ def scalar_offset(operation):
 
 
 def scalar_offsets(operation, mode=SCALAR_MODE):
+    if mode == FLOAT_MODE:
+        require(operation == 'store-float-argument', 'unsupported float store operation')
+        return [4]
     if mode == SCALAR_MODE:
         return [scalar_offset(operation)]
     require(mode == SCALAR_V2_MODE and operation in SCALAR_V2_POLICY['site_offsets'], 'unsupported scalar operation/version')
@@ -671,39 +725,51 @@ def gp_context_evidence(baseline, root):
 
 
 def scalar_review(ledger, owner, root):
-    consumers = [i for i in ledger['functions'] if i.get('comparison_mode') in SCALAR_MODES
+    consumers = [i for i in ledger['functions'] if i.get('comparison_mode') in DATA_MODES
                  and i['data_binding']['owner_id'] == owner['id']]
     path = local_path(root, owner['review'])
     require(path.suffix == '.json' and not (Path(root) / owner['review']).is_symlink(), 'scalar review must be regular JSON')
     data = path.read_bytes()
     review = json.loads(data)
     source_hashes = {item['source']: digest(source_bytes(local_path(root, item['source']))) for item in [owner] + consumers}
-    require(isinstance(review, dict) and review.get('schema_version') == (2 if ledger['schema_version'] == 3 else 1)
+    require(isinstance(review, dict) and review.get('schema_version') == (3 if float_owner(owner) else 2 if ledger['schema_version'] >= 3 else 1)
             and review.get('baseline_sha256') == TARGET['baseline_sha256']
             and review.get('owner_id') == owner['id']
             and review.get('function_ids') == sorted(i['id'] for i in consumers)
             and review.get('source_sha256') == source_hashes
             and review.get('gp_context_sha256') == gp_descriptor(root)
             and review.get('runtime') == GP_SPEC['runtime'], 'stale or incomplete scalar source review')
-    if ledger['schema_version'] == 3:
-        require(review.get('comparison_mode') == SCALAR_V2_MODE
+    if ledger['schema_version'] >= 3:
+        require(review.get('comparison_mode') == (FLOAT_MODE if float_owner(owner) else SCALAR_V2_MODE)
                 and review.get('operations') == {i['id']: i['data_binding']['operation'] for i in consumers},
                 'stale or incomplete scalar-v2 operation review')
+    if float_owner(owner):
+        require(canonical(review.get('value_contract')) == canonical(FLOAT_VALUE_CONTRACT), 'missing float value/lifetime review contract')
     return digest(data)
 
 
 def scalar_owners(ledger, root):
-    consumers = [i for i in ledger['functions'] if i.get('comparison_mode') in SCALAR_MODES]
+    consumers = [i for i in ledger['functions'] if i.get('comparison_mode') in DATA_MODES]
     if not consumers:
-        require('data_objects' not in ledger, 'unreferenced data owner collection')
+        require('data_objects' not in ledger and ledger['schema_version'] != 4, 'unreferenced data owner collection or missing float lane')
         return {}
     items = ledger.get('data_objects')
-    v2 = ledger['schema_version'] == 3
+    v2 = ledger['schema_version'] >= 3
+    mixed_float = ledger['schema_version'] == 4
     mode = SCALAR_V2_MODE if v2 else SCALAR_MODE
-    require(ledger['schema_version'] in (2, 3) and isinstance(items, list)
-            and (1 <= len(items) <= 2 if v2 else len(items) == 1)
-            and all(i['comparison_mode'] == mode for i in consumers),
+    require(ledger['schema_version'] in (2, 3, 4) and isinstance(items, list)
+            and all(isinstance(owner, dict) for owner in items)
+            and (1 <= len(items) <= 3 if mixed_float else 1 <= len(items) <= 2 if v2 else len(items) == 1)
+            and all(i['comparison_mode'] in (SCALAR_V2_MODE, FLOAT_MODE) if mixed_float
+                    else i['comparison_mode'] == mode for i in consumers),
             'scalar version/owner count mismatch or mixed scalar policies')
+    if mixed_float:
+        require(type(ledger['schema_version']) is int, 'float ledger schema must be an integer')
+        require(sum(float_owner(o) for o in items) == 1
+                and all(o.get('comparison_mode') in (SCALAR_V2_MODE, FLOAT_MODE) for o in items),
+                'ledger4 requires exactly one float owner and explicit per-owner modes')
+    else:
+        require(not any(float_owner(o) for o in items), 'float owner needs ledger4')
     identities = {key: {i[key] for i in ledger['functions']} for key in ('id', 'symbol', 'original_symbol')}
     if v2:
         require(all(len(values) == len(ledger['functions']) for values in identities.values()),
@@ -716,8 +782,11 @@ def scalar_owners(ledger, root):
         require(all(owner[key] not in identities[key] for key in ('id', 'symbol'))
                 and (not v2 or owner['original_symbol'] not in identities['original_symbol']), 'scalar owner identity collision')
         require(type(owner['size']) is int and owner['size'] == 4 and owner['section'] == '.sdata'
-                and owner['data_type'] == 'uint32' and owner['storage'] == 'sdata-file-zero'
-                and type(owner['initializer']) is int and owner['initializer'] == 0
+                and ((float_owner(owner) and owner['data_type'] == 'float32'
+                      and owner['storage'] == 'sdata-file-float-one' and owner['initializer'] == '1.0f')
+                     or (not float_owner(owner) and owner['data_type'] == 'uint32'
+                         and owner['storage'] == 'sdata-file-zero'
+                         and type(owner['initializer']) is int and owner['initializer'] == 0))
                 and type(owner['original_binding']) is int and owner['original_binding'] in (0, 1), 'unsupported scalar owner type/storage')
         require(owner['linkage_adapter'] == ('original-local-to-unique-extern' if owner['original_binding'] == 0 else 'global-to-global'),
                 'missing explicit original/source linkage adaptation')
@@ -725,11 +794,13 @@ def scalar_owners(ledger, root):
         require(0 < start <= 0x7ffffffc and start % 4 == 0, 'scalar owner address out of supported range')
         source = local_path(root, owner['source'])
         require(source.suffix == '.cpp' and owner['language'] == 'c++' and owner['toolchain'] == 'ee-gcc'
-                and owner['compiler_args'] == SCALAR_FLAGS and source not in sources, 'invalid scalar owner source/profile')
+                and owner['compiler_args'] == (FLOAT_STORE_FLAGS if float_owner(owner) else SCALAR_FLAGS) and source not in sources, 'invalid scalar owner source/profile')
         source_bytes(source)
         if v2:
             review_path = local_path(root, owner['review'])
-            require(review_path not in review_paths, 'scalar-v2 owners need distinct reviews')
+            require(review_path not in review_paths and (not mixed_float or review_path not in sources
+                    and review_path != source), 'data owners need distinct reviews and sources')
+            require(not mixed_float or source not in review_paths, 'source collides with data review')
             require(all(start + 4 <= address(i['address']) or address(i['address']) + i['size'] <= start
                         for i in ledger['functions']), 'scalar-v2 owner overlaps function')
             require(all(start + 4 <= lo or hi <= start for lo, hi in extents), 'scalar-v2 owner extents overlap')
@@ -745,8 +816,9 @@ def scalar_owners(ledger, root):
                 and binding['owner_id'] in owners, 'unbound scalar source dependency')
         owner = owners[binding['owner_id']]
         require(binding['object_symbol'] == owner['symbol'], 'scalar import belongs to another owner')
-        require(item['size'] == max(scalar_offsets(binding['operation'], mode)) + 4
-                and item.get('toolchain') == 'ee-gcc' and item['compiler_args'] == SCALAR_FLAGS,
+        require(not mixed_float or owner['comparison_mode'] == item['comparison_mode'], 'cross-policy data owner binding')
+        require(item['size'] == max(scalar_offsets(binding['operation'], item['comparison_mode'])) + 4
+                and item.get('toolchain') == 'ee-gcc' and item['compiler_args'] == (FLOAT_STORE_FLAGS if item['comparison_mode'] == FLOAT_MODE else SCALAR_FLAGS),
                 'scalar consumer shape/profile mismatch')
         used.add(owner['id'])
     require(used == set(owners), 'unconsumed scalar source owner')
@@ -784,7 +856,7 @@ def scalar_owner_original(elf, owner):
                 'original scalar owner overlaps or aliases another symbol')
     offset = section[4] + start - section[3]
     contents = elf.span(offset, 4)
-    require(contents == bytes(4), 'original scalar initializer is not file-backed zero')
+    require(contents == owner_initializer(owner), 'original data initializer differs from explicit policy')
     phoff, = struct.unpack_from('<I', elf.data, 28)
     phsize, phnum = struct.unpack_from('<HH', elf.data, 42)
     require(phsize == 32 and 0 < phnum < 0xffff, 'scalar owner needs ordinary load headers')
@@ -819,7 +891,9 @@ def scalar_owner_rebuilt(elf, owner):
     index, section = elf.named_section('.sdata')
     require(symbol['section'] == index and (section[1], section[2], section[3], section[5], section[8]) == (1, 0x10000003, 0, 4, 4),
             'generated scalar storage mismatch')
-    require(elf.section_data(index) == bytes(4), 'generated scalar initializer mismatch')
+    require(elf.section_data(index) == owner_initializer(owner), 'generated scalar initializer mismatch')
+    if float_owner(owner):
+        float_abi(elf)
     elf.call_symbols(symbol, [])
     generated_gp0(elf)
     for i, current in enumerate(elf.sections):
@@ -828,7 +902,7 @@ def scalar_owner_rebuilt(elf, owner):
         if current[2] & 2 and current[5] and i != index:
             require((elf.names[i], current[1], current[2], current[5]) == ('.MIPS.abiflags', 0x7000002a, 2, 24),
                     'scalar owner contains extra allocated payload')
-    return bytes(4)
+    return owner_initializer(owner)
 
 
 def scalar_body(code, operation, raw=False, mode=SCALAR_MODE):
@@ -840,7 +914,7 @@ def scalar_body(code, operation, raw=False, mode=SCALAR_MODE):
     if operation == 'add-ten':
         require(words[1] == 0x2442000a and words[0] & 0xffff0000 == 0x8f820000
                 and words[0] & 65535 == words[-1] & 65535, 'unsupported or cross-owner add-ten load/update')
-    expected = {'read': 0x8f820000, 'write': 0xaf840000, 'set-one': 0xaf820000, 'add-ten': 0xaf820000}[operation]
+    expected = {'read': 0x8f820000, 'write': 0xaf840000, 'set-one': 0xaf820000, 'add-ten': 0xaf820000, 'store-float-argument': 0xe78c0000}[operation]
     require(words[-1] & 0xffff0000 == expected and (not raw or words[-1] & 65535 == 0),
             'scalar access opcode/register or zero-addend mismatch')
     value = words[-1] & 65535
@@ -857,14 +931,14 @@ def scalar_relocation_evidence(item, owner):
             'gp': GP_SPEC['gp_symbol']['address'], 'addend': 0, 'displacement': delta}
     mode = item.get('comparison_mode', SCALAR_MODE)
     sites = [dict(evidence, offset=offset) for offset in scalar_offsets(item['data_binding']['operation'], mode)]
-    return sites if mode == SCALAR_V2_MODE else sites[0]
+    return sites if mode in (SCALAR_V2_MODE, FLOAT_MODE) else sites[0]
 
 
 def relocate_scalar(code, original, item, owner):
     operation = item['data_binding']['operation']
     evidence = scalar_relocation_evidence(item, owner)
     mode = item.get('comparison_mode', SCALAR_MODE)
-    sites = evidence if mode == SCALAR_V2_MODE else [evidence]
+    sites = evidence if mode in (SCALAR_V2_MODE, FLOAT_MODE) else [evidence]
     require(scalar_body(original, operation, mode=mode) == sites[0]['displacement'], 'original scalar access targets a different owner')
     scalar_body(code, operation, raw=True, mode=mode)
     output = bytearray(code)
@@ -875,7 +949,7 @@ def relocate_scalar(code, original, item, owner):
 
 
 def validate_ledger(ledger, root=ROOT):
-    require(isinstance(ledger, dict) and ledger.get('schema_version') in (1, 2, 3), 'unsupported ledger schema')
+    require(isinstance(ledger, dict) and ledger.get('schema_version') in (1, 2, 3, 4), 'unsupported ledger schema')
     require(ledger.get('target') == TARGET, 'ledger must pin the reviewed Norrath baseline identity and .text bounds')
     items = ledger.get('functions')
     require(isinstance(items, list) and len(items) > 0, 'ledger needs complete authored function entries')
@@ -898,10 +972,10 @@ def validate_ledger(ledger, root=ROOT):
         require(isinstance(flags, list) and all(isinstance(f, str) for f in flags), 'compiler arguments must be strings')
         flavor = item.get('toolchain', 'clang')
         require(flavor in ('clang', 'ee-gcc', HIST_FLAVOR), 'unsupported toolchain flavor')
-        scalar = item.get('comparison_mode') in SCALAR_MODES
+        scalar = item.get('comparison_mode') in DATA_MODES
         require(scalar or 'data_binding' not in item, 'ordinary entries cannot declare scalar dependencies')
         if scalar:
-            require(flavor == 'ee-gcc' and flags == SCALAR_FLAGS, 'scalar mode requires exact isolated EE profile')
+            require(flavor == 'ee-gcc' and flags == (FLOAT_STORE_FLAGS if item['comparison_mode'] == FLOAT_MODE else SCALAR_FLAGS), 'scalar mode requires exact isolated EE profile')
         if flavor == HIST_FLAVOR:
             require(item.get('comparison_mode') == HIST_MODE and flags == HIST_FLAGS,
                     'historical leaf requires explicit mode and exact ordered profile')
@@ -982,15 +1056,16 @@ def toolchain_identity(flavor, compiler, env):
                         'target': EE_TARGET, 'components': components, 'specs_sha256': specs_hash}
 
 
-def ee_data_model(executable, flags, env):
+def ee_data_model(executable, flags, env, expected=None):
+    expected = EE_MODEL if expected is None else expected
     output = compiler_output([str(executable)] + flags + FIXED_FLAGS + ['-dM', '-E', '-'], env, input=b'')
     macros = {}
     for line in output.decode('ascii').splitlines():
         parts = line.split(maxsplit=2)
-        if len(parts) == 3 and parts[0] == '#define' and parts[1] in EE_MODEL:
+        if len(parts) == 3 and parts[0] == '#define' and parts[1] in expected:
             require(parts[1] not in macros, 'duplicate EE data-model declaration')
             macros[parts[1]] = parts[2]
-    require(macros == EE_MODEL, 'EE GCC data model does not match reviewed R5900/EABI leaf scope')
+    require(macros == expected, 'EE GCC data model does not match reviewed R5900/EABI leaf scope')
     return macros
 
 
@@ -1128,6 +1203,8 @@ def compile_scalar_owner(owner, original, contents, executable, identity, review
         try:
             require(toolchain_identity('ee-gcc', executable, env)[1] == identity, 'scalar owner compiler changed before compilation')
             result['data_model'] = ee_data_model(executable, owner['compiler_args'], env)
+            if float_owner(owner):
+                result['float_model'] = ee_data_model(executable, owner['compiler_args'], env, FLOAT_MODEL)
             command = [str(executable)] + owner['compiler_args'] + FIXED_FLAGS + ['-c', str(snapshot), '-o', str(obj)]
             compiled = subprocess.run(command, cwd=directory, capture_output=True, timeout=120, check=False, env=env)
             (output_dir / (owner['id'] + '.log')).write_bytes(compiled.stdout + compiled.stderr)
@@ -1138,7 +1215,9 @@ def compile_scalar_owner(owner, original, contents, executable, identity, review
             require(toolchain_identity('ee-gcc', executable, env)[1] == identity, 'scalar owner components changed during compilation')
             data = obj.read_bytes()
             rebuilt = scalar_owner_rebuilt(Elf32(data), owner)
-            result.update(status='matched', size=4, storage=owner['storage'], initializer=0,
+            if float_owner(owner):
+                result.update(float_abi=float_abi(Elf32(data)), comparison_mode=FLOAT_MODE, data_type='float32')
+            result.update(status='matched', size=4, storage=owner['storage'], initializer=owner['initializer'],
                           object_sha256=digest(data), original=original, rebuilt_sha256=digest(rebuilt),
                           generated_binding=1, object_flags=BASELINE_FLAGS & ~1, linkage_adapter=owner['linkage_adapter'], runtime=GP_SPEC['runtime'])
         except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
@@ -1156,11 +1235,11 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
     original_owners = {key: scalar_owner_original(baseline, owner) for key, owner in owners.items()}
     originals = {item['id']: baseline.original(item) for item in ledger['functions']}
     for item in ordered:
-        if item.get('comparison_mode') in SCALAR_MODES:
+        if item.get('comparison_mode') in DATA_MODES:
             original_graph_body(baseline, item, strict_intersections=True)
             owner = owners[item['data_binding']['owner_id']]
             evidence = scalar_relocation_evidence(item, owner)
-            displacement = evidence[0]['displacement'] if item['comparison_mode'] == SCALAR_V2_MODE else evidence['displacement']
+            displacement = evidence[0]['displacement'] if item['comparison_mode'] in (SCALAR_V2_MODE, FLOAT_MODE) else evidence['displacement']
             require(scalar_body(originals[item['id']], item['data_binding']['operation'], mode=item['comparison_mode'])
                     == displacement, 'original scalar access targets a different owner')
         if item.get('toolchain') == HIST_FLAVOR:
@@ -1190,9 +1269,9 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
             toolchains[HIST_FLAVOR] = historical_identity(historical_compiler, historical_assembler, hist_env, root)
             historical_compiler = toolchains[HIST_FLAVOR][0]
             historical_assembler = historical_layout(root)[1]
-    if owners and ledger['schema_version'] == 3:
+    if owners and ledger['schema_version'] >= 3:
         toolchains = {flavor: (executable, json.loads(canonical(identity))) for flavor, (executable, identity) in toolchains.items()}
-    report = {'schema_version': 6 if owners and ledger['schema_version'] == 3 else 5 if owners else 4 if HIST_FLAVOR in flavors else 3 if members else 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
+    report = {'schema_version': 7 if owners and ledger['schema_version'] == 4 else 6 if owners and ledger['schema_version'] == 3 else 5 if owners else 4 if HIST_FLAVOR in flavors else 3 if members else 2, 'scope': SCOPE, 'target': TARGET['id'], 'baseline_sha256': TARGET['baseline_sha256'],
               'ledger_sha256': digest(canonical(ledger)), 'verifier_sha256': digest(Path(__file__).read_bytes()),
               'recorded_at': datetime.now(timezone.utc).isoformat(),
               'toolchains': {flavor: value[1] for flavor, value in toolchains.items()}, 'functions': []}
@@ -1206,8 +1285,12 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
     owner_reviews = {key: scalar_review(ledger, owner, root) for key, owner in owners.items()}
     owner_results = {}
     if owners:
-        policy = scalar_policy(ledger)
-        report.update(scalar_policy=policy, scalar_policy_sha256=digest(canonical(policy)), gp_context=gp_evidence)
+        report['gp_context'] = gp_evidence
+        if any(not float_owner(o) for o in owners.values()):
+            policy = scalar_policy(ledger)
+            report.update(scalar_policy=policy, scalar_policy_sha256=digest(canonical(policy)))
+        if ledger['schema_version'] == 4:
+            report.update(float_store_policy=FLOAT_POLICY, float_store_policy_sha256=digest(canonical(FLOAT_POLICY)))
         for key, owner in owners.items():
             owner_results[key] = compile_scalar_owner(owner, original_owners[key], snapshots[key],
                 toolchains['ee-gcc'][0], toolchains['ee-gcc'][1], owner_reviews[key], gp_evidence, output_dir, root, env)
@@ -1225,7 +1308,7 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
             snapshot.write_bytes(contents)
             command = [str(executable)] + item['compiler_args'] + FIXED_FLAGS + ['-c', str(snapshot.resolve()), '-o', str(obj.resolve())]
             try:
-                if item.get('comparison_mode') in SCALAR_MODES:
+                if item.get('comparison_mode') in DATA_MODES:
                     require(owner_results[item['data_binding']['owner_id']]['status'] == 'matched',
                             'source-backed scalar owner did not freshly match')
                 if item.get('comparison_mode') == DIRECT_MODE:
@@ -1237,6 +1320,8 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
                 if flavor == 'ee-gcc':
                     require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components changed before compilation')
                     result['data_model'] = ee_data_model(executable, item['compiler_args'], env)
+                    if item.get('comparison_mode') == FLOAT_MODE:
+                        result['float_model'] = ee_data_model(executable, item['compiler_args'], env, FLOAT_MODEL)
                 if flavor == HIST_FLAVOR:
                     hist_env = dict(env, TMPDIR=str(directory))
                     require(historical_identity(executable, historical_assembler, hist_env, root)[1] == identity,
@@ -1257,18 +1342,21 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
                     require(toolchain_identity(flavor, executable, env)[1] == identity, 'EE GCC components or specs changed during compilation')
                 (output_dir / (item['id'] + '.log')).write_bytes(compiled.stdout + compiled.stderr)
                 require(compiled.returncode == 0, 'compilation failed; inspect private build log')
-                if item.get('comparison_mode') in SCALAR_MODES:
+                if item.get('comparison_mode') in DATA_MODES:
                     require(obj.is_file() and not obj.is_symlink(), 'scalar consumer needs fresh regular object')
                 object_data = obj.read_bytes()
                 elf = Elf32(object_data)
                 if flavor == 'ee-gcc':
                     require(elf.flags == BASELINE_FLAGS, 'EE GCC object flags differ from reviewed R5900/EABI64 target')
                 direct = item.get('comparison_mode') == DIRECT_MODE
-                if item.get('comparison_mode') in SCALAR_MODES:
+                if item.get('comparison_mode') in DATA_MODES:
                     binding = item['data_binding']; owner = owners[binding['owner_id']]
                     raw, _ = elf.rebuilt(item['symbol'], scalar_binding=binding, scalar_mode=item['comparison_mode'])
                     code, evidence = relocate_scalar(raw, originals[item['id']], item, owner)
-                    result['scalar_relocations' if item['comparison_mode'] == SCALAR_V2_MODE else 'scalar_relocation'] = evidence
+                    result[relocation_key(item['comparison_mode'])] = evidence
+                    if item['comparison_mode'] == FLOAT_MODE:
+                        result['float_abi'] = float_abi(elf)
+                        result['object_flags'] = BASELINE_FLAGS
                     result.update(comparison_mode=item['comparison_mode'],
                                   raw_rebuilt_sha256=digest(raw), owner_id=owner['id'],
                                   owner_result_sha256=digest(canonical(owner_results[owner['id']])),
@@ -1320,7 +1408,7 @@ def verify(ledger, game, compiler, output_dir, root=ROOT, ee_compiler=None,
                 if item.get('toolchain') == HIST_FLAVOR:
                     completed[item['id']].update(status='failed', reason='historical source or compiler changed during verification')
     if owners:
-        scalar_items = list(owners.values()) + [i for i in ordered if i.get('comparison_mode') in SCALAR_MODES]
+        scalar_items = list(owners.values()) + [i for i in ordered if i.get('comparison_mode') in DATA_MODES]
         stable = all(source_bytes(local_path(root, i['source'])) == snapshots[i['id']] for i in scalar_items)
         stable = stable and toolchain_identity('ee-gcc', toolchains['ee-gcc'][0], env)[1] == toolchains['ee-gcc'][1]
         stable = stable and gp_descriptor(root) == gp_evidence['context_sha256']
@@ -1375,14 +1463,24 @@ def validate_identity(identity, flavor, root=ROOT):
 def recorded_scalar_owners(report, ledger, identities, root):
     owners = scalar_owners(ledger, root)
     if not owners:
-        require(not any(k in report for k in ('data_objects', 'scalar_policy', 'gp_context')), 'unexpected scalar receipt evidence')
+        require(not any(k in report for k in ('data_objects', 'scalar_policy', 'scalar_policy_sha256', 'float_store_policy', 'float_store_policy_sha256', 'gp_context')), 'unexpected scalar receipt evidence')
         return {}
     context = {'context_sha256': gp_descriptor(root), 'startup_context_sha256': GP_SPEC['startup']['context_sha256'],
                'gp': GP_SPEC['gp_symbol']['address'], 'runtime': GP_SPEC['runtime']}
-    policy = scalar_policy(ledger)
-    require(report['schema_version'] == (6 if ledger['schema_version'] == 3 else 5) and report.get('scalar_policy') == policy
-            and report.get('scalar_policy_sha256') == digest(canonical(policy))
-            and report.get('gp_context') == context, 'missing scalar receipt policy/context')
+    require(report['schema_version'] == (7 if ledger['schema_version'] == 4 else 6 if ledger['schema_version'] == 3 else 5)
+            and report.get('gp_context') == context, 'missing data receipt policy/context')
+    if any(not float_owner(o) for o in owners.values()):
+        policy = scalar_policy(ledger)
+        require(report.get('scalar_policy') == policy and report.get('scalar_policy_sha256') == digest(canonical(policy)),
+                'missing scalar receipt policy')
+    else:
+        require('scalar_policy' not in report and 'scalar_policy_sha256' not in report, 'float-only receipt cannot claim scalar policy')
+    if ledger['schema_version'] == 4:
+        require(type(report['schema_version']) is int, 'float receipt schema must be an integer')
+        require(canonical(report.get('float_store_policy')) == canonical(FLOAT_POLICY)
+                and report.get('float_store_policy_sha256') == digest(canonical(FLOAT_POLICY)), 'missing float store policy')
+    else:
+        require('float_store_policy' not in report and 'float_store_policy_sha256' not in report, 'unexpected float store policy')
     results = report.get('data_objects')
     require(isinstance(results, list) and len(results) == len(owners), 'missing source owner receipts')
     for result, owner in zip(results, owners.values()):
@@ -1395,15 +1493,26 @@ def recorded_scalar_owners(report, ledger, identities, root):
         require(result.get('status') in ('matched', 'mismatched', 'failed'), 'invalid owner status')
         if result['status'] != 'matched':
             continue
+        if float_owner(owner):
+            require(canonical(result.get('float_model')) == canonical(FLOAT_MODEL)
+                    and canonical(result.get('float_abi')) == canonical(FLOAT_ABI)
+                    and result.get('comparison_mode') == FLOAT_MODE and result.get('data_type') == 'float32'
+                    and type(result.get('size')) is int and type(result.get('object_flags')) is int
+                    and type(result.get('generated_binding')) is int,
+                    'missing float owner model/ABI evidence')
+        else:
+            require(not any(k in result for k in ('float_model', 'float_abi', 'data_type', 'comparison_mode')),
+                    'integer owner cannot claim float evidence')
         original = result.get('original', {})
         expected = {'symbol': owner['original_symbol'], 'address': owner['address'], 'size': 4,
-                    'binding': owner['original_binding'], 'section': '.sdata', 'initializer_sha256': digest(bytes(4))}
-        require(all(original.get(k) == v for k, v in expected.items())
+                    'binding': owner['original_binding'], 'section': '.sdata', 'initializer_sha256': digest(owner_initializer(owner))}
+        require((canonical({k: original.get(k) for k in expected}) == canonical(expected) if float_owner(owner)
+                 else all(original.get(k) == v for k, v in expected.items()))
                 and all(type(original.get(k)) is int and original[k] >= 0 for k in ('section_index', 'file_offset', 'load_index'))
                 and original['section_index'] > 0 and original['file_offset'] >= 52
                 and result.get('data_model') == EE_MODEL and result.get('size') == 4
-                and result.get('storage') == owner['storage'] and result.get('initializer') == 0
-                and result.get('rebuilt_sha256') == digest(bytes(4)) and result.get('generated_binding') == 1
+                and result.get('storage') == owner['storage'] and result.get('initializer') == owner['initializer']
+                and result.get('rebuilt_sha256') == digest(owner_initializer(owner)) and result.get('generated_binding') == 1
                 and result.get('object_flags') == BASELINE_FLAGS & ~1
                 and result.get('linkage_adapter') == owner['linkage_adapter'] and result.get('runtime') == GP_SPEC['runtime']
                 and isinstance(result.get('object_sha256'), str) and HASH.fullmatch(result['object_sha256']),
@@ -1414,16 +1523,16 @@ def recorded_scalar_owners(report, ledger, identities, root):
 def recorded_matches(report, ledger, root=ROOT):
     validate_ledger(ledger, root)
     ordered, members = call_graph(ledger)
-    require(report.get('schema_version') in (1, 2, 3, 4, 5, 6) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
+    require(report.get('schema_version') in (1, 2, 3, 4, 5, 6, 7) and report.get('scope') == SCOPE, 'unsupported comparison receipt')
     if members:
-        require(report['schema_version'] in (3, 4, 5, 6) and report.get('call_policy') == CALL_POLICY
+        require(report['schema_version'] in (3, 4, 5, 6, 7) and report.get('call_policy') == CALL_POLICY
                 and report.get('call_policy_sha256') == digest(canonical(CALL_POLICY)), 'missing direct-call receipt policy')
     require(report.get('target') == TARGET['id'] and report.get('baseline_sha256') == TARGET['baseline_sha256'], 'receipt targets different baseline')
     require(report.get('ledger_sha256') == digest(canonical(ledger)), 'stale receipt: ledger changed')
     require(report.get('verifier_sha256') == digest(Path(__file__).read_bytes()), 'stale receipt: verifier changed')
     flavors = {item.get('toolchain', 'clang') for item in ledger['functions']}
     if HIST_FLAVOR in flavors:
-        require(report['schema_version'] in (4, 5, 6) and report.get('historical_policy') == HIST_POLICY
+        require(report['schema_version'] in (4, 5, 6, 7) and report.get('historical_policy') == HIST_POLICY
                 and report.get('historical_policy_sha256') == digest(canonical(HIST_POLICY)),
                 'missing historical comparison receipt policy')
     if report['schema_version'] == 1:
@@ -1452,6 +1561,15 @@ def recorded_matches(report, ledger, root=ROOT):
                 and result.get('compiler_args') == effective_args(item), 'stale receipt: source or compiler args changed')
         require(result.get('status') in ('matched', 'mismatched', 'failed'), 'invalid comparison status')
         if result['status'] == 'matched':
+            if item.get('comparison_mode') == FLOAT_MODE:
+                require(canonical(result.get('float_model')) == canonical(FLOAT_MODEL)
+                    and canonical(result.get('float_abi')) == canonical(FLOAT_ABI)
+                        and type(result.get('object_flags')) is int and result['object_flags'] == BASELINE_FLAGS
+                        and type(result.get('size')) is int,
+                        'missing float consumer model/ABI evidence')
+            else:
+                require('float_model' not in result and 'float_abi' not in result and 'float_store_relocations' not in result,
+                        'ordinary receipt cannot claim float evidence')
             if flavor == 'ee-gcc':
                 require(result.get('data_model') == EE_MODEL, 'missing recorded EE GCC data-model evidence')
             if flavor == HIST_FLAVOR:
@@ -1485,14 +1603,17 @@ def recorded_matches(report, ledger, root=ROOT):
                         and callee.get('rebuilt_sha256') == binding['body_sha256'], 'receipt dependency is not source-matched')
                 dependencies[binding['callee_id']] = digest(canonical(callee))
             require(result.get('dependencies') == dependencies, 'stale or missing dependency result binding')
-        elif item.get('comparison_mode') in SCALAR_MODES:
+        elif item.get('comparison_mode') in DATA_MODES:
             owner = next(o for o in ledger['data_objects'] if o['id'] == item['data_binding']['owner_id'])
             dependency = owner_results[owner['id']]
             require(dependency['status'] == 'matched' and result.get('owner_id') == owner['id']
                     and result.get('owner_result_sha256') == digest(canonical(dependency))
                     and result.get('comparison_mode') == item['comparison_mode']
-                    and result.get('scalar_relocations' if item['comparison_mode'] == SCALAR_V2_MODE else 'scalar_relocation') == scalar_relocation_evidence(item, owner)
-                    and ('scalar_relocation' if item['comparison_mode'] == SCALAR_V2_MODE else 'scalar_relocations') not in result
+                    and (canonical(result.get(relocation_key(item['comparison_mode']))) == canonical(scalar_relocation_evidence(item, owner))
+                         if item['comparison_mode'] == FLOAT_MODE else
+                         result.get(relocation_key(item['comparison_mode'])) == scalar_relocation_evidence(item, owner))
+                    and not any(k in result for k in {'scalar_relocation', 'scalar_relocations', 'float_store_relocations'}
+                                - {relocation_key(item['comparison_mode'])})
                     and result.get('gp_context_sha256') == gp_descriptor(root)
                     and isinstance(result.get('raw_rebuilt_sha256'), str) and HASH.fullmatch(result['raw_rebuilt_sha256'])
                     and 'relocations' not in result and 'dependencies' not in result,
@@ -1521,7 +1642,7 @@ def invalidate_report(destination, ledger_path, ledger, game, compiler, root=ROO
     require(destination.resolve() not in protected, 'receipt path collides with a protected input')
     if destination.exists():
         previous = json.loads(destination.read_text(encoding='utf-8'))
-        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2, 3, 4, 5, 6)
+        require(isinstance(previous, dict) and previous.get('schema_version') in (1, 2, 3, 4, 5, 6, 7)
                 and previous.get('scope') == SCOPE, 'refusing to replace a file that is not a comparison receipt')
         destination.unlink()
 
