@@ -1,11 +1,11 @@
 {
-  "schema_version": 6,
+  "schema_version": 7,
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "2050581ce367d543902b366fc99f1aab584a4fb80c897b644423786b839c6267",
+  "ledger_sha256": "4d8ec4926180703c5cb9b43bb764e6203fb616c1a5fb1f7c597acbc3c70383ba",
   "verifier_sha256": "1a50831027627e0f42acd1c1ddab53474eb86c57fc72c7f48b1ac05d40d834e3",
-  "recorded_at": "2026-10-10T10:04:50.726634+00:00",
+  "recorded_at": "2026-10-10T10:06:09.940978+00:00",
   "toolchains": {
     "clang": {
       "flavor": "clang",
@@ -357,7 +357,7 @@
       },
       "comparison_mode": "historical-integer-leaf-v1",
       "control_flow_policy": "historical-integer-leaf-v1",
-      "assembly_sha256": "1ea6230f0ccf56e359c6a4b184e7afc2c10003d060b842ad948c6b7b17bd0263",
+      "assembly_sha256": "3c3c9c15184dc8f6d4a58234f375fbc89fcd67cd05e315ad6549f851bffd0c7a",
       "assembler_args": [
         "-EL",
         "-mips3",
@@ -366,11 +366,11 @@
         "<fresh-object.o>"
       ],
       "object_flags": 536879105,
-      "object_sha256": "74cd19a9240892d34531d5e9e6890f28833ed317bedf511c734162b88413c022",
+      "object_sha256": "36f931592e07e42259fbd10e16fc211f4d134b5968923e1f122333c887b4a191",
       "size": 52,
       "original_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
       "rebuilt_sha256": "c0d5c70d5e97af2e8c0a9f4ba9ebe7adc8b19b771ce93897a5cee252322c44c7",
-      "historical_evidence_sha256": "be38d7eeb31af34acc68af0ce8972e41fc7724034f75e1271cab3da877b457c2"
+      "historical_evidence_sha256": "df3e2d2c989cd97abbceeaea41c716ce8194f41d5f8093ee95882cb096eb0f5b"
     },
     {
       "id": "light_disable_volumetric_lighting",
@@ -517,6 +517,100 @@
       "size": 16,
       "original_sha256": "cdd5d5ca9f433b4b93dc8b7d3367c49ee5cc971c093004363fe0dfca9fa83579",
       "rebuilt_sha256": "cdd5d5ca9f433b4b93dc8b7d3367c49ee5cc971c093004363fe0dfca9fa83579"
+    },
+    {
+      "id": "light_global_char_light_scale",
+      "source_sha256": "4020881a51fe414488f0b7f9c90147afcad23713e05d98bb7083f992d05c1795",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "toolchain": "ee-gcc",
+      "toolchain_sha256": "c59895b4427579def92cdbd71ed195f72317c71ed65967e44522c52a41f00545",
+      "status": "matched",
+      "data_model": {
+        "__mips_single_float": "1",
+        "__SIZEOF_INT__": "4",
+        "__mips_fpr": "32",
+        "__SIZEOF_LONG__": "4",
+        "__mips_eabi": "1",
+        "_MIPS_ARCH_R5900": "1",
+        "__SIZEOF_POINTER__": "4",
+        "__mips64": "1"
+      },
+      "float_model": {
+        "__FLT_HAS_DENORM__": "1",
+        "__FLT_MIN_EXP__": "(-125)",
+        "__FLT_MANT_DIG__": "24",
+        "__FLT_RADIX__": "2",
+        "__FLT_HAS_QUIET_NAN__": "0",
+        "__FLT_HAS_INFINITY__": "0",
+        "__SIZEOF_FLOAT__": "4",
+        "__FLT_MAX_EXP__": "129"
+      },
+      "float_store_relocations": [
+        {
+          "type": "R_MIPS_GPREL16",
+          "object_symbol": "norrath_global_char_light_scale",
+          "owner_id": "global_char_light_scale_state",
+          "address": "0x00483ab4",
+          "gp": "0x004879f0",
+          "addend": 0,
+          "displacement": -16188,
+          "offset": 4
+        }
+      ],
+      "float_abi": {
+        "abiflags_sha256": "0e8a1cd81bacd2508e37790bcb8755c83cc9c4f3bea6d179c36c33f604b621a3",
+        "ases": 0,
+        "attributes_sha256": "b11839c00f9a46ab10f579ad74944e3a7bdfef92df5d5532479cdd9eb924ae31",
+        "cpr1_size": 32,
+        "cpr2_size": 0,
+        "flags1": 1,
+        "flags2": 0,
+        "fp_abi": 2,
+        "gpr_size": 64,
+        "isa_extension": 6,
+        "isa_level": 3,
+        "isa_revision": 0,
+        "version": 0
+      },
+      "object_flags": 546455553,
+      "comparison_mode": "ee-gprel-float-store-v1",
+      "raw_rebuilt_sha256": "f479a222ac6b1056b8fe4dc5e121e0605ff76e70247edc56f8d116756cc440dd",
+      "owner_id": "global_char_light_scale_state",
+      "owner_result_sha256": "c18bdd6250d5ceba662b22b4bde7b76660045071b4344f466b7c61f82461d257",
+      "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+      "object_sha256": "30a2f790e5a49681139bb0a33d98fce5ddbef84ff38da6612c8007d9142f00dd",
+      "size": 8,
+      "original_sha256": "a80d9d903b77f6ca541264c1a979f25cfcdb71b3fda226b8d3e42eb87077b30a",
+      "rebuilt_sha256": "a80d9d903b77f6ca541264c1a979f25cfcdb71b3fda226b8d3e42eb87077b30a"
     }
   ],
   "historical_policy": {
@@ -599,6 +693,86 @@
     "consumer_flags": 546455553
   },
   "scalar_policy_sha256": "0042c4773b95dd1fcdff17d21d5c10137c9b545828c053ada1afca8f7d21ec44",
+  "float_store_policy": {
+    "mode": "ee-gprel-float-store-v1",
+    "storage": "sdata-file-float-one",
+    "data_type": "float32",
+    "size": 4,
+    "initializer": "1.0f",
+    "initializer_hex": "0000803f",
+    "max_owners": 1,
+    "operations": [
+      "store-float-argument"
+    ],
+    "site_offsets": {
+      "store-float-argument": [
+        4
+      ]
+    },
+    "relocation": "R_MIPS_GPREL16",
+    "addend": 0,
+    "closure": "fresh-source-owner",
+    "compiler_args": [
+      "-O2",
+      "-ffreestanding",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-exceptions",
+      "-fno-pic",
+      "-fno-rtti",
+      "-fno-stack-protector",
+      "-fno-unwind-tables",
+      "-fomit-frame-pointer",
+      "-fwrapv",
+      "-mabi=eabi",
+      "-march=r5900",
+      "-mfp32",
+      "-mgp64",
+      "-mlong32",
+      "-mno-abicalls",
+      "-msingle-float",
+      "-std=c++17",
+      "-G4",
+      "-fno-zero-initialized-in-bss"
+    ],
+    "float_model": {
+      "__SIZEOF_FLOAT__": "4",
+      "__FLT_RADIX__": "2",
+      "__FLT_MANT_DIG__": "24",
+      "__FLT_MIN_EXP__": "(-125)",
+      "__FLT_MAX_EXP__": "129",
+      "__FLT_HAS_QUIET_NAN__": "0",
+      "__FLT_HAS_INFINITY__": "0",
+      "__FLT_HAS_DENORM__": "1"
+    },
+    "abi": {
+      "version": 0,
+      "isa_level": 3,
+      "isa_revision": 0,
+      "gpr_size": 64,
+      "cpr1_size": 32,
+      "cpr2_size": 0,
+      "fp_abi": 2,
+      "isa_extension": 6,
+      "ases": 0,
+      "flags1": 1,
+      "flags2": 0,
+      "abiflags_sha256": "0e8a1cd81bacd2508e37790bcb8755c83cc9c4f3bea6d179c36c33f604b621a3",
+      "attributes_sha256": "b11839c00f9a46ab10f579ad74944e3a7bdfef92df5d5532479cdd9eb924ae31"
+    },
+    "value_contract": {
+      "source": "finite-common-representable-float-values",
+      "target": "store-low32-f12-object-bits",
+      "memory": "exclusive-live-ordinary-float-object",
+      "exceptional_values": "target-bits-only-no-portable-cpp-claim"
+    },
+    "runtime": {
+      "gp_preservation": "unverified",
+      "initialization": "unverified"
+    },
+    "owner_flags": 546455552,
+    "consumer_flags": 546455553
+  },
+  "float_store_policy_sha256": "68db9eb200406a4de21ba1b65420404253043e6ed936db929d416e2471ca7c7e",
   "data_objects": [
     {
       "id": "disable_volumetric_lighting_state",
@@ -736,6 +910,105 @@
         "initializer_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
       },
       "rebuilt_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "generated_binding": 1,
+      "object_flags": 546455552,
+      "linkage_adapter": "original-local-to-unique-extern",
+      "runtime": {
+        "gp_preservation": "unverified",
+        "initialization": "unverified"
+      }
+    },
+    {
+      "id": "global_char_light_scale_state",
+      "source_sha256": "ba2780091563462f9b4bc27a8d0a3716377e384417ea2d58df47cde2e7ce4b8c",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "toolchain": "ee-gcc",
+      "toolchain_sha256": "c59895b4427579def92cdbd71ed195f72317c71ed65967e44522c52a41f00545",
+      "review_sha256": "d8fb7c6d60c77a54a6298d86f1054b7bf34de313653702a55a17d8c30d3567a0",
+      "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+      "status": "matched",
+      "data_model": {
+        "__mips_single_float": "1",
+        "__SIZEOF_INT__": "4",
+        "__mips_fpr": "32",
+        "__SIZEOF_LONG__": "4",
+        "__mips_eabi": "1",
+        "_MIPS_ARCH_R5900": "1",
+        "__SIZEOF_POINTER__": "4",
+        "__mips64": "1"
+      },
+      "float_model": {
+        "__FLT_HAS_DENORM__": "1",
+        "__FLT_MIN_EXP__": "(-125)",
+        "__FLT_MANT_DIG__": "24",
+        "__FLT_RADIX__": "2",
+        "__FLT_HAS_QUIET_NAN__": "0",
+        "__FLT_HAS_INFINITY__": "0",
+        "__SIZEOF_FLOAT__": "4",
+        "__FLT_MAX_EXP__": "129"
+      },
+      "float_abi": {
+        "abiflags_sha256": "0e8a1cd81bacd2508e37790bcb8755c83cc9c4f3bea6d179c36c33f604b621a3",
+        "ases": 0,
+        "attributes_sha256": "b11839c00f9a46ab10f579ad74944e3a7bdfef92df5d5532479cdd9eb924ae31",
+        "cpr1_size": 32,
+        "cpr2_size": 0,
+        "flags1": 1,
+        "flags2": 0,
+        "fp_abi": 2,
+        "gpr_size": 64,
+        "isa_extension": 6,
+        "isa_level": 3,
+        "isa_revision": 0,
+        "version": 0
+      },
+      "comparison_mode": "ee-gprel-float-store-v1",
+      "data_type": "float32",
+      "size": 4,
+      "storage": "sdata-file-float-one",
+      "initializer": "1.0f",
+      "object_sha256": "909c9523f5a90a20c76eb84236f5c5672652e93b0b9c334ea65e88932f51acfb",
+      "original": {
+        "symbol": "globalCharLightScale",
+        "address": "0x00483ab4",
+        "size": 4,
+        "binding": 0,
+        "section": ".sdata",
+        "section_index": 12,
+        "file_offset": 3689140,
+        "load_index": 1,
+        "initializer_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+      },
+      "rebuilt_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
       "generated_binding": 1,
       "object_flags": 546455552,
       "linkage_adapter": "original-local-to-unique-extern",

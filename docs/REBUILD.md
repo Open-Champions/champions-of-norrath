@@ -214,8 +214,8 @@ code relocations. General runtime-data relocations remain unsupported. Source va
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **nine complete functions and 144 matching code bytes**,
-plus **two separately verified initialized data objects totaling eight bytes**.
+Current source progress is **ten complete functions and 152 matching code bytes**,
+plus **three separately verified initialized data objects totaling twelve bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
@@ -299,3 +299,23 @@ host interaction cases checked that each update preserves the other state. The
 existing setter explicitly migrated to v2 with unchanged source and a fresh review.
 These checks do not establish original translation-unit linkage, actual caller
 sequencing, initialization execution, concurrent access or runtime lighting.
+
+The tenth complete body, `lightGlobalCharLightScale(float)` at `0x0013eac0`,
+stores its supplied float in the independently authored mutable state at
+`0x00483ab4`. All eight function bytes and the separate four-byte `1.0f`
+initializer match. The explicit float-store policy verifies the complete return
+and F12 store, one GP-relative relocation, the selected fresh owner, and the
+actual compiler float model and ABI records. This brings initialized source
+data coverage to three objects totaling twelve bytes.
+
+The [source review](../targets/SLUS-20565/global-char-light-scale-review.json)
+separates finite common-representable source values from the target instruction's
+raw four-byte store. Independent isolated GNU links and 65,662 host interaction
+cases passed with ASan/UBSan: 65,364 finite cases and 298 exceptional patterns
+observed on the host only. A separate guarded store model covered 65,545 raw
+patterns. None of these tests establishes PS2 execution or general exceptional
+floating-point semantics. The observed clear caller supplies `1.0f`, but its
+complete compiled body still differs from the original, as does the larger
+optional-reset candidate. They receive no match credit. The original local owner
+uses an explicit external-linkage comparison adapter; full source integration
+and runtime initialization remain unfinished.

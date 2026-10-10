@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "target": {
     "id": "SLUS-20565-sha256-9a60f13c5c31",
     "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
@@ -321,6 +321,44 @@
         "object_symbol": "norrath_interface_mode",
         "operation": "add-ten"
       }
+    },
+    {
+      "id": "light_global_char_light_scale",
+      "source": "reconstructed/light_global_char_light_scale.cpp",
+      "symbol": "norrath_light_global_char_light_scale",
+      "original_symbol": "lightGlobalCharLightScale__Ff",
+      "address": "0x0013eac0",
+      "size": 8,
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "comparison_mode": "ee-gprel-float-store-v1",
+      "data_binding": {
+        "owner_id": "global_char_light_scale_state",
+        "object_symbol": "norrath_global_char_light_scale",
+        "operation": "store-float-argument"
+      }
     }
   ],
   "data_objects": [
@@ -361,7 +399,8 @@
       "storage": "sdata-file-zero",
       "initializer": 0,
       "linkage_adapter": "original-local-to-unique-extern",
-      "review": "targets/SLUS-20565/disable-volumetric-lighting-review.json"
+      "review": "targets/SLUS-20565/disable-volumetric-lighting-review.json",
+      "comparison_mode": "ee-gprel-scalar-v2"
     },
     {
       "id": "interface_mode_state",
@@ -400,7 +439,48 @@
       "storage": "sdata-file-zero",
       "initializer": 0,
       "linkage_adapter": "original-local-to-unique-extern",
-      "review": "targets/SLUS-20565/interface-mode-review.json"
+      "review": "targets/SLUS-20565/interface-mode-review.json",
+      "comparison_mode": "ee-gprel-scalar-v2"
+    },
+    {
+      "id": "global_char_light_scale_state",
+      "source": "reconstructed/global_char_light_scale_state.cpp",
+      "symbol": "norrath_global_char_light_scale",
+      "original_symbol": "globalCharLightScale",
+      "address": "0x00483ab4",
+      "size": 4,
+      "original_binding": 0,
+      "section": ".sdata",
+      "language": "c++",
+      "toolchain": "ee-gcc",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss"
+      ],
+      "data_type": "float32",
+      "storage": "sdata-file-float-one",
+      "initializer": "1.0f",
+      "linkage_adapter": "original-local-to-unique-extern",
+      "review": "targets/SLUS-20565/global-char-light-scale-review.json",
+      "comparison_mode": "ee-gprel-float-store-v1"
     }
   ]
 }
