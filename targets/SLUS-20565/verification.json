@@ -3,9 +3,9 @@
   "scope": "recorded-complete-symbol-byte-comparison",
   "target": "SLUS-20565-sha256-9a60f13c5c31",
   "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "ledger_sha256": "201032251552302cff181227e2b086f0c6e9a1b35e88d99f967c4d63473921a0",
+  "ledger_sha256": "1fe50458cd99b7cce88828a0c2ffc1628ffd8777111775f5108efafe588193fc",
   "verifier_sha256": "006edc925c5f2e01a9919f2b69865db16ef4de55402ee51c032727167aae491a",
-  "recorded_at": "2026-10-10T08:12:33.952940+00:00",
+  "recorded_at": "2026-10-10T08:14:56.838679+00:00",
   "compiler": {
     "name": "clang-20",
     "sha256": "01ac721d7f35bb9a1c74b4a17c6253fd645e1602a7322a47003eec1de00a8bd0",
@@ -77,6 +77,39 @@
       "size": 8,
       "original_sha256": "5ce5ad86d452c4d2422bd63e15223d5d6b3dfb77f224a88c1f476e9fb34e359d",
       "rebuilt_sha256": "5ce5ad86d452c4d2422bd63e15223d5d6b3dfb77f224a88c1f476e9fb34e359d"
+    },
+    {
+      "id": "skill_resist_poison_level_requirement",
+      "source_sha256": "256f9cb4c445268163ecad1b2c1502d936e406036326c75bc8a7d2fdbb5af053",
+      "compiler_args": [
+        "--no-default-config",
+        "--target=mipsel-none-elf",
+        "-march=mips3",
+        "-mabi=32",
+        "-O2",
+        "-ffreestanding",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ],
+      "status": "matched",
+      "object_sha256": "5da665e46ed5ddb6f26998169d147bb8e7d9d7813c01f93eadd8b71544b11124",
+      "size": 8,
+      "original_sha256": "85fd1e2a1150609993568db1ada9a05762fdfa856f5f68823bf6eae422f11073",
+      "rebuilt_sha256": "85fd1e2a1150609993568db1ada9a05762fdfa856f5f68823bf6eae422f11073"
     }
   ]
 }

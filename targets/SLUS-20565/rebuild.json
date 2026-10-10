@@ -71,6 +71,37 @@
         "dispatch": "Retained SkillLightningWeapons vtable entry at 0x00451f6c (+0x2c) points to this function; dispatch execution remains unverified.",
         "interface": "Opaque receiver and integer parameter are comparison adapters; original C++ return type, whole-program ABI and runtime use are not established."
       }
+    },
+    {
+      "id": "skill_resist_poison_level_requirement",
+      "address": "0x00313d18",
+      "size": 8,
+      "original_symbol": "getLevelRequirement__17SkillResistPoisoni",
+      "source": "reconstructed/skill_resist_poison_level_requirement.cpp",
+      "symbol": "norrath_resist_poison_level_requirement",
+      "language": "c++",
+      "compiler_args": [
+        "--no-default-config",
+        "--target=mipsel-none-elf",
+        "-march=mips3",
+        "-mabi=32",
+        "-O2",
+        "-ffreestanding",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fomit-frame-pointer"
+      ],
+      "evidence": {
+        "behavior": "Returns the input integer bit pattern shifted left two positions with 32-bit truncation; receiver is unused, with no memory access, calls or stack changes.",
+        "boundary": "Original weak STT_FUNC size 8, no same-address alias or intersecting nonempty symbol. Preceding skill-point-cost symbol ends at 0x00313d18; following destructor begins at 0x00313d20.",
+        "dispatch": "Retained SkillResistPoison vtable at 0x0044d918 has a function pointer at +0x34 (0x0044d94c); dispatch execution remains unverified.",
+        "interface": "Unsigned 32-bit comparison parameter and return explicitly model the shift bit behavior without signed-overflow undefined behavior. Original member name has a signed integer argument; original return type, caller range and wider ABI remain unverified."
+      }
     }
   ]
 }

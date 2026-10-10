@@ -100,11 +100,17 @@ The object is compared without rewriting its code. Source validation also reject
 directive and extension tokens conservatively, including when they occur in
 comments or strings, so unrecorded external source cannot supply a candidate.
 
-Current source progress is **two complete functions and sixteen matching bytes**.
+Current source progress is **three complete functions and twenty-four matching bytes**.
 The second complete body, `SkillLightningWeapons::getSkillPointCost(int)` at
 `0x002a9e48`, returns 1 independently of its inputs and adds eight freshly matched
 bytes. Its complete symbol has no aliases or overlaps; the preceding function is
 separated by four bytes of alignment padding and the next begins at its end.
-This does not reconstruct its class, vtable, skill system or gameplay. Next work
+A third complete body, `SkillResistPoison::getLevelRequirement(int)` at
+`0x00313d18`, adds an eight-byte nonconstant shift. Its unsigned 32-bit comparison
+adapter models wrapping for all input bit patterns; nine host boundary cases
+passed an undefined-behavior check. Actual R5900 instructions match, while original
+return type, caller ranges and whole-program ABI remain unverified.
+
+These results do not reconstruct the classes, vtables, skill systems or gameplay. Next work
 should take another independently supported function and preserve the same
 fresh-comparison and one-function-per-commit discipline.
