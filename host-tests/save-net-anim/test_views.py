@@ -129,6 +129,9 @@ class ViewTests(unittest.TestCase):
     def test_lump_format(self):
         self.expect("norrath_mc_lump_format_bytes.cpp", "norrath_mc_lump_format_bytes", 7, b"%s.lmp\0")
 
+    def test_start_key(self):
+        self.expect("norrath_mc_start_key_bytes.cpp", "norrath_mc_start_key_bytes", 6, b"start\0")
+
 
 if __name__ == "__main__":
     unittest.main()
