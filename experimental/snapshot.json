@@ -4538,6 +4538,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-kernel/init_system.cpp"
+    },
+    {
+      "input_order": 287,
+      "component": "runtime-initsys",
+      "object_name": "create_sema.o",
+      "private_object_sha256": "2c6b86a29ec636d2f14f38f431ed9b5fc8cc562c6530fe153510b99e96035940",
+      "emitted_functions": [
+        {
+          "name": "CreateSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys/create_sema.S"
     }
   ],
   "drafts": [
@@ -5493,7 +5507,8 @@
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
     "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
     "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
-    "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997"
+    "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
+    "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586"
   },
   "additional_implementations": [
     {
@@ -5935,11 +5950,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 287,
-    "authored_default_inputs": 285,
+    "selected_inputs": 288,
+    "authored_default_inputs": 286,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 411,
-    "compiled_body_bytes_from_accepted_inputs": 242960,
+    "emitted_function_definitions_including_helpers": 412,
+    "compiled_body_bytes_from_accepted_inputs": 242976,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -5951,7 +5966,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 8
+    "startup_selected_inputs": 9
   },
   "startup_implementations": [
     {
@@ -6031,6 +6046,16 @@
       "source_sha256": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
       "object_sha256": "468da10066e7abc173d7293a73d312f9feb438e022032f5afbf542df66a9b44b",
       "review": "docs/STARTUP_KERNEL.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys/create_sema.S",
+      "symbol": "CreateSema",
+      "compiled_body_bytes": 16,
+      "source_sha256": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
+      "object_sha256": "2c6b86a29ec636d2f14f38f431ed9b5fc8cc562c6530fe153510b99e96035940",
+      "review": "docs/STARTUP_INITSYS.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
     }
