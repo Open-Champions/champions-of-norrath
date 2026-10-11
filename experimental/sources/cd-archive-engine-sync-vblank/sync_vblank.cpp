@@ -17,3 +17,9 @@ int norrath_archive_engine_sync_vblank() {
     return static_cast<int>(static_cast<signed char>(norrath_archive_vblank_field_view));
 }
 }
+// Same body as engineSyncVBlank__Fv at 0x00191180.
+#if defined(__APPLE__)
+asm(".globl _engineSyncVBlank__Fv\n.set _engineSyncVBlank__Fv, _norrath_archive_engine_sync_vblank\n");
+#else
+asm(".globl engineSyncVBlank__Fv\n.set engineSyncVBlank__Fv, norrath_archive_engine_sync_vblank\n");
+#endif

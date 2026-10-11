@@ -47,3 +47,20 @@ extern "C" const unsigned char norrath_archive_load_failure_format_view[] = {
 extern "C" const unsigned char norrath_archive_zero_record_format_view[] = {
     '!','!','!','!','!','!','!','!','!','!',' ','%','s',' ','i','s',' ','f','u','c','k','e','d','\n',0
 };
+// These authored views are the original objects. cdBusy is 0x00483ffc,
+// command is 0x006d86b0, cdResult is 0x00486924, and noNewVags is 0x00483f90.
+#if defined(__APPLE__)
+asm(
+    ".globl _cdBusy\n.set _cdBusy, _norrath_archive_read_active_view\n"
+    ".globl _command\n.set _command, _norrath_archive_command_view\n"
+    ".globl _cdResult\n.set _cdResult, _norrath_archive_completion_pointer_view\n"
+    ".globl _noNewVags\n.set _noNewVags, _norrath_archive_no_new_vags_view\n"
+);
+#else
+asm(
+    ".globl cdBusy\n.set cdBusy, norrath_archive_read_active_view\n"
+    ".globl command\n.set command, norrath_archive_command_view\n"
+    ".globl cdResult\n.set cdResult, norrath_archive_completion_pointer_view\n"
+    ".globl noNewVags\n.set noNewVags, norrath_archive_no_new_vags_view\n"
+);
+#endif
