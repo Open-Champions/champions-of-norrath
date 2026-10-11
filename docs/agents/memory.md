@@ -76,13 +76,15 @@ The official plan on this worktree, rebuilt outside git, still lists 911 unresol
 
 `mallinfo` at `0x00302340` is 48 bytes and is not the 40-byte `__malloc_current_mallinfo` object. It loads `_impure_ptr` at `0x00448480` and calls `_mallinfo_r`, then returns the caller's struct pointer. `memSetMark__Fi` at `0x00144830` is 24 bytes and sets one bit of the mark word. `memClearMark__Fi` at `0x00144848` is 28 bytes and clears that bit. The shift amount is the argument's low five bits. `memDeleteMarked__Fi` at `0x00144868` is 124 bytes. It frees one matching allocated block, then starts again at the ring word. `memScrambleFree__Fv` at `0x00144ba8` is 80 bytes. It fills a free payload with `0xA5` for the block's size word, then reloads the ring word as the end of the walk.
 
+`engineInit` also uses five objects from this package. `blockAllocInit__Fv` is the 220-byte function at `0x001440d8`. It is the existing `norrath_block_alloc_init` body, so the original name is a second symbol on that 320-byte compiled extent. `__wrap_malloc` at `0x001449a8` is 52 bytes and was not already authored. A zero `enableMallocWrapper` byte calls `malloc` with the same size. Any other byte calls `memAlloc__FiPc` with that size and the unsymbolized text `fake malloc` at `0x00461ea8`. The returned pointer is the callee's pointer. `memInit__FPvi` at `0x001448e8` is 108 bytes. A positive size fills that many bytes with `0xA5`. The block then becomes one free header, the ring and next-fit words point at it, the free and size words are the size minus 28, the capacity word is the size, the fragment threshold becomes 36, and the dump count becomes 0. `memAllocPtr` at `0x00486a54` and `memAllocSize` at `0x00486a58` are adjacent four-byte BSS words. Each authored object is four zero bytes. This relocatable build does not place them beside each other.
+
 ## Imports closed
 
-`norrath_mem_realloc`, `norrath_player_malloc_bins_view`, `norrath_player_malloc_trim_threshold_view`, `norrath_player_malloc_top_pad_view`, `norrath_player_malloc_break_base_view`, `norrath_player_malloc_max_break_view`, `norrath_player_malloc_max_total_view`, `norrath_player_malloc_current_info_view`, `norrath_player_malloc_lock_owner_view`, `norrath_player_malloc_lock_count_view`, `norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`, `norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`, `norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`, `norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`, `norrath_heap_check_file_view`, `norrath_heap_failure_format_view`, `norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`, `norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`, `norrath_heap_dump_totals_format_view`, `norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`, `norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`, `enableMallocWrapper`, `memAlloc__FiPc`, `memFree__FPv`, `memSetMark__Fi`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memScrambleFree__Fv`, `mallinfo`.
+`norrath_mem_realloc`, `norrath_player_malloc_bins_view`, `norrath_player_malloc_trim_threshold_view`, `norrath_player_malloc_top_pad_view`, `norrath_player_malloc_break_base_view`, `norrath_player_malloc_max_break_view`, `norrath_player_malloc_max_total_view`, `norrath_player_malloc_current_info_view`, `norrath_player_malloc_lock_owner_view`, `norrath_player_malloc_lock_count_view`, `norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`, `norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`, `norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`, `norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`, `norrath_heap_check_file_view`, `norrath_heap_failure_format_view`, `norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`, `norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`, `norrath_heap_dump_totals_format_view`, `norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`, `norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`, `enableMallocWrapper`, `memAlloc__FiPc`, `memFree__FPv`, `memSetMark__Fi`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memScrambleFree__Fv`, `mallinfo`, `__wrap_malloc`, `memInit__FPvi`, `blockAllocInit__Fv`, `memAllocPtr`, `memAllocSize`.
 
 ## Imports opened
 
-`memcpy`, `_impure_ptr`, and `_mallinfo_r`. `memcpy` comes from `norrath_mem_realloc`. `mallinfo` is the caller of the other two. `norrath_mem_alloc` and `norrath_mem_free` were already defined. `memset` was already defined, and `memScrambleFree__Fv` calls it. `norrath_factory_impure_pointer_word` is the same pinned address as `_impure_ptr` and stays a separate unresolved name.
+`memcpy`, `_impure_ptr`, `_mallinfo_r`, and `malloc`. `memcpy` comes from `norrath_mem_realloc`. `mallinfo` calls `_impure_ptr` and `_mallinfo_r`. `__wrap_malloc` calls `malloc` when the enable byte is zero, and calls the existing `memAlloc__FiPc` otherwise. `norrath_mem_alloc`, `norrath_mem_free`, `memset`, and `norrath_block_memory_set` were already defined. `norrath_factory_impure_pointer_word` is the same pinned address as `_impure_ptr` and stays a separate unresolved name.
 
 ## Build-plan entries needed
 
@@ -172,6 +174,42 @@ Update these existing entries in place. Each gains one emitted function of the s
     "source": "sources/game-sound-memory-lifecycle-build/mem_free.cpp",
     "sha256": "9e5771dc0780504f3ab59fe3e24700926eeb1ce12a46136bf6d85af1767d3309",
     "add_emitted_function": {"name": "memFree__FPv", "compiled_body_bytes": 1288}
+  },
+  {
+    "source": "sources/block-alloc-source-v2/initialization.cpp",
+    "sha256": "9686cb9f7a9b3030772d5a642f7d7ceed7bd6a21c82e1f6c8343ec632612d16b",
+    "add_emitted_function": {"name": "blockAllocInit__Fv", "compiled_body_bytes": 320}
+  }
+]
+```
+
+Append these inputs. Header closure is empty. Do not add their host checks.
+
+```json
+[
+  {
+    "source": "sources/memory-wrap-malloc/wrap_malloc.cpp",
+    "object_name": "wrap_malloc.o",
+    "sha256": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
+    "emitted_functions": [{"name": "__wrap_malloc", "compiled_body_bytes": 40}]
+  },
+  {
+    "source": "sources/memory-mem-init/mem_init.cpp",
+    "object_name": "mem_init.o",
+    "sha256": "934c88a2097bfd51cbe3807395d530b2b26e567234f01182bcd158ae4dcaeaa7",
+    "emitted_functions": [{"name": "memInit__FPvi", "compiled_body_bytes": 392}]
+  },
+  {
+    "source": "sources/memory-alloc-pointer/alloc_pointer.cpp",
+    "object_name": "alloc_pointer.o",
+    "sha256": "286e14926ec596ed5429d3cef1a658034e9f1651816c5ffd688eb885d46c93d6",
+    "emitted_functions": []
+  },
+  {
+    "source": "sources/memory-alloc-size/alloc_size.cpp",
+    "object_name": "alloc_size.o",
+    "sha256": "b7f86aeb6130ff51d194de3effaa5e961feb3bd87bee47609996b0a5e11b8646",
+    "emitted_functions": []
   }
 ]
 ```
@@ -188,7 +226,7 @@ Compile `malloc_bins.cpp` with the EE profile, then run `check_bins_object` on t
 
 ## Authored but never executed
 
-The EE objects were compiled and relocatable-linked. They were not executed on the EE, and no game path ran them. The host checks for realloc, the mark words, marked deletion, free scrambling, and `mallinfo` did run. The alias comparison ran on the EE objects. None of that is PS2 execution or an original-byte match. The compiled mark, deletion, scramble, and `mallinfo` bodies are 60, 64, 160, 156, and 56 bytes.
+The EE objects were compiled and relocatable-linked. They were not executed on the EE, and no game path ran them. The host checks for realloc, the mark words, marked deletion, free scrambling, and `mallinfo` did run. The alias comparison ran on the EE objects. None of that is PS2 execution or an original-byte match. The compiled mark, deletion, scramble, and `mallinfo` bodies are 60, 64, 160, 156, and 56 bytes. `__wrap_malloc` compiled to 40 bytes and `memInit__FPvi` to 392. The two allocation words compiled to four BSS bytes each.
 
 ## Unknown
 
@@ -201,3 +239,5 @@ The EE objects were compiled and relocatable-linked. They were not executed on t
 - Runtime of `memInit`, semaphore creation, and any later writer of the enable byte.
 - The 240-byte body of `_mallinfo_r` at `0x0030b028`. `mallinfo` only calls it. That callee locks, copies the 40-byte current mallinfo object, and unlocks.
 - Whether `norrath_factory_impure_pointer_word` and `_impure_ptr` should become one object. Both names refer to `0x00448480`, and both stay unresolved.
+- The body of `malloc` at `0x00301548`, 84 bytes. `__wrap_malloc` calls it when the enable byte is zero.
+- Placing `memAllocPtr` and `memAllocSize` in the adjacent BSS slots `0x00486a54` and `0x00486a58`. The authored objects have the observed sizes and zero initial bytes, without that placement.
