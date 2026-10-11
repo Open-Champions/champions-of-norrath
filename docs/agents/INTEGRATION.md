@@ -748,6 +748,43 @@ Closed the 40 `amx*` natives this package defines. Opened:
 756 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
 execution.
 
+## agents/natives-c
+
+All 47 units were selected. Host checks passed. `gameCam` and `levelFlags`
+are data. Two units also emit file-local helpers. No game binary was
+committed.
+
+| | |
+|---|---|
+| Before | 829 |
+| After | 826 |
+| Closed | 47 |
+| Opened | 44 |
+
+Closed the 45 functions this package defines, plus `gameCam` and
+`levelFlags`. Opened: `DLG_StartDialog__FPcP9DlgPacketii`,
+`DLG_StartWithSwoopDone`, `MC_GetAsyncMode__Fv`, `MC_SaveCheckPoint__Fiii`,
+`MC_SaveConfig__Fv`, `MC_SaveGameBrowser__Fi`,
+`P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `__tfP4Prop`,
+`__tfP6PhProp`, `__tfP8ItemProp`,
+`animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi`,
+`animAdd__FP14AnimationStateP15AnimationHeaderi`,
+`animInitState__FP14AnimationState`, `animResetFramestates__FP14AnimationState`,
+`animSetToEnd__FP14AnimationState`, `findTagString__10GameObjectPci`,
+`floorDrawEnable`, `fxDust`, `gameNetKick__Fi`, `gameNoDraw`, `gameOver`,
+`gameRecallInhibit`, `gameSetCameraShake__Ffb`, `hudSetInfoMessage__FPUsiic`,
+`hudShowBust__FPcPUsii`, `hudShowCompass__FG6Point3PUs`,
+`inventoryGetItemIndex__FiPcPiT2`, `lumpFind__FPvPc`, `objectDrawEnable`,
+`objectFindInBox__FG6Point3T0PP10GameObjecti`, `playerSelectionSetup__Fv`,
+`playerSelectionStart__Fv`, `removeItemFromInventory__Fiiii`,
+`removeQuestFromLog__FPc`, `scriptInPostAction`, `scriptSetPostAction__FPc`,
+`shopRunning`, `soundMakeSequenceUnpausable__Fi`,
+`soundPlaySequence__FP15AnimationHeaderP10GameObjectf`,
+`soundPlaySound__FP10_vagHeaderP6Point3fff`, `soundStartDialogStream__FiPci`,
+`soundStartMusic__FPci`, `startEntranceName`, `worldSetFarClip__Ff`.
+679 function bodies, 803 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -839,7 +876,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, and natives-a. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, and natives-c. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -873,3 +910,4 @@ and no startup stage has executed.
 - 2026-10-11 17:16 CDT — `agents/frame-loop` — 888 unresolved imports
 - 2026-10-11 17:17 CDT — `agents/dialog-hud-controls` — 836 unresolved imports
 - 2026-10-11 17:19 CDT — `agents/natives-a` — 829 unresolved imports
+- 2026-10-11 17:20 CDT — `agents/natives-c` — 826 unresolved imports

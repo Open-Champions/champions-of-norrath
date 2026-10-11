@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 756,
+  "default_authored_inputs": 803,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1239,6 +1239,53 @@
     "sources/natives-a-get-player-v-dir/get_player_v_dir.cpp": "d0486c99a151bc8c53f15a91a43ef421986d2bf4369ed4f1127e35bf1f9b9b92",
     "sources/natives-a-get-player-v-position/get_player_v_position.cpp": "0460a0febb47bd38d9e1f28bd9b160c1c5c385058622be4a632a4475e1f975ed",
     "sources/natives-a-get-rand/get_rand.cpp": "d02d777a17e633710eab2566013a1c6f83ade4e713bf47d3818b86f922c13843",
+    "sources/natives-c-amx-put-players-in-vehicle/put_players_in_vehicle.cpp": "bb9a79e1bb913a46f0aad5530a266788571f8e9d9b65ba13e3df19dc5c3d3f9b",
+    "sources/natives-c-amx-reap-enemies/reap_enemies.cpp": "f2b9d76b67078e4978f0ebb233ceb419e7d1e3bbca7ab366de9b4a58c8c0573e",
+    "sources/natives-c-amx-remove-player-item/remove_player_item.cpp": "f144b580f7aee9bac2a39bf3b3f4650daa9bb678f5b99b71783feb207b55a541",
+    "sources/natives-c-amx-remove-quest/remove_quest.cpp": "af2825c8149136f4850ac93706ebae621470c46b82d5fb672fb99b42e3846fe9",
+    "sources/natives-c-amx-save-checkpoint/save_checkpoint.cpp": "2038bd13991adec4007d16aa14d587eeaf6146253a455acf6916be82d7bc5c4e",
+    "sources/natives-c-amx-save-done/save_done.cpp": "92595c384f0143c85df75e932de1c114e531ec6a981d622c584b2c6cf39d43ca",
+    "sources/natives-c-amx-save-end-config/save_end_config.cpp": "bad25dd0616ccc91e061c89eb0693a31587e9842a3caf044bd6463ffdc292ce9",
+    "sources/natives-c-amx-save-game/save_game.cpp": "0f10a0901986822ae2c22309404ff7405caa423c0a8300bdc31c756953b4969f",
+    "sources/natives-c-amx-set-best-active-player/set_best_active_player.cpp": "cff08ef11c518d69957ff291e38629ed8fa13f99daf0094b202e6fef0878522d",
+    "sources/natives-c-amx-set-entrance/set_entrance.cpp": "f2ea2cfc758a03a0cbd69bb2eeb570ec1744c5e85a49273ad63e8fbea1f3444d",
+    "sources/natives-c-amx-set-far-clip/set_far_clip.cpp": "9d84b9e01cb06ce8f69fdfaef0ae84dd8d40142f2e9d115d9290f8b30dbd729f",
+    "sources/natives-c-amx-set-hit-points/set_hit_points.cpp": "e3d6b59b90146e7e953d9ca5378c41d04a98916ca522245fbc4f000fa11fed12",
+    "sources/natives-c-amx-set-info/set_info.cpp": "7bba098df52b1db532413a7fa3b5832aa7f78d4777f2895c9bc0bfc1ace7fd16",
+    "sources/natives-c-amx-set-no-collide/set_no_collide.cpp": "fd8a2b72f9c600f7e9fff8472e131c4e0943a5a09013aae779c75362132e640c",
+    "sources/natives-c-amx-set-particle/set_particle.cpp": "717906bd8d74c3eb45c223e6074489ad8ed4fc0b6bad0c56be708ac1d342d785",
+    "sources/natives-c-amx-set-post-action/set_post_action.cpp": "65098b1dde149bc4e22360a7c32f3417a936ccc0bca016015b1f1a4c531ccb24",
+    "sources/natives-c-amx-set-save-inhibit/set_save_inhibit.cpp": "b0280e0ecaad031f72afcea475a0117539c42a84dcf3af689e1d118355b088db",
+    "sources/natives-c-amx-setup-player-sel/setup_player_sel.cpp": "d3ce63de5951b9be09fa9803fea5fea7b528165a15598274c5be7323e85d47f8",
+    "sources/natives-c-amx-setv/setv.cpp": "f6a958fe33cf91f692810b9c79873481005702f9d98205746ba6724ca10aad6e",
+    "sources/natives-c-amx-shake-camera/shake_camera.cpp": "3dd5861a4236c33d6b83d71156a2fe2ed49ad098c3be2938d471b73b8ae3c048",
+    "sources/natives-c-amx-shop-running/shop_running.cpp": "3068247b91a3ca0e1cdf720c97d935c9f78a763d975d77da3ab2acc0a352edfe",
+    "sources/natives-c-amx-show-bust/show_bust.cpp": "6d4e6ba9603445ba3607785e0c7b29241eee86588e11b3879fa32a2e8ec65e6c",
+    "sources/natives-c-amx-show-compass/show_compass.cpp": "93ff37f4fb827ae554d836cccfee72fd4799eec72f43a72716d648686abb1f58",
+    "sources/natives-c-amx-show-monster/show_monster.cpp": "aa9879dd44bc0dca4544b13384971053f144d60ad9fb4da7c151b82914b37a47",
+    "sources/natives-c-amx-simple-new-world/simple_new_world.cpp": "e41b6e26b158486651ad58e304618de0ffaa8207302fb21e72aa1c116aa683cf",
+    "sources/natives-c-amx-sound-sequence/sound_sequence.cpp": "de5e43f8aecd92c4f34b4f27bcff90043e3c52e023a39c2ec63618ce0778cb28",
+    "sources/natives-c-amx-sound/sound.cpp": "df1a5dd5cf3774170d7e2c16fc5c1139a2b8597e6ac9fba3d9320991fc8a07e0",
+    "sources/natives-c-amx-start-audio/start_audio.cpp": "a4d1e4c167757c5683d9dd8c01e8e9f7f412065590f970ed002036e19c409081",
+    "sources/natives-c-amx-start-dialog/start_dialog.cpp": "f23235f3cc098826b907494a653c43a1c8cea5834fec420281bf752997e4fd9f",
+    "sources/natives-c-amx-start-music/start_music.cpp": "c99f8a6bbf9c79923eb80647d00eb7dbadb97c21136523d77cb2c15a8a87811c",
+    "sources/natives-c-amx-start-npc-anim/start_npc_anim.cpp": "00cafac2cb9b20e1275a3f50dcd43b22925212b40b50ea80632fe2f920624a33",
+    "sources/natives-c-amx-start-player-sel/start_player_sel.cpp": "09000b10e0af9be8f00baee788688d4617b0321ed2d0547555c98d7c5b3978da",
+    "sources/natives-c-amx-start-prop-anim/start_prop_anim.cpp": "657591b4541b07cbf31c93cde5642c4a25253eccf78d1a0cfe0786d7fb7402be",
+    "sources/natives-c-amx-start-with-swoop-done/start_with_swoop_done.cpp": "dc948223de38db9dda1f2e9332046386c2340c2f36b26a8e13f55ca29749a76c",
+    "sources/natives-c-amx-stop-following-path/stop_following_path.cpp": "da49092ce18242a67e67e84e142e3b75dc4572f4ca129ca5e97624857766b165",
+    "sources/natives-c-amx-stop-following-player/stop_following_player.cpp": "8437651fffd4d23437880fb507762704b55e9e6970c498e4ee87215bfb8cb966",
+    "sources/natives-c-amx-stop-prop-anim/stop_prop_anim.cpp": "30c8b79fbc3ddd5474dbac7b9ba8357ed2f2c0725d640c5d347a5d0099dc0f10",
+    "sources/natives-c-amx-take-player-gold/take_player_gold.cpp": "dc2ba4cb1e9e4f4d519edc6e7b6a9741d72786254716ee4472949932ff4d65f2",
+    "sources/natives-c-amx-trigger/trigger.cpp": "b2cb47fbe234ec56a8a56b6140c020686abca2e2ae74aaeee5f1ea4e3b6b431f",
+    "sources/natives-c-amx-unfriendly/unfriendly.cpp": "01d0fbfd5aeb22eae75b12fd75c15a1a759df2023a003534d0a7818ea41c5942",
+    "sources/natives-c-disable-zoom/disable_zoom.cpp": "5e741f63659a3dbc773a4fda6bfd609978af9a8fb0996e5a3b5232bd0c6abae3",
+    "sources/natives-c-game-cam/game_cam.cpp": "25821bceac06465ca26fe334de7d779601872a03ef5d88cbba14d265fc6ab4bf",
+    "sources/natives-c-level-flags/level_flags.cpp": "b990639819f4b751d0e5474b01ff376bae6b1e48f87d001afc2fa39757d657da",
+    "sources/natives-c-set-distance/set_distance.cpp": "cdaddc8a5d910da92e1707c63784bf5c5ba1dc0dab551ee6a5939d9b9d124b45",
+    "sources/natives-c-set-max-height/set_max_height.cpp": "5ca10f5bcd833f778a11ebb65c87caae0364d9adfdd7b58686b94f95af569f26",
+    "sources/natives-c-set-pitch/set_pitch.cpp": "aa6d7a7f0f016535542d58539dbff9a5cfdc9e30dcd256e566aeaffe89dda16e",
+    "sources/natives-c-update-dust/update_dust.cpp": "fce5ee74b5a362aabc68622bfc1bc0f2cf3394a1cc36aa79ee2b6b331b5c221a",
     "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
     "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
     "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
@@ -10309,6 +10356,429 @@
       "profile": "authored_cpp",
       "sha256": "d02d777a17e633710eab2566013a1c6f83ade4e713bf47d3818b86f922c13843",
       "source": "sources/natives-a-get-rand/get_rand.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 758,
+      "kind": "independently_authored_source",
+      "object_name": "put_players_in_vehicle.o",
+      "profile": "authored_cpp",
+      "sha256": "bb9a79e1bb913a46f0aad5530a266788571f8e9d9b65ba13e3df19dc5c3d3f9b",
+      "source": "sources/natives-c-amx-put-players-in-vehicle/put_players_in_vehicle.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 759,
+      "kind": "independently_authored_source",
+      "object_name": "reap_enemies.o",
+      "profile": "authored_cpp",
+      "sha256": "f2b9d76b67078e4978f0ebb233ceb419e7d1e3bbca7ab366de9b4a58c8c0573e",
+      "source": "sources/natives-c-amx-reap-enemies/reap_enemies.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 760,
+      "kind": "independently_authored_source",
+      "object_name": "remove_player_item.o",
+      "profile": "authored_cpp",
+      "sha256": "f144b580f7aee9bac2a39bf3b3f4650daa9bb678f5b99b71783feb207b55a541",
+      "source": "sources/natives-c-amx-remove-player-item/remove_player_item.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 761,
+      "kind": "independently_authored_source",
+      "object_name": "remove_quest.o",
+      "profile": "authored_cpp",
+      "sha256": "af2825c8149136f4850ac93706ebae621470c46b82d5fb672fb99b42e3846fe9",
+      "source": "sources/natives-c-amx-remove-quest/remove_quest.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 762,
+      "kind": "independently_authored_source",
+      "object_name": "save_checkpoint.o",
+      "profile": "authored_cpp",
+      "sha256": "2038bd13991adec4007d16aa14d587eeaf6146253a455acf6916be82d7bc5c4e",
+      "source": "sources/natives-c-amx-save-checkpoint/save_checkpoint.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 763,
+      "kind": "independently_authored_source",
+      "object_name": "save_done.o",
+      "profile": "authored_cpp",
+      "sha256": "92595c384f0143c85df75e932de1c114e531ec6a981d622c584b2c6cf39d43ca",
+      "source": "sources/natives-c-amx-save-done/save_done.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 764,
+      "kind": "independently_authored_source",
+      "object_name": "save_end_config.o",
+      "profile": "authored_cpp",
+      "sha256": "bad25dd0616ccc91e061c89eb0693a31587e9842a3caf044bd6463ffdc292ce9",
+      "source": "sources/natives-c-amx-save-end-config/save_end_config.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 765,
+      "kind": "independently_authored_source",
+      "object_name": "save_game.o",
+      "profile": "authored_cpp",
+      "sha256": "0f10a0901986822ae2c22309404ff7405caa423c0a8300bdc31c756953b4969f",
+      "source": "sources/natives-c-amx-save-game/save_game.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 766,
+      "kind": "independently_authored_source",
+      "object_name": "set_best_active_player.o",
+      "profile": "authored_cpp",
+      "sha256": "cff08ef11c518d69957ff291e38629ed8fa13f99daf0094b202e6fef0878522d",
+      "source": "sources/natives-c-amx-set-best-active-player/set_best_active_player.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 767,
+      "kind": "independently_authored_source",
+      "object_name": "set_entrance.o",
+      "profile": "authored_cpp",
+      "sha256": "f2ea2cfc758a03a0cbd69bb2eeb570ec1744c5e85a49273ad63e8fbea1f3444d",
+      "source": "sources/natives-c-amx-set-entrance/set_entrance.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 768,
+      "kind": "independently_authored_source",
+      "object_name": "set_far_clip.o",
+      "profile": "authored_cpp",
+      "sha256": "9d84b9e01cb06ce8f69fdfaef0ae84dd8d40142f2e9d115d9290f8b30dbd729f",
+      "source": "sources/natives-c-amx-set-far-clip/set_far_clip.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 769,
+      "kind": "independently_authored_source",
+      "object_name": "set_hit_points.o",
+      "profile": "authored_cpp",
+      "sha256": "e3d6b59b90146e7e953d9ca5378c41d04a98916ca522245fbc4f000fa11fed12",
+      "source": "sources/natives-c-amx-set-hit-points/set_hit_points.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 770,
+      "kind": "independently_authored_source",
+      "object_name": "set_info.o",
+      "profile": "authored_cpp",
+      "sha256": "7bba098df52b1db532413a7fa3b5832aa7f78d4777f2895c9bc0bfc1ace7fd16",
+      "source": "sources/natives-c-amx-set-info/set_info.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 771,
+      "kind": "independently_authored_source",
+      "object_name": "set_no_collide.o",
+      "profile": "authored_cpp",
+      "sha256": "fd8a2b72f9c600f7e9fff8472e131c4e0943a5a09013aae779c75362132e640c",
+      "source": "sources/natives-c-amx-set-no-collide/set_no_collide.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 772,
+      "kind": "independently_authored_source",
+      "object_name": "set_particle.o",
+      "profile": "authored_cpp",
+      "sha256": "717906bd8d74c3eb45c223e6074489ad8ed4fc0b6bad0c56be708ac1d342d785",
+      "source": "sources/natives-c-amx-set-particle/set_particle.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 773,
+      "kind": "independently_authored_source",
+      "object_name": "set_post_action.o",
+      "profile": "authored_cpp",
+      "sha256": "65098b1dde149bc4e22360a7c32f3417a936ccc0bca016015b1f1a4c531ccb24",
+      "source": "sources/natives-c-amx-set-post-action/set_post_action.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 774,
+      "kind": "independently_authored_source",
+      "object_name": "set_save_inhibit.o",
+      "profile": "authored_cpp",
+      "sha256": "b0280e0ecaad031f72afcea475a0117539c42a84dcf3af689e1d118355b088db",
+      "source": "sources/natives-c-amx-set-save-inhibit/set_save_inhibit.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 775,
+      "kind": "independently_authored_source",
+      "object_name": "setup_player_sel.o",
+      "profile": "authored_cpp",
+      "sha256": "d3ce63de5951b9be09fa9803fea5fea7b528165a15598274c5be7323e85d47f8",
+      "source": "sources/natives-c-amx-setup-player-sel/setup_player_sel.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 776,
+      "kind": "independently_authored_source",
+      "object_name": "setv.o",
+      "profile": "authored_cpp",
+      "sha256": "f6a958fe33cf91f692810b9c79873481005702f9d98205746ba6724ca10aad6e",
+      "source": "sources/natives-c-amx-setv/setv.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 777,
+      "kind": "independently_authored_source",
+      "object_name": "shake_camera.o",
+      "profile": "authored_cpp",
+      "sha256": "3dd5861a4236c33d6b83d71156a2fe2ed49ad098c3be2938d471b73b8ae3c048",
+      "source": "sources/natives-c-amx-shake-camera/shake_camera.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 778,
+      "kind": "independently_authored_source",
+      "object_name": "shop_running.o",
+      "profile": "authored_cpp",
+      "sha256": "3068247b91a3ca0e1cdf720c97d935c9f78a763d975d77da3ab2acc0a352edfe",
+      "source": "sources/natives-c-amx-shop-running/shop_running.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 779,
+      "kind": "independently_authored_source",
+      "object_name": "show_bust.o",
+      "profile": "authored_cpp",
+      "sha256": "6d4e6ba9603445ba3607785e0c7b29241eee86588e11b3879fa32a2e8ec65e6c",
+      "source": "sources/natives-c-amx-show-bust/show_bust.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 780,
+      "kind": "independently_authored_source",
+      "object_name": "show_compass.o",
+      "profile": "authored_cpp",
+      "sha256": "93ff37f4fb827ae554d836cccfee72fd4799eec72f43a72716d648686abb1f58",
+      "source": "sources/natives-c-amx-show-compass/show_compass.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 781,
+      "kind": "independently_authored_source",
+      "object_name": "show_monster.o",
+      "profile": "authored_cpp",
+      "sha256": "aa9879dd44bc0dca4544b13384971053f144d60ad9fb4da7c151b82914b37a47",
+      "source": "sources/natives-c-amx-show-monster/show_monster.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 782,
+      "kind": "independently_authored_source",
+      "object_name": "simple_new_world.o",
+      "profile": "authored_cpp",
+      "sha256": "e41b6e26b158486651ad58e304618de0ffaa8207302fb21e72aa1c116aa683cf",
+      "source": "sources/natives-c-amx-simple-new-world/simple_new_world.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 783,
+      "kind": "independently_authored_source",
+      "object_name": "sound.o",
+      "profile": "authored_cpp",
+      "sha256": "df1a5dd5cf3774170d7e2c16fc5c1139a2b8597e6ac9fba3d9320991fc8a07e0",
+      "source": "sources/natives-c-amx-sound/sound.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 784,
+      "kind": "independently_authored_source",
+      "object_name": "sound_sequence.o",
+      "profile": "authored_cpp",
+      "sha256": "de5e43f8aecd92c4f34b4f27bcff90043e3c52e023a39c2ec63618ce0778cb28",
+      "source": "sources/natives-c-amx-sound-sequence/sound_sequence.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 785,
+      "kind": "independently_authored_source",
+      "object_name": "start_audio.o",
+      "profile": "authored_cpp",
+      "sha256": "a4d1e4c167757c5683d9dd8c01e8e9f7f412065590f970ed002036e19c409081",
+      "source": "sources/natives-c-amx-start-audio/start_audio.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 786,
+      "kind": "independently_authored_source",
+      "object_name": "start_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "f23235f3cc098826b907494a653c43a1c8cea5834fec420281bf752997e4fd9f",
+      "source": "sources/natives-c-amx-start-dialog/start_dialog.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 787,
+      "kind": "independently_authored_source",
+      "object_name": "start_music.o",
+      "profile": "authored_cpp",
+      "sha256": "c99f8a6bbf9c79923eb80647d00eb7dbadb97c21136523d77cb2c15a8a87811c",
+      "source": "sources/natives-c-amx-start-music/start_music.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 788,
+      "kind": "independently_authored_source",
+      "object_name": "start_npc_anim.o",
+      "profile": "authored_cpp",
+      "sha256": "00cafac2cb9b20e1275a3f50dcd43b22925212b40b50ea80632fe2f920624a33",
+      "source": "sources/natives-c-amx-start-npc-anim/start_npc_anim.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 789,
+      "kind": "independently_authored_source",
+      "object_name": "start_player_sel.o",
+      "profile": "authored_cpp",
+      "sha256": "09000b10e0af9be8f00baee788688d4617b0321ed2d0547555c98d7c5b3978da",
+      "source": "sources/natives-c-amx-start-player-sel/start_player_sel.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 790,
+      "kind": "independently_authored_source",
+      "object_name": "start_prop_anim.o",
+      "profile": "authored_cpp",
+      "sha256": "657591b4541b07cbf31c93cde5642c4a25253eccf78d1a0cfe0786d7fb7402be",
+      "source": "sources/natives-c-amx-start-prop-anim/start_prop_anim.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 791,
+      "kind": "independently_authored_source",
+      "object_name": "start_with_swoop_done.o",
+      "profile": "authored_cpp",
+      "sha256": "dc948223de38db9dda1f2e9332046386c2340c2f36b26a8e13f55ca29749a76c",
+      "source": "sources/natives-c-amx-start-with-swoop-done/start_with_swoop_done.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 792,
+      "kind": "independently_authored_source",
+      "object_name": "stop_following_path.o",
+      "profile": "authored_cpp",
+      "sha256": "da49092ce18242a67e67e84e142e3b75dc4572f4ca129ca5e97624857766b165",
+      "source": "sources/natives-c-amx-stop-following-path/stop_following_path.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 793,
+      "kind": "independently_authored_source",
+      "object_name": "stop_following_player.o",
+      "profile": "authored_cpp",
+      "sha256": "8437651fffd4d23437880fb507762704b55e9e6970c498e4ee87215bfb8cb966",
+      "source": "sources/natives-c-amx-stop-following-player/stop_following_player.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 794,
+      "kind": "independently_authored_source",
+      "object_name": "stop_prop_anim.o",
+      "profile": "authored_cpp",
+      "sha256": "30c8b79fbc3ddd5474dbac7b9ba8357ed2f2c0725d640c5d347a5d0099dc0f10",
+      "source": "sources/natives-c-amx-stop-prop-anim/stop_prop_anim.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 795,
+      "kind": "independently_authored_source",
+      "object_name": "take_player_gold.o",
+      "profile": "authored_cpp",
+      "sha256": "dc2ba4cb1e9e4f4d519edc6e7b6a9741d72786254716ee4472949932ff4d65f2",
+      "source": "sources/natives-c-amx-take-player-gold/take_player_gold.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 796,
+      "kind": "independently_authored_source",
+      "object_name": "trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "b2cb47fbe234ec56a8a56b6140c020686abca2e2ae74aaeee5f1ea4e3b6b431f",
+      "source": "sources/natives-c-amx-trigger/trigger.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 797,
+      "kind": "independently_authored_source",
+      "object_name": "unfriendly.o",
+      "profile": "authored_cpp",
+      "sha256": "01d0fbfd5aeb22eae75b12fd75c15a1a759df2023a003534d0a7818ea41c5942",
+      "source": "sources/natives-c-amx-unfriendly/unfriendly.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 798,
+      "kind": "independently_authored_source",
+      "object_name": "disable_zoom.o",
+      "profile": "authored_cpp",
+      "sha256": "5e741f63659a3dbc773a4fda6bfd609978af9a8fb0996e5a3b5232bd0c6abae3",
+      "source": "sources/natives-c-disable-zoom/disable_zoom.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 799,
+      "kind": "independently_authored_source",
+      "object_name": "game_cam.o",
+      "profile": "authored_cpp",
+      "sha256": "25821bceac06465ca26fe334de7d779601872a03ef5d88cbba14d265fc6ab4bf",
+      "source": "sources/natives-c-game-cam/game_cam.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 800,
+      "kind": "independently_authored_source",
+      "object_name": "level_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "b990639819f4b751d0e5474b01ff376bae6b1e48f87d001afc2fa39757d657da",
+      "source": "sources/natives-c-level-flags/level_flags.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 801,
+      "kind": "independently_authored_source",
+      "object_name": "set_distance.o",
+      "profile": "authored_cpp",
+      "sha256": "cdaddc8a5d910da92e1707c63784bf5c5ba1dc0dab551ee6a5939d9b9d124b45",
+      "source": "sources/natives-c-set-distance/set_distance.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 802,
+      "kind": "independently_authored_source",
+      "object_name": "set_max_height.o",
+      "profile": "authored_cpp",
+      "sha256": "5ca10f5bcd833f778a11ebb65c87caae0364d9adfdd7b58686b94f95af569f26",
+      "source": "sources/natives-c-set-max-height/set_max_height.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 803,
+      "kind": "independently_authored_source",
+      "object_name": "set_pitch.o",
+      "profile": "authored_cpp",
+      "sha256": "aa6d7a7f0f016535542d58539dbff9a5cfdc9e30dcd256e566aeaffe89dda16e",
+      "source": "sources/natives-c-set-pitch/set_pitch.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 804,
+      "kind": "independently_authored_source",
+      "object_name": "update_dust.o",
+      "profile": "authored_cpp",
+      "sha256": "fce5ee74b5a362aabc68622bfc1bc0f2cf3394a1cc36aa79ee2b6b331b5c221a",
+      "source": "sources/natives-c-update-dust/update_dust.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -10408,7 +10878,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "5544f306ad010328c303040b4a8f5ae49e5fd5be88c12c7144ae155145f9ae7f",
+  "snapshot_sha256": "6f8ad523ca87864a0408d369a7753fd2aed31d4f968b505648f84865a10aa075",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
