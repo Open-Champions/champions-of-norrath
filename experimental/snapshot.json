@@ -5544,6 +5544,241 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/cd-archive-views/views.cpp"
+    },
+    {
+      "input_order": 371,
+      "component": "libc-format-memchr",
+      "object_name": "libc_format_memchr.o",
+      "private_object_sha256": "1b6ed1981265cecea27b227fdfaaded1196c367549637dd4b8aee151c4678d19",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_memchr",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-memchr/memchr.cpp"
+    },
+    {
+      "input_order": 372,
+      "component": "libc-format-mbtowc",
+      "object_name": "libc_format_mbtowc.o",
+      "private_object_sha256": "8bd822a6033e787ab52755341380b7816bb6fb92c9bf7e8d07d8fd408da76e8a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_mbtowc_reentrant",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp"
+    },
+    {
+      "input_order": 373,
+      "component": "libc-format-locale",
+      "object_name": "libc_format_localeconv.o",
+      "private_object_sha256": "576fcbec68da0f594ad3acf33c7f4709ca25b866f938f89918c587d6083c825d",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_localeconv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-locale/localeconv.cpp"
+    },
+    {
+      "input_order": 374,
+      "component": "libc-format-reent-write",
+      "object_name": "libc_format_write_r.o",
+      "private_object_sha256": "96bdec9036552e16eb1652dec95de9f1ef473623a54f2f8bd413cd3d083c5401",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_write_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp"
+    },
+    {
+      "input_order": 375,
+      "component": "libc-format-reent-read",
+      "object_name": "libc_format_read_r.o",
+      "private_object_sha256": "264e578b29f764f7407178d97b35b0598884c008f2fe351bdd2e8f1f2f084728",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_read_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp"
+    },
+    {
+      "input_order": 376,
+      "component": "libc-format-reent-close",
+      "object_name": "libc_format_close_r.o",
+      "private_object_sha256": "0a21e426358c35d912aaa821699f7b1565c6079b41e394407e23616999b5bbdb",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_close_reentrant",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp"
+    },
+    {
+      "input_order": 377,
+      "component": "libc-format-reent-seek",
+      "object_name": "libc_format_seek_r.o",
+      "private_object_sha256": "18419be273a4853c6f62612aa5b92044e7f18900f3a53aef3f7ec68385447fc4",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_seek_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp"
+    },
+    {
+      "input_order": 378,
+      "component": "libc-format-stream-setup",
+      "object_name": "libc_format_swsetup.o",
+      "private_object_sha256": "86dd299a01dfabba5858f6f0ce7a4bb27f224d75424d0f875709c5d6490e2887",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_stream_write_setup",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp"
+    },
+    {
+      "input_order": 379,
+      "component": "libc-format-format-string",
+      "object_name": "libc_format_sprintf.o",
+      "private_object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "emitted_functions": [
+        {
+          "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-format-string/format_string.cpp"
+    },
+    {
+      "input_order": 380,
+      "component": "libc-format-sce-printf",
+      "object_name": "libc_format_sce_printf.o",
+      "private_object_sha256": "1f34476fcd34f06a3c57dbbfaf2da84be5bfe7b0a03d89ee9f4e57a4a0f7fb38",
+      "emitted_functions": [
+        {
+          "name": "norrath_sce_printf",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "scePrintf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp"
+    },
+    {
+      "input_order": 381,
+      "component": "libc-format-ctype",
+      "object_name": "libc_format_ctype.o",
+      "private_object_sha256": "0daa3da79b6167738eb07711c661599b73cdddd524cf431b18e55f67e69f8569",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-ctype/ctype_view.cpp"
+    },
+    {
+      "input_order": 382,
+      "component": "libc-format-impure",
+      "object_name": "libc_format_impure.o",
+      "private_object_sha256": "88fe07038d7e81b632b71092cb9f8b71a8034925b67c07d21e1910260f32359c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-impure/impure_pointer.cpp"
+    },
+    {
+      "input_order": 383,
+      "component": "libc-format-errno",
+      "object_name": "libc_format_errno.o",
+      "private_object_sha256": "15143ab450f279b91d4eed17ff45d9dbc1d358f00055d0e7e1d9160b95b689e7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-errno/errno_word.cpp"
+    },
+    {
+      "input_order": 384,
+      "component": "libc-format-mb-cur-max",
+      "object_name": "libc_format_mb_cur_max.o",
+      "private_object_sha256": "94c2d2d4cd97a5d46a87e09bcf59a14c6650bdcd4f480d51dc165079e2f6a8b5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp"
+    },
+    {
+      "input_order": 385,
+      "component": "libc-format-formatter-text",
+      "object_name": "libc_format_formatter_text.o",
+      "private_object_sha256": "319c52bf661d595231a64f45d8b8d63160c4e271335665e1b6fd62a2f35ca231",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp"
+    },
+    {
+      "input_order": 386,
+      "component": "libc-format-dtoa-text",
+      "object_name": "libc_format_dtoa_text.o",
+      "private_object_sha256": "1b5df20358023ce52461281a454abe1b7024fa56fd55d28fe3b330318670eb4c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp"
+    },
+    {
+      "input_order": 387,
+      "component": "libc-format-dtoa-coefficients",
+      "object_name": "libc_format_dtoa_coefficients.o",
+      "private_object_sha256": "8f472ab23ff93a1989f7aac84f4ad41c2f33cfd25d24ff042dffaa8209477ff8",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp"
+    },
+    {
+      "input_order": 388,
+      "component": "libc-format-sscanf",
+      "object_name": "libc_format_sscanf.o",
+      "private_object_sha256": "2aaf704c71e7cdf5406e6ecd181e10e0e458415e813d4d9877ddbf87b23d8896",
+      "emitted_functions": [
+        {
+          "name": "sscanf",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-sscanf/sscanf.cpp"
+    },
+    {
+      "input_order": 389,
+      "component": "libc-format-strcmp",
+      "object_name": "libc_format_strcmp.o",
+      "private_object_sha256": "2727c06f63598d31fd6c9892b87d73ef9ece85a844767766761d1e2774adebb8",
+      "emitted_functions": [
+        {
+          "name": "strcmp",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-strcmp/strcmp.cpp"
     }
   ],
   "drafts": [
@@ -6534,6 +6769,45 @@
     "sources/level-entity-restoration-build/megatile_entitize.cpp": "ca73f79b198f5e97ef58398babe01b5dfdb9d14df0adb7f8ef1195d24291f466",
     "sources/level-entity-restoration-build/object_put_save_data.cpp": "04953adc68c1dd55402f8dfdbd21b46b99bc7103dc8ef21418401d69b49a58a4",
     "sources/level-entity-restoration-build/restoration.hpp": "c97ec507d9ddd8726444313899d0d54ec6d482c80a1ad5ca85e4212770a5bb38",
+    "sources/libc-format-ctype/ctype_contract.cpp": "c10e1e356db9f21887994d12938d33113e0d714bb124f36e6039b1d5c4eb2f1d",
+    "sources/libc-format-ctype/ctype_view.cpp": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients_contract.cpp": "dd157f0308a1281d93c5397c87a3d6d525626753ec9e5a114fdeb1bc2aa3cda2",
+    "sources/libc-format-dtoa-text/dtoa_text.cpp": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+    "sources/libc-format-dtoa-text/dtoa_text_contract.cpp": "4b21f44e35a11eb59c1228244e7f75363ada4f64ed145a0b66adea9b39f8447d",
+    "sources/libc-format-errno/errno_contract.cpp": "b0d2725d5d6ef2f4d97283c9511f6d267a8955c60e57cdc0d7a7a9d6bb0957c0",
+    "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+    "sources/libc-format-format-string/format_string_contract.cpp": "59dd535696cc425571d942bb471bd6c2b60a6205c710cbbcb49f89c4dd502a5e",
+    "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+    "sources/libc-format-formatter-text/formatter_text_contract.cpp": "8819ea0a729356722ca94c67fa66b6a0591ce2cc0ccf1c75debd3ac753c952b4",
+    "sources/libc-format-impure/impure_contract.cpp": "10f588820983a0087c2c9e60e34bda22c35c673bea815763f766fa701006680b",
+    "sources/libc-format-impure/impure_pointer.cpp": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+    "sources/libc-format-impure/impure_state.hpp": "629fe075a04293058788793a4a5720eb183f2c6686096a3c4966f5e86cb35902",
+    "sources/libc-format-locale/localeconv.cpp": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+    "sources/libc-format-locale/localeconv_contract.cpp": "f52855589c0831567be5d14778e2d3c822a899a7b2e5b0d46420234b30ba636c",
+    "sources/libc-format-mb-cur-max/mb_cur_max.cpp": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+    "sources/libc-format-mb-cur-max/mb_cur_max_contract.cpp": "b2a5e9ce2359276d01518a215be4e696dfd26453084b14cfef824a05cf096ce4",
+    "sources/libc-format-mbtowc/mbtowc_contract.cpp": "7cf0db9d621556c64eb20c378826b0d382f4af10a9610079f138d4d4dae54b9a",
+    "sources/libc-format-mbtowc/mbtowc_reentrant.cpp": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+    "sources/libc-format-memchr/memchr.cpp": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+    "sources/libc-format-memchr/memchr_contract.cpp": "3853ff66f17ca0a683dc4fb11a829dbebab978fa352d296430230a1b13dcb3e5",
+    "sources/libc-format-reent-close/close_contract.cpp": "8ecd70507113cf48c02cf1a549841a9f5cfc0b72151a25f205bd3e0468c418c8",
+    "sources/libc-format-reent-close/close_reentrant.cpp": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+    "sources/libc-format-reent-read/read_contract.cpp": "991d410fb31460850002e289977ec66356554a4fcefbef8f66dfca26c3bc7ffa",
+    "sources/libc-format-reent-read/read_reentrant.cpp": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+    "sources/libc-format-reent-seek/seek_contract.cpp": "363b96977973cbcd90e016242df576a91394cc1a7b83ff9ba2e269518f41569c",
+    "sources/libc-format-reent-seek/seek_reentrant.cpp": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+    "sources/libc-format-reent-write/write_contract.cpp": "514ef9bf5b59e9d1f06c26c76b4cedb61280d2d24c0e6b727e3579521fb29732",
+    "sources/libc-format-reent-write/write_reentrant.cpp": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+    "sources/libc-format-sce-printf/sce_printf.cpp": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+    "sources/libc-format-sce-printf/sce_printf_contract.cpp": "747f112f5ce9f27cb4f466b6b5a5412144a21e8ed5dbea5f4e43dcef78771bc0",
+    "sources/libc-format-sscanf/sscanf.cpp": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+    "sources/libc-format-sscanf/sscanf_contract.cpp": "7e5de671adf03213195f44e1fc3c677bb58e20e84476774d6e070b4e5df67eef",
+    "sources/libc-format-strcmp/strcmp.cpp": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+    "sources/libc-format-strcmp/strcmp_contract.cpp": "27e10d0fbf8af8202cd65f127a637c3d334dc304bea931b0335c154a53c48381",
+    "sources/libc-format-stream-setup/stream_setup_contract.cpp": "651ecbca612eff9630357aafb5b84f929cdfbd832ae2e294f73767a22f2d2bc7",
+    "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -7086,11 +7360,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 371,
-    "authored_default_inputs": 369,
+    "selected_inputs": 390,
+    "authored_default_inputs": 388,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 461,
-    "compiled_body_bytes_from_accepted_inputs": 266788,
+    "emitted_function_definitions_including_helpers": 474,
+    "compiled_body_bytes_from_accepted_inputs": 268968,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -7103,7 +7377,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 58
+    "package_selected_inputs": 77
   },
   "startup_implementations": [
     {
@@ -8305,6 +8579,298 @@
       "emitted_functions": [],
       "host_files": [
         "sources/cd-archive-views/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-memchr/memchr.cpp",
+      "source_sha256": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+      "object_sha256": "1b6ed1981265cecea27b227fdfaaded1196c367549637dd4b8aee151c4678d19",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_memchr",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-memchr/memchr_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp",
+      "source_sha256": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+      "object_sha256": "8bd822a6033e787ab52755341380b7816bb6fb92c9bf7e8d07d8fd408da76e8a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_mbtowc_reentrant",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-mbtowc/mbtowc_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-locale/localeconv.cpp",
+      "source_sha256": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+      "object_sha256": "576fcbec68da0f594ad3acf33c7f4709ca25b866f938f89918c587d6083c825d",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_localeconv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-locale/localeconv_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp",
+      "source_sha256": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+      "object_sha256": "96bdec9036552e16eb1652dec95de9f1ef473623a54f2f8bd413cd3d083c5401",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_write_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-write/write_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp",
+      "source_sha256": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+      "object_sha256": "264e578b29f764f7407178d97b35b0598884c008f2fe351bdd2e8f1f2f084728",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_read_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-read/read_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp",
+      "source_sha256": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+      "object_sha256": "0a21e426358c35d912aaa821699f7b1565c6079b41e394407e23616999b5bbdb",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_close_reentrant",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-close/close_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp",
+      "source_sha256": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+      "object_sha256": "18419be273a4853c6f62612aa5b92044e7f18900f3a53aef3f7ec68385447fc4",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_seek_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-seek/seek_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp",
+      "source_sha256": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+      "object_sha256": "86dd299a01dfabba5858f6f0ce7a4bb27f224d75424d0f875709c5d6490e2887",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_stream_write_setup",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-stream-setup/stream_setup_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-format-string/format_string.cpp",
+      "source_sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+      "object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "emitted_functions": [
+        {
+          "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-format-string/format_string_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp",
+      "source_sha256": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+      "object_sha256": "1f34476fcd34f06a3c57dbbfaf2da84be5bfe7b0a03d89ee9f4e57a4a0f7fb38",
+      "emitted_functions": [
+        {
+          "name": "norrath_sce_printf",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "scePrintf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-sce-printf/sce_printf_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-ctype/ctype_view.cpp",
+      "source_sha256": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+      "object_sha256": "0daa3da79b6167738eb07711c661599b73cdddd524cf431b18e55f67e69f8569",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-ctype/ctype_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-impure/impure_pointer.cpp",
+      "source_sha256": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+      "object_sha256": "88fe07038d7e81b632b71092cb9f8b71a8034925b67c07d21e1910260f32359c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-impure/impure_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-errno/errno_word.cpp",
+      "source_sha256": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+      "object_sha256": "15143ab450f279b91d4eed17ff45d9dbc1d358f00055d0e7e1d9160b95b689e7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-errno/errno_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp",
+      "source_sha256": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+      "object_sha256": "94c2d2d4cd97a5d46a87e09bcf59a14c6650bdcd4f480d51dc165079e2f6a8b5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-mb-cur-max/mb_cur_max_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp",
+      "source_sha256": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+      "object_sha256": "319c52bf661d595231a64f45d8b8d63160c4e271335665e1b6fd62a2f35ca231",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-formatter-text/formatter_text_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp",
+      "source_sha256": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+      "object_sha256": "1b5df20358023ce52461281a454abe1b7024fa56fd55d28fe3b330318670eb4c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-dtoa-text/dtoa_text_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp",
+      "source_sha256": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+      "object_sha256": "8f472ab23ff93a1989f7aac84f4ad41c2f33cfd25d24ff042dffaa8209477ff8",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-dtoa-coefficients/dtoa_coefficients_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-sscanf/sscanf.cpp",
+      "source_sha256": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+      "object_sha256": "2aaf704c71e7cdf5406e6ecd181e10e0e458415e813d4d9877ddbf87b23d8896",
+      "emitted_functions": [
+        {
+          "name": "sscanf",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-sscanf/sscanf_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-strcmp/strcmp.cpp",
+      "source_sha256": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+      "object_sha256": "2727c06f63598d31fd6c9892b87d73ef9ece85a844767766761d1e2774adebb8",
+      "emitted_functions": [
+        {
+          "name": "strcmp",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-strcmp/strcmp_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

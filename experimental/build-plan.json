@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 369,
+  "default_authored_inputs": 388,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -944,6 +944,26 @@
     "sources/level-entity-restoration-build/megatile_entitize.cpp": "ca73f79b198f5e97ef58398babe01b5dfdb9d14df0adb7f8ef1195d24291f466",
     "sources/level-entity-restoration-build/object_put_save_data.cpp": "04953adc68c1dd55402f8dfdbd21b46b99bc7103dc8ef21418401d69b49a58a4",
     "sources/level-entity-restoration-build/restoration.hpp": "c97ec507d9ddd8726444313899d0d54ec6d482c80a1ad5ca85e4212770a5bb38",
+    "sources/libc-format-ctype/ctype_view.cpp": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+    "sources/libc-format-dtoa-text/dtoa_text.cpp": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+    "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+    "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+    "sources/libc-format-impure/impure_pointer.cpp": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+    "sources/libc-format-impure/impure_state.hpp": "629fe075a04293058788793a4a5720eb183f2c6686096a3c4966f5e86cb35902",
+    "sources/libc-format-locale/localeconv.cpp": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+    "sources/libc-format-mb-cur-max/mb_cur_max.cpp": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+    "sources/libc-format-mbtowc/mbtowc_reentrant.cpp": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+    "sources/libc-format-memchr/memchr.cpp": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+    "sources/libc-format-reent-close/close_reentrant.cpp": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+    "sources/libc-format-reent-read/read_reentrant.cpp": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+    "sources/libc-format-reent-seek/seek_reentrant.cpp": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+    "sources/libc-format-reent-write/write_reentrant.cpp": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+    "sources/libc-format-sce-printf/sce_printf.cpp": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+    "sources/libc-format-sscanf/sscanf.cpp": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+    "sources/libc-format-strcmp/strcmp.cpp": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+    "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -6264,6 +6284,179 @@
       "profile": "authored_cpp",
       "sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
       "source": "sources/cd-archive-views/views.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 371,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_memchr.o",
+      "profile": "authored_cpp",
+      "sha256": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+      "source": "sources/libc-format-memchr/memchr.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 372,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_mbtowc.o",
+      "profile": "authored_cpp",
+      "sha256": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 373,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_localeconv.o",
+      "profile": "authored_cpp",
+      "sha256": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+      "source": "sources/libc-format-locale/localeconv.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 374,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_write_r.o",
+      "profile": "authored_cpp",
+      "sha256": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 375,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_read_r.o",
+      "profile": "authored_cpp",
+      "sha256": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 376,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_close_r.o",
+      "profile": "authored_cpp",
+      "sha256": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 377,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_seek_r.o",
+      "profile": "authored_cpp",
+      "sha256": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 378,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_swsetup.o",
+      "profile": "authored_cpp",
+      "sha256": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 379,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sprintf.o",
+      "profile": "authored_cpp",
+      "sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+      "source": "sources/libc-format-format-string/format_string.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 380,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sce_printf.o",
+      "profile": "authored_cpp",
+      "sha256": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 381,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_ctype.o",
+      "profile": "authored_cpp",
+      "sha256": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+      "source": "sources/libc-format-ctype/ctype_view.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/libc-format-impure/impure_state.hpp"
+      ],
+      "input_order": 382,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_impure.o",
+      "profile": "authored_cpp",
+      "sha256": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+      "source": "sources/libc-format-impure/impure_pointer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 383,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_errno.o",
+      "profile": "authored_cpp",
+      "sha256": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+      "source": "sources/libc-format-errno/errno_word.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 384,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_mb_cur_max.o",
+      "profile": "authored_cpp",
+      "sha256": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 385,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_formatter_text.o",
+      "profile": "authored_cpp",
+      "sha256": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 386,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_dtoa_text.o",
+      "profile": "authored_cpp",
+      "sha256": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 387,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_dtoa_coefficients.o",
+      "profile": "authored_cpp",
+      "sha256": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 388,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sscanf.o",
+      "profile": "authored_cpp",
+      "sha256": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+      "source": "sources/libc-format-sscanf/sscanf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 389,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_strcmp.o",
+      "profile": "authored_cpp",
+      "sha256": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+      "source": "sources/libc-format-strcmp/strcmp.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6363,7 +6556,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3c38f5b556a5b04fb65a3861715abe77a0a99afbbacd5aefbea23ee65e4f070f",
+  "snapshot_sha256": "96b16855d85be418465f3048f139a6e19657897091fe568a272984493ee5bb33",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -317,6 +317,29 @@ the three vblank views. `norrath_sce_printf` was already unresolved.
 and `norrath_archive_sound_free_ram` stay unresolved. 459 function bodies,
 369 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/libc-format
+
+Merged. Observed `scePrintf`, `sscanf`, and `strcmp` are the published names.
+`scePrintf` is an alias of `norrath_sce_printf` on the EE object. Each unit
+has a host contract that returns failure. No game binary or disassembly
+listing was committed. All 19 host contracts passed. `memAlloc__FiPc` stays
+unresolved.
+
+| | |
+|---|---|
+| Before | 763 |
+| After | 740 |
+| Closed | 30 |
+| Opened | 7 |
+
+Closed: the 30 names in `docs/agents/libc-format.md`, including `scePrintf`,
+`sscanf`, `strcmp`, and `norrath_sce_printf`. `_putchar` is defined and was
+not a previous import. Opened: `_printf`, `close`, `deci2Putchar`, `lseek`,
+`read`, `serialPutchar`, `write`. The notes' already-defined callees stayed
+defined. Bodies match the notes, including both printf names at 104 bytes,
+`sscanf` 344, and `strcmp` 40. 472 function bodies, 388 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -344,7 +367,7 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-megatile, script-amx, and cd-archive. The held AMX draft remains uncompiled.
+megatile, script-amx, cd-archive, and libc-format. The held AMX draft remains uncompiled.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -356,3 +379,4 @@ and no startup stage has executed.
 - 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
 - 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports
 - 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports
+- 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports
