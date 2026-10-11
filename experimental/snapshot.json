@@ -11952,6 +11952,459 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/vslots-b-turn-to-face/turn_to_face.cpp"
+    },
+    {
+      "input_order": 913,
+      "component": "particles-alloc-descriptor",
+      "object_name": "alloc_descriptor.o",
+      "private_object_sha256": "5ef8a0a866c54485ffe2d4beaab0d047ca1dfb7c671c10742ee256610b5c8ea5",
+      "emitted_functions": [
+        {
+          "name": "allocDescriptor__FP11ParticleDef",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-alloc-descriptor/alloc_descriptor.cpp"
+    },
+    {
+      "input_order": 914,
+      "component": "particles-always-draw-list",
+      "object_name": "always_draw_list.o",
+      "private_object_sha256": "b8a140f64cb7f04bd2622aeb803922a2e00d9ff0f2f9d6bde5cc117a261046d4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-always-draw-list/always_draw_list.cpp"
+    },
+    {
+      "input_order": 915,
+      "component": "particles-anim-results",
+      "object_name": "anim_results.o",
+      "private_object_sha256": "268f3d304e758c09b5b01d5cb90d823015111d836b092d8bc28f1fe4dbc5c549",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-anim-results/anim_results.cpp"
+    },
+    {
+      "input_order": 916,
+      "component": "particles-anim-table",
+      "object_name": "anim_table.o",
+      "private_object_sha256": "c1ffbf3f186a00b138334430c241c3428c770c6e7c4752a7e600fae59cf5b450",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-anim-table/anim_table.cpp"
+    },
+    {
+      "input_order": 917,
+      "component": "particles-ar-list-back",
+      "object_name": "ar_list_back.o",
+      "private_object_sha256": "cee699a93a148e73c1ad304afea8261f003055aa0b87174e35f054f20bb67fdc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-ar-list-back/ar_list_back.cpp"
+    },
+    {
+      "input_order": 918,
+      "component": "particles-ar-list",
+      "object_name": "ar_list.o",
+      "private_object_sha256": "6ac9f914e052b7bd21c51621091b07921e3f865b1baa28a69c79cf20462ef016",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-ar-list/ar_list.cpp"
+    },
+    {
+      "input_order": 919,
+      "component": "particles-bolt",
+      "object_name": "bolt.o",
+      "private_object_sha256": "ec83feddc5a3975f6b1a34137724f107fd69940a054b5a0b34e15a708947f48a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-bolt/bolt.cpp"
+    },
+    {
+      "input_order": 920,
+      "component": "particles-desc-list-mark",
+      "object_name": "desc_list_mark.o",
+      "private_object_sha256": "1687df0ca46fd2b6e014d8d37337baa68d339dc4f63d31a295c5e763cfdef993",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-desc-list-mark/desc_list_mark.cpp"
+    },
+    {
+      "input_order": 921,
+      "component": "particles-desc-list",
+      "object_name": "desc_list.o",
+      "private_object_sha256": "5173c0d7ba35ca825d6fa6138aba66e1341a74ebee78be3122d2d77f22ec2729",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-desc-list/desc_list.cpp"
+    },
+    {
+      "input_order": 922,
+      "component": "particles-draw-objects-task",
+      "object_name": "draw_objects_task.o",
+      "private_object_sha256": "4cb760fbc0f00772e5e1b6bc5dc0cc755e205a27cd1c30389e7bbf5db0a20ed7",
+      "emitted_functions": [
+        {
+          "name": "call_draw",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "walk_list",
+          "compiled_body_bytes": 680
+        },
+        {
+          "name": "drawObjectsTask__Fv",
+          "compiled_body_bytes": 792
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-draw-objects-task/draw_objects_task.cpp"
+    },
+    {
+      "input_order": 923,
+      "component": "particles-draw-particles-task",
+      "object_name": "draw_particles_task.o",
+      "private_object_sha256": "d37616b4405427cbc9bafdd32dde917acaf48d4758a59e094efca035f474c070",
+      "emitted_functions": [
+        {
+          "name": "drawParticlesTask__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-draw-particles-task/draw_particles_task.cpp"
+    },
+    {
+      "input_order": 924,
+      "component": "particles-far-clip",
+      "object_name": "far_clip.o",
+      "private_object_sha256": "188872494c04ff9a55b6cc00e1c940d430b92220160fe88e8766e5a97df9b7cf",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-far-clip/far_clip.cpp"
+    },
+    {
+      "input_order": 925,
+      "component": "particles-frame-states",
+      "object_name": "frame_states.o",
+      "private_object_sha256": "7f76c547d38dd2a17e23d8d74be2ecd1b972966e351cb1a2b48c3d8e7180377a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-frame-states/frame_states.cpp"
+    },
+    {
+      "input_order": 926,
+      "component": "particles-free-nodes",
+      "object_name": "free_nodes.o",
+      "private_object_sha256": "35814846050d09956a8ca542806bef7d98fa485c0a43393441417f2f20fa8f33",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-free-nodes/free_nodes.cpp"
+    },
+    {
+      "input_order": 927,
+      "component": "particles-fs-list",
+      "object_name": "fs_list.o",
+      "private_object_sha256": "b62451ac3ef2fbcdef0b88b19ff3aa895766f40ee67772d68eebe9d02b4cdb03",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-fs-list/fs_list.cpp"
+    },
+    {
+      "input_order": 928,
+      "component": "particles-ghost-object-grid",
+      "object_name": "ghost_object_grid.o",
+      "private_object_sha256": "0763d646c76fe2c397adb23202d501ad286bbdef74802e68a9940e6b45a55bb6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-ghost-object-grid/ghost_object_grid.cpp"
+    },
+    {
+      "input_order": 929,
+      "component": "particles-identity-result",
+      "object_name": "identity_result.o",
+      "private_object_sha256": "d7861776a4d100ea34b9ecb84c1459dceb33766d6fa4f8396dd89c7a2e90b43c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-identity-result/identity_result.cpp"
+    },
+    {
+      "input_order": 930,
+      "component": "particles-init-noise",
+      "object_name": "init_noise.o",
+      "private_object_sha256": "63681c3e9861398e7a7387f88af07b3bbd6f6854765885e95bf822955e618423",
+      "emitted_functions": [
+        {
+          "name": "initNoiseTable__Fv",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-init-noise/init_noise.cpp"
+    },
+    {
+      "input_order": 931,
+      "component": "particles-init-particle-systems",
+      "object_name": "init_particle_systems.o",
+      "private_object_sha256": "944db46da56f3cf1a35d1d1f455a5e783c21255d36acb4f9d347607a30885687",
+      "emitted_functions": [
+        {
+          "name": "initParticleSystems__Fv",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-init-particle-systems/init_particle_systems.cpp"
+    },
+    {
+      "input_order": 932,
+      "component": "particles-init-trails",
+      "object_name": "init_trails.o",
+      "private_object_sha256": "b6e2c5e40891f01f76ba958a18bb6fe6b1e5509a309459c1ec9731e757810636",
+      "emitted_functions": [
+        {
+          "name": "initTrails__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-init-trails/init_trails.cpp"
+    },
+    {
+      "input_order": 933,
+      "component": "particles-invisible",
+      "object_name": "invisible.o",
+      "private_object_sha256": "1f806f3897f587c66220e5c3c9ba4e5ce4ce859159ba40b0a072bacfa6a922bc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-invisible/invisible.cpp"
+    },
+    {
+      "input_order": 934,
+      "component": "particles-light-reset",
+      "object_name": "light_reset.o",
+      "private_object_sha256": "2a2d1bdc51e92833658a739fa9cd66452b99e918d9c5f954a313ab3a04f75e05",
+      "emitted_functions": [
+        {
+          "name": "lightResetOptionalParams__Fv",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-light-reset/light_reset.cpp"
+    },
+    {
+      "input_order": 935,
+      "component": "particles-list-destroy",
+      "object_name": "list_destroy.o",
+      "private_object_sha256": "144d4a38f947ef1775b77d0f3bc21c8f333179ae2569c89f264a8a34806a557e",
+      "emitted_functions": [
+        {
+          "name": "listDestroy__FP8ListHead",
+          "compiled_body_bytes": 348
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-list-destroy/list_destroy.cpp"
+    },
+    {
+      "input_order": 936,
+      "component": "particles-model-clipping",
+      "object_name": "model_clipping.o",
+      "private_object_sha256": "6181b30e537199c2b50e1811c3e7b4be7e5d86eb2a54d83f2bf7daafa2ca50d7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-model-clipping/model_clipping.cpp"
+    },
+    {
+      "input_order": 937,
+      "component": "particles-nm-lines",
+      "object_name": "nm_lines.o",
+      "private_object_sha256": "1143b71293e7d58f76da574b29e76fe6678cf3de7c208479b9d68657c963673d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-nm-lines/nm_lines.cpp"
+    },
+    {
+      "input_order": 938,
+      "component": "particles-nm-single",
+      "object_name": "nm_single.o",
+      "private_object_sha256": "bc1d45a240d8040b2cb2b20779c2834a0e2f014a3365281f5cc9a0b34531a5b6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-nm-single/nm_single.cpp"
+    },
+    {
+      "input_order": 939,
+      "component": "particles-nodes",
+      "object_name": "nodes.o",
+      "private_object_sha256": "b3b80eee02e03e5032568a172aa141da8ad1fe6a1688c0ba5d4d6518ca9d095e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-nodes/nodes.cpp"
+    },
+    {
+      "input_order": 940,
+      "component": "particles-noise-table",
+      "object_name": "noise_table.o",
+      "private_object_sha256": "e65dd2d71b3e2a651a9ce8c62a590c653fa1a55e8aca5569072a9d95bf0aa9dc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-noise-table/noise_table.cpp"
+    },
+    {
+      "input_order": 941,
+      "component": "particles-object-draw-enable",
+      "object_name": "object_draw_enable.o",
+      "private_object_sha256": "ea690ef2cfb8ad8cb4f4b48f371ee931d6fdc7fb3f10cf8e651dbd3e6cb2e403",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-object-draw-enable/object_draw_enable.cpp"
+    },
+    {
+      "input_order": 942,
+      "component": "particles-object-grid",
+      "object_name": "object_grid.o",
+      "private_object_sha256": "cc4be766eda46facfe36d97360bb8402c3a5001ac1c80ea005e439ed2f1e0c36",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-object-grid/object_grid.cpp"
+    },
+    {
+      "input_order": 943,
+      "component": "particles-object-hash",
+      "object_name": "object_hash.o",
+      "private_object_sha256": "eb8c6a665cacf84300b5168806fd6cc725ea909cc7d6424a91e875f8c73bb860",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-object-hash/object_hash.cpp"
+    },
+    {
+      "input_order": 944,
+      "component": "particles-object-ignore-flags",
+      "object_name": "object_ignore_flags.o",
+      "private_object_sha256": "37614d79c83f132fdec1ac011e1caa2609f6c00d8a1747c7e853875219e487e6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-object-ignore-flags/object_ignore_flags.cpp"
+    },
+    {
+      "input_order": 945,
+      "component": "particles-object-strings",
+      "object_name": "object_strings.o",
+      "private_object_sha256": "e207505b73dcece22aeeb5f5a01c7bdf5a353d41e7969048c21cdde61b75c1ad",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-object-strings/object_strings.cpp"
+    },
+    {
+      "input_order": 946,
+      "component": "particles-off-the-grid",
+      "object_name": "off_the_grid.o",
+      "private_object_sha256": "2b11e72290f16321f025edf2d81adfd5dc2ff3ea0cb782f9d97c44200a5fc1db",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-off-the-grid/off_the_grid.cpp"
+    },
+    {
+      "input_order": 947,
+      "component": "particles-p-frame-num",
+      "object_name": "p_frame_num.o",
+      "private_object_sha256": "0ee0d0c16b019260258679f2183b2ccda0221d3da700dd7f8056f50f9df46604",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-p-frame-num/p_frame_num.cpp"
+    },
+    {
+      "input_order": 948,
+      "component": "particles-particle-block",
+      "object_name": "particle_block.o",
+      "private_object_sha256": "f64bdbff86ea21ea40f5d6e8160d09022cc3435c63f582aa204ffcae5d80bfc7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-particle-block/particle_block.cpp"
+    },
+    {
+      "input_order": 949,
+      "component": "particles-particle-systems",
+      "object_name": "particle_systems.o",
+      "private_object_sha256": "c9327d872e8f5ec5a68a80900d8724af1407d0b827642005d3b73f557a4939f5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-particle-systems/particle_systems.cpp"
+    },
+    {
+      "input_order": 950,
+      "component": "particles-ps-sequence",
+      "object_name": "ps_sequence.o",
+      "private_object_sha256": "a3286cb5329a235bb62d5c8d115be92ff64c8ca5c278035de50c37df76010f65",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-ps-sequence/ps_sequence.cpp"
+    },
+    {
+      "input_order": 951,
+      "component": "particles-scene",
+      "object_name": "scene.o",
+      "private_object_sha256": "d7cbffa28a704256f57440a19a22b2536a500056e1acd91464628955237ec5ac",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-scene/scene.cpp"
+    },
+    {
+      "input_order": 952,
+      "component": "particles-string-hash",
+      "object_name": "string_hash.o",
+      "private_object_sha256": "0c76ca4cebf60fedeb404a102cabc7e3e90d824f1c1b881227eea67cc823f156",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-string-hash/string_hash.cpp"
+    },
+    {
+      "input_order": 953,
+      "component": "particles-trail-sequence",
+      "object_name": "trail_sequence.o",
+      "private_object_sha256": "533041b8f8f7ae86848cffa33d200a807288f53498acd4185c6ddde2153eac49",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-trail-sequence/trail_sequence.cpp"
+    },
+    {
+      "input_order": 954,
+      "component": "particles-trail",
+      "object_name": "trail.o",
+      "private_object_sha256": "73aca66360141c4e41254c50b9a5f556097cd35da427207b24693ab8404df375",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-trail/trail.cpp"
+    },
+    {
+      "input_order": 955,
+      "component": "particles-wiggly-tab",
+      "object_name": "wiggly_tab.o",
+      "private_object_sha256": "ba84da916390611a01485cfbe9df0b04decf03dd6b27b6fbc1c2062d54972f20",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-wiggly-tab/wiggly_tab.cpp"
+    },
+    {
+      "input_order": 956,
+      "component": "particles-world-camera-matrix",
+      "object_name": "world_camera_matrix.o",
+      "private_object_sha256": "52fcdb7c3704ef183218fab2771847aaa036782bb2a2ef81925bde95b0aa0244",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-world-camera-matrix/world_camera_matrix.cpp"
+    },
+    {
+      "input_order": 957,
+      "component": "particles-world-camera-pos",
+      "object_name": "world_camera_pos.o",
+      "private_object_sha256": "6119d574004dae9549981de23d53025fb03b0bd0ea2f4c267532b618b61a4497",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/particles-world-camera-pos/world_camera_pos.cpp"
     }
   ],
   "drafts": [
@@ -13790,6 +14243,96 @@
     "sources/object-infra-state/state_contract.cpp": "0fd212e29ca6492099b9271585dddd25b873e62d005d8a57870f5d777935ff48",
     "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
     "sources/object-infra-vtable/game_object_vtable_contract.cpp": "980b81b6b1d140e1d39d394eba30bd1686f7fe15c7da8d9944899faecfb9dab7",
+    "sources/particles-alloc-descriptor/alloc_descriptor.cpp": "c4af109e165dc7c94ab1c7532eae7ff6e71c72292b2079c489f18be43d03fa7e",
+    "sources/particles-alloc-descriptor/host_check.cpp": "476d7f9ce88a7e1d72cd476d2d77b212bc375556b9445be86c708b482dfc4502",
+    "sources/particles-always-draw-list/always_draw_list.cpp": "996f30fa896ff79e1ef28f2f35509e7962628c9743fdd187671611940dc91715",
+    "sources/particles-always-draw-list/host_check.cpp": "6da2a7e18e6c6bc36bed1525e9e13010d9bca7d02bef971d4a68c06e7c292f57",
+    "sources/particles-anim-results/anim_results.cpp": "cb4f251b2f310bc01208cf7c4c8e30ed85777e452cc50b3c202326d102244636",
+    "sources/particles-anim-results/host_check.cpp": "c8e097e067d0788e37ec80d0373a10457504b65ffcf840e1afb61ad2c8f29b3e",
+    "sources/particles-anim-table/anim_table.cpp": "b725f405ca3e76ab9ddbb3486944ccac456ecfa5432ed3c9e1734974aaf6213d",
+    "sources/particles-anim-table/host_check.cpp": "ebffa91bca5769c91cde86d3663f109f9b344bc11b8949fd45b4026143bcdaa2",
+    "sources/particles-ar-list-back/ar_list_back.cpp": "1345748936c07263dc0a93c05f29a94cd348acbef07d7d97026b9265d0ca97f2",
+    "sources/particles-ar-list-back/host_check.cpp": "6b839a127adba9665163dab93495b24ab9bff4a7382b90e84f8f21c306377aad",
+    "sources/particles-ar-list/ar_list.cpp": "8c1cc7145c84df2f807f4d2b92672c3437b1b32656df882f54a7cefff0306769",
+    "sources/particles-ar-list/host_check.cpp": "753a5e9004f1e497ea980055db0a324ad883a5f9a16d23e160d6ebaefa11a439",
+    "sources/particles-bolt/bolt.cpp": "75a50b88a2d236588ad30cf775ae5bafb4e036fe7ad5fc4e3450eda2128e06b2",
+    "sources/particles-bolt/host_check.cpp": "946ca12976eb9355e6cb5dbfff40fef494046e8754df7232d88ff9d368d94884",
+    "sources/particles-desc-list-mark/desc_list_mark.cpp": "7d707abcc55f58727fa5f2c8b6172f12b8d8d59572f677c88c9c5074c5357045",
+    "sources/particles-desc-list-mark/host_check.cpp": "d9797cebaab97b8b229af185f68c04b7a4b58dfaee22bb53665292364ba6d57d",
+    "sources/particles-desc-list/desc_list.cpp": "60dbfb1d58fb35eba4e58d4af258acebf82e0a7182b4a16553fb5acb60db73fb",
+    "sources/particles-desc-list/host_check.cpp": "4f85853b71760252a8dd7953aaa131af6c4658df7545943e3efb89f555a83e3c",
+    "sources/particles-draw-objects-task/draw_objects_task.cpp": "07c1a012c48f67378bc4587aa7a274553c10c809406c1e393aaf8272939bd6a5",
+    "sources/particles-draw-objects-task/host_check.cpp": "d33f185f28f58ecef15a4537290fc1a345bfef7933a2cc206ade2aa5b0892ec9",
+    "sources/particles-draw-particles-task/draw_particles_task.cpp": "b90655ef205574d9a2eeb306b368095986e9657b9863c717b0573a6551252ba3",
+    "sources/particles-draw-particles-task/host_check.cpp": "f4fe5e03c908bf6e02b0a863385b598ef2b5a10b86741a5dfeb4512bde3ae6e2",
+    "sources/particles-far-clip/far_clip.cpp": "2fe5ceb3dd46ee3e0996bfe7e0cde84d9f444a986ede07ee7e044dd8caaa8af3",
+    "sources/particles-far-clip/host_check.cpp": "e337be8201a8ccb4d1e20516ade08a57e5c3e9d378f3563d00a2cf3be3f30e59",
+    "sources/particles-frame-states/frame_states.cpp": "a483415a541921d27e4afb1842ad122797f8168c012965d4152adc680876d9c8",
+    "sources/particles-frame-states/host_check.cpp": "7a1edb75b2569f31d27f5632fe87463e035d0c3670442fda75a8774f94d1a22a",
+    "sources/particles-free-nodes/free_nodes.cpp": "fccdca0cb0aa100edf9b59c5a53b2347f9e1e1921172f13557c2f77e89cefbf5",
+    "sources/particles-free-nodes/host_check.cpp": "4279fd9a60de3aeb98a8fc085c96d2e63e3f05cb24d92738167eb18fac53c57b",
+    "sources/particles-fs-list/fs_list.cpp": "6f04cd68b2d02fb500287658a0b33a0f46e6de7a6fa57a5081d350147ac07e09",
+    "sources/particles-fs-list/host_check.cpp": "33cc2b561280832772348437d658e199ab2f3c93e08941ee4021544a49c8cd0c",
+    "sources/particles-ghost-object-grid/ghost_object_grid.cpp": "720cd09eef65c08c060a280b516851c71e5fce2879afb0a902bb9de38be8166d",
+    "sources/particles-ghost-object-grid/host_check.cpp": "2221f7711fc76484e0d46f34109735e590f57c9febcc9b2f137b60c647f3343e",
+    "sources/particles-identity-result/host_check.cpp": "7176d4c0694268e68a915009386d18f49ad8f18ebc7fc51655d11067fb497ea3",
+    "sources/particles-identity-result/identity_result.cpp": "a740c301093222828878e95eda5b014876eeab739fcf000d393cfa4809b35323",
+    "sources/particles-init-noise/host_check.cpp": "7969b354ef1413f1cf0bd6c9bb404f49202ba3a50dc0a82a21709c43b44a0b55",
+    "sources/particles-init-noise/init_noise.cpp": "ac3110fdc5175b1cc7368c6d60d1492fa3d94d081fb1a652130eee88da9a1178",
+    "sources/particles-init-particle-systems/host_check.cpp": "a66c3b3b81e117a2aab437cfba85683ca5752f8aad76d0a780644bdc103de4e0",
+    "sources/particles-init-particle-systems/init_particle_systems.cpp": "18409b7f1ee70b9e6455499bcf7cf7b0c54c3830ef7b3cecb8f55419de59fc08",
+    "sources/particles-init-trails/host_check.cpp": "d0a309ce0ce751d1b451eb1f5c489fd095436c811acb6d87282e90b005491080",
+    "sources/particles-init-trails/init_trails.cpp": "23ea1b6c5573dc4f0805066e713187f2ff5f4bd441ef79115baab28ba797e263",
+    "sources/particles-invisible/host_check.cpp": "31435f851f4a14a24bfbe9a65237677ce7631e105dcfb7586a4fb8b6bc3abecd",
+    "sources/particles-invisible/invisible.cpp": "44ae67d1c6722c6af0f0e806d0ce7c13b07c10fb3a14667f5b2c6d7a7b20e8db",
+    "sources/particles-light-reset/host_check.cpp": "4ad7a85b4888afb185f845e1f88e4dab76e32b93a22dde1fc20d1e4f4333e846",
+    "sources/particles-light-reset/light_reset.cpp": "c9f8edb634246efd80cd8d2292a6f8cde95760ade977bf50b7293a8f2d545b8d",
+    "sources/particles-list-destroy/host_check.cpp": "40d41547f126a0903c73ceabdd4ffaeda34a97b9d59e837fc06df328eece8207",
+    "sources/particles-list-destroy/list_destroy.cpp": "2e63e459b4df359ea141e67eba200b65471b7d2e8a2f79463683c4e574d6a6d5",
+    "sources/particles-model-clipping/host_check.cpp": "b95937ded40f9025198237b35c938ef3f65afeea6ea31b3d49724100e0b1b071",
+    "sources/particles-model-clipping/model_clipping.cpp": "13c11cb714b23505a58515207469766bcbf349f1b171baa3dc59542b6621036a",
+    "sources/particles-nm-lines/host_check.cpp": "031644fbfae3390cf268304d619ab4d1bb618483481db344c51f528c049b4783",
+    "sources/particles-nm-lines/nm_lines.cpp": "93e284120e270d9a83ba87ae07054a5a688a20f31c11374e53eff641a9bddf0f",
+    "sources/particles-nm-single/host_check.cpp": "9fa183538fc459b1039950a58b8f7242a4bfcbe4a710a41528220805c7ff3940",
+    "sources/particles-nm-single/nm_single.cpp": "a238a9b241412fb99533537a4f2871fa2adf949947eefbb4037c61bee9cb5b50",
+    "sources/particles-nodes/host_check.cpp": "68cddf39ff2e255d038cd1243e0dfc49a8642d15188a27edefa8d1994646638d",
+    "sources/particles-nodes/nodes.cpp": "32e3b886ed86bd49105b2d82f22aa5d4627bd25aad660d40a1395dba42455848",
+    "sources/particles-noise-table/host_check.cpp": "0b5d6ebf8efe47119c8b92cda300a78934879d2d4048842f46656f08c2a51024",
+    "sources/particles-noise-table/noise_table.cpp": "8d0adbcd5076b0bf113564da6962ec05fa4875f67ceb4776f86728e3dc187f28",
+    "sources/particles-object-draw-enable/host_check.cpp": "c16eab35edae5687e511f57eadd7e77f20dc1c79fead5bb8afb6dee165189d68",
+    "sources/particles-object-draw-enable/object_draw_enable.cpp": "70056c889f0cc3c45a54d2a76b1c4d5942d31bb0d4bc93cb60a9917162ce0d4c",
+    "sources/particles-object-grid/host_check.cpp": "825ca25723f7bcb49dc54df5247374c4f7845d2547915890553b43ce5c340149",
+    "sources/particles-object-grid/object_grid.cpp": "4174591bb7d5c4c68298f03368b7e88002576803933aa99827ea09534851af29",
+    "sources/particles-object-hash/host_check.cpp": "4fb7daee6db8a1ea9781f9585c4f608f73fc4da7662a563a9bb28ef64604a4c4",
+    "sources/particles-object-hash/object_hash.cpp": "dbc1404bbf092369b590332961d1383892416934348587acc0304db303ed3cee",
+    "sources/particles-object-ignore-flags/host_check.cpp": "bd9d7e8f36bac43c0c69743f8c351501b202ce1eb16a2fc09585ab0055116f58",
+    "sources/particles-object-ignore-flags/object_ignore_flags.cpp": "6088e77e54cd896db8830396cc72e741e9cda893a8ae7980005ed8b7883f4d00",
+    "sources/particles-object-strings/host_check.cpp": "72a3d336d69b7f5364d32304be376c86124e9eaf647e5b85c4e720cad37662d7",
+    "sources/particles-object-strings/object_strings.cpp": "e2a73c4417b6b9e5c43c4818aa603b996eeeedab27bb0568f3f2f715ad3ec95a",
+    "sources/particles-off-the-grid/host_check.cpp": "7b983120098866325f22d46033e0a58f88ed30a3a6612dea5ec14359f61c6d36",
+    "sources/particles-off-the-grid/off_the_grid.cpp": "963d6ef386aedc6dcc44efa33d192942d58a61649315ecc3cb2c3596c4eb505f",
+    "sources/particles-p-frame-num/host_check.cpp": "6c67b9a8ad578354406623374cfc59d559eed927060eca2781670227adf97e58",
+    "sources/particles-p-frame-num/p_frame_num.cpp": "37ba21f9b811e1a854c95d6d667810cd18969945386f5f404ee3882fedb9b821",
+    "sources/particles-particle-block/host_check.cpp": "b74a6ee5a1716c920ede84fedf0399809823e6079330daff241e5d52d4371aed",
+    "sources/particles-particle-block/particle_block.cpp": "88b0cc1fad92b7a14b121e6f02f9b1e2c37bc4dc8588c1e818365ab65d3adf6f",
+    "sources/particles-particle-systems/host_check.cpp": "b2c6a364bb1f7ea8f50d8e8a51b6941d4f130797d718ce6955b0b636a0cc87f4",
+    "sources/particles-particle-systems/particle_systems.cpp": "b1582629d20cc18ed190ba138ab445bb6b21baf1c012d7ab9a7dd6a1a444a4df",
+    "sources/particles-ps-sequence/host_check.cpp": "11381f91837cbd91221b49ee1c7379e433d695f04f5958ed02a2c8718b97f758",
+    "sources/particles-ps-sequence/ps_sequence.cpp": "cbfec073858ac9c18e3ccbbcbc287050197a0de0c91aecd5173426defbe3502b",
+    "sources/particles-scene/host_check.cpp": "0f9ef460832e6a5a4abda06855a6324e9f21de56d5cfca52a44b91c2784fa523",
+    "sources/particles-scene/scene.cpp": "62132d07f2f2fa6c3f3f1fed2bb6d26515692066a108ea4ecc9cab07567ee62d",
+    "sources/particles-string-hash/host_check.cpp": "6f4c0ea6db134e31eb09f6fd84d955352d08938c9b529f04a6f9096d4b3024eb",
+    "sources/particles-string-hash/string_hash.cpp": "e72b53cff5fbe27be0eb3783890fc5ac9b1e2aeb529928ac9e8916abff56fd54",
+    "sources/particles-trail-sequence/host_check.cpp": "98ff119adeb6c160917e5f688c3a59ae328060d41abb58d24776914d352cce3a",
+    "sources/particles-trail-sequence/trail_sequence.cpp": "c9b6a6e99faaf466cb143a3d8a9fac41da2945dd67623d0144260337e4472ea8",
+    "sources/particles-trail/host_check.cpp": "cb6a017ac9f6ac157652d9bf82f4c5540052df431d3aa2cea773a3f3ebdc2d04",
+    "sources/particles-trail/trail.cpp": "0c5069fc2bb4bb5aac2b43b7776d115e30a7c6f78db377e12a02f786c30bd4f7",
+    "sources/particles-wiggly-tab/host_check.cpp": "6b3c28e5ea683c9dac03f24445c2ec18524958d586aab3c43d74a2e3ccc4d936",
+    "sources/particles-wiggly-tab/wiggly_tab.cpp": "a9a0ca7b59e1e002526ef069260203b5b75f3b99f107993fffd3eb2bdebcf5a9",
+    "sources/particles-world-camera-matrix/host_check.cpp": "33b49561118ff3105432c4cdc12c195463316451ed353a28eac38757d029b4de",
+    "sources/particles-world-camera-matrix/world_camera_matrix.cpp": "ce1f0b948a7ef3779695962eed3205ff663d456a835b349168f7994002bc732e",
+    "sources/particles-world-camera-pos/host_check.cpp": "e65db6148fdfe44356952dee65cd3a49eac92f808d88810fd64d1c3eab0a04ee",
+    "sources/particles-world-camera-pos/world_camera_pos.cpp": "bd3734804cd76e30f6ceacf4928a66de4ac168ecde09fe5c17e230edc3cea279",
     "sources/render-lights-ambient-vtable/ambient_vtable.cpp": "b1d7a54bbd3264523bedb141efeeae4775b7beaaa09451d40a8a5a1687ab5244",
     "sources/render-lights-ambient-vtable/ambient_vtable_contract.cpp": "56b50c01e814747f7459b3912bc1c67becfc44890892ae148431015735e416bc",
     "sources/render-lights-border-pop/pop_border.cpp": "bda8547c968cbcaf8872e2396172a7364f64b3f620191153037399bc3425977a",
@@ -14653,11 +15196,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 913,
-    "authored_default_inputs": 911,
+    "selected_inputs": 958,
+    "authored_default_inputs": 956,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 770,
-    "compiled_body_bytes_from_accepted_inputs": 349800,
+    "emitted_function_definitions_including_helpers": 780,
+    "compiled_body_bytes_from_accepted_inputs": 352936,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -14670,7 +15213,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 600
+    "package_selected_inputs": 645
   },
   "startup_implementations": [
     {
@@ -23908,6 +24451,594 @@
       ],
       "host_files": [
         "sources/vslots-b-turn-to-face/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-alloc-descriptor/alloc_descriptor.cpp",
+      "source_sha256": "c4af109e165dc7c94ab1c7532eae7ff6e71c72292b2079c489f18be43d03fa7e",
+      "object_sha256": "5ef8a0a866c54485ffe2d4beaab0d047ca1dfb7c671c10742ee256610b5c8ea5",
+      "emitted_functions": [
+        {
+          "name": "allocDescriptor__FP11ParticleDef",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/particles-alloc-descriptor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-always-draw-list/always_draw_list.cpp",
+      "source_sha256": "996f30fa896ff79e1ef28f2f35509e7962628c9743fdd187671611940dc91715",
+      "object_sha256": "b8a140f64cb7f04bd2622aeb803922a2e00d9ff0f2f9d6bde5cc117a261046d4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-always-draw-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-anim-results/anim_results.cpp",
+      "source_sha256": "cb4f251b2f310bc01208cf7c4c8e30ed85777e452cc50b3c202326d102244636",
+      "object_sha256": "268f3d304e758c09b5b01d5cb90d823015111d836b092d8bc28f1fe4dbc5c549",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-anim-results/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-anim-table/anim_table.cpp",
+      "source_sha256": "b725f405ca3e76ab9ddbb3486944ccac456ecfa5432ed3c9e1734974aaf6213d",
+      "object_sha256": "c1ffbf3f186a00b138334430c241c3428c770c6e7c4752a7e600fae59cf5b450",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-anim-table/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-ar-list-back/ar_list_back.cpp",
+      "source_sha256": "1345748936c07263dc0a93c05f29a94cd348acbef07d7d97026b9265d0ca97f2",
+      "object_sha256": "cee699a93a148e73c1ad304afea8261f003055aa0b87174e35f054f20bb67fdc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-ar-list-back/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-ar-list/ar_list.cpp",
+      "source_sha256": "8c1cc7145c84df2f807f4d2b92672c3437b1b32656df882f54a7cefff0306769",
+      "object_sha256": "6ac9f914e052b7bd21c51621091b07921e3f865b1baa28a69c79cf20462ef016",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-ar-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-bolt/bolt.cpp",
+      "source_sha256": "75a50b88a2d236588ad30cf775ae5bafb4e036fe7ad5fc4e3450eda2128e06b2",
+      "object_sha256": "ec83feddc5a3975f6b1a34137724f107fd69940a054b5a0b34e15a708947f48a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-bolt/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-desc-list-mark/desc_list_mark.cpp",
+      "source_sha256": "7d707abcc55f58727fa5f2c8b6172f12b8d8d59572f677c88c9c5074c5357045",
+      "object_sha256": "1687df0ca46fd2b6e014d8d37337baa68d339dc4f63d31a295c5e763cfdef993",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-desc-list-mark/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-desc-list/desc_list.cpp",
+      "source_sha256": "60dbfb1d58fb35eba4e58d4af258acebf82e0a7182b4a16553fb5acb60db73fb",
+      "object_sha256": "5173c0d7ba35ca825d6fa6138aba66e1341a74ebee78be3122d2d77f22ec2729",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-desc-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-draw-objects-task/draw_objects_task.cpp",
+      "source_sha256": "07c1a012c48f67378bc4587aa7a274553c10c809406c1e393aaf8272939bd6a5",
+      "object_sha256": "4cb760fbc0f00772e5e1b6bc5dc0cc755e205a27cd1c30389e7bbf5db0a20ed7",
+      "emitted_functions": [
+        {
+          "name": "call_draw",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "walk_list",
+          "compiled_body_bytes": 680
+        },
+        {
+          "name": "drawObjectsTask__Fv",
+          "compiled_body_bytes": 792
+        }
+      ],
+      "host_files": [
+        "sources/particles-draw-objects-task/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-draw-particles-task/draw_particles_task.cpp",
+      "source_sha256": "b90655ef205574d9a2eeb306b368095986e9657b9863c717b0573a6551252ba3",
+      "object_sha256": "d37616b4405427cbc9bafdd32dde917acaf48d4758a59e094efca035f474c070",
+      "emitted_functions": [
+        {
+          "name": "drawParticlesTask__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/particles-draw-particles-task/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-far-clip/far_clip.cpp",
+      "source_sha256": "2fe5ceb3dd46ee3e0996bfe7e0cde84d9f444a986ede07ee7e044dd8caaa8af3",
+      "object_sha256": "188872494c04ff9a55b6cc00e1c940d430b92220160fe88e8766e5a97df9b7cf",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-far-clip/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-frame-states/frame_states.cpp",
+      "source_sha256": "a483415a541921d27e4afb1842ad122797f8168c012965d4152adc680876d9c8",
+      "object_sha256": "7f76c547d38dd2a17e23d8d74be2ecd1b972966e351cb1a2b48c3d8e7180377a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-frame-states/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-free-nodes/free_nodes.cpp",
+      "source_sha256": "fccdca0cb0aa100edf9b59c5a53b2347f9e1e1921172f13557c2f77e89cefbf5",
+      "object_sha256": "35814846050d09956a8ca542806bef7d98fa485c0a43393441417f2f20fa8f33",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-free-nodes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-fs-list/fs_list.cpp",
+      "source_sha256": "6f04cd68b2d02fb500287658a0b33a0f46e6de7a6fa57a5081d350147ac07e09",
+      "object_sha256": "b62451ac3ef2fbcdef0b88b19ff3aa895766f40ee67772d68eebe9d02b4cdb03",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-fs-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-ghost-object-grid/ghost_object_grid.cpp",
+      "source_sha256": "720cd09eef65c08c060a280b516851c71e5fce2879afb0a902bb9de38be8166d",
+      "object_sha256": "0763d646c76fe2c397adb23202d501ad286bbdef74802e68a9940e6b45a55bb6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-ghost-object-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-identity-result/identity_result.cpp",
+      "source_sha256": "a740c301093222828878e95eda5b014876eeab739fcf000d393cfa4809b35323",
+      "object_sha256": "d7861776a4d100ea34b9ecb84c1459dceb33766d6fa4f8396dd89c7a2e90b43c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-identity-result/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-init-noise/init_noise.cpp",
+      "source_sha256": "ac3110fdc5175b1cc7368c6d60d1492fa3d94d081fb1a652130eee88da9a1178",
+      "object_sha256": "63681c3e9861398e7a7387f88af07b3bbd6f6854765885e95bf822955e618423",
+      "emitted_functions": [
+        {
+          "name": "initNoiseTable__Fv",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "host_files": [
+        "sources/particles-init-noise/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-init-particle-systems/init_particle_systems.cpp",
+      "source_sha256": "18409b7f1ee70b9e6455499bcf7cf7b0c54c3830ef7b3cecb8f55419de59fc08",
+      "object_sha256": "944db46da56f3cf1a35d1d1f455a5e783c21255d36acb4f9d347607a30885687",
+      "emitted_functions": [
+        {
+          "name": "initParticleSystems__Fv",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/particles-init-particle-systems/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-init-trails/init_trails.cpp",
+      "source_sha256": "23ea1b6c5573dc4f0805066e713187f2ff5f4bd441ef79115baab28ba797e263",
+      "object_sha256": "b6e2c5e40891f01f76ba958a18bb6fe6b1e5509a309459c1ec9731e757810636",
+      "emitted_functions": [
+        {
+          "name": "initTrails__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/particles-init-trails/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-invisible/invisible.cpp",
+      "source_sha256": "44ae67d1c6722c6af0f0e806d0ce7c13b07c10fb3a14667f5b2c6d7a7b20e8db",
+      "object_sha256": "1f806f3897f587c66220e5c3c9ba4e5ce4ce859159ba40b0a072bacfa6a922bc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-invisible/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-light-reset/light_reset.cpp",
+      "source_sha256": "c9f8edb634246efd80cd8d2292a6f8cde95760ade977bf50b7293a8f2d545b8d",
+      "object_sha256": "2a2d1bdc51e92833658a739fa9cd66452b99e918d9c5f954a313ab3a04f75e05",
+      "emitted_functions": [
+        {
+          "name": "lightResetOptionalParams__Fv",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "host_files": [
+        "sources/particles-light-reset/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-list-destroy/list_destroy.cpp",
+      "source_sha256": "2e63e459b4df359ea141e67eba200b65471b7d2e8a2f79463683c4e574d6a6d5",
+      "object_sha256": "144d4a38f947ef1775b77d0f3bc21c8f333179ae2569c89f264a8a34806a557e",
+      "emitted_functions": [
+        {
+          "name": "listDestroy__FP8ListHead",
+          "compiled_body_bytes": 348
+        }
+      ],
+      "host_files": [
+        "sources/particles-list-destroy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-model-clipping/model_clipping.cpp",
+      "source_sha256": "13c11cb714b23505a58515207469766bcbf349f1b171baa3dc59542b6621036a",
+      "object_sha256": "6181b30e537199c2b50e1811c3e7b4be7e5d86eb2a54d83f2bf7daafa2ca50d7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-model-clipping/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-nm-lines/nm_lines.cpp",
+      "source_sha256": "93e284120e270d9a83ba87ae07054a5a688a20f31c11374e53eff641a9bddf0f",
+      "object_sha256": "1143b71293e7d58f76da574b29e76fe6678cf3de7c208479b9d68657c963673d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-nm-lines/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-nm-single/nm_single.cpp",
+      "source_sha256": "a238a9b241412fb99533537a4f2871fa2adf949947eefbb4037c61bee9cb5b50",
+      "object_sha256": "bc1d45a240d8040b2cb2b20779c2834a0e2f014a3365281f5cc9a0b34531a5b6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-nm-single/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-nodes/nodes.cpp",
+      "source_sha256": "32e3b886ed86bd49105b2d82f22aa5d4627bd25aad660d40a1395dba42455848",
+      "object_sha256": "b3b80eee02e03e5032568a172aa141da8ad1fe6a1688c0ba5d4d6518ca9d095e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-nodes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-noise-table/noise_table.cpp",
+      "source_sha256": "8d0adbcd5076b0bf113564da6962ec05fa4875f67ceb4776f86728e3dc187f28",
+      "object_sha256": "e65dd2d71b3e2a651a9ce8c62a590c653fa1a55e8aca5569072a9d95bf0aa9dc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-noise-table/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-object-draw-enable/object_draw_enable.cpp",
+      "source_sha256": "70056c889f0cc3c45a54d2a76b1c4d5942d31bb0d4bc93cb60a9917162ce0d4c",
+      "object_sha256": "ea690ef2cfb8ad8cb4f4b48f371ee931d6fdc7fb3f10cf8e651dbd3e6cb2e403",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-object-draw-enable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-object-grid/object_grid.cpp",
+      "source_sha256": "4174591bb7d5c4c68298f03368b7e88002576803933aa99827ea09534851af29",
+      "object_sha256": "cc4be766eda46facfe36d97360bb8402c3a5001ac1c80ea005e439ed2f1e0c36",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-object-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-object-hash/object_hash.cpp",
+      "source_sha256": "dbc1404bbf092369b590332961d1383892416934348587acc0304db303ed3cee",
+      "object_sha256": "eb8c6a665cacf84300b5168806fd6cc725ea909cc7d6424a91e875f8c73bb860",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-object-hash/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-object-ignore-flags/object_ignore_flags.cpp",
+      "source_sha256": "6088e77e54cd896db8830396cc72e741e9cda893a8ae7980005ed8b7883f4d00",
+      "object_sha256": "37614d79c83f132fdec1ac011e1caa2609f6c00d8a1747c7e853875219e487e6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-object-ignore-flags/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-object-strings/object_strings.cpp",
+      "source_sha256": "e2a73c4417b6b9e5c43c4818aa603b996eeeedab27bb0568f3f2f715ad3ec95a",
+      "object_sha256": "e207505b73dcece22aeeb5f5a01c7bdf5a353d41e7969048c21cdde61b75c1ad",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-object-strings/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-off-the-grid/off_the_grid.cpp",
+      "source_sha256": "963d6ef386aedc6dcc44efa33d192942d58a61649315ecc3cb2c3596c4eb505f",
+      "object_sha256": "2b11e72290f16321f025edf2d81adfd5dc2ff3ea0cb782f9d97c44200a5fc1db",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-off-the-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-p-frame-num/p_frame_num.cpp",
+      "source_sha256": "37ba21f9b811e1a854c95d6d667810cd18969945386f5f404ee3882fedb9b821",
+      "object_sha256": "0ee0d0c16b019260258679f2183b2ccda0221d3da700dd7f8056f50f9df46604",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-p-frame-num/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-particle-block/particle_block.cpp",
+      "source_sha256": "88b0cc1fad92b7a14b121e6f02f9b1e2c37bc4dc8588c1e818365ab65d3adf6f",
+      "object_sha256": "f64bdbff86ea21ea40f5d6e8160d09022cc3435c63f582aa204ffcae5d80bfc7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-particle-block/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-particle-systems/particle_systems.cpp",
+      "source_sha256": "b1582629d20cc18ed190ba138ab445bb6b21baf1c012d7ab9a7dd6a1a444a4df",
+      "object_sha256": "c9327d872e8f5ec5a68a80900d8724af1407d0b827642005d3b73f557a4939f5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-particle-systems/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-ps-sequence/ps_sequence.cpp",
+      "source_sha256": "cbfec073858ac9c18e3ccbbcbc287050197a0de0c91aecd5173426defbe3502b",
+      "object_sha256": "a3286cb5329a235bb62d5c8d115be92ff64c8ca5c278035de50c37df76010f65",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-ps-sequence/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-scene/scene.cpp",
+      "source_sha256": "62132d07f2f2fa6c3f3f1fed2bb6d26515692066a108ea4ecc9cab07567ee62d",
+      "object_sha256": "d7cbffa28a704256f57440a19a22b2536a500056e1acd91464628955237ec5ac",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-scene/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-string-hash/string_hash.cpp",
+      "source_sha256": "e72b53cff5fbe27be0eb3783890fc5ac9b1e2aeb529928ac9e8916abff56fd54",
+      "object_sha256": "0c76ca4cebf60fedeb404a102cabc7e3e90d824f1c1b881227eea67cc823f156",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-string-hash/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-trail-sequence/trail_sequence.cpp",
+      "source_sha256": "c9b6a6e99faaf466cb143a3d8a9fac41da2945dd67623d0144260337e4472ea8",
+      "object_sha256": "533041b8f8f7ae86848cffa33d200a807288f53498acd4185c6ddde2153eac49",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-trail-sequence/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-trail/trail.cpp",
+      "source_sha256": "0c5069fc2bb4bb5aac2b43b7776d115e30a7c6f78db377e12a02f786c30bd4f7",
+      "object_sha256": "73aca66360141c4e41254c50b9a5f556097cd35da427207b24693ab8404df375",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-trail/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-wiggly-tab/wiggly_tab.cpp",
+      "source_sha256": "a9a0ca7b59e1e002526ef069260203b5b75f3b99f107993fffd3eb2bdebcf5a9",
+      "object_sha256": "ba84da916390611a01485cfbe9df0b04decf03dd6b27b6fbc1c2062d54972f20",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-wiggly-tab/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-world-camera-matrix/world_camera_matrix.cpp",
+      "source_sha256": "ce1f0b948a7ef3779695962eed3205ff663d456a835b349168f7994002bc732e",
+      "object_sha256": "52fcdb7c3704ef183218fab2771847aaa036782bb2a2ef81925bde95b0aa0244",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-world-camera-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "particles",
+      "source": "sources/particles-world-camera-pos/world_camera_pos.cpp",
+      "source_sha256": "bd3734804cd76e30f6ceacf4928a66de4ac168ecde09fe5c17e230edc3cea279",
+      "object_sha256": "6119d574004dae9549981de23d53025fb03b0bd0ea2f4c267532b618b61a4497",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/particles-world-camera-pos/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -1096,6 +1096,34 @@ Closed: `msg_load__5LeverPc`, `setState__7Nataslai`,
 and does not change the link. 768 function bodies, 911 authored inputs,
 zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/particles
+
+All 45 units were selected. Host checks passed. Ten of them are functions.
+The other 35 are data. Eleven data names were not previous imports, so they
+did not change the count: `alwaysDrawList`, `bolt`, `descList`,
+`modelClippingOn`, `noiseTable`, `objectIgnoreFlags`, `PS`, `psSequenceNm`,
+`trail`, `trailSequenceNm`, and `worldCameraMatrix`.
+
+| | |
+|---|---|
+| Before | 947 |
+| After | 929 |
+| Closed | 34 |
+| Opened | 16 |
+
+Closed includes `objectGrid`, `ghostObjectGrid`, `stringHash`, `objectHash`,
+`offTheGrid`, `objectStrings`, `freeNodes`, `worldCameraPos`,
+`drawObjectsTask__Fv`, `drawParticlesTask__Fv`, `initNoiseTable__Fv`,
+`initParticleSystems__Fv`, `initTrails__Fv`, `lightResetOptionalParams__Fv`,
+`listDestroy__FP8ListHead`, and `allocDescriptor__FP11ParticleDef`. Opened:
+`P_DrawParticles__FP8Matrix34`, `_$_16ListSafeIterator`,
+`__16ListSafeIteratorP8ListHeadi`, `ambientOnly`, `charAmbient`,
+`charDirect`, `charDirect2`, `charDirectDir`, `charDirectDir2`,
+`charScaleB`, `charScaleG`, `charScaleR`, `disableVolumetricLighting`,
+`interfaceMode`, `next__16ListSafeIterator`, and
+`worldClipCubeToClipFrustum__FPA1_fi`. 778 function bodies, 956 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1143,10 +1171,10 @@ each pair is one symbol.
 world-state still defines `norrath_loader_current_name_view` for that
 original name and does not alias it. Decide whether they are one symbol.
 
-subsystem-inits leaves `objectGrid`, `ghostObjectGrid`, `stringHash`,
-`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes` unresolved.
-object-infra already defines view names for those objects and does not alias
-the original names. Decide whether each pair is one symbol.
+particles now defines `objectGrid`, `ghostObjectGrid`, `stringHash`,
+`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes`. object-infra
+still defines view names for those objects and does not alias the original
+names. Decide whether each pair is one symbol.
 
 `norrath_restore_broadcast_mask_word` is still unresolved. world-state defines
 that address once, as `norrath_grid_ignore_flags_view`, and does not emit a
@@ -1204,7 +1232,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, and vehicle-actors. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, and particles. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1253,3 +1281,4 @@ and no startup stage has executed.
 - 2026-10-11 17:49 CDT — `agents/vehicle-actors` — 950 unresolved imports
 - 2026-10-11 17:51 CDT — `agents/vslots-b` — 947 unresolved imports
 - 2026-10-11 17:52 CDT — `agents/vslots-b` — 947 unresolved imports
+- 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
