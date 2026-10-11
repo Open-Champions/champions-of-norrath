@@ -50,3 +50,22 @@ Profile `authored_entry_asm`. Header closure empty. Object name
 `set_dma_chain.o`. Source `sources/audio-set-dma-chain/set_dma_chain.S`.
 SHA-256 `488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e`.
 Do not plan `host_check.cpp`.
+
+## DMA enable
+
+Observed `EnableDmac` at 0x002d5cf8 is 104 bytes. It masks COP0 Status with
+`0x10000`, calls `DIntr` only when that bit is set, requests service 22
+(`_EnableDmac` at 0x002d4e40) with the incoming channel, executes `sync`, and
+calls `EIntr` on the same bit. The service result is returned. This source
+issues service 22 directly and calls `norrath_sound_disable_interrupts` and
+`norrath_sound_enable_interrupts`. It is not an original-byte match. The host
+contract fails unless the disabled path is service-then-sync, the enabled path
+is disable, service 22, sync, enable, and bit 0 alone does not take the
+interrupt path.
+
+### Build-plan entry
+
+Profile `authored_cpp`. Header closure empty. Object name `enable_dma.o`.
+Source `sources/audio-enable-dma/enable_dma.cpp`. SHA-256
+`295e36b9d1eb95ad5e2d8f32b37cdfd5a89a15e35bf84b923fb807a36f2180a6`.
+Do not plan `host_contract.cpp`.
