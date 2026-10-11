@@ -1,0 +1,21 @@
+// Observed player tag strings. Addresses are the suffixes of the import names.
+extern "C" const char norrath_player_view_462350[] = "noCollide";
+extern "C" const char norrath_player_view_462360[] = "animMask";
+extern "C" const char norrath_player_view_4623a0[] = "equipmnt.lmp";
+extern "C" const char norrath_player_view_4623b0[] = "healingpotion";
+extern "C" const char norrath_player_view_483ba0[] = "action";
+extern "C" const char norrath_player_view_483ba8[] = "name";
+extern "C" const char norrath_player_view_483bb0[] = "rname";
+extern "C" const char norrath_player_view_483bb8[] = "%s.lmp";
+extern "C" const char norrath_player_view_483bc0[] = "%s.vif";
+extern "C" const char norrath_player_view_483bc8[] = "%s.tex";
+extern "C" const char norrath_player_view_483bd0[] = "lump";
+extern "C" const char norrath_player_view_483bd8[] = "model";
+extern "C" const char norrath_player_view_483be0[] = "texture";
+extern "C" const char norrath_player_view_483be8[] = "anim";
+extern "C" const char norrath_player_view_483bf0[] = "%d";
+extern "C" const char norrath_player_view_483c08[] = "gold";
+extern "C" const char norrath_player_view_483c10[] = "from";
+extern "C" const char norrath_player_view_483c18[] = "default";
+extern "C" const char norrath_player_view_483c20[] = "gate";
+extern "C" const char norrath_player_view_483c28[] = "item";
