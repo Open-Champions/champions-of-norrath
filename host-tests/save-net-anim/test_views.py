@@ -198,6 +198,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_animation_dependency_view_4e6755.cpp",
                     "norrath_animation_dependency_view_4e6755", 3 * 17632 + 1, require_zero=True)
 
+    def test_send_cursors(self):
+        self.expect("norrath_network_send_cursor_words_view.cpp",
+                    "norrath_network_send_cursor_words_view", 3 * 17632 + 4, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
