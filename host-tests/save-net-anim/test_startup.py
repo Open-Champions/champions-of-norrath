@@ -112,6 +112,9 @@ class StartupTests(unittest.TestCase):
     def test_mc_protect_ram_slot(self):
         self.expect_object("mc_protect_ram_slot.cpp", "MC_ProtectRamSlot", 1, b"\0")
 
+    def test_net_game_launch_info(self):
+        self.expect_object("net_game_launch_info.cpp", "netGameLaunchInfo", 328, bytes(328))
+
 
 if __name__ == "__main__":
     unittest.main()
