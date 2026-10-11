@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 339,
+  "default_authored_inputs": 343,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -950,6 +950,10 @@
     "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
     "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
     "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+    "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+    "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+    "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
     "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
@@ -5955,6 +5959,42 @@
       "profile": "authored_cpp",
       "sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 341,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_slow_run_list.o",
+      "profile": "authored_cpp",
+      "sha256": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+      "source": "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 342,
+      "kind": "independently_authored_source",
+      "object_name": "state.o",
+      "profile": "authored_cpp",
+      "sha256": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+      "source": "sources/object-infra-state/state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 343,
+      "kind": "independently_authored_source",
+      "object_name": "game_object_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+      "source": "sources/object-infra-vtable/game_object_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 344,
+      "kind": "independently_authored_source",
+      "object_name": "factory_text.o",
+      "profile": "authored_cpp",
+      "sha256": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+      "source": "sources/object-infra-factory-text/factory_text.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6054,7 +6094,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "1845ddf017f862d5c01bc2ec51f5960cedaaefa74347b4a9aa4455357f90c83c",
+  "snapshot_sha256": "fb5f35c531279afc3267e8b643a7ec6dfa5ab88071ed8d5bd9bdf6ef4e8f955a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

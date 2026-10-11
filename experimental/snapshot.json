@@ -5189,6 +5189,47 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
+    },
+    {
+      "input_order": 341,
+      "component": "object-infra-slow-run-list",
+      "object_name": "add_to_slow_run_list.o",
+      "private_object_sha256": "2a3ebad8cfc83fe16a20293079e7cd0bd042277e1dda585781429c1d8966824f",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_slow_run_list",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp"
+    },
+    {
+      "input_order": 342,
+      "component": "object-infra-state",
+      "object_name": "state.o",
+      "private_object_sha256": "9f64dc231f9a9437b15f117cb3609dfe1a2985013779d68d95a4cfd4ccefccdb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/object-infra-state/state.cpp"
+    },
+    {
+      "input_order": 343,
+      "component": "object-infra-vtable",
+      "object_name": "game_object_vtable.o",
+      "private_object_sha256": "594f898d4e54067a2ad162bc19e771ca9e4dae000ba34203902bba295ac4084a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/object-infra-vtable/game_object_vtable.cpp"
+    },
+    {
+      "input_order": 344,
+      "component": "object-infra-factory-text",
+      "object_name": "factory_text.o",
+      "private_object_sha256": "bfe6804ff1848d93cc9f2bef5eb61f44399b850d0a7bc0c512a167c8c9fa895b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/object-infra-factory-text/factory_text.cpp"
     }
   ],
   "drafts": [
@@ -6227,7 +6268,15 @@
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
     "sources/memory-block-storage/host_check.cpp": "8a135c017c628544dbe63f8b42ede6f6e8e0e5fe7adfc83c2aa76e39a580f03f",
     "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
-    "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311"
+    "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311",
+    "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+    "sources/object-infra-slow-run-list/add_to_slow_run_list_contract.cpp": "1327ff9dbeb0a87b0b1cc17076c78ee407ed6bcdf0121eb77d59d9af5e5ba225",
+    "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+    "sources/object-infra-state/state_contract.cpp": "0fd212e29ca6492099b9271585dddd25b873e62d005d8a57870f5d777935ff48",
+    "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+    "sources/object-infra-vtable/game_object_vtable_contract.cpp": "980b81b6b1d140e1d39d394eba30bd1686f7fe15c7da8d9944899faecfb9dab7",
+    "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+    "sources/object-infra-factory-text/factory_text_contract.cpp": "aa0972e327ab2a47dddec1066a0074e9c8b5532e7674d3a4fbda5dafc7f40e42"
   },
   "additional_implementations": [
     {
@@ -6669,11 +6718,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 341,
-    "authored_default_inputs": 339,
+    "selected_inputs": 345,
+    "authored_default_inputs": 343,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 444,
-    "compiled_body_bytes_from_accepted_inputs": 249008,
+    "emitted_function_definitions_including_helpers": 445,
+    "compiled_body_bytes_from_accepted_inputs": 249312,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6686,7 +6735,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 33,
-    "package_selected_inputs": 29
+    "package_selected_inputs": 33
   },
   "startup_implementations": [
     {
@@ -7405,6 +7454,59 @@
       "emitted_functions": [],
       "host_files": [
         "sources/memory-wrapper-byte/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "object-infra",
+      "source": "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp",
+      "source_sha256": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+      "object_sha256": "2a3ebad8cfc83fe16a20293079e7cd0bd042277e1dda585781429c1d8966824f",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_slow_run_list",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/object-infra-slow-run-list/add_to_slow_run_list_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "object-infra",
+      "source": "sources/object-infra-state/state.cpp",
+      "source_sha256": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+      "object_sha256": "9f64dc231f9a9437b15f117cb3609dfe1a2985013779d68d95a4cfd4ccefccdb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/object-infra-state/state_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "object-infra",
+      "source": "sources/object-infra-vtable/game_object_vtable.cpp",
+      "source_sha256": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+      "object_sha256": "594f898d4e54067a2ad162bc19e771ca9e4dae000ba34203902bba295ac4084a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/object-infra-vtable/game_object_vtable_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "object-infra",
+      "source": "sources/object-infra-factory-text/factory_text.cpp",
+      "source_sha256": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+      "object_sha256": "bfe6804ff1848d93cc9f2bef5eb61f44399b850d0a7bc0c512a167c8c9fa895b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/object-infra-factory-text/factory_text_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
