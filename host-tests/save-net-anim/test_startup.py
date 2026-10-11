@@ -91,6 +91,9 @@ class StartupTests(unittest.TestCase):
         self.assertEqual(alias["shndx"], original["shndx"])
         self.assertEqual(self._bytes(data, sections, alias), b"\0")
 
+    def test_net_interface_is_up(self):
+        self.expect_object("net_interface_is_up.cpp", "netInterfaceIsUp", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
