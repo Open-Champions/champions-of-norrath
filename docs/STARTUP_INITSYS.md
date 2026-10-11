@@ -20,3 +20,7 @@ not define semaphore objects or deletion effects. `SignalSema` (service 66) is
 not on this path.
 
 `DeleteSema` uses the same shape for service 65. Both wrappers were compared as complete `.text` bodies against the pinned executable.
+
+## CRT0 supplement
+
+`supplement_crt0` at 0x002dd6b0 stores `CreateSema` results in `__sce_sema_id` and `__sce_eh_sema_id`. Each request has word 1 and word 2 set to 1. The other parameter words are not written; how many words service 64 reads is unknown. The host contract checks the two stored identifiers and those two words. The 72-byte body is not an original-byte match.

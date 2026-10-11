@@ -123,6 +123,7 @@ def check(root):
         ('sources/runtime-kernel/init_system.cpp', '_InitSys'),
         ('sources/runtime-initsys/create_sema.S', 'CreateSema'),
         ('sources/runtime-initsys/delete_sema.S', 'DeleteSema'),
+        ('sources/runtime-initsys/supplement_crt0.cpp', 'supplement_crt0'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
