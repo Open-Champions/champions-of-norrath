@@ -28,6 +28,7 @@ STUBS = {
     0x00143830: "norrath_actor_add_run_list",
     0x0017DB78: "norrath_world_check_for_water",
     0x0013D230: "norrath_light_add",
+    0x00165DC0: "norrath_lump_find_resource",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -471,7 +472,7 @@ def object_bytes(machine, count):
     return bytes(machine.u8(OBJECT + index) for index in range(count))
 
 
-def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None):
+def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None, regs=None, stack=None):
     machine = Machine({}, STUBS, answers)
     machine.mem.update(image_bytes)
     for index in range(256):
@@ -486,6 +487,12 @@ def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None)
     machine.write32(5, POINT)
     machine.write32(6, type_bits)
     machine.write32(7, ARGUMENTS)
+    if regs:
+        for index, value in regs.items():
+            machine.write32(index, value)
+    if stack:
+        for index, value in enumerate(stack):
+            machine.set32(STACK + index * 8, value)
     machine.r[29] = sext32(STACK)
     machine.run(entry)
     return machine
@@ -566,6 +573,7 @@ def main():
     compare_candle2(data, loads)
     compare_container(data, loads)
     compare_candle(data, loads)
+    compare_container_resources(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -707,6 +715,72 @@ def compare_candle(data, loads):
                 print(" byte", index, hex(a), hex(b))
         raise SystemExit("candle comparison failed")
     print("candle: original/compiled scenario matched")
+
+
+def compare_container_resources(data, loads):
+    original = read_vaddr(data, loads, 0x0021D6F0, 0x17C)
+    output = Path("/tmp/actors-a-container-resources.o")
+    compile_object(ROOT / "experimental/sources/actors-a-container-resources/container_resources.cpp", output)
+    text, relocs, symbols, named = parse_object(output)
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_lump_find_resource": 0x00165DC0,
+        "norrath_world_check_for_water": 0x0017DB78,
+        "norrath_actors_a_view_44ccb8": 0x0044CCB8,
+        "norrath_factory_world_pointer_word": 0x004844A0,
+    }
+    for symbol in symbols.values():
+        if symbol.startswith(".LC"):
+            bases[symbol] = 0x220000
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x0021D6F0 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    pool = 0x220000
+    for index, byte in enumerate(named.get(".rodata.cst4", b"")):
+        compiled_image[pool + index] = byte
+    extra = {0x004844A0: 0x20001000}
+    names = {7: 0x1001, 8: 0x1002, 9: 0x1003, 10: 0x1004, 11: 0x1005}
+    filled = bytes([0x5A] * 12)
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    scenarios = [
+        (0x00AB, [5, 0xFFFFFFFD, 4, ARGUMENTS], 0x100, 0x00100110, 0x40A00000, 0xC0400000, 4),
+        (-2 & 0xFFFFFFFF, [0, 0, 1, ARGUMENTS], 0, 0x10, 0, 0, 1),
+    ]
+    for type_bits, stack, flags, expect_flags, amount_bits, other_bits, bits in scenarios:
+        left = run_case(original_image, 0x0021D6F0, [0, 0x11111111, 0x22222222, 0x1A5],
+                        type_bits=type_bits, flags=flags, extra=extra, regs=names, stack=stack)
+        right = run_case(compiled_image, CODE, [0, 0x11111111, 0x22222222, 0x1A5],
+                         type_bits=type_bits, flags=flags, extra=extra, regs=names, stack=stack)
+        names_ok = ([call[0] for call in left.calls] == [call[0] for call in right.calls] ==
+                    ["norrath_game_object_construct", "norrath_lump_find_resource",
+                     "norrath_lump_find_resource", "norrath_world_check_for_water"])
+        calls_ok = (names_ok and left.calls[0][3] == right.calls[0][3] == 0 and
+                    left.calls[0][4] == right.calls[0][4] == ARGUMENTS and left.calls[0][5] == incoming and
+                    left.calls[1][1:3] == right.calls[1][1:3] == (0x1001, 0x1002) and
+                    left.calls[2][1:3] == right.calls[2][1:3] == (0x1001, 0x1003) and
+                    left.calls[3][1] == right.calls[3][1] == 0x20001000 and
+                    left.calls[3][3] == right.calls[3][3] == 0 and left.calls[3][5] == filled and
+                    left.floats == right.floats == [0x41400000])
+        state_ok = (object_bytes(left, 160) == object_bytes(right, 160) and left.low(2) == right.low(2) == 0x1A5 and
+                    left.u8(OBJECT + 124) == 0xA5 and left.u32(OBJECT + 12) == expect_flags and
+                    left.u32(OBJECT + 28) == amount_bits and left.u32(OBJECT + 32) == other_bits and
+                    left.u32(OBJECT + 72) == 0x0044CCB8 and left.u32(OBJECT + 96) == 0x11111111 and
+                    left.u32(OBJECT + 100) == 0x22222222 and left.u32(OBJECT + 104) == bits and
+                    left.u32(OBJECT + 116) == 0 and left.u32(OBJECT + 120) == 0xFFFFFFFF and
+                    left.u32(OBJECT + 76) == 0x1001 and left.u32(OBJECT + 80) == 0x1002 and
+                    left.u32(OBJECT + 84) == 0x1003 and left.u32(OBJECT + 88) == 0x1004 and
+                    left.u32(OBJECT + 92) == 0x1005 and
+                    (left.u8(OBJECT + 56) | (left.u8(OBJECT + 57) << 8)) == (type_bits & 0xFFFF))
+        if not calls_ok or not state_ok:
+            print("resources calls", left.calls)
+            print("compiled", right.calls)
+            print("floats", [hex(v) for v in left.floats], [hex(v) for v in right.floats])
+            print("return", hex(left.low(2)), hex(right.low(2)), "flags", hex(left.u32(OBJECT + 12)), hex(right.u32(OBJECT + 12)))
+            for index, (a, b) in enumerate(zip(object_bytes(left, 160), object_bytes(right, 160))):
+                if a != b:
+                    print(" byte", index, hex(a), hex(b))
+            raise SystemExit("container resources comparison failed")
+    print("container resources: 2 original/compiled scenarios matched")
 
 
 if __name__ == "__main__":
