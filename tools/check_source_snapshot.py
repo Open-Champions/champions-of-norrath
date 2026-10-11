@@ -118,6 +118,7 @@ def check(root):
         ('sources/runtime-startup/destructors.cpp', '__do_global_dtors'),
         ('sources/runtime-startup/constructors.cpp', '__do_global_ctors'),
         ('sources/runtime-entry/start.S', '_start'),
+        ('sources/runtime-kernel/root.S', '_root'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
