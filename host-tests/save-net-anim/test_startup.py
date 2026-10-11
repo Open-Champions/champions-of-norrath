@@ -235,6 +235,23 @@ int main() {
         self.ee_exports(source, "textInitNet__Fv", [
             "dataHandle", "netRegisterMessageHandler__FPFPUci_v", "textHandler__FPUci"])
 
+    def test_mc_configure(self):
+        source = STARTUP / "mc_configure.cpp"
+        self.host([source], r'''
+extern "C" int MC_Configure__Fv();
+static int stopped;
+extern "C" void stopCardQuery__Fv() { stopped = 1; }
+extern "C" int newMode__Fii(int mode, int argument) {
+    if (!stopped || mode != 0 || argument != 0) return 9;
+    return 5;
+}
+int main() {
+    if (MC_Configure__Fv() != 5) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "MC_Configure__Fv", ["newMode__Fii", "stopCardQuery__Fv"])
+
 
 if __name__ == "__main__":
     unittest.main()
