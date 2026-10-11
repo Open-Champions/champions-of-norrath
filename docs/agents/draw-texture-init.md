@@ -8,13 +8,17 @@ The fresh partial link of this branch, before these sources, has 692 unresolved 
 
 Observed at `0x0016d160`, 276 bytes. A nonzero word at offset 28 returns with no stores. The other path stores `0xa7fb` at offset 10, `0xffffffff` at offset 28, and the texture address plus the old word at offset 16. Bit 0 of the halfword at offset 8 stops there. Bit `0x100` is the path that relocates a leading word and then each word of the following records. Records end at a `0xff` byte. The halfword at offset 6 is 72 plus one truncated quotient per record. The 64 bytes at `ntsc_legallineTex` take the header path only: their halfword at offset 8 is `0x0060`, so the quotient is left at `0x8c08`.
 
+## textureInit__Fii
+
+Observed at `0x001725e0`, 64 bytes. It stores the arithmetic right-shift by 8 of `address + 255` at `0x0048695c` and of `size - (address & 0xff)` at `0x00486960`, calls `textureInternalInit__Fv`, then stores that reloaded size minus one at `textureMaxBlockSize` (`0x004840b0`, four zero bytes). A second `textureBufferStartAddress` label is at `0x00486a34`. This unit publishes one external word under that name, the word this function stores.
+
 ## Imports closed
 
-`textureInitTexture__FP8_texture`.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`.
 
 ## Imports opened
 
-None.
+`textureInternalInit__Fv`.
 
 ## Build-plan entries needed
 
@@ -29,11 +33,22 @@ None.
 }
 ```
 
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "texture_init.o",
+  "profile": "authored_cpp",
+  "sha256": "8b75a353afcac335116466bbe46f22fe56e94614ec15403b42d32f585dc18d21",
+  "source": "sources/draw-texture-init-texture-init/texture_init.cpp"
+}
+```
+
 The integrator assigns `input_order`. No shared plan file was edited.
 
 ## Authored but never executed
 
-`textureInitTexture__FP8_texture` was compiled with the reviewed EE toolchain and checked on the host. It has not run on the EE. No startup stage has run.
+`textureInitTexture__FP8_texture` and `textureInit__Fii` were compiled with the reviewed EE toolchain and checked on the host. Neither has run on the EE. No startup stage has run.
 
 ## Unknown
 
