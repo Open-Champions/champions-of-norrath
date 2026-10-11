@@ -40,3 +40,7 @@ not on this path.
 ## ExecPS2 patch
 
 `InitExecPS2` at 0x002dda10 returns without further calls when `PatchIsNeeded` is zero. Otherwise it calls the local `setup` at 0x002dd940 for the first two `SysExecPS2Entry` pairs, `Copy` at 0x002dd950 from `osdsrc` to 0x80074000 for 1960 bytes, `FlushCache(0)` and `FlushCache(2)`, then one `GetEntryAddress`/`setup` pair starting at word 4. The gate starts at 2 and stops once it is no longer below 3, so this image walks one pair. The imported names are `kernel_execps2_setup`, `kernel_execps2_copy`, and `kernel_execps2_get_entry` because other copies share the original local spellings. The copied bytes are not reproduced here.
+
+## Alarm patch
+
+`InitAlarm` at 0x002dddc8 returns immediately when bit 0x100 of the word at 0x10001810 is set. Otherwise it uses the local `setup` at 0x002ddd60, `Copy` at 0x002ddd70, and `GetEntryAddress` at 0x002dddb8. The copies are 1856 bytes from `srcfile` to 0x80076000 and 40 bytes from `eenull` to 0x00082000, followed by `FlushCache(0)` and `FlushCache(2)`. Six entry pairs are then installed, starting at word 4 of the local `SysEntry` at 0x00445968. That table is imported as `kernel_alarm_sysentry`. Naming 0x10001810 as timer-3 mode is inferred. The host contract uses `NORRATH_HOST_CONTRACT` for that load.

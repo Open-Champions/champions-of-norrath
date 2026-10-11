@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 292,
+  "default_authored_inputs": 293,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -927,6 +927,7 @@
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
     "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
     "sources/runtime-initsys/delete_sema.S": "565a0c5f5f3ec9e793377840a812e977970adbddac93200a0d76b55c74d53a51",
+    "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
     "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
     "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
     "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
@@ -5485,6 +5486,15 @@
       "profile": "authored_cpp",
       "sha256": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
       "source": "sources/runtime-initsys/init_exec_ps2.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 294,
+      "kind": "independently_authored_source",
+      "object_name": "init_alarm.o",
+      "profile": "authored_cpp",
+      "sha256": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
+      "source": "sources/runtime-initsys/init_alarm.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5584,7 +5594,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "691e762693715f5bd79a1dba8f84e8db7a3d2565be65137055d5f5414ae011e0",
+  "snapshot_sha256": "4f779380030dd8bc9569484d26d342240df54c611b6128f1b6ce4c0ee13da245",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
