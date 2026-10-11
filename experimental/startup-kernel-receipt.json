@@ -1,0 +1,73 @@
+{
+  "partial_build": {
+    "common_symbol_count": 0,
+    "function_count": 409,
+    "game_executable": false,
+    "implicit_assembler_count": 285,
+    "link_count": 1,
+    "metadata_query_count": 4,
+    "original_files_used": false,
+    "plan_sha256": "314de1b80a5b425779158914ce41aa960bd793fe46fa895e3bdd7060cc586d82",
+    "runtime_verified": false,
+    "selected_inputs": 285,
+    "snapshot_sha256": "a4d22080ce87f4a45feff0aea5c929a3a8315e01033c20ee61bd363cce668dc3",
+    "source_cc_count": 285,
+    "status": "partial_build_complete",
+    "symbol_aliases_applied": false,
+    "unresolved_symbol_count": 869
+  },
+  "partial_object_sha256": "08414e0077626c1a45e8a39162d4c98275a2be0c1d7efe74573eb6ce96fa595d",
+  "imports_removed": [
+    "FlushCache",
+    "_InitSys",
+    "_root"
+  ],
+  "imports_added": [
+    "InitAlarm",
+    "InitExecPS2",
+    "InitSystemCallTableAddress",
+    "InitTLBFunctions",
+    "InitThread",
+    "InitTimer",
+    "StartTimerSystemTime",
+    "sceSifInitRebootNotify",
+    "supplement_crt0"
+  ],
+  "functions": [
+    {
+      "compiled_extent": 8,
+      "exact_match_ledger_admission": false,
+      "kernel_executed": false,
+      "object_sha256": "6d178f18d07924b20056307178486190f8163cbc531f7493cb425e9e70740611",
+      "original_address": "0x100250",
+      "original_extent": 8,
+      "raw_body_bytes_equal": true,
+      "source_sha256": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
+      "symbol": "_root"
+    },
+    {
+      "compiled_extent": 16,
+      "exact_match_ledger_admission": false,
+      "kernel_executed": false,
+      "object_sha256": "2f73dddac4745d2947434dccef15809cdbdefd256f8d297bc7e4bdf429203a01",
+      "original_address": "0x2d5360",
+      "original_extent": 16,
+      "raw_body_bytes_equal": true,
+      "source_sha256": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
+      "symbol": "FlushCache"
+    },
+    {
+      "compiled_extent": 84,
+      "exact_match_ledger_admission": false,
+      "kernel_executed": false,
+      "object_sha256": "468da10066e7abc173d7293a73d312f9feb438e022032f5afbf542df66a9b44b",
+      "original_address": "0x2dd8e8",
+      "original_extent": 84,
+      "raw_body_bytes_equal": false,
+      "source_sha256": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
+      "symbol": "_InitSys"
+    }
+  ],
+  "kernel_executed": false,
+  "game_runtime_executed": false
+}

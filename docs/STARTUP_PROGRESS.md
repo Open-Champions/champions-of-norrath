@@ -77,3 +77,12 @@ entry dependencies and closes none of the prior 853: kernel services, argument
 storage, root callback, linker boundaries, `main`, and `exit`. No original code
 or fixed address alias supplies them in the partial object. No entry/kernel
 execution or first frame has been demonstrated.
+
+## Kernel entry interface package
+
+The root callback, startup cache wrapper and `_InitSys` dispatcher now resolve
+three of the entry imports. The dispatcher exposes nine lower-level services,
+so the fresh count is **869 imports** (863 − 3 + 9), with zero COMMON. The
+[review](STARTUP_KERNEL.md) and [receipt](../experimental/startup-kernel-receipt.json)
+record the checks and the C++ frame/ABI limitation. Source bootstrap and ordinary
+constructor dispatch are now present; no kernel/startup stage has actually run.
