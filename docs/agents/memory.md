@@ -70,13 +70,19 @@ The reviewed `-G0` profile does not recreate `.sdata` or file-backed zero sectio
 
 The official plan on this worktree, rebuilt outside git, still lists 911 unresolved names. The memory names in that list are the closed set below, plus `norrath_player_heap_pointer_word`, which stays unresolved. The sound IOP heap views belong to the audio package.
 
+## Original names used by main and launchSRS
+
+`enableMallocWrapper` is the one-byte object at `0x00483b11`. `memAlloc__FiPc` is the 492-byte function at `0x00144368`; its heap check uses line 502. `memFree__FPv` is the 232-byte function at `0x00144558`; its heap check uses line 583. Those three are the objects already authored as `norrath_enable_malloc_wrapper_byte_view`, `norrath_mem_alloc`, and `norrath_mem_free`. Each original name is a second global symbol on that same extent. The compiled bodies stay 1, 1248, and 1288 bytes. A host program reads the EE object and fails if the two names differ in section, value, or size. The flag's host byte check defines `NORRATH_WRAPPER_BYTE_HOST_CHECK` because this machine's host compiler rejects alias attributes.
+
+`mallinfo` at `0x00302340` is 48 bytes and is not the 40-byte `__malloc_current_mallinfo` object. It loads `_impure_ptr` at `0x00448480` and calls `_mallinfo_r`, then returns the caller's struct pointer. `memSetMark__Fi` at `0x00144830` is 24 bytes and sets one bit of the mark word. `memClearMark__Fi` at `0x00144848` is 28 bytes and clears that bit. The shift amount is the argument's low five bits. `memDeleteMarked__Fi` at `0x00144868` is 124 bytes. It frees one matching allocated block, then starts again at the ring word. `memScrambleFree__Fv` at `0x00144ba8` is 80 bytes. It fills a free payload with `0xA5` for the block's size word, then reloads the ring word as the end of the walk.
+
 ## Imports closed
 
-`norrath_mem_realloc`, `norrath_player_malloc_bins_view`, `norrath_player_malloc_trim_threshold_view`, `norrath_player_malloc_top_pad_view`, `norrath_player_malloc_break_base_view`, `norrath_player_malloc_max_break_view`, `norrath_player_malloc_max_total_view`, `norrath_player_malloc_current_info_view`, `norrath_player_malloc_lock_owner_view`, `norrath_player_malloc_lock_count_view`, `norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`, `norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`, `norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`, `norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`, `norrath_heap_check_file_view`, `norrath_heap_failure_format_view`, `norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`, `norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`, `norrath_heap_dump_totals_format_view`, `norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`, `norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`.
+`norrath_mem_realloc`, `norrath_player_malloc_bins_view`, `norrath_player_malloc_trim_threshold_view`, `norrath_player_malloc_top_pad_view`, `norrath_player_malloc_break_base_view`, `norrath_player_malloc_max_break_view`, `norrath_player_malloc_max_total_view`, `norrath_player_malloc_current_info_view`, `norrath_player_malloc_lock_owner_view`, `norrath_player_malloc_lock_count_view`, `norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`, `norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`, `norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`, `norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`, `norrath_heap_check_file_view`, `norrath_heap_failure_format_view`, `norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`, `norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`, `norrath_heap_dump_totals_format_view`, `norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`, `norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`, `enableMallocWrapper`, `memAlloc__FiPc`, `memFree__FPv`, `memSetMark__Fi`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memScrambleFree__Fv`, `mallinfo`.
 
 ## Imports opened
 
-`memcpy`. `norrath_mem_realloc` calls the existing `norrath_mem_alloc` and `norrath_mem_free` providers. Those two are undefined only when this package is linked by itself.
+`memcpy`, `_impure_ptr`, and `_mallinfo_r`. `memcpy` comes from `norrath_mem_realloc`. `mallinfo` is the caller of the other two. `norrath_mem_alloc` and `norrath_mem_free` were already defined. `memset` was already defined, and `memScrambleFree__Fv` calls it. `norrath_factory_impure_pointer_word` is the same pinned address as `_impure_ptr` and stays a separate unresolved name.
 
 ## Build-plan entries needed
 
@@ -117,8 +123,55 @@ Append these authored inputs. Do not add the `host_check.cpp` or `check_bins_obj
   {
     "source": "sources/memory-wrapper-byte/wrapper_byte.cpp",
     "object_name": "wrapper_byte.o",
-    "sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sha256": "b68e09b9f3b5d9234d3cd529e31fa711d86a6b6981e910a088b58078a1ce15e9",
     "emitted_functions": []
+  },
+  {
+    "source": "sources/memory-set-mark/mem_set_mark.cpp",
+    "object_name": "mem_set_mark.o",
+    "sha256": "9a61ab6480fe75b82a6638db87d22aeeb7fc41995bf4ba3c937aedd2253b1ab8",
+    "emitted_functions": [{"name": "memSetMark__Fi", "compiled_body_bytes": 60}]
+  },
+  {
+    "source": "sources/memory-clear-mark/mem_clear_mark.cpp",
+    "object_name": "mem_clear_mark.o",
+    "sha256": "420d79a22da4a74a03626e5375c0295ad607efc307ff844f7aa8199ddfa48e6f",
+    "emitted_functions": [{"name": "memClearMark__Fi", "compiled_body_bytes": 64}]
+  },
+  {
+    "source": "sources/memory-delete-marked/mem_delete_marked.cpp",
+    "object_name": "mem_delete_marked.o",
+    "sha256": "0b55c13d0bfb9e2b59a6d3fd5923ecec75c2788106785e156a7ffdf724e50516",
+    "emitted_functions": [{"name": "memDeleteMarked__Fi", "compiled_body_bytes": 160}]
+  },
+  {
+    "source": "sources/memory-scramble-free/mem_scramble_free.cpp",
+    "object_name": "mem_scramble_free.o",
+    "sha256": "4ec81437a4173a9f26a7aa19a67e402efff1ee6239bfb37c7c056c8225522974",
+    "emitted_functions": [{"name": "memScrambleFree__Fv", "compiled_body_bytes": 156}]
+  },
+  {
+    "source": "sources/memory-mallinfo/mallinfo.cpp",
+    "object_name": "mallinfo.o",
+    "sha256": "7419c00356c3d742ac23769d2c7053194d4a3929570cda0273e14bcf7153718a",
+    "emitted_functions": [{"name": "mallinfo", "compiled_body_bytes": 56}]
+  }
+]
+```
+
+Update these existing entries in place. Each gains one emitted function of the same size as the existing body. Do not add `check_same_extent.cpp` or any `host_check.cpp`.
+
+```json
+[
+  {
+    "source": "sources/game-heap-allocator-build/mem_alloc.cpp",
+    "sha256": "3c74fa0480a0e22d85ab425ed2ee9125f415e9110a83847c2e0835a3174b2bfa",
+    "add_emitted_function": {"name": "memAlloc__FiPc", "compiled_body_bytes": 1248}
+  },
+  {
+    "source": "sources/game-sound-memory-lifecycle-build/mem_free.cpp",
+    "sha256": "9e5771dc0780504f3ab59fe3e24700926eeb1ce12a46136bf6d85af1767d3309",
+    "add_emitted_function": {"name": "memFree__FPv", "compiled_body_bytes": 1288}
   }
 ]
 ```
@@ -131,11 +184,11 @@ clang++ -std=c++17 -O2 -fsanitize=address,undefined -c experimental/sources/memo
 clang++ -fsanitize=address,undefined /tmp/mem_realloc_host.o /tmp/mem_realloc_check.o -o /tmp/mem_realloc_check && /tmp/mem_realloc_check
 ```
 
-Compile `malloc_bins.cpp` with the EE profile, then run `check_bins_object` on that object. Compile each other data file with host `clang++` and link it to its `host_check.cpp`.
+Compile `malloc_bins.cpp` with the EE profile, then run `check_bins_object` on that object. Compile `check_same_extent` on the host and pass it the EE objects for the two allocator names and the flag byte. Compile each other data file with host `clang++` and link it to its `host_check.cpp`. The flag byte's host compile defines `NORRATH_WRAPPER_BYTE_HOST_CHECK`. The deletion, scramble, and `mallinfo` host compiles define `NORRATH_DELETE_MARKED_HOST_CHECK`, `NORRATH_SCRAMBLE_FREE_HOST_CHECK`, and `NORRATH_MALLINFO_HOST_CHECK`.
 
 ## Authored but never executed
 
-The EE objects were compiled and relocatable-linked. They were not executed on the EE, and no game path ran them. The host realloc check and the host data comparisons did run. They do not establish PS2 timing, interrupts, or the original 240-byte body.
+The EE objects were compiled and relocatable-linked. They were not executed on the EE, and no game path ran them. The host checks for realloc, the mark words, marked deletion, free scrambling, and `mallinfo` did run. The alias comparison ran on the EE objects. None of that is PS2 execution or an original-byte match. The compiled mark, deletion, scramble, and `mallinfo` bodies are 60, 64, 160, 156, and 56 bytes.
 
 ## Unknown
 
@@ -146,3 +199,5 @@ The EE objects were compiled and relocatable-linked. They were not executed on t
 - Making `__sce_sema_id` and the semaphore view the same object. Startup still writes the original name.
 - Original section class and GP placement under the reviewed `-G0` profile.
 - Runtime of `memInit`, semaphore creation, and any later writer of the enable byte.
+- The 240-byte body of `_mallinfo_r` at `0x0030b028`. `mallinfo` only calls it. That callee locks, copies the 40-byte current mallinfo object, and unlocks.
+- Whether `norrath_factory_impure_pointer_word` and `_impure_ptr` should become one object. Both names refer to `0x00448480`, and both stay unresolved.
