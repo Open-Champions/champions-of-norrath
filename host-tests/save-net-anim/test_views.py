@@ -206,6 +206,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_network_send_ring_bytes_view.cpp",
                     "norrath_network_send_ring_bytes_view", 3 * 17632 + 8192, require_zero=True)
 
+    def test_animation_state(self):
+        self.expect("norrath_inventory_animation_state_base_view.cpp",
+                    "norrath_inventory_animation_state_base_view", 4 * 264, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
