@@ -32,3 +32,5 @@ extern "C" void norrath_block_alloc_init() {
     // newly allocated list. blockAlloc selects this row then returnsnull.
     write_word(region + 60u, pool);
 }
+// blockAllocInit__Fv is this body: 0x001440d8, 220 bytes in the pinned image.
+extern "C" void blockAllocInit__Fv() __attribute__((alias("norrath_block_alloc_init")));
