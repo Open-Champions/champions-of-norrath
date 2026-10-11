@@ -4,6 +4,13 @@
 
 extern "C" unsigned char norrath_factory_impure_pointer_word[4] = {};
 extern "C" int norrath_format_string(char*, const char*, ...);
+extern "C" int sprintf(char*, const char*, ...);
+
+static int call_sprintf(char* destination, const char* format, const char* text) {
+    auto* function = sprintf;
+    __asm__ __volatile__("" : "+r"(function));
+    return function(destination, format, text);
+}
 
 static char* g_buffer;
 static int g_calls;
@@ -52,6 +59,10 @@ int main() {
     if (g_flags != 0x208 || g_width != 0x7fffffffu || g_size != 0x7fffffffu) return 4;
     if (g_base != destination || g_owner != 0x12345678u) return 5;
     if (buffer[0] != 'O' || buffer[1] != 'K' || buffer[2] != 0 || buffer[3] != static_cast<char>(0xa5)) return 6;
+    std::memset(buffer, 0xa5, 32);
+    if (call_sprintf(buffer, "%s.lmp", "town") != 2) return 7;
+    if (g_calls != 2 || g_flags != 0x208 || g_base != destination || g_owner != 0x12345678u) return 8;
+    if (buffer[0] != 'O' || buffer[1] != 'K' || buffer[2] != 0 || buffer[3] != static_cast<char>(0xa5)) return 9;
     std::printf("format string cases passed\n");
     return 0;
 }

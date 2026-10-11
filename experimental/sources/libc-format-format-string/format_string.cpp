@@ -49,7 +49,7 @@ void write_half(unsigned char* p, unsigned value) {
 }
 }
 
-extern "C" int norrath_format_string(char* destination, const char* format, ...) {
+static int format_into(char* destination, const char* format, __builtin_va_list arguments) {
     const Word reent = read_word(norrath_factory_impure_pointer_word);
     alignas(8) unsigned char stream[88];
     unsigned char* state = stream;
@@ -59,11 +59,29 @@ extern "C" int norrath_format_string(char* destination, const char* format, ...)
     write_word(state + 16, address_of(destination));
     write_word(state + 84, reent);
     write_word(state, address_of(destination));
-    __builtin_va_list arguments;
-    __builtin_va_start(arguments, format);
     const auto* cursor = reinterpret_cast<const unsigned char*>(arguments);
     const int result = norrath_factory_vfprintf(stream, format, cursor);
     *bytes(read_word(state)) = 0u;
+    return result;
+}
+
+extern "C" int norrath_format_string(char* destination, const char* format, ...) {
+    __builtin_va_list arguments;
+    __builtin_va_start(arguments, format);
+    const int result = format_into(destination, format, arguments);
     __builtin_va_end(arguments);
     return result;
 }
+
+// Same body as norrath_format_string. engineInit calls this name.
+#if defined(__mips__)
+extern "C" int sprintf(char* destination, const char* format, ...) __attribute__((alias("norrath_format_string")));
+#else
+extern "C" int sprintf(char* destination, const char* format, ...) {
+    __builtin_va_list arguments;
+    __builtin_va_start(arguments, format);
+    const int result = format_into(destination, format, arguments);
+    __builtin_va_end(arguments);
+    return result;
+}
+#endif
