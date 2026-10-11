@@ -292,6 +292,31 @@ functions. 447 function bodies, 356 authored inputs, zero COMMON. 214 tool
 tests passed. No retail script and no EE execution. The host executor test
 does not cover every opcode slot; the notes list the unrun slots.
 
+## agents/cd-archive
+
+Merged the pushed tip. Observed originals stay next to the `norrath_archive_*`
+names. Each unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. All 13 host contracts passed. This tip does
+not define `cdLoad__FPcPvii`; that name stays unresolved for a later pass.
+
+| | |
+|---|---|
+| Before | 752 |
+| After | 763 |
+| Closed | 34 |
+| Opened | 45 |
+
+Closed: the 12 archive functions and 22 views that were already imports.
+`norrath_archive_no_new_vags_view` and
+`norrath_archive_cd_command_count_view` are defined and were not previous
+imports. Opened: the 45 names in the notes that were not already present,
+including `sceCdStream`, the Sony CD/SIF helpers, the six extension inits, and
+the three vblank views. `norrath_sce_printf` was already unresolved.
+`norrath_player_wait_semaphore`, `norrath_player_signal_semaphore`, and
+`norrath_string_compare` were already defined. `norrath_archive_map_animation_sounds`
+and `norrath_archive_sound_free_ram` stay unresolved. 459 function bodies,
+369 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -319,7 +344,7 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-megatile, and script-amx. The held AMX draft remains uncompiled.
+megatile, script-amx, and cd-archive. The held AMX draft remains uncompiled.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -330,3 +355,4 @@ and no startup stage has executed.
 
 - 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
 - 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports
+- 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports

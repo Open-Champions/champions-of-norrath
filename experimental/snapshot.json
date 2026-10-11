@@ -5367,6 +5367,183 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/script-amx-exec/exec.cpp"
+    },
+    {
+      "input_order": 358,
+      "component": "cd-archive-engine-push-border",
+      "object_name": "push_border.o",
+      "private_object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_push_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp"
+    },
+    {
+      "input_order": 359,
+      "component": "cd-archive-engine-pop-border",
+      "object_name": "pop_border.o",
+      "private_object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_pop_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp"
+    },
+    {
+      "input_order": 360,
+      "component": "cd-archive-engine-sync-vblank",
+      "object_name": "sync_vblank.o",
+      "private_object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_sync_vblank",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp"
+    },
+    {
+      "input_order": 361,
+      "component": "cd-archive-last-character",
+      "object_name": "last_character.o",
+      "private_object_sha256": "3dda0d92e2038fd55291436a1dedd4340df451f46a3d65090e34088dc8fdcf27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_last_character",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-last-character/last_character.cpp"
+    },
+    {
+      "input_order": 362,
+      "component": "cd-archive-cd-sync",
+      "object_name": "cd_sync.o",
+      "private_object_sha256": "9b7bf0831727279a6dbf1dfae31633a67e3cf537e135919ccf63e1c9e6777f33",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_sync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp"
+    },
+    {
+      "input_order": 363,
+      "component": "cd-archive-cd-error",
+      "object_name": "cd_error.o",
+      "private_object_sha256": "9e8d3e75269699bf51f7b6b9fc46486b10d352b728bbbea78b3e0ae2d0f02500",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_error",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp"
+    },
+    {
+      "input_order": 364,
+      "component": "cd-archive-cd-read",
+      "object_name": "cd_read.o",
+      "private_object_sha256": "737e0b35435bbfd0e1b904592abe9605018a85986511b76ea36557ce0eb5889f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read",
+          "compiled_body_bytes": 716
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp"
+    },
+    {
+      "input_order": 365,
+      "component": "cd-archive-cd-read-iop",
+      "object_name": "cd_read_iop.o",
+      "private_object_sha256": "79f5728eb2f5f3bbad194df09a56f5c1422f9d811b5abb4e82864274cdc7cd01",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read_iop",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp"
+    },
+    {
+      "input_order": 366,
+      "component": "cd-archive-cd-stream-pause",
+      "object_name": "stream_pause.o",
+      "private_object_sha256": "1e05b2278dfab9cc31cb220b5d1ec7b27c12e9f2ab8ab12c1095e03302809db0",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_pause",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp"
+    },
+    {
+      "input_order": 367,
+      "component": "cd-archive-cd-stream-read",
+      "object_name": "stream_read.o",
+      "private_object_sha256": "9709016fb403f61e5a49bfe0baad54a37d4f91c54b5cc0c221b5fa92d1c0d2c8",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_read",
+          "compiled_body_bytes": 532
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp"
+    },
+    {
+      "input_order": 368,
+      "component": "cd-archive-cd-layer-search",
+      "object_name": "layer_search.o",
+      "private_object_sha256": "aea2a9eee7182feaeeff9b48a3a8c9022e8c3ee98ab562c0623eb263cc79ac27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_layer_search",
+          "compiled_body_bytes": 860
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp"
+    },
+    {
+      "input_order": 369,
+      "component": "cd-archive-initialize-file",
+      "object_name": "initialize_file.o",
+      "private_object_sha256": "5d6cb7f522f48198f49e513439de16fbe5828556ffd6a9a15a14cf8328b8172f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_initialize_file",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp"
+    },
+    {
+      "input_order": 370,
+      "component": "cd-archive-views",
+      "object_name": "views.o",
+      "private_object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-views/views.cpp"
     }
   ],
   "drafts": [
@@ -5455,6 +5632,32 @@
     "sources/block-allocator-lifecycle-build/block_get_number_free.cpp": "4b4baf9d85ba2ea0bdc1a97fe1ce6c29c62c1e02c657b4d5a51476d9a6e67d61",
     "sources/block-allocator-lifecycle-build/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
+    "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+    "sources/cd-archive-cd-error/host_contract.cpp": "4933c52777d9069ba93cede1902ef16a939499dd62ac027a5ea7b4aa0decce68",
+    "sources/cd-archive-cd-layer-search/host_contract.cpp": "44ed3c6ec02d58146e9f8f695de9396157bb0cec6b23fd9dd1f87f054ca98b66",
+    "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+    "sources/cd-archive-cd-read-iop/host_contract.cpp": "5339e28f691990e72aa48caacf779003c2aa94e10a71ba1a7111562d512951d6",
+    "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+    "sources/cd-archive-cd-read/host_contract.cpp": "6b0479f64dadee778d219973da5ebcfcef806bfe223d17102164e29b4cbcf430",
+    "sources/cd-archive-cd-stream-pause/host_contract.cpp": "c55f935b4efe4a725bc18f3d7585fc945df901f32026d944398a4f8971e4d114",
+    "sources/cd-archive-cd-stream-pause/stream_pause.cpp": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+    "sources/cd-archive-cd-stream-read/host_contract.cpp": "8a25a37643f94fe6c36f58f48d35b4d370820adf934f7ede23840922a82412f4",
+    "sources/cd-archive-cd-stream-read/stream_read.cpp": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+    "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+    "sources/cd-archive-cd-sync/host_contract.cpp": "69ac147650d1759e94847c2bebd43a4bd78deb4c1c99bb264a0229afe02238ac",
+    "sources/cd-archive-engine-pop-border/host_contract.cpp": "14047b8c30a411fcb05b2258f77e5658f898724978438b3ddd2d5d8aa5b40370",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+    "sources/cd-archive-engine-push-border/host_contract.cpp": "dab785842554a9a04563414b6e4d7d6c8ae819adc004e80b4494a2fed21f2a5f",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+    "sources/cd-archive-engine-sync-vblank/host_contract.cpp": "1b21e87e6ee79f1b3499e728f3e9f75c87c75fd5d47151e9ed1f821bb62215b7",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-initialize-file/host_contract.cpp": "2ed0bce12bec2d1a913fc8f0b084fd4f8f7cf2ec5a237fb87e0706fda6739fc1",
+    "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+    "sources/cd-archive-last-character/host_contract.cpp": "4f11337edc4f7f17ea7f72b97b07c9c2a635d98b373801939275e643a16b28f2",
+    "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+    "sources/cd-archive-views/host_contract.cpp": "37332f5e7da911b1967c4aa317b821cc233916374e1900ced2cd645915cd2f18",
+    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -6883,11 +7086,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 358,
-    "authored_default_inputs": 356,
+    "selected_inputs": 371,
+    "authored_default_inputs": 369,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 449,
-    "compiled_body_bytes_from_accepted_inputs": 263068,
+    "emitted_function_definitions_including_helpers": 461,
+    "compiled_body_bytes_from_accepted_inputs": 266788,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6900,7 +7103,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 45
+    "package_selected_inputs": 58
   },
   "startup_implementations": [
     {
@@ -7886,6 +8089,222 @@
       ],
       "host_files": [
         "sources/script-amx-exec/exec_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp",
+      "source_sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+      "object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_push_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-push-border/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp",
+      "source_sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+      "object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_pop_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-pop-border/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp",
+      "source_sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+      "object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_sync_vblank",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-sync-vblank/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-last-character/last_character.cpp",
+      "source_sha256": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+      "object_sha256": "3dda0d92e2038fd55291436a1dedd4340df451f46a3d65090e34088dc8fdcf27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_last_character",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-last-character/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp",
+      "source_sha256": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+      "object_sha256": "9b7bf0831727279a6dbf1dfae31633a67e3cf537e135919ccf63e1c9e6777f33",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_sync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp",
+      "source_sha256": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+      "object_sha256": "9e8d3e75269699bf51f7b6b9fc46486b10d352b728bbbea78b3e0ae2d0f02500",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_error",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-error/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp",
+      "source_sha256": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+      "object_sha256": "737e0b35435bbfd0e1b904592abe9605018a85986511b76ea36557ce0eb5889f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read",
+          "compiled_body_bytes": 716
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp",
+      "source_sha256": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+      "object_sha256": "79f5728eb2f5f3bbad194df09a56f5c1422f9d811b5abb4e82864274cdc7cd01",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read_iop",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-read-iop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp",
+      "source_sha256": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+      "object_sha256": "1e05b2278dfab9cc31cb220b5d1ec7b27c12e9f2ab8ab12c1095e03302809db0",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_pause",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-stream-pause/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp",
+      "source_sha256": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+      "object_sha256": "9709016fb403f61e5a49bfe0baad54a37d4f91c54b5cc0c221b5fa92d1c0d2c8",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_read",
+          "compiled_body_bytes": 532
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-stream-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp",
+      "source_sha256": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+      "object_sha256": "aea2a9eee7182feaeeff9b48a3a8c9022e8c3ee98ab562c0623eb263cc79ac27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_layer_search",
+          "compiled_body_bytes": 860
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-layer-search/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp",
+      "source_sha256": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+      "object_sha256": "5d6cb7f522f48198f49e513439de16fbe5828556ffd6a9a15a14cf8328b8172f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_initialize_file",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-initialize-file/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-views/views.cpp",
+      "source_sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+      "object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/cd-archive-views/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

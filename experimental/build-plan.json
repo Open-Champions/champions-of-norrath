@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 356,
+  "default_authored_inputs": 369,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -71,6 +71,19 @@
     "sources/block-allocator-lifecycle-build/block_get_number_free.cpp": "4b4baf9d85ba2ea0bdc1a97fe1ce6c29c62c1e02c657b4d5a51476d9a6e67d61",
     "sources/block-allocator-lifecycle-build/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
+    "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+    "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+    "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+    "sources/cd-archive-cd-stream-pause/stream_pause.cpp": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+    "sources/cd-archive-cd-stream-read/stream_read.cpp": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+    "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+    "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -6134,6 +6147,123 @@
       "profile": "authored_cpp",
       "sha256": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
       "source": "sources/script-amx-exec/exec.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 358,
+      "kind": "independently_authored_source",
+      "object_name": "push_border.o",
+      "profile": "authored_cpp",
+      "sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 359,
+      "kind": "independently_authored_source",
+      "object_name": "pop_border.o",
+      "profile": "authored_cpp",
+      "sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 360,
+      "kind": "independently_authored_source",
+      "object_name": "sync_vblank.o",
+      "profile": "authored_cpp",
+      "sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 361,
+      "kind": "independently_authored_source",
+      "object_name": "last_character.o",
+      "profile": "authored_cpp",
+      "sha256": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+      "source": "sources/cd-archive-last-character/last_character.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 362,
+      "kind": "independently_authored_source",
+      "object_name": "cd_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 363,
+      "kind": "independently_authored_source",
+      "object_name": "cd_error.o",
+      "profile": "authored_cpp",
+      "sha256": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 364,
+      "kind": "independently_authored_source",
+      "object_name": "cd_read.o",
+      "profile": "authored_cpp",
+      "sha256": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 365,
+      "kind": "independently_authored_source",
+      "object_name": "cd_read_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 366,
+      "kind": "independently_authored_source",
+      "object_name": "stream_pause.o",
+      "profile": "authored_cpp",
+      "sha256": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 367,
+      "kind": "independently_authored_source",
+      "object_name": "stream_read.o",
+      "profile": "authored_cpp",
+      "sha256": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 368,
+      "kind": "independently_authored_source",
+      "object_name": "layer_search.o",
+      "profile": "authored_cpp",
+      "sha256": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 369,
+      "kind": "independently_authored_source",
+      "object_name": "initialize_file.o",
+      "profile": "authored_cpp",
+      "sha256": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 370,
+      "kind": "independently_authored_source",
+      "object_name": "views.o",
+      "profile": "authored_cpp",
+      "sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+      "source": "sources/cd-archive-views/views.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6233,7 +6363,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f413ecee66b959ed1e0b9094f4fd1a16a0eb12e66e8998ee5fd4e9848376a5cb",
+  "snapshot_sha256": "3c38f5b556a5b04fb65a3861715abe77a0a99afbbacd5aefbea23ee65e4f070f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
