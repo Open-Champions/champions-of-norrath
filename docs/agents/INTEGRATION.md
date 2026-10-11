@@ -578,6 +578,28 @@ Closed: `engineAddTask__FPFv_viPci`, `enginePrintTasks__Fv`,
 `norrath_game_pause_word_view`. Opened: `taskList`. 536 function bodies, 632
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/game-boot
+
+All five units were selected. Host checks include the implementation and passed
+when compiled alone. Body sizes match the notes: `DLG_Init__Fv` 112,
+`gameBoot__Fv` 136, `gameInit__Fv` 888, `debugCheckForPauseMenuStart__Fv` 1184,
+`simpleDrawLoop__FPFv_i` 464. `gameBoot__Fv` also defines `_$tmp_0.1090`,
+which was not a previous import. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 775 |
+| After | 870 |
+| Closed | 5 |
+| Opened | 100 |
+
+Closed: `DLG_Init__Fv`, `gameBoot__Fv`, `gameInit__Fv`,
+`debugCheckForPauseMenuStart__Fv`, `simpleDrawLoop__FPFv_i`. The notes listed
+105 new imports. Five of those were already present or already defined:
+`MC_Debug`, `frameNm`, and `gameCam` were already unresolved; `nmPlayers` and
+`engineRemoveTask__FPFv_v` are already defined. 541 function bodies, 637
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -657,7 +679,7 @@ symbol was defined twice.
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
-and scheduler. `engineInit__Ff`,
+scheduler, and game-boot. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -684,3 +706,4 @@ and no startup stage has executed.
 - 2026-10-11 16:56 CDT — `agents/gameobject-base` — 781 unresolved imports
 - 2026-10-11 16:59 CDT — `agents/libc-format` — 779 unresolved imports
 - 2026-10-11 17:08 CDT — `agents/scheduler` — 775 unresolved imports
+- 2026-10-11 17:10 CDT — `agents/game-boot` — 870 unresolved imports

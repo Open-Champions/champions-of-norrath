@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 632,
+  "default_authored_inputs": 637,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -301,6 +301,11 @@
     "sources/game-archive-services-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-archive-services-build/dependencies.hpp": "65fd1ef43d8a6a5ceb10be599ae2612a406464aaf1034a976bea58503693410c",
     "sources/game-archive-services-build/loader_primitives.hpp": "54158aa5a19e01304588a63f4d2d4e461f8cbebffeeb5dbe28b323f1a323ad41",
+    "sources/game-boot-dlg-init/dlg_init.cpp": "e0c37e5c4b9521e4fa8361f7878a65998cb98dcca42faf6fabedb4c793578153",
+    "sources/game-boot-draw-loop/simple_draw.cpp": "8c4f99c1c4cae0065450faf3198f6d581b3de63012a95df2ec0cf9723ae30833",
+    "sources/game-boot-game-boot/game_boot.cpp": "6de79f5720a339e640d2ad0e086d06b16233bdd786521bf28fc751b0d669a368",
+    "sources/game-boot-game-init/game_init.cpp": "e6b668524220ea55600b8caa6fec1c11e0cb56b5de98ca9a090356b616dcc387",
+    "sources/game-boot-pause-menu/debug_check.cpp": "dbef5b51d52b65d68168d3b9e018e2692e34131df23549f5c010cfea15bb4d35",
     "sources/game-creature-animation-build/animation.cpp": "76888a92bc6405b7da22e7ac8141058a881b28bf5ed635d0a06b85e6bad561ad",
     "sources/game-creature-animation-build/creature_animation.hpp": "fce9603a7f59a5c3873c5d4d936d573f1458e50f0a5962da3f9ad7b38134d2cd",
     "sources/game-creature-animation-build/finish_construction.cpp": "072d958f75a1a31cb516ff0d28d9709db30a9bd737e0e000f95cb9688f73af25",
@@ -9069,6 +9074,51 @@
       "profile": "authored_cpp",
       "sha256": "b004f8ae1cf60898a0a6a28e04bf4508e4401a3ba5fc53d32a6b13ce61fee846",
       "source": "sources/scheduler-task-words/task_words.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 634,
+      "kind": "independently_authored_source",
+      "object_name": "dlg_init.o",
+      "profile": "authored_cpp",
+      "sha256": "e0c37e5c4b9521e4fa8361f7878a65998cb98dcca42faf6fabedb4c793578153",
+      "source": "sources/game-boot-dlg-init/dlg_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 635,
+      "kind": "independently_authored_source",
+      "object_name": "simple_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "8c4f99c1c4cae0065450faf3198f6d581b3de63012a95df2ec0cf9723ae30833",
+      "source": "sources/game-boot-draw-loop/simple_draw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 636,
+      "kind": "independently_authored_source",
+      "object_name": "game_boot.o",
+      "profile": "authored_cpp",
+      "sha256": "6de79f5720a339e640d2ad0e086d06b16233bdd786521bf28fc751b0d669a368",
+      "source": "sources/game-boot-game-boot/game_boot.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 637,
+      "kind": "independently_authored_source",
+      "object_name": "game_init.o",
+      "profile": "authored_cpp",
+      "sha256": "e6b668524220ea55600b8caa6fec1c11e0cb56b5de98ca9a090356b616dcc387",
+      "source": "sources/game-boot-game-init/game_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 638,
+      "kind": "independently_authored_source",
+      "object_name": "debug_check.o",
+      "profile": "authored_cpp",
+      "sha256": "dbef5b51d52b65d68168d3b9e018e2692e34131df23549f5c010cfea15bb4d35",
+      "source": "sources/game-boot-pause-menu/debug_check.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9168,7 +9218,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "e8bccc68f50fbd2f89b3f6f7b05cc0e5f2974643257b2b183cef2e58f2f9280b",
+  "snapshot_sha256": "53dcf0be6290f68495152dc0b7adab54e04f0c66a974d04c2311afd771944599",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

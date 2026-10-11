@@ -8293,6 +8293,76 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/scheduler-task-words/task_words.cpp"
+    },
+    {
+      "input_order": 634,
+      "component": "game-boot-dlg-init",
+      "object_name": "dlg_init.o",
+      "private_object_sha256": "048ac19232472866ba61e75561d1247f0e7861be2691a2f949a1d11012983cdd",
+      "emitted_functions": [
+        {
+          "name": "DLG_Init__Fv",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-boot-dlg-init/dlg_init.cpp"
+    },
+    {
+      "input_order": 635,
+      "component": "game-boot-draw-loop",
+      "object_name": "simple_draw.o",
+      "private_object_sha256": "29bcfc62cf5d16bfdd977cdc7769568e14364d9cdbae407741bc83081c7a1aeb",
+      "emitted_functions": [
+        {
+          "name": "simpleDrawLoop__FPFv_i",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-boot-draw-loop/simple_draw.cpp"
+    },
+    {
+      "input_order": 636,
+      "component": "game-boot-game-boot",
+      "object_name": "game_boot.o",
+      "private_object_sha256": "18b476940778b987af77f898f8ae57ef5ac32fd933969a1d18f810188aa88e88",
+      "emitted_functions": [
+        {
+          "name": "gameBoot__Fv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-boot-game-boot/game_boot.cpp"
+    },
+    {
+      "input_order": 637,
+      "component": "game-boot-game-init",
+      "object_name": "game_init.o",
+      "private_object_sha256": "bfd9468a55829447d7734d18575b00d9213a1f0e28fa2b6165b1ad215ddebcf2",
+      "emitted_functions": [
+        {
+          "name": "gameInit__Fv",
+          "compiled_body_bytes": 888
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-boot-game-init/game_init.cpp"
+    },
+    {
+      "input_order": 638,
+      "component": "game-boot-pause-menu",
+      "object_name": "debug_check.o",
+      "private_object_sha256": "86a8aab0632ee2f657c767dea225b99a5bcd60a314e6f8ad1c92389a463b54cd",
+      "emitted_functions": [
+        {
+          "name": "debugCheckForPauseMenuStart__Fv",
+          "compiled_body_bytes": 1184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-boot-pause-menu/debug_check.cpp"
     }
   ],
   "drafts": [
@@ -8783,6 +8853,16 @@
     "sources/game-archive-services-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-archive-services-build/dependencies.hpp": "65fd1ef43d8a6a5ceb10be599ae2612a406464aaf1034a976bea58503693410c",
     "sources/game-archive-services-build/loader_primitives.hpp": "54158aa5a19e01304588a63f4d2d4e461f8cbebffeeb5dbe28b323f1a323ad41",
+    "sources/game-boot-dlg-init/dlg_init.cpp": "e0c37e5c4b9521e4fa8361f7878a65998cb98dcca42faf6fabedb4c793578153",
+    "sources/game-boot-dlg-init/host_check.cpp": "4bee7bf9a8a2c41d9da4d502d6529df08accb8bb0e8f0ad0d92dc6c63ed5d52f",
+    "sources/game-boot-draw-loop/host_check.cpp": "ea62658cb50f2d3cdc0c7134104b11d6a2c040c03e7619523eb0f9271e7e1bf5",
+    "sources/game-boot-draw-loop/simple_draw.cpp": "8c4f99c1c4cae0065450faf3198f6d581b3de63012a95df2ec0cf9723ae30833",
+    "sources/game-boot-game-boot/game_boot.cpp": "6de79f5720a339e640d2ad0e086d06b16233bdd786521bf28fc751b0d669a368",
+    "sources/game-boot-game-boot/host_check.cpp": "6086029e021580d5c95224497414689e571fd94f1e164023aee1834047c88c3d",
+    "sources/game-boot-game-init/game_init.cpp": "e6b668524220ea55600b8caa6fec1c11e0cb56b5de98ca9a090356b616dcc387",
+    "sources/game-boot-game-init/host_check.cpp": "65a5d4911c15d5351ef1759cea1b436205fd677448238fab2105e7df38d20d75",
+    "sources/game-boot-pause-menu/debug_check.cpp": "dbef5b51d52b65d68168d3b9e018e2692e34131df23549f5c010cfea15bb4d35",
+    "sources/game-boot-pause-menu/host_check.cpp": "177936add92d3e7ae9977da1cd941fc61127390073a08616a72f637b1c71c164",
     "sources/game-creature-animation-build/animation.cpp": "76888a92bc6405b7da22e7ac8141058a881b28bf5ed635d0a06b85e6bad561ad",
     "sources/game-creature-animation-build/creature_animation.hpp": "fce9603a7f59a5c3873c5d4d936d573f1458e50f0a5962da3f9ad7b38134d2cd",
     "sources/game-creature-animation-build/finish_construction.cpp": "072d958f75a1a31cb516ff0d28d9709db30a9bd737e0e000f95cb9688f73af25",
@@ -10440,11 +10520,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 634,
-    "authored_default_inputs": 632,
+    "selected_inputs": 639,
+    "authored_default_inputs": 637,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 538,
-    "compiled_body_bytes_from_accepted_inputs": 287060,
+    "emitted_function_definitions_including_helpers": 543,
+    "compiled_body_bytes_from_accepted_inputs": 289844,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10457,7 +10537,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 321
+    "package_selected_inputs": 326
   },
   "startup_implementations": [
     {
@@ -15198,6 +15278,91 @@
       "emitted_functions": [],
       "host_files": [
         "sources/scheduler-task-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-boot",
+      "source": "sources/game-boot-dlg-init/dlg_init.cpp",
+      "source_sha256": "e0c37e5c4b9521e4fa8361f7878a65998cb98dcca42faf6fabedb4c793578153",
+      "object_sha256": "048ac19232472866ba61e75561d1247f0e7861be2691a2f949a1d11012983cdd",
+      "emitted_functions": [
+        {
+          "name": "DLG_Init__Fv",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/game-boot-dlg-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-boot",
+      "source": "sources/game-boot-draw-loop/simple_draw.cpp",
+      "source_sha256": "8c4f99c1c4cae0065450faf3198f6d581b3de63012a95df2ec0cf9723ae30833",
+      "object_sha256": "29bcfc62cf5d16bfdd977cdc7769568e14364d9cdbae407741bc83081c7a1aeb",
+      "emitted_functions": [
+        {
+          "name": "simpleDrawLoop__FPFv_i",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/game-boot-draw-loop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-boot",
+      "source": "sources/game-boot-game-boot/game_boot.cpp",
+      "source_sha256": "6de79f5720a339e640d2ad0e086d06b16233bdd786521bf28fc751b0d669a368",
+      "object_sha256": "18b476940778b987af77f898f8ae57ef5ac32fd933969a1d18f810188aa88e88",
+      "emitted_functions": [
+        {
+          "name": "gameBoot__Fv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/game-boot-game-boot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-boot",
+      "source": "sources/game-boot-game-init/game_init.cpp",
+      "source_sha256": "e6b668524220ea55600b8caa6fec1c11e0cb56b5de98ca9a090356b616dcc387",
+      "object_sha256": "bfd9468a55829447d7734d18575b00d9213a1f0e28fa2b6165b1ad215ddebcf2",
+      "emitted_functions": [
+        {
+          "name": "gameInit__Fv",
+          "compiled_body_bytes": 888
+        }
+      ],
+      "host_files": [
+        "sources/game-boot-game-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-boot",
+      "source": "sources/game-boot-pause-menu/debug_check.cpp",
+      "source_sha256": "dbef5b51d52b65d68168d3b9e018e2692e34131df23549f5c010cfea15bb4d35",
+      "object_sha256": "86a8aab0632ee2f657c767dea225b99a5bcd60a314e6f8ad1c92389a463b54cd",
+      "emitted_functions": [
+        {
+          "name": "debugCheckForPauseMenuStart__Fv",
+          "compiled_body_bytes": 1184
+        }
+      ],
+      "host_files": [
+        "sources/game-boot-pause-menu/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
