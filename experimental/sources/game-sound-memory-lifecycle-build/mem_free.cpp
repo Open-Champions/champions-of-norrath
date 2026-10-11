@@ -43,4 +43,7 @@ extern "C" void norrath_mem_free(void* allocation) {
         write_word_ordered(address(norrath_heap_next_fit_view),final_previous);
     }
 }
+// memFree__FPv is this body: 0x00144558, 232 bytes in the pinned image.
+// The check at line 583 is the same function.
+extern "C" void memFree__FPv(void* allocation) __attribute__((alias("norrath_mem_free")));
 
