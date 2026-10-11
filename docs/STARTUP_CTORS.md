@@ -53,3 +53,34 @@ work/ctor-check/dtors
 work/ctor-check/dtors reentrant
 work/ctor-check/dtors empty table
 ```
+
+## Reverse constructor walker
+
+The complete 192-byte original at 0x002f9ee8 first registers frame information,
+then obtains the count from slot zero or scans through the null terminator when
+that slot is all ones. It calls slots count through one in reverse order and
+finally registers `__do_global_dtors` with `atexit`, without inspecting failure.
+This preserves both forms of well-formed table; corrupt/unbounded tables remain
+outside the memory-valid contract. The pinned table contains 101 callbacks.
+
+The source owns a six-word frame-registration object: the inspected registrar
+at 0x002fc428 initializes words at offsets 0, 4, 8, 12, 16 and 20; the original
+object at 0x008ea980 ends where the main guard at 0x008ea998 begins. This establishes
+the 24-byte storage span, not the rest of the exception runtime. The registrar,
+frame contents, callback tables and `atexit` remain external dependencies.
+The target emits 176 bytes. Generated call order, sentinel scan and reverse loop
+were inspected. Host ASan/UBSan checks cover 204 tables (counts 0–101 in both
+counted and sentinel form), registration-before-callbacks and exit-registration
+after callbacks, including ignored registration failure. These checks execute
+host stand-ins for dependencies, not original callbacks or PS2 startup.
+
+```sh
+clang++ -std=c++17 -O2 -fsanitize=address,undefined -D__do_global_ctors=norrath_test_ctors -D__do_global_dtors=norrath_test_dtors -D__CTOR_LIST__=norrath_test_ctor_list -D__EH_FRAME_BEGIN__=norrath_test_frames -D__register_frame_info=norrath_test_register -Datexit=norrath_test_atexit experimental/sources/runtime-startup/constructors.cpp tools/checks/constructors_contract.cpp -o work/ctor-check/ctors
+work/ctor-check/ctors
+```
+
+The constructor package is implemented before low-level entry because these
+complete C++ contracts can be checked with the established compiler profile.
+Entry requires a separate pre-stack CPU/kernel ABI implementation and validation;
+putting an ordinary C++ prologue at `_start` would be incorrect. No startup stage
+is described as reached merely because its dispatcher now compiles.
