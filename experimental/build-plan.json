@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 845,
+  "default_authored_inputs": 846,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1465,6 +1465,7 @@
     "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
     "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+    "sources/script-amx-script-init/script_init.cpp": "fd7991b049e7cae9a2505644f2f929aaea850cb40b62fdab7f7e330ba0035608",
     "sources/sif-keyboard-init-sif/init_sif.cpp": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
     "sources/sif-keyboard-iop-heap-query/query.cpp": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
     "sources/sif-keyboard-keyboard/keyboard.cpp": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
@@ -11232,6 +11233,15 @@
       "profile": "authored_cpp",
       "sha256": "b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e",
       "source": "sources/audio-sound-sleep/sound_sleep.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 847,
+      "kind": "independently_authored_source",
+      "object_name": "script_init.o",
+      "profile": "authored_cpp",
+      "sha256": "fd7991b049e7cae9a2505644f2f929aaea850cb40b62fdab7f7e330ba0035608",
+      "source": "sources/script-amx-script-init/script_init.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11331,7 +11341,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ddebc772c872128666eb74c6c2e7821f9dd0892851e54d613e7e5eb7d3cedd70",
+  "snapshot_sha256": "22deaa8d3c2880043d40f78809eb039dd002096f5ebbb07c931ef5e4df3576bb",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

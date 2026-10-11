@@ -959,6 +959,24 @@ closed. Those names were already defined or were not published. 723 function
 bodies, 845 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/script-amx second pass
+
+`scriptInit__Fv` was selected. It is 72 bytes. The host check passed. The
+held AMX draft was not selected. `engineAddTask__FPFv_viPci` was already
+defined, so it did not open.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `scriptInit__Fv`. Opened: `scriptTask__Fv`. The notes also listed the
+first-pass script names as closed. Those were already defined. 724 function
+bodies, 846 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1067,7 +1085,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, and the audio second pass. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, and the script-amx second pass. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1109,3 +1127,4 @@ and no startup stage has executed.
 - 2026-10-11 17:31 CDT — `agents/cd-archive` — 886 unresolved imports
 - 2026-10-11 17:38 CDT — `agents/memory` — 879 unresolved imports
 - 2026-10-11 17:41 CDT — `agents/audio` — 879 unresolved imports
+- 2026-10-11 17:42 CDT — `agents/script-amx` — 879 unresolved imports

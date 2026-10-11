@@ -11133,6 +11133,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/audio-sound-sleep/sound_sleep.cpp"
+    },
+    {
+      "input_order": 847,
+      "component": "script-amx-script-init",
+      "object_name": "script_init.o",
+      "private_object_sha256": "591238c619cfa288ae6f63237e8f43116f01ebb4ea1294ff879528e24fd879a9",
+      "emitted_functions": [
+        {
+          "name": "scriptInit__Fv",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-script-init/script_init.cpp"
     }
   ],
   "drafts": [
@@ -13112,6 +13126,8 @@
     "sources/script-amx-native-registry/registry_host.cpp": "9f62aba5a36960e52cf212d9a63eb4d27f4b897bf2f83264f15bbd1ba5ca8933",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
     "sources/script-amx-post-action/post_action_host.cpp": "73c888406f60754402b8bd518694647610a2ec4221d5a877e34a3b494d4374af",
+    "sources/script-amx-script-init/script_init.cpp": "fd7991b049e7cae9a2505644f2f929aaea850cb40b62fdab7f7e330ba0035608",
+    "sources/script-amx-script-init/script_init_host.cpp": "0cd4095f0eb43d120811a9b8c15c09bd36e546bb3bcb8d84be6f2311ec6def2f",
     "sources/sif-keyboard-init-sif/host_contract.cpp": "36b95658a28c895157179c942fc9818a3a34792a029a9b44e3ee7cbcbace1d0a",
     "sources/sif-keyboard-init-sif/init_sif.cpp": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
     "sources/sif-keyboard-iop-heap-query/host_contract.cpp": "8134eff4bdc303ca733741d59c9d94f9b5598945d10649c948711a6983170545",
@@ -13699,11 +13715,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 847,
-    "authored_default_inputs": 845,
+    "selected_inputs": 848,
+    "authored_default_inputs": 846,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 725,
-    "compiled_body_bytes_from_accepted_inputs": 335912,
+    "emitted_function_definitions_including_helpers": 726,
+    "compiled_body_bytes_from_accepted_inputs": 335984,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13716,7 +13732,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 534
+    "package_selected_inputs": 535
   },
   "startup_implementations": [
     {
@@ -21937,6 +21953,23 @@
       ],
       "host_files": [
         "sources/audio-sound-sleep/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-script-init/script_init.cpp",
+      "source_sha256": "fd7991b049e7cae9a2505644f2f929aaea850cb40b62fdab7f7e330ba0035608",
+      "object_sha256": "591238c619cfa288ae6f63237e8f43116f01ebb4ea1294ff879528e24fd879a9",
+      "emitted_functions": [
+        {
+          "name": "scriptInit__Fv",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/script-amx-script-init/script_init_host.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
