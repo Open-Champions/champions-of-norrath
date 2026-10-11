@@ -12,13 +12,17 @@ Observed at `0x0016d160`, 276 bytes. A nonzero word at offset 28 returns with no
 
 Observed at `0x001725e0`, 64 bytes. It stores the arithmetic right-shift by 8 of `address + 255` at `0x0048695c` and of `size - (address & 0xff)` at `0x00486960`, calls `textureInternalInit__Fv`, then stores that reloaded size minus one at `textureMaxBlockSize` (`0x004840b0`, four zero bytes). A second `textureBufferStartAddress` label is at `0x00486a34`. This unit publishes one external word under that name, the word this function stores.
 
+## initVIF__Fv
+
+Observed at `0x0018f118`, 224 bytes. COP2 register 28 receives 1024. `sceDmaSend` / `sceDmaSync` run on `dmaVif1` with `0x0031b790` (`loadVU1Program`) and on `dmaVif0` with `0x0031b510` (`loadVU0Program`). Both syncs use mode 0 and timeout 0. `FlushCache(0)` and `sceGsSyncPath(0, 0)` follow. The words at `0x10003820` and `0x10003c20` are set to 2, then `sceGsSyncV(0)` runs twice. `0x1100ffb4`, `0x1100ffb8`, and `0x1100ff60` receive `0x30ae4000`, `0x30be4000`, and `0x8000`; the next three words are zero. The channel pointers are the words at `0x00486a40` and `0x00486a44`. Separate local words with the same names are at `0x004868d8` and `0x004868dc`; `drawInit` uses those.
+
 ## Imports closed
 
-`textureInitTexture__FP8_texture`, `textureInit__Fii`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`, `dmaVif0`, `dmaVif1`.
 
 ## Imports opened
 
-`textureInternalInit__Fv`.
+`textureInternalInit__Fv`, `sceDmaSend`, `sceDmaSync`, `FlushCache`, `sceGsSyncPath`, `sceGsSyncV`. `FlushCache` is already selected in the kernel package; the other four stay imports.
 
 ## Build-plan entries needed
 
@@ -44,11 +48,22 @@ Observed at `0x001725e0`, 64 bytes. It stores the arithmetic right-shift by 8 of
 }
 ```
 
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "init_vif.o",
+  "profile": "authored_cpp",
+  "sha256": "81c34f0f897d8159901b30ea14fabc47209eabd4e31c594e374de354fadf91e4",
+  "source": "sources/draw-texture-init-init-vif/init_vif.cpp"
+}
+```
+
 The integrator assigns `input_order`. No shared plan file was edited.
 
 ## Authored but never executed
 
-`textureInitTexture__FP8_texture` and `textureInit__Fii` were compiled with the reviewed EE toolchain and checked on the host. Neither has run on the EE. No startup stage has run.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, and `initVIF__Fv` were compiled with the reviewed EE toolchain and checked on the host. None has run on the EE. No startup stage has run.
 
 ## Unknown
 
