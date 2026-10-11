@@ -113,6 +113,16 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 }
 ```
 
+```json
+{
+  "header_closure": ["sources/actors-a-anttrap/anttrap.hpp"],
+  "kind": "independently_authored_source",
+  "object_name": "anttrap.o",
+  "profile": "authored_cpp",
+  "source": "sources/actors-a-anttrap/anttrap.cpp"
+}
+```
+
 ## Status
 
 `norrath_construct_Candle2` is `__7Candle2G6Point3` at `0x002310a8`, 120 bytes. It clears both base-call pointers, stores view `0x0044a930`, ORs flag `1`, writes `0xf0` at byte 40, clears bytes 76 and 77, and returns `norrath_actor_add_run_list`.
@@ -131,12 +141,14 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 
 `norrath_construct_FloorSwitch` is `__11FloorSwitchG6Point3PPc` at `0x002132c0`, 296 bytes. It performs one collision update, stores the door height before the negative-index delete, then replaces the view with `0x00449790` and returns `norrath_object_add_to_medium_run_list`. The tag-string clear of bit `0x00100000` remains.
 
-imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`
+`norrath_construct_AntTrap` is `__7AntTrapPcG6Point3sPPc` at `0x00225fe8`, 204 bytes. It forwards to `norrath_construct_AutoProp`, ORs flag 1, and queries `lumpFindResource` with the bytes at object+109 and the word at `0x00471310`. A null header leaves V0 at 0. Otherwise the state at object+152 is initialized, the header is added with mode 4, set to its end, the half at 158 gains bit `0x80`, and that half is V0. The header receives bits `0x3f800000` at +20 and byte 1 at +24.
 
-imports opened: `norrath_world_check_for_water`; `norrath_light_add`; `norrath_construct_AutoPropLP`; `norrath_world_find_closest_door`; `norrath_world_set_door_collision`; `norrath_world_get_door_height`; `norrath_object_add_to_delete_list`; `norrath_object_add_to_medium_run_list` (retained `objectAddToMediumRunList__FP10GameObject`). Container and ContainerWithResources also use the existing `norrath_lump_find_resource` and `norrath_factory_world_pointer_word`.
+imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap`
 
-build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, EggSack, DoorSecret, DoorSwing, and FloorSwitch entries above.
+imports opened: `norrath_world_check_for_water`; `norrath_light_add`; `norrath_construct_AutoPropLP`; `norrath_construct_AutoProp`; `norrath_world_find_closest_door`; `norrath_world_set_door_collision`; `norrath_world_get_door_height`; `norrath_object_add_to_delete_list`; `norrath_object_add_to_medium_run_list` (retained `objectAddToMediumRunList__FP10GameObject`). Container, ContainerWithResources, and AntTrap use the existing `norrath_lump_find_resource`, `norrath_actor_animation_initialize`, `norrath_actor_animation_add`, and `norrath_animation_set_to_end`.
 
-authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch` (compared against the original bodies; not run as gameplay).
+build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, EggSack, DoorSecret, DoorSwing, FloorSwitch, and AntTrap entries above.
+
+authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap` (compared against the original bodies; not run as gameplay).
 
 unknown: the remaining A–F constructor imports, and NaN behavior of the height compare.

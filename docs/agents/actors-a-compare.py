@@ -35,6 +35,10 @@ STUBS = {
     0x0017D3D0: "norrath_world_get_door_height",
     0x001437E8: "norrath_object_add_to_delete_list",
     0x00143908: "norrath_object_add_to_medium_run_list",
+    0x00220278: "norrath_construct_AutoProp",
+    0x001637A8: "norrath_actor_animation_initialize",
+    0x00163830: "norrath_actor_animation_add",
+    0x00163BA0: "norrath_animation_set_to_end",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -379,7 +383,7 @@ class Machine:
                     self.floats.append(self.f[12])
                 if name == "norrath_light_add":
                     self.snapshots.append(bytes(self.u8(self.low(4) + i) for i in range(64)))
-                if name == "norrath_construct_AutoPropLP":
+                if name in ("norrath_construct_AutoPropLP", "norrath_construct_AutoProp"):
                     self.snapshots.append(struct.pack("<I", self.low(8)))
                 if name == "norrath_world_find_closest_door":
                     self.snapshots.append(struct.pack("<II", self.u32(OBJECT + 12), self.u32(OBJECT + 72)))
@@ -598,6 +602,7 @@ def main():
     compare_doorsecret(data, loads)
     compare_doorswing(data, loads)
     compare_floorswitch(data, loads)
+    compare_anttrap(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -1062,6 +1067,66 @@ def compare_floorswitch(data, loads):
                     print(" byte", index, hex(a), hex(b))
             raise SystemExit("floorswitch comparison failed")
     print("floorswitch: 2 original/compiled scenarios matched")
+
+
+def compare_anttrap(data, loads):
+    original = read_vaddr(data, loads, 0x00225FE8, 0xCC)
+    output = Path("/tmp/actors-a-anttrap.o")
+    compile_object(ROOT / "experimental/sources/actors-a-anttrap/anttrap.cpp", output)
+    text, relocs, symbols, _named = parse_object(output)
+    bases = {
+        "norrath_construct_AutoProp": 0x00220278,
+        "norrath_lump_find_resource": 0x00165DC0,
+        "norrath_actor_animation_initialize": 0x001637A8,
+        "norrath_actor_animation_add": 0x00163830,
+        "norrath_animation_set_to_end": 0x00163BA0,
+        "norrath_actors_a_view_44f1f8": 0x0044F1F8,
+        "norrath_actors_a_view_471310": 0x00471310,
+    }
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x00225FE8 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    resource = 0x33000000
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    extra = {OBJECT + 156: 0x01005A5A}
+    for index in range(8):
+        extra[resource + index * 4] = 0x5A5A5A5A
+    regs = {5: 0x1001, 6: POINT, 7: 0xAB, 8: ARGUMENTS}
+    present = ["norrath_construct_AutoProp", "norrath_lump_find_resource",
+               "norrath_actor_animation_initialize", "norrath_actor_animation_add",
+               "norrath_animation_set_to_end"]
+    scenarios = [
+        ([0, resource, 0, 0, 0], present, 0x0180, resource, 0x3F800000, 1),
+        ([0, 0], present[:2], 0, 0, 0x5A5A5A5A, 0x5A),
+    ]
+    for answers, names, ret, stored, float_bits, marker in scenarios:
+        left = run_case(original_image, 0x00225FE8, answers, flags=0x10, extra=extra, regs=regs, object_size=420)
+        right = run_case(compiled_image, CODE, answers, flags=0x10, extra=extra, regs=regs, object_size=420)
+        ok = ([call[0] for call in left.calls] == [call[0] for call in right.calls] == names and
+              left.low(2) == right.low(2) == ret and object_bytes(left, 420) == object_bytes(right, 420) and
+              left.calls[0][1] == OBJECT and left.calls[0][2] == 0x1001 and left.calls[0][4] == 0xAB and
+              left.calls[0][5] == incoming and left.snapshots == [struct.pack("<I", ARGUMENTS)] and
+              left.calls[1][1] == right.calls[1][1] == OBJECT + 109 and
+              left.calls[1][2] == right.calls[1][2] == 0x00471310 and
+              left.u32(OBJECT + 12) == 0x11 and left.u32(OBJECT + 72) == 0x0044F1F8 and
+              left.u32(OBJECT + 408) == stored and
+              (left.u8(OBJECT + 158) | (left.u8(OBJECT + 159) << 8)) == (0x0180 if stored else 0x0100) and
+              left.u32(resource + 20) == right.u32(resource + 20) == float_bits and
+              left.u8(resource + 24) == right.u8(resource + 24) == marker)
+        if stored:
+            for side in (left, right):
+                ok = ok and side.calls[2][1] == OBJECT + 152 and side.calls[3][1] == OBJECT + 152
+                ok = ok and side.calls[3][2] == resource and side.calls[3][3] == 4 and side.calls[4][1] == OBJECT + 152
+        if not ok:
+            print("anttrap", names)
+            print("left", left.calls)
+            print("right", right.calls)
+            print("return", hex(left.low(2)), hex(right.low(2)))
+            for index, (a, b) in enumerate(zip(object_bytes(left, 420), object_bytes(right, 420))):
+                if a != b:
+                    print(" byte", index, hex(a), hex(b))
+            raise SystemExit("anttrap comparison failed")
+    print("anttrap: 2 original/compiled scenarios matched")
 
 
 if __name__ == "__main__":
