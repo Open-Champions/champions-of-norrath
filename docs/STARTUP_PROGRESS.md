@@ -101,3 +101,17 @@ are the only import changes: **869 → 867**, nothing added, zero COMMON, 411
 function bodies. The optional inputs stay out of the default build. No startup
 stage or kernel service has run. The [receipt](../experimental/startup-newlib-receipt.json)
 records both outputs.
+
+## InitSys service package
+
+The nine services named by `_InitSys`, plus `CreateSema` and `DeleteSema`, are
+now selected authored source. The two semaphore wrappers match the original
+16-byte bodies. The other nine are complete call orchestration with host
+contracts; they are not original-byte matches, and no EE service has run.
+Defining the nine removes those imports and exposes their callees. The measured
+default partial link is **911 unresolved imports** (869 − 9 + 51), zero COMMON,
+420 function bodies. `_gp` was already defined, so `InitThread` did not add it.
+`main` and `launchSRS` are still unresolved. The
+[review](STARTUP_INITSYS.md) separates observed calls from unknown helper and
+hardware effects. The [receipt](../experimental/startup-initsys-receipt.json)
+lists the import delta.
