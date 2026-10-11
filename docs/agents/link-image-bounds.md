@@ -14,13 +14,17 @@ Observed at `0x002fc428`, 104 bytes. The caller passes the frame pointer and a s
 
 Observed at `0x002ff8d8`, 160 bytes. It loads the object addressed by `_impure_ptr`. The word at offset 328 selects a 136-byte block; a zero word selects the block at offset 332 and stores that address. The block is a next address, a signed count, and 32 function addresses. Count 32 or more calls `__wrap_malloc(136)`. A null allocation returns -1 and leaves the previous block unchanged. Otherwise the new block's next word is the previous block, the function is stored at the current count, and the count increases by one. Success returns 0. The compiled body is 372 bytes. The host contract fails if the 32nd registration allocates, if the 33rd does not allocate 136 bytes, if the new block is not linked in front, or if allocation failure still returns 0.
 
+## __deregister_frame_info
+
+Observed at `0x002fc558`, 188 bytes. It waits on `__sce_eh_sema_id` and walks `objects`. A match is the node whose word 2 is the caller's frame pointer. That node is unlinked. Word 3 is passed to `__wrap_free` only when it is nonzero and is not the same pointer. The semaphore is signaled and the node is returned. No match signals the semaphore and calls `abort`. The compiled body is 160 bytes. The host contract fails if the middle node stays linked, if a null or identical word 3 is freed, if the signal uses the id from before the wait, or if a missing node skips `abort`.
+
 ## Imports closed
 
-`__register_frame_info`, `atexit`.
+`__register_frame_info`, `atexit`, `__deregister_frame_info`.
 
 ## Imports opened
 
-None yet. `WaitSema` and `__wrap_malloc` are already defined. `SignalSema`, `__sce_eh_sema_id`, and `_impure_ptr` were already unresolved. `objects` is defined with the registrar.
+`__wrap_free`, `abort`. `WaitSema` and `__wrap_malloc` are already defined. `SignalSema`, `__sce_eh_sema_id`, and `_impure_ptr` were already unresolved. `objects` is defined with the registrar.
 
 ## Build-plan entries needed
 
@@ -28,8 +32,8 @@ Append these authored inputs. Do not add the host contracts. Assign `input_order
 
 ## What is authored but never executed
 
-`__register_frame_info` and `atexit` have not run on the EE. No constructor walk has called them, and nothing has invoked the registered functions.
+`__register_frame_info`, `atexit`, and `__deregister_frame_info` have not run on the EE. No constructor walk has called them, and nothing has invoked a registered function or freed a frame node.
 
 ## What is unknown
 
-What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The bytes of the reentrancy object outside offsets 328 and 332. Negative block counts are outside this contract. The other eleven package symbols are not defined yet.
+What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The bytes of the reentrancy object outside offsets 328 and 332. Negative block counts are outside this contract. What `abort` does after the missing-node signal. The other ten package symbols are not defined yet.
