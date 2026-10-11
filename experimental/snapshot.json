@@ -4874,6 +4874,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys-callees/set_t2_mode.S"
+    },
+    {
+      "input_order": 311,
+      "component": "runtime-initsys-callees",
+      "object_name": "set_t2_comp.o",
+      "private_object_sha256": "decfcd539b84a2bfc9950868377df38512600a0df9732aebe8fef4e9c7ba68e5",
+      "emitted_functions": [
+        {
+          "name": "SetT2_COMP",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys-callees/set_t2_comp.S"
     }
   ],
   "drafts": [
@@ -5853,7 +5867,8 @@
     "sources/runtime-initsys-callees/eintr.S": "38e8cf0e89dadfb18a3e94712f895d18f204b11527a2bca55460b7e2a4fde8f9",
     "sources/runtime-initsys-callees/set_t2.S": "9f58d405620f1df5ea112ae67776007b823fec0a0941f5b403773978fd0a8dff",
     "sources/runtime-initsys-callees/set_t2_count.S": "43ae8a001eb7b400bf9cf4f93714b2c1550ba2bc9598a56d799ebd6ae747f9f3",
-    "sources/runtime-initsys-callees/set_t2_mode.S": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6"
+    "sources/runtime-initsys-callees/set_t2_mode.S": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6",
+    "sources/runtime-initsys-callees/set_t2_comp.S": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525"
   },
   "additional_implementations": [
     {
@@ -6295,11 +6310,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 311,
-    "authored_default_inputs": 309,
+    "selected_inputs": 312,
+    "authored_default_inputs": 310,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 435,
-    "compiled_body_bytes_from_accepted_inputs": 247852,
+    "emitted_function_definitions_including_helpers": 436,
+    "compiled_body_bytes_from_accepted_inputs": 247868,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6311,7 +6326,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 32
+    "startup_selected_inputs": 33
   },
   "startup_implementations": [
     {
@@ -6630,6 +6645,16 @@
       "compiled_body_bytes": 16,
       "source_sha256": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6",
       "object_sha256": "7f069ace69b571f2056c48f11ecf0fe14e0557772f6d5e07fb70f81b8a6a907a",
+      "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys-callees/set_t2_comp.S",
+      "symbol": "SetT2_COMP",
+      "compiled_body_bytes": 16,
+      "source_sha256": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
+      "object_sha256": "decfcd539b84a2bfc9950868377df38512600a0df9732aebe8fef4e9c7ba68e5",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
