@@ -20,7 +20,16 @@ unsigned norrath_construct_AutoChest(void* object, char* name, const void* point
 unsigned norrath_construct_AutoContainer(void* object, char* name, const void* point, short type, char** arguments);
 unsigned norrath_construct_AutoChestLP(void* object, char* name, const void* point, short type, char** arguments);
 unsigned norrath_construct_AutoContainerLP(void* object, char* name, const void* point, short type, char** arguments);
+unsigned norrath_construct_Boat(void* object, const void* point, short type, char** arguments);
+// Original __7VehicleG6Point3sPPci and Reset__7Vehiclei. Defined by vehicle-actors.
+unsigned norrath_construct_Vehicle(void* object, const void* point, short type, char** arguments, int flag);
+unsigned norrath_vehicle_reset(void* object, int value);
+// Original worldCheckForWater__FP12_worldHeaderG6Point3fPf. Not defined here.
+int norrath_world_check_for_water(void* world, const void* point, float radius, float* output);
+// Existing 4-byte `world` pointer at 0x4844a0.
+extern unsigned char norrath_actors_b_view_4844a0[];
 extern unsigned char norrath_ctors_ant_lantern_view_44e940[];
+extern unsigned char norrath_ctors_ant_lantern_view_453328[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
