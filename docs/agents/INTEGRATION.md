@@ -102,3 +102,50 @@ enable 112. The twelve storage units emit no functions. The host body
 comparison matched both 16-byte requests against the pinned executable.
 Thirteen host contracts passed. 214 tool tests passed. No EE, DMA, SPU, or
 game path ran.
+
+## agents/memory
+
+Merged. Observed symbols, sizes, and initial bytes are separated from inferred
+names. `memRealloc` has a host check that fails on the clamp, slack, split, and
+growth paths. Data units have host checks. No game binary or disassembly
+listing was committed.
+
+The notes describe a private plan whose unresolved list still had 911 names.
+That absolute count does not reproduce on the shared tip. The closed and
+opened names do.
+
+| | |
+|---|---|
+| Before | 978 |
+| After | 950 |
+| Closed | 29 |
+| Opened | 1 (`memcpy`) |
+
+Closed: `norrath_mem_realloc`, `norrath_player_malloc_bins_view`,
+`norrath_player_malloc_trim_threshold_view`,
+`norrath_player_malloc_top_pad_view`,
+`norrath_player_malloc_break_base_view`,
+`norrath_player_malloc_max_break_view`,
+`norrath_player_malloc_max_total_view`,
+`norrath_player_malloc_current_info_view`,
+`norrath_player_malloc_lock_owner_view`,
+`norrath_player_malloc_lock_count_view`,
+`norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`,
+`norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`,
+`norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`,
+`norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`,
+`norrath_heap_check_file_view`, `norrath_heap_failure_format_view`,
+`norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`,
+`norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`,
+`norrath_heap_dump_totals_format_view`,
+`norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`,
+`norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`.
+
+`norrath_mem_alloc` and `norrath_mem_free` were already defined, so the new
+call does not open them. `__sce_sema_id` stays unresolved. The semaphore view
+is a separate object; the notes say those two names are not yet one symbol.
+`norrath_player_heap_pointer_word` stays unresolved. The realloc body is 556
+bytes, matching the note. The other five units emit no functions. The
+sanitized realloc check and the bin-object check passed. The heap text check
+passes its byte comparisons; under AddressSanitizer it then reads one byte
+past `mem.cc`. 214 tool tests passed. No EE or game path ran.

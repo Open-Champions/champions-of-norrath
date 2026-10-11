@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 333,
+  "default_authored_inputs": 339,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -944,6 +944,12 @@
     "sources/math-integer-trig-coefficients/coefficients.cpp": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
     "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
+    "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+    "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
+    "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+    "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
+    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
     "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
@@ -5895,6 +5901,60 @@
       "profile": "authored_cpp",
       "sha256": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
       "source": "sources/audio-startup-strings/startup_strings.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 335,
+      "kind": "independently_authored_source",
+      "object_name": "mem_realloc.o",
+      "profile": "authored_cpp",
+      "sha256": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
+      "source": "sources/memory-realloc/mem_realloc.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 336,
+      "kind": "independently_authored_source",
+      "object_name": "malloc_bins.o",
+      "profile": "authored_cpp",
+      "sha256": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
+      "source": "sources/memory-malloc-state/malloc_bins.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 337,
+      "kind": "independently_authored_source",
+      "object_name": "malloc_scalars.o",
+      "profile": "authored_cpp",
+      "sha256": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+      "source": "sources/memory-malloc-state/malloc_scalars.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 338,
+      "kind": "independently_authored_source",
+      "object_name": "heap_state.o",
+      "profile": "authored_cpp",
+      "sha256": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+      "source": "sources/memory-heap-state/heap_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 339,
+      "kind": "independently_authored_source",
+      "object_name": "block_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
+      "source": "sources/memory-block-storage/block_storage.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 340,
+      "kind": "independently_authored_source",
+      "object_name": "wrapper_byte.o",
+      "profile": "authored_cpp",
+      "sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+      "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5994,7 +6054,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d0b23639085e490defdbc32f186944d32319f0a4088b3b540a31cc3640bd7729",
+  "snapshot_sha256": "1845ddf017f862d5c01bc2ec51f5960cedaaefa74347b4a9aa4455357f90c83c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

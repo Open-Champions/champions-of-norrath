@@ -5130,6 +5130,65 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/audio-startup-strings/startup_strings.cpp"
+    },
+    {
+      "input_order": 335,
+      "component": "memory-realloc",
+      "object_name": "mem_realloc.o",
+      "private_object_sha256": "e7b7660d92d3909c6208dc5023fbba21f7ac2365405a2e33ca02d2444e180850",
+      "emitted_functions": [
+        {
+          "name": "norrath_mem_realloc",
+          "compiled_body_bytes": 556
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-realloc/mem_realloc.cpp"
+    },
+    {
+      "input_order": 336,
+      "component": "memory-malloc-state",
+      "object_name": "malloc_bins.o",
+      "private_object_sha256": "7f907f729cc628fed830bd828bab856bcb8b6f52f3993ecc34ad1698003db1aa",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-malloc-state/malloc_bins.cpp"
+    },
+    {
+      "input_order": 337,
+      "component": "memory-malloc-state",
+      "object_name": "malloc_scalars.o",
+      "private_object_sha256": "cc4421260749e3a14ac9c982dae8bc0363bc47209cc31e21174602b653abb76d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-malloc-state/malloc_scalars.cpp"
+    },
+    {
+      "input_order": 338,
+      "component": "memory-heap-state",
+      "object_name": "heap_state.o",
+      "private_object_sha256": "d9a866ec747f4b181cfc942b5b8bb755b66083990cb4f8f9a9cb25e5c410aefc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-heap-state/heap_state.cpp"
+    },
+    {
+      "input_order": 339,
+      "component": "memory-block-storage",
+      "object_name": "block_storage.o",
+      "private_object_sha256": "f7c99e2196382fdeb037eb319b3f690b76e6c9692425ccda2e4ba2f1538af567",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-block-storage/block_storage.cpp"
+    },
+    {
+      "input_order": 340,
+      "component": "memory-wrapper-byte",
+      "object_name": "wrapper_byte.o",
+      "private_object_sha256": "80299a103856db1389d886128abd6cf3871bcab62af45d535edd137d304af02c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
     }
   ],
   "drafts": [
@@ -6156,7 +6215,19 @@
     "sources/audio-iop-buffers/host_contract.cpp": "ce7437fd9fc315da1a2436eef2333e69ce1146a792aa609a0bf468b33d4a5875",
     "sources/audio-iop-buffers/iop_buffers.cpp": "14f9beab640d0188b7d1d1244f6d369731f7656f9019522d1ab0895ef8d78dcc",
     "sources/audio-startup-strings/host_contract.cpp": "6ecabfa325b75c63d32199bc71d7fc83ed1d88479f93038b9719b5b7c0559594",
-    "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40"
+    "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
+    "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
+    "sources/memory-realloc/host_check.cpp": "e5238a24b07f09b050291e0619bcede7d5f776a6c39085f58628f93d9df04bb4",
+    "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
+    "sources/memory-malloc-state/check_bins_object.cpp": "6c21de5eaa222f5c12564fc58ca7637b7cdd112a68c0080335b0378f9ededc9e",
+    "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+    "sources/memory-malloc-state/host_check.cpp": "eab3a9c2d81da47405e3360584bd36b7eaf3fe1d2c028a015afedfc711a87ef8",
+    "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+    "sources/memory-heap-state/host_check.cpp": "95ead24a998d927240fb008b3624044535e5f4bda0da29bec48cf37fc47dc729",
+    "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
+    "sources/memory-block-storage/host_check.cpp": "8a135c017c628544dbe63f8b42ede6f6e8e0e5fe7adfc83c2aa76e39a580f03f",
+    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311"
   },
   "additional_implementations": [
     {
@@ -6598,11 +6669,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 335,
-    "authored_default_inputs": 333,
+    "selected_inputs": 341,
+    "authored_default_inputs": 339,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 443,
-    "compiled_body_bytes_from_accepted_inputs": 248452,
+    "emitted_function_definitions_including_helpers": 444,
+    "compiled_body_bytes_from_accepted_inputs": 249008,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6615,7 +6686,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 33,
-    "package_selected_inputs": 23
+    "package_selected_inputs": 29
   },
   "startup_implementations": [
     {
@@ -7257,6 +7328,83 @@
       "emitted_functions": [],
       "host_files": [
         "sources/audio-startup-strings/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-realloc/mem_realloc.cpp",
+      "source_sha256": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
+      "object_sha256": "e7b7660d92d3909c6208dc5023fbba21f7ac2365405a2e33ca02d2444e180850",
+      "emitted_functions": [
+        {
+          "name": "norrath_mem_realloc",
+          "compiled_body_bytes": 556
+        }
+      ],
+      "host_files": [
+        "sources/memory-realloc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-malloc-state/malloc_bins.cpp",
+      "source_sha256": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
+      "object_sha256": "7f907f729cc628fed830bd828bab856bcb8b6f52f3993ecc34ad1698003db1aa",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-malloc-state/check_bins_object.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-malloc-state/malloc_scalars.cpp",
+      "source_sha256": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+      "object_sha256": "cc4421260749e3a14ac9c982dae8bc0363bc47209cc31e21174602b653abb76d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-malloc-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-heap-state/heap_state.cpp",
+      "source_sha256": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+      "object_sha256": "d9a866ec747f4b181cfc942b5b8bb755b66083990cb4f8f9a9cb25e5c410aefc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-heap-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-block-storage/block_storage.cpp",
+      "source_sha256": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
+      "object_sha256": "f7c99e2196382fdeb037eb319b3f690b76e6c9692425ccda2e4ba2f1538af567",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-block-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-wrapper-byte/wrapper_byte.cpp",
+      "source_sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+      "object_sha256": "80299a103856db1389d886128abd6cf3871bcab62af45d535edd137d304af02c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-wrapper-byte/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
