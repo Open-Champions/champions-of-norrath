@@ -29,13 +29,30 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 /tmp/frame-end-check
 ```
 
+## engineFrameStart__FUib
+
+Observed at `0x00191200`, 252 bytes. The reviewed EE body is 312 bytes. `simpleDrawLoop` calls it with `coreClearColor` and 0. The second argument is passed through unchanged.
+
+`lightVU0StoppedProcessing` runs first. `frameStartPacket` receives the color, that second argument, and `draw` word 8 from before `FlushCache(0)` and `drawStart`. A nonzero word 0 after those calls copies the reloaded words 8 and 4 to words 20 and 16. A zero word 0 stores zero in both. Word 12 becomes 1. Word 0 ends as 1; a zero store immediately before that 1 has no call between them.
+
+`gstart` and `glistp` both receive `0x0038f9e0 + (drawFrameNm & 1) * 0x445c0`, with `0x30000000` set. Even is `0x3038f9e0`. Odd is `0x303d3fa0`. `drawFrameNm` is loaded after `drawStart`. `fullFrameMode` zero stores the sign-extended `vblankField` byte in word 8. Any other value stores 0. Word 4 then receives `fullFrameMode`.
+
+```sh
+c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
+  -I experimental/sources/frame-loop-frame-start \
+  experimental/sources/frame-loop-frame-start/host_check.cpp -o /tmp/frame-start-check
+/tmp/frame-start-check
+```
+
 ## Imports closed
 
-`engineFrameEnd__Fb`.
+`engineFrameEnd__Fb`, `engineFrameStart__FUib`.
 
 ## Imports opened
 
-`DIntr`, `EIntr`, `PollSema`, `WaitSema`, `coreLoadingScreenRunning`, `doSuperSample__Fiib`, `draw`, `drawFrameNm`, `drawWaitFinished__Fv`, `engineDisplayDisable`, `engineSetVideoMode__Fb`, `fullFrameMode`, `lastFrameVBlankCount`, `powerOffMode`, `sceGsSyncPath`, `scePrintf`, `switchTo30Counter.798`, `switchToHalfCounter.797`, `texturePackDown__Fv`, `vblankCount`, `vblankField`, `vblankSemaphore`, `vblankSemaphore2`.
+`DIntr`, `EIntr`, `FlushCache`, `PollSema`, `WaitSema`, `coreLoadingScreenRunning`, `doSuperSample__Fiib`, `draw`, `drawFrameNm`, `drawStart__Fv`, `drawWaitFinished__Fv`, `engineDisplayDisable`, `engineSetVideoMode__Fb`, `frameStartPacket__FUibi`, `fullFrameMode`, `glistp`, `gstart`, `lastFrameVBlankCount`, `lightVU0StoppedProcessing__Fv`, `powerOffMode`, `sceGsSyncPath`, `scePrintf`, `switchTo30Counter.798`, `switchToHalfCounter.797`, `texturePackDown__Fv`, `vblankCount`, `vblankField`, `vblankSemaphore`, `vblankSemaphore2`.
+
+`gstart` and `glistp` are defined by later units in this package. Until those units are linked, this object leaves them unresolved.
 
 `scePrintf`, `DIntr`, `EIntr`, `WaitSema`, and `PollSema` already exist as names elsewhere. This unit references them and does not define them.
 
@@ -55,11 +72,25 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 }
 ```
 
-Do not add `host_check.cpp`. The integrator assigns `input_order`.
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "frame_start.o",
+  "profile": "authored_cpp",
+  "sha256": "6902c57b116f1a66aeae62408fea11c95b9e2c787685335c25e450f04e5a7177",
+  "source": "sources/frame-loop-frame-start/frame_start.cpp",
+  "emitted_functions": [
+    {"name": "engineFrameStart__FUib", "compiled_body_bytes": 312}
+  ]
+}
+```
+
+Do not add either `host_check.cpp`. The integrator assigns `input_order`.
 
 ## Authored but never executed
 
-`engineFrameEnd__Fb`. The host checks ran on this Mac, and the reviewed EE compiler produced a relocatable object. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented.
+`engineFrameEnd__Fb` and `engineFrameStart__FUib`. The host checks ran on this Mac, and the reviewed EE compiler produced relocatable objects. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented.
 
 ## Unknown
 
