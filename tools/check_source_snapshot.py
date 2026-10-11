@@ -146,12 +146,18 @@ def check(root):
         ('sources/runtime-initsys-callees/set_t2_count.S', 'SetT2_COUNT'),
         ('sources/runtime-initsys-callees/set_t2_mode.S', 'SetT2_MODE'),
         ('sources/runtime-initsys-callees/set_t2_comp.S', 'SetT2_COMP'),
+        ('sources/runtime-startup-text/startup_text.cpp', ''),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
         assert record['source'] == item['source']
-        assert item['emitted_functions'] == [{'name': record['symbol'],
-                                             'compiled_body_bytes': record['compiled_body_bytes']}]
+        if record['symbol'] == '':
+            assert record['compiled_body_bytes'] == 0
+            assert item['emitted_functions'] == []
+            assert record['data_symbols']
+        else:
+            assert item['emitted_functions'] == [{'name': record['symbol'],
+                                                 'compiled_body_bytes': record['compiled_body_bytes']}]
         assert record['source_sha256'] == files[record['source']]
         assert record['object_sha256'] == item['private_object_sha256']
         assert record['game_runtime_verified'] is False

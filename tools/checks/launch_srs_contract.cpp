@@ -42,28 +42,28 @@ asm(
     "__srsctorsend:\n"
     ".byte 0\n");
 
-char norrath_main_sdata_004866a0[] = "site";
-char norrath_main_sdata_004867d0[] = "lump";
-char norrath_main_rodata_0047afe8[] = "h2";
-char norrath_main_rodata_0047aff8[] = "h3";
-char norrath_main_rodata_0047b008[] = "h4";
-char norrath_main_rodata_0047b018[] = "h5";
-char norrath_main_rodata_0047b028[] = "h6";
-char norrath_main_rodata_0047b038[] = "h7";
-char norrath_launchsrs_rodata_0047aeb8[] = "alloc";
-char norrath_launchsrs_rodata_0047aed8[] = "expr";
-char norrath_launchsrs_sdata_004867b0[] = "cd";
-char norrath_launchsrs_rodata_0047af30[] = "p1";
-char norrath_launchsrs_rodata_0047af50[] = "p2";
-char norrath_launchsrs_rodata_0047af70[] = "p3";
-char norrath_launchsrs_rodata_0047af88[] = "p4";
-char norrath_launchsrs_rodata_0047afa0[] = "p5";
-char norrath_launchsrs_rodata_0047afb0[] = "fmt";
-char norrath_launchsrs_rodata_0047afc0[] = "mod";
-char norrath_launchsrs_rodata_0047afd0[] = "p6";
-char norrath_launchsrs_sdata_004867b8[] = "b8";
-char norrath_launchsrs_sdata_004867c0[] = "c0";
-char norrath_launchsrs_sdata_004867c8[] = "c8";
+char norrath_startup_core_source_name[] = "site";
+char norrath_startup_fx_lump[] = "lump";
+char norrath_startup_halo2_tex[] = "h2";
+char norrath_startup_halo3_tex[] = "h3";
+char norrath_startup_halo4_tex[] = "h4";
+char norrath_startup_wisphalo_tex[] = "h5";
+char norrath_startup_halo5_tex[] = "h6";
+char norrath_startup_halo7_tex[] = "h7";
+char norrath_startup_module_allocation_text[] = "alloc";
+char norrath_startup_blanket_assert_text[] = "expr";
+char norrath_startup_srs_bin_name[] = "cd";
+char norrath_startup_pre_sound_sleep_memory_text[] = "p1";
+char norrath_startup_post_sound_sleep_memory_text[] = "p2";
+char norrath_startup_pre_srs_memory_text[] = "p3";
+char norrath_startup_run_constructors_text[] = "p4";
+char norrath_startup_go_srs_text[] = "p5";
+char norrath_startup_dotted_quad_text[] = "fmt";
+char norrath_startup_visounddriver_name[] = "mod";
+char norrath_startup_post_srs_memory_text[] = "p6";
+char norrath_startup_after_srs_marker[] = "b8";
+char norrath_startup_after_result_marker[] = "c0";
+char norrath_startup_after_module_marker[] = "c8";
 static char parsed_text[] = "parsed";
 static char other_text[] = "other";
 static unsigned short wide_text[] = {1, 0};
@@ -77,7 +77,7 @@ extern "C" void lumpClear__Fi(int value) {
     ++clears;
 }
 extern "C" void* memAlloc__FiPc(int bytes, char* name) {
-    if (name != norrath_launchsrs_rodata_0047aeb8) return nullptr;
+    if (name != norrath_startup_module_allocation_text) return nullptr;
     ++allocs;
     if (mode == 2 && allocs == 1) {
         if (bytes != 0x400000) return nullptr;
@@ -95,11 +95,11 @@ extern "C" void memFree__FPv(void* block) {
     ++frees;
 }
 extern "C" void __assert__FPCcUiT0i(const char* file, unsigned line, const char* text, int) {
-    if (file != norrath_main_sdata_004866a0 || line != 2326u || text != norrath_launchsrs_rodata_0047aed8) return;
+    if (file != norrath_startup_core_source_name || line != 2326u || text != norrath_startup_blanket_assert_text) return;
     ++asserts;
 }
 extern "C" void cdLoad__FPcPvii(char* name, void* destination, int requested, int byte_offset) {
-    if (name != norrath_launchsrs_sdata_004867b0 || requested || byte_offset) fail(1);
+    if (name != norrath_startup_srs_bin_name || requested || byte_offset) fail(1);
     if (destination != reinterpret_cast<void*>(static_cast<std::uintptr_t>(0x01000000u))) fail(1);
 }
 extern "C" void engineClear__Fv() {}
@@ -142,12 +142,12 @@ extern "C" int srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i(
     return result_code;
 }
 extern "C" int sscanf(char* text, const char* format, int* first, int* second, int* third, int* fourth) {
-    if (format != norrath_launchsrs_rodata_0047afb0) return 0;
+    if (format != norrath_startup_dotted_quad_text) return 0;
     *first = 1; *second = 2; *third = 3; *fourth = 4;
     return text == other_text ? 4 : 1;
 }
 extern "C" int sceSifSearchModuleByName(char* name) {
-    if (name != norrath_launchsrs_rodata_0047afc0) return -1;
+    if (name != norrath_startup_visounddriver_name) return -1;
     return module_id;
 }
 extern "C" int sceSifStopModule(int identifier, int second, int third, int* fourth) {
@@ -166,9 +166,9 @@ extern "C" void soundRestore__Fb(int value) { if (value != 1) fail(1); }
 extern "C" void frontEndInit__Fi(int value) { if (value == 0) ++fronts; }
 extern "C" void rejectForeignModules__Fv() { ++rejects; }
 extern "C" void sceMcInit() {}
-extern "C" void lumpLoad__FPc(char* name) { if (name != norrath_main_sdata_004867d0) fail(1); }
+extern "C" void lumpLoad__FPc(char* name) { if (name != norrath_startup_fx_lump) fail(1); }
 extern "C" char* lumpFindResource__FPcT0(char* lump, char* name) {
-    if (lump != norrath_main_sdata_004867d0) return nullptr;
+    if (lump != norrath_startup_fx_lump) return nullptr;
     return name;
 }
 extern "C" void lumpLock__Fi(int value) { if (value == 50) ++locks; }
@@ -199,7 +199,7 @@ int main() {
     if (marks < 1 || ctors != 2 || fronts != 1 || rejects != 1 || fromSRS != 1) return 4;
     if (netInterfaceIsUp != 0 || MC_ProtectRamSlot != 0 || fromSRSButEnteringGame != 0) return 5;
     if (engineDisplayDisable != 10000 || locks != 1 || resets != 1 || enableMallocWrapper != 0) return 6;
-    if (haloTexture2 != norrath_main_rodata_0047afe8 || haloTexture7 != norrath_main_rodata_0047b038) return 7;
+    if (haloTexture2 != norrath_startup_halo2_tex || haloTexture7 != norrath_startup_halo7_tex) return 7;
     if (*reinterpret_cast<unsigned*>(pad + 268) != 120u || *reinterpret_cast<unsigned*>(pad + 4) != 120u) return 8;
     if (stops != 0 || scrambles != 1) return 9;
 

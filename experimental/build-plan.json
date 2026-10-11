@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 310,
+  "default_authored_inputs": 311,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -951,8 +951,8 @@
     "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
     "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
     "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
-    "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
-    "sources/runtime-main/main.cpp": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
+    "sources/runtime-launchsrs/launch_srs.cpp": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
+    "sources/runtime-main/main.cpp": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
@@ -962,7 +962,8 @@
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
-    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
+    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
+    "sources/runtime-startup-text/startup_text.cpp": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e"
   },
   "inputs": [
     {
@@ -5546,7 +5547,7 @@
       "kind": "independently_authored_source",
       "object_name": "main.o",
       "profile": "authored_cpp",
-      "sha256": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
+      "sha256": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
       "source": "sources/runtime-main/main.cpp"
     },
     {
@@ -5555,7 +5556,7 @@
       "kind": "independently_authored_source",
       "object_name": "launch_srs.o",
       "profile": "authored_cpp",
-      "sha256": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
+      "sha256": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
       "source": "sources/runtime-launchsrs/launch_srs.cpp"
     },
     {
@@ -5665,6 +5666,15 @@
       "profile": "authored_entry_asm",
       "sha256": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
       "source": "sources/runtime-initsys-callees/set_t2_comp.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 312,
+      "kind": "independently_authored_source",
+      "object_name": "startup_text.o",
+      "profile": "authored_cpp",
+      "sha256": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
+      "source": "sources/runtime-startup-text/startup_text.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5764,7 +5774,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fe0fff08502cac60c01c68a4a592eac0c7bfae7cb19c94fe8517e39f40307daf",
+  "snapshot_sha256": "f1a16d35a155d24b7194c2e37faa1456984f5ae7aa589c7fac9d547e001d0ce6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
