@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 622,
+  "default_authored_inputs": 623,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1083,7 +1083,7 @@
     "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
     "sources/libc-format-dtoa-text/dtoa_text.cpp": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
     "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
-    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+    "sources/libc-format-format-string/format_string.cpp": "8deaac76108240a0ba3a56bdb48c10ebdebd0197f2af3dc7a89216aa99079f48",
     "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
     "sources/libc-format-impure/impure_pointer.cpp": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
     "sources/libc-format-impure/impure_state.hpp": "629fe075a04293058788793a4a5720eb183f2c6686096a3c4966f5e86cb35902",
@@ -1099,6 +1099,7 @@
     "sources/libc-format-sscanf/sscanf.cpp": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
     "sources/libc-format-strcmp/strcmp.cpp": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
     "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+    "sources/libc-format-strtod/strtod.cpp": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -6642,7 +6643,7 @@
       "kind": "independently_authored_source",
       "object_name": "libc_format_sprintf.o",
       "profile": "authored_cpp",
-      "sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+      "sha256": "8deaac76108240a0ba3a56bdb48c10ebdebd0197f2af3dc7a89216aa99079f48",
       "source": "sources/libc-format-format-string/format_string.cpp"
     },
     {
@@ -8958,6 +8959,15 @@
       "profile": "authored_cpp",
       "sha256": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
       "source": "sources/gameobject-base-typeinfo/typeinfo.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 624,
+      "kind": "independently_authored_source",
+      "object_name": "strtod.o",
+      "profile": "authored_cpp",
+      "sha256": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
+      "source": "sources/libc-format-strtod/strtod.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9057,7 +9067,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0379449f6ac1d9888ed6ecf5dd1f22d8ea7fed472b1af86e3bacfef4a4d22883",
+  "snapshot_sha256": "2d40b645ec27eadc03d3a6bc29adefe589b87037091562df93b1362b37ac2cc3",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

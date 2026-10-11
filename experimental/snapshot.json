@@ -5661,10 +5661,14 @@
       "input_order": 379,
       "component": "libc-format-format-string",
       "object_name": "libc_format_sprintf.o",
-      "private_object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "private_object_sha256": "35923ae7aba8a77190c4f5e425ea13f1f467a44d979f2c8010d2a7d75aeb2379",
       "emitted_functions": [
         {
           "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "sprintf",
           "compiled_body_bytes": 172
         }
       ],
@@ -8169,6 +8173,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/gameobject-base-typeinfo/typeinfo.cpp"
+    },
+    {
+      "input_order": 624,
+      "component": "libc-format-strtod",
+      "object_name": "strtod.o",
+      "private_object_sha256": "0bec2772a05057870d69f1f0b9134e7361cddc91fbbd76cd03b4a9f9da786c6c",
+      "emitted_functions": [
+        {
+          "name": "strtod",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-strtod/strtod.cpp"
     }
   ],
   "drafts": [
@@ -9499,8 +9517,8 @@
     "sources/libc-format-dtoa-text/dtoa_text_contract.cpp": "4b21f44e35a11eb59c1228244e7f75363ada4f64ed145a0b66adea9b39f8447d",
     "sources/libc-format-errno/errno_contract.cpp": "b0d2725d5d6ef2f4d97283c9511f6d267a8955c60e57cdc0d7a7a9d6bb0957c0",
     "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
-    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
-    "sources/libc-format-format-string/format_string_contract.cpp": "59dd535696cc425571d942bb471bd6c2b60a6205c710cbbcb49f89c4dd502a5e",
+    "sources/libc-format-format-string/format_string.cpp": "8deaac76108240a0ba3a56bdb48c10ebdebd0197f2af3dc7a89216aa99079f48",
+    "sources/libc-format-format-string/format_string_contract.cpp": "7a8aa0a746dc74e6289265bd807ffd8cf515f4068bdf4760fd09323fe994d44e",
     "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
     "sources/libc-format-formatter-text/formatter_text_contract.cpp": "8819ea0a729356722ca94c67fa66b6a0591ce2cc0ccf1c75debd3ac753c952b4",
     "sources/libc-format-impure/impure_contract.cpp": "10f588820983a0087c2c9e60e34bda22c35c673bea815763f766fa701006680b",
@@ -9530,6 +9548,8 @@
     "sources/libc-format-strcmp/strcmp_contract.cpp": "27e10d0fbf8af8202cd65f127a637c3d334dc304bea931b0335c154a53c48381",
     "sources/libc-format-stream-setup/stream_setup_contract.cpp": "651ecbca612eff9630357aafb5b84f929cdfbd832ae2e294f73767a22f2d2bc7",
     "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+    "sources/libc-format-strtod/strtod.cpp": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
+    "sources/libc-format-strtod/strtod_contract.cpp": "9df2b4fa5cdaeb1bf69588d59cacb8740dee1793cbb1c0f29ccb0948abb9c88f",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -10295,11 +10315,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 624,
-    "authored_default_inputs": 622,
+    "selected_inputs": 625,
+    "authored_default_inputs": 623,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 531,
-    "compiled_body_bytes_from_accepted_inputs": 283636,
+    "emitted_function_definitions_including_helpers": 533,
+    "compiled_body_bytes_from_accepted_inputs": 283840,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10312,7 +10332,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 311
+    "package_selected_inputs": 312
   },
   "startup_implementations": [
     {
@@ -11657,11 +11677,15 @@
     {
       "package": "libc-format",
       "source": "sources/libc-format-format-string/format_string.cpp",
-      "source_sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
-      "object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "source_sha256": "8deaac76108240a0ba3a56bdb48c10ebdebd0197f2af3dc7a89216aa99079f48",
+      "object_sha256": "35923ae7aba8a77190c4f5e425ea13f1f467a44d979f2c8010d2a7d75aeb2379",
       "emitted_functions": [
         {
           "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "sprintf",
           "compiled_body_bytes": 172
         }
       ],
@@ -14899,6 +14923,23 @@
       ],
       "host_files": [
         "sources/gameobject-base-typeinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-strtod/strtod.cpp",
+      "source_sha256": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
+      "object_sha256": "0bec2772a05057870d69f1f0b9134e7361cddc91fbbd76cd03b4a9f9da786c6c",
+      "emitted_functions": [
+        {
+          "name": "strtod",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-strtod/strtod_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

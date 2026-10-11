@@ -539,6 +539,24 @@ and not a previous import: `norrath_ti_10GameObject`. Opened:
 `norrath_rtti_user`. 529 function bodies, 622 authored inputs, zero COMMON.
 214 tool tests passed. No EE or game execution.
 
+## agents/libc-format second pass
+
+The branch gained `strtod` and an `sprintf` alias on the existing format
+string. Both host checks passed. `sprintf` is an alias of
+`norrath_format_string` on the EE object; each symbol is 172 bytes.
+`strtod` is 32 bytes and forwards to the already defined
+`norrath_player_strtod_reentrant`. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 781 |
+| After | 779 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `sprintf`, `strtod`. 531 function bodies, 623 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -642,3 +660,4 @@ and no startup stage has executed.
 - 2026-10-11 16:50 CDT — `agents/data-views` — 782 unresolved imports
 - 2026-10-11 16:52 CDT — `agents/actors-b` — 796 unresolved imports
 - 2026-10-11 16:56 CDT — `agents/gameobject-base` — 781 unresolved imports
+- 2026-10-11 16:59 CDT — `agents/libc-format` — 779 unresolved imports
