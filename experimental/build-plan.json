@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 278,
+  "default_authored_inputs": 279,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -925,6 +925,7 @@
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
+    "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
@@ -5345,6 +5346,15 @@
       "profile": "authored_cpp",
       "sha256": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
       "source": "sources/runtime-memory/memset.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 280,
+      "kind": "independently_authored_source",
+      "object_name": "main_guard.o",
+      "profile": "authored_cpp",
+      "sha256": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
+      "source": "sources/runtime-startup/main_guard.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5419,7 +5429,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "4743e29eb640b0ed16b4dbfac629ab9091f9853d8b2e09f0c39503f0ac83b2ef",
+  "snapshot_sha256": "5f9c12dfaae7b57a631433c1a89793370cf55f0e5299a1eabf10be46921bf952",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
