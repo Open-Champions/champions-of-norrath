@@ -419,6 +419,12 @@ The slow-run function's reviewed compile is one 304-byte body. The other three
 units emit no functions. Snapshot entries for a private plan need
 `emitted_functions` of that one function, and an empty list for the data units.
 
+A private copy of this branch's plan, kept outside git, accepted all four
+units. The driver reported 300 authored inputs, one link, and 646 unresolved
+imports. Every name under Imports closed was absent from that list. All
+seventeen `norrath_vt_*` names were present. `runtime_verified` and
+`game_executable` were false.
+
 ## Authored but never executed
 
 The slow-run insertion, its 60 heads, the constructor and hash objects, the
