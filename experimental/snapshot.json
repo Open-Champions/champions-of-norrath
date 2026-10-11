@@ -4980,6 +4980,156 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/math-softdouble-nan/nan_parts.cpp"
+    },
+    {
+      "input_order": 320,
+      "component": "audio-add-dma-handler",
+      "object_name": "add_dma_handler.o",
+      "private_object_sha256": "17c55472e65d30e0862219e2d11505ad1515f386a5be9ddf7448782b1fe6a5f9",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_add_dma_handler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-add-dma-handler/add_dma_handler.S"
+    },
+    {
+      "input_order": 321,
+      "component": "audio-set-dma-chain",
+      "object_name": "set_dma_chain.o",
+      "private_object_sha256": "a0d69d6c2ff2481a21ed0b0c695837e4268bf2f08bf4703228913060e2b5a40f",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_set_dma_chain",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-set-dma-chain/set_dma_chain.S"
+    },
+    {
+      "input_order": 322,
+      "component": "audio-enable-dma",
+      "object_name": "enable_dma.o",
+      "private_object_sha256": "b00684fd94d24adac37a18d6d8d7d6fbc778524faccc5f39ec4594cf4360d871",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_enable_dma",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-enable-dma/enable_dma.cpp"
+    },
+    {
+      "input_order": 323,
+      "component": "audio-command-storage",
+      "object_name": "command_storage.o",
+      "private_object_sha256": "9f8fd3eef0f6e396c8101f39079f2de21d2574392c967ff0a1d8f1203f5573bb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-command-storage/command_storage.cpp"
+    },
+    {
+      "input_order": 324,
+      "component": "audio-channel-records",
+      "object_name": "channel_records.o",
+      "private_object_sha256": "918d7729c68b8f2f60708d0509d2316c778c17b2eb84d9ddd0b66c579d19fe80",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-channel-records/channel_records.cpp"
+    },
+    {
+      "input_order": 325,
+      "component": "audio-channel-voice",
+      "object_name": "voice_map.o",
+      "private_object_sha256": "18aa03cc61e90443a5eb2b133785b8a9398f71c0b489f5a2242bee994ba09aa3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-channel-voice/voice_map.cpp"
+    },
+    {
+      "input_order": 326,
+      "component": "audio-key-words",
+      "object_name": "key_words.o",
+      "private_object_sha256": "453a262e7887a4f8d2e674306154ea782de9652949ab7e1b9d33aa396dffa094",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-key-words/key_words.cpp"
+    },
+    {
+      "input_order": 327,
+      "component": "audio-group-limits",
+      "object_name": "group_limits.o",
+      "private_object_sha256": "3b2e2ea257f2538e551488e2f67644a3c67213e646363ce1d04fca707727b632",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-group-limits/group_limits.cpp"
+    },
+    {
+      "input_order": 328,
+      "component": "audio-sequence-records",
+      "object_name": "sequence_records.o",
+      "private_object_sha256": "65b845e6e81ad3bcac3111a6d3012220fe4956e8c461ad54ddc340acffe3140d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-sequence-records/sequence_records.cpp"
+    },
+    {
+      "input_order": 329,
+      "component": "audio-stream-storage",
+      "object_name": "stream_storage.o",
+      "private_object_sha256": "c111ac467db1d80b911d5f1ce57d23499a8879bc9284f2fd87dd544cd2003081",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-stream-storage/stream_storage.cpp"
+    },
+    {
+      "input_order": 330,
+      "component": "audio-master-volume",
+      "object_name": "master_volume.o",
+      "private_object_sha256": "70724993e9401da22085c36eb56a1426bf9fb41b355e949fb874aa50f22622d0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-master-volume/master_volume.cpp"
+    },
+    {
+      "input_order": 331,
+      "component": "audio-delay-thread-name",
+      "object_name": "delay_thread_name.o",
+      "private_object_sha256": "dc6312c62e6626ef098952d2fb0019e5a52318a09f88be5c0ede27b9be9fd427",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-delay-thread-name/delay_thread_name.cpp"
+    },
+    {
+      "input_order": 332,
+      "component": "audio-dialog-maps",
+      "object_name": "dialog_maps.o",
+      "private_object_sha256": "bc082dfce0d7dc5775720a4a49c973ecd380ec07dee31b90c46d60ad44bfb6db",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-dialog-maps/dialog_maps.cpp"
+    },
+    {
+      "input_order": 333,
+      "component": "audio-iop-buffers",
+      "object_name": "iop_buffers.o",
+      "private_object_sha256": "3b81a211962a6b43e323b20fc84c54ae9675c3772211dfaebb91b0eb11a580f7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-iop-buffers/iop_buffers.cpp"
+    },
+    {
+      "input_order": 334,
+      "component": "audio-startup-strings",
+      "object_name": "startup_strings.o",
+      "private_object_sha256": "cfbaf9937a6cabaec8477f77329e0b0c584534028c035c7a88f6b6fc6033c80f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-startup-strings/startup_strings.cpp"
     }
   ],
   "drafts": [
@@ -5976,7 +6126,37 @@
     "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-pow-constants/host_test.cpp": "afba9ec75bd87924a8243e7168c0eaaea4344de27f4d74b268f835fdcb0ce3b4",
     "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
-    "sources/math-softdouble-nan/host_test.cpp": "19a6fe6baa266ec42e95bcfd0dc306b15af8391404e9b64eeb3c6e3f7f321454"
+    "sources/math-softdouble-nan/host_test.cpp": "19a6fe6baa266ec42e95bcfd0dc306b15af8391404e9b64eeb3c6e3f7f321454",
+    "sources/audio-add-dma-handler/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/audio-add-dma-handler/add_dma_handler.S": "64739e1a20d2ee7356b080cbc6be2ebbde719f0234b54d8d11e39fe7fb9daef3",
+    "sources/audio-set-dma-chain/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/audio-set-dma-chain/set_dma_chain.S": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
+    "sources/audio-enable-dma/host_contract.cpp": "d78aeff3d1d0e22939ca715d109573310e6476df44a980ad8d3baffe28ac91ed",
+    "sources/audio-enable-dma/enable_dma.cpp": "295e36b9d1eb95ad5e2d8f32b37cdfd5a89a15e35bf84b923fb807a36f2180a6",
+    "sources/audio-command-storage/host_contract.cpp": "481203c651dfb5eff9439e4b92333698a21eb38339c281276ac1478c0df25331",
+    "sources/audio-command-storage/command_storage.cpp": "aa53a4be46ed1f5cb5a59e3291dac7fb7be70d112d2accdc08f693ddfeee082d",
+    "sources/audio-channel-records/host_contract.cpp": "4cdb88e9056a9d90639edab56cd05a53129d6012adcda78ab4959fb75d0c4696",
+    "sources/audio-channel-records/channel_records.cpp": "0d0cd87af4a41e6fca0153e53cd5018a3316d7fe1070eec6339d10c921bb4092",
+    "sources/audio-channel-voice/host_contract.cpp": "3728fea6550f6f425b5d42e58c879c32642162e2febedbe027ad0c2e7a3cdbaf",
+    "sources/audio-channel-voice/voice_map.cpp": "1b4b700d3ca565b14952af8207709b864d0c08ccf84f7028e5e4ce4ce0247074",
+    "sources/audio-key-words/host_contract.cpp": "c5e5167db1ee951b31bc699529dae244092623a943974cdc5af17bff110028b3",
+    "sources/audio-key-words/key_words.cpp": "11785d495e631ec70f267d14f6621086d23ceeecd19ce7f4475b1465d5e829c1",
+    "sources/audio-group-limits/host_contract.cpp": "6b205ead03198580c99a585dd8a4b0484daaffab946e5ec641da9d98de0926df",
+    "sources/audio-group-limits/group_limits.cpp": "6f3aa3127fa38a210071db230c1173d3012ed69d7a8f1f39f222d487a1212b25",
+    "sources/audio-sequence-records/host_contract.cpp": "181b31f44c8f0599fe2906ee42a45a351fc90d1ca50be3bb91b82f65f9f6d9d5",
+    "sources/audio-sequence-records/sequence_records.cpp": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
+    "sources/audio-stream-storage/host_contract.cpp": "321bdb9c1a0d3e280b54df2e160bc99f5764c0501a56130f455a352fc2870c09",
+    "sources/audio-stream-storage/stream_storage.cpp": "aa50a8b67685697051e9ca80984d01c4f634f72a0ef2ea143e4bea31bb44e0ab",
+    "sources/audio-master-volume/host_contract.cpp": "28ea80ac7f5deb97654c1c988dbeb665a7cebfbcc6ef48c4d32d62ea98e24d96",
+    "sources/audio-master-volume/master_volume.cpp": "d5d756d0e3b8bf4968728590d8d1ebfe5417c9374cf8f6f73745a2fb79e55f0c",
+    "sources/audio-delay-thread-name/host_contract.cpp": "95a918d8de79d1998dee28669d7393e5926b80a6e4c94332f8cddb6f926f8356",
+    "sources/audio-delay-thread-name/delay_thread_name.cpp": "fca61b494483fcf3bd36f2718bf45cf4b6e01705a6a6acfbe6ca541115b77a9b",
+    "sources/audio-dialog-maps/host_contract.cpp": "f7974e082b589b8db4e14f01f33e9ccfafa5984b6ad88f9d3bb84c93c703a041",
+    "sources/audio-dialog-maps/dialog_maps.cpp": "bccb408e0824d35c473c4e4be0b3c3bc33504c804b1c24c792089638cea73549",
+    "sources/audio-iop-buffers/host_contract.cpp": "ce7437fd9fc315da1a2436eef2333e69ce1146a792aa609a0bf468b33d4a5875",
+    "sources/audio-iop-buffers/iop_buffers.cpp": "14f9beab640d0188b7d1d1244f6d369731f7656f9019522d1ab0895ef8d78dcc",
+    "sources/audio-startup-strings/host_contract.cpp": "6ecabfa325b75c63d32199bc71d7fc83ed1d88479f93038b9719b5b7c0559594",
+    "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40"
   },
   "additional_implementations": [
     {
@@ -6418,11 +6598,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 320,
-    "authored_default_inputs": 318,
+    "selected_inputs": 335,
+    "authored_default_inputs": 333,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 440,
-    "compiled_body_bytes_from_accepted_inputs": 248308,
+    "emitted_function_definitions_including_helpers": 443,
+    "compiled_body_bytes_from_accepted_inputs": 248452,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6435,7 +6615,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 33,
-    "package_selected_inputs": 8
+    "package_selected_inputs": 23
   },
   "startup_implementations": [
     {
@@ -6882,6 +7062,201 @@
       "emitted_functions": [],
       "host_files": [
         "sources/math-softdouble-nan/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-add-dma-handler/add_dma_handler.S",
+      "source_sha256": "64739e1a20d2ee7356b080cbc6be2ebbde719f0234b54d8d11e39fe7fb9daef3",
+      "object_sha256": "17c55472e65d30e0862219e2d11505ad1515f386a5be9ddf7448782b1fe6a5f9",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_add_dma_handler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/audio-add-dma-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-set-dma-chain/set_dma_chain.S",
+      "source_sha256": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
+      "object_sha256": "a0d69d6c2ff2481a21ed0b0c695837e4268bf2f08bf4703228913060e2b5a40f",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_set_dma_chain",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/audio-set-dma-chain/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-enable-dma/enable_dma.cpp",
+      "source_sha256": "295e36b9d1eb95ad5e2d8f32b37cdfd5a89a15e35bf84b923fb807a36f2180a6",
+      "object_sha256": "b00684fd94d24adac37a18d6d8d7d6fbc778524faccc5f39ec4594cf4360d871",
+      "emitted_functions": [
+        {
+          "name": "norrath_sound_enable_dma",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/audio-enable-dma/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-command-storage/command_storage.cpp",
+      "source_sha256": "aa53a4be46ed1f5cb5a59e3291dac7fb7be70d112d2accdc08f693ddfeee082d",
+      "object_sha256": "9f8fd3eef0f6e396c8101f39079f2de21d2574392c967ff0a1d8f1203f5573bb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-command-storage/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-channel-records/channel_records.cpp",
+      "source_sha256": "0d0cd87af4a41e6fca0153e53cd5018a3316d7fe1070eec6339d10c921bb4092",
+      "object_sha256": "918d7729c68b8f2f60708d0509d2316c778c17b2eb84d9ddd0b66c579d19fe80",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-channel-records/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-channel-voice/voice_map.cpp",
+      "source_sha256": "1b4b700d3ca565b14952af8207709b864d0c08ccf84f7028e5e4ce4ce0247074",
+      "object_sha256": "18aa03cc61e90443a5eb2b133785b8a9398f71c0b489f5a2242bee994ba09aa3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-channel-voice/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-key-words/key_words.cpp",
+      "source_sha256": "11785d495e631ec70f267d14f6621086d23ceeecd19ce7f4475b1465d5e829c1",
+      "object_sha256": "453a262e7887a4f8d2e674306154ea782de9652949ab7e1b9d33aa396dffa094",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-key-words/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-group-limits/group_limits.cpp",
+      "source_sha256": "6f3aa3127fa38a210071db230c1173d3012ed69d7a8f1f39f222d487a1212b25",
+      "object_sha256": "3b2e2ea257f2538e551488e2f67644a3c67213e646363ce1d04fca707727b632",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-group-limits/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-sequence-records/sequence_records.cpp",
+      "source_sha256": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
+      "object_sha256": "65b845e6e81ad3bcac3111a6d3012220fe4956e8c461ad54ddc340acffe3140d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-sequence-records/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-stream-storage/stream_storage.cpp",
+      "source_sha256": "aa50a8b67685697051e9ca80984d01c4f634f72a0ef2ea143e4bea31bb44e0ab",
+      "object_sha256": "c111ac467db1d80b911d5f1ce57d23499a8879bc9284f2fd87dd544cd2003081",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-stream-storage/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-master-volume/master_volume.cpp",
+      "source_sha256": "d5d756d0e3b8bf4968728590d8d1ebfe5417c9374cf8f6f73745a2fb79e55f0c",
+      "object_sha256": "70724993e9401da22085c36eb56a1426bf9fb41b355e949fb874aa50f22622d0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-master-volume/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-delay-thread-name/delay_thread_name.cpp",
+      "source_sha256": "fca61b494483fcf3bd36f2718bf45cf4b6e01705a6a6acfbe6ca541115b77a9b",
+      "object_sha256": "dc6312c62e6626ef098952d2fb0019e5a52318a09f88be5c0ede27b9be9fd427",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-delay-thread-name/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-dialog-maps/dialog_maps.cpp",
+      "source_sha256": "bccb408e0824d35c473c4e4be0b3c3bc33504c804b1c24c792089638cea73549",
+      "object_sha256": "bc082dfce0d7dc5775720a4a49c973ecd380ec07dee31b90c46d60ad44bfb6db",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-dialog-maps/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-iop-buffers/iop_buffers.cpp",
+      "source_sha256": "14f9beab640d0188b7d1d1244f6d369731f7656f9019522d1ab0895ef8d78dcc",
+      "object_sha256": "3b81a211962a6b43e323b20fc84c54ae9675c3772211dfaebb91b0eb11a580f7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-iop-buffers/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-startup-strings/startup_strings.cpp",
+      "source_sha256": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
+      "object_sha256": "cfbaf9937a6cabaec8477f77329e0b0c584534028c035c7a88f6b6fc6033c80f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/audio-startup-strings/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
