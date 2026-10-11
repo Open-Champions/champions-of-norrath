@@ -18,6 +18,16 @@
 !/reconstructed/
 /reconstructed/*
 !/reconstructed/*.cpp
+!/experimental/
+/experimental/**
+!/experimental/README.md
+!/experimental/snapshot.json
+!/experimental/sources/
+!/experimental/sources/**/
+!/experimental/sources/**/*.cpp
+!/experimental/sources/**/*.hpp
+# This one independently authored transport draft retains its compile hold.
+!/experimental/sources/game-amx-exec-native-transport-source-v4/transport.S
 !/tools/
 /tools/*
 !/tools/*.py

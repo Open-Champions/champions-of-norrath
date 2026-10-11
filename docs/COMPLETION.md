@@ -12,11 +12,11 @@ must remain unknown unless independently established.
 |---|---|---|
 | Stable input identity | Fresh executable hash and independently checked layout | Identified for this exact private input; no retail-authenticity claim |
 | Complete executable scope | Inventory of all loaded code, initialized data, zero-initialized memory, overlays and non-runtime ELF records; unresolved mappings explicitly resolved | Main `.text` is only part of the image; `.srs`, VU code, overlays and data remain |
-| Authored source | Readable independently authored implementations, validated boundaries, dependencies, interfaces and data layouts | Only a few complete leaf functions are verified; symbol names are not source |
+| Authored source | Readable independently authored implementations, validated boundaries, dependencies, interfaces and data layouts | Eleven exact-matched functions; experimental source for 262 partial-build inputs is published separately, with unresolved dependencies and held drafts |
 | Reproducible build | Clean-checkout commands, pinned toolchain/components/options and an explicit private-input manifest | Current commands compile isolated functions; no game link target exists |
 | Complete link and comparison | Rebuilt ELF, section and load-layout checks, and whole-file comparison against the pinned original; every mismatch investigated | No rebuilt game ELF exists; equal selected functions do not establish a whole image |
 | Runtime verification | Executed startup and meaningful game flows compared with the same baseline under recorded conditions; no inferred runtime success from static checks | No reconstructed executable has been executed |
-| Reviewable delivery | Reviewed source/build instructions, sanitized reproducibility evidence, and private originals/assets kept out of published history | Current delivery is an early draft containing tools and individual bodies |
+| Reviewable delivery | Reviewed source/build instructions, sanitized reproducibility evidence, and private originals/assets kept out of published history | Tools, exact-matched bodies, and a broader experimental source snapshot are public; no clean-checkout game build or runtime result |
 
 The build must not obtain its apparent code coverage by copying original code
 sections, opaque retail bodies, assembly dumps or generated decompiler output into

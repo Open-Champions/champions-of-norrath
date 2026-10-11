@@ -27,3 +27,5 @@ jobs:
         run: python -m unittest discover -s tools -p "test_*.py" -v
       - name: Check current authored source and saved receipt consistency
         run: python tools/rebuild.py check --report targets/SLUS-20565/verification.json --require-matches
+      - name: Check experimental source publication integrity
+        run: python tools/check_source_snapshot.py

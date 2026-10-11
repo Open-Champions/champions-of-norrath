@@ -15,6 +15,12 @@ keep the full rebuild and runtime checks separate from intermediate milestones. 
 hashes, function counts and progress do not apply to this game. There is no game
 build command or playable release yet.
 
+The newer [experimental source snapshot](experimental/README.md) publishes source
+for 262 inputs from a private partial integration that emitted 388 function
+definitions, including helpers, plus arithmetic and interpreter drafts.
+These implementations have no additional exact-byte match or gameplay credit;
+their dependencies and integration remain unfinished.
+
 ## Start here
 
 1. Read the hash-pinned baseline and current function-verification evidence.
