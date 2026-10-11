@@ -46,9 +46,11 @@ Headers declare the symbol. The `.cpp` file defines it. On the EE compiler the d
 
 `objectIgnoreFlags` is also the word `objectPutSaveData` passes as the broadcast mask. `norrath_restore_broadcast_mask_word` is that same address. This package defines it once, under the grid name. A second link symbol is not defined.
 
+`worldWaterBumpSpeed` is a different object. It is the four file-backed zero bytes at `0x00484148` in `.sdata`. The recorded size is 4, and `worldWaterAlpha` starts at `0x0048414c`. `main` stores the integer 1 with `sw` at `gp-14504` when the word at `pad+8` equals 16398. None of the earlier `norrath_` objects has this address, so the word is defined once, under the original name, as `int worldWaterBumpSpeed`. `launchSRS` does not reference it.
+
 ## Imports closed
 
-`norrath_route_add_node`, `norrath_list_copy_object_word`, `norrath_grid_ignore_flags_view`, `norrath_grid_vertical_extent_view`, `norrath_game_cut_mode_byte_view`, `norrath_game_core_loading_word_view`, `norrath_dialog_active_pointer_word_view`, `norrath_restore_defaults_view`, `norrath_restore_string_base_word`, `norrath_restore_filter_word`, `norrath_restore_broadcast_head_view`, `norrath_loader_special_flag_view`, `norrath_loader_active_buffer_view`, `norrath_loader_active_size_view`, `norrath_loader_active_marker_view`, `norrath_loader_active_name_view`, `norrath_loader_current_name_view`, `norrath_loader_name_a_view`, `norrath_loader_name_b_view`, `norrath_loader_context_a_view`, `norrath_loader_context_b_view`, `norrath_loader_missing_format_view`, `norrath_route_nodes_bytes`, `norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, `norrath_route_free_root_bytes`, `norrath_route_world_word_bytes`, `norrath_route_draw_frame_bytes`.
+`norrath_route_add_node`, `norrath_list_copy_object_word`, `norrath_grid_ignore_flags_view`, `norrath_grid_vertical_extent_view`, `norrath_game_cut_mode_byte_view`, `norrath_game_core_loading_word_view`, `norrath_dialog_active_pointer_word_view`, `norrath_restore_defaults_view`, `norrath_restore_string_base_word`, `norrath_restore_filter_word`, `norrath_restore_broadcast_head_view`, `norrath_loader_special_flag_view`, `norrath_loader_active_buffer_view`, `norrath_loader_active_size_view`, `norrath_loader_active_marker_view`, `norrath_loader_active_name_view`, `norrath_loader_current_name_view`, `norrath_loader_name_a_view`, `norrath_loader_name_b_view`, `norrath_loader_context_a_view`, `norrath_loader_context_b_view`, `norrath_loader_missing_format_view`, `norrath_route_nodes_bytes`, `norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, `norrath_route_free_root_bytes`, `norrath_route_world_word_bytes`, `norrath_route_draw_frame_bytes`, `worldWaterBumpSpeed`.
 
 ## Imports opened
 
@@ -118,7 +120,9 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
     "sources/world-state-route-world/storage.cpp": "c4f204f538e6a97993abe05c3db354ce4c6703e2bd5d8ba10694a47c4414b0ae",
     "sources/world-state-route-world/storage.hpp": "696acf8fbce2b86a5e2df93c18e9eef0024c41e3e55ea6cbbf19fd769f10d1b6",
     "sources/world-state-route-draw-frame/storage.cpp": "e003230effa3cf442909e89fce352ee6ef792506014dd657599af3d48ac70735",
-    "sources/world-state-route-draw-frame/storage.hpp": "5430647e8879b62a947ebf52d1eeb720e9a83d16a1b1a0490abec335fdc93131"
+    "sources/world-state-route-draw-frame/storage.hpp": "5430647e8879b62a947ebf52d1eeb720e9a83d16a1b1a0490abec335fdc93131",
+    "sources/world-state-water-bump-speed/water_bump_speed.cpp": "3b4c8fc623a2a5ec7156a7c30f69589185a57b149580ca5288799e43ec5429ec",
+    "sources/world-state-water-bump-speed/water_bump_speed.hpp": "e871f52829b3cab8ee96991a8590442a055880c256ab5ee8dd527754beb1c40f"
   },
   "inputs": [
     {
@@ -461,6 +465,18 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
       "source": "sources/world-state-route-draw-frame/storage.cpp",
       "emitted_functions": [],
       "component": "world-state-route-draw-frame"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-bump-speed/water_bump_speed.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_bump_speed.o",
+      "profile": "authored_cpp",
+      "sha256": "3b4c8fc623a2a5ec7156a7c30f69589185a57b149580ca5288799e43ec5429ec",
+      "source": "sources/world-state-water-bump-speed/water_bump_speed.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-bump-speed"
     }
   ]
 }
@@ -468,7 +484,7 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
 
 ## Authored but never executed
 
-No gameplay, runtime, or partial-link execution. `norrath_route_add_node` was compiled with the reviewed EE toolchain and checked by the host allocation and reclaim test. Each data object was compiled with the same flags and checked by a host byte comparison. The private plan was not submitted to `tools/build_partial.py` because that driver requires the snapshot input list to match.
+No gameplay, runtime, or partial-link execution. `norrath_route_add_node` was compiled with the reviewed EE toolchain and checked by the host allocation and reclaim test. Each data object, including `worldWaterBumpSpeed`, was compiled with the same flags and checked by a host comparison. The private plan was not submitted to `tools/build_partial.py` because that driver requires the snapshot input list to match.
 
 ## Unknown
 
