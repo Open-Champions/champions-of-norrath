@@ -252,6 +252,24 @@ int main() {
 ''')
         self.ee_exports(source, "MC_Configure__Fv", ["newMode__Fii", "stopCardQuery__Fv"])
 
+    def test_mc_reset(self):
+        source = STARTUP / "mc_reset.cpp"
+        self.host([source], r'''
+extern "C" int MCA_Slot = 0;
+extern "C" int MCA_Port = 0;
+extern "C" int MC_Reset__Fv();
+static int cleared;
+extern "C" void MCA_ClearInfo__Fv() { cleared = 1; }
+int main() {
+    MCA_Slot = 4;
+    MCA_Port = 6;
+    if (MC_Reset__Fv() != -1) return 2;
+    if (!cleared || MCA_Slot != -1 || MCA_Port != -1) return 3;
+    return 0;
+}
+''')
+        self.ee_exports(source, "MC_Reset__Fv", ["MCA_ClearInfo__Fv", "MCA_Port", "MCA_Slot"])
+
 
 if __name__ == "__main__":
     unittest.main()
