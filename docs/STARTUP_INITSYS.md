@@ -44,3 +44,7 @@ not on this path.
 ## Alarm patch
 
 `InitAlarm` at 0x002dddc8 returns immediately when bit 0x100 of the word at 0x10001810 is set. Otherwise it uses the local `setup` at 0x002ddd60, `Copy` at 0x002ddd70, and `GetEntryAddress` at 0x002dddb8. The copies are 1856 bytes from `srcfile` to 0x80076000 and 40 bytes from `eenull` to 0x00082000, followed by `FlushCache(0)` and `FlushCache(2)`. Six entry pairs are then installed, starting at word 4 of the local `SysEntry` at 0x00445968. That table is imported as `kernel_alarm_sysentry`. Naming 0x10001810 as timer-3 mode is inferred. The host contract uses `NORRATH_HOST_CONTRACT` for that load.
+
+## TLB handlers
+
+`InitTLBFunctions` at 0x002dfbe0 calls the local `setup` at 0x002dfbd0 three times for the first six words of the local `SysEntry` at 0x00445d50, imported as `kernel_tlb_sysentry`. It copies 816 bytes from `tlbsrc` to 0x80075000 through the local `Copy` at 0x002dfb78, then `FlushCache(0)` and `FlushCache(2)`. Five `GetEntryAddress`/`setup` pairs follow, using the local `GetEntryAddress` at 0x002dfbc0, starting at word 6. It then stores `GetEntryAddress(3)` in `_kExecArg`. The gate starts at 3 and stops once it is no longer below 8.

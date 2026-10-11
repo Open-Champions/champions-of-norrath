@@ -4650,6 +4650,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys/init_alarm.cpp"
+    },
+    {
+      "input_order": 295,
+      "component": "runtime-initsys",
+      "object_name": "init_tlb.o",
+      "private_object_sha256": "de402e40dc4366c13ce67998b2cec2d424d6c7b5682c9c73a38c25db3b8adc4a",
+      "emitted_functions": [
+        {
+          "name": "InitTLBFunctions",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys/init_tlb.cpp"
     }
   ],
   "drafts": [
@@ -5613,7 +5627,8 @@
     "sources/runtime-initsys/start_timer_system_time.cpp": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf",
     "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
     "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
-    "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149"
+    "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
+    "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35"
   },
   "additional_implementations": [
     {
@@ -6055,11 +6070,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 295,
-    "authored_default_inputs": 293,
+    "selected_inputs": 296,
+    "authored_default_inputs": 294,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 419,
-    "compiled_body_bytes_from_accepted_inputs": 243824,
+    "emitted_function_definitions_including_helpers": 420,
+    "compiled_body_bytes_from_accepted_inputs": 244008,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6071,7 +6086,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 16
+    "startup_selected_inputs": 17
   },
   "startup_implementations": [
     {
@@ -6230,6 +6245,16 @@
       "compiled_body_bytes": 212,
       "source_sha256": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
       "object_sha256": "178a329bbcc2de70489f699bbf67eb5a6e50ee2aaf98a966485c9545e4706109",
+      "review": "docs/STARTUP_INITSYS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys/init_tlb.cpp",
+      "symbol": "InitTLBFunctions",
+      "compiled_body_bytes": 184,
+      "source_sha256": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
+      "object_sha256": "de402e40dc4366c13ce67998b2cec2d424d6c7b5682c9c73a38c25db3b8adc4a",
       "review": "docs/STARTUP_INITSYS.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
