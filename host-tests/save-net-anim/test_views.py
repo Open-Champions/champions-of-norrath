@@ -122,6 +122,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_game_hud_no_controller_byte_view.cpp",
                     "norrath_game_hud_no_controller_byte_view", 1, b"\0")
 
+    def test_disable_startup_script(self):
+        self.expect("norrath_mc_disable_startup_script_bytes.cpp",
+                    "norrath_mc_disable_startup_script_bytes", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
