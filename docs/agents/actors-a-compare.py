@@ -29,6 +29,7 @@ STUBS = {
     0x0017DB78: "norrath_world_check_for_water",
     0x0013D230: "norrath_light_add",
     0x00165DC0: "norrath_lump_find_resource",
+    0x00223BD8: "norrath_construct_AutoPropLP",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -358,12 +359,19 @@ class Machine:
                 if name is None:
                     raise SystemExit("jal leaves the function: %#x from %#x" % (target, pc))
                 point = b""
-                if name in ("norrath_game_object_construct", "norrath_world_check_for_water"):
-                    point = bytes(self.u8(self.low(5) + i) for i in range(12))
+                point_reg = 6 if name in ("norrath_construct_AutoPropLP", "norrath_construct_AutoProp") else 5
+                if name in ("norrath_game_object_construct", "norrath_world_check_for_water",
+                            "norrath_construct_AutoPropLP", "norrath_construct_AutoProp",
+                            "norrath_world_find_closest_door"):
+                    point = bytes(self.u8(self.low(point_reg) + i) for i in range(12))
                 if name == "norrath_world_check_for_water":
                     self.floats.append(self.f[12])
                 if name == "norrath_light_add":
                     self.snapshots.append(bytes(self.u8(self.low(4) + i) for i in range(64)))
+                if name == "norrath_construct_AutoPropLP":
+                    self.snapshots.append(struct.pack("<I", self.low(8)))
+                if name == "norrath_world_find_closest_door":
+                    self.snapshots.append(struct.pack("<II", self.u32(OBJECT + 12), self.u32(OBJECT + 72)))
                 self.calls.append((name, self.low(4), self.low(5), self.low(6), self.low(7), point))
                 if not self.answers:
                     raise SystemExit("stub %s had no scripted answer" % name)
@@ -472,10 +480,11 @@ def object_bytes(machine, count):
     return bytes(machine.u8(OBJECT + index) for index in range(count))
 
 
-def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None, regs=None, stack=None):
+def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None, regs=None,
+             stack=None, object_size=256):
     machine = Machine({}, STUBS, answers)
     machine.mem.update(image_bytes)
-    for index in range(256):
+    for index in range(object_size):
         machine.set8(OBJECT + index, 0x5A)
     machine.set32(OBJECT + 12, flags)
     for index, word in enumerate((0x3F800000, 0x40000000, 0x40400000)):
@@ -574,6 +583,7 @@ def main():
     compare_container(data, loads)
     compare_candle(data, loads)
     compare_container_resources(data, loads)
+    compare_eggsack(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -781,6 +791,45 @@ def compare_container_resources(data, loads):
                     print(" byte", index, hex(a), hex(b))
             raise SystemExit("container resources comparison failed")
     print("container resources: 2 original/compiled scenarios matched")
+
+
+def compare_eggsack(data, loads):
+    original = read_vaddr(data, loads, 0x002260B8, 0x88)
+    output = Path("/tmp/actors-a-eggsack.o")
+    compile_object(ROOT / "experimental/sources/actors-a-eggsack/eggsack.cpp", output)
+    text, relocs, symbols, _named = parse_object(output)
+    bases = {
+        "norrath_construct_AutoPropLP": 0x00223BD8,
+        "norrath_actors_a_view_44f2a0": 0x0044F2A0,
+    }
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x002260B8 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    scenarios = [(0xAB, 0x100, 0x102), (0xFFFFFFFE, 0, 2)]
+    for type_bits, seed, expect in scenarios:
+        regs = {5: 0x1001, 6: POINT, 7: type_bits, 8: ARGUMENTS}
+        extra = {OBJECT + 316: seed}
+        left = run_case(original_image, 0x002260B8, [0], extra=extra, regs=regs, object_size=480)
+        right = run_case(compiled_image, CODE, [0], extra=extra, regs=regs, object_size=480)
+        ok = (left.low(2) == right.low(2) == OBJECT + 436 and
+              object_bytes(left, 480) == object_bytes(right, 480) and
+              left.calls[0][0] == right.calls[0][0] == "norrath_construct_AutoPropLP" and
+              left.calls[0][1] == OBJECT and left.calls[0][2] == 0x1001 and
+              left.calls[0][4] == right.calls[0][4] == (type_bits & 0xFFFFFFFF) and
+              left.calls[0][5] == incoming and left.snapshots == right.snapshots ==
+              [struct.pack("<I", ARGUMENTS)] and left.u32(OBJECT + 72) == 0x0044F2A0 and
+              left.u32(OBJECT + 316) == expect and left.u32(OBJECT + 440) == 2 and
+              left.u32(OBJECT + 444) == 2 and left.u32(OBJECT + 448) == 2 and
+              left.u32(OBJECT + 452) == 2)
+        if not ok:
+            print("eggsack", hex(type_bits), left.calls, right.calls)
+            print("return", hex(left.low(2)), hex(right.low(2)), "snaps", left.snapshots, right.snapshots)
+            for index, (a, b) in enumerate(zip(object_bytes(left, 480), object_bytes(right, 480))):
+                if a != b:
+                    print(" byte", index, hex(a), hex(b))
+            raise SystemExit("eggsack comparison failed")
+    print("eggsack: 2 original/compiled scenarios matched")
 
 
 if __name__ == "__main__":

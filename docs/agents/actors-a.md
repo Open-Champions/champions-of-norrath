@@ -73,6 +73,16 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 }
 ```
 
+```json
+{
+  "header_closure": ["sources/actors-a-eggsack/eggsack.hpp"],
+  "kind": "independently_authored_source",
+  "object_name": "eggsack.o",
+  "profile": "authored_cpp",
+  "source": "sources/actors-a-eggsack/eggsack.cpp"
+}
+```
+
 ## Status
 
 `norrath_construct_Candle2` is `__7Candle2G6Point3` at `0x002310a8`, 120 bytes. It clears both base-call pointers, stores view `0x0044a930`, ORs flag `1`, writes `0xf0` at byte 40, clears bytes 76 and 77, and returns `norrath_actor_add_run_list`.
@@ -83,12 +93,14 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 
 `norrath_construct_ContainerWithResources` is `__9ContainerG6Point3sPcN43iiiPPc` at `0x0021d6f0`, 380 bytes. It stores the same view as Container, converts the first two stack integers to floats at offsets 28 and 32, and ORs `0x00100000` when bit 2 of the third integer is set. The resource queries are `lumpFindResource(first, second)` then `lumpFindResource(first, third)`.
 
-imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`
+`norrath_construct_EggSack` is `__7EggSackPcG6Point3sPPc` at `0x002260b8`, 136 bytes. It forwards the name, a copied point, the sign-extended type, and the argument list to `norrath_construct_AutoPropLP`, stores view `0x0044f2a0`, writes 2 at offsets 452, 448, 444 and 440, and ORs 2 into the word at 316. V0 is object+436.
 
-imports opened: `norrath_world_check_for_water` (retained `worldCheckForWater__FP12_worldHeaderG6Point3fPf`); `norrath_light_add` (retained `lightAdd__FP5Light`). Container and ContainerWithResources also use the existing `norrath_lump_find_resource` and `norrath_factory_world_pointer_word`.
+imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`
 
-build-plan entries needed: the Blocker, Candle2, Container, Candle, and ContainerWithResources entries above.
+imports opened: `norrath_world_check_for_water` (retained `worldCheckForWater__FP12_worldHeaderG6Point3fPf`); `norrath_light_add` (retained `lightAdd__FP5Light`); `norrath_construct_AutoPropLP` (still in this package, not yet authored). Container and ContainerWithResources also use the existing `norrath_lump_find_resource` and `norrath_factory_world_pointer_word`.
 
-authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources` (compared against the original bodies; not run as gameplay).
+build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, and EggSack entries above.
+
+authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack` (compared against the original bodies; not run as gameplay).
 
 unknown: the remaining A–F constructor imports, and NaN behavior of the height compare.
