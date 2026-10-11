@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 295,
+  "default_authored_inputs": 296,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -931,6 +931,7 @@
     "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
     "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
     "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
+    "sources/runtime-initsys/init_timer.cpp": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
     "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
     "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
     "sources/runtime-initsys/start_timer_system_time.cpp": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf",
@@ -5515,6 +5516,15 @@
       "profile": "authored_cpp",
       "sha256": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
       "source": "sources/runtime-initsys/init_syscall_table.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 297,
+      "kind": "independently_authored_source",
+      "object_name": "init_timer.o",
+      "profile": "authored_cpp",
+      "sha256": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
+      "source": "sources/runtime-initsys/init_timer.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5614,7 +5624,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "51770b09af12c921460838e156537fd039a08112d43a7f42c6d0035fae2b7d9f",
+  "snapshot_sha256": "85e070db4407a7adde6a710301de4a549bef8d922e34f5be9d03005133daa071",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
