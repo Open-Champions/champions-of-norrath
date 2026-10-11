@@ -20,33 +20,33 @@ Argument scans start at `argv[1]` and stop at the first `strcmp` hit. The first 
 
 Each loop calls `gameInit__Fv`, `lumpClear__Fi(5)`, and `gameLoop__Fv`. A nonzero `netInitState` calls `netFree__Fb(0)`. A zero `coreLaunchSRS` repeats the loop. Otherwise `launchSRS__Fv` runs and the loop repeats. `main` does not reach a return.
 
-These addresses have no ELF symbol. `USEnglishKbdMapTable` ends at 0x0047aa34 and does not contain them. Each one is a separate unresolved object. The original bytes are not in this source.
+These addresses have no ELF symbol. `USEnglishKbdMapTable` ends at 0x0047aa34 and does not contain them. The observed bytes and the names now used for them are in [STARTUP_TEXT.md](STARTUP_TEXT.md).
 
-| Address | Use | Text length before the NUL |
-| --- | --- | --- |
-| 0x0047afe8 | second halo resource | 9 |
-| 0x0047aff8 | third halo resource | 9 |
-| 0x0047b008 | fourth halo resource | 9 |
-| 0x0047b018 | fifth halo resource | 12 |
-| 0x0047b028 | sixth halo resource | 9 |
-| 0x0047b038 | seventh halo resource | 9 |
-| 0x0047b048 | first `scePrintf` text | 15 |
-| 0x0047b058 | 9-byte `levelName` source | 8 |
-| 0x0047b068 | `engineAddTask` text | 8 |
-| 0x0047b078 | `lumpLoad` | 9 |
-| 0x0047b088 | `lumpLoad` and font lump | 8 |
-| 0x0047b098 | `defaultFont` resource | 13 |
-| 0x0047b0a8 | `mediumFont` resource | 15 |
-| 0x0047b0b8 | `smallFont` resource | 17 |
-| 0x0047b0d0 | `lumpLoad` | 9 |
-| 0x0047b0e0 | `lumpLoad` | 12 |
-| 0x0047b0f0 | first halo lump | 10 |
-| 0x0047b100 | first halo resource | 9 |
-| 0x0047b110 | eighth halo resource | 9 |
-| 0x0047b120 | second `scePrintf` text | 20 |
-| 0x0047b138 | second `strcmp` needle | 10 |
-| 0x004866a0 | stack-check site | 7 |
-| 0x004867d0 | `lumpLoad` and later halo lump | 6 |
-| 0x004867d8 | first `strcmp` needle | 5 |
+| Address | Use | Text length before the NUL | Observed text |
+| --- | --- | --- | --- |
+| 0x0047afe8 | second halo resource | 9 | `halo2.tex` |
+| 0x0047aff8 | third halo resource | 9 | `halo3.tex` |
+| 0x0047b008 | fourth halo resource | 9 | `halo4.tex` |
+| 0x0047b018 | fifth halo resource | 12 | `wisphalo.tex` |
+| 0x0047b028 | sixth halo resource | 9 | `halo5.tex` |
+| 0x0047b038 | seventh halo resource | 9 | `halo7.tex` |
+| 0x0047b048 | first `scePrintf` text | 15 | `postMC %dk %dk.` |
+| 0x0047b058 | 9-byte `levelName` source | 8 | `faydark2` |
+| 0x0047b068 | `engineAddTask` text | 8 | `warpMenu` |
+| 0x0047b078 | `lumpLoad` | 9 | `mouth.lmp` |
+| 0x0047b088 | `lumpLoad` and font lump | 8 | `font.lmp` |
+| 0x0047b098 | `defaultFont` resource | 13 | `gamefonta.fnt` |
+| 0x0047b0a8 | `mediumFont` resource | 15 | `gamefontmed.fnt` |
+| 0x0047b0b8 | `smallFont` resource | 17 | `gamefontsmall.fnt` |
+| 0x0047b0d0 | `lumpLoad` | 9 | `gtext.lmp` |
+| 0x0047b0e0 | `lumpLoad` | 12 | `interfac.lmp` |
+| 0x0047b0f0 | first halo lump | 10 | `engine.lmp` |
+| 0x0047b100 | first halo resource | 9 | `halo1.tex` |
+| 0x0047b110 | eighth halo resource | 9 | `halo8.tex` |
+| 0x0047b120 | second `scePrintf` text | 20 | `preMainLoop %dk %dk.` |
+| 0x0047b138 | second `strcmp` needle | 10 | `--mainmenu` |
+| 0x004866a0 | stack-check site | 7 | `core.cc` |
+| 0x004867d0 | `lumpLoad` and later halo lump | 6 | `fx.lmp` |
+| 0x004867d8 | first `strcmp` needle | 5 | `--net` |
 
 `coreBeenInSRS` is one byte at 0x004867af. 0x004867d0 and 0x004867d8 are past that byte. Font and halo results are stored in `defaultFont`, `mediumFont`, `smallFont`, and `haloTexture1` through `haloTexture8`. `lumpLock__Fi` is called with 100 and then 50.

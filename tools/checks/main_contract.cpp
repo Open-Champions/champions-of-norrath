@@ -33,30 +33,30 @@ unsigned char fromSRSButEnteringGame;
 unsigned char netInitState;
 unsigned char coreLaunchSRS;
 
-char norrath_main_sdata_004866a0[] = "site";
-char norrath_main_sdata_004867d0[] = "lump";
-char norrath_main_sdata_004867d8[] = "arg1";
-char norrath_main_rodata_0047afe8[] = "h2";
-char norrath_main_rodata_0047aff8[] = "h3";
-char norrath_main_rodata_0047b008[] = "h4";
-char norrath_main_rodata_0047b018[] = "h5";
-char norrath_main_rodata_0047b028[] = "h6";
-char norrath_main_rodata_0047b038[] = "h7";
-char norrath_main_rodata_0047b048[] = "text-1";
-char norrath_main_rodata_0047b058[9] = {11, 22, 33, 44, 55, 66, 77, 88, 99};
-char norrath_main_rodata_0047b068[] = "task";
-char norrath_main_rodata_0047b078[] = "load-a";
-char norrath_main_rodata_0047b088[] = "load-b";
-char norrath_main_rodata_0047b098[] = "font-a";
-char norrath_main_rodata_0047b0a8[] = "font-b";
-char norrath_main_rodata_0047b0b8[] = "font-c";
-char norrath_main_rodata_0047b0d0[] = "load-c";
-char norrath_main_rodata_0047b0e0[] = "load-d";
-char norrath_main_rodata_0047b0f0[] = "halo-a";
-char norrath_main_rodata_0047b100[] = "halo-b";
-char norrath_main_rodata_0047b110[] = "h8";
-char norrath_main_rodata_0047b120[] = "text-2";
-char norrath_main_rodata_0047b138[] = "arg2";
+char norrath_startup_core_source_name[] = "site";
+char norrath_startup_fx_lump[] = "lump";
+char norrath_startup_net_argument[] = "arg1";
+char norrath_startup_halo2_tex[] = "h2";
+char norrath_startup_halo3_tex[] = "h3";
+char norrath_startup_halo4_tex[] = "h4";
+char norrath_startup_wisphalo_tex[] = "h5";
+char norrath_startup_halo5_tex[] = "h6";
+char norrath_startup_halo7_tex[] = "h7";
+char norrath_startup_post_mc_memory_text[] = "text-1";
+char norrath_startup_initial_level_name[9] = {11, 22, 33, 44, 55, 66, 77, 88, 99};
+char norrath_startup_warp_menu_task_text[] = "task";
+char norrath_startup_mouth_lump[] = "load-a";
+char norrath_startup_font_lump[] = "load-b";
+char norrath_startup_gamefont_a[] = "font-a";
+char norrath_startup_gamefont_medium[] = "font-b";
+char norrath_startup_gamefont_small[] = "font-c";
+char norrath_startup_gtext_lump[] = "load-c";
+char norrath_startup_interface_lump[] = "load-d";
+char norrath_startup_engine_lump[] = "halo-a";
+char norrath_startup_halo1_tex[] = "halo-b";
+char norrath_startup_halo8_tex[] = "h8";
+char norrath_startup_pre_main_loop_memory_text[] = "text-2";
+char norrath_startup_main_menu_argument[] = "arg2";
 
 static char marker_a[] = "match-first";
 static char marker_b[] = "match-second";
@@ -84,7 +84,7 @@ extern "C" void engineInit__Ff(float value) {
     if (bits != 0x3f7fffffu) fail(10);
 }
 extern "C" void _engineCheckStack__FPCci(const char* site, int line) {
-    if (site != norrath_main_sdata_004866a0) fail(11);
+    if (site != norrath_startup_core_source_name) fail(11);
     if (line != 2648 && line != 2950) fail(12);
 }
 extern "C" void cutInitNet__Fv() {
@@ -108,8 +108,8 @@ extern "C" int sceSifQueryTotalFreeMemSize() {
     return which == 1 ? 8192 : 1024;
 }
 extern "C" void scePrintf(char* text, unsigned left, unsigned right) {
-    if (printfs == 0 && text != norrath_main_rodata_0047b048) fail(16);
-    if (printfs == 1 && text != norrath_main_rodata_0047b120) fail(17);
+    if (printfs == 0 && text != norrath_startup_post_mc_memory_text) fail(16);
+    if (printfs == 1 && text != norrath_startup_pre_main_loop_memory_text) fail(17);
     if (printfs > 1) fail(18);
     printf_left[printfs] = left;
     printf_right[printfs] = right;
@@ -128,9 +128,9 @@ extern "C" void gameInit__Fv() {
 extern "C" void debugCheckForPauseMenuStart__Fv() {}
 extern "C" void engineAddTask__FPFv_viPci(void (*callback)(), int second, char* third, int fourth) {
     if (callback != debugCheckForPauseMenuStart__Fv || second != 110 ||
-        third != norrath_main_rodata_0047b068 || fourth != 0) fail(19);
+        third != norrath_startup_warp_menu_task_text || fourth != 0) fail(19);
     for (int i = 0; i < 9; ++i) {
-        if (static_cast<unsigned char>(levelName[i]) != norrath_main_rodata_0047b058[i]) fail(20);
+        if (static_cast<unsigned char>(levelName[i]) != norrath_startup_initial_level_name[i]) fail(20);
     }
     if (static_cast<unsigned char>(levelName[80]) != 0xffu || levelName[81] != 0 || levelName[242] != 0) fail(21);
     ++tasks;
@@ -138,8 +138,8 @@ extern "C" void engineAddTask__FPFv_viPci(void (*callback)(), int second, char* 
 extern "C" void enginePrintTasks__Fv() { ++prints; }
 extern "C" void lumpLoad__FPc(char* name) {
     char* expected[] = {
-        norrath_main_rodata_0047b078, norrath_main_rodata_0047b088, norrath_main_rodata_0047b0d0,
-        norrath_main_rodata_0047b0e0, norrath_main_sdata_004867d0,
+        norrath_startup_mouth_lump, norrath_startup_font_lump, norrath_startup_gtext_lump,
+        norrath_startup_interface_lump, norrath_startup_fx_lump,
     };
     if (load_calls >= 5 || name != expected[load_calls]) fail(22);
     ++load_calls;
@@ -147,17 +147,17 @@ extern "C" void lumpLoad__FPc(char* name) {
 extern "C" char* lumpFindResource__FPcT0(char* lump, char* name) {
     struct Pair { char* lump; char* name; };
     static const Pair expected[] = {
-        {norrath_main_rodata_0047b088, norrath_main_rodata_0047b098},
-        {norrath_main_rodata_0047b088, norrath_main_rodata_0047b0a8},
-        {norrath_main_rodata_0047b088, norrath_main_rodata_0047b0b8},
-        {norrath_main_rodata_0047b0f0, norrath_main_rodata_0047b100},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047afe8},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047aff8},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047b008},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047b018},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047b028},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047b038},
-        {norrath_main_sdata_004867d0, norrath_main_rodata_0047b110},
+        {norrath_startup_font_lump, norrath_startup_gamefont_a},
+        {norrath_startup_font_lump, norrath_startup_gamefont_medium},
+        {norrath_startup_font_lump, norrath_startup_gamefont_small},
+        {norrath_startup_engine_lump, norrath_startup_halo1_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo2_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo3_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo4_tex},
+        {norrath_startup_fx_lump, norrath_startup_wisphalo_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo5_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo7_tex},
+        {norrath_startup_fx_lump, norrath_startup_halo8_tex},
     };
     if (find_calls >= 11 || lump != expected[find_calls].lump || name != expected[find_calls].name) fail(23);
     char* result = resources[find_calls];
@@ -185,9 +185,9 @@ extern "C" void simpleDrawLoop__FPFv_i(void (*callback)()) {
     ++logos;
 }
 extern "C" int strcmp(const char* left, const char* right) {
-    if (left == norrath_main_sdata_004867d8 && right == marker_a) return 0;
-    if (left == norrath_main_sdata_004867d8 && right == nullptr && mode == 6) return 0;
-    if (left == norrath_main_rodata_0047b138 && right == marker_b) return 0;
+    if (left == norrath_startup_net_argument && right == marker_a) return 0;
+    if (left == norrath_startup_net_argument && right == nullptr && mode == 6) return 0;
+    if (left == norrath_startup_main_menu_argument && right == marker_b) return 0;
     return 1;
 }
 extern "C" void initChars__FiPPc(int argc, char** argv) {
