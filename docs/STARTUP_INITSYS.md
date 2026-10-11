@@ -32,3 +32,7 @@ not on this path.
 ## Timer system time
 
 `StartTimerSystemTime` at 0x002de180 calls `DIntr`, then loads the word at 0x10001010. If bit 0x80 is set it returns 1, calling `EIntr` only when `DIntr` returned nonzero. Otherwise it calls `SetT2_MODE` with bits 10 and 11 cleared and bit 7 set, then `SetNextComp(iGetTimerSystemTime())`, restores through `EIntr` on the same condition, and returns 0. Naming 0x10001010 as timer-2 mode is inferred from the public EE timer map. The host contract supplies that word through `NORRATH_HOST_CONTRACT`, which the reviewed EE profile does not define.
+
+## Thread initializer
+
+`InitThread` at 0x002d5eb8 returns -1 when `topId` is already greater than zero. Otherwise it requests a semaphore with word 1 set to 255 and word 2 set to 0, stores that result in `topSema`, and returns -1 when the result is negative. The thread parameter stores `topThread`, `stack.15`, 1024, `_gp`, and 0. `CreateThread`'s result is stored in `topId` even when negative; a negative result deletes `topSema` and returns -1. A nonnegative result clears the first two `topArg` words, calls `StartThread` with that argument, then `ChangeThreadPriority(GetThreadId(), 1)`, and returns `topId`. Other parameter words are not written. The host contract covers the existing-thread, semaphore-failure, thread-failure, and success paths.
