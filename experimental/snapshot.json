@@ -5142,7 +5142,11 @@
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
-    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
+    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
+    "sources/game-script-set-script-source/set_script.cpp": "4f3ef22f942cbd4a57c1b81a2fd81c6ad99510ca2458a2417a42a4d68e16dedf",
+    "sources/game-script-set-script-source/set_script.hpp": "1c4f52d3ca64e4ead3d1fa12f41b6b16bcb2462ddbe01615474e8c299f91858a",
+    "sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp": "dbf996b41ce0fe3ad165824ca8667ec94d15c2a7055fdc43b1100b00752bf20e",
+    "sources/game-megatile-pm-pointer-cap-source/pointer_cap.hpp": "4246fb4e75ba3bc3439677b85cb796567d2ae704a98ac4789e9b08b1b37f73e3"
   },
   "additional_implementations": [
     {
@@ -5190,19 +5194,78 @@
       "private_FIRST_manifest_sha256": "69c734b2b76efb01421e93451b5fd8607869312cc26f174e12f89bf964fb1259",
       "additional_exact_original_matches": 0,
       "runtime_executed": false
+    },
+    {
+      "component": "game-script-set-script-source",
+      "functions": [
+        "norrath_script_set_script"
+      ],
+      "files": [
+        "sources/game-script-set-script-source/set_script.cpp",
+        "sources/game-script-set-script-source/set_script.hpp"
+      ],
+      "status": "Complete source and first compilation reviewed; integrated into private V45 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "9e68e453169991e76af33272cfdff4e83f0a8b3b66a034df5ab4d7da02721efc",
+      "first_compiled_object_sha256": "ae251a5420ba9f2dffc8bb5a481a0922ae4b82d9739477845ea0de6a14fa530a",
+      "first_compiled_body_bytes": 84,
+      "private_ROOT_actual_review_manifest_sha256": "6d7838c1f3c0ccd906bc491b4bf58cfd70a5e3124f6e52071f05c8c66f2cea5d",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical32 pointer and stable ordinary-RAM behavior; genuine Init then unconditional native registration, with original native upper-pointer/frame/physical behavior held."
+    },
+    {
+      "component": "game-megatile-pm-pointer-cap-source",
+      "functions": [
+        "norrath_megatile_cap_pm_pointers"
+      ],
+      "files": [
+        "sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp",
+        "sources/game-megatile-pm-pointer-cap-source/pointer_cap.hpp"
+      ],
+      "status": "Complete source and first compilation reviewed; integrated into private V45 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "de4dadd2f53831bd12afab813958c00753644776b592737208bd558a0b26ffa6",
+      "first_compiled_object_sha256": "8e0d0921cd8ad5289cd51b8b17f822d5b097f24961f60e877d4ba414d58ed436",
+      "first_compiled_body_bytes": 1080,
+      "private_ROOT_actual_review_manifest_sha256": "6d7838c1f3c0ccd906bc491b4bf58cfd70a5e3124f6e52071f05c8c66f2cea5d",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "bounded_behavior": {
+        "fixtures": 12,
+        "paired_calls": 12,
+        "comparison_runs": 1,
+        "persistent_pointer_counter_memory_matched": true,
+        "returned_low32_pointer_matched": true,
+        "each_count_publication_matched": true,
+        "saved_low64_SP_GP_matched": true,
+        "original_words_covered": 97,
+        "original_whole_words": 99,
+        "compiled_words_covered": 256,
+        "compiled_whole_words": 270,
+        "original_executed_steps": 1312,
+        "compiled_executed_steps": 4095,
+        "earlier_cases_replayed": false,
+        "provider_calls": 0,
+        "new_ISA": 0,
+        "sparse_alias_probes_do_not_establish_pool_capacity_or_game_inputs": true,
+        "native_upper128_physical_frame_IRQ_fault_or_hardware_gameplay_verified": false,
+        "private_result_manifest_sha256": "3295f8ac8f9477f73816c342dfa3306184b473ddcdaecd6bbb4be99100c85fab",
+        "private_ROOT_saved_result_review_sha256": "96f585ad47028a05599ee0836335c3768671c2e137802765e3c28f86a3aabe6b"
+      }
     }
   ],
   "latest_private_partial_integration": {
-    "revision": "V44",
-    "input_objects": 268,
-    "emitted_function_definitions_including_helpers": 392,
-    "compiled_body_bytes": 232940,
-    "unresolved_imports": 830,
+    "revision": "V45",
+    "input_objects": 270,
+    "emitted_function_definitions_including_helpers": 394,
+    "compiled_body_bytes": 234104,
+    "encoded_relocation_fields": 5375,
+    "unresolved_imports": 828,
     "same_mutable_owners": 8,
-    "source_functions_added": 4,
+    "source_functions_added": 2,
     "old_code_and_storage_preserved": true,
-    "object_sha256": "e640f988cf2690dd1bceae390d869b252d86b74bbb4af97ea0d7de6ddf7a734d",
-    "private_ROOT_manifest_sha256": "c5b4215ac6ac2f753eccc89abe1fddc09e8e3a68cc34a2f9c3cd72f97eb40ee2",
+    "object_sha256": "aa96e3e81b4d35bb6d1e10ca0a2aa36f07f933a69fa3e64f6815e3ce1f5e3cd1",
+    "private_FIRST_manifest_sha256": "e05564bcce92ea4ab626e51491a7f21ca91555ec2a45659e66c10fc60c37be40",
+    "private_ROOT_manifest_sha256": "ac2734040f60b735c2b441194784efdd38f7402bc8f16490c91049cf3dcb74a0",
     "fresh_reproduction_performed": false,
     "runtime_verified": false,
     "additional_exact_original_matches": 0

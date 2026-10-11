@@ -48,6 +48,16 @@ percentage follows from the emitted function count.
   mismatch advancement, live counter reads, and genuine string helper calls.
   Its first compilation, output review, and private V44 integration passed.
   The pool owner, capacity, behavior execution, and game runtime remain unfinished.
+- `game-megatile-pm-pointer-cap-source` supplies pointer-list sentinel insertion
+  and reuse of earlier runs. Its first compilation and private V45 integration
+  passed. Twelve focused comparisons matched persistent memory, returned
+  pointers, count updates, and saved low64 registers. Coverage reached 97/99
+  original words and 256/270 generated words. Sparse alias probes do not establish
+  pool capacity or valid gameplay inputs; hardware and game runtime remain open.
+- `game-script-set-script-source` publishes the current script pointer and calls
+  the genuine AMX initialization and native-registration providers. Its first
+  compilation and private V45 integration passed. Interpreter transport, storage
+  ownership, physical access/frame behavior, and game runtime remain open.
 - `game-software-arithmetic-source-v2` reconstructs multiplication, division,
   and remainder algorithms with explicit accumulator capture and restoration.
   All 1,596 bounded normal/correction comparisons matched return values and
@@ -63,10 +73,10 @@ percentage follows from the emitted function count.
   to infer a runnable interpreter. A separate private diagnostic compilation
   of the worker does not validate this transport or its integration.
 
-The current private V44 partial object integrates the four new definitions with
-the unchanged V43 inputs: 268 inputs, 392 emitted function bodies, 232,940 body
-bytes, and 830 unresolved imports. All prior code/storage is preserved; the pool
-view remains unowned and unbound. This first link has not been reproduced and is
+The current private V45 partial object integrates six new definitions with
+the unchanged V43 inputs: 270 inputs, 394 emitted function bodies, 234,104 body
+bytes, and 828 unresolved imports. All prior code/storage is preserved; the pool
+views remain unowned and unbound. This first link has not been reproduced and is
 distinct from the 262-input public build recipe and its 386-body output.
 
 ## Checking this publication

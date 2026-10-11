@@ -40,11 +40,42 @@ def check(root):
     assert integration['runtime_executed'] is False
     assert integration['clean_checkout_game_build'] is False
     additions = snapshot.get('additional_implementations', [])
-    assert sum(len(item['functions']) for item in additions) == 4
+    assert sum(len(item['functions']) for item in additions) == 6
+    additional_functions = [name for item in additions for name in item['functions']]
+    assert len(set(additional_functions)) == 6
+    assert set(additional_functions) == {
+        'norrath_list_safe_iterator_construct', 'norrath_list_safe_iterator_next',
+        'norrath_list_safe_iterator_destroy', 'norrath_megatile_add_pm_list',
+        'norrath_script_set_script', 'norrath_megatile_cap_pm_pointers',
+    }
     for item in additions:
         assert all(name in files for name in item['files'])
         assert item['additional_exact_original_matches'] == 0
         assert item['runtime_executed'] is False
+    by_component = {item['component']: item for item in additions}
+    for component, function, body_bytes in (
+        ('game-script-set-script-source', 'norrath_script_set_script', 84),
+        ('game-megatile-pm-pointer-cap-source', 'norrath_megatile_cap_pm_pointers', 1080),
+    ):
+        item = by_component[component]
+        assert item['functions'] == [function]
+        assert item['first_compiled_body_bytes'] == body_bytes
+        for field in ('private_FIRST_manifest_sha256', 'first_compiled_object_sha256',
+                      'private_ROOT_actual_review_manifest_sha256'):
+            assert re.fullmatch(r'[0-9a-f]{64}', item[field]), (component, field)
+        assert not set(item['files']) & {entry['source'] for entry in authored}, component
+    behavior = by_component['game-megatile-pm-pointer-cap-source']['bounded_behavior']
+    assert behavior['fixtures'] == behavior['paired_calls'] == 12
+    assert behavior['comparison_runs'] == 1
+    for field in ('persistent_pointer_counter_memory_matched', 'returned_low32_pointer_matched',
+                  'each_count_publication_matched', 'saved_low64_SP_GP_matched',
+                  'sparse_alias_probes_do_not_establish_pool_capacity_or_game_inputs'):
+        assert behavior[field] is True, field
+    assert (behavior['original_words_covered'], behavior['original_whole_words']) == (97, 99)
+    assert (behavior['compiled_words_covered'], behavior['compiled_whole_words']) == (256, 270)
+    assert behavior['earlier_cases_replayed'] is False
+    assert behavior['provider_calls'] == behavior['new_ISA'] == 0
+    assert behavior['native_upper128_physical_frame_IRQ_fault_or_hardware_gameplay_verified'] is False
     transport = directory / 'sources/game-amx-exec-native-transport-source-v4'
     for name in ('exec.cpp', 'context.cpp', 'transport.S'):
         assert re.search(r'^#error .*HOLD', (transport / name).read_text(), re.M), name
