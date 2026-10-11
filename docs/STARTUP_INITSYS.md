@@ -28,3 +28,7 @@ not on this path.
 ## Reboot notification
 
 `sceSifInitRebootNotify` at 0x002df5f8 stores zero to `g_pUserRebootBuf` and `g_iUserRebootSize`, then calls `memset(g_SysRebootBuf, 0, 512)`. The 512-byte length is the symbol span. Whether a reboot consumer observes that buffer is unknown. The host contract checks both stores and the fill arguments.
+
+## Timer system time
+
+`StartTimerSystemTime` at 0x002de180 calls `DIntr`, then loads the word at 0x10001010. If bit 0x80 is set it returns 1, calling `EIntr` only when `DIntr` returned nonzero. Otherwise it calls `SetT2_MODE` with bits 10 and 11 cleared and bit 7 set, then `SetNextComp(iGetTimerSystemTime())`, restores through `EIntr` on the same condition, and returns 0. Naming 0x10001010 as timer-2 mode is inferred from the public EE timer map. The host contract supplies that word through `NORRATH_HOST_CONTRACT`, which the reviewed EE profile does not define.

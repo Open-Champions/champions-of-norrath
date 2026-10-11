@@ -4594,6 +4594,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys/sif_reboot_notify.cpp"
+    },
+    {
+      "input_order": 291,
+      "component": "runtime-initsys",
+      "object_name": "start_timer_system_time.o",
+      "private_object_sha256": "6575ac0611e29462ed9f56b45441f9219bc5dda9930d5acae738348aaa2877ab",
+      "emitted_functions": [
+        {
+          "name": "StartTimerSystemTime",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys/start_timer_system_time.cpp"
     }
   ],
   "drafts": [
@@ -5553,7 +5567,8 @@
     "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
     "sources/runtime-initsys/delete_sema.S": "565a0c5f5f3ec9e793377840a812e977970adbddac93200a0d76b55c74d53a51",
     "sources/runtime-initsys/supplement_crt0.cpp": "8b75e38af12ac9fc4531884bb5b0490cf80c0926ea19801643887ade7878a79b",
-    "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238"
+    "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
+    "sources/runtime-initsys/start_timer_system_time.cpp": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf"
   },
   "additional_implementations": [
     {
@@ -5995,11 +6010,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 291,
-    "authored_default_inputs": 289,
+    "selected_inputs": 292,
+    "authored_default_inputs": 290,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 415,
-    "compiled_body_bytes_from_accepted_inputs": 243100,
+    "emitted_function_definitions_including_helpers": 416,
+    "compiled_body_bytes_from_accepted_inputs": 243260,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6011,7 +6026,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 12
+    "startup_selected_inputs": 13
   },
   "startup_implementations": [
     {
@@ -6130,6 +6145,16 @@
       "compiled_body_bytes": 36,
       "source_sha256": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
       "object_sha256": "11181407aac865afb27b63fb7a0436f53717731d741588d1e8d427290e6a7168",
+      "review": "docs/STARTUP_INITSYS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys/start_timer_system_time.cpp",
+      "symbol": "StartTimerSystemTime",
+      "compiled_body_bytes": 160,
+      "source_sha256": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf",
+      "object_sha256": "6575ac0611e29462ed9f56b45441f9219bc5dda9930d5acae738348aaa2877ab",
       "review": "docs/STARTUP_INITSYS.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
