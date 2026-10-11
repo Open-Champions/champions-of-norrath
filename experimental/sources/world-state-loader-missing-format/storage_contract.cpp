@@ -1,0 +1,11 @@
+#include "storage.hpp"
+#include <cstdio>
+int main() {
+    static const unsigned char expect[22] = { 0x21, 0x21, 0x21, 0x21, 0x21, 0x21, 0x6c, 0x75, 0x6d, 0x70, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x66, 0x6f, 0x75, 0x6e, 0x64, 0x0a, 0x00 };
+    for (unsigned i = 0; i != 22; ++i) {
+        if (norrath_loader_missing_format_view[i] != expect[i]) return 1;
+    }
+    
+    std::puts("Define the missing-lump format string.");
+    return 0;
+}
