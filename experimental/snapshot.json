@@ -11147,6 +11147,272 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/script-amx-script-init/script_init.cpp"
+    },
+    {
+      "input_order": 848,
+      "component": "vslots-b-counter-load",
+      "object_name": "counter_load.o",
+      "private_object_sha256": "10d544264a7ca8f2643ccee05ab09efef3f70bff0ab1a4684b7cc233033bf0e5",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7CounterPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-counter-load/counter_load.cpp"
+    },
+    {
+      "input_order": 849,
+      "component": "vslots-b-counter-save",
+      "object_name": "counter_save.o",
+      "private_object_sha256": "19709726e8238fc8e6eaac11bc478322f1e80c0bf1bc7ae067925fbc02fd8ab4",
+      "emitted_functions": [
+        {
+          "name": "msg_save__7CounterPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-counter-save/counter_save.cpp"
+    },
+    {
+      "input_order": 850,
+      "component": "vslots-b-draw-cat",
+      "object_name": "draw_cat.o",
+      "private_object_sha256": "8ab1eb96adad80114f03eed24e5ad3d6c0415d5fe7fc80785fe25a741537259f",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__3Cat",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-draw-cat/draw_cat.cpp"
+    },
+    {
+      "input_order": 851,
+      "component": "vslots-b-draw-mermaid",
+      "object_name": "draw_mermaid.o",
+      "private_object_sha256": "cf5f0bcd20c01135a04efa28c4e71a4e9d1a54e5480826d08ac7c9d076f287f9",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Mermaid",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-draw-mermaid/draw_mermaid.cpp"
+    },
+    {
+      "input_order": 852,
+      "component": "vslots-b-draw-spider",
+      "object_name": "draw_spider.o",
+      "private_object_sha256": "29defc1dec3691afb6e2d8bd4be27c8434cfb78c1a8a428aebec6289cc7b95c1",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__11SmallSpider",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-draw-spider/draw_spider.cpp"
+    },
+    {
+      "input_order": 853,
+      "component": "vslots-b-draw-trap",
+      "object_name": "draw_trap.o",
+      "private_object_sha256": "8c3ec1d0217bdc2312374adf80a9016ec36740a197a3e7961f36e67d41a25f1e",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__4Trap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-draw-trap/draw_trap.cpp"
+    },
+    {
+      "input_order": 854,
+      "component": "vslots-b-lever-save",
+      "object_name": "lever_save.o",
+      "private_object_sha256": "eb02afb6e1e9158c9101488cba221b285dd4ec43786bc9b864ef68b6772c37a9",
+      "emitted_functions": [
+        {
+          "name": "msg_save__5LeverPc",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-lever-save/lever_save.cpp"
+    },
+    {
+      "input_order": 855,
+      "component": "vslots-b-msg-hurt",
+      "object_name": "msg_hurt.o",
+      "private_object_sha256": "e056e30baa301848d5cb1f2332ef1d4af99413504dcc20ab8c055def64aa6044",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__8CreaturefP10GameObjecti",
+          "compiled_body_bytes": 868
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-msg-hurt/msg_hurt.cpp"
+    },
+    {
+      "input_order": 856,
+      "component": "vslots-b-msg-move-collision",
+      "object_name": "msg_move_collision.o",
+      "private_object_sha256": "6115d890bfd11b5e736d4900d4ea2f8778572ec73f74174a8399e62854f6d906",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__8CreaturePP10GameObject",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-msg-move-collision/msg_move_collision.cpp"
+    },
+    {
+      "input_order": 857,
+      "component": "vslots-b-msg-route",
+      "object_name": "msg_route.o",
+      "private_object_sha256": "70bc2b43e91eeadbab0f4fdcd599d72125a0706292fdd108309db97547c2aa2c",
+      "emitted_functions": [
+        {
+          "name": "msg_route__8Creaturei",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-msg-route/msg_route.cpp"
+    },
+    {
+      "input_order": 858,
+      "component": "vslots-b-msg-trigger",
+      "object_name": "msg_trigger.o",
+      "private_object_sha256": "3b3dabfc824c72241e57cfbdd467c48b4ff7ac1c06decb51b6d94f474931d1b4",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8Creaturei",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-msg-trigger/msg_trigger.cpp"
+    },
+    {
+      "input_order": 859,
+      "component": "vslots-b-run-natasla",
+      "object_name": "run_natasla.o",
+      "private_object_sha256": "d21b1c90e1d5a1f5da38a6fee2e3035ad1807764f561781dadcc9f7fbc841917",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Natasla",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-run-natasla/run_natasla.cpp"
+    },
+    {
+      "input_order": 860,
+      "component": "vslots-b-run-spells",
+      "object_name": "run_spells.o",
+      "private_object_sha256": "45cd5dced132dbed6f038301cdbb9fdfba0d25f369a1eb4b8188060ca8834648",
+      "emitted_functions": [
+        {
+          "name": "runSpells__8CreatureG6Point3",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-run-spells/run_spells.cpp"
+    },
+    {
+      "input_order": 861,
+      "component": "vslots-b-run-timer",
+      "object_name": "run_timer.o",
+      "private_object_sha256": "dc4d0e9a974e0d5d855b3924ccfcf69e95e84d3c54fab43dd73658a32738dcd4",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Timer",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-run-timer/run_timer.cpp"
+    },
+    {
+      "input_order": 862,
+      "component": "vslots-b-set-active-chunks",
+      "object_name": "set_active_chunks.o",
+      "private_object_sha256": "1c3362ff9abd3cb2677f81dfbdde880fef53a53b0902e74bbba69001a18f0973",
+      "emitted_functions": [
+        {
+          "name": "setActiveChunks__8Creature",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-set-active-chunks/set_active_chunks.cpp"
+    },
+    {
+      "input_order": 863,
+      "component": "vslots-b-set-state",
+      "object_name": "set_state.o",
+      "private_object_sha256": "dfad8a7f77a0931b5092525c2d976c0d8e1d0cc587fc37b395108f747f0d0e8e",
+      "emitted_functions": [
+        {
+          "name": "setState__8Creaturei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-set-state/set_state.cpp"
+    },
+    {
+      "input_order": 864,
+      "component": "vslots-b-stun",
+      "object_name": "stun.o",
+      "private_object_sha256": "0cde08bfcdc476944a3cf7bbe11573c2d29a9d00b5f7b8e1cec336f13db683d9",
+      "emitted_functions": [
+        {
+          "name": "stun__8Creaturei",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-stun/stun.cpp"
+    },
+    {
+      "input_order": 865,
+      "component": "vslots-b-trigger-params",
+      "object_name": "trigger_params.o",
+      "private_object_sha256": "8b005431d8ddfc0c2b083a690de0deb2b203666fc7270b9069aa8e80c18ea733",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__13TriggerParamsi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-trigger-params/trigger_params.cpp"
+    },
+    {
+      "input_order": 866,
+      "component": "vslots-b-trigger-timer",
+      "object_name": "trigger_timer.o",
+      "private_object_sha256": "2c2e1a112514a3e38a7bcb433b495d0dc22a8c2065f52473055b07095d0c4e6f",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__5Timeri",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-trigger-timer/trigger_timer.cpp"
     }
   ],
   "drafts": [
@@ -13156,6 +13422,45 @@
     "sources/subsystem-inits-rand-state/host_check.cpp": "8730bef85a1f914fffc60d564d0f6a33d4b96574a2e1fc8ec4e549217b77d3f0",
     "sources/subsystem-inits-world/host_check.cpp": "5c31fb602f375a20f064bac972b37dea18676393280447f40cfb8b0d2d05f9eb",
     "sources/subsystem-inits-world/world_init.cpp": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
+    "sources/vslots-b-bytes/bytes.hpp": "c5fea9b60c5c91b0e84169c526dbf41d4cb6dd4b2206f0daa586a117fc2e5578",
+    "sources/vslots-b-counter-load/counter_load.cpp": "09716749e7a7e3657faa2dd1b985915e2b0302df004e7d3da9558b0b56070300",
+    "sources/vslots-b-counter-load/host_check.cpp": "68cf36300a7c6c2e04d7a41e5ea3279e2b91c7bf9ec2c52c86b90d2d101e29aa",
+    "sources/vslots-b-counter-save/counter_save.cpp": "743a3988832f58fc9f1525bc90755532429153f0a25339e8e30e76e2cc218745",
+    "sources/vslots-b-counter-save/host_check.cpp": "f5b3b455dcf201bc91cef6ae3e5c42d215c57c0cb84ced44b9c51dc1cfc24a5e",
+    "sources/vslots-b-draw-cat/draw_cat.cpp": "7ffce26c2ed0207d064678de5d8c8daedca75aa53e11d54f44cfe3143cad7246",
+    "sources/vslots-b-draw-cat/host_check.cpp": "97a15d74eff796766e13df14b13277bfce934f185f5c1458a72de5acf840e54d",
+    "sources/vslots-b-draw-mermaid/draw_mermaid.cpp": "2ace9a8ee79d59fea17066a6f97b73970895aabb03120ea296035275f4eb1f97",
+    "sources/vslots-b-draw-mermaid/host_check.cpp": "c1e05b0f99a907a1f733ebfa8492b7ee7659d21aa394590cd95d4cd387f2a3ea",
+    "sources/vslots-b-draw-spider/draw_spider.cpp": "b61c3f3bae2a5a0d0b6c8b417a7b49bc49bd17ad2c4aa57e27dc773711ee30e7",
+    "sources/vslots-b-draw-spider/host_check.cpp": "55fb954366d8bf28b85d5f30f1484dc7bbfb753e6b1aaeb8e0b8586faaf8a858",
+    "sources/vslots-b-draw-trap/draw_trap.cpp": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
+    "sources/vslots-b-draw-trap/host_check.cpp": "d91584eb17c0ea96afd326a821ab88e4d30736ae002f6c6bf2f8c182d0bf1266",
+    "sources/vslots-b-lever-save/host_check.cpp": "ae2153b2abfc828f8fea3aec8bcfc72277915363680bdaa429f030f08c3a7233",
+    "sources/vslots-b-lever-save/lever_save.cpp": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
+    "sources/vslots-b-msg-hurt/host_check.cpp": "62b8d75db82dd736abc61a39c8f8607bfd65987076adb2a596cf5bc034fe317d",
+    "sources/vslots-b-msg-hurt/msg_hurt.cpp": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
+    "sources/vslots-b-msg-move-collision/host_check.cpp": "b29fba9b8853bb55378ce076601f5eb4d2f364434847f5747cb36578b3deba08",
+    "sources/vslots-b-msg-move-collision/msg_move_collision.cpp": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+    "sources/vslots-b-msg-route/host_check.cpp": "4092586b11d3defc1bae2b5815dcc31c0f4d9777e5bb9bd556b8969cda956d78",
+    "sources/vslots-b-msg-route/msg_route.cpp": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
+    "sources/vslots-b-msg-trigger/host_check.cpp": "6168e8232f71c54ceb338d13c94dadec7191e6dfbf042beb3b3f6ed8ddeed813",
+    "sources/vslots-b-msg-trigger/msg_trigger.cpp": "adb9fa7b14ad67602fe247e4bc0694d87fb75264dabe1e6c191f0f51ccf80b1d",
+    "sources/vslots-b-run-natasla/host_check.cpp": "6aabe05f31a38e234a297315c7d0432a6c9d8a46b50899d35231d4bd55af26c6",
+    "sources/vslots-b-run-natasla/run_natasla.cpp": "c23b2bf8a2c2ca39c46c2ce31f0c3c1a8411b0ef7b77f928660a01a28c9ea1b0",
+    "sources/vslots-b-run-spells/host_check.cpp": "44903a867d50be2ca56771615b718e5a14c390782aaa0b61b5c85be5ea5af661",
+    "sources/vslots-b-run-spells/run_spells.cpp": "f1e9856cf96df91665a611966ece846bf528a8ee57ed0310e3ea5b5d5412a836",
+    "sources/vslots-b-run-timer/host_check.cpp": "f6f04b703b823d1c41ed566e545a76fcd36cfc922f7543d8070def77ff4c655f",
+    "sources/vslots-b-run-timer/run_timer.cpp": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
+    "sources/vslots-b-set-active-chunks/host_check.cpp": "89885476221c31d062b77054d3b5df5a43a25a0b09433d438033248e01202180",
+    "sources/vslots-b-set-active-chunks/set_active_chunks.cpp": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+    "sources/vslots-b-set-state/host_check.cpp": "90fdb3b380ddee58161bc274be639680b982e06f671d408657c950e72764cbe8",
+    "sources/vslots-b-set-state/set_state.cpp": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
+    "sources/vslots-b-stun/host_check.cpp": "3c5dc702db67bdfdf6d7f2db449d17b89e7adce5d8173020929ed9634e0cae4e",
+    "sources/vslots-b-stun/stun.cpp": "15d2d41f26653e5343a7ea235d8b2e2446bd750435f7878dde69fca87853d612",
+    "sources/vslots-b-trigger-params/host_check.cpp": "0cd94e2eaebb20789a2c020f56134a80679f5752f18b3b12c3284129233f4eea",
+    "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
+    "sources/vslots-b-trigger-timer/host_check.cpp": "9f7024b10667f02e0eb9708c5b3a87a1d0c43a08df60fc4e25992234e1967cca",
+    "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -13715,11 +14020,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 848,
-    "authored_default_inputs": 846,
+    "selected_inputs": 867,
+    "authored_default_inputs": 865,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 726,
-    "compiled_body_bytes_from_accepted_inputs": 335984,
+    "emitted_function_definitions_including_helpers": 745,
+    "compiled_body_bytes_from_accepted_inputs": 338556,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13732,7 +14037,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 535
+    "package_selected_inputs": 554
   },
   "startup_implementations": [
     {
@@ -21970,6 +22275,329 @@
       ],
       "host_files": [
         "sources/script-amx-script-init/script_init_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-counter-load/counter_load.cpp",
+      "source_sha256": "09716749e7a7e3657faa2dd1b985915e2b0302df004e7d3da9558b0b56070300",
+      "object_sha256": "10d544264a7ca8f2643ccee05ab09efef3f70bff0ab1a4684b7cc233033bf0e5",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7CounterPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-counter-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-counter-save/counter_save.cpp",
+      "source_sha256": "743a3988832f58fc9f1525bc90755532429153f0a25339e8e30e76e2cc218745",
+      "object_sha256": "19709726e8238fc8e6eaac11bc478322f1e80c0bf1bc7ae067925fbc02fd8ab4",
+      "emitted_functions": [
+        {
+          "name": "msg_save__7CounterPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-counter-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-draw-cat/draw_cat.cpp",
+      "source_sha256": "7ffce26c2ed0207d064678de5d8c8daedca75aa53e11d54f44cfe3143cad7246",
+      "object_sha256": "8ab1eb96adad80114f03eed24e5ad3d6c0415d5fe7fc80785fe25a741537259f",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__3Cat",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-draw-cat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-draw-mermaid/draw_mermaid.cpp",
+      "source_sha256": "2ace9a8ee79d59fea17066a6f97b73970895aabb03120ea296035275f4eb1f97",
+      "object_sha256": "cf5f0bcd20c01135a04efa28c4e71a4e9d1a54e5480826d08ac7c9d076f287f9",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Mermaid",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-draw-mermaid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-draw-spider/draw_spider.cpp",
+      "source_sha256": "b61c3f3bae2a5a0d0b6c8b417a7b49bc49bd17ad2c4aa57e27dc773711ee30e7",
+      "object_sha256": "29defc1dec3691afb6e2d8bd4be27c8434cfb78c1a8a428aebec6289cc7b95c1",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__11SmallSpider",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-draw-spider/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-draw-trap/draw_trap.cpp",
+      "source_sha256": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
+      "object_sha256": "8c3ec1d0217bdc2312374adf80a9016ec36740a197a3e7961f36e67d41a25f1e",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__4Trap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-draw-trap/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-lever-save/lever_save.cpp",
+      "source_sha256": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
+      "object_sha256": "eb02afb6e1e9158c9101488cba221b285dd4ec43786bc9b864ef68b6772c37a9",
+      "emitted_functions": [
+        {
+          "name": "msg_save__5LeverPc",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-lever-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-msg-hurt/msg_hurt.cpp",
+      "source_sha256": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
+      "object_sha256": "e056e30baa301848d5cb1f2332ef1d4af99413504dcc20ab8c055def64aa6044",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__8CreaturefP10GameObjecti",
+          "compiled_body_bytes": 868
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-msg-hurt/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-msg-move-collision/msg_move_collision.cpp",
+      "source_sha256": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+      "object_sha256": "6115d890bfd11b5e736d4900d4ea2f8778572ec73f74174a8399e62854f6d906",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__8CreaturePP10GameObject",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-msg-move-collision/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-msg-route/msg_route.cpp",
+      "source_sha256": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
+      "object_sha256": "70bc2b43e91eeadbab0f4fdcd599d72125a0706292fdd108309db97547c2aa2c",
+      "emitted_functions": [
+        {
+          "name": "msg_route__8Creaturei",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-msg-route/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-msg-trigger/msg_trigger.cpp",
+      "source_sha256": "adb9fa7b14ad67602fe247e4bc0694d87fb75264dabe1e6c191f0f51ccf80b1d",
+      "object_sha256": "3b3dabfc824c72241e57cfbdd467c48b4ff7ac1c06decb51b6d94f474931d1b4",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8Creaturei",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-msg-trigger/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-run-natasla/run_natasla.cpp",
+      "source_sha256": "c23b2bf8a2c2ca39c46c2ce31f0c3c1a8411b0ef7b77f928660a01a28c9ea1b0",
+      "object_sha256": "d21b1c90e1d5a1f5da38a6fee2e3035ad1807764f561781dadcc9f7fbc841917",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Natasla",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-run-natasla/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-run-spells/run_spells.cpp",
+      "source_sha256": "f1e9856cf96df91665a611966ece846bf528a8ee57ed0310e3ea5b5d5412a836",
+      "object_sha256": "45cd5dced132dbed6f038301cdbb9fdfba0d25f369a1eb4b8188060ca8834648",
+      "emitted_functions": [
+        {
+          "name": "runSpells__8CreatureG6Point3",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-run-spells/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-run-timer/run_timer.cpp",
+      "source_sha256": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
+      "object_sha256": "dc4d0e9a974e0d5d855b3924ccfcf69e95e84d3c54fab43dd73658a32738dcd4",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Timer",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-run-timer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-set-active-chunks/set_active_chunks.cpp",
+      "source_sha256": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+      "object_sha256": "1c3362ff9abd3cb2677f81dfbdde880fef53a53b0902e74bbba69001a18f0973",
+      "emitted_functions": [
+        {
+          "name": "setActiveChunks__8Creature",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-set-active-chunks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-set-state/set_state.cpp",
+      "source_sha256": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
+      "object_sha256": "dfad8a7f77a0931b5092525c2d976c0d8e1d0cc587fc37b395108f747f0d0e8e",
+      "emitted_functions": [
+        {
+          "name": "setState__8Creaturei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-set-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-stun/stun.cpp",
+      "source_sha256": "15d2d41f26653e5343a7ea235d8b2e2446bd750435f7878dde69fca87853d612",
+      "object_sha256": "0cde08bfcdc476944a3cf7bbe11573c2d29a9d00b5f7b8e1cec336f13db683d9",
+      "emitted_functions": [
+        {
+          "name": "stun__8Creaturei",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-stun/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-trigger-params/trigger_params.cpp",
+      "source_sha256": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
+      "object_sha256": "8b005431d8ddfc0c2b083a690de0deb2b203666fc7270b9069aa8e80c18ea733",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__13TriggerParamsi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-trigger-params/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-trigger-timer/trigger_timer.cpp",
+      "source_sha256": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
+      "object_sha256": "2c2e1a112514a3e38a7bcb433b495d0dc22a8c2065f52473055b07095d0c4e6f",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__5Timeri",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-trigger-timer/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -977,6 +977,38 @@ first-pass script names as closed. Those were already defined. 724 function
 bodies, 846 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/vslots-b
+
+All 19 units were selected. Host checks passed. The notes' plan list named
+four Creature methods. The tree also contained fifteen actor methods, and
+those host checks passed, so they were selected too. `setState__8Creaturei`
+is a normal global. The notes say the original binding was weak.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 871 |
+| Closed | 19 |
+| Opened | 11 |
+
+Closed: `msg_draw__11SmallSpider`, `msg_draw__3Cat`, `msg_draw__4Trap`,
+`msg_draw__7Mermaid`, `msg_hurt__8CreaturefP10GameObjecti`,
+`msg_load__7CounterPc`, `msg_moveCollision__8CreaturePP10GameObject`,
+`msg_route__8Creaturei`, `msg_run__5Timer`, `msg_run__7Natasla`,
+`msg_save__5LeverPc`, `msg_save__7CounterPc`, `msg_trigger__13TriggerParamsi`,
+`msg_trigger__5Timeri`, `msg_trigger__8Creaturei`,
+`runSpells__8CreatureG6Point3`, `setActiveChunks__8Creature`,
+`setState__8Creaturei`, `stun__8Creaturei`. Opened: `DLG_SetMutex__Fv`,
+`creatureAdvanceAnimation__8Creaturef`,
+`draw__8CreatureP12_modelHeaderP8_textureT1`,
+`everyFrame__8CreatureP12_modelHeader`, `iatan2__Fff`,
+`modelGetActiveChunks__FP12_modelHeaderi`, `modelResetOptionalParams__Fv`,
+`modelSetShadowBrightness__Ff`, `objectActivationCheck__8Creaturei`,
+`objectDoMyActions__FP10GameObjecti`, `objectRemoveFromRunList__FP10GameObject`.
+The notes predicted only `modelGetActiveChunks__FP12_modelHeaderi` and
+`iatan2__Fff`. 743 function bodies, 865 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1085,7 +1117,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, and the script-amx second pass. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, and vslots-b. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1128,3 +1160,4 @@ and no startup stage has executed.
 - 2026-10-11 17:38 CDT — `agents/memory` — 879 unresolved imports
 - 2026-10-11 17:41 CDT — `agents/audio` — 879 unresolved imports
 - 2026-10-11 17:42 CDT — `agents/script-amx` — 879 unresolved imports
+- 2026-10-11 17:44 CDT — `agents/vslots-b` — 871 unresolved imports

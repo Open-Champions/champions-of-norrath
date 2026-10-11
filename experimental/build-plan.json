@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 846,
+  "default_authored_inputs": 865,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1480,6 +1480,26 @@
     "sources/subsystem-inits-particles/p_init.cpp": "a326f797a2191806d5fea476655f1276730922332dd925aed0d904b90ac230ee",
     "sources/subsystem-inits-rand-state/e_rand_state.cpp": "4566ec0f6220273ec17eee51791cb3bb411b566d64703c50c69426b42c91c87c",
     "sources/subsystem-inits-world/world_init.cpp": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
+    "sources/vslots-b-bytes/bytes.hpp": "c5fea9b60c5c91b0e84169c526dbf41d4cb6dd4b2206f0daa586a117fc2e5578",
+    "sources/vslots-b-counter-load/counter_load.cpp": "09716749e7a7e3657faa2dd1b985915e2b0302df004e7d3da9558b0b56070300",
+    "sources/vslots-b-counter-save/counter_save.cpp": "743a3988832f58fc9f1525bc90755532429153f0a25339e8e30e76e2cc218745",
+    "sources/vslots-b-draw-cat/draw_cat.cpp": "7ffce26c2ed0207d064678de5d8c8daedca75aa53e11d54f44cfe3143cad7246",
+    "sources/vslots-b-draw-mermaid/draw_mermaid.cpp": "2ace9a8ee79d59fea17066a6f97b73970895aabb03120ea296035275f4eb1f97",
+    "sources/vslots-b-draw-spider/draw_spider.cpp": "b61c3f3bae2a5a0d0b6c8b417a7b49bc49bd17ad2c4aa57e27dc773711ee30e7",
+    "sources/vslots-b-draw-trap/draw_trap.cpp": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
+    "sources/vslots-b-lever-save/lever_save.cpp": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
+    "sources/vslots-b-msg-hurt/msg_hurt.cpp": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
+    "sources/vslots-b-msg-move-collision/msg_move_collision.cpp": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+    "sources/vslots-b-msg-route/msg_route.cpp": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
+    "sources/vslots-b-msg-trigger/msg_trigger.cpp": "adb9fa7b14ad67602fe247e4bc0694d87fb75264dabe1e6c191f0f51ccf80b1d",
+    "sources/vslots-b-run-natasla/run_natasla.cpp": "c23b2bf8a2c2ca39c46c2ce31f0c3c1a8411b0ef7b77f928660a01a28c9ea1b0",
+    "sources/vslots-b-run-spells/run_spells.cpp": "f1e9856cf96df91665a611966ece846bf528a8ee57ed0310e3ea5b5d5412a836",
+    "sources/vslots-b-run-timer/run_timer.cpp": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
+    "sources/vslots-b-set-active-chunks/set_active_chunks.cpp": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+    "sources/vslots-b-set-state/set_state.cpp": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
+    "sources/vslots-b-stun/stun.cpp": "15d2d41f26653e5343a7ea235d8b2e2446bd750435f7878dde69fca87853d612",
+    "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
+    "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -11242,6 +11262,211 @@
       "profile": "authored_cpp",
       "sha256": "fd7991b049e7cae9a2505644f2f929aaea850cb40b62fdab7f7e330ba0035608",
       "source": "sources/script-amx-script-init/script_init.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 848,
+      "kind": "independently_authored_source",
+      "object_name": "counter_load.o",
+      "profile": "authored_cpp",
+      "sha256": "09716749e7a7e3657faa2dd1b985915e2b0302df004e7d3da9558b0b56070300",
+      "source": "sources/vslots-b-counter-load/counter_load.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 849,
+      "kind": "independently_authored_source",
+      "object_name": "counter_save.o",
+      "profile": "authored_cpp",
+      "sha256": "743a3988832f58fc9f1525bc90755532429153f0a25339e8e30e76e2cc218745",
+      "source": "sources/vslots-b-counter-save/counter_save.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 850,
+      "kind": "independently_authored_source",
+      "object_name": "draw_cat.o",
+      "profile": "authored_cpp",
+      "sha256": "7ffce26c2ed0207d064678de5d8c8daedca75aa53e11d54f44cfe3143cad7246",
+      "source": "sources/vslots-b-draw-cat/draw_cat.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 851,
+      "kind": "independently_authored_source",
+      "object_name": "draw_mermaid.o",
+      "profile": "authored_cpp",
+      "sha256": "2ace9a8ee79d59fea17066a6f97b73970895aabb03120ea296035275f4eb1f97",
+      "source": "sources/vslots-b-draw-mermaid/draw_mermaid.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 852,
+      "kind": "independently_authored_source",
+      "object_name": "draw_spider.o",
+      "profile": "authored_cpp",
+      "sha256": "b61c3f3bae2a5a0d0b6c8b417a7b49bc49bd17ad2c4aa57e27dc773711ee30e7",
+      "source": "sources/vslots-b-draw-spider/draw_spider.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 853,
+      "kind": "independently_authored_source",
+      "object_name": "draw_trap.o",
+      "profile": "authored_cpp",
+      "sha256": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
+      "source": "sources/vslots-b-draw-trap/draw_trap.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 854,
+      "kind": "independently_authored_source",
+      "object_name": "lever_save.o",
+      "profile": "authored_cpp",
+      "sha256": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
+      "source": "sources/vslots-b-lever-save/lever_save.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 855,
+      "kind": "independently_authored_source",
+      "object_name": "msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
+      "source": "sources/vslots-b-msg-hurt/msg_hurt.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 856,
+      "kind": "independently_authored_source",
+      "object_name": "msg_move_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+      "source": "sources/vslots-b-msg-move-collision/msg_move_collision.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 857,
+      "kind": "independently_authored_source",
+      "object_name": "msg_route.o",
+      "profile": "authored_cpp",
+      "sha256": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
+      "source": "sources/vslots-b-msg-route/msg_route.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 858,
+      "kind": "independently_authored_source",
+      "object_name": "msg_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "adb9fa7b14ad67602fe247e4bc0694d87fb75264dabe1e6c191f0f51ccf80b1d",
+      "source": "sources/vslots-b-msg-trigger/msg_trigger.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 859,
+      "kind": "independently_authored_source",
+      "object_name": "run_natasla.o",
+      "profile": "authored_cpp",
+      "sha256": "c23b2bf8a2c2ca39c46c2ce31f0c3c1a8411b0ef7b77f928660a01a28c9ea1b0",
+      "source": "sources/vslots-b-run-natasla/run_natasla.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 860,
+      "kind": "independently_authored_source",
+      "object_name": "run_spells.o",
+      "profile": "authored_cpp",
+      "sha256": "f1e9856cf96df91665a611966ece846bf528a8ee57ed0310e3ea5b5d5412a836",
+      "source": "sources/vslots-b-run-spells/run_spells.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 861,
+      "kind": "independently_authored_source",
+      "object_name": "run_timer.o",
+      "profile": "authored_cpp",
+      "sha256": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
+      "source": "sources/vslots-b-run-timer/run_timer.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 862,
+      "kind": "independently_authored_source",
+      "object_name": "set_active_chunks.o",
+      "profile": "authored_cpp",
+      "sha256": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+      "source": "sources/vslots-b-set-active-chunks/set_active_chunks.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 863,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
+      "source": "sources/vslots-b-set-state/set_state.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 864,
+      "kind": "independently_authored_source",
+      "object_name": "stun.o",
+      "profile": "authored_cpp",
+      "sha256": "15d2d41f26653e5343a7ea235d8b2e2446bd750435f7878dde69fca87853d612",
+      "source": "sources/vslots-b-stun/stun.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 865,
+      "kind": "independently_authored_source",
+      "object_name": "trigger_params.o",
+      "profile": "authored_cpp",
+      "sha256": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
+      "source": "sources/vslots-b-trigger-params/trigger_params.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 866,
+      "kind": "independently_authored_source",
+      "object_name": "trigger_timer.o",
+      "profile": "authored_cpp",
+      "sha256": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
+      "source": "sources/vslots-b-trigger-timer/trigger_timer.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11341,7 +11566,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "22deaa8d3c2880043d40f78809eb039dd002096f5ebbb07c931ef5e4df3576bb",
+  "snapshot_sha256": "c77949f2d4c94c492b288435e5169292a6335fa0ef0a2ba54d33b6ebc33caf0a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
