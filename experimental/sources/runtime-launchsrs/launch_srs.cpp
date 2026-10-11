@@ -1,7 +1,8 @@
 // Observed launchSRS at 0x002d01e0, 1588 bytes. It returns.
 // cdLoad__FPcPvii is the symbol at 0x00165120, extent 0x114. The drafted
 // loader is norrath_cd_load and does not publish that address, so this
-// import stays separate. Unnamed text addresses are unresolved objects.
+// import stays separate. Its text arguments are the named objects in
+// startup_text.cpp. Those addresses have no ELF symbol.
 extern "C" {
 void lumpClear__Fi(int value);
 void* memAlloc__FiPc(int bytes, char* name);
@@ -60,28 +61,28 @@ extern char* haloTexture6;
 extern char* haloTexture7;
 extern void (*_srsctorsstart[])();
 extern char _srsctorsend[];
-extern char norrath_main_sdata_004866a0[];
-extern char norrath_main_sdata_004867d0[];
-extern char norrath_main_rodata_0047afe8[];
-extern char norrath_main_rodata_0047aff8[];
-extern char norrath_main_rodata_0047b008[];
-extern char norrath_main_rodata_0047b018[];
-extern char norrath_main_rodata_0047b028[];
-extern char norrath_main_rodata_0047b038[];
-extern char norrath_launchsrs_rodata_0047aeb8[];
-extern char norrath_launchsrs_rodata_0047aed8[];
-extern char norrath_launchsrs_sdata_004867b0[];
-extern char norrath_launchsrs_rodata_0047af30[];
-extern char norrath_launchsrs_rodata_0047af50[];
-extern char norrath_launchsrs_rodata_0047af70[];
-extern char norrath_launchsrs_rodata_0047af88[];
-extern char norrath_launchsrs_rodata_0047afa0[];
-extern char norrath_launchsrs_rodata_0047afb0[];
-extern char norrath_launchsrs_rodata_0047afc0[];
-extern char norrath_launchsrs_rodata_0047afd0[];
-extern char norrath_launchsrs_sdata_004867b8[];
-extern char norrath_launchsrs_sdata_004867c0[];
-extern char norrath_launchsrs_sdata_004867c8[];
+extern char norrath_startup_core_source_name[];
+extern char norrath_startup_fx_lump[];
+extern char norrath_startup_halo2_tex[];
+extern char norrath_startup_halo3_tex[];
+extern char norrath_startup_halo4_tex[];
+extern char norrath_startup_wisphalo_tex[];
+extern char norrath_startup_halo5_tex[];
+extern char norrath_startup_halo7_tex[];
+extern char norrath_startup_module_allocation_text[];
+extern char norrath_startup_blanket_assert_text[];
+extern char norrath_startup_srs_bin_name[];
+extern char norrath_startup_pre_sound_sleep_memory_text[];
+extern char norrath_startup_post_sound_sleep_memory_text[];
+extern char norrath_startup_pre_srs_memory_text[];
+extern char norrath_startup_run_constructors_text[];
+extern char norrath_startup_go_srs_text[];
+extern char norrath_startup_dotted_quad_text[];
+extern char norrath_startup_visounddriver_name[];
+extern char norrath_startup_post_srs_memory_text[];
+extern char norrath_startup_after_srs_marker[];
+extern char norrath_startup_after_result_marker[];
+extern char norrath_startup_after_module_marker[];
 
 void launchSRS__Fv() {
     coreBeenInSRS = 1;
@@ -90,10 +91,10 @@ void launchSRS__Fv() {
     unsigned size = 0x400000u;
     void* reserved = 0;
     for (;;) {
-        reserved = memAlloc__FiPc(static_cast<int>(size), norrath_launchsrs_rodata_0047aeb8);
+        reserved = memAlloc__FiPc(static_cast<int>(size), norrath_startup_module_allocation_text);
         unsigned address = static_cast<unsigned>(reinterpret_cast<unsigned long>(reserved));
         if (static_cast<int>(0x01000000u) < static_cast<int>(address)) {
-            __assert__FPCcUiT0i(norrath_main_sdata_004866a0, 2326u, norrath_launchsrs_rodata_0047aed8,
+            __assert__FPCcUiT0i(norrath_startup_core_source_name, 2326u, norrath_startup_blanket_assert_text,
                                 static_cast<int>(reinterpret_cast<unsigned long>(__builtin_return_address(0))));
         }
         unsigned end = address + size;
@@ -101,24 +102,24 @@ void launchSRS__Fv() {
         if (static_cast<int>(0x013590acu) < static_cast<int>(end)) break;
         memFree__FPv(reserved);
     }
-    cdLoad__FPcPvii(norrath_launchsrs_sdata_004867b0,
+    cdLoad__FPcPvii(norrath_startup_srs_bin_name,
                     reinterpret_cast<void*>(static_cast<unsigned long>(0x01000000u)), 0, 0);
     engineClear__Fv();
     unsigned shifted = static_cast<unsigned>(sceSifQueryMaxFreeMemSize()) >> 10;
     unsigned total = static_cast<unsigned>(sceSifQueryTotalFreeMemSize()) >> 10;
-    scePrintf(norrath_launchsrs_rodata_0047af30, shifted, total);
+    scePrintf(norrath_startup_pre_sound_sleep_memory_text, shifted, total);
     soundSleep__Fv();
     shifted = static_cast<unsigned>(sceSifQueryMaxFreeMemSize()) >> 10;
     total = static_cast<unsigned>(sceSifQueryTotalFreeMemSize()) >> 10;
-    scePrintf(norrath_launchsrs_rodata_0047af50, shifted, total);
+    scePrintf(norrath_startup_post_sound_sleep_memory_text, shifted, total);
     keyboardFree__Fv();
     textureFreeCacheBuffer__Fv();
     shifted = static_cast<unsigned>(sceSifQueryMaxFreeMemSize()) >> 10;
     total = static_cast<unsigned>(sceSifQueryTotalFreeMemSize()) >> 10;
-    scePrintf(norrath_launchsrs_rodata_0047af70, shifted, total);
+    scePrintf(norrath_startup_pre_srs_memory_text, shifted, total);
     enableMallocWrapper = 1;
     memSetMark__Fi(0);
-    scePrintf(norrath_launchsrs_rodata_0047af88);
+    scePrintf(norrath_startup_run_constructors_text);
     void (**cursor)() = _srsctorsstart;
     void (**ctors_end)() = reinterpret_cast<void (**)()>(&_srsctorsend);
     while (cursor != ctors_end) {
@@ -143,12 +144,12 @@ void launchSRS__Fv() {
     unsigned short* looked_up = textGetString__FPc(reinterpret_cast<char*>(netGameLaunchInfo + 199));
     char copied_text[80];
     ustrcpy__FPcPUs(copied_text, looked_up);
-    scePrintf(norrath_launchsrs_rodata_0047afa0);
+    scePrintf(norrath_startup_go_srs_text);
     int result = srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i(
         reinterpret_cast<const char*>(netGameLaunchInfo + 7), &flag_word, &count_word, first_slots,
         second_words, &zero_word, third_slots, fourth_words, netInterfaceIsUp == 0 ? 1 : 0,
         reinterpret_cast<const char*>(netGameLaunchInfo + 135), copied_text, netGameLaunchInfo[295]);
-    scePrintf(norrath_launchsrs_sdata_004867b8);
+    scePrintf(norrath_startup_after_srs_marker);
     engineDisplayDisable = 10000;
     int parsed_words[4];
     if (result == 100) {
@@ -161,13 +162,13 @@ void launchSRS__Fv() {
         netGameLaunchInfo[6] = static_cast<unsigned char>(zero_word);
         unsigned char* record = netGameLaunchInfo + 312;
         for (int index = 0; index < count_word; ++index) {
-            sscanf(first_slots[index], norrath_launchsrs_rodata_0047afb0, &parsed_words[0], &parsed_words[1],
+            sscanf(first_slots[index], norrath_startup_dotted_quad_text, &parsed_words[0], &parsed_words[1],
                    &parsed_words[2], &parsed_words[3]);
             record[-49] = static_cast<unsigned char>(parsed_words[0]);
             record[-48] = static_cast<unsigned char>(parsed_words[1]);
             record[-47] = static_cast<unsigned char>(parsed_words[2]);
             record[-46] = static_cast<unsigned char>(parsed_words[3]);
-            int fields = sscanf(third_slots[index], norrath_launchsrs_rodata_0047afb0, &parsed_words[0],
+            int fields = sscanf(third_slots[index], norrath_startup_dotted_quad_text, &parsed_words[0],
                                 &parsed_words[1], &parsed_words[2], &parsed_words[3]);
             record[-33] = static_cast<unsigned char>(parsed_words[0]);
             record[-32] = static_cast<unsigned char>(parsed_words[1]);
@@ -177,16 +178,16 @@ void launchSRS__Fv() {
             record += 4;
         }
     }
-    scePrintf(norrath_launchsrs_sdata_004867c0);
-    int module = sceSifSearchModuleByName(norrath_launchsrs_rodata_0047afc0);
+    scePrintf(norrath_startup_after_result_marker);
+    int module = sceSifSearchModuleByName(norrath_startup_visounddriver_name);
     if (module >= 0) {
         sceSifStopModule(module, 0, 0, &parsed_words[3]);
         sceSifUnloadModule(module);
     }
-    scePrintf(norrath_launchsrs_sdata_004867c8);
+    scePrintf(norrath_startup_after_module_marker);
     shifted = static_cast<unsigned>(sceSifQueryMaxFreeMemSize()) >> 10;
     total = static_cast<unsigned>(sceSifQueryTotalFreeMemSize()) >> 10;
-    scePrintf(norrath_launchsrs_rodata_0047afd0, shifted, total);
+    scePrintf(norrath_startup_post_srs_memory_text, shifted, total);
     enableMallocWrapper = 0;
     memClearMark__Fi(0);
     memDeleteMarked__Fi(0);
@@ -208,13 +209,13 @@ void launchSRS__Fv() {
     }
     fromSRS = 1;
     sceMcInit();
-    lumpLoad__FPc(norrath_main_sdata_004867d0);
-    haloTexture2 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047afe8);
-    haloTexture3 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047aff8);
-    haloTexture4 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047b008);
-    haloTexture5 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047b018);
-    haloTexture6 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047b028);
-    haloTexture7 = lumpFindResource__FPcT0(norrath_main_sdata_004867d0, norrath_main_rodata_0047b038);
+    lumpLoad__FPc(norrath_startup_fx_lump);
+    haloTexture2 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_halo2_tex);
+    haloTexture3 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_halo3_tex);
+    haloTexture4 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_halo4_tex);
+    haloTexture5 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_wisphalo_tex);
+    haloTexture6 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_halo5_tex);
+    haloTexture7 = lumpFindResource__FPcT0(norrath_startup_fx_lump, norrath_startup_halo7_tex);
     lumpLock__Fi(50);
     MC_Reset__Fv();
     unsigned char* pad_word = pad + 268;

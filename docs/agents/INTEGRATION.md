@@ -193,6 +193,28 @@ bytes. The other three units emit no functions. All four host contracts
 passed. 214 tool tests passed. No PS2 or game execution. The vtable slots are
 not called.
 
+## Startup text from the shared branch
+
+The startup lead's text unit landed on `origin/codex/norrath-first-reconstruction`
+after object-infra was committed here and before that commit was pushed. It
+is selected data, not one of the four packages. `main` and `launchSRS` now
+reference the named strings. The unit defines no function.
+
+The lead measured 912 on the memory tip (950 − 38). Measured from the
+object-infra tip, the same 38 names close and nothing opens.
+
+| | |
+|---|---|
+| Before | 685 |
+| After | 647 |
+| Closed | 38 |
+| Opened | 0 |
+
+Closed: the 24 `norrath_main_rodata_*` / `norrath_main_sdata_*` addresses and
+the 14 `norrath_launchsrs_rodata_*` / `norrath_launchsrs_sdata_*` addresses
+listed in `docs/STARTUP_TEXT.md`. Opened: none. 443 function bodies, 344
+authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
+
 ## Disagreements
 
 `norrath_actor_add_slow_run_list` was already selected. It walks 60 heads at

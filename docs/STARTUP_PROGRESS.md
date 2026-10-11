@@ -152,3 +152,33 @@ Partial object
 `94dc88b91858122ad4514424de332a7a658705b526f8e49b0960543b30544de4`.
 The [review](STARTUP_INITSYS_CALLEES.md) records the instruction behavior.
 `engineAddTask__FPFv_viPci` is still unresolved. No kernel service has run.
+
+## Imports opened by main and launchSRS
+
+Defining `main` added 83 imports. Defining `launchSRS` added 48. One of the 83, `launchSRS__Fv`, is already authored. The thirty-eight unnamed text addresses are now named from the bytes in the pinned image; see [STARTUP_TEXT.md](STARTUP_TEXT.md). The other symbols stay imports.
+
+| Owner | Symbols |
+| --- | --- |
+| cd-archive | `cdLoad__FPcPvii`, `lumpClear__Fi`, `lumpFindResource__FPcT0`, `lumpLoad__FPc`, `lumpLock__Fi` |
+| audio | `soundRestore__Fb`, `soundSleep__Fv` |
+| memory | `enableMallocWrapper`, `mallinfo`, `memAlloc__FiPc`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memFree__FPv`, `memScrambleFree__Fv`, `memSetMark__Fi` |
+| libc-format | `scePrintf`, `sscanf`, `strcmp` |
+| items-player | `initChars__FiPPc`, `inventoryInitNet__Fv`, `levelName`, `picInit__4itemv`, `shopInitNet__Fv` |
+| save-net-anim | `commInitNet__Fv`, `coreBeenInSRS`, `coreLaunchSRS`, `cutInitNet__Fv`, `DLG_InitNet__Fv`, `fromSRS`, `fromSRSButEnteringGame`, `hudInitNet__Fv`, `MC_Configure__Fv`, `MC_Init__Fi`, `MC_ProtectRamSlot`, `MC_Reset__Fv`, `mcProcess__Fv`, `netFree__Fb`, `netGameLaunchInfo`, `netInitState`, `netInterfaceIsUp`, `netNetworkMode`, `sceMcInit`, `textInitNet__Fv` |
+| world-state | `worldWaterBumpSpeed` |
+| render-lights | `defaultFont`, `displaySBLogoScreen__Fv`, `displaySOELogo__Fv`, `engineSetScreenColor__Fiiii`, `haloTexture1` through `haloTexture8`, `mediumFont`, `smallFont`, `textureAllocateCacheBuffer__Fv`, `textureFreeCacheBuffer__Fv` |
+| gameobject-base | `gameobjInit__Fv` |
+| scheduler / floor session | `engineAddTask__FPFv_viPci`, `enginePrintTasks__Fv` |
+| startup text, now defined | the 24 addresses `main` referenced and the 14 additional addresses `launchSRS` referenced |
+
+`math`, `script-amx`, `megatile`, `object-infra`, `actors-a`, `actors-b`, and `data-views` do not own any of these 131 symbols. `floorInit__Fv` is not one of them; `engineInit` would be the caller, and that function is not authored.
+
+These remain unowned: `_engineCheckStack__FPCci`, `_srsctorsend`, `_srsctorsstart`, `__assert__FPCcUiT0i`, `DLG_Init__Fv`, `debugCheckForPauseMenuStart__Fv`, `engineClear__Fv`, `engineDisplayDisable`, `engineInit__Ff`, `engineRestore__Fv`, `frontEndInit__Fi`, `frontEndStartInNetMenu__Fv`, `gameBoot__Fv`, `gameInit__Fv`, `gameLoop__Fv`, `keyboardFree__Fv`, `keyboardRestart__Fv`, `pad`, `rejectForeignModules__Fv`, `sceSifQueryMaxFreeMemSize`, `sceSifQueryTotalFreeMemSize`, `sceSifSearchModuleByName`, `sceSifStopModule`, `sceSifUnloadModule`, `simpleDrawLoop__FPFv_i`, `skipIntro`, `srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`, `textGetString__FPc`, `ustrcpy__FPcPUs`.
+
+## Startup text
+
+The unnamed text is selected authored data. It defines no function. Math, audio, and memory were already merged and had left the partial link at 950 imports. With this text included, the fresh default partial link is **912 unresolved imports** (950 − 38), zero COMMON, 442 function bodies, 340 authored inputs. Partial object `8b45c1940a0e6988f2b187b6d9bbb0c38f2c6b1638a0614d67329e2916c37c29`. No EE startup stage has run.
+
+## Call chain
+
+`_start` calls `_InitSys`, `FlushCache`, and `main`. `_InitSys` calls its nine services. `__main` runs the ordinary constructor walk. `main` is authored and does not return. Its first call after `__main` is `engineInit__Ff` at 0x001902b0, 1944 bytes. That function is the first missing link. It calls `floorInit__Fv`, which stays with the floor session, and `engineAddTask` is still unresolved. `launchSRS` is authored, and `main` calls it only after `gameLoop`, which is after the logo draw. No stage of this chain has executed.

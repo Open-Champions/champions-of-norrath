@@ -4697,7 +4697,7 @@
       "input_order": 298,
       "component": "runtime-main",
       "object_name": "main.o",
-      "private_object_sha256": "97c6164820b5f01dd6b2e4cf9ce7bd18fe1432f646982bf805a695d6aa39def8",
+      "private_object_sha256": "22c16678a0e27f4552df73c9312a1d93e8ed57c133876878e2b84be62cf2ee0f",
       "emitted_functions": [
         {
           "name": "main",
@@ -4711,7 +4711,7 @@
       "input_order": 299,
       "component": "runtime-launchsrs",
       "object_name": "launch_srs.o",
-      "private_object_sha256": "5ad23591b1b4f8a12e1c2694ec5367129104aaf46f3b87e5bee59bde762c0445",
+      "private_object_sha256": "0d5a79383812f3d10da387ca1b84571c7f4750042aeb47ca65adbe35a8c84ac2",
       "emitted_functions": [
         {
           "name": "launchSRS__Fv",
@@ -4891,6 +4891,15 @@
     },
     {
       "input_order": 312,
+      "component": "runtime-startup-text",
+      "object_name": "startup_text.o",
+      "private_object_sha256": "93cf81f7364863d1eebc8fa2e4a4a0eda653fc8bd22bf0c3cbd074587d414a42",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-startup-text/startup_text.cpp"
+    },
+    {
+      "input_order": 313,
       "component": "math-double-isinf",
       "object_name": "double_isinf.o",
       "private_object_sha256": "1a902487fdfc02191494e391d600548711ee2c02ae61c7f9301c862eae11de4a",
@@ -4904,7 +4913,7 @@
       "source": "sources/math-double-isinf/double_isinf.cpp"
     },
     {
-      "input_order": 313,
+      "input_order": 314,
       "component": "math-double-isnan",
       "object_name": "double_isnan.o",
       "private_object_sha256": "6825d1f2c3aca46d2cdf9ec282c3ef2fd0df9f982a072c71a3537daf95a9d301",
@@ -4918,7 +4927,7 @@
       "source": "sources/math-double-isnan/double_isnan.cpp"
     },
     {
-      "input_order": 314,
+      "input_order": 315,
       "component": "math-entity-floor",
       "object_name": "entity_floor.o",
       "private_object_sha256": "e3ae798344a17f3e678e36b3858ea4d78fc1fe66be29af49ee9696148d1ea2b7",
@@ -4932,7 +4941,7 @@
       "source": "sources/math-entity-floor/entity_floor.cpp"
     },
     {
-      "input_order": 315,
+      "input_order": 316,
       "component": "math-entity-fptodp",
       "object_name": "entity_fptodp.o",
       "private_object_sha256": "d6b39ed9b0e881e87fb8edb5d5a4a1d0b33f61f75b21fc73214bfb0c402f7d23",
@@ -4946,7 +4955,7 @@
       "source": "sources/math-entity-fptodp/entity_fptodp.cpp"
     },
     {
-      "input_order": 316,
+      "input_order": 317,
       "component": "math-integer-trig-coefficients",
       "object_name": "coefficients.o",
       "private_object_sha256": "61d50a69c2b653bd69e2dbdd43a83ef7b6b9ae015c9c2f67f1689ef0d685aafc",
@@ -4955,7 +4964,7 @@
       "source": "sources/math-integer-trig-coefficients/coefficients.cpp"
     },
     {
-      "input_order": 317,
+      "input_order": 318,
       "component": "math-atan-tables",
       "object_name": "atan_tables.o",
       "private_object_sha256": "4c4275a58699ba93d970125c82015fa93dbf06113273f3e1f96a3959b9a40825",
@@ -4964,7 +4973,7 @@
       "source": "sources/math-atan-tables/atan_tables.cpp"
     },
     {
-      "input_order": 318,
+      "input_order": 319,
       "component": "math-pow-constants",
       "object_name": "pow_constants.o",
       "private_object_sha256": "1721274fb030171b8e6a8ac308aff0a8a1f68f894a994de68c1b82ea6eb9d439",
@@ -4973,7 +4982,7 @@
       "source": "sources/math-pow-constants/pow_constants.cpp"
     },
     {
-      "input_order": 319,
+      "input_order": 320,
       "component": "math-softdouble-nan",
       "object_name": "nan_parts.o",
       "private_object_sha256": "e9c70b6aeaf84b463f57c5e9ab79175939c5c8725998592d370476382bc82ccb",
@@ -4982,7 +4991,7 @@
       "source": "sources/math-softdouble-nan/nan_parts.cpp"
     },
     {
-      "input_order": 320,
+      "input_order": 321,
       "component": "audio-add-dma-handler",
       "object_name": "add_dma_handler.o",
       "private_object_sha256": "17c55472e65d30e0862219e2d11505ad1515f386a5be9ddf7448782b1fe6a5f9",
@@ -4996,7 +5005,7 @@
       "source": "sources/audio-add-dma-handler/add_dma_handler.S"
     },
     {
-      "input_order": 321,
+      "input_order": 322,
       "component": "audio-set-dma-chain",
       "object_name": "set_dma_chain.o",
       "private_object_sha256": "a0d69d6c2ff2481a21ed0b0c695837e4268bf2f08bf4703228913060e2b5a40f",
@@ -5010,7 +5019,7 @@
       "source": "sources/audio-set-dma-chain/set_dma_chain.S"
     },
     {
-      "input_order": 322,
+      "input_order": 323,
       "component": "audio-enable-dma",
       "object_name": "enable_dma.o",
       "private_object_sha256": "b00684fd94d24adac37a18d6d8d7d6fbc778524faccc5f39ec4594cf4360d871",
@@ -5024,7 +5033,7 @@
       "source": "sources/audio-enable-dma/enable_dma.cpp"
     },
     {
-      "input_order": 323,
+      "input_order": 324,
       "component": "audio-command-storage",
       "object_name": "command_storage.o",
       "private_object_sha256": "9f8fd3eef0f6e396c8101f39079f2de21d2574392c967ff0a1d8f1203f5573bb",
@@ -5033,7 +5042,7 @@
       "source": "sources/audio-command-storage/command_storage.cpp"
     },
     {
-      "input_order": 324,
+      "input_order": 325,
       "component": "audio-channel-records",
       "object_name": "channel_records.o",
       "private_object_sha256": "918d7729c68b8f2f60708d0509d2316c778c17b2eb84d9ddd0b66c579d19fe80",
@@ -5042,7 +5051,7 @@
       "source": "sources/audio-channel-records/channel_records.cpp"
     },
     {
-      "input_order": 325,
+      "input_order": 326,
       "component": "audio-channel-voice",
       "object_name": "voice_map.o",
       "private_object_sha256": "18aa03cc61e90443a5eb2b133785b8a9398f71c0b489f5a2242bee994ba09aa3",
@@ -5051,7 +5060,7 @@
       "source": "sources/audio-channel-voice/voice_map.cpp"
     },
     {
-      "input_order": 326,
+      "input_order": 327,
       "component": "audio-key-words",
       "object_name": "key_words.o",
       "private_object_sha256": "453a262e7887a4f8d2e674306154ea782de9652949ab7e1b9d33aa396dffa094",
@@ -5060,7 +5069,7 @@
       "source": "sources/audio-key-words/key_words.cpp"
     },
     {
-      "input_order": 327,
+      "input_order": 328,
       "component": "audio-group-limits",
       "object_name": "group_limits.o",
       "private_object_sha256": "3b2e2ea257f2538e551488e2f67644a3c67213e646363ce1d04fca707727b632",
@@ -5069,7 +5078,7 @@
       "source": "sources/audio-group-limits/group_limits.cpp"
     },
     {
-      "input_order": 328,
+      "input_order": 329,
       "component": "audio-sequence-records",
       "object_name": "sequence_records.o",
       "private_object_sha256": "65b845e6e81ad3bcac3111a6d3012220fe4956e8c461ad54ddc340acffe3140d",
@@ -5078,7 +5087,7 @@
       "source": "sources/audio-sequence-records/sequence_records.cpp"
     },
     {
-      "input_order": 329,
+      "input_order": 330,
       "component": "audio-stream-storage",
       "object_name": "stream_storage.o",
       "private_object_sha256": "c111ac467db1d80b911d5f1ce57d23499a8879bc9284f2fd87dd544cd2003081",
@@ -5087,7 +5096,7 @@
       "source": "sources/audio-stream-storage/stream_storage.cpp"
     },
     {
-      "input_order": 330,
+      "input_order": 331,
       "component": "audio-master-volume",
       "object_name": "master_volume.o",
       "private_object_sha256": "70724993e9401da22085c36eb56a1426bf9fb41b355e949fb874aa50f22622d0",
@@ -5096,7 +5105,7 @@
       "source": "sources/audio-master-volume/master_volume.cpp"
     },
     {
-      "input_order": 331,
+      "input_order": 332,
       "component": "audio-delay-thread-name",
       "object_name": "delay_thread_name.o",
       "private_object_sha256": "dc6312c62e6626ef098952d2fb0019e5a52318a09f88be5c0ede27b9be9fd427",
@@ -5105,7 +5114,7 @@
       "source": "sources/audio-delay-thread-name/delay_thread_name.cpp"
     },
     {
-      "input_order": 332,
+      "input_order": 333,
       "component": "audio-dialog-maps",
       "object_name": "dialog_maps.o",
       "private_object_sha256": "bc082dfce0d7dc5775720a4a49c973ecd380ec07dee31b90c46d60ad44bfb6db",
@@ -5114,7 +5123,7 @@
       "source": "sources/audio-dialog-maps/dialog_maps.cpp"
     },
     {
-      "input_order": 333,
+      "input_order": 334,
       "component": "audio-iop-buffers",
       "object_name": "iop_buffers.o",
       "private_object_sha256": "3b81a211962a6b43e323b20fc84c54ae9675c3772211dfaebb91b0eb11a580f7",
@@ -5123,7 +5132,7 @@
       "source": "sources/audio-iop-buffers/iop_buffers.cpp"
     },
     {
-      "input_order": 334,
+      "input_order": 335,
       "component": "audio-startup-strings",
       "object_name": "startup_strings.o",
       "private_object_sha256": "cfbaf9937a6cabaec8477f77329e0b0c584534028c035c7a88f6b6fc6033c80f",
@@ -5132,7 +5141,7 @@
       "source": "sources/audio-startup-strings/startup_strings.cpp"
     },
     {
-      "input_order": 335,
+      "input_order": 336,
       "component": "memory-realloc",
       "object_name": "mem_realloc.o",
       "private_object_sha256": "e7b7660d92d3909c6208dc5023fbba21f7ac2365405a2e33ca02d2444e180850",
@@ -5146,7 +5155,7 @@
       "source": "sources/memory-realloc/mem_realloc.cpp"
     },
     {
-      "input_order": 336,
+      "input_order": 337,
       "component": "memory-malloc-state",
       "object_name": "malloc_bins.o",
       "private_object_sha256": "7f907f729cc628fed830bd828bab856bcb8b6f52f3993ecc34ad1698003db1aa",
@@ -5155,7 +5164,7 @@
       "source": "sources/memory-malloc-state/malloc_bins.cpp"
     },
     {
-      "input_order": 337,
+      "input_order": 338,
       "component": "memory-malloc-state",
       "object_name": "malloc_scalars.o",
       "private_object_sha256": "cc4421260749e3a14ac9c982dae8bc0363bc47209cc31e21174602b653abb76d",
@@ -5164,7 +5173,7 @@
       "source": "sources/memory-malloc-state/malloc_scalars.cpp"
     },
     {
-      "input_order": 338,
+      "input_order": 339,
       "component": "memory-heap-state",
       "object_name": "heap_state.o",
       "private_object_sha256": "d9a866ec747f4b181cfc942b5b8bb755b66083990cb4f8f9a9cb25e5c410aefc",
@@ -5173,7 +5182,7 @@
       "source": "sources/memory-heap-state/heap_state.cpp"
     },
     {
-      "input_order": 339,
+      "input_order": 340,
       "component": "memory-block-storage",
       "object_name": "block_storage.o",
       "private_object_sha256": "f7c99e2196382fdeb037eb319b3f690b76e6c9692425ccda2e4ba2f1538af567",
@@ -5182,7 +5191,7 @@
       "source": "sources/memory-block-storage/block_storage.cpp"
     },
     {
-      "input_order": 340,
+      "input_order": 341,
       "component": "memory-wrapper-byte",
       "object_name": "wrapper_byte.o",
       "private_object_sha256": "80299a103856db1389d886128abd6cf3871bcab62af45d535edd137d304af02c",
@@ -5191,7 +5200,7 @@
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
     },
     {
-      "input_order": 341,
+      "input_order": 342,
       "component": "object-infra-slow-run-list",
       "object_name": "add_to_slow_run_list.o",
       "private_object_sha256": "2a3ebad8cfc83fe16a20293079e7cd0bd042277e1dda585781429c1d8966824f",
@@ -5205,7 +5214,7 @@
       "source": "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp"
     },
     {
-      "input_order": 342,
+      "input_order": 343,
       "component": "object-infra-state",
       "object_name": "state.o",
       "private_object_sha256": "9f64dc231f9a9437b15f117cb3609dfe1a2985013779d68d95a4cfd4ccefccdb",
@@ -5214,7 +5223,7 @@
       "source": "sources/object-infra-state/state.cpp"
     },
     {
-      "input_order": 343,
+      "input_order": 344,
       "component": "object-infra-vtable",
       "object_name": "game_object_vtable.o",
       "private_object_sha256": "594f898d4e54067a2ad162bc19e771ca9e4dae000ba34203902bba295ac4084a",
@@ -5223,7 +5232,7 @@
       "source": "sources/object-infra-vtable/game_object_vtable.cpp"
     },
     {
-      "input_order": 344,
+      "input_order": 345,
       "component": "object-infra-factory-text",
       "object_name": "factory_text.o",
       "private_object_sha256": "bfe6804ff1848d93cc9f2bef5eb61f44399b850d0a7bc0c512a167c8c9fa895b",
@@ -6197,8 +6206,8 @@
     "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
     "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
     "sources/runtime-initsys/init_timer.cpp": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
-    "sources/runtime-main/main.cpp": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
-    "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
+    "sources/runtime-main/main.cpp": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
+    "sources/runtime-launchsrs/launch_srs.cpp": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
     "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
     "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
     "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
@@ -6269,6 +6278,7 @@
     "sources/memory-block-storage/host_check.cpp": "8a135c017c628544dbe63f8b42ede6f6e8e0e5fe7adfc83c2aa76e39a580f03f",
     "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
     "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311",
+    "sources/runtime-startup-text/startup_text.cpp": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
     "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
     "sources/object-infra-slow-run-list/add_to_slow_run_list_contract.cpp": "1327ff9dbeb0a87b0b1cc17076c78ee407ed6bcdf0121eb77d59d9af5e5ba225",
     "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
@@ -6718,8 +6728,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 345,
-    "authored_default_inputs": 343,
+    "selected_inputs": 346,
+    "authored_default_inputs": 344,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 445,
     "compiled_body_bytes_from_accepted_inputs": 249312,
@@ -6734,7 +6744,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 33,
+    "startup_selected_inputs": 34,
     "package_selected_inputs": 33
   },
   "startup_implementations": [
@@ -6932,8 +6942,8 @@
       "source": "sources/runtime-main/main.cpp",
       "symbol": "main",
       "compiled_body_bytes": 1284,
-      "source_sha256": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
-      "object_sha256": "97c6164820b5f01dd6b2e4cf9ce7bd18fe1432f646982bf805a695d6aa39def8",
+      "source_sha256": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
+      "object_sha256": "22c16678a0e27f4552df73c9312a1d93e8ed57c133876878e2b84be62cf2ee0f",
       "review": "docs/STARTUP_MAIN.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
@@ -6942,8 +6952,8 @@
       "source": "sources/runtime-launchsrs/launch_srs.cpp",
       "symbol": "launchSRS__Fv",
       "compiled_body_bytes": 1608,
-      "source_sha256": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
-      "object_sha256": "5ad23591b1b4f8a12e1c2694ec5367129104aaf46f3b87e5bee59bde762c0445",
+      "source_sha256": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
+      "object_sha256": "0d5a79383812f3d10da387ca1b84571c7f4750042aeb47ca65adbe35a8c84ac2",
       "review": "docs/STARTUP_LAUNCHSRS.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
@@ -7065,6 +7075,56 @@
       "source_sha256": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
       "object_sha256": "decfcd539b84a2bfc9950868377df38512600a0df9732aebe8fef4e9c7ba68e5",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-startup-text/startup_text.cpp",
+      "symbol": "",
+      "compiled_body_bytes": 0,
+      "data_symbols": [
+        "norrath_startup_halo2_tex",
+        "norrath_startup_halo3_tex",
+        "norrath_startup_halo4_tex",
+        "norrath_startup_wisphalo_tex",
+        "norrath_startup_halo5_tex",
+        "norrath_startup_halo7_tex",
+        "norrath_startup_post_mc_memory_text",
+        "norrath_startup_initial_level_name",
+        "norrath_startup_warp_menu_task_text",
+        "norrath_startup_mouth_lump",
+        "norrath_startup_font_lump",
+        "norrath_startup_gamefont_a",
+        "norrath_startup_gamefont_medium",
+        "norrath_startup_gamefont_small",
+        "norrath_startup_gtext_lump",
+        "norrath_startup_interface_lump",
+        "norrath_startup_engine_lump",
+        "norrath_startup_halo1_tex",
+        "norrath_startup_halo8_tex",
+        "norrath_startup_pre_main_loop_memory_text",
+        "norrath_startup_main_menu_argument",
+        "norrath_startup_core_source_name",
+        "norrath_startup_fx_lump",
+        "norrath_startup_net_argument",
+        "norrath_startup_module_allocation_text",
+        "norrath_startup_blanket_assert_text",
+        "norrath_startup_srs_bin_name",
+        "norrath_startup_pre_sound_sleep_memory_text",
+        "norrath_startup_post_sound_sleep_memory_text",
+        "norrath_startup_pre_srs_memory_text",
+        "norrath_startup_run_constructors_text",
+        "norrath_startup_go_srs_text",
+        "norrath_startup_dotted_quad_text",
+        "norrath_startup_visounddriver_name",
+        "norrath_startup_post_srs_memory_text",
+        "norrath_startup_after_srs_marker",
+        "norrath_startup_after_result_marker",
+        "norrath_startup_after_module_marker"
+      ],
+      "source_sha256": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
+      "object_sha256": "93cf81f7364863d1eebc8fa2e4a4a0eda653fc8bd22bf0c3cbd074587d414a42",
+      "review": "docs/STARTUP_TEXT.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
     }
