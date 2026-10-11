@@ -6,7 +6,7 @@ Package notes for `agents/save-net-anim`. These objects were compiled with the r
 
 ## Layout notes
 
-The network mode byte, the HUD no-controller byte, and the memory-card startup-script flag are one-byte zeros. The mode byte is the same address as the still-unresolved `norrath_creature_view_483829`. This package defines only `norrath_network_mode_byte_view`. A second definition of the creature name would be a different byte.
+The network mode byte, the HUD no-controller byte, and the memory-card startup-script flag are one-byte zeros. The mode byte is the same address as the still-unresolved `norrath_creature_view_483829`. This package defines `norrath_network_mode_byte_view` and aliases `netNetworkMode` to that same byte. A second definition of the creature name would be a different byte.
 
 String objects include the terminating NUL and stop there. `%s.lmp` is 7 bytes. `start` is 6. `script.scr` is 11. `preStart` is 9. `objects.ob` is 11. `anm` is 4. The padding before the next literal is not part of the symbol.
 
@@ -26,11 +26,30 @@ The saved-level index is 648 bytes, 27 records of 24. That is the gap from the i
 
 The cosmetic animation table is 144 bytes, eighteen slots. Each slot is a zero word followed by a pointer. The last pointer is null. The other seventeen targets are unresolved object methods. Factory code that exists today only stores the address of the table.
 
-`norrath_construct_Savepoint` is still unresolved. It is the factory constructor used by object creation, so it stays with object-infra. `norrath_network_partner_count_word_view` is already defined.
+`norrath_construct_Savepoint` is still unresolved. It is the factory constructor used by object creation, so it stays with object-infra. `norrath_network_partner_count_word_view` is already defined by game-network-partner-count. `netFree` stores the original name `nmPartners`, which is that same word, and this package does not define it again.
+
+## Original names
+
+`main` and `launchSRS` import the original names listed under Imports closed. `netNetworkMode` is not a new object. It is an alias of `norrath_network_mode_byte_view`: both symbols are size 1, the same address, and the same section. The image byte is `0x483829`. The other names were not the same bytes as anything this package had already defined, so each one is a new source file under `experimental/sources/save-net-anim-startup/`.
+
+`netInterfaceIsUp` is the zero byte at `0x483828`, immediately before the mode byte. `netInitState` is the zero byte at `0x4838ed`. `MC_ProtectRamSlot` is `0x485be0`. `coreLaunchSRS` is `0x486679`. `fromSRS`, `fromSRSButEnteringGame`, and `coreBeenInSRS` are the three adjacent zero bytes at `0x4867ad` through `0x4867af`, immediately before `srs.bin`. The first two are local in the image. They are defined as globals here because `main` references them from another file. `netGameLaunchInfo` is 328 zero bytes at `0x333130`.
+
+`cutInitNet__Fv` (`0x18e448`, 36 bytes) registers `cutMsgHandlerFunction__FPUci` and stores the id in `cutMsgHandler`. `commInitNet__Fv` (`0x2cd1a8`, 52) registers `commHandler__FPUci` into `commHandle`, then `commStatusHandler__FPUci` into `commStatusHandle`. `DLG_InitNet__Fv` (`0x1d3808`, 36) registers `dialogMsgCallback__FPUci` into `dialogMsgHandle`. `hudInitNet__Fv` (`0x1c77f0`, 52) registers `hudMsgCallback__FPUci` into `hudMsgHandle`, then `netWaitCallBack__FPUci` into `netWaitMsgHandler`. The first store happens before the second call. `textInitNet__Fv` (`0x2cb410`, 36) registers `textHandler__FPUci` into `dataHandle`.
+
+`MC_Configure__Fv` (`0x25ad10`, 40) calls `stopCardQuery__Fv` and returns `newMode__Fii(0, 0)`. `MC_Reset__Fv` (`0x25ac40`, 40) calls `MCA_ClearInfo__Fv`, stores -1 into `MCA_Slot` and `MCA_Port`, and returns -1. `mcProcess__Fv` (`0x2d0ed0`, 36) calls `mcHeartBeat__Fv` and returns 1 when the unsigned `gameBailFromGameLoop` word is nonzero.
+
+`MC_Init__Fi` (`0x2502c8`, 1004) stores its argument in `disableMC` before `gameSetDefaultGameConfig__Fi(-1)`, then reloads that byte. A nonzero `sceMcInit` result stores 1 into `disableMC` and returns 1. A zero result, or a nonzero argument that skips `sceMcInit`, takes the long path and returns -1. That path calls `MC_NewGame__Fi(1)`, sizes each level as `(size + _3map$autoMapBitsSize + 1000)` aligned down to a multiple of 128, keeps the running best across acts, then replaces `slotFootPrint` with `0xb29c8` after `bareSlotFootPrint` has taken the computed sum plus 648. The icon header then receives the observed `PS2D` bytes, halfword 26, the six pool floats plus 1.0, 0.5, and -0.5, the SJIS title, and three `icon.ico` copies. `MCA_Present` and `MCA_Formatted` are nonzero addresses, so the debug command always runs.
+
+`sceMcInit` (`0x2e0b90`, 460) creates two semaphores only when `semaidRegFunc` is negative. The first parameter words are 1, 1, and 0 at offsets 4, 8, and 20. The second are 1, 0, and 0. It then calls `sceMcSync(0, 0, 0)`, `WaitSema` on the first id, and `sceSifInitRpc(0)`. The countdown is `0x100000`. `sceSifBindRpc` uses server `0x80000400`. A negative bind prints `bind error libmc \n` and does not return. A zero word at `mcClientID+36` repeats the countdown and the bind. Command 254 is sent with 48 bytes from `sifParamOrd` and 12 bytes into `retval`. A negative RPC result clears that client word and returns the result minus 100. A service word below 522 returns -120. A manager word below 526 returns -121. Otherwise the first `retval` word is returned.
+
+`netFree__Fb` (`0x130de0`, 912) returns without stores while `netInitState` is zero. Otherwise it clears that byte, closes a non-negative `broadcastConnection` with timeout 1000, and stores -1 there. A nonzero argument calls `sceInetCtlDownInterface` and clears `netInterfaceIsUp`. It always terminates `cd`, clears `netNetworkMode`, sets `netNmPartners` to 1, blanks 70528 partner bytes, and writes 128.0f at record offsets 24, 40, 56, 72, 104, 120, 136, and 152 of four stride-17632 records. It then stores 0 through `nmPartners`.
+
 
 ## Imports closed
 
-`norrath_archive_map_animation_sounds`, `norrath_network_mode_byte_view`, `norrath_game_hud_no_controller_byte_view`, `norrath_mc_disable_startup_script_bytes`, `norrath_mc_lump_format_bytes`, `norrath_mc_start_key_bytes`, `norrath_mc_script_section_key_bytes`, `norrath_mc_pre_start_key_bytes`, `norrath_mc_objects_section_key_bytes`, `norrath_archive_animation_extension_view`, `norrath_animation_dependency_view_47ff1c`, `norrath_animation_transition_threshold_view`, `norrath_inventory_animation_transition_rate_view`, `norrath_inventory_animation_lump_names_view`, `norrath_inventory_animation_resource_names_view`, `norrath_network_message_callbacks_view`, `norrath_network_player_local_flags_view`, `norrath_animation_dependency_view_4e6755`, `norrath_network_send_cursor_words_view`, `norrath_network_send_ring_bytes_view`, `norrath_inventory_animation_state_base_view`, `norrath_saved_map_tiles_bytes`, `norrath_mc_saved_level_index_bytes`, `norrath_mc_saved_level_payload_bytes`, `norrath_mc_load_buffer_bytes`, `norrath_game_never_save_table_view`, `norrath_factory_animation_vtable`.
+`norrath_archive_map_animation_sounds`, `norrath_network_mode_byte_view`, `netNetworkMode`, `norrath_game_hud_no_controller_byte_view`, `norrath_mc_disable_startup_script_bytes`, `norrath_mc_lump_format_bytes`, `norrath_mc_start_key_bytes`, `norrath_mc_script_section_key_bytes`, `norrath_mc_pre_start_key_bytes`, `norrath_mc_objects_section_key_bytes`, `norrath_archive_animation_extension_view`, `norrath_animation_dependency_view_47ff1c`, `norrath_animation_transition_threshold_view`, `norrath_inventory_animation_transition_rate_view`, `norrath_inventory_animation_lump_names_view`, `norrath_inventory_animation_resource_names_view`, `norrath_network_message_callbacks_view`, `norrath_network_player_local_flags_view`, `norrath_animation_dependency_view_4e6755`, `norrath_network_send_cursor_words_view`, `norrath_network_send_ring_bytes_view`, `norrath_inventory_animation_state_base_view`, `norrath_saved_map_tiles_bytes`, `norrath_mc_saved_level_index_bytes`, `norrath_mc_saved_level_payload_bytes`, `norrath_mc_load_buffer_bytes`, `norrath_game_never_save_table_view`, `norrath_factory_animation_vtable`.
+
+`commInitNet__Fv`, `coreBeenInSRS`, `coreLaunchSRS`, `cutInitNet__Fv`, `DLG_InitNet__Fv`, `fromSRS`, `fromSRSButEnteringGame`, `hudInitNet__Fv`, `MC_Configure__Fv`, `MC_Init__Fi`, `MC_ProtectRamSlot`, `MC_Reset__Fv`, `mcProcess__Fv`, `netFree__Fb`, `netGameLaunchInfo`, `netInitState`, `netInterfaceIsUp`, `sceMcInit`, `textInitNet__Fv`.
 
 ## Imports opened
 
@@ -40,9 +59,17 @@ The never-save table references these existing factory imports: `norrath_factory
 
 The animation table adds these unresolved method symbols: `__tf16CosmeticPropAnim`, `_$_16CosmeticPropAnim`, `msg_hurt__10GameObjectfP10GameObjecti`, `msg_trigger__10GameObjecti`, `msg_run__16CosmeticPropAnim`, `msg_draw__16CosmeticPropAnim`, `msg_collision__10GameObjectP10GameObject`, `msg_route__10GameObjecti`, `msg_load__16CosmeticPropAnimPc`, `msg_save__16CosmeticPropAnimPc`, `msg_collisionWorld__10GameObjectG6Point3`, `msg_moveCollision__10GameObjectPP10GameObject`, `msg_alert__10GameObjectifG6Point3P10GameObject`, `msg_getPokeName__10GameObjectPUsi`, `msg_poke__10GameObjecti`, `clone__16CosmeticPropAnim`, `getModel__10GameObject`.
 
+Registrars: `netRegisterMessageHandler__FPFPUci_v`, `netRegisterPacketHandler__FPFPUci_v`, `cutMsgHandlerFunction__FPUci`, `cutMsgHandler`, `commHandler__FPUci`, `commStatusHandler__FPUci`, `commHandle`, `commStatusHandle`, `dialogMsgCallback__FPUci`, `dialogMsgHandle`, `hudMsgCallback__FPUci`, `netWaitCallBack__FPUci`, `hudMsgHandle`, `netWaitMsgHandler`, `textHandler__FPUci`, `dataHandle`.
+
+Memory card: `stopCardQuery__Fv`, `newMode__Fii`, `MCA_ClearInfo__Fv`, `MCA_Slot`, `MCA_Port`, `mcHeartBeat__Fv`, `gameBailFromGameLoop`, `MCA_Init__Fv`, `gameSetDefaultGameConfig__Fi`, `MC_NewGame__Fi`, `sprintf`, `strcpy`, `memset`, `AsciiString2Sjis__FPUcPUs`, `engineAddTask__FPFv_viPci`, `MCA_Cmd__Fiiii`, `MCA_Sync__FPi`, `mcHeartBeatRun__Fv`, `disableMC`, `flareAlpha`, `frontEndWasRunning`, `curAct`, `asyncMode`, `oldAsyncMode`, `configState`, `lastCardPort`, `lastCardSlot`, `pauseStackPos`, `keepPlayerPositions`, `MC_SavingOrLoading`, `browserState`, `MC_LastModeSuccessful`, `saveCheckPointCount`, `flareDelta`, `killPlayer`, `MC_KickProtect`, `MC_CheckPointAge`, `slotFootPrint`, `actCount`, `actLevelCount`, `allActs`, `_3map$autoMapBitsSize`, `bareSlotFootPrint`, `totalClusters`, `errorCondition`, `slotClusters`, `totalFootPrint`, `iconHeader`, `sortedTimes`, `MC_Debug`, `MCA_LastDirCount`.
+
+`sceMcInit` references `CreateSema`, `sceMcSync`, `WaitSema`, `sceSifInitRpc`, `sceSifBindRpc`, `scePrintf`, `sceSifCallRpc`, `SignalSema`, `semaidRegFunc`, `semaid_timerfunc`, `mcClientID`, `sifParamOrd`, `retval`.
+
+`netFree` references `broadcastConnection`, `cd`, `g_net_buf`, `sceInetClose`, `sceInetCtlDownInterface`, `sceLibnetTerminate`, `netNmPartners`, `partners`, and `nmPartners`. `inventoryInitNet__Fv` and `shopInitNet__Fv` stay with items-player.
+
 ## Build-plan entries needed
 
-Append these to `experimental/build-plan.json`. Orders 312 through 338 follow this worktree's current maximum of 311. Renumber them if another package takes those orders first. `snapshot.json` needs the same sources, the header, and a contiguous input list or `check_source_snapshot.py` fails.
+Append these to `experimental/build-plan.json`. Orders 346 through 391 follow this worktree's current maximum of 345. Renumber them if another package takes those orders first. `snapshot.json` needs the same sources, the header, and a contiguous input list or `check_source_snapshot.py` fails.
 
 ```json
 [
@@ -50,7 +77,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
     "header_closure": [
       "sources/save-net-anim-map-sounds/map_sounds.hpp"
     ],
-    "input_order": 312,
+    "input_order": 346,
     "kind": "independently_authored_source",
     "object_name": "map_sounds.o",
     "profile": "authored_cpp",
@@ -59,7 +86,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 313,
+    "input_order": 347,
     "kind": "independently_authored_source",
     "object_name": "norrath_animation_dependency_view_47ff1c.o",
     "profile": "authored_cpp",
@@ -68,7 +95,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 314,
+    "input_order": 348,
     "kind": "independently_authored_source",
     "object_name": "norrath_animation_dependency_view_4e6755.o",
     "profile": "authored_cpp",
@@ -77,7 +104,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 315,
+    "input_order": 349,
     "kind": "independently_authored_source",
     "object_name": "norrath_animation_transition_threshold_view.o",
     "profile": "authored_cpp",
@@ -86,7 +113,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 316,
+    "input_order": 350,
     "kind": "independently_authored_source",
     "object_name": "norrath_archive_animation_extension_view.o",
     "profile": "authored_cpp",
@@ -95,7 +122,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 317,
+    "input_order": 351,
     "kind": "independently_authored_source",
     "object_name": "norrath_factory_animation_vtable.o",
     "profile": "authored_cpp",
@@ -104,7 +131,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 318,
+    "input_order": 352,
     "kind": "independently_authored_source",
     "object_name": "norrath_game_hud_no_controller_byte_view.o",
     "profile": "authored_cpp",
@@ -113,7 +140,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 319,
+    "input_order": 353,
     "kind": "independently_authored_source",
     "object_name": "norrath_game_never_save_table_view.o",
     "profile": "authored_cpp",
@@ -122,7 +149,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 320,
+    "input_order": 354,
     "kind": "independently_authored_source",
     "object_name": "norrath_inventory_animation_lump_names_view.o",
     "profile": "authored_cpp",
@@ -131,7 +158,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 321,
+    "input_order": 355,
     "kind": "independently_authored_source",
     "object_name": "norrath_inventory_animation_resource_names_view.o",
     "profile": "authored_cpp",
@@ -140,7 +167,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 322,
+    "input_order": 356,
     "kind": "independently_authored_source",
     "object_name": "norrath_inventory_animation_state_base_view.o",
     "profile": "authored_cpp",
@@ -149,7 +176,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 323,
+    "input_order": 357,
     "kind": "independently_authored_source",
     "object_name": "norrath_inventory_animation_transition_rate_view.o",
     "profile": "authored_cpp",
@@ -158,7 +185,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 324,
+    "input_order": 358,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_disable_startup_script_bytes.o",
     "profile": "authored_cpp",
@@ -167,7 +194,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 325,
+    "input_order": 359,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_load_buffer_bytes.o",
     "profile": "authored_cpp",
@@ -176,7 +203,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 326,
+    "input_order": 360,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_lump_format_bytes.o",
     "profile": "authored_cpp",
@@ -185,7 +212,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 327,
+    "input_order": 361,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_objects_section_key_bytes.o",
     "profile": "authored_cpp",
@@ -194,7 +221,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 328,
+    "input_order": 362,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_pre_start_key_bytes.o",
     "profile": "authored_cpp",
@@ -203,7 +230,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 329,
+    "input_order": 363,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_saved_level_index_bytes.o",
     "profile": "authored_cpp",
@@ -212,7 +239,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 330,
+    "input_order": 364,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_saved_level_payload_bytes.o",
     "profile": "authored_cpp",
@@ -221,7 +248,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 331,
+    "input_order": 365,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_script_section_key_bytes.o",
     "profile": "authored_cpp",
@@ -230,7 +257,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 332,
+    "input_order": 366,
     "kind": "independently_authored_source",
     "object_name": "norrath_mc_start_key_bytes.o",
     "profile": "authored_cpp",
@@ -239,7 +266,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 333,
+    "input_order": 367,
     "kind": "independently_authored_source",
     "object_name": "norrath_network_message_callbacks_view.o",
     "profile": "authored_cpp",
@@ -248,16 +275,16 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 334,
+    "input_order": 368,
     "kind": "independently_authored_source",
     "object_name": "norrath_network_mode_byte_view.o",
     "profile": "authored_cpp",
-    "sha256": "138e2f020a200eba859ea2c10695523b01100186560f190021de6729ba94d7e6",
+    "sha256": "05dab96dc055d99e805a7f67ea0e3e042a2162dfcbbfc16a8cf82a9ebc6ddd62",
     "source": "sources/save-net-anim-views/norrath_network_mode_byte_view.cpp"
   },
   {
     "header_closure": [],
-    "input_order": 335,
+    "input_order": 369,
     "kind": "independently_authored_source",
     "object_name": "norrath_network_player_local_flags_view.o",
     "profile": "authored_cpp",
@@ -266,7 +293,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 336,
+    "input_order": 370,
     "kind": "independently_authored_source",
     "object_name": "norrath_network_send_cursor_words_view.o",
     "profile": "authored_cpp",
@@ -275,7 +302,7 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 337,
+    "input_order": 371,
     "kind": "independently_authored_source",
     "object_name": "norrath_network_send_ring_bytes_view.o",
     "profile": "authored_cpp",
@@ -284,20 +311,191 @@ Append these to `experimental/build-plan.json`. Orders 312 through 338 follow th
   },
   {
     "header_closure": [],
-    "input_order": 338,
+    "input_order": 372,
     "kind": "independently_authored_source",
     "object_name": "norrath_saved_map_tiles_bytes.o",
     "profile": "authored_cpp",
     "sha256": "0109d172252921f11bf417b5e87e41ec7a1a1fb42775b670de87981610161f0e",
     "source": "sources/save-net-anim-views/norrath_saved_map_tiles_bytes.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 373,
+    "kind": "independently_authored_source",
+    "object_name": "comm_init_net.o",
+    "profile": "authored_cpp",
+    "sha256": "7b7a854471737f6077d582ead8e2b5823462d0fb178727f28489605d98aee701",
+    "source": "sources/save-net-anim-startup/comm_init_net.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 374,
+    "kind": "independently_authored_source",
+    "object_name": "core_been_in_srs.o",
+    "profile": "authored_cpp",
+    "sha256": "fdf79529f1c28d4e676ce6005611e51a98f4fd7fdcbc92024a2d49fd3e476b48",
+    "source": "sources/save-net-anim-startup/core_been_in_srs.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 375,
+    "kind": "independently_authored_source",
+    "object_name": "core_launch_srs.o",
+    "profile": "authored_cpp",
+    "sha256": "560afa28fd8bc560f451571b5ee3b82ca84013bc2f02bfc671b4e7f1b1859ecf",
+    "source": "sources/save-net-anim-startup/core_launch_srs.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 376,
+    "kind": "independently_authored_source",
+    "object_name": "cut_init_net.o",
+    "profile": "authored_cpp",
+    "sha256": "c2f9e9d4604522b02f307d5268f295810ababf951b287eb74d0f4d5204b4a864",
+    "source": "sources/save-net-anim-startup/cut_init_net.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 377,
+    "kind": "independently_authored_source",
+    "object_name": "dlg_init_net.o",
+    "profile": "authored_cpp",
+    "sha256": "9b4eaa36ba5ccf4cbd274ac33fed138f32b1430e392a33e839e86e0ac59c5991",
+    "source": "sources/save-net-anim-startup/dlg_init_net.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 378,
+    "kind": "independently_authored_source",
+    "object_name": "from_srs.o",
+    "profile": "authored_cpp",
+    "sha256": "b3235d22d9139a83ab0b45154c0017b934eb979a013e2e869779e39bcbf497a9",
+    "source": "sources/save-net-anim-startup/from_srs.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 379,
+    "kind": "independently_authored_source",
+    "object_name": "from_srs_but_entering_game.o",
+    "profile": "authored_cpp",
+    "sha256": "1b2a9559447879c8714ec2508dbd54e1458a556526560f6026331849507fa2f6",
+    "source": "sources/save-net-anim-startup/from_srs_but_entering_game.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 380,
+    "kind": "independently_authored_source",
+    "object_name": "hud_init_net.o",
+    "profile": "authored_cpp",
+    "sha256": "f85c6c8ae3b68db4464d203d578d8f7d938109d0afb63d135d8de4ccd763d9bd",
+    "source": "sources/save-net-anim-startup/hud_init_net.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 381,
+    "kind": "independently_authored_source",
+    "object_name": "mc_configure.o",
+    "profile": "authored_cpp",
+    "sha256": "a484c0b4aa40b4a3203f339b5bdff82232cfe855261d8b050f66da0275ac70e9",
+    "source": "sources/save-net-anim-startup/mc_configure.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 382,
+    "kind": "independently_authored_source",
+    "object_name": "mc_init.o",
+    "profile": "authored_cpp",
+    "sha256": "2d2462c633da604a596e3711efce69ecd37ee9eefe1505240c925fd3dee0ed90",
+    "source": "sources/save-net-anim-startup/mc_init.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 383,
+    "kind": "independently_authored_source",
+    "object_name": "mc_process.o",
+    "profile": "authored_cpp",
+    "sha256": "c402d619a0e8c5826beeaa562354ae083dae28180ebdddc6ee0c9c149ae8461e",
+    "source": "sources/save-net-anim-startup/mc_process.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 384,
+    "kind": "independently_authored_source",
+    "object_name": "mc_protect_ram_slot.o",
+    "profile": "authored_cpp",
+    "sha256": "7a9e193dbd47c02833c15c94c3d9bcc634fbfef1cc4053193be60c07b0b98631",
+    "source": "sources/save-net-anim-startup/mc_protect_ram_slot.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 385,
+    "kind": "independently_authored_source",
+    "object_name": "mc_reset.o",
+    "profile": "authored_cpp",
+    "sha256": "254a20914ead29d38df2c8c01f11d4340b61d3a5d5c4bc8988a4c3071fb7d9cc",
+    "source": "sources/save-net-anim-startup/mc_reset.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 386,
+    "kind": "independently_authored_source",
+    "object_name": "net_free.o",
+    "profile": "authored_cpp",
+    "sha256": "dd546c285c770f4ae2447333ab43b93689b2ceed9ba7585954722950c9bcf835",
+    "source": "sources/save-net-anim-startup/net_free.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 387,
+    "kind": "independently_authored_source",
+    "object_name": "net_game_launch_info.o",
+    "profile": "authored_cpp",
+    "sha256": "95b5c6ec383e960284ee8469affba996bc7c6f32a857fd793ed679d7fe066e58",
+    "source": "sources/save-net-anim-startup/net_game_launch_info.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 388,
+    "kind": "independently_authored_source",
+    "object_name": "net_init_state.o",
+    "profile": "authored_cpp",
+    "sha256": "e54747f76d2f5ee788533b486ca7a74a5033a185897cb57da692b324d4c6e9cb",
+    "source": "sources/save-net-anim-startup/net_init_state.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 389,
+    "kind": "independently_authored_source",
+    "object_name": "net_interface_is_up.o",
+    "profile": "authored_cpp",
+    "sha256": "1c319edf17b392e6a01dace391d1def032ddc868fdeca66fe9dc70fd40046b0d",
+    "source": "sources/save-net-anim-startup/net_interface_is_up.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 390,
+    "kind": "independently_authored_source",
+    "object_name": "sce_mc_init.o",
+    "profile": "authored_cpp",
+    "sha256": "e68230438247235f76efee87da9ccefd15d50e6046c0d6df7f469145afb69722",
+    "source": "sources/save-net-anim-startup/sce_mc_init.cpp"
+  },
+  {
+    "header_closure": [],
+    "input_order": 391,
+    "kind": "independently_authored_source",
+    "object_name": "text_init_net.o",
+    "profile": "authored_cpp",
+    "sha256": "54dbaede67f438a08f285738b293b54bf89cc4c9cd6baaab1af8a7b132c73150",
+    "source": "sources/save-net-anim-startup/text_init_net.cpp"
   }
 ]
 ```
 
 ## Authored but never executed
 
-`norrath_archive_map_animation_sounds` runs in the host test. The EE compile checks the symbol only. It is not linked into the partial image and was not executed by the EE. The views and the vtable are data. Nothing in this branch calls the vtable slots.
+`norrath_archive_map_animation_sounds` and the startup functions run in the host tests. The EE compile checks each defined symbol and its unresolved imports. None of them is linked into the partial image, and none was executed by the EE. The views and the vtable are data. Nothing in this branch calls the vtable slots. The `sceMcInit` bind-failure loop is not taken by the host test.
 
 ## Unknown
 
-Which startup store first writes the zero views. Whether a later store replaces a never-save pointer. The original section of each `-G0` zero object. The bytes between partner slots, which sit inside these spans and also inside neighboring views that this package does not alias. Handler indexes past 15, and player indexes past 3. The animation math views, `norrath_construct_Savepoint`, and `norrath_creature_view_483829`.
+Which startup store first writes the zero views. Whether a later store replaces a never-save pointer. The original section of each `-G0` zero object. The bytes between partner slots, which sit inside these spans and also inside neighboring views that this package does not alias. Handler indexes past 15, and player indexes past 3. The animation math views, `norrath_construct_Savepoint`, and `norrath_creature_view_483829`. The semaphore-parameter bytes other than the three words stored by `sceMcInit` are not written in the image; this reconstruction clears them. The bodies of the registered handlers are not in this package.
