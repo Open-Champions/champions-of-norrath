@@ -159,6 +159,21 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_inventory_animation_transition_rate_view.cpp",
                     "norrath_inventory_animation_transition_rate_view", 4, bytes.fromhex("9999993e"))
 
+    def test_lump_names(self):
+        content = bytes.fromhex(
+            "736f6e7961322e6c6d70000000000000"
+            "7261676e6172322e6c6d700000000000"
+            "656c665f6d646b2e6c6d700000000000"
+            "6572755f6d616c652e6c6d7000000000"
+            "656c665f66646b322e6c6d7000000000"
+            "656c665f666869322e6c6d7000000000"
+            "656c665f66776f322e6c6d7000000000"
+            "6572755f66656d2e6c6d700000000000"
+            "68656d5f686967682e6c6d7000000000"
+            "656c665f6d776f322e6c6d7000000000")
+        self.expect("norrath_inventory_animation_lump_names_view.cpp",
+                    "norrath_inventory_animation_lump_names_view", 160, content)
+
 
 if __name__ == "__main__":
     unittest.main()
