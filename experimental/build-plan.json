@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 817,
+  "default_authored_inputs": 828,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -44,6 +44,28 @@
   },
   "external_header_evidence": "ceil preprocessing closure and literal header equality in both retained source trees; floor full fresh closure remains to be checked during the first portable build.",
   "files": {
+    "sources/actors-a-anttrap/anttrap.cpp": "1a67ae4db258386109605709dd2b9566de7feaf3dab3af1c81d3652029725281",
+    "sources/actors-a-anttrap/anttrap.hpp": "1fee23d34cd7354b9ae09dd90ecceff7d4c52cb74bc8d25a2d14d61bfe655e18",
+    "sources/actors-a-blocker/blocker.cpp": "74f57f00c82225e29f2791acdeeaa7deb56df8035f39f984dd41852e06522306",
+    "sources/actors-a-blocker/blocker.hpp": "f0d5587d4d53cd5f3d506e533d1c7f321d5b553ae9cdd40f666f511b87c3b968",
+    "sources/actors-a-candle/candle.cpp": "cca62cf1254820575200c3485206dab156cc101bd8bbfee2d5f4a440037935c9",
+    "sources/actors-a-candle/candle.hpp": "a71fb27671655d9510d7493491fea8e799140706876d55406c4c9bff19a7891b",
+    "sources/actors-a-candle2/candle2.cpp": "dabb218011f0d108b93fe8ee9a109a8ce0d3af54d4375257b0fa031582bb08cb",
+    "sources/actors-a-candle2/candle2.hpp": "68606fc92365d94a2243490ca79683be2b1a499d6b69a926f78d5af56329db16",
+    "sources/actors-a-container-resources/container_resources.cpp": "0de4e1900b2863d6e9e606633cd4b82dcfe966abad3365695fb036f264db8a7f",
+    "sources/actors-a-container-resources/container_resources.hpp": "377d4e14b81348f9adb16f2e862477f113ebb6a0690877a365eb37bd52db3000",
+    "sources/actors-a-container/container.cpp": "7ff897641fa9bdd2565a7742d9ca08408ca648e623b6b901fd234c51f126baf6",
+    "sources/actors-a-container/container.hpp": "22b2ea542b9150c5e9a35086a601800277b2cf8f6e5549ca188d6751c8c15e95",
+    "sources/actors-a-doorsecret/doorsecret.cpp": "025b09f2c2cbc144e0d64054f1ddb6ad6b7594c780231d136b4dadf21c8cb019",
+    "sources/actors-a-doorsecret/doorsecret.hpp": "1ac3aa86da3147f18b3b07120fb96f26907c0c92ec370a34cf72d397311c8252",
+    "sources/actors-a-doorswing/doorswing.cpp": "56c4566f2fb913466f5c729720ea5f4d8bb8d8b9a4a9ed64752421ca77de7e6b",
+    "sources/actors-a-doorswing/doorswing.hpp": "91853f9d06efadddb51b1a7488bdf167aa682b99a121fe7b4b6f9bc12ab1a238",
+    "sources/actors-a-eggsack/eggsack.cpp": "d0132bb183e3aeaf0e152eaea29300a79059f778eb2de20023f0ed1d0d48c431",
+    "sources/actors-a-eggsack/eggsack.hpp": "75bad24e7de3ec3d8a1dab54583b2d88ceb6e1500e98227508b00554d881cc26",
+    "sources/actors-a-firebomb/firebomb.cpp": "48b98fd0c5a836b9af4df9ad0e0f82a13581ec6ff2a1b55bae6ef2b3aaeddd7f",
+    "sources/actors-a-firebomb/firebomb.hpp": "67b83bf9aac3b76716d0794fdd39b61135f39b2a2a69b6786bc9bf62d8bfe49e",
+    "sources/actors-a-floorswitch/floorswitch.cpp": "487dfe56a3605b2ee13c2a6cd122e9eb991301424a5fd9f0d8713e279c5cfada",
+    "sources/actors-a-floorswitch/floorswitch.hpp": "7c1c444cbf6f14a455ae5221bf32c5456ee4e5233c82575419b30fcdad5260dc",
     "sources/actors-b-constructors/detail.hpp": "bfcdcef9d66e9ae63dc4f93ca51e481ee6da2790cf7452ffe4a35583faa9737d",
     "sources/actors-b-constructors/goth_trap.cpp": "473019f40c46213fcbc870f1c78c3507d5c2f683e6127183c64754ed9eab0be8",
     "sources/actors-b-constructors/hack_door.cpp": "68c5ab661c21dfab5c890cf870f087156c116f2c56ecee53a7c756b7135f01da",
@@ -10919,6 +10941,127 @@
       "profile": "authored_cpp",
       "sha256": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
       "source": "sources/sif-keyboard-module-calls/module.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-anttrap/anttrap.hpp"
+      ],
+      "input_order": 819,
+      "kind": "independently_authored_source",
+      "object_name": "anttrap.o",
+      "profile": "authored_cpp",
+      "sha256": "1a67ae4db258386109605709dd2b9566de7feaf3dab3af1c81d3652029725281",
+      "source": "sources/actors-a-anttrap/anttrap.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-blocker/blocker.hpp"
+      ],
+      "input_order": 820,
+      "kind": "independently_authored_source",
+      "object_name": "blocker.o",
+      "profile": "authored_cpp",
+      "sha256": "74f57f00c82225e29f2791acdeeaa7deb56df8035f39f984dd41852e06522306",
+      "source": "sources/actors-a-blocker/blocker.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-candle/candle.hpp"
+      ],
+      "input_order": 821,
+      "kind": "independently_authored_source",
+      "object_name": "candle.o",
+      "profile": "authored_cpp",
+      "sha256": "cca62cf1254820575200c3485206dab156cc101bd8bbfee2d5f4a440037935c9",
+      "source": "sources/actors-a-candle/candle.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-candle2/candle2.hpp"
+      ],
+      "input_order": 822,
+      "kind": "independently_authored_source",
+      "object_name": "candle2.o",
+      "profile": "authored_cpp",
+      "sha256": "dabb218011f0d108b93fe8ee9a109a8ce0d3af54d4375257b0fa031582bb08cb",
+      "source": "sources/actors-a-candle2/candle2.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-container/container.hpp"
+      ],
+      "input_order": 823,
+      "kind": "independently_authored_source",
+      "object_name": "container.o",
+      "profile": "authored_cpp",
+      "sha256": "7ff897641fa9bdd2565a7742d9ca08408ca648e623b6b901fd234c51f126baf6",
+      "source": "sources/actors-a-container/container.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-container-resources/container_resources.hpp"
+      ],
+      "input_order": 824,
+      "kind": "independently_authored_source",
+      "object_name": "container_resources.o",
+      "profile": "authored_cpp",
+      "sha256": "0de4e1900b2863d6e9e606633cd4b82dcfe966abad3365695fb036f264db8a7f",
+      "source": "sources/actors-a-container-resources/container_resources.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-doorsecret/doorsecret.hpp"
+      ],
+      "input_order": 825,
+      "kind": "independently_authored_source",
+      "object_name": "doorsecret.o",
+      "profile": "authored_cpp",
+      "sha256": "025b09f2c2cbc144e0d64054f1ddb6ad6b7594c780231d136b4dadf21c8cb019",
+      "source": "sources/actors-a-doorsecret/doorsecret.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-doorswing/doorswing.hpp"
+      ],
+      "input_order": 826,
+      "kind": "independently_authored_source",
+      "object_name": "doorswing.o",
+      "profile": "authored_cpp",
+      "sha256": "56c4566f2fb913466f5c729720ea5f4d8bb8d8b9a4a9ed64752421ca77de7e6b",
+      "source": "sources/actors-a-doorswing/doorswing.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-eggsack/eggsack.hpp"
+      ],
+      "input_order": 827,
+      "kind": "independently_authored_source",
+      "object_name": "eggsack.o",
+      "profile": "authored_cpp",
+      "sha256": "d0132bb183e3aeaf0e152eaea29300a79059f778eb2de20023f0ed1d0d48c431",
+      "source": "sources/actors-a-eggsack/eggsack.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-firebomb/firebomb.hpp"
+      ],
+      "input_order": 828,
+      "kind": "independently_authored_source",
+      "object_name": "firebomb.o",
+      "profile": "authored_cpp",
+      "sha256": "48b98fd0c5a836b9af4df9ad0e0f82a13581ec6ff2a1b55bae6ef2b3aaeddd7f",
+      "source": "sources/actors-a-firebomb/firebomb.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-a-floorswitch/floorswitch.hpp"
+      ],
+      "input_order": 829,
+      "kind": "independently_authored_source",
+      "object_name": "floorswitch.o",
+      "profile": "authored_cpp",
+      "sha256": "487dfe56a3605b2ee13c2a6cd122e9eb991301424a5fd9f0d8713e279c5cfada",
+      "source": "sources/actors-a-floorswitch/floorswitch.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11018,7 +11161,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "611f4ead43ddf7ebbc932fb3515008a0880aa4b8cdcda40b4b2f926727bc5425",
+  "snapshot_sha256": "c6e9432cd6bf7412a7e74c7f72c824ac54f8f9833e8adc49ffb2fea056bcfb25",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

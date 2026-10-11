@@ -187,7 +187,7 @@ def check(root):
         for host in record['host_files']:
             if host.startswith('sources/'):
                 assert host in files and host not in authored_sources
-            elif host.startswith(('host-tests/', 'tools/checks/')) and host.endswith(('.cpp', '.py')):
+            elif host.startswith(('host-tests/', 'tools/checks/', 'docs/agents/')) and host.endswith(('.cpp', '.py')):
                 assert (root / host).is_file()
             else:
                 raise AssertionError(host)

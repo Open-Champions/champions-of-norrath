@@ -10740,6 +10740,160 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/sif-keyboard-module-calls/module.cpp"
+    },
+    {
+      "input_order": 819,
+      "component": "actors-a-anttrap",
+      "object_name": "anttrap.o",
+      "private_object_sha256": "c98e0f3526e39d23f1de29bbadc8e9eef143ae142b9815a3949552c1a0ee8572",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AntTrap",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-anttrap/anttrap.cpp"
+    },
+    {
+      "input_order": 820,
+      "component": "actors-a-blocker",
+      "object_name": "blocker.o",
+      "private_object_sha256": "23c771fe1cb6c13b980615ebca614b93d3aa4a45eae0754f3d365c9af8370333",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Blocker",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-blocker/blocker.cpp"
+    },
+    {
+      "input_order": 821,
+      "component": "actors-a-candle",
+      "object_name": "candle.o",
+      "private_object_sha256": "a8c890dff713f0decf830a0823e5a12cb947751d7a98024751874db140244e64",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Candle",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-candle/candle.cpp"
+    },
+    {
+      "input_order": 822,
+      "component": "actors-a-candle2",
+      "object_name": "candle2.o",
+      "private_object_sha256": "c973f3e44b2fcc9a5d21e11bfce47782c38f49f92b40610d9bae754816f61e64",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Candle2",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-candle2/candle2.cpp"
+    },
+    {
+      "input_order": 823,
+      "component": "actors-a-container",
+      "object_name": "container.o",
+      "private_object_sha256": "9bbddb05acdc228a5c964fcc320657f721ab0de53565fb83581d3c0f17855266",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Container",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-container/container.cpp"
+    },
+    {
+      "input_order": 824,
+      "component": "actors-a-container-resources",
+      "object_name": "container_resources.o",
+      "private_object_sha256": "894f5c01eb072e3e027ca47f8ad8c8e09082ca02981e0de51be82de6357be25a",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_ContainerWithResources",
+          "compiled_body_bytes": 908
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-container-resources/container_resources.cpp"
+    },
+    {
+      "input_order": 825,
+      "component": "actors-a-doorsecret",
+      "object_name": "doorsecret.o",
+      "private_object_sha256": "db09f448b1bd910513afe259f444ec95348dd8355173445d2efdee640b3322c0",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_DoorSecret",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-doorsecret/doorsecret.cpp"
+    },
+    {
+      "input_order": 826,
+      "component": "actors-a-doorswing",
+      "object_name": "doorswing.o",
+      "private_object_sha256": "6c645431538db74250698e8b40be603a968a66558726ddb9e086142390fb32b5",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_DoorSwing",
+          "compiled_body_bytes": 608
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-doorswing/doorswing.cpp"
+    },
+    {
+      "input_order": 827,
+      "component": "actors-a-eggsack",
+      "object_name": "eggsack.o",
+      "private_object_sha256": "101c35d239569ace17326d62d4ff9e2ccaf37b51a42bfee34a28c372f5ac5e9f",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_EggSack",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-eggsack/eggsack.cpp"
+    },
+    {
+      "input_order": 828,
+      "component": "actors-a-firebomb",
+      "object_name": "firebomb.o",
+      "private_object_sha256": "5e157ac820f0c9126a801b439b2d522ac90f482aa01a5433862b0294f671e386",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FireBomb",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-firebomb/firebomb.cpp"
+    },
+    {
+      "input_order": 829,
+      "component": "actors-a-floorswitch",
+      "object_name": "floorswitch.o",
+      "private_object_sha256": "29c396e84e16ce0ff109680d1ea3f43a21a4bbd2d05b5ab08df6d0ca9a21f14c",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FloorSwitch",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/actors-a-floorswitch/floorswitch.cpp"
     }
   ],
   "drafts": [
@@ -10786,6 +10940,28 @@
     }
   ],
   "files": {
+    "sources/actors-a-anttrap/anttrap.cpp": "1a67ae4db258386109605709dd2b9566de7feaf3dab3af1c81d3652029725281",
+    "sources/actors-a-anttrap/anttrap.hpp": "1fee23d34cd7354b9ae09dd90ecceff7d4c52cb74bc8d25a2d14d61bfe655e18",
+    "sources/actors-a-blocker/blocker.cpp": "74f57f00c82225e29f2791acdeeaa7deb56df8035f39f984dd41852e06522306",
+    "sources/actors-a-blocker/blocker.hpp": "f0d5587d4d53cd5f3d506e533d1c7f321d5b553ae9cdd40f666f511b87c3b968",
+    "sources/actors-a-candle/candle.cpp": "cca62cf1254820575200c3485206dab156cc101bd8bbfee2d5f4a440037935c9",
+    "sources/actors-a-candle/candle.hpp": "a71fb27671655d9510d7493491fea8e799140706876d55406c4c9bff19a7891b",
+    "sources/actors-a-candle2/candle2.cpp": "dabb218011f0d108b93fe8ee9a109a8ce0d3af54d4375257b0fa031582bb08cb",
+    "sources/actors-a-candle2/candle2.hpp": "68606fc92365d94a2243490ca79683be2b1a499d6b69a926f78d5af56329db16",
+    "sources/actors-a-container-resources/container_resources.cpp": "0de4e1900b2863d6e9e606633cd4b82dcfe966abad3365695fb036f264db8a7f",
+    "sources/actors-a-container-resources/container_resources.hpp": "377d4e14b81348f9adb16f2e862477f113ebb6a0690877a365eb37bd52db3000",
+    "sources/actors-a-container/container.cpp": "7ff897641fa9bdd2565a7742d9ca08408ca648e623b6b901fd234c51f126baf6",
+    "sources/actors-a-container/container.hpp": "22b2ea542b9150c5e9a35086a601800277b2cf8f6e5549ca188d6751c8c15e95",
+    "sources/actors-a-doorsecret/doorsecret.cpp": "025b09f2c2cbc144e0d64054f1ddb6ad6b7594c780231d136b4dadf21c8cb019",
+    "sources/actors-a-doorsecret/doorsecret.hpp": "1ac3aa86da3147f18b3b07120fb96f26907c0c92ec370a34cf72d397311c8252",
+    "sources/actors-a-doorswing/doorswing.cpp": "56c4566f2fb913466f5c729720ea5f4d8bb8d8b9a4a9ed64752421ca77de7e6b",
+    "sources/actors-a-doorswing/doorswing.hpp": "91853f9d06efadddb51b1a7488bdf167aa682b99a121fe7b4b6f9bc12ab1a238",
+    "sources/actors-a-eggsack/eggsack.cpp": "d0132bb183e3aeaf0e152eaea29300a79059f778eb2de20023f0ed1d0d48c431",
+    "sources/actors-a-eggsack/eggsack.hpp": "75bad24e7de3ec3d8a1dab54583b2d88ceb6e1500e98227508b00554d881cc26",
+    "sources/actors-a-firebomb/firebomb.cpp": "48b98fd0c5a836b9af4df9ad0e0f82a13581ec6ff2a1b55bae6ef2b3aaeddd7f",
+    "sources/actors-a-firebomb/firebomb.hpp": "67b83bf9aac3b76716d0794fdd39b61135f39b2a2a69b6786bc9bf62d8bfe49e",
+    "sources/actors-a-floorswitch/floorswitch.cpp": "487dfe56a3605b2ee13c2a6cd122e9eb991301424a5fd9f0d8713e279c5cfada",
+    "sources/actors-a-floorswitch/floorswitch.hpp": "7c1c444cbf6f14a455ae5221bf32c5456ee4e5233c82575419b30fcdad5260dc",
     "sources/actors-b-constructors/detail.hpp": "bfcdcef9d66e9ae63dc4f93ca51e481ee6da2790cf7452ffe4a35583faa9737d",
     "sources/actors-b-constructors/goth_trap.cpp": "473019f40c46213fcbc870f1c78c3507d5c2f683e6127183c64754ed9eab0be8",
     "sources/actors-b-constructors/hack_door.cpp": "68c5ab661c21dfab5c890cf870f087156c116f2c56ecee53a7c756b7135f01da",
@@ -13247,11 +13423,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 819,
-    "authored_default_inputs": 817,
+    "selected_inputs": 830,
+    "authored_default_inputs": 828,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 696,
-    "compiled_body_bytes_from_accepted_inputs": 326712,
+    "emitted_function_definitions_including_helpers": 707,
+    "compiled_body_bytes_from_accepted_inputs": 332324,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13264,7 +13440,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 506
+    "package_selected_inputs": 517
   },
   "startup_implementations": [
     {
@@ -21007,6 +21183,193 @@
       ],
       "host_files": [
         "sources/sif-keyboard-module-calls/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-anttrap/anttrap.cpp",
+      "source_sha256": "1a67ae4db258386109605709dd2b9566de7feaf3dab3af1c81d3652029725281",
+      "object_sha256": "c98e0f3526e39d23f1de29bbadc8e9eef143ae142b9815a3949552c1a0ee8572",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AntTrap",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-blocker/blocker.cpp",
+      "source_sha256": "74f57f00c82225e29f2791acdeeaa7deb56df8035f39f984dd41852e06522306",
+      "object_sha256": "23c771fe1cb6c13b980615ebca614b93d3aa4a45eae0754f3d365c9af8370333",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Blocker",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-candle/candle.cpp",
+      "source_sha256": "cca62cf1254820575200c3485206dab156cc101bd8bbfee2d5f4a440037935c9",
+      "object_sha256": "a8c890dff713f0decf830a0823e5a12cb947751d7a98024751874db140244e64",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Candle",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-candle2/candle2.cpp",
+      "source_sha256": "dabb218011f0d108b93fe8ee9a109a8ce0d3af54d4375257b0fa031582bb08cb",
+      "object_sha256": "c973f3e44b2fcc9a5d21e11bfce47782c38f49f92b40610d9bae754816f61e64",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Candle2",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-container/container.cpp",
+      "source_sha256": "7ff897641fa9bdd2565a7742d9ca08408ca648e623b6b901fd234c51f126baf6",
+      "object_sha256": "9bbddb05acdc228a5c964fcc320657f721ab0de53565fb83581d3c0f17855266",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Container",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-container-resources/container_resources.cpp",
+      "source_sha256": "0de4e1900b2863d6e9e606633cd4b82dcfe966abad3365695fb036f264db8a7f",
+      "object_sha256": "894f5c01eb072e3e027ca47f8ad8c8e09082ca02981e0de51be82de6357be25a",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_ContainerWithResources",
+          "compiled_body_bytes": 908
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-doorsecret/doorsecret.cpp",
+      "source_sha256": "025b09f2c2cbc144e0d64054f1ddb6ad6b7594c780231d136b4dadf21c8cb019",
+      "object_sha256": "db09f448b1bd910513afe259f444ec95348dd8355173445d2efdee640b3322c0",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_DoorSecret",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-doorswing/doorswing.cpp",
+      "source_sha256": "56c4566f2fb913466f5c729720ea5f4d8bb8d8b9a4a9ed64752421ca77de7e6b",
+      "object_sha256": "6c645431538db74250698e8b40be603a968a66558726ddb9e086142390fb32b5",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_DoorSwing",
+          "compiled_body_bytes": 608
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-eggsack/eggsack.cpp",
+      "source_sha256": "d0132bb183e3aeaf0e152eaea29300a79059f778eb2de20023f0ed1d0d48c431",
+      "object_sha256": "101c35d239569ace17326d62d4ff9e2ccaf37b51a42bfee34a28c372f5ac5e9f",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_EggSack",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-firebomb/firebomb.cpp",
+      "source_sha256": "48b98fd0c5a836b9af4df9ad0e0f82a13581ec6ff2a1b55bae6ef2b3aaeddd7f",
+      "object_sha256": "5e157ac820f0c9126a801b439b2d522ac90f482aa01a5433862b0294f671e386",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FireBomb",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actors-a",
+      "source": "sources/actors-a-floorswitch/floorswitch.cpp",
+      "source_sha256": "487dfe56a3605b2ee13c2a6cd122e9eb991301424a5fd9f0d8713e279c5cfada",
+      "object_sha256": "29c396e84e16ce0ff109680d1ea3f43a21a4bbd2d05b5ab08df6d0ca9a21f14c",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FloorSwitch",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "docs/agents/actors-a-compare.py"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

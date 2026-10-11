@@ -865,6 +865,27 @@ Opened: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
 694 function bodies, 817 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/actors-a
+
+All 11 constructors were selected. `docs/agents/actors-a-compare.py` ran each
+one against the private image and matched. That comparison is a host check,
+not an exact-match ledger admission. The snapshot checker now accepts a
+`docs/agents/*.py` host file. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 865 |
+| After | 882 |
+| Closed | 11 |
+| Opened | 28 |
+
+Closed the 11 `norrath_construct_*` names this package defines. Opened 24
+`norrath_actors_a_view_*` words plus `norrath_light_add`,
+`norrath_object_add_to_delete_list`, `norrath_object_add_to_medium_run_list`,
+`norrath_world_find_closest_door`, and `norrath_world_set_door_collision`.
+705 function bodies, 828 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -956,7 +977,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, and sif-keyboard. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, and actors-a. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -994,3 +1015,4 @@ and no startup stage has executed.
 - 2026-10-11 17:23 CDT — `agents/floor` — 819 unresolved imports
 - 2026-10-11 17:25 CDT — `agents/engine-restore` — 856 unresolved imports
 - 2026-10-11 17:26 CDT — `agents/sif-keyboard` — 865 unresolved imports
+- 2026-10-11 17:28 CDT — `agents/actors-a` — 882 unresolved imports
