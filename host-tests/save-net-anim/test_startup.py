@@ -109,6 +109,9 @@ class StartupTests(unittest.TestCase):
     def test_core_launch_srs(self):
         self.expect_object("core_launch_srs.cpp", "coreLaunchSRS", 1, b"\0")
 
+    def test_mc_protect_ram_slot(self):
+        self.expect_object("mc_protect_ram_slot.cpp", "MC_ProtectRamSlot", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
