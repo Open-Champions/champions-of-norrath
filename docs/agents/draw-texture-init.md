@@ -26,11 +26,11 @@ Observed at `0x0018f7d0`, 752 bytes. The packet base is `packetBuffer` at `0x003
 
 ## Imports closed
 
-`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `drawInit__Fv`, `initSupersample__Fv`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`, `dmaVif0`, `dmaVif1`, `drawRecords`, `drawHead`, `endTagVU1`, `writeBuffer`, `nmDrawUsed`, `endDrawSemaphore`, `vif0HID`, `vif1HID`, `gifHID`.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `drawInit__Fv`, `initSupersample__Fv`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`, `dmaVif0`, `dmaVif1`, `drawRecords`, `drawHead`, `endTagVU1`, `writeBuffer`, `nmDrawUsed`, `endDrawSemaphore`, `vif0HID`, `vif1HID`, `gifHID`, `dispEnv`, `displayBuffer1StartAddress`, `displayBuffer2StartAddress`, `engineDrawBufferStartAddress`, `engineEnvTexAddress`, `engineShadowTexAddress`, `ntsc_legallineTex`, `ntsc_legallinebottomTex`, `dmaGif`, `zwritesOn`, `zwritesOff`, `fullFrameMode`, `packetBuffer`.
 
 ## Imports opened
 
-`textureInternalInit__Fv`, `sceDmaSend`, `sceDmaSync`, `FlushCache`, `sceGsSyncPath`, `sceGsSyncV`, `sceDmaGetChan`, `memset`, `CreateSema`, `AddDmacHandler`, `EnableDmac`, `AddIntcHandler`, `EnableIntc`, `reloadDMA__Fi`, `gsIntHandler__Fi`, `packetBuffer`, `dispEnv`, `engineEnvTexAddress`, `engineDrawBufferStartAddress`, `zwritesOn`, `zwritesOff`, `dmaGif`, `fullFrameMode`, `makeSamplePacket__Fb`. `FlushCache` and `memset` are already selected. The DMA and interrupt services stay imports.
+`textureInternalInit__Fv`, `sceDmaSend`, `sceDmaSync`, `FlushCache`, `sceGsSyncPath`, `sceGsSyncV`, `sceDmaGetChan`, `memset`, `CreateSema`, `AddDmacHandler`, `EnableDmac`, `AddIntcHandler`, `EnableIntc`, `reloadDMA__Fi`, `gsIntHandler__Fi`, `makeSamplePacket__Fb`. `FlushCache` and `memset` are already selected. The DMA and interrupt services stay imports.
 
 ## Build-plan entries needed
 
@@ -89,12 +89,155 @@ Observed at `0x0018f7d0`, 752 bytes. The packet base is `packetBuffer` at `0x003
 }
 ```
 
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "disp_env.o",
+  "profile": "authored_cpp",
+  "sha256": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
+  "source": "sources/draw-texture-init-disp-env/disp_env.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "display_buffer_1.o",
+  "profile": "authored_cpp",
+  "sha256": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
+  "source": "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "display_buffer_2.o",
+  "profile": "authored_cpp",
+  "sha256": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
+  "source": "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "engine_draw_buffer.o",
+  "profile": "authored_cpp",
+  "sha256": "f3c424518f56851f7f300a178d511369597d7231e10838212633cbbf2883fae6",
+  "source": "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "engine_env_tex.o",
+  "profile": "authored_cpp",
+  "sha256": "d2cb49771750412c146ed65a3dd60f7a83b289879437c68d2af9b621200f1872",
+  "source": "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "engine_shadow_tex.o",
+  "profile": "authored_cpp",
+  "sha256": "4980f30ce3c439b24dd6830f8b1db239e7f3e51a3f61ba97dfae88060aa11eb7",
+  "source": "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "ntsc_legal_line.o",
+  "profile": "authored_cpp",
+  "sha256": "ebbad15ff4297513e756951c98b90f7d7da963220887dfeaa3754a9b82e14446",
+  "source": "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "ntsc_legal_line_bottom.o",
+  "profile": "authored_cpp",
+  "sha256": "f2d496936f01e904714569111e57c60d6c82167c16dfc49c53a3d446a1cda682",
+  "source": "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "dma_gif.o",
+  "profile": "authored_cpp",
+  "sha256": "eb652ad3116b28561c736b51fb6c1cf4594dbec84b813194f64a80ea86399f16",
+  "source": "sources/draw-texture-init-dma-gif/dma_gif.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "zwrites_on.o",
+  "profile": "authored_cpp",
+  "sha256": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
+  "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "zwrites_off.o",
+  "profile": "authored_cpp",
+  "sha256": "4aa4020f74376ed33bbe743d2b01027da71bbe82f0cea748a80d7f1c219db092",
+  "source": "sources/draw-texture-init-zwrites-off/zwrites_off.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "full_frame_mode.o",
+  "profile": "authored_cpp",
+  "sha256": "53cd47a66617f353397c6afb365310608fb0a90c1e65eb16a4178886d9d98790",
+  "source": "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp"
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "packet_buffer.o",
+  "profile": "authored_cpp",
+  "sha256": "157041b461186207e9be56c7edfa295e715fa3c127fd7de7e743719c73954476",
+  "source": "sources/draw-texture-init-packet-buffer/packet_buffer.cpp"
+}
+```
+
 The integrator assigns `input_order`. No shared plan file was edited.
 
 ## Authored but never executed
 
-`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `drawInit__Fv`, and `initSupersample__Fv` were compiled with the reviewed EE toolchain and checked on the host. None has run on the EE. No startup stage has run.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `drawInit__Fv`, `initSupersample__Fv`, and the display, texture-address, NTSC header, DMA, z-write, frame-mode, and packet-buffer objects were compiled with the reviewed EE toolchain and checked on the host. None has run on the EE. No startup stage has run.
 
 ## Unknown
 
-The `_texture` bytes outside offsets 6, 8, 10, 16, and 28 are not established by this function. What `0xa7fb` selects is unknown. Whether a callee of another routine changes those words before this call is unknown.
+The `_texture` bytes outside offsets 6, 8, 10, 16, and 28 are not established by this function. What `0xa7fb` selects is unknown. Whether a callee of another routine changes those words before this call is unknown. The GS register numbers stored by `initSupersample__Fv` are the observed constants; what each one selects beyond the traced bit packing is unknown. The packet arm that writes offset 192 is in the image and is not entered for the tag this function builds. The local `dmaGif` at `0x004868d4` stays private to `drawInit__Fv`. `simpleDrawLoop__FPFv_i` is an unresolved draw-named import and is not part of this package's assigned symbols.
