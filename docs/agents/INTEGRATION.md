@@ -512,6 +512,33 @@ Closed: the 13 `norrath_construct_*` names. Opened: `norrath_construct_Vehicle`,
 not open. 511 function bodies, 604 authored inputs, zero COMMON. 214 tool
 tests passed. No EE or game execution.
 
+## agents/gameobject-base
+
+All 18 units were selected. Each host check returns non-zero when the copy,
+destructor order, clone bytes, or leaf behavior is wrong. All 18 passed.
+The destructor host compile defines `NORRATH_GAMEOBJECT_HOST_CHECK`. The
+memcpy host check calls the same body under `norrath_memcpy_under_test` so
+it does not replace the host library. No game binary or disassembly listing
+was committed. `memcpy` compiles to 540 bytes; the notes say the image is
+176. The destructor is 736 against 680, type info 72 against 60, and clone
+512 against 244. The empty leaves compile to 8 bytes, matching the notes.
+
+The notes' private total of 632 unresolved imports does not reproduce on
+this tip.
+
+| | |
+|---|---|
+| Before | 796 |
+| After | 781 |
+| Closed | 18 |
+| Opened | 3 |
+
+Closed: `memcpy` and the 17 `norrath_vt_*_10GameObject` names. Also defined,
+and not a previous import: `norrath_ti_10GameObject`. Opened:
+`norrath_object_remove_string`, `norrath_list_head_copy_construct`, and
+`norrath_rtti_user`. 529 function bodies, 622 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -590,7 +617,7 @@ symbol was defined twice.
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-engine-init, world-state, render-lights, data-views, and actors-b. `engineInit__Ff`,
+engine-init, world-state, render-lights, data-views, actors-b, and gameobject-base. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -614,3 +641,4 @@ and no startup stage has executed.
 - 2026-10-11 16:47 CDT — `agents/render-lights` — 750 unresolved imports
 - 2026-10-11 16:50 CDT — `agents/data-views` — 782 unresolved imports
 - 2026-10-11 16:52 CDT — `agents/actors-b` — 796 unresolved imports
+- 2026-10-11 16:56 CDT — `agents/gameobject-base` — 781 unresolved imports

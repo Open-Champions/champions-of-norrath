@@ -7917,6 +7917,258 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/actors-b-constructors/trigger.cpp"
+    },
+    {
+      "input_order": 606,
+      "component": "gameobject-base-clone",
+      "object_name": "clone.o",
+      "private_object_sha256": "1ac8508632044d58e6cfd2e39c97ac669e0195a2d8f327443b00b4531b0e3be5",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_10GameObject",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-clone/clone.cpp"
+    },
+    {
+      "input_order": 607,
+      "component": "gameobject-base-dtor",
+      "object_name": "dtor.o",
+      "private_object_sha256": "653c5312284c8bbbb426a7237a53b97ec6589b84277fad910fb791141a63c169",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_10GameObject",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 608,
+      "component": "gameobject-base-get-model",
+      "object_name": "get_model.o",
+      "private_object_sha256": "6675d32510b5501cfdf3acee1b5be34dfba178607ae6da86dd9bcb62e13bae68",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_get_model_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-get-model/get_model.cpp"
+    },
+    {
+      "input_order": 609,
+      "component": "gameobject-base-memcpy",
+      "object_name": "memcpy.o",
+      "private_object_sha256": "a3022dae0cb0165667a3e7d732aad95475e9c773834b3eaa4ac14a1870a34ae3",
+      "emitted_functions": [
+        {
+          "name": "memcpy",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-memcpy/memcpy.cpp"
+    },
+    {
+      "input_order": 610,
+      "component": "gameobject-base-msg-alert",
+      "object_name": "msg_alert.o",
+      "private_object_sha256": "94bb3e6be5519c3fc2df5b61d4cbfd3d55ef78ce31f57e761451f964649afc09",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_alert_10GameObject",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-alert/msg_alert.cpp"
+    },
+    {
+      "input_order": 611,
+      "component": "gameobject-base-msg-collision",
+      "object_name": "msg_collision.o",
+      "private_object_sha256": "716673965788a8812b62c7dbe0af461a4507e8c4cde75165cc9817890108cdcf",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_collision_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-collision/msg_collision.cpp"
+    },
+    {
+      "input_order": 612,
+      "component": "gameobject-base-msg-collision-world",
+      "object_name": "msg_collision_world.o",
+      "private_object_sha256": "87a08cc17202a6ae012c53957eae590ae6f7c8984aaa59f66aa0afae1b7980ed",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_collision_world_10GameObject",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-collision-world/msg_collision_world.cpp"
+    },
+    {
+      "input_order": 613,
+      "component": "gameobject-base-msg-draw",
+      "object_name": "msg_draw.o",
+      "private_object_sha256": "128bc8074eaaa82f52a59813edf96f9b3108847a1e8df9a57cb26feefcdb5544",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_draw_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-draw/msg_draw.cpp"
+    },
+    {
+      "input_order": 614,
+      "component": "gameobject-base-msg-get-poke-name",
+      "object_name": "msg_get_poke_name.o",
+      "private_object_sha256": "94f6358ed1223ac91fd4d1a632ac46fd1b049f6ad23ac53cd5f8ca3c29b98849",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_get_poke_name_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-get-poke-name/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 615,
+      "component": "gameobject-base-msg-hurt",
+      "object_name": "msg_hurt.o",
+      "private_object_sha256": "65b8bad4cdc55d59eb5edcc9683ecb0a09e5f88ebdb24a136632dcce08bcc588",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_hurt_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-hurt/msg_hurt.cpp"
+    },
+    {
+      "input_order": 616,
+      "component": "gameobject-base-msg-load",
+      "object_name": "msg_load.o",
+      "private_object_sha256": "8c80157344cfd421d541f09580467fc2046877cdda836bea5298542809e679e0",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_load_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-load/msg_load.cpp"
+    },
+    {
+      "input_order": 617,
+      "component": "gameobject-base-msg-move-collision",
+      "object_name": "msg_move_collision.o",
+      "private_object_sha256": "93e4e3f8e5b783526b6906fb0784a8796166e23c0e6407b206f7855f2f6a3840",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_move_collision_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-move-collision/msg_move_collision.cpp"
+    },
+    {
+      "input_order": 618,
+      "component": "gameobject-base-msg-poke",
+      "object_name": "msg_poke.o",
+      "private_object_sha256": "ee41ed30a3d730e5858e58d4d16e329def902aeb200b765f28edd62a397fa988",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_poke_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-poke/msg_poke.cpp"
+    },
+    {
+      "input_order": 619,
+      "component": "gameobject-base-msg-route",
+      "object_name": "msg_route.o",
+      "private_object_sha256": "fa4e36c4b41e131a2de93ff82df052be6ea85b93215ab1876bea6334d190273c",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_route_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-route/msg_route.cpp"
+    },
+    {
+      "input_order": 620,
+      "component": "gameobject-base-msg-run",
+      "object_name": "msg_run.o",
+      "private_object_sha256": "501c61e25efea9468535be8ca8ec0a8680a8e95e466b0f3b8174b6a04d94d1c3",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_run_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-run/msg_run.cpp"
+    },
+    {
+      "input_order": 621,
+      "component": "gameobject-base-msg-save",
+      "object_name": "msg_save.o",
+      "private_object_sha256": "4db3db885dea5f62eb63576c1a1f98e64a98672ebc6210430b6b3e0057806133",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_save_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-save/msg_save.cpp"
+    },
+    {
+      "input_order": 622,
+      "component": "gameobject-base-msg-trigger",
+      "object_name": "msg_trigger.o",
+      "private_object_sha256": "c97901b49708dfaf517507c664893f6c0e1a75a3b45a5875dc048ff5dbe0cbf1",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_trigger_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-msg-trigger/msg_trigger.cpp"
+    },
+    {
+      "input_order": 623,
+      "component": "gameobject-base-typeinfo",
+      "object_name": "typeinfo.o",
+      "private_object_sha256": "5d4f11f715aa94506f546f2bc464de1a51c9059b9b9b0180e7e600b72d8bea45",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_10GameObject",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gameobject-base-typeinfo/typeinfo.cpp"
     }
   ],
   "drafts": [
@@ -9127,6 +9379,42 @@
     "sources/game-world-forbidden-build/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/game-world-forbidden-build/world_forbidden.cpp": "2b53766576073e6cd86592ff339320a62e374080133d279aaad54215ddbfed94",
     "sources/game-world-forbidden-build/world_forbidden.hpp": "0c042ba81015395d5b7faae71052dc8feb3934e50ae6cad5b7e037e1797cee37",
+    "sources/gameobject-base-clone/clone.cpp": "b0f21741a46bfc006550ba9a8698e4a36df50dbc8db2e29413667c23a5dc4fc8",
+    "sources/gameobject-base-clone/host_check.cpp": "55b1c1a5c1b130ac3ca17bf4a754e9ad6312be5d83ad29d6bd99b795823d6186",
+    "sources/gameobject-base-dtor/dtor.cpp": "20d60d176a4242074d92a21ecc8107f97f5ee2b92ea892cca9fd75b45b9515b1",
+    "sources/gameobject-base-dtor/host_check.cpp": "f5000d133278dc6fce5835d65a55c5989a6d71406210d680c05eff9cb273419c",
+    "sources/gameobject-base-get-model/get_model.cpp": "3e884a654cb6a8b5e4d9a26d89ccf4eaf4277b435edcca556f17b51983be32f0",
+    "sources/gameobject-base-get-model/host_check.cpp": "a4f9efeb69cd0705816d8b2a79363cecb8ff3b9d4a4c04163cd7983a2b36d2b5",
+    "sources/gameobject-base-memcpy/host_check.cpp": "7887c6898711a44fce6f0aaf74afe84a63da5b6f7e7674bc2e67f1cdf08a03f0",
+    "sources/gameobject-base-memcpy/memcpy.cpp": "a9d29928ea949771cb881bb4b63020f116986aeae924b34d7e2161a74e85b6d3",
+    "sources/gameobject-base-msg-alert/host_check.cpp": "88aae99e0c4ffe2985cf182ac2b226419c9c21f9fea2d9e6b253f06b88fd8583",
+    "sources/gameobject-base-msg-alert/msg_alert.cpp": "408d7b0d72677f3b2fd2833780dcd60abf4514f87570afdea92e7083ee4d29d1",
+    "sources/gameobject-base-msg-collision-world/host_check.cpp": "22f86c49e08ad5d27cd435b05dc3ed9f382778f179df3d6ef1a009ff42a4fb42",
+    "sources/gameobject-base-msg-collision-world/msg_collision_world.cpp": "96f62477630309697fab15ac49be77fbb5200995b8c1904fab622366823cb33a",
+    "sources/gameobject-base-msg-collision/host_check.cpp": "9b2cae9718ac6076fd2766e74de2f2f699356462816f4092b803242d5851bd4e",
+    "sources/gameobject-base-msg-collision/msg_collision.cpp": "1fb22676569be547c04201439c01cde2037db0f35ecb74d5f332d759ad02a01c",
+    "sources/gameobject-base-msg-draw/host_check.cpp": "b768c065191234e1c6136d5c1ce3c784ce997228bdb4079933f7a83a58d3093c",
+    "sources/gameobject-base-msg-draw/msg_draw.cpp": "9d476645cfaa5713f0fdda027653a926f03ae2c1e0c0c43c86931aa39263daed",
+    "sources/gameobject-base-msg-get-poke-name/host_check.cpp": "b283ff3bcdc0011f9e4c4266dad6c9007e39018b91e6d46080bbee76a0a0e991",
+    "sources/gameobject-base-msg-get-poke-name/msg_get_poke_name.cpp": "9b8b5c03d7e56aa8ecf3d1234a31aa3f35d0de661ae17b76c2ec4e8767fabed7",
+    "sources/gameobject-base-msg-hurt/host_check.cpp": "503d48cfd6aa0dfa3b1639a026651eb7aac4b9bea5b68340c5d3cf7c5c6edd3c",
+    "sources/gameobject-base-msg-hurt/msg_hurt.cpp": "895512e07aedda46c98262cb130a7acb729502367481ebbeecc81ccd1e42a2a2",
+    "sources/gameobject-base-msg-load/host_check.cpp": "74696bebf46ea29c77f4f6c680c018049e31fb386e8ab0dcc89c1137ce394652",
+    "sources/gameobject-base-msg-load/msg_load.cpp": "5ea5fa9db592c32a8eef675af2f90aeabe592f27ef16a89124c112147c5af3c9",
+    "sources/gameobject-base-msg-move-collision/host_check.cpp": "06401d9218b458e83937f188fe2018a8abb1d71254731b891b4c3433cb564bd4",
+    "sources/gameobject-base-msg-move-collision/msg_move_collision.cpp": "01f451e498af4d63eb7673b646e0991e2fabe9dcf3317010de8e9fba9a924040",
+    "sources/gameobject-base-msg-poke/host_check.cpp": "f9cf75dca252736a7c42ecac3acbe5e08da278772b06b79c3f312dd542a0bb55",
+    "sources/gameobject-base-msg-poke/msg_poke.cpp": "42e5e17e42b718b137ef31f8ab9123f6f9ba751c3ed524cb2c967badee2883e6",
+    "sources/gameobject-base-msg-route/host_check.cpp": "b1a171b350b3ba7a84ee18994dbefb9664feed4f0e0ce55bcc0f7716c8684dd2",
+    "sources/gameobject-base-msg-route/msg_route.cpp": "e9605665f4fc0d2db1c2905ed45cee6fccb3b8409bb9e6e52d4915f7ecbf06f7",
+    "sources/gameobject-base-msg-run/host_check.cpp": "0415d31910cc85d409a8ea06c373c30c1c221e5c6623e1db71cce5ff468ca8e4",
+    "sources/gameobject-base-msg-run/msg_run.cpp": "02e7d1cfeaf513512bf9a832b4bb2cf90d4e21564c3c8be1a3dd65da1f493be0",
+    "sources/gameobject-base-msg-save/host_check.cpp": "6a5e65b84cdfef07d1828be0202e06b198c7e374742f0836883e9b7a3a52de02",
+    "sources/gameobject-base-msg-save/msg_save.cpp": "ab4971c46e2cdeac9df6e97626e1f8a59b44c58c60dacf1cabc6d21ca1a9688d",
+    "sources/gameobject-base-msg-trigger/host_check.cpp": "47e984ad9cc7f0cb5ae85b034339002bbcaf0388740d868d5187443010512fb7",
+    "sources/gameobject-base-msg-trigger/msg_trigger.cpp": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
+    "sources/gameobject-base-typeinfo/host_check.cpp": "8f61f9c0a70e15b28e4194321f8d2b0dbb9788c9e9f81c1b2d01931d282337f2",
+    "sources/gameobject-base-typeinfo/typeinfo.cpp": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
     "sources/items-player-ability-coefficients/ability_coefficients.cpp": "c39a8b37853410828119bde82e771cc134770b71ca9c8f184b77e803df38f38b",
     "sources/items-player-ability-coefficients/host_test.cpp": "38f68269b5d4a4020fcc0d4c4a9f90adda3a8b2c8c0e8baa7de533554455590a",
     "sources/items-player-active-count/active_count.cpp": "5a2074a09b3c7bd1177cc4ca7aa25b2e2054d3e1f4b55ab5cb22874d8acd1845",
@@ -10007,11 +10295,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 606,
-    "authored_default_inputs": 604,
+    "selected_inputs": 624,
+    "authored_default_inputs": 622,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 513,
-    "compiled_body_bytes_from_accepted_inputs": 281576,
+    "emitted_function_definitions_including_helpers": 531,
+    "compiled_body_bytes_from_accepted_inputs": 283636,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10024,7 +10312,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 293
+    "package_selected_inputs": 311
   },
   "startup_implementations": [
     {
@@ -14305,6 +14593,312 @@
       ],
       "host_files": [
         "sources/actors-b-constructors/host/trigger_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-clone/clone.cpp",
+      "source_sha256": "b0f21741a46bfc006550ba9a8698e4a36df50dbc8db2e29413667c23a5dc4fc8",
+      "object_sha256": "1ac8508632044d58e6cfd2e39c97ac669e0195a2d8f327443b00b4531b0e3be5",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_10GameObject",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-dtor/dtor.cpp",
+      "source_sha256": "20d60d176a4242074d92a21ecc8107f97f5ee2b92ea892cca9fd75b45b9515b1",
+      "object_sha256": "653c5312284c8bbbb426a7237a53b97ec6589b84277fad910fb791141a63c169",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_10GameObject",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-get-model/get_model.cpp",
+      "source_sha256": "3e884a654cb6a8b5e4d9a26d89ccf4eaf4277b435edcca556f17b51983be32f0",
+      "object_sha256": "6675d32510b5501cfdf3acee1b5be34dfba178607ae6da86dd9bcb62e13bae68",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_get_model_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-get-model/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-memcpy/memcpy.cpp",
+      "source_sha256": "a9d29928ea949771cb881bb4b63020f116986aeae924b34d7e2161a74e85b6d3",
+      "object_sha256": "a3022dae0cb0165667a3e7d732aad95475e9c773834b3eaa4ac14a1870a34ae3",
+      "emitted_functions": [
+        {
+          "name": "memcpy",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-memcpy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-alert/msg_alert.cpp",
+      "source_sha256": "408d7b0d72677f3b2fd2833780dcd60abf4514f87570afdea92e7083ee4d29d1",
+      "object_sha256": "94bb3e6be5519c3fc2df5b61d4cbfd3d55ef78ce31f57e761451f964649afc09",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_alert_10GameObject",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-alert/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-collision/msg_collision.cpp",
+      "source_sha256": "1fb22676569be547c04201439c01cde2037db0f35ecb74d5f332d759ad02a01c",
+      "object_sha256": "716673965788a8812b62c7dbe0af461a4507e8c4cde75165cc9817890108cdcf",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_collision_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-collision/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-collision-world/msg_collision_world.cpp",
+      "source_sha256": "96f62477630309697fab15ac49be77fbb5200995b8c1904fab622366823cb33a",
+      "object_sha256": "87a08cc17202a6ae012c53957eae590ae6f7c8984aaa59f66aa0afae1b7980ed",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_collision_world_10GameObject",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-collision-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-draw/msg_draw.cpp",
+      "source_sha256": "9d476645cfaa5713f0fdda027653a926f03ae2c1e0c0c43c86931aa39263daed",
+      "object_sha256": "128bc8074eaaa82f52a59813edf96f9b3108847a1e8df9a57cb26feefcdb5544",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_draw_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-get-poke-name/msg_get_poke_name.cpp",
+      "source_sha256": "9b8b5c03d7e56aa8ecf3d1234a31aa3f35d0de661ae17b76c2ec4e8767fabed7",
+      "object_sha256": "94f6358ed1223ac91fd4d1a632ac46fd1b049f6ad23ac53cd5f8ca3c29b98849",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_get_poke_name_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-get-poke-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-hurt/msg_hurt.cpp",
+      "source_sha256": "895512e07aedda46c98262cb130a7acb729502367481ebbeecc81ccd1e42a2a2",
+      "object_sha256": "65b8bad4cdc55d59eb5edcc9683ecb0a09e5f88ebdb24a136632dcce08bcc588",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_hurt_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-hurt/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-load/msg_load.cpp",
+      "source_sha256": "5ea5fa9db592c32a8eef675af2f90aeabe592f27ef16a89124c112147c5af3c9",
+      "object_sha256": "8c80157344cfd421d541f09580467fc2046877cdda836bea5298542809e679e0",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_load_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-move-collision/msg_move_collision.cpp",
+      "source_sha256": "01f451e498af4d63eb7673b646e0991e2fabe9dcf3317010de8e9fba9a924040",
+      "object_sha256": "93e4e3f8e5b783526b6906fb0784a8796166e23c0e6407b206f7855f2f6a3840",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_move_collision_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-move-collision/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-poke/msg_poke.cpp",
+      "source_sha256": "42e5e17e42b718b137ef31f8ab9123f6f9ba751c3ed524cb2c967badee2883e6",
+      "object_sha256": "ee41ed30a3d730e5858e58d4d16e329def902aeb200b765f28edd62a397fa988",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_poke_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-poke/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-route/msg_route.cpp",
+      "source_sha256": "e9605665f4fc0d2db1c2905ed45cee6fccb3b8409bb9e6e52d4915f7ecbf06f7",
+      "object_sha256": "fa4e36c4b41e131a2de93ff82df052be6ea85b93215ab1876bea6334d190273c",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_route_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-route/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-run/msg_run.cpp",
+      "source_sha256": "02e7d1cfeaf513512bf9a832b4bb2cf90d4e21564c3c8be1a3dd65da1f493be0",
+      "object_sha256": "501c61e25efea9468535be8ca8ec0a8680a8e95e466b0f3b8174b6a04d94d1c3",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_run_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-save/msg_save.cpp",
+      "source_sha256": "ab4971c46e2cdeac9df6e97626e1f8a59b44c58c60dacf1cabc6d21ca1a9688d",
+      "object_sha256": "4db3db885dea5f62eb63576c1a1f98e64a98672ebc6210430b6b3e0057806133",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_save_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-msg-trigger/msg_trigger.cpp",
+      "source_sha256": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
+      "object_sha256": "c97901b49708dfaf517507c664893f6c0e1a75a3b45a5875dc048ff5dbe0cbf1",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_trigger_10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-msg-trigger/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gameobject-base",
+      "source": "sources/gameobject-base-typeinfo/typeinfo.cpp",
+      "source_sha256": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
+      "object_sha256": "5d4f11f715aa94506f546f2bc464de1a51c9059b9b9b0180e7e600b72d8bea45",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_10GameObject",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/gameobject-base-typeinfo/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

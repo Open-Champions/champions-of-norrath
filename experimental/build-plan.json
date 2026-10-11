@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 604,
+  "default_authored_inputs": 622,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1018,6 +1018,24 @@
     "sources/game-world-forbidden-build/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/game-world-forbidden-build/world_forbidden.cpp": "2b53766576073e6cd86592ff339320a62e374080133d279aaad54215ddbfed94",
     "sources/game-world-forbidden-build/world_forbidden.hpp": "0c042ba81015395d5b7faae71052dc8feb3934e50ae6cad5b7e037e1797cee37",
+    "sources/gameobject-base-clone/clone.cpp": "b0f21741a46bfc006550ba9a8698e4a36df50dbc8db2e29413667c23a5dc4fc8",
+    "sources/gameobject-base-dtor/dtor.cpp": "20d60d176a4242074d92a21ecc8107f97f5ee2b92ea892cca9fd75b45b9515b1",
+    "sources/gameobject-base-get-model/get_model.cpp": "3e884a654cb6a8b5e4d9a26d89ccf4eaf4277b435edcca556f17b51983be32f0",
+    "sources/gameobject-base-memcpy/memcpy.cpp": "a9d29928ea949771cb881bb4b63020f116986aeae924b34d7e2161a74e85b6d3",
+    "sources/gameobject-base-msg-alert/msg_alert.cpp": "408d7b0d72677f3b2fd2833780dcd60abf4514f87570afdea92e7083ee4d29d1",
+    "sources/gameobject-base-msg-collision-world/msg_collision_world.cpp": "96f62477630309697fab15ac49be77fbb5200995b8c1904fab622366823cb33a",
+    "sources/gameobject-base-msg-collision/msg_collision.cpp": "1fb22676569be547c04201439c01cde2037db0f35ecb74d5f332d759ad02a01c",
+    "sources/gameobject-base-msg-draw/msg_draw.cpp": "9d476645cfaa5713f0fdda027653a926f03ae2c1e0c0c43c86931aa39263daed",
+    "sources/gameobject-base-msg-get-poke-name/msg_get_poke_name.cpp": "9b8b5c03d7e56aa8ecf3d1234a31aa3f35d0de661ae17b76c2ec4e8767fabed7",
+    "sources/gameobject-base-msg-hurt/msg_hurt.cpp": "895512e07aedda46c98262cb130a7acb729502367481ebbeecc81ccd1e42a2a2",
+    "sources/gameobject-base-msg-load/msg_load.cpp": "5ea5fa9db592c32a8eef675af2f90aeabe592f27ef16a89124c112147c5af3c9",
+    "sources/gameobject-base-msg-move-collision/msg_move_collision.cpp": "01f451e498af4d63eb7673b646e0991e2fabe9dcf3317010de8e9fba9a924040",
+    "sources/gameobject-base-msg-poke/msg_poke.cpp": "42e5e17e42b718b137ef31f8ab9123f6f9ba751c3ed524cb2c967badee2883e6",
+    "sources/gameobject-base-msg-route/msg_route.cpp": "e9605665f4fc0d2db1c2905ed45cee6fccb3b8409bb9e6e52d4915f7ecbf06f7",
+    "sources/gameobject-base-msg-run/msg_run.cpp": "02e7d1cfeaf513512bf9a832b4bb2cf90d4e21564c3c8be1a3dd65da1f493be0",
+    "sources/gameobject-base-msg-save/msg_save.cpp": "ab4971c46e2cdeac9df6e97626e1f8a59b44c58c60dacf1cabc6d21ca1a9688d",
+    "sources/gameobject-base-msg-trigger/msg_trigger.cpp": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
+    "sources/gameobject-base-typeinfo/typeinfo.cpp": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
     "sources/items-player-ability-coefficients/ability_coefficients.cpp": "c39a8b37853410828119bde82e771cc134770b71ca9c8f184b77e803df38f38b",
     "sources/items-player-active-count/active_count.cpp": "5a2074a09b3c7bd1177cc4ca7aa25b2e2054d3e1f4b55ab5cb22874d8acd1845",
     "sources/items-player-armor-coefficient/armor_coefficient.cpp": "9222ee809f5000a38b216f869245abb1bae7d575e72cf97dacc0d1cf4b6f79b5",
@@ -8778,6 +8796,168 @@
       "profile": "authored_cpp",
       "sha256": "0d9f5c37abf054d4d7e60f1acba63a2d3c22197fade9f8e9f3111296bbe69f75",
       "source": "sources/actors-b-constructors/trigger.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 606,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "b0f21741a46bfc006550ba9a8698e4a36df50dbc8db2e29413667c23a5dc4fc8",
+      "source": "sources/gameobject-base-clone/clone.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 607,
+      "kind": "independently_authored_source",
+      "object_name": "dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "20d60d176a4242074d92a21ecc8107f97f5ee2b92ea892cca9fd75b45b9515b1",
+      "source": "sources/gameobject-base-dtor/dtor.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 608,
+      "kind": "independently_authored_source",
+      "object_name": "get_model.o",
+      "profile": "authored_cpp",
+      "sha256": "3e884a654cb6a8b5e4d9a26d89ccf4eaf4277b435edcca556f17b51983be32f0",
+      "source": "sources/gameobject-base-get-model/get_model.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 609,
+      "kind": "independently_authored_source",
+      "object_name": "memcpy.o",
+      "profile": "authored_cpp",
+      "sha256": "a9d29928ea949771cb881bb4b63020f116986aeae924b34d7e2161a74e85b6d3",
+      "source": "sources/gameobject-base-memcpy/memcpy.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 610,
+      "kind": "independently_authored_source",
+      "object_name": "msg_alert.o",
+      "profile": "authored_cpp",
+      "sha256": "408d7b0d72677f3b2fd2833780dcd60abf4514f87570afdea92e7083ee4d29d1",
+      "source": "sources/gameobject-base-msg-alert/msg_alert.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 611,
+      "kind": "independently_authored_source",
+      "object_name": "msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "1fb22676569be547c04201439c01cde2037db0f35ecb74d5f332d759ad02a01c",
+      "source": "sources/gameobject-base-msg-collision/msg_collision.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 612,
+      "kind": "independently_authored_source",
+      "object_name": "msg_collision_world.o",
+      "profile": "authored_cpp",
+      "sha256": "96f62477630309697fab15ac49be77fbb5200995b8c1904fab622366823cb33a",
+      "source": "sources/gameobject-base-msg-collision-world/msg_collision_world.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 613,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "9d476645cfaa5713f0fdda027653a926f03ae2c1e0c0c43c86931aa39263daed",
+      "source": "sources/gameobject-base-msg-draw/msg_draw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 614,
+      "kind": "independently_authored_source",
+      "object_name": "msg_get_poke_name.o",
+      "profile": "authored_cpp",
+      "sha256": "9b8b5c03d7e56aa8ecf3d1234a31aa3f35d0de661ae17b76c2ec4e8767fabed7",
+      "source": "sources/gameobject-base-msg-get-poke-name/msg_get_poke_name.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 615,
+      "kind": "independently_authored_source",
+      "object_name": "msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "895512e07aedda46c98262cb130a7acb729502367481ebbeecc81ccd1e42a2a2",
+      "source": "sources/gameobject-base-msg-hurt/msg_hurt.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 616,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "5ea5fa9db592c32a8eef675af2f90aeabe592f27ef16a89124c112147c5af3c9",
+      "source": "sources/gameobject-base-msg-load/msg_load.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 617,
+      "kind": "independently_authored_source",
+      "object_name": "msg_move_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "01f451e498af4d63eb7673b646e0991e2fabe9dcf3317010de8e9fba9a924040",
+      "source": "sources/gameobject-base-msg-move-collision/msg_move_collision.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 618,
+      "kind": "independently_authored_source",
+      "object_name": "msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "42e5e17e42b718b137ef31f8ab9123f6f9ba751c3ed524cb2c967badee2883e6",
+      "source": "sources/gameobject-base-msg-poke/msg_poke.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 619,
+      "kind": "independently_authored_source",
+      "object_name": "msg_route.o",
+      "profile": "authored_cpp",
+      "sha256": "e9605665f4fc0d2db1c2905ed45cee6fccb3b8409bb9e6e52d4915f7ecbf06f7",
+      "source": "sources/gameobject-base-msg-route/msg_route.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 620,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "02e7d1cfeaf513512bf9a832b4bb2cf90d4e21564c3c8be1a3dd65da1f493be0",
+      "source": "sources/gameobject-base-msg-run/msg_run.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 621,
+      "kind": "independently_authored_source",
+      "object_name": "msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "ab4971c46e2cdeac9df6e97626e1f8a59b44c58c60dacf1cabc6d21ca1a9688d",
+      "source": "sources/gameobject-base-msg-save/msg_save.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 622,
+      "kind": "independently_authored_source",
+      "object_name": "msg_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
+      "source": "sources/gameobject-base-msg-trigger/msg_trigger.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 623,
+      "kind": "independently_authored_source",
+      "object_name": "typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
+      "source": "sources/gameobject-base-typeinfo/typeinfo.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -8877,7 +9057,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ab75047cc7cb9fc5f0e033c5552b3782f2e5c1044b3ed864f75a2203a765dec4",
+  "snapshot_sha256": "0379449f6ac1d9888ed6ecf5dd1f22d8ea7fed472b1af86e3bacfef4a4d22883",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
