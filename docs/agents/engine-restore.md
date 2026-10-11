@@ -88,9 +88,54 @@ Source `sources/engine-restore-engine-clear/engine_clear.cpp`. SHA-256
 `aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41`.
 Do not plan `host_contract.cpp`.
 
+## engineRestore
+
+Observed `engineRestore__Fv` at 0x001901e0 is 204 bytes and returns. One caller
+reaches it: `launchSRS`. Fresh compilation is 192 bytes and is not an
+original-byte match. The reviewed compiler emitted `sra`, `sh`, and `sync`.
+
+`AddIntcHandler(2, vblankHandler, 0)` stores its result in `vblankHID` before
+`EnableIntc(2)`. `GetThreadId` and `ChangeThreadPriority` are already defined;
+this file calls them and does not redefine them. The priority is 10.
+`drawRestoreInterrupts` follows.
+
+Three words are then stored: 130 at 0x10000010, 0 at 0x10000000, and 159 at
+0x10000810. `lumpFindResource` is called with the unnamed text `engine.lmp`
+at 0x00464238 and `shadowblob.tex` at 0x00464248. Those addresses have no ELF
+symbol and are not the `engine.lmp` object `main` already imports.
+
+The word at offset 16 of that result is combined with 0x20000000 and the
+halfword at offset 20 of that address receives bits 8..23 of
+`engineShadowTexAddress`. The instruction is `sra` by 8; the filled bits are
+above the stored halfword. `sync` runs, then `sceDmaSendN` receives `dmaGif`,
+the unmodified word from offset 16, and the unsigned halfword at offset 6.
+`initSupersample`, `initVIF`, and `padInit` follow, in that order.
+
+Calling 0x20000000 the uncached segment is inferred from the public EE map.
+What the three absolute stores program, and what the resource record means,
+is unknown.
+
+Host check:
+
+```sh
+c++ -std=c++17 -Wall -Wextra -Werror -o /tmp/engine-restore-check \
+  experimental/sources/engine-restore-engine-restore/host_contract.cpp
+/tmp/engine-restore-check
+```
+
+The EE profile does not define `NORRATH_HOST_CONTRACT`. That macro is how the
+host contract observes the absolute stores.
+
+### Build-plan entry
+
+Profile `authored_cpp`. Header closure empty. Object name `engine_restore.o`.
+Source `sources/engine-restore-engine-restore/engine_restore.cpp`. SHA-256
+`158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4`.
+Do not plan `host_contract.cpp`.
+
 ## Imports closed
 
-`frontEndInit__Fi`, `engineClear__Fv`.
+`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`.
 
 ## Imports opened
 
@@ -109,25 +154,34 @@ were already unresolved.
 From `engineClear`: `DisableIntc`, `RemoveIntcHandler`,
 `drawRemoveInterrupts__Fv`, `vblankHID`.
 
+From `engineRestore`: `AddIntcHandler`, `drawRestoreInterrupts__Fv`,
+`sceDmaSendN`, `initSupersample__Fv`, `initVIF__Fv`, `padInit__Fv`,
+`vblankHandler__Fi`, `engineShadowTexAddress`, `dmaGif`. `EnableIntc` was
+already unresolved. `GetThreadId` and `ChangeThreadPriority` are already
+defined.
+
 ## Build-plan entries needed
 
 | Source | Object | SHA-256 |
 | --- | --- | --- |
 | `sources/engine-restore-front-end/front_end_init.cpp` | `front_end_init.o` | `a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab` |
 | `sources/engine-restore-engine-clear/engine_clear.cpp` | `engine_clear.o` | `aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41` |
+| `sources/engine-restore-engine-restore/engine_restore.cpp` | `engine_restore.o` | `158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4` |
 
-Both use `authored_cpp` and an empty header closure. Host contracts are not
-inputs.
+All three use `authored_cpp` and an empty header closure. Host contracts are
+not inputs.
 
 ## Authored but never executed
 
-`frontEndInit__Fi` and `engineClear__Fv`. Host contracts ran on this machine.
-The reviewed EE compiler produced relocatable objects. No EE, interrupt, menu,
-or game path ran.
+`frontEndInit__Fi`, `engineClear__Fv`, and `engineRestore__Fv`. Host contracts
+ran on this machine. The reviewed EE compiler produced relocatable objects.
+No EE, interrupt, DMA, menu, or game path ran.
 
 ## Unknown
 
-`Menu` layout and the effects of the functions these two routines call.
+`Menu` layout and the effects of the functions these routines call.
 `main` and `launchSRS` pass 0 to `frontEndInit`. Whether a suspended front end
 is reachable from those callers is unknown. What `vblankHID` contains before
-`engineClear` is unknown.
+`engineClear` is unknown. The resource record passed to `sceDmaSendN`, and the
+effect of the three absolute stores, are unknown. `gameLoop`, `srs_main`,
+`pad`, `skipIntro`, and `engineDisplayDisable` are still open.
