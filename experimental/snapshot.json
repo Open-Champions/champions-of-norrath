@@ -5159,10 +5159,23 @@
         "sources/game-list-safe-iterator-source/next.cpp",
         "sources/game-list-safe-iterator-source/destroy.cpp"
       ],
-      "status": "Complete authored source, first compilation and focused output review passed in declared ordinary-RAM low32 scope; behavior execution and partial integration pending",
+      "status": "Complete source and first compilation reviewed; integrated into private V44 partial object; native/game runtime and original-byte equality unverified",
       "private_FIRST_manifest_sha256": "00caca492ccd6da0a9299546cce717a9e98f7aab6a50b584baeb70dc6855ab9e",
       "additional_exact_original_matches": 0,
-      "runtime_executed": false
+      "runtime_executed": false,
+      "bounded_behavior": {
+        "fixtures": 16,
+        "paired_calls": 51,
+        "additional_constructor_pair": 1,
+        "persistent_memory_and_saved_low64_SP_GP_matched": true,
+        "original_constructor_words_covered": 40,
+        "original_constructor_whole_words": 40,
+        "earlier_cases_replayed": false,
+        "delete_flag1_or_hardware_gameplay_verified": false,
+        "fixture_environment_transitions_are_not_callback_execution": true,
+        "private_result_manifest_sha256": "11a7e0dc6301bb98421d5eb6ca51ce2ad25a4793499ee389c687d2630019428d",
+        "private_constructor_gap_manifest_sha256": "1a47d6035cee2a0a343a18375175f7946f24e2e24db628fb9251c084e8e59b7d"
+      }
     },
     {
       "component": "game-megatile-name-pool-source",
@@ -5173,10 +5186,25 @@
         "sources/game-megatile-name-pool-source/name_pool.hpp",
         "sources/game-megatile-name-pool-source/add_name.cpp"
       ],
-      "status": "Complete authored source, first compilation and focused output review passed in declared ordinary-RAM low32 scope; behavior execution and partial integration pending",
+      "status": "Complete source and first compilation reviewed; integrated into private V44 partial object; native/game runtime and original-byte equality unverified",
       "private_FIRST_manifest_sha256": "69c734b2b76efb01421e93451b5fd8607869312cc26f174e12f89bf964fb1259",
       "additional_exact_original_matches": 0,
       "runtime_executed": false
     }
-  ]
+  ],
+  "latest_private_partial_integration": {
+    "revision": "V44",
+    "input_objects": 268,
+    "emitted_function_definitions_including_helpers": 392,
+    "compiled_body_bytes": 232940,
+    "unresolved_imports": 830,
+    "same_mutable_owners": 8,
+    "source_functions_added": 4,
+    "old_code_and_storage_preserved": true,
+    "object_sha256": "e640f988cf2690dd1bceae390d869b252d86b74bbb4af97ea0d7de6ddf7a734d",
+    "private_ROOT_manifest_sha256": "c5b4215ac6ac2f753eccc89abe1fddc09e8e3a68cc34a2f9c3cd72f97eb40ee2",
+    "fresh_reproduction_performed": false,
+    "runtime_verified": false,
+    "additional_exact_original_matches": 0
+  }
 }

@@ -36,13 +36,18 @@ percentage follows from the emitted function count.
 - `game-list-safe-iterator-source` now supplies all three complete iterator
   functions needed by entity restoration: construction, advancement, and
   destruction. The implementations retain mutation-sensitive link handling and
-  use the existing genuine deletion provider. All three compiled successfully;
-  behavior execution and integration remain pending.
+  use the existing genuine deletion provider. All three compiled and integrated
+  into private V44. Sixteen bounded fixtures passed 51 original/generated paired
+  calls; one additional pair closed a specific constructor branch gap without
+  repeating earlier cases. Persistent list/marker memory and saved low64
+  registers matched. Fixture removals between calls are explicit environment
+  changes, not executed game callbacks. Delete flag one, physical access/frame
+  behavior, interrupts, and game runtime remain unverified.
 - `game-megatile-name-pool-source` supplies the complete name-pool routine used
   six times by megatile restoration. It preserves interior suffix matching,
   mismatch advancement, live counter reads, and genuine string helper calls.
-  Its first compilation and focused output review passed. The pool owner,
-  capacity, behavior execution, and integration remain unfinished.
+  Its first compilation, output review, and private V44 integration passed.
+  The pool owner, capacity, behavior execution, and game runtime remain unfinished.
 - `game-software-arithmetic-source-v2` reconstructs multiplication, division,
   and remainder algorithms with explicit accumulator capture and restoration.
   All 1,596 bounded normal/correction comparisons matched return values and
@@ -57,6 +62,12 @@ percentage follows from the emitted function count.
   interrupt, and exception behavior remain unresolved. Do not remove the holds
   to infer a runnable interpreter. A separate private diagnostic compilation
   of the worker does not validate this transport or its integration.
+
+The current private V44 partial object integrates the four new definitions with
+the unchanged V43 inputs: 268 inputs, 392 emitted function bodies, 232,940 body
+bytes, and 830 unresolved imports. All prior code/storage is preserved; the pool
+view remains unowned and unbound. This first link has not been reproduced and is
+distinct from the 262-input public build recipe and its 386-body output.
 
 ## Checking this publication
 
