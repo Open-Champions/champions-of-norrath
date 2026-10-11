@@ -190,6 +190,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_network_message_callbacks_view.cpp",
                     "norrath_network_message_callbacks_view", 64, require_zero=True)
 
+    def test_local_flags(self):
+        self.expect("norrath_network_player_local_flags_view.cpp",
+                    "norrath_network_player_local_flags_view", 3 * 17632 + 1, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
