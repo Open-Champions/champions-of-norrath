@@ -49,12 +49,17 @@ extern "C" const unsigned char norrath_archive_zero_record_format_view[] = {
 };
 // These authored views are the original objects. cdBusy is 0x00483ffc,
 // command is 0x006d86b0, cdResult is 0x00486924, and noNewVags is 0x00483f90.
+// isDual is the 4 zero bytes at 0x00483ff4, dualLayer2Start the 4 zero bytes
+// at 0x00483ff8, and CDmode the 4 zero bytes at 0x00486920.
 #if defined(__APPLE__)
 asm(
     ".globl _cdBusy\n.set _cdBusy, _norrath_archive_read_active_view\n"
     ".globl _command\n.set _command, _norrath_archive_command_view\n"
     ".globl _cdResult\n.set _cdResult, _norrath_archive_completion_pointer_view\n"
     ".globl _noNewVags\n.set _noNewVags, _norrath_archive_no_new_vags_view\n"
+    ".globl _isDual\n.set _isDual, _norrath_archive_directory_switch_view\n"
+    ".globl _dualLayer2Start\n.set _dualLayer2Start, _norrath_archive_layer_bias_view\n"
+    ".globl _CDmode\n.set _CDmode, _norrath_archive_read_mode_view\n"
 );
 #else
 asm(
@@ -62,5 +67,8 @@ asm(
     ".globl command\n.set command, norrath_archive_command_view\n"
     ".globl cdResult\n.set cdResult, norrath_archive_completion_pointer_view\n"
     ".globl noNewVags\n.set noNewVags, norrath_archive_no_new_vags_view\n"
+    ".globl isDual\n.set isDual, norrath_archive_directory_switch_view\n"
+    ".globl dualLayer2Start\n.set dualLayer2Start, norrath_archive_layer_bias_view\n"
+    ".globl CDmode\n.set CDmode, norrath_archive_read_mode_view\n"
 );
 #endif
