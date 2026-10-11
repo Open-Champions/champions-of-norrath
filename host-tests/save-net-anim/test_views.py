@@ -139,6 +139,10 @@ class ViewTests(unittest.TestCase):
     def test_pre_start_key(self):
         self.expect("norrath_mc_pre_start_key_bytes.cpp", "norrath_mc_pre_start_key_bytes", 9, b"preStart\0")
 
+    def test_objects_key(self):
+        self.expect("norrath_mc_objects_section_key_bytes.cpp",
+                    "norrath_mc_objects_section_key_bytes", 11, b"objects.ob\0")
+
 
 if __name__ == "__main__":
     unittest.main()
