@@ -55,17 +55,41 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 /tmp/display-disable-check
 ```
 
+## Display-list words
+
+These six objects are 4 bytes in `.sdata`. Under `-G0` the three zero words land in BSS and the three nonzero words land in `.data`. The EE bytes match the file bytes. None of these units emits a function. `engineFrameStart` writes `gstart` and `glistp`. `simpleDrawLoop` writes `frameNm` and reads `coreClearColor`. The pause-menu check reads `GLISTSIZE`, `glistp`, and `gstart`. `gameInit` later replaces `engineBrightnessCorrection` from `MC_GameConfig+4`; this unit is the initial file word.
+
+| Symbol | Address | File bytes | Value |
+| --- | --- | --- | --- |
+| `frameNm` | `0x004844a4` | `00 00 00 00` | 0 |
+| `gstart` | `0x004844c4` | `00 00 00 00` | 0 |
+| `glistp` | `0x004844c8` | `00 00 00 00` | 0 |
+| `GLISTSIZE` | `0x00484468` | `b8 88 00 00` | 35000 |
+| `coreClearColor` | `0x0048667c` | `00 00 00 80` | `0x80000000` |
+| `engineBrightnessCorrection` | `0x00484420` | `00 00 00 3f` | `0x3f000000` |
+
+Host checks compare those bytes and fail if a one-byte change still compares equal. Example:
+
+```sh
+c++ -std=c++17 -O2 -Wall -Wextra -Werror -fsanitize=address,undefined \
+  -I experimental/sources/frame-loop-glist-size \
+  experimental/sources/frame-loop-glist-size/host_check.cpp -o /tmp/glist-size-check
+/tmp/glist-size-check
+```
+
+The same command shape was used for `frameNm`, `glistp`, `gstart`, `coreClearColor`, and `engineBrightnessCorrection`.
+
 ## Imports closed
 
-`engineFrameEnd__Fb`, `engineFrameStart__FUib`, `engineSetDisplayDisable__Fi`.
+`engineFrameEnd__Fb`, `engineFrameStart__FUib`, `engineSetDisplayDisable__Fi`, `engineBrightnessCorrection`, `frameNm`, `glistp`, `gstart`, `GLISTSIZE`, `coreClearColor`.
+
+`engineRemoveTask__FPFv_v` is not here. The scheduler package defines it.
 
 ## Imports opened
 
-`DIntr`, `EIntr`, `FlushCache`, `PollSema`, `WaitSema`, `coreLoadingScreenRunning`, `doSuperSample__Fiib`, `draw`, `drawFrameNm`, `drawStart__Fv`, `drawWaitFinished__Fv`, `engineDisplayDisable`, `engineSetVideoMode__Fb`, `frameStartPacket__FUibi`, `fullFrameMode`, `glistp`, `gstart`, `lastFrameVBlankCount`, `lightVU0StoppedProcessing__Fv`, `powerOffMode`, `sceGsSyncPath`, `scePrintf`, `switchTo30Counter.798`, `switchToHalfCounter.797`, `texturePackDown__Fv`, `vblankCount`, `vblankField`, `vblankSemaphore`, `vblankSemaphore2`.
+`DIntr`, `EIntr`, `FlushCache`, `PollSema`, `WaitSema`, `coreLoadingScreenRunning`, `doSuperSample__Fiib`, `draw`, `drawFrameNm`, `drawStart__Fv`, `drawWaitFinished__Fv`, `engineDisplayDisable`, `engineSetVideoMode__Fb`, `frameStartPacket__FUibi`, `fullFrameMode`, `lastFrameVBlankCount`, `lightVU0StoppedProcessing__Fv`, `powerOffMode`, `sceGsSyncPath`, `scePrintf`, `switchTo30Counter.798`, `switchToHalfCounter.797`, `texturePackDown__Fv`, `vblankCount`, `vblankField`, `vblankSemaphore`, `vblankSemaphore2`.
 
-`gstart` and `glistp` are defined by later units in this package. Until those units are linked, this object leaves them unresolved.
-
-`scePrintf`, `DIntr`, `EIntr`, `WaitSema`, and `PollSema` already exist as names elsewhere. This unit references them and does not define them.
+`scePrintf`, `DIntr`, `EIntr`, `WaitSema`, `PollSema`, and `FlushCache` already exist as names elsewhere. These units reference them and do not define them. `engineDisplayDisable` stays unresolved; its file word is 3, and this package does not own that object.
 
 ## Build-plan entries needed
 
@@ -111,12 +135,84 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 }
 ```
 
-Do not add any `host_check.cpp`. The integrator assigns `input_order`.
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "frame_nm.o",
+  "profile": "authored_cpp",
+  "sha256": "85f69867540303854ead89778bc07a36c069f551c19ec6544954cd0dd441f89c",
+  "source": "sources/frame-loop-frame-nm/frame_nm.cpp",
+  "emitted_functions": []
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "glistp.o",
+  "profile": "authored_cpp",
+  "sha256": "684051e9f824df564a6a0d2be8fbc00add99d3aaa63ef400d969b5ea2da9db6f",
+  "source": "sources/frame-loop-glistp/glistp.cpp",
+  "emitted_functions": []
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "gstart.o",
+  "profile": "authored_cpp",
+  "sha256": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
+  "source": "sources/frame-loop-gstart/gstart.cpp",
+  "emitted_functions": []
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "glist_size.o",
+  "profile": "authored_cpp",
+  "sha256": "97109965d0378b58114473ef0805b2b2b407e0d264fe5b64f39353620cc6b147",
+  "source": "sources/frame-loop-glist-size/glist_size.cpp",
+  "emitted_functions": []
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "clear_color.o",
+  "profile": "authored_cpp",
+  "sha256": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
+  "source": "sources/frame-loop-clear-color/clear_color.cpp",
+  "emitted_functions": []
+}
+```
+
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "brightness.o",
+  "profile": "authored_cpp",
+  "sha256": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
+  "source": "sources/frame-loop-brightness/brightness.cpp",
+  "emitted_functions": []
+}
+```
+
+Do not add any `host_check.cpp`. The integrator assigns `input_order`. A private link of these nine objects, kept outside git, resolves `gstart` and `glistp` inside the package and leaves the opened names above undefined. It adds no COMMON symbols.
 
 ## Authored but never executed
 
-`engineFrameEnd__Fb`, `engineFrameStart__FUib`, and `engineSetDisplayDisable__Fi`. The host checks ran on this Mac, and the reviewed EE compiler produced relocatable objects. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented.
+`engineFrameEnd__Fb`, `engineFrameStart__FUib`, and `engineSetDisplayDisable__Fi`, plus the six words. The host checks ran on this Mac, and the reviewed EE compiler produced relocatable objects. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented. The words were not read by a running game.
 
 ## Unknown
 
-What 9766, 9767, 29299, 4884, and the threshold 31 select. The hardware effect of reading and clearing `0x10000000`. Whether `PollSema` returning the semaphore id means the wait is unfinished; the compare is what the instructions do. The ELF size of `draw`, and the meaning of its words past the offsets used. The zero store at address 0 faults on the EE if the canary check is reached; the host store returns. `powerOffMode` has no return path in the image. Interrupts between the paired `vblankCount` loads were not sampled. No startup stage has run.
+What 9766, 9767, 29299, 4884, and the threshold 31 select. The hardware effect of reading and clearing `0x10000000`. Whether `PollSema` returning the semaphore id means the wait is unfinished; the compare is what the instructions do. The ELF size of `draw`, and the meaning of its words past the offsets used. The zero store at address 0 faults on the EE if the canary check is reached; the host store returns. `powerOffMode` has no return path in the image. Interrupts between the paired `vblankCount` loads were not sampled. Why `0x0038f9e0` sits 0x10000 bytes into `packetBuffer` is not established beyond that arithmetic; the instruction uses the immediate. `GLISTSIZE` is 35000 and is not that `0x445c0` stride. No startup stage has run.
