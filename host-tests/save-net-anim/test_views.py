@@ -186,6 +186,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_inventory_animation_resource_names_view.cpp",
                     "norrath_inventory_animation_resource_names_view", 112, content)
 
+    def test_message_callbacks(self):
+        self.expect("norrath_network_message_callbacks_view.cpp",
+                    "norrath_network_message_callbacks_view", 64, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
