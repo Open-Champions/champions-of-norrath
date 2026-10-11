@@ -33,3 +33,20 @@ Do not add `host_check.cpp`
 as a plan input; it uses host headers. `snapshot.json` must record both files
 before `tools/check_source_snapshot.py` will accept the tree. This note does
 not edit that snapshot.
+
+## DMA chain request
+
+Observed `sceSifSetDChain` at 0x002d54c0 is sixteen bytes: service 120, then
+return. It writes no argument. `isceSifSetDChain` is service -120 and is not
+this import. The published symbol is `norrath_sound_set_dma_chain`.
+
+Same host checker shape, address `0x002d54c0`, object symbol
+`norrath_sound_set_dma_chain`. The compiled body matched the pinned
+executable.
+
+### Build-plan entry
+
+Profile `authored_entry_asm`. Header closure empty. Object name
+`set_dma_chain.o`. Source `sources/audio-set-dma-chain/set_dma_chain.S`.
+SHA-256 `488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e`.
+Do not plan `host_check.cpp`.
