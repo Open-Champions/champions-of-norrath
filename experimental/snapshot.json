@@ -8493,6 +8493,355 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/subsystem-inits-world/world_init.cpp"
+    },
+    {
+      "input_order": 649,
+      "component": "gs-dma-kernel-wait-sema",
+      "object_name": "wait_sema.o",
+      "private_object_sha256": "99c2fe3dcaa02327ee2bde07daa5b9e580caaaff10bf4137b593b4f49fb6f676",
+      "emitted_functions": [
+        {
+          "name": "WaitSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-wait-sema/wait_sema.S"
+    },
+    {
+      "input_order": 650,
+      "component": "gs-dma-kernel-add-intc-handler",
+      "object_name": "add_intc_handler.o",
+      "private_object_sha256": "0ac7e506deae84e81a91e7f8ec612df58a639ad175fe94c66f556b8d376661f1",
+      "emitted_functions": [
+        {
+          "name": "AddIntcHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-add-intc-handler/add_intc_handler.S"
+    },
+    {
+      "input_order": 651,
+      "component": "gs-dma-kernel-poll-sema",
+      "object_name": "poll_sema.o",
+      "private_object_sha256": "53f6f3d2692e5078f9e46c690b9e4d8127042baad7f3874519eb615f1dd30728",
+      "emitted_functions": [
+        {
+          "name": "PollSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-poll-sema/poll_sema.S"
+    },
+    {
+      "input_order": 652,
+      "component": "gs-dma-kernel-isignal-sema",
+      "object_name": "isignal_sema.o",
+      "private_object_sha256": "e9601a64df12fd21f2a6cba03424e539eea47deee4e8b455d68c949f7dc4984d",
+      "emitted_functions": [
+        {
+          "name": "iSignalSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-isignal-sema/isignal_sema.S"
+    },
+    {
+      "input_order": 653,
+      "component": "gs-dma-kernel-remove-intc-handler",
+      "object_name": "remove_intc_handler.o",
+      "private_object_sha256": "41b3ec421bbd2d36c52ec6b7e9cf0d18181782924d30f96587c6591d364bb218",
+      "emitted_functions": [
+        {
+          "name": "RemoveIntcHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-remove-intc-handler/remove_intc_handler.S"
+    },
+    {
+      "input_order": 654,
+      "component": "gs-dma-kernel-set-gs-crt",
+      "object_name": "set_gs_crt.o",
+      "private_object_sha256": "c41b3ec1f0b68d3ee53cc856b2196a9241de28a64984931f42fe1bf120c7c701",
+      "emitted_functions": [
+        {
+          "name": "SetGsCrt",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-set-gs-crt/set_gs_crt.S"
+    },
+    {
+      "input_order": 655,
+      "component": "gs-dma-kernel-gs-put-imr",
+      "object_name": "gs_put_imr.o",
+      "private_object_sha256": "10df82d0d9a3e25b4e4a22286ce4d47011bc2e24ad83f652b5883668b8c63917",
+      "emitted_functions": [
+        {
+          "name": "GsPutIMR",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-gs-put-imr/gs_put_imr.S"
+    },
+    {
+      "input_order": 656,
+      "component": "gs-dma-kernel-get-gs-dxdy-offset",
+      "object_name": "get_gs_dxdy_offset.o",
+      "private_object_sha256": "26e24bf7605eadfed091fc1599e9ef6247ffc640a5394cedf501f5e5bc7766f6",
+      "emitted_functions": [
+        {
+          "name": "_GetGsDxDyOffset",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-get-gs-dxdy-offset/get_gs_dxdy_offset.S"
+    },
+    {
+      "input_order": 657,
+      "component": "gs-dma-kernel-enable-intc",
+      "object_name": "enable_intc.o",
+      "private_object_sha256": "f85b3dc0d7fdb958c96d2f0423f56dcfbd76c2c3c4849c40f1a6f588ea03f0aa",
+      "emitted_functions": [
+        {
+          "name": "EnableIntc",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-enable-intc/enable_intc.cpp"
+    },
+    {
+      "input_order": 658,
+      "component": "gs-dma-kernel-disable-intc",
+      "object_name": "disable_intc.o",
+      "private_object_sha256": "cda78ab2bbaf43e8584e92dbf8c2390f8c3d8646d3a39fdbf3b282e61935627c",
+      "emitted_functions": [
+        {
+          "name": "DisableIntc",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-disable-intc/disable_intc.cpp"
+    },
+    {
+      "input_order": 659,
+      "component": "gs-dma-kernel-get-gparam",
+      "object_name": "get_gparam.o",
+      "private_object_sha256": "9990bbdc068aca9caad610f33b154036a9e19a655cf3a1468513a9fc1f1dfaba",
+      "emitted_functions": [
+        {
+          "name": "sceGsGetGParam",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-get-gparam/get_gparam.cpp"
+    },
+    {
+      "input_order": 660,
+      "component": "gs-dma-kernel-reset-graph",
+      "object_name": "reset_graph.o",
+      "private_object_sha256": "818e4355e0ddc06e120e7b22823d40237768da9e26cff6caa5509da9423f6f6b",
+      "emitted_functions": [
+        {
+          "name": "sceGsResetGraph",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-reset-graph/reset_graph.cpp"
+    },
+    {
+      "input_order": 661,
+      "component": "gs-dma-kernel-reset-path",
+      "object_name": "reset_path.o",
+      "private_object_sha256": "38996c1fc613ab7da455b7ed0e38a607c8b02f4525d0df98c4115f3bb318ec0c",
+      "emitted_functions": [
+        {
+          "name": "sceGsResetPath",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-reset-path/reset_path.S"
+    },
+    {
+      "input_order": 662,
+      "component": "gs-dma-kernel-dma-get-chan",
+      "object_name": "dma_get_chan.o",
+      "private_object_sha256": "7961233cf0c06804756641999abd37c6114226cf890720e427fd2a2b7a227b26",
+      "emitted_functions": [
+        {
+          "name": "sceDmaGetChan",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-dma-get-chan/dma_get_chan.cpp"
+    },
+    {
+      "input_order": 663,
+      "component": "gs-dma-kernel-check-address",
+      "object_name": "check_address.o",
+      "private_object_sha256": "6e6cfc86f7109a6472daa53278ce1aad9dfb1bb82c7c436bea84eabb9206b635",
+      "emitted_functions": [
+        {
+          "name": "CheckAddress",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-check-address/check_address.cpp"
+    },
+    {
+      "input_order": 664,
+      "component": "gs-dma-kernel-memclr",
+      "object_name": "memclr.o",
+      "private_object_sha256": "801716534a3f146c7ccc8437f4cc5f61800069804b82a3ff6174e49a4b9e7631",
+      "emitted_functions": [
+        {
+          "name": "memclr",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-memclr/memclr.cpp"
+    },
+    {
+      "input_order": 665,
+      "component": "gs-dma-kernel-wait-dma",
+      "object_name": "wait_dma.o",
+      "private_object_sha256": "828cc50c0f55d2d1dbda8829e159d0282a24ddd6dee23ac9e2d62dee66ac9b11",
+      "emitted_functions": [
+        {
+          "name": "WaitDma",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-wait-dma/wait_dma.cpp"
+    },
+    {
+      "input_order": 666,
+      "component": "gs-dma-kernel-dma-sync",
+      "object_name": "dma_sync.o",
+      "private_object_sha256": "f15dcbe9e0680b2a7b6227cc8e65138b0eba1cf8196c40fe314b6e78628cffb0",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSync",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-dma-sync/dma_sync.cpp"
+    },
+    {
+      "input_order": 667,
+      "component": "gs-dma-kernel-dma-send-n",
+      "object_name": "dma_send_n.o",
+      "private_object_sha256": "8f9513df66c6ccbd40b3bec25f21ce60f1fca11bdc15f79dddaad40aca5c3f63",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSendN",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-dma-send-n/dma_send_n.cpp"
+    },
+    {
+      "input_order": 668,
+      "component": "gs-dma-kernel-dma-reset",
+      "object_name": "dma_reset.o",
+      "private_object_sha256": "821ebaf8772a36f03bcbde9293b910cca4e548e09ca82dbb11216797ab051269",
+      "emitted_functions": [
+        {
+          "name": "sceDmaReset",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-dma-reset/dma_reset.cpp"
+    },
+    {
+      "input_order": 669,
+      "component": "gs-dma-kernel-set-def-disp-env",
+      "object_name": "set_def_disp_env.o",
+      "private_object_sha256": "47f004d04e243cc2683baa84b01a29887ea9b13996b659cd59c5be6452e29fa9",
+      "emitted_functions": [
+        {
+          "name": "sceGsSetDefDispEnv",
+          "compiled_body_bytes": 1104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-set-def-disp-env/set_def_disp_env.cpp"
+    },
+    {
+      "input_order": 670,
+      "component": "gs-dma-kernel-put-disp-env",
+      "object_name": "put_disp_env.o",
+      "private_object_sha256": "20a0f852fccd2d703946a14c811c66590ec2e6e50775d50f5d8de97a96533273",
+      "emitted_functions": [
+        {
+          "name": "sceGsPutDispEnv",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-put-disp-env/put_disp_env.cpp"
+    },
+    {
+      "input_order": 671,
+      "component": "gs-dma-kernel-sync-path",
+      "object_name": "sync_path.o",
+      "private_object_sha256": "58da11fa0159b79e80ed84e6b269d718baf78b7b4a14c23c24bd7c4e4fd1ed0e",
+      "emitted_functions": [
+        {
+          "name": "_ZL12norrath_dumpv",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "sceGsSyncPath",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-sync-path/sync_path.cpp"
+    },
+    {
+      "input_order": 672,
+      "component": "gs-dma-kernel-vblank-state",
+      "object_name": "vblank_state.o",
+      "private_object_sha256": "7a7f6329c4d53ce89c6a3c6b3bdf8d851f64ce1ce5d7be95d30e7f895c841149",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-vblank-state/vblank_state.cpp"
+    },
+    {
+      "input_order": 673,
+      "component": "gs-dma-kernel-vblank-handler",
+      "object_name": "vblank_handler.o",
+      "private_object_sha256": "4229b1d2699b696623343eb6e84d4dae2ccf1e5fbc0b2d1bee7b2c11dc7e14e6",
+      "emitted_functions": [
+        {
+          "name": "vblankHandler__Fi",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp"
     }
   ],
   "drafts": [
@@ -9749,6 +10098,48 @@
     "sources/gameobject-base-msg-trigger/msg_trigger.cpp": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
     "sources/gameobject-base-typeinfo/host_check.cpp": "8f61f9c0a70e15b28e4194321f8d2b0dbb9788c9e9f81c1b2d01931d282337f2",
     "sources/gameobject-base-typeinfo/typeinfo.cpp": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
+    "sources/gs-dma-kernel-add-intc-handler/add_intc_handler.S": "854cc9b92ca70ac4aaa4ec9c560b8241488d1b83997bb157f109238783f71c3f",
+    "sources/gs-dma-kernel-body-check/host_check.cpp": "ccbf5483b08e4d4508b1984dbfbdea72c8864c4830b6bd57832fcb9b9d9e6019",
+    "sources/gs-dma-kernel-check-address/check_address.cpp": "7378c646cb2a9191d4004e19052f83b16b9e3210d023d8b51b738424c7deccc6",
+    "sources/gs-dma-kernel-check-address/host_contract.cpp": "5b2953130dac5e23d126f753d59433e88a7200452d1456a3631689566fc47dd0",
+    "sources/gs-dma-kernel-disable-intc/disable_intc.cpp": "514ab62ceda3e37bfeddecccb48ea52e864823621f9adc8d7337be02f6888e15",
+    "sources/gs-dma-kernel-disable-intc/host_contract.cpp": "e2b50405fad689dd34c24e38dcdb04ad1b347a3490b5725dac13e1c99200198d",
+    "sources/gs-dma-kernel-dma-get-chan/dma_get_chan.cpp": "2ff4e9f6eceae942cc28a63169844c84d36063e56adb0f4abd12115dce3ef28c",
+    "sources/gs-dma-kernel-dma-get-chan/host_contract.cpp": "633f5706afd96bc7dcf4233a4d9fe6fbfa7fa53c38625846627694a59580a1c1",
+    "sources/gs-dma-kernel-dma-reset/dma_reset.cpp": "0bd01401796a3a52090e78e43efdad7da77d662c16e96517ea4d9f7998f0f070",
+    "sources/gs-dma-kernel-dma-reset/host_contract.cpp": "2e652791c1e0434cfd959b4c75f046570dc15dd2527f467b497f5955bf5aa305",
+    "sources/gs-dma-kernel-dma-send-n/dma_send_n.cpp": "b87e3fc45964a76f2eea530dbf1c989c7bbb0e9d48f489d373bb70cf83ff37b1",
+    "sources/gs-dma-kernel-dma-send-n/host_contract.cpp": "c6e87e8af60fb57f2b2d51a29d4f4f1fd924c6c6dde28d83af7ae04d233d556c",
+    "sources/gs-dma-kernel-dma-sync/dma_sync.cpp": "c78aa2bed44a1d1b889c34f9c26c82b97d9319779a6ed0165c981593a245ade5",
+    "sources/gs-dma-kernel-dma-sync/host_contract.cpp": "4d4ed60e8b0940ea164fd7a5611dfd22f3f996fe443a1587ad6a98035c74bb01",
+    "sources/gs-dma-kernel-enable-intc/enable_intc.cpp": "c1d3ba1e833cad9c5e4860995cb8865bab8859cc26dfbb4c758fa0f66e9ceab5",
+    "sources/gs-dma-kernel-enable-intc/host_contract.cpp": "154927ee2f86944cca04e6aa61792faadacd0094ea8299db1cc9eb644189ced7",
+    "sources/gs-dma-kernel-get-gparam/get_gparam.cpp": "ef40467bc99f4c4a4228ca3e1ce88d4877794971de4532f5cad4ca4c7dd8289a",
+    "sources/gs-dma-kernel-get-gparam/host_contract.cpp": "0b7edfe65887920c18895dd7dd57b9a72aeab4ba40e1728c895284df5645628b",
+    "sources/gs-dma-kernel-get-gs-dxdy-offset/get_gs_dxdy_offset.S": "75ad40f9d07ff59332416804e7f8119c9e3b4a4d79794ec10f3e6a35663e2c5e",
+    "sources/gs-dma-kernel-gs-put-imr/gs_put_imr.S": "eebe155d360aca68e84646f07bf83a7f7a94c370d2973b4d99151e58f314f6cc",
+    "sources/gs-dma-kernel-isignal-sema/isignal_sema.S": "15b93ae93d4e93efdf05c242f334a70e91dea8a47c573360d1ebb8388dfeda11",
+    "sources/gs-dma-kernel-memclr/host_contract.cpp": "9c330af66b98445a6ff4fd12bdf58841a171409deeb1a01b8be3667f9bc2cbd6",
+    "sources/gs-dma-kernel-memclr/memclr.cpp": "a31cd8ad9b0c09a5e6446bcab13380205e98984f3b2b20756e771f47b76da101",
+    "sources/gs-dma-kernel-poll-sema/poll_sema.S": "60b7918e81e7e677b79616aa2fbccc902677ce64872b0d5c8742bf9ee06becd8",
+    "sources/gs-dma-kernel-put-disp-env/host_contract.cpp": "e096f4e743d6a98ed85c9c07d0ee4faef7043024874541ede76de15136509003",
+    "sources/gs-dma-kernel-put-disp-env/put_disp_env.cpp": "91b51b7103907efc2e9065129d6fa0ec54591736e928c8718f323724f68e123f",
+    "sources/gs-dma-kernel-remove-intc-handler/remove_intc_handler.S": "c7b034773a46d45f8f40e87a292c3a0086d8112a7da7e31b52b674e7f46163ad",
+    "sources/gs-dma-kernel-reset-graph/host_contract.cpp": "f8a358b28d33eba997b56d51d7a51c79939bff1a6f11ee31e9dc338c94371608",
+    "sources/gs-dma-kernel-reset-graph/reset_graph.cpp": "217a9656287fa093643c0d836e9f37e45f00d8f0790cf61a1127521eb1d6e8e9",
+    "sources/gs-dma-kernel-reset-path/reset_path.S": "9291d7005cd39f81d0d5ef931b0274a090fbc936d2920d6594eb97ffe760c90b",
+    "sources/gs-dma-kernel-set-def-disp-env/host_contract.cpp": "bb17edefcf2f68567bc94587179f5791baf1d9ef45a85fc1cf6da6879bdf48a1",
+    "sources/gs-dma-kernel-set-def-disp-env/set_def_disp_env.cpp": "61a1b4d3fa98b063d3860a72919cf6e3b3313721060a25d8b2cf999b89bfc22b",
+    "sources/gs-dma-kernel-set-gs-crt/set_gs_crt.S": "4597c7318592fa9e8af8ea17de467fba14d49f488f51dbc98001dbd0c5e26d1f",
+    "sources/gs-dma-kernel-sync-path/host_contract.cpp": "e296a7d0a8e08b787da04f843629f43c5fe2991871678cdf6528e33d6135e863",
+    "sources/gs-dma-kernel-sync-path/sync_path.cpp": "fc59efc4f5f2b2caba2b6050ca87efe81f89a77ad8a1b86c2380f15fcb581290",
+    "sources/gs-dma-kernel-vblank-handler/host_contract.cpp": "273d359baba97eaafa1c5c797dbc6f9914fc18b20adaa8475f0e301ced81e3b5",
+    "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp": "69c30b1d85fba4187c76cdaacbcbac02cacb585f05559dd635b093526d4af0ee",
+    "sources/gs-dma-kernel-vblank-state/host_contract.cpp": "3e52d802a802b5286ecb0c852f7585cd92e10f80e05cd825b83aa892e7a31395",
+    "sources/gs-dma-kernel-vblank-state/vblank_state.cpp": "84a689b6b29fd940935160e7423d7162e6101da48adc9b5831fe994c691fcec0",
+    "sources/gs-dma-kernel-wait-dma/host_contract.cpp": "c93162b78cf4c10fb816c10d74e488b329aeb0cbab16967ced86518ccf178c57",
+    "sources/gs-dma-kernel-wait-dma/wait_dma.cpp": "b192e1852a53238ab1e7e0f8ad3e0d940d9c062343f6920e5de9d2ea01fcc9ff",
+    "sources/gs-dma-kernel-wait-sema/wait_sema.S": "7a90dd1fdbd7a4221ed9575f204c7d37e2a3af0087c984c0f710f60dc06f4960",
     "sources/items-player-ability-coefficients/ability_coefficients.cpp": "c39a8b37853410828119bde82e771cc134770b71ca9c8f184b77e803df38f38b",
     "sources/items-player-ability-coefficients/host_test.cpp": "38f68269b5d4a4020fcc0d4c4a9f90adda3a8b2c8c0e8baa7de533554455590a",
     "sources/items-player-active-count/active_count.cpp": "5a2074a09b3c7bd1177cc4ca7aa25b2e2054d3e1f4b55ab5cb22874d8acd1845",
@@ -10670,11 +11061,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 649,
-    "authored_default_inputs": 647,
+    "selected_inputs": 674,
+    "authored_default_inputs": 672,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 551,
-    "compiled_body_bytes_from_accepted_inputs": 291908,
+    "emitted_function_definitions_including_helpers": 576,
+    "compiled_body_bytes_from_accepted_inputs": 296720,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10687,7 +11078,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 336
+    "package_selected_inputs": 361
   },
   "startup_implementations": [
     {
@@ -15673,6 +16064,430 @@
       ],
       "host_files": [
         "sources/subsystem-inits-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-wait-sema/wait_sema.S",
+      "source_sha256": "7a90dd1fdbd7a4221ed9575f204c7d37e2a3af0087c984c0f710f60dc06f4960",
+      "object_sha256": "99c2fe3dcaa02327ee2bde07daa5b9e580caaaff10bf4137b593b4f49fb6f676",
+      "emitted_functions": [
+        {
+          "name": "WaitSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-add-intc-handler/add_intc_handler.S",
+      "source_sha256": "854cc9b92ca70ac4aaa4ec9c560b8241488d1b83997bb157f109238783f71c3f",
+      "object_sha256": "0ac7e506deae84e81a91e7f8ec612df58a639ad175fe94c66f556b8d376661f1",
+      "emitted_functions": [
+        {
+          "name": "AddIntcHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-poll-sema/poll_sema.S",
+      "source_sha256": "60b7918e81e7e677b79616aa2fbccc902677ce64872b0d5c8742bf9ee06becd8",
+      "object_sha256": "53f6f3d2692e5078f9e46c690b9e4d8127042baad7f3874519eb615f1dd30728",
+      "emitted_functions": [
+        {
+          "name": "PollSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-isignal-sema/isignal_sema.S",
+      "source_sha256": "15b93ae93d4e93efdf05c242f334a70e91dea8a47c573360d1ebb8388dfeda11",
+      "object_sha256": "e9601a64df12fd21f2a6cba03424e539eea47deee4e8b455d68c949f7dc4984d",
+      "emitted_functions": [
+        {
+          "name": "iSignalSema",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-remove-intc-handler/remove_intc_handler.S",
+      "source_sha256": "c7b034773a46d45f8f40e87a292c3a0086d8112a7da7e31b52b674e7f46163ad",
+      "object_sha256": "41b3ec421bbd2d36c52ec6b7e9cf0d18181782924d30f96587c6591d364bb218",
+      "emitted_functions": [
+        {
+          "name": "RemoveIntcHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-set-gs-crt/set_gs_crt.S",
+      "source_sha256": "4597c7318592fa9e8af8ea17de467fba14d49f488f51dbc98001dbd0c5e26d1f",
+      "object_sha256": "c41b3ec1f0b68d3ee53cc856b2196a9241de28a64984931f42fe1bf120c7c701",
+      "emitted_functions": [
+        {
+          "name": "SetGsCrt",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-gs-put-imr/gs_put_imr.S",
+      "source_sha256": "eebe155d360aca68e84646f07bf83a7f7a94c370d2973b4d99151e58f314f6cc",
+      "object_sha256": "10df82d0d9a3e25b4e4a22286ce4d47011bc2e24ad83f652b5883668b8c63917",
+      "emitted_functions": [
+        {
+          "name": "GsPutIMR",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-get-gs-dxdy-offset/get_gs_dxdy_offset.S",
+      "source_sha256": "75ad40f9d07ff59332416804e7f8119c9e3b4a4d79794ec10f3e6a35663e2c5e",
+      "object_sha256": "26e24bf7605eadfed091fc1599e9ef6247ffc640a5394cedf501f5e5bc7766f6",
+      "emitted_functions": [
+        {
+          "name": "_GetGsDxDyOffset",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-enable-intc/enable_intc.cpp",
+      "source_sha256": "c1d3ba1e833cad9c5e4860995cb8865bab8859cc26dfbb4c758fa0f66e9ceab5",
+      "object_sha256": "f85b3dc0d7fdb958c96d2f0423f56dcfbd76c2c3c4849c40f1a6f588ea03f0aa",
+      "emitted_functions": [
+        {
+          "name": "EnableIntc",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-enable-intc/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-disable-intc/disable_intc.cpp",
+      "source_sha256": "514ab62ceda3e37bfeddecccb48ea52e864823621f9adc8d7337be02f6888e15",
+      "object_sha256": "cda78ab2bbaf43e8584e92dbf8c2390f8c3d8646d3a39fdbf3b282e61935627c",
+      "emitted_functions": [
+        {
+          "name": "DisableIntc",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-disable-intc/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-get-gparam/get_gparam.cpp",
+      "source_sha256": "ef40467bc99f4c4a4228ca3e1ce88d4877794971de4532f5cad4ca4c7dd8289a",
+      "object_sha256": "9990bbdc068aca9caad610f33b154036a9e19a655cf3a1468513a9fc1f1dfaba",
+      "emitted_functions": [
+        {
+          "name": "sceGsGetGParam",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-get-gparam/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-reset-graph/reset_graph.cpp",
+      "source_sha256": "217a9656287fa093643c0d836e9f37e45f00d8f0790cf61a1127521eb1d6e8e9",
+      "object_sha256": "818e4355e0ddc06e120e7b22823d40237768da9e26cff6caa5509da9423f6f6b",
+      "emitted_functions": [
+        {
+          "name": "sceGsResetGraph",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-reset-graph/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-reset-path/reset_path.S",
+      "source_sha256": "9291d7005cd39f81d0d5ef931b0274a090fbc936d2920d6594eb97ffe760c90b",
+      "object_sha256": "38996c1fc613ab7da455b7ed0e38a607c8b02f4525d0df98c4115f3bb318ec0c",
+      "emitted_functions": [
+        {
+          "name": "sceGsResetPath",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-body-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-dma-get-chan/dma_get_chan.cpp",
+      "source_sha256": "2ff4e9f6eceae942cc28a63169844c84d36063e56adb0f4abd12115dce3ef28c",
+      "object_sha256": "7961233cf0c06804756641999abd37c6114226cf890720e427fd2a2b7a227b26",
+      "emitted_functions": [
+        {
+          "name": "sceDmaGetChan",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-dma-get-chan/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-check-address/check_address.cpp",
+      "source_sha256": "7378c646cb2a9191d4004e19052f83b16b9e3210d023d8b51b738424c7deccc6",
+      "object_sha256": "6e6cfc86f7109a6472daa53278ce1aad9dfb1bb82c7c436bea84eabb9206b635",
+      "emitted_functions": [
+        {
+          "name": "CheckAddress",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-check-address/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-memclr/memclr.cpp",
+      "source_sha256": "a31cd8ad9b0c09a5e6446bcab13380205e98984f3b2b20756e771f47b76da101",
+      "object_sha256": "801716534a3f146c7ccc8437f4cc5f61800069804b82a3ff6174e49a4b9e7631",
+      "emitted_functions": [
+        {
+          "name": "memclr",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-memclr/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-wait-dma/wait_dma.cpp",
+      "source_sha256": "b192e1852a53238ab1e7e0f8ad3e0d940d9c062343f6920e5de9d2ea01fcc9ff",
+      "object_sha256": "828cc50c0f55d2d1dbda8829e159d0282a24ddd6dee23ac9e2d62dee66ac9b11",
+      "emitted_functions": [
+        {
+          "name": "WaitDma",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-wait-dma/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-dma-sync/dma_sync.cpp",
+      "source_sha256": "c78aa2bed44a1d1b889c34f9c26c82b97d9319779a6ed0165c981593a245ade5",
+      "object_sha256": "f15dcbe9e0680b2a7b6227cc8e65138b0eba1cf8196c40fe314b6e78628cffb0",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSync",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-dma-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-dma-send-n/dma_send_n.cpp",
+      "source_sha256": "b87e3fc45964a76f2eea530dbf1c989c7bbb0e9d48f489d373bb70cf83ff37b1",
+      "object_sha256": "8f9513df66c6ccbd40b3bec25f21ce60f1fca11bdc15f79dddaad40aca5c3f63",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSendN",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-dma-send-n/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-dma-reset/dma_reset.cpp",
+      "source_sha256": "0bd01401796a3a52090e78e43efdad7da77d662c16e96517ea4d9f7998f0f070",
+      "object_sha256": "821ebaf8772a36f03bcbde9293b910cca4e548e09ca82dbb11216797ab051269",
+      "emitted_functions": [
+        {
+          "name": "sceDmaReset",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-dma-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-set-def-disp-env/set_def_disp_env.cpp",
+      "source_sha256": "61a1b4d3fa98b063d3860a72919cf6e3b3313721060a25d8b2cf999b89bfc22b",
+      "object_sha256": "47f004d04e243cc2683baa84b01a29887ea9b13996b659cd59c5be6452e29fa9",
+      "emitted_functions": [
+        {
+          "name": "sceGsSetDefDispEnv",
+          "compiled_body_bytes": 1104
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-set-def-disp-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-put-disp-env/put_disp_env.cpp",
+      "source_sha256": "91b51b7103907efc2e9065129d6fa0ec54591736e928c8718f323724f68e123f",
+      "object_sha256": "20a0f852fccd2d703946a14c811c66590ec2e6e50775d50f5d8de97a96533273",
+      "emitted_functions": [
+        {
+          "name": "sceGsPutDispEnv",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-put-disp-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-sync-path/sync_path.cpp",
+      "source_sha256": "fc59efc4f5f2b2caba2b6050ca87efe81f89a77ad8a1b86c2380f15fcb581290",
+      "object_sha256": "58da11fa0159b79e80ed84e6b269d718baf78b7b4a14c23c24bd7c4e4fd1ed0e",
+      "emitted_functions": [
+        {
+          "name": "_ZL12norrath_dumpv",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "sceGsSyncPath",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-sync-path/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-vblank-state/vblank_state.cpp",
+      "source_sha256": "84a689b6b29fd940935160e7423d7162e6101da48adc9b5831fe994c691fcec0",
+      "object_sha256": "7a7f6329c4d53ce89c6a3c6b3bdf8d851f64ce1ce5d7be95d30e7f895c841149",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-kernel-vblank-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-kernel",
+      "source": "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp",
+      "source_sha256": "69c30b1d85fba4187c76cdaacbcbac02cacb585f05559dd635b093526d4af0ee",
+      "object_sha256": "4229b1d2699b696623343eb6e84d4dae2ccf1e5fbc0b2d1bee7b2c11dc7e14e6",
+      "emitted_functions": [
+        {
+          "name": "vblankHandler__Fi",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-kernel-vblank-handler/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -621,6 +621,31 @@ Closed: `padInit__Fv`, `emathInit__Fv`, `listInit__Fv`, `animInit__Fv`,
 already unresolved, so 47 names opened. 549 function bodies, 647 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/gs-dma-kernel
+
+All 25 units were selected. Nine assembled bodies matched the private image
+byte for byte, including `sceGsResetPath` at 104 bytes. The other functions
+passed their host contracts. `vblank_state` defines `vblankCount`,
+`vblankField`, `vblankHID`, `vblankSemaphore`, and `vblankSemaphore2` and does
+not define the cd-archive view names. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 907 |
+| After | 893 |
+| Closed | 19 |
+| Opened | 5 |
+
+Closed 19 names that were already unresolved, including `vblankHandler__Fi`
+and the five vblank words. Also defined, and not previous imports:
+`iSignalSema`, `RemoveIntcHandler`, `SetGsCrt`, `GsPutIMR`,
+`_GetGsDxDyOffset`, `DisableIntc`, `sceGsGetGParam`, `CheckAddress`,
+`memclr`, `WaitDma`, plus the vblank data that was already counted above.
+Opened: `checkModelVersion`, `draw`, `sceDmaPause`, `sceDmaPutEnv`,
+`specialMpegMode`. 574 function bodies, 672 authored inputs, zero COMMON.
+214 tool tests passed. The byte comparisons are host checks. They are not an
+exact-match ledger admission. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -658,9 +683,9 @@ selected. Decide which object owns the name.
 script-amx keys. save-net-anim defines the same two names again. Those units
 were not selected. Decide whether a second definition is wanted.
 
-`vblankCount`, `vblankField`, and `vblankSemaphore2` are now imports from
-`engineInit`. cd-archive defines `norrath_archive_vblank_count_view`,
-`norrath_archive_vblank_field_view`, and
+`vblankCount`, `vblankField`, `vblankHID`, `vblankSemaphore`, and
+`vblankSemaphore2` are now defined by gs-dma-kernel. cd-archive still defines
+`norrath_archive_vblank_count_view`, `norrath_archive_vblank_field_view`, and
 `norrath_archive_vblank_semaphore_view` as separate objects. Decide whether
 each pair is one symbol.
 
@@ -705,7 +730,7 @@ symbol was defined twice.
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
-scheduler, game-boot, and subsystem-inits. `engineInit__Ff`,
+scheduler, game-boot, subsystem-inits, and gs-dma-kernel. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -734,3 +759,4 @@ and no startup stage has executed.
 - 2026-10-11 17:08 CDT — `agents/scheduler` — 775 unresolved imports
 - 2026-10-11 17:10 CDT — `agents/game-boot` — 870 unresolved imports
 - 2026-10-11 17:11 CDT — `agents/subsystem-inits` — 907 unresolved imports
+- 2026-10-11 17:13 CDT — `agents/gs-dma-kernel` — 893 unresolved imports

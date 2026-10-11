@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 647,
+  "default_authored_inputs": 672,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1041,6 +1041,31 @@
     "sources/gameobject-base-msg-save/msg_save.cpp": "ab4971c46e2cdeac9df6e97626e1f8a59b44c58c60dacf1cabc6d21ca1a9688d",
     "sources/gameobject-base-msg-trigger/msg_trigger.cpp": "35ec3cdc6f28dd03e5c509217a03d8f521dbf0ee892edec3a5d4979e178f2385",
     "sources/gameobject-base-typeinfo/typeinfo.cpp": "af9043d4ebb40c72ecd7201799340ad9e8406705d4d223c3c88dac4b18113281",
+    "sources/gs-dma-kernel-add-intc-handler/add_intc_handler.S": "854cc9b92ca70ac4aaa4ec9c560b8241488d1b83997bb157f109238783f71c3f",
+    "sources/gs-dma-kernel-check-address/check_address.cpp": "7378c646cb2a9191d4004e19052f83b16b9e3210d023d8b51b738424c7deccc6",
+    "sources/gs-dma-kernel-disable-intc/disable_intc.cpp": "514ab62ceda3e37bfeddecccb48ea52e864823621f9adc8d7337be02f6888e15",
+    "sources/gs-dma-kernel-dma-get-chan/dma_get_chan.cpp": "2ff4e9f6eceae942cc28a63169844c84d36063e56adb0f4abd12115dce3ef28c",
+    "sources/gs-dma-kernel-dma-reset/dma_reset.cpp": "0bd01401796a3a52090e78e43efdad7da77d662c16e96517ea4d9f7998f0f070",
+    "sources/gs-dma-kernel-dma-send-n/dma_send_n.cpp": "b87e3fc45964a76f2eea530dbf1c989c7bbb0e9d48f489d373bb70cf83ff37b1",
+    "sources/gs-dma-kernel-dma-sync/dma_sync.cpp": "c78aa2bed44a1d1b889c34f9c26c82b97d9319779a6ed0165c981593a245ade5",
+    "sources/gs-dma-kernel-enable-intc/enable_intc.cpp": "c1d3ba1e833cad9c5e4860995cb8865bab8859cc26dfbb4c758fa0f66e9ceab5",
+    "sources/gs-dma-kernel-get-gparam/get_gparam.cpp": "ef40467bc99f4c4a4228ca3e1ce88d4877794971de4532f5cad4ca4c7dd8289a",
+    "sources/gs-dma-kernel-get-gs-dxdy-offset/get_gs_dxdy_offset.S": "75ad40f9d07ff59332416804e7f8119c9e3b4a4d79794ec10f3e6a35663e2c5e",
+    "sources/gs-dma-kernel-gs-put-imr/gs_put_imr.S": "eebe155d360aca68e84646f07bf83a7f7a94c370d2973b4d99151e58f314f6cc",
+    "sources/gs-dma-kernel-isignal-sema/isignal_sema.S": "15b93ae93d4e93efdf05c242f334a70e91dea8a47c573360d1ebb8388dfeda11",
+    "sources/gs-dma-kernel-memclr/memclr.cpp": "a31cd8ad9b0c09a5e6446bcab13380205e98984f3b2b20756e771f47b76da101",
+    "sources/gs-dma-kernel-poll-sema/poll_sema.S": "60b7918e81e7e677b79616aa2fbccc902677ce64872b0d5c8742bf9ee06becd8",
+    "sources/gs-dma-kernel-put-disp-env/put_disp_env.cpp": "91b51b7103907efc2e9065129d6fa0ec54591736e928c8718f323724f68e123f",
+    "sources/gs-dma-kernel-remove-intc-handler/remove_intc_handler.S": "c7b034773a46d45f8f40e87a292c3a0086d8112a7da7e31b52b674e7f46163ad",
+    "sources/gs-dma-kernel-reset-graph/reset_graph.cpp": "217a9656287fa093643c0d836e9f37e45f00d8f0790cf61a1127521eb1d6e8e9",
+    "sources/gs-dma-kernel-reset-path/reset_path.S": "9291d7005cd39f81d0d5ef931b0274a090fbc936d2920d6594eb97ffe760c90b",
+    "sources/gs-dma-kernel-set-def-disp-env/set_def_disp_env.cpp": "61a1b4d3fa98b063d3860a72919cf6e3b3313721060a25d8b2cf999b89bfc22b",
+    "sources/gs-dma-kernel-set-gs-crt/set_gs_crt.S": "4597c7318592fa9e8af8ea17de467fba14d49f488f51dbc98001dbd0c5e26d1f",
+    "sources/gs-dma-kernel-sync-path/sync_path.cpp": "fc59efc4f5f2b2caba2b6050ca87efe81f89a77ad8a1b86c2380f15fcb581290",
+    "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp": "69c30b1d85fba4187c76cdaacbcbac02cacb585f05559dd635b093526d4af0ee",
+    "sources/gs-dma-kernel-vblank-state/vblank_state.cpp": "84a689b6b29fd940935160e7423d7162e6101da48adc9b5831fe994c691fcec0",
+    "sources/gs-dma-kernel-wait-dma/wait_dma.cpp": "b192e1852a53238ab1e7e0f8ad3e0d940d9c062343f6920e5de9d2ea01fcc9ff",
+    "sources/gs-dma-kernel-wait-sema/wait_sema.S": "7a90dd1fdbd7a4221ed9575f204c7d37e2a3af0087c984c0f710f60dc06f4960",
     "sources/items-player-ability-coefficients/ability_coefficients.cpp": "c39a8b37853410828119bde82e771cc134770b71ca9c8f184b77e803df38f38b",
     "sources/items-player-active-count/active_count.cpp": "5a2074a09b3c7bd1177cc4ca7aa25b2e2054d3e1f4b55ab5cb22874d8acd1845",
     "sources/items-player-armor-coefficient/armor_coefficient.cpp": "9222ee809f5000a38b216f869245abb1bae7d575e72cf97dacc0d1cf4b6f79b5",
@@ -9219,6 +9244,231 @@
       "profile": "authored_cpp",
       "sha256": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
       "source": "sources/subsystem-inits-world/world_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 649,
+      "kind": "independently_authored_source",
+      "object_name": "wait_sema.o",
+      "profile": "authored_entry_asm",
+      "sha256": "7a90dd1fdbd7a4221ed9575f204c7d37e2a3af0087c984c0f710f60dc06f4960",
+      "source": "sources/gs-dma-kernel-wait-sema/wait_sema.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 650,
+      "kind": "independently_authored_source",
+      "object_name": "add_intc_handler.o",
+      "profile": "authored_entry_asm",
+      "sha256": "854cc9b92ca70ac4aaa4ec9c560b8241488d1b83997bb157f109238783f71c3f",
+      "source": "sources/gs-dma-kernel-add-intc-handler/add_intc_handler.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 651,
+      "kind": "independently_authored_source",
+      "object_name": "poll_sema.o",
+      "profile": "authored_entry_asm",
+      "sha256": "60b7918e81e7e677b79616aa2fbccc902677ce64872b0d5c8742bf9ee06becd8",
+      "source": "sources/gs-dma-kernel-poll-sema/poll_sema.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 652,
+      "kind": "independently_authored_source",
+      "object_name": "isignal_sema.o",
+      "profile": "authored_entry_asm",
+      "sha256": "15b93ae93d4e93efdf05c242f334a70e91dea8a47c573360d1ebb8388dfeda11",
+      "source": "sources/gs-dma-kernel-isignal-sema/isignal_sema.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 653,
+      "kind": "independently_authored_source",
+      "object_name": "remove_intc_handler.o",
+      "profile": "authored_entry_asm",
+      "sha256": "c7b034773a46d45f8f40e87a292c3a0086d8112a7da7e31b52b674e7f46163ad",
+      "source": "sources/gs-dma-kernel-remove-intc-handler/remove_intc_handler.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 654,
+      "kind": "independently_authored_source",
+      "object_name": "set_gs_crt.o",
+      "profile": "authored_entry_asm",
+      "sha256": "4597c7318592fa9e8af8ea17de467fba14d49f488f51dbc98001dbd0c5e26d1f",
+      "source": "sources/gs-dma-kernel-set-gs-crt/set_gs_crt.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 655,
+      "kind": "independently_authored_source",
+      "object_name": "gs_put_imr.o",
+      "profile": "authored_entry_asm",
+      "sha256": "eebe155d360aca68e84646f07bf83a7f7a94c370d2973b4d99151e58f314f6cc",
+      "source": "sources/gs-dma-kernel-gs-put-imr/gs_put_imr.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 656,
+      "kind": "independently_authored_source",
+      "object_name": "get_gs_dxdy_offset.o",
+      "profile": "authored_entry_asm",
+      "sha256": "75ad40f9d07ff59332416804e7f8119c9e3b4a4d79794ec10f3e6a35663e2c5e",
+      "source": "sources/gs-dma-kernel-get-gs-dxdy-offset/get_gs_dxdy_offset.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 657,
+      "kind": "independently_authored_source",
+      "object_name": "enable_intc.o",
+      "profile": "authored_cpp",
+      "sha256": "c1d3ba1e833cad9c5e4860995cb8865bab8859cc26dfbb4c758fa0f66e9ceab5",
+      "source": "sources/gs-dma-kernel-enable-intc/enable_intc.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 658,
+      "kind": "independently_authored_source",
+      "object_name": "disable_intc.o",
+      "profile": "authored_cpp",
+      "sha256": "514ab62ceda3e37bfeddecccb48ea52e864823621f9adc8d7337be02f6888e15",
+      "source": "sources/gs-dma-kernel-disable-intc/disable_intc.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 659,
+      "kind": "independently_authored_source",
+      "object_name": "get_gparam.o",
+      "profile": "authored_cpp",
+      "sha256": "ef40467bc99f4c4a4228ca3e1ce88d4877794971de4532f5cad4ca4c7dd8289a",
+      "source": "sources/gs-dma-kernel-get-gparam/get_gparam.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 660,
+      "kind": "independently_authored_source",
+      "object_name": "reset_graph.o",
+      "profile": "authored_cpp",
+      "sha256": "217a9656287fa093643c0d836e9f37e45f00d8f0790cf61a1127521eb1d6e8e9",
+      "source": "sources/gs-dma-kernel-reset-graph/reset_graph.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 661,
+      "kind": "independently_authored_source",
+      "object_name": "reset_path.o",
+      "profile": "authored_entry_asm",
+      "sha256": "9291d7005cd39f81d0d5ef931b0274a090fbc936d2920d6594eb97ffe760c90b",
+      "source": "sources/gs-dma-kernel-reset-path/reset_path.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 662,
+      "kind": "independently_authored_source",
+      "object_name": "dma_get_chan.o",
+      "profile": "authored_cpp",
+      "sha256": "2ff4e9f6eceae942cc28a63169844c84d36063e56adb0f4abd12115dce3ef28c",
+      "source": "sources/gs-dma-kernel-dma-get-chan/dma_get_chan.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 663,
+      "kind": "independently_authored_source",
+      "object_name": "check_address.o",
+      "profile": "authored_cpp",
+      "sha256": "7378c646cb2a9191d4004e19052f83b16b9e3210d023d8b51b738424c7deccc6",
+      "source": "sources/gs-dma-kernel-check-address/check_address.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 664,
+      "kind": "independently_authored_source",
+      "object_name": "memclr.o",
+      "profile": "authored_cpp",
+      "sha256": "a31cd8ad9b0c09a5e6446bcab13380205e98984f3b2b20756e771f47b76da101",
+      "source": "sources/gs-dma-kernel-memclr/memclr.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 665,
+      "kind": "independently_authored_source",
+      "object_name": "wait_dma.o",
+      "profile": "authored_cpp",
+      "sha256": "b192e1852a53238ab1e7e0f8ad3e0d940d9c062343f6920e5de9d2ea01fcc9ff",
+      "source": "sources/gs-dma-kernel-wait-dma/wait_dma.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 666,
+      "kind": "independently_authored_source",
+      "object_name": "dma_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "c78aa2bed44a1d1b889c34f9c26c82b97d9319779a6ed0165c981593a245ade5",
+      "source": "sources/gs-dma-kernel-dma-sync/dma_sync.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 667,
+      "kind": "independently_authored_source",
+      "object_name": "dma_send_n.o",
+      "profile": "authored_cpp",
+      "sha256": "b87e3fc45964a76f2eea530dbf1c989c7bbb0e9d48f489d373bb70cf83ff37b1",
+      "source": "sources/gs-dma-kernel-dma-send-n/dma_send_n.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 668,
+      "kind": "independently_authored_source",
+      "object_name": "dma_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "0bd01401796a3a52090e78e43efdad7da77d662c16e96517ea4d9f7998f0f070",
+      "source": "sources/gs-dma-kernel-dma-reset/dma_reset.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 669,
+      "kind": "independently_authored_source",
+      "object_name": "set_def_disp_env.o",
+      "profile": "authored_cpp",
+      "sha256": "61a1b4d3fa98b063d3860a72919cf6e3b3313721060a25d8b2cf999b89bfc22b",
+      "source": "sources/gs-dma-kernel-set-def-disp-env/set_def_disp_env.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 670,
+      "kind": "independently_authored_source",
+      "object_name": "put_disp_env.o",
+      "profile": "authored_cpp",
+      "sha256": "91b51b7103907efc2e9065129d6fa0ec54591736e928c8718f323724f68e123f",
+      "source": "sources/gs-dma-kernel-put-disp-env/put_disp_env.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 671,
+      "kind": "independently_authored_source",
+      "object_name": "sync_path.o",
+      "profile": "authored_cpp",
+      "sha256": "fc59efc4f5f2b2caba2b6050ca87efe81f89a77ad8a1b86c2380f15fcb581290",
+      "source": "sources/gs-dma-kernel-sync-path/sync_path.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 672,
+      "kind": "independently_authored_source",
+      "object_name": "vblank_state.o",
+      "profile": "authored_cpp",
+      "sha256": "84a689b6b29fd940935160e7423d7162e6101da48adc9b5831fe994c691fcec0",
+      "source": "sources/gs-dma-kernel-vblank-state/vblank_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 673,
+      "kind": "independently_authored_source",
+      "object_name": "vblank_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "69c30b1d85fba4187c76cdaacbcbac02cacb585f05559dd635b093526d4af0ee",
+      "source": "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9318,7 +9568,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "789cc3a273b9efb81cb66792423293033220fdd557007ceb8f79b30472bdd8c5",
+  "snapshot_sha256": "9ad159204a9b820cb37c0fa9aea3392e990452227224ed40457c7ab02df10858",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
