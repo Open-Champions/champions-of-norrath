@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 844,
+  "default_authored_inputs": 845,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -93,6 +93,7 @@
     "sources/audio-master-volume/master_volume.cpp": "d5d756d0e3b8bf4968728590d8d1ebfe5417c9374cf8f6f73745a2fb79e55f0c",
     "sources/audio-sequence-records/sequence_records.cpp": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
     "sources/audio-set-dma-chain/set_dma_chain.S": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
+    "sources/audio-sound-sleep/sound_sleep.cpp": "b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e",
     "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
     "sources/audio-stream-storage/stream_storage.cpp": "aa50a8b67685697051e9ca80984d01c4f634f72a0ef2ea143e4bea31bb44e0ab",
     "sources/block-alloc-source-v2/block_alloc.cpp": "35df646bc5d3ee076d7efa28d1ad86514c20ab3198d50eab10e456068accc1d8",
@@ -11222,6 +11223,15 @@
       "profile": "authored_cpp",
       "sha256": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
       "source": "sources/memory-wrap-malloc/wrap_malloc.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 846,
+      "kind": "independently_authored_source",
+      "object_name": "sound_sleep.o",
+      "profile": "authored_cpp",
+      "sha256": "b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e",
+      "source": "sources/audio-sound-sleep/sound_sleep.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11321,7 +11331,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0327d75387e23169522f9994fbf25250492467290bd3b57bebf1a0f5bebd3578",
+  "snapshot_sha256": "ddebc772c872128666eb74c6c2e7821f9dd0892851e54d613e7e5eb7d3cedd70",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

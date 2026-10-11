@@ -938,6 +938,27 @@ the three prefix aliases as closed. Those views were already defined, and
 the three aliases were not published. 722 function bodies, 844 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/audio second pass
+
+`soundSleep__Fv` was selected. It is 260 bytes. The host contract passed.
+`soundInit__Ff` and `soundRestore__Fb` were authored as aliases on two
+sources inside the frozen 264-input prefix. Those input records stay the
+V43 receipt, so the alias lines were not kept and those two names stay
+unresolved. The fifteen earlier audio sources were already selected.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `soundSleep__Fv`. Opened: `sceSifFreeIopHeap`. The notes also listed
+`soundInit__Ff`, `soundRestore__Fb`, and the first-pass audio names as
+closed. Those names were already defined or were not published. 723 function
+bodies, 845 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1029,6 +1050,12 @@ frozen prefix. Those lines were not kept. The three original names stay
 unresolved. Decide whether a later unit outside that prefix should publish
 them.
 
+`soundInit__Ff` and `soundRestore__Fb` were authored as aliases of
+`norrath_sound_initialize` and `norrath_sound_restore` on sources inside the
+frozen prefix. Those lines were not kept. Both original names stay
+unresolved. Decide whether a later unit outside that prefix should publish
+them.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1040,7 +1067,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, and the memory second pass. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, and the audio second pass. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1081,3 +1108,4 @@ and no startup stage has executed.
 - 2026-10-11 17:28 CDT — `agents/actors-a` — 882 unresolved imports
 - 2026-10-11 17:31 CDT — `agents/cd-archive` — 886 unresolved imports
 - 2026-10-11 17:38 CDT — `agents/memory` — 879 unresolved imports
+- 2026-10-11 17:41 CDT — `agents/audio` — 879 unresolved imports

@@ -11119,6 +11119,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/memory-wrap-malloc/wrap_malloc.cpp"
+    },
+    {
+      "input_order": 846,
+      "component": "audio-sound-sleep",
+      "object_name": "sound_sleep.o",
+      "private_object_sha256": "5cf2270ea979e9ab64a38f7d66f6650f80ddc22f5608440a888ae38170c7e918",
+      "emitted_functions": [
+        {
+          "name": "soundSleep__Fv",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/audio-sound-sleep/sound_sleep.cpp"
     }
   ],
   "drafts": [
@@ -11240,6 +11254,10 @@
     "sources/audio-sequence-records/sequence_records.cpp": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
     "sources/audio-set-dma-chain/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
     "sources/audio-set-dma-chain/set_dma_chain.S": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
+    "sources/audio-sound-init/host_check.cpp": "17d5c5ee952c2db27e82f1856688da20b01bdff3b2dd0b91458b5e7d7ef8f090",
+    "sources/audio-sound-restore/host_check.cpp": "46443fc826ae8960734053276a916b7c0ac8dd38a4bc9a8211fcfbcc8480e8c2",
+    "sources/audio-sound-sleep/host_contract.cpp": "891a8081506743a7cc95b04d870c713187679af32e6f697f667bd7f61d75e62a",
+    "sources/audio-sound-sleep/sound_sleep.cpp": "b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e",
     "sources/audio-startup-strings/host_contract.cpp": "6ecabfa325b75c63d32199bc71d7fc83ed1d88479f93038b9719b5b7c0559594",
     "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
     "sources/audio-stream-storage/host_contract.cpp": "321bdb9c1a0d3e280b54df2e160bc99f5764c0501a56130f455a352fc2870c09",
@@ -13681,11 +13699,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 846,
-    "authored_default_inputs": 844,
+    "selected_inputs": 847,
+    "authored_default_inputs": 845,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 724,
-    "compiled_body_bytes_from_accepted_inputs": 335652,
+    "emitted_function_definitions_including_helpers": 725,
+    "compiled_body_bytes_from_accepted_inputs": 335912,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13698,7 +13716,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 533
+    "package_selected_inputs": 534
   },
   "startup_implementations": [
     {
@@ -21902,6 +21920,23 @@
       ],
       "host_files": [
         "sources/memory-wrap-malloc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "audio",
+      "source": "sources/audio-sound-sleep/sound_sleep.cpp",
+      "source_sha256": "b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e",
+      "object_sha256": "5cf2270ea979e9ab64a38f7d66f6650f80ddc22f5608440a888ae38170c7e918",
+      "emitted_functions": [
+        {
+          "name": "soundSleep__Fv",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/audio-sound-sleep/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
