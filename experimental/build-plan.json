@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1005,
+  "default_authored_inputs": 1006,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -128,6 +128,8 @@
     "sources/cd-archive-lump-lock/lump_lock.cpp": "155cf72c0377200930ea6fbb1483a320e67176834f3f06e651cef02778bf0eef",
     "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
     "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
+    "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
+    "sources/ctors-ant-lantern-constructors/detail.hpp": "a135670598cdfdc9351eeb1aafd277e007ddc4b94ceee3f04cf4f9a7d89839dd",
     "sources/data-views-symbols/norrath_actor_view_42b118.cpp": "fc4f0fbf6a17b470fcaaa73eb56e30bb87ba5cbdb796dc9bfa9cd8a32bdaaa08",
     "sources/data-views-symbols/norrath_actor_view_42b768.cpp": "4186e315568174b63c28472e6b0b3f63470d689b3a30cdbb5b1be4a4bb73b470",
     "sources/data-views-symbols/norrath_actor_view_42baa8.cpp": "35df379600a367754daa7796dc4a8648b22545f761eabe18190cfb2834b84bbb",
@@ -12878,6 +12880,17 @@
       "profile": "authored_cpp",
       "sha256": "d411827e78da3b50b47cbf60718440bb7f124a9cf4590590527ad8ecd6c704b6",
       "source": "sources/link-image-bounds-frame/register_frame_info.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1007,
+      "kind": "independently_authored_source",
+      "object_name": "auto_chest_lp.o",
+      "profile": "authored_cpp",
+      "sha256": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
+      "source": "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -12977,7 +12990,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8012b99b9dc7433d7fc466ca8c1e22fabd0f7b6a4eb5534afc1bc7876ae035bb",
+  "snapshot_sha256": "8ec0437db9bb2a2123c78fee041c3def1d0447e03d144df8425e7fce66073ce6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

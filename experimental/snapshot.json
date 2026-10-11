@@ -13091,6 +13091,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/link-image-bounds-frame/register_frame_info.cpp"
+    },
+    {
+      "input_order": 1007,
+      "component": "ctors-ant-lantern-constructors",
+      "object_name": "auto_chest_lp.o",
+      "private_object_sha256": "0fc514f411a576b5ea24b98ada24df8ad78176a3c28fe9247a97aac06e94bc6b",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoChestLP",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp"
     }
   ],
   "drafts": [
@@ -13272,6 +13286,9 @@
     "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
     "sources/cd-archive-views/host_contract.cpp": "37332f5e7da911b1967c4aa317b821cc233916374e1900ced2cd645915cd2f18",
     "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
+    "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
+    "sources/ctors-ant-lantern-constructors/detail.hpp": "a135670598cdfdc9351eeb1aafd277e007ddc4b94ceee3f04cf4f9a7d89839dd",
+    "sources/ctors-ant-lantern-constructors/host/auto_chest_lp_contract.cpp": "77383be38aba68cbaeb292469265f07ed6e7c72c4837551970502d517ced1004",
     "sources/data-views-host-checks/norrath_actor_view_42b118.cpp": "8f96ea50880d6d8f79fe3e8d3a1691c0ca6e1d8aa98b888f0efc16c35efebf02",
     "sources/data-views-host-checks/norrath_actor_view_42b768.cpp": "5305ff5b225fd968add46c1f0dc05cd8b0087fc56fb3b56d7464c2a4fab4972a",
     "sources/data-views-host-checks/norrath_actor_view_42baa8.cpp": "803e5a467460372a5e4a3dcc759947dd044bf7dbf97ea2626173bfffaa7db62e",
@@ -15981,11 +15998,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1007,
-    "authored_default_inputs": 1005,
+    "selected_inputs": 1008,
+    "authored_default_inputs": 1006,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 829,
-    "compiled_body_bytes_from_accepted_inputs": 362800,
+    "emitted_function_definitions_including_helpers": 830,
+    "compiled_body_bytes_from_accepted_inputs": 363060,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -15998,7 +16015,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 694
+    "package_selected_inputs": 695
   },
   "startup_implementations": [
     {
@@ -26657,6 +26674,23 @@
       ],
       "host_files": [
         "sources/link-image-bounds-frame/register_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "ctors-ant-lantern",
+      "source": "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp",
+      "source_sha256": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
+      "object_sha256": "0fc514f411a576b5ea24b98ada24df8ad78176a3c28fe9247a97aac06e94bc6b",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoChestLP",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/ctors-ant-lantern-constructors/host/auto_chest_lp_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

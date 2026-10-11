@@ -1168,6 +1168,25 @@ already unresolved. `WaitSema` was already defined. 827 function bodies,
 1005 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
 execution.
 
+## agents/ctors-ant-lantern
+
+`norrath_construct_AutoChestLP` was selected. It is 260 bytes. The EE
+compile passed the 32-bit pointer assert. The host contract does not compile
+on this arm64 machine because that header requires `sizeof(void*) == 4`, so
+the behavioral checks did not run here.
+
+| | |
+|---|---|
+| Before | 888 |
+| After | 889 |
+| Closed | 1 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoChestLP`. Opened:
+`__11AddParticleG6Point3PPc` and `norrath_ctors_ant_lantern_view_44ea78`.
+828 function bodies, 1006 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1276,7 +1295,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, and link-image-bounds. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, and ctors-ant-lantern. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1328,3 +1347,4 @@ and no startup stage has executed.
 - 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
 - 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
 - 2026-10-11 17:57 CDT — `agents/link-image-bounds` — 888 unresolved imports
+- 2026-10-11 17:59 CDT — `agents/ctors-ant-lantern` — 889 unresolved imports
