@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 882,
+  "default_authored_inputs": 883,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1507,6 +1507,7 @@
     "sources/vslots-b-lever-save/lever_save.cpp": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
     "sources/vslots-b-msg-hurt/msg_hurt.cpp": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
     "sources/vslots-b-msg-move-collision/msg_move_collision.cpp": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+    "sources/vslots-b-msg-poke/msg_poke.cpp": "e393ec9e2fbe267f5c2081e4d5edc93b674b0015578eff6fe1fda4e43ff14449",
     "sources/vslots-b-msg-route/msg_route.cpp": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
     "sources/vslots-b-msg-trigger/msg_trigger.cpp": "adb9fa7b14ad67602fe247e4bc0694d87fb75264dabe1e6c191f0f51ccf80b1d",
     "sources/vslots-b-run-natasla/run_natasla.cpp": "c23b2bf8a2c2ca39c46c2ce31f0c3c1a8411b0ef7b77f928660a01a28c9ea1b0",
@@ -11637,6 +11638,17 @@
       "profile": "authored_cpp",
       "sha256": "c86aff1f1461226e401815549208b1a77b29ea80aba84030088eb04a2e2da12d",
       "source": "sources/light-methods-texture-draw-color/texture_draw_color.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 884,
+      "kind": "independently_authored_source",
+      "object_name": "msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "e393ec9e2fbe267f5c2081e4d5edc93b674b0015578eff6fe1fda4e43ff14449",
+      "source": "sources/vslots-b-msg-poke/msg_poke.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11736,7 +11748,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "01edfd5aec7c95d90df4db2d91d6e84d5626be9e02c29cb6fa543d90aff71fff",
+  "snapshot_sha256": "059cd6ac314947e29a91983fa1a8c147896523a6aa3669436981f9a22d804521",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -11651,6 +11651,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/light-methods-texture-draw-color/texture_draw_color.cpp"
+    },
+    {
+      "input_order": 884,
+      "component": "vslots-b-msg-poke",
+      "object_name": "msg_poke.o",
+      "private_object_sha256": "16440f2e566871db54afed406ba6591fa767cd5066973e775589456130d16bde",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__8Creaturei",
+          "compiled_body_bytes": 572
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-msg-poke/msg_poke.cpp"
     }
   ],
   "drafts": [
@@ -13713,6 +13727,8 @@
     "sources/vslots-b-msg-hurt/msg_hurt.cpp": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
     "sources/vslots-b-msg-move-collision/host_check.cpp": "b29fba9b8853bb55378ce076601f5eb4d2f364434847f5747cb36578b3deba08",
     "sources/vslots-b-msg-move-collision/msg_move_collision.cpp": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
+    "sources/vslots-b-msg-poke/host_check.cpp": "e95123f5e39f337cf08b843d4440821065151da7206b1b2dc71a6002168ab466",
+    "sources/vslots-b-msg-poke/msg_poke.cpp": "e393ec9e2fbe267f5c2081e4d5edc93b674b0015578eff6fe1fda4e43ff14449",
     "sources/vslots-b-msg-route/host_check.cpp": "4092586b11d3defc1bae2b5815dcc31c0f4d9777e5bb9bd556b8969cda956d78",
     "sources/vslots-b-msg-route/msg_route.cpp": "3de93b207493a65b0f548bdc3e960c3efceee0af8e80f72e08b0d4de49d2519b",
     "sources/vslots-b-msg-trigger/host_check.cpp": "6168e8232f71c54ceb338d13c94dadec7191e6dfbf042beb3b3f6ed8ddeed813",
@@ -14292,11 +14308,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 884,
-    "authored_default_inputs": 882,
+    "selected_inputs": 885,
+    "authored_default_inputs": 883,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 762,
-    "compiled_body_bytes_from_accepted_inputs": 344588,
+    "emitted_function_definitions_including_helpers": 763,
+    "compiled_body_bytes_from_accepted_inputs": 345160,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -14309,7 +14325,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 571
+    "package_selected_inputs": 572
   },
   "startup_implementations": [
     {
@@ -23159,6 +23175,23 @@
       ],
       "host_files": [
         "sources/light-methods-texture-draw-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-msg-poke/msg_poke.cpp",
+      "source_sha256": "e393ec9e2fbe267f5c2081e4d5edc93b674b0015578eff6fe1fda4e43ff14449",
+      "object_sha256": "16440f2e566871db54afed406ba6591fa767cd5066973e775589456130d16bde",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__8Creaturei",
+          "compiled_body_bytes": 572
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-msg-poke/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

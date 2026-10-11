@@ -1037,6 +1037,21 @@ Opened: `_textureDrawColor__FP8_textureiiiUi`, `getMegatileCenter__FG6Point2`,
 760 function bodies, 882 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/vslots-b msg_poke
+
+`msg_poke__8Creaturei` was selected. It is 572 bytes. The host check passed.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 866 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `msg_poke__8Creaturei`. Opened: `gameSomeoneInShop__Fv`. 761 function
+bodies, 883 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1190,3 +1205,4 @@ and no startup stage has executed.
 - 2026-10-11 17:42 CDT — `agents/script-amx` — 879 unresolved imports
 - 2026-10-11 17:44 CDT — `agents/vslots-b` — 871 unresolved imports
 - 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports
+- 2026-10-11 17:47 CDT — `agents/vslots-b` — 866 unresolved imports
