@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 301,
+  "default_authored_inputs": 302,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -926,6 +926,7 @@
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
     "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
+    "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
     "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
     "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
     "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
@@ -5575,6 +5576,15 @@
       "profile": "authored_entry_asm",
       "sha256": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
       "source": "sources/runtime-initsys-callees/start_thread.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 303,
+      "kind": "independently_authored_source",
+      "object_name": "change_thread_priority.o",
+      "profile": "authored_entry_asm",
+      "sha256": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
+      "source": "sources/runtime-initsys-callees/change_thread_priority.S"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5674,7 +5684,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "bb3ad147625f25a7dc835d82a41e8e42d6fbb9476e0c8c29fc24c1af3fc01af1",
+  "snapshot_sha256": "cdb799cb5ce9129488fc163179da92ffe651c3b5eca23df18a50f50ada9a0743",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

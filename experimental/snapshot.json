@@ -4762,6 +4762,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys-callees/start_thread.S"
+    },
+    {
+      "input_order": 303,
+      "component": "runtime-initsys-callees",
+      "object_name": "change_thread_priority.o",
+      "private_object_sha256": "7c169316ce896d025690f69aa7ccfa0620230d72b78dca00edd37266c0825428",
+      "emitted_functions": [
+        {
+          "name": "ChangeThreadPriority",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys-callees/change_thread_priority.S"
     }
   ],
   "drafts": [
@@ -5733,7 +5747,8 @@
     "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
     "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
     "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
-    "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d"
+    "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
+    "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676"
   },
   "additional_implementations": [
     {
@@ -6175,11 +6190,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 303,
-    "authored_default_inputs": 301,
+    "selected_inputs": 304,
+    "authored_default_inputs": 302,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 427,
-    "compiled_body_bytes_from_accepted_inputs": 247552,
+    "emitted_function_definitions_including_helpers": 428,
+    "compiled_body_bytes_from_accepted_inputs": 247568,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6191,7 +6206,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 24
+    "startup_selected_inputs": 25
   },
   "startup_implementations": [
     {
@@ -6430,6 +6445,16 @@
       "compiled_body_bytes": 16,
       "source_sha256": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
       "object_sha256": "29a5428b13c887ed96c3a13f654fc493ab517ad39f7e511e22725c03c9899464",
+      "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys-callees/change_thread_priority.S",
+      "symbol": "ChangeThreadPriority",
+      "compiled_body_bytes": 16,
+      "source_sha256": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
+      "object_sha256": "7c169316ce896d025690f69aa7ccfa0620230d72b78dca00edd37266c0825428",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
