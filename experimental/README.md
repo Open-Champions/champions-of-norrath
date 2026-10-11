@@ -57,9 +57,14 @@ draft holds. It does not compile code, rerun private comparisons, verify the
 original executable, or execute gameplay. The private object and review hashes
 are provenance references, not evidence independently reproduced by this check.
 
+The [partial source-build recipe](../docs/PORTABLE_BUILD.md) has now compiled all
+262 authored inputs from a clean checkout and produced a genuine partial object.
+It excludes the two external math files and the held drafts, leaves imports
+unresolved, and supplies no game executable or runtime result.
+
 Files preserve the exact reviewed source bytes and their component directory
 structure, including repeated local interface headers. This is a source delivery
-snapshot, not a clean-checkout game build recipe. The existing
+snapshot, not a complete game build recipe. The existing
 [toolchain documentation](../docs/TOOLCHAINS.md) describes compiler setup;
 per-component build integration remains work in progress.
 

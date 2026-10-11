@@ -20,6 +20,9 @@ for 262 inputs from a private partial integration that emitted 388 function
 definitions, including helpers, plus arithmetic and interpreter drafts.
 These implementations have no additional exact-byte match or gameplay credit;
 their dependencies and integration remain unfinished.
+The [partial source-build command](docs/PORTABLE_BUILD.md) has compiled the
+262 authored inputs from a clean checkout; it leaves 836 imports unresolved and
+produces no game executable.
 
 ## Start here
 

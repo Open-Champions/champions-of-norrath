@@ -29,3 +29,5 @@ jobs:
         run: python tools/rebuild.py check --report targets/SLUS-20565/verification.json --require-matches
       - name: Check experimental source publication integrity
         run: python tools/check_source_snapshot.py
+      - name: Validate the published partial-build source plan without target tools
+        run: python tools/build_partial.py --source-root experimental --plan experimental/build-plan.json --check-plan
