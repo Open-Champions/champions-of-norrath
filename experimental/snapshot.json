@@ -4888,6 +4888,98 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys-callees/set_t2_comp.S"
+    },
+    {
+      "input_order": 312,
+      "component": "math-double-isinf",
+      "object_name": "double_isinf.o",
+      "private_object_sha256": "1a902487fdfc02191494e391d600548711ee2c02ae61c7f9301c862eae11de4a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_double_isinf",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/math-double-isinf/double_isinf.cpp"
+    },
+    {
+      "input_order": 313,
+      "component": "math-double-isnan",
+      "object_name": "double_isnan.o",
+      "private_object_sha256": "6825d1f2c3aca46d2cdf9ec282c3ef2fd0df9f982a072c71a3537daf95a9d301",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_double_isnan",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/math-double-isnan/double_isnan.cpp"
+    },
+    {
+      "input_order": 314,
+      "component": "math-entity-floor",
+      "object_name": "entity_floor.o",
+      "private_object_sha256": "e3ae798344a17f3e678e36b3858ea4d78fc1fe66be29af49ee9696148d1ea2b7",
+      "emitted_functions": [
+        {
+          "name": "norrath_entity_floorf",
+          "compiled_body_bytes": 232
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/math-entity-floor/entity_floor.cpp"
+    },
+    {
+      "input_order": 315,
+      "component": "math-entity-fptodp",
+      "object_name": "entity_fptodp.o",
+      "private_object_sha256": "d6b39ed9b0e881e87fb8edb5d5a4a1d0b33f61f75b21fc73214bfb0c402f7d23",
+      "emitted_functions": [
+        {
+          "name": "norrath_entity_fptodp",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/math-entity-fptodp/entity_fptodp.cpp"
+    },
+    {
+      "input_order": 316,
+      "component": "math-integer-trig-coefficients",
+      "object_name": "coefficients.o",
+      "private_object_sha256": "61d50a69c2b653bd69e2dbdd43a83ef7b6b9ae015c9c2f67f1689ef0d685aafc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/math-integer-trig-coefficients/coefficients.cpp"
+    },
+    {
+      "input_order": 317,
+      "component": "math-atan-tables",
+      "object_name": "atan_tables.o",
+      "private_object_sha256": "4c4275a58699ba93d970125c82015fa93dbf06113273f3e1f96a3959b9a40825",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/math-atan-tables/atan_tables.cpp"
+    },
+    {
+      "input_order": 318,
+      "component": "math-pow-constants",
+      "object_name": "pow_constants.o",
+      "private_object_sha256": "1721274fb030171b8e6a8ac308aff0a8a1f68f894a994de68c1b82ea6eb9d439",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/math-pow-constants/pow_constants.cpp"
+    },
+    {
+      "input_order": 319,
+      "component": "math-softdouble-nan",
+      "object_name": "nan_parts.o",
+      "private_object_sha256": "e9c70b6aeaf84b463f57c5e9ab79175939c5c8725998592d370476382bc82ccb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/math-softdouble-nan/nan_parts.cpp"
     }
   ],
   "drafts": [
@@ -5868,7 +5960,23 @@
     "sources/runtime-initsys-callees/set_t2.S": "9f58d405620f1df5ea112ae67776007b823fec0a0941f5b403773978fd0a8dff",
     "sources/runtime-initsys-callees/set_t2_count.S": "43ae8a001eb7b400bf9cf4f93714b2c1550ba2bc9598a56d799ebd6ae747f9f3",
     "sources/runtime-initsys-callees/set_t2_mode.S": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6",
-    "sources/runtime-initsys-callees/set_t2_comp.S": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525"
+    "sources/runtime-initsys-callees/set_t2_comp.S": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
+    "sources/math-double-isinf/double_isinf.cpp": "a74f52effb9ea3126f6f29e3ba237829f11996be0593a2ab0fdf4eb91c70e0bb",
+    "sources/math-double-isinf/host_test.cpp": "0b2dba233bc6985f630d039d939358aad26d33f4d4e4650e66fe443a7e3d4ed1",
+    "sources/math-double-isnan/double_isnan.cpp": "34db1e4bb097a46110efc159098d0937c0f7177b06ca6fd40bf1d39f9b66e5fb",
+    "sources/math-double-isnan/host_test.cpp": "090347aede797dd543e7e016e4a5c937aa747e8036440a394b2111d0192b99f4",
+    "sources/math-entity-floor/entity_floor.cpp": "17a95f18fca30e6c58a498f999d8dc315c96f62e444fcbe31ef782a387094c07",
+    "sources/math-entity-floor/host_test.cpp": "0fc05a8ebde3a0d198e105a6491113e02719a863d4b3480f5ebd71ea43d470b6",
+    "sources/math-entity-fptodp/entity_fptodp.cpp": "4dc3d52dacda1d11b5552aec5d535854446a74ab7365a0b784cafead141700a3",
+    "sources/math-entity-fptodp/host_test.cpp": "6be7b4ca8d8eb07c543bfde377c8861930562f2d45c92d6479d3e6a44f90cf55",
+    "sources/math-integer-trig-coefficients/coefficients.cpp": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
+    "sources/math-integer-trig-coefficients/host_test.cpp": "32e7ce6eb87a575b946d1881641c015fe931d9df90188deb5260a112db00e7fc",
+    "sources/math-atan-tables/atan_tables.cpp": "5ccbd9af257fb289ad79fecb9a9c57956a70d37a9ee8b9e4fee7d0402b79b5d6",
+    "sources/math-atan-tables/host_test.cpp": "11e71364dcf8860e3c4a6b339285d2623960b58abc90ee66888a6d290f69ac2c",
+    "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
+    "sources/math-pow-constants/host_test.cpp": "afba9ec75bd87924a8243e7168c0eaaea4344de27f4d74b268f835fdcb0ce3b4",
+    "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/math-softdouble-nan/host_test.cpp": "19a6fe6baa266ec42e95bcfd0dc306b15af8391404e9b64eeb3c6e3f7f321454"
   },
   "additional_implementations": [
     {
@@ -6310,23 +6418,24 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 312,
-    "authored_default_inputs": 310,
+    "selected_inputs": 320,
+    "authored_default_inputs": 318,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 436,
-    "compiled_body_bytes_from_accepted_inputs": 247868,
+    "emitted_function_definitions_including_helpers": 440,
+    "compiled_body_bytes_from_accepted_inputs": 248308,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
     "new_selected_game_functions": 7,
     "new_selected_architectural_primitives": 1,
-    "coefficient_initializer_inputs": 0,
+    "coefficient_initializer_inputs": 1,
     "original_receipt_scope": "partial_integration and build-receipt.json describe only the original264-input V43 prefix /262 authored default, not this successor selection",
     "clean_source_successor_build_performed": true,
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 33
+    "startup_selected_inputs": 33,
+    "package_selected_inputs": 8
   },
   "startup_implementations": [
     {
@@ -6656,6 +6765,124 @@
       "source_sha256": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
       "object_sha256": "decfcd539b84a2bfc9950868377df38512600a0df9732aebe8fef4e9c7ba68e5",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    }
+  ],
+  "package_implementations": [
+    {
+      "package": "math",
+      "source": "sources/math-double-isinf/double_isinf.cpp",
+      "source_sha256": "a74f52effb9ea3126f6f29e3ba237829f11996be0593a2ab0fdf4eb91c70e0bb",
+      "object_sha256": "1a902487fdfc02191494e391d600548711ee2c02ae61c7f9301c862eae11de4a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_double_isinf",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/math-double-isinf/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-double-isnan/double_isnan.cpp",
+      "source_sha256": "34db1e4bb097a46110efc159098d0937c0f7177b06ca6fd40bf1d39f9b66e5fb",
+      "object_sha256": "6825d1f2c3aca46d2cdf9ec282c3ef2fd0df9f982a072c71a3537daf95a9d301",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_double_isnan",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/math-double-isnan/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-entity-floor/entity_floor.cpp",
+      "source_sha256": "17a95f18fca30e6c58a498f999d8dc315c96f62e444fcbe31ef782a387094c07",
+      "object_sha256": "e3ae798344a17f3e678e36b3858ea4d78fc1fe66be29af49ee9696148d1ea2b7",
+      "emitted_functions": [
+        {
+          "name": "norrath_entity_floorf",
+          "compiled_body_bytes": 232
+        }
+      ],
+      "host_files": [
+        "sources/math-entity-floor/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-entity-fptodp/entity_fptodp.cpp",
+      "source_sha256": "4dc3d52dacda1d11b5552aec5d535854446a74ab7365a0b784cafead141700a3",
+      "object_sha256": "d6b39ed9b0e881e87fb8edb5d5a4a1d0b33f61f75b21fc73214bfb0c402f7d23",
+      "emitted_functions": [
+        {
+          "name": "norrath_entity_fptodp",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/math-entity-fptodp/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-integer-trig-coefficients/coefficients.cpp",
+      "source_sha256": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
+      "object_sha256": "61d50a69c2b653bd69e2dbdd43a83ef7b6b9ae015c9c2f67f1689ef0d685aafc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/math-integer-trig-coefficients/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-atan-tables/atan_tables.cpp",
+      "source_sha256": "5ccbd9af257fb289ad79fecb9a9c57956a70d37a9ee8b9e4fee7d0402b79b5d6",
+      "object_sha256": "4c4275a58699ba93d970125c82015fa93dbf06113273f3e1f96a3959b9a40825",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/math-atan-tables/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-pow-constants/pow_constants.cpp",
+      "source_sha256": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
+      "object_sha256": "1721274fb030171b8e6a8ac308aff0a8a1f68f894a994de68c1b82ea6eb9d439",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/math-pow-constants/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "math",
+      "source": "sources/math-softdouble-nan/nan_parts.cpp",
+      "source_sha256": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+      "object_sha256": "e9c70b6aeaf84b463f57c5e9ab79175939c5c8725998592d370476382bc82ccb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/math-softdouble-nan/host_test.cpp"
+      ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
     }
