@@ -138,6 +138,34 @@ int main() {
             "cutMsgHandler", "cutMsgHandlerFunction__FPUci",
             "netRegisterMessageHandler__FPFPUci_v"])
 
+    def test_comm_init_net(self):
+        source = STARTUP / "comm_init_net.cpp"
+        self.host([source], r'''
+extern "C" int commHandle = 0;
+extern "C" int commStatusHandle = 0;
+extern "C" void commHandler__FPUci(unsigned char*, int) {}
+extern "C" void commStatusHandler__FPUci(unsigned char*, int) {}
+extern "C" void commInitNet__Fv();
+extern "C" int netRegisterPacketHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler != commHandler__FPUci || commHandle != 0) return 9;
+    return 7;
+}
+extern "C" int netRegisterMessageHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler != commStatusHandler__FPUci || commHandle != 7) return 9;
+    return 8;
+}
+int main() {
+    commHandle = commStatusHandle = 0;
+    commInitNet__Fv();
+    if (commHandle != 7 || commStatusHandle != 8) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "commInitNet__Fv", [
+            "commHandle", "commHandler__FPUci", "commStatusHandle",
+            "commStatusHandler__FPUci", "netRegisterMessageHandler__FPFPUci_v",
+            "netRegisterPacketHandler__FPFPUci_v"])
+
 
 if __name__ == "__main__":
     unittest.main()
