@@ -16,13 +16,17 @@ Observed at `0x001725e0`, 64 bytes. It stores the arithmetic right-shift by 8 of
 
 Observed at `0x0018f118`, 224 bytes. COP2 register 28 receives 1024. `sceDmaSend` / `sceDmaSync` run on `dmaVif1` with `0x0031b790` (`loadVU1Program`) and on `dmaVif0` with `0x0031b510` (`loadVU0Program`). Both syncs use mode 0 and timeout 0. `FlushCache(0)` and `sceGsSyncPath(0, 0)` follow. The words at `0x10003820` and `0x10003c20` are set to 2, then `sceGsSyncV(0)` runs twice. `0x1100ffb4`, `0x1100ffb8`, and `0x1100ff60` receive `0x30ae4000`, `0x30be4000`, and `0x8000`; the next three words are zero. The channel pointers are the words at `0x00486a40` and `0x00486a44`. Separate local words with the same names are at `0x004868d8` and `0x004868dc`; `drawInit` uses those.
 
+## drawInit__Fv
+
+Observed at `0x0015f6d0`, 596 bytes. `endTagVU1` is `0x00614240` and is 128 bytes before `texDmaList`. With a 16-byte-aligned base the 64-bit tag is `0x10000002` and the following words are `0x11000000`, `0x50000002`, `0x8001`, `0x10000000`, 14, 0, 0, 2, 97, and 0. `drawRecords` is the 65536 bytes at `0x00604200`. Eight pointers at `drawHead+32` (`drawHead` is `0x00614200`, 64 bytes) address `(2048+index)<<4` into that buffer, and each record word at offset 12 is cleared. `writeBuffer` becomes 1. `nmDrawUsed` becomes 8. The semaphore word at offset 4 is `0x186a0`. `reloadDMA__Fi` is the 2488-byte function at `0x0015ed18`. `gsIntHandler__Fi` is the 40-byte function at `0x0015fac8`. 32000 is stored at `0x12001010` and 4 at `0x10003010`. The DMA channel pointers written here are the local words at `0x004868d4`, `0x004868d8`, and `0x004868dc`.
+
 ## Imports closed
 
-`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`, `dmaVif0`, `dmaVif1`.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, `drawInit__Fv`, `textureBufferStartAddress`, `textureBufferSize`, `textureMaxBlockSize`, `dmaVif0`, `dmaVif1`, `drawRecords`, `drawHead`, `endTagVU1`, `writeBuffer`, `nmDrawUsed`, `endDrawSemaphore`, `vif0HID`, `vif1HID`, `gifHID`.
 
 ## Imports opened
 
-`textureInternalInit__Fv`, `sceDmaSend`, `sceDmaSync`, `FlushCache`, `sceGsSyncPath`, `sceGsSyncV`. `FlushCache` is already selected in the kernel package; the other four stay imports.
+`textureInternalInit__Fv`, `sceDmaSend`, `sceDmaSync`, `FlushCache`, `sceGsSyncPath`, `sceGsSyncV`, `sceDmaGetChan`, `memset`, `CreateSema`, `AddDmacHandler`, `EnableDmac`, `AddIntcHandler`, `EnableIntc`, `reloadDMA__Fi`, `gsIntHandler__Fi`. `FlushCache` and `memset` are already selected. The DMA and interrupt services stay imports.
 
 ## Build-plan entries needed
 
@@ -59,11 +63,22 @@ Observed at `0x0018f118`, 224 bytes. COP2 register 28 receives 1024. `sceDmaSend
 }
 ```
 
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "draw_init.o",
+  "profile": "authored_cpp",
+  "sha256": "5e70bfb04ec241286b6115078c6a9122c5756577c54e7df8f8efe4d668b1b6bc",
+  "source": "sources/draw-texture-init-draw-init/draw_init.cpp"
+}
+```
+
 The integrator assigns `input_order`. No shared plan file was edited.
 
 ## Authored but never executed
 
-`textureInitTexture__FP8_texture`, `textureInit__Fii`, and `initVIF__Fv` were compiled with the reviewed EE toolchain and checked on the host. None has run on the EE. No startup stage has run.
+`textureInitTexture__FP8_texture`, `textureInit__Fii`, `initVIF__Fv`, and `drawInit__Fv` were compiled with the reviewed EE toolchain and checked on the host. None has run on the EE. No startup stage has run.
 
 ## Unknown
 
