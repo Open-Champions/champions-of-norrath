@@ -96,3 +96,8 @@ extern "C" void norrath_sound_restore(bool reset_hardware) {
     rpc_original(0x20,0);
 }
 
+/* soundRestore__Fb at 0x0024bc38 is 984 bytes and is this function.
+ * The original name is the same body, not a second copy.
+ */
+extern "C" void soundRestore__Fb(bool) __attribute__((alias("norrath_sound_restore")));
+
