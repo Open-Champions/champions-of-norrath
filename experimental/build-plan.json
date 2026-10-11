@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1006,
+  "default_authored_inputs": 1037,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1536,6 +1536,37 @@
     "sources/sif-keyboard-iop-heap-query/query.cpp": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
     "sources/sif-keyboard-keyboard/keyboard.cpp": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
     "sources/sif-keyboard-module-calls/module.cpp": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
+    "sources/sound-rpc-views-command-dma-destination/command_dma_destination.cpp": "d073367397fbfad661ea0a99261f0b0c53f6aabe215f84737348b99fcb94abc9",
+    "sources/sound-rpc-views-iop-heap-bind/iop_heap_bind.cpp": "cfaa49752e9c8e68fb39d00f6b6681a767ed11b2d21501ac5624b14a234c17fb",
+    "sources/sound-rpc-views-iop-heap-client/iop_heap_client.cpp": "2b142de7d37132e6ccac2092d8fe876a5d6f03948e3ab0dd16403683ab7147ee",
+    "sources/sound-rpc-views-iop-heap-receive/iop_heap_receive.cpp": "c43a29c41f343308edd09ec7a8d8cf93f37b0570e754dacbda2b393433f1e6b0",
+    "sources/sound-rpc-views-iop-heap-send/iop_heap_send.cpp": "836c16926195144dae6028ecf2ecdb8b010529e4d7f9781eeb8f7aea17c4d982",
+    "sources/sound-rpc-views-remote-bind-failure/remote_bind_failure.cpp": "9cad9b4b2926c150a8cd5d67dc601d4b223f2d036c4e1f718c8411efba9b7d28",
+    "sources/sound-rpc-views-remote-client/remote_client.cpp": "f8252b24d04514b8eafeb994a9ae15f91d23fd27a4f218dc009c59c3cd74222b",
+    "sources/sound-rpc-views-remote-end-function/remote_end_function.cpp": "6f7ceb7aeb8df1816eaa0048998c3af56397a310117e8fad2c7a1a7a0d1bf0ef",
+    "sources/sound-rpc-views-remote-end-gp/remote_end_gp.cpp": "d2f4905bafdc98bdf027239ee2fdba00969cb8895390772102d6a8f89909ae62",
+    "sources/sound-rpc-views-remote-interrupt-arguments/remote_interrupt_arguments.cpp": "69f928cde7503ff328124031ec89a2c50043d1a73cd2dbf0cff457c9e5ca24a5",
+    "sources/sound-rpc-views-remote-interrupt-functions/remote_interrupt_functions.cpp": "a7383a4f591444d28941e5ef0321f1e67489c76a4677b5c55d6fb81b0ab8d3ec",
+    "sources/sound-rpc-views-remote-interrupt-gps/remote_interrupt_gps.cpp": "41218617e7ff8e0f5397f42c8b7adfb0e69e8803f94dbe10e6f326046c5ac0cc",
+    "sources/sound-rpc-views-remote-packet/remote_packet.cpp": "baccaf0212e6531848678b329af4c2190d113147ebf1e5b8c9b9783e78f3e7be",
+    "sources/sound-rpc-views-restore-allocation/restore_allocation.cpp": "8000fa778a16f13bc8ee2597c507e73b9cce063da6607b80f65d2e453f077ec3",
+    "sources/sound-rpc-views-restore-formats/restore_formats.cpp": "0ced8fd6e1f8fcdfbab9388981468c1246ce25954fa108cf068822a017dfad8b",
+    "sources/sound-rpc-views-restore-slot/restore_slot.cpp": "898feaf799ac21559035d2f2e81836ad83e85fd8cb0e41809e78b1f5078a13b2",
+    "sources/sound-rpc-views-restore-stream-count/restore_stream_count.cpp": "db55091e4d92846d5c2abebc074df4fefc142fb998d522cf76e27b43e8192e12",
+    "sources/sound-rpc-views-rpc-client/rpc_client.cpp": "26f8588192ea667b20f129f791b76ecc84dc710c4417c4183800be21d8716966",
+    "sources/sound-rpc-views-rpc-free-buffer/rpc_free_buffer.cpp": "0ea6a37d1f97f96aa7ff56339103bcb5f8001955bae9e867a083162c78537750",
+    "sources/sound-rpc-views-rpc-free-buffer2/rpc_free_buffer2.cpp": "f8dcec828fdf3b7fe407d6ea40f87ccc340a13f7ed4007b95ef8a7500a58e348",
+    "sources/sound-rpc-views-rpc-initialized/rpc_initialized.cpp": "f62cb77b0ac50864e2a2ea9649a3d112ab143b4e9dba06adbfa69c49f613bd8a",
+    "sources/sound-rpc-views-rpc-packet-buffer/rpc_packet_buffer.cpp": "f4af050b92eb579cf36739a86d18328235458f0af4c83c0addb9f53f6a047292",
+    "sources/sound-rpc-views-rpc-pool-state/rpc_pool_state.cpp": "35e160127b7147f58779099c02adec4494e29fe558b2800f5daa2b13800826ca",
+    "sources/sound-rpc-views-rpc-receive/rpc_receive.cpp": "182033825be26deb011bf4f8cb81b18cd331e6ab5ccd17ad0d9229d8e9be0bde",
+    "sources/sound-rpc-views-rpc-send/rpc_send.cpp": "17e9c4f5ca39f4159bf01f3352dd1f34f815ca8c207969e0c66758ec6b73a9f7",
+    "sources/sound-rpc-views-sequence-spinner/sequence_spinner.cpp": "a2dd62ad1ea44f5aa38f5ab8adf44728a5efaeef48bc0ac06b1d559287df2a0b",
+    "sources/sound-rpc-views-stereo-enable/stereo_enable.cpp": "01507c15baeda199e6e0f5c6544f95da0f3a42abccd083c6603676f7dede7698",
+    "sources/sound-rpc-views-stream-heap/stream_heap.cpp": "6517eb970deeccb0f6b87c69451a370a4fe162579a9c9f85d76b84ea47c52f0a",
+    "sources/sound-rpc-views-wake-ring/wake_ring.cpp": "fdb675ddab0cfdd6a345b9a4b2d11e4f99d07173092e6588cca2c9f2c4590ae6",
+    "sources/sound-rpc-views-wake-semaphore/wake_semaphore.cpp": "22fa3ff30d44c73801fc8e1ef573875ba91c54eda3585ca080144cb28b83dff6",
+    "sources/sound-rpc-views-wake-top-id/wake_top_id.cpp": "1923ed3d5fee31f3305499ded3c6d6025ededd14dce02b4e8e3647535d907dd9",
     "sources/subsystem-inits-anim/anim_init.cpp": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
     "sources/subsystem-inits-emath/emath_init.cpp": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
     "sources/subsystem-inits-level-name/level_name.cpp": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
@@ -12891,6 +12922,285 @@
       "profile": "authored_cpp",
       "sha256": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
       "source": "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1008,
+      "kind": "independently_authored_source",
+      "object_name": "command_dma_destination.o",
+      "profile": "authored_cpp",
+      "sha256": "d073367397fbfad661ea0a99261f0b0c53f6aabe215f84737348b99fcb94abc9",
+      "source": "sources/sound-rpc-views-command-dma-destination/command_dma_destination.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1009,
+      "kind": "independently_authored_source",
+      "object_name": "iop_heap_bind.o",
+      "profile": "authored_cpp",
+      "sha256": "cfaa49752e9c8e68fb39d00f6b6681a767ed11b2d21501ac5624b14a234c17fb",
+      "source": "sources/sound-rpc-views-iop-heap-bind/iop_heap_bind.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1010,
+      "kind": "independently_authored_source",
+      "object_name": "iop_heap_client.o",
+      "profile": "authored_cpp",
+      "sha256": "2b142de7d37132e6ccac2092d8fe876a5d6f03948e3ab0dd16403683ab7147ee",
+      "source": "sources/sound-rpc-views-iop-heap-client/iop_heap_client.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1011,
+      "kind": "independently_authored_source",
+      "object_name": "iop_heap_receive.o",
+      "profile": "authored_cpp",
+      "sha256": "c43a29c41f343308edd09ec7a8d8cf93f37b0570e754dacbda2b393433f1e6b0",
+      "source": "sources/sound-rpc-views-iop-heap-receive/iop_heap_receive.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1012,
+      "kind": "independently_authored_source",
+      "object_name": "iop_heap_send.o",
+      "profile": "authored_cpp",
+      "sha256": "836c16926195144dae6028ecf2ecdb8b010529e4d7f9781eeb8f7aea17c4d982",
+      "source": "sources/sound-rpc-views-iop-heap-send/iop_heap_send.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1013,
+      "kind": "independently_authored_source",
+      "object_name": "remote_bind_failure.o",
+      "profile": "authored_cpp",
+      "sha256": "9cad9b4b2926c150a8cd5d67dc601d4b223f2d036c4e1f718c8411efba9b7d28",
+      "source": "sources/sound-rpc-views-remote-bind-failure/remote_bind_failure.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1014,
+      "kind": "independently_authored_source",
+      "object_name": "remote_client.o",
+      "profile": "authored_cpp",
+      "sha256": "f8252b24d04514b8eafeb994a9ae15f91d23fd27a4f218dc009c59c3cd74222b",
+      "source": "sources/sound-rpc-views-remote-client/remote_client.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1015,
+      "kind": "independently_authored_source",
+      "object_name": "remote_end_function.o",
+      "profile": "authored_cpp",
+      "sha256": "6f7ceb7aeb8df1816eaa0048998c3af56397a310117e8fad2c7a1a7a0d1bf0ef",
+      "source": "sources/sound-rpc-views-remote-end-function/remote_end_function.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1016,
+      "kind": "independently_authored_source",
+      "object_name": "remote_end_gp.o",
+      "profile": "authored_cpp",
+      "sha256": "d2f4905bafdc98bdf027239ee2fdba00969cb8895390772102d6a8f89909ae62",
+      "source": "sources/sound-rpc-views-remote-end-gp/remote_end_gp.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1017,
+      "kind": "independently_authored_source",
+      "object_name": "remote_interrupt_arguments.o",
+      "profile": "authored_cpp",
+      "sha256": "69f928cde7503ff328124031ec89a2c50043d1a73cd2dbf0cff457c9e5ca24a5",
+      "source": "sources/sound-rpc-views-remote-interrupt-arguments/remote_interrupt_arguments.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1018,
+      "kind": "independently_authored_source",
+      "object_name": "remote_interrupt_functions.o",
+      "profile": "authored_cpp",
+      "sha256": "a7383a4f591444d28941e5ef0321f1e67489c76a4677b5c55d6fb81b0ab8d3ec",
+      "source": "sources/sound-rpc-views-remote-interrupt-functions/remote_interrupt_functions.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1019,
+      "kind": "independently_authored_source",
+      "object_name": "remote_interrupt_gps.o",
+      "profile": "authored_cpp",
+      "sha256": "41218617e7ff8e0f5397f42c8b7adfb0e69e8803f94dbe10e6f326046c5ac0cc",
+      "source": "sources/sound-rpc-views-remote-interrupt-gps/remote_interrupt_gps.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1020,
+      "kind": "independently_authored_source",
+      "object_name": "remote_packet.o",
+      "profile": "authored_cpp",
+      "sha256": "baccaf0212e6531848678b329af4c2190d113147ebf1e5b8c9b9783e78f3e7be",
+      "source": "sources/sound-rpc-views-remote-packet/remote_packet.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1021,
+      "kind": "independently_authored_source",
+      "object_name": "restore_allocation.o",
+      "profile": "authored_cpp",
+      "sha256": "8000fa778a16f13bc8ee2597c507e73b9cce063da6607b80f65d2e453f077ec3",
+      "source": "sources/sound-rpc-views-restore-allocation/restore_allocation.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1022,
+      "kind": "independently_authored_source",
+      "object_name": "restore_formats.o",
+      "profile": "authored_cpp",
+      "sha256": "0ced8fd6e1f8fcdfbab9388981468c1246ce25954fa108cf068822a017dfad8b",
+      "source": "sources/sound-rpc-views-restore-formats/restore_formats.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1023,
+      "kind": "independently_authored_source",
+      "object_name": "restore_slot.o",
+      "profile": "authored_cpp",
+      "sha256": "898feaf799ac21559035d2f2e81836ad83e85fd8cb0e41809e78b1f5078a13b2",
+      "source": "sources/sound-rpc-views-restore-slot/restore_slot.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1024,
+      "kind": "independently_authored_source",
+      "object_name": "restore_stream_count.o",
+      "profile": "authored_cpp",
+      "sha256": "db55091e4d92846d5c2abebc074df4fefc142fb998d522cf76e27b43e8192e12",
+      "source": "sources/sound-rpc-views-restore-stream-count/restore_stream_count.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1025,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_client.o",
+      "profile": "authored_cpp",
+      "sha256": "26f8588192ea667b20f129f791b76ecc84dc710c4417c4183800be21d8716966",
+      "source": "sources/sound-rpc-views-rpc-client/rpc_client.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1026,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_free_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "0ea6a37d1f97f96aa7ff56339103bcb5f8001955bae9e867a083162c78537750",
+      "source": "sources/sound-rpc-views-rpc-free-buffer/rpc_free_buffer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1027,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_free_buffer2.o",
+      "profile": "authored_cpp",
+      "sha256": "f8dcec828fdf3b7fe407d6ea40f87ccc340a13f7ed4007b95ef8a7500a58e348",
+      "source": "sources/sound-rpc-views-rpc-free-buffer2/rpc_free_buffer2.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1028,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_initialized.o",
+      "profile": "authored_cpp",
+      "sha256": "f62cb77b0ac50864e2a2ea9649a3d112ab143b4e9dba06adbfa69c49f613bd8a",
+      "source": "sources/sound-rpc-views-rpc-initialized/rpc_initialized.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1029,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_packet_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "f4af050b92eb579cf36739a86d18328235458f0af4c83c0addb9f53f6a047292",
+      "source": "sources/sound-rpc-views-rpc-packet-buffer/rpc_packet_buffer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1030,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_pool_state.o",
+      "profile": "authored_cpp",
+      "sha256": "35e160127b7147f58779099c02adec4494e29fe558b2800f5daa2b13800826ca",
+      "source": "sources/sound-rpc-views-rpc-pool-state/rpc_pool_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1031,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_receive.o",
+      "profile": "authored_cpp",
+      "sha256": "182033825be26deb011bf4f8cb81b18cd331e6ab5ccd17ad0d9229d8e9be0bde",
+      "source": "sources/sound-rpc-views-rpc-receive/rpc_receive.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1032,
+      "kind": "independently_authored_source",
+      "object_name": "rpc_send.o",
+      "profile": "authored_cpp",
+      "sha256": "17e9c4f5ca39f4159bf01f3352dd1f34f815ca8c207969e0c66758ec6b73a9f7",
+      "source": "sources/sound-rpc-views-rpc-send/rpc_send.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1033,
+      "kind": "independently_authored_source",
+      "object_name": "sequence_spinner.o",
+      "profile": "authored_cpp",
+      "sha256": "a2dd62ad1ea44f5aa38f5ab8adf44728a5efaeef48bc0ac06b1d559287df2a0b",
+      "source": "sources/sound-rpc-views-sequence-spinner/sequence_spinner.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1034,
+      "kind": "independently_authored_source",
+      "object_name": "stereo_enable.o",
+      "profile": "authored_cpp",
+      "sha256": "01507c15baeda199e6e0f5c6544f95da0f3a42abccd083c6603676f7dede7698",
+      "source": "sources/sound-rpc-views-stereo-enable/stereo_enable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1035,
+      "kind": "independently_authored_source",
+      "object_name": "stream_heap.o",
+      "profile": "authored_cpp",
+      "sha256": "6517eb970deeccb0f6b87c69451a370a4fe162579a9c9f85d76b84ea47c52f0a",
+      "source": "sources/sound-rpc-views-stream-heap/stream_heap.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1036,
+      "kind": "independently_authored_source",
+      "object_name": "wake_ring.o",
+      "profile": "authored_cpp",
+      "sha256": "fdb675ddab0cfdd6a345b9a4b2d11e4f99d07173092e6588cca2c9f2c4590ae6",
+      "source": "sources/sound-rpc-views-wake-ring/wake_ring.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1037,
+      "kind": "independently_authored_source",
+      "object_name": "wake_semaphore.o",
+      "profile": "authored_cpp",
+      "sha256": "22fa3ff30d44c73801fc8e1ef573875ba91c54eda3585ca080144cb28b83dff6",
+      "source": "sources/sound-rpc-views-wake-semaphore/wake_semaphore.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1038,
+      "kind": "independently_authored_source",
+      "object_name": "wake_top_id.o",
+      "profile": "authored_cpp",
+      "sha256": "1923ed3d5fee31f3305499ded3c6d6025ededd14dce02b4e8e3647535d907dd9",
+      "source": "sources/sound-rpc-views-wake-top-id/wake_top_id.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -12990,7 +13300,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8ec0437db9bb2a2123c78fee041c3def1d0447e03d144df8425e7fce66073ce6",
+  "snapshot_sha256": "6feb69560f82a5b76ab7a3f60ab0f06bca9a2fda3a79cce4c6b0a452825a2b49",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

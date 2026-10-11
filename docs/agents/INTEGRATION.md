@@ -1187,6 +1187,27 @@ Closed: `norrath_construct_AutoChestLP`. Opened:
 828 function bodies, 1006 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/sound-rpc-views
+
+All 31 units were selected. They are data objects only; no function was
+added. The notes tie each view to a pinned symbol address and size and
+separate the caller-proven prefix from the unnamed tail bytes. Each unit has
+a host check that returns failure on a wrong size or nonzero byte. All 31
+host checks passed on this machine. The previous integrator merged the
+branch and left the plan and snapshot edits uncommitted; this link is the
+first complete one for that selection.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 858 |
+| Closed | 31 |
+| Opened | 0 |
+
+Closed: the 31 `norrath_sound_*_view` names listed in the package notes.
+Opened: none. 828 function bodies, 1037 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1284,6 +1305,12 @@ frozen prefix. Those lines were not kept. Both original names stay
 unresolved. Decide whether a later unit outside that prefix should publish
 them.
 
+`norrath_sound_command_dma_destination_word_view` is a separate 4-byte
+object for byte 8 of the command table already published as
+`norrath_sound_command_state_view`. A store through one does not update the
+other. Decide whether the DMA word should become a view inside the command
+state object.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1295,7 +1322,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, and ctors-ant-lantern. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, and sound-rpc-views. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1348,3 +1375,4 @@ and no startup stage has executed.
 - 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
 - 2026-10-11 17:57 CDT — `agents/link-image-bounds` — 888 unresolved imports
 - 2026-10-11 17:59 CDT — `agents/ctors-ant-lantern` — 889 unresolved imports
+- 2026-10-11 18:08 CDT — `agents/sound-rpc-views` — 858 unresolved imports
