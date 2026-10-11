@@ -143,6 +143,7 @@ def check(root):
         ('sources/runtime-initsys-callees/dintr.S', 'DIntr'),
         ('sources/runtime-initsys-callees/eintr.S', 'EIntr'),
         ('sources/runtime-initsys-callees/set_t2.S', 'SetT2'),
+        ('sources/runtime-initsys-callees/set_t2_count.S', 'SetT2_COUNT'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
