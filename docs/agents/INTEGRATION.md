@@ -340,6 +340,29 @@ defined. Bodies match the notes, including both printf names at 104 bytes,
 `sscanf` 344, and `strcmp` 40. 472 function bodies, 388 authored inputs, zero
 COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/items-player
+
+Merged. Original startup names `initChars__FiPPc`, `inventoryInitNet__Fv`,
+`levelName`, `picInit__4itemv`, and `shopInitNet__Fv` are defined. Each plan
+unit has a host test. Item, named-item, and proxy-mesh rows assert a 32-bit
+layout, so those three host programs do not run on this 64-bit machine; the
+EE compile includes the same assert and succeeded. No game binary or
+disassembly listing was committed. `memAlloc__FiPc` stays unresolved.
+
+| | |
+|---|---|
+| Before | 740 |
+| After | 692 |
+| Closed | 100 |
+| Opened | 52 |
+
+Closed: the names in `docs/agents/items-player.md` except `nmPlayers`, which
+is defined and was not a previous import. Opened: 52 vtable and message
+symbols from that notes list. `cdLoad__FPcPvii`, `exit`, `launchSRS`, `main`,
+`memAlloc__FiPc`, `netNetworkMode`, `strcmp`, and `_fbss` were already
+unresolved or already defined. 477 function bodies, 421 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -359,6 +382,16 @@ The memory notes say the original word is one symbol and this package defines
 only the view. `__sce_sema_id` is still unresolved. Decide whether the view
 should become that symbol.
 
+`norrath_player_view_484ca8` is defined for the original
+`gotPlayerStartThisLevel` byte. `norrath_got_player_start_this_level_bytes`
+stays unresolved. The items notes say those two names are the same byte and
+this package does not alias them. Decide whether they should be one symbol.
+
+`levelName` and `norrath_player_view_34b752` are separate objects. The host
+test fails if those pointers are equal. The notes say the view sits inside
+the 322-byte `levelName` image. Decide whether the tail should be a second
+symbol.
+
 ## Disagreements
 
 The two items under Needs a decision are the only symbol disagreements among
@@ -367,7 +400,7 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-megatile, script-amx, cd-archive, and libc-format. The held AMX draft remains uncompiled.
+megatile, script-amx, cd-archive, libc-format, and items-player. The held AMX draft remains uncompiled.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -380,3 +413,4 @@ and no startup stage has executed.
 - 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports
 - 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports
 - 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports
+- 2026-10-11 16:34 CDT — `agents/items-player` — 692 unresolved imports
