@@ -466,6 +466,28 @@ Opened: 18 names, including `norrath_construct_Line`, `frameNm`,
 slots. 498 function bodies, 528 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/data-views
+
+63 of 98 view objects were selected. Each selected host check returns non-zero
+when the initial scalar, string, or virtual-slot function disagrees. All 63
+passed. No game binary or disassembly listing was committed. These units add
+data, not function bodies.
+
+35 player-view units were not selected. items-player already defines those
+names, including `norrath_player_view_484ca8`. Selecting them again would
+multiply the symbols. The files stay in the source snapshot.
+
+| | |
+|---|---|
+| Before | 750 |
+| After | 782 |
+| Closed | 63 |
+| Opened | 95 |
+
+Closed: `norrath_actor_view_42b118`, `norrath_actor_view_42b768`, `norrath_actor_view_42baa8`, `norrath_actor_view_42c130`, `norrath_actor_view_42c710`, `norrath_actor_view_42d0c0`, `norrath_actor_view_4488f0`, `norrath_actor_view_44b170`, `norrath_actor_view_44b540`, `norrath_actor_view_44c170`, `norrath_actor_view_44e1c0`, `norrath_actor_view_44e6a0`, `norrath_actor_view_44f4c8`, `norrath_actor_view_460710`, `norrath_actor_view_460720`, `norrath_actor_view_460730`, `norrath_actor_view_460740`, `norrath_actor_view_47fb54`, `norrath_actor_view_480eec`, `norrath_actor_view_480ef0`, `norrath_actor_view_48113c`, `norrath_actor_view_481140`, `norrath_actor_view_4813a4`, `norrath_actor_view_4813a8`, `norrath_actor_view_4813ac`, `norrath_actor_view_4816d8`, `norrath_actor_view_481a08`, `norrath_actor_view_481a0c`, `norrath_actor_view_481a10`, `norrath_actor_view_4837a8`, `norrath_actor_view_4837b0`, `norrath_actor_view_4837b8`, `norrath_actor_view_4837c0`, `norrath_actor_view_4837c8`, `norrath_actor_view_4837d0`, `norrath_actor_view_4837d8`, `norrath_actor_view_483ad0`, `norrath_actor_view_484318`, `norrath_actor_view_4844a4`, `norrath_actor_view_484f98`, `norrath_actor_view_485150`, `norrath_actor_view_485410`, `norrath_actor_view_485418`, `norrath_creature_view_47fb58`, `norrath_creature_view_47fb5c`, `norrath_creature_view_47fb60`, `norrath_creature_view_47fb64`, `norrath_creature_view_47fb68`, `norrath_creature_view_4837e0`, `norrath_creature_view_483829`, `norrath_creature_view_483e58`, `norrath_creature_view_484538`, `norrath_creature_view_484cac`, `norrath_creature_view_484cd8`, `norrath_creature_view_48690c`, `norrath_creature_view_486910`, `norrath_next_view_42c650`, `norrath_next_view_4490d0`, `norrath_next_view_449160`, `norrath_next_view_4491f0`, `norrath_next_view_449280`, `norrath_next_view_44c958`, `norrath_next_view_44e820`. The 35 player views were already defined, so they were not imports. Opened: `_$_11SmallSpider`, `_$_13PokeReflector`, `_$_13TriggerParams`, `_$_14GnomeNavigator`, `_$_3Cat`, `_$_4Trap`, `_$_5Lever`, `_$_5Timer`, `_$_7Counter`, `_$_7Mermaid`, `_$_7Natasla`, `_$_8Creature`, `_$_9CdEyeball`, `__tf11SmallSpider`, `__tf13PokeReflector`, `__tf13TriggerParams`, `__tf14GnomeNavigator`, `__tf3Cat`, `__tf4Trap`, `__tf5Lever`, `__tf5Timer`, `__tf7Counter`, `__tf7Mermaid`, `__tf7Natasla`, `__tf8Creature`, `__tf9CdEyeball`, `clone__10GameObject`, `clone__11SmallSpider`, `clone__13PokeReflector`, `clone__13TriggerParams`, `clone__3Cat`, `clone__5Lever`, `clone__5Timer`, `clone__7Counter`, `clone__8Creature`, `clone__9CdEyeball`, `confuse__8Creaturei`, `death__8Creature`, `getMinibossName__8Creature`, `getModel__8Creature`, `getSkillRank__8Creaturei`, `initMiniboss__8Creature`, `isEnemy__8CreatureP10GameObject`, `msg_alert__8CreatureifG6Point3P10GameObject`, `msg_collisionWorld__8CreatureG6Point3`, `msg_collision__11SmallSpiderP10GameObject`, `msg_collision__3CatP10GameObject`, `msg_collision__8CreatureP10GameObject`, `msg_draw__11SmallSpider`, `msg_draw__14GnomeNavigator`, `msg_draw__3Cat`, `msg_draw__4Trap`, `msg_draw__5Lever`, `msg_draw__7Mermaid`, `msg_draw__7Natasla`, `msg_draw__9CdEyeball`, `msg_getPokeName__13PokeReflectorPUsi`, `msg_getPokeName__5LeverPUsi`, `msg_getPokeName__8CreaturePUsi`, `msg_hurt__8CreaturefP10GameObjecti`, `msg_load__5LeverPc`, `msg_load__7CounterPc`, `msg_load__8CreaturePc`, `msg_moveCollision__8CreaturePP10GameObject`, `msg_poke__13PokeReflectori`, `msg_poke__5Leveri`, `msg_poke__8Creaturei`, `msg_route__8Creaturei`, `msg_run__11SmallSpider`, `msg_run__14GnomeNavigator`, `msg_run__3Cat`, `msg_run__4Trap`, `msg_run__5Lever`, `msg_run__5Timer`, `msg_run__7Mermaid`, `msg_run__7Natasla`, `msg_run__9CdEyeball`, `msg_save__5LeverPc`, `msg_save__7CounterPc`, `msg_save__8CreaturePc`, `msg_trigger__13TriggerParamsi`, `msg_trigger__5Timeri`, `msg_trigger__7Counteri`, `msg_trigger__8Creaturei`, `runSpells__8CreatureG6Point3`, `setActiveChunks__8Creature`, `setState__11SmallSpideri`, `setState__14GnomeNavigatori`, `setState__3Cati`, `setState__7Mermaidi`, `setState__7Nataslai`, `setState__8Creaturei`, `stun__8Creaturei`, `turnToFace__8CreatureiG6Point3`, `updateEnemy__8Creature`. Notes that list a larger slot set include names that were already unresolved or already defined. 498 function
+bodies, 591 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -526,6 +548,10 @@ those two views are one symbol.
 are the cd-archive border returns. render-lights defines the same two names
 again. Those units were not selected. Decide which package owns the names.
 
+items-player already defines 35 `norrath_player_view_*` names. data-views
+defines the same 35 names again, including `norrath_player_view_484ca8`.
+Those units were not selected. Decide which package owns each name.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -535,11 +561,11 @@ symbol was defined twice.
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-engine-init, world-state, and render-lights. `engineInit__Ff`,
+engine-init, world-state, render-lights, and data-views. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
-save-net-anim view units and the two unselected render-lights border units
-are authored and not in the link.
+save-net-anim view units, the two unselected render-lights border units,
+and the 35 unselected data-views player views are authored and not in the link.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -557,3 +583,4 @@ and no startup stage has executed.
 - 2026-10-11 16:39 CDT — `agents/engine-init` — 789 unresolved imports
 - 2026-10-11 16:44 CDT — `agents/world-state` — 756 unresolved imports
 - 2026-10-11 16:47 CDT — `agents/render-lights` — 750 unresolved imports
+- 2026-10-11 16:50 CDT — `agents/data-views` — 782 unresolved imports
