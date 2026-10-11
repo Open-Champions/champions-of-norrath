@@ -143,6 +143,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_mc_objects_section_key_bytes.cpp",
                     "norrath_mc_objects_section_key_bytes", 11, b"objects.ob\0")
 
+    def test_animation_extension(self):
+        self.expect("norrath_archive_animation_extension_view.cpp",
+                    "norrath_archive_animation_extension_view", 4, b"anm\0")
+
 
 if __name__ == "__main__":
     unittest.main()
