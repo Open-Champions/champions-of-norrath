@@ -1009,6 +1009,34 @@ The notes predicted only `modelGetActiveChunks__FP12_modelHeaderi` and
 `iatan2__Fff`. 743 function bodies, 865 authored inputs, zero COMMON. 214
 tool tests passed. No EE or game execution.
 
+## agents/light-methods
+
+All 17 units were selected. Host checks passed. The four typeinfo units
+also define the 12-byte `norrath_ti_*` objects. Those were not previous
+imports, so they did not change the count.
+
+| | |
+|---|---|
+| Before | 871 |
+| After | 866 |
+| Closed | 17 |
+| Opened | 12 |
+
+Closed: `norrath_construct_Line`, the four `norrath_vt_clone_*` names, the
+four `norrath_vt_dtor_*` names, `norrath_vt_msg_draw_12CosmeticProp`,
+`norrath_vt_msg_load_12CosmeticProp`, `norrath_vt_msg_save_12CosmeticProp`,
+the four `norrath_vt_tf_*` names, and `textureDrawColor__FP8_textureiiiUi`.
+Opened: `_textureDrawColor__FP8_textureiiiUi`, `getMegatileCenter__FG6Point2`,
+`getMegatileOriginalCenter__FG6Point2`, `initializeMe__4Line`,
+`matIdent__FP8Matrix33`, `matMakeTransYaw__FP8Matrix34G6Point3s`,
+`matRot__FP8Matrix33is`, `matTransform__FP6Point3P8Matrix33T0`,
+`modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi`,
+`norrath_rtti_si`, `objectSaveAddToStringPool__FPCc`,
+`objectSaveGetFromStringPool__Fi`. `norrath_list_head_copy_construct`,
+`lumpFindResource__FPcT0`, and `memAlloc__FiPc` were already unresolved.
+760 function bodies, 882 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1117,7 +1145,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, and vslots-b. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, and light-methods. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1161,3 +1189,4 @@ and no startup stage has executed.
 - 2026-10-11 17:41 CDT — `agents/audio` — 879 unresolved imports
 - 2026-10-11 17:42 CDT — `agents/script-amx` — 879 unresolved imports
 - 2026-10-11 17:44 CDT — `agents/vslots-b` — 871 unresolved imports
+- 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports

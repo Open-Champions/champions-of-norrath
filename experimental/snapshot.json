@@ -11413,6 +11413,244 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/vslots-b-trigger-timer/trigger_timer.cpp"
+    },
+    {
+      "input_order": 867,
+      "component": "light-methods-ambient-clone",
+      "object_name": "light_methods_ambient_clone.o",
+      "private_object_sha256": "38171272a249ceaa570dc32d15361949d6aab2cd187e4275839d24849e15d958",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_17charAmbient_Light",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-ambient-clone/clone.cpp"
+    },
+    {
+      "input_order": 868,
+      "component": "light-methods-ambient-dtor",
+      "object_name": "light_methods_ambient_dtor.o",
+      "private_object_sha256": "37dd9fc25a96461666627aeebc58f07ca5a4ce65baf6d419623eee9e0eb75fe9",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_17charAmbient_Light",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-ambient-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 869,
+      "component": "light-methods-ambient-typeinfo",
+      "object_name": "light_methods_ambient_typeinfo.o",
+      "private_object_sha256": "353ecaaf0d3d7e85654db29f585cb7cbe69a02bc9ff4b11466add65ad00da957",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_17charAmbient_Light",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-ambient-typeinfo/typeinfo.cpp"
+    },
+    {
+      "input_order": 870,
+      "component": "light-methods-cosmetic-clone",
+      "object_name": "light_methods_cosmetic_clone.o",
+      "private_object_sha256": "38c9fddef62fc73cb3e6615cc3671bf51930f679c25e0284c5fcee686c364a20",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_12CosmeticProp",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-clone/clone.cpp"
+    },
+    {
+      "input_order": 871,
+      "component": "light-methods-cosmetic-draw",
+      "object_name": "light_methods_cosmetic_draw.o",
+      "private_object_sha256": "1ac50379697418d8e5957d3a8d9e581fd6545e7c78ded1f4d269a400d7f41f65",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_draw_12CosmeticProp",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-draw/msg_draw.cpp"
+    },
+    {
+      "input_order": 872,
+      "component": "light-methods-cosmetic-dtor",
+      "object_name": "light_methods_cosmetic_dtor.o",
+      "private_object_sha256": "7e29d1777bdff61c77b0879cd63230a9b9d18d2f61556e41156978712e688a6b",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_12CosmeticProp",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 873,
+      "component": "light-methods-cosmetic-load",
+      "object_name": "light_methods_cosmetic_load.o",
+      "private_object_sha256": "66b006573ab0372b7106787f5d8bde244d3afacae8491333dc732391c32fdf30",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_load_12CosmeticProp",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-load/msg_load.cpp"
+    },
+    {
+      "input_order": 874,
+      "component": "light-methods-cosmetic-save",
+      "object_name": "light_methods_cosmetic_save.o",
+      "private_object_sha256": "18ff43bf62b9d85f69b6c1ef651e3842a40e13ac7079be1c70a39cb27261b360",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_save_12CosmeticProp",
+          "compiled_body_bytes": 876
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-save/msg_save.cpp"
+    },
+    {
+      "input_order": 875,
+      "component": "light-methods-cosmetic-typeinfo",
+      "object_name": "light_methods_cosmetic_typeinfo.o",
+      "private_object_sha256": "3dfa9859872ab10bd78ebb95955334aa1fd3d26157df50763588ddbbd2b54116",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_12CosmeticProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-cosmetic-typeinfo/typeinfo.cpp"
+    },
+    {
+      "input_order": 876,
+      "component": "light-methods-directional-clone",
+      "object_name": "light_methods_directional_clone.o",
+      "private_object_sha256": "fbe4fc5f5c43d9c1176b58c7c47e0aa70452cec51784df3e29fa8423251dd7b9",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_21charDirectional_Light",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-clone/clone.cpp"
+    },
+    {
+      "input_order": 877,
+      "component": "light-methods-directional-d-clone",
+      "object_name": "light_methods_directional_d_clone.o",
+      "private_object_sha256": "1e025d0f0d1e4c17b9c55ebe232d39d649ade179b448135d5edfaa3e1b50ad2e",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_22charDirectional_LightD",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-d-clone/clone.cpp"
+    },
+    {
+      "input_order": 878,
+      "component": "light-methods-directional-d-dtor",
+      "object_name": "light_methods_directional_d_dtor.o",
+      "private_object_sha256": "3b63ab78f69eaadf68f17dde442caba3656a4362f2d3038e958536b2719341e4",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_22charDirectional_LightD",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-d-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 879,
+      "component": "light-methods-directional-d-typeinfo",
+      "object_name": "light_methods_directional_d_typeinfo.o",
+      "private_object_sha256": "7e7821ce2067b10c5ad2eecd29b7238d5711c23fd95a4f21931add80844c205d",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_22charDirectional_LightD",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-d-typeinfo/typeinfo.cpp"
+    },
+    {
+      "input_order": 880,
+      "component": "light-methods-directional-dtor",
+      "object_name": "light_methods_directional_dtor.o",
+      "private_object_sha256": "126aa9d0ae79393360044f123ad74caba8c182aad5f23f90e9b35b725fb0ca33",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_21charDirectional_Light",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 881,
+      "component": "light-methods-directional-typeinfo",
+      "object_name": "light_methods_directional_typeinfo.o",
+      "private_object_sha256": "e192069916327b9aaf51ebfa10cfbdbfe1d421b4407414a97b8b680fdcee5e7d",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_21charDirectional_Light",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-directional-typeinfo/typeinfo.cpp"
+    },
+    {
+      "input_order": 882,
+      "component": "light-methods-line-construct",
+      "object_name": "light_methods_line_construct.o",
+      "private_object_sha256": "49e23bf59342316e677844ac28fe5e956938313fa6e02904467d3e1b5706ce48",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Line",
+          "compiled_body_bytes": 2008
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-line-construct/line_construct.cpp"
+    },
+    {
+      "input_order": 883,
+      "component": "light-methods-texture-draw-color",
+      "object_name": "light_methods_texture_draw_color.o",
+      "private_object_sha256": "e8975a4d4d0193578f4129ca2117af4c75af0f8fa2cca7de6b35399fc2965685",
+      "emitted_functions": [
+        {
+          "name": "textureDrawColor__FP8_textureiiiUi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/light-methods-texture-draw-color/texture_draw_color.cpp"
     }
   ],
   "drafts": [
@@ -12974,6 +13212,40 @@
     "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
     "sources/libc-format-strtod/strtod.cpp": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
     "sources/libc-format-strtod/strtod_contract.cpp": "9df2b4fa5cdaeb1bf69588d59cacb8740dee1793cbb1c0f29ccb0948abb9c88f",
+    "sources/light-methods-ambient-clone/clone.cpp": "131e29db82047cb460e85410e644fca7dec6168780b44c545eef4c8c458cb677",
+    "sources/light-methods-ambient-clone/host_check.cpp": "ed0f2375b3eacc16a5cc07dc55ef5d71943537aa18888ddff2e63aa514f26dbe",
+    "sources/light-methods-ambient-dtor/dtor.cpp": "7938a84c9e0f2dd6e9dbe5eb9a826ef811d10d91b2bd08c75f7c73ceb88237d4",
+    "sources/light-methods-ambient-dtor/host_check.cpp": "dc69efef25ef701e5a33cf79496e1c7f21a2b134a90b5b3325bc84357d77336d",
+    "sources/light-methods-ambient-typeinfo/host_check.cpp": "0bd6bd66a68fc8607848e377373cbf17be04f644bd09614b14521480f783a026",
+    "sources/light-methods-ambient-typeinfo/typeinfo.cpp": "2fe1185875851a94dd181bca7c5dc8b08264ca2aeeadfff19fb1c8fe6007991c",
+    "sources/light-methods-cosmetic-clone/clone.cpp": "5b519215c86468979eb0325c8ff6d11eb9ebf31a26b75bc15ea3e1a154bb2732",
+    "sources/light-methods-cosmetic-clone/host_check.cpp": "2916db55e097f7a41a9d30a314bbc813188cfaf51186c435ef6acbb271cbb4d9",
+    "sources/light-methods-cosmetic-draw/host_check.cpp": "eb48ee154b69232dac6630efa626672b7ad58aa2811d914b5ab3ee4f0371a1da",
+    "sources/light-methods-cosmetic-draw/msg_draw.cpp": "f22089a96b5503b3977096c706cad62f785c4811dc63ef17e8c09428adddc659",
+    "sources/light-methods-cosmetic-dtor/dtor.cpp": "2b3a23ec74be3e1e86ab434e8731a02e1bbfd7996b7f352fc52ca85bcca19f32",
+    "sources/light-methods-cosmetic-dtor/host_check.cpp": "95bd6aaed2b58ba56968378e73a64810e8dcc6516dc73d1e0cbc2ad46c44e807",
+    "sources/light-methods-cosmetic-load/host_check.cpp": "17c43b168ba2739e7bd3a4569572e26abb3d7438bcf2cf6efe71508653865b06",
+    "sources/light-methods-cosmetic-load/msg_load.cpp": "36e4ede0051aaf93b0f487136418ed4bd6c96814163947c2b122a769a6ac0c5e",
+    "sources/light-methods-cosmetic-save/host_check.cpp": "15f8410999c0446dba2219d4f5a08de93c6b46ae7b17f6a5d64e85c711039414",
+    "sources/light-methods-cosmetic-save/msg_save.cpp": "9a1088ae076cabfc9b4af9357a6f46918c9ac704d83cafbfe849831a96fdf40c",
+    "sources/light-methods-cosmetic-typeinfo/host_check.cpp": "8c3ffbe5f22c13958f728fc88e361b2fc4a14211bde26c96a4a76c2feee45d57",
+    "sources/light-methods-cosmetic-typeinfo/typeinfo.cpp": "b0283cf38c99618ee1f46fdce2f7cbeb206e73cc283880d64a43f8ae744eee36",
+    "sources/light-methods-directional-clone/clone.cpp": "bac726d34719059e9e7dcace348b9ae81996f12e4285e5a7bda87acc95bb078c",
+    "sources/light-methods-directional-clone/host_check.cpp": "b375b86823348dd75820e641c78958f9d10f3018ba8bce87a064d9289628b451",
+    "sources/light-methods-directional-d-clone/clone.cpp": "6e2d0a621f16477c7dafebf078109663a3187b93945cf2b8f379340facd1f528",
+    "sources/light-methods-directional-d-clone/host_check.cpp": "16976e2e4865210703a098d5422ac699e23c3134dfc2fd1e1db60b3b2ba434a4",
+    "sources/light-methods-directional-d-dtor/dtor.cpp": "ec3a52c89a8299b7ed35afc26e7aab11e18726c9e12f80c40fcc4fdaa460b84b",
+    "sources/light-methods-directional-d-dtor/host_check.cpp": "aa1f0c1a9d9e03560b672bfbf3a0730fa2b2ecc6e996e425d162f685b5bc7e18",
+    "sources/light-methods-directional-d-typeinfo/host_check.cpp": "a3c609f16de1f1d97d15d1217e1844c6d18b1ad1d5a4b89a805e2efbc6c71ce0",
+    "sources/light-methods-directional-d-typeinfo/typeinfo.cpp": "6143a8cdea3ff96c2b2aa58a61e7a56cb33c56776127ee2497a4b0b00aa07e01",
+    "sources/light-methods-directional-dtor/dtor.cpp": "3a219056ea893ffde75732dad1ed4961ab22b0c6807e4a827d4dae3bb07f66cb",
+    "sources/light-methods-directional-dtor/host_check.cpp": "e25039e4bb8ed12381dcc9d567f4d6faa8400beaf0957b534ca16d031d79a577",
+    "sources/light-methods-directional-typeinfo/host_check.cpp": "fb1d7a7df84b73b724a01802e60f39262e0c48881fd616188fac5997e88e165a",
+    "sources/light-methods-directional-typeinfo/typeinfo.cpp": "4c67a96aa963545b75964a61b3fdc3356d657761491aacf666e0714abed874a2",
+    "sources/light-methods-line-construct/host_check.cpp": "d7297c1e7bbb2d46d1d8cc489c696a47f64b8f4a1f0bd98490c4f5f1ff176595",
+    "sources/light-methods-line-construct/line_construct.cpp": "c7ba7db8a0fff244ab894f0b6c59e3162ed87a2ef509e1308ea65205b167cbf2",
+    "sources/light-methods-texture-draw-color/host_check.cpp": "d89a07dfb7d440aef54f551e1243d00ffe01390eeb4251dfaa1763bf34dfbe10",
+    "sources/light-methods-texture-draw-color/texture_draw_color.cpp": "c86aff1f1461226e401815549208b1a77b29ea80aba84030088eb04a2e2da12d",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -14020,11 +14292,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 867,
-    "authored_default_inputs": 865,
+    "selected_inputs": 884,
+    "authored_default_inputs": 882,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 745,
-    "compiled_body_bytes_from_accepted_inputs": 338556,
+    "emitted_function_definitions_including_helpers": 762,
+    "compiled_body_bytes_from_accepted_inputs": 344588,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -14037,7 +14309,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 554
+    "package_selected_inputs": 571
   },
   "startup_implementations": [
     {
@@ -22598,6 +22870,295 @@
       ],
       "host_files": [
         "sources/vslots-b-trigger-timer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-ambient-clone/clone.cpp",
+      "source_sha256": "131e29db82047cb460e85410e644fca7dec6168780b44c545eef4c8c458cb677",
+      "object_sha256": "38171272a249ceaa570dc32d15361949d6aab2cd187e4275839d24849e15d958",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_17charAmbient_Light",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-ambient-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-ambient-dtor/dtor.cpp",
+      "source_sha256": "7938a84c9e0f2dd6e9dbe5eb9a826ef811d10d91b2bd08c75f7c73ceb88237d4",
+      "object_sha256": "37dd9fc25a96461666627aeebc58f07ca5a4ce65baf6d419623eee9e0eb75fe9",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_17charAmbient_Light",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-ambient-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-ambient-typeinfo/typeinfo.cpp",
+      "source_sha256": "2fe1185875851a94dd181bca7c5dc8b08264ca2aeeadfff19fb1c8fe6007991c",
+      "object_sha256": "353ecaaf0d3d7e85654db29f585cb7cbe69a02bc9ff4b11466add65ad00da957",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_17charAmbient_Light",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-ambient-typeinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-clone/clone.cpp",
+      "source_sha256": "5b519215c86468979eb0325c8ff6d11eb9ebf31a26b75bc15ea3e1a154bb2732",
+      "object_sha256": "38c9fddef62fc73cb3e6615cc3671bf51930f679c25e0284c5fcee686c364a20",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_12CosmeticProp",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-draw/msg_draw.cpp",
+      "source_sha256": "f22089a96b5503b3977096c706cad62f785c4811dc63ef17e8c09428adddc659",
+      "object_sha256": "1ac50379697418d8e5957d3a8d9e581fd6545e7c78ded1f4d269a400d7f41f65",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_draw_12CosmeticProp",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-dtor/dtor.cpp",
+      "source_sha256": "2b3a23ec74be3e1e86ab434e8731a02e1bbfd7996b7f352fc52ca85bcca19f32",
+      "object_sha256": "7e29d1777bdff61c77b0879cd63230a9b9d18d2f61556e41156978712e688a6b",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_12CosmeticProp",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-load/msg_load.cpp",
+      "source_sha256": "36e4ede0051aaf93b0f487136418ed4bd6c96814163947c2b122a769a6ac0c5e",
+      "object_sha256": "66b006573ab0372b7106787f5d8bde244d3afacae8491333dc732391c32fdf30",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_load_12CosmeticProp",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-save/msg_save.cpp",
+      "source_sha256": "9a1088ae076cabfc9b4af9357a6f46918c9ac704d83cafbfe849831a96fdf40c",
+      "object_sha256": "18ff43bf62b9d85f69b6c1ef651e3842a40e13ac7079be1c70a39cb27261b360",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_msg_save_12CosmeticProp",
+          "compiled_body_bytes": 876
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-cosmetic-typeinfo/typeinfo.cpp",
+      "source_sha256": "b0283cf38c99618ee1f46fdce2f7cbeb206e73cc283880d64a43f8ae744eee36",
+      "object_sha256": "3dfa9859872ab10bd78ebb95955334aa1fd3d26157df50763588ddbbd2b54116",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_12CosmeticProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-cosmetic-typeinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-clone/clone.cpp",
+      "source_sha256": "bac726d34719059e9e7dcace348b9ae81996f12e4285e5a7bda87acc95bb078c",
+      "object_sha256": "fbe4fc5f5c43d9c1176b58c7c47e0aa70452cec51784df3e29fa8423251dd7b9",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_21charDirectional_Light",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-d-clone/clone.cpp",
+      "source_sha256": "6e2d0a621f16477c7dafebf078109663a3187b93945cf2b8f379340facd1f528",
+      "object_sha256": "1e025d0f0d1e4c17b9c55ebe232d39d649ade179b448135d5edfaa3e1b50ad2e",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_clone_22charDirectional_LightD",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-d-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-d-dtor/dtor.cpp",
+      "source_sha256": "ec3a52c89a8299b7ed35afc26e7aab11e18726c9e12f80c40fcc4fdaa460b84b",
+      "object_sha256": "3b63ab78f69eaadf68f17dde442caba3656a4362f2d3038e958536b2719341e4",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_22charDirectional_LightD",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-d-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-d-typeinfo/typeinfo.cpp",
+      "source_sha256": "6143a8cdea3ff96c2b2aa58a61e7a56cb33c56776127ee2497a4b0b00aa07e01",
+      "object_sha256": "7e7821ce2067b10c5ad2eecd29b7238d5711c23fd95a4f21931add80844c205d",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_22charDirectional_LightD",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-d-typeinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-dtor/dtor.cpp",
+      "source_sha256": "3a219056ea893ffde75732dad1ed4961ab22b0c6807e4a827d4dae3bb07f66cb",
+      "object_sha256": "126aa9d0ae79393360044f123ad74caba8c182aad5f23f90e9b35b725fb0ca33",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_dtor_21charDirectional_Light",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-directional-typeinfo/typeinfo.cpp",
+      "source_sha256": "4c67a96aa963545b75964a61b3fdc3356d657761491aacf666e0714abed874a2",
+      "object_sha256": "e192069916327b9aaf51ebfa10cfbdbfe1d421b4407414a97b8b680fdcee5e7d",
+      "emitted_functions": [
+        {
+          "name": "norrath_vt_tf_21charDirectional_Light",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-directional-typeinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-line-construct/line_construct.cpp",
+      "source_sha256": "c7ba7db8a0fff244ab894f0b6c59e3162ed87a2ef509e1308ea65205b167cbf2",
+      "object_sha256": "49e23bf59342316e677844ac28fe5e956938313fa6e02904467d3e1b5706ce48",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Line",
+          "compiled_body_bytes": 2008
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-line-construct/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "light-methods",
+      "source": "sources/light-methods-texture-draw-color/texture_draw_color.cpp",
+      "source_sha256": "c86aff1f1461226e401815549208b1a77b29ea80aba84030088eb04a2e2da12d",
+      "object_sha256": "e8975a4d4d0193578f4129ca2117af4c75af0f8fa2cca7de6b35399fc2965685",
+      "emitted_functions": [
+        {
+          "name": "textureDrawColor__FP8_textureiiiUi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/light-methods-texture-draw-color/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
