@@ -144,6 +144,7 @@ def check(root):
         ('sources/runtime-initsys-callees/eintr.S', 'EIntr'),
         ('sources/runtime-initsys-callees/set_t2.S', 'SetT2'),
         ('sources/runtime-initsys-callees/set_t2_count.S', 'SetT2_COUNT'),
+        ('sources/runtime-initsys-callees/set_t2_mode.S', 'SetT2_MODE'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
