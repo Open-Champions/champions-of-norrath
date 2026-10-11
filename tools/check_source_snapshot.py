@@ -140,6 +140,7 @@ def check(root):
         ('sources/runtime-initsys-callees/change_thread_priority.S', 'ChangeThreadPriority'),
         ('sources/runtime-initsys-callees/get_thread_id.S', 'GetThreadId'),
         ('sources/runtime-initsys-callees/find_address.S', 'FindAddress'),
+        ('sources/runtime-initsys-callees/dintr.S', 'DIntr'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):

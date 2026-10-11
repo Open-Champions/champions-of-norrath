@@ -4804,6 +4804,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys-callees/find_address.S"
+    },
+    {
+      "input_order": 306,
+      "component": "runtime-initsys-callees",
+      "object_name": "dintr.o",
+      "private_object_sha256": "1fd6cddbe41839b6fbb7c6a71e1cc0f8014d5a039c93e021d265591bdee01c03",
+      "emitted_functions": [
+        {
+          "name": "DIntr",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys-callees/dintr.S"
     }
   ],
   "drafts": [
@@ -5778,7 +5792,8 @@
     "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
     "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
     "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
-    "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4"
+    "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
+    "sources/runtime-initsys-callees/dintr.S": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2"
   },
   "additional_implementations": [
     {
@@ -6220,11 +6235,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 306,
-    "authored_default_inputs": 304,
+    "selected_inputs": 307,
+    "authored_default_inputs": 305,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 430,
-    "compiled_body_bytes_from_accepted_inputs": 247600,
+    "emitted_function_definitions_including_helpers": 431,
+    "compiled_body_bytes_from_accepted_inputs": 247684,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6236,7 +6251,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 27
+    "startup_selected_inputs": 28
   },
   "startup_implementations": [
     {
@@ -6505,6 +6520,16 @@
       "compiled_body_bytes": 16,
       "source_sha256": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
       "object_sha256": "e81458d1b758503457cc496884f955899df528a636ef6f89d5cc1cff1f56c9eb",
+      "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys-callees/dintr.S",
+      "symbol": "DIntr",
+      "compiled_body_bytes": 84,
+      "source_sha256": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2",
+      "object_sha256": "1fd6cddbe41839b6fbb7c6a71e1cc0f8014d5a039c93e021d265591bdee01c03",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
