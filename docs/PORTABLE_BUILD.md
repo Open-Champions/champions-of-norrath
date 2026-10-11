@@ -108,7 +108,8 @@ inventory is not an instruction-equivalence audit or gameplay test.
 The link uses only `-m elf32lr5900 -r --warn-common`. It imports no absolute game
 addresses and applies no symbol aliases. In particular, the historical private
 V43 binding of `memset` to `norrath_block_memory_set` is not automatically applied;
-`memset` remains an explicit unresolved import in this recipe. The output therefore
+the current successor plan instead includes an independently authored `memset`
+definition, reducing the default unresolved count to 847. The output therefore
 has its own identity and is not claimed to reproduce any private integration object hash or
 its import counts. No original executable, assets, BIOS, compiled private object,
 held draft or proprietary tool is read by the public driver.
@@ -120,3 +121,8 @@ The driver now inventories REL and RELA, preserves the function-symbol multiset
 through linking, and writes tentative storage separately to `common-storage.json`.
 COMMON is not an undefined import; final storage allocation and initialization
 remain separate requirements. The fresh authored baseline has no COMMON symbols.
+
+The current memory-package plan selects 278 authored inputs. See the
+[runtime provider review](../experimental/sources/runtime-memory/REVIEW.md) and
+[execution receipt](../experimental/runtime-memory-receipt.json). The historical
+277-input receipt above remains unchanged.

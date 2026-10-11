@@ -4426,6 +4426,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/game-integer-trig-code-only-source/isin.cpp"
+    },
+    {
+      "component": "runtime-memory",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "memset"
+        }
+      ],
+      "input_order": 279,
+      "kind": "independently_authored_source",
+      "object_name": "memset.o",
+      "private_object_sha256": "ab8d24111a385a1db49d7fc9d1ddda4fded8cfe7357bf1f58783a99281c8a56f",
+      "source": "sources/runtime-memory/memset.cpp"
     }
   ],
   "drafts": [
@@ -5373,7 +5387,8 @@
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
-    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
+    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
+    "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6"
   },
   "additional_implementations": [
     {

@@ -43,3 +43,14 @@ Original executable identity was freshly checked against the pinned baseline.
 Complete private startup extents were reviewed; raw instructions remain private.
 The import triage's name clusters do not establish runtime ordering or ownership.
 Floor drawing/init and engine add-task scheduler remain outside this work.
+
+## C-runtime memory package
+
+The default source build now resolves `memset`: **848 → 847** imports, with no
+new imports and no aliases. Its complete source provider passed 196,992 guarded
+host cases with ASan/UBSan and fresh target compilation without recursive calls.
+The [review](../experimental/sources/runtime-memory/REVIEW.md) explains why the
+standard source definition supersedes the optional alias in local commit 33bc826.
+The [receipt](../experimental/runtime-memory-receipt.json) records the executed
+build identities; later JSON ordering changes do not change the selected sources.
+No entry, constructor, first-frame or gameplay stage has executed.
