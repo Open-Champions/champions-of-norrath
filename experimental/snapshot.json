@@ -4510,6 +4510,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-kernel/root.S"
+    },
+    {
+      "input_order": 285,
+      "component": "runtime-kernel",
+      "object_name": "flush_cache.o",
+      "private_object_sha256": "2f73dddac4745d2947434dccef15809cdbdefd256f8d297bc7e4bdf429203a01",
+      "emitted_functions": [
+        {
+          "name": "FlushCache",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-kernel/flush_cache.S"
     }
   ],
   "drafts": [
@@ -5463,7 +5477,8 @@
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
-    "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c"
+    "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
+    "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc"
   },
   "additional_implementations": [
     {
@@ -5905,11 +5920,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 285,
-    "authored_default_inputs": 283,
+    "selected_inputs": 286,
+    "authored_default_inputs": 284,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 409,
-    "compiled_body_bytes_from_accepted_inputs": 242860,
+    "emitted_function_definitions_including_helpers": 410,
+    "compiled_body_bytes_from_accepted_inputs": 242876,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -5921,7 +5936,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 6
+    "startup_selected_inputs": 7
   },
   "startup_implementations": [
     {
@@ -5980,6 +5995,16 @@
       "compiled_body_bytes": 8,
       "source_sha256": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
       "object_sha256": "6d178f18d07924b20056307178486190f8163cbc531f7493cb425e9e70740611",
+      "review": "docs/STARTUP_KERNEL.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-kernel/flush_cache.S",
+      "symbol": "FlushCache",
+      "compiled_body_bytes": 16,
+      "source_sha256": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
+      "object_sha256": "2f73dddac4745d2947434dccef15809cdbdefd256f8d297bc7e4bdf429203a01",
       "review": "docs/STARTUP_KERNEL.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

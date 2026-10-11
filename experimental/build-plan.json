@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 283,
+  "default_authored_inputs": 284,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -925,6 +925,7 @@
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
+    "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
     "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
@@ -5395,6 +5396,15 @@
       "profile": "authored_entry_asm",
       "sha256": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
       "source": "sources/runtime-kernel/root.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 285,
+      "kind": "independently_authored_source",
+      "object_name": "flush_cache.o",
+      "profile": "authored_entry_asm",
+      "sha256": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
+      "source": "sources/runtime-kernel/flush_cache.S"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5494,7 +5504,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "e89aedd9b7380a0f4afa2cba216e7b17763327d1f1923efd821c9652668768ad",
+  "snapshot_sha256": "4f2db741ed5bc3acbafedd4696869350201cfe0f30586780b9e0b97562bcdcff",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
