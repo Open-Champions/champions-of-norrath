@@ -1052,6 +1052,33 @@ Closed: `msg_poke__8Creaturei`. Opened: `gameSomeoneInShop__Fv`. 761 function
 bodies, 883 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/vehicle-actors
+
+Twenty-five units were selected. `norrath_construct_Vehicle` was not
+selected: its host check fails on the memset value. The 21 views are data.
+`norrath_vehicle_view_44ffd8` was defined and was not a previous import.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 950 |
+| Closed | 24 |
+| Opened | 108 |
+
+Closed: `norrath_actor_add_medium_run_list`,
+`norrath_goth_trap_set_passable_state`,
+`norrath_hate_bridge_set_passable_state`, `norrath_vehicle_reset`, and the
+twenty `norrath_actors_b_view_*` names from `448a70` through `4850f8`.
+Opened 108 names, mostly the virtual-table callees plus
+`worldSetDoorCollision__FP12_worldHeaderii`,
+`worldMoveDoor__FP12_worldHeaderiG6Point3s`,
+`worldSetDoorHeight__FP12_worldHeaderif`, `Reset__5Wheel`,
+`matToQuaternion__FP4QuatP8Matrix34`, `quatToMat__FP8Matrix33P4Quat`, and
+`refreshSettings__7Vehicle`. `modelGetActiveChunks__FP12_modelHeaderi` and
+`matMakeTransYaw__FP8Matrix34G6Point3s` were already unresolved.
+`norrath_construct_Vehicle` stays unresolved. 765 function bodies, 908
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1131,9 +1158,9 @@ the draw-texture globals. Decide whether the private triple should stay
 private.
 
 `norrath_route_world_word_bytes` is the world-state object for original
-`world` at `0x004844a0`. actors-b leaves that address unresolved as
-`norrath_actors_b_view_4844a0` and does not alias it. Decide whether they
-are one symbol.
+`world` at `0x004844a0`. vehicle-actors now defines
+`norrath_actors_b_view_4844a0` as a separate object and does not alias the
+world-state word. Decide whether they are one symbol.
 
 `enableMallocWrapper` is now an alias of the selected
 `norrath_enable_malloc_wrapper_byte_view`. `memAlloc__FiPc`, `memFree__FPv`,
@@ -1160,7 +1187,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, and light-methods. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, and vehicle-actors. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1206,3 +1233,4 @@ and no startup stage has executed.
 - 2026-10-11 17:44 CDT — `agents/vslots-b` — 871 unresolved imports
 - 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports
 - 2026-10-11 17:47 CDT — `agents/vslots-b` — 866 unresolved imports
+- 2026-10-11 17:49 CDT — `agents/vehicle-actors` — 950 unresolved imports
