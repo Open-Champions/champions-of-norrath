@@ -5276,6 +5276,97 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/megatile-tables/tables.cpp"
+    },
+    {
+      "input_order": 349,
+      "component": "script-amx-custom-variables",
+      "object_name": "custom_variables.o",
+      "private_object_sha256": "febf59393708a678cb535e357f9b486734deb174ed403e0678a4e27f4666564b",
+      "emitted_functions": [
+        {
+          "name": "norrath_custom_variables_process",
+          "compiled_body_bytes": 1360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp"
+    },
+    {
+      "input_order": 350,
+      "component": "script-amx-current-amx",
+      "object_name": "current_amx.o",
+      "private_object_sha256": "4e6460fed34de9db2716c55410b6b03b39afe1130ba382637a7dfeb2f11d8f6b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-current-amx/current_amx.cpp"
+    },
+    {
+      "input_order": 351,
+      "component": "script-amx-complain-frame",
+      "object_name": "complain_frame.o",
+      "private_object_sha256": "67e3dfce98348cef488924927a38cc03889aaa9504f312e6234204253c6f289b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp"
+    },
+    {
+      "input_order": 352,
+      "component": "script-amx-little-endian",
+      "object_name": "little_endian.o",
+      "private_object_sha256": "6a5af8620eeb234021199322f9b392129a0d09e7e61a76f007a05e904b96a78b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-little-endian/little_endian.cpp"
+    },
+    {
+      "input_order": 353,
+      "component": "script-amx-game-state",
+      "object_name": "game_state.o",
+      "private_object_sha256": "0abf7692277722be58e950493007d8c60162502ec94bb48a8f3a12727de21c25",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-game-state/game_state.cpp"
+    },
+    {
+      "input_order": 354,
+      "component": "script-amx-post-action",
+      "object_name": "post_action.o",
+      "private_object_sha256": "c99e9fb60327ce91c73d02209a8e8301196332dc4d6747fdb9f09e336c03b8fa",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-post-action/post_action.cpp"
+    },
+    {
+      "input_order": 355,
+      "component": "script-amx-memory-card-keys",
+      "object_name": "memory_card_keys.o",
+      "private_object_sha256": "71d5ced3af9f6f32b0a6e1c7189ac7b17a931d94794242759f927318600bc83a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp"
+    },
+    {
+      "input_order": 356,
+      "component": "script-amx-native-registry",
+      "object_name": "native_registry.o",
+      "private_object_sha256": "73975ed3cbca00df7659342ee84f4f9667b418cdb12f78f69a9d6cb5ad51f1cd",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-native-registry/registry.cpp"
+    },
+    {
+      "input_order": 357,
+      "component": "script-amx-exec",
+      "object_name": "amx_exec.o",
+      "private_object_sha256": "f38d55f100897ef4504ae897d1b15a12e51a48c0160086236016874ec5152b39",
+      "emitted_functions": [
+        {
+          "name": "norrath_amx_exec",
+          "compiled_body_bytes": 7996
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-exec/exec.cpp"
     }
   ],
   "drafts": [
@@ -6329,6 +6420,24 @@
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+    "sources/script-amx-complain-frame/complain_frame_host.cpp": "42c7f4039a4f5cdc44f1c33746bf37ac833b0f95332f7b5253b34c929ca77bc3",
+    "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+    "sources/script-amx-current-amx/current_amx_host.cpp": "aa1046ce309503eb8d54ecfb587b1dbb346708820f0bda49955ff190f6ad5c55",
+    "sources/script-amx-custom-variables/custom_variables.cpp": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+    "sources/script-amx-custom-variables/custom_variables_host.cpp": "e7f5852e82e4b54ae16d3ca485aac6825def748534da892a014abad9b67269c1",
+    "sources/script-amx-exec/exec.cpp": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+    "sources/script-amx-exec/exec_host.cpp": "70424707261e3635b6b5fede3cf0a3addea3a7e88a795c45ac04af0a2d7a8efb",
+    "sources/script-amx-game-state/game_state.cpp": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+    "sources/script-amx-game-state/game_state_host.cpp": "4a7ecea752afe065af4356d31f6abc22a60a11d8eea2262f15b19551e226d574",
+    "sources/script-amx-little-endian/little_endian.cpp": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+    "sources/script-amx-little-endian/little_endian_host.cpp": "31c0bc47e0b6068ba4be14dff1cd5667f3349232d8c809231b700396914c53f4",
+    "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+    "sources/script-amx-memory-card-keys/keys_host.cpp": "e617d4eb462a80f30d144e7d943a148bc4d6b5c6b9c1fd6f44b130121d70f011",
+    "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+    "sources/script-amx-native-registry/registry_host.cpp": "9f62aba5a36960e52cf212d9a63eb4d27f4b897bf2f83264f15bbd1ba5ca8933",
+    "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+    "sources/script-amx-post-action/post_action_host.cpp": "73c888406f60754402b8bd518694647610a2ec4221d5a877e34a3b494d4374af",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -6774,11 +6883,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 349,
-    "authored_default_inputs": 347,
+    "selected_inputs": 358,
+    "authored_default_inputs": 356,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 447,
-    "compiled_body_bytes_from_accepted_inputs": 253712,
+    "emitted_function_definitions_including_helpers": 449,
+    "compiled_body_bytes_from_accepted_inputs": 263068,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6791,7 +6900,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 36
+    "package_selected_inputs": 45
   },
   "startup_implementations": [
     {
@@ -7659,6 +7768,124 @@
       "emitted_functions": [],
       "host_files": [
         "sources/megatile-tables/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp",
+      "source_sha256": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+      "object_sha256": "febf59393708a678cb535e357f9b486734deb174ed403e0678a4e27f4666564b",
+      "emitted_functions": [
+        {
+          "name": "norrath_custom_variables_process",
+          "compiled_body_bytes": 1360
+        }
+      ],
+      "host_files": [
+        "sources/script-amx-custom-variables/custom_variables_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-current-amx/current_amx.cpp",
+      "source_sha256": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+      "object_sha256": "4e6460fed34de9db2716c55410b6b03b39afe1130ba382637a7dfeb2f11d8f6b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-current-amx/current_amx_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp",
+      "source_sha256": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+      "object_sha256": "67e3dfce98348cef488924927a38cc03889aaa9504f312e6234204253c6f289b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-complain-frame/complain_frame_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-little-endian/little_endian.cpp",
+      "source_sha256": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+      "object_sha256": "6a5af8620eeb234021199322f9b392129a0d09e7e61a76f007a05e904b96a78b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-little-endian/little_endian_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-game-state/game_state.cpp",
+      "source_sha256": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+      "object_sha256": "0abf7692277722be58e950493007d8c60162502ec94bb48a8f3a12727de21c25",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-game-state/game_state_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-post-action/post_action.cpp",
+      "source_sha256": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+      "object_sha256": "c99e9fb60327ce91c73d02209a8e8301196332dc4d6747fdb9f09e336c03b8fa",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-post-action/post_action_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp",
+      "source_sha256": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+      "object_sha256": "71d5ced3af9f6f32b0a6e1c7189ac7b17a931d94794242759f927318600bc83a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-memory-card-keys/keys_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-native-registry/registry.cpp",
+      "source_sha256": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+      "object_sha256": "73975ed3cbca00df7659342ee84f4f9667b418cdb12f78f69a9d6cb5ad51f1cd",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-native-registry/registry_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-exec/exec.cpp",
+      "source_sha256": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+      "object_sha256": "f38d55f100897ef4504ae897d1b15a12e51a48c0160086236016874ec5152b39",
+      "emitted_functions": [
+        {
+          "name": "norrath_amx_exec",
+          "compiled_body_bytes": 7996
+        }
+      ],
+      "host_files": [
+        "sources/script-amx-exec/exec_host.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

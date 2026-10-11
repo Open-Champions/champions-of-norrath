@@ -257,6 +257,41 @@ Bodies: specialparse 2404, entity dispatch 1996. The table unit emits no
 functions. 445 function bodies, 347 authored inputs, zero COMMON. 214 tool
 tests passed. No EE or game execution.
 
+## agents/script-amx
+
+Merged. The selected executor is `sources/script-amx-exec/exec.cpp`. The older
+held draft `sources/game-amx-exec-native-transport-source-v4` is unchanged,
+still stops on `#error`, and is not a plan input. Each new unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+All nine host checks passed.
+
+| | |
+|---|---|
+| Before | 626 |
+| After | 752 |
+| Closed | 10 |
+| Opened | 136 |
+
+Closed: `norrath_custom_variables_process`,
+`norrath_script_current_amx_word_view`,
+`norrath_script_complain_frame_word_view`,
+`norrath_amx_little_endian_word_view`,
+`norrath_script_game_state_data_view`, `norrath_script_post_action_view`,
+`norrath_mc_pre_start_key_bytes`, `norrath_mc_start_key_bytes`,
+`norrath_amx_game_native_registry_view`, `norrath_amx_exec`.
+
+Opened: the 120 `amx*__FP5__amxPi` natives named in `docs/agents/script-amx.md`
+(`amxNewWorld__FP5__amxPi` once), plus `DisableZooming__6Camera`,
+`SetDistanceAtLevel__6Cameraif`, `SetMaxHeight__6Cameraf`,
+`SetPitchAtLevel__6Cameraii`, `fxUpdateDust__Fiiiiiiii`, `gameCam`,
+`levelFlags`, and the ten `worldWater*` words. `norrath_copy_bytes`,
+`norrath_memory_compare`, `norrath_factory_strstr`, and
+`norrath_player_sscanf` were already defined, so they did not open.
+Bodies: custom variables 1360, executor 7996. The other seven units emit no
+functions. 447 function bodies, 356 authored inputs, zero COMMON. 214 tool
+tests passed. No retail script and no EE execution. The host executor test
+does not cover every opcode slot; the notes list the unrun slots.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -284,7 +319,7 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-and megatile.
+megatile, and script-amx. The held AMX draft remains uncompiled.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -294,3 +329,4 @@ and no startup stage has executed.
 ## Push log
 
 - 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
+- 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports

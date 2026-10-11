@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 347,
+  "default_authored_inputs": 356,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -999,6 +999,15 @@
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+    "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+    "sources/script-amx-custom-variables/custom_variables.cpp": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+    "sources/script-amx-exec/exec.cpp": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+    "sources/script-amx-game-state/game_state.cpp": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+    "sources/script-amx-little-endian/little_endian.cpp": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+    "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+    "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+    "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -6044,6 +6053,87 @@
       "profile": "authored_cpp",
       "sha256": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
       "source": "sources/megatile-tables/tables.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 349,
+      "kind": "independently_authored_source",
+      "object_name": "custom_variables.o",
+      "profile": "authored_cpp",
+      "sha256": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 350,
+      "kind": "independently_authored_source",
+      "object_name": "current_amx.o",
+      "profile": "authored_cpp",
+      "sha256": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+      "source": "sources/script-amx-current-amx/current_amx.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 351,
+      "kind": "independently_authored_source",
+      "object_name": "complain_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 352,
+      "kind": "independently_authored_source",
+      "object_name": "little_endian.o",
+      "profile": "authored_cpp",
+      "sha256": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+      "source": "sources/script-amx-little-endian/little_endian.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 353,
+      "kind": "independently_authored_source",
+      "object_name": "game_state.o",
+      "profile": "authored_cpp",
+      "sha256": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+      "source": "sources/script-amx-game-state/game_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 354,
+      "kind": "independently_authored_source",
+      "object_name": "post_action.o",
+      "profile": "authored_cpp",
+      "sha256": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+      "source": "sources/script-amx-post-action/post_action.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 355,
+      "kind": "independently_authored_source",
+      "object_name": "memory_card_keys.o",
+      "profile": "authored_cpp",
+      "sha256": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 356,
+      "kind": "independently_authored_source",
+      "object_name": "native_registry.o",
+      "profile": "authored_cpp",
+      "sha256": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+      "source": "sources/script-amx-native-registry/registry.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 357,
+      "kind": "independently_authored_source",
+      "object_name": "amx_exec.o",
+      "profile": "authored_cpp",
+      "sha256": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+      "source": "sources/script-amx-exec/exec.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6143,7 +6233,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a790a90bc93743bc5e788086b2ce8486b5870cea9b8a643687dfe5eb4677b099",
+  "snapshot_sha256": "f413ecee66b959ed1e0b9094f4fd1a16a0eb12e66e8998ee5fd4e9848376a5cb",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
