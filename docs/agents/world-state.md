@@ -48,9 +48,23 @@ Headers declare the symbol. The `.cpp` file defines it. On the EE compiler the d
 
 `worldWaterBumpSpeed` is a different object. It is the four file-backed zero bytes at `0x00484148` in `.sdata`. The recorded size is 4, and `worldWaterAlpha` starts at `0x0048414c`. `main` stores the integer 1 with `sw` at `gp-14504` when the word at `pad+8` equals 16398. None of the earlier `norrath_` objects has this address, so the word is defined once, under the original name, as `int worldWaterBumpSpeed`. `launchSRS` does not reference it.
 
+The script interpreter imports nine more words in the same `.sdata` run. Each recorded size is 4. They are not aliases of earlier `norrath_` objects. `worldWaterWavyness2` ends at `0x00484164`; `collisionFrame` is the next symbol, at `0x00484188`, and those intervening bytes are not part of the wavyness word.
+
+| Symbol | Address | Initial bytes | Script use |
+|---|---|---|---|
+| `worldWaterBumpAmount` | `0x0048413c` | `00 00 24 42` (float 41) | float conversion |
+| `worldWaterBumpRadius` | `0x00484140` | `00 00 80 40` (float 4) | float conversion |
+| `worldWaterBumpTimer` | `0x00484144` | `06 00 00 00` (integer 6) | integer conversion |
+| `worldWaterAlpha` | `0x0048414c` | `62 00 00 00` (integer 98) | fourth `waterColor` integer |
+| `worldWaterAlpha2` | `0x00484150` | `62 00 00 00` (integer 98) | fourth `waterColor2` integer |
+| `worldWaterColor` | `0x00484154` | `80 80 80 00` | packed color word |
+| `worldWaterColor2` | `0x00484158` | `80 80 80 00` | packed color word |
+| `worldWaterWavyness` | `0x0048415c` | `00 00 c0 3c` | float load, multiply, store |
+| `worldWaterWavyness2` | `0x00484160` | `00 00 c0 3c` | float load, multiply, store |
+
 ## Imports closed
 
-`norrath_route_add_node`, `norrath_list_copy_object_word`, `norrath_grid_ignore_flags_view`, `norrath_grid_vertical_extent_view`, `norrath_game_cut_mode_byte_view`, `norrath_game_core_loading_word_view`, `norrath_dialog_active_pointer_word_view`, `norrath_restore_defaults_view`, `norrath_restore_string_base_word`, `norrath_restore_filter_word`, `norrath_restore_broadcast_head_view`, `norrath_loader_special_flag_view`, `norrath_loader_active_buffer_view`, `norrath_loader_active_size_view`, `norrath_loader_active_marker_view`, `norrath_loader_active_name_view`, `norrath_loader_current_name_view`, `norrath_loader_name_a_view`, `norrath_loader_name_b_view`, `norrath_loader_context_a_view`, `norrath_loader_context_b_view`, `norrath_loader_missing_format_view`, `norrath_route_nodes_bytes`, `norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, `norrath_route_free_root_bytes`, `norrath_route_world_word_bytes`, `norrath_route_draw_frame_bytes`, `worldWaterBumpSpeed`.
+`norrath_route_add_node`, `norrath_list_copy_object_word`, `norrath_grid_ignore_flags_view`, `norrath_grid_vertical_extent_view`, `norrath_game_cut_mode_byte_view`, `norrath_game_core_loading_word_view`, `norrath_dialog_active_pointer_word_view`, `norrath_restore_defaults_view`, `norrath_restore_string_base_word`, `norrath_restore_filter_word`, `norrath_restore_broadcast_head_view`, `norrath_loader_special_flag_view`, `norrath_loader_active_buffer_view`, `norrath_loader_active_size_view`, `norrath_loader_active_marker_view`, `norrath_loader_active_name_view`, `norrath_loader_current_name_view`, `norrath_loader_name_a_view`, `norrath_loader_name_b_view`, `norrath_loader_context_a_view`, `norrath_loader_context_b_view`, `norrath_loader_missing_format_view`, `norrath_route_nodes_bytes`, `norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, `norrath_route_free_root_bytes`, `norrath_route_world_word_bytes`, `norrath_route_draw_frame_bytes`, `worldWaterBumpSpeed`, `worldWaterBumpAmount`, `worldWaterBumpRadius`, `worldWaterBumpTimer`, `worldWaterAlpha`, `worldWaterAlpha2`, `worldWaterColor`, `worldWaterColor2`, `worldWaterWavyness`, `worldWaterWavyness2`.
 
 ## Imports opened
 
@@ -122,7 +136,25 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
     "sources/world-state-route-draw-frame/storage.cpp": "e003230effa3cf442909e89fce352ee6ef792506014dd657599af3d48ac70735",
     "sources/world-state-route-draw-frame/storage.hpp": "5430647e8879b62a947ebf52d1eeb720e9a83d16a1b1a0490abec335fdc93131",
     "sources/world-state-water-bump-speed/water_bump_speed.cpp": "3b4c8fc623a2a5ec7156a7c30f69589185a57b149580ca5288799e43ec5429ec",
-    "sources/world-state-water-bump-speed/water_bump_speed.hpp": "e871f52829b3cab8ee96991a8590442a055880c256ab5ee8dd527754beb1c40f"
+    "sources/world-state-water-bump-speed/water_bump_speed.hpp": "e871f52829b3cab8ee96991a8590442a055880c256ab5ee8dd527754beb1c40f",
+    "sources/world-state-water-bump-amount/word.cpp": "f40625fbc1aee04c5882920586139d1975dba841a61809ca5461a2ff1482cc82",
+    "sources/world-state-water-bump-amount/word.hpp": "5546da016e2a9631c4d7e1efb3cafa50e98201dc86c36349d59c54346f581e16",
+    "sources/world-state-water-bump-radius/word.cpp": "90271e263148082debabdb98b705e256f079b647dacec649e2ac14f3091e9905",
+    "sources/world-state-water-bump-radius/word.hpp": "028e1c53f63deadb3d6697f6decbb87322884125937cc18cc706e3d622ecaac8",
+    "sources/world-state-water-bump-timer/word.cpp": "8cc6520718f630024d67d9e44406a46ac2f285a318d7d476fbab8a417479687d",
+    "sources/world-state-water-bump-timer/word.hpp": "353280f37324a1dcff8a55a122daa30e3278dbb8ea679fef951ad1d0a2f0c822",
+    "sources/world-state-water-alpha/word.cpp": "152e94ddf439006e1ef7f5653f14fa37a7081f4e6fd838724c321bbf63689d06",
+    "sources/world-state-water-alpha/word.hpp": "fc26127fc58e3b13a97c50f0f5847b730dbfd5d30538f68a4edbb3c54bf92bcd",
+    "sources/world-state-water-alpha2/word.cpp": "0913bc1478b2cd9f79b9aec4369e2b772dd5fea81d60e53e61e756351f28b544",
+    "sources/world-state-water-alpha2/word.hpp": "e37ffbdba47b33df4ff1d04df24de0873b88f281e5472740681f398b4dca5394",
+    "sources/world-state-water-color/word.cpp": "a7d2fe57ffae0a012b7fb5558ee7b6677b2848ce5f06e3c4c0255eb1ce9aa0f7",
+    "sources/world-state-water-color/word.hpp": "0dac9cabeeb28ec5681c257d8faadad1910c4c5f7446ddaeb99a13565e28a0da",
+    "sources/world-state-water-color2/word.cpp": "82e5dc43ba495793a1be7f4883f600b5a3d2bbc8ea3f977ff9528bc8c432b113",
+    "sources/world-state-water-color2/word.hpp": "8e6f6995bc3e395ef2b818344da69ec7a8f49bd4fd3fd900ee56b88e0d149e75",
+    "sources/world-state-water-wavyness/word.cpp": "1694b4dfdd75990f7810c099b1929d8a18d165ddcc43c7c13a55bbbf484e5656",
+    "sources/world-state-water-wavyness/word.hpp": "5743f8c32f0ef28d94aa1f798138c64ed981d00599aee85b62816e34ca40abeb",
+    "sources/world-state-water-wavyness2/word.cpp": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
+    "sources/world-state-water-wavyness2/word.hpp": "46e8099c57665987efdd116a953d9cab8d7b67f6b00824ac278df3c1bc57f4c6"
   },
   "inputs": [
     {
@@ -477,6 +509,114 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
       "source": "sources/world-state-water-bump-speed/water_bump_speed.cpp",
       "emitted_functions": [],
       "component": "world-state-water-bump-speed"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-bump-amount/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_bump_amount.o",
+      "profile": "authored_cpp",
+      "sha256": "f40625fbc1aee04c5882920586139d1975dba841a61809ca5461a2ff1482cc82",
+      "source": "sources/world-state-water-bump-amount/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-bump-amount"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-bump-radius/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_bump_radius.o",
+      "profile": "authored_cpp",
+      "sha256": "90271e263148082debabdb98b705e256f079b647dacec649e2ac14f3091e9905",
+      "source": "sources/world-state-water-bump-radius/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-bump-radius"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-bump-timer/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_bump_timer.o",
+      "profile": "authored_cpp",
+      "sha256": "8cc6520718f630024d67d9e44406a46ac2f285a318d7d476fbab8a417479687d",
+      "source": "sources/world-state-water-bump-timer/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-bump-timer"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-alpha/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_alpha.o",
+      "profile": "authored_cpp",
+      "sha256": "152e94ddf439006e1ef7f5653f14fa37a7081f4e6fd838724c321bbf63689d06",
+      "source": "sources/world-state-water-alpha/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-alpha"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-alpha2/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_alpha2.o",
+      "profile": "authored_cpp",
+      "sha256": "0913bc1478b2cd9f79b9aec4369e2b772dd5fea81d60e53e61e756351f28b544",
+      "source": "sources/world-state-water-alpha2/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-alpha2"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-color/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_color.o",
+      "profile": "authored_cpp",
+      "sha256": "a7d2fe57ffae0a012b7fb5558ee7b6677b2848ce5f06e3c4c0255eb1ce9aa0f7",
+      "source": "sources/world-state-water-color/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-color"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-color2/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_color2.o",
+      "profile": "authored_cpp",
+      "sha256": "82e5dc43ba495793a1be7f4883f600b5a3d2bbc8ea3f977ff9528bc8c432b113",
+      "source": "sources/world-state-water-color2/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-color2"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-wavyness/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_wavyness.o",
+      "profile": "authored_cpp",
+      "sha256": "1694b4dfdd75990f7810c099b1929d8a18d165ddcc43c7c13a55bbbf484e5656",
+      "source": "sources/world-state-water-wavyness/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-wavyness"
+    },
+    {
+      "header_closure": [
+        "sources/world-state-water-wavyness2/word.hpp"
+      ],
+      "kind": "independently_authored_source",
+      "object_name": "ws_water_wavyness2.o",
+      "profile": "authored_cpp",
+      "sha256": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
+      "source": "sources/world-state-water-wavyness2/word.cpp",
+      "emitted_functions": [],
+      "component": "world-state-water-wavyness2"
     }
   ]
 }
@@ -484,7 +624,7 @@ Append these to `experimental/build-plan.json` and add matching `experimental/sn
 
 ## Authored but never executed
 
-No gameplay, runtime, or partial-link execution. `norrath_route_add_node` was compiled with the reviewed EE toolchain and checked by the host allocation and reclaim test. Each data object, including `worldWaterBumpSpeed`, was compiled with the same flags and checked by a host comparison. The private plan was not submitted to `tools/build_partial.py` because that driver requires the snapshot input list to match.
+No gameplay, runtime, or partial-link execution. `norrath_route_add_node` was compiled with the reviewed EE toolchain and checked by the host allocation and reclaim test. Each data object, including `worldWaterBumpSpeed` and the nine script water words, was compiled with the same flags and checked by a host byte comparison. The private plan was not submitted to `tools/build_partial.py` because that driver requires the snapshot input list to match.
 
 ## Unknown
 
@@ -495,3 +635,5 @@ No gameplay, runtime, or partial-link execution. `norrath_route_add_node` was co
 `norrath_loader_failure_word_view` is not an ELF object. The referenced instruction is `sw zero, 0(zero)` at `0x00165d04`.
 
 The dialog pointer, string base, broadcast-list head, and loader active name have ELF size 0. Their extents above are inferred from the next symbol. The route failed-search address before the cache is not reconstructed. The route function is not an original-byte match.
+
+`worldWaterRainTimer` at `0x004841c0` is four file-backed zero bytes in `.sdata`. The script merge does not import it, so it is not defined here.
