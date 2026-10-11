@@ -886,6 +886,29 @@ Closed the 11 `norrath_construct_*` names this package defines. Opened 24
 705 function bodies, 828 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/cd-archive second pass
+
+Seven new units were selected and four existing units were updated in place.
+`cdLoad__FPcPvii` is 400 bytes and `cdInit__Fv` is 204. The border and vblank
+functions and seven view names are GAS aliases of the existing
+`norrath_archive_*` symbols. The plan `symbol_aliases` list stays empty.
+Host checks passed. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 882 |
+| After | 886 |
+| Closed | 6 |
+| Opened | 10 |
+
+Closed: `cdInit__Fv`, `cdLoad__FPcPvii`, `lumpClear__Fi`,
+`lumpFindResource__FPcT0`, `lumpLoad__FPc`, `lumpLock__Fi`. Opened:
+`cdWait__Fv`, `issueCommand__Fv`, `loadDirectory__FP9directoryii`,
+`lumpUnload__FPv`, `sceCdReadDvdDualInfo`, `sceCdSearchFile`, `sceCdStInit`,
+`sceSifAllocIopHeap`, `soundClear__Fi`, `soundLock__Fi`. 715 function
+bodies, 835 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -944,12 +967,15 @@ second object. The plan rejects symbol aliases. Decide whether the mask name
 should be the view.
 
 `norrath_loader_special_flag_view` is defined for original `noNewVags`.
-cd-archive already defines `norrath_archive_no_new_vags_view`. Decide whether
-those two views are one symbol.
+cd-archive now also publishes `noNewVags` as an alias of
+`norrath_archive_no_new_vags_view`. The loader view is still a second object.
+Decide whether that view should be the same symbol.
 
 `norrath_archive_engine_pop_border` and `norrath_archive_engine_push_border`
-are the cd-archive border returns. render-lights defines the same two names
-again. Those units were not selected. Decide which package owns the names.
+are the selected cd-archive border returns. The original names
+`enginePopBorderColor__Fv` and `enginePushBorderColor__FUi` are aliases of
+those two. render-lights defines the norrath names again. Those units were
+not selected.
 
 items-player already defines 35 `norrath_player_view_*` names. data-views
 defines the same 35 names again, including `norrath_player_view_484ca8`.
@@ -977,7 +1003,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, and actors-a. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, and the cd-archive second pass. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1016,3 +1042,4 @@ and no startup stage has executed.
 - 2026-10-11 17:25 CDT — `agents/engine-restore` — 856 unresolved imports
 - 2026-10-11 17:26 CDT — `agents/sif-keyboard` — 865 unresolved imports
 - 2026-10-11 17:28 CDT — `agents/actors-a` — 882 unresolved imports
+- 2026-10-11 17:31 CDT — `agents/cd-archive` — 886 unresolved imports

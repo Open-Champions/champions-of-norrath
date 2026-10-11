@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 828,
+  "default_authored_inputs": 835,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -108,18 +108,25 @@
     "sources/block-allocator-lifecycle-build/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
     "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+    "sources/cd-archive-cd-init/cd_init.cpp": "536d2bbe76656a934c6525fdcedd6addd8a2bd337408d09d98266c3a7e5a1d6b",
     "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-load/cd_load.cpp": "f5a574ff616d2f62b77264241baf54a970c13c6f4c4ad7836aa973db2e3fe512",
     "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
     "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
     "sources/cd-archive-cd-stream-pause/stream_pause.cpp": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
     "sources/cd-archive-cd-stream-read/stream_read.cpp": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
     "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
-    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
-    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
-    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "e24d39ab05e9117b631e6380fd174a6f3ccb5af02bd48aa58fa05864c8766d4f",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "ee21dba1b2cb7a01568a812cf92a839bb041d3c9d9c45e1286c8701b0e8d4250",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "e5dd4270ab8378d4ca05e59cd2c3ca466f0f433ac9588fc69697cfdbf943a802",
     "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
     "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
-    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+    "sources/cd-archive-lump-clear/lump_clear.cpp": "ef56c4bb8d75ebd5c41c558313ec0cc40a2b1203991d325d4ae2d723353c2f7b",
+    "sources/cd-archive-lump-find-resource/lump_find_resource.cpp": "986371d17ea310fa063fbc329a1309fd480aba93c08e2346755855283cfde8a7",
+    "sources/cd-archive-lump-load/lump_load.cpp": "229b7b45fe1227f8e9ad19ac7897061513aa623d9f82670c9510663199765542",
+    "sources/cd-archive-lump-lock/lump_lock.cpp": "155cf72c0377200930ea6fbb1483a320e67176834f3f06e651cef02778bf0eef",
+    "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
+    "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
     "sources/data-views-symbols/norrath_actor_view_42b118.cpp": "fc4f0fbf6a17b470fcaaa73eb56e30bb87ba5cbdb796dc9bfa9cd8a32bdaaa08",
     "sources/data-views-symbols/norrath_actor_view_42b768.cpp": "4186e315568174b63c28472e6b0b3f63470d689b3a30cdbb5b1be4a4bb73b470",
     "sources/data-views-symbols/norrath_actor_view_42baa8.cpp": "35df379600a367754daa7796dc4a8648b22545f761eabe18190cfb2834b84bbb",
@@ -6671,7 +6678,7 @@
       "kind": "independently_authored_source",
       "object_name": "push_border.o",
       "profile": "authored_cpp",
-      "sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+      "sha256": "ee21dba1b2cb7a01568a812cf92a839bb041d3c9d9c45e1286c8701b0e8d4250",
       "source": "sources/cd-archive-engine-push-border/push_border.cpp"
     },
     {
@@ -6680,7 +6687,7 @@
       "kind": "independently_authored_source",
       "object_name": "pop_border.o",
       "profile": "authored_cpp",
-      "sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+      "sha256": "e24d39ab05e9117b631e6380fd174a6f3ccb5af02bd48aa58fa05864c8766d4f",
       "source": "sources/cd-archive-engine-pop-border/pop_border.cpp"
     },
     {
@@ -6689,7 +6696,7 @@
       "kind": "independently_authored_source",
       "object_name": "sync_vblank.o",
       "profile": "authored_cpp",
-      "sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+      "sha256": "e5dd4270ab8378d4ca05e59cd2c3ca466f0f433ac9588fc69697cfdbf943a802",
       "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp"
     },
     {
@@ -6779,7 +6786,7 @@
       "kind": "independently_authored_source",
       "object_name": "views.o",
       "profile": "authored_cpp",
-      "sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+      "sha256": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
       "source": "sources/cd-archive-views/views.cpp"
     },
     {
@@ -11062,6 +11069,69 @@
       "profile": "authored_cpp",
       "sha256": "487dfe56a3605b2ee13c2a6cd122e9eb991301424a5fd9f0d8713e279c5cfada",
       "source": "sources/actors-a-floorswitch/floorswitch.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 830,
+      "kind": "independently_authored_source",
+      "object_name": "cd_init.o",
+      "profile": "authored_cpp",
+      "sha256": "536d2bbe76656a934c6525fdcedd6addd8a2bd337408d09d98266c3a7e5a1d6b",
+      "source": "sources/cd-archive-cd-init/cd_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 831,
+      "kind": "independently_authored_source",
+      "object_name": "cd_load.o",
+      "profile": "authored_cpp",
+      "sha256": "f5a574ff616d2f62b77264241baf54a970c13c6f4c4ad7836aa973db2e3fe512",
+      "source": "sources/cd-archive-cd-load/cd_load.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 832,
+      "kind": "independently_authored_source",
+      "object_name": "lump_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "ef56c4bb8d75ebd5c41c558313ec0cc40a2b1203991d325d4ae2d723353c2f7b",
+      "source": "sources/cd-archive-lump-clear/lump_clear.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 833,
+      "kind": "independently_authored_source",
+      "object_name": "lump_find_resource.o",
+      "profile": "authored_cpp",
+      "sha256": "986371d17ea310fa063fbc329a1309fd480aba93c08e2346755855283cfde8a7",
+      "source": "sources/cd-archive-lump-find-resource/lump_find_resource.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 834,
+      "kind": "independently_authored_source",
+      "object_name": "lump_load.o",
+      "profile": "authored_cpp",
+      "sha256": "229b7b45fe1227f8e9ad19ac7897061513aa623d9f82670c9510663199765542",
+      "source": "sources/cd-archive-lump-load/lump_load.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 835,
+      "kind": "independently_authored_source",
+      "object_name": "lump_lock.o",
+      "profile": "authored_cpp",
+      "sha256": "155cf72c0377200930ea6fbb1483a320e67176834f3f06e651cef02778bf0eef",
+      "source": "sources/cd-archive-lump-lock/lump_lock.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 836,
+      "kind": "independently_authored_source",
+      "object_name": "lump_state.o",
+      "profile": "authored_cpp",
+      "sha256": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
+      "source": "sources/cd-archive-lump-state/lump_state.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11161,7 +11231,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c6e9432cd6bf7412a7e74c7f72c824ac54f8f9833e8adc49ffb2fea056bcfb25",
+  "snapshot_sha256": "4ce170745aea3bf16fbead08fb46f3cac686bc956954e01cc45e3f7c1b293736",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

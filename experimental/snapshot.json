@@ -5372,8 +5372,12 @@
       "input_order": 358,
       "component": "cd-archive-engine-push-border",
       "object_name": "push_border.o",
-      "private_object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "private_object_sha256": "f4597d8bbaed413300b8003ef40c0fa0c28b7c5afd89eb46f7c92ed134b06a66",
       "emitted_functions": [
+        {
+          "name": "enginePushBorderColor__FUi",
+          "compiled_body_bytes": 8
+        },
         {
           "name": "norrath_archive_engine_push_border",
           "compiled_body_bytes": 8
@@ -5386,8 +5390,12 @@
       "input_order": 359,
       "component": "cd-archive-engine-pop-border",
       "object_name": "pop_border.o",
-      "private_object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "private_object_sha256": "b0720fc6aff1a13b8588044cd410f90938e55b76f714696be06cbb2136ae12f7",
       "emitted_functions": [
+        {
+          "name": "enginePopBorderColor__Fv",
+          "compiled_body_bytes": 8
+        },
         {
           "name": "norrath_archive_engine_pop_border",
           "compiled_body_bytes": 8
@@ -5400,8 +5408,12 @@
       "input_order": 360,
       "component": "cd-archive-engine-sync-vblank",
       "object_name": "sync_vblank.o",
-      "private_object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "private_object_sha256": "62224e5b259e2b59cd07f30e8cf884a2c5410f482aba94f5f74390d79bdaf22a",
       "emitted_functions": [
+        {
+          "name": "engineSyncVBlank__Fv",
+          "compiled_body_bytes": 148
+        },
         {
           "name": "norrath_archive_engine_sync_vblank",
           "compiled_body_bytes": 148
@@ -5540,7 +5552,7 @@
       "input_order": 370,
       "component": "cd-archive-views",
       "object_name": "views.o",
-      "private_object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "private_object_sha256": "1ac0269da7f6c97755ae73fae1964ade55a7564d06c3fb894110011eae863714",
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/cd-archive-views/views.cpp"
@@ -10894,6 +10906,103 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/actors-a-floorswitch/floorswitch.cpp"
+    },
+    {
+      "input_order": 830,
+      "component": "cd-archive-cd-init",
+      "object_name": "cd_init.o",
+      "private_object_sha256": "b81a927103a5fa89fd58e550208e898dc98ceaca41f7ef1d969f7ee23946905c",
+      "emitted_functions": [
+        {
+          "name": "cdInit__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-init/cd_init.cpp"
+    },
+    {
+      "input_order": 831,
+      "component": "cd-archive-cd-load",
+      "object_name": "cd_load.o",
+      "private_object_sha256": "10022f93713281b2122bc5469ae9439e824044e2ff4942aee245abb4b91c1cd4",
+      "emitted_functions": [
+        {
+          "name": "cdLoad__FPcPvii",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-load/cd_load.cpp"
+    },
+    {
+      "input_order": 832,
+      "component": "cd-archive-lump-clear",
+      "object_name": "lump_clear.o",
+      "private_object_sha256": "471e7c651afabfae5150b5b1a03c45089ba0d23b48723d1267ef9842db84fff3",
+      "emitted_functions": [
+        {
+          "name": "lumpClear__Fi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-lump-clear/lump_clear.cpp"
+    },
+    {
+      "input_order": 833,
+      "component": "cd-archive-lump-find-resource",
+      "object_name": "lump_find_resource.o",
+      "private_object_sha256": "e0341b80373ac2fa0fafefebf192cdfe709769948fce903fb6580c4dc84fdcf2",
+      "emitted_functions": [
+        {
+          "name": "lumpFindResource__FPcT0",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-lump-find-resource/lump_find_resource.cpp"
+    },
+    {
+      "input_order": 834,
+      "component": "cd-archive-lump-load",
+      "object_name": "lump_load.o",
+      "private_object_sha256": "01674cbb879340f760d8c7211772115ec737852c0013b32f5e27f8534f12b104",
+      "emitted_functions": [
+        {
+          "name": "resident_lump",
+          "compiled_body_bytes": 240
+        },
+        {
+          "name": "lumpLoad__FPc",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-lump-load/lump_load.cpp"
+    },
+    {
+      "input_order": 835,
+      "component": "cd-archive-lump-lock",
+      "object_name": "lump_lock.o",
+      "private_object_sha256": "90034dbd3619f96f38df267778894c40daf46a3748f1b3331debe7a90d041bbe",
+      "emitted_functions": [
+        {
+          "name": "lumpLock__Fi",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-lump-lock/lump_lock.cpp"
+    },
+    {
+      "input_order": 836,
+      "component": "cd-archive-lump-state",
+      "object_name": "lump_state.o",
+      "private_object_sha256": "ce2bc09b33f3e68ded524e40adfc2030ccb879f06e1d904f82ad54b5586be39b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-lump-state/lump_state.cpp"
     }
   ],
   "drafts": [
@@ -11033,8 +11142,12 @@
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
     "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
     "sources/cd-archive-cd-error/host_contract.cpp": "4933c52777d9069ba93cede1902ef16a939499dd62ac027a5ea7b4aa0decce68",
+    "sources/cd-archive-cd-init/cd_init.cpp": "536d2bbe76656a934c6525fdcedd6addd8a2bd337408d09d98266c3a7e5a1d6b",
+    "sources/cd-archive-cd-init/host_contract.cpp": "930b21f4e664daec3032c6f23c1580a4e1ec7018af3a11cdd2923cffb3d5e4e6",
     "sources/cd-archive-cd-layer-search/host_contract.cpp": "44ed3c6ec02d58146e9f8f695de9396157bb0cec6b23fd9dd1f87f054ca98b66",
     "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-load/cd_load.cpp": "f5a574ff616d2f62b77264241baf54a970c13c6f4c4ad7836aa973db2e3fe512",
+    "sources/cd-archive-cd-load/host_contract.cpp": "f4f94b8e0b7b3df1a776c1440592e7df3067bf61de90fe375c824c91308f8924",
     "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
     "sources/cd-archive-cd-read-iop/host_contract.cpp": "5339e28f691990e72aa48caacf779003c2aa94e10a71ba1a7111562d512951d6",
     "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
@@ -11046,17 +11159,27 @@
     "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
     "sources/cd-archive-cd-sync/host_contract.cpp": "69ac147650d1759e94847c2bebd43a4bd78deb4c1c99bb264a0229afe02238ac",
     "sources/cd-archive-engine-pop-border/host_contract.cpp": "14047b8c30a411fcb05b2258f77e5658f898724978438b3ddd2d5d8aa5b40370",
-    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "e24d39ab05e9117b631e6380fd174a6f3ccb5af02bd48aa58fa05864c8766d4f",
     "sources/cd-archive-engine-push-border/host_contract.cpp": "dab785842554a9a04563414b6e4d7d6c8ae819adc004e80b4494a2fed21f2a5f",
-    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "ee21dba1b2cb7a01568a812cf92a839bb041d3c9d9c45e1286c8701b0e8d4250",
     "sources/cd-archive-engine-sync-vblank/host_contract.cpp": "1b21e87e6ee79f1b3499e728f3e9f75c87c75fd5d47151e9ed1f821bb62215b7",
-    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "e5dd4270ab8378d4ca05e59cd2c3ca466f0f433ac9588fc69697cfdbf943a802",
     "sources/cd-archive-initialize-file/host_contract.cpp": "2ed0bce12bec2d1a913fc8f0b084fd4f8f7cf2ec5a237fb87e0706fda6739fc1",
     "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
     "sources/cd-archive-last-character/host_contract.cpp": "4f11337edc4f7f17ea7f72b97b07c9c2a635d98b373801939275e643a16b28f2",
     "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+    "sources/cd-archive-lump-clear/host_contract.cpp": "39c51df8bee07662f6d181cfcb480b7bc4de739154134d412bc66fe8c5dc491b",
+    "sources/cd-archive-lump-clear/lump_clear.cpp": "ef56c4bb8d75ebd5c41c558313ec0cc40a2b1203991d325d4ae2d723353c2f7b",
+    "sources/cd-archive-lump-find-resource/host_contract.cpp": "88d283bfe3bbd84826e32d91bfb873481ebecbde79c502f5a1543930083def7b",
+    "sources/cd-archive-lump-find-resource/lump_find_resource.cpp": "986371d17ea310fa063fbc329a1309fd480aba93c08e2346755855283cfde8a7",
+    "sources/cd-archive-lump-load/host_contract.cpp": "4917175a2b0626e1977a0e4485b793d458167d97585707bf76ac7da6d86904a1",
+    "sources/cd-archive-lump-load/lump_load.cpp": "229b7b45fe1227f8e9ad19ac7897061513aa623d9f82670c9510663199765542",
+    "sources/cd-archive-lump-lock/host_contract.cpp": "9fbb9f35a196165d616be26c291a3d08d3c1220f796209af3cd10f3abbef7709",
+    "sources/cd-archive-lump-lock/lump_lock.cpp": "155cf72c0377200930ea6fbb1483a320e67176834f3f06e651cef02778bf0eef",
+    "sources/cd-archive-lump-state/host_contract.cpp": "d42cef4ca36307ba9313c0c21a9500bb74b23aa3da6d3beb86e2fcc189a4e812",
+    "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
     "sources/cd-archive-views/host_contract.cpp": "37332f5e7da911b1967c4aa317b821cc233916374e1900ced2cd645915cd2f18",
-    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+    "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
     "sources/data-views-host-checks/norrath_actor_view_42b118.cpp": "8f96ea50880d6d8f79fe3e8d3a1691c0ca6e1d8aa98b888f0efc16c35efebf02",
     "sources/data-views-host-checks/norrath_actor_view_42b768.cpp": "5305ff5b225fd968add46c1f0dc05cd8b0087fc56fb3b56d7464c2a4fab4972a",
     "sources/data-views-host-checks/norrath_actor_view_42baa8.cpp": "803e5a467460372a5e4a3dcc759947dd044bf7dbf97ea2626173bfffaa7db62e",
@@ -13423,11 +13546,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 830,
-    "authored_default_inputs": 828,
+    "selected_inputs": 837,
+    "authored_default_inputs": 835,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 707,
-    "compiled_body_bytes_from_accepted_inputs": 332324,
+    "emitted_function_definitions_including_helpers": 717,
+    "compiled_body_bytes_from_accepted_inputs": 334724,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13440,7 +13563,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 517
+    "package_selected_inputs": 524
   },
   "startup_implementations": [
     {
@@ -14433,9 +14556,13 @@
     {
       "package": "cd-archive",
       "source": "sources/cd-archive-engine-push-border/push_border.cpp",
-      "source_sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
-      "object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "source_sha256": "ee21dba1b2cb7a01568a812cf92a839bb041d3c9d9c45e1286c8701b0e8d4250",
+      "object_sha256": "f4597d8bbaed413300b8003ef40c0fa0c28b7c5afd89eb46f7c92ed134b06a66",
       "emitted_functions": [
+        {
+          "name": "enginePushBorderColor__FUi",
+          "compiled_body_bytes": 8
+        },
         {
           "name": "norrath_archive_engine_push_border",
           "compiled_body_bytes": 8
@@ -14450,9 +14577,13 @@
     {
       "package": "cd-archive",
       "source": "sources/cd-archive-engine-pop-border/pop_border.cpp",
-      "source_sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
-      "object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "source_sha256": "e24d39ab05e9117b631e6380fd174a6f3ccb5af02bd48aa58fa05864c8766d4f",
+      "object_sha256": "b0720fc6aff1a13b8588044cd410f90938e55b76f714696be06cbb2136ae12f7",
       "emitted_functions": [
+        {
+          "name": "enginePopBorderColor__Fv",
+          "compiled_body_bytes": 8
+        },
         {
           "name": "norrath_archive_engine_pop_border",
           "compiled_body_bytes": 8
@@ -14467,9 +14598,13 @@
     {
       "package": "cd-archive",
       "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp",
-      "source_sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
-      "object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "source_sha256": "e5dd4270ab8378d4ca05e59cd2c3ca466f0f433ac9588fc69697cfdbf943a802",
+      "object_sha256": "62224e5b259e2b59cd07f30e8cf884a2c5410f482aba94f5f74390d79bdaf22a",
       "emitted_functions": [
+        {
+          "name": "engineSyncVBlank__Fv",
+          "compiled_body_bytes": 148
+        },
         {
           "name": "norrath_archive_engine_sync_vblank",
           "compiled_body_bytes": 148
@@ -14637,8 +14772,8 @@
     {
       "package": "cd-archive",
       "source": "sources/cd-archive-views/views.cpp",
-      "source_sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
-      "object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "source_sha256": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
+      "object_sha256": "1ac0269da7f6c97755ae73fae1964ade55a7564d06c3fb894110011eae863714",
       "emitted_functions": [],
       "host_files": [
         "sources/cd-archive-views/host_contract.cpp"
@@ -21370,6 +21505,124 @@
       ],
       "host_files": [
         "docs/agents/actors-a-compare.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-init/cd_init.cpp",
+      "source_sha256": "536d2bbe76656a934c6525fdcedd6addd8a2bd337408d09d98266c3a7e5a1d6b",
+      "object_sha256": "b81a927103a5fa89fd58e550208e898dc98ceaca41f7ef1d969f7ee23946905c",
+      "emitted_functions": [
+        {
+          "name": "cdInit__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-load/cd_load.cpp",
+      "source_sha256": "f5a574ff616d2f62b77264241baf54a970c13c6f4c4ad7836aa973db2e3fe512",
+      "object_sha256": "10022f93713281b2122bc5469ae9439e824044e2ff4942aee245abb4b91c1cd4",
+      "emitted_functions": [
+        {
+          "name": "cdLoad__FPcPvii",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-load/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-lump-clear/lump_clear.cpp",
+      "source_sha256": "ef56c4bb8d75ebd5c41c558313ec0cc40a2b1203991d325d4ae2d723353c2f7b",
+      "object_sha256": "471e7c651afabfae5150b5b1a03c45089ba0d23b48723d1267ef9842db84fff3",
+      "emitted_functions": [
+        {
+          "name": "lumpClear__Fi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-lump-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-lump-find-resource/lump_find_resource.cpp",
+      "source_sha256": "986371d17ea310fa063fbc329a1309fd480aba93c08e2346755855283cfde8a7",
+      "object_sha256": "e0341b80373ac2fa0fafefebf192cdfe709769948fce903fb6580c4dc84fdcf2",
+      "emitted_functions": [
+        {
+          "name": "lumpFindResource__FPcT0",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-lump-find-resource/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-lump-load/lump_load.cpp",
+      "source_sha256": "229b7b45fe1227f8e9ad19ac7897061513aa623d9f82670c9510663199765542",
+      "object_sha256": "01674cbb879340f760d8c7211772115ec737852c0013b32f5e27f8534f12b104",
+      "emitted_functions": [
+        {
+          "name": "resident_lump",
+          "compiled_body_bytes": 240
+        },
+        {
+          "name": "lumpLoad__FPc",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-lump-load/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-lump-lock/lump_lock.cpp",
+      "source_sha256": "155cf72c0377200930ea6fbb1483a320e67176834f3f06e651cef02778bf0eef",
+      "object_sha256": "90034dbd3619f96f38df267778894c40daf46a3748f1b3331debe7a90d041bbe",
+      "emitted_functions": [
+        {
+          "name": "lumpLock__Fi",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-lump-lock/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-lump-state/lump_state.cpp",
+      "source_sha256": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
+      "object_sha256": "ce2bc09b33f3e68ded524e40adfc2030ccb879f06e1d904f82ad54b5586be39b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/cd-archive-lump-state/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
