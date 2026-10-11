@@ -4790,6 +4790,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys-callees/get_thread_id.S"
+    },
+    {
+      "input_order": 305,
+      "component": "runtime-initsys-callees",
+      "object_name": "find_address.o",
+      "private_object_sha256": "e81458d1b758503457cc496884f955899df528a636ef6f89d5cc1cff1f56c9eb",
+      "emitted_functions": [
+        {
+          "name": "FindAddress",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys-callees/find_address.S"
     }
   ],
   "drafts": [
@@ -5763,7 +5777,8 @@
     "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
     "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
     "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
-    "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145"
+    "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
+    "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4"
   },
   "additional_implementations": [
     {
@@ -6205,11 +6220,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 305,
-    "authored_default_inputs": 303,
+    "selected_inputs": 306,
+    "authored_default_inputs": 304,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 429,
-    "compiled_body_bytes_from_accepted_inputs": 247584,
+    "emitted_function_definitions_including_helpers": 430,
+    "compiled_body_bytes_from_accepted_inputs": 247600,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6221,7 +6236,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 26
+    "startup_selected_inputs": 27
   },
   "startup_implementations": [
     {
@@ -6480,6 +6495,16 @@
       "compiled_body_bytes": 16,
       "source_sha256": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
       "object_sha256": "12a07e3837198a9ca846c81ce5b39e998b4f1059c15b82d30e27f9b20cba698a",
+      "review": "docs/STARTUP_INITSYS_CALLEES.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys-callees/find_address.S",
+      "symbol": "FindAddress",
+      "compiled_body_bytes": 16,
+      "source_sha256": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
+      "object_sha256": "e81458d1b758503457cc496884f955899df528a636ef6f89d5cc1cff1f56c9eb",
       "review": "docs/STARTUP_INITSYS_CALLEES.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
