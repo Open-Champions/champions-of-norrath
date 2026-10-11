@@ -40,16 +40,18 @@ comparison pass.
 
 ## Current engineering priorities
 
-1. Validate a compiler capable of the observed R5900/EABI model, including component
-   fingerprints and real complete-function comparisons. Do not broaden the verifier
-   just to accept an incompatible output.
-2. Resolve the original load/section layout before authoring a linker script.
-   Distinguish file-backed bytes, memory-only ranges, shared ranges and metadata.
-3. Grow reconstructed source toward real dependencies and interacting systems,
-   retaining one freshly verified complete function per source commit.
-4. Introduce and execute an actual whole-program build when its source, runtime
-   support and data requirements are understood. Empty or placeholder executables
-   do not satisfy this step.
+1. Build interacting game systems and close the dependencies required for real
+   startup and gameplay. Use separate implementation tasks for subagents.
+2. Integrate completed source and fix demonstrated build, link, and runtime
+   failures. Resolve load layout, data ownership, and ABI questions where they
+   block the next working system; preserve accepted toolchain evidence.
+3. Check changed behavior and specific unresolved risks. Do not repeatedly audit
+   unchanged artifacts. Keep exact-byte match admission separate from experimental
+   source publication, and keep both separate from runtime success.
+4. Resolve runtime prerequisites alongside source development, execute meaningful
+   gameplay milestones, and publish authored source at useful checkpoints. Final
+   completion still requires every criterion above; a partial or placeholder
+   executable cannot satisfy it.
 
 The shared native Godot client is a separate repository and verification effort.
 Success here must not be advertised as a playable native port, and a native
