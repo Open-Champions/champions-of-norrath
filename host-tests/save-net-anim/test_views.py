@@ -226,6 +226,44 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_mc_load_buffer_bytes.cpp", "norrath_mc_load_buffer_bytes", 60032,
                     require_zero=True)
 
+    def test_never_save_table(self):
+        data, sections, symbols, relocations = self.expect(
+            "norrath_game_never_save_table_view.cpp", "norrath_game_never_save_table_view", 76)
+        row = defined(symbols, "norrath_game_never_save_table_view")
+        table = self.object_bytes(data, sections, row)
+        words = struct.unpack("<19I", table)
+        self.assertEqual(words[-1], 0)
+        self.assertEqual(len(relocations), 18)
+        expected = [
+            "norrath_factory_text_483b38",
+            "norrath_factory_text_483b40",
+            "norrath_factory_text_483b48",
+            "norrath_factory_text_461fc0",
+            "norrath_factory_text_483b50",
+            "norrath_factory_text_461fd0",
+            "norrath_factory_text_461fe0",
+            ".rodata.str1.8",
+            "norrath_factory_text_483b60",
+            "norrath_factory_text_483b68",
+            "norrath_factory_text_461ff0",
+            "norrath_factory_text_462000",
+            "norrath_factory_text_462010",
+            "norrath_factory_text_462028",
+            "norrath_factory_text_462040",
+            "norrath_factory_text_462058",
+            "norrath_factory_text_462058",
+            "norrath_factory_text_462068",
+        ]
+        self.assertEqual([item["symbol"] for item in relocations], expected)
+        for index, reloc in enumerate(relocations):
+            self.assertEqual(reloc["type"], 2)
+            self.assertEqual(reloc["offset"], index * 4)
+        pool = None
+        for section in sections:
+            if section["name"] == ".rodata.str1.8":
+                pool = data[section["offset"]:section["offset"] + section["size"]]
+        self.assertEqual(pool[words[7]:].split(b"\0", 1)[0], b"faytree")
+
 
 if __name__ == "__main__":
     unittest.main()
