@@ -31,3 +31,16 @@ extern "C" int sceSifQueryMaxFreeMemSize() {
         return -1;
     return rdata.word;
 }
+
+// Observed sceSifQueryTotalFreeMemSize at 0x002dc490, 112 bytes. It uses the
+// same _bind word, client, and receive object as the maximum-free query.
+// The operation is 7. The negative-word, negative-call, and receive-word
+// results match that query.
+extern "C" int sceSifQueryTotalFreeMemSize() {
+    if (_bind < 0)
+        return 0;
+    const int call = sceSifCallRpc(cd, 7, 0, 0, 0, &rdata, 4, 0, 0);
+    if (call < 0)
+        return -1;
+    return rdata.word;
+}

@@ -50,8 +50,8 @@ static void reset(int bind_word, int rpc_result, int word) {
     seen_completion_argument = reinterpret_cast<void*>(1);
 }
 
-static int expect_call() {
-    if (calls != 1 || seen_client != cd || seen_operation != 6 || seen_mode != 0) return 1;
+static int expect_call(int operation) {
+    if (calls != 1 || seen_client != cd || seen_operation != operation || seen_mode != 0) return 1;
     if (seen_send != 0 || seen_send_size != 0 || seen_receive != &rdata) return 2;
     if (seen_receive_size != 4 || seen_completion != 0 || seen_completion_argument != 0) return 3;
     return 0;
@@ -64,15 +64,27 @@ int main() {
     reset(-2147483647 - 1, 0, 99);
     if (sceSifQueryMaxFreeMemSize() != 0 || calls != 0) return 12;
     reset(0, -1, 99);
-    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call() != 0) return 13;
+    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call(6) != 0) return 13;
     reset(0, -2147483647 - 1, 99);
-    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call() != 0) return 14;
+    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call(6) != 0) return 14;
     reset(0, 0, 0x12345678);
-    if (sceSifQueryMaxFreeMemSize() != 0x12345678 || expect_call() != 0) return 15;
+    if (sceSifQueryMaxFreeMemSize() != 0x12345678 || expect_call(6) != 0) return 15;
     reset(1, 4, -50);
-    if (sceSifQueryMaxFreeMemSize() != -50 || expect_call() != 0) return 16;
+    if (sceSifQueryMaxFreeMemSize() != -50 || expect_call(6) != 0) return 16;
     reset(2147483647, -1, 7);
-    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call() != 0) return 17;
-    std::puts("max free query passed");
+    if (sceSifQueryMaxFreeMemSize() != -1 || expect_call(6) != 0) return 17;
+    reset(-1, 0, 99);
+    if (sceSifQueryTotalFreeMemSize() != 0 || calls != 0) return 18;
+    reset(0, -1, 99);
+    if (sceSifQueryTotalFreeMemSize() != -1 || expect_call(7) != 0) return 19;
+    reset(0, 0, 0x01020304);
+    if (sceSifQueryTotalFreeMemSize() != 0x01020304 || expect_call(7) != 0) return 20;
+    reset(2, 1, -3);
+    if (sceSifQueryTotalFreeMemSize() != -3 || expect_call(7) != 0) return 21;
+    reset(0, 0, 11);
+    if (sceSifQueryMaxFreeMemSize() != 11 || expect_call(6) != 0) return 22;
+    reset(0, 0, 11);
+    if (sceSifQueryTotalFreeMemSize() != 11 || expect_call(7) != 0) return 23;
+    std::puts("free memory queries passed");
     return 0;
 }
