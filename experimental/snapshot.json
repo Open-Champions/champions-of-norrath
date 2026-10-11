@@ -4221,12 +4221,25 @@
   "drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
-      "status": "FIRST compiled and reviewed; bounded machine conformance and unchanged fresh build pending; not integrated",
+      "status": "FIRST reviewed; 1596 bounded normal/correction V0+four-accumulator comparisons and16 zero-selector/bank probes passed; one unchanged fresh build byte-identical. Not integrated; original physical frame/table/IRQ/fault/exception state/resumption and gameplay unfinished.",
       "files": [
         "sources/game-software-arithmetic-source-v2/native_accumulators.hpp",
         "sources/game-software-arithmetic-source-v2/software_arithmetic.cpp",
         "sources/game-software-arithmetic-source-v2/software_arithmetic.hpp"
-      ]
+      ],
+      "scoped_conformance": {
+        "normal_and_correction_cases": 1596,
+        "zero_selector_and_bank_probes": 16,
+        "mismatches": 0,
+        "whole_compiled_words": 513,
+        "normal_plus_zero_covered_words": 472,
+        "uncovered_words": 41,
+        "original_reference_words": 870,
+        "original_reference_covered_words": 748,
+        "hardware_native_or_game_runtime_grant": false
+      },
+      "private_conformance_manifest_sha256": "c96d9f5628d2f30a0e0609f1a40166d7d88641e0831d5ed2d9f6e91eff736b5f",
+      "private_ROOT_completed_reproduction_manifest_sha256": "44289a8290302e89393428c6ad01157ac9d9b1d5802eb3ff1688e19f923dabf0"
     },
     {
       "component": "game-amx-exec-native-transport-source-v4",
@@ -4422,6 +4435,13 @@
     "sources/game-item-create-build-v2/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-item-create-build-v2/item_create.cpp": "213e84cb68d6eb92464b9ac4be7ca9d22a858dbda0f42ac684c72cb568c61364",
     "sources/game-item-create-build-v2/item_create.hpp": "b883224a7555868793674283ab296d77dbfaf85f2c36689f6678128f15da0ca1",
+    "sources/game-list-safe-iterator-source/construct.cpp": "16c6210a6a22a7d732f50dc5a033f1d03e597151341b7cd0423e29181835223e",
+    "sources/game-list-safe-iterator-source/destroy.cpp": "22ff9eb11ba587699f3cd3d52e4c8a488c6e1821750bc4beb920c8f493f2bdcd",
+    "sources/game-list-safe-iterator-source/iterator_memory.hpp": "b7a38d26125da0aaff336b70d9e2af04bb315a1f5de87060931fe0678e4a7317",
+    "sources/game-list-safe-iterator-source/next.cpp": "2a36a98c6b17ecd779abb8c868076d3f97b5158449bb1836917a8c45bfb1116e",
+    "sources/game-list-safe-iterator-source/safe_iterator.hpp": "fb38a3a7c3984e59d7fcd9f3b6413a8c4b39bf8673ee76ee22734f4fc33281a4",
+    "sources/game-megatile-name-pool-source/add_name.cpp": "e7215469c3e2fb4397e2fbde63205cb04fb1d10aa63cb8cef3621a3305a9a466",
+    "sources/game-megatile-name-pool-source/name_pool.hpp": "7d8fdde96bafc2a85388a7fd31ebd82454ff1147265f9cc7afb909a5b28f2776",
     "sources/game-network-partner-count-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-network-partner-count-build/network_local.hpp": "c374470ea89db8959b88f6f02e2d382b912b07d9dbdc0a2872140f61139b9309",
     "sources/game-network-partner-count-build/network_partner_count.cpp": "6ba99188c42b8e5e1c68b4eb82ce9fc298202e6144071b19273064ef16e36bcf",
@@ -5123,5 +5143,40 @@
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
     "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
-  }
+  },
+  "additional_implementations": [
+    {
+      "component": "game-list-safe-iterator-source",
+      "functions": [
+        "norrath_list_safe_iterator_construct",
+        "norrath_list_safe_iterator_next",
+        "norrath_list_safe_iterator_destroy"
+      ],
+      "files": [
+        "sources/game-list-safe-iterator-source/safe_iterator.hpp",
+        "sources/game-list-safe-iterator-source/iterator_memory.hpp",
+        "sources/game-list-safe-iterator-source/construct.cpp",
+        "sources/game-list-safe-iterator-source/next.cpp",
+        "sources/game-list-safe-iterator-source/destroy.cpp"
+      ],
+      "status": "Complete authored source, first compilation and focused output review passed in declared ordinary-RAM low32 scope; behavior execution and partial integration pending",
+      "private_FIRST_manifest_sha256": "00caca492ccd6da0a9299546cce717a9e98f7aab6a50b584baeb70dc6855ab9e",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false
+    },
+    {
+      "component": "game-megatile-name-pool-source",
+      "functions": [
+        "norrath_megatile_add_pm_list"
+      ],
+      "files": [
+        "sources/game-megatile-name-pool-source/name_pool.hpp",
+        "sources/game-megatile-name-pool-source/add_name.cpp"
+      ],
+      "status": "Complete authored source, first compilation and focused output review passed in declared ordinary-RAM low32 scope; behavior execution and partial integration pending",
+      "private_FIRST_manifest_sha256": "69c734b2b76efb01421e93451b5fd8607869312cc26f174e12f89bf964fb1259",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false
+    }
+  ]
 }

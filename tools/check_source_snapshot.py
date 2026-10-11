@@ -39,6 +39,12 @@ def check(root):
     assert integration['additional_exact_original_matches'] == 0
     assert integration['runtime_executed'] is False
     assert integration['clean_checkout_game_build'] is False
+    additions = snapshot.get('additional_implementations', [])
+    assert sum(len(item['functions']) for item in additions) == 4
+    for item in additions:
+        assert all(name in files for name in item['files'])
+        assert item['additional_exact_original_matches'] == 0
+        assert item['runtime_executed'] is False
     transport = directory / 'sources/game-amx-exec-native-transport-source-v4'
     for name in ('exec.cpp', 'context.cpp', 'transport.S'):
         assert re.search(r'^#error .*HOLD', (transport / name).read_text(), re.M), name

@@ -32,6 +32,13 @@ input, retained private object, upstream source, alias, or retry was used. The
 recipe, and output hashes. This proves a working partial source-build path; it
 does not establish a repeat-build byte identity, a game executable, or gameplay.
 
+The current plan is a metadata successor: only its snapshot digest changed after
+four additional, excluded source implementations and updated arithmetic evidence
+were published. Its selected 262 sources, headers, flags, and tool identities are
+unchanged. The receipt preserves the exact executed plan hash; commit
+`8bf270c162f2aef0717ee8a025dbf16688052424` preserves that plan. The new iterator,
+name-pool, and arithmetic code is excluded from this recipe's measured output.
+
 The driver compiles each unit once, retains preprocessed source and assembly,
 then performs one relocatable link. A failure stops the driver, leaves the failed outputs and command log in
 place, and does not trigger a retry or change any source or flags. Existing output

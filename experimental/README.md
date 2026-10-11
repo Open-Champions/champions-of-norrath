@@ -33,10 +33,24 @@ percentage follows from the emitted function count.
 
 ## Drafts outside the partial integration
 
+- `game-list-safe-iterator-source` now supplies all three complete iterator
+  functions needed by entity restoration: construction, advancement, and
+  destruction. The implementations retain mutation-sensitive link handling and
+  use the existing genuine deletion provider. All three compiled successfully;
+  behavior execution and integration remain pending.
+- `game-megatile-name-pool-source` supplies the complete name-pool routine used
+  six times by megatile restoration. It preserves interior suffix matching,
+  mismatch advancement, live counter reads, and genuine string helper calls.
+  Its first compilation and focused output review passed. The pool owner,
+  capacity, behavior execution, and integration remain unfinished.
 - `game-software-arithmetic-source-v2` reconstructs multiplication, division,
   and remainder algorithms with explicit accumulator capture and restoration.
-  Its first compiler output was reviewed, but the new machine comparisons and
-  unchanged repeat compilation remain pending. It is not bound into V43.
+  All 1,596 bounded normal/correction comparisons matched return values and
+  four final accumulator values; all 16 bounded zero probes matched their
+  selector and incoming banks. The unchanged repeat compilation produced the
+  same object. Coverage reaches 472/513 generated words, with gaps recorded.
+  Original frame/table access, fault/interrupt/exception/resumption behavior and
+  gameplay remain unverified. It is not bound into V43.
 - `game-amx-exec-native-transport-source-v4` contains the interpreter, context,
   and independently authored architecture transport draft. All three original
   `#error` holds remain in place. Physical-frame, register, lifetime, nesting,
@@ -67,6 +81,14 @@ structure, including repeated local interface headers. This is a source delivery
 snapshot, not a complete game build recipe. The existing
 [toolchain documentation](../docs/TOOLCHAINS.md) describes compiler setup;
 per-component build integration remains work in progress.
+
+The current build plan has the same 262 input sources, include closure, profiles,
+and tool identities as the executed recipe. Its snapshot digest was updated to
+cover the new excluded implementations and arithmetic status metadata. The
+[first build receipt](build-receipt.json) retains the actual earlier snapshot and
+plan hashes; [commit 8bf270c](https://github.com/Open-Champions/champions-of-norrath/commit/8bf270c162f2aef0717ee8a025dbf16688052424)
+preserves that exact recipe. The added implementations are not silently included
+in its measured output counts.
 
 Original executables, disc/BIOS images, assets, disassembly, generated decompiler
 output, compiler outputs, private fixtures, and tool binaries are excluded.
