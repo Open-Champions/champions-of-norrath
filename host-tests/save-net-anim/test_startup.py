@@ -94,6 +94,9 @@ class StartupTests(unittest.TestCase):
     def test_net_interface_is_up(self):
         self.expect_object("net_interface_is_up.cpp", "netInterfaceIsUp", 1, b"\0")
 
+    def test_net_init_state(self):
+        self.expect_object("net_init_state.cpp", "netInitState", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
