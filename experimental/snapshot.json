@@ -13077,6 +13077,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/vslots-a-tf-creature/typeinfo.cpp"
+    },
+    {
+      "input_order": 1006,
+      "component": "link-image-bounds-frame",
+      "object_name": "register_frame_info.o",
+      "private_object_sha256": "82087dee4c4158feaad49cec9e416481848e5035337891277f90b1db9e34957c",
+      "emitted_functions": [
+        {
+          "name": "__register_frame_info",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-frame/register_frame_info.cpp"
     }
   ],
   "drafts": [
@@ -14672,6 +14686,9 @@
     "sources/light-methods-line-construct/line_construct.cpp": "c7ba7db8a0fff244ab894f0b6c59e3162ed87a2ef509e1308ea65205b167cbf2",
     "sources/light-methods-texture-draw-color/host_check.cpp": "d89a07dfb7d440aef54f551e1243d00ffe01390eeb4251dfaa1763bf34dfbe10",
     "sources/light-methods-texture-draw-color/texture_draw_color.cpp": "c86aff1f1461226e401815549208b1a77b29ea80aba84030088eb04a2e2da12d",
+    "sources/link-image-bounds-frame/frame_object.hpp": "c00ee8e6b6fcafae2ba56a064337c133bc081bc557f98d68bce0514bcf3a629d",
+    "sources/link-image-bounds-frame/register_frame_info.cpp": "d411827e78da3b50b47cbf60718440bb7f124a9cf4590590527ad8ecd6c704b6",
+    "sources/link-image-bounds-frame/register_host.cpp": "87f8faf37a211dc40fc0b1277fa95dcda7dd807da34cfa7307179998f7d25d46",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -15964,11 +15981,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1006,
-    "authored_default_inputs": 1004,
+    "selected_inputs": 1007,
+    "authored_default_inputs": 1005,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 828,
-    "compiled_body_bytes_from_accepted_inputs": 362708,
+    "emitted_function_definitions_including_helpers": 829,
+    "compiled_body_bytes_from_accepted_inputs": 362800,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -15981,7 +15998,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 693
+    "package_selected_inputs": 694
   },
   "startup_implementations": [
     {
@@ -26623,6 +26640,23 @@
       ],
       "host_files": [
         "sources/vslots-a-tf-creature/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-frame/register_frame_info.cpp",
+      "source_sha256": "d411827e78da3b50b47cbf60718440bb7f124a9cf4590590527ad8ecd6c704b6",
+      "object_sha256": "82087dee4c4158feaad49cec9e416481848e5035337891277f90b1db9e34957c",
+      "emitted_functions": [
+        {
+          "name": "__register_frame_info",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/link-image-bounds-frame/register_host.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

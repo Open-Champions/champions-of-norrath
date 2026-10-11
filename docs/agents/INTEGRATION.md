@@ -1151,6 +1151,23 @@ Opened: `_$_14AnimationState`, `_$_15FxCreatureState`,
 `readyToSwitch__3Cat`, `switchToRun__3Cat`. 826 function bodies, 1004
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/link-image-bounds
+
+`__register_frame_info` was selected. It is 92 bytes. The host check
+passed. The unit also defines `objects`, which was not a previous import.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 888 |
+| Closed | 1 |
+| Opened | 0 |
+
+Closed: `__register_frame_info`. `SignalSema` and `__sce_eh_sema_id` were
+already unresolved. `WaitSema` was already defined. 827 function bodies,
+1005 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1259,7 +1276,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, and vslots-a. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, and link-image-bounds. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1310,3 +1327,4 @@ and no startup stage has executed.
 - 2026-10-11 17:52 CDT — `agents/vslots-b` — 947 unresolved imports
 - 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
 - 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
+- 2026-10-11 17:57 CDT — `agents/link-image-bounds` — 888 unresolved imports
