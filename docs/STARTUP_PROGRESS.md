@@ -86,3 +86,18 @@ so the fresh count is **869 imports** (863 − 3 + 9), with zero COMMON. The
 [review](STARTUP_KERNEL.md) and [receipt](../experimental/startup-kernel-receipt.json)
 record the checks and the C++ frame/ABI limitation. Source bootstrap and ordinary
 constructor dispatch are now present; no kernel/startup stage has actually run.
+
+## Clean export and optional Newlib math
+
+A `git archive` of `9a5b33d` built with the reviewed EE toolchain and no
+`--newlib-root` reproduced the kernel receipt: **869 unresolved imports**,
+409 function bodies, zero COMMON, and the same partial-object SHA-256
+`08414e0077626c1a45e8a39162d4c98275a2be0c1d7efe74573eb6ce96fa595d`. The archive
+supplied every selected authored input; no local-only source was required.
+
+The same archive with a Newlib 1.10.0 tree whose ten pinned files matched
+`external_files` compiled `floorf` (232 bytes) and `ceilf` (240 bytes). Those
+are the only import changes: **869 → 867**, nothing added, zero COMMON, 411
+function bodies. The optional inputs stay out of the default build. No startup
+stage or kernel service has run. The [receipt](../experimental/startup-newlib-receipt.json)
+records both outputs.

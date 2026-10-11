@@ -25,15 +25,19 @@
 !/experimental/build-plan.json
 !/experimental/build-receipt.json
 !/experimental/build-receipt-expanded.json
+!/experimental/startup-newlib-receipt.json
 !/experimental/sources/
 !/experimental/sources/**/
 !/experimental/sources/**/*.cpp
 !/experimental/sources/**/*.hpp
+!/experimental/sources/**/*.S
 # This one independently authored transport draft retains its compile hold.
 !/experimental/sources/game-amx-exec-native-transport-source-v4/transport.S
 !/tools/
 /tools/*
 !/tools/*.py
+!/tools/checks/
+!/tools/checks/*.cpp
 !/.github/
 /.github/*
 !/.github/workflows/

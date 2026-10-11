@@ -1,0 +1,40 @@
+{
+  "archive_revision": "9a5b33d8bee9ef13e1f580467851065839745519",
+  "archive_command": "git archive --format=tar HEAD",
+  "local_only_sources_required": false,
+  "authored_partial_build": {
+    "common_symbol_count": 0,
+    "function_count": 409,
+    "game_executable": false,
+    "original_files_used": false,
+    "plan_sha256": "314de1b80a5b425779158914ce41aa960bd793fe46fa895e3bdd7060cc586d82",
+    "selected_inputs": 285,
+    "source_cc_count": 285,
+    "status": "partial_build_complete",
+    "symbol_aliases_applied": false,
+    "unresolved_symbol_count": 869,
+    "partial_object_sha256": "08414e0077626c1a45e8a39162d4c98275a2be0c1d7efe74573eb6ce96fa595d"
+  },
+  "newlib_partial_build": {
+    "common_symbol_count": 0,
+    "function_count": 411,
+    "game_executable": false,
+    "newlib_version": "1.10.0",
+    "newlib_fetched": false,
+    "external_file_hashes_matched": true,
+    "original_files_used": false,
+    "selected_inputs": 287,
+    "source_cc_count": 287,
+    "status": "partial_build_complete",
+    "symbol_aliases_applied": false,
+    "unresolved_symbol_count": 867,
+    "partial_object_sha256": "fe9b4da51037651ed69b03f641f92cbef6be75c64c9045fdc35a938400006a47",
+    "imports_removed": ["ceilf", "floorf"],
+    "imports_added": [],
+    "floorf_compiled_body_bytes": 232,
+    "ceilf_compiled_body_bytes": 240
+  },
+  "default_build_includes_newlib": false,
+  "kernel_executed": false,
+  "game_runtime_executed": false
+}
