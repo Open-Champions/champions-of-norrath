@@ -118,6 +118,10 @@ class ViewTests(unittest.TestCase):
     def test_network_mode_byte(self):
         self.expect("norrath_network_mode_byte_view.cpp", "norrath_network_mode_byte_view", 1, b"\0")
 
+    def test_hud_no_controller_byte(self):
+        self.expect("norrath_game_hud_no_controller_byte_view.cpp",
+                    "norrath_game_hud_no_controller_byte_view", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
