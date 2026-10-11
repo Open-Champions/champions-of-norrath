@@ -130,6 +130,7 @@ def check(root):
         ('sources/runtime-initsys/init_exec_ps2.cpp', 'InitExecPS2'),
         ('sources/runtime-initsys/init_alarm.cpp', 'InitAlarm'),
         ('sources/runtime-initsys/init_tlb.cpp', 'InitTLBFunctions'),
+        ('sources/runtime-initsys/init_syscall_table.cpp', 'InitSystemCallTableAddress'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):

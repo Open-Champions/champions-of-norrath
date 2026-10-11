@@ -4664,6 +4664,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-initsys/init_tlb.cpp"
+    },
+    {
+      "input_order": 296,
+      "component": "runtime-initsys",
+      "object_name": "init_syscall_table.o",
+      "private_object_sha256": "11f4a68c4f533e3f818d7095091f33914d1251acd24d0d471069300c7343bebc",
+      "emitted_functions": [
+        {
+          "name": "InitSystemCallTableAddress",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys/init_syscall_table.cpp"
     }
   ],
   "drafts": [
@@ -5628,7 +5642,8 @@
     "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
     "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
     "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
-    "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35"
+    "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
+    "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec"
   },
   "additional_implementations": [
     {
@@ -6070,11 +6085,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 296,
-    "authored_default_inputs": 294,
+    "selected_inputs": 297,
+    "authored_default_inputs": 295,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 420,
-    "compiled_body_bytes_from_accepted_inputs": 244008,
+    "emitted_function_definitions_including_helpers": 421,
+    "compiled_body_bytes_from_accepted_inputs": 244264,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6086,7 +6101,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 17
+    "startup_selected_inputs": 18
   },
   "startup_implementations": [
     {
@@ -6255,6 +6270,16 @@
       "compiled_body_bytes": 184,
       "source_sha256": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
       "object_sha256": "de402e40dc4366c13ce67998b2cec2d424d6c7b5682c9c73a38c25db3b8adc4a",
+      "review": "docs/STARTUP_INITSYS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys/init_syscall_table.cpp",
+      "symbol": "InitSystemCallTableAddress",
+      "compiled_body_bytes": 256,
+      "source_sha256": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
+      "object_sha256": "11f4a68c4f533e3f818d7095091f33914d1251acd24d0d471069300c7343bebc",
       "review": "docs/STARTUP_INITSYS.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -48,3 +48,7 @@ not on this path.
 ## TLB handlers
 
 `InitTLBFunctions` at 0x002dfbe0 calls the local `setup` at 0x002dfbd0 three times for the first six words of the local `SysEntry` at 0x00445d50, imported as `kernel_tlb_sysentry`. It copies 816 bytes from `tlbsrc` to 0x80075000 through the local `Copy` at 0x002dfb78, then `FlushCache(0)` and `FlushCache(2)`. Five `GetEntryAddress`/`setup` pairs follow, using the local `GetEntryAddress` at 0x002dfbc0, starting at word 6. It then stores `GetEntryAddress(3)` in `_kExecArg`. The gate starts at 3 and stops once it is no longer below 8.
+
+## Syscall table address
+
+`InitSystemCallTableAddress` at 0x002dd7d8 calls the local `setup` at 0x002dd8d8 for both pairs in the 16-byte local `SysEntry` at 0x00444a20, imported as `kernel_syscall_sysentry`. It then calls local `FindAddress` at 0x002dd790 over `[0x80000000, 0x80080000)` with `kFindAddress` and with the local `kCopy` at 0x002dd718. That second pattern is imported as `kernel_syscall_pattern_kcopy` because `kCopy` is not a unique symbol. While the hits still disagree, the lower adjusted address is advanced by four bytes and searched again. The adjustments are 524 and 360. The agreeing adjusted `kFindAddress` hit is stored in `_SyscallEntry`. The host contract covers an immediate match and one repair step. What the patterns recognize inside kernel memory is unknown.
