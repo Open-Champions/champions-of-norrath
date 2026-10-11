@@ -147,6 +147,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_archive_animation_extension_view.cpp",
                     "norrath_archive_animation_extension_view", 4, b"anm\0")
 
+    def test_atan_scale(self):
+        self.expect("norrath_animation_dependency_view_47ff1c.cpp",
+                    "norrath_animation_dependency_view_47ff1c", 4, bytes.fromhex("83f92246"))
+
 
 if __name__ == "__main__":
     unittest.main()
