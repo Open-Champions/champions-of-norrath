@@ -26,6 +26,7 @@ STUBS = {
     0x00143A80: "norrath_actor_find_tag_string",
     0x00140F60: "norrath_game_object_find_tag_int",
     0x00143830: "norrath_actor_add_run_list",
+    0x0017DB78: "norrath_world_check_for_water",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -83,6 +84,7 @@ class Machine:
         self.stubs = stubs
         self.answers = list(answers)
         self.calls = []
+        self.floats = []
         self.halt = None
 
     def low(self, index):
@@ -352,7 +354,11 @@ class Machine:
                 name = self.stubs.get(target)
                 if name is None:
                     raise SystemExit("jal leaves the function: %#x from %#x" % (target, pc))
-                point = bytes(self.u8(self.low(5) + i) for i in range(12)) if name == "norrath_game_object_construct" else b""
+                point = b""
+                if name in ("norrath_game_object_construct", "norrath_world_check_for_water"):
+                    point = bytes(self.u8(self.low(5) + i) for i in range(12))
+                if name == "norrath_world_check_for_water":
+                    self.floats.append(self.f[12])
                 self.calls.append((name, self.low(4), self.low(5), self.low(6), self.low(7), point))
                 if not self.answers:
                     raise SystemExit("stub %s had no scripted answer" % name)
@@ -394,10 +400,12 @@ def parse_object(path):
     symbols = {}
     text = None
     relocs = []
+    named = {}
     for section in sections:
         label = name_of(section)
+        named[label] = data[section[4]:section[4] + section[5]]
         if label == ".text":
-            text = data[section[4]:section[4] + section[5]]
+            text = named[label]
         elif label == ".symtab":
             string_section = sections[section[6]]
             strings = data[string_section[4]:string_section[4] + string_section[5]]
@@ -422,7 +430,7 @@ def parse_object(path):
             name_off = struct.unpack_from("<I", raw)[0]
             end = strings.find(b"\0", name_off)
             sym_by_index[index] = strings[name_off:end].decode()
-    return text, relocs, sym_by_index
+    return text, relocs, sym_by_index, named
 
 
 def apply_relocations(text, relocs, sym_by_index, bases):
@@ -459,7 +467,7 @@ def object_bytes(machine, count):
     return bytes(machine.u8(OBJECT + index) for index in range(count))
 
 
-def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0):
+def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0, extra=None):
     machine = Machine({}, STUBS, answers)
     machine.mem.update(image_bytes)
     for index in range(256):
@@ -467,6 +475,9 @@ def run_case(image_bytes, entry, answers, type_bits=0x1234, flags=0):
     machine.set32(OBJECT + 12, flags)
     for index, word in enumerate((0x3F800000, 0x40000000, 0x40400000)):
         machine.set32(POINT + index * 4, word)
+    if extra:
+        for addr, value in extra.items():
+            machine.set32(addr, value)
     machine.write32(4, OBJECT)
     machine.write32(5, POINT)
     machine.write32(6, type_bits)
@@ -497,7 +508,7 @@ def main():
     original = read_vaddr(data, loads, 0x00216600, 0x150)
     output = Path("/tmp/actors-a-blocker.o")
     compile_object(ROOT / "experimental/sources/actors-a-blocker/blocker.cpp", output)
-    text, relocs, symbols = parse_object(output)
+    text, relocs, symbols, _named = parse_object(output)
     bases = {
         "norrath_game_object_construct": 0x001411F0,
         "norrath_actor_find_tag_string": 0x00143A80,
@@ -549,13 +560,14 @@ def main():
         raise SystemExit("%d blocker scenarios failed" % failures)
     print("blocker: %d original/compiled scenarios matched" % len(cases))
     compare_candle2(data, loads)
+    compare_container(data, loads)
 
 
 def compare_candle2(data, loads):
     original = read_vaddr(data, loads, 0x002310A8, 0x78)
     output = Path("/tmp/actors-a-candle2.o")
     compile_object(ROOT / "experimental/sources/actors-a-candle2/candle2.cpp", output)
-    text, relocs, symbols = parse_object(output)
+    text, relocs, symbols, _named = parse_object(output)
     bases = {
         "norrath_game_object_construct": 0x001411F0,
         "norrath_actor_add_run_list": 0x00143830,
@@ -591,6 +603,57 @@ def compare_candle2(data, loads):
                 print(" byte", index, hex(a), hex(b))
         raise SystemExit("candle2 comparison failed")
     print("candle2: original/compiled scenario matched")
+
+
+def compare_container(data, loads):
+    original = read_vaddr(data, loads, 0x0021D578, 0xB4)
+    output = Path("/tmp/actors-a-container.o")
+    compile_object(ROOT / "experimental/sources/actors-a-container/container.cpp", output)
+    text, relocs, symbols, named = parse_object(output)
+    pool = 0x220000
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_world_check_for_water": 0x0017DB78,
+        "norrath_actors_a_view_44ccb8": 0x0044CCB8,
+        "norrath_factory_world_pointer_word": 0x004844A0,
+        ".LC0": pool,
+    }
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x0021D578 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    for index, byte in enumerate(named.get(".rodata.cst4", b"")):
+        compiled_image[pool + index] = byte
+    extra = {0x004844A0: 0x20001000}
+    # Base returns 0. Water returns 0x1a5 so the stored byte and V0 can differ.
+    left = run_case(original_image, 0x0021D578, [0, 0x1A5], type_bits=0x00AB, extra=extra)
+    right = run_case(compiled_image, CODE, [0, 0x1A5], type_bits=0x00AB, extra=extra)
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    position = bytes([0x5A]) * 12
+    ok = (left.low(2) == right.low(2) == 0x1A5 and object_bytes(left, 140) == object_bytes(right, 140) and
+          left.calls[0][0] == right.calls[0][0] == "norrath_game_object_construct" and
+          left.calls[0][3] == right.calls[0][3] == 0 and left.calls[0][4] == right.calls[0][4] == ARGUMENTS and
+          left.calls[0][5] == right.calls[0][5] == incoming and
+          left.calls[1][0] == right.calls[1][0] == "norrath_world_check_for_water" and
+          left.calls[1][1] == right.calls[1][1] == 0x20001000 and left.calls[1][3] == right.calls[1][3] == 0 and
+          left.calls[1][5] == right.calls[1][5] == position and
+          left.floats == right.floats == [0x41400000] and
+          left.u32(OBJECT + 12) == 0x10 and left.u32(OBJECT + 72) == 0x0044CCB8 and
+          left.u8(OBJECT + 56) == 0xAB and left.u8(OBJECT + 57) == 0 and
+          left.u32(OBJECT + 116) == 0 and left.u32(OBJECT + 120) == 0xFFFFFFFF and
+          left.u8(OBJECT + 124) == 0xA5)
+    if not ok:
+        print("container calls", left.calls)
+        print("compiled", right.calls)
+        print("floats", [hex(x) for x in left.floats], [hex(x) for x in right.floats])
+        print("return", hex(left.low(2)), hex(right.low(2)))
+        print("flags", hex(left.u32(OBJECT + 12)), "view", hex(left.u32(OBJECT + 72)),
+              "half", hex(left.u8(OBJECT + 56) | (left.u8(OBJECT + 57) << 8)),
+              "b124", hex(left.u8(OBJECT + 124)))
+        for index, (a, b) in enumerate(zip(object_bytes(left, 140), object_bytes(right, 140))):
+            if a != b:
+                print(" byte", index, hex(a), hex(b))
+        raise SystemExit("container comparison failed")
+    print("container: original/compiled scenario matched")
 
 
 if __name__ == "__main__":
