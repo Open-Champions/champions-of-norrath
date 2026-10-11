@@ -166,6 +166,27 @@ int main() {
             "commStatusHandler__FPUci", "netRegisterMessageHandler__FPFPUci_v",
             "netRegisterPacketHandler__FPFPUci_v"])
 
+    def test_dlg_init_net(self):
+        source = STARTUP / "dlg_init_net.cpp"
+        self.host([source], r'''
+extern "C" int dialogMsgHandle = 0;
+extern "C" void dialogMsgCallback__FPUci(unsigned char*, int) {}
+extern "C" void DLG_InitNet__Fv();
+extern "C" int netRegisterMessageHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler != dialogMsgCallback__FPUci) return 1;
+    return 15;
+}
+int main() {
+    dialogMsgHandle = 0;
+    DLG_InitNet__Fv();
+    if (dialogMsgHandle != 15) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "DLG_InitNet__Fv", [
+            "dialogMsgCallback__FPUci", "dialogMsgHandle",
+            "netRegisterMessageHandler__FPFPUci_v"])
+
 
 if __name__ == "__main__":
     unittest.main()
