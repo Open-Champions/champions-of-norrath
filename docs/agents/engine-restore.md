@@ -62,39 +62,72 @@ Do not plan `host_contract.cpp`.
 `snapshot.json` must record both files before `tools/check_source_snapshot.py`
 will accept the tree. This note does not edit that snapshot.
 
+## engineClear
+
+Observed `engineClear__Fv` at 0x001911c8 is 48 bytes and returns. One caller
+reaches it: `launchSRS`. Fresh compilation is 44 bytes and is not an
+original-byte match.
+
+It disables cause 2, removes the handler id currently in `vblankHID` for cause
+2, then calls `drawRemoveInterrupts`. The handler word is loaded after
+`DisableIntc` returns. `vblankHID` is the local four-byte symbol at
+0x004843ec.
+
+Host check:
+
+```sh
+c++ -std=c++17 -Wall -Wextra -Werror -o /tmp/engine-clear-check \
+  experimental/sources/engine-restore-engine-clear/host_contract.cpp
+/tmp/engine-clear-check
+```
+
+### Build-plan entry
+
+Profile `authored_cpp`. Header closure empty. Object name `engine_clear.o`.
+Source `sources/engine-restore-engine-clear/engine_clear.cpp`. SHA-256
+`aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41`.
+Do not plan `host_contract.cpp`.
+
 ## Imports closed
 
-`frontEndInit__Fi`.
+`frontEndInit__Fi`, `engineClear__Fv`.
 
 ## Imports opened
 
-`MC_GetReadyForMainMenu__Fv`, `MC_LoadGameBrowser__Fii`, `menuSetPos__FP4Menui`,
-`padInitPadIndexMap__Fv`, `runFrontEnd__Fv`, `engineAddTask__FPFv_viPci`,
-`lumpLoad__FPc`, `frontEndSuspend`, `hudNoDraw`, `netNetworkMode`, `nmPlayers`,
-`musicPlaying`, `attemptLoadGame`, `MC_LastModeSuccessful`, `menuNm`, `menu`,
-`frontMenu`, `creditMenu`, `autodemoTimer`, `levelName`,
-`frontEndStartInCredits`, `frontendControllerConfigRunning`, `frontEndRunning`,
-`lineShift`, `expWarnAlpha`, `gamePause`, `gameNoDraw`, `floorDrawEnable`,
-`objectDrawEnable`, `creditsPosY`, `engineHoldMpeg`,
+From `frontEndInit`: `MC_GetReadyForMainMenu__Fv`, `MC_LoadGameBrowser__Fii`,
+`menuSetPos__FP4Menui`, `padInitPadIndexMap__Fv`, `runFrontEnd__Fv`,
+`frontEndSuspend`, `hudNoDraw`, `nmPlayers`, `musicPlaying`, `attemptLoadGame`,
+`MC_LastModeSuccessful`, `menuNm`, `menu`, `frontMenu`, `creditMenu`,
+`autodemoTimer`, `frontEndStartInCredits`, `frontendControllerConfigRunning`,
+`frontEndRunning`, `lineShift`, `expWarnAlpha`, `gamePause`, `gameNoDraw`,
+`floorDrawEnable`, `objectDrawEnable`, `creditsPosY`, `engineHoldMpeg`,
 `emergencyMusicWaitAbort`.
 
 `engineAddTask__FPFv_viPci`, `lumpLoad__FPc`, `netNetworkMode`, and `levelName`
 were already unresolved.
 
+From `engineClear`: `DisableIntc`, `RemoveIntcHandler`,
+`drawRemoveInterrupts__Fv`, `vblankHID`.
+
 ## Build-plan entries needed
 
-One `authored_cpp` input, `sources/engine-restore-front-end/front_end_init.cpp`,
-object `front_end_init.o`, empty header closure. SHA-256
-`a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab`.
-`host_contract.cpp` is not an input.
+| Source | Object | SHA-256 |
+| --- | --- | --- |
+| `sources/engine-restore-front-end/front_end_init.cpp` | `front_end_init.o` | `a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab` |
+| `sources/engine-restore-engine-clear/engine_clear.cpp` | `engine_clear.o` | `aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41` |
+
+Both use `authored_cpp` and an empty header closure. Host contracts are not
+inputs.
 
 ## Authored but never executed
 
-`frontEndInit__Fi`. The host contract ran on this machine. The reviewed EE
-compiler produced a relocatable object. No EE, menu, memory-card, or game path
-ran.
+`frontEndInit__Fi` and `engineClear__Fv`. Host contracts ran on this machine.
+The reviewed EE compiler produced relocatable objects. No EE, interrupt, menu,
+or game path ran.
 
 ## Unknown
 
-`Menu` layout, the effects of the called functions, and whether a suspended
-front end is reachable from `main` or `launchSRS`. Those two callers pass 0.
+`Menu` layout and the effects of the functions these two routines call.
+`main` and `launchSRS` pass 0 to `frontEndInit`. Whether a suspended front end
+is reachable from those callers is unknown. What `vblankHID` contains before
+`engineClear` is unknown.
