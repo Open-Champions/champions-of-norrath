@@ -215,6 +215,26 @@ int main() {
             "netRegisterMessageHandler__FPFPUci_v", "netWaitCallBack__FPUci",
             "netWaitMsgHandler"])
 
+    def test_text_init_net(self):
+        source = STARTUP / "text_init_net.cpp"
+        self.host([source], r'''
+extern "C" int dataHandle = 0;
+extern "C" void textHandler__FPUci(unsigned char*, int) {}
+extern "C" void textInitNet__Fv();
+extern "C" int netRegisterMessageHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler != textHandler__FPUci) return 1;
+    return 21;
+}
+int main() {
+    dataHandle = 0;
+    textInitNet__Fv();
+    if (dataHandle != 21) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "textInitNet__Fv", [
+            "dataHandle", "netRegisterMessageHandler__FPFPUci_v", "textHandler__FPUci"])
+
 
 if __name__ == "__main__":
     unittest.main()
