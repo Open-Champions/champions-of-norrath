@@ -27,3 +27,29 @@ work/ctor-check/main
 
 The snapshot records the fresh target object and source identities. The public
 partial driver independently recompiles the selected source after this package.
+
+## Persistent destructor walker
+
+The complete 140-byte original at 0x002f9e58 uses a persistent cursor whose
+original initializer at 0x004480d0 is 0x0031f3f0 (`__DTOR_LIST__ + 1`). The separate
+completed word at 0x004480d4 is initially zero. Both initializers were read from
+the pinned image. The walker advances the stored cursor before each callback,
+then sets the completion guard before deregistering `__EH_FRAME_BEGIN__`.
+
+The source owns the cursor and zero guard, preserving forward order, callback
+reentry, and one-time deregistration. The callback table, frame metadata and
+frame deregistration routine stay unresolved: no original callback bytes or
+addresses supply them. The zero guard is emitted in BSS rather than the original
+initialized data; future executable layout must initialize this source storage.
+The target emits 128 bytes. Its indirect calls, pre-call cursor update and
+post-walk guard were inspected; there is no new exact-byte match.
+
+Three isolated ASan/UBSan host runs cover an ordinary table, callback reentry,
+and an empty table, plus repeated dispatch and reentry from frame deregistration.
+
+```sh
+clang++ -std=c++17 -O2 -fsanitize=address,undefined -D__do_global_dtors=norrath_test_dtors -D__DTOR_LIST__=norrath_test_dtor_list -D__EH_FRAME_BEGIN__=norrath_test_frames -D__deregister_frame_info=norrath_test_deregister experimental/sources/runtime-startup/destructors.cpp tools/checks/destructors_contract.cpp -o work/ctor-check/dtors
+work/ctor-check/dtors
+work/ctor-check/dtors reentrant
+work/ctor-check/dtors empty table
+```
