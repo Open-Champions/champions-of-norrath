@@ -27,6 +27,7 @@ STUBS = {
     0x00140F60: "norrath_game_object_find_tag_int",
     0x00143830: "norrath_actor_add_run_list",
     0x0017DB78: "norrath_world_check_for_water",
+    0x0013D230: "norrath_light_add",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -85,6 +86,7 @@ class Machine:
         self.answers = list(answers)
         self.calls = []
         self.floats = []
+        self.snapshots = []
         self.halt = None
 
     def low(self, index):
@@ -359,6 +361,8 @@ class Machine:
                     point = bytes(self.u8(self.low(5) + i) for i in range(12))
                 if name == "norrath_world_check_for_water":
                     self.floats.append(self.f[12])
+                if name == "norrath_light_add":
+                    self.snapshots.append(bytes(self.u8(self.low(4) + i) for i in range(64)))
                 self.calls.append((name, self.low(4), self.low(5), self.low(6), self.low(7), point))
                 if not self.answers:
                     raise SystemExit("stub %s had no scripted answer" % name)
@@ -561,6 +565,7 @@ def main():
     print("blocker: %d original/compiled scenarios matched" % len(cases))
     compare_candle2(data, loads)
     compare_container(data, loads)
+    compare_candle(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -654,6 +659,54 @@ def compare_container(data, loads):
                 print(" byte", index, hex(a), hex(b))
         raise SystemExit("container comparison failed")
     print("container: original/compiled scenario matched")
+
+
+def compare_candle(data, loads):
+    original = read_vaddr(data, loads, 0x002301A8, 0x14C)
+    output = Path("/tmp/actors-a-candle.o")
+    compile_object(ROOT / "experimental/sources/actors-a-candle/candle.cpp", output)
+    text, relocs, symbols, named = parse_object(output)
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_actor_add_run_list": 0x00143830,
+        "norrath_light_add": 0x0013D230,
+        "norrath_actors_a_view_44a9c0": 0x0044A9C0,
+        "norrath_actors_a_view_481980": 0x00481980,
+    }
+    for symbol in symbols.values():
+        if symbol.startswith(".LC"):
+            bases[symbol] = 0x220000
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x002301A8 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    for index, byte in enumerate(named.get(".rodata.cst4", b"")):
+        compiled_image[0x220000 + index] = byte
+    extra = {0x00481980: 0x3F000000}
+    left = run_case(original_image, 0x002301A8, [0, 0, 0x66], type_bits=0x77, flags=0x10, extra=extra)
+    right = run_case(compiled_image, CODE, [0, 0, 0x66], type_bits=0x77, flags=0x10, extra=extra)
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    ok = (left.low(2) == right.low(2) == 0x66 and object_bytes(left, 160) == object_bytes(right, 160) and
+          left.snapshots == right.snapshots and len(left.snapshots) == 1 and
+          [call[0] for call in left.calls] == [call[0] for call in right.calls] ==
+          ["norrath_game_object_construct", "norrath_light_add", "norrath_actor_add_run_list"] and
+          left.calls[0][3] == 0 and left.calls[0][4] == 0 and left.calls[0][5] == incoming and
+          left.calls[1][1] == right.calls[1][1] == OBJECT + 76 and left.calls[2][1] == OBJECT and
+          left.u32(OBJECT + 12) == 0x11 and left.u8(OBJECT + 40) == 0xF0 and left.u8(OBJECT + 85) == 1 and
+          left.u32(OBJECT + 72) == 0x0044A9C0 and left.u32(OBJECT + 144) == 0x77 and
+          left.u8(OBJECT + 94) == 51 and left.u8(OBJECT + 96) == 39 and left.u8(OBJECT + 98) == 18)
+    if not ok:
+        print("candle calls", left.calls)
+        print("compiled", right.calls)
+        print("return", hex(left.low(2)), hex(right.low(2)), "snaps", len(left.snapshots), len(right.snapshots))
+        if left.snapshots and right.snapshots and left.snapshots[0] != right.snapshots[0]:
+            for index, (a, b) in enumerate(zip(left.snapshots[0], right.snapshots[0])):
+                if a != b:
+                    print(" light", index, hex(a), hex(b))
+        for index, (a, b) in enumerate(zip(object_bytes(left, 160), object_bytes(right, 160))):
+            if a != b:
+                print(" byte", index, hex(a), hex(b))
+        raise SystemExit("candle comparison failed")
+    print("candle: original/compiled scenario matched")
 
 
 if __name__ == "__main__":
