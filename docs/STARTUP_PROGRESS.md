@@ -115,3 +115,15 @@ default partial link is **911 unresolved imports** (869 − 9 + 51), zero COMMON
 [review](STARTUP_INITSYS.md) separates observed calls from unknown helper and
 hardware effects. The [receipt](../experimental/startup-initsys-receipt.json)
 lists the import delta.
+
+## main
+
+`main` is now selected authored source. It calls `engineAddTask__FPFv_viPci`
+and leaves that symbol undefined. The fresh default partial link is **993
+unresolved imports** (911 − 1 + 83), zero COMMON, 421 function bodies, 297
+authored inputs. Partial object
+`aaed1908f2f6b7be2c2132e835578ec77954853f1e33bfd5f60c19820d0b6555`.
+`__main` was already defined. The 24 unnamed text addresses are separate
+imports because they have no ELF symbol; their bytes are not in the source.
+The [review](STARTUP_MAIN.md) records the control flow. No EE startup stage
+has run. `launchSRS` is still unresolved.
