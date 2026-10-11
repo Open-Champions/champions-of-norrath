@@ -97,6 +97,9 @@ class StartupTests(unittest.TestCase):
     def test_net_init_state(self):
         self.expect_object("net_init_state.cpp", "netInitState", 1, b"\0")
 
+    def test_from_srs(self):
+        self.expect_object("from_srs.cpp", "fromSRS", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
