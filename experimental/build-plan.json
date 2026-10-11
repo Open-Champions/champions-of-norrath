@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 344,
+  "default_authored_inputs": 347,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -944,6 +944,12 @@
     "sources/math-integer-trig-coefficients/coefficients.cpp": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
     "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/megatile-do-entity-dispatch/dispatch.cpp": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+    "sources/megatile-do-entity-dispatch/dispatch.hpp": "dbf4fd3bd6a2e9b3f2db5112d8ced3bbcd2433fe5e614b07b501d3154d9614bc",
+    "sources/megatile-specialparse/specialparse.cpp": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+    "sources/megatile-specialparse/specialparse.hpp": "6e98207c17962c429d34aa9e7a0c5cca9a0986e440a00173839141b0f13272bf",
+    "sources/megatile-tables/tables.cpp": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+    "sources/megatile-tables/tables.hpp": "f1f29335a879b25f7016f918825b41953ed92d7cb0e78079275eafa2cd45f925",
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
     "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
     "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
@@ -6005,6 +6011,39 @@
       "profile": "authored_cpp",
       "sha256": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
       "source": "sources/object-infra-factory-text/factory_text.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-specialparse/specialparse.hpp"
+      ],
+      "input_order": 346,
+      "kind": "independently_authored_source",
+      "object_name": "specialparse.o",
+      "profile": "authored_cpp",
+      "sha256": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+      "source": "sources/megatile-specialparse/specialparse.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-do-entity-dispatch/dispatch.hpp"
+      ],
+      "input_order": 347,
+      "kind": "independently_authored_source",
+      "object_name": "dispatch.o",
+      "profile": "authored_cpp",
+      "sha256": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+      "source": "sources/megatile-do-entity-dispatch/dispatch.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-tables/tables.hpp"
+      ],
+      "input_order": 348,
+      "kind": "independently_authored_source",
+      "object_name": "tables.o",
+      "profile": "authored_cpp",
+      "sha256": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+      "source": "sources/megatile-tables/tables.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6104,7 +6143,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3ea00cced05e9321549763b789c13ea3d753ab3fd521fcec43099c6e083638c3",
+  "snapshot_sha256": "a790a90bc93743bc5e788086b2ce8486b5870cea9b8a643687dfe5eb4677b099",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

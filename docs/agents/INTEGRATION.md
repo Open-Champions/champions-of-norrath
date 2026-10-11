@@ -215,7 +215,52 @@ the 14 `norrath_launchsrs_rodata_*` / `norrath_launchsrs_sdata_*` addresses
 listed in `docs/STARTUP_TEXT.md`. Opened: none. 443 function bodies, 344
 authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
 
-## Disagreements
+## agents/megatile
+
+Merged. Observed original names stay tied to addresses. Each unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+Host checks for specialparse, entity dispatch, and the table bytes passed.
+
+The notes list 47 defined names as closed. All 47 are defined. Only 23 of
+them were unresolved imports on the shared link, so the official delta is
+smaller than that list.
+
+| | |
+|---|---|
+| Before | 647 |
+| After | 626 |
+| Closed | 23 |
+| Opened | 2 |
+
+Closed: `norrath_megatile_specialparse`, `norrath_megatile_do_entity_dispatch`,
+`norrath_megatile_regions_view`, `norrath_megatile_x_view`,
+`norrath_megatile_y_view`, `norrath_megatile_grid_origin_view`,
+`norrath_megatile_pm_pointers_view`, `norrath_megatile_pm_characters_view`,
+`norrath_megatile_counters_view`, `norrath_megatile_world_word`,
+`norrath_megatile_scale_view`, `norrath_megatile_name_a_view`,
+`norrath_megatile_name_b_view`, `norrath_megatile_name_c_view`,
+`norrath_megatile_name_d_view`, `norrath_megatile_name_e_view`,
+`norrath_megatile_name_f_view`, `norrath_megatile_pm_name_view`,
+`norrath_megatile_pm_a_view`, `norrath_megatile_pm_b_view`,
+`norrath_megatile_pm_c_view`, `norrath_megatile_count_format_view`,
+`norrath_megatile_point_format_view`.
+
+The other 24 names in the notes are defined and were not previous imports:
+`norrath_megatile_dynlevels_view`, `norrath_megatile_level_name_view`,
+`norrath_megatile_closest_limit_view`, and the trigger, format, kitten, and
+spawn text objects.
+
+Opened: `norrath_factory_sscanf`, `norrath_swap_int`. The other names the
+notes leave open were already unresolved or already defined, including
+`norrath_megatile_add_pm_list` and `norrath_megatile_cap_pm_pointers`.
+Bodies: specialparse 2404, entity dispatch 1996. The table unit emits no
+functions. 445 function bodies, 347 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+## Needs a decision
+
+These two disagreements are still unresolved. Neither package was changed to
+force them together.
 
 `norrath_actor_add_slow_run_list` was already selected. It walks 60 heads at
 `norrath_actor_view_50bfd0` and the same cycle word. `object-infra` adds
@@ -223,19 +268,29 @@ authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
 defines `norrath_object_slow_run_list_view` for observed `slowRunList` at
 `0x4fbfd0`. Its notes say `norrath_actor_view_50bfd0` is not that list. The
 two functions are different symbols, so the link has no duplicate definition.
-They do not share a head array.
+They do not share a head array. Decide whether those are two lists or one
+list under two names.
 
 `norrath_player_malloc_semaphore_view` and `__sce_sema_id` remain two objects.
 The memory notes say the original word is one symbol and this package defines
-only the view. `__sce_sema_id` is still unresolved.
+only the view. `__sce_sema_id` is still unresolved. Decide whether the view
+should become that symbol.
 
-No symbol in these four packages was defined twice.
+## Disagreements
+
+The two items under Needs a decision are the only symbol disagreements among
+the packages selected so far. No symbol in those packages was defined twice.
 
 ## Still authored, never executed
 
-Every function and data object added by math, audio, memory, and object-infra.
+Every function and data object added by math, audio, memory, object-infra,
+and megatile.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
 of the startup bodies already on the shared branch: they are selected source,
 and no startup stage has executed.
+
+## Push log
+
+- 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
