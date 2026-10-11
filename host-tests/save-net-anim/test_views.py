@@ -202,6 +202,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_network_send_cursor_words_view.cpp",
                     "norrath_network_send_cursor_words_view", 3 * 17632 + 4, require_zero=True)
 
+    def test_send_rings(self):
+        self.expect("norrath_network_send_ring_bytes_view.cpp",
+                    "norrath_network_send_ring_bytes_view", 3 * 17632 + 8192, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
