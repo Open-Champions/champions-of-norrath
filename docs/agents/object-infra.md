@@ -90,9 +90,32 @@ first NUL. Neighboring literals after those NULs are not claimed. The reviewed
 `-G0` profile puts the 36 zero marker bytes in BSS; the original object is
 file-backed `.data`.
 
+```json
+{
+  "header_closure": [],
+  "input_order": 300,
+  "kind": "independently_authored_source",
+  "object_name": "game_object_vtable.o",
+  "profile": "authored_cpp",
+  "sha256": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+  "source": "sources/object-infra-vtable/game_object_vtable.cpp"
+}
+```
+
+`game_object_vtable_contract.cpp` is not a plan input. It reads the EE object.
+
+## Vtable evidence
+
+`_vt$10GameObject` at `0x44d498` is 144 bytes. The words alternate a zero and a
+function address, ending in a zero slot. The constructor stores the table
+address at object+72. The reviewed compile emits 144 `.data` bytes and seventeen
+`R_MIPS_32` relocations at offsets 4, 12, ..., 132. The function bodies are not
+in this package.
+
 ## Imports closed
 
 - `norrath_object_add_to_slow_run_list`
+- `norrath_game_object_vtable_view`
 - `norrath_create_by_name_function_word`
 - `norrath_constructor_default_head_view`
 - `norrath_constructor_grid_a_view`
@@ -113,15 +136,31 @@ file-backed `.data`.
 
 ## Imports opened
 
-- none beyond symbols already imported by existing units
-  (`norrath_list_remove`, `norrath_list_oneway_link`, `norrath_actor_view_483ad0`)
+- `norrath_vt_tf_10GameObject` for observed `__tf10GameObject`
+- `norrath_vt_dtor_10GameObject` for observed `_$_10GameObject`
+- `norrath_vt_msg_hurt_10GameObject` for observed `msg_hurt__10GameObjectfP10GameObjecti`
+- `norrath_vt_msg_trigger_10GameObject` for observed `msg_trigger__10GameObjecti`
+- `norrath_vt_msg_run_10GameObject` for observed `msg_run__10GameObject`
+- `norrath_vt_msg_draw_10GameObject` for observed `msg_draw__10GameObject`
+- `norrath_vt_msg_collision_10GameObject` for observed `msg_collision__10GameObjectP10GameObject`
+- `norrath_vt_msg_route_10GameObject` for observed `msg_route__10GameObjecti`
+- `norrath_vt_msg_load_10GameObject` for observed `msg_load__10GameObjectPc`
+- `norrath_vt_msg_save_10GameObject` for observed `msg_save__10GameObjectPc`
+- `norrath_vt_msg_collision_world_10GameObject` for observed `msg_collisionWorld__10GameObjectG6Point3`
+- `norrath_vt_msg_move_collision_10GameObject` for observed `msg_moveCollision__10GameObjectPP10GameObject`
+- `norrath_vt_msg_alert_10GameObject` for observed `msg_alert__10GameObjectifG6Point3P10GameObject`
+- `norrath_vt_msg_get_poke_name_10GameObject` for observed `msg_getPokeName__10GameObjectPUsi`
+- `norrath_vt_msg_poke_10GameObject` for observed `msg_poke__10GameObjecti`
+- `norrath_vt_clone_10GameObject` for observed `clone__10GameObject`
+- `norrath_vt_get_model_10GameObject` for observed `getModel__10GameObject`
+- already imported elsewhere: `norrath_list_remove`, `norrath_list_oneway_link`, `norrath_actor_view_483ad0`
 
 ## Authored but never executed
 
-- The slow-run insertion, its 60 heads, and the state objects above.
-  Host contracts passed. No PS2 execution.
+- The slow-run insertion, its 60 heads, the state objects, and the vtable.
+  Host contracts passed. No PS2 execution. The vtable slots are not called.
 
 ## Still open in this package
 
-The game-object vtable and the factory text literals. The 80
-`norrath_construct_<Actor>` constructors are out of scope.
+The factory text literals. The 80 `norrath_construct_<Actor>` constructors are
+out of scope. Calling through the vtable is not executed.
