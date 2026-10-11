@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 803,
+  "default_authored_inputs": 806,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -240,6 +240,9 @@
     "sources/factory-tag-queries-build/find_tag_string.cpp": "26893343677a27f42159089fa4c6534d95de076075238703f55de3a474cdafb0",
     "sources/factory-tag-queries-build/has_light_or_particle.cpp": "160c37b73bbac7363571b0f0b1416f508d383e315fa4189f1ecfb9d0df8adf78",
     "sources/factory-tag-queries-build/tag_queries.hpp": "e284b01bdb2f3a5071a59378c15a0490f414104725b60677421b112a5d416015",
+    "sources/floor-draw/floor_draw.cpp": "6258e2eb8b666a095dd7c075a9ba01834c8cbf6b3ea589bfaa3980eeb45dba31",
+    "sources/floor-init/floor_init.cpp": "a81aa00394a34ee018104cbe90be80e387ad3646ca234aebdba49abd088eb16a",
+    "sources/floor-storage/floor_storage.cpp": "4bee1cf0d05450b9a8dccad9fdcc24a8f07c6947515a72f8f90638dbc0fcca6d",
     "sources/frame-loop-brightness/brightness.cpp": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
     "sources/frame-loop-clear-color/clear_color.cpp": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
     "sources/frame-loop-display-disable/set_display_disable.cpp": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
@@ -10779,6 +10782,33 @@
       "profile": "authored_cpp",
       "sha256": "fce5ee74b5a362aabc68622bfc1bc0f2cf3394a1cc36aa79ee2b6b331b5c221a",
       "source": "sources/natives-c-update-dust/update_dust.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 805,
+      "kind": "independently_authored_source",
+      "object_name": "floor_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "6258e2eb8b666a095dd7c075a9ba01834c8cbf6b3ea589bfaa3980eeb45dba31",
+      "source": "sources/floor-draw/floor_draw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 806,
+      "kind": "independently_authored_source",
+      "object_name": "floor_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a81aa00394a34ee018104cbe90be80e387ad3646ca234aebdba49abd088eb16a",
+      "source": "sources/floor-init/floor_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 807,
+      "kind": "independently_authored_source",
+      "object_name": "floor_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "4bee1cf0d05450b9a8dccad9fdcc24a8f07c6947515a72f8f90638dbc0fcca6d",
+      "source": "sources/floor-storage/floor_storage.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -10878,7 +10908,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "6f8ad523ca87864a0408d369a7753fd2aed31d4f968b505648f84865a10aa075",
+  "snapshot_sha256": "bbbe46b3fe32f8f7b668d7232481d70b0e4cd032d51995998eccf06dee6d5619",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

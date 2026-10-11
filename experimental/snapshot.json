@@ -10544,6 +10544,47 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/natives-c-update-dust/update_dust.cpp"
+    },
+    {
+      "input_order": 805,
+      "component": "floor-draw",
+      "object_name": "floor_draw.o",
+      "private_object_sha256": "92cacc07600018c5848ab31b4e518b676c19d378e95840944f6e637a22b90af1",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18emit_visible_cellsEjRNS_10SubmissionE.constprop.0",
+          "compiled_body_bytes": 1396
+        },
+        {
+          "name": "floorDraw__Fv",
+          "compiled_body_bytes": 6400
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-draw/floor_draw.cpp"
+    },
+    {
+      "input_order": 806,
+      "component": "floor-init",
+      "object_name": "floor_init.o",
+      "private_object_sha256": "29d272b95f3a878ad920b1eee337cd442b16d8d2a625f8f67669a78f2509761a",
+      "emitted_functions": [
+        {
+          "name": "floorInit__Fv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-init/floor_init.cpp"
+    },
+    {
+      "input_order": 807,
+      "component": "floor-storage",
+      "object_name": "floor_storage.o",
+      "private_object_sha256": "3c8d17f31c947917226bb6b79fa3ff1708d18a2d7b389442b33ca38783af00a1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-storage/floor_storage.cpp"
     }
   ],
   "drafts": [
@@ -10995,6 +11036,12 @@
     "sources/factory-tag-queries-build/find_tag_string.cpp": "26893343677a27f42159089fa4c6534d95de076075238703f55de3a474cdafb0",
     "sources/factory-tag-queries-build/has_light_or_particle.cpp": "160c37b73bbac7363571b0f0b1416f508d383e315fa4189f1ecfb9d0df8adf78",
     "sources/factory-tag-queries-build/tag_queries.hpp": "e284b01bdb2f3a5071a59378c15a0490f414104725b60677421b112a5d416015",
+    "sources/floor-draw/floor_draw.cpp": "6258e2eb8b666a095dd7c075a9ba01834c8cbf6b3ea589bfaa3980eeb45dba31",
+    "sources/floor-draw/host_check.cpp": "d04f3e7e541ddab6e45b3fa324f678de79ba48498a44524033854b1014dfa063",
+    "sources/floor-init/floor_init.cpp": "a81aa00394a34ee018104cbe90be80e387ad3646ca234aebdba49abd088eb16a",
+    "sources/floor-init/host_check.cpp": "9a4b1a95180883eb2627a9ad55c60305b9adeeafc848178617ae79e42975e345",
+    "sources/floor-storage/floor_storage.cpp": "4bee1cf0d05450b9a8dccad9fdcc24a8f07c6947515a72f8f90638dbc0fcca6d",
+    "sources/floor-storage/host_check.cpp": "bb4b65d609c07c844afd865e6e8fa4d860bd1626a56fb785ec426b5b5732c8a1",
     "sources/frame-loop-brightness/brightness.cpp": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
     "sources/frame-loop-brightness/host_check.cpp": "e1a2ca8d18830b6603614bfa87ef22377b42b854182502d7707b73ec8687a22d",
     "sources/frame-loop-clear-color/clear_color.cpp": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
@@ -13025,11 +13072,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 805,
-    "authored_default_inputs": 803,
+    "selected_inputs": 808,
+    "authored_default_inputs": 806,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 681,
-    "compiled_body_bytes_from_accepted_inputs": 315504,
+    "emitted_function_definitions_including_helpers": 684,
+    "compiled_body_bytes_from_accepted_inputs": 323352,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13042,7 +13089,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 492
+    "package_selected_inputs": 495
   },
   "startup_implementations": [
     {
@@ -20547,6 +20594,56 @@
       ],
       "host_files": [
         "sources/natives-c-update-dust/update_dust_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor",
+      "source": "sources/floor-draw/floor_draw.cpp",
+      "source_sha256": "6258e2eb8b666a095dd7c075a9ba01834c8cbf6b3ea589bfaa3980eeb45dba31",
+      "object_sha256": "92cacc07600018c5848ab31b4e518b676c19d378e95840944f6e637a22b90af1",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18emit_visible_cellsEjRNS_10SubmissionE.constprop.0",
+          "compiled_body_bytes": 1396
+        },
+        {
+          "name": "floorDraw__Fv",
+          "compiled_body_bytes": 6400
+        }
+      ],
+      "host_files": [
+        "sources/floor-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor",
+      "source": "sources/floor-init/floor_init.cpp",
+      "source_sha256": "a81aa00394a34ee018104cbe90be80e387ad3646ca234aebdba49abd088eb16a",
+      "object_sha256": "29d272b95f3a878ad920b1eee337cd442b16d8d2a625f8f67669a78f2509761a",
+      "emitted_functions": [
+        {
+          "name": "floorInit__Fv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/floor-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor",
+      "source": "sources/floor-storage/floor_storage.cpp",
+      "source_sha256": "4bee1cf0d05450b9a8dccad9fdcc24a8f07c6947515a72f8f90638dbc0fcca6d",
+      "object_sha256": "3c8d17f31c947917226bb6b79fa3ff1708d18a2d7b389442b33ca38783af00a1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/floor-storage/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

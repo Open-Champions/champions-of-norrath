@@ -785,6 +785,28 @@ Closed the 45 functions this package defines, plus `gameCam` and
 679 function bodies, 803 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/floor
+
+All three units were selected. Host checks passed. `floorDraw__Fv` is 6400
+bytes and a file-local helper is 1396. `floorInit__Fv` is 52. No game
+binary was committed. `glistp`, `zwritesOn`, and `zwritesOff` were already
+defined, so they did not open.
+
+| | |
+|---|---|
+| Before | 826 |
+| After | 819 |
+| Closed | 12 |
+| Opened | 5 |
+
+Closed: `floorInit__Fv`, `floorDrawEnable`, and the ten
+`norrath_floor_*` views this package defines. `floorDraw__Fv` is defined
+and was not a previous import. Opened: `__11ResourceMapPcT1`,
+`drawAddToList__FPviP8_textureP11_drawRecordi`, `worldCameraPos`,
+`worldClipCubeToFrustum__FPA1_fi`, `worldWorldViewMatrix`. 682 function
+bodies, 806 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -876,7 +898,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, and natives-c. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, and floor. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -911,3 +933,4 @@ and no startup stage has executed.
 - 2026-10-11 17:17 CDT — `agents/dialog-hud-controls` — 836 unresolved imports
 - 2026-10-11 17:19 CDT — `agents/natives-a` — 829 unresolved imports
 - 2026-10-11 17:20 CDT — `agents/natives-c` — 826 unresolved imports
+- 2026-10-11 17:23 CDT — `agents/floor` — 819 unresolved imports
