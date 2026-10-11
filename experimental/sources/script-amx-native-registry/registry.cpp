@@ -1,0 +1,254 @@
+// Observed nativeList at 0x00333930, 976 bytes: 121 name/function
+// pairs and a zero terminator. Each record is a name pointer then a
+// function pointer. newWorld and newWorldAlways share one function.
+// The functions themselves remain unresolved.
+extern "C" {
+struct NorrathAmxNativeEntry {
+    const char* name;
+    void (*function)();
+};
+void amxCallScript__FP5__amxPi();
+void amxPrint__FP5__amxPi();
+void amxPrintVal__FP5__amxPi();
+void amxSound__FP5__amxPi();
+void amxSoundSequence__FP5__amxPi();
+void amxLightEffect__FP5__amxPi();
+void amxSimpleNewWorld__FP5__amxPi();
+void amxNewWorld__FP5__amxPi();
+void amxNewWorldPost__FP5__amxPi();
+void amxActivateShop__FP5__amxPi();
+void amxShopRunning__FP5__amxPi();
+void amxGetScaledTime__FP5__amxPi();
+void amxSetFarClip__FP5__amxPi();
+void amxStartDialog__FP5__amxPi();
+void amxChangeSwoop__FP5__amxPi();
+void amxStartWithSwoopDone__FP5__amxPi();
+void amxDialogRunning__FP5__amxPi();
+void amxDeleteMonster__FP5__amxPi();
+void amxHideMonster__FP5__amxPi();
+void amxShowMonster__FP5__amxPi();
+void amxMoveMonster__FP5__amxPi();
+void amxFollowPlayer__FP5__amxPi();
+void amxStopFollowingPlayer__FP5__amxPi();
+void amxFollowPath__FP5__amxPi();
+void amxStopFollowingPath__FP5__amxPi();
+void amxFriendly__FP5__amxPi();
+void amxUnFriendly__FP5__amxPi();
+void amxStartPropAnim__FP5__amxPi();
+void amxStopPropAnim__FP5__amxPi();
+void amxPropAnimAtEnd__FP5__amxPi();
+void amxStartNPCAnim__FP5__amxPi();
+void amxNPCAnimAtEnd__FP5__amxPi();
+void amxAddExpandingPoolUnder__FP5__amxPi();
+void amxPlayerHasItem__FP5__amxPi();
+void amxRemovePlayerItem__FP5__amxPi();
+void amxGivePlayerItem__FP5__amxPi();
+void amxGivePlayerRandomItem__FP5__amxPi();
+void amxGivePlayerExp__FP5__amxPi();
+void amxGivePlayerGold__FP5__amxPi();
+void amxTakePlayerGold__FP5__amxPi();
+void amxCheckPlayerGold__FP5__amxPi();
+void amxPlayGotItemSound__FP5__amxPi();
+void amxSetInfo__FP5__amxPi();
+void amxAddHelpMessage__FP5__amxPi();
+void amxAddQuest__FP5__amxPi();
+void amxRemoveQuest__FP5__amxPi();
+void amxHornOmen__FP5__amxPi();
+void amxPlanarSteel__FP5__amxPi();
+void amxParticleMorph__FP5__amxPi();
+void amxHealPlayer__FP5__amxPi();
+void amxLeaveGame__FP5__amxPi();
+void amxEndGame__FP5__amxPi();
+void amxEndGauntlet__FP5__amxPi();
+void amxClearRecall__FP5__amxPi();
+void amxStartMusic__FP5__amxPi();
+void amxStartAudio__FP5__amxPi();
+void amxEndMusic__FP5__amxPi();
+void amxSaveGame__FP5__amxPi();
+void amxSaveEndConfig__FP5__amxPi();
+void amxSaveDone__FP5__amxPi();
+void amxExitToMainMenu__FP5__amxPi();
+void amxReapEnemies__FP5__amxPi();
+void amxGetv__FP5__amxPi();
+void amxGetNumPlayers__FP5__amxPi();
+void amxSetv__FP5__amxPi();
+void amxAddv__FP5__amxPi();
+void amxGetRand__FP5__amxPi();
+void amxActivePlayerIsDwarf__FP5__amxPi();
+void amxActivePlayerIsElf__FP5__amxPi();
+void amxGamePaused__FP5__amxPi();
+void amxPauseGameControl__FP5__amxPi();
+void amxLevelLoading__FP5__amxPi();
+void amxSetParticle__FP5__amxPi();
+void amxAddParticleOnObject__FP5__amxPi();
+void amxSetNoCollide__FP5__amxPi();
+void amxShakeCamera__FP5__amxPi();
+void amxDeleteObjects__FP5__amxPi();
+void amxHidePlayers__FP5__amxPi();
+void amxCheckPlayerAlive__FP5__amxPi();
+void amxSetBestActivePlayer__FP5__amxPi();
+void amxDecayPlayerLights__FP5__amxPi();
+void amxCheckIfAnyMonstersRemain__FP5__amxPi();
+void amxForceMutexRelease__FP5__amxPi();
+void amxAddDeferedCall__FP5__amxPi();
+void amxCutscene__FP5__amxPi();
+void amxSetPostAction__FP5__amxPi();
+void amxNewWorldParameter__FP5__amxPi();
+void amxPutNPCInVehicle__FP5__amxPi();
+void amxPutPlayersInVehicle__FP5__amxPi();
+void amxEntityRideVehicle__FP5__amxPi();
+void amxControlVehicle__FP5__amxPi();
+void amxPlayersLoaded__FP5__amxPi();
+void amxHoldVehicle__FP5__amxPi();
+void amxGetPlayerVPosition__FP5__amxPi();
+void amxGetVPosition__FP5__amxPi();
+void amxGetPlayerVDir__FP5__amxPi();
+void amxSetupPlayerSel__FP5__amxPi();
+void amxStartPlayerSel__FP5__amxPi();
+void amxPlayerSelRunning__FP5__amxPi();
+void amxObjectInPlayerTrigger__FP5__amxPi();
+void amxSetEntrance__FP5__amxPi();
+void amxHudResetFadeScreen__FP5__amxPi();
+void amxHudFadeScreen__FP5__amxPi();
+void amxClosestPlayerDist__FP5__amxPi();
+void amxHitPlayers__FP5__amxPi();
+void amxShowCompass__FP5__amxPi();
+void amxShowBust__FP5__amxPi();
+void amxGetHitPoints__FP5__amxPi();
+void amxSetHitPoints__FP5__amxPi();
+void amxSaveCheckPoint__FP5__amxPi();
+void amxLoadCheckPoint__FP5__amxPi();
+void amxTrigger__FP5__amxPi();
+void amxAutoPropSetState__FP5__amxPi();
+void amxPreloadResource__FP5__amxPi();
+void amxSetSaveInhibit__FP5__amxPi();
+void amxGetSaveInhibit__FP5__amxPi();
+void amxCountQuestItems__FP5__amxPi();
+void amxPlayersAlive__FP5__amxPi();
+void amxCountLiveObjects__FP5__amxPi();
+void amxNetworkMode__FP5__amxPi();
+NorrathAmxNativeEntry norrath_amx_game_native_registry_view[] = {
+    {"callScript", amxCallScript__FP5__amxPi},
+    {"print", amxPrint__FP5__amxPi},
+    {"printVal", amxPrintVal__FP5__amxPi},
+    {"sound", amxSound__FP5__amxPi},
+    {"soundSequence", amxSoundSequence__FP5__amxPi},
+    {"lightEffect", amxLightEffect__FP5__amxPi},
+    {"simpleNewWorld", amxSimpleNewWorld__FP5__amxPi},
+    {"newWorld", amxNewWorld__FP5__amxPi},
+    {"newWorldAlways", amxNewWorld__FP5__amxPi},
+    {"newWorldPost", amxNewWorldPost__FP5__amxPi},
+    {"activateStore", amxActivateShop__FP5__amxPi},
+    {"storeRunning", amxShopRunning__FP5__amxPi},
+    {"getScaledTime", amxGetScaledTime__FP5__amxPi},
+    {"setFarClip", amxSetFarClip__FP5__amxPi},
+    {"startDialog", amxStartDialog__FP5__amxPi},
+    {"changeSwoop", amxChangeSwoop__FP5__amxPi},
+    {"startWithSwoopDone", amxStartWithSwoopDone__FP5__amxPi},
+    {"dialogRunning", amxDialogRunning__FP5__amxPi},
+    {"deleteMonster", amxDeleteMonster__FP5__amxPi},
+    {"hideMonster", amxHideMonster__FP5__amxPi},
+    {"showMonster", amxShowMonster__FP5__amxPi},
+    {"moveMonster", amxMoveMonster__FP5__amxPi},
+    {"followPlayer", amxFollowPlayer__FP5__amxPi},
+    {"stopFollowingPlayer", amxStopFollowingPlayer__FP5__amxPi},
+    {"followPath", amxFollowPath__FP5__amxPi},
+    {"stopFollowingPath", amxStopFollowingPath__FP5__amxPi},
+    {"friendly", amxFriendly__FP5__amxPi},
+    {"unFriendly", amxUnFriendly__FP5__amxPi},
+    {"startPropAnim", amxStartPropAnim__FP5__amxPi},
+    {"stopPropAnim", amxStopPropAnim__FP5__amxPi},
+    {"propAnimAtEnd", amxPropAnimAtEnd__FP5__amxPi},
+    {"startNPCAnim", amxStartNPCAnim__FP5__amxPi},
+    {"NPCAnimAtEnd", amxNPCAnimAtEnd__FP5__amxPi},
+    {"addExpandingPool", amxAddExpandingPoolUnder__FP5__amxPi},
+    {"playerHasItem", amxPlayerHasItem__FP5__amxPi},
+    {"removePlayerItem", amxRemovePlayerItem__FP5__amxPi},
+    {"givePlayerItem", amxGivePlayerItem__FP5__amxPi},
+    {"givePlayerRandom", amxGivePlayerRandomItem__FP5__amxPi},
+    {"givePlayerExp", amxGivePlayerExp__FP5__amxPi},
+    {"givePlayerGold", amxGivePlayerGold__FP5__amxPi},
+    {"takePlayerGold", amxTakePlayerGold__FP5__amxPi},
+    {"checkPlayerGold", amxCheckPlayerGold__FP5__amxPi},
+    {"playGotItemSound", amxPlayGotItemSound__FP5__amxPi},
+    {"setInfo", amxSetInfo__FP5__amxPi},
+    {"addHelpMessage", amxAddHelpMessage__FP5__amxPi},
+    {"addQuest", amxAddQuest__FP5__amxPi},
+    {"removeQuest", amxRemoveQuest__FP5__amxPi},
+    {"hornOmen", amxHornOmen__FP5__amxPi},
+    {"planarSteel", amxPlanarSteel__FP5__amxPi},
+    {"particleMorph", amxParticleMorph__FP5__amxPi},
+    {"healPlayer", amxHealPlayer__FP5__amxPi},
+    {"leaveGame", amxLeaveGame__FP5__amxPi},
+    {"endGame", amxEndGame__FP5__amxPi},
+    {"endGauntlet", amxEndGauntlet__FP5__amxPi},
+    {"clearRecall", amxClearRecall__FP5__amxPi},
+    {"startMusic", amxStartMusic__FP5__amxPi},
+    {"startAudio", amxStartAudio__FP5__amxPi},
+    {"endMusic", amxEndMusic__FP5__amxPi},
+    {"saveGame", amxSaveGame__FP5__amxPi},
+    {"saveEndConfig", amxSaveEndConfig__FP5__amxPi},
+    {"saveDone", amxSaveDone__FP5__amxPi},
+    {"exitToMainMenu", amxExitToMainMenu__FP5__amxPi},
+    {"reapEnemies", amxReapEnemies__FP5__amxPi},
+    {"getv", amxGetv__FP5__amxPi},
+    {"getNumPlayers", amxGetNumPlayers__FP5__amxPi},
+    {"setv", amxSetv__FP5__amxPi},
+    {"addv", amxAddv__FP5__amxPi},
+    {"getRand", amxGetRand__FP5__amxPi},
+    {"activePlayerIsDwarf", amxActivePlayerIsDwarf__FP5__amxPi},
+    {"activePlayerIsElf", amxActivePlayerIsElf__FP5__amxPi},
+    {"gamePaused", amxGamePaused__FP5__amxPi},
+    {"pauseGameControl", amxPauseGameControl__FP5__amxPi},
+    {"levelLoading", amxLevelLoading__FP5__amxPi},
+    {"setParticle", amxSetParticle__FP5__amxPi},
+    {"addParticleOnObject", amxAddParticleOnObject__FP5__amxPi},
+    {"setNoCollide", amxSetNoCollide__FP5__amxPi},
+    {"shakeCamera", amxShakeCamera__FP5__amxPi},
+    {"deleteObjects", amxDeleteObjects__FP5__amxPi},
+    {"hidePlayers", amxHidePlayers__FP5__amxPi},
+    {"checkPlayerAlive", amxCheckPlayerAlive__FP5__amxPi},
+    {"setBestActivePlayer", amxSetBestActivePlayer__FP5__amxPi},
+    {"decayPlayerLights", amxDecayPlayerLights__FP5__amxPi},
+    {"checkMonstersLeft", amxCheckIfAnyMonstersRemain__FP5__amxPi},
+    {"forceMutexRelease", amxForceMutexRelease__FP5__amxPi},
+    {"addDeferedCall", amxAddDeferedCall__FP5__amxPi},
+    {"cutScene", amxCutscene__FP5__amxPi},
+    {"postAction", amxSetPostAction__FP5__amxPi},
+    {"newWorldParameter", amxNewWorldParameter__FP5__amxPi},
+    {"putNPCInVehicle", amxPutNPCInVehicle__FP5__amxPi},
+    {"putPlayersInVehicle", amxPutPlayersInVehicle__FP5__amxPi},
+    {"entityRideVehicle", amxEntityRideVehicle__FP5__amxPi},
+    {"controlVehicle", amxControlVehicle__FP5__amxPi},
+    {"playersLoaded", amxPlayersLoaded__FP5__amxPi},
+    {"holdVehicle", amxHoldVehicle__FP5__amxPi},
+    {"getPlayerVPosition", amxGetPlayerVPosition__FP5__amxPi},
+    {"getVPosition", amxGetVPosition__FP5__amxPi},
+    {"getPlayerVDir", amxGetPlayerVDir__FP5__amxPi},
+    {"setupPlayerSel", amxSetupPlayerSel__FP5__amxPi},
+    {"startPlayerSel", amxStartPlayerSel__FP5__amxPi},
+    {"playerSelRunning", amxPlayerSelRunning__FP5__amxPi},
+    {"objInPlayerTrig", amxObjectInPlayerTrigger__FP5__amxPi},
+    {"setEntrance", amxSetEntrance__FP5__amxPi},
+    {"hudResetFadeScreen", amxHudResetFadeScreen__FP5__amxPi},
+    {"hudFadeScreen", amxHudFadeScreen__FP5__amxPi},
+    {"closestPlayerDist", amxClosestPlayerDist__FP5__amxPi},
+    {"hitPlayers", amxHitPlayers__FP5__amxPi},
+    {"showCompass", amxShowCompass__FP5__amxPi},
+    {"showBust", amxShowBust__FP5__amxPi},
+    {"getHitPoints", amxGetHitPoints__FP5__amxPi},
+    {"setHitPoints", amxSetHitPoints__FP5__amxPi},
+    {"saveCheckPoint", amxSaveCheckPoint__FP5__amxPi},
+    {"loadCheckPoint", amxLoadCheckPoint__FP5__amxPi},
+    {"trigger", amxTrigger__FP5__amxPi},
+    {"autoPropSetState", amxAutoPropSetState__FP5__amxPi},
+    {"preloadResource", amxPreloadResource__FP5__amxPi},
+    {"setSaveInhibit", amxSetSaveInhibit__FP5__amxPi},
+    {"getSaveInhibit", amxGetSaveInhibit__FP5__amxPi},
+    {"countQuestItems", amxCountQuestItems__FP5__amxPi},
+    {"countPlayersAlive", amxPlayersAlive__FP5__amxPi},
+    {"countLiveObjects", amxCountLiveObjects__FP5__amxPi},
+    {"networkMode", amxNetworkMode__FP5__amxPi},
+    {nullptr, nullptr},
+};
+}
