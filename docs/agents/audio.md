@@ -105,8 +105,36 @@ caller advances that pointer by 452. `soundInitHardware` loads the scale from
 `DelayThread` stores 0x0047b688. The dialog initializer writes 12 bytes at
 `globalDialogDir` and points at `mouth.lmp` and `dialog.bin`.
 
+## Original names used by main and launchSRS
+
+`soundRestore__Fb` at 0x0024bc38 is 984 bytes. Its reset path stores
+`0x00032000` and calls `soundInitHardware`, then allocates stream buffers
+and issues the same RPC sequence already written as `norrath_sound_restore`.
+The original name is an alias of that symbol. Both symbols in the compiled
+object have the same value, size, and section. The compiled body is 1632
+bytes and is not an original-byte match. The host check fails if the two
+symbols diverge. No second plan entry: the existing input
+`sources/game-sound-restore-update-build/restore.cpp` changed. Its SHA-256
+is now `f628db76921a5ad131df2eb6e2063ec150e758be5e67b68a42522396ae799cad`
+(was `a0c8f39bd07f535e79080b52766b70ef771f59225fce3353d34cc3fed31a09c4`).
+
+`soundSleep__Fv` at 0x0024b9e8 is 180 bytes and is not that function. It
+frees the three words at `streamAllocation` (0x007dd280) through
+`sceSifFreeIopHeap`, clears offsets 44 and 48 in each of the three stream
+records, and calls `sceSifCallRpc`. That RPC is the existing
+`norrath_sound_call_rpc`: command 160, mode 0, send length 0, receive
+length 64, null end function and parameter. The host contract fails if a
+zero allocation is freed, a live word is cleared before the free, a
+neighboring stream byte changes, or the RPC arguments change.
+
+Profile `authored_cpp`. Header closure empty. Object name `sound_sleep.o`.
+Source `sources/audio-sound-sleep/sound_sleep.cpp`. SHA-256
+`b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e`.
+Do not plan either host check.
+
 ## Imports closed
 
+`soundRestore__Fb`, `soundSleep__Fv`,
 `norrath_sound_add_dma_handler`, `norrath_sound_enable_dma`,
 `norrath_sound_set_dma_chain`,
 `norrath_sound_command_packet_buffer_view`,
@@ -140,27 +168,38 @@ caller advances that pointer by 452. `soundInitHardware` loads the scale from
 
 ## Imports opened
 
-None. `norrath_sound_enable_dma` calls the existing
-`norrath_sound_disable_interrupts` and `norrath_sound_enable_interrupts`.
-Service 22 is issued directly, so `_EnableDmac` is not a new import.
+`sceSifFreeIopHeap`. `soundSleep__Fv` also uses the existing unresolved
+views `norrath_sound_stream_heap_words_view`, `norrath_sound_rpc_client_view`,
+`norrath_sound_rpc_send_view`, and `norrath_sound_rpc_receive_view`. It calls
+the existing `norrath_sound_call_rpc` and the existing stream-record view.
+`norrath_sound_enable_dma` calls the existing interrupt functions. Service 22
+is issued directly, so `_EnableDmac` is not a new import. `soundRestore__Fb`
+adds no import.
 
 ## Build-plan entries needed
 
-Append the 15 plan sources in this note. Do not add `host_check.cpp` or
+Append the 15 plan sources in this note, plus
+`sources/audio-sound-sleep/sound_sleep.cpp`. Refresh the existing
+`restore.cpp` hash recorded above. Do not add `host_check.cpp` or
 `host_contract.cpp` as inputs. `snapshot.json` must record every new file,
-including those host checks, before `tools/check_source_snapshot.py` accepts
-the tree. This branch does not edit the snapshot or the shared plan.
+including those host checks and the changed `restore.cpp`, before
+`tools/check_source_snapshot.py` accepts the tree. This branch does not edit
+the snapshot or the shared plan.
 
 ## Authored but never executed
 
-Every function and data object above. The host contracts and the DMA body
-comparisons ran on this machine. Nothing was executed on the EE. No syscall,
-DMA, SPU, or game path has run.
+Every function and data object above, including `soundRestore__Fb` and
+`soundSleep__Fv`. The host contracts and the DMA body comparisons ran on
+this machine. Nothing was executed on the EE. No syscall, DMA, SPU, or game
+path has run. `sceSifFreeIopHeap` has not been reconstructed.
 
 ## Unknown
 
-Services 18, 22, and 120 have unknown kernel effects. `norrath_sound_enable_dma`
-is not an original-byte match. Four bytes between the 43 channel records and
+Services 18, 22, and 120 have unknown kernel effects. `norrath_sound_enable_dma`,
+`soundRestore__Fb`, and `soundSleep__Fv` are not original-byte matches.
+`sceSifFreeIopHeap` at 0x002dc2a0 is 28 bytes and only calls
+`sceSifFreeSysMemory`; its effect is unknown. The fourth byte of the
+16-byte `streamAllocation` object is not written by `soundSleep__Fv`. Four bytes between the 43 channel records and
 `soundList`, four bytes between the three stream records and `gCd`, and four
 bytes between the dialog map and `delaySoundList` are not owned. Bytes after
 each C string are other rodata. `IOPbuffer`'s next symbol starts 8 bytes
