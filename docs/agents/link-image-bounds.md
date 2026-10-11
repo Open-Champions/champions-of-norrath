@@ -10,22 +10,26 @@ Observed at `0x002fc428`, 104 bytes. The caller passes the frame pointer and a s
 
 `objects` is the local BSS word at `0x008eab18`. This unit defines it as a global four-byte pointer so the deregistrar can share it. The original binding is local. Its initial value is zero.
 
+## atexit
+
+Observed at `0x002ff8d8`, 160 bytes. It loads the object addressed by `_impure_ptr`. The word at offset 328 selects a 136-byte block; a zero word selects the block at offset 332 and stores that address. The block is a next address, a signed count, and 32 function addresses. Count 32 or more calls `__wrap_malloc(136)`. A null allocation returns -1 and leaves the previous block unchanged. Otherwise the new block's next word is the previous block, the function is stored at the current count, and the count increases by one. Success returns 0. The compiled body is 372 bytes. The host contract fails if the 32nd registration allocates, if the 33rd does not allocate 136 bytes, if the new block is not linked in front, or if allocation failure still returns 0.
+
 ## Imports closed
 
-`__register_frame_info`.
+`__register_frame_info`, `atexit`.
 
 ## Imports opened
 
-None yet. `WaitSema` is already defined. `SignalSema` and `__sce_eh_sema_id` were already unresolved. `objects` is defined here.
+None yet. `WaitSema` and `__wrap_malloc` are already defined. `SignalSema`, `__sce_eh_sema_id`, and `_impure_ptr` were already unresolved. `objects` is defined with the registrar.
 
 ## Build-plan entries needed
 
-Append these authored inputs. Do not add `register_host.cpp`. Assign `input_order` at integration. Header closure is the frame object header.
+Append these authored inputs. Do not add the host contracts. Assign `input_order` at integration. The registrar's header closure is `sources/link-image-bounds-frame/frame_object.hpp`. `atexit.cpp` has an empty header closure.
 
 ## What is authored but never executed
 
-`__register_frame_info` has not run on the EE. No constructor walk has called it.
+`__register_frame_info` and `atexit` have not run on the EE. No constructor walk has called them, and nothing has invoked the registered functions.
 
 ## What is unknown
 
-What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The other twelve package symbols are not defined yet.
+What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The bytes of the reentrancy object outside offsets 328 and 332. Negative block counts are outside this contract. The other eleven package symbols are not defined yet.
