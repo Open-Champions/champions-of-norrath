@@ -187,6 +187,34 @@ int main() {
             "dialogMsgCallback__FPUci", "dialogMsgHandle",
             "netRegisterMessageHandler__FPFPUci_v"])
 
+    def test_hud_init_net(self):
+        source = STARTUP / "hud_init_net.cpp"
+        self.host([source], r'''
+extern "C" int hudMsgHandle = 0;
+extern "C" int netWaitMsgHandler = 0;
+extern "C" void hudMsgCallback__FPUci(unsigned char*, int) {}
+extern "C" void netWaitCallBack__FPUci(unsigned char*, int) {}
+extern "C" void hudInitNet__Fv();
+extern "C" int netRegisterMessageHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler == hudMsgCallback__FPUci) return 11;
+    if (handler == netWaitCallBack__FPUci) {
+        if (hudMsgHandle != 11) return 3;
+        return 12;
+    }
+    return 4;
+}
+int main() {
+    hudMsgHandle = netWaitMsgHandler = 0;
+    hudInitNet__Fv();
+    if (hudMsgHandle != 11 || netWaitMsgHandler != 12) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "hudInitNet__Fv", [
+            "hudMsgCallback__FPUci", "hudMsgHandle",
+            "netRegisterMessageHandler__FPFPUci_v", "netWaitCallBack__FPUci",
+            "netWaitMsgHandler"])
+
 
 if __name__ == "__main__":
     unittest.main()
