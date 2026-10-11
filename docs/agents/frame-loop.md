@@ -44,9 +44,20 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 /tmp/frame-start-check
 ```
 
+## engineSetDisplayDisable__Fi
+
+Observed at `0x001911f8`, 8 bytes. The reviewed EE body is 12 bytes. It stores the argument in `engineDisplayDisable` and returns. `simpleDrawLoop` calls it with 2 and later with 1.
+
+```sh
+c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
+  -I experimental/sources/frame-loop-display-disable \
+  experimental/sources/frame-loop-display-disable/host_check.cpp -o /tmp/display-disable-check
+/tmp/display-disable-check
+```
+
 ## Imports closed
 
-`engineFrameEnd__Fb`, `engineFrameStart__FUib`.
+`engineFrameEnd__Fb`, `engineFrameStart__FUib`, `engineSetDisplayDisable__Fi`.
 
 ## Imports opened
 
@@ -86,11 +97,25 @@ c++ -std=c++17 -O2 -fwrapv -Wall -Wextra -Werror -fsanitize=address,undefined \
 }
 ```
 
-Do not add either `host_check.cpp`. The integrator assigns `input_order`.
+```json
+{
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "set_display_disable.o",
+  "profile": "authored_cpp",
+  "sha256": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
+  "source": "sources/frame-loop-display-disable/set_display_disable.cpp",
+  "emitted_functions": [
+    {"name": "engineSetDisplayDisable__Fi", "compiled_body_bytes": 12}
+  ]
+}
+```
+
+Do not add any `host_check.cpp`. The integrator assigns `input_order`.
 
 ## Authored but never executed
 
-`engineFrameEnd__Fb` and `engineFrameStart__FUib`. The host checks ran on this Mac, and the reviewed EE compiler produced relocatable objects. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented.
+`engineFrameEnd__Fb`, `engineFrameStart__FUib`, and `engineSetDisplayDisable__Fi`. The host checks ran on this Mac, and the reviewed EE compiler produced relocatable objects. No GS, DMA, semaphore, timer, or interrupt call has run on the EE. No frame was presented.
 
 ## Unknown
 
