@@ -270,6 +270,25 @@ int main() {
 ''')
         self.ee_exports(source, "MC_Reset__Fv", ["MCA_ClearInfo__Fv", "MCA_Port", "MCA_Slot"])
 
+    def test_mc_process(self):
+        source = STARTUP / "mc_process.cpp"
+        self.host([source], r'''
+extern "C" int gameBailFromGameLoop = 0;
+extern "C" int mcProcess__Fv();
+static int beats;
+extern "C" void mcHeartBeat__Fv() { beats += 1; }
+int main() {
+    gameBailFromGameLoop = 0;
+    if (mcProcess__Fv() != 0 || beats != 1) return 2;
+    gameBailFromGameLoop = -1;
+    if (mcProcess__Fv() != 1 || beats != 2) return 3;
+    gameBailFromGameLoop = 2;
+    if (mcProcess__Fv() != 1) return 4;
+    return 0;
+}
+''')
+        self.ee_exports(source, "mcProcess__Fv", ["gameBailFromGameLoop", "mcHeartBeat__Fv"])
+
 
 if __name__ == "__main__":
     unittest.main()
