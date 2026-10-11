@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 305,
+  "default_authored_inputs": 306,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -929,6 +929,7 @@
     "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
     "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
     "sources/runtime-initsys-callees/dintr.S": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2",
+    "sources/runtime-initsys-callees/eintr.S": "38e8cf0e89dadfb18a3e94712f895d18f204b11527a2bca55460b7e2a4fde8f9",
     "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
     "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
     "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
@@ -5615,6 +5616,15 @@
       "profile": "authored_entry_asm",
       "sha256": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2",
       "source": "sources/runtime-initsys-callees/dintr.S"
+    },
+    {
+      "header_closure": [],
+      "input_order": 307,
+      "kind": "independently_authored_source",
+      "object_name": "eintr.o",
+      "profile": "authored_entry_asm",
+      "sha256": "38e8cf0e89dadfb18a3e94712f895d18f204b11527a2bca55460b7e2a4fde8f9",
+      "source": "sources/runtime-initsys-callees/eintr.S"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5714,7 +5724,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0b7c194ebdb88a5bdc9a838bc3861259c4b90deec72b0edd22efc24a1700eb83",
+  "snapshot_sha256": "eb16c27a541e5d20f1bf6186d8abe86d5f8882082b958377e585ad899ea6026e",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
