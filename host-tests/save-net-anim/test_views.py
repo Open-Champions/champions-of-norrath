@@ -214,6 +214,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_saved_map_tiles_bytes.cpp", "norrath_saved_map_tiles_bytes", 93312,
                     require_zero=True)
 
+    def test_saved_level_index(self):
+        self.expect("norrath_mc_saved_level_index_bytes.cpp",
+                    "norrath_mc_saved_level_index_bytes", 27 * 24, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
