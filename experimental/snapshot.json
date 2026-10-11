@@ -10585,6 +10585,89 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/floor-storage/floor_storage.cpp"
+    },
+    {
+      "input_order": 808,
+      "component": "engine-restore-display-disable",
+      "object_name": "engine_display_disable.o",
+      "private_object_sha256": "41c2f186c0fe92b0785793524de25a5377c020210f2bb020a49850b469130854",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-display-disable/engine_display_disable.cpp"
+    },
+    {
+      "input_order": 809,
+      "component": "engine-restore-engine-clear",
+      "object_name": "engine_clear.o",
+      "private_object_sha256": "ef07f55824ec898d2fb11e414f6b7cb9a5deff418c3eb939a38fc9cace5695cb",
+      "emitted_functions": [
+        {
+          "name": "engineClear__Fv",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-engine-clear/engine_clear.cpp"
+    },
+    {
+      "input_order": 810,
+      "component": "engine-restore-engine-restore",
+      "object_name": "engine_restore.o",
+      "private_object_sha256": "ea972935ae0d28242f962cc7f12c794aab00db2591f8028fb901345472bc4350",
+      "emitted_functions": [
+        {
+          "name": "engineRestore__Fv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-engine-restore/engine_restore.cpp"
+    },
+    {
+      "input_order": 811,
+      "component": "engine-restore-front-end",
+      "object_name": "front_end_init.o",
+      "private_object_sha256": "6e0000b644168e0fb6dc7b5e5fd4b30912f615b863b35e8157a5defc662ccc54",
+      "emitted_functions": [
+        {
+          "name": "frontEndInit__Fi",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-front-end/front_end_init.cpp"
+    },
+    {
+      "input_order": 812,
+      "component": "engine-restore-pad",
+      "object_name": "pad.o",
+      "private_object_sha256": "0abccd1f6465fd080e1cf5c38c763c94eeec8e3ec46bec20a2f210fb1b37aeb6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-pad/pad.cpp"
+    },
+    {
+      "input_order": 813,
+      "component": "engine-restore-skip-intro",
+      "object_name": "skip_intro.o",
+      "private_object_sha256": "25e20a2e51a62d3d3791842810e119fc6ed9a2f37b056880a69d41e83b3d8d72",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-skip-intro/skip_intro.cpp"
+    },
+    {
+      "input_order": 814,
+      "component": "engine-restore-srs-main",
+      "object_name": "srs_main.o",
+      "private_object_sha256": "e02f829f6de25e077c5ab5f1331c70a5f4ebf7a20a071b3b8858c79a91faaf85",
+      "emitted_functions": [
+        {
+          "name": "srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i",
+          "compiled_body_bytes": 1200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/engine-restore-srs-main/srs_main.cpp"
     }
   ],
   "drafts": [
@@ -10998,6 +11081,18 @@
     "sources/engine-init-startup/check_stack.cpp": "36f031fd80a9272f72f84b5e926d4aee09b244111b8798d70d652a582bee7952",
     "sources/engine-init-startup/ee_mmio.hpp": "beee209ffaeef7a3b5f8f71379a817e9eb5657c72792b27e3a53aad0ad21d4ae",
     "sources/engine-init-startup/engine_init.cpp": "bcf13dfb628b041a65090342be9aef9db4e0c4a9ea2d11dc599b56394da66188",
+    "sources/engine-restore-display-disable/engine_display_disable.cpp": "8ad6c2288189f4dd63c069599ba14e05216130f79c3df7910f1f6abeb1c19c08",
+    "sources/engine-restore-engine-clear/engine_clear.cpp": "aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41",
+    "sources/engine-restore-engine-clear/host_contract.cpp": "7410abdd330307b8f844fec41a2cd8bece9f9710aaa68581267d627778cc4045",
+    "sources/engine-restore-engine-restore/engine_restore.cpp": "158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4",
+    "sources/engine-restore-engine-restore/host_contract.cpp": "6fa705b9874a09802351b00910f36a42d7fd51e3aa91687d9980d9df94e4527d",
+    "sources/engine-restore-front-end/front_end_init.cpp": "a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab",
+    "sources/engine-restore-front-end/host_contract.cpp": "a8e6b936f90eac1da1d13eae6890116513a9c448a1a474880306c99fe4e04d6d",
+    "sources/engine-restore-pad/host_contract.cpp": "06fde85566650bff38a8af64e91573b281fa030cf7680df11ca4d12c8535d9d6",
+    "sources/engine-restore-pad/pad.cpp": "dffcaf0f47af1d44ba261518ca77b55b3ba4d7a162196cbdcf6099a74c37ec57",
+    "sources/engine-restore-skip-intro/skip_intro.cpp": "c912f8cf4360b0f4c4a533aef1a942f05313031e2caf888dc3d079e2a587c39e",
+    "sources/engine-restore-srs-main/host_contract.cpp": "1eef1e1003f94ada061486da76bbb8275a3c4321f885aa94dd6a4244327db17c",
+    "sources/engine-restore-srs-main/srs_main.cpp": "415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d",
     "sources/factory-core-formatter-build/core_formatter.cpp": "4a6e24a864dba3f1249ae015cd2e21005d224506272a09657ce291bb24d67d96",
     "sources/factory-core-formatter-build/core_formatter.hpp": "e6b42ca3ee4f2af8daed4d7995599873d70a42b807933801946d195e4c73cb68",
     "sources/factory-core-formatter-build/formatting.hpp": "a1112d1a68ef5d4f1b456de1a2f47be890e929fd15edbf380cd12be6a66e2997",
@@ -13072,11 +13167,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 808,
-    "authored_default_inputs": 806,
+    "selected_inputs": 815,
+    "authored_default_inputs": 813,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 684,
-    "compiled_body_bytes_from_accepted_inputs": 323352,
+    "emitted_function_definitions_including_helpers": 688,
+    "compiled_body_bytes_from_accepted_inputs": 325328,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13089,7 +13184,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 495
+    "package_selected_inputs": 502
   },
   "startup_implementations": [
     {
@@ -20644,6 +20739,110 @@
       "emitted_functions": [],
       "host_files": [
         "sources/floor-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-display-disable/engine_display_disable.cpp",
+      "source_sha256": "8ad6c2288189f4dd63c069599ba14e05216130f79c3df7910f1f6abeb1c19c08",
+      "object_sha256": "41c2f186c0fe92b0785793524de25a5377c020210f2bb020a49850b469130854",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/engine-restore-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-engine-clear/engine_clear.cpp",
+      "source_sha256": "aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41",
+      "object_sha256": "ef07f55824ec898d2fb11e414f6b7cb9a5deff418c3eb939a38fc9cace5695cb",
+      "emitted_functions": [
+        {
+          "name": "engineClear__Fv",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/engine-restore-engine-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-engine-restore/engine_restore.cpp",
+      "source_sha256": "158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4",
+      "object_sha256": "ea972935ae0d28242f962cc7f12c794aab00db2591f8028fb901345472bc4350",
+      "emitted_functions": [
+        {
+          "name": "engineRestore__Fv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/engine-restore-engine-restore/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-front-end/front_end_init.cpp",
+      "source_sha256": "a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab",
+      "object_sha256": "6e0000b644168e0fb6dc7b5e5fd4b30912f615b863b35e8157a5defc662ccc54",
+      "emitted_functions": [
+        {
+          "name": "frontEndInit__Fi",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "host_files": [
+        "sources/engine-restore-front-end/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-pad/pad.cpp",
+      "source_sha256": "dffcaf0f47af1d44ba261518ca77b55b3ba4d7a162196cbdcf6099a74c37ec57",
+      "object_sha256": "0abccd1f6465fd080e1cf5c38c763c94eeec8e3ec46bec20a2f210fb1b37aeb6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/engine-restore-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-skip-intro/skip_intro.cpp",
+      "source_sha256": "c912f8cf4360b0f4c4a533aef1a942f05313031e2caf888dc3d079e2a587c39e",
+      "object_sha256": "25e20a2e51a62d3d3791842810e119fc6ed9a2f37b056880a69d41e83b3d8d72",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/engine-restore-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "engine-restore",
+      "source": "sources/engine-restore-srs-main/srs_main.cpp",
+      "source_sha256": "415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d",
+      "object_sha256": "e02f829f6de25e077c5ab5f1331c70a5f4ebf7a20a071b3b8858c79a91faaf85",
+      "emitted_functions": [
+        {
+          "name": "srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i",
+          "compiled_body_bytes": 1200
+        }
+      ],
+      "host_files": [
+        "sources/engine-restore-srs-main/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

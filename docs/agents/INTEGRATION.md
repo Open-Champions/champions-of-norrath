@@ -807,6 +807,41 @@ and was not a previous import. Opened: `__11ResourceMapPcT1`,
 bodies, 806 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/engine-restore
+
+All seven units were selected. The pad host contract also checks
+`engineDisplayDisable` (value 3) and `skipIntro` (value 0). Compiled bodies:
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i` 1200, `frontEndInit__Fi` 540,
+`engineRestore__Fv` 192, `engineClear__Fv` 44. No game binary was committed.
+The worker's private count of 710 does not reproduce.
+
+| | |
+|---|---|
+| Before | 819 |
+| After | 856 |
+| Closed | 7 |
+| Opened | 44 |
+
+Closed: `engineClear__Fv`, `engineDisplayDisable`, `engineRestore__Fv`,
+`frontEndInit__Fi`, `pad`, `skipIntro`,
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`. Opened:
+`CheckNetwork__15VINetworkStatus`, `ClearVRAM__FUcUcUcUc`, `Close__7VITimer`,
+`Free__10VILauncher`, `GetDefault__10VILanguage`, `Init__10VILauncherb`,
+`Init__7VITimer`, `Initialize__15VINetworkStatus`, `LoadExecPS2`,
+`MC_GetReadyForMainMenu__Fv`, `MC_LoadGameBrowser__Fii`,
+`SetDefault__10VILanguage12VILanguageID`, `Setup__10VILauncher`,
+`Station__10VILauncheriPCcN22i`, `VIDisplayLoadingScreen__Fb`,
+`VIMemCardSetProductId__FPCc`, `VIMemCardSetProductTitle__FPCc`,
+`_$_10VILauncher`, `_$_15VINetworkStatus`, `__10VILauncher`,
+`__15VINetworkStatus`, `attemptLoadGame`, `autodemoTimer`, `creditMenu`,
+`creditsPosY`, `drawRemoveInterrupts__Fv`, `drawRestoreInterrupts__Fv`,
+`emergencyMusicWaitAbort`, `engineHoldMpeg`, `exitEzNetCnf`, `exitEzNetCtl`,
+`expWarnAlpha`, `ezNetCtlDownInterface`, `frontEndRunning`,
+`frontEndStartInCredits`, `frontEndSuspend`, `frontMenu`,
+`frontendControllerConfigRunning`, `hudNoDraw`, `lineShift`, `musicPlaying`,
+`printf`, `runFrontEnd__Fv`, `sceSifInitIopHeap`. 686 function bodies, 813
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -898,7 +933,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, and floor. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, and engine-restore. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -934,3 +969,4 @@ and no startup stage has executed.
 - 2026-10-11 17:19 CDT — `agents/natives-a` — 829 unresolved imports
 - 2026-10-11 17:20 CDT — `agents/natives-c` — 826 unresolved imports
 - 2026-10-11 17:23 CDT — `agents/floor` — 819 unresolved imports
+- 2026-10-11 17:25 CDT — `agents/engine-restore` — 856 unresolved imports
