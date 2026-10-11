@@ -132,6 +132,10 @@ class ViewTests(unittest.TestCase):
     def test_start_key(self):
         self.expect("norrath_mc_start_key_bytes.cpp", "norrath_mc_start_key_bytes", 6, b"start\0")
 
+    def test_script_key(self):
+        self.expect("norrath_mc_script_section_key_bytes.cpp",
+                    "norrath_mc_script_section_key_bytes", 11, b"script.scr\0")
+
 
 if __name__ == "__main__":
     unittest.main()
