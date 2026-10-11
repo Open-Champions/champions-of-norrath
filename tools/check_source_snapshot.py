@@ -134,6 +134,7 @@ def check(root):
         ('sources/runtime-initsys/init_timer.cpp', 'InitTimer'),
         ('sources/runtime-main/main.cpp', 'main'),
         ('sources/runtime-launchsrs/launch_srs.cpp', 'launchSRS__Fv'),
+        ('sources/runtime-initsys-callees/add_intc_handler2.S', 'AddIntcHandler2'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):

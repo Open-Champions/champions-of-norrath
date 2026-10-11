@@ -4720,6 +4720,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-launchsrs/launch_srs.cpp"
+    },
+    {
+      "input_order": 300,
+      "component": "runtime-initsys-callees",
+      "object_name": "add_intc_handler2.o",
+      "private_object_sha256": "659ee145d48c7ecdccfda848b7815089b140e9227b1782c156eeb69f4edc5c84",
+      "emitted_functions": [
+        {
+          "name": "AddIntcHandler2",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-initsys-callees/add_intc_handler2.S"
     }
   ],
   "drafts": [
@@ -5688,7 +5702,8 @@
     "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
     "sources/runtime-initsys/init_timer.cpp": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
     "sources/runtime-main/main.cpp": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
-    "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633"
+    "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
+    "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44"
   },
   "additional_implementations": [
     {
@@ -6130,11 +6145,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 300,
-    "authored_default_inputs": 298,
+    "selected_inputs": 301,
+    "authored_default_inputs": 299,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 424,
-    "compiled_body_bytes_from_accepted_inputs": 247504,
+    "emitted_function_definitions_including_helpers": 425,
+    "compiled_body_bytes_from_accepted_inputs": 247520,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6146,7 +6161,7 @@
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
-    "startup_selected_inputs": 21
+    "startup_selected_inputs": 22
   },
   "startup_implementations": [
     {
@@ -6356,6 +6371,16 @@
       "source_sha256": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
       "object_sha256": "5ad23591b1b4f8a12e1c2694ec5367129104aaf46f3b87e5bee59bde762c0445",
       "review": "docs/STARTUP_LAUNCHSRS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-initsys-callees/add_intc_handler2.S",
+      "symbol": "AddIntcHandler2",
+      "compiled_body_bytes": 16,
+      "source_sha256": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
+      "object_sha256": "659ee145d48c7ecdccfda848b7815089b140e9227b1782c156eeb69f4edc5c84",
+      "review": "docs/STARTUP_INITSYS_CALLEES.md",
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
     }
