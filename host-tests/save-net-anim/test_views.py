@@ -264,6 +264,34 @@ class ViewTests(unittest.TestCase):
                 pool = data[section["offset"]:section["offset"] + section["size"]]
         self.assertEqual(pool[words[7]:].split(b"\0", 1)[0], b"faytree")
 
+    def test_animation_vtable(self):
+        data, sections, symbols, relocations = self.expect(
+            "norrath_factory_animation_vtable.cpp", "norrath_factory_animation_vtable", 144)
+        row = defined(symbols, "norrath_factory_animation_vtable")
+        table = self.object_bytes(data, sections, row)
+        words = struct.unpack("<36I", table)
+        self.assertEqual(words[0::2], (0,) * 18)
+        targets = [item["symbol"] for item in relocations if item["section"].startswith(".rel")]
+        self.assertEqual(targets, [
+            "__tf16CosmeticPropAnim",
+            "_$_16CosmeticPropAnim",
+            "msg_hurt__10GameObjectfP10GameObjecti",
+            "msg_trigger__10GameObjecti",
+            "msg_run__16CosmeticPropAnim",
+            "msg_draw__16CosmeticPropAnim",
+            "msg_collision__10GameObjectP10GameObject",
+            "msg_route__10GameObjecti",
+            "msg_load__16CosmeticPropAnimPc",
+            "msg_save__16CosmeticPropAnimPc",
+            "msg_collisionWorld__10GameObjectG6Point3",
+            "msg_moveCollision__10GameObjectPP10GameObject",
+            "msg_alert__10GameObjectifG6Point3P10GameObject",
+            "msg_getPokeName__10GameObjectPUsi",
+            "msg_poke__10GameObjecti",
+            "clone__16CosmeticPropAnim",
+            "getModel__10GameObject",
+        ])
+
 
 if __name__ == "__main__":
     unittest.main()
