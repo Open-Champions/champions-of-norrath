@@ -5194,7 +5194,7 @@
       "input_order": 341,
       "component": "memory-wrapper-byte",
       "object_name": "wrapper_byte.o",
-      "private_object_sha256": "80299a103856db1389d886128abd6cf3871bcab62af45d535edd137d304af02c",
+      "private_object_sha256": "d8f2e5d5ce7a32c42a2bf910b59e9099d2253f5e808c91219f18bae98e0e24bf",
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
@@ -11003,6 +11003,122 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/cd-archive-lump-state/lump_state.cpp"
+    },
+    {
+      "input_order": 837,
+      "component": "memory-alloc-pointer",
+      "object_name": "alloc_pointer.o",
+      "private_object_sha256": "4a057f6e827447b565b8394b63e3881583de668fa8eddb842bfcd4034ad46860",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-alloc-pointer/alloc_pointer.cpp"
+    },
+    {
+      "input_order": 838,
+      "component": "memory-alloc-size",
+      "object_name": "alloc_size.o",
+      "private_object_sha256": "4adbe7047351cc338d8a84fa05e6e96c8bfbc23d6d3da87a561f7bc2fa801a27",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-alloc-size/alloc_size.cpp"
+    },
+    {
+      "input_order": 839,
+      "component": "memory-clear-mark",
+      "object_name": "mem_clear_mark.o",
+      "private_object_sha256": "fceef695dd22cfaba5b12893dba3dc017ee66f3f8e42bf4d799463a84eea7fd6",
+      "emitted_functions": [
+        {
+          "name": "memClearMark__Fi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-clear-mark/mem_clear_mark.cpp"
+    },
+    {
+      "input_order": 840,
+      "component": "memory-delete-marked",
+      "object_name": "mem_delete_marked.o",
+      "private_object_sha256": "03b9d3c4eb08f5304d8e0f40d0dfe5efca7335acd73593a8dae93df1c0bc6762",
+      "emitted_functions": [
+        {
+          "name": "memDeleteMarked__Fi",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-delete-marked/mem_delete_marked.cpp"
+    },
+    {
+      "input_order": 841,
+      "component": "memory-mallinfo",
+      "object_name": "mallinfo.o",
+      "private_object_sha256": "191ba5afdc7f0cf2535c1710ffc7a58ffe55d0d16f7fd6b3f01fbc0e4bd1ea57",
+      "emitted_functions": [
+        {
+          "name": "mallinfo",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-mallinfo/mallinfo.cpp"
+    },
+    {
+      "input_order": 842,
+      "component": "memory-mem-init",
+      "object_name": "mem_init.o",
+      "private_object_sha256": "cc68108a2214a0a33bd61eb6a1d39fdb2cd3384103bf0511520785eed9cb73a9",
+      "emitted_functions": [
+        {
+          "name": "memInit__FPvi",
+          "compiled_body_bytes": 392
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-mem-init/mem_init.cpp"
+    },
+    {
+      "input_order": 843,
+      "component": "memory-scramble-free",
+      "object_name": "mem_scramble_free.o",
+      "private_object_sha256": "4a8388ffd9bf8fdbb83c2566a2a9efdbab5fa11969c24c5aac0a2cb926b6fe13",
+      "emitted_functions": [
+        {
+          "name": "memScrambleFree__Fv",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-scramble-free/mem_scramble_free.cpp"
+    },
+    {
+      "input_order": 844,
+      "component": "memory-set-mark",
+      "object_name": "mem_set_mark.o",
+      "private_object_sha256": "9e4fcd01f6844e33959a4d4948170c20cf213bc1f9409646da43001a353e22ba",
+      "emitted_functions": [
+        {
+          "name": "memSetMark__Fi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-set-mark/mem_set_mark.cpp"
+    },
+    {
+      "input_order": 845,
+      "component": "memory-wrap-malloc",
+      "object_name": "wrap_malloc.o",
+      "private_object_sha256": "4597ea87b24644f44c88be50ce61a7c7135a5441b38c98da752b7bf7cb3f3d79",
+      "emitted_functions": [
+        {
+          "name": "__wrap_malloc",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memory-wrap-malloc/wrap_malloc.cpp"
     }
   ],
   "drafts": [
@@ -12590,18 +12706,37 @@
     "sources/megatile-tables/host_test.cpp": "a51fa2032900bdbbdb110f8524d4f696ec18c9e86f3e3f1f6ac16fc8a502fd3d",
     "sources/megatile-tables/tables.cpp": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
     "sources/megatile-tables/tables.hpp": "f1f29335a879b25f7016f918825b41953ed92d7cb0e78079275eafa2cd45f925",
+    "sources/memory-alloc-pointer/alloc_pointer.cpp": "286e14926ec596ed5429d3cef1a658034e9f1651816c5ffd688eb885d46c93d6",
+    "sources/memory-alloc-pointer/host_check.cpp": "49932646bd8690b131a94bdaf09dd0763ac7f85bc437a63c961d3b11fb85c984",
+    "sources/memory-alloc-size/alloc_size.cpp": "b7f86aeb6130ff51d194de3effaa5e961feb3bd87bee47609996b0a5e11b8646",
+    "sources/memory-alloc-size/host_check.cpp": "f05c700bf947a9ce213f5b28b5e94a834d2498c621d137b00fac47378e6853e7",
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
     "sources/memory-block-storage/host_check.cpp": "8a135c017c628544dbe63f8b42ede6f6e8e0e5fe7adfc83c2aa76e39a580f03f",
+    "sources/memory-clear-mark/host_check.cpp": "d20fa255ab7be017af46bd7008152c19a4b6aa019ef0338b1d8cad7e2399ae2d",
+    "sources/memory-clear-mark/mem_clear_mark.cpp": "420d79a22da4a74a03626e5375c0295ad607efc307ff844f7aa8199ddfa48e6f",
+    "sources/memory-delete-marked/host_check.cpp": "99d0a3dc67d94ca1bfcbb04d9dda350022faaedf37ca89671d7b7d583926c481",
+    "sources/memory-delete-marked/mem_delete_marked.cpp": "0b55c13d0bfb9e2b59a6d3fd5923ecec75c2788106785e156a7ffdf724e50516",
     "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
     "sources/memory-heap-state/host_check.cpp": "95ead24a998d927240fb008b3624044535e5f4bda0da29bec48cf37fc47dc729",
+    "sources/memory-mallinfo/host_check.cpp": "af469901a8b7d7b48ac9eaae6fa167dc8563eea15d4738d08c6beb001546ab10",
+    "sources/memory-mallinfo/mallinfo.cpp": "7419c00356c3d742ac23769d2c7053194d4a3929570cda0273e14bcf7153718a",
     "sources/memory-malloc-state/check_bins_object.cpp": "6c21de5eaa222f5c12564fc58ca7637b7cdd112a68c0080335b0378f9ededc9e",
     "sources/memory-malloc-state/host_check.cpp": "eab3a9c2d81da47405e3360584bd36b7eaf3fe1d2c028a015afedfc711a87ef8",
     "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
     "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+    "sources/memory-mem-init/host_check.cpp": "ddbb277fd5523c109e9b58d1d3482430e66eaaf8aed1dd61f4f227d630bc82ea",
+    "sources/memory-mem-init/mem_init.cpp": "934c88a2097bfd51cbe3807395d530b2b26e567234f01182bcd158ae4dcaeaa7",
+    "sources/memory-original-names/check_same_extent.cpp": "a6771c6485b7d0a2081101808ebce439b733bb2901a24de233c0e2fbd0f7ef3a",
     "sources/memory-realloc/host_check.cpp": "e5238a24b07f09b050291e0619bcede7d5f776a6c39085f58628f93d9df04bb4",
     "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
+    "sources/memory-scramble-free/host_check.cpp": "78721d60d3e1c2e3d269ed244098e3690d7665e0c90f223c4da2131ef9030eb5",
+    "sources/memory-scramble-free/mem_scramble_free.cpp": "4ec81437a4173a9f26a7aa19a67e402efff1ee6239bfb37c7c056c8225522974",
+    "sources/memory-set-mark/host_check.cpp": "42056b112759f5d74bd984c951b2060d53b6e9a1bcda0575c36ee3986b5ca226",
+    "sources/memory-set-mark/mem_set_mark.cpp": "9a61ab6480fe75b82a6638db87d22aeeb7fc41995bf4ba3c937aedd2253b1ab8",
+    "sources/memory-wrap-malloc/host_check.cpp": "7cbccf9848d5c7c7cf0964527671fffe90fc2bf1e189a8a686833c5467485c1a",
+    "sources/memory-wrap-malloc/wrap_malloc.cpp": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
     "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311",
-    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/memory-wrapper-byte/wrapper_byte.cpp": "b68e09b9f3b5d9234d3cd529e31fa711d86a6b6981e910a088b58078a1ce15e9",
     "sources/natives-a-activate-shop/activate_shop.cpp": "03aceb5f5f34b7efc451543dd1b6682b008ab0e9292a58b9d1a777a635f532b0",
     "sources/natives-a-activate-shop/host_contract.cpp": "57401547ff972f9cd29431377c8a3bfb0277b1154c5bf33a32c62d556876b70f",
     "sources/natives-a-active-player-is-dwarf/active_player_is_dwarf.cpp": "30409c19fc8f0ecbe2234bbd04eded98a05b7b4b7a1a40a2a40084fd35daf396",
@@ -13546,11 +13681,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 837,
-    "authored_default_inputs": 835,
+    "selected_inputs": 846,
+    "authored_default_inputs": 844,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 717,
-    "compiled_body_bytes_from_accepted_inputs": 334724,
+    "emitted_function_definitions_including_helpers": 724,
+    "compiled_body_bytes_from_accepted_inputs": 335652,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13563,7 +13698,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 524
+    "package_selected_inputs": 533
   },
   "startup_implementations": [
     {
@@ -14327,11 +14462,12 @@
     {
       "package": "memory",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp",
-      "source_sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
-      "object_sha256": "80299a103856db1389d886128abd6cf3871bcab62af45d535edd137d304af02c",
+      "source_sha256": "b68e09b9f3b5d9234d3cd529e31fa711d86a6b6981e910a088b58078a1ce15e9",
+      "object_sha256": "d8f2e5d5ce7a32c42a2bf910b59e9099d2253f5e808c91219f18bae98e0e24bf",
       "emitted_functions": [],
       "host_files": [
-        "sources/memory-wrapper-byte/host_check.cpp"
+        "sources/memory-wrapper-byte/host_check.cpp",
+        "sources/memory-original-names/check_same_extent.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
@@ -21623,6 +21759,149 @@
       "emitted_functions": [],
       "host_files": [
         "sources/cd-archive-lump-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-alloc-pointer/alloc_pointer.cpp",
+      "source_sha256": "286e14926ec596ed5429d3cef1a658034e9f1651816c5ffd688eb885d46c93d6",
+      "object_sha256": "4a057f6e827447b565b8394b63e3881583de668fa8eddb842bfcd4034ad46860",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-alloc-pointer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-alloc-size/alloc_size.cpp",
+      "source_sha256": "b7f86aeb6130ff51d194de3effaa5e961feb3bd87bee47609996b0a5e11b8646",
+      "object_sha256": "4adbe7047351cc338d8a84fa05e6e96c8bfbc23d6d3da87a561f7bc2fa801a27",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memory-alloc-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-clear-mark/mem_clear_mark.cpp",
+      "source_sha256": "420d79a22da4a74a03626e5375c0295ad607efc307ff844f7aa8199ddfa48e6f",
+      "object_sha256": "fceef695dd22cfaba5b12893dba3dc017ee66f3f8e42bf4d799463a84eea7fd6",
+      "emitted_functions": [
+        {
+          "name": "memClearMark__Fi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/memory-clear-mark/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-delete-marked/mem_delete_marked.cpp",
+      "source_sha256": "0b55c13d0bfb9e2b59a6d3fd5923ecec75c2788106785e156a7ffdf724e50516",
+      "object_sha256": "03b9d3c4eb08f5304d8e0f40d0dfe5efca7335acd73593a8dae93df1c0bc6762",
+      "emitted_functions": [
+        {
+          "name": "memDeleteMarked__Fi",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/memory-delete-marked/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-mallinfo/mallinfo.cpp",
+      "source_sha256": "7419c00356c3d742ac23769d2c7053194d4a3929570cda0273e14bcf7153718a",
+      "object_sha256": "191ba5afdc7f0cf2535c1710ffc7a58ffe55d0d16f7fd6b3f01fbc0e4bd1ea57",
+      "emitted_functions": [
+        {
+          "name": "mallinfo",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/memory-mallinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-mem-init/mem_init.cpp",
+      "source_sha256": "934c88a2097bfd51cbe3807395d530b2b26e567234f01182bcd158ae4dcaeaa7",
+      "object_sha256": "cc68108a2214a0a33bd61eb6a1d39fdb2cd3384103bf0511520785eed9cb73a9",
+      "emitted_functions": [
+        {
+          "name": "memInit__FPvi",
+          "compiled_body_bytes": 392
+        }
+      ],
+      "host_files": [
+        "sources/memory-mem-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-scramble-free/mem_scramble_free.cpp",
+      "source_sha256": "4ec81437a4173a9f26a7aa19a67e402efff1ee6239bfb37c7c056c8225522974",
+      "object_sha256": "4a8388ffd9bf8fdbb83c2566a2a9efdbab5fa11969c24c5aac0a2cb926b6fe13",
+      "emitted_functions": [
+        {
+          "name": "memScrambleFree__Fv",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/memory-scramble-free/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-set-mark/mem_set_mark.cpp",
+      "source_sha256": "9a61ab6480fe75b82a6638db87d22aeeb7fc41995bf4ba3c937aedd2253b1ab8",
+      "object_sha256": "9e4fcd01f6844e33959a4d4948170c20cf213bc1f9409646da43001a353e22ba",
+      "emitted_functions": [
+        {
+          "name": "memSetMark__Fi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/memory-set-mark/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memory",
+      "source": "sources/memory-wrap-malloc/wrap_malloc.cpp",
+      "source_sha256": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
+      "object_sha256": "4597ea87b24644f44c88be50ce61a7c7135a5441b38c98da752b7bf7cb3f3d79",
+      "emitted_functions": [
+        {
+          "name": "__wrap_malloc",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/memory-wrap-malloc/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

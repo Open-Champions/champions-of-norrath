@@ -909,6 +909,35 @@ Closed: `cdInit__Fv`, `cdLoad__FPcPvii`, `lumpClear__Fi`,
 bodies, 835 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/memory second pass
+
+Nine new units were selected. `enableMallocWrapper` is now a second name on
+the already selected `norrath_enable_malloc_wrapper_byte_view`. The
+same-extent check passed on that object, and the existing byte host check
+passed. The plan `symbol_aliases` list stays empty.
+
+`memAlloc__FiPc`, `memFree__FPv`, and `blockAllocInit__Fv` were authored as
+aliases on three sources inside the frozen 264-input prefix. Those input
+records stay the V43 receipt, so the alias lines were not kept and those
+three names stay unresolved. `memory-realloc`, `memory-malloc-state`,
+`memory-heap-state`, and `memory-block-storage` were already selected and
+were not appended again.
+
+| | |
+|---|---|
+| Before | 886 |
+| After | 879 |
+| Closed | 10 |
+| Opened | 3 |
+
+Closed: `__wrap_malloc`, `enableMallocWrapper`, `mallinfo`, `memAllocPtr`,
+`memAllocSize`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memInit__FPvi`,
+`memScrambleFree__Fv`, `memSetMark__Fi`. Opened: `_impure_ptr`,
+`_mallinfo_r`, `malloc`. The notes also listed the first-pass view names and
+the three prefix aliases as closed. Those views were already defined, and
+the three aliases were not published. 722 function bodies, 844 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -992,6 +1021,14 @@ private.
 `norrath_actors_b_view_4844a0` and does not alias it. Decide whether they
 are one symbol.
 
+`enableMallocWrapper` is now an alias of the selected
+`norrath_enable_malloc_wrapper_byte_view`. `memAlloc__FiPc`, `memFree__FPv`,
+and `blockAllocInit__Fv` were authored as aliases of `norrath_mem_alloc`,
+`norrath_mem_free`, and `norrath_block_alloc_init` on sources inside the
+frozen prefix. Those lines were not kept. The three original names stay
+unresolved. Decide whether a later unit outside that prefix should publish
+them.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1003,7 +1040,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, and the cd-archive second pass. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, and the memory second pass. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1043,3 +1080,4 @@ and no startup stage has executed.
 - 2026-10-11 17:26 CDT — `agents/sif-keyboard` — 865 unresolved imports
 - 2026-10-11 17:28 CDT — `agents/actors-a` — 882 unresolved imports
 - 2026-10-11 17:31 CDT — `agents/cd-archive` — 886 unresolved imports
+- 2026-10-11 17:38 CDT — `agents/memory` — 879 unresolved imports

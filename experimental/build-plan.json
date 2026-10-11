@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 835,
+  "default_authored_inputs": 844,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1232,12 +1232,21 @@
     "sources/megatile-specialparse/specialparse.hpp": "6e98207c17962c429d34aa9e7a0c5cca9a0986e440a00173839141b0f13272bf",
     "sources/megatile-tables/tables.cpp": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
     "sources/megatile-tables/tables.hpp": "f1f29335a879b25f7016f918825b41953ed92d7cb0e78079275eafa2cd45f925",
+    "sources/memory-alloc-pointer/alloc_pointer.cpp": "286e14926ec596ed5429d3cef1a658034e9f1651816c5ffd688eb885d46c93d6",
+    "sources/memory-alloc-size/alloc_size.cpp": "b7f86aeb6130ff51d194de3effaa5e961feb3bd87bee47609996b0a5e11b8646",
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
+    "sources/memory-clear-mark/mem_clear_mark.cpp": "420d79a22da4a74a03626e5375c0295ad607efc307ff844f7aa8199ddfa48e6f",
+    "sources/memory-delete-marked/mem_delete_marked.cpp": "0b55c13d0bfb9e2b59a6d3fd5923ecec75c2788106785e156a7ffdf724e50516",
     "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+    "sources/memory-mallinfo/mallinfo.cpp": "7419c00356c3d742ac23769d2c7053194d4a3929570cda0273e14bcf7153718a",
     "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
     "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+    "sources/memory-mem-init/mem_init.cpp": "934c88a2097bfd51cbe3807395d530b2b26e567234f01182bcd158ae4dcaeaa7",
     "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
-    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/memory-scramble-free/mem_scramble_free.cpp": "4ec81437a4173a9f26a7aa19a67e402efff1ee6239bfb37c7c056c8225522974",
+    "sources/memory-set-mark/mem_set_mark.cpp": "9a61ab6480fe75b82a6638db87d22aeeb7fc41995bf4ba3c937aedd2253b1ab8",
+    "sources/memory-wrap-malloc/wrap_malloc.cpp": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
+    "sources/memory-wrapper-byte/wrapper_byte.cpp": "b68e09b9f3b5d9234d3cd529e31fa711d86a6b6981e910a088b58078a1ce15e9",
     "sources/natives-a-activate-shop/activate_shop.cpp": "03aceb5f5f34b7efc451543dd1b6682b008ab0e9292a58b9d1a777a635f532b0",
     "sources/natives-a-active-player-is-dwarf/active_player_is_dwarf.cpp": "30409c19fc8f0ecbe2234bbd04eded98a05b7b4b7a1a40a2a40084fd35daf396",
     "sources/natives-a-active-player-is-elf/active_player_is_elf.cpp": "80cd7b30b69c5ff00decaa0a17a4f6f1bcb8a1c6e7a09079df4188d46ca2060d",
@@ -6519,7 +6528,7 @@
       "kind": "independently_authored_source",
       "object_name": "wrapper_byte.o",
       "profile": "authored_cpp",
-      "sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+      "sha256": "b68e09b9f3b5d9234d3cd529e31fa711d86a6b6981e910a088b58078a1ce15e9",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
     },
     {
@@ -11132,6 +11141,87 @@
       "profile": "authored_cpp",
       "sha256": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
       "source": "sources/cd-archive-lump-state/lump_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 837,
+      "kind": "independently_authored_source",
+      "object_name": "alloc_pointer.o",
+      "profile": "authored_cpp",
+      "sha256": "286e14926ec596ed5429d3cef1a658034e9f1651816c5ffd688eb885d46c93d6",
+      "source": "sources/memory-alloc-pointer/alloc_pointer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 838,
+      "kind": "independently_authored_source",
+      "object_name": "alloc_size.o",
+      "profile": "authored_cpp",
+      "sha256": "b7f86aeb6130ff51d194de3effaa5e961feb3bd87bee47609996b0a5e11b8646",
+      "source": "sources/memory-alloc-size/alloc_size.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 839,
+      "kind": "independently_authored_source",
+      "object_name": "mem_clear_mark.o",
+      "profile": "authored_cpp",
+      "sha256": "420d79a22da4a74a03626e5375c0295ad607efc307ff844f7aa8199ddfa48e6f",
+      "source": "sources/memory-clear-mark/mem_clear_mark.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 840,
+      "kind": "independently_authored_source",
+      "object_name": "mem_delete_marked.o",
+      "profile": "authored_cpp",
+      "sha256": "0b55c13d0bfb9e2b59a6d3fd5923ecec75c2788106785e156a7ffdf724e50516",
+      "source": "sources/memory-delete-marked/mem_delete_marked.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 841,
+      "kind": "independently_authored_source",
+      "object_name": "mallinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "7419c00356c3d742ac23769d2c7053194d4a3929570cda0273e14bcf7153718a",
+      "source": "sources/memory-mallinfo/mallinfo.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 842,
+      "kind": "independently_authored_source",
+      "object_name": "mem_init.o",
+      "profile": "authored_cpp",
+      "sha256": "934c88a2097bfd51cbe3807395d530b2b26e567234f01182bcd158ae4dcaeaa7",
+      "source": "sources/memory-mem-init/mem_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 843,
+      "kind": "independently_authored_source",
+      "object_name": "mem_scramble_free.o",
+      "profile": "authored_cpp",
+      "sha256": "4ec81437a4173a9f26a7aa19a67e402efff1ee6239bfb37c7c056c8225522974",
+      "source": "sources/memory-scramble-free/mem_scramble_free.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 844,
+      "kind": "independently_authored_source",
+      "object_name": "mem_set_mark.o",
+      "profile": "authored_cpp",
+      "sha256": "9a61ab6480fe75b82a6638db87d22aeeb7fc41995bf4ba3c937aedd2253b1ab8",
+      "source": "sources/memory-set-mark/mem_set_mark.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 845,
+      "kind": "independently_authored_source",
+      "object_name": "wrap_malloc.o",
+      "profile": "authored_cpp",
+      "sha256": "03138602207ff4e1abc59d3ff9e3fbe68293c74b08ef46c783dc36de241c1af1",
+      "source": "sources/memory-wrap-malloc/wrap_malloc.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11231,7 +11321,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "4ce170745aea3bf16fbead08fb46f3cac686bc956954e01cc45e3f7c1b293736",
+  "snapshot_sha256": "0327d75387e23169522f9994fbf25250492467290bd3b57bebf1a0f5bebd3578",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

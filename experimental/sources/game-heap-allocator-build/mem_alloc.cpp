@@ -87,7 +87,3 @@ extern "C" void* norrath_mem_alloc(int requested_bytes, char* allocation_name) {
     write_word(header + 24u, caller);
     return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(payload));
 }
-// memAlloc__FiPc is this body: 0x00144368, 492 bytes in the pinned image.
-// The check at line 502 and the failure path are the same function.
-extern "C" void* memAlloc__FiPc(int requested_bytes, char* allocation_name)
-    __attribute__((alias("norrath_mem_alloc")));
