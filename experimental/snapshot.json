@@ -6575,6 +6575,353 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/engine-init-startup/engine_init.cpp"
+    },
+    {
+      "input_order": 468,
+      "component": "world-state-copy-object",
+      "object_name": "ws_list_copy_object.o",
+      "private_object_sha256": "5ca1aee9537191f3780299e145b3b65e0d53e95995fd778d5b37c74723934533",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-copy-object/storage.cpp"
+    },
+    {
+      "input_order": 469,
+      "component": "world-state-core-loading",
+      "object_name": "ws_core_loading.o",
+      "private_object_sha256": "a79be795812a2de648b9d026ab233c09f35084ea65568eb6776a7a4be3d58fe1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-core-loading/storage.cpp"
+    },
+    {
+      "input_order": 470,
+      "component": "world-state-cut-mode",
+      "object_name": "ws_cut_mode.o",
+      "private_object_sha256": "0dbd31da7a2af8e833fdbc88c10b0a3309f25cfb1f118ca38eedc9559a803844",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-cut-mode/storage.cpp"
+    },
+    {
+      "input_order": 471,
+      "component": "world-state-dialog-active",
+      "object_name": "ws_dialog_active.o",
+      "private_object_sha256": "db3b7b707b8b3e5e3fe8275579ab9a5498ba80bf9d0ce7e21ff7e3cf505d1032",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-dialog-active/storage.cpp"
+    },
+    {
+      "input_order": 472,
+      "component": "world-state-ignore-flags",
+      "object_name": "ws_grid_ignore_flags.o",
+      "private_object_sha256": "0022395cf2823336694cc692559a3749af1c2581b26c5c1dfa49a654231f67b3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-ignore-flags/storage.cpp"
+    },
+    {
+      "input_order": 473,
+      "component": "world-state-loader-active-buffer",
+      "object_name": "ws_loader_active_buffer.o",
+      "private_object_sha256": "f946fa844ee5a9dcd9824a25b5a49423968b12927aad51504a0c2b7c95cfa824",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-active-buffer/storage.cpp"
+    },
+    {
+      "input_order": 474,
+      "component": "world-state-loader-active-marker",
+      "object_name": "ws_loader_active_marker.o",
+      "private_object_sha256": "5d099191881b0aa8d112c9f1309217958ae13e6be35508b02ae17968f40f1d84",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-active-marker/storage.cpp"
+    },
+    {
+      "input_order": 475,
+      "component": "world-state-loader-active-name",
+      "object_name": "ws_loader_active_name.o",
+      "private_object_sha256": "f9b4f26bfcd047cc4139d8b81d9509a19cc63f0e18173eda09ba7ddb5837ee0b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-active-name/storage.cpp"
+    },
+    {
+      "input_order": 476,
+      "component": "world-state-loader-active-size",
+      "object_name": "ws_loader_active_size.o",
+      "private_object_sha256": "6075d695d8bc41b449d5cc8d12af05ad1718ea013a61776e008d9fe726000c58",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-active-size/storage.cpp"
+    },
+    {
+      "input_order": 477,
+      "component": "world-state-loader-context-a",
+      "object_name": "ws_loader_context_a.o",
+      "private_object_sha256": "ee95865ea44877ced34a9bfb33c7af40e28ec544fc2aa5f5123e730d7f778df6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-context-a/storage.cpp"
+    },
+    {
+      "input_order": 478,
+      "component": "world-state-loader-context-b",
+      "object_name": "ws_loader_context_b.o",
+      "private_object_sha256": "2176f6f65779474720a49d7ed81559d350cc5dd52377fb28d3c265e4ee8727ae",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-context-b/storage.cpp"
+    },
+    {
+      "input_order": 479,
+      "component": "world-state-loader-current-name",
+      "object_name": "ws_loader_current_name.o",
+      "private_object_sha256": "c2e5961640ccf2440df911406059ae28b0d925912dcae2a721e5a7f96b1e141b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-current-name/storage.cpp"
+    },
+    {
+      "input_order": 480,
+      "component": "world-state-loader-missing-format",
+      "object_name": "ws_loader_missing_format.o",
+      "private_object_sha256": "8b90e2669f475821120ff69cb3bd4c7c52260ca00d649886a232429272059687",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-missing-format/storage.cpp"
+    },
+    {
+      "input_order": 481,
+      "component": "world-state-loader-name-a",
+      "object_name": "ws_loader_name_a.o",
+      "private_object_sha256": "ee81537247010b2bb651560e10710656e98352317a8272055143ef38f80feb9f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-name-a/storage.cpp"
+    },
+    {
+      "input_order": 482,
+      "component": "world-state-loader-name-b",
+      "object_name": "ws_loader_name_b.o",
+      "private_object_sha256": "d94b22f8020b6532101330b0db07297beaa80bb877476bae52ff3ba35273aae3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-name-b/storage.cpp"
+    },
+    {
+      "input_order": 483,
+      "component": "world-state-loader-special-flag",
+      "object_name": "ws_loader_special_flag.o",
+      "private_object_sha256": "fb3427706d6459d7c8cc6978c33c2768e22f3058578f55d12a5a4fb4032ec7cb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-loader-special-flag/storage.cpp"
+    },
+    {
+      "input_order": 484,
+      "component": "world-state-restore-broadcast-head",
+      "object_name": "ws_restore_broadcast_head.o",
+      "private_object_sha256": "9bbb40f3c64b849e454f46a259dd15ca8f765ff73be5d9b536b46478bf023c6a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-restore-broadcast-head/storage.cpp"
+    },
+    {
+      "input_order": 485,
+      "component": "world-state-restore-defaults",
+      "object_name": "ws_restore_defaults.o",
+      "private_object_sha256": "a3178be37ad3189643052231b4999f535b03e580528dc9c0d802e9eaf9bf2cfb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-restore-defaults/storage.cpp"
+    },
+    {
+      "input_order": 486,
+      "component": "world-state-restore-filter",
+      "object_name": "ws_restore_filter.o",
+      "private_object_sha256": "2d2be5f20677a6070a01a9ea76e1b2c288eca6ac6f7a7cd35f95f0fbf1c71736",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-restore-filter/storage.cpp"
+    },
+    {
+      "input_order": 487,
+      "component": "world-state-restore-string-base",
+      "object_name": "ws_restore_string_base.o",
+      "private_object_sha256": "0a5452a7f561eb63f1ab8265f9ec074225099bf754e843081042a22acb698a55",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-restore-string-base/storage.cpp"
+    },
+    {
+      "input_order": 488,
+      "component": "world-state-route-add-node",
+      "object_name": "ws_route_add_node.o",
+      "private_object_sha256": "49076e11612640a6ae03f2f10043646da1bd3c0cb61aa8e851d080f95c493014",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_add_node",
+          "compiled_body_bytes": 1048
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-add-node/route_add_node.cpp"
+    },
+    {
+      "input_order": 489,
+      "component": "world-state-route-cache",
+      "object_name": "ws_route_cache.o",
+      "private_object_sha256": "cb8755d9059b5dd03b2c627d174b7137bcbab8dd8100824c1c771731855e1d22",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-cache/storage.cpp"
+    },
+    {
+      "input_order": 490,
+      "component": "world-state-route-draw-frame",
+      "object_name": "ws_route_draw_frame.o",
+      "private_object_sha256": "bef30cdbac5b4ea44d20b6e26e1f9332f2910ff07fdefe4ae0fb8ffaf0922508",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-draw-frame/storage.cpp"
+    },
+    {
+      "input_order": 491,
+      "component": "world-state-route-free-root",
+      "object_name": "ws_route_free_root.o",
+      "private_object_sha256": "59b4473c2b76d2d2d5fa6df1af46a577c7326ec32a3897579663eb9d196f0f00",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-free-root/storage.cpp"
+    },
+    {
+      "input_order": 492,
+      "component": "world-state-route-node-used",
+      "object_name": "ws_route_node_used.o",
+      "private_object_sha256": "4a64fc2cbf21296fdd6f5c62f8cb5777d2fae084676e8a733d3ae81cdfa2b805",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-node-used/storage.cpp"
+    },
+    {
+      "input_order": 493,
+      "component": "world-state-route-nodes",
+      "object_name": "ws_route_nodes.o",
+      "private_object_sha256": "52ce3848f94bf8099e95426f29aa04a2cfa0530e06701c7b0bc99aa10a5e0b48",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-nodes/storage.cpp"
+    },
+    {
+      "input_order": 494,
+      "component": "world-state-route-world",
+      "object_name": "ws_route_world.o",
+      "private_object_sha256": "27c938b21153de5888482ce1e615db5a6ae212504c9f85031f131fae7eedf45d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-route-world/storage.cpp"
+    },
+    {
+      "input_order": 495,
+      "component": "world-state-vertical-extent",
+      "object_name": "ws_grid_vertical_extent.o",
+      "private_object_sha256": "9dadcee9630ede137c4b01cc4811f46409c918a7cf67745e1fc977335ab76a1c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-vertical-extent/storage.cpp"
+    },
+    {
+      "input_order": 496,
+      "component": "world-state-water-alpha",
+      "object_name": "ws_water_alpha.o",
+      "private_object_sha256": "a4b1b61f1ec4ea9026ca61c7d7fba8be3c5ce4cde6241029734c64fbd572a549",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-alpha/word.cpp"
+    },
+    {
+      "input_order": 497,
+      "component": "world-state-water-alpha2",
+      "object_name": "ws_water_alpha2.o",
+      "private_object_sha256": "41f8bf23d8ca5b4fd203d303dd2ee4efede75a2d04f68fa19a4ee97aefe75be4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-alpha2/word.cpp"
+    },
+    {
+      "input_order": 498,
+      "component": "world-state-water-bump-amount",
+      "object_name": "ws_water_bump_amount.o",
+      "private_object_sha256": "93db28264d47d06f9c82c6dd64143eaebda4b47e2d2e002488e4156d46d9b806",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-bump-amount/word.cpp"
+    },
+    {
+      "input_order": 499,
+      "component": "world-state-water-bump-radius",
+      "object_name": "ws_water_bump_radius.o",
+      "private_object_sha256": "2f14d7a4cf1af77aed99fc7204bb3efb1535f56dc348e5943823ed20fe0bb303",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-bump-radius/word.cpp"
+    },
+    {
+      "input_order": 500,
+      "component": "world-state-water-bump-speed",
+      "object_name": "ws_water_bump_speed.o",
+      "private_object_sha256": "b8379d8d185d69623cce7466809f05980b9f9bd68f9aba8ac4a50d8acd29459f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-bump-speed/water_bump_speed.cpp"
+    },
+    {
+      "input_order": 501,
+      "component": "world-state-water-bump-timer",
+      "object_name": "ws_water_bump_timer.o",
+      "private_object_sha256": "2587f84e9cbe57a6a4b96bf0251fab41deff3cd627ba48f42d6a35add39ea41a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-bump-timer/word.cpp"
+    },
+    {
+      "input_order": 502,
+      "component": "world-state-water-color",
+      "object_name": "ws_water_color.o",
+      "private_object_sha256": "e7c55280d4032f32d912d4de62bc86f07bc854a7585e7df4706c4e94d0412214",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-color/word.cpp"
+    },
+    {
+      "input_order": 503,
+      "component": "world-state-water-color2",
+      "object_name": "ws_water_color2.o",
+      "private_object_sha256": "68b64ab238c4f9fef9a5d886515d539ef9cf29516a8b3d7137bfd189e8cb89d6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-color2/word.cpp"
+    },
+    {
+      "input_order": 504,
+      "component": "world-state-water-wavyness",
+      "object_name": "ws_water_wavyness.o",
+      "private_object_sha256": "f67ee0aa984c2946822824475eb9b25c7f649adfc2dd3edbad1e26504223d655",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-wavyness/word.cpp"
+    },
+    {
+      "input_order": 505,
+      "component": "world-state-water-wavyness2",
+      "object_name": "ws_water_wavyness2.o",
+      "private_object_sha256": "311fb26edb9a65f0ae4bd4ad105e09d765195a6903607c6b83ab3c071189052f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/world-state-water-wavyness2/word.cpp"
     }
   ],
   "drafts": [
@@ -7834,7 +8181,121 @@
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
-    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
+    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
+    "sources/world-state-copy-object/storage.cpp": "373eabe186793f655c349949197db6d5d45c4a0015d30d7e742c99150b46f593",
+    "sources/world-state-copy-object/storage.hpp": "4dce002754cd378038c8aa8ccc7c0c76025779c040fae26833c46913714a4dbb",
+    "sources/world-state-copy-object/storage_contract.cpp": "f6a5a8a7a4bd38ed542aef77800905904071f0faa49c880eff4142403272ecb6",
+    "sources/world-state-core-loading/storage.cpp": "e71d66289391819e861aa9e14f43330a39505a2ac1e8febf9a00eef94202c374",
+    "sources/world-state-core-loading/storage.hpp": "f333bc5cdbb968eb5809d04d88e66d4765adf75315dbc144e345eae954d9ee0b",
+    "sources/world-state-core-loading/storage_contract.cpp": "fa5879e93eae2358fa9cccb1918e0564dd6dae5a3fde7b6549c0fd61a175b79a",
+    "sources/world-state-cut-mode/storage.cpp": "e54618541c5df8ee21f5f25eb7a6935035a623769960ef67644b5deebd55c737",
+    "sources/world-state-cut-mode/storage.hpp": "5477e92267512696c06e039ba45a5c1acc37411b7113d81bcc1b48e0f04a659e",
+    "sources/world-state-cut-mode/storage_contract.cpp": "268d99795d4839714005f83d2f6c0830a8c27484e75d7ed292e8d6aa7ff99864",
+    "sources/world-state-dialog-active/storage.cpp": "189f16a0d37cc43b9adc3e8c7b5ad37f79566769565fe962846f4a903158eb40",
+    "sources/world-state-dialog-active/storage.hpp": "e869eee5d316aabcdf7289c73fdf406461a811ee5466f180e6d4557f5fcb8fbb",
+    "sources/world-state-dialog-active/storage_contract.cpp": "edeaa1072abbbfb2f448c403d60138d303c54b1a6d2735a8a3a35a1edd61fec3",
+    "sources/world-state-ignore-flags/storage.cpp": "3f2b2d4bb42c7ccb1b5f2b5153fef8432698f95f2ccead552ed702f05573ff60",
+    "sources/world-state-ignore-flags/storage.hpp": "9a68f5928a2e29dd5914c898cd51612be9592754eb53ff9c2b19ce8db4b7c13e",
+    "sources/world-state-ignore-flags/storage_contract.cpp": "a99096197a48724be92841c11f84ebb2a2cecea8ed3444fc193aec2e35f68234",
+    "sources/world-state-loader-active-buffer/storage.cpp": "a2c0c8c3f97b897ce68de31d0614a26c34307e67d046c0aac50bb1a18afb4a9f",
+    "sources/world-state-loader-active-buffer/storage.hpp": "e07d86390c5cf24b22c128701803a29b13142573d288a4c00b6497132f47e451",
+    "sources/world-state-loader-active-buffer/storage_contract.cpp": "358013b9344f47d6afa9c9eadbb002c3124efd84ffdff71fbb67a08fc1dc0e73",
+    "sources/world-state-loader-active-marker/storage.cpp": "feb19203f6c0c827bf0ba639e861e9b894af54c36ee54a83202a1df65dd98377",
+    "sources/world-state-loader-active-marker/storage.hpp": "fe193c73eab21c333a5cae773f806c3e689b91ca6333f509113ae99717a91a38",
+    "sources/world-state-loader-active-marker/storage_contract.cpp": "ed30059851ece8b234c8992ec59da6e9c3834c691729ad1128aadc94b78769bd",
+    "sources/world-state-loader-active-name/storage.cpp": "d7f7b6eb78e03d4aa64c8a477f1154536b50cc595f7ff6c4e2bdb82aae5d8a84",
+    "sources/world-state-loader-active-name/storage.hpp": "c64b69d3552a6000b994ebc35f9a8a0198967c8263dd16b5f539a2fcad5e7966",
+    "sources/world-state-loader-active-name/storage_contract.cpp": "75d32078af772e5cfbdd71cc42752a9b48d83e2e35801dbdf4dbf4c5bb5b6a6f",
+    "sources/world-state-loader-active-size/storage.cpp": "c91d64342bd8c425bfb85a147aef17ee90474127d3573a0a108168653cc79157",
+    "sources/world-state-loader-active-size/storage.hpp": "7093041c7b1e998f686f28939c23ef4897bdaa96c0d7be400b285b114a4a33bf",
+    "sources/world-state-loader-active-size/storage_contract.cpp": "f6e28a39bcdfecd10a0d0969a918a323107bc06086905cd40021200b75b93132",
+    "sources/world-state-loader-context-a/storage.cpp": "504ec9ff41c9865c242eb01cd4ef4d48a58d615ed57bd0e0e49ea898bf96e99c",
+    "sources/world-state-loader-context-a/storage.hpp": "c798fb0881f7eb489adc0c0f5f3bd40bb0dd61ef8d9903eaf8209d2c0678fdef",
+    "sources/world-state-loader-context-a/storage_contract.cpp": "6167447ad9037cc914afe85532ddb066b1a78de840b72588a6a2b4a1fe699a01",
+    "sources/world-state-loader-context-b/storage.cpp": "ec22b225e9e1c0bc727cedffc11dc49d72e726c8827ec45a46d2ff01ac6381a7",
+    "sources/world-state-loader-context-b/storage.hpp": "cb22d4ff618df63f7a8b4eeeb8c6a9d6e51fa5f243171d0c4f82cd3c5724350d",
+    "sources/world-state-loader-context-b/storage_contract.cpp": "370120634d7daa722595009fc19f927cfab0752a3b4531b5efa72d298411f499",
+    "sources/world-state-loader-current-name/storage.cpp": "67aa0be01d692e9d019d91b126c2c29128fb342fb182cd1f416e4f146c831803",
+    "sources/world-state-loader-current-name/storage.hpp": "3f55158f9ecacb16b781b41205b716e2b6b11a7268e0dafcc71a3ca6c06468b6",
+    "sources/world-state-loader-current-name/storage_contract.cpp": "59fd7f9cb559d7070a53ce8f7c6acdf6f0bfcd503264a20f8dc0d2f2bd4b403a",
+    "sources/world-state-loader-missing-format/storage.cpp": "168b0b55fd2c0fd0f448659897ecceace4a9232b03c9e0fa2cbc4a592de0a902",
+    "sources/world-state-loader-missing-format/storage.hpp": "653bdc6903ec7bd17d9cebaded0df93b6bc5a4ef9b7cffcc67f6a4b3707f933c",
+    "sources/world-state-loader-missing-format/storage_contract.cpp": "ea8a6c41ca231aed313944c808dcd33abd83ba608177b557fd04e889510cccfd",
+    "sources/world-state-loader-name-a/storage.cpp": "697b26b6490446bf59e2146ae3cb7a65b20cfb8d1341649fef4eedaed0741e36",
+    "sources/world-state-loader-name-a/storage.hpp": "178f16376385a2afc71818e829362defa75c880f50059a362cbbb94709172873",
+    "sources/world-state-loader-name-a/storage_contract.cpp": "e3c0f9536e3bac51e637a519e5a9535bd23f510ea41ba4be2ff2c689c6563fcc",
+    "sources/world-state-loader-name-b/storage.cpp": "a05017d722ef0045e776104d9b547644d767ab82310e0091ddeffc8ec68b5ba2",
+    "sources/world-state-loader-name-b/storage.hpp": "0b2f30800a2220c0b9dbf80dec1e5252be400f17ecf0d95dbe8ab6cd29b3e6e9",
+    "sources/world-state-loader-name-b/storage_contract.cpp": "9b6ca349c1a69857d8f1447bcd8c5343c3517efcea8c52ec8f09bb3c05bcfd68",
+    "sources/world-state-loader-special-flag/storage.cpp": "3e1872a6dccad8b58b360494bd7939c33ef4bdba6f3d2efc6557e27321f10b0f",
+    "sources/world-state-loader-special-flag/storage.hpp": "43a757846f4e94b16969590239ba0790160a2c9b8ed7a5440bb35a938567170a",
+    "sources/world-state-loader-special-flag/storage_contract.cpp": "8697202be05cd4733f3b0e531102bc4c69487fec557d7e6f4c5a513d108e86c6",
+    "sources/world-state-restore-broadcast-head/storage.cpp": "a3958c83fc43bd2cd2fe2af058c792875ed952fa8162e5d7c18d60060ec692ff",
+    "sources/world-state-restore-broadcast-head/storage.hpp": "2c08fb4c34aedf9176131bfa8e747199ce3e8f298b203bad223c55c6333f61ab",
+    "sources/world-state-restore-broadcast-head/storage_contract.cpp": "85f29d010c369f481328ed5b50798812d2dd5c3cbe3bc6cfb6b42f0d6c44ca7a",
+    "sources/world-state-restore-defaults/storage.cpp": "92369dd4e13f9264167f4a43907e2eb4d877df4d649dfbb327adbbef7d895084",
+    "sources/world-state-restore-defaults/storage.hpp": "01037d16c3b9380681f437935c2708b41da6d9285e530cc05c241f5e312ae12d",
+    "sources/world-state-restore-defaults/storage_contract.cpp": "5457c360bf9b75abc4f1238511269724d421cde591a13456d3503b857096d6f7",
+    "sources/world-state-restore-filter/storage.cpp": "ac7edb75791cbe1bc4d54da5aa2e391cc4bef4765cbc373fb2b27c713a2278bb",
+    "sources/world-state-restore-filter/storage.hpp": "58ba536be2aa2b8506265c37b8073cd55ddeda6d60eb6a10e4bc06671aac048b",
+    "sources/world-state-restore-filter/storage_contract.cpp": "1c101d0d0f6dcb79923ff27f6b74abb12e8a3fd83384f30b2b9eb4423acde286",
+    "sources/world-state-restore-string-base/storage.cpp": "b54b7efaab7da38df088d90e40d023738714bcd68844aa67fb6750411dde0d90",
+    "sources/world-state-restore-string-base/storage.hpp": "6888687e05dac0880ae274dbd30ac3c506bddf9e9e14397630dd8c8bcdd05cea",
+    "sources/world-state-restore-string-base/storage_contract.cpp": "c0df335eb836d4aa47a9e391b88e1c6399d9cbdd662ceed79ea26904fadf094b",
+    "sources/world-state-route-add-node/route_add_node.cpp": "4300a59ce76dc11188710ff06d300e5a6d62d66be6e2aca1476ef7f912f59707",
+    "sources/world-state-route-add-node/route_add_node.hpp": "3c1e67a7ec0dc6824fe0a12635938304877522fe941ba87701734b4cf0b57c02",
+    "sources/world-state-route-add-node/route_add_node_contract.cpp": "f180564444d05e950acc93563a2a36e27175ad5d7b68c36f0f137557eb7cace8",
+    "sources/world-state-route-cache/storage.cpp": "aba3e52a3faa98c7bfa7c17d6df045c9245889d3cb78526e79bd4d47a1007362",
+    "sources/world-state-route-cache/storage.hpp": "8f93dfc57db11ea1cf02077c1c923fcff1dde04e94d52c53b04405b5abdc911b",
+    "sources/world-state-route-cache/storage_contract.cpp": "d1c269da9a245da2782021b6b68e6a0395535819b9f3089c33d1a7f875c483ac",
+    "sources/world-state-route-draw-frame/storage.cpp": "e003230effa3cf442909e89fce352ee6ef792506014dd657599af3d48ac70735",
+    "sources/world-state-route-draw-frame/storage.hpp": "5430647e8879b62a947ebf52d1eeb720e9a83d16a1b1a0490abec335fdc93131",
+    "sources/world-state-route-draw-frame/storage_contract.cpp": "dc8530afefd47313947e50249e0cb32cc8fde8ff8c2919b73019fbd818651329",
+    "sources/world-state-route-free-root/storage.cpp": "8f0c452ac54ac291a8524f0d125ec16e935687d686165fdc0c37ab9c2685c1da",
+    "sources/world-state-route-free-root/storage.hpp": "e84adf2b1dc55fc6d8accdb53ee87b07d09e4159b8f8ff960a6b5d26728872c1",
+    "sources/world-state-route-free-root/storage_contract.cpp": "656db467a7e81f640629c90d04093b0ac7fbfa80b0f0cd002d8fa8604a9c4128",
+    "sources/world-state-route-node-used/storage.cpp": "1a3cba86d1d4e7e2c13d2ba67add360d99c40b6a0f28b6a518abcc5eed409fcd",
+    "sources/world-state-route-node-used/storage.hpp": "37a74594c5b2e6b3574d8a57107aa43cbe9d146d09e260c0c3d613b512ab4300",
+    "sources/world-state-route-node-used/storage_contract.cpp": "6bb1c2e3104557be7d54719901bf969ba6395ff192d6a6092ec5811f1138f12b",
+    "sources/world-state-route-nodes/storage.cpp": "b31c43e13e5b02866d88b905571a3c2a2056c9633c2c24b3cc79f324ff8e6efd",
+    "sources/world-state-route-nodes/storage.hpp": "d42358db6dbe36d6018bb7cdc7be42bd56b2fbf1b0713811f120c9a72271cc21",
+    "sources/world-state-route-nodes/storage_contract.cpp": "cfe2075b2bddeab5a71379a0963343cafe1d7a0829bad4a3c67a04a0a93ad86f",
+    "sources/world-state-route-world/storage.cpp": "c4f204f538e6a97993abe05c3db354ce4c6703e2bd5d8ba10694a47c4414b0ae",
+    "sources/world-state-route-world/storage.hpp": "696acf8fbce2b86a5e2df93c18e9eef0024c41e3e55ea6cbbf19fd769f10d1b6",
+    "sources/world-state-route-world/storage_contract.cpp": "33be9de78f56e225a652e2e2f00086d9b12a22c43272008ab3ec0bfbc933d595",
+    "sources/world-state-vertical-extent/storage.cpp": "a41807d4c042e63fe652f2ed654ad732bc0956456f3252abd04e48a6d8ec8d14",
+    "sources/world-state-vertical-extent/storage.hpp": "80d9496453a8ce21a2d5ca7a17626f81df12d2d748fb68db8c7defc81fcf811a",
+    "sources/world-state-vertical-extent/storage_contract.cpp": "2548ba2bda34e1f4b0c9c6651d65bbc7766133d7c7d3e432ced37eaee4b37754",
+    "sources/world-state-water-alpha/word.cpp": "152e94ddf439006e1ef7f5653f14fa37a7081f4e6fd838724c321bbf63689d06",
+    "sources/world-state-water-alpha/word.hpp": "fc26127fc58e3b13a97c50f0f5847b730dbfd5d30538f68a4edbb3c54bf92bcd",
+    "sources/world-state-water-alpha/word_contract.cpp": "3d8365d8f94ca04a0b011696cf87688ba9b1c1b62d1eaaf8fc0c98c274af48a8",
+    "sources/world-state-water-alpha2/word.cpp": "0913bc1478b2cd9f79b9aec4369e2b772dd5fea81d60e53e61e756351f28b544",
+    "sources/world-state-water-alpha2/word.hpp": "e37ffbdba47b33df4ff1d04df24de0873b88f281e5472740681f398b4dca5394",
+    "sources/world-state-water-alpha2/word_contract.cpp": "8df60175c999ff03b0c33584056f28a588075f319242f4943f6067a27dfe7422",
+    "sources/world-state-water-bump-amount/word.cpp": "f40625fbc1aee04c5882920586139d1975dba841a61809ca5461a2ff1482cc82",
+    "sources/world-state-water-bump-amount/word.hpp": "5546da016e2a9631c4d7e1efb3cafa50e98201dc86c36349d59c54346f581e16",
+    "sources/world-state-water-bump-amount/word_contract.cpp": "8def0766abcfb61d055fc85796088e435dddc82541bb8c56a70fc5290c6f250d",
+    "sources/world-state-water-bump-radius/word.cpp": "90271e263148082debabdb98b705e256f079b647dacec649e2ac14f3091e9905",
+    "sources/world-state-water-bump-radius/word.hpp": "028e1c53f63deadb3d6697f6decbb87322884125937cc18cc706e3d622ecaac8",
+    "sources/world-state-water-bump-radius/word_contract.cpp": "f077bfd54627cdafb189dabd7a27801055643dfb4c1b9137cffac1d1d076fcf3",
+    "sources/world-state-water-bump-speed/water_bump_speed.cpp": "3b4c8fc623a2a5ec7156a7c30f69589185a57b149580ca5288799e43ec5429ec",
+    "sources/world-state-water-bump-speed/water_bump_speed.hpp": "e871f52829b3cab8ee96991a8590442a055880c256ab5ee8dd527754beb1c40f",
+    "sources/world-state-water-bump-speed/water_bump_speed_contract.cpp": "a6cac89d9fb2c6993e01647e98c2795e1827e264f41e9382aa76f133651dae94",
+    "sources/world-state-water-bump-timer/word.cpp": "8cc6520718f630024d67d9e44406a46ac2f285a318d7d476fbab8a417479687d",
+    "sources/world-state-water-bump-timer/word.hpp": "353280f37324a1dcff8a55a122daa30e3278dbb8ea679fef951ad1d0a2f0c822",
+    "sources/world-state-water-bump-timer/word_contract.cpp": "14293d987fae05103c002cbb392986f1fb1f22305c171dd933623251b53c26c8",
+    "sources/world-state-water-color/word.cpp": "a7d2fe57ffae0a012b7fb5558ee7b6677b2848ce5f06e3c4c0255eb1ce9aa0f7",
+    "sources/world-state-water-color/word.hpp": "0dac9cabeeb28ec5681c257d8faadad1910c4c5f7446ddaeb99a13565e28a0da",
+    "sources/world-state-water-color/word_contract.cpp": "010a25cef8dbe96bd8477ee9c65d11191fe67703ca2a7bc29569da955e83e4f4",
+    "sources/world-state-water-color2/word.cpp": "82e5dc43ba495793a1be7f4883f600b5a3d2bbc8ea3f977ff9528bc8c432b113",
+    "sources/world-state-water-color2/word.hpp": "8e6f6995bc3e395ef2b818344da69ec7a8f49bd4fd3fd900ee56b88e0d149e75",
+    "sources/world-state-water-color2/word_contract.cpp": "11f3315423c9087813e0d4cbc78a8632dc1802aa9927fff2b625c67a202d21b6",
+    "sources/world-state-water-wavyness/word.cpp": "1694b4dfdd75990f7810c099b1929d8a18d165ddcc43c7c13a55bbbf484e5656",
+    "sources/world-state-water-wavyness/word.hpp": "5743f8c32f0ef28d94aa1f798138c64ed981d00599aee85b62816e34ca40abeb",
+    "sources/world-state-water-wavyness/word_contract.cpp": "a4d094a71589ca1b905a9c8483b4d2012cba719b1b17b327a070da519bf964dc",
+    "sources/world-state-water-wavyness2/word.cpp": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
+    "sources/world-state-water-wavyness2/word.hpp": "46e8099c57665987efdd116a953d9cab8d7b67f6b00824ac278df3c1bc57f4c6",
+    "sources/world-state-water-wavyness2/word_contract.cpp": "e4b65d00b7dd5750effa4ab5eeeafd25b09eeb835f3c92a551b969424955e186"
   },
   "additional_implementations": [
     {
@@ -8276,11 +8737,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 468,
-    "authored_default_inputs": 466,
+    "selected_inputs": 506,
+    "authored_default_inputs": 504,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 493,
-    "compiled_body_bytes_from_accepted_inputs": 276116,
+    "emitted_function_definitions_including_helpers": 494,
+    "compiled_body_bytes_from_accepted_inputs": 277164,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -8293,7 +8754,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 155
+    "package_selected_inputs": 193
   },
   "startup_implementations": [
     {
@@ -10818,6 +11279,467 @@
       ],
       "host_files": [
         "tools/checks/engine_init_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-copy-object/storage.cpp",
+      "source_sha256": "373eabe186793f655c349949197db6d5d45c4a0015d30d7e742c99150b46f593",
+      "object_sha256": "5ca1aee9537191f3780299e145b3b65e0d53e95995fd778d5b37c74723934533",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-copy-object/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-core-loading/storage.cpp",
+      "source_sha256": "e71d66289391819e861aa9e14f43330a39505a2ac1e8febf9a00eef94202c374",
+      "object_sha256": "a79be795812a2de648b9d026ab233c09f35084ea65568eb6776a7a4be3d58fe1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-core-loading/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-cut-mode/storage.cpp",
+      "source_sha256": "e54618541c5df8ee21f5f25eb7a6935035a623769960ef67644b5deebd55c737",
+      "object_sha256": "0dbd31da7a2af8e833fdbc88c10b0a3309f25cfb1f118ca38eedc9559a803844",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-cut-mode/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-dialog-active/storage.cpp",
+      "source_sha256": "189f16a0d37cc43b9adc3e8c7b5ad37f79566769565fe962846f4a903158eb40",
+      "object_sha256": "db3b7b707b8b3e5e3fe8275579ab9a5498ba80bf9d0ce7e21ff7e3cf505d1032",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-dialog-active/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-ignore-flags/storage.cpp",
+      "source_sha256": "3f2b2d4bb42c7ccb1b5f2b5153fef8432698f95f2ccead552ed702f05573ff60",
+      "object_sha256": "0022395cf2823336694cc692559a3749af1c2581b26c5c1dfa49a654231f67b3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-ignore-flags/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-active-buffer/storage.cpp",
+      "source_sha256": "a2c0c8c3f97b897ce68de31d0614a26c34307e67d046c0aac50bb1a18afb4a9f",
+      "object_sha256": "f946fa844ee5a9dcd9824a25b5a49423968b12927aad51504a0c2b7c95cfa824",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-active-buffer/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-active-marker/storage.cpp",
+      "source_sha256": "feb19203f6c0c827bf0ba639e861e9b894af54c36ee54a83202a1df65dd98377",
+      "object_sha256": "5d099191881b0aa8d112c9f1309217958ae13e6be35508b02ae17968f40f1d84",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-active-marker/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-active-name/storage.cpp",
+      "source_sha256": "d7f7b6eb78e03d4aa64c8a477f1154536b50cc595f7ff6c4e2bdb82aae5d8a84",
+      "object_sha256": "f9b4f26bfcd047cc4139d8b81d9509a19cc63f0e18173eda09ba7ddb5837ee0b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-active-name/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-active-size/storage.cpp",
+      "source_sha256": "c91d64342bd8c425bfb85a147aef17ee90474127d3573a0a108168653cc79157",
+      "object_sha256": "6075d695d8bc41b449d5cc8d12af05ad1718ea013a61776e008d9fe726000c58",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-active-size/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-context-a/storage.cpp",
+      "source_sha256": "504ec9ff41c9865c242eb01cd4ef4d48a58d615ed57bd0e0e49ea898bf96e99c",
+      "object_sha256": "ee95865ea44877ced34a9bfb33c7af40e28ec544fc2aa5f5123e730d7f778df6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-context-a/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-context-b/storage.cpp",
+      "source_sha256": "ec22b225e9e1c0bc727cedffc11dc49d72e726c8827ec45a46d2ff01ac6381a7",
+      "object_sha256": "2176f6f65779474720a49d7ed81559d350cc5dd52377fb28d3c265e4ee8727ae",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-context-b/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-current-name/storage.cpp",
+      "source_sha256": "67aa0be01d692e9d019d91b126c2c29128fb342fb182cd1f416e4f146c831803",
+      "object_sha256": "c2e5961640ccf2440df911406059ae28b0d925912dcae2a721e5a7f96b1e141b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-current-name/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-missing-format/storage.cpp",
+      "source_sha256": "168b0b55fd2c0fd0f448659897ecceace4a9232b03c9e0fa2cbc4a592de0a902",
+      "object_sha256": "8b90e2669f475821120ff69cb3bd4c7c52260ca00d649886a232429272059687",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-missing-format/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-name-a/storage.cpp",
+      "source_sha256": "697b26b6490446bf59e2146ae3cb7a65b20cfb8d1341649fef4eedaed0741e36",
+      "object_sha256": "ee81537247010b2bb651560e10710656e98352317a8272055143ef38f80feb9f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-name-a/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-name-b/storage.cpp",
+      "source_sha256": "a05017d722ef0045e776104d9b547644d767ab82310e0091ddeffc8ec68b5ba2",
+      "object_sha256": "d94b22f8020b6532101330b0db07297beaa80bb877476bae52ff3ba35273aae3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-name-b/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-loader-special-flag/storage.cpp",
+      "source_sha256": "3e1872a6dccad8b58b360494bd7939c33ef4bdba6f3d2efc6557e27321f10b0f",
+      "object_sha256": "fb3427706d6459d7c8cc6978c33c2768e22f3058578f55d12a5a4fb4032ec7cb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-loader-special-flag/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-restore-broadcast-head/storage.cpp",
+      "source_sha256": "a3958c83fc43bd2cd2fe2af058c792875ed952fa8162e5d7c18d60060ec692ff",
+      "object_sha256": "9bbb40f3c64b849e454f46a259dd15ca8f765ff73be5d9b536b46478bf023c6a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-restore-broadcast-head/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-restore-defaults/storage.cpp",
+      "source_sha256": "92369dd4e13f9264167f4a43907e2eb4d877df4d649dfbb327adbbef7d895084",
+      "object_sha256": "a3178be37ad3189643052231b4999f535b03e580528dc9c0d802e9eaf9bf2cfb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-restore-defaults/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-restore-filter/storage.cpp",
+      "source_sha256": "ac7edb75791cbe1bc4d54da5aa2e391cc4bef4765cbc373fb2b27c713a2278bb",
+      "object_sha256": "2d2be5f20677a6070a01a9ea76e1b2c288eca6ac6f7a7cd35f95f0fbf1c71736",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-restore-filter/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-restore-string-base/storage.cpp",
+      "source_sha256": "b54b7efaab7da38df088d90e40d023738714bcd68844aa67fb6750411dde0d90",
+      "object_sha256": "0a5452a7f561eb63f1ab8265f9ec074225099bf754e843081042a22acb698a55",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-restore-string-base/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-add-node/route_add_node.cpp",
+      "source_sha256": "4300a59ce76dc11188710ff06d300e5a6d62d66be6e2aca1476ef7f912f59707",
+      "object_sha256": "49076e11612640a6ae03f2f10043646da1bd3c0cb61aa8e851d080f95c493014",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_add_node",
+          "compiled_body_bytes": 1048
+        }
+      ],
+      "host_files": [
+        "sources/world-state-route-add-node/route_add_node_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-cache/storage.cpp",
+      "source_sha256": "aba3e52a3faa98c7bfa7c17d6df045c9245889d3cb78526e79bd4d47a1007362",
+      "object_sha256": "cb8755d9059b5dd03b2c627d174b7137bcbab8dd8100824c1c771731855e1d22",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-cache/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-draw-frame/storage.cpp",
+      "source_sha256": "e003230effa3cf442909e89fce352ee6ef792506014dd657599af3d48ac70735",
+      "object_sha256": "bef30cdbac5b4ea44d20b6e26e1f9332f2910ff07fdefe4ae0fb8ffaf0922508",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-draw-frame/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-free-root/storage.cpp",
+      "source_sha256": "8f0c452ac54ac291a8524f0d125ec16e935687d686165fdc0c37ab9c2685c1da",
+      "object_sha256": "59b4473c2b76d2d2d5fa6df1af46a577c7326ec32a3897579663eb9d196f0f00",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-free-root/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-node-used/storage.cpp",
+      "source_sha256": "1a3cba86d1d4e7e2c13d2ba67add360d99c40b6a0f28b6a518abcc5eed409fcd",
+      "object_sha256": "4a64fc2cbf21296fdd6f5c62f8cb5777d2fae084676e8a733d3ae81cdfa2b805",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-node-used/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-nodes/storage.cpp",
+      "source_sha256": "b31c43e13e5b02866d88b905571a3c2a2056c9633c2c24b3cc79f324ff8e6efd",
+      "object_sha256": "52ce3848f94bf8099e95426f29aa04a2cfa0530e06701c7b0bc99aa10a5e0b48",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-nodes/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-route-world/storage.cpp",
+      "source_sha256": "c4f204f538e6a97993abe05c3db354ce4c6703e2bd5d8ba10694a47c4414b0ae",
+      "object_sha256": "27c938b21153de5888482ce1e615db5a6ae212504c9f85031f131fae7eedf45d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-route-world/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-vertical-extent/storage.cpp",
+      "source_sha256": "a41807d4c042e63fe652f2ed654ad732bc0956456f3252abd04e48a6d8ec8d14",
+      "object_sha256": "9dadcee9630ede137c4b01cc4811f46409c918a7cf67745e1fc977335ab76a1c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-vertical-extent/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-alpha/word.cpp",
+      "source_sha256": "152e94ddf439006e1ef7f5653f14fa37a7081f4e6fd838724c321bbf63689d06",
+      "object_sha256": "a4b1b61f1ec4ea9026ca61c7d7fba8be3c5ce4cde6241029734c64fbd572a549",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-alpha/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-alpha2/word.cpp",
+      "source_sha256": "0913bc1478b2cd9f79b9aec4369e2b772dd5fea81d60e53e61e756351f28b544",
+      "object_sha256": "41f8bf23d8ca5b4fd203d303dd2ee4efede75a2d04f68fa19a4ee97aefe75be4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-alpha2/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-bump-amount/word.cpp",
+      "source_sha256": "f40625fbc1aee04c5882920586139d1975dba841a61809ca5461a2ff1482cc82",
+      "object_sha256": "93db28264d47d06f9c82c6dd64143eaebda4b47e2d2e002488e4156d46d9b806",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-bump-amount/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-bump-radius/word.cpp",
+      "source_sha256": "90271e263148082debabdb98b705e256f079b647dacec649e2ac14f3091e9905",
+      "object_sha256": "2f14d7a4cf1af77aed99fc7204bb3efb1535f56dc348e5943823ed20fe0bb303",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-bump-radius/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-bump-speed/water_bump_speed.cpp",
+      "source_sha256": "3b4c8fc623a2a5ec7156a7c30f69589185a57b149580ca5288799e43ec5429ec",
+      "object_sha256": "b8379d8d185d69623cce7466809f05980b9f9bd68f9aba8ac4a50d8acd29459f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-bump-speed/water_bump_speed_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-bump-timer/word.cpp",
+      "source_sha256": "8cc6520718f630024d67d9e44406a46ac2f285a318d7d476fbab8a417479687d",
+      "object_sha256": "2587f84e9cbe57a6a4b96bf0251fab41deff3cd627ba48f42d6a35add39ea41a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-bump-timer/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-color/word.cpp",
+      "source_sha256": "a7d2fe57ffae0a012b7fb5558ee7b6677b2848ce5f06e3c4c0255eb1ce9aa0f7",
+      "object_sha256": "e7c55280d4032f32d912d4de62bc86f07bc854a7585e7df4706c4e94d0412214",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-color/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-color2/word.cpp",
+      "source_sha256": "82e5dc43ba495793a1be7f4883f600b5a3d2bbc8ea3f977ff9528bc8c432b113",
+      "object_sha256": "68b64ab238c4f9fef9a5d886515d539ef9cf29516a8b3d7137bfd189e8cb89d6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-color2/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-wavyness/word.cpp",
+      "source_sha256": "1694b4dfdd75990f7810c099b1929d8a18d165ddcc43c7c13a55bbbf484e5656",
+      "object_sha256": "f67ee0aa984c2946822824475eb9b25c7f649adfc2dd3edbad1e26504223d655",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-wavyness/word_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "world-state",
+      "source": "sources/world-state-water-wavyness2/word.cpp",
+      "source_sha256": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
+      "object_sha256": "311fb26edb9a65f0ae4bd4ad105e09d765195a6903607c6b83ab3c071189052f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/world-state-water-wavyness2/word_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

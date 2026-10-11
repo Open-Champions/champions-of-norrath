@@ -412,6 +412,29 @@ DMA calls, and `vblankCount`, `vblankField`, `vblankSemaphore`, and
 491 function bodies, 466 authored inputs, zero COMMON. 214 tool tests passed.
 No EE startup stage ran.
 
+## agents/world-state
+
+All 38 units have a host contract that returns non-zero when the initial
+bytes or the route allocation and reclaim path are wrong. All 38 passed.
+No game binary or disassembly listing was committed. The route body compiles
+to 1048 bytes; the notes say the original body is 572 bytes, so this is not
+an original-byte match. Notes that mark an ELF size of zero as inferred stay
+labeled that way.
+
+| | |
+|---|---|
+| Before | 789 |
+| After | 756 |
+| Closed | 34 |
+| Opened | 1 |
+
+The notes list 38 defined names. All 38 are defined. Four were not previous
+imports, so they do not change the count: `norrath_route_nodes_bytes`,
+`norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, and
+`norrath_route_free_root_bytes`. Opened: `norrath_route_unroll_vnode`.
+`norrath_world_find_height` was already defined. 492 function bodies, 504
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -455,17 +478,30 @@ were not selected. Decide whether a second definition is wanted.
 `norrath_archive_vblank_semaphore_view` as separate objects. Decide whether
 each pair is one symbol.
 
+`engineCurrentLevelName` is still an import from `engineInit`. world-state
+defines `norrath_loader_current_name_view` for that original name and does
+not alias it. Decide whether they are one symbol.
+
+`norrath_restore_broadcast_mask_word` is still unresolved. world-state defines
+that address once, as `norrath_grid_ignore_flags_view`, and does not emit a
+second object. The plan rejects symbol aliases. Decide whether the mask name
+should be the view.
+
+`norrath_loader_special_flag_view` is defined for original `noNewVags`.
+cd-archive already defines `norrath_archive_no_new_vags_view`. Decide whether
+those two views are one symbol.
+
 ## Disagreements
 
-The two items under Needs a decision are the only symbol disagreements among
-the packages selected so far. No symbol in those packages was defined twice.
+The symbol disagreements are the items under Needs a decision. No selected
+symbol was defined twice.
 
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-and engine-init. `engineInit__Ff` and `_engineCheckStack__FPCci` are selected
-and have not run. The held AMX draft remains uncompiled. The three unselected
+engine-init, and world-state. `engineInit__Ff`, `_engineCheckStack__FPCci`,
+and `norrath_route_add_node` are selected and have not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units are authored and not in the link.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
@@ -482,3 +518,4 @@ and no startup stage has executed.
 - 2026-10-11 16:34 CDT — `agents/items-player` — 692 unresolved imports
 - 2026-10-11 16:37 CDT — `agents/save-net-anim` — 738 unresolved imports
 - 2026-10-11 16:39 CDT — `agents/engine-init` — 789 unresolved imports
+- 2026-10-11 16:44 CDT — `agents/world-state` — 756 unresolved imports
