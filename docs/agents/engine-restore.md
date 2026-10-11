@@ -133,9 +133,62 @@ Source `sources/engine-restore-engine-restore/engine_restore.cpp`. SHA-256
 `158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4`.
 Do not plan `host_contract.cpp`.
 
+## srs_main
+
+Observed `srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i` at 0x0116ca68 is 1172 bytes
+and returns an int. It is the `.srs` symbol `launchSRS` calls. Fresh
+compilation is 1200 bytes and is not an original-byte match.
+
+The ninth argument is the word `launchSRS` stores at 0(sp). This function
+does not read it. The jump table at 0x011ddd10 selects on `Setup`'s return
+plus one, for values whose unsigned sum is below 7:
+
+| Setup result | Continuation |
+| --- | --- |
+| 0, 1, 3, and any result outside 0..5 | `Station` |
+| 2 | language exec, then `Station` if `LoadExecPS2` returns |
+| 4, 5 | tear down and return 0 |
+
+`Station` returns 1 to make this function return 0. Any other `Station`
+result returns 100. `exit(-1)` is called when `Init` is negative, and the
+instructions after that call still execute if `exit` returns.
+
+`g_mode` is initially 3 and is copied into the flag word after `Station`.
+`g_numClients` is copied into the count word and bounds the copy loop.
+`g_myIndex` is copied into the zero word. `first.3069` is initially 1. While
+it is nonzero the function calls `sceDmaReset(1)`, sets bit 1 of the word at
+0x1000e020, and calls the two SIF init routines, then clears the flag. The
+copy loop writes `g_ips` and `g_localClientIps` in 24-byte steps and the port
+words one index at a time.
+
+The text at the printf and memcard sites has no ELF symbol. `g_mode`,
+`g_ips`, `g_ports`, `g_localClientIps`, `g_localClientPorts`, `g_numClients`,
+`g_localIp`, `g_myIndex`, `first.3069`, `s_argv`, and `s_buf` are defined
+here with the observed sizes and initial bytes. What those VI calls do after
+entry is unknown. The `VILauncher` and `VINetworkStatus` object sizes are
+unknown; the source only passes their addresses.
+
+Host check:
+
+```sh
+c++ -std=c++17 -Wall -Wextra -Werror -o /tmp/srs-main-check \
+  experimental/sources/engine-restore-srs-main/host_contract.cpp
+/tmp/srs-main-check
+```
+
+`NORRATH_HOST_CONTRACT` is not defined by the EE profile.
+
+### Build-plan entry
+
+Profile `authored_cpp`. Header closure empty. Object name `srs_main.o`.
+Source `sources/engine-restore-srs-main/srs_main.cpp`. SHA-256
+`415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d`.
+Do not plan `host_contract.cpp`.
+
 ## Imports closed
 
-`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`.
+`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`,
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`.
 
 ## Imports opened
 
@@ -160,6 +213,18 @@ From `engineRestore`: `AddIntcHandler`, `drawRestoreInterrupts__Fv`,
 already unresolved. `GetThreadId` and `ChangeThreadPriority` are already
 defined.
 
+From `srs_main`: `__10VILauncher`, `__15VINetworkStatus`, `_$_10VILauncher`,
+`_$_15VINetworkStatus`, `CheckNetwork__15VINetworkStatus`,
+`ClearVRAM__FUcUcUcUc`, `Close__7VITimer`, `exitEzNetCnf`, `exitEzNetCtl`,
+`ezNetCtlDownInterface`, `Free__10VILauncher`, `GetDefault__10VILanguage`,
+`Init__10VILauncherb`, `Init__7VITimer`, `Initialize__15VINetworkStatus`,
+`LoadExecPS2`, `printf`, `sceDmaReset`, `sceGsResetPath`, `sceSifInitIopHeap`,
+`sceSifInitRpc`, `SetDefault__10VILanguage12VILanguageID`, `Setup__10VILauncher`,
+`sprintf`, `Station__10VILauncheriPCcN22i`, `strcpy`,
+`VIDisplayLoadingScreen__Fb`, `VIMemCardSetProductId__FPCc`,
+`VIMemCardSetProductTitle__FPCc`. `exit` and `memset` were already unresolved
+or defined: `memset` is defined, `exit` was already unresolved.
+
 ## Build-plan entries needed
 
 | Source | Object | SHA-256 |
@@ -167,15 +232,17 @@ defined.
 | `sources/engine-restore-front-end/front_end_init.cpp` | `front_end_init.o` | `a2789c95500901d74970ec232974145da660201a54b3cb10acb8a77474c1fcab` |
 | `sources/engine-restore-engine-clear/engine_clear.cpp` | `engine_clear.o` | `aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41` |
 | `sources/engine-restore-engine-restore/engine_restore.cpp` | `engine_restore.o` | `158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4` |
+| `sources/engine-restore-srs-main/srs_main.cpp` | `srs_main.o` | `415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d` |
 
-All three use `authored_cpp` and an empty header closure. Host contracts are
+All four use `authored_cpp` and an empty header closure. Host contracts are
 not inputs.
 
 ## Authored but never executed
 
-`frontEndInit__Fi`, `engineClear__Fv`, and `engineRestore__Fv`. Host contracts
-ran on this machine. The reviewed EE compiler produced relocatable objects.
-No EE, interrupt, DMA, menu, or game path ran.
+`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`, and
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`. Host contracts ran on this machine.
+The reviewed EE compiler produced relocatable objects. No EE, interrupt, DMA,
+SIF, menu, or game path ran.
 
 ## Unknown
 
