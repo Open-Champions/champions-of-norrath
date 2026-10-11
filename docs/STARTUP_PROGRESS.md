@@ -65,3 +65,15 @@ exposed startup dependencies (`__CTOR_LIST__`, `__DTOR_LIST__`, `__EH_FRAME_BEGI
 `__register_frame_info`, `__deregister_frame_info`, `atexit`). COMMON remains zero.
 The increase from 847 reflects new startup coverage, not a regression in closure.
 The [receipt](../experimental/startup-ctors-receipt.json) pins this measurement.
+
+## Entry package
+
+A complete authored `_start` is now selected. Three complete original/authored
+instruction-model traces and three deliberate-fault rejection checks passed.
+The [entry review](STARTUP_ENTRY.md) states the exact CPU/memory/call contracts
+and the model's limits. The [receipt](../experimental/startup-entry-receipt.json)
+records the fresh partial build: **863 imports**, zero COMMON. This exposes ten
+entry dependencies and closes none of the prior 853: kernel services, argument
+storage, root callback, linker boundaries, `main`, and `exit`. No original code
+or fixed address alias supplies them in the partial object. No entry/kernel
+execution or first frame has been demonstrated.

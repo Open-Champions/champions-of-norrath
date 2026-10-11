@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 281,
+  "default_authored_inputs": 282,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -924,6 +924,7 @@
     "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
+    "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
@@ -5375,6 +5376,15 @@
       "profile": "authored_cpp",
       "sha256": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
       "source": "sources/runtime-startup/constructors.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 283,
+      "kind": "independently_authored_source",
+      "object_name": "start.o",
+      "profile": "authored_entry_asm",
+      "sha256": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
+      "source": "sources/runtime-entry/start.S"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5415,6 +5425,31 @@
       ],
       "language": "c++"
     },
+    "authored_entry_asm": {
+      "driver": "g++",
+      "flags": [
+        "-G0",
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-pic",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-nostdinc",
+        "-x",
+        "assembler-with-cpp"
+      ],
+      "language": "assembler-with-cpp"
+    },
     "newlib_c": {
       "driver": "gcc",
       "flags": [
@@ -5449,7 +5484,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "05b9aace7dd066dfa9856a9f728e22a57c4cf2bc982e21c424891e6e6fcdb6d5",
+  "snapshot_sha256": "fdd5679710ef33afb0cea774f093b1594c28680e5d7c41f2bd3d1e2dde922e11",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

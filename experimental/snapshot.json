@@ -4482,6 +4482,20 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/runtime-startup/constructors.cpp"
+    },
+    {
+      "input_order": 283,
+      "component": "runtime-entry",
+      "object_name": "start.o",
+      "private_object_sha256": "c0f830883045697d55caa2cb6d3db171f44ecea13be859f42af1fda46b2649c5",
+      "emitted_functions": [
+        {
+          "name": "_start",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-entry/start.S"
     }
   ],
   "drafts": [
@@ -5433,7 +5447,8 @@
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
-    "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03"
+    "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
+    "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab"
   },
   "additional_implementations": [
     {
