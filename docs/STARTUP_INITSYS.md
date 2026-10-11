@@ -24,3 +24,7 @@ not on this path.
 ## CRT0 supplement
 
 `supplement_crt0` at 0x002dd6b0 stores `CreateSema` results in `__sce_sema_id` and `__sce_eh_sema_id`. Each request has word 1 and word 2 set to 1. The other parameter words are not written; how many words service 64 reads is unknown. The host contract checks the two stored identifiers and those two words. The 72-byte body is not an original-byte match.
+
+## Reboot notification
+
+`sceSifInitRebootNotify` at 0x002df5f8 stores zero to `g_pUserRebootBuf` and `g_iUserRebootSize`, then calls `memset(g_SysRebootBuf, 0, 512)`. The 512-byte length is the symbol span. Whether a reboot consumer observes that buffer is unknown. The host contract checks both stores and the fill arguments.

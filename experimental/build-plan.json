@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 288,
+  "default_authored_inputs": 289,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -927,6 +927,7 @@
     "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
     "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
     "sources/runtime-initsys/delete_sema.S": "565a0c5f5f3ec9e793377840a812e977970adbddac93200a0d76b55c74d53a51",
+    "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
     "sources/runtime-initsys/supplement_crt0.cpp": "8b75e38af12ac9fc4531884bb5b0490cf80c0926ea19801643887ade7878a79b",
     "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
     "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
@@ -5445,6 +5446,15 @@
       "profile": "authored_cpp",
       "sha256": "8b75e38af12ac9fc4531884bb5b0490cf80c0926ea19801643887ade7878a79b",
       "source": "sources/runtime-initsys/supplement_crt0.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 290,
+      "kind": "independently_authored_source",
+      "object_name": "sif_reboot_notify.o",
+      "profile": "authored_cpp",
+      "sha256": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
+      "source": "sources/runtime-initsys/sif_reboot_notify.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5544,7 +5554,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "9f3c0a06ccca569b12c04edaa05ef309c0919530922f68164c045798da789007",
+  "snapshot_sha256": "3b9f13906ae95bdb7168886581ed6cadd2348ad48f9fed32b0b34451d6f0d127",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
