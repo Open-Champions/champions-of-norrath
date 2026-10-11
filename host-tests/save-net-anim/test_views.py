@@ -222,6 +222,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_mc_saved_level_payload_bytes.cpp",
                     "norrath_mc_saved_level_payload_bytes", 618800, require_zero=True)
 
+    def test_load_buffer(self):
+        self.expect("norrath_mc_load_buffer_bytes.cpp", "norrath_mc_load_buffer_bytes", 60032,
+                    require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
