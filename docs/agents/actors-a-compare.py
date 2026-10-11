@@ -25,6 +25,7 @@ STUBS = {
     0x001411F0: "norrath_game_object_construct",
     0x00143A80: "norrath_actor_find_tag_string",
     0x00140F60: "norrath_game_object_find_tag_int",
+    0x00143830: "norrath_actor_add_run_list",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -547,6 +548,49 @@ def main():
     if failures:
         raise SystemExit("%d blocker scenarios failed" % failures)
     print("blocker: %d original/compiled scenarios matched" % len(cases))
+    compare_candle2(data, loads)
+
+
+def compare_candle2(data, loads):
+    original = read_vaddr(data, loads, 0x002310A8, 0x78)
+    output = Path("/tmp/actors-a-candle2.o")
+    compile_object(ROOT / "experimental/sources/actors-a-candle2/candle2.cpp", output)
+    text, relocs, symbols = parse_object(output)
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_actor_add_run_list": 0x00143830,
+        "norrath_actors_a_view_44a930": 0x0044A930,
+    }
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x002310A8 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    left = run_case(original_image, 0x002310A8, [0, 0x55], flags=0x100)
+    right = run_case(compiled_image, CODE, [0, 0x55], flags=0x100)
+    point = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    def used(call):
+        name, a0, a1, a2, a3, copied = call
+        if name == "norrath_actor_add_run_list":
+            return (name, a0)
+        return (name, a0, a2, a3, copied)
+    ok = (list(map(used, left.calls)) == list(map(used, right.calls)) and
+          object_bytes(left, 96) == object_bytes(right, 96) and
+          left.low(2) == right.low(2) == 0x55 and
+          left.calls[0][0] == "norrath_game_object_construct" and left.calls[0][3] == 0 and
+          left.calls[0][4] == 0 and left.calls[0][5] == point and
+          used(left.calls[1]) == ("norrath_actor_add_run_list", OBJECT) and
+          left.u32(OBJECT + 12) == 0x101 and left.u8(OBJECT + 40) == 0xF0 and
+          left.u32(OBJECT + 72) == 0x0044A930 and left.u8(OBJECT + 76) == 0 and left.u8(OBJECT + 77) == 0)
+    if not ok:
+        print("flags", hex(left.u32(OBJECT + 12)), "b40", hex(left.u8(OBJECT + 40)),
+              "view", hex(left.u32(OBJECT + 72)), "b76", left.u8(OBJECT + 76), left.u8(OBJECT + 77))
+        print("point", left.calls[0][5], point)
+        print("candle2 calls", left.calls, right.calls)
+        print("return", hex(left.low(2)), hex(right.low(2)))
+        for index, (a, b) in enumerate(zip(object_bytes(left, 96), object_bytes(right, 96))):
+            if a != b:
+                print(" byte", index, hex(a), hex(b))
+        raise SystemExit("candle2 comparison failed")
+    print("candle2: original/compiled scenario matched")
 
 
 if __name__ == "__main__":

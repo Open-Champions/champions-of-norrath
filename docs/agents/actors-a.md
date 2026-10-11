@@ -33,14 +33,26 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 }
 ```
 
+```json
+{
+  "header_closure": ["sources/actors-a-candle2/candle2.hpp"],
+  "kind": "independently_authored_source",
+  "object_name": "candle2.o",
+  "profile": "authored_cpp",
+  "source": "sources/actors-a-candle2/candle2.cpp"
+}
+```
+
 ## Status
 
-imports closed: `norrath_construct_Blocker`
+`norrath_construct_Candle2` is `__7Candle2G6Point3` at `0x002310a8`, 120 bytes. It clears both base-call pointers, stores view `0x0044a930`, ORs flag `1`, writes `0xf0` at byte 40, clears bytes 76 and 77, and returns `norrath_actor_add_run_list`.
+
+imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`
 
 imports opened: none. Blocker uses existing `norrath_game_object_construct`, `norrath_actor_find_tag_string`, `norrath_game_object_find_tag_int`, and four address views.
 
-build-plan entries needed: the Blocker entry above.
+build-plan entries needed: the Blocker and Candle2 entries above.
 
-authored but never executed: `norrath_construct_Blocker` (compared against the original body; not run as gameplay).
+authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2` (compared against the original bodies; not run as gameplay).
 
 unknown: the remaining A–F constructor imports, and NaN behavior of the height compare.
