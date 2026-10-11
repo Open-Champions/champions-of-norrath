@@ -73,6 +73,20 @@ inline unsigned long long read_u64(Address a) {
 inline void write_u64(Address a, unsigned long long value) {
     for (unsigned i = 0; i < 8u; ++i) bytes(a)[i] = static_cast<unsigned char>(value >> (8u * i));
 }
+__attribute__((always_inline)) inline float read_single(Address a) {
+    const unsigned word = read_word(a);
+    float value;
+    unsigned char* out = reinterpret_cast<unsigned char*>(&value);
+    out[0] = static_cast<unsigned char>(word);
+    out[1] = static_cast<unsigned char>(word >> 8);
+    out[2] = static_cast<unsigned char>(word >> 16);
+    out[3] = static_cast<unsigned char>(word >> 24);
+    return value;
+}
+__attribute__((always_inline)) inline void write_single(Address a, float value) {
+    const unsigned char* in = reinterpret_cast<const unsigned char*>(&value);
+    write_word(a, unsigned(in[0]) | (unsigned(in[1]) << 8) | (unsigned(in[2]) << 16) | (unsigned(in[3]) << 24));
+}
 inline int signed_word(unsigned value) {
     return value <= 0x7fffffffu ? static_cast<int>(value) : -1 - static_cast<int>(0xffffffffu - value);
 }
