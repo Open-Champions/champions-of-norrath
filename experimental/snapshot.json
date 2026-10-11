@@ -9029,6 +9029,102 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp"
+    },
+    {
+      "input_order": 692,
+      "component": "frame-loop-brightness",
+      "object_name": "brightness.o",
+      "private_object_sha256": "9dfd5cdc9d4f142acda105b351e22b24c2eae01cee035d6838b451dddbf866be",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-brightness/brightness.cpp"
+    },
+    {
+      "input_order": 693,
+      "component": "frame-loop-clear-color",
+      "object_name": "clear_color.o",
+      "private_object_sha256": "3b211885bb6b4a7128e3fa17c79a8b6aabfa9a2f94f5886e3233b0378221053b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-clear-color/clear_color.cpp"
+    },
+    {
+      "input_order": 694,
+      "component": "frame-loop-display-disable",
+      "object_name": "set_display_disable.o",
+      "private_object_sha256": "04219291f996a4572815d0b69592b8e0a4e7d2fdbaa02d66cea0c7bf5eb9f2c8",
+      "emitted_functions": [
+        {
+          "name": "engineSetDisplayDisable__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-display-disable/set_display_disable.cpp"
+    },
+    {
+      "input_order": 695,
+      "component": "frame-loop-frame-end",
+      "object_name": "frame_end.o",
+      "private_object_sha256": "8c94ea09c9f799cc6151973e911021c33a2db6704497cf0f9f09ca20b230cdaf",
+      "emitted_functions": [
+        {
+          "name": "engineFrameEnd__Fb",
+          "compiled_body_bytes": 1020
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-frame-end/frame_end.cpp"
+    },
+    {
+      "input_order": 696,
+      "component": "frame-loop-frame-nm",
+      "object_name": "frame_nm.o",
+      "private_object_sha256": "4becdbb4c81ee73feee725ccb011a6f361de23bd80d339a1894d366a8b2ef1fd",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-frame-nm/frame_nm.cpp"
+    },
+    {
+      "input_order": 697,
+      "component": "frame-loop-frame-start",
+      "object_name": "frame_start.o",
+      "private_object_sha256": "85d3c8f32a4758174ddc6a172b6227498d76af582e324ce2a79e8820dbd87c93",
+      "emitted_functions": [
+        {
+          "name": "engineFrameStart__FUib",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-frame-start/frame_start.cpp"
+    },
+    {
+      "input_order": 698,
+      "component": "frame-loop-glist-size",
+      "object_name": "glist_size.o",
+      "private_object_sha256": "667e5b89e347d39eb8c1e67ed861cea3696a7f1040b9b42762f33221de2e6885",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-glist-size/glist_size.cpp"
+    },
+    {
+      "input_order": 699,
+      "component": "frame-loop-glistp",
+      "object_name": "glistp.o",
+      "private_object_sha256": "a8844a702a193560730f3d9691f66ff9c678a860411ecf3893b1220ada42e486",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-glistp/glistp.cpp"
+    },
+    {
+      "input_order": 700,
+      "component": "frame-loop-gstart",
+      "object_name": "gstart.o",
+      "private_object_sha256": "4f4526d3036bf9487feeff4bba37506aa94478ce0b82cc84def24179f157c32f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/frame-loop-gstart/gstart.cpp"
     }
   ],
   "drafts": [
@@ -9446,6 +9542,24 @@
     "sources/factory-tag-queries-build/find_tag_string.cpp": "26893343677a27f42159089fa4c6534d95de076075238703f55de3a474cdafb0",
     "sources/factory-tag-queries-build/has_light_or_particle.cpp": "160c37b73bbac7363571b0f0b1416f508d383e315fa4189f1ecfb9d0df8adf78",
     "sources/factory-tag-queries-build/tag_queries.hpp": "e284b01bdb2f3a5071a59378c15a0490f414104725b60677421b112a5d416015",
+    "sources/frame-loop-brightness/brightness.cpp": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
+    "sources/frame-loop-brightness/host_check.cpp": "e1a2ca8d18830b6603614bfa87ef22377b42b854182502d7707b73ec8687a22d",
+    "sources/frame-loop-clear-color/clear_color.cpp": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
+    "sources/frame-loop-clear-color/host_check.cpp": "e1f281720564c480ad6132ebee0a06105bf74e0b6b874bd3ff831f9de4cb6651",
+    "sources/frame-loop-display-disable/host_check.cpp": "a863c236e56b4082d0bd86483d67511d2e1d4f81f550b0932e2c98cd9b263907",
+    "sources/frame-loop-display-disable/set_display_disable.cpp": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
+    "sources/frame-loop-frame-end/frame_end.cpp": "488cd2dd60133947a888e5a2d300e5ca8a1cda3d1f01210babaa402fe9445363",
+    "sources/frame-loop-frame-end/host_check.cpp": "afd61489b4b226081555520244a08df368fec004538b5b1b48c5db0f733bb5d4",
+    "sources/frame-loop-frame-nm/frame_nm.cpp": "85f69867540303854ead89778bc07a36c069f551c19ec6544954cd0dd441f89c",
+    "sources/frame-loop-frame-nm/host_check.cpp": "07ce1c9e1aaa8b431d257902b62244de185d99966504a5b1714566ff963e1c65",
+    "sources/frame-loop-frame-start/frame_start.cpp": "6902c57b116f1a66aeae62408fea11c95b9e2c787685335c25e450f04e5a7177",
+    "sources/frame-loop-frame-start/host_check.cpp": "6fee6e47261a80f609462d750dd09ed2c82c6881f776319b88c94ba74e68961e",
+    "sources/frame-loop-glist-size/glist_size.cpp": "97109965d0378b58114473ef0805b2b2b407e0d264fe5b64f39353620cc6b147",
+    "sources/frame-loop-glist-size/host_check.cpp": "717e351689f709f9bb9f1e5e6f44cfdce92b0137e86a9581a267ec8812d743f4",
+    "sources/frame-loop-glistp/glistp.cpp": "684051e9f824df564a6a0d2be8fbc00add99d3aaa63ef400d969b5ea2da9db6f",
+    "sources/frame-loop-glistp/host_check.cpp": "025ad7202ad9bd547a96977d582555361545c888aa0425af5dacac379c319476",
+    "sources/frame-loop-gstart/gstart.cpp": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
+    "sources/frame-loop-gstart/host_check.cpp": "ef3d7c1dc80bcddd6c12f6d28e24f8405af8c4423e54590b00d9cb0aafb57de2",
     "sources/game-actor-grid-removal-build/actors.hpp": "15d28c23aa52b8f3c6c974652cb607f4aaa75a595e75af9cccaa76660d8c7a9d",
     "sources/game-actor-grid-removal-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-actor-grid-removal-build/remove_from_grid.cpp": "760aa3e1c2ba4cb0704c66cb015bb6d9bd922fe50cb9a727009ffa0926eac377",
@@ -11284,11 +11398,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 692,
-    "authored_default_inputs": 690,
+    "selected_inputs": 701,
+    "authored_default_inputs": 699,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 581,
-    "compiled_body_bytes_from_accepted_inputs": 299440,
+    "emitted_function_definitions_including_helpers": 584,
+    "compiled_body_bytes_from_accepted_inputs": 300784,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -11301,7 +11415,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 379
+    "package_selected_inputs": 388
   },
   "startup_implementations": [
     {
@@ -16952,6 +17066,129 @@
       "emitted_functions": [],
       "host_files": [
         "sources/draw-texture-init-zwrites-on/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-brightness/brightness.cpp",
+      "source_sha256": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
+      "object_sha256": "9dfd5cdc9d4f142acda105b351e22b24c2eae01cee035d6838b451dddbf866be",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-brightness/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-clear-color/clear_color.cpp",
+      "source_sha256": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
+      "object_sha256": "3b211885bb6b4a7128e3fa17c79a8b6aabfa9a2f94f5886e3233b0378221053b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-clear-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-display-disable/set_display_disable.cpp",
+      "source_sha256": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
+      "object_sha256": "04219291f996a4572815d0b69592b8e0a4e7d2fdbaa02d66cea0c7bf5eb9f2c8",
+      "emitted_functions": [
+        {
+          "name": "engineSetDisplayDisable__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/frame-loop-display-disable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-frame-end/frame_end.cpp",
+      "source_sha256": "488cd2dd60133947a888e5a2d300e5ca8a1cda3d1f01210babaa402fe9445363",
+      "object_sha256": "8c94ea09c9f799cc6151973e911021c33a2db6704497cf0f9f09ca20b230cdaf",
+      "emitted_functions": [
+        {
+          "name": "engineFrameEnd__Fb",
+          "compiled_body_bytes": 1020
+        }
+      ],
+      "host_files": [
+        "sources/frame-loop-frame-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-frame-nm/frame_nm.cpp",
+      "source_sha256": "85f69867540303854ead89778bc07a36c069f551c19ec6544954cd0dd441f89c",
+      "object_sha256": "4becdbb4c81ee73feee725ccb011a6f361de23bd80d339a1894d366a8b2ef1fd",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-frame-nm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-frame-start/frame_start.cpp",
+      "source_sha256": "6902c57b116f1a66aeae62408fea11c95b9e2c787685335c25e450f04e5a7177",
+      "object_sha256": "85d3c8f32a4758174ddc6a172b6227498d76af582e324ce2a79e8820dbd87c93",
+      "emitted_functions": [
+        {
+          "name": "engineFrameStart__FUib",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/frame-loop-frame-start/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-glist-size/glist_size.cpp",
+      "source_sha256": "97109965d0378b58114473ef0805b2b2b407e0d264fe5b64f39353620cc6b147",
+      "object_sha256": "667e5b89e347d39eb8c1e67ed861cea3696a7f1040b9b42762f33221de2e6885",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-glist-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-glistp/glistp.cpp",
+      "source_sha256": "684051e9f824df564a6a0d2be8fbc00add99d3aaa63ef400d969b5ea2da9db6f",
+      "object_sha256": "a8844a702a193560730f3d9691f66ff9c678a860411ecf3893b1220ada42e486",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-glistp/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "frame-loop",
+      "source": "sources/frame-loop-gstart/gstart.cpp",
+      "source_sha256": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
+      "object_sha256": "4f4526d3036bf9487feeff4bba37506aa94478ce0b82cc84def24179f157c32f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/frame-loop-gstart/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

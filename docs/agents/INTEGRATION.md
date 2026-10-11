@@ -672,6 +672,30 @@ previous imports: `textureBufferSize`, `textureMaxBlockSize`, `drawRecords`,
 `sceGsSyncV`, `textureInternalInit__Fv`. 579 function bodies, 690 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/frame-loop
+
+All nine units were selected. Host checks passed.
+`engineBrightnessCorrection` is the initial word `0x3f000000`. Compiled
+bodies: `engineFrameEnd__Fb` 1020, `engineFrameStart__FUib` 312,
+`engineSetDisplayDisable__Fi` 12. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 884 |
+| After | 888 |
+| Closed | 9 |
+| Opened | 13 |
+
+Closed: `engineFrameEnd__Fb`, `engineFrameStart__FUib`,
+`engineSetDisplayDisable__Fi`, `engineBrightnessCorrection`, `frameNm`,
+`glistp`, `gstart`, `GLISTSIZE`, `coreClearColor`. Opened:
+`coreLoadingScreenRunning`, `doSuperSample__Fiib`, `drawFrameNm`,
+`drawStart__Fv`, `drawWaitFinished__Fv`, `engineSetVideoMode__Fb`,
+`frameStartPacket__FUibi`, `lastFrameVBlankCount`,
+`lightVU0StoppedProcessing__Fv`, `powerOffMode`, `switchTo30Counter.798`,
+`switchToHalfCounter.797`, `texturePackDown__Fv`. 582 function bodies, 699
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -762,8 +786,8 @@ symbol was defined twice.
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
-scheduler, game-boot, subsystem-inits, gs-dma-kernel, and draw-texture-init.
-`engineInit__Ff`,
+scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
+frame-loop. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -794,3 +818,4 @@ and no startup stage has executed.
 - 2026-10-11 17:11 CDT — `agents/subsystem-inits` — 907 unresolved imports
 - 2026-10-11 17:13 CDT — `agents/gs-dma-kernel` — 893 unresolved imports
 - 2026-10-11 17:15 CDT — `agents/draw-texture-init` — 884 unresolved imports
+- 2026-10-11 17:16 CDT — `agents/frame-loop` — 888 unresolved imports

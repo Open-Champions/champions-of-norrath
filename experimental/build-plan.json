@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 690,
+  "default_authored_inputs": 699,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -223,6 +223,15 @@
     "sources/factory-tag-queries-build/find_tag_string.cpp": "26893343677a27f42159089fa4c6534d95de076075238703f55de3a474cdafb0",
     "sources/factory-tag-queries-build/has_light_or_particle.cpp": "160c37b73bbac7363571b0f0b1416f508d383e315fa4189f1ecfb9d0df8adf78",
     "sources/factory-tag-queries-build/tag_queries.hpp": "e284b01bdb2f3a5071a59378c15a0490f414104725b60677421b112a5d416015",
+    "sources/frame-loop-brightness/brightness.cpp": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
+    "sources/frame-loop-clear-color/clear_color.cpp": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
+    "sources/frame-loop-display-disable/set_display_disable.cpp": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
+    "sources/frame-loop-frame-end/frame_end.cpp": "488cd2dd60133947a888e5a2d300e5ca8a1cda3d1f01210babaa402fe9445363",
+    "sources/frame-loop-frame-nm/frame_nm.cpp": "85f69867540303854ead89778bc07a36c069f551c19ec6544954cd0dd441f89c",
+    "sources/frame-loop-frame-start/frame_start.cpp": "6902c57b116f1a66aeae62408fea11c95b9e2c787685335c25e450f04e5a7177",
+    "sources/frame-loop-glist-size/glist_size.cpp": "97109965d0378b58114473ef0805b2b2b407e0d264fe5b64f39353620cc6b147",
+    "sources/frame-loop-glistp/glistp.cpp": "684051e9f824df564a6a0d2be8fbc00add99d3aaa63ef400d969b5ea2da9db6f",
+    "sources/frame-loop-gstart/gstart.cpp": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
     "sources/game-actor-grid-removal-build/actors.hpp": "15d28c23aa52b8f3c6c974652cb607f4aaa75a595e75af9cccaa76660d8c7a9d",
     "sources/game-actor-grid-removal-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-actor-grid-removal-build/remove_from_grid.cpp": "760aa3e1c2ba4cb0704c66cb015bb6d9bd922fe50cb9a727009ffa0926eac377",
@@ -9649,6 +9658,87 @@
       "profile": "authored_cpp",
       "sha256": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
       "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 692,
+      "kind": "independently_authored_source",
+      "object_name": "brightness.o",
+      "profile": "authored_cpp",
+      "sha256": "ecf041ce054154010a0162112fad9672002ebe750f93876ed36165573af70478",
+      "source": "sources/frame-loop-brightness/brightness.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 693,
+      "kind": "independently_authored_source",
+      "object_name": "clear_color.o",
+      "profile": "authored_cpp",
+      "sha256": "fd623bb6d60f4d0e4c750565abb38796646c4f4845a5ce8d3ff0b006f8ebbc52",
+      "source": "sources/frame-loop-clear-color/clear_color.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 694,
+      "kind": "independently_authored_source",
+      "object_name": "set_display_disable.o",
+      "profile": "authored_cpp",
+      "sha256": "d883c1b36b6b80895c06ed1b79f930a0c2e23a93af436b536c9965b647ff1073",
+      "source": "sources/frame-loop-display-disable/set_display_disable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 695,
+      "kind": "independently_authored_source",
+      "object_name": "frame_end.o",
+      "profile": "authored_cpp",
+      "sha256": "488cd2dd60133947a888e5a2d300e5ca8a1cda3d1f01210babaa402fe9445363",
+      "source": "sources/frame-loop-frame-end/frame_end.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 696,
+      "kind": "independently_authored_source",
+      "object_name": "frame_nm.o",
+      "profile": "authored_cpp",
+      "sha256": "85f69867540303854ead89778bc07a36c069f551c19ec6544954cd0dd441f89c",
+      "source": "sources/frame-loop-frame-nm/frame_nm.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 697,
+      "kind": "independently_authored_source",
+      "object_name": "frame_start.o",
+      "profile": "authored_cpp",
+      "sha256": "6902c57b116f1a66aeae62408fea11c95b9e2c787685335c25e450f04e5a7177",
+      "source": "sources/frame-loop-frame-start/frame_start.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 698,
+      "kind": "independently_authored_source",
+      "object_name": "glist_size.o",
+      "profile": "authored_cpp",
+      "sha256": "97109965d0378b58114473ef0805b2b2b407e0d264fe5b64f39353620cc6b147",
+      "source": "sources/frame-loop-glist-size/glist_size.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 699,
+      "kind": "independently_authored_source",
+      "object_name": "glistp.o",
+      "profile": "authored_cpp",
+      "sha256": "684051e9f824df564a6a0d2be8fbc00add99d3aaa63ef400d969b5ea2da9db6f",
+      "source": "sources/frame-loop-glistp/glistp.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 700,
+      "kind": "independently_authored_source",
+      "object_name": "gstart.o",
+      "profile": "authored_cpp",
+      "sha256": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
+      "source": "sources/frame-loop-gstart/gstart.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9748,7 +9838,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "7499bde4aa137a8a83556540b4f4d8b7e014680abe063c7a8592f7f71c08b8a0",
+  "snapshot_sha256": "f15f28693c2e45d7e64f2daf9dd97520557c766c4489016675ec326a8ba16554",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
