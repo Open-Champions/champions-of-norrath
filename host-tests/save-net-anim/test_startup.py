@@ -106,6 +106,9 @@ class StartupTests(unittest.TestCase):
     def test_core_been_in_srs(self):
         self.expect_object("core_been_in_srs.cpp", "coreBeenInSRS", 1, b"\0")
 
+    def test_core_launch_srs(self):
+        self.expect_object("core_launch_srs.cpp", "coreLaunchSRS", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
