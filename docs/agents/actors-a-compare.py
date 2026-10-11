@@ -98,6 +98,8 @@ class Machine:
         self.calls = []
         self.floats = []
         self.snapshots = []
+        self.hi = 0
+        self.lo = 0
         self.halt = None
 
     def low(self, index):
@@ -189,6 +191,25 @@ class Machine:
                 self.write32(rd, sext32(self.low(rt)) >> sa)
             elif funct == 8:  # jr
                 return ("jump", self.low(rs))
+            elif funct == 0x10:  # mfhi
+                self.write32(rd, self.hi)
+            elif funct == 0x12:  # mflo
+                self.write32(rd, self.lo)
+            elif funct in (0x18, 0x19):  # mult / multu, including the three-register form
+                product = (sext32(self.low(rs)) * sext32(self.low(rt)) if funct == 0x18
+                           else self.low(rs) * self.low(rt))
+                self.lo = product & 0xFFFFFFFF
+                self.hi = (product >> 32) & 0xFFFFFFFF
+                if rd:
+                    self.write32(rd, self.lo)
+            elif funct == 0x1A:  # div, toward zero
+                divisor = sext32(self.low(rt))
+                dividend = sext32(self.low(rs))
+                if divisor:
+                    magnitude = abs(dividend) // abs(divisor)
+                    quotient = -magnitude if (dividend < 0) != (divisor < 0) else magnitude
+                    self.lo = quotient & 0xFFFFFFFF
+                    self.hi = (dividend - quotient * divisor) & 0xFFFFFFFF
             elif funct == 33:  # addu
                 self.write32(rd, self.low(rs) + self.low(rt))
             elif funct == 45:  # daddu, including the original 64-bit move idiom
@@ -215,6 +236,14 @@ class Machine:
             elif funct == 0x3A:  # dsrl
                 if rd:
                     self.r[rd] = (self.r[rt] & 0xFFFFFFFFFFFFFFFF) >> sa
+            elif funct == 0x3B:  # dsra
+                value = self.r[rt] & 0xFFFFFFFFFFFFFFFF
+                if sa and (value & (1 << 63)):
+                    value = ((value >> sa) | (~0 << (64 - sa))) & 0xFFFFFFFFFFFFFFFF
+                elif sa:
+                    value >>= sa
+                if rd:
+                    self.r[rd] = value
             elif funct == 0x3C:  # dsll32
                 if rd:
                     self.r[rd] = (self.r[rt] & 0xFFFFFFFFFFFFFFFF) << (sa + 32)
@@ -222,6 +251,9 @@ class Machine:
             elif funct == 0x3E:  # dsrl32
                 if rd:
                     self.r[rd] = (self.r[rt] & 0xFFFFFFFFFFFFFFFF) >> (sa + 32)
+            elif funct == 0x34:  # teq
+                if self.low(rs) == self.low(rt):
+                    raise SystemExit("teq trap at %#x" % pc)
             elif funct == 0 and rd == 0 and rt == 0:
                 return None
             else:
@@ -603,6 +635,7 @@ def main():
     compare_doorswing(data, loads)
     compare_floorswitch(data, loads)
     compare_anttrap(data, loads)
+    compare_firebomb(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -1127,6 +1160,86 @@ def compare_anttrap(data, loads):
                     print(" byte", index, hex(a), hex(b))
             raise SystemExit("anttrap comparison failed")
     print("anttrap: 2 original/compiled scenarios matched")
+
+
+def firebomb_lcg(seed, divisor):
+    nxt = (seed * 0x19660D + 0x3C6EF35F) & 0xFFFFFFFF
+    mixed = nxt >> 16
+    signed_divisor = sext32(divisor)
+    magnitude = abs(mixed) // abs(signed_divisor)
+    quotient = -magnitude if (mixed < 0) != (signed_divisor < 0) else magnitude
+    remainder = (mixed - quotient * signed_divisor) & 0xFFFFFFFF
+    return nxt, mixed, remainder
+
+
+def compare_firebomb(data, loads):
+    original = read_vaddr(data, loads, 0x002898B0, 0x188)
+    output = Path("/tmp/actors-a-firebomb.o")
+    compile_object(ROOT / "experimental/sources/actors-a-firebomb/firebomb.cpp", output)
+    text, relocs, symbols, named = parse_object(output)
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_actor_add_run_list": 0x00143830,
+        "norrath_actor_find_tag_string": 0x00143A80,
+        "norrath_game_object_find_tag_int": 0x00140F60,
+        "norrath_actors_a_view_449430": 0x00449430,
+        "norrath_actors_a_view_438e98": 0x00438E98,
+        "norrath_actors_a_view_477758": 0x00477758,
+        "norrath_actors_a_view_4860b8": 0x004860B8,
+        "norrath_actors_a_view_4860c0": 0x004860C0,
+        "norrath_actors_a_view_483e5c": 0x00483E5C,
+    }
+    for symbol in symbols.values():
+        if symbol.startswith(".LC"):
+            bases[symbol] = 0x220000
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x002898B0 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    for index, byte in enumerate(named.get(".rodata.cst4", b"")):
+        compiled_image[0x220000 + index] = byte
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    absent = ["norrath_game_object_construct", "norrath_actor_add_run_list",
+              "norrath_actor_find_tag_string", "norrath_actor_find_tag_string",
+              "norrath_actor_find_tag_string"]
+    present = ["norrath_game_object_construct", "norrath_actor_add_run_list",
+               "norrath_actor_find_tag_string", "norrath_game_object_find_tag_int",
+               "norrath_actor_find_tag_string", "norrath_game_object_find_tag_int",
+               "norrath_actor_find_tag_string", "norrath_game_object_find_tag_int"]
+    scenarios = [
+        ([0, 0, 0, 0, 0], absent, 0xAB, 240, 0, 1),
+        ([0, 0, 1, 5, 1, 0x1AB, 1, 0xFFFFFFFD], present, 0xFFFFFFFE, 300, 0xAB, 0xFD),
+        ([0, 0, 1, 0xFFFFFFFF, 1, 0, 1, 1], present, 0xAB, 0xFFFFFFC4, 0, 1),
+    ]
+    for answers, names, type_bits, span, second, third in scenarios:
+        extra = {0x00483E5C: 0x12345678}
+        nxt, mixed, remainder = firebomb_lcg(0x12345678, span)
+        left = run_case(original_image, 0x002898B0, answers, type_bits=type_bits, flags=0x100, extra=extra)
+        right = run_case(compiled_image, CODE, answers, type_bits=type_bits, flags=0x100, extra=extra)
+        ok = ([call[0] for call in left.calls] == [call[0] for call in right.calls] == names and
+              object_bytes(left, 96) == object_bytes(right, 96) and
+              left.low(2) == right.low(2) == mixed and left.u32(0x00483E5C) == right.u32(0x00483E5C) == nxt and
+              left.calls[0][3] == right.calls[0][3] == 0x00438E98 and left.calls[0][4] == ARGUMENTS and
+              left.calls[0][5] == incoming and left.calls[1][1] == OBJECT and
+              left.u32(OBJECT + 12) == 0x4001 and left.u32(OBJECT + 28) == 0x42700000 and
+              left.u32(OBJECT + 72) == 0x00449430 and left.u8(OBJECT + 77) == 0 and
+              left.u32(OBJECT + 80) == span and left.u8(OBJECT + 78) == second and
+              left.u8(OBJECT + 79) == third and left.u32(OBJECT + 84) == remainder and
+              (left.u8(OBJECT + 56) | (left.u8(OBJECT + 57) << 8)) == (type_bits & 0xFFFF))
+        strings = (0x00477758, 0x004860B8, 0x004860C0)
+        seen = [call for call in left.calls if call[0] == "norrath_actor_find_tag_string"]
+        ok = ok and [call[2] for call in seen] == list(strings) and all(call[1] == OBJECT and call[3] == 0 for call in seen)
+        if not ok:
+            print("firebomb", names)
+            print("left", left.calls)
+            print("right", right.calls)
+            print("return", hex(left.low(2)), hex(right.low(2)), "expect", hex(mixed))
+            print("seed", hex(left.u32(0x00483E5C)), hex(right.u32(0x00483E5C)), "span", hex(left.u32(OBJECT + 80)), hex(right.u32(OBJECT + 80)))
+            print("rem", hex(left.u32(OBJECT + 84)), hex(right.u32(OBJECT + 84)), "expect", hex(remainder))
+            for index, (a, b) in enumerate(zip(object_bytes(left, 96), object_bytes(right, 96))):
+                if a != b:
+                    print(" byte", index, hex(a), hex(b))
+            raise SystemExit("firebomb comparison failed")
+    print("firebomb: 3 original/compiled scenarios matched")
 
 
 if __name__ == "__main__":

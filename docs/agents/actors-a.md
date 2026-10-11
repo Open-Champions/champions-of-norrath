@@ -123,6 +123,16 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 }
 ```
 
+```json
+{
+  "header_closure": ["sources/actors-a-firebomb/firebomb.hpp"],
+  "kind": "independently_authored_source",
+  "object_name": "firebomb.o",
+  "profile": "authored_cpp",
+  "source": "sources/actors-a-firebomb/firebomb.cpp"
+}
+```
+
 ## Status
 
 `norrath_construct_Candle2` is `__7Candle2G6Point3` at `0x002310a8`, 120 bytes. It clears both base-call pointers, stores view `0x0044a930`, ORs flag `1`, writes `0xf0` at byte 40, clears bytes 76 and 77, and returns `norrath_actor_add_run_list`.
@@ -143,12 +153,14 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 
 `norrath_construct_AntTrap` is `__7AntTrapPcG6Point3sPPc` at `0x00225fe8`, 204 bytes. It forwards to `norrath_construct_AutoProp`, ORs flag 1, and queries `lumpFindResource` with the bytes at object+109 and the word at `0x00471310`. A null header leaves V0 at 0. Otherwise the state at object+152 is initialized, the header is added with mode 4, set to its end, the half at 158 gains bit `0x80`, and that half is V0. The header receives bits `0x3f800000` at +20 and byte 1 at +24.
 
-imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap`
+`norrath_construct_FireBomb` is `__8FireBombG6Point3sPPc` at `0x002898b0`, 392 bytes. The base call keeps the resource map at `0x00438e98`. Flags are replaced with `0x4001`, offset 28 receives bits `0x42700000`, and byte 77 is cleared before the run list. Absent tags store 240, byte 0, and byte 1. A present first tag stores 60 times its integer at offset 80; the other two store the integer's low byte at 78 and 79. The word at `0x00483e5c` becomes `state * 0x00019660d + 0x3c6ef35f`. V0 is that state shifted right 16. Offset 84 stores the toward-zero remainder of V0 divided by the word at offset 80.
+
+imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap`, `norrath_construct_FireBomb`
 
 imports opened: `norrath_world_check_for_water`; `norrath_light_add`; `norrath_construct_AutoPropLP`; `norrath_construct_AutoProp`; `norrath_world_find_closest_door`; `norrath_world_set_door_collision`; `norrath_world_get_door_height`; `norrath_object_add_to_delete_list`; `norrath_object_add_to_medium_run_list` (retained `objectAddToMediumRunList__FP10GameObject`). Container, ContainerWithResources, and AntTrap use the existing `norrath_lump_find_resource`, `norrath_actor_animation_initialize`, `norrath_actor_animation_add`, and `norrath_animation_set_to_end`.
 
-build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, EggSack, DoorSecret, DoorSwing, FloorSwitch, and AntTrap entries above.
+build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, EggSack, DoorSecret, DoorSwing, FloorSwitch, AntTrap, and FireBomb entries above.
 
-authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap` (compared against the original bodies; not run as gameplay).
+authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`, `norrath_construct_DoorSwing`, `norrath_construct_FloorSwitch`, `norrath_construct_AntTrap`, `norrath_construct_FireBomb` (compared against the original bodies; not run as gameplay).
 
-unknown: the remaining A–F constructor imports, and NaN behavior of the height compare.
+unknown: NaN behavior of the Blocker height compare, and the remaining A–F constructor imports `norrath_construct_Ant`, `norrath_construct_AntQueen`, `norrath_construct_Arenabeast`, `norrath_construct_AutoChest`, `norrath_construct_AutoChestLP`, `norrath_construct_AutoContainer`, `norrath_construct_AutoContainerLP`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Boat`, `norrath_construct_Catapult`, `norrath_construct_Chest`, `norrath_construct_CloudGiant`, `norrath_construct_Critter`, `norrath_construct_Cthulu`, `norrath_construct_Cyclops`, `norrath_construct_Demon`, `norrath_construct_FemaleDarkElf`, `norrath_construct_FireBeetle`, `norrath_construct_FireFly`, and `norrath_construct_Froglock`. Cat and CdEyeball are already defined outside this package. `check_source_snapshot.py` will not accept these new files until the integrator records them; that shared file was left unchanged.
