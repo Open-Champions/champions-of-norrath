@@ -115,6 +115,29 @@ class StartupTests(unittest.TestCase):
     def test_net_game_launch_info(self):
         self.expect_object("net_game_launch_info.cpp", "netGameLaunchInfo", 328, bytes(328))
 
+    def test_cut_init_net(self):
+        source = STARTUP / "cut_init_net.cpp"
+        self.host([source], r'''
+extern "C" int cutMsgHandler = 0;
+extern "C" void cutMsgHandlerFunction__FPUci(unsigned char*, int) {}
+extern "C" void cutInitNet__Fv();
+static int calls;
+extern "C" int netRegisterMessageHandler__FPFPUci_v(void (*handler)(unsigned char*, int)) {
+    if (handler != cutMsgHandlerFunction__FPUci) return 1;
+    calls += 1;
+    return 41;
+}
+int main() {
+    cutMsgHandler = 0;
+    cutInitNet__Fv();
+    if (calls != 1 || cutMsgHandler != 41) return 2;
+    return 0;
+}
+''')
+        self.ee_exports(source, "cutInitNet__Fv", [
+            "cutMsgHandler", "cutMsgHandlerFunction__FPUci",
+            "netRegisterMessageHandler__FPFPUci_v"])
+
 
 if __name__ == "__main__":
     unittest.main()
