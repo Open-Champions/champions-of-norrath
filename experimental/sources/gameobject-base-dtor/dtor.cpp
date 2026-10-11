@@ -61,7 +61,7 @@ bool lower_nonempty_tag(unsigned char* tag) {
     } while (raw != 0u);
     return true;
 }
-unsigned char* find_name_value(unsigned char* object, unsigned occurrence) {
+__attribute__((always_inline)) inline unsigned char* find_name_value(unsigned char* object, unsigned occurrence) {
     unsigned args_word = read_word(object + 44u);
     if (args_word == 0u) return nullptr;
     if (lower_nonempty_tag(norrath_constructor_tag_b_view)) args_word = read_word(object + 44u);
