@@ -40,13 +40,14 @@ def check(root):
     assert integration['runtime_executed'] is False
     assert integration['clean_checkout_game_build'] is False
     additions = snapshot.get('additional_implementations', [])
-    assert sum(len(item['functions']) for item in additions) == 6
+    assert sum(len(item['functions']) for item in additions) == 7
     additional_functions = [name for item in additions for name in item['functions']]
-    assert len(set(additional_functions)) == 6
+    assert len(set(additional_functions)) == 7
     assert set(additional_functions) == {
         'norrath_list_safe_iterator_construct', 'norrath_list_safe_iterator_next',
         'norrath_list_safe_iterator_destroy', 'norrath_megatile_add_pm_list',
         'norrath_script_set_script', 'norrath_megatile_cap_pm_pointers',
+        'norrath_object_process_delete_list',
     }
     for item in additions:
         assert all(name in files for name in item['files'])
@@ -56,6 +57,7 @@ def check(root):
     for component, function, body_bytes in (
         ('game-script-set-script-source', 'norrath_script_set_script', 84),
         ('game-megatile-pm-pointer-cap-source', 'norrath_megatile_cap_pm_pointers', 1080),
+        ('game-object-process-delete-list-source', 'norrath_object_process_delete_list', 496),
     ):
         item = by_component[component]
         assert item['functions'] == [function]
@@ -64,6 +66,35 @@ def check(root):
                       'private_ROOT_actual_review_manifest_sha256'):
             assert re.fullmatch(r'[0-9a-f]{64}', item[field]), (component, field)
         assert not set(item['files']) & {entry['source'] for entry in authored}, component
+    deletion = by_component['game-object-process-delete-list-source']
+    assert deletion['callback_scope'] == {
+        'declared_arguments': 2, 'declared_return': 'void', 'flags_argument': 3,
+        'incidental_A2_A3_verified': False,
+        'arbitrary_native_signatures_verified': False,
+        'native_physical_frame_upper_register_lifetime_IRQ_fault_verified': False,
+        'runtime_verified': False,
+    }
+    assert all(term in deletion['scope'] for term in
+               ('ordinary-RAM', 'incidental A2/A3', 'physical access/frame', 'lifetime', 'IRQ/fault'))
+    deletion_header = (directory / 'sources/game-object-process-delete-list-source/process_delete.hpp').read_text()
+    for declaration in (
+        'void norrath_object_process_delete_list();',
+        'void norrath_list_safe_iterator_construct(unsigned char* iterator, unsigned char* head, int mask);',
+        'void norrath_list_safe_iterator_next(unsigned char* iterator);',
+        'void norrath_list_safe_iterator_destroy(unsigned char* iterator, int flags);',
+        'using Callback = void (*)(unsigned char*, int);',
+    ):
+        assert declaration in deletion_header, declaration
+    latest = snapshot['latest_private_partial_integration']
+    assert (latest['revision'], latest['input_objects'],
+            latest['emitted_function_definitions_including_helpers'],
+            latest['compiled_body_bytes'], latest['encoded_relocation_fields'],
+            latest['unresolved_imports']) == ('V46', 271, 395, 234600, 5384, 827)
+    assert latest['same_mutable_owners'] == 8 and latest['old_code_and_storage_preserved'] is True
+    assert latest['fresh_reproduction_performed'] is False and latest['runtime_verified'] is False
+    assert latest['additional_exact_original_matches'] == 0
+    for field in ('object_sha256', 'private_FIRST_manifest_sha256', 'private_ROOT_manifest_sha256'):
+        assert re.fullmatch(r'[0-9a-f]{64}', latest[field]), field
     behavior = by_component['game-megatile-pm-pointer-cap-source']['bounded_behavior']
     assert behavior['fixtures'] == behavior['paired_calls'] == 12
     assert behavior['comparison_runs'] == 1

@@ -31,7 +31,7 @@ accounts for that difference. General dependency closure, startup, load layout,
 SRS/VU code, and runtime behavior remain unfinished. No whole-game completion
 percentage follows from the emitted function count.
 
-## Drafts outside the partial integration
+## Additional implementations and held drafts
 
 - `game-list-safe-iterator-source` now supplies all three complete iterator
   functions needed by entity restoration: construction, advancement, and
@@ -58,6 +58,12 @@ percentage follows from the emitted function count.
   the genuine AMX initialization and native-registration providers. Its first
   compilation and private V45 integration passed. Interpreter transport, storage
   ownership, physical access/frame behavior, and game runtime remain open.
+- `game-object-process-delete-list-source` supplies the deletion-list traversal
+  using the genuine safe iterator and adjusted-object callback. Its first
+  compilation and private V46 integration passed. The callback scope is only
+  the declared two-argument interface; incidental A2/A3, arbitrary native
+  signatures, physical access/frame behavior, object lifetime, interrupts,
+  faults, and gameplay remain unverified.
 - `game-software-arithmetic-source-v2` reconstructs multiplication, division,
   and remainder algorithms with explicit accumulator capture and restoration.
   All 1,596 bounded normal/correction comparisons matched return values and
@@ -73,10 +79,10 @@ percentage follows from the emitted function count.
   to infer a runnable interpreter. A separate private diagnostic compilation
   of the worker does not validate this transport or its integration.
 
-The current private V45 partial object integrates six new definitions with
-the unchanged V43 inputs: 270 inputs, 394 emitted function bodies, 234,104 body
-bytes, and 828 unresolved imports. All prior code/storage is preserved; the pool
-views remain unowned and unbound. This first link has not been reproduced and is
+The current private V46 partial object integrates seven new definitions with
+the unchanged V43 inputs: 271 inputs, 395 emitted function bodies, 234,600 body
+bytes, 5,384 relocation fields, and 827 unresolved imports. All prior code/storage
+is preserved; the pool views remain unowned and unbound. This first link has not been reproduced and is
 distinct from the 262-input public build recipe and its 386-body output.
 
 ## Checking this publication

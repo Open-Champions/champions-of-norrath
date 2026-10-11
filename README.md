@@ -20,6 +20,10 @@ for 262 inputs from a private partial integration that emitted 388 function
 definitions, including helpers, plus arithmetic and interpreter drafts.
 These implementations have no additional exact-byte match or gameplay credit;
 their dependencies and integration remain unfinished.
+The current private V46 partial integration adds seven published implementations
+and contains 271 inputs, 395 function bodies, 234,600 body bytes, 5,384 relocation
+fields, and 827 unresolved imports. This remains separate from the unchanged public
+build recipe below.
 The [partial source-build command](docs/PORTABLE_BUILD.md) has compiled the
 262 authored inputs from a clean checkout; it leaves 836 imports unresolved and
 produces no game executable.
