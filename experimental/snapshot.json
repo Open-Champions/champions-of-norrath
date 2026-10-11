@@ -8842,6 +8842,193 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp"
+    },
+    {
+      "input_order": 674,
+      "component": "draw-texture-init-disp-env",
+      "object_name": "disp_env.o",
+      "private_object_sha256": "28b1bac3c65b66fcabc6f7ddcf83f38a339457914242b0aaf3e8547dfb83d256",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-disp-env/disp_env.cpp"
+    },
+    {
+      "input_order": 675,
+      "component": "draw-texture-init-display-buffer-1",
+      "object_name": "display_buffer_1.o",
+      "private_object_sha256": "a65412e234e8ef90aadc4a0479acba2a33aca15f22651f3456b824c367caacc8",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp"
+    },
+    {
+      "input_order": 676,
+      "component": "draw-texture-init-display-buffer-2",
+      "object_name": "display_buffer_2.o",
+      "private_object_sha256": "bf5aa8a6ed9856eb7bc2b60ffc02e3864723d718e4372dc0f5bee4ab991094e8",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp"
+    },
+    {
+      "input_order": 677,
+      "component": "draw-texture-init-dma-gif",
+      "object_name": "dma_gif.o",
+      "private_object_sha256": "fd839f6ad3a6879263c1f5a05a77ec213e4af35054e45bc1beea1df981bc093e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-dma-gif/dma_gif.cpp"
+    },
+    {
+      "input_order": 678,
+      "component": "draw-texture-init-draw-init",
+      "object_name": "draw_init.o",
+      "private_object_sha256": "002ea7fb76c618c418931e6b350f8b07f63c07e614b6d50f6a9e734983266a38",
+      "emitted_functions": [
+        {
+          "name": "drawInit__Fv",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-draw-init/draw_init.cpp"
+    },
+    {
+      "input_order": 679,
+      "component": "draw-texture-init-engine-draw-buffer",
+      "object_name": "engine_draw_buffer.o",
+      "private_object_sha256": "b6dcddf8dafb9e1a0892160f068252d292830a286398cda0a5ca01edb7c6d511",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp"
+    },
+    {
+      "input_order": 680,
+      "component": "draw-texture-init-engine-env-tex",
+      "object_name": "engine_env_tex.o",
+      "private_object_sha256": "3d309e28970981e4b26b7188a3b508d015c82ad8ee34e916076751dd225af695",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp"
+    },
+    {
+      "input_order": 681,
+      "component": "draw-texture-init-engine-shadow-tex",
+      "object_name": "engine_shadow_tex.o",
+      "private_object_sha256": "0b36cdf73002fdd48a59d77a623d9442ad6d3fbd6146ed67301d94cf5b908205",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp"
+    },
+    {
+      "input_order": 682,
+      "component": "draw-texture-init-full-frame-mode",
+      "object_name": "full_frame_mode.o",
+      "private_object_sha256": "6106e6637966d03cdbdce3fc5dd3fab0c3a065fea3f1cd80579abac8e8312d08",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp"
+    },
+    {
+      "input_order": 683,
+      "component": "draw-texture-init-init-supersample",
+      "object_name": "init_supersample.o",
+      "private_object_sha256": "82be665deeb23d6b66f0607b500ccd120db68aa76341274e67faa518711ddcfd",
+      "emitted_functions": [
+        {
+          "name": "initSupersample__Fv",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-init-supersample/init_supersample.cpp"
+    },
+    {
+      "input_order": 684,
+      "component": "draw-texture-init-init-vif",
+      "object_name": "init_vif.o",
+      "private_object_sha256": "9c559940de96159b6c0d18c1a7815fc067a7abc13f084564e14b42da4f21e9d2",
+      "emitted_functions": [
+        {
+          "name": "initVIF__Fv",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-init-vif/init_vif.cpp"
+    },
+    {
+      "input_order": 685,
+      "component": "draw-texture-init-ntsc-legal-line",
+      "object_name": "ntsc_legal_line.o",
+      "private_object_sha256": "f1ca916b3b2dc184bf92f13cf1a9bbd05d9bd30a46b31893d664a7105032aad9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp"
+    },
+    {
+      "input_order": 686,
+      "component": "draw-texture-init-ntsc-legal-line-bottom",
+      "object_name": "ntsc_legal_line_bottom.o",
+      "private_object_sha256": "f85225f629e61e3265cff001f85b8aeaca04cc1ab11f2bca4f77c9541a2c89f0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp"
+    },
+    {
+      "input_order": 687,
+      "component": "draw-texture-init-packet-buffer",
+      "object_name": "packet_buffer.o",
+      "private_object_sha256": "9eff72b3ed239d0d99fc25667b77361fc2442314bc168f230e38c4dc60f8bfae",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-packet-buffer/packet_buffer.cpp"
+    },
+    {
+      "input_order": 688,
+      "component": "draw-texture-init-texture-init",
+      "object_name": "texture_init.o",
+      "private_object_sha256": "c46f46d1bb88559819c6f8b40e3f9ec1161308827f8f122763a12d052ff5dc95",
+      "emitted_functions": [
+        {
+          "name": "textureInit__Fii",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-texture-init/texture_init.cpp"
+    },
+    {
+      "input_order": 689,
+      "component": "draw-texture-init-texture-init-texture",
+      "object_name": "texture_init_texture.o",
+      "private_object_sha256": "ad9fa57eeb12f858cd1434134e94b79d17d89a5b5df993fb583f5326e892091b",
+      "emitted_functions": [
+        {
+          "name": "textureInitTexture__FP8_texture",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-texture-init-texture/texture_init_texture.cpp"
+    },
+    {
+      "input_order": 690,
+      "component": "draw-texture-init-zwrites-off",
+      "object_name": "zwrites_off.o",
+      "private_object_sha256": "1a701cf2e1290bd27a202eec744845a430e153393d42729c9fad5934511a4088",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-zwrites-off/zwrites_off.cpp"
+    },
+    {
+      "input_order": 691,
+      "component": "draw-texture-init-zwrites-on",
+      "object_name": "zwrites_on.o",
+      "private_object_sha256": "91f4ccdee90e43da871b6235584cc725742dbe66534eb9d0ce2a503f90f5ad14",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp"
     }
   ],
   "drafts": [
@@ -9179,6 +9366,42 @@
     "sources/data-views-symbols/norrath_player_view_483f3e.cpp": "288639fd122f6f8dd4a82b9c20fd14089135c2499d4b91908d0e0b1c03a92c27",
     "sources/data-views-symbols/norrath_player_view_484ca8.cpp": "acac2881b6f250efba0fb15106c47ec4009f5f7e87193efe27eb78330747997c",
     "sources/data-views-symbols/norrath_player_view_484f38.cpp": "78e7c2ccc21c04c725009b7b9bb28f28d06c31ce552ff5c291c62747a128afe2",
+    "sources/draw-texture-init-disp-env/disp_env.cpp": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
+    "sources/draw-texture-init-disp-env/host_contract.cpp": "9dc1f867252cdf6309cd9073c7d74a0bc3c99d77d75896c03b22691dd2027f35",
+    "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
+    "sources/draw-texture-init-display-buffer-1/host_contract.cpp": "e5a579307914b3da458282167c033e235382ffef48fd939ff509f008763ca975",
+    "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
+    "sources/draw-texture-init-display-buffer-2/host_contract.cpp": "f23a51b72d162d4cdced3bae3ae52908788af72b4222d4985158f53b6d099c25",
+    "sources/draw-texture-init-dma-gif/dma_gif.cpp": "eb652ad3116b28561c736b51fb6c1cf4594dbec84b813194f64a80ea86399f16",
+    "sources/draw-texture-init-dma-gif/host_contract.cpp": "0f6cdefe65b6060ac70014fd04bd6df260294c086dd8783a6521082d7b4528d2",
+    "sources/draw-texture-init-draw-init/draw_init.cpp": "5e70bfb04ec241286b6115078c6a9122c5756577c54e7df8f8efe4d668b1b6bc",
+    "sources/draw-texture-init-draw-init/host_contract.cpp": "f29c1437ffc40c53d7ea51c0f47ba699c3bdc2910332b0291a6d5cd504b551e2",
+    "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp": "f3c424518f56851f7f300a178d511369597d7231e10838212633cbbf2883fae6",
+    "sources/draw-texture-init-engine-draw-buffer/host_contract.cpp": "5bc1b1eaa0d0abca004aa41a4431cdeabe00dabb0da2ee73489431069f512a2d",
+    "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp": "d2cb49771750412c146ed65a3dd60f7a83b289879437c68d2af9b621200f1872",
+    "sources/draw-texture-init-engine-env-tex/host_contract.cpp": "03b37f9db319b2922ae8f72e91d501478268686dbacc3120cb4352c25beb691c",
+    "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp": "4980f30ce3c439b24dd6830f8b1db239e7f3e51a3f61ba97dfae88060aa11eb7",
+    "sources/draw-texture-init-engine-shadow-tex/host_contract.cpp": "07e57a46c6d22a6359455ae18c40e8e8d81cb0500890e1e18388238e66cd287c",
+    "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp": "53cd47a66617f353397c6afb365310608fb0a90c1e65eb16a4178886d9d98790",
+    "sources/draw-texture-init-full-frame-mode/host_contract.cpp": "9df8245780bbf22ecc9f9971cd264ba4853de059808047a2fe9e8f0ed968b05a",
+    "sources/draw-texture-init-init-supersample/host_contract.cpp": "da194ad51277105971d53900cf3958ae18f8441f97718fbce7509a22fe0d20f7",
+    "sources/draw-texture-init-init-supersample/init_supersample.cpp": "16e2ff8115e8d9fa5130c625c0858f843dc3afb530cfc9ae80aa5937c4f9bccc",
+    "sources/draw-texture-init-init-vif/host_contract.cpp": "f95ba185bd1e77483106e9480ef5a1c30d1db4d049c49591c44d85e0d0504b08",
+    "sources/draw-texture-init-init-vif/init_vif.cpp": "81c34f0f897d8159901b30ea14fabc47209eabd4e31c594e374de354fadf91e4",
+    "sources/draw-texture-init-ntsc-legal-line-bottom/host_contract.cpp": "fcb6af4dd4ad99a1b2d51196dc97d2ca37dcf17c3995aa49c5b01a199de584c1",
+    "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp": "f2d496936f01e904714569111e57c60d6c82167c16dfc49c53a3d446a1cda682",
+    "sources/draw-texture-init-ntsc-legal-line/host_contract.cpp": "1cf59d046f18a9bc4e97fffd30d09007c62ae31420b4139f7e163ac0103d47b4",
+    "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp": "ebbad15ff4297513e756951c98b90f7d7da963220887dfeaa3754a9b82e14446",
+    "sources/draw-texture-init-packet-buffer/host_contract.cpp": "0bc436b42d1e4a3f16360875c576e5ea7c26177fe4df52eb47e8e32166812fc5",
+    "sources/draw-texture-init-packet-buffer/packet_buffer.cpp": "157041b461186207e9be56c7edfa295e715fa3c127fd7de7e743719c73954476",
+    "sources/draw-texture-init-texture-init-texture/host_contract.cpp": "bb9f1a3c8723d1a88ad17b1b0fb28d0722d4f2d5c5ee0f80b7a2365084fc8f85",
+    "sources/draw-texture-init-texture-init-texture/texture_init_texture.cpp": "839e6689eb37e3ceeac2c90afc74dc5503b1a23f241927bffddff71b07276ad1",
+    "sources/draw-texture-init-texture-init/host_contract.cpp": "ea013cf56a767a691e5e23e9a53dae3a934520cf244edda4059b2f95cde2f7a5",
+    "sources/draw-texture-init-texture-init/texture_init.cpp": "8b75a353afcac335116466bbe46f22fe56e94614ec15403b42d32f585dc18d21",
+    "sources/draw-texture-init-zwrites-off/host_contract.cpp": "2f1d1caa0e1a257f36dc977cf2abd803cb38c6e98d82c36e843fec360532c9f4",
+    "sources/draw-texture-init-zwrites-off/zwrites_off.cpp": "4aa4020f74376ed33bbe743d2b01027da71bbe82f0cea748a80d7f1c219db092",
+    "sources/draw-texture-init-zwrites-on/host_contract.cpp": "38d8b2af3577f605f1ce7946f3a83ba54de5a73c1a913560b018ad471878289c",
+    "sources/draw-texture-init-zwrites-on/zwrites_on.cpp": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -11061,11 +11284,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 674,
-    "authored_default_inputs": 672,
+    "selected_inputs": 692,
+    "authored_default_inputs": 690,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 576,
-    "compiled_body_bytes_from_accepted_inputs": 296720,
+    "emitted_function_definitions_including_helpers": 581,
+    "compiled_body_bytes_from_accepted_inputs": 299440,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -11078,7 +11301,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 361
+    "package_selected_inputs": 379
   },
   "startup_implementations": [
     {
@@ -16488,6 +16711,247 @@
       ],
       "host_files": [
         "sources/gs-dma-kernel-vblank-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-disp-env/disp_env.cpp",
+      "source_sha256": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
+      "object_sha256": "28b1bac3c65b66fcabc6f7ddcf83f38a339457914242b0aaf3e8547dfb83d256",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-disp-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp",
+      "source_sha256": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
+      "object_sha256": "a65412e234e8ef90aadc4a0479acba2a33aca15f22651f3456b824c367caacc8",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-display-buffer-1/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp",
+      "source_sha256": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
+      "object_sha256": "bf5aa8a6ed9856eb7bc2b60ffc02e3864723d718e4372dc0f5bee4ab991094e8",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-display-buffer-2/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-dma-gif/dma_gif.cpp",
+      "source_sha256": "eb652ad3116b28561c736b51fb6c1cf4594dbec84b813194f64a80ea86399f16",
+      "object_sha256": "fd839f6ad3a6879263c1f5a05a77ec213e4af35054e45bc1beea1df981bc093e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-dma-gif/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-draw-init/draw_init.cpp",
+      "source_sha256": "5e70bfb04ec241286b6115078c6a9122c5756577c54e7df8f8efe4d668b1b6bc",
+      "object_sha256": "002ea7fb76c618c418931e6b350f8b07f63c07e614b6d50f6a9e734983266a38",
+      "emitted_functions": [
+        {
+          "name": "drawInit__Fv",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "host_files": [
+        "sources/draw-texture-init-draw-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp",
+      "source_sha256": "f3c424518f56851f7f300a178d511369597d7231e10838212633cbbf2883fae6",
+      "object_sha256": "b6dcddf8dafb9e1a0892160f068252d292830a286398cda0a5ca01edb7c6d511",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-engine-draw-buffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp",
+      "source_sha256": "d2cb49771750412c146ed65a3dd60f7a83b289879437c68d2af9b621200f1872",
+      "object_sha256": "3d309e28970981e4b26b7188a3b508d015c82ad8ee34e916076751dd225af695",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-engine-env-tex/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp",
+      "source_sha256": "4980f30ce3c439b24dd6830f8b1db239e7f3e51a3f61ba97dfae88060aa11eb7",
+      "object_sha256": "0b36cdf73002fdd48a59d77a623d9442ad6d3fbd6146ed67301d94cf5b908205",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-engine-shadow-tex/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp",
+      "source_sha256": "53cd47a66617f353397c6afb365310608fb0a90c1e65eb16a4178886d9d98790",
+      "object_sha256": "6106e6637966d03cdbdce3fc5dd3fab0c3a065fea3f1cd80579abac8e8312d08",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-full-frame-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-init-supersample/init_supersample.cpp",
+      "source_sha256": "16e2ff8115e8d9fa5130c625c0858f843dc3afb530cfc9ae80aa5937c4f9bccc",
+      "object_sha256": "82be665deeb23d6b66f0607b500ccd120db68aa76341274e67faa518711ddcfd",
+      "emitted_functions": [
+        {
+          "name": "initSupersample__Fv",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "host_files": [
+        "sources/draw-texture-init-init-supersample/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-init-vif/init_vif.cpp",
+      "source_sha256": "81c34f0f897d8159901b30ea14fabc47209eabd4e31c594e374de354fadf91e4",
+      "object_sha256": "9c559940de96159b6c0d18c1a7815fc067a7abc13f084564e14b42da4f21e9d2",
+      "emitted_functions": [
+        {
+          "name": "initVIF__Fv",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/draw-texture-init-init-vif/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp",
+      "source_sha256": "ebbad15ff4297513e756951c98b90f7d7da963220887dfeaa3754a9b82e14446",
+      "object_sha256": "f1ca916b3b2dc184bf92f13cf1a9bbd05d9bd30a46b31893d664a7105032aad9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-ntsc-legal-line/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp",
+      "source_sha256": "f2d496936f01e904714569111e57c60d6c82167c16dfc49c53a3d446a1cda682",
+      "object_sha256": "f85225f629e61e3265cff001f85b8aeaca04cc1ab11f2bca4f77c9541a2c89f0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-ntsc-legal-line-bottom/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-packet-buffer/packet_buffer.cpp",
+      "source_sha256": "157041b461186207e9be56c7edfa295e715fa3c127fd7de7e743719c73954476",
+      "object_sha256": "9eff72b3ed239d0d99fc25667b77361fc2442314bc168f230e38c4dc60f8bfae",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-packet-buffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-texture-init/texture_init.cpp",
+      "source_sha256": "8b75a353afcac335116466bbe46f22fe56e94614ec15403b42d32f585dc18d21",
+      "object_sha256": "c46f46d1bb88559819c6f8b40e3f9ec1161308827f8f122763a12d052ff5dc95",
+      "emitted_functions": [
+        {
+          "name": "textureInit__Fii",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/draw-texture-init-texture-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-texture-init-texture/texture_init_texture.cpp",
+      "source_sha256": "839e6689eb37e3ceeac2c90afc74dc5503b1a23f241927bffddff71b07276ad1",
+      "object_sha256": "ad9fa57eeb12f858cd1434134e94b79d17d89a5b5df993fb583f5326e892091b",
+      "emitted_functions": [
+        {
+          "name": "textureInitTexture__FP8_texture",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "sources/draw-texture-init-texture-init-texture/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-zwrites-off/zwrites_off.cpp",
+      "source_sha256": "4aa4020f74376ed33bbe743d2b01027da71bbe82f0cea748a80d7f1c219db092",
+      "object_sha256": "1a701cf2e1290bd27a202eec744845a430e153393d42729c9fad5934511a4088",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-zwrites-off/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "draw-texture-init",
+      "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp",
+      "source_sha256": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
+      "object_sha256": "91f4ccdee90e43da871b6235584cc725742dbe66534eb9d0ce2a503f90f5ad14",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/draw-texture-init-zwrites-on/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

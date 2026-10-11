@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 672,
+  "default_authored_inputs": 690,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -161,6 +161,24 @@
     "sources/data-views-symbols/norrath_next_view_449280.cpp": "79573fa555a5b5ebb1dc92c94d9e6386518d82e7bbbdaec3d917f5347e884bc7",
     "sources/data-views-symbols/norrath_next_view_44c958.cpp": "82c8e3dd77183ffc963c9d23d444ed83b80dd348710298da19bad8ccde82ce8b",
     "sources/data-views-symbols/norrath_next_view_44e820.cpp": "293bc0e9b2526498752fa8df556e34aa1c411d2b04de2a78cdfc554101a33a97",
+    "sources/draw-texture-init-disp-env/disp_env.cpp": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
+    "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
+    "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
+    "sources/draw-texture-init-dma-gif/dma_gif.cpp": "eb652ad3116b28561c736b51fb6c1cf4594dbec84b813194f64a80ea86399f16",
+    "sources/draw-texture-init-draw-init/draw_init.cpp": "5e70bfb04ec241286b6115078c6a9122c5756577c54e7df8f8efe4d668b1b6bc",
+    "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp": "f3c424518f56851f7f300a178d511369597d7231e10838212633cbbf2883fae6",
+    "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp": "d2cb49771750412c146ed65a3dd60f7a83b289879437c68d2af9b621200f1872",
+    "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp": "4980f30ce3c439b24dd6830f8b1db239e7f3e51a3f61ba97dfae88060aa11eb7",
+    "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp": "53cd47a66617f353397c6afb365310608fb0a90c1e65eb16a4178886d9d98790",
+    "sources/draw-texture-init-init-supersample/init_supersample.cpp": "16e2ff8115e8d9fa5130c625c0858f843dc3afb530cfc9ae80aa5937c4f9bccc",
+    "sources/draw-texture-init-init-vif/init_vif.cpp": "81c34f0f897d8159901b30ea14fabc47209eabd4e31c594e374de354fadf91e4",
+    "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp": "f2d496936f01e904714569111e57c60d6c82167c16dfc49c53a3d446a1cda682",
+    "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp": "ebbad15ff4297513e756951c98b90f7d7da963220887dfeaa3754a9b82e14446",
+    "sources/draw-texture-init-packet-buffer/packet_buffer.cpp": "157041b461186207e9be56c7edfa295e715fa3c127fd7de7e743719c73954476",
+    "sources/draw-texture-init-texture-init-texture/texture_init_texture.cpp": "839e6689eb37e3ceeac2c90afc74dc5503b1a23f241927bffddff71b07276ad1",
+    "sources/draw-texture-init-texture-init/texture_init.cpp": "8b75a353afcac335116466bbe46f22fe56e94614ec15403b42d32f585dc18d21",
+    "sources/draw-texture-init-zwrites-off/zwrites_off.cpp": "4aa4020f74376ed33bbe743d2b01027da71bbe82f0cea748a80d7f1c219db092",
+    "sources/draw-texture-init-zwrites-on/zwrites_on.cpp": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -9469,6 +9487,168 @@
       "profile": "authored_cpp",
       "sha256": "69c30b1d85fba4187c76cdaacbcbac02cacb585f05559dd635b093526d4af0ee",
       "source": "sources/gs-dma-kernel-vblank-handler/vblank_handler.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 674,
+      "kind": "independently_authored_source",
+      "object_name": "disp_env.o",
+      "profile": "authored_cpp",
+      "sha256": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
+      "source": "sources/draw-texture-init-disp-env/disp_env.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 675,
+      "kind": "independently_authored_source",
+      "object_name": "display_buffer_1.o",
+      "profile": "authored_cpp",
+      "sha256": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
+      "source": "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 676,
+      "kind": "independently_authored_source",
+      "object_name": "display_buffer_2.o",
+      "profile": "authored_cpp",
+      "sha256": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
+      "source": "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 677,
+      "kind": "independently_authored_source",
+      "object_name": "dma_gif.o",
+      "profile": "authored_cpp",
+      "sha256": "eb652ad3116b28561c736b51fb6c1cf4594dbec84b813194f64a80ea86399f16",
+      "source": "sources/draw-texture-init-dma-gif/dma_gif.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 678,
+      "kind": "independently_authored_source",
+      "object_name": "draw_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5e70bfb04ec241286b6115078c6a9122c5756577c54e7df8f8efe4d668b1b6bc",
+      "source": "sources/draw-texture-init-draw-init/draw_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 679,
+      "kind": "independently_authored_source",
+      "object_name": "engine_draw_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "f3c424518f56851f7f300a178d511369597d7231e10838212633cbbf2883fae6",
+      "source": "sources/draw-texture-init-engine-draw-buffer/engine_draw_buffer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 680,
+      "kind": "independently_authored_source",
+      "object_name": "engine_env_tex.o",
+      "profile": "authored_cpp",
+      "sha256": "d2cb49771750412c146ed65a3dd60f7a83b289879437c68d2af9b621200f1872",
+      "source": "sources/draw-texture-init-engine-env-tex/engine_env_tex.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 681,
+      "kind": "independently_authored_source",
+      "object_name": "engine_shadow_tex.o",
+      "profile": "authored_cpp",
+      "sha256": "4980f30ce3c439b24dd6830f8b1db239e7f3e51a3f61ba97dfae88060aa11eb7",
+      "source": "sources/draw-texture-init-engine-shadow-tex/engine_shadow_tex.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 682,
+      "kind": "independently_authored_source",
+      "object_name": "full_frame_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "53cd47a66617f353397c6afb365310608fb0a90c1e65eb16a4178886d9d98790",
+      "source": "sources/draw-texture-init-full-frame-mode/full_frame_mode.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 683,
+      "kind": "independently_authored_source",
+      "object_name": "init_supersample.o",
+      "profile": "authored_cpp",
+      "sha256": "16e2ff8115e8d9fa5130c625c0858f843dc3afb530cfc9ae80aa5937c4f9bccc",
+      "source": "sources/draw-texture-init-init-supersample/init_supersample.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 684,
+      "kind": "independently_authored_source",
+      "object_name": "init_vif.o",
+      "profile": "authored_cpp",
+      "sha256": "81c34f0f897d8159901b30ea14fabc47209eabd4e31c594e374de354fadf91e4",
+      "source": "sources/draw-texture-init-init-vif/init_vif.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 685,
+      "kind": "independently_authored_source",
+      "object_name": "ntsc_legal_line.o",
+      "profile": "authored_cpp",
+      "sha256": "ebbad15ff4297513e756951c98b90f7d7da963220887dfeaa3754a9b82e14446",
+      "source": "sources/draw-texture-init-ntsc-legal-line/ntsc_legal_line.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 686,
+      "kind": "independently_authored_source",
+      "object_name": "ntsc_legal_line_bottom.o",
+      "profile": "authored_cpp",
+      "sha256": "f2d496936f01e904714569111e57c60d6c82167c16dfc49c53a3d446a1cda682",
+      "source": "sources/draw-texture-init-ntsc-legal-line-bottom/ntsc_legal_line_bottom.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 687,
+      "kind": "independently_authored_source",
+      "object_name": "packet_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "157041b461186207e9be56c7edfa295e715fa3c127fd7de7e743719c73954476",
+      "source": "sources/draw-texture-init-packet-buffer/packet_buffer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 688,
+      "kind": "independently_authored_source",
+      "object_name": "texture_init.o",
+      "profile": "authored_cpp",
+      "sha256": "8b75a353afcac335116466bbe46f22fe56e94614ec15403b42d32f585dc18d21",
+      "source": "sources/draw-texture-init-texture-init/texture_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 689,
+      "kind": "independently_authored_source",
+      "object_name": "texture_init_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "839e6689eb37e3ceeac2c90afc74dc5503b1a23f241927bffddff71b07276ad1",
+      "source": "sources/draw-texture-init-texture-init-texture/texture_init_texture.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 690,
+      "kind": "independently_authored_source",
+      "object_name": "zwrites_off.o",
+      "profile": "authored_cpp",
+      "sha256": "4aa4020f74376ed33bbe743d2b01027da71bbe82f0cea748a80d7f1c219db092",
+      "source": "sources/draw-texture-init-zwrites-off/zwrites_off.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 691,
+      "kind": "independently_authored_source",
+      "object_name": "zwrites_on.o",
+      "profile": "authored_cpp",
+      "sha256": "9b69dfdfd244e5b127d9b2fbf620e60dea931da3dbdc136691b055ba14e7d5e3",
+      "source": "sources/draw-texture-init-zwrites-on/zwrites_on.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9568,7 +9748,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "9ad159204a9b820cb37c0fa9aea3392e990452227224ed40457c7ab02df10858",
+  "snapshot_sha256": "7499bde4aa137a8a83556540b4f4d8b7e014680abe063c7a8592f7f71c08b8a0",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

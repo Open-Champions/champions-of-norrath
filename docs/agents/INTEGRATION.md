@@ -646,6 +646,32 @@ Opened: `checkModelVersion`, `draw`, `sceDmaPause`, `sceDmaPutEnv`,
 214 tool tests passed. The byte comparisons are host checks. They are not an
 exact-match ledger admission. No EE or game execution.
 
+## agents/draw-texture-init
+
+All 18 units were selected. Host checks passed. `initVIF__Fv` and
+`drawInit__Fv` compile their MMIO stores as real stores on the EE and as
+host callbacks under `NORRATH_HOST_CONTRACT`. Compiled bodies:
+`initSupersample__Fv` 1284, `textureInitTexture__FP8_texture` 616,
+`drawInit__Fv` 496, `initVIF__Fv` 216, `textureInit__Fii` 108. No game
+binary was committed.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 884 |
+| Closed | 17 |
+| Opened | 8 |
+
+Closed the 17 names above that were already unresolved, including `dmaGif`,
+`dmaVif0`, `dmaVif1`, and `textureBufferStartAddress`. Also defined, and not
+previous imports: `textureBufferSize`, `textureMaxBlockSize`, `drawRecords`,
+`drawHead`, `endTagVU1`, `writeBuffer`, `nmDrawUsed`, `endDrawSemaphore`,
+`vif0HID`, `vif1HID`, `gifHID`, `fullFrameMode`, `packetBuffer`,
+`zwritesOn`, `zwritesOff`. Opened: `AddDmacHandler`, `EnableDmac`,
+`gsIntHandler__Fi`, `makeSamplePacket__Fb`, `reloadDMA__Fi`, `sceDmaSend`,
+`sceGsSyncV`, `textureInternalInit__Fv`. 579 function bodies, 690 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -715,6 +741,12 @@ items-player already defines 35 `norrath_player_view_*` names. data-views
 defines the same 35 names again, including `norrath_player_view_484ca8`.
 Those units were not selected. Decide which package owns each name.
 
+draw-texture-init defines the global `dmaGif`, `dmaVif0`, and `dmaVif1`.
+`drawInit__Fv` keeps a separate private triple and does not publish it.
+engine-init left which object a final link binds unsettled. This link binds
+the draw-texture globals. Decide whether the private triple should stay
+private.
+
 `norrath_route_world_word_bytes` is the world-state object for original
 `world` at `0x004844a0`. actors-b leaves that address unresolved as
 `norrath_actors_b_view_4844a0` and does not alias it. Decide whether they
@@ -730,7 +762,8 @@ symbol was defined twice.
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
-scheduler, game-boot, subsystem-inits, and gs-dma-kernel. `engineInit__Ff`,
+scheduler, game-boot, subsystem-inits, gs-dma-kernel, and draw-texture-init.
+`engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -760,3 +793,4 @@ and no startup stage has executed.
 - 2026-10-11 17:10 CDT — `agents/game-boot` — 870 unresolved imports
 - 2026-10-11 17:11 CDT — `agents/subsystem-inits` — 907 unresolved imports
 - 2026-10-11 17:13 CDT — `agents/gs-dma-kernel` — 893 unresolved imports
+- 2026-10-11 17:15 CDT — `agents/draw-texture-init` — 884 unresolved imports
