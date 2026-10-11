@@ -174,6 +174,18 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_inventory_animation_lump_names_view.cpp",
                     "norrath_inventory_animation_lump_names_view", 160, content)
 
+    def test_resource_names(self):
+        content = bytes.fromhex(
+            "6468735f69646c65622e616e6d000000"
+            "6468615f69646c65622e616e6d000000"
+            "6c5f69646c65622e616e6d0000000000"
+            "625f69646c65622e616e6d0000000000"
+            "6e775f69646c65622e616e6d00000000"
+            "64775f69646c65622e616e6d00000000"
+            "6f68775f69646c65622e616e6d000000")
+        self.expect("norrath_inventory_animation_resource_names_view.cpp",
+                    "norrath_inventory_animation_resource_names_view", 112, content)
+
 
 if __name__ == "__main__":
     unittest.main()
