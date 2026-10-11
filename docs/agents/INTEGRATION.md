@@ -363,6 +363,31 @@ symbols from that notes list. `cdLoad__FPcPvii`, `exit`, `launchSRS`, `main`,
 unresolved or already defined. 477 function bodies, 421 authored inputs, zero
 COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/save-net-anim
+
+Merged. Three view units are on the branch and were not selected, because
+those symbols are already in the link. The selected units have host tests
+under `host-tests/save-net-anim/`; 48 host tests passed. No game binary or
+disassembly listing was committed. `norrath_archive_sound_free_ram` stays
+unresolved.
+
+| | |
+|---|---|
+| Before | 692 |
+| After | 738 |
+| Closed | 44 |
+| Opened | 90 |
+
+Closed: the 44 names that left the unresolved list, including
+`norrath_archive_map_animation_sounds`, `sceMcInit`, and the startup names
+`commInitNet__Fv` through `textInitNet__Fv`. Opened: 90 names, including the
+memory-card helpers, network words, and `sprintf` / `strcpy`. Not selected:
+`norrath_archive_animation_extension_view` (cd-archive already defines the
+larger extension table), `norrath_mc_pre_start_key_bytes`, and
+`norrath_mc_start_key_bytes` (script-amx already defines both keys). 489
+function bodies, 464 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -392,6 +417,14 @@ test fails if those pointers are equal. The notes say the view sits inside
 the 322-byte `levelName` image. Decide whether the tail should be a second
 symbol.
 
+`norrath_archive_animation_extension_view` is the cd-archive extension table.
+save-net-anim also defines that name as four bytes, `anm`. That unit was not
+selected. Decide which object owns the name.
+
+`norrath_mc_pre_start_key_bytes` and `norrath_mc_start_key_bytes` are the
+script-amx keys. save-net-anim defines the same two names again. Those units
+were not selected. Decide whether a second definition is wanted.
+
 ## Disagreements
 
 The two items under Needs a decision are the only symbol disagreements among
@@ -400,7 +433,9 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-megatile, script-amx, cd-archive, libc-format, and items-player. The held AMX draft remains uncompiled.
+megatile, script-amx, cd-archive, libc-format, items-player, and
+save-net-anim. The held AMX draft remains uncompiled. The three unselected
+save-net-anim view units are authored and not in the link.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -414,3 +449,4 @@ and no startup stage has executed.
 - 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports
 - 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports
 - 2026-10-11 16:34 CDT — `agents/items-player` — 692 unresolved imports
+- 2026-10-11 16:37 CDT — `agents/save-net-anim` — 738 unresolved imports

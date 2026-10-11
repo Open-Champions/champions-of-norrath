@@ -185,8 +185,12 @@ def check(root):
         assert review.is_file() and review.suffix == '.md'
         assert record['host_files']
         for host in record['host_files']:
-            assert host in files and host not in authored_sources
-            assert host.startswith('sources/')
+            if host.startswith('sources/'):
+                assert host in files and host not in authored_sources
+            elif host.startswith('host-tests/') and host.endswith(('.cpp', '.py')):
+                assert (root / host).is_file()
+            else:
+                raise AssertionError(host)
     provenance = snapshot['source_provenance']
     assert len(provenance) == 15
     for name, record in provenance.items():
