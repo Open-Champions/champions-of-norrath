@@ -210,6 +210,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_inventory_animation_state_base_view.cpp",
                     "norrath_inventory_animation_state_base_view", 4 * 264, require_zero=True)
 
+    def test_saved_map(self):
+        self.expect("norrath_saved_map_tiles_bytes.cpp", "norrath_saved_map_tiles_bytes", 93312,
+                    require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
