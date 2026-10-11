@@ -1124,6 +1124,33 @@ Closed includes `objectGrid`, `ghostObjectGrid`, `stringHash`, `objectHash`,
 `worldClipCubeToClipFrustum__FPA1_fi`. 778 function bodies, 956 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/vslots-a
+
+All 48 units were selected. Host checks passed. They are the typeinfo,
+destructor, clone, and creature slot bodies in this package.
+
+| | |
+|---|---|
+| Before | 929 |
+| After | 889 |
+| Closed | 48 |
+| Opened | 8 |
+
+Closed: the twelve `_$_*` destructors, the thirteen `__tf*` typeinfo
+functions, the ten `clone__*` functions, and
+`confuse__8Creaturei`, `death__8Creature`, `getMinibossName__8Creature`,
+`getModel__8Creature`, `getSkillRank__8Creaturei`, `initMiniboss__8Creature`,
+`isEnemy__8CreatureP10GameObject`,
+`msg_alert__8CreatureifG6Point3P10GameObject`,
+`msg_collisionWorld__8CreatureG6Point3`,
+`msg_collision__11SmallSpiderP10GameObject`,
+`msg_collision__3CatP10GameObject`, `msg_collision__8CreatureP10GameObject`.
+Opened: `_$_14AnimationState`, `_$_15FxCreatureState`,
+`__15AnimationState8RC15AnimationState8`, `__rtti_si`,
+`dropItem__4itemG6Point3Pc`, `objectAddToDeleteList__FP10GameObject`,
+`readyToSwitch__3Cat`, `switchToRun__3Cat`. 826 function bodies, 1004
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1232,7 +1259,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, and particles. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, and vslots-a. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1282,3 +1309,4 @@ and no startup stage has executed.
 - 2026-10-11 17:51 CDT — `agents/vslots-b` — 947 unresolved imports
 - 2026-10-11 17:52 CDT — `agents/vslots-b` — 947 unresolved imports
 - 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
+- 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
