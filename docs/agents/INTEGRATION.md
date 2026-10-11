@@ -388,6 +388,30 @@ larger extension table), `norrath_mc_pre_start_key_bytes`, and
 function bodies, 464 authored inputs, zero COMMON. 214 tool tests passed.
 No EE or game execution.
 
+## agents/engine-init
+
+Merged ahead of the remaining packages. This is the first missing link after
+`main`. Both functions have host contracts that returned failure when the
+order or the GS and DMA values were wrong. Both contracts passed. No game
+binary or disassembly listing was committed. The compiled `engineInit__Ff`
+body is 2080 bytes; the notes say that is not an original-byte match of the
+1944-byte image. The stack check body is 144 bytes.
+
+| | |
+|---|---|
+| Before | 738 |
+| After | 789 |
+| Closed | 2 |
+| Opened | 53 |
+
+Closed: `engineInit__Ff`, `_engineCheckStack__FPCci`. Opened: 53 names,
+including `floorInit__Fv`, `vblankHandler__Fi`, `memInit__FPvi`, the GS and
+DMA calls, and `vblankCount`, `vblankField`, `vblankSemaphore`, and
+`vblankSemaphore2`. The cd-archive package already defines separate
+`norrath_archive_vblank_*` views and does not alias these original names.
+491 function bodies, 466 authored inputs, zero COMMON. 214 tool tests passed.
+No EE startup stage ran.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -425,6 +449,12 @@ selected. Decide which object owns the name.
 script-amx keys. save-net-anim defines the same two names again. Those units
 were not selected. Decide whether a second definition is wanted.
 
+`vblankCount`, `vblankField`, and `vblankSemaphore2` are now imports from
+`engineInit`. cd-archive defines `norrath_archive_vblank_count_view`,
+`norrath_archive_vblank_field_view`, and
+`norrath_archive_vblank_semaphore_view` as separate objects. Decide whether
+each pair is one symbol.
+
 ## Disagreements
 
 The two items under Needs a decision are the only symbol disagreements among
@@ -433,8 +463,9 @@ the packages selected so far. No symbol in those packages was defined twice.
 ## Still authored, never executed
 
 Every function and data object added by math, audio, memory, object-infra,
-megatile, script-amx, cd-archive, libc-format, items-player, and
-save-net-anim. The held AMX draft remains uncompiled. The three unselected
+megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
+and engine-init. `engineInit__Ff` and `_engineCheckStack__FPCci` are selected
+and have not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units are authored and not in the link.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
@@ -450,3 +481,4 @@ and no startup stage has executed.
 - 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports
 - 2026-10-11 16:34 CDT — `agents/items-player` — 692 unresolved imports
 - 2026-10-11 16:37 CDT — `agents/save-net-anim` — 738 unresolved imports
+- 2026-10-11 16:39 CDT — `agents/engine-init` — 789 unresolved imports
