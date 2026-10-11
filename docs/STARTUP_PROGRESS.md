@@ -54,3 +54,14 @@ standard source definition supersedes the optional alias in local commit 33bc826
 The [receipt](../experimental/runtime-memory-receipt.json) records the executed
 build identities; later JSON ordering changes do not change the selected sources.
 No entry, constructor, first-frame or gameplay stage has executed.
+
+## Ordinary constructor package
+
+The complete ordinary guard, reverse constructor walker and persistent destructor
+walker are now selected authored source. Their dependency chain links internally,
+but **no game startup stage has executed**. See [contracts and host checks](STARTUP_CTORS.md).
+The fresh package build has **853 imports**: zero old imports closed and six newly
+exposed startup dependencies (`__CTOR_LIST__`, `__DTOR_LIST__`, `__EH_FRAME_BEGIN__`,
+`__register_frame_info`, `__deregister_frame_info`, `atexit`). COMMON remains zero.
+The increase from 847 reflects new startup coverage, not a regression in closure.
+The [receipt](../experimental/startup-ctors-receipt.json) pins this measurement.
