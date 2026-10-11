@@ -720,6 +720,34 @@ and the button, dialog, menu, and volume words those units define. Opened:
 `stream`. 592 function bodies, 716 authored inputs, zero COMMON. 214 tool
 tests passed. No EE or game execution.
 
+## agents/natives-a
+
+All 40 units were selected. Host contracts passed. Body sizes match the
+notes. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 836 |
+| After | 829 |
+| Closed | 40 |
+| Opened | 33 |
+
+Closed the 40 `amx*` natives this package defines. Opened:
+`DLG_FireUpShopOnExit`, `DLG_ForceMutexRelease__Fv`, `DLG_SwoopMode`,
+`MC_SaveConfigSilent__Fii`, `P_AddParticle__FP11ParticleDefP6Point3T1f`,
+`__eq__C9type_infoRC9type_info`, `__tf8AutoProp`, `activePlayer`,
+`addQuestToLog__FPcT0`, `amx_GetAddr`, `amx_GetString`, `charm__8Creaturei`,
+`checkForMonsters__FP10GameObject`, `cutStartScene__FP9_cutscenePc`,
+`floorAdd__FG6Point3sfii`, `gameCheckPlayerAlive__Fv`,
+`gamePlayerLightAttenuate`, `hudAddHelpMessage__FiPUsT1`, `nmPlayersAlive`,
+`noMonsters`, `objectFindObject__FPc`, `objectFindObject__FPcPP10GameObjecti`,
+`objectIterateGrid__FPFP10GameObject_v`, `objectUpdateInGrid__FP10GameObject`,
+`playersAlive`, `queryInventoryItem__FPci`, `scriptAddDeferedCall__FPc`,
+`scriptGetGameState__FPc`, `scriptParticles`, `scriptSetGameState__FPci`,
+`scriptStart__FPc`, `shopStart__Fiii`, `syncRandState`. 632 function bodies,
+756 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -811,7 +839,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, and dialog-hud-controls. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, and natives-a. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -844,3 +872,4 @@ and no startup stage has executed.
 - 2026-10-11 17:15 CDT — `agents/draw-texture-init` — 884 unresolved imports
 - 2026-10-11 17:16 CDT — `agents/frame-loop` — 888 unresolved imports
 - 2026-10-11 17:17 CDT — `agents/dialog-hud-controls` — 836 unresolved imports
+- 2026-10-11 17:19 CDT — `agents/natives-a` — 829 unresolved imports

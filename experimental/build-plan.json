@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 716,
+  "default_authored_inputs": 756,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1199,6 +1199,46 @@
     "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
     "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
     "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/natives-a-activate-shop/activate_shop.cpp": "03aceb5f5f34b7efc451543dd1b6682b008ab0e9292a58b9d1a777a635f532b0",
+    "sources/natives-a-active-player-is-dwarf/active_player_is_dwarf.cpp": "30409c19fc8f0ecbe2234bbd04eded98a05b7b4b7a1a40a2a40084fd35daf396",
+    "sources/natives-a-active-player-is-elf/active_player_is_elf.cpp": "80cd7b30b69c5ff00decaa0a17a4f6f1bcb8a1c6e7a09079df4188d46ca2060d",
+    "sources/natives-a-add-deferred-call/add_deferred_call.cpp": "b63c92f6ee0c9293e3acd6683fe3fb1311b8e1bcfa036ac34ef8e57138d06ea3",
+    "sources/natives-a-add-expanding-pool/add_expanding_pool.cpp": "864a4e1a794167c9d302f86ebaf75287a6e12a28443df392ec6a3b4ac5a15897",
+    "sources/natives-a-add-help-message/add_help_message.cpp": "22ec80175274242cd806092540f05e05f8151d49ebde1ecf1149fe3fd73e4971",
+    "sources/natives-a-add-particle-on-object/add_particle_on_object.cpp": "22a9bd33ff2c84da35de0b6f40513576a11fc3786973578bf18377f286f0540d",
+    "sources/natives-a-add-quest/add_quest.cpp": "a17a51eb5d80e4ccd7f79ae644e6494d76b4fbefafcef80767d1052c015e80f7",
+    "sources/natives-a-addv/addv.cpp": "5c48f6fa8c4dd56c04ab673a8b480b90b1ec803b1d6c2b14fa065d2dfe738c5c",
+    "sources/natives-a-auto-prop-set-state/auto_prop_set_state.cpp": "8bd576b7b9752c5664888fa153b5ea016d7c88a75051f6d2dfacb39ecbccfd0a",
+    "sources/natives-a-call-script/call_script.cpp": "b834dda992d13d6fc8329a75609f1aff3d3c1cb26452964a44a100a2c61ff9d3",
+    "sources/natives-a-change-swoop/change_swoop.cpp": "3aa0e20282bc51a4df2bf706e00af43d3887594df58604b9d5fff629306b25b2",
+    "sources/natives-a-check-monsters-remain/check_monsters_remain.cpp": "7b839ac83477d81097044412a1d75fb16ae195aabdf8866d3561c642b91a2939",
+    "sources/natives-a-check-player-alive/check_player_alive.cpp": "82df3bfad2e7e3ec44f63ec6c241ff6f8601efe94eaf61ffcb0b0600e549cc37",
+    "sources/natives-a-check-player-gold/check_player_gold.cpp": "abf7fb5ae47d67db98af73d994078107517342f202485826a54db0f790a05213",
+    "sources/natives-a-clear-recall/clear_recall.cpp": "45ea2b77e52a73d574354c8edc2370a83c64eba660e8e276f5f8ac7707579e99",
+    "sources/natives-a-closest-player-dist/closest_player_dist.cpp": "056c19c14d374d54e375152f882b647e969c6d20b24e9cd555534873ed2f83aa",
+    "sources/natives-a-control-vehicle/control_vehicle.cpp": "c5a770bc81fc2ff2082ad46ffe5e67ba333993bbb20935f1bdb31d1d74965456",
+    "sources/natives-a-count-live-objects/count_live_objects.cpp": "0389f9d5806de594f731adc911d1ca40103b3cb30c55835531974412ef61560c",
+    "sources/natives-a-count-quest-items/count_quest_items.cpp": "a47495dc3eef16466ad2bfbb33f20044ad64b0e988c5d98832a4a0b8065084d8",
+    "sources/natives-a-cutscene/cutscene.cpp": "ce87c09b506df344e8b7f4d94d2ddd63f126bd517c8073c483d099ed71a8dfd1",
+    "sources/natives-a-decay-player-lights/decay_player_lights.cpp": "318060cf1729aecced306f236f81e4e6f411c75e7e3642e07d4d35cfdd32064d",
+    "sources/natives-a-delete-monster/delete_monster.cpp": "382fd8b7324c167da85cdef5ec955ff30655aec30b2539b9b7de79d47da1bd94",
+    "sources/natives-a-delete-objects/delete_objects.cpp": "5cebc1d69cf980464a7b33153dfd83a3cd6eb13a34ead61838841582dcd0492f",
+    "sources/natives-a-dialog-running/dialog_running.cpp": "64d8e7c2c12ee6732eb35c87fb61219185f6a09271c9b1de8d5d0febaf524485",
+    "sources/natives-a-end-game/end_game.cpp": "a2c26f27e542fc910fa332bd74245f687ef214657ad26cbcdfbd905cf3951f43",
+    "sources/natives-a-end-gauntlet/end_gauntlet.cpp": "0cc20673becc023b11895f7b4c93e8b3a87e71c0238aacb9c2f1a3e1d6e4a701",
+    "sources/natives-a-end-music/end_music.cpp": "67fb0c1abbe43356af8e9fc6d8194c82eab1072f9c9d3b0a9c4b543f4e553186",
+    "sources/natives-a-entity-ride-vehicle/entity_ride_vehicle.cpp": "f28e462e8a6f0920269936252d47b5929a643aa5961bc2f9bf536ffd2074b776",
+    "sources/natives-a-exit-to-main-menu/exit_to_main_menu.cpp": "d8eb8ea6471a0563d8b4296f6414670892c420e641c4a74ee01a8ce6caf16e72",
+    "sources/natives-a-follow-path/follow_path.cpp": "747d763fa2f87c88f7b33e56cd1f2970163e4bd7369bb83b69832e7b55ceebe3",
+    "sources/natives-a-follow-player/follow_player.cpp": "bb395c513aea1ddd5c17aa4316ceca98693f4a10ffdf95a2717e87e4711656b9",
+    "sources/natives-a-force-mutex-release/force_mutex_release.cpp": "dd7837bc4972cff50131e5449f837f443e808d0ecdb61c786e79fcd2127be17a",
+    "sources/natives-a-friendly/friendly.cpp": "3c4a2c6ef3ae4c1656e10f9fc87f6ed93aa9bdfc076d4e8de4603062a8394ac5",
+    "sources/natives-a-game-paused/game_paused.cpp": "45bc7c6b9080f71fd4f38edf5926340e74e8807312a11582ad94c682e056b34e",
+    "sources/natives-a-get-hit-points/get_hit_points.cpp": "364bc34bfaae8d1b6b774eb6d2768cf6c80f2d96a7b94c857f537b362ade1169",
+    "sources/natives-a-get-num-players/get_num_players.cpp": "192c7943c2f035878a66457d23314b68a603a2452c36c80f6bfabbf2826f6e79",
+    "sources/natives-a-get-player-v-dir/get_player_v_dir.cpp": "d0486c99a151bc8c53f15a91a43ef421986d2bf4369ed4f1127e35bf1f9b9b92",
+    "sources/natives-a-get-player-v-position/get_player_v_position.cpp": "0460a0febb47bd38d9e1f28bd9b160c1c5c385058622be4a632a4475e1f975ed",
+    "sources/natives-a-get-rand/get_rand.cpp": "d02d777a17e633710eab2566013a1c6f83ade4e713bf47d3818b86f922c13843",
     "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
     "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
     "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
@@ -9909,6 +9949,366 @@
       "profile": "authored_cpp",
       "sha256": "4ce3e12bb24e65dd46501d93bc7bb4e8421fb7e928656a2118c648e4d6d5d477",
       "source": "sources/dialog-hud-controls-special-sound/special_sound.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 718,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_activate_shop.o",
+      "profile": "authored_cpp",
+      "sha256": "03aceb5f5f34b7efc451543dd1b6682b008ab0e9292a58b9d1a777a635f532b0",
+      "source": "sources/natives-a-activate-shop/activate_shop.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 719,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_active_player_is_dwarf.o",
+      "profile": "authored_cpp",
+      "sha256": "30409c19fc8f0ecbe2234bbd04eded98a05b7b4b7a1a40a2a40084fd35daf396",
+      "source": "sources/natives-a-active-player-is-dwarf/active_player_is_dwarf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 720,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_active_player_is_elf.o",
+      "profile": "authored_cpp",
+      "sha256": "80cd7b30b69c5ff00decaa0a17a4f6f1bcb8a1c6e7a09079df4188d46ca2060d",
+      "source": "sources/natives-a-active-player-is-elf/active_player_is_elf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 721,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_add_deferred_call.o",
+      "profile": "authored_cpp",
+      "sha256": "b63c92f6ee0c9293e3acd6683fe3fb1311b8e1bcfa036ac34ef8e57138d06ea3",
+      "source": "sources/natives-a-add-deferred-call/add_deferred_call.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 722,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_add_expanding_pool.o",
+      "profile": "authored_cpp",
+      "sha256": "864a4e1a794167c9d302f86ebaf75287a6e12a28443df392ec6a3b4ac5a15897",
+      "source": "sources/natives-a-add-expanding-pool/add_expanding_pool.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 723,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_add_help_message.o",
+      "profile": "authored_cpp",
+      "sha256": "22ec80175274242cd806092540f05e05f8151d49ebde1ecf1149fe3fd73e4971",
+      "source": "sources/natives-a-add-help-message/add_help_message.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 724,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_add_particle_on_object.o",
+      "profile": "authored_cpp",
+      "sha256": "22a9bd33ff2c84da35de0b6f40513576a11fc3786973578bf18377f286f0540d",
+      "source": "sources/natives-a-add-particle-on-object/add_particle_on_object.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 725,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_add_quest.o",
+      "profile": "authored_cpp",
+      "sha256": "a17a51eb5d80e4ccd7f79ae644e6494d76b4fbefafcef80767d1052c015e80f7",
+      "source": "sources/natives-a-add-quest/add_quest.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 726,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_addv.o",
+      "profile": "authored_cpp",
+      "sha256": "5c48f6fa8c4dd56c04ab673a8b480b90b1ec803b1d6c2b14fa065d2dfe738c5c",
+      "source": "sources/natives-a-addv/addv.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 727,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_auto_prop_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "8bd576b7b9752c5664888fa153b5ea016d7c88a75051f6d2dfacb39ecbccfd0a",
+      "source": "sources/natives-a-auto-prop-set-state/auto_prop_set_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 728,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_call_script.o",
+      "profile": "authored_cpp",
+      "sha256": "b834dda992d13d6fc8329a75609f1aff3d3c1cb26452964a44a100a2c61ff9d3",
+      "source": "sources/natives-a-call-script/call_script.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 729,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_change_swoop.o",
+      "profile": "authored_cpp",
+      "sha256": "3aa0e20282bc51a4df2bf706e00af43d3887594df58604b9d5fff629306b25b2",
+      "source": "sources/natives-a-change-swoop/change_swoop.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 730,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_check_monsters_remain.o",
+      "profile": "authored_cpp",
+      "sha256": "7b839ac83477d81097044412a1d75fb16ae195aabdf8866d3561c642b91a2939",
+      "source": "sources/natives-a-check-monsters-remain/check_monsters_remain.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 731,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_check_player_alive.o",
+      "profile": "authored_cpp",
+      "sha256": "82df3bfad2e7e3ec44f63ec6c241ff6f8601efe94eaf61ffcb0b0600e549cc37",
+      "source": "sources/natives-a-check-player-alive/check_player_alive.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 732,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_check_player_gold.o",
+      "profile": "authored_cpp",
+      "sha256": "abf7fb5ae47d67db98af73d994078107517342f202485826a54db0f790a05213",
+      "source": "sources/natives-a-check-player-gold/check_player_gold.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 733,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_clear_recall.o",
+      "profile": "authored_cpp",
+      "sha256": "45ea2b77e52a73d574354c8edc2370a83c64eba660e8e276f5f8ac7707579e99",
+      "source": "sources/natives-a-clear-recall/clear_recall.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 734,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_closest_player_dist.o",
+      "profile": "authored_cpp",
+      "sha256": "056c19c14d374d54e375152f882b647e969c6d20b24e9cd555534873ed2f83aa",
+      "source": "sources/natives-a-closest-player-dist/closest_player_dist.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 735,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_control_vehicle.o",
+      "profile": "authored_cpp",
+      "sha256": "c5a770bc81fc2ff2082ad46ffe5e67ba333993bbb20935f1bdb31d1d74965456",
+      "source": "sources/natives-a-control-vehicle/control_vehicle.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 736,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_count_live_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "0389f9d5806de594f731adc911d1ca40103b3cb30c55835531974412ef61560c",
+      "source": "sources/natives-a-count-live-objects/count_live_objects.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 737,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_count_quest_items.o",
+      "profile": "authored_cpp",
+      "sha256": "a47495dc3eef16466ad2bfbb33f20044ad64b0e988c5d98832a4a0b8065084d8",
+      "source": "sources/natives-a-count-quest-items/count_quest_items.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 738,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_cutscene.o",
+      "profile": "authored_cpp",
+      "sha256": "ce87c09b506df344e8b7f4d94d2ddd63f126bd517c8073c483d099ed71a8dfd1",
+      "source": "sources/natives-a-cutscene/cutscene.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 739,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_decay_player_lights.o",
+      "profile": "authored_cpp",
+      "sha256": "318060cf1729aecced306f236f81e4e6f411c75e7e3642e07d4d35cfdd32064d",
+      "source": "sources/natives-a-decay-player-lights/decay_player_lights.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 740,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_delete_monster.o",
+      "profile": "authored_cpp",
+      "sha256": "382fd8b7324c167da85cdef5ec955ff30655aec30b2539b9b7de79d47da1bd94",
+      "source": "sources/natives-a-delete-monster/delete_monster.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 741,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_delete_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "5cebc1d69cf980464a7b33153dfd83a3cd6eb13a34ead61838841582dcd0492f",
+      "source": "sources/natives-a-delete-objects/delete_objects.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 742,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_dialog_running.o",
+      "profile": "authored_cpp",
+      "sha256": "64d8e7c2c12ee6732eb35c87fb61219185f6a09271c9b1de8d5d0febaf524485",
+      "source": "sources/natives-a-dialog-running/dialog_running.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 743,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_end_game.o",
+      "profile": "authored_cpp",
+      "sha256": "a2c26f27e542fc910fa332bd74245f687ef214657ad26cbcdfbd905cf3951f43",
+      "source": "sources/natives-a-end-game/end_game.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 744,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_end_gauntlet.o",
+      "profile": "authored_cpp",
+      "sha256": "0cc20673becc023b11895f7b4c93e8b3a87e71c0238aacb9c2f1a3e1d6e4a701",
+      "source": "sources/natives-a-end-gauntlet/end_gauntlet.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 745,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_end_music.o",
+      "profile": "authored_cpp",
+      "sha256": "67fb0c1abbe43356af8e9fc6d8194c82eab1072f9c9d3b0a9c4b543f4e553186",
+      "source": "sources/natives-a-end-music/end_music.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 746,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_entity_ride_vehicle.o",
+      "profile": "authored_cpp",
+      "sha256": "f28e462e8a6f0920269936252d47b5929a643aa5961bc2f9bf536ffd2074b776",
+      "source": "sources/natives-a-entity-ride-vehicle/entity_ride_vehicle.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 747,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_exit_to_main_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "d8eb8ea6471a0563d8b4296f6414670892c420e641c4a74ee01a8ce6caf16e72",
+      "source": "sources/natives-a-exit-to-main-menu/exit_to_main_menu.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 748,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_follow_path.o",
+      "profile": "authored_cpp",
+      "sha256": "747d763fa2f87c88f7b33e56cd1f2970163e4bd7369bb83b69832e7b55ceebe3",
+      "source": "sources/natives-a-follow-path/follow_path.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 749,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_follow_player.o",
+      "profile": "authored_cpp",
+      "sha256": "bb395c513aea1ddd5c17aa4316ceca98693f4a10ffdf95a2717e87e4711656b9",
+      "source": "sources/natives-a-follow-player/follow_player.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 750,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_force_mutex_release.o",
+      "profile": "authored_cpp",
+      "sha256": "dd7837bc4972cff50131e5449f837f443e808d0ecdb61c786e79fcd2127be17a",
+      "source": "sources/natives-a-force-mutex-release/force_mutex_release.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 751,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_friendly.o",
+      "profile": "authored_cpp",
+      "sha256": "3c4a2c6ef3ae4c1656e10f9fc87f6ed93aa9bdfc076d4e8de4603062a8394ac5",
+      "source": "sources/natives-a-friendly/friendly.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 752,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_game_paused.o",
+      "profile": "authored_cpp",
+      "sha256": "45bc7c6b9080f71fd4f38edf5926340e74e8807312a11582ad94c682e056b34e",
+      "source": "sources/natives-a-game-paused/game_paused.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 753,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_get_hit_points.o",
+      "profile": "authored_cpp",
+      "sha256": "364bc34bfaae8d1b6b774eb6d2768cf6c80f2d96a7b94c857f537b362ade1169",
+      "source": "sources/natives-a-get-hit-points/get_hit_points.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 754,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_get_num_players.o",
+      "profile": "authored_cpp",
+      "sha256": "192c7943c2f035878a66457d23314b68a603a2452c36c80f6bfabbf2826f6e79",
+      "source": "sources/natives-a-get-num-players/get_num_players.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 755,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_get_player_v_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "d0486c99a151bc8c53f15a91a43ef421986d2bf4369ed4f1127e35bf1f9b9b92",
+      "source": "sources/natives-a-get-player-v-dir/get_player_v_dir.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 756,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_get_player_v_position.o",
+      "profile": "authored_cpp",
+      "sha256": "0460a0febb47bd38d9e1f28bd9b160c1c5c385058622be4a632a4475e1f975ed",
+      "source": "sources/natives-a-get-player-v-position/get_player_v_position.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 757,
+      "kind": "independently_authored_source",
+      "object_name": "natives_a_get_rand.o",
+      "profile": "authored_cpp",
+      "sha256": "d02d777a17e633710eab2566013a1c6f83ade4e713bf47d3818b86f922c13843",
+      "source": "sources/natives-a-get-rand/get_rand.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -10008,7 +10408,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a41401689ee9507b77835be726199970cc34fe6c305e4f6e3a0c9d6548298b0c",
+  "snapshot_sha256": "5544f306ad010328c303040b4a8f5ae49e5fd5be88c12c7144ae155145f9ae7f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
