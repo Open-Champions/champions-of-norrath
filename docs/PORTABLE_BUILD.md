@@ -112,3 +112,11 @@ V43 binding of `memset` to `norrath_block_memory_set` is not automatically appli
 has its own identity and is not claimed to reproduce any private integration object hash or
 its import counts. No original executable, assets, BIOS, compiled private object,
 held draft or proprietary tool is read by the public driver.
+
+## Dependency measurement audit
+
+The [startup checkpoint](STARTUP_PROGRESS.md) records the fresh 848-import baseline.
+The driver now inventories REL and RELA, preserves the function-symbol multiset
+through linking, and writes tentative storage separately to `common-storage.json`.
+COMMON is not an undefined import; final storage allocation and initialization
+remain separate requirements. The fresh authored baseline has no COMMON symbols.

@@ -5,6 +5,7 @@ No downloading, original game files, fallback objects, stubs or executable link.
 Use --check-plan for file-only validation; a build requires an explicit toolchain.
 """
 import argparse
+from collections import Counter
 import hashlib
 import json
 import os
@@ -120,6 +121,7 @@ def elf_inventory(path):
             raise ValueError('Unterminated ELF string')
         return table[offset:end].decode('utf-8', 'strict')
     allocated, defined, undefined, fields = [], [], set(), 0
+    common = []
     abi = None
     for section in sections:
         name = string(names, section[0])
@@ -131,10 +133,11 @@ def elf_inventory(path):
             if len(payload) != 24:
                 raise ValueError('Unexpected MIPS ABI record')
             abi = dict(zip(('version', 'isa_level', 'isa_rev', 'gpr_size', 'cpr1_size', 'cpr2_size', 'fp_abi', 'isa_ext', 'ases', 'flags1', 'flags2'), struct.unpack('<H6B4I', payload)))
-        if section[1] == 9:
-            if section[5] % 8:
+        if section[1] in (4, 9):
+            entry_size = 12 if section[1] == 4 else 8
+            if section[9] != entry_size or section[5] % entry_size:
                 raise ValueError('Malformed relocation table')
-            fields += section[5] // 8
+            fields += section[5] // entry_size
         if section[1] == 2:
             strings = sections[section[6]]
             strings = take(strings[4], strings[5])
@@ -143,13 +146,30 @@ def elf_inventory(path):
             for offset in range(0, len(payload), 16):
                 nameoff, value, size, info, other, shndx = struct.unpack_from('<IIIBBH', payload, offset)
                 symbol = string(strings, nameoff)
-                if shndx == 0 and symbol and info >> 4 in (1, 2):
+                if shndx in (0, 0xff04) and symbol and info >> 4 in (1, 2):
                     undefined.add(symbol)
-                if shndx and info & 15 == 2:
+                if shndx in (0xfff2, 0xff03):
+                    common.append({'name': symbol, 'size': size, 'alignment': value,
+                                   'section_index': shndx})
+                if info & 15 == 2 and shndx not in (0, 0xff04):
+                    if not 0 < shndx < min(len(sections), 0xff00):
+                        raise ValueError('Function has no concrete section: ' + symbol)
+                    owner = sections[shndx]
+                    if owner[1] != 1 or owner[2] & 6 != 6 or value + size > owner[5]:
+                        raise ValueError('Function extent outside executable storage: ' + symbol)
                     defined.append({'name': symbol, 'compiled_body_bytes': size})
     if not abi or (abi['gpr_size'], abi['cpr1_size'], abi['fp_abi']) != (2, 1, 2):
         raise ValueError('Unexpected GPR64/FP32/single-float ABI')
-    return {'sha256': digest(path), 'functions': defined, 'function_count': sum(x['compiled_body_bytes'] > 0 for x in defined), 'function_symbol_count': len(defined), 'function_body_bytes': sum(x['compiled_body_bytes'] for x in defined), 'undefined_symbols': sorted(undefined), 'relocation_fields': fields, 'allocated_sections': allocated, 'abi': abi}
+    return {'sha256': digest(path), 'functions': defined, 'function_count': sum(x['compiled_body_bytes'] > 0 for x in defined), 'function_symbol_count': len(defined), 'function_body_bytes': sum(x['compiled_body_bytes'] for x in defined), 'common_symbols': common, 'undefined_symbols': sorted(undefined), 'relocation_fields': fields, 'allocated_sections': allocated, 'abi': abi}
+
+
+def validate_linked_functions(inventories, linked):
+    """Preserve the multiset: local function names may repeat across objects."""
+    key = lambda f: (f['name'], f['compiled_body_bytes'])
+    expected = Counter(key(f) for i in inventories for f in i['functions'])
+    actual = Counter(map(key, linked['functions']))
+    if actual != expected:
+        raise ValueError('Partial link changed function symbols/extents; review required')
 
 
 def main():
@@ -278,13 +298,13 @@ def main():
         result = output / 'game-components-partial.o'
         run([tc / 'bin' / (prefix + '-ld'), *plan['link_flags'], '-Map=' + str(output / 'game-components.map'), '-o', result, *objects], 'relocatable_link')
         linked = elf_inventory(result)
-        if linked['function_body_bytes'] != sum(x['function_body_bytes'] for x in inventories):
-            raise ValueError('Partial link changed total function extents; review required')
+        validate_linked_functions(inventories, linked)
         verify(tc, identity['binary_hashes'])
         save(output / 'object-inventories.json', inventories)
         save(output / 'partial-inventory.json', linked)
         save(output / 'unresolved-imports.json', linked['undefined_symbols'])
-        status.update(status='partial_build_complete', function_count=linked['function_count'], unresolved_symbol_count=len(linked['undefined_symbols']), symbol_aliases_applied=False)
+        save(output / 'common-storage.json', linked['common_symbols'])
+        status.update(status='partial_build_complete', function_count=linked['function_count'], unresolved_symbol_count=len(linked['undefined_symbols']), common_symbol_count=len(linked['common_symbols']), symbol_aliases_applied=False)
         print(json.dumps(status))
     except BaseException as exc:
         status.update(status='failed_preserved_no_retry', error=str(exc))
