@@ -40,19 +40,28 @@ routines. All 15 retained successful compile commands use the same unchanged
 `authored_cpp` flags. The selected revisions are floor insertion v2, light-floor
 and world-light-map v1, light search v3, and strict comparison v2.
 
-This expanded 277-unit recipe has passed file-only validation; it has not yet been
-compiled or linked from the published source tree. Its output hashes, function
-inventory and unresolved count remain unmeasured. The next build is one clean
-source build: 277 compiler invocations with implicit assembly and one relocatable
-link, using the pinned toolchain and a new output directory. Neither optional
-Newlib input is selected by default. Arithmetic and interpreter drafts remain
-excluded. The floor trig coefficient imports remain external; this recipe adds
-no coefficient data or storage bindings.
+The expanded build succeeded from a clean Git archive of revision
+`2df783d45488984c6b4e349b55cbeb7964d7022b`: 277 source compilations with implicit
+assembly and one relocatable link, with no retries. It produced 401 function
+bodies, 241,520 body bytes and 848 unresolved imports. The
+[expanded receipt](../experimental/build-receipt-expanded.json) pins the executed
+source revision, plan, driver and output. All fifteen added source objects were
+byte-identical to their previously accepted compiled objects; this comparison is
+between authored builds and grants no original-game byte matches.
+
+The current plan differs from that executed plan only in its snapshot digest:
+the snapshot now records the successful build and references its separate receipt.
+The 277 sources, all 886 included files, flags and tool identities are unchanged;
+no additional compilation was needed for this evidence update. The exact executed
+recipe remains at the recorded revision. No Newlib input, original game file,
+retained private object, symbol alias, coefficient initializer or held draft was
+used. This is a partial relocatable source build, not an executable or gameplay
+verification.
 
 The historical 262-unit receipt remains unchanged. It preserves the exact executed
 plan hash, and commit `8bf270c162f2aef0717ee8a025dbf16688052424` preserves that
-plan. A successful expanded build needs its own separate receipt; the earlier
-result is not evidence that the expanded recipe has been built.
+plan. The expanded build has its own separate receipt; the earlier result describes
+only the historical selection.
 
 The driver compiles each unit once, retains preprocessed source and assembly,
 then performs one relocatable link. A failure stops the driver, leaves the failed outputs and command log in

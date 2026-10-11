@@ -31,8 +31,11 @@ load layout, SRS/VU code, and game runtime remain unfinished.
 The historical `partial_integration` record describes only the original V43
 264-input prefix: 388 definitions and 231,604 body bytes, with an identical
 repeat link. The [public build receipt](build-receipt.json) describes the earlier
-262 authored-input clean-source build and its 386 definitions. Neither record
-is evidence of a clean-source build of the expanded 277 authored-input selection.
+262 authored-input clean-source build and its 386 definitions. The separate [expanded receipt](build-receipt-expanded.json) records a clean Git
+archive build of all 277 authored units: 401 definitions, 241,520 body bytes,
+5,495 relocation fields and 848 unresolved imports. No original game file, retained
+private object, upstream source or symbol alias was used. This verifies the partial
+source-build path, without establishing an executable or gameplay.
 
 ## Additional implementations and held drafts
 
@@ -117,8 +120,8 @@ are provenance references, not evidence independently reproduced by this check.
 The [partial source-build recipe](../docs/PORTABLE_BUILD.md) selects all 277
 authored units by default and accepts the two optional external sources only
 through explicit paths and hash checks. Held arithmetic/interpreter drafts are
-excluded. The expanded recipe has not yet been built from a clean checkout;
-its selection must not be confused with the historical 262-input success.
+excluded. The expanded recipe passed its clean-source build; its separate receipt keeps that
+result distinct from the historical 262-input success.
 
 Files preserve exact reviewed source bytes, including repeated canonical local
 headers. The coherent lighting folder aggregates literal files from their
@@ -126,8 +129,9 @@ accepted source versions. See [toolchain documentation](../docs/TOOLCHAINS.md)
 for compiler setup. The original [first build receipt](build-receipt.json)
 retains its earlier snapshot and plan hashes;
 [commit 8bf270c](https://github.com/Open-Champions/champions-of-norrath/commit/8bf270c162f2aef0717ee8a025dbf16688052424)
-preserves that exact historical recipe. No new build or runtime result follows
-from updating the source selection and plan.
+preserves that exact historical recipe. The current metadata successor records
+the new build while preserving the executed source/recipe revision in its receipt.
+Source files, flags and tool identities did not change after the clean build.
 
 Original executables, disc/BIOS images, assets, disassembly, generated decompiler
 output, compiler outputs, private fixtures, and tool binaries are excluded.

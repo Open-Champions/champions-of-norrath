@@ -50,7 +50,19 @@ def check(root):
     assert sum(f['compiled_body_bytes'] for r in inputs
                for f in r['emitted_functions']) == selection['compiled_body_bytes_from_accepted_inputs']
     assert selection['coefficient_initializer_inputs'] == 0
-    assert selection['clean_source_successor_build_performed'] is False
+    if selection['clean_source_successor_build_performed']:
+        receipt_path = directory / selection['expanded_build_receipt']
+        assert receipt_path.name == 'build-receipt-expanded.json'
+        assert hashlib.sha256(receipt_path.read_bytes()).hexdigest() == selection['expanded_build_receipt_sha256']
+        receipt = json.loads(receipt_path.read_text())
+        assert receipt['source_inputs'] == receipt['source_compiler_invocations'] == 277
+        assert receipt['relocatable_link_invocations'] == 1
+        assert receipt['original_game_inputs_used'] is False
+        assert receipt['retained_private_objects_used_as_inputs'] is False
+        assert receipt['symbol_aliases_applied'] is False
+        assert receipt['gameplay_verified'] is False
+        assert (receipt['function_bodies'], receipt['function_body_bytes'],
+                receipt['unresolved_symbols']) == (401, 241520, 848)
     assert selection['runtime_verified'] is False
     assert 'original264-input V43 prefix' in selection['original_receipt_scope']
     assert hashlib.sha256((directory / 'build-receipt.json').read_bytes()).hexdigest() == 'fd66baac8172c7b4ae3c4fc57ec45a166ecde8c22ad43ed16330542f75614c09'

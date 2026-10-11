@@ -25,9 +25,10 @@ The private V47 partial integration contains 279 inputs, 403 function bodies
 including helpers, 241,992 body bytes, 5,511 relocation fields and 845 unresolved
 imports. It preserves the earlier code and storage and leaves the trigonometry
 coefficients unresolved. This is an unfinished relocatable object.
-The [partial source-build command](docs/PORTABLE_BUILD.md) has previously compiled
-262 authored inputs from a clean checkout. The successor recipe adds the fifteen
-newly selected source units; its execution evidence will be recorded separately.
+The [partial source-build command](docs/PORTABLE_BUILD.md) has compiled all
+277 authored inputs from a clean Git archive, producing 401 function bodies with
+848 imports unresolved. Its [separate receipt](experimental/build-receipt-expanded.json)
+preserves the exact executed recipe and output.
 There is no rebuilt game executable or demonstrated gameplay.
 
 ## Start here
