@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 262,
+  "default_authored_inputs": 277,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8,7 +8,7 @@
         "sources/game-software-arithmetic-source-v2/software_arithmetic.cpp",
         "sources/game-software-arithmetic-source-v2/software_arithmetic.hpp"
       ],
-      "status": "FIRST compiled and reviewed; bounded machine conformance and unchanged fresh build pending; not integrated"
+      "status": "FIRST reviewed; 1596 bounded normal/correction V0+four-accumulator comparisons and16 zero-selector/bank probes passed; one unchanged fresh build byte-identical. Not integrated; original physical frame/table/IRQ/fault/exception state/resumption and gameplay unfinished."
     },
     {
       "component": "game-amx-exec-native-transport-source-v4",
@@ -197,13 +197,37 @@
     "sources/game-creature-animation-build/creature_animation.hpp": "fce9603a7f59a5c3873c5d4d936d573f1458e50f0a5962da3f9ad7b38134d2cd",
     "sources/game-creature-animation-build/finish_construction.cpp": "072d958f75a1a31cb516ff0d28d9709db30a9bd737e0e000f95cb9688f73af25",
     "sources/game-creature-animation-build/set_parameters.cpp": "42959f53f255182cb9040b59766c87796388c4d6453f3fac16ce79a26ed4a4fd",
+    "sources/game-floor-add-source-v2/ee_compare.hpp": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+    "sources/game-floor-add-source-v2/floor_add.cpp": "5062c771b20096168b7c6fd83e8b4a2f8ddd79b33c1c373fd9869bf6a74c5f83",
+    "sources/game-floor-add-source-v2/floor_add.hpp": "8fd1a1d946376d88e491fe59378d0b1db11b04956964b811167438b17614b8e1",
+    "sources/game-floor-clear-source/floor_clear.cpp": "66957c663312552eeb6ee024bc983f30fc88357a240dfc92b89d3a9a034447f5",
+    "sources/game-floor-clear-source/floor_clear.hpp": "317958629fab05ed5af73238b81f0f48a1bb1a1b0ca25430047e93fc0d01b5b8",
+    "sources/game-floor-lighting-kernel-source/ee_compare.cpp": "f5da5c48e9c32cf34fd0ae35ee28429e6dc10a2f2924d624a3b3f5b7081b35c0",
+    "sources/game-floor-lighting-kernel-source/ee_compare.hpp": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+    "sources/game-floor-lighting-kernel-source/find_lights.cpp": "784619f7e52115910cd67f2cba7a23c7089e05832d3a306953c4398a9876deb0",
+    "sources/game-floor-lighting-kernel-source/grid_stride.hpp": "4a9a9a383aad9200cc4ffc163c5b4dbc276d095f851ea919fd793ac05ad10175",
+    "sources/game-floor-lighting-kernel-source/light_floor.cpp": "fccb8ac18bbe8048e886d0eb67267b8db58e419da466b831feb5b67968429a64",
+    "sources/game-floor-lighting-kernel-source/lighting.hpp": "f12233f3d93d18c17ea11e1c201b0b5aea9dbb4f66caafe9d88fba4026aa7ab8",
+    "sources/game-floor-lighting-kernel-source/world_light_map.cpp": "0c9a6549cdc05505aec7ce2c019d56c896387ab030be1c6d9d689466dbfa9dc1",
     "sources/game-heap-allocator-build/heap.hpp": "1f8fad9e708f2717b05a1bccb8db0e25368554e707261ddfb910e2a3ac945ec2",
     "sources/game-heap-allocator-build/mem_alloc.cpp": "87338796936eecbab658e938a1dead6e4e3e82600613cd6dd2f77439a08e49ac",
     "sources/game-heap-allocator-build/mem_check_heap.cpp": "a2737eb7b232e569df407574d336e682e9eb7a34438fdbb6f1970924ac8b4520",
     "sources/game-heap-allocator-build/mem_dump_heap.cpp": "8d04c9f747eec9756a2256dd94c8a72c27dbb83efa95fb011cdd424bfdafd390",
+    "sources/game-integer-trig-code-only-source/icos.cpp": "49dd01609d7d0da4ae90cd21bc61cb387e43f8aca811c7d2616ff62bb9e00c47",
+    "sources/game-integer-trig-code-only-source/isin.cpp": "be9f9a81578a1df1453b3f8db8090382accfed21cc083b316671b8b321269fe9",
+    "sources/game-integer-trig-code-only-source/rotation.hpp": "694021a38329e658592a1ad7675dc415743e6802d07238d718ad0a9a0f3b261e",
     "sources/game-item-create-build-v2/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-item-create-build-v2/item_create.cpp": "213e84cb68d6eb92464b9ac4be7ca9d22a858dbda0f42ac684c72cb568c61364",
     "sources/game-item-create-build-v2/item_create.hpp": "b883224a7555868793674283ab296d77dbfaf85f2c36689f6678128f15da0ca1",
+    "sources/game-list-safe-iterator-source/construct.cpp": "16c6210a6a22a7d732f50dc5a033f1d03e597151341b7cd0423e29181835223e",
+    "sources/game-list-safe-iterator-source/destroy.cpp": "22ff9eb11ba587699f3cd3d52e4c8a488c6e1821750bc4beb920c8f493f2bdcd",
+    "sources/game-list-safe-iterator-source/iterator_memory.hpp": "b7a38d26125da0aaff336b70d9e2af04bb315a1f5de87060931fe0678e4a7317",
+    "sources/game-list-safe-iterator-source/next.cpp": "2a36a98c6b17ecd779abb8c868076d3f97b5158449bb1836917a8c45bfb1116e",
+    "sources/game-list-safe-iterator-source/safe_iterator.hpp": "fb38a3a7c3984e59d7fcd9f3b6413a8c4b39bf8673ee76ee22734f4fc33281a4",
+    "sources/game-megatile-name-pool-source/add_name.cpp": "e7215469c3e2fb4397e2fbde63205cb04fb1d10aa63cb8cef3621a3305a9a466",
+    "sources/game-megatile-name-pool-source/name_pool.hpp": "7d8fdde96bafc2a85388a7fd31ebd82454ff1147265f9cc7afb909a5b28f2776",
+    "sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp": "dbf996b41ce0fe3ad165824ca8667ec94d15c2a7055fdc43b1100b00752bf20e",
+    "sources/game-megatile-pm-pointer-cap-source/pointer_cap.hpp": "4246fb4e75ba3bc3439677b85cb796567d2ae704a98ac4789e9b08b1b37f73e3",
     "sources/game-network-partner-count-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-network-partner-count-build/network_local.hpp": "c374470ea89db8959b88f6f02e2d382b912b07d9dbdc0a2872140f61139b9309",
     "sources/game-network-partner-count-build/network_partner_count.cpp": "6ba99188c42b8e5e1c68b4eb82ce9fc298202e6144071b19273064ef16e36bcf",
@@ -234,6 +258,8 @@
     "sources/game-object-named-lookup-build/find_named.cpp": "e4301687b5c5467407953f25a59cc56e8d0b08403e99f9af85bc672d8b170c68",
     "sources/game-object-named-lookup-build/find_named_list.cpp": "4b816a84fb3c012d9fd13e9f5a1977ab6f6727a8e2febdeac8ec628e43ea7fd6",
     "sources/game-object-named-lookup-build/named_lookup.hpp": "96af1b586d2dbb410b2ae79220cb05d1aca452ca219e188e81fe56826616f95f",
+    "sources/game-object-process-delete-list-source/process_delete.cpp": "fab0f5e2e2074df5581ac2b675ad194fa494e5d7cafd52abc5ae2b144b439d9e",
+    "sources/game-object-process-delete-list-source/process_delete.hpp": "d27bb4964dec9052af5112707a3c807398762f096659c5fda23c758b833089a9",
     "sources/game-object-registration-build/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/game-object-registration-build/factory.hpp": "2e2819281ead4a3f998095258cc083b61a65195831e696b5e89bb9a77f624af2",
     "sources/game-object-registration-build/filter.cpp": "8d99ec90e0f819b6ba541b58b911525acc425b5cf60cc7be7d9c708dbde9dd30",
@@ -452,6 +478,8 @@
     "sources/game-player-wielding-build/wielding.hpp": "539e11653ab29ce45ee4044c04bb02ef6772c67e3d98bf5af264103036b94e80",
     "sources/game-save-copy-build/copy_bytes.cpp": "b63f5e48f5bf869c1a6d7a471e77f5b8bfdd1f7f28fbda9aae11f5a9f854ab9e",
     "sources/game-save-copy-build/string_primitives.hpp": "b835eac356332f7c777882ec1266f6fa1f682d06def0b865e58dfd7e7a733447",
+    "sources/game-script-set-script-source/set_script.cpp": "4f3ef22f942cbd4a57c1b81a2fd81c6ad99510ca2458a2417a42a4d68e16dedf",
+    "sources/game-script-set-script-source/set_script.hpp": "1c4f52d3ca64e4ead3d1fa12f41b6b16bcb2462ddbe01615474e8c299f91858a",
     "sources/game-script-start-build/add_node.hpp": "72350fa5f13c365f256a9034be88f8fcad768960ff9801c0babfd5cc6ff6768f",
     "sources/game-script-start-build/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-script-start-build/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
@@ -5136,6 +5164,177 @@
       "profile": "authored_cpp",
       "sha256": "c12d9d746ab691cd68638c4ea97df268ca368cb752d709b2bdfa72ce05a48123",
       "source": "sources/game-amx-public-metadata-build/get_public_variable.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-list-safe-iterator-source/iterator_memory.hpp",
+        "sources/game-list-safe-iterator-source/safe_iterator.hpp"
+      ],
+      "input_order": 264,
+      "kind": "independently_authored_source",
+      "object_name": "construct.o",
+      "profile": "authored_cpp",
+      "sha256": "16c6210a6a22a7d732f50dc5a033f1d03e597151341b7cd0423e29181835223e",
+      "source": "sources/game-list-safe-iterator-source/construct.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-list-safe-iterator-source/iterator_memory.hpp",
+        "sources/game-list-safe-iterator-source/safe_iterator.hpp"
+      ],
+      "input_order": 265,
+      "kind": "independently_authored_source",
+      "object_name": "next.o",
+      "profile": "authored_cpp",
+      "sha256": "2a36a98c6b17ecd779abb8c868076d3f97b5158449bb1836917a8c45bfb1116e",
+      "source": "sources/game-list-safe-iterator-source/next.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-list-safe-iterator-source/iterator_memory.hpp",
+        "sources/game-list-safe-iterator-source/safe_iterator.hpp"
+      ],
+      "input_order": 266,
+      "kind": "independently_authored_source",
+      "object_name": "destroy.o",
+      "profile": "authored_cpp",
+      "sha256": "22ff9eb11ba587699f3cd3d52e4c8a488c6e1821750bc4beb920c8f493f2bdcd",
+      "source": "sources/game-list-safe-iterator-source/destroy.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-megatile-name-pool-source/name_pool.hpp"
+      ],
+      "input_order": 267,
+      "kind": "independently_authored_source",
+      "object_name": "add_name.o",
+      "profile": "authored_cpp",
+      "sha256": "e7215469c3e2fb4397e2fbde63205cb04fb1d10aa63cb8cef3621a3305a9a466",
+      "source": "sources/game-megatile-name-pool-source/add_name.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-megatile-pm-pointer-cap-source/pointer_cap.hpp"
+      ],
+      "input_order": 268,
+      "kind": "independently_authored_source",
+      "object_name": "cap_pointers.o",
+      "profile": "authored_cpp",
+      "sha256": "dbf996b41ce0fe3ad165824ca8667ec94d15c2a7055fdc43b1100b00752bf20e",
+      "source": "sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-script-set-script-source/set_script.hpp"
+      ],
+      "input_order": 269,
+      "kind": "independently_authored_source",
+      "object_name": "set_script.o",
+      "profile": "authored_cpp",
+      "sha256": "4f3ef22f942cbd4a57c1b81a2fd81c6ad99510ca2458a2417a42a4d68e16dedf",
+      "source": "sources/game-script-set-script-source/set_script.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-object-process-delete-list-source/process_delete.hpp"
+      ],
+      "input_order": 270,
+      "kind": "independently_authored_source",
+      "object_name": "process_delete.o",
+      "profile": "authored_cpp",
+      "sha256": "fab0f5e2e2074df5581ac2b675ad194fa494e5d7cafd52abc5ae2b144b439d9e",
+      "source": "sources/game-object-process-delete-list-source/process_delete.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-clear-source/floor_clear.hpp"
+      ],
+      "input_order": 271,
+      "kind": "independently_authored_source",
+      "object_name": "floor_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "66957c663312552eeb6ee024bc983f30fc88357a240dfc92b89d3a9a034447f5",
+      "source": "sources/game-floor-clear-source/floor_clear.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-add-source-v2/ee_compare.hpp",
+        "sources/game-floor-add-source-v2/floor_add.hpp"
+      ],
+      "input_order": 272,
+      "kind": "independently_authored_source",
+      "object_name": "floor_add.o",
+      "profile": "authored_cpp",
+      "sha256": "5062c771b20096168b7c6fd83e8b4a2f8ddd79b33c1c373fd9869bf6a74c5f83",
+      "source": "sources/game-floor-add-source-v2/floor_add.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-lighting-kernel-source/lighting.hpp"
+      ],
+      "input_order": 273,
+      "kind": "independently_authored_source",
+      "object_name": "light_floor.o",
+      "profile": "authored_cpp",
+      "sha256": "fccb8ac18bbe8048e886d0eb67267b8db58e419da466b831feb5b67968429a64",
+      "source": "sources/game-floor-lighting-kernel-source/light_floor.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-lighting-kernel-source/ee_compare.hpp",
+        "sources/game-floor-lighting-kernel-source/grid_stride.hpp",
+        "sources/game-floor-lighting-kernel-source/lighting.hpp"
+      ],
+      "input_order": 274,
+      "kind": "independently_authored_source",
+      "object_name": "find_lights.o",
+      "profile": "authored_cpp",
+      "sha256": "784619f7e52115910cd67f2cba7a23c7089e05832d3a306953c4398a9876deb0",
+      "source": "sources/game-floor-lighting-kernel-source/find_lights.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-lighting-kernel-source/lighting.hpp"
+      ],
+      "input_order": 275,
+      "kind": "independently_authored_source",
+      "object_name": "world_light_map.o",
+      "profile": "authored_cpp",
+      "sha256": "0c9a6549cdc05505aec7ce2c019d56c896387ab030be1c6d9d689466dbfa9dc1",
+      "source": "sources/game-floor-lighting-kernel-source/world_light_map.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-floor-lighting-kernel-source/ee_compare.hpp"
+      ],
+      "input_order": 276,
+      "kind": "independently_authored_source",
+      "object_name": "ee_compare.o",
+      "profile": "authored_cpp",
+      "sha256": "f5da5c48e9c32cf34fd0ae35ee28429e6dc10a2f2924d624a3b3f5b7081b35c0",
+      "source": "sources/game-floor-lighting-kernel-source/ee_compare.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-integer-trig-code-only-source/rotation.hpp"
+      ],
+      "input_order": 277,
+      "kind": "independently_authored_source",
+      "object_name": "icos.o",
+      "profile": "authored_cpp",
+      "sha256": "49dd01609d7d0da4ae90cd21bc61cb387e43f8aca811c7d2616ff62bb9e00c47",
+      "source": "sources/game-integer-trig-code-only-source/icos.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/game-integer-trig-code-only-source/rotation.hpp"
+      ],
+      "input_order": 278,
+      "kind": "independently_authored_source",
+      "object_name": "isin.o",
+      "profile": "authored_cpp",
+      "sha256": "be9f9a81578a1df1453b3f8db8090382accfed21cc083b316671b8b321269fe9",
+      "source": "sources/game-integer-trig-code-only-source/isin.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -5210,7 +5409,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a23b8af6c6a23c33d2b96f7f670107491f9a57e43bb1fead03a08209d2bbb8ff",
+  "snapshot_sha256": "44df18d5a0fe53f2cc249412e88febcbc3efc2987e564c5a6cd62a3b7ddd6297",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

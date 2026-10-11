@@ -25,30 +25,98 @@ def check(root):
               (directory / 'sources').rglob('*') if p.is_file()}
     assert actual == set(files), 'Unrecorded or missing source files'
     inputs = snapshot['inputs']
-    assert len(inputs) == 264
-    assert [r['input_order'] for r in inputs] == list(range(264))
+    selection = snapshot['selected_source_scope']
+    prefix_count = selection['historical_prefix_inputs']
+    assert prefix_count == 264
+    prefix = inputs[:prefix_count]
+    prefix_digest = hashlib.sha256(json.dumps(prefix, sort_keys=True,
+                                            separators=(',', ':')).encode()).hexdigest()
+    assert prefix_digest == selection['historical_prefix_records_sha256']
+    assert prefix_digest == 'cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2'
+    assert [r['input_order'] for r in inputs] == list(range(len(inputs)))
     authored = [r for r in inputs if r['kind'] == 'independently_authored_source']
     external = [r for r in inputs if r['kind'] == 'external_upstream_source']
-    assert len(authored) == 262 and len(external) == 2
+    assert len(authored) == selection['authored_default_inputs']
+    assert len(external) == selection['optional_external_inputs'] == 2
+    assert len(inputs) == selection['selected_inputs']
+    assert all(r['source'].endswith('.cpp') for r in inputs[prefix_count:])
+    assert len({r['source'] for r in authored}) == len(authored)
     assert all(r['source'] in files for r in authored)
     assert all(r['vendored'] is False for r in external)
-    assert sum(len(r['emitted_functions']) for r in inputs) == 388
-    assert sum(f['compiled_body_bytes'] for r in inputs
+    assert sum(len(r['emitted_functions']) for r in prefix) == 388
+    assert sum(f['compiled_body_bytes'] for r in prefix
                for f in r['emitted_functions']) == 231604
+    assert sum(len(r['emitted_functions']) for r in inputs) == selection['emitted_function_definitions_including_helpers']
+    assert sum(f['compiled_body_bytes'] for r in inputs
+               for f in r['emitted_functions']) == selection['compiled_body_bytes_from_accepted_inputs']
+    assert selection['coefficient_initializer_inputs'] == 0
+    assert selection['clean_source_successor_build_performed'] is False
+    assert selection['runtime_verified'] is False
+    assert 'original264-input V43 prefix' in selection['original_receipt_scope']
+    assert hashlib.sha256((directory / 'build-receipt.json').read_bytes()).hexdigest() == 'fd66baac8172c7b4ae3c4fc57ec45a166ecde8c22ad43ed16330542f75614c09'
     integration = snapshot['partial_integration']
     assert integration['additional_exact_original_matches'] == 0
     assert integration['runtime_executed'] is False
     assert integration['clean_checkout_game_build'] is False
     additions = snapshot.get('additional_implementations', [])
-    assert sum(len(item['functions']) for item in additions) == 7
+    assert sum(len(item['functions']) for item in additions) == selection['additional_selected_inputs']
     additional_functions = [name for item in additions for name in item['functions']]
-    assert len(set(additional_functions)) == 7
+    assert len(set(additional_functions)) == selection['additional_selected_inputs']
     assert set(additional_functions) == {
         'norrath_list_safe_iterator_construct', 'norrath_list_safe_iterator_next',
         'norrath_list_safe_iterator_destroy', 'norrath_megatile_add_pm_list',
         'norrath_script_set_script', 'norrath_megatile_cap_pm_pointers',
         'norrath_object_process_delete_list',
+        'norrath_floor_clear', 'norrath_floor_add', 'norrath_light_floor_sprite',
+        'norrath_find_lights_at_point', 'norrath_world_query_light_map',
+        'ee_c_lt_s_word', 'norrath_integer_cosine', 'norrath_integer_sine',
     }
+    additional_sources = {name for item in additions for name in item['files'] if name.endswith('.cpp')}
+    assert {r['source'] for r in inputs[prefix_count:]} == additional_sources
+    assert len(inputs) == prefix_count + len(additional_sources)
+    assert len(authored) == 262 + len(additional_sources)
+    assert {f['name'] for r in inputs[prefix_count:] for f in r['emitted_functions']} == set(additional_functions)
+    selected_sources = {r['source'] for r in authored}
+    assert not selected_sources & {f for draft in snapshot['drafts'] for f in draft['files']}
+    assert not any(re.search(r'/(?:icos|isin)_(?:scale|cubic|quintic|septic)\.cpp$', f) for f in files)
+    expected_tail = [
+        'sources/game-list-safe-iterator-source/construct.cpp',
+        'sources/game-list-safe-iterator-source/next.cpp',
+        'sources/game-list-safe-iterator-source/destroy.cpp',
+        'sources/game-megatile-name-pool-source/add_name.cpp',
+        'sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp',
+        'sources/game-script-set-script-source/set_script.cpp',
+        'sources/game-object-process-delete-list-source/process_delete.cpp',
+        'sources/game-floor-clear-source/floor_clear.cpp',
+        'sources/game-floor-add-source-v2/floor_add.cpp',
+        'sources/game-floor-lighting-kernel-source/light_floor.cpp',
+        'sources/game-floor-lighting-kernel-source/find_lights.cpp',
+        'sources/game-floor-lighting-kernel-source/world_light_map.cpp',
+        'sources/game-floor-lighting-kernel-source/ee_compare.cpp',
+        'sources/game-integer-trig-code-only-source/icos.cpp',
+        'sources/game-integer-trig-code-only-source/isin.cpp',
+    ]
+    assert [r['source'] for r in inputs[prefix_count:]] == expected_tail
+    provenance = snapshot['source_provenance']
+    assert len(provenance) == 15
+    for name, record in provenance.items():
+        assert name in files and record['sha256'] == files[name]
+        assert record['literal_copy'] is True
+        assert record['private_source'].startswith('work/')
+    expected_versions = {
+        'sources/game-floor-add-source-v2/floor_add.cpp': 'work/game-floor-add-source-v2/floor_add.cpp',
+        'sources/game-floor-lighting-kernel-source/light_floor.cpp': 'work/game-floor-lighting-source/light_floor.cpp',
+        'sources/game-floor-lighting-kernel-source/find_lights.cpp': 'work/game-floor-lighting-source-v3/find_lights.cpp',
+        'sources/game-floor-lighting-kernel-source/world_light_map.cpp': 'work/game-floor-lighting-source/world_light_map.cpp',
+        'sources/game-floor-lighting-kernel-source/ee_compare.cpp': 'work/game-floor-lighting-source-v2/ee_compare.cpp',
+    }
+    for name, version in expected_versions.items():
+        assert provenance[name]['private_source'] == version
+    assert not any(f.startswith(('sources/game-floor-add-source/', 'sources/game-floor-lighting-source/',
+                                 'sources/game-floor-lighting-source-v2/', 'sources/game-floor-lighting-source-v3/')) for f in files)
+    new_items = additions[-8:]
+    assert sum(item['implementation_kind'] == 'complete_game_function' for item in new_items) == selection['new_selected_game_functions'] == 7
+    assert sum(item['implementation_kind'] == 'authored_architectural_primitive' for item in new_items) == selection['new_selected_architectural_primitives'] == 1
     for item in additions:
         assert all(name in files for name in item['files'])
         assert item['additional_exact_original_matches'] == 0
@@ -65,7 +133,7 @@ def check(root):
         for field in ('private_FIRST_manifest_sha256', 'first_compiled_object_sha256',
                       'private_ROOT_actual_review_manifest_sha256'):
             assert re.fullmatch(r'[0-9a-f]{64}', item[field]), (component, field)
-        assert not set(item['files']) & {entry['source'] for entry in authored}, component
+        assert set(item['files']) & selected_sources, component
     deletion = by_component['game-object-process-delete-list-source']
     assert deletion['callback_scope'] == {
         'declared_arguments': 2, 'declared_return': 'void', 'flags_argument': 3,
@@ -86,10 +154,14 @@ def check(root):
     ):
         assert declaration in deletion_header, declaration
     latest = snapshot['latest_private_partial_integration']
-    assert (latest['revision'], latest['input_objects'],
-            latest['emitted_function_definitions_including_helpers'],
+    assert latest['revision'] == 'V47'
+    assert (latest['input_objects'], latest['emitted_function_definitions_including_helpers'],
             latest['compiled_body_bytes'], latest['encoded_relocation_fields'],
-            latest['unresolved_imports']) == ('V46', 271, 395, 234600, 5384, 827)
+            latest['unresolved_imports']) == (279, 403, 241992, 5511, 845)
+    assert 'pending_private_partial_integration' not in snapshot
+    assert (latest['initialized_mutable_data_bytes'], latest['bss_bytes'],
+            latest['new_source_constant_pool_bytes'],
+            latest['trigonometric_coefficient_imports_unresolved']) == (32, 9344, 40, 8)
     assert latest['same_mutable_owners'] == 8 and latest['old_code_and_storage_preserved'] is True
     assert latest['fresh_reproduction_performed'] is False and latest['runtime_verified'] is False
     assert latest['additional_exact_original_matches'] == 0
@@ -114,6 +186,9 @@ def check(root):
 
 
 if __name__ == '__main__':
-    count = check(Path(__file__).resolve().parents[1])
-    print(f'PASS: {count} source/header files; 262 authored inputs, 2 upstream references; '
-          'draft holds retained. No game match or runtime verification performed.')
+    root = Path(__file__).resolve().parents[1]
+    count = check(root)
+    selection = json.loads((root / 'experimental/snapshot.json').read_text())['selected_source_scope']
+    print(f"PASS: {count} source/header files; {selection['authored_default_inputs']} authored inputs, "
+          f"{selection['optional_external_inputs']} optional upstream references; historical prefix and draft holds retained. "
+          'No source build, game match or runtime verification performed.')

@@ -5,9 +5,9 @@ It does not produce a game executable or a playable release. The unresolved impo
 are written to `unresolved-imports.json`; they are not supplied by stubs or original
 code. The interpreter and software arithmetic drafts are excluded.
 
-The plan contains 262 authored translation units in snapshot order. Every unit's
+The plan contains 277 authored translation units in snapshot order. Every unit's
 language and flags were derived from its retained compile record. These happen to
-share one C++17 profile; this is not a guessed replacement profile. All 858 included
+share one C++17 profile; this is not a guessed replacement profile. All 886 included
 source/header files are hash checked, including the authored floating-point models
 and conversion primitive. No SDK, host standard library or runtime library is added.
 
@@ -20,7 +20,7 @@ python3 tools/build_partial.py --source-root experimental --plan experimental/bu
 Build using an explicitly supplied EE installation and a new output directory:
 
 ```sh
-python3 tools/build_partial.py --source-root experimental --plan experimental/build-plan.json --toolchain /path/to/reviewed/ee --output work/portable-partial-first
+python3 tools/build_partial.py --source-root experimental --plan experimental/build-plan.json --toolchain /path/to/reviewed/ee --output work/portable-partial-expanded-first
 ```
 
 The first authored-only build succeeded from a clean Git archive of revision
@@ -32,12 +32,27 @@ input, retained private object, upstream source, alias, or retry was used. The
 recipe, and output hashes. This proves a working partial source-build path; it
 does not establish a repeat-build byte identity, a game executable, or gameplay.
 
-The current plan is a metadata successor: only its snapshot digest changed after
-four additional, excluded source implementations and updated arithmetic evidence
-were published. Its selected 262 sources, headers, flags, and tool identities are
-unchanged. The receipt preserves the exact executed plan hash; commit
-`8bf270c162f2aef0717ee8a025dbf16688052424` preserves that plan. The new iterator,
-name-pool, and arithmetic code is excluded from this recipe's measured output.
+The current plan expands that historical selection by 15 authored units: three safe
+iterator routines, name-pool insertion, megatile pointer limiting, script setup,
+deletion-list processing, floor clearing and insertion, three floor-lighting
+routines, the native strict-comparison primitive, and two integer-angle trig
+routines. All 15 retained successful compile commands use the same unchanged
+`authored_cpp` flags. The selected revisions are floor insertion v2, light-floor
+and world-light-map v1, light search v3, and strict comparison v2.
+
+This expanded 277-unit recipe has passed file-only validation; it has not yet been
+compiled or linked from the published source tree. Its output hashes, function
+inventory and unresolved count remain unmeasured. The next build is one clean
+source build: 277 compiler invocations with implicit assembly and one relocatable
+link, using the pinned toolchain and a new output directory. Neither optional
+Newlib input is selected by default. Arithmetic and interpreter drafts remain
+excluded. The floor trig coefficient imports remain external; this recipe adds
+no coefficient data or storage bindings.
+
+The historical 262-unit receipt remains unchanged. It preserves the exact executed
+plan hash, and commit `8bf270c162f2aef0717ee8a025dbf16688052424` preserves that
+plan. A successful expanded build needs its own separate receipt; the earlier
+result is not evidence that the expanded recipe has been built.
 
 The driver compiles each unit once, retains preprocessed source and assembly,
 then performs one relocatable link. A failure stops the driver, leaves the failed outputs and command log in
@@ -55,7 +70,7 @@ reviewed successor toolchain identity/profile; there is no skip-hash switch. See
 
 ## Optional upstream floorf and ceilf
 
-The default build leaves these two implementations absent. To compile all 264
+The default build leaves these two implementations absent. To compile all 279
 snapshot inputs, supply an existing Newlib 1.10.0 tree:
 
 ```sh
@@ -85,6 +100,6 @@ The link uses only `-m elf32lr5900 -r --warn-common`. It imports no absolute gam
 addresses and applies no symbol aliases. In particular, the historical private
 V43 binding of `memset` to `norrath_block_memory_set` is not automatically applied;
 `memset` remains an explicit unresolved import in this recipe. The output therefore
-has its own identity and is not claimed to reproduce the private V43 object hash or
+has its own identity and is not claimed to reproduce any private integration object hash or
 its import counts. No original executable, assets, BIOS, compiled private object,
 held draft or proprietary tool is read by the public driver.

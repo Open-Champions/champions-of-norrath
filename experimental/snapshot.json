@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "target_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
-  "scope": "Exact authored source snapshot from reviewed private partial integration; no new original-byte match or runtime claim",
+  "scope": "All accepted selected authored sources through the accepted V47 source set, plus two optional upstream references; historical V43 receipt is explicitly limited to original264-input prefix; no new original-byte match or runtime claim",
   "partial_integration": {
     "revision": "V43",
     "input_objects": 264,
@@ -4216,6 +4216,216 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/game-amx-public-metadata-build/get_public_variable.cpp"
+    },
+    {
+      "input_order": 264,
+      "component": "game-list-safe-iterator-build",
+      "object_name": "construct.o",
+      "private_object_sha256": "2a1bfc8a483fc15c39a93b14602e68833e88e3c475159559802568267a46e737",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_safe_iterator_construct",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-list-safe-iterator-source/construct.cpp"
+    },
+    {
+      "input_order": 265,
+      "component": "game-list-safe-iterator-build",
+      "object_name": "next.o",
+      "private_object_sha256": "45096035d0759a600022dc3417953dba8fd142be5f0b76105c8c0938f7507e09",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_safe_iterator_next",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-list-safe-iterator-source/next.cpp"
+    },
+    {
+      "input_order": 266,
+      "component": "game-list-safe-iterator-build",
+      "object_name": "destroy.o",
+      "private_object_sha256": "808216280ee9732706c523f89830411f91ef33cbfdda61890a97cb64105c5b7a",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_safe_iterator_destroy",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-list-safe-iterator-source/destroy.cpp"
+    },
+    {
+      "input_order": 267,
+      "component": "game-megatile-name-pool-build",
+      "object_name": "add_name.o",
+      "private_object_sha256": "57f2cf0e118a8adaf6592f46a925689f4df814a24c1e35f9b58bf560fffe0362",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_add_pm_list",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-megatile-name-pool-source/add_name.cpp"
+    },
+    {
+      "input_order": 268,
+      "component": "game-megatile-pm-pointer-cap-build",
+      "object_name": "cap_pointers.o",
+      "private_object_sha256": "8e0d0921cd8ad5289cd51b8b17f822d5b097f24961f60e877d4ba414d58ed436",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_cap_pm_pointers",
+          "compiled_body_bytes": 1080
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-megatile-pm-pointer-cap-source/cap_pointers.cpp"
+    },
+    {
+      "input_order": 269,
+      "component": "game-script-set-script-build",
+      "object_name": "set_script.o",
+      "private_object_sha256": "ae251a5420ba9f2dffc8bb5a481a0922ae4b82d9739477845ea0de6a14fa530a",
+      "emitted_functions": [
+        {
+          "name": "norrath_script_set_script",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-script-set-script-source/set_script.cpp"
+    },
+    {
+      "input_order": 270,
+      "component": "game-object-process-delete-list-build",
+      "object_name": "process_delete.o",
+      "private_object_sha256": "0c1c1d192ff59cd458b186e0a063d7bb31a91bfb5f2708dc4b75accb14e54cdf",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_process_delete_list",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-object-process-delete-list-source/process_delete.cpp"
+    },
+    {
+      "input_order": 271,
+      "component": "game-floor-clear-build",
+      "object_name": "floor_clear.o",
+      "private_object_sha256": "3818f114c2bfda6e39587730a76ebdc5e1dd3446505e7ee42793e0e825bf2782",
+      "emitted_functions": [
+        {
+          "name": "norrath_floor_clear",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-clear-source/floor_clear.cpp"
+    },
+    {
+      "input_order": 272,
+      "component": "game-floor-add-build-v2",
+      "object_name": "floor_add.o",
+      "private_object_sha256": "b5fb925c084e049fe53537b5e6c83490636bf98f795ed1590c4fae913f6a0ab7",
+      "emitted_functions": [
+        {
+          "name": "norrath_floor_add",
+          "compiled_body_bytes": 2808
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-add-source-v2/floor_add.cpp"
+    },
+    {
+      "input_order": 273,
+      "component": "game-floor-lighting-build",
+      "object_name": "light_floor.o",
+      "private_object_sha256": "21ec2cfdc1bfc37f103cdfc4cd819cfb29d8176cc8e2e1e4d9c21eb4c856dc69",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_floor_sprite",
+          "compiled_body_bytes": 1768
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-lighting-kernel-source/light_floor.cpp"
+    },
+    {
+      "input_order": 274,
+      "component": "game-floor-lighting-build-v3",
+      "object_name": "find_lights.o",
+      "private_object_sha256": "e993064eb7013febb98eb24a9f7d80b7c8b0047d55d049c6f1aca391f31109c0",
+      "emitted_functions": [
+        {
+          "name": "norrath_find_lights_at_point",
+          "compiled_body_bytes": 1716
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-lighting-kernel-source/find_lights.cpp"
+    },
+    {
+      "input_order": 275,
+      "component": "game-floor-lighting-build",
+      "object_name": "world_light_map.o",
+      "private_object_sha256": "77773a425d5f27d7c4a97920ab097be9769eb9292de2db5b5c1a9a749ad34566",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_query_light_map",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-lighting-kernel-source/world_light_map.cpp"
+    },
+    {
+      "input_order": 276,
+      "component": "game-floor-lighting-build-v2",
+      "object_name": "ee_compare.o",
+      "private_object_sha256": "93284f29149842a289caa3d9a227e9831077b1fe8596d3c2346213ae4a4f1f65",
+      "emitted_functions": [
+        {
+          "name": "ee_c_lt_s_word",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-floor-lighting-kernel-source/ee_compare.cpp"
+    },
+    {
+      "input_order": 277,
+      "component": "game-integer-trig-code-only-build",
+      "object_name": "icos.o",
+      "private_object_sha256": "545936d86b8f59bbba281e5fc49eb216f04e76a7088bfaa5967e8aa85923d0e4",
+      "emitted_functions": [
+        {
+          "name": "norrath_integer_cosine",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-integer-trig-code-only-source/icos.cpp"
+    },
+    {
+      "input_order": 278,
+      "component": "game-integer-trig-code-only-build",
+      "object_name": "isin.o",
+      "private_object_sha256": "ad206380e92d12317e2dd26886181a7f7f2cf17f63f0c7598a247e695e1e594c",
+      "emitted_functions": [
+        {
+          "name": "norrath_integer_sine",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-integer-trig-code-only-source/isin.cpp"
     }
   ],
   "drafts": [
@@ -4428,10 +4638,25 @@
     "sources/game-creature-animation-build/creature_animation.hpp": "fce9603a7f59a5c3873c5d4d936d573f1458e50f0a5962da3f9ad7b38134d2cd",
     "sources/game-creature-animation-build/finish_construction.cpp": "072d958f75a1a31cb516ff0d28d9709db30a9bd737e0e000f95cb9688f73af25",
     "sources/game-creature-animation-build/set_parameters.cpp": "42959f53f255182cb9040b59766c87796388c4d6453f3fac16ce79a26ed4a4fd",
+    "sources/game-floor-add-source-v2/ee_compare.hpp": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+    "sources/game-floor-add-source-v2/floor_add.cpp": "5062c771b20096168b7c6fd83e8b4a2f8ddd79b33c1c373fd9869bf6a74c5f83",
+    "sources/game-floor-add-source-v2/floor_add.hpp": "8fd1a1d946376d88e491fe59378d0b1db11b04956964b811167438b17614b8e1",
+    "sources/game-floor-clear-source/floor_clear.cpp": "66957c663312552eeb6ee024bc983f30fc88357a240dfc92b89d3a9a034447f5",
+    "sources/game-floor-clear-source/floor_clear.hpp": "317958629fab05ed5af73238b81f0f48a1bb1a1b0ca25430047e93fc0d01b5b8",
+    "sources/game-floor-lighting-kernel-source/ee_compare.cpp": "f5da5c48e9c32cf34fd0ae35ee28429e6dc10a2f2924d624a3b3f5b7081b35c0",
+    "sources/game-floor-lighting-kernel-source/ee_compare.hpp": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+    "sources/game-floor-lighting-kernel-source/find_lights.cpp": "784619f7e52115910cd67f2cba7a23c7089e05832d3a306953c4398a9876deb0",
+    "sources/game-floor-lighting-kernel-source/grid_stride.hpp": "4a9a9a383aad9200cc4ffc163c5b4dbc276d095f851ea919fd793ac05ad10175",
+    "sources/game-floor-lighting-kernel-source/light_floor.cpp": "fccb8ac18bbe8048e886d0eb67267b8db58e419da466b831feb5b67968429a64",
+    "sources/game-floor-lighting-kernel-source/lighting.hpp": "f12233f3d93d18c17ea11e1c201b0b5aea9dbb4f66caafe9d88fba4026aa7ab8",
+    "sources/game-floor-lighting-kernel-source/world_light_map.cpp": "0c9a6549cdc05505aec7ce2c019d56c896387ab030be1c6d9d689466dbfa9dc1",
     "sources/game-heap-allocator-build/heap.hpp": "1f8fad9e708f2717b05a1bccb8db0e25368554e707261ddfb910e2a3ac945ec2",
     "sources/game-heap-allocator-build/mem_alloc.cpp": "87338796936eecbab658e938a1dead6e4e3e82600613cd6dd2f77439a08e49ac",
     "sources/game-heap-allocator-build/mem_check_heap.cpp": "a2737eb7b232e569df407574d336e682e9eb7a34438fdbb6f1970924ac8b4520",
     "sources/game-heap-allocator-build/mem_dump_heap.cpp": "8d04c9f747eec9756a2256dd94c8a72c27dbb83efa95fb011cdd424bfdafd390",
+    "sources/game-integer-trig-code-only-source/icos.cpp": "49dd01609d7d0da4ae90cd21bc61cb387e43f8aca811c7d2616ff62bb9e00c47",
+    "sources/game-integer-trig-code-only-source/isin.cpp": "be9f9a81578a1df1453b3f8db8090382accfed21cc083b316671b8b321269fe9",
+    "sources/game-integer-trig-code-only-source/rotation.hpp": "694021a38329e658592a1ad7675dc415743e6802d07238d718ad0a9a0f3b261e",
     "sources/game-item-create-build-v2/constructor.hpp": "5f6a2f7ddda1c07e5ada349018e15c06a278f6ea428061823363b2d1997b7c2d",
     "sources/game-item-create-build-v2/item_create.cpp": "213e84cb68d6eb92464b9ac4be7ca9d22a858dbda0f42ac684c72cb568c61364",
     "sources/game-item-create-build-v2/item_create.hpp": "b883224a7555868793674283ab296d77dbfaf85f2c36689f6678128f15da0ca1",
@@ -5280,23 +5505,329 @@
         "native_physical_frame_upper_register_lifetime_IRQ_fault_verified": false,
         "runtime_verified": false
       }
+    },
+    {
+      "component": "game-floor-clear-source",
+      "functions": [
+        "norrath_floor_clear"
+      ],
+      "files": [
+        "sources/game-floor-clear-source/floor_clear.cpp",
+        "sources/game-floor-clear-source/floor_clear.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "3ffbcb9eef892493f3661d31742b0c1181e19c08398df8552be9eba8a53308b4",
+      "first_compiled_object_sha256": "3818f114c2bfda6e39587730a76ebdc5e1dd3446505e7ee42793e0e825bf2782",
+      "first_compiled_body_bytes": 384,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-clear-source/floor_clear.cpp",
+        "sha256": "66957c663312552eeb6ee024bc983f30fc88357a240dfc92b89d3a9a034447f5",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding.",
+      "bounded_behavior": {
+        "fixtures": 3,
+        "paired_calls": 3,
+        "genuine_original_and_authored_memset_bodies": true,
+        "persistent_memory_layout_publication_saved_low64_SP_GP_matched": true,
+        "original_root_words_covered": 69,
+        "original_root_whole_words": 69,
+        "compiled_root_words_covered": 92,
+        "compiled_root_whole_words": 96,
+        "old_cases_replayed": false,
+        "native_or_hardware_gameplay_verified": false,
+        "private_result_manifest_sha256": "929da965d571a40ababeec8c0914df2ed2f9cceaabcdca33db32288c47688872",
+        "private_ROOT_saved_result_review_sha256": "f55f95d265963198ad6b27439b56829edc28ff6b108e9d406d110871f4563f65"
+      }
+    },
+    {
+      "component": "game-floor-add-source-v2",
+      "functions": [
+        "norrath_floor_add"
+      ],
+      "files": [
+        "sources/game-floor-add-source-v2/floor_add.cpp",
+        "sources/game-floor-add-source-v2/floor_add.hpp",
+        "sources/game-floor-add-source-v2/ee_compare.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "5856ab1659fb42e81575356e7987d267f45381039dbe7d61e82cf3d40d347618",
+      "first_compiled_object_sha256": "b5fb925c084e049fe53537b5e6c83490636bf98f795ed1590c4fae913f6a0ab7",
+      "first_compiled_body_bytes": 2808,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-add-source-v2/floor_add.cpp",
+        "sha256": "5062c771b20096168b7c6fd83e8b4a2f8ddd79b33c1c373fd9869bf6a74c5f83",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "game-floor-light-sprite-source",
+      "functions": [
+        "norrath_light_floor_sprite"
+      ],
+      "files": [
+        "sources/game-floor-lighting-kernel-source/light_floor.cpp",
+        "sources/game-floor-lighting-kernel-source/lighting.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "820f542b0ebe16c99d5396c3dec94843a50ac482aa48f3dcc52affc011654740",
+      "first_compiled_object_sha256": "21ec2cfdc1bfc37f103cdfc4cd819cfb29d8176cc8e2e1e4d9c21eb4c856dc69",
+      "first_compiled_body_bytes": 1768,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-lighting-source/light_floor.cpp",
+        "sha256": "fccb8ac18bbe8048e886d0eb67267b8db58e419da466b831feb5b67968429a64",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "game-floor-find-lights-source-v3",
+      "functions": [
+        "norrath_find_lights_at_point"
+      ],
+      "files": [
+        "sources/game-floor-lighting-kernel-source/find_lights.cpp",
+        "sources/game-floor-lighting-kernel-source/lighting.hpp",
+        "sources/game-floor-lighting-kernel-source/ee_compare.hpp",
+        "sources/game-floor-lighting-kernel-source/grid_stride.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "6094c38f13faac9fd759f396d5b714b33cced7c768013fef4c0cb94c7ba3356a",
+      "first_compiled_object_sha256": "e993064eb7013febb98eb24a9f7d80b7c8b0047d55d049c6f1aca391f31109c0",
+      "first_compiled_body_bytes": 1716,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-lighting-source-v3/find_lights.cpp",
+        "sha256": "784619f7e52115910cd67f2cba7a23c7089e05832d3a306953c4398a9876deb0",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "game-floor-world-light-map-source",
+      "functions": [
+        "norrath_world_query_light_map"
+      ],
+      "files": [
+        "sources/game-floor-lighting-kernel-source/world_light_map.cpp",
+        "sources/game-floor-lighting-kernel-source/lighting.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "820f542b0ebe16c99d5396c3dec94843a50ac482aa48f3dcc52affc011654740",
+      "first_compiled_object_sha256": "77773a425d5f27d7c4a97920ab097be9769eb9292de2db5b5c1a9a749ad34566",
+      "first_compiled_body_bytes": 260,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-lighting-source/world_light_map.cpp",
+        "sha256": "0c9a6549cdc05505aec7ce2c019d56c896387ab030be1c6d9d689466dbfa9dc1",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "ee-native-float-compare-source",
+      "functions": [
+        "ee_c_lt_s_word"
+      ],
+      "files": [
+        "sources/game-floor-lighting-kernel-source/ee_compare.cpp",
+        "sources/game-floor-lighting-kernel-source/ee_compare.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "eec08805613d1bb6d898dcbaf9b108276dd99d784e4b809b151b2eafc5c785e4",
+      "first_compiled_object_sha256": "93284f29149842a289caa3d9a227e9831077b1fe8596d3c2346213ae4a4f1f65",
+      "first_compiled_body_bytes": 24,
+      "private_ROOT_actual_review_manifest_sha256": "5e134b92411e6a16040f4a837b8f3a80cfa0cb3bcb0bdfae23c5dcce3e5eab01",
+      "source_provenance": {
+        "private_source": "work/game-floor-lighting-source-v2/ee_compare.cpp",
+        "sha256": "f5da5c48e9c32cf34fd0ae35ee28429e6dc10a2f2924d624a3b3f5b7081b35c0",
+        "literal_copy": true
+      },
+      "implementation_kind": "authored_architectural_primitive",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "game-integer-cosine-source",
+      "functions": [
+        "norrath_integer_cosine"
+      ],
+      "files": [
+        "sources/game-integer-trig-code-only-source/icos.cpp",
+        "sources/game-integer-trig-code-only-source/rotation.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "d1ae94d6b65dd03b74673d688f8e3d59957a9e5c2d9cdd4004a55eed83ee8caf",
+      "first_compiled_object_sha256": "545936d86b8f59bbba281e5fc49eb216f04e76a7088bfaa5967e8aa85923d0e4",
+      "first_compiled_body_bytes": 216,
+      "private_ROOT_actual_review_manifest_sha256": "80a34149a86a3ade3284b89857291697ad2b8b3ad3285dddf418fec0929d19de",
+      "source_provenance": {
+        "private_source": "work/game-integer-trig-code-only-source/icos.cpp",
+        "sha256": "49dd01609d7d0da4ae90cd21bc61cb387e43f8aca811c7d2616ff62bb9e00c47",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
+    },
+    {
+      "component": "game-integer-sine-source",
+      "functions": [
+        "norrath_integer_sine"
+      ],
+      "files": [
+        "sources/game-integer-trig-code-only-source/isin.cpp",
+        "sources/game-integer-trig-code-only-source/rotation.hpp"
+      ],
+      "status": "Complete source and FIRST compilation accepted; selected for source build; integrated into the accepted private V47 partial object; native/game runtime and original-byte equality unverified",
+      "private_FIRST_manifest_sha256": "d1ae94d6b65dd03b74673d688f8e3d59957a9e5c2d9cdd4004a55eed83ee8caf",
+      "first_compiled_object_sha256": "ad206380e92d12317e2dd26886181a7f7f2cf17f63f0c7598a247e695e1e594c",
+      "first_compiled_body_bytes": 216,
+      "private_ROOT_actual_review_manifest_sha256": "80a34149a86a3ade3284b89857291697ad2b8b3ad3285dddf418fec0929d19de",
+      "source_provenance": {
+        "private_source": "work/game-integer-trig-code-only-source/isin.cpp",
+        "sha256": "be9f9a81578a1df1453b3f8db8090382accfed21cc083b316671b8b321269fe9",
+        "literal_copy": true
+      },
+      "implementation_kind": "complete_game_function",
+      "additional_exact_original_matches": 0,
+      "runtime_executed": false,
+      "scope": "Canonical target ABI and valid stable ordinary-RAM source behavior; original physical frame/access, FPU status/timing, native upper lanes, IRQ/fault, lifetime and hardware/gameplay remain unverified. Shared floor/light views and all eight trig coefficient owners remain unresolved; no original payload or address binding."
     }
   ],
   "latest_private_partial_integration": {
-    "revision": "V46",
-    "input_objects": 271,
-    "emitted_function_definitions_including_helpers": 395,
-    "compiled_body_bytes": 234600,
-    "encoded_relocation_fields": 5384,
-    "unresolved_imports": 827,
+    "revision": "V47",
+    "input_objects": 279,
+    "emitted_function_definitions_including_helpers": 403,
+    "compiled_body_bytes": 241992,
+    "encoded_relocation_fields": 5511,
+    "unresolved_imports": 845,
     "same_mutable_owners": 8,
-    "source_functions_added": 1,
+    "source_functions_added": 8,
     "old_code_and_storage_preserved": true,
-    "object_sha256": "94d7255c450e20c319268584cf35bc7fd6a5d96503e4617ff9246689022629fd",
-    "private_FIRST_manifest_sha256": "9de75e67d9e0f7d67a84c1bb6bae046d2818b7451e94bdc29a9b216ca774a620",
-    "private_ROOT_manifest_sha256": "201c99325b749755868f4b0c1ce2bf5759ba6df03f9ce794288ea10553f77aeb",
+    "object_sha256": "f23c3e3bf70c04b561f6331ab33fe98f7b0c912ede28f0ef91943e56ca7a9bd6",
+    "private_FIRST_manifest_sha256": "d12f9dc46cad1c570bff9969fd4bac3c218914c3de25dd1ef68f87c90c85ae11",
+    "private_ROOT_manifest_sha256": "417db83734b2969eb6c72efc84be4f5cdbde86fac8a64b52b8a26e62db6d1cfa",
     "fresh_reproduction_performed": false,
     "runtime_verified": false,
-    "additional_exact_original_matches": 0
+    "additional_exact_original_matches": 0,
+    "initialized_mutable_data_bytes": 32,
+    "bss_bytes": 9344,
+    "new_source_constant_pool_bytes": 40,
+    "trigonometric_coefficient_imports_unresolved": 8
+  },
+  "source_provenance": {
+    "sources/game-floor-clear-source/floor_clear.cpp": {
+      "private_source": "work/game-floor-clear-source/floor_clear.cpp",
+      "sha256": "66957c663312552eeb6ee024bc983f30fc88357a240dfc92b89d3a9a034447f5",
+      "literal_copy": true
+    },
+    "sources/game-floor-clear-source/floor_clear.hpp": {
+      "private_source": "work/game-floor-clear-source/floor_clear.hpp",
+      "sha256": "317958629fab05ed5af73238b81f0f48a1bb1a1b0ca25430047e93fc0d01b5b8",
+      "literal_copy": true
+    },
+    "sources/game-floor-add-source-v2/floor_add.cpp": {
+      "private_source": "work/game-floor-add-source-v2/floor_add.cpp",
+      "sha256": "5062c771b20096168b7c6fd83e8b4a2f8ddd79b33c1c373fd9869bf6a74c5f83",
+      "literal_copy": true
+    },
+    "sources/game-floor-add-source-v2/floor_add.hpp": {
+      "private_source": "work/game-floor-add-source-v2/floor_add.hpp",
+      "sha256": "8fd1a1d946376d88e491fe59378d0b1db11b04956964b811167438b17614b8e1",
+      "literal_copy": true
+    },
+    "sources/game-floor-add-source-v2/ee_compare.hpp": {
+      "private_source": "work/game-floor-add-source-v2/ee_compare.hpp",
+      "sha256": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/light_floor.cpp": {
+      "private_source": "work/game-floor-lighting-source/light_floor.cpp",
+      "sha256": "fccb8ac18bbe8048e886d0eb67267b8db58e419da466b831feb5b67968429a64",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/world_light_map.cpp": {
+      "private_source": "work/game-floor-lighting-source/world_light_map.cpp",
+      "sha256": "0c9a6549cdc05505aec7ce2c019d56c896387ab030be1c6d9d689466dbfa9dc1",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/find_lights.cpp": {
+      "private_source": "work/game-floor-lighting-source-v3/find_lights.cpp",
+      "sha256": "784619f7e52115910cd67f2cba7a23c7089e05832d3a306953c4398a9876deb0",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/grid_stride.hpp": {
+      "private_source": "work/game-floor-lighting-source-v3/grid_stride.hpp",
+      "sha256": "4a9a9a383aad9200cc4ffc163c5b4dbc276d095f851ea919fd793ac05ad10175",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/lighting.hpp": {
+      "private_source": "work/game-floor-lighting-source-v3/lighting.hpp",
+      "sha256": "f12233f3d93d18c17ea11e1c201b0b5aea9dbb4f66caafe9d88fba4026aa7ab8",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/ee_compare.cpp": {
+      "private_source": "work/game-floor-lighting-source-v2/ee_compare.cpp",
+      "sha256": "f5da5c48e9c32cf34fd0ae35ee28429e6dc10a2f2924d624a3b3f5b7081b35c0",
+      "literal_copy": true
+    },
+    "sources/game-floor-lighting-kernel-source/ee_compare.hpp": {
+      "private_source": "work/game-floor-lighting-source-v2/ee_compare.hpp",
+      "sha256": "057f1c15df8df836fd836afbbd9eeae8f2fa1abe20791e5e8adc26fa93c97fc5",
+      "literal_copy": true
+    },
+    "sources/game-integer-trig-code-only-source/icos.cpp": {
+      "private_source": "work/game-integer-trig-code-only-source/icos.cpp",
+      "sha256": "49dd01609d7d0da4ae90cd21bc61cb387e43f8aca811c7d2616ff62bb9e00c47",
+      "literal_copy": true
+    },
+    "sources/game-integer-trig-code-only-source/isin.cpp": {
+      "private_source": "work/game-integer-trig-code-only-source/isin.cpp",
+      "sha256": "be9f9a81578a1df1453b3f8db8090382accfed21cc083b316671b8b321269fe9",
+      "literal_copy": true
+    },
+    "sources/game-integer-trig-code-only-source/rotation.hpp": {
+      "private_source": "work/game-integer-trig-code-only-source/rotation.hpp",
+      "sha256": "694021a38329e658592a1ad7675dc415743e6802d07238d718ad0a9a0f3b261e",
+      "literal_copy": true
+    }
+  },
+  "selected_source_scope": {
+    "selected_inputs": 279,
+    "authored_default_inputs": 277,
+    "optional_external_inputs": 2,
+    "emitted_function_definitions_including_helpers": 403,
+    "compiled_body_bytes_from_accepted_inputs": 241992,
+    "historical_prefix_inputs": 264,
+    "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
+    "additional_selected_inputs": 15,
+    "new_selected_game_functions": 7,
+    "new_selected_architectural_primitives": 1,
+    "coefficient_initializer_inputs": 0,
+    "original_receipt_scope": "partial_integration and build-receipt.json describe only the original264-input V43 prefix /262 authored default, not this successor selection",
+    "clean_source_successor_build_performed": false,
+    "runtime_verified": false
   }
 }
