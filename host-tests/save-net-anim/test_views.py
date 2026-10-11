@@ -194,6 +194,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_network_player_local_flags_view.cpp",
                     "norrath_network_player_local_flags_view", 3 * 17632 + 1, require_zero=True)
 
+    def test_connected_status(self):
+        self.expect("norrath_animation_dependency_view_4e6755.cpp",
+                    "norrath_animation_dependency_view_4e6755", 3 * 17632 + 1, require_zero=True)
+
 
 if __name__ == "__main__":
     unittest.main()
