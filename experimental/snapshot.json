@@ -11910,6 +11910,48 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/vehicle-actors-views/norrath_vehicle_view_44ffd8.cpp"
+    },
+    {
+      "input_order": 910,
+      "component": "vslots-b-lever-load",
+      "object_name": "lever_load.o",
+      "private_object_sha256": "c021f3d6366d977e481069a2f843a26176e00653889338efeedfbe93875594d3",
+      "emitted_functions": [
+        {
+          "name": "msg_load__5LeverPc",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-lever-load/lever_load.cpp"
+    },
+    {
+      "input_order": 911,
+      "component": "vslots-b-set-state-natasla",
+      "object_name": "set_state_natasla.o",
+      "private_object_sha256": "907acac6e22fa860293f75b16d766d7280760d38f48b35c5ae0d6dff0b2ef8d3",
+      "emitted_functions": [
+        {
+          "name": "setState__7Nataslai",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-set-state-natasla/set_state_natasla.cpp"
+    },
+    {
+      "input_order": 912,
+      "component": "vslots-b-turn-to-face",
+      "object_name": "turn_to_face.o",
+      "private_object_sha256": "24fa5661516300716a3223c99e05d81cdf6933625241c5e865fd978afc667a56",
+      "emitted_functions": [
+        {
+          "name": "turnToFace__8CreatureiG6Point3",
+          "compiled_body_bytes": 1800
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vslots-b-turn-to-face/turn_to_face.cpp"
     }
   ],
   "drafts": [
@@ -14018,6 +14060,8 @@
     "sources/vslots-b-draw-spider/host_check.cpp": "55fb954366d8bf28b85d5f30f1484dc7bbfb753e6b1aaeb8e0b8586faaf8a858",
     "sources/vslots-b-draw-trap/draw_trap.cpp": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
     "sources/vslots-b-draw-trap/host_check.cpp": "d91584eb17c0ea96afd326a821ab88e4d30736ae002f6c6bf2f8c182d0bf1266",
+    "sources/vslots-b-lever-load/host_check.cpp": "684333570118a3a19d33b7c9abe394274709435584bed21eac3f99327a2f5b9b",
+    "sources/vslots-b-lever-load/lever_load.cpp": "d13b04112e241d6ddcafd5d5f248aed5f3128e2625f65574c4a9d03db401a8fc",
     "sources/vslots-b-lever-save/host_check.cpp": "ae2153b2abfc828f8fea3aec8bcfc72277915363680bdaa429f030f08c3a7233",
     "sources/vslots-b-lever-save/lever_save.cpp": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
     "sources/vslots-b-msg-hurt/host_check.cpp": "62b8d75db82dd736abc61a39c8f8607bfd65987076adb2a596cf5bc034fe317d",
@@ -14038,6 +14082,8 @@
     "sources/vslots-b-run-timer/run_timer.cpp": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
     "sources/vslots-b-set-active-chunks/host_check.cpp": "89885476221c31d062b77054d3b5df5a43a25a0b09433d438033248e01202180",
     "sources/vslots-b-set-active-chunks/set_active_chunks.cpp": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+    "sources/vslots-b-set-state-natasla/host_check.cpp": "bc15a84e271eda9c83b3ecf62d5f1c845aa290571a57af2a4a9c74b9e7f5583a",
+    "sources/vslots-b-set-state-natasla/set_state_natasla.cpp": "b29e430490b46876839b504dda496ffee8d46574ca4502f9c4851bb738655aed",
     "sources/vslots-b-set-state/host_check.cpp": "90fdb3b380ddee58161bc274be639680b982e06f671d408657c950e72764cbe8",
     "sources/vslots-b-set-state/set_state.cpp": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
     "sources/vslots-b-stun/host_check.cpp": "3c5dc702db67bdfdf6d7f2db449d17b89e7adce5d8173020929ed9634e0cae4e",
@@ -14046,6 +14092,8 @@
     "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
     "sources/vslots-b-trigger-timer/host_check.cpp": "9f7024b10667f02e0eb9708c5b3a87a1d0c43a08df60fc4e25992234e1967cca",
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
+    "sources/vslots-b-turn-to-face/host_check.cpp": "509db91ea87ca4a01848b5af80c3ef4d31ca40f4b39f74bef0cdd30c0cee114d",
+    "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -14605,11 +14653,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 910,
-    "authored_default_inputs": 908,
+    "selected_inputs": 913,
+    "authored_default_inputs": 911,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 767,
-    "compiled_body_bytes_from_accepted_inputs": 347692,
+    "emitted_function_definitions_including_helpers": 770,
+    "compiled_body_bytes_from_accepted_inputs": 349800,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -14622,7 +14670,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 597
+    "package_selected_inputs": 600
   },
   "startup_implementations": [
     {
@@ -23809,6 +23857,57 @@
       "emitted_functions": [],
       "host_files": [
         "sources/vehicle-actors-views/host/norrath_vehicle_view_44ffd8.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-lever-load/lever_load.cpp",
+      "source_sha256": "d13b04112e241d6ddcafd5d5f248aed5f3128e2625f65574c4a9d03db401a8fc",
+      "object_sha256": "c021f3d6366d977e481069a2f843a26176e00653889338efeedfbe93875594d3",
+      "emitted_functions": [
+        {
+          "name": "msg_load__5LeverPc",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-lever-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-set-state-natasla/set_state_natasla.cpp",
+      "source_sha256": "b29e430490b46876839b504dda496ffee8d46574ca4502f9c4851bb738655aed",
+      "object_sha256": "907acac6e22fa860293f75b16d766d7280760d38f48b35c5ae0d6dff0b2ef8d3",
+      "emitted_functions": [
+        {
+          "name": "setState__7Nataslai",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-set-state-natasla/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vslots-b",
+      "source": "sources/vslots-b-turn-to-face/turn_to_face.cpp",
+      "source_sha256": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+      "object_sha256": "24fa5661516300716a3223c99e05d81cdf6933625241c5e865fd978afc667a56",
+      "emitted_functions": [
+        {
+          "name": "turnToFace__8CreatureiG6Point3",
+          "compiled_body_bytes": 1800
+        }
+      ],
+      "host_files": [
+        "sources/vslots-b-turn-to-face/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 908,
+  "default_authored_inputs": 911,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1529,6 +1529,7 @@
     "sources/vslots-b-draw-mermaid/draw_mermaid.cpp": "2ace9a8ee79d59fea17066a6f97b73970895aabb03120ea296035275f4eb1f97",
     "sources/vslots-b-draw-spider/draw_spider.cpp": "b61c3f3bae2a5a0d0b6c8b417a7b49bc49bd17ad2c4aa57e27dc773711ee30e7",
     "sources/vslots-b-draw-trap/draw_trap.cpp": "1bb3261aab0ea9d25082123ef55e5fcf5d16758c78f6ccad6ede1cd664d56b00",
+    "sources/vslots-b-lever-load/lever_load.cpp": "d13b04112e241d6ddcafd5d5f248aed5f3128e2625f65574c4a9d03db401a8fc",
     "sources/vslots-b-lever-save/lever_save.cpp": "9cd23d239aa3500d6c37db6d57ed612e61d386f652fda03ceef15ca31476e8c6",
     "sources/vslots-b-msg-hurt/msg_hurt.cpp": "27d1e7b429b1b74e7448ec6fc87716d101a81511de91f0fad440ff1a7a52e2f8",
     "sources/vslots-b-msg-move-collision/msg_move_collision.cpp": "97bd556689f3c5319955b1761a84af52749982a748478d518d6ceabc526e16a8",
@@ -1539,10 +1540,12 @@
     "sources/vslots-b-run-spells/run_spells.cpp": "f1e9856cf96df91665a611966ece846bf528a8ee57ed0310e3ea5b5d5412a836",
     "sources/vslots-b-run-timer/run_timer.cpp": "37786ab6237593847f205bd8168650243bedeedd0ce388661a0352156da43d59",
     "sources/vslots-b-set-active-chunks/set_active_chunks.cpp": "864b2a370c54e0b2a715bc4f0822f6b96d27f0fa2886480e8c63a519e23f40c4",
+    "sources/vslots-b-set-state-natasla/set_state_natasla.cpp": "b29e430490b46876839b504dda496ffee8d46574ca4502f9c4851bb738655aed",
     "sources/vslots-b-set-state/set_state.cpp": "927b7781dee9c1bc95404d9f718a6b9e7157764a079bdaba30820a302c4aafc8",
     "sources/vslots-b-stun/stun.cpp": "15d2d41f26653e5343a7ea235d8b2e2446bd750435f7878dde69fca87853d612",
     "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
+    "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -11899,6 +11902,39 @@
       "profile": "authored_cpp",
       "sha256": "207842972edac51a126ca22b37a2b9954e13b3b46148029f990ae4be7f2dccc1",
       "source": "sources/vehicle-actors-views/norrath_vehicle_view_44ffd8.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 910,
+      "kind": "independently_authored_source",
+      "object_name": "lever_load.o",
+      "profile": "authored_cpp",
+      "sha256": "d13b04112e241d6ddcafd5d5f248aed5f3128e2625f65574c4a9d03db401a8fc",
+      "source": "sources/vslots-b-lever-load/lever_load.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 911,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_natasla.o",
+      "profile": "authored_cpp",
+      "sha256": "b29e430490b46876839b504dda496ffee8d46574ca4502f9c4851bb738655aed",
+      "source": "sources/vslots-b-set-state-natasla/set_state_natasla.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 912,
+      "kind": "independently_authored_source",
+      "object_name": "turn_to_face.o",
+      "profile": "authored_cpp",
+      "sha256": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+      "source": "sources/vslots-b-turn-to-face/turn_to_face.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -11998,7 +12034,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "9888a4a60dc72706fd8cc8f64f8981c8dfdb97a2253c865e83f7729389489474",
+  "snapshot_sha256": "8e6378fe609260c34d486400c0354269e25cdfaf1b38c740219946ff91c8c965",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

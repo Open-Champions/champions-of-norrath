@@ -1079,6 +1079,22 @@ Opened 108 names, mostly the virtual-table callees plus
 `norrath_construct_Vehicle` stays unresolved. 765 function bodies, 908
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/vslots-b lever, Natasla, and turn
+
+Three units were selected. Host checks passed. None of them opened a new
+import.
+
+| | |
+|---|---|
+| Before | 950 |
+| After | 947 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `msg_load__5LeverPc`, `setState__7Nataslai`,
+`turnToFace__8CreatureiG6Point3`. 768 function bodies, 911 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1234,3 +1250,4 @@ and no startup stage has executed.
 - 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports
 - 2026-10-11 17:47 CDT — `agents/vslots-b` — 866 unresolved imports
 - 2026-10-11 17:49 CDT — `agents/vehicle-actors` — 950 unresolved imports
+- 2026-10-11 17:51 CDT — `agents/vslots-b` — 947 unresolved imports
