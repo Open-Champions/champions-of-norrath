@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 591,
+  "default_authored_inputs": 604,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -44,6 +44,20 @@
   },
   "external_header_evidence": "ceil preprocessing closure and literal header equality in both retained source trees; floor full fresh closure remains to be checked during the first portable build.",
   "files": {
+    "sources/actors-b-constructors/detail.hpp": "bfcdcef9d66e9ae63dc4f93ca51e481ee6da2790cf7452ffe4a35583faa9737d",
+    "sources/actors-b-constructors/goth_trap.cpp": "473019f40c46213fcbc870f1c78c3507d5c2f683e6127183c64754ed9eab0be8",
+    "sources/actors-b-constructors/hack_door.cpp": "68c5ab661c21dfab5c890cf870f087156c116f2c56ecee53a7c756b7135f01da",
+    "sources/actors-b-constructors/hate_bridge.cpp": "77b8f692c7b05dd836758d7ad546940fc0dcaf231b2784bf636fa18ec8b863c2",
+    "sources/actors-b-constructors/hate_gate.cpp": "7ef114f03aeef07cd45c77f929312dacf7cb6cec62f61ad26b561768f71e91d4",
+    "sources/actors-b-constructors/hate_hole.cpp": "597b8d7f1ff4ee00644cd9b1cb8e76bf3944f4ac801dcbea09c5eccb01378dc2",
+    "sources/actors-b-constructors/hate_into.cpp": "899fe15c2b236d5b0f165bf1155569d0f8ab4c4e9917dde6ae491dc89b61e182",
+    "sources/actors-b-constructors/lava_tractor.cpp": "61d29c41c76f3feae35df56376df2ff10178ad0596f93ad331044d802385da5b",
+    "sources/actors-b-constructors/missile_trap.cpp": "0b0dc1bf8f5393fe82f1771df856fc5bdcce3c707d840f582e696ab976c24762",
+    "sources/actors-b-constructors/push_physics_prop_simple.cpp": "2c2a9a31e5e525fb251f4d284969fddd3ecb1dbe759f319bb776e972a727d11c",
+    "sources/actors-b-constructors/shooter.cpp": "61c14b8add8cd1e4ba28fbf50e5907e2b2ca366579cbdab38e56f77a2a3fb1c4",
+    "sources/actors-b-constructors/skul_boat.cpp": "545e15f4de876c6094a3218c757697bdbb49e06df46abf12af3cb2183cdf6173",
+    "sources/actors-b-constructors/teleporter.cpp": "a622b17974c627c235074778610e1af7102eff6919431d5cf0e4b3b98bb49ee6",
+    "sources/actors-b-constructors/trigger.cpp": "0d9f5c37abf054d4d7e60f1acba63a2d3c22197fade9f8e9f3111296bbe69f75",
     "sources/audio-add-dma-handler/add_dma_handler.S": "64739e1a20d2ee7356b080cbc6be2ebbde719f0234b54d8d11e39fe7fb9daef3",
     "sources/audio-channel-records/channel_records.cpp": "0d0cd87af4a41e6fca0153e53cd5018a3316d7fe1070eec6339d10c921bb4092",
     "sources/audio-channel-voice/voice_map.cpp": "1b4b700d3ca565b14952af8207709b864d0c08ccf84f7028e5e4ce4ce0247074",
@@ -8621,6 +8635,149 @@
       "profile": "authored_cpp",
       "sha256": "293bc0e9b2526498752fa8df556e34aa1c411d2b04de2a78cdfc554101a33a97",
       "source": "sources/data-views-symbols/norrath_next_view_44e820.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 593,
+      "kind": "independently_authored_source",
+      "object_name": "goth_trap.o",
+      "profile": "authored_cpp",
+      "sha256": "473019f40c46213fcbc870f1c78c3507d5c2f683e6127183c64754ed9eab0be8",
+      "source": "sources/actors-b-constructors/goth_trap.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 594,
+      "kind": "independently_authored_source",
+      "object_name": "hack_door.o",
+      "profile": "authored_cpp",
+      "sha256": "68c5ab661c21dfab5c890cf870f087156c116f2c56ecee53a7c756b7135f01da",
+      "source": "sources/actors-b-constructors/hack_door.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 595,
+      "kind": "independently_authored_source",
+      "object_name": "hate_bridge.o",
+      "profile": "authored_cpp",
+      "sha256": "77b8f692c7b05dd836758d7ad546940fc0dcaf231b2784bf636fa18ec8b863c2",
+      "source": "sources/actors-b-constructors/hate_bridge.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 596,
+      "kind": "independently_authored_source",
+      "object_name": "hate_gate.o",
+      "profile": "authored_cpp",
+      "sha256": "7ef114f03aeef07cd45c77f929312dacf7cb6cec62f61ad26b561768f71e91d4",
+      "source": "sources/actors-b-constructors/hate_gate.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 597,
+      "kind": "independently_authored_source",
+      "object_name": "hate_hole.o",
+      "profile": "authored_cpp",
+      "sha256": "597b8d7f1ff4ee00644cd9b1cb8e76bf3944f4ac801dcbea09c5eccb01378dc2",
+      "source": "sources/actors-b-constructors/hate_hole.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 598,
+      "kind": "independently_authored_source",
+      "object_name": "hate_into.o",
+      "profile": "authored_cpp",
+      "sha256": "899fe15c2b236d5b0f165bf1155569d0f8ab4c4e9917dde6ae491dc89b61e182",
+      "source": "sources/actors-b-constructors/hate_into.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 599,
+      "kind": "independently_authored_source",
+      "object_name": "lava_tractor.o",
+      "profile": "authored_cpp",
+      "sha256": "61d29c41c76f3feae35df56376df2ff10178ad0596f93ad331044d802385da5b",
+      "source": "sources/actors-b-constructors/lava_tractor.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 600,
+      "kind": "independently_authored_source",
+      "object_name": "missile_trap.o",
+      "profile": "authored_cpp",
+      "sha256": "0b0dc1bf8f5393fe82f1771df856fc5bdcce3c707d840f582e696ab976c24762",
+      "source": "sources/actors-b-constructors/missile_trap.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 601,
+      "kind": "independently_authored_source",
+      "object_name": "push_physics_prop_simple.o",
+      "profile": "authored_cpp",
+      "sha256": "2c2a9a31e5e525fb251f4d284969fddd3ecb1dbe759f319bb776e972a727d11c",
+      "source": "sources/actors-b-constructors/push_physics_prop_simple.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 602,
+      "kind": "independently_authored_source",
+      "object_name": "shooter.o",
+      "profile": "authored_cpp",
+      "sha256": "61c14b8add8cd1e4ba28fbf50e5907e2b2ca366579cbdab38e56f77a2a3fb1c4",
+      "source": "sources/actors-b-constructors/shooter.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 603,
+      "kind": "independently_authored_source",
+      "object_name": "skul_boat.o",
+      "profile": "authored_cpp",
+      "sha256": "545e15f4de876c6094a3218c757697bdbb49e06df46abf12af3cb2183cdf6173",
+      "source": "sources/actors-b-constructors/skul_boat.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 604,
+      "kind": "independently_authored_source",
+      "object_name": "teleporter.o",
+      "profile": "authored_cpp",
+      "sha256": "a622b17974c627c235074778610e1af7102eff6919431d5cf0e4b3b98bb49ee6",
+      "source": "sources/actors-b-constructors/teleporter.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/actors-b-constructors/detail.hpp"
+      ],
+      "input_order": 605,
+      "kind": "independently_authored_source",
+      "object_name": "trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "0d9f5c37abf054d4d7e60f1acba63a2d3c22197fade9f8e9f3111296bbe69f75",
+      "source": "sources/actors-b-constructors/trigger.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -8720,7 +8877,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "5cb629c1b0a00d3e3acabd2b64bc1b5af40e22f1498608b5a74386243df5263e",
+  "snapshot_sha256": "ab75047cc7cb9fc5f0e033c5552b3782f2e5c1044b3ed864f75a2203a765dec4",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

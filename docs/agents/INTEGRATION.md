@@ -488,6 +488,30 @@ Closed: `norrath_actor_view_42b118`, `norrath_actor_view_42b768`, `norrath_actor
 bodies, 591 authored inputs, zero COMMON. 214 tool tests passed. No EE or
 game execution.
 
+## agents/actors-b
+
+All 13 constructors were selected. Each host contract returns non-zero when
+the call order, stored vtable, or forwarded result is wrong. All 13 passed.
+The host compile defines `NORRATH_ACTORS_B_HOST`, which the shared header
+requires where pointers are wider than 32 bits. No game binary or disassembly
+listing was committed. The compiled bodies are larger than the image extents
+in the notes. GothTrap is 188 bytes here and 116 bytes in the notes.
+
+| | |
+|---|---|
+| Before | 782 |
+| After | 796 |
+| Closed | 13 |
+| Opened | 27 |
+
+Closed: the 13 `norrath_construct_*` names. Opened: `norrath_construct_Vehicle`,
+`norrath_vehicle_reset`, `norrath_goth_trap_set_passable_state`,
+`norrath_hate_bridge_set_passable_state`, `norrath_actor_add_medium_run_list`,
+`norrath_world_get_door_height`, `norrath_world_check_for_water`, and the 20
+`norrath_actors_b_view_*` addresses. `sscanf` is already defined, so it did
+not open. 511 function bodies, 604 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -552,6 +576,11 @@ items-player already defines 35 `norrath_player_view_*` names. data-views
 defines the same 35 names again, including `norrath_player_view_484ca8`.
 Those units were not selected. Decide which package owns each name.
 
+`norrath_route_world_word_bytes` is the world-state object for original
+`world` at `0x004844a0`. actors-b leaves that address unresolved as
+`norrath_actors_b_view_4844a0` and does not alias it. Decide whether they
+are one symbol.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -561,7 +590,7 @@ symbol was defined twice.
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-engine-init, world-state, render-lights, and data-views. `engineInit__Ff`,
+engine-init, world-state, render-lights, data-views, and actors-b. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -584,3 +613,4 @@ and no startup stage has executed.
 - 2026-10-11 16:44 CDT — `agents/world-state` — 756 unresolved imports
 - 2026-10-11 16:47 CDT — `agents/render-lights` — 750 unresolved imports
 - 2026-10-11 16:50 CDT — `agents/data-views` — 782 unresolved imports
+- 2026-10-11 16:52 CDT — `agents/actors-b` — 796 unresolved imports
