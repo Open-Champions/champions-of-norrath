@@ -151,6 +151,10 @@ class ViewTests(unittest.TestCase):
         self.expect("norrath_animation_dependency_view_47ff1c.cpp",
                     "norrath_animation_dependency_view_47ff1c", 4, bytes.fromhex("83f92246"))
 
+    def test_transition_threshold(self):
+        self.expect("norrath_animation_transition_threshold_view.cpp",
+                    "norrath_animation_transition_threshold_view", 4, bytes.fromhex("8888883c"))
+
 
 if __name__ == "__main__":
     unittest.main()
