@@ -5890,11 +5890,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 279,
-    "authored_default_inputs": 277,
+    "selected_inputs": 284,
+    "authored_default_inputs": 282,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 403,
-    "compiled_body_bytes_from_accepted_inputs": 241992,
+    "emitted_function_definitions_including_helpers": 408,
+    "compiled_body_bytes_from_accepted_inputs": 242852,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -5905,6 +5905,59 @@
     "clean_source_successor_build_performed": true,
     "runtime_verified": false,
     "expanded_build_receipt": "build-receipt-expanded.json",
-    "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0"
-  }
+    "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
+    "startup_selected_inputs": 5
+  },
+  "startup_implementations": [
+    {
+      "source": "sources/runtime-memory/memset.cpp",
+      "symbol": "memset",
+      "compiled_body_bytes": 40,
+      "source_sha256": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
+      "object_sha256": "ab8d24111a385a1db49d7fc9d1ddda4fded8cfe7357bf1f58783a99281c8a56f",
+      "review": "experimental/sources/runtime-memory/REVIEW.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-startup/main_guard.cpp",
+      "symbol": "__main",
+      "compiled_body_bytes": 36,
+      "source_sha256": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
+      "object_sha256": "b382a79614c2cda533f7b818d0dbcee7da4d9b99c4da335dc393cf9647e15ff3",
+      "review": "docs/STARTUP_CTORS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-startup/destructors.cpp",
+      "symbol": "__do_global_dtors",
+      "compiled_body_bytes": 128,
+      "source_sha256": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
+      "object_sha256": "1dc44dc8cdf5c91d35e1d5c89bc79323ceace7eae3fdc83e7ac1bd7fbd933d64",
+      "review": "docs/STARTUP_CTORS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-startup/constructors.cpp",
+      "symbol": "__do_global_ctors",
+      "compiled_body_bytes": 176,
+      "source_sha256": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
+      "object_sha256": "ee2b05a41a7538b7656feb41d9ef83ed52205f2a88462507b809e859d7d040a2",
+      "review": "docs/STARTUP_CTORS.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "source": "sources/runtime-entry/start.S",
+      "symbol": "_start",
+      "compiled_body_bytes": 480,
+      "source_sha256": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
+      "object_sha256": "c0f830883045697d55caa2cb6d3db171f44ecea13be859f42af1fda46b2649c5",
+      "review": "docs/STARTUP_ENTRY.md",
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    }
+  ]
 }

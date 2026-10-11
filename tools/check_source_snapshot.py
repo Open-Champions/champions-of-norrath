@@ -23,7 +23,7 @@ def check(root):
             assert relative in files, (name, include)
     actual = {p.relative_to(directory).as_posix() for p in
               (directory / 'sources').rglob('*') if p.is_file()}
-    assert actual == set(files), 'Unrecorded or missing source files'
+    assert actual == set(files) | {'sources/runtime-memory/REVIEW.md'}, 'Unrecorded or missing source files'
     inputs = snapshot['inputs']
     selection = snapshot['selected_source_scope']
     prefix_count = selection['historical_prefix_inputs']
@@ -39,7 +39,8 @@ def check(root):
     assert len(authored) == selection['authored_default_inputs']
     assert len(external) == selection['optional_external_inputs'] == 2
     assert len(inputs) == selection['selected_inputs']
-    assert all(r['source'].endswith('.cpp') for r in inputs[prefix_count:])
+    historical_end = 279
+    assert all(r['source'].endswith('.cpp') for r in inputs[prefix_count:historical_end])
     assert len({r['source'] for r in authored}) == len(authored)
     assert all(r['source'] in files for r in authored)
     assert all(r['vendored'] is False for r in external)
@@ -84,10 +85,10 @@ def check(root):
         'ee_c_lt_s_word', 'norrath_integer_cosine', 'norrath_integer_sine',
     }
     additional_sources = {name for item in additions for name in item['files'] if name.endswith('.cpp')}
-    assert {r['source'] for r in inputs[prefix_count:]} == additional_sources
-    assert len(inputs) == prefix_count + len(additional_sources)
-    assert len(authored) == 262 + len(additional_sources)
-    assert {f['name'] for r in inputs[prefix_count:] for f in r['emitted_functions']} == set(additional_functions)
+    assert {r['source'] for r in inputs[prefix_count:historical_end]} == additional_sources
+    assert historical_end == prefix_count + len(additional_sources)
+    assert len(authored) == 262 + len(additional_sources) + selection['startup_selected_inputs']
+    assert {f['name'] for r in inputs[prefix_count:historical_end] for f in r['emitted_functions']} == set(additional_functions)
     selected_sources = {r['source'] for r in authored}
     assert not selected_sources & {f for draft in snapshot['drafts'] for f in draft['files']}
     assert not any(re.search(r'/(?:icos|isin)_(?:scale|cubic|quintic|septic)\.cpp$', f) for f in files)
@@ -108,7 +109,27 @@ def check(root):
         'sources/game-integer-trig-code-only-source/icos.cpp',
         'sources/game-integer-trig-code-only-source/isin.cpp',
     ]
-    assert [r['source'] for r in inputs[prefix_count:]] == expected_tail
+    assert [r['source'] for r in inputs[prefix_count:historical_end]] == expected_tail
+    startup = snapshot['startup_implementations']
+    assert len(startup) == selection['startup_selected_inputs'] == len(inputs) - historical_end
+    approved = [
+        ('sources/runtime-memory/memset.cpp', 'memset'),
+        ('sources/runtime-startup/main_guard.cpp', '__main'),
+        ('sources/runtime-startup/destructors.cpp', '__do_global_dtors'),
+        ('sources/runtime-startup/constructors.cpp', '__do_global_ctors'),
+        ('sources/runtime-entry/start.S', '_start'),
+    ]
+    assert [(r['source'], r['symbol']) for r in startup] == approved
+    for record, item in zip(startup, inputs[historical_end:]):
+        assert record['source'] == item['source']
+        assert item['emitted_functions'] == [{'name': record['symbol'],
+                                             'compiled_body_bytes': record['compiled_body_bytes']}]
+        assert record['source_sha256'] == files[record['source']]
+        assert record['object_sha256'] == item['private_object_sha256']
+        assert record['game_runtime_verified'] is False
+        assert record['exact_match_ledger_admission'] is False
+        review = root / record['review']
+        assert review.is_file() and review.suffix == '.md'
     provenance = snapshot['source_provenance']
     assert len(provenance) == 15
     for name, record in provenance.items():
