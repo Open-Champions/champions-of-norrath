@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 339,
+  "default_authored_inputs": 344,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -950,6 +950,10 @@
     "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
     "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
     "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+    "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+    "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+    "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
     "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
@@ -980,9 +984,10 @@
     "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
     "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
     "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
-    "sources/runtime-launchsrs/launch_srs.cpp": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
-    "sources/runtime-main/main.cpp": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
+    "sources/runtime-launchsrs/launch_srs.cpp": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
+    "sources/runtime-main/main.cpp": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
     "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
+    "sources/runtime-startup-text/startup_text.cpp": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
@@ -5575,7 +5580,7 @@
       "kind": "independently_authored_source",
       "object_name": "main.o",
       "profile": "authored_cpp",
-      "sha256": "4e45d82c759158037add313d588b21185e71bd908bfd53bcc05a2016926e90b0",
+      "sha256": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
       "source": "sources/runtime-main/main.cpp"
     },
     {
@@ -5584,7 +5589,7 @@
       "kind": "independently_authored_source",
       "object_name": "launch_srs.o",
       "profile": "authored_cpp",
-      "sha256": "3b2efe439e9f03802a1c89f90302fae60c59d2c4b497cb21f3ce21374135d633",
+      "sha256": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
       "source": "sources/runtime-launchsrs/launch_srs.cpp"
     },
     {
@@ -5699,6 +5704,15 @@
       "header_closure": [],
       "input_order": 312,
       "kind": "independently_authored_source",
+      "object_name": "startup_text.o",
+      "profile": "authored_cpp",
+      "sha256": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
+      "source": "sources/runtime-startup-text/startup_text.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 313,
+      "kind": "independently_authored_source",
       "object_name": "double_isinf.o",
       "profile": "authored_cpp",
       "sha256": "a74f52effb9ea3126f6f29e3ba237829f11996be0593a2ab0fdf4eb91c70e0bb",
@@ -5706,7 +5720,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 313,
+      "input_order": 314,
       "kind": "independently_authored_source",
       "object_name": "double_isnan.o",
       "profile": "authored_cpp",
@@ -5715,7 +5729,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 314,
+      "input_order": 315,
       "kind": "independently_authored_source",
       "object_name": "entity_floor.o",
       "profile": "authored_cpp",
@@ -5724,7 +5738,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 315,
+      "input_order": 316,
       "kind": "independently_authored_source",
       "object_name": "entity_fptodp.o",
       "profile": "authored_cpp",
@@ -5733,7 +5747,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 316,
+      "input_order": 317,
       "kind": "independently_authored_source",
       "object_name": "coefficients.o",
       "profile": "authored_cpp",
@@ -5742,7 +5756,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 317,
+      "input_order": 318,
       "kind": "independently_authored_source",
       "object_name": "atan_tables.o",
       "profile": "authored_cpp",
@@ -5751,7 +5765,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 318,
+      "input_order": 319,
       "kind": "independently_authored_source",
       "object_name": "pow_constants.o",
       "profile": "authored_cpp",
@@ -5760,7 +5774,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 319,
+      "input_order": 320,
       "kind": "independently_authored_source",
       "object_name": "nan_parts.o",
       "profile": "authored_cpp",
@@ -5769,7 +5783,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 320,
+      "input_order": 321,
       "kind": "independently_authored_source",
       "object_name": "add_dma_handler.o",
       "profile": "authored_entry_asm",
@@ -5778,7 +5792,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 321,
+      "input_order": 322,
       "kind": "independently_authored_source",
       "object_name": "set_dma_chain.o",
       "profile": "authored_entry_asm",
@@ -5787,7 +5801,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 322,
+      "input_order": 323,
       "kind": "independently_authored_source",
       "object_name": "enable_dma.o",
       "profile": "authored_cpp",
@@ -5796,7 +5810,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 323,
+      "input_order": 324,
       "kind": "independently_authored_source",
       "object_name": "command_storage.o",
       "profile": "authored_cpp",
@@ -5805,7 +5819,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 324,
+      "input_order": 325,
       "kind": "independently_authored_source",
       "object_name": "channel_records.o",
       "profile": "authored_cpp",
@@ -5814,7 +5828,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 325,
+      "input_order": 326,
       "kind": "independently_authored_source",
       "object_name": "voice_map.o",
       "profile": "authored_cpp",
@@ -5823,7 +5837,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 326,
+      "input_order": 327,
       "kind": "independently_authored_source",
       "object_name": "key_words.o",
       "profile": "authored_cpp",
@@ -5832,7 +5846,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 327,
+      "input_order": 328,
       "kind": "independently_authored_source",
       "object_name": "group_limits.o",
       "profile": "authored_cpp",
@@ -5841,7 +5855,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 328,
+      "input_order": 329,
       "kind": "independently_authored_source",
       "object_name": "sequence_records.o",
       "profile": "authored_cpp",
@@ -5850,7 +5864,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 329,
+      "input_order": 330,
       "kind": "independently_authored_source",
       "object_name": "stream_storage.o",
       "profile": "authored_cpp",
@@ -5859,7 +5873,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 330,
+      "input_order": 331,
       "kind": "independently_authored_source",
       "object_name": "master_volume.o",
       "profile": "authored_cpp",
@@ -5868,7 +5882,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 331,
+      "input_order": 332,
       "kind": "independently_authored_source",
       "object_name": "delay_thread_name.o",
       "profile": "authored_cpp",
@@ -5877,7 +5891,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 332,
+      "input_order": 333,
       "kind": "independently_authored_source",
       "object_name": "dialog_maps.o",
       "profile": "authored_cpp",
@@ -5886,7 +5900,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 333,
+      "input_order": 334,
       "kind": "independently_authored_source",
       "object_name": "iop_buffers.o",
       "profile": "authored_cpp",
@@ -5895,7 +5909,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 334,
+      "input_order": 335,
       "kind": "independently_authored_source",
       "object_name": "startup_strings.o",
       "profile": "authored_cpp",
@@ -5904,7 +5918,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 335,
+      "input_order": 336,
       "kind": "independently_authored_source",
       "object_name": "mem_realloc.o",
       "profile": "authored_cpp",
@@ -5913,7 +5927,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 336,
+      "input_order": 337,
       "kind": "independently_authored_source",
       "object_name": "malloc_bins.o",
       "profile": "authored_cpp",
@@ -5922,7 +5936,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 337,
+      "input_order": 338,
       "kind": "independently_authored_source",
       "object_name": "malloc_scalars.o",
       "profile": "authored_cpp",
@@ -5931,7 +5945,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 338,
+      "input_order": 339,
       "kind": "independently_authored_source",
       "object_name": "heap_state.o",
       "profile": "authored_cpp",
@@ -5940,7 +5954,7 @@
     },
     {
       "header_closure": [],
-      "input_order": 339,
+      "input_order": 340,
       "kind": "independently_authored_source",
       "object_name": "block_storage.o",
       "profile": "authored_cpp",
@@ -5949,12 +5963,48 @@
     },
     {
       "header_closure": [],
-      "input_order": 340,
+      "input_order": 341,
       "kind": "independently_authored_source",
       "object_name": "wrapper_byte.o",
       "profile": "authored_cpp",
       "sha256": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
       "source": "sources/memory-wrapper-byte/wrapper_byte.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 342,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_slow_run_list.o",
+      "profile": "authored_cpp",
+      "sha256": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
+      "source": "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 343,
+      "kind": "independently_authored_source",
+      "object_name": "state.o",
+      "profile": "authored_cpp",
+      "sha256": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
+      "source": "sources/object-infra-state/state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 344,
+      "kind": "independently_authored_source",
+      "object_name": "game_object_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+      "source": "sources/object-infra-vtable/game_object_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 345,
+      "kind": "independently_authored_source",
+      "object_name": "factory_text.o",
+      "profile": "authored_cpp",
+      "sha256": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+      "source": "sources/object-infra-factory-text/factory_text.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6054,7 +6104,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "1845ddf017f862d5c01bc2ec51f5960cedaaefa74347b4a9aa4455357f90c83c",
+  "snapshot_sha256": "3ea00cced05e9321549763b789c13ea3d753ab3fd521fcec43099c6e083638c3",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

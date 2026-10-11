@@ -149,3 +149,93 @@ bytes, matching the note. The other five units emit no functions. The
 sanitized realloc check and the bin-object check passed. The heap text check
 passes its byte comparisons; under AddressSanitizer it then reads one byte
 past `mem.cc`. 214 tool tests passed. No EE or game path ran.
+
+## agents/object-infra
+
+Merged. Addresses are tied to observed symbols. The slow-run function, state,
+vtable, and factory-text units each have a host contract that fails on a
+mismatch. No game binary or disassembly listing was committed.
+
+The notes' private link reported 646 unresolved imports from that branch's
+own plan. That absolute count does not reproduce. The closed and opened names
+do: every name under Imports closed left the unresolved list, and the
+seventeen vtable slots arrived.
+
+| | |
+|---|---|
+| Before | 950 |
+| After | 685 |
+| Closed | 282 |
+| Opened | 17 |
+
+Closed: the 282 names in `docs/agents/object-infra.md`, including
+`norrath_object_add_to_slow_run_list`, the constructor and hash views, the
+factory marker, and all 263 `norrath_factory_text_*` views. The hash-slot
+names are assembler aliases of the constructor string tables, so each pair is
+one object. `norrath_object_slow_run_list_view` is also defined. It was not a
+previous import, so it does not change the count.
+
+Opened: `norrath_vt_tf_10GameObject`, `norrath_vt_dtor_10GameObject`,
+`norrath_vt_msg_hurt_10GameObject`, `norrath_vt_msg_trigger_10GameObject`,
+`norrath_vt_msg_run_10GameObject`, `norrath_vt_msg_draw_10GameObject`,
+`norrath_vt_msg_collision_10GameObject`, `norrath_vt_msg_route_10GameObject`,
+`norrath_vt_msg_load_10GameObject`, `norrath_vt_msg_save_10GameObject`,
+`norrath_vt_msg_collision_world_10GameObject`,
+`norrath_vt_msg_move_collision_10GameObject`,
+`norrath_vt_msg_alert_10GameObject`,
+`norrath_vt_msg_get_poke_name_10GameObject`,
+`norrath_vt_msg_poke_10GameObject`, `norrath_vt_clone_10GameObject`,
+`norrath_vt_get_model_10GameObject`.
+
+`norrath_list_remove` and `norrath_list_oneway_link` were already defined.
+`norrath_actor_view_483ad0` was already unresolved. The slow-run body is 304
+bytes. The other three units emit no functions. All four host contracts
+passed. 214 tool tests passed. No PS2 or game execution. The vtable slots are
+not called.
+
+## Startup text from the shared branch
+
+The startup lead's text unit landed on `origin/codex/norrath-first-reconstruction`
+after object-infra was committed here and before that commit was pushed. It
+is selected data, not one of the four packages. `main` and `launchSRS` now
+reference the named strings. The unit defines no function.
+
+The lead measured 912 on the memory tip (950 − 38). Measured from the
+object-infra tip, the same 38 names close and nothing opens.
+
+| | |
+|---|---|
+| Before | 685 |
+| After | 647 |
+| Closed | 38 |
+| Opened | 0 |
+
+Closed: the 24 `norrath_main_rodata_*` / `norrath_main_sdata_*` addresses and
+the 14 `norrath_launchsrs_rodata_*` / `norrath_launchsrs_sdata_*` addresses
+listed in `docs/STARTUP_TEXT.md`. Opened: none. 443 function bodies, 344
+authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
+
+## Disagreements
+
+`norrath_actor_add_slow_run_list` was already selected. It walks 60 heads at
+`norrath_actor_view_50bfd0` and the same cycle word. `object-infra` adds
+`norrath_object_add_to_slow_run_list` for observed `objectAddToSlowRunList` and
+defines `norrath_object_slow_run_list_view` for observed `slowRunList` at
+`0x4fbfd0`. Its notes say `norrath_actor_view_50bfd0` is not that list. The
+two functions are different symbols, so the link has no duplicate definition.
+They do not share a head array.
+
+`norrath_player_malloc_semaphore_view` and `__sce_sema_id` remain two objects.
+The memory notes say the original word is one symbol and this package defines
+only the view. `__sce_sema_id` is still unresolved.
+
+No symbol in these four packages was defined twice.
+
+## Still authored, never executed
+
+Every function and data object added by math, audio, memory, and object-infra.
+Host checks ran on this machine. The reviewed EE compiler produced relocatable
+objects and the partial link succeeded. No routine from these packages has
+run on the EE, under the original process, or as gameplay. The same is true
+of the startup bodies already on the shared branch: they are selected source,
+and no startup stage has executed.
