@@ -132,9 +132,25 @@ Source `sources/audio-sound-sleep/sound_sleep.cpp`. SHA-256
 `b8970067048a1cdd7bfca8ae92418c4bfa5ddf1034a27b8096203663daf42d7e`.
 Do not plan either host check.
 
+## Original name used by engineInit
+
+`soundInit__Ff` at 0x0024c010 is 428 bytes. It clamps the float argument,
+calls `sceSdRemoteInit` and `soundInitHardware`, clears 43 channel records,
+allocates the two 4096-byte IOP buffers, binds RPC id `0x163a5`, then calls
+`soundRestore__Fb(0)` and `soundUpdateAdjustments`. That is the function
+already authored as `norrath_sound_initialize`. The original name is an alias
+of that symbol. Both symbols in the compiled object have the same value,
+size, and section. The compiled body is 788 bytes and is not an original-byte
+match. One nop at 0x0024c1bc sits after the symbol and is not included. The
+host check fails if the two symbols diverge. No second plan entry: the
+existing input `sources/game-sound-startup-build/initialize_sound.cpp`
+changed. Its SHA-256 is now
+`23395f48948a8fe60bf09b29a9ec5d9b9c1bd54a5add5dde45791b210049c71c`
+(was `d92fb343481103220ccc59c7464c90216aac7d04cea1d0b5af37ec48038cbd1f`).
+
 ## Imports closed
 
-`soundRestore__Fb`, `soundSleep__Fv`,
+`soundInit__Ff`, `soundRestore__Fb`, `soundSleep__Fv`,
 `norrath_sound_add_dma_handler`, `norrath_sound_enable_dma`,
 `norrath_sound_set_dma_chain`,
 `norrath_sound_command_packet_buffer_view`,
@@ -174,29 +190,31 @@ views `norrath_sound_stream_heap_words_view`, `norrath_sound_rpc_client_view`,
 the existing `norrath_sound_call_rpc` and the existing stream-record view.
 `norrath_sound_enable_dma` calls the existing interrupt functions. Service 22
 is issued directly, so `_EnableDmac` is not a new import. `soundRestore__Fb`
-adds no import.
+and `soundInit__Ff` add no import.
 
 ## Build-plan entries needed
 
 Append the 15 plan sources in this note, plus
 `sources/audio-sound-sleep/sound_sleep.cpp`. Refresh the existing
-`restore.cpp` hash recorded above. Do not add `host_check.cpp` or
-`host_contract.cpp` as inputs. `snapshot.json` must record every new file,
-including those host checks and the changed `restore.cpp`, before
-`tools/check_source_snapshot.py` accepts the tree. This branch does not edit
-the snapshot or the shared plan.
+`restore.cpp` and `initialize_sound.cpp` hashes recorded above. Do not add
+`host_check.cpp` or `host_contract.cpp` as inputs. `snapshot.json` must
+record every new file, including those host checks and the changed sources,
+before `tools/check_source_snapshot.py` accepts the tree. This branch does
+not edit the snapshot or the shared plan.
 
 ## Authored but never executed
 
-Every function and data object above, including `soundRestore__Fb` and
-`soundSleep__Fv`. The host contracts and the DMA body comparisons ran on
-this machine. Nothing was executed on the EE. No syscall, DMA, SPU, or game
-path has run. `sceSifFreeIopHeap` has not been reconstructed.
+Every function and data object above, including `soundInit__Ff`,
+`soundRestore__Fb`, and `soundSleep__Fv`. The host contracts and the DMA
+body comparisons ran on this machine. Nothing was executed on the EE. No
+syscall, DMA, SPU, or game path has run. `sceSifFreeIopHeap` has not been
+reconstructed.
 
 ## Unknown
 
 Services 18, 22, and 120 have unknown kernel effects. `norrath_sound_enable_dma`,
-`soundRestore__Fb`, and `soundSleep__Fv` are not original-byte matches.
+`soundInit__Ff`, `soundRestore__Fb`, and `soundSleep__Fv` are not
+original-byte matches.
 `sceSifFreeIopHeap` at 0x002dc2a0 is 28 bytes and only calls
 `sceSifFreeSysMemory`; its effect is unknown. The fourth byte of the
 16-byte `streamAllocation` object is not written by `soundSleep__Fv`. Four bytes between the 43 channel records and
