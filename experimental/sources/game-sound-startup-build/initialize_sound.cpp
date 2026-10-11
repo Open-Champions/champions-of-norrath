@@ -53,3 +53,8 @@ extern "C" void norrath_sound_initialize(float gain) {
     norrath_sound_restore(false);
     norrath_sound_update_adjustments();
 }
+
+/* soundInit__Ff at 0x0024c010 is 428 bytes and is this function.
+ * The original name is the same body, not a second copy.
+ */
+extern "C" void soundInit__Ff(float) __attribute__((alias("norrath_sound_initialize")));
