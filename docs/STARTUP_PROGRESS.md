@@ -126,4 +126,16 @@ authored inputs. Partial object
 `__main` was already defined. The 24 unnamed text addresses are separate
 imports because they have no ELF symbol; their bytes are not in the source.
 The [review](STARTUP_MAIN.md) records the control flow. No EE startup stage
-has run. `launchSRS` is still unresolved.
+has run.
+
+## launchSRS
+
+`launchSRS` is now selected authored source. It reserves a heap block, shuts
+down sound, keyboard, and texture cache, walks `_srsctorsstart`, calls
+`srs_main`, then restores those subsystems and reloads six halo resources.
+`cdLoad__FPcPvii` stays a separate import. The fresh default partial link is
+**1040 unresolved imports** (993 − 1 + 48), zero COMMON, 422 function bodies,
+298 authored inputs. Partial object
+`db0ae5e19bd1d9a86dd695b9d6a34a666d222b5b60c18bbd20be5d22b02103d3`.
+The [review](STARTUP_LAUNCHSRS.md) records the control flow.
+`engineAddTask__FPFv_viPci` is still unresolved. No EE startup stage has run.

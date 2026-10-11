@@ -133,6 +133,7 @@ def check(root):
         ('sources/runtime-initsys/init_syscall_table.cpp', 'InitSystemCallTableAddress'),
         ('sources/runtime-initsys/init_timer.cpp', 'InitTimer'),
         ('sources/runtime-main/main.cpp', 'main'),
+        ('sources/runtime-launchsrs/launch_srs.cpp', 'launchSRS__Fv'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):
