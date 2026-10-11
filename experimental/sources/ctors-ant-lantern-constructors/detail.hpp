@@ -19,6 +19,8 @@ unsigned __11AddParticleG6Point3PPc(void* object, const void* point, char** argu
 unsigned norrath_construct_AutoChest(void* object, char* name, const void* point, short type, char** arguments);
 unsigned norrath_construct_AutoContainer(void* object, char* name, const void* point, short type, char** arguments);
 unsigned norrath_construct_AutoChestLP(void* object, char* name, const void* point, short type, char** arguments);
+unsigned norrath_construct_AutoContainerLP(void* object, char* name, const void* point, short type, char** arguments);
+extern unsigned char norrath_ctors_ant_lantern_view_44e940[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
