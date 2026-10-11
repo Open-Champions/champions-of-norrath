@@ -30,6 +30,10 @@ STUBS = {
     0x0013D230: "norrath_light_add",
     0x00165DC0: "norrath_lump_find_resource",
     0x00223BD8: "norrath_construct_AutoPropLP",
+    0x00175440: "norrath_world_find_closest_door",
+    0x0017D348: "norrath_world_set_door_collision",
+    0x0017D3D0: "norrath_world_get_door_height",
+    0x001437E8: "norrath_object_add_to_delete_list",
 }
 OBJECT = 0x31000000
 POINT = 0x31001000
@@ -200,6 +204,12 @@ class Machine:
                 self.write32(rd, 1 if self.low(rs) < self.low(rt) else 0)
             elif funct == 42:  # slt
                 self.write32(rd, 1 if sext32(self.low(rs)) < sext32(self.low(rt)) else 0)
+            elif funct == 0x38:  # dsll
+                if rd:
+                    self.r[rd] = ((self.r[rt] & 0xFFFFFFFFFFFFFFFF) << sa) & 0xFFFFFFFFFFFFFFFF
+            elif funct == 0x3A:  # dsrl
+                if rd:
+                    self.r[rd] = (self.r[rt] & 0xFFFFFFFFFFFFFFFF) >> sa
             elif funct == 0x3C:  # dsll32
                 if rd:
                     self.r[rd] = (self.r[rt] & 0xFFFFFFFFFFFFFFFF) << (sa + 32)
@@ -584,6 +594,7 @@ def main():
     compare_candle(data, loads)
     compare_container_resources(data, loads)
     compare_eggsack(data, loads)
+    compare_doorsecret(data, loads)
 
 
 def compare_candle2(data, loads):
@@ -830,6 +841,77 @@ def compare_eggsack(data, loads):
                     print(" byte", index, hex(a), hex(b))
             raise SystemExit("eggsack comparison failed")
     print("eggsack: 2 original/compiled scenarios matched")
+
+
+def compare_doorsecret(data, loads):
+    original = read_vaddr(data, loads, 0x00212F08, 0x14C)
+    output = Path("/tmp/actors-a-doorsecret.o")
+    compile_object(ROOT / "experimental/sources/actors-a-doorsecret/doorsecret.cpp", output)
+    text, relocs, symbols, _named = parse_object(output)
+    bases = {
+        "norrath_game_object_construct": 0x001411F0,
+        "norrath_actor_find_tag_string": 0x00143A80,
+        "norrath_world_find_closest_door": 0x00175440,
+        "norrath_world_set_door_collision": 0x0017D348,
+        "norrath_world_get_door_height": 0x0017D3D0,
+        "norrath_object_add_to_delete_list": 0x001437E8,
+        "norrath_actors_a_view_44d0a8": 0x0044D0A8,
+        "norrath_actors_a_view_4498b0": 0x004498B0,
+        "norrath_actors_a_view_485358": 0x00485358,
+        "norrath_factory_world_pointer_word": 0x004844A0,
+    }
+    compiled = apply_relocations(text, relocs, symbols, bases)
+    original_image = {0x00212F08 + index: byte for index, byte in enumerate(original)}
+    compiled_image = {CODE + index: byte for index, byte in enumerate(compiled)}
+    extra = {0x004844A0: 0x20001000}
+    incoming = bytes([0x00, 0x00, 0x80, 0x3F, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x40, 0x40])
+    filled = bytes([0x5A] * 12)
+    # tag absent / positive door, then tag present / negative door.
+    scenarios = [
+        ([0, 0, 5, 0, 0x1234, 0], 0x100, 0x00100103, 0x00100103, 5, 0x1234,
+         ["norrath_game_object_construct", "norrath_actor_find_tag_string",
+          "norrath_world_find_closest_door", "norrath_world_set_door_collision",
+          "norrath_world_get_door_height", "norrath_world_set_door_collision"]),
+        ([0, 1, 0x8000, 0, 0xAB, 0x99, 0], 0, 3, 0x00100003, 0x8000, 0xAB,
+         ["norrath_game_object_construct", "norrath_actor_find_tag_string",
+          "norrath_world_find_closest_door", "norrath_world_set_door_collision",
+          "norrath_world_get_door_height", "norrath_object_add_to_delete_list",
+          "norrath_world_set_door_collision"]),
+    ]
+    for answers, flags, mid_flags, final_flags, door, height, names in scenarios:
+        signed = door if door < 0x8000 else door - 0x10000
+        left = run_case(original_image, 0x00212F08, answers, flags=flags, extra=extra, regs={6: ARGUMENTS})
+        right = run_case(compiled_image, CODE, answers, flags=flags, extra=extra, regs={6: ARGUMENTS})
+        names_ok = [call[0] for call in left.calls] == [call[0] for call in right.calls] == names
+        snap = struct.pack("<II", mid_flags, 0x0044D0A8)
+        ok = (names_ok and left.low(2) == right.low(2) == 0x00100000 and
+              object_bytes(left, 96) == object_bytes(right, 96) and
+              left.snapshots == right.snapshots == [snap] and
+              left.calls[0][3] == 0 and left.calls[0][4] == ARGUMENTS and left.calls[0][5] == incoming and
+              left.calls[1][1] == OBJECT and left.calls[1][2] == 0x00485358 and left.calls[1][3] == 0 and
+              left.calls[2][1] == 0x20001000 and left.calls[2][5] == filled and
+              left.u32(OBJECT + 12) == final_flags and left.u32(OBJECT + 72) == 0x004498B0 and
+              (left.u8(OBJECT + 76) | (left.u8(OBJECT + 77) << 8)) == door and
+              (left.u8(OBJECT + 78) | (left.u8(OBJECT + 79) << 8)) == height)
+        for side in (left, right):
+            for call in side.calls:
+                if call[0] == "norrath_world_set_door_collision":
+                    ok = ok and call[1] == 0x20001000 and call[2] == (signed & 0xFFFFFFFF) and call[3] == 1
+                if call[0] == "norrath_world_get_door_height":
+                    ok = ok and call[1] == 0x20001000 and call[2] == (signed & 0xFFFFFFFF)
+                if call[0] == "norrath_object_add_to_delete_list":
+                    ok = ok and call[1] == OBJECT
+        if not ok:
+            print("doorsecret", names)
+            print("left", left.calls)
+            print("right", right.calls)
+            print("return", hex(left.low(2)), hex(right.low(2)), "flags", hex(left.u32(OBJECT + 12)), hex(right.u32(OBJECT + 12)))
+            print("snaps", left.snapshots, right.snapshots)
+            for index, (a, b) in enumerate(zip(object_bytes(left, 96), object_bytes(right, 96))):
+                if a != b:
+                    print(" byte", index, hex(a), hex(b))
+            raise SystemExit("doorsecret comparison failed")
+    print("doorsecret: 2 original/compiled scenarios matched")
 
 
 if __name__ == "__main__":

@@ -83,6 +83,16 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 }
 ```
 
+```json
+{
+  "header_closure": ["sources/actors-a-doorsecret/doorsecret.hpp"],
+  "kind": "independently_authored_source",
+  "object_name": "doorsecret.o",
+  "profile": "authored_cpp",
+  "source": "sources/actors-a-doorsecret/doorsecret.cpp"
+}
+```
+
 ## Status
 
 `norrath_construct_Candle2` is `__7Candle2G6Point3` at `0x002310a8`, 120 bytes. It clears both base-call pointers, stores view `0x0044a930`, ORs flag `1`, writes `0xf0` at byte 40, clears bytes 76 and 77, and returns `norrath_actor_add_run_list`.
@@ -95,12 +105,14 @@ Retail edition, whether a zero height uses IEEE equality for every NaN pattern, 
 
 `norrath_construct_EggSack` is `__7EggSackPcG6Point3sPPc` at `0x002260b8`, 136 bytes. It forwards the name, a copied point, the sign-extended type, and the argument list to `norrath_construct_AutoPropLP`, stores view `0x0044f2a0`, writes 2 at offsets 452, 448, 444 and 440, and ORs 2 into the word at 316. V0 is object+436.
 
-imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`
+`norrath_construct_DoorSecret` is `__10DoorSecretG6Point3PPc` at `0x00212f08`, 332 bytes. A present tag at `0x00485358` clears bit `0x00100000` before the door queries, and the last flag store sets that bit again. A negative door index calls `norrath_object_add_to_delete_list`. V0 is `0x00100000`.
 
-imports opened: `norrath_world_check_for_water` (retained `worldCheckForWater__FP12_worldHeaderG6Point3fPf`); `norrath_light_add` (retained `lightAdd__FP5Light`); `norrath_construct_AutoPropLP` (still in this package, not yet authored). Container and ContainerWithResources also use the existing `norrath_lump_find_resource` and `norrath_factory_world_pointer_word`.
+imports closed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret`
 
-build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, and EggSack entries above.
+imports opened: `norrath_world_check_for_water`; `norrath_light_add`; `norrath_construct_AutoPropLP`; `norrath_world_find_closest_door`; `norrath_world_set_door_collision`; `norrath_world_get_door_height`; `norrath_object_add_to_delete_list`. Container and ContainerWithResources also use the existing `norrath_lump_find_resource` and `norrath_factory_world_pointer_word`.
 
-authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack` (compared against the original bodies; not run as gameplay).
+build-plan entries needed: the Blocker, Candle2, Container, Candle, ContainerWithResources, EggSack, and DoorSecret entries above.
+
+authored but never executed: `norrath_construct_Blocker`, `norrath_construct_Candle2`, `norrath_construct_Container`, `norrath_construct_Candle`, `norrath_construct_ContainerWithResources`, `norrath_construct_EggSack`, `norrath_construct_DoorSecret` (compared against the original bodies; not run as gameplay).
 
 unknown: the remaining A–F constructor imports, and NaN behavior of the height compare.
