@@ -696,6 +696,30 @@ Closed: `engineFrameEnd__Fb`, `engineFrameStart__FUib`,
 `switchToHalfCounter.797`, `texturePackDown__Fv`. 582 function bodies, 699
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/dialog-hud-controls
+
+All 17 units were selected. Host checks passed. The notes heading is
+"Imports you opened"; the five summary sections are present. No game binary
+was committed. `nmPlayers` and `player` stay unresolved. `engineAddTask__FPFv_viPci`,
+`netNetworkMode`, and `scePrintf` were already defined.
+
+| | |
+|---|---|
+| Before | 888 |
+| After | 836 |
+| Closed | 59 |
+| Opened | 7 |
+
+Closed 59 names, including `DLG_Active__Fv`, `helpMessageInit__Fv`,
+`menuSetPos__FP4Menui`, `msgHudSetPlayerBusy__Fcc`, `netGetLocalPlayerNm__Fi`,
+`netPlayerIsLocal__Fi`, `soundFadeStream__Fi`, `soundUpdateMusicVolume__Fv`,
+`specialSoundHandler__FiG6Point3`, `worldSetLightHaloTexture__FP8_texture`,
+and the button, dialog, menu, and volume words those units define. Opened:
+`gameFootstepSound__FG6Point3iii`, `helpMessageFrame__Fv`, `lightHaloTexture`,
+`musicDuckAmount`, `netSendMessage__FiPUci`, `soundSetStreamVolume__Fif`,
+`stream`. 592 function bodies, 716 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -787,7 +811,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop. `engineInit__Ff`,
+frame-loop, and dialog-hud-controls. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -819,3 +843,4 @@ and no startup stage has executed.
 - 2026-10-11 17:13 CDT — `agents/gs-dma-kernel` — 893 unresolved imports
 - 2026-10-11 17:15 CDT — `agents/draw-texture-init` — 884 unresolved imports
 - 2026-10-11 17:16 CDT — `agents/frame-loop` — 888 unresolved imports
+- 2026-10-11 17:17 CDT — `agents/dialog-hud-controls` — 836 unresolved imports

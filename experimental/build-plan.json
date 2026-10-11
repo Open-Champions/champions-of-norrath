@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 699,
+  "default_authored_inputs": 716,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -161,6 +161,23 @@
     "sources/data-views-symbols/norrath_next_view_449280.cpp": "79573fa555a5b5ebb1dc92c94d9e6386518d82e7bbbdaec3d917f5347e884bc7",
     "sources/data-views-symbols/norrath_next_view_44c958.cpp": "82c8e3dd77183ffc963c9d23d444ed83b80dd348710298da19bad8ccde82ce8b",
     "sources/data-views-symbols/norrath_next_view_44e820.cpp": "293bc0e9b2526498752fa8df556e34aa1c411d2b04de2a78cdfc554101a33a97",
+    "sources/dialog-hud-controls-button-records/button_records.cpp": "36e70cb6865fcfd97abe67a490c579f563da870fc27c946a26311f5afc2721b0",
+    "sources/dialog-hud-controls-button-words/button_words.cpp": "59b9868b91c171626abb2983d2cce5c5f4ee262e6b53f39844937c0f6927706f",
+    "sources/dialog-hud-controls-dialog-words/dialog_words.cpp": "e01d9981c224fa2c3462494044e2b7729f3b1cea60aa7948212c40467c8b283a",
+    "sources/dialog-hud-controls-dlg-active/dlg_active.cpp": "555d329dd44d37b004519469c768107911e618acd7e1247a79212d0855e78bd4",
+    "sources/dialog-hud-controls-halo-texture/halo_texture.cpp": "c1ee1f43c9aef18ee5ae3c5eed09dcfd475bfef63f7c6889cd85675e2b5dc963",
+    "sources/dialog-hud-controls-help-message-init/help_message_init.cpp": "83e4e0d2ebef1ff7db874d16319a1e464e0654088b5eaa734c73c3a2adc136fe",
+    "sources/dialog-hud-controls-hud-comm-flags/hud_comm_flags.cpp": "d7919fcebadcd00736afd070a5c70b0940e99e20115484cc71cd510e4ba83027",
+    "sources/dialog-hud-controls-main-menus/main_menus.cpp": "af0d3d1b420479b7e8d41b54c4c73e68ce792b27598a1604b63d2309ccfbbb69",
+    "sources/dialog-hud-controls-menu-set-pos/menu_set_pos.cpp": "95a9149e27d36e91e1e9aabccb95ba82bd603b5a203149a3fce0c11d5e3eaf9d",
+    "sources/dialog-hud-controls-menu-state/menu_state.cpp": "22a13e578a6288262148e3e504b880b14b0d77cabccd8841b2567b4ad6481dc3",
+    "sources/dialog-hud-controls-msg-hud-busy/msg_hud_busy.cpp": "9fbe3ae057c4c3fc617b201803b33a3664df15d17dbc80a492aa4dca26b910c7",
+    "sources/dialog-hud-controls-net-get-local-player/net_get_local_player.cpp": "d1e8361cb9e6f7290a4bc73d7d85210aa462133d2c0f6fee10e045c0a0df73b1",
+    "sources/dialog-hud-controls-net-player-is-local/net_player_is_local.cpp": "a711bcdf640b44f206060ea5c1f13a0cee8557bf11798facaa2e18cff53c69a4",
+    "sources/dialog-hud-controls-sound-fade/sound_fade.cpp": "36ae84aa94f2b08e50e5fbad80129397f24a26e22a510d5f1a7d400969d5eca6",
+    "sources/dialog-hud-controls-sound-update-music/sound_update_music.cpp": "309ff791d99c6d9e585d0d97a260ed48f474733277f7a08c34adaffff43d1337",
+    "sources/dialog-hud-controls-sound-volumes/sound_volumes.cpp": "362fd8cf125e763de8136fc90ad22937cb75a8eae844f1e017a565f2057bb7c9",
+    "sources/dialog-hud-controls-special-sound/special_sound.cpp": "4ce3e12bb24e65dd46501d93bc7bb4e8421fb7e928656a2118c648e4d6d5d477",
     "sources/draw-texture-init-disp-env/disp_env.cpp": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
     "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
     "sources/draw-texture-init-display-buffer-2/display_buffer_2.cpp": "cfb934f9229b5d88131ae023a39126edcb8adf73be02c6ec91dd49e160a03f2f",
@@ -9739,6 +9756,159 @@
       "profile": "authored_cpp",
       "sha256": "73545183c1fb7589a9428f9673bca9f967073420df222a429ce99220a8be340a",
       "source": "sources/frame-loop-gstart/gstart.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 701,
+      "kind": "independently_authored_source",
+      "object_name": "button_records.o",
+      "profile": "authored_cpp",
+      "sha256": "36e70cb6865fcfd97abe67a490c579f563da870fc27c946a26311f5afc2721b0",
+      "source": "sources/dialog-hud-controls-button-records/button_records.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 702,
+      "kind": "independently_authored_source",
+      "object_name": "button_words.o",
+      "profile": "authored_cpp",
+      "sha256": "59b9868b91c171626abb2983d2cce5c5f4ee262e6b53f39844937c0f6927706f",
+      "source": "sources/dialog-hud-controls-button-words/button_words.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 703,
+      "kind": "independently_authored_source",
+      "object_name": "dialog_words.o",
+      "profile": "authored_cpp",
+      "sha256": "e01d9981c224fa2c3462494044e2b7729f3b1cea60aa7948212c40467c8b283a",
+      "source": "sources/dialog-hud-controls-dialog-words/dialog_words.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 704,
+      "kind": "independently_authored_source",
+      "object_name": "dlg_active.o",
+      "profile": "authored_cpp",
+      "sha256": "555d329dd44d37b004519469c768107911e618acd7e1247a79212d0855e78bd4",
+      "source": "sources/dialog-hud-controls-dlg-active/dlg_active.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 705,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "c1ee1f43c9aef18ee5ae3c5eed09dcfd475bfef63f7c6889cd85675e2b5dc963",
+      "source": "sources/dialog-hud-controls-halo-texture/halo_texture.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 706,
+      "kind": "independently_authored_source",
+      "object_name": "help_message_init.o",
+      "profile": "authored_cpp",
+      "sha256": "83e4e0d2ebef1ff7db874d16319a1e464e0654088b5eaa734c73c3a2adc136fe",
+      "source": "sources/dialog-hud-controls-help-message-init/help_message_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 707,
+      "kind": "independently_authored_source",
+      "object_name": "hud_comm_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "d7919fcebadcd00736afd070a5c70b0940e99e20115484cc71cd510e4ba83027",
+      "source": "sources/dialog-hud-controls-hud-comm-flags/hud_comm_flags.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 708,
+      "kind": "independently_authored_source",
+      "object_name": "main_menus.o",
+      "profile": "authored_cpp",
+      "sha256": "af0d3d1b420479b7e8d41b54c4c73e68ce792b27598a1604b63d2309ccfbbb69",
+      "source": "sources/dialog-hud-controls-main-menus/main_menus.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 709,
+      "kind": "independently_authored_source",
+      "object_name": "menu_set_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "95a9149e27d36e91e1e9aabccb95ba82bd603b5a203149a3fce0c11d5e3eaf9d",
+      "source": "sources/dialog-hud-controls-menu-set-pos/menu_set_pos.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 710,
+      "kind": "independently_authored_source",
+      "object_name": "menu_state.o",
+      "profile": "authored_cpp",
+      "sha256": "22a13e578a6288262148e3e504b880b14b0d77cabccd8841b2567b4ad6481dc3",
+      "source": "sources/dialog-hud-controls-menu-state/menu_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 711,
+      "kind": "independently_authored_source",
+      "object_name": "msg_hud_busy.o",
+      "profile": "authored_cpp",
+      "sha256": "9fbe3ae057c4c3fc617b201803b33a3664df15d17dbc80a492aa4dca26b910c7",
+      "source": "sources/dialog-hud-controls-msg-hud-busy/msg_hud_busy.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 712,
+      "kind": "independently_authored_source",
+      "object_name": "net_get_local_player.o",
+      "profile": "authored_cpp",
+      "sha256": "d1e8361cb9e6f7290a4bc73d7d85210aa462133d2c0f6fee10e045c0a0df73b1",
+      "source": "sources/dialog-hud-controls-net-get-local-player/net_get_local_player.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 713,
+      "kind": "independently_authored_source",
+      "object_name": "net_player_is_local.o",
+      "profile": "authored_cpp",
+      "sha256": "a711bcdf640b44f206060ea5c1f13a0cee8557bf11798facaa2e18cff53c69a4",
+      "source": "sources/dialog-hud-controls-net-player-is-local/net_player_is_local.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 714,
+      "kind": "independently_authored_source",
+      "object_name": "sound_fade.o",
+      "profile": "authored_cpp",
+      "sha256": "36ae84aa94f2b08e50e5fbad80129397f24a26e22a510d5f1a7d400969d5eca6",
+      "source": "sources/dialog-hud-controls-sound-fade/sound_fade.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 715,
+      "kind": "independently_authored_source",
+      "object_name": "sound_update_music.o",
+      "profile": "authored_cpp",
+      "sha256": "309ff791d99c6d9e585d0d97a260ed48f474733277f7a08c34adaffff43d1337",
+      "source": "sources/dialog-hud-controls-sound-update-music/sound_update_music.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 716,
+      "kind": "independently_authored_source",
+      "object_name": "sound_volumes.o",
+      "profile": "authored_cpp",
+      "sha256": "362fd8cf125e763de8136fc90ad22937cb75a8eae844f1e017a565f2057bb7c9",
+      "source": "sources/dialog-hud-controls-sound-volumes/sound_volumes.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 717,
+      "kind": "independently_authored_source",
+      "object_name": "special_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "4ce3e12bb24e65dd46501d93bc7bb4e8421fb7e928656a2118c648e4d6d5d477",
+      "source": "sources/dialog-hud-controls-special-sound/special_sound.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9838,7 +10008,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f15f28693c2e45d7e64f2daf9dd97520557c766c4489016675ec326a8ba16554",
+  "snapshot_sha256": "a41401689ee9507b77835be726199970cc34fe6c305e4f6e3a0c9d6548298b0c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

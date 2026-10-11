@@ -9125,6 +9125,209 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/frame-loop-gstart/gstart.cpp"
+    },
+    {
+      "input_order": 701,
+      "component": "dialog-hud-controls-button-records",
+      "object_name": "button_records.o",
+      "private_object_sha256": "116df6af20f8fa2ba23168a111ac174cbdd5ab0c98dcb019f9686a9443a49108",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-button-records/button_records.cpp"
+    },
+    {
+      "input_order": 702,
+      "component": "dialog-hud-controls-button-words",
+      "object_name": "button_words.o",
+      "private_object_sha256": "2835d5a18050555b1265e697e37fffa5076ec64e227b484b424f1db1bf690c21",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-button-words/button_words.cpp"
+    },
+    {
+      "input_order": 703,
+      "component": "dialog-hud-controls-dialog-words",
+      "object_name": "dialog_words.o",
+      "private_object_sha256": "6602d6288f84f8580b6ef7f9cfeea2b2c7d06090a72444bec05de4199bbb8583",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-dialog-words/dialog_words.cpp"
+    },
+    {
+      "input_order": 704,
+      "component": "dialog-hud-controls-dlg-active",
+      "object_name": "dlg_active.o",
+      "private_object_sha256": "2293233d14694eb27a0b4cf6aa7e1cac8bc53b069e91e0ad136d7939fc3a9844",
+      "emitted_functions": [
+        {
+          "name": "DLG_Active__Fv",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-dlg-active/dlg_active.cpp"
+    },
+    {
+      "input_order": 705,
+      "component": "dialog-hud-controls-halo-texture",
+      "object_name": "halo_texture.o",
+      "private_object_sha256": "8338367e8c1a5ea7d911a92ce238d537fea2a06820e4c5c7492063f9532cc3d1",
+      "emitted_functions": [
+        {
+          "name": "worldSetLightHaloTexture__FP8_texture",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-halo-texture/halo_texture.cpp"
+    },
+    {
+      "input_order": 706,
+      "component": "dialog-hud-controls-help-message-init",
+      "object_name": "help_message_init.o",
+      "private_object_sha256": "f77e3f4154e290a7d24d90f96b0711b18418990ddadc8a3211dd08896a9f78a6",
+      "emitted_functions": [
+        {
+          "name": "helpMessageInit__Fv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-help-message-init/help_message_init.cpp"
+    },
+    {
+      "input_order": 707,
+      "component": "dialog-hud-controls-hud-comm-flags",
+      "object_name": "hud_comm_flags.o",
+      "private_object_sha256": "c04318984d469083a97ab63cd45c44b7999cb37abbfea8ae85b1836de24d6eda",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-hud-comm-flags/hud_comm_flags.cpp"
+    },
+    {
+      "input_order": 708,
+      "component": "dialog-hud-controls-main-menus",
+      "object_name": "main_menus.o",
+      "private_object_sha256": "98b64db73a2c7cb8a011472a96aca05eecdf54e5d14414d868abcfc869775f1a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-main-menus/main_menus.cpp"
+    },
+    {
+      "input_order": 709,
+      "component": "dialog-hud-controls-menu-set-pos",
+      "object_name": "menu_set_pos.o",
+      "private_object_sha256": "dbb7f19d85b23490a8bcdbba7ab8f696703bf834a76c0f0f1bc02fabd8e2c10b",
+      "emitted_functions": [
+        {
+          "name": "menuSetPos__FP4Menui",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-menu-set-pos/menu_set_pos.cpp"
+    },
+    {
+      "input_order": 710,
+      "component": "dialog-hud-controls-menu-state",
+      "object_name": "menu_state.o",
+      "private_object_sha256": "d427a624b92b3797cfb45eab8971f1cf95eca45c140a8a75fbaf1eb56047c0b1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-menu-state/menu_state.cpp"
+    },
+    {
+      "input_order": 711,
+      "component": "dialog-hud-controls-msg-hud-busy",
+      "object_name": "msg_hud_busy.o",
+      "private_object_sha256": "b0152e8890f05bad323a982a747d3ac1e79ba36dd5c0905340376fd4c4417f9c",
+      "emitted_functions": [
+        {
+          "name": "msgHudSetPlayerBusy__Fcc",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-msg-hud-busy/msg_hud_busy.cpp"
+    },
+    {
+      "input_order": 712,
+      "component": "dialog-hud-controls-net-get-local-player",
+      "object_name": "net_get_local_player.o",
+      "private_object_sha256": "1e4b994daff834f4ca1f4567ce6f7d9caf81706952fa0a31761e1d14bd40786b",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalPlayerNm__Fi",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-net-get-local-player/net_get_local_player.cpp"
+    },
+    {
+      "input_order": 713,
+      "component": "dialog-hud-controls-net-player-is-local",
+      "object_name": "net_player_is_local.o",
+      "private_object_sha256": "1a97e45d7dd379d1de766187d6772a559949f7fad9184e3285077b7ac09256a0",
+      "emitted_functions": [
+        {
+          "name": "netPlayerIsLocal__Fi",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-net-player-is-local/net_player_is_local.cpp"
+    },
+    {
+      "input_order": 714,
+      "component": "dialog-hud-controls-sound-fade",
+      "object_name": "sound_fade.o",
+      "private_object_sha256": "474f5e834a3dbdf2ed6404b97860731425acbdd7688d9237669e5618565267d8",
+      "emitted_functions": [
+        {
+          "name": "soundFadeStream__Fi",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-sound-fade/sound_fade.cpp"
+    },
+    {
+      "input_order": 715,
+      "component": "dialog-hud-controls-sound-update-music",
+      "object_name": "sound_update_music.o",
+      "private_object_sha256": "a3e69639498821da1151e48bd90d4ab297608e52ac257a3b57d7557ed4db9850",
+      "emitted_functions": [
+        {
+          "name": "soundUpdateMusicVolume__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-sound-update-music/sound_update_music.cpp"
+    },
+    {
+      "input_order": 716,
+      "component": "dialog-hud-controls-sound-volumes",
+      "object_name": "sound_volumes.o",
+      "private_object_sha256": "81687de7153f5590c4a15f9c808f3f9c114b1cfffcdee3788f262180c33132a1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-sound-volumes/sound_volumes.cpp"
+    },
+    {
+      "input_order": 717,
+      "component": "dialog-hud-controls-special-sound",
+      "object_name": "special_sound.o",
+      "private_object_sha256": "4b6cbb62cf7fd1b98c84b88fac01c813388809736f8a8920ccdb74adcc68605e",
+      "emitted_functions": [
+        {
+          "name": "specialSoundHandler__FiG6Point3",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/dialog-hud-controls-special-sound/special_sound.cpp"
     }
   ],
   "drafts": [
@@ -9462,6 +9665,40 @@
     "sources/data-views-symbols/norrath_player_view_483f3e.cpp": "288639fd122f6f8dd4a82b9c20fd14089135c2499d4b91908d0e0b1c03a92c27",
     "sources/data-views-symbols/norrath_player_view_484ca8.cpp": "acac2881b6f250efba0fb15106c47ec4009f5f7e87193efe27eb78330747997c",
     "sources/data-views-symbols/norrath_player_view_484f38.cpp": "78e7c2ccc21c04c725009b7b9bb28f28d06c31ce552ff5c291c62747a128afe2",
+    "sources/dialog-hud-controls-button-records/button_records.cpp": "36e70cb6865fcfd97abe67a490c579f563da870fc27c946a26311f5afc2721b0",
+    "sources/dialog-hud-controls-button-records/host_check.cpp": "0e470908894fb879102e4b65e48990d4caf36d0fce39e25625542a020e2735b2",
+    "sources/dialog-hud-controls-button-words/button_words.cpp": "59b9868b91c171626abb2983d2cce5c5f4ee262e6b53f39844937c0f6927706f",
+    "sources/dialog-hud-controls-button-words/host_check.cpp": "bab3d3e1d23fe25c32ba7e7458eab30c6a11432e0686ceda0874253b95889d9d",
+    "sources/dialog-hud-controls-dialog-words/dialog_words.cpp": "e01d9981c224fa2c3462494044e2b7729f3b1cea60aa7948212c40467c8b283a",
+    "sources/dialog-hud-controls-dialog-words/host_check.cpp": "7851505af747fe58fccbb234da50fdaaa95c8a3b080d23e0251381af877845a9",
+    "sources/dialog-hud-controls-dlg-active/dlg_active.cpp": "555d329dd44d37b004519469c768107911e618acd7e1247a79212d0855e78bd4",
+    "sources/dialog-hud-controls-dlg-active/host_check.cpp": "b1a636e2afa07a795ae2c6358090233298d5ff676e78aa4b059e145ea955f144",
+    "sources/dialog-hud-controls-halo-texture/halo_texture.cpp": "c1ee1f43c9aef18ee5ae3c5eed09dcfd475bfef63f7c6889cd85675e2b5dc963",
+    "sources/dialog-hud-controls-halo-texture/host_check.cpp": "bc8198b315cd704e88ec9168cc909ab6e23304bd3d5922b7b0676898e91af9a2",
+    "sources/dialog-hud-controls-help-message-init/help_message_init.cpp": "83e4e0d2ebef1ff7db874d16319a1e464e0654088b5eaa734c73c3a2adc136fe",
+    "sources/dialog-hud-controls-help-message-init/host_check.cpp": "9053429fe8c8c3d3822fdd140ff6e8eca098e5670986424e968e51f1b9afb644",
+    "sources/dialog-hud-controls-hud-comm-flags/host_check.cpp": "c7f3a04399fd52423b6211f945857725d303d3bb1239a9dc84e13e0809493f8a",
+    "sources/dialog-hud-controls-hud-comm-flags/hud_comm_flags.cpp": "d7919fcebadcd00736afd070a5c70b0940e99e20115484cc71cd510e4ba83027",
+    "sources/dialog-hud-controls-main-menus/host_check.cpp": "8a85971e7203b4de95747a628ba70a7b81c206712b2afd7c0fa7c5c932f04ba0",
+    "sources/dialog-hud-controls-main-menus/main_menus.cpp": "af0d3d1b420479b7e8d41b54c4c73e68ce792b27598a1604b63d2309ccfbbb69",
+    "sources/dialog-hud-controls-menu-set-pos/host_check.cpp": "1eff1c4e2cf73c8c531987f87a7dfe20794405c982b98a8db09b09ea406d9fc4",
+    "sources/dialog-hud-controls-menu-set-pos/menu_set_pos.cpp": "95a9149e27d36e91e1e9aabccb95ba82bd603b5a203149a3fce0c11d5e3eaf9d",
+    "sources/dialog-hud-controls-menu-state/host_check.cpp": "28c4f8174ffa1a6c95230a3707c6bc25bf0277cc9cca4b03f019b980e8f2c7dc",
+    "sources/dialog-hud-controls-menu-state/menu_state.cpp": "22a13e578a6288262148e3e504b880b14b0d77cabccd8841b2567b4ad6481dc3",
+    "sources/dialog-hud-controls-msg-hud-busy/host_check.cpp": "2921caa6779ce0f390a1be26492315b74d1515defda2e7943c3b79118dd6dad5",
+    "sources/dialog-hud-controls-msg-hud-busy/msg_hud_busy.cpp": "9fbe3ae057c4c3fc617b201803b33a3664df15d17dbc80a492aa4dca26b910c7",
+    "sources/dialog-hud-controls-net-get-local-player/host_check.cpp": "778d534ad888f87b402ccf1499b25bbb7d2a14b31d190d3f5abe623a4f37ae5e",
+    "sources/dialog-hud-controls-net-get-local-player/net_get_local_player.cpp": "d1e8361cb9e6f7290a4bc73d7d85210aa462133d2c0f6fee10e045c0a0df73b1",
+    "sources/dialog-hud-controls-net-player-is-local/host_check.cpp": "d47674a635d171390288e63306f24ccca477b65f563557521bc24e2670eb88c7",
+    "sources/dialog-hud-controls-net-player-is-local/net_player_is_local.cpp": "a711bcdf640b44f206060ea5c1f13a0cee8557bf11798facaa2e18cff53c69a4",
+    "sources/dialog-hud-controls-sound-fade/host_check.cpp": "a1ea50b5aa776bcd4caedd4ac569359a8597ff38d898eea34c340f529d6ab785",
+    "sources/dialog-hud-controls-sound-fade/sound_fade.cpp": "36ae84aa94f2b08e50e5fbad80129397f24a26e22a510d5f1a7d400969d5eca6",
+    "sources/dialog-hud-controls-sound-update-music/host_check.cpp": "84745512c61706ec0d7783ce84a67a00fc9271040515575a76aad71e64321afa",
+    "sources/dialog-hud-controls-sound-update-music/sound_update_music.cpp": "309ff791d99c6d9e585d0d97a260ed48f474733277f7a08c34adaffff43d1337",
+    "sources/dialog-hud-controls-sound-volumes/host_check.cpp": "1c846a5821c81330eba0d7e8a41a32c6db1f3e4d192743683dd7202ded2a0133",
+    "sources/dialog-hud-controls-sound-volumes/sound_volumes.cpp": "362fd8cf125e763de8136fc90ad22937cb75a8eae844f1e017a565f2057bb7c9",
+    "sources/dialog-hud-controls-special-sound/host_check.cpp": "d2a05e7d505235e1b7e9f095320921141f362ee710a322b93a015161dbc7c192",
+    "sources/dialog-hud-controls-special-sound/special_sound.cpp": "4ce3e12bb24e65dd46501d93bc7bb4e8421fb7e928656a2118c648e4d6d5d477",
     "sources/draw-texture-init-disp-env/disp_env.cpp": "1329265ea601c083060616a680f0f240f813fec6efd7eb63c6152843d74bd592",
     "sources/draw-texture-init-disp-env/host_contract.cpp": "9dc1f867252cdf6309cd9073c7d74a0bc3c99d77d75896c03b22691dd2027f35",
     "sources/draw-texture-init-display-buffer-1/display_buffer_1.cpp": "2ce028d8aa5443c73325ae2b8a8549170f08f55428faed1aa2d34dbb950e161f",
@@ -11398,11 +11635,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 701,
-    "authored_default_inputs": 699,
+    "selected_inputs": 718,
+    "authored_default_inputs": 716,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 584,
-    "compiled_body_bytes_from_accepted_inputs": 300784,
+    "emitted_function_definitions_including_helpers": 594,
+    "compiled_body_bytes_from_accepted_inputs": 301708,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -11415,7 +11652,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 388
+    "package_selected_inputs": 405
   },
   "startup_implementations": [
     {
@@ -17189,6 +17426,260 @@
       "emitted_functions": [],
       "host_files": [
         "sources/frame-loop-gstart/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-button-records/button_records.cpp",
+      "source_sha256": "36e70cb6865fcfd97abe67a490c579f563da870fc27c946a26311f5afc2721b0",
+      "object_sha256": "116df6af20f8fa2ba23168a111ac174cbdd5ab0c98dcb019f9686a9443a49108",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-button-records/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-button-words/button_words.cpp",
+      "source_sha256": "59b9868b91c171626abb2983d2cce5c5f4ee262e6b53f39844937c0f6927706f",
+      "object_sha256": "2835d5a18050555b1265e697e37fffa5076ec64e227b484b424f1db1bf690c21",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-button-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-dialog-words/dialog_words.cpp",
+      "source_sha256": "e01d9981c224fa2c3462494044e2b7729f3b1cea60aa7948212c40467c8b283a",
+      "object_sha256": "6602d6288f84f8580b6ef7f9cfeea2b2c7d06090a72444bec05de4199bbb8583",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-dialog-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-dlg-active/dlg_active.cpp",
+      "source_sha256": "555d329dd44d37b004519469c768107911e618acd7e1247a79212d0855e78bd4",
+      "object_sha256": "2293233d14694eb27a0b4cf6aa7e1cac8bc53b069e91e0ad136d7939fc3a9844",
+      "emitted_functions": [
+        {
+          "name": "DLG_Active__Fv",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-dlg-active/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-halo-texture/halo_texture.cpp",
+      "source_sha256": "c1ee1f43c9aef18ee5ae3c5eed09dcfd475bfef63f7c6889cd85675e2b5dc963",
+      "object_sha256": "8338367e8c1a5ea7d911a92ce238d537fea2a06820e4c5c7492063f9532cc3d1",
+      "emitted_functions": [
+        {
+          "name": "worldSetLightHaloTexture__FP8_texture",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-halo-texture/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-help-message-init/help_message_init.cpp",
+      "source_sha256": "83e4e0d2ebef1ff7db874d16319a1e464e0654088b5eaa734c73c3a2adc136fe",
+      "object_sha256": "f77e3f4154e290a7d24d90f96b0711b18418990ddadc8a3211dd08896a9f78a6",
+      "emitted_functions": [
+        {
+          "name": "helpMessageInit__Fv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-help-message-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-hud-comm-flags/hud_comm_flags.cpp",
+      "source_sha256": "d7919fcebadcd00736afd070a5c70b0940e99e20115484cc71cd510e4ba83027",
+      "object_sha256": "c04318984d469083a97ab63cd45c44b7999cb37abbfea8ae85b1836de24d6eda",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-hud-comm-flags/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-main-menus/main_menus.cpp",
+      "source_sha256": "af0d3d1b420479b7e8d41b54c4c73e68ce792b27598a1604b63d2309ccfbbb69",
+      "object_sha256": "98b64db73a2c7cb8a011472a96aca05eecdf54e5d14414d868abcfc869775f1a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-main-menus/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-menu-set-pos/menu_set_pos.cpp",
+      "source_sha256": "95a9149e27d36e91e1e9aabccb95ba82bd603b5a203149a3fce0c11d5e3eaf9d",
+      "object_sha256": "dbb7f19d85b23490a8bcdbba7ab8f696703bf834a76c0f0f1bc02fabd8e2c10b",
+      "emitted_functions": [
+        {
+          "name": "menuSetPos__FP4Menui",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-menu-set-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-menu-state/menu_state.cpp",
+      "source_sha256": "22a13e578a6288262148e3e504b880b14b0d77cabccd8841b2567b4ad6481dc3",
+      "object_sha256": "d427a624b92b3797cfb45eab8971f1cf95eca45c140a8a75fbaf1eb56047c0b1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-menu-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-msg-hud-busy/msg_hud_busy.cpp",
+      "source_sha256": "9fbe3ae057c4c3fc617b201803b33a3664df15d17dbc80a492aa4dca26b910c7",
+      "object_sha256": "b0152e8890f05bad323a982a747d3ac1e79ba36dd5c0905340376fd4c4417f9c",
+      "emitted_functions": [
+        {
+          "name": "msgHudSetPlayerBusy__Fcc",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-msg-hud-busy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-net-get-local-player/net_get_local_player.cpp",
+      "source_sha256": "d1e8361cb9e6f7290a4bc73d7d85210aa462133d2c0f6fee10e045c0a0df73b1",
+      "object_sha256": "1e4b994daff834f4ca1f4567ce6f7d9caf81706952fa0a31761e1d14bd40786b",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalPlayerNm__Fi",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-net-get-local-player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-net-player-is-local/net_player_is_local.cpp",
+      "source_sha256": "a711bcdf640b44f206060ea5c1f13a0cee8557bf11798facaa2e18cff53c69a4",
+      "object_sha256": "1a97e45d7dd379d1de766187d6772a559949f7fad9184e3285077b7ac09256a0",
+      "emitted_functions": [
+        {
+          "name": "netPlayerIsLocal__Fi",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-net-player-is-local/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-sound-fade/sound_fade.cpp",
+      "source_sha256": "36ae84aa94f2b08e50e5fbad80129397f24a26e22a510d5f1a7d400969d5eca6",
+      "object_sha256": "474f5e834a3dbdf2ed6404b97860731425acbdd7688d9237669e5618565267d8",
+      "emitted_functions": [
+        {
+          "name": "soundFadeStream__Fi",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-sound-fade/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-sound-update-music/sound_update_music.cpp",
+      "source_sha256": "309ff791d99c6d9e585d0d97a260ed48f474733277f7a08c34adaffff43d1337",
+      "object_sha256": "a3e69639498821da1151e48bd90d4ab297608e52ac257a3b57d7557ed4db9850",
+      "emitted_functions": [
+        {
+          "name": "soundUpdateMusicVolume__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-sound-update-music/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-sound-volumes/sound_volumes.cpp",
+      "source_sha256": "362fd8cf125e763de8136fc90ad22937cb75a8eae844f1e017a565f2057bb7c9",
+      "object_sha256": "81687de7153f5590c4a15f9c808f3f9c114b1cfffcdee3788f262180c33132a1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/dialog-hud-controls-sound-volumes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "dialog-hud-controls",
+      "source": "sources/dialog-hud-controls-special-sound/special_sound.cpp",
+      "source_sha256": "4ce3e12bb24e65dd46501d93bc7bb4e8421fb7e928656a2118c648e4d6d5d477",
+      "object_sha256": "4b6cbb62cf7fd1b98c84b88fac01c813388809736f8a8920ccdb74adcc68605e",
+      "emitted_functions": [
+        {
+          "name": "specialSoundHandler__FiG6Point3",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/dialog-hud-controls-special-sound/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
