@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 623,
+  "default_authored_inputs": 632,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1236,6 +1236,16 @@
     "sources/save-net-anim-views/norrath_saved_map_tiles_bytes.cpp": "0109d172252921f11bf417b5e87e41ec7a1a1fb42775b670de87981610161f0e",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/scheduler-access/access.hpp": "5f08cc8e9183da708e6333d5af0da8d48402974ea7da60b673a130aaaab9614e",
+    "sources/scheduler-add-task/add_task.cpp": "ce1e0eeaf53e04af2aef1947289807e756a40b507a7c6ed30ff7e3ce9a625a80",
+    "sources/scheduler-bail-word/bail_word.cpp": "d4ac80f953b3031f7b73a6586302ba630848e30e5f6c37a61b2056be80861a71",
+    "sources/scheduler-frame-number/frame_number.cpp": "8d1a6b0e3568b18b23bd633aa81ed65371c802614fd200b08db162b8564ff77a",
+    "sources/scheduler-pause-word/pause_word.cpp": "94bbd6bf77029b61ce52a25bd2d9723722b840c095a2a3cfd77e7d00048ecb13",
+    "sources/scheduler-print-tasks/print_tasks.cpp": "54e92b58681d3713f445a1f1111d86025de4d6b287308545d3e88481ed7b0f38",
+    "sources/scheduler-remove-task/remove_task.cpp": "85e6810deb8b12affd21ec1adbd2a51667027b3c2c4c68c476711c4b87f592df",
+    "sources/scheduler-run-tasks/run_tasks.cpp": "dacd124c58da1dd9dec223532bc5012a6ca42fe4b51024d8fef2ba9a34b3fa93",
+    "sources/scheduler-task-active/task_active.cpp": "b1311b7348cf3c4fa3f656753a6a572060b48aa7a61592df9d69bda29da0865d",
+    "sources/scheduler-task-words/task_words.cpp": "b004f8ae1cf60898a0a6a28e04bf4508e4401a3ba5fc53d32a6b13ce61fee846",
     "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
     "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
     "sources/script-amx-custom-variables/custom_variables.cpp": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
@@ -8968,6 +8978,97 @@
       "profile": "authored_cpp",
       "sha256": "7676f7017f03ffb268481b741294d11592c61e86b43943af73513b1d4b188903",
       "source": "sources/libc-format-strtod/strtod.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/scheduler-access/access.hpp"
+      ],
+      "input_order": 625,
+      "kind": "independently_authored_source",
+      "object_name": "add_task.o",
+      "profile": "authored_cpp",
+      "sha256": "ce1e0eeaf53e04af2aef1947289807e756a40b507a7c6ed30ff7e3ce9a625a80",
+      "source": "sources/scheduler-add-task/add_task.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 626,
+      "kind": "independently_authored_source",
+      "object_name": "bail_word.o",
+      "profile": "authored_cpp",
+      "sha256": "d4ac80f953b3031f7b73a6586302ba630848e30e5f6c37a61b2056be80861a71",
+      "source": "sources/scheduler-bail-word/bail_word.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 627,
+      "kind": "independently_authored_source",
+      "object_name": "frame_number.o",
+      "profile": "authored_cpp",
+      "sha256": "8d1a6b0e3568b18b23bd633aa81ed65371c802614fd200b08db162b8564ff77a",
+      "source": "sources/scheduler-frame-number/frame_number.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 628,
+      "kind": "independently_authored_source",
+      "object_name": "pause_word.o",
+      "profile": "authored_cpp",
+      "sha256": "94bbd6bf77029b61ce52a25bd2d9723722b840c095a2a3cfd77e7d00048ecb13",
+      "source": "sources/scheduler-pause-word/pause_word.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/scheduler-access/access.hpp"
+      ],
+      "input_order": 629,
+      "kind": "independently_authored_source",
+      "object_name": "print_tasks.o",
+      "profile": "authored_cpp",
+      "sha256": "54e92b58681d3713f445a1f1111d86025de4d6b287308545d3e88481ed7b0f38",
+      "source": "sources/scheduler-print-tasks/print_tasks.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/scheduler-access/access.hpp"
+      ],
+      "input_order": 630,
+      "kind": "independently_authored_source",
+      "object_name": "remove_task.o",
+      "profile": "authored_cpp",
+      "sha256": "85e6810deb8b12affd21ec1adbd2a51667027b3c2c4c68c476711c4b87f592df",
+      "source": "sources/scheduler-remove-task/remove_task.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/scheduler-access/access.hpp"
+      ],
+      "input_order": 631,
+      "kind": "independently_authored_source",
+      "object_name": "run_tasks.o",
+      "profile": "authored_cpp",
+      "sha256": "dacd124c58da1dd9dec223532bc5012a6ca42fe4b51024d8fef2ba9a34b3fa93",
+      "source": "sources/scheduler-run-tasks/run_tasks.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/scheduler-access/access.hpp"
+      ],
+      "input_order": 632,
+      "kind": "independently_authored_source",
+      "object_name": "task_active.o",
+      "profile": "authored_cpp",
+      "sha256": "b1311b7348cf3c4fa3f656753a6a572060b48aa7a61592df9d69bda29da0865d",
+      "source": "sources/scheduler-task-active/task_active.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 633,
+      "kind": "independently_authored_source",
+      "object_name": "task_words.o",
+      "profile": "authored_cpp",
+      "sha256": "b004f8ae1cf60898a0a6a28e04bf4508e4401a3ba5fc53d32a6b13ce61fee846",
+      "source": "sources/scheduler-task-words/task_words.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9067,7 +9168,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2d40b645ec27eadc03d3a6bc29adefe589b87037091562df93b1362b37ac2cc3",
+  "snapshot_sha256": "e8bccc68f50fbd2f89b3f6f7b05cc0e5f2974643257b2b183cef2e58f2f9280b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

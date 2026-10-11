@@ -8187,6 +8187,112 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/libc-format-strtod/strtod.cpp"
+    },
+    {
+      "input_order": 625,
+      "component": "scheduler-add-task",
+      "object_name": "add_task.o",
+      "private_object_sha256": "fd1dadf8699d0ddb8273409a93db62ce040d210c1c70d95f592ac62aee369d73",
+      "emitted_functions": [
+        {
+          "name": "engineAddTask__FPFv_viPci",
+          "compiled_body_bytes": 1140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-add-task/add_task.cpp"
+    },
+    {
+      "input_order": 626,
+      "component": "scheduler-bail-word",
+      "object_name": "bail_word.o",
+      "private_object_sha256": "39ff912dbf0a1964689f8d6512a417c229cae9e28862bb109d27c2c62bfb9d77",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-bail-word/bail_word.cpp"
+    },
+    {
+      "input_order": 627,
+      "component": "scheduler-frame-number",
+      "object_name": "frame_number.o",
+      "private_object_sha256": "9841a1dc8b7d24a458aac9672c6f2bde260feec49f4f7f4984593e775ff084b2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-frame-number/frame_number.cpp"
+    },
+    {
+      "input_order": 628,
+      "component": "scheduler-pause-word",
+      "object_name": "pause_word.o",
+      "private_object_sha256": "76943052e7fd889bc6f34f31e95791880940268c4d248a085913b3f2a575c6f9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-pause-word/pause_word.cpp"
+    },
+    {
+      "input_order": 629,
+      "component": "scheduler-print-tasks",
+      "object_name": "print_tasks.o",
+      "private_object_sha256": "09b01d9bc30d817a7f0fe204afa7788a56e0554bee52a7b692718c152c9a8d7e",
+      "emitted_functions": [
+        {
+          "name": "enginePrintTasks__Fv",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-print-tasks/print_tasks.cpp"
+    },
+    {
+      "input_order": 630,
+      "component": "scheduler-remove-task",
+      "object_name": "remove_task.o",
+      "private_object_sha256": "06a7c055f20561fffb335e9b7595c77b6b0ccc6794120f95038b7960eec2f748",
+      "emitted_functions": [
+        {
+          "name": "engineRemoveTask__FPFv_v",
+          "compiled_body_bytes": 1088
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-remove-task/remove_task.cpp"
+    },
+    {
+      "input_order": 631,
+      "component": "scheduler-run-tasks",
+      "object_name": "run_tasks.o",
+      "private_object_sha256": "5380c4456f380169ea7d3a8287bde884af5c45276bbf33aade83328ab711d77e",
+      "emitted_functions": [
+        {
+          "name": "engineRunTasks__Fii",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-run-tasks/run_tasks.cpp"
+    },
+    {
+      "input_order": 632,
+      "component": "scheduler-task-active",
+      "object_name": "task_active.o",
+      "private_object_sha256": "6ae3c4ec0ebab84e3c5ae725789a9aa3d49f7071f626ae8e04bb0cb6182bf9de",
+      "emitted_functions": [
+        {
+          "name": "engineTaskActive__FPc",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-task-active/task_active.cpp"
+    },
+    {
+      "input_order": 633,
+      "component": "scheduler-task-words",
+      "object_name": "task_words.o",
+      "private_object_sha256": "82737407759eb61da9bc879be1c167fff7f3c6f2760e77e51598ddd8672dd435",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/scheduler-task-words/task_words.cpp"
     }
   ],
   "drafts": [
@@ -9738,6 +9844,25 @@
     "sources/save-net-anim-views/norrath_saved_map_tiles_bytes.cpp": "0109d172252921f11bf417b5e87e41ec7a1a1fb42775b670de87981610161f0e",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/scheduler-access/access.hpp": "5f08cc8e9183da708e6333d5af0da8d48402974ea7da60b673a130aaaab9614e",
+    "sources/scheduler-add-task/add_task.cpp": "ce1e0eeaf53e04af2aef1947289807e756a40b507a7c6ed30ff7e3ce9a625a80",
+    "sources/scheduler-add-task/host_check.cpp": "517910defa556748aa468e7362f7acdbdd6abe4ee548e13065a246cf7b682421",
+    "sources/scheduler-bail-word/bail_word.cpp": "d4ac80f953b3031f7b73a6586302ba630848e30e5f6c37a61b2056be80861a71",
+    "sources/scheduler-bail-word/host_check.cpp": "f6d8714830d70518ddaf3fb4c996330e5fede4770caea9c64cb61de1c727f465",
+    "sources/scheduler-frame-number/frame_number.cpp": "8d1a6b0e3568b18b23bd633aa81ed65371c802614fd200b08db162b8564ff77a",
+    "sources/scheduler-frame-number/host_check.cpp": "fd11ce01e1673a00c986e447068f5af7dbc9b9dcb4f6ade55f0370d41c1caf0e",
+    "sources/scheduler-pause-word/host_check.cpp": "41c7c2d152c549e4033cfe50e7db7e5f7d59ee510577f350ebc309e6f5fa1a78",
+    "sources/scheduler-pause-word/pause_word.cpp": "94bbd6bf77029b61ce52a25bd2d9723722b840c095a2a3cfd77e7d00048ecb13",
+    "sources/scheduler-print-tasks/host_check.cpp": "7546d04ac1e905079f66bae9e157b1d6bfc7fa873a07c452194b05c5370640c9",
+    "sources/scheduler-print-tasks/print_tasks.cpp": "54e92b58681d3713f445a1f1111d86025de4d6b287308545d3e88481ed7b0f38",
+    "sources/scheduler-remove-task/host_check.cpp": "f2e87b129e9b7fda1d99b8d9e3c9ba0fd292b1d1a7ff6bee98bbff29aad6d223",
+    "sources/scheduler-remove-task/remove_task.cpp": "85e6810deb8b12affd21ec1adbd2a51667027b3c2c4c68c476711c4b87f592df",
+    "sources/scheduler-run-tasks/host_check.cpp": "b4a5546d570f99f42efe6141c0ae365b8d44cae1669d97302df41d305c683579",
+    "sources/scheduler-run-tasks/run_tasks.cpp": "dacd124c58da1dd9dec223532bc5012a6ca42fe4b51024d8fef2ba9a34b3fa93",
+    "sources/scheduler-task-active/host_check.cpp": "a8d4c715829732b2223f780ae5ea362553ff290a8cdfe891b5645cdba182fb39",
+    "sources/scheduler-task-active/task_active.cpp": "b1311b7348cf3c4fa3f656753a6a572060b48aa7a61592df9d69bda29da0865d",
+    "sources/scheduler-task-words/host_check.cpp": "a0f9256142be8e6a4e5fbdede228412741e75ac02c56ad10a437ec270881dd8a",
+    "sources/scheduler-task-words/task_words.cpp": "b004f8ae1cf60898a0a6a28e04bf4508e4401a3ba5fc53d32a6b13ce61fee846",
     "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
     "sources/script-amx-complain-frame/complain_frame_host.cpp": "42c7f4039a4f5cdc44f1c33746bf37ac833b0f95332f7b5253b34c929ca77bc3",
     "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
@@ -10315,11 +10440,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 625,
-    "authored_default_inputs": 623,
+    "selected_inputs": 634,
+    "authored_default_inputs": 632,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 533,
-    "compiled_body_bytes_from_accepted_inputs": 283840,
+    "emitted_function_definitions_including_helpers": 538,
+    "compiled_body_bytes_from_accepted_inputs": 287060,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10332,7 +10457,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 312
+    "package_selected_inputs": 321
   },
   "startup_implementations": [
     {
@@ -14940,6 +15065,139 @@
       ],
       "host_files": [
         "sources/libc-format-strtod/strtod_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-add-task/add_task.cpp",
+      "source_sha256": "ce1e0eeaf53e04af2aef1947289807e756a40b507a7c6ed30ff7e3ce9a625a80",
+      "object_sha256": "fd1dadf8699d0ddb8273409a93db62ce040d210c1c70d95f592ac62aee369d73",
+      "emitted_functions": [
+        {
+          "name": "engineAddTask__FPFv_viPci",
+          "compiled_body_bytes": 1140
+        }
+      ],
+      "host_files": [
+        "sources/scheduler-add-task/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-bail-word/bail_word.cpp",
+      "source_sha256": "d4ac80f953b3031f7b73a6586302ba630848e30e5f6c37a61b2056be80861a71",
+      "object_sha256": "39ff912dbf0a1964689f8d6512a417c229cae9e28862bb109d27c2c62bfb9d77",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/scheduler-bail-word/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-frame-number/frame_number.cpp",
+      "source_sha256": "8d1a6b0e3568b18b23bd633aa81ed65371c802614fd200b08db162b8564ff77a",
+      "object_sha256": "9841a1dc8b7d24a458aac9672c6f2bde260feec49f4f7f4984593e775ff084b2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/scheduler-frame-number/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-pause-word/pause_word.cpp",
+      "source_sha256": "94bbd6bf77029b61ce52a25bd2d9723722b840c095a2a3cfd77e7d00048ecb13",
+      "object_sha256": "76943052e7fd889bc6f34f31e95791880940268c4d248a085913b3f2a575c6f9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/scheduler-pause-word/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-print-tasks/print_tasks.cpp",
+      "source_sha256": "54e92b58681d3713f445a1f1111d86025de4d6b287308545d3e88481ed7b0f38",
+      "object_sha256": "09b01d9bc30d817a7f0fe204afa7788a56e0554bee52a7b692718c152c9a8d7e",
+      "emitted_functions": [
+        {
+          "name": "enginePrintTasks__Fv",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/scheduler-print-tasks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-remove-task/remove_task.cpp",
+      "source_sha256": "85e6810deb8b12affd21ec1adbd2a51667027b3c2c4c68c476711c4b87f592df",
+      "object_sha256": "06a7c055f20561fffb335e9b7595c77b6b0ccc6794120f95038b7960eec2f748",
+      "emitted_functions": [
+        {
+          "name": "engineRemoveTask__FPFv_v",
+          "compiled_body_bytes": 1088
+        }
+      ],
+      "host_files": [
+        "sources/scheduler-remove-task/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-run-tasks/run_tasks.cpp",
+      "source_sha256": "dacd124c58da1dd9dec223532bc5012a6ca42fe4b51024d8fef2ba9a34b3fa93",
+      "object_sha256": "5380c4456f380169ea7d3a8287bde884af5c45276bbf33aade83328ab711d77e",
+      "emitted_functions": [
+        {
+          "name": "engineRunTasks__Fii",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "host_files": [
+        "sources/scheduler-run-tasks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-task-active/task_active.cpp",
+      "source_sha256": "b1311b7348cf3c4fa3f656753a6a572060b48aa7a61592df9d69bda29da0865d",
+      "object_sha256": "6ae3c4ec0ebab84e3c5ae725789a9aa3d49f7071f626ae8e04bb0cb6182bf9de",
+      "emitted_functions": [
+        {
+          "name": "engineTaskActive__FPc",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/scheduler-task-active/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "scheduler",
+      "source": "sources/scheduler-task-words/task_words.cpp",
+      "source_sha256": "b004f8ae1cf60898a0a6a28e04bf4508e4401a3ba5fc53d32a6b13ce61fee846",
+      "object_sha256": "82737407759eb61da9bc879be1c167fff7f3c6f2760e77e51598ddd8672dd435",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/scheduler-task-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

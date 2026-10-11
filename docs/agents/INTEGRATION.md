@@ -557,6 +557,27 @@ string. Both host checks passed. `sprintf` is an alias of
 Closed: `sprintf`, `strtod`. 531 function bodies, 623 authored inputs, zero
 COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/scheduler
+
+All nine units were selected. Host checks passed. Body sizes match the notes:
+`engineAddTask__FPFv_viPci` 1140, `engineRemoveTask__FPFv_v` 1088,
+`engineRunTasks__Fii` 512, `engineTaskActive__FPc` 360,
+`enginePrintTasks__Fv` 120. The four word objects have empty function lists.
+No game binary was committed. `strcmp` was already defined, so it did not
+open. `currentTask` and `nmTasks` are defined and were not previous imports.
+
+| | |
+|---|---|
+| Before | 779 |
+| After | 775 |
+| Closed | 5 |
+| Opened | 1 |
+
+Closed: `engineAddTask__FPFv_viPci`, `enginePrintTasks__Fv`,
+`norrath_game_bail_from_loop_view`, `norrath_game_frame_number_word_view`,
+`norrath_game_pause_word_view`. Opened: `taskList`. 536 function bodies, 632
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -635,7 +656,8 @@ symbol was defined twice.
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-engine-init, world-state, render-lights, data-views, actors-b, and gameobject-base. `engineInit__Ff`,
+engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
+and scheduler. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -661,3 +683,4 @@ and no startup stage has executed.
 - 2026-10-11 16:52 CDT — `agents/actors-b` — 796 unresolved imports
 - 2026-10-11 16:56 CDT — `agents/gameobject-base` — 781 unresolved imports
 - 2026-10-11 16:59 CDT — `agents/libc-format` — 779 unresolved imports
+- 2026-10-11 17:08 CDT — `agents/scheduler` — 775 unresolved imports
