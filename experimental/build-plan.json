@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 813,
+  "default_authored_inputs": 817,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1426,6 +1426,10 @@
     "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
     "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+    "sources/sif-keyboard-init-sif/init_sif.cpp": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
+    "sources/sif-keyboard-iop-heap-query/query.cpp": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
+    "sources/sif-keyboard-keyboard/keyboard.cpp": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
+    "sources/sif-keyboard-module-calls/module.cpp": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
     "sources/subsystem-inits-anim/anim_init.cpp": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
     "sources/subsystem-inits-emath/emath_init.cpp": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
     "sources/subsystem-inits-level-name/level_name.cpp": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
@@ -10879,6 +10883,42 @@
       "profile": "authored_cpp",
       "sha256": "415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d",
       "source": "sources/engine-restore-srs-main/srs_main.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 815,
+      "kind": "independently_authored_source",
+      "object_name": "init_sif.o",
+      "profile": "authored_cpp",
+      "sha256": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
+      "source": "sources/sif-keyboard-init-sif/init_sif.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 816,
+      "kind": "independently_authored_source",
+      "object_name": "query.o",
+      "profile": "authored_cpp",
+      "sha256": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
+      "source": "sources/sif-keyboard-iop-heap-query/query.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 817,
+      "kind": "independently_authored_source",
+      "object_name": "keyboard.o",
+      "profile": "authored_cpp",
+      "sha256": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
+      "source": "sources/sif-keyboard-keyboard/keyboard.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 818,
+      "kind": "independently_authored_source",
+      "object_name": "module.o",
+      "profile": "authored_cpp",
+      "sha256": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
+      "source": "sources/sif-keyboard-module-calls/module.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -10978,7 +11018,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0fe2d1b95c67df23bc4e0d4962eccd19da498350fd23b5aa2dd3e2fdbca58102",
+  "snapshot_sha256": "611f4ead43ddf7ebbc932fb3515008a0880aa4b8cdcda40b4b2f926727bc5425",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -10668,6 +10668,78 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/engine-restore-srs-main/srs_main.cpp"
+    },
+    {
+      "input_order": 815,
+      "component": "sif-keyboard-init-sif",
+      "object_name": "init_sif.o",
+      "private_object_sha256": "2bdfaf1275fef8642204a38205d44a5e8524834465431d1cddf3c6d50c045e53",
+      "emitted_functions": [
+        {
+          "name": "initSif__Fv",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sif-keyboard-init-sif/init_sif.cpp"
+    },
+    {
+      "input_order": 816,
+      "component": "sif-keyboard-iop-heap-query",
+      "object_name": "query.o",
+      "private_object_sha256": "8d98ff5da8fd7ae910492150f89af4dc99df2ff8fadff93e05ea3d2e6364e9cb",
+      "emitted_functions": [
+        {
+          "name": "sceSifQueryMaxFreeMemSize",
+          "compiled_body_bytes": 120
+        },
+        {
+          "name": "sceSifQueryTotalFreeMemSize",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sif-keyboard-iop-heap-query/query.cpp"
+    },
+    {
+      "input_order": 817,
+      "component": "sif-keyboard-keyboard",
+      "object_name": "keyboard.o",
+      "private_object_sha256": "acabeb04e8eb79fc677b093e29aa12462ef0e1fad78e17515a84fc5af5e66671",
+      "emitted_functions": [
+        {
+          "name": "keyboardFree__Fv",
+          "compiled_body_bytes": 12
+        },
+        {
+          "name": "keyboardRestart__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sif-keyboard-keyboard/keyboard.cpp"
+    },
+    {
+      "input_order": 818,
+      "component": "sif-keyboard-module-calls",
+      "object_name": "module.o",
+      "private_object_sha256": "dd3b34c5df98b549a18965a0a06cdd4f590c0e7c74263816d16ac06fad064dac",
+      "emitted_functions": [
+        {
+          "name": "sceSifSearchModuleByName",
+          "compiled_body_bytes": 180
+        },
+        {
+          "name": "sceSifUnloadModule",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "sceSifStopModule",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sif-keyboard-module-calls/module.cpp"
     }
   ],
   "drafts": [
@@ -12588,6 +12660,14 @@
     "sources/script-amx-native-registry/registry_host.cpp": "9f62aba5a36960e52cf212d9a63eb4d27f4b897bf2f83264f15bbd1ba5ca8933",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
     "sources/script-amx-post-action/post_action_host.cpp": "73c888406f60754402b8bd518694647610a2ec4221d5a877e34a3b494d4374af",
+    "sources/sif-keyboard-init-sif/host_contract.cpp": "36b95658a28c895157179c942fc9818a3a34792a029a9b44e3ee7cbcbace1d0a",
+    "sources/sif-keyboard-init-sif/init_sif.cpp": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
+    "sources/sif-keyboard-iop-heap-query/host_contract.cpp": "8134eff4bdc303ca733741d59c9d94f9b5598945d10649c948711a6983170545",
+    "sources/sif-keyboard-iop-heap-query/query.cpp": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
+    "sources/sif-keyboard-keyboard/host_contract.cpp": "dbc675fb2bf1eb7a55991cf62dfc1df78fee77524ec7f0f2648a5302925dc3ec",
+    "sources/sif-keyboard-keyboard/keyboard.cpp": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
+    "sources/sif-keyboard-module-calls/host_contract.cpp": "20405bf0eacbed427ce6809fc1788dd4735516c6e1680de2dc84eb7b1cd7d1a5",
+    "sources/sif-keyboard-module-calls/module.cpp": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
     "sources/subsystem-inits-anim/anim_init.cpp": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
     "sources/subsystem-inits-anim/host_check.cpp": "6a412b147355c9aac034366668788df3616aaee2c46bc3f66672ef82c549e629",
     "sources/subsystem-inits-emath/emath_init.cpp": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
@@ -13167,11 +13247,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 815,
-    "authored_default_inputs": 813,
+    "selected_inputs": 819,
+    "authored_default_inputs": 817,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 688,
-    "compiled_body_bytes_from_accepted_inputs": 325328,
+    "emitted_function_definitions_including_helpers": 696,
+    "compiled_body_bytes_from_accepted_inputs": 326712,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -13184,7 +13264,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 502
+    "package_selected_inputs": 506
   },
   "startup_implementations": [
     {
@@ -20843,6 +20923,90 @@
       ],
       "host_files": [
         "sources/engine-restore-srs-main/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sif-keyboard",
+      "source": "sources/sif-keyboard-init-sif/init_sif.cpp",
+      "source_sha256": "1ddc53e86e167c01dfc1838c4b76a7c85f34c4f071c6894e120c7cb26b198d95",
+      "object_sha256": "2bdfaf1275fef8642204a38205d44a5e8524834465431d1cddf3c6d50c045e53",
+      "emitted_functions": [
+        {
+          "name": "initSif__Fv",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "host_files": [
+        "sources/sif-keyboard-init-sif/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sif-keyboard",
+      "source": "sources/sif-keyboard-iop-heap-query/query.cpp",
+      "source_sha256": "0dbc63a16aaaadfa13c16b818500cf92d052eef652e66aa009fb1cd8852039d6",
+      "object_sha256": "8d98ff5da8fd7ae910492150f89af4dc99df2ff8fadff93e05ea3d2e6364e9cb",
+      "emitted_functions": [
+        {
+          "name": "sceSifQueryMaxFreeMemSize",
+          "compiled_body_bytes": 120
+        },
+        {
+          "name": "sceSifQueryTotalFreeMemSize",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/sif-keyboard-iop-heap-query/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sif-keyboard",
+      "source": "sources/sif-keyboard-keyboard/keyboard.cpp",
+      "source_sha256": "baf3788f3af26f3e5615dc334afb4f51785cb813dc220550413bb4da5f7c4c68",
+      "object_sha256": "acabeb04e8eb79fc677b093e29aa12462ef0e1fad78e17515a84fc5af5e66671",
+      "emitted_functions": [
+        {
+          "name": "keyboardFree__Fv",
+          "compiled_body_bytes": 12
+        },
+        {
+          "name": "keyboardRestart__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/sif-keyboard-keyboard/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sif-keyboard",
+      "source": "sources/sif-keyboard-module-calls/module.cpp",
+      "source_sha256": "e3c35e6d2df618563cc219f14397a3aee372f0bcad06c1aa511197ebb6ca75bd",
+      "object_sha256": "dd3b34c5df98b549a18965a0a06cdd4f590c0e7c74263816d16ac06fad064dac",
+      "emitted_functions": [
+        {
+          "name": "sceSifSearchModuleByName",
+          "compiled_body_bytes": 180
+        },
+        {
+          "name": "sceSifUnloadModule",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "sceSifStopModule",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/sif-keyboard-module-calls/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

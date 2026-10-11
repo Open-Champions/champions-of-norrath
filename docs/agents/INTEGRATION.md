@@ -842,6 +842,29 @@ Closed: `engineClear__Fv`, `engineDisplayDisable`, `engineRestore__Fv`,
 `printf`, `runFrontEnd__Fv`, `sceSifInitIopHeap`. 686 function bodies, 813
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/sif-keyboard
+
+All four units were selected. Host contracts passed. `initSif__Fv` is 480
+bytes. The query pair is 120 bytes each. No game binary was committed.
+`_bind` is defined and was not a previous import.
+
+| | |
+|---|---|
+| Before | 856 |
+| After | 865 |
+| Closed | 8 |
+| Opened | 17 |
+
+Closed: `initSif__Fv`, `keyboardFree__Fv`, `keyboardRestart__Fv`,
+`sceSifQueryMaxFreeMemSize`, `sceSifQueryTotalFreeMemSize`,
+`sceSifSearchModuleByName`, `sceSifStopModule`, `sceSifUnloadModule`.
+Opened: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
+`_ctype_`, `_lf_bind`, `_lf_version`, `commSystemInit__Fv`, `sceCdInit`,
+`sceCdMmode`, `sceFsReset`, `sceSifLoadFileReset`, `sceSifLoadModule`,
+`sceSifRebootIop`, `sceSifSyncIop`, `strlen`, `strncpy`, `textSystemInit__Fv`.
+694 function bodies, 817 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -933,7 +956,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, and engine-restore. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, and sif-keyboard. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -970,3 +993,4 @@ and no startup stage has executed.
 - 2026-10-11 17:20 CDT — `agents/natives-c` — 826 unresolved imports
 - 2026-10-11 17:23 CDT — `agents/floor` — 819 unresolved imports
 - 2026-10-11 17:25 CDT — `agents/engine-restore` — 856 unresolved imports
+- 2026-10-11 17:26 CDT — `agents/sif-keyboard` — 865 unresolved imports
