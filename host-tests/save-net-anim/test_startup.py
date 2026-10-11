@@ -531,6 +531,108 @@ int main() {
             "sceMcSync", "scePrintf", "sceSifBindRpc", "sceSifCallRpc",
             "sceSifInitRpc", "semaidRegFunc", "semaid_timerfunc", "sifParamOrd"])
 
+    def test_net_free(self):
+        source = STARTUP / "net_free.cpp"
+        self.host([source], r'''
+extern "C" unsigned char netInitState = 0;
+extern "C" int broadcastConnection = 0;
+extern "C" unsigned char cd[4] = {};
+extern "C" unsigned char g_net_buf[4] = {};
+extern "C" unsigned char netInterfaceIsUp = 0;
+extern "C" unsigned char netNetworkMode = 0;
+extern "C" unsigned char netNmPartners = 0;
+extern "C" unsigned char partners[70528] = {};
+extern "C" int nmPartners = 0;
+static char log[8];
+static int logn = 0;
+static int close_connection = 0;
+static int close_timeout = 0;
+static int down_mode = -1;
+static int saw_nm_before_blank = -1;
+static void note(char mark) { log[logn++] = mark; }
+extern "C" int sceInetClose(unsigned char* client, unsigned char* buffer,
+                            int connection, int timeout) {
+    if (client != cd || buffer != g_net_buf) return 1;
+    close_connection = connection;
+    close_timeout = timeout;
+    note('C');
+    return 0;
+}
+extern "C" int sceInetCtlDownInterface(unsigned char* client, unsigned char* buffer, int mode) {
+    if (client != cd || buffer != g_net_buf) return 1;
+    down_mode = mode;
+    note('D');
+    return 0;
+}
+extern "C" int sceLibnetTerminate(unsigned char* client) {
+    if (client != cd) return 1;
+    note('T');
+    return 0;
+}
+extern "C" void* memset(void* destination, int value, unsigned size) {
+    unsigned char* bytes = static_cast<unsigned char*>(destination);
+    if (destination == partners && size == 0x11380u) {
+        saw_nm_before_blank = netNmPartners;
+        note('M');
+    }
+    for (unsigned index = 0; index < size; ++index) bytes[index] = static_cast<unsigned char>(value);
+    return destination;
+}
+extern "C" void netFree__Fb(int bring_down);
+static int float_at(int offset) {
+    return partners[offset] == 0 && partners[offset + 1] == 0 &&
+           partners[offset + 2] == 0 && partners[offset + 3] == 0x43;
+}
+static int pattern_ok() {
+    static const int offsets[] = {24, 40, 56, 72, 104, 120, 136, 152};
+    for (int slot = 0; slot < 4; ++slot) {
+        int base = slot * 17632;
+        if (partners[base] != 0 || partners[base + 16] != 0 || partners[base + 92] != 0) return 0;
+        if (partners[base + 17631] != 0) return 0;
+        for (int item = 0; item < 8; ++item) {
+            if (!float_at(base + offsets[item])) return 0;
+        }
+    }
+    return 1;
+}
+int main() {
+    for (unsigned index = 0; index < sizeof partners; ++index) partners[index] = 0xab;
+    netInitState = 0;
+    broadcastConnection = 42;
+    netInterfaceIsUp = 7;
+    netNetworkMode = 3;
+    netNmPartners = 4;
+    nmPartners = 9;
+    netFree__Fb(1);
+    if (logn != 0 || partners[0] != 0xab || netInitState != 0 || broadcastConnection != 42) return 1;
+    if (netInterfaceIsUp != 7 || netNetworkMode != 3 || nmPartners != 9 || netNmPartners != 4) return 2;
+    logn = 0;
+    netInitState = 1;
+    broadcastConnection = -5;
+    netFree__Fb(0);
+    if (logn != 2 || log[0] != 'T' || log[1] != 'M') return 3;
+    if (broadcastConnection != -5 || netInterfaceIsUp != 7 || netInitState != 0) return 4;
+    if (netNetworkMode != 0 || nmPartners != 0 || netNmPartners != 1 || saw_nm_before_blank != 1) return 5;
+    if (!pattern_ok()) return 6;
+    logn = 0;
+    for (unsigned index = 0; index < sizeof partners; ++index) partners[index] = 0xcd;
+    netInitState = 1;
+    broadcastConnection = 42;
+    netInterfaceIsUp = 7;
+    netNetworkMode = 3;
+    nmPartners = 9;
+    netFree__Fb(1);
+    if (logn != 4 || log[0] != 'C' || log[1] != 'D' || log[2] != 'T' || log[3] != 'M') return 7;
+    if (close_connection != 42 || close_timeout != 1000 || down_mode != 0) return 8;
+    if (broadcastConnection != -1 || netInterfaceIsUp != 0 || !pattern_ok()) return 9;
+    return 0;
+}
+''')
+        self.ee_exports(source, "netFree__Fb", [
+            "broadcastConnection", "cd", "g_net_buf", "memset", "netInitState",
+            "netInterfaceIsUp", "netNetworkMode", "netNmPartners", "nmPartners",
+            "partners", "sceInetClose", "sceInetCtlDownInterface", "sceLibnetTerminate"])
+
 
 if __name__ == "__main__":
     unittest.main()
