@@ -8363,6 +8363,136 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/game-boot-pause-menu/debug_check.cpp"
+    },
+    {
+      "input_order": 639,
+      "component": "subsystem-inits-anim",
+      "object_name": "anim_init.o",
+      "private_object_sha256": "8b7cb2caa417c20c3e5534bd4b8b84586a8137479a3bc3213b474151406fa90e",
+      "emitted_functions": [
+        {
+          "name": "animInit__Fv",
+          "compiled_body_bytes": 548
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-anim/anim_init.cpp"
+    },
+    {
+      "input_order": 640,
+      "component": "subsystem-inits-emath",
+      "object_name": "emath_init.o",
+      "private_object_sha256": "09590dfaa20057d1ad6d8189edc9034cda703a78f9ff26363931046b4ca1ef2f",
+      "emitted_functions": [
+        {
+          "name": "emathInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-emath/emath_init.cpp"
+    },
+    {
+      "input_order": 641,
+      "component": "subsystem-inits-level-name",
+      "object_name": "level_name.o",
+      "private_object_sha256": "2d4c478f2d159776752c0f8aadadfb632962e2d7c8dde5cc251964cca337b824",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-level-name/level_name.cpp"
+    },
+    {
+      "input_order": 642,
+      "component": "subsystem-inits-light",
+      "object_name": "light_init.o",
+      "private_object_sha256": "0c83784e55c31be326e1bdac660574aee4545beee6ae2d4ba655695ef50a1d00",
+      "emitted_functions": [
+        {
+          "name": "lightInit__Fv",
+          "compiled_body_bytes": 232
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-light/light_init.cpp"
+    },
+    {
+      "input_order": 643,
+      "component": "subsystem-inits-list",
+      "object_name": "list_init.o",
+      "private_object_sha256": "ff2d90d6228e70e9d47989befe9b85cf00538d259063bbb09ace03af51dda998",
+      "emitted_functions": [
+        {
+          "name": "listInit__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-list/list_init.cpp"
+    },
+    {
+      "input_order": 644,
+      "component": "subsystem-inits-object",
+      "object_name": "object_init.o",
+      "private_object_sha256": "de183d7fd3af76a11770d0ef823e7e7707cbb52b8c4638c410b028cf5d2c0ffe",
+      "emitted_functions": [
+        {
+          "name": "objectInit__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-object/object_init.cpp"
+    },
+    {
+      "input_order": 645,
+      "component": "subsystem-inits-pad",
+      "object_name": "pad_init.o",
+      "private_object_sha256": "88d9913cb668202ad3c683395fd2ecaeb91ca175c65e0d85a4b48307fac3ee15",
+      "emitted_functions": [
+        {
+          "name": "padInit__Fv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-pad/pad_init.cpp"
+    },
+    {
+      "input_order": 646,
+      "component": "subsystem-inits-particles",
+      "object_name": "p_init.o",
+      "private_object_sha256": "c7bdb3fdb7bd0233550074b3dc52c663a933603679d1939d79e6203af58f17e1",
+      "emitted_functions": [
+        {
+          "name": "P_Init__Fv",
+          "compiled_body_bytes": 636
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-particles/p_init.cpp"
+    },
+    {
+      "input_order": 647,
+      "component": "subsystem-inits-rand-state",
+      "object_name": "e_rand_state.o",
+      "private_object_sha256": "3d4b486f808050f9ca0a3401d74863a385e359c9973d49cf1dfc2bdc2a8b280c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-rand-state/e_rand_state.cpp"
+    },
+    {
+      "input_order": 648,
+      "component": "subsystem-inits-world",
+      "object_name": "world_init.o",
+      "private_object_sha256": "70cc617888a2b5acb4ea0b90ed63b077a4e53cf5601ca67170b18f8e816145ed",
+      "emitted_functions": [
+        {
+          "name": "worldInit__Fv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/subsystem-inits-world/world_init.cpp"
     }
   ],
   "drafts": [
@@ -9961,6 +10091,26 @@
     "sources/script-amx-native-registry/registry_host.cpp": "9f62aba5a36960e52cf212d9a63eb4d27f4b897bf2f83264f15bbd1ba5ca8933",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
     "sources/script-amx-post-action/post_action_host.cpp": "73c888406f60754402b8bd518694647610a2ec4221d5a877e34a3b494d4374af",
+    "sources/subsystem-inits-anim/anim_init.cpp": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
+    "sources/subsystem-inits-anim/host_check.cpp": "6a412b147355c9aac034366668788df3616aaee2c46bc3f66672ef82c549e629",
+    "sources/subsystem-inits-emath/emath_init.cpp": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
+    "sources/subsystem-inits-emath/host_check.cpp": "1d0b96244effbd3d0e8079979426ab072c8ee6d340791c07cedf9908a7a31a1d",
+    "sources/subsystem-inits-level-name/host_check.cpp": "a80fcf131b5e3f3b6b3a8c311c52364e8fa9df38e1fc101c9e8eaa0f13190d62",
+    "sources/subsystem-inits-level-name/level_name.cpp": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
+    "sources/subsystem-inits-light/host_check.cpp": "c550f4c67bc6a6fb055a5f9763ff3a4be1b0239bd28deecb741eb5a4d2677115",
+    "sources/subsystem-inits-light/light_init.cpp": "2a2f4075ace17ed394323cc0646eab73122c6ea17fbf1d7e7a714bc248e090b7",
+    "sources/subsystem-inits-list/host_check.cpp": "1f7300b20ca2db9a2d3bcf09e372a91d01611c839d4b2c16aca98f3b883dfbf2",
+    "sources/subsystem-inits-list/list_init.cpp": "88587f80976a97c6abfc31ab337774f02ac5bfa72c20dab972b687c06ef0b258",
+    "sources/subsystem-inits-object/host_check.cpp": "07c297731d62a66eabae7a9e67b8950f21b84c03682249cb63d3a3f673989570",
+    "sources/subsystem-inits-object/object_init.cpp": "34d41d4cbd262ddec506e962ee14d143ec9026cc6383b1fcbed7112f6a483bea",
+    "sources/subsystem-inits-pad/host_check.cpp": "4173dc6e7b2da845827f3f2170de2b592cc59b1a6efae0530c64aec2a7922e32",
+    "sources/subsystem-inits-pad/pad_init.cpp": "48b164d7641bad0f594e966e442332ae3f174034ff7e05934c7ee78cc658b129",
+    "sources/subsystem-inits-particles/host_check.cpp": "6bfb0be0a05372d9cb5c9713a41127def2d158d7b157daeb1c0e501dc8df5277",
+    "sources/subsystem-inits-particles/p_init.cpp": "a326f797a2191806d5fea476655f1276730922332dd925aed0d904b90ac230ee",
+    "sources/subsystem-inits-rand-state/e_rand_state.cpp": "4566ec0f6220273ec17eee51791cb3bb411b566d64703c50c69426b42c91c87c",
+    "sources/subsystem-inits-rand-state/host_check.cpp": "8730bef85a1f914fffc60d564d0f6a33d4b96574a2e1fc8ec4e549217b77d3f0",
+    "sources/subsystem-inits-world/host_check.cpp": "5c31fb602f375a20f064bac972b37dea18676393280447f40cfb8b0d2d05f9eb",
+    "sources/subsystem-inits-world/world_init.cpp": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -10520,11 +10670,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 639,
-    "authored_default_inputs": 637,
+    "selected_inputs": 649,
+    "authored_default_inputs": 647,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 543,
-    "compiled_body_bytes_from_accepted_inputs": 289844,
+    "emitted_function_definitions_including_helpers": 551,
+    "compiled_body_bytes_from_accepted_inputs": 291908,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -10537,7 +10687,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 326
+    "package_selected_inputs": 336
   },
   "startup_implementations": [
     {
@@ -15363,6 +15513,166 @@
       ],
       "host_files": [
         "sources/game-boot-pause-menu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-anim/anim_init.cpp",
+      "source_sha256": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
+      "object_sha256": "8b7cb2caa417c20c3e5534bd4b8b84586a8137479a3bc3213b474151406fa90e",
+      "emitted_functions": [
+        {
+          "name": "animInit__Fv",
+          "compiled_body_bytes": 548
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-anim/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-emath/emath_init.cpp",
+      "source_sha256": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
+      "object_sha256": "09590dfaa20057d1ad6d8189edc9034cda703a78f9ff26363931046b4ca1ef2f",
+      "emitted_functions": [
+        {
+          "name": "emathInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-emath/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-level-name/level_name.cpp",
+      "source_sha256": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
+      "object_sha256": "2d4c478f2d159776752c0f8aadadfb632962e2d7c8dde5cc251964cca337b824",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/subsystem-inits-level-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-light/light_init.cpp",
+      "source_sha256": "2a2f4075ace17ed394323cc0646eab73122c6ea17fbf1d7e7a714bc248e090b7",
+      "object_sha256": "0c83784e55c31be326e1bdac660574aee4545beee6ae2d4ba655695ef50a1d00",
+      "emitted_functions": [
+        {
+          "name": "lightInit__Fv",
+          "compiled_body_bytes": 232
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-light/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-list/list_init.cpp",
+      "source_sha256": "88587f80976a97c6abfc31ab337774f02ac5bfa72c20dab972b687c06ef0b258",
+      "object_sha256": "ff2d90d6228e70e9d47989befe9b85cf00538d259063bbb09ace03af51dda998",
+      "emitted_functions": [
+        {
+          "name": "listInit__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-object/object_init.cpp",
+      "source_sha256": "34d41d4cbd262ddec506e962ee14d143ec9026cc6383b1fcbed7112f6a483bea",
+      "object_sha256": "de183d7fd3af76a11770d0ef823e7e7707cbb52b8c4638c410b028cf5d2c0ffe",
+      "emitted_functions": [
+        {
+          "name": "objectInit__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-pad/pad_init.cpp",
+      "source_sha256": "48b164d7641bad0f594e966e442332ae3f174034ff7e05934c7ee78cc658b129",
+      "object_sha256": "88d9913cb668202ad3c683395fd2ecaeb91ca175c65e0d85a4b48307fac3ee15",
+      "emitted_functions": [
+        {
+          "name": "padInit__Fv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-pad/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-particles/p_init.cpp",
+      "source_sha256": "a326f797a2191806d5fea476655f1276730922332dd925aed0d904b90ac230ee",
+      "object_sha256": "c7bdb3fdb7bd0233550074b3dc52c663a933603679d1939d79e6203af58f17e1",
+      "emitted_functions": [
+        {
+          "name": "P_Init__Fv",
+          "compiled_body_bytes": 636
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-particles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-rand-state/e_rand_state.cpp",
+      "source_sha256": "4566ec0f6220273ec17eee51791cb3bb411b566d64703c50c69426b42c91c87c",
+      "object_sha256": "3d4b486f808050f9ca0a3401d74863a385e359c9973d49cf1dfc2bdc2a8b280c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/subsystem-inits-rand-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "subsystem-inits",
+      "source": "sources/subsystem-inits-world/world_init.cpp",
+      "source_sha256": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
+      "object_sha256": "70cc617888a2b5acb4ea0b90ed63b077a4e53cf5601ca67170b18f8e816145ed",
+      "emitted_functions": [
+        {
+          "name": "worldInit__Fv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/subsystem-inits-world/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

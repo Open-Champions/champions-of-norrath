@@ -600,6 +600,27 @@ Closed: `DLG_Init__Fv`, `gameBoot__Fv`, `gameInit__Fv`,
 `engineRemoveTask__FPFv_v` are already defined. 541 function bodies, 637
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/subsystem-inits
+
+All ten units were selected. Host checks passed. `engineCurrentLevelName` is
+80 zero bytes and `eRandState` is a data object. No game binary was committed.
+`memset` and `engineAddTask__FPFv_viPci` were already defined. `pad` was
+already unresolved.
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 907 |
+| Closed | 10 |
+| Opened | 47 |
+
+Closed: `padInit__Fv`, `emathInit__Fv`, `listInit__Fv`, `animInit__Fv`,
+`objectInit__Fv`, `worldInit__Fv`, `P_Init__Fv`, `lightInit__Fv`,
+`eRandState`, `engineCurrentLevelName`. The notes listed 50 new imports.
+`memset` and `engineAddTask__FPFv_viPci` are already defined, and `pad` was
+already unresolved, so 47 names opened. 549 function bodies, 647 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -643,9 +664,14 @@ were not selected. Decide whether a second definition is wanted.
 `norrath_archive_vblank_semaphore_view` as separate objects. Decide whether
 each pair is one symbol.
 
-`engineCurrentLevelName` is still an import from `engineInit`. world-state
-defines `norrath_loader_current_name_view` for that original name and does
-not alias it. Decide whether they are one symbol.
+`engineCurrentLevelName` is now the 80 zero bytes from subsystem-inits.
+world-state still defines `norrath_loader_current_name_view` for that
+original name and does not alias it. Decide whether they are one symbol.
+
+subsystem-inits leaves `objectGrid`, `ghostObjectGrid`, `stringHash`,
+`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes` unresolved.
+object-infra already defines view names for those objects and does not alias
+the original names. Decide whether each pair is one symbol.
 
 `norrath_restore_broadcast_mask_word` is still unresolved. world-state defines
 that address once, as `norrath_grid_ignore_flags_view`, and does not emit a
@@ -679,7 +705,7 @@ symbol was defined twice.
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
-scheduler, and game-boot. `engineInit__Ff`,
+scheduler, game-boot, and subsystem-inits. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -707,3 +733,4 @@ and no startup stage has executed.
 - 2026-10-11 16:59 CDT — `agents/libc-format` — 779 unresolved imports
 - 2026-10-11 17:08 CDT — `agents/scheduler` — 775 unresolved imports
 - 2026-10-11 17:10 CDT — `agents/game-boot` — 870 unresolved imports
+- 2026-10-11 17:11 CDT — `agents/subsystem-inits` — 907 unresolved imports

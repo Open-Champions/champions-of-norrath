@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 637,
+  "default_authored_inputs": 647,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1260,6 +1260,16 @@
     "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
     "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
     "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+    "sources/subsystem-inits-anim/anim_init.cpp": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
+    "sources/subsystem-inits-emath/emath_init.cpp": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
+    "sources/subsystem-inits-level-name/level_name.cpp": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
+    "sources/subsystem-inits-light/light_init.cpp": "2a2f4075ace17ed394323cc0646eab73122c6ea17fbf1d7e7a714bc248e090b7",
+    "sources/subsystem-inits-list/list_init.cpp": "88587f80976a97c6abfc31ab337774f02ac5bfa72c20dab972b687c06ef0b258",
+    "sources/subsystem-inits-object/object_init.cpp": "34d41d4cbd262ddec506e962ee14d143ec9026cc6383b1fcbed7112f6a483bea",
+    "sources/subsystem-inits-pad/pad_init.cpp": "48b164d7641bad0f594e966e442332ae3f174034ff7e05934c7ee78cc658b129",
+    "sources/subsystem-inits-particles/p_init.cpp": "a326f797a2191806d5fea476655f1276730922332dd925aed0d904b90ac230ee",
+    "sources/subsystem-inits-rand-state/e_rand_state.cpp": "4566ec0f6220273ec17eee51791cb3bb411b566d64703c50c69426b42c91c87c",
+    "sources/subsystem-inits-world/world_init.cpp": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -9119,6 +9129,96 @@
       "profile": "authored_cpp",
       "sha256": "dbef5b51d52b65d68168d3b9e018e2692e34131df23549f5c010cfea15bb4d35",
       "source": "sources/game-boot-pause-menu/debug_check.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 639,
+      "kind": "independently_authored_source",
+      "object_name": "anim_init.o",
+      "profile": "authored_cpp",
+      "sha256": "584dc88ca8accfdec1887ce7df6ca06ceb86e7a0c8c35bd7da9758ce348e040b",
+      "source": "sources/subsystem-inits-anim/anim_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 640,
+      "kind": "independently_authored_source",
+      "object_name": "emath_init.o",
+      "profile": "authored_cpp",
+      "sha256": "8cb8b45e08401a6e0c307993377d6918832d137c06c6d25066910b53326e2350",
+      "source": "sources/subsystem-inits-emath/emath_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 641,
+      "kind": "independently_authored_source",
+      "object_name": "level_name.o",
+      "profile": "authored_cpp",
+      "sha256": "0e6d2ee336b7246087cd8bd29ee2c1d87804cb69d653cca199c1550ce4678e5c",
+      "source": "sources/subsystem-inits-level-name/level_name.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 642,
+      "kind": "independently_authored_source",
+      "object_name": "light_init.o",
+      "profile": "authored_cpp",
+      "sha256": "2a2f4075ace17ed394323cc0646eab73122c6ea17fbf1d7e7a714bc248e090b7",
+      "source": "sources/subsystem-inits-light/light_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 643,
+      "kind": "independently_authored_source",
+      "object_name": "list_init.o",
+      "profile": "authored_cpp",
+      "sha256": "88587f80976a97c6abfc31ab337774f02ac5bfa72c20dab972b687c06ef0b258",
+      "source": "sources/subsystem-inits-list/list_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 644,
+      "kind": "independently_authored_source",
+      "object_name": "object_init.o",
+      "profile": "authored_cpp",
+      "sha256": "34d41d4cbd262ddec506e962ee14d143ec9026cc6383b1fcbed7112f6a483bea",
+      "source": "sources/subsystem-inits-object/object_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 645,
+      "kind": "independently_authored_source",
+      "object_name": "pad_init.o",
+      "profile": "authored_cpp",
+      "sha256": "48b164d7641bad0f594e966e442332ae3f174034ff7e05934c7ee78cc658b129",
+      "source": "sources/subsystem-inits-pad/pad_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 646,
+      "kind": "independently_authored_source",
+      "object_name": "p_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a326f797a2191806d5fea476655f1276730922332dd925aed0d904b90ac230ee",
+      "source": "sources/subsystem-inits-particles/p_init.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 647,
+      "kind": "independently_authored_source",
+      "object_name": "e_rand_state.o",
+      "profile": "authored_cpp",
+      "sha256": "4566ec0f6220273ec17eee51791cb3bb411b566d64703c50c69426b42c91c87c",
+      "source": "sources/subsystem-inits-rand-state/e_rand_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 648,
+      "kind": "independently_authored_source",
+      "object_name": "world_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a19a9741c07e4debe9cd680e8e35bb5e06db3bdfa79a8c7b3d56ecc752265d23",
+      "source": "sources/subsystem-inits-world/world_init.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -9218,7 +9318,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "53dcf0be6290f68495152dc0b7adab54e04f0c66a974d04c2311afd771944599",
+  "snapshot_sha256": "789cc3a273b9efb81cb66792423293033220fdd557007ceb8f79b30472bdd8c5",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
