@@ -185,10 +185,48 @@ Source `sources/engine-restore-srs-main/srs_main.cpp`. SHA-256
 `415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d`.
 Do not plan `host_contract.cpp`.
 
+## Display, intro, and pad words
+
+`engineDisplayDisable` at 0x0048440c is a four-byte `.sdata` word whose file
+bytes are `03 00 00 00`. The fresh object keeps that value in `.data`. The
+`-G0` profile does not place it in `.sdata`.
+
+`skipIntro` at 0x004866c0 is a four-byte local `.sdata` word whose file bytes
+are zero. `pad` at 0x0034beb8 is 352 `.data` bytes, all zero. `main` reads
+`pad + 8`. `launchSRS` writes `pad + 4`, `pad + 92`, `pad + 180`, and
+`pad + 268`. The authored zero objects are `.bss` under this profile. Their
+initial value is zero. They are not COMMON.
+
+Host check:
+
+```sh
+c++ -std=c++17 -Wall -Wextra -Werror -o /tmp/engine-words-check \
+  experimental/sources/engine-restore-pad/host_contract.cpp
+/tmp/engine-words-check
+```
+
+### Build-plan entries
+
+Profile `authored_cpp`, empty header closure, no functions emitted.
+
+| Source | Object | SHA-256 |
+| --- | --- | --- |
+| `sources/engine-restore-display-disable/engine_display_disable.cpp` | `engine_display_disable.o` | `8ad6c2288189f4dd63c069599ba14e05216130f79c3df7910f1f6abeb1c19c08` |
+| `sources/engine-restore-skip-intro/skip_intro.cpp` | `skip_intro.o` | `c912f8cf4360b0f4c4a533aef1a942f05313031e2caf888dc3d079e2a587c39e` |
+| `sources/engine-restore-pad/pad.cpp` | `pad.o` | `dffcaf0f47af1d44ba261518ca77b55b3ba4d7a162196cbdcf6099a74c37ec57` |
+
+Do not plan `host_contract.cpp`. `snapshot.json` must record the new sources
+and host files before `tools/check_source_snapshot.py` will accept the tree.
+
 ## Imports closed
 
-`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`,
+`engineClear__Fv`, `engineDisplayDisable`, `engineRestore__Fv`,
+`frontEndInit__Fi`, `pad`, `skipIntro`,
 `srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`.
+
+A private relocatable link of the 647-import baseline object plus these seven
+units left 710 unresolved names: 7 closed and 70 opened. That link is not a
+fresh plan build. `snapshot.json` was not edited. COMMON stayed absent.
 
 ## Imports opened
 
@@ -233,22 +271,28 @@ or defined: `memset` is defined, `exit` was already unresolved.
 | `sources/engine-restore-engine-clear/engine_clear.cpp` | `engine_clear.o` | `aab20367270eaf329ebf56bddf583365d8d84636522a4fb3d0e439283cc43e41` |
 | `sources/engine-restore-engine-restore/engine_restore.cpp` | `engine_restore.o` | `158155411558a2cfcf35300e58eeb384aaf0ae86f4b24fe2d979c5054537cdc4` |
 | `sources/engine-restore-srs-main/srs_main.cpp` | `srs_main.o` | `415c71f5721962b7a7f9ec17e99fc4f5335d62ffab51bbbb63a39c4784669d2d` |
+| `sources/engine-restore-display-disable/engine_display_disable.cpp` | `engine_display_disable.o` | `8ad6c2288189f4dd63c069599ba14e05216130f79c3df7910f1f6abeb1c19c08` |
+| `sources/engine-restore-skip-intro/skip_intro.cpp` | `skip_intro.o` | `c912f8cf4360b0f4c4a533aef1a942f05313031e2caf888dc3d079e2a587c39e` |
+| `sources/engine-restore-pad/pad.cpp` | `pad.o` | `dffcaf0f47af1d44ba261518ca77b55b3ba4d7a162196cbdcf6099a74c37ec57` |
 
-All four use `authored_cpp` and an empty header closure. Host contracts are
-not inputs.
+All seven use `authored_cpp` and an empty header closure. The three word
+units emit no functions. Host contracts are not inputs.
 
 ## Authored but never executed
 
-`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`, and
-`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`. Host contracts ran on this machine.
-The reviewed EE compiler produced relocatable objects. No EE, interrupt, DMA,
-SIF, menu, or game path ran.
+`frontEndInit__Fi`, `engineClear__Fv`, `engineRestore__Fv`,
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`, `engineDisplayDisable`, `skipIntro`,
+and `pad`. Host contracts ran on this machine. The reviewed EE compiler
+produced relocatable objects. No EE, interrupt, DMA, SIF, menu, or game path
+ran.
 
 ## Unknown
 
-`Menu` layout and the effects of the functions these routines call.
-`main` and `launchSRS` pass 0 to `frontEndInit`. Whether a suspended front end
-is reachable from those callers is unknown. What `vblankHID` contains before
-`engineClear` is unknown. The resource record passed to `sceDmaSendN`, and the
-effect of the three absolute stores, are unknown. `gameLoop`, `srs_main`,
-`pad`, `skipIntro`, and `engineDisplayDisable` are still open.
+`gameLoop__Fv` at 0x002cf048 is 2812 bytes and is still unresolved. `main` is
+its one caller. A complete host-checked translation was not finished, so no
+body was added. `Menu` layout, the `VILauncher` and `VINetworkStatus` sizes,
+and the effects of every callee above are unknown. `main` and `launchSRS`
+pass 0 to `frontEndInit`. Whether a suspended front end is reachable from
+those callers is unknown. What `vblankHID` contains before `engineClear`,
+what the shadow-texture record means, and what the stores at 0x10000000,
+0x10000010, 0x10000810, and 0x1000e020 program are unknown.
