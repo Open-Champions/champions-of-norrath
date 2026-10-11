@@ -18,3 +18,5 @@ is unknown.
 requests, numbers 64 and 65. Fresh compilation reproduces both bodies. They do
 not define semaphore objects or deletion effects. `SignalSema` (service 66) is
 not on this path.
+
+`DeleteSema` uses the same shape for service 65. Both wrappers were compared as complete `.text` bodies against the pinned executable.
