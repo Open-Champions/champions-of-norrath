@@ -1,6 +1,6 @@
 # InitSys callees
 
-`main` and `launchSRS` do not reference these symbols. They are the startup calls and data opened by the nine `_InitSys` services. None of them is `engineAddTask`. Fresh compilation of the functions below reproduces the original instruction bytes except the three timer tail calls, whose `j` is a relocation to `SetT2`. No kernel service has run.
+`main` and `launchSRS` do not reference these symbols. They are the startup calls and data opened by the nine `_InitSys` services. None of them is `engineAddTask`. Fresh compilation of the functions below reproduces the original instruction bytes except the three timer tail calls, whose `j` is a relocation to `SetT2`. The default partial link is 1029 unresolved imports, zero COMMON, and 434 function bodies. Defining these twelve removes the eleven that were already imports. `SetT2` was not an import before, because the original tail calls jump to its address rather than to a symbol the linker could name. No kernel service has run.
 
 ## Syscall requests
 

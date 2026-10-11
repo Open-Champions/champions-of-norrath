@@ -139,3 +139,16 @@ down sound, keyboard, and texture cache, walks `_srsctorsstart`, calls
 `db0ae5e19bd1d9a86dd695b9d6a34a666d222b5b60c18bbd20be5d22b02103d3`.
 The [review](STARTUP_LAUNCHSRS.md) records the control flow.
 `engineAddTask__FPFv_viPci` is still unresolved. No EE startup stage has run.
+
+## InitSys callee package
+
+`main` and `launchSRS` do not call the 51 symbols opened by the nine services.
+Twelve functions from that neighborhood are now authored: six syscall requests
+(`AddIntcHandler2`, `CreateThread`, `StartThread`, `ChangeThreadPriority`,
+`GetThreadId`, `FindAddress`), `DIntr`, `EIntr`, `SetT2`, and the three timer
+register tail calls. The fresh default partial link is **1029 unresolved
+imports** (1040 − 11), zero COMMON, 434 function bodies, 310 authored inputs.
+Partial object
+`94dc88b91858122ad4514424de332a7a658705b526f8e49b0960543b30544de4`.
+The [review](STARTUP_INITSYS_CALLEES.md) records the instruction behavior.
+`engineAddTask__FPFv_viPci` is still unresolved. No kernel service has run.
