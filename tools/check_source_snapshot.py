@@ -50,7 +50,9 @@ def check(root):
     assert sum(len(r['emitted_functions']) for r in inputs) == selection['emitted_function_definitions_including_helpers']
     assert sum(f['compiled_body_bytes'] for r in inputs
                for f in r['emitted_functions']) == selection['compiled_body_bytes_from_accepted_inputs']
-    assert selection['coefficient_initializer_inputs'] == 0
+    coefficient_inputs = [r for r in authored if r['source'].endswith(
+        '/math-integer-trig-coefficients/coefficients.cpp')]
+    assert selection['coefficient_initializer_inputs'] == len(coefficient_inputs)
     if selection['clean_source_successor_build_performed']:
         receipt_path = directory / selection['expanded_build_receipt']
         assert receipt_path.name == 'build-receipt-expanded.json'
@@ -87,7 +89,8 @@ def check(root):
     additional_sources = {name for item in additions for name in item['files'] if name.endswith('.cpp')}
     assert {r['source'] for r in inputs[prefix_count:historical_end]} == additional_sources
     assert historical_end == prefix_count + len(additional_sources)
-    assert len(authored) == 262 + len(additional_sources) + selection['startup_selected_inputs']
+    assert len(authored) == (262 + len(additional_sources) + selection['startup_selected_inputs']
+                             + selection['package_selected_inputs'])
     assert {f['name'] for r in inputs[prefix_count:historical_end] for f in r['emitted_functions']} == set(additional_functions)
     selected_sources = {r['source'] for r in authored}
     assert not selected_sources & {f for draft in snapshot['drafts'] for f in draft['files']}
@@ -111,7 +114,10 @@ def check(root):
     ]
     assert [r['source'] for r in inputs[prefix_count:historical_end]] == expected_tail
     startup = snapshot['startup_implementations']
-    assert len(startup) == selection['startup_selected_inputs'] == len(inputs) - historical_end
+    packages = snapshot['package_implementations']
+    assert len(startup) == selection['startup_selected_inputs']
+    assert len(packages) == selection['package_selected_inputs']
+    assert len(inputs) == historical_end + len(startup) + len(packages)
     approved = [
         ('sources/runtime-memory/memset.cpp', 'memset'),
         ('sources/runtime-startup/main_guard.cpp', '__main'),
@@ -149,7 +155,7 @@ def check(root):
         ('sources/runtime-startup-text/startup_text.cpp', ''),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
-    for record, item in zip(startup, inputs[historical_end:]):
+    for record, item in zip(startup, inputs[historical_end:historical_end + len(startup)]):
         assert record['source'] == item['source']
         if record['symbol'] == '':
             assert record['compiled_body_bytes'] == 0
@@ -164,6 +170,23 @@ def check(root):
         assert record['exact_match_ledger_admission'] is False
         review = root / record['review']
         assert review.is_file() and review.suffix == '.md'
+    authored_sources = {r['source'] for r in authored}
+    for record, item in zip(packages, inputs[historical_end + len(startup):]):
+        assert record['source'] == item['source']
+        assert item['kind'] == 'independently_authored_source'
+        assert item['emitted_functions'] == record['emitted_functions']
+        assert record['source_sha256'] == files[record['source']]
+        assert record['object_sha256'] == item['private_object_sha256']
+        assert re.fullmatch(r'[0-9a-f]{64}', record['object_sha256'])
+        assert record['game_runtime_verified'] is False
+        assert record['exact_match_ledger_admission'] is False
+        assert record['package']
+        review = root / 'docs' / 'agents' / (record['package'] + '.md')
+        assert review.is_file() and review.suffix == '.md'
+        assert record['host_files']
+        for host in record['host_files']:
+            assert host in files and host not in authored_sources
+            assert host.startswith('sources/')
     provenance = snapshot['source_provenance']
     assert len(provenance) == 15
     for name, record in provenance.items():

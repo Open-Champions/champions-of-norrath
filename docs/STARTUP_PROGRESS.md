@@ -177,7 +177,7 @@ These remain unowned: `_engineCheckStack__FPCci`, `_srsctorsend`, `_srsctorsstar
 
 ## Startup text
 
-The unnamed text is selected authored data. It defines no function. The fresh default partial link is **991 unresolved imports** (1029 − 38), zero COMMON, 434 function bodies, 311 authored inputs. Partial object `19024cc214f83e73e6e83cdb8ebb70f7514b3d809ba0135f65a054327216a53e`. No EE startup stage has run.
+The unnamed text is selected authored data. It defines no function. Math, audio, and memory were already merged and had left the partial link at 950 imports. With this text included, the fresh default partial link is **912 unresolved imports** (950 − 38), zero COMMON, 442 function bodies, 340 authored inputs. Partial object `8b45c1940a0e6988f2b187b6d9bbb0c38f2c6b1638a0614d67329e2916c37c29`. No EE startup stage has run.
 
 ## Call chain
 
