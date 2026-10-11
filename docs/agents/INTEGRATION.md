@@ -215,7 +215,135 @@ the 14 `norrath_launchsrs_rodata_*` / `norrath_launchsrs_sdata_*` addresses
 listed in `docs/STARTUP_TEXT.md`. Opened: none. 443 function bodies, 344
 authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
 
-## Disagreements
+## agents/megatile
+
+Merged. Observed original names stay tied to addresses. Each unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+Host checks for specialparse, entity dispatch, and the table bytes passed.
+
+The notes list 47 defined names as closed. All 47 are defined. Only 23 of
+them were unresolved imports on the shared link, so the official delta is
+smaller than that list.
+
+| | |
+|---|---|
+| Before | 647 |
+| After | 626 |
+| Closed | 23 |
+| Opened | 2 |
+
+Closed: `norrath_megatile_specialparse`, `norrath_megatile_do_entity_dispatch`,
+`norrath_megatile_regions_view`, `norrath_megatile_x_view`,
+`norrath_megatile_y_view`, `norrath_megatile_grid_origin_view`,
+`norrath_megatile_pm_pointers_view`, `norrath_megatile_pm_characters_view`,
+`norrath_megatile_counters_view`, `norrath_megatile_world_word`,
+`norrath_megatile_scale_view`, `norrath_megatile_name_a_view`,
+`norrath_megatile_name_b_view`, `norrath_megatile_name_c_view`,
+`norrath_megatile_name_d_view`, `norrath_megatile_name_e_view`,
+`norrath_megatile_name_f_view`, `norrath_megatile_pm_name_view`,
+`norrath_megatile_pm_a_view`, `norrath_megatile_pm_b_view`,
+`norrath_megatile_pm_c_view`, `norrath_megatile_count_format_view`,
+`norrath_megatile_point_format_view`.
+
+The other 24 names in the notes are defined and were not previous imports:
+`norrath_megatile_dynlevels_view`, `norrath_megatile_level_name_view`,
+`norrath_megatile_closest_limit_view`, and the trigger, format, kitten, and
+spawn text objects.
+
+Opened: `norrath_factory_sscanf`, `norrath_swap_int`. The other names the
+notes leave open were already unresolved or already defined, including
+`norrath_megatile_add_pm_list` and `norrath_megatile_cap_pm_pointers`.
+Bodies: specialparse 2404, entity dispatch 1996. The table unit emits no
+functions. 445 function bodies, 347 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+## agents/script-amx
+
+Merged. The selected executor is `sources/script-amx-exec/exec.cpp`. The older
+held draft `sources/game-amx-exec-native-transport-source-v4` is unchanged,
+still stops on `#error`, and is not a plan input. Each new unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+All nine host checks passed.
+
+| | |
+|---|---|
+| Before | 626 |
+| After | 752 |
+| Closed | 10 |
+| Opened | 136 |
+
+Closed: `norrath_custom_variables_process`,
+`norrath_script_current_amx_word_view`,
+`norrath_script_complain_frame_word_view`,
+`norrath_amx_little_endian_word_view`,
+`norrath_script_game_state_data_view`, `norrath_script_post_action_view`,
+`norrath_mc_pre_start_key_bytes`, `norrath_mc_start_key_bytes`,
+`norrath_amx_game_native_registry_view`, `norrath_amx_exec`.
+
+Opened: the 120 `amx*__FP5__amxPi` natives named in `docs/agents/script-amx.md`
+(`amxNewWorld__FP5__amxPi` once), plus `DisableZooming__6Camera`,
+`SetDistanceAtLevel__6Cameraif`, `SetMaxHeight__6Cameraf`,
+`SetPitchAtLevel__6Cameraii`, `fxUpdateDust__Fiiiiiiii`, `gameCam`,
+`levelFlags`, and the ten `worldWater*` words. `norrath_copy_bytes`,
+`norrath_memory_compare`, `norrath_factory_strstr`, and
+`norrath_player_sscanf` were already defined, so they did not open.
+Bodies: custom variables 1360, executor 7996. The other seven units emit no
+functions. 447 function bodies, 356 authored inputs, zero COMMON. 214 tool
+tests passed. No retail script and no EE execution. The host executor test
+does not cover every opcode slot; the notes list the unrun slots.
+
+## agents/cd-archive
+
+Merged the pushed tip. Observed originals stay next to the `norrath_archive_*`
+names. Each unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. All 13 host contracts passed. This tip does
+not define `cdLoad__FPcPvii`; that name stays unresolved for a later pass.
+
+| | |
+|---|---|
+| Before | 752 |
+| After | 763 |
+| Closed | 34 |
+| Opened | 45 |
+
+Closed: the 12 archive functions and 22 views that were already imports.
+`norrath_archive_no_new_vags_view` and
+`norrath_archive_cd_command_count_view` are defined and were not previous
+imports. Opened: the 45 names in the notes that were not already present,
+including `sceCdStream`, the Sony CD/SIF helpers, the six extension inits, and
+the three vblank views. `norrath_sce_printf` was already unresolved.
+`norrath_player_wait_semaphore`, `norrath_player_signal_semaphore`, and
+`norrath_string_compare` were already defined. `norrath_archive_map_animation_sounds`
+and `norrath_archive_sound_free_ram` stay unresolved. 459 function bodies,
+369 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/libc-format
+
+Merged. Observed `scePrintf`, `sscanf`, and `strcmp` are the published names.
+`scePrintf` is an alias of `norrath_sce_printf` on the EE object. Each unit
+has a host contract that returns failure. No game binary or disassembly
+listing was committed. All 19 host contracts passed. `memAlloc__FiPc` stays
+unresolved.
+
+| | |
+|---|---|
+| Before | 763 |
+| After | 740 |
+| Closed | 30 |
+| Opened | 7 |
+
+Closed: the 30 names in `docs/agents/libc-format.md`, including `scePrintf`,
+`sscanf`, `strcmp`, and `norrath_sce_printf`. `_putchar` is defined and was
+not a previous import. Opened: `_printf`, `close`, `deci2Putchar`, `lseek`,
+`read`, `serialPutchar`, `write`. The notes' already-defined callees stayed
+defined. Bodies match the notes, including both printf names at 104 bytes,
+`sscanf` 344, and `strcmp` 40. 472 function bodies, 388 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## Needs a decision
+
+These two disagreements are still unresolved. Neither package was changed to
+force them together.
 
 `norrath_actor_add_slow_run_list` was already selected. It walks 60 heads at
 `norrath_actor_view_50bfd0` and the same cycle word. `object-infra` adds
@@ -223,19 +351,32 @@ authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
 defines `norrath_object_slow_run_list_view` for observed `slowRunList` at
 `0x4fbfd0`. Its notes say `norrath_actor_view_50bfd0` is not that list. The
 two functions are different symbols, so the link has no duplicate definition.
-They do not share a head array.
+They do not share a head array. Decide whether those are two lists or one
+list under two names.
 
 `norrath_player_malloc_semaphore_view` and `__sce_sema_id` remain two objects.
 The memory notes say the original word is one symbol and this package defines
-only the view. `__sce_sema_id` is still unresolved.
+only the view. `__sce_sema_id` is still unresolved. Decide whether the view
+should become that symbol.
 
-No symbol in these four packages was defined twice.
+## Disagreements
+
+The two items under Needs a decision are the only symbol disagreements among
+the packages selected so far. No symbol in those packages was defined twice.
 
 ## Still authored, never executed
 
-Every function and data object added by math, audio, memory, and object-infra.
+Every function and data object added by math, audio, memory, object-infra,
+megatile, script-amx, cd-archive, and libc-format. The held AMX draft remains uncompiled.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
 of the startup bodies already on the shared branch: they are selected source,
 and no startup stage has executed.
+
+## Push log
+
+- 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
+- 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports
+- 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports
+- 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports

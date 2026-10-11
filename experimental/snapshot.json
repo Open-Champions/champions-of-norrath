@@ -5239,6 +5239,546 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/object-infra-factory-text/factory_text.cpp"
+    },
+    {
+      "input_order": 346,
+      "component": "megatile-specialparse",
+      "object_name": "specialparse.o",
+      "private_object_sha256": "043d6fda56a4d10780adb61a7434aeb810bb849a0ab618929c44cd867ef6872e",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_specialparse",
+          "compiled_body_bytes": 2404
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/megatile-specialparse/specialparse.cpp"
+    },
+    {
+      "input_order": 347,
+      "component": "megatile-do-entity-dispatch",
+      "object_name": "dispatch.o",
+      "private_object_sha256": "3c8e67177ce3f3a9414d9ade3553e18dfdaf21de29213f1536dfe8f1751f502b",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_do_entity_dispatch",
+          "compiled_body_bytes": 1996
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/megatile-do-entity-dispatch/dispatch.cpp"
+    },
+    {
+      "input_order": 348,
+      "component": "megatile-tables",
+      "object_name": "tables.o",
+      "private_object_sha256": "99d83e5fd511d00891a4213c7879a0da541adde6576e5b7a10209db5ea2f6cdb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/megatile-tables/tables.cpp"
+    },
+    {
+      "input_order": 349,
+      "component": "script-amx-custom-variables",
+      "object_name": "custom_variables.o",
+      "private_object_sha256": "febf59393708a678cb535e357f9b486734deb174ed403e0678a4e27f4666564b",
+      "emitted_functions": [
+        {
+          "name": "norrath_custom_variables_process",
+          "compiled_body_bytes": 1360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp"
+    },
+    {
+      "input_order": 350,
+      "component": "script-amx-current-amx",
+      "object_name": "current_amx.o",
+      "private_object_sha256": "4e6460fed34de9db2716c55410b6b03b39afe1130ba382637a7dfeb2f11d8f6b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-current-amx/current_amx.cpp"
+    },
+    {
+      "input_order": 351,
+      "component": "script-amx-complain-frame",
+      "object_name": "complain_frame.o",
+      "private_object_sha256": "67e3dfce98348cef488924927a38cc03889aaa9504f312e6234204253c6f289b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp"
+    },
+    {
+      "input_order": 352,
+      "component": "script-amx-little-endian",
+      "object_name": "little_endian.o",
+      "private_object_sha256": "6a5af8620eeb234021199322f9b392129a0d09e7e61a76f007a05e904b96a78b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-little-endian/little_endian.cpp"
+    },
+    {
+      "input_order": 353,
+      "component": "script-amx-game-state",
+      "object_name": "game_state.o",
+      "private_object_sha256": "0abf7692277722be58e950493007d8c60162502ec94bb48a8f3a12727de21c25",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-game-state/game_state.cpp"
+    },
+    {
+      "input_order": 354,
+      "component": "script-amx-post-action",
+      "object_name": "post_action.o",
+      "private_object_sha256": "c99e9fb60327ce91c73d02209a8e8301196332dc4d6747fdb9f09e336c03b8fa",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-post-action/post_action.cpp"
+    },
+    {
+      "input_order": 355,
+      "component": "script-amx-memory-card-keys",
+      "object_name": "memory_card_keys.o",
+      "private_object_sha256": "71d5ced3af9f6f32b0a6e1c7189ac7b17a931d94794242759f927318600bc83a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp"
+    },
+    {
+      "input_order": 356,
+      "component": "script-amx-native-registry",
+      "object_name": "native_registry.o",
+      "private_object_sha256": "73975ed3cbca00df7659342ee84f4f9667b418cdb12f78f69a9d6cb5ad51f1cd",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-native-registry/registry.cpp"
+    },
+    {
+      "input_order": 357,
+      "component": "script-amx-exec",
+      "object_name": "amx_exec.o",
+      "private_object_sha256": "f38d55f100897ef4504ae897d1b15a12e51a48c0160086236016874ec5152b39",
+      "emitted_functions": [
+        {
+          "name": "norrath_amx_exec",
+          "compiled_body_bytes": 7996
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/script-amx-exec/exec.cpp"
+    },
+    {
+      "input_order": 358,
+      "component": "cd-archive-engine-push-border",
+      "object_name": "push_border.o",
+      "private_object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_push_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp"
+    },
+    {
+      "input_order": 359,
+      "component": "cd-archive-engine-pop-border",
+      "object_name": "pop_border.o",
+      "private_object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_pop_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp"
+    },
+    {
+      "input_order": 360,
+      "component": "cd-archive-engine-sync-vblank",
+      "object_name": "sync_vblank.o",
+      "private_object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_sync_vblank",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp"
+    },
+    {
+      "input_order": 361,
+      "component": "cd-archive-last-character",
+      "object_name": "last_character.o",
+      "private_object_sha256": "3dda0d92e2038fd55291436a1dedd4340df451f46a3d65090e34088dc8fdcf27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_last_character",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-last-character/last_character.cpp"
+    },
+    {
+      "input_order": 362,
+      "component": "cd-archive-cd-sync",
+      "object_name": "cd_sync.o",
+      "private_object_sha256": "9b7bf0831727279a6dbf1dfae31633a67e3cf537e135919ccf63e1c9e6777f33",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_sync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp"
+    },
+    {
+      "input_order": 363,
+      "component": "cd-archive-cd-error",
+      "object_name": "cd_error.o",
+      "private_object_sha256": "9e8d3e75269699bf51f7b6b9fc46486b10d352b728bbbea78b3e0ae2d0f02500",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_error",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp"
+    },
+    {
+      "input_order": 364,
+      "component": "cd-archive-cd-read",
+      "object_name": "cd_read.o",
+      "private_object_sha256": "737e0b35435bbfd0e1b904592abe9605018a85986511b76ea36557ce0eb5889f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read",
+          "compiled_body_bytes": 716
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp"
+    },
+    {
+      "input_order": 365,
+      "component": "cd-archive-cd-read-iop",
+      "object_name": "cd_read_iop.o",
+      "private_object_sha256": "79f5728eb2f5f3bbad194df09a56f5c1422f9d811b5abb4e82864274cdc7cd01",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read_iop",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp"
+    },
+    {
+      "input_order": 366,
+      "component": "cd-archive-cd-stream-pause",
+      "object_name": "stream_pause.o",
+      "private_object_sha256": "1e05b2278dfab9cc31cb220b5d1ec7b27c12e9f2ab8ab12c1095e03302809db0",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_pause",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp"
+    },
+    {
+      "input_order": 367,
+      "component": "cd-archive-cd-stream-read",
+      "object_name": "stream_read.o",
+      "private_object_sha256": "9709016fb403f61e5a49bfe0baad54a37d4f91c54b5cc0c221b5fa92d1c0d2c8",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_read",
+          "compiled_body_bytes": 532
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp"
+    },
+    {
+      "input_order": 368,
+      "component": "cd-archive-cd-layer-search",
+      "object_name": "layer_search.o",
+      "private_object_sha256": "aea2a9eee7182feaeeff9b48a3a8c9022e8c3ee98ab562c0623eb263cc79ac27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_layer_search",
+          "compiled_body_bytes": 860
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp"
+    },
+    {
+      "input_order": 369,
+      "component": "cd-archive-initialize-file",
+      "object_name": "initialize_file.o",
+      "private_object_sha256": "5d6cb7f522f48198f49e513439de16fbe5828556ffd6a9a15a14cf8328b8172f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_initialize_file",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp"
+    },
+    {
+      "input_order": 370,
+      "component": "cd-archive-views",
+      "object_name": "views.o",
+      "private_object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/cd-archive-views/views.cpp"
+    },
+    {
+      "input_order": 371,
+      "component": "libc-format-memchr",
+      "object_name": "libc_format_memchr.o",
+      "private_object_sha256": "1b6ed1981265cecea27b227fdfaaded1196c367549637dd4b8aee151c4678d19",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_memchr",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-memchr/memchr.cpp"
+    },
+    {
+      "input_order": 372,
+      "component": "libc-format-mbtowc",
+      "object_name": "libc_format_mbtowc.o",
+      "private_object_sha256": "8bd822a6033e787ab52755341380b7816bb6fb92c9bf7e8d07d8fd408da76e8a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_mbtowc_reentrant",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp"
+    },
+    {
+      "input_order": 373,
+      "component": "libc-format-locale",
+      "object_name": "libc_format_localeconv.o",
+      "private_object_sha256": "576fcbec68da0f594ad3acf33c7f4709ca25b866f938f89918c587d6083c825d",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_localeconv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-locale/localeconv.cpp"
+    },
+    {
+      "input_order": 374,
+      "component": "libc-format-reent-write",
+      "object_name": "libc_format_write_r.o",
+      "private_object_sha256": "96bdec9036552e16eb1652dec95de9f1ef473623a54f2f8bd413cd3d083c5401",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_write_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp"
+    },
+    {
+      "input_order": 375,
+      "component": "libc-format-reent-read",
+      "object_name": "libc_format_read_r.o",
+      "private_object_sha256": "264e578b29f764f7407178d97b35b0598884c008f2fe351bdd2e8f1f2f084728",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_read_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp"
+    },
+    {
+      "input_order": 376,
+      "component": "libc-format-reent-close",
+      "object_name": "libc_format_close_r.o",
+      "private_object_sha256": "0a21e426358c35d912aaa821699f7b1565c6079b41e394407e23616999b5bbdb",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_close_reentrant",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp"
+    },
+    {
+      "input_order": 377,
+      "component": "libc-format-reent-seek",
+      "object_name": "libc_format_seek_r.o",
+      "private_object_sha256": "18419be273a4853c6f62612aa5b92044e7f18900f3a53aef3f7ec68385447fc4",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_seek_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp"
+    },
+    {
+      "input_order": 378,
+      "component": "libc-format-stream-setup",
+      "object_name": "libc_format_swsetup.o",
+      "private_object_sha256": "86dd299a01dfabba5858f6f0ce7a4bb27f224d75424d0f875709c5d6490e2887",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_stream_write_setup",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp"
+    },
+    {
+      "input_order": 379,
+      "component": "libc-format-format-string",
+      "object_name": "libc_format_sprintf.o",
+      "private_object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "emitted_functions": [
+        {
+          "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-format-string/format_string.cpp"
+    },
+    {
+      "input_order": 380,
+      "component": "libc-format-sce-printf",
+      "object_name": "libc_format_sce_printf.o",
+      "private_object_sha256": "1f34476fcd34f06a3c57dbbfaf2da84be5bfe7b0a03d89ee9f4e57a4a0f7fb38",
+      "emitted_functions": [
+        {
+          "name": "norrath_sce_printf",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "scePrintf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp"
+    },
+    {
+      "input_order": 381,
+      "component": "libc-format-ctype",
+      "object_name": "libc_format_ctype.o",
+      "private_object_sha256": "0daa3da79b6167738eb07711c661599b73cdddd524cf431b18e55f67e69f8569",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-ctype/ctype_view.cpp"
+    },
+    {
+      "input_order": 382,
+      "component": "libc-format-impure",
+      "object_name": "libc_format_impure.o",
+      "private_object_sha256": "88fe07038d7e81b632b71092cb9f8b71a8034925b67c07d21e1910260f32359c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-impure/impure_pointer.cpp"
+    },
+    {
+      "input_order": 383,
+      "component": "libc-format-errno",
+      "object_name": "libc_format_errno.o",
+      "private_object_sha256": "15143ab450f279b91d4eed17ff45d9dbc1d358f00055d0e7e1d9160b95b689e7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-errno/errno_word.cpp"
+    },
+    {
+      "input_order": 384,
+      "component": "libc-format-mb-cur-max",
+      "object_name": "libc_format_mb_cur_max.o",
+      "private_object_sha256": "94c2d2d4cd97a5d46a87e09bcf59a14c6650bdcd4f480d51dc165079e2f6a8b5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp"
+    },
+    {
+      "input_order": 385,
+      "component": "libc-format-formatter-text",
+      "object_name": "libc_format_formatter_text.o",
+      "private_object_sha256": "319c52bf661d595231a64f45d8b8d63160c4e271335665e1b6fd62a2f35ca231",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp"
+    },
+    {
+      "input_order": 386,
+      "component": "libc-format-dtoa-text",
+      "object_name": "libc_format_dtoa_text.o",
+      "private_object_sha256": "1b5df20358023ce52461281a454abe1b7024fa56fd55d28fe3b330318670eb4c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp"
+    },
+    {
+      "input_order": 387,
+      "component": "libc-format-dtoa-coefficients",
+      "object_name": "libc_format_dtoa_coefficients.o",
+      "private_object_sha256": "8f472ab23ff93a1989f7aac84f4ad41c2f33cfd25d24ff042dffaa8209477ff8",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp"
+    },
+    {
+      "input_order": 388,
+      "component": "libc-format-sscanf",
+      "object_name": "libc_format_sscanf.o",
+      "private_object_sha256": "2aaf704c71e7cdf5406e6ecd181e10e0e458415e813d4d9877ddbf87b23d8896",
+      "emitted_functions": [
+        {
+          "name": "sscanf",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-sscanf/sscanf.cpp"
+    },
+    {
+      "input_order": 389,
+      "component": "libc-format-strcmp",
+      "object_name": "libc_format_strcmp.o",
+      "private_object_sha256": "2727c06f63598d31fd6c9892b87d73ef9ece85a844767766761d1e2774adebb8",
+      "emitted_functions": [
+        {
+          "name": "strcmp",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/libc-format-strcmp/strcmp.cpp"
     }
   ],
   "drafts": [
@@ -5285,6 +5825,36 @@
     }
   ],
   "files": {
+    "sources/audio-add-dma-handler/add_dma_handler.S": "64739e1a20d2ee7356b080cbc6be2ebbde719f0234b54d8d11e39fe7fb9daef3",
+    "sources/audio-add-dma-handler/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/audio-channel-records/channel_records.cpp": "0d0cd87af4a41e6fca0153e53cd5018a3316d7fe1070eec6339d10c921bb4092",
+    "sources/audio-channel-records/host_contract.cpp": "4cdb88e9056a9d90639edab56cd05a53129d6012adcda78ab4959fb75d0c4696",
+    "sources/audio-channel-voice/host_contract.cpp": "3728fea6550f6f425b5d42e58c879c32642162e2febedbe027ad0c2e7a3cdbaf",
+    "sources/audio-channel-voice/voice_map.cpp": "1b4b700d3ca565b14952af8207709b864d0c08ccf84f7028e5e4ce4ce0247074",
+    "sources/audio-command-storage/command_storage.cpp": "aa53a4be46ed1f5cb5a59e3291dac7fb7be70d112d2accdc08f693ddfeee082d",
+    "sources/audio-command-storage/host_contract.cpp": "481203c651dfb5eff9439e4b92333698a21eb38339c281276ac1478c0df25331",
+    "sources/audio-delay-thread-name/delay_thread_name.cpp": "fca61b494483fcf3bd36f2718bf45cf4b6e01705a6a6acfbe6ca541115b77a9b",
+    "sources/audio-delay-thread-name/host_contract.cpp": "95a918d8de79d1998dee28669d7393e5926b80a6e4c94332f8cddb6f926f8356",
+    "sources/audio-dialog-maps/dialog_maps.cpp": "bccb408e0824d35c473c4e4be0b3c3bc33504c804b1c24c792089638cea73549",
+    "sources/audio-dialog-maps/host_contract.cpp": "f7974e082b589b8db4e14f01f33e9ccfafa5984b6ad88f9d3bb84c93c703a041",
+    "sources/audio-enable-dma/enable_dma.cpp": "295e36b9d1eb95ad5e2d8f32b37cdfd5a89a15e35bf84b923fb807a36f2180a6",
+    "sources/audio-enable-dma/host_contract.cpp": "d78aeff3d1d0e22939ca715d109573310e6476df44a980ad8d3baffe28ac91ed",
+    "sources/audio-group-limits/group_limits.cpp": "6f3aa3127fa38a210071db230c1173d3012ed69d7a8f1f39f222d487a1212b25",
+    "sources/audio-group-limits/host_contract.cpp": "6b205ead03198580c99a585dd8a4b0484daaffab946e5ec641da9d98de0926df",
+    "sources/audio-iop-buffers/host_contract.cpp": "ce7437fd9fc315da1a2436eef2333e69ce1146a792aa609a0bf468b33d4a5875",
+    "sources/audio-iop-buffers/iop_buffers.cpp": "14f9beab640d0188b7d1d1244f6d369731f7656f9019522d1ab0895ef8d78dcc",
+    "sources/audio-key-words/host_contract.cpp": "c5e5167db1ee951b31bc699529dae244092623a943974cdc5af17bff110028b3",
+    "sources/audio-key-words/key_words.cpp": "11785d495e631ec70f267d14f6621086d23ceeecd19ce7f4475b1465d5e829c1",
+    "sources/audio-master-volume/host_contract.cpp": "28ea80ac7f5deb97654c1c988dbeb665a7cebfbcc6ef48c4d32d62ea98e24d96",
+    "sources/audio-master-volume/master_volume.cpp": "d5d756d0e3b8bf4968728590d8d1ebfe5417c9374cf8f6f73745a2fb79e55f0c",
+    "sources/audio-sequence-records/host_contract.cpp": "181b31f44c8f0599fe2906ee42a45a351fc90d1ca50be3bb91b82f65f9f6d9d5",
+    "sources/audio-sequence-records/sequence_records.cpp": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
+    "sources/audio-set-dma-chain/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/audio-set-dma-chain/set_dma_chain.S": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
+    "sources/audio-startup-strings/host_contract.cpp": "6ecabfa325b75c63d32199bc71d7fc83ed1d88479f93038b9719b5b7c0559594",
+    "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
+    "sources/audio-stream-storage/host_contract.cpp": "321bdb9c1a0d3e280b54df2e160bc99f5764c0501a56130f455a352fc2870c09",
+    "sources/audio-stream-storage/stream_storage.cpp": "aa50a8b67685697051e9ca80984d01c4f634f72a0ef2ea143e4bea31bb44e0ab",
     "sources/block-alloc-source-v2/block_alloc.cpp": "35df646bc5d3ee076d7efa28d1ad86514c20ab3198d50eab10e456068accc1d8",
     "sources/block-alloc-source-v2/block_alloc.hpp": "f95800131369e6f8142c57f172fb06ee37aa996d99cdd815fde647fb14acf76a",
     "sources/block-alloc-source-v2/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
@@ -5297,6 +5867,32 @@
     "sources/block-allocator-lifecycle-build/block_get_number_free.cpp": "4b4baf9d85ba2ea0bdc1a97fe1ce6c29c62c1e02c657b4d5a51476d9a6e67d61",
     "sources/block-allocator-lifecycle-build/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
+    "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+    "sources/cd-archive-cd-error/host_contract.cpp": "4933c52777d9069ba93cede1902ef16a939499dd62ac027a5ea7b4aa0decce68",
+    "sources/cd-archive-cd-layer-search/host_contract.cpp": "44ed3c6ec02d58146e9f8f695de9396157bb0cec6b23fd9dd1f87f054ca98b66",
+    "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+    "sources/cd-archive-cd-read-iop/host_contract.cpp": "5339e28f691990e72aa48caacf779003c2aa94e10a71ba1a7111562d512951d6",
+    "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+    "sources/cd-archive-cd-read/host_contract.cpp": "6b0479f64dadee778d219973da5ebcfcef806bfe223d17102164e29b4cbcf430",
+    "sources/cd-archive-cd-stream-pause/host_contract.cpp": "c55f935b4efe4a725bc18f3d7585fc945df901f32026d944398a4f8971e4d114",
+    "sources/cd-archive-cd-stream-pause/stream_pause.cpp": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+    "sources/cd-archive-cd-stream-read/host_contract.cpp": "8a25a37643f94fe6c36f58f48d35b4d370820adf934f7ede23840922a82412f4",
+    "sources/cd-archive-cd-stream-read/stream_read.cpp": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+    "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+    "sources/cd-archive-cd-sync/host_contract.cpp": "69ac147650d1759e94847c2bebd43a4bd78deb4c1c99bb264a0229afe02238ac",
+    "sources/cd-archive-engine-pop-border/host_contract.cpp": "14047b8c30a411fcb05b2258f77e5658f898724978438b3ddd2d5d8aa5b40370",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+    "sources/cd-archive-engine-push-border/host_contract.cpp": "dab785842554a9a04563414b6e4d7d6c8ae819adc004e80b4494a2fed21f2a5f",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+    "sources/cd-archive-engine-sync-vblank/host_contract.cpp": "1b21e87e6ee79f1b3499e728f3e9f75c87c75fd5d47151e9ed1f821bb62215b7",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-initialize-file/host_contract.cpp": "2ed0bce12bec2d1a913fc8f0b084fd4f8f7cf2ec5a237fb87e0706fda6739fc1",
+    "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+    "sources/cd-archive-last-character/host_contract.cpp": "4f11337edc4f7f17ea7f72b97b07c9c2a635d98b373801939275e643a16b28f2",
+    "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+    "sources/cd-archive-views/host_contract.cpp": "37332f5e7da911b1967c4aa317b821cc233916374e1900ced2cd645915cd2f18",
+    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -6173,53 +6769,52 @@
     "sources/level-entity-restoration-build/megatile_entitize.cpp": "ca73f79b198f5e97ef58398babe01b5dfdb9d14df0adb7f8ef1195d24291f466",
     "sources/level-entity-restoration-build/object_put_save_data.cpp": "04953adc68c1dd55402f8dfdbd21b46b99bc7103dc8ef21418401d69b49a58a4",
     "sources/level-entity-restoration-build/restoration.hpp": "c97ec507d9ddd8726444313899d0d54ec6d482c80a1ad5ca85e4212770a5bb38",
+    "sources/libc-format-ctype/ctype_contract.cpp": "c10e1e356db9f21887994d12938d33113e0d714bb124f36e6039b1d5c4eb2f1d",
+    "sources/libc-format-ctype/ctype_view.cpp": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients_contract.cpp": "dd157f0308a1281d93c5397c87a3d6d525626753ec9e5a114fdeb1bc2aa3cda2",
+    "sources/libc-format-dtoa-text/dtoa_text.cpp": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+    "sources/libc-format-dtoa-text/dtoa_text_contract.cpp": "4b21f44e35a11eb59c1228244e7f75363ada4f64ed145a0b66adea9b39f8447d",
+    "sources/libc-format-errno/errno_contract.cpp": "b0d2725d5d6ef2f4d97283c9511f6d267a8955c60e57cdc0d7a7a9d6bb0957c0",
+    "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+    "sources/libc-format-format-string/format_string_contract.cpp": "59dd535696cc425571d942bb471bd6c2b60a6205c710cbbcb49f89c4dd502a5e",
+    "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+    "sources/libc-format-formatter-text/formatter_text_contract.cpp": "8819ea0a729356722ca94c67fa66b6a0591ce2cc0ccf1c75debd3ac753c952b4",
+    "sources/libc-format-impure/impure_contract.cpp": "10f588820983a0087c2c9e60e34bda22c35c673bea815763f766fa701006680b",
+    "sources/libc-format-impure/impure_pointer.cpp": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+    "sources/libc-format-impure/impure_state.hpp": "629fe075a04293058788793a4a5720eb183f2c6686096a3c4966f5e86cb35902",
+    "sources/libc-format-locale/localeconv.cpp": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+    "sources/libc-format-locale/localeconv_contract.cpp": "f52855589c0831567be5d14778e2d3c822a899a7b2e5b0d46420234b30ba636c",
+    "sources/libc-format-mb-cur-max/mb_cur_max.cpp": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+    "sources/libc-format-mb-cur-max/mb_cur_max_contract.cpp": "b2a5e9ce2359276d01518a215be4e696dfd26453084b14cfef824a05cf096ce4",
+    "sources/libc-format-mbtowc/mbtowc_contract.cpp": "7cf0db9d621556c64eb20c378826b0d382f4af10a9610079f138d4d4dae54b9a",
+    "sources/libc-format-mbtowc/mbtowc_reentrant.cpp": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+    "sources/libc-format-memchr/memchr.cpp": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+    "sources/libc-format-memchr/memchr_contract.cpp": "3853ff66f17ca0a683dc4fb11a829dbebab978fa352d296430230a1b13dcb3e5",
+    "sources/libc-format-reent-close/close_contract.cpp": "8ecd70507113cf48c02cf1a549841a9f5cfc0b72151a25f205bd3e0468c418c8",
+    "sources/libc-format-reent-close/close_reentrant.cpp": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+    "sources/libc-format-reent-read/read_contract.cpp": "991d410fb31460850002e289977ec66356554a4fcefbef8f66dfca26c3bc7ffa",
+    "sources/libc-format-reent-read/read_reentrant.cpp": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+    "sources/libc-format-reent-seek/seek_contract.cpp": "363b96977973cbcd90e016242df576a91394cc1a7b83ff9ba2e269518f41569c",
+    "sources/libc-format-reent-seek/seek_reentrant.cpp": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+    "sources/libc-format-reent-write/write_contract.cpp": "514ef9bf5b59e9d1f06c26c76b4cedb61280d2d24c0e6b727e3579521fb29732",
+    "sources/libc-format-reent-write/write_reentrant.cpp": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+    "sources/libc-format-sce-printf/sce_printf.cpp": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+    "sources/libc-format-sce-printf/sce_printf_contract.cpp": "747f112f5ce9f27cb4f466b6b5a5412144a21e8ed5dbea5f4e43dcef78771bc0",
+    "sources/libc-format-sscanf/sscanf.cpp": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+    "sources/libc-format-sscanf/sscanf_contract.cpp": "7e5de671adf03213195f44e1fc3c677bb58e20e84476774d6e070b4e5df67eef",
+    "sources/libc-format-strcmp/strcmp.cpp": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+    "sources/libc-format-strcmp/strcmp_contract.cpp": "27e10d0fbf8af8202cd65f127a637c3d334dc304bea931b0335c154a53c48381",
+    "sources/libc-format-stream-setup/stream_setup_contract.cpp": "651ecbca612eff9630357aafb5b84f929cdfbd832ae2e294f73767a22f2d2bc7",
+    "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
     "sources/make-collision-list-source/list.cpp": "38f7306b53244563b2c673156fefb5d862417bde534423bf38dc3ae293dae279",
     "sources/make-collision-list-source/list.hpp": "fd82e1f7c2ce3db7c7960492bfbae2499f4c92007b491b1549b1c62be44cc419",
-    "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
-    "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
-    "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
-    "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
-    "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
-    "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
-    "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
-    "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
-    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3",
-    "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
-    "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
-    "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
-    "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
-    "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
-    "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
-    "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
-    "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
-    "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
-    "sources/runtime-initsys/delete_sema.S": "565a0c5f5f3ec9e793377840a812e977970adbddac93200a0d76b55c74d53a51",
-    "sources/runtime-initsys/supplement_crt0.cpp": "8b75e38af12ac9fc4531884bb5b0490cf80c0926ea19801643887ade7878a79b",
-    "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
-    "sources/runtime-initsys/start_timer_system_time.cpp": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf",
-    "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
-    "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
-    "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
-    "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
-    "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
-    "sources/runtime-initsys/init_timer.cpp": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
-    "sources/runtime-main/main.cpp": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
-    "sources/runtime-launchsrs/launch_srs.cpp": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
-    "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
-    "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
-    "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
-    "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
-    "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
-    "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
-    "sources/runtime-initsys-callees/dintr.S": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2",
-    "sources/runtime-initsys-callees/eintr.S": "38e8cf0e89dadfb18a3e94712f895d18f204b11527a2bca55460b7e2a4fde8f9",
-    "sources/runtime-initsys-callees/set_t2.S": "9f58d405620f1df5ea112ae67776007b823fec0a0941f5b403773978fd0a8dff",
-    "sources/runtime-initsys-callees/set_t2_count.S": "43ae8a001eb7b400bf9cf4f93714b2c1550ba2bc9598a56d799ebd6ae747f9f3",
-    "sources/runtime-initsys-callees/set_t2_mode.S": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6",
-    "sources/runtime-initsys-callees/set_t2_comp.S": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
+    "sources/math-atan-tables/atan_tables.cpp": "5ccbd9af257fb289ad79fecb9a9c57956a70d37a9ee8b9e4fee7d0402b79b5d6",
+    "sources/math-atan-tables/host_test.cpp": "11e71364dcf8860e3c4a6b339285d2623960b58abc90ee66888a6d290f69ac2c",
     "sources/math-double-isinf/double_isinf.cpp": "a74f52effb9ea3126f6f29e3ba237829f11996be0593a2ab0fdf4eb91c70e0bb",
     "sources/math-double-isinf/host_test.cpp": "0b2dba233bc6985f630d039d939358aad26d33f4d4e4650e66fe443a7e3d4ed1",
     "sources/math-double-isnan/double_isnan.cpp": "34db1e4bb097a46110efc159098d0937c0f7177b06ca6fd40bf1d39f9b66e5fb",
@@ -6230,63 +6825,100 @@
     "sources/math-entity-fptodp/host_test.cpp": "6be7b4ca8d8eb07c543bfde377c8861930562f2d45c92d6479d3e6a44f90cf55",
     "sources/math-integer-trig-coefficients/coefficients.cpp": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
     "sources/math-integer-trig-coefficients/host_test.cpp": "32e7ce6eb87a575b946d1881641c015fe931d9df90188deb5260a112db00e7fc",
-    "sources/math-atan-tables/atan_tables.cpp": "5ccbd9af257fb289ad79fecb9a9c57956a70d37a9ee8b9e4fee7d0402b79b5d6",
-    "sources/math-atan-tables/host_test.cpp": "11e71364dcf8860e3c4a6b339285d2623960b58abc90ee66888a6d290f69ac2c",
-    "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-pow-constants/host_test.cpp": "afba9ec75bd87924a8243e7168c0eaaea4344de27f4d74b268f835fdcb0ce3b4",
-    "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-softdouble-nan/host_test.cpp": "19a6fe6baa266ec42e95bcfd0dc306b15af8391404e9b64eeb3c6e3f7f321454",
-    "sources/audio-add-dma-handler/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
-    "sources/audio-add-dma-handler/add_dma_handler.S": "64739e1a20d2ee7356b080cbc6be2ebbde719f0234b54d8d11e39fe7fb9daef3",
-    "sources/audio-set-dma-chain/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
-    "sources/audio-set-dma-chain/set_dma_chain.S": "488f61cbb18e9fa87e7711ba2fe07f79502da0eeb5d4bacb7fa46afd6b4d884e",
-    "sources/audio-enable-dma/host_contract.cpp": "d78aeff3d1d0e22939ca715d109573310e6476df44a980ad8d3baffe28ac91ed",
-    "sources/audio-enable-dma/enable_dma.cpp": "295e36b9d1eb95ad5e2d8f32b37cdfd5a89a15e35bf84b923fb807a36f2180a6",
-    "sources/audio-command-storage/host_contract.cpp": "481203c651dfb5eff9439e4b92333698a21eb38339c281276ac1478c0df25331",
-    "sources/audio-command-storage/command_storage.cpp": "aa53a4be46ed1f5cb5a59e3291dac7fb7be70d112d2accdc08f693ddfeee082d",
-    "sources/audio-channel-records/host_contract.cpp": "4cdb88e9056a9d90639edab56cd05a53129d6012adcda78ab4959fb75d0c4696",
-    "sources/audio-channel-records/channel_records.cpp": "0d0cd87af4a41e6fca0153e53cd5018a3316d7fe1070eec6339d10c921bb4092",
-    "sources/audio-channel-voice/host_contract.cpp": "3728fea6550f6f425b5d42e58c879c32642162e2febedbe027ad0c2e7a3cdbaf",
-    "sources/audio-channel-voice/voice_map.cpp": "1b4b700d3ca565b14952af8207709b864d0c08ccf84f7028e5e4ce4ce0247074",
-    "sources/audio-key-words/host_contract.cpp": "c5e5167db1ee951b31bc699529dae244092623a943974cdc5af17bff110028b3",
-    "sources/audio-key-words/key_words.cpp": "11785d495e631ec70f267d14f6621086d23ceeecd19ce7f4475b1465d5e829c1",
-    "sources/audio-group-limits/host_contract.cpp": "6b205ead03198580c99a585dd8a4b0484daaffab946e5ec641da9d98de0926df",
-    "sources/audio-group-limits/group_limits.cpp": "6f3aa3127fa38a210071db230c1173d3012ed69d7a8f1f39f222d487a1212b25",
-    "sources/audio-sequence-records/host_contract.cpp": "181b31f44c8f0599fe2906ee42a45a351fc90d1ca50be3bb91b82f65f9f6d9d5",
-    "sources/audio-sequence-records/sequence_records.cpp": "204b6b8acd702319d6c92b9c31343a5b23b34654bad981140e6973b8812a2c4c",
-    "sources/audio-stream-storage/host_contract.cpp": "321bdb9c1a0d3e280b54df2e160bc99f5764c0501a56130f455a352fc2870c09",
-    "sources/audio-stream-storage/stream_storage.cpp": "aa50a8b67685697051e9ca80984d01c4f634f72a0ef2ea143e4bea31bb44e0ab",
-    "sources/audio-master-volume/host_contract.cpp": "28ea80ac7f5deb97654c1c988dbeb665a7cebfbcc6ef48c4d32d62ea98e24d96",
-    "sources/audio-master-volume/master_volume.cpp": "d5d756d0e3b8bf4968728590d8d1ebfe5417c9374cf8f6f73745a2fb79e55f0c",
-    "sources/audio-delay-thread-name/host_contract.cpp": "95a918d8de79d1998dee28669d7393e5926b80a6e4c94332f8cddb6f926f8356",
-    "sources/audio-delay-thread-name/delay_thread_name.cpp": "fca61b494483fcf3bd36f2718bf45cf4b6e01705a6a6acfbe6ca541115b77a9b",
-    "sources/audio-dialog-maps/host_contract.cpp": "f7974e082b589b8db4e14f01f33e9ccfafa5984b6ad88f9d3bb84c93c703a041",
-    "sources/audio-dialog-maps/dialog_maps.cpp": "bccb408e0824d35c473c4e4be0b3c3bc33504c804b1c24c792089638cea73549",
-    "sources/audio-iop-buffers/host_contract.cpp": "ce7437fd9fc315da1a2436eef2333e69ce1146a792aa609a0bf468b33d4a5875",
-    "sources/audio-iop-buffers/iop_buffers.cpp": "14f9beab640d0188b7d1d1244f6d369731f7656f9019522d1ab0895ef8d78dcc",
-    "sources/audio-startup-strings/host_contract.cpp": "6ecabfa325b75c63d32199bc71d7fc83ed1d88479f93038b9719b5b7c0559594",
-    "sources/audio-startup-strings/startup_strings.cpp": "162d51c4ba625a48af1fb4966e540ae1abda7573e15e3d9ff4646513556d0b40",
-    "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
-    "sources/memory-realloc/host_check.cpp": "e5238a24b07f09b050291e0619bcede7d5f776a6c39085f58628f93d9df04bb4",
-    "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
-    "sources/memory-malloc-state/check_bins_object.cpp": "6c21de5eaa222f5c12564fc58ca7637b7cdd112a68c0080335b0378f9ededc9e",
-    "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
-    "sources/memory-malloc-state/host_check.cpp": "eab3a9c2d81da47405e3360584bd36b7eaf3fe1d2c028a015afedfc711a87ef8",
-    "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
-    "sources/memory-heap-state/host_check.cpp": "95ead24a998d927240fb008b3624044535e5f4bda0da29bec48cf37fc47dc729",
+    "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/megatile-do-entity-dispatch/dispatch.cpp": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+    "sources/megatile-do-entity-dispatch/dispatch.hpp": "dbf4fd3bd6a2e9b3f2db5112d8ced3bbcd2433fe5e614b07b501d3154d9614bc",
+    "sources/megatile-do-entity-dispatch/host_test.cpp": "fd2a5a7db8895b02de9a9dea8f1073ab8b53ad4c77ec4edbcdde195779bdd28b",
+    "sources/megatile-specialparse/host_test.cpp": "8d1c880ca84f65e829e3c3b7091eee681d2d43fdc7fcea69f73e16a9bba23df4",
+    "sources/megatile-specialparse/specialparse.cpp": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+    "sources/megatile-specialparse/specialparse.hpp": "6e98207c17962c429d34aa9e7a0c5cca9a0986e440a00173839141b0f13272bf",
+    "sources/megatile-tables/host_test.cpp": "a51fa2032900bdbbdb110f8524d4f696ec18c9e86f3e3f1f6ac16fc8a502fd3d",
+    "sources/megatile-tables/tables.cpp": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+    "sources/megatile-tables/tables.hpp": "f1f29335a879b25f7016f918825b41953ed92d7cb0e78079275eafa2cd45f925",
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
     "sources/memory-block-storage/host_check.cpp": "8a135c017c628544dbe63f8b42ede6f6e8e0e5fe7adfc83c2aa76e39a580f03f",
-    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
+    "sources/memory-heap-state/host_check.cpp": "95ead24a998d927240fb008b3624044535e5f4bda0da29bec48cf37fc47dc729",
+    "sources/memory-malloc-state/check_bins_object.cpp": "6c21de5eaa222f5c12564fc58ca7637b7cdd112a68c0080335b0378f9ededc9e",
+    "sources/memory-malloc-state/host_check.cpp": "eab3a9c2d81da47405e3360584bd36b7eaf3fe1d2c028a015afedfc711a87ef8",
+    "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
+    "sources/memory-malloc-state/malloc_scalars.cpp": "070b07958030ea0fea6672e99709b3c9df150642c8cdc2bd80d07647047b6cc5",
+    "sources/memory-realloc/host_check.cpp": "e5238a24b07f09b050291e0619bcede7d5f776a6c39085f58628f93d9df04bb4",
+    "sources/memory-realloc/mem_realloc.cpp": "3483ade3dc606a8eaadfd44ba4d22414914fdce8530e2776f83603d185023dfa",
     "sources/memory-wrapper-byte/host_check.cpp": "9ec28f7399fe69882d0cf449b2f34f82ed85144177e3ed2ae4290e694b967311",
-    "sources/runtime-startup-text/startup_text.cpp": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
+    "sources/memory-wrapper-byte/wrapper_byte.cpp": "7b486fca5287e6147d1d27d285c0f6beff88f973aa55d59738f3a3e112697600",
+    "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
+    "sources/object-infra-factory-text/factory_text_contract.cpp": "aa0972e327ab2a47dddec1066a0074e9c8b5532e7674d3a4fbda5dafc7f40e42",
     "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
     "sources/object-infra-slow-run-list/add_to_slow_run_list_contract.cpp": "1327ff9dbeb0a87b0b1cc17076c78ee407ed6bcdf0121eb77d59d9af5e5ba225",
     "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
     "sources/object-infra-state/state_contract.cpp": "0fd212e29ca6492099b9271585dddd25b873e62d005d8a57870f5d777935ff48",
     "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
     "sources/object-infra-vtable/game_object_vtable_contract.cpp": "980b81b6b1d140e1d39d394eba30bd1686f7fe15c7da8d9944899faecfb9dab7",
-    "sources/object-infra-factory-text/factory_text.cpp": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
-    "sources/object-infra-factory-text/factory_text_contract.cpp": "aa0972e327ab2a47dddec1066a0074e9c8b5532e7674d3a4fbda5dafc7f40e42"
+    "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
+    "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
+    "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
+    "sources/runtime-entry/start.S": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
+    "sources/runtime-initsys-callees/add_intc_handler2.S": "a82e33e141010cbfc6444e527058e63bc32681ed5cae2b3124bba53b80970a44",
+    "sources/runtime-initsys-callees/change_thread_priority.S": "f4e9d1bf7a37b2407430611a209589488b78f7896cf725e69960e027f2353676",
+    "sources/runtime-initsys-callees/create_thread.S": "668993f50f5ae34f9e9002eb4747bb0202787d4deacbacff634b6e932bffe01b",
+    "sources/runtime-initsys-callees/dintr.S": "fca4944eeb16e1d17a28daa2f8857241c8ee3fb796ae25ef213b8f57e6107da2",
+    "sources/runtime-initsys-callees/eintr.S": "38e8cf0e89dadfb18a3e94712f895d18f204b11527a2bca55460b7e2a4fde8f9",
+    "sources/runtime-initsys-callees/find_address.S": "f63dbb9c244a61a423946f7ba220cf75bcf5d80efcd42c0f8890d66f9e8802f4",
+    "sources/runtime-initsys-callees/get_thread_id.S": "f74875360393d3c1802766cc9893b331ec26d3b75188da0701c0e181f7723145",
+    "sources/runtime-initsys-callees/set_t2.S": "9f58d405620f1df5ea112ae67776007b823fec0a0941f5b403773978fd0a8dff",
+    "sources/runtime-initsys-callees/set_t2_comp.S": "06fdeb511eeefca2aeb8f2af87ad3f6b9acc97f9167e59dd2889d07bb82e5525",
+    "sources/runtime-initsys-callees/set_t2_count.S": "43ae8a001eb7b400bf9cf4f93714b2c1550ba2bc9598a56d799ebd6ae747f9f3",
+    "sources/runtime-initsys-callees/set_t2_mode.S": "aea047847de9682ab446df7b32b9a8bab290baf24557170bef274ab8ef6b93e6",
+    "sources/runtime-initsys-callees/start_thread.S": "de496bef35e1473938f74288fe7cdb7be2d77223c8a40ab3058b535228c2dc5d",
+    "sources/runtime-initsys/create_sema.S": "e31856549ed86c59cf819eacda38045f13067008372fd70ec259e40d80e92586",
+    "sources/runtime-initsys/delete_sema.S": "565a0c5f5f3ec9e793377840a812e977970adbddac93200a0d76b55c74d53a51",
+    "sources/runtime-initsys/init_alarm.cpp": "f5340d21b5c85e7bdc8cb99f6adb829460d5a9870fbe96a2d5054175df0f6149",
+    "sources/runtime-initsys/init_exec_ps2.cpp": "c9561182a515fa61268fbb3d7f829074e195b19d3735d7138a08daabf8d2caac",
+    "sources/runtime-initsys/init_syscall_table.cpp": "5f0ca8333409b4ffcc9f364363346d18cfe62f8e5956433a8e494030d4c13eec",
+    "sources/runtime-initsys/init_thread.cpp": "1f5b258c8540c27db9cfa036229f8028c2737c4b6220aeec2cec6d3bf96fa15a",
+    "sources/runtime-initsys/init_timer.cpp": "e7253f6f8fba798bc2da77902d43ca49d375636a635034eb03f04bf88156e7bb",
+    "sources/runtime-initsys/init_tlb.cpp": "b3d3ce117b451a7d280bccb99e0519d9bd1cf67a1fe27ad069412c175b909c35",
+    "sources/runtime-initsys/sif_reboot_notify.cpp": "8355df8365e7078beeb7a3a3c826929a3f211ebcf49e406cd898957fed3c7238",
+    "sources/runtime-initsys/start_timer_system_time.cpp": "596a813d1b8b468082988666e059bf90ae7636831e2f88fd6e5732cf4ce7cadf",
+    "sources/runtime-initsys/supplement_crt0.cpp": "8b75e38af12ac9fc4531884bb5b0490cf80c0926ea19801643887ade7878a79b",
+    "sources/runtime-kernel/flush_cache.S": "d1a11de6ad4668aeb94eea5ecababd7e6f10e0c033a0eb5f512cd10a06b97ecc",
+    "sources/runtime-kernel/init_system.cpp": "3fc0737ee9ee08362355340f83c5cbe16e6089f8bfaf35caf63a3d04d7ecf997",
+    "sources/runtime-kernel/root.S": "691d7bfb2eaaed662ed37ea12b4049202e65aa4b8938a050672f517d32dffb0c",
+    "sources/runtime-launchsrs/launch_srs.cpp": "8bdda953ce6f3f006efa4726a34605e72a0910ff6e8791e4c3e34861400703b4",
+    "sources/runtime-main/main.cpp": "8df586254973daa9667760232fca6ee39b776a5a08317d450a0f88c3be548475",
+    "sources/runtime-memory/memset.cpp": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
+    "sources/runtime-startup-text/startup_text.cpp": "267968a3f029c0f9894050a94968db653d599bcef98b2eab97ea08a93f220d2e",
+    "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
+    "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
+    "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
+    "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
+    "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+    "sources/script-amx-complain-frame/complain_frame_host.cpp": "42c7f4039a4f5cdc44f1c33746bf37ac833b0f95332f7b5253b34c929ca77bc3",
+    "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+    "sources/script-amx-current-amx/current_amx_host.cpp": "aa1046ce309503eb8d54ecfb587b1dbb346708820f0bda49955ff190f6ad5c55",
+    "sources/script-amx-custom-variables/custom_variables.cpp": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+    "sources/script-amx-custom-variables/custom_variables_host.cpp": "e7f5852e82e4b54ae16d3ca485aac6825def748534da892a014abad9b67269c1",
+    "sources/script-amx-exec/exec.cpp": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+    "sources/script-amx-exec/exec_host.cpp": "70424707261e3635b6b5fede3cf0a3addea3a7e88a795c45ac04af0a2d7a8efb",
+    "sources/script-amx-game-state/game_state.cpp": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+    "sources/script-amx-game-state/game_state_host.cpp": "4a7ecea752afe065af4356d31f6abc22a60a11d8eea2262f15b19551e226d574",
+    "sources/script-amx-little-endian/little_endian.cpp": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+    "sources/script-amx-little-endian/little_endian_host.cpp": "31c0bc47e0b6068ba4be14dff1cd5667f3349232d8c809231b700396914c53f4",
+    "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+    "sources/script-amx-memory-card-keys/keys_host.cpp": "e617d4eb462a80f30d144e7d943a148bc4d6b5c6b9c1fd6f44b130121d70f011",
+    "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+    "sources/script-amx-native-registry/registry_host.cpp": "9f62aba5a36960e52cf212d9a63eb4d27f4b897bf2f83264f15bbd1ba5ca8933",
+    "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+    "sources/script-amx-post-action/post_action_host.cpp": "73c888406f60754402b8bd518694647610a2ec4221d5a877e34a3b494d4374af",
+    "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
+    "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
+    "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
+    "sources/world-load-level-entities-build-v2/load_entities.hpp": "a7ca37368d354d3f59c9da3c93d9a54f737be31cf98a6f47380bdf6ffc461dc3"
   },
   "additional_implementations": [
     {
@@ -6728,11 +7360,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 346,
-    "authored_default_inputs": 344,
+    "selected_inputs": 390,
+    "authored_default_inputs": 388,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 445,
-    "compiled_body_bytes_from_accepted_inputs": 249312,
+    "emitted_function_definitions_including_helpers": 474,
+    "compiled_body_bytes_from_accepted_inputs": 268968,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -6745,7 +7377,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 33
+    "package_selected_inputs": 77
   },
   "startup_implementations": [
     {
@@ -7567,6 +8199,678 @@
       "emitted_functions": [],
       "host_files": [
         "sources/object-infra-factory-text/factory_text_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "megatile",
+      "source": "sources/megatile-specialparse/specialparse.cpp",
+      "source_sha256": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+      "object_sha256": "043d6fda56a4d10780adb61a7434aeb810bb849a0ab618929c44cd867ef6872e",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_specialparse",
+          "compiled_body_bytes": 2404
+        }
+      ],
+      "host_files": [
+        "sources/megatile-specialparse/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "megatile",
+      "source": "sources/megatile-do-entity-dispatch/dispatch.cpp",
+      "source_sha256": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+      "object_sha256": "3c8e67177ce3f3a9414d9ade3553e18dfdaf21de29213f1536dfe8f1751f502b",
+      "emitted_functions": [
+        {
+          "name": "norrath_megatile_do_entity_dispatch",
+          "compiled_body_bytes": 1996
+        }
+      ],
+      "host_files": [
+        "sources/megatile-do-entity-dispatch/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "megatile",
+      "source": "sources/megatile-tables/tables.cpp",
+      "source_sha256": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+      "object_sha256": "99d83e5fd511d00891a4213c7879a0da541adde6576e5b7a10209db5ea2f6cdb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/megatile-tables/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp",
+      "source_sha256": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+      "object_sha256": "febf59393708a678cb535e357f9b486734deb174ed403e0678a4e27f4666564b",
+      "emitted_functions": [
+        {
+          "name": "norrath_custom_variables_process",
+          "compiled_body_bytes": 1360
+        }
+      ],
+      "host_files": [
+        "sources/script-amx-custom-variables/custom_variables_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-current-amx/current_amx.cpp",
+      "source_sha256": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+      "object_sha256": "4e6460fed34de9db2716c55410b6b03b39afe1130ba382637a7dfeb2f11d8f6b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-current-amx/current_amx_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp",
+      "source_sha256": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+      "object_sha256": "67e3dfce98348cef488924927a38cc03889aaa9504f312e6234204253c6f289b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-complain-frame/complain_frame_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-little-endian/little_endian.cpp",
+      "source_sha256": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+      "object_sha256": "6a5af8620eeb234021199322f9b392129a0d09e7e61a76f007a05e904b96a78b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-little-endian/little_endian_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-game-state/game_state.cpp",
+      "source_sha256": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+      "object_sha256": "0abf7692277722be58e950493007d8c60162502ec94bb48a8f3a12727de21c25",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-game-state/game_state_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-post-action/post_action.cpp",
+      "source_sha256": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+      "object_sha256": "c99e9fb60327ce91c73d02209a8e8301196332dc4d6747fdb9f09e336c03b8fa",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-post-action/post_action_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp",
+      "source_sha256": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+      "object_sha256": "71d5ced3af9f6f32b0a6e1c7189ac7b17a931d94794242759f927318600bc83a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-memory-card-keys/keys_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-native-registry/registry.cpp",
+      "source_sha256": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+      "object_sha256": "73975ed3cbca00df7659342ee84f4f9667b418cdb12f78f69a9d6cb5ad51f1cd",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/script-amx-native-registry/registry_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "script-amx",
+      "source": "sources/script-amx-exec/exec.cpp",
+      "source_sha256": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+      "object_sha256": "f38d55f100897ef4504ae897d1b15a12e51a48c0160086236016874ec5152b39",
+      "emitted_functions": [
+        {
+          "name": "norrath_amx_exec",
+          "compiled_body_bytes": 7996
+        }
+      ],
+      "host_files": [
+        "sources/script-amx-exec/exec_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp",
+      "source_sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+      "object_sha256": "8b63c22bd5bc5d93a64fa48f82dd4888c1a5da21a1bc046ea8ddd8c76e09d830",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_push_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-push-border/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp",
+      "source_sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+      "object_sha256": "87d4d7b82b151088c86af859dbf0ddee4c274126e00970c4d32971c827779f3b",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_pop_border",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-pop-border/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp",
+      "source_sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+      "object_sha256": "3948dba57559e9cf5bf58f3ce9c0d8bae21c3e901f5a9773157a90b8dbd2f473",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_engine_sync_vblank",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-engine-sync-vblank/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-last-character/last_character.cpp",
+      "source_sha256": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+      "object_sha256": "3dda0d92e2038fd55291436a1dedd4340df451f46a3d65090e34088dc8fdcf27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_last_character",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-last-character/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp",
+      "source_sha256": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+      "object_sha256": "9b7bf0831727279a6dbf1dfae31633a67e3cf537e135919ccf63e1c9e6777f33",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_sync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp",
+      "source_sha256": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+      "object_sha256": "9e8d3e75269699bf51f7b6b9fc46486b10d352b728bbbea78b3e0ae2d0f02500",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_error",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-error/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp",
+      "source_sha256": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+      "object_sha256": "737e0b35435bbfd0e1b904592abe9605018a85986511b76ea36557ce0eb5889f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read",
+          "compiled_body_bytes": 716
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp",
+      "source_sha256": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+      "object_sha256": "79f5728eb2f5f3bbad194df09a56f5c1422f9d811b5abb4e82864274cdc7cd01",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_read_iop",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-read-iop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp",
+      "source_sha256": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+      "object_sha256": "1e05b2278dfab9cc31cb220b5d1ec7b27c12e9f2ab8ab12c1095e03302809db0",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_pause",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-stream-pause/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp",
+      "source_sha256": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+      "object_sha256": "9709016fb403f61e5a49bfe0baad54a37d4f91c54b5cc0c221b5fa92d1c0d2c8",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_stream_read",
+          "compiled_body_bytes": 532
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-stream-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp",
+      "source_sha256": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+      "object_sha256": "aea2a9eee7182feaeeff9b48a3a8c9022e8c3ee98ab562c0623eb263cc79ac27",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_cd_layer_search",
+          "compiled_body_bytes": 860
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-cd-layer-search/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp",
+      "source_sha256": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+      "object_sha256": "5d6cb7f522f48198f49e513439de16fbe5828556ffd6a9a15a14cf8328b8172f",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_initialize_file",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "host_files": [
+        "sources/cd-archive-initialize-file/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "cd-archive",
+      "source": "sources/cd-archive-views/views.cpp",
+      "source_sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+      "object_sha256": "7aea98ea6a1abb7dfb9d5c1909276ae442421c619c03e2ea37dd32a374f3be29",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/cd-archive-views/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-memchr/memchr.cpp",
+      "source_sha256": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+      "object_sha256": "1b6ed1981265cecea27b227fdfaaded1196c367549637dd4b8aee151c4678d19",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_memchr",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-memchr/memchr_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp",
+      "source_sha256": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+      "object_sha256": "8bd822a6033e787ab52755341380b7816bb6fb92c9bf7e8d07d8fd408da76e8a",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_mbtowc_reentrant",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-mbtowc/mbtowc_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-locale/localeconv.cpp",
+      "source_sha256": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+      "object_sha256": "576fcbec68da0f594ad3acf33c7f4709ca25b866f938f89918c587d6083c825d",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_localeconv",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-locale/localeconv_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp",
+      "source_sha256": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+      "object_sha256": "96bdec9036552e16eb1652dec95de9f1ef473623a54f2f8bd413cd3d083c5401",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_write_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-write/write_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp",
+      "source_sha256": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+      "object_sha256": "264e578b29f764f7407178d97b35b0598884c008f2fe351bdd2e8f1f2f084728",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_read_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-read/read_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp",
+      "source_sha256": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+      "object_sha256": "0a21e426358c35d912aaa821699f7b1565c6079b41e394407e23616999b5bbdb",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_close_reentrant",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-close/close_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp",
+      "source_sha256": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+      "object_sha256": "18419be273a4853c6f62612aa5b92044e7f18900f3a53aef3f7ec68385447fc4",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_seek_reentrant",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-reent-seek/seek_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp",
+      "source_sha256": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+      "object_sha256": "86dd299a01dfabba5858f6f0ce7a4bb27f224d75424d0f875709c5d6490e2887",
+      "emitted_functions": [
+        {
+          "name": "norrath_factory_stream_write_setup",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-stream-setup/stream_setup_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-format-string/format_string.cpp",
+      "source_sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+      "object_sha256": "be421694c2f29b325c473f32afd167206eda2f30ce9e817a652193fd0e2b654e",
+      "emitted_functions": [
+        {
+          "name": "norrath_format_string",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-format-string/format_string_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp",
+      "source_sha256": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+      "object_sha256": "1f34476fcd34f06a3c57dbbfaf2da84be5bfe7b0a03d89ee9f4e57a4a0f7fb38",
+      "emitted_functions": [
+        {
+          "name": "norrath_sce_printf",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "scePrintf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-sce-printf/sce_printf_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-ctype/ctype_view.cpp",
+      "source_sha256": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+      "object_sha256": "0daa3da79b6167738eb07711c661599b73cdddd524cf431b18e55f67e69f8569",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-ctype/ctype_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-impure/impure_pointer.cpp",
+      "source_sha256": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+      "object_sha256": "88fe07038d7e81b632b71092cb9f8b71a8034925b67c07d21e1910260f32359c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-impure/impure_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-errno/errno_word.cpp",
+      "source_sha256": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+      "object_sha256": "15143ab450f279b91d4eed17ff45d9dbc1d358f00055d0e7e1d9160b95b689e7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-errno/errno_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp",
+      "source_sha256": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+      "object_sha256": "94c2d2d4cd97a5d46a87e09bcf59a14c6650bdcd4f480d51dc165079e2f6a8b5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-mb-cur-max/mb_cur_max_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp",
+      "source_sha256": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+      "object_sha256": "319c52bf661d595231a64f45d8b8d63160c4e271335665e1b6fd62a2f35ca231",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-formatter-text/formatter_text_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp",
+      "source_sha256": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+      "object_sha256": "1b5df20358023ce52461281a454abe1b7024fa56fd55d28fe3b330318670eb4c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-dtoa-text/dtoa_text_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp",
+      "source_sha256": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+      "object_sha256": "8f472ab23ff93a1989f7aac84f4ad41c2f33cfd25d24ff042dffaa8209477ff8",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/libc-format-dtoa-coefficients/dtoa_coefficients_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-sscanf/sscanf.cpp",
+      "source_sha256": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+      "object_sha256": "2aaf704c71e7cdf5406e6ecd181e10e0e458415e813d4d9877ddbf87b23d8896",
+      "emitted_functions": [
+        {
+          "name": "sscanf",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-sscanf/sscanf_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "libc-format",
+      "source": "sources/libc-format-strcmp/strcmp.cpp",
+      "source_sha256": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+      "object_sha256": "2727c06f63598d31fd6c9892b87d73ef9ece85a844767766761d1e2774adebb8",
+      "emitted_functions": [
+        {
+          "name": "strcmp",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/libc-format-strcmp/strcmp_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

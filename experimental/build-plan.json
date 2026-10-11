@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 344,
+  "default_authored_inputs": 388,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -71,6 +71,19 @@
     "sources/block-allocator-lifecycle-build/block_get_number_free.cpp": "4b4baf9d85ba2ea0bdc1a97fe1ce6c29c62c1e02c657b4d5a51476d9a6e67d61",
     "sources/block-allocator-lifecycle-build/byte_view.hpp": "7b0e3442bee191c70ece151a23fac8e1f4ae16b601f5660942eb0c35dc5654c4",
     "sources/block-allocator-lifecycle-build/free_count.hpp": "41364fdd7b564335e6e62f99166fd02c6dc05326ef3c80585ef3b685de8e0fbb",
+    "sources/cd-archive-cd-error/cd_error.cpp": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+    "sources/cd-archive-cd-layer-search/layer_search.cpp": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+    "sources/cd-archive-cd-read-iop/cd_read_iop.cpp": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+    "sources/cd-archive-cd-read/cd_read.cpp": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+    "sources/cd-archive-cd-stream-pause/stream_pause.cpp": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+    "sources/cd-archive-cd-stream-read/stream_read.cpp": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+    "sources/cd-archive-cd-sync/cd_sync.cpp": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+    "sources/cd-archive-engine-pop-border/pop_border.cpp": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+    "sources/cd-archive-engine-push-border/push_border.cpp": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+    "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+    "sources/cd-archive-initialize-file/initialize_file.cpp": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+    "sources/cd-archive-last-character/last_character.cpp": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+    "sources/cd-archive-views/views.cpp": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
     "sources/ee-collision-primitives/primitives.cpp": "05eda3675725003075e0e748bb22d4e57f370de6834d8bfb42b922f4dfa2cde8",
     "sources/ee-conversion-primitive/primitive.cpp": "6a307b197fa27ab9be54a778d151fc0bb1e7086abaf09a88217bd2950fbbca0b",
     "sources/ee-ordered-mul-primitive/primitive.cpp": "d4ab01017c520ce682e8b93511dd7974080c81c54e6ad6bd29727e438ca5d8b8",
@@ -931,6 +944,26 @@
     "sources/level-entity-restoration-build/megatile_entitize.cpp": "ca73f79b198f5e97ef58398babe01b5dfdb9d14df0adb7f8ef1195d24291f466",
     "sources/level-entity-restoration-build/object_put_save_data.cpp": "04953adc68c1dd55402f8dfdbd21b46b99bc7103dc8ef21418401d69b49a58a4",
     "sources/level-entity-restoration-build/restoration.hpp": "c97ec507d9ddd8726444313899d0d54ec6d482c80a1ad5ca85e4212770a5bb38",
+    "sources/libc-format-ctype/ctype_view.cpp": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+    "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+    "sources/libc-format-dtoa-text/dtoa_text.cpp": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+    "sources/libc-format-errno/errno_word.cpp": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+    "sources/libc-format-format-string/format_string.cpp": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+    "sources/libc-format-formatter-text/formatter_text.cpp": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+    "sources/libc-format-impure/impure_pointer.cpp": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+    "sources/libc-format-impure/impure_state.hpp": "629fe075a04293058788793a4a5720eb183f2c6686096a3c4966f5e86cb35902",
+    "sources/libc-format-locale/localeconv.cpp": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+    "sources/libc-format-mb-cur-max/mb_cur_max.cpp": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+    "sources/libc-format-mbtowc/mbtowc_reentrant.cpp": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+    "sources/libc-format-memchr/memchr.cpp": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+    "sources/libc-format-reent-close/close_reentrant.cpp": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+    "sources/libc-format-reent-read/read_reentrant.cpp": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+    "sources/libc-format-reent-seek/seek_reentrant.cpp": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+    "sources/libc-format-reent-write/write_reentrant.cpp": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+    "sources/libc-format-sce-printf/sce_printf.cpp": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+    "sources/libc-format-sscanf/sscanf.cpp": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+    "sources/libc-format-strcmp/strcmp.cpp": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+    "sources/libc-format-stream-setup/stream_write_setup.cpp": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
     "sources/lump-find-build/lump_find.cpp": "647e6e195d165e90ca35828811fd3ce2234f4c1ce4f9875c9379d0b5c7711552",
     "sources/lump-find-build/lump_find.hpp": "42f3dd477369c3ec888abee412b05f03f7b453e928be2bf5459a4f00b2da0ecd",
     "sources/lump-find-build/string_compare.cpp": "fd656a818192a1291f6f67bbc44bff8c1f58354352f7a88ef2b05deb93c19a90",
@@ -944,6 +977,12 @@
     "sources/math-integer-trig-coefficients/coefficients.cpp": "64d2b076423092833c4f5c7f49ae0c3a05c88ce39c3d1c4040b451dce0d4523c",
     "sources/math-pow-constants/pow_constants.cpp": "d7f05b71a48437646814998e928b2d34b994f110fdc1413faab32ff6c9b8324f",
     "sources/math-softdouble-nan/nan_parts.cpp": "559525bb8e9ae5ba0aba3e1d082c1f18dfe60c78c5619c2ac6458844916b2293",
+    "sources/megatile-do-entity-dispatch/dispatch.cpp": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+    "sources/megatile-do-entity-dispatch/dispatch.hpp": "dbf4fd3bd6a2e9b3f2db5112d8ced3bbcd2433fe5e614b07b501d3154d9614bc",
+    "sources/megatile-specialparse/specialparse.cpp": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+    "sources/megatile-specialparse/specialparse.hpp": "6e98207c17962c429d34aa9e7a0c5cca9a0986e440a00173839141b0f13272bf",
+    "sources/megatile-tables/tables.cpp": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+    "sources/megatile-tables/tables.hpp": "f1f29335a879b25f7016f918825b41953ed92d7cb0e78079275eafa2cd45f925",
     "sources/memory-block-storage/block_storage.cpp": "c2b0b8c97d88a62202e0795253b71ab843352abdeb8c05a8796e5290624eec5c",
     "sources/memory-heap-state/heap_state.cpp": "1dfe7bf1dec13e6b6ba0b3b01804cc594430898889e450e69db34ec9625974ea",
     "sources/memory-malloc-state/malloc_bins.cpp": "9f6197bb65523c6b35075848f80df3cd0957fa309470177fd2a9de5028a36925",
@@ -993,6 +1032,15 @@
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
     "sources/saved-map-read-build/read_saved_map.cpp": "5e86ed1edfaf8eac0efe2dd40fbc356d3a47457cc7ba9524b74e3423772b3242",
     "sources/saved-map-read-build/saved_map.hpp": "edfec03ac81a939bef1d18a978534373b0be66118c2079f8a5133e40aecca34b",
+    "sources/script-amx-complain-frame/complain_frame.cpp": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+    "sources/script-amx-current-amx/current_amx.cpp": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+    "sources/script-amx-custom-variables/custom_variables.cpp": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+    "sources/script-amx-exec/exec.cpp": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+    "sources/script-amx-game-state/game_state.cpp": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+    "sources/script-amx-little-endian/little_endian.cpp": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+    "sources/script-amx-memory-card-keys/keys.cpp": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+    "sources/script-amx-native-registry/registry.cpp": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+    "sources/script-amx-post-action/post_action.cpp": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -6005,6 +6053,410 @@
       "profile": "authored_cpp",
       "sha256": "d673c8cecade9f718a3992996ecd80f5fca413a923c6d5bed3b4944d2d931cd3",
       "source": "sources/object-infra-factory-text/factory_text.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-specialparse/specialparse.hpp"
+      ],
+      "input_order": 346,
+      "kind": "independently_authored_source",
+      "object_name": "specialparse.o",
+      "profile": "authored_cpp",
+      "sha256": "1a1a3224c6799b87af6160d7c6944809efa5e39cecef2c5a22e822ec864e59d4",
+      "source": "sources/megatile-specialparse/specialparse.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-do-entity-dispatch/dispatch.hpp"
+      ],
+      "input_order": 347,
+      "kind": "independently_authored_source",
+      "object_name": "dispatch.o",
+      "profile": "authored_cpp",
+      "sha256": "9976fcd499deb22413716f79ff7fea84ad54c9e0d45fc52f43728dd429aff873",
+      "source": "sources/megatile-do-entity-dispatch/dispatch.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/megatile-tables/tables.hpp"
+      ],
+      "input_order": 348,
+      "kind": "independently_authored_source",
+      "object_name": "tables.o",
+      "profile": "authored_cpp",
+      "sha256": "beb9897dc126d9e0422f8b10eff35a95e54581dc9d6a6a1cec7a77ab3c1b47d4",
+      "source": "sources/megatile-tables/tables.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 349,
+      "kind": "independently_authored_source",
+      "object_name": "custom_variables.o",
+      "profile": "authored_cpp",
+      "sha256": "af764d9d3022a2524909819db9c2c54b179726f72f030542e6c214f6b7eccb12",
+      "source": "sources/script-amx-custom-variables/custom_variables.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 350,
+      "kind": "independently_authored_source",
+      "object_name": "current_amx.o",
+      "profile": "authored_cpp",
+      "sha256": "4a8611d2a19d69c28ddd05ddad4ed01ccd365becb384ccf253880ccd8d6ad88a",
+      "source": "sources/script-amx-current-amx/current_amx.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 351,
+      "kind": "independently_authored_source",
+      "object_name": "complain_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "c7cf0e02444eedf985309a5083e5ec1bae2b9cb1b5367c2a36c32e7e9337628d",
+      "source": "sources/script-amx-complain-frame/complain_frame.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 352,
+      "kind": "independently_authored_source",
+      "object_name": "little_endian.o",
+      "profile": "authored_cpp",
+      "sha256": "d785940e1d075848b4e5dabca6573b0eaaa3ba38776da689a71a5be967328322",
+      "source": "sources/script-amx-little-endian/little_endian.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 353,
+      "kind": "independently_authored_source",
+      "object_name": "game_state.o",
+      "profile": "authored_cpp",
+      "sha256": "0c8aba04707d4f91a4e0cabd897a26878f43e50e5e2f9933bab5df53bcb4e489",
+      "source": "sources/script-amx-game-state/game_state.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 354,
+      "kind": "independently_authored_source",
+      "object_name": "post_action.o",
+      "profile": "authored_cpp",
+      "sha256": "0424e945a8608c4c12a4978d389e5bfe5ed2efe5d39a46f6feea5b9d0f18571f",
+      "source": "sources/script-amx-post-action/post_action.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 355,
+      "kind": "independently_authored_source",
+      "object_name": "memory_card_keys.o",
+      "profile": "authored_cpp",
+      "sha256": "145cd211f56f0e0ee728eae103232902c5d654a3dc71810bc34070d7d29f26aa",
+      "source": "sources/script-amx-memory-card-keys/keys.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 356,
+      "kind": "independently_authored_source",
+      "object_name": "native_registry.o",
+      "profile": "authored_cpp",
+      "sha256": "a4daf596c59cd27fc7bc85091605497ce448de324e0e379b0a3b65e1bd29923b",
+      "source": "sources/script-amx-native-registry/registry.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 357,
+      "kind": "independently_authored_source",
+      "object_name": "amx_exec.o",
+      "profile": "authored_cpp",
+      "sha256": "bf98c2664fd9fb9f0cc1fbdad7dfb263d695fb73d86d956b41051b5b5a4b3e44",
+      "source": "sources/script-amx-exec/exec.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 358,
+      "kind": "independently_authored_source",
+      "object_name": "push_border.o",
+      "profile": "authored_cpp",
+      "sha256": "99acb0d995a077701076b9be82752d53992ae07247ecb7c2ae0534ad42adddbc",
+      "source": "sources/cd-archive-engine-push-border/push_border.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 359,
+      "kind": "independently_authored_source",
+      "object_name": "pop_border.o",
+      "profile": "authored_cpp",
+      "sha256": "87f792d65f5ee685174fcb6a9f5c76669f90cf4aa13d5c2d0d364895311cd0b5",
+      "source": "sources/cd-archive-engine-pop-border/pop_border.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 360,
+      "kind": "independently_authored_source",
+      "object_name": "sync_vblank.o",
+      "profile": "authored_cpp",
+      "sha256": "d19be1827dc4766828cc2f11f5fea7bf211902fb0a103631492edecd5e7c4847",
+      "source": "sources/cd-archive-engine-sync-vblank/sync_vblank.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 361,
+      "kind": "independently_authored_source",
+      "object_name": "last_character.o",
+      "profile": "authored_cpp",
+      "sha256": "c492e58d834bbe286530b268a1fde01ba0c6a9ff3f822f635a87c3efe10cedb4",
+      "source": "sources/cd-archive-last-character/last_character.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 362,
+      "kind": "independently_authored_source",
+      "object_name": "cd_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "a31efbf3fc295278eac763c3d1e325a0f7a9d86acd098e35631d2151bebcf461",
+      "source": "sources/cd-archive-cd-sync/cd_sync.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 363,
+      "kind": "independently_authored_source",
+      "object_name": "cd_error.o",
+      "profile": "authored_cpp",
+      "sha256": "ab69929ea1bd158e0f809df3f1a62da7c64d37b649570bca24c4a7bc8f07bbfa",
+      "source": "sources/cd-archive-cd-error/cd_error.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 364,
+      "kind": "independently_authored_source",
+      "object_name": "cd_read.o",
+      "profile": "authored_cpp",
+      "sha256": "3d93d71856070c752421d212d1c31b12b83e7c0ebcdc609e9e398d5ad2e29ddb",
+      "source": "sources/cd-archive-cd-read/cd_read.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 365,
+      "kind": "independently_authored_source",
+      "object_name": "cd_read_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "921145b15cb13ef54b012c6dcc6d78ab05ef57f050105159d7a124afde6623ad",
+      "source": "sources/cd-archive-cd-read-iop/cd_read_iop.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 366,
+      "kind": "independently_authored_source",
+      "object_name": "stream_pause.o",
+      "profile": "authored_cpp",
+      "sha256": "7fb8fb925e6c226ce2c8609a3cafe88367a16278cbf5b330f3bbe9c88d44f31f",
+      "source": "sources/cd-archive-cd-stream-pause/stream_pause.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 367,
+      "kind": "independently_authored_source",
+      "object_name": "stream_read.o",
+      "profile": "authored_cpp",
+      "sha256": "bae947f305238ecb2793fdb3140d83e5d48b6733bf9655e5306a52b517928eff",
+      "source": "sources/cd-archive-cd-stream-read/stream_read.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 368,
+      "kind": "independently_authored_source",
+      "object_name": "layer_search.o",
+      "profile": "authored_cpp",
+      "sha256": "e0f6e6b18dfc16ad6ab0f860ffd7f72eddfe67c9ef528ddfd0135694bb1cf146",
+      "source": "sources/cd-archive-cd-layer-search/layer_search.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 369,
+      "kind": "independently_authored_source",
+      "object_name": "initialize_file.o",
+      "profile": "authored_cpp",
+      "sha256": "6e43324b2fffce1224a740c9b91e92ee1b675329eba1cbe6b33d5d454a4c327c",
+      "source": "sources/cd-archive-initialize-file/initialize_file.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 370,
+      "kind": "independently_authored_source",
+      "object_name": "views.o",
+      "profile": "authored_cpp",
+      "sha256": "f6d12b11b095fab59c774dd9269090c89af94b6924dea771e93ff9cdc952d099",
+      "source": "sources/cd-archive-views/views.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 371,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_memchr.o",
+      "profile": "authored_cpp",
+      "sha256": "e1a9cafbf8a0663398f1db9c063d04ff0a68c584eb91084302ee1160e5dfa89f",
+      "source": "sources/libc-format-memchr/memchr.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 372,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_mbtowc.o",
+      "profile": "authored_cpp",
+      "sha256": "75a2bff730aefecf28f355b541dfd0307ee1880b458b3424a6c33ce8525bd60e",
+      "source": "sources/libc-format-mbtowc/mbtowc_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 373,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_localeconv.o",
+      "profile": "authored_cpp",
+      "sha256": "034f6cae1a2b56275a98fc882d504c1783eb34cb106893c27d16684eb021301b",
+      "source": "sources/libc-format-locale/localeconv.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 374,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_write_r.o",
+      "profile": "authored_cpp",
+      "sha256": "7a0ba9263387899ccfca930f6784cb29971e119ad083d7264fc1d0cd0ade8fb2",
+      "source": "sources/libc-format-reent-write/write_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 375,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_read_r.o",
+      "profile": "authored_cpp",
+      "sha256": "28751b852a302cbd9370b59166ea90a0ca1a3ca599e429bd31452a7fef45ab52",
+      "source": "sources/libc-format-reent-read/read_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 376,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_close_r.o",
+      "profile": "authored_cpp",
+      "sha256": "19c70577f9733ed0ce067e91049515eafc6047a5476920a89d113909f401b3a0",
+      "source": "sources/libc-format-reent-close/close_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 377,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_seek_r.o",
+      "profile": "authored_cpp",
+      "sha256": "4f957d23ebacb60bec10513986bbb6afd716d371568e2a50aebb2e331f47d216",
+      "source": "sources/libc-format-reent-seek/seek_reentrant.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 378,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_swsetup.o",
+      "profile": "authored_cpp",
+      "sha256": "9fb1dea571f4fd949de5c6e90f664a6fcf5d05728ee1298970e022690c27bec7",
+      "source": "sources/libc-format-stream-setup/stream_write_setup.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 379,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sprintf.o",
+      "profile": "authored_cpp",
+      "sha256": "d24787f63fad59cf4bf36e55a173b8b8a1dac2974430fa3938c62d76d8cb9e5f",
+      "source": "sources/libc-format-format-string/format_string.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 380,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sce_printf.o",
+      "profile": "authored_cpp",
+      "sha256": "11d8121cd79c02d19335136600ecc0f3800b2282e1ec9248752691732ec436a3",
+      "source": "sources/libc-format-sce-printf/sce_printf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 381,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_ctype.o",
+      "profile": "authored_cpp",
+      "sha256": "8b4640808645716a41207ac028eda9dca02ad542877d7d669849b2a0fa349746",
+      "source": "sources/libc-format-ctype/ctype_view.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/libc-format-impure/impure_state.hpp"
+      ],
+      "input_order": 382,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_impure.o",
+      "profile": "authored_cpp",
+      "sha256": "7a75b063dceee4398af8fc7e7c5460a3115f9355e3e97cdd2d492050b24a5882",
+      "source": "sources/libc-format-impure/impure_pointer.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 383,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_errno.o",
+      "profile": "authored_cpp",
+      "sha256": "ba5b229cd0d15d37ee1460f384f542d36ae31ade2100ab42ebc97ffdeca08e32",
+      "source": "sources/libc-format-errno/errno_word.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 384,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_mb_cur_max.o",
+      "profile": "authored_cpp",
+      "sha256": "17f3ba69e0adda39f1acfb8117f689a6551f01f555f8f869fe97cde2f5d556a5",
+      "source": "sources/libc-format-mb-cur-max/mb_cur_max.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 385,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_formatter_text.o",
+      "profile": "authored_cpp",
+      "sha256": "32f6fb35572f4e6ff6b571f6d796e93261e2a1a0a4c45db95b61d2ce0d55ff7d",
+      "source": "sources/libc-format-formatter-text/formatter_text.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 386,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_dtoa_text.o",
+      "profile": "authored_cpp",
+      "sha256": "61bb7bfbf37b76d74c761cb59b918bc9edf3d56a69aa1348733d9798f6696941",
+      "source": "sources/libc-format-dtoa-text/dtoa_text.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 387,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_dtoa_coefficients.o",
+      "profile": "authored_cpp",
+      "sha256": "4af5fb61d686231f89204b2126329807b6b02766b50e1593b2d8fadbad5c6588",
+      "source": "sources/libc-format-dtoa-coefficients/dtoa_coefficients.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 388,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_sscanf.o",
+      "profile": "authored_cpp",
+      "sha256": "659b7caa868658c84edb991e07e9b6a3333596f5ce56c9c73828c4ddfb4af2dd",
+      "source": "sources/libc-format-sscanf/sscanf.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 389,
+      "kind": "independently_authored_source",
+      "object_name": "libc_format_strcmp.o",
+      "profile": "authored_cpp",
+      "sha256": "9b555995ed8710c72e9e9ac5bbd727e8329a75c7099a2efb9fa02b06b5e029fe",
+      "source": "sources/libc-format-strcmp/strcmp.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -6104,7 +6556,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3ea00cced05e9321549763b789c13ea3d753ab3fd521fcec43099c6e083638c3",
+  "snapshot_sha256": "96b16855d85be418465f3048f139a6e19657897091fe568a272984493ee5bb33",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
