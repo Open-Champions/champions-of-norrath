@@ -400,6 +400,137 @@ int main() {
             "saveCheckPointCount", "sceMcInit", "slotClusters", "slotFootPrint", "sortedTimes",
             "sprintf", "strcpy", "totalClusters", "totalFootPrint"])
 
+    def test_sce_mc_init(self):
+        source = STARTUP / "sce_mc_init.cpp"
+        self.host([source], r'''
+#include <string.h>
+extern "C" int semaidRegFunc = 0;
+extern "C" int semaid_timerfunc = 0;
+extern "C" unsigned char mcClientID[40] = {};
+extern "C" unsigned char sifParamOrd[48] = {};
+extern "C" unsigned char retval[64] = {};
+static int sema_calls = 0;
+static int sema_a4[2], sema_a8[2], sema_a20[2];
+static int sync_args[3];
+static int waited = -1;
+static int wait_id = -1;
+static int init_rpc = -1;
+static int binds = 0;
+static int leave_unbound = 0;
+static unsigned bind_server = 0;
+static int bind_mode = -1;
+static int rpc_command = 0;
+static int rpc_mode = -1;
+static int rpc_send_size = 0;
+static int rpc_receive_size = 0;
+static void* rpc_send = 0;
+static void* rpc_receive = 0;
+static void* rpc_done = 0;
+static void* rpc_done_arg = 0;
+static int rpc_result = 0;
+static int signals = 0;
+static int printed = 0;
+static char printed_text[80];
+extern "C" int CreateSema(void* param) {
+    unsigned char* bytes = static_cast<unsigned char*>(param);
+    int slot = sema_calls;
+    if (slot < 2) {
+        sema_a4[slot] = bytes[4] | (bytes[5] << 8) | (bytes[6] << 16) | (bytes[7] << 24);
+        sema_a8[slot] = bytes[8] | (bytes[9] << 8) | (bytes[10] << 16) | (bytes[11] << 24);
+        sema_a20[slot] = bytes[20] | (bytes[21] << 8) | (bytes[22] << 16) | (bytes[23] << 24);
+    }
+    sema_calls += 1;
+    return sema_calls == 1 ? 7 : 8;
+}
+extern "C" int sceMcSync(int mode, int a, int b) {
+    sync_args[0] = mode; sync_args[1] = a; sync_args[2] = b; return 0;
+}
+extern "C" int WaitSema(int id) { wait_id = id; return 0; }
+extern "C" int sceSifInitRpc(int mode) { init_rpc = mode; return 0; }
+extern "C" int sceSifBindRpc(void* client, unsigned int server, int mode) {
+    binds += 1;
+    bind_server = server;
+    bind_mode = mode;
+    if (client != mcClientID) return -2;
+    if (leave_unbound > 0) {
+        leave_unbound -= 1;
+        mcClientID[36] = 0; mcClientID[37] = 0; mcClientID[38] = 0; mcClientID[39] = 0;
+    } else {
+        mcClientID[36] = 1; mcClientID[37] = 0; mcClientID[38] = 0; mcClientID[39] = 0;
+    }
+    return 0;
+}
+extern "C" int scePrintf(const char* text) {
+    printed += 1;
+    strncpy(printed_text, text, 79);
+    printed_text[79] = 0;
+    return 0;
+}
+static void put_word(unsigned char* base, int offset, int value) {
+    unsigned bits = static_cast<unsigned>(value);
+    base[offset] = static_cast<unsigned char>(bits);
+    base[offset + 1] = static_cast<unsigned char>(bits >> 8);
+    base[offset + 2] = static_cast<unsigned char>(bits >> 16);
+    base[offset + 3] = static_cast<unsigned char>(bits >> 24);
+}
+static int word_at(unsigned char* base, int offset) {
+    return (int)((unsigned)base[offset] | ((unsigned)base[offset + 1] << 8) |
+                 ((unsigned)base[offset + 2] << 16) | ((unsigned)base[offset + 3] << 24));
+}
+extern "C" int sceSifCallRpc(void* client, int command, int mode, void* send,
+                             int send_size, void* receive, int receive_size,
+                             void* done, void* done_arg) {
+    if (client != mcClientID) return -50;
+    rpc_command = command;
+    rpc_mode = mode;
+    rpc_send = send;
+    rpc_send_size = send_size;
+    rpc_receive = receive;
+    rpc_receive_size = receive_size;
+    rpc_done = done;
+    rpc_done_arg = done_arg;
+    return rpc_result;
+}
+extern "C" int SignalSema(int id) { signals += 1; waited = id; return 0; }
+extern "C" int sceMcInit();
+int main() {
+    semaidRegFunc = -1;
+    leave_unbound = 1;
+    rpc_result = 0;
+    put_word(retval, 0, 9);
+    put_word(retval, 4, 522);
+    put_word(retval, 8, 526);
+    if (sceMcInit() != 9) return 1;
+    if (sema_calls != 2 || sema_a4[0] != 1 || sema_a8[0] != 1 || sema_a20[0] != 0) return 2;
+    if (sema_a4[1] != 1 || sema_a8[1] != 0 || sema_a20[1] != 0) return 3;
+    if (semaidRegFunc != 7 || semaid_timerfunc != 8) return 4;
+    if (sync_args[0] != 0 || sync_args[1] != 0 || sync_args[2] != 0) return 5;
+    if (init_rpc != 0 || binds != 2 || bind_server != 0x80000400u || bind_mode != 0) return 6;
+    if (rpc_command != 254 || rpc_mode != 0 || rpc_send != sifParamOrd || rpc_send_size != 48) return 7;
+    if (rpc_receive != retval || rpc_receive_size != 12 || rpc_done != 0 || rpc_done_arg != 0) return 8;
+    if (signals != 1 || waited != 7 || wait_id != 7 || printed != 0) return 9;
+    put_word(retval, 4, 521);
+    if (sceMcInit() != -120 || printed != 1 || strcmp(printed_text, "libmc: too old release of mcserv.irx\n") != 0) return 10;
+    if (word_at(mcClientID, 36) != 0) return 11;
+    put_word(retval, 4, 522);
+    put_word(retval, 8, 525);
+    if (sceMcInit() != -121 || strcmp(printed_text, "libmc: too old release of mcman.irx\n") != 0) return 12;
+    rpc_result = -3;
+    put_word(retval, 8, 526);
+    if (sceMcInit() != -103 || word_at(mcClientID, 36) != 0) return 13;
+    int created = sema_calls;
+    semaidRegFunc = 5;
+    rpc_result = 0;
+    put_word(retval, 0, 4);
+    if (sceMcInit() != 4 || sema_calls != created || semaidRegFunc != 5) return 14;
+    return 0;
+}
+''')
+        self.ee_exports(source, "sceMcInit", [
+            "CreateSema", "SignalSema", "WaitSema", "mcClientID", "retval",
+            "sceMcSync", "scePrintf", "sceSifBindRpc", "sceSifCallRpc",
+            "sceSifInitRpc", "semaidRegFunc", "semaid_timerfunc", "sifParamOrd"])
+
 
 if __name__ == "__main__":
     unittest.main()
