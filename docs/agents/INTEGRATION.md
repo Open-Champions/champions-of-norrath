@@ -435,6 +435,37 @@ imports, so they do not change the count: `norrath_route_nodes_bytes`,
 `norrath_world_find_height` was already defined. 492 function bodies, 504
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/render-lights
+
+24 units were selected. Each host contract failed when the reviewed EE
+object did not carry the expected symbol, bytes, or behavior. All 24 passed.
+No game binary or disassembly listing was committed. The line body is 172
+bytes; the notes say the original is 164. The screen-color, cache, and logo
+bodies are not original-byte matches.
+
+The two border units were not selected. cd-archive already defines
+`norrath_archive_engine_pop_border` and
+`norrath_archive_engine_push_border`. Selecting them again would multiply
+those symbols.
+
+| | |
+|---|---|
+| Before | 756 |
+| After | 750 |
+| Closed | 24 |
+| Opened | 18 |
+
+Closed: the 24 selected names that were already imports, including
+`norrath_game_line_add`, `engineSetScreenColor__Fiiii`, both texture-cache
+functions, both logo functions, the four vtables, the font and halo pointers,
+and the clear-color and tag objects. Also defined, and not previous imports:
+`compositeR`, `compositeG`, `compositeB`, `uncompCache`, `uncompCacheAlloc`,
+`uncompCacheBuffer`, `norrath_game_line_count`, and `norrath_game_lines`.
+Opened: 18 names, including `norrath_construct_Line`, `frameNm`,
+`textureDrawColor__FP8_textureiiiUi`, and the light and cosmetic vtable
+slots. 498 function bodies, 528 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -491,6 +522,10 @@ should be the view.
 cd-archive already defines `norrath_archive_no_new_vags_view`. Decide whether
 those two views are one symbol.
 
+`norrath_archive_engine_pop_border` and `norrath_archive_engine_push_border`
+are the cd-archive border returns. render-lights defines the same two names
+again. Those units were not selected. Decide which package owns the names.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -500,9 +535,11 @@ symbol was defined twice.
 
 Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
-engine-init, and world-state. `engineInit__Ff`, `_engineCheckStack__FPCci`,
-and `norrath_route_add_node` are selected and have not run. The held AMX draft remains uncompiled. The three unselected
-save-net-anim view units are authored and not in the link.
+engine-init, world-state, and render-lights. `engineInit__Ff`,
+`_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
+not run. The held AMX draft remains uncompiled. The three unselected
+save-net-anim view units and the two unselected render-lights border units
+are authored and not in the link.
 Host checks ran on this machine. The reviewed EE compiler produced relocatable
 objects and the partial link succeeded. No routine from these packages has
 run on the EE, under the original process, or as gameplay. The same is true
@@ -519,3 +556,4 @@ and no startup stage has executed.
 - 2026-10-11 16:37 CDT — `agents/save-net-anim` — 738 unresolved imports
 - 2026-10-11 16:39 CDT — `agents/engine-init` — 789 unresolved imports
 - 2026-10-11 16:44 CDT — `agents/world-state` — 756 unresolved imports
+- 2026-10-11 16:47 CDT — `agents/render-lights` — 750 unresolved imports

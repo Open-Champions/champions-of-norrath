@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 504,
+  "default_authored_inputs": 528,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1033,6 +1033,30 @@
     "sources/object-infra-slow-run-list/add_to_slow_run_list.cpp": "70f0df24eb2fdc22c25061ec679378f38f32786d1d499bc780d63d7d3d53bbd9",
     "sources/object-infra-state/state.cpp": "b55eefe01504a82d6937f31956d8104c3b6e0c0e60d33b55abfe5a93b90fad98",
     "sources/object-infra-vtable/game_object_vtable.cpp": "efed16f3f5b9538e6f17edd7a144519164da33f2f1eadde37698e6de7b4f6127",
+    "sources/render-lights-ambient-vtable/ambient_vtable.cpp": "b1d7a54bbd3264523bedb141efeeae4775b7beaaa09451d40a8a5a1687ab5244",
+    "sources/render-lights-clear-color/clear_color.cpp": "6a33072b1453b49f1297d98522c4646525a0b444387f892f5ea603b3c21cbe68",
+    "sources/render-lights-cosmetic-vtable/cosmetic_vtable.cpp": "3f27f5c03c3eebed21bf0d48dcf8df5e54eda276ed8da17239e51a32c90b5e26",
+    "sources/render-lights-default-font/default_font.cpp": "aa410f57e1715bbe8b2f2b41e209f4b6115c60898c52084a217b6e517000dfea",
+    "sources/render-lights-directional-d-vtable/directional_d_vtable.cpp": "fea7732039891656844d643026e7e8c8631ca4ca553745bde9d398b1d72d422a",
+    "sources/render-lights-directional-vtable/directional_vtable.cpp": "78316b800bb876d33394479e040417d3e876e77e90e87a5a1b7c6b19156f28b8",
+    "sources/render-lights-dynamic-light-tag/dynamic_light_tag.cpp": "eee92a10c886072daa54822f2c4cfd6d7cf52eac622352314c102c8bc6b4b9fb",
+    "sources/render-lights-halo-tag/halo_tag.cpp": "223b08825ced003c71619909b35cd668b757012d7b099a618536ec56bb2c2918",
+    "sources/render-lights-halo-texture-1/halo_texture_1.cpp": "72b60c378ab3152bb7e91a101870ad3249a3ee31d19a7e5e6108d7301a2085ed",
+    "sources/render-lights-halo-texture-2/halo_texture_2.cpp": "fc1930e6bf31fb38026b4e22796a1a6f2a1bcdcfaa9dc7b0ac84479a6de307e5",
+    "sources/render-lights-halo-texture-3/halo_texture_3.cpp": "a1d75389ef0451b65b1dbca68750b0b0f0b18579eb529d8bd85198d5cb9cadc0",
+    "sources/render-lights-halo-texture-4/halo_texture_4.cpp": "a20947693952be34d975a85b2faf5dbd6964ceda85eb3c662dba38f23eb5990d",
+    "sources/render-lights-halo-texture-5/halo_texture_5.cpp": "bf5148ca30de40a7892e02a8e9545944f62817fa6cdf98211065fde69f5784f8",
+    "sources/render-lights-halo-texture-6/halo_texture_6.cpp": "21aaca50161c1c2ac0b9cc7eae442d42d6525bf7163d573c7cc8eb54ef77f909",
+    "sources/render-lights-halo-texture-7/halo_texture_7.cpp": "9e86288a999e0aaa81f89ac84849dcf2e6936da86f69eeb33ae441b1c07c1dde",
+    "sources/render-lights-halo-texture-8/halo_texture_8.cpp": "e72cf596d9aa7c005b2a61c36fce951cfae7232e65e3933ce688b635cdf4311f",
+    "sources/render-lights-line-add/game_line_add.cpp": "db14c58888bd52a9108eb9fdb9b7985cdd863df7bdce712218cfc2a93c34d035",
+    "sources/render-lights-medium-font/medium_font.cpp": "9f0d032f620bbc4ba0e2e336dd28dc5897eb7a7d65ee8fc3fae7256a63d62fb3",
+    "sources/render-lights-sb-logo/sb_logo.cpp": "eb51d13e2161b9df1b6588a75e23791dd888e901d830f11e07c8c3ba74b996ff",
+    "sources/render-lights-screen-color/screen_color.cpp": "23912196c0e735f74e731294e8d13fe64873afa47a45b6f55e944b9c8926c1e2",
+    "sources/render-lights-small-font/small_font.cpp": "5e351ae3032ffa721fa33140e748ca8e8192f853b99d5533a61bf613575e2b00",
+    "sources/render-lights-soe-logo/soe_logo.cpp": "e78546d38dd5e7be041b6dccf28ec8b108f719c81d70ab4682bc0d52f0750cf3",
+    "sources/render-lights-texture-cache-allocate/texture_cache_allocate.cpp": "53274369f0d4a9627b6fb31f9d8567ac9283c07eabdbcc08a1a2984b00043290",
+    "sources/render-lights-texture-cache-free/texture_cache_free.cpp": "37f4767df00967a45015fce9945da0e76624dae1b40e4cb52927b7f4f02337cc",
     "sources/route-creation-dispatch-build-v2/dispatch.cpp": "cf99c14c859edfd96d759ec4a6c01e3045ea950f061f9d23e17cad397153edf8",
     "sources/route-creation-dispatch-build-v2/dispatch.hpp": "e720832762d4aab98f5956e8875d3f7c5f6d816017b1c39f3fc028830b85f922",
     "sources/route-creation-dispatch-build-v2/setter.cpp": "e4d166c368ee14544d7512f765734a4136b7753dbb0522b692a8889a9aea8692",
@@ -7751,6 +7775,222 @@
       "profile": "authored_cpp",
       "sha256": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
       "source": "sources/world-state-water-wavyness2/word.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 506,
+      "kind": "independently_authored_source",
+      "object_name": "ambient_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "b1d7a54bbd3264523bedb141efeeae4775b7beaaa09451d40a8a5a1687ab5244",
+      "source": "sources/render-lights-ambient-vtable/ambient_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 507,
+      "kind": "independently_authored_source",
+      "object_name": "clear_color.o",
+      "profile": "authored_cpp",
+      "sha256": "6a33072b1453b49f1297d98522c4646525a0b444387f892f5ea603b3c21cbe68",
+      "source": "sources/render-lights-clear-color/clear_color.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 508,
+      "kind": "independently_authored_source",
+      "object_name": "cosmetic_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "3f27f5c03c3eebed21bf0d48dcf8df5e54eda276ed8da17239e51a32c90b5e26",
+      "source": "sources/render-lights-cosmetic-vtable/cosmetic_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 509,
+      "kind": "independently_authored_source",
+      "object_name": "default_font.o",
+      "profile": "authored_cpp",
+      "sha256": "aa410f57e1715bbe8b2f2b41e209f4b6115c60898c52084a217b6e517000dfea",
+      "source": "sources/render-lights-default-font/default_font.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 510,
+      "kind": "independently_authored_source",
+      "object_name": "directional_d_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "fea7732039891656844d643026e7e8c8631ca4ca553745bde9d398b1d72d422a",
+      "source": "sources/render-lights-directional-d-vtable/directional_d_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 511,
+      "kind": "independently_authored_source",
+      "object_name": "directional_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "78316b800bb876d33394479e040417d3e876e77e90e87a5a1b7c6b19156f28b8",
+      "source": "sources/render-lights-directional-vtable/directional_vtable.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 512,
+      "kind": "independently_authored_source",
+      "object_name": "dynamic_light_tag.o",
+      "profile": "authored_cpp",
+      "sha256": "eee92a10c886072daa54822f2c4cfd6d7cf52eac622352314c102c8bc6b4b9fb",
+      "source": "sources/render-lights-dynamic-light-tag/dynamic_light_tag.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 513,
+      "kind": "independently_authored_source",
+      "object_name": "halo_tag.o",
+      "profile": "authored_cpp",
+      "sha256": "223b08825ced003c71619909b35cd668b757012d7b099a618536ec56bb2c2918",
+      "source": "sources/render-lights-halo-tag/halo_tag.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 514,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_1.o",
+      "profile": "authored_cpp",
+      "sha256": "72b60c378ab3152bb7e91a101870ad3249a3ee31d19a7e5e6108d7301a2085ed",
+      "source": "sources/render-lights-halo-texture-1/halo_texture_1.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 515,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_2.o",
+      "profile": "authored_cpp",
+      "sha256": "fc1930e6bf31fb38026b4e22796a1a6f2a1bcdcfaa9dc7b0ac84479a6de307e5",
+      "source": "sources/render-lights-halo-texture-2/halo_texture_2.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 516,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_3.o",
+      "profile": "authored_cpp",
+      "sha256": "a1d75389ef0451b65b1dbca68750b0b0f0b18579eb529d8bd85198d5cb9cadc0",
+      "source": "sources/render-lights-halo-texture-3/halo_texture_3.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 517,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_4.o",
+      "profile": "authored_cpp",
+      "sha256": "a20947693952be34d975a85b2faf5dbd6964ceda85eb3c662dba38f23eb5990d",
+      "source": "sources/render-lights-halo-texture-4/halo_texture_4.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 518,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_5.o",
+      "profile": "authored_cpp",
+      "sha256": "bf5148ca30de40a7892e02a8e9545944f62817fa6cdf98211065fde69f5784f8",
+      "source": "sources/render-lights-halo-texture-5/halo_texture_5.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 519,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_6.o",
+      "profile": "authored_cpp",
+      "sha256": "21aaca50161c1c2ac0b9cc7eae442d42d6525bf7163d573c7cc8eb54ef77f909",
+      "source": "sources/render-lights-halo-texture-6/halo_texture_6.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 520,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_7.o",
+      "profile": "authored_cpp",
+      "sha256": "9e86288a999e0aaa81f89ac84849dcf2e6936da86f69eeb33ae441b1c07c1dde",
+      "source": "sources/render-lights-halo-texture-7/halo_texture_7.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 521,
+      "kind": "independently_authored_source",
+      "object_name": "halo_texture_8.o",
+      "profile": "authored_cpp",
+      "sha256": "e72cf596d9aa7c005b2a61c36fce951cfae7232e65e3933ce688b635cdf4311f",
+      "source": "sources/render-lights-halo-texture-8/halo_texture_8.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 522,
+      "kind": "independently_authored_source",
+      "object_name": "game_line_add.o",
+      "profile": "authored_cpp",
+      "sha256": "db14c58888bd52a9108eb9fdb9b7985cdd863df7bdce712218cfc2a93c34d035",
+      "source": "sources/render-lights-line-add/game_line_add.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 523,
+      "kind": "independently_authored_source",
+      "object_name": "medium_font.o",
+      "profile": "authored_cpp",
+      "sha256": "9f0d032f620bbc4ba0e2e336dd28dc5897eb7a7d65ee8fc3fae7256a63d62fb3",
+      "source": "sources/render-lights-medium-font/medium_font.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 524,
+      "kind": "independently_authored_source",
+      "object_name": "sb_logo.o",
+      "profile": "authored_cpp",
+      "sha256": "eb51d13e2161b9df1b6588a75e23791dd888e901d830f11e07c8c3ba74b996ff",
+      "source": "sources/render-lights-sb-logo/sb_logo.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 525,
+      "kind": "independently_authored_source",
+      "object_name": "screen_color.o",
+      "profile": "authored_cpp",
+      "sha256": "23912196c0e735f74e731294e8d13fe64873afa47a45b6f55e944b9c8926c1e2",
+      "source": "sources/render-lights-screen-color/screen_color.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 526,
+      "kind": "independently_authored_source",
+      "object_name": "small_font.o",
+      "profile": "authored_cpp",
+      "sha256": "5e351ae3032ffa721fa33140e748ca8e8192f853b99d5533a61bf613575e2b00",
+      "source": "sources/render-lights-small-font/small_font.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 527,
+      "kind": "independently_authored_source",
+      "object_name": "soe_logo.o",
+      "profile": "authored_cpp",
+      "sha256": "e78546d38dd5e7be041b6dccf28ec8b108f719c81d70ab4682bc0d52f0750cf3",
+      "source": "sources/render-lights-soe-logo/soe_logo.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 528,
+      "kind": "independently_authored_source",
+      "object_name": "texture_cache_allocate.o",
+      "profile": "authored_cpp",
+      "sha256": "53274369f0d4a9627b6fb31f9d8567ac9283c07eabdbcc08a1a2984b00043290",
+      "source": "sources/render-lights-texture-cache-allocate/texture_cache_allocate.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 529,
+      "kind": "independently_authored_source",
+      "object_name": "texture_cache_free.o",
+      "profile": "authored_cpp",
+      "sha256": "37f4767df00967a45015fce9945da0e76624dae1b40e4cb52927b7f4f02337cc",
+      "source": "sources/render-lights-texture-cache-free/texture_cache_free.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -7850,7 +8090,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c5515349814bbe6d4c277a0fa2b3f1fd68b0cb027d42f4d276e57999fb3432cb",
+  "snapshot_sha256": "02c070813df84ee0772a7f3fe3e11b1ea874afdca7ea21968450e5c5b1657bd3",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
