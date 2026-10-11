@@ -96,6 +96,41 @@ in the retained floor tree. The floor preprocessing record was not retained; its
 actual fresh dependencies must pass the closure check on the first portable build.
 Any unexpected dependency stops the build for review.
 
+## Optional authored memset binding
+
+The default build leaves `memset` unresolved. Three authored objects import it:
+the compiler emits those calls for local zero-initialization in the script
+game-state reader and the two AMX natives for game state and post action. Adding
+`--bind-memset` to a real build passes `--defsym=memset=norrath_block_memory_set`
+to the same relocatable link:
+
+```sh
+python3 tools/build_partial.py --source-root experimental --plan experimental/build-plan.json --toolchain /path/to/reviewed/ee --bind-memset --output work/portable-partial-memset
+```
+
+`tools/memory_binding.py` pins the compiled hash of the authored provider object
+and of the three importing objects. A changed provider, a changed, missing or
+additional importer, or an existing `memset` definition stops the build before the
+link. Afterwards the driver requires `memset` to be a zero-size global function
+symbol at the provider's section and value, with the 40-byte provider body
+retained. The option is rejected with `--check-plan`, writes `memory-binding.json`,
+and reports `symbol_aliases_applied: true`. These hashes identify authored
+compiler output for the reviewed toolchain, never original game code.
+
+Observed in local working-tree runs with the reviewed toolchain, one with and one
+without the option: all 277 compiled objects were byte-identical between the runs.
+Without the option the partial object keeps the receipt hash and 848 unresolved
+imports. With it there are 847; `memset` is the only name removed and none is
+added. Function bodies (401), body bytes (241,520), relocation fields (5,495) and
+every allocated section are unchanged; only the symbol, string and relocation
+tables differ, and all relocations name the same symbols at the same offsets. The
+bound object has its own hash, was not built from a clean Git archive and has no
+separate receipt.
+
+Inferred, not executed: the provider's byte-fill loop and returned destination
+satisfy these three calls. No runtime behavior, original-byte match or
+reconstruction credit follows from this binding.
+
 ## Outputs and boundaries
 
 Each source unit receives its own ordered output directory, command stdout/stderr,
@@ -105,10 +140,10 @@ the GPR64/FP32/single-float ABI. It writes the linked map, partial object, unres
 symbol list, all object inventories, a status record and artifact hashes. This
 inventory is not an instruction-equivalence audit or gameplay test.
 
-The link uses only `-m elf32lr5900 -r --warn-common`. It imports no absolute game
+The default link uses only `-m elf32lr5900 -r --warn-common`. It imports no absolute game
 addresses and applies no symbol aliases. In particular, the historical private
 V43 binding of `memset` to `norrath_block_memory_set` is not automatically applied;
-`memset` remains an explicit unresolved import in this recipe. The output therefore
+`memset` remains an explicit unresolved import unless `--bind-memset` is given. The output therefore
 has its own identity and is not claimed to reproduce any private integration object hash or
 its import counts. No original executable, assets, BIOS, compiled private object,
 held draft or proprietary tool is read by the public driver.

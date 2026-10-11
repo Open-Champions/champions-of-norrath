@@ -13,6 +13,7 @@ import re
 import struct
 import subprocess
 import sys
+import memory_binding
 
 
 def digest(path):
@@ -146,7 +147,8 @@ def elf_inventory(path):
                 if shndx == 0 and symbol and info >> 4 in (1, 2):
                     undefined.add(symbol)
                 if shndx and info & 15 == 2:
-                    defined.append({'name': symbol, 'compiled_body_bytes': size})
+                    defined.append({'name': symbol, 'compiled_body_bytes': size,
+                                    'section_index': shndx, 'value': value, 'binding': info >> 4})
     if not abi or (abi['gpr_size'], abi['cpr1_size'], abi['fp_abi']) != (2, 1, 2):
         raise ValueError('Unexpected GPR64/FP32/single-float ABI')
     return {'sha256': digest(path), 'functions': defined, 'function_count': sum(x['compiled_body_bytes'] > 0 for x in defined), 'function_symbol_count': len(defined), 'function_body_bytes': sum(x['compiled_body_bytes'] for x in defined), 'undefined_symbols': sorted(undefined), 'relocation_fields': fields, 'allocated_sections': allocated, 'abi': abi}
@@ -159,6 +161,8 @@ def main():
     parser.add_argument('--check-plan', action='store_true', help='Check source hashes/includes only; launch no target tools')
     parser.add_argument('--toolchain', type=Path, help='Explicit reviewed EE installation prefix')
     parser.add_argument('--newlib-root', type=Path, help='Optional supplied newlib-1.10.0 root; never fetched')
+    parser.add_argument('--bind-memset', action='store_true',
+                        help='Bind only the three reviewed compiler memset calls to the authored provider')
     parser.add_argument('--output', type=Path, help='New output directory; existing directories are rejected')
     args = parser.parse_args()
     root = args.source_root.resolve()
@@ -169,6 +173,8 @@ def main():
         verify(newlib, plan['external_files'])
     selected = [x for x in plan['inputs'] if newlib or x['kind'] == 'independently_authored_source']
     if args.check_plan:
+        if args.bind_memset:
+            parser.error('--bind-memset requires an actual build to verify emitted provider and consumers')
         print(json.dumps({'status': 'source_plan_valid', 'selected_inputs': len(selected), 'source_and_header_files': len(plan['files']), 'target_tools_executed': 0, 'build_verified': False}))
         return
     if not args.toolchain or not args.output:
@@ -276,15 +282,22 @@ def main():
         if newlib:
             verify(newlib, plan['external_files'])
         result = output / 'game-components-partial.o'
-        run([tc / 'bin' / (prefix + '-ld'), *plan['link_flags'], '-Map=' + str(output / 'game-components.map'), '-o', result, *objects], 'relocatable_link')
+        binding_flags = []
+        if args.bind_memset:
+            binding = memory_binding.validate_inputs(inventories)
+            save(output / 'memory-binding.json', binding)
+            binding_flags = [binding['link_flag']]
+        run([tc / 'bin' / (prefix + '-ld'), *plan['link_flags'], *binding_flags, '-Map=' + str(output / 'game-components.map'), '-o', result, *objects], 'relocatable_link')
         linked = elf_inventory(result)
+        if args.bind_memset:
+            memory_binding.validate_output(linked)
         if linked['function_body_bytes'] != sum(x['function_body_bytes'] for x in inventories):
             raise ValueError('Partial link changed total function extents; review required')
         verify(tc, identity['binary_hashes'])
         save(output / 'object-inventories.json', inventories)
         save(output / 'partial-inventory.json', linked)
         save(output / 'unresolved-imports.json', linked['undefined_symbols'])
-        status.update(status='partial_build_complete', function_count=linked['function_count'], unresolved_symbol_count=len(linked['undefined_symbols']), symbol_aliases_applied=False)
+        status.update(status='partial_build_complete', function_count=linked['function_count'], unresolved_symbol_count=len(linked['undefined_symbols']), symbol_aliases_applied=args.bind_memset)
         print(json.dumps(status))
     except BaseException as exc:
         status.update(status='failed_preserved_no_retry', error=str(exc))
