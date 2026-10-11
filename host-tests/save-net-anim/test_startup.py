@@ -100,6 +100,9 @@ class StartupTests(unittest.TestCase):
     def test_from_srs(self):
         self.expect_object("from_srs.cpp", "fromSRS", 1, b"\0")
 
+    def test_from_srs_but_entering_game(self):
+        self.expect_object("from_srs_but_entering_game.cpp", "fromSRSButEnteringGame", 1, b"\0")
+
 
 if __name__ == "__main__":
     unittest.main()
