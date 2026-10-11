@@ -127,6 +127,7 @@ def check(root):
         ('sources/runtime-initsys/sif_reboot_notify.cpp', 'sceSifInitRebootNotify'),
         ('sources/runtime-initsys/start_timer_system_time.cpp', 'StartTimerSystemTime'),
         ('sources/runtime-initsys/init_thread.cpp', 'InitThread'),
+        ('sources/runtime-initsys/init_exec_ps2.cpp', 'InitExecPS2'),
     ]
     assert [(r['source'], r['symbol']) for r in startup] == approved
     for record, item in zip(startup, inputs[historical_end:]):

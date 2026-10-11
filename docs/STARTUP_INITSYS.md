@@ -36,3 +36,7 @@ not on this path.
 ## Thread initializer
 
 `InitThread` at 0x002d5eb8 returns -1 when `topId` is already greater than zero. Otherwise it requests a semaphore with word 1 set to 255 and word 2 set to 0, stores that result in `topSema`, and returns -1 when the result is negative. The thread parameter stores `topThread`, `stack.15`, 1024, `_gp`, and 0. `CreateThread`'s result is stored in `topId` even when negative; a negative result deletes `topSema` and returns -1. A nonnegative result clears the first two `topArg` words, calls `StartThread` with that argument, then `ChangeThreadPriority(GetThreadId(), 1)`, and returns `topId`. Other parameter words are not written. The host contract covers the existing-thread, semaphore-failure, thread-failure, and success paths.
+
+## ExecPS2 patch
+
+`InitExecPS2` at 0x002dda10 returns without further calls when `PatchIsNeeded` is zero. Otherwise it calls the local `setup` at 0x002dd940 for the first two `SysExecPS2Entry` pairs, `Copy` at 0x002dd950 from `osdsrc` to 0x80074000 for 1960 bytes, `FlushCache(0)` and `FlushCache(2)`, then one `GetEntryAddress`/`setup` pair starting at word 4. The gate starts at 2 and stops once it is no longer below 3, so this image walks one pair. The imported names are `kernel_execps2_setup`, `kernel_execps2_copy`, and `kernel_execps2_get_entry` because other copies share the original local spellings. The copied bytes are not reproduced here.
