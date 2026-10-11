@@ -3,8 +3,8 @@
 Package notes for `agents/render-lights`. Addresses are from the private
 hash-pinned `SLUS_205.65` symbol table and the reviewed EE decoder. They are
 local evidence, not values reproduced by the relocatable build. Host contracts
-are not plan inputs. `input_order` values assume this branch's 335-input plan
-(333 authored plus two optional external inputs). The integrator renumbers
+are not plan inputs. `input_order` values assume this branch's 341-input plan
+(339 authored plus two optional external inputs). The integrator renumbers
 when other packages land.
 
 ## Line insertion
@@ -71,8 +71,8 @@ GameObject slot names match the object-infra vtable.
 ## Private build
 
 A private copy of this branch's plan, kept outside git, accepted all ten
-units. The driver reported 343 authored inputs, one link, 444 function
-bodies, and 998 unresolved imports. Every name under Imports closed was absent
+units. The driver reported 349 authored inputs, one link, 445 function
+bodies, and 970 unresolved imports. Every name under Imports closed was absent
 from that list. `norrath_block_alloc` was already defined. `runtime_verified`
 and `game_executable` were false. `python3 -m unittest discover -s tools -p
 'test_*.py'` passed, 214 tests.
@@ -135,7 +135,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 335,
+  "input_order": 341,
   "kind": "independently_authored_source",
   "object_name": "game_line_add.o",
   "profile": "authored_cpp",
@@ -147,7 +147,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 336,
+  "input_order": 342,
   "kind": "independently_authored_source",
   "object_name": "push_border.o",
   "profile": "authored_cpp",
@@ -159,7 +159,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 337,
+  "input_order": 343,
   "kind": "independently_authored_source",
   "object_name": "pop_border.o",
   "profile": "authored_cpp",
@@ -171,7 +171,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 338,
+  "input_order": 344,
   "kind": "independently_authored_source",
   "object_name": "clear_color.o",
   "profile": "authored_cpp",
@@ -183,7 +183,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 339,
+  "input_order": 345,
   "kind": "independently_authored_source",
   "object_name": "dynamic_light_tag.o",
   "profile": "authored_cpp",
@@ -195,7 +195,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 340,
+  "input_order": 346,
   "kind": "independently_authored_source",
   "object_name": "halo_tag.o",
   "profile": "authored_cpp",
@@ -207,7 +207,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 341,
+  "input_order": 347,
   "kind": "independently_authored_source",
   "object_name": "ambient_vtable.o",
   "profile": "authored_cpp",
@@ -219,7 +219,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 342,
+  "input_order": 348,
   "kind": "independently_authored_source",
   "object_name": "directional_vtable.o",
   "profile": "authored_cpp",
@@ -231,7 +231,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 343,
+  "input_order": 349,
   "kind": "independently_authored_source",
   "object_name": "directional_d_vtable.o",
   "profile": "authored_cpp",
@@ -243,7 +243,7 @@ They collapse with the object-infra vtable when that package is linked.
 ```json
 {
   "header_closure": [],
-  "input_order": 344,
+  "input_order": 350,
   "kind": "independently_authored_source",
   "object_name": "cosmetic_vtable.o",
   "profile": "authored_cpp",
