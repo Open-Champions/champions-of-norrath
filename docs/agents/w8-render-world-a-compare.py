@@ -33,6 +33,41 @@ M32 = crc.M32
 f2b, b2f = crc.f2b, crc.b2f
 
 EXE, P, FLAGS, GP = crc.EXE, crc.P, crc.FLAGS, crc.GP
+
+_orig_cop1 = Machine.cop1
+
+
+def _cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
+    # COP1.S sqrt.s (4), max.s (0x28) and min.s (0x29) are not in the shared interpreter.
+    if rs == 0x10 and fn in (4, 0x28, 0x29):
+        import math
+        a, b = self.fv(rd), self.fv(rt)
+        if fn == 4:
+            b = self.fv(rt)   # the R5900 takes the source in the ft field
+            self.setf(sa, math.sqrt(b) if b >= 0 else float('nan'))
+        elif fn == 0x28:
+            self.setf(sa, max(a, b))
+        else:
+            self.setf(sa, min(a, b))
+        return None
+    return _orig_cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt)
+
+
+Machine.cop1 = _cop1
+
+_orig_exe = Machine.exe
+
+
+def _exe(self, ins, pc):
+    # SPECIAL teq (0x34): the authored build checks division by zero, the image does not.
+    if (ins >> 26) == 0 and (ins & 63) == 0x34:
+        if (self.r[(ins >> 21) & 31] & crc.M64) == (self.r[(ins >> 16) & 31] & crc.M64):
+            raise Stop('division by zero trap at %#x' % pc)
+        return None
+    return _orig_exe(self, ins, pc)
+
+
+Machine.exe = _exe
 SRC = crc.SRC
 SCRATCH = crc.SCRATCH
 AUTH_BASE = 0x08000000
@@ -151,8 +186,11 @@ class Stubs:
                 entry.append(m.r[reg] & crc.M64)
             for off in sp.get('stack', []):
                 entry.append(m.u32(m.g32(29) + off))
-            for reg, n in sp.get('peek', []):
-                entry.append(m.read(m.g32(reg), n))
+            for reg in sp.get('nonnull', []):
+                entry.append(m.g32(reg) != 0)
+            for item in sp.get('peek', []):
+                reg, n = item[0], item[1]
+                entry.append(m.read(m.g32(reg) + (item[2] if len(item) > 2 else 0), n))
             for reg in sp.get('str', []):
                 entry.append(cstr(m, m.g32(reg)))
             if not sp.get('silent'):
@@ -884,6 +922,152 @@ def scenario_creature_draw(rng):
 
 reg('draw__8CreatureP12_modelHeaderP8_textureT1', 0x109808, 'w8-render-world-a-creature-draw/creature_draw.cpp',
     scenario_creature_draw, stubs=draw_stubs(), stub_addr=DRAW_ADDR, fixed={'vfunc': 0x600000}, returns=True)
+
+def ef_stubs():
+    def hit_fret(r, m):
+        return r.choice([-0.5, 0.0, 0.3, 0.5, 0.9, 1.0, 1.5, 0.75, 0.01])
+
+    def get_vert_ret(r, m):
+        if r.random() < 0.15:
+            return 0
+        return ARENA + 0x20000 + 0x40 * r.randrange(4)
+
+    def init_pos_effect(r, m):
+        m.w32(m.g32(4) + 32, r.choice([0, 1, 2, 5]))
+
+    def stricmp_ret(r, m):
+        a, b = cstr(m, m.g32(4)).lower(), cstr(m, m.g32(5)).lower()
+        return (a > b) - (a < b)
+
+    def strcpy_effect(r, m):
+        src = cstr(m, m.g32(5), 400)
+        for i, c in enumerate(src + b'\0'):
+            m.w8(m.g32(4) + i, c)
+
+    return {
+        'vfunc_a': dict(regs=[0], peek=[(5, 12)]),
+        'vfunc_b': dict(regs=[0], ret=lambda r, m: STRARENA + 0x3000),
+        'findTagString__10GameObjectPci': dict(regs=[0, 2], str=[5], ret=lambda r, m: r.choice([0, STRARENA + 0x2000])),
+        'gameLineInitPathState__FP17gameLinePathStatePcP6Point3': dict(regs=[2], str=[5]),
+        'gameLineGet__FPc': dict(str=[4], ret=lambda r, m: ARENA + 0x1F000),
+        'initPosition__FP17gameLinePathState': dict(effect=init_pos_effect),
+        'gameLineGetVert__Fii': dict(nargs=2, ret=get_vert_ret),
+        'objectUpdateInGrid__FP10GameObject': dict(nargs=1),
+        'resetRouting__8Creature': dict(nargs=1),
+        'addEffect__FiG6Point3': dict(nargs=1, peek=[(5, 12)]),
+        'eRand__10GameObject': dict(nargs=1, ret=lambda r, m: r.choice([0, 1, 7, 99, 12345, 0x7FFFFFFF, 0xFFFFFFF0])),
+        'gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb': dict(
+            nargs=6, nf=2, nonnull=[10], peek=[(10, 16, 16), (10, 32, 32)], regs=[0, 1, 2, 3, 4, 5, 7]),
+        'iatan2__Fff': dict(nf=2, ret=lambda r, m: r.choice([0, 100, 4000, 70000, 0xFFFF8123, 32767, 5])),
+        'icos__Fi': dict(nargs=1, fret=trig_fret),
+        'isin__Fi': dict(nargs=1, fret=trig_fret),
+        'worldHitscan__FP12_worldHeaderG6Point3T1fi': dict(regs=[0, 3], nf=1, peek=[(5, 12), (6, 12)], fret=hit_fret),
+        'netCheckActivation__FG6Point3f': dict(peek=[(4, 12)], nf=1, ret=lambda r, m: r.choice([0, 1])),
+        'netGetLocalObject__FP8Creature': dict(nargs=1, ret=lambda r, m: r.choice([ARENA + 0x4000, ARENA + 0x4000, 0x31000000])),
+        'isBoss__FP10GameObject': dict(nargs=1, ret=lambda r, m: r.choice([0, 1])),
+        'fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStateffff': dict(
+            regs=[0, 1, 3, 4], peek=[(6, 12)], nf=4),
+        'fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi': dict(
+            regs=[0, 1, 3, 4, 5], peek=[(6, 12)], nf=3),
+        'strcasecmp': dict(str=[4, 5], ret=stricmp_ret),
+        'strcpy': dict(regs=[0], str=[5], effect=strcpy_effect),
+        'getClosestLivingPlayer__FG6Point3f': dict(peek=[(4, 12)], nf=1, ret=lambda r, m: r.choice([-1, 0, 1, 2, 3])),
+    }
+
+
+EF_ADDR = {
+    'vfunc_a': 0x600000, 'vfunc_b': 0x600010,
+    'findTagString__10GameObjectPci': 0x143A80, 'gameLineInitPathState__FP17gameLinePathStatePcP6Point3': 0x279B58,
+    'gameLineGet__FPc': 0x279AD0, 'initPosition__FP17gameLinePathState': 0x278B48, 'gameLineGetVert__Fii': 0x279BC8,
+    'objectUpdateInGrid__FP10GameObject': 0x143630, 'resetRouting__8Creature': 0x113460, 'addEffect__FiG6Point3': 0x1D5630,
+    'eRand__10GameObject': 0x153FA8,
+    'gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb': 0x1CE218, 'iatan2__Fff': 0x15A198,
+    'icos__Fi': 0x15A070, 'isin__Fi': 0x15A100, 'worldHitscan__FP12_worldHeaderG6Point3T1fi': 0x17B7E0,
+    'netCheckActivation__FG6Point3f': 0x135658, 'netGetLocalObject__FP8Creature': 0x1353D8, 'isBoss__FP10GameObject': 0x10B1C8,
+    'fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStateffff': 0x1DACE0,
+    'fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi': 0x1DBBB0,
+    'strcasecmp': 0x304168, 'strcpy': 0x304640, 'getClosestLivingPlayer__FG6Point3f': 0x10EB18}
+
+
+def scenario_every_frame(rng):
+    mem = {}
+    obj = ARENA + 0x4000
+    fill(rng, mem, obj, 0x400)
+    pick = rng.choice
+    for off in (16, 20, 24, 32, 60, 64, 92, 104, 224, 228, 560, 564, 776, 780, 784):
+        putf(mem, obj + off, rnd_float(rng) if rng.random() < 0.7 else pick([60.0, 100.0, -100.0, 700.0]))
+    put32(mem, obj + 12, pick([0, 0, 0x40, 8, 0x4000000, 0x4000040, 0x48, rng.randrange(1 << 32)]))
+    flags = pick([0, 1, 0x08000000, 0x00400000, 0x00800000, 0x00C00000, 0x80000001, 0x08000001, 0x00C00001])
+    put32(mem, obj + 160, flags)
+    put32(mem, obj + 164, pick([0, 0, 0xFFFFFFFF]))
+    put32(mem, obj + 72, ARENA + 0x6000)
+    put32(mem, ARENA + 0x6000 + 136, 0x00000008 if rng.random() < 0.5 else 0xFFF8)
+    put32(mem, ARENA + 0x6000 + 140, 0x600000)
+    put32(mem, ARENA + 0x6000 + 152, 0x00000010)
+    put32(mem, ARENA + 0x6000 + 156, 0x600010)
+    for base in (140, 148):
+        for i in range(4):
+            v = pick([0, 1, 2, 3, -1, -2, -3, 100, -100, 32767, -32768])
+            mem[obj + base + 2 * i] = v & 0xFF
+            mem[obj + base + 2 * i + 1] = (v >> 8) & 0xFF
+    def h(off, vals):
+        v = pick(vals) & 0xFFFF
+        mem[obj + off] = v & 0xFF
+        mem[obj + off + 1] = v >> 8
+    h(792, [0, 0, 1, 2, -1, 5]); h(796, [0, 0, 1, 3]); h(794, [0, 1, 3]); h(56, [0, 100, 0x7FFF, 0xFFFF, 0x1234])
+    h(880, [0, 2, 5, -3]); h(882, [0, 2, 9, 5]); h(884, [1, 3]); h(886, [1, 4, 7])
+    v808 = pick([0, 50, 99, 100, 1000, 1001])
+    put32(mem, obj + 804, pick([0, 100, 1000])); put32(mem, obj + 808, v808)
+    put32(mem, obj + 80, pick([0, 600, 1100, 2000, v808, v808 + 600]))
+    mem[obj + 84] = pick([0, 3, 5])
+    mem[obj + 85] = pick([0xFF, 0, 1, 2, 5, 0x7F, 3])
+    mem[obj + 40] = pick([0, 7, 200])
+    mem[obj + 800] = pick([60, 0, 1, 20, 29, 30, 31, 59, 100, 200, 0xF0])
+    put32(mem, obj + 236, pick([0, 0, 1, 0x31000000]))
+    put32(mem, obj + 252, pick([0, 100, 970, 990]))
+    put32(mem, obj + 924, pick([0, 0, 0, 5, 30, 31, 50, -3, 1000]))
+    for off in (856, 864, 860, 868, 872, 876):
+        putf(mem, obj + off, pick([0.0, 0.0, 0.01, 0.5, 1.0, 1.5, 70.0, -1.0, 0.03]))
+    put32(mem, obj + 788, 0)
+    putf(mem, obj + 788, pick([0.0, 100.0, 500.0, 5.0, 50.0]))
+    put32(mem, sym('frameNm'), pick([0, 4, 32, 33, 64, 100, 128, 1000, 31, 3]))
+    put32(mem, sym('nmPlayers'), pick([0, 1, 2, 4]))
+    put32(mem, sym('localNmPlayersAlive'), pick([0, 1, 2, 4]))
+    for i in range(4):
+        put32(mem, sym('localPlayersAlive') + 4 * i, pick([0, 1, 2, 3]))
+    put32(mem, sym('levelFlags'), pick([0, 0x100, 0x1FF]))
+    mem[sym('netNetworkMode')] = pick([0, 1])
+    put32(mem, sym('world'), pick([0, 0x31000000]))
+    pl = sym('player')
+    for i in range(4):
+        o = ARENA + 0x10000 + 0x200 * i
+        fill(rng, mem, o, 0x80)
+        put32(mem, pl + 23984 * i + 21872, pick([0, o, o]))
+        put32(mem, o + 12, pick([0, 8, 1, 0x18]))
+        for off in (16, 20, 24):
+            putf(mem, o + off, rnd_float(rng))
+        w = rng.randrange(1 << 16)
+        mem[o + 56] = w & 0xFF; mem[o + 57] = w >> 8
+    for a, txt in ((sym('levelName') + 81, rng.choice([b'kelethin', b'KELETHIN', b'other', b''])),):
+        put_str(mem, a, txt)
+    put_str(mem, STRARENA + 0x2000, b'path1')
+    put_str(mem, STRARENA + 0x3000, rng.choice([b'boss name', b'']))
+    for k in range(4):
+        v = ARENA + 0x20000 + 0x40 * k
+        fill(rng, mem, v, 0x40)
+        for off in (0, 4, 8):
+            putf(mem, v + off, rnd_float(rng) if rng.random() < 0.6 else pick([60.0, -100.0, 0.0, 700.0]))
+        mem[v + 60] = pick([0, 3, 5])
+    put32(mem, sym('bossMeterCurrent'), 77); put32(mem, sym('bossMeterMax'), 88)
+    cmp_addrs = (list(range(obj, obj + 0x400)) + list(range(sym('bossMeterCurrent'), sym('bossMeterCurrent') + 4)) +
+                 list(range(sym('bossMeterMax'), sym('bossMeterMax') + 4)) +
+                 list(range(sym('bossMeterName'), sym('bossMeterName') + 128)))
+    return {'mem': mem, 'args': [obj, 0x31100000], 'compare': cmp_addrs, 'steps': 800000}
+
+
+reg('everyFrame__8CreatureP12_modelHeader', 0x10EBF8, 'w8-render-world-a-creature-every-frame/creature_every_frame.cpp',
+    scenario_every_frame, stubs=ef_stubs(), stub_addr=EF_ADDR, fixed={'vfunc_a': 0x600000, 'vfunc_b': 0x600010},
+    returns=True)
 
 
 if __name__ == '__main__':
