@@ -132,6 +132,7 @@ ALIASES = {
     'norrath_game_object_construct': '__10GameObjectG6Point3PQ210GameObject11resourceMapPPc',
     'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
     'norrath_light_add': 'lightAdd__FP5Light',
+    'norrath_list_oneway_link': 'listOnewayLink__FP8ListHeadT0Pv',
 }
 
 
@@ -540,6 +541,28 @@ reg('__11AddParticleG6Point3PPc', 0x222A40, 'w8-fx-particles-add-particle-ctor/a
     stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), '__11ParticleDef': (1, 0, 0),
            'particleInit__11AddParticlePPc': (2, 0, 0), 'lightInit__11AddParticlePPc': (2, 0, 0),
            'norrath_light_add': (1, 0, 0)})
+
+# ---- __11LightEffectG6Point3ffffffffffffP10GameObjecti ----
+def scenario_light_effect(rng, seed):
+    mem = {}
+    fill(rng, mem, ARENA, 0x200)
+    point = ARENA + 0x1000
+    for k in range(3):
+        put32(mem, point + 4 * k, f2b(float(rng.randrange(-500, 500))))
+    put32(mem, FRAME_NM, rng.randrange(1 << 32))
+    vals = [rng.choice([0.0, 1.0, -1.5, 100.7, -250.2, 3.0, 40000.0, 12.25]) for _ in range(12)]
+    vals[8] = rng.choice([1.0, 2.0, 0.5, 30.0, -4.0, 300.0])           # radius
+    vals[11] = rng.choice([0.0, 0.01, 0.5, 3.0, -1.0, 1.0])            # seconds
+    bits = [f2b(v) for v in vals]
+    return {'mem': mem, 'args': [ARENA, point, rng.choice([0, ARENA + 0x3000]), rng.randrange(1 << 32)],
+            'fargs': {12 + i: bits[i] for i in range(8)},
+            'stack': {0: bits[8], 8: bits[9], 16: bits[10], 24: bits[11]}}
+
+
+reg('__11LightEffectG6Point3ffffffffffffP10GameObjecti', 0x1E5278,
+    'w8-fx-particles-light-effect-ctor/light_effect_ctor.cpp', scenario_light_effect,
+    stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), 'norrath_light_add': (1, 0, 0),
+           'norrath_list_oneway_link': (3, 0, 0), 'norrath_actor_add_run_list': (1, 0, 0)})
 
 
 if __name__ == '__main__':
