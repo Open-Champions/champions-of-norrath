@@ -4,6 +4,7 @@
 // instruction stream: a word access is declared int, a byte access unsigned char, and a float access float.
 // Placement in the original data areas is not reproduced.
 //
+//   coreInterfaceFadeUpVal    0x004447b8, 16 bytes, four floats, file 1.0f each (word 0x3f800000; float access)
 //   disableVolumetricLighting 0x00483aa8, 4 bytes, file 0       (word load and store)
 //   currentRunningObject      0x00483acc, 4 bytes, file 0       (pointer; word load and store)
 //   currentLayerDir           0x00483ff0, 4 bytes, file 0x006cc6a0 = layer0Dir (pointer)
@@ -30,6 +31,7 @@
 extern "C" unsigned char layer0Dir[];
 
 extern "C" {
+float coreInterfaceFadeUpVal[4] = {1.0f, 1.0f, 1.0f, 1.0f};
 int disableVolumetricLighting = 0;
 unsigned char* currentRunningObject = 0;
 unsigned char* currentLayerDir = layer0Dir;

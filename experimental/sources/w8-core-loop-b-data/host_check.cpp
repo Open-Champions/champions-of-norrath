@@ -14,6 +14,8 @@ int main() {
     int words = disableVolumetricLighting | curFocus | endInit | coreSwitchScene | coreSwitchSceneStart |
                 coreLevelCommentTimer | coreLoadingStart | drawBustCur | drawBustMax | delayCount | curPlaySeconds;
     if (words != 0) return 3;
+    for (float v : coreInterfaceFadeUpVal) if (v != 1.0f) return 10;
+    static_assert(sizeof coreInterfaceFadeUpVal == 16, "fade values");
     if (drawBustOn != 0 || drawCompassOn != 0 || correction != 0.0f) return 4;
     for (unsigned char b : drawBustTexName) if (b) return 5;
     for (unsigned char b : dummyTex) if (b) return 6;
