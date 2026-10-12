@@ -30765,6 +30765,362 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp"
+    },
+    {
+      "input_order": 2368,
+      "component": "w8-render-world-a-block-alloc-init",
+      "object_name": "block_alloc_init.o",
+      "private_object_sha256": "ecbe4d6a3632ad9c09f02de368e862b427f8932801d825dc0db13874e2ef0494",
+      "emitted_functions": [
+        {
+          "name": "blockAllocInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-block-alloc-init/block_alloc_init.cpp"
+    },
+    {
+      "input_order": 2369,
+      "component": "w8-render-world-a-block-alloc",
+      "object_name": "block_alloc.o",
+      "private_object_sha256": "21094a812af686e22e8ce42cae8bcff2b2f8be31173c706329319299e4216d8b",
+      "emitted_functions": [
+        {
+          "name": "blockAlloc__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-block-alloc/block_alloc.cpp"
+    },
+    {
+      "input_order": 2370,
+      "component": "w8-render-world-a-block-get-nm-free",
+      "object_name": "block_get_nm_free.o",
+      "private_object_sha256": "c958335997f3bc1578c71262e7b10f59cd3e8f3c2de1ff1276808d7f1f8d55ee",
+      "emitted_functions": [
+        {
+          "name": "blockGetNmFree__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp"
+    },
+    {
+      "input_order": 2371,
+      "component": "w8-render-world-a-check-can-alloc-descriptor",
+      "object_name": "check_can_alloc_descriptor.o",
+      "private_object_sha256": "766301f8c6a81c7094c4270cac63b12779219c9cc11592c50154898f9eea8b05",
+      "emitted_functions": [
+        {
+          "name": "checkCanAllocDescriptor__Fv",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp"
+    },
+    {
+      "input_order": 2372,
+      "component": "w8-render-world-a-creature-advance-animation",
+      "object_name": "creature_advance_animation.o",
+      "private_object_sha256": "ce9dd149177f2e99f1d592e956c08f3f6da02473f4034dd6369da47ce387e9aa",
+      "emitted_functions": [
+        {
+          "name": "creatureAdvanceAnimation__8Creaturef",
+          "compiled_body_bytes": 352
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp"
+    },
+    {
+      "input_order": 2373,
+      "component": "w8-render-world-a-creature-draw",
+      "object_name": "creature_draw.o",
+      "private_object_sha256": "093a58146fca283acc3262e85238c0a2915c38ab6670c2376b1365c9682aff2d",
+      "emitted_functions": [
+        {
+          "name": "draw__8CreatureP12_modelHeaderP8_textureT1",
+          "compiled_body_bytes": 2824
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-creature-draw/creature_draw.cpp"
+    },
+    {
+      "input_order": 2374,
+      "component": "w8-render-world-a-creature-every-frame",
+      "object_name": "creature_every_frame.o",
+      "private_object_sha256": "07ca3172662f396cca8851c93f809b311af0a7bb6fa2a7f1e197945152c1d0c0",
+      "emitted_functions": [
+        {
+          "name": "everyFrame__8CreatureP12_modelHeader",
+          "compiled_body_bytes": 3948
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-creature-every-frame/creature_every_frame.cpp"
+    },
+    {
+      "input_order": 2375,
+      "component": "w8-render-world-a-eval-hermite",
+      "object_name": "eval_hermite.o",
+      "private_object_sha256": "a7d1775d9e5ff669801bb529c668870f587beb72c22fb9ea172624ca2e9f7945",
+      "emitted_functions": [
+        {
+          "name": "evalHermite__Ffffff",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-eval-hermite/eval_hermite.cpp"
+    },
+    {
+      "input_order": 2376,
+      "component": "w8-render-world-a-floor-clear",
+      "object_name": "floor_clear.o",
+      "private_object_sha256": "99da7207246c325b8e423340269bef38ebb9a305ff3abbca6a73e3a5f994d652",
+      "emitted_functions": [
+        {
+          "name": "floorClear__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-floor-clear/floor_clear.cpp"
+    },
+    {
+      "input_order": 2377,
+      "component": "w8-render-world-a-get-megatile-center",
+      "object_name": "get_megatile_center.o",
+      "private_object_sha256": "ff52fd26e319dbea646dd6e9ae690f0f543dc5e1fd1687c8de0477f1f4bed252",
+      "emitted_functions": [
+        {
+          "name": "getMegatileCenter__FG6Point2",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-get-megatile-center/get_megatile_center.cpp"
+    },
+    {
+      "input_order": 2378,
+      "component": "w8-render-world-a-get-megatile-original-center",
+      "object_name": "get_megatile_original_center.o",
+      "private_object_sha256": "62fb250246344bbe35dfd1955d68aac70da34edc3fe22bd7d074e9bc5cbca60c",
+      "emitted_functions": [
+        {
+          "name": "getMegatileOriginalCenter__FG6Point2",
+          "compiled_body_bytes": 316
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp"
+    },
+    {
+      "input_order": 2379,
+      "component": "w8-render-world-a-global-init-edgearray",
+      "object_name": "global_init_edgearray.o",
+      "private_object_sha256": "221b16ed8e06f06b2c99fb636309956864fba0f8d8fe8918d202015e4bcc93a3",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "_GLOBAL_$I$edgearray",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp"
+    },
+    {
+      "input_order": 2380,
+      "component": "w8-render-world-a-global-init-model-clipping-on",
+      "object_name": "global_init_model_clipping_on.o",
+      "private_object_sha256": "99f23331faf7ff539582255b59ff5c9a7db622f91de50bf670bd18576d93d62f",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$I$modelClippingOn",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp"
+    },
+    {
+      "input_order": 2381,
+      "component": "w8-render-world-a-global-init-world-tile",
+      "object_name": "global_init_world_tile.o",
+      "private_object_sha256": "bd6003a4922e33c67ddc5fd0926b87294239ae2e666ca2ee66b5a520190ad64a",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 648
+        },
+        {
+          "name": "_GLOBAL_$I$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        },
+        {
+          "name": "_GLOBAL_$D$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp"
+    },
+    {
+      "input_order": 2382,
+      "component": "w8-render-world-a-load-directory",
+      "object_name": "load_directory.o",
+      "private_object_sha256": "8025e9cd0c0fd2e194d8a2040d3fe1ba8c2e730c701ea328e8f13e7900415387",
+      "emitted_functions": [
+        {
+          "name": "loadDirectory__FP9directoryii",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-load-directory/load_directory.cpp"
+    },
+    {
+      "input_order": 2383,
+      "component": "w8-render-world-a-lump-check",
+      "object_name": "lump_check.o",
+      "private_object_sha256": "f1c549aed1874f9fec64f0c1b903d7d6d7e1a7f53923e7302870f42903be1ec4",
+      "emitted_functions": [
+        {
+          "name": "lumpCheck__Fv",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-lump-check/lump_check.cpp"
+    },
+    {
+      "input_order": 2384,
+      "component": "w8-render-world-a-lump-find-by-type",
+      "object_name": "lump_find_by_type.o",
+      "private_object_sha256": "3e1726307500ecc1c5d26700dd8d6abad71208ed0d81450d9ca143d679dbb95e",
+      "emitted_functions": [
+        {
+          "name": "lumpFindByType__FPvPci",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp"
+    },
+    {
+      "input_order": 2385,
+      "component": "w8-render-world-a-lump-query",
+      "object_name": "lump_query.o",
+      "private_object_sha256": "d584ef30f30ce8102e574448a9f9c6ad7720fa23b6257f286af92474c490d985",
+      "emitted_functions": [
+        {
+          "name": "lumpQuery__FPc",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-lump-query/lump_query.cpp"
+    },
+    {
+      "input_order": 2386,
+      "component": "w8-render-world-a-lump-unload",
+      "object_name": "lump_unload.o",
+      "private_object_sha256": "dd340d69d69372c9a027e4eedaef3070ec194877ab3277ad83766daeab706557",
+      "emitted_functions": [
+        {
+          "name": "lumpUnload__FPv",
+          "compiled_body_bytes": 544
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-lump-unload/lump_unload.cpp"
+    },
+    {
+      "input_order": 2387,
+      "component": "w8-render-world-a-megatile-init",
+      "object_name": "megatile_init.o",
+      "private_object_sha256": "9eb4789adab2c228ed3f7e0fb073254cfeb5648a95ff3aef18fbdc54df2af694",
+      "emitted_functions": [
+        {
+          "name": "megatileInit__FP12MegatileRootPv",
+          "compiled_body_bytes": 652
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-megatile-init/megatile_init.cpp"
+    },
+    {
+      "input_order": 2388,
+      "component": "w8-render-world-a-megatile-storage",
+      "object_name": "megatile_storage.o",
+      "private_object_sha256": "743df9cb32bfd034ef5c9019b22d77f8e7a1cfd043a591ae1e88812a012bf8d4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-megatile-storage/megatile_storage.cpp"
+    },
+    {
+      "input_order": 2389,
+      "component": "w8-render-world-a-render-storage",
+      "object_name": "render_storage.o",
+      "private_object_sha256": "f2b957e321f5f4398ca70b708e296dc543135dc8dd6b06603cb2add85daeea98",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-render-storage/render_storage.cpp"
+    },
+    {
+      "input_order": 2390,
+      "component": "w8-render-world-a-run-standard-glow",
+      "object_name": "run_standard_glow.o",
+      "private_object_sha256": "e58c0886af80f017e9b88804cc419f4b3a231d8d9b4dd7f39f9d5175e961be16",
+      "emitted_functions": [
+        {
+          "name": "runStandardGlow__8Creature",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-run-standard-glow/run_standard_glow.cpp"
+    },
+    {
+      "input_order": 2391,
+      "component": "w8-render-world-a-set-dir-light",
+      "object_name": "set_dir_light.o",
+      "private_object_sha256": "44869f39b5243117e61d228fc578403f975c3d02ed88b0f9472da44e6b4d6d27",
+      "emitted_functions": [
+        {
+          "name": "setDirLight__Fsssssfb",
+          "compiled_body_bytes": 404
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-set-dir-light/set_dir_light.cpp"
+    },
+    {
+      "input_order": 2392,
+      "component": "w8-render-world-a-texture-draw-color",
+      "object_name": "texture_draw_color.o",
+      "private_object_sha256": "e675a145638bf26535f702218808734fa13d7c1521d7321094df2468d2da92f6",
+      "emitted_functions": [
+        {
+          "name": "_textureDrawColor__FP8_textureiiiUi",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-render-world-a-texture-draw-color/texture_draw_color.cpp"
     }
   ],
   "drafts": [
@@ -35994,7 +36350,57 @@
     "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp": "559d20152df30df5de353994033c5c0ea5fdb07021e870a600f4a19d3d1f569a",
     "sources/w8-net-play-b-wait-for-peers/host_check.cpp": "71b0bc10e68b9fc619c8eebb85e872351f2d1c3cde09c46d1393e9e6daa50e78",
     "sources/w8-net-play-b-launch-state/launch_state.cpp": "189276675640d4361f5b1a18fd0fe5431118370a5679abd27baa7a987ffab737",
-    "sources/w8-net-play-b-launch-state/host_check.cpp": "f367f79a56f28095ef1d4776317c398466cf7f7213efc798c01628aa850106e4"
+    "sources/w8-net-play-b-launch-state/host_check.cpp": "f367f79a56f28095ef1d4776317c398466cf7f7213efc798c01628aa850106e4",
+    "sources/w8-render-world-a-block-alloc-init/block_alloc_init.cpp": "b7437cc254fcf5694153195afe23467115a512281d68247b1b1dcf14a1db18ef",
+    "sources/w8-render-world-a-block-alloc-init/host_check.cpp": "5865b23c8b74c8838b647248614a788249a7fa3da9a539fa0145ec31cd89442d",
+    "sources/w8-render-world-a-block-alloc/block_alloc.cpp": "a5a295ee2788d8cb8cdb35a98b531568f276d52dfe0d4518cf9373fed81fee8c",
+    "sources/w8-render-world-a-block-alloc/host_check.cpp": "1ecdd392442b119a1622b7f0000a7623513649781a5f3b757574b3b892f0554f",
+    "sources/w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp": "46a876a4d361c233e89772c283f713a56a5a6c0ec8f7a776f522e4ff73003f88",
+    "sources/w8-render-world-a-block-get-nm-free/host_check.cpp": "00a222d2731081ec29c1645ea2fcc3da1d24bd53901441c7f9249f9c0b3e866f",
+    "sources/w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp": "c939fdc11cc08c76255a98b7e13fd68584f998ff887ea332bf070c8969982093",
+    "sources/w8-render-world-a-check-can-alloc-descriptor/host_check.cpp": "09cdf9efb8bd9cdc4e86ec090392733f212633b079b00ce7e21f98b8bbcf2257",
+    "sources/w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp": "cc664c50b7ae7a949c561e8710f5f05abcc43791129f9d1bb596b5f381d01cb2",
+    "sources/w8-render-world-a-creature-advance-animation/host_check.cpp": "8a7508112f8625c5377bbe7c7eaf6edf82cf4e452e1f4f5659a501d5d9d497ce",
+    "sources/w8-render-world-a-creature-draw/creature_draw.cpp": "0f0c53a29094a05da5e96dee80740ddd8e6caa37704cb430a40e9d4708ab7c5f",
+    "sources/w8-render-world-a-creature-draw/host_check.cpp": "cfbc3be817c7ba1cc3e5343f33a1934a628e2bbcf64c06637906af33e717814e",
+    "sources/w8-render-world-a-creature-every-frame/creature_every_frame.cpp": "1ebf0418856281cd86f33daa9644a15a5c23cac69f6a838a84e8c38c85c35a78",
+    "sources/w8-render-world-a-creature-every-frame/host_check.cpp": "ed700ff908f3ff883906a2278d4354adbda1b174902edc31fc4f9cecb5eb33cd",
+    "sources/w8-render-world-a-eval-hermite/eval_hermite.cpp": "c8427fbfd2ac2fec98de8e6fbd8379b810ed228b0667f6b3a0553966a49f1938",
+    "sources/w8-render-world-a-eval-hermite/host_check.cpp": "856b8594cd7c734b9b8b81f04f691e9ec114a062b89bc86bcdc430031d1ac1e4",
+    "sources/w8-render-world-a-floor-clear/floor_clear.cpp": "de82e2bb1dc0df8c677f103979d30a9b3e0883d98487fe6b31001fa4efa3a814",
+    "sources/w8-render-world-a-floor-clear/host_check.cpp": "f533b5753ba10f6c4856d14695689a7c62d31a7ead836a2aeb54d43616abd1f9",
+    "sources/w8-render-world-a-get-megatile-center/get_megatile_center.cpp": "5ff55f0c1528f0d6b0aca90473d2b7b4fd7a633549bc39f0745f167c2d4eda3d",
+    "sources/w8-render-world-a-get-megatile-center/host_check.cpp": "1cd9d5e1d4a2478b0bfe8bb6d28551df4ac0af13e876356f93bffa7fc29910b1",
+    "sources/w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp": "af7e470fad5a34d56e118a52f14da5b9ffb403a43b1e0cb1ac5924fda96e7356",
+    "sources/w8-render-world-a-get-megatile-original-center/host_check.cpp": "0fed7884ad506ddf361eb91631d2b091bb6db37bad1909339072a8da2abb9d84",
+    "sources/w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp": "3c38620169e03995fedbf70d121843e8318a8b26261c62d352fc0df32a93fa85",
+    "sources/w8-render-world-a-global-init-edgearray/host_check.cpp": "26928b6b9eac0258664962360a567fe6d9dc9e119d9ed4da1d6be85de76acbf1",
+    "sources/w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp": "86ece6162712e6a07a61210ed1fd923c91e2f9b3156bc1c9640e35be26fe8385",
+    "sources/w8-render-world-a-global-init-model-clipping-on/host_check.cpp": "afa1213fe4d0ddffb924196722dbd5354a0a2b3124ebefca6daaba84c513a536",
+    "sources/w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp": "285a0b3212224e4adc9f4003deed98a06d92752fa9cee380f489b463557c62cd",
+    "sources/w8-render-world-a-global-init-world-tile/host_check.cpp": "41f1297866f5a22bd430c1380d19d46fbf48b04d590c9208e580cb9805dbed47",
+    "sources/w8-render-world-a-load-directory/load_directory.cpp": "b2156ecd61871ac1fdfcf1a569236cacbf6773df5d3eff530f49e72536a6e292",
+    "sources/w8-render-world-a-load-directory/host_check.cpp": "bf70bca45638da5fe0ca0b4680d3d2126197371cd27c8485cd785702401102fc",
+    "sources/w8-render-world-a-lump-check/lump_check.cpp": "17ba1dedc226a1e1c2233532852e91e641ee0138664344f0d017662c8b72a13d",
+    "sources/w8-render-world-a-lump-check/host_check.cpp": "e4b8d160dee045f5db1d891fa4fc5f4bf5a681a2bdc68cc43d3b7d12c1db0d56",
+    "sources/w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp": "1a0c3354dd0de8452bf532f6661612c636b13b827cf38afbfbf8cb91395c8c11",
+    "sources/w8-render-world-a-lump-find-by-type/host_check.cpp": "0c3b8a2e9d9caf0aa6ce890478f19ac059570bbcba416af34e8178cda5116e7d",
+    "sources/w8-render-world-a-lump-query/lump_query.cpp": "ed3a0182cbe62a68f0e48ba8092c9e642602ffce33448907b43097859c03400f",
+    "sources/w8-render-world-a-lump-query/host_check.cpp": "f3e0a37ec0f3857aca3e1603aedea08393c1e4d041db5cbc1739e4cbf3a2afb5",
+    "sources/w8-render-world-a-lump-unload/lump_unload.cpp": "81a4aeaf126dc3995d9621e07ae0b35862e81809d5188572e7f75041beb6de83",
+    "sources/w8-render-world-a-lump-unload/host_check.cpp": "c466f031fe6bc8b94fb84ac1243bce2330181a01dce58400804ba3e2e866bfaf",
+    "sources/w8-render-world-a-megatile-init/megatile_init.cpp": "adb02b7b3224440e6dbad5fe83294d1a49f840aa6f6e510524fbf0abc49f50fd",
+    "sources/w8-render-world-a-megatile-init/host_check.cpp": "303400e5a0ffdaf3b65c91d401476b42767b63c39aba72aff0309b9b09918931",
+    "sources/w8-render-world-a-megatile-storage/megatile_storage.cpp": "395c1d22218bcdbc4cff862a69c7f21d8974089b427b1642fb5ed66cd96913cc",
+    "sources/w8-render-world-a-megatile-storage/host_check.cpp": "87e0a89d90f0c610e792f7b92503a8a555073c6f676e1b18f7a61c1f50b238bc",
+    "sources/w8-render-world-a-render-storage/render_storage.cpp": "e45c2085c104ffaab030aa55874ca5ab3da5019a295282e04d986b930543080e",
+    "sources/w8-render-world-a-render-storage/host_check.cpp": "652d637251da2defb4e96d0f978a8520c4f1719f62eb9652f545d7d7b924e6a2",
+    "sources/w8-render-world-a-run-standard-glow/run_standard_glow.cpp": "518a74b2346ab9be19ca2dab90bf8038949981b106299ed91677efc7e380c84c",
+    "sources/w8-render-world-a-run-standard-glow/host_check.cpp": "59ec5b4d115f8e9b9bef96e40c881e3ce67b3aed7a31e4388f773e4af365ce72",
+    "sources/w8-render-world-a-set-dir-light/set_dir_light.cpp": "526ef18050a1c5725b6a92aea404f61617bf8cdb0c16b147bcc994b1fbb1bbab",
+    "sources/w8-render-world-a-set-dir-light/host_check.cpp": "55d1a19cf4d361f98d0313dc23c8dfbf16567dc0b945a3c1e876cb55afa00102",
+    "sources/w8-render-world-a-texture-draw-color/texture_draw_color.cpp": "f3eebd9f15e783fa83390249c2878c8223279c5e282f1d35b9e3f77fcc69b533",
+    "sources/w8-render-world-a-texture-draw-color/host_check.cpp": "704cdc91bac281541309fb581214411e78025fcd6d6741e9cd344fb03cca3159"
   },
   "additional_implementations": [
     {
@@ -36436,11 +36842,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2368,
-    "authored_default_inputs": 2366,
+    "selected_inputs": 2393,
+    "authored_default_inputs": 2391,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1925,
-    "compiled_body_bytes_from_accepted_inputs": 819800,
+    "emitted_function_definitions_including_helpers": 1952,
+    "compiled_body_bytes_from_accepted_inputs": 831596,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -36453,7 +36859,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2055
+    "package_selected_inputs": 2080
   },
   "startup_implementations": [
     {
@@ -68887,6 +69293,437 @@
       ],
       "host_files": [
         "sources/w8-net-play-b-wait-for-peers/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-block-alloc-init/block_alloc_init.cpp",
+      "source_sha256": "b7437cc254fcf5694153195afe23467115a512281d68247b1b1dcf14a1db18ef",
+      "object_sha256": "ecbe4d6a3632ad9c09f02de368e862b427f8932801d825dc0db13874e2ef0494",
+      "emitted_functions": [
+        {
+          "name": "blockAllocInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-block-alloc-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-block-alloc/block_alloc.cpp",
+      "source_sha256": "a5a295ee2788d8cb8cdb35a98b531568f276d52dfe0d4518cf9373fed81fee8c",
+      "object_sha256": "21094a812af686e22e8ce42cae8bcff2b2f8be31173c706329319299e4216d8b",
+      "emitted_functions": [
+        {
+          "name": "blockAlloc__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-block-alloc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp",
+      "source_sha256": "46a876a4d361c233e89772c283f713a56a5a6c0ec8f7a776f522e4ff73003f88",
+      "object_sha256": "c958335997f3bc1578c71262e7b10f59cd3e8f3c2de1ff1276808d7f1f8d55ee",
+      "emitted_functions": [
+        {
+          "name": "blockGetNmFree__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-block-get-nm-free/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp",
+      "source_sha256": "c939fdc11cc08c76255a98b7e13fd68584f998ff887ea332bf070c8969982093",
+      "object_sha256": "766301f8c6a81c7094c4270cac63b12779219c9cc11592c50154898f9eea8b05",
+      "emitted_functions": [
+        {
+          "name": "checkCanAllocDescriptor__Fv",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-check-can-alloc-descriptor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp",
+      "source_sha256": "cc664c50b7ae7a949c561e8710f5f05abcc43791129f9d1bb596b5f381d01cb2",
+      "object_sha256": "ce9dd149177f2e99f1d592e956c08f3f6da02473f4034dd6369da47ce387e9aa",
+      "emitted_functions": [
+        {
+          "name": "creatureAdvanceAnimation__8Creaturef",
+          "compiled_body_bytes": 352
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-creature-advance-animation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-creature-draw/creature_draw.cpp",
+      "source_sha256": "0f0c53a29094a05da5e96dee80740ddd8e6caa37704cb430a40e9d4708ab7c5f",
+      "object_sha256": "093a58146fca283acc3262e85238c0a2915c38ab6670c2376b1365c9682aff2d",
+      "emitted_functions": [
+        {
+          "name": "draw__8CreatureP12_modelHeaderP8_textureT1",
+          "compiled_body_bytes": 2824
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-creature-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-creature-every-frame/creature_every_frame.cpp",
+      "source_sha256": "1ebf0418856281cd86f33daa9644a15a5c23cac69f6a838a84e8c38c85c35a78",
+      "object_sha256": "07ca3172662f396cca8851c93f809b311af0a7bb6fa2a7f1e197945152c1d0c0",
+      "emitted_functions": [
+        {
+          "name": "everyFrame__8CreatureP12_modelHeader",
+          "compiled_body_bytes": 3948
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-creature-every-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-eval-hermite/eval_hermite.cpp",
+      "source_sha256": "c8427fbfd2ac2fec98de8e6fbd8379b810ed228b0667f6b3a0553966a49f1938",
+      "object_sha256": "a7d1775d9e5ff669801bb529c668870f587beb72c22fb9ea172624ca2e9f7945",
+      "emitted_functions": [
+        {
+          "name": "evalHermite__Ffffff",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-eval-hermite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-floor-clear/floor_clear.cpp",
+      "source_sha256": "de82e2bb1dc0df8c677f103979d30a9b3e0883d98487fe6b31001fa4efa3a814",
+      "object_sha256": "99da7207246c325b8e423340269bef38ebb9a305ff3abbca6a73e3a5f994d652",
+      "emitted_functions": [
+        {
+          "name": "floorClear__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-floor-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-get-megatile-center/get_megatile_center.cpp",
+      "source_sha256": "5ff55f0c1528f0d6b0aca90473d2b7b4fd7a633549bc39f0745f167c2d4eda3d",
+      "object_sha256": "ff52fd26e319dbea646dd6e9ae690f0f543dc5e1fd1687c8de0477f1f4bed252",
+      "emitted_functions": [
+        {
+          "name": "getMegatileCenter__FG6Point2",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-get-megatile-center/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp",
+      "source_sha256": "af7e470fad5a34d56e118a52f14da5b9ffb403a43b1e0cb1ac5924fda96e7356",
+      "object_sha256": "62fb250246344bbe35dfd1955d68aac70da34edc3fe22bd7d074e9bc5cbca60c",
+      "emitted_functions": [
+        {
+          "name": "getMegatileOriginalCenter__FG6Point2",
+          "compiled_body_bytes": 316
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-get-megatile-original-center/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp",
+      "source_sha256": "3c38620169e03995fedbf70d121843e8318a8b26261c62d352fc0df32a93fa85",
+      "object_sha256": "221b16ed8e06f06b2c99fb636309956864fba0f8d8fe8918d202015e4bcc93a3",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "_GLOBAL_$I$edgearray",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-global-init-edgearray/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp",
+      "source_sha256": "86ece6162712e6a07a61210ed1fd923c91e2f9b3156bc1c9640e35be26fe8385",
+      "object_sha256": "99f23331faf7ff539582255b59ff5c9a7db622f91de50bf670bd18576d93d62f",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$I$modelClippingOn",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-global-init-model-clipping-on/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp",
+      "source_sha256": "285a0b3212224e4adc9f4003deed98a06d92752fa9cee380f489b463557c62cd",
+      "object_sha256": "bd6003a4922e33c67ddc5fd0926b87294239ae2e666ca2ee66b5a520190ad64a",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 648
+        },
+        {
+          "name": "_GLOBAL_$I$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        },
+        {
+          "name": "_GLOBAL_$D$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-global-init-world-tile/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-load-directory/load_directory.cpp",
+      "source_sha256": "b2156ecd61871ac1fdfcf1a569236cacbf6773df5d3eff530f49e72536a6e292",
+      "object_sha256": "8025e9cd0c0fd2e194d8a2040d3fe1ba8c2e730c701ea328e8f13e7900415387",
+      "emitted_functions": [
+        {
+          "name": "loadDirectory__FP9directoryii",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-load-directory/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-lump-check/lump_check.cpp",
+      "source_sha256": "17ba1dedc226a1e1c2233532852e91e641ee0138664344f0d017662c8b72a13d",
+      "object_sha256": "f1c549aed1874f9fec64f0c1b903d7d6d7e1a7f53923e7302870f42903be1ec4",
+      "emitted_functions": [
+        {
+          "name": "lumpCheck__Fv",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-lump-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp",
+      "source_sha256": "1a0c3354dd0de8452bf532f6661612c636b13b827cf38afbfbf8cb91395c8c11",
+      "object_sha256": "3e1726307500ecc1c5d26700dd8d6abad71208ed0d81450d9ca143d679dbb95e",
+      "emitted_functions": [
+        {
+          "name": "lumpFindByType__FPvPci",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-lump-find-by-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-lump-query/lump_query.cpp",
+      "source_sha256": "ed3a0182cbe62a68f0e48ba8092c9e642602ffce33448907b43097859c03400f",
+      "object_sha256": "d584ef30f30ce8102e574448a9f9c6ad7720fa23b6257f286af92474c490d985",
+      "emitted_functions": [
+        {
+          "name": "lumpQuery__FPc",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-lump-query/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-lump-unload/lump_unload.cpp",
+      "source_sha256": "81a4aeaf126dc3995d9621e07ae0b35862e81809d5188572e7f75041beb6de83",
+      "object_sha256": "dd340d69d69372c9a027e4eedaef3070ec194877ab3277ad83766daeab706557",
+      "emitted_functions": [
+        {
+          "name": "lumpUnload__FPv",
+          "compiled_body_bytes": 544
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-lump-unload/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-megatile-init/megatile_init.cpp",
+      "source_sha256": "adb02b7b3224440e6dbad5fe83294d1a49f840aa6f6e510524fbf0abc49f50fd",
+      "object_sha256": "9eb4789adab2c228ed3f7e0fb073254cfeb5648a95ff3aef18fbdc54df2af694",
+      "emitted_functions": [
+        {
+          "name": "megatileInit__FP12MegatileRootPv",
+          "compiled_body_bytes": 652
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-megatile-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-megatile-storage/megatile_storage.cpp",
+      "source_sha256": "395c1d22218bcdbc4cff862a69c7f21d8974089b427b1642fb5ed66cd96913cc",
+      "object_sha256": "743df9cb32bfd034ef5c9019b22d77f8e7a1cfd043a591ae1e88812a012bf8d4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-render-world-a-megatile-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-render-storage/render_storage.cpp",
+      "source_sha256": "e45c2085c104ffaab030aa55874ca5ab3da5019a295282e04d986b930543080e",
+      "object_sha256": "f2b957e321f5f4398ca70b708e296dc543135dc8dd6b06603cb2add85daeea98",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-render-world-a-render-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-run-standard-glow/run_standard_glow.cpp",
+      "source_sha256": "518a74b2346ab9be19ca2dab90bf8038949981b106299ed91677efc7e380c84c",
+      "object_sha256": "e58c0886af80f017e9b88804cc419f4b3a231d8d9b4dd7f39f9d5175e961be16",
+      "emitted_functions": [
+        {
+          "name": "runStandardGlow__8Creature",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-run-standard-glow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-set-dir-light/set_dir_light.cpp",
+      "source_sha256": "526ef18050a1c5725b6a92aea404f61617bf8cdb0c16b147bcc994b1fbb1bbab",
+      "object_sha256": "44869f39b5243117e61d228fc578403f975c3d02ed88b0f9472da44e6b4d6d27",
+      "emitted_functions": [
+        {
+          "name": "setDirLight__Fsssssfb",
+          "compiled_body_bytes": 404
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-set-dir-light/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-render-world-a",
+      "source": "sources/w8-render-world-a-texture-draw-color/texture_draw_color.cpp",
+      "source_sha256": "f3eebd9f15e783fa83390249c2878c8223279c5e282f1d35b9e3f77fcc69b533",
+      "object_sha256": "e675a145638bf26535f702218808734fa13d7c1521d7321094df2468d2da92f6",
+      "emitted_functions": [
+        {
+          "name": "_textureDrawColor__FP8_textureiiiUi",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/w8-render-world-a-texture-draw-color/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

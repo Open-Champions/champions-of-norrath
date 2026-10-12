@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2366,
+  "default_authored_inputs": 2391,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3118,7 +3118,32 @@
     "sources/w8-net-play-b-start-level/net_start_level.cpp": "5831e10c793399648830b1ca88985f783decb89fbac673cad4b5716b2a884347",
     "sources/w8-net-play-b-start-network-game-frame/net_start_network_game_frame.cpp": "3105b37675dfe124bbc36abb3314bf76559f76f27d17b5d4acb00c56bec898bd",
     "sources/w8-net-play-b-start-network-game-init/net_start_network_game_init.cpp": "7d8dc279361afe83fb289df36e3b6422727568a78cfe4dd333b6e0a7eed1e6e6",
-    "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp": "559d20152df30df5de353994033c5c0ea5fdb07021e870a600f4a19d3d1f569a"
+    "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp": "559d20152df30df5de353994033c5c0ea5fdb07021e870a600f4a19d3d1f569a",
+    "sources/w8-render-world-a-block-alloc-init/block_alloc_init.cpp": "b7437cc254fcf5694153195afe23467115a512281d68247b1b1dcf14a1db18ef",
+    "sources/w8-render-world-a-block-alloc/block_alloc.cpp": "a5a295ee2788d8cb8cdb35a98b531568f276d52dfe0d4518cf9373fed81fee8c",
+    "sources/w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp": "46a876a4d361c233e89772c283f713a56a5a6c0ec8f7a776f522e4ff73003f88",
+    "sources/w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp": "c939fdc11cc08c76255a98b7e13fd68584f998ff887ea332bf070c8969982093",
+    "sources/w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp": "cc664c50b7ae7a949c561e8710f5f05abcc43791129f9d1bb596b5f381d01cb2",
+    "sources/w8-render-world-a-creature-draw/creature_draw.cpp": "0f0c53a29094a05da5e96dee80740ddd8e6caa37704cb430a40e9d4708ab7c5f",
+    "sources/w8-render-world-a-creature-every-frame/creature_every_frame.cpp": "1ebf0418856281cd86f33daa9644a15a5c23cac69f6a838a84e8c38c85c35a78",
+    "sources/w8-render-world-a-eval-hermite/eval_hermite.cpp": "c8427fbfd2ac2fec98de8e6fbd8379b810ed228b0667f6b3a0553966a49f1938",
+    "sources/w8-render-world-a-floor-clear/floor_clear.cpp": "de82e2bb1dc0df8c677f103979d30a9b3e0883d98487fe6b31001fa4efa3a814",
+    "sources/w8-render-world-a-get-megatile-center/get_megatile_center.cpp": "5ff55f0c1528f0d6b0aca90473d2b7b4fd7a633549bc39f0745f167c2d4eda3d",
+    "sources/w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp": "af7e470fad5a34d56e118a52f14da5b9ffb403a43b1e0cb1ac5924fda96e7356",
+    "sources/w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp": "3c38620169e03995fedbf70d121843e8318a8b26261c62d352fc0df32a93fa85",
+    "sources/w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp": "86ece6162712e6a07a61210ed1fd923c91e2f9b3156bc1c9640e35be26fe8385",
+    "sources/w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp": "285a0b3212224e4adc9f4003deed98a06d92752fa9cee380f489b463557c62cd",
+    "sources/w8-render-world-a-load-directory/load_directory.cpp": "b2156ecd61871ac1fdfcf1a569236cacbf6773df5d3eff530f49e72536a6e292",
+    "sources/w8-render-world-a-lump-check/lump_check.cpp": "17ba1dedc226a1e1c2233532852e91e641ee0138664344f0d017662c8b72a13d",
+    "sources/w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp": "1a0c3354dd0de8452bf532f6661612c636b13b827cf38afbfbf8cb91395c8c11",
+    "sources/w8-render-world-a-lump-query/lump_query.cpp": "ed3a0182cbe62a68f0e48ba8092c9e642602ffce33448907b43097859c03400f",
+    "sources/w8-render-world-a-lump-unload/lump_unload.cpp": "81a4aeaf126dc3995d9621e07ae0b35862e81809d5188572e7f75041beb6de83",
+    "sources/w8-render-world-a-megatile-init/megatile_init.cpp": "adb02b7b3224440e6dbad5fe83294d1a49f840aa6f6e510524fbf0abc49f50fd",
+    "sources/w8-render-world-a-megatile-storage/megatile_storage.cpp": "395c1d22218bcdbc4cff862a69c7f21d8974089b427b1642fb5ed66cd96913cc",
+    "sources/w8-render-world-a-render-storage/render_storage.cpp": "e45c2085c104ffaab030aa55874ca5ab3da5019a295282e04d986b930543080e",
+    "sources/w8-render-world-a-run-standard-glow/run_standard_glow.cpp": "518a74b2346ab9be19ca2dab90bf8038949981b106299ed91677efc7e380c84c",
+    "sources/w8-render-world-a-set-dir-light/set_dir_light.cpp": "526ef18050a1c5725b6a92aea404f61617bf8cdb0c16b147bcc994b1fbb1bbab",
+    "sources/w8-render-world-a-texture-draw-color/texture_draw_color.cpp": "f3eebd9f15e783fa83390249c2878c8223279c5e282f1d35b9e3f77fcc69b533"
   },
   "inputs": [
     {
@@ -33712,6 +33737,387 @@
           "compiled_body_bytes": 228
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2368,
+      "kind": "independently_authored_source",
+      "object_name": "block_alloc_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b7437cc254fcf5694153195afe23467115a512281d68247b1b1dcf14a1db18ef",
+      "source": "sources/w8-render-world-a-block-alloc-init/block_alloc_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "blockAllocInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2369,
+      "kind": "independently_authored_source",
+      "object_name": "block_alloc.o",
+      "profile": "authored_cpp",
+      "sha256": "a5a295ee2788d8cb8cdb35a98b531568f276d52dfe0d4518cf9373fed81fee8c",
+      "source": "sources/w8-render-world-a-block-alloc/block_alloc.cpp",
+      "emitted_functions": [
+        {
+          "name": "blockAlloc__Fi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2370,
+      "kind": "independently_authored_source",
+      "object_name": "block_get_nm_free.o",
+      "profile": "authored_cpp",
+      "sha256": "46a876a4d361c233e89772c283f713a56a5a6c0ec8f7a776f522e4ff73003f88",
+      "source": "sources/w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp",
+      "emitted_functions": [
+        {
+          "name": "blockGetNmFree__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2371,
+      "kind": "independently_authored_source",
+      "object_name": "check_can_alloc_descriptor.o",
+      "profile": "authored_cpp",
+      "sha256": "c939fdc11cc08c76255a98b7e13fd68584f998ff887ea332bf070c8969982093",
+      "source": "sources/w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp",
+      "emitted_functions": [
+        {
+          "name": "checkCanAllocDescriptor__Fv",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2372,
+      "kind": "independently_authored_source",
+      "object_name": "creature_advance_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "cc664c50b7ae7a949c561e8710f5f05abcc43791129f9d1bb596b5f381d01cb2",
+      "source": "sources/w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp",
+      "emitted_functions": [
+        {
+          "name": "creatureAdvanceAnimation__8Creaturef",
+          "compiled_body_bytes": 352
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2373,
+      "kind": "independently_authored_source",
+      "object_name": "creature_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "0f0c53a29094a05da5e96dee80740ddd8e6caa37704cb430a40e9d4708ab7c5f",
+      "source": "sources/w8-render-world-a-creature-draw/creature_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "draw__8CreatureP12_modelHeaderP8_textureT1",
+          "compiled_body_bytes": 2824
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2374,
+      "kind": "independently_authored_source",
+      "object_name": "creature_every_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "1ebf0418856281cd86f33daa9644a15a5c23cac69f6a838a84e8c38c85c35a78",
+      "source": "sources/w8-render-world-a-creature-every-frame/creature_every_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "everyFrame__8CreatureP12_modelHeader",
+          "compiled_body_bytes": 3948
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2375,
+      "kind": "independently_authored_source",
+      "object_name": "eval_hermite.o",
+      "profile": "authored_cpp",
+      "sha256": "c8427fbfd2ac2fec98de8e6fbd8379b810ed228b0667f6b3a0553966a49f1938",
+      "source": "sources/w8-render-world-a-eval-hermite/eval_hermite.cpp",
+      "emitted_functions": [
+        {
+          "name": "evalHermite__Ffffff",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2376,
+      "kind": "independently_authored_source",
+      "object_name": "floor_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "de82e2bb1dc0df8c677f103979d30a9b3e0883d98487fe6b31001fa4efa3a814",
+      "source": "sources/w8-render-world-a-floor-clear/floor_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "floorClear__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2377,
+      "kind": "independently_authored_source",
+      "object_name": "get_megatile_center.o",
+      "profile": "authored_cpp",
+      "sha256": "5ff55f0c1528f0d6b0aca90473d2b7b4fd7a633549bc39f0745f167c2d4eda3d",
+      "source": "sources/w8-render-world-a-get-megatile-center/get_megatile_center.cpp",
+      "emitted_functions": [
+        {
+          "name": "getMegatileCenter__FG6Point2",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2378,
+      "kind": "independently_authored_source",
+      "object_name": "get_megatile_original_center.o",
+      "profile": "authored_cpp",
+      "sha256": "af7e470fad5a34d56e118a52f14da5b9ffb403a43b1e0cb1ac5924fda96e7356",
+      "source": "sources/w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp",
+      "emitted_functions": [
+        {
+          "name": "getMegatileOriginalCenter__FG6Point2",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2379,
+      "kind": "independently_authored_source",
+      "object_name": "global_init_edgearray.o",
+      "profile": "authored_cpp",
+      "sha256": "3c38620169e03995fedbf70d121843e8318a8b26261c62d352fc0df32a93fa85",
+      "source": "sources/w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "_GLOBAL_$I$edgearray",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2380,
+      "kind": "independently_authored_source",
+      "object_name": "global_init_model_clipping_on.o",
+      "profile": "authored_cpp",
+      "sha256": "86ece6162712e6a07a61210ed1fd923c91e2f9b3156bc1c9640e35be26fe8385",
+      "source": "sources/w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$I$modelClippingOn",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2381,
+      "kind": "independently_authored_source",
+      "object_name": "global_init_world_tile.o",
+      "profile": "authored_cpp",
+      "sha256": "285a0b3212224e4adc9f4003deed98a06d92752fa9cee380f489b463557c62cd",
+      "source": "sources/w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL21static_initializationii",
+          "compiled_body_bytes": 648
+        },
+        {
+          "name": "_GLOBAL_$I$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        },
+        {
+          "name": "_GLOBAL_$D$worldTileEntityLightScale",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2382,
+      "kind": "independently_authored_source",
+      "object_name": "load_directory.o",
+      "profile": "authored_cpp",
+      "sha256": "b2156ecd61871ac1fdfcf1a569236cacbf6773df5d3eff530f49e72536a6e292",
+      "source": "sources/w8-render-world-a-load-directory/load_directory.cpp",
+      "emitted_functions": [
+        {
+          "name": "loadDirectory__FP9directoryii",
+          "compiled_body_bytes": 432
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2383,
+      "kind": "independently_authored_source",
+      "object_name": "lump_check.o",
+      "profile": "authored_cpp",
+      "sha256": "17ba1dedc226a1e1c2233532852e91e641ee0138664344f0d017662c8b72a13d",
+      "source": "sources/w8-render-world-a-lump-check/lump_check.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpCheck__Fv",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2384,
+      "kind": "independently_authored_source",
+      "object_name": "lump_find_by_type.o",
+      "profile": "authored_cpp",
+      "sha256": "1a0c3354dd0de8452bf532f6661612c636b13b827cf38afbfbf8cb91395c8c11",
+      "source": "sources/w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpFindByType__FPvPci",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2385,
+      "kind": "independently_authored_source",
+      "object_name": "lump_query.o",
+      "profile": "authored_cpp",
+      "sha256": "ed3a0182cbe62a68f0e48ba8092c9e642602ffce33448907b43097859c03400f",
+      "source": "sources/w8-render-world-a-lump-query/lump_query.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpQuery__FPc",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2386,
+      "kind": "independently_authored_source",
+      "object_name": "lump_unload.o",
+      "profile": "authored_cpp",
+      "sha256": "81a4aeaf126dc3995d9621e07ae0b35862e81809d5188572e7f75041beb6de83",
+      "source": "sources/w8-render-world-a-lump-unload/lump_unload.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpUnload__FPv",
+          "compiled_body_bytes": 544
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2387,
+      "kind": "independently_authored_source",
+      "object_name": "megatile_init.o",
+      "profile": "authored_cpp",
+      "sha256": "adb02b7b3224440e6dbad5fe83294d1a49f840aa6f6e510524fbf0abc49f50fd",
+      "source": "sources/w8-render-world-a-megatile-init/megatile_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "megatileInit__FP12MegatileRootPv",
+          "compiled_body_bytes": 652
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2388,
+      "kind": "independently_authored_source",
+      "object_name": "megatile_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "395c1d22218bcdbc4cff862a69c7f21d8974089b427b1642fb5ed66cd96913cc",
+      "source": "sources/w8-render-world-a-megatile-storage/megatile_storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2389,
+      "kind": "independently_authored_source",
+      "object_name": "render_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "e45c2085c104ffaab030aa55874ca5ab3da5019a295282e04d986b930543080e",
+      "source": "sources/w8-render-world-a-render-storage/render_storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2390,
+      "kind": "independently_authored_source",
+      "object_name": "run_standard_glow.o",
+      "profile": "authored_cpp",
+      "sha256": "518a74b2346ab9be19ca2dab90bf8038949981b106299ed91677efc7e380c84c",
+      "source": "sources/w8-render-world-a-run-standard-glow/run_standard_glow.cpp",
+      "emitted_functions": [
+        {
+          "name": "runStandardGlow__8Creature",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2391,
+      "kind": "independently_authored_source",
+      "object_name": "set_dir_light.o",
+      "profile": "authored_cpp",
+      "sha256": "526ef18050a1c5725b6a92aea404f61617bf8cdb0c16b147bcc994b1fbb1bbab",
+      "source": "sources/w8-render-world-a-set-dir-light/set_dir_light.cpp",
+      "emitted_functions": [
+        {
+          "name": "setDirLight__Fsssssfb",
+          "compiled_body_bytes": 404
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2392,
+      "kind": "independently_authored_source",
+      "object_name": "texture_draw_color.o",
+      "profile": "authored_cpp",
+      "sha256": "f3eebd9f15e783fa83390249c2878c8223279c5e282f1d35b9e3f77fcc69b533",
+      "source": "sources/w8-render-world-a-texture-draw-color/texture_draw_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "_textureDrawColor__FP8_textureiiiUi",
+          "compiled_body_bytes": 508
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -33811,7 +34217,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "02079361f33eac072c9a5baf9f91240c793176a39af772ca0eb965bc1f229bfb",
+  "snapshot_sha256": "a3136e019fc213fc777d371ae236635e0e276e42dc3a5ee4974811475f17d3b5",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

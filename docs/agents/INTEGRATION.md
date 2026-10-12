@@ -4637,6 +4637,52 @@ Opened: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_ConvertTempPlayerToReal__F
 `totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`,
 `worldPlotRouteSetEnable__Fi`.
 
+## agents/w8-render-world-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five units
+with fresh `input_order` values 2366 through 2390: 27 emitted functions
+(11,796 compiled body bytes, not original-byte matches, including file-local
+helpers). All 25 host checks build and exit 0 here (25 of 25). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1950 function bodies, 2391 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1518 |
+| After | 1514 |
+| Closed | 30 |
+| Opened | 26 |
+
+Closed: `_GLOBAL_$D$worldTileEntityLightScale`, `_GLOBAL_$I$edgearray`,
+`_GLOBAL_$I$modelClippingOn`, `_GLOBAL_$I$worldTileEntityLightScale`,
+`_textureDrawColor__FP8_textureiiiUi`, `blockAllocInit__Fv`,
+`blockAlloc__Fi`, `blockGetNmFree__Fv`, `cache`, `cacheHead`, `cacheTail`,
+`checkBlock`, `checkCanAllocDescriptor__Fv`,
+`creatureAdvanceAnimation__8Creaturef`, `decompressStack`,
+`draw__8CreatureP12_modelHeaderP8_textureT1`, `evalHermite__Ffffff`,
+`everyFrame__8CreatureP12_modelHeader`, `floorClear__Fv`,
+`getMegatileCenter__FG6Point2`, `getMegatileOriginalCenter__FG6Point2`,
+`lastNmBlocksFree`, `lastNmQ.1088`, `loadDirectory__FP9directoryii`,
+`loadSampleRate.784`, `lumpCheck__Fv`, `lumpFindByType__FPvPci`,
+`lumpQuery__FPc`, `lumpUnload__FPv`, `megatileInit__FP12MegatileRootPv`.
+
+Opened: `ParticleEmitterTestParticle`, `_$_5Light`, `bossMeterName`,
+`drawTexture__FR6PacketP8_textureiiiiii`, `droplet`, `ef1Noise__Fi`,
+`freeLump__FPv`, `fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Poin
+t3sP15FxCreatureStateffff`, `fxRunCreatureGlow__FP10GameObjectP12_modelHeade
+rP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi`, `fxRunCreatureShoc
+k__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`,
+`gameLineGetVert__Fii`, `gameLineGet__FPc`,
+`getClosestLivingPlayer__FG6Point3f`, `initPosition__FP17gameLinePathState`,
+`isBoss__FP10GameObject`, `lightSetColorScale__Ffff`,
+`lightSetPrimaryDirectional__FG6Point3Ps`,
+`lightSetSecondaryDirectional__FG6Point3Ps`,
+`megatileBankInit__FP16MegatileInstBankPv`,
+`megatileItemInit__FP8MegatilePv`, `mtcInitialize__Fv`,
+`netCheckActivation__FG6Point3f`, `rainSplashParticle`, `routeQueue`,
+`textRemoveText__FPv`, `worldFreeWorld__FP12_worldHeader`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
