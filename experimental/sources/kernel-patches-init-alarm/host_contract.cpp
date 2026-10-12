@@ -7,7 +7,9 @@
 #include <cstdio>
 #include <cstring>
 
-extern "C" unsigned g_pFreeAlarm = 0;
+extern "C" {
+unsigned g_pFreeAlarm = 0;
+}
 extern "C" AlarmSlot g_AlarmBuf[64] = {};
 
 static unsigned low(const void* address) {
