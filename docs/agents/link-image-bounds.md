@@ -30,9 +30,19 @@ The EE compiler emitted both data-only objects, with no initializer functions.
 Both host contracts checked every slot and both sentinels. A private reference
 comparison independently checked all 112 callback names against original slots.
 
+## Semaphore storage
+
+Observed `__sce_sema_id` at `0x00444a30` and `__sce_eh_sema_id` at
+`0x00444a34`: separate four-byte `.data` objects, each initially zero.
+The authored definitions are separate zero-initialized words (emitted in BSS).
+The host contract checks initial values, distinct addresses, and independent
+mutation. The reviewed EE compilation passed. The final image must initialize
+this BSS before use. `norrath_player_malloc_semaphore_view` remains separate,
+as required by the integration decision; this package adds no alias.
+
 ## Imports closed
 
-`__register_frame_info`, `atexit`, `__deregister_frame_info`, `__CTOR_LIST__`, `__DTOR_LIST__`.
+`__register_frame_info`, `atexit`, `__deregister_frame_info`, `__CTOR_LIST__`, `__DTOR_LIST__`, `__sce_sema_id`, `__sce_eh_sema_id`.
 
 ## Imports opened
 
