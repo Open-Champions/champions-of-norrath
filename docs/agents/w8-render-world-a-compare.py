@@ -658,6 +658,52 @@ reg('creatureAdvanceAnimation__8Creaturef', 0x111830,
     stubs=CREATURE_STUBS, stub_addr=CREATURE_ADDR, returns=True)
 
 
+def mg_effect(rng, m):
+    if rng.random() < 0.12:
+        m.w32(sym('mgrg'), ARENA + 0x6000)
+
+
+MEGA_STUBS = {'megatileBankInit__FP16MegatileInstBankPv': dict(nargs=2, effect=mg_effect),
+              'megatileItemInit__FP8MegatilePv': dict(nargs=2, effect=mg_effect),
+              'mtcInitialize__Fv': dict(nargs=0)}
+MEGA_ADDR = {'megatileBankInit__FP16MegatileInstBankPv': 0x2660A8, 'megatileItemInit__FP8MegatilePv': 0x266100,
+             'mtcInitialize__Fv': 0x266EE8}
+
+
+def scenario_megatile_init(rng):
+    mem = {}
+    root = ARENA + 0x3000
+    base = ARENA + 0x10000
+    for a in (root, ARENA + 0x6000):
+        fill(rng, mem, a, 0x400)
+        put32(mem, a + 28, rng.choice([0, 1, 2, 3]))
+        put32(mem, a + 36, rng.choice([0, 1, 2]))
+        put32(mem, a + 32, 0x100)
+        put32(mem, a + 40, 0x400)
+        put32(mem, a + 52, rng.choice([0, 0x2000, 0x2000]))
+        w = rng.choice([0, 1, 2, 3, 4, 0xFFFF, 5])
+        mem[a + 48] = w & 0xFF; mem[a + 49] = w >> 8
+        put32(mem, a + 56, rng.choice([0, 1, 2, 2, 3]))
+        put32(mem, a + 84, rng.choice([0, 1, 2, 3, 5]) if rng.random() < 0.9 else 0x100)
+        put32(mem, a + 760, rng.choice([0, 1, 1, 2]))
+        put32(mem, a + 764, rng.choice([0, 1, 4, 8]))
+        for e in range(8):
+            mem[a + 768 + 16 * e + 16] = rng.choice([0, 1, 1, 2, 0xFF]) if e else rng.choice([0, 1, 1, 2, 0xFF])
+    put32(mem, sym('mgrg'), rng.choice([0, 0x12345678]))
+    # blocks reached through the relocated pointers
+    fill(rng, mem, base + 0x100, 0x100)
+    fill(rng, mem, base + 0x400, 0x400)
+    fill(rng, mem, base + 0x2000, 0x400)
+    cmp_addrs = list(range(root, root + 0x400)) + list(range(ARENA + 0x6000, ARENA + 0x6400)) + \
+        list(range(base + 0x100, base + 0x200)) + list(range(base + 0x400, base + 0x800)) + \
+        list(range(base + 0x2000, base + 0x2400)) + list(range(sym('mgrg'), sym('mgrg') + 4))
+    return {'mem': mem, 'args': [root, base], 'compare': cmp_addrs, 'steps': 3000000}
+
+
+reg('megatileInit__FP12MegatileRootPv', 0x25E0E0, 'w8-render-world-a-megatile-init/megatile_init.cpp', scenario_megatile_init,
+    stubs=MEGA_STUBS, stub_addr=MEGA_ADDR)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
