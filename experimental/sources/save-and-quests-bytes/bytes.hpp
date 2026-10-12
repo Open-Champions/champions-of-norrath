@@ -54,6 +54,11 @@ inline unsigned long long read_u64(const void* a) {
     const unsigned char* p = static_cast<const unsigned char*>(a);
     return static_cast<unsigned long long>(read_word(p)) | (static_cast<unsigned long long>(read_word(p + 4)) << 32);
 }
+inline int read_i16(const void* a) {
+    const unsigned char* p = static_cast<const unsigned char*>(a);
+    const int value = p[0] | (p[1] << 8);
+    return value < 32768 ? value : value - 65536;
+}
 inline float read_single(const void* a) { return __builtin_bit_cast(float, read_word(a)); }
 inline void write_single(void* a, float value) { write_word(a, __builtin_bit_cast(unsigned, value)); }
 inline int signed_word(unsigned value) {
