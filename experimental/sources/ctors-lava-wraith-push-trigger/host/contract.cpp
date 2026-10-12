@@ -45,7 +45,7 @@ static void run_case(int tag_int, int mode, int type) {
     const unsigned r = norrath_construct_PushTrigger(o.b, pt, type, args);
     std::vector<std::string> w{"GameObject map=0 args=1"};
     char b[160];
-    std::snprintf(b, sizeof b, "int hasPhysics 0 flags=%08x", 0x1010bu); w.push_back(b);
+    std::snprintf(b, sizeof b, "int hasPhysics 0 flags=%08x", 0x10010bu); w.push_back(b);
     w.push_back("str icon 0");
     if (mode != 0) {
         if (mode == 1) w.push_back("strcmp up up");
@@ -56,7 +56,7 @@ static void run_case(int tag_int, int mode, int type) {
     }
     expect_log(w, "push trigger");
     for (int i = 0; i < 12; ++i) want.b[16 + i] = pt[i];
-    want.w(12, 0x1010b & (tag_int ? ~1u : ~0u)); want.w(72, low(norrath_ctors_lava_wraith_view_44c710)); want.w(56, (unsigned)type, 2);
+    want.w(12, 0x10010b & (tag_int ? ~1u : ~0u)); want.w(72, low(norrath_ctors_lava_wraith_view_44c710)); want.w(56, (unsigned)type, 2);
     expect_image(o, want, "push trigger image");
     expect(r == (mode ? 0xabcu : 0u), "push trigger return");
 }

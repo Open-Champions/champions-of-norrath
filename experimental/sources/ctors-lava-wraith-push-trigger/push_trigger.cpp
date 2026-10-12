@@ -1,7 +1,7 @@
 #include "../ctors-lava-wraith-detail/detail.hpp"
 // __11PushTriggerG6Point3iPPc at 0x1d12d8, 404 bytes.
 // GameObject receives a point snapshot, a null map and the argument list. View
-// 0x44c710 goes to +72, flags gain 0x0001000b and the low half of the int goes
+// 0x44c710 goes to +72, flags gain 0x0010000b and the low half of the int goes
 // to +56. A nonzero integer tag at 0x46cd20 clears flag bit 0. The string tag
 // at 0x484fa0 selects the map-icon path: with no string the constructor ends
 // and V0 is that null result. Otherwise the kind is 0 when the string equals
@@ -14,7 +14,7 @@ extern "C" unsigned norrath_construct_PushTrigger(void* object, const void* poin
     const PointBytes local = snapshot_point(point);
     (void)norrath_game_object_construct(object, &local, nullptr, arguments);
     const Address a = address(object);
-    write_word(a + 12u, read_word(a + 12u) | 0x0001000bu);
+    write_word(a + 12u, read_word(a + 12u) | 0x0010000bu);
     write_word(a + 72u, address_bits(norrath_ctors_lava_wraith_view_44c710));
     write_half(a + 56u, static_cast<unsigned>(type));
     if (norrath_game_object_find_tag_int(object, reinterpret_cast<char*>(norrath_ctors_lava_wraith_view_46cd20), 0) != 0) {
