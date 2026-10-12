@@ -17902,6 +17902,196 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp"
+    },
+    {
+      "input_order": 1394,
+      "component": "combat-reactions-alert-game-object",
+      "object_name": "alert.o",
+      "private_object_sha256": "c83580ab8bb8c6943b0931c050f6248335857aa2fd9daf22cbe69e5b301031ca",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__10GameObjectifG6Point3P10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-alert-game-object/alert.cpp"
+    },
+    {
+      "input_order": 1395,
+      "component": "combat-reactions-charm",
+      "object_name": "charm.o",
+      "private_object_sha256": "209e762702e68faef8b9d7eae38b562ccca5b714a3f769d1c15f20907c64ecea",
+      "emitted_functions": [
+        {
+          "name": "charm__8Creaturei",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-charm/charm.cpp"
+    },
+    {
+      "input_order": 1396,
+      "component": "combat-reactions-collision-frame",
+      "object_name": "frame.o",
+      "private_object_sha256": "6e5a3caca8e9733fe9b316b0beb4728097eed39d757b9325bc8181fb8d510ad0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-frame/frame.cpp"
+    },
+    {
+      "input_order": 1397,
+      "component": "combat-reactions-collision-game-object",
+      "object_name": "collision.o",
+      "private_object_sha256": "86e26cfa3adc0321abe6eec93c1ca7ef52d0ea4b4bce67f3bf299c8ddf262812",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__10GameObjectP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-game-object/collision.cpp"
+    },
+    {
+      "input_order": 1398,
+      "component": "combat-reactions-collision-gold",
+      "object_name": "collision_gold.o",
+      "private_object_sha256": "a22446b104778a99bede253b48b81deb131fe862698e28bd77a100a9fc1016f3",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__4GoldP10GameObject",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-gold/collision_gold.cpp"
+    },
+    {
+      "input_order": 1399,
+      "component": "combat-reactions-collision-grid-scale",
+      "object_name": "grid_scale.o",
+      "private_object_sha256": "993c74e036ef8870cfce3cba723a03a7fb2a4265e8f55f92ec6dc612d1a27116",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-grid-scale/grid_scale.cpp"
+    },
+    {
+      "input_order": 1400,
+      "component": "combat-reactions-collision-world",
+      "object_name": "collision_world.o",
+      "private_object_sha256": "4c3a9b089a58158ea2083402e24aad0d4d7d922f7f8c03955f6fe5fd5150f3f8",
+      "emitted_functions": [
+        {
+          "name": "msg_collisionWorld__10GameObjectG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-world/collision_world.cpp"
+    },
+    {
+      "input_order": 1401,
+      "component": "combat-reactions-hurt-game-object",
+      "object_name": "hurt.o",
+      "private_object_sha256": "e36f6404eac1abae9bd2f60e776c14bbe9a1061e824252cbc91c753c36d34e91",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10GameObjectfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-hurt-game-object/hurt.cpp"
+    },
+    {
+      "input_order": 1402,
+      "component": "combat-reactions-set-state-cat",
+      "object_name": "set_state_cat.o",
+      "private_object_sha256": "2ec6ff739b8dbb77e04dadbd00f577d5942ad8b6a09553de14aa95b757be64bf",
+      "emitted_functions": [
+        {
+          "name": "setState__3Cati",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-cat/set_state_cat.cpp"
+    },
+    {
+      "input_order": 1403,
+      "component": "combat-reactions-set-state-gnome",
+      "object_name": "set_state_gnome.o",
+      "private_object_sha256": "fc4727515034c96b7bb98c392fce4de71427e9d4f456f656859a393e9524ef6e",
+      "emitted_functions": [
+        {
+          "name": "setState__14GnomeNavigatori",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp"
+    },
+    {
+      "input_order": 1404,
+      "component": "combat-reactions-set-state-mermaid",
+      "object_name": "set_state_mermaid.o",
+      "private_object_sha256": "46592296918ed27fc1f2ca80d5cfb117896f0dc5e390cbc1467ce9a31f2d7b07",
+      "emitted_functions": [
+        {
+          "name": "setState__7Mermaidi",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp"
+    },
+    {
+      "input_order": 1405,
+      "component": "combat-reactions-set-state-spider",
+      "object_name": "set_state_spider.o",
+      "private_object_sha256": "3991934317b3322fed214a2994ddbc14f7cc1b0d447cd155762ebf0fc2d97712",
+      "emitted_functions": [
+        {
+          "name": "setState__11SmallSpideri",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-spider/set_state_spider.cpp"
+    },
+    {
+      "input_order": 1406,
+      "component": "combat-reactions-spell-blessed-type-name",
+      "object_name": "type_name.o",
+      "private_object_sha256": "0d3dbf6ffc7f3dab33e460beffc614248627a1390c63359b53f8338a0dd4b62f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-spell-blessed-type-name/type_name.cpp"
+    },
+    {
+      "input_order": 1407,
+      "component": "combat-reactions-spell-type-name",
+      "object_name": "type_name.o",
+      "private_object_sha256": "447fa566eb5c36c499b115860df168fdbd88a62212d107c506c83d6bee5a2a99",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-spell-type-name/type_name.cpp"
+    },
+    {
+      "input_order": 1408,
+      "component": "combat-reactions-update-enemy",
+      "object_name": "update_enemy.o",
+      "private_object_sha256": "db58d5cdde4beb31aaa63b2757fda3502198c9132c6cf65c6ccec2d5309a0592",
+      "emitted_functions": [
+        {
+          "name": "updateEnemy__8Creature",
+          "compiled_body_bytes": 3568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-update-enemy/update_enemy.cpp"
     }
   ],
   "drafts": [
@@ -21090,7 +21280,39 @@
     "sources/loop-grid-fx-task-list/task_list.cpp": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
     "sources/loop-grid-fx-task-list/host_check.cpp": "e59da3ed56b933c6a72fda49fc38bdffbc02caf83832d6c05d6e7390ae55d78f",
     "sources/loop-grid-fx-particle-storage/particle_storage.cpp": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
-    "sources/loop-grid-fx-particle-storage/host_check.cpp": "0654ae521e6d2edad88877bcef688bb9d364fe00c0be660addd04a33b503e7e9"
+    "sources/loop-grid-fx-particle-storage/host_check.cpp": "0654ae521e6d2edad88877bcef688bb9d364fe00c0be660addd04a33b503e7e9",
+    "sources/combat-reactions-alert-game-object/host_check.cpp": "f416a950e214e9308ec44941ebd3c731f0640f9668bd149a2db2ce6caa05a526",
+    "sources/combat-reactions-alert-game-object/alert.cpp": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+    "sources/combat-reactions-bytes/bytes.hpp": "3c483121a898b452c5e0e420d5702f67618768a16cd45a9d30914533a51e35d6",
+    "sources/combat-reactions-charm/host_check.cpp": "1af0832051fc2e3e6d9d0ca4de057ad9919c2c1b4f3a826f54fb77711185c842",
+    "sources/combat-reactions-charm/charm.cpp": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+    "sources/combat-reactions-collision-frame/host_check.cpp": "7513f68d1554eae27718af1499eaaa8c05995ec6f4a8dfc9fbe46cdce2440d4a",
+    "sources/combat-reactions-collision-frame/frame.cpp": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+    "sources/combat-reactions-collision-game-object/host_check.cpp": "f5665cafe84fef6aa213a33514efadd25526d09a849d128cd75e32a605d36663",
+    "sources/combat-reactions-collision-game-object/collision.cpp": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+    "sources/combat-reactions-collision-gold/host_check.cpp": "292c8af9839b2b9bfb4c256951f573ea4a38df4fa02abe6c585b299282d66ca0",
+    "sources/combat-reactions-collision-gold/collision_gold.cpp": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+    "sources/combat-reactions-collision-grid-scale/host_check.cpp": "c2f1d9676ce0713b7f6a6e914d745bec75e5eed31f0582e93b3dd0917f4e2d3c",
+    "sources/combat-reactions-collision-grid-scale/grid_scale.cpp": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+    "sources/combat-reactions-collision-world/host_check.cpp": "307862fee43ed9a68c22ef59ee742bfa98bd19e66b189885a07c3498cc28297b",
+    "sources/combat-reactions-collision-world/collision_world.cpp": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+    "sources/combat-reactions-hurt-game-object/host_check.cpp": "9665673ba45cc9b44a267b3033d522a3d0dc69e37e3fba10a646fee7d9a791af",
+    "sources/combat-reactions-hurt-game-object/hurt.cpp": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+    "sources/combat-reactions-set-state-cat/host_check.cpp": "9aad8c05e5523eb7d454d5b4f287e8ae879db8ea6a55db6562d4bbbe445591d6",
+    "sources/combat-reactions-set-state-cat/set_state_cat.cpp": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+    "sources/combat-reactions-set-state-gnome/host_check.cpp": "92fb224afc5d8d2ca180c44f7fb6ecc11af4593333946950dfaf60916915a268",
+    "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+    "sources/combat-reactions-set-state-mermaid/host_check.cpp": "da58c7e75d3a6e5e55978ea30c188978c9975b63bf3449d8db5571c6a9ce8b6e",
+    "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+    "sources/combat-reactions-set-state-spider/host_check.cpp": "7f48b80b9f7dbcda5291bad1a8a5bf508eb808ca906d25a9c1ef660b7b72b165",
+    "sources/combat-reactions-set-state-spider/set_state_spider.cpp": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+    "sources/combat-reactions-spell-blessed-type-name/host_check.cpp": "a8bc82aa55036dca3da8fe77602213a81a0bd724047cb924b0262eafa7d276ed",
+    "sources/combat-reactions-spell-blessed-type-name/type_name.cpp": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+    "sources/combat-reactions-spell-type-name/host_check.cpp": "2d993e6457c2ecd99ecd38be84b52283ba557b0aa8932a3dc1b372673302d62d",
+    "sources/combat-reactions-spell-type-name/type_name.cpp": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+    "sources/combat-reactions-update-enemy/host_check.cpp": "9a74251f7690af91a2b8d42ad9b631cabf4b2943663cfbfd7b9096c1e08fed22",
+    "sources/combat-reactions-update-enemy/update_enemy.cpp": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+    "sources/combat-reactions-bytes/host_vcall.hpp": "5b7652b42820bb4d7db88e83817a5a2053cb11ed915e4dadf7691172abef96ad"
   },
   "additional_implementations": [
     {
@@ -21532,11 +21754,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1394,
-    "authored_default_inputs": 1392,
+    "selected_inputs": 1409,
+    "authored_default_inputs": 1407,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1098,
-    "compiled_body_bytes_from_accepted_inputs": 455716,
+    "emitted_function_definitions_including_helpers": 1109,
+    "compiled_body_bytes_from_accepted_inputs": 463012,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -21549,7 +21771,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1081
+    "package_selected_inputs": 1096
   },
   "startup_implementations": [
     {
@@ -38180,6 +38402,241 @@
       "emitted_functions": [],
       "host_files": [
         "sources/loop-grid-fx-particle-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-alert-game-object/alert.cpp",
+      "source_sha256": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+      "object_sha256": "c83580ab8bb8c6943b0931c050f6248335857aa2fd9daf22cbe69e5b301031ca",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__10GameObjectifG6Point3P10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-alert-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-charm/charm.cpp",
+      "source_sha256": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+      "object_sha256": "209e762702e68faef8b9d7eae38b562ccca5b714a3f769d1c15f20907c64ecea",
+      "emitted_functions": [
+        {
+          "name": "charm__8Creaturei",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-charm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-frame/frame.cpp",
+      "source_sha256": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+      "object_sha256": "6e5a3caca8e9733fe9b316b0beb4728097eed39d757b9325bc8181fb8d510ad0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-collision-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-game-object/collision.cpp",
+      "source_sha256": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+      "object_sha256": "86e26cfa3adc0321abe6eec93c1ca7ef52d0ea4b4bce67f3bf299c8ddf262812",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__10GameObjectP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-gold/collision_gold.cpp",
+      "source_sha256": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+      "object_sha256": "a22446b104778a99bede253b48b81deb131fe862698e28bd77a100a9fc1016f3",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__4GoldP10GameObject",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-gold/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-grid-scale/grid_scale.cpp",
+      "source_sha256": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+      "object_sha256": "993c74e036ef8870cfce3cba723a03a7fb2a4265e8f55f92ec6dc612d1a27116",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-collision-grid-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-world/collision_world.cpp",
+      "source_sha256": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+      "object_sha256": "4c3a9b089a58158ea2083402e24aad0d4d7d922f7f8c03955f6fe5fd5150f3f8",
+      "emitted_functions": [
+        {
+          "name": "msg_collisionWorld__10GameObjectG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-hurt-game-object/hurt.cpp",
+      "source_sha256": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+      "object_sha256": "e36f6404eac1abae9bd2f60e776c14bbe9a1061e824252cbc91c753c36d34e91",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10GameObjectfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-hurt-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-cat/set_state_cat.cpp",
+      "source_sha256": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+      "object_sha256": "2ec6ff739b8dbb77e04dadbd00f577d5942ad8b6a09553de14aa95b757be64bf",
+      "emitted_functions": [
+        {
+          "name": "setState__3Cati",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-cat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp",
+      "source_sha256": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+      "object_sha256": "fc4727515034c96b7bb98c392fce4de71427e9d4f456f656859a393e9524ef6e",
+      "emitted_functions": [
+        {
+          "name": "setState__14GnomeNavigatori",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-gnome/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp",
+      "source_sha256": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+      "object_sha256": "46592296918ed27fc1f2ca80d5cfb117896f0dc5e390cbc1467ce9a31f2d7b07",
+      "emitted_functions": [
+        {
+          "name": "setState__7Mermaidi",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-mermaid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-spider/set_state_spider.cpp",
+      "source_sha256": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+      "object_sha256": "3991934317b3322fed214a2994ddbc14f7cc1b0d447cd155762ebf0fc2d97712",
+      "emitted_functions": [
+        {
+          "name": "setState__11SmallSpideri",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-spider/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-spell-blessed-type-name/type_name.cpp",
+      "source_sha256": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+      "object_sha256": "0d3dbf6ffc7f3dab33e460beffc614248627a1390c63359b53f8338a0dd4b62f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-spell-blessed-type-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-spell-type-name/type_name.cpp",
+      "source_sha256": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+      "object_sha256": "447fa566eb5c36c499b115860df168fdbd88a62212d107c506c83d6bee5a2a99",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-spell-type-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-update-enemy/update_enemy.cpp",
+      "source_sha256": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+      "object_sha256": "db58d5cdde4beb31aaa63b2757fda3502198c9132c6cf65c6ccec2d5309a0592",
+      "emitted_functions": [
+        {
+          "name": "updateEnemy__8Creature",
+          "compiled_body_bytes": 3568
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-update-enemy/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

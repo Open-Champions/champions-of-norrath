@@ -2350,6 +2350,58 @@ Opened: `P_DeleteParticleSystem__Fi`, `P_Pop__Fv`,
 1392 authored inputs, zero COMMON. 214 tool tests passed. Object hashes in
 the snapshot come from the fresh build. No EE or game execution.
 
+## agents/combat-reactions
+
+Merged. The notes carry the five summary sections: evidence with observed
+addresses and separate inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Fifteen units, each with a
+`host_check.cpp`. All 15 passed on this machine with ASan/UBSan. A scripted
+mutation pass (one numeric literal changed at a time) was killed by the
+checks in every unit that has literals: 9/10 for the Cat, Gnome and Mermaid
+`setState` bodies, 7/10 for the Spider, 5/10 `updateEnemy__8Creature`, 3/6
+`msg_collision__4Gold`, 1/1 `charm__8Creaturei`. The notes also describe a
+comparison against the pinned executable
+(`docs/agents/combat-reactions-compare.py`, 1500 seeds per function, zero
+mismatches); that script reads the private executable, which integration
+does not, so it was not re-run and the result is the worker's. No game binary
+or disassembly listing was committed.
+
+Fifteen units were selected with fresh `input_order` values 1394 through
+1408; the four data units emit no functions. The seven code units include
+`sources/combat-reactions-bytes/bytes.hpp`, recorded in their header closure;
+`host_vcall.hpp` in the same directory is a host-only header and is in the
+snapshot `files` map only. All 15 source hashes and compiled body bytes
+match the notes. The six names the notes say other packages closed first
+(`death`, the Creature `msg_alert`, the Cat and SmallSpider collisions,
+`setState__7Nataslai`, `turnToFace`) are not defined here and not duplicated.
+
+The worker's count (1142 to 1133) was measured on an older tip; the closed
+and opened names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1204 |
+| After | 1195 |
+| Closed | 15 |
+| Opened | 6 |
+
+Closed: `charm__8Creaturei`, `msg_alert__10GameObjectifG6Point3P10GameObject`,
+`msg_collisionWorld__10GameObjectG6Point3`,
+`msg_collision__10GameObjectP10GameObject`,
+`msg_collision__4GoldP10GameObject`, `msg_hurt__10GameObjectfP10GameObjecti`,
+`norrath_collision_frame_bytes`, `norrath_collision_grid_scale_bytes`,
+`norrath_spell_blessed_type_name_view`, `norrath_spell_type_name_view`,
+`setState__11SmallSpideri`, `setState__14GnomeNavigatori`, `setState__3Cati`,
+`setState__7Mermaidi`, `updateEnemy__8Creature`.
+
+Opened: `animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
+`animGlobalSync__FP14AnimationState`,
+`getSmartRandomDestination__8Creaturei`, `hudGivePlayerGold__FiG6Point3i`,
+`resetRouting__8Creature`, `setStateProcessing__8CreaturePi`. 1107 function
+bodies, 1407 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
