@@ -1699,6 +1699,49 @@ Opened: `GetPitch__6Camera`, `GetYaw__6Camera`, `body`,
 bodies, 1238 authored inputs, zero COMMON. 214 tool tests passed. No EE
 or game execution.
 
+## agents/simloop-services
+
+This is a partial package: the branch carries eleven units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/simloop-services.md` from the source
+comments. All eleven units were selected with fresh `input_order`
+values 1240 through 1250. Eight host contracts passed on this machine.
+The `cdProcess`, `soundMapSound`, and `soundResetStream` contracts
+assume 32-bit pointers in their harnesses (pointer round-trip through a
+32-bit word, 4-byte pointer slots, and a `memset` size that only holds
+with 32-bit struct layout) and fail on this 64-bit machine for that
+reason, the same documented limitation as the ctors-ant-lantern
+contracts; their reviewed EE compilations passed. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1035 |
+| After | 1054 |
+| Closed | 11 |
+| Opened | 30 |
+
+Closed: `cdDirectoryLookup__FPcPiT1i`, `cdProcess__Fv`,
+`padInitPadIndexMap__Fv`, `padProcess__Fv`,
+`soundGetStreamPlayStatus__Fi`, `soundMakeSequenceUnpausable__Fi`,
+`soundMapSound__FPci`, `soundResetStream__Fi`,
+`soundSetStreamVolume__Fif`, `soundStartDialogStream__FiPci`,
+`soundStartMusic__FPci`. Also defined, and not a previous import: the
+`cdDirectoryLookup` file-local helper `find_row`.
+
+Opened: `currentLayerDir`, `gCd`, `initLump__FPv`, `layer0Dir`,
+`layer1Dir`, `lumps`, `memRealloc__FPvi`, `nmLumps`, `padFrame.756`,
+`padGetUnprocessedData__FiP18padUnprocessedData`, `padIndexMap`,
+`padProcessData__FP3padP18padUnprocessedDataP12padStateData`, `sbuff`,
+`sbuffin`, `sceCdGetError`, `sceCdLayerSearchFile`, `sceCdStRead`,
+`sceCdSync`, `scePadGetSlotMax`, `sequence`,
+`soundFindDialog__FPc`, `soundGetDialogFilename__Fv`,
+`soundGetFreeRam__Fv`, `soundStartStream__FiPciiiiii`,
+`soundUpdateAdjustments__Fv`, `streamOutput`, `streamSizeLeft`,
+`streamVolume`, `streaming`, `tapCount`. 976 function bodies, 1249
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1840,7 +1883,8 @@ covers Boat and AutoContainerLP. The eleven selected game-loop units
 (eight functions, five words) are in the link; the two unselected
 game-loop units are authored and not in the link. The twenty-five
 memcard-calls units are in the link. The forty natives-b units are in
-the link. The fifteen pre-logo-dialog units are in the link.
+the link. The fifteen pre-logo-dialog units are in the link. The eleven
+simloop-services units are in the link.
 `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected

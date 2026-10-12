@@ -15865,6 +15865,164 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/pre-logo-dialog-words/dialog_words.cpp"
+    },
+    {
+      "input_order": 1240,
+      "component": "simloop-services-cd-directory-lookup",
+      "object_name": "cd_directory_lookup.o",
+      "private_object_sha256": "7688d007c63c8239838e82fa53f1a512219173e70a617069d8de4e21c400f117",
+      "emitted_functions": [
+        {
+          "name": "cdDirectoryLookup__FPcPiT1i",
+          "compiled_body_bytes": 532
+        },
+        {
+          "name": "find_row",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-cd-directory-lookup/cd_directory_lookup.cpp"
+    },
+    {
+      "input_order": 1241,
+      "component": "simloop-services-cd-process",
+      "object_name": "cd_process.o",
+      "private_object_sha256": "8e602bcd4520d04e0faf638337d1f150dd84bbfb9a3ead88ffb0c542898fec66",
+      "emitted_functions": [
+        {
+          "name": "cdProcess__Fv",
+          "compiled_body_bytes": 664
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-cd-process/cd_process.cpp"
+    },
+    {
+      "input_order": 1242,
+      "component": "simloop-services-pad-index-map",
+      "object_name": "pad_index_map.o",
+      "private_object_sha256": "f8d5c7e646207e6357bbf5dc5f3f7ceb01c98875d5ff6394c35ce93d6c9d94ae",
+      "emitted_functions": [
+        {
+          "name": "padInitPadIndexMap__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-pad-index-map/pad_index_map.cpp"
+    },
+    {
+      "input_order": 1243,
+      "component": "simloop-services-pad-process",
+      "object_name": "pad_process.o",
+      "private_object_sha256": "be222fe28df01acf25ec5fc4a5549c419d2910e8972721730df717e8b0e142d7",
+      "emitted_functions": [
+        {
+          "name": "padProcess__Fv",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-pad-process/pad_process.cpp"
+    },
+    {
+      "input_order": 1244,
+      "component": "simloop-services-sound-make-unpausable",
+      "object_name": "sound_make_unpausable.o",
+      "private_object_sha256": "72f4b13a0d416d78cd765826f45b264a1c705b485e13098b0888b9394538e005",
+      "emitted_functions": [
+        {
+          "name": "soundMakeSequenceUnpausable__Fi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-make-unpausable/sound_make_unpausable.cpp"
+    },
+    {
+      "input_order": 1245,
+      "component": "simloop-services-sound-map",
+      "object_name": "sound_map.o",
+      "private_object_sha256": "938159676bce4ebe1bcbb511fd42ff70667311ac0f6d20e0829043c4a74d88a1",
+      "emitted_functions": [
+        {
+          "name": "soundMapSound__FPci",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-map/sound_map.cpp"
+    },
+    {
+      "input_order": 1246,
+      "component": "simloop-services-sound-reset-stream",
+      "object_name": "sound_reset_stream.o",
+      "private_object_sha256": "a18bbde02ff3e4a648a078dd07e7a7d8835de9c4d3a511bb0984932bc06bd119",
+      "emitted_functions": [
+        {
+          "name": "soundResetStream__Fi",
+          "compiled_body_bytes": 316
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-reset-stream/sound_reset_stream.cpp"
+    },
+    {
+      "input_order": 1247,
+      "component": "simloop-services-sound-set-stream-volume",
+      "object_name": "sound_set_stream_volume.o",
+      "private_object_sha256": "877b345aa94d8b48b76234fa2f57855fcd48e39cc4d30d323af7f2f69e5332b8",
+      "emitted_functions": [
+        {
+          "name": "soundSetStreamVolume__Fif",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp"
+    },
+    {
+      "input_order": 1248,
+      "component": "simloop-services-sound-start-dialog",
+      "object_name": "sound_start_dialog.o",
+      "private_object_sha256": "95c019294e2edf55716f22629f7b30484cad12ebb9ba0351b71998edaf4f2344",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__FiPci",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp"
+    },
+    {
+      "input_order": 1249,
+      "component": "simloop-services-sound-start-music",
+      "object_name": "sound_start_music.o",
+      "private_object_sha256": "8ad3ffcda31f95b6d110f914fdff01c62adbf741232227dc0223e49e91e7b320",
+      "emitted_functions": [
+        {
+          "name": "soundStartMusic__FPci",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-start-music/sound_start_music.cpp"
+    },
+    {
+      "input_order": 1250,
+      "component": "simloop-services-sound-stream-status",
+      "object_name": "sound_stream_status.o",
+      "private_object_sha256": "eb414c224f4b1f8eefe287bd0f1fafdcd67f0b1549e66c4d6393266093fb9fe0",
+      "emitted_functions": [
+        {
+          "name": "soundGetStreamPlayStatus__Fi",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-sound-stream-status/sound_stream_status.cpp"
     }
   ],
   "drafts": [
@@ -18767,7 +18925,29 @@
     "sources/pre-logo-dialog-start-dialog/start_dialog.cpp": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
     "sources/pre-logo-dialog-start-dialog/host_check.cpp": "c2b8a6bf2f55ea443230b95e3eaf767c5085767b2c7e0e1305820ce2ec1fc77f",
     "sources/pre-logo-dialog-words/dialog_words.cpp": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
-    "sources/pre-logo-dialog-words/host_check.cpp": "f984b934a409aec797e3f4c8a9b80f0ba23d440eecc8ecb71ea4750061f8ada9"
+    "sources/pre-logo-dialog-words/host_check.cpp": "f984b934a409aec797e3f4c8a9b80f0ba23d440eecc8ecb71ea4750061f8ada9",
+    "sources/simloop-services-cd-directory-lookup/cd_directory_lookup.cpp": "5358457ae15bb843df0d2483c7eddef648ce5fba284af510301a02f0913ce9c8",
+    "sources/simloop-services-cd-directory-lookup/host_check.cpp": "72a4ea2f20d340b208d3831efec2a5053d0799ae1c0de98222865f42bc0a9478",
+    "sources/simloop-services-cd-process/cd_process.cpp": "b8df8d554014274b732a3cbb8ccd2a3c4da06301967aa231eb8a7d3b52c5ac89",
+    "sources/simloop-services-cd-process/host_check.cpp": "0455170fbd8e52300ff013cc40923d188c1d8283eaa06a9d7a97b0706935faf3",
+    "sources/simloop-services-pad-index-map/pad_index_map.cpp": "e5ac920eef39151e112bbed2727a4937034a5bf8d9983d601ca06e90f493efec",
+    "sources/simloop-services-pad-index-map/host_check.cpp": "e6d1ddf771f7632f29869f97e707d3db6d29f51601233d83c98db2154c712cca",
+    "sources/simloop-services-pad-process/pad_process.cpp": "19ab5944dfc99bd31e8cbc3abb235714c8e08bb3f7c11cb08d0c3a8184022680",
+    "sources/simloop-services-pad-process/host_check.cpp": "e7e3c89c05abe79ae06780fcec0469de6b4d3a3fb05eee0a15fffb524f1accfc",
+    "sources/simloop-services-sound-make-unpausable/sound_make_unpausable.cpp": "e11ac197628d956c5f12c16b5bba7bbcef00b21cad7042fccd8ad5a13ed06876",
+    "sources/simloop-services-sound-make-unpausable/host_check.cpp": "87b37908e2cfb6100596d9560fc37e024938720744f148eeb006cb796f5a3194",
+    "sources/simloop-services-sound-map/sound_map.cpp": "721c89c46c3a108dee2cb2f2686604a8e025fc00f3610d8a39491bc9c5af2985",
+    "sources/simloop-services-sound-map/host_check.cpp": "c77eff5f94e0c4ab24864199c2a9fb956fcc570601f274ac87152961acd536e6",
+    "sources/simloop-services-sound-reset-stream/sound_reset_stream.cpp": "97570ee826cc9b7780d28c2ce8c805a542a7446569893b1311b9626b92edb677",
+    "sources/simloop-services-sound-reset-stream/host_check.cpp": "95458df34c771952173c32e54cfced77f472529c2cda040debfe681c421edfb3",
+    "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp": "0296ae6b5f122ac2bb209bb8157b4fb628e202ace2c5a7ab09e2e918c469d1ad",
+    "sources/simloop-services-sound-set-stream-volume/host_check.cpp": "796989993db32b1541205c5aad08180993e9930b0071a416d8a221746006522d",
+    "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp": "0ed0e9d812e9e4e51d97be9660ea48b228e918e0e3de09ec2260660778831def",
+    "sources/simloop-services-sound-start-dialog/host_check.cpp": "0470436b70a704f385d340fe28fb15bcf07192fe62cfccbdb980769f99f3a20e",
+    "sources/simloop-services-sound-start-music/sound_start_music.cpp": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
+    "sources/simloop-services-sound-start-music/host_check.cpp": "1b179200c48d530cf0b092129f42f468b7f3131e2f562893767d80935e911032",
+    "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
+    "sources/simloop-services-sound-stream-status/host_check.cpp": "ab11ffd68567e4dcebcc044255934dce1a4f654818e1147d8cb71870f640a8b8"
   },
   "additional_implementations": [
     {
@@ -19209,11 +19389,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1240,
-    "authored_default_inputs": 1238,
+    "selected_inputs": 1251,
+    "authored_default_inputs": 1249,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 966,
-    "compiled_body_bytes_from_accepted_inputs": 400184,
+    "emitted_function_definitions_including_helpers": 978,
+    "compiled_body_bytes_from_accepted_inputs": 403604,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19226,7 +19406,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 927
+    "package_selected_inputs": 938
   },
   "startup_implementations": [
     {
@@ -33358,6 +33538,197 @@
       "emitted_functions": [],
       "host_files": [
         "sources/pre-logo-dialog-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-cd-directory-lookup/cd_directory_lookup.cpp",
+      "source_sha256": "5358457ae15bb843df0d2483c7eddef648ce5fba284af510301a02f0913ce9c8",
+      "object_sha256": "7688d007c63c8239838e82fa53f1a512219173e70a617069d8de4e21c400f117",
+      "emitted_functions": [
+        {
+          "name": "cdDirectoryLookup__FPcPiT1i",
+          "compiled_body_bytes": 532
+        },
+        {
+          "name": "find_row",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-cd-directory-lookup/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-cd-process/cd_process.cpp",
+      "source_sha256": "b8df8d554014274b732a3cbb8ccd2a3c4da06301967aa231eb8a7d3b52c5ac89",
+      "object_sha256": "8e602bcd4520d04e0faf638337d1f150dd84bbfb9a3ead88ffb0c542898fec66",
+      "emitted_functions": [
+        {
+          "name": "cdProcess__Fv",
+          "compiled_body_bytes": 664
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-cd-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-pad-index-map/pad_index_map.cpp",
+      "source_sha256": "e5ac920eef39151e112bbed2727a4937034a5bf8d9983d601ca06e90f493efec",
+      "object_sha256": "f8d5c7e646207e6357bbf5dc5f3f7ceb01c98875d5ff6394c35ce93d6c9d94ae",
+      "emitted_functions": [
+        {
+          "name": "padInitPadIndexMap__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-pad-index-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-pad-process/pad_process.cpp",
+      "source_sha256": "19ab5944dfc99bd31e8cbc3abb235714c8e08bb3f7c11cb08d0c3a8184022680",
+      "object_sha256": "be222fe28df01acf25ec5fc4a5549c419d2910e8972721730df717e8b0e142d7",
+      "emitted_functions": [
+        {
+          "name": "padProcess__Fv",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-pad-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-make-unpausable/sound_make_unpausable.cpp",
+      "source_sha256": "e11ac197628d956c5f12c16b5bba7bbcef00b21cad7042fccd8ad5a13ed06876",
+      "object_sha256": "72f4b13a0d416d78cd765826f45b264a1c705b485e13098b0888b9394538e005",
+      "emitted_functions": [
+        {
+          "name": "soundMakeSequenceUnpausable__Fi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-make-unpausable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-map/sound_map.cpp",
+      "source_sha256": "721c89c46c3a108dee2cb2f2686604a8e025fc00f3610d8a39491bc9c5af2985",
+      "object_sha256": "938159676bce4ebe1bcbb511fd42ff70667311ac0f6d20e0829043c4a74d88a1",
+      "emitted_functions": [
+        {
+          "name": "soundMapSound__FPci",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-reset-stream/sound_reset_stream.cpp",
+      "source_sha256": "97570ee826cc9b7780d28c2ce8c805a542a7446569893b1311b9626b92edb677",
+      "object_sha256": "a18bbde02ff3e4a648a078dd07e7a7d8835de9c4d3a511bb0984932bc06bd119",
+      "emitted_functions": [
+        {
+          "name": "soundResetStream__Fi",
+          "compiled_body_bytes": 316
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-reset-stream/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp",
+      "source_sha256": "0296ae6b5f122ac2bb209bb8157b4fb628e202ace2c5a7ab09e2e918c469d1ad",
+      "object_sha256": "877b345aa94d8b48b76234fa2f57855fcd48e39cc4d30d323af7f2f69e5332b8",
+      "emitted_functions": [
+        {
+          "name": "soundSetStreamVolume__Fif",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-set-stream-volume/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp",
+      "source_sha256": "0ed0e9d812e9e4e51d97be9660ea48b228e918e0e3de09ec2260660778831def",
+      "object_sha256": "95c019294e2edf55716f22629f7b30484cad12ebb9ba0351b71998edaf4f2344",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__FiPci",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-start-dialog/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-start-music/sound_start_music.cpp",
+      "source_sha256": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
+      "object_sha256": "8ad3ffcda31f95b6d110f914fdff01c62adbf741232227dc0223e49e91e7b320",
+      "emitted_functions": [
+        {
+          "name": "soundStartMusic__FPci",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-start-music/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "simloop-services",
+      "source": "sources/simloop-services-sound-stream-status/sound_stream_status.cpp",
+      "source_sha256": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
+      "object_sha256": "eb414c224f4b1f8eefe287bd0f1fafdcd67f0b1549e66c4d6393266093fb9fe0",
+      "emitted_functions": [
+        {
+          "name": "soundGetStreamPlayStatus__Fi",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "host_files": [
+        "sources/simloop-services-sound-stream-status/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

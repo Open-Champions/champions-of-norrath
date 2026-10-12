@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1238,
+  "default_authored_inputs": 1249,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1954,7 +1954,18 @@
     "sources/pre-logo-dialog-show-compass/show_compass.cpp": "f7149285e45a40b3a55fdc149f1d1ec912d5acb3dbaf32a66123ed21097f9d1b",
     "sources/pre-logo-dialog-special-handler/special_handler.cpp": "1ce0d928db3baa80ee2e7293de961bde47594e3a43786acc0e6965e8c455d420",
     "sources/pre-logo-dialog-start-dialog/start_dialog.cpp": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
-    "sources/pre-logo-dialog-words/dialog_words.cpp": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7"
+    "sources/pre-logo-dialog-words/dialog_words.cpp": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
+    "sources/simloop-services-cd-directory-lookup/cd_directory_lookup.cpp": "5358457ae15bb843df0d2483c7eddef648ce5fba284af510301a02f0913ce9c8",
+    "sources/simloop-services-cd-process/cd_process.cpp": "b8df8d554014274b732a3cbb8ccd2a3c4da06301967aa231eb8a7d3b52c5ac89",
+    "sources/simloop-services-pad-index-map/pad_index_map.cpp": "e5ac920eef39151e112bbed2727a4937034a5bf8d9983d601ca06e90f493efec",
+    "sources/simloop-services-pad-process/pad_process.cpp": "19ab5944dfc99bd31e8cbc3abb235714c8e08bb3f7c11cb08d0c3a8184022680",
+    "sources/simloop-services-sound-make-unpausable/sound_make_unpausable.cpp": "e11ac197628d956c5f12c16b5bba7bbcef00b21cad7042fccd8ad5a13ed06876",
+    "sources/simloop-services-sound-map/sound_map.cpp": "721c89c46c3a108dee2cb2f2686604a8e025fc00f3610d8a39491bc9c5af2985",
+    "sources/simloop-services-sound-reset-stream/sound_reset_stream.cpp": "97570ee826cc9b7780d28c2ce8c805a542a7446569893b1311b9626b92edb677",
+    "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp": "0296ae6b5f122ac2bb209bb8157b4fb628e202ace2c5a7ab09e2e918c469d1ad",
+    "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp": "0ed0e9d812e9e4e51d97be9660ea48b228e918e0e3de09ec2260660778831def",
+    "sources/simloop-services-sound-start-music/sound_start_music.cpp": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
+    "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de"
   },
   "inputs": [
     {
@@ -16017,6 +16028,175 @@
       "profile": "authored_cpp",
       "sha256": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
       "source": "sources/pre-logo-dialog-words/dialog_words.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1240,
+      "kind": "independently_authored_source",
+      "object_name": "cd_directory_lookup.o",
+      "profile": "authored_cpp",
+      "sha256": "5358457ae15bb843df0d2483c7eddef648ce5fba284af510301a02f0913ce9c8",
+      "source": "sources/simloop-services-cd-directory-lookup/cd_directory_lookup.cpp",
+      "emitted_functions": [
+        {
+          "name": "cdDirectoryLookup__FPcPiT1i",
+          "compiled_body_bytes": 532
+        },
+        {
+          "name": "find_row",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1241,
+      "kind": "independently_authored_source",
+      "object_name": "cd_process.o",
+      "profile": "authored_cpp",
+      "sha256": "b8df8d554014274b732a3cbb8ccd2a3c4da06301967aa231eb8a7d3b52c5ac89",
+      "source": "sources/simloop-services-cd-process/cd_process.cpp",
+      "emitted_functions": [
+        {
+          "name": "cdProcess__Fv",
+          "compiled_body_bytes": 664
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1242,
+      "kind": "independently_authored_source",
+      "object_name": "pad_index_map.o",
+      "profile": "authored_cpp",
+      "sha256": "e5ac920eef39151e112bbed2727a4937034a5bf8d9983d601ca06e90f493efec",
+      "source": "sources/simloop-services-pad-index-map/pad_index_map.cpp",
+      "emitted_functions": [
+        {
+          "name": "padInitPadIndexMap__Fv",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1243,
+      "kind": "independently_authored_source",
+      "object_name": "pad_process.o",
+      "profile": "authored_cpp",
+      "sha256": "19ab5944dfc99bd31e8cbc3abb235714c8e08bb3f7c11cb08d0c3a8184022680",
+      "source": "sources/simloop-services-pad-process/pad_process.cpp",
+      "emitted_functions": [
+        {
+          "name": "padProcess__Fv",
+          "compiled_body_bytes": 772
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1244,
+      "kind": "independently_authored_source",
+      "object_name": "sound_make_unpausable.o",
+      "profile": "authored_cpp",
+      "sha256": "e11ac197628d956c5f12c16b5bba7bbcef00b21cad7042fccd8ad5a13ed06876",
+      "source": "sources/simloop-services-sound-make-unpausable/sound_make_unpausable.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundMakeSequenceUnpausable__Fi",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1245,
+      "kind": "independently_authored_source",
+      "object_name": "sound_map.o",
+      "profile": "authored_cpp",
+      "sha256": "721c89c46c3a108dee2cb2f2686604a8e025fc00f3610d8a39491bc9c5af2985",
+      "source": "sources/simloop-services-sound-map/sound_map.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundMapSound__FPci",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1246,
+      "kind": "independently_authored_source",
+      "object_name": "sound_reset_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "97570ee826cc9b7780d28c2ce8c805a542a7446569893b1311b9626b92edb677",
+      "source": "sources/simloop-services-sound-reset-stream/sound_reset_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundResetStream__Fi",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1247,
+      "kind": "independently_authored_source",
+      "object_name": "sound_set_stream_volume.o",
+      "profile": "authored_cpp",
+      "sha256": "0296ae6b5f122ac2bb209bb8157b4fb628e202ace2c5a7ab09e2e918c469d1ad",
+      "source": "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundSetStreamVolume__Fif",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1248,
+      "kind": "independently_authored_source",
+      "object_name": "sound_start_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "0ed0e9d812e9e4e51d97be9660ea48b228e918e0e3de09ec2260660778831def",
+      "source": "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__FiPci",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1249,
+      "kind": "independently_authored_source",
+      "object_name": "sound_start_music.o",
+      "profile": "authored_cpp",
+      "sha256": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
+      "source": "sources/simloop-services-sound-start-music/sound_start_music.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartMusic__FPci",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1250,
+      "kind": "independently_authored_source",
+      "object_name": "sound_stream_status.o",
+      "profile": "authored_cpp",
+      "sha256": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
+      "source": "sources/simloop-services-sound-stream-status/sound_stream_status.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetStreamPlayStatus__Fi",
+          "compiled_body_bytes": 264
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -16116,7 +16296,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "dc7afa90e759fb79026dedd84f5f3b631f17a8f02fc458d044e369c816d00b8b",
+  "snapshot_sha256": "ee3804fa7cd7ab5d6d53f904a5d550165aa3c81ad89107920a244ef6437e14c6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
