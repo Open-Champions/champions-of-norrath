@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1305,
+  "default_authored_inputs": 1317,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2021,7 +2021,19 @@
     "sources/vi-launcher-setup/setup.cpp": "32df6ee732c9feccaddb549459a18472be1fb0326d1d0f7109ca98f05cc609ac",
     "sources/vi-launcher-station/station.cpp": "ca4af5ec603ac6c8a7dc77a16c894f3b500db8079172c611fcb9751cc2825cff",
     "sources/vi-launcher-timer-close/timer_close.cpp": "8ecc7bd6eb83ba0cc837da508b55419a34e6d7c96d7587eb78ad5bcabdfad9bc",
-    "sources/vi-launcher-timer-init/timer_init.cpp": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b"
+    "sources/vi-launcher-timer-init/timer_init.cpp": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b",
+    "sources/session-roster-net-wait-callback/net_wait_callback.cpp": "a692062942ec14c783f652bcbf49b959013aa69c48c5455cba53e9b92c7b03aa",
+    "sources/session-roster-comm-handler/comm_handler.cpp": "0c629dbd872feef99abb8b227bbeb58570bfbc0671a6b5ea514601f2bc710d91",
+    "sources/session-roster-comm-status-handler/comm_status_handler.cpp": "914fe6dca1c4fd6cf20a368e49a2ecdccb4f5ae227fdecee0146a236b621ef11",
+    "sources/session-roster-check-for-monsters/check_for_monsters.cpp": "5755df41cd93e319e7583b32859d0446d884a5183f4cefe4886ec173c79b11ef",
+    "sources/session-roster-player-selection-setup/player_selection_setup.cpp": "cfaf7ac5c135e2e15e33c15c937b817edae8ec785a405f7ce5adcd0a24c768c9",
+    "sources/session-roster-net-register-message-handler/register_message_handler.cpp": "6c4f9e67dc3164e01626feae3d0cfeef3cd21ffef9a9ebee21d03e9d1622944b",
+    "sources/session-roster-net-register-packet-handler/register_packet_handler.cpp": "fb1f949ce32ec87e570139e47a80b9c795ab01feedee5e2a509262ccdc8ac8bb",
+    "sources/session-roster-player-selection-start/player_selection_start.cpp": "cf158485ff757138370ff58bc6fa6ebd20e34ef01645490baf0ab14a96fc7d68",
+    "sources/session-roster-player-init/player_init.cpp": "120f707d1866d39071817d5ca5d6f3df69e264ba53d84630e126fca8dff90cc9",
+    "sources/session-roster-net-state/net_state.cpp": "e471be296cf21497f34d72ebde594f2993a0766e62a7bb1800207e93994d4e03",
+    "sources/session-roster-net-handlers/net_handlers.cpp": "0877378ba033dcc0b9fb28154d0fd69c41550b911cc51b58637875f06b91ce04",
+    "sources/session-roster-player-selection-state/player_selection_state.cpp": "1e4949a8e6dc2844f6c31fb21f994ce289ae9fcfd79f0086a8d86f5d90707fb0"
   },
   "inputs": [
     {
@@ -17087,6 +17099,171 @@
           "compiled_body_bytes": 112
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1307,
+      "kind": "independently_authored_source",
+      "object_name": "net_wait_callback.o",
+      "profile": "authored_cpp",
+      "sha256": "a692062942ec14c783f652bcbf49b959013aa69c48c5455cba53e9b92c7b03aa",
+      "source": "sources/session-roster-net-wait-callback/net_wait_callback.cpp",
+      "emitted_functions": [
+        {
+          "name": "netWaitCallBack__FPUci",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1308,
+      "kind": "independently_authored_source",
+      "object_name": "comm_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "0c629dbd872feef99abb8b227bbeb58570bfbc0671a6b5ea514601f2bc710d91",
+      "source": "sources/session-roster-comm-handler/comm_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "commHandler__FPUci",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1309,
+      "kind": "independently_authored_source",
+      "object_name": "comm_status_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "914fe6dca1c4fd6cf20a368e49a2ecdccb4f5ae227fdecee0146a236b621ef11",
+      "source": "sources/session-roster-comm-status-handler/comm_status_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "commStatusHandler__FPUci",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1310,
+      "kind": "independently_authored_source",
+      "object_name": "check_for_monsters.o",
+      "profile": "authored_cpp",
+      "sha256": "5755df41cd93e319e7583b32859d0446d884a5183f4cefe4886ec173c79b11ef",
+      "source": "sources/session-roster-check-for-monsters/check_for_monsters.cpp",
+      "emitted_functions": [
+        {
+          "name": "checkForMonsters__FP10GameObject",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1311,
+      "kind": "independently_authored_source",
+      "object_name": "player_selection_setup.o",
+      "profile": "authored_cpp",
+      "sha256": "cfaf7ac5c135e2e15e33c15c937b817edae8ec785a405f7ce5adcd0a24c768c9",
+      "source": "sources/session-roster-player-selection-setup/player_selection_setup.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionSetup__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1312,
+      "kind": "independently_authored_source",
+      "object_name": "register_message_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "6c4f9e67dc3164e01626feae3d0cfeef3cd21ffef9a9ebee21d03e9d1622944b",
+      "source": "sources/session-roster-net-register-message-handler/register_message_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "netRegisterMessageHandler__FPFPUci_v",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1313,
+      "kind": "independently_authored_source",
+      "object_name": "register_packet_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "fb1f949ce32ec87e570139e47a80b9c795ab01feedee5e2a509262ccdc8ac8bb",
+      "source": "sources/session-roster-net-register-packet-handler/register_packet_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "netRegisterPacketHandler__FPFPUci_v",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1314,
+      "kind": "independently_authored_source",
+      "object_name": "player_selection_start.o",
+      "profile": "authored_cpp",
+      "sha256": "cf158485ff757138370ff58bc6fa6ebd20e34ef01645490baf0ab14a96fc7d68",
+      "source": "sources/session-roster-player-selection-start/player_selection_start.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionStart__Fv",
+          "compiled_body_bytes": 320
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1315,
+      "kind": "independently_authored_source",
+      "object_name": "player_init.o",
+      "profile": "authored_cpp",
+      "sha256": "120f707d1866d39071817d5ca5d6f3df69e264ba53d84630e126fca8dff90cc9",
+      "source": "sources/session-roster-player-init/player_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerInit__FiiPcScScScScT2",
+          "compiled_body_bytes": 1252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1316,
+      "kind": "independently_authored_source",
+      "object_name": "net_state.o",
+      "profile": "authored_cpp",
+      "sha256": "e471be296cf21497f34d72ebde594f2993a0766e62a7bb1800207e93994d4e03",
+      "source": "sources/session-roster-net-state/net_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1317,
+      "kind": "independently_authored_source",
+      "object_name": "net_handlers.o",
+      "profile": "authored_cpp",
+      "sha256": "0877378ba033dcc0b9fb28154d0fd69c41550b911cc51b58637875f06b91ce04",
+      "source": "sources/session-roster-net-handlers/net_handlers.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1318,
+      "kind": "independently_authored_source",
+      "object_name": "player_selection_state.o",
+      "profile": "authored_cpp",
+      "sha256": "1e4949a8e6dc2844f6c31fb21f994ce289ae9fcfd79f0086a8d86f5d90707fb0",
+      "source": "sources/session-roster-player-selection-state/player_selection_state.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -17186,7 +17363,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3d97e8b1ee93e23a1af96f6d0f3eecc0a95157717bee371713090e913c3d6a61",
+  "snapshot_sha256": "da2dceece07ed393c9e928ca342c1284144b7733f4b16cfc46b52dbcd970d91e",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

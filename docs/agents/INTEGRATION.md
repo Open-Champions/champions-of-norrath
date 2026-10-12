@@ -2094,6 +2094,45 @@ Opened: `DeleteThread`, `Handler__7VITimeri`, `Password__C13VIGameOptions`,
 `sceMcGetInfo`, `scePadEnd`, `setup_main__Fv`, `srand`,
 `station_main__FiPCcPcT2T1T1i`.
 
+## agents/session-roster
+
+Merged (the branch notes carry the five summary sections; its unit count was
+corrected in the last commit). Nine functions plus four data units, each with
+a `host_check.cpp` that passes here (13 of 13 exit 0). Twelve of the thirteen
+units were selected with fresh `input_order` values 1305 through 1316.
+session-roster-player-state was **not** selected: the link fails with multiple
+definitions of `invisible`, `nmLines` and `nmSingle`, already defined by
+other packages (inputs 933, 937 and 938). Its other six words
+(`playersAlive`, `startEntranceName`, `syncRandState`, `activePlayer`,
+`nmPlayersAlive`, `noMonsters`) therefore stay undefined, and its files stay in
+the source snapshot. This is why the notes' closed list (26) is larger than the
+18 names actually closed here; `activePlayer` and `invisible` appear in the
+notes' list but `activePlayer` is still not closed. The 12 selected sources
+compile under `authored_cpp`, 1904 body bytes. No game binary or disassembly
+listing was committed. 1040 function bodies, 1317 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1208 |
+| After | 1201 |
+| Closed | 18 |
+| Opened | 11 |
+
+Closed: `broadcastConnection`, `checkForMonsters__FP10GameObject`, `commHandle`,
+`commHandler__FPUci`, `commStatusHandle`, `commStatusHandler__FPUci`,
+`g_net_buf`, `msgHandler`, `netNmPartners`,
+`netRegisterMessageHandler__FPFPUci_v`,
+`netRegisterPacketHandler__FPFPUci_v`, `netWaitCallBack__FPUci`,
+`netWaitMsgHandler`, `nmPartners`, `partners`,
+`playerInit__FiiPcScScScScT2`, `playerSelectionSetup__Fv`,
+`playerSelectionStart__Fv`.
+
+Opened: `abilityTable`, `fadeIconY`, `fadeTimer`, `firstTime`, `init__Fv`,
+`language`, `lightPushSceneLights__FG6Point3iiiiiiiii`,
+`playerRecomputeAbilityModifiers__Fv`, `playerSelectionTask__Fv`,
+`recievePacket__FiPUc`, `setupDefaultEquipment__Fi`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
