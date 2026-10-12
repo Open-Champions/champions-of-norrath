@@ -33,6 +33,7 @@ P = cr.P
 SRC = cr.SRC
 STACK = cr.STACK
 STUB = 0x00500000
+SLOTS = {'base': 0}   # base address of the skill slot block for the run in progress
 
 # callee -> what its call is logged with. 'o' object (ordinal of first use),
 # 'i' integer register, 's' C string, 'f' float register, 'k' stack word.
@@ -47,7 +48,7 @@ def spec_for(name):
     if name in ARGS:
         return ARGS[name]
     if re.match(r'__\d+(Skill|Spell)', name):
-        return [('r', 4, 'o')]
+        return [('r', 4, 'x')]
     raise SystemExit('no argument layout for callee ' + name)
 
 
@@ -80,7 +81,9 @@ def make_stub(name, m, objs):
         for item in lay:
             if item[0] == 'r':
                 v = mm.g32(item[1])
-                if item[2] == 'o':
+                if item[2] == 'x':
+                    row.append(('slot', (v - SLOTS['base']) // 104, (v - SLOTS['base']) % 104))
+                elif item[2] == 'o':
                     if v not in objs:
                         objs[v] = len(objs)
                     row.append(('obj', objs[v]))
@@ -96,7 +99,32 @@ def make_stub(name, m, objs):
     return stub
 
 
-def run(image, entry, stub_addrs, args):
+def norm_word(image, value, vtables):
+    if value in vtables:
+        return ('table', value)
+    text = bytearray()
+    while len(text) < 40 and 0 < image.byte(value + len(text)) < 127 and value < 0x2000000:
+        text.append(image.byte(value + len(text)))
+    if text and image.byte(value + len(text)) == 0:
+        return ('text', bytes(text))
+    return ('word', value)
+
+
+def slot_writes(m, image, vtables):
+    """Writes into the slot block as (slot, offset) -> value, pointers replaced by what they name."""
+    base = SLOTS['base']
+    out = {}
+    if not base:
+        return out
+    for off in range(0, 61 * 104, 4):
+        if any((base + off + i) in m.mem for i in range(4)):
+            v = m.u32(base + off)
+            out[(off // 104, off % 104)] = norm_word(image, v, vtables) if off % 104 in (0, 96) else v
+    return out
+
+
+def run(image, entry, stub_addrs, args, base=0, vtables=frozenset()):
+    SLOTS['base'] = base
     mem = {}
     stubs = {}
     m = cr.Machine(image, mem, stubs, cr.GP)
@@ -107,8 +135,15 @@ def run(image, entry, stub_addrs, args):
     for i, v in enumerate(args):
         m.r[4 + i] = v
     m.run(entry)
-    writes = {a: v for a, v in mem.items() if not (STACK - 0x2000 <= a < STACK + 0x100)}
+    if base:
+        writes = slot_writes(m, image, vtables)
+    else:
+        writes = {a: v for a, v in mem.items() if not (STACK - 0x2000 <= a < STACK + 0x100)}
     return m.log, writes
+
+
+def word_at(image, a):
+    return sum(image.byte(a + i) << (8 * i) for i in range(4))
 
 
 def wrapper_target(exe, addr):
@@ -119,26 +154,45 @@ def wrapper_target(exe, addr):
     raise SystemExit('no call in wrapper at %#x' % addr)
 
 
+def companion_sources(path, text):
+    """Sibling unit directories this unit includes from (the skill slot definitions)."""
+    out = []
+    for d in re.findall(r'#include "\.\./([^/"]+)/', text):
+        out += sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(path)), d, '*.cpp')))
+    return out
+
+
 def compare(path, exe, syms):
     text = open(path).read()
     sym = re.search(r'void (_GLOBAL_\$I\$\w+)\(\)', text).group(1)
     work = os.path.join(cr.SCRATCH, os.path.basename(os.path.dirname(path)))
     os.makedirs(work, exist_ok=True)
-    obj = os.path.join(work, 'init.o')
-    subprocess.check_call([P + 'g++', *cr.FLAGS, '-c', path, '-o', obj])
-    und = [l.split()[-1] for l in subprocess.check_output([P + 'nm', '-u', obj], text=True).splitlines() if l.strip()]
+    objs = []
+    for k, src in enumerate([path] + companion_sources(path, text)):
+        obj = os.path.join(work, 'part%d.o' % k)
+        subprocess.check_call([P + 'g++', *cr.FLAGS, '-c', src, '-o', obj])
+        objs.append(obj)
+    elf = os.path.join(work, 'init.elf')
+    # first link: find what is still undefined once the parts are combined
+    probe = os.path.join(work, 'probe.o')
+    subprocess.check_call([P + 'ld', '-m', 'elf32lr5900', '-r', '-o', probe, *objs])
+    und = [l.split()[-1] for l in subprocess.check_output([P + 'nm', '-u', probe], text=True).splitlines() if l.strip()]
     orig_stubs = {}
     auth_stubs = {}
     defs = {}
+    vtables = set()
     for n, name in enumerate(und):
         if len(syms.get(name, [])) != 1:
             raise SystemExit('import %s is not one image symbol' % name)
+        if name.startswith('_vt$'):
+            defs[name] = syms[name][0]          # data import: same address in both runs
+            vtables.add(syms[name][0])
+            continue
         orig_stubs[syms[name][0]] = name
         defs[name] = STUB + 0x10 * n
         auth_stubs[defs[name]] = name
-    elf = os.path.join(work, 'init.elf')
     cmd = [P + 'ld', '-m', 'elf32lr5900', '-Ttext=0x00400000', '--no-warn-mismatch']
-    cmd += ['--defsym=%s=%#x' % kv for kv in defs.items()] + ['-o', elf, obj]
+    cmd += ['--defsym=%s=%#x' % kv for kv in defs.items()] + ['-o', elf, *objs]
     subprocess.check_call(cmd)
     auth = cr.Image(elf)
     names = {}
@@ -155,9 +209,19 @@ def compare(path, exe, syms):
     for init in (1, 0):
         for pri in (0xffff, 0):
             cases.append(('local(%d,%#x)' % (init, pri), o_loc, a_loc, [init, pri]))
+    o_base = a_base = 0
+    if 'skills' in names and 'skills' in syms:
+        o_base = word_at(exe, syms['skills'][0] + 4)
+        a_base = word_at(auth, names['skills'] + 4)
+        table_o = [word_at(exe, syms['skills'][0] + 4 * k) for k in range(63)]
+        table_a = [word_at(auth, names['skills'] + 4 * k) for k in range(63)]
+        rel = lambda t, b: [None if v == 0 else v - b for v in t]
+        if rel(table_o, o_base) != rel(table_a, a_base):
+            bad += 1
+            print('MISMATCH %s: the skills table differs' % sym)
     for label, oe, ae, args in cases:
-        ra = run(exe, oe, orig_stubs, args)
-        rb = run(auth, ae, auth_stubs, args)
+        ra = run(exe, oe, orig_stubs, args, o_base, vtables)
+        rb = run(auth, ae, auth_stubs, args, a_base, vtables)
         if ra != rb:
             bad += 1
             n = min(len(ra[0]), len(rb[0]))
@@ -166,7 +230,7 @@ def compare(path, exe, syms):
         if label == 'wrapper' and not ra[0]:
             bad += 1
             print('%s: the image wrapper made no calls; the check proves nothing' % sym)
-    print('%s: %d calls, %s' % (sym, len(ra[0]) if label == 'wrapper' else len(run(exe, o_wrap, orig_stubs, [])[0]), 'FAIL' if bad else 'equal'))
+    print('%s: %d calls, %s' % (sym, len(ra[0]) if label == 'wrapper' else len(run(exe, o_wrap, orig_stubs, [], o_base, vtables)[0]), 'FAIL' if bad else 'equal'))
     return bad
 
 
