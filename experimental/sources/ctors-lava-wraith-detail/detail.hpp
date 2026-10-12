@@ -57,6 +57,19 @@ extern unsigned char norrath_creature_view_484cac[];
 extern unsigned char norrath_ctors_lava_wraith_view_4853d0[];
 extern unsigned char norrath_ctors_lava_wraith_view_4853d8[];
 unsigned norrath_construct_WeaponRack(void* object, const void* point, int type, char** arguments);
+unsigned norrath_creature_construct(void* object, const void* point, short type, void* resource_map, float scale, char** arguments);
+// Original setParameters__8Creaturefffffi at 0x1092f0, setAnimEventFlags__8Creatureififififi
+// at 0x1128a8 and finishConstruction__8Creature at 0x1091b0. Not defined here.
+void norrath_creature_set_parameters(void* object, float a, float b, float c, float d, float e, int flag);
+void norrath_creature_set_anim_event_flags(void* object, int a, float b, int c, float d, int e, float f, int g, float h, int i);
+unsigned norrath_creature_finish_construction(void* object);
+void norrath_actor_animation_initialize(void* state);
+void norrath_actor_animation_add(void* state, void* header, int flags);
+unsigned long long norrath_actor_model_active_chunks(void* model, int requested);
+extern unsigned char norrath_actor_view_4844a4[];
+extern unsigned char norrath_ctors_lava_wraith_view_42d048[];
+extern unsigned char norrath_ctors_lava_wraith_view_44f3d8[];
+unsigned norrath_construct_Rondo(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
