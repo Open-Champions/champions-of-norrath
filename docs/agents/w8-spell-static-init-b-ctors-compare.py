@@ -28,6 +28,21 @@ cr = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cr)
 
 P = cr.P
+
+# The EE's floating-point unit has no infinities: an overflow or a division by zero gives the
+# largest magnitude, bits 0x7fffffff (0xffffffff when negative). The shared interpreter
+# models an infinity there, which would make a correct comparison fail.
+_setf = cr.Machine.setf
+
+
+def _setf_ee(self, i, x):
+    if x in (float('inf'), float('-inf')):
+        self.f[i] = 0x7FFFFFFF if x > 0 else 0xFFFFFFFF
+    else:
+        _setf(self, i, x)
+
+
+cr.Machine.setf = _setf_ee
 SRC = cr.SRC
 M32 = cr.M32
 OBJ = 0x30000000
@@ -59,6 +74,9 @@ def fill(rng, mem, base, size):
 # ('p', n, size) bytes at the pointer in register n.
 CALLS = {
     'P_CreateParticleSystem__Fv': [],
+    'lightAdd__FP5Light': [('r', 4), ('p', 4, 48)],
+    'lumpFindResource__FPcT0': [('s', 4), ('s', 5)],
+    'soundPlaySequence__FP15AnimationHeaderG6Point3f': [('r', 4), ('p', 5, 12), ('f', 12)],
 }
 FUNCTIONS = {}
 
@@ -109,6 +127,11 @@ def run(image, entry, stub_addrs, sc, seed):
                     row.append(mm.g32(item[1]))
                 elif item[0] == 'f':
                     row.append(mm.f[item[1]])
+                elif item[0] == 's':
+                    out = bytearray()
+                    while len(out) < 64 and mm.u8(mm.g32(item[1]) + len(out)):
+                        out.append(mm.u8(mm.g32(item[1]) + len(out)))
+                    row.append(bytes(out))
                 else:
                     row.append(mm.read(mm.g32(item[1]), item[2]))
             m.log.append(tuple(row))
@@ -160,6 +183,26 @@ def compare(sym, runs, syms, exe):
 
 # ---- scenarios ----
 
+def putf(mem, a, x):
+    put32(mem, a, cr.f2b(x))
+
+
+def scenario_planar(rng):
+    mem = {}
+    fill(rng, mem, OBJ, 128)
+    fill(rng, mem, OTHER, 64)
+    for k in range(3):
+        putf(mem, OTHER + 16 + 4 * k, rng.choice([0.0, -1.5, 2.25, 100.0, rng.uniform(-50, 50)]))
+    putf(mem, OTHER + 32, rng.choice([0.0, 1.0, -3.7, 5.5, 10000.0, rng.uniform(-100, 100)]))
+    put32(mem, 0x483E5C, rng.choice([0, 1, 0xFFFFFFFF, rng.randrange(1 << 32)]))
+    put32(mem, 0x4844A4, rng.choice([0, 1000, 0xFFFFFF00, rng.randrange(1 << 32)]))
+    # data the callee names are read from
+    args = [OBJ, rng.choice([0, 1, 255, 256, -1, rng.randrange(1 << 32)]), OTHER, rng.choice([0, OTHER + 0x100, rng.randrange(1 << 32)])]
+    return {'mem': mem, 'args': args, 'compare': list(range(OBJ, OBJ + 128)) + list(range(0x483E5C, 0x483E60))
+            + list(range(0x4844A4, 0x4844A8))}
+
+
+
 def scenario_horn(rng):
     mem = {}
     fill(rng, mem, OBJ, 64)
@@ -172,6 +215,8 @@ def scenario_horn(rng):
 
 
 reg('__19SpellHornOmenEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-hornomen-ctor/ctor.cpp', scenario_horn)
+
+reg('__22SpellPlanarSteelEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-planarsteel-ctor/ctor.cpp', scenario_planar)
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
