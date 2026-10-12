@@ -14,7 +14,7 @@ the game or on hardware.
 - Every unit has a `host_check.cpp` built with `c++ -std=c++17 -Wall -Wextra -Werror`
   (units that read headers by address also use their `NORRATH_HOST_*` macro, which
   swaps a stored 32-bit address for an offset into a test arena). All exited 0.
-- All 21 authored units were linked together with `ld -m elf32lr5900 -r --warn-common`
+- All 22 authored units were linked together with `ld -m elf32lr5900 -r --warn-common`
   with no duplicate definitions among them.
 - `python3 -m unittest discover -s tools -p 'test_*.py'` passed (214 tests).
 - I did not run `tools/build_partial.py`: it refuses plans whose sources are not in
@@ -31,6 +31,7 @@ Highlights that are easy to miss:
 - `worldFindWaterPatches` and `worldDrawWorld` walk the same half-word stream tree
   (split nodes have bits 0x8000|0x4000 in the first case and just 0x8000 in the second).
   Keys are built as `sign_extended_low | (sign_extended_high << 16)`, shifted by 2.
+- `texDecompressThread` claims uncompMap entries, uploads a 16x16 image of 1024 bytes taken from the start of the texture header, builds a 256-entry prefix table at scratchpad `0x70003800` on every pass, and writes decoded 8x8-pixel blocks through `unscrambleTable`. While `textureUncompBufferLocked` or `clearing` is set it ignores the time budget (it only checks the budget when both are clear).
 - `texProcessLoad` computes the squared distance of a candidate block using the x cell
   index for both axes. This looks unintended but is what the code does; it is reproduced
   and covered by a host check.
@@ -54,20 +55,11 @@ Highlights that are easy to miss:
 - In `texProcessLoad` the state byte meanings (0 idle, 1 waiting on the stream, 2 releasing,
   3 one-frame delay) are inferred from the transitions, not from any name.
 
-## Unknown
-
-- What the world header, the 60-byte polyset records, the 64-byte textures and the model
-  header fields mean beyond the offsets read.
-- Whether `worldFindWaterPatches` is really only used for water (the name is the
-  executable's).
-- Types of several flags and of the halos table.
-- `texDecompressThread__FPv` (0x0016f8b8, 2,788 bytes) is not authored; see below.
-
-## Imports closed (30 of the 31 in my list)
+## Imports closed (all 31 in my list)
 
 `megatile_ramkmax`, `modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi`,
 `modelGetActiveChunks__FP12_modelHeaderi`, `modelResetOptionalParams__Fv`,
-`modelSetShadowBrightness__Ff`, `nmLumps`, `segmentUsed`, `texIsDecompressing__Fv`,
+`modelSetShadowBrightness__Ff`, `nmLumps`, `segmentUsed`, `texDecompressThread__FPv`, `texIsDecompressing__Fv`,
 `texIsLoading__Fv`, `texProcessDecompress__Fv`, `texProcessLoad__Fi`, `texdecompress`,
 `texmap`, `texmapend`, `texmapstart`, `uncompMap`, `uncompSpin`, `world`,
 `worldAllocateWaterPatches__Fi`, `worldClear__Fv`, `worldClipCubeToClipFrustum__FPA1_fi`,
@@ -77,46 +69,12 @@ Highlights that are easy to miss:
 `worldRunWaterTask__Fv`, `worldSetDoorCollision__FP12_worldHeaderii`,
 `worldSetDoorHeight__FP12_worldHeaderif`, `worldSetViewCenter__Fv`, `worldViewCenter`.
 
-## Imports not closed
-
-`texDecompressThread__FPv` at `0x0016f8b8`, 2,788 bytes. Not authored yet; it is a long Huffman-style texture decoder thread with scratchpad tables and GS packet building, left for last.
-
 ## Imports opened
 
-Symbols my sources reference but do not define (unresolved in a link of only my units):
-`DynamicLightArray`, `GLISTSIZE`, `StartThread`, `TerminateThread`, `WakeupThread`,
-`animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`,
-`animLoadBoneMatricies__FP6PacketP14AnimationState`, `cdEndStream__Fv`,
-`cdIsBusyStreamingNonwithstanding__Fv`, `cdIsBusy__Fv`, `cdStartStream__FPci`,
-`cdStreamLoadAsync__FPcT0i`, `clipFrustumNormalSign`, `decodeQHead`, `decodeQTail`,
-`decompressThreadid`, `defaultHalos`, `drawAddToList__FPviP8_textureP11_drawRecordi`,
-`drawFrameNm`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`, `dumpMem__FPvi`,
-`engineCurrentLevelName`, `engineScissory1`, `engineScissory2`, `floorf` (external Newlib),
-`gameIsPaused__Fv`, `glistp`, `globalShadowBrightness`, `gstart`, `halos`, `icos__Fi`,
-`isin__Fi`, `lightDeactivate__FP5Light`, `loadCompleteFlag`, `loadInProgress`,
-`loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`, `loadSlot`,
-`matMul__FP8Matrix44P8Matrix34T0`, `memAlloc__FiPc`, `memFree__FPv`, `memset`,
-`modelClippingOn`, `modelDrawFade`, `modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`,
-`modelOption`, `modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`,
-`modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`, `modelShadowScale`,
-`nmHalos`, `nmWaterPatches`, `reallyLoad.873` (a function-local static in the original,
-referenced here through an assembler label), `routeClearStart`, `routeEnable`, `rqHead`,
-`rqTail`, `scx1`, `scx2`, `scy1`, `scy2`, `shadowBrightness`, `sprintf`,
-`texCacheData__FP8_texturei`, `texDecodeStarted`, `texLastDecompressionTime`,
-`textureFreeTexture__FP8_texture`,
-`textureInitTexture__FP12_worldHeaderP8_texturePUcPc`, `texturePageBlock`,
-`texturePageLoc`, `texturePageSegLoc`, `texturePageTable`, `texturesAreDecompressing`,
-`texturesAreLoading`, `waterInit__Fv`, `waterPatch`, `worldAnimation`,
-`worldCameraMatrix`, `worldCameraPos`, `worldCharViewMatrix`,
-`worldClipCubeToFrustum__FPA1_fi`, `worldClipFrustum`, `worldLastDrawSucceded`,
-`worldRunWater__FP12_worldHeader`, the water tuning globals
-(`worldWaterAlpha`, `worldWaterAlpha2`, `worldWaterBumpAmount`, `worldWaterBumpRadius`,
-`worldWaterBumpTimer`, `worldWaterColor`, `worldWaterColor2`, `worldWaterRainTimer`,
-`worldWaterWavyness`, `worldWaterWavyness2`), `zwritesOff`, `zwritesOn`.
-Many of these are authored by other packages under their real names (`worldWater*` by
-world-state, `worldClipCubeToFrustum__FPA1_fi` and `worldCameraPos` by floor-world-view,
-`DynamicLightArray` is used by sony-cd-world-init). `clipFrustumNormalSign` and
-`worldClipFrustum` (0x006ec7a8, 0x006eb9f8) have no definer that I found.
+Symbols my sources reference but do not define (the unresolved symbols of a `ld -r` link of only my 22 objects):
+`DynamicLightArray`, `GLISTSIZE`, `SleepThread`, `StartThread`, `TerminateThread`, `WakeupThread`, `animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`, `animLoadBoneMatricies__FP6PacketP14AnimationState`, `cdEndStream__Fv`, `cdIsBusyStreamingNonwithstanding__Fv`, `cdIsBusy__Fv`, `cdStartStream__FPci`, `cdStreamLoadAsync__FPcT0i`, `clearing`, `clipFrustumNormalSign`, `decodeQ`, `decodeQHead`, `decodeQTail`, `decompressThreadid`, `defaultHalos`, `drawAddToList__FPviP8_textureP11_drawRecordi`, `drawFrameNm`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`, `dumpMem__FPvi`, `engineCurrentLevelName`, `engineFullFrameMode`, `engineScissory1`, `engineScissory2`, `floorf`, `gameIsPaused__Fv`, `glistp`, `globalShadowBrightness`, `gstart`, `halos`, `icos__Fi`, `isin__Fi`, `lightDeactivate__FP5Light`, `loadCompleteFlag`, `loadInProgress`, `loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`, `loadSlot`, `matMul__FP8Matrix44P8Matrix34T0`, `memAlloc__FiPc`, `memFree__FPv`, `memset`, `modelClippingOn`, `modelDrawFade`, `modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`, `modelOption`, `modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`, `modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`, `modelShadowScale`, `nmHalos`, `nmWaterPatches`, `putBlock__FP8_textureP6PacketPPP9uncompMapPPii`, `reallyLoad.873`, `routeClearStart`, `routeEnable`, `rqHead`, `rqTail`, `scx1`, `scx2`, `scy1`, `scy2`, `shadowBrightness`, `sprintf`, `texCacheData__FP8_texturei`, `texDecodeStarted`, `texLastDecompressionTime`, `textureFreeTexture__FP8_texture`, `textureInitTexture__FP12_worldHeaderP8_texturePUcPc`, `texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`, `texturePageTable`, `textureUncompBufferLocked`, `texturesAreDecompressing`, `texturesAreLoading`, `uncompCache`, `unscrambleTable`, `vqDecompress__FP8_texturei`, `waterInit__Fv`, `waterPatch`, `worldAnimation`, `worldCameraMatrix`, `worldCameraPos`, `worldCharViewMatrix`, `worldClipCubeToFrustum__FPA1_fi`, `worldClipFrustum`, `worldLastDrawSucceded`, `worldRunWater__FP12_worldHeader`, `worldWaterAlpha`, `worldWaterAlpha2`, `worldWaterBumpAmount`, `worldWaterBumpRadius`, `worldWaterBumpTimer`, `worldWaterColor`, `worldWaterColor2`, `worldWaterRainTimer`, `worldWaterWavyness`, `worldWaterWavyness2`, `zwritesOff`, `zwritesOn`.
+
+Many belong to other packages under their real names (`worldWater*` to world-state, `worldClipCubeToFrustum__FPA1_fi` and `worldCameraPos` to floor-world-view, `DynamicLightArray` is used by sony-cd-world-init, the texture tables by gs-dma-present). `reallyLoad.873` is a function-local static of the original, referenced here through an assembler label. `clipFrustumNormalSign` and `worldClipFrustum` (0x006ec7a8, 0x006eb9f8) have no definer that I found. The function-local statics of `texDecompressThread__FPv` (x1, y1, x2, y2, y, tab) are defined in that unit under C++ names; the original symbols are `x1.846` and so on.
 
 ## Build-plan entries needed
 
@@ -135,7 +93,7 @@ exists in the plan (game-state-draw-world).
   {
     "source": "sources/w8-render-world-b-model-draw/model_draw.cpp",
     "object_name": "model_draw.o",
-    "sha256": "2e2ccf4580456013811fdcb99a2a3e20e6b1b177e3d02aa581cd5d284fb8bada"
+    "sha256": "b3e6ea7b79ad65954d6906ad32357a6bd1b98eea8d730c59486fbebf6f0fb7c1"
   },
   {
     "source": "sources/w8-render-world-b-model-reset-optional/reset_optional.cpp",
@@ -146,6 +104,11 @@ exists in the plan (game-state-draw-world).
     "source": "sources/w8-render-world-b-model-shadow/shadow_brightness.cpp",
     "object_name": "shadow_brightness.o",
     "sha256": "5ce4cbf654a89cb72db8d4b3ec67971e4d5a0443c539c698b2c9e2bd2187cdc9"
+  },
+  {
+    "source": "sources/w8-render-world-b-tex-decompress-thread/decompress_thread.cpp",
+    "object_name": "decompress_thread.o",
+    "sha256": "4da8955f34ccb793bcbada73f9b04f9754fd5a9da0668c01db1a841e158ba537"
   },
   {
     "source": "sources/w8-render-world-b-tex-is-decompressing/is_decompressing.cpp",
@@ -240,13 +203,20 @@ exists in the plan (game-state-draw-world).
 All of it. Every function was checked only by compiling it and running my own host
 checks against stubs, which prove what I understood and wrote, not that the original
 behaves that way. `worldDrawWorld`, `worldFindWaterPatches`, `worldReset`, `worldMoveDoor`,
-`texProcessLoad` and `modelDraw` use arena offsets on the host in place of 32-bit
+`texProcessLoad`, `modelDraw` and `texDecompressThread` use arena offsets (the last also a host scratchpad and a host timer function) on the host in place of 32-bit
 addresses; the EE objects use real addresses. `modelDraw` writes the second word of its
 local packet (the last tag address) but the host checks do not read it.
 No data was cross-checked against a running game, and the section placement of the data
 units was checked only with `nm`/`readelf` on the compiled object.
 
-## Blockers
+## Unknown
 
-- None needing the owner. The remaining symbol is blocked by size and effort, not by
-  missing information.
+- What the world header, the 60-byte polyset records, the 64-byte textures and the model
+  header fields mean beyond the offsets read.
+- Whether `worldFindWaterPatches` is really only used for water (the name is the
+  executable's).
+- Types of several flags and of the halos table.
+- What `putBlock__FP8_textureP6PacketPPP9uncompMapPPii` writes through its pointer arguments, and the meaning of the two chain pointers `texDecompressThread` keeps; its packet struct is a three-word guess (cursor at +0, the word at +4 not touched here, last tag at +8).
+- The meaning of the 2048 context bytes and the 1024 palette-like bytes in the texture header.
+
+Blockers needing the owner: none.
