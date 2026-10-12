@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1426,
+  "default_authored_inputs": 1457,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2143,7 +2143,58 @@
     "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp": "d3ae0093990abff6d9915e1636b39a24822833a83333e9132b921518b1de41a7",
     "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp": "5457ec4c7204b02042cd96fbcc11dc494f639a161f1a068c27b6b28269c62c03",
     "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp": "4dff148551f7a46f1bcc2b79ea11b1aa24b9c5bd695a32dbabdacaad993e6547",
-    "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57"
+    "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
+    "sources/level-anim-load-anim-add/anim_add.cpp": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+    "sources/level-anim-load-common/mem.hpp": "387f4fd04cd4045a881f8e6b4072af795a917855c23ce1dc37ec5d3b5f2a3e31",
+    "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+    "sources/level-anim-load-anim-init-state/anim_init_state.cpp": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+    "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+    "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+    "sources/level-anim-load-cd-state/storage.cpp": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+    "sources/level-anim-load-cd-state/storage.hpp": "2d2b4ba2d61f5212a6b350827bf99615b1d5babbbe19b9cc623153912e075f6a",
+    "sources/level-anim-load-cut-current-scene/storage.cpp": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+    "sources/level-anim-load-cut-current-scene/storage.hpp": "eb70e07c2f69ddd6c5bf0b49463aeab59a9f198452393ca25be7dd477d2b54c8",
+    "sources/level-anim-load-cut-init/storage.cpp": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+    "sources/level-anim-load-cut-init/storage.hpp": "fb5c66206524fe28de04bd7eba334ffb278ad73e26eb5ddffb2776b647bab466",
+    "sources/level-anim-load-cut-msg-handler/storage.cpp": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+    "sources/level-anim-load-cut-msg-handler/storage.hpp": "6fae00157c28b20b19d7433c61c471a4293678ea918bfbcb05c549ab80d496fe",
+    "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+    "sources/level-anim-load-cut-play-mode/storage.cpp": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+    "sources/level-anim-load-cut-play-mode/storage.hpp": "4cd9c3fea5a0a2a6aa10fc79e1abbff48871b9b1a3d3297c4d4ddd086ef72a24",
+    "sources/level-anim-load-cut-scene-name/storage.cpp": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+    "sources/level-anim-load-cut-scene-name/storage.hpp": "8953fb96afab10e5acbdbd446ee95a5577cd101e84408ede9fe5e50d8f4e3176",
+    "sources/level-anim-load-cut-skip-mode/storage.cpp": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+    "sources/level-anim-load-cut-skip-mode/storage.hpp": "fa1dfa60280bd7654fc31f84acd98f331c5c6d61bfb243aaec61ac8366ea4aa6",
+    "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+    "sources/level-anim-load-cut-time/storage.cpp": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+    "sources/level-anim-load-cut-time/storage.hpp": "ceda0c3cea11a5ce02efd5aa28b8a9453e932a09e97e1249f1649f72c9c20e13",
+    "sources/level-anim-load-dialog-actor/storage.cpp": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+    "sources/level-anim-load-dialog-actor/storage.hpp": "5826553953ecb9be86c8fab99631d5f3e64ef5709b93251a160858d86d640478",
+    "sources/level-anim-load-display-action-pos/storage.cpp": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+    "sources/level-anim-load-display-action-pos/storage.hpp": "c843fd31dba4e3187cd52297b5e7ad953ab1356311bd16dc6a26eab16f68ab72",
+    "sources/level-anim-load-display-cut-pos/storage.cpp": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+    "sources/level-anim-load-display-cut-pos/storage.hpp": "4a6ae77cda114247d6b4362ebcdb50e75933db50fa409b07d3ab23c0ecbc095a",
+    "sources/level-anim-load-display-frame/storage.cpp": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+    "sources/level-anim-load-display-frame/storage.hpp": "13dd92e267d9d92161c198c6f357770c6f634ad177ebff00b967bdf7f1bea079",
+    "sources/level-anim-load-find-height-scale/storage.cpp": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+    "sources/level-anim-load-find-height-scale/storage.hpp": "3070e769f32123312ef9d1d768736613ae32fd41315fb7f09d8af8e98635f7e0",
+    "sources/level-anim-load-forbidden-scale/storage.cpp": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+    "sources/level-anim-load-forbidden-scale/storage.hpp": "fbc870dbb1333e34da32f09221cfb9726abcfcec28e1bcde66acab2f95010bf6",
+    "sources/level-anim-load-lump-find/lump_find.cpp": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+    "sources/level-anim-load-monster-spawn/monster_spawn.cpp": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+    "sources/level-anim-load-music-size/storage.cpp": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+    "sources/level-anim-load-music-size/storage.hpp": "d928af1bdfe29d783ee0091c2746778d597cc2eea2ecb36f725ac37685e4140c",
+    "sources/level-anim-load-net-nm-ready/storage.cpp": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+    "sources/level-anim-load-net-nm-ready/storage.hpp": "4e3249194e09b0ec328f96538a278bdd23eb2ad82cc07d2576831b7a6eec01d9",
+    "sources/level-anim-load-net-we-sent-ready/storage.cpp": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+    "sources/level-anim-load-net-we-sent-ready/storage.hpp": "e4be98540c128f9c3787fb31d9a2e956db8b8c2b86f98a8880d65db656038ca0",
+    "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+    "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+    "sources/level-anim-load-swap-int/swap_int.cpp": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+    "sources/level-anim-load-world-flags-word/storage.cpp": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+    "sources/level-anim-load-world-flags-word/storage.hpp": "d03b361b4224c4073d84b68b95bd929135262b29a62c1d45b90257ab47b94efa",
+    "sources/level-anim-load-world-pointer-word/storage.cpp": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+    "sources/level-anim-load-world-pointer-word/storage.hpp": "2cade5859b88f4436d8b092d388a8eb7f813138bb940baa1540674a0917b8308"
   },
   "inputs": [
     {
@@ -18806,6 +18857,434 @@
       "sha256": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
       "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1428,
+      "kind": "independently_authored_source",
+      "object_name": "anim_add.o",
+      "profile": "authored_cpp",
+      "sha256": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+      "source": "sources/level-anim-load-anim-add/anim_add.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAdd__FP14AnimationStateP15AnimationHeaderi",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1429,
+      "kind": "independently_authored_source",
+      "object_name": "anim_add_transition_to.o",
+      "profile": "authored_cpp",
+      "sha256": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+      "source": "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1430,
+      "kind": "independently_authored_source",
+      "object_name": "anim_init_state.o",
+      "profile": "authored_cpp",
+      "sha256": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+      "source": "sources/level-anim-load-anim-init-state/anim_init_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "animInitState__FP14AnimationState",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1431,
+      "kind": "independently_authored_source",
+      "object_name": "anim_reset_framestates.o",
+      "profile": "authored_cpp",
+      "sha256": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+      "source": "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp",
+      "emitted_functions": [
+        {
+          "name": "animResetFramestates__FP14AnimationState",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1432,
+      "kind": "independently_authored_source",
+      "object_name": "anim_set_to_end.o",
+      "profile": "authored_cpp",
+      "sha256": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+      "source": "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "animSetToEnd__FP14AnimationState",
+          "compiled_body_bytes": 440
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cd-state/storage.hpp"
+      ],
+      "input_order": 1433,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+      "source": "sources/level-anim-load-cd-state/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-current-scene/storage.hpp"
+      ],
+      "input_order": 1434,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+      "source": "sources/level-anim-load-cut-current-scene/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-init/storage.hpp"
+      ],
+      "input_order": 1435,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+      "source": "sources/level-anim-load-cut-init/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-msg-handler/storage.hpp"
+      ],
+      "input_order": 1436,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+      "source": "sources/level-anim-load-cut-msg-handler/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1437,
+      "kind": "independently_authored_source",
+      "object_name": "cut_msg_handler_function.o",
+      "profile": "authored_cpp",
+      "sha256": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+      "source": "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutMsgHandlerFunction__FPUci",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-play-mode/storage.hpp"
+      ],
+      "input_order": 1438,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+      "source": "sources/level-anim-load-cut-play-mode/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-scene-name/storage.hpp"
+      ],
+      "input_order": 1439,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+      "source": "sources/level-anim-load-cut-scene-name/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-skip-mode/storage.hpp"
+      ],
+      "input_order": 1440,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+      "source": "sources/level-anim-load-cut-skip-mode/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1441,
+      "kind": "independently_authored_source",
+      "object_name": "cut_start_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+      "source": "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutStartScene__FP9_cutscenePc",
+          "compiled_body_bytes": 384
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-time/storage.hpp"
+      ],
+      "input_order": 1442,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+      "source": "sources/level-anim-load-cut-time/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-dialog-actor/storage.hpp"
+      ],
+      "input_order": 1443,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+      "source": "sources/level-anim-load-dialog-actor/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-action-pos/storage.hpp"
+      ],
+      "input_order": 1444,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+      "source": "sources/level-anim-load-display-action-pos/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-cut-pos/storage.hpp"
+      ],
+      "input_order": 1445,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+      "source": "sources/level-anim-load-display-cut-pos/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-frame/storage.hpp"
+      ],
+      "input_order": 1446,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+      "source": "sources/level-anim-load-display-frame/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-find-height-scale/storage.hpp"
+      ],
+      "input_order": 1447,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+      "source": "sources/level-anim-load-find-height-scale/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-forbidden-scale/storage.hpp"
+      ],
+      "input_order": 1448,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+      "source": "sources/level-anim-load-forbidden-scale/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1449,
+      "kind": "independently_authored_source",
+      "object_name": "lump_find.o",
+      "profile": "authored_cpp",
+      "sha256": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+      "source": "sources/level-anim-load-lump-find/lump_find.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpFind__FPvPc",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1450,
+      "kind": "independently_authored_source",
+      "object_name": "monster_spawn.o",
+      "profile": "authored_cpp",
+      "sha256": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+      "source": "sources/level-anim-load-monster-spawn/monster_spawn.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_monster_spawn",
+          "compiled_body_bytes": 2812
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-music-size/storage.hpp"
+      ],
+      "input_order": 1451,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+      "source": "sources/level-anim-load-music-size/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-net-nm-ready/storage.hpp"
+      ],
+      "input_order": 1452,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+      "source": "sources/level-anim-load-net-nm-ready/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-net-we-sent-ready/storage.hpp"
+      ],
+      "input_order": 1453,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+      "source": "sources/level-anim-load-net-we-sent-ready/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1454,
+      "kind": "independently_authored_source",
+      "object_name": "route_unroll_vnode.o",
+      "profile": "authored_cpp",
+      "sha256": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+      "source": "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_unroll_vnode",
+          "compiled_body_bytes": 444
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1455,
+      "kind": "independently_authored_source",
+      "object_name": "sound_free_ram.o",
+      "profile": "authored_cpp",
+      "sha256": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+      "source": "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_sound_free_ram",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1456,
+      "kind": "independently_authored_source",
+      "object_name": "swap_int.o",
+      "profile": "authored_cpp",
+      "sha256": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+      "source": "sources/level-anim-load-swap-int/swap_int.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_swap_int",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-world-flags-word/storage.hpp"
+      ],
+      "input_order": 1457,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+      "source": "sources/level-anim-load-world-flags-word/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-world-pointer-word/storage.hpp"
+      ],
+      "input_order": 1458,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+      "source": "sources/level-anim-load-world-pointer-word/storage.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -18905,7 +19384,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "6cf7ae41287343f03473be1edbda3ae8d5c0933b8fa9332dd2462ac2aee8af9d",
+  "snapshot_sha256": "6b28ed1c5d5f4b5e331f176026c48ef543a55e5275a7ae249130dc955873515d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

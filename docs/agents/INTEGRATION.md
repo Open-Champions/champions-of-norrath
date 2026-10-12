@@ -2470,6 +2470,78 @@ Opened (all function labels from the virtual tables): `_$_10DoorSecret`,
 COMMON. 214 tool tests passed. Object hashes in the snapshot come from the
 fresh build. No EE or game execution.
 
+## agents/level-anim-load
+
+Merged, with four of the 35 units left out of the plan. The notes carry the
+five summary sections: functions and data with original addresses and sizes,
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Twelve function units have a
+`host_contract.cpp` and the storage units have a `storage_contract.cpp`. All
+31 selected contracts passed on this machine with ASan/UBSan
+(`-DNORRATH_HOST_ARENA` maps target words into an arena on the host only). A
+scripted mutation pass was killed by the contracts in every function unit
+that has numeric literals (10/10 `animAddTransitionTo`, `animSetToEnd`,
+`animResetFramestates` and `routeUnrollVnode`; 9/10 `animAdd` and
+`cutStartScene`; 8/10 `monsterSpawn` and `lumpFind`). No game binary or
+disassembly listing was committed. The 12 compiled body sizes match the notes.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `level-anim-load-loader-failure-word` defines `norrath_loader_failure_word_view`
+  as a global absolute symbol with value 0 through a basic `asm` block, so
+  the loader's store to address 0 resolves. PORTABLE_BUILD says the link
+  imports no absolute game addresses and applies no aliases; an absolute
+  symbol in the partial object breaks that statement, the unit has no host
+  contract, and the notes themselves ask for a decision. The import stays
+  open until the owner decides.
+- `level-anim-load-anim-results`, `level-anim-load-frame-states` and
+  `level-anim-load-scene-state` define `animResults`, `frameStates` and
+  `scene`, which `anim_results.o` (input 915), `frame_states.o` (input 925)
+  and `scene.o` (input 951) already define. Selecting them made the
+  relocatable link fail with multiple definitions; the notes' closed list is
+  stale on those three names.
+
+Thirty-one units were selected with fresh `input_order` values 1428
+through 1458 (the 12 function units and 19 storage units). The host-only headers in `level-anim-load-common`
+and the files of the four left-out units are in the snapshot `files` map.
+
+Two same-address pairs from the notes stay open as two separate words:
+`norrath_factory_world_pointer_word` (the word `world`, already defined as
+`norrath_route_world_word_bytes` by world-state) and
+`norrath_factory_world_flags_word` (`levelFlags`, already defined by
+natives-c). They are different link symbols, so the link has no duplicate
+definition but the two copies of each word do not agree. `cutMode` stays an
+import under its original name.
+
+The worker's private count (950 to 937 on an older tip) is not the official
+one. Eighteen of the 22 closed names in the notes reproduce; the others are
+the four left out above.
+
+| | |
+|---|---|
+| Before | 1221 |
+| After | 1208 |
+| Closed | 18 |
+| Opened | 5 |
+
+Closed: `animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi`,
+`animAdd__FP14AnimationStateP15AnimationHeaderi`,
+`animInitState__FP14AnimationState`, `animResetFramestates__FP14AnimationState`,
+`animSetToEnd__FP14AnimationState`, `cd`, `cutMsgHandler`,
+`cutMsgHandlerFunction__FPUci`, `cutStartScene__FP9_cutscenePc`,
+`lumpFind__FPvPc`, `norrath_archive_sound_free_ram`,
+`norrath_factory_world_flags_word`, `norrath_factory_world_pointer_word`,
+`norrath_find_height_orientation_scale_bytes`,
+`norrath_forbidden_orientation_scale_bytes`, `norrath_monster_spawn`,
+`norrath_route_unroll_vnode`, `norrath_swap_int`.
+
+Opened: `coreStartLoading__Fv`, `cutDrawFrame__Fv`, `cutRunFrameTask__Fv`,
+`spawn__FG6Point3iisPcbPPci`, `updateAnimation__FP13animComponent`. 1119
+function bodies, 1457 authored inputs, zero COMMON. 214 tool tests passed.
+Object hashes in the snapshot come from the fresh build. No EE or game
+execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
