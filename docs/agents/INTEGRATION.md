@@ -3471,6 +3471,40 @@ Opened: `GetTargetNum__6Camera`, `SetCutWasActive__6Camera`, `_3map$mapOffset`,
 `thereIsACutPlayer`, `validLocalPlayer`, `willDraw__3mapP12_worldHeaderf`,
 `worldSetViewMatricies__FP6Point3P8Matrix34`.
 
+## agents/w8-core-loop-c
+
+Merged (the branch notes carry the five summary sections). Thirty-one units
+with fresh `input_order` values 1720 through 1750: 11 emitted functions (1004
+compiled body bytes, not original-byte matches) and 20 data-only units. Each
+unit has a host check; all 31 build and exit 0 here (31 of 31). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1374 function bodies, 1751 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1609 |
+| After | 1593 |
+| Closed | 31 |
+| Opened | 15 |
+
+Closed: `endTimer`, `endTimer.1059`, `engineDisable30fps`, `engineFullFrameMode`,
+`engineGetAIStepCount__Fv`, `engineLastAITime`,
+`engineLoadEnvTex__FP8_texture`, `engineReboot__Fv`, `engineScissory1`,
+`engineScissory2`, `engineScreenSlide`, `engineSetBlur__Fi`,
+`engineYOffset`, `fadeIconY`, `fadeTimer`, `firstTime`, `flaredIn`,
+`flaredOut`, `frameNumWrapped__Fv`, `gameAutoMapMode`, `gameCameraShake`,
+`gameCheckNoSaveZone__Fv`, `gameCreatureThinkSpinner`, `gameDeathStart__Fi`,
+`gameDeathTimer`, `gameDeathTimerSingle`, `gameGetFullLevelName__FPc`,
+`gameItemTreasureRamp__Fv`, `gameLevelLoading`, `gameLineClear__Fv`,
+`gameLineDebugDraw__Fv`.
+
+Opened: `UnpreparePowerOff__Fv`, `_$_4Line`, `checkSave__FP10GameObject`,
+`deathNetHack`, `deathState`, `frameNumWrappedPS__FP14ParticleSystem`,
+`gameDeath__Fv`, `gameLineCount`, `gameLines`, `nextFrameDrop`,
+`objectIterateRunLists__FPFP10GameObject_v`, `saveOk`, `sceSifExitCmd`,
+`soundQuiet__Fv`, `texTerminateThread__Fv`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
