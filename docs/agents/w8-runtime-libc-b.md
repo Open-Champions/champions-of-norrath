@@ -1,0 +1,76 @@
+# w8-runtime-libc-b
+
+C runtime and RTTI support (2/2). Every unit below was compiled once with the reviewed `authored_cpp` flags and the reviewed EE g++. Each has a host test beside it (`*_host_test.cpp`). Those tests include host headers and stub callees, so they are not EE build inputs. A host test builds the source with `-D<name>=w8_<name>` where the name collides with the host C library, and links it with the test file.
+
+Addresses are from the private executable whose hash is the snapshot `target_sha256`. Compiled sizes are `.text` sizes from the EE compile, not original-byte matches. No build was run against a merged plan; the sources were compiled one at a time.
+
+## Observed
+
+- `srand` (`0x00302fc0`, 24 bytes) writes its argument, zero-extended, to offset 168 of the object `_impure_ptr` aims at. `rand` (`0x00302fd8`, 100 bytes) multiplies that 64-bit word by `0x5851f42d4c957f2d`, adds 1, stores it back, and returns bits 32..62. The original calls `__muldi3`; the compiler expands the multiply inline, so the authored object has no `__muldi3` import.
+- `__rtti_si` (`0x002fd348`, 32 bytes, authored as `norrath_rtti_si`) is null-safe and writes name at +0, the address `0x004537b0` (`_vt$14__si_type_info`, 48 bytes) at +4, and the base record at +8. `__rtti_user` (`0x002fd368`, 28 bytes, `norrath_rtti_user`) writes name at +0 and `0x004537e0` (`_vt$16__user_type_info`, 48 bytes) at +4. The vtable views are libc-a's names.
+- `readyToSwitch__3Cat` (`0x001eef30`, 16 bytes) returns 1 when the signed byte at +292 equals 1.
+- `powf` (`0x002f16d0`, 20 bytes) forwards both floats to `__ieee754_powf` (`0x002f4f80`). `tanf` (`0x002f1550`, 120 bytes) is the fdlibm shape: bits at most `0x3f490fda` go to `__kernel_tanf(x, 0, 1)`; otherwise `__ieee754_rem_pio2f` (`0x002f5760`) then `__kernel_tanf(y0, y1, 1 - ((n & 1) << 1))`.
+- `printf` (`0x00302560`, 112 bytes): stores `_impure_ptr` into the owner word (+84) of the impure object's standard-out stream (+8), then calls `vfprintf` (`0x00306a60`, authored `norrath_factory_vfprintf`) with that stream, the format and the argument cursor.
+- `write` (`0x002d56a8`) accepts descriptors 1 and 2, `read` (`0x002d5728`) accepts descriptor 0; others return -1. Both check the word `ttyinit` (`0x00444950`, zero in the image); when zero they call `sceTtyInit` with the buffer pointer, return -1 on a zero result, and set the word to 1. Then `sceTtyWrite` / `sceTtyRead` (`0x002d6470` / `0x002d65e8`) is called with the buffer and count. `sceResetttyinit` clears the word.
+- `strlen` (`0x00304cfc`), `strcpy` (`0x00304640`, returns the destination), `strncpy` (`0x00305118`, zero-pads, returns the destination), `strncmp` (`0x00304f60`, unsigned byte difference), `strstr` (`0x00305328`, empty needle returns the haystack) and `strcasecmp` (`0x00304168`) have standard results. The first five use 8/16-byte block scans on aligned inputs that the authored byte loops do not reproduce. `strcasecmp` folds through the 384-byte ctype view with a signed first pass and an unsigned recheck, as in `norrath_factory_strcasecmp`.
+- Data: `__mprec_tens` (`0x0047f4f0`, 200 bytes) is the 25 doubles 1e0..1e24; `__mprec_tinytens` (`0x0047f5e0`, 40 bytes) holds 1e-16, 9.999999999999999e-33, 1e-64, 9.999999999999999e-129, 1e-256; `__infinity` (`0x0047f608`, 8 bytes) is +inf. The parse-rounding doubles at `0x0047ed48`, `0x0047ed50`, `0x0047ed58` are 0.4999999, 0.5000001 and 0.24999995. `basefix.0` (`0x0047ef70`, 34 bytes) is the 17 shorts {10, 1..16}. The string `"e%ld"` is at `0x0047ef98`. Each data address was confirmed by a load in `_strtod_r` or `__svfscanf`.
+
+## Inferred
+
+- `ttyinit` is shared with `sceResetttyinit`, which another package authors as `int ttyinit;`; `read` and `write` declare it `extern int ttyinit;`.
+- The overflow view is the same image word as `__infinity`.
+- The `sceTtyInit` argument is the buffer pointer because the original passes its second argument register unchanged; the callee may ignore it.
+
+## Unknown
+
+- What the byte at Cat+292 means.
+- The argument and return contracts of `sceTtyInit`, `sceTtyRead`, `sceTtyWrite` beyond the words used here.
+- The original `printf` spills `f12`-`f19` below the integer argument cursor; the authored one uses the compiler varargs cursor, so float arguments past that cursor are not claimed.
+- The block-scan paths of the string functions are not reproduced; only the byte results are.
+
+## Imports closed
+
+`norrath_player_number_half_lower_view`, `norrath_player_number_half_upper_view`, `norrath_player_number_overflow_view`, `norrath_player_number_quarter_lower_view`, `norrath_player_number_tens_view`, `norrath_player_number_tiny_tens_view`, `norrath_player_scan_base_normalization_view`, `norrath_player_scan_exponent_format_view`, `norrath_rtti_si`, `norrath_rtti_user`, `powf`, `printf`, `rand`, `read`, `readyToSwitch__3Cat`, `srand`, `strcasecmp`, `strcpy`, `strlen`, `strncmp`, `strncpy`, `strstr`, `tanf`, `write`.
+
+## Imports opened
+
+`__ieee754_powf`, `__kernel_tanf`, `__ieee754_rem_pio2f`, `sceTtyInit`, `sceTtyRead`, `sceTtyWrite`, `ttyinit` (defined by the startup-sce-d reset-tty-init unit once merged).
+
+Still referenced and owned elsewhere: `norrath_factory_impure_pointer_word`, `norrath_factory_vfprintf`, `norrath_factory_ctype_minimum_view`, `norrath_legacy_single_inheritance_type_info_vtable_view` and `norrath_legacy_user_type_info_vtable_view` (libc-a).
+
+`strlen`, `strncmp` and `strcasecmp` are second authored bodies of functions that also exist as `norrath_factory_strlen`, `norrath_factory_strncmp` and `norrath_factory_strcasecmp`. They are kept because callers import the plain names and the plan has no symbol aliases.
+
+## Build-plan entries needed
+
+Profile `authored_cpp`, kind `independently_authored_source`. `input_order` values are suggestions after the current last input (1407); the integrator renumbers. `emitted_functions` belongs in the snapshot input. Add each source and the header `sources/libc-format-impure/impure_state.hpp` (already in the files map) to `files`, and bump `default_authored_inputs` by 24. Do not add the `*_host_test.cpp` files.
+
+```
+{"header_closure": [], "input_order": 1408, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_half_lower.o", "profile": "authored_cpp", "sha256": "666d640211220cf4ed5dce72d9c5b93fcd9bac1ef83ebce3f2a8180f41679e36", "source": "sources/w8-runtime-libc-b-number-half-lower/number_half_lower.cpp"}
+{"header_closure": [], "input_order": 1409, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_half_upper.o", "profile": "authored_cpp", "sha256": "8b6cf37723fc2b7f88c1f82d60351739406362a50c16dd5e242b94c98752d5eb", "source": "sources/w8-runtime-libc-b-number-half-upper/number_half_upper.cpp"}
+{"header_closure": [], "input_order": 1410, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_overflow.o", "profile": "authored_cpp", "sha256": "fc6507e95e057b613e255fc8cb290057ef9ff514968efbcfb320fb15928c4b72", "source": "sources/w8-runtime-libc-b-number-overflow/number_overflow.cpp"}
+{"header_closure": [], "input_order": 1411, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_quarter_lower.o", "profile": "authored_cpp", "sha256": "eda30cd9ed33c2b3e5df557eff368e7c29df1903775c3bf461d69e593c613b9d", "source": "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower.cpp"}
+{"header_closure": [], "input_order": 1412, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_tens.o", "profile": "authored_cpp", "sha256": "cbc2264ce397265dd89d0b105236d9826a1a69cb16eb3334618cc42932cffca9", "source": "sources/w8-runtime-libc-b-number-tens/number_tens.cpp"}
+{"header_closure": [], "input_order": 1413, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_number_tiny_tens.o", "profile": "authored_cpp", "sha256": "9e728cf48bb877cbdfc76cdad16101f96f06c95a1f5c7858b242bbf5183f80c5", "source": "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens.cpp"}
+{"header_closure": [], "input_order": 1414, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_powf.o", "profile": "authored_cpp", "sha256": "240e3d711d59f7aa1eb1407d269e608f9999952c173d66a6aadd68a33e634e36", "source": "sources/w8-runtime-libc-b-powf/powf.cpp", "emitted_functions": [{"name": "powf", "compiled_body_bytes": 8}]}
+{"header_closure": ["sources/libc-format-impure/impure_state.hpp"], "input_order": 1415, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_printf.o", "profile": "authored_cpp", "sha256": "c96b9847531d2160dba656a22f9de69f4b1cfacbea9c3fd955f5cb530674ccdc", "source": "sources/w8-runtime-libc-b-printf/printf.cpp", "emitted_functions": [{"name": "printf", "compiled_body_bytes": 80}]}
+{"header_closure": ["sources/libc-format-impure/impure_state.hpp"], "input_order": 1416, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_rand.o", "profile": "authored_cpp", "sha256": "c154c8f9614e04fe7ea6e6a919fa9078b27a6d62c37812e1edc8238388d710bb", "source": "sources/w8-runtime-libc-b-rand/rand.cpp", "emitted_functions": [{"name": "rand", "compiled_body_bytes": 160}]}
+{"header_closure": [], "input_order": 1417, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_read.o", "profile": "authored_cpp", "sha256": "a449c1a5de26c794ef662f51cf8710739f6592932a3f1bad8f0822090f9520e2", "source": "sources/w8-runtime-libc-b-read/read.cpp", "emitted_functions": [{"name": "read", "compiled_body_bytes": 128}]}
+{"header_closure": [], "input_order": 1418, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_ready_to_switch.o", "profile": "authored_cpp", "sha256": "57079de9041ebe273916d2f3c88484ff49966f4b5adbbc5732e9d056ace290e8", "source": "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch.cpp", "emitted_functions": [{"name": "readyToSwitch__3Cat", "compiled_body_bytes": 16}]}
+{"header_closure": [], "input_order": 1419, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_rtti_si.o", "profile": "authored_cpp", "sha256": "516abdaea65178048da05917c4a227a789eb9eccebc7ccca40e3cd0419e2e448", "source": "sources/w8-runtime-libc-b-rtti-si/rtti_si.cpp", "emitted_functions": [{"name": "norrath_rtti_si", "compiled_body_bytes": 40}]}
+{"header_closure": [], "input_order": 1420, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_rtti_user.o", "profile": "authored_cpp", "sha256": "e88cb330af9da6cabd5c6972f00c6c4d7bc72a0c1539cabaeb3bd408ff1d10fb", "source": "sources/w8-runtime-libc-b-rtti-user/rtti_user.cpp", "emitted_functions": [{"name": "norrath_rtti_user", "compiled_body_bytes": 32}]}
+{"header_closure": [], "input_order": 1421, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_scan_base_normalization.o", "profile": "authored_cpp", "sha256": "5f3b38747263718d4e9288128ed247bdc004f1a784962a1edce76e95538694cd", "source": "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization.cpp"}
+{"header_closure": [], "input_order": 1422, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_scan_exponent_format.o", "profile": "authored_cpp", "sha256": "94233e6d4b23a75fa5280a33b2a7b76204af3f9dfba1ad5c387103ba60dbba85", "source": "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format.cpp"}
+{"header_closure": ["sources/libc-format-impure/impure_state.hpp"], "input_order": 1423, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_srand.o", "profile": "authored_cpp", "sha256": "aae8a64397da971e718df0e80b43d6e2628358323addb8a106f071cb8c2cae6b", "source": "sources/w8-runtime-libc-b-srand/srand.cpp", "emitted_functions": [{"name": "srand", "compiled_body_bytes": 24}]}
+{"header_closure": [], "input_order": 1424, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strcasecmp.o", "profile": "authored_cpp", "sha256": "f80cb8370eeb5dc4c0f61f8bbca58624f281b9b10c75d0e9c41e3fdda6113426", "source": "sources/w8-runtime-libc-b-strcasecmp/strcasecmp.cpp", "emitted_functions": [{"name": "strcasecmp", "compiled_body_bytes": 296}]}
+{"header_closure": [], "input_order": 1425, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strcpy.o", "profile": "authored_cpp", "sha256": "eb69041d119cbde8e9bd947df2c5d87dfa5a27f4bf6f2733289f8d0272d4b585", "source": "sources/w8-runtime-libc-b-strcpy/strcpy.cpp", "emitted_functions": [{"name": "strcpy", "compiled_body_bytes": 40}]}
+{"header_closure": [], "input_order": 1426, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strlen.o", "profile": "authored_cpp", "sha256": "c4dc90e3eb4aad48b522d191ff03068170c29fb107cbfb315ac7d36478c70492", "source": "sources/w8-runtime-libc-b-strlen/strlen.cpp", "emitted_functions": [{"name": "strlen", "compiled_body_bytes": 48}]}
+{"header_closure": [], "input_order": 1427, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strncmp.o", "profile": "authored_cpp", "sha256": "0ea23d12690cc64ef7902220809e34c8ecfe71296bc80dec15f204907b95b377", "source": "sources/w8-runtime-libc-b-strncmp/strncmp.cpp", "emitted_functions": [{"name": "strncmp", "compiled_body_bytes": 80}]}
+{"header_closure": [], "input_order": 1428, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strncpy.o", "profile": "authored_cpp", "sha256": "ce36476cb04530ea0f59d5742f15fd6f46ab2e702758d4a9dae21821adf735cc", "source": "sources/w8-runtime-libc-b-strncpy/strncpy.cpp", "emitted_functions": [{"name": "strncpy", "compiled_body_bytes": 104}]}
+{"header_closure": [], "input_order": 1429, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_strstr.o", "profile": "authored_cpp", "sha256": "a1d33fb771e9a7e2af6656832fd1b288d579eb8d29ec7786f29c18a3e39d77c0", "source": "sources/w8-runtime-libc-b-strstr/strstr.cpp", "emitted_functions": [{"name": "strstr", "compiled_body_bytes": 88}]}
+{"header_closure": [], "input_order": 1430, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_tanf.o", "profile": "authored_cpp", "sha256": "5df92987562d6ce49e69d42209bfc9ae8fc702c34f013283c71c7713b69789d9", "source": "sources/w8-runtime-libc-b-tanf/tanf.cpp", "emitted_functions": [{"name": "tanf", "compiled_body_bytes": 104}]}
+{"header_closure": [], "input_order": 1431, "kind": "independently_authored_source", "object_name": "w8_runtime_libc_b_write.o", "profile": "authored_cpp", "sha256": "4be20b3d199cf678ca2306a7d13528276f66205511c75dcde1eb110ae173ba03", "source": "sources/w8-runtime-libc-b-write/write.cpp", "emitted_functions": [{"name": "write", "compiled_body_bytes": 136}]}
+```
+
+## Authored but never executed
+
+Nothing from this package ran on the target. The host tests ran host builds of the sources against stubs: `printf` stubs the formatter, `read` and `write` stub the tty calls, `powf` and `tanf` stub their fdlibm callees, `rtti_si` and `rtti_user` use host pointer slots in place of 32-bit words, `rand` is compared against a 128-bit reference, and `strcasecmp` rebuilds the "C"-locale table. The data views are compared with host double literals, not with the image, since the image stays private.
