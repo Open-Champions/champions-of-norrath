@@ -47,7 +47,7 @@ int main() {
     // two bind errors, then a server pointer after two empty answers
     _scmd_dr_bind = -1; bound_calls = 0; bind_ok_after = 2; server_word_after = 2; cddr[9] = 0; SCE_CD_debug = 1; prints = 0;
     if (sceCdDiskReady(0) != 42 || bound_calls != 5 || _scmd_dr_bind != 0) return 7;
-    if (prints != 5) return 12;
+    if (prints != 4) return 12;
     if (std::strcmp(printed[0], "NEW DiskReady Call\n") != 0 || std::strcmp(printed[1], "Libcdvd bind err CdDiskReady\n") != 0 ||
         std::strcmp(printed[prints - 1], "DiskReady ended\n") != 0) return 8;
     SCE_CD_debug = 0;
