@@ -3818,6 +3818,24 @@ Closed: `norrath_player_number_half_lower_view`,
 Opened: `__ieee754_powf`, `__ieee754_rem_pio2f`, `__kernel_tanf`, `sceTtyInit`,
 `sceTtyRead`, `sceTtyWrite`, `ttyinit`.
 
+## Not merged: agents/w8-spell-static-init-b
+
+Rejected at tip `ed20fab` (30 units, 54 emitted functions: 25 static
+initializer entries, the `skills` table and its initializer, three
+constructors and an `AnimationState` copy). The notes carry the five summary
+sections and the sources compile and link (selecting them took the count
+from 1593 to 1633 here, with 30 names closed and 70 opened), but none of the
+30 units has a host check, host contract or any other test, and the notes
+mention only the private build as verification. The snapshot checker
+therefore refuses the package (every selected record needs a host file), and
+by the repo rule a function with no test that could fail cannot be accepted.
+
+Not merged, and no files were edited. A re-merge needs a check beside each
+unit that fails on a wrong call order, constant or store; then 30 plan
+entries starting at the integrator's current end of plan. The worker's own
+count (1195 to 1236) was measured on an older base and is not the official
+delta.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
