@@ -20,6 +20,7 @@ run with its address. Nothing from the executable is stored; scratch files go to
 a fresh temporary directory.
 """
 import importlib.util
+import struct
 import os
 import random
 import subprocess
@@ -94,12 +95,14 @@ ALIAS = {
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
     'norrath_actor_random': 'eRand__10GameObject',
+    'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
+    'norrath_actor_add_medium_run_list': 'objectAddToMediumRunList__FP10GameObject',
     'norrath_actor_find_tag_string': 'findTagString__10GameObjectPci',
     'norrath_block_alloc': 'blockAlloc__Fi',
     'norrath_game_object_find_tag_int': 'findTagInt__10GameObjectPci',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'syncRandState': 0x483E5C, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'levelFlags': 0x4844C0, 'syncRandState': 0x483E5C, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
         'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
         'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
@@ -596,6 +599,50 @@ def sc_fire_bomb_run(rng):
     return {'mem': mem, 'args': [OBJ], 'compare': whole_object() + list(range(0x483E5C, 0x483E60))}
 
 
+def sc_shooter_run(rng):
+    mem = new_object(rng)
+    period = rng.choice([1, 2, 3, 4, 8, 0xFFFE, 5])
+    sper = period - 0x10000 if period >= 0x8000 else period
+    frame = sper * rng.choice([0, 1, 2, 3, -1, 7]) + rng.choice([0, 0, 0, 1])
+    put32(mem, 0x4844A4, frame & 0xFFFFFFFF)
+    mem[OBJ + 84], mem[OBJ + 85] = period & 0xFF, period >> 8
+    mode = rng.choice([0, 1, 1, 2, 0xFFFF])
+    mem[OBJ + 82], mem[OBJ + 83] = mode & 0xFF, mode >> 8
+    mem[OBJ + 76] = rng.choice([0, 1, 0xFF])
+    for k in range(4):
+        mem[OBJ + 77 + k] = rng.choice([0, 0, 1, 8, 16, 7, 0xFF, 0x80, 40, 0xF8, 4, 12, 0x14])
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0x12345678]))
+    for off in (16, 20, 24):
+        putf(mem, OBJ + off, float(rng.randrange(-30, 30)))
+    put32(mem, 0x4844C0, rng.choice([0, 0x8000, 0xFFFFFFFF, 0x7FFF]))
+    put32(mem, 0x4844A0, rng.choice([0, 0x30050000]))
+    put32(mem, 0x31F548, rng.choice([0, 0x31F00000, rng.randrange(1 << 32)]))
+    put32(mem, 0x31F54C, rng.choice([0, 0x31F00010, rng.randrange(1 << 32)]))
+    put32(mem, NMPLAYERS, rng.choice([-1, 0, 1, 2, 3, 4]))
+    for k, o in enumerate(PLAYER_OBJS):
+        fill(rng, mem, o, 0x40)
+        near = rng.random() < 0.4
+        for q in (16, 20, 24):
+            putf(mem, o + q, float(rng.randrange(-300, 300) if near else rng.randrange(-3000, 3000)))
+        put32(mem, PLAYER + 21872 + 23984 * k, rng.choice([o, o, o, 0]))
+        if rng.random() < 0.3:
+            # land exactly on, just inside, or just outside the 720 radius
+            axis = rng.randrange(3)
+            delta = rng.choice([720.0, -720.0, 719.0, 721.0])
+            sx = struct.unpack('<f', struct.pack('<I', sum(mem[OBJ + 16 + i] << (8 * i) for i in range(4))))[0]
+            sy = struct.unpack('<f', struct.pack('<I', sum(mem[OBJ + 20 + i] << (8 * i) for i in range(4))))[0]
+            sz = struct.unpack('<f', struct.pack('<I', sum(mem[OBJ + 24 + i] << (8 * i) for i in range(4))))[0]
+            pos = [sx, sy, sz]
+            pos[axis] += delta
+            for q, v in zip((16, 20, 24), pos):
+                putf(mem, o + q, v)
+    for o in TRIG_LIST:
+        fill(rng, mem, o, 0x40)
+        put32(mem, o + 12, rng.choice([0x40, 0x40, 0, 0xFFFFFFBF, 0xFFFFFFFF]))
+    cmp_addrs = whole_object() + list(range(NMPLAYERS, NMPLAYERS + 4)) + list(range(0x4844C0, 0x4844C4))
+    return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs, 'list': TRIG_LIST}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -681,6 +728,22 @@ reg('msg_run__8FireBomb', W + 'fire-bomb-run/run.cpp', sc_fire_bomb_run,
      'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1, 2, 4])),
      'blockAlloc__Fi': (['i'], ('i', [0, 0x31F90000, 0x31FA0000, 0x31FA0000])),
      '__11FireBombletG6Point3sPcT1P6Point3i': (['i', 's12', 'i', 'i', 's12', 's12', 'i'], None)})
+
+reg('msg_run__7Shooter', W + 'shooter-run/run.cpp', sc_shooter_run,
+    {'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'eRand__10GameObject': (['o'], ('i', [0, 1, 999, 1000, 65535, 0xFFFFFFFF, 0x7FFFFFFF, 0x80000000, 12345, 59, 60, 4, 5])),
+     'blockAlloc__Fi': (['i'], ('i', [0, 0x31F90000, 0x31FA0000, 0x31FA0000])),
+     'objectAddToRunList__FP10GameObject': (['o'], ('i', [0, 1])),
+     'objectAddToMediumRunList__FP10GameObject': (['o'], ('i', [0, 1])),
+     'objectFindInBox__FG6Point3T0PP10GameObjecti': (['s12', 's12', 'L', 'i'], None),
+     'worldHitscan__FP12_worldHeaderG6Point3T1fi': (['i', 's12', 's12', 'f', 'i'], ('f', [-1, -1, -1, 0, 5])),
+     '__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii': (['i', 's12', 's12', 'i', 'i', 'i', 'i', 'i', 'k', 'k'], None),
+     '__13MissileWeaponiP12_modelHeaderP8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description':
+         (['i', 'i', 'i', 'i', 's12', 's12', 'i', 'i'] + ['k'] * 9, None),
+     'sprintf': ([], None),
+     'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
+     'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
