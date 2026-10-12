@@ -222,6 +222,19 @@ extern unsigned char norrath_ctors_lava_wraith_view_472ca0[];
 extern unsigned char norrath_ctors_lava_wraith_view_472cb0[];
 extern unsigned char norrath_ctors_lava_wraith_view_472cc8[];
 unsigned norrath_construct_Mummy(void* object, const void* point, short type, char** arguments, char* name);
+// Original initType__11MaleDarkElfb at 0x2870d8 and setState__11MaleDarkElfi at 0x288818.
+// Not defined here.
+void norrath_male_dark_elf_init_type(void* object, int flag);
+void norrath_male_dark_elf_set_state(void* object, int state);
+extern unsigned char norrath_ctors_lava_wraith_view_438c70[];
+extern unsigned char norrath_ctors_lava_wraith_view_450440[];
+extern unsigned char norrath_ctors_lava_wraith_view_477568[];
+extern unsigned char norrath_ctors_lava_wraith_view_477580[];
+extern unsigned char norrath_ctors_lava_wraith_view_477598[];
+extern unsigned char norrath_ctors_lava_wraith_view_4775b0[];
+extern unsigned char norrath_ctors_lava_wraith_view_4775c8[];
+extern unsigned char norrath_ctors_lava_wraith_view_4775d8[];
+unsigned norrath_construct_MaleDarkElf(void* object, const void* point, short type, char** arguments, char* name);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
