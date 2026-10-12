@@ -1,7 +1,7 @@
 /* soundStartGlobalMusic__FPci at 0x0024a390 is 156 bytes.
  *
- * If soundMusicVolume (0x00485934) is below the float at 0x0048200c, which
- * holds 0.0f, nothing happens. Otherwise stream 0 gets its volume set to
+ * If soundMusicVolume (0x00485934) is below the float constant at 0x0048200c
+ * (bits 0x3d4ccccc, one unit under the nearest 0.05f), nothing happens. Otherwise stream 0 gets its volume set to
  * musicDuckAmount * soundMusicVolume * 0.46875f. The name is then looked up
  * with soundFindGlobalDialog__FPc. A found record whose words at offsets 64
  * and 144 differ starts stream 0 with soundStartStream__FiPciiiiii:
@@ -24,7 +24,7 @@ void soundStartStream__FiPciiiiii(int stream, char* file, int flags, int offset,
                                   int a5, int a6, int a7);
 
 void soundStartGlobalMusic__FPci(char* name, int flags) {
-    if (soundMusicVolume < 0.0f) return;
+    if (soundMusicVolume < __builtin_bit_cast(float, 0x3d4ccccc)) return;
     soundSetStreamVolume__Fif(0, musicDuckAmount * soundMusicVolume * 0.46875f);
     unsigned char* record = soundFindGlobalDialog__FPc(name);
     if (record == nullptr) return;

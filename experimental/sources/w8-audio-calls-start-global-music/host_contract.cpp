@@ -32,14 +32,18 @@ int main() {
     found = table; setw(144, 100);        // empty span: no stream
     soundStartGlobalMusic__FPci(name, 0);
     if (start_calls != 2) return 7;
-    soundMusicVolume = -0.25f;            // negative volume: nothing at all
     int before = vol_calls;
-    soundStartGlobalMusic__FPci(name, 0);
-    if (vol_calls != before || start_calls != 2) return 8;
-    soundMusicVolume = 0.0f;              // zero is allowed
     setw(144, 612);
+    unsigned below = 0x3d4cccbb, edge = 0x3d4ccccc;   // the cutoff is the bits 0x3d4ccccc
+    std::memcpy(&soundMusicVolume, &below, 4);
     soundStartGlobalMusic__FPci(name, 0);
-    if (vol_calls != before + 1 || vol != 0.0f || start_calls != 3) return 9;
+    if (vol_calls != before || start_calls != 2) return 8;     // under the cutoff: nothing at all
+    std::memcpy(&soundMusicVolume, &edge, 4);
+    soundStartGlobalMusic__FPci(name, 0);
+    if (vol_calls != before + 1 || start_calls != 3) return 9; // equal to the cutoff is allowed
+    soundMusicVolume = 0.0f;
+    soundStartGlobalMusic__FPci(name, 0);
+    if (vol_calls != before + 1) return 10;
     std::puts("start_global_music passed");
     return 0;
 }
