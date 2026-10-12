@@ -119,6 +119,26 @@ def build_authored(rel, work, extra_flags=()):
     return out, {n: defsyms[n] for n, is_fn in funcs.items() if is_fn}
 
 
+def object_names(elf):
+    """Sorted (start, size, name) of data objects in the executable plus, when given, a linked authored image.
+
+    Authored file-local statics carry a C++ mangling prefix, which is stripped."""
+    import re
+    items = []
+    for image in (cr.EXE, elf):
+        if not image:
+            continue
+        for line in subprocess.check_output([P + 'nm', '-S', image], text=True).splitlines():
+            parts = line.split()
+            if len(parts) == 4 and parts[2] in 'bBdD':
+                name = re.sub(r'^_ZL\d+', '', parts[3])
+                items.append((int(parts[0], 16), int(parts[1], 16), name))
+            elif len(parts) == 3 and parts[1] in 'bBdD':
+                items.append((int(parts[0], 16), 0, re.sub(r'^_ZL\d+', '', parts[2])))
+    items.sort()
+    return items
+
+
 def symbol_address(elf, name):
     for line in subprocess.check_output([P + 'nm', elf], text=True).splitlines():
         parts = line.split()
@@ -140,7 +160,7 @@ def resolve(name):
     return exe_symbols()[ALIASES.get(name, name)]
 
 
-def make_stub(name, sig, rng, log, answers, effects=None):
+def make_stub(name, sig, rng, log, answers, effects=None, namer=None):
     """Logging stub. sig = (int_args, float_args, stack_words[, peeks]).
 
     peeks is a tuple of (argument register index, byte count): the bytes the
@@ -151,6 +171,15 @@ def make_stub(name, sig, rng, log, answers, effects=None):
 
     def handler(m):
         def norm(v):
+            if namer is not None:
+                import bisect
+                k = bisect.bisect_right(namer, (v, 1 << 40, '')) - 1
+                if k >= 0:
+                    start, size, nm = namer[k]
+                    if v == start:
+                        return nm
+                    if v < start + size:
+                        return '%s+%d' % (nm, v - start)
             return 'stack' if stack_region(v) else v
         ints = [('masked' if i in masked else norm(m.g32(4 + i))) for i in range(min(n_int, 8))]
         floats = [m.f[12 + i] for i in range(n_float)]
@@ -171,14 +200,14 @@ def stack_region(addr):
     return STACK - 0x10000 <= addr < STACK + 0x1000
 
 
-def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, effects=None):
+def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, effects=None, namer=None):
     mem = dict(scenario['mem'])
     log = []
     rng = random.Random(seed ^ 0xface)
     stubs = {}
     m = Mach(Composite(image) if auth else image, mem, stubs, GP)
     for name, addr in func_addrs.items():
-        stubs[addr] = make_stub(name, sigs[name], rng, log, answers, effects)
+        stubs[addr] = make_stub(name, sigs[name], rng, log, answers, effects, namer)
     m.r[29] = STACK
     for i, v in enumerate(scenario.get('args', [])):
         m.r[4 + i] = v & M32
@@ -211,6 +240,7 @@ def compare(name, runs):
     for addr, cb in spec.get('callbacks', {}).items():
         orig_funcs[cb] = addr
         auth_funcs[cb] = addr
+    orig_names = auth_names = object_names(elf) if spec.get('name_objects') else None
     bad = 0
     seen = {}
     for seed in range(runs):
@@ -221,7 +251,8 @@ def compare(name, runs):
             try:
                 if is_auth:
                     sc = dict(sc, steps=sc.get('steps', 400000) * 6)
-                res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth, spec.get('effects')))
+                res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth, spec.get('effects'),
+                                     auth_names if is_auth else orig_names))
             except cr.Stop as exc:
                 if not is_auth and 'step limit' in str(exc):
                     skipped = True      # the original itself runs too long on this scenario
@@ -563,6 +594,52 @@ reg('__11LightEffectG6Point3ffffffffffffP10GameObjecti', 0x1E5278,
     'w8-fx-particles-light-effect-ctor/light_effect_ctor.cpp', scenario_light_effect,
     stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), 'norrath_light_add': (1, 0, 0),
            'norrath_list_oneway_link': (3, 0, 0), 'norrath_actor_add_run_list': (1, 0, 0)})
+
+# ---- static initializers: _GLOBAL_$I$ and _GLOBAL_$D$ wrappers ----
+# (translation unit, original $I$ address, original $D$ address or None, source directory, arrays the
+# initializer or destructor touches as (address, bytes))
+INIT_UNITS = [
+    ('fxResourceMap', 0x1E6B10, None, 'fx', []),
+    ('cloudgiantResourceMap', 0x1E9BA0, None, 'cloudgiant', []),
+    ('lavaMonsterResourceMap', 0x1EE370, None, 'lava-monster', []),
+    ('soulResourceMap', 0x1F5030, None, 'soul', []),
+    ('innoruukResourceMap', 0x1FF800, None, 'innoruuk', []),
+    ('cyclopsResourceMap', 0x203CD8, None, 'cyclops', []),
+    ('wraithResourceMap', 0x205328, 0x205348, 'wraith', [(0x42BD18, 240)]),
+    ('antResourceMap', 0x208D60, None, 'ant', []),
+    ('spiderResourceMap', 0x20FF28, None, 'spider', []),
+    ('fireBeetleResourceMap', 0x2126A0, None, 'fire-beetle', []),
+    ('hasLightOrParticleNumber__FPPci', 0x2256E8, None, 'has-light-or-particle-number', []),
+    ('orc1ResourceMap', 0x22BAD0, 0x22BAF0, 'orc1', [(0x42CE10, 80)]),
+    ('goblinResourceMap', 0x22F570, None, 'goblin', []),
+    ('mummyResourceMap', 0x23C310, None, 'mummy', []),
+    ('udkResourceMap', 0x23FA58, None, 'udk', []),
+    ('vampireResourceMap', 0x243848, None, 'vampire', []),
+    ('wesResourceMap', 0x249F70, 0x249F90, 'wes', [(0x42DD90, 40)]),
+    ('scriptParticles', 0x13C508, None, 'script-particles', []),
+]
+INIT_STUBS = {
+    '__11ParticleDefiiiiiiiifffiiiPFPv_v': (8, 3, 5),
+    'listDestroy__FP8ListHead': (1, 0, 0),
+    '__11ResourceMapPcT1': (3, 0, 0, ((1, 16), (2, 16)), (1, 2)),
+}
+
+
+def make_init_scenario(arrays):
+    def scenario(rng, seed):
+        mem = {}
+        for addr, size in arrays:
+            fill(rng, mem, addr, size)
+        return {'mem': mem, 'args': []}
+    return scenario
+
+
+for _tu, _i, _d, _dir, _arrays in INIT_UNITS:
+    reg('_GLOBAL_$I$' + _tu, _i, 'w8-fx-particles-init-%s/static_init.cpp' % _dir, make_init_scenario(_arrays),
+        stubs=INIT_STUBS, name_objects=True)
+    if _d:
+        reg('_GLOBAL_$D$' + _tu, _d, 'w8-fx-particles-init-%s/static_init.cpp' % _dir, make_init_scenario(_arrays),
+            stubs=INIT_STUBS, name_objects=True)
 
 
 if __name__ == '__main__':
