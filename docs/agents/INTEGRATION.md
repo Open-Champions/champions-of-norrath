@@ -4041,6 +4041,43 @@ aderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f`,
 `worldHitscan__FP12_worldHeaderG6Point3T1fi`,
 `worldPerturbWater__FP12_worldHeaderG6Point3ff`.
 
+## agents/w8-audio-calls
+
+Merged (the branch notes carry the five summary sections). Thirty of the 32
+units were selected with fresh `input_order` values 2031 through 2060 (30
+emitted functions, 5696 compiled body bytes, not original-byte matches). All
+30 host checks build and exit 0 here (30 of 30). The two data units
+`sound_state.cpp` and `sound_state_extra.cpp` (19 data words) have no host
+check, and the snapshot checker rejects a record without a host file, so
+they stay in the snapshot, unselected; that is why `desiredMusicDuckAmount`
+and `nextChannel` appear as opened and 17 of the notes' closed names remain
+open. No duplicate definition was found at link time. No game binary or
+disassembly listing was committed. 1626 function bodies, 2061 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1562 |
+| After | 1540 |
+| Closed | 26 |
+| Opened | 4 |
+
+Closed: `_GLOBAL_$D$soundSfxVolume`, `_GLOBAL_$I$soundSfxVolume`, `findChannel__Fv`,
+`getStockPitch__FP10_vagHeader`, `soundChangeVolume__Fiff`,
+`soundClearStreamQue__Fi`, `soundClear__Fi`, `soundContinueStream__Fi`,
+`soundFindDialog__FPc`, `soundFlushCommandBuffer__Fv`,
+`soundGetDialogFilename__Fv`, `soundGetDialogSize__FPc`,
+`soundGetFreeRam__Fv`, `soundGetNmQueued__Fi`,
+`soundGetStreamAmountPlayed__Fi`, `soundGetStreamPreloadDone__Fi`,
+`soundInit__Ff`, `soundLock__Fi`,
+`soundPlaySequence__FP15AnimationHeaderG6Point3f`, `soundRestore__Fb`,
+`soundSetMusicDuckAmount__Ff`, `soundStartGlobalMusic__FPci`,
+`soundStartStream__FiPciiiiii`, `soundStopSound__Fi`,
+`soundUpdateAdjustments__Fv`, `transferVAG__FP10_vagHeaderi`.
+
+Opened: `desiredMusicDuckAmount`, `nextChannel`, `sceSdTransToIOP`,
+`soundSetAudioEffect__Fiiiii`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

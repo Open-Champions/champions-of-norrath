@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2031,
+  "default_authored_inputs": 2061,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2776,7 +2776,37 @@
     "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp": "95f1e74ceb8399cd793220f6d5e6ef69616f40bf60b0fb716fe9809a70381138",
     "sources/w8-actor-virtuals-c-shooter-run/run.cpp": "670619c50af39ea252ae34f65277ada57d2f38eff417db7219d533bc25a39ea2",
     "sources/w8-actor-virtuals-c-container-run/run.cpp": "ae06d8184fc19e68ee420fbc38565b4f2ff6e78fd36ce6ce94212c9f9be572c1",
-    "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1"
+    "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1",
+    "sources/w8-audio-calls-change-volume/change_volume.cpp": "c1cf64a4376287f01ffe759d3c9efec3618a4231e9baaad95c1c461d87d31137",
+    "sources/w8-audio-calls-clear-stream-que/clear_stream_que.cpp": "889dc490b50b46f39d0d1a3641ee598dd3ea007d89ce0e74e9d851a133a1631a",
+    "sources/w8-audio-calls-continue-stream/continue_stream.cpp": "120a49465725110aa9a2dc1ae6780a399a264004f5fec7d4e2bf85458e452f29",
+    "sources/w8-audio-calls-find-channel/find_channel.cpp": "a030ce921fff0c4939ef6fdc7b902e6718e1ebbd5b51f880b541d1b15f97e5e7",
+    "sources/w8-audio-calls-find-dialog/find_dialog.cpp": "6505a9213080a3d716279fa166595dc63a297210d51746b51d3afe7e9f18f008",
+    "sources/w8-audio-calls-find-global-dialog/find_global_dialog.cpp": "d42f4c04cd0f8360c17321d8518d1ca30eb156d6f2ca8ff103e0ced4103824c9",
+    "sources/w8-audio-calls-flush-command-buffer/flush_command_buffer.cpp": "00f8b4c1621c1a1c7c18ef79b883668e4fb9a771d81f0b388a125a9700fe7592",
+    "sources/w8-audio-calls-get-dialog-dir/get_dialog_dir.cpp": "8bab24fbee2b770adc3cd78b32f41d9b9124486ff6f119d22515092d7a4cb778",
+    "sources/w8-audio-calls-get-dialog-filename/get_dialog_filename.cpp": "e505838b6187b755a06171571fd6ff0ba2815745e6bed78a6291b4fd3b5fb171",
+    "sources/w8-audio-calls-get-dialog-size/get_dialog_size.cpp": "e24461691176a12230f41f2fd096d67a21d80603cf566bc60cefb203c2a77350",
+    "sources/w8-audio-calls-get-free-ram/get_free_ram.cpp": "4fdc8514039e5c2f8d9da0b1b58eb0bf5085bc4bddb8e25ea70fc2bd6c6dfe47",
+    "sources/w8-audio-calls-get-nm-queued/get_nm_queued.cpp": "7bad58dcccda49e84e4cddc103298599dd1c816789981e91d0988e2205c2c739",
+    "sources/w8-audio-calls-get-stock-pitch/get_stock_pitch.cpp": "3205dd448245c0ce9ef5bf17ba60b7216cbcca7629f254ce9f4142f1473643a2",
+    "sources/w8-audio-calls-get-stream-amount-played/get_stream_amount_played.cpp": "34c525006fe951f6d7e5289969c7ce860e379118de242e67cc878453e71b6a1e",
+    "sources/w8-audio-calls-get-stream-preload-done/get_stream_preload_done.cpp": "30668b7256952e256e7b82e185ed6acb1723c5bb0f980dbd0af14253967ff399",
+    "sources/w8-audio-calls-global-destroy/global_destroy.cpp": "f979d02715e9ca8a305df5293c38e486c26bb215fc46847297a25caf22544925",
+    "sources/w8-audio-calls-global-init/global_init.cpp": "87397e2cb1d23589d275bde2306aadc1fdf58a70acbf8a745a35af220b84c6c7",
+    "sources/w8-audio-calls-lock/sound_lock.cpp": "24d481b57b81b9de41c82c2183a1e77162e7943b8c272c11a770265b1a71148b",
+    "sources/w8-audio-calls-play-sequence-at-point/play_sequence_at_point.cpp": "04e352573c32dce7e0d124e006dc8f4eda910420ad8db0464335aaadd5583c61",
+    "sources/w8-audio-calls-print-stream/print_stream.cpp": "98c3c7856b6773eae6079d59cd68c625a9b569fe18f54a18b3ce7321ddd44f99",
+    "sources/w8-audio-calls-set-music-duck-amount/set_music_duck_amount.cpp": "0cae69c1896fad7b8d0b173c4e4a7c5d97b188a3b1017797f9a11ad7f89e8de6",
+    "sources/w8-audio-calls-sound-clear/sound_clear.cpp": "36f19e89fc2cad72b7c01bb0ae84e89a533cb122d7113144dfb1b7089230bd0b",
+    "sources/w8-audio-calls-sound-error/sound_error.cpp": "0909bd279bf9cb76e06970185206ffc18ed4d95c665bc39737a69a3f75be6a36",
+    "sources/w8-audio-calls-sound-init-entry/sound_init.cpp": "41e46eadaacd8881d11b1dd0ebdf8fc4fa29e093d13ed60dda7afac9a8f63194",
+    "sources/w8-audio-calls-sound-restore-entry/sound_restore.cpp": "bb9e8d5b94816938396f3ee6ccad54f7ff477260c9b68eb672df2abd16d659d3",
+    "sources/w8-audio-calls-start-global-music/start_global_music.cpp": "4f37e78460fc4530a32f76f878de0f90b994a315606ebda1b0d9ab6941dbd152",
+    "sources/w8-audio-calls-start-stream/start_stream.cpp": "09c7eba1e007c89097b4368ddb7ee96f8ee318d9819a5922479f546c5b303fb1",
+    "sources/w8-audio-calls-stop-sound/stop_sound.cpp": "d197d37ffebe5b46871b195e977a4688b6f30c02aa1b34ce1f593ddc376ce2a7",
+    "sources/w8-audio-calls-transfer-vag/transfer_vag.cpp": "8062d2f9da167bca3a04001333df0eadeb7eff4ab0166a8f4c2fdb8953a7ffc7",
+    "sources/w8-audio-calls-update-adjustments-entry/update_adjustments.cpp": "d8fe163ccfd5d72bdd08c0c74d5e019ba2a77760bebf8fe6793543ee50119728"
   },
   "inputs": [
     {
@@ -28258,6 +28288,456 @@
           "compiled_body_bytes": 6556
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2033,
+      "kind": "independently_authored_source",
+      "object_name": "change_volume.o",
+      "profile": "authored_cpp",
+      "sha256": "c1cf64a4376287f01ffe759d3c9efec3618a4231e9baaad95c1c461d87d31137",
+      "source": "sources/w8-audio-calls-change-volume/change_volume.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundChangeVolume__Fiff",
+          "compiled_body_bytes": 276
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2034,
+      "kind": "independently_authored_source",
+      "object_name": "clear_stream_que.o",
+      "profile": "authored_cpp",
+      "sha256": "889dc490b50b46f39d0d1a3641ee598dd3ea007d89ce0e74e9d851a133a1631a",
+      "source": "sources/w8-audio-calls-clear-stream-que/clear_stream_que.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundClearStreamQue__Fi",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2035,
+      "kind": "independently_authored_source",
+      "object_name": "continue_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "120a49465725110aa9a2dc1ae6780a399a264004f5fec7d4e2bf85458e452f29",
+      "source": "sources/w8-audio-calls-continue-stream/continue_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundContinueStream__Fi",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2036,
+      "kind": "independently_authored_source",
+      "object_name": "find_channel.o",
+      "profile": "authored_cpp",
+      "sha256": "a030ce921fff0c4939ef6fdc7b902e6718e1ebbd5b51f880b541d1b15f97e5e7",
+      "source": "sources/w8-audio-calls-find-channel/find_channel.cpp",
+      "emitted_functions": [
+        {
+          "name": "findChannel__Fv",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2037,
+      "kind": "independently_authored_source",
+      "object_name": "find_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "6505a9213080a3d716279fa166595dc63a297210d51746b51d3afe7e9f18f008",
+      "source": "sources/w8-audio-calls-find-dialog/find_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundFindDialog__FPc",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2038,
+      "kind": "independently_authored_source",
+      "object_name": "find_global_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "d42f4c04cd0f8360c17321d8518d1ca30eb156d6f2ca8ff103e0ced4103824c9",
+      "source": "sources/w8-audio-calls-find-global-dialog/find_global_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundFindGlobalDialog__FPc",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2039,
+      "kind": "independently_authored_source",
+      "object_name": "flush_command_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "00f8b4c1621c1a1c7c18ef79b883668e4fb9a771d81f0b388a125a9700fe7592",
+      "source": "sources/w8-audio-calls-flush-command-buffer/flush_command_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundFlushCommandBuffer__Fv",
+          "compiled_body_bytes": 608
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2040,
+      "kind": "independently_authored_source",
+      "object_name": "get_dialog_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "8bab24fbee2b770adc3cd78b32f41d9b9124486ff6f119d22515092d7a4cb778",
+      "source": "sources/w8-audio-calls-get-dialog-dir/get_dialog_dir.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetDialogDir__Fv",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2041,
+      "kind": "independently_authored_source",
+      "object_name": "get_dialog_filename.o",
+      "profile": "authored_cpp",
+      "sha256": "e505838b6187b755a06171571fd6ff0ba2815745e6bed78a6291b4fd3b5fb171",
+      "source": "sources/w8-audio-calls-get-dialog-filename/get_dialog_filename.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetDialogFilename__Fv",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2042,
+      "kind": "independently_authored_source",
+      "object_name": "get_dialog_size.o",
+      "profile": "authored_cpp",
+      "sha256": "e24461691176a12230f41f2fd096d67a21d80603cf566bc60cefb203c2a77350",
+      "source": "sources/w8-audio-calls-get-dialog-size/get_dialog_size.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetDialogSize__FPc",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2043,
+      "kind": "independently_authored_source",
+      "object_name": "get_free_ram.o",
+      "profile": "authored_cpp",
+      "sha256": "4fdc8514039e5c2f8d9da0b1b58eb0bf5085bc4bddb8e25ea70fc2bd6c6dfe47",
+      "source": "sources/w8-audio-calls-get-free-ram/get_free_ram.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetFreeRam__Fv",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2044,
+      "kind": "independently_authored_source",
+      "object_name": "get_nm_queued.o",
+      "profile": "authored_cpp",
+      "sha256": "7bad58dcccda49e84e4cddc103298599dd1c816789981e91d0988e2205c2c739",
+      "source": "sources/w8-audio-calls-get-nm-queued/get_nm_queued.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetNmQueued__Fi",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2045,
+      "kind": "independently_authored_source",
+      "object_name": "get_stock_pitch.o",
+      "profile": "authored_cpp",
+      "sha256": "3205dd448245c0ce9ef5bf17ba60b7216cbcca7629f254ce9f4142f1473643a2",
+      "source": "sources/w8-audio-calls-get-stock-pitch/get_stock_pitch.cpp",
+      "emitted_functions": [
+        {
+          "name": "getStockPitch__FP10_vagHeader",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2046,
+      "kind": "independently_authored_source",
+      "object_name": "get_stream_amount_played.o",
+      "profile": "authored_cpp",
+      "sha256": "34c525006fe951f6d7e5289969c7ce860e379118de242e67cc878453e71b6a1e",
+      "source": "sources/w8-audio-calls-get-stream-amount-played/get_stream_amount_played.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetStreamAmountPlayed__Fi",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2047,
+      "kind": "independently_authored_source",
+      "object_name": "get_stream_preload_done.o",
+      "profile": "authored_cpp",
+      "sha256": "30668b7256952e256e7b82e185ed6acb1723c5bb0f980dbd0af14253967ff399",
+      "source": "sources/w8-audio-calls-get-stream-preload-done/get_stream_preload_done.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetStreamPreloadDone__Fi",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2048,
+      "kind": "independently_authored_source",
+      "object_name": "global_destroy.o",
+      "profile": "authored_cpp",
+      "sha256": "f979d02715e9ca8a305df5293c38e486c26bb215fc46847297a25caf22544925",
+      "source": "sources/w8-audio-calls-global-destroy/global_destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$D$soundSfxVolume",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2049,
+      "kind": "independently_authored_source",
+      "object_name": "global_init.o",
+      "profile": "authored_cpp",
+      "sha256": "87397e2cb1d23589d275bde2306aadc1fdf58a70acbf8a745a35af220b84c6c7",
+      "source": "sources/w8-audio-calls-global-init/global_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$soundSfxVolume",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2050,
+      "kind": "independently_authored_source",
+      "object_name": "sound_lock.o",
+      "profile": "authored_cpp",
+      "sha256": "24d481b57b81b9de41c82c2183a1e77162e7943b8c272c11a770265b1a71148b",
+      "source": "sources/w8-audio-calls-lock/sound_lock.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundLock__Fi",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2051,
+      "kind": "independently_authored_source",
+      "object_name": "play_sequence_at_point.o",
+      "profile": "authored_cpp",
+      "sha256": "04e352573c32dce7e0d124e006dc8f4eda910420ad8db0464335aaadd5583c61",
+      "source": "sources/w8-audio-calls-play-sequence-at-point/play_sequence_at_point.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundPlaySequence__FP15AnimationHeaderG6Point3f",
+          "compiled_body_bytes": 620
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2052,
+      "kind": "independently_authored_source",
+      "object_name": "print_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "98c3c7856b6773eae6079d59cd68c625a9b569fe18f54a18b3ce7321ddd44f99",
+      "source": "sources/w8-audio-calls-print-stream/print_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundPrintStream__Fi",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2053,
+      "kind": "independently_authored_source",
+      "object_name": "set_music_duck_amount.o",
+      "profile": "authored_cpp",
+      "sha256": "0cae69c1896fad7b8d0b173c4e4a7c5d97b188a3b1017797f9a11ad7f89e8de6",
+      "source": "sources/w8-audio-calls-set-music-duck-amount/set_music_duck_amount.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundSetMusicDuckAmount__Ff",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2054,
+      "kind": "independently_authored_source",
+      "object_name": "sound_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "36f19e89fc2cad72b7c01bb0ae84e89a533cb122d7113144dfb1b7089230bd0b",
+      "source": "sources/w8-audio-calls-sound-clear/sound_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundClear__Fi",
+          "compiled_body_bytes": 640
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2055,
+      "kind": "independently_authored_source",
+      "object_name": "sound_error.o",
+      "profile": "authored_cpp",
+      "sha256": "0909bd279bf9cb76e06970185206ffc18ed4d95c665bc39737a69a3f75be6a36",
+      "source": "sources/w8-audio-calls-sound-error/sound_error.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundError__FPc",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2056,
+      "kind": "independently_authored_source",
+      "object_name": "sound_init.o",
+      "profile": "authored_cpp",
+      "sha256": "41e46eadaacd8881d11b1dd0ebdf8fc4fa29e093d13ed60dda7afac9a8f63194",
+      "source": "sources/w8-audio-calls-sound-init-entry/sound_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundInit__Ff",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2057,
+      "kind": "independently_authored_source",
+      "object_name": "sound_restore.o",
+      "profile": "authored_cpp",
+      "sha256": "bb9e8d5b94816938396f3ee6ccad54f7ff477260c9b68eb672df2abd16d659d3",
+      "source": "sources/w8-audio-calls-sound-restore-entry/sound_restore.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundRestore__Fb",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2058,
+      "kind": "independently_authored_source",
+      "object_name": "start_global_music.o",
+      "profile": "authored_cpp",
+      "sha256": "4f37e78460fc4530a32f76f878de0f90b994a315606ebda1b0d9ab6941dbd152",
+      "source": "sources/w8-audio-calls-start-global-music/start_global_music.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalMusic__FPci",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2059,
+      "kind": "independently_authored_source",
+      "object_name": "start_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "09c7eba1e007c89097b4368ddb7ee96f8ee318d9819a5922479f546c5b303fb1",
+      "source": "sources/w8-audio-calls-start-stream/start_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartStream__FiPciiiiii",
+          "compiled_body_bytes": 336
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2060,
+      "kind": "independently_authored_source",
+      "object_name": "stop_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "d197d37ffebe5b46871b195e977a4688b6f30c02aa1b34ce1f593ddc376ce2a7",
+      "source": "sources/w8-audio-calls-stop-sound/stop_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStopSound__Fi",
+          "compiled_body_bytes": 416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2061,
+      "kind": "independently_authored_source",
+      "object_name": "transfer_vag.o",
+      "profile": "authored_cpp",
+      "sha256": "8062d2f9da167bca3a04001333df0eadeb7eff4ab0166a8f4c2fdb8953a7ffc7",
+      "source": "sources/w8-audio-calls-transfer-vag/transfer_vag.cpp",
+      "emitted_functions": [
+        {
+          "name": "transferVAG__FP10_vagHeaderi",
+          "compiled_body_bytes": 600
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2062,
+      "kind": "independently_authored_source",
+      "object_name": "update_adjustments.o",
+      "profile": "authored_cpp",
+      "sha256": "d8fe163ccfd5d72bdd08c0c74d5e019ba2a77760bebf8fe6793543ee50119728",
+      "source": "sources/w8-audio-calls-update-adjustments-entry/update_adjustments.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundUpdateAdjustments__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -28357,7 +28837,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "99005f411e16a0deb08b96531bbfb5dcec60271bcf2e72732bdb2f34a2b0f4eb",
+  "snapshot_sha256": "8094e7087186145ef85c869a00f6889c0c22010e8a284d174baed478f8374582",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
