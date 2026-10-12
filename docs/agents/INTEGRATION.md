@@ -1515,6 +1515,40 @@ Opened: `norrath_ctors_ant_lantern_view_44e940`,
 stay unresolved for later units. 886 function bodies, 1147 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/game-loop
+
+This is a partial package: the branch carries thirteen units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/game-loop.md` from the source comments.
+Eleven of the thirteen units were selected with fresh `input_order`
+values 1149 through 1159. game-loop-draw-particles redefines
+`drawParticlesTask__Fv` and game-loop-object-draw-enable redefines
+`objectDrawEnable`, both from the particles package; their files stay in
+the source snapshot. All thirteen sources compile under `authored_cpp`,
+and all thirteen host checks passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 1005 |
+| Closed | 11 |
+| Opened | 17 |
+
+Closed: `frontEndStartInNetMenu__Fv`, `gameCheckPlayerAlive__Fv`,
+`gameNetKick__Fi`, `gameNoDraw`, `gameOver`, `gamePlayerLightAttenuate`,
+`gameRecallInhibit`, `gameSetCameraShake__Ffb`, `hudNoDraw`,
+`runObjectsTask__Fv`, `transformSceneLightTask__Fv`. Also defined, and
+not previous imports: the two `runObjectsTask` file-local helpers.
+
+Opened: `Kick__7Vehicle`, `MC_Kick__Fv`, `blockGetNmFree__Fv`,
+`debugClearStartMenu__Fv`, `deleteList`, `hudKick__Fv`,
+`invShutDown__Fi`, `isNetGame`, `lastNmBlocksFree`,
+`matTransform34Vec__FP6Point3P8Matrix34T0`, `mediumRunList`,
+`menuNetClientServer`, `padBigRumble__Fiff`, `runList`, `shopKick__Fv`,
+`slowRunList`, `worldViewCenter`. 894 function bodies, 1158 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1652,7 +1686,9 @@ vehicle constructor is authored and not in the link. The unselected
 texture-draw-color unit is authored and not in the link. The six
 actor-view-tables views are data, not functions. The 26 card-progress
 data words are data, not functions. The shared constructor header now
-covers Boat and AutoContainerLP. `engineInit__Ff`,
+covers Boat and AutoContainerLP. The eleven selected game-loop units
+(eight functions, five words) are in the link; the two unselected
+game-loop units are authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,

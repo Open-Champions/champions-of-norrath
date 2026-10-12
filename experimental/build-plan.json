@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1147,
+  "default_authored_inputs": 1158,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1863,7 +1863,18 @@
     "sources/card-progress-icon-header/icon_header.cpp": "811069f9e3f9436f4fd643555bf85d13fa607ccb7f06e114321cad80308c3e55",
     "sources/card-progress-sorted-times/sorted_times.cpp": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d",
     "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp": "19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51",
-    "sources/ctors-ant-lantern-constructors/boat.cpp": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76"
+    "sources/ctors-ant-lantern-constructors/boat.cpp": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76",
+    "sources/game-loop-camera-shake/camera_shake.cpp": "4aa0461b39d7d865d37070fb3426a43c5a378a5b12aa1c42b483d8f718bc2f52",
+    "sources/game-loop-check-player-alive/check_player_alive.cpp": "10943687073c56b7da1db73661cd9bb7517b9576ce59a2807ecd88e64f40fd7a",
+    "sources/game-loop-frontend-net-menu/front_end_net_menu.cpp": "f036ebb94489e181afc72b10893debb71c7fdc541db52ec6cd4879a66810e4ee",
+    "sources/game-loop-game-no-draw/game_no_draw.cpp": "23aa68b5a3277318b5de7b9a90e2e2df22219a964502b91f3b038dab557bdea7",
+    "sources/game-loop-game-over/game_over.cpp": "fccf5890e355a7b5b9078e8f25766dba7c6743503edc1809e7d27de47d9e5c19",
+    "sources/game-loop-hud-no-draw/hud_no_draw.cpp": "c6f679b6b1b40242f58b82dbffd07df8cf487b18dee536b8f7af94412cbed2dc",
+    "sources/game-loop-net-kick/net_kick.cpp": "f2d47c59494493fad2e0996c7440758d48a9728890313df16bdbb5e476e6ad62",
+    "sources/game-loop-player-light-attenuate/player_light_attenuate.cpp": "64bb3764c444695b01c0111d6c1fb71111e8c1015834474fa7daeaa5842ddba4",
+    "sources/game-loop-recall-inhibit/recall_inhibit.cpp": "96446d66b9421320e778e852b8e15e30e99fa3acad8bf9bd3b09af4b2849b912",
+    "sources/game-loop-run-objects/run_objects.cpp": "9f4e4f4b6cf6c2d774582a2da40b41ad97471552519f858212fbdc4142dacbfe",
+    "sources/game-loop-transform-scene-light/transform_scene_light.cpp": "c4da33e3bfcd72ba87a119e3daf50c44640cb0e4f1ac23e0ba8d18e8eb5aa444"
   },
   "inputs": [
     {
@@ -14649,6 +14660,149 @@
           "compiled_body_bytes": 396
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1149,
+      "kind": "independently_authored_source",
+      "object_name": "camera_shake.o",
+      "profile": "authored_cpp",
+      "sha256": "4aa0461b39d7d865d37070fb3426a43c5a378a5b12aa1c42b483d8f718bc2f52",
+      "source": "sources/game-loop-camera-shake/camera_shake.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameSetCameraShake__Ffb",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1150,
+      "kind": "independently_authored_source",
+      "object_name": "check_player_alive.o",
+      "profile": "authored_cpp",
+      "sha256": "10943687073c56b7da1db73661cd9bb7517b9576ce59a2807ecd88e64f40fd7a",
+      "source": "sources/game-loop-check-player-alive/check_player_alive.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameCheckPlayerAlive__Fv",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1151,
+      "kind": "independently_authored_source",
+      "object_name": "front_end_net_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "f036ebb94489e181afc72b10893debb71c7fdc541db52ec6cd4879a66810e4ee",
+      "source": "sources/game-loop-frontend-net-menu/front_end_net_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "frontEndStartInNetMenu__Fv",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1152,
+      "kind": "independently_authored_source",
+      "object_name": "game_no_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "23aa68b5a3277318b5de7b9a90e2e2df22219a964502b91f3b038dab557bdea7",
+      "source": "sources/game-loop-game-no-draw/game_no_draw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1153,
+      "kind": "independently_authored_source",
+      "object_name": "game_over.o",
+      "profile": "authored_cpp",
+      "sha256": "fccf5890e355a7b5b9078e8f25766dba7c6743503edc1809e7d27de47d9e5c19",
+      "source": "sources/game-loop-game-over/game_over.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1154,
+      "kind": "independently_authored_source",
+      "object_name": "hud_no_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "c6f679b6b1b40242f58b82dbffd07df8cf487b18dee536b8f7af94412cbed2dc",
+      "source": "sources/game-loop-hud-no-draw/hud_no_draw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1155,
+      "kind": "independently_authored_source",
+      "object_name": "net_kick.o",
+      "profile": "authored_cpp",
+      "sha256": "f2d47c59494493fad2e0996c7440758d48a9728890313df16bdbb5e476e6ad62",
+      "source": "sources/game-loop-net-kick/net_kick.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameNetKick__Fi",
+          "compiled_body_bytes": 276
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1156,
+      "kind": "independently_authored_source",
+      "object_name": "player_light_attenuate.o",
+      "profile": "authored_cpp",
+      "sha256": "64bb3764c444695b01c0111d6c1fb71111e8c1015834474fa7daeaa5842ddba4",
+      "source": "sources/game-loop-player-light-attenuate/player_light_attenuate.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1157,
+      "kind": "independently_authored_source",
+      "object_name": "recall_inhibit.o",
+      "profile": "authored_cpp",
+      "sha256": "96446d66b9421320e778e852b8e15e30e99fa3acad8bf9bd3b09af4b2849b912",
+      "source": "sources/game-loop-recall-inhibit/recall_inhibit.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1158,
+      "kind": "independently_authored_source",
+      "object_name": "run_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "9f4e4f4b6cf6c2d774582a2da40b41ad97471552519f858212fbdc4142dacbfe",
+      "source": "sources/game-loop-run-objects/run_objects.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13walk_run_listEPhS0_",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L9call_slotEPhjib",
+          "compiled_body_bytes": 72
+        },
+        {
+          "name": "runObjectsTask__Fv",
+          "compiled_body_bytes": 1024
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1159,
+      "kind": "independently_authored_source",
+      "object_name": "transform_scene_light.o",
+      "profile": "authored_cpp",
+      "sha256": "c4da33e3bfcd72ba87a119e3daf50c44640cb0e4f1ac23e0ba8d18e8eb5aa444",
+      "source": "sources/game-loop-transform-scene-light/transform_scene_light.cpp",
+      "emitted_functions": [
+        {
+          "name": "transformSceneLightTask__Fv",
+          "compiled_body_bytes": 632
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -14748,7 +14902,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fe8f0ea1d1399c8c5e23543d1440377e0030c09c3cad5df9126968cbb3a37369",
+  "snapshot_sha256": "f53f34819c77cd4b39eb942ce5f0744d213e947f52b9a83a54ffe6a11bd07782",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
