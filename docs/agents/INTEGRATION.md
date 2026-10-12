@@ -4532,6 +4532,58 @@ Opened: `SleepThread`,
 `worldAnimation`, `worldClipFrustum`, `worldLastDrawSucceded`,
 `worldRunWater__FP12_worldHeader`, `worldWaterRainTimer`.
 
+## agents/w8-spell-static-init-a
+
+Merged (the branch notes carry the five summary sections). Thirty-one units
+with fresh `input_order` values 2316 through 2346: 31 emitted functions
+(10,056 compiled body bytes, not original-byte matches). All 31 host checks
+build and exit 0 here (31 of 31). No duplicate definition was found at link
+time, and the package opened no new import. No game binary or disassembly
+listing was committed. 1907 function bodies, 2347 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution. (Its sibling
+`agents/w8-spell-static-init-b` has no host checks and is not merged; see its
+entry above.)
+
+| | |
+|---|---|
+| Before | 1511 |
+| After | 1478 |
+| Closed | 33 |
+| Opened | 0 |
+
+Closed: `_GLOBAL_$I$__10HolyStrikesiG6Point3P10GameObjectP5Skill`,
+`_GLOBAL_$I$__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`,
+`_GLOBAL_$I$__10StaticFireG6Point3fif`,
+`_GLOBAL_$I$__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`,
+`_GLOBAL_$I$__12SpellBlessediP8CreatureP5Skill`,
+`_GLOBAL_$I$__12SpellCycloneiP8CreatureP5Skill`,
+`_GLOBAL_$I$__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`,
+`_GLOBAL_$I$__15SpellConeOfFireiP8CreatureP5Skill`,
+`_GLOBAL_$I$__15SpellWizardBeamiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellColdWeaponsiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellConeOfFrostiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellFireWeaponsiP8CreatureP5Skill`,
+`_GLOBAL_$I$__17SpellConvertEnemyiP8CreatureP5Skill`,
+`_GLOBAL_$I$__17SpellUndeadShieldiP8CreatureP5Skill`,
+`_GLOBAL_$I$__18SpellDiseaseShieldiP8CreatureP5Skill`,
+`_GLOBAL_$I$__19BlindingLightEffectG6Point3iP8CreatureP5Skill`,
+`_GLOBAL_$I$__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`,
+`_GLOBAL_$I$__22SpellPlanarSteelEffectiP8CreatureP5Skill`,
+`_GLOBAL_$I$__3NPCG6Point3sPcN33ifPPc`, `_GLOBAL_$I$__5TorchG6Point3PPci`,
+`_GLOBAL_$I$__6SwitchG6Point3PPc`, `_GLOBAL_$I$__8FireBombG6Point3sPPc`,
+`_GLOBAL_$I$__8HolyBoltG6Point3iiP8CreatureP5Skill`,
+`_GLOBAL_$I$__8JumpGateG6Point3sPPc`,
+`_GLOBAL_$I$attack__14SpellHarmTouchP10GameObjectPiT2`,
+`_GLOBAL_$I$canCast__18SkillConvertUndeadP8Creature`,
+`_GLOBAL_$I$cast__13SkillDarknessiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__13SkillEntangleiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__14SkillMultiFireiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__15SkillClericRootiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__18SkillRepulseUndeadiP8CreatureG6Point3s`,
+`teleportParticle1`, `teleportParticle2`.
+
+Opened: none
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
