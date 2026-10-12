@@ -614,6 +614,50 @@ reg('_textureDrawColor__FP8_textureiiiUi', 0x16E658, 'w8-render-world-a-texture-
     scenario_texture_draw_color, stubs=TDC_STUBS, stub_addr=TDC_ADDR)
 
 
+def trig_fret(rng, m):
+    angle = crc.s32(m.g32(4))
+    return crc.fround(((angle * 7919) % 1000) / 500.0 - 1.0)
+
+
+def anim_advance_effect(rng, m):
+    if rng.random() < 0.5:
+        putf(m.mem, m.g32(6), float(rng.randrange(-6, 7)))
+        putf(m.mem, m.g32(6) + 4, float(rng.randrange(-6, 7)))
+        m.w16(m.g32(7), rng.randrange(-300, 300))
+
+
+CREATURE_STUBS = {
+    'animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps': dict(
+        nargs=4, nf=1, effect=anim_advance_effect, ret=lambda r, m: r.choice([0, 1, 2, 7, -1])),
+    'icos__Fi': dict(nargs=1, fret=trig_fret),
+    'isin__Fi': dict(nargs=1, fret=trig_fret)}
+CREATURE_ADDR = {'animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps': 0x160830, 'icos__Fi': 0x15A070,
+                 'isin__Fi': 0x15A100}
+
+
+def scenario_creature_advance(rng):
+    mem = {}
+    obj = ARENA + 0x4000
+    fill(rng, mem, obj, 0x400)
+    for off in (180, 184, 224):
+        putf(mem, obj + off, float(rng.randrange(-8, 9)) * rng.choice([1.0, 0.5, 0.25]))
+    put32(mem, obj + 236, rng.choice([0, 0, 1, 0x31000000]))
+    put32(mem, obj + 160, rng.choice([0, 0x02000000, 0x01000000, 0xFFFFFFFF]))
+    put32(mem, obj + 164, rng.choice([0, 0xFFFFFFFF]))
+    mem[obj + 800] = rng.choice([0, 1, 2, 30, 59, 60, 61, 127, 128, 255, rng.randrange(256)])
+    mem[obj + 56] = rng.randrange(256); mem[obj + 57] = rng.randrange(256)
+    w16 = rng.randrange(-300, 300) & 0xFFFF
+    mem[obj + 188] = w16 & 0xFF; mem[obj + 189] = w16 >> 8
+    step = float(rng.randrange(-4, 8)) * rng.choice([1.0, 0.5])
+    return {'mem': mem, 'args': [obj], 'fargs': {12: f2b(step)}, 'compare': list(range(obj, obj + 0x400)),
+            'returns': True}
+
+
+reg('creatureAdvanceAnimation__8Creaturef', 0x111830,
+    'w8-render-world-a-creature-advance-animation/creature_advance_animation.cpp', scenario_creature_advance,
+    stubs=CREATURE_STUBS, stub_addr=CREATURE_ADDR, returns=True)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
