@@ -216,6 +216,26 @@ extern unsigned char norrath_ctors_ant_lantern_view_482338[];
 extern unsigned char norrath_ctors_ant_lantern_view_48233c[];
 extern unsigned char norrath_ctors_ant_lantern_view_482340[];
 extern unsigned char norrath_ctors_ant_lantern_view_476ac8[];
+unsigned norrath_construct_Arenabeast(void* object, const void* point, short type, char** arguments);
+unsigned norrath_construct_Ghoul(void* object, const void* point, short type, int variant, char** arguments);
+extern unsigned char norrath_ctors_ant_lantern_view_42d200[];
+extern unsigned char norrath_ctors_ant_lantern_view_44f6a8[];
+extern unsigned char norrath_ctors_ant_lantern_view_481ab4[];
+extern unsigned char norrath_ctors_ant_lantern_view_481ab8[];
+extern unsigned char norrath_ctors_ant_lantern_view_481abc[];
+extern unsigned char norrath_ctors_ant_lantern_view_481ac0[];
+extern unsigned char norrath_ctors_ant_lantern_view_481ac4[];
+extern unsigned char norrath_ctors_ant_lantern_view_481ac8[];
+extern unsigned char norrath_ctors_ant_lantern_view_42b630[];
+extern unsigned char norrath_ctors_ant_lantern_view_42b548[];
+extern unsigned char norrath_ctors_ant_lantern_view_44bae0[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e58[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e5c[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e60[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e64[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e68[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e6c[];
+extern unsigned char norrath_ctors_ant_lantern_view_480e70[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
