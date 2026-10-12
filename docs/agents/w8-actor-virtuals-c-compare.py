@@ -90,10 +90,11 @@ ALIAS = {
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
     'norrath_actor_random': 'eRand__10GameObject',
+    'norrath_block_alloc': 'blockAlloc__Fi',
     'norrath_game_object_find_tag_int': 'findTagInt__10GameObjectPci',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
         'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
         'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
@@ -140,17 +141,33 @@ def make_stub(name, kinds, ret, rng, scn=None):
     s<N> N bytes at pointer, c C string, x ignored, f float register."""
     def handler(m):
         if name == 'sprintf':
-            # only the %s directive is supported; writes the formatted text to a0
+            # %s and %d only; arguments come from a2.. in order; writes the text to a0
             fmt = cstr(m, m.g32(5), 200)
-            text = fmt.replace(b'%s', cstr(m, m.g32(6), 160))
-            m.write(m.g32(4), text + b'\0')
-            m.log.append(('sprintf', fmt, cstr(m, m.g32(6))))
-            m.setr32(2, len(text))
+            out, argi, i = bytearray(), 6, 0
+            while i < len(fmt):
+                if fmt[i:i + 1] == b'%' and fmt[i + 1:i + 2] in (b's', b'd'):
+                    if fmt[i + 1:i + 2] == b's':
+                        out += cstr(m, m.g32(argi), 160)
+                    else:
+                        out += str(cr.s32(m.g32(argi))).encode()
+                    argi += 1
+                    i += 2
+                else:
+                    out += fmt[i:i + 1]
+                    i += 1
+            m.write(m.g32(4), bytes(out) + b'\0')
+            m.log.append(('sprintf', fmt, bytes(out)))
+            m.setr32(2, len(out))
             return
         entry = [name]
         ai = 0
         fi = 12
+        stack_slot = 0
         for tok in kinds:
+            if tok == 'k':
+                entry.append(('stack', m.g32(29) and m.u32(m.g32(29) + 8 * stack_slot)))
+                stack_slot += 1
+                continue
             if tok == 'f':
                 entry.append(('f', m.f[fi]))
                 fi += 1
@@ -543,6 +560,24 @@ def sc_trigger_run(rng):
                        TYPE_B: ('typeB', [], ('i', [0x31F20000]))}}
 
 
+def sc_missile_run(rng):
+    mem = new_object(rng)
+    div = rng.choice([1, 2, 3, 5, 7, 10, 0xFFFF, 0xFFFB, 4])
+    sdiv = div - 0x10000 if div >= 0x8000 else div
+    frame = sdiv * rng.choice([0, 1, 2, 3, -1, 5, 100]) + rng.choice([0, 0, 0, 0, 1])
+    put32(mem, 0x4844A4, frame & 0xFFFFFFFF)
+    mem[OBJ + 78] = div & 0xFF
+    mem[OBJ + 79] = div >> 8
+    mem[OBJ + 76] = rng.choice([0, 0, 1, 1, 1, 2, 0xFF])
+    mem[OBJ + 77] = rng.choice([0, 0, 0, 0x80])
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0x12345678]))
+    for off in (16, 20, 24):
+        putf(mem, OBJ + off, float(rng.randrange(-30, 30)))
+    put32(mem, 0x31F548, rng.choice([0, 0x31F00000, rng.randrange(1 << 32)]))
+    put32(mem, 0x31F54C, rng.choice([0, 0x31F00010, rng.randrange(1 << 32)]))
+    return {'mem': mem, 'args': [OBJ], 'compare': whole_object() + list(range(0x31F548, 0x31F550))}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -607,6 +642,18 @@ reg('msg_run__7Trigger', W + 'trigger-run/run.cpp', sc_trigger_run,
      'objectDoMyActions__FP10GameObjecti': (['i', 'i'], None),
      'scriptStart__FPc': (['c'], ('i', [0, 1, 5])),
      'sprintf': ([], None)})
+
+reg('msg_run__11MissileTrap', W + 'missile-trap-run/run.cpp', sc_missile_run,
+    {'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'eRand__10GameObject': (['o'], ('i', [0, 1, 999, 1000, 65535, 0xFFFFFFFF, 0x7FFFFFFF, 0x80000000, 12345, 59, 60, 4, 5])),
+     'blockAlloc__Fi': (['i'], ('i', [0, 0x31F90000, 0x31FA0000])),
+     '__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii': (['i', 's12', 's12', 'i', 'i', 'i', 'i', 'i', 'k', 'k'], None),
+     '__13MissileWeaponiP12_modelHeaderP8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description':
+         (['i', 'i', 'i', 'i', 's12', 's12', 'i', 'i'] + ['k'] * 9, None),
+     'sprintf': ([], None),
+     'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
+     'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
