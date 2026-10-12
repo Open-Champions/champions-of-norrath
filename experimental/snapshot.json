@@ -23052,6 +23052,120 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w8-frontend-menu-a-yes-no-state/yes_no_state.cpp"
+    },
+    {
+      "input_order": 1798,
+      "component": "w8-frontend-menu-b-push-pause",
+      "object_name": "push_pause.o",
+      "private_object_sha256": "54b9c97e5050d5111a4683bf2b0303d109db85067d2b070137017284ad235d0e",
+      "emitted_functions": [
+        {
+          "name": "pushPause__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-push-pause/push_pause.cpp"
+    },
+    {
+      "input_order": 1799,
+      "component": "w8-frontend-menu-b-stop-credits",
+      "object_name": "stop_credits.o",
+      "private_object_sha256": "523eb52fbef672e0f0a1f9e120ae8467d759b8dc5ac8f9a86f0d1e255b57568a",
+      "emitted_functions": [
+        {
+          "name": "stopCredits__Fv",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-stop-credits/stop_credits.cpp"
+    },
+    {
+      "input_order": 1800,
+      "component": "w8-frontend-menu-b-pause-process",
+      "object_name": "pause_process.o",
+      "private_object_sha256": "3ae7a0d66ba5c5be9147aac742420431bfbf895a543813eb7d2a45def537b560",
+      "emitted_functions": [
+        {
+          "name": "pauseProcess__Fv",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-pause-process/pause_process.cpp"
+    },
+    {
+      "input_order": 1801,
+      "component": "w8-frontend-menu-b-menu-run",
+      "object_name": "menu_run.o",
+      "private_object_sha256": "72eee57a1e08bc22d2cf0f3ad102cc7fb49d1dfa7e1618392472ab6c2492d808",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7skippedEPKh",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L4editEPKhi",
+          "compiled_body_bytes": 260
+        },
+        {
+          "name": "menuRun__FP4MenuP3padPi",
+          "compiled_body_bytes": 1276
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-menu-run/menu_run.cpp"
+    },
+    {
+      "input_order": 1802,
+      "component": "w8-frontend-menu-b-menu-draw",
+      "object_name": "menu_draw.o",
+      "private_object_sha256": "e5881e450079d0f05d40e1c64a44dc74cac48b8afdba3591e21b4fa2c9d6c18b",
+      "emitted_functions": [
+        {
+          "name": "menuDraw__FiiP4MenuUiUiP4FontP8_texturei",
+          "compiled_body_bytes": 2748
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-menu-draw/menu_draw.cpp"
+    },
+    {
+      "input_order": 1803,
+      "component": "w8-frontend-menu-b-net-menus",
+      "object_name": "net_menus.o",
+      "private_object_sha256": "6ee680fe306e81ac4f2483de0b65af9594859d41c21d7c591b3c5365408b0036",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-net-menus/net_menus.cpp"
+    },
+    {
+      "input_order": 1804,
+      "component": "w8-frontend-menu-b-option-menu",
+      "object_name": "option_menu.o",
+      "private_object_sha256": "59e4c5ce32829a0c5fe4607238d437926af4f255fd2f1fee9921764a528db051",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-option-menu/option_menu.cpp"
+    },
+    {
+      "input_order": 1805,
+      "component": "w8-frontend-menu-b-dialog-state",
+      "object_name": "dialog_state.o",
+      "private_object_sha256": "b0bb17b6d13115b6e084613a7dcafdb14aae40b88815e206b39b8f4c4a8f015b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-dialog-state/dialog_state.cpp"
+    },
+    {
+      "input_order": 1806,
+      "component": "w8-frontend-menu-b-misc-words",
+      "object_name": "misc_words.o",
+      "private_object_sha256": "57549ccfb6c183bc1003cefcbcba2eed7dd6252132d153aba265228194ed6f82",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-frontend-menu-b-misc-words/misc_words.cpp"
     }
   ],
   "drafts": [
@@ -27099,7 +27213,26 @@
     "sources/w8-frontend-menu-a-hud-run-yes-no/yes_no.cpp": "d50837b02de681a2d140e856974f582a3fd4bc5e511619118b5adf056bd926a0",
     "sources/w8-frontend-menu-a-hud-run-yes-no/host_check.cpp": "954fce4038caeb3237e60a6b3c5730f45f09bbd79725f582b3b89bebbc1b4ee3",
     "sources/w8-frontend-menu-a-yes-no-state/yes_no_state.cpp": "f954997097d441e54bf6569bb2617904068a024724b8816b383b1c9e586f4055",
-    "sources/w8-frontend-menu-a-yes-no-state/host_check.cpp": "56c9759514be83fc392ac20d7f35fe453a0f92a71ff4246abe19cc709ff08799"
+    "sources/w8-frontend-menu-a-yes-no-state/host_check.cpp": "56c9759514be83fc392ac20d7f35fe453a0f92a71ff4246abe19cc709ff08799",
+    "sources/w8-frontend-menu-b-push-pause/push_pause.cpp": "957e63e9aa0b08f69ba36d988230f1554fd7068fdbc73ba66180511ee4768749",
+    "sources/w8-frontend-menu-b-push-pause/host_check.cpp": "3726524da68562e98a88bd7466c1748f3074d7943d6e5ecacb7730afa6b0ac82",
+    "sources/w8-frontend-menu-b-stop-credits/stop_credits.cpp": "57d7547a3f6add64e572c31575e2bc2a33361cf7085353507261dd950e61751d",
+    "sources/w8-frontend-menu-b-stop-credits/host_check.cpp": "e41795069b76e1695511ef1da0cc1a3b73407d8a98e3fe2b37603ce4ee12d630",
+    "sources/w8-frontend-menu-b-pause-process/pause_process.cpp": "a1723698d7913c2e46aed1445dc0bc4af7e55b1ffc5ae60c09d47d9fa359cfa6",
+    "sources/w8-frontend-menu-b-pause-process/host_check.cpp": "d17c308e512c1b7fad4002278f0b4f3071713b51cbfed0f5600f8dc2baaa0fee",
+    "sources/w8-frontend-menu-b-menu-run/menu_run.cpp": "33d3cc451dff97834b0974b5666862fc74f5321b55a87583c33c6bb06f2e76c1",
+    "sources/w8-frontend-menu-b-menu-run/host_check.cpp": "811be525b1950fbeebfc67021f4104566bbfec011b58784f1d76c745f41f38e6",
+    "sources/w8-frontend-menu-b-menu-draw/menu_draw.cpp": "1b8e520a732e178a48d37c269f1589b74be663204989c2fba50a5ab8b5145aa5",
+    "sources/w8-frontend-menu-b-menu-draw/host_check.cpp": "968cc5c6dc13c21e3d5324876044fa85cc1080042f595b44c52202792915db46",
+    "sources/w8-frontend-menu-b-net-menus/net_menus.cpp": "b6b2a7873d09d7557edb4c1e443b5a66d1ed5fb72de6aec5aa99d66ae196a6ad",
+    "sources/w8-frontend-menu-b-net-menus/host_check.cpp": "c3a4413f74f88daa69bc071cc14f1bad5dd1b78c3c5c2b4a9a2fee78c92aef1a",
+    "sources/w8-frontend-menu-b-option-menu/option_menu.cpp": "52eaab1186ce263fe5d13b561d597e417401434c4af55f4f998fef0e3ab400cd",
+    "sources/w8-frontend-menu-b-option-menu/host_check.cpp": "82ecc9ca117af24b3dc57b675c0aff12382cbf1694c61aa121db211cbee6faea",
+    "sources/w8-frontend-menu-b-dialog-state/dialog_state.cpp": "179538a61b618febb99f412236c51264973523b7d70d6eb656b2458af1c2eb73",
+    "sources/w8-frontend-menu-b-dialog-state/host_check.cpp": "ef7185073c74fee5644c35d248ec4c57bf0e10649030420f60a1d8297d5dbec0",
+    "sources/w8-frontend-menu-b-misc-words/misc_words.cpp": "65880cf2eaae722a753f1529bff9824e1cb73429ff4374abdf8ced834eaf732f",
+    "sources/w8-frontend-menu-b-misc-words/host_check.cpp": "331366c6df848be1976a57bde18868d64fb54eeefc8598b1a86bfcd7faf6ed08",
+    "sources/w8-frontend-menu-b-menu-words/menu_words.cpp": "bce1c0114b60ce67cdc1ad339e684f4422ba76349013d0b6313a258109ab3488"
   },
   "additional_implementations": [
     {
@@ -27541,11 +27674,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1798,
-    "authored_default_inputs": 1796,
+    "selected_inputs": 1807,
+    "authored_default_inputs": 1805,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1403,
-    "compiled_body_bytes_from_accepted_inputs": 619872,
+    "emitted_function_definitions_including_helpers": 1410,
+    "compiled_body_bytes_from_accepted_inputs": 624876,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -27558,7 +27691,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1485
+    "package_selected_inputs": 1494
   },
   "startup_implementations": [
     {
@@ -50569,6 +50702,147 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w8-frontend-menu-a-yes-no-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-push-pause/push_pause.cpp",
+      "source_sha256": "957e63e9aa0b08f69ba36d988230f1554fd7068fdbc73ba66180511ee4768749",
+      "object_sha256": "54b9c97e5050d5111a4683bf2b0303d109db85067d2b070137017284ad235d0e",
+      "emitted_functions": [
+        {
+          "name": "pushPause__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w8-frontend-menu-b-push-pause/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-stop-credits/stop_credits.cpp",
+      "source_sha256": "57d7547a3f6add64e572c31575e2bc2a33361cf7085353507261dd950e61751d",
+      "object_sha256": "523eb52fbef672e0f0a1f9e120ae8467d759b8dc5ac8f9a86f0d1e255b57568a",
+      "emitted_functions": [
+        {
+          "name": "stopCredits__Fv",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w8-frontend-menu-b-stop-credits/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-pause-process/pause_process.cpp",
+      "source_sha256": "a1723698d7913c2e46aed1445dc0bc4af7e55b1ffc5ae60c09d47d9fa359cfa6",
+      "object_sha256": "3ae7a0d66ba5c5be9147aac742420431bfbf895a543813eb7d2a45def537b560",
+      "emitted_functions": [
+        {
+          "name": "pauseProcess__Fv",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "host_files": [
+        "sources/w8-frontend-menu-b-pause-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-menu-run/menu_run.cpp",
+      "source_sha256": "33d3cc451dff97834b0974b5666862fc74f5321b55a87583c33c6bb06f2e76c1",
+      "object_sha256": "72eee57a1e08bc22d2cf0f3ad102cc7fb49d1dfa7e1618392472ab6c2492d808",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7skippedEPKh",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L4editEPKhi",
+          "compiled_body_bytes": 260
+        },
+        {
+          "name": "menuRun__FP4MenuP3padPi",
+          "compiled_body_bytes": 1276
+        }
+      ],
+      "host_files": [
+        "sources/w8-frontend-menu-b-menu-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-menu-draw/menu_draw.cpp",
+      "source_sha256": "1b8e520a732e178a48d37c269f1589b74be663204989c2fba50a5ab8b5145aa5",
+      "object_sha256": "e5881e450079d0f05d40e1c64a44dc74cac48b8afdba3591e21b4fa2c9d6c18b",
+      "emitted_functions": [
+        {
+          "name": "menuDraw__FiiP4MenuUiUiP4FontP8_texturei",
+          "compiled_body_bytes": 2748
+        }
+      ],
+      "host_files": [
+        "sources/w8-frontend-menu-b-menu-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-net-menus/net_menus.cpp",
+      "source_sha256": "b6b2a7873d09d7557edb4c1e443b5a66d1ed5fb72de6aec5aa99d66ae196a6ad",
+      "object_sha256": "6ee680fe306e81ac4f2483de0b65af9594859d41c21d7c591b3c5365408b0036",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-frontend-menu-b-net-menus/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-option-menu/option_menu.cpp",
+      "source_sha256": "52eaab1186ce263fe5d13b561d597e417401434c4af55f4f998fef0e3ab400cd",
+      "object_sha256": "59e4c5ce32829a0c5fe4607238d437926af4f255fd2f1fee9921764a528db051",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-frontend-menu-b-option-menu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-dialog-state/dialog_state.cpp",
+      "source_sha256": "179538a61b618febb99f412236c51264973523b7d70d6eb656b2458af1c2eb73",
+      "object_sha256": "b0bb17b6d13115b6e084613a7dcafdb14aae40b88815e206b39b8f4c4a8f015b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-frontend-menu-b-dialog-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-frontend-menu-b",
+      "source": "sources/w8-frontend-menu-b-misc-words/misc_words.cpp",
+      "source_sha256": "65880cf2eaae722a753f1529bff9824e1cb73429ff4374abdf8ced834eaf732f",
+      "object_sha256": "57549ccfb6c183bc1003cefcbcba2eed7dd6252132d153aba265228194ed6f82",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-frontend-menu-b-misc-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

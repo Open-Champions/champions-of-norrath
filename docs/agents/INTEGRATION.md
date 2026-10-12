@@ -3590,6 +3590,41 @@ Closed: `Password__C13VIGameOptions`, `Username__C13VIGameOptions`,
 Opened: `MC_NameToAct__FPc`, `__12RecallEffectG6Point3`,
 `fontPrintWrapCenteredu__FiiPUsiiii`.
 
+## agents/w8-frontend-menu-b
+
+Merged as a **partial package**: the notes carry the observed/inferred
+separation, the plan table and a summary with closed and opened imports, but
+not separate "authored but never executed" and "unknown" sections. Every
+selected function has a `host_check.cpp`; all 9 build and exit 0 here. Nine
+of the 10 units were selected with fresh `input_order` values 1796 through
+1804 (7 emitted functions, 5004 compiled body bytes, not original-byte
+matches; the notes' plan table has no object names, so `<stem>.o` was used).
+w8-frontend-menu-b-menu-words is a data-only unit with no host check at all,
+and the snapshot checker requires a host file for every selected record, so
+it stays in the snapshot, unselected, until a check exists; that is why
+`norrath_menu_local_t_004844e8` and `norrath_menu_word_00484514` appear as
+opened. No game binary or disassembly listing was committed. 1408 function
+bodies, 1805 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1608 |
+| After | 1589 |
+| Closed | 24 |
+| Opened | 5 |
+
+Closed: `menuDraw__FiiP4MenuUiUiP4FontP8_texturei`, `menuModeRebootQuestion`,
+`menuNetClientServer`, `menuNetImportOrNewGame`, `menuNetImportOrNewPlayer`,
+`menuRun__FP4MenuP3padPi`, `nameChars`, `optionCount`, `optionIndex`,
+`optionLinePos`, `optionMenu`, `optionsShowing`, `pauseProcess__Fv`,
+`pushPause__Fv`, `ranBrowser`, `ranConfig`, `scrollEnd`, `scrollSpan`,
+`scrollTarget`, `scrollY`, `showMore`, `showOptions`, `stopCredits__Fv`,
+`title`.
+
+Opened: `lerpColor__FUiUif`, `norrath_menu_local_t_004844e8`,
+`norrath_menu_word_00484514`, `pauseStack`, `paused`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
