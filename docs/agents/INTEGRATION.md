@@ -2428,3 +2428,4 @@ and no startup stage has executed.
 - 2026-10-12 12:41 CDT — `agents/card-progress`, `agents/memcard-calls` (follow-up commits) — 1142 unresolved imports
 - 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
 - 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
+- 2026-10-12 13:12 CDT — `agents/frontend-shell` (rejected, not merged; log notes only) — 1201 unresolved imports
