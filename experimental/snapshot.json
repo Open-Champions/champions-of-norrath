@@ -13993,6 +13993,316 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/link-image-bounds-sema/sema_ids.cpp"
+    },
+    {
+      "input_order": 1087,
+      "component": "gs-dma-present-add-dmac-handler",
+      "object_name": "add_dmac_handler.o",
+      "private_object_sha256": "44444135606bd770e90a09e292f7214f2c97dc7e00da89735014daede5d85912",
+      "emitted_functions": [
+        {
+          "name": "AddDmacHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-add-dmac-handler/add_dmac_handler.S"
+    },
+    {
+      "input_order": 1088,
+      "component": "gs-dma-present-check-model-version",
+      "object_name": "check_model_version.o",
+      "private_object_sha256": "2d7b270bed7b1423ada2369964bff40ff407e4fbbb4582c0810f7acebb5ad9c1",
+      "emitted_functions": [
+        {
+          "name": "checkModelVersion",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-check-model-version/check_model_version.cpp"
+    },
+    {
+      "input_order": 1089,
+      "component": "gs-dma-present-core-loading",
+      "object_name": "core_loading.o",
+      "private_object_sha256": "42a13053d33aad749b8c89fdf59776a67ec61f317646d1f566f6d6197b2991b5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-core-loading/core_loading.cpp"
+    },
+    {
+      "input_order": 1090,
+      "component": "gs-dma-present-draw",
+      "object_name": "draw.o",
+      "private_object_sha256": "be84125cf885f60e66d2b2e661f889676b940a819a5d62e3691a11ea6638d575",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw/draw.cpp"
+    },
+    {
+      "input_order": 1091,
+      "component": "gs-dma-present-draw-frame-nm",
+      "object_name": "draw_frame_nm.o",
+      "private_object_sha256": "6e60ca41425c7506179ac5ac8df25696478725632ee53a9207d06f95dabac11e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw-frame-nm/draw_frame_nm.cpp"
+    },
+    {
+      "input_order": 1092,
+      "component": "gs-dma-present-draw-remove-interrupts",
+      "object_name": "draw_remove_interrupts.o",
+      "private_object_sha256": "619aa05a4f23c0eaeab3c1036b442d5df70cf7db33763cd5e232753a694d5748",
+      "emitted_functions": [
+        {
+          "name": "drawRemoveInterrupts__Fv",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw-remove-interrupts/draw_remove_interrupts.cpp"
+    },
+    {
+      "input_order": 1093,
+      "component": "gs-dma-present-draw-restore-interrupts",
+      "object_name": "draw_restore_interrupts.o",
+      "private_object_sha256": "714bcd8675ea69891a3e691b7399f0b8f0ce096851a9e830518858a02ec8cc2e",
+      "emitted_functions": [
+        {
+          "name": "drawRestoreInterrupts__Fv",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw-restore-interrupts/draw_restore_interrupts.cpp"
+    },
+    {
+      "input_order": 1094,
+      "component": "gs-dma-present-draw-start",
+      "object_name": "draw_start.o",
+      "private_object_sha256": "30c784b3221acb646f7272d3d563beac84ccaa5b2c2dc5f2796f11ca28ede69b",
+      "emitted_functions": [
+        {
+          "name": "drawStart__Fv",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw-start/draw_start.cpp"
+    },
+    {
+      "input_order": 1095,
+      "component": "gs-dma-present-draw-wait-finished",
+      "object_name": "draw_wait_finished.o",
+      "private_object_sha256": "d826a2cad4b8481a1c36ad40eb502d7822bf39f98c674558101c9636711aef62",
+      "emitted_functions": [
+        {
+          "name": "drawWaitFinished__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-draw-wait-finished/draw_wait_finished.cpp"
+    },
+    {
+      "input_order": 1096,
+      "component": "gs-dma-present-enable-dmac",
+      "object_name": "enable_dmac.o",
+      "private_object_sha256": "c367d830c56e306ca878d1653778f1490107e7b9351a57904579c606ee9f0dbf",
+      "emitted_functions": [
+        {
+          "name": "EnableDmac",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-enable-dmac/enable_dmac.cpp"
+    },
+    {
+      "input_order": 1097,
+      "component": "gs-dma-present-engine-set-video-mode",
+      "object_name": "engine_set_video_mode.o",
+      "private_object_sha256": "a3f87e3fdc67bd8ced7303f746cf3897d201d3585af2c041a9ebf47995ad4f59",
+      "emitted_functions": [
+        {
+          "name": "engineSetVideoMode__Fb",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-engine-set-video-mode/engine_set_video_mode.cpp"
+    },
+    {
+      "input_order": 1098,
+      "component": "gs-dma-present-frame-start-packet",
+      "object_name": "frame_start_packet.o",
+      "private_object_sha256": "9d7c0814c32807bc1c3f585996b48ea8f8b3e11628a060ed99a4c23c79afb524",
+      "emitted_functions": [
+        {
+          "name": "frameStartPacket__FUibi",
+          "compiled_body_bytes": 584
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-frame-start-packet/frame_start_packet.cpp"
+    },
+    {
+      "input_order": 1099,
+      "component": "gs-dma-present-gs-int-handler",
+      "object_name": "gs_int_handler.o",
+      "private_object_sha256": "385f6bcaa89e0ac6ee829a1a205a41eca5252f083aa0c1f279e6f4356712d0c0",
+      "emitted_functions": [
+        {
+          "name": "gsIntHandler__Fi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-gs-int-handler/gs_int_handler.cpp"
+    },
+    {
+      "input_order": 1100,
+      "component": "gs-dma-present-last-frame-vblank",
+      "object_name": "last_frame_vblank.o",
+      "private_object_sha256": "ebb378e9f3004cda35976e1fc66b8be32d50a8c4f28091e10779c6cdc56440ba",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-last-frame-vblank/last_frame_vblank.cpp"
+    },
+    {
+      "input_order": 1101,
+      "component": "gs-dma-present-make-sample-packet",
+      "object_name": "make_sample_packet.o",
+      "private_object_sha256": "546c76a8ae24089a1f92a78141780449caeee68d94ccd5e0e7f03340c186bb2c",
+      "emitted_functions": [
+        {
+          "name": "makeSamplePacket__Fb",
+          "compiled_body_bytes": 804
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-make-sample-packet/make_sample_packet.cpp"
+    },
+    {
+      "input_order": 1102,
+      "component": "gs-dma-present-power-off-mode",
+      "object_name": "power_off_mode.o",
+      "private_object_sha256": "8b4289fb724ec47ec7996b32ae5a0a0ff2689664e2eebf02c4162a1c6bdf3021",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-power-off-mode/power_off_mode.cpp"
+    },
+    {
+      "input_order": 1103,
+      "component": "gs-dma-present-sce-dma-pause",
+      "object_name": "sce_dma_pause.o",
+      "private_object_sha256": "9c5ac80626b6b1810b4644623908c847f899ac11d830b87da4ce9f72ee318ef5",
+      "emitted_functions": [
+        {
+          "name": "sceDmaPause",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-sce-dma-pause/sce_dma_pause.cpp"
+    },
+    {
+      "input_order": 1104,
+      "component": "gs-dma-present-sce-dma-put-env",
+      "object_name": "sce_dma_put_env.o",
+      "private_object_sha256": "9f5fa9e91ce3295b37e336636ecd70d77032af60911d884dc699be1d4c42629b",
+      "emitted_functions": [
+        {
+          "name": "sceDmaPutEnv",
+          "compiled_body_bytes": 436
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-sce-dma-put-env/sce_dma_put_env.cpp"
+    },
+    {
+      "input_order": 1105,
+      "component": "gs-dma-present-sce-dma-send",
+      "object_name": "sce_dma_send.o",
+      "private_object_sha256": "8c5a6451dbaab95c63bf35b22b8841021964eb41e2f79a090d187ea38ffc2b6e",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSend",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-sce-dma-send/sce_dma_send.cpp"
+    },
+    {
+      "input_order": 1106,
+      "component": "gs-dma-present-sce-gs-sync-v",
+      "object_name": "sce_gs_sync_v.o",
+      "private_object_sha256": "78bf702c1d07b873a4c16f048244f695eb563d0bfd08b4b8207f714f2c6863ab",
+      "emitted_functions": [
+        {
+          "name": "sceGsSyncV",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-sce-gs-sync-v/sce_gs_sync_v.cpp"
+    },
+    {
+      "input_order": 1107,
+      "component": "gs-dma-present-special-mpeg-mode",
+      "object_name": "special_mpeg_mode.o",
+      "private_object_sha256": "caf1726b49d010e49e9abc2f61ee5f70f7b1c26606cdef0a6ea6a37d0435ae39",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-special-mpeg-mode/special_mpeg_mode.cpp"
+    },
+    {
+      "input_order": 1108,
+      "component": "gs-dma-present-switch-30-counter",
+      "object_name": "switch_30_counter.o",
+      "private_object_sha256": "7cfc8b2caafeabada5b27f8cb45b97070ea5e1faf23e66f0c29d63c74f91968e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-switch-30-counter/switch_30_counter.cpp"
+    },
+    {
+      "input_order": 1109,
+      "component": "gs-dma-present-switch-half-counter",
+      "object_name": "switch_half_counter.o",
+      "private_object_sha256": "623248446fb0ad4a99e1fbfec989ee02912ee7fadf0856e9b3b33901f8180e13",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-switch-half-counter/switch_half_counter.cpp"
+    },
+    {
+      "input_order": 1110,
+      "component": "gs-dma-present-texture-internal-init",
+      "object_name": "texture_internal_init.o",
+      "private_object_sha256": "b46af4174bd79ceaaab2271dded77425ffff2943e1614c7664b79fac42f4d7fb",
+      "emitted_functions": [
+        {
+          "name": "textureInternalInit__Fv",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-texture-internal-init/texture_internal_init.cpp"
+    },
+    {
+      "input_order": 1111,
+      "component": "gs-dma-present-texture-pack-down",
+      "object_name": "texture_pack_down.o",
+      "private_object_sha256": "d256e237f5d27e9218dfe7e79d084a9b0e56659e115cd6fe887bc39913eee9bb",
+      "emitted_functions": [
+        {
+          "name": "texturePackDown__Fv",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-texture-pack-down/texture_pack_down.cpp"
     }
   ],
   "drafts": [
@@ -16612,7 +16922,59 @@
     "sources/link-image-bounds-dtors/dtor_list.cpp": "c15c120e3cf9d8b46306b5c1afccd94a2d893cff51f0955339dd7668d2168160",
     "sources/link-image-bounds-dtors/host_contract.cpp": "60220f03bcb82958941cc18c1af23725c2be7237eb3c580cd152a540fd9aab69",
     "sources/link-image-bounds-sema/sema_ids.cpp": "8403e4ea29efbb5cfe8091316d8075d3ee20851baf417f5e1cecc9229f273f04",
-    "sources/link-image-bounds-sema/host_contract.cpp": "7ba277acc92c75bf390cb50c44d598c23fcab4f77b7cbc7fa65e4e4a01a72da2"
+    "sources/link-image-bounds-sema/host_contract.cpp": "7ba277acc92c75bf390cb50c44d598c23fcab4f77b7cbc7fa65e4e4a01a72da2",
+    "sources/gs-dma-present-add-dmac-handler/add_dmac_handler.S": "b8aaf3926799a893db0720f673f2b7e3d935a6d1bf4af18d4d97fb7904c8fecc",
+    "sources/gs-dma-present-add-dmac-handler/host_check.cpp": "ccbf5483b08e4d4508b1984dbfbdea72c8864c4830b6bd57832fcb9b9d9e6019",
+    "sources/gs-dma-present-check-model-version/check_model_version.cpp": "4baf5dfba2f98bf12c58f6e9541cf5bdc29bdac9845d88c9f396ac0e3647c769",
+    "sources/gs-dma-present-check-model-version/host_contract.cpp": "0745c82d4e6278143e9c4ba65c9a04b4643cd0bb9fa34e3657b95aad94d253c9",
+    "sources/gs-dma-present-core-loading/core_loading.cpp": "d120a6c55a0537b809269a16caf0f2b0d86508f2524d608469dfebdc1fa221f0",
+    "sources/gs-dma-present-core-loading/host_contract.cpp": "3921cd44cfd8e407129dd87e6ef2886994209e2d1ca84780a544739cf5b771be",
+    "sources/gs-dma-present-draw/draw.cpp": "51db443cac0c97aef2d2e4cc8a11684bbf8eeb1c8aedca9987f3cb414f96a92f",
+    "sources/gs-dma-present-draw/host_contract.cpp": "d942de901168504c1d55ccf45fc9ee0537ec52727bc41c5ce00ad0940edac173",
+    "sources/gs-dma-present-draw-frame-nm/draw_frame_nm.cpp": "185857e1747a18524123235e70b32dce31e86b021612946e93f64e2ac5b5d921",
+    "sources/gs-dma-present-draw-frame-nm/host_contract.cpp": "fec4cfe9a304d8632fcf7bd2c4ee9dee95c99811a74c73e1091c9e3714abe1b0",
+    "sources/gs-dma-present-draw-remove-interrupts/draw_remove_interrupts.cpp": "12f3acc7b5502d740b05f7a042fe0bda60918945feea0907d6f45d50f280ce86",
+    "sources/gs-dma-present-draw-remove-interrupts/host_contract.cpp": "ce9e1ee23b49467820c4fed793fd564b6b300a024ad4158ac1d3cde8f339439c",
+    "sources/gs-dma-present-draw-restore-interrupts/draw_restore_interrupts.cpp": "49a0999147be294630e4276efadd65e388bc28331c228d6b621ff51dd6f59e87",
+    "sources/gs-dma-present-draw-restore-interrupts/host_contract.cpp": "275a4b6a6f434e99a0825dd552f78c4c70a5ab5859443acb48e333d092649d0d",
+    "sources/gs-dma-present-draw-start/draw_start.cpp": "a0c67725e3467f975d475d2cd5938e1e3f4c2e96e212b950096fca8420733198",
+    "sources/gs-dma-present-draw-start/host_contract.cpp": "f6b63eb4800f007497136457c2e6ce651eb1eedf74e905f57233524778e02f49",
+    "sources/gs-dma-present-draw-wait-finished/draw_wait_finished.cpp": "9a2dd240b30b52ce1b504eb9169313bde0189daaa348877918485e197d811fa0",
+    "sources/gs-dma-present-draw-wait-finished/host_contract.cpp": "53d1905ac2b307cffa6fb98cce946be52b2b7f18b9628078299dff42d5da9111",
+    "sources/gs-dma-present-enable-dmac/enable_dmac.cpp": "c370de245064ca2eee5403c8cf020f8939ff559446a18ff425726023b3d0785d",
+    "sources/gs-dma-present-enable-dmac/host_contract.cpp": "dc71f10f3feb2d09abe44b45323482ebab5c9f723c28aa29a0ff5020e572115a",
+    "sources/gs-dma-present-engine-set-video-mode/engine_set_video_mode.cpp": "6ff65e50d230bbc0a0300d112b30583871abb9b1126552505332577cfbaccb08",
+    "sources/gs-dma-present-engine-set-video-mode/host_contract.cpp": "3ec883454269c528582bd155970a45f2fc43916c844d6dc5cd24951109f04d1f",
+    "sources/gs-dma-present-frame-start-packet/frame_start_packet.cpp": "7782a5dee73f9c4661ed7038735def0243f05b13ffbbfb895382c93ad20c39f9",
+    "sources/gs-dma-present-frame-start-packet/host_contract.cpp": "e2a67fb71ebab8c9c069f4e830a0d3aeae6918a31d2f91189a2a8bcbe16bc7bd",
+    "sources/gs-dma-present-gs-int-handler/gs_int_handler.cpp": "d6685c05967839284a2f87c7f14d6e70531fd561756b9ff40401e4d997f4e7ea",
+    "sources/gs-dma-present-gs-int-handler/host_contract.cpp": "2c295cbe0345caa89a0e42ec5fcb510a095a3d69f9510e3f60118254e2009156",
+    "sources/gs-dma-present-last-frame-vblank/last_frame_vblank.cpp": "0c219e014b3dfb83fb423d937fb69cc06fd1ce9de400cc3883b91d6c4dac0610",
+    "sources/gs-dma-present-last-frame-vblank/host_contract.cpp": "2383e1742641f7487d5479f65a7826b0f2454c201e11849959000e5fde72b0d0",
+    "sources/gs-dma-present-make-sample-packet/make_sample_packet.cpp": "c7d143f95c0fc3b5672864bb7be790a00d0f24647492cae44edfe8425dcb819e",
+    "sources/gs-dma-present-make-sample-packet/host_contract.cpp": "72baeafc9f4f82fa17c29c951bfa4796b4b5e8da1d09a72571ab318adbafa099",
+    "sources/gs-dma-present-power-off-mode/power_off_mode.cpp": "315d62e4f66abbf1ec418a19cc6c68d8f72d5c113d868d3f015d164b6f887958",
+    "sources/gs-dma-present-power-off-mode/host_contract.cpp": "fb066359aabbd75f2123406ec968b3ea067ee9c3185116c2521ec2ecd6aade2a",
+    "sources/gs-dma-present-sce-dma-pause/sce_dma_pause.cpp": "4a112182f8927e0577a34b041b7ff78f4b0f879ee86e096828909964d2e750e9",
+    "sources/gs-dma-present-sce-dma-pause/host_contract.cpp": "2bfe3be353bcbc853ba2f74b634eded72414db73b6797088dbbd0f27668b163b",
+    "sources/gs-dma-present-sce-dma-put-env/sce_dma_put_env.cpp": "495586867b373c4d1b6167445ddc59e9d504704dfb5c1300cb44787c77ddc097",
+    "sources/gs-dma-present-sce-dma-put-env/host_contract.cpp": "07819fe89ec4f9e8060fdae5b4e768bc850a1982bc1a9e2d994afc2fed9a3518",
+    "sources/gs-dma-present-sce-dma-send/sce_dma_send.cpp": "83bb4794a79041d4595ae1f1c86b85d56e2bc9beff2e39f1120fa41324fe2afc",
+    "sources/gs-dma-present-sce-dma-send/host_contract.cpp": "14543af9e361f177f4f7bf86f28e099a0fcfb3776dd612f30805e5b96f79a108",
+    "sources/gs-dma-present-sce-gs-sync-v/sce_gs_sync_v.cpp": "af8491514220e2a182bd42ff25a972389dbf6040a8b71e02a69cb5f98aa7a8c4",
+    "sources/gs-dma-present-sce-gs-sync-v/host_contract.cpp": "38b8d76c027153b82d89ecf9f9af5a6556f750d3ce63f2b91ed760b0b587cd09",
+    "sources/gs-dma-present-special-mpeg-mode/special_mpeg_mode.cpp": "41ad56c97116f350ece731b7089cda80ffe1fbd166239b06d9bdc76da3153478",
+    "sources/gs-dma-present-special-mpeg-mode/host_contract.cpp": "2ce08095c58708f2d8f29bd3796556ec1a6623c0be6939be709fed3256d06557",
+    "sources/gs-dma-present-switch-30-counter/switch_30_counter.cpp": "77aa9b2b06308cfd3aa6dfd8dc1c7b688db41c6ae0639af8ae27b8a6fa61eadb",
+    "sources/gs-dma-present-switch-30-counter/host_contract.cpp": "f7bac9316b2111a174d2884e1ab3b172fcf035096c4a904265868be6f4c5c1d7",
+    "sources/gs-dma-present-switch-half-counter/switch_half_counter.cpp": "d7b4822084729f4aa72049c0a9c978994eda5658f2773779a7b8861e521c1930",
+    "sources/gs-dma-present-switch-half-counter/host_contract.cpp": "e61aca5bd3e5916120b9dfde935cfa752858f8368af77d6329936eb8530efb24",
+    "sources/gs-dma-present-texture-internal-init/texture_internal_init.cpp": "30d2519185f096188416633faf1ac09a344cbccc6fd36d87aeebdf6d4e9dc1c2",
+    "sources/gs-dma-present-texture-internal-init/host_contract.cpp": "0c9346daf142a323e40b42f3231457ca1015437ea9aac4224b4d893814321ccb",
+    "sources/gs-dma-present-texture-pack-down/texture_pack_down.cpp": "804f3476906aacf4f523185af9f240a6a934567e35a70edc423839c8d6dfedaa",
+    "sources/gs-dma-present-texture-pack-down/host_contract.cpp": "14ded0592c6f45bacb2bcba31f033f03b524ec3e5576df249f1369aac8326582",
+    "sources/gs-dma-present-texture-draw-color/texture_draw_color.cpp": "cc7b0ee6b1c3f5545b09f2cbddd9b91db9b4ce011d171b7319066d01c0ad7586",
+    "sources/gs-dma-present-texture-draw-color/host_contract.cpp": "0752249f31dbefe63c3dc2f806768497f9067331b1d662e4afb0bc826ea3f059"
   },
   "additional_implementations": [
     {
@@ -17054,11 +17416,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1087,
-    "authored_default_inputs": 1085,
+    "selected_inputs": 1112,
+    "authored_default_inputs": 1110,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 866,
-    "compiled_body_bytes_from_accepted_inputs": 377340,
+    "emitted_function_definitions_including_helpers": 883,
+    "compiled_body_bytes_from_accepted_inputs": 381196,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -17071,7 +17433,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 774
+    "package_selected_inputs": 799
   },
   "startup_implementations": [
     {
@@ -28872,6 +29234,391 @@
       "emitted_functions": [],
       "host_files": [
         "sources/link-image-bounds-sema/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-add-dmac-handler/add_dmac_handler.S",
+      "source_sha256": "b8aaf3926799a893db0720f673f2b7e3d935a6d1bf4af18d4d97fb7904c8fecc",
+      "object_sha256": "44444135606bd770e90a09e292f7214f2c97dc7e00da89735014daede5d85912",
+      "emitted_functions": [
+        {
+          "name": "AddDmacHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-add-dmac-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-check-model-version/check_model_version.cpp",
+      "source_sha256": "4baf5dfba2f98bf12c58f6e9541cf5bdc29bdac9845d88c9f396ac0e3647c769",
+      "object_sha256": "2d7b270bed7b1423ada2369964bff40ff407e4fbbb4582c0810f7acebb5ad9c1",
+      "emitted_functions": [
+        {
+          "name": "checkModelVersion",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-check-model-version/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-core-loading/core_loading.cpp",
+      "source_sha256": "d120a6c55a0537b809269a16caf0f2b0d86508f2524d608469dfebdc1fa221f0",
+      "object_sha256": "42a13053d33aad749b8c89fdf59776a67ec61f317646d1f566f6d6197b2991b5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-core-loading/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw/draw.cpp",
+      "source_sha256": "51db443cac0c97aef2d2e4cc8a11684bbf8eeb1c8aedca9987f3cb414f96a92f",
+      "object_sha256": "be84125cf885f60e66d2b2e661f889676b940a819a5d62e3691a11ea6638d575",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-draw/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw-frame-nm/draw_frame_nm.cpp",
+      "source_sha256": "185857e1747a18524123235e70b32dce31e86b021612946e93f64e2ac5b5d921",
+      "object_sha256": "6e60ca41425c7506179ac5ac8df25696478725632ee53a9207d06f95dabac11e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-draw-frame-nm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw-remove-interrupts/draw_remove_interrupts.cpp",
+      "source_sha256": "12f3acc7b5502d740b05f7a042fe0bda60918945feea0907d6f45d50f280ce86",
+      "object_sha256": "619aa05a4f23c0eaeab3c1036b442d5df70cf7db33763cd5e232753a694d5748",
+      "emitted_functions": [
+        {
+          "name": "drawRemoveInterrupts__Fv",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-draw-remove-interrupts/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw-restore-interrupts/draw_restore_interrupts.cpp",
+      "source_sha256": "49a0999147be294630e4276efadd65e388bc28331c228d6b621ff51dd6f59e87",
+      "object_sha256": "714bcd8675ea69891a3e691b7399f0b8f0ce096851a9e830518858a02ec8cc2e",
+      "emitted_functions": [
+        {
+          "name": "drawRestoreInterrupts__Fv",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-draw-restore-interrupts/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw-start/draw_start.cpp",
+      "source_sha256": "a0c67725e3467f975d475d2cd5938e1e3f4c2e96e212b950096fca8420733198",
+      "object_sha256": "30c784b3221acb646f7272d3d563beac84ccaa5b2c2dc5f2796f11ca28ede69b",
+      "emitted_functions": [
+        {
+          "name": "drawStart__Fv",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-draw-start/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-draw-wait-finished/draw_wait_finished.cpp",
+      "source_sha256": "9a2dd240b30b52ce1b504eb9169313bde0189daaa348877918485e197d811fa0",
+      "object_sha256": "d826a2cad4b8481a1c36ad40eb502d7822bf39f98c674558101c9636711aef62",
+      "emitted_functions": [
+        {
+          "name": "drawWaitFinished__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-draw-wait-finished/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-enable-dmac/enable_dmac.cpp",
+      "source_sha256": "c370de245064ca2eee5403c8cf020f8939ff559446a18ff425726023b3d0785d",
+      "object_sha256": "c367d830c56e306ca878d1653778f1490107e7b9351a57904579c606ee9f0dbf",
+      "emitted_functions": [
+        {
+          "name": "EnableDmac",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-enable-dmac/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-engine-set-video-mode/engine_set_video_mode.cpp",
+      "source_sha256": "6ff65e50d230bbc0a0300d112b30583871abb9b1126552505332577cfbaccb08",
+      "object_sha256": "a3f87e3fdc67bd8ced7303f746cf3897d201d3585af2c041a9ebf47995ad4f59",
+      "emitted_functions": [
+        {
+          "name": "engineSetVideoMode__Fb",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-engine-set-video-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-frame-start-packet/frame_start_packet.cpp",
+      "source_sha256": "7782a5dee73f9c4661ed7038735def0243f05b13ffbbfb895382c93ad20c39f9",
+      "object_sha256": "9d7c0814c32807bc1c3f585996b48ea8f8b3e11628a060ed99a4c23c79afb524",
+      "emitted_functions": [
+        {
+          "name": "frameStartPacket__FUibi",
+          "compiled_body_bytes": 584
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-frame-start-packet/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-gs-int-handler/gs_int_handler.cpp",
+      "source_sha256": "d6685c05967839284a2f87c7f14d6e70531fd561756b9ff40401e4d997f4e7ea",
+      "object_sha256": "385f6bcaa89e0ac6ee829a1a205a41eca5252f083aa0c1f279e6f4356712d0c0",
+      "emitted_functions": [
+        {
+          "name": "gsIntHandler__Fi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-gs-int-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-last-frame-vblank/last_frame_vblank.cpp",
+      "source_sha256": "0c219e014b3dfb83fb423d937fb69cc06fd1ce9de400cc3883b91d6c4dac0610",
+      "object_sha256": "ebb378e9f3004cda35976e1fc66b8be32d50a8c4f28091e10779c6cdc56440ba",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-last-frame-vblank/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-make-sample-packet/make_sample_packet.cpp",
+      "source_sha256": "c7d143f95c0fc3b5672864bb7be790a00d0f24647492cae44edfe8425dcb819e",
+      "object_sha256": "546c76a8ae24089a1f92a78141780449caeee68d94ccd5e0e7f03340c186bb2c",
+      "emitted_functions": [
+        {
+          "name": "makeSamplePacket__Fb",
+          "compiled_body_bytes": 804
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-make-sample-packet/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-power-off-mode/power_off_mode.cpp",
+      "source_sha256": "315d62e4f66abbf1ec418a19cc6c68d8f72d5c113d868d3f015d164b6f887958",
+      "object_sha256": "8b4289fb724ec47ec7996b32ae5a0a0ff2689664e2eebf02c4162a1c6bdf3021",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-power-off-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-sce-dma-pause/sce_dma_pause.cpp",
+      "source_sha256": "4a112182f8927e0577a34b041b7ff78f4b0f879ee86e096828909964d2e750e9",
+      "object_sha256": "9c5ac80626b6b1810b4644623908c847f899ac11d830b87da4ce9f72ee318ef5",
+      "emitted_functions": [
+        {
+          "name": "sceDmaPause",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-sce-dma-pause/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-sce-dma-put-env/sce_dma_put_env.cpp",
+      "source_sha256": "495586867b373c4d1b6167445ddc59e9d504704dfb5c1300cb44787c77ddc097",
+      "object_sha256": "9f5fa9e91ce3295b37e336636ecd70d77032af60911d884dc699be1d4c42629b",
+      "emitted_functions": [
+        {
+          "name": "sceDmaPutEnv",
+          "compiled_body_bytes": 436
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-sce-dma-put-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-sce-dma-send/sce_dma_send.cpp",
+      "source_sha256": "83bb4794a79041d4595ae1f1c86b85d56e2bc9beff2e39f1120fa41324fe2afc",
+      "object_sha256": "8c5a6451dbaab95c63bf35b22b8841021964eb41e2f79a090d187ea38ffc2b6e",
+      "emitted_functions": [
+        {
+          "name": "sceDmaSend",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-sce-dma-send/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-sce-gs-sync-v/sce_gs_sync_v.cpp",
+      "source_sha256": "af8491514220e2a182bd42ff25a972389dbf6040a8b71e02a69cb5f98aa7a8c4",
+      "object_sha256": "78bf702c1d07b873a4c16f048244f695eb563d0bfd08b4b8207f714f2c6863ab",
+      "emitted_functions": [
+        {
+          "name": "sceGsSyncV",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-sce-gs-sync-v/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-special-mpeg-mode/special_mpeg_mode.cpp",
+      "source_sha256": "41ad56c97116f350ece731b7089cda80ffe1fbd166239b06d9bdc76da3153478",
+      "object_sha256": "caf1726b49d010e49e9abc2f61ee5f70f7b1c26606cdef0a6ea6a37d0435ae39",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-special-mpeg-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-switch-30-counter/switch_30_counter.cpp",
+      "source_sha256": "77aa9b2b06308cfd3aa6dfd8dc1c7b688db41c6ae0639af8ae27b8a6fa61eadb",
+      "object_sha256": "7cfc8b2caafeabada5b27f8cb45b97070ea5e1faf23e66f0c29d63c74f91968e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-switch-30-counter/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-switch-half-counter/switch_half_counter.cpp",
+      "source_sha256": "d7b4822084729f4aa72049c0a9c978994eda5658f2773779a7b8861e521c1930",
+      "object_sha256": "623248446fb0ad4a99e1fbfec989ee02912ee7fadf0856e9b3b33901f8180e13",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/gs-dma-present-switch-half-counter/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-texture-internal-init/texture_internal_init.cpp",
+      "source_sha256": "30d2519185f096188416633faf1ac09a344cbccc6fd36d87aeebdf6d4e9dc1c2",
+      "object_sha256": "b46af4174bd79ceaaab2271dded77425ffff2943e1614c7664b79fac42f4d7fb",
+      "emitted_functions": [
+        {
+          "name": "textureInternalInit__Fv",
+          "compiled_body_bytes": 564
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-texture-internal-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-texture-pack-down/texture_pack_down.cpp",
+      "source_sha256": "804f3476906aacf4f523185af9f240a6a934567e35a70edc423839c8d6dfedaa",
+      "object_sha256": "d256e237f5d27e9218dfe7e79d084a9b0e56659e115cd6fe887bc39913eee9bb",
+      "emitted_functions": [
+        {
+          "name": "texturePackDown__Fv",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-texture-pack-down/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

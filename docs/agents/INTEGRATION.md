@@ -1373,6 +1373,52 @@ defined and does not change the count. The registrar's `objects` head was
 already defined. 864 function bodies, 1085 authored inputs, zero COMMON.
 214 tool tests passed. No EE startup stage ran.
 
+## agents/gs-dma-present
+
+This is a partial package: the branch carries 26 units with per-symbol
+observed addresses and behavior, but its notes lack the five summary
+sections (no closed/opened lists, no plan entries). It is merged because
+every committed function has a host test and the tool tests pass. 25 of
+the 26 units were selected with fresh `input_order` values 1087 through
+1111. gs-dma-present-texture-draw-color was not selected: it redefines
+`textureDrawColor__FP8_textureiiiUi` from light-methods, and its file
+stays in the source snapshot. All 26 sources compile under their reviewed
+profiles. 24 host contracts passed on this machine. The
+`AddDmacHandler` check compares the assembled stub against the pinned
+executable, which this machine does not read; the stub assembles to the
+claimed 16 bytes. No game binary or disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 992 |
+| After | 1007 |
+| Closed | 25 |
+| Opened | 40 |
+
+Closed: `AddDmacHandler`, `EnableDmac`, `checkModelVersion`,
+`coreLoadingScreenRunning`, `draw`, `drawFrameNm`,
+`drawRemoveInterrupts__Fv`, `drawRestoreInterrupts__Fv`,
+`drawStart__Fv`, `drawWaitFinished__Fv`, `engineSetVideoMode__Fb`,
+`frameStartPacket__FUibi`, `gsIntHandler__Fi`, `lastFrameVBlankCount`,
+`makeSamplePacket__Fb`, `powerOffMode`, `sceDmaPause`, `sceDmaPutEnv`,
+`sceDmaSend`, `sceGsSyncV`, `specialMpegMode`,
+`switchTo30Counter.798`, `switchToHalfCounter.797`,
+`textureInternalInit__Fv`, `texturePackDown__Fv`. Also defined, and not
+previous imports: `gsHID`.
+
+Opened: `DisableDmac`, `RemoveDmacHandler`, `VSync`, `VSync2`, `atoi`,
+`cache`, `cacheClear__Fv`, `cacheHead`, `cacheTail`, `compositeAlpha`,
+`copyScreen`, `copyScreenAlpha`, `copyScreenColor`, `copyScreenFrame`,
+`decompressStack`, `decompressThreadid`, `dummyTex`, `engineDisable30fps`,
+`engineFullFrameMode`, `engineScissory1`, `engineScissory2`,
+`engineScreenSlide`, `engineYOffset`, `frameStatePacket`,
+`makeUnscrambleTable__Fv`, `sceClose`, `sceDmaCurrentEnv`, `sceOpen`,
+`sceRead`, `segmentUsed`, `texDecompressThread__FPv`, `texdecompress`,
+`texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`,
+`texturePageTable`, `textureUncompBufferLocked`, `trippleBufferMode`,
+`uncompMap`, `uncompSpin`. 881 function bodies, 1110 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1505,8 +1551,9 @@ megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
 frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
-sony-cd, and link-image-bounds second pass. The vehicle constructor is
-authored and not in the link. `engineInit__Ff`,
+sony-cd, and link-image-bounds second pass, and gs-dma-present. The
+vehicle constructor is authored and not in the link. The unselected
+texture-draw-color unit is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
