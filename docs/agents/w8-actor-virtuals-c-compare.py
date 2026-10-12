@@ -95,6 +95,7 @@ ALIAS = {
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
     'norrath_actor_random': 'eRand__10GameObject',
+    'norrath_actor_remove_from_run_list': 'objectRemoveFromRunList__FP10GameObject',
     'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
     'norrath_actor_add_medium_run_list': 'objectAddToMediumRunList__FP10GameObject',
     'norrath_actor_find_tag_string': 'findTagString__10GameObjectPci',
@@ -102,7 +103,8 @@ ALIAS = {
     'norrath_game_object_find_tag_int': 'findTagInt__10GameObjectPci',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'levelFlags': 0x4844C0, 'syncRandState': 0x483E5C, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'worldDifficulty': 0x484CAC, 'levelName': 0x34B660,
+        'norrath_container_msg_run_fuseParticle_bytes': 0x7D7720, 'norrath_container_msg_run_smokeParticle_bytes': 0x7D7770, 'levelFlags': 0x4844C0, 'syncRandState': 0x483E5C, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
         'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
         'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
@@ -185,6 +187,11 @@ def make_stub(name, kinds, ret, rng, scn=None):
                 entry.append(v)
             elif tok == 'x':
                 pass
+            elif tok == 'dF':
+                # item-description struct: log the bytes the caller initialised, then scribble over it
+                entry.append(('desc', m.read(v + 16, 18), m.read(v + 36, 2), m.read(v + 44, 2), m.read(v + 52, 2), m.read(v + 60, 2)))
+                for k in range(64):
+                    m.w8(v + k, rng.randrange(256))
             elif tok == 'L':
                 chosen = rng.sample(scn['list'], rng.randint(0, len(scn['list'])))
                 for k, t in enumerate(chosen):
@@ -643,6 +650,47 @@ def sc_shooter_run(rng):
     return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs, 'list': TRIG_LIST}
 
 
+LUMPS = [0x31F00000, 0x31F00100]
+STRS = [0x31F00200, 0x31F00240, 0x31F00280]
+
+
+def sc_container_run(rng):
+    mem = new_object(rng)
+    vtable(rng, mem, {8: (VSTUB, rng.choice([0, 8, -8]))})
+    for lump in LUMPS:
+        fill(rng, mem, lump, 0x40)
+        mem[lump + 18] = rng.choice([0, 1, 2, 3, 5, 0xFF, 0x80, 4])
+    for a, text in zip(STRS, (b'resA', b'resB', b'resC')):
+        for i, c in enumerate(text + b'\0'):
+            mem[a + i] = c
+    for off, a in zip((76, 88, 92), STRS):
+        put32(mem, OBJ + off, a)
+    put32(mem, OBJ + 96, rng.choice([0, 0x31F00300]))
+    for off in (108, 112):
+        putf(mem, OBJ + off, float(rng.choice([0, 0, 1, -1, 2, 5, -7])) * rng.choice([1, 0.03125]))
+    for off in (16, 20, 24):
+        putf(mem, OBJ + off, float(rng.randrange(-30, 30)))
+    putf(mem, OBJ + 28, float(rng.choice([3, 5, 10, 17])))
+    putf(mem, OBJ + 32, float(rng.choice([2, 4, 9, 20])))
+    mem[OBJ + 124] = rng.choice([0, 0, 1, 0xFF, 0x80])
+    put32(mem, OBJ + 104, rng.choice([0, 1, 4, 5, 0x21, 0x41, 0x81, 0x101, 0x201, 0x401, 0x21, 0xFFFFFFFF, 0x1, 0x1, 0x241, 0x5]))
+    put32(mem, OBJ + 116, rng.choice([0, 1, 2, 179, 180, 181, 0xFFFFFFFF, 5]))
+    put32(mem, OBJ + 128, rng.choice([0, 1, 1, 1, 2, 3]))
+    put32(mem, OBJ + 120, rng.randrange(1 << 32))
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0x12345678]))
+    put32(mem, 0x4844A4, rng.choice([0, 8, 7, 16, 1, 0xFFFFFFF8, 4, 12, 3]))
+    put32(mem, 0x4844A0, rng.choice([0, 0x30050000]))
+    putf(mem, 0x484CAC, float(rng.choice([0, 1, 2, 3, 5])))
+    fill(rng, mem, 0x31F540, 0x6A0)
+    put32(mem, 0x31F540 + 8, 0)
+    text = rng.choice([b'tutor', b'tower', b'other', b'towerx', b''])
+    for i, c in enumerate(text + b'\0'):
+        mem[0x34B660 + 81 + i] = c
+    cmp_addrs = whole_object()
+    return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs,
+            'vstubs': {VSTUB: ('delete', ['o', 'i'], None)}}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -744,6 +792,38 @@ reg('msg_run__7Shooter', W + 'shooter-run/run.cpp', sc_shooter_run,
      'sprintf': ([], None),
      'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
      'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
+
+reg('msg_run__9Container', W + 'container-run/run.cpp', sc_container_run,
+    {'genericMove__10GameObjectG6Point3P10GameObject': (['o', 's12', 'i'], None),
+     'worldPerturbWater__FP12_worldHeaderG6Point3ff': (['i', 's12', 'f', 'f'], ('i', [0, 1, 5])),
+     'worldCheckForWater__FP12_worldHeaderG6Point3fPf': (['i', 's12', 'f', 'i'], ('i', [0, 1])),
+     'objectRemoveFromRunList__FP10GameObject': (['o'], ('i', [0, 1])),
+     'eRand__10GameObject': (['o'], ('i', [0, 1, 7499, 7500, 0xf617, 0xf618, 0xffdb, 0xffdc, 65535, 0xFFFFFFFF, 0x7FFFFFFF, 0x80000000, 12345, 3, 61, 100, 32768, 9999, 10000, 30000, 29999])),
+     'blockAlloc__Fi': (['i'], ('i', [0, 0x31F90000, 0x31FA0000, 0x31FA0000, 0x31FA0000])),
+     'lumpFindResource__FPcT0': (['c', 'c'], ('i', LUMPS)),
+     'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], ('i', [0, 7, 0x1234])),
+     'sprintf': ([], None),
+     'strcmp': (['c', 'c'], ('i', [0, 0, 1, -1])),
+     'strstr': (['c', 'c'], ('i', [0, LUMPS[0]])),
+     'gameSetCameraShake__Ffb': (['f', 'i'], None),
+     'modelGetCharAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f':
+         (['i', 's12', 'i', 'i', 'i', 'W', 'i', 'f'], None),
+     'P_AddParticle__FP11ParticleDefP6Point3T1f': (['i', 's12', 's12', 'f'], None),
+     'makeExplosion__FG6Point3f': (['s12', 'f'], None),
+     'objectRadialDamage__FP10GameObjectG6Point3iffiii': (['o', 's12', 'i', 'f', 'f', 'i', 'i', 'i'], None),
+     'floorAdd__FG6Point3sfii': (['s12', 'i', 'f', 'i', 'i'], None),
+     '__11LightEffectG6Point3ffffffffffffP10GameObjecti': (['i', 's12'] + ['f'] * 8 + ['i', 'i'] + ['k'] * 4, None),
+     '__6PhPropG6Point3PcN22liPQ24item11descriptionf': (['i', 's12', 'c', 'c', 'c', 'i', 'i', 's64', 'f'], None),
+     'soundStopSound__Fi': (['i'], None),
+     'gameTreasureRamp__Fv': ([], ('f', [0.5, 1, 2, 3.5])),
+     '__4GoldG6Point3i': (['i', 's12', 'i'], None),
+     'create__4itemPcPQ24item11descriptionii': (['c', 'dF', 'i', 'i'], None),
+     'makeRandomPotion__4itemPQ24item11description': (['dF'], None),
+     'getProxyMeshId__4itemPQ24item11description': (['s64'], ('i', [0, 1, 5, 105, 50])),
+     'initStuff__6PhPropi': (['i', 'i'], None),
+     'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'addEffect__FiG6Point3': (['i', 's12'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
