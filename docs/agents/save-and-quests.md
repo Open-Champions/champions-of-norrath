@@ -47,3 +47,7 @@ Observed at `0x0024fc10`, 160 bytes; the reviewed compile emits 148. For each so
 ## textHandler__FPUci
 
 Observed at `0x002ca8d0`, 488 bytes; the reviewed compile emits 436. Symbols (`nm` sizes): `inMsg` `0x008d8938`, 1008 bytes (eight 126-byte slots), `msgTimeout` `0x008d8d28`, 32 bytes (eight words), `outMsg` `0x008d88b8`, 128 bytes, `waiting` `0x00486dac`, 4 bytes. A message shifts slots and words up one place (index 6 to 0), copies `size` bytes into slot 0 (unbounded), and zeroes `msgTimeout[0]`. If slot 0 matches `outMsg` on bytes 0, 1, 2 and on `slot[0] + 1` bytes from byte 3, `outMsg` byte 0 becomes 1, byte 3 becomes 32, bytes 4 and 1 become 0, and `waiting` is cleared. The registrar (`dataHandle` set by the net registration) is not in this function; what the fields mean is unknown (inferred only: received text lines and an outgoing text buffer). Opens imports `inMsg`, `msgTimeout`, `outMsg`, `waiting`, `memcpy`, `memcmp`.
+
+## msg_load__10GameObjectPc and msg_save__10GameObjectPc
+
+Observed at `0x00312e78` and `0x00312e80`, 8 bytes each, weak symbols in the reference. Both return 0 and touch nothing, so the base object has no persistent state. The authored versions are ordinary (strong) definitions.
