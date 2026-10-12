@@ -112,6 +112,16 @@ extern unsigned char norrath_ctors_ant_lantern_view_481170[];
 extern unsigned char norrath_ctors_ant_lantern_view_481174[];
 extern unsigned char norrath_ctors_ant_lantern_view_481178[];
 extern unsigned char norrath_ctors_ant_lantern_view_48117c[];
+extern unsigned char norrath_ctors_ant_lantern_view_42c308[];
+extern unsigned char norrath_ctors_ant_lantern_view_44bea0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814e4[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814e8[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814ec[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814f0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814f4[];
+extern unsigned char norrath_ctors_ant_lantern_view_4814f8[];
+extern unsigned char norrath_ctors_ant_lantern_view_34b474[];
+extern unsigned char norrath_creature_view_484cac[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
