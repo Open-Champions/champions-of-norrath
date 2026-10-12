@@ -24,12 +24,20 @@ unsigned norrath_construct_Boat(void* object, const void* point, short type, cha
 // Original __7VehicleG6Point3sPPci and Reset__7Vehiclei. Defined by vehicle-actors.
 unsigned norrath_construct_Vehicle(void* object, const void* point, short type, char** arguments, int flag);
 unsigned norrath_vehicle_reset(void* object, int value);
+// Original __10GameObjectG6Point3PQ210GameObject11resourceMapPPc, lightAdd__FP5Light and
+// objectAddToRunList__FP10GameObject. Defined by other packages or left unresolved.
+unsigned norrath_game_object_construct(void* object, const void* point, void* resource_map, char** arguments);
+void norrath_light_add(void* light);
+unsigned norrath_actor_add_run_list(void* object);
+unsigned norrath_construct_Lamp(void* object, const void* point);
 // Original worldCheckForWater__FP12_worldHeaderG6Point3fPf. Not defined here.
 int norrath_world_check_for_water(void* world, const void* point, float radius, float* output);
 // Existing 4-byte `world` pointer at 0x4844a0.
 extern unsigned char norrath_actors_b_view_4844a0[];
 extern unsigned char norrath_ctors_ant_lantern_view_44e940[];
 extern unsigned char norrath_ctors_ant_lantern_view_453328[];
+extern unsigned char norrath_ctors_ant_lantern_view_44a810[];
+extern unsigned char norrath_ctors_ant_lantern_view_481990[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
@@ -39,6 +47,11 @@ inline Address address(const void* p) { return reinterpret_cast<Address>(p); }
 inline unsigned address_bits(const void* p) { return static_cast<unsigned>(address(p)); }
 inline unsigned char* bytes(Address a) { return reinterpret_cast<unsigned char*>(a); }
 inline void* pointer(Address a) { return reinterpret_cast<void*>(a); }
+inline void write_half(Address a, unsigned value) {
+    unsigned char* p = bytes(a);
+    p[0] = static_cast<unsigned char>(value);
+    p[1] = static_cast<unsigned char>(value >> 8);
+}
 inline unsigned read_word(Address a) {
     const unsigned char* p = bytes(a);
     return unsigned(p[0]) | (unsigned(p[1]) << 8) | (unsigned(p[2]) << 16) | (unsigned(p[3]) << 24);
