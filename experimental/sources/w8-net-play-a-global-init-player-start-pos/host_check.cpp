@@ -1,5 +1,4 @@
 #include "global_init.cpp"
-unsigned char trailParticleSpark[80];
 static int calls;
 static void* self;
 static int ints[8], tail[3];
@@ -17,7 +16,7 @@ extern "C" void __11ParticleDefiiiiiiiifffiiiPFPv_v(void* s, int a, int b, int c
 }
 int main() {
     _GLOBAL_$I$playerStartPos();
-    if (calls != 1 || self != trailParticleSpark) return 1;
+    if (calls != 1 || self != trailParticleSpark || sizeof(trailParticleSpark) != 80) return 1;
     const int want[8] = {200, 200, 150, 300, 200, 175, 100, 0};
     for (int n = 0; n < 8; ++n) if (ints[n] != want[n]) return 2;
     if (floats[0] != 2.0f || floats[1] != 5.0f || floats[2] != -20.0f) return 3;
