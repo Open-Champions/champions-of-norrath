@@ -139,6 +139,18 @@ def object_names(elf):
     return items
 
 
+def rebase_for(elf, spec):
+    """(authored start, size, delta) for authored globals that stand for original objects."""
+    out = []
+    for name, orig_addr in spec.get('rebase', {}).items():
+        for line in subprocess.check_output([P + 'nm', '-S', elf], text=True).splitlines():
+            parts = line.split()
+            if len(parts) == 4 and parts[3] == name:
+                start = int(parts[0], 16)
+                out.append((start, int(parts[1], 16), orig_addr - start))
+    return out
+
+
 def symbol_address(elf, name):
     for line in subprocess.check_output([P + 'nm', elf], text=True).splitlines():
         parts = line.split()
@@ -200,7 +212,7 @@ def stack_region(addr):
     return STACK - 0x10000 <= addr < STACK + 0x1000
 
 
-def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, effects=None, namer=None):
+def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, effects=None, namer=None, rebase=None):
     mem = dict(scenario['mem'])
     log = []
     rng = random.Random(seed ^ 0xface)
@@ -217,6 +229,9 @@ def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, eff
         m.w32(STACK + off, v)
     m.run(entry, steps=scenario.get('steps', 400000))
     state = {a: v for a, v in m.mem.items() if not stack_region(a)}
+    for lo, size, delta in (rebase or ()):
+        for a in [a for a in state if lo <= a < lo + size]:
+            state[a + delta] = state.pop(a)
     return log, state, m.g32(2), m.f[0]
 
 
@@ -252,7 +267,8 @@ def compare(name, runs):
                 if is_auth:
                     sc = dict(sc, steps=sc.get('steps', 400000) * 6)
                 res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth, spec.get('effects'),
-                                     auth_names if is_auth else orig_names))
+                                     auth_names if is_auth else orig_names,
+                                     rebase_for(elf, spec) if is_auth else None))
             except cr.Stop as exc:
                 if not is_auth and 'step limit' in str(exc):
                     skipped = True      # the original itself runs too long on this scenario
@@ -640,6 +656,18 @@ for _tu, _i, _d, _dir, _arrays in INIT_UNITS:
     if _d:
         reg('_GLOBAL_$D$' + _tu, _d, 'w8-fx-particles-init-%s/static_init.cpp' % _dir, make_init_scenario(_arrays),
             stubs=INIT_STUBS, name_objects=True)
+
+# ---- _GLOBAL_$I$particlesPaused ----
+def scenario_particles_paused(rng, seed):
+    mem = {}
+    fill(rng, mem, 0x37F730, 512)
+    fill(rng, mem, 0x6F5AD0, 4992)
+    return {'mem': mem, 'args': []}
+
+
+reg('_GLOBAL_$I$particlesPaused', 0x187778, 'w8-fx-particles-init-particles-paused/static_init.cpp',
+    scenario_particles_paused, stubs=INIT_STUBS, name_objects=True,
+    rebase={'globalSystemSave': 0x37F830})
 
 
 if __name__ == '__main__':
