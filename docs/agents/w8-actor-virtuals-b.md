@@ -184,7 +184,7 @@ the sources; it is in their `header_closure`.
 {"emitted_functions":[{"compiled_body_bytes":56,"name":"msg_poke__8AutoPropi"}],"header_closure":["sources/w8-actor-virtuals-b-common/virtual_call.hpp"],"kind":"independently_authored_source","object_name":"msg_poke.o","profile":"authored_cpp","sha256":"7f36cb25bf6190a1a8e8b4f215ce8272422d65268a505cbcbcaf37327d00a845","source":"sources/w8-actor-virtuals-b-msg-poke-autoprop/msg_poke.cpp"}
 {"emitted_functions":[{"compiled_body_bytes":104,"name":"msg_poke__9Containeri"}],"header_closure":[],"kind":"independently_authored_source","object_name":"msg_poke.o","profile":"authored_cpp","sha256":"87de9370cce1c4c620e6c619d0d6ade8898b6924061a63d6ce619ae098d4117c","source":"sources/w8-actor-virtuals-b-msg-poke-container/msg_poke.cpp"}
 {"emitted_functions":[{"compiled_body_bytes":140,"name":"msg_run__10HateBridge"}],"header_closure":[],"kind":"independently_authored_source","object_name":"msg_run.o","profile":"authored_cpp","sha256":"e0d262812cc2c230479dc54d122816f746f9e56485a4d6179d7e5547b554251f","source":"sources/w8-actor-virtuals-b-msg-run-hatebridge/msg_run.cpp"}
-{"emitted_functions":[{"compiled_body_bytes":284,"name":"_ZN12_GLOBAL__N_1L4emitEPvPKh"},{"compiled_body_bytes":68,"name":"msg_run__10Teleporter"}],"header_closure":[],"kind":"independently_authored_source","object_name":"msg_run.o","profile":"authored_cpp","sha256":"50fbbd9655e8360a98fecc48131b470d004d21464d0b472c37520602b81e2a50","source":"sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp"}
+{"emitted_functions":[{"compiled_body_bytes":284,"name":"_ZN12_GLOBAL__N_1L4emitEPvPKh"},{"compiled_body_bytes":68,"name":"msg_run__10Teleporter"}],"header_closure":[],"kind":"independently_authored_source","object_name":"msg_run.o","profile":"authored_cpp","sha256":"8cf78dec23a238fadcfdc4ebcf0a837402f86f53537186c474cb968d44d7f4f0","source":"sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp"}
 {"emitted_functions":[{"compiled_body_bytes":92,"name":"__tf9WorldPart"}],"header_closure":[],"kind":"independently_authored_source","object_name":"typeinfo.o","profile":"authored_cpp","sha256":"81d1084c180bfaa99e8a7376c253f5f0259ce14e664aa2f056bfbe4b92e1b5ba","source":"sources/w8-actor-virtuals-b-tf-9worldpart/typeinfo.cpp"}
 ```
 
@@ -220,7 +220,7 @@ the sources; it is in their `header_closure`.
 {"sources/w8-actor-virtuals-b-msg-poke-autoprop/msg_poke.cpp":"7f36cb25bf6190a1a8e8b4f215ce8272422d65268a505cbcbcaf37327d00a845"}
 {"sources/w8-actor-virtuals-b-msg-poke-container/msg_poke.cpp":"87de9370cce1c4c620e6c619d0d6ade8898b6924061a63d6ce619ae098d4117c"}
 {"sources/w8-actor-virtuals-b-msg-run-hatebridge/msg_run.cpp":"e0d262812cc2c230479dc54d122816f746f9e56485a4d6179d7e5547b554251f"}
-{"sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp":"50fbbd9655e8360a98fecc48131b470d004d21464d0b472c37520602b81e2a50"}
+{"sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp":"8cf78dec23a238fadcfdc4ebcf0a837402f86f53537186c474cb968d44d7f4f0"}
 {"sources/w8-actor-virtuals-b-tf-9worldpart/typeinfo.cpp":"81d1084c180bfaa99e8a7376c253f5f0259ce14e664aa2f056bfbe4b92e1b5ba"}
 ```
 
