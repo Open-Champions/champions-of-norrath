@@ -145,11 +145,12 @@ def make_stub(name, sig, rng, log, answers):
     register points at are logged too."""
     n_int, n_float, n_stack = sig[:3]
     peeks = sig[3] if len(sig) > 3 else ()
+    masked = sig[4] if len(sig) > 4 else ()     # int argument indexes not logged raw (address differs)
 
     def handler(m):
         def norm(v):
             return 'stack' if stack_region(v) else v
-        ints = [norm(m.g32(4 + i)) for i in range(min(n_int, 8))]
+        ints = [('masked' if i in masked else norm(m.g32(4 + i))) for i in range(min(n_int, 8))]
         floats = [m.f[12 + i] for i in range(n_float)]
         sp = m.g32(29)
         stack = [norm(m.u32(sp + 8 * i)) for i in range(n_stack)]
@@ -485,6 +486,28 @@ def scenario_update_ps(rng, seed):
 reg('updatePS__FP14ParticleSystem', 0x181080, 'w8-fx-particles-update-ps/update_ps.cpp', scenario_update_ps,
     returns=True, stubs={'callback_a': (1, 0, 0, ((0, 16),)), 'callback_b': (1, 0, 0, ((0, 16),))},
     callbacks={CB_A: 'callback_a', CB_B: 'callback_b'})
+
+# ---- setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v ----
+def rand_float_bits(rng):
+    return f2b(rng.choice([0.0, 1.0, 2.5, 0.125, 10.0, -3.0, 7.0, 0.5, 100.0]))
+
+
+def scenario_set_particle_def(rng, seed):
+    mem = {}
+    fill(rng, mem, ARENA, 0x100)
+    ints = [rng.choice([0, 1, 5, 100, 255, -7, 4096, 90000]) & M32 for _ in range(8)]
+    mode = rng.choice([-2, -1, 0, 1, 2, 3, 4, 9])
+    tier = rng.choice([-2, 0, 1, 2, 2, 3, 3, 4, 9])
+    grid = rng.choice([0, 1, 0x11, 0x2F, 0x55, 0xFF, -16 & M32, -1 & M32, 0x123])
+    callback = rng.choice([0, 0, 0, 0x1234])
+    return {'mem': mem, 'args': [ARENA] + ints[:7],
+            'fargs': {12: rand_float_bits(rng), 13: rand_float_bits(rng), 14: rand_float_bits(rng)},
+            'stack': {0: ints[7], 8: mode & M32, 16: tier & M32, 24: grid, 32: callback}}
+
+
+reg('setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v', 0x180820,
+    'w8-fx-particles-set-particle-def/set_particle_def.cpp', scenario_set_particle_def,
+    stubs={'__assert__FPCcUiT0i': (4, 0, 0, ((0, 12), (2, 21)), (0, 2))})
 
 
 if __name__ == '__main__':
