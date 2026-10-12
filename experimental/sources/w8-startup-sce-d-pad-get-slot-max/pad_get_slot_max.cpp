@@ -1,6 +1,6 @@
 /* Observed scePadGetSlotMax at 0x002d46e0, 104 bytes. Stores command 13 in
  * word 0 and the port argument in word 1 of the shared 128-byte padman buffer
- * (0x008dd9c0), then calls sceSifCallRpc on the first padsif client
+ * (0x008ddac0), then calls sceSifCallRpc on the first padsif client
  * (0x008dd880) with command 1, mode 0, that buffer as send and receive area
  * of 128 bytes, no completion function and no argument. A negative result
  * returns 0; otherwise word 3 of the buffer is returned.

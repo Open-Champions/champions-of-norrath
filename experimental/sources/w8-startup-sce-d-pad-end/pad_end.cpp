@@ -1,5 +1,5 @@
 /* Observed scePadEnd at 0x002d3690, 128 bytes. Stores command 15 in word 0
- * of the shared padman buffer (0x008dd9c0) and calls sceSifCallRpc on the
+ * of the shared padman buffer (0x008ddac0) and calls sceSifCallRpc on the
  * first padsif client (0x008dd880) with command 1, mode 0, that buffer as
  * send and receive area of 128 bytes, no completion function and no argument.
  * A negative result returns 0. Otherwise word 3 is the result; when it equals

@@ -1,5 +1,5 @@
 /* Observed scePadGetModVersion at 0x002d4748, 100 bytes. Stores command 18 in
- * word 0 of the shared padman buffer (0x008dd9c0) and calls sceSifCallRpc on
+ * word 0 of the shared padman buffer (0x008ddac0) and calls sceSifCallRpc on
  * the first padsif client (0x008dd880) with command 1, mode 0, that buffer as
  * send and receive area of 128 bytes, no completion function and no
  * argument. A negative result returns 0; otherwise word 3 is returned. The
