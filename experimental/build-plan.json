@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1710,
+  "default_authored_inputs": 1720,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2452,7 +2452,17 @@
     "sources/w8-core-loop-a-static-init-mc-disable-startup-script/static_init_mc_disable_startup_script.cpp": "900017b63b7e53eb1bf8594797cde285bb24ac95a227a5daa37703dc71ada27c",
     "sources/w8-core-loop-a-static-init-net-interface-is-up/static_init_net_interface_is_up.cpp": "64c7bce11537bebee9b5a40d95759a2aa50954ee2df53e4c6f663cd81b2a67dc",
     "sources/w8-core-loop-a-static-init-no-ambient-offset/static_init_no_ambient_offset.cpp": "a87e8dce2c2191f78374aec4585fac0c00856bebeab5dc75d77d7589496a13c2",
-    "sources/w8-core-loop-a-static-init-route-generation/static_init_route_generation.cpp": "d85516da33145aa366b703038ce3806585d884b96d12f8647a99899e9f855aa5"
+    "sources/w8-core-loop-a-static-init-route-generation/static_init_route_generation.cpp": "d85516da33145aa366b703038ce3806585d884b96d12f8647a99899e9f855aa5",
+    "sources/w8-core-loop-b-cut-clear/cut_clear.cpp": "4345997fd2afbef54bd9d0977753cdeabf0bee2e09adaf77c8d7a988762dc5df",
+    "sources/w8-core-loop-b-cut-run-frame/cut_run_frame.cpp": "663140a922d8f8d99d0c05ffaffd09bc09797aa45b5388ad67670a11f48ed745",
+    "sources/w8-core-loop-b-data/core_loop_data.cpp": "827c6d465788dcc6e2b4e73fef59f6fb871e7e428fe9d1dc7e64892e96ef2779",
+    "sources/w8-core-loop-b-do-new-world/do_new_world.cpp": "b202cce884f547467516862122b70c46ca5b8736ba332673a848c55f4dba5833",
+    "sources/w8-core-loop-b-draw-auto-map/draw_auto_map.cpp": "5127970140d40ea8547c4d085dfd132bf7aeff3002a372a78393477f85fef28d",
+    "sources/w8-core-loop-b-draw-dome/draw_dome.cpp": "38ffca9e314d9c2b779e64fd99db904b1114073605cb72a96e74cff48627a9d0",
+    "sources/w8-core-loop-b-draw-list-clear/draw_list_clear.cpp": "ce2e43d41b14f41059c3624e0acfb4d56c2bdc27d85ce2eef955782fbe527610",
+    "sources/w8-core-loop-b-fade-up/fade_up.cpp": "fe2741c7ddced140b86c5a3293adb189113421e4a236896d9001376c6e47c50d",
+    "sources/w8-core-loop-b-map-early-init/early_init.cpp": "9c25058150bb3663565b890519a678329b5660feff6a5b440ce5c412a7636618",
+    "sources/w8-core-loop-b-start-switch-scene/start_switch_scene.cpp": "98f82888c70399820d8700f5720026d6c5d7d4095351ba10cc652548d5061c7c"
   },
   "inputs": [
     {
@@ -23475,6 +23485,151 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1712,
+      "kind": "independently_authored_source",
+      "object_name": "cut_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "4345997fd2afbef54bd9d0977753cdeabf0bee2e09adaf77c8d7a988762dc5df",
+      "source": "sources/w8-core-loop-b-cut-clear/cut_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutClear__Fv",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1713,
+      "kind": "independently_authored_source",
+      "object_name": "cut_run_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "663140a922d8f8d99d0c05ffaffd09bc09797aa45b5388ad67670a11f48ed745",
+      "source": "sources/w8-core-loop-b-cut-run-frame/cut_run_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutRunFrame__Fb",
+          "compiled_body_bytes": 1392
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1714,
+      "kind": "independently_authored_source",
+      "object_name": "core_loop_data.o",
+      "profile": "authored_cpp",
+      "sha256": "827c6d465788dcc6e2b4e73fef59f6fb871e7e428fe9d1dc7e64892e96ef2779",
+      "source": "sources/w8-core-loop-b-data/core_loop_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1715,
+      "kind": "independently_authored_source",
+      "object_name": "do_new_world.o",
+      "profile": "authored_cpp",
+      "sha256": "b202cce884f547467516862122b70c46ca5b8736ba332673a848c55f4dba5833",
+      "source": "sources/w8-core-loop-b-do-new-world/do_new_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "doNewWorld__FPc",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1716,
+      "kind": "independently_authored_source",
+      "object_name": "draw_auto_map.o",
+      "profile": "authored_cpp",
+      "sha256": "5127970140d40ea8547c4d085dfd132bf7aeff3002a372a78393477f85fef28d",
+      "source": "sources/w8-core-loop-b-draw-auto-map/draw_auto_map.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawAutoMap__Fv",
+          "compiled_body_bytes": 2852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1717,
+      "kind": "independently_authored_source",
+      "object_name": "draw_dome.o",
+      "profile": "authored_cpp",
+      "sha256": "38ffca9e314d9c2b779e64fd99db904b1114073605cb72a96e74cff48627a9d0",
+      "source": "sources/w8-core-loop-b-draw-dome/draw_dome.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawDome__Fv",
+          "compiled_body_bytes": 460
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1718,
+      "kind": "independently_authored_source",
+      "object_name": "draw_list_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "ce2e43d41b14f41059c3624e0acfb4d56c2bdc27d85ce2eef955782fbe527610",
+      "source": "sources/w8-core-loop-b-draw-list-clear/draw_list_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawListClear__Fv",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1719,
+      "kind": "independently_authored_source",
+      "object_name": "fade_up.o",
+      "profile": "authored_cpp",
+      "sha256": "fe2741c7ddced140b86c5a3293adb189113421e4a236896d9001376c6e47c50d",
+      "source": "sources/w8-core-loop-b-fade-up/fade_up.cpp",
+      "emitted_functions": [
+        {
+          "name": "coreInterfaceFadeUp__Fi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1720,
+      "kind": "independently_authored_source",
+      "object_name": "early_init.o",
+      "profile": "authored_cpp",
+      "sha256": "9c25058150bb3663565b890519a678329b5660feff6a5b440ce5c412a7636618",
+      "source": "sources/w8-core-loop-b-map-early-init/early_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "earlyInit__3mapP12_worldHeader",
+          "compiled_body_bytes": 388
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1721,
+      "kind": "independently_authored_source",
+      "object_name": "start_switch_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "98f82888c70399820d8700f5720026d6c5d7d4095351ba10cc652548d5061c7c",
+      "source": "sources/w8-core-loop-b-start-switch-scene/start_switch_scene.cpp",
+      "emitted_functions": [
+        {
+          "name": "coreStartSwitchScene__Fi",
+          "compiled_body_bytes": 28
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -23574,7 +23729,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f4b92528fc2d8a6025d437d4e32a0290a2e4f59b46c120378a58d6d506c5c224",
+  "snapshot_sha256": "fb3d7ebd36802a4a1a908dd2f309f6afece81a00b3f45373349b9c53223210be",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

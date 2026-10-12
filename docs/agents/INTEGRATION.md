@@ -3425,6 +3425,52 @@ Opened: `__tf11PushTrigger`, `__tf9Savepoint`, `compImmediateCompressor`,
 `gameCheckForDeathScreen__Fv`, `groupVolumeScale`, `padRunFrame__Fv`,
 `tempPlayerStruct`.
 
+## agents/w8-core-loop-b
+
+Merged (the branch notes carry the five summary sections). Ten units with
+fresh `input_order` values 1710 through 1719 (the notes' plan entries are
+pretty-printed JSON blocks without `input_order`; those entries were taken in
+listed order): 9 emitted functions, 5848 compiled body bytes, not
+original-byte matches, plus a data unit. Each unit has a host check; all 10
+build and exit 0 here (10 of 10). No duplicate definition was found at link
+time. No game binary or disassembly listing was committed. 1363 function
+bodies, 1720 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1592 |
+| After | 1609 |
+| Closed | 31 |
+| Opened | 48 |
+
+Closed: `coreInterfaceFadeUpVal`, `coreInterfaceFadeUp__Fi`,
+`coreLevelCommentTimer`, `coreLoadingStart`, `coreStartSwitchScene__Fi`,
+`coreSwitchScene`, `coreSwitchSceneStart`, `correction`, `curFocus`,
+`curPlaySeconds`, `currentLayerDir`, `currentRunningObject`, `cutClear__Fv`,
+`cutRunFrame__Fb`, `delayCount`, `disableVolumetricLighting`,
+`doNewWorld__FPc`, `drawAutoMap__Fv`, `drawBustCur`, `drawBustMax`,
+`drawBustOn`, `drawBustTexName`, `drawBustTitle`, `drawCompassOn`,
+`drawCompassPoint`, `drawCompassTitle`, `drawDome__Fv`, `drawListClear__Fv`,
+`dummyTex`, `earlyInit__3mapP12_worldHeader`, `endInit`.
+
+Opened: `GetTargetNum__6Camera`, `SetCutWasActive__6Camera`, `_3map$mapOffset`,
+`_3map$mapheight`, `_3map$maptiles`, `_3map$mapwidth`, `advanceFrame__Ff`,
+`animationLoadPos`, `animationLoading`, `cdIsBusy__Fv`,
+`cdLoadAsync__FPcPvT0ii`, `cutCameraPos`, `cutInitScene__FP9_cutscene`,
+`cutStop__Fv`, `dialogPacket`, `displayDialogPos`, `dlgDir`, `domeLump`,
+`drawCharacterCallBack__FiP6Point3PsPiN23`,
+`draw__3mapP12_worldHeaderfffffffG6Point2PFiP6Point3PsPiPiPi_is`, `flags`,
+`isRevealed__3mapv`, `lightDisableLocalLights__Fv`,
+`lightGlobalCharLightScale__Ff`, `mapButtonWasDown`, `mapObjList`,
+`mapScale`, `mapScissorX`, `mapScissorY`, `mapX`, `mapY`,
+`matMakeTrans__FP8Matrix34G6Point3`, `modelSetNoZWrite__Fv`, `myFOV`,
+`myPitch`, `myRoll`, `myYaw`, `netGetLocalObject__FP8Creature`, `nmActions`,
+`nmDialogNodes`, `norrath_softdouble_compare_2fba48`,
+`revealMap__3mapG6Point3`, `scaleScale`, `setCamera__Ff`,
+`thereIsACutPlayer`, `validLocalPlayer`, `willDraw__3mapP12_worldHeaderf`,
+`worldSetViewMatricies__FP6Point3P8Matrix34`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

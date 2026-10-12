@@ -22045,6 +22045,141 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-core-loop-a-static-init-route-generation/static_init_route_generation.cpp"
+    },
+    {
+      "input_order": 1712,
+      "component": "w8-core-loop-b-cut-clear",
+      "object_name": "cut_clear.o",
+      "private_object_sha256": "a3157c2d6c61065335bc3ddefa255b6353a495f4b1a50ef45507ea1e7a626a4a",
+      "emitted_functions": [
+        {
+          "name": "cutClear__Fv",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-cut-clear/cut_clear.cpp"
+    },
+    {
+      "input_order": 1713,
+      "component": "w8-core-loop-b-cut-run-frame",
+      "object_name": "cut_run_frame.o",
+      "private_object_sha256": "a9d00d5624af83a6c85bd5a039ca5664bb0ef3097cbbf14ceb049adc0a975ed4",
+      "emitted_functions": [
+        {
+          "name": "cutRunFrame__Fb",
+          "compiled_body_bytes": 1392
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-cut-run-frame/cut_run_frame.cpp"
+    },
+    {
+      "input_order": 1714,
+      "component": "w8-core-loop-b-data",
+      "object_name": "core_loop_data.o",
+      "private_object_sha256": "cb5f1c02d6441707487cfe1b41c9cd2c38af9a471e47d532b3528a8206f36449",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-data/core_loop_data.cpp"
+    },
+    {
+      "input_order": 1715,
+      "component": "w8-core-loop-b-do-new-world",
+      "object_name": "do_new_world.o",
+      "private_object_sha256": "d149498b5dca9e2eb0508e54297878a2058a3f421c42f53238974cf6beec6514",
+      "emitted_functions": [
+        {
+          "name": "doNewWorld__FPc",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-do-new-world/do_new_world.cpp"
+    },
+    {
+      "input_order": 1716,
+      "component": "w8-core-loop-b-draw-auto-map",
+      "object_name": "draw_auto_map.o",
+      "private_object_sha256": "dbbda10c4f60bae71c06d7fbafd9596f39b2c00192abf72425ead86e4225e584",
+      "emitted_functions": [
+        {
+          "name": "drawAutoMap__Fv",
+          "compiled_body_bytes": 2852
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-draw-auto-map/draw_auto_map.cpp"
+    },
+    {
+      "input_order": 1717,
+      "component": "w8-core-loop-b-draw-dome",
+      "object_name": "draw_dome.o",
+      "private_object_sha256": "dbac9cf9055a04ba1cf6badd682f963807dbbe9f3f6674715304f92d9f4f1c3b",
+      "emitted_functions": [
+        {
+          "name": "drawDome__Fv",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-draw-dome/draw_dome.cpp"
+    },
+    {
+      "input_order": 1718,
+      "component": "w8-core-loop-b-draw-list-clear",
+      "object_name": "draw_list_clear.o",
+      "private_object_sha256": "ac165bdf1bd1b77e79cea01cf4abd44d34b8f52d8a26fec35e3f8322264a84f3",
+      "emitted_functions": [
+        {
+          "name": "drawListClear__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-draw-list-clear/draw_list_clear.cpp"
+    },
+    {
+      "input_order": 1719,
+      "component": "w8-core-loop-b-fade-up",
+      "object_name": "fade_up.o",
+      "private_object_sha256": "5f0d0b60501f8bcd04afa4dbe6ed7ea79cbf5101e20cf90021b593e61f590122",
+      "emitted_functions": [
+        {
+          "name": "coreInterfaceFadeUp__Fi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-fade-up/fade_up.cpp"
+    },
+    {
+      "input_order": 1720,
+      "component": "w8-core-loop-b-map-early-init",
+      "object_name": "early_init.o",
+      "private_object_sha256": "59a338d9df23b083e446e61a49791ece401a0aad80b7335913103bb61f021dd0",
+      "emitted_functions": [
+        {
+          "name": "earlyInit__3mapP12_worldHeader",
+          "compiled_body_bytes": 388
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-map-early-init/early_init.cpp"
+    },
+    {
+      "input_order": 1721,
+      "component": "w8-core-loop-b-start-switch-scene",
+      "object_name": "start_switch_scene.o",
+      "private_object_sha256": "631a9d4fe8e350c9f09d4cbf4e8b5823510fdefa333bdf06a535d206edcc3764",
+      "emitted_functions": [
+        {
+          "name": "coreStartSwitchScene__Fi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-core-loop-b-start-switch-scene/start_switch_scene.cpp"
     }
   ],
   "drafts": [
@@ -25929,7 +26064,27 @@
     "sources/w8-core-loop-a-static-init-no-ambient-offset/static_init_no_ambient_offset.cpp": "a87e8dce2c2191f78374aec4585fac0c00856bebeab5dc75d77d7589496a13c2",
     "sources/w8-core-loop-a-static-init-no-ambient-offset/host_check.cpp": "a57c8cdf9116ef273a83b5eb4388366c3d8c57f71f903ea588276dd20367e4c1",
     "sources/w8-core-loop-a-static-init-route-generation/static_init_route_generation.cpp": "d85516da33145aa366b703038ce3806585d884b96d12f8647a99899e9f855aa5",
-    "sources/w8-core-loop-a-static-init-route-generation/host_check.cpp": "45928a099a49b5049899fad5e26575a4679d50842058ed1dee8fc48b9e2475e0"
+    "sources/w8-core-loop-a-static-init-route-generation/host_check.cpp": "45928a099a49b5049899fad5e26575a4679d50842058ed1dee8fc48b9e2475e0",
+    "sources/w8-core-loop-b-cut-clear/cut_clear.cpp": "4345997fd2afbef54bd9d0977753cdeabf0bee2e09adaf77c8d7a988762dc5df",
+    "sources/w8-core-loop-b-cut-clear/host_check.cpp": "6831d19523b4760d0a7b15f8cb6807e62913cadc7fb78dedb7d3a2d8e46b493f",
+    "sources/w8-core-loop-b-cut-run-frame/cut_run_frame.cpp": "663140a922d8f8d99d0c05ffaffd09bc09797aa45b5388ad67670a11f48ed745",
+    "sources/w8-core-loop-b-cut-run-frame/host_check.cpp": "369d153716128c648a179801c15467c4077e4b5d2afab60585a1d3b5a88cd9ae",
+    "sources/w8-core-loop-b-data/core_loop_data.cpp": "827c6d465788dcc6e2b4e73fef59f6fb871e7e428fe9d1dc7e64892e96ef2779",
+    "sources/w8-core-loop-b-data/host_check.cpp": "347f6a7762808073326237b6a1a0fb9383869f25b317d60e21990a8ba8bb11d8",
+    "sources/w8-core-loop-b-do-new-world/do_new_world.cpp": "b202cce884f547467516862122b70c46ca5b8736ba332673a848c55f4dba5833",
+    "sources/w8-core-loop-b-do-new-world/host_check.cpp": "65f0245072c1c980b6ee02331e9da071c348eb85063fb1b010d0069ae9920b26",
+    "sources/w8-core-loop-b-draw-auto-map/draw_auto_map.cpp": "5127970140d40ea8547c4d085dfd132bf7aeff3002a372a78393477f85fef28d",
+    "sources/w8-core-loop-b-draw-auto-map/host_check.cpp": "efbc7c1643ad72be00be2c56011eee39f7835b4f524621fbc32c4632e18264b5",
+    "sources/w8-core-loop-b-draw-dome/draw_dome.cpp": "38ffca9e314d9c2b779e64fd99db904b1114073605cb72a96e74cff48627a9d0",
+    "sources/w8-core-loop-b-draw-dome/host_check.cpp": "b5af56f5a51916860ecf322d34df08368afd7325e4cf09bb11eac113dd2b3df5",
+    "sources/w8-core-loop-b-draw-list-clear/draw_list_clear.cpp": "ce2e43d41b14f41059c3624e0acfb4d56c2bdc27d85ce2eef955782fbe527610",
+    "sources/w8-core-loop-b-draw-list-clear/host_check.cpp": "485eb6c7fe34c0c62b3d36956fa95caeb581a1203572ff65ed78738b4752e669",
+    "sources/w8-core-loop-b-fade-up/fade_up.cpp": "fe2741c7ddced140b86c5a3293adb189113421e4a236896d9001376c6e47c50d",
+    "sources/w8-core-loop-b-fade-up/host_check.cpp": "0ec48075b2b3ec4e9791756a78591f93244b0565a3d92429402a178d73dd3f3f",
+    "sources/w8-core-loop-b-map-early-init/early_init.cpp": "9c25058150bb3663565b890519a678329b5660feff6a5b440ce5c412a7636618",
+    "sources/w8-core-loop-b-map-early-init/host_check.cpp": "45977fe76b2cfc37d2cda68b109f8370b9b4a02a1524037bb706b6919a7eecc4",
+    "sources/w8-core-loop-b-start-switch-scene/start_switch_scene.cpp": "98f82888c70399820d8700f5720026d6c5d7d4095351ba10cc652548d5061c7c",
+    "sources/w8-core-loop-b-start-switch-scene/host_check.cpp": "9f9361f117c59bef5312d7b27859f94f4b3185c069b631e2358340b48942d7bf"
   },
   "additional_implementations": [
     {
@@ -26371,11 +26526,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1712,
-    "authored_default_inputs": 1710,
+    "selected_inputs": 1722,
+    "authored_default_inputs": 1720,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1356,
-    "compiled_body_bytes_from_accepted_inputs": 604532,
+    "emitted_function_definitions_including_helpers": 1365,
+    "compiled_body_bytes_from_accepted_inputs": 610380,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -26388,7 +26543,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1399
+    "package_selected_inputs": 1409
   },
   "startup_implementations": [
     {
@@ -48116,6 +48271,171 @@
       ],
       "host_files": [
         "sources/w8-core-loop-a-static-init-route-generation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-cut-clear/cut_clear.cpp",
+      "source_sha256": "4345997fd2afbef54bd9d0977753cdeabf0bee2e09adaf77c8d7a988762dc5df",
+      "object_sha256": "a3157c2d6c61065335bc3ddefa255b6353a495f4b1a50ef45507ea1e7a626a4a",
+      "emitted_functions": [
+        {
+          "name": "cutClear__Fv",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-cut-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-cut-run-frame/cut_run_frame.cpp",
+      "source_sha256": "663140a922d8f8d99d0c05ffaffd09bc09797aa45b5388ad67670a11f48ed745",
+      "object_sha256": "a9d00d5624af83a6c85bd5a039ca5664bb0ef3097cbbf14ceb049adc0a975ed4",
+      "emitted_functions": [
+        {
+          "name": "cutRunFrame__Fb",
+          "compiled_body_bytes": 1392
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-cut-run-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-data/core_loop_data.cpp",
+      "source_sha256": "827c6d465788dcc6e2b4e73fef59f6fb871e7e428fe9d1dc7e64892e96ef2779",
+      "object_sha256": "cb5f1c02d6441707487cfe1b41c9cd2c38af9a471e47d532b3528a8206f36449",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-core-loop-b-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-do-new-world/do_new_world.cpp",
+      "source_sha256": "b202cce884f547467516862122b70c46ca5b8736ba332673a848c55f4dba5833",
+      "object_sha256": "d149498b5dca9e2eb0508e54297878a2058a3f421c42f53238974cf6beec6514",
+      "emitted_functions": [
+        {
+          "name": "doNewWorld__FPc",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-do-new-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-draw-auto-map/draw_auto_map.cpp",
+      "source_sha256": "5127970140d40ea8547c4d085dfd132bf7aeff3002a372a78393477f85fef28d",
+      "object_sha256": "dbbda10c4f60bae71c06d7fbafd9596f39b2c00192abf72425ead86e4225e584",
+      "emitted_functions": [
+        {
+          "name": "drawAutoMap__Fv",
+          "compiled_body_bytes": 2852
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-draw-auto-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-draw-dome/draw_dome.cpp",
+      "source_sha256": "38ffca9e314d9c2b779e64fd99db904b1114073605cb72a96e74cff48627a9d0",
+      "object_sha256": "dbac9cf9055a04ba1cf6badd682f963807dbbe9f3f6674715304f92d9f4f1c3b",
+      "emitted_functions": [
+        {
+          "name": "drawDome__Fv",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-draw-dome/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-draw-list-clear/draw_list_clear.cpp",
+      "source_sha256": "ce2e43d41b14f41059c3624e0acfb4d56c2bdc27d85ce2eef955782fbe527610",
+      "object_sha256": "ac165bdf1bd1b77e79cea01cf4abd44d34b8f52d8a26fec35e3f8322264a84f3",
+      "emitted_functions": [
+        {
+          "name": "drawListClear__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-draw-list-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-fade-up/fade_up.cpp",
+      "source_sha256": "fe2741c7ddced140b86c5a3293adb189113421e4a236896d9001376c6e47c50d",
+      "object_sha256": "5f0d0b60501f8bcd04afa4dbe6ed7ea79cbf5101e20cf90021b593e61f590122",
+      "emitted_functions": [
+        {
+          "name": "coreInterfaceFadeUp__Fi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-fade-up/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-map-early-init/early_init.cpp",
+      "source_sha256": "9c25058150bb3663565b890519a678329b5660feff6a5b440ce5c412a7636618",
+      "object_sha256": "59a338d9df23b083e446e61a49791ece401a0aad80b7335913103bb61f021dd0",
+      "emitted_functions": [
+        {
+          "name": "earlyInit__3mapP12_worldHeader",
+          "compiled_body_bytes": 388
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-map-early-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-core-loop-b",
+      "source": "sources/w8-core-loop-b-start-switch-scene/start_switch_scene.cpp",
+      "source_sha256": "98f82888c70399820d8700f5720026d6c5d7d4095351ba10cc652548d5061c7c",
+      "object_sha256": "631a9d4fe8e350c9f09d4cbf4e8b5823510fdefa333bdf06a535d206edcc3764",
+      "emitted_functions": [
+        {
+          "name": "coreStartSwitchScene__Fi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w8-core-loop-b-start-switch-scene/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
