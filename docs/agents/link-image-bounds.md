@@ -1,6 +1,6 @@
 # Link image bounds
 
-Package work is on `agents/link-image-bounds`. New source is under `experimental/sources/link-image-bounds-*`. Host checks sit beside that source and stay out of the EE plan. Function units use profile `authored_cpp`. Absolute image labels use profile `authored_entry_asm`. Addresses were read from the pinned SLUS-20565 symbol table. Fresh EE objects are not original-byte matches. No EE startup stage has run.
+Package work is on `agents/link-image-bounds`. New source is under `experimental/sources/link-image-bounds-*`. Host checks sit beside that source and stay out of the EE plan. Function units use profile `authored_cpp`. Original absolute image labels are evidence only, not partial-link definitions. Addresses were read from the pinned SLUS-20565 symbol table. Fresh EE objects are not original-byte matches. No EE startup stage has run.
 
 `__sce_sema_id` is not aliased to `norrath_player_malloc_semaphore_view`. Callers `_start`, `InitThread`, `__do_global_ctors`, `__do_global_dtors`, `supplement_crt0`, and `engineInit` stay imports.
 
@@ -18,9 +18,21 @@ Observed at `0x002ff8d8`, 160 bytes. It loads the object addressed by `_impure_p
 
 Observed at `0x002fc558`, 188 bytes. It waits on `__sce_eh_sema_id` and walks `objects`. A match is the node whose word 2 is the caller's frame pointer. That node is unlinked. Word 3 is passed to `__wrap_free` only when it is nonzero and is not the same pointer. The semaphore is signaled and the node is returned. No match signals the semaphore and calls `abort`. The compiled body is 160 bytes. The host contract fails if the middle node stays linked, if a null or identical word 3 is freed, if the signal uses the id from before the wait, or if a missing node skips `abort`.
 
+## Takeover review: constructor and destructor tables
+
+Observed against the freshly SHA-256-checked baseline: `.ctors` at
+`0x0031f250` holds 103 words (all-ones sentinel, 101 callbacks, zero), and
+`.dtors` at `0x0031f3ec` holds 13 words (sentinel, 11 callbacks, zero).
+Every callback initializer names the retained symbol at that original slot.
+The authored tables contain relocations to those names, not original addresses.
+The callbacks remain imports; no callback implementation is supplied here.
+The EE compiler emitted both data-only objects, with no initializer functions.
+Both host contracts checked every slot and both sentinels. A private reference
+comparison independently checked all 112 callback names against original slots.
+
 ## Imports closed
 
-`__register_frame_info`, `atexit`, `__deregister_frame_info`.
+`__register_frame_info`, `atexit`, `__deregister_frame_info`, `__CTOR_LIST__`, `__DTOR_LIST__`.
 
 ## Imports opened
 
@@ -36,4 +48,4 @@ Append these authored inputs. Do not add the host contracts. Assign `input_order
 
 ## What is unknown
 
-What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The bytes of the reentrancy object outside offsets 328 and 332. Negative block counts are outside this contract. What `abort` does after the missing-node signal. The other ten package symbols are not defined yet.
+What `WaitSema` and `SignalSema` do with the semaphore id. The meanings of cleared words 0, 1, and 4 beyond the stores. Whether a final link should keep `objects` local. The bytes of the reentrancy object outside offsets 328 and 332. Negative block counts are outside this contract. What `abort` does after the missing-node signal. The two callback tables are now defined; the other eight package symbols await review.
