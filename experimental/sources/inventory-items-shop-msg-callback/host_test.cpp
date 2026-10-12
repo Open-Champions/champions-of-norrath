@@ -1,8 +1,8 @@
 // Host check for shopMsgCallback__FPUci with stubbed callees.
 #define NORRATH_INVENTORY_HOST 1
-#define strstr host_strstr
+#define norrath_factory_strstr host_strstr
 #include "shop_msg_callback.cpp"
-#undef strstr
+#undef norrath_factory_strstr
 #include <cstdint>
 #include <cstring>
 

@@ -1,8 +1,8 @@
 #define NORRATH_INVENTORY_HOST 1
 #include <cstring>
-#define strstr host_strstr
+#define norrath_factory_strstr host_strstr
 #include "get_index.cpp"
-#undef strstr
+#undef norrath_factory_strstr
 
 extern "C" unsigned char player[23984 * 2] = {};
 extern "C" char* host_strstr(const char* haystack, const char* needle) { return const_cast<char*>(std::strstr(haystack, needle)); }
