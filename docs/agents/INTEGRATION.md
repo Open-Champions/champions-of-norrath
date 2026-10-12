@@ -4211,6 +4211,57 @@ Opened: `Free__7VISetup`, `Free__9VIStation`, `Init__7VISetupi`,
 `soundStartDialogStream__Fiii`, `startScorePos`, `timeLastTransition`,
 `unet_shutdown__Fv`, `worldFindHeight__FP12_worldHeaderG6Point3f`.
 
+## agents/w8-fx-particles
+
+Merged (the branch notes carry the five summary sections). Thirty-eight units
+with fresh `input_order` values 2138 through 2175: 38 emitted functions
+(18,088 compiled body bytes, not original-byte matches). All 38 host checks
+build and exit 0 here (38 of 38). No duplicate definition was found at link
+time. No game binary or disassembly listing was committed. 1731 function
+bodies, 2176 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1560 |
+| After | 1538 |
+| Closed | 40 |
+| Opened | 18 |
+
+Closed: `DynamicLightArray`, `P_DeleteParticleSystem__Fi`,
+`P_DrawParticles__FP8Matrix34`, `P_Pop__Fv`, `ParticleEmitterArray`,
+`_GLOBAL_$D$orc1ResourceMap`, `_GLOBAL_$D$wesResourceMap`,
+`_GLOBAL_$D$wraithResourceMap`, `_GLOBAL_$I$antResourceMap`,
+`_GLOBAL_$I$cloudgiantResourceMap`, `_GLOBAL_$I$cyclopsResourceMap`,
+`_GLOBAL_$I$fireBeetleResourceMap`, `_GLOBAL_$I$fxResourceMap`,
+`_GLOBAL_$I$goblinResourceMap`,
+`_GLOBAL_$I$hasLightOrParticleNumber__FPPci`,
+`_GLOBAL_$I$innoruukResourceMap`, `_GLOBAL_$I$lavaMonsterResourceMap`,
+`_GLOBAL_$I$mummyResourceMap`, `_GLOBAL_$I$orc1ResourceMap`,
+`_GLOBAL_$I$particlesPaused`, `_GLOBAL_$I$scriptParticles`,
+`_GLOBAL_$I$soulResourceMap`, `_GLOBAL_$I$spiderResourceMap`,
+`_GLOBAL_$I$udkResourceMap`, `_GLOBAL_$I$vampireResourceMap`,
+`_GLOBAL_$I$wesResourceMap`, `_GLOBAL_$I$wraithResourceMap`,
+`__11AddParticleG6Point3PPc`,
+`__11LightEffectG6Point3ffffffffffffP10GameObjecti`,
+`__11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`__19ParticleMorphEffectP8CreatureT1`,
+`__eq__19ParticleEmitterDataRC19ParticleEmitterData`, `fxClear__Fv`,
+`lightClear__Fv`, `lightDeactivate__FP5Light`,
+`lightPushSceneLights__FG6Point3iiiiiiiii`, `nmParticleEmitterRecs`,
+`setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`updatePS__FP14ParticleSystem`, `updateTrails__Fv`.
+
+Opened: `_14WoodElfSoldier$m_commanderList`, `_3Orc$m_commanderList`,
+`_6Wraith$s_rWraithList`, `__11ParticleDef`, `_vt$11AddParticle`,
+`_vt$11LightEffect`, `_vt$19ParticleMorphEffect`,
+`drawDistortionParticles__Fv`, `drawLines__Fv`,
+`drawPS__FR6PacketP14ParticleSystem`, `drawSingleParticles__Fi`,
+`drawTrails__Fv`, `lightInit__11AddParticlePPc`,
+`matMakeViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix34N20`,
+`matMul__FP8Matrix44P8Matrix34T0`, `particleInit__11AddParticlePPc`,
+`savedScene`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
