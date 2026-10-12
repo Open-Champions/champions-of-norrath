@@ -27,3 +27,7 @@ Observed at `0x001d3e88`, 132 bytes; the reviewed compile emits 188. A null name
 ## scriptGetGameState__FPc
 
 Observed at `0x001d39c0`, 236 bytes; the reviewed compile emits 256. The name is copied (unbounded) into a 256-byte stack buffer and lower-cased with the newlib table (`_ctype_[c + 1] & 1` adds 32). The table `norrath_script_game_state_data_view` (`gameStateData`, `0x007d35e8`) is read as records of a NUL-terminated name plus one signed value byte, ended by a record starting with a zero byte. A match returns the value byte sign-extended. No match appends the lower-cased key, clears its value byte, and returns 0; the byte after the new record is not written. Opens imports `_ctype_`, `strcmp`, `strlen`, `strcpy` (some already defined elsewhere).
+
+## scriptSetGameState__FPci
+
+Observed at `0x001d3ab0`, 248 bytes; the reviewed compile emits 296. The value is clamped to -128..127. The name is lower-cased exactly as in `scriptGetGameState__FPc` and searched in the same record table. The clamped value is stored in the byte after the terminator of the matching record, or of the newly appended key. Returns nothing.
