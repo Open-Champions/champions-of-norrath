@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1249,
+  "default_authored_inputs": 1252,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1965,7 +1965,10 @@
     "sources/simloop-services-sound-set-stream-volume/sound_set_stream_volume.cpp": "0296ae6b5f122ac2bb209bb8157b4fb628e202ace2c5a7ab09e2e918c469d1ad",
     "sources/simloop-services-sound-start-dialog/sound_start_dialog.cpp": "0ed0e9d812e9e4e51d97be9660ea48b228e918e0e3de09ec2260660778831def",
     "sources/simloop-services-sound-start-music/sound_start_music.cpp": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
-    "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de"
+    "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
+    "sources/gs-dma-present-do-super-sample/do_super_sample.cpp": "ac011ff6b83bd50350db910c9881069ae83123148d03df5ad3e0c2622da1dec3",
+    "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp": "eb2762591ffbadefd7632107b295c782ac3cf284cbd42ca97dbe54168f94b551",
+    "sources/gs-dma-present-reload-dma/reload_dma.cpp": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d"
   },
   "inputs": [
     {
@@ -16197,6 +16200,55 @@
           "compiled_body_bytes": 264
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1251,
+      "kind": "independently_authored_source",
+      "object_name": "do_super_sample.o",
+      "profile": "authored_cpp",
+      "sha256": "ac011ff6b83bd50350db910c9881069ae83123148d03df5ad3e0c2622da1dec3",
+      "source": "sources/gs-dma-present-do-super-sample/do_super_sample.cpp",
+      "emitted_functions": [
+        {
+          "name": "doSuperSample__Fiib",
+          "compiled_body_bytes": 984
+        },
+        {
+          "name": "_ZL17float_to_int_wordf",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1252,
+      "kind": "independently_authored_source",
+      "object_name": "light_vu0_stopped.o",
+      "profile": "authored_cpp",
+      "sha256": "eb2762591ffbadefd7632107b295c782ac3cf284cbd42ca97dbe54168f94b551",
+      "source": "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp",
+      "emitted_functions": [
+        {
+          "name": "lightVU0StoppedProcessing__Fv",
+          "compiled_body_bytes": 588
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1253,
+      "kind": "independently_authored_source",
+      "object_name": "reload_dma.o",
+      "profile": "authored_cpp",
+      "sha256": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d",
+      "source": "sources/gs-dma-present-reload-dma/reload_dma.cpp",
+      "emitted_functions": [
+        {
+          "name": "reloadDMA__Fi",
+          "compiled_body_bytes": 2928
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -16296,7 +16348,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ee3804fa7cd7ab5d6d53f904a5d550165aa3c81ad89107920a244ef6437e14c6",
+  "snapshot_sha256": "178cdc7b5e5ef868760e28e16bfe63828994f319d523a385b0ee2c2119a42e47",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

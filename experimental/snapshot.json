@@ -16023,6 +16023,52 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/simloop-services-sound-stream-status/sound_stream_status.cpp"
+    },
+    {
+      "input_order": 1251,
+      "component": "gs-dma-present-do-super-sample",
+      "object_name": "do_super_sample.o",
+      "private_object_sha256": "87be3e0ddc5af50d514abc6b0a605f9f06adc2f2b06b40b6d2a60f1bb84a95a7",
+      "emitted_functions": [
+        {
+          "name": "doSuperSample__Fiib",
+          "compiled_body_bytes": 984
+        },
+        {
+          "name": "_ZL17float_to_int_wordf",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-do-super-sample/do_super_sample.cpp"
+    },
+    {
+      "input_order": 1252,
+      "component": "gs-dma-present-light-vu0-stopped",
+      "object_name": "light_vu0_stopped.o",
+      "private_object_sha256": "80b316a4730a153e71f6cfcca5efd76ef9cc800808ff7a8719029e4ae8dffc48",
+      "emitted_functions": [
+        {
+          "name": "lightVU0StoppedProcessing__Fv",
+          "compiled_body_bytes": 588
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp"
+    },
+    {
+      "input_order": 1253,
+      "component": "gs-dma-present-reload-dma",
+      "object_name": "reload_dma.o",
+      "private_object_sha256": "757ac49b1ac0b9824ac324a5d65505eb3d47e2b6596abd173984ac560081b3b5",
+      "emitted_functions": [
+        {
+          "name": "reloadDMA__Fi",
+          "compiled_body_bytes": 2928
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/gs-dma-present-reload-dma/reload_dma.cpp"
     }
   ],
   "drafts": [
@@ -18947,7 +18993,13 @@
     "sources/simloop-services-sound-start-music/sound_start_music.cpp": "b783a6a0ab6c3cb65e707eb3bf2a6b4a70830842b22c0ce95d2ee3dc67f6ed42",
     "sources/simloop-services-sound-start-music/host_check.cpp": "1b179200c48d530cf0b092129f42f468b7f3131e2f562893767d80935e911032",
     "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
-    "sources/simloop-services-sound-stream-status/host_check.cpp": "ab11ffd68567e4dcebcc044255934dce1a4f654818e1147d8cb71870f640a8b8"
+    "sources/simloop-services-sound-stream-status/host_check.cpp": "ab11ffd68567e4dcebcc044255934dce1a4f654818e1147d8cb71870f640a8b8",
+    "sources/gs-dma-present-do-super-sample/do_super_sample.cpp": "ac011ff6b83bd50350db910c9881069ae83123148d03df5ad3e0c2622da1dec3",
+    "sources/gs-dma-present-do-super-sample/host_contract.cpp": "58b57d9407a813ea9ee9e4d68462ffa273510906f95d46d0908e3d2b2113ea9a",
+    "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp": "eb2762591ffbadefd7632107b295c782ac3cf284cbd42ca97dbe54168f94b551",
+    "sources/gs-dma-present-light-vu0-stopped/host_contract.cpp": "58bb37f72626e3b906a18e5ef61c3c2dde50e939152ab976d3211a62c59fbd2b",
+    "sources/gs-dma-present-reload-dma/reload_dma.cpp": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d",
+    "sources/gs-dma-present-reload-dma/host_contract.cpp": "cb79ab3ecf6ae7470fc8db32c9baa0ffe0e84d12492a7302ef83d5682ee541bc"
   },
   "additional_implementations": [
     {
@@ -19389,11 +19441,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1251,
-    "authored_default_inputs": 1249,
+    "selected_inputs": 1254,
+    "authored_default_inputs": 1252,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 978,
-    "compiled_body_bytes_from_accepted_inputs": 403604,
+    "emitted_function_definitions_including_helpers": 982,
+    "compiled_body_bytes_from_accepted_inputs": 408364,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19406,7 +19458,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 938
+    "package_selected_inputs": 941
   },
   "startup_implementations": [
     {
@@ -33729,6 +33781,61 @@
       ],
       "host_files": [
         "sources/simloop-services-sound-stream-status/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-do-super-sample/do_super_sample.cpp",
+      "source_sha256": "ac011ff6b83bd50350db910c9881069ae83123148d03df5ad3e0c2622da1dec3",
+      "object_sha256": "87be3e0ddc5af50d514abc6b0a605f9f06adc2f2b06b40b6d2a60f1bb84a95a7",
+      "emitted_functions": [
+        {
+          "name": "doSuperSample__Fiib",
+          "compiled_body_bytes": 984
+        },
+        {
+          "name": "_ZL17float_to_int_wordf",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-do-super-sample/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp",
+      "source_sha256": "eb2762591ffbadefd7632107b295c782ac3cf284cbd42ca97dbe54168f94b551",
+      "object_sha256": "80b316a4730a153e71f6cfcca5efd76ef9cc800808ff7a8719029e4ae8dffc48",
+      "emitted_functions": [
+        {
+          "name": "lightVU0StoppedProcessing__Fv",
+          "compiled_body_bytes": 588
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-light-vu0-stopped/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "gs-dma-present",
+      "source": "sources/gs-dma-present-reload-dma/reload_dma.cpp",
+      "source_sha256": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d",
+      "object_sha256": "757ac49b1ac0b9824ac324a5d65505eb3d47e2b6596abd173984ac560081b3b5",
+      "emitted_functions": [
+        {
+          "name": "reloadDMA__Fi",
+          "compiled_body_bytes": 2928
+        }
+      ],
+      "host_files": [
+        "sources/gs-dma-present-reload-dma/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
