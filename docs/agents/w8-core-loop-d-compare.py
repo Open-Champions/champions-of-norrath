@@ -30,8 +30,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 _spec = importlib.util.spec_from_file_location('crc', os.path.join(HERE, 'combat-reactions-compare.py'))
 crc = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(crc)
-Machine, Image, Stop, M32, GP, FLAGS, P, SRC, SCRATCH, EXE = (
-    crc.Machine, crc.Image, crc.Stop, crc.M32, crc.GP, crc.FLAGS, crc.P, crc.SRC, crc.SCRATCH, crc.EXE)
+Image, Stop, M32, GP, FLAGS, P, SRC, SCRATCH, EXE = (
+    crc.Image, crc.Stop, crc.M32, crc.GP, crc.FLAGS, crc.P, crc.SRC, crc.SCRATCH, crc.EXE)
 
 TEXT = 0x02800000
 STACK = 0x3F000000
@@ -57,6 +57,16 @@ def putf(mem, a, x):
 def fill(rng, mem, base, size):
     for i in range(size):
         mem[base + i] = rng.randrange(256)
+
+
+class Machine(crc.Machine):
+    """The shared interpreter plus sqrt.s (the EE form takes its operand from ft)."""
+
+    def cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
+        if rs == 0x10 and fn == 4:
+            self.setf(sa, self.fv(rt) ** 0.5)
+            return None
+        return super().cop1(ins, pc, rs, rt, rd, sa, fn, tgt)
 
 
 class Combined:
@@ -204,9 +214,28 @@ def scenario_unscramble(rng, syms):
     return {'mem': mem}
 
 
+def scenario_pan(rng, syms):
+    mem = {}
+    pos = sym(syms, 'worldCameraPos')
+    mat = sym(syms, 'worldCameraMatrix')
+    for i in range(3):
+        putf(mem, pos + 4 * i, float(rng.randrange(-200, 200)))
+        putf(mem, SCN + 4 * i, float(rng.choice([rng.randrange(-700, 700), rng.randrange(-300, 300)])))
+    for i in range(9):
+        putf(mem, mat + 4 * i, float(rng.choice([-1, 0, 0, 1, 2, -2, 0.5, 4])))
+    fill(rng, mem, SCN + 0x100, 8)
+    a = float(rng.choice([0, 100, 360, 400, 500, -50]))
+    b = float(rng.choice([360, 840, 500, 1000, 100, 1200]))
+    if a == b:
+        b += 1.0
+    return {'mem': mem, 'args': [SCN, SCN + 0x100, SCN + 0x104], 'fargs': {12: f2b(a), 13: f2b(b)}}
+
+
 SPECS = {
     'makeUnscrambleTable__Fv': dict(src=['w8-core-loop-d-unscramble-table/unscramble_table.cpp'],
                                     symbol='makeUnscrambleTable__Fv', scenario=scenario_unscramble),
+    'pan__FG6Point3ffPfT3': dict(src=['w8-core-loop-d-pan/pan.cpp'], symbol='pan__FG6Point3ffPfT3',
+                                 scenario=scenario_pan),
 }
 
 
