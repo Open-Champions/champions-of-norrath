@@ -178,6 +178,11 @@ unsigned norrath_construct_UndeadKnightClone(void* object, const void* point, sh
 extern unsigned char norrath_ctors_lava_wraith_view_42d138[];
 extern unsigned char norrath_ctors_lava_wraith_view_44f5b8[];
 unsigned norrath_construct_Minion(void* object, const void* point, short type, char** arguments);
+// Original __3Webii at 0x20fac8. Not defined here.
+void norrath_web_construct(void* web, int first, int second);
+extern unsigned char norrath_ctors_lava_wraith_view_42c228[];
+extern unsigned char norrath_ctors_lava_wraith_view_44b350[];
+unsigned norrath_construct_SpiderQueen(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
