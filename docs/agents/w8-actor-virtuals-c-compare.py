@@ -89,9 +89,12 @@ ALIAS = {
     'norrath_lump_find_resource': 'lumpFindResource__FPcT0',
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
+    'norrath_actor_random': 'eRand__10GameObject',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538}
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538,
+        'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
+        'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
 
 def exe_symbols():
@@ -148,6 +151,9 @@ def make_stub(name, kinds, ret, rng):
                 entry.append(v)
             elif tok == 'x':
                 pass
+            elif tok == 'W':
+                for k in range(3):
+                    m.write(v + 4 * k, cr.f2b(float(rng.randrange(-20, 20))).to_bytes(4, 'little'))
             elif tok == 'c':
                 entry.append(cstr(m, v))
             elif tok[0] == 's':
@@ -460,6 +466,25 @@ def sc_container_save(rng):
             'compare': whole_object() + list(range(EXTRA, EXTRA + 0x200))}
 
 
+def sc_hate_run(rng):
+    mem = new_object(rng)
+    for off in (16, 20, 24):
+        putf(mem, OBJ + off, float(rng.randrange(-30, 30)))
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0x12345678]))
+    put32(mem, OBJ + 144, rng.choice([0, 0x31F00000, 0xFFFFFFFF]))
+    put32(mem, 0x4844A4, rng.choice([0, 1, 2, 3, 7, 8, 100, 0xFFFFFFFF, rng.randrange(1 << 32)]))
+    return {'mem': mem, 'args': [OBJ], 'compare': whole_object()}
+
+
+HATE_STUBS = {
+    'msg_run__8AutoProp': (['o'], None),
+    'modelGetNmShadowPoints__FP12_modelHeader': (['i'], ('i', [-1, 0, 1, 2, 3, 5, 9, 16, 20, 40])),
+    'modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f':
+        (['i', 'o', 's12', 'i', 'i', 'W', 'x', 'i', 'f'], ('i', [0, 1])),
+    'eRand__10GameObject': (['o'], ('i', [0, 1, 65535, 32768, 12345, 0xFFFFFFFF, 0x7FFFFFFF, 0x80000000, 7])),
+    'P_AddParticle__FP11ParticleDefP6Point3T1f': (['o', 's12', 's12', 'f'], None),
+}
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -509,6 +534,9 @@ reg('setPassableState__8HateHoleb', W + 'hate-hole-passable/set_passable_state.c
 
 reg('msg_save__9ContainerPc', W + 'container-save/save.cpp', sc_container_save,
     {'objectSaveAddToStringPool__FPCc': (['i'], ('i', [0, 1, 0x1234, 0xFFFFFFFF, 77, 78]))}, returns=True)
+
+reg('msg_run__8HateInto', W + 'hate-into-run/run.cpp', sc_hate_run, HATE_STUBS)
+reg('msg_run__8HateGate', W + 'hate-gate-run/run.cpp', sc_hate_run, HATE_STUBS)
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
