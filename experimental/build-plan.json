@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2176,
+  "default_authored_inputs": 2191,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2921,7 +2921,22 @@
     "sources/w8-fx-particles-particle-emitter-array/particle_emitter_array.cpp": "07d996a759c99fba466abb0e7ca955eec5da228c22d90dafc98459c8fbc1df82",
     "sources/w8-fx-particles-set-particle-def/set_particle_def.cpp": "c2a16f1c838d579aaabd0bfa7d1a137f95cc7a8ee0ee7700a0bf69812a43d7e7",
     "sources/w8-fx-particles-update-ps/update_ps.cpp": "e017aad2f2b2c2ff28a530a1ccb35881b5fbba42db9d7838c44534f2cb06fdf3",
-    "sources/w8-fx-particles-update-trails/update_trails.cpp": "66421392240a18024276098837bcaece94f898917d08ad1d1da808b7997a4295"
+    "sources/w8-fx-particles-update-trails/update_trails.cpp": "66421392240a18024276098837bcaece94f898917d08ad1d1da808b7997a4295",
+    "sources/w8-hud-text-items-a-add-item-to-inventory/add_item.cpp": "8dd7de765b56559df355489740405753d45abe32f84ea3f500269281e5342cbe",
+    "sources/w8-hud-text-items-a-advance-dialog-swoop/advance_swoop.cpp": "18b66b65991f314b29bc208a8c616a94cc1c529b6807933d74f72671357448b6",
+    "sources/w8-hud-text-items-a-cache-clear/cache_clear.cpp": "242288a12a4ddc1a5da41ae24efcba1adbcc4261130da3ec3211cabb761a8651",
+    "sources/w8-hud-text-items-a-color-scale/color_scale.cpp": "b4ab94106129fb119e4d2b4e24b46965e83f376c98869411f4954eb212ec2017",
+    "sources/w8-hud-text-items-a-dialog-state/dialog_state.cpp": "1cb0ef575d8f221811fae7711cd191443064d7d5cfaa39a4c24ab5b02d02dc81",
+    "sources/w8-hud-text-items-a-dlg-clear/dlg_clear.cpp": "40be200c51c23e21139590952bb9bdeb49a26b3ebade93ec704ef7d935ceabf6",
+    "sources/w8-hud-text-items-a-dlg-set-mutex/set_mutex.cpp": "5a2fd74e42829fcfdef398bff019072db0d18b5b940dee371567065848ab8fc4",
+    "sources/w8-hud-text-items-a-equip-item/equip_item.cpp": "30331f0d62abcb08b40f9e0f0db36f7afc272fa234815bd644e804401f3227f9",
+    "sources/w8-hud-text-items-a-font-color/font_color.cpp": "5c2c020ac63d64f088fe90210f22616373964e9ae7895f8791eb87ea1f48b12a",
+    "sources/w8-hud-text-items-a-font-static-init/font_static_init.cpp": "e4ce03a04a63cd743a80e5f63e6e2c414293d98d24c21ac4061b67f5de0a4a5c",
+    "sources/w8-hud-text-items-a-inventory-static-init/inventory_static_init.cpp": "f0ea511f9b3519edd2b6544f172b5a6abce8a93a80fe2e157a7eac34af2f6040",
+    "sources/w8-hud-text-items-a-item-drop/item_drop.cpp": "92ed3057fef948f1525be2754ed22bee9d8000c59a5024113c58644bf105df47",
+    "sources/w8-hud-text-items-a-quest-info-static-init/quest_info_static_init.cpp": "2268f981edc904e2dc9f002e3fdb1be9aa7a5d535318b231ecca3596f341d104",
+    "sources/w8-hud-text-items-a-shop-static-init/shop_static_init.cpp": "d2333c597ad45acf418a7e3de71248aabd24961cefd7e60b8c8b26e92620c644",
+    "sources/w8-hud-text-items-a-start-dialog-swoop/start_swoop.cpp": "b5ebecbeecd1aa742ead3e60678f6a16481c8ca563108e2aa80217d267baed14"
   },
   "inputs": [
     {
@@ -30524,6 +30539,258 @@
           "compiled_body_bytes": 308
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2178,
+      "kind": "independently_authored_source",
+      "object_name": "add_item.o",
+      "profile": "authored_cpp",
+      "sha256": "8dd7de765b56559df355489740405753d45abe32f84ea3f500269281e5342cbe",
+      "source": "sources/w8-hud-text-items-a-add-item-to-inventory/add_item.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL15firstRecallHinti",
+          "compiled_body_bytes": 136
+        },
+        {
+          "name": "addItemToInventory__FiPQ24item11descriptioni",
+          "compiled_body_bytes": 748
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2179,
+      "kind": "independently_authored_source",
+      "object_name": "advance_swoop.o",
+      "profile": "authored_cpp",
+      "sha256": "18b66b65991f314b29bc208a8c616a94cc1c529b6807933d74f72671357448b6",
+      "source": "sources/w8-hud-text-items-a-advance-dialog-swoop/advance_swoop.cpp",
+      "emitted_functions": [
+        {
+          "name": "AdvanceDialogSwoop__6CameraiPf",
+          "compiled_body_bytes": 408
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2180,
+      "kind": "independently_authored_source",
+      "object_name": "cache_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "242288a12a4ddc1a5da41ae24efcba1adbcc4261130da3ec3211cabb761a8651",
+      "source": "sources/w8-hud-text-items-a-cache-clear/cache_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "cacheClear__Fv",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2181,
+      "kind": "independently_authored_source",
+      "object_name": "color_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "b4ab94106129fb119e4d2b4e24b46965e83f376c98869411f4954eb212ec2017",
+      "source": "sources/w8-hud-text-items-a-color-scale/color_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "colorScale__FUif",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2182,
+      "kind": "independently_authored_source",
+      "object_name": "dialog_state.o",
+      "profile": "authored_cpp",
+      "sha256": "1cb0ef575d8f221811fae7711cd191443064d7d5cfaa39a4c24ab5b02d02dc81",
+      "source": "sources/w8-hud-text-items-a-dialog-state/dialog_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2183,
+      "kind": "independently_authored_source",
+      "object_name": "dlg_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "40be200c51c23e21139590952bb9bdeb49a26b3ebade93ec704ef7d935ceabf6",
+      "source": "sources/w8-hud-text-items-a-dlg-clear/dlg_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "DLG_Clear__Fv",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2184,
+      "kind": "independently_authored_source",
+      "object_name": "set_mutex.o",
+      "profile": "authored_cpp",
+      "sha256": "5a2fd74e42829fcfdef398bff019072db0d18b5b940dee371567065848ab8fc4",
+      "source": "sources/w8-hud-text-items-a-dlg-set-mutex/set_mutex.cpp",
+      "emitted_functions": [
+        {
+          "name": "DLG_SetMutex__Fv",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2185,
+      "kind": "independently_authored_source",
+      "object_name": "equip_item.o",
+      "profile": "authored_cpp",
+      "sha256": "30331f0d62abcb08b40f9e0f0db36f7afc272fa234815bd644e804401f3227f9",
+      "source": "sources/w8-hud-text-items-a-equip-item/equip_item.cpp",
+      "emitted_functions": [
+        {
+          "name": "equipItem__FiPQ24item11descriptioni",
+          "compiled_body_bytes": 2144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2186,
+      "kind": "independently_authored_source",
+      "object_name": "font_color.o",
+      "profile": "authored_cpp",
+      "sha256": "5c2c020ac63d64f088fe90210f22616373964e9ae7895f8791eb87ea1f48b12a",
+      "source": "sources/w8-hud-text-items-a-font-color/font_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "fontColor__FUiii",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2187,
+      "kind": "independently_authored_source",
+      "object_name": "font_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "e4ce03a04a63cd743a80e5f63e6e2c414293d98d24c21ac4061b67f5de0a4a5c",
+      "source": "sources/w8-hud-text-items-a-font-static-init/font_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL14staticInitFontii.constprop.0",
+          "compiled_body_bytes": 20
+        },
+        {
+          "name": "_GLOBAL_$I$_fontStringSize__FP4FontPci",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2188,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "f0ea511f9b3519edd2b6544f172b5a6abce8a93a80fe2e157a7eac34af2f6040",
+      "source": "sources/w8-hud-text-items-a-inventory-static-init/inventory_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL19staticInitInventoryii.constprop.0",
+          "compiled_body_bytes": 312
+        },
+        {
+          "name": "_GLOBAL_$I$inventoryLoad__Fv",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$D$inventoryLoad__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2189,
+      "kind": "independently_authored_source",
+      "object_name": "item_drop.o",
+      "profile": "authored_cpp",
+      "sha256": "92ed3057fef948f1525be2754ed22bee9d8000c59a5024113c58644bf105df47",
+      "source": "sources/w8-hud-text-items-a-item-drop/item_drop.cpp",
+      "emitted_functions": [
+        {
+          "name": "dropItem__4itemG6Point3Pc",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2190,
+      "kind": "independently_authored_source",
+      "object_name": "quest_info_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "2268f981edc904e2dc9f002e3fdb1be9aa7a5d535318b231ecca3596f341d104",
+      "source": "sources/w8-hud-text-items-a-quest-info-static-init/quest_info_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL19staticInitQuestInfoii.constprop.0",
+          "compiled_body_bytes": 116
+        },
+        {
+          "name": "_GLOBAL_$I$displayQuestInfo__FP11questStructi",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$D$displayQuestInfo__FP11questStructi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2191,
+      "kind": "independently_authored_source",
+      "object_name": "shop_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "d2333c597ad45acf418a7e3de71248aabd24961cefd7e60b8c8b26e92620c644",
+      "source": "sources/w8-hud-text-items-a-shop-static-init/shop_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL14staticInitShopii.constprop.0",
+          "compiled_body_bytes": 224
+        },
+        {
+          "name": "_GLOBAL_$I$shopActiveFrame",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$D$shopActiveFrame",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2192,
+      "kind": "independently_authored_source",
+      "object_name": "start_swoop.o",
+      "profile": "authored_cpp",
+      "sha256": "b5ebecbeecd1aa742ead3e60678f6a16481c8ca563108e2aa80217d267baed14",
+      "source": "sources/w8-hud-text-items-a-start-dialog-swoop/start_swoop.cpp",
+      "emitted_functions": [
+        {
+          "name": "StartDialogSwoop__6CameraP10GameObjecti",
+          "compiled_body_bytes": 1340
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -30623,7 +30890,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c17a72616278d2088c2a5304873654508040351271e089745c8286c4a2ba5fe3",
+  "snapshot_sha256": "45cf0136900b7cf6a194e3c164c6c59c35d26389f2990ce0501dc06cd293cfdc",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

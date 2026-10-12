@@ -4262,6 +4262,45 @@ Opened: `_14WoodElfSoldier$m_commanderList`, `_3Orc$m_commanderList`,
 `matMul__FP8Matrix44P8Matrix34T0`, `particleInit__11AddParticlePPc`,
 `savedScene`.
 
+## agents/w8-hud-text-items-a
+
+Merged (the branch notes carry the five summary sections). Fifteen of the 16
+units were selected with fresh `input_order` values 2176 through 2190 (22
+emitted functions, 6516 compiled body bytes, not original-byte matches). All
+16 host checks build and exit 0 here (16 of 16). `boss-meter-words` was **not**
+selected: it defines `hudNoDraw`, already defined by the game-loop package's
+`hud_no_draw.cpp`, so the link fails with a multiple definition; its files
+stay in the snapshot, unselected, and `bossMeterCurrent`, `bossMeterMax` and
+`bossMeterAlpha` stay open. No game binary or disassembly listing was
+committed. 1753 function bodies, 2191 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1538 |
+| After | 1526 |
+| Closed | 25 |
+| Opened | 13 |
+
+Closed: `AdvanceDialogSwoop__6CameraiPf`, `DLG_Clear__Fv`, `DLG_NewWorld`,
+`DLG_SetMutex__Fv`, `StartDialogSwoop__6CameraP10GameObjecti`,
+`_GLOBAL_$D$displayQuestInfo__FP11questStructi`,
+`_GLOBAL_$D$inventoryLoad__Fv`, `_GLOBAL_$D$shopActiveFrame`,
+`_GLOBAL_$I$_fontStringSize__FP4FontPci`,
+`_GLOBAL_$I$displayQuestInfo__FP11questStructi`,
+`_GLOBAL_$I$inventoryLoad__Fv`, `_GLOBAL_$I$shopActiveFrame`,
+`addItemToInventory__FiPQ24item11descriptioni`, `cacheClear__Fv`,
+`colorScale__FUif`, `dialogCreature`, `dialogIdleAnimation`, `dialogMutex`,
+`dlgArrayPtr`, `dlgName`, `dlgPos`, `dropItem__4itemG6Point3Pc`,
+`equipItem__FiPQ24item11descriptioni`, `fontColor__FUiii`, `shopList`.
+
+Opened: `distanceToPlane__FP6Point3N20`, `fontCharAlpha`,
+`inventoryCheckWieldingStatus__FiPQ24item11description`,
+`inventorySetAnim__FiP14AnimationStatei`, `lastFontCharAlpha`,
+`lastFontColor`, `lerpShortRot__Fssfff`, `multiHudAddHelpMessage__FiPUsT1i`,
+`nmChars`, `nmDirectQWords`, `p`, `playerGetPotionsLeft__Fii`,
+`reglistLoopCount`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
