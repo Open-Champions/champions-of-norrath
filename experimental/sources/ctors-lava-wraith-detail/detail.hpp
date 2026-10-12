@@ -204,6 +204,24 @@ extern unsigned char norrath_ctors_lava_wraith_view_44b810[];
 extern unsigned char norrath_ctors_lava_wraith_view_46d7b8[];
 extern unsigned char norrath_ctors_lava_wraith_view_34b474[];
 unsigned norrath_construct_LavaMonster(void* object, const void* point, short type, char** arguments, char* name);
+// Original setWeapon__5Mummy at 0x23bcf0, initType__5Mummyb at 0x2371a8 and
+// setState__5Mummyi at 0x239008. Not defined here.
+void norrath_mummy_set_weapon(void* object);
+void norrath_mummy_init_type(void* object, int flag);
+void norrath_mummy_set_state(void* object, int state);
+extern unsigned char norrath_ctors_lava_wraith_view_42d2b0[];
+extern unsigned char norrath_ctors_lava_wraith_view_44fa38[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c10[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c28[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c38[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c50[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c60[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c78[];
+extern unsigned char norrath_ctors_lava_wraith_view_472c88[];
+extern unsigned char norrath_ctors_lava_wraith_view_472ca0[];
+extern unsigned char norrath_ctors_lava_wraith_view_472cb0[];
+extern unsigned char norrath_ctors_lava_wraith_view_472cc8[];
+unsigned norrath_construct_Mummy(void* object, const void* point, short type, char** arguments, char* name);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
