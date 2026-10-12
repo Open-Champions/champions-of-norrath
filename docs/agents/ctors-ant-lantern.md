@@ -807,6 +807,8 @@ Already defined elsewhere in the plan and only called here: `memset`, `norrath_a
 
 Defined by this package and called by another unit of it: `norrath_construct_AutoChest` (AutoChestLP), `norrath_construct_AutoContainer` (AutoContainerLP), `norrath_construct_AutoProp` (AutoPropLP) and `norrath_construct_FireBeetle` (FireFly). The four data views that duplicated names already defined by other packages (`norrath_player_view_429410`, `norrath_creature_view_484538`, `norrath_player_view_484ca8`, `norrath_player_view_484f38`) use those names.
 
+Private trial link (not the official count): the 32 objects were relocatably linked with the current baseline `game-components-partial.o` using the plan's link flags. No duplicate definitions; unresolved imports went from 950 to 1260, which is exactly the 32 closed names removed and 342 opened (319 address views and 23 original-name or libc imports). The lead's integrated build is the authority.
+
 ## Build-plan entries needed
 
 The 32 JSON entries are in the section of that name near the top of this file (one per source, profile `authored_cpp`, header closure `sources/ctors-ant-lantern-constructors/detail.hpp`, one emitted function each). The entries for JumpGate and the earlier three carry the hashes recorded when each was last edited; `detail.hpp` is shared by all 32 and its current hash is in the table note above. Do not add `host/`. Each entry's `emitted_functions` name and `compiled_body_bytes` were taken from the reviewed-flag compile of that source.
