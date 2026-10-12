@@ -1,6 +1,11 @@
 name: Norrath reconstruction checks
 on:
   push:
+    # Worker branches are checked by the integrator before merge; running the matrix on each of their pushes only floods the queue.
+    branches-ignore:
+      - 'agents/**'
+      - 'integration/**'
+      - 'lead/**'
   pull_request:
 permissions:
   contents: read
