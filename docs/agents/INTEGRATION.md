@@ -3133,6 +3133,60 @@ Opened: `norrath_body_init`, `norrath_creature_finish_construction`,
 `norrath_wood_elf_soldier_init_type`, `norrath_wood_elf_soldier_set_state`,
 `norrath_world_hitscan`.
 
+## agents/inventory-items
+
+Merged (the branch notes carry the five summary sections). The notes list the
+plan table twice (the second copy adds three units); rows were de-duplicated
+by source and their hashes agree. Twenty-seven units with fresh `input_order`
+values 1433 through 1459: 23 functions (including the file-local `fill`
+helper of `shopStart`, 10,640 compiled body bytes, not original-byte matches)
+plus data and view units. Each unit has a `host_check.cpp`, `host_test.cpp`
+or `host/check.cpp`; all 25 host programs build and exit 0 on this machine
+(25 of 25). The notes' "imports closed" list is the worker's; the official
+closed list is below. No game binary or disassembly listing was committed.
+1204 function bodies, 1546 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1671 |
+| After | 1686 |
+| Closed | 26 |
+| Opened | 41 |
+
+Closed: `_$_4Gold`, `_$_8ItemProp`, `__tf4Gold`, `__tf8ItemProp`, `__tfP8ItemProp`,
+`clone__4Gold`, `clone__8ItemProp`, `invMsgCallback__FPUci`,
+`inventoryGetItemIndex__FiPcPiT2`, `msg_draw__4Gold`, `msg_draw__8ItemProp`,
+`msg_getPokeName__8ItemPropPUsi`, `msg_load__4GoldPc`,
+`msg_load__8ItemPropPc`, `msg_poke__8ItemPropi`, `msg_run__4Gold`,
+`msg_save__4GoldPc`, `msg_save__8ItemPropPc`,
+`norrath_inventory_ability_sound_lump_view`,
+`norrath_inventory_ability_sound_resource_view`,
+`norrath_inventory_reset_resource_names_view`, `queryInventoryItem__FPci`,
+`removeItemFromInventory__Fiiii`, `shopMsgCallback__FPUci`, `shopRunning`,
+`shopStart__Fiii`.
+
+Opened: `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `Pop__6Camera`,
+`__14AnimationStateRC14AnimationState`,
+`animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps`, `animState`,
+`animStatePtr`, `coins`,
+`compareToItem__Q24item11descriptionPQ24item11description`,
+`drinkPotion__6Playeriiii`, `getName__4itemPQ24item11descriptioni`,
+`getValue__4itemPQ24item11description`, `get__11ResourceMap`, `invGrid`,
+`inventory`, `inventoryAdjustAbility__Fii`, `inventoryAdjustSkill__Ficx`,
+`inventoryExit__Fiii`, `inventoryGridDropItem__Fiiciiii`,
+`modelSetHalo__FP7HaloDefi`, `norrath_rtti_ptr`, `norrath_ti_4Prop`,
+`pack__4itemPQ24item11description`, `playerLogInventory__Fi`,
+`playerMaybeGetItem__FiPQ24item11description`, `playerNetDead__Fv`,
+`resetPlayerAnimations__Fi`, `setupHalo__4itemPQ24item11descriptionf`,
+`shop`, `shopBuy__FcPQ24item11description`, `shopDisableMouse`,
+`shopFrame__Fv`, `shopIntro`,
+`shopItemSetAttributes__FiiPcPQ24item11description`, `shopList`,
+`shopMouseDecay`, `shopTick`, `startFrame`,
+`unequipItem__FiPQ24item11description`,
+`unpack__4itemPQ24item11description`, `ustrcat__FPUsPc`,
+`waitingForStreamSpool`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

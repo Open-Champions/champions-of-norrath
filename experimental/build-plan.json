@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1519,
+  "default_authored_inputs": 1546,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2257,7 +2257,36 @@
     "sources/ctors-lava-wraith-weapon-rack/weapon_rack.cpp": "a27de1078600861ad8ce7ac69661f81f2bb11a8f7bdc0fe2eb5c196b4ae5e7e7",
     "sources/ctors-lava-wraith-web-trap/web_trap.cpp": "8df537450eb04938f98ba6a6259fd50e7e91f91dafcb5d5a420b14d86359a775",
     "sources/ctors-lava-wraith-wood-elf-soldier/wood_elf_soldier.cpp": "51564a2db35b75349591bf167457c07eda22f360949a9dbce29bcd7b91787251",
-    "sources/ctors-lava-wraith-wraith/wraith.cpp": "24fd491dc5d4ece4d2d3930cd5dcc773277b3d826318b573db6a9a3b373777bd"
+    "sources/ctors-lava-wraith-wraith/wraith.cpp": "24fd491dc5d4ece4d2d3930cd5dcc773277b3d826318b573db6a9a3b373777bd",
+    "sources/inventory-items-clone-gold/clone.cpp": "68abcad1e87f325a8b471a360133d7a12438ba678648bde163d14ca7069dde7f",
+    "sources/inventory-items-object/object.hpp": "ea2808ea22197b6d9d415e821d0bcfa77d0ddc742eab8e9409e9bbef5b3f20cd",
+    "sources/inventory-items-clone-itemprop/clone.cpp": "62236c1bdb03a89adb0b4b054d5a90fcbaa685163a17e401bc28f6501559ee28",
+    "sources/inventory-items-dtor-gold/dtor.cpp": "6199e67ebfdf962a7f4f111a9d53e8b22f02996bb2f481daeec3e0fce82dbd6b",
+    "sources/inventory-items-dtor-itemprop/dtor.cpp": "0de709b41b0b791ca09dec638d3bd1505612d5f1068989fb31f7ac26073565a5",
+    "sources/inventory-items-get-index/get_index.cpp": "25c64329f474da9313507ca3386d3c77cbdb3256227de4340040447f358deb4b",
+    "sources/inventory-items-record/record.hpp": "40adb98656b4ba29dd1dd1e2262463311649c7ff19b55302a50544c1d24d0dc8",
+    "sources/inventory-items-msg-callback/msg_callback.cpp": "0c7ef3b87ef22406e6523965e07fea8c8d610366b1824b93556b73e06810bc70",
+    "sources/inventory-items-msg-draw-gold/msg_draw.cpp": "28a9bd693da1d7079411da3cddbd1f679cb8339a999ba941dc842897a1399a09",
+    "sources/inventory-items-msg-draw-itemprop/msg_draw.cpp": "2006c0f1f74f8b7f254af01e8d4feb119395058c551a69b6ae4bf6ed0b56ba6a",
+    "sources/inventory-items-msg-load-gold/msg_load.cpp": "b247a6c116d8386c93bb0ce8d09afbc366a30674e2ea4b0391c973582aa28010",
+    "sources/inventory-items-msg-load-itemprop/msg_load.cpp": "09362d02797cca1f50867b39fc663b7d3c5746f0e45c901d4101a9188e06db57",
+    "sources/inventory-items-msg-poke-itemprop/msg_poke.cpp": "31f923d4aaddd58545c3852b6c9f70f9747483e9c0b2995a5445e27d712d238c",
+    "sources/inventory-items-msg-run-gold/msg_run.cpp": "406e8c78c995df96a4ce0d589d7c4be2a677b4b4c94ef889c882eeea862f0b7c",
+    "sources/inventory-items-msg-save-gold/msg_save.cpp": "e252f2bc99320aa8d8e6b56a512827d9b190d97277598e6c56dfc6697f8bf7eb",
+    "sources/inventory-items-msg-save-itemprop/msg_save.cpp": "0192f17c54d91f1f136779c1599eb3c584631cbd5ca2e7f7c75f374abc5d365f",
+    "sources/inventory-items-poke-name-itemprop/poke_name.cpp": "7dc80d00cf2748c27776722f359e54124d84de390e9e3ccdb131b25739bac294",
+    "sources/inventory-items-query/query.cpp": "1d6310d6ea6ab705b73d8d00889f33a82d1563b2a081175a621042de868c8841",
+    "sources/inventory-items-remove/remove.cpp": "e304c2fe4137030b231f20f888709a29de83871c612d282c5aa0e69c06aafaa9",
+    "sources/inventory-items-shop-msg-callback/shop_msg_callback.cpp": "e70f0fcc81337154b365cf1271b983b5be283427509e3e3403a51a257a93622d",
+    "sources/inventory-items-shop-start/shop_start.cpp": "5fd2678841c4057852e90541bb10b799a8df9f443fa8cae3507ed096978ed20d",
+    "sources/inventory-items-tf-gold/typeinfo.cpp": "6e99df7c3609ac0c0bb5d7cbbd0ad4aaa805b19aef08725b4922142790565cea",
+    "sources/inventory-items-tf-itemprop/typeinfo.cpp": "2c3f9aff30809d54cffd62d4ae7c77f835f0560dc86ae07da3186194713b76b0",
+    "sources/inventory-items-tf-ptr-itemprop/typeinfo.cpp": "f3565bd21533c125b83dee2ce800621abceea0559dd9d25cf26f1eb65e407d4d",
+    "sources/inventory-items-gold-resources/gold_resources.cpp": "f1d40629e10f49ec5adb57b4f5770458164889904aef8877fe9ccd524a548f79",
+    "sources/inventory-items-shop-running/shop_running.cpp": "29c4c4442f260a2b841cc6a6cbd87374dc6f827261eaa52e336634f84463344f",
+    "sources/inventory-items-views/norrath_inventory_ability_sound_lump_view.cpp": "180849e5b2655235861006fc88222c977c8c74ea80a475fa19a6409fc5a73e0b",
+    "sources/inventory-items-views/norrath_inventory_ability_sound_resource_view.cpp": "ada6a7a4162ad0a5bc5afe9cb9e39832133ce19c26acd5cf49d046058c4fe27b",
+    "sources/inventory-items-views/norrath_inventory_reset_resource_names_view.cpp": "b3f2c12f9987b8d91a0e76b4345ede12b1ba2a662697f04de7984e01e1de0ecb"
   },
   "inputs": [
     {
@@ -20402,6 +20431,422 @@
           "compiled_body_bytes": 900
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1521,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "68abcad1e87f325a8b471a360133d7a12438ba678648bde163d14ca7069dde7f",
+      "source": "sources/inventory-items-clone-gold/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__4Gold",
+          "compiled_body_bytes": 680
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1522,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "62236c1bdb03a89adb0b4b054d5a90fcbaa685163a17e401bc28f6501559ee28",
+      "source": "sources/inventory-items-clone-itemprop/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__8ItemProp",
+          "compiled_body_bytes": 984
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1523,
+      "kind": "independently_authored_source",
+      "object_name": "dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "6199e67ebfdf962a7f4f111a9d53e8b22f02996bb2f481daeec3e0fce82dbd6b",
+      "source": "sources/inventory-items-dtor-gold/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_4Gold",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1524,
+      "kind": "independently_authored_source",
+      "object_name": "dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "0de709b41b0b791ca09dec638d3bd1505612d5f1068989fb31f7ac26073565a5",
+      "source": "sources/inventory-items-dtor-itemprop/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8ItemProp",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1525,
+      "kind": "independently_authored_source",
+      "object_name": "get_index.o",
+      "profile": "authored_cpp",
+      "sha256": "25c64329f474da9313507ca3386d3c77cbdb3256227de4340040447f358deb4b",
+      "source": "sources/inventory-items-get-index/get_index.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryGetItemIndex__FiPcPiT2",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1526,
+      "kind": "independently_authored_source",
+      "object_name": "msg_callback.o",
+      "profile": "authored_cpp",
+      "sha256": "0c7ef3b87ef22406e6523965e07fea8c8d610366b1824b93556b73e06810bc70",
+      "source": "sources/inventory-items-msg-callback/msg_callback.cpp",
+      "emitted_functions": [
+        {
+          "name": "invMsgCallback__FPUci",
+          "compiled_body_bytes": 320
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1527,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "28a9bd693da1d7079411da3cddbd1f679cb8339a999ba941dc842897a1399a09",
+      "source": "sources/inventory-items-msg-draw-gold/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__4Gold",
+          "compiled_body_bytes": 1292
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp",
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1528,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "2006c0f1f74f8b7f254af01e8d4feb119395058c551a69b6ae4bf6ed0b56ba6a",
+      "source": "sources/inventory-items-msg-draw-itemprop/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__8ItemProp",
+          "compiled_body_bytes": 640
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1529,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "b247a6c116d8386c93bb0ce8d09afbc366a30674e2ea4b0391c973582aa28010",
+      "source": "sources/inventory-items-msg-load-gold/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__4GoldPc",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1530,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "09362d02797cca1f50867b39fc663b7d3c5746f0e45c901d4101a9188e06db57",
+      "source": "sources/inventory-items-msg-load-itemprop/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__8ItemPropPc",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1531,
+      "kind": "independently_authored_source",
+      "object_name": "msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "31f923d4aaddd58545c3852b6c9f70f9747483e9c0b2995a5445e27d712d238c",
+      "source": "sources/inventory-items-msg-poke-itemprop/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__8ItemPropi",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1532,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "406e8c78c995df96a4ce0d589d7c4be2a677b4b4c94ef889c882eeea862f0b7c",
+      "source": "sources/inventory-items-msg-run-gold/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__4Gold",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1533,
+      "kind": "independently_authored_source",
+      "object_name": "msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "e252f2bc99320aa8d8e6b56a512827d9b190d97277598e6c56dfc6697f8bf7eb",
+      "source": "sources/inventory-items-msg-save-gold/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__4GoldPc",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1534,
+      "kind": "independently_authored_source",
+      "object_name": "msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "0192f17c54d91f1f136779c1599eb3c584631cbd5ca2e7f7c75f374abc5d365f",
+      "source": "sources/inventory-items-msg-save-itemprop/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__8ItemPropPc",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp"
+      ],
+      "input_order": 1535,
+      "kind": "independently_authored_source",
+      "object_name": "poke_name.o",
+      "profile": "authored_cpp",
+      "sha256": "7dc80d00cf2748c27776722f359e54124d84de390e9e3ccdb131b25739bac294",
+      "source": "sources/inventory-items-poke-name-itemprop/poke_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__8ItemPropPUsi",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1536,
+      "kind": "independently_authored_source",
+      "object_name": "query.o",
+      "profile": "authored_cpp",
+      "sha256": "1d6310d6ea6ab705b73d8d00889f33a82d1563b2a081175a621042de868c8841",
+      "source": "sources/inventory-items-query/query.cpp",
+      "emitted_functions": [
+        {
+          "name": "queryInventoryItem__FPci",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1537,
+      "kind": "independently_authored_source",
+      "object_name": "remove.o",
+      "profile": "authored_cpp",
+      "sha256": "e304c2fe4137030b231f20f888709a29de83871c612d282c5aa0e69c06aafaa9",
+      "source": "sources/inventory-items-remove/remove.cpp",
+      "emitted_functions": [
+        {
+          "name": "removeItemFromInventory__Fiiii",
+          "compiled_body_bytes": 964
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1538,
+      "kind": "independently_authored_source",
+      "object_name": "shop_msg_callback.o",
+      "profile": "authored_cpp",
+      "sha256": "e70f0fcc81337154b365cf1271b983b5be283427509e3e3403a51a257a93622d",
+      "source": "sources/inventory-items-shop-msg-callback/shop_msg_callback.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopMsgCallback__FPUci",
+          "compiled_body_bytes": 532
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-object/object.hpp",
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 1539,
+      "kind": "independently_authored_source",
+      "object_name": "shop_start.o",
+      "profile": "authored_cpp",
+      "sha256": "5fd2678841c4057852e90541bb10b799a8df9f443fa8cae3507ed096978ed20d",
+      "source": "sources/inventory-items-shop-start/shop_start.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L4fillEPN15inventory_items4ListEPKNS0_4SlotERKNS_5StageEiff",
+          "compiled_body_bytes": 648
+        },
+        {
+          "name": "shopStart__Fiii",
+          "compiled_body_bytes": 2356
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1540,
+      "kind": "independently_authored_source",
+      "object_name": "typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "6e99df7c3609ac0c0bb5d7cbbd0ad4aaa805b19aef08725b4922142790565cea",
+      "source": "sources/inventory-items-tf-gold/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf4Gold",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1541,
+      "kind": "independently_authored_source",
+      "object_name": "typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "2c3f9aff30809d54cffd62d4ae7c77f835f0560dc86ae07da3186194713b76b0",
+      "source": "sources/inventory-items-tf-itemprop/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf8ItemProp",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1542,
+      "kind": "independently_authored_source",
+      "object_name": "typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "f3565bd21533c125b83dee2ce800621abceea0559dd9d25cf26f1eb65e407d4d",
+      "source": "sources/inventory-items-tf-ptr-itemprop/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tfP8ItemProp",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1543,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_items_gold_resources_gold_resources.o",
+      "profile": "authored_cpp",
+      "sha256": "f1d40629e10f49ec5adb57b4f5770458164889904aef8877fe9ccd524a548f79",
+      "source": "sources/inventory-items-gold-resources/gold_resources.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1544,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_items_shop_running_shop_running.o",
+      "profile": "authored_cpp",
+      "sha256": "29c4c4442f260a2b841cc6a6cbd87374dc6f827261eaa52e336634f84463344f",
+      "source": "sources/inventory-items-shop-running/shop_running.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1545,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_items_views_norrath_inventory_ability_sound_lump_view.o",
+      "profile": "authored_cpp",
+      "sha256": "180849e5b2655235861006fc88222c977c8c74ea80a475fa19a6409fc5a73e0b",
+      "source": "sources/inventory-items-views/norrath_inventory_ability_sound_lump_view.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1546,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_items_views_norrath_inventory_ability_sound_resource_view.o",
+      "profile": "authored_cpp",
+      "sha256": "ada6a7a4162ad0a5bc5afe9cb9e39832133ce19c26acd5cf49d046058c4fe27b",
+      "source": "sources/inventory-items-views/norrath_inventory_ability_sound_resource_view.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1547,
+      "kind": "independently_authored_source",
+      "object_name": "inventory_items_views_norrath_inventory_reset_resource_names_view.o",
+      "profile": "authored_cpp",
+      "sha256": "b3f2c12f9987b8d91a0e76b4345ede12b1ba2a662697f04de7984e01e1de0ecb",
+      "source": "sources/inventory-items-views/norrath_inventory_reset_resource_names_view.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -20501,7 +20946,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d7ebb6d750635581f2137772bf5deb13bfac372956c3f829b0fc7d3299901a7e",
+  "snapshot_sha256": "bf5f74394af8df8b739a5a41502768f45f3bf69b1939e1902e3ab6d26a683894",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
