@@ -2183,13 +2183,12 @@ Opened: `DPRINT`, `batchBuffer`, `delaySoundList`, `disableSoundPlaying`,
 `sceMtapGetModVersion`, `scePadGetModVersion`, `scePadInit2`, `sceSdRemote`,
 `sequenceInProgress`, `sequenceVolume`, `soundChangeVolume__Fiff`,
 `soundFlushCommandBuffer__Fv`, `soundFrameNm`.
-## Not merged: agents/frontend-shell
+## Open defect: agents/frontend-shell contract cannot fail
 
-Rejected at tip `940b753` (two commits: the front-end data words and
-`runFrontEnd__Fv`, 7060 compiled bytes). The notes carry the five summary
-sections and the sources compile and link (1165 unresolved with them
-selected, against 1142 without), but the `runFrontEnd` host contract cannot
-fail on most of what it claims to check.
+This section was first written as a rejection of `agents/frontend-shell` at
+tip `940b753`. Another integrator merged and selected the package a few
+minutes later (the "agents/frontend-shell" entry above), so it is on the
+shared branch with the defect below unfixed. The finding stands.
 
 `experimental/sources/frontend-shell-run/host_contract.cpp` clears the shared
 `error` word at the top of `reset()`, and `main` calls `reset()` before each of
@@ -2199,17 +2198,19 @@ title y coordinate from 36 to 37, the skipped-title menu number from 50 to 51,
 and the title x base from 320 to 321 all left the contract exiting 0, though
 checks 7 and 10 assert those values. With the `error = 0` line deleted from
 `reset()` the unmodified source passes all 45 outcomes, so the checks
-themselves look sound; the harness hides their failures. That makes the unit
-a function with no test that could fail.
+themselves look sound; the harness hides their failures. Until it is fixed,
+`runFrontEnd__Fv` is a function with no test that could fail in the sense of
+CONTRIBUTING and the repo rules. The words unit's `host_check.cpp` is sound.
 
-Not merged, and the contract was not edited here. The one-line fix is to stop
-clearing `error` in `reset()` (the contract already prints and returns the first
-failing code), after which a re-merge needs three plan entries: `front_end_words.o`,
-`run_locals.o`, `run_front_end.o`, with `runFrontEnd__Fv` 7060 bytes. A fresh
-check also showed the words unit's own `host_check.cpp` is sound and passes
-alone. Separately, the notes record that `runFrontEnd` binds the `menu` and
-`menuNm` locals of the original to the same-named globals of
-`dialog-hud-controls`; that aliasing would need a decision when it lands.
+The contract was not edited here (it belongs to the worker's package). The
+one-line fix is to stop clearing `error` in `reset()`; the contract already
+prints and returns the first failing code. That the package was merged anyway
+is also a reason to read the worker's host contracts before trusting the
+"every committed function has a test" test: the vi-launcher contracts were
+checked by mutation and do catch changes; this one does not. The notes also
+record that `runFrontEnd` binds the original's `menu` and `menuNm` locals to
+the same-named globals of `dialog-hud-controls`; that aliasing still needs a
+decision.
 
 ## agents/kernel-patches
 
