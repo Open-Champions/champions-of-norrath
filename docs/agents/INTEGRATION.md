@@ -3657,6 +3657,59 @@ Closed: `_GLOBAL_$I$nmPlayers`, `_GLOBAL_$I$playerSelectSuccessful`,
 Opened: `__11ParticleDefiiiiiiiifffiiiPFPv_v`, `commProcessReal__Fv`, `lgAudClose`,
 `netGetLocalPlayerNmSafe__Fi`, `sceCdRead`, `sceCdReadIOPm`.
 
+## agents/w8-pad-memcard-a
+
+Merged (the branch notes carry the five summary sections). Twenty-seven units
+with fresh `input_order` values 1823 through 1849: 20 emitted functions
+(18,264 compiled body bytes, not original-byte matches) and data words. Each
+unit has a `host_contract.cpp`; all 27 build and exit 0 here (27 of 27). Two
+of them (`mc-reset-ram-slot`, `async-load-game`) need `-fno-builtin`, as the
+notes say; without it one of them fails to run. No duplicate definition was
+found at link time. The notes' plan entries carried their own `input_order`
+values; fresh ones were assigned. No game binary or disassembly listing was
+committed. The count rises because the memory-card calls pull in many
+original data words and `sceMc*` imports that no package defines yet. 1440
+function bodies, 1850 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1560 |
+| After | 1607 |
+| Closed | 26 |
+| Opened | 73 |
+
+Closed: `MCA_FileOpen`, `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
+`MCA_Reset__Fv`, `MC_ChangePlayers__FiPUsiii`, `MC_FrontEndImport`,
+`MC_HasThisLevelBeenSaved__Fv`, `MC_Kick__Fv`, `MC_ResetRamSlot__Fv`,
+`MC_SetNewAct__Fi`, `MC_SpawnPoint`, `asyncChangePlayers__Fv`,
+`asyncConfigure__Fv`, `asyncLoadGame__Fv`, `asyncSaveConfigSilent__Fv`,
+`asyncSaveConfig__Fv`, `asyncSaveGame__Fv`,
+`frontendInitControllerConfig__Fi`, `frontendRunControllerConfig__Fv`,
+`mcProcessKick__Fv`, `mcRunCmdNo`, `netBlankControllerButtons__Fiii`,
+`netBlankController__Fii`, `netLocalPad`, `neverSaveAlwaysLoadFromLump__FPc`.
+
+Opened: `MCA_Busy__Fv`, `MCA_DirContents`, `MCA_Result`, `__extendsfdf2`,
+`askedForConfigLoad`, `browserSlot`, `buttonValues`, `cardType`,
+`commandQueueEmpty__Fv`, `configFileName`, `configFormatted`,
+`configLumpLoaded`, `configMode`, `configStrings`, `curSel`,
+`drawProgress__Fv`, `finishFrameCount`, `fontPrintWrapCentered__FiiPciiii`,
+`getBestSlotName__FPc`, `hudHeaderUni`, `inGameConfigShuttingDown`,
+`initializedLump`, `jumpGateHubReset__Fi`, `loadName`,
+`loadPlayerInfo__FiPiP12playerStruct`, `loadRamSlot__Fv`, `lumpAdd__FPvPCc`,
+`memcardTitle__FPUs`, `modifyRamSlotForNetSave__Fv`, `myLumpBuffer`,
+`neverSave`, `newSel`, `nullBuff`, `pcLaunch`, `pcNmPlayers`, `pcTitle`,
+`playerChangeOldPos`, `playerChangeOldYaw`, `playerGetMarkerColor__Fii`,
+`playerRace`, `playerStatus`, `popPause__Fi`, `prepareBrowserUndo__Fv`,
+`quickLoadStamp`, `raceStrings`, `ramSlot`, `resetWithClose__Fv`,
+`runBrowser__FPUs`, `runConfigure__FiPUsi`, `sceMcChdir`, `sceMcClose`,
+`sceMcDelete`, `sceMcFormat`, `sceMcGetDir`, `sceMcMkdir`, `sceMcOpen`,
+`sceMcRead`, `sceMcSeek`, `sceMcWrite`, `serviceResult__FP8queueCmdPi`,
+`slotInfoHeaders`, `sortedDir`, `sortedDirCount`, `startProgress__Fv`,
+`strchr`, `t`, `tempBuffer`, `texStrings`, `textureLockCacheBuffer__Fv`,
+`texturePrepareToLockCacheBuffer__Fv`, `textureReleaseCacheBuffer__Fv`,
+`unModifyRamSlotForNetSave__Fv`, `undoBrowser__Fv`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

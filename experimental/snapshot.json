@@ -23388,6 +23388,348 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w8-net-play-a-net-state-data/net_state_data.cpp"
+    },
+    {
+      "input_order": 1825,
+      "component": "w8-pad-memcard-a-pad-blank",
+      "object_name": "pad_blank.o",
+      "private_object_sha256": "e7909d2548fdc55062ee6004e636cb65af92c45401b62e63c1f5690dc43eaad4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-pad-blank/pad_blank.cpp"
+    },
+    {
+      "input_order": 1826,
+      "component": "w8-pad-memcard-a-net-blank-controller",
+      "object_name": "net_blank_controller.o",
+      "private_object_sha256": "84796bc19f519446d51cf77b5507cc84abf8c4fcecbc4d9f2e55ff09329f29c1",
+      "emitted_functions": [
+        {
+          "name": "netBlankController__Fii",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-net-blank-controller/net_blank_controller.cpp"
+    },
+    {
+      "input_order": 1827,
+      "component": "w8-pad-memcard-a-net-blank-controller-buttons",
+      "object_name": "net_blank_controller_buttons.o",
+      "private_object_sha256": "2afd6e49a280e210383a9567c7e15cebc0f3b6d6747a0856493f43a0b9973e91",
+      "emitted_functions": [
+        {
+          "name": "netBlankControllerButtons__Fiii",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-net-blank-controller-buttons/net_blank_controller_buttons.cpp"
+    },
+    {
+      "input_order": 1828,
+      "component": "w8-pad-memcard-a-mca-reset",
+      "object_name": "mca_reset.o",
+      "private_object_sha256": "d197efc97d9b2ff6a2776567295aac0bb448cfc421d43b9c6fcd54726acf346e",
+      "emitted_functions": [
+        {
+          "name": "MCA_Reset__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mca-reset/mca_reset.cpp"
+    },
+    {
+      "input_order": 1829,
+      "component": "w8-pad-memcard-a-mc-process-kick",
+      "object_name": "mc_process_kick.o",
+      "private_object_sha256": "74e09dc554b8ea507f745c83465ca7e64d01e8128a5a6b321fe808845235d980",
+      "emitted_functions": [
+        {
+          "name": "mcProcessKick__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-process-kick/mc_process_kick.cpp"
+    },
+    {
+      "input_order": 1830,
+      "component": "w8-pad-memcard-a-mc-reset-ram-slot",
+      "object_name": "mc_reset_ram_slot.o",
+      "private_object_sha256": "ea88afb8ab6c57c5ef20f73fae5f7146cc9e0f98c243cae4445990bb8dc16587",
+      "emitted_functions": [
+        {
+          "name": "MC_ResetRamSlot__Fv",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-reset-ram-slot/mc_reset_ram_slot.cpp"
+    },
+    {
+      "input_order": 1831,
+      "component": "w8-pad-memcard-a-mc-kick",
+      "object_name": "mc_kick.o",
+      "private_object_sha256": "ef8cf1469b2ee78316e004128a2cd0d189a7a2f0ce053aa8bf76c98017cdbfb9",
+      "emitted_functions": [
+        {
+          "name": "MC_Kick__Fv",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-kick/mc_kick.cpp"
+    },
+    {
+      "input_order": 1832,
+      "component": "w8-pad-memcard-a-mc-set-new-act",
+      "object_name": "mc_set_new_act.o",
+      "private_object_sha256": "8ff0ef5d1b3429d1c003459c351bd553765b6b5a8b578a0130b9aa9bac9125b5",
+      "emitted_functions": [
+        {
+          "name": "MC_SetNewAct__Fi",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-set-new-act/mc_set_new_act.cpp"
+    },
+    {
+      "input_order": 1833,
+      "component": "w8-pad-memcard-a-mc-change-players",
+      "object_name": "mc_change_players.o",
+      "private_object_sha256": "8ee10cc851b183189de651663e453a177dc43152fa235b1d60e13c6526a6cd4a",
+      "emitted_functions": [
+        {
+          "name": "MC_ChangePlayers__FiPUsiii",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-change-players/mc_change_players.cpp"
+    },
+    {
+      "input_order": 1834,
+      "component": "w8-pad-memcard-a-never-save-always-load",
+      "object_name": "never_save_always_load.o",
+      "private_object_sha256": "49364c388af5d9a17f38a9e8c25bd60aa6b71212e00de661cc2d961f315f53e1",
+      "emitted_functions": [
+        {
+          "name": "neverSaveAlwaysLoadFromLump__FPc",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-never-save-always-load/never_save_always_load.cpp"
+    },
+    {
+      "input_order": 1835,
+      "component": "w8-pad-memcard-a-frontend-init-controller-config",
+      "object_name": "frontend_init_controller_config.o",
+      "private_object_sha256": "c6bd97a118a1657da67293ae32aec5d2240c51c7a70f833b1982da38cbd4252f",
+      "emitted_functions": [
+        {
+          "name": "frontendInitControllerConfig__Fi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-frontend-init-controller-config/frontend_init_controller_config.cpp"
+    },
+    {
+      "input_order": 1836,
+      "component": "w8-pad-memcard-a-async-configure",
+      "object_name": "async_configure.o",
+      "private_object_sha256": "908d25c82a977c88b33c329db61851863e6acfa8d2e8b830fd223fc3aca33077",
+      "emitted_functions": [
+        {
+          "name": "asyncConfigure__Fv",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-configure/async_configure.cpp"
+    },
+    {
+      "input_order": 1837,
+      "component": "w8-pad-memcard-a-has-level-been-saved",
+      "object_name": "mc_has_this_level_been_saved.o",
+      "private_object_sha256": "8609a3c28b0f10f1313db8fd0f356211704d1bbe174a8df9b20d511eadcc5043",
+      "emitted_functions": [
+        {
+          "name": "MC_HasThisLevelBeenSaved__Fv",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-has-level-been-saved/mc_has_this_level_been_saved.cpp"
+    },
+    {
+      "input_order": 1838,
+      "component": "w8-pad-memcard-a-mca-file-open",
+      "object_name": "mca_file_open.o",
+      "private_object_sha256": "4d3e210e90f9d186ab4b081ac9114f802618751e9562d0a3d6615d94598f652f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mca-file-open/mca_file_open.cpp"
+    },
+    {
+      "input_order": 1839,
+      "component": "w8-pad-memcard-a-mca-formatted",
+      "object_name": "mca_formatted.o",
+      "private_object_sha256": "19c02cf5783e1c2b101cc59e0546c34fa3a8386f60dd32d8fc6c63df3d24f14e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mca-formatted/mca_formatted.cpp"
+    },
+    {
+      "input_order": 1840,
+      "component": "w8-pad-memcard-a-mca-present",
+      "object_name": "mca_present.o",
+      "private_object_sha256": "589a33c696ed738537c03d2b6e619a0355a598e60675cd3bdc20f30c524d7571",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mca-present/mca_present.cpp"
+    },
+    {
+      "input_order": 1841,
+      "component": "w8-pad-memcard-a-mc-front-end-import",
+      "object_name": "mc_front_end_import.o",
+      "private_object_sha256": "7fa5a16df9a49171a7b7512059db29e0578f6a1b06a5ce9d24a06a674f0af7e6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-front-end-import/mc_front_end_import.cpp"
+    },
+    {
+      "input_order": 1842,
+      "component": "w8-pad-memcard-a-mc-spawn-point",
+      "object_name": "mc_spawn_point.o",
+      "private_object_sha256": "58250e76b4c9d67ca5d10cb1af28596fec2dadff1091904bf4e9fcc9e187bcc0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-spawn-point/mc_spawn_point.cpp"
+    },
+    {
+      "input_order": 1843,
+      "component": "w8-pad-memcard-a-mc-run-cmd-no",
+      "object_name": "mc_run_cmd_no.o",
+      "private_object_sha256": "2061b370b432da86d26bf292902a4af97b34a67d52c6c8bebd7276ccd271f0da",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mc-run-cmd-no/mc_run_cmd_no.cpp"
+    },
+    {
+      "input_order": 1844,
+      "component": "w8-pad-memcard-a-net-local-pad",
+      "object_name": "net_local_pad.o",
+      "private_object_sha256": "297be239b617607d869c38e4d74b5744e31bade18ad463c90d09729da1e5ddb1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-net-local-pad/net_local_pad.cpp"
+    },
+    {
+      "input_order": 1845,
+      "component": "w8-pad-memcard-a-async-save-config",
+      "object_name": "async_save_config.o",
+      "private_object_sha256": "6a3ef906e0f44fe4c8b01f80adc044c8d3eb11dc3eb5c37cf13f37779873a469",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveConfig__Fv",
+          "compiled_body_bytes": 844
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-save-config/async_save_config.cpp"
+    },
+    {
+      "input_order": 1846,
+      "component": "w8-pad-memcard-a-async-save-config-silent",
+      "object_name": "async_save_config_silent.o",
+      "private_object_sha256": "b3585c24d0a55290efd8b7e341f0d7107050305550ef6b385a93cfb558be6a46",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveConfigSilent__Fv",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-save-config-silent/async_save_config_silent.cpp"
+    },
+    {
+      "input_order": 1847,
+      "component": "w8-pad-memcard-a-mca-process",
+      "object_name": "mca_process.o",
+      "private_object_sha256": "c6eb9564689a3b3f7bb4beaf64d792722d274a551dcbe144fb97b0453d9cabf7",
+      "emitted_functions": [
+        {
+          "name": "MCA_Process__FPi",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-mca-process/mca_process.cpp"
+    },
+    {
+      "input_order": 1848,
+      "component": "w8-pad-memcard-a-async-save-game",
+      "object_name": "async_save_game.o",
+      "private_object_sha256": "668c875647fe7072670dfacb3e97c8ecadf17f4b4c043c9fe1e4bc4e89a2de0b",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveGame__Fv",
+          "compiled_body_bytes": 1848
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-save-game/async_save_game.cpp"
+    },
+    {
+      "input_order": 1849,
+      "component": "w8-pad-memcard-a-async-load-game",
+      "object_name": "async_load_game.o",
+      "private_object_sha256": "8a52bc397cf6b1ffdf7f3e65abd4d602e4ff79697084cc665d11af333b12638b",
+      "emitted_functions": [
+        {
+          "name": "asyncLoadGame__Fv",
+          "compiled_body_bytes": 1664
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-load-game/async_load_game.cpp"
+    },
+    {
+      "input_order": 1850,
+      "component": "w8-pad-memcard-a-frontend-run-controller-config",
+      "object_name": "frontend_run_controller_config.o",
+      "private_object_sha256": "781346714f1b0276d703d5b4ea8a062bf2db499c3c8ff2d270a7f06d1d273589",
+      "emitted_functions": [
+        {
+          "name": "frontendRunControllerConfig__Fv",
+          "compiled_body_bytes": 3848
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-frontend-run-controller-config/frontend_run_controller_config.cpp"
+    },
+    {
+      "input_order": 1851,
+      "component": "w8-pad-memcard-a-async-change-players",
+      "object_name": "async_change_players.o",
+      "private_object_sha256": "b5bdac39b100c2e5978bd493ed089806e2d2b9d3c72e418cd9341ddf09de4332",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L16saveOldPositionsEv",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "asyncChangePlayers__Fv",
+          "compiled_body_bytes": 7080
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-a-async-change-players/async_change_players.cpp"
     }
   ],
   "drafts": [
@@ -27490,7 +27832,61 @@
     "sources/w8-net-play-a-experience-table/experience_table.cpp": "c21191191898947c65eb1c4fe125b6808bae2f9da1a45ce631a296848a7478c9",
     "sources/w8-net-play-a-experience-table/host_check.cpp": "2cfb280994318344aa02f738c619efd5e5022033c71eee7bf1a6038f062c8201",
     "sources/w8-net-play-a-net-state-data/net_state_data.cpp": "41039d45c50654fff8b48ea59f33c8ab19f1d807ee3aece9ed2f37c8bde932dd",
-    "sources/w8-net-play-a-net-state-data/host_check.cpp": "27188ed5271a934cc0924095bae4a9b75165c563e0d81572deba3d297459acc6"
+    "sources/w8-net-play-a-net-state-data/host_check.cpp": "27188ed5271a934cc0924095bae4a9b75165c563e0d81572deba3d297459acc6",
+    "sources/w8-pad-memcard-a-pad-blank/pad_blank.cpp": "4116c580319744322b8494ecc6bf1a5b2459c143eb1a0b83759cd487d453f0ee",
+    "sources/w8-pad-memcard-a-pad-blank/host_contract.cpp": "dee597731e50d5e229485d1087350553a40281bc052c1ed344ef3f841a56eb17",
+    "sources/w8-pad-memcard-a-net-blank-controller/net_blank_controller.cpp": "2cefccae858411bc4081e7618e0359c280d39bffea727ef83015cb335ef122f5",
+    "sources/w8-pad-memcard-a-net-blank-controller/host_contract.cpp": "04ec0977476b835bfba58f2bf29eb7254700e17cf5b9f1387cbedda8961ebb18",
+    "sources/w8-pad-memcard-a-net-blank-controller-buttons/net_blank_controller_buttons.cpp": "060f3b7b3230a5a35d6720fe1234fb8f10a99f5a4253d0a67192ba1f6b7ca9c1",
+    "sources/w8-pad-memcard-a-net-blank-controller-buttons/host_contract.cpp": "caf3bd39579393388cd8fb0c4d60c267733de68263b4152654da187aa53c53c2",
+    "sources/w8-pad-memcard-a-mca-reset/mca_reset.cpp": "07034b67c7551dc3f3a53a85811310ffe6f5d9a75a3868ead45901504beced2d",
+    "sources/w8-pad-memcard-a-mca-reset/host_contract.cpp": "b6a6433c341bcfb4e452d083895f3163985a70d89cc9129c735c264ae2daec5d",
+    "sources/w8-pad-memcard-a-mc-process-kick/mc_process_kick.cpp": "9b9328da5fe0f76e576e4dc768d3a53d763973ff300ed0c56eb5ba1df6e3b141",
+    "sources/w8-pad-memcard-a-mc-process-kick/host_contract.cpp": "fc02415c656363ccd1bae3f9740804308f1b528cb029d048608b20444a37bcfb",
+    "sources/w8-pad-memcard-a-mc-reset-ram-slot/mc_reset_ram_slot.cpp": "a13a3375f648b55a75b78a4ac7b70f7cb6a3300902addc6f6e0651e394af2042",
+    "sources/w8-pad-memcard-a-mc-reset-ram-slot/host_contract.cpp": "8414a7c05e50adae56b055282b7026c97a0f963b62706981d41f16dbb120c21d",
+    "sources/w8-pad-memcard-a-mc-kick/mc_kick.cpp": "de6ca5d1c98581b2b169d92ea1112a314253cbd89649c76d8fa9ecda9c3fddcb",
+    "sources/w8-pad-memcard-a-mc-kick/host_contract.cpp": "a53c23b8df817ca316840ac06eb424334a087af742129a2dd213425aa8ab6193",
+    "sources/w8-pad-memcard-a-mc-set-new-act/mc_set_new_act.cpp": "ef36887d999096483032774d108292b1ce7c1aa1603e2a34f2bd3e56303f09ad",
+    "sources/w8-pad-memcard-a-mc-set-new-act/host_contract.cpp": "4bb63f5d8e626087b80f334367626dfa22de20cde66249a5d25368e82e623b82",
+    "sources/w8-pad-memcard-a-mc-change-players/mc_change_players.cpp": "aef28dbfef25ddb26edf26035a1fa3babffaa457012b469c0fd45370d0ed9032",
+    "sources/w8-pad-memcard-a-mc-change-players/host_contract.cpp": "928780effe4e4b2031cf0dd483083ee187f0299f765c36611d949e66c42c44b3",
+    "sources/w8-pad-memcard-a-never-save-always-load/never_save_always_load.cpp": "558fa55952af3e0e73459afbe3444d9cdc3036f301366f47a850ef2afe06ffc2",
+    "sources/w8-pad-memcard-a-never-save-always-load/host_contract.cpp": "7c4c2bbfbd64fc144a4087f83a37ba523a0dff6f806d085fc88a130ec8e4dc4b",
+    "sources/w8-pad-memcard-a-frontend-init-controller-config/frontend_init_controller_config.cpp": "7804fb60858f64835c555884d16ec8b4415727c273700e23e67fa0cbf1bef7b4",
+    "sources/w8-pad-memcard-a-frontend-init-controller-config/host_contract.cpp": "e1135ce3db7e22f16aa3eceb6097e00767b6fcf9353a19278fa945481b0eb4ba",
+    "sources/w8-pad-memcard-a-async-configure/async_configure.cpp": "57ad582655da80c2c235f74078599ed1d264fd66ba1ad05078bd5208e70eba22",
+    "sources/w8-pad-memcard-a-async-configure/host_contract.cpp": "81f01dcb23fc8975b08ae4a8c072cb17617e979dce3ef89f66387d43c7d02728",
+    "sources/w8-pad-memcard-a-has-level-been-saved/mc_has_this_level_been_saved.cpp": "a77f227bbf86d9a82eae53d4fec828ba365e10567f4044708dc4d5e253b1f585",
+    "sources/w8-pad-memcard-a-has-level-been-saved/host_contract.cpp": "7072ce57b0bca02fc219310cf91613444d34fe4496eef95254399e2d9e3baabf",
+    "sources/w8-pad-memcard-a-mca-file-open/mca_file_open.cpp": "e2965eb9e8b7703e53aa153c1d4783e68f014bd02b9659492bccf7963a78af6c",
+    "sources/w8-pad-memcard-a-mca-file-open/host_contract.cpp": "cf6fa642418eb53c7d562cf38cdb3fabf0f0c86d0fe60c6174dd73fe043b254e",
+    "sources/w8-pad-memcard-a-mca-formatted/mca_formatted.cpp": "ae1b70fc10e2295c44d59c95c01f1d083e12d621b060f4649b9937c18ece8f07",
+    "sources/w8-pad-memcard-a-mca-formatted/host_contract.cpp": "4ce3427a196ed913cc77b04069cdcc354fc172409388e697a1de0d3f18152c30",
+    "sources/w8-pad-memcard-a-mca-present/mca_present.cpp": "afa0a555bdb8bd43f242b0bfc166da5d63fb89a1ac679e19a9e5b94bbabf0019",
+    "sources/w8-pad-memcard-a-mca-present/host_contract.cpp": "39c4ed191368c0cc019b83223a60233e951311bc38accf44001c94c9cc9529b4",
+    "sources/w8-pad-memcard-a-mc-front-end-import/mc_front_end_import.cpp": "cc67235c9e3d0adee5ba4f2905c393e05cadffac3011625c5acb9b440c705f8c",
+    "sources/w8-pad-memcard-a-mc-front-end-import/host_contract.cpp": "9b17ce1f9e173f8bb8f5c8bccf6f5b65bb9c43d770100002e957fd5024bd97d5",
+    "sources/w8-pad-memcard-a-mc-spawn-point/mc_spawn_point.cpp": "97e9a362a1cedfa489ead923befb6a74a3f5ad8c2ee605ef7b15f0efd5340866",
+    "sources/w8-pad-memcard-a-mc-spawn-point/host_contract.cpp": "bf78955fcc567d399ab06f0a81c0f56f2f8e2e837f3e1870991a9549abdfbca0",
+    "sources/w8-pad-memcard-a-mc-run-cmd-no/mc_run_cmd_no.cpp": "303fa79fe767e376f78ff63774c8c082519560b97f894f492361d5ca52f7e1ac",
+    "sources/w8-pad-memcard-a-mc-run-cmd-no/host_contract.cpp": "91d38910e8036d68d47f8ba4b305fd63a9fc1aa281041698c8cd955e38701eb7",
+    "sources/w8-pad-memcard-a-net-local-pad/net_local_pad.cpp": "00941e24c5a0a8de1fa71e711e90f83ebc6a01e0111b93490b0a8020ce84e386",
+    "sources/w8-pad-memcard-a-net-local-pad/host_contract.cpp": "342f548f97a73c58cc009779e8e21d1a158cd93d4ba300d0dafda9485d875c8b",
+    "sources/w8-pad-memcard-a-async-save-config/async_save_config.cpp": "1d7188af9c6e6572e452e39402616e5b120e6ffcd680a214ae29cfd376357941",
+    "sources/w8-pad-memcard-a-async-save-config/host_contract.cpp": "3189bb1fbd16f26498f5b056690dc6b50ff073d6597317a6e4c4f2919267715d",
+    "sources/w8-pad-memcard-a-async-save-config-silent/async_save_config_silent.cpp": "e137c6bc7b53b63664924602a4fb241b89b1400d030229eff3dfc49127125a9f",
+    "sources/w8-pad-memcard-a-async-save-config-silent/host_contract.cpp": "1d4c74030707827d919a01641ade174688785f614fb002db801c9a0d8a89c44a",
+    "sources/w8-pad-memcard-a-mca-process/mca_process.cpp": "3b08dbc37b72cdf091dbd57fc8b5795d15b5f016ab48ccf7f55848017f8491ae",
+    "sources/w8-pad-memcard-a-mca-process/host_contract.cpp": "c3153cc9c10ea8ce440b07155ce159bcc20cac280d1ce7eb532ad8c127079d7d",
+    "sources/w8-pad-memcard-a-async-save-game/async_save_game.cpp": "49c3fa98f725a8db2f5f97eb0af0202a7bfa7dd345182481534865c22c29fd1c",
+    "sources/w8-pad-memcard-a-async-save-game/host_contract.cpp": "b496960bf48953b69e12cb4c5e0d48ab84d8ac2925572568799d0762819d97ab",
+    "sources/w8-pad-memcard-a-async-load-game/async_load_game.cpp": "92afed23cf1cc6b80ae80a42226d5aea34868e9cf97f3f90f6809c23131f3870",
+    "sources/w8-pad-memcard-a-async-load-game/host_contract.cpp": "e7e814fe1c03e1e89de9e22ba67b5e6ef11e9d22e408b12d63c2f772e9b1d7a8",
+    "sources/w8-pad-memcard-a-frontend-run-controller-config/frontend_run_controller_config.cpp": "abc1392436e8bf3c092afa17dc4b6b4a3bd8bb8f103038da234955e491ed39df",
+    "sources/w8-pad-memcard-a-frontend-run-controller-config/host_contract.cpp": "471266e4513f1a0deff97c2be26fe41c1d8d44e1a482fabc04f04d7c9d68fc87",
+    "sources/w8-pad-memcard-a-async-change-players/async_change_players.cpp": "1d9ad05cdb508042c9a40bb29d5254a6868e1523f1c4224d25d3063de7567853",
+    "sources/w8-pad-memcard-a-async-change-players/host_contract.cpp": "146f005be910da4217ce7e01bab7e01abee954badb0cd16ba108a843c1c85e77"
   },
   "additional_implementations": [
     {
@@ -27932,11 +28328,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1825,
-    "authored_default_inputs": 1823,
+    "selected_inputs": 1852,
+    "authored_default_inputs": 1850,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1422,
-    "compiled_body_bytes_from_accepted_inputs": 627568,
+    "emitted_function_definitions_including_helpers": 1442,
+    "compiled_body_bytes_from_accepted_inputs": 645832,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -27949,7 +28345,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1512
+    "package_selected_inputs": 1539
   },
   "startup_implementations": [
     {
@@ -51377,6 +51773,429 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w8-net-play-a-net-state-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-pad-blank/pad_blank.cpp",
+      "source_sha256": "4116c580319744322b8494ecc6bf1a5b2459c143eb1a0b83759cd487d453f0ee",
+      "object_sha256": "e7909d2548fdc55062ee6004e636cb65af92c45401b62e63c1f5690dc43eaad4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-pad-blank/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-net-blank-controller/net_blank_controller.cpp",
+      "source_sha256": "2cefccae858411bc4081e7618e0359c280d39bffea727ef83015cb335ef122f5",
+      "object_sha256": "84796bc19f519446d51cf77b5507cc84abf8c4fcecbc4d9f2e55ff09329f29c1",
+      "emitted_functions": [
+        {
+          "name": "netBlankController__Fii",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-net-blank-controller/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-net-blank-controller-buttons/net_blank_controller_buttons.cpp",
+      "source_sha256": "060f3b7b3230a5a35d6720fe1234fb8f10a99f5a4253d0a67192ba1f6b7ca9c1",
+      "object_sha256": "2afd6e49a280e210383a9567c7e15cebc0f3b6d6747a0856493f43a0b9973e91",
+      "emitted_functions": [
+        {
+          "name": "netBlankControllerButtons__Fiii",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-net-blank-controller-buttons/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mca-reset/mca_reset.cpp",
+      "source_sha256": "07034b67c7551dc3f3a53a85811310ffe6f5d9a75a3868ead45901504beced2d",
+      "object_sha256": "d197efc97d9b2ff6a2776567295aac0bb448cfc421d43b9c6fcd54726acf346e",
+      "emitted_functions": [
+        {
+          "name": "MCA_Reset__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mca-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-process-kick/mc_process_kick.cpp",
+      "source_sha256": "9b9328da5fe0f76e576e4dc768d3a53d763973ff300ed0c56eb5ba1df6e3b141",
+      "object_sha256": "74e09dc554b8ea507f745c83465ca7e64d01e8128a5a6b321fe808845235d980",
+      "emitted_functions": [
+        {
+          "name": "mcProcessKick__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-process-kick/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-reset-ram-slot/mc_reset_ram_slot.cpp",
+      "source_sha256": "a13a3375f648b55a75b78a4ac7b70f7cb6a3300902addc6f6e0651e394af2042",
+      "object_sha256": "ea88afb8ab6c57c5ef20f73fae5f7146cc9e0f98c243cae4445990bb8dc16587",
+      "emitted_functions": [
+        {
+          "name": "MC_ResetRamSlot__Fv",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-reset-ram-slot/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-kick/mc_kick.cpp",
+      "source_sha256": "de6ca5d1c98581b2b169d92ea1112a314253cbd89649c76d8fa9ecda9c3fddcb",
+      "object_sha256": "ef8cf1469b2ee78316e004128a2cd0d189a7a2f0ce053aa8bf76c98017cdbfb9",
+      "emitted_functions": [
+        {
+          "name": "MC_Kick__Fv",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-kick/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-set-new-act/mc_set_new_act.cpp",
+      "source_sha256": "ef36887d999096483032774d108292b1ce7c1aa1603e2a34f2bd3e56303f09ad",
+      "object_sha256": "8ff0ef5d1b3429d1c003459c351bd553765b6b5a8b578a0130b9aa9bac9125b5",
+      "emitted_functions": [
+        {
+          "name": "MC_SetNewAct__Fi",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-set-new-act/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-change-players/mc_change_players.cpp",
+      "source_sha256": "aef28dbfef25ddb26edf26035a1fa3babffaa457012b469c0fd45370d0ed9032",
+      "object_sha256": "8ee10cc851b183189de651663e453a177dc43152fa235b1d60e13c6526a6cd4a",
+      "emitted_functions": [
+        {
+          "name": "MC_ChangePlayers__FiPUsiii",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-change-players/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-never-save-always-load/never_save_always_load.cpp",
+      "source_sha256": "558fa55952af3e0e73459afbe3444d9cdc3036f301366f47a850ef2afe06ffc2",
+      "object_sha256": "49364c388af5d9a17f38a9e8c25bd60aa6b71212e00de661cc2d961f315f53e1",
+      "emitted_functions": [
+        {
+          "name": "neverSaveAlwaysLoadFromLump__FPc",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-never-save-always-load/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-frontend-init-controller-config/frontend_init_controller_config.cpp",
+      "source_sha256": "7804fb60858f64835c555884d16ec8b4415727c273700e23e67fa0cbf1bef7b4",
+      "object_sha256": "c6bd97a118a1657da67293ae32aec5d2240c51c7a70f833b1982da38cbd4252f",
+      "emitted_functions": [
+        {
+          "name": "frontendInitControllerConfig__Fi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-frontend-init-controller-config/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-configure/async_configure.cpp",
+      "source_sha256": "57ad582655da80c2c235f74078599ed1d264fd66ba1ad05078bd5208e70eba22",
+      "object_sha256": "908d25c82a977c88b33c329db61851863e6acfa8d2e8b830fd223fc3aca33077",
+      "emitted_functions": [
+        {
+          "name": "asyncConfigure__Fv",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-configure/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-has-level-been-saved/mc_has_this_level_been_saved.cpp",
+      "source_sha256": "a77f227bbf86d9a82eae53d4fec828ba365e10567f4044708dc4d5e253b1f585",
+      "object_sha256": "8609a3c28b0f10f1313db8fd0f356211704d1bbe174a8df9b20d511eadcc5043",
+      "emitted_functions": [
+        {
+          "name": "MC_HasThisLevelBeenSaved__Fv",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-has-level-been-saved/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mca-file-open/mca_file_open.cpp",
+      "source_sha256": "e2965eb9e8b7703e53aa153c1d4783e68f014bd02b9659492bccf7963a78af6c",
+      "object_sha256": "4d3e210e90f9d186ab4b081ac9114f802618751e9562d0a3d6615d94598f652f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mca-file-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mca-formatted/mca_formatted.cpp",
+      "source_sha256": "ae1b70fc10e2295c44d59c95c01f1d083e12d621b060f4649b9937c18ece8f07",
+      "object_sha256": "19c02cf5783e1c2b101cc59e0546c34fa3a8386f60dd32d8fc6c63df3d24f14e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mca-formatted/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mca-present/mca_present.cpp",
+      "source_sha256": "afa0a555bdb8bd43f242b0bfc166da5d63fb89a1ac679e19a9e5b94bbabf0019",
+      "object_sha256": "589a33c696ed738537c03d2b6e619a0355a598e60675cd3bdc20f30c524d7571",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mca-present/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-front-end-import/mc_front_end_import.cpp",
+      "source_sha256": "cc67235c9e3d0adee5ba4f2905c393e05cadffac3011625c5acb9b440c705f8c",
+      "object_sha256": "7fa5a16df9a49171a7b7512059db29e0578f6a1b06a5ce9d24a06a674f0af7e6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-front-end-import/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-spawn-point/mc_spawn_point.cpp",
+      "source_sha256": "97e9a362a1cedfa489ead923befb6a74a3f5ad8c2ee605ef7b15f0efd5340866",
+      "object_sha256": "58250e76b4c9d67ca5d10cb1af28596fec2dadff1091904bf4e9fcc9e187bcc0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-spawn-point/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mc-run-cmd-no/mc_run_cmd_no.cpp",
+      "source_sha256": "303fa79fe767e376f78ff63774c8c082519560b97f894f492361d5ca52f7e1ac",
+      "object_sha256": "2061b370b432da86d26bf292902a4af97b34a67d52c6c8bebd7276ccd271f0da",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mc-run-cmd-no/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-net-local-pad/net_local_pad.cpp",
+      "source_sha256": "00941e24c5a0a8de1fa71e711e90f83ebc6a01e0111b93490b0a8020ce84e386",
+      "object_sha256": "297be239b617607d869c38e4d74b5744e31bade18ad463c90d09729da1e5ddb1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-a-net-local-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-save-config/async_save_config.cpp",
+      "source_sha256": "1d7188af9c6e6572e452e39402616e5b120e6ffcd680a214ae29cfd376357941",
+      "object_sha256": "6a3ef906e0f44fe4c8b01f80adc044c8d3eb11dc3eb5c37cf13f37779873a469",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveConfig__Fv",
+          "compiled_body_bytes": 844
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-save-config/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-save-config-silent/async_save_config_silent.cpp",
+      "source_sha256": "e137c6bc7b53b63664924602a4fb241b89b1400d030229eff3dfc49127125a9f",
+      "object_sha256": "b3585c24d0a55290efd8b7e341f0d7107050305550ef6b385a93cfb558be6a46",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveConfigSilent__Fv",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-save-config-silent/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-mca-process/mca_process.cpp",
+      "source_sha256": "3b08dbc37b72cdf091dbd57fc8b5795d15b5f016ab48ccf7f55848017f8491ae",
+      "object_sha256": "c6eb9564689a3b3f7bb4beaf64d792722d274a551dcbe144fb97b0453d9cabf7",
+      "emitted_functions": [
+        {
+          "name": "MCA_Process__FPi",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-mca-process/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-save-game/async_save_game.cpp",
+      "source_sha256": "49c3fa98f725a8db2f5f97eb0af0202a7bfa7dd345182481534865c22c29fd1c",
+      "object_sha256": "668c875647fe7072670dfacb3e97c8ecadf17f4b4c043c9fe1e4bc4e89a2de0b",
+      "emitted_functions": [
+        {
+          "name": "asyncSaveGame__Fv",
+          "compiled_body_bytes": 1848
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-save-game/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-load-game/async_load_game.cpp",
+      "source_sha256": "92afed23cf1cc6b80ae80a42226d5aea34868e9cf97f3f90f6809c23131f3870",
+      "object_sha256": "8a52bc397cf6b1ffdf7f3e65abd4d602e4ff79697084cc665d11af333b12638b",
+      "emitted_functions": [
+        {
+          "name": "asyncLoadGame__Fv",
+          "compiled_body_bytes": 1664
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-load-game/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-frontend-run-controller-config/frontend_run_controller_config.cpp",
+      "source_sha256": "abc1392436e8bf3c092afa17dc4b6b4a3bd8bb8f103038da234955e491ed39df",
+      "object_sha256": "781346714f1b0276d703d5b4ea8a062bf2db499c3c8ff2d270a7f06d1d273589",
+      "emitted_functions": [
+        {
+          "name": "frontendRunControllerConfig__Fv",
+          "compiled_body_bytes": 3848
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-frontend-run-controller-config/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-a",
+      "source": "sources/w8-pad-memcard-a-async-change-players/async_change_players.cpp",
+      "source_sha256": "1d9ad05cdb508042c9a40bb29d5254a6868e1523f1c4224d25d3063de7567853",
+      "object_sha256": "b5bdac39b100c2e5978bd493ed089806e2d2b9d3c72e418cd9341ddf09de4332",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L16saveOldPositionsEv",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "asyncChangePlayers__Fv",
+          "compiled_body_bytes": 7080
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-a-async-change-players/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
