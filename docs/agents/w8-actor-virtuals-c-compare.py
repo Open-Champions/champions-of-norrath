@@ -35,6 +35,7 @@ M32 = cr.M32
 P, FLAGS, GP, EXE, SRC = cr.P, cr.FLAGS, cr.GP, cr.EXE, cr.SRC
 SCRATCH = cr.SCRATCH
 put32, putf, fill = cr.put32, cr.putf, cr.fill
+b2f = cr.b2f
 
 # --- Machine additions: sqrt.s -------------------------------------------------
 _old_cop1 = Machine.cop1
@@ -199,7 +200,7 @@ def make_stub(name, kinds, ret, rng, scn=None):
                 m.write(v + 4 * len(chosen), (0).to_bytes(4, 'little'))
                 entry.append(('listed', tuple(chosen)))
             elif tok == 'W':
-                for k in range(3):
+                for k in range(3 if v else 0):
                     m.write(v + 4 * k, cr.f2b(float(rng.randrange(-20, 20))).to_bytes(4, 'little'))
             elif tok == 'c':
                 entry.append(cstr(m, v))
@@ -691,6 +692,53 @@ def sc_container_run(rng):
             'vstubs': {VSTUB: ('delete', ['o', 'i'], None)}}
 
 
+PP_LIST = [OBJ] + [OTHER + 0x400 * k for k in range(3)]
+PP_TABLES = [0x30060000 + 0x100 * k for k in range(4)]
+
+
+def sc_push_run(rng):
+    mem = new_object(rng)
+    vtable(rng, mem, {48: (VSTUB, rng.choice([0, 8, -8]))})
+    put32(mem, OBJ + 252, rng.choice([0, 1, 5, 1, 1, 2]))
+    put32(mem, OBJ + 248, rng.choice([0, 0, 3, 30]))
+    put32(mem, OBJ + 244, rng.choice([0, 0, 5, 60]))
+    putf(mem, OBJ + 80, rng.choice([1.0, 2.0, 4.0, 0.5]))
+    putf(mem, OBJ + 76, float(rng.choice([0, -2, 3, 10])))
+    for off in (96, 100, 104, 16, 20, 24, 232, 236, 240):
+        putf(mem, OBJ + off, float(rng.randrange(-6, 6)))
+    for off in (124, 128, 132, 136, 140, 144):
+        putf(mem, OBJ + off, rng.choice([0.0, 0.0, 1.0, -1.0, 2.0, -3.0, 0.005, -0.005, 0.0001, 0.5, b2f(0x3dc08312), b2f(0x3dc08311), b2f(0x3e189374), b2f(0x3e189373), -b2f(0x3dc08312)]))
+    for k in range(9):
+        putf(mem, OBJ + 148 + 4 * k, rng.choice([0.0, 1.0, -1.0, 0.5]))
+    putf(mem, OBJ + 256, rng.choice([0.5, 1.0, 2.0, 4.0]))
+    putf(mem, OBJ + 28, float(rng.choice([1, 2, 3])))
+    putf(mem, OBJ + 32, float(rng.choice([2, 4])))
+    put32(mem, 0x4844A0, rng.choice([0, 0x30050000]))
+    for k, o in enumerate(PP_LIST[1:], 1):
+        fill(rng, mem, o, 0x200)
+        put32(mem, o + 12, rng.choice([0, 0, 0x10, 0x10, 1, 0x11, 0xFFFFFFFF, 0x20]))
+        for q in (16, 20):
+            putf(mem, o + q, float(rng.randrange(-4, 4)))
+        putf(mem, o + 24, float(rng.randrange(-6, 6)))
+        putf(mem, o + 28, float(rng.choice([1, 2, 3])))
+        putf(mem, o + 32, float(rng.choice([2, 4, 8])))
+        put32(mem, o + 248, rng.choice([0, 0, 1, 5]))
+        put32(mem, o + 72, PP_TABLES[k])
+    for k, t in enumerate(PP_TABLES):
+        fill(rng, mem, t, 0x100)
+        put32(mem, t + 4, rng.choice([TYPE_A, TYPE_A, TYPE_B]))
+        mem[t + 48], mem[t + 49] = rng.choice([0, 8, 0xF8]), 0
+        mem[t + 49] = 0xFF if mem[t + 48] == 0xF8 else 0
+        put32(mem, t + 52, VSTUB)
+    cmp_addrs = whole_object()
+    for o in PP_LIST[1:]:
+        cmp_addrs += list(range(o, o + 0x200))
+    return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs, 'list': PP_LIST,
+            'vstubs': {VSTUB: ('contact', ['o', 'o'], None),
+                       TYPE_A: ('typeA', [], ('i', [0x31F10000])),
+                       TYPE_B: ('typeB', [], ('i', [0x31F20000]))}}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -824,6 +872,19 @@ reg('msg_run__9Container', W + 'container-run/run.cpp', sc_container_run,
      'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
      'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
      'addEffect__FiG6Point3': (['i', 's12'], None)})
+
+reg('msg_run__15PushPhysicsProp', W + 'push-physics-prop-run/run.cpp', sc_push_run,
+    {'matUntransform__FP6Point3P8Matrix33T0': (['s12', 'i', 'W'], None),
+     'bodyGetVelocity__FP5_bodyP6Point3T1': (['o', 's12', 'W'], None),
+     'bodyAddForce__FP5_bodyP6Point3N31': (['o', 's12', 's12', 's12', 's12'], None),
+     'bodyApplyImpulse__FP5_bodyG6Point3T1f': (['o', 's12', 's12', 'f'], None),
+     'bodyApplyForce__FP5_bodyG6Point3T1f': (['o', 's12', 's12', 'f'], None),
+     'worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3': (['i', 's12', 's12', 'f', 'i', 'W'], ('f', [1, 0.5, 0.25, 0, 1, 1])),
+     'objectUpdateInGrid__FP10GameObject': (['o'], None),
+     'objectFindInBox__FG6Point3T0PP10GameObjecti': (['s12', 's12', 'L', 'i'], None),
+     'worldFindStandHeight__FP12_worldHeaderG6Point3f': (['i', 's12', 'f'], ('f', [-5, 0, 1, 2.5, 10, 2, 3, 4, 5, 6, 7, 8, -100000, -99999])),
+     '__tf15PushPhysicsProp': ([], ('i', [0x31F10000])),
+     '__eq__C9type_infoRC9type_info': (['i', 'i'], ('eq', None))})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
