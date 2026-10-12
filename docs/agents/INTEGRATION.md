@@ -3187,6 +3187,19 @@ Opened: `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `Pop__6Camera`,
 `unpack__4itemPQ24item11description`, `ustrcat__FPUsPc`,
 `waitingForStreamSpool`.
 
+
+Second check by another pass over the same merge: the closed (26), opened (41)
+and official counts (1671 to 1686) reproduce independently on this tip. One
+host check is unsound under the sanitizers although it exits 0 without them:
+`inventory-items-msg-load-itemprop/host_check.cpp` stores to `order[steps++]`
+past the end of its own 4-entry array (the Prop loader stub is called more
+than four times), which ASan/UBSan flag at line 25. It is a defect in the check's
+stub, not in the source, and does not change the verdict. A scripted mutation
+pass (one numeric literal changed at a time) was killed by the checks in
+every unit that has literals: 10/10 `msg_load__8ItemPropPc` and `_$_4Gold`,
+9/10 `msg_draw__4Gold`, `removeItemFromInventory__Fiiii` and `shopStart__Fiii`,
+5/10 `invMsgCallback__FPUci`, 4/10 `msg_run__4Gold`.
+
 ## agents/save-and-quests
 
 Merged (the branch notes carry the five summary sections). Twenty-two of the
