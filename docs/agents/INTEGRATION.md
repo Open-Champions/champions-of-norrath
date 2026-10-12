@@ -4428,6 +4428,55 @@ tegrationEffect__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sffi`
 `soundStartGlobalDialogStreamRandom__FiPci`,
 `soundStartGlobalDialogStream__FiPci`, `wLumpHeader`.
 
+## agents/w8-object-list-math
+
+Merged (the branch notes carry the five summary sections). Forty-two units
+with fresh `input_order` values 2252 through 2293: 45 emitted functions
+(7808 compiled body bytes, not original-byte matches, including file-local
+helpers). All 42 `host_check.cpp` programs build and exit 0 here (42 of 42),
+with two build notes: six checks need the unit linked with sibling units of
+the package that define their callees (`object-clear`, `find-object-by-class`,
+`mat-make-trans-yaw`, `mat-to-quaternion`, `safe-iterator-next` and
+`safe-iterator-destroy`), and `mat-rot33` compares floats bit for bit, so it
+only passes with `-ffp-contract=off` (on this arm64 host the default fused
+multiply-add changes the last bit; the EE has no fused form). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1856 function bodies, 2294 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1533 |
+| After | 1491 |
+| Closed | 44 |
+| Opened | 2 |
+
+Closed: `_$_16ListSafeIterator`, `_GLOBAL_$D$lastkey`,
+`_GLOBAL_$D$objectIgnoreFlags`, `_GLOBAL_$I$addpmlist__FPc`,
+`_GLOBAL_$I$lastkey`, `_GLOBAL_$I$objectIgnoreFlags`,
+`__16ListSafeIteratorP8ListHeadi`, `createByName__FPcG6Point3sPPc`,
+`deleteList`, `iatan2__Fff`, `icos__Fi`, `initializeMe__4Line`, `isin__Fi`,
+`lineToY__Fi`, `listOnewayLink__FP8ListHeadT0Pv`, `matIdent__FP8Matrix33`,
+`matMakeTransYaw__FP8Matrix34G6Point3s`, `matRot__FP8Matrix33is`,
+`matToQuaternion__FP4QuatP8Matrix34`,
+`matTransform34Vec__FP6Point3P8Matrix34T0`,
+`matTransform__FP6Point3P8Matrix33T0`, `mediumRunList`, `memAlloc__FiPc`,
+`memCheckHeapReal__FPCci`, `memFree__FPv`, `memRealloc__FPvi`, `nextIndex`,
+`next__16ListSafeIterator`, `objectActivationCheck__8Creaturei`,
+`objectAddToDeleteList__FP10GameObject`, `objectClear__Fv`,
+`objectDoMyActions__FP10GameObjecti`,
+`objectFindAnimation__FP10GameObjectPc`,
+`objectFindObjectByClass__FPcPP10GameObjecti`,
+`objectInside__7TriggerP10GameObject`,
+`objectRemoveFromGrid__FP10GameObject`,
+`objectRemoveFromRunList__FP10GameObject`,
+`objectSaveAddToStringPool__FPCc`, `objectSaveGetFromStringPool__Fi`,
+`objectSetCreateByNameFunction__FPFPcG6Point3sPPc_P10GameObject`,
+`objectSetFilterFunction__FPFPc_i`, `quatToMat__FP8Matrix33P4Quat`,
+`runList`, `slowRunList`.
+
+Opened: `_$_10VIKeyboard`, `__10VIKeyboard`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
