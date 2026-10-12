@@ -2053,6 +2053,47 @@ Opened: `MC_FrontEndImport`, `animFrame__Fv`, `commProcess__Fv`,
 1009 function bodies, 1283 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/vi-launcher
+
+Merged (the branch notes carry the five summary sections: per-symbol observed
+addresses, inferred and unknown notes, closed and opened imports, build-plan
+entries, and an authored-never-executed statement). Twenty-two units, one
+function per commit, each with a `host_contract.cpp`; all 22 compile and run
+here with exit 0. Fresh `input_order` values 1283 through 1304. All 22
+sources compile under `authored_cpp` with empty header closure; 22 function
+bodies, 2884 body bytes. No game binary or disassembly listing was committed.
+Host contracts are in the snapshot `files` map and not in the plan.
+1031 function bodies, 1305 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1199 |
+| After | 1208 |
+| Closed | 22 |
+| Opened | 31 |
+
+Closed: `CheckNetwork__15VINetworkStatus`, `ClearVRAM__FUcUcUcUc`,
+`Close__7VITimer`, `Free__10VILauncher`, `GetDefault__10VILanguage`,
+`Init__10VILauncherb`, `Init__7VITimer`, `Initialize__15VINetworkStatus`,
+`LoadExecPS2`, `SetDefault__10VILanguage12VILanguageID`,
+`Setup__10VILauncher`, `Station__10VILauncheriPCcN22i`,
+`VIDisplayLoadingScreen__Fb`, `VIMemCardSetProductId__FPCc`,
+`VIMemCardSetProductTitle__FPCc`, `_$_10VILauncher`, `_$_15VINetworkStatus`,
+`__10VILauncher`, `__15VINetworkStatus`, `exitEzNetCnf`, `exitEzNetCtl`,
+`ezNetCtlDownInterface`.
+
+Opened: `DeleteThread`, `Handler__7VITimeri`, `Password__C13VIGameOptions`,
+`RotateThreadReadyQueue`, `SetArg`, `TerminateLibrary`,
+`Username__C13VIGameOptions`, `VIDisplayScreen16__FPCcib`,
+`VIGetGameOptions__Fv`, `_LoadExecPS2`, `__builtin_delete`,
+`__wrap_memalign`, `dmaGIF`, `initEzNetCtl`, `rand`, `sceCdReadClock`,
+`sceGifPkAddGsData`, `sceGifPkInit`, `sceGifPkReset`, `sceGifPkSize`,
+`sceGifPkTerminate`, `sceGszbufaddr`, `sceInetCtlGetState`,
+`sceInetGetInterfaceList`, `sceLibnetInitialize`, `sceMcEnd`,
+`sceMcGetInfo`, `scePadEnd`, `setup_main__Fv`, `srand`,
+`station_main__FiPCcPcT2T1T1i`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

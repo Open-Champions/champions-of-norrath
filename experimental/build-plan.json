@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1283,
+  "default_authored_inputs": 1305,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1999,7 +1999,29 @@
     "sources/floor-world-view-set-far-clip/set_far_clip.cpp": "ab4da0f336e919cfd54d25f4766d7fc5e1db1c4b5c1c21ee5088d95e3244cdc9",
     "sources/floor-world-view-set-frustum/set_frustum.cpp": "2f8ee54a3b9e92fb97375682906d5db0655419f6cb5602d95af25298b15c57a3",
     "sources/floor-world-view-world-matrix/world_matrix.cpp": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647",
-    "sources/game-loop-game-loop/game_loop.cpp": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa"
+    "sources/game-loop-game-loop/game_loop.cpp": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa",
+    "sources/vi-launcher-clear-vram/clear_vram.cpp": "60afe6cad548152d278e92384c23b730dad7494db574e792c9b1c6d72c9e06bd",
+    "sources/vi-launcher-ctor/launcher_ctor.cpp": "dd3834493226ed130e89c24083ddffd943858cd1625266708e7fcd5c3d827d89",
+    "sources/vi-launcher-dtor/launcher_dtor.cpp": "6b1ded2dc9ef67b3d679e2ecdaa7ba8d8ff8ce3e4a184f622c7d9f3f14278efd",
+    "sources/vi-launcher-eznet-cnf/exit_cnf.cpp": "5f0214453a3884990bfbb6a2821d6863b9352ce74fc9493f75f3864910bd1a26",
+    "sources/vi-launcher-eznet-ctl/exit_ctl.cpp": "04a71dfbb480cae4ecee04e6e55c3218ee846a44b27446a6046d25d7d87889f6",
+    "sources/vi-launcher-eznet-down/down_interface.cpp": "e4ea5f69ac3b5b6a98775586b123cdb6f6eb7987bc9975c18c19eddc5e622d6e",
+    "sources/vi-launcher-free/launcher_free.cpp": "1a4ac5c14da404bd93bbebbdc3f5d2316a9e6c1c3f17c32f6e0320a08f0d20d3",
+    "sources/vi-launcher-init/launcher_init.cpp": "5d95fb54ca4200b499db267b733b60b23a813b4402c02bf6f54a115ed4b7ebbe",
+    "sources/vi-launcher-language-get/language_get.cpp": "93aa6b43b260786a7e260aa89ae4ed358f781ea3326da59413ece7fe8cf0f5c9",
+    "sources/vi-launcher-language-set/language_set.cpp": "bf896a62a4c67714f72c5ee174ef8de1f60105f2cc09698236fe16c8d26d72ef",
+    "sources/vi-launcher-load-exec/load_exec.cpp": "f5283a80eeacd5d409bde777577176695017e5f5954beca6c3cfb2dc9d0d1058",
+    "sources/vi-launcher-loading/loading.cpp": "9e5527548d6f1c730a5ca97baea506e138f926b39965421b09a9e208a8302ab4",
+    "sources/vi-launcher-net-check/net_check.cpp": "a1537bba04207ad4512a6f415db539b3a5a9d6fed78164a41df708a0e3a08fea",
+    "sources/vi-launcher-net-ctor/net_ctor.cpp": "34bde2ada00542fbb7c08027817ad70b964b9debdf6a97bd5af41eec918968a5",
+    "sources/vi-launcher-net-dtor/net_dtor.cpp": "efe89cd5c9100f20e407d75b87f04fb81eb1db931ca6611348f9e0ad99222a49",
+    "sources/vi-launcher-net-init/net_init.cpp": "5a26b2aaa805cf56435b18191030cc5601861c28653cc8ae4a3098eb09c99074",
+    "sources/vi-launcher-product-id/product_id.cpp": "03a525420cf95301565eb273e5b0dd8b35a79de1b47eab226e54d1d305cebae9",
+    "sources/vi-launcher-product-title/product_title.cpp": "79cd03e6007c76eac5e175a5ca06347aa588367ec2ea987bc8615a252fa5d254",
+    "sources/vi-launcher-setup/setup.cpp": "32df6ee732c9feccaddb549459a18472be1fb0326d1d0f7109ca98f05cc609ac",
+    "sources/vi-launcher-station/station.cpp": "ca4af5ec603ac6c8a7dc77a16c894f3b500db8079172c611fcb9751cc2825cff",
+    "sources/vi-launcher-timer-close/timer_close.cpp": "8ecc7bd6eb83ba0cc837da508b55419a34e6d7c96d7587eb78ad5bcabdfad9bc",
+    "sources/vi-launcher-timer-init/timer_init.cpp": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b"
   },
   "inputs": [
     {
@@ -16735,6 +16757,336 @@
           "compiled_body_bytes": 3876
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1285,
+      "kind": "independently_authored_source",
+      "object_name": "clear_vram.o",
+      "profile": "authored_cpp",
+      "sha256": "60afe6cad548152d278e92384c23b730dad7494db574e792c9b1c6d72c9e06bd",
+      "source": "sources/vi-launcher-clear-vram/clear_vram.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClearVRAM__FUcUcUcUc",
+          "compiled_body_bytes": 704
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1286,
+      "kind": "independently_authored_source",
+      "object_name": "launcher_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "dd3834493226ed130e89c24083ddffd943858cd1625266708e7fcd5c3d827d89",
+      "source": "sources/vi-launcher-ctor/launcher_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1287,
+      "kind": "independently_authored_source",
+      "object_name": "launcher_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "6b1ded2dc9ef67b3d679e2ecdaa7ba8d8ff8ce3e4a184f622c7d9f3f14278efd",
+      "source": "sources/vi-launcher-dtor/launcher_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VILauncher",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1288,
+      "kind": "independently_authored_source",
+      "object_name": "exit_cnf.o",
+      "profile": "authored_cpp",
+      "sha256": "5f0214453a3884990bfbb6a2821d6863b9352ce74fc9493f75f3864910bd1a26",
+      "source": "sources/vi-launcher-eznet-cnf/exit_cnf.cpp",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCnf",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1289,
+      "kind": "independently_authored_source",
+      "object_name": "exit_ctl.o",
+      "profile": "authored_cpp",
+      "sha256": "04a71dfbb480cae4ecee04e6e55c3218ee846a44b27446a6046d25d7d87889f6",
+      "source": "sources/vi-launcher-eznet-ctl/exit_ctl.cpp",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCtl",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1290,
+      "kind": "independently_authored_source",
+      "object_name": "down_interface.o",
+      "profile": "authored_cpp",
+      "sha256": "e4ea5f69ac3b5b6a98775586b123cdb6f6eb7987bc9975c18c19eddc5e622d6e",
+      "source": "sources/vi-launcher-eznet-down/down_interface.cpp",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlDownInterface",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1291,
+      "kind": "independently_authored_source",
+      "object_name": "launcher_free.o",
+      "profile": "authored_cpp",
+      "sha256": "1a4ac5c14da404bd93bbebbdc3f5d2316a9e6c1c3f17c32f6e0320a08f0d20d3",
+      "source": "sources/vi-launcher-free/launcher_free.cpp",
+      "emitted_functions": [
+        {
+          "name": "Free__10VILauncher",
+          "compiled_body_bytes": 408
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1292,
+      "kind": "independently_authored_source",
+      "object_name": "launcher_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5d95fb54ca4200b499db267b733b60b23a813b4402c02bf6f54a115ed4b7ebbe",
+      "source": "sources/vi-launcher-init/launcher_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__10VILauncherb",
+          "compiled_body_bytes": 268
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1293,
+      "kind": "independently_authored_source",
+      "object_name": "language_get.o",
+      "profile": "authored_cpp",
+      "sha256": "93aa6b43b260786a7e260aa89ae4ed358f781ea3326da59413ece7fe8cf0f5c9",
+      "source": "sources/vi-launcher-language-get/language_get.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetDefault__10VILanguage",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1294,
+      "kind": "independently_authored_source",
+      "object_name": "language_set.o",
+      "profile": "authored_cpp",
+      "sha256": "bf896a62a4c67714f72c5ee174ef8de1f60105f2cc09698236fe16c8d26d72ef",
+      "source": "sources/vi-launcher-language-set/language_set.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetDefault__10VILanguage12VILanguageID",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1295,
+      "kind": "independently_authored_source",
+      "object_name": "load_exec.o",
+      "profile": "authored_cpp",
+      "sha256": "f5283a80eeacd5d409bde777577176695017e5f5954beca6c3cfb2dc9d0d1058",
+      "source": "sources/vi-launcher-load-exec/load_exec.cpp",
+      "emitted_functions": [
+        {
+          "name": "LoadExecPS2",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1296,
+      "kind": "independently_authored_source",
+      "object_name": "loading.o",
+      "profile": "authored_cpp",
+      "sha256": "9e5527548d6f1c730a5ca97baea506e138f926b39965421b09a9e208a8302ab4",
+      "source": "sources/vi-launcher-loading/loading.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIDisplayLoadingScreen__Fb",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1297,
+      "kind": "independently_authored_source",
+      "object_name": "net_check.o",
+      "profile": "authored_cpp",
+      "sha256": "a1537bba04207ad4512a6f415db539b3a5a9d6fed78164a41df708a0e3a08fea",
+      "source": "sources/vi-launcher-net-check/net_check.cpp",
+      "emitted_functions": [
+        {
+          "name": "CheckNetwork__15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1298,
+      "kind": "independently_authored_source",
+      "object_name": "net_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "34bde2ada00542fbb7c08027817ad70b964b9debdf6a97bd5af41eec918968a5",
+      "source": "sources/vi-launcher-net-ctor/net_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15VINetworkStatus",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1299,
+      "kind": "independently_authored_source",
+      "object_name": "net_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "efe89cd5c9100f20e407d75b87f04fb81eb1db931ca6611348f9e0ad99222a49",
+      "source": "sources/vi-launcher-net-dtor/net_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1300,
+      "kind": "independently_authored_source",
+      "object_name": "net_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5a26b2aaa805cf56435b18191030cc5601861c28653cc8ae4a3098eb09c99074",
+      "source": "sources/vi-launcher-net-init/net_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Initialize__15VINetworkStatus",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1301,
+      "kind": "independently_authored_source",
+      "object_name": "product_id.o",
+      "profile": "authored_cpp",
+      "sha256": "03a525420cf95301565eb273e5b0dd8b35a79de1b47eab226e54d1d305cebae9",
+      "source": "sources/vi-launcher-product-id/product_id.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductId__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1302,
+      "kind": "independently_authored_source",
+      "object_name": "product_title.o",
+      "profile": "authored_cpp",
+      "sha256": "79cd03e6007c76eac5e175a5ca06347aa588367ec2ea987bc8615a252fa5d254",
+      "source": "sources/vi-launcher-product-title/product_title.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductTitle__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1303,
+      "kind": "independently_authored_source",
+      "object_name": "setup.o",
+      "profile": "authored_cpp",
+      "sha256": "32df6ee732c9feccaddb549459a18472be1fb0326d1d0f7109ca98f05cc609ac",
+      "source": "sources/vi-launcher-setup/setup.cpp",
+      "emitted_functions": [
+        {
+          "name": "Setup__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1304,
+      "kind": "independently_authored_source",
+      "object_name": "station.o",
+      "profile": "authored_cpp",
+      "sha256": "ca4af5ec603ac6c8a7dc77a16c894f3b500db8079172c611fcb9751cc2825cff",
+      "source": "sources/vi-launcher-station/station.cpp",
+      "emitted_functions": [
+        {
+          "name": "Station__10VILauncheriPCcN22i",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1305,
+      "kind": "independently_authored_source",
+      "object_name": "timer_close.o",
+      "profile": "authored_cpp",
+      "sha256": "8ecc7bd6eb83ba0cc837da508b55419a34e6d7c96d7587eb78ad5bcabdfad9bc",
+      "source": "sources/vi-launcher-timer-close/timer_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__7VITimer",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1306,
+      "kind": "independently_authored_source",
+      "object_name": "timer_init.o",
+      "profile": "authored_cpp",
+      "sha256": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b",
+      "source": "sources/vi-launcher-timer-init/timer_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__7VITimer",
+          "compiled_body_bytes": 112
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -16834,7 +17186,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2ae64d5499db2643c6c053b91d73a054210f86bbeb73ce2b6ed8600c376b2c99",
+  "snapshot_sha256": "3d97e8b1ee93e23a1af96f6d0f3eecc0a95157717bee371713090e913c3d6a61",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

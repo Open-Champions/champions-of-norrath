@@ -16493,6 +16493,314 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/game-loop-game-loop/game_loop.cpp"
+    },
+    {
+      "input_order": 1285,
+      "component": "vi-launcher-clear-vram",
+      "object_name": "clear_vram.o",
+      "private_object_sha256": "17e9ddb4a0e92b822b18381dd0002a246e15a15b0ba19a5a47543fca52df470d",
+      "emitted_functions": [
+        {
+          "name": "ClearVRAM__FUcUcUcUc",
+          "compiled_body_bytes": 704
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-clear-vram/clear_vram.cpp"
+    },
+    {
+      "input_order": 1286,
+      "component": "vi-launcher-ctor",
+      "object_name": "launcher_ctor.o",
+      "private_object_sha256": "aee0069ecab4a48096f8eac4a29b098703226b54c4369f6e68f3a5a2e2873975",
+      "emitted_functions": [
+        {
+          "name": "__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-ctor/launcher_ctor.cpp"
+    },
+    {
+      "input_order": 1287,
+      "component": "vi-launcher-dtor",
+      "object_name": "launcher_dtor.o",
+      "private_object_sha256": "d189342e5d202d3d687c9c21c0cd0781e5a93b302d0b3058ed4287960a5bbc4f",
+      "emitted_functions": [
+        {
+          "name": "_$_10VILauncher",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-dtor/launcher_dtor.cpp"
+    },
+    {
+      "input_order": 1288,
+      "component": "vi-launcher-eznet-cnf",
+      "object_name": "exit_cnf.o",
+      "private_object_sha256": "586d1f307e31b433a936757b4bad717bd1c636d393ac7f138677d69f42e8202b",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCnf",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-eznet-cnf/exit_cnf.cpp"
+    },
+    {
+      "input_order": 1289,
+      "component": "vi-launcher-eznet-ctl",
+      "object_name": "exit_ctl.o",
+      "private_object_sha256": "bd81867700654f78f1fa6cec06decc680562855388c4d1aad084f4b96feaea24",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCtl",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-eznet-ctl/exit_ctl.cpp"
+    },
+    {
+      "input_order": 1290,
+      "component": "vi-launcher-eznet-down",
+      "object_name": "down_interface.o",
+      "private_object_sha256": "e523a65f3af84a02759630a004a46d1e02bd85c67a8efc7157b35fffad2cfc83",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlDownInterface",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-eznet-down/down_interface.cpp"
+    },
+    {
+      "input_order": 1291,
+      "component": "vi-launcher-free",
+      "object_name": "launcher_free.o",
+      "private_object_sha256": "109d4fbc854262fbfd80c32352aa0ea97bb40b45c978c28ed6490223a5dd117e",
+      "emitted_functions": [
+        {
+          "name": "Free__10VILauncher",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-free/launcher_free.cpp"
+    },
+    {
+      "input_order": 1292,
+      "component": "vi-launcher-init",
+      "object_name": "launcher_init.o",
+      "private_object_sha256": "e1bce58132aedaa225f4b276486d8451c71ba40467c8397180252849889e398c",
+      "emitted_functions": [
+        {
+          "name": "Init__10VILauncherb",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-init/launcher_init.cpp"
+    },
+    {
+      "input_order": 1293,
+      "component": "vi-launcher-language-get",
+      "object_name": "language_get.o",
+      "private_object_sha256": "ca8e9fd111a66f6a4e36cf9890b7f168040e9235c66a345e21e31ba3702f3699",
+      "emitted_functions": [
+        {
+          "name": "GetDefault__10VILanguage",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-language-get/language_get.cpp"
+    },
+    {
+      "input_order": 1294,
+      "component": "vi-launcher-language-set",
+      "object_name": "language_set.o",
+      "private_object_sha256": "aa4fb797d78a744e4372f2a4a3d86a35d720ab6cb6549df26becad7a1d899607",
+      "emitted_functions": [
+        {
+          "name": "SetDefault__10VILanguage12VILanguageID",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-language-set/language_set.cpp"
+    },
+    {
+      "input_order": 1295,
+      "component": "vi-launcher-load-exec",
+      "object_name": "load_exec.o",
+      "private_object_sha256": "c57f115fd8f6bde37c75487f8b25b7d6f1654ac7cd4160b60bfc548c7a659cdf",
+      "emitted_functions": [
+        {
+          "name": "LoadExecPS2",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-load-exec/load_exec.cpp"
+    },
+    {
+      "input_order": 1296,
+      "component": "vi-launcher-loading",
+      "object_name": "loading.o",
+      "private_object_sha256": "62e159489079afe845598f353e4ba1ae1434721708d9f0c8e533d113f88ece39",
+      "emitted_functions": [
+        {
+          "name": "VIDisplayLoadingScreen__Fb",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-loading/loading.cpp"
+    },
+    {
+      "input_order": 1297,
+      "component": "vi-launcher-net-check",
+      "object_name": "net_check.o",
+      "private_object_sha256": "62839670f479976129e5ea8bd2b8a3c002d395bfaf47f16a17d6e182c3ac213b",
+      "emitted_functions": [
+        {
+          "name": "CheckNetwork__15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-net-check/net_check.cpp"
+    },
+    {
+      "input_order": 1298,
+      "component": "vi-launcher-net-ctor",
+      "object_name": "net_ctor.o",
+      "private_object_sha256": "26bcfcb9976a271a8b45f29d760307678acdf915ef88193bf125e9cdc55e2ea2",
+      "emitted_functions": [
+        {
+          "name": "__15VINetworkStatus",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-net-ctor/net_ctor.cpp"
+    },
+    {
+      "input_order": 1299,
+      "component": "vi-launcher-net-dtor",
+      "object_name": "net_dtor.o",
+      "private_object_sha256": "df07f18140eeefb26256566a5b860d38ac29d62c5f0dd4ffdbe2357e0a498ac1",
+      "emitted_functions": [
+        {
+          "name": "_$_15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-net-dtor/net_dtor.cpp"
+    },
+    {
+      "input_order": 1300,
+      "component": "vi-launcher-net-init",
+      "object_name": "net_init.o",
+      "private_object_sha256": "091d32f0bbccd865ba7fafcc4c9912cc388684749bf3e86e3ba54f626139b734",
+      "emitted_functions": [
+        {
+          "name": "Initialize__15VINetworkStatus",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-net-init/net_init.cpp"
+    },
+    {
+      "input_order": 1301,
+      "component": "vi-launcher-product-id",
+      "object_name": "product_id.o",
+      "private_object_sha256": "3ede2d34c9becba9a9991c265b0c2eb93d72da8dd46f84ec2aa58319f9d2d105",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductId__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-product-id/product_id.cpp"
+    },
+    {
+      "input_order": 1302,
+      "component": "vi-launcher-product-title",
+      "object_name": "product_title.o",
+      "private_object_sha256": "dc386eec27810d9f45c16e79921907d88ae75334ea9646ebe8db593875a9d38f",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductTitle__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-product-title/product_title.cpp"
+    },
+    {
+      "input_order": 1303,
+      "component": "vi-launcher-setup",
+      "object_name": "setup.o",
+      "private_object_sha256": "848bb1e6eebd994b698080b1321fedf545b4b56c93e4c952f82cd5b3e3fdc740",
+      "emitted_functions": [
+        {
+          "name": "Setup__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-setup/setup.cpp"
+    },
+    {
+      "input_order": 1304,
+      "component": "vi-launcher-station",
+      "object_name": "station.o",
+      "private_object_sha256": "b6b7841048be0158792fb9014fe99e558dc796762c0eefb7c018bb1315b50a34",
+      "emitted_functions": [
+        {
+          "name": "Station__10VILauncheriPCcN22i",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-station/station.cpp"
+    },
+    {
+      "input_order": 1305,
+      "component": "vi-launcher-timer-close",
+      "object_name": "timer_close.o",
+      "private_object_sha256": "00185af413a39ac2fefea55290d572bddb605211a23ba30f0d1e3f0a56294380",
+      "emitted_functions": [
+        {
+          "name": "Close__7VITimer",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-timer-close/timer_close.cpp"
+    },
+    {
+      "input_order": 1306,
+      "component": "vi-launcher-timer-init",
+      "object_name": "timer_init.o",
+      "private_object_sha256": "29b8d19047c74027cf2650051d20181660d3c4591de870e25c4133a6150b0b4c",
+      "emitted_functions": [
+        {
+          "name": "Init__7VITimer",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/vi-launcher-timer-init/timer_init.cpp"
     }
   ],
   "drafts": [
@@ -19493,7 +19801,51 @@
     "sources/game-loop-game-loop/game_loop.cpp": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa",
     "sources/game-loop-game-loop/host_check.cpp": "b0c6054f07f48a12185afbf7b63fec5d4443fdaa5b3c7a983bff6df24fb13632",
     "sources/game-loop-draw-objects/draw_objects.cpp": "26e86e74c356e3d8e4f293962c0bea53a0ceaff31750ff6b12d9f4940654ce89",
-    "sources/game-loop-draw-objects/host_check.cpp": "759a2c3ee5f5de2dcae1e9f898a155002f1dc03fe68c3bebd7fa8a33b3f1157d"
+    "sources/game-loop-draw-objects/host_check.cpp": "759a2c3ee5f5de2dcae1e9f898a155002f1dc03fe68c3bebd7fa8a33b3f1157d",
+    "sources/vi-launcher-clear-vram/clear_vram.cpp": "60afe6cad548152d278e92384c23b730dad7494db574e792c9b1c6d72c9e06bd",
+    "sources/vi-launcher-clear-vram/host_contract.cpp": "745470978a53493112506dd8df14db3578105a15a55ad9bb817fc3932702c13e",
+    "sources/vi-launcher-ctor/launcher_ctor.cpp": "dd3834493226ed130e89c24083ddffd943858cd1625266708e7fcd5c3d827d89",
+    "sources/vi-launcher-ctor/host_contract.cpp": "c3c22c2b9eef4cdc322888d320e2e808578503de4694435ffaa90efbbbbbbfc5",
+    "sources/vi-launcher-dtor/launcher_dtor.cpp": "6b1ded2dc9ef67b3d679e2ecdaa7ba8d8ff8ce3e4a184f622c7d9f3f14278efd",
+    "sources/vi-launcher-dtor/host_contract.cpp": "b8830ac2cd77fb793f6515dbfa7b154001f4f3daff4f6d51acaa2a8d59c2b1a0",
+    "sources/vi-launcher-eznet-cnf/exit_cnf.cpp": "5f0214453a3884990bfbb6a2821d6863b9352ce74fc9493f75f3864910bd1a26",
+    "sources/vi-launcher-eznet-cnf/host_contract.cpp": "4d2194b3b6329429033f9ed02141075b1f227a558b06d4f0e792d1c1fcba5f5b",
+    "sources/vi-launcher-eznet-ctl/exit_ctl.cpp": "04a71dfbb480cae4ecee04e6e55c3218ee846a44b27446a6046d25d7d87889f6",
+    "sources/vi-launcher-eznet-ctl/host_contract.cpp": "f59397897817e83af2c94dd74c3fd79941e46038ee3eeb430da5556d0a207cd9",
+    "sources/vi-launcher-eznet-down/down_interface.cpp": "e4ea5f69ac3b5b6a98775586b123cdb6f6eb7987bc9975c18c19eddc5e622d6e",
+    "sources/vi-launcher-eznet-down/host_contract.cpp": "6153255c88bc8321ead0a14f74960de3079a0f244b9588d28c4aebf7e7cb120c",
+    "sources/vi-launcher-free/launcher_free.cpp": "1a4ac5c14da404bd93bbebbdc3f5d2316a9e6c1c3f17c32f6e0320a08f0d20d3",
+    "sources/vi-launcher-free/host_contract.cpp": "13550d3459b4fc58cdc6323304a16e15ba3231828d950aed749336a1e5db7c5a",
+    "sources/vi-launcher-init/launcher_init.cpp": "5d95fb54ca4200b499db267b733b60b23a813b4402c02bf6f54a115ed4b7ebbe",
+    "sources/vi-launcher-init/host_contract.cpp": "a93c847264981f57c9a5cba6e5f54ada84ca1521c5e3ca12d3f22dab8e2c0436",
+    "sources/vi-launcher-language-get/language_get.cpp": "93aa6b43b260786a7e260aa89ae4ed358f781ea3326da59413ece7fe8cf0f5c9",
+    "sources/vi-launcher-language-get/host_contract.cpp": "2640a52b96748b2dd506f1e310859d6c4b34dcbf941901af3f2ec65372baa946",
+    "sources/vi-launcher-language-set/language_set.cpp": "bf896a62a4c67714f72c5ee174ef8de1f60105f2cc09698236fe16c8d26d72ef",
+    "sources/vi-launcher-language-set/host_contract.cpp": "edf89632ea28982fb066e952fd372352c82a40da32bb37d9efcf731b78526615",
+    "sources/vi-launcher-load-exec/load_exec.cpp": "f5283a80eeacd5d409bde777577176695017e5f5954beca6c3cfb2dc9d0d1058",
+    "sources/vi-launcher-load-exec/host_contract.cpp": "c09a44b1cd5df0151dda9d7d9540afe1455a269c31c79263f8b6fab466367979",
+    "sources/vi-launcher-loading/loading.cpp": "9e5527548d6f1c730a5ca97baea506e138f926b39965421b09a9e208a8302ab4",
+    "sources/vi-launcher-loading/host_contract.cpp": "970f5087d8adeef26f8410600072f5b51806fc54a15894e9b0212e761d2cb2f0",
+    "sources/vi-launcher-net-check/net_check.cpp": "a1537bba04207ad4512a6f415db539b3a5a9d6fed78164a41df708a0e3a08fea",
+    "sources/vi-launcher-net-check/host_contract.cpp": "6e5247afcc95c8b497b2660fb497eeeff6e95b81aea53fc574814236e6f0ee30",
+    "sources/vi-launcher-net-ctor/net_ctor.cpp": "34bde2ada00542fbb7c08027817ad70b964b9debdf6a97bd5af41eec918968a5",
+    "sources/vi-launcher-net-ctor/host_contract.cpp": "dde2a3b10743272a761c29022d569b2fe8be1748c4590a9301df348656d84e39",
+    "sources/vi-launcher-net-dtor/net_dtor.cpp": "efe89cd5c9100f20e407d75b87f04fb81eb1db931ca6611348f9e0ad99222a49",
+    "sources/vi-launcher-net-dtor/host_contract.cpp": "299e89bbd676b1247fb701f4bfb43287a7a37d9e9986d8c588f0df39fa3bddfe",
+    "sources/vi-launcher-net-init/net_init.cpp": "5a26b2aaa805cf56435b18191030cc5601861c28653cc8ae4a3098eb09c99074",
+    "sources/vi-launcher-net-init/host_contract.cpp": "ddea507afc23df7df0c89aaa8ba17a81c7b5da31f9734e2ffef4e6f4053b74e8",
+    "sources/vi-launcher-product-id/product_id.cpp": "03a525420cf95301565eb273e5b0dd8b35a79de1b47eab226e54d1d305cebae9",
+    "sources/vi-launcher-product-id/host_contract.cpp": "66ce79f1243f0fba7359c117f57d8ed4f8deb50de74f6c705c81478042eca82a",
+    "sources/vi-launcher-product-title/product_title.cpp": "79cd03e6007c76eac5e175a5ca06347aa588367ec2ea987bc8615a252fa5d254",
+    "sources/vi-launcher-product-title/host_contract.cpp": "f14f7323c9191caeb9cf5d504dbb8bcaea2ad495f1974b79ae8e9b0102d7e8b9",
+    "sources/vi-launcher-setup/setup.cpp": "32df6ee732c9feccaddb549459a18472be1fb0326d1d0f7109ca98f05cc609ac",
+    "sources/vi-launcher-setup/host_contract.cpp": "3eea9017ce231406fbbde9d4fd80572671819f37b243901ffa9a8fd9d3b1bfea",
+    "sources/vi-launcher-station/station.cpp": "ca4af5ec603ac6c8a7dc77a16c894f3b500db8079172c611fcb9751cc2825cff",
+    "sources/vi-launcher-station/host_contract.cpp": "e996ad94dc6cce6cc061d55be401134f545d887c3f462b521e3292c65f84f26e",
+    "sources/vi-launcher-timer-close/timer_close.cpp": "8ecc7bd6eb83ba0cc837da508b55419a34e6d7c96d7587eb78ad5bcabdfad9bc",
+    "sources/vi-launcher-timer-close/host_contract.cpp": "d7ce3010b991200e74a45b9b089602c78e94c2e3a4e58ba57cedf7325209428d",
+    "sources/vi-launcher-timer-init/timer_init.cpp": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b",
+    "sources/vi-launcher-timer-init/host_contract.cpp": "170a09813f2c9213cc4816d71c8a1204ff3007be1df3d992fccb707d69bca739"
   },
   "additional_implementations": [
     {
@@ -19935,11 +20287,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1285,
-    "authored_default_inputs": 1283,
+    "selected_inputs": 1307,
+    "authored_default_inputs": 1305,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1011,
-    "compiled_body_bytes_from_accepted_inputs": 429512,
+    "emitted_function_definitions_including_helpers": 1033,
+    "compiled_body_bytes_from_accepted_inputs": 432396,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19952,7 +20304,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 972
+    "package_selected_inputs": 994
   },
   "startup_implementations": [
     {
@@ -34847,6 +35199,380 @@
       ],
       "host_files": [
         "sources/game-loop-game-loop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-clear-vram/clear_vram.cpp",
+      "source_sha256": "60afe6cad548152d278e92384c23b730dad7494db574e792c9b1c6d72c9e06bd",
+      "object_sha256": "17e9ddb4a0e92b822b18381dd0002a246e15a15b0ba19a5a47543fca52df470d",
+      "emitted_functions": [
+        {
+          "name": "ClearVRAM__FUcUcUcUc",
+          "compiled_body_bytes": 704
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-clear-vram/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-ctor/launcher_ctor.cpp",
+      "source_sha256": "dd3834493226ed130e89c24083ddffd943858cd1625266708e7fcd5c3d827d89",
+      "object_sha256": "aee0069ecab4a48096f8eac4a29b098703226b54c4369f6e68f3a5a2e2873975",
+      "emitted_functions": [
+        {
+          "name": "__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-ctor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-dtor/launcher_dtor.cpp",
+      "source_sha256": "6b1ded2dc9ef67b3d679e2ecdaa7ba8d8ff8ce3e4a184f622c7d9f3f14278efd",
+      "object_sha256": "d189342e5d202d3d687c9c21c0cd0781e5a93b302d0b3058ed4287960a5bbc4f",
+      "emitted_functions": [
+        {
+          "name": "_$_10VILauncher",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-eznet-cnf/exit_cnf.cpp",
+      "source_sha256": "5f0214453a3884990bfbb6a2821d6863b9352ce74fc9493f75f3864910bd1a26",
+      "object_sha256": "586d1f307e31b433a936757b4bad717bd1c636d393ac7f138677d69f42e8202b",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCnf",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-eznet-cnf/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-eznet-ctl/exit_ctl.cpp",
+      "source_sha256": "04a71dfbb480cae4ecee04e6e55c3218ee846a44b27446a6046d25d7d87889f6",
+      "object_sha256": "bd81867700654f78f1fa6cec06decc680562855388c4d1aad084f4b96feaea24",
+      "emitted_functions": [
+        {
+          "name": "exitEzNetCtl",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-eznet-ctl/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-eznet-down/down_interface.cpp",
+      "source_sha256": "e4ea5f69ac3b5b6a98775586b123cdb6f6eb7987bc9975c18c19eddc5e622d6e",
+      "object_sha256": "e523a65f3af84a02759630a004a46d1e02bd85c67a8efc7157b35fffad2cfc83",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlDownInterface",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-eznet-down/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-free/launcher_free.cpp",
+      "source_sha256": "1a4ac5c14da404bd93bbebbdc3f5d2316a9e6c1c3f17c32f6e0320a08f0d20d3",
+      "object_sha256": "109d4fbc854262fbfd80c32352aa0ea97bb40b45c978c28ed6490223a5dd117e",
+      "emitted_functions": [
+        {
+          "name": "Free__10VILauncher",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-free/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-init/launcher_init.cpp",
+      "source_sha256": "5d95fb54ca4200b499db267b733b60b23a813b4402c02bf6f54a115ed4b7ebbe",
+      "object_sha256": "e1bce58132aedaa225f4b276486d8451c71ba40467c8397180252849889e398c",
+      "emitted_functions": [
+        {
+          "name": "Init__10VILauncherb",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-language-get/language_get.cpp",
+      "source_sha256": "93aa6b43b260786a7e260aa89ae4ed358f781ea3326da59413ece7fe8cf0f5c9",
+      "object_sha256": "ca8e9fd111a66f6a4e36cf9890b7f168040e9235c66a345e21e31ba3702f3699",
+      "emitted_functions": [
+        {
+          "name": "GetDefault__10VILanguage",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-language-get/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-language-set/language_set.cpp",
+      "source_sha256": "bf896a62a4c67714f72c5ee174ef8de1f60105f2cc09698236fe16c8d26d72ef",
+      "object_sha256": "aa4fb797d78a744e4372f2a4a3d86a35d720ab6cb6549df26becad7a1d899607",
+      "emitted_functions": [
+        {
+          "name": "SetDefault__10VILanguage12VILanguageID",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-language-set/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-load-exec/load_exec.cpp",
+      "source_sha256": "f5283a80eeacd5d409bde777577176695017e5f5954beca6c3cfb2dc9d0d1058",
+      "object_sha256": "c57f115fd8f6bde37c75487f8b25b7d6f1654ac7cd4160b60bfc548c7a659cdf",
+      "emitted_functions": [
+        {
+          "name": "LoadExecPS2",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-load-exec/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-loading/loading.cpp",
+      "source_sha256": "9e5527548d6f1c730a5ca97baea506e138f926b39965421b09a9e208a8302ab4",
+      "object_sha256": "62e159489079afe845598f353e4ba1ae1434721708d9f0c8e533d113f88ece39",
+      "emitted_functions": [
+        {
+          "name": "VIDisplayLoadingScreen__Fb",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-loading/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-net-check/net_check.cpp",
+      "source_sha256": "a1537bba04207ad4512a6f415db539b3a5a9d6fed78164a41df708a0e3a08fea",
+      "object_sha256": "62839670f479976129e5ea8bd2b8a3c002d395bfaf47f16a17d6e182c3ac213b",
+      "emitted_functions": [
+        {
+          "name": "CheckNetwork__15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-net-check/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-net-ctor/net_ctor.cpp",
+      "source_sha256": "34bde2ada00542fbb7c08027817ad70b964b9debdf6a97bd5af41eec918968a5",
+      "object_sha256": "26bcfcb9976a271a8b45f29d760307678acdf915ef88193bf125e9cdc55e2ea2",
+      "emitted_functions": [
+        {
+          "name": "__15VINetworkStatus",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-net-ctor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-net-dtor/net_dtor.cpp",
+      "source_sha256": "efe89cd5c9100f20e407d75b87f04fb81eb1db931ca6611348f9e0ad99222a49",
+      "object_sha256": "df07f18140eeefb26256566a5b860d38ac29d62c5f0dd4ffdbe2357e0a498ac1",
+      "emitted_functions": [
+        {
+          "name": "_$_15VINetworkStatus",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-net-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-net-init/net_init.cpp",
+      "source_sha256": "5a26b2aaa805cf56435b18191030cc5601861c28653cc8ae4a3098eb09c99074",
+      "object_sha256": "091d32f0bbccd865ba7fafcc4c9912cc388684749bf3e86e3ba54f626139b734",
+      "emitted_functions": [
+        {
+          "name": "Initialize__15VINetworkStatus",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-net-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-product-id/product_id.cpp",
+      "source_sha256": "03a525420cf95301565eb273e5b0dd8b35a79de1b47eab226e54d1d305cebae9",
+      "object_sha256": "3ede2d34c9becba9a9991c265b0c2eb93d72da8dd46f84ec2aa58319f9d2d105",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductId__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-product-id/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-product-title/product_title.cpp",
+      "source_sha256": "79cd03e6007c76eac5e175a5ca06347aa588367ec2ea987bc8615a252fa5d254",
+      "object_sha256": "dc386eec27810d9f45c16e79921907d88ae75334ea9646ebe8db593875a9d38f",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardSetProductTitle__FPCc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-product-title/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-setup/setup.cpp",
+      "source_sha256": "32df6ee732c9feccaddb549459a18472be1fb0326d1d0f7109ca98f05cc609ac",
+      "object_sha256": "848bb1e6eebd994b698080b1321fedf545b4b56c93e4c952f82cd5b3e3fdc740",
+      "emitted_functions": [
+        {
+          "name": "Setup__10VILauncher",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-setup/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-station/station.cpp",
+      "source_sha256": "ca4af5ec603ac6c8a7dc77a16c894f3b500db8079172c611fcb9751cc2825cff",
+      "object_sha256": "b6b7841048be0158792fb9014fe99e558dc796762c0eefb7c018bb1315b50a34",
+      "emitted_functions": [
+        {
+          "name": "Station__10VILauncheriPCcN22i",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-station/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-timer-close/timer_close.cpp",
+      "source_sha256": "8ecc7bd6eb83ba0cc837da508b55419a34e6d7c96d7587eb78ad5bcabdfad9bc",
+      "object_sha256": "00185af413a39ac2fefea55290d572bddb605211a23ba30f0d1e3f0a56294380",
+      "emitted_functions": [
+        {
+          "name": "Close__7VITimer",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-timer-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "vi-launcher",
+      "source": "sources/vi-launcher-timer-init/timer_init.cpp",
+      "source_sha256": "988d97365b44eafe216444806df2e2afd9d3c65dbe0fd9c124f1e507db1ded0b",
+      "object_sha256": "29b8d19047c74027cf2650051d20181660d3c4591de870e25c4133a6150b0b4c",
+      "emitted_functions": [
+        {
+          "name": "Init__7VITimer",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/vi-launcher-timer-init/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
