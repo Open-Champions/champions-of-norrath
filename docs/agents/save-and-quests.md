@@ -43,3 +43,7 @@ Observed at `0x001be638`, 364 bytes; the reviewed compile emits 432. Same record
 ## AsciiString2Sjis__FPUcPUs
 
 Observed at `0x0024fc10`, 160 bytes; the reviewed compile emits 148. For each source byte it calls `Ascii2Sjis__FUc`, swaps the low two bytes of the result, and stores one halfword. A zero halfword terminates the output. The host check substitutes a stand-in for `Ascii2Sjis__FUc`; the real converter's table is not part of this package. Opens import `Ascii2Sjis__FUc` (and `strlen`).
+
+## textHandler__FPUci
+
+Observed at `0x002ca8d0`, 488 bytes; the reviewed compile emits 436. Symbols (`nm` sizes): `inMsg` `0x008d8938`, 1008 bytes (eight 126-byte slots), `msgTimeout` `0x008d8d28`, 32 bytes (eight words), `outMsg` `0x008d88b8`, 128 bytes, `waiting` `0x00486dac`, 4 bytes. A message shifts slots and words up one place (index 6 to 0), copies `size` bytes into slot 0 (unbounded), and zeroes `msgTimeout[0]`. If slot 0 matches `outMsg` on bytes 0, 1, 2 and on `slot[0] + 1` bytes from byte 3, `outMsg` byte 0 becomes 1, byte 3 becomes 32, bytes 4 and 1 become 0, and `waiting` is cleared. The registrar (`dataHandle` set by the net registration) is not in this function; what the fields mean is unknown (inferred only: received text lines and an outgoing text buffer). Opens imports `inMsg`, `msgTimeout`, `outMsg`, `waiting`, `memcpy`, `memcmp`.
