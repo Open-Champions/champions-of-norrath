@@ -381,6 +381,20 @@ def sc_auto_set_state(rng):
             'vstubs': {VSTUB: ('virt152', ['o', 'i'], None)}}
 
 
+def sc_auto_trigger(rng):
+    mem = new_object(rng)
+    vtable(rng, mem, {136: (VSTUB, rng.choice([0, 8, -8, 0x70]))})
+    put32(mem, OBJ + 284, rng.choice([0x40, 0x40, 0x40, 0, 0x3F, 0xFFFFFFFF]))
+    put32(mem, OBJ + 288, rng.choice([0, 1, 1, 5]))
+    put32(mem, OBJ + 376, rng.choice([0, 1, 1, 1, 2, 0xFFFFFFFF]))
+    name = rng.choice([b'gothtrap', b'GothTrap', b'GOTHTRAP', b'gothtrapx', b'fayactuator', b'FayActuator',
+                       b'fayactuato', b'', b'zzz'])
+    for i, c in enumerate(name + b'\0'):
+        mem[OBJ + 76 + i] = c
+    return {'mem': mem, 'args': [OBJ, rng.choice([0, 7, -1])], 'compare': whole_object(),
+            'vstubs': {VSTUB: ('virt136', ['o'], None)}}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -404,6 +418,11 @@ reg('setState__8AutoPropi', W + 'auto-prop-set-state/set_state.cpp', sc_auto_set
     {'modelGetActiveChunks__FP12_modelHeaderi': (['i', 'i'], ('q', [0, 1, 0x8877665544332211, 0xFFFFFFFFFFFFFFFF, 0x80000000])),
      'animAdd__FP14AnimationStateP15AnimationHeaderi': (['o', 'i', 'i'], None),
      'animSetToEnd__FP14AnimationState': (['o'], None)})
+
+reg('msg_trigger__8AutoPropi', W + 'auto-prop-trigger/trigger.cpp', sc_auto_trigger,
+    {'strcasecmp': (['c', 'c'], ('i', [0, 0, 1, -1, 32])),
+     'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
+     'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
