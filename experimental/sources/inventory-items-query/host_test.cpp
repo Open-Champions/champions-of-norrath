@@ -16,7 +16,7 @@ static unsigned put(const void* object) {
     }
     return 0;
 }
-namespace { const void* host_resolve(unsigned word) { return table[word - 1]; } }
+namespace inventory_items { const void* host_resolve(unsigned word) { return table[word - 1]; } }
 
 struct Desc { unsigned name; };
 static Desc descs[16];
