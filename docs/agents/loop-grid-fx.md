@@ -317,8 +317,8 @@ comparison: compiled bodies are larger than the image extents.
 
 - The meaning of definition bytes 0..15 and 28..79 beyond the words listed above, and the
   role of `P_Pop__Fv` (a 4-byte stub in the image).
-- Why `updatePS` returns "live" for the whole 32-update idle window before deletion
-  (observed count 31, purpose not inferred).
+- What the idle threshold of 32 updates before `P_DeleteParticleSystem` is for (the old
+  count must be 31 or more; the reason is not inferred).
 - Whether any caller depends on `objectFindObject__FPc` returning a stack word read after
   the call (it reads `found[0]` only).
 - The real capacity of `taskList`, and whether `scriptParticles[3]` is a terminator or only
