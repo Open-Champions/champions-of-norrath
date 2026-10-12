@@ -2,7 +2,7 @@
 #include "../push_physics_prop.cpp"
 #include "../../ctors-lava-wraith-detail/host_support.hpp"
 using namespace hs;
-unsigned char norrath_ctors_lava_wraith_view_448a70[4];
+unsigned char norrath_actors_b_view_448a70[4];
 static unsigned char* obj;
 static char names[3][4];
 extern "C" unsigned norrath_game_object_construct(void* object, const void* point, void* map, char** arguments) {
@@ -37,7 +37,7 @@ static void run_case(float scale) {
     for (int i = 0; i < 12; ++i) { want.b[16 + i] = pt[i]; want.b[232 + i] = pt[i]; want.b[96 + i] = pt[i]; }
     // x at +16, y at +20, z at +24; the +96 copy is taken while z is raised by the scale
     want.w(104, fbits(7.25f + scale));
-    want.w(256, fbits(scale)); want.w(72, low(norrath_ctors_lava_wraith_view_448a70));
+    want.w(256, fbits(scale)); want.w(72, low(norrath_actors_b_view_448a70));
     want.w(276, low(names[2])); want.w(268, low(names[0])); want.w(272, low(names[1]));
     want.w(260, 0x1000 + 4); want.w(264, 0x1000 + 8);
     want.w(76, 0); want.w(32, fbits(scale + scale)); want.w(28, fbits(scale * [] { unsigned u = 0x3f999999u; float f; std::memcpy(&f, &u, 4); return f; }()));

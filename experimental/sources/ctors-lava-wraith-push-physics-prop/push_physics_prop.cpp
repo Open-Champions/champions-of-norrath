@@ -17,7 +17,7 @@ extern "C" unsigned norrath_construct_PushPhysicsProp(void* object, const void* 
     (void)norrath_game_object_construct(object, &local, nullptr, nullptr);
     const Address a = address(object);
     write_word(a + 256u, float_bits(scale));
-    write_word(a + 72u, address_bits(norrath_ctors_lava_wraith_view_448a70));
+    write_word(a + 72u, address_bits(norrath_actors_b_view_448a70));
     write_word(a + 276u, address_bits(second));
     write_word(a + 268u, address_bits(lump));
     write_word(a + 272u, address_bits(first));

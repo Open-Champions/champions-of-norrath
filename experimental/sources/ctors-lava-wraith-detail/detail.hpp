@@ -29,7 +29,7 @@ unsigned norrath_construct_Torch(void* object, const void* point, char** argumen
 void* norrath_lump_find_resource(char* lump_name, char* resource_name);
 void norrath_body_init(void* body, float a, float b, float c, float d, float e);
 unsigned norrath_actor_add_run_list(void* object);
-extern unsigned char norrath_ctors_lava_wraith_view_448a70[];
+extern unsigned char norrath_actors_b_view_448a70[];
 unsigned norrath_construct_PushPhysicsProp(void* object, const void* point, short type, char* lump, char* first, char* second, float scale);
 int norrath_game_object_find_tag_int(void* object, char* tag, int occurrence);
 int strcmp(const char* left, const char* right);
@@ -45,6 +45,18 @@ extern unsigned char norrath_ctors_lava_wraith_view_46cd50[];
 extern unsigned char norrath_ctors_lava_wraith_view_46cd60[];
 extern unsigned char norrath_ctors_lava_wraith_view_46cd70[];
 unsigned norrath_construct_PushTrigger(void* object, const void* point, int type, char** arguments);
+int norrath_game_object_e_rand(void* object);
+float norrath_player_treasure_ramp();
+float norrath_game_object_find_tag_float(void* object, char* tag, int occurrence);
+// Original createRandom__4itemPQ24item11descriptioniiii at 0x104440 and
+// create__4itemPcPQ24item11descriptionii at 0x105f60. Not defined here.
+int norrath_item_create_random(void* description, int level, int a, int b, int c);
+unsigned norrath_item_create(char* name, void* description, int a, int b);
+extern unsigned char norrath_ctors_lava_wraith_view_448fb0[];
+extern unsigned char norrath_creature_view_484cac[];
+extern unsigned char norrath_ctors_lava_wraith_view_4853d0[];
+extern unsigned char norrath_ctors_lava_wraith_view_4853d8[];
+unsigned norrath_construct_WeaponRack(void* object, const void* point, int type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
