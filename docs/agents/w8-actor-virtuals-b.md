@@ -16,10 +16,10 @@ the reviewed EE binutils from that image's symbol table and code; no listing was
 | `getModel__10AutoObject` | 0x00314de8 | 8 | `w8-actor-virtuals-b-get-model-autoobject` |
 | `msg_run__10HateBridge` | 0x00226468 | 124 | `w8-actor-virtuals-b-msg-run-hatebridge` |
 | `msg_draw__10Teleporter` | 0x0021ce78 | 8 | `w8-actor-virtuals-b-msg-draw-teleporter` |
-| `msg_run__10Teleporter` | 0x00216380 | 632 | `w8-actor-virtuals-b-msg-run-teleporter` |
+| `msg_run__10Teleporter` | 0x00216380 | 636 | `w8-actor-virtuals-b-msg-run-teleporter` |
 | `clone__7Trigger` | 0x00115d80 | 336 | `w8-actor-virtuals-b-clone-trigger` |
 | `clone__11MissileTrap` | 0x00124a70 | 272 | `w8-actor-virtuals-b-clone-missiletrap` |
-| `clone__8FireBomb` | 0x001284e0 | 272 | `w8-actor-virtuals-b-clone-firebomb` |
+| `clone__8FireBomb` | 0x001284e0 | 304 | `w8-actor-virtuals-b-clone-firebomb` |
 | `clone__9Container` | 0x001154d8 | 368 | `w8-actor-virtuals-b-clone-container` |
 | `clone__9WorldPart` | 0x00127580 | 272 | `w8-actor-virtuals-b-clone-worldpart` |
 | `clone__7Shooter` | 0x00124b80 | 332 | `w8-actor-virtuals-b-clone-shooter` |
@@ -83,8 +83,7 @@ RC9type_info`).
 
 ## Checks performed
 
-- Each source compiles with the reviewed EE `g++ 15.2.0` `authored_cpp` flags (no warnings
-  treated as errors in that profile; the object defines only the named function, plus
+- Each source compiles with the reviewed EE `g++ 15.2.0` `authored_cpp` flags (the object defines only the named function, plus
   one local helper symbol `_ZN12_GLOBAL__N_1L4emitEPvPKh` in the Teleporter `msg_run`).
 - Each `host_check.cpp` passes with the system `c++ -std=c++17 -Wall -Wextra -Werror`.
   The checks replace the callees with recording stubs and assert call order, arguments,

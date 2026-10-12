@@ -1,4 +1,4 @@
-// Observed msg_run__10Teleporter at 0x00216380, 632 bytes.
+// Observed msg_run__10Teleporter at 0x00216380, 636 bytes.
 // Calls objectActivationCheck__8Creaturei(object, 600) and ignores the result.
 // Then emits two particles, one with the data object at 0x0042c670 (symbol
 // teleportParticle1) and one with the one at 0x0042c6c0 (teleportParticle2). Each
