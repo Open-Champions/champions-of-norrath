@@ -70,7 +70,7 @@ ALIAS = {
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
 }
 # data symbols the authored object may import -> original address
-DATA = {}
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0}
 
 
 def exe_symbols():
@@ -335,6 +335,16 @@ reg('sleepMonsters__8creaturev', 'w8-actor-virtuals-c-sleep-monsters/sleep_monst
     {'objectIterateRunLists__FPFP10GameObject_v': ('iterate', None),
      'listDestroy__FP8ListHead': (['o'], None)})
 
+def sc_auto_passable(rng):
+    mem = new_object(rng)
+    put32(mem, OBJ + 12, rng.choice([0, 1, 0xFFFFFFFE, 0xFFFFFFFF, 0x100, rng.randrange(1 << 32)]))
+    put32(mem, OBJ + 284, rng.choice([0, 1, 2, 3, 0xFFFFFFFE, 0xFFFFFFFF]))
+    put32(mem, OBJ + 396, rng.choice([0, 5, 0xFFFFFFFF, 1000]))
+    put32(mem, 0x4844A0, rng.choice([0, 0x30050000, 0x12345678]))
+    return {'mem': mem, 'args': [OBJ, rng.choice([0, 1, 1, 0x100, -1])],
+            'compare': whole_object() + list(range(0x4844A0, 0x4844A4))}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -349,6 +359,10 @@ reg('msg_trigger__11MissileTrapi', W + 'missile-trap-trigger/trigger.cpp', sc_ob
      'objectRemoveFromRunList__FP10GameObject': (['o'], ('i', [0, 7, 0x40000000, 0xFFFFFFFF]))}, returns=True)
 reg('setPassableState__8HackDoorb', W + 'hack-door-passable/set_passable_state.cpp', sc_obj_bool,
     {'setPassableState__8AutoPropb': (['o', 'i'], None)})
+
+reg('setPassableState__8AutoPropb', W + 'auto-prop-passable/set_passable_state.cpp', sc_auto_passable,
+    {'worldSetDoorCollision__FP12_worldHeaderii': (['i', 'i', 'i'], ('i', [0, 1, 99])),
+     'worldMoveDoor__FP12_worldHeaderiG6Point3s': (['i', 'i', 's12', 'i'], ('i', [0, 5, 77]))})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
