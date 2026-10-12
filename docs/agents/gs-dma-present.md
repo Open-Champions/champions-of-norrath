@@ -67,6 +67,37 @@ and every stepper edge. Fresh EE compilation passed with no new imports.
 Inferred: the packet words are DMA/GIF descriptors. Unknown: hardware
 packet effects, FCSR mode, caller argument meanings, and valid color ranges.
 
+## reloadDMA__Fi
+
+Observed at `0x0015ed18`, 2488 bytes. Always returns 1. An uninitialized
+engine with any cause but -1 runs sync/ei and returns. Cause -2 bumps
+`donesGot.753` when `channelDone.747` has bit 1 (else clears
+`flushing.755`) and stores 2 at `0x12001000`. Cause -1 flips
+`readBuffer.745`, marks initialized, clears the bucket, `texTypes.758`,
+`sentDone.752`, both done counters, points all four texture queues at the
+draw-record head, and sets `channelDone.747` to 0 (2 with an empty head).
+A 2-valued `channelDone.747` with matching counters scans bucket slots for
+a new head, locking and skipping nodes. The drain masks `channelBusy.746`
+with `~(1u << (cause & 31))`, walks the tex/vif queues against DMA
+counters, sweeps on cause 1, repoints on cause 2, and honors `flushing.755`.
+Uploads build GIF tags at computed tex/vif list addresses (lock/cacheIn
+selected by halfwords, s3 budget vs `drawSizeOverEnable`), close with
+`0x70000000`, kick lengths at `0x1000a000`/`0x10009000`, and flip the lists.
+The tail signals `endDrawSemaphore` (EIntr/SignalSema/DIntr for cause -1,
+iSignalSema otherwise) once the bucket reaches 8 with idle channels. All
+21 state words are defined here with file values (zeros, `drawSizeOverEnable`
+1); the zero-initialized ones land in BSS rather than `.sdata` under the
+reviewed profile. Host cases cover entry gating, both -2 arms, reframe,
+tex/vif drains, the cause-1 sweep, cause-2 repoint, flushing return, both
+semaphore tails, upload/cachein/small paths with exact store words, the s3
+budget trip, the vif 6-node batch close, and the refill lock walk. Fresh EE
+compilation passed with no new imports.
+
+Inferred: computed addresses are uncached DMA-list aliases; the dead tag
+accumulator and dead stack slots carry no behavior. Unknown: hardware DMA
+effects, texture heap layout, valid counter ranges, and the texture
+halfword meanings.
+
 ## makeSamplePacket__Fb
 
 Observed at `0x0018f1f8`, 1492 bytes. Builds 577 quadwords, including two
