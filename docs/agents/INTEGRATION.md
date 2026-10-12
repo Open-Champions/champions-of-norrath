@@ -3836,6 +3836,46 @@ entries starting at the integrator's current end of plan. The worker's own
 count (1195 to 1236) was measured on an older base and is not the official
 delta.
 
+## agents/w8-startup-sce-a
+
+Merged (the branch notes carry the five summary sections). Thirty-four of the
+35 units with fresh `input_order` values 1908 through 1941: 34 emitted
+functions (2984 compiled body bytes, not original-byte matches). The package
+has two kinds of check. Twenty `host_contract.cpp` programs run the C++ bodies
+against mocks; all 20 build and exit 0 here. Fourteen `host_check.cpp`
+programs (syscall stubs and one assembly body) are byte comparers that take
+the private executable as an argument; the integrator does not read the
+executable, so those 14 were **not** run, and the byte-match statements in
+the notes are the worker's only. They are recorded in the snapshot as host
+file references, like the earlier gs-dma-kernel stubs. w8-startup-sce-a-ctype-table
+(`_ctype_`) was **not** selected: its only check, `host_check_data.py`, is not
+in the branch (the file does not exist in the tree), so the unit has no
+committed test and the snapshot checker rejects it; its source stays in the
+snapshot, unselected. The worker did not run a full partial build; the
+official counts are below. No game binary or disassembly listing was
+committed. 1513 function bodies, 1942 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1593 |
+| After | 1586 |
+| Closed | 25 |
+| Opened | 18 |
+
+Closed: `DPRINT`, `DeleteThread`, `DisableDmac`, `GetOsdConfigParam`,
+`Handler__7VITimeri`, `PowerOffCB`, `PowerOffHandler__FPv`,
+`PowerOffThread__FPv`, `RemoveDmacHandler`, `RotateThreadReadyQueue`,
+`SetArg`, `SetOsdConfigParam`, `SetTimerAlarm`, `SuspendThread`,
+`TerminateLibrary`, `TimerUSec2BusClock`, `VIDisplayScreen16__FPCcib`,
+`VIGetGameOptions__Fv`, `VIStartKeyboardDriver__Fv`, `VSync`, `VSync2`,
+`WakeupThread`, `_LoadExecPS2`, `__wrap_free`, `__wrap_memalign`.
+
+Opened: `AllocTimerCounter`, `InitTLB`, `SetTimerHandler`, `StartTimerCounter`,
+`free`, `gCdFile`, `lgKbMInit`, `memalign`, `sCdRmode`, `sGameOptions`,
+`sceCdCbPoff_Gp`, `sceCdDiskReady`, `sceCdPoffCbdata`, `sceCdPoffCbfunc`,
+`sceCdPowerOff`, `sceDevctl`, `sceGifPkEnd`, `sceGifPkRefLoadImage`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

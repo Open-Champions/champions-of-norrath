@@ -24447,6 +24447,481 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-runtime-libc-b-write/write.cpp"
+    },
+    {
+      "input_order": 1910,
+      "component": "w8-startup-sce-a-bounce",
+      "object_name": "bounce.o",
+      "private_object_sha256": "f3aed5f3b1e6510abe997c99ef82746fdeaec9aa7c47ca44b776f2715e51064d",
+      "emitted_functions": [
+        {
+          "name": "Bounce__FiUsPv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-bounce/bounce.cpp"
+    },
+    {
+      "input_order": 1911,
+      "component": "w8-startup-sce-a-cd-poff-intr",
+      "object_name": "cd_poff_intr.o",
+      "private_object_sha256": "60489f4bf28d2ddfdfe5dbec842134488863f88be473d9e64b855368e6af938b",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_Poff_Intr",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-cd-poff-intr/cd_poff_intr.cpp"
+    },
+    {
+      "input_order": 1912,
+      "component": "w8-startup-sce-a-delete-thread",
+      "object_name": "delete_thread.o",
+      "private_object_sha256": "eff645971c53011528238ef89616adce0a7134db06015070a7597b5c350bd6a9",
+      "emitted_functions": [
+        {
+          "name": "DeleteThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-delete-thread/delete_thread.S"
+    },
+    {
+      "input_order": 1913,
+      "component": "w8-startup-sce-a-disable-dmac",
+      "object_name": "disable_dmac.o",
+      "private_object_sha256": "1d765574096bdcbf3bc8ac2128b97b9d29b8b1db8ac652c6f108cc14ee59bfda",
+      "emitted_functions": [
+        {
+          "name": "DisableDmac",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-disable-dmac/disable_dmac.cpp"
+    },
+    {
+      "input_order": 1914,
+      "component": "w8-startup-sce-a-disable-dmac-service",
+      "object_name": "disable_dmac_service.o",
+      "private_object_sha256": "5e643a40748c37b6aa587291de0c25ecc768acaadf1ef8465df1ac3f81ac6781",
+      "emitted_functions": [
+        {
+          "name": "_DisableDmac",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-disable-dmac-service/disable_dmac_service.S"
+    },
+    {
+      "input_order": 1915,
+      "component": "w8-startup-sce-a-dprint",
+      "object_name": "dprint.o",
+      "private_object_sha256": "9d9bd8b7053e6a71cac315c44af6c475c8c9272abc2a73a148bd133814071b16",
+      "emitted_functions": [
+        {
+          "name": "DPRINT",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-dprint/dprint.cpp"
+    },
+    {
+      "input_order": 1916,
+      "component": "w8-startup-sce-a-get-osd-config-param",
+      "object_name": "get_osd_config_param.o",
+      "private_object_sha256": "4f893e6fc7d950023c89a99bd6df4ae30bca6f650ed75d1b0b49e3172065f7c6",
+      "emitted_functions": [
+        {
+          "name": "GetOsdConfigParam",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-get-osd-config-param/get_osd_config_param.S"
+    },
+    {
+      "input_order": 1917,
+      "component": "w8-startup-sce-a-i-set-alarm",
+      "object_name": "i_set_alarm.o",
+      "private_object_sha256": "b09b9202990a32c9b02d704065a0a9bb1022a6c96d5b8df334af1f03478ece30",
+      "emitted_functions": [
+        {
+          "name": "iSetAlarm",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-i-set-alarm/i_set_alarm.S"
+    },
+    {
+      "input_order": 1918,
+      "component": "w8-startup-sce-a-load-exec-ps2",
+      "object_name": "load_exec_ps2.o",
+      "private_object_sha256": "7d2681768503cfea2b6ffacb807794162285094433be641b8b766383f8e72f4e",
+      "emitted_functions": [
+        {
+          "name": "_LoadExecPS2",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-load-exec-ps2/load_exec_ps2.S"
+    },
+    {
+      "input_order": 1919,
+      "component": "w8-startup-sce-a-power-off-cb",
+      "object_name": "power_off_cb.o",
+      "private_object_sha256": "bd732e46da59ad3c25671f0a44cbbf0159c9fb6462f0fd27f0978d222eebb7fa",
+      "emitted_functions": [
+        {
+          "name": "PowerOffCB",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-power-off-cb/power_off_cb.cpp"
+    },
+    {
+      "input_order": 1920,
+      "component": "w8-startup-sce-a-power-off-handler",
+      "object_name": "power_off_handler.o",
+      "private_object_sha256": "9b493fd51d48172f9953c6e3fe9dfaa4a0058a4ab731a786331480192f701b08",
+      "emitted_functions": [
+        {
+          "name": "PowerOffHandler__FPv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-power-off-handler/power_off_handler.cpp"
+    },
+    {
+      "input_order": 1921,
+      "component": "w8-startup-sce-a-power-off-thread",
+      "object_name": "power_off_thread.o",
+      "private_object_sha256": "284aee9227ecafd0e43bf0d4a3867e69b7e4283518e351d62d0c9843da1563df",
+      "emitted_functions": [
+        {
+          "name": "PowerOffThread__FPv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-power-off-thread/power_off_thread.cpp"
+    },
+    {
+      "input_order": 1922,
+      "component": "w8-startup-sce-a-remove-dmac-handler",
+      "object_name": "remove_dmac_handler.o",
+      "private_object_sha256": "f40ff30922ce9cdbf346cdcad2523916d07d748dcbb16857c6542dcd21d90eba",
+      "emitted_functions": [
+        {
+          "name": "RemoveDmacHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-remove-dmac-handler/remove_dmac_handler.S"
+    },
+    {
+      "input_order": 1923,
+      "component": "w8-startup-sce-a-rotate-thread-ready-queue",
+      "object_name": "rotate_thread_ready_queue.o",
+      "private_object_sha256": "2e908d143302d805646f355d5b49bcd6cbb4cd856091fdbe7b20c68b28bd795f",
+      "emitted_functions": [
+        {
+          "name": "RotateThreadReadyQueue",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-rotate-thread-ready-queue/rotate_thread_ready_queue.S"
+    },
+    {
+      "input_order": 1924,
+      "component": "w8-startup-sce-a-set-arg",
+      "object_name": "set_arg.o",
+      "private_object_sha256": "1eef1e1f742affa6955782013b69176e8e8cf58d158a79c64fdfdd1b3975a967",
+      "emitted_functions": [
+        {
+          "name": "SetArg",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-set-arg/set_arg.cpp"
+    },
+    {
+      "input_order": 1925,
+      "component": "w8-startup-sce-a-set-osd-config-param",
+      "object_name": "set_osd_config_param.o",
+      "private_object_sha256": "67fde006388f37a5b2518e9bbc46132e05324adc5ca9520d42757f95bc48408b",
+      "emitted_functions": [
+        {
+          "name": "SetOsdConfigParam",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-set-osd-config-param/set_osd_config_param.S"
+    },
+    {
+      "input_order": 1926,
+      "component": "w8-startup-sce-a-set-timer-alarm",
+      "object_name": "set_timer_alarm.o",
+      "private_object_sha256": "58908d442aeebe2109eb1aacbe4ad94d129334d17113aa0c298f52f066ec4d9a",
+      "emitted_functions": [
+        {
+          "name": "_ZL13alarm_handleriiiPv",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "SetTimerAlarm",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-set-timer-alarm/set_timer_alarm.cpp"
+    },
+    {
+      "input_order": 1927,
+      "component": "w8-startup-sce-a-set-vsync-flag",
+      "object_name": "set_vsync_flag.o",
+      "private_object_sha256": "04e8462712e8f76e3cf4ef9258f5df463ecf89b96ef495f06f45841fdb457fb7",
+      "emitted_functions": [
+        {
+          "name": "SetVSyncFlag",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-set-vsync-flag/set_vsync_flag.S"
+    },
+    {
+      "input_order": 1928,
+      "component": "w8-startup-sce-a-setarg-copy",
+      "object_name": "setarg_copy.o",
+      "private_object_sha256": "a45e4937165006a88d7351d573356a32f4a2bf60f6d09f9a97538e487e23872a",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_copy",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-setarg-copy/setarg_copy.S"
+    },
+    {
+      "input_order": 1929,
+      "component": "w8-startup-sce-a-setarg-pattern-kcopy",
+      "object_name": "setarg_pattern_kcopy.o",
+      "private_object_sha256": "d36154f9e79aef48de534a1c76bb58d88ed51197e681f3833245d01890c185bf",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_pattern_kcopy",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-setarg-pattern-kcopy/setarg_pattern_kcopy.S"
+    },
+    {
+      "input_order": 1930,
+      "component": "w8-startup-sce-a-setarg-setup",
+      "object_name": "setarg_setup.o",
+      "private_object_sha256": "bb536e0015a353090a8e2e74317f2c87f1db1c26116d0903da9dae88bc8bad02",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_setup",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-setarg-setup/setarg_setup.S"
+    },
+    {
+      "input_order": 1931,
+      "component": "w8-startup-sce-a-setarg-sysentry",
+      "object_name": "setarg_sysentry.o",
+      "private_object_sha256": "ed851370ef2cb45b1e85bc868605fc68483cecdc06a5a3b0ebf227dc75a11b69",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-setarg-sysentry/setarg_sysentry.cpp"
+    },
+    {
+      "input_order": 1932,
+      "component": "w8-startup-sce-a-suspend-thread",
+      "object_name": "suspend_thread.o",
+      "private_object_sha256": "ecb0a9e5a115695f2e51c7868850f930ee7e0abd7141b05050afac01168bc64b",
+      "emitted_functions": [
+        {
+          "name": "SuspendThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-suspend-thread/suspend_thread.S"
+    },
+    {
+      "input_order": 1933,
+      "component": "w8-startup-sce-a-terminate-library",
+      "object_name": "terminate_library.o",
+      "private_object_sha256": "b22f29572b074a7b0ffac07283da9da166fbe94cb9487648c399820b7d1a6615",
+      "emitted_functions": [
+        {
+          "name": "TerminateLibrary",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-terminate-library/terminate_library.cpp"
+    },
+    {
+      "input_order": 1934,
+      "component": "w8-startup-sce-a-timer-usec-to-bus-clock",
+      "object_name": "timer_usec_to_bus_clock.o",
+      "private_object_sha256": "32383f445642c3c3ccb3f99689b95b224c21327a7aa5d0293c9d34ced6a4ea82",
+      "emitted_functions": [
+        {
+          "name": "TimerUSec2BusClock",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-timer-usec-to-bus-clock/timer_usec_to_bus_clock.cpp"
+    },
+    {
+      "input_order": 1935,
+      "component": "w8-startup-sce-a-vi-display-screen16",
+      "object_name": "display_screen16.o",
+      "private_object_sha256": "0eb0cbb9256f81283a948f1c1b0abec24ce6a7fb5837d299c60252fd50af51a6",
+      "emitted_functions": [
+        {
+          "name": "VIDisplayScreen16__FPCcib",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vi-display-screen16/display_screen16.cpp"
+    },
+    {
+      "input_order": 1936,
+      "component": "w8-startup-sce-a-vi-get-game-options",
+      "object_name": "get_game_options.o",
+      "private_object_sha256": "77e9231aa5b715b1c533c8a47e786ff3de7e3955861a72031a814e822a640272",
+      "emitted_functions": [
+        {
+          "name": "VIGetGameOptions__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vi-get-game-options/get_game_options.cpp"
+    },
+    {
+      "input_order": 1937,
+      "component": "w8-startup-sce-a-vi-start-keyboard-driver",
+      "object_name": "start_keyboard_driver.o",
+      "private_object_sha256": "baa02aee0d1e36c7d80ebc277c40de3845854b1faf530eaf8ad96c099e6efddc",
+      "emitted_functions": [
+        {
+          "name": "VIStartKeyboardDriver__Fv",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vi-start-keyboard-driver/start_keyboard_driver.cpp"
+    },
+    {
+      "input_order": 1938,
+      "component": "w8-startup-sce-a-vi-timer-handler",
+      "object_name": "timer_handler.o",
+      "private_object_sha256": "7c76e008c8c095d4747e908a205e5cdcbc73864b23c2ad24452bcdc61217203e",
+      "emitted_functions": [
+        {
+          "name": "Handler__7VITimeri",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vi-timer-handler/timer_handler.cpp"
+    },
+    {
+      "input_order": 1939,
+      "component": "w8-startup-sce-a-vsync",
+      "object_name": "vsync.o",
+      "private_object_sha256": "fc69ddf8af5d99a594058f40b63b39ff3e0f0d4af84e83ded1239b0c00fd2420",
+      "emitted_functions": [
+        {
+          "name": "VSync",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vsync/vsync.cpp"
+    },
+    {
+      "input_order": 1940,
+      "component": "w8-startup-sce-a-vsync2",
+      "object_name": "vsync2.o",
+      "private_object_sha256": "e26420fc1ed16348576a66d3da69f56c94662282b9ec87f9aa1cd8005b0847e0",
+      "emitted_functions": [
+        {
+          "name": "VSync2",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-vsync2/vsync2.cpp"
+    },
+    {
+      "input_order": 1941,
+      "component": "w8-startup-sce-a-wakeup-thread",
+      "object_name": "wakeup_thread.o",
+      "private_object_sha256": "d5e4b27148a4139a429f1daa108e4f5dd69d1744741014ecf599442ea5e8f323",
+      "emitted_functions": [
+        {
+          "name": "WakeupThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-wakeup-thread/wakeup_thread.S"
+    },
+    {
+      "input_order": 1942,
+      "component": "w8-startup-sce-a-wrap-free",
+      "object_name": "wrap_free.o",
+      "private_object_sha256": "3ba25235824f316d48014efc2aed2aa21941ac948b7f03c332b84bfb7d5afedb",
+      "emitted_functions": [
+        {
+          "name": "__wrap_free",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-wrap-free/wrap_free.cpp"
+    },
+    {
+      "input_order": 1943,
+      "component": "w8-startup-sce-a-wrap-memalign",
+      "object_name": "wrap_memalign.o",
+      "private_object_sha256": "717b0134b675065fa78c0f1a312c2b64e8e087be5b2a7dce4de3577139757ba8",
+      "emitted_functions": [
+        {
+          "name": "__wrap_memalign",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-a-wrap-memalign/wrap_memalign.cpp"
     }
   ],
   "drafts": [
@@ -28719,7 +29194,76 @@
     "sources/w8-runtime-libc-b-tanf/tanf.cpp": "5df92987562d6ce49e69d42209bfc9ae8fc702c34f013283c71c7713b69789d9",
     "sources/w8-runtime-libc-b-tanf/tanf_host_test.cpp": "9fe1687a7f39f839d70fc6d6d4b516a63d46ee9790b2a0e148de4d6ff28cf967",
     "sources/w8-runtime-libc-b-write/write.cpp": "4be20b3d199cf678ca2306a7d13528276f66205511c75dcde1eb110ae173ba03",
-    "sources/w8-runtime-libc-b-write/write_host_test.cpp": "f592cb8e8b9e57fe8c4a3479d6a42d5afdd3cb046b3fabb358245355584e49ad"
+    "sources/w8-runtime-libc-b-write/write_host_test.cpp": "f592cb8e8b9e57fe8c4a3479d6a42d5afdd3cb046b3fabb358245355584e49ad",
+    "sources/w8-startup-sce-a-bounce/bounce.cpp": "76b3a5922307471921111e9f521c5ed00c4a3592d896d83c1b187778e354b7d9",
+    "sources/w8-startup-sce-a-bounce/host_contract.cpp": "d0c3b208683575a4cc0f9ac3cb81d33beb960a9354572f96dcb8297d493ce510",
+    "sources/w8-startup-sce-a-cd-poff-intr/cd_poff_intr.cpp": "18f73f43e1384dfe83783aaa0edd24e03014fe1d87833f34092cbd9a1149fa6e",
+    "sources/w8-startup-sce-a-cd-poff-intr/host_contract.cpp": "a2f7ec17156b56b55fdcd7bd48b46201c3d5bb7b99a5fd0e92786e089c4b6999",
+    "sources/w8-startup-sce-a-delete-thread/delete_thread.S": "e0f18d0523190aa15d848db920e7e43729fbfb39149de5e1596973fe5f3efa92",
+    "sources/w8-startup-sce-a-delete-thread/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-disable-dmac/disable_dmac.cpp": "39a3d8303fb7ff1f9c2827b6c9ca1695dba45709b40fe79d485ae11c035378d8",
+    "sources/w8-startup-sce-a-disable-dmac/host_contract.cpp": "c51ebb055b657663356ec64924dbceb22b7515e27654d887187efcffc3c8eeeb",
+    "sources/w8-startup-sce-a-disable-dmac-service/disable_dmac_service.S": "a510128c0cad78b00e62647644f58729b41973d6e44effc9dfb4be93a882b2a6",
+    "sources/w8-startup-sce-a-disable-dmac-service/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-dprint/dprint.cpp": "34c4360825b0aefa1943233e4718822a4527f650c73327f9361bdf3fb1e92616",
+    "sources/w8-startup-sce-a-dprint/host_contract.cpp": "e630cad03394d34dd6997613cd1335d19693538cb9f745b85851c1626e8e069c",
+    "sources/w8-startup-sce-a-get-osd-config-param/get_osd_config_param.S": "64b3492cf4f01ab1c2f528696733492be59a8e97bd9c605073c46e57c208cd93",
+    "sources/w8-startup-sce-a-get-osd-config-param/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-i-set-alarm/i_set_alarm.S": "f58a1a565e5a1e33fd71cf43fe9672f03ba9712c9374936854dbcf3a9d3e7357",
+    "sources/w8-startup-sce-a-i-set-alarm/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-load-exec-ps2/load_exec_ps2.S": "dd9beeb5f4dd4372fe208db83bf36eea1c2af9a9c3ffb7dfc8b41355dc45fe41",
+    "sources/w8-startup-sce-a-load-exec-ps2/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-power-off-cb/power_off_cb.cpp": "90aa9008aac09381c784cf14b10bf5ecc4de24256cd6816b3efd9a8c22b601eb",
+    "sources/w8-startup-sce-a-power-off-cb/host_contract.cpp": "640e28b24648e5bb3032a0cce5266ea1bbf5b6738ec026cf2422f2a5d26eac02",
+    "sources/w8-startup-sce-a-power-off-handler/power_off_handler.cpp": "1609b31345033dafa56c9ee96125002d78604ed3a39e5afa2097e2482fd5818f",
+    "sources/w8-startup-sce-a-power-off-handler/host_contract.cpp": "6bc9c1295760647ecd192bfdbed4fd64f96cffafdd0d343062b430b7e3dac99a",
+    "sources/w8-startup-sce-a-power-off-thread/power_off_thread.cpp": "3494fdbed6b10f0fd44680db7aae9127687e538bba465744395f7ef3537cec99",
+    "sources/w8-startup-sce-a-power-off-thread/host_contract.cpp": "588d0692b025d73c8015b8de0476b8b429fbacb8dfc41fb48e5772865a83fea9",
+    "sources/w8-startup-sce-a-remove-dmac-handler/remove_dmac_handler.S": "2120b58d9a82771adf6f37af6f4424176ae9ec0ad20dc0cdad5f2b0b8f0e8601",
+    "sources/w8-startup-sce-a-remove-dmac-handler/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-rotate-thread-ready-queue/rotate_thread_ready_queue.S": "7b49c68ada71f1b904800172e98fe3689887511632b37227b652a24acbd1463f",
+    "sources/w8-startup-sce-a-rotate-thread-ready-queue/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-set-arg/set_arg.cpp": "fa358bd3d3c847a29399addd874bce36d3f2579e8ef7931a77d44fc9c36c19d3",
+    "sources/w8-startup-sce-a-set-arg/host_contract.cpp": "7c12f3cdb699e167b1d0b9264b1819d617f5e3a375e0d552b79dd04ac8f04f92",
+    "sources/w8-startup-sce-a-set-osd-config-param/set_osd_config_param.S": "e75dfb47104f52719caa30493c2ac95172feee8a63292c2447af9a4e2dcb78a2",
+    "sources/w8-startup-sce-a-set-osd-config-param/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-set-timer-alarm/set_timer_alarm.cpp": "abff744cefa0c10b559d968b3e336535311198470341cc0447ff3371a905870a",
+    "sources/w8-startup-sce-a-set-timer-alarm/host_contract.cpp": "e33bfd0d3f4769ce672bf194f1965da22ba09a294d97cf3d2e9bbf414353f58a",
+    "sources/w8-startup-sce-a-set-vsync-flag/set_vsync_flag.S": "2b54fd1382f5d3a784c3cc0d711f2776426de110c99fd295220f8b6f0a3ad02d",
+    "sources/w8-startup-sce-a-set-vsync-flag/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-setarg-copy/setarg_copy.S": "08190c07516052882ff2f6519085485674f89e14cb3379e6fceaa239fdde5583",
+    "sources/w8-startup-sce-a-setarg-copy/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-setarg-pattern-kcopy/setarg_pattern_kcopy.S": "66ea0ff04fed92c07c8c607557b23d82aed85ad8032162439a3c4954de767b37",
+    "sources/w8-startup-sce-a-setarg-pattern-kcopy/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-setarg-setup/setarg_setup.S": "a4378d7dcc66c5ababfa15d25b7c3312b9621016a1d471fb879cf526b7b40ef6",
+    "sources/w8-startup-sce-a-setarg-setup/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-setarg-sysentry/setarg_sysentry.cpp": "a51327f85a8b27bec4acd87a9244cc41658b21e216b438b676ee109edf697fc2",
+    "sources/w8-startup-sce-a-setarg-sysentry/host_contract.cpp": "210786d7c8df5c2c8d7f32ab4c13a7438311d4fef5de7c5670a7174cec9ac558",
+    "sources/w8-startup-sce-a-suspend-thread/suspend_thread.S": "0f8aebcca4680eefae7e98f219ef402cf2fbe60a50c742edb71e5744be542639",
+    "sources/w8-startup-sce-a-suspend-thread/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-terminate-library/terminate_library.cpp": "291a98f2d7d6fe25ba24765d6564502e6b6a907ff915ad20291c2c8b2b7d419e",
+    "sources/w8-startup-sce-a-terminate-library/host_contract.cpp": "9fef9a7b8c2738e3dccc199ca02db292b394743b078a77a251d72d6ffe3c204f",
+    "sources/w8-startup-sce-a-timer-usec-to-bus-clock/timer_usec_to_bus_clock.cpp": "a9f6eb66ec6d3917ce33f2f556ee2ed84f8baf9f3cd21f482805fa347522597a",
+    "sources/w8-startup-sce-a-timer-usec-to-bus-clock/host_contract.cpp": "67f32a88f6393a978605ab0e50711d96ad4170ab7507b51261fe71352c428bed",
+    "sources/w8-startup-sce-a-vi-display-screen16/display_screen16.cpp": "915a2cfd763872d34ffe4931a79e929dcdf8b3a919d9563e36b7916edf675474",
+    "sources/w8-startup-sce-a-vi-display-screen16/host_contract.cpp": "6f912f19ef448ac6fbb6c81f98532e657c9d26db4ae90fffaa1f7961827bc276",
+    "sources/w8-startup-sce-a-vi-get-game-options/get_game_options.cpp": "196cae127cb6f91a2392c84214c2b84d90e6764d14669939bfb4a682c3765e19",
+    "sources/w8-startup-sce-a-vi-get-game-options/host_contract.cpp": "cd373df280905825b5c7826cefa1808b5763e46ac271b4b878116c9003cc155f",
+    "sources/w8-startup-sce-a-vi-start-keyboard-driver/start_keyboard_driver.cpp": "14786d15c76abb579b0bebad315eba46ece6223c09f3518dae415d23e2bbc309",
+    "sources/w8-startup-sce-a-vi-start-keyboard-driver/host_contract.cpp": "96f391673bd0b125f027b42efd58686fef97487d8b4d7d4a54cb9a3e57484cb7",
+    "sources/w8-startup-sce-a-vi-timer-handler/timer_handler.cpp": "213d591a41d38e061fde17c430355c2665e87d540821b2179967ce373c4bfe4e",
+    "sources/w8-startup-sce-a-vi-timer-handler/host_contract.cpp": "153d68a62bf8d35058107ef645c41529cbc47c98774fedafbe0de0dd51ac06d9",
+    "sources/w8-startup-sce-a-vsync/vsync.cpp": "eff603ed212d6a07593bedfd971707b21532d501bc49d0cd7a2d68a9546d3bf6",
+    "sources/w8-startup-sce-a-vsync/host_contract.cpp": "26b55fc3bfc127b24247d595a65207ea8152f56c0f6eb0e6124d569bf3c84651",
+    "sources/w8-startup-sce-a-vsync2/vsync2.cpp": "b3179e6e651c2d4032b69f7c78f112a3b9d94b161d5654df66515e2cf74c1e0f",
+    "sources/w8-startup-sce-a-vsync2/host_contract.cpp": "4afbade8e367b9b746fed1e2350390a29eabf74b7fa5d76575ed419b232fc264",
+    "sources/w8-startup-sce-a-wakeup-thread/wakeup_thread.S": "14fc41c77de0e34baa0a83d0d0d84b33ebc70a34199519343be821219ea600d5",
+    "sources/w8-startup-sce-a-wakeup-thread/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-a-wrap-free/wrap_free.cpp": "25706f94e6a852549b81cac06a3cb4e4bb93ffa137a6f6f6c041ca57fcf5581f",
+    "sources/w8-startup-sce-a-wrap-free/host_contract.cpp": "89a44a9a618cd08c2564eff19a343304f3a6d26441c98de757b1488eb5380eb9",
+    "sources/w8-startup-sce-a-wrap-memalign/wrap_memalign.cpp": "e2674ab75737c1fdd87c22012282b38d73c59ab05a915aca416ce44e77b30618",
+    "sources/w8-startup-sce-a-wrap-memalign/host_contract.cpp": "b532e83c7de9ae4b0aa93587f68e5ae45314dc91662ab505fa481525c4a6e5f2",
+    "sources/w8-startup-sce-a-ctype-table/ctype_table.cpp": "aed03768f7aa65e8cceced2fbc7a715b55a1c38536b1d10b39a971db2bffe096"
   },
   "additional_implementations": [
     {
@@ -29161,11 +29705,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1910,
-    "authored_default_inputs": 1908,
+    "selected_inputs": 1944,
+    "authored_default_inputs": 1942,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1481,
-    "compiled_body_bytes_from_accepted_inputs": 655256,
+    "emitted_function_definitions_including_helpers": 1515,
+    "compiled_body_bytes_from_accepted_inputs": 658240,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -29178,7 +29722,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1597
+    "package_selected_inputs": 1631
   },
   "startup_implementations": [
     {
@@ -53920,6 +54464,583 @@
       ],
       "host_files": [
         "sources/w8-runtime-libc-b-write/write_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-bounce/bounce.cpp",
+      "source_sha256": "76b3a5922307471921111e9f521c5ed00c4a3592d896d83c1b187778e354b7d9",
+      "object_sha256": "f3aed5f3b1e6510abe997c99ef82746fdeaec9aa7c47ca44b776f2715e51064d",
+      "emitted_functions": [
+        {
+          "name": "Bounce__FiUsPv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-bounce/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-cd-poff-intr/cd_poff_intr.cpp",
+      "source_sha256": "18f73f43e1384dfe83783aaa0edd24e03014fe1d87833f34092cbd9a1149fa6e",
+      "object_sha256": "60489f4bf28d2ddfdfe5dbec842134488863f88be473d9e64b855368e6af938b",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_Poff_Intr",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-cd-poff-intr/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-delete-thread/delete_thread.S",
+      "source_sha256": "e0f18d0523190aa15d848db920e7e43729fbfb39149de5e1596973fe5f3efa92",
+      "object_sha256": "eff645971c53011528238ef89616adce0a7134db06015070a7597b5c350bd6a9",
+      "emitted_functions": [
+        {
+          "name": "DeleteThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-delete-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-disable-dmac/disable_dmac.cpp",
+      "source_sha256": "39a3d8303fb7ff1f9c2827b6c9ca1695dba45709b40fe79d485ae11c035378d8",
+      "object_sha256": "1d765574096bdcbf3bc8ac2128b97b9d29b8b1db8ac652c6f108cc14ee59bfda",
+      "emitted_functions": [
+        {
+          "name": "DisableDmac",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-disable-dmac/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-disable-dmac-service/disable_dmac_service.S",
+      "source_sha256": "a510128c0cad78b00e62647644f58729b41973d6e44effc9dfb4be93a882b2a6",
+      "object_sha256": "5e643a40748c37b6aa587291de0c25ecc768acaadf1ef8465df1ac3f81ac6781",
+      "emitted_functions": [
+        {
+          "name": "_DisableDmac",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-disable-dmac-service/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-dprint/dprint.cpp",
+      "source_sha256": "34c4360825b0aefa1943233e4718822a4527f650c73327f9361bdf3fb1e92616",
+      "object_sha256": "9d9bd8b7053e6a71cac315c44af6c475c8c9272abc2a73a148bd133814071b16",
+      "emitted_functions": [
+        {
+          "name": "DPRINT",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-dprint/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-get-osd-config-param/get_osd_config_param.S",
+      "source_sha256": "64b3492cf4f01ab1c2f528696733492be59a8e97bd9c605073c46e57c208cd93",
+      "object_sha256": "4f893e6fc7d950023c89a99bd6df4ae30bca6f650ed75d1b0b49e3172065f7c6",
+      "emitted_functions": [
+        {
+          "name": "GetOsdConfigParam",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-get-osd-config-param/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-i-set-alarm/i_set_alarm.S",
+      "source_sha256": "f58a1a565e5a1e33fd71cf43fe9672f03ba9712c9374936854dbcf3a9d3e7357",
+      "object_sha256": "b09b9202990a32c9b02d704065a0a9bb1022a6c96d5b8df334af1f03478ece30",
+      "emitted_functions": [
+        {
+          "name": "iSetAlarm",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-i-set-alarm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-load-exec-ps2/load_exec_ps2.S",
+      "source_sha256": "dd9beeb5f4dd4372fe208db83bf36eea1c2af9a9c3ffb7dfc8b41355dc45fe41",
+      "object_sha256": "7d2681768503cfea2b6ffacb807794162285094433be641b8b766383f8e72f4e",
+      "emitted_functions": [
+        {
+          "name": "_LoadExecPS2",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-load-exec-ps2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-power-off-cb/power_off_cb.cpp",
+      "source_sha256": "90aa9008aac09381c784cf14b10bf5ecc4de24256cd6816b3efd9a8c22b601eb",
+      "object_sha256": "bd732e46da59ad3c25671f0a44cbbf0159c9fb6462f0fd27f0978d222eebb7fa",
+      "emitted_functions": [
+        {
+          "name": "PowerOffCB",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-power-off-cb/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-power-off-handler/power_off_handler.cpp",
+      "source_sha256": "1609b31345033dafa56c9ee96125002d78604ed3a39e5afa2097e2482fd5818f",
+      "object_sha256": "9b493fd51d48172f9953c6e3fe9dfaa4a0058a4ab731a786331480192f701b08",
+      "emitted_functions": [
+        {
+          "name": "PowerOffHandler__FPv",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-power-off-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-power-off-thread/power_off_thread.cpp",
+      "source_sha256": "3494fdbed6b10f0fd44680db7aae9127687e538bba465744395f7ef3537cec99",
+      "object_sha256": "284aee9227ecafd0e43bf0d4a3867e69b7e4283518e351d62d0c9843da1563df",
+      "emitted_functions": [
+        {
+          "name": "PowerOffThread__FPv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-power-off-thread/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-remove-dmac-handler/remove_dmac_handler.S",
+      "source_sha256": "2120b58d9a82771adf6f37af6f4424176ae9ec0ad20dc0cdad5f2b0b8f0e8601",
+      "object_sha256": "f40ff30922ce9cdbf346cdcad2523916d07d748dcbb16857c6542dcd21d90eba",
+      "emitted_functions": [
+        {
+          "name": "RemoveDmacHandler",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-remove-dmac-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-rotate-thread-ready-queue/rotate_thread_ready_queue.S",
+      "source_sha256": "7b49c68ada71f1b904800172e98fe3689887511632b37227b652a24acbd1463f",
+      "object_sha256": "2e908d143302d805646f355d5b49bcd6cbb4cd856091fdbe7b20c68b28bd795f",
+      "emitted_functions": [
+        {
+          "name": "RotateThreadReadyQueue",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-rotate-thread-ready-queue/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-set-arg/set_arg.cpp",
+      "source_sha256": "fa358bd3d3c847a29399addd874bce36d3f2579e8ef7931a77d44fc9c36c19d3",
+      "object_sha256": "1eef1e1f742affa6955782013b69176e8e8cf58d158a79c64fdfdd1b3975a967",
+      "emitted_functions": [
+        {
+          "name": "SetArg",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-set-arg/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-set-osd-config-param/set_osd_config_param.S",
+      "source_sha256": "e75dfb47104f52719caa30493c2ac95172feee8a63292c2447af9a4e2dcb78a2",
+      "object_sha256": "67fde006388f37a5b2518e9bbc46132e05324adc5ca9520d42757f95bc48408b",
+      "emitted_functions": [
+        {
+          "name": "SetOsdConfigParam",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-set-osd-config-param/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-set-timer-alarm/set_timer_alarm.cpp",
+      "source_sha256": "abff744cefa0c10b559d968b3e336535311198470341cc0447ff3371a905870a",
+      "object_sha256": "58908d442aeebe2109eb1aacbe4ad94d129334d17113aa0c298f52f066ec4d9a",
+      "emitted_functions": [
+        {
+          "name": "_ZL13alarm_handleriiiPv",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "SetTimerAlarm",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-set-timer-alarm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-set-vsync-flag/set_vsync_flag.S",
+      "source_sha256": "2b54fd1382f5d3a784c3cc0d711f2776426de110c99fd295220f8b6f0a3ad02d",
+      "object_sha256": "04e8462712e8f76e3cf4ef9258f5df463ecf89b96ef495f06f45841fdb457fb7",
+      "emitted_functions": [
+        {
+          "name": "SetVSyncFlag",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-set-vsync-flag/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-setarg-copy/setarg_copy.S",
+      "source_sha256": "08190c07516052882ff2f6519085485674f89e14cb3379e6fceaa239fdde5583",
+      "object_sha256": "a45e4937165006a88d7351d573356a32f4a2bf60f6d09f9a97538e487e23872a",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_copy",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-setarg-copy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-setarg-pattern-kcopy/setarg_pattern_kcopy.S",
+      "source_sha256": "66ea0ff04fed92c07c8c607557b23d82aed85ad8032162439a3c4954de767b37",
+      "object_sha256": "d36154f9e79aef48de534a1c76bb58d88ed51197e681f3833245d01890c185bf",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_pattern_kcopy",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-setarg-pattern-kcopy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-setarg-setup/setarg_setup.S",
+      "source_sha256": "a4378d7dcc66c5ababfa15d25b7c3312b9621016a1d471fb879cf526b7b40ef6",
+      "object_sha256": "bb536e0015a353090a8e2e74317f2c87f1db1c26116d0903da9dae88bc8bad02",
+      "emitted_functions": [
+        {
+          "name": "kernel_setarg_setup",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-setarg-setup/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-setarg-sysentry/setarg_sysentry.cpp",
+      "source_sha256": "a51327f85a8b27bec4acd87a9244cc41658b21e216b438b676ee109edf697fc2",
+      "object_sha256": "ed851370ef2cb45b1e85bc868605fc68483cecdc06a5a3b0ebf227dc75a11b69",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-a-setarg-sysentry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-suspend-thread/suspend_thread.S",
+      "source_sha256": "0f8aebcca4680eefae7e98f219ef402cf2fbe60a50c742edb71e5744be542639",
+      "object_sha256": "ecb0a9e5a115695f2e51c7868850f930ee7e0abd7141b05050afac01168bc64b",
+      "emitted_functions": [
+        {
+          "name": "SuspendThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-suspend-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-terminate-library/terminate_library.cpp",
+      "source_sha256": "291a98f2d7d6fe25ba24765d6564502e6b6a907ff915ad20291c2c8b2b7d419e",
+      "object_sha256": "b22f29572b074a7b0ffac07283da9da166fbe94cb9487648c399820b7d1a6615",
+      "emitted_functions": [
+        {
+          "name": "TerminateLibrary",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-terminate-library/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-timer-usec-to-bus-clock/timer_usec_to_bus_clock.cpp",
+      "source_sha256": "a9f6eb66ec6d3917ce33f2f556ee2ed84f8baf9f3cd21f482805fa347522597a",
+      "object_sha256": "32383f445642c3c3ccb3f99689b95b224c21327a7aa5d0293c9d34ced6a4ea82",
+      "emitted_functions": [
+        {
+          "name": "TimerUSec2BusClock",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-timer-usec-to-bus-clock/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vi-display-screen16/display_screen16.cpp",
+      "source_sha256": "915a2cfd763872d34ffe4931a79e929dcdf8b3a919d9563e36b7916edf675474",
+      "object_sha256": "0eb0cbb9256f81283a948f1c1b0abec24ce6a7fb5837d299c60252fd50af51a6",
+      "emitted_functions": [
+        {
+          "name": "VIDisplayScreen16__FPCcib",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vi-display-screen16/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vi-get-game-options/get_game_options.cpp",
+      "source_sha256": "196cae127cb6f91a2392c84214c2b84d90e6764d14669939bfb4a682c3765e19",
+      "object_sha256": "77e9231aa5b715b1c533c8a47e786ff3de7e3955861a72031a814e822a640272",
+      "emitted_functions": [
+        {
+          "name": "VIGetGameOptions__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vi-get-game-options/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vi-start-keyboard-driver/start_keyboard_driver.cpp",
+      "source_sha256": "14786d15c76abb579b0bebad315eba46ece6223c09f3518dae415d23e2bbc309",
+      "object_sha256": "baa02aee0d1e36c7d80ebc277c40de3845854b1faf530eaf8ad96c099e6efddc",
+      "emitted_functions": [
+        {
+          "name": "VIStartKeyboardDriver__Fv",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vi-start-keyboard-driver/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vi-timer-handler/timer_handler.cpp",
+      "source_sha256": "213d591a41d38e061fde17c430355c2665e87d540821b2179967ce373c4bfe4e",
+      "object_sha256": "7c76e008c8c095d4747e908a205e5cdcbc73864b23c2ad24452bcdc61217203e",
+      "emitted_functions": [
+        {
+          "name": "Handler__7VITimeri",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vi-timer-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vsync/vsync.cpp",
+      "source_sha256": "eff603ed212d6a07593bedfd971707b21532d501bc49d0cd7a2d68a9546d3bf6",
+      "object_sha256": "fc69ddf8af5d99a594058f40b63b39ff3e0f0d4af84e83ded1239b0c00fd2420",
+      "emitted_functions": [
+        {
+          "name": "VSync",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vsync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-vsync2/vsync2.cpp",
+      "source_sha256": "b3179e6e651c2d4032b69f7c78f112a3b9d94b161d5654df66515e2cf74c1e0f",
+      "object_sha256": "e26420fc1ed16348576a66d3da69f56c94662282b9ec87f9aa1cd8005b0847e0",
+      "emitted_functions": [
+        {
+          "name": "VSync2",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-vsync2/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-wakeup-thread/wakeup_thread.S",
+      "source_sha256": "14fc41c77de0e34baa0a83d0d0d84b33ebc70a34199519343be821219ea600d5",
+      "object_sha256": "d5e4b27148a4139a429f1daa108e4f5dd69d1744741014ecf599442ea5e8f323",
+      "emitted_functions": [
+        {
+          "name": "WakeupThread",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-wakeup-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-wrap-free/wrap_free.cpp",
+      "source_sha256": "25706f94e6a852549b81cac06a3cb4e4bb93ffa137a6f6f6c041ca57fcf5581f",
+      "object_sha256": "3ba25235824f316d48014efc2aed2aa21941ac948b7f03c332b84bfb7d5afedb",
+      "emitted_functions": [
+        {
+          "name": "__wrap_free",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-wrap-free/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-a",
+      "source": "sources/w8-startup-sce-a-wrap-memalign/wrap_memalign.cpp",
+      "source_sha256": "e2674ab75737c1fdd87c22012282b38d73c59ab05a915aca416ce44e77b30618",
+      "object_sha256": "717b0134b675065fa78c0f1a312c2b64e8e087be5b2a7dce4de3577139757ba8",
+      "emitted_functions": [
+        {
+          "name": "__wrap_memalign",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-a-wrap-memalign/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
