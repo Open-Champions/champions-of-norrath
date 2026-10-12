@@ -54,12 +54,17 @@ extern "C" unsigned norrath_construct_Skeleton(void* object, const void* point, 
         write_half(item + offset, 0u);
         write_half(item + 8u + offset, 0u);
     }
-    if (read_word(table + 4u) != read_word(address(norrath_ctors_lava_wraith_view_483f88))) {
-        for (Address entry = table + 8u; read_word(entry) != 0u; entry += 8u) {
-            store_pointer(entry + 4u, norrath_lump_find_resource(static_cast<char*>(load_pointer(table)),
-                                                                 static_cast<char*>(load_pointer(entry))));
+    const unsigned stamp = read_word(address(norrath_ctors_lava_wraith_view_483f88));
+    if (read_word(table + 4u) != stamp) {
+        unsigned fresh = stamp;
+        if (read_word(table + 8u) != 0u) {
+            for (Address entry = table + 8u; read_word(entry) != 0u; entry += 8u) {
+                store_pointer(entry + 4u, norrath_lump_find_resource(static_cast<char*>(load_pointer(table)),
+                                                                     static_cast<char*>(load_pointer(entry))));
+            }
+            fresh = read_word(address(norrath_ctors_lava_wraith_view_483f88));
         }
-        write_word(table + 4u, read_word(address(norrath_ctors_lava_wraith_view_483f88)));
+        write_word(table + 4u, fresh);
     }
     write_byte(a + 40u, 20u);
     const unsigned low_word = read_word(a + 160u) | 0x10000u;
