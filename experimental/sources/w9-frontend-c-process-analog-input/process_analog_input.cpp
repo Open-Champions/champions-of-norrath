@@ -3,12 +3,14 @@
 // processing routine). Takes two raw stick bytes x and y (0..255, centered on
 // 128) and writes two floats. Each axis is (value - 128) scaled by 2^-7 (bit
 // pattern 0x3c000000) to roughly -1..1. With the length m = sqrt(x*x + y*y):
-// if m < 0.041666664 (0x3d2aaaaa) both outputs are 0.0. Otherwise a factor
-// f = (1.0 - 0.041666664 / m) * 10.68 (0x412ae147 as the multiplier) is applied
-// and the outputs are x*f and y*f. The sqrt is the hardware sqrt.s instruction.
-// Inferred: a radial dead zone with rescale, from that arithmetic.
-// Unknown: the intended meaning of 10.68 (the result can exceed 1.0 near the
-// rim, and no clamp is present), and whether the original used a named type.
+// if m < 0.32 (0x3ea3d70a) both outputs are 0.0. Otherwise a factor
+// f = (1.0 - 0.32 / m) * 1.4705882 (0x3fbc3c3c, about 1 / 0.68) is applied and
+// the outputs are x*f and y*f. The sqrt is the hardware sqrt.s instruction.
+// Inferred: a radial dead zone with rescale, from that arithmetic; the gain
+// is the reciprocal of one minus the dead zone only numerically.
+// Unknown: the intended meaning of the constants (the result can reach
+// slightly above 1.0 near the rim; no clamp is present), and whether the
+// original used a named type.
 static float bits_to_float(unsigned bits) {
     union {
         unsigned u;
@@ -21,8 +23,8 @@ static float bits_to_float(unsigned bits) {
 extern "C" {
 void processAnalogInput__FiiPfT2(int x, int y, float* out_x, float* out_y) {
     float scale = bits_to_float(0x3c000000u);
-    float dead_zone = bits_to_float(0x3d2aaaaau);
-    float gain = bits_to_float(0x412ae147u);
+    float dead_zone = bits_to_float(0x3ea3d70au);
+    float gain = bits_to_float(0x3fbc3c3cu);
     float fx = static_cast<float>(x - 128) * scale;
     float fy = static_cast<float>(y - 128) * scale;
     float length = __builtin_sqrtf(fx * fx + fy * fy);
