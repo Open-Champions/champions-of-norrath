@@ -151,6 +151,12 @@ unsigned norrath_construct_WaterSpout(void* object, const void* point, int type)
 extern unsigned char norrath_ctors_lava_wraith_view_42d650[];
 extern unsigned char norrath_ctors_lava_wraith_view_44b080[];
 unsigned norrath_construct_Vampire(void* object, const void* point, short type, char** arguments);
+// Original initWeapon__8Skelight at 0x246598 and setState__8Skelighti at 0x246cf0. Not defined here.
+void norrath_skelight_init_weapon(void* object);
+void norrath_skelight_set_state(void* object, int state);
+extern unsigned char norrath_ctors_lava_wraith_view_42dbf0[];
+extern unsigned char norrath_ctors_lava_wraith_view_44fdf8[];
+unsigned norrath_construct_Skelight(void* object, const void* point, short type, char** arguments, signed char flag, int value);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
