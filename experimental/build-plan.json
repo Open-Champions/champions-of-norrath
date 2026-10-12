@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1080,
+  "default_authored_inputs": 1085,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1796,7 +1796,12 @@
     "sources/sony-cd-stream/stream.cpp": "c9188e19ea098edfa09d0999200e0ce89376b1ad922b96c6b2210564806cb8dc",
     "sources/sony-cd-sync-s/sync_s.cpp": "be35df53ca1289dbef8ac6f2c716a3e1a25b972596928d7465a46257740d3f7d",
     "sources/sony-cd-words/words.cpp": "ad3df13998e90d08c7e7c4b8e56e7887efbf9a641f60af34a3909505ee288664",
-    "sources/sony-cd-world-init/world_init.cpp": "54605a2528399cdcc5cceabb080dc243b8a085ac00f9218b15be62dc63be6f4a"
+    "sources/sony-cd-world-init/world_init.cpp": "54605a2528399cdcc5cceabb080dc243b8a085ac00f9218b15be62dc63be6f4a",
+    "sources/link-image-bounds-atexit/atexit.cpp": "a10d689de659f2241cfba16e03e4ac374d4c3babba0c36a90c21aa6d17064d41",
+    "sources/link-image-bounds-frame/deregister_frame_info.cpp": "0066efd85942a95f2d21a23a974c5b3aaea561d4c65f248a0c239fa8cac96b8a",
+    "sources/link-image-bounds-ctors/ctor_list.cpp": "064447ff2d9a721b80212cd01b4994e1c4c917f1bc76f2555075e4840e1ff27b",
+    "sources/link-image-bounds-dtors/dtor_list.cpp": "c15c120e3cf9d8b46306b5c1afccd94a2d893cff51f0955339dd7668d2168160",
+    "sources/link-image-bounds-sema/sema_ids.cpp": "8403e4ea29efbb5cfe8091316d8075d3ee20851baf417f5e1cecc9229f273f04"
   },
   "inputs": [
     {
@@ -13829,6 +13834,65 @@
           "compiled_body_bytes": 2332
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1082,
+      "kind": "independently_authored_source",
+      "object_name": "atexit.o",
+      "profile": "authored_cpp",
+      "sha256": "a10d689de659f2241cfba16e03e4ac374d4c3babba0c36a90c21aa6d17064d41",
+      "source": "sources/link-image-bounds-atexit/atexit.cpp",
+      "emitted_functions": [
+        {
+          "name": "atexit",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/link-image-bounds-frame/frame_object.hpp"
+      ],
+      "input_order": 1083,
+      "kind": "independently_authored_source",
+      "object_name": "deregister_frame_info.o",
+      "profile": "authored_cpp",
+      "sha256": "0066efd85942a95f2d21a23a974c5b3aaea561d4c65f248a0c239fa8cac96b8a",
+      "source": "sources/link-image-bounds-frame/deregister_frame_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "__deregister_frame_info",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1084,
+      "kind": "independently_authored_source",
+      "object_name": "ctor_list.o",
+      "profile": "authored_cpp",
+      "sha256": "064447ff2d9a721b80212cd01b4994e1c4c917f1bc76f2555075e4840e1ff27b",
+      "source": "sources/link-image-bounds-ctors/ctor_list.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1085,
+      "kind": "independently_authored_source",
+      "object_name": "dtor_list.o",
+      "profile": "authored_cpp",
+      "sha256": "c15c120e3cf9d8b46306b5c1afccd94a2d893cff51f0955339dd7668d2168160",
+      "source": "sources/link-image-bounds-dtors/dtor_list.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1086,
+      "kind": "independently_authored_source",
+      "object_name": "sema_ids.o",
+      "profile": "authored_cpp",
+      "sha256": "8403e4ea29efbb5cfe8091316d8075d3ee20851baf417f5e1cecc9229f273f04",
+      "source": "sources/link-image-bounds-sema/sema_ids.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -13928,7 +13992,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "56005579801068dbd823d12eb8a21ab2d3a0b7f15b51ead0e70334bcb4ada7f4",
+  "snapshot_sha256": "9e56276ea082a38d8756df8636ca1176cb2074fddcbafee91465cfcb53a9d263",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -13938,6 +13938,61 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/sony-cd-world-init/world_init.cpp"
+    },
+    {
+      "input_order": 1082,
+      "component": "link-image-bounds-atexit",
+      "object_name": "atexit.o",
+      "private_object_sha256": "b2126eef1321d006663287deca6c0571e2f421b324a2cffeeca3bf4b86a53cb1",
+      "emitted_functions": [
+        {
+          "name": "atexit",
+          "compiled_body_bytes": 372
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-atexit/atexit.cpp"
+    },
+    {
+      "input_order": 1083,
+      "component": "link-image-bounds-frame",
+      "object_name": "deregister_frame_info.o",
+      "private_object_sha256": "e21a6b027d8ed793295d8f2130e044071f9f31f21fdde0a579e4737a93629a59",
+      "emitted_functions": [
+        {
+          "name": "__deregister_frame_info",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-frame/deregister_frame_info.cpp"
+    },
+    {
+      "input_order": 1084,
+      "component": "link-image-bounds-ctors",
+      "object_name": "ctor_list.o",
+      "private_object_sha256": "1e5dc2ffc14b03eb1d41ec985ef79765800785cf0fc3c63f16ccc66c06234cb5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-ctors/ctor_list.cpp"
+    },
+    {
+      "input_order": 1085,
+      "component": "link-image-bounds-dtors",
+      "object_name": "dtor_list.o",
+      "private_object_sha256": "e976110d4fd8fedecba56357e76375a2ec0eb58c1b8b57bfb47150218a76e468",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-dtors/dtor_list.cpp"
+    },
+    {
+      "input_order": 1086,
+      "component": "link-image-bounds-sema",
+      "object_name": "sema_ids.o",
+      "private_object_sha256": "447a44739d01dec0ee86cffd25bf6d3d7e67fbdcd0257cea5b61b4fb5ac0a5f4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/link-image-bounds-sema/sema_ids.cpp"
     }
   ],
   "drafts": [
@@ -16547,7 +16602,17 @@
     "sources/sony-cd-vblank-views/views.cpp": "2735a9c09cb5afcffd3881673c54a30b2da2862a2278c3da24b7ef2325bc30d7",
     "sources/sony-cd-vblank-views/host_contract.cpp": "a6245497a1493e8bd5c08b1848c4fbdef41d790a5d2d8a8b0d864ded32203985",
     "sources/sony-cd-text-add/text_add.cpp": "f12d983c6875ce872e1d0a7ee7bc998b07d500746a2821aca4fbf1d761ba0e92",
-    "sources/sony-cd-text-add/host_contract.cpp": "9d31a22c96e4562af9290718c7cea8eb46f3120371aa3b18d7522a629cdfb52d"
+    "sources/sony-cd-text-add/host_contract.cpp": "9d31a22c96e4562af9290718c7cea8eb46f3120371aa3b18d7522a629cdfb52d",
+    "sources/link-image-bounds-atexit/atexit.cpp": "a10d689de659f2241cfba16e03e4ac374d4c3babba0c36a90c21aa6d17064d41",
+    "sources/link-image-bounds-atexit/host_contract.cpp": "432a9cd92086af41e92e6be2ca6371136dbc07fbc48dc12185f6e7e218b05654",
+    "sources/link-image-bounds-frame/deregister_frame_info.cpp": "0066efd85942a95f2d21a23a974c5b3aaea561d4c65f248a0c239fa8cac96b8a",
+    "sources/link-image-bounds-frame/deregister_host.cpp": "62642d83c6f41842e38e265df717e77c13e475f665e5fc92f3d7007076a34ad2",
+    "sources/link-image-bounds-ctors/ctor_list.cpp": "064447ff2d9a721b80212cd01b4994e1c4c917f1bc76f2555075e4840e1ff27b",
+    "sources/link-image-bounds-ctors/host_contract.cpp": "a0250384877c36003f91dc0d096a4d6de83850032cce6037687a4aaa835b82ea",
+    "sources/link-image-bounds-dtors/dtor_list.cpp": "c15c120e3cf9d8b46306b5c1afccd94a2d893cff51f0955339dd7668d2168160",
+    "sources/link-image-bounds-dtors/host_contract.cpp": "60220f03bcb82958941cc18c1af23725c2be7237eb3c580cd152a540fd9aab69",
+    "sources/link-image-bounds-sema/sema_ids.cpp": "8403e4ea29efbb5cfe8091316d8075d3ee20851baf417f5e1cecc9229f273f04",
+    "sources/link-image-bounds-sema/host_contract.cpp": "7ba277acc92c75bf390cb50c44d598c23fcab4f77b7cbc7fa65e4e4a01a72da2"
   },
   "additional_implementations": [
     {
@@ -16989,11 +17054,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1082,
-    "authored_default_inputs": 1080,
+    "selected_inputs": 1087,
+    "authored_default_inputs": 1085,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 864,
-    "compiled_body_bytes_from_accepted_inputs": 376808,
+    "emitted_function_definitions_including_helpers": 866,
+    "compiled_body_bytes_from_accepted_inputs": 377340,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -17006,7 +17071,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 769
+    "package_selected_inputs": 774
   },
   "startup_implementations": [
     {
@@ -28737,6 +28802,76 @@
       ],
       "host_files": [
         "sources/sony-cd-world-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-atexit/atexit.cpp",
+      "source_sha256": "a10d689de659f2241cfba16e03e4ac374d4c3babba0c36a90c21aa6d17064d41",
+      "object_sha256": "b2126eef1321d006663287deca6c0571e2f421b324a2cffeeca3bf4b86a53cb1",
+      "emitted_functions": [
+        {
+          "name": "atexit",
+          "compiled_body_bytes": 372
+        }
+      ],
+      "host_files": [
+        "sources/link-image-bounds-atexit/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-frame/deregister_frame_info.cpp",
+      "source_sha256": "0066efd85942a95f2d21a23a974c5b3aaea561d4c65f248a0c239fa8cac96b8a",
+      "object_sha256": "e21a6b027d8ed793295d8f2130e044071f9f31f21fdde0a579e4737a93629a59",
+      "emitted_functions": [
+        {
+          "name": "__deregister_frame_info",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/link-image-bounds-frame/deregister_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-ctors/ctor_list.cpp",
+      "source_sha256": "064447ff2d9a721b80212cd01b4994e1c4c917f1bc76f2555075e4840e1ff27b",
+      "object_sha256": "1e5dc2ffc14b03eb1d41ec985ef79765800785cf0fc3c63f16ccc66c06234cb5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/link-image-bounds-ctors/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-dtors/dtor_list.cpp",
+      "source_sha256": "c15c120e3cf9d8b46306b5c1afccd94a2d893cff51f0955339dd7668d2168160",
+      "object_sha256": "e976110d4fd8fedecba56357e76375a2ec0eb58c1b8b57bfb47150218a76e468",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/link-image-bounds-dtors/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "link-image-bounds",
+      "source": "sources/link-image-bounds-sema/sema_ids.cpp",
+      "source_sha256": "8403e4ea29efbb5cfe8091316d8075d3ee20851baf417f5e1cecc9229f273f04",
+      "object_sha256": "447a44739d01dec0ee86cffd25bf6d3d7e67fbdcd0257cea5b61b4fb5ac0a5f4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/link-image-bounds-sema/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -49,7 +49,7 @@ contracts also passed (six host executables total). The reference check is
 reproducible without publishing original data:
 
 ```sh
-python3 experimental/sources/link-image-bounds-checks/check_reference.py --original /path/to/private/SLUS_205.65
+python3 docs/agents/link-image-bounds-check.py --original /path/to/private/SLUS_205.65
 ```
 
 Compile each `host_contract.cpp`, `register_host.cpp`, and `deregister_host.cpp`

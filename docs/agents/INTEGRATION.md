@@ -1336,6 +1336,43 @@ already unresolved or already defined, including `cdLoad__FPcPvii`,
 1080 authored inputs, zero COMMON. 214 tool tests passed. No EE, CD, SIF, or
 game path ran.
 
+## agents/link-image-bounds second pass
+
+Merged. The branch had absorbed merges of other packages; the merge kept
+the shared log, plan, and snapshot and took only the new
+link-image-bounds files and notes. Five of the six proposed inputs were
+selected with fresh `input_order` values 1082 through 1086.
+`register_frame_info` was already selected in the first pass and was not
+appended again. All five sources compile under `authored_cpp` with the
+hashes and body bytes the notes claim (`atexit` 372,
+`__deregister_frame_info` 160, the rest data). All five host contracts
+passed on this machine. The reference checker needs the private image, so
+it did not run here; it lives at `docs/agents/link-image-bounds-check.py`
+now, because only `.cpp`, `.hpp`, and `.S` files may sit under
+`experimental/sources`. No game binary or disassembly listing was
+committed. The rejected `.eh_frame` byte array was never committed. The
+notes keep observed addresses separate from the authored names, and the
+sema unit adds no alias between `__sce_sema_id` and the malloc view.
+
+| | |
+|---|---|
+| Before | 884 |
+| After | 992 |
+| Closed | 6 |
+| Opened | 114 |
+
+Closed: `__CTOR_LIST__`, `__DTOR_LIST__`, `__deregister_frame_info`,
+`__sce_eh_sema_id`, `__sce_sema_id`, `atexit`. `__register_frame_info`
+was already defined. `__wrap_free` and `abort` were already resolved, so
+they did not open.
+
+Opened: the exact 114 names listed in the package notes: `__wrap_free`,
+`abort`, the 101 `_GLOBAL_$I$*` constructor callbacks, and the 11
+`_GLOBAL_$D$*` destructor callbacks. `__register_frame_info` was already
+defined and does not change the count. The registrar's `objects` head was
+already defined. 864 function bodies, 1085 authored inputs, zero COMMON.
+214 tool tests passed. No EE startup stage ran.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1467,8 +1504,9 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state, and
-sony-cd. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
+sony-cd, and link-image-bounds second pass. The vehicle constructor is
+authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
