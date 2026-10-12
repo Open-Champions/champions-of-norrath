@@ -1873,6 +1873,51 @@ and `soundGetStreamPlayStatus__Fi`. 984 function bodies, 1256 authored inputs, z
 objects are byte-identical to the recorded `object_sha256` values. No
 EE or game execution.
 
+## agents/iop-module-boot
+
+Merged. The branch notes carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+host checks. The branch was still receiving commits when the integrator
+started; it was merged once its notes commit landed. Fifteen units, one
+function per commit, each with a host contract beside the source. All
+fifteen contracts passed on this machine with ASan/UBSan, and a mutated
+`sceSifSyncIop` (second notify value changed) made its contract exit
+non-zero, so the contracts can fail. The fifteen sources compile under
+`authored_cpp` with the body bytes the notes claim. No game binary or
+disassembly listing was committed; the `host_contract.cpp` files are in the
+snapshot `files` map and not in the plan.
+
+Fifteen units were selected with fresh `input_order` values 1258 through
+1272. The worker's private count reproduces exactly on the shared tip.
+
+| | |
+|---|---|
+| Before | 1149 |
+| After | 1152 |
+| Closed | 15 |
+| Opened | 18 |
+
+Closed: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
+`_lf_bind`, `_lf_version`, `commSystemInit__Fv`, `sceCdInit`, `sceCdMmode`,
+`sceFsReset`, `sceSifInitIopHeap`, `sceSifLoadFileReset`,
+`sceSifLoadModule`, `sceSifRebootIop`, `sceSifSyncIop`,
+`textSystemInit__Fv`.
+
+Opened: `PowerOffCB`, `PowerOffHandler__FPv`, `PowerOffThread__FPv`,
+`VIStartKeyboardDriver__Fv`, `_sceCd_scmdsdata`, `_sceSifLoadModule`,
+`cdvd_exit`, `lgAudInit`, `lgCodecEnumerate`, `lgCodecInit`, `lgCodecOpen`,
+`lgKbdClose`, `memcmp`, `sceCdPOffCallback`, `sceResetttyinit`,
+`sceSifExecNotifyHandler`, `sceSifExitRpc`, `sceSifResetIop`. 999 function
+bodies, 1271 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build and were identical on a
+second build. No EE or game execution.
+
+The notes ask for three edits to merged `sif-keyboard` sources (use the
+exported `norrath_iop_heap_client`, `norrath_loadfile_client`, `_senddata` and
+`vik` instead of private statics). They change game code in another package,
+so the integrator did not make them; see Needs a decision.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
@@ -2020,6 +2065,16 @@ name. Decide whether the view should gain that alias.
 `c.1089` at `0x007d0988` has ELF size 0 and stays unresolved. The
 Camera-owning package should settle its extent before anything defines
 it.
+
+`iop-module-boot` exports `norrath_iop_heap_client`, `norrath_loadfile_client`,
+`_senddata` and `vik`, and its notes ask `sif-keyboard` to use them. Today
+`sif-keyboard-iop-heap-query`, `sif-keyboard-module-calls` and
+`sif-keyboard-keyboard` keep private `static` copies, so the link has no
+duplicate definition, but the module calls use a client that `sceSifInitIopHeap`
+and `_lf_bind` never bind, and `Init__10VIKeyboard` and `textSystemInit__Fv` initialise a
+different `vik` than `keyboardFree__Fv` frees. The package owner should make
+the three edits listed in `docs/agents/iop-module-boot.md`; they were not
+made here because they change game code.
 
 ## Disagreements
 

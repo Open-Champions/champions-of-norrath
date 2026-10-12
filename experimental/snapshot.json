@@ -16125,6 +16125,216 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/pre-logo-dialog-draw/draw_dialog.cpp"
+    },
+    {
+      "input_order": 1258,
+      "component": "iop-module-boot-load-module",
+      "object_name": "load_module.o",
+      "private_object_sha256": "252745853280f99d88d19d9ad6ee6dd077759092467ea9f4c90f9c9cd39c1617",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "sceSifLoadModule"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-load-module/load_module.cpp"
+    },
+    {
+      "input_order": 1259,
+      "component": "iop-module-boot-iop-heap",
+      "object_name": "iop_heap.o",
+      "private_object_sha256": "64d0b967970d222eff1d6831a3c0768fc8bc381ba3411ff32a63685244b6d312",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "sceSifInitIopHeap"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-iop-heap/iop_heap.cpp"
+    },
+    {
+      "input_order": 1260,
+      "component": "iop-module-boot-reboot-iop",
+      "object_name": "reboot_iop.o",
+      "private_object_sha256": "5f348529a0f74de63c83e8dfeb47ac0bd8c045db9d990eb8b3d3b65ad897fc1e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "sceSifRebootIop"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-reboot-iop/reboot_iop.cpp"
+    },
+    {
+      "input_order": 1261,
+      "component": "iop-module-boot-sync-iop",
+      "object_name": "sync_iop.o",
+      "private_object_sha256": "475acd4a33bdf5c5c69766e74e89aaf0d27709ce092604f824b8d15e2ff8db97",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 80,
+          "name": "sceSifSyncIop"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-sync-iop/sync_iop.cpp"
+    },
+    {
+      "input_order": 1262,
+      "component": "iop-module-boot-loadfile-reset",
+      "object_name": "loadfile_reset.o",
+      "private_object_sha256": "060c34dfaeab14a95a292c8213e7e6928e37f45e807f1e7eb8c707aaa8488f69",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "sceSifLoadFileReset"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-loadfile-reset/loadfile_reset.cpp"
+    },
+    {
+      "input_order": 1263,
+      "component": "iop-module-boot-fs-reset",
+      "object_name": "fs_reset.o",
+      "private_object_sha256": "9302c3ccc843ead0c0787336bc723e196d243998f626079fa15d42f6685db4c0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "sceFsReset"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-fs-reset/fs_reset.cpp"
+    },
+    {
+      "input_order": 1264,
+      "component": "iop-module-boot-cd-init",
+      "object_name": "cd_init.o",
+      "private_object_sha256": "fd76d501aaaad7f5bcc483b2b5434ce4bcf10ea6d5365eab1a41b2cffa75da5f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 832,
+          "name": "sceCdInit"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-cd-init/cd_init.cpp"
+    },
+    {
+      "input_order": 1265,
+      "component": "iop-module-boot-cd-mmode",
+      "object_name": "cd_mmode.o",
+      "private_object_sha256": "d15fbf173f9d7273f5a62946a0c6ba55f24818edb24a224be4c25a5124496d3c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 240,
+          "name": "sceCdMmode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-cd-mmode/cd_mmode.cpp"
+    },
+    {
+      "input_order": 1266,
+      "component": "iop-module-boot-lf-bind",
+      "object_name": "lf_bind.o",
+      "private_object_sha256": "e68b156054cf2cbcc90eed15460b5babac5e795e8af4727304484100f019246c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "_lf_bind"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-lf-bind/lf_bind.cpp"
+    },
+    {
+      "input_order": 1267,
+      "component": "iop-module-boot-lf-version",
+      "object_name": "lf_version.o",
+      "private_object_sha256": "e744f41a5fe5520d7e7ac6337a04202b1af7abd68c41b0d8db4930f3b3d0961f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "_lf_version"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-lf-version/lf_version.cpp"
+    },
+    {
+      "input_order": 1268,
+      "component": "iop-module-boot-power-off",
+      "object_name": "power_off.o",
+      "private_object_sha256": "2b10a375a42ba3daaa4adf8a360b4b7d20957a8fee28bef92571c0a122f3270e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "PreparePowerOff__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-power-off/power_off.cpp"
+    },
+    {
+      "input_order": 1269,
+      "component": "iop-module-boot-text-system",
+      "object_name": "text_system.o",
+      "private_object_sha256": "60917c352d777d60b254cb02a1fd26794278061288d67fddcf303963e7454488",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "textSystemInit__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-text-system/text_system.cpp"
+    },
+    {
+      "input_order": 1270,
+      "component": "iop-module-boot-keyboard-init",
+      "object_name": "keyboard_init.o",
+      "private_object_sha256": "22c467e3ecb2025f49a69863c5fa6169558d464fb43d27c0c82223c80c7bafdc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Init__10VIKeyboard"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-keyboard-init/keyboard_init.cpp"
+    },
+    {
+      "input_order": 1271,
+      "component": "iop-module-boot-keyboard-free",
+      "object_name": "keyboard_free.o",
+      "private_object_sha256": "91b931b94d4ece849cbceacf68645254778209ade8faa91286d8457f64c8e545",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "Free__10VIKeyboard"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-keyboard-free/keyboard_free.cpp"
+    },
+    {
+      "input_order": 1272,
+      "component": "iop-module-boot-comm",
+      "object_name": "comm.o",
+      "private_object_sha256": "f98025a4bc4b56ef1cea4db43dca53cff3563e0a66303e215d09e3586f20ebcc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 232,
+          "name": "commSystemInit__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/iop-module-boot-comm/comm.cpp"
     }
   ],
   "drafts": [
@@ -19063,7 +19273,37 @@
     "sources/pre-logo-dialog-run/run_dialog.cpp": "21db4ef831f53e092676d49c9694775583800e53efeaf07c7c3598f8664c6c44",
     "sources/pre-logo-dialog-run/host_check.cpp": "4876023d59ff2ccd46ae64985bf60a64171ba84ce42ac0bf17f67d0878fa1034",
     "sources/pre-logo-dialog-draw/draw_dialog.cpp": "04f9c5314cdb42e66ad8f957357586201cc00342daa2aede4a5f963be2d48688",
-    "sources/pre-logo-dialog-draw/host_check.cpp": "338e77df2c0c1a1515c191dd3d2cd105696642fa3e49e68fd2c13fc1a7fa5a84"
+    "sources/pre-logo-dialog-draw/host_check.cpp": "338e77df2c0c1a1515c191dd3d2cd105696642fa3e49e68fd2c13fc1a7fa5a84",
+    "sources/iop-module-boot-load-module/load_module.cpp": "fd44523aff489f79c14d00efa78adb61cc8c65d6e606bea408ee656a6c1d183f",
+    "sources/iop-module-boot-load-module/host_contract.cpp": "c8db57c2ed116db4861fad526a03dc21f39253a88dd9713729274a3151751660",
+    "sources/iop-module-boot-iop-heap/iop_heap.cpp": "0a8ffb1513d56eb5da194073525290a66fce4031e46ff90143a6f375a95cd0c8",
+    "sources/iop-module-boot-iop-heap/host_contract.cpp": "c6af23aa19687cdcc0f9b229855c63028331e42e04bfd948d64778a835e66c50",
+    "sources/iop-module-boot-reboot-iop/reboot_iop.cpp": "9105dfa09368f8d01296d0dfd9c6cea2a4c847def8e35352ae60b4461cafd5f7",
+    "sources/iop-module-boot-reboot-iop/host_contract.cpp": "bdd8f28ab5516f74ec85459da0378faa1b2ac2dd8464ba37cf17925fbaec93f8",
+    "sources/iop-module-boot-sync-iop/sync_iop.cpp": "1dda9d32d3c5f387e82b1ee15cdad6e1e57fd932fc9a645224bdd802a54719a4",
+    "sources/iop-module-boot-sync-iop/host_contract.cpp": "52c088e24ebf98579bf7e450d2fb37012aed65fed5d1c25584857445cf9a3804",
+    "sources/iop-module-boot-loadfile-reset/loadfile_reset.cpp": "c97e65beb01fe4ec845d51ba9b438f8e2a732e3f5726f631905aee782c505d7a",
+    "sources/iop-module-boot-loadfile-reset/host_contract.cpp": "2b3cc4b563dfc677b74e2eb0fa5bacc753ec9944c22e6e8d20862ad89478e2a2",
+    "sources/iop-module-boot-fs-reset/fs_reset.cpp": "38c617397bbaa40ab764f931f7a8685e7a1d39fc61600c11b4b84316b21cc644",
+    "sources/iop-module-boot-fs-reset/host_contract.cpp": "507b8f3c8e52b3f33963a0146debbc9249bf09b1a1e19f7ae2f1335e91166650",
+    "sources/iop-module-boot-cd-init/cd_init.cpp": "d23471a49595b999bab1a0ac5a11bf663b83f89cb78b45948ce380fefa864169",
+    "sources/iop-module-boot-cd-init/host_contract.cpp": "cf132689b74315ad8b582d4bebf229e87ca25e16d63972121b7d97237d5fa1a3",
+    "sources/iop-module-boot-cd-mmode/cd_mmode.cpp": "cdd3bfbd31e246da6b5b7144ff48720c96e6a2ad445f73b1bf75cb42f482b52f",
+    "sources/iop-module-boot-cd-mmode/host_contract.cpp": "51876f1e898c127a8600cfa3ce16048dcbe0ac77c8bf555b47d992203b7b54db",
+    "sources/iop-module-boot-lf-bind/lf_bind.cpp": "ad3773fddc7cd5f7e753a5b087771bf0f28014427295d2ce46cf054a996a5955",
+    "sources/iop-module-boot-lf-bind/host_contract.cpp": "e34373e3bea943e8b1448da1946e30800e7100c3b8de4ec2d9fa661d70f20ae0",
+    "sources/iop-module-boot-lf-version/lf_version.cpp": "0dab255aa979f8d6515c4ba2fff465062f02fc48f2c4eba20bf197264b1fe5da",
+    "sources/iop-module-boot-lf-version/host_contract.cpp": "2aa5bf8eca2a31d8ef57d3277f67d175b9fc7219f852fd3c23da3785bbf2f468",
+    "sources/iop-module-boot-power-off/power_off.cpp": "a05fded8d589abad05d2e7165a3b9f05a625ca0d1d81cf29c1fc710b33e6ae34",
+    "sources/iop-module-boot-power-off/host_contract.cpp": "16931f0b4204bb417c5fa2850cc76429f557effde587d29d1adbc536ec4232fd",
+    "sources/iop-module-boot-text-system/text_system.cpp": "3f535ec6a36350296af5f4706f17ead65dbbe5cfc4f6bfc5026ead87c10f01c0",
+    "sources/iop-module-boot-text-system/host_contract.cpp": "e31bc07176b1ea9b5d344b688d2b05bba6e95fc005061e84c2d88e9a3928e104",
+    "sources/iop-module-boot-keyboard-init/keyboard_init.cpp": "ead6981c4b04b0eb61dfaaa237cec94c74d657dd176a846d3d73682cc5f4ce63",
+    "sources/iop-module-boot-keyboard-init/host_contract.cpp": "71eed8a775fce369883ba1ab8f3efe056172ab2b2422ff41e4992519c6b2baaf",
+    "sources/iop-module-boot-keyboard-free/keyboard_free.cpp": "d39470e3feeaae226f5d1ded27fa31fc46a9b6579f1a8635d07990a24508c501",
+    "sources/iop-module-boot-keyboard-free/host_contract.cpp": "be9371d41907f364cfdda6156d81c918144f24dd593aad882e73e6933f2712ba",
+    "sources/iop-module-boot-comm/comm.cpp": "fe731db9f14a190b24d35fc1bb50893a2d4c8f70a22895b38769dcbd93386bac",
+    "sources/iop-module-boot-comm/host_contract.cpp": "18eec57da0c43075dd6452c6e58d7e4f78e92aae71e4f132e37ab6109560255c"
   },
   "additional_implementations": [
     {
@@ -19505,11 +19745,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1258,
-    "authored_default_inputs": 1256,
+    "selected_inputs": 1273,
+    "authored_default_inputs": 1271,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 986,
-    "compiled_body_bytes_from_accepted_inputs": 420176,
+    "emitted_function_definitions_including_helpers": 1001,
+    "compiled_body_bytes_from_accepted_inputs": 422904,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19522,7 +19762,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 945
+    "package_selected_inputs": 960
   },
   "startup_implementations": [
     {
@@ -33968,6 +34208,261 @@
       ],
       "host_files": [
         "sources/pre-logo-dialog-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-load-module/load_module.cpp",
+      "source_sha256": "fd44523aff489f79c14d00efa78adb61cc8c65d6e606bea408ee656a6c1d183f",
+      "object_sha256": "252745853280f99d88d19d9ad6ee6dd077759092467ea9f4c90f9c9cd39c1617",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "sceSifLoadModule"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-load-module/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-iop-heap/iop_heap.cpp",
+      "source_sha256": "0a8ffb1513d56eb5da194073525290a66fce4031e46ff90143a6f375a95cd0c8",
+      "object_sha256": "64d0b967970d222eff1d6831a3c0768fc8bc381ba3411ff32a63685244b6d312",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "sceSifInitIopHeap"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-iop-heap/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-reboot-iop/reboot_iop.cpp",
+      "source_sha256": "9105dfa09368f8d01296d0dfd9c6cea2a4c847def8e35352ae60b4461cafd5f7",
+      "object_sha256": "5f348529a0f74de63c83e8dfeb47ac0bd8c045db9d990eb8b3d3b65ad897fc1e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "sceSifRebootIop"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-reboot-iop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-sync-iop/sync_iop.cpp",
+      "source_sha256": "1dda9d32d3c5f387e82b1ee15cdad6e1e57fd932fc9a645224bdd802a54719a4",
+      "object_sha256": "475acd4a33bdf5c5c69766e74e89aaf0d27709ce092604f824b8d15e2ff8db97",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 80,
+          "name": "sceSifSyncIop"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-sync-iop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-loadfile-reset/loadfile_reset.cpp",
+      "source_sha256": "c97e65beb01fe4ec845d51ba9b438f8e2a732e3f5726f631905aee782c505d7a",
+      "object_sha256": "060c34dfaeab14a95a292c8213e7e6928e37f45e807f1e7eb8c707aaa8488f69",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "sceSifLoadFileReset"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-loadfile-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-fs-reset/fs_reset.cpp",
+      "source_sha256": "38c617397bbaa40ab764f931f7a8685e7a1d39fc61600c11b4b84316b21cc644",
+      "object_sha256": "9302c3ccc843ead0c0787336bc723e196d243998f626079fa15d42f6685db4c0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "sceFsReset"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-fs-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-cd-init/cd_init.cpp",
+      "source_sha256": "d23471a49595b999bab1a0ac5a11bf663b83f89cb78b45948ce380fefa864169",
+      "object_sha256": "fd76d501aaaad7f5bcc483b2b5434ce4bcf10ea6d5365eab1a41b2cffa75da5f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 832,
+          "name": "sceCdInit"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-cd-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-cd-mmode/cd_mmode.cpp",
+      "source_sha256": "cdd3bfbd31e246da6b5b7144ff48720c96e6a2ad445f73b1bf75cb42f482b52f",
+      "object_sha256": "d15fbf173f9d7273f5a62946a0c6ba55f24818edb24a224be4c25a5124496d3c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 240,
+          "name": "sceCdMmode"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-cd-mmode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-lf-bind/lf_bind.cpp",
+      "source_sha256": "ad3773fddc7cd5f7e753a5b087771bf0f28014427295d2ce46cf054a996a5955",
+      "object_sha256": "e68b156054cf2cbcc90eed15460b5babac5e795e8af4727304484100f019246c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "_lf_bind"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-lf-bind/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-lf-version/lf_version.cpp",
+      "source_sha256": "0dab255aa979f8d6515c4ba2fff465062f02fc48f2c4eba20bf197264b1fe5da",
+      "object_sha256": "e744f41a5fe5520d7e7ac6337a04202b1af7abd68c41b0d8db4930f3b3d0961f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "_lf_version"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-lf-version/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-power-off/power_off.cpp",
+      "source_sha256": "a05fded8d589abad05d2e7165a3b9f05a625ca0d1d81cf29c1fc710b33e6ae34",
+      "object_sha256": "2b10a375a42ba3daaa4adf8a360b4b7d20957a8fee28bef92571c0a122f3270e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "PreparePowerOff__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-power-off/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-text-system/text_system.cpp",
+      "source_sha256": "3f535ec6a36350296af5f4706f17ead65dbbe5cfc4f6bfc5026ead87c10f01c0",
+      "object_sha256": "60917c352d777d60b254cb02a1fd26794278061288d67fddcf303963e7454488",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "textSystemInit__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-text-system/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-keyboard-init/keyboard_init.cpp",
+      "source_sha256": "ead6981c4b04b0eb61dfaaa237cec94c74d657dd176a846d3d73682cc5f4ce63",
+      "object_sha256": "22c467e3ecb2025f49a69863c5fa6169558d464fb43d27c0c82223c80c7bafdc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Init__10VIKeyboard"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-keyboard-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-keyboard-free/keyboard_free.cpp",
+      "source_sha256": "d39470e3feeaae226f5d1ded27fa31fc46a9b6579f1a8635d07990a24508c501",
+      "object_sha256": "91b931b94d4ece849cbceacf68645254778209ade8faa91286d8457f64c8e545",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "Free__10VIKeyboard"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-keyboard-free/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "iop-module-boot",
+      "source": "sources/iop-module-boot-comm/comm.cpp",
+      "source_sha256": "fe731db9f14a190b24d35fc1bb50893a2d4c8f70a22895b38769dcbd93386bac",
+      "object_sha256": "f98025a4bc4b56ef1cea4db43dca53cff3563e0a66303e215d09e3586f20ebcc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 232,
+          "name": "commSystemInit__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/iop-module-boot-comm/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
