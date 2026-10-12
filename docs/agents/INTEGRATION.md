@@ -3320,6 +3320,38 @@ harAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f`,
 `worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`,
 `worldFindStandHeight__FP12_worldHeaderG6Point3f`, `worldViewMatrix`.
 
+## agents/w8-actor-virtuals-a
+
+Merged (the branch notes carry the five summary sections). Thirty units with
+fresh `input_order` values 1616 through 1645, all with a `host_check.cpp`:
+13 destructors, 14 type-info functions, `_$_14AnimationState`,
+`_$_15FxCreatureState`, and one more destructor (30 functions in total, 3320
+compiled body bytes, not original-byte matches). All 30 host programs pass
+here (30 of 30); `_$_14AnimationState`'s check only builds as intended with
+`-DNORRATH_W8AV_HOST` (without it the unit reads raw 32-bit words and
+segfaults on a 64-bit host, which is a harness build detail, not a failure of
+the check). The worker's claim (30 closed, 3 opened) reproduces exactly. No
+game binary or disassembly listing was committed. 1304 function bodies, 1646
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1658 |
+| After | 1631 |
+| Closed | 30 |
+| Opened | 3 |
+
+Closed: `_$_10HateBridge`, `_$_10Teleporter`, `_$_11MissileTrap`,
+`_$_14AnimationState`, `_$_15FxCreatureState`, `_$_15PushPhysicsProp`,
+`_$_7Shooter`, `_$_7Trigger`, `_$_8FireBomb`, `_$_8GothTrap`,
+`_$_8HackDoor`, `_$_8HateGate`, `_$_8HateHole`, `_$_8HateInto`,
+`_$_9Container`, `_$_9WorldPart`, `__tf10HateBridge`, `__tf10Teleporter`,
+`__tf11MissileTrap`, `__tf15PushPhysicsProp`, `__tf3NPC`, `__tf7Shooter`,
+`__tf7Trigger`, `__tf8FireBomb`, `__tf8GothTrap`, `__tf8HackDoor`,
+`__tf8HateGate`, `__tf8HateHole`, `__tf8HateInto`, `__tf9Container`.
+
+Opened: `_$_8AutoProp`, `__ti8AutoProp`, `worldReleaseDoor__FP12_worldHeaderi`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
