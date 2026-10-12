@@ -335,6 +335,21 @@ reg('sleepMonsters__8creaturev', 'w8-actor-virtuals-c-sleep-monsters/sleep_monst
     {'objectIterateRunLists__FPFP10GameObject_v': ('iterate', None),
      'listDestroy__FP8ListHead': (['o'], None)})
 
+W = 'w8-actor-virtuals-c-'
+reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
+reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
+reg('setActiveChunks__10Teleporter', W + 'teleporter-set-active-chunks/set_active_chunks.cpp', sc_noop, {})
+reg('msg_run__8GothTrap', W + 'goth-trap-run/run.cpp', sc_noop, {})
+reg('msg_run__8HateHole', W + 'hate-hole-run/run.cpp', sc_noop, {'msg_run__8AutoProp': (['o'], None)})
+reg('msg_save__7ShooterPc', W + 'shooter-save/save.cpp', sc_save_buffer, {}, returns=True)
+reg('msg_save__7TriggerPc', W + 'trigger-save/save.cpp', sc_save_buffer, {}, returns=True)
+reg('msg_save__8AutoPropPc', W + 'auto-prop-save/save.cpp', sc_save_buffer, {}, returns=True)
+reg('msg_trigger__11MissileTrapi', W + 'missile-trap-trigger/trigger.cpp', sc_obj_int,
+    {'objectAddToRunList__FP10GameObject': (['o'], ('i', [0, 1, 0x30001234, 0xFFFFFFFF])),
+     'objectRemoveFromRunList__FP10GameObject': (['o'], ('i', [0, 7, 0x40000000, 0xFFFFFFFF]))}, returns=True)
+reg('setPassableState__8HackDoorb', W + 'hack-door-passable/set_passable_state.cpp', sc_obj_bool,
+    {'setPassableState__8AutoPropb': (['o', 'i'], None)})
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
