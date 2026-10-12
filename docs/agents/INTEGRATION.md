@@ -3912,6 +3912,36 @@ Opened: `InvalidDCache`, `__malloc_current_mallinfo`, `__malloc_lock`,
 `iSetTimerAlarm`, `iWakeupThread`, `isceSifSendCmd`, `kputs`,
 `sceCdStPause`, `sceCdStStop`, `sceSifRemoveCmdHandler`, `streamPaused`.
 
+## agents/w8-startup-sce-c
+
+Merged (the branch notes carry the five summary sections). Twenty-seven
+units with fresh `input_order` values 1960 through 1986: 23 emitted functions
+(4748 compiled body bytes, not original-byte matches) and data words. All 27
+host checks build and exit 0 here (27 of 27). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1554 function bodies, 1987 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1580 |
+| After | 1563 |
+| Closed | 30 |
+| Opened | 13 |
+
+Closed: `lgCodecOpen`, `lgKbdClose`, `loadThreadID`, `preConfigure`, `sbuff`,
+`sbuffin`, `sceCdCbPoff_Gp`, `sceCdGetError`, `sceCdLayerSearchFile`,
+`sceCdPOffCallback`, `sceCdPoffCbdata`, `sceCdPoffCbfunc`, `sceCdReadClock`,
+`sceCdReadDvdDualInfo`, `sceCdSearchFile`, `sceCdStInit`, `sceCdStRead`,
+`sceCdSync`, `sceClose`, `sceGifPkAddGsData`, `sceGifPkInit`,
+`sceGifPkReset`, `sceGifPkSize`, `sceGifPkTerminate`, `sceGszbufaddr`,
+`sceInetClose`, `sceInetCtlDownInterface`, `sceInetCtlGetState`,
+`sceInetGetInterfaceList`, `sceLibnetInitialize`.
+
+Opened: `CallRpc`, `GLibData`, `MemcpyS`, `_cd`, `_iob`, `_rcv_data_rpc`,
+`_sceFsSigSema`, `_sceFsWaitS`, `_send_data`, `get_iob`, `gsm_create`,
+`gsm_option`, `sceSifMBindRpcParam`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

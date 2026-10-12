@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1960,
+  "default_authored_inputs": 1987,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2703,7 +2703,34 @@
     "sources/w8-startup-sce-b-request-bind/request_bind.cpp": "94bceb66cfd7f7a16a65fea68d763fb8be0b684723bb28281c4665d82b1a62ca",
     "sources/w8-startup-sce-b-request-rdata/request_rdata.cpp": "f4fb0971e59dc13a08e0a1c514557cea073abf03b9a27859ba53ba4b787b6049",
     "sources/w8-startup-sce-b-lg-aud-init/lg_aud_init.cpp": "7d13b8b1e087c6c8f293734afb227c09ff7b2369bb58cdb10b534bcb01bc0425",
-    "sources/w8-startup-sce-b-data-words/words.cpp": "aa984d1f5f861f7a3dc50c7232cd0290a0d75e00fdce7d03cc80575f173e9508"
+    "sources/w8-startup-sce-b-data-words/words.cpp": "aa984d1f5f861f7a3dc50c7232cd0290a0d75e00fdce7d03cc80575f173e9508",
+    "sources/w8-startup-sce-c-cd-get-error/get_error.cpp": "56c83ddf30fa5a5e37e37257bc304ccbb95ba356e75ef3a060dbeef3a1f19d18",
+    "sources/w8-startup-sce-c-cd-layer-search-file/layer_search_file.cpp": "bae0f5601563704b1de7cbefba21925c37e407f78a13c681f7b2a7ff9c2fabb2",
+    "sources/w8-startup-sce-c-cd-poff-callback/poff_callback.cpp": "5f47ab719dfecf29f4282b99b54374a5c83e0df5f3a3998c7249f8203ab9b897",
+    "sources/w8-startup-sce-c-cd-read-clock/read_clock.cpp": "a794dd9778d41c80b51b3c60af44cdf6465013d763f567b6f5575dfd24fd8b8c",
+    "sources/w8-startup-sce-c-cd-read-dvd-dual-info/read_dvd_dual_info.cpp": "ec88f0e022c04177b6d33d506b0a70ac02cd989bf0bcfbbc1db556d1d144751e",
+    "sources/w8-startup-sce-c-cd-search-file/search_file.cpp": "d639a519074345bc4a7d99fcf5036a073c58aed40ce4e20c598ce8af0a0c5280",
+    "sources/w8-startup-sce-c-cd-st-init/st_init.cpp": "bcf90a938b98c712b377db6ad4f5c05da4079d04c7cee6712d882ec7deddec1f",
+    "sources/w8-startup-sce-c-cd-st-read/st_read.cpp": "87be43a78633ae3b75066292c4afa374407fb21fc9d1fdba03259a0e4b89cc22",
+    "sources/w8-startup-sce-c-cd-sync/cd_sync.cpp": "3ddcc7290365b516c02579ab82d64c2157413b76de014f2a937444a6ba28fde5",
+    "sources/w8-startup-sce-c-data-load-thread-id/load_thread_id.cpp": "ba9903048a55226f3449b4f16910d0b1ee9d3d64df1e925f6cd4a637601ab737",
+    "sources/w8-startup-sce-c-data-pre-configure/pre_configure.cpp": "a39782a87fa1a931c5cf999da8783a2c47a4598a2c083dd70620ea787bab9a61",
+    "sources/w8-startup-sce-c-data-sbuff/sbuff.cpp": "446c3d13e50cba09756b4285886165e4aac4ce2d184c04e0dc28e1aa971257d9",
+    "sources/w8-startup-sce-c-data-sbuffin/sbuffin.cpp": "661fdd810d222a58407971ea9e866997c9e2e31c5c7b97eb6409761063fce6c4",
+    "sources/w8-startup-sce-c-fs-close/fs_close.cpp": "ff8b3b139a5d4df921aeb778d14681baba9966a81a550e3e1d9642591d4ada4c",
+    "sources/w8-startup-sce-c-gif-pk-add-gs-data/pk_add_gs_data.cpp": "fa2920f21c636f8be599a1cbadbf8f5e17d8e2f032fc75fe76911f53873074c7",
+    "sources/w8-startup-sce-c-gif-pk-init/pk_init.cpp": "09cc9e75d1096e0e1159bbe6fd9212d957e8b4b2964639e77f1fca78b441f652",
+    "sources/w8-startup-sce-c-gif-pk-reset/pk_reset.cpp": "b2c79fd748aa4f1f6014326169d8ccd1eeb9db00451f734fc919ca2c3ac19553",
+    "sources/w8-startup-sce-c-gif-pk-size/pk_size.cpp": "e56b88f2e2fd61864e87c1ed434d26b9a19532c75474bd0bc0fd95bba7a34958",
+    "sources/w8-startup-sce-c-gif-pk-terminate/pk_terminate.cpp": "3b0a8888f97d89ab38f64f83519cb5d8eab973c8619570f1409e0efaa9196333",
+    "sources/w8-startup-sce-c-gs-zbuf-addr/zbuf_addr.cpp": "0a4bf472e5b502576346a6aa92bc1562e08bd734f804b115464bcbcbb08639eb",
+    "sources/w8-startup-sce-c-inet-close/inet_close.cpp": "e51bb6711869a39947eb507adf703811c7ee9a6c73ce387c736a3621d4ab83c1",
+    "sources/w8-startup-sce-c-inet-ctl-down-interface/down_interface.cpp": "c57ffb73a50ae63559c71d4a90eb9ce34a3a8bdc8878c54789d5d94acd52e119",
+    "sources/w8-startup-sce-c-inet-ctl-get-state/get_state.cpp": "d44ef363141b39e41f5327cca26792101c1196c9f5ee3d856ca03e238c051bb9",
+    "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp": "ce86366218a02df34a54f9f7fce6ac88f6ee029d5ac4b02e28bcefe9120e4966",
+    "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp": "07e3486b445d6d087a26ae95b2c75b847a5d151c2e60c2263ad8d96a74df0851",
+    "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
+    "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c"
   },
   "inputs": [
     {
@@ -27116,6 +27143,391 @@
       "sha256": "aa984d1f5f861f7a3dc50c7232cd0290a0d75e00fdce7d03cc80575f173e9508",
       "source": "sources/w8-startup-sce-b-data-words/words.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1962,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-get-error.o",
+      "profile": "authored_cpp",
+      "sha256": "56c83ddf30fa5a5e37e37257bc304ccbb95ba356e75ef3a060dbeef3a1f19d18",
+      "source": "sources/w8-startup-sce-c-cd-get-error/get_error.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdGetError",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1963,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-layer-search-file.o",
+      "profile": "authored_cpp",
+      "sha256": "bae0f5601563704b1de7cbefba21925c37e407f78a13c681f7b2a7ff9c2fabb2",
+      "source": "sources/w8-startup-sce-c-cd-layer-search-file/layer_search_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdLayerSearchFile",
+          "compiled_body_bytes": 924
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1964,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-poff-callback.o",
+      "profile": "authored_cpp",
+      "sha256": "5f47ab719dfecf29f4282b99b54374a5c83e0df5f3a3998c7249f8203ab9b897",
+      "source": "sources/w8-startup-sce-c-cd-poff-callback/poff_callback.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdPOffCallback",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1965,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-read-clock.o",
+      "profile": "authored_cpp",
+      "sha256": "a794dd9778d41c80b51b3c60af44cdf6465013d763f567b6f5575dfd24fd8b8c",
+      "source": "sources/w8-startup-sce-c-cd-read-clock/read_clock.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadClock",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1966,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-read-dvd-dual-info.o",
+      "profile": "authored_cpp",
+      "sha256": "ec88f0e022c04177b6d33d506b0a70ac02cd989bf0bcfbbc1db556d1d144751e",
+      "source": "sources/w8-startup-sce-c-cd-read-dvd-dual-info/read_dvd_dual_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadDvdDualInfo",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1967,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-search-file.o",
+      "profile": "authored_cpp",
+      "sha256": "d639a519074345bc4a7d99fcf5036a073c58aed40ce4e20c598ce8af0a0c5280",
+      "source": "sources/w8-startup-sce-c-cd-search-file/search_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdSearchFile",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1968,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-st-init.o",
+      "profile": "authored_cpp",
+      "sha256": "bcf90a938b98c712b377db6ad4f5c05da4079d04c7cee6712d882ec7deddec1f",
+      "source": "sources/w8-startup-sce-c-cd-st-init/st_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdStInit",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1969,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-st-read.o",
+      "profile": "authored_cpp",
+      "sha256": "87be43a78633ae3b75066292c4afa374407fb21fc9d1fdba03259a0e4b89cc22",
+      "source": "sources/w8-startup-sce-c-cd-st-read/st_read.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdStRead",
+          "compiled_body_bytes": 476
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1970,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-cd-sync.o",
+      "profile": "authored_cpp",
+      "sha256": "3ddcc7290365b516c02579ab82d64c2157413b76de014f2a937444a6ba28fde5",
+      "source": "sources/w8-startup-sce-c-cd-sync/cd_sync.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceCdSync",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1971,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-data-load-thread-id.o",
+      "profile": "authored_cpp",
+      "sha256": "ba9903048a55226f3449b4f16910d0b1ee9d3d64df1e925f6cd4a637601ab737",
+      "source": "sources/w8-startup-sce-c-data-load-thread-id/load_thread_id.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1972,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-data-pre-configure.o",
+      "profile": "authored_cpp",
+      "sha256": "a39782a87fa1a931c5cf999da8783a2c47a4598a2c083dd70620ea787bab9a61",
+      "source": "sources/w8-startup-sce-c-data-pre-configure/pre_configure.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1973,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-data-sbuff.o",
+      "profile": "authored_cpp",
+      "sha256": "446c3d13e50cba09756b4285886165e4aac4ce2d184c04e0dc28e1aa971257d9",
+      "source": "sources/w8-startup-sce-c-data-sbuff/sbuff.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1974,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-data-sbuffin.o",
+      "profile": "authored_cpp",
+      "sha256": "661fdd810d222a58407971ea9e866997c9e2e31c5c7b97eb6409761063fce6c4",
+      "source": "sources/w8-startup-sce-c-data-sbuffin/sbuffin.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1975,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-fs-close.o",
+      "profile": "authored_cpp",
+      "sha256": "ff8b3b139a5d4df921aeb778d14681baba9966a81a550e3e1d9642591d4ada4c",
+      "source": "sources/w8-startup-sce-c-fs-close/fs_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceClose",
+          "compiled_body_bytes": 512
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1976,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gif-pk-add-gs-data.o",
+      "profile": "authored_cpp",
+      "sha256": "fa2920f21c636f8be599a1cbadbf8f5e17d8e2f032fc75fe76911f53873074c7",
+      "source": "sources/w8-startup-sce-c-gif-pk-add-gs-data/pk_add_gs_data.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkAddGsData",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1977,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gif-pk-init.o",
+      "profile": "authored_cpp",
+      "sha256": "09cc9e75d1096e0e1159bbe6fd9212d957e8b4b2964639e77f1fca78b441f652",
+      "source": "sources/w8-startup-sce-c-gif-pk-init/pk_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkInit",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1978,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gif-pk-reset.o",
+      "profile": "authored_cpp",
+      "sha256": "b2c79fd748aa4f1f6014326169d8ccd1eeb9db00451f734fc919ca2c3ac19553",
+      "source": "sources/w8-startup-sce-c-gif-pk-reset/pk_reset.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkReset",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1979,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gif-pk-size.o",
+      "profile": "authored_cpp",
+      "sha256": "e56b88f2e2fd61864e87c1ed434d26b9a19532c75474bd0bc0fd95bba7a34958",
+      "source": "sources/w8-startup-sce-c-gif-pk-size/pk_size.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkSize",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1980,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gif-pk-terminate.o",
+      "profile": "authored_cpp",
+      "sha256": "3b0a8888f97d89ab38f64f83519cb5d8eab973c8619570f1409e0efaa9196333",
+      "source": "sources/w8-startup-sce-c-gif-pk-terminate/pk_terminate.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkTerminate",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1981,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-gs-zbuf-addr.o",
+      "profile": "authored_cpp",
+      "sha256": "0a4bf472e5b502576346a6aa92bc1562e08bd734f804b115464bcbcbb08639eb",
+      "source": "sources/w8-startup-sce-c-gs-zbuf-addr/zbuf_addr.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceGszbufaddr",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1982,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-inet-close.o",
+      "profile": "authored_cpp",
+      "sha256": "e51bb6711869a39947eb507adf703811c7ee9a6c73ce387c736a3621d4ab83c1",
+      "source": "sources/w8-startup-sce-c-inet-close/inet_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetClose",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1983,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-inet-ctl-down-interface.o",
+      "profile": "authored_cpp",
+      "sha256": "c57ffb73a50ae63559c71d4a90eb9ce34a3a8bdc8878c54789d5d94acd52e119",
+      "source": "sources/w8-startup-sce-c-inet-ctl-down-interface/down_interface.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlDownInterface",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1984,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-inet-ctl-get-state.o",
+      "profile": "authored_cpp",
+      "sha256": "d44ef363141b39e41f5327cca26792101c1196c9f5ee3d856ca03e238c051bb9",
+      "source": "sources/w8-startup-sce-c-inet-ctl-get-state/get_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlGetState",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1985,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-inet-get-interface-list.o",
+      "profile": "authored_cpp",
+      "sha256": "ce86366218a02df34a54f9f7fce6ac88f6ee029d5ac4b02e28bcefe9120e4966",
+      "source": "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetGetInterfaceList",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1986,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-lg-codec-open.o",
+      "profile": "authored_cpp",
+      "sha256": "07e3486b445d6d087a26ae95b2c75b847a5d151c2e60c2263ad8d96a74df0851",
+      "source": "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp",
+      "emitted_functions": [
+        {
+          "name": "lgCodecOpen",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1987,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-lg-kbd-close.o",
+      "profile": "authored_cpp",
+      "sha256": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
+      "source": "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "lgKbdClose",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1988,
+      "kind": "independently_authored_source",
+      "object_name": "w8-startup-sce-c-libnet-initialize.o",
+      "profile": "authored_cpp",
+      "sha256": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c",
+      "source": "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetInitialize",
+          "compiled_body_bytes": 280
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -27215,7 +27627,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "44e81b262e2fd4b24a24989796579c0182d140c0a989410cf1a58b0c0bd3dfa9",
+  "snapshot_sha256": "108055209543de1bcb612cfa919c26622f7d874ade363233c72274e34c8be774",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -25173,6 +25173,364 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w8-startup-sce-b-data-words/words.cpp"
+    },
+    {
+      "input_order": 1962,
+      "component": "w8-startup-sce-c-cd-get-error",
+      "object_name": "w8-startup-sce-c-cd-get-error.o",
+      "private_object_sha256": "a37b3767e32b526abd968f17719ca6a780f2e70ddcfc6f0df60c7398b17f1ac7",
+      "emitted_functions": [
+        {
+          "name": "sceCdGetError",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-get-error/get_error.cpp"
+    },
+    {
+      "input_order": 1963,
+      "component": "w8-startup-sce-c-cd-layer-search-file",
+      "object_name": "w8-startup-sce-c-cd-layer-search-file.o",
+      "private_object_sha256": "e37e15a119ab8a86243cada0bb66b6b988b26f3b1d8aa2409716cec6c6be64d4",
+      "emitted_functions": [
+        {
+          "name": "sceCdLayerSearchFile",
+          "compiled_body_bytes": 924
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-layer-search-file/layer_search_file.cpp"
+    },
+    {
+      "input_order": 1964,
+      "component": "w8-startup-sce-c-cd-poff-callback",
+      "object_name": "w8-startup-sce-c-cd-poff-callback.o",
+      "private_object_sha256": "d2f969aebc38bb7a33351a22f36a4aa9cecd4430a15f172cf14c439564cb434c",
+      "emitted_functions": [
+        {
+          "name": "sceCdPOffCallback",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-poff-callback/poff_callback.cpp"
+    },
+    {
+      "input_order": 1965,
+      "component": "w8-startup-sce-c-cd-read-clock",
+      "object_name": "w8-startup-sce-c-cd-read-clock.o",
+      "private_object_sha256": "82daba4e7cd07cd80f5a9599df8e6637fb002b8f695925be7f542716dfc2b17e",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadClock",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-read-clock/read_clock.cpp"
+    },
+    {
+      "input_order": 1966,
+      "component": "w8-startup-sce-c-cd-read-dvd-dual-info",
+      "object_name": "w8-startup-sce-c-cd-read-dvd-dual-info.o",
+      "private_object_sha256": "52130f30a155595fa92c48e527e86be0505f6cbb586c3785cb699911b3895ab1",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadDvdDualInfo",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-read-dvd-dual-info/read_dvd_dual_info.cpp"
+    },
+    {
+      "input_order": 1967,
+      "component": "w8-startup-sce-c-cd-search-file",
+      "object_name": "w8-startup-sce-c-cd-search-file.o",
+      "private_object_sha256": "cd52b47097846170766d0d2c137a71bc7bee6330d538cc7673ea14a03e2121d0",
+      "emitted_functions": [
+        {
+          "name": "sceCdSearchFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-search-file/search_file.cpp"
+    },
+    {
+      "input_order": 1968,
+      "component": "w8-startup-sce-c-cd-st-init",
+      "object_name": "w8-startup-sce-c-cd-st-init.o",
+      "private_object_sha256": "b47d8b5f348c35eeb981c58347cf4f6aee7b74ff814c610aa8388117755710b8",
+      "emitted_functions": [
+        {
+          "name": "sceCdStInit",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-st-init/st_init.cpp"
+    },
+    {
+      "input_order": 1969,
+      "component": "w8-startup-sce-c-cd-st-read",
+      "object_name": "w8-startup-sce-c-cd-st-read.o",
+      "private_object_sha256": "f4ac10b53d35c5b1f88ed48faad9881e40dcc81c51874c3593aebe7f500e7f2f",
+      "emitted_functions": [
+        {
+          "name": "sceCdStRead",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-st-read/st_read.cpp"
+    },
+    {
+      "input_order": 1970,
+      "component": "w8-startup-sce-c-cd-sync",
+      "object_name": "w8-startup-sce-c-cd-sync.o",
+      "private_object_sha256": "02afe0ce5c7673979420264106532cb7ccee5efb13b4d6d8821f5176c7694fc9",
+      "emitted_functions": [
+        {
+          "name": "sceCdSync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-cd-sync/cd_sync.cpp"
+    },
+    {
+      "input_order": 1971,
+      "component": "w8-startup-sce-c-data-load-thread-id",
+      "object_name": "w8-startup-sce-c-data-load-thread-id.o",
+      "private_object_sha256": "ac1aa04827567b9e092188a78f2480c51919eeb445bbaa1d1332e4e495add0d0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-data-load-thread-id/load_thread_id.cpp"
+    },
+    {
+      "input_order": 1972,
+      "component": "w8-startup-sce-c-data-pre-configure",
+      "object_name": "w8-startup-sce-c-data-pre-configure.o",
+      "private_object_sha256": "4ad53f195a686fe3c5af1167eca0792ad0011d84e07c1edd4e24fb93e748219d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-data-pre-configure/pre_configure.cpp"
+    },
+    {
+      "input_order": 1973,
+      "component": "w8-startup-sce-c-data-sbuff",
+      "object_name": "w8-startup-sce-c-data-sbuff.o",
+      "private_object_sha256": "354f3d9c7317aa39d23a3dd49fe4c34ef9de99849f842ff8de74169727707c44",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-data-sbuff/sbuff.cpp"
+    },
+    {
+      "input_order": 1974,
+      "component": "w8-startup-sce-c-data-sbuffin",
+      "object_name": "w8-startup-sce-c-data-sbuffin.o",
+      "private_object_sha256": "8b7365e683cee62f7ee9d1376dc26af0e84043c05572639a709d708b65033e01",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-data-sbuffin/sbuffin.cpp"
+    },
+    {
+      "input_order": 1975,
+      "component": "w8-startup-sce-c-fs-close",
+      "object_name": "w8-startup-sce-c-fs-close.o",
+      "private_object_sha256": "185104eb2a473a382d0bab97b21a4d996a4a2d9be5a47672b092a3206d4ca5c1",
+      "emitted_functions": [
+        {
+          "name": "sceClose",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-fs-close/fs_close.cpp"
+    },
+    {
+      "input_order": 1976,
+      "component": "w8-startup-sce-c-gif-pk-add-gs-data",
+      "object_name": "w8-startup-sce-c-gif-pk-add-gs-data.o",
+      "private_object_sha256": "c48aa9e6a701d45748f1553e84303a78b566e42d863aea6615ae978d09a7e2b9",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkAddGsData",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gif-pk-add-gs-data/pk_add_gs_data.cpp"
+    },
+    {
+      "input_order": 1977,
+      "component": "w8-startup-sce-c-gif-pk-init",
+      "object_name": "w8-startup-sce-c-gif-pk-init.o",
+      "private_object_sha256": "7594cfe1290e128527f8f1fd6926d8210fc1c1555575600000e7721de3848319",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkInit",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gif-pk-init/pk_init.cpp"
+    },
+    {
+      "input_order": 1978,
+      "component": "w8-startup-sce-c-gif-pk-reset",
+      "object_name": "w8-startup-sce-c-gif-pk-reset.o",
+      "private_object_sha256": "e3ab4f12787c2c991c94624a77bb2b8b637915e0f23e518f7a68dd7cc9972535",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkReset",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gif-pk-reset/pk_reset.cpp"
+    },
+    {
+      "input_order": 1979,
+      "component": "w8-startup-sce-c-gif-pk-size",
+      "object_name": "w8-startup-sce-c-gif-pk-size.o",
+      "private_object_sha256": "1885b0eb1b9a014be4052ce971d78512a207a5f1b02ff30f5534660b6de1ec90",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkSize",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gif-pk-size/pk_size.cpp"
+    },
+    {
+      "input_order": 1980,
+      "component": "w8-startup-sce-c-gif-pk-terminate",
+      "object_name": "w8-startup-sce-c-gif-pk-terminate.o",
+      "private_object_sha256": "315a3c7660b04009ff937aa23d5802e9aa08cbfc11bb0ba9e133a8de6757c2dd",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkTerminate",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gif-pk-terminate/pk_terminate.cpp"
+    },
+    {
+      "input_order": 1981,
+      "component": "w8-startup-sce-c-gs-zbuf-addr",
+      "object_name": "w8-startup-sce-c-gs-zbuf-addr.o",
+      "private_object_sha256": "4631c9882842a241f731777f88bebf69008080f759179ea99aff2d22db8ad729",
+      "emitted_functions": [
+        {
+          "name": "sceGszbufaddr",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-gs-zbuf-addr/zbuf_addr.cpp"
+    },
+    {
+      "input_order": 1982,
+      "component": "w8-startup-sce-c-inet-close",
+      "object_name": "w8-startup-sce-c-inet-close.o",
+      "private_object_sha256": "0c84cc09f00abb2325358825f5f42f3c62687270f1217a853cf9c0452766d268",
+      "emitted_functions": [
+        {
+          "name": "sceInetClose",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-inet-close/inet_close.cpp"
+    },
+    {
+      "input_order": 1983,
+      "component": "w8-startup-sce-c-inet-ctl-down-interface",
+      "object_name": "w8-startup-sce-c-inet-ctl-down-interface.o",
+      "private_object_sha256": "2fb28554c19d900b66d8ce36c7b702e4f50f4af8dd1026d006473d451313a03e",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlDownInterface",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-inet-ctl-down-interface/down_interface.cpp"
+    },
+    {
+      "input_order": 1984,
+      "component": "w8-startup-sce-c-inet-ctl-get-state",
+      "object_name": "w8-startup-sce-c-inet-ctl-get-state.o",
+      "private_object_sha256": "e5f0a455322a7d1db2ae05f34bf7291f23ecd563e6d396eae84ecfa852e97eb6",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlGetState",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-inet-ctl-get-state/get_state.cpp"
+    },
+    {
+      "input_order": 1985,
+      "component": "w8-startup-sce-c-inet-get-interface-list",
+      "object_name": "w8-startup-sce-c-inet-get-interface-list.o",
+      "private_object_sha256": "be60c6b7ce3413ee75c1807b7ae651640ee2ad5e30e864fed33d8abe0c07ebc6",
+      "emitted_functions": [
+        {
+          "name": "sceInetGetInterfaceList",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp"
+    },
+    {
+      "input_order": 1986,
+      "component": "w8-startup-sce-c-lg-codec-open",
+      "object_name": "w8-startup-sce-c-lg-codec-open.o",
+      "private_object_sha256": "8f5e05d0f3a1884964636059950bb2755f0091013bbd11b305b73b97a93a89df",
+      "emitted_functions": [
+        {
+          "name": "lgCodecOpen",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp"
+    },
+    {
+      "input_order": 1987,
+      "component": "w8-startup-sce-c-lg-kbd-close",
+      "object_name": "w8-startup-sce-c-lg-kbd-close.o",
+      "private_object_sha256": "d7c3019aef1d243468eae3d3aec92f445e79d35871728cd01ec798f10a6682a7",
+      "emitted_functions": [
+        {
+          "name": "lgKbdClose",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp"
+    },
+    {
+      "input_order": 1988,
+      "component": "w8-startup-sce-c-libnet-initialize",
+      "object_name": "w8-startup-sce-c-libnet-initialize.o",
+      "private_object_sha256": "f0f300806299a3a237134ef3792f611cfe39b5e0fd94b455207e1ad6612eeb52",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetInitialize",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp"
     }
   ],
   "drafts": [
@@ -29551,7 +29909,61 @@
     "sources/w8-startup-sce-b-lg-aud-init/host_contract.cpp": "06f03c27a0599ef35e3c21596c7b88972ec87448631f917c763cc3e16a4c92d1",
     "sources/w8-startup-sce-b-data-words/words.cpp": "aa984d1f5f861f7a3dc50c7232cd0290a0d75e00fdce7d03cc80575f173e9508",
     "sources/w8-startup-sce-b-data-words/host_contract.cpp": "e840ccd5adbfa6d4584986d946fd6522473212ed63b96e95e292ed202385b4e0",
-    "sources/w8-startup-sce-b-k-exit-tlb-handler/k_exit_tlb_handler.cpp": "1b4ce43d1bd5c846d17ce7327892b99a2500c54f3665f03aba581e9319acd675"
+    "sources/w8-startup-sce-b-k-exit-tlb-handler/k_exit_tlb_handler.cpp": "1b4ce43d1bd5c846d17ce7327892b99a2500c54f3665f03aba581e9319acd675",
+    "sources/w8-startup-sce-c-cd-get-error/get_error.cpp": "56c83ddf30fa5a5e37e37257bc304ccbb95ba356e75ef3a060dbeef3a1f19d18",
+    "sources/w8-startup-sce-c-cd-get-error/host_contract.cpp": "2259437bcae6360d0193109dd3bef5d7d540e99843e4dd4feaebeef1c2adb7d6",
+    "sources/w8-startup-sce-c-cd-layer-search-file/layer_search_file.cpp": "bae0f5601563704b1de7cbefba21925c37e407f78a13c681f7b2a7ff9c2fabb2",
+    "sources/w8-startup-sce-c-cd-layer-search-file/host_contract.cpp": "da47110068287d32e409b6fa732fb0973fe19ef44ec439fbf5ea42fae9abfc0c",
+    "sources/w8-startup-sce-c-cd-poff-callback/poff_callback.cpp": "5f47ab719dfecf29f4282b99b54374a5c83e0df5f3a3998c7249f8203ab9b897",
+    "sources/w8-startup-sce-c-cd-poff-callback/host_contract.cpp": "51e321fdc894c3acde3800d24bc5d40f85e1cd0300ed6479e02007faa20900d3",
+    "sources/w8-startup-sce-c-cd-read-clock/read_clock.cpp": "a794dd9778d41c80b51b3c60af44cdf6465013d763f567b6f5575dfd24fd8b8c",
+    "sources/w8-startup-sce-c-cd-read-clock/host_contract.cpp": "51029ec36e0385b785079dc25d90db63f33111ce9b8409e4863945dbf818c25f",
+    "sources/w8-startup-sce-c-cd-read-dvd-dual-info/read_dvd_dual_info.cpp": "ec88f0e022c04177b6d33d506b0a70ac02cd989bf0bcfbbc1db556d1d144751e",
+    "sources/w8-startup-sce-c-cd-read-dvd-dual-info/host_contract.cpp": "4a5025c8e2ce5b46f8672cbbd1e2ed33ad28ea3ef06fcd642768ae473c495dff",
+    "sources/w8-startup-sce-c-cd-search-file/search_file.cpp": "d639a519074345bc4a7d99fcf5036a073c58aed40ce4e20c598ce8af0a0c5280",
+    "sources/w8-startup-sce-c-cd-search-file/host_contract.cpp": "dc1cccca1c97a659effd151f117f0a059842be360145cc163e18e42a71fdd6d0",
+    "sources/w8-startup-sce-c-cd-st-init/st_init.cpp": "bcf90a938b98c712b377db6ad4f5c05da4079d04c7cee6712d882ec7deddec1f",
+    "sources/w8-startup-sce-c-cd-st-init/host_contract.cpp": "2eb4b29a9a566ec76c3b24c712548735576078a3df80813e953f143a78a72620",
+    "sources/w8-startup-sce-c-cd-st-read/st_read.cpp": "87be43a78633ae3b75066292c4afa374407fb21fc9d1fdba03259a0e4b89cc22",
+    "sources/w8-startup-sce-c-cd-st-read/host_contract.cpp": "b4bbe48a02fa5fd01aa5cbf71083e11b48cc7bfbd18f602ff71062dd2c304628",
+    "sources/w8-startup-sce-c-cd-sync/cd_sync.cpp": "3ddcc7290365b516c02579ab82d64c2157413b76de014f2a937444a6ba28fde5",
+    "sources/w8-startup-sce-c-cd-sync/host_contract.cpp": "ebdf3c5dcdc60e3fb470feb72d81862ecbdd0f490d0c1412fb0dec4964ba3d6e",
+    "sources/w8-startup-sce-c-data-load-thread-id/load_thread_id.cpp": "ba9903048a55226f3449b4f16910d0b1ee9d3d64df1e925f6cd4a637601ab737",
+    "sources/w8-startup-sce-c-data-load-thread-id/host_contract.cpp": "fb54628f87a8f78c51c6be41f566f27525e82df05977dfda024703087a6f4b57",
+    "sources/w8-startup-sce-c-data-pre-configure/pre_configure.cpp": "a39782a87fa1a931c5cf999da8783a2c47a4598a2c083dd70620ea787bab9a61",
+    "sources/w8-startup-sce-c-data-pre-configure/host_contract.cpp": "9cf7332d73c8cc8b839a390292b1c088b20e4c7c502f4071e809851585406318",
+    "sources/w8-startup-sce-c-data-sbuff/sbuff.cpp": "446c3d13e50cba09756b4285886165e4aac4ce2d184c04e0dc28e1aa971257d9",
+    "sources/w8-startup-sce-c-data-sbuff/host_contract.cpp": "c550b4bacd060d38a7b23f6a20de5e1cff329b0603eca87927b736e8cde1e859",
+    "sources/w8-startup-sce-c-data-sbuffin/sbuffin.cpp": "661fdd810d222a58407971ea9e866997c9e2e31c5c7b97eb6409761063fce6c4",
+    "sources/w8-startup-sce-c-data-sbuffin/host_contract.cpp": "cf26b1df3a059ec789b18fae2f383a0522bff1745aaa85bf13a358ab812757ec",
+    "sources/w8-startup-sce-c-fs-close/fs_close.cpp": "ff8b3b139a5d4df921aeb778d14681baba9966a81a550e3e1d9642591d4ada4c",
+    "sources/w8-startup-sce-c-fs-close/host_contract.cpp": "117dd771a351ac877b6b6d69528e50b964d5803d131cbd099d729323077aae02",
+    "sources/w8-startup-sce-c-gif-pk-add-gs-data/pk_add_gs_data.cpp": "fa2920f21c636f8be599a1cbadbf8f5e17d8e2f032fc75fe76911f53873074c7",
+    "sources/w8-startup-sce-c-gif-pk-add-gs-data/host_contract.cpp": "c2953829ad625fd7082d1a9cdfc18ea214c8c28b08268ec9de371180427dce40",
+    "sources/w8-startup-sce-c-gif-pk-init/pk_init.cpp": "09cc9e75d1096e0e1159bbe6fd9212d957e8b4b2964639e77f1fca78b441f652",
+    "sources/w8-startup-sce-c-gif-pk-init/host_contract.cpp": "57c5960589d1a89831f7fa184832d15e2f0318c50bde60700a24a602cba50648",
+    "sources/w8-startup-sce-c-gif-pk-reset/pk_reset.cpp": "b2c79fd748aa4f1f6014326169d8ccd1eeb9db00451f734fc919ca2c3ac19553",
+    "sources/w8-startup-sce-c-gif-pk-reset/host_contract.cpp": "8f22c4e0bc875d880ab97fa0f3fca374cea962d318e0776eaf84057d9862e640",
+    "sources/w8-startup-sce-c-gif-pk-size/pk_size.cpp": "e56b88f2e2fd61864e87c1ed434d26b9a19532c75474bd0bc0fd95bba7a34958",
+    "sources/w8-startup-sce-c-gif-pk-size/host_contract.cpp": "f0f5153d40b0020292530977b23d7cbea66e4d1a52a96f29e9e282474babe429",
+    "sources/w8-startup-sce-c-gif-pk-terminate/pk_terminate.cpp": "3b0a8888f97d89ab38f64f83519cb5d8eab973c8619570f1409e0efaa9196333",
+    "sources/w8-startup-sce-c-gif-pk-terminate/host_contract.cpp": "1be62055923ef7e9e735e5d30c61333998e0d0efad53530b657f5d3b07d151e2",
+    "sources/w8-startup-sce-c-gs-zbuf-addr/zbuf_addr.cpp": "0a4bf472e5b502576346a6aa92bc1562e08bd734f804b115464bcbcbb08639eb",
+    "sources/w8-startup-sce-c-gs-zbuf-addr/host_contract.cpp": "3e2a7389f396268d11e03d03415efae86da4b0cc591782095844f086b8fe023b",
+    "sources/w8-startup-sce-c-inet-close/inet_close.cpp": "e51bb6711869a39947eb507adf703811c7ee9a6c73ce387c736a3621d4ab83c1",
+    "sources/w8-startup-sce-c-inet-close/host_contract.cpp": "2bd914c3ea9aa1492dcdc44b64e05127f908fb5e7a7d362ec1c0a99e887345c2",
+    "sources/w8-startup-sce-c-inet-ctl-down-interface/down_interface.cpp": "c57ffb73a50ae63559c71d4a90eb9ce34a3a8bdc8878c54789d5d94acd52e119",
+    "sources/w8-startup-sce-c-inet-ctl-down-interface/host_contract.cpp": "7dab24cb791cad038d481e7c57db8999ddc2f1b5a1b97dcfe8efea19f67c306c",
+    "sources/w8-startup-sce-c-inet-ctl-get-state/get_state.cpp": "d44ef363141b39e41f5327cca26792101c1196c9f5ee3d856ca03e238c051bb9",
+    "sources/w8-startup-sce-c-inet-ctl-get-state/host_contract.cpp": "2b6b2519d8878ea9a4b1b87b5db3a7fa4bdd18a20b012a168373daa0f9209d3e",
+    "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp": "ce86366218a02df34a54f9f7fce6ac88f6ee029d5ac4b02e28bcefe9120e4966",
+    "sources/w8-startup-sce-c-inet-get-interface-list/host_contract.cpp": "55e93639e7903f00b305530d3406105db252c91c300221bca1811002f0ec9cb0",
+    "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp": "07e3486b445d6d087a26ae95b2c75b847a5d151c2e60c2263ad8d96a74df0851",
+    "sources/w8-startup-sce-c-lg-codec-open/host_contract.cpp": "c5893f1b3fa41f406684f4a32e3b93056fb428905cf2104972ec05da7fe212bd",
+    "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
+    "sources/w8-startup-sce-c-lg-kbd-close/host_contract.cpp": "9dece063fd646e7543e14fadc7715b19e7f9bbe67999631919760360e3cfe2c4",
+    "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c",
+    "sources/w8-startup-sce-c-libnet-initialize/host_contract.cpp": "cdda067b4ef34508a8abd4e45121007fd18a082d1d2f362fdd0c464e1c7df3df"
   },
   "additional_implementations": [
     {
@@ -29993,11 +30405,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1962,
-    "authored_default_inputs": 1960,
+    "selected_inputs": 1989,
+    "authored_default_inputs": 1987,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1533,
-    "compiled_body_bytes_from_accepted_inputs": 661696,
+    "emitted_function_definitions_including_helpers": 1556,
+    "compiled_body_bytes_from_accepted_inputs": 666444,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -30010,7 +30422,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1649
+    "package_selected_inputs": 1676
   },
   "startup_implementations": [
     {
@@ -55634,6 +56046,445 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w8-startup-sce-b-data-words/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-get-error/get_error.cpp",
+      "source_sha256": "56c83ddf30fa5a5e37e37257bc304ccbb95ba356e75ef3a060dbeef3a1f19d18",
+      "object_sha256": "a37b3767e32b526abd968f17719ca6a780f2e70ddcfc6f0df60c7398b17f1ac7",
+      "emitted_functions": [
+        {
+          "name": "sceCdGetError",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-get-error/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-layer-search-file/layer_search_file.cpp",
+      "source_sha256": "bae0f5601563704b1de7cbefba21925c37e407f78a13c681f7b2a7ff9c2fabb2",
+      "object_sha256": "e37e15a119ab8a86243cada0bb66b6b988b26f3b1d8aa2409716cec6c6be64d4",
+      "emitted_functions": [
+        {
+          "name": "sceCdLayerSearchFile",
+          "compiled_body_bytes": 924
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-layer-search-file/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-poff-callback/poff_callback.cpp",
+      "source_sha256": "5f47ab719dfecf29f4282b99b54374a5c83e0df5f3a3998c7249f8203ab9b897",
+      "object_sha256": "d2f969aebc38bb7a33351a22f36a4aa9cecd4430a15f172cf14c439564cb434c",
+      "emitted_functions": [
+        {
+          "name": "sceCdPOffCallback",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-poff-callback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-read-clock/read_clock.cpp",
+      "source_sha256": "a794dd9778d41c80b51b3c60af44cdf6465013d763f567b6f5575dfd24fd8b8c",
+      "object_sha256": "82daba4e7cd07cd80f5a9599df8e6637fb002b8f695925be7f542716dfc2b17e",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadClock",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-read-clock/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-read-dvd-dual-info/read_dvd_dual_info.cpp",
+      "source_sha256": "ec88f0e022c04177b6d33d506b0a70ac02cd989bf0bcfbbc1db556d1d144751e",
+      "object_sha256": "52130f30a155595fa92c48e527e86be0505f6cbb586c3785cb699911b3895ab1",
+      "emitted_functions": [
+        {
+          "name": "sceCdReadDvdDualInfo",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-read-dvd-dual-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-search-file/search_file.cpp",
+      "source_sha256": "d639a519074345bc4a7d99fcf5036a073c58aed40ce4e20c598ce8af0a0c5280",
+      "object_sha256": "cd52b47097846170766d0d2c137a71bc7bee6330d538cc7673ea14a03e2121d0",
+      "emitted_functions": [
+        {
+          "name": "sceCdSearchFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-search-file/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-st-init/st_init.cpp",
+      "source_sha256": "bcf90a938b98c712b377db6ad4f5c05da4079d04c7cee6712d882ec7deddec1f",
+      "object_sha256": "b47d8b5f348c35eeb981c58347cf4f6aee7b74ff814c610aa8388117755710b8",
+      "emitted_functions": [
+        {
+          "name": "sceCdStInit",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-st-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-st-read/st_read.cpp",
+      "source_sha256": "87be43a78633ae3b75066292c4afa374407fb21fc9d1fdba03259a0e4b89cc22",
+      "object_sha256": "f4ac10b53d35c5b1f88ed48faad9881e40dcc81c51874c3593aebe7f500e7f2f",
+      "emitted_functions": [
+        {
+          "name": "sceCdStRead",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-st-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-cd-sync/cd_sync.cpp",
+      "source_sha256": "3ddcc7290365b516c02579ab82d64c2157413b76de014f2a937444a6ba28fde5",
+      "object_sha256": "02afe0ce5c7673979420264106532cb7ccee5efb13b4d6d8821f5176c7694fc9",
+      "emitted_functions": [
+        {
+          "name": "sceCdSync",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-cd-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-data-load-thread-id/load_thread_id.cpp",
+      "source_sha256": "ba9903048a55226f3449b4f16910d0b1ee9d3d64df1e925f6cd4a637601ab737",
+      "object_sha256": "ac1aa04827567b9e092188a78f2480c51919eeb445bbaa1d1332e4e495add0d0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-c-data-load-thread-id/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-data-pre-configure/pre_configure.cpp",
+      "source_sha256": "a39782a87fa1a931c5cf999da8783a2c47a4598a2c083dd70620ea787bab9a61",
+      "object_sha256": "4ad53f195a686fe3c5af1167eca0792ad0011d84e07c1edd4e24fb93e748219d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-c-data-pre-configure/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-data-sbuff/sbuff.cpp",
+      "source_sha256": "446c3d13e50cba09756b4285886165e4aac4ce2d184c04e0dc28e1aa971257d9",
+      "object_sha256": "354f3d9c7317aa39d23a3dd49fe4c34ef9de99849f842ff8de74169727707c44",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-c-data-sbuff/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-data-sbuffin/sbuffin.cpp",
+      "source_sha256": "661fdd810d222a58407971ea9e866997c9e2e31c5c7b97eb6409761063fce6c4",
+      "object_sha256": "8b7365e683cee62f7ee9d1376dc26af0e84043c05572639a709d708b65033e01",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-c-data-sbuffin/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-fs-close/fs_close.cpp",
+      "source_sha256": "ff8b3b139a5d4df921aeb778d14681baba9966a81a550e3e1d9642591d4ada4c",
+      "object_sha256": "185104eb2a473a382d0bab97b21a4d996a4a2d9be5a47672b092a3206d4ca5c1",
+      "emitted_functions": [
+        {
+          "name": "sceClose",
+          "compiled_body_bytes": 512
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-fs-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gif-pk-add-gs-data/pk_add_gs_data.cpp",
+      "source_sha256": "fa2920f21c636f8be599a1cbadbf8f5e17d8e2f032fc75fe76911f53873074c7",
+      "object_sha256": "c48aa9e6a701d45748f1553e84303a78b566e42d863aea6615ae978d09a7e2b9",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkAddGsData",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gif-pk-add-gs-data/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gif-pk-init/pk_init.cpp",
+      "source_sha256": "09cc9e75d1096e0e1159bbe6fd9212d957e8b4b2964639e77f1fca78b441f652",
+      "object_sha256": "7594cfe1290e128527f8f1fd6926d8210fc1c1555575600000e7721de3848319",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkInit",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gif-pk-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gif-pk-reset/pk_reset.cpp",
+      "source_sha256": "b2c79fd748aa4f1f6014326169d8ccd1eeb9db00451f734fc919ca2c3ac19553",
+      "object_sha256": "e3ab4f12787c2c991c94624a77bb2b8b637915e0f23e518f7a68dd7cc9972535",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkReset",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gif-pk-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gif-pk-size/pk_size.cpp",
+      "source_sha256": "e56b88f2e2fd61864e87c1ed434d26b9a19532c75474bd0bc0fd95bba7a34958",
+      "object_sha256": "1885b0eb1b9a014be4052ce971d78512a207a5f1b02ff30f5534660b6de1ec90",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkSize",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gif-pk-size/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gif-pk-terminate/pk_terminate.cpp",
+      "source_sha256": "3b0a8888f97d89ab38f64f83519cb5d8eab973c8619570f1409e0efaa9196333",
+      "object_sha256": "315a3c7660b04009ff937aa23d5802e9aa08cbfc11bb0ba9e133a8de6757c2dd",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkTerminate",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gif-pk-terminate/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-gs-zbuf-addr/zbuf_addr.cpp",
+      "source_sha256": "0a4bf472e5b502576346a6aa92bc1562e08bd734f804b115464bcbcbb08639eb",
+      "object_sha256": "4631c9882842a241f731777f88bebf69008080f759179ea99aff2d22db8ad729",
+      "emitted_functions": [
+        {
+          "name": "sceGszbufaddr",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-gs-zbuf-addr/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-inet-close/inet_close.cpp",
+      "source_sha256": "e51bb6711869a39947eb507adf703811c7ee9a6c73ce387c736a3621d4ab83c1",
+      "object_sha256": "0c84cc09f00abb2325358825f5f42f3c62687270f1217a853cf9c0452766d268",
+      "emitted_functions": [
+        {
+          "name": "sceInetClose",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-inet-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-inet-ctl-down-interface/down_interface.cpp",
+      "source_sha256": "c57ffb73a50ae63559c71d4a90eb9ce34a3a8bdc8878c54789d5d94acd52e119",
+      "object_sha256": "2fb28554c19d900b66d8ce36c7b702e4f50f4af8dd1026d006473d451313a03e",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlDownInterface",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-inet-ctl-down-interface/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-inet-ctl-get-state/get_state.cpp",
+      "source_sha256": "d44ef363141b39e41f5327cca26792101c1196c9f5ee3d856ca03e238c051bb9",
+      "object_sha256": "e5f0a455322a7d1db2ae05f34bf7291f23ecd563e6d396eae84ecfa852e97eb6",
+      "emitted_functions": [
+        {
+          "name": "sceInetCtlGetState",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-inet-ctl-get-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp",
+      "source_sha256": "ce86366218a02df34a54f9f7fce6ac88f6ee029d5ac4b02e28bcefe9120e4966",
+      "object_sha256": "be60c6b7ce3413ee75c1807b7ae651640ee2ad5e30e864fed33d8abe0c07ebc6",
+      "emitted_functions": [
+        {
+          "name": "sceInetGetInterfaceList",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-inet-get-interface-list/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp",
+      "source_sha256": "07e3486b445d6d087a26ae95b2c75b847a5d151c2e60c2263ad8d96a74df0851",
+      "object_sha256": "8f5e05d0f3a1884964636059950bb2755f0091013bbd11b305b73b97a93a89df",
+      "emitted_functions": [
+        {
+          "name": "lgCodecOpen",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-lg-codec-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp",
+      "source_sha256": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
+      "object_sha256": "d7c3019aef1d243468eae3d3aec92f445e79d35871728cd01ec798f10a6682a7",
+      "emitted_functions": [
+        {
+          "name": "lgKbdClose",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-lg-kbd-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-c",
+      "source": "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp",
+      "source_sha256": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c",
+      "object_sha256": "f0f300806299a3a237134ef3792f611cfe39b5e0fd94b455207e1ad6612eeb52",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetInitialize",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-c-libnet-initialize/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
