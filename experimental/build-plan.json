@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1325,
+  "default_authored_inputs": 1368,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2041,7 +2041,50 @@
     "sources/simloop-services-sound-frame/sound_frame.cpp": "ebea775b668fd8b7daeb82d757f67f526e3c5b539d00a0afd0a9d9d5b26c86fc",
     "sources/simloop-services-sound-play-sequence/sound_play_sequence.cpp": "bd01476c475778e2ea9cfe90c2c9fd7d3a80ee03ee41ba5761d4568221589884",
     "sources/simloop-services-sound-play-sound/sound_play_sound.cpp": "5eb8c22443bc42bcf4f50399edce820013e02125e1f618f1b8acf69a908ad101",
-    "sources/simloop-services-sound-sequence-length/sound_compute_sequence_length.cpp": "6f514598a587cfc83a9f0fe7bead4ebfd3a9ccddbde4e5d8ba4e1f2c4cd9a264"
+    "sources/simloop-services-sound-sequence-length/sound_compute_sequence_length.cpp": "6f514598a587cfc83a9f0fe7bead4ebfd3a9ccddbde4e5d8ba4e1f2c4cd9a264",
+    "sources/kernel-patches-signal-sema/signal_sema.S": "16b5a4dd3ad74d4c07bcd0695764dd1b9fd1a7a146685eb3e6eaa0b2b24d9ff4",
+    "sources/kernel-patches-syscall-table-setup/syscall_table_setup.S": "5999ac342b744bbae619510fa119ebbfb251023eb1b6e269badb6c7976a7b20d",
+    "sources/kernel-patches-execps2-setup/execps2_setup.S": "b53cd88032e49c46b626cf2f9dbd760a6e0ebe0d66f73f071133d7548230c590",
+    "sources/kernel-patches-execps2-copy/execps2_copy.S": "e3bed75ae05ecb41d36c4bddc4b2530ce05ccc6b847a1a53aab22d50d82d7de0",
+    "sources/kernel-patches-execps2-get-entry/execps2_get_entry.S": "0f4c1e72c5298298958ac20e3c193255f1aa7c8a149ba958ddaab22353c8f4eb",
+    "sources/kernel-patches-alarm-setup/alarm_setup.S": "91e4112daa910874014b020097f709d81b0db254aa2af273d2b89ac5c206b690",
+    "sources/kernel-patches-alarm-copy/alarm_copy.S": "005643a6d2ea3a8847b8e600b828dfca2d6a5e825b9bc408c10cf43fdc84b574",
+    "sources/kernel-patches-alarm-get-entry/alarm_get_entry.S": "78a99c4d3b6e6b078132d51af0c8cd23e9bf25f241b9adb814ee0b00706299e7",
+    "sources/kernel-patches-tlb-copy/tlb_copy.S": "91a13d2b5885590cad932bf1d7b07b1242f0d3f2e19c9d0c359b0bcd7aec7828",
+    "sources/kernel-patches-tlb-get-entry/tlb_get_entry.S": "28326c865ff5ab02782035ef29a6bc397e1ad19715fcbcc8a243d7c9121a64d6",
+    "sources/kernel-patches-tlb-setup/tlb_setup.S": "9647b9eff1c4747f809ff10dce27812bcab41c443f1b6d460f6c21d49ddc0c7d",
+    "sources/kernel-patches-syscall-pattern-kcopy/syscall_pattern_kcopy.S": "f64437d3d41bb7c40069a7af3a027360079730e5ede2163e17bc01aa3df68ed9",
+    "sources/kernel-patches-k-find-address/k_find_address.S": "bb8394532715230d4d92f3db29dad844dbe8874ad76ea87bd4041aa9a9cf2140",
+    "sources/kernel-patches-get-timer-system-time/get_timer_system_time.cpp": "8bcdd6c81ad2fd6dc5c497dd4b175bf6faa411d35e50663d4b14d73189ab077a",
+    "sources/kernel-patches-init-alarm/init_alarm_list.cpp": "975cd074c93c2ca7ba25a9dcca31a22d7bf5cfc2f2166735bbe9f305e075cd69",
+    "sources/kernel-patches-patch-is-needed/patch_is_needed.cpp": "6e3a4a681f8e85c9f7311a5218056ec4b5c21df5a32d1c2a30c0a8754b79241b",
+    "sources/kernel-patches-top-thread/top_thread.cpp": "f2e289caf2768a237f913292558e86f7f226722978a7cdc6ab806f0343d1d0ff",
+    "sources/kernel-patches-set-next-comp/set_next_comp.cpp": "f63b823aeaf0d3aa69b70746db49d2dc60978aaf9695d9b7b8062bf76b458ec3",
+    "sources/kernel-patches-timer-handler/timer_handler.cpp": "94f90685fff0e9d7e91afbc010391e7fb33c9ba21c8e970c784461df567c3b4f",
+    "sources/kernel-patches-execps2-pattern-kcopy/execps2_pattern_kcopy.S": "256513456b512ae4090b186cf1f6e5bffd0bf9c243128e717076874d4e4cf438",
+    "sources/kernel-patches-alarm-pattern-kcopy/alarm_pattern_kcopy.S": "a2873063d15ec0c6cea6e81f592a1fe57349110e8bb08d8dd4bd67da34689306",
+    "sources/kernel-patches-tlb-pattern-kcopy/tlb_pattern_kcopy.S": "9107748d90f80af7216fa2553d2cca0a21c31b7f298de6c3bbfca750b3307dd5",
+    "sources/kernel-patches-g-timer/g_timer.cpp": "fdbeefbf41e9bc0d735dda794bd461234f53f3e5c6fc6b0ed4bd60554dc6d74b",
+    "sources/kernel-patches-top-id/top_id.cpp": "ca6795607b1f6b211a50e8e621334247be57601c0cad8067fe08b445a1ff8340",
+    "sources/kernel-patches-top-sema/top_sema.cpp": "5e5813e0e1bc36d19d573e0dbd88c02aa7a7e4bf200167ae64f53411cfb58ed0",
+    "sources/kernel-patches-top-arg/top_arg.cpp": "abdd7e05dbe797382e11339dd938e82567e72a83efca9f558fbd1241004796f0",
+    "sources/kernel-patches-g-counter-buf/g_counter_buf.cpp": "8d9ad05a2197e1c15c4265fa5daa7803ff5f9343ce96fefc81043180d4681116",
+    "sources/kernel-patches-g-sys-reboot-buf/g_sys_reboot_buf.cpp": "8275b380438817885853cdcc12031f0c0bbe4e9c5d33c0f7f769168570cd4baa",
+    "sources/kernel-patches-g-user-reboot-buf/g_p_user_reboot_buf.cpp": "ebdc137e75ca202b04c33f1f6df78d2ce6746c26af049393f1783bbca491fb00",
+    "sources/kernel-patches-g-user-reboot-size/g_i_user_reboot_size.cpp": "71749620ccedba1eabed7cd228064325f6a81ef54604fa35a2bc0f72196ffd3e",
+    "sources/kernel-patches-syscall-entry/syscall_entry.cpp": "27671d8d0fb8d0f8c1832352f2ebfd26eda71eefe2ca0c5d2dd177b2b224b83d",
+    "sources/kernel-patches-k-exec-arg/k_exec_arg.cpp": "5a72e9485b20cb1ddceab5586cc4acdad159041069f1928b4268a02f3fb0fdb3",
+    "sources/kernel-patches-sif-param-ord/sif_param_ord.cpp": "aab7d320897bb5537a6b52a301c81f1da661fdfeb7f6cd6d26dc3bae1363e018",
+    "sources/kernel-patches-semaid-reg-func/semaid_reg_func.cpp": "24d5aa6e20ea3bf7684b24daa29c5c05b360b73788a2e49165c5c1f77d5438cb",
+    "sources/kernel-patches-semaid-timerfunc/semaid_timerfunc.cpp": "e7bf298ba6d434d74076b059d9c3b0a3fda80dbb52a03be9b64e1bde4fae163b",
+    "sources/kernel-patches-syscall-sysentry/syscall_sysentry.cpp": "bbaeab055a3bb00af0fa5fa1eec4e2f309b8daffbc8d3c4dddd79dac99dc3948",
+    "sources/kernel-patches-execps2-entry/exec_ps2_entry.cpp": "daa849b8f45cf12f44f575dc33275b3a994b4d91f64a49be5188bf0e8d504656",
+    "sources/kernel-patches-alarm-sysentry/alarm_sysentry.cpp": "79d977340e8203eb4843e1f7cc6fc424735ff9a62425a24b4b4beb5446bc2098",
+    "sources/kernel-patches-tlb-sysentry/tlb_sysentry.cpp": "c5a085803b0acd26a81a329e8a71404a5e6686a8b59e89b3c9d545980981ff83",
+    "sources/kernel-patches-unlink-alarm/unlink_alarm.cpp": "af6f4abd8b1f03be64d7db3e5abb906c36d082ad5a57e738d537e05495360374",
+    "sources/kernel-patches-insert-alarm/insert_alarm.cpp": "f49c4ff2f777f8d7e50d838085cc39390a18a13104155f9882b398b89ff90977",
+    "sources/kernel-patches-g-alarm-buf/g_alarm_buf.cpp": "7a92952303b47609c1cd3f95bc1fd6b31a3be02aca38bad6e2d4c338cc3f23ea",
+    "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417"
   },
   "inputs": [
     {
@@ -17404,6 +17447,556 @@
           "compiled_body_bytes": 368
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1327,
+      "kind": "independently_authored_source",
+      "object_name": "signal_sema.o",
+      "profile": "authored_entry_asm",
+      "sha256": "16b5a4dd3ad74d4c07bcd0695764dd1b9fd1a7a146685eb3e6eaa0b2b24d9ff4",
+      "source": "sources/kernel-patches-signal-sema/signal_sema.S",
+      "emitted_functions": [
+        {
+          "name": "SignalSema",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1328,
+      "kind": "independently_authored_source",
+      "object_name": "syscall_table_setup.o",
+      "profile": "authored_entry_asm",
+      "sha256": "5999ac342b744bbae619510fa119ebbfb251023eb1b6e269badb6c7976a7b20d",
+      "source": "sources/kernel-patches-syscall-table-setup/syscall_table_setup.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_syscall_table_setup",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1329,
+      "kind": "independently_authored_source",
+      "object_name": "execps2_setup.o",
+      "profile": "authored_entry_asm",
+      "sha256": "b53cd88032e49c46b626cf2f9dbd760a6e0ebe0d66f73f071133d7548230c590",
+      "source": "sources/kernel-patches-execps2-setup/execps2_setup.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_execps2_setup",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1330,
+      "kind": "independently_authored_source",
+      "object_name": "execps2_copy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "e3bed75ae05ecb41d36c4bddc4b2530ce05ccc6b847a1a53aab22d50d82d7de0",
+      "source": "sources/kernel-patches-execps2-copy/execps2_copy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_execps2_copy",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1331,
+      "kind": "independently_authored_source",
+      "object_name": "execps2_get_entry.o",
+      "profile": "authored_entry_asm",
+      "sha256": "0f4c1e72c5298298958ac20e3c193255f1aa7c8a149ba958ddaab22353c8f4eb",
+      "source": "sources/kernel-patches-execps2-get-entry/execps2_get_entry.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_execps2_get_entry",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1332,
+      "kind": "independently_authored_source",
+      "object_name": "alarm_setup.o",
+      "profile": "authored_entry_asm",
+      "sha256": "91e4112daa910874014b020097f709d81b0db254aa2af273d2b89ac5c206b690",
+      "source": "sources/kernel-patches-alarm-setup/alarm_setup.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_alarm_setup",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1333,
+      "kind": "independently_authored_source",
+      "object_name": "alarm_copy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "005643a6d2ea3a8847b8e600b828dfca2d6a5e825b9bc408c10cf43fdc84b574",
+      "source": "sources/kernel-patches-alarm-copy/alarm_copy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_alarm_copy",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1334,
+      "kind": "independently_authored_source",
+      "object_name": "alarm_get_entry.o",
+      "profile": "authored_entry_asm",
+      "sha256": "78a99c4d3b6e6b078132d51af0c8cd23e9bf25f241b9adb814ee0b00706299e7",
+      "source": "sources/kernel-patches-alarm-get-entry/alarm_get_entry.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_alarm_get_entry",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1335,
+      "kind": "independently_authored_source",
+      "object_name": "tlb_copy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "91a13d2b5885590cad932bf1d7b07b1242f0d3f2e19c9d0c359b0bcd7aec7828",
+      "source": "sources/kernel-patches-tlb-copy/tlb_copy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_tlb_copy",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1336,
+      "kind": "independently_authored_source",
+      "object_name": "tlb_get_entry.o",
+      "profile": "authored_entry_asm",
+      "sha256": "28326c865ff5ab02782035ef29a6bc397e1ad19715fcbcc8a243d7c9121a64d6",
+      "source": "sources/kernel-patches-tlb-get-entry/tlb_get_entry.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_tlb_get_entry",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1337,
+      "kind": "independently_authored_source",
+      "object_name": "tlb_setup.o",
+      "profile": "authored_entry_asm",
+      "sha256": "9647b9eff1c4747f809ff10dce27812bcab41c443f1b6d460f6c21d49ddc0c7d",
+      "source": "sources/kernel-patches-tlb-setup/tlb_setup.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_tlb_setup",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1338,
+      "kind": "independently_authored_source",
+      "object_name": "syscall_pattern_kcopy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "f64437d3d41bb7c40069a7af3a027360079730e5ede2163e17bc01aa3df68ed9",
+      "source": "sources/kernel-patches-syscall-pattern-kcopy/syscall_pattern_kcopy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_syscall_pattern_kcopy",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1339,
+      "kind": "independently_authored_source",
+      "object_name": "k_find_address.o",
+      "profile": "authored_entry_asm",
+      "sha256": "bb8394532715230d4d92f3db29dad844dbe8874ad76ea87bd4041aa9a9cf2140",
+      "source": "sources/kernel-patches-k-find-address/k_find_address.S",
+      "emitted_functions": [
+        {
+          "name": "kFindAddress",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1340,
+      "kind": "independently_authored_source",
+      "object_name": "get_timer_system_time.o",
+      "profile": "authored_cpp",
+      "sha256": "8bcdd6c81ad2fd6dc5c497dd4b175bf6faa411d35e50663d4b14d73189ab077a",
+      "source": "sources/kernel-patches-get-timer-system-time/get_timer_system_time.cpp",
+      "emitted_functions": [
+        {
+          "name": "iGetTimerSystemTime",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1341,
+      "kind": "independently_authored_source",
+      "object_name": "init_alarm_list.o",
+      "profile": "authored_cpp",
+      "sha256": "975cd074c93c2ca7ba25a9dcca31a22d7bf5cfc2f2166735bbe9f305e075cd69",
+      "source": "sources/kernel-patches-init-alarm/init_alarm_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "_InitAlarm",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1342,
+      "kind": "independently_authored_source",
+      "object_name": "patch_is_needed.o",
+      "profile": "authored_cpp",
+      "sha256": "6e3a4a681f8e85c9f7311a5218056ec4b5c21df5a32d1c2a30c0a8754b79241b",
+      "source": "sources/kernel-patches-patch-is-needed/patch_is_needed.cpp",
+      "emitted_functions": [
+        {
+          "name": "PatchIsNeeded",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1343,
+      "kind": "independently_authored_source",
+      "object_name": "top_thread.o",
+      "profile": "authored_cpp",
+      "sha256": "f2e289caf2768a237f913292558e86f7f226722978a7cdc6ab806f0343d1d0ff",
+      "source": "sources/kernel-patches-top-thread/top_thread.cpp",
+      "emitted_functions": [
+        {
+          "name": "topThread",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1344,
+      "kind": "independently_authored_source",
+      "object_name": "set_next_comp.o",
+      "profile": "authored_cpp",
+      "sha256": "f63b823aeaf0d3aa69b70746db49d2dc60978aaf9695d9b7b8062bf76b458ec3",
+      "source": "sources/kernel-patches-set-next-comp/set_next_comp.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetNextComp",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1345,
+      "kind": "independently_authored_source",
+      "object_name": "timer_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "94f90685fff0e9d7e91afbc010391e7fb33c9ba21c8e970c784461df567c3b4f",
+      "source": "sources/kernel-patches-timer-handler/timer_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "cbTimerHandler",
+          "compiled_body_bytes": 672
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1346,
+      "kind": "independently_authored_source",
+      "object_name": "execps2_pattern_kcopy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "256513456b512ae4090b186cf1f6e5bffd0bf9c243128e717076874d4e4cf438",
+      "source": "sources/kernel-patches-execps2-pattern-kcopy/execps2_pattern_kcopy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_execps2_pattern_kcopy",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1347,
+      "kind": "independently_authored_source",
+      "object_name": "alarm_pattern_kcopy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "a2873063d15ec0c6cea6e81f592a1fe57349110e8bb08d8dd4bd67da34689306",
+      "source": "sources/kernel-patches-alarm-pattern-kcopy/alarm_pattern_kcopy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_alarm_pattern_kcopy",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1348,
+      "kind": "independently_authored_source",
+      "object_name": "tlb_pattern_kcopy.o",
+      "profile": "authored_entry_asm",
+      "sha256": "9107748d90f80af7216fa2553d2cca0a21c31b7f298de6c3bbfca750b3307dd5",
+      "source": "sources/kernel-patches-tlb-pattern-kcopy/tlb_pattern_kcopy.S",
+      "emitted_functions": [
+        {
+          "name": "kernel_tlb_pattern_kcopy",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1349,
+      "kind": "independently_authored_source",
+      "object_name": "g_timer.o",
+      "profile": "authored_cpp",
+      "sha256": "fdbeefbf41e9bc0d735dda794bd461234f53f3e5c6fc6b0ed4bd60554dc6d74b",
+      "source": "sources/kernel-patches-g-timer/g_timer.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1350,
+      "kind": "independently_authored_source",
+      "object_name": "top_id.o",
+      "profile": "authored_cpp",
+      "sha256": "ca6795607b1f6b211a50e8e621334247be57601c0cad8067fe08b445a1ff8340",
+      "source": "sources/kernel-patches-top-id/top_id.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1351,
+      "kind": "independently_authored_source",
+      "object_name": "top_sema.o",
+      "profile": "authored_cpp",
+      "sha256": "5e5813e0e1bc36d19d573e0dbd88c02aa7a7e4bf200167ae64f53411cfb58ed0",
+      "source": "sources/kernel-patches-top-sema/top_sema.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1352,
+      "kind": "independently_authored_source",
+      "object_name": "top_arg.o",
+      "profile": "authored_cpp",
+      "sha256": "abdd7e05dbe797382e11339dd938e82567e72a83efca9f558fbd1241004796f0",
+      "source": "sources/kernel-patches-top-arg/top_arg.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1353,
+      "kind": "independently_authored_source",
+      "object_name": "g_counter_buf.o",
+      "profile": "authored_cpp",
+      "sha256": "8d9ad05a2197e1c15c4265fa5daa7803ff5f9343ce96fefc81043180d4681116",
+      "source": "sources/kernel-patches-g-counter-buf/g_counter_buf.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1354,
+      "kind": "independently_authored_source",
+      "object_name": "g_sys_reboot_buf.o",
+      "profile": "authored_cpp",
+      "sha256": "8275b380438817885853cdcc12031f0c0bbe4e9c5d33c0f7f769168570cd4baa",
+      "source": "sources/kernel-patches-g-sys-reboot-buf/g_sys_reboot_buf.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1355,
+      "kind": "independently_authored_source",
+      "object_name": "g_p_user_reboot_buf.o",
+      "profile": "authored_cpp",
+      "sha256": "ebdc137e75ca202b04c33f1f6df78d2ce6746c26af049393f1783bbca491fb00",
+      "source": "sources/kernel-patches-g-user-reboot-buf/g_p_user_reboot_buf.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1356,
+      "kind": "independently_authored_source",
+      "object_name": "g_i_user_reboot_size.o",
+      "profile": "authored_cpp",
+      "sha256": "71749620ccedba1eabed7cd228064325f6a81ef54604fa35a2bc0f72196ffd3e",
+      "source": "sources/kernel-patches-g-user-reboot-size/g_i_user_reboot_size.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1357,
+      "kind": "independently_authored_source",
+      "object_name": "syscall_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "27671d8d0fb8d0f8c1832352f2ebfd26eda71eefe2ca0c5d2dd177b2b224b83d",
+      "source": "sources/kernel-patches-syscall-entry/syscall_entry.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1358,
+      "kind": "independently_authored_source",
+      "object_name": "k_exec_arg.o",
+      "profile": "authored_cpp",
+      "sha256": "5a72e9485b20cb1ddceab5586cc4acdad159041069f1928b4268a02f3fb0fdb3",
+      "source": "sources/kernel-patches-k-exec-arg/k_exec_arg.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1359,
+      "kind": "independently_authored_source",
+      "object_name": "sif_param_ord.o",
+      "profile": "authored_cpp",
+      "sha256": "aab7d320897bb5537a6b52a301c81f1da661fdfeb7f6cd6d26dc3bae1363e018",
+      "source": "sources/kernel-patches-sif-param-ord/sif_param_ord.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1360,
+      "kind": "independently_authored_source",
+      "object_name": "semaid_reg_func.o",
+      "profile": "authored_cpp",
+      "sha256": "24d5aa6e20ea3bf7684b24daa29c5c05b360b73788a2e49165c5c1f77d5438cb",
+      "source": "sources/kernel-patches-semaid-reg-func/semaid_reg_func.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1361,
+      "kind": "independently_authored_source",
+      "object_name": "semaid_timerfunc.o",
+      "profile": "authored_cpp",
+      "sha256": "e7bf298ba6d434d74076b059d9c3b0a3fda80dbb52a03be9b64e1bde4fae163b",
+      "source": "sources/kernel-patches-semaid-timerfunc/semaid_timerfunc.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1362,
+      "kind": "independently_authored_source",
+      "object_name": "syscall_sysentry.o",
+      "profile": "authored_cpp",
+      "sha256": "bbaeab055a3bb00af0fa5fa1eec4e2f309b8daffbc8d3c4dddd79dac99dc3948",
+      "source": "sources/kernel-patches-syscall-sysentry/syscall_sysentry.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1363,
+      "kind": "independently_authored_source",
+      "object_name": "exec_ps2_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "daa849b8f45cf12f44f575dc33275b3a994b4d91f64a49be5188bf0e8d504656",
+      "source": "sources/kernel-patches-execps2-entry/exec_ps2_entry.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1364,
+      "kind": "independently_authored_source",
+      "object_name": "alarm_sysentry.o",
+      "profile": "authored_cpp",
+      "sha256": "79d977340e8203eb4843e1f7cc6fc424735ff9a62425a24b4b4beb5446bc2098",
+      "source": "sources/kernel-patches-alarm-sysentry/alarm_sysentry.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1365,
+      "kind": "independently_authored_source",
+      "object_name": "tlb_sysentry.o",
+      "profile": "authored_cpp",
+      "sha256": "c5a085803b0acd26a81a329e8a71404a5e6686a8b59e89b3c9d545980981ff83",
+      "source": "sources/kernel-patches-tlb-sysentry/tlb_sysentry.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1366,
+      "kind": "independently_authored_source",
+      "object_name": "unlink_alarm.o",
+      "profile": "authored_cpp",
+      "sha256": "af6f4abd8b1f03be64d7db3e5abb906c36d082ad5a57e738d537e05495360374",
+      "source": "sources/kernel-patches-unlink-alarm/unlink_alarm.cpp",
+      "emitted_functions": [
+        {
+          "name": "UnlinkAlarm",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1367,
+      "kind": "independently_authored_source",
+      "object_name": "insert_alarm.o",
+      "profile": "authored_cpp",
+      "sha256": "f49c4ff2f777f8d7e50d838085cc39390a18a13104155f9882b398b89ff90977",
+      "source": "sources/kernel-patches-insert-alarm/insert_alarm.cpp",
+      "emitted_functions": [
+        {
+          "name": "InsertAlarm",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1368,
+      "kind": "independently_authored_source",
+      "object_name": "g_alarm_buf.o",
+      "profile": "authored_cpp",
+      "sha256": "7a92952303b47609c1cd3f95bc1fd6b31a3be02aca38bad6e2d4c338cc3f23ea",
+      "source": "sources/kernel-patches-g-alarm-buf/g_alarm_buf.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1369,
+      "kind": "independently_authored_source",
+      "object_name": "g_p_free_alarm.o",
+      "profile": "authored_cpp",
+      "sha256": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417",
+      "source": "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -17503,7 +18096,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "919572ea8c008d9d92c5092c0cec7bae7cf6c25208c5bb5e3761015f417be9fa",
+  "snapshot_sha256": "186e475882d1162d6265316279aef57105d99ccb801fde5b3aa868aa34a17e43",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
