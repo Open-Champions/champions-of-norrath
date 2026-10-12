@@ -1419,6 +1419,41 @@ Opened: `DisableDmac`, `RemoveDmacHandler`, `VSync`, `VSync2`, `atoi`,
 `uncompMap`, `uncompSpin`. 881 function bodies, 1110 authored inputs,
 zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/actor-view-tables
+
+This is a partial package: the branch carries six data-view commits with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/actor-view-tables.md` from the source
+comments. All six units were selected with fresh `input_order` values
+1112 through 1117. They are data objects only; no function was added.
+Each unit has a host file that returns failure on a wrong size or nonzero
+byte; all six passed on this machine (each compiled together with its
+implementation). No game binary or disassembly listing was committed. The
+existing mentions of these names are `extern` references in the actors-a
+constructors, not definitions.
+
+| | |
+|---|---|
+| Before | 1007 |
+| After | 1019 |
+| Closed | 6 |
+| Opened | 18 |
+
+Closed: `norrath_actor_view_486878`, `norrath_actors_a_view_438e98`,
+`norrath_actors_a_view_449430`, `norrath_actors_a_view_44ccb8`,
+`norrath_actors_a_view_44d0a8`, `norrath_actors_a_view_485358`.
+
+Opened: the 18 vtable slot targets the three 144-byte tables point at:
+`_$_8FireBomb`, `_$_9Container`, `_$_9WorldPart`, `__tf8FireBomb`,
+`__tf9Container`, `__tf9WorldPart`, `clone__8FireBomb`,
+`clone__9Container`, `clone__9WorldPart`,
+`msg_collision__9ContainerP10GameObject`, `msg_draw__9Container`,
+`msg_getPokeName__9ContainerPUsi`,
+`msg_hurt__9ContainerfP10GameObjecti`, `msg_load__9ContainerPc`,
+`msg_poke__9Containeri`, `msg_run__8FireBomb`, `msg_run__9Container`,
+`msg_save__9ContainerPc`. 881 function bodies, 1116 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1553,7 +1588,8 @@ scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
 frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
 sony-cd, and link-image-bounds second pass, and gs-dma-present. The
 vehicle constructor is authored and not in the link. The unselected
-texture-draw-color unit is authored and not in the link. `engineInit__Ff`,
+texture-draw-color unit is authored and not in the link. The six
+actor-view-tables views are data, not functions. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,

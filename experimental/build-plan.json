@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1110,
+  "default_authored_inputs": 1116,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1826,7 +1826,13 @@
     "sources/gs-dma-present-switch-30-counter/switch_30_counter.cpp": "77aa9b2b06308cfd3aa6dfd8dc1c7b688db41c6ae0639af8ae27b8a6fa61eadb",
     "sources/gs-dma-present-switch-half-counter/switch_half_counter.cpp": "d7b4822084729f4aa72049c0a9c978994eda5658f2773779a7b8861e521c1930",
     "sources/gs-dma-present-texture-internal-init/texture_internal_init.cpp": "30d2519185f096188416633faf1ac09a344cbccc6fd36d87aeebdf6d4e9dc1c2",
-    "sources/gs-dma-present-texture-pack-down/texture_pack_down.cpp": "804f3476906aacf4f523185af9f240a6a934567e35a70edc423839c8d6dfedaa"
+    "sources/gs-dma-present-texture-pack-down/texture_pack_down.cpp": "804f3476906aacf4f523185af9f240a6a934567e35a70edc423839c8d6dfedaa",
+    "sources/actor-view-tables-views/norrath_actor_view_486878.cpp": "a4e7fb5582612b70602575146e1f5b5d33ecf49119a12c2a200144a7ed4d6e13",
+    "sources/actor-view-tables-views/norrath_actors_a_view_438e98.cpp": "1189cde3277e6ec6b42f9f912e2b22885afcd9dd9350a43eb082d41027966444",
+    "sources/actor-view-tables-views/norrath_actors_a_view_449430.cpp": "9fb7f4748b63ee49dcdbb2ae9b4fc62c1bc3b6d846a8b6b6f4ec0c4109abfb84",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44ccb8.cpp": "f6b784afc49980307a69722e362ff0b799b8af12dd4914a4161499d7ca177994",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44d0a8.cpp": "fc2c2a52f506ebab0f03e128a1982dee7f2638444370feddedf3352cc2947948",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485358.cpp": "e1a03148b42be8198e07fe1fe370f347318e5f0dbb87fc8b2bf41a359f07cad4"
   },
   "inputs": [
     {
@@ -14245,6 +14251,60 @@
           "compiled_body_bytes": 44
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1112,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actor_view_486878.o",
+      "profile": "authored_cpp",
+      "sha256": "a4e7fb5582612b70602575146e1f5b5d33ecf49119a12c2a200144a7ed4d6e13",
+      "source": "sources/actor-view-tables-views/norrath_actor_view_486878.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1113,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_438e98.o",
+      "profile": "authored_cpp",
+      "sha256": "1189cde3277e6ec6b42f9f912e2b22885afcd9dd9350a43eb082d41027966444",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_438e98.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1114,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_449430.o",
+      "profile": "authored_cpp",
+      "sha256": "9fb7f4748b63ee49dcdbb2ae9b4fc62c1bc3b6d846a8b6b6f4ec0c4109abfb84",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_449430.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1115,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44ccb8.o",
+      "profile": "authored_cpp",
+      "sha256": "f6b784afc49980307a69722e362ff0b799b8af12dd4914a4161499d7ca177994",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44ccb8.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1116,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44d0a8.o",
+      "profile": "authored_cpp",
+      "sha256": "fc2c2a52f506ebab0f03e128a1982dee7f2638444370feddedf3352cc2947948",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44d0a8.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1117,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_485358.o",
+      "profile": "authored_cpp",
+      "sha256": "e1a03148b42be8198e07fe1fe370f347318e5f0dbb87fc8b2bf41a359f07cad4",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485358.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -14344,7 +14404,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "cd48304739f6247844da184dc37a5181177ff387dca3b2ba0c83bc33eb162abf",
+  "snapshot_sha256": "1bb837f304ab05d64af7c35303f48b500b2cc6b9e8ca3d9e102e0875643323d8",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
