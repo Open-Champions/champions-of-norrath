@@ -509,6 +509,10 @@ reg('setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v', 0x180820,
     'w8-fx-particles-set-particle-def/set_particle_def.cpp', scenario_set_particle_def,
     stubs={'__assert__FPCcUiT0i': (4, 0, 0, ((0, 12), (2, 21)), (0, 2))})
 
+reg('__11ParticleDefiiiiiiiifffiiiPFPv_v', 0x180D78, 'w8-fx-particles-particle-def-ctor/particle_def_ctor.cpp',
+    scenario_set_particle_def,
+    stubs={'setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v': (8, 3, 5)})
+
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
