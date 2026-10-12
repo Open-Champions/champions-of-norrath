@@ -1454,6 +1454,40 @@ Opened: the 18 vtable slot targets the three 144-byte tables point at:
 `msg_save__9ContainerPc`. 881 function bodies, 1116 authored inputs,
 zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/card-progress
+
+Merged. The notes separate observed bytes from inferred names, and the
+host tests fail on wrong behavior. No game binary or disassembly listing
+was committed. All 29 units were selected with fresh `input_order`
+values 1118 through 1146. The three functions compile to exactly the
+claimed bodies (`newMode__Fii` 36, `stopCardQuery__Fv` 164, `sceMcSync`
+228). All 40 host tests in `host-tests/card-progress/` passed on this
+machine. `flareAlpha`/`flareDelta` are the card words the notes claim;
+the same-named locals elsewhere are different objects and stay undefined.
+`frontEndWasRunning` and every `MC_`/`MCA_` function stay imports.
+
+| | |
+|---|---|
+| Before | 1019 |
+| After | 999 |
+| Closed | 29 |
+| Opened | 9 |
+
+Closed: `_3map$autoMapBitsSize`, `actCount`, `actLevelCount`, `allActs`,
+`asyncMode`, `bareSlotFootPrint`, `browserState`, `configState`,
+`curAct`, `disableMC`, `errorCondition`, `flareAlpha`, `flareDelta`,
+`iconHeader`, `keepPlayerPositions`, `killPlayer`, `lastCardPort`,
+`lastCardSlot`, `newMode__Fii`, `oldAsyncMode`, `pauseStackPos`,
+`saveCheckPointCount`, `sceMcSync`, `slotClusters`, `slotFootPrint`,
+`sortedTimes`, `stopCardQuery__Fv`, `totalClusters`, `totalFootPrint`.
+
+Opened: `MCA_FileOpen`, `MCA_Reset__Fv`, `act1`, `act2`, `act3`, `act4`,
+`act5`, `mcRunCmdNo`, `syncState`. The other names the notes leave open
+were already unresolved, including `MCA_Cmd__Fiiii`, `MCA_Sync__FPi`,
+`semaidRegFunc`, `semaid_timerfunc`, `retval`, `PollSema`, `WaitSema`,
+and `SignalSema`. 884 function bodies, 1145 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1589,7 +1623,8 @@ frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, si
 sony-cd, and link-image-bounds second pass, and gs-dma-present. The
 vehicle constructor is authored and not in the link. The unselected
 texture-draw-color unit is authored and not in the link. The six
-actor-view-tables views are data, not functions. `engineInit__Ff`,
+actor-view-tables views are data, not functions. The 26 card-progress
+data words are data, not functions. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
