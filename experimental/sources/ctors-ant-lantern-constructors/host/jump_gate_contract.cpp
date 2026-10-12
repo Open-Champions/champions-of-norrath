@@ -10,7 +10,8 @@ static void expect(bool cond, const char* message) {
 #define VIEW(name, size) unsigned char norrath_ctors_ant_lantern_view_##name[size]
 VIEW(4494c0, 4); VIEW(476b70, 16); VIEW(486038, 16); VIEW(486040, 16); VIEW(476b80, 16) = "hurtname"; VIEW(476b90, 16) = "gatename"; VIEW(486048, 16);
 VIEW(486050, 16) = "%s.A"; VIEW(486058, 16) = "%s.B"; VIEW(486060, 16) = "%s.C"; VIEW(48239c, 4);
-VIEW(486030, 4); VIEW(486da4, 4); VIEW(484538, 4); VIEW(483e5c, 4); VIEW(484f38, 32); VIEW(484ca8, 4); VIEW(429410, 12 * 8);
+VIEW(486030, 4); VIEW(486da4, 4); VIEW(483e5c, 4);
+unsigned char norrath_creature_view_484538[4], norrath_player_view_484f38[32], norrath_player_view_484ca8[4], norrath_player_view_429410[12 * 8];
 static unsigned char object[400];
 static unsigned char blocks[2][8];
 static int stage;
@@ -126,32 +127,32 @@ int main() {
     // global gates
     set_word(norrath_ctors_ant_lantern_view_486030, 1);
     set_word(norrath_ctors_ant_lantern_view_486da4, 1);
-    set_word(norrath_ctors_ant_lantern_view_484538, 3);
-    norrath_ctors_ant_lantern_view_484ca8[0] = 0;
+    set_word(norrath_creature_view_484538, 3);
+    norrath_player_view_484ca8[0] = 0;
     run(1);
-    expect(find_calls == 0 && norrath_ctors_ant_lantern_view_484ca8[0] == 0, "second global set exits before the search");
+    expect(find_calls == 0 && norrath_player_view_484ca8[0] == 0, "second global set exits before the search");
     set_word(norrath_ctors_ant_lantern_view_486da4, 0);
-    set_word(norrath_ctors_ant_lantern_view_484538, 0);
+    set_word(norrath_creature_view_484538, 0);
     run(1);
-    expect(find_calls == 0 && norrath_ctors_ant_lantern_view_484ca8[0] == 3, "count zero only sets the byte");
-    set_word(norrath_ctors_ant_lantern_view_484538, 3);
+    expect(find_calls == 0 && norrath_player_view_484ca8[0] == 3, "count zero only sets the byte");
+    set_word(norrath_creature_view_484538, 3);
     set_word(norrath_ctors_ant_lantern_view_483e5c, 1);
-    std::memset(norrath_ctors_ant_lantern_view_429410, 0xaa, 12 * 8);
-    std::memset(norrath_ctors_ant_lantern_view_484f38, 0xbb, 32);
-    norrath_ctors_ant_lantern_view_484ca8[0] = 0;
+    std::memset(norrath_player_view_429410, 0xaa, 12 * 8);
+    std::memset(norrath_player_view_484f38, 0xbb, 32);
+    norrath_player_view_484ca8[0] = 0;
     run(1);
-    expect(find_calls == 3 && norrath_ctors_ant_lantern_view_484ca8[0] == 3, "three searches and the byte");
+    expect(find_calls == 3 && norrath_player_view_484ca8[0] == 3, "three searches and the byte");
     for (int k = 0; k < 3; ++k) {
         expect(std::memcmp(find_points[k], object + 16, 12) == 0 && find_args[k][0] == 36 && find_args[k][1] == 24 && find_third[k] == nullptr, "search arguments");
-        for (int i = 0; i < 12; ++i) expect(norrath_ctors_ant_lantern_view_429410[12 * k + i] == 0x10 * (k + 1) + i, "result stored in the table");
+        for (int i = 0; i < 12; ++i) expect(norrath_player_view_429410[12 * k + i] == 0x10 * (k + 1) + i, "result stored in the table");
     }
-    expect(norrath_ctors_ant_lantern_view_429410[36] == 0xaa, "table entry 3 untouched");
+    expect(norrath_player_view_429410[36] == 0xaa, "table entry 3 untouched");
     unsigned state = 1u;
     for (int k = 0; k < 3; ++k) {
         state = state * 0x19660du + 0x3c6ef35fu;
-        expect(half_at(norrath_ctors_ant_lantern_view_484f38 + 2 * k) == (state >> 16), "generator high half");
+        expect(half_at(norrath_player_view_484f38 + 2 * k) == (state >> 16), "generator high half");
     }
-    expect(word_at(norrath_ctors_ant_lantern_view_483e5c) == state && norrath_ctors_ant_lantern_view_484f38[6] == 0xbb, "generator state saved, fourth half untouched");
+    expect(word_at(norrath_ctors_ant_lantern_view_483e5c) == state && norrath_player_view_484f38[6] == 0xbb, "generator state saved, fourth half untouched");
     if (fails != 0) return 1;
     std::puts("jump gate constructor passed");
     return 0;

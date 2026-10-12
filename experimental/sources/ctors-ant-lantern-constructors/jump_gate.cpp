@@ -94,20 +94,20 @@ extern "C" unsigned norrath_construct_JumpGate(void* object, const void* point, 
     }
     if (read_word(address(norrath_ctors_ant_lantern_view_486030)) == 0u) return 0u;
     if (read_word(address(norrath_ctors_ant_lantern_view_486da4)) != 0u) return 0u;
-    if (static_cast<int>(read_word(address(norrath_ctors_ant_lantern_view_484538))) > 0) {
+    if (static_cast<int>(read_word(address(norrath_creature_view_484538))) > 0) {
         for (unsigned index = 0u;;) {
             const PointBytes position = snapshot_point(pointer(a + 16u));
             unsigned char spot[12];
             objectFindEmptySpot__FG6Point3iiPc(spot, &position, 36, 24, nullptr);
             ++index;
-            const Address entry = address(norrath_ctors_ant_lantern_view_429410) + (index - 1u) * 12u;
+            const Address entry = address(norrath_player_view_429410) + (index - 1u) * 12u;
             for (unsigned byte = 0u; byte < 12u; ++byte) bytes(entry)[byte] = spot[byte];
             const unsigned state = read_word(address(norrath_ctors_ant_lantern_view_483e5c)) * 0x19660du + 0x3c6ef35fu;
             write_word(address(norrath_ctors_ant_lantern_view_483e5c), state);
-            write_half(address(norrath_ctors_ant_lantern_view_484f38) + (index - 1u) * 2u, state >> 16);
-            if (!(static_cast<int>(index) < static_cast<int>(read_word(address(norrath_ctors_ant_lantern_view_484538))))) break;
+            write_half(address(norrath_player_view_484f38) + (index - 1u) * 2u, state >> 16);
+            if (!(static_cast<int>(index) < static_cast<int>(read_word(address(norrath_creature_view_484538))))) break;
         }
     }
-    bytes(address(norrath_ctors_ant_lantern_view_484ca8))[0] = 3u;
+    bytes(address(norrath_player_view_484ca8))[0] = 3u;
     return 0u;
 }
