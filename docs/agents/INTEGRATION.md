@@ -3559,6 +3559,37 @@ Opened: `DLG_GetDialogCreature__Fv`, `_$_11AutoChestLP`, `_$_15AutoContainerLP`,
 `targetObjs`, `targets`, `textBodyLen`, `unscrambleTable`,
 `worldPlotRouteProcess__Fi`, `yaws`.
 
+## agents/w8-frontend-menu-a
+
+Merged (the branch notes carry the five summary sections). Thirteen units
+with fresh `input_order` values 1783 through 1795: 11 emitted functions (3516
+compiled body bytes, not original-byte matches) and data words. The notes'
+plan table lists paths without the `sources/` prefix; the prefix was added.
+All 13 host checks build and exit 0 here (13 of 13). The notes claim 24 of 25
+named imports closed; the official link shows 24 names leaving the list.
+No game binary or disassembly listing was committed. 1401 function bodies,
+1796 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1629 |
+| After | 1608 |
+| Closed | 24 |
+| Opened | 3 |
+
+Closed: `Password__C13VIGameOptions`, `Username__C13VIGameOptions`,
+`_GLOBAL_$D$optionMenu`, `_GLOBAL_$I$optionMenu`, `body`, `cheatOn`,
+`colorLevelNames__FP4Menu`, `controlPaused`, `cursorTween`,
+`debugClearStartMenu__Fv`, `debugRecall__Fi`, `difficultyMenu`,
+`frontEndCleanUp__Fi`, `fullLaunchOK`, `gameControlDontResetPause`,
+`gameTypeMenu`, `helpMessageOn`, `hudNoController`,
+`hudRunNoControllers__Fi`, `hudRunYesNo__FPUsiiii`, `kickMenu`,
+`kickMenuList`, `language`, `letterAtATime`.
+
+Opened: `MC_NameToAct__FPc`, `__12RecallEffectG6Point3`,
+`fontPrintWrapCenteredu__FiiPUsiiii`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

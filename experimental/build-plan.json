@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1783,
+  "default_authored_inputs": 1796,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2526,7 +2526,20 @@
     "sources/w8-core-loop-d-vtables/view_453328.cpp": "80f87abb07321d2381e7219267cc308629e387282a7cf40f6673a2b1ba4130bc",
     "sources/w8-core-loop-d-vtables/factory_prop_vtable.cpp": "f39639ba9ede5d85577ebf0ef5c39951d83afdb51ef3f9239e0c627292aa8ac9",
     "sources/w8-core-loop-d-init-lump/init_lump.cpp": "b722e2c05b5e2d79594ac813aba18705b534c729aff36dc1e5aa66ca4df586c0",
-    "sources/w8-core-loop-d-select-init/select_init.cpp": "475cb5f26a50ac979189808c8a3cb90b2f8a3955055b6d441bc339336f143534"
+    "sources/w8-core-loop-d-select-init/select_init.cpp": "475cb5f26a50ac979189808c8a3cb90b2f8a3955055b6d441bc339336f143534",
+    "sources/w8-frontend-menu-a-game-options-username/username.cpp": "89747cc2432aa91e5ec8778f67eed65c76d9f617eeba5bde56a4cea8c95d1223",
+    "sources/w8-frontend-menu-a-game-options-password/password.cpp": "e984a602e121b85e09a035aa9918bebecdd761d80945d3a2c5dbd4cdf0af1eb9",
+    "sources/w8-frontend-menu-a-front-end-clean-up/clean_up.cpp": "dc105faf71576c8abe24603fedc014cbf517b065c6ac35081f2efc558cc7191c",
+    "sources/w8-frontend-menu-a-debug-clear-start-menu/clear_start_menu.cpp": "82567785b6b6b3bf812c64986c02fc9bab4472ee7e52993ca70f0ff6153b7086",
+    "sources/w8-frontend-menu-a-color-level-names/color_level_names.cpp": "5cc03883563807f991404c28de5003f66852c62df1aa9ecc51a46593eb368f1f",
+    "sources/w8-frontend-menu-a-hud-run-no-controllers/no_controllers.cpp": "91a9a68869f1836c2b4b402134509de6d943f2fae99887aea75af40c16d1f6f9",
+    "sources/w8-frontend-menu-a-option-menu-static/static_init.cpp": "b083271ef926d219f4f40ccf7e24d67b17a11b573441ff117e2de92d6c0622b8",
+    "sources/w8-frontend-menu-a-option-flags/option_flags.cpp": "6c8641f2924b7bc01822eeebf58ae26c2be3de7c822409c549886f41b3ce6723",
+    "sources/w8-frontend-menu-a-menu-state-words/menu_state_words.cpp": "799df5300c81cb361955b97db360f966bf3a78c79441bd6df0e019eba083a495",
+    "sources/w8-frontend-menu-a-menu-tables/menu_tables.cpp": "ca082e84918793308dad6dfffd464faf8a24b74cd61308207fd7e0cc550885d0",
+    "sources/w8-frontend-menu-a-debug-recall/debug_recall.cpp": "6eda19225df3bc02fcd01df99443fbdc5cd27432d8b06d2976173a0c1dba3e21",
+    "sources/w8-frontend-menu-a-hud-run-yes-no/yes_no.cpp": "d50837b02de681a2d140e856974f582a3fd4bc5e511619118b5adf056bd926a0",
+    "sources/w8-frontend-menu-a-yes-no-state/yes_no_state.cpp": "f954997097d441e54bf6569bb2617904068a024724b8816b383b1c9e586f4055"
   },
   "inputs": [
     {
@@ -24465,6 +24478,189 @@
           "compiled_body_bytes": 1812
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1785,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_username.o",
+      "profile": "authored_cpp",
+      "sha256": "89747cc2432aa91e5ec8778f67eed65c76d9f617eeba5bde56a4cea8c95d1223",
+      "source": "sources/w8-frontend-menu-a-game-options-username/username.cpp",
+      "emitted_functions": [
+        {
+          "name": "Username__C13VIGameOptions",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1786,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_password.o",
+      "profile": "authored_cpp",
+      "sha256": "e984a602e121b85e09a035aa9918bebecdd761d80945d3a2c5dbd4cdf0af1eb9",
+      "source": "sources/w8-frontend-menu-a-game-options-password/password.cpp",
+      "emitted_functions": [
+        {
+          "name": "Password__C13VIGameOptions",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1787,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_clean_up.o",
+      "profile": "authored_cpp",
+      "sha256": "dc105faf71576c8abe24603fedc014cbf517b065c6ac35081f2efc558cc7191c",
+      "source": "sources/w8-frontend-menu-a-front-end-clean-up/clean_up.cpp",
+      "emitted_functions": [
+        {
+          "name": "frontEndCleanUp__Fi",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1788,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_clear_start_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "82567785b6b6b3bf812c64986c02fc9bab4472ee7e52993ca70f0ff6153b7086",
+      "source": "sources/w8-frontend-menu-a-debug-clear-start-menu/clear_start_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "debugClearStartMenu__Fv",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1789,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_color_level_names.o",
+      "profile": "authored_cpp",
+      "sha256": "5cc03883563807f991404c28de5003f66852c62df1aa9ecc51a46593eb368f1f",
+      "source": "sources/w8-frontend-menu-a-color-level-names/color_level_names.cpp",
+      "emitted_functions": [
+        {
+          "name": "colorLevelNames__FP4Menu",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1790,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_no_controllers.o",
+      "profile": "authored_cpp",
+      "sha256": "91a9a68869f1836c2b4b402134509de6d943f2fae99887aea75af40c16d1f6f9",
+      "source": "sources/w8-frontend-menu-a-hud-run-no-controllers/no_controllers.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudRunNoControllers__Fi",
+          "compiled_body_bytes": 508
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1791,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b083271ef926d219f4f40ccf7e24d67b17a11b573441ff117e2de92d6c0622b8",
+      "source": "sources/w8-frontend-menu-a-option-menu-static/static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L23option_menu_static_workEii.constprop.0",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_GLOBAL_$I$optionMenu",
+          "compiled_body_bytes": 8
+        },
+        {
+          "name": "_GLOBAL_$D$optionMenu",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1792,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_option_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "6c8641f2924b7bc01822eeebf58ae26c2be3de7c822409c549886f41b3ce6723",
+      "source": "sources/w8-frontend-menu-a-option-flags/option_flags.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1793,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_menu_state_words.o",
+      "profile": "authored_cpp",
+      "sha256": "799df5300c81cb361955b97db360f966bf3a78c79441bd6df0e019eba083a495",
+      "source": "sources/w8-frontend-menu-a-menu-state-words/menu_state_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1794,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_menu_tables.o",
+      "profile": "authored_cpp",
+      "sha256": "ca082e84918793308dad6dfffd464faf8a24b74cd61308207fd7e0cc550885d0",
+      "source": "sources/w8-frontend-menu-a-menu-tables/menu_tables.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1795,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_debug_recall.o",
+      "profile": "authored_cpp",
+      "sha256": "6eda19225df3bc02fcd01df99443fbdc5cd27432d8b06d2976173a0c1dba3e21",
+      "source": "sources/w8-frontend-menu-a-debug-recall/debug_recall.cpp",
+      "emitted_functions": [
+        {
+          "name": "debugRecall__Fi",
+          "compiled_body_bytes": 1084
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1796,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_yes_no.o",
+      "profile": "authored_cpp",
+      "sha256": "d50837b02de681a2d140e856974f582a3fd4bc5e511619118b5adf056bd926a0",
+      "source": "sources/w8-frontend-menu-a-hud-run-yes-no/yes_no.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudRunYesNo__FPUsiiii",
+          "compiled_body_bytes": 1396
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1797,
+      "kind": "independently_authored_source",
+      "object_name": "w8fma_yes_no_state.o",
+      "profile": "authored_cpp",
+      "sha256": "f954997097d441e54bf6569bb2617904068a024724b8816b383b1c9e586f4055",
+      "source": "sources/w8-frontend-menu-a-yes-no-state/yes_no_state.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -24564,7 +24760,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "10ed26b19668de6af49c748309eade8c39a7598b61cffdff7b5dfd9f8f4463ee",
+  "snapshot_sha256": "284bef5348969a574f30802300f5d983895be6726c3fcdb2dea8ceab5093e170",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
