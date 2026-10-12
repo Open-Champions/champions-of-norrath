@@ -90,9 +90,10 @@ ALIAS = {
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
     'norrath_actor_random': 'eRand__10GameObject',
+    'norrath_game_object_find_tag_int': 'findTagInt__10GameObjectPci',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538,
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
         'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
         'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
@@ -134,10 +135,18 @@ def make_iterator(name, objects):
     return handler
 
 
-def make_stub(name, kinds, ret, rng):
+def make_stub(name, kinds, ret, rng, scn=None):
     """kinds: one token per argument register: i int, o object address (as value),
     s<N> N bytes at pointer, c C string, x ignored, f float register."""
     def handler(m):
+        if name == 'sprintf':
+            # only the %s directive is supported; writes the formatted text to a0
+            fmt = cstr(m, m.g32(5), 200)
+            text = fmt.replace(b'%s', cstr(m, m.g32(6), 160))
+            m.write(m.g32(4), text + b'\0')
+            m.log.append(('sprintf', fmt, cstr(m, m.g32(6))))
+            m.setr32(2, len(text))
+            return
         entry = [name]
         ai = 0
         fi = 12
@@ -151,6 +160,12 @@ def make_stub(name, kinds, ret, rng):
                 entry.append(v)
             elif tok == 'x':
                 pass
+            elif tok == 'L':
+                chosen = rng.sample(scn['list'], rng.randint(0, len(scn['list'])))
+                for k, t in enumerate(chosen):
+                    m.write(v + 4 * k, t.to_bytes(4, 'little'))
+                m.write(v + 4 * len(chosen), (0).to_bytes(4, 'little'))
+                entry.append(('listed', tuple(chosen)))
             elif tok == 'W':
                 for k in range(3):
                     m.write(v + 4 * k, cr.f2b(float(rng.randrange(-20, 20))).to_bytes(4, 'little'))
@@ -160,7 +175,9 @@ def make_stub(name, kinds, ret, rng):
                 entry.append(m.read(v, int(tok[1:])))
             ai += 1
         m.log.append(tuple(entry))
-        if ret is not None:
+        if ret is not None and ret[0] == 'eq':
+            m.setr32(2, 1 if m.g32(4) == m.g32(5) else 0)
+        elif ret is not None:
             kind, pool = ret
             val = rng.choice(pool)
             if kind == 'i':
@@ -220,9 +237,9 @@ def run_one(image, entry, stub_addrs, spec, scenario, seed):
         if kinds == 'iterate':
             stubs[stub_addrs[name]] = make_iterator(name, scenario['iterate'])
         else:
-            stubs[stub_addrs[name]] = make_stub(name, kinds, ret, rng)
+            stubs[stub_addrs[name]] = make_stub(name, kinds, ret, rng, scenario)
     for addr, (name, kinds, ret) in scenario.get('vstubs', {}).items():
-        stubs[addr] = make_stub(name, kinds, ret, rng)
+        stubs[addr] = make_stub(name, kinds, ret, rng, scenario)
     m.r[29] = STACK
     for i, v in enumerate(scenario['args']):
         m.r[4 + i] = v & M32
@@ -485,6 +502,47 @@ HATE_STUBS = {
     'P_AddParticle__FP11ParticleDefP6Point3T1f': (['o', 's12', 's12', 'f'], None),
 }
 
+TYPE_A, TYPE_B = VSTUB + 0x100, VSTUB + 0x110
+TRIG_LIST = [OTHER + 0x400 * k for k in range(4)]
+TRIG_TABLES = [0x30060000 + 0x100 * k for k in range(4)]
+
+
+def sc_trigger_run(rng):
+    mem = new_object(rng)
+    vtable(rng, mem, {136: (VSTUB, rng.choice([0, 8, -8]))})
+    mem[OBJ + 97] = rng.choice([0, 0, 1, 0xFF])
+    mem[OBJ + 96] = rng.choice([0, 1, 0xFF, 0x80])
+    put32(mem, OBJ + 100, rng.choice([0, 0, 0, 1, 5, 0xFFFFFFFF]))
+    put32(mem, OBJ + 104, rng.randrange(1 << 32))
+    put32(mem, OBJ + 108, rng.choice([0, 0, OTHER + 0x1000, TRIG_LIST[1]]))
+    for k, o in enumerate(TRIG_LIST):
+        fill(rng, mem, o, 0x100)
+        put32(mem, o + 72, TRIG_TABLES[k])
+        fill(rng, mem, TRIG_TABLES[k], 0x100)
+        put32(mem, TRIG_TABLES[k] + 4, rng.choice([TYPE_A, TYPE_A, TYPE_B]))
+    for off in (76, 80, 84, 88):
+        putf(mem, OBJ + off, float(rng.randrange(-50, 50)))
+    put32(mem, OBJ + 92, rng.choice([0x31F00100, 0x31F00200]))
+    for a, text in ((0x31F00100, b'scriptA'), (0x31F00200, b'script_b2')):
+        for i, c in enumerate(text + b'\0'):
+            mem[a + i] = c
+    put32(mem, NMPLAYERS, rng.choice([-1, 0, 1, 2, 3, 4]))
+    for k in range(4):
+        put32(mem, PLAYER + 21872 + 23984 * k, rng.choice([PLAYER_OBJS[k], PLAYER_OBJS[k], 0]))
+    put32(mem, 0x483ACC, rng.randrange(1 << 32))
+    put32(mem, 0x48453C, rng.randrange(1 << 32))
+    cmp_addrs = whole_object() + list(range(0x483ACC, 0x483AD0)) + list(range(0x48453C, 0x484540)) + list(range(NMPLAYERS, NMPLAYERS + 4))
+    for o in TRIG_LIST:
+        cmp_addrs += list(range(o, o + 0x100))
+    # the scan list contains only real objects; OTHER+0x1000 used for +108 holds scratch memory
+    fill(rng, mem, OTHER + 0x1000, 0x100)
+    cmp_addrs += list(range(OTHER + 0x1000, OTHER + 0x1100))
+    return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs, 'list': TRIG_LIST,
+            'vstubs': {VSTUB: ('virt136', ['o', 'o'], ('i', [0, 0, 1])),
+                       TYPE_A: ('typeA', [], ('i', [0x31F10000])),
+                       TYPE_B: ('typeB', [], ('i', [0x31F20000]))}}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -540,6 +598,15 @@ reg('msg_run__8HateGate', W + 'hate-gate-run/run.cpp', sc_hate_run, HATE_STUBS)
 
 reg('msg_save__15PushPhysicsPropPc', W + 'push-physics-prop-save/save.cpp', sc_save_buffer,
     {'objectSaveAddToStringPool__FPCc': (['i'], ('i', [0, 1, 0x1234, 0xFFFFFFFF, 77, 78]))}, returns=True)
+
+reg('msg_run__7Trigger', W + 'trigger-run/run.cpp', sc_trigger_run,
+    {'objectFindInBox__FG6Point3T0PP10GameObjecti': (['s12', 's12', 'L', 'i'], None),
+     '__tf13TriggerParams': ([], ('i', [0x31F10000])),
+     '__eq__C9type_infoRC9type_info': (['i', 'i'], ('eq', None)),
+     'findTagInt__10GameObjectPci': (['i', 'c', 'i'], ('i', [0, 0, 1, 2, 5, 0xFFFFFFFF])),
+     'objectDoMyActions__FP10GameObjecti': (['i', 'i'], None),
+     'scriptStart__FPc': (['c'], ('i', [0, 1, 5])),
+     'sprintf': ([], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
