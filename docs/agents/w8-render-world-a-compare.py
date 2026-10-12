@@ -365,6 +365,82 @@ reg('checkCanAllocDescriptor__Fv', 0x187268, 'w8-render-world-a-check-can-alloc-
     scenario_check_descriptor, returns=True)
 
 
+def strrchr_ret(rng, m):
+    a, c = m.g32(4), m.g32(5) & 0xFF
+    last = 0
+    i = 0
+    while True:
+        ch = m.u8(a + i)
+        if ch == c:
+            last = a + i
+        if ch == 0:
+            break
+        i += 1
+    return last
+
+
+def strcmp_ret(rng, m):
+    a, b = m.g32(4), m.g32(5)
+    i = 0
+    while True:
+        x, y = m.u8(a + i), m.u8(b + i)
+        if x != y or x == 0:
+            return x - y
+        i += 1
+
+
+STRSTUBS = {'strrchr': dict(nargs=2, str=[4], ret=strrchr_ret), 'strcmp': dict(nargs=0, str=[4, 5], ret=strcmp_ret)}
+STRSTUB_ADDR = {'strrchr': 0x3052D8, 'strcmp': 0x3044FC}
+STRARENA = ARENA + 0x8000
+NAMES = [b'a.tex', b'b.etex', b'noext', b'x.y.tex', b'c.', b'd.tex.bak', b'.tex', b'tex', b'm.etex', b'n.tex']
+
+
+def put_str(mem, a, text):
+    for i, c in enumerate(text + b'\0'):
+        mem[a + i] = c
+
+
+def scenario_lump_find_by_type(rng):
+    mem = {}
+    n = rng.choice([0, 1, 2, 3, 5, 8])
+    d = ARENA
+    put32(mem, d, n | (rng.randrange(1 << 16) << 16))
+    for i in range(n):
+        e = d + 4 + 12 * i
+        s = STRARENA + 0x20 * i
+        put_str(mem, s, rng.choice(NAMES))
+        put32(mem, e, s)
+        put32(mem, e + 4, rng.randrange(1 << 32))
+        put32(mem, e + 8, rng.randrange(1 << 32))
+    ext = STRARENA + 0x400
+    put_str(mem, ext, rng.choice([b'tex', b'etex', b'', b'bak', b'y', b'zzz']))
+    skip = rng.choice([0, 0, 1, 2, 3, -1, -2])
+    return {'mem': mem, 'args': [d, ext, skip], 'compare': list(range(d, d + 4 + 12 * 8))}
+
+
+def scenario_lump_query(rng):
+    mem = {}
+    base = sym('lumps')
+    n = rng.choice([0, 1, 2, 4, 6])
+    pool = [b'font.lmp', b'env.lmp', b'a.lmp', b'']
+    put32(mem, sym('nmLumps'), n)
+    for i in range(7):
+        r = base + 40 * i
+        fill(rng, mem, r, 40)
+        put_str(mem, r, rng.choice(pool))
+        put32(mem, r + 16, rng.choice([0, 0x31000000 + 16 * i, rng.randrange(1 << 32)]))
+        put32(mem, r + 20, rng.choice([0, 1, 2, 3, 0xFFFFFFFE, 0xFFFFFFFF]))
+    q = STRARENA
+    put_str(mem, q, rng.choice(pool))
+    return {'mem': mem, 'args': [q], 'compare': list(range(base, base + 280))}
+
+
+reg('lumpFindByType__FPvPci', 0x166650, 'w8-render-world-a-lump-find-by-type/lump_find_by_type.cpp',
+    scenario_lump_find_by_type, stubs=STRSTUBS, stub_addr=STRSTUB_ADDR, returns=True)
+reg('lumpQuery__FPc', 0x166E30, 'w8-render-world-a-lump-query/lump_query.cpp', scenario_lump_query,
+    stubs={'strcmp': STRSTUBS['strcmp']}, stub_addr=STRSTUB_ADDR, returns=True)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
