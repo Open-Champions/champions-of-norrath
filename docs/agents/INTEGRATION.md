@@ -1610,3 +1610,4 @@ and no startup stage has executed.
 - 2026-10-11 19:12 CDT — `agents/game-state` — 893 unresolved imports
 - 2026-10-11 19:20 CDT — `agents/sony-cd` — 884 unresolved imports
 - 2026-10-11 19:27 CDT — `agents/link-image-bounds` — 992 unresolved imports
+- 2026-10-11 19:34 CDT — `agents/gs-dma-present` — 1007 unresolved imports
