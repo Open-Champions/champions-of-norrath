@@ -1790,6 +1790,89 @@ that list was already unresolved or already defined on this tip. 980
 function bodies, 1252 authored inputs, zero COMMON. 214 tool tests passed.
 No EE, GS, DMA, VU, or game execution.
 
+## agents/pre-logo-dialog second pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a private-trial verification log. Four new units were selected with fresh
+`input_order` values 1254 through 1257. The 15 first-pass units were already
+selected and were not appended again. All four sources compile under
+`authored_cpp` with the hashes and body bytes the notes claim
+(`dialogMsgCallback__FPUci` 3192, `pauseMenuFrameRun__Fv` 4888,
+`runDialog__Fv` 2100, `drawDialog__Fv` 1632; verified with `nm
+--print-size` on the reviewed EE objects). All four host contracts passed
+on this machine with ASan/UBSan. No game binary or disassembly listing was
+committed.
+
+The existing `extern` references in game-boot (`runDialog__Fv`,
+`drawDialog__Fv`, `pauseMenuFrameRun__Fv`) and save-net-anim
+(`dialogMsgCallback__FPUci`) are declarations, not definitions, so the
+new definitions do not multiply any symbol. `dialog_msg.o` also defines
+the file-local BSS `_ZL9dialogTag`; it is data, not a function, so it is
+not in the emitted-function list. `player` and `c.1089` stay unresolved
+by design (see Unknown in the package notes).
+
+The worker's private trial reported 22 closed and 157 opened, measured on
+that branch's older 845-input tree where the 15 first-pass units were not
+yet selected. That absolute count does not reproduce on the shared tip.
+The closed and opened names do: every measured name is in the notes'
+lists.
+
+| | |
+|---|---|
+| Before | 1056 |
+| After | 1149 |
+| Closed | 4 |
+| Opened | 97 |
+
+Closed: `dialogMsgCallback__FPUci`, `drawDialog__Fv`,
+`pauseMenuFrameRun__Fv`, `runDialog__Fv`.
+
+Opened: the 97 names measured from the link diff, all in the notes'
+opened list, including `AdvanceDialogSwoop__6CameraiPf`,
+`BuildMatrix__6CamerafffP6Point3`, `MC_ChangePlayers__FiPUsiii`,
+`Push__6Camera`, `SetPitch__6Camerai`, `SetYaw__6Camerai`,
+`StartDialogSwoop__6CameraP10GameObjecti`, `__tf3NPC`,
+`__throw_bad_typeid`, `anim`, `animLoadingComplete`, `animStarted`,
+`cancelStreamWait`, `checkBlock`, `cleanUp__Fv`,
+`colorLevelNames__FP4Menu`, `coreInterfaceFadeUpVal`,
+`coreInterfaceFadeUp__Fi`, `coreStartSwitchScene__Fi`, `correction`,
+`cursorTween`, `dialogCreature`, `dialogIdleAnimation`, `dlgArrayPtr`,
+`dlgName`, `dlgPos`, `endTimer.1059`, `evalHermite__Ffffff`,
+`flaredIn`, `flaredOut`, `fontLastPrintedPosition`,
+`fontPrintCentered__FiiPci`, `fontRestrict__Fi`, `fontScissor__Fiiii`,
+`frontendInitControllerConfig__Fi`,
+`frontendRunControllerConfig__Fv`, `gameCheckNoSaveZone__Fv`,
+`gamePopConfig__Fv`, `gamePushConfig__Fv`, `hudFooterUni`,
+`hudNetLevelWarp__FPc`, `hudRunYesNo__FPUsiiii`,
+`hudShowMsg__FPUsN20iii`, `initAnimation__Fv`, `kickMenu`,
+`kickMenuList`, `lastNmQ.1088`, `lastWarpPos`, `letterAtATime`,
+`lineToY__Fi`, `loadSampleRate.784`,
+`menuDraw__FiiP4MenuUiUiP4FontP8_texturei`,
+`menuRun__FP4MenuP3padPi`, `msgHudPlayerExit__Fv`,
+`msgHudRecall__Fc`, `nameChars`, `netKickPlayer__Fi`,
+`netPlayerIsConnected__Fi`, `netRestoreButtonConfigs__Fv`,
+`nextIndex`, `objectFindAnimation__FP10GameObjectPc`, `optTbl`,
+`optionCount`, `optionIndex`, `optionLinePos`, `optionsShowing`,
+`preConfigure`, `realDlgPos`, `resetTextBody__Fv`, `runAnimation__Fv`,
+`sceneTransitionOK.1041`, `scrollEnd`, `scrollSpan`, `scrollTarget`,
+`scrollY`, `sentEndMsg`, `setExtraParams__FP8CreaturePc`,
+`showCoords__Fv`, `showMore`, `showOptions`,
+`sleepMonsters__8creaturev`, `soundContinueStream__Fi`,
+`soundGetDialogSize__FPc`, `soundGetNmQueued__Fi`,
+`soundGetStreamAmountPlayed__Fi`, `soundGetStreamPreloadDone__Fi`,
+`soundSetMusicDuckAmount__Ff`, `soundStartGlobalMusic__FPci`,
+`startPacket__Fi`, `swooping`, `textBody`, `textBodyChars`,
+`textPageDone`, `usprintf__FPUsT0ffffffff`, `ustrlen__FPUs`,
+`waitForSound`, `wakeMonsters__8creaturev`. The rest of the notes'
+opened list was already unresolved or already defined on this tip,
+including `GetPitch__6Camera`, `GetYaw__6Camera`, `DLG_NewWorld`,
+`SetMode__6Camerai`, `Update__6Camera`, `fontStart__FP4FontiUii`,
+and `soundGetStreamPlayStatus__Fi`. 984 function bodies, 1256 authored inputs, zero COMMON. 214 tool tests passed. The build-output
+objects are byte-identical to the recorded `object_sha256` values. No
+EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1910,6 +1993,24 @@ address as a separate object. Decide whether they are one symbol.
 32768 bytes. sony-cd also defines that name as `0x2000` words for the same
 span. That unit was not selected. Decide which package owns the name.
 
+`anim` is claimed twice: pre-logo-dialog imports the ELF name used by the
+dialog callback at `0x007d0dc8`, while a same-named local symbol owns
+`0x00790f60`. This package defines neither object. Decide whether they
+are one symbol.
+
+`preConfigure` exists twice (80 bytes at `0x0037f150`, used by the pause
+menu, and at `0x004289d0`). This package defines neither object. Decide
+whether they are one symbol.
+
+`player` is imported by pre-logo-dialog. items-player already defines the
+95,936 zero bytes at `0x00408600` as
+`norrath_player_progression_records_view` and does not alias the ELF
+name. Decide whether the view should gain that alias.
+
+`c.1089` at `0x007d0988` has ELF size 0 and stays unresolved. The
+Camera-owning package should settle its extent before anything defines
+it.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1922,7 +2023,8 @@ megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
 frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
-sony-cd, and link-image-bounds second pass, and gs-dma-present. The
+sony-cd, and link-image-bounds second pass, and gs-dma-present, and the
+pre-logo-dialog second pass. The
 vehicle constructor is authored and not in the link. The unselected
 texture-draw-color unit is authored and not in the link. The six
 actor-view-tables views are data, not functions. The 26 card-progress
@@ -1934,7 +2036,9 @@ memcard-calls units are in the link. The forty natives-b units are in
 the link. The fifteen pre-logo-dialog units are in the link. The eleven
 simloop-services units are in the link. The three closing gs-dma-present
 units (three functions plus one file-local helper) are in the link; the
-texture-draw-color unit stays authored and not in the link.
+texture-draw-color unit stays authored and not in the link. The four
+pre-logo-dialog second-pass units (four functions plus the file-local
+`_ZL9dialogTag` BSS) are in the link.
 `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
