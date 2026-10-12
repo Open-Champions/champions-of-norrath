@@ -165,6 +165,7 @@ ALIASES = {
     'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
     'norrath_light_add': 'lightAdd__FP5Light',
     'norrath_list_oneway_link': 'listOnewayLink__FP8ListHeadT0Pv',
+    'norrath_player_resource_map_get': 'get__11ResourceMap',
 }
 
 
@@ -668,6 +669,88 @@ def scenario_particles_paused(rng, seed):
 reg('_GLOBAL_$I$particlesPaused', 0x187778, 'w8-fx-particles-init-particles-paused/static_init.cpp',
     scenario_particles_paused, stubs=INIT_STUBS, name_objects=True,
     rebase={'globalSystemSave': 0x37F830})
+
+# ---- P_DrawParticles__FP8Matrix34 ----
+OBJECT_DRAW_ENABLE = 0x483AC8
+PUSH_LEVEL = 0x484304
+GLISTP, GSTART, GLISTSIZE = 0x4844C8, 0x4844C4, 0x484468
+NM_SINGLE = 0x4869F8
+WORLD_SCRZ = 0x48419C
+
+
+def rand_floats(m, base, count, rng):
+    for k in range(count):
+        put32(m.mem, base + 4 * k, f2b(float(rng.choice([-2.0, -1.0, -0.5, 0.0, 0.25, 1.0, 3.0, 100.5]))))
+
+
+def effect_matrix16(m, rng):
+    for k in range(16):
+        put32(m.mem, m.g32(4) + 4 * k, f2b(float(rng.choice([-2.0, -1.0, 0.0, 0.5, 1.0, 7.0, 255.25]))))
+
+
+def effect_matrix12(m, rng):
+    for k in range(12):
+        put32(m.mem, m.g32(4) + 4 * k, f2b(float(rng.choice([-2.0, -1.0, 0.0, 0.5, 1.0, 7.0, 255.25]))))
+
+
+def effect_draw_ps(m, rng):
+    packet = m.g32(4)
+    cursor = m.u32(packet)
+    for k in range(16):
+        m.w8(cursor + k, rng.randrange(256))
+    m.w32(packet + 4, cursor)
+    m.w32(packet, cursor + 16 * rng.choice([1, 2, 3, 5]))
+
+
+def scenario_draw_particles(rng, seed):
+    mem = {}
+    camera = ARENA + 0x4000
+    for k in range(12):
+        put32(mem, camera + 4 * k, f2b(float(rng.choice([-1.0, 0.0, 0.5, 2.0, 9.0]))))
+    put32(mem, OBJECT_DRAW_ENABLE - OBJECT_DRAW_ENABLE % 4, 0)
+    mem[OBJECT_DRAW_ENABLE] = rng.choice([1, 1, 1, 0x80, 0])
+    put32(mem, PUSH_LEVEL, rng.choice([0, 0, 0, 1, 3]))
+    put32(mem, 0x4844A4, rng.randrange(1 << 32))                      # frameNm
+    mem[0x4869F4] = rng.randrange(256); mem[0x4869F5] = rng.randrange(256)    # P_FrameNum
+    put32(mem, WORLD_SCRZ, f2b(rng.choice([1024.0, 512.5, 3.0])))
+    for i in range(32):
+        put32(mem, 0x780280 + 4 * i, rng.choice([0xFFFFFFFF, 0xFFFFFFFF, 1, 2, 7]))
+        rec = 0x780300 + 64 * i
+        kind = rng.choice([0, 1, 2, 3, 4, 4, 5, 0xFFFFFFFF, 7])
+        put32(mem, rec, rng.choice([0, 100, 7679, 7680, 7700, 7999, 8000, 0xFFFFFE00, 0x7FFFFFFF]))
+        put32(mem, rec + 4, ((kind << 9) | rng.randrange(512)) & M32)
+        put32(mem, rec + 16, rng.choice([0, 100, 7679, 7680, 7700, 7999, 8000, 0xFFFFFE00]))
+    for i in range(16):
+        rec = 0x6F5AD0 + 312 * i
+        put32(mem, rec + 304, rng.choice([0, 1, 5]))
+        for k in range(12):
+            put32(mem, rec + 256 + 4 * k, f2b(float(rng.choice([-1.0, 0.0, 0.5, 2.0, 9.0]))))
+    k = rng.randrange(0, 6000)
+    start = ARENA + 0x100000
+    list_at = start + 8 * k + rng.choice([0, 0, 0, 4])
+    put32(mem, GSTART, start)
+    put32(mem, GLISTP, list_at)
+    room = rng.choice([2900, 3100, 3300, 3700, 5900, 6100, 6300, 7000, 2000, 9000])
+    put32(mem, GLISTSIZE, (k + room) & M32)
+    put32(mem, NM_SINGLE, rng.randrange(1, 9))
+    fill(rng, mem, list_at - 16, 0x1000)
+    return {'mem': mem, 'args': [camera]}
+
+
+reg('P_DrawParticles__FP8Matrix34', 0x186070, 'w8-fx-particles-draw-particles/draw_particles.cpp',
+    scenario_draw_particles, name_objects=False,
+    answers={'gameIsPaused__Fv': lambda rng: rng.choice([0, 0, 1])},
+    effects={'matMakeViewMatrix__FP8Matrix44fffffff': effect_matrix16,
+             'matMul__FP8Matrix44P8Matrix34T0': effect_matrix16,
+             'matMul__FP8Matrix34N20': effect_matrix12, 'drawPS__FR6PacketP14ParticleSystem': effect_draw_ps},
+    stubs={'drawTrails__Fv': (0, 0, 0), 'gameIsPaused__Fv': (0, 0, 0), 'drawSingleParticles__Fi': (1, 0, 0),
+           'matMakeViewMatrix__FP8Matrix44fffffff': (1, 7, 0),
+           'matMul__FP8Matrix44P8Matrix34T0': (3, 0, 0, ((1, 48), (2, 64))),
+           'matMul__FP8Matrix34N20': (3, 0, 0, ((1, 48), (2, 48))),
+           'drawPS__FR6PacketP14ParticleSystem': (2, 0, 0, ((0, 12),)),
+           'norrath_player_resource_map_get': (1, 0, 0),
+           'drawAddToList__FPviP8_textureP11_drawRecordi': (5, 0, 0),
+           'drawLines__Fv': (0, 0, 0), 'drawDistortionParticles__Fv': (0, 0, 0)})
 
 
 if __name__ == '__main__':
