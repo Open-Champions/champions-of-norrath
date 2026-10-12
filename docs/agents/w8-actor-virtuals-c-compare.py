@@ -494,6 +494,8 @@ reg('setPassableState__8GothTrapb', W + 'goth-trap-passable/set_passable_state.c
 reg('setPassableState__10HateBridgeb', W + 'hate-bridge-passable/set_passable_state.cpp', sc_door_state, DOOR_STUBS,
     extra=['vehicle-actors-hate-bridge-passable/set_passable_state.cpp'])
 
+reg('setPassableState__8HateHoleb', W + 'hate-hole-passable/set_passable_state.cpp', sc_door_state, DOOR_STUBS)
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
