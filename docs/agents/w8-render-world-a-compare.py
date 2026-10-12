@@ -580,6 +580,40 @@ reg('getMegatileOriginalCenter__FG6Point2', 0x265968,
     'w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp', scenario_megatile_center)
 
 
+def draw_texture_effect(rng, m):
+    cur = m.u32(m.g32(4))
+    n = rng.choice([0, 1, 2, 5, 9])
+    half = rng.random() < 0.15
+    for i in range(16 * n + (8 if half else 0)):
+        m.w8(cur + i, rng.randrange(256))
+    m.w32(m.g32(4), cur + 16 * n + (8 if half else 0))
+
+
+TDC_STUBS = {'drawTexture__FR6PacketP8_textureiiiiii': dict(regs=[1, 2, 3, 4, 5, 6, 7], peek=[(4, 4)], effect=draw_texture_effect),
+             'drawAddToList__FPviP8_textureP11_drawRecordi': dict(nargs=5)}
+TDC_ADDR = {'drawTexture__FR6PacketP8_textureiiiiii': 0x16DC60, 'drawAddToList__FPviP8_textureP11_drawRecordi': 0x15EB80}
+
+
+def scenario_texture_draw_color(rng):
+    mem = {}
+    start = ARENA + 0x2000 * rng.randrange(1, 3)
+    gstart = ARENA + 0x1000 if rng.random() < 0.5 else start - 0x400
+    put32(mem, sym('glistp'), start)
+    put32(mem, sym('gstart'), start - rng.choice([0x1000, 0x2000, 8, 0x40]))
+    put32(mem, sym('GLISTSIZE'), rng.choice([0x10000, 3000 + 0x400, 3000 + 0x3FF, 3000 + 0x401, 100]) )
+    tex = ARENA + 0x20000
+    fill(rng, mem, tex, 16)
+    fill(rng, mem, start, 0x400)
+    cmp_addrs = list(range(start, start + 0x400)) + list(range(sym('glistp'), sym('glistp') + 4))
+    return {'mem': mem, 'args': [tex, rng.randrange(-100, 100), rng.randrange(-100, 100), rng.randrange(0, 50),
+                                 rng.randrange(1 << 32)],
+            'compare': cmp_addrs}
+
+
+reg('_textureDrawColor__FP8_textureiiiUi', 0x16E658, 'w8-render-world-a-texture-draw-color/texture_draw_color.cpp',
+    scenario_texture_draw_color, stubs=TDC_STUBS, stub_addr=TDC_ADDR)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
