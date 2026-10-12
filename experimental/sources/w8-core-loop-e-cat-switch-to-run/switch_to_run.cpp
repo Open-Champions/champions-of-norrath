@@ -24,12 +24,12 @@ struct Block32 {
     unsigned char bytes[32];
 } __attribute__((packed));
 
-AnimationHeader* header_at(unsigned char* object, unsigned offset) {
+__attribute__((always_inline)) inline AnimationHeader* header_at(unsigned char* object, unsigned offset) {
     unsigned char* const table = *reinterpret_cast<unsigned char**>(object + 36);
     return *reinterpret_cast<AnimationHeader**>(table + offset);
 }
 
-float negative_thirtieth() {
+__attribute__((always_inline)) inline float negative_thirtieth() {
     union {
         unsigned bits;
         float value;
