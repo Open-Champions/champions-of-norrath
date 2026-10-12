@@ -2444,3 +2444,4 @@ and no startup stage has executed.
 - 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
 - 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
 - 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
+- 2026-10-12 13:10 CDT — `agents/simloop-services` —  unresolved imports
