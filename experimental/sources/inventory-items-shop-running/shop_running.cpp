@@ -2,4 +2,6 @@
 // neighbouring symbols are 4 bytes apart on both sides. shopStart__Fiii stores
 // 1 here when it opens the shop screen (gp-relative offset -15044).
 // Unknown: every reader and every other writer.
-extern "C" int shopRunning = 0;
+extern "C" {
+int shopRunning = 0;
+}
