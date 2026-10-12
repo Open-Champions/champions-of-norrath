@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1368,
+  "default_authored_inputs": 1371,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2084,7 +2084,10 @@
     "sources/kernel-patches-unlink-alarm/unlink_alarm.cpp": "af6f4abd8b1f03be64d7db3e5abb906c36d082ad5a57e738d537e05495360374",
     "sources/kernel-patches-insert-alarm/insert_alarm.cpp": "f49c4ff2f777f8d7e50d838085cc39390a18a13104155f9882b398b89ff90977",
     "sources/kernel-patches-g-alarm-buf/g_alarm_buf.cpp": "7a92952303b47609c1cd3f95bc1fd6b31a3be02aca38bad6e2d4c338cc3f23ea",
-    "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417"
+    "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417",
+    "sources/frontend-shell-words/front_end_words.cpp": "9b4d9ff91e2afeba955256b53be42cae13814abb84632d406a572c449039a690",
+    "sources/frontend-shell-run/run_locals.cpp": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
+    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373"
   },
   "inputs": [
     {
@@ -17997,6 +18000,41 @@
       "sha256": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417",
       "source": "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1370,
+      "kind": "independently_authored_source",
+      "object_name": "front_end_words.o",
+      "profile": "authored_cpp",
+      "sha256": "9b4d9ff91e2afeba955256b53be42cae13814abb84632d406a572c449039a690",
+      "source": "sources/frontend-shell-words/front_end_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1371,
+      "kind": "independently_authored_source",
+      "object_name": "run_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
+      "source": "sources/frontend-shell-run/run_locals.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1372,
+      "kind": "independently_authored_source",
+      "object_name": "run_front_end.o",
+      "profile": "authored_cpp",
+      "sha256": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373",
+      "source": "sources/frontend-shell-run/run_front_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "runFrontEnd__Fv",
+          "compiled_body_bytes": 7060
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -18096,7 +18134,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "186e475882d1162d6265316279aef57105d99ccb801fde5b3aa868aa34a17e43",
+  "snapshot_sha256": "a8606c3188641210675ea6b5856f23787c95f5ac9133cd2aa57074eaecaa6a43",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

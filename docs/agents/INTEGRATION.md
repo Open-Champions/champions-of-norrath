@@ -2229,6 +2229,47 @@ Closed: `PatchIsNeeded`, `SetNextComp`, `SignalSema`, `SysExecPS2Entry`,
 Opened: `GetOsdConfigParam`, `SetOsdConfigParam`, `SuspendThread`, `WakeupThread`,
 `_kExitTLBHandler`, `kprintf`.
 
+## agents/frontend-shell
+
+Merged as a **partial package**: the notes carry the observed, inferred and
+unknown separation, the build-plan table and the import lists, but not the
+five separate summary sections (no standalone "Authored but never executed"
+or "Unknown" headings; unknowns are inline). Every committed function has a
+test: `runFrontEnd__Fv` has `host_contract.cpp` and the data words have
+`host_check.cpp`; both pass here (2 of 2) and 214 tool tests pass. Three units
+with fresh `input_order` values 1368 through 1370; one function (7060 body
+bytes, not an original-byte match; the original is 5656 bytes). No game binary
+or disassembly listing was committed. The notes say `menu` and `menuNm` are
+also defined by dialog-hud-controls; the link has no duplicate definition
+(they are externs here), so nothing was dropped. The worker's private
+trial (879 to 928) is not the official delta. 1076 function bodies, 1371
+authored inputs, zero COMMON. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1197 |
+| After | 1217 |
+| Closed | 14 |
+| Opened | 34 |
+
+Closed: `attemptLoadGame`, `autodemoTimer`, `creditMenu`, `creditsPosY`,
+`engineHoldMpeg`, `expWarnAlpha`, `frontEndRunning`,
+`frontEndStartInCredits`, `frontEndSuspend`, `frontEndWasRunning`,
+`frontMenu`, `frontendControllerConfigRunning`, `lineShift`,
+`runFrontEnd__Fv`.
+
+Opened: `commMenu`, `coreClearNetLogFuck`, `creditsText`, `curFocus`,
+`difficultyMenu`, `endInit`, `endTimer`, `engineReboot__Fv`,
+`frontEndCleanUp__Fi`, `gameTypeMenu`, `hudRunNoControllers__Fi`,
+`launchPlayerSelect__Fv`, `menuModeRebootQuestion`,
+`menuNetImportOrNewGame`, `menuNetImportOrNewPlayer`, `musicStart`,
+`netAttemptLaunch`, `netDoNewLaunch__Fv`, `optionMenu`, `paramRunning__Fv`,
+`playerMenu`, `playerSelectCount`, `playerSelectEnforce`,
+`playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`,
+`playerSelectStartPlayer`, `playerSelectSuccessful`, `setSRSInfo__Fv`,
+`soundClearStreamQue__Fi`, `startNetLaunch__Fv`, `statusPtr`,
+`stopCredits__Fv`, `textureSmoothBorder__FiiiiiUiiii`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
