@@ -55,3 +55,7 @@ Observed at `0x00312e78` and `0x00312e80`, 8 bytes each, weak symbols in the ref
 ## msg_load__5LeverPc
 
 Observed at `0x0021c9e0`, 112 bytes. Reads a four-byte value (bit pattern, stored at object+76), a word (object+12), a byte (object+80) and a byte (object+81) from the buffer and returns 10. If the byte at object+81 is nonzero it calls `objectAddToRunList__FP10GameObject` with the object. Mirrors `msg_save__5LeverPc` (`vslots-b-lever-save`). Opens import `objectAddToRunList__FP10GameObject`.
+
+## msg_save__8CreaturePc
+
+Observed at `0x001119d8`, 436 bytes; the reviewed compile emits 576. Buffer order: word at object+244; single at object+560 as an integer; string-pool index of the text at the pointer in object+892. If the single at object+560 is at most zero (NaN skips it): object+36 points to a table of 8-byte entries (text pointer, header pointer); from entry 1 up to the first zero text pointer, the entry whose header pointer equals the word at `object + 264 + (signed byte at object+292) * 32` supplies the text whose pool index is stored, else -1. Then, if bit 0 of the 64-bit flags at object+160 is set, the single at object+564 as an integer and the signed byte at object+76 as a word. Then the byte at object+570, a mask byte (flag bit 24 -> 1, bit 32 -> 2, bit 22 -> 4, bit 23 -> 8), two zero bytes. Returns the byte count. Float-to-integer conversion truncates toward zero. No field is named. Opens import `objectSaveAddToStringPool__FPCc`.
