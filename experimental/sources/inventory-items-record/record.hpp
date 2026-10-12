@@ -4,7 +4,9 @@
 // at record+328, each 4616 bytes: 64 slots of 72 bytes, a signed count at
 // list+4608, and 4 bytes that no routine here reads. Slot+0 is a pointer to a
 // description whose first word points to the item name; slot+4 is a signed
-// halfword. Unknown: the other slot fields and what distinguishes the lists.
+// halfword. Slot+34 is a second signed halfword, and description+28 is a
+// signed type byte. Unknown: the other slot fields and what distinguishes the
+// lists.
 // The record words are 32 bits. A host check cannot place objects below 4 GiB,
 // so it defines NORRATH_INVENTORY_HOST and supplies host_resolve to turn a
 // word back into a host pointer.
@@ -14,10 +16,14 @@ namespace inventory_items {
 struct Slot {
     unsigned description;
     short quantity;
-    unsigned char unread[66];
+    unsigned char unread_a[28];
+    short index;
+    unsigned char unread_b[36];
 };
 struct Description {
     unsigned name;
+    unsigned char unread[24];
+    signed char type;
 };
 struct List {
     Slot slots[64];
@@ -26,6 +32,10 @@ struct List {
 };
 static_assert(sizeof(Slot) == 72 && sizeof(List) == 4616, "observed strides");
 
+// The 32-bit value a record word holds for an object address.
+inline unsigned word_of(const void* object) {
+    return static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(object));
+}
 inline List* player_lists(int owner) {
     return reinterpret_cast<List*>(player + owner * 23984 + 328);
 }
