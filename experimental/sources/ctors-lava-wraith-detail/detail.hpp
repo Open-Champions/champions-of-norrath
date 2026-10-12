@@ -93,6 +93,15 @@ extern unsigned char norrath_ctors_lava_wraith_view_42b3d8[];
 extern unsigned char norrath_ctors_lava_wraith_view_44def0[];
 extern unsigned char norrath_ctors_lava_wraith_view_485240[];
 unsigned norrath_construct_Soul(void* object, const void* point, short type, char** arguments, void* minion);
+// Original fptodp at 0x2fb320 (already named by the math package), dpadd at
+// 0x2fb5c0 and dptofp at 0x2fbc20. The last two are named here by address
+// because no verified authored counterpart is known. Not defined here.
+unsigned long long norrath_entity_fptodp(float value);
+unsigned long long norrath_softdouble_add_2fb5c0(unsigned long long left, unsigned long long right);
+float norrath_softdouble_to_float_2fbc20(unsigned long long value);
+extern unsigned char norrath_ctors_lava_wraith_view_42b330[];
+extern unsigned char norrath_ctors_lava_wraith_view_44b630[];
+unsigned norrath_construct_Scorpion(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
