@@ -1648,6 +1648,57 @@ notes leave open were already unresolved or already defined, including
 1223 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
 execution.
 
+## agents/pre-logo-dialog
+
+This is a partial package: the branch carries fifteen units with
+per-symbol observed addresses and behavior, but its notes leave the
+closed/opened lists pending, so the measured link delta below stands in
+for them. All fifteen units were selected with fresh `input_order`
+values 1225 through 1239. Each unit compiles under `authored_cpp`, and
+each host contract passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1002 |
+| After | 1035 |
+| Closed | 18 |
+| Opened | 51 |
+
+Closed: `DLG_FireUpShopOnExit`, `DLG_ForceMutexRelease__Fv`,
+`DLG_StartDialog__FPcP9DlgPacketii`, `DLG_StartWithSwoopDone`,
+`DLG_SwoopMode`, `animSetSpecialSoundHandler__FPFiG6Point3_v`,
+`dialogMsgHandle`, `gameFootstepSound__FG6Point3iii`,
+`gameobjInit__Fv`, `helpMessageFrame__Fv`,
+`hudAddHelpMessage__FiPUsT1`, `hudMsgCallback__FPUci`, `hudMsgHandle`,
+`hudSetInfoMessage__FPUsiic`, `hudShowBust__FPcPUsii`,
+`hudShowCompass__FG6Point3PUs`, `lightHaloTexture`,
+`netSendMessage__FiPUci`. Also defined, and not a previous import: the
+`hudMsgCallback` file-local helper.
+
+Opened: `GetPitch__6Camera`, `GetYaw__6Camera`, `body`,
+`colorScale__FUif`, `controlPaused`, `createByName__FPcG6Point3sPPc`,
+`debugRecall__Fi`, `dialogMutex`, `drawBustCur`, `drawBustMax`,
+`drawBustOn`, `drawBustTexName`, `drawBustTitle`, `drawCompassOn`,
+`drawCompassPoint`, `drawCompassTitle`, `fontColor__FUiii`,
+`fontEnd__Fv`, `fontPrintCenteredu__FiiPUsi`,
+`fontPrintWrapu__FiiPUsiiii`, `fontPrint__FiiPci`,
+`fontPrintu__FiiPUsi`, `fontStart__FP4FontiUii`,
+`fontStringSizeu__FP4FontPUsi`, `hudAssignQuickSpell__Fiii`,
+`hudAssignSpellBookSpell__Fiiil`, `infoMessage`, `infoMessageAlways`,
+`infoMessageTimer`, `msgHandler`, `multiBody`, `multiRelease`,
+`multiSide`, `multiTitle`, `netBlankControllerButtons__Fiii`,
+`netDisconnectPlayer__Fi`, `netLocalPad`,
+`neverSaveAlwaysLoadFromLump__FPc`,
+`objectSetCreateByNameFunction__FPFPcG6Point3sPPc_P10GameObject`,
+`objectSetFilterFunction__FPFPc_i`, `playerDamageHandler__6Player`,
+`rectangleDraw__FiiiiiUi`, `saveActivate__9Savepoint`,
+`scriptActivatePostAction__Fv`, `soundPlaySequence__FP15AnimationHeaderG6Point3f`,
+`specialHandler`, `textureDrawBorder__FiiiiiUiPcii`, `title`,
+`ustrcat__FPUsT0`, `ustrcpy__FPUsPc`, `ustrcpy__FPUsT0`. 964 function
+bodies, 1238 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1788,7 +1839,9 @@ data words are data, not functions. The shared constructor header now
 covers Boat and AutoContainerLP. The eleven selected game-loop units
 (eight functions, five words) are in the link; the two unselected
 game-loop units are authored and not in the link. The twenty-five
-memcard-calls units are in the link. The forty natives-b units are in the link. `engineInit__Ff`,
+memcard-calls units are in the link. The forty natives-b units are in
+the link. The fifteen pre-logo-dialog units are in the link.
+`engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,

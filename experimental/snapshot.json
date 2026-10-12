@@ -15666,6 +15666,205 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle.cpp"
+    },
+    {
+      "input_order": 1225,
+      "component": "pre-logo-dialog-footstep",
+      "object_name": "footstep.o",
+      "private_object_sha256": "eac5b6962baf2c539895d1d1b026d0784fc07ccf70ce286d76b99a9e14e84be5",
+      "emitted_functions": [
+        {
+          "name": "gameFootstepSound__FG6Point3iii",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-footstep/footstep.cpp"
+    },
+    {
+      "input_order": 1226,
+      "component": "pre-logo-dialog-force-mutex",
+      "object_name": "force_mutex.o",
+      "private_object_sha256": "1592a6983a12631109aa03b2afbaee67b659af4e51b9a40c35c92c15dcb8059b",
+      "emitted_functions": [
+        {
+          "name": "DLG_ForceMutexRelease__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-force-mutex/force_mutex.cpp"
+    },
+    {
+      "input_order": 1227,
+      "component": "pre-logo-dialog-gameobj-init",
+      "object_name": "gameobj_init.o",
+      "private_object_sha256": "67673dc342801451438f76d35cffa572f472ccef16b35f54d334aca749628414",
+      "emitted_functions": [
+        {
+          "name": "gameobjInit__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-gameobj-init/gameobj_init.cpp"
+    },
+    {
+      "input_order": 1228,
+      "component": "pre-logo-dialog-halo",
+      "object_name": "light_halo.o",
+      "private_object_sha256": "24a2749b56ce961e87053e2615b19da2c1765fc0cb2c95b7f55a4c2b1c4499a7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-halo/light_halo.cpp"
+    },
+    {
+      "input_order": 1229,
+      "component": "pre-logo-dialog-handles",
+      "object_name": "msg_handles.o",
+      "private_object_sha256": "91a802560c8e3795d348facf5080b9bb692d2cbdd01c9df1bcd5d26c623807b5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-handles/msg_handles.cpp"
+    },
+    {
+      "input_order": 1230,
+      "component": "pre-logo-dialog-help-frame",
+      "object_name": "help_frame.o",
+      "private_object_sha256": "c4ab909eaecd45fe11ce50affb3f452e8d8fb7a48fa1d6957e5d4a203c96ca2b",
+      "emitted_functions": [
+        {
+          "name": "helpMessageFrame__Fv",
+          "compiled_body_bytes": 1708
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-help-frame/help_frame.cpp"
+    },
+    {
+      "input_order": 1231,
+      "component": "pre-logo-dialog-hud-add-help",
+      "object_name": "hud_add_help.o",
+      "private_object_sha256": "0b10af6a5a58dfa5cca6a1b875b26c8820017c1327f284fbba4a7f62f928ae37",
+      "emitted_functions": [
+        {
+          "name": "hudAddHelpMessage__FiPUsT1",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-hud-add-help/hud_add_help.cpp"
+    },
+    {
+      "input_order": 1232,
+      "component": "pre-logo-dialog-hud-msg",
+      "object_name": "hud_msg.o",
+      "private_object_sha256": "20a0223fb658adba7638c3ad1ec1f149743553d0c59dadbefd3e45fb3a6292fb",
+      "emitted_functions": [
+        {
+          "name": "_ZL17disconnect_playeri",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "hudMsgCallback__FPUci",
+          "compiled_body_bytes": 964
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-hud-msg/hud_msg.cpp"
+    },
+    {
+      "input_order": 1233,
+      "component": "pre-logo-dialog-hud-set-info",
+      "object_name": "hud_set_info.o",
+      "private_object_sha256": "9941df6b2f7a9498ee5b8adeffbabb80eaa07ef9e1ef63c465ff33f6797103ca",
+      "emitted_functions": [
+        {
+          "name": "hudSetInfoMessage__FPUsiic",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-hud-set-info/hud_set_info.cpp"
+    },
+    {
+      "input_order": 1234,
+      "component": "pre-logo-dialog-net-send",
+      "object_name": "net_send.o",
+      "private_object_sha256": "6548aa5770a3d7761ac71cd605e392e0584a970b621f28209f5aa06b91a73b71",
+      "emitted_functions": [
+        {
+          "name": "netSendMessage__FiPUci",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-net-send/net_send.cpp"
+    },
+    {
+      "input_order": 1235,
+      "component": "pre-logo-dialog-show-bust",
+      "object_name": "show_bust.o",
+      "private_object_sha256": "74e4dcd1ecbee7847a7088aa318b3a6e9c9eddb4c29645d5a59bcc1937eca5ba",
+      "emitted_functions": [
+        {
+          "name": "hudShowBust__FPcPUsii",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-show-bust/show_bust.cpp"
+    },
+    {
+      "input_order": 1236,
+      "component": "pre-logo-dialog-show-compass",
+      "object_name": "show_compass.o",
+      "private_object_sha256": "3b0ece3668596d852e38cda4671b1f050bfeacee36f99922e120a6b70c14d7a4",
+      "emitted_functions": [
+        {
+          "name": "hudShowCompass__FG6Point3PUs",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-show-compass/show_compass.cpp"
+    },
+    {
+      "input_order": 1237,
+      "component": "pre-logo-dialog-special-handler",
+      "object_name": "special_handler.o",
+      "private_object_sha256": "10583fe34f239ee939fbc09e23c2e04ca5ab34e57983a4d48922e12d5a236175",
+      "emitted_functions": [
+        {
+          "name": "animSetSpecialSoundHandler__FPFiG6Point3_v",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-special-handler/special_handler.cpp"
+    },
+    {
+      "input_order": 1238,
+      "component": "pre-logo-dialog-start-dialog",
+      "object_name": "start_dialog.o",
+      "private_object_sha256": "d4ea22340186496181a915952352c7e798370e0719eb68f4c3da6986de3a19c4",
+      "emitted_functions": [
+        {
+          "name": "DLG_StartDialog__FPcP9DlgPacketii",
+          "compiled_body_bytes": 448
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-start-dialog/start_dialog.cpp"
+    },
+    {
+      "input_order": 1239,
+      "component": "pre-logo-dialog-words",
+      "object_name": "dialog_words.o",
+      "private_object_sha256": "4c42e9445c9c6f604b348f3af184a81d9fc32e50074a229366ec4ff0e6f3b61e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/pre-logo-dialog-words/dialog_words.cpp"
     }
   ],
   "drafts": [
@@ -18538,7 +18737,37 @@
     "sources/natives-b-prop-anim-at-end/prop_anim_at_end.cpp": "80e6099b40dfcc46bca4e6328531e06b066ddbdfc9e8cdca7a95b6a466fe4dce",
     "sources/natives-b-prop-anim-at-end/prop_anim_at_end_host.cpp": "b2b2d8aa90196521c0ee84bbc13ffff0cb78749a0e06514dffa7ed6cd89eb9bf",
     "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle.cpp": "5a192e0e70281d9af394c0dcdd209bc2853b0065a0fa544481bac96edd722424",
-    "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle_host.cpp": "8572ed19c86256fbe273d3fb93e7e4f2f99a08ad5c11281c785c74aa0d1239df"
+    "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle_host.cpp": "8572ed19c86256fbe273d3fb93e7e4f2f99a08ad5c11281c785c74aa0d1239df",
+    "sources/pre-logo-dialog-footstep/footstep.cpp": "e89c24850ecf3ef3673515028b65a57b2d34b3785bf933e91d9fa9c5a0eb12ef",
+    "sources/pre-logo-dialog-footstep/host_check.cpp": "d823e63cad1eee257a2190b29720e41cdd341f8d04897207e1953c3a8325b26d",
+    "sources/pre-logo-dialog-force-mutex/force_mutex.cpp": "01dcc2bab704d25e9c743aa2de695bd2f3b9a2778c11b41b286c6b1a2fff63a0",
+    "sources/pre-logo-dialog-force-mutex/host_check.cpp": "2acf1444c68d07af94ecdb06183253db4af5e428ae9c55b3eb25aba73d91fb9f",
+    "sources/pre-logo-dialog-gameobj-init/gameobj_init.cpp": "8f3ef9e97f8f0667e990a136e4a95d0dc8933603523b960b730735dde3c8b71f",
+    "sources/pre-logo-dialog-gameobj-init/host_check.cpp": "2861be30b62b3a291f8e9fc9bb7855e13c6d6e90f711a00875d44664aa85f695",
+    "sources/pre-logo-dialog-halo/light_halo.cpp": "27260c4795362ebdca7cceb3a46b563a099cbcc035ce8f31882247858b9ed51a",
+    "sources/pre-logo-dialog-halo/host_check.cpp": "325e47a1dbdfb98e30db400a7e893c7ebd05f3a70f3c544270dfd4acc736a1bd",
+    "sources/pre-logo-dialog-handles/msg_handles.cpp": "7c7288512f484e7d8b758b1c78f777516b49e2f700d43f1d3f324ed69e666136",
+    "sources/pre-logo-dialog-handles/host_check.cpp": "a8f2779c7f7f07582774de150573dab5d75e6211139808f79cb156efd9065276",
+    "sources/pre-logo-dialog-help-frame/help_frame.cpp": "19e8af5cd16e66ee92d2d4a9f13a4673d09262049d5ae5ac830a69303ed5954a",
+    "sources/pre-logo-dialog-help-frame/host_check.cpp": "d00c8cd926c5f37ed626952b976ac51f6502f7d1ad940b1ed8349158878bc869",
+    "sources/pre-logo-dialog-hud-add-help/hud_add_help.cpp": "cd51f3a9ac7e190125b526b69f68a03849f16fde8062fb878d45bdfd10f8ad39",
+    "sources/pre-logo-dialog-hud-add-help/host_check.cpp": "9d74fbe6cc05a16ba6c5a6a91637ed60000880592616f10176dc0a99196efd17",
+    "sources/pre-logo-dialog-hud-msg/hud_msg.cpp": "a8ba9a3274c7f474d921499a18dce591f1aba2836b55658c25c1313bef5d384a",
+    "sources/pre-logo-dialog-hud-msg/host_check.cpp": "730d439ef3317f7de9a86a0fb797a14bfebdc689d5aee9e14f3898d4b8ee859a",
+    "sources/pre-logo-dialog-hud-set-info/hud_set_info.cpp": "c95e164089ae47e9f7cc141961ec911d456990778d8af1196123cfa2bf7c60c2",
+    "sources/pre-logo-dialog-hud-set-info/host_check.cpp": "2cf060ed996e3468ede345843b9cc8e137ea4beb24bd4cf5ceb23d1bafc4beed",
+    "sources/pre-logo-dialog-net-send/net_send.cpp": "9e881d1cf96b08bd6fdeb7046e068e4008e340e5fcdbc13de8334cf0308105ac",
+    "sources/pre-logo-dialog-net-send/host_check.cpp": "f4c0e6bd753ecedb46abb4e08bf48f807c649f9127e4d21732a98d48e8c46dce",
+    "sources/pre-logo-dialog-show-bust/show_bust.cpp": "74d65e21626dd7071bc639e4ad5c76830050920d8a0be708bc9fcfef05b76661",
+    "sources/pre-logo-dialog-show-bust/host_check.cpp": "e963f2d80d026dce98951756c20cd460cd06a5ba674ae1ba24ab32e809e2d59d",
+    "sources/pre-logo-dialog-show-compass/show_compass.cpp": "f7149285e45a40b3a55fdc149f1d1ec912d5acb3dbaf32a66123ed21097f9d1b",
+    "sources/pre-logo-dialog-show-compass/host_check.cpp": "db0156c31ce5a4acc31ea04b4d78e8296ba19798e5b664487d6b243440bb05e7",
+    "sources/pre-logo-dialog-special-handler/special_handler.cpp": "1ce0d928db3baa80ee2e7293de961bde47594e3a43786acc0e6965e8c455d420",
+    "sources/pre-logo-dialog-special-handler/host_check.cpp": "bfc069d5a102a415a80b40b465106766236bffb5af713250231b8b9299b94e91",
+    "sources/pre-logo-dialog-start-dialog/start_dialog.cpp": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
+    "sources/pre-logo-dialog-start-dialog/host_check.cpp": "c2b8a6bf2f55ea443230b95e3eaf767c5085767b2c7e0e1305820ce2ec1fc77f",
+    "sources/pre-logo-dialog-words/dialog_words.cpp": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
+    "sources/pre-logo-dialog-words/host_check.cpp": "f984b934a409aec797e3f4c8a9b80f0ba23d440eecc8ecb71ea4750061f8ada9"
   },
   "additional_implementations": [
     {
@@ -18980,11 +19209,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1225,
-    "authored_default_inputs": 1223,
+    "selected_inputs": 1240,
+    "authored_default_inputs": 1238,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 953,
-    "compiled_body_bytes_from_accepted_inputs": 395096,
+    "emitted_function_definitions_including_helpers": 966,
+    "compiled_body_bytes_from_accepted_inputs": 400184,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -18997,7 +19226,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 912
+    "package_selected_inputs": 927
   },
   "startup_implementations": [
     {
@@ -32885,6 +33114,250 @@
       ],
       "host_files": [
         "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle_host.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-footstep/footstep.cpp",
+      "source_sha256": "e89c24850ecf3ef3673515028b65a57b2d34b3785bf933e91d9fa9c5a0eb12ef",
+      "object_sha256": "eac5b6962baf2c539895d1d1b026d0784fc07ccf70ce286d76b99a9e14e84be5",
+      "emitted_functions": [
+        {
+          "name": "gameFootstepSound__FG6Point3iii",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-footstep/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-force-mutex/force_mutex.cpp",
+      "source_sha256": "01dcc2bab704d25e9c743aa2de695bd2f3b9a2778c11b41b286c6b1a2fff63a0",
+      "object_sha256": "1592a6983a12631109aa03b2afbaee67b659af4e51b9a40c35c92c15dcb8059b",
+      "emitted_functions": [
+        {
+          "name": "DLG_ForceMutexRelease__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-force-mutex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-gameobj-init/gameobj_init.cpp",
+      "source_sha256": "8f3ef9e97f8f0667e990a136e4a95d0dc8933603523b960b730735dde3c8b71f",
+      "object_sha256": "67673dc342801451438f76d35cffa572f472ccef16b35f54d334aca749628414",
+      "emitted_functions": [
+        {
+          "name": "gameobjInit__Fv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-gameobj-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-halo/light_halo.cpp",
+      "source_sha256": "27260c4795362ebdca7cceb3a46b563a099cbcc035ce8f31882247858b9ed51a",
+      "object_sha256": "24a2749b56ce961e87053e2615b19da2c1765fc0cb2c95b7f55a4c2b1c4499a7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/pre-logo-dialog-halo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-handles/msg_handles.cpp",
+      "source_sha256": "7c7288512f484e7d8b758b1c78f777516b49e2f700d43f1d3f324ed69e666136",
+      "object_sha256": "91a802560c8e3795d348facf5080b9bb692d2cbdd01c9df1bcd5d26c623807b5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/pre-logo-dialog-handles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-help-frame/help_frame.cpp",
+      "source_sha256": "19e8af5cd16e66ee92d2d4a9f13a4673d09262049d5ae5ac830a69303ed5954a",
+      "object_sha256": "c4ab909eaecd45fe11ce50affb3f452e8d8fb7a48fa1d6957e5d4a203c96ca2b",
+      "emitted_functions": [
+        {
+          "name": "helpMessageFrame__Fv",
+          "compiled_body_bytes": 1708
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-help-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-hud-add-help/hud_add_help.cpp",
+      "source_sha256": "cd51f3a9ac7e190125b526b69f68a03849f16fde8062fb878d45bdfd10f8ad39",
+      "object_sha256": "0b10af6a5a58dfa5cca6a1b875b26c8820017c1327f284fbba4a7f62f928ae37",
+      "emitted_functions": [
+        {
+          "name": "hudAddHelpMessage__FiPUsT1",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-hud-add-help/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-hud-msg/hud_msg.cpp",
+      "source_sha256": "a8ba9a3274c7f474d921499a18dce591f1aba2836b55658c25c1313bef5d384a",
+      "object_sha256": "20a0223fb658adba7638c3ad1ec1f149743553d0c59dadbefd3e45fb3a6292fb",
+      "emitted_functions": [
+        {
+          "name": "_ZL17disconnect_playeri",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "hudMsgCallback__FPUci",
+          "compiled_body_bytes": 964
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-hud-msg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-hud-set-info/hud_set_info.cpp",
+      "source_sha256": "c95e164089ae47e9f7cc141961ec911d456990778d8af1196123cfa2bf7c60c2",
+      "object_sha256": "9941df6b2f7a9498ee5b8adeffbabb80eaa07ef9e1ef63c465ff33f6797103ca",
+      "emitted_functions": [
+        {
+          "name": "hudSetInfoMessage__FPUsiic",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-hud-set-info/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-net-send/net_send.cpp",
+      "source_sha256": "9e881d1cf96b08bd6fdeb7046e068e4008e340e5fcdbc13de8334cf0308105ac",
+      "object_sha256": "6548aa5770a3d7761ac71cd605e392e0584a970b621f28209f5aa06b91a73b71",
+      "emitted_functions": [
+        {
+          "name": "netSendMessage__FiPUci",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-net-send/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-show-bust/show_bust.cpp",
+      "source_sha256": "74d65e21626dd7071bc639e4ad5c76830050920d8a0be708bc9fcfef05b76661",
+      "object_sha256": "74e4dcd1ecbee7847a7088aa318b3a6e9c9eddb4c29645d5a59bcc1937eca5ba",
+      "emitted_functions": [
+        {
+          "name": "hudShowBust__FPcPUsii",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-show-bust/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-show-compass/show_compass.cpp",
+      "source_sha256": "f7149285e45a40b3a55fdc149f1d1ec912d5acb3dbaf32a66123ed21097f9d1b",
+      "object_sha256": "3b0ece3668596d852e38cda4671b1f050bfeacee36f99922e120a6b70c14d7a4",
+      "emitted_functions": [
+        {
+          "name": "hudShowCompass__FG6Point3PUs",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-show-compass/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-special-handler/special_handler.cpp",
+      "source_sha256": "1ce0d928db3baa80ee2e7293de961bde47594e3a43786acc0e6965e8c455d420",
+      "object_sha256": "10583fe34f239ee939fbc09e23c2e04ca5ab34e57983a4d48922e12d5a236175",
+      "emitted_functions": [
+        {
+          "name": "animSetSpecialSoundHandler__FPFiG6Point3_v",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-special-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-start-dialog/start_dialog.cpp",
+      "source_sha256": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
+      "object_sha256": "d4ea22340186496181a915952352c7e798370e0719eb68f4c3da6986de3a19c4",
+      "emitted_functions": [
+        {
+          "name": "DLG_StartDialog__FPcP9DlgPacketii",
+          "compiled_body_bytes": 448
+        }
+      ],
+      "host_files": [
+        "sources/pre-logo-dialog-start-dialog/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "pre-logo-dialog",
+      "source": "sources/pre-logo-dialog-words/dialog_words.cpp",
+      "source_sha256": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
+      "object_sha256": "4c42e9445c9c6f604b348f3af184a81d9fc32e50074a229366ec4ff0e6f3b61e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/pre-logo-dialog-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

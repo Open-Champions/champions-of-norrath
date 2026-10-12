@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1223,
+  "default_authored_inputs": 1238,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1939,7 +1939,22 @@
     "sources/natives-b-print/print.cpp": "2fb0cee7a1c43618a88bd95679210d06e81341d154905a0a86610f5dfc90eb78",
     "sources/natives-b-print-val/print_val.cpp": "60823e922cf5f75a8e735461ecd48dacf93bbeced84381d82e45274a48572248",
     "sources/natives-b-prop-anim-at-end/prop_anim_at_end.cpp": "80e6099b40dfcc46bca4e6328531e06b066ddbdfc9e8cdca7a95b6a466fe4dce",
-    "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle.cpp": "5a192e0e70281d9af394c0dcdd209bc2853b0065a0fa544481bac96edd722424"
+    "sources/natives-b-put-npc-in-vehicle/put_npc_in_vehicle.cpp": "5a192e0e70281d9af394c0dcdd209bc2853b0065a0fa544481bac96edd722424",
+    "sources/pre-logo-dialog-footstep/footstep.cpp": "e89c24850ecf3ef3673515028b65a57b2d34b3785bf933e91d9fa9c5a0eb12ef",
+    "sources/pre-logo-dialog-force-mutex/force_mutex.cpp": "01dcc2bab704d25e9c743aa2de695bd2f3b9a2778c11b41b286c6b1a2fff63a0",
+    "sources/pre-logo-dialog-gameobj-init/gameobj_init.cpp": "8f3ef9e97f8f0667e990a136e4a95d0dc8933603523b960b730735dde3c8b71f",
+    "sources/pre-logo-dialog-halo/light_halo.cpp": "27260c4795362ebdca7cceb3a46b563a099cbcc035ce8f31882247858b9ed51a",
+    "sources/pre-logo-dialog-handles/msg_handles.cpp": "7c7288512f484e7d8b758b1c78f777516b49e2f700d43f1d3f324ed69e666136",
+    "sources/pre-logo-dialog-help-frame/help_frame.cpp": "19e8af5cd16e66ee92d2d4a9f13a4673d09262049d5ae5ac830a69303ed5954a",
+    "sources/pre-logo-dialog-hud-add-help/hud_add_help.cpp": "cd51f3a9ac7e190125b526b69f68a03849f16fde8062fb878d45bdfd10f8ad39",
+    "sources/pre-logo-dialog-hud-msg/hud_msg.cpp": "a8ba9a3274c7f474d921499a18dce591f1aba2836b55658c25c1313bef5d384a",
+    "sources/pre-logo-dialog-hud-set-info/hud_set_info.cpp": "c95e164089ae47e9f7cc141961ec911d456990778d8af1196123cfa2bf7c60c2",
+    "sources/pre-logo-dialog-net-send/net_send.cpp": "9e881d1cf96b08bd6fdeb7046e068e4008e340e5fcdbc13de8334cf0308105ac",
+    "sources/pre-logo-dialog-show-bust/show_bust.cpp": "74d65e21626dd7071bc639e4ad5c76830050920d8a0be708bc9fcfef05b76661",
+    "sources/pre-logo-dialog-show-compass/show_compass.cpp": "f7149285e45a40b3a55fdc149f1d1ec912d5acb3dbaf32a66123ed21097f9d1b",
+    "sources/pre-logo-dialog-special-handler/special_handler.cpp": "1ce0d928db3baa80ee2e7293de961bde47594e3a43786acc0e6965e8c455d420",
+    "sources/pre-logo-dialog-start-dialog/start_dialog.cpp": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
+    "sources/pre-logo-dialog-words/dialog_words.cpp": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7"
   },
   "inputs": [
     {
@@ -15791,6 +15806,217 @@
           "compiled_body_bytes": 144
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1225,
+      "kind": "independently_authored_source",
+      "object_name": "footstep.o",
+      "profile": "authored_cpp",
+      "sha256": "e89c24850ecf3ef3673515028b65a57b2d34b3785bf933e91d9fa9c5a0eb12ef",
+      "source": "sources/pre-logo-dialog-footstep/footstep.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameFootstepSound__FG6Point3iii",
+          "compiled_body_bytes": 460
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1226,
+      "kind": "independently_authored_source",
+      "object_name": "force_mutex.o",
+      "profile": "authored_cpp",
+      "sha256": "01dcc2bab704d25e9c743aa2de695bd2f3b9a2778c11b41b286c6b1a2fff63a0",
+      "source": "sources/pre-logo-dialog-force-mutex/force_mutex.cpp",
+      "emitted_functions": [
+        {
+          "name": "DLG_ForceMutexRelease__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1227,
+      "kind": "independently_authored_source",
+      "object_name": "gameobj_init.o",
+      "profile": "authored_cpp",
+      "sha256": "8f3ef9e97f8f0667e990a136e4a95d0dc8933603523b960b730735dde3c8b71f",
+      "source": "sources/pre-logo-dialog-gameobj-init/gameobj_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameobjInit__Fv",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1228,
+      "kind": "independently_authored_source",
+      "object_name": "light_halo.o",
+      "profile": "authored_cpp",
+      "sha256": "27260c4795362ebdca7cceb3a46b563a099cbcc035ce8f31882247858b9ed51a",
+      "source": "sources/pre-logo-dialog-halo/light_halo.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1229,
+      "kind": "independently_authored_source",
+      "object_name": "msg_handles.o",
+      "profile": "authored_cpp",
+      "sha256": "7c7288512f484e7d8b758b1c78f777516b49e2f700d43f1d3f324ed69e666136",
+      "source": "sources/pre-logo-dialog-handles/msg_handles.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1230,
+      "kind": "independently_authored_source",
+      "object_name": "help_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "19e8af5cd16e66ee92d2d4a9f13a4673d09262049d5ae5ac830a69303ed5954a",
+      "source": "sources/pre-logo-dialog-help-frame/help_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "helpMessageFrame__Fv",
+          "compiled_body_bytes": 1708
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1231,
+      "kind": "independently_authored_source",
+      "object_name": "hud_add_help.o",
+      "profile": "authored_cpp",
+      "sha256": "cd51f3a9ac7e190125b526b69f68a03849f16fde8062fb878d45bdfd10f8ad39",
+      "source": "sources/pre-logo-dialog-hud-add-help/hud_add_help.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudAddHelpMessage__FiPUsT1",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1232,
+      "kind": "independently_authored_source",
+      "object_name": "hud_msg.o",
+      "profile": "authored_cpp",
+      "sha256": "a8ba9a3274c7f474d921499a18dce591f1aba2836b55658c25c1313bef5d384a",
+      "source": "sources/pre-logo-dialog-hud-msg/hud_msg.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL17disconnect_playeri",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "hudMsgCallback__FPUci",
+          "compiled_body_bytes": 964
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1233,
+      "kind": "independently_authored_source",
+      "object_name": "hud_set_info.o",
+      "profile": "authored_cpp",
+      "sha256": "c95e164089ae47e9f7cc141961ec911d456990778d8af1196123cfa2bf7c60c2",
+      "source": "sources/pre-logo-dialog-hud-set-info/hud_set_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudSetInfoMessage__FPUsiic",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1234,
+      "kind": "independently_authored_source",
+      "object_name": "net_send.o",
+      "profile": "authored_cpp",
+      "sha256": "9e881d1cf96b08bd6fdeb7046e068e4008e340e5fcdbc13de8334cf0308105ac",
+      "source": "sources/pre-logo-dialog-net-send/net_send.cpp",
+      "emitted_functions": [
+        {
+          "name": "netSendMessage__FiPUci",
+          "compiled_body_bytes": 344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1235,
+      "kind": "independently_authored_source",
+      "object_name": "show_bust.o",
+      "profile": "authored_cpp",
+      "sha256": "74d65e21626dd7071bc639e4ad5c76830050920d8a0be708bc9fcfef05b76661",
+      "source": "sources/pre-logo-dialog-show-bust/show_bust.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudShowBust__FPcPUsii",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1236,
+      "kind": "independently_authored_source",
+      "object_name": "show_compass.o",
+      "profile": "authored_cpp",
+      "sha256": "f7149285e45a40b3a55fdc149f1d1ec912d5acb3dbaf32a66123ed21097f9d1b",
+      "source": "sources/pre-logo-dialog-show-compass/show_compass.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudShowCompass__FG6Point3PUs",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1237,
+      "kind": "independently_authored_source",
+      "object_name": "special_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "1ce0d928db3baa80ee2e7293de961bde47594e3a43786acc0e6965e8c455d420",
+      "source": "sources/pre-logo-dialog-special-handler/special_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "animSetSpecialSoundHandler__FPFiG6Point3_v",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1238,
+      "kind": "independently_authored_source",
+      "object_name": "start_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "57e27d1e1366687fa9e3581564905c8667678dc4e893b907e9636804b4216af1",
+      "source": "sources/pre-logo-dialog-start-dialog/start_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "DLG_StartDialog__FPcP9DlgPacketii",
+          "compiled_body_bytes": 448
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1239,
+      "kind": "independently_authored_source",
+      "object_name": "dialog_words.o",
+      "profile": "authored_cpp",
+      "sha256": "f925ff0cef307dd3d9d8493439c3ace476e8b7fb5c2c63d7faaa0dd4a062aac7",
+      "source": "sources/pre-logo-dialog-words/dialog_words.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -15890,7 +16116,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3b4c0bb13e2ee37c83bec1a9855c892c016a895ee96072fda682d78d51db4fe1",
+  "snapshot_sha256": "dc7afa90e759fb79026dedd84f5f3b631f17a8f02fc458d044e369c816d00b8b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
