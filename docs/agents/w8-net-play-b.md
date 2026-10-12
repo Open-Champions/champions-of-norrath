@@ -66,7 +66,7 @@ Beyond that, every function (except the four storage units) was compared against
 | `netStartNetworkGameFrame` | 1500 | 0 | 336 of 409 (the rest are alignment fallbacks) |
 | `netStartNetworkGameInit` | 600 (0 mismatches after the delay-slot fix) | 0 | 445 of 447 (padding) |
 | `norrath_player_proxy_mesh_id` | 400 | 0 | 17 of 17 |
-| `netGameStep` | 2300 in three families (normal, forced send, kick state 2) | 0 | 1367 + 1234 reached across families; every reachable instruction hit except the alignment fallback of the pad-record copy and padding |
+| `netGameStep` | 2300 in three families (normal, forced send, kick state 2) | 0 | 1449 instructions; each family leaves different gaps (1319, 1367 and 1234 reached) and the intersection of the gaps is only padding nops and the alignment fallback of the pad-record copy |
 | `netDoNewLaunch` | 3500 + 1500 | 0 | 1810 of 2016 in the first run (the rest are alignment fallbacks of struct copies, branch delay slots that cannot run, and padding), plus the second run reached the second join packet |
 
 "Alignment fallback" means the image copies large structures with a runtime test of the source and destination alignment and an unaligned path; all objects here are aligned, so that path never runs and was not exercised. Because the compiler used for the authored code copies structures inline too, the same difference cannot be observed from the outside.
