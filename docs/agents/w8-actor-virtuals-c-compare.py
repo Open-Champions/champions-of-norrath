@@ -41,7 +41,7 @@ _old_cop1 = Machine.cop1
 
 def _cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
     if rs == 0x10 and fn == 4:
-        a = self.fv(rd)
+        a = self.fv(rt)  # the R5900 sqrt.s takes ft
         self.setf(sa, a ** 0.5 if a >= 0 else float('nan'))
         return None
     return _old_cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt)
@@ -91,7 +91,7 @@ ALIAS = {
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0}
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538}
 
 
 def exe_symbols():
@@ -395,6 +395,36 @@ def sc_auto_trigger(rng):
             'vstubs': {VSTUB: ('virt136', ['o'], None)}}
 
 
+PLAYER = 0x408600
+NMPLAYERS = 0x484538
+PLAYER_OBJS = [0x30100000 + 0x1000 * k for k in range(4)]
+
+
+def sc_auto_run(rng):
+    mem = new_object(rng)
+    put32(mem, OBJ + 280, rng.choice([0, 1, 5]))
+    mem[OBJ + 40] = rng.choice([0, 3, 255])
+    mem[OBJ + 156] = rng.choice([0, 0, 1, 0xFF, 0x80])
+    put32(mem, OBJ + 192, rng.choice([0, 1, 2, 3, 0xFFFFFFFF, 1, 1]))
+    put32(mem, OBJ + 292, rng.choice([0, 1, 7, 1, 1]))
+    put32(mem, OBJ + 380, rng.choice([0, 5, 0xFFFFFFFF]))
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0x4000, 0x12345678]))
+    for k, o in enumerate((16, 20, 24)):
+        putf(mem, OBJ + o, float(rng.randrange(-30, 30)))
+    put32(mem, NMPLAYERS, rng.choice([-1, 0, 1, 2, 3, 4, 4, 5]))
+    for k, o in enumerate(PLAYER_OBJS):
+        fill(rng, mem, o, 0x400)
+        put32(mem, o + 12, rng.choice([0, 8, 0x10, 0xFFFFFFF7, 0xFFFFFFFF]))
+        near = rng.random() < 0.7
+        for q in (16, 20, 24):
+            putf(mem, o + q, float(rng.randrange(-24, 24) if near else rng.randrange(-60, 60)))
+        put32(mem, PLAYER + 21872 + 23984 * k, rng.choice([o, o, o, 0]))
+    cmp_addrs = whole_object() + list(range(NMPLAYERS, NMPLAYERS + 4))
+    for o in PLAYER_OBJS:
+        cmp_addrs += list(range(o, o + 0x400))
+    return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -423,6 +453,17 @@ reg('msg_trigger__8AutoPropi', W + 'auto-prop-trigger/trigger.cpp', sc_auto_trig
     {'strcasecmp': (['c', 'c'], ('i', [0, 0, 1, -1, 32])),
      'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
      'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
+
+reg('msg_run__8AutoProp', W + 'auto-prop-run/run.cpp', sc_auto_run,
+    {'objectActiveProcessing__FP10GameObjectii': (['o', 'i', 'i'], ('i', [0, 1, 1, 1, 1, 1, 1, 1, 5, 0xFFFFFFFF])),
+     'animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps': (['o', 'o', 'i', 'i'], ('i', [0, 1, 2, 3, 5, 0xFFFF])),
+     'strticmp__FPCcT0': (['c', 'c'], ('i', [0, 0, 0, 0, 0, 0, 0, 1, 0xFFFFFFFF])),
+     'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1])),
+     'gameDifficultyScale__Fv': ([], ('f', [1, 2, 0.5])),
+     'iatan2__Fff': (['f', 'f'], ('i', [0, 0x4000, 0x8000, 0xC000, 0xFFFF, 0x12345, 0xFFFF8000, 0x7FFF, 5])),
+     'gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb':
+         (['o', 'o', 'f', 'f', 'i', 'i', 'i', 'i', 'i', 'i'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
