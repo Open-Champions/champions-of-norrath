@@ -44,6 +44,29 @@ Inferred: round-to-nearest-even matches `cvt.w.s` under the default FCSR
 mode. Unknown: FCSR state, VU/converter side effects, the scene word
 meanings, and why the matrix lengths are discarded.
 
+## doSuperSample__Fiib
+
+Observed at `0x0018fe00`, 992 bytes. A changed mode word rebuilds the
+sample packet with `(mode != 0)` and updates `madePacket.769`, defined here
+with its `-1` file value. Gray 128 is used unless `useComposite` selects the
+composite words. A nonzero `trippleBufferMode` with alpha below 128 emits
+the fixed 12-quadword `frameStatePacket` (tag `0x70000005`, DMA/GIF header,
+one buffer word mixing both display bases, and the constant tail) and sends
+it before the sync-path wait; the alternate tag arm is dead. `copyScreenAlpha`
+takes alpha clamped to 0..128, `copyScreenColor` takes the doubled scaled
+color packed R/G/B with round-half-even and 0..255 clamps, and the three
+composite words step toward the 124..133 band (`>= 133` drops 4, 124..132
+becomes 128, below grows 4). Brightness at or above 0.2 (NaN included) bumps
+`compositeAlpha` by 3 and pins the scale to 0.2. `copyScreenFrame` takes the
+shifted selected base with `0xa0000`, then `FlushCache(0)`, the `copyScreen`
+send, and a final sync-path wait. Host cases cover mode caching, both buffer
+selects with exact packet words, all three skip paths, call order, both
+brightness paths plus NaN, alpha clamps, saturation via out-of-band words,
+and every stepper edge. Fresh EE compilation passed with no new imports.
+
+Inferred: the packet words are DMA/GIF descriptors. Unknown: hardware
+packet effects, FCSR mode, caller argument meanings, and valid color ranges.
+
 ## makeSamplePacket__Fb
 
 Observed at `0x0018f1f8`, 1492 bytes. Builds 577 quadwords, including two
