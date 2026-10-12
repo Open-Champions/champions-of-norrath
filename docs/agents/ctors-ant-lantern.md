@@ -44,8 +44,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/cthulu.cpp` | `norrath_construct_Cthulu` | `__6CthuluG6Point3sPPc` `0x280a88`, 796 bytes | 1392 | `4f5add1f2419bce139cdcdb794be130faf8c805a53c199e6fce2f1afc35a7cd3` |
 | `ctors-ant-lantern-constructors/arenabeast.cpp` | `norrath_construct_Arenabeast` | `__10ArenabeastG6Point3sPPc` `0x235478`, 888 bytes | 1380 | `79410540ac8ec05661f14a93f2b2c294247d6ecce2ebd036b61a7faa1ff7ae6a` |
 | `ctors-ant-lantern-constructors/ghoul.cpp` | `norrath_construct_Ghoul` | `__5GhoulG6Point3siPPc` `0x1f62e8`, 852 bytes | 1196 | `dcd8561f3b62d89461db09859d46d1a971662e89c52437ffced89262f3b93cc2` |
+| `ctors-ant-lantern-constructors/badger.cpp` | `norrath_construct_Badger` | `__6BadgerG6Point3sPPci` `0x1eef40`, 924 bytes | 1356 | `82b21131bc106be592822d587beaa6a121ae85ddefdc3b83303dfd000b9b01e1` |
 
-`detail.hpp` sha256 `dda76cc2d2ebcc0fb7fdebcdae06bfea6028363ea1884366fe1dec7ab14c5ccd`.
+`detail.hpp` sha256 `c558f1e3ba78fccf0df0dda7125635184a7bac0ac1864dccf8141b3bf0fd6a76`.
 
 ## Build-plan entries needed
 
@@ -430,6 +431,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "badger.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/badger.cpp",
+  "sha256": "82b21131bc106be592822d587beaa6a121ae85ddefdc3b83303dfd000b9b01e1",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Badger",
+      "compiled_body_bytes": 1356
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -488,9 +508,11 @@ Observed `__10ArenabeastG6Point3sPPc` at `0x235478`, 888 bytes. Creature with ta
 
 Observed `__5GhoulG6Point3siPPc` at `0x1f62e8`, 852 bytes. Three `eRand` rolls give the Creature scale (r1&7)+(r2&7)+(r3&7)+18. The int argument selects the map table (`0x42b630` when nonzero, `0x42b548` when zero). Vtable `0x44bae0` (`_vt$5Ghoul`), a few singles, `setParameters` with a global and four 1.0 values, animation header from model+172 plus randomised time, slow run list, eight `setAnimEventFlags` calls (3, 4, 5, 5, 17, 18, 19, 20), the eight-byte chunk result at +552 and `finishConstruction`'s V0.
 
+Observed `__6BadgerG6Point3sPPci` at `0x1eef40`, 924 bytes. Creature with the 176-byte record at `0x42b1d0 + 176 * kind` as map and scale 10.0, vtable `0x44c350` (`_vt$6Badger`), the kind's low byte stored at +964. When that byte (as signed) equals 1 a set of singles and one `setParameters` call are used; otherwise byte 40 becomes 45, +228 becomes -15.0, and the level text at `0x34b6b1` is compared with a text at `0x46dbe0` to choose between two `setParameters` calls. Then the eight-byte chunk result at +552, animation header from model+132, slow run list, seven `setAnimEventFlags` calls (4, 5, 6, 7, 10, 11, 12) and `finishConstruction`'s V0.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`
 
 ## Imports opened
 
@@ -523,11 +545,12 @@ Address views `norrath_ctors_ant_lantern_view_42bf58`, `_44c440`, `_4812d8` thro
 `dpadd` (original at `0x2fb5c0`) and `dptofp` (original at `0x2fbc20`) — software double routines used by the original; the reconstruction calls them and `norrath_entity_fptodp` (existing, original `fptodp`). The double at `0x476ac8` is read as two words. Address views `norrath_ctors_ant_lantern_view_438a38`, `_450160`, `_476ac8`, `_482328` through `_482340` (seven singles).
 Address views `norrath_ctors_ant_lantern_view_42d200`, `_44f6a8`, `_481ab4` through `_481ac8` (six singles).
 Address views `norrath_ctors_ant_lantern_view_42b630`, `_42b548`, `_44bae0`, `_480e58` through `_480e70` (seven singles).
+Address views `norrath_ctors_ant_lantern_view_42b1d0`, `_44c350`, `_46dbe0`, `_480cc8` through `_480cec` (ten singles); `_34b6b1` as for Chest.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
