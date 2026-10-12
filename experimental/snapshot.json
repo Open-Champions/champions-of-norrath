@@ -14633,6 +14633,34 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/card-progress-sorted-times/sorted_times.cpp"
+    },
+    {
+      "input_order": 1147,
+      "component": "ctors-ant-lantern-constructors",
+      "object_name": "auto_container_lp.o",
+      "private_object_sha256": "2657ef8badc7be4e76d4e0e8cf52f56ff195039547d7a6de6f19f51f9cb5d251",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoContainerLP",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp"
+    },
+    {
+      "input_order": 1148,
+      "component": "ctors-ant-lantern-constructors",
+      "object_name": "boat.o",
+      "private_object_sha256": "0f6d5b85c4475d201d73269873ca7a2aa9d93197109c79e521cd82284f27ad4a",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Boat",
+          "compiled_body_bytes": 396
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/ctors-ant-lantern-constructors/boat.cpp"
     }
   ],
   "drafts": [
@@ -14815,7 +14843,7 @@
     "sources/cd-archive-views/host_contract.cpp": "37332f5e7da911b1967c4aa317b821cc233916374e1900ced2cd645915cd2f18",
     "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
     "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
-    "sources/ctors-ant-lantern-constructors/detail.hpp": "a135670598cdfdc9351eeb1aafd277e007ddc4b94ceee3f04cf4f9a7d89839dd",
+    "sources/ctors-ant-lantern-constructors/detail.hpp": "e3fc83d133e1bf2462ff3072766329ad81533b60d3696f530a6e80095cd3140d",
     "sources/ctors-ant-lantern-constructors/host/auto_chest_lp_contract.cpp": "77383be38aba68cbaeb292469265f07ed6e7c72c4837551970502d517ced1004",
     "sources/data-views-host-checks/norrath_actor_view_42b118.cpp": "8f96ea50880d6d8f79fe3e8d3a1691c0ca6e1d8aa98b888f0efc16c35efebf02",
     "sources/data-views-host-checks/norrath_actor_view_42b768.cpp": "5305ff5b225fd968add46c1f0dc05cd8b0087fc56fb3b56d7464c2a4fab4972a",
@@ -17345,7 +17373,11 @@
     "sources/card-progress-bare-slot-footprint/bare_slot_footprint.cpp": "c2f0c6447f93526ec4ee6a0162b6ac8ab2112ba37ffdf33074a795ebc37e4560",
     "sources/card-progress-total-footprint/total_footprint.cpp": "b89e09e37a7ddccc58257617a9b6b37124f5f4a1ae310d5d6414c7ed8e3c112f",
     "sources/card-progress-icon-header/icon_header.cpp": "811069f9e3f9436f4fd643555bf85d13fa607ccb7f06e114321cad80308c3e55",
-    "sources/card-progress-sorted-times/sorted_times.cpp": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d"
+    "sources/card-progress-sorted-times/sorted_times.cpp": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d",
+    "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp": "19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51",
+    "sources/ctors-ant-lantern-constructors/host/auto_container_lp_contract.cpp": "88320a8d5ae1742c7e98e989fd9e2d1dc311289fab77936d76bf4c2f5b07674b",
+    "sources/ctors-ant-lantern-constructors/boat.cpp": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76",
+    "sources/ctors-ant-lantern-constructors/host/boat_contract.cpp": "174143d05c2afc7cac321e79e01060ee713ea32864469d51cc5f2a20ce5a4907"
   },
   "additional_implementations": [
     {
@@ -17787,11 +17819,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1147,
-    "authored_default_inputs": 1145,
+    "selected_inputs": 1149,
+    "authored_default_inputs": 1147,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 886,
-    "compiled_body_bytes_from_accepted_inputs": 381624,
+    "emitted_function_definitions_including_helpers": 888,
+    "compiled_body_bytes_from_accepted_inputs": 382280,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -17804,7 +17836,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 834
+    "package_selected_inputs": 836
   },
   "startup_implementations": [
     {
@@ -30425,6 +30457,40 @@
       "emitted_functions": [],
       "host_files": [
         "host-tests/card-progress/test_sorted_times.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "ctors-ant-lantern",
+      "source": "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp",
+      "source_sha256": "19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51",
+      "object_sha256": "2657ef8badc7be4e76d4e0e8cf52f56ff195039547d7a6de6f19f51f9cb5d251",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoContainerLP",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/ctors-ant-lantern-constructors/host/auto_container_lp_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "ctors-ant-lantern",
+      "source": "sources/ctors-ant-lantern-constructors/boat.cpp",
+      "source_sha256": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76",
+      "object_sha256": "0f6d5b85c4475d201d73269873ca7a2aa9d93197109c79e521cd82284f27ad4a",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Boat",
+          "compiled_body_bytes": 396
+        }
+      ],
+      "host_files": [
+        "sources/ctors-ant-lantern-constructors/host/boat_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

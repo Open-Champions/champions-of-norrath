@@ -1488,6 +1488,33 @@ were already unresolved, including `MCA_Cmd__Fiiii`, `MCA_Sync__FPi`,
 and `SignalSema`. 884 function bodies, 1145 authored inputs, zero
 COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/ctors-ant-lantern second pass
+
+Merged. Two constructor units were added with fresh `input_order` values
+1147 and 1148. Both compile under `authored_cpp` with the bodies the
+notes claim (`norrath_construct_AutoContainerLP` 260,
+`norrath_construct_Boat` 396). The shared `detail.hpp` gained
+declarations; the already-selected `auto_chest_lp` still compiles to its
+recorded 260-byte body, and its plan and snapshot header hashes were
+refreshed. The host contracts require 32-bit pointers and do not compile
+on this arm64 machine, as recorded for the first pass; the EE compilation
+passed the header's 32-bit assert. No game binary or disassembly listing
+was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 999 |
+| Closed | 2 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`.
+Opened: `norrath_ctors_ant_lantern_view_44e940`,
+`norrath_ctors_ant_lantern_view_453328`. The parent constructors
+`norrath_construct_AutoChest` and `norrath_construct_AutoContainer`
+stay unresolved for later units. 886 function bodies, 1147 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1624,7 +1651,8 @@ sony-cd, and link-image-bounds second pass, and gs-dma-present. The
 vehicle constructor is authored and not in the link. The unselected
 texture-draw-color unit is authored and not in the link. The six
 actor-view-tables views are data, not functions. The 26 card-progress
-data words are data, not functions. `engineInit__Ff`,
+data words are data, not functions. The shared constructor header now
+covers Boat and AutoContainerLP. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,

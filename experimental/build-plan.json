@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1145,
+  "default_authored_inputs": 1147,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -129,7 +129,7 @@
     "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
     "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
     "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
-    "sources/ctors-ant-lantern-constructors/detail.hpp": "a135670598cdfdc9351eeb1aafd277e007ddc4b94ceee3f04cf4f9a7d89839dd",
+    "sources/ctors-ant-lantern-constructors/detail.hpp": "e3fc83d133e1bf2462ff3072766329ad81533b60d3696f530a6e80095cd3140d",
     "sources/data-views-symbols/norrath_actor_view_42b118.cpp": "fc4f0fbf6a17b470fcaaa73eb56e30bb87ba5cbdb796dc9bfa9cd8a32bdaaa08",
     "sources/data-views-symbols/norrath_actor_view_42b768.cpp": "4186e315568174b63c28472e6b0b3f63470d689b3a30cdbb5b1be4a4bb73b470",
     "sources/data-views-symbols/norrath_actor_view_42baa8.cpp": "35df379600a367754daa7796dc4a8648b22545f761eabe18190cfb2834b84bbb",
@@ -1861,7 +1861,9 @@
     "sources/card-progress-bare-slot-footprint/bare_slot_footprint.cpp": "c2f0c6447f93526ec4ee6a0162b6ac8ab2112ba37ffdf33074a795ebc37e4560",
     "sources/card-progress-total-footprint/total_footprint.cpp": "b89e09e37a7ddccc58257617a9b6b37124f5f4a1ae310d5d6414c7ed8e3c112f",
     "sources/card-progress-icon-header/icon_header.cpp": "811069f9e3f9436f4fd643555bf85d13fa607ccb7f06e114321cad80308c3e55",
-    "sources/card-progress-sorted-times/sorted_times.cpp": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d"
+    "sources/card-progress-sorted-times/sorted_times.cpp": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d",
+    "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp": "19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51",
+    "sources/ctors-ant-lantern-constructors/boat.cpp": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76"
   },
   "inputs": [
     {
@@ -14613,6 +14615,40 @@
       "profile": "authored_cpp",
       "sha256": "7e93fbf2d139e1819a455391d26f6fafe8193bf5412cde271e8149fe4843762d",
       "source": "sources/card-progress-sorted-times/sorted_times.cpp"
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1147,
+      "kind": "independently_authored_source",
+      "object_name": "auto_container_lp.o",
+      "profile": "authored_cpp",
+      "sha256": "19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51",
+      "source": "sources/ctors-ant-lantern-constructors/auto_container_lp.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoContainerLP",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1148,
+      "kind": "independently_authored_source",
+      "object_name": "boat.o",
+      "profile": "authored_cpp",
+      "sha256": "36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76",
+      "source": "sources/ctors-ant-lantern-constructors/boat.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Boat",
+          "compiled_body_bytes": 396
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -14712,7 +14748,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "e40393afdd8a9ebbac2963a092ea789087d183c08fd959d7dab38e61fdb888c7",
+  "snapshot_sha256": "fe8f0ea1d1399c8c5e23543d1440377e0030c09c3cad5df9126968cbb3a37369",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
