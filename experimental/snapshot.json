@@ -14798,6 +14798,306 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/game-loop-transform-scene-light/transform_scene_light.cpp"
+    },
+    {
+      "input_order": 1160,
+      "component": "memcard-calls-busy",
+      "object_name": "busy.o",
+      "private_object_sha256": "13ccccf419a85d882ef72ffee811e128d7065740b5c7d6aaa2b20eb03a8781f2",
+      "emitted_functions": [
+        {
+          "name": "MC_Busy__Fv",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-busy/busy.cpp"
+    },
+    {
+      "input_order": 1161,
+      "component": "memcard-calls-checkpoint-age",
+      "object_name": "checkpoint_age.o",
+      "private_object_sha256": "c88bde30a2c7766cbcea9e0158b40c0b24378f6f32223932261e0373a290b81b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-checkpoint-age/checkpoint_age.cpp"
+    },
+    {
+      "input_order": 1162,
+      "component": "memcard-calls-client-id",
+      "object_name": "client_id.o",
+      "private_object_sha256": "24bd781793114d2fdeb2c3077a2777691ac2a6ff1432493f3ec68ca63c2c1af9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-client-id/client_id.cpp"
+    },
+    {
+      "input_order": 1163,
+      "component": "memcard-calls-debug",
+      "object_name": "debug.o",
+      "private_object_sha256": "80c28358b7a5d83cff65acd008621384b5846170c089430c9e89a6aebb7ee45e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-debug/debug.cpp"
+    },
+    {
+      "input_order": 1164,
+      "component": "memcard-calls-game-config",
+      "object_name": "game_config.o",
+      "private_object_sha256": "d99e9758bf7c6e7f32853f0385f58c5bb7084586e6c30f3725bac15a38faa36b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-game-config/game_config.cpp"
+    },
+    {
+      "input_order": 1165,
+      "component": "memcard-calls-get-async-mode",
+      "object_name": "get_async_mode.o",
+      "private_object_sha256": "fa8657fc4dce29047485308d497d93547e9b39f29cbf9359d0478c48d2ce45b6",
+      "emitted_functions": [
+        {
+          "name": "MC_GetAsyncMode__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-get-async-mode/get_async_mode.cpp"
+    },
+    {
+      "input_order": 1166,
+      "component": "memcard-calls-heartbeat",
+      "object_name": "heartbeat.o",
+      "private_object_sha256": "7976e20a9cd3a9e3890f28e7346930fcc9caf05d5031e7ee55bd6a3f75958fb7",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeat__Fv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-heartbeat/heartbeat.cpp"
+    },
+    {
+      "input_order": 1167,
+      "component": "memcard-calls-heartbeat-run",
+      "object_name": "heartbeat_run.o",
+      "private_object_sha256": "d55e13adf7f6e5fd578f6c32428a1ab3b3e3a7055dba7afcb5a7acd25d24a8f8",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeatRun__Fv",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-heartbeat-run/heartbeat_run.cpp"
+    },
+    {
+      "input_order": 1168,
+      "component": "memcard-calls-kick-protect",
+      "object_name": "kick_protect.o",
+      "private_object_sha256": "b1f2bad3c675273310e0d7cdc7046394eab1af121caf39b0212b44651d24dc57",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-kick-protect/kick_protect.cpp"
+    },
+    {
+      "input_order": 1169,
+      "component": "memcard-calls-last-dir-count",
+      "object_name": "last_dir_count.o",
+      "private_object_sha256": "438fba181b016fbf8e145f31b94c978a42d2d8095ec8f531a1260e52defb3487",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-last-dir-count/last_dir_count.cpp"
+    },
+    {
+      "input_order": 1170,
+      "component": "memcard-calls-last-mode",
+      "object_name": "last_mode.o",
+      "private_object_sha256": "6a7a9262254a6d438d7b2b0b5c27d3a684d22e6153f60a72cf1b50b7b701273c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-last-mode/last_mode.cpp"
+    },
+    {
+      "input_order": 1171,
+      "component": "memcard-calls-load-browser",
+      "object_name": "load_browser.o",
+      "private_object_sha256": "eee487bec1189ca81e424cf814cc85c12b7197fa8c24098a44d6744b18653996",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadGameBrowser__Fii",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-load-browser/load_browser.cpp"
+    },
+    {
+      "input_order": 1172,
+      "component": "memcard-calls-mca-clear-info",
+      "object_name": "clear_info.o",
+      "private_object_sha256": "5d80247b02e1f97fda2ee7ce4fea88ae4ec057107a889b16ad6545bfd980db02",
+      "emitted_functions": [
+        {
+          "name": "MCA_ClearInfo__Fv",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-mca-clear-info/clear_info.cpp"
+    },
+    {
+      "input_order": 1173,
+      "component": "memcard-calls-mca-cmd",
+      "object_name": "mca_cmd.o",
+      "private_object_sha256": "ec3f6b3b629f79ebc5a1d365726e0841da8faa7dec71446908d37109f21a7b2e",
+      "emitted_functions": [
+        {
+          "name": "MCA_Cmd__Fiiii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-mca-cmd/mca_cmd.cpp"
+    },
+    {
+      "input_order": 1174,
+      "component": "memcard-calls-mca-init",
+      "object_name": "mca_init.o",
+      "private_object_sha256": "bbcc478780a9277733bd1e521462092c334990424c3466286b6f01cd35e0b0d6",
+      "emitted_functions": [
+        {
+          "name": "MCA_Init__Fv",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-mca-init/mca_init.cpp"
+    },
+    {
+      "input_order": 1175,
+      "component": "memcard-calls-mca-sync",
+      "object_name": "mca_sync.o",
+      "private_object_sha256": "fb3060aa284d6b489314262a71218f2d8d1ec6d2cf9fbae682680809380dd7aa",
+      "emitted_functions": [
+        {
+          "name": "MCA_Sync__FPi",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-mca-sync/mca_sync.cpp"
+    },
+    {
+      "input_order": 1176,
+      "component": "memcard-calls-new-game",
+      "object_name": "new_game.o",
+      "private_object_sha256": "e99e919faad7504522bc9c7bf058c8fbceaa90e04853c605ab0a1c1dd66f564d",
+      "emitted_functions": [
+        {
+          "name": "MC_NewGame__Fi",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-new-game/new_game.cpp"
+    },
+    {
+      "input_order": 1177,
+      "component": "memcard-calls-port",
+      "object_name": "port.o",
+      "private_object_sha256": "c99d81acaa0d80eb0589b76c0e5088542bd19677c8339153ee1590c354af20fe",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-port/port.cpp"
+    },
+    {
+      "input_order": 1178,
+      "component": "memcard-calls-ready-menu",
+      "object_name": "ready_menu.o",
+      "private_object_sha256": "791ac5937606750fc4627387cd237c5ca2de32571ca8473556dfa39b6136378c",
+      "emitted_functions": [
+        {
+          "name": "MC_GetReadyForMainMenu__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-ready-menu/ready_menu.cpp"
+    },
+    {
+      "input_order": 1179,
+      "component": "memcard-calls-save-browser",
+      "object_name": "save_browser.o",
+      "private_object_sha256": "15d61724c3fed7f448d7bd8854fadbc8bebc8d9156ae1886e3b5d03d10e9c024",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveGameBrowser__Fi",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-save-browser/save_browser.cpp"
+    },
+    {
+      "input_order": 1180,
+      "component": "memcard-calls-save-checkpoint",
+      "object_name": "save_checkpoint.o",
+      "private_object_sha256": "04d1169e32277bf3962e7b924c0bcc48aaf2894eed618be5827b22190c6530f2",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveCheckPoint__Fiii",
+          "compiled_body_bytes": 828
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-save-checkpoint/save_checkpoint.cpp"
+    },
+    {
+      "input_order": 1181,
+      "component": "memcard-calls-save-config",
+      "object_name": "save_config.o",
+      "private_object_sha256": "f17c3e30b43f35fd24ecd60fcd1a73eff0a1ac2a6b05336efdb29d36011ade17",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfig__Fv",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-save-config/save_config.cpp"
+    },
+    {
+      "input_order": 1182,
+      "component": "memcard-calls-save-config-silent",
+      "object_name": "save_config_silent.o",
+      "private_object_sha256": "359a864432cc9fe69ddbcbc368f1455dd8a2090c43ad899475b40017cbe2cbc5",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfigSilent__Fii",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-save-config-silent/save_config_silent.cpp"
+    },
+    {
+      "input_order": 1183,
+      "component": "memcard-calls-saving",
+      "object_name": "saving.o",
+      "private_object_sha256": "3aeeeeefddf3974ac9bce18936be999b577a0a25a90ceb43dcc3dcd59f6f4eca",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-saving/saving.cpp"
+    },
+    {
+      "input_order": 1184,
+      "component": "memcard-calls-slot",
+      "object_name": "slot.o",
+      "private_object_sha256": "db5c1523cc9a925aead329cad40851b35b3f809540157b3426df8f3829027746",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/memcard-calls-slot/slot.cpp"
     }
   ],
   "drafts": [
@@ -17540,7 +17840,57 @@
     "sources/game-loop-draw-particles/draw_particles.cpp": "2d1ae2baa9069d4517c0b4a433e990784e57b4e04ee944a011d86006e710fe2d",
     "sources/game-loop-draw-particles/host_check.cpp": "28735d9a3f5150577e066e7547985bf022ca7fee4f00dcb94c48f33a3de7c123",
     "sources/game-loop-object-draw-enable/object_draw_enable.cpp": "8d2ea358de45b0b4b8e86da44cd8d105976a5c64e4f884f38f7b3d5802a2f4d0",
-    "sources/game-loop-object-draw-enable/host_check.cpp": "b917baa645a0e61f7c19b96ae271d05ceca0435c94bc264298c6a3ebf777039f"
+    "sources/game-loop-object-draw-enable/host_check.cpp": "b917baa645a0e61f7c19b96ae271d05ceca0435c94bc264298c6a3ebf777039f",
+    "sources/memcard-calls-busy/busy.cpp": "346e48c8ce513a4b65339aefccfb545439da4eef5e7f32616056067cbb3d52d0",
+    "sources/memcard-calls-busy/host_contract.cpp": "1ae8e8d08f1bfdca35b259cb81212275d17ecda06eebfa99ffec3d4c6109205a",
+    "sources/memcard-calls-checkpoint-age/checkpoint_age.cpp": "b73708c86d8db62d26e4ba6785b7ef039490f4c16145903271e817ff30c62cd2",
+    "sources/memcard-calls-checkpoint-age/host_contract.cpp": "b09f86aad4a5e063dc0fbba609eaa3311622416fb123db12b2004e913ad27ec4",
+    "sources/memcard-calls-client-id/client_id.cpp": "414fdd33d2335ebfe7fccd81e81026b5ae34faa6a909029530c3da12d4a3ee2a",
+    "sources/memcard-calls-client-id/host_contract.cpp": "1be6d97c12c42ebdb2f0dd922004536d1a3d271753909ac42c2ddea5b949b403",
+    "sources/memcard-calls-debug/debug.cpp": "0b1d795445317be091a348599a736f9879637ec8aef8d4501ffa9e174a7d30d0",
+    "sources/memcard-calls-debug/host_contract.cpp": "45ff7f5ab6cc4e68fcbdae06a3c391e77660db151eb5fae2b103e100dcf8da33",
+    "sources/memcard-calls-game-config/game_config.cpp": "3fb2c99891488c3437e4911eb613280aae3d8845536978e40f968093a2d7b282",
+    "sources/memcard-calls-game-config/host_contract.cpp": "aa8da1c09d32c3191a80dfb668445e605e8b2b52b48845225782dd90dc065d65",
+    "sources/memcard-calls-get-async-mode/get_async_mode.cpp": "cc81ed0546562a715882a0ed5ab91d0207b34cdb83f8766984fbeceb1f6a7547",
+    "sources/memcard-calls-get-async-mode/host_contract.cpp": "ece6ac3efab7000c4c5a3e3dbe9b258d648b43e88e2512ec642cc72c5865c598",
+    "sources/memcard-calls-heartbeat/heartbeat.cpp": "1c462ccfa55cca39ca645912c022bc0820f7e3193bb9c9648063ea556dd18e28",
+    "sources/memcard-calls-heartbeat/host_contract.cpp": "099bd795205e64dd09429a3d6ad59f65681f61b106a2dde2636f1ef6907cd0ac",
+    "sources/memcard-calls-heartbeat-run/heartbeat_run.cpp": "829f0be95204a161442a275f97ff461ad03e6d0f0e51ba68b51c2c1bb5af8ba4",
+    "sources/memcard-calls-heartbeat-run/host_contract.cpp": "1a8e82a6d1a84634e81da3cbeaef68d50f6cb4cfdb3a4e0da9e63d3bf118974c",
+    "sources/memcard-calls-kick-protect/kick_protect.cpp": "7dc3243177a41fe7771ee7381773256455889eebe65b015c36a242b173f95d59",
+    "sources/memcard-calls-kick-protect/host_contract.cpp": "286686384fe4b3374be33c8381ec01c17d025c181b8d921df720b9a61099515c",
+    "sources/memcard-calls-last-dir-count/last_dir_count.cpp": "ef00b984c14454585949d7781e043ccbf26dbb2bef541c397306d9c808047b1e",
+    "sources/memcard-calls-last-dir-count/host_contract.cpp": "e9323c5f86b41c1daad9e90d6d8b9d3dfece2b30b69af4a08f1addfbdd765441",
+    "sources/memcard-calls-last-mode/last_mode.cpp": "7b9b1cb249fef329d5fe3d5d869cac7fcc6dbc584496b9e41d3573eefdf4601f",
+    "sources/memcard-calls-last-mode/host_contract.cpp": "ef3feed5746167e9d8e7741cf8b9e5e4773bbb0d04776240f8faff15a924ce01",
+    "sources/memcard-calls-load-browser/load_browser.cpp": "c7055557342e66347f1f8e25446f313dbdf4dd7aa937ad73149259a592b6a1f6",
+    "sources/memcard-calls-load-browser/host_contract.cpp": "fe95e5f0e73021938e30d24219bdb1af73c75a7274d080fbb611e22568a11a25",
+    "sources/memcard-calls-mca-clear-info/clear_info.cpp": "eb2d67e685029111fe2699638eaa043763ff30fafdab35ec77815e227cac3615",
+    "sources/memcard-calls-mca-clear-info/host_contract.cpp": "a6d44e545a0e4403b4d2547c7aa5265840e8fd31e67279d7128676fef1ddfcf6",
+    "sources/memcard-calls-mca-cmd/mca_cmd.cpp": "cee25c006eba5e76e124ee35c1d88c483a2b45f1c85a89f2169580a7ad0187e3",
+    "sources/memcard-calls-mca-cmd/host_contract.cpp": "1e0f13cea786379970a3504ac96efada4191915c43370ece9fcd4bc933ff2e86",
+    "sources/memcard-calls-mca-init/mca_init.cpp": "850c67940f874913ab260757ae8df9d3f255218bfeb650ed5b21ef395696814b",
+    "sources/memcard-calls-mca-init/host_contract.cpp": "2656e7da5d8d6aa8b4853a58174c558414c60f35a8ba33efb1c07039b5a774c6",
+    "sources/memcard-calls-mca-sync/mca_sync.cpp": "f23247d0284dbe5492ecb2c4a13593f7e7140fdef14d41eb295ef3de2b001feb",
+    "sources/memcard-calls-mca-sync/host_contract.cpp": "a0a09ef3be9648e9c00eae6ef50582ca85384b0d561a7ee71eb368837770976e",
+    "sources/memcard-calls-new-game/new_game.cpp": "950b7386dde99809c071ff3f68764377d2efe1fc4c0cde4905e85fa6dc5842f8",
+    "sources/memcard-calls-new-game/host_contract.cpp": "08639c0a879e3c937a692d6e174234b5bbe81d0e4a53858e424b646ea977964c",
+    "sources/memcard-calls-port/port.cpp": "fe5da6455ff961bd7519bed93e810faaad741522702ac8ef09f0b66a74ca3279",
+    "sources/memcard-calls-port/host_contract.cpp": "4c605b542a976ea19c89f2f82342da2f3e6d42a0cf8c0d3f6d3363066dab7ee6",
+    "sources/memcard-calls-ready-menu/ready_menu.cpp": "f868751fac82b3ec60d350726e551ad05c916727e582e7c348d57dc66c04e9c0",
+    "sources/memcard-calls-ready-menu/host_contract.cpp": "75dcb65a0b35419cf3a325172801f9d0315899ec681810ea5bc0691410948d85",
+    "sources/memcard-calls-save-browser/save_browser.cpp": "1adc1bcc95eab1fe6d9366d15a5b384ecae6d66e1af3445745c042a42171b825",
+    "sources/memcard-calls-save-browser/host_contract.cpp": "d7d2a08f945dab45fd800ff90c261af16e71b4945d838e21cba0565cd23519fc",
+    "sources/memcard-calls-save-checkpoint/save_checkpoint.cpp": "1a54e9fd1a67090b9659a64431eae8d8664aef4441681d683c76798ed2d55ec9",
+    "sources/memcard-calls-save-checkpoint/host_contract.cpp": "0f012159dc8fbd332f02bf5311cedd91ee40b9173b08cb2ed9f23bcef1ec7181",
+    "sources/memcard-calls-save-config/save_config.cpp": "5ec8329b5f1aa230d039e25b7b6dcb10abba13dafb8e76c8f61780ab7656852e",
+    "sources/memcard-calls-save-config/host_contract.cpp": "232f3d1c48f57f372c89107ea4e3cdde3aaec13fa69e5a93ea43095333e7ca26",
+    "sources/memcard-calls-save-config-silent/save_config_silent.cpp": "b07bfc61d69bb179021cec7241f5363df1c481b4bbb822eee5ab33ac102d6442",
+    "sources/memcard-calls-save-config-silent/host_contract.cpp": "6a35a729ee763419b28a49c21d698d7a9c468fb804f6e9b6d7a3b34a2d10686c",
+    "sources/memcard-calls-saving/saving.cpp": "4cecd3cd86e00003a88fbe281bbd8c768de318cb99b3babd1bbe407c05990e45",
+    "sources/memcard-calls-saving/host_contract.cpp": "e4263ae0301012251ae957e4d4cfbedaf7413545b6b9cef77e771a6601a7fc87",
+    "sources/memcard-calls-slot/slot.cpp": "bbef7090e708fbfe3071ea7c31620fb7478d6c70929fa130e21877e5fdcdfc14",
+    "sources/memcard-calls-slot/host_contract.cpp": "39de66d720e5803decbcdfd26c5cacb5a5c4243cca98a9367b4c33c981b2ecc4"
   },
   "additional_implementations": [
     {
@@ -17982,11 +18332,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1160,
-    "authored_default_inputs": 1158,
+    "selected_inputs": 1185,
+    "authored_default_inputs": 1183,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 896,
-    "compiled_body_bytes_from_accepted_inputs": 384892,
+    "emitted_function_definitions_including_helpers": 911,
+    "compiled_body_bytes_from_accepted_inputs": 387800,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -17999,7 +18349,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 847
+    "package_selected_inputs": 872
   },
   "startup_implementations": [
     {
@@ -30824,6 +31174,381 @@
       ],
       "host_files": [
         "sources/game-loop-transform-scene-light/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-busy/busy.cpp",
+      "source_sha256": "346e48c8ce513a4b65339aefccfb545439da4eef5e7f32616056067cbb3d52d0",
+      "object_sha256": "13ccccf419a85d882ef72ffee811e128d7065740b5c7d6aaa2b20eb03a8781f2",
+      "emitted_functions": [
+        {
+          "name": "MC_Busy__Fv",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-busy/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-checkpoint-age/checkpoint_age.cpp",
+      "source_sha256": "b73708c86d8db62d26e4ba6785b7ef039490f4c16145903271e817ff30c62cd2",
+      "object_sha256": "c88bde30a2c7766cbcea9e0158b40c0b24378f6f32223932261e0373a290b81b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-checkpoint-age/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-client-id/client_id.cpp",
+      "source_sha256": "414fdd33d2335ebfe7fccd81e81026b5ae34faa6a909029530c3da12d4a3ee2a",
+      "object_sha256": "24bd781793114d2fdeb2c3077a2777691ac2a6ff1432493f3ec68ca63c2c1af9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-client-id/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-debug/debug.cpp",
+      "source_sha256": "0b1d795445317be091a348599a736f9879637ec8aef8d4501ffa9e174a7d30d0",
+      "object_sha256": "80c28358b7a5d83cff65acd008621384b5846170c089430c9e89a6aebb7ee45e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-debug/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-game-config/game_config.cpp",
+      "source_sha256": "3fb2c99891488c3437e4911eb613280aae3d8845536978e40f968093a2d7b282",
+      "object_sha256": "d99e9758bf7c6e7f32853f0385f58c5bb7084586e6c30f3725bac15a38faa36b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-game-config/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-get-async-mode/get_async_mode.cpp",
+      "source_sha256": "cc81ed0546562a715882a0ed5ab91d0207b34cdb83f8766984fbeceb1f6a7547",
+      "object_sha256": "fa8657fc4dce29047485308d497d93547e9b39f29cbf9359d0478c48d2ce45b6",
+      "emitted_functions": [
+        {
+          "name": "MC_GetAsyncMode__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-get-async-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-heartbeat/heartbeat.cpp",
+      "source_sha256": "1c462ccfa55cca39ca645912c022bc0820f7e3193bb9c9648063ea556dd18e28",
+      "object_sha256": "7976e20a9cd3a9e3890f28e7346930fcc9caf05d5031e7ee55bd6a3f75958fb7",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeat__Fv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-heartbeat/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-heartbeat-run/heartbeat_run.cpp",
+      "source_sha256": "829f0be95204a161442a275f97ff461ad03e6d0f0e51ba68b51c2c1bb5af8ba4",
+      "object_sha256": "d55e13adf7f6e5fd578f6c32428a1ab3b3e3a7055dba7afcb5a7acd25d24a8f8",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeatRun__Fv",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-heartbeat-run/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-kick-protect/kick_protect.cpp",
+      "source_sha256": "7dc3243177a41fe7771ee7381773256455889eebe65b015c36a242b173f95d59",
+      "object_sha256": "b1f2bad3c675273310e0d7cdc7046394eab1af121caf39b0212b44651d24dc57",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-kick-protect/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-last-dir-count/last_dir_count.cpp",
+      "source_sha256": "ef00b984c14454585949d7781e043ccbf26dbb2bef541c397306d9c808047b1e",
+      "object_sha256": "438fba181b016fbf8e145f31b94c978a42d2d8095ec8f531a1260e52defb3487",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-last-dir-count/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-last-mode/last_mode.cpp",
+      "source_sha256": "7b9b1cb249fef329d5fe3d5d869cac7fcc6dbc584496b9e41d3573eefdf4601f",
+      "object_sha256": "6a7a9262254a6d438d7b2b0b5c27d3a684d22e6153f60a72cf1b50b7b701273c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-last-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-load-browser/load_browser.cpp",
+      "source_sha256": "c7055557342e66347f1f8e25446f313dbdf4dd7aa937ad73149259a592b6a1f6",
+      "object_sha256": "eee487bec1189ca81e424cf814cc85c12b7197fa8c24098a44d6744b18653996",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadGameBrowser__Fii",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-load-browser/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-mca-clear-info/clear_info.cpp",
+      "source_sha256": "eb2d67e685029111fe2699638eaa043763ff30fafdab35ec77815e227cac3615",
+      "object_sha256": "5d80247b02e1f97fda2ee7ce4fea88ae4ec057107a889b16ad6545bfd980db02",
+      "emitted_functions": [
+        {
+          "name": "MCA_ClearInfo__Fv",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-mca-clear-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-mca-cmd/mca_cmd.cpp",
+      "source_sha256": "cee25c006eba5e76e124ee35c1d88c483a2b45f1c85a89f2169580a7ad0187e3",
+      "object_sha256": "ec3f6b3b629f79ebc5a1d365726e0841da8faa7dec71446908d37109f21a7b2e",
+      "emitted_functions": [
+        {
+          "name": "MCA_Cmd__Fiiii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-mca-cmd/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-mca-init/mca_init.cpp",
+      "source_sha256": "850c67940f874913ab260757ae8df9d3f255218bfeb650ed5b21ef395696814b",
+      "object_sha256": "bbcc478780a9277733bd1e521462092c334990424c3466286b6f01cd35e0b0d6",
+      "emitted_functions": [
+        {
+          "name": "MCA_Init__Fv",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-mca-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-mca-sync/mca_sync.cpp",
+      "source_sha256": "f23247d0284dbe5492ecb2c4a13593f7e7140fdef14d41eb295ef3de2b001feb",
+      "object_sha256": "fb3060aa284d6b489314262a71218f2d8d1ec6d2cf9fbae682680809380dd7aa",
+      "emitted_functions": [
+        {
+          "name": "MCA_Sync__FPi",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-mca-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-new-game/new_game.cpp",
+      "source_sha256": "950b7386dde99809c071ff3f68764377d2efe1fc4c0cde4905e85fa6dc5842f8",
+      "object_sha256": "e99e919faad7504522bc9c7bf058c8fbceaa90e04853c605ab0a1c1dd66f564d",
+      "emitted_functions": [
+        {
+          "name": "MC_NewGame__Fi",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-new-game/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-port/port.cpp",
+      "source_sha256": "fe5da6455ff961bd7519bed93e810faaad741522702ac8ef09f0b66a74ca3279",
+      "object_sha256": "c99d81acaa0d80eb0589b76c0e5088542bd19677c8339153ee1590c354af20fe",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-port/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-ready-menu/ready_menu.cpp",
+      "source_sha256": "f868751fac82b3ec60d350726e551ad05c916727e582e7c348d57dc66c04e9c0",
+      "object_sha256": "791ac5937606750fc4627387cd237c5ca2de32571ca8473556dfa39b6136378c",
+      "emitted_functions": [
+        {
+          "name": "MC_GetReadyForMainMenu__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-ready-menu/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-save-browser/save_browser.cpp",
+      "source_sha256": "1adc1bcc95eab1fe6d9366d15a5b384ecae6d66e1af3445745c042a42171b825",
+      "object_sha256": "15d61724c3fed7f448d7bd8854fadbc8bebc8d9156ae1886e3b5d03d10e9c024",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveGameBrowser__Fi",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-save-browser/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-save-checkpoint/save_checkpoint.cpp",
+      "source_sha256": "1a54e9fd1a67090b9659a64431eae8d8664aef4441681d683c76798ed2d55ec9",
+      "object_sha256": "04d1169e32277bf3962e7b924c0bcc48aaf2894eed618be5827b22190c6530f2",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveCheckPoint__Fiii",
+          "compiled_body_bytes": 828
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-save-checkpoint/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-save-config/save_config.cpp",
+      "source_sha256": "5ec8329b5f1aa230d039e25b7b6dcb10abba13dafb8e76c8f61780ab7656852e",
+      "object_sha256": "f17c3e30b43f35fd24ecd60fcd1a73eff0a1ac2a6b05336efdb29d36011ade17",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfig__Fv",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-save-config/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-save-config-silent/save_config_silent.cpp",
+      "source_sha256": "b07bfc61d69bb179021cec7241f5363df1c481b4bbb822eee5ab33ac102d6442",
+      "object_sha256": "359a864432cc9fe69ddbcbc368f1455dd8a2090c43ad899475b40017cbe2cbc5",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfigSilent__Fii",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/memcard-calls-save-config-silent/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-saving/saving.cpp",
+      "source_sha256": "4cecd3cd86e00003a88fbe281bbd8c768de318cb99b3babd1bbe407c05990e45",
+      "object_sha256": "3aeeeeefddf3974ac9bce18936be999b577a0a25a90ceb43dcc3dcd59f6f4eca",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-saving/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "memcard-calls",
+      "source": "sources/memcard-calls-slot/slot.cpp",
+      "source_sha256": "bbef7090e708fbfe3071ea7c31620fb7478d6c70929fa130e21877e5fdcdfc14",
+      "object_sha256": "db5c1523cc9a925aead329cad40851b35b3f809540157b3426df8f3829027746",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/memcard-calls-slot/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

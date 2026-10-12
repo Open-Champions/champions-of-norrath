@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1158,
+  "default_authored_inputs": 1183,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1874,7 +1874,32 @@
     "sources/game-loop-player-light-attenuate/player_light_attenuate.cpp": "64bb3764c444695b01c0111d6c1fb71111e8c1015834474fa7daeaa5842ddba4",
     "sources/game-loop-recall-inhibit/recall_inhibit.cpp": "96446d66b9421320e778e852b8e15e30e99fa3acad8bf9bd3b09af4b2849b912",
     "sources/game-loop-run-objects/run_objects.cpp": "9f4e4f4b6cf6c2d774582a2da40b41ad97471552519f858212fbdc4142dacbfe",
-    "sources/game-loop-transform-scene-light/transform_scene_light.cpp": "c4da33e3bfcd72ba87a119e3daf50c44640cb0e4f1ac23e0ba8d18e8eb5aa444"
+    "sources/game-loop-transform-scene-light/transform_scene_light.cpp": "c4da33e3bfcd72ba87a119e3daf50c44640cb0e4f1ac23e0ba8d18e8eb5aa444",
+    "sources/memcard-calls-busy/busy.cpp": "346e48c8ce513a4b65339aefccfb545439da4eef5e7f32616056067cbb3d52d0",
+    "sources/memcard-calls-checkpoint-age/checkpoint_age.cpp": "b73708c86d8db62d26e4ba6785b7ef039490f4c16145903271e817ff30c62cd2",
+    "sources/memcard-calls-client-id/client_id.cpp": "414fdd33d2335ebfe7fccd81e81026b5ae34faa6a909029530c3da12d4a3ee2a",
+    "sources/memcard-calls-debug/debug.cpp": "0b1d795445317be091a348599a736f9879637ec8aef8d4501ffa9e174a7d30d0",
+    "sources/memcard-calls-game-config/game_config.cpp": "3fb2c99891488c3437e4911eb613280aae3d8845536978e40f968093a2d7b282",
+    "sources/memcard-calls-get-async-mode/get_async_mode.cpp": "cc81ed0546562a715882a0ed5ab91d0207b34cdb83f8766984fbeceb1f6a7547",
+    "sources/memcard-calls-heartbeat/heartbeat.cpp": "1c462ccfa55cca39ca645912c022bc0820f7e3193bb9c9648063ea556dd18e28",
+    "sources/memcard-calls-heartbeat-run/heartbeat_run.cpp": "829f0be95204a161442a275f97ff461ad03e6d0f0e51ba68b51c2c1bb5af8ba4",
+    "sources/memcard-calls-kick-protect/kick_protect.cpp": "7dc3243177a41fe7771ee7381773256455889eebe65b015c36a242b173f95d59",
+    "sources/memcard-calls-last-dir-count/last_dir_count.cpp": "ef00b984c14454585949d7781e043ccbf26dbb2bef541c397306d9c808047b1e",
+    "sources/memcard-calls-last-mode/last_mode.cpp": "7b9b1cb249fef329d5fe3d5d869cac7fcc6dbc584496b9e41d3573eefdf4601f",
+    "sources/memcard-calls-load-browser/load_browser.cpp": "c7055557342e66347f1f8e25446f313dbdf4dd7aa937ad73149259a592b6a1f6",
+    "sources/memcard-calls-mca-clear-info/clear_info.cpp": "eb2d67e685029111fe2699638eaa043763ff30fafdab35ec77815e227cac3615",
+    "sources/memcard-calls-mca-cmd/mca_cmd.cpp": "cee25c006eba5e76e124ee35c1d88c483a2b45f1c85a89f2169580a7ad0187e3",
+    "sources/memcard-calls-mca-init/mca_init.cpp": "850c67940f874913ab260757ae8df9d3f255218bfeb650ed5b21ef395696814b",
+    "sources/memcard-calls-mca-sync/mca_sync.cpp": "f23247d0284dbe5492ecb2c4a13593f7e7140fdef14d41eb295ef3de2b001feb",
+    "sources/memcard-calls-new-game/new_game.cpp": "950b7386dde99809c071ff3f68764377d2efe1fc4c0cde4905e85fa6dc5842f8",
+    "sources/memcard-calls-port/port.cpp": "fe5da6455ff961bd7519bed93e810faaad741522702ac8ef09f0b66a74ca3279",
+    "sources/memcard-calls-ready-menu/ready_menu.cpp": "f868751fac82b3ec60d350726e551ad05c916727e582e7c348d57dc66c04e9c0",
+    "sources/memcard-calls-save-browser/save_browser.cpp": "1adc1bcc95eab1fe6d9366d15a5b384ecae6d66e1af3445745c042a42171b825",
+    "sources/memcard-calls-save-checkpoint/save_checkpoint.cpp": "1a54e9fd1a67090b9659a64431eae8d8664aef4441681d683c76798ed2d55ec9",
+    "sources/memcard-calls-save-config/save_config.cpp": "5ec8329b5f1aa230d039e25b7b6dcb10abba13dafb8e76c8f61780ab7656852e",
+    "sources/memcard-calls-save-config-silent/save_config_silent.cpp": "b07bfc61d69bb179021cec7241f5363df1c481b4bbb822eee5ab33ac102d6442",
+    "sources/memcard-calls-saving/saving.cpp": "4cecd3cd86e00003a88fbe281bbd8c768de318cb99b3babd1bbe407c05990e45",
+    "sources/memcard-calls-slot/slot.cpp": "bbef7090e708fbfe3071ea7c31620fb7478d6c70929fa130e21877e5fdcdfc14"
   },
   "inputs": [
     {
@@ -14803,6 +14828,321 @@
           "compiled_body_bytes": 632
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1160,
+      "kind": "independently_authored_source",
+      "object_name": "busy.o",
+      "profile": "authored_cpp",
+      "sha256": "346e48c8ce513a4b65339aefccfb545439da4eef5e7f32616056067cbb3d52d0",
+      "source": "sources/memcard-calls-busy/busy.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_Busy__Fv",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1161,
+      "kind": "independently_authored_source",
+      "object_name": "checkpoint_age.o",
+      "profile": "authored_cpp",
+      "sha256": "b73708c86d8db62d26e4ba6785b7ef039490f4c16145903271e817ff30c62cd2",
+      "source": "sources/memcard-calls-checkpoint-age/checkpoint_age.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1162,
+      "kind": "independently_authored_source",
+      "object_name": "client_id.o",
+      "profile": "authored_cpp",
+      "sha256": "414fdd33d2335ebfe7fccd81e81026b5ae34faa6a909029530c3da12d4a3ee2a",
+      "source": "sources/memcard-calls-client-id/client_id.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1163,
+      "kind": "independently_authored_source",
+      "object_name": "debug.o",
+      "profile": "authored_cpp",
+      "sha256": "0b1d795445317be091a348599a736f9879637ec8aef8d4501ffa9e174a7d30d0",
+      "source": "sources/memcard-calls-debug/debug.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1164,
+      "kind": "independently_authored_source",
+      "object_name": "game_config.o",
+      "profile": "authored_cpp",
+      "sha256": "3fb2c99891488c3437e4911eb613280aae3d8845536978e40f968093a2d7b282",
+      "source": "sources/memcard-calls-game-config/game_config.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1165,
+      "kind": "independently_authored_source",
+      "object_name": "get_async_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "cc81ed0546562a715882a0ed5ab91d0207b34cdb83f8766984fbeceb1f6a7547",
+      "source": "sources/memcard-calls-get-async-mode/get_async_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_GetAsyncMode__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1166,
+      "kind": "independently_authored_source",
+      "object_name": "heartbeat.o",
+      "profile": "authored_cpp",
+      "sha256": "1c462ccfa55cca39ca645912c022bc0820f7e3193bb9c9648063ea556dd18e28",
+      "source": "sources/memcard-calls-heartbeat/heartbeat.cpp",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeat__Fv",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1167,
+      "kind": "independently_authored_source",
+      "object_name": "heartbeat_run.o",
+      "profile": "authored_cpp",
+      "sha256": "829f0be95204a161442a275f97ff461ad03e6d0f0e51ba68b51c2c1bb5af8ba4",
+      "source": "sources/memcard-calls-heartbeat-run/heartbeat_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "mcHeartBeatRun__Fv",
+          "compiled_body_bytes": 568
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1168,
+      "kind": "independently_authored_source",
+      "object_name": "kick_protect.o",
+      "profile": "authored_cpp",
+      "sha256": "7dc3243177a41fe7771ee7381773256455889eebe65b015c36a242b173f95d59",
+      "source": "sources/memcard-calls-kick-protect/kick_protect.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1169,
+      "kind": "independently_authored_source",
+      "object_name": "last_dir_count.o",
+      "profile": "authored_cpp",
+      "sha256": "ef00b984c14454585949d7781e043ccbf26dbb2bef541c397306d9c808047b1e",
+      "source": "sources/memcard-calls-last-dir-count/last_dir_count.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1170,
+      "kind": "independently_authored_source",
+      "object_name": "last_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "7b9b1cb249fef329d5fe3d5d869cac7fcc6dbc584496b9e41d3573eefdf4601f",
+      "source": "sources/memcard-calls-last-mode/last_mode.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1171,
+      "kind": "independently_authored_source",
+      "object_name": "load_browser.o",
+      "profile": "authored_cpp",
+      "sha256": "c7055557342e66347f1f8e25446f313dbdf4dd7aa937ad73149259a592b6a1f6",
+      "source": "sources/memcard-calls-load-browser/load_browser.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadGameBrowser__Fii",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1172,
+      "kind": "independently_authored_source",
+      "object_name": "clear_info.o",
+      "profile": "authored_cpp",
+      "sha256": "eb2d67e685029111fe2699638eaa043763ff30fafdab35ec77815e227cac3615",
+      "source": "sources/memcard-calls-mca-clear-info/clear_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "MCA_ClearInfo__Fv",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1173,
+      "kind": "independently_authored_source",
+      "object_name": "mca_cmd.o",
+      "profile": "authored_cpp",
+      "sha256": "cee25c006eba5e76e124ee35c1d88c483a2b45f1c85a89f2169580a7ad0187e3",
+      "source": "sources/memcard-calls-mca-cmd/mca_cmd.cpp",
+      "emitted_functions": [
+        {
+          "name": "MCA_Cmd__Fiiii",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1174,
+      "kind": "independently_authored_source",
+      "object_name": "mca_init.o",
+      "profile": "authored_cpp",
+      "sha256": "850c67940f874913ab260757ae8df9d3f255218bfeb650ed5b21ef395696814b",
+      "source": "sources/memcard-calls-mca-init/mca_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "MCA_Init__Fv",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1175,
+      "kind": "independently_authored_source",
+      "object_name": "mca_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "f23247d0284dbe5492ecb2c4a13593f7e7140fdef14d41eb295ef3de2b001feb",
+      "source": "sources/memcard-calls-mca-sync/mca_sync.cpp",
+      "emitted_functions": [
+        {
+          "name": "MCA_Sync__FPi",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1176,
+      "kind": "independently_authored_source",
+      "object_name": "new_game.o",
+      "profile": "authored_cpp",
+      "sha256": "950b7386dde99809c071ff3f68764377d2efe1fc4c0cde4905e85fa6dc5842f8",
+      "source": "sources/memcard-calls-new-game/new_game.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_NewGame__Fi",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1177,
+      "kind": "independently_authored_source",
+      "object_name": "port.o",
+      "profile": "authored_cpp",
+      "sha256": "fe5da6455ff961bd7519bed93e810faaad741522702ac8ef09f0b66a74ca3279",
+      "source": "sources/memcard-calls-port/port.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1178,
+      "kind": "independently_authored_source",
+      "object_name": "ready_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "f868751fac82b3ec60d350726e551ad05c916727e582e7c348d57dc66c04e9c0",
+      "source": "sources/memcard-calls-ready-menu/ready_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_GetReadyForMainMenu__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1179,
+      "kind": "independently_authored_source",
+      "object_name": "save_browser.o",
+      "profile": "authored_cpp",
+      "sha256": "1adc1bcc95eab1fe6d9366d15a5b384ecae6d66e1af3445745c042a42171b825",
+      "source": "sources/memcard-calls-save-browser/save_browser.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveGameBrowser__Fi",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1180,
+      "kind": "independently_authored_source",
+      "object_name": "save_checkpoint.o",
+      "profile": "authored_cpp",
+      "sha256": "1a54e9fd1a67090b9659a64431eae8d8664aef4441681d683c76798ed2d55ec9",
+      "source": "sources/memcard-calls-save-checkpoint/save_checkpoint.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveCheckPoint__Fiii",
+          "compiled_body_bytes": 828
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1181,
+      "kind": "independently_authored_source",
+      "object_name": "save_config.o",
+      "profile": "authored_cpp",
+      "sha256": "5ec8329b5f1aa230d039e25b7b6dcb10abba13dafb8e76c8f61780ab7656852e",
+      "source": "sources/memcard-calls-save-config/save_config.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfig__Fv",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1182,
+      "kind": "independently_authored_source",
+      "object_name": "save_config_silent.o",
+      "profile": "authored_cpp",
+      "sha256": "b07bfc61d69bb179021cec7241f5363df1c481b4bbb822eee5ab33ac102d6442",
+      "source": "sources/memcard-calls-save-config-silent/save_config_silent.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_SaveConfigSilent__Fii",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1183,
+      "kind": "independently_authored_source",
+      "object_name": "saving.o",
+      "profile": "authored_cpp",
+      "sha256": "4cecd3cd86e00003a88fbe281bbd8c768de318cb99b3babd1bbe407c05990e45",
+      "source": "sources/memcard-calls-saving/saving.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1184,
+      "kind": "independently_authored_source",
+      "object_name": "slot.o",
+      "profile": "authored_cpp",
+      "sha256": "bbef7090e708fbfe3071ea7c31620fb7478d6c70929fa130e21877e5fdcdfc14",
+      "source": "sources/memcard-calls-slot/slot.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -14902,7 +15242,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f53f34819c77cd4b39eb942ce5f0744d213e947f52b9a83a54ffe6a11bd07782",
+  "snapshot_sha256": "f0882059803ea37b4899a554123eb8b862b070536cdb0b222688aef8ab82c91c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -1549,6 +1549,54 @@ Opened: `Kick__7Vehicle`, `MC_Kick__Fv`, `blockGetNmFree__Fv`,
 `slowRunList`, `worldViewCenter`. 894 function bodies, 1158 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/memcard-calls
+
+This is a partial package: the branch carries twenty-five units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/memcard-calls.md` from the source
+comments. All twenty-five units were selected with fresh `input_order`
+values 1160 through 1184. Twenty-four host contracts passed on this
+machine with default flags; the `MCA_Init` contract passes at `-O0` (at
+`-O1` this host compiler expands the constant-size `memset` inline and
+bypasses the call-counting wrapper, a host-toolchain artifact rather
+than a reconstruction defect). No game binary or disassembly listing
+was committed. The five `MCA_Init` queue words were local in the image
+and are global here so `MCA_Cmd` can share them; `MCA_LastDirCount`
+stays a separate object from that local word.
+
+| | |
+|---|---|
+| Before | 1005 |
+| After | 1011 |
+| Closed | 25 |
+| Opened | 31 |
+
+Closed: `MCA_ClearInfo__Fv`, `MCA_Cmd__Fiiii`, `MCA_Init__Fv`,
+`MCA_LastDirCount`, `MCA_Port`, `MCA_Slot`, `MCA_Sync__FPi`,
+`MC_Busy__Fv`, `MC_CheckPointAge`, `MC_Debug`, `MC_GameConfig`,
+`MC_GetAsyncMode__Fv`, `MC_GetReadyForMainMenu__Fv`, `MC_KickProtect`,
+`MC_LastModeSuccessful`, `MC_LoadGameBrowser__Fii`, `MC_NewGame__Fi`,
+`MC_SaveCheckPoint__Fiii`, `MC_SaveConfigSilent__Fii`,
+`MC_SaveConfig__Fv`, `MC_SaveGameBrowser__Fi`, `MC_SavingOrLoading`,
+`mcClientID`, `mcHeartBeatRun__Fv`, `mcHeartBeat__Fv`. Also defined,
+and not previous imports: the `MCA_Init` queue words (`clearBytes`,
+`queueEnd`, `queueStart`, `checkResults`, `lastDirCount`), the
+`mcHeartBeatRun` file-local words, and the `MCA_Init` 16384-byte
+`nullBuff`.
+
+Opened: `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
+`MC_HasThisLevelBeenSaved__Fv`, `MC_ResetRamSlot__Fv`,
+`MC_SetNewAct__Fi`, `MC_SpawnPoint`, `actionCoolOff`,
+`asyncChangePlayers__Fv`, `asyncConfigure__Fv`, `asyncLoadGame__Fv`,
+`asyncSaveConfigSilent__Fv`, `asyncSaveConfig__Fv`,
+`asyncSaveGame__Fv`, `commandQueue`, `curPlaySeconds`, `delayCount`,
+`fullLaunchOK`, `gameGetFullLevelName__FPc`, `getLongLevelName__FPc`,
+`interfaceOn`, `netBlankController__Fii`, `pushPause__Fv`,
+`ranBrowser`, `ranConfig`, `resetQuickLoad__Fv`, `saveConfigEndGame`,
+`strncmp`, `strstr`, `updateRamSlot__Fii`, `whichPad`. 909 function
+bodies, 1183 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1688,7 +1736,8 @@ actor-view-tables views are data, not functions. The 26 card-progress
 data words are data, not functions. The shared constructor header now
 covers Boat and AutoContainerLP. The eleven selected game-loop units
 (eight functions, five words) are in the link; the two unselected
-game-loop units are authored and not in the link. `engineInit__Ff`,
+game-loop units are authored and not in the link. The twenty-five
+memcard-calls units are in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
