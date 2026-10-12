@@ -13637,6 +13637,307 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/game-state-bail/bail.cpp"
+    },
+    {
+      "input_order": 1061,
+      "component": "sony-cd-anim-init",
+      "object_name": "sony-cd-anim-init.o",
+      "private_object_sha256": "4ef7bfa38995364ecdaef54a4c0ace1ab205ca8d608323fde3b6ada154f60874",
+      "emitted_functions": [
+        {
+          "name": "relocate",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "animInitAnimation__FP15AnimationHeader",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-anim-init/anim_init.cpp"
+    },
+    {
+      "input_order": 1062,
+      "component": "sony-cd-callback",
+      "object_name": "sony-cd-callback.o",
+      "private_object_sha256": "b633079e66350647026df36a7b8bcd69e3c2b1f4795953100a70d56db11f7bc7",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_cd_callback",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-callback/callback.cpp"
+    },
+    {
+      "input_order": 1063,
+      "component": "sony-cd-cmd-sem-init",
+      "object_name": "sony-cd-cmd-sem-init.o",
+      "private_object_sha256": "06c9432dcf1a42aa1b0661f1af1efd71f93a30f726a9396c2ad19ea8c0824091",
+      "emitted_functions": [
+        {
+          "name": "cmd_sem_init",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-cmd-sem-init/cmd_sem_init.cpp"
+    },
+    {
+      "input_order": 1064,
+      "component": "sony-cd-delay-thread",
+      "object_name": "sony-cd-delay-thread.o",
+      "private_object_sha256": "cfd12b652ccc7e256b472661742609490d444bb7e5dfc8f059a3e0cdefe0afb2",
+      "emitted_functions": [
+        {
+          "name": "delay_handler",
+          "compiled_body_bytes": 36
+        },
+        {
+          "name": "DelayThread",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-delay-thread/delay_thread.cpp"
+    },
+    {
+      "input_order": 1065,
+      "component": "sony-cd-disk-ready",
+      "object_name": "sony-cd-disk-ready.o",
+      "private_object_sha256": "337759ed540d66c5a0dce0d3df820a791cab416183b3de603a79d7488c246069",
+      "emitted_functions": [
+        {
+          "name": "sceCdNcmdDiskReady",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-disk-ready/disk_ready.cpp"
+    },
+    {
+      "input_order": 1066,
+      "component": "sony-cd-font-init",
+      "object_name": "sony-cd-font-init.o",
+      "private_object_sha256": "5c802ecda26b973954910144f58ac6ded6a42325c4fd1cce068c8f838cd573e2",
+      "emitted_functions": [
+        {
+          "name": "fontInitFont__FP4Font",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-font-init/font_init.cpp"
+    },
+    {
+      "input_order": 1067,
+      "component": "sony-cd-model-init",
+      "object_name": "sony-cd-model-init.o",
+      "private_object_sha256": "eb5466d881655f598d24639550d72a6ee28902e43bc8275e3b2867b94ed178e7",
+      "emitted_functions": [
+        {
+          "name": "modelInitModel__FPv",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-model-init/model_init.cpp"
+    },
+    {
+      "input_order": 1068,
+      "component": "sony-cd-ncmd-prechk",
+      "object_name": "sony-cd-ncmd-prechk.o",
+      "private_object_sha256": "5aea07708ba3260fa8971db5e7ca3fa78372b2fea083057de19436ab96bde10c",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_ncmd_prechk",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-ncmd-prechk/ncmd_prechk.cpp"
+    },
+    {
+      "input_order": 1069,
+      "component": "sony-cd-read-intr",
+      "object_name": "sony-cd-read-intr.o",
+      "private_object_sha256": "07a027708ee1457a63fb898131257ac91e43342e609acca33f57d5ab094b0a30",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_cd_read_intr",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-read-intr/read_intr.cpp"
+    },
+    {
+      "input_order": 1070,
+      "component": "sony-cd-refer-thread",
+      "object_name": "sony-cd-refer-thread.o",
+      "private_object_sha256": "f0fcbc1b885661b7934d678402ff1ad6b347e38e6edc714222e923deb184f941",
+      "emitted_functions": [
+        {
+          "name": "ReferThreadStatus",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-refer-thread/refer_thread.S"
+    },
+    {
+      "input_order": 1071,
+      "component": "sony-cd-scmd-prechk",
+      "object_name": "sony-cd-scmd-prechk.o",
+      "private_object_sha256": "612bc8098aaec28b22602e6dbd6c2804a132ebfa562e9c3351968621bd8dd402",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_scmd_prechk",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-scmd-prechk/scmd_prechk.cpp"
+    },
+    {
+      "input_order": 1072,
+      "component": "sony-cd-sif-bind",
+      "object_name": "sony-cd-sif-bind.o",
+      "private_object_sha256": "cdb3c2b2006481dd7055611eabca46ae5e063b82c47940c24ce32c755d8e735d",
+      "emitted_functions": [
+        {
+          "name": "sceSifBindRpc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sif-bind/bind_rpc.cpp"
+    },
+    {
+      "input_order": 1073,
+      "component": "sony-cd-sif-call",
+      "object_name": "sony-cd-sif-call.o",
+      "private_object_sha256": "858822054414b568bf7baeb820a0fb47d654bf755af8fa4fc7ff729e8b55f1f5",
+      "emitted_functions": [
+        {
+          "name": "sceSifCallRpc",
+          "compiled_body_bytes": 916
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sif-call/call_rpc.cpp"
+    },
+    {
+      "input_order": 1074,
+      "component": "sony-cd-sif-check-stat",
+      "object_name": "sony-cd-sif-check-stat.o",
+      "private_object_sha256": "e9f4f63d3b52a5017c2ab799165ac7d314cf7b11b67513d6bac3ca900124f79d",
+      "emitted_functions": [
+        {
+          "name": "sceSifCheckStatRpc",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sif-check-stat/check_stat.cpp"
+    },
+    {
+      "input_order": 1075,
+      "component": "sony-cd-sif-init",
+      "object_name": "sony-cd-sif-init.o",
+      "private_object_sha256": "6a09a4ff72c6fde18d4b76572fe8194195b5f407688f88a55172e76dab1a9a6d",
+      "emitted_functions": [
+        {
+          "name": "sceSifInitRpc",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sif-init/init_rpc.cpp"
+    },
+    {
+      "input_order": 1076,
+      "component": "sony-cd-sif-writeback",
+      "object_name": "sony-cd-sif-writeback.o",
+      "private_object_sha256": "b8f528a5731ce271bb4a50d1cc2c90c9d5e3b59cce8e9109e4033927d7410d8f",
+      "emitted_functions": [
+        {
+          "name": "sceSifWriteBackDCache",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sif-writeback/writeback.cpp"
+    },
+    {
+      "input_order": 1077,
+      "component": "sony-cd-sound-add",
+      "object_name": "sony-cd-sound-add.o",
+      "private_object_sha256": "2637fd6cc42ef9fa2145dbb1fe325054213677112c5146085eac2abc9338a025",
+      "emitted_functions": [
+        {
+          "name": "soundAddSound__FPcP10_vagHeaderb",
+          "compiled_body_bytes": 816
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sound-add/sound_add.cpp"
+    },
+    {
+      "input_order": 1078,
+      "component": "sony-cd-stream",
+      "object_name": "sony-cd-stream.o",
+      "private_object_sha256": "0d3080429c41bbf91cdfb7b158ea78811ad8529f9ff2eb8197e9e28396969f86",
+      "emitted_functions": [
+        {
+          "name": "sceCdStream",
+          "compiled_body_bytes": 528
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-stream/stream.cpp"
+    },
+    {
+      "input_order": 1079,
+      "component": "sony-cd-sync-s",
+      "object_name": "sony-cd-sync-s.o",
+      "private_object_sha256": "b7640ba67c7efb7c1be087d9f9bd40189be9e611f29083f871272ceb184d8463",
+      "emitted_functions": [
+        {
+          "name": "sceCdSyncS",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-sync-s/sync_s.cpp"
+    },
+    {
+      "input_order": 1080,
+      "component": "sony-cd-words",
+      "object_name": "sony-cd-words.o",
+      "private_object_sha256": "38ca86c9536af31ee75cf8647bc537059ab96f9aff294027af0e2570df32ab3a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-words/words.cpp"
+    },
+    {
+      "input_order": 1081,
+      "component": "sony-cd-world-init",
+      "object_name": "sony-cd-world-init.o",
+      "private_object_sha256": "4556861f99c8d29cf9f193559c9fd8b975ded71f95e07f0be72fa17460f88086",
+      "emitted_functions": [
+        {
+          "name": "relocate_if_set",
+          "compiled_body_bytes": 60
+        },
+        {
+          "name": "worldInitWorld__FP12_worldHeader",
+          "compiled_body_bytes": 2332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/sony-cd-world-init/world_init.cpp"
     }
   ],
   "drafts": [
@@ -16194,7 +16495,59 @@
     "sources/game-state-exit-to-menu/host_check.cpp": "4a9d4667f6e31d52d317edde4cf1548e83a891ca883ecedf4dc9589c0d5aca0a",
     "sources/game-state-cut-mode/host_check.cpp": "0210669c11a67a7fb9cd708def0b041f8e1e722dc3e7c59d57a2f030b8149b7a",
     "sources/game-state-main-menu/host_check.cpp": "a94050acaa218f7f6eac6d970c76331ed5c42506f774846c3d87d3ff34a02d42",
-    "sources/game-state-bail/host_check.cpp": "cc54c6fccbc61f632c533a93cdfb10a691a396faf0947050e6e9ce00b0c45cd8"
+    "sources/game-state-bail/host_check.cpp": "cc54c6fccbc61f632c533a93cdfb10a691a396faf0947050e6e9ce00b0c45cd8",
+    "sources/sony-cd-anim-init/anim_init.cpp": "6cf85231fad3f9b3e18773ddd14ec56b6c95d4bbfb80a1b43300b7febf0aac1e",
+    "sources/sony-cd-anim-init/host_contract.cpp": "c517288298ac3008e47adb03beb2ec89850d288beea8dd8eeedbec94471053ce",
+    "sources/sony-cd-callback/callback.cpp": "ab3c3fa289624b0187c3a50a607aa7c20af40ed65cf6dde411bcb9802a08467b",
+    "sources/sony-cd-callback/host_contract.cpp": "015a66439057dfaeea6f0ae94d27d1c6cb1adbdd94598e29c0b44e2e94d981db",
+    "sources/sony-cd-cmd-sem-init/cmd_sem_init.cpp": "19cff86bb1ef99946aff7f5479dee350f7a846f7cd7e51d9d5da73b1c53f9204",
+    "sources/sony-cd-cmd-sem-init/host_contract.cpp": "28b02d807ac02c1c9f34bfd22d0a7e753c2ddb632134c2c33290b67d1b1fab03",
+    "sources/sony-cd-delay-thread/delay_thread.cpp": "8df1b54be44203319b9d335a133fb3a549d31710c8508e87a2ab46df0d43f861",
+    "sources/sony-cd-delay-thread/host_contract.cpp": "1390825dfc8515bf1c5372765f4424e37be64dff61c66024cc112b813f0bba76",
+    "sources/sony-cd-disk-ready/disk_ready.cpp": "23959d23a8e8195cec7f22a75b4fa6662cd95fb8fb7de24d99f1f43ea6c12fc7",
+    "sources/sony-cd-disk-ready/host_contract.cpp": "6ade9fd2919a0456a982c1f95aef727e3bc4f52d151190ebf575308e0fc07df4",
+    "sources/sony-cd-font-init/font_init.cpp": "afab351d5ea2ee839cf3564849f0cb5f88b3c08c6bfdbe354fc00172aaa8c383",
+    "sources/sony-cd-font-init/host_contract.cpp": "82bade4af4c1485e6fd96e9214a9dd911edbd9efa5e139e861d57faa1fbbe9f3",
+    "sources/sony-cd-model-init/model_init.cpp": "72ffc461f5008c85192cef5d9f4987dfecf8b8784d1b115d81710e5701157102",
+    "sources/sony-cd-model-init/host_contract.cpp": "29497988afc38e22e770468cb688061be5e1288ae3bd62a997f3b81492dc4e11",
+    "sources/sony-cd-ncmd-prechk/ncmd_prechk.cpp": "f171c5452e915b1d1b194d81466180d8e44e6022038c6f33656fd4e495939382",
+    "sources/sony-cd-ncmd-prechk/host_contract.cpp": "14b9877002719b6dd38266ab63ca7e482b76543fa60f85eb4a43cc6792f26c7e",
+    "sources/sony-cd-read-intr/read_intr.cpp": "375e3a18d490572c4a433a48c26ee762abffda5b6211a8047b79f46e3d9c1b81",
+    "sources/sony-cd-read-intr/host_contract.cpp": "0bd80411c2afd84f3475f97616a89ebe9580c8af3b55d254967e36c1bd075189",
+    "sources/sony-cd-refer-thread/refer_thread.S": "d70e2a0289f0828152c415140cd46aa973932648bf3b9e870c6bd2530ff63854",
+    "sources/sony-cd-refer-thread/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/sony-cd-scmd-prechk/scmd_prechk.cpp": "2e3977400f0292288bed1f9cb0561495e643096e86a80f1282459e425fc90ac0",
+    "sources/sony-cd-scmd-prechk/host_contract.cpp": "e97ad6f8fb8ec0bcc34ba46db499fb08a7615a7051000ec20d152c4895b50d7c",
+    "sources/sony-cd-sif-bind/bind_rpc.cpp": "78efaa78ba007d8f433ad97b24d9170e3401e75b43bd463c0c8bb56ded2d886a",
+    "sources/sony-cd-sif-bind/host_contract.cpp": "e7cbc7a6ab74071a3e6d54da7c882ca7e9c5dadc22f8148a2425bc8680da3587",
+    "sources/sony-cd-sif-call/call_rpc.cpp": "9860d0ab6a0499ea90c63752883c8aca0b93f50b1b2de7f8d3215be4d1002594",
+    "sources/sony-cd-sif-call/host_contract.cpp": "a9605b89a6e7dd73d7244a16e3e6fb0c0af84f5c286e5d2700264c8fe4de01db",
+    "sources/sony-cd-sif-check-stat/check_stat.cpp": "232ad5d0f5c7e7e5c0f9b14c981e425c11074cb19575dc3de6522393c8a74536",
+    "sources/sony-cd-sif-check-stat/host_contract.cpp": "52a283757875972439d9d9a1c3b5e64c9766c70df5dd0d0461babad78239aed6",
+    "sources/sony-cd-sif-init/init_rpc.cpp": "c2b7bfb447d861fe6040304027ec44f55ea076ffe8bb1d32ad1bbabff7db97d7",
+    "sources/sony-cd-sif-init/host_contract.cpp": "62ca3e7bdbaacd7e51c65d93ec3377d5efb97086d5bfe4a52926df10938f5ad6",
+    "sources/sony-cd-sif-writeback/writeback.cpp": "6447db92fda8e72ae72e9f3ccbabb58f02243b59c1ef8d958cdc243507f2b161",
+    "sources/sony-cd-sif-writeback/host_contract.cpp": "ed4e21b93705447376d06ea7cc75a3a892a348d98b0719be606bf8dc6711ba84",
+    "sources/sony-cd-sound-add/sound_add.cpp": "6cf2c4d779c1bfcc5339f492b384ad2b8ba491b37c4b7fe61fd6a86be6b768c5",
+    "sources/sony-cd-sound-add/host_contract.cpp": "d96f43a85b46a5733e6fb6a29ee379d7947661aa0609796e2a7df72667c6ef31",
+    "sources/sony-cd-stream/stream.cpp": "c9188e19ea098edfa09d0999200e0ce89376b1ad922b96c6b2210564806cb8dc",
+    "sources/sony-cd-stream/host_contract.cpp": "ed07bc724982ad1d69b7731e1591598313895b4f69adbd7cd168d62b8adea9bb",
+    "sources/sony-cd-sync-s/sync_s.cpp": "be35df53ca1289dbef8ac6f2c716a3e1a25b972596928d7465a46257740d3f7d",
+    "sources/sony-cd-sync-s/host_contract.cpp": "b0b384f72a1bbbe573d7522e343b9a68a78aa633a07c6fa29adf55941a3413ee",
+    "sources/sony-cd-words/words.cpp": "ad3df13998e90d08c7e7c4b8e56e7887efbf9a641f60af34a3909505ee288664",
+    "sources/sony-cd-words/host_contract.cpp": "a69ccf7fd1715db21f9da10019b36ea6b5f5c313a5c5e9e705c366fbb66abca1",
+    "sources/sony-cd-world-init/world_init.cpp": "54605a2528399cdcc5cceabb080dc243b8a085ac00f9218b15be62dc63be6f4a",
+    "sources/sony-cd-world-init/host_contract.cpp": "3af9689df0734e77f6bcad0ceea2df85073a555ce1a9cf33695738360ed57e6c",
+    "sources/sony-cd-texture-init/texture_init.cpp": "e79eefdf7ecf61a8a5b902a51c1a5ed3916e8c3426691dee8fc1e95a84c169d2",
+    "sources/sony-cd-texture-init/host_contract.cpp": "2616717e700e25e08c85a3763f9743519afac2a8d5d59bd266f7269eadd75f07",
+    "sources/sony-cd-isignal-sema/isignal_sema.S": "9b4e2b1f158c6fa23541ebe9819501a1cfa7acdeaef6897de7968818b571cf95",
+    "sources/sony-cd-isignal-sema/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/sony-cd-poll-sema/poll_sema.S": "89dd3caef456cfa130f9f6eb19c83a2a007fe2377e4005ec40c30fc76958f6cd",
+    "sources/sony-cd-poll-sema/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/sony-cd-vblank-views/views.cpp": "2735a9c09cb5afcffd3881673c54a30b2da2862a2278c3da24b7ef2325bc30d7",
+    "sources/sony-cd-vblank-views/host_contract.cpp": "a6245497a1493e8bd5c08b1848c4fbdef41d790a5d2d8a8b0d864ded32203985",
+    "sources/sony-cd-text-add/text_add.cpp": "f12d983c6875ce872e1d0a7ee7bc998b07d500746a2821aca4fbf1d761ba0e92",
+    "sources/sony-cd-text-add/host_contract.cpp": "9d31a22c96e4562af9290718c7cea8eb46f3120371aa3b18d7522a629cdfb52d"
   },
   "additional_implementations": [
     {
@@ -16636,11 +16989,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1061,
-    "authored_default_inputs": 1059,
+    "selected_inputs": 1082,
+    "authored_default_inputs": 1080,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 841,
-    "compiled_body_bytes_from_accepted_inputs": 368184,
+    "emitted_function_definitions_including_helpers": 864,
+    "compiled_body_bytes_from_accepted_inputs": 376808,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -16653,7 +17006,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 748
+    "package_selected_inputs": 769
   },
   "startup_implementations": [
     {
@@ -28020,6 +28373,370 @@
       "emitted_functions": [],
       "host_files": [
         "sources/game-state-bail/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-anim-init/anim_init.cpp",
+      "source_sha256": "6cf85231fad3f9b3e18773ddd14ec56b6c95d4bbfb80a1b43300b7febf0aac1e",
+      "object_sha256": "4ef7bfa38995364ecdaef54a4c0ace1ab205ca8d608323fde3b6ada154f60874",
+      "emitted_functions": [
+        {
+          "name": "relocate",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "animInitAnimation__FP15AnimationHeader",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-anim-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-callback/callback.cpp",
+      "source_sha256": "ab3c3fa289624b0187c3a50a607aa7c20af40ed65cf6dde411bcb9802a08467b",
+      "object_sha256": "b633079e66350647026df36a7b8bcd69e3c2b1f4795953100a70d56db11f7bc7",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_cd_callback",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-callback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-cmd-sem-init/cmd_sem_init.cpp",
+      "source_sha256": "19cff86bb1ef99946aff7f5479dee350f7a846f7cd7e51d9d5da73b1c53f9204",
+      "object_sha256": "06c9432dcf1a42aa1b0661f1af1efd71f93a30f726a9396c2ad19ea8c0824091",
+      "emitted_functions": [
+        {
+          "name": "cmd_sem_init",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-cmd-sem-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-delay-thread/delay_thread.cpp",
+      "source_sha256": "8df1b54be44203319b9d335a133fb3a549d31710c8508e87a2ab46df0d43f861",
+      "object_sha256": "cfd12b652ccc7e256b472661742609490d444bb7e5dfc8f059a3e0cdefe0afb2",
+      "emitted_functions": [
+        {
+          "name": "delay_handler",
+          "compiled_body_bytes": 36
+        },
+        {
+          "name": "DelayThread",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-delay-thread/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-disk-ready/disk_ready.cpp",
+      "source_sha256": "23959d23a8e8195cec7f22a75b4fa6662cd95fb8fb7de24d99f1f43ea6c12fc7",
+      "object_sha256": "337759ed540d66c5a0dce0d3df820a791cab416183b3de603a79d7488c246069",
+      "emitted_functions": [
+        {
+          "name": "sceCdNcmdDiskReady",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-disk-ready/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-font-init/font_init.cpp",
+      "source_sha256": "afab351d5ea2ee839cf3564849f0cb5f88b3c08c6bfdbe354fc00172aaa8c383",
+      "object_sha256": "5c802ecda26b973954910144f58ac6ded6a42325c4fd1cce068c8f838cd573e2",
+      "emitted_functions": [
+        {
+          "name": "fontInitFont__FP4Font",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-font-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-model-init/model_init.cpp",
+      "source_sha256": "72ffc461f5008c85192cef5d9f4987dfecf8b8784d1b115d81710e5701157102",
+      "object_sha256": "eb5466d881655f598d24639550d72a6ee28902e43bc8275e3b2867b94ed178e7",
+      "emitted_functions": [
+        {
+          "name": "modelInitModel__FPv",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-model-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-ncmd-prechk/ncmd_prechk.cpp",
+      "source_sha256": "f171c5452e915b1d1b194d81466180d8e44e6022038c6f33656fd4e495939382",
+      "object_sha256": "5aea07708ba3260fa8971db5e7ca3fa78372b2fea083057de19436ab96bde10c",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_ncmd_prechk",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-ncmd-prechk/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-read-intr/read_intr.cpp",
+      "source_sha256": "375e3a18d490572c4a433a48c26ee762abffda5b6211a8047b79f46e3d9c1b81",
+      "object_sha256": "07a027708ee1457a63fb898131257ac91e43342e609acca33f57d5ab094b0a30",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_cd_read_intr",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-read-intr/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-refer-thread/refer_thread.S",
+      "source_sha256": "d70e2a0289f0828152c415140cd46aa973932648bf3b9e870c6bd2530ff63854",
+      "object_sha256": "f0fcbc1b885661b7934d678402ff1ad6b347e38e6edc714222e923deb184f941",
+      "emitted_functions": [
+        {
+          "name": "ReferThreadStatus",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-refer-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-scmd-prechk/scmd_prechk.cpp",
+      "source_sha256": "2e3977400f0292288bed1f9cb0561495e643096e86a80f1282459e425fc90ac0",
+      "object_sha256": "612bc8098aaec28b22602e6dbd6c2804a132ebfa562e9c3351968621bd8dd402",
+      "emitted_functions": [
+        {
+          "name": "_sceCd_scmd_prechk",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-scmd-prechk/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sif-bind/bind_rpc.cpp",
+      "source_sha256": "78efaa78ba007d8f433ad97b24d9170e3401e75b43bd463c0c8bb56ded2d886a",
+      "object_sha256": "cdb3c2b2006481dd7055611eabca46ae5e063b82c47940c24ce32c755d8e735d",
+      "emitted_functions": [
+        {
+          "name": "sceSifBindRpc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sif-bind/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sif-call/call_rpc.cpp",
+      "source_sha256": "9860d0ab6a0499ea90c63752883c8aca0b93f50b1b2de7f8d3215be4d1002594",
+      "object_sha256": "858822054414b568bf7baeb820a0fb47d654bf755af8fa4fc7ff729e8b55f1f5",
+      "emitted_functions": [
+        {
+          "name": "sceSifCallRpc",
+          "compiled_body_bytes": 916
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sif-call/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sif-check-stat/check_stat.cpp",
+      "source_sha256": "232ad5d0f5c7e7e5c0f9b14c981e425c11074cb19575dc3de6522393c8a74536",
+      "object_sha256": "e9f4f63d3b52a5017c2ab799165ac7d314cf7b11b67513d6bac3ca900124f79d",
+      "emitted_functions": [
+        {
+          "name": "sceSifCheckStatRpc",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sif-check-stat/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sif-init/init_rpc.cpp",
+      "source_sha256": "c2b7bfb447d861fe6040304027ec44f55ea076ffe8bb1d32ad1bbabff7db97d7",
+      "object_sha256": "6a09a4ff72c6fde18d4b76572fe8194195b5f407688f88a55172e76dab1a9a6d",
+      "emitted_functions": [
+        {
+          "name": "sceSifInitRpc",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sif-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sif-writeback/writeback.cpp",
+      "source_sha256": "6447db92fda8e72ae72e9f3ccbabb58f02243b59c1ef8d958cdc243507f2b161",
+      "object_sha256": "b8f528a5731ce271bb4a50d1cc2c90c9d5e3b59cce8e9109e4033927d7410d8f",
+      "emitted_functions": [
+        {
+          "name": "sceSifWriteBackDCache",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sif-writeback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sound-add/sound_add.cpp",
+      "source_sha256": "6cf2c4d779c1bfcc5339f492b384ad2b8ba491b37c4b7fe61fd6a86be6b768c5",
+      "object_sha256": "2637fd6cc42ef9fa2145dbb1fe325054213677112c5146085eac2abc9338a025",
+      "emitted_functions": [
+        {
+          "name": "soundAddSound__FPcP10_vagHeaderb",
+          "compiled_body_bytes": 816
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sound-add/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-stream/stream.cpp",
+      "source_sha256": "c9188e19ea098edfa09d0999200e0ce89376b1ad922b96c6b2210564806cb8dc",
+      "object_sha256": "0d3080429c41bbf91cdfb7b158ea78811ad8529f9ff2eb8197e9e28396969f86",
+      "emitted_functions": [
+        {
+          "name": "sceCdStream",
+          "compiled_body_bytes": 528
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-stream/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-sync-s/sync_s.cpp",
+      "source_sha256": "be35df53ca1289dbef8ac6f2c716a3e1a25b972596928d7465a46257740d3f7d",
+      "object_sha256": "b7640ba67c7efb7c1be087d9f9bd40189be9e611f29083f871272ceb184d8463",
+      "emitted_functions": [
+        {
+          "name": "sceCdSyncS",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-sync-s/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-words/words.cpp",
+      "source_sha256": "ad3df13998e90d08c7e7c4b8e56e7887efbf9a641f60af34a3909505ee288664",
+      "object_sha256": "38ca86c9536af31ee75cf8647bc537059ab96f9aff294027af0e2570df32ab3a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/sony-cd-words/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "sony-cd",
+      "source": "sources/sony-cd-world-init/world_init.cpp",
+      "source_sha256": "54605a2528399cdcc5cceabb080dc243b8a085ac00f9218b15be62dc63be6f4a",
+      "object_sha256": "4556861f99c8d29cf9f193559c9fd8b975ded71f95e07f0be72fa17460f88086",
+      "emitted_functions": [
+        {
+          "name": "relocate_if_set",
+          "compiled_body_bytes": 60
+        },
+        {
+          "name": "worldInitWorld__FP12_worldHeader",
+          "compiled_body_bytes": 2332
+        }
+      ],
+      "host_files": [
+        "sources/sony-cd-world-init/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

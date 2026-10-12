@@ -1266,6 +1266,76 @@ unresolved or already defined on this tip, including `DLG_Active__Fv`,
 839 function bodies, 1059 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## agents/sony-cd
+
+Merged. The notes separate observed addresses from inferred names, and each
+selected unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. 21 of the 26 units were selected. Five
+units were not selected because those symbols are already in the link:
+sony-cd-texture-init redefines `textureInitTexture__FP8_texture` from
+draw-texture-init, sony-cd-isignal-sema redefines `iSignalSema` and
+sony-cd-poll-sema redefines `PollSema` from gs-dma-kernel,
+sony-cd-vblank-views redefines the three `norrath_archive_vblank_*` views
+from cd-archive, and sony-cd-text-add redefines `table` from
+particles-anim-table. Their files stay in the source snapshot. The notes
+list those names as closed; they were already defined, so the official
+delta is smaller than that list.
+
+20 host contracts passed on this machine. The `ReferThreadStatus` check
+compares the assembled body against the pinned executable, which this
+machine does not read; the stub assembles to the claimed 16 bytes and the
+worker records the match. All 26 sources compile under their reviewed
+profiles with the hashes the notes claim. The file-local helpers
+`relocate`, `delay_handler`, and `relocate_if_set` are recorded alongside
+their functions.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 884 |
+| Closed | 39 |
+| Opened | 30 |
+
+Closed: `DelayThread`, `ReferThreadStatus`, `SCE_CD_debug`,
+`_sceCd_Read_cur_pos`, `_sceCd_c_cb_sem`, `_sceCd_cd_callback`,
+`_sceCd_cd_ncmd`, `_sceCd_cd_read_intr`, `_sceCd_cd_scmd`,
+`_sceCd_ee_read_mode`, `_sceCd_ncmd_prechk`, `_sceCd_ncmd_semid`,
+`_sceCd_ncmdsdata`, `_sceCd_rd_intr_data`, `_sceCd_scmd_prechk`,
+`_sceCd_scmd_semid`, `_sceCd_scmdrdata`, `_sf_bind`, `_sf_data`,
+`animInitAnimation__FP15AnimationHeader`, `cdrdsf`, `cmd_sem_init`,
+`dum_mode`, `fontInitFont__FP4Font`, `modelInitModel__FPv`, `my_th_info`,
+`my_thid`, `ncmd_sema_keep_cmd`, `sceCdNcmdDiskReady`, `sceCdStream`,
+`sceSifBindRpc`, `sceSifCallRpc`, `sceSifCheckStatRpc`, `sceSifInitRpc`,
+`sceSifWriteBackDCache`, `sfrdata`,
+`soundAddSound__FPcP10_vagHeaderb`, `stm_status`,
+`worldInitWorld__FP12_worldHeader`.
+
+Also defined, and not previous imports: `_sceCd_ncmdrdata`,
+`_sceCd_rcmd_semid`, `_ncmd_bind`, `_scmd_bind`, `scmd_sema_keep_cmd`,
+`cb_thid`, `cb_semid`, `sceCdCbfunc`, `sceCdCbfunc_num`,
+`sceCdCbfunc_number`, `_sceSifInitCheck`, `_data_table`, `_packet_buffer`,
+`_free_buffer`, `_free_buffer2`, `nmSounds`, `effectsBufferSize`,
+`soundList`, and `sceCdSyncS`. Not selected, so authored and not in the
+link: `textureInitTexture__FP8_texture`, `iSignalSema`, `PollSema`, the
+three `norrath_archive_vblank_*` views, `textAddText__FPv`, and `table`;
+each name keeps its existing owner.
+
+Opened: `DynamicLightArray`, `ParticleEmitterArray`, `SetTimerAlarm`,
+`TimerUSec2BusClock`, `__eq__19ParticleEmitterDataRC19ParticleEmitterData`,
+`_request_bind`, `_request_call`, `_request_end`, `_request_rdata`,
+`_sceRpcFreePacket`, `_sceRpcGetPacket`, `convertEnd__Fi`,
+`earlyInit__3mapP12_worldHeader`, `getStockPitch__FP10_vagHeader`,
+`lightDeactivate__FP5Light`, `megatileGenerate__FP12_worldHeader`,
+`megatileInit__FP12MegatileRootPv`, `megatile_ramkmax`,
+`nmParticleEmitterRecs`, `sceSifAddCmdHandler`, `sceSifGetReg`,
+`sceSifGetSreg`, `sceSifInitCmd`, `sceSifSendCmd`, `sceSifSetReg`,
+`strcasecmp`, `texmap`, `texmapend`, `texmapstart`,
+`transferVAG__FP10_vagHeaderi`. The other names the notes leave open were
+already unresolved or already defined, including `cdLoad__FPcPvii`,
+`strlen`, `sprintf`, and `_engineCheckStack__FPCci`. 862 function bodies,
+1080 authored inputs, zero COMMON. 214 tool tests passed. No EE, CD, SIF, or
+game path ran.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1382,6 +1452,10 @@ separate object. Decide whether they are one symbol.
 scheduler still defines `norrath_game_bail_from_loop_view` for the same
 address as a separate object. Decide whether they are one symbol.
 
+`table` at `0x006d8fa0` is defined once, by particles-anim-table as
+32768 bytes. sony-cd also defines that name as `0x2000` words for the same
+span. That unit was not selected. Decide which package owns the name.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1393,7 +1467,8 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, and game-state. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state, and
+sony-cd. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
