@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1317,
+  "default_authored_inputs": 1325,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2033,7 +2033,15 @@
     "sources/session-roster-player-init/player_init.cpp": "120f707d1866d39071817d5ca5d6f3df69e264ba53d84630e126fca8dff90cc9",
     "sources/session-roster-net-state/net_state.cpp": "e471be296cf21497f34d72ebde594f2993a0766e62a7bb1800207e93994d4e03",
     "sources/session-roster-net-handlers/net_handlers.cpp": "0877378ba033dcc0b9fb28154d0fd69c41550b911cc51b58637875f06b91ce04",
-    "sources/session-roster-player-selection-state/player_selection_state.cpp": "1e4949a8e6dc2844f6c31fb21f994ce289ae9fcfd79f0086a8d86f5d90707fb0"
+    "sources/session-roster-player-selection-state/player_selection_state.cpp": "1e4949a8e6dc2844f6c31fb21f994ce289ae9fcfd79f0086a8d86f5d90707fb0",
+    "sources/simloop-services-sce-mtap-init/sce_mtap_init.cpp": "21bf63ca98618315b048c45575dfb4e140356564da1466e2934268b5911d3a20",
+    "sources/simloop-services-sce-mtap-port-open/sce_mtap_port_open.cpp": "d6863328f9d91cd6c173f1ecf42eee3e86c7dac4a0c23257a394ef35648e9fad",
+    "sources/simloop-services-sce-pad-init/sce_pad_init.cpp": "c6dd241b30ad9e3f87be7eb6d4701ef61293d1f60ab98cda857985ba49d06bfb",
+    "sources/simloop-services-sce-pad-port-open/sce_pad_port_open.cpp": "7ba53de6656b151f6e0ece8f18032106834459a5133d61de0672c4063034b143",
+    "sources/simloop-services-sound-frame/sound_frame.cpp": "ebea775b668fd8b7daeb82d757f67f526e3c5b539d00a0afd0a9d9d5b26c86fc",
+    "sources/simloop-services-sound-play-sequence/sound_play_sequence.cpp": "bd01476c475778e2ea9cfe90c2c9fd7d3a80ee03ee41ba5761d4568221589884",
+    "sources/simloop-services-sound-play-sound/sound_play_sound.cpp": "5eb8c22443bc42bcf4f50399edce820013e02125e1f618f1b8acf69a908ad101",
+    "sources/simloop-services-sound-sequence-length/sound_compute_sequence_length.cpp": "6f514598a587cfc83a9f0fe7bead4ebfd3a9ccddbde4e5d8ba4e1f2c4cd9a264"
   },
   "inputs": [
     {
@@ -17264,6 +17272,138 @@
       "sha256": "1e4949a8e6dc2844f6c31fb21f994ce289ae9fcfd79f0086a8d86f5d90707fb0",
       "source": "sources/session-roster-player-selection-state/player_selection_state.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1319,
+      "kind": "independently_authored_source",
+      "object_name": "sce_mtap_init.o",
+      "profile": "authored_cpp",
+      "sha256": "21bf63ca98618315b048c45575dfb4e140356564da1466e2934268b5911d3a20",
+      "source": "sources/simloop-services-sce-mtap-init/sce_mtap_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "bind_client",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "sceMtapInit",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1320,
+      "kind": "independently_authored_source",
+      "object_name": "sce_mtap_port_open.o",
+      "profile": "authored_cpp",
+      "sha256": "d6863328f9d91cd6c173f1ecf42eee3e86c7dac4a0c23257a394ef35648e9fad",
+      "source": "sources/simloop-services-sce-mtap-port-open/sce_mtap_port_open.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMtapPortOpen",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1321,
+      "kind": "independently_authored_source",
+      "object_name": "sce_pad_init.o",
+      "profile": "authored_cpp",
+      "sha256": "c6dd241b30ad9e3f87be7eb6d4701ef61293d1f60ab98cda857985ba49d06bfb",
+      "source": "sources/simloop-services-sce-pad-init/sce_pad_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadInit",
+          "compiled_body_bytes": 500
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1322,
+      "kind": "independently_authored_source",
+      "object_name": "sce_pad_port_open.o",
+      "profile": "authored_cpp",
+      "sha256": "7ba53de6656b151f6e0ece8f18032106834459a5133d61de0672c4063034b143",
+      "source": "sources/simloop-services-sce-pad-port-open/sce_pad_port_open.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadPortOpen",
+          "compiled_body_bytes": 716
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1323,
+      "kind": "independently_authored_source",
+      "object_name": "sound_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "ebea775b668fd8b7daeb82d757f67f526e3c5b539d00a0afd0a9d9d5b26c86fc",
+      "source": "sources/simloop-services-sound-frame/sound_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundFrame__Fv",
+          "compiled_body_bytes": 808
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1324,
+      "kind": "independently_authored_source",
+      "object_name": "sound_play_sequence.o",
+      "profile": "authored_cpp",
+      "sha256": "bd01476c475778e2ea9cfe90c2c9fd7d3a80ee03ee41ba5761d4568221589884",
+      "source": "sources/simloop-services-sound-play-sequence/sound_play_sequence.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundPlaySequence__FP15AnimationHeaderP10GameObjectf",
+          "compiled_body_bytes": 616
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1325,
+      "kind": "independently_authored_source",
+      "object_name": "sound_play_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "5eb8c22443bc42bcf4f50399edce820013e02125e1f618f1b8acf69a908ad101",
+      "source": "sources/simloop-services-sound-play-sound/sound_play_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "point_at",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "append_command",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "soundPlaySound__FP10_vagHeaderP6Point3fff",
+          "compiled_body_bytes": 1848
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1326,
+      "kind": "independently_authored_source",
+      "object_name": "sound_compute_sequence_length.o",
+      "profile": "authored_cpp",
+      "sha256": "6f514598a587cfc83a9f0fe7bead4ebfd3a9ccddbde4e5d8ba4e1f2c4cd9a264",
+      "source": "sources/simloop-services-sound-sequence-length/sound_compute_sequence_length.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundComputeSequenceLength__FP15AnimationHeader",
+          "compiled_body_bytes": 368
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -17363,7 +17503,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "da2dceece07ed393c9e928ca342c1284144b7733f4b16cfc46b52dbcd970d91e",
+  "snapshot_sha256": "919572ea8c008d9d92c5092c0cec7bae7cf6c25208c5bb5e3761015f417be9fa",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

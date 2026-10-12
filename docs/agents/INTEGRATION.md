@@ -2133,6 +2133,57 @@ Opened: `abilityTable`, `fadeIconY`, `fadeTimer`, `firstTime`, `init__Fv`,
 `playerRecomputeAbilityModifiers__Fv`, `playerSelectionTask__Fv`,
 `recievePacket__FiPUc`, `setupDefaultEquipment__Fi`.
 
+## agents/simloop-services closing pass
+
+Merged (the branch notes carry the five summary sections; the first merge in
+this log had only a partial package). Twelve units were new since the first
+merge; eight were selected with fresh `input_order` values 1317 through 1324
+(11 functions including the three file-local helpers `bind_client`,
+`point_at`, `append_command`; 5764 body bytes). Four were **not** selected:
+`pad-dma-buffer`, `pad-mtap-state`, `sound-music-state` and
+`sound-stream-records` are data-only units with no host check at all, and the
+snapshot checker requires host files for every selected package record, so
+they stay in the source snapshot, unselected, until each has a check that can
+fail. Skipping them is why `scePadInit` and the multitap init now leave the
+`norrath_libpad_*` and `norrath_libmtap_*` view words open (the 11 view names
+below). Host checks: 15 of 19 exit 0 here. `cdProcess`, `soundMapSound`
+(accepted at the first merge for the same reason), and the new
+`soundPlaySequence` and `soundComputeSequenceLength` checks segfault on this
+64-bit machine because the harnesses assume 32-bit addressable pointers; a
+32-bit-pointer run (arm64 pagezero shrink, x86_64 under Rosetta) did not work
+here either, so those two new functions are only compiled, not host-tested,
+on this machine. The worker's private trial counts are not the official ones.
+1051 function bodies, 1325 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1201 |
+| After | 1227 |
+| Closed | 8 |
+| Opened | 34 |
+
+Closed: `sceMtapInit`, `sceMtapPortOpen`, `scePadInit`, `scePadPortOpen`,
+`soundComputeSequenceLength__FP15AnimationHeader`, `soundFrame__Fv`,
+`soundPlaySequence__FP15AnimationHeaderP10GameObjectf`,
+`soundPlaySound__FP10_vagHeaderP6Point3fff`.
+
+Opened: `DPRINT`, `batchBuffer`, `delaySoundList`, `disableSoundPlaying`,
+`findChannel__Fv`, `listOnewayLink__FP8ListHeadT0Pv`, `nmBatchCommands`,
+`norrath_libmtap_change_priority_client_view`,
+`norrath_libmtap_get_connection_client_view`,
+`norrath_libmtap_module_version_client_view`,
+`norrath_libmtap_port_close_client_view`,
+`norrath_libmtap_port_open_client_view`, `norrath_libmtap_rpc_buffer_view`,
+`norrath_libpad_dma_info_view`, `norrath_libpad_is_init_word`,
+`norrath_libpad_is_warning_word`, `norrath_libpad_port_info_view`,
+`norrath_libpad_rpc_buffer_view`, `norrath_libpad_rpc_clients_view`,
+`pan__FG6Point3ffPfT3`, `pauseProcess__Fv`, `runAmbient__Fv`,
+`runMusicDucking__Fv`, `runScreaming__Fv`, `runSequences__Fv`,
+`sceMtapGetModVersion`, `scePadGetModVersion`, `scePadInit2`, `sceSdRemote`,
+`sequenceInProgress`, `sequenceVolume`, `soundChangeVolume__Fiff`,
+`soundFlushCommandBuffer__Fv`, `soundFrameNm`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
