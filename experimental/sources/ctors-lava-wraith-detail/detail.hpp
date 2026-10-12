@@ -136,6 +136,14 @@ extern unsigned char norrath_ctors_lava_wraith_view_486120[];
 extern unsigned char norrath_ctors_lava_wraith_view_486128[];
 extern unsigned char norrath_ctors_lava_wraith_view_486130[];
 unsigned norrath_construct_StaticFire(void* object, const void* point, short type, char** arguments);
+float norrath_integer_sine(int angle);
+float norrath_integer_cosine(int angle);
+// Original worldHitscan__FP12_worldHeaderG6Point3T1fi at 0x17b7e0. Not defined here.
+float norrath_world_hitscan(void* world, const void* from, const void* direction, float distance, int mode);
+extern unsigned char norrath_ctors_lava_wraith_view_449c20[];
+extern unsigned char norrath_ctors_lava_wraith_view_485330[];
+extern unsigned char norrath_ctors_lava_wraith_view_470358[];
+unsigned norrath_construct_WebTrap(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
