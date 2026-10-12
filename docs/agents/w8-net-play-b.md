@@ -52,18 +52,24 @@ Beyond that, every function (except the four storage units) was compared against
 
 | Function | Scenarios | Mismatches | Original instructions reached |
 |---|---|---|---|
-| `netStartLevel`, `netStart` | 7 | 0 | all |
-| `netPlayerIsConnected`, `netDisconnectPlayer` | 864 each | 0 | all |
-| `netClearContact`, `netInContact` | 144 each | 0 | all |
-| `playerClearSpellEffect`, `netRestoreButtonConfigs` | 6, 1 | 0 | all |
-| `netKickPlayer` | 576 | 0 | all |
-| `netWaitForPeersToCatchUp` | 240 | 0 | all |
-| `netInit` | 162 | 0 | all |
-| `netStartNetworkGameFrame` | 1500 | 0 | all |
-| `netStartNetworkGameInit` | 600 | 0 (after the delay-slot fix) | all |
-| `norrath_player_proxy_mesh_id` | 400 | 0 | all |
-| `netGameStep` | about 3400 over three scenario families | 0 | all but the alignment-fallback struct copy and padding |
-| `netDoNewLaunch` | 3500 + 1500 | 0 | 1810 of 2016 (the rest are alignment-fallback copies, branch delay slots that cannot run, and padding) |
+| `netStartLevel` | 3 | 0 | 2 of 2 |
+| `netStart` | 4 | 0 | 15 of 15 |
+| `netPlayerIsConnected` | 864 | 0 | 15 of 15 |
+| `netDisconnectPlayer` | 864 | 0 | 11 of 11 |
+| `netClearContact` | 144 | 0 | 15 of 15 |
+| `netInContact` | 144 | 0 | 27 of 27 |
+| `playerClearSpellEffect` | 6 | 0 | 26 of 26 |
+| `netRestoreButtonConfigs` | 1 | 0 | 75 of 75 |
+| `netKickPlayer` | 576 | 0 | 46 of 46 |
+| `netWaitForPeersToCatchUp` | 240 | 0 | 44 of 45 (the other is padding) |
+| `netInit` | 162 | 0 | 310 of 407 (the rest are alignment fallbacks) |
+| `netStartNetworkGameFrame` | 1500 | 0 | 336 of 409 (the rest are alignment fallbacks) |
+| `netStartNetworkGameInit` | 600 (0 mismatches after the delay-slot fix) | 0 | 445 of 447 (padding) |
+| `norrath_player_proxy_mesh_id` | 400 | 0 | 17 of 17 |
+| `netGameStep` | 2300 in three families (normal, forced send, kick state 2) | 0 | 1367 + 1234 reached across families; every reachable instruction hit except the alignment fallback of the pad-record copy and padding |
+| `netDoNewLaunch` | 3500 + 1500 | 0 | 1810 of 2016 in the first run (the rest are alignment fallbacks of struct copies, branch delay slots that cannot run, and padding), plus the second run reached the second join packet |
+
+"Alignment fallback" means the image copies large structures with a runtime test of the source and destination alignment and an unaligned path; all objects here are aligned, so that path never runs and was not exercised. Because the compiler used for the authored code copies structures inline too, the same difference cannot be observed from the outside.
 
 The interpreter, the fake callees and the fixtures are not equivalent to hardware: timing, exceptions, the real callees, physical frame behaviour and the EE's floating point rounding beyond what the instructions used here need are not covered. In the paired runs, bytes the image leaves uninitialised on the stack (the 512-byte tail of each datagram, and the ring entry word at +16 in `netGameStep`) are excluded or not compared.
 
