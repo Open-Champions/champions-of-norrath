@@ -286,11 +286,14 @@ def sc_wake(rng):
 
 def sc_sleep(rng):
     mem = new_object(rng)
-    put32(mem, OBJ + 12, rng.choice([0, 0x20, 0x40, 0x60, 0xFFFFFFFF, 0xFFFFFFDF, 0x2000020, 0x20]))
-    mem[OBJ + 570] = rng.choice([0, 0, 0x10, 0xFF, 0x01, 0x80])
-    put32(mem, OBJ + 572, rng.choice([10, 9, 11, 0x1000A, 0, 0xFFFF000A]))
+    objs = [OBJ, OTHER, OTHER + 0x100]
     vtable(rng, mem, {184: (VSTUB, rng.choice([0, 8, -8, 0x70]))})
-    return {'mem': mem, 'args': [OBJ], 'compare': whole_object(),
+    for o in objs:
+        put32(mem, o + 12, rng.choice([0, 0x20, 0x20, 0x40, 0x60, 0xFFFFFFFF, 0xFFFFFFDF, 0x2000020]))
+        mem[o + 570] = rng.choice([0, 0, 0, 0x10, 0xFF, 0x01, 0x80])
+        put32(mem, o + 572, rng.choice([10, 9, 11, 0x1000A, 0, 0xFFFF000A, 0x7FFF000A]))
+        put32(mem, o + 72, VT)
+    return {'mem': mem, 'args': [], 'compare': whole_object(), 'iterate': objs,
             'vstubs': {VSTUB: ('virt184', ['o', 'i'], None)}}
 
 
@@ -327,6 +330,10 @@ RUNLIST = ('objectAddToRunList__FP10GameObject', ['o'], ('i', [0, 1, 0x30001234,
 
 reg('wakeMonsters__8creaturev', 'w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp', sc_wake,
     {'objectIterateRunLists__FPFP10GameObject_v': ('iterate', None)})
+
+reg('sleepMonsters__8creaturev', 'w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp', sc_sleep,
+    {'objectIterateRunLists__FPFP10GameObject_v': ('iterate', None),
+     'listDestroy__FP8ListHead': (['o'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
