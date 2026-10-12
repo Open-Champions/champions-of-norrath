@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1371,
+  "default_authored_inputs": 1457,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2087,7 +2087,114 @@
     "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417",
     "sources/frontend-shell-words/front_end_words.cpp": "9b4d9ff91e2afeba955256b53be42cae13814abb84632d406a572c449039a690",
     "sources/frontend-shell-run/run_locals.cpp": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
-    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373"
+    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373",
+    "sources/loop-grid-fx-find-list/find_list.cpp": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+    "sources/loop-grid-fx-find-first/find_first.cpp": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+    "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+    "sources/loop-grid-fx-find-in-box/find_in_box.cpp": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+    "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+    "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+    "sources/loop-grid-fx-remove-string/remove_string.cpp": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+    "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+    "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+    "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+    "sources/loop-grid-fx-light-add/light_add.cpp": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+    "sources/loop-grid-fx-has-number/has_number.cpp": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+    "sources/loop-grid-fx-p-clear/p_clear.cpp": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+    "sources/loop-grid-fx-add-particle/add_particle.cpp": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+    "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+    "sources/loop-grid-fx-p-update/p_update.cpp": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+    "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+    "sources/loop-grid-fx-script-particles/script_particles.cpp": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+    "sources/loop-grid-fx-fx-dust/fx_dust.cpp": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+    "sources/loop-grid-fx-task-list/task_list.cpp": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+    "sources/loop-grid-fx-particle-storage/particle_storage.cpp": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+    "sources/combat-reactions-alert-game-object/alert.cpp": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+    "sources/combat-reactions-charm/charm.cpp": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+    "sources/combat-reactions-bytes/bytes.hpp": "3c483121a898b452c5e0e420d5702f67618768a16cd45a9d30914533a51e35d6",
+    "sources/combat-reactions-collision-frame/frame.cpp": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+    "sources/combat-reactions-collision-game-object/collision.cpp": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+    "sources/combat-reactions-collision-gold/collision_gold.cpp": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+    "sources/combat-reactions-collision-grid-scale/grid_scale.cpp": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+    "sources/combat-reactions-collision-world/collision_world.cpp": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+    "sources/combat-reactions-hurt-game-object/hurt.cpp": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+    "sources/combat-reactions-set-state-cat/set_state_cat.cpp": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+    "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+    "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+    "sources/combat-reactions-set-state-spider/set_state_spider.cpp": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+    "sources/combat-reactions-spell-blessed-type-name/type_name.cpp": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+    "sources/combat-reactions-spell-type-name/type_name.cpp": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+    "sources/combat-reactions-update-enemy/update_enemy.cpp": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+    "sources/actor-view-tables-views/norrath_actor_view_50bfd0.cpp": "b7414b6eac64a39782f9dd35aeb475cedf1bd8bc48f6e8ed477fea3c94640fda",
+    "sources/actor-view-tables-views/norrath_actors_a_view_449790.cpp": "b6fd080766cd3ff3e2d7d1a2ab3e5401c22187a7c436e4892efdadcb19e80335",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4498b0.cpp": "3558ec27974159f000632a92c8d20a83c0e22e52d12d6dc8fcbc4bdec2459ee7",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4499d8.cpp": "04c431c3f2833a61bbc5fd1f26d40b0cb8c787caff9a05d5f8f06b32c9d8f91b",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44a930.cpp": "dbdbed6c7bd8eb99bb99917dde96db8ad1123dc7895412301f8594dc71af1caf",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44a9c0.cpp": "85e5ae5b3aeebeb16a57b89626d139f5effe4a026f6e2ca1032c21fa65d6e006",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44c830.cpp": "3412afd1f1bd7c4cf5b56b47b304d483ea7304f5500a80b5292ece290fb2f0a3",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44f1f8.cpp": "bce1f82294bac041ab65e55db992035c7bb73176fa3cc300d50094cef289522f",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44f2a0.cpp": "ae3ce0d2c0bcbda5f7b42cfc36ec84f60afc1d96860f9065b90786b214c2a489",
+    "sources/actor-view-tables-views/norrath_actors_a_view_470830.cpp": "44777c8c365704f680b0e4919c307468dddb6d29f30f228c9d9fa911c8def1c1",
+    "sources/actor-view-tables-views/norrath_actors_a_view_471310.cpp": "f953a36f85401df6c27ca2ca6907be821bccd09ba07e6123a1f2ab71326de264",
+    "sources/actor-view-tables-views/norrath_actors_a_view_477758.cpp": "0e3286e532fc612b5380b1705b95736328d5a9aa8acde64d496e624db4ef86d6",
+    "sources/actor-view-tables-views/norrath_actors_a_view_481980.cpp": "9ec5d82b1301dedc962b5b38c92a3dc9bd2dbcc19b7b43a3dbfbd7b8e6ee33cf",
+    "sources/actor-view-tables-views/norrath_actors_a_view_483e5c.cpp": "8d1bf67cb747cf0593ce495edc1d8c47fd53d8b6b8e4908604d9ad67aead2dfc",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485360.cpp": "cac77923bb7b226283bdd455eba2fb8a7354a1f154f9e91de78851c16434ef64",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp": "d3ae0093990abff6d9915e1636b39a24822833a83333e9132b921518b1de41a7",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp": "5457ec4c7204b02042cd96fbcc11dc494f639a161f1a068c27b6b28269c62c03",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp": "4dff148551f7a46f1bcc2b79ea11b1aa24b9c5bd695a32dbabdacaad993e6547",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
+    "sources/level-anim-load-anim-add/anim_add.cpp": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+    "sources/level-anim-load-common/mem.hpp": "387f4fd04cd4045a881f8e6b4072af795a917855c23ce1dc37ec5d3b5f2a3e31",
+    "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+    "sources/level-anim-load-anim-init-state/anim_init_state.cpp": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+    "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+    "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+    "sources/level-anim-load-cd-state/storage.cpp": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+    "sources/level-anim-load-cd-state/storage.hpp": "2d2b4ba2d61f5212a6b350827bf99615b1d5babbbe19b9cc623153912e075f6a",
+    "sources/level-anim-load-cut-current-scene/storage.cpp": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+    "sources/level-anim-load-cut-current-scene/storage.hpp": "eb70e07c2f69ddd6c5bf0b49463aeab59a9f198452393ca25be7dd477d2b54c8",
+    "sources/level-anim-load-cut-init/storage.cpp": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+    "sources/level-anim-load-cut-init/storage.hpp": "fb5c66206524fe28de04bd7eba334ffb278ad73e26eb5ddffb2776b647bab466",
+    "sources/level-anim-load-cut-msg-handler/storage.cpp": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+    "sources/level-anim-load-cut-msg-handler/storage.hpp": "6fae00157c28b20b19d7433c61c471a4293678ea918bfbcb05c549ab80d496fe",
+    "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+    "sources/level-anim-load-cut-play-mode/storage.cpp": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+    "sources/level-anim-load-cut-play-mode/storage.hpp": "4cd9c3fea5a0a2a6aa10fc79e1abbff48871b9b1a3d3297c4d4ddd086ef72a24",
+    "sources/level-anim-load-cut-scene-name/storage.cpp": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+    "sources/level-anim-load-cut-scene-name/storage.hpp": "8953fb96afab10e5acbdbd446ee95a5577cd101e84408ede9fe5e50d8f4e3176",
+    "sources/level-anim-load-cut-skip-mode/storage.cpp": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+    "sources/level-anim-load-cut-skip-mode/storage.hpp": "fa1dfa60280bd7654fc31f84acd98f331c5c6d61bfb243aaec61ac8366ea4aa6",
+    "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+    "sources/level-anim-load-cut-time/storage.cpp": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+    "sources/level-anim-load-cut-time/storage.hpp": "ceda0c3cea11a5ce02efd5aa28b8a9453e932a09e97e1249f1649f72c9c20e13",
+    "sources/level-anim-load-dialog-actor/storage.cpp": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+    "sources/level-anim-load-dialog-actor/storage.hpp": "5826553953ecb9be86c8fab99631d5f3e64ef5709b93251a160858d86d640478",
+    "sources/level-anim-load-display-action-pos/storage.cpp": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+    "sources/level-anim-load-display-action-pos/storage.hpp": "c843fd31dba4e3187cd52297b5e7ad953ab1356311bd16dc6a26eab16f68ab72",
+    "sources/level-anim-load-display-cut-pos/storage.cpp": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+    "sources/level-anim-load-display-cut-pos/storage.hpp": "4a6ae77cda114247d6b4362ebcdb50e75933db50fa409b07d3ab23c0ecbc095a",
+    "sources/level-anim-load-display-frame/storage.cpp": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+    "sources/level-anim-load-display-frame/storage.hpp": "13dd92e267d9d92161c198c6f357770c6f634ad177ebff00b967bdf7f1bea079",
+    "sources/level-anim-load-find-height-scale/storage.cpp": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+    "sources/level-anim-load-find-height-scale/storage.hpp": "3070e769f32123312ef9d1d768736613ae32fd41315fb7f09d8af8e98635f7e0",
+    "sources/level-anim-load-forbidden-scale/storage.cpp": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+    "sources/level-anim-load-forbidden-scale/storage.hpp": "fbc870dbb1333e34da32f09221cfb9726abcfcec28e1bcde66acab2f95010bf6",
+    "sources/level-anim-load-lump-find/lump_find.cpp": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+    "sources/level-anim-load-monster-spawn/monster_spawn.cpp": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+    "sources/level-anim-load-music-size/storage.cpp": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+    "sources/level-anim-load-music-size/storage.hpp": "d928af1bdfe29d783ee0091c2746778d597cc2eea2ecb36f725ac37685e4140c",
+    "sources/level-anim-load-net-nm-ready/storage.cpp": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+    "sources/level-anim-load-net-nm-ready/storage.hpp": "4e3249194e09b0ec328f96538a278bdd23eb2ad82cc07d2576831b7a6eec01d9",
+    "sources/level-anim-load-net-we-sent-ready/storage.cpp": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+    "sources/level-anim-load-net-we-sent-ready/storage.hpp": "e4be98540c128f9c3787fb31d9a2e956db8b8c2b86f98a8880d65db656038ca0",
+    "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+    "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+    "sources/level-anim-load-swap-int/swap_int.cpp": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+    "sources/level-anim-load-world-flags-word/storage.cpp": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+    "sources/level-anim-load-world-flags-word/storage.hpp": "d03b361b4224c4073d84b68b95bd929135262b29a62c1d45b90257ab47b94efa",
+    "sources/level-anim-load-world-pointer-word/storage.cpp": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+    "sources/level-anim-load-world-pointer-word/storage.hpp": "2cade5859b88f4436d8b092d388a8eb7f813138bb940baa1540674a0917b8308"
   },
   "inputs": [
     {
@@ -18035,6 +18142,1149 @@
           "compiled_body_bytes": 7060
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1373,
+      "kind": "independently_authored_source",
+      "object_name": "find_list.o",
+      "profile": "authored_cpp",
+      "sha256": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1374,
+      "kind": "independently_authored_source",
+      "object_name": "find_first.o",
+      "profile": "authored_cpp",
+      "sha256": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1375,
+      "kind": "independently_authored_source",
+      "object_name": "find_tag_string.o",
+      "profile": "authored_cpp",
+      "sha256": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1376,
+      "kind": "independently_authored_source",
+      "object_name": "find_in_box.o",
+      "profile": "authored_cpp",
+      "sha256": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1377,
+      "kind": "independently_authored_source",
+      "object_name": "update_in_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1378,
+      "kind": "independently_authored_source",
+      "object_name": "iterate_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1379,
+      "kind": "independently_authored_source",
+      "object_name": "remove_string.o",
+      "profile": "authored_cpp",
+      "sha256": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1380,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_delete_list.o",
+      "profile": "authored_cpp",
+      "sha256": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1381,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_medium_run_list.o",
+      "profile": "authored_cpp",
+      "sha256": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1382,
+      "kind": "independently_authored_source",
+      "object_name": "list_head_copy.o",
+      "profile": "authored_cpp",
+      "sha256": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1383,
+      "kind": "independently_authored_source",
+      "object_name": "light_add.o",
+      "profile": "authored_cpp",
+      "sha256": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1384,
+      "kind": "independently_authored_source",
+      "object_name": "has_number.o",
+      "profile": "authored_cpp",
+      "sha256": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1385,
+      "kind": "independently_authored_source",
+      "object_name": "p_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1386,
+      "kind": "independently_authored_source",
+      "object_name": "add_particle.o",
+      "profile": "authored_cpp",
+      "sha256": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1387,
+      "kind": "independently_authored_source",
+      "object_name": "update_particle_type.o",
+      "profile": "authored_cpp",
+      "sha256": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1388,
+      "kind": "independently_authored_source",
+      "object_name": "p_update.o",
+      "profile": "authored_cpp",
+      "sha256": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1389,
+      "kind": "independently_authored_source",
+      "object_name": "emitter_tag.o",
+      "profile": "authored_cpp",
+      "sha256": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1390,
+      "kind": "independently_authored_source",
+      "object_name": "script_particles.o",
+      "profile": "authored_cpp",
+      "sha256": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1391,
+      "kind": "independently_authored_source",
+      "object_name": "fx_dust.o",
+      "profile": "authored_cpp",
+      "sha256": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1392,
+      "kind": "independently_authored_source",
+      "object_name": "task_list.o",
+      "profile": "authored_cpp",
+      "sha256": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1393,
+      "kind": "independently_authored_source",
+      "object_name": "particle_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1394,
+      "kind": "independently_authored_source",
+      "object_name": "alert.o",
+      "profile": "authored_cpp",
+      "sha256": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+      "source": "sources/combat-reactions-alert-game-object/alert.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__10GameObjectifG6Point3P10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1395,
+      "kind": "independently_authored_source",
+      "object_name": "charm.o",
+      "profile": "authored_cpp",
+      "sha256": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+      "source": "sources/combat-reactions-charm/charm.cpp",
+      "emitted_functions": [
+        {
+          "name": "charm__8Creaturei",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1396,
+      "kind": "independently_authored_source",
+      "object_name": "frame.o",
+      "profile": "authored_cpp",
+      "sha256": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+      "source": "sources/combat-reactions-collision-frame/frame.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1397,
+      "kind": "independently_authored_source",
+      "object_name": "collision.o",
+      "profile": "authored_cpp",
+      "sha256": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+      "source": "sources/combat-reactions-collision-game-object/collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__10GameObjectP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1398,
+      "kind": "independently_authored_source",
+      "object_name": "collision_gold.o",
+      "profile": "authored_cpp",
+      "sha256": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+      "source": "sources/combat-reactions-collision-gold/collision_gold.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__4GoldP10GameObject",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1399,
+      "kind": "independently_authored_source",
+      "object_name": "grid_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+      "source": "sources/combat-reactions-collision-grid-scale/grid_scale.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1400,
+      "kind": "independently_authored_source",
+      "object_name": "collision_world.o",
+      "profile": "authored_cpp",
+      "sha256": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+      "source": "sources/combat-reactions-collision-world/collision_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collisionWorld__10GameObjectG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1401,
+      "kind": "independently_authored_source",
+      "object_name": "hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+      "source": "sources/combat-reactions-hurt-game-object/hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10GameObjectfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1402,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_cat.o",
+      "profile": "authored_cpp",
+      "sha256": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+      "source": "sources/combat-reactions-set-state-cat/set_state_cat.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__3Cati",
+          "compiled_body_bytes": 1028
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1403,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_gnome.o",
+      "profile": "authored_cpp",
+      "sha256": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+      "source": "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__14GnomeNavigatori",
+          "compiled_body_bytes": 836
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1404,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_mermaid.o",
+      "profile": "authored_cpp",
+      "sha256": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+      "source": "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__7Mermaidi",
+          "compiled_body_bytes": 644
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1405,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_spider.o",
+      "profile": "authored_cpp",
+      "sha256": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+      "source": "sources/combat-reactions-set-state-spider/set_state_spider.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__11SmallSpideri",
+          "compiled_body_bytes": 832
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1406,
+      "kind": "independently_authored_source",
+      "object_name": "type_name.o",
+      "profile": "authored_cpp",
+      "sha256": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+      "source": "sources/combat-reactions-spell-blessed-type-name/type_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1407,
+      "kind": "independently_authored_source",
+      "object_name": "type_name.o",
+      "profile": "authored_cpp",
+      "sha256": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+      "source": "sources/combat-reactions-spell-type-name/type_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/combat-reactions-bytes/bytes.hpp"
+      ],
+      "input_order": 1408,
+      "kind": "independently_authored_source",
+      "object_name": "update_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+      "source": "sources/combat-reactions-update-enemy/update_enemy.cpp",
+      "emitted_functions": [
+        {
+          "name": "updateEnemy__8Creature",
+          "compiled_body_bytes": 3568
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1409,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actor_view_50bfd0.o",
+      "profile": "authored_cpp",
+      "sha256": "b7414b6eac64a39782f9dd35aeb475cedf1bd8bc48f6e8ed477fea3c94640fda",
+      "source": "sources/actor-view-tables-views/norrath_actor_view_50bfd0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1410,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_449790.o",
+      "profile": "authored_cpp",
+      "sha256": "b6fd080766cd3ff3e2d7d1a2ab3e5401c22187a7c436e4892efdadcb19e80335",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_449790.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1411,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_4498b0.o",
+      "profile": "authored_cpp",
+      "sha256": "3558ec27974159f000632a92c8d20a83c0e22e52d12d6dc8fcbc4bdec2459ee7",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4498b0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1412,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_4499d8.o",
+      "profile": "authored_cpp",
+      "sha256": "04c431c3f2833a61bbc5fd1f26d40b0cb8c787caff9a05d5f8f06b32c9d8f91b",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4499d8.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1413,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44a930.o",
+      "profile": "authored_cpp",
+      "sha256": "dbdbed6c7bd8eb99bb99917dde96db8ad1123dc7895412301f8594dc71af1caf",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a930.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1414,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44a9c0.o",
+      "profile": "authored_cpp",
+      "sha256": "85e5ae5b3aeebeb16a57b89626d139f5effe4a026f6e2ca1032c21fa65d6e006",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a9c0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1415,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44c830.o",
+      "profile": "authored_cpp",
+      "sha256": "3412afd1f1bd7c4cf5b56b47b304d483ea7304f5500a80b5292ece290fb2f0a3",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44c830.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1416,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44f1f8.o",
+      "profile": "authored_cpp",
+      "sha256": "bce1f82294bac041ab65e55db992035c7bb73176fa3cc300d50094cef289522f",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f1f8.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1417,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_44f2a0.o",
+      "profile": "authored_cpp",
+      "sha256": "ae3ce0d2c0bcbda5f7b42cfc36ec84f60afc1d96860f9065b90786b214c2a489",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f2a0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1418,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_470830.o",
+      "profile": "authored_cpp",
+      "sha256": "44777c8c365704f680b0e4919c307468dddb6d29f30f228c9d9fa911c8def1c1",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_470830.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1419,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_471310.o",
+      "profile": "authored_cpp",
+      "sha256": "f953a36f85401df6c27ca2ca6907be821bccd09ba07e6123a1f2ab71326de264",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_471310.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1420,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_477758.o",
+      "profile": "authored_cpp",
+      "sha256": "0e3286e532fc612b5380b1705b95736328d5a9aa8acde64d496e624db4ef86d6",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_477758.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1421,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_481980.o",
+      "profile": "authored_cpp",
+      "sha256": "9ec5d82b1301dedc962b5b38c92a3dc9bd2dbcc19b7b43a3dbfbd7b8e6ee33cf",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_481980.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1422,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_483e5c.o",
+      "profile": "authored_cpp",
+      "sha256": "8d1bf67cb747cf0593ce495edc1d8c47fd53d8b6b8e4908604d9ad67aead2dfc",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_483e5c.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1423,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_485360.o",
+      "profile": "authored_cpp",
+      "sha256": "cac77923bb7b226283bdd455eba2fb8a7354a1f154f9e91de78851c16434ef64",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485360.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1424,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_485400.o",
+      "profile": "authored_cpp",
+      "sha256": "d3ae0093990abff6d9915e1636b39a24822833a83333e9132b921518b1de41a7",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1425,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_485408.o",
+      "profile": "authored_cpp",
+      "sha256": "5457ec4c7204b02042cd96fbcc11dc494f639a161f1a068c27b6b28269c62c03",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1426,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_4860b8.o",
+      "profile": "authored_cpp",
+      "sha256": "4dff148551f7a46f1bcc2b79ea11b1aa24b9c5bd695a32dbabdacaad993e6547",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1427,
+      "kind": "independently_authored_source",
+      "object_name": "norrath_actors_a_view_4860c0.o",
+      "profile": "authored_cpp",
+      "sha256": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1428,
+      "kind": "independently_authored_source",
+      "object_name": "anim_add.o",
+      "profile": "authored_cpp",
+      "sha256": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+      "source": "sources/level-anim-load-anim-add/anim_add.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAdd__FP14AnimationStateP15AnimationHeaderi",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1429,
+      "kind": "independently_authored_source",
+      "object_name": "anim_add_transition_to.o",
+      "profile": "authored_cpp",
+      "sha256": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+      "source": "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1430,
+      "kind": "independently_authored_source",
+      "object_name": "anim_init_state.o",
+      "profile": "authored_cpp",
+      "sha256": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+      "source": "sources/level-anim-load-anim-init-state/anim_init_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "animInitState__FP14AnimationState",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1431,
+      "kind": "independently_authored_source",
+      "object_name": "anim_reset_framestates.o",
+      "profile": "authored_cpp",
+      "sha256": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+      "source": "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp",
+      "emitted_functions": [
+        {
+          "name": "animResetFramestates__FP14AnimationState",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1432,
+      "kind": "independently_authored_source",
+      "object_name": "anim_set_to_end.o",
+      "profile": "authored_cpp",
+      "sha256": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+      "source": "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "animSetToEnd__FP14AnimationState",
+          "compiled_body_bytes": 440
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cd-state/storage.hpp"
+      ],
+      "input_order": 1433,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+      "source": "sources/level-anim-load-cd-state/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-current-scene/storage.hpp"
+      ],
+      "input_order": 1434,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+      "source": "sources/level-anim-load-cut-current-scene/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-init/storage.hpp"
+      ],
+      "input_order": 1435,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+      "source": "sources/level-anim-load-cut-init/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-msg-handler/storage.hpp"
+      ],
+      "input_order": 1436,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+      "source": "sources/level-anim-load-cut-msg-handler/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1437,
+      "kind": "independently_authored_source",
+      "object_name": "cut_msg_handler_function.o",
+      "profile": "authored_cpp",
+      "sha256": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+      "source": "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutMsgHandlerFunction__FPUci",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-play-mode/storage.hpp"
+      ],
+      "input_order": 1438,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+      "source": "sources/level-anim-load-cut-play-mode/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-scene-name/storage.hpp"
+      ],
+      "input_order": 1439,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+      "source": "sources/level-anim-load-cut-scene-name/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-skip-mode/storage.hpp"
+      ],
+      "input_order": 1440,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+      "source": "sources/level-anim-load-cut-skip-mode/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1441,
+      "kind": "independently_authored_source",
+      "object_name": "cut_start_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+      "source": "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp",
+      "emitted_functions": [
+        {
+          "name": "cutStartScene__FP9_cutscenePc",
+          "compiled_body_bytes": 384
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-cut-time/storage.hpp"
+      ],
+      "input_order": 1442,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+      "source": "sources/level-anim-load-cut-time/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-dialog-actor/storage.hpp"
+      ],
+      "input_order": 1443,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+      "source": "sources/level-anim-load-dialog-actor/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-action-pos/storage.hpp"
+      ],
+      "input_order": 1444,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+      "source": "sources/level-anim-load-display-action-pos/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-cut-pos/storage.hpp"
+      ],
+      "input_order": 1445,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+      "source": "sources/level-anim-load-display-cut-pos/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-display-frame/storage.hpp"
+      ],
+      "input_order": 1446,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+      "source": "sources/level-anim-load-display-frame/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-find-height-scale/storage.hpp"
+      ],
+      "input_order": 1447,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+      "source": "sources/level-anim-load-find-height-scale/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-forbidden-scale/storage.hpp"
+      ],
+      "input_order": 1448,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+      "source": "sources/level-anim-load-forbidden-scale/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1449,
+      "kind": "independently_authored_source",
+      "object_name": "lump_find.o",
+      "profile": "authored_cpp",
+      "sha256": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+      "source": "sources/level-anim-load-lump-find/lump_find.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpFind__FPvPc",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1450,
+      "kind": "independently_authored_source",
+      "object_name": "monster_spawn.o",
+      "profile": "authored_cpp",
+      "sha256": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+      "source": "sources/level-anim-load-monster-spawn/monster_spawn.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_monster_spawn",
+          "compiled_body_bytes": 2812
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-music-size/storage.hpp"
+      ],
+      "input_order": 1451,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+      "source": "sources/level-anim-load-music-size/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-net-nm-ready/storage.hpp"
+      ],
+      "input_order": 1452,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+      "source": "sources/level-anim-load-net-nm-ready/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-net-we-sent-ready/storage.hpp"
+      ],
+      "input_order": 1453,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+      "source": "sources/level-anim-load-net-we-sent-ready/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1454,
+      "kind": "independently_authored_source",
+      "object_name": "route_unroll_vnode.o",
+      "profile": "authored_cpp",
+      "sha256": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+      "source": "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_unroll_vnode",
+          "compiled_body_bytes": 444
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 1455,
+      "kind": "independently_authored_source",
+      "object_name": "sound_free_ram.o",
+      "profile": "authored_cpp",
+      "sha256": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+      "source": "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_sound_free_ram",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1456,
+      "kind": "independently_authored_source",
+      "object_name": "swap_int.o",
+      "profile": "authored_cpp",
+      "sha256": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+      "source": "sources/level-anim-load-swap-int/swap_int.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_swap_int",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-world-flags-word/storage.hpp"
+      ],
+      "input_order": 1457,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+      "source": "sources/level-anim-load-world-flags-word/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-world-pointer-word/storage.hpp"
+      ],
+      "input_order": 1458,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+      "source": "sources/level-anim-load-world-pointer-word/storage.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -18134,7 +19384,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a8606c3188641210675ea6b5856f23787c95f5ac9133cd2aa57074eaecaa6a43",
+  "snapshot_sha256": "6b28ed1c5d5f4b5e331f176026c48ef543a55e5275a7ae249130dc955873515d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -2183,6 +2183,34 @@ Opened: `DPRINT`, `batchBuffer`, `delaySoundList`, `disableSoundPlaying`,
 `sceMtapGetModVersion`, `scePadGetModVersion`, `scePadInit2`, `sceSdRemote`,
 `sequenceInProgress`, `sequenceVolume`, `soundChangeVolume__Fiff`,
 `soundFlushCommandBuffer__Fv`, `soundFrameNm`.
+## Open defect: agents/frontend-shell contract cannot fail
+
+This section was first written as a rejection of `agents/frontend-shell` at
+tip `940b753`. Another integrator merged and selected the package a few
+minutes later (the "agents/frontend-shell" entry above), so it is on the
+shared branch with the defect below unfixed. The finding stands.
+
+`experimental/sources/frontend-shell-run/host_contract.cpp` clears the shared
+`error` word at the top of `reset()`, and `main` calls `reset()` before each of
+its 45 scenarios. A failing `expect` in any scenario but the last is erased by
+the next `reset()`. Mutating `run_front_end.cpp` confirmed it: changing the
+title y coordinate from 36 to 37, the skipped-title menu number from 50 to 51,
+and the title x base from 320 to 321 all left the contract exiting 0, though
+checks 7 and 10 assert those values. With the `error = 0` line deleted from
+`reset()` the unmodified source passes all 45 outcomes, so the checks
+themselves look sound; the harness hides their failures. Until it is fixed,
+`runFrontEnd__Fv` is a function with no test that could fail in the sense of
+CONTRIBUTING and the repo rules. The words unit's `host_check.cpp` is sound.
+
+The contract was not edited here (it belongs to the worker's package). The
+one-line fix is to stop clearing `error` in `reset()`; the contract already
+prints and returns the first failing code. That the package was merged anyway
+is also a reason to read the worker's host contracts before trusting the
+"every committed function has a test" test: the vi-launcher contracts were
+checked by mutation and do catch changes; this one does not. The notes also
+record that `runFrontEnd` binds the original's `menu` and `menuNm` locals to
+the same-named globals of `dialog-hud-controls`; that aliasing still needs a
+decision.
 
 ## agents/kernel-patches
 
@@ -2269,6 +2297,250 @@ Opened: `commMenu`, `coreClearNetLogFuck`, `creditsText`, `curFocus`,
 `playerSelectStartPlayer`, `playerSelectSuccessful`, `setSRSInfo__Fv`,
 `soundClearStreamQue__Fi`, `startNetLaunch__Fv`, `statusPtr`,
 `stopCredits__Fv`, `textureSmoothBorder__FiiiiiUiiii`.
+
+## agents/loop-grid-fx
+
+Merged. The notes carry the five summary sections: per-symbol addresses with
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about half an hour. Twenty-one units, each with a
+`host_check.cpp` beside the source; the checks that read pointer words build
+with `-DNORRATH_HOST_CONTRACT`, which the EE build never defines. All 21
+passed on this machine with ASan/UBSan. A scripted mutation pass (one
+numeric literal changed at a time, up to ten per source) was killed by the
+contract in every unit that has literals (for example 10/10 `P_AddParticle`,
+10/10 `P_Clear`, 9/10 `norrath_light_add`, 8/10 `objectFindObject`, 3/10
+`norrath_object_remove_string`), so the checks can fail. No game binary or
+disassembly listing was committed.
+
+Twenty-one units were selected with fresh `input_order` values 1373 through
+1393; the five data units emit no functions. Their link has no duplicate
+definition. The notes' "duplicates" section is about name pairs, not link
+collisions, and stays open: `objectUpdateInGrid__FP10GameObject` and
+`norrath_object_update_in_grid`, `objectFindInBox__FG6Point3T0PP10GameObjecti`
+and `norrath_object_find_in_box`, and `norrath_object_add_to_medium_run_list`
+and `norrath_actor_add_medium_run_list` are each the same routine under two
+names in two packages. All are selected; callers still bind to one name.
+
+The worker's private trial (950 to 940 on an older tip) is not the official count. The
+closed list reproduces exactly.
+
+| | |
+|---|---|
+| Before | 1217 |
+| After | 1204 |
+| Closed | 20 |
+| Opened | 7 |
+
+Closed: `P_AddParticle__FP11ParticleDefP6Point3T1f`, `P_Clear__Fv`,
+`P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `P_Update__Fv`,
+`findTagString__10GameObjectPci`, `fxDust`,
+`norrath_factory_particle_emitter_tag_bytes`,
+`norrath_has_light_or_particle_number`, `norrath_light_add`,
+`norrath_list_head_copy_construct`, `norrath_object_add_to_delete_list`,
+`norrath_object_add_to_medium_run_list`, `norrath_object_remove_string`,
+`objectFindInBox__FG6Point3T0PP10GameObjecti`, `objectFindObject__FPc`,
+`objectFindObject__FPcPP10GameObjecti`, `objectIterateGrid__FPFP10GameObject_v`,
+`objectUpdateInGrid__FP10GameObject`, `scriptParticles`, `taskList`.
+
+Opened: `P_DeleteParticleSystem__Fi`, `P_Pop__Fv`,
+`checkCanAllocDescriptor__Fv`, `frameNumWrapped__Fv`,
+`setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`updatePS__FP14ParticleSystem`, `updateTrails__Fv`. 1096 function bodies,
+1392 authored inputs, zero COMMON. 214 tool tests passed. Object hashes in
+the snapshot come from the fresh build. No EE or game execution.
+
+## agents/combat-reactions
+
+Merged. The notes carry the five summary sections: evidence with observed
+addresses and separate inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Fifteen units, each with a
+`host_check.cpp`. All 15 passed on this machine with ASan/UBSan. A scripted
+mutation pass (one numeric literal changed at a time) was killed by the
+checks in every unit that has literals: 9/10 for the Cat, Gnome and Mermaid
+`setState` bodies, 7/10 for the Spider, 5/10 `updateEnemy__8Creature`, 3/6
+`msg_collision__4Gold`, 1/1 `charm__8Creaturei`. The notes also describe a
+comparison against the pinned executable
+(`docs/agents/combat-reactions-compare.py`, 1500 seeds per function, zero
+mismatches); that script reads the private executable, which integration
+does not, so it was not re-run and the result is the worker's. No game binary
+or disassembly listing was committed.
+
+Fifteen units were selected with fresh `input_order` values 1394 through
+1408; the four data units emit no functions. The seven code units include
+`sources/combat-reactions-bytes/bytes.hpp`, recorded in their header closure;
+`host_vcall.hpp` in the same directory is a host-only header and is in the
+snapshot `files` map only. All 15 source hashes and compiled body bytes
+match the notes. The six names the notes say other packages closed first
+(`death`, the Creature `msg_alert`, the Cat and SmallSpider collisions,
+`setState__7Nataslai`, `turnToFace`) are not defined here and not duplicated.
+
+The worker's count (1142 to 1133) was measured on an older tip; the closed
+and opened names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1204 |
+| After | 1195 |
+| Closed | 15 |
+| Opened | 6 |
+
+Closed: `charm__8Creaturei`, `msg_alert__10GameObjectifG6Point3P10GameObject`,
+`msg_collisionWorld__10GameObjectG6Point3`,
+`msg_collision__10GameObjectP10GameObject`,
+`msg_collision__4GoldP10GameObject`, `msg_hurt__10GameObjectfP10GameObjecti`,
+`norrath_collision_frame_bytes`, `norrath_collision_grid_scale_bytes`,
+`norrath_spell_blessed_type_name_view`, `norrath_spell_type_name_view`,
+`setState__11SmallSpideri`, `setState__14GnomeNavigatori`, `setState__3Cati`,
+`setState__7Mermaidi`, `updateEnemy__8Creature`.
+
+Opened: `animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
+`animGlobalSync__FP14AnimationState`,
+`getSmartRandomDestination__8Creaturei`, `hudGivePlayerGold__FiG6Point3i`,
+`resetRouting__8Creature`, `setStateProcessing__8CreaturePi`. 1107 function
+bodies, 1407 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build. No EE or game execution.
+
+## agents/actor-view-tables second pass
+
+Merged. The branch notes carry the evidence, closed and opened lists,
+build-plan hashes, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. The integrator's earlier
+`docs/agents/actor-view-tables.md` collided with the worker's on merge; both
+are kept, the worker's text first and the integrator's selection notes under
+their own heading at the end. Nineteen new data views (virtual tables, tag
+strings, resource maps and the slow-run-list heads), each with a host file
+under `actor-view-tables-views/host/` that returns failure on a wrong size or
+nonzero byte; all 25 host files (six from the first pass) pass on this
+machine. They are data objects; no function was added, and the checks are
+size and zero-fill checks only. No game binary or disassembly listing was
+committed.
+
+Nineteen units were selected with fresh `input_order` values 1409 through
+1427, component `actor-view-tables-views`. The six first-pass units were
+already selected and were not appended again. The virtual tables
+each name sized functions by assembler label, so closing the names
+opens new function imports; the worker did not measure the link and the
+real net count goes up.
+
+The notes settle half of a "Needs a decision" item: `norrath_actor_view_50bfd0`
+is the 240-byte `slowRunList` object at `0x4fbfd0` (the import name carries a
+sign-extension misread of `lui 0x50 / addiu 0xbfd0`), which contradicts the
+`object-infra` note that it is not that list. `object-infra` still defines
+`norrath_object_slow_run_list_view` for the same original object, so the link
+now has two definitions of one object under two names. They are different
+symbols and no duplicate definition arises; which name should survive is still
+open.
+
+| | |
+|---|---|
+| Before | 1195 |
+| After | 1221 |
+| Closed | 19 |
+| Opened | 45 |
+
+Closed: `norrath_actor_view_50bfd0`, `norrath_actors_a_view_449790`,
+`norrath_actors_a_view_4498b0`, `norrath_actors_a_view_4499d8`,
+`norrath_actors_a_view_44a930`, `norrath_actors_a_view_44a9c0`,
+`norrath_actors_a_view_44c830`, `norrath_actors_a_view_44f1f8`,
+`norrath_actors_a_view_44f2a0`, `norrath_actors_a_view_470830`,
+`norrath_actors_a_view_471310`, `norrath_actors_a_view_477758`,
+`norrath_actors_a_view_481980`, `norrath_actors_a_view_483e5c`,
+`norrath_actors_a_view_485360`, `norrath_actors_a_view_485400`,
+`norrath_actors_a_view_485408`, `norrath_actors_a_view_4860b8`,
+`norrath_actors_a_view_4860c0`.
+
+Opened (all function labels from the virtual tables): `_$_10DoorSecret`,
+`_$_11FloorSwitch`, `_$_6Candle`, `_$_7AntTrap`, `_$_7Blocker`,
+`_$_7Candle2`, `_$_7EggSack`, `_$_9DoorSwing`, `__tf10DoorSecret`,
+`__tf11FloorSwitch`, `__tf6Candle`, `__tf7AntTrap`, `__tf7Blocker`,
+`__tf7Candle2`, `__tf7EggSack`, `__tf9DoorSwing`, `clone__10DoorSecret`,
+`clone__11FloorSwitch`, `clone__6Candle`, `clone__7Blocker`,
+`clone__7Candle2`, `clone__9DoorSwing`, `msg_draw__10AutoPropLP`,
+`msg_draw__6Candle`, `msg_draw__7Candle2`, `msg_getPokeName__10DoorSecretPUsi`,
+`msg_getPokeName__9DoorSwingPUsi`, `msg_load__10DoorSecretPc`,
+`msg_load__11FloorSwitchPc`, `msg_load__9DoorSwingPc`,
+`msg_poke__10DoorSecreti`, `msg_poke__9DoorSwingi`, `msg_presave__9DoorSwing`,
+`msg_run__10AutoPropLP`, `msg_run__10DoorSecret`, `msg_run__11FloorSwitch`,
+`msg_run__6Candle`, `msg_run__7AntTrap`, `msg_run__7Candle2`,
+`msg_run__9DoorSwing`, `msg_save__10DoorSecretPc`, `msg_save__11FloorSwitchPc`,
+`msg_save__9DoorSwingPc`, `msg_trigger__10DoorSecreti`,
+`msg_trigger__9DoorSwingi`. 1107 function bodies, 1426 authored inputs, zero
+COMMON. 214 tool tests passed. Object hashes in the snapshot come from the
+fresh build. No EE or game execution.
+
+## agents/level-anim-load
+
+Merged, with four of the 35 units left out of the plan. The notes carry the
+five summary sections: functions and data with original addresses and sizes,
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Twelve function units have a
+`host_contract.cpp` and the storage units have a `storage_contract.cpp`. All
+31 selected contracts passed on this machine with ASan/UBSan
+(`-DNORRATH_HOST_ARENA` maps target words into an arena on the host only). A
+scripted mutation pass was killed by the contracts in every function unit
+that has numeric literals (10/10 `animAddTransitionTo`, `animSetToEnd`,
+`animResetFramestates` and `routeUnrollVnode`; 9/10 `animAdd` and
+`cutStartScene`; 8/10 `monsterSpawn` and `lumpFind`). No game binary or
+disassembly listing was committed. The 12 compiled body sizes match the notes.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `level-anim-load-loader-failure-word` defines `norrath_loader_failure_word_view`
+  as a global absolute symbol with value 0 through a basic `asm` block, so
+  the loader's store to address 0 resolves. PORTABLE_BUILD says the link
+  imports no absolute game addresses and applies no aliases; an absolute
+  symbol in the partial object breaks that statement, the unit has no host
+  contract, and the notes themselves ask for a decision. The import stays
+  open until the owner decides.
+- `level-anim-load-anim-results`, `level-anim-load-frame-states` and
+  `level-anim-load-scene-state` define `animResults`, `frameStates` and
+  `scene`, which `anim_results.o` (input 915), `frame_states.o` (input 925)
+  and `scene.o` (input 951) already define. Selecting them made the
+  relocatable link fail with multiple definitions; the notes' closed list is
+  stale on those three names.
+
+Thirty-one units were selected with fresh `input_order` values 1428
+through 1458 (the 12 function units and 19 storage units). The host-only headers in `level-anim-load-common`
+and the files of the four left-out units are in the snapshot `files` map.
+
+Two same-address pairs from the notes stay open as two separate words:
+`norrath_factory_world_pointer_word` (the word `world`, already defined as
+`norrath_route_world_word_bytes` by world-state) and
+`norrath_factory_world_flags_word` (`levelFlags`, already defined by
+natives-c). They are different link symbols, so the link has no duplicate
+definition but the two copies of each word do not agree. `cutMode` stays an
+import under its original name.
+
+The worker's private count (950 to 937 on an older tip) is not the official
+one. Eighteen of the 22 closed names in the notes reproduce; the others are
+the four left out above.
+
+| | |
+|---|---|
+| Before | 1221 |
+| After | 1208 |
+| Closed | 18 |
+| Opened | 5 |
+
+Closed: `animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi`,
+`animAdd__FP14AnimationStateP15AnimationHeaderi`,
+`animInitState__FP14AnimationState`, `animResetFramestates__FP14AnimationState`,
+`animSetToEnd__FP14AnimationState`, `cd`, `cutMsgHandler`,
+`cutMsgHandlerFunction__FPUci`, `cutStartScene__FP9_cutscenePc`,
+`lumpFind__FPvPc`, `norrath_archive_sound_free_ram`,
+`norrath_factory_world_flags_word`, `norrath_factory_world_pointer_word`,
+`norrath_find_height_orientation_scale_bytes`,
+`norrath_forbidden_orientation_scale_bytes`, `norrath_monster_spawn`,
+`norrath_route_unroll_vnode`, `norrath_swap_int`.
+
+Opened: `coreStartLoading__Fv`, `cutDrawFrame__Fv`, `cutRunFrameTask__Fv`,
+`spawn__FG6Point3iisPcbPPci`, `updateAnimation__FP13animComponent`. 1119
+function bodies, 1457 authored inputs, zero COMMON. 214 tool tests passed.
+Object hashes in the snapshot come from the fresh build. No EE or game
+execution.
 
 ## Not merged: codex/norrath-runtime-binding
 
@@ -2428,6 +2700,14 @@ different `vik` than `keyboardFree__Fv` frees. The package owner should make
 the three edits listed in `docs/agents/iop-module-boot.md`; they were not
 made here because they change game code.
 
+The `engine-restore-srs-main` host contract has the same harness flaw that
+kept `agents/frontend-shell` out: `reset()` clears `error`, and `main` returns
+`error` only after the first two scenarios and at the end. A failure in the
+scenarios at lines 249 to 273 of `host_contract.cpp` is erased by the next
+`reset()`. This was found by the integrator after that package had merged; it
+is a harness defect, not a source defect, and was not edited here. The owner
+should keep the first failing code across resets.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -2530,6 +2810,11 @@ and no startup stage has executed.
 - 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
 - 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
 - 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
-- 2026-10-12 13:10 CDT — `agents/simloop-services` —  unresolved imports
-- 2026-10-12 13:13 CDT — `agents/kernel-patches` —  unresolved imports
-- 2026-10-12 13:15 CDT — `agents/frontend-shell` —  unresolved imports
+- 2026-10-12 13:10 CDT — `agents/simloop-services` — 1227 unresolved imports
+- 2026-10-12 13:13 CDT — `agents/kernel-patches` — 1197 unresolved imports
+- 2026-10-12 13:15 CDT — `agents/frontend-shell` — 1217 unresolved imports
+- 2026-10-12 13:12 CDT — `agents/frontend-shell` (rejected, not merged; log notes only) — 1201 unresolved imports
+- 2026-10-12 13:33 CDT — `agents/loop-grid-fx` — 1204 unresolved imports
+- 2026-10-12 13:43 CDT — `agents/combat-reactions` — 1195 unresolved imports
+- 2026-10-12 13:55 CDT — `agents/actor-view-tables` — 1221 unresolved imports
+- 2026-10-12 14:09 CDT — `agents/level-anim-load` — 1208 unresolved imports

@@ -17617,6 +17617,991 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/frontend-shell-run/run_front_end.cpp"
+    },
+    {
+      "input_order": 1373,
+      "component": "loop-grid-fx-find-list",
+      "object_name": "find_list.o",
+      "private_object_sha256": "800a795dc48acee32f2c23197ee2cff1245b0d7fc13e756b6b9aa42b0e51f440",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp"
+    },
+    {
+      "input_order": 1374,
+      "component": "loop-grid-fx-find-first",
+      "object_name": "find_first.o",
+      "private_object_sha256": "10a37e5231c53f932473f96332e342b6cbf2213f58a7bb219bc505b854f60e85",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp"
+    },
+    {
+      "input_order": 1375,
+      "component": "loop-grid-fx-find-tag-string",
+      "object_name": "find_tag_string.o",
+      "private_object_sha256": "062350d57ab5ce65bf85861209cb852c8fc27188e6a983658ab4400bb6ff91f6",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp"
+    },
+    {
+      "input_order": 1376,
+      "component": "loop-grid-fx-find-in-box",
+      "object_name": "find_in_box.o",
+      "private_object_sha256": "9a8aa3facee00071fac21b146ffff83df2879de8923162e8751be74680848f8f",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp"
+    },
+    {
+      "input_order": 1377,
+      "component": "loop-grid-fx-update-in-grid",
+      "object_name": "update_in_grid.o",
+      "private_object_sha256": "7ef1070cc0958fc37e5fdd7523d2a7b4212215bc104589734daeb900577fbd4f",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp"
+    },
+    {
+      "input_order": 1378,
+      "component": "loop-grid-fx-iterate-grid",
+      "object_name": "iterate_grid.o",
+      "private_object_sha256": "94529093d3af99f9eb6ac1450e28634657da2d0c796c5b4bef78afa24a7b6159",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp"
+    },
+    {
+      "input_order": 1379,
+      "component": "loop-grid-fx-remove-string",
+      "object_name": "remove_string.o",
+      "private_object_sha256": "419d3bcf1dca78ac8d02f5db7264800f78b36a163b797d38c5c8ea63d519b318",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp"
+    },
+    {
+      "input_order": 1380,
+      "component": "loop-grid-fx-delete-list",
+      "object_name": "add_to_delete_list.o",
+      "private_object_sha256": "51056904f290dc203bf99904a20ebc494d91bbc40bd170ee8e8e7f2c834ba3e5",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp"
+    },
+    {
+      "input_order": 1381,
+      "component": "loop-grid-fx-medium-run-list",
+      "object_name": "add_to_medium_run_list.o",
+      "private_object_sha256": "3709e678f9beea1522ce8e24b2f99e14f0ae983d5920f755fb3789f8e56d87db",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp"
+    },
+    {
+      "input_order": 1382,
+      "component": "loop-grid-fx-list-head-copy",
+      "object_name": "list_head_copy.o",
+      "private_object_sha256": "8d799a23b83c7deff50938c5d6e4cb8f40d42fa678a41e6da3d16ae2252ec324",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp"
+    },
+    {
+      "input_order": 1383,
+      "component": "loop-grid-fx-light-add",
+      "object_name": "light_add.o",
+      "private_object_sha256": "e72f794a0af29c609e1e7e64b0957c582f4caba34a0a1f185b491d19974f5f5b",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp"
+    },
+    {
+      "input_order": 1384,
+      "component": "loop-grid-fx-has-number",
+      "object_name": "has_number.o",
+      "private_object_sha256": "98ee55c44e3e71e795a5f606a376a24d7100b0a8348a37a0489d542ed8123568",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp"
+    },
+    {
+      "input_order": 1385,
+      "component": "loop-grid-fx-p-clear",
+      "object_name": "p_clear.o",
+      "private_object_sha256": "3c61c62c363919efce213400ce83b7816357cd75486dfd6a5d488cd7f48697d4",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp"
+    },
+    {
+      "input_order": 1386,
+      "component": "loop-grid-fx-add-particle",
+      "object_name": "add_particle.o",
+      "private_object_sha256": "e5be36fdeedb5819aab4e0ae775227c473f1105f5829b556bea475313602b419",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp"
+    },
+    {
+      "input_order": 1387,
+      "component": "loop-grid-fx-update-particle-type",
+      "object_name": "update_particle_type.o",
+      "private_object_sha256": "133309a8d045b625729ab0f5abb7ee9d6446c37e3070df92549e12649a3db59f",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp"
+    },
+    {
+      "input_order": 1388,
+      "component": "loop-grid-fx-p-update",
+      "object_name": "p_update.o",
+      "private_object_sha256": "10044a17fff51149b108b520323fcc229d7a38e48e669c97a644dd9b367ff247",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp"
+    },
+    {
+      "input_order": 1389,
+      "component": "loop-grid-fx-emitter-tag",
+      "object_name": "emitter_tag.o",
+      "private_object_sha256": "7d26aaadbccc2db3dfeb576f1183aa68d834f3a969b8b1359de24811cab013f5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp"
+    },
+    {
+      "input_order": 1390,
+      "component": "loop-grid-fx-script-particles",
+      "object_name": "script_particles.o",
+      "private_object_sha256": "f693a4097dcb23b12533bf81db063f45e33318a0182c6031a5206c458476f081",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp"
+    },
+    {
+      "input_order": 1391,
+      "component": "loop-grid-fx-fx-dust",
+      "object_name": "fx_dust.o",
+      "private_object_sha256": "424eff5fb522a1040a108e54999099235a36cec6d277569ddf69381e1fdf7925",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp"
+    },
+    {
+      "input_order": 1392,
+      "component": "loop-grid-fx-task-list",
+      "object_name": "task_list.o",
+      "private_object_sha256": "7efa0a15ebfa959ae4eaf39ffe262c5dfb2c4ba541f6d41d9b54ad80fb35286f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp"
+    },
+    {
+      "input_order": 1393,
+      "component": "loop-grid-fx-particle-storage",
+      "object_name": "particle_storage.o",
+      "private_object_sha256": "64c6d975db38690b8ad36c86a5a43bb72914e9b3b014050be2792e00f62bf3a2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp"
+    },
+    {
+      "input_order": 1394,
+      "component": "combat-reactions-alert-game-object",
+      "object_name": "alert.o",
+      "private_object_sha256": "c83580ab8bb8c6943b0931c050f6248335857aa2fd9daf22cbe69e5b301031ca",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__10GameObjectifG6Point3P10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-alert-game-object/alert.cpp"
+    },
+    {
+      "input_order": 1395,
+      "component": "combat-reactions-charm",
+      "object_name": "charm.o",
+      "private_object_sha256": "209e762702e68faef8b9d7eae38b562ccca5b714a3f769d1c15f20907c64ecea",
+      "emitted_functions": [
+        {
+          "name": "charm__8Creaturei",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-charm/charm.cpp"
+    },
+    {
+      "input_order": 1396,
+      "component": "combat-reactions-collision-frame",
+      "object_name": "frame.o",
+      "private_object_sha256": "6e5a3caca8e9733fe9b316b0beb4728097eed39d757b9325bc8181fb8d510ad0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-frame/frame.cpp"
+    },
+    {
+      "input_order": 1397,
+      "component": "combat-reactions-collision-game-object",
+      "object_name": "collision.o",
+      "private_object_sha256": "86e26cfa3adc0321abe6eec93c1ca7ef52d0ea4b4bce67f3bf299c8ddf262812",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__10GameObjectP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-game-object/collision.cpp"
+    },
+    {
+      "input_order": 1398,
+      "component": "combat-reactions-collision-gold",
+      "object_name": "collision_gold.o",
+      "private_object_sha256": "a22446b104778a99bede253b48b81deb131fe862698e28bd77a100a9fc1016f3",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__4GoldP10GameObject",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-gold/collision_gold.cpp"
+    },
+    {
+      "input_order": 1399,
+      "component": "combat-reactions-collision-grid-scale",
+      "object_name": "grid_scale.o",
+      "private_object_sha256": "993c74e036ef8870cfce3cba723a03a7fb2a4265e8f55f92ec6dc612d1a27116",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-grid-scale/grid_scale.cpp"
+    },
+    {
+      "input_order": 1400,
+      "component": "combat-reactions-collision-world",
+      "object_name": "collision_world.o",
+      "private_object_sha256": "4c3a9b089a58158ea2083402e24aad0d4d7d922f7f8c03955f6fe5fd5150f3f8",
+      "emitted_functions": [
+        {
+          "name": "msg_collisionWorld__10GameObjectG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-collision-world/collision_world.cpp"
+    },
+    {
+      "input_order": 1401,
+      "component": "combat-reactions-hurt-game-object",
+      "object_name": "hurt.o",
+      "private_object_sha256": "e36f6404eac1abae9bd2f60e776c14bbe9a1061e824252cbc91c753c36d34e91",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10GameObjectfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-hurt-game-object/hurt.cpp"
+    },
+    {
+      "input_order": 1402,
+      "component": "combat-reactions-set-state-cat",
+      "object_name": "set_state_cat.o",
+      "private_object_sha256": "2ec6ff739b8dbb77e04dadbd00f577d5942ad8b6a09553de14aa95b757be64bf",
+      "emitted_functions": [
+        {
+          "name": "setState__3Cati",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-cat/set_state_cat.cpp"
+    },
+    {
+      "input_order": 1403,
+      "component": "combat-reactions-set-state-gnome",
+      "object_name": "set_state_gnome.o",
+      "private_object_sha256": "fc4727515034c96b7bb98c392fce4de71427e9d4f456f656859a393e9524ef6e",
+      "emitted_functions": [
+        {
+          "name": "setState__14GnomeNavigatori",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp"
+    },
+    {
+      "input_order": 1404,
+      "component": "combat-reactions-set-state-mermaid",
+      "object_name": "set_state_mermaid.o",
+      "private_object_sha256": "46592296918ed27fc1f2ca80d5cfb117896f0dc5e390cbc1467ce9a31f2d7b07",
+      "emitted_functions": [
+        {
+          "name": "setState__7Mermaidi",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp"
+    },
+    {
+      "input_order": 1405,
+      "component": "combat-reactions-set-state-spider",
+      "object_name": "set_state_spider.o",
+      "private_object_sha256": "3991934317b3322fed214a2994ddbc14f7cc1b0d447cd155762ebf0fc2d97712",
+      "emitted_functions": [
+        {
+          "name": "setState__11SmallSpideri",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-set-state-spider/set_state_spider.cpp"
+    },
+    {
+      "input_order": 1406,
+      "component": "combat-reactions-spell-blessed-type-name",
+      "object_name": "type_name.o",
+      "private_object_sha256": "0d3dbf6ffc7f3dab33e460beffc614248627a1390c63359b53f8338a0dd4b62f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-spell-blessed-type-name/type_name.cpp"
+    },
+    {
+      "input_order": 1407,
+      "component": "combat-reactions-spell-type-name",
+      "object_name": "type_name.o",
+      "private_object_sha256": "447fa566eb5c36c499b115860df168fdbd88a62212d107c506c83d6bee5a2a99",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-spell-type-name/type_name.cpp"
+    },
+    {
+      "input_order": 1408,
+      "component": "combat-reactions-update-enemy",
+      "object_name": "update_enemy.o",
+      "private_object_sha256": "db58d5cdde4beb31aaa63b2757fda3502198c9132c6cf65c6ccec2d5309a0592",
+      "emitted_functions": [
+        {
+          "name": "updateEnemy__8Creature",
+          "compiled_body_bytes": 3568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/combat-reactions-update-enemy/update_enemy.cpp"
+    },
+    {
+      "input_order": 1409,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actor_view_50bfd0.o",
+      "private_object_sha256": "29700f1a3009b9418ef55ce72e04f50c6844723b750480479bea02a9849ff36b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actor_view_50bfd0.cpp"
+    },
+    {
+      "input_order": 1410,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_449790.o",
+      "private_object_sha256": "5dc27dc1059fa685f31914da01a57f4637cdc8c018fe500f06d9483e3862522b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_449790.cpp"
+    },
+    {
+      "input_order": 1411,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_4498b0.o",
+      "private_object_sha256": "217da82d113d3b042f8357d33d57980ac20246c34061e501d13cc6938b88618d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4498b0.cpp"
+    },
+    {
+      "input_order": 1412,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_4499d8.o",
+      "private_object_sha256": "42377a91f302abd992151999ccc25c657d48c64e58deb596a9170d043f4b62c4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4499d8.cpp"
+    },
+    {
+      "input_order": 1413,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_44a930.o",
+      "private_object_sha256": "6e13ff8823105695e256241f5190aadbb8c72c253ddee592429a904a3afc915a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a930.cpp"
+    },
+    {
+      "input_order": 1414,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_44a9c0.o",
+      "private_object_sha256": "3900ccdee6df15a45f6361a9224b3e188235aa0e6542bacbaaaa273469baf5f9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a9c0.cpp"
+    },
+    {
+      "input_order": 1415,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_44c830.o",
+      "private_object_sha256": "b55150d6499252c6af8207c24b7d3b36110209249896c3a518ff77ba1be47a8b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44c830.cpp"
+    },
+    {
+      "input_order": 1416,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_44f1f8.o",
+      "private_object_sha256": "b4de70b99152af6b93a02a95dd617d4e855a9541110eef70a53b2a699a5bbc0a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f1f8.cpp"
+    },
+    {
+      "input_order": 1417,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_44f2a0.o",
+      "private_object_sha256": "1aa276bf58a48d9db03affe99c40cf97e06ec480cfd24ebac0637f4803995a9c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f2a0.cpp"
+    },
+    {
+      "input_order": 1418,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_470830.o",
+      "private_object_sha256": "f879022672234109cd315342e2a21ef97b2b2abb8878b24abbbe664e931e4770",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_470830.cpp"
+    },
+    {
+      "input_order": 1419,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_471310.o",
+      "private_object_sha256": "1584cace0c5403ec0c54b65e82e95cd936aa5f6b610085c6a5ff891d5a6cded6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_471310.cpp"
+    },
+    {
+      "input_order": 1420,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_477758.o",
+      "private_object_sha256": "028611541be4da16465825c533a3d2a3cc62ed2a5ae1faf78570c73d34299ead",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_477758.cpp"
+    },
+    {
+      "input_order": 1421,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_481980.o",
+      "private_object_sha256": "d3c4c8a2ee3c54e97373327116ea18d8d4082ca4d23861b2f8839d541085fdcf",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_481980.cpp"
+    },
+    {
+      "input_order": 1422,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_483e5c.o",
+      "private_object_sha256": "ab67a71360855cc65ff9999657702e33c1035afa2215fa9eb0df8cc3d77dd4c7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_483e5c.cpp"
+    },
+    {
+      "input_order": 1423,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_485360.o",
+      "private_object_sha256": "0eabc9345aa3078fa246da8ad98bd448b9014aa1145058ec30881db6215ffba1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485360.cpp"
+    },
+    {
+      "input_order": 1424,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_485400.o",
+      "private_object_sha256": "d62841f026bf4456c4b5485a11f096431e3749bfe554b11919cac9b2fb7adb00",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp"
+    },
+    {
+      "input_order": 1425,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_485408.o",
+      "private_object_sha256": "afa694365c4677adeb73bfa6de921568516848bc3daf2fa8e0dcb6c52e9eed5a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp"
+    },
+    {
+      "input_order": 1426,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_4860b8.o",
+      "private_object_sha256": "ea0e0e53a5f52b7e7cf56bce679ae79bd8eac9649731ac6d89fa62226da432b9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp"
+    },
+    {
+      "input_order": 1427,
+      "component": "actor-view-tables-views",
+      "object_name": "norrath_actors_a_view_4860c0.o",
+      "private_object_sha256": "8b5d67ccc288e8aa4a3c36a005a01e65d8ebb7e42af46aea8f00683008fa2ad7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp"
+    },
+    {
+      "input_order": 1428,
+      "component": "level-anim-load-anim-add",
+      "object_name": "anim_add.o",
+      "private_object_sha256": "c6555dffa11b40c8f1210aa3a8c3eb7a620b289b5349119de5d81dc2730791be",
+      "emitted_functions": [
+        {
+          "name": "animAdd__FP14AnimationStateP15AnimationHeaderi",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-anim-add/anim_add.cpp"
+    },
+    {
+      "input_order": 1429,
+      "component": "level-anim-load-anim-add-transition-to",
+      "object_name": "anim_add_transition_to.o",
+      "private_object_sha256": "dcc5295e5214dfd41941d27616293ea45b76f04f1595635bf2c15ad1ad9d2be5",
+      "emitted_functions": [
+        {
+          "name": "animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp"
+    },
+    {
+      "input_order": 1430,
+      "component": "level-anim-load-anim-init-state",
+      "object_name": "anim_init_state.o",
+      "private_object_sha256": "2dd39f651ac7e786c39071a7efe304bc550e9bd2829c566f0fbc501774e48364",
+      "emitted_functions": [
+        {
+          "name": "animInitState__FP14AnimationState",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-anim-init-state/anim_init_state.cpp"
+    },
+    {
+      "input_order": 1431,
+      "component": "level-anim-load-anim-reset-framestates",
+      "object_name": "anim_reset_framestates.o",
+      "private_object_sha256": "7ab37a939a2e4ed1ef74059c0f3b337dee1f9ab65584fe2752ecce233d8876c9",
+      "emitted_functions": [
+        {
+          "name": "animResetFramestates__FP14AnimationState",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp"
+    },
+    {
+      "input_order": 1432,
+      "component": "level-anim-load-anim-set-to-end",
+      "object_name": "anim_set_to_end.o",
+      "private_object_sha256": "c957a54f5e77e50d74231f67103b4a92cc69a590063259e56b697b693ee9db99",
+      "emitted_functions": [
+        {
+          "name": "animSetToEnd__FP14AnimationState",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp"
+    },
+    {
+      "input_order": 1433,
+      "component": "level-anim-load-cd-state",
+      "object_name": "storage.o",
+      "private_object_sha256": "695d42b49bd657e9f885a895e094c47d1a1870c40c5db14abe214c52ccbd314a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cd-state/storage.cpp"
+    },
+    {
+      "input_order": 1434,
+      "component": "level-anim-load-cut-current-scene",
+      "object_name": "storage.o",
+      "private_object_sha256": "36ae479da142a801f845d2da58341bf82d933d3a46ee553069abc25a99b0016a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-current-scene/storage.cpp"
+    },
+    {
+      "input_order": 1435,
+      "component": "level-anim-load-cut-init",
+      "object_name": "storage.o",
+      "private_object_sha256": "ab9f6d52b6869dcef5ad07241f833875eaa7e39c8e353cf4da441458979670fe",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-init/storage.cpp"
+    },
+    {
+      "input_order": 1436,
+      "component": "level-anim-load-cut-msg-handler",
+      "object_name": "storage.o",
+      "private_object_sha256": "dab76fe1f8a88423e30e2f6ea485e82aaa4d4f46c7da744063026de5d6d0ca9c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-msg-handler/storage.cpp"
+    },
+    {
+      "input_order": 1437,
+      "component": "level-anim-load-cut-msg-handler-function",
+      "object_name": "cut_msg_handler_function.o",
+      "private_object_sha256": "1852a0269a73df7c80a6f4cc6f5586da4bf64aa32c8b469844674c5b9b91abda",
+      "emitted_functions": [
+        {
+          "name": "cutMsgHandlerFunction__FPUci",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp"
+    },
+    {
+      "input_order": 1438,
+      "component": "level-anim-load-cut-play-mode",
+      "object_name": "storage.o",
+      "private_object_sha256": "8f90d028b47639e5f83506c60db5398b6f2b5a0994851b9370331195ae6e869c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-play-mode/storage.cpp"
+    },
+    {
+      "input_order": 1439,
+      "component": "level-anim-load-cut-scene-name",
+      "object_name": "storage.o",
+      "private_object_sha256": "9f38f9b1e77c7a1b772e2b30a6a774f7c8831c05e207f795223c55fd89030584",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-scene-name/storage.cpp"
+    },
+    {
+      "input_order": 1440,
+      "component": "level-anim-load-cut-skip-mode",
+      "object_name": "storage.o",
+      "private_object_sha256": "f150df99b3a66cb6b40a085e05676b784ccc1d0b6fcf4e63a3eab4d1f59377ed",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-skip-mode/storage.cpp"
+    },
+    {
+      "input_order": 1441,
+      "component": "level-anim-load-cut-start-scene",
+      "object_name": "cut_start_scene.o",
+      "private_object_sha256": "df9779a4600c115faa82033a16505c07d9e02aa73a29b59f559a7999004b3e79",
+      "emitted_functions": [
+        {
+          "name": "cutStartScene__FP9_cutscenePc",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp"
+    },
+    {
+      "input_order": 1442,
+      "component": "level-anim-load-cut-time",
+      "object_name": "storage.o",
+      "private_object_sha256": "6bbaf38c466e4cfc787d75365d6abb590d790f07e5f019b18c3090b8e2fa9ca0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-cut-time/storage.cpp"
+    },
+    {
+      "input_order": 1443,
+      "component": "level-anim-load-dialog-actor",
+      "object_name": "storage.o",
+      "private_object_sha256": "45e09b6d3f908c4de9505bfa7d89e18398bca1ae27d9982d8135882900e1fe2c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-dialog-actor/storage.cpp"
+    },
+    {
+      "input_order": 1444,
+      "component": "level-anim-load-display-action-pos",
+      "object_name": "storage.o",
+      "private_object_sha256": "099a88e6fc2bbbac4ca10d2bcd55d7cb6a6115ff20df60123540e86b0ec91430",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-display-action-pos/storage.cpp"
+    },
+    {
+      "input_order": 1445,
+      "component": "level-anim-load-display-cut-pos",
+      "object_name": "storage.o",
+      "private_object_sha256": "c02a7b83e1c6014911c3adcba6d5738affe6c0ab22ae494d21dc20e0ab797b89",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-display-cut-pos/storage.cpp"
+    },
+    {
+      "input_order": 1446,
+      "component": "level-anim-load-display-frame",
+      "object_name": "storage.o",
+      "private_object_sha256": "dcfbfac928648f3c073012194355d1a8ec150bfb96bf4c443d3254a166a583c3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-display-frame/storage.cpp"
+    },
+    {
+      "input_order": 1447,
+      "component": "level-anim-load-find-height-scale",
+      "object_name": "storage.o",
+      "private_object_sha256": "e1564608112c61805f6f4ba32b769955f75e1cdfa0068a593b2d80c2f06ba038",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-find-height-scale/storage.cpp"
+    },
+    {
+      "input_order": 1448,
+      "component": "level-anim-load-forbidden-scale",
+      "object_name": "storage.o",
+      "private_object_sha256": "affed16cb953436c8ee33d8f21ee73a6658765490efcdb0706a220bfdd7dcdef",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-forbidden-scale/storage.cpp"
+    },
+    {
+      "input_order": 1449,
+      "component": "level-anim-load-lump-find",
+      "object_name": "lump_find.o",
+      "private_object_sha256": "b886a12bd0556a796753951a63dff10e3f169a917077b7913204c61a819034d9",
+      "emitted_functions": [
+        {
+          "name": "lumpFind__FPvPc",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-lump-find/lump_find.cpp"
+    },
+    {
+      "input_order": 1450,
+      "component": "level-anim-load-monster-spawn",
+      "object_name": "monster_spawn.o",
+      "private_object_sha256": "64a6c1aceb6492fb9d34f6d1b62092708ef90d15c89be3d079b3f83537aacedf",
+      "emitted_functions": [
+        {
+          "name": "norrath_monster_spawn",
+          "compiled_body_bytes": 2812
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-monster-spawn/monster_spawn.cpp"
+    },
+    {
+      "input_order": 1451,
+      "component": "level-anim-load-music-size",
+      "object_name": "storage.o",
+      "private_object_sha256": "498a862dfae0334f62c907f4d0e93ea30b69398aa9496daa5b44bee1d2616b0c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-music-size/storage.cpp"
+    },
+    {
+      "input_order": 1452,
+      "component": "level-anim-load-net-nm-ready",
+      "object_name": "storage.o",
+      "private_object_sha256": "f7b41d63c4913f08379ab487f04e850bbe3a73375f3a0f0d6096f9f411989067",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-net-nm-ready/storage.cpp"
+    },
+    {
+      "input_order": 1453,
+      "component": "level-anim-load-net-we-sent-ready",
+      "object_name": "storage.o",
+      "private_object_sha256": "c157d4285b551ec0cac25c952a3ff0db32669ea7ad17c3219e0447345e05a126",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-net-we-sent-ready/storage.cpp"
+    },
+    {
+      "input_order": 1454,
+      "component": "level-anim-load-route-unroll-vnode",
+      "object_name": "route_unroll_vnode.o",
+      "private_object_sha256": "b4376dc42ceab89059f62bb30a198993bce976c844209f545cb73cdfb2ab63a7",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_unroll_vnode",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp"
+    },
+    {
+      "input_order": 1455,
+      "component": "level-anim-load-sound-free-ram",
+      "object_name": "sound_free_ram.o",
+      "private_object_sha256": "5305e506eebf9a09a93f9ee1772c5cf958793411abc6d690f20fe5e8d8da0a03",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_sound_free_ram",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp"
+    },
+    {
+      "input_order": 1456,
+      "component": "level-anim-load-swap-int",
+      "object_name": "swap_int.o",
+      "private_object_sha256": "1df02150d25175473d7422e35f43104a7cb8eda0bc0edd35179d8ee5e6720df5",
+      "emitted_functions": [
+        {
+          "name": "norrath_swap_int",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-swap-int/swap_int.cpp"
+    },
+    {
+      "input_order": 1457,
+      "component": "level-anim-load-world-flags-word",
+      "object_name": "storage.o",
+      "private_object_sha256": "c7967a6aea5bb28985e1d2b96a03fadde0ccdcb093a13eaf98f5a1f0b4555b10",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-world-flags-word/storage.cpp"
+    },
+    {
+      "input_order": 1458,
+      "component": "level-anim-load-world-pointer-word",
+      "object_name": "storage.o",
+      "private_object_sha256": "baddaa0fd0fd4d108ff9be50782ee8974a5671eaa177f5ef50eaf30054a8d3ce",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/level-anim-load-world-pointer-word/storage.cpp"
     }
   ],
   "drafts": [
@@ -20763,7 +21748,213 @@
     "sources/frontend-shell-words/host_check.cpp": "dde2ff897497047bf49656f0977a1771874683b674fa383f545473b595995dbb",
     "sources/frontend-shell-run/run_locals.cpp": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
     "sources/frontend-shell-run/host_contract.cpp": "a7fb35819dc6825450d32c931c938d9d7c52c2bf0d5960118da351e6ef8757b3",
-    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373"
+    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373",
+    "sources/loop-grid-fx-find-list/find_list.cpp": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+    "sources/loop-grid-fx-find-list/host_check.cpp": "2766cd021eeb1b7b01463fa04d01700f90fc9f860b1d900c72937fdea1f8361d",
+    "sources/loop-grid-fx-find-first/find_first.cpp": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+    "sources/loop-grid-fx-find-first/host_check.cpp": "0a776c62112eb1207cb3f793d53cce8e8976ff1fdee82b87a032336476283287",
+    "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+    "sources/loop-grid-fx-find-tag-string/host_check.cpp": "bc0da7429d3bf8ccd5e1b7dafaeb8ae594ee002993f5531de393fa00256392a8",
+    "sources/loop-grid-fx-find-in-box/find_in_box.cpp": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+    "sources/loop-grid-fx-find-in-box/host_check.cpp": "3c53cc28b3e9e063fd361c8fee806deaafb908b5c2bc87dc1078f5de72e5a6f0",
+    "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+    "sources/loop-grid-fx-update-in-grid/host_check.cpp": "e66366e7d80d3fadea18373df1108489bb84eb4df26a8a378e411090d7eccf68",
+    "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+    "sources/loop-grid-fx-iterate-grid/host_check.cpp": "eacb00e1bcdc99fa94f6e49f29694813728a6f031b349a34daf6b1b3cbac642c",
+    "sources/loop-grid-fx-remove-string/remove_string.cpp": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+    "sources/loop-grid-fx-remove-string/host_check.cpp": "ee4bde6ed27a9b485594e106c90c215a46a241b03457fa77d918e3c2b0611325",
+    "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+    "sources/loop-grid-fx-delete-list/host_check.cpp": "629fe4a7b581e5a008645dd6456d3328c79aea30d4e16442689b8b05323c1c42",
+    "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+    "sources/loop-grid-fx-medium-run-list/host_check.cpp": "eb3ef185591c4df3ac37e892a5d357da919b64085f8cd4a3b0f4a19b865ca659",
+    "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+    "sources/loop-grid-fx-list-head-copy/host_check.cpp": "b8245737b80b48afb3d122b55e855d0e5ac3281be97c23af2cb49c8dd9de9f46",
+    "sources/loop-grid-fx-light-add/light_add.cpp": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+    "sources/loop-grid-fx-light-add/host_check.cpp": "7ba26b43785f39644834a710fa3135c0d2b7ec4e7b402611cc01ece7ff5ed7dc",
+    "sources/loop-grid-fx-has-number/has_number.cpp": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+    "sources/loop-grid-fx-has-number/host_check.cpp": "1ef599ae2c0024df3b7c87350422da38471003b6551dc3c9ee3feab488b3bf61",
+    "sources/loop-grid-fx-p-clear/p_clear.cpp": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+    "sources/loop-grid-fx-p-clear/host_check.cpp": "8752b6a5747515a464dc7a15b4ef25626ed540e3dc72cd4629cea0e76b15d02c",
+    "sources/loop-grid-fx-add-particle/add_particle.cpp": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+    "sources/loop-grid-fx-add-particle/host_check.cpp": "2b96ca196010913bdd1bec725f15013645d26c658be8a12081ed89bdecb5cde8",
+    "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+    "sources/loop-grid-fx-update-particle-type/host_check.cpp": "33cc280781a96af933fc90ecbe49aa01af4f8faa4b8a0f9c194a144f9bcc2766",
+    "sources/loop-grid-fx-p-update/p_update.cpp": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+    "sources/loop-grid-fx-p-update/host_check.cpp": "01c07f99b6eef2714dce9e160c6d8c0d8a0bae3fd9095fd899d66fa2cb6487ce",
+    "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+    "sources/loop-grid-fx-emitter-tag/host_check.cpp": "cdb4751f4b061a002e45f88642e3253ae67d3a8c08ac85a673b31344eca1907b",
+    "sources/loop-grid-fx-script-particles/script_particles.cpp": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+    "sources/loop-grid-fx-script-particles/host_check.cpp": "a5251fdd8e03b1b30811badf4f00b3038b9a01ffd26d88ca9209c65cf65f69ee",
+    "sources/loop-grid-fx-fx-dust/fx_dust.cpp": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+    "sources/loop-grid-fx-fx-dust/host_check.cpp": "b38cfdfb1fea1fdbb1fbb9d96213cde414c9adf56bf7bf5d7c8d98a19c23db0a",
+    "sources/loop-grid-fx-task-list/task_list.cpp": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+    "sources/loop-grid-fx-task-list/host_check.cpp": "e59da3ed56b933c6a72fda49fc38bdffbc02caf83832d6c05d6e7390ae55d78f",
+    "sources/loop-grid-fx-particle-storage/particle_storage.cpp": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+    "sources/loop-grid-fx-particle-storage/host_check.cpp": "0654ae521e6d2edad88877bcef688bb9d364fe00c0be660addd04a33b503e7e9",
+    "sources/combat-reactions-alert-game-object/host_check.cpp": "f416a950e214e9308ec44941ebd3c731f0640f9668bd149a2db2ce6caa05a526",
+    "sources/combat-reactions-alert-game-object/alert.cpp": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+    "sources/combat-reactions-bytes/bytes.hpp": "3c483121a898b452c5e0e420d5702f67618768a16cd45a9d30914533a51e35d6",
+    "sources/combat-reactions-charm/host_check.cpp": "1af0832051fc2e3e6d9d0ca4de057ad9919c2c1b4f3a826f54fb77711185c842",
+    "sources/combat-reactions-charm/charm.cpp": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+    "sources/combat-reactions-collision-frame/host_check.cpp": "7513f68d1554eae27718af1499eaaa8c05995ec6f4a8dfc9fbe46cdce2440d4a",
+    "sources/combat-reactions-collision-frame/frame.cpp": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+    "sources/combat-reactions-collision-game-object/host_check.cpp": "f5665cafe84fef6aa213a33514efadd25526d09a849d128cd75e32a605d36663",
+    "sources/combat-reactions-collision-game-object/collision.cpp": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+    "sources/combat-reactions-collision-gold/host_check.cpp": "292c8af9839b2b9bfb4c256951f573ea4a38df4fa02abe6c585b299282d66ca0",
+    "sources/combat-reactions-collision-gold/collision_gold.cpp": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+    "sources/combat-reactions-collision-grid-scale/host_check.cpp": "c2f1d9676ce0713b7f6a6e914d745bec75e5eed31f0582e93b3dd0917f4e2d3c",
+    "sources/combat-reactions-collision-grid-scale/grid_scale.cpp": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+    "sources/combat-reactions-collision-world/host_check.cpp": "307862fee43ed9a68c22ef59ee742bfa98bd19e66b189885a07c3498cc28297b",
+    "sources/combat-reactions-collision-world/collision_world.cpp": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+    "sources/combat-reactions-hurt-game-object/host_check.cpp": "9665673ba45cc9b44a267b3033d522a3d0dc69e37e3fba10a646fee7d9a791af",
+    "sources/combat-reactions-hurt-game-object/hurt.cpp": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+    "sources/combat-reactions-set-state-cat/host_check.cpp": "9aad8c05e5523eb7d454d5b4f287e8ae879db8ea6a55db6562d4bbbe445591d6",
+    "sources/combat-reactions-set-state-cat/set_state_cat.cpp": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+    "sources/combat-reactions-set-state-gnome/host_check.cpp": "92fb224afc5d8d2ca180c44f7fb6ecc11af4593333946950dfaf60916915a268",
+    "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+    "sources/combat-reactions-set-state-mermaid/host_check.cpp": "da58c7e75d3a6e5e55978ea30c188978c9975b63bf3449d8db5571c6a9ce8b6e",
+    "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+    "sources/combat-reactions-set-state-spider/host_check.cpp": "7f48b80b9f7dbcda5291bad1a8a5bf508eb808ca906d25a9c1ef660b7b72b165",
+    "sources/combat-reactions-set-state-spider/set_state_spider.cpp": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+    "sources/combat-reactions-spell-blessed-type-name/host_check.cpp": "a8bc82aa55036dca3da8fe77602213a81a0bd724047cb924b0262eafa7d276ed",
+    "sources/combat-reactions-spell-blessed-type-name/type_name.cpp": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+    "sources/combat-reactions-spell-type-name/host_check.cpp": "2d993e6457c2ecd99ecd38be84b52283ba557b0aa8932a3dc1b372673302d62d",
+    "sources/combat-reactions-spell-type-name/type_name.cpp": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+    "sources/combat-reactions-update-enemy/host_check.cpp": "9a74251f7690af91a2b8d42ad9b631cabf4b2943663cfbfd7b9096c1e08fed22",
+    "sources/combat-reactions-update-enemy/update_enemy.cpp": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+    "sources/combat-reactions-bytes/host_vcall.hpp": "5b7652b42820bb4d7db88e83817a5a2053cb11ed915e4dadf7691172abef96ad",
+    "sources/actor-view-tables-views/norrath_actors_a_view_449790.cpp": "b6fd080766cd3ff3e2d7d1a2ab3e5401c22187a7c436e4892efdadcb19e80335",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4498b0.cpp": "3558ec27974159f000632a92c8d20a83c0e22e52d12d6dc8fcbc4bdec2459ee7",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4499d8.cpp": "04c431c3f2833a61bbc5fd1f26d40b0cb8c787caff9a05d5f8f06b32c9d8f91b",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44a930.cpp": "dbdbed6c7bd8eb99bb99917dde96db8ad1123dc7895412301f8594dc71af1caf",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44a9c0.cpp": "85e5ae5b3aeebeb16a57b89626d139f5effe4a026f6e2ca1032c21fa65d6e006",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44c830.cpp": "3412afd1f1bd7c4cf5b56b47b304d483ea7304f5500a80b5292ece290fb2f0a3",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44f1f8.cpp": "bce1f82294bac041ab65e55db992035c7bb73176fa3cc300d50094cef289522f",
+    "sources/actor-view-tables-views/norrath_actors_a_view_44f2a0.cpp": "ae3ce0d2c0bcbda5f7b42cfc36ec84f60afc1d96860f9065b90786b214c2a489",
+    "sources/actor-view-tables-views/norrath_actors_a_view_470830.cpp": "44777c8c365704f680b0e4919c307468dddb6d29f30f228c9d9fa911c8def1c1",
+    "sources/actor-view-tables-views/norrath_actors_a_view_471310.cpp": "f953a36f85401df6c27ca2ca6907be821bccd09ba07e6123a1f2ab71326de264",
+    "sources/actor-view-tables-views/norrath_actors_a_view_477758.cpp": "0e3286e532fc612b5380b1705b95736328d5a9aa8acde64d496e624db4ef86d6",
+    "sources/actor-view-tables-views/norrath_actors_a_view_481980.cpp": "9ec5d82b1301dedc962b5b38c92a3dc9bd2dbcc19b7b43a3dbfbd7b8e6ee33cf",
+    "sources/actor-view-tables-views/norrath_actors_a_view_483e5c.cpp": "8d1bf67cb747cf0593ce495edc1d8c47fd53d8b6b8e4908604d9ad67aead2dfc",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485360.cpp": "cac77923bb7b226283bdd455eba2fb8a7354a1f154f9e91de78851c16434ef64",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp": "d3ae0093990abff6d9915e1636b39a24822833a83333e9132b921518b1de41a7",
+    "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp": "5457ec4c7204b02042cd96fbcc11dc494f639a161f1a068c27b6b28269c62c03",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp": "4dff148551f7a46f1bcc2b79ea11b1aa24b9c5bd695a32dbabdacaad993e6547",
+    "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
+    "sources/actor-view-tables-views/norrath_actor_view_50bfd0.cpp": "b7414b6eac64a39782f9dd35aeb475cedf1bd8bc48f6e8ed477fea3c94640fda",
+    "sources/actor-view-tables-views/host/norrath_actor_view_50bfd0.cpp": "4683a72805e8b0f12637ae99e981dc5040f96f0963908e13ea4320c1c6277538",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_449790.cpp": "9e0a0c52aed762c1ff3650efc38f3f772f7bff22888c6f38d2ce337747b957ce",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_4498b0.cpp": "6d716fbdc09428a4db07fcf307f5543b202febd38396fb439a6a88ca17d4dd26",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_4499d8.cpp": "60d2d02901cc6a41e197d2474ac2d7474d5f59526b5461a725935e3a4f876f04",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_44a930.cpp": "5a4fc39027cf6f81f49e2c35b6e5b9515b529abc1cb28bd74bf404eb406bb1ba",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_44a9c0.cpp": "d91b3fd7b226e5ade9f5124f674a7e84ace78645497eaa9c7dbab25e19f50929",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_44c830.cpp": "b2073f8e11b6552404854168e857c2f484047cdafb05796fde7844fcf4f36496",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_44f1f8.cpp": "4d0d4c197a65cb8251002a7cd081bc92e27f5f4a116e0335b5746aa776c39d04",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_44f2a0.cpp": "32ce68e15780d89267c6b9aa7c82029f89e7a483946d61a6bcbba412b33cba2d",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_470830.cpp": "6481e03441731a3b5e537c3a5826fa9b467da03f3edc9e1bec876d963a9f7209",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_471310.cpp": "d7a63a3b85b010b9cf5bd2e9d966a1b8718eadf9e27d21ae1ccd4dcec0ac339d",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_477758.cpp": "dd1054748ce5053bd5e4957f0e0c1ce5204700c55e91f6851eb3c6863fc7b949",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_481980.cpp": "b54a856a438b4c3b5474a8473c30a6477caf1dee1657c7500077969702ed64e1",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_483e5c.cpp": "e0f0512af5de205fc6a83d3d00f27cc3c44930f017149e2e7755c2022c272335",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_485360.cpp": "3c0b1a344c6fa8d7b6ff0619cd49de3da1a85327fb1875bf47510e22311ddbf8",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_485400.cpp": "bef55d5df42054a251c32d46334d8d58344a545bca243a4ee6a791dc83c18df3",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_485408.cpp": "6b5b90429ce93675165593d22c402494113f9fab7cf0bbc4d10bc70bb132f76b",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_4860b8.cpp": "02b0901a7f2b7891dd484e19f3f27d975e2397c5f68188d75c39ccd8c5f2671e",
+    "sources/actor-view-tables-views/host/norrath_actors_a_view_4860c0.cpp": "d0c61f8f1d4b911645ea4ff47b64b61cc793c02baba53a500183b51d0ebdac4e",
+    "sources/level-anim-load-common/mem.hpp": "387f4fd04cd4045a881f8e6b4072af795a917855c23ce1dc37ec5d3b5f2a3e31",
+    "sources/level-anim-load-anim-add/host_contract.cpp": "e2097de1193c7d7ab6d9422a60528d04b1bdd4490a1634ccaf78e44bd58b2af4",
+    "sources/level-anim-load-anim-add/anim_add.cpp": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+    "sources/level-anim-load-anim-add-transition-to/host_contract.cpp": "3f4a610bcd55b5c3ec62c63b8a110d685a7d3d3720271d4d6acf2f776e9e1c16",
+    "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+    "sources/level-anim-load-anim-init-state/host_contract.cpp": "84b4652d5717e562fd9bf10e317418b78e6b5c2b1b5d45e812aea2febbff598d",
+    "sources/level-anim-load-anim-init-state/anim_init_state.cpp": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+    "sources/level-anim-load-anim-reset-framestates/host_contract.cpp": "ebe21194b26e4961441f8ef2aee0f8d30c0a6160ea514543ce7c2d440c95e333",
+    "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+    "sources/level-anim-load-anim-set-to-end/host_contract.cpp": "43d64c56f7df1d66edbfe8df2b8dbcb2439044e8916de7c8c11ef2608d0cd50d",
+    "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+    "sources/level-anim-load-cd-state/storage.hpp": "2d2b4ba2d61f5212a6b350827bf99615b1d5babbbe19b9cc623153912e075f6a",
+    "sources/level-anim-load-cd-state/storage_contract.cpp": "eab337e677d1c9eefb4e5007c4b0a4d482d38d03c3b69dea3b31adb241179159",
+    "sources/level-anim-load-cd-state/storage.cpp": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+    "sources/level-anim-load-cut-current-scene/storage.hpp": "eb70e07c2f69ddd6c5bf0b49463aeab59a9f198452393ca25be7dd477d2b54c8",
+    "sources/level-anim-load-cut-current-scene/storage_contract.cpp": "9ae15c7fa8ed56b51743425960420a77629555ec943c8bc8a6ca4eb00a879bc7",
+    "sources/level-anim-load-cut-current-scene/storage.cpp": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+    "sources/level-anim-load-cut-init/storage.hpp": "fb5c66206524fe28de04bd7eba334ffb278ad73e26eb5ddffb2776b647bab466",
+    "sources/level-anim-load-cut-init/storage_contract.cpp": "aa6d0bd8c2083e821c378935ae3d1445a578adca06a9cc15b4b36ca83d59b071",
+    "sources/level-anim-load-cut-init/storage.cpp": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+    "sources/level-anim-load-cut-msg-handler/storage.hpp": "6fae00157c28b20b19d7433c61c471a4293678ea918bfbcb05c549ab80d496fe",
+    "sources/level-anim-load-cut-msg-handler/storage_contract.cpp": "646fe34d2ead846991c1fc4128e47411a6e0404f664b9434bc6707639f72f458",
+    "sources/level-anim-load-cut-msg-handler/storage.cpp": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+    "sources/level-anim-load-cut-msg-handler-function/host_contract.cpp": "16342c0d1a69efeaf4db8987d199b15236510cf7864a5e12b30875c8b0262b66",
+    "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+    "sources/level-anim-load-cut-play-mode/storage.hpp": "4cd9c3fea5a0a2a6aa10fc79e1abbff48871b9b1a3d3297c4d4ddd086ef72a24",
+    "sources/level-anim-load-cut-play-mode/storage_contract.cpp": "e74e9db1ab7dcc0693afd6df97b282b00dbf20bfaba487447be6a880e9f6636b",
+    "sources/level-anim-load-cut-play-mode/storage.cpp": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+    "sources/level-anim-load-cut-scene-name/storage.hpp": "8953fb96afab10e5acbdbd446ee95a5577cd101e84408ede9fe5e50d8f4e3176",
+    "sources/level-anim-load-cut-scene-name/storage_contract.cpp": "6278dd1fbc84c33b57c2794b4928449f73ee6f3205dc316400393b459af55f75",
+    "sources/level-anim-load-cut-scene-name/storage.cpp": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+    "sources/level-anim-load-cut-skip-mode/storage.hpp": "fa1dfa60280bd7654fc31f84acd98f331c5c6d61bfb243aaec61ac8366ea4aa6",
+    "sources/level-anim-load-cut-skip-mode/storage_contract.cpp": "43c85f477b3952bd68b70ff70c917a0107ffbee5f4d99e9770dba00c3630e43f",
+    "sources/level-anim-load-cut-skip-mode/storage.cpp": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+    "sources/level-anim-load-cut-start-scene/host_contract.cpp": "d64c25781bb4b46a43e0a80ece2c5105facfc71b0cc88b414b2075b7b5ed9654",
+    "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+    "sources/level-anim-load-cut-time/storage.hpp": "ceda0c3cea11a5ce02efd5aa28b8a9453e932a09e97e1249f1649f72c9c20e13",
+    "sources/level-anim-load-cut-time/storage_contract.cpp": "5bbadd0f0d30ca0c0eb3ce3a91e8baf087c7b329bb72e4e044492d3113ca4969",
+    "sources/level-anim-load-cut-time/storage.cpp": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+    "sources/level-anim-load-dialog-actor/storage.hpp": "5826553953ecb9be86c8fab99631d5f3e64ef5709b93251a160858d86d640478",
+    "sources/level-anim-load-dialog-actor/storage_contract.cpp": "9e091322c6c6a950385dc356a0f0d66726602726159d3abb9d95afc6a68de9b7",
+    "sources/level-anim-load-dialog-actor/storage.cpp": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+    "sources/level-anim-load-display-action-pos/storage.hpp": "c843fd31dba4e3187cd52297b5e7ad953ab1356311bd16dc6a26eab16f68ab72",
+    "sources/level-anim-load-display-action-pos/storage_contract.cpp": "cc57ab5ab1107f3a36e4883fc78578665483b3bc26ecd888386bce7dea3b79ad",
+    "sources/level-anim-load-display-action-pos/storage.cpp": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+    "sources/level-anim-load-display-cut-pos/storage.hpp": "4a6ae77cda114247d6b4362ebcdb50e75933db50fa409b07d3ab23c0ecbc095a",
+    "sources/level-anim-load-display-cut-pos/storage_contract.cpp": "87ef90ab68011923c389246b9e3b73036c87c397971868ce50b708587f9ed0cd",
+    "sources/level-anim-load-display-cut-pos/storage.cpp": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+    "sources/level-anim-load-display-frame/storage.hpp": "13dd92e267d9d92161c198c6f357770c6f634ad177ebff00b967bdf7f1bea079",
+    "sources/level-anim-load-display-frame/storage_contract.cpp": "ef2c1c2672a274ef1ff1946fd62e263e2953f1eb53e17fac26475ae6d02e40be",
+    "sources/level-anim-load-display-frame/storage.cpp": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+    "sources/level-anim-load-find-height-scale/storage.hpp": "3070e769f32123312ef9d1d768736613ae32fd41315fb7f09d8af8e98635f7e0",
+    "sources/level-anim-load-find-height-scale/storage_contract.cpp": "9a1e0249439e891caef29cbffdf10fdde74bbda5bed47518a95ace41361bec42",
+    "sources/level-anim-load-find-height-scale/storage.cpp": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+    "sources/level-anim-load-forbidden-scale/storage.hpp": "fbc870dbb1333e34da32f09221cfb9726abcfcec28e1bcde66acab2f95010bf6",
+    "sources/level-anim-load-forbidden-scale/storage_contract.cpp": "440bab696b811415f749c1423bd0972dadd73f1d3971ae7a59d3109e75171e4e",
+    "sources/level-anim-load-forbidden-scale/storage.cpp": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+    "sources/level-anim-load-lump-find/host_contract.cpp": "706e7d89f162698abf15c22c3fe14b6af8393297f1a47242ac087e5dbff4cb84",
+    "sources/level-anim-load-lump-find/lump_find.cpp": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+    "sources/level-anim-load-monster-spawn/host_contract.cpp": "1f3e8f5e4833dfa0a7673549c25f0aced67c47492f6ad68dffc05459a375d3b8",
+    "sources/level-anim-load-monster-spawn/monster_spawn.cpp": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+    "sources/level-anim-load-music-size/storage.hpp": "d928af1bdfe29d783ee0091c2746778d597cc2eea2ecb36f725ac37685e4140c",
+    "sources/level-anim-load-music-size/storage_contract.cpp": "637ce7b19dc5eced5b53c75444ed5515e8c45178e7f026a5db7cd1c8feba82d4",
+    "sources/level-anim-load-music-size/storage.cpp": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+    "sources/level-anim-load-net-nm-ready/storage.hpp": "4e3249194e09b0ec328f96538a278bdd23eb2ad82cc07d2576831b7a6eec01d9",
+    "sources/level-anim-load-net-nm-ready/storage_contract.cpp": "2af91a25c7d3c7c8f64a3b0d61c002ce842c4d5b34744f9d2214cae153cb93d9",
+    "sources/level-anim-load-net-nm-ready/storage.cpp": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+    "sources/level-anim-load-net-we-sent-ready/storage.hpp": "e4be98540c128f9c3787fb31d9a2e956db8b8c2b86f98a8880d65db656038ca0",
+    "sources/level-anim-load-net-we-sent-ready/storage_contract.cpp": "4f5916e4dfb39c7d5c9bf5572d6c1dd4be9e098e41b6b8ee65e23ba07b938bad",
+    "sources/level-anim-load-net-we-sent-ready/storage.cpp": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+    "sources/level-anim-load-route-unroll-vnode/host_contract.cpp": "1ce294a6e71d452e70524768daddd13cbfbaed050b774fa1a1a0d037737fd65f",
+    "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+    "sources/level-anim-load-sound-free-ram/host_contract.cpp": "a622f21454f9d53fbd57d0322e80a2bd426cac9d6aba604ce448e240f55440f8",
+    "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+    "sources/level-anim-load-swap-int/host_contract.cpp": "6db0ab64c903d5e3867cd5a3986af058aa2d0635603afd55eed40be139f9aa2c",
+    "sources/level-anim-load-swap-int/swap_int.cpp": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+    "sources/level-anim-load-world-flags-word/storage.hpp": "d03b361b4224c4073d84b68b95bd929135262b29a62c1d45b90257ab47b94efa",
+    "sources/level-anim-load-world-flags-word/storage_contract.cpp": "490b1a71e9c1c6966bf530884a8ee8aa932c6c44d100a8bbb007d9003d285d9f",
+    "sources/level-anim-load-world-flags-word/storage.cpp": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+    "sources/level-anim-load-world-pointer-word/storage.hpp": "2cade5859b88f4436d8b092d388a8eb7f813138bb940baa1540674a0917b8308",
+    "sources/level-anim-load-world-pointer-word/storage_contract.cpp": "8a72098585a01424a53e810b24c8ac921aaa87b6deeccef5b607d507c5194b26",
+    "sources/level-anim-load-world-pointer-word/storage.cpp": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+    "sources/level-anim-load-anim-results/storage.cpp": "5c83389567f4e2cccbe0be8512d7304aa74e6413efc0ad158f5af13ca408878a",
+    "sources/level-anim-load-anim-results/storage.hpp": "d5248cd1d114f4807a037c37afb489d1d9caa7d85aabbd00251aec4585a88677",
+    "sources/level-anim-load-anim-results/storage_contract.cpp": "4bd3f0d8dff843e31515d9449364011957db0e3f2662cedc631cac93c7a22cc8",
+    "sources/level-anim-load-common/host_arena.hpp": "5c5adb356007d9cf3f26d5c712ba1b01f2c3fa6308241334d4197d2030191e16",
+    "sources/level-anim-load-common/host_check.hpp": "890d00cf7d6c2a81fea1da66b6097670f5aec7e0401609eb06d6d43933c24309",
+    "sources/level-anim-load-frame-states/storage.cpp": "bf0eb334aea12fec3bf5d729a4473db8aa689cb0b665c6ac00833d1f0e800e78",
+    "sources/level-anim-load-frame-states/storage.hpp": "576cc78e5ae49c2444fadfb1fd5e856ee150291e3971ab068bbd2b8328c76da3",
+    "sources/level-anim-load-frame-states/storage_contract.cpp": "8f5ecdc89febd622131e9dbdc6338caeda9408d39d638ba84888f025a58afff2",
+    "sources/level-anim-load-loader-failure-word/failure_word.cpp": "f8f47f4028b1ca99e6bceb0a9f9b8fca00dff4554b2b1ffde7c9a18896ad4791",
+    "sources/level-anim-load-scene-state/storage.cpp": "8e60f5381b4f6c157145d06d19ee5006a8f0c50fc1cff412b82810351def5bfb",
+    "sources/level-anim-load-scene-state/storage.hpp": "00aba2b6a9a2119826570f8b2b519cac1e40fe57efcc556e0301fbc3b3912bb7",
+    "sources/level-anim-load-scene-state/storage_contract.cpp": "4ec39b3383689c8bb83e1e4252d3e966885051d6b85deb3e5b4fbfdacb3c2391"
   },
   "additional_implementations": [
     {
@@ -21205,11 +22396,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1373,
-    "authored_default_inputs": 1371,
+    "selected_inputs": 1459,
+    "authored_default_inputs": 1457,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1078,
-    "compiled_body_bytes_from_accepted_inputs": 449232,
+    "emitted_function_definitions_including_helpers": 1121,
+    "compiled_body_bytes_from_accepted_inputs": 468468,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -21222,7 +22413,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1060
+    "package_selected_inputs": 1146
   },
   "startup_implementations": [
     {
@@ -37505,6 +38696,1249 @@
       ],
       "host_files": [
         "sources/frontend-shell-run/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp",
+      "source_sha256": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+      "object_sha256": "800a795dc48acee32f2c23197ee2cff1245b0d7fc13e756b6b9aa42b0e51f440",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp",
+      "source_sha256": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+      "object_sha256": "10a37e5231c53f932473f96332e342b6cbf2213f58a7bb219bc505b854f60e85",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-first/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp",
+      "source_sha256": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+      "object_sha256": "062350d57ab5ce65bf85861209cb852c8fc27188e6a983658ab4400bb6ff91f6",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-tag-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp",
+      "source_sha256": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+      "object_sha256": "9a8aa3facee00071fac21b146ffff83df2879de8923162e8751be74680848f8f",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-in-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp",
+      "source_sha256": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+      "object_sha256": "7ef1070cc0958fc37e5fdd7523d2a7b4212215bc104589734daeb900577fbd4f",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-update-in-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp",
+      "source_sha256": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+      "object_sha256": "94529093d3af99f9eb6ac1450e28634657da2d0c796c5b4bef78afa24a7b6159",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-iterate-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp",
+      "source_sha256": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+      "object_sha256": "419d3bcf1dca78ac8d02f5db7264800f78b36a163b797d38c5c8ea63d519b318",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-remove-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp",
+      "source_sha256": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+      "object_sha256": "51056904f290dc203bf99904a20ebc494d91bbc40bd170ee8e8e7f2c834ba3e5",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-delete-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp",
+      "source_sha256": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+      "object_sha256": "3709e678f9beea1522ce8e24b2f99e14f0ae983d5920f755fb3789f8e56d87db",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-medium-run-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp",
+      "source_sha256": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+      "object_sha256": "8d799a23b83c7deff50938c5d6e4cb8f40d42fa678a41e6da3d16ae2252ec324",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-list-head-copy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp",
+      "source_sha256": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+      "object_sha256": "e72f794a0af29c609e1e7e64b0957c582f4caba34a0a1f185b491d19974f5f5b",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-light-add/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp",
+      "source_sha256": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+      "object_sha256": "98ee55c44e3e71e795a5f606a376a24d7100b0a8348a37a0489d542ed8123568",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-has-number/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp",
+      "source_sha256": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+      "object_sha256": "3c61c62c363919efce213400ce83b7816357cd75486dfd6a5d488cd7f48697d4",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-p-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp",
+      "source_sha256": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+      "object_sha256": "e5be36fdeedb5819aab4e0ae775227c473f1105f5829b556bea475313602b419",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-add-particle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp",
+      "source_sha256": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+      "object_sha256": "133309a8d045b625729ab0f5abb7ee9d6446c37e3070df92549e12649a3db59f",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-update-particle-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp",
+      "source_sha256": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+      "object_sha256": "10044a17fff51149b108b520323fcc229d7a38e48e669c97a644dd9b367ff247",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-p-update/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp",
+      "source_sha256": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+      "object_sha256": "7d26aaadbccc2db3dfeb576f1183aa68d834f3a969b8b1359de24811cab013f5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-emitter-tag/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp",
+      "source_sha256": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+      "object_sha256": "f693a4097dcb23b12533bf81db063f45e33318a0182c6031a5206c458476f081",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-script-particles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp",
+      "source_sha256": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+      "object_sha256": "424eff5fb522a1040a108e54999099235a36cec6d277569ddf69381e1fdf7925",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-fx-dust/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp",
+      "source_sha256": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+      "object_sha256": "7efa0a15ebfa959ae4eaf39ffe262c5dfb2c4ba541f6d41d9b54ad80fb35286f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-task-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp",
+      "source_sha256": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+      "object_sha256": "64c6d975db38690b8ad36c86a5a43bb72914e9b3b014050be2792e00f62bf3a2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-particle-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-alert-game-object/alert.cpp",
+      "source_sha256": "36b3711989e35426f0dd44f7fb6f7664e43b1ad89838df94bbce4046f641eca1",
+      "object_sha256": "c83580ab8bb8c6943b0931c050f6248335857aa2fd9daf22cbe69e5b301031ca",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__10GameObjectifG6Point3P10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-alert-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-charm/charm.cpp",
+      "source_sha256": "c432d5eba53b932d57dccf724cf350988a6ec001e200ae4039cba2bd137fb723",
+      "object_sha256": "209e762702e68faef8b9d7eae38b562ccca5b714a3f769d1c15f20907c64ecea",
+      "emitted_functions": [
+        {
+          "name": "charm__8Creaturei",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-charm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-frame/frame.cpp",
+      "source_sha256": "bcce16b5e61c37bd93e2c09f9fa2a54caedac09c29ab13c5ccfd8577cda670e7",
+      "object_sha256": "6e5a3caca8e9733fe9b316b0beb4728097eed39d757b9325bc8181fb8d510ad0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-collision-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-game-object/collision.cpp",
+      "source_sha256": "ef1b1d52ffe2752793c962f5d7a0a063d20ad163fb1e3dd778f5088c409c28db",
+      "object_sha256": "86e26cfa3adc0321abe6eec93c1ca7ef52d0ea4b4bce67f3bf299c8ddf262812",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__10GameObjectP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-gold/collision_gold.cpp",
+      "source_sha256": "2f97d81c085ffd3ac818107ef322b01a5bdfbdeedaa6063ca8a674f1e2f26952",
+      "object_sha256": "a22446b104778a99bede253b48b81deb131fe862698e28bd77a100a9fc1016f3",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__4GoldP10GameObject",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-gold/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-grid-scale/grid_scale.cpp",
+      "source_sha256": "b31d610f8413b091d291e0602c1eedae9776c76a84a72114bc84067c724582c5",
+      "object_sha256": "993c74e036ef8870cfce3cba723a03a7fb2a4265e8f55f92ec6dc612d1a27116",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-collision-grid-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-collision-world/collision_world.cpp",
+      "source_sha256": "cf967f67e9d5283182dce7fc51f5e233b0db0026e0b30385ca1dcc4665d35a7b",
+      "object_sha256": "4c3a9b089a58158ea2083402e24aad0d4d7d922f7f8c03955f6fe5fd5150f3f8",
+      "emitted_functions": [
+        {
+          "name": "msg_collisionWorld__10GameObjectG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-collision-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-hurt-game-object/hurt.cpp",
+      "source_sha256": "58d06ce15d89de4f59c6fc98ff84e310cf0e8e050e8d97c161009ddb969db2a3",
+      "object_sha256": "e36f6404eac1abae9bd2f60e776c14bbe9a1061e824252cbc91c753c36d34e91",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10GameObjectfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-hurt-game-object/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-cat/set_state_cat.cpp",
+      "source_sha256": "8978e6804ab7619b75417c8f0b85263a1f3d0cf494397a6d1f163425cbeab430",
+      "object_sha256": "2ec6ff739b8dbb77e04dadbd00f577d5942ad8b6a09553de14aa95b757be64bf",
+      "emitted_functions": [
+        {
+          "name": "setState__3Cati",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-cat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-gnome/set_state_gnome.cpp",
+      "source_sha256": "4649660c800fbb00050257ef6700aadee20464353db5e4b768b555813028393c",
+      "object_sha256": "fc4727515034c96b7bb98c392fce4de71427e9d4f456f656859a393e9524ef6e",
+      "emitted_functions": [
+        {
+          "name": "setState__14GnomeNavigatori",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-gnome/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-mermaid/set_state_mermaid.cpp",
+      "source_sha256": "51e395cf6b2b0d10fd88c03c9168d8a2aee5ad0b94be0be9947408a682c11517",
+      "object_sha256": "46592296918ed27fc1f2ca80d5cfb117896f0dc5e390cbc1467ce9a31f2d7b07",
+      "emitted_functions": [
+        {
+          "name": "setState__7Mermaidi",
+          "compiled_body_bytes": 644
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-mermaid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-set-state-spider/set_state_spider.cpp",
+      "source_sha256": "6a011b8704dbdf8dcbf7142d9e3141c47cc2bef15e0471bc869e4f5f59b6744d",
+      "object_sha256": "3991934317b3322fed214a2994ddbc14f7cc1b0d447cd155762ebf0fc2d97712",
+      "emitted_functions": [
+        {
+          "name": "setState__11SmallSpideri",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-set-state-spider/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-spell-blessed-type-name/type_name.cpp",
+      "source_sha256": "ae7d85f982d8dd83664d5ce5599a4cd7a418692a52e70909e6e8a056f4704baa",
+      "object_sha256": "0d3dbf6ffc7f3dab33e460beffc614248627a1390c63359b53f8338a0dd4b62f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-spell-blessed-type-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-spell-type-name/type_name.cpp",
+      "source_sha256": "70a119afaeb20b1b1d38b471d2a86d7fe7c7ea5750b18a5ddfb6ab7a91b477c1",
+      "object_sha256": "447fa566eb5c36c499b115860df168fdbd88a62212d107c506c83d6bee5a2a99",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/combat-reactions-spell-type-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "combat-reactions",
+      "source": "sources/combat-reactions-update-enemy/update_enemy.cpp",
+      "source_sha256": "a6d6a26d48ffcd2fbe431e323c9d2681c9946de0e1ecfb79adf179502ef45dc0",
+      "object_sha256": "db58d5cdde4beb31aaa63b2757fda3502198c9132c6cf65c6ccec2d5309a0592",
+      "emitted_functions": [
+        {
+          "name": "updateEnemy__8Creature",
+          "compiled_body_bytes": 3568
+        }
+      ],
+      "host_files": [
+        "sources/combat-reactions-update-enemy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actor_view_50bfd0.cpp",
+      "source_sha256": "b7414b6eac64a39782f9dd35aeb475cedf1bd8bc48f6e8ed477fea3c94640fda",
+      "object_sha256": "29700f1a3009b9418ef55ce72e04f50c6844723b750480479bea02a9849ff36b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actor_view_50bfd0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_449790.cpp",
+      "source_sha256": "b6fd080766cd3ff3e2d7d1a2ab3e5401c22187a7c436e4892efdadcb19e80335",
+      "object_sha256": "5dc27dc1059fa685f31914da01a57f4637cdc8c018fe500f06d9483e3862522b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_449790.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4498b0.cpp",
+      "source_sha256": "3558ec27974159f000632a92c8d20a83c0e22e52d12d6dc8fcbc4bdec2459ee7",
+      "object_sha256": "217da82d113d3b042f8357d33d57980ac20246c34061e501d13cc6938b88618d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_4498b0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4499d8.cpp",
+      "source_sha256": "04c431c3f2833a61bbc5fd1f26d40b0cb8c787caff9a05d5f8f06b32c9d8f91b",
+      "object_sha256": "42377a91f302abd992151999ccc25c657d48c64e58deb596a9170d043f4b62c4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_4499d8.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a930.cpp",
+      "source_sha256": "dbdbed6c7bd8eb99bb99917dde96db8ad1123dc7895412301f8594dc71af1caf",
+      "object_sha256": "6e13ff8823105695e256241f5190aadbb8c72c253ddee592429a904a3afc915a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_44a930.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44a9c0.cpp",
+      "source_sha256": "85e5ae5b3aeebeb16a57b89626d139f5effe4a026f6e2ca1032c21fa65d6e006",
+      "object_sha256": "3900ccdee6df15a45f6361a9224b3e188235aa0e6542bacbaaaa273469baf5f9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_44a9c0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44c830.cpp",
+      "source_sha256": "3412afd1f1bd7c4cf5b56b47b304d483ea7304f5500a80b5292ece290fb2f0a3",
+      "object_sha256": "b55150d6499252c6af8207c24b7d3b36110209249896c3a518ff77ba1be47a8b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_44c830.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f1f8.cpp",
+      "source_sha256": "bce1f82294bac041ab65e55db992035c7bb73176fa3cc300d50094cef289522f",
+      "object_sha256": "b4de70b99152af6b93a02a95dd617d4e855a9541110eef70a53b2a699a5bbc0a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_44f1f8.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_44f2a0.cpp",
+      "source_sha256": "ae3ce0d2c0bcbda5f7b42cfc36ec84f60afc1d96860f9065b90786b214c2a489",
+      "object_sha256": "1aa276bf58a48d9db03affe99c40cf97e06ec480cfd24ebac0637f4803995a9c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_44f2a0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_470830.cpp",
+      "source_sha256": "44777c8c365704f680b0e4919c307468dddb6d29f30f228c9d9fa911c8def1c1",
+      "object_sha256": "f879022672234109cd315342e2a21ef97b2b2abb8878b24abbbe664e931e4770",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_470830.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_471310.cpp",
+      "source_sha256": "f953a36f85401df6c27ca2ca6907be821bccd09ba07e6123a1f2ab71326de264",
+      "object_sha256": "1584cace0c5403ec0c54b65e82e95cd936aa5f6b610085c6a5ff891d5a6cded6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_471310.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_477758.cpp",
+      "source_sha256": "0e3286e532fc612b5380b1705b95736328d5a9aa8acde64d496e624db4ef86d6",
+      "object_sha256": "028611541be4da16465825c533a3d2a3cc62ed2a5ae1faf78570c73d34299ead",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_477758.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_481980.cpp",
+      "source_sha256": "9ec5d82b1301dedc962b5b38c92a3dc9bd2dbcc19b7b43a3dbfbd7b8e6ee33cf",
+      "object_sha256": "d3c4c8a2ee3c54e97373327116ea18d8d4082ca4d23861b2f8839d541085fdcf",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_481980.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_483e5c.cpp",
+      "source_sha256": "8d1bf67cb747cf0593ce495edc1d8c47fd53d8b6b8e4908604d9ad67aead2dfc",
+      "object_sha256": "ab67a71360855cc65ff9999657702e33c1035afa2215fa9eb0df8cc3d77dd4c7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_483e5c.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485360.cpp",
+      "source_sha256": "cac77923bb7b226283bdd455eba2fb8a7354a1f154f9e91de78851c16434ef64",
+      "object_sha256": "0eabc9345aa3078fa246da8ad98bd448b9014aa1145058ec30881db6215ffba1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_485360.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485400.cpp",
+      "source_sha256": "d3ae0093990abff6d9915e1636b39a24822833a83333e9132b921518b1de41a7",
+      "object_sha256": "d62841f026bf4456c4b5485a11f096431e3749bfe554b11919cac9b2fb7adb00",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_485400.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_485408.cpp",
+      "source_sha256": "5457ec4c7204b02042cd96fbcc11dc494f639a161f1a068c27b6b28269c62c03",
+      "object_sha256": "afa694365c4677adeb73bfa6de921568516848bc3daf2fa8e0dcb6c52e9eed5a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_485408.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860b8.cpp",
+      "source_sha256": "4dff148551f7a46f1bcc2b79ea11b1aa24b9c5bd695a32dbabdacaad993e6547",
+      "object_sha256": "ea0e0e53a5f52b7e7cf56bce679ae79bd8eac9649731ac6d89fa62226da432b9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_4860b8.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "actor-view-tables",
+      "source": "sources/actor-view-tables-views/norrath_actors_a_view_4860c0.cpp",
+      "source_sha256": "2600e97b6eab8f2eeabaa914c5843edbf7011945d036373c6abdf42766599f57",
+      "object_sha256": "8b5d67ccc288e8aa4a3c36a005a01e65d8ebb7e42af46aea8f00683008fa2ad7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/actor-view-tables-views/host/norrath_actors_a_view_4860c0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-anim-add/anim_add.cpp",
+      "source_sha256": "654541b71ca4137fd386ab76dadd7db55343ddce8dedb0225092f05bb97b3f05",
+      "object_sha256": "c6555dffa11b40c8f1210aa3a8c3eb7a620b289b5349119de5d81dc2730791be",
+      "emitted_functions": [
+        {
+          "name": "animAdd__FP14AnimationStateP15AnimationHeaderi",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-anim-add/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-anim-add-transition-to/anim_add_transition_to.cpp",
+      "source_sha256": "5dc5b43adfe5e49d8b9b9f6ad5f868210c8d937433b63511b344c44db24f4efd",
+      "object_sha256": "dcc5295e5214dfd41941d27616293ea45b76f04f1595635bf2c15ad1ad9d2be5",
+      "emitted_functions": [
+        {
+          "name": "animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-anim-add-transition-to/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-anim-init-state/anim_init_state.cpp",
+      "source_sha256": "83f29cbdd836db25fb046d29cc16161f51c45629acb78cd23d9ac7237afa523e",
+      "object_sha256": "2dd39f651ac7e786c39071a7efe304bc550e9bd2829c566f0fbc501774e48364",
+      "emitted_functions": [
+        {
+          "name": "animInitState__FP14AnimationState",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-anim-init-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-anim-reset-framestates/anim_reset_framestates.cpp",
+      "source_sha256": "992d4622a56944824d3a84c3161384c7634edfb4d7ac067d8ecbccaed49d480b",
+      "object_sha256": "7ab37a939a2e4ed1ef74059c0f3b337dee1f9ab65584fe2752ecce233d8876c9",
+      "emitted_functions": [
+        {
+          "name": "animResetFramestates__FP14AnimationState",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-anim-reset-framestates/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-anim-set-to-end/anim_set_to_end.cpp",
+      "source_sha256": "44deed07186ee948d4d1454e8269325ef70c1b73b5a68f8cb4f78d47bb31fec8",
+      "object_sha256": "c957a54f5e77e50d74231f67103b4a92cc69a590063259e56b697b693ee9db99",
+      "emitted_functions": [
+        {
+          "name": "animSetToEnd__FP14AnimationState",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-anim-set-to-end/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cd-state/storage.cpp",
+      "source_sha256": "240d053ce394835f28d1b5ef86d5c20dd5fddfd80bcaa1a88e99e74e2c7e552e",
+      "object_sha256": "695d42b49bd657e9f885a895e094c47d1a1870c40c5db14abe214c52ccbd314a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cd-state/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-current-scene/storage.cpp",
+      "source_sha256": "798f5c6e580a045e2b54734d49d930223a40eb17daead378d6f3bbffc34bcefb",
+      "object_sha256": "36ae479da142a801f845d2da58341bf82d933d3a46ee553069abc25a99b0016a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-current-scene/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-init/storage.cpp",
+      "source_sha256": "3ced145469e4411fe6cf62e69aa7ea8ec59f44b1d6f9ce1aa6660b79f454f5ef",
+      "object_sha256": "ab9f6d52b6869dcef5ad07241f833875eaa7e39c8e353cf4da441458979670fe",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-init/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-msg-handler/storage.cpp",
+      "source_sha256": "a213e85b14233592a58bb73a59e4f7b1f8e3956edc041fc4a774a98969a603ce",
+      "object_sha256": "dab76fe1f8a88423e30e2f6ea485e82aaa4d4f46c7da744063026de5d6d0ca9c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-msg-handler/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-msg-handler-function/cut_msg_handler_function.cpp",
+      "source_sha256": "5a133c7f44752db70eec15352e215370c60674bdc6832c16d3fc13f5fc65cbe9",
+      "object_sha256": "1852a0269a73df7c80a6f4cc6f5586da4bf64aa32c8b469844674c5b9b91abda",
+      "emitted_functions": [
+        {
+          "name": "cutMsgHandlerFunction__FPUci",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-cut-msg-handler-function/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-play-mode/storage.cpp",
+      "source_sha256": "c89f09d3be338f7bc09ee1ec61a0d9544605981c03458a70bfd1a135c677cc8b",
+      "object_sha256": "8f90d028b47639e5f83506c60db5398b6f2b5a0994851b9370331195ae6e869c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-play-mode/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-scene-name/storage.cpp",
+      "source_sha256": "308c4b3358fb0e9e21b1d90c83c96584a96ec1ad1e3b22f7609f543ef09d00f0",
+      "object_sha256": "9f38f9b1e77c7a1b772e2b30a6a774f7c8831c05e207f795223c55fd89030584",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-scene-name/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-skip-mode/storage.cpp",
+      "source_sha256": "1ab972e9887a1afa7d8b2093455be769357abd6981bf7a69751ab67473836b7b",
+      "object_sha256": "f150df99b3a66cb6b40a085e05676b784ccc1d0b6fcf4e63a3eab4d1f59377ed",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-skip-mode/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-start-scene/cut_start_scene.cpp",
+      "source_sha256": "3f9f277aa9832699b304aa5d11e4aa3e35060b08acef880e5ab8a5b1f510975e",
+      "object_sha256": "df9779a4600c115faa82033a16505c07d9e02aa73a29b59f559a7999004b3e79",
+      "emitted_functions": [
+        {
+          "name": "cutStartScene__FP9_cutscenePc",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-cut-start-scene/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-cut-time/storage.cpp",
+      "source_sha256": "868f7c1e263d877da6d0249a0b474255384310160af188c10d902733837d6a02",
+      "object_sha256": "6bbaf38c466e4cfc787d75365d6abb590d790f07e5f019b18c3090b8e2fa9ca0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-cut-time/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-dialog-actor/storage.cpp",
+      "source_sha256": "0e670425ded373d122992eea5983715656c28d53007286a6a3408ec9c8880d4f",
+      "object_sha256": "45e09b6d3f908c4de9505bfa7d89e18398bca1ae27d9982d8135882900e1fe2c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-dialog-actor/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-display-action-pos/storage.cpp",
+      "source_sha256": "71d66951ee6f8f430b45a427d22d91df1019f3e276967853cdb66a6ef7d7c556",
+      "object_sha256": "099a88e6fc2bbbac4ca10d2bcd55d7cb6a6115ff20df60123540e86b0ec91430",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-display-action-pos/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-display-cut-pos/storage.cpp",
+      "source_sha256": "b4c001b57fa73fade9eb84186643db35d17db8a2332a7c93f3d55aae8dfa8757",
+      "object_sha256": "c02a7b83e1c6014911c3adcba6d5738affe6c0ab22ae494d21dc20e0ab797b89",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-display-cut-pos/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-display-frame/storage.cpp",
+      "source_sha256": "8150f5cf26f99db57d80f789ba8e34b0ae9f5accef0bc1b62ab1060d4af62f72",
+      "object_sha256": "dcfbfac928648f3c073012194355d1a8ec150bfb96bf4c443d3254a166a583c3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-display-frame/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-find-height-scale/storage.cpp",
+      "source_sha256": "f7c368856c061553679db40b481351de203e7a69e5f4f366797345fae31eb1f5",
+      "object_sha256": "e1564608112c61805f6f4ba32b769955f75e1cdfa0068a593b2d80c2f06ba038",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-find-height-scale/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-forbidden-scale/storage.cpp",
+      "source_sha256": "fe8ad9d6a5365ef61f417da97aadddd1ef9df862188f8c81d159c48ad5ba4972",
+      "object_sha256": "affed16cb953436c8ee33d8f21ee73a6658765490efcdb0706a220bfdd7dcdef",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-forbidden-scale/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-lump-find/lump_find.cpp",
+      "source_sha256": "c42ad46490d371bd75ecf661ce013afb7a600f348be1eb290a8af6bfaeb1dac3",
+      "object_sha256": "b886a12bd0556a796753951a63dff10e3f169a917077b7913204c61a819034d9",
+      "emitted_functions": [
+        {
+          "name": "lumpFind__FPvPc",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-lump-find/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-monster-spawn/monster_spawn.cpp",
+      "source_sha256": "41852c6fca73652d77e6e436e8fd4e694af4c7d81395103f26d3ca6d5d2ff635",
+      "object_sha256": "64a6c1aceb6492fb9d34f6d1b62092708ef90d15c89be3d079b3f83537aacedf",
+      "emitted_functions": [
+        {
+          "name": "norrath_monster_spawn",
+          "compiled_body_bytes": 2812
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-monster-spawn/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-music-size/storage.cpp",
+      "source_sha256": "338a56b5c62a5eaee000e70050708e5dd11c8cd3f65bc71d7c0608bfe2e5b6cf",
+      "object_sha256": "498a862dfae0334f62c907f4d0e93ea30b69398aa9496daa5b44bee1d2616b0c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-music-size/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-net-nm-ready/storage.cpp",
+      "source_sha256": "035a1c16e1a850633b12abb725365691fb0004ca6640c9e3ff06eab5d38f47d6",
+      "object_sha256": "f7b41d63c4913f08379ab487f04e850bbe3a73375f3a0f0d6096f9f411989067",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-net-nm-ready/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-net-we-sent-ready/storage.cpp",
+      "source_sha256": "b7bf9a067326876e20bbda29c026042b22d783d2e801e4c1ffb07932886b9159",
+      "object_sha256": "c157d4285b551ec0cac25c952a3ff0db32669ea7ad17c3219e0447345e05a126",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-net-we-sent-ready/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-route-unroll-vnode/route_unroll_vnode.cpp",
+      "source_sha256": "a38d38a778df2af3aece41012c154e25cc6e568a34ffff9936c1de33f25f0170",
+      "object_sha256": "b4376dc42ceab89059f62bb30a198993bce976c844209f545cb73cdfb2ab63a7",
+      "emitted_functions": [
+        {
+          "name": "norrath_route_unroll_vnode",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-route-unroll-vnode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-sound-free-ram/sound_free_ram.cpp",
+      "source_sha256": "127210bc2d028fd50c2badee83fbecc32c8ff93e666bbdb50e7d33efef5993d4",
+      "object_sha256": "5305e506eebf9a09a93f9ee1772c5cf958793411abc6d690f20fe5e8d8da0a03",
+      "emitted_functions": [
+        {
+          "name": "norrath_archive_sound_free_ram",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-sound-free-ram/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-swap-int/swap_int.cpp",
+      "source_sha256": "8088ab150d71b03a34b39071a50c16fd1c7ddfdb9eb1778f3c7994d967441ff3",
+      "object_sha256": "1df02150d25175473d7422e35f43104a7cb8eda0bc0edd35179d8ee5e6720df5",
+      "emitted_functions": [
+        {
+          "name": "norrath_swap_int",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/level-anim-load-swap-int/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-world-flags-word/storage.cpp",
+      "source_sha256": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
+      "object_sha256": "c7967a6aea5bb28985e1d2b96a03fadde0ccdcb093a13eaf98f5a1f0b4555b10",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-world-flags-word/storage_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "level-anim-load",
+      "source": "sources/level-anim-load-world-pointer-word/storage.cpp",
+      "source_sha256": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
+      "object_sha256": "baddaa0fd0fd4d108ff9be50782ee8974a5671eaa177f5ef50eaf30054a8d3ce",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/level-anim-load-world-pointer-word/storage_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
