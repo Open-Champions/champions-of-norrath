@@ -172,6 +172,9 @@ unsigned norrath_construct_MummyKing(void* object, const void* point, short type
 extern unsigned char norrath_ctors_lava_wraith_view_42d578[];
 extern unsigned char norrath_ctors_lava_wraith_view_44fc18[];
 unsigned norrath_construct_UndeadKnight(void* object, const void* point, short type, char** arguments);
+extern unsigned char norrath_ctors_lava_wraith_view_44fb28[];
+extern unsigned char norrath_ctors_lava_wraith_view_4858b8[];
+unsigned norrath_construct_UndeadKnightClone(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
