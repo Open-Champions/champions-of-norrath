@@ -1079,6 +1079,930 @@ Opened 108 names, mostly the virtual-table callees plus
 `norrath_construct_Vehicle` stays unresolved. 765 function bodies, 908
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
+## agents/vslots-b lever, Natasla, and turn
+
+Three units were selected. Host checks passed. None of them opened a new
+import.
+
+| | |
+|---|---|
+| Before | 950 |
+| After | 947 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `msg_load__5LeverPc`, `setState__7Nataslai`,
+`turnToFace__8CreatureiG6Point3`. A later notes commit records those names
+and does not change the link. 768 function bodies, 911 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/particles
+
+All 45 units were selected. Host checks passed. Ten of them are functions.
+The other 35 are data. Eleven data names were not previous imports, so they
+did not change the count: `alwaysDrawList`, `bolt`, `descList`,
+`modelClippingOn`, `noiseTable`, `objectIgnoreFlags`, `PS`, `psSequenceNm`,
+`trail`, `trailSequenceNm`, and `worldCameraMatrix`.
+
+| | |
+|---|---|
+| Before | 947 |
+| After | 929 |
+| Closed | 34 |
+| Opened | 16 |
+
+Closed includes `objectGrid`, `ghostObjectGrid`, `stringHash`, `objectHash`,
+`offTheGrid`, `objectStrings`, `freeNodes`, `worldCameraPos`,
+`drawObjectsTask__Fv`, `drawParticlesTask__Fv`, `initNoiseTable__Fv`,
+`initParticleSystems__Fv`, `initTrails__Fv`, `lightResetOptionalParams__Fv`,
+`listDestroy__FP8ListHead`, and `allocDescriptor__FP11ParticleDef`. Opened:
+`P_DrawParticles__FP8Matrix34`, `_$_16ListSafeIterator`,
+`__16ListSafeIteratorP8ListHeadi`, `ambientOnly`, `charAmbient`,
+`charDirect`, `charDirect2`, `charDirectDir`, `charDirectDir2`,
+`charScaleB`, `charScaleG`, `charScaleR`, `disableVolumetricLighting`,
+`interfaceMode`, `next__16ListSafeIterator`, and
+`worldClipCubeToClipFrustum__FPA1_fi`. 778 function bodies, 956 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/vslots-a
+
+All 48 units were selected. Host checks passed. They are the typeinfo,
+destructor, clone, and creature slot bodies in this package.
+
+| | |
+|---|---|
+| Before | 929 |
+| After | 889 |
+| Closed | 48 |
+| Opened | 8 |
+
+Closed: the twelve `_$_*` destructors, the thirteen `__tf*` typeinfo
+functions, the ten `clone__*` functions, and
+`confuse__8Creaturei`, `death__8Creature`, `getMinibossName__8Creature`,
+`getModel__8Creature`, `getSkillRank__8Creaturei`, `initMiniboss__8Creature`,
+`isEnemy__8CreatureP10GameObject`,
+`msg_alert__8CreatureifG6Point3P10GameObject`,
+`msg_collisionWorld__8CreatureG6Point3`,
+`msg_collision__11SmallSpiderP10GameObject`,
+`msg_collision__3CatP10GameObject`, `msg_collision__8CreatureP10GameObject`.
+Opened: `_$_14AnimationState`, `_$_15FxCreatureState`,
+`__15AnimationState8RC15AnimationState8`, `__rtti_si`,
+`dropItem__4itemG6Point3Pc`, `objectAddToDeleteList__FP10GameObject`,
+`readyToSwitch__3Cat`, `switchToRun__3Cat`. 826 function bodies, 1004
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/link-image-bounds
+
+`__register_frame_info` was selected. It is 92 bytes. The host check
+passed. The unit also defines `objects`, which was not a previous import.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 888 |
+| Closed | 1 |
+| Opened | 0 |
+
+Closed: `__register_frame_info`. `SignalSema` and `__sce_eh_sema_id` were
+already unresolved. `WaitSema` was already defined. 827 function bodies,
+1005 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/ctors-ant-lantern
+
+`norrath_construct_AutoChestLP` was selected. It is 260 bytes. The EE
+compile passed the 32-bit pointer assert. The host contract does not compile
+on this arm64 machine because that header requires `sizeof(void*) == 4`, so
+the behavioral checks did not run here.
+
+| | |
+|---|---|
+| Before | 888 |
+| After | 889 |
+| Closed | 1 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoChestLP`. Opened:
+`__11AddParticleG6Point3PPc` and `norrath_ctors_ant_lantern_view_44ea78`.
+828 function bodies, 1006 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/sound-rpc-views
+
+All 31 units were selected. They are data objects only; no function was
+added. The notes tie each view to a pinned symbol address and size and
+separate the caller-proven prefix from the unnamed tail bytes. Each unit has
+a host check that returns failure on a wrong size or nonzero byte. All 31
+host checks passed on this machine. The previous integrator merged the
+branch and left the plan and snapshot edits uncommitted; this link is the
+first complete one for that selection.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 858 |
+| Closed | 31 |
+| Opened | 0 |
+
+Closed: the 31 `norrath_sound_*_view` names listed in the package notes.
+Opened: none. 828 function bodies, 1037 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+## agents/game-state
+
+The previous integrator merged the branch and was cut off before the plan
+and snapshot edits. The merge commit is kept; this selection appends its 22
+units with fresh `input_order` values 1039 through 1060. All 22 sources
+compile under the reviewed `authored_cpp` flags with the function names and
+body bytes the notes claim, including `gameMaybeSaveConfig__Fii` at 2216
+bytes and `gameSetDefaultGameConfig__Fi` at 1332. All 22 host contracts
+passed on this machine. No game binary or disassembly listing was committed.
+The notes separate observed addresses from inferred names; the
+`0x00484eb8` byte is published as `norrath_game_state_byte_00484eb8` inside
+the reset unit and is not an ELF name. `gameLoop__Fv` stays unauthored.
+`gameCam` stays the natives-c definition.
+
+| | |
+|---|---|
+| Before | 858 |
+| After | 893 |
+| Closed | 22 |
+| Opened | 57 |
+
+Closed: `__6Camera`, `coreInterfaceFlare__Fi`, `coreLoading`, `cutMode`,
+`exitToMenuMode`, `gameBailFromGameLoop`, `gameCameraTask__Fv`,
+`gameClear__Fi`, `gameCombatCamera`, `gameControlPaused`,
+`gameDrawWorld__Fv`, `gameInitSkillRamps__Fv`, `gameIsPaused__Fv`,
+`gameMaybeSaveConfig__Fii`, `gameMultiPlayerMarkersOn`,
+`gameNetReplicateQuestItems`, `gamePause`, `gameResetGameState__Fv`,
+`gameReverseCameraYaw`, `gameSetDefaultGameConfig__Fi`,
+`jumpGateJumping__Fv`, `mainMenu`.
+
+Opened: `DLG_Clear__Fv`, `Reset__6Cameraii`, `SetMode__6Camerai`,
+`Update__6Camera`, `_listCheckAllIntegrity__FPCci`, `bossMeterAlpha`,
+`bossMeterCurrent`, `bossMeterMax`, `cdClear__Fv`, `cheatOn`,
+`commInit__Fv`, `coreInterfaceBrightness`, `cutClear__Fv`,
+`drawAutoMap__Fv`, `drawDome__Fv`, `drawListClear__Fv`, `floorClear__Fv`,
+`fxClear__Fv`, `gameAutoMapMode`, `gameCameraShake`, `gameDeathTimer`,
+`gameDeathTimerSingle`, `gameHidePlayers`, `gameLineClear__Fv`,
+`gameLineDebugDraw__Fv`, `gameShowEnemiesInMap`, `helpMessageOn`,
+`hudClearInfoMessage__Fv`, `hudFinishGold__Fv`, `hudNoController`,
+`inventoryReset__Fv`, `jumpGateClear__Fv`, `jumping`,
+`lastNmLocalPlayersAlive`, `levelSeeds`, `lightClear__Fv`,
+`localNmPlayersAlive`, `memCheckHeapReal__FPCci`, `multiHelpMessageOn`,
+`objectClear__Fv`, `padClear__Fv`, `playerClearSpellEffect__Fv`,
+`playerGlobalInit__Fv`, `removeAllQuestsFromLog__Fv`,
+`scriptClearAllGameState__Fv`, `scriptClear__Fv`, `scriptSuperClear__Fv`,
+`shopActiveFrame`, `skills`, `textInit__Fv`, `textureClear__Fv`, `world`,
+`worldAllocateWaterPatches__Fi`, `worldClear__Fv`,
+`worldDrawWorld__FP12_worldHeader`, `worldReset__FP12_worldHeader`,
+`worldSetViewCenter__Fv`.
+
+The notes list about a hundred opened names. The rest were already
+unresolved or already defined on this tip, including `DLG_Active__Fv`,
+`MC_GameConfig`, `MC_SaveConfig__Fv`, `coreLoadingScreenRunning`,
+`engineBrightnessCorrection`, `floorDrawEnable`, `gameNoDraw`,
+`gameOver`, `netNetworkMode`, `objectDrawEnable`, and `soundMusicVolume`.
+839 function bodies, 1059 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/sony-cd
+
+Merged. The notes separate observed addresses from inferred names, and each
+selected unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. 21 of the 26 units were selected. Five
+units were not selected because those symbols are already in the link:
+sony-cd-texture-init redefines `textureInitTexture__FP8_texture` from
+draw-texture-init, sony-cd-isignal-sema redefines `iSignalSema` and
+sony-cd-poll-sema redefines `PollSema` from gs-dma-kernel,
+sony-cd-vblank-views redefines the three `norrath_archive_vblank_*` views
+from cd-archive, and sony-cd-text-add redefines `table` from
+particles-anim-table. Their files stay in the source snapshot. The notes
+list those names as closed; they were already defined, so the official
+delta is smaller than that list.
+
+20 host contracts passed on this machine. The `ReferThreadStatus` check
+compares the assembled body against the pinned executable, which this
+machine does not read; the stub assembles to the claimed 16 bytes and the
+worker records the match. All 26 sources compile under their reviewed
+profiles with the hashes the notes claim. The file-local helpers
+`relocate`, `delay_handler`, and `relocate_if_set` are recorded alongside
+their functions.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 884 |
+| Closed | 39 |
+| Opened | 30 |
+
+Closed: `DelayThread`, `ReferThreadStatus`, `SCE_CD_debug`,
+`_sceCd_Read_cur_pos`, `_sceCd_c_cb_sem`, `_sceCd_cd_callback`,
+`_sceCd_cd_ncmd`, `_sceCd_cd_read_intr`, `_sceCd_cd_scmd`,
+`_sceCd_ee_read_mode`, `_sceCd_ncmd_prechk`, `_sceCd_ncmd_semid`,
+`_sceCd_ncmdsdata`, `_sceCd_rd_intr_data`, `_sceCd_scmd_prechk`,
+`_sceCd_scmd_semid`, `_sceCd_scmdrdata`, `_sf_bind`, `_sf_data`,
+`animInitAnimation__FP15AnimationHeader`, `cdrdsf`, `cmd_sem_init`,
+`dum_mode`, `fontInitFont__FP4Font`, `modelInitModel__FPv`, `my_th_info`,
+`my_thid`, `ncmd_sema_keep_cmd`, `sceCdNcmdDiskReady`, `sceCdStream`,
+`sceSifBindRpc`, `sceSifCallRpc`, `sceSifCheckStatRpc`, `sceSifInitRpc`,
+`sceSifWriteBackDCache`, `sfrdata`,
+`soundAddSound__FPcP10_vagHeaderb`, `stm_status`,
+`worldInitWorld__FP12_worldHeader`.
+
+Also defined, and not previous imports: `_sceCd_ncmdrdata`,
+`_sceCd_rcmd_semid`, `_ncmd_bind`, `_scmd_bind`, `scmd_sema_keep_cmd`,
+`cb_thid`, `cb_semid`, `sceCdCbfunc`, `sceCdCbfunc_num`,
+`sceCdCbfunc_number`, `_sceSifInitCheck`, `_data_table`, `_packet_buffer`,
+`_free_buffer`, `_free_buffer2`, `nmSounds`, `effectsBufferSize`,
+`soundList`, and `sceCdSyncS`. Not selected, so authored and not in the
+link: `textureInitTexture__FP8_texture`, `iSignalSema`, `PollSema`, the
+three `norrath_archive_vblank_*` views, `textAddText__FPv`, and `table`;
+each name keeps its existing owner.
+
+Opened: `DynamicLightArray`, `ParticleEmitterArray`, `SetTimerAlarm`,
+`TimerUSec2BusClock`, `__eq__19ParticleEmitterDataRC19ParticleEmitterData`,
+`_request_bind`, `_request_call`, `_request_end`, `_request_rdata`,
+`_sceRpcFreePacket`, `_sceRpcGetPacket`, `convertEnd__Fi`,
+`earlyInit__3mapP12_worldHeader`, `getStockPitch__FP10_vagHeader`,
+`lightDeactivate__FP5Light`, `megatileGenerate__FP12_worldHeader`,
+`megatileInit__FP12MegatileRootPv`, `megatile_ramkmax`,
+`nmParticleEmitterRecs`, `sceSifAddCmdHandler`, `sceSifGetReg`,
+`sceSifGetSreg`, `sceSifInitCmd`, `sceSifSendCmd`, `sceSifSetReg`,
+`strcasecmp`, `texmap`, `texmapend`, `texmapstart`,
+`transferVAG__FP10_vagHeaderi`. The other names the notes leave open were
+already unresolved or already defined, including `cdLoad__FPcPvii`,
+`strlen`, `sprintf`, and `_engineCheckStack__FPCci`. 862 function bodies,
+1080 authored inputs, zero COMMON. 214 tool tests passed. No EE, CD, SIF, or
+game path ran.
+
+## agents/link-image-bounds second pass
+
+Merged. The branch had absorbed merges of other packages; the merge kept
+the shared log, plan, and snapshot and took only the new
+link-image-bounds files and notes. Five of the six proposed inputs were
+selected with fresh `input_order` values 1082 through 1086.
+`register_frame_info` was already selected in the first pass and was not
+appended again. All five sources compile under `authored_cpp` with the
+hashes and body bytes the notes claim (`atexit` 372,
+`__deregister_frame_info` 160, the rest data). All five host contracts
+passed on this machine. The reference checker needs the private image, so
+it did not run here; it lives at `docs/agents/link-image-bounds-check.py`
+now, because only `.cpp`, `.hpp`, and `.S` files may sit under
+`experimental/sources`. No game binary or disassembly listing was
+committed. The rejected `.eh_frame` byte array was never committed. The
+notes keep observed addresses separate from the authored names, and the
+sema unit adds no alias between `__sce_sema_id` and the malloc view.
+
+| | |
+|---|---|
+| Before | 884 |
+| After | 992 |
+| Closed | 6 |
+| Opened | 114 |
+
+Closed: `__CTOR_LIST__`, `__DTOR_LIST__`, `__deregister_frame_info`,
+`__sce_eh_sema_id`, `__sce_sema_id`, `atexit`. `__register_frame_info`
+was already defined. `__wrap_free` and `abort` were already resolved, so
+they did not open.
+
+Opened: the exact 114 names listed in the package notes: `__wrap_free`,
+`abort`, the 101 `_GLOBAL_$I$*` constructor callbacks, and the 11
+`_GLOBAL_$D$*` destructor callbacks. `__register_frame_info` was already
+defined and does not change the count. The registrar's `objects` head was
+already defined. 864 function bodies, 1085 authored inputs, zero COMMON.
+214 tool tests passed. No EE startup stage ran.
+
+## agents/gs-dma-present
+
+This is a partial package: the branch carries 26 units with per-symbol
+observed addresses and behavior, but its notes lack the five summary
+sections (no closed/opened lists, no plan entries). It is merged because
+every committed function has a host test and the tool tests pass. 25 of
+the 26 units were selected with fresh `input_order` values 1087 through
+1111. gs-dma-present-texture-draw-color was not selected: it redefines
+`textureDrawColor__FP8_textureiiiUi` from light-methods, and its file
+stays in the source snapshot. All 26 sources compile under their reviewed
+profiles. 24 host contracts passed on this machine. The
+`AddDmacHandler` check compares the assembled stub against the pinned
+executable, which this machine does not read; the stub assembles to the
+claimed 16 bytes. No game binary or disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 992 |
+| After | 1007 |
+| Closed | 25 |
+| Opened | 40 |
+
+Closed: `AddDmacHandler`, `EnableDmac`, `checkModelVersion`,
+`coreLoadingScreenRunning`, `draw`, `drawFrameNm`,
+`drawRemoveInterrupts__Fv`, `drawRestoreInterrupts__Fv`,
+`drawStart__Fv`, `drawWaitFinished__Fv`, `engineSetVideoMode__Fb`,
+`frameStartPacket__FUibi`, `gsIntHandler__Fi`, `lastFrameVBlankCount`,
+`makeSamplePacket__Fb`, `powerOffMode`, `sceDmaPause`, `sceDmaPutEnv`,
+`sceDmaSend`, `sceGsSyncV`, `specialMpegMode`,
+`switchTo30Counter.798`, `switchToHalfCounter.797`,
+`textureInternalInit__Fv`, `texturePackDown__Fv`. Also defined, and not
+previous imports: `gsHID`.
+
+Opened: `DisableDmac`, `RemoveDmacHandler`, `VSync`, `VSync2`, `atoi`,
+`cache`, `cacheClear__Fv`, `cacheHead`, `cacheTail`, `compositeAlpha`,
+`copyScreen`, `copyScreenAlpha`, `copyScreenColor`, `copyScreenFrame`,
+`decompressStack`, `decompressThreadid`, `dummyTex`, `engineDisable30fps`,
+`engineFullFrameMode`, `engineScissory1`, `engineScissory2`,
+`engineScreenSlide`, `engineYOffset`, `frameStatePacket`,
+`makeUnscrambleTable__Fv`, `sceClose`, `sceDmaCurrentEnv`, `sceOpen`,
+`sceRead`, `segmentUsed`, `texDecompressThread__FPv`, `texdecompress`,
+`texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`,
+`texturePageTable`, `textureUncompBufferLocked`, `trippleBufferMode`,
+`uncompMap`, `uncompSpin`. 881 function bodies, 1110 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/actor-view-tables
+
+This is a partial package: the branch carries six data-view commits with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/actor-view-tables.md` from the source
+comments. All six units were selected with fresh `input_order` values
+1112 through 1117. They are data objects only; no function was added.
+Each unit has a host file that returns failure on a wrong size or nonzero
+byte; all six passed on this machine (each compiled together with its
+implementation). No game binary or disassembly listing was committed. The
+existing mentions of these names are `extern` references in the actors-a
+constructors, not definitions.
+
+| | |
+|---|---|
+| Before | 1007 |
+| After | 1019 |
+| Closed | 6 |
+| Opened | 18 |
+
+Closed: `norrath_actor_view_486878`, `norrath_actors_a_view_438e98`,
+`norrath_actors_a_view_449430`, `norrath_actors_a_view_44ccb8`,
+`norrath_actors_a_view_44d0a8`, `norrath_actors_a_view_485358`.
+
+Opened: the 18 vtable slot targets the three 144-byte tables point at:
+`_$_8FireBomb`, `_$_9Container`, `_$_9WorldPart`, `__tf8FireBomb`,
+`__tf9Container`, `__tf9WorldPart`, `clone__8FireBomb`,
+`clone__9Container`, `clone__9WorldPart`,
+`msg_collision__9ContainerP10GameObject`, `msg_draw__9Container`,
+`msg_getPokeName__9ContainerPUsi`,
+`msg_hurt__9ContainerfP10GameObjecti`, `msg_load__9ContainerPc`,
+`msg_poke__9Containeri`, `msg_run__8FireBomb`, `msg_run__9Container`,
+`msg_save__9ContainerPc`. 881 function bodies, 1116 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/card-progress
+
+Merged. The notes separate observed bytes from inferred names, and the
+host tests fail on wrong behavior. No game binary or disassembly listing
+was committed. All 29 units were selected with fresh `input_order`
+values 1118 through 1146. The three functions compile to exactly the
+claimed bodies (`newMode__Fii` 36, `stopCardQuery__Fv` 164, `sceMcSync`
+228). All 40 host tests in `host-tests/card-progress/` passed on this
+machine. `flareAlpha`/`flareDelta` are the card words the notes claim;
+the same-named locals elsewhere are different objects and stay undefined.
+`frontEndWasRunning` and every `MC_`/`MCA_` function stay imports.
+
+| | |
+|---|---|
+| Before | 1019 |
+| After | 999 |
+| Closed | 29 |
+| Opened | 9 |
+
+Closed: `_3map$autoMapBitsSize`, `actCount`, `actLevelCount`, `allActs`,
+`asyncMode`, `bareSlotFootPrint`, `browserState`, `configState`,
+`curAct`, `disableMC`, `errorCondition`, `flareAlpha`, `flareDelta`,
+`iconHeader`, `keepPlayerPositions`, `killPlayer`, `lastCardPort`,
+`lastCardSlot`, `newMode__Fii`, `oldAsyncMode`, `pauseStackPos`,
+`saveCheckPointCount`, `sceMcSync`, `slotClusters`, `slotFootPrint`,
+`sortedTimes`, `stopCardQuery__Fv`, `totalClusters`, `totalFootPrint`.
+
+Opened: `MCA_FileOpen`, `MCA_Reset__Fv`, `act1`, `act2`, `act3`, `act4`,
+`act5`, `mcRunCmdNo`, `syncState`. The other names the notes leave open
+were already unresolved, including `MCA_Cmd__Fiiii`, `MCA_Sync__FPi`,
+`semaidRegFunc`, `semaid_timerfunc`, `retval`, `PollSema`, `WaitSema`,
+and `SignalSema`. 884 function bodies, 1145 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/ctors-ant-lantern second pass
+
+Merged. Two constructor units were added with fresh `input_order` values
+1147 and 1148. Both compile under `authored_cpp` with the bodies the
+notes claim (`norrath_construct_AutoContainerLP` 260,
+`norrath_construct_Boat` 396). The shared `detail.hpp` gained
+declarations; the already-selected `auto_chest_lp` still compiles to its
+recorded 260-byte body, and its plan and snapshot header hashes were
+refreshed. The host contracts require 32-bit pointers and do not compile
+on this arm64 machine, as recorded for the first pass; the EE compilation
+passed the header's 32-bit assert. No game binary or disassembly listing
+was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 999 |
+| Closed | 2 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`.
+Opened: `norrath_ctors_ant_lantern_view_44e940`,
+`norrath_ctors_ant_lantern_view_453328`. The parent constructors
+`norrath_construct_AutoChest` and `norrath_construct_AutoContainer`
+stay unresolved for later units. 886 function bodies, 1147 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/game-loop
+
+This is a partial package: the branch carries thirteen units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/game-loop.md` from the source comments.
+Eleven of the thirteen units were selected with fresh `input_order`
+values 1149 through 1159. game-loop-draw-particles redefines
+`drawParticlesTask__Fv` and game-loop-object-draw-enable redefines
+`objectDrawEnable`, both from the particles package; their files stay in
+the source snapshot. All thirteen sources compile under `authored_cpp`,
+and all thirteen host checks passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 1005 |
+| Closed | 11 |
+| Opened | 17 |
+
+Closed: `frontEndStartInNetMenu__Fv`, `gameCheckPlayerAlive__Fv`,
+`gameNetKick__Fi`, `gameNoDraw`, `gameOver`, `gamePlayerLightAttenuate`,
+`gameRecallInhibit`, `gameSetCameraShake__Ffb`, `hudNoDraw`,
+`runObjectsTask__Fv`, `transformSceneLightTask__Fv`. Also defined, and
+not previous imports: the two `runObjectsTask` file-local helpers.
+
+Opened: `Kick__7Vehicle`, `MC_Kick__Fv`, `blockGetNmFree__Fv`,
+`debugClearStartMenu__Fv`, `deleteList`, `hudKick__Fv`,
+`invShutDown__Fi`, `isNetGame`, `lastNmBlocksFree`,
+`matTransform34Vec__FP6Point3P8Matrix34T0`, `mediumRunList`,
+`menuNetClientServer`, `padBigRumble__Fiff`, `runList`, `shopKick__Fv`,
+`slowRunList`, `worldViewCenter`. 894 function bodies, 1158 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/memcard-calls
+
+This is a partial package: the branch carries twenty-five units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/memcard-calls.md` from the source
+comments. All twenty-five units were selected with fresh `input_order`
+values 1160 through 1184. Twenty-four host contracts passed on this
+machine with default flags; the `MCA_Init` contract passes at `-O0` (at
+`-O1` this host compiler expands the constant-size `memset` inline and
+bypasses the call-counting wrapper, a host-toolchain artifact rather
+than a reconstruction defect). No game binary or disassembly listing
+was committed. The five `MCA_Init` queue words were local in the image
+and are global here so `MCA_Cmd` can share them; `MCA_LastDirCount`
+stays a separate object from that local word.
+
+| | |
+|---|---|
+| Before | 1005 |
+| After | 1011 |
+| Closed | 25 |
+| Opened | 31 |
+
+Closed: `MCA_ClearInfo__Fv`, `MCA_Cmd__Fiiii`, `MCA_Init__Fv`,
+`MCA_LastDirCount`, `MCA_Port`, `MCA_Slot`, `MCA_Sync__FPi`,
+`MC_Busy__Fv`, `MC_CheckPointAge`, `MC_Debug`, `MC_GameConfig`,
+`MC_GetAsyncMode__Fv`, `MC_GetReadyForMainMenu__Fv`, `MC_KickProtect`,
+`MC_LastModeSuccessful`, `MC_LoadGameBrowser__Fii`, `MC_NewGame__Fi`,
+`MC_SaveCheckPoint__Fiii`, `MC_SaveConfigSilent__Fii`,
+`MC_SaveConfig__Fv`, `MC_SaveGameBrowser__Fi`, `MC_SavingOrLoading`,
+`mcClientID`, `mcHeartBeatRun__Fv`, `mcHeartBeat__Fv`. Also defined,
+and not previous imports: the `MCA_Init` queue words (`clearBytes`,
+`queueEnd`, `queueStart`, `checkResults`, `lastDirCount`), the
+`mcHeartBeatRun` file-local words, and the `MCA_Init` 16384-byte
+`nullBuff`.
+
+Opened: `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
+`MC_HasThisLevelBeenSaved__Fv`, `MC_ResetRamSlot__Fv`,
+`MC_SetNewAct__Fi`, `MC_SpawnPoint`, `actionCoolOff`,
+`asyncChangePlayers__Fv`, `asyncConfigure__Fv`, `asyncLoadGame__Fv`,
+`asyncSaveConfigSilent__Fv`, `asyncSaveConfig__Fv`,
+`asyncSaveGame__Fv`, `commandQueue`, `curPlaySeconds`, `delayCount`,
+`fullLaunchOK`, `gameGetFullLevelName__FPc`, `getLongLevelName__FPc`,
+`interfaceOn`, `netBlankController__Fii`, `pushPause__Fv`,
+`ranBrowser`, `ranConfig`, `resetQuickLoad__Fv`, `saveConfigEndGame`,
+`strncmp`, `strstr`, `updateRamSlot__Fii`, `whichPad`. 909 function
+bodies, 1183 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+## agents/natives-b
+
+Merged. The middle third of the retail `amx*` natives: all 40 units
+were selected with fresh `input_order` values 1185 through 1224. Each
+unit compiles under `authored_cpp` with the hash the notes claim, and
+each has a host test that returns failure; all 40 passed on this
+machine. No game binary or disassembly listing was committed. The notes
+separate observed retail names and extents from inferred call shapes.
+The two file-local helpers in the random-item unit are recorded
+alongside it.
+
+| | |
+|---|---|
+| Before | 1011 |
+| After | 1002 |
+| Closed | 40 |
+| Opened | 31 |
+
+Closed: the 40 `amx*__FP5__amxPi` natives named in
+`docs/agents/natives-b.md` (`amxGetSaveInhibit` through
+`amxPutNPCInVehicle`).
+
+Opened: `AddNPCDriver__7VehicleP3NPC`, `DLG_NewWorld`,
+`SetHold__7Vehiclei`,
+`__11LightEffectG6Point3ffffffffffffP10GameObjecti`,
+`__19ParticleMorphEffectP8CreatureT1`,
+`__19SpellHornOmenEffectiP8CreatureP5Skill`,
+`__22SpellPlanarSteelEffectiP8CreatureP5Skill`,
+`__8ItemPropG6Point3PQ24item11descriptioni`,
+`addItemToInventory__FiPQ24item11descriptioni`,
+`addSpell__8CreatureP5Spell`, `blockAlloc__Fi`,
+`createRandom__4itemPQ24item11descriptioniiii`,
+`create__4itemPcPQ24item11descriptionii`, `currentRunningObject`,
+`doNewWorld__FPc`, `equipItem__FiPQ24item11descriptioni`,
+`gameControlDontResetPause`, `gameDeathStart__Fi`,
+`gameItemTreasureRamp__Fv`, `gameLevelLoading`,
+`getWeight__4itemPQ24item11description`, `givePlayerExperience__Fii`,
+`hudFadeScreen__Fi`, `hudResetFadeScreen__Fi`,
+`objectFindObjectByClass__FPcPP10GameObjecti`,
+`objectRemoveFromGrid__FP10GameObject`, `playerGetFeatRank__Fix`,
+`playerPlaySound__Fii`, `playerRecomputeWeight__Fi`,
+`playerSelectionRunning__Fv`, `worldDifficulty`. The other names the
+notes leave open were already unresolved or already defined, including
+`gameBailFromGameLoop`, `gameControlPaused`, `gameHidePlayers`,
+`gameRecallInhibit`, `gameNetKick__Fi`, `gameDifficulty`, `levelName`,
+`netNetworkMode`, `nmPlayers`, the player/route views, `strcpy`,
+`strncmp`, `strstr`, `amx_GetAddr`, `amx_GetString`,
+`lumpFindResource__FPcT0`, and `lumpLoad__FPc`. 951 function bodies,
+1223 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/pre-logo-dialog
+
+This is a partial package: the branch carries fifteen units with
+per-symbol observed addresses and behavior, but its notes leave the
+closed/opened lists pending, so the measured link delta below stands in
+for them. All fifteen units were selected with fresh `input_order`
+values 1225 through 1239. Each unit compiles under `authored_cpp`, and
+each host contract passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1002 |
+| After | 1035 |
+| Closed | 18 |
+| Opened | 51 |
+
+Closed: `DLG_FireUpShopOnExit`, `DLG_ForceMutexRelease__Fv`,
+`DLG_StartDialog__FPcP9DlgPacketii`, `DLG_StartWithSwoopDone`,
+`DLG_SwoopMode`, `animSetSpecialSoundHandler__FPFiG6Point3_v`,
+`dialogMsgHandle`, `gameFootstepSound__FG6Point3iii`,
+`gameobjInit__Fv`, `helpMessageFrame__Fv`,
+`hudAddHelpMessage__FiPUsT1`, `hudMsgCallback__FPUci`, `hudMsgHandle`,
+`hudSetInfoMessage__FPUsiic`, `hudShowBust__FPcPUsii`,
+`hudShowCompass__FG6Point3PUs`, `lightHaloTexture`,
+`netSendMessage__FiPUci`. Also defined, and not a previous import: the
+`hudMsgCallback` file-local helper.
+
+Opened: `GetPitch__6Camera`, `GetYaw__6Camera`, `body`,
+`colorScale__FUif`, `controlPaused`, `createByName__FPcG6Point3sPPc`,
+`debugRecall__Fi`, `dialogMutex`, `drawBustCur`, `drawBustMax`,
+`drawBustOn`, `drawBustTexName`, `drawBustTitle`, `drawCompassOn`,
+`drawCompassPoint`, `drawCompassTitle`, `fontColor__FUiii`,
+`fontEnd__Fv`, `fontPrintCenteredu__FiiPUsi`,
+`fontPrintWrapu__FiiPUsiiii`, `fontPrint__FiiPci`,
+`fontPrintu__FiiPUsi`, `fontStart__FP4FontiUii`,
+`fontStringSizeu__FP4FontPUsi`, `hudAssignQuickSpell__Fiii`,
+`hudAssignSpellBookSpell__Fiiil`, `infoMessage`, `infoMessageAlways`,
+`infoMessageTimer`, `msgHandler`, `multiBody`, `multiRelease`,
+`multiSide`, `multiTitle`, `netBlankControllerButtons__Fiii`,
+`netDisconnectPlayer__Fi`, `netLocalPad`,
+`neverSaveAlwaysLoadFromLump__FPc`,
+`objectSetCreateByNameFunction__FPFPcG6Point3sPPc_P10GameObject`,
+`objectSetFilterFunction__FPFPc_i`, `playerDamageHandler__6Player`,
+`rectangleDraw__FiiiiiUi`, `saveActivate__9Savepoint`,
+`scriptActivatePostAction__Fv`, `soundPlaySequence__FP15AnimationHeaderG6Point3f`,
+`specialHandler`, `textureDrawBorder__FiiiiiUiPcii`, `title`,
+`ustrcat__FPUsT0`, `ustrcpy__FPUsPc`, `ustrcpy__FPUsT0`. 964 function
+bodies, 1238 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+## agents/simloop-services
+
+This is a partial package: the branch carries eleven units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/simloop-services.md` from the source
+comments. All eleven units were selected with fresh `input_order`
+values 1240 through 1250. Eight host contracts passed on this machine.
+The `cdProcess`, `soundMapSound`, and `soundResetStream` contracts
+assume 32-bit pointers in their harnesses (pointer round-trip through a
+32-bit word, 4-byte pointer slots, and a `memset` size that only holds
+with 32-bit struct layout) and fail on this 64-bit machine for that
+reason, the same documented limitation as the ctors-ant-lantern
+contracts; their reviewed EE compilations passed. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1035 |
+| After | 1054 |
+| Closed | 11 |
+| Opened | 30 |
+
+Closed: `cdDirectoryLookup__FPcPiT1i`, `cdProcess__Fv`,
+`padInitPadIndexMap__Fv`, `padProcess__Fv`,
+`soundGetStreamPlayStatus__Fi`, `soundMakeSequenceUnpausable__Fi`,
+`soundMapSound__FPci`, `soundResetStream__Fi`,
+`soundSetStreamVolume__Fif`, `soundStartDialogStream__FiPci`,
+`soundStartMusic__FPci`. Also defined, and not a previous import: the
+`cdDirectoryLookup` file-local helper `find_row`.
+
+Opened: `currentLayerDir`, `gCd`, `initLump__FPv`, `layer0Dir`,
+`layer1Dir`, `lumps`, `memRealloc__FPvi`, `nmLumps`, `padFrame.756`,
+`padGetUnprocessedData__FiP18padUnprocessedData`, `padIndexMap`,
+`padProcessData__FP3padP18padUnprocessedDataP12padStateData`, `sbuff`,
+`sbuffin`, `sceCdGetError`, `sceCdLayerSearchFile`, `sceCdStRead`,
+`sceCdSync`, `scePadGetSlotMax`, `sequence`,
+`soundFindDialog__FPc`, `soundGetDialogFilename__Fv`,
+`soundGetFreeRam__Fv`, `soundStartStream__FiPciiiiii`,
+`soundUpdateAdjustments__Fv`, `streamOutput`, `streamSizeLeft`,
+`streamVolume`, `streaming`, `tapCount`. 976 function bodies, 1249
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/gs-dma-present closing pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a verification log. Each of the three new units has a host contract that
+fails (assert aborts) on a wrong word, order, or call; all three passed on
+this machine with ASan/UBSan. No game binary or disassembly listing was
+committed. The three sources compile under `authored_cpp` with the hashes
+and body bytes the notes claim.
+
+Three of the 29 proposed inputs were selected with fresh `input_order`
+values 1251 through 1253. The 25 inherited units were already selected and
+were not appended again. gs-dma-present-texture-draw-color is still not
+selected: it redefines `textureDrawColor__FP8_textureiiiUi` from
+light-methods, and its file stays in the source snapshot. Object names
+follow the in-plan convention (`do_super_sample.o`, `light_vu0_stopped.o`,
+`reload_dma.o`) rather than the notes' `present_` proposals; there was no
+collision either way.
+
+One correction against the notes: their plan entry for do-super-sample
+listed only `doSuperSample__Fiib`, but the fresh EE object also emits the
+file-local helper `_ZL17float_to_int_wordf` (260 bytes), so both are
+recorded, matching 38 existing mangled-helper precedents. The driver
+compares the full function multiset, so the helper had to be listed.
+`madePacket.769` and the 21 `reloadDMA__Fi` state words are defined and
+were not previous imports. The notes flag that `gsIntHandler__Fi`
+declares `reloadDMA__Fi` as `void` while the observed body returns 1 and
+the new unit declares it `int`; return type is not part of linkage, and
+the partial link succeeded.
+
+| | |
+|---|---|
+| Before | 1054 |
+| After | 1056 |
+| Closed | 3 |
+| Opened | 5 |
+
+Closed: `doSuperSample__Fiib`, `lightVU0StoppedProcessing__Fv`,
+`reloadDMA__Fi`.
+
+Opened: `globalCharLightScale`, `textureCacheIn__FP8_texture`,
+`textureLock__FP8_texture`, `textureUnlock__FP8_texture`,
+`worldCharViewMatrix`. All five are in the notes' opened list; the rest of
+that list was already unresolved or already defined on this tip. 980
+function bodies, 1252 authored inputs, zero COMMON. 214 tool tests passed.
+No EE, GS, DMA, VU, or game execution.
+
+## agents/pre-logo-dialog second pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a private-trial verification log. Four new units were selected with fresh
+`input_order` values 1254 through 1257. The 15 first-pass units were already
+selected and were not appended again. All four sources compile under
+`authored_cpp` with the hashes and body bytes the notes claim
+(`dialogMsgCallback__FPUci` 3192, `pauseMenuFrameRun__Fv` 4888,
+`runDialog__Fv` 2100, `drawDialog__Fv` 1632; verified with `nm
+--print-size` on the reviewed EE objects). All four host contracts passed
+on this machine with ASan/UBSan. No game binary or disassembly listing was
+committed.
+
+The existing `extern` references in game-boot (`runDialog__Fv`,
+`drawDialog__Fv`, `pauseMenuFrameRun__Fv`) and save-net-anim
+(`dialogMsgCallback__FPUci`) are declarations, not definitions, so the
+new definitions do not multiply any symbol. `dialog_msg.o` also defines
+the file-local BSS `_ZL9dialogTag`; it is data, not a function, so it is
+not in the emitted-function list. `player` and `c.1089` stay unresolved
+by design (see Unknown in the package notes).
+
+The worker's private trial reported 22 closed and 157 opened, measured on
+that branch's older 845-input tree where the 15 first-pass units were not
+yet selected. That absolute count does not reproduce on the shared tip.
+The closed and opened names do: every measured name is in the notes'
+lists.
+
+| | |
+|---|---|
+| Before | 1056 |
+| After | 1149 |
+| Closed | 4 |
+| Opened | 97 |
+
+Closed: `dialogMsgCallback__FPUci`, `drawDialog__Fv`,
+`pauseMenuFrameRun__Fv`, `runDialog__Fv`.
+
+Opened: the 97 names measured from the link diff, all in the notes'
+opened list, including `AdvanceDialogSwoop__6CameraiPf`,
+`BuildMatrix__6CamerafffP6Point3`, `MC_ChangePlayers__FiPUsiii`,
+`Push__6Camera`, `SetPitch__6Camerai`, `SetYaw__6Camerai`,
+`StartDialogSwoop__6CameraP10GameObjecti`, `__tf3NPC`,
+`__throw_bad_typeid`, `anim`, `animLoadingComplete`, `animStarted`,
+`cancelStreamWait`, `checkBlock`, `cleanUp__Fv`,
+`colorLevelNames__FP4Menu`, `coreInterfaceFadeUpVal`,
+`coreInterfaceFadeUp__Fi`, `coreStartSwitchScene__Fi`, `correction`,
+`cursorTween`, `dialogCreature`, `dialogIdleAnimation`, `dlgArrayPtr`,
+`dlgName`, `dlgPos`, `endTimer.1059`, `evalHermite__Ffffff`,
+`flaredIn`, `flaredOut`, `fontLastPrintedPosition`,
+`fontPrintCentered__FiiPci`, `fontRestrict__Fi`, `fontScissor__Fiiii`,
+`frontendInitControllerConfig__Fi`,
+`frontendRunControllerConfig__Fv`, `gameCheckNoSaveZone__Fv`,
+`gamePopConfig__Fv`, `gamePushConfig__Fv`, `hudFooterUni`,
+`hudNetLevelWarp__FPc`, `hudRunYesNo__FPUsiiii`,
+`hudShowMsg__FPUsN20iii`, `initAnimation__Fv`, `kickMenu`,
+`kickMenuList`, `lastNmQ.1088`, `lastWarpPos`, `letterAtATime`,
+`lineToY__Fi`, `loadSampleRate.784`,
+`menuDraw__FiiP4MenuUiUiP4FontP8_texturei`,
+`menuRun__FP4MenuP3padPi`, `msgHudPlayerExit__Fv`,
+`msgHudRecall__Fc`, `nameChars`, `netKickPlayer__Fi`,
+`netPlayerIsConnected__Fi`, `netRestoreButtonConfigs__Fv`,
+`nextIndex`, `objectFindAnimation__FP10GameObjectPc`, `optTbl`,
+`optionCount`, `optionIndex`, `optionLinePos`, `optionsShowing`,
+`preConfigure`, `realDlgPos`, `resetTextBody__Fv`, `runAnimation__Fv`,
+`sceneTransitionOK.1041`, `scrollEnd`, `scrollSpan`, `scrollTarget`,
+`scrollY`, `sentEndMsg`, `setExtraParams__FP8CreaturePc`,
+`showCoords__Fv`, `showMore`, `showOptions`,
+`sleepMonsters__8creaturev`, `soundContinueStream__Fi`,
+`soundGetDialogSize__FPc`, `soundGetNmQueued__Fi`,
+`soundGetStreamAmountPlayed__Fi`, `soundGetStreamPreloadDone__Fi`,
+`soundSetMusicDuckAmount__Ff`, `soundStartGlobalMusic__FPci`,
+`startPacket__Fi`, `swooping`, `textBody`, `textBodyChars`,
+`textPageDone`, `usprintf__FPUsT0ffffffff`, `ustrlen__FPUs`,
+`waitForSound`, `wakeMonsters__8creaturev`. The rest of the notes'
+opened list was already unresolved or already defined on this tip,
+including `GetPitch__6Camera`, `GetYaw__6Camera`, `DLG_NewWorld`,
+`SetMode__6Camerai`, `Update__6Camera`, `fontStart__FP4FontiUii`,
+and `soundGetStreamPlayStatus__Fi`. 984 function bodies, 1256 authored inputs, zero COMMON. 214 tool tests passed. The build-output
+objects are byte-identical to the recorded `object_sha256` values. No
+EE or game execution.
+
+## agents/iop-module-boot
+
+Merged. The branch notes carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+host checks. The branch was still receiving commits when the integrator
+started; it was merged once its notes commit landed. Fifteen units, one
+function per commit, each with a host contract beside the source. All
+fifteen contracts passed on this machine with ASan/UBSan, and a mutated
+`sceSifSyncIop` (second notify value changed) made its contract exit
+non-zero, so the contracts can fail. The fifteen sources compile under
+`authored_cpp` with the body bytes the notes claim. No game binary or
+disassembly listing was committed; the `host_contract.cpp` files are in the
+snapshot `files` map and not in the plan.
+
+Fifteen units were selected with fresh `input_order` values 1258 through
+1272. The worker's private count reproduces exactly on the shared tip.
+
+| | |
+|---|---|
+| Before | 1149 |
+| After | 1152 |
+| Closed | 15 |
+| Opened | 18 |
+
+Closed: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
+`_lf_bind`, `_lf_version`, `commSystemInit__Fv`, `sceCdInit`, `sceCdMmode`,
+`sceFsReset`, `sceSifInitIopHeap`, `sceSifLoadFileReset`,
+`sceSifLoadModule`, `sceSifRebootIop`, `sceSifSyncIop`,
+`textSystemInit__Fv`.
+
+Opened: `PowerOffCB`, `PowerOffHandler__FPv`, `PowerOffThread__FPv`,
+`VIStartKeyboardDriver__Fv`, `_sceCd_scmdsdata`, `_sceSifLoadModule`,
+`cdvd_exit`, `lgAudInit`, `lgCodecEnumerate`, `lgCodecInit`, `lgCodecOpen`,
+`lgKbdClose`, `memcmp`, `sceCdPOffCallback`, `sceResetttyinit`,
+`sceSifExecNotifyHandler`, `sceSifExitRpc`, `sceSifResetIop`. 999 function
+bodies, 1271 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build and were identical on a
+second build. No EE or game execution.
+
+The notes ask for three edits to merged `sif-keyboard` sources (use the
+exported `norrath_iop_heap_client`, `norrath_loadfile_client`, `_senddata` and
+`vik` instead of private statics). They change game code in another package,
+so the integrator did not make them; see Needs a decision.
+
+## agents/floor-world-view
+
+Merged, with three of the fourteen units left out of the plan. The notes
+carry the five summary sections, though the package never ran
+`build_partial.py` or the tool tests, so its closed and opened lists were
+not measured; the measured link delta below replaces them. All fourteen
+sources compile under `authored_cpp`. Thirteen host checks passed on this
+machine with ASan/UBSan. `floor-world-view-program-views` passes without
+the sanitizers and exits 2 under them, because its non-MIPS branch declares
+two separate arrays and only asserts that the host linker places them 816
+bytes apart. The real property holds in the EE object: `nm -S` of the fresh
+object puts `norrath_floor_program_end_view` at 0x330 and the start at 0.
+Mutating `worldGetDoorHeight`'s record offset made its check exit non-zero.
+No game binary or disassembly listing was committed.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `floor-world-view-floor-add` defines `floorAdd__FG6Point3sfii` as an
+  eight-byte forward to `norrath_floor_add`. The original is 956 bytes and the
+  notes list "whether `floorAdd` in the original differs from
+  `norrath_floor_add`" as unknown. Selecting it would close the import with a
+  placeholder, which is a symbol alias in all but name; the build driver
+  applies no aliases. Left unresolved until someone shows the two are one
+  function.
+- `floor-world-view-camera-pos` and `floor-world-view-far-clip` define
+  `worldCameraPos` and `farClip`, which `world_camera_pos.o` (input 957) and
+  `far_clip.o` (input 924) already define. Selecting them made the
+  relocatable link fail with multiple definitions. The notes' closed list
+  was taken from an older base and is stale on those two names.
+
+Eleven units were selected with fresh `input_order` values 1273 through
+1283.
+
+| | |
+|---|---|
+| Before | 1152 |
+| After | 1142 |
+| Closed | 12 |
+| Opened | 2 |
+
+Closed: `__11ResourceMapPcT1`,
+`drawAddToList__FPviP8_textureP11_drawRecordi`,
+`norrath_floor_program_end_view`, `norrath_floor_program_start_view`,
+`norrath_world_check_for_water`, `norrath_world_find_closest_door`,
+`norrath_world_get_door_height`, `norrath_world_set_door_collision`,
+`worldClipCubeToFrustum__FPA1_fi`, `worldSetFarClip__Ff`,
+`worldSetFrustum__Fffff`, `worldWorldViewMatrix`.
+
+Opened: `tanf`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`.
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. Object hashes in the snapshot come from the fresh build and were
+identical on a second build. No EE or game execution.
+
+## agents/card-progress and agents/memcard-calls follow-up commits
+
+Merged. Both packages were already selected; these merges add no inputs.
+`agents/card-progress` gained one commit that makes the host-test support
+module read its EE toolchain from `EE_TOOLCHAIN` (its fallback is another
+contributor's absolute path; set `EE_TOOLCHAIN` on this machine). That file is
+a host test, not a plan input. `agents/memcard-calls` gained its own package
+notes (checks, closed and opened lists, build-plan entries) plus a trim of an
+unsupported unknown. The integrator's earlier `docs/agents/memcard-calls.md`
+collided with it on merge; both are kept, the worker's text first and the
+integrator's selection notes under their own heading at the end.
+
+| | |
+|---|---|
+| Before | 1142 |
+| After | 1142 |
+| Closed | 0 |
+| Opened | 0 |
+
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## Not merged: codex/norrath-runtime-binding
+
+`origin/codex/norrath-runtime-binding` (owner, one commit) adds an
+opt-in `--defsym=memset=norrath_block_memory_set` binding to
+`tools/build_partial.py` with hash-checked provider/consumers plus docs.
+It is not an `agents/*` worker package, carries no agent notes, and
+changes the build driver itself, so it is left for the startup lead or
+owner to merge. The default authored partial link used for the official
+counts above does not take the opt-in flag and is unaffected.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1126,10 +2050,10 @@ each pair is one symbol.
 world-state still defines `norrath_loader_current_name_view` for that
 original name and does not alias it. Decide whether they are one symbol.
 
-subsystem-inits leaves `objectGrid`, `ghostObjectGrid`, `stringHash`,
-`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes` unresolved.
-object-infra already defines view names for those objects and does not alias
-the original names. Decide whether each pair is one symbol.
+particles now defines `objectGrid`, `ghostObjectGrid`, `stringHash`,
+`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes`. object-infra
+still defines view names for those objects and does not alias the original
+names. Decide whether each pair is one symbol.
 
 `norrath_restore_broadcast_mask_word` is still unresolved. world-state defines
 that address once, as `norrath_grid_ignore_flags_view`, and does not emit a
@@ -1176,6 +2100,57 @@ frozen prefix. Those lines were not kept. Both original names stay
 unresolved. Decide whether a later unit outside that prefix should publish
 them.
 
+`norrath_sound_command_dma_destination_word_view` is a separate 4-byte
+object for byte 8 of the command table already published as
+`norrath_sound_command_state_view`. A store through one does not update the
+other. Decide whether the DMA word should become a view inside the command
+state object.
+
+`cutMode` is now the 1-byte ELF name from game-state. world-state still
+defines `norrath_game_cut_mode_byte_view` and data-views still defines
+`norrath_actor_view_484318` for the same address as separate objects.
+Decide whether the three should be one symbol.
+
+`coreLoading` is now the 4-byte ELF name from game-state. world-state still
+defines `norrath_game_core_loading_word_view` for the same address as a
+separate object. Decide whether they are one symbol.
+
+`gameBailFromGameLoop` is now the 4-byte ELF name from game-state.
+scheduler still defines `norrath_game_bail_from_loop_view` for the same
+address as a separate object. Decide whether they are one symbol.
+
+`table` at `0x006d8fa0` is defined once, by particles-anim-table as
+32768 bytes. sony-cd also defines that name as `0x2000` words for the same
+span. That unit was not selected. Decide which package owns the name.
+
+`anim` is claimed twice: pre-logo-dialog imports the ELF name used by the
+dialog callback at `0x007d0dc8`, while a same-named local symbol owns
+`0x00790f60`. This package defines neither object. Decide whether they
+are one symbol.
+
+`preConfigure` exists twice (80 bytes at `0x0037f150`, used by the pause
+menu, and at `0x004289d0`). This package defines neither object. Decide
+whether they are one symbol.
+
+`player` is imported by pre-logo-dialog. items-player already defines the
+95,936 zero bytes at `0x00408600` as
+`norrath_player_progression_records_view` and does not alias the ELF
+name. Decide whether the view should gain that alias.
+
+`c.1089` at `0x007d0988` has ELF size 0 and stays unresolved. The
+Camera-owning package should settle its extent before anything defines
+it.
+
+`iop-module-boot` exports `norrath_iop_heap_client`, `norrath_loadfile_client`,
+`_senddata` and `vik`, and its notes ask `sif-keyboard` to use them. Today
+`sif-keyboard-iop-heap-query`, `sif-keyboard-module-calls` and
+`sif-keyboard-keyboard` keep private `static` copies, so the link has no
+duplicate definition, but the module calls use a client that `sceSifInitIopHeap`
+and `_lf_bind` never bind, and `Init__10VIKeyboard` and `textSystemInit__Fv` initialise a
+different `vik` than `keyboardFree__Fv` frees. The package owner should make
+the three edits listed in `docs/agents/iop-module-boot.md`; they were not
+made here because they change game code.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1187,7 +2162,24 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, and vehicle-actors. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
+sony-cd, and link-image-bounds second pass, and gs-dma-present, and the
+pre-logo-dialog second pass. The
+vehicle constructor is authored and not in the link. The unselected
+texture-draw-color unit is authored and not in the link. The six
+actor-view-tables views are data, not functions. The 26 card-progress
+data words are data, not functions. The shared constructor header now
+covers Boat and AutoContainerLP. The eleven selected game-loop units
+(eight functions, five words) are in the link; the two unselected
+game-loop units are authored and not in the link. The twenty-five
+memcard-calls units are in the link. The forty natives-b units are in
+the link. The fifteen pre-logo-dialog units are in the link. The eleven
+simloop-services units are in the link. The three closing gs-dma-present
+units (three functions plus one file-local helper) are in the link; the
+texture-draw-color unit stays authored and not in the link. The four
+pre-logo-dialog second-pass units (four functions plus the file-local
+`_ZL9dialogTag` BSS) are in the link.
+`engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
@@ -1234,3 +2226,26 @@ and no startup stage has executed.
 - 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports
 - 2026-10-11 17:47 CDT — `agents/vslots-b` — 866 unresolved imports
 - 2026-10-11 17:49 CDT — `agents/vehicle-actors` — 950 unresolved imports
+- 2026-10-11 17:51 CDT — `agents/vslots-b` — 947 unresolved imports
+- 2026-10-11 17:52 CDT — `agents/vslots-b` — 947 unresolved imports
+- 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
+- 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
+- 2026-10-11 17:57 CDT — `agents/link-image-bounds` — 888 unresolved imports
+- 2026-10-11 17:59 CDT — `agents/ctors-ant-lantern` — 889 unresolved imports
+- 2026-10-11 18:08 CDT — `agents/sound-rpc-views` — 858 unresolved imports
+- 2026-10-11 19:12 CDT — `agents/game-state` — 893 unresolved imports
+- 2026-10-11 19:20 CDT — `agents/sony-cd` — 884 unresolved imports
+- 2026-10-11 19:27 CDT — `agents/link-image-bounds` — 992 unresolved imports
+- 2026-10-11 19:34 CDT — `agents/gs-dma-present` — 1007 unresolved imports
+- 2026-10-11 19:40 CDT — `agents/actor-view-tables` — 1019 unresolved imports
+- 2026-10-11 19:46 CDT — `agents/card-progress` — 999 unresolved imports
+- 2026-10-11 19:52 CDT — `agents/ctors-ant-lantern` — 999 unresolved imports
+- 2026-10-11 19:58 CDT — `agents/game-loop` — 1005 unresolved imports
+- 2026-10-11 20:05 CDT — `agents/memcard-calls` — 1011 unresolved imports
+- 2026-10-11 20:12 CDT — `agents/natives-b` — 1002 unresolved imports
+- 2026-10-11 20:20 CDT — `agents/pre-logo-dialog` — 1035 unresolved imports
+- 2026-10-11 20:28 CDT — `agents/simloop-services` — 1054 unresolved imports
+- 2026-10-11 21:21 CDT — `agents/gs-dma-present` — 1056 unresolved imports
+- 2026-10-11 22:19 CDT — `agents/pre-logo-dialog` — 1149 unresolved imports- 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
+- 2026-10-12 12:39 CDT — `agents/floor-world-view` — 1142 unresolved imports
+- 2026-10-12 12:41 CDT — `agents/card-progress`, `agents/memcard-calls` (follow-up commits) — 1142 unresolved imports
