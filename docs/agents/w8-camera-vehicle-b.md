@@ -495,3 +495,12 @@ objects were compiled and never linked into an executed program.
   UTF-16 units used) and why the LavaTractor wall threshold is below -1.
 - `msg_run` argument/branch fidelity was reconstructed by reading control flow
   only; no recorded execution exists.
+
+## Private link check
+
+A private root (copy of `experimental/` with the 24 entries above appended)
+built with the reviewed toolchain: 1431 inputs compiled and linked once,
+1131 function bodies, 1203 unresolved symbols, zero COMMON. None of the 24
+names listed under "Imports closed" is in that unresolved list. The count
+reflects this branch's base plus only this package, so it is not an
+integration delta. The link was not executed.
