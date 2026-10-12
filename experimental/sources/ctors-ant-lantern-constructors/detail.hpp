@@ -178,6 +178,21 @@ extern unsigned char norrath_ctors_ant_lantern_view_471248[];
 extern unsigned char norrath_ctors_ant_lantern_view_471260[];
 extern unsigned char norrath_ctors_ant_lantern_view_485768[];
 extern unsigned char norrath_ctors_ant_lantern_view_471278[];
+unsigned norrath_construct_Blocker(void* object, const void* point, short type, char** arguments);
+float icos__Fi(int angle);
+float isin__Fi(int angle);
+extern unsigned char norrath_ctors_ant_lantern_view_44ebb0[];
+extern unsigned char norrath_ctors_ant_lantern_view_470ff0[];
+extern unsigned char norrath_ctors_ant_lantern_view_471000[];
+extern unsigned char norrath_ctors_ant_lantern_view_471010[];
+extern unsigned char norrath_ctors_ant_lantern_view_471020[];
+extern unsigned char norrath_ctors_ant_lantern_view_485560[];
+extern unsigned char norrath_ctors_ant_lantern_view_485568[];
+extern unsigned char norrath_ctors_ant_lantern_view_485570[];
+extern unsigned char norrath_ctors_ant_lantern_view_485578[];
+extern unsigned char norrath_ctors_ant_lantern_view_471030[];
+extern unsigned char norrath_ctors_ant_lantern_view_485580[];
+extern unsigned char norrath_ctors_ant_lantern_view_471150[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
