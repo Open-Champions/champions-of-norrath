@@ -30,11 +30,20 @@ __attribute__((noinline)) void option_menu_static_work(int constructing, int pri
     if (constructing == 1) {
         for (int i = 0; i < 3; ++i) option_menu_animation_states[i][5] = 1;
     }
+    if (constructing == 0) {
+        for (int i = 2; i >= 0; --i) _$_14AnimationState(option_menu_animation_states[i], 2);
+    }
 }
 }
 
 extern "C" {
 void _GLOBAL_$I$optionMenu() {
     option_menu_static_work(1, 0xffff);
+}
+}
+
+extern "C" {
+void _GLOBAL_$D$optionMenu() {
+    option_menu_static_work(0, 0xffff);
 }
 }
