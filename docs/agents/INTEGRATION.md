@@ -2310,3 +2310,4 @@ and no startup stage has executed.
 - 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
 - 2026-10-12 12:39 CDT — `agents/floor-world-view` — 1142 unresolved imports
 - 2026-10-12 12:41 CDT — `agents/card-progress`, `agents/memcard-calls` (follow-up commits) — 1142 unresolved imports
+- 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
