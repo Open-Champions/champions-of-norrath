@@ -85,6 +85,14 @@ unsigned norrath_construct_Wraith(void* object, const void* point, short type, c
 extern unsigned char norrath_ctors_lava_wraith_view_42b7e8[];
 extern unsigned char norrath_ctors_lava_wraith_view_44e2b0[];
 unsigned norrath_construct_SeaMonster(void* object, const void* point, short type, char** arguments);
+extern char levelName[];
+int norrath_factory_strcasecmp(const char* left, const char* right);
+// Original setState__4Souli at 0x1f46c8. Not defined here.
+void norrath_soul_set_state(void* object, int state);
+extern unsigned char norrath_ctors_lava_wraith_view_42b3d8[];
+extern unsigned char norrath_ctors_lava_wraith_view_44def0[];
+extern unsigned char norrath_ctors_lava_wraith_view_485240[];
+unsigned norrath_construct_Soul(void* object, const void* point, short type, char** arguments, void* minion);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
