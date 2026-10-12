@@ -17617,6 +17617,291 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/frontend-shell-run/run_front_end.cpp"
+    },
+    {
+      "input_order": 1373,
+      "component": "loop-grid-fx-find-list",
+      "object_name": "find_list.o",
+      "private_object_sha256": "800a795dc48acee32f2c23197ee2cff1245b0d7fc13e756b6b9aa42b0e51f440",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp"
+    },
+    {
+      "input_order": 1374,
+      "component": "loop-grid-fx-find-first",
+      "object_name": "find_first.o",
+      "private_object_sha256": "10a37e5231c53f932473f96332e342b6cbf2213f58a7bb219bc505b854f60e85",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp"
+    },
+    {
+      "input_order": 1375,
+      "component": "loop-grid-fx-find-tag-string",
+      "object_name": "find_tag_string.o",
+      "private_object_sha256": "062350d57ab5ce65bf85861209cb852c8fc27188e6a983658ab4400bb6ff91f6",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp"
+    },
+    {
+      "input_order": 1376,
+      "component": "loop-grid-fx-find-in-box",
+      "object_name": "find_in_box.o",
+      "private_object_sha256": "9a8aa3facee00071fac21b146ffff83df2879de8923162e8751be74680848f8f",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp"
+    },
+    {
+      "input_order": 1377,
+      "component": "loop-grid-fx-update-in-grid",
+      "object_name": "update_in_grid.o",
+      "private_object_sha256": "7ef1070cc0958fc37e5fdd7523d2a7b4212215bc104589734daeb900577fbd4f",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp"
+    },
+    {
+      "input_order": 1378,
+      "component": "loop-grid-fx-iterate-grid",
+      "object_name": "iterate_grid.o",
+      "private_object_sha256": "94529093d3af99f9eb6ac1450e28634657da2d0c796c5b4bef78afa24a7b6159",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp"
+    },
+    {
+      "input_order": 1379,
+      "component": "loop-grid-fx-remove-string",
+      "object_name": "remove_string.o",
+      "private_object_sha256": "419d3bcf1dca78ac8d02f5db7264800f78b36a163b797d38c5c8ea63d519b318",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp"
+    },
+    {
+      "input_order": 1380,
+      "component": "loop-grid-fx-delete-list",
+      "object_name": "add_to_delete_list.o",
+      "private_object_sha256": "51056904f290dc203bf99904a20ebc494d91bbc40bd170ee8e8e7f2c834ba3e5",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp"
+    },
+    {
+      "input_order": 1381,
+      "component": "loop-grid-fx-medium-run-list",
+      "object_name": "add_to_medium_run_list.o",
+      "private_object_sha256": "3709e678f9beea1522ce8e24b2f99e14f0ae983d5920f755fb3789f8e56d87db",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp"
+    },
+    {
+      "input_order": 1382,
+      "component": "loop-grid-fx-list-head-copy",
+      "object_name": "list_head_copy.o",
+      "private_object_sha256": "8d799a23b83c7deff50938c5d6e4cb8f40d42fa678a41e6da3d16ae2252ec324",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp"
+    },
+    {
+      "input_order": 1383,
+      "component": "loop-grid-fx-light-add",
+      "object_name": "light_add.o",
+      "private_object_sha256": "e72f794a0af29c609e1e7e64b0957c582f4caba34a0a1f185b491d19974f5f5b",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp"
+    },
+    {
+      "input_order": 1384,
+      "component": "loop-grid-fx-has-number",
+      "object_name": "has_number.o",
+      "private_object_sha256": "98ee55c44e3e71e795a5f606a376a24d7100b0a8348a37a0489d542ed8123568",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp"
+    },
+    {
+      "input_order": 1385,
+      "component": "loop-grid-fx-p-clear",
+      "object_name": "p_clear.o",
+      "private_object_sha256": "3c61c62c363919efce213400ce83b7816357cd75486dfd6a5d488cd7f48697d4",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp"
+    },
+    {
+      "input_order": 1386,
+      "component": "loop-grid-fx-add-particle",
+      "object_name": "add_particle.o",
+      "private_object_sha256": "e5be36fdeedb5819aab4e0ae775227c473f1105f5829b556bea475313602b419",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp"
+    },
+    {
+      "input_order": 1387,
+      "component": "loop-grid-fx-update-particle-type",
+      "object_name": "update_particle_type.o",
+      "private_object_sha256": "133309a8d045b625729ab0f5abb7ee9d6446c37e3070df92549e12649a3db59f",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp"
+    },
+    {
+      "input_order": 1388,
+      "component": "loop-grid-fx-p-update",
+      "object_name": "p_update.o",
+      "private_object_sha256": "10044a17fff51149b108b520323fcc229d7a38e48e669c97a644dd9b367ff247",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp"
+    },
+    {
+      "input_order": 1389,
+      "component": "loop-grid-fx-emitter-tag",
+      "object_name": "emitter_tag.o",
+      "private_object_sha256": "7d26aaadbccc2db3dfeb576f1183aa68d834f3a969b8b1359de24811cab013f5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp"
+    },
+    {
+      "input_order": 1390,
+      "component": "loop-grid-fx-script-particles",
+      "object_name": "script_particles.o",
+      "private_object_sha256": "f693a4097dcb23b12533bf81db063f45e33318a0182c6031a5206c458476f081",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp"
+    },
+    {
+      "input_order": 1391,
+      "component": "loop-grid-fx-fx-dust",
+      "object_name": "fx_dust.o",
+      "private_object_sha256": "424eff5fb522a1040a108e54999099235a36cec6d277569ddf69381e1fdf7925",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp"
+    },
+    {
+      "input_order": 1392,
+      "component": "loop-grid-fx-task-list",
+      "object_name": "task_list.o",
+      "private_object_sha256": "7efa0a15ebfa959ae4eaf39ffe262c5dfb2c4ba541f6d41d9b54ad80fb35286f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp"
+    },
+    {
+      "input_order": 1393,
+      "component": "loop-grid-fx-particle-storage",
+      "object_name": "particle_storage.o",
+      "private_object_sha256": "64c6d975db38690b8ad36c86a5a43bb72914e9b3b014050be2792e00f62bf3a2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp"
     }
   ],
   "drafts": [
@@ -20763,7 +21048,49 @@
     "sources/frontend-shell-words/host_check.cpp": "dde2ff897497047bf49656f0977a1771874683b674fa383f545473b595995dbb",
     "sources/frontend-shell-run/run_locals.cpp": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
     "sources/frontend-shell-run/host_contract.cpp": "a7fb35819dc6825450d32c931c938d9d7c52c2bf0d5960118da351e6ef8757b3",
-    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373"
+    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373",
+    "sources/loop-grid-fx-find-list/find_list.cpp": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+    "sources/loop-grid-fx-find-list/host_check.cpp": "2766cd021eeb1b7b01463fa04d01700f90fc9f860b1d900c72937fdea1f8361d",
+    "sources/loop-grid-fx-find-first/find_first.cpp": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+    "sources/loop-grid-fx-find-first/host_check.cpp": "0a776c62112eb1207cb3f793d53cce8e8976ff1fdee82b87a032336476283287",
+    "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+    "sources/loop-grid-fx-find-tag-string/host_check.cpp": "bc0da7429d3bf8ccd5e1b7dafaeb8ae594ee002993f5531de393fa00256392a8",
+    "sources/loop-grid-fx-find-in-box/find_in_box.cpp": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+    "sources/loop-grid-fx-find-in-box/host_check.cpp": "3c53cc28b3e9e063fd361c8fee806deaafb908b5c2bc87dc1078f5de72e5a6f0",
+    "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+    "sources/loop-grid-fx-update-in-grid/host_check.cpp": "e66366e7d80d3fadea18373df1108489bb84eb4df26a8a378e411090d7eccf68",
+    "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+    "sources/loop-grid-fx-iterate-grid/host_check.cpp": "eacb00e1bcdc99fa94f6e49f29694813728a6f031b349a34daf6b1b3cbac642c",
+    "sources/loop-grid-fx-remove-string/remove_string.cpp": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+    "sources/loop-grid-fx-remove-string/host_check.cpp": "ee4bde6ed27a9b485594e106c90c215a46a241b03457fa77d918e3c2b0611325",
+    "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+    "sources/loop-grid-fx-delete-list/host_check.cpp": "629fe4a7b581e5a008645dd6456d3328c79aea30d4e16442689b8b05323c1c42",
+    "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+    "sources/loop-grid-fx-medium-run-list/host_check.cpp": "eb3ef185591c4df3ac37e892a5d357da919b64085f8cd4a3b0f4a19b865ca659",
+    "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+    "sources/loop-grid-fx-list-head-copy/host_check.cpp": "b8245737b80b48afb3d122b55e855d0e5ac3281be97c23af2cb49c8dd9de9f46",
+    "sources/loop-grid-fx-light-add/light_add.cpp": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+    "sources/loop-grid-fx-light-add/host_check.cpp": "7ba26b43785f39644834a710fa3135c0d2b7ec4e7b402611cc01ece7ff5ed7dc",
+    "sources/loop-grid-fx-has-number/has_number.cpp": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+    "sources/loop-grid-fx-has-number/host_check.cpp": "1ef599ae2c0024df3b7c87350422da38471003b6551dc3c9ee3feab488b3bf61",
+    "sources/loop-grid-fx-p-clear/p_clear.cpp": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+    "sources/loop-grid-fx-p-clear/host_check.cpp": "8752b6a5747515a464dc7a15b4ef25626ed540e3dc72cd4629cea0e76b15d02c",
+    "sources/loop-grid-fx-add-particle/add_particle.cpp": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+    "sources/loop-grid-fx-add-particle/host_check.cpp": "2b96ca196010913bdd1bec725f15013645d26c658be8a12081ed89bdecb5cde8",
+    "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+    "sources/loop-grid-fx-update-particle-type/host_check.cpp": "33cc280781a96af933fc90ecbe49aa01af4f8faa4b8a0f9c194a144f9bcc2766",
+    "sources/loop-grid-fx-p-update/p_update.cpp": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+    "sources/loop-grid-fx-p-update/host_check.cpp": "01c07f99b6eef2714dce9e160c6d8c0d8a0bae3fd9095fd899d66fa2cb6487ce",
+    "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+    "sources/loop-grid-fx-emitter-tag/host_check.cpp": "cdb4751f4b061a002e45f88642e3253ae67d3a8c08ac85a673b31344eca1907b",
+    "sources/loop-grid-fx-script-particles/script_particles.cpp": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+    "sources/loop-grid-fx-script-particles/host_check.cpp": "a5251fdd8e03b1b30811badf4f00b3038b9a01ffd26d88ca9209c65cf65f69ee",
+    "sources/loop-grid-fx-fx-dust/fx_dust.cpp": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+    "sources/loop-grid-fx-fx-dust/host_check.cpp": "b38cfdfb1fea1fdbb1fbb9d96213cde414c9adf56bf7bf5d7c8d98a19c23db0a",
+    "sources/loop-grid-fx-task-list/task_list.cpp": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+    "sources/loop-grid-fx-task-list/host_check.cpp": "e59da3ed56b933c6a72fda49fc38bdffbc02caf83832d6c05d6e7390ae55d78f",
+    "sources/loop-grid-fx-particle-storage/particle_storage.cpp": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+    "sources/loop-grid-fx-particle-storage/host_check.cpp": "0654ae521e6d2edad88877bcef688bb9d364fe00c0be660addd04a33b503e7e9"
   },
   "additional_implementations": [
     {
@@ -21205,11 +21532,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1373,
-    "authored_default_inputs": 1371,
+    "selected_inputs": 1394,
+    "authored_default_inputs": 1392,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1078,
-    "compiled_body_bytes_from_accepted_inputs": 449232,
+    "emitted_function_definitions_including_helpers": 1098,
+    "compiled_body_bytes_from_accepted_inputs": 455716,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -21222,7 +21549,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1060
+    "package_selected_inputs": 1081
   },
   "startup_implementations": [
     {
@@ -37505,6 +37832,354 @@
       ],
       "host_files": [
         "sources/frontend-shell-run/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp",
+      "source_sha256": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+      "object_sha256": "800a795dc48acee32f2c23197ee2cff1245b0d7fc13e756b6b9aa42b0e51f440",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp",
+      "source_sha256": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+      "object_sha256": "10a37e5231c53f932473f96332e342b6cbf2213f58a7bb219bc505b854f60e85",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-first/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp",
+      "source_sha256": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+      "object_sha256": "062350d57ab5ce65bf85861209cb852c8fc27188e6a983658ab4400bb6ff91f6",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-tag-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp",
+      "source_sha256": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+      "object_sha256": "9a8aa3facee00071fac21b146ffff83df2879de8923162e8751be74680848f8f",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-find-in-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp",
+      "source_sha256": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+      "object_sha256": "7ef1070cc0958fc37e5fdd7523d2a7b4212215bc104589734daeb900577fbd4f",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-update-in-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp",
+      "source_sha256": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+      "object_sha256": "94529093d3af99f9eb6ac1450e28634657da2d0c796c5b4bef78afa24a7b6159",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-iterate-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp",
+      "source_sha256": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+      "object_sha256": "419d3bcf1dca78ac8d02f5db7264800f78b36a163b797d38c5c8ea63d519b318",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-remove-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp",
+      "source_sha256": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+      "object_sha256": "51056904f290dc203bf99904a20ebc494d91bbc40bd170ee8e8e7f2c834ba3e5",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-delete-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp",
+      "source_sha256": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+      "object_sha256": "3709e678f9beea1522ce8e24b2f99e14f0ae983d5920f755fb3789f8e56d87db",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-medium-run-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp",
+      "source_sha256": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+      "object_sha256": "8d799a23b83c7deff50938c5d6e4cb8f40d42fa678a41e6da3d16ae2252ec324",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-list-head-copy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp",
+      "source_sha256": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+      "object_sha256": "e72f794a0af29c609e1e7e64b0957c582f4caba34a0a1f185b491d19974f5f5b",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-light-add/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp",
+      "source_sha256": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+      "object_sha256": "98ee55c44e3e71e795a5f606a376a24d7100b0a8348a37a0489d542ed8123568",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-has-number/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp",
+      "source_sha256": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+      "object_sha256": "3c61c62c363919efce213400ce83b7816357cd75486dfd6a5d488cd7f48697d4",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-p-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp",
+      "source_sha256": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+      "object_sha256": "e5be36fdeedb5819aab4e0ae775227c473f1105f5829b556bea475313602b419",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-add-particle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp",
+      "source_sha256": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+      "object_sha256": "133309a8d045b625729ab0f5abb7ee9d6446c37e3070df92549e12649a3db59f",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-update-particle-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp",
+      "source_sha256": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+      "object_sha256": "10044a17fff51149b108b520323fcc229d7a38e48e669c97a644dd9b367ff247",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/loop-grid-fx-p-update/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp",
+      "source_sha256": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+      "object_sha256": "7d26aaadbccc2db3dfeb576f1183aa68d834f3a969b8b1359de24811cab013f5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-emitter-tag/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp",
+      "source_sha256": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+      "object_sha256": "f693a4097dcb23b12533bf81db063f45e33318a0182c6031a5206c458476f081",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-script-particles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp",
+      "source_sha256": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+      "object_sha256": "424eff5fb522a1040a108e54999099235a36cec6d277569ddf69381e1fdf7925",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-fx-dust/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp",
+      "source_sha256": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+      "object_sha256": "7efa0a15ebfa959ae4eaf39ffe262c5dfb2c4ba541f6d41d9b54ad80fb35286f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-task-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "loop-grid-fx",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp",
+      "source_sha256": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+      "object_sha256": "64c6d975db38690b8ad36c86a5a43bb72914e9b3b014050be2792e00f62bf3a2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/loop-grid-fx-particle-storage/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

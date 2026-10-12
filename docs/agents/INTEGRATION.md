@@ -2298,6 +2298,58 @@ Opened: `commMenu`, `coreClearNetLogFuck`, `creditsText`, `curFocus`,
 `soundClearStreamQue__Fi`, `startNetLaunch__Fv`, `statusPtr`,
 `stopCredits__Fv`, `textureSmoothBorder__FiiiiiUiiii`.
 
+## agents/loop-grid-fx
+
+Merged. The notes carry the five summary sections: per-symbol addresses with
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about half an hour. Twenty-one units, each with a
+`host_check.cpp` beside the source; the checks that read pointer words build
+with `-DNORRATH_HOST_CONTRACT`, which the EE build never defines. All 21
+passed on this machine with ASan/UBSan. A scripted mutation pass (one
+numeric literal changed at a time, up to ten per source) was killed by the
+contract in every unit that has literals (for example 10/10 `P_AddParticle`,
+10/10 `P_Clear`, 9/10 `norrath_light_add`, 8/10 `objectFindObject`, 3/10
+`norrath_object_remove_string`), so the checks can fail. No game binary or
+disassembly listing was committed.
+
+Twenty-one units were selected with fresh `input_order` values 1373 through
+1393; the five data units emit no functions. Their link has no duplicate
+definition. The notes' "duplicates" section is about name pairs, not link
+collisions, and stays open: `objectUpdateInGrid__FP10GameObject` and
+`norrath_object_update_in_grid`, `objectFindInBox__FG6Point3T0PP10GameObjecti`
+and `norrath_object_find_in_box`, and `norrath_object_add_to_medium_run_list`
+and `norrath_actor_add_medium_run_list` are each the same routine under two
+names in two packages. All are selected; callers still bind to one name.
+
+The worker's private trial (950 to 940 on an older tip) is not the official count. The
+closed list reproduces exactly.
+
+| | |
+|---|---|
+| Before | 1217 |
+| After | 1204 |
+| Closed | 20 |
+| Opened | 7 |
+
+Closed: `P_AddParticle__FP11ParticleDefP6Point3T1f`, `P_Clear__Fv`,
+`P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `P_Update__Fv`,
+`findTagString__10GameObjectPci`, `fxDust`,
+`norrath_factory_particle_emitter_tag_bytes`,
+`norrath_has_light_or_particle_number`, `norrath_light_add`,
+`norrath_list_head_copy_construct`, `norrath_object_add_to_delete_list`,
+`norrath_object_add_to_medium_run_list`, `norrath_object_remove_string`,
+`objectFindInBox__FG6Point3T0PP10GameObjecti`, `objectFindObject__FPc`,
+`objectFindObject__FPcPP10GameObjecti`, `objectIterateGrid__FPFP10GameObject_v`,
+`objectUpdateInGrid__FP10GameObject`, `scriptParticles`, `taskList`.
+
+Opened: `P_DeleteParticleSystem__Fi`, `P_Pop__Fv`,
+`checkCanAllocDescriptor__Fv`, `frameNumWrapped__Fv`,
+`setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`updatePS__FP14ParticleSystem`, `updateTrails__Fv`. 1096 function bodies,
+1392 authored inputs, zero COMMON. 214 tool tests passed. Object hashes in
+the snapshot come from the fresh build. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

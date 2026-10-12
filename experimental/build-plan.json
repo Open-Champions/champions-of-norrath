@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1371,
+  "default_authored_inputs": 1392,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2087,7 +2087,28 @@
     "sources/kernel-patches-g-p-free-alarm/g_p_free_alarm.cpp": "7816ee87c23f748d3b7cf6aa0db6754f003cd184be78c3ed34c42c05d7120417",
     "sources/frontend-shell-words/front_end_words.cpp": "9b4d9ff91e2afeba955256b53be42cae13814abb84632d406a572c449039a690",
     "sources/frontend-shell-run/run_locals.cpp": "307fa4d9464111fb4d24b50bc28001d7fd50ea3e4f5c691bd4bcbbfbe405797b",
-    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373"
+    "sources/frontend-shell-run/run_front_end.cpp": "32b88e1aafa0fb48365223291d9c632b8d7b29d71fa0b47181523d444fd22373",
+    "sources/loop-grid-fx-find-list/find_list.cpp": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+    "sources/loop-grid-fx-find-first/find_first.cpp": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+    "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+    "sources/loop-grid-fx-find-in-box/find_in_box.cpp": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+    "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+    "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+    "sources/loop-grid-fx-remove-string/remove_string.cpp": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+    "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+    "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+    "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+    "sources/loop-grid-fx-light-add/light_add.cpp": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+    "sources/loop-grid-fx-has-number/has_number.cpp": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+    "sources/loop-grid-fx-p-clear/p_clear.cpp": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+    "sources/loop-grid-fx-add-particle/add_particle.cpp": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+    "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+    "sources/loop-grid-fx-p-update/p_update.cpp": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+    "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+    "sources/loop-grid-fx-script-particles/script_particles.cpp": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+    "sources/loop-grid-fx-fx-dust/fx_dust.cpp": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+    "sources/loop-grid-fx-task-list/task_list.cpp": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+    "sources/loop-grid-fx-particle-storage/particle_storage.cpp": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6"
   },
   "inputs": [
     {
@@ -18035,6 +18056,312 @@
           "compiled_body_bytes": 7060
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1373,
+      "kind": "independently_authored_source",
+      "object_name": "find_list.o",
+      "profile": "authored_cpp",
+      "sha256": "730618cd0a530c44d2d1233d7fab52d430e4b3808babb513ec042fa894045f51",
+      "source": "sources/loop-grid-fx-find-list/find_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPcPP10GameObjecti",
+          "compiled_body_bytes": 444
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1374,
+      "kind": "independently_authored_source",
+      "object_name": "find_first.o",
+      "profile": "authored_cpp",
+      "sha256": "d8b27ab520e8925b9619685aa658bdc8fbd822bf02667de46354cfaf254ee0f8",
+      "source": "sources/loop-grid-fx-find-first/find_first.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindObject__FPc",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1375,
+      "kind": "independently_authored_source",
+      "object_name": "find_tag_string.o",
+      "profile": "authored_cpp",
+      "sha256": "add70ed93bd34635df3b4481ad274b87333bc95a4cd1c45033e012ca0fbfa048",
+      "source": "sources/loop-grid-fx-find-tag-string/find_tag_string.cpp",
+      "emitted_functions": [
+        {
+          "name": "findTagString__10GameObjectPci",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1376,
+      "kind": "independently_authored_source",
+      "object_name": "find_in_box.o",
+      "profile": "authored_cpp",
+      "sha256": "ca2ba19e6b460784c40aa2557edf3c8d23e2659aa551ea1c7b7da4947f089889",
+      "source": "sources/loop-grid-fx-find-in-box/find_in_box.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindInBox__FG6Point3T0PP10GameObjecti",
+          "compiled_body_bytes": 820
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1377,
+      "kind": "independently_authored_source",
+      "object_name": "update_in_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "d1596ba32b1c5fae3098fe55b02ff398a49b87f9417fb9182ccb41a5602a940e",
+      "source": "sources/loop-grid-fx-update-in-grid/update_in_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectUpdateInGrid__FP10GameObject",
+          "compiled_body_bytes": 468
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1378,
+      "kind": "independently_authored_source",
+      "object_name": "iterate_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "e995ed3cf2d19718f812d40abfda86dbd0a8a2dd0e8112fffca019cd419afb88",
+      "source": "sources/loop-grid-fx-iterate-grid/iterate_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L10visit_listEPhS0_PFvS0_E",
+          "compiled_body_bytes": 124
+        },
+        {
+          "name": "objectIterateGrid__FPFP10GameObject_v",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1379,
+      "kind": "independently_authored_source",
+      "object_name": "remove_string.o",
+      "profile": "authored_cpp",
+      "sha256": "4607f6628ad2a2e6219878ff096663da4e08e7e359155d4ed3c5855f9524e4a7",
+      "source": "sources/loop-grid-fx-remove-string/remove_string.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_remove_string",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1380,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_delete_list.o",
+      "profile": "authored_cpp",
+      "sha256": "2039e5ec93efba03eae4fa7e5a2367ca0ec4ca8709f08678ae3e6a764a8edea7",
+      "source": "sources/loop-grid-fx-delete-list/add_to_delete_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_delete_list",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1381,
+      "kind": "independently_authored_source",
+      "object_name": "add_to_medium_run_list.o",
+      "profile": "authored_cpp",
+      "sha256": "73a4b0f95d7a0f930ca99ba0b621d8b2eda6d86663e684e868a2b8a0ddc28bea",
+      "source": "sources/loop-grid-fx-medium-run-list/add_to_medium_run_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_object_add_to_medium_run_list",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1382,
+      "kind": "independently_authored_source",
+      "object_name": "list_head_copy.o",
+      "profile": "authored_cpp",
+      "sha256": "17f1e1b6583f9d295e159fe8ff92a9ffe702516c2e2ad5c62e4154875c523123",
+      "source": "sources/loop-grid-fx-list-head-copy/list_head_copy.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_list_head_copy_construct",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1383,
+      "kind": "independently_authored_source",
+      "object_name": "light_add.o",
+      "profile": "authored_cpp",
+      "sha256": "868ee6d645bde3d33afd6b86aa018710f45bb3299ff525bdd44c2cac0f2eda58",
+      "source": "sources/loop-grid-fx-light-add/light_add.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_add",
+          "compiled_body_bytes": 456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1384,
+      "kind": "independently_authored_source",
+      "object_name": "has_number.o",
+      "profile": "authored_cpp",
+      "sha256": "87f9041ecce098aec520e7fbdc0e99bc1b28e8b872bb3f2738a2ebf65f148c31",
+      "source": "sources/loop-grid-fx-has-number/has_number.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L18numbered_tag_valueEPPcPKci",
+          "compiled_body_bytes": 292
+        },
+        {
+          "name": "norrath_has_light_or_particle_number",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1385,
+      "kind": "independently_authored_source",
+      "object_name": "p_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "439338a5c4145652dc941cd943c27f5dd88d6bc5c1cd0efd034edcba6eed5999",
+      "source": "sources/loop-grid-fx-p-clear/p_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_Clear__Fv",
+          "compiled_body_bytes": 468
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L13reset_entriesEj",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14release_chainsEjj",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1386,
+      "kind": "independently_authored_source",
+      "object_name": "add_particle.o",
+      "profile": "authored_cpp",
+      "sha256": "f4b04eeecfaf3781bb5ae8afdcd40b3cf052e17bfe335a721845cc316bf04e24",
+      "source": "sources/loop-grid-fx-add-particle/add_particle.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_AddParticle__FP11ParticleDefP6Point3T1f",
+          "compiled_body_bytes": 1156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1387,
+      "kind": "independently_authored_source",
+      "object_name": "update_particle_type.o",
+      "profile": "authored_cpp",
+      "sha256": "9e4b677ed880dcce69f46995c4c9136080a4ea0e80d3be0ae4ef651056bac6ce",
+      "source": "sources/loop-grid-fx-update-particle-type/update_particle_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1388,
+      "kind": "independently_authored_source",
+      "object_name": "p_update.o",
+      "profile": "authored_cpp",
+      "sha256": "cddc326de47725ebffadaa9b26c3db0942af0770006af7e1b1117a9789f3319b",
+      "source": "sources/loop-grid-fx-p-update/p_update.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_Update__Fv",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1389,
+      "kind": "independently_authored_source",
+      "object_name": "emitter_tag.o",
+      "profile": "authored_cpp",
+      "sha256": "8c4959de7bcda474dfe8e0d55be4aa0cbffd17af9bc8cab2a27b935811f0fb95",
+      "source": "sources/loop-grid-fx-emitter-tag/emitter_tag.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1390,
+      "kind": "independently_authored_source",
+      "object_name": "script_particles.o",
+      "profile": "authored_cpp",
+      "sha256": "650fbdd7c5cb03072df90b8b7fd03bb109e8b1110646aa02f78ff5074eb679de",
+      "source": "sources/loop-grid-fx-script-particles/script_particles.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1391,
+      "kind": "independently_authored_source",
+      "object_name": "fx_dust.o",
+      "profile": "authored_cpp",
+      "sha256": "9c87d2f531dfd1ece9364b14c4ceca352180e7ce8d75c54d5e8ef686750493b6",
+      "source": "sources/loop-grid-fx-fx-dust/fx_dust.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1392,
+      "kind": "independently_authored_source",
+      "object_name": "task_list.o",
+      "profile": "authored_cpp",
+      "sha256": "1ea5a3e554ad11cd67c3030b3514f7ab08c2d0a0c1e342ae945c969ebea89c88",
+      "source": "sources/loop-grid-fx-task-list/task_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1393,
+      "kind": "independently_authored_source",
+      "object_name": "particle_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "a361efd49bc8be4d7a3c1c74b067c1ac54a1a84a66f71b0a6aedb547baff47f6",
+      "source": "sources/loop-grid-fx-particle-storage/particle_storage.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -18134,7 +18461,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a8606c3188641210675ea6b5856f23787c95f5ac9133cd2aa57074eaecaa6a43",
+  "snapshot_sha256": "66d183063b59048547b21eafd35975ae54a4b343ed96a24fe7ce71999d15920d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
