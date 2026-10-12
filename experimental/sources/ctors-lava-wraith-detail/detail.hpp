@@ -160,6 +160,12 @@ unsigned norrath_construct_Skelight(void* object, const void* point, short type,
 extern unsigned char norrath_ctors_lava_wraith_view_42ce60[];
 extern unsigned char norrath_ctors_lava_wraith_view_44b260[];
 unsigned norrath_construct_SuperOrc(void* object, const void* point, short type, char** arguments);
+void* norrath_lump_load(char* lump_name);
+extern unsigned char norrath_ctors_lava_wraith_view_42d700[];
+extern unsigned char norrath_ctors_lava_wraith_view_44fd08[];
+extern unsigned char norrath_ctors_lava_wraith_view_4858c0[];
+extern unsigned char norrath_ctors_lava_wraith_view_4858c8[];
+unsigned norrath_construct_VampireLord(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
