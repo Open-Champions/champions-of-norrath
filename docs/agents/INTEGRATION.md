@@ -4383,6 +4383,51 @@ Opened: `TerminateThread`, `alwaysLoadedPage`, `decodeQHead`, `decodeQTail`,
 `textureDrawSuperColor__FP8_textureiiiUiiiiicc`, `texturesAreDecompressing`,
 `texturesAreLoading`.
 
+## agents/w8-net-play-c
+
+Merged (the branch notes carry the five summary sections). Twelve of the 14
+units were selected with fresh `input_order` values 2240 through 2251 (13
+emitted functions, 8540 compiled body bytes, not original-byte matches).
+Seven host checks build and run directly; five (`player-damage-handler`,
+`player-recompute-ability-modifiers`, `player-recompute-weight`,
+`pre-cache-armor`, `start-packet`) map dialog data at the fixed address
+0x20000000 and only work in the build their header comment prescribes
+(`-arch x86_64 -Wl,-pagezero_size,0x10000`); built that way, all five exit 0
+here, so all 12 pass. Two units were **not** selected because the link
+reported multiple definitions: `alive-sync-state` (`playersAlive`,
+`syncRandState`) and `player-select-state` (`playerMenu`) are already defined
+by earlier packages; their files stay in the snapshot, unselected. No game
+binary or disassembly listing was committed. 1811 function bodies, 2252
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1516 |
+| After | 1533 |
+| Closed | 12 |
+| Opened | 29 |
+
+Closed: `playerDamageHandler__6Player`, `playerDeallocateArmorCaches__Fv`,
+`playerGetFeatRank__Fix`, `playerGlobalInit__Fv`, `playerPlaySound__Fii`,
+`playerRecomputeAbilityModifiers__Fv`, `playerRecomputeWeight__Fi`,
+`playerSelectionRunning__Fv`, `preCacheArmor__6Player`,
+`recievePacket__FiPUc`, `startNetLaunch__Fv`, `startPacket__Fi`.
+
+Opened: `ClericSkillTree`, `RangerSkillTree`, `ShadowKnightSkillTree`,
+`WarriorSkillTree`, `WizardSkillTree`, `_4item$globalItem`,
+`__8GutChunkG6Point3iif`, `cacheCdDone`,
+`cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture`,
+`cacheLoadCache`, `cheatInvulnerability`, `cheatMode`, `curDlgStart`, `disin
+tegrationEffect__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sffi`
+, `eqLumpHeader`, `gSkillTree`, `getPicName__4itemPciPQ24item11description`,
+`lastYAnchor`, `netForceLocalUpdate`,
+`norrath_player_armor_cache_view_7cb770`, `packetbuffer`, `packetshift`,
+`playSoundForDlg__FP9DlgPacket`, `playerIsAnimPlaying__6PlayerPc`,
+`recomputePaperDollModifiers__Fi`, `soundReallyAllFlags__Fi`,
+`soundStartGlobalDialogStreamRandom__FiPci`,
+`soundStartGlobalDialogStream__FiPci`, `wLumpHeader`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

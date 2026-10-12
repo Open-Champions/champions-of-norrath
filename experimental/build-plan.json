@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2240,
+  "default_authored_inputs": 2252,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2985,7 +2985,19 @@
     "sources/w8-hud-text-items-c-ustrcpy-narrow/ustrcpy_narrow.cpp": "702376aee8ea9b70c644f878efd43b4a187c25b58e83f3577203a91a55a05574",
     "sources/w8-hud-text-items-c-ustrcpy-uu/ustrcpy_uu.cpp": "0d1d76afe741beb39564c4d0b66b4ff13fd64cf88e63841a531f8617214c6f62",
     "sources/w8-hud-text-items-c-ustrcpy-widen/ustrcpy_widen.cpp": "31e4b725d58d708e2d9179f283e3c3443602a1d9c2f23dba48756f51dacb3c16",
-    "sources/w8-hud-text-items-c-ustrlen/ustrlen.cpp": "d24d71f344cc4024210e52db1aa2961f23d10ae7b1d1c24f8c1a53c2776f7ad4"
+    "sources/w8-hud-text-items-c-ustrlen/ustrlen.cpp": "d24d71f344cc4024210e52db1aa2961f23d10ae7b1d1c24f8c1a53c2776f7ad4",
+    "sources/w8-net-play-c-player-damage-handler/player_damage_handler.cpp": "2a0f958ddf749824eca95459b591b4cf3649a5e4a8b6acb94a42729dac00faf0",
+    "sources/w8-net-play-c-player-deallocate-armor-caches/player_deallocate_armor_caches.cpp": "0a9ccf43726a6e8b93d23e3eb2b6003e1c00cb2aa6d70a78793b023af41be6e1",
+    "sources/w8-net-play-c-player-get-feat-rank/player_get_feat_rank.cpp": "8b0dce2b807e7fdb8f851f5c7c7975e09078b82e0e72a118a6bb84fe6ddc8643",
+    "sources/w8-net-play-c-player-global-init/player_global_init.cpp": "c96eab3ef92f9e32797f9022fff81495625f8e136591b6bcf2c8985b947139b0",
+    "sources/w8-net-play-c-player-play-sound/player_play_sound.cpp": "cf2a80928935e14dd4923859b0066c635a677826c5a985db881dafbdfa7fc5b3",
+    "sources/w8-net-play-c-player-recompute-ability-modifiers/player_recompute_ability_modifiers.cpp": "f191cc8b47959a463c600e829c345e2159d726a5403595999b6d3c1e46f90a8b",
+    "sources/w8-net-play-c-player-recompute-weight/player_recompute_weight.cpp": "b6d7714bff519de930537e468a7e0d4b5b4f0080a6306d44012c78a4414c4e0d",
+    "sources/w8-net-play-c-player-selection-running/player_selection_running.cpp": "188d100332a7221ae4cbe74a563518c7f2270ddd6ae6b8fd1230591697f5467e",
+    "sources/w8-net-play-c-pre-cache-armor/pre_cache_armor.cpp": "1b9ae1b7c1cf32e3a0e0b7a01e2816acfba231cf329dfec5cc81b205959b37de",
+    "sources/w8-net-play-c-recieve-packet/recieve_packet.cpp": "597a446c4767e2d2853e7aa8d2ae64808802bd35777f7b2acb53b04a1ecf8317",
+    "sources/w8-net-play-c-start-net-launch/start_net_launch.cpp": "7d0ea3002a27b7dc9ee0de9f024c0e1f4b3e28a7483e92a69320dd954a10e9f5",
+    "sources/w8-net-play-c-start-packet/start_packet.cpp": "0f15421904a2af6e0dc3efe8b3517ea409e402f5d8276931de33ac1f79bddbe7"
   },
   "inputs": [
     {
@@ -31555,6 +31567,190 @@
           "compiled_body_bytes": 44
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2242,
+      "kind": "independently_authored_source",
+      "object_name": "player_damage_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "2a0f958ddf749824eca95459b591b4cf3649a5e4a8b6acb94a42729dac00faf0",
+      "source": "sources/w8-net-play-c-player-damage-handler/player_damage_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerDamageHandler__6Player",
+          "compiled_body_bytes": 2260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2243,
+      "kind": "independently_authored_source",
+      "object_name": "player_deallocate_armor_caches.o",
+      "profile": "authored_cpp",
+      "sha256": "0a9ccf43726a6e8b93d23e3eb2b6003e1c00cb2aa6d70a78793b023af41be6e1",
+      "source": "sources/w8-net-play-c-player-deallocate-armor-caches/player_deallocate_armor_caches.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerDeallocateArmorCaches__Fv",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2244,
+      "kind": "independently_authored_source",
+      "object_name": "player_get_feat_rank.o",
+      "profile": "authored_cpp",
+      "sha256": "8b0dce2b807e7fdb8f851f5c7c7975e09078b82e0e72a118a6bb84fe6ddc8643",
+      "source": "sources/w8-net-play-c-player-get-feat-rank/player_get_feat_rank.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerGetFeatRank__Fix",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2245,
+      "kind": "independently_authored_source",
+      "object_name": "player_global_init.o",
+      "profile": "authored_cpp",
+      "sha256": "c96eab3ef92f9e32797f9022fff81495625f8e136591b6bcf2c8985b947139b0",
+      "source": "sources/w8-net-play-c-player-global-init/player_global_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "copyTree",
+          "compiled_body_bytes": 164
+        },
+        {
+          "name": "playerGlobalInit__Fv",
+          "compiled_body_bytes": 180
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2246,
+      "kind": "independently_authored_source",
+      "object_name": "player_play_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "cf2a80928935e14dd4923859b0066c635a677826c5a985db881dafbdfa7fc5b3",
+      "source": "sources/w8-net-play-c-player-play-sound/player_play_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerPlaySound__Fii",
+          "compiled_body_bytes": 1256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2247,
+      "kind": "independently_authored_source",
+      "object_name": "player_recompute_ability_modifiers.o",
+      "profile": "authored_cpp",
+      "sha256": "f191cc8b47959a463c600e829c345e2159d726a5403595999b6d3c1e46f90a8b",
+      "source": "sources/w8-net-play-c-player-recompute-ability-modifiers/player_recompute_ability_modifiers.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerRecomputeAbilityModifiers__Fv",
+          "compiled_body_bytes": 1708
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2248,
+      "kind": "independently_authored_source",
+      "object_name": "player_recompute_weight.o",
+      "profile": "authored_cpp",
+      "sha256": "b6d7714bff519de930537e468a7e0d4b5b4f0080a6306d44012c78a4414c4e0d",
+      "source": "sources/w8-net-play-c-player-recompute-weight/player_recompute_weight.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerRecomputeWeight__Fi",
+          "compiled_body_bytes": 292
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2249,
+      "kind": "independently_authored_source",
+      "object_name": "player_selection_running.o",
+      "profile": "authored_cpp",
+      "sha256": "188d100332a7221ae4cbe74a563518c7f2270ddd6ae6b8fd1230591697f5467e",
+      "source": "sources/w8-net-play-c-player-selection-running/player_selection_running.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionRunning__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2250,
+      "kind": "independently_authored_source",
+      "object_name": "pre_cache_armor.o",
+      "profile": "authored_cpp",
+      "sha256": "1b9ae1b7c1cf32e3a0e0b7a01e2816acfba231cf329dfec5cc81b205959b37de",
+      "source": "sources/w8-net-play-c-pre-cache-armor/pre_cache_armor.cpp",
+      "emitted_functions": [
+        {
+          "name": "preCacheArmor__6Player",
+          "compiled_body_bytes": 1044
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2251,
+      "kind": "independently_authored_source",
+      "object_name": "recieve_packet.o",
+      "profile": "authored_cpp",
+      "sha256": "597a446c4767e2d2853e7aa8d2ae64808802bd35777f7b2acb53b04a1ecf8317",
+      "source": "sources/w8-net-play-c-recieve-packet/recieve_packet.cpp",
+      "emitted_functions": [
+        {
+          "name": "recievePacket__FiPUc",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2252,
+      "kind": "independently_authored_source",
+      "object_name": "start_net_launch.o",
+      "profile": "authored_cpp",
+      "sha256": "7d0ea3002a27b7dc9ee0de9f024c0e1f4b3e28a7483e92a69320dd954a10e9f5",
+      "source": "sources/w8-net-play-c-start-net-launch/start_net_launch.cpp",
+      "emitted_functions": [
+        {
+          "name": "startNetLaunch__Fv",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2253,
+      "kind": "independently_authored_source",
+      "object_name": "start_packet.o",
+      "profile": "authored_cpp",
+      "sha256": "0f15421904a2af6e0dc3efe8b3517ea409e402f5d8276931de33ac1f79bddbe7",
+      "source": "sources/w8-net-play-c-start-packet/start_packet.cpp",
+      "emitted_functions": [
+        {
+          "name": "startPacket__Fi",
+          "compiled_body_bytes": 864
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -31654,7 +31850,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "da6f685ed18a8b660c068584d259a8407a71d2c2e3d4a0f0d2b9c16502ce4e6c",
+  "snapshot_sha256": "745ab4cc49834687b2af0fcc988550aa89e4296feda12461b4423286806ae0a7",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
