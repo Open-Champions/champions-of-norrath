@@ -35,15 +35,15 @@ static int after() {
     return cacheHead == 0 && cacheTail == 0 ? 0 : 4;
 }
 int main() {
-    fill(); cacheHead = 3; cacheTail = 6;
+    fill(); cacheTail = 3; cacheHead = 6;
     cacheClear__Fv();
     for (int i = 0; i < 16; ++i) if (mark(i) != ((i >= 3 && i <= 6) ? 0 : 0x7777)) return 10 + i;
     if (int r = after()) return 30 + r;
-    fill(); cacheHead = 14; cacheTail = 1;   // wraps around the ring
+    fill(); cacheTail = 14; cacheHead = 1;   // wraps around the ring
     cacheClear__Fv();
     for (int i = 0; i < 16; ++i) if (mark(i) != ((i == 14 || i == 15 || i == 0 || i == 1) ? 0 : 0x7777)) return 50 + i;
     if (int r = after()) return 70 + r;
-    fill(); cacheHead = 5; cacheTail = 5;     // single record
+    fill(); cacheTail = 5; cacheHead = 5;     // single record
     cacheClear__Fv();
     for (int i = 0; i < 16; ++i) if (mark(i) != (i == 5 ? 0 : 0x7777)) return 90 + i;
     if (int r = after()) return 110 + r;
