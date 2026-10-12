@@ -46,8 +46,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/ghoul.cpp` | `norrath_construct_Ghoul` | `__5GhoulG6Point3siPPc` `0x1f62e8`, 852 bytes | 1196 | `dcd8561f3b62d89461db09859d46d1a971662e89c52437ffced89262f3b93cc2` |
 | `ctors-ant-lantern-constructors/badger.cpp` | `norrath_construct_Badger` | `__6BadgerG6Point3sPPci` `0x1eef40`, 924 bytes | 1356 | `82b21131bc106be592822d587beaa6a121ae85ddefdc3b83303dfd000b9b01e1` |
 | `ctors-ant-lantern-constructors/black_widow.cpp` | `norrath_construct_BlackWidow` | `__10BlackWidowG6Point3sPPcPc` `0x209c20`, 896 bytes | 1364 | `7d5294ccabdedfe07ba739b9baeafe41bbd2fd9d84dfa6aebba9d933609c8bd0` |
+| `ctors-ant-lantern-constructors/froglock.cpp` | `norrath_construct_Froglock` | `__8FroglockG6Point3sPPcPc` `0x1ff820`, 880 bytes | 1272 | `59e3d75582c155db40d7bb5f6b60381fa182c16df76324ff787d87fcc6af687d` |
 
-`detail.hpp` sha256 `c558f1e3ba78fccf0df0dda7125635184a7bac0ac1864dccf8141b3bf0fd6a76`.
+`detail.hpp` sha256 `c9a61b66fce6e74093079d1a1ca52e736427ace4112dabcb2f80cbb754a3ec62`.
 
 ## Build-plan entries needed
 
@@ -470,6 +471,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "froglock.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/froglock.cpp",
+  "sha256": "59e3d75582c155db40d7bb5f6b60381fa182c16df76324ff787d87fcc6af687d",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Froglock",
+      "compiled_body_bytes": 1272
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -532,9 +552,11 @@ Observed `__6BadgerG6Point3sPPci` at `0x1eef40`, 924 bytes. Creature with the 17
 
 Observed `__10BlackWidowG6Point3sPPcPc` at `0x209c20`, 896 bytes. The last argument is a name string. Two `eRand` rolls give the Creature scale (r1&7)+(r2&7)+32, map `0x42c188`. Vtable `0x44c260` (`_vt$10BlackWidow`), a `Web` (`__3Webii`, 35 and 180) constructed at object+976, flag bits and singles, `setParameters` with 1.0, a global and three 1.0 values. The name is compared (`strticmp`) with a text at `0x46ffe0`: on a match the header at model+148 is added with flag 4 and extra flag bits and half 572 = 16 are set; otherwise the header at model+116 is added with flag 1 and its time randomised. Then the eight-byte chunk result at +552, slow run list, eight `setAnimEventFlags` calls (16, 4, 6, 8, 9, 10, 11, 18) and `finishConstruction`'s V0.
 
+Observed `__8FroglockG6Point3sPPcPc` at `0x1ff820`, 880 bytes. The last argument is a name string. Creature with table `0x42b958` and scale 10.0, vtable `0x44bcc0` (`_vt$8Froglock`), the same four-halves / marker-bytes / zero-run block as Demon at 1048..1093, flag bits, singles and clears, +960 = 17. Two `strticmp` name comparisons (texts at `0x46f120` and `0x46f130`) optionally change +960 to 16 and, behind a roll scaled by 2^-16 against a global threshold, store a small value at +208. Then `initAttackVariant__8Froglock`, `setParameters`, the eight-byte chunk result at +552, animation header from model+60, slow run list, five `setAnimEventFlags` calls (12, 3, 13, 4, 5) and `finishConstruction`'s V0. Inferred only: the two texts read as weapon-variant names.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`
 
 ## Imports opened
 
@@ -569,11 +591,12 @@ Address views `norrath_ctors_ant_lantern_view_42d200`, `_44f6a8`, `_481ab4` thro
 Address views `norrath_ctors_ant_lantern_view_42b630`, `_42b548`, `_44bae0`, `_480e58` through `_480e70` (seven singles).
 Address views `norrath_ctors_ant_lantern_view_42b1d0`, `_44c350`, `_46dbe0`, `_480cc8` through `_480cec` (ten singles); `_34b6b1` as for Chest.
 `__3Webii` (original at `0x20fac8`) — original name, not defined here. Address views `norrath_ctors_ant_lantern_view_42c188`, `_44c260`, `_46ffe0`, `_4813bc` through `_4813d4` (seven singles).
+`initAttackVariant__8Froglock` (original at `0x1ffb90`) — original name, not defined here. Address views `norrath_ctors_ant_lantern_view_42b958`, `_44bcc0`, `_46f120`, `_46f130`, `_48109c` through `_4810b0` (six singles).
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
