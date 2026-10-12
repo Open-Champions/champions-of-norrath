@@ -28,7 +28,7 @@ int main() {
     scriptAddDeferedCall__FPc(b);
     if (nextNmDeferedCalls != 64) return 5;
     for (unsigned i = 0; i < sizeof deferedCall; ++i) if (deferedCall[i]) return 6;
-    // negative counts still index (below 64)
+    // a negative frame has its low bit set
     scriptFrame = -1;  // low bit set -> bank 0
     nextNmDeferedCalls = 2;
     scriptAddDeferedCall__FPc(b);
