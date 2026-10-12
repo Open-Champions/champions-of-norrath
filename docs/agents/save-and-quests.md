@@ -23,3 +23,7 @@ Observed at `0x001d3d40`, 108 bytes; the reviewed compile emits 100. While `next
 ## scriptStart__FPc
 
 Observed at `0x001d3e88`, 132 bytes; the reviewed compile emits 188. A null name or null `curScriptPtr` returns -1. `amx_FindPublic(amx, name, &index)` nonzero returns -1 and, when the function-local static `complainFrame.672` (word `0x0048508c`, initially -10000) is below `drawFrameNm`, sets it to `drawFrameNm + 20`. A zero status runs `amx_Exec(amx, &result, index, 0, 0)` and returns the stored word. `result` starts as the zero status, so a run that stores nothing returns 0. The fourth and fifth argument registers are zero; reading them as parameter count and data follows the existing executor's declaration. Opens imports `amx_FindPublic`, `amx_Exec`; uses existing views `norrath_script_current_amx_word_view` and `norrath_script_complain_frame_word_view`.
+
+## scriptGetGameState__FPc
+
+Observed at `0x001d39c0`, 236 bytes; the reviewed compile emits 256. The name is copied (unbounded) into a 256-byte stack buffer and lower-cased with the newlib table (`_ctype_[c + 1] & 1` adds 32). The table `norrath_script_game_state_data_view` (`gameStateData`, `0x007d35e8`) is read as records of a NUL-terminated name plus one signed value byte, ended by a record starting with a zero byte. A match returns the value byte sign-extended. No match appends the lower-cased key, clears its value byte, and returns 0; the byte after the new record is not written. Opens imports `_ctype_`, `strcmp`, `strlen`, `strcpy` (some already defined elsewhere).
