@@ -34,7 +34,7 @@ int main() {
     InvalidDCache(0x1000u, 0x2000u);
     if (std::strcmp(log_text, "I") != 0 || seen_first != 0x1000u || seen_second != 0x2000u) return 1;
     reset(0x10000u);
-    InvalidDCache(0x12345u, 0xfffffffffu & 0x987654fu);
+    InvalidDCache(0x12345u, 0x987654fu);
     if (std::strcmp(log_text, "DIE") != 0 || seen_first != 0x12340u || seen_second != 0x9876540u) return 2;
     reset(0xfffeffffu);
     InvalidDCache(0x7fu, 0xbfu);
