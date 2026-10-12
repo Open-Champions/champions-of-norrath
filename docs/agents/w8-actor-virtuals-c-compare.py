@@ -166,13 +166,22 @@ def make_stub(name, kinds, ret, rng):
     return handler
 
 
-def build_authored(rel, work, stubnames):
-    base = os.path.basename(rel).replace('.cpp', '')
-    obj = os.path.join(work, base + '.o')
-    subprocess.check_call([P + 'g++', *FLAGS, '-c', os.path.join(SRC, rel), '-o', obj])
-    und = [l.split()[-1] for l in subprocess.check_output([P + 'nm', '-u', obj], text=True).splitlines() if l.strip()]
+def build_authored(spec, work, stubnames):
+    objs = []
+    for rel in [spec['src']] + spec.get('extra', []):
+        obj = os.path.join(work, os.path.basename(os.path.dirname(rel)) + '-' + os.path.basename(rel).replace('.cpp', '.o'))
+        subprocess.check_call([P + 'g++', *FLAGS, '-c', os.path.join(SRC, rel), '-o', obj])
+        objs.append(obj)
+    und, defined = set(), set()
+    for obj in objs:
+        for l in subprocess.check_output([P + 'nm', obj], text=True).splitlines():
+            parts = l.split()
+            if len(parts) == 2 and parts[0] == 'U':
+                und.add(parts[1])
+            elif len(parts) == 3 and parts[1] != 'U':
+                defined.add(parts[2])
     defsyms = {}
-    for name in und:
+    for name in sorted(und - defined):
         if name in DATA:
             defsyms[name] = DATA[name]
         else:
@@ -180,10 +189,10 @@ def build_authored(rel, work, stubnames):
             if orig not in stubnames:
                 raise SystemExit('unmapped authored import: ' + name)
             defsyms[name] = STUB + 0x10 * stubnames.index(orig)
-    out = os.path.join(work, base + '.elf')
+    out = os.path.join(work, 'linked.elf')
     cmd = [P + 'ld', '-m', 'elf32lr5900', '-Ttext=0x00400000', '--no-warn-mismatch']
     cmd += ['--defsym=%s=%#x' % kv for kv in defsyms.items()]
-    cmd += ['-o', out, obj]
+    cmd += ['-o', out] + objs
     subprocess.check_call(cmd)
     return out
 
@@ -227,7 +236,7 @@ def compare(name, runs=200):
         EXESYM = exe_symbols()
     exe = Image(EXE)
     names = list(spec['stubs'])
-    elf = build_authored(spec['src'], work, names)
+    elf = build_authored(spec, work, names)
     auth = Image(elf)
     auth_entry = symbol_address(elf, spec.get('auth_symbol', name))
     orig_entry = EXESYM[spec.get('orig_symbol', name)]
@@ -425,6 +434,21 @@ def sc_auto_run(rng):
     return {'mem': mem, 'args': [OBJ], 'compare': cmp_addrs}
 
 
+def sc_door_state(rng):
+    mem = new_object(rng)
+    put32(mem, OBJ + 376, rng.choice([0, 1, 2, 3, 0xFFFFFFFF, 5]))
+    put32(mem, OBJ + 396, rng.choice([0, 5, 0xFFFFFFFF, 1000]))
+    for off in (400, 408):
+        putf(mem, OBJ + off, float(rng.randrange(-300, 300)))
+    put32(mem, 0x4844A0, rng.choice([0, 0x30050000, 0x12345678]))
+    return {'mem': mem, 'args': [OBJ, rng.choice([0, 1, 1, 0x100, -1])],
+            'compare': whole_object() + list(range(0x4844A0, 0x4844A4))}
+
+
+DOOR_STUBS = {'worldSetDoorCollision__FP12_worldHeaderii': (['i', 'i', 'i'], ('i', [0, 1, 99])),
+              'worldMoveDoor__FP12_worldHeaderiG6Point3s': (['i', 'i', 's12', 'i'], ('i', [0, 5, 77])),
+              'worldSetDoorHeight__FP12_worldHeaderif': (['i', 'i', 'f'], ('i', [0, 3, 0xFFFFFFFF]))}
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -464,6 +488,11 @@ reg('msg_run__8AutoProp', W + 'auto-prop-run/run.cpp', sc_auto_run,
      'iatan2__Fff': (['f', 'f'], ('i', [0, 0x4000, 0x8000, 0xC000, 0xFFFF, 0x12345, 0xFFFF8000, 0x7FFF, 5])),
      'gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb':
          (['o', 'o', 'f', 'f', 'i', 'i', 'i', 'i', 'i', 'i'], None)})
+
+reg('setPassableState__8GothTrapb', W + 'goth-trap-passable/set_passable_state.cpp', sc_door_state, DOOR_STUBS,
+    extra=['vehicle-actors-goth-trap-passable/set_passable_state.cpp'])
+reg('setPassableState__10HateBridgeb', W + 'hate-bridge-passable/set_passable_state.cpp', sc_door_state, DOOR_STUBS,
+    extra=['vehicle-actors-hate-bridge-passable/set_passable_state.cpp'])
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
