@@ -1742,6 +1742,54 @@ Opened: `currentLayerDir`, `gCd`, `initLump__FPv`, `layer0Dir`,
 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
 execution.
 
+## agents/gs-dma-present closing pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a verification log. Each of the three new units has a host contract that
+fails (assert aborts) on a wrong word, order, or call; all three passed on
+this machine with ASan/UBSan. No game binary or disassembly listing was
+committed. The three sources compile under `authored_cpp` with the hashes
+and body bytes the notes claim.
+
+Three of the 29 proposed inputs were selected with fresh `input_order`
+values 1251 through 1253. The 25 inherited units were already selected and
+were not appended again. gs-dma-present-texture-draw-color is still not
+selected: it redefines `textureDrawColor__FP8_textureiiiUi` from
+light-methods, and its file stays in the source snapshot. Object names
+follow the in-plan convention (`do_super_sample.o`, `light_vu0_stopped.o`,
+`reload_dma.o`) rather than the notes' `present_` proposals; there was no
+collision either way.
+
+One correction against the notes: their plan entry for do-super-sample
+listed only `doSuperSample__Fiib`, but the fresh EE object also emits the
+file-local helper `_ZL17float_to_int_wordf` (260 bytes), so both are
+recorded, matching 38 existing mangled-helper precedents. The driver
+compares the full function multiset, so the helper had to be listed.
+`madePacket.769` and the 21 `reloadDMA__Fi` state words are defined and
+were not previous imports. The notes flag that `gsIntHandler__Fi`
+declares `reloadDMA__Fi` as `void` while the observed body returns 1 and
+the new unit declares it `int`; return type is not part of linkage, and
+the partial link succeeded.
+
+| | |
+|---|---|
+| Before | 1054 |
+| After | 1056 |
+| Closed | 3 |
+| Opened | 5 |
+
+Closed: `doSuperSample__Fiib`, `lightVU0StoppedProcessing__Fv`,
+`reloadDMA__Fi`.
+
+Opened: `globalCharLightScale`, `textureCacheIn__FP8_texture`,
+`textureLock__FP8_texture`, `textureUnlock__FP8_texture`,
+`worldCharViewMatrix`. All five are in the notes' opened list; the rest of
+that list was already unresolved or already defined on this tip. 980
+function bodies, 1252 authored inputs, zero COMMON. 214 tool tests passed.
+No EE, GS, DMA, VU, or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1884,7 +1932,9 @@ covers Boat and AutoContainerLP. The eleven selected game-loop units
 game-loop units are authored and not in the link. The twenty-five
 memcard-calls units are in the link. The forty natives-b units are in
 the link. The fifteen pre-logo-dialog units are in the link. The eleven
-simloop-services units are in the link.
+simloop-services units are in the link. The three closing gs-dma-present
+units (three functions plus one file-local helper) are in the link; the
+texture-draw-color unit stays authored and not in the link.
 `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
