@@ -1,8 +1,8 @@
 #include <cstdio>
 #include "get_error.cpp"
 extern "C" int _sceCd_scmd_semid = 77;
-extern "C" alignas(4) unsigned char _sceCd_cd_scmd[40];
-extern "C" alignas(4) unsigned char _sceCd_scmdrdata[0x420];
+extern "C" alignas(4) unsigned char _sceCd_cd_scmd[40] = {};
+extern "C" alignas(4) unsigned char _sceCd_scmdrdata[0x420] = {};
 static int prechk_result = 1, prechk_arg = -1, rpc_result = 0, signals = 0, signaled = -1, rpc_calls = 0;
 static unsigned bad_args = 0;
 extern "C" int _sceCd_scmd_prechk(int c) { prechk_arg = c; return prechk_result; }
