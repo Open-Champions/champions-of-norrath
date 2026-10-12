@@ -35,7 +35,7 @@ f2b, b2f = crc.f2b, crc.b2f
 EXE, P, FLAGS, GP = crc.EXE, crc.P, crc.FLAGS, crc.GP
 SRC = crc.SRC
 SCRATCH = crc.SCRATCH
-AUTH_BASE = 0x38000000
+AUTH_BASE = 0x08000000
 STUB = 0x00500000
 STACK = 0x3F000000
 ARENA = 0x30000000
@@ -48,7 +48,7 @@ class Combined:
         self.exe, self.auth = exe, auth
 
     def byte(self, addr):
-        if addr >= AUTH_BASE:
+        if AUTH_BASE <= addr < AUTH_BASE + 0x1000000:
             return self.auth.byte(addr)
         return self.exe.byte(addr)
 
@@ -70,8 +70,8 @@ def build_authored(rels, work, stub_names, alias):
     if SYMS is None:
         SYMS = image_symbols()
     objs = []
-    for rel in rels:
-        obj = os.path.join(work, os.path.basename(rel).replace('.cpp', '.o'))
+    for n, rel in enumerate(rels):
+        obj = os.path.join(work, '%d-%s' % (n, os.path.basename(rel).replace('.cpp', '.o')))
         subprocess.check_call([P + 'g++', *FLAGS, '-c', os.path.join(SRC, rel), '-o', obj])
         objs.append(obj)
     und = set()
@@ -135,7 +135,7 @@ def cstr(m, a, limit=64):
 
 
 class Stubs:
-    """Logging stubs. spec: name -> dict(peek=[(argreg, nbytes)], str=[argreg], ret=fn(rng, m) -> int or None,
+    """Logging stubs. spec: name -> dict(nargs=integer args logged, nf=float args logged, peek=[(argreg, nbytes)], str=[argreg], ret=fn(rng, m) -> int or None,
     fret=fn(rng, m) -> float or None, effect=fn(rng, m))."""
 
     def __init__(self, spec, rng):
@@ -146,7 +146,7 @@ class Stubs:
         sp = self.spec[name]
 
         def h(m):
-            entry = [name] + [m.g32(4 + i) for i in range(4)] + [m.f[12], m.f[13], m.f[14]]
+            entry = [name] + [m.g32(4 + i) for i in range(sp.get('nargs', 0))] + [m.f[12 + i] for i in range(sp.get('nf', 0))]
             for reg, n in sp.get('peek', []):
                 entry.append(m.read(m.g32(reg), n))
             for reg in sp.get('str', []):
@@ -171,7 +171,7 @@ def run_one(image, entry, stub_addrs, sc, seed, stub_spec):
         stubs[stub_addrs[name]] = st.handler(name)
     m.r[29] = STACK
     for i, v in enumerate(sc['args']):
-        m.r[4 + i] = v & M32
+        m.setr32(4 + i, v)
     for i, v in sc.get('fargs', {}).items():
         m.f[i] = v
     m.log = []
@@ -261,9 +261,9 @@ def memset_effect(rng, m):
     m.setr32(2, dst)
 
 
-MEMSET = {'norrath_block_memory_set': dict(effect=memset_effect)}
+MEMSET = {'norrath_block_memory_set': dict(effect=memset_effect, nargs=3)}
 MEMSET_ADDR = {'norrath_block_memory_set': 0x3021B0}
-COPYOBJ = {'norrath_list_set_copy_object': dict()}
+COPYOBJ = {'norrath_list_set_copy_object': dict(nargs=1)}
 COPYOBJ_ADDR = {'norrath_list_set_copy_object': 0x194490}
 BLOCK_SRC = ['w8-render-world-a-block-alloc/block_alloc.cpp', 'block-alloc-source-v2/block_alloc.cpp',
              'block-alloc-source-v2/memory_set.cpp', 'block-alloc-source-v2/list_copy.cpp']
@@ -301,21 +301,43 @@ def scenario_block_free_count(rng):
 
 def scenario_block_alloc(rng):
     mem = {}
+    fill(rng, mem, ARENA, 0x3000)
     lens = [rng.choice([0, 0, 1, 2, 5]) for _ in range(3)]
     region = block_region(rng, mem, lens)
+    put32(mem, region + 48, 0x7FFFFFFF)
+    put32(mem, region + 60, rng.choice([0x700000, 0x31000000]))
     size = rng.choice([0, 1, 15, 16, 17, 63, 64, 65, 255, 256, 257, 512, 1000, -1, -20])
-    fill(rng, mem, ARENA, 0x3000)
-    # rebuild nodes' next words after fill by re-running region setup deterministically
-    mem2 = {}
-    block_region(random.Random(rng.random()), mem2, lens)
-    mem.update({a: v for a, v in mem2.items() if a >= ARENA})
     cmp_addrs = list(range(region, region + 64)) + list(range(ARENA, ARENA + 0x3000))
     return {'mem': mem, 'args': [size], 'compare': cmp_addrs}
+
+
+def scenario_block_init(rng):
+    mem = {}
+    region = sym('region')
+    for row in range(3):
+        put32(mem, region + 16 * row, 4 * rng.choice([1, 2, 4, 16, 33]))
+        put32(mem, region + 16 * row + 4, rng.choice([1, 2, 3, 10, 25]))
+        for j in (8, 12):
+            put32(mem, region + 16 * row + j, rng.randrange(1 << 32))
+    for j in (48, 52, 56, 60):
+        put32(mem, region + j, rng.randrange(1 << 32))
+    pool = sym('dataBlock')
+    fill(rng, mem, pool, 0x1000)
+    return {'mem': mem, 'args': [], 'compare': list(range(region, region + 64)) + list(range(pool, pool + 0x1000))}
 
 
 reg('blockGetNmFree__Fv', 0x144778, ['w8-render-world-a-block-get-nm-free/block_get_nm_free.cpp',
                                      'block-allocator-lifecycle-build/block_get_number_free.cpp'],
     scenario_block_free_count, returns=True, alias={'norrath_block_region_view': 'region'})
+
+
+reg('blockAlloc__Fi', 0x1441B8, ['w8-render-world-a-block-alloc/block_alloc.cpp', 'block-alloc-source-v2/block_alloc.cpp'],
+    scenario_block_alloc, stubs={**MEMSET, **COPYOBJ}, stub_addr={**MEMSET_ADDR, **COPYOBJ_ADDR}, returns=True,
+    alias={'norrath_block_region_view': 'region'})
+reg('blockAllocInit__Fv', 0x1440D8, ['w8-render-world-a-block-alloc-init/block_alloc_init.cpp',
+                                     'block-alloc-source-v2/initialization.cpp'],
+    scenario_block_init, stubs=MEMSET, stub_addr=MEMSET_ADDR,
+    alias={'norrath_block_region_view': 'region', 'norrath_block_data_pool_view': 'dataBlock'})
 
 
 if __name__ == '__main__':
