@@ -4788,3 +4788,4 @@ and no startup stage has executed.
 - 2026-10-12 15:42 CDT — `agents/w8-hud-text-items-b` — 1526 unresolved imports
 - 2026-10-12 15:45 CDT — `agents/w8-hud-text-items-c` — 1516 unresolved imports
 - 2026-10-12 15:48 CDT — `agents/w8-net-play-c` — 1533 unresolved imports
+- 2026-10-12 15:51 CDT — `agents/w8-object-list-math` — 1491 unresolved imports
