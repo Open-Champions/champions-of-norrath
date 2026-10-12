@@ -4,7 +4,7 @@
 int main() {
     alignas(16) unsigned buffer[16];
     unsigned char* b = reinterpret_cast<unsigned char*>(buffer);
-    // Unaligned cursor with a tag: three padding words, tag count adds 3 - 1... (cursor 16+4 -> 32)
+    // Cursor 4 bytes past a quadword, tag at the start: three padding words; header gains 32/16 - 1.
     std::memset(buffer, 0xaa, sizeof buffer);
     buffer[0] = 1;
     GifPacketState packet = {b + 20, b, b};
