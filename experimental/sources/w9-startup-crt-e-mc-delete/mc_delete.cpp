@@ -19,7 +19,7 @@ extern int semaidRegFunc;
 
 int PollSema(int id);
 int SignalSema(int id);
-char* strncpy(char* destination, const char* source, unsigned count);
+char* strncpy(char* destination, const char* source, __SIZE_TYPE__ count);
 int sceSifCallRpc(void* client, unsigned command, unsigned mode, void* send, int send_size,
                   void* receive, int receive_size, void (*done)(void*), void* done_arg);
 void mceSifRpcEndFunc(void* argument);

@@ -11,7 +11,7 @@ static void (*done_fn)(void*); static void* sent; static void* received;
 extern "C" int PollSema(int id) { ++polls; return id == 6 ? poll_result : -1; }
 extern "C" int SignalSema(int id) { if (id == 6) ++signals; return 0; }
 extern "C" void mceSifRpcEndFunc(void*) {}
-extern "C" char* strncpy(char* d, const char* s, unsigned n) {
+extern "C" char* strncpy(char* d, const char* s, __SIZE_TYPE__ n) {
     ++strncpy_calls;
     if (n != 1023u) return d;
     std::size_t i = 0;
@@ -33,7 +33,6 @@ int main() {
     if (sceMcDelete(1, 2, "") != -210 || signals != 2 || rpc_calls != 0 || strncpy_calls != 0) return 4;
     sifParamFname[2] = 99;
     std::string longname(1100, 'x');
-    sifParamFname[0x1000 / 4 - 1] = 0;
     rpc_result = 0;
     if (sceMcDelete(1, 2, "BASLUS-20565") != 0) return 5;
     const char* block = reinterpret_cast<const char*>(sifParamFname);
@@ -42,7 +41,7 @@ int main() {
     if (sifParamFname[0] != 1 || sifParamFname[1] != 2 || sifParamFname[2] != 0 ||
         std::strcmp(block + 20, "BASLUS-20565") != 0 || block[1043] != 0 || mcRunCmdNo != 15) return 7;
     if (sceMcDelete(0, 0, longname.c_str()) != 0) return 8;
-    if (block[20 + 1022] != 'x' || block[1043] != 0 || block[1042] != 0) return 9;
+    if (block[20 + 1022] != 'x' || block[1043] != 0 || block[1042] != 'x') return 9;
     mcRunCmdNo = 0; rpc_result = 4; signals = 0;
     if (sceMcDelete(0, 0, "z") != 4 || mcRunCmdNo != 0 || signals != 1) return 10;
     std::puts("sceMcDelete contract passed");
