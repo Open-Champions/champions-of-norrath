@@ -2743,3 +2743,4 @@ and no startup stage has executed.
 - 2026-10-12 13:12 CDT — `agents/frontend-shell` (rejected, not merged; log notes only) — 1201 unresolved imports
 - 2026-10-12 13:33 CDT — `agents/loop-grid-fx` — 1204 unresolved imports
 - 2026-10-12 13:43 CDT — `agents/combat-reactions` — 1195 unresolved imports
+- 2026-10-12 13:55 CDT — `agents/actor-view-tables` — 1221 unresolved imports
