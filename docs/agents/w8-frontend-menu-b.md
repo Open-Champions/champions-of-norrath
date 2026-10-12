@@ -6,7 +6,7 @@ has run on an EE or in the game; nothing here is an original-byte match.
 Every function compiled with the reviewed `authored_cpp` flags and has a host
 check that fails when its branches, stores or call order change (several were
 mutated to confirm). No game bytes, disassembly or decompiler output is
-committed. `tools/build_partial.py` was not run; see the build section.
+committed. `tools/build_partial.py` was not run; see the build check section.
 
 ## Functions
 
@@ -106,9 +106,9 @@ file in `snapshot.json` too. Do not plan the `host_check.cpp` files.
 Each of the ten sources was compiled alone with the plan's `authored_cpp` flags
 and the reviewed toolchain, then all ten linked with `ld -m elf32lr5900 -r
 --warn-common`: no duplicate definitions, no COMMON symbols, five function
-definitions. The partial build driver and the unit test suite were not run (the
-full partial build is out of scope while others build; this package edits no
-shared plan, snapshot or tool).
+definitions. The partial build driver was not run (no shared plan or snapshot was edited,
+and others are building). `python3 -m unittest discover -s tools -p 'test_*.py'`
+ran 214 tests and passed.
 
 ## Summary
 
