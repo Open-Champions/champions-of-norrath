@@ -3,8 +3,9 @@
 //
 // Broadcast mode (netBroadCastStart nonzero): a 64-byte parameter block is
 // cleared and its word 1 set to 3000; sceInetCreate(cd, g_net_buf, &block)
-// gives a handle and broadcastConnection = sceInetOpen(cd, g_net_buf, handle,
-// 1000). Partner record 0 (17632-byte stride in `partners`) gets bytes 0..3
+// gives a handle, which is stored in broadcastConnection; then
+// sceInetOpen(cd, g_net_buf, handle, 1000) is called and its result is not
+// kept (the image stores the handle in the branch delay slot of that call). Partner record 0 (17632-byte stride in `partners`) gets bytes 0..3
 // from myaddr bytes 4..7 and byte 17620 = 1; nmPartners becomes 1; and the
 // word at 17600 of each of the four records becomes 1.
 //
@@ -15,8 +16,9 @@
 //     (MC_GetTempPlayerStorage(0), 23984 bytes) is copied to the record at
 //     index info[6] (signed byte) of the same storage, through a local copy.
 //  3. lnet_buf = memAlloc(0x8000, "Net Launch buff"); a second cleared
-//     64-byte block (word 1 = 3000) gives udpLaunchConnection through
-//     sceInetCreate and sceInetOpen(cd, lnet_buf, handle, 1000).
+//     64-byte block (word 1 = 3000) goes to sceInetCreate; its result is
+//     stored in udpLaunchConnection and passed to sceInetOpen(cd, lnet_buf,
+//     handle, 1000), whose result is not kept.
 //     hostLaunchMask becomes -1; currentTime, lastPingTime, the three
 //     launch/quit flags, hostStartedWithoutMe, netLaunchTimer and
 //     netLaunchExpirationCount become 0.
@@ -104,7 +106,8 @@ extern "C" void netStartNetworkGameInit__Fv() {
         parameters[1] = 3000;
         parameters[0] = 0;
         int handle = sceInetCreate(cd, g_net_buf, parameters);
-        broadcastConnection = sceInetOpen(cd, g_net_buf, handle, 1000);
+        broadcastConnection = handle;
+        sceInetOpen(cd, g_net_buf, handle, 1000);
         partners[0] = myaddr[4];
         partners[1] = myaddr[5];
         partners[2] = myaddr[6];
@@ -128,7 +131,8 @@ extern "C" void netStartNetworkGameInit__Fv() {
         parameters[1] = 3000;
         parameters[0] = 0;
         int handle = sceInetCreate(cd, g_net_buf, parameters);
-        udpLaunchConnection = sceInetOpen(cd, lnet_buf, handle, 1000);
+        udpLaunchConnection = handle;
+        sceInetOpen(cd, lnet_buf, handle, 1000);
     }
     hostLaunchMask = -1;
     currentTime = 0;

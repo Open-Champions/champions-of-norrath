@@ -108,7 +108,7 @@ static int run_launch(int flags, int count, int local, int other, int modem) {
     if (plain) want += "N";
     if (log_text != want) { std::printf("log %s want %s\n", log_text.c_str(), want.c_str()); return 101; }
     if (nmPartners != 0) return 102;
-    if (lnet_buf != lnet_arena || udpLaunchConnection != 900 || open_buffer[0] != lnet_arena || open_handle[0] != 500) return 103;
+    if (lnet_buf != lnet_arena || udpLaunchConnection != 500 || open_buffer[0] != lnet_arena || open_handle[0] != 500) return 103;
     if (param_word0[0] != 0 || param_word1[0] != 3000) return 104;
     if (hostLaunchMask != -1 || currentTime || lastPingTime || netNewLaunchMaybeQuit || netNewLaunchMaybeLaunch || hostForcedLaunch || hostStartedWithoutMe || netLaunchTimer || netLaunchExpirationCount) return 105;
     // temporary storage move
@@ -188,7 +188,7 @@ int main() {
     strict = false;
     if (bad || log_text != "MCO") std::printf("bad=%d log=%s\n", bad, log_text.c_str());
     CHECK(!bad && log_text == "MCO", 1);
-    CHECK(nmPartners == 1 && broadcastConnection == 900 && open_buffer[0] == g_net_buf && open_handle[0] == 500, 2);
+    CHECK(nmPartners == 1 && broadcastConnection == 500 && open_buffer[0] == g_net_buf && open_handle[0] == 500, 2);
     CHECK(partners[0] == 11 && partners[1] == 22 && partners[2] == 33 && partners[3] == 44 && partners[17620] == 1, 3);
     for (int i = 0; i < 4; ++i) CHECK(W(partners, i * 17632 + 17600) == 1, 4);
     for (int i = 0; i < (int)sizeof partners; ++i) {
