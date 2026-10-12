@@ -2183,7 +2183,7 @@ Opened: `DPRINT`, `batchBuffer`, `delaySoundList`, `disableSoundPlaying`,
 `sceMtapGetModVersion`, `scePadGetModVersion`, `scePadInit2`, `sceSdRemote`,
 `sequenceInProgress`, `sequenceVolume`, `soundChangeVolume__Fiff`,
 `soundFlushCommandBuffer__Fv`, `soundFrameNm`.
-## Open defect: agents/frontend-shell contract cannot fail
+## Fixed: agents/frontend-shell contract could not fail
 
 This section was first written as a rejection of `agents/frontend-shell` at
 tip `940b753`. Another integrator merged and selected the package a few
@@ -2211,6 +2211,15 @@ checked by mutation and do catch changes; this one does not. The notes also
 record that `runFrontEnd` binds the original's `menu` and `menuNm` locals to
 the same-named globals of `dialog-hud-controls`; that aliasing still needs a
 decision.
+
+Fixed by the integrator after the parallel merge: the `error = 0;` line was
+removed from `reset()` in `frontend-shell-run/host_contract.cpp` (test harness
+only; no game source touched) and its snapshot hash updated. Re-checked: the
+unmodified source still exits 0, and a copy of `run_front_end.cpp` with the
+title x base changed from 320 to 321 now exits 7 (check 7). The `menu` and
+`menuNm` aliasing against dialog-hud-controls still needs an owner decision.
+The shared branch stands at 1208 unresolved imports with that fix, 214 tool
+tests and the snapshot check passing.
 
 ## agents/kernel-patches
 

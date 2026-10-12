@@ -293,7 +293,6 @@ static void store_ptr(unsigned char* slot, const void* pointer) {
 }
 
 static void reset() {
-    error = 0;
     calls = 0;
     music_count = 0;
     isin_angle = -1;
