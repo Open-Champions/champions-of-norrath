@@ -54,8 +54,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/goblin.cpp` | `norrath_construct_Goblin` | `__6GoblinG6Point3sPPcPc` `0x22bb10`, 1644 bytes | 2808 | `1dd20b03ad7a621cbd31eae78704fdc01c953baf68e44f2e14382c6157d81dda` |
 | `ctors-ant-lantern-constructors/ant.cpp` | `norrath_construct_Ant` | `__3AntG6Point3sPPcPcc` `0x205368`, 1556 bytes | 2720 | `01652d6e19eff17eaee8dffb3085d4247a14304becc51c691b2f18cb8d357c71` |
 | `ctors-ant-lantern-constructors/cloud_giant.cpp` | `norrath_construct_CloudGiant` | `__10CloudGiantG6Point3sPPcPc` `0x1e6b30`, 1404 bytes | 2084 | `4b07e1f6a97f6ed8c508b9c3f1b63dd6379ce1419c63c22ee4bb8faf75b244b5` |
+| `ctors-ant-lantern-constructors/critter.cpp` | `norrath_construct_Critter` | `__7CritterPcG6Point3sPPc` `0x1efeb0`, 1944 bytes | 2860 | `eff6f7af4f4241cff1aa2a375291c9d5f51ce06ed235024df54cfb0383367ada` |
 
-`detail.hpp` sha256 `cdb921aeefdc52bb92273033de0081846559df6f9493483822eaa62f737076c9`.
+`detail.hpp` sha256 `0454403afe8a6ac77076c7d2450b9b671b83a2187b079d6a38b42a497217eb09`.
 
 ## Build-plan entries needed
 
@@ -630,6 +631,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "critter.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/critter.cpp",
+  "sha256": "eff6f7af4f4241cff1aa2a375291c9d5f51ce06ed235024df54cfb0383367ada",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Critter",
+      "compiled_body_bytes": 2860
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -708,9 +728,11 @@ Observed `__3AntG6Point3sPPcPcc` at `0x205368`, 1556 bytes. The last two argumen
 
 Observed `__10CloudGiantG6Point3sPPcPc` at `0x1e6b30`, 1404 bytes. The last argument is a name string. Creature with table `0x42ae60` and scale 10.0, vtable `0x44dbe8` (`_vt$10CloudGiant`), two copies of the four-halves / marker-bytes / zero-run block (at 1072..1117 and 1208..1253), flag bits and singles. One `strticmp` name test against the text at `0x46d300` selects between a special case (words 208/976/980, an entry in the table at 1228, `setParameters` with 60.0, 2.0, 4.0, a global and 10.5, +788 = 2000.0) and the ordinary case (+244 = 1 << (roll % 3), a different `setParameters`). Then the eight-byte chunk result at +552, a roll threshold that sets +208, 2.0 at +224, animation header from model+132, slow run list, eleven `setAnimEventFlags` calls and `finishConstruction`'s V0. The entry search can only hit the first entry because the heads were just set to 0xffff. Inferred only: the matched text reads as a boss name.
 
+Observed `__7CritterPcG6Point3sPPc` at `0x1efeb0`, 1944 bytes. The argument after the object is a name string, lowercased in place through the ctype table (`norrath_factory_ctype_minimum_view[c + 128]`, bit 0). `eRand` first (scale `(roll % 14) + 4`), Creature with a null map, vtable `0x44c080` (`_vt$7Critter`), the truncated single at +788 stored at +1084, flag bits, singles, `setParameters` with five 1.0 values, then eight string tags (or the lowercased name when a tag is absent) printed with formats into a lump name and a resource name and looked up with `lumpFindResource` into +1036, +1040, +1044, +1056, +1060, +1064, +1068 (falling back to +1044) and +1072 (falling back to +1064). A speed tag is read with `sscanf` into +1016 (else 1.0). Then animation state, `gameLineInitPathState`, a state choice (`setState__7Critteri` with 12, 13, 0 or 1 from +980, a one-shot tag, and which resources exist), 32 string tags setting bits in +244, `specificInit__7CritterPcT1`, the eight-byte chunk result for the header at +1036 stored at +552, and either the run list (half 572 equal to 12) or the slow run list, then `finishConstruction`'s V0. The buffer sizes (16, 16, 64, 16 bytes) are read from the stack offsets; the original source sizes are not known. Inferred only: the tag texts read as asset names.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate`, `norrath_construct_FemaleDarkElf`, `norrath_construct_Goblin`, `norrath_construct_Ant`, `norrath_construct_CloudGiant`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate`, `norrath_construct_FemaleDarkElf`, `norrath_construct_Goblin`, `norrath_construct_Ant`, `norrath_construct_CloudGiant`, `norrath_construct_Critter`
 
 ## Imports opened
 
@@ -753,11 +775,12 @@ Address views `norrath_ctors_ant_lantern_view_42b1d0`, `_44c350`, `_46dbe0`, `_4
 `setWeapons__6Goblin` (original at `0x22c180`) and `initType__6Goblinb` (original at `0x22c250`) — original names, not defined here. `memset` is reached through the compiler builtin and appears as an undefined `memset` in the object. Address views `norrath_ctors_ant_lantern_view_42cef0`, `_44b900`, `_42cfc8` (data table), `_483f88`, `_471ed0`, `_471ee0`, `_471ef0`, `_471f00`, `_471f10`, `_471f20`, `_481890` through `_4818a8` (seven singles).
 `norrath_entity_fptodp` (existing), `dpadd` and `dptofp` as for Cthulu. Address views `norrath_ctors_ant_lantern_view_42be08`, `_42beb0`, `_44c530`, `_46fa28`, `_46fa38`, `_46fa48`, `_46fa58`, `_4852d8`, `_4852e0`, `_48124c` through `_481298` (twenty singles).
 Address views `norrath_ctors_ant_lantern_view_42ae60`, `_44dbe8`, `_46d300`, `_480b20` through `_480b4c` (thirteen singles).
+`gameLineInitPathState__FP17gameLinePathStatePcP6Point3` (original at `0x279b58`), `setState__7Critteri` (original at `0x1f0f48`) and `specificInit__7CritterPcT1` (original at `0x1f1240`) — original names, not defined here. `sscanf` (variadic, as launchSRS and actors-b use it) and `strcpy`. `norrath_factory_ctype_minimum_view` (existing, libc-format). Address views `norrath_ctors_ant_lantern_view_44c080`, `_480d28`, `_46dc90`, `_485158`, `_485160`, `_485168`, `_485170`, `_485178`, `_46dca0`, `_485180`, `_46dcb0`, `_46dcc0`, `_46dcd0`, `_46dce0`, `_46dcf0`, `_46dd00`, `_46dd10`, `_46dd20`, `_46dd30`, `_46dd40`, `_46dd50`, `_46dd60`, `_485188`, `_485190`, `_485198`, `_46dd70`.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate`, `norrath_construct_FemaleDarkElf`, `norrath_construct_Goblin`, `norrath_construct_Ant`, `norrath_construct_CloudGiant` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate`, `norrath_construct_FemaleDarkElf`, `norrath_construct_Goblin`, `norrath_construct_Ant`, `norrath_construct_CloudGiant`, `norrath_construct_Critter` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
