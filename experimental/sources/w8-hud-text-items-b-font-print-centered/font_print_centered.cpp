@@ -4,7 +4,7 @@
 // a 1024-element 16-bit buffer with ustrcpy__FPUsPc, and _fontPrintu__FiiPUsi
 // (not the fontPrintu wrapper) prints it at x minus half the width. The half is
 // an arithmetic shift, so a negative width rounds toward negative infinity.
-// defined here.
+// Callees and curFont are not defined here.
 extern "C" void* curFont;
 extern "C" int _fontStringSize__FP4FontPci(void* font, const char* text, int color);
 extern "C" void ustrcpy__FPUsPc(unsigned short* dst, const char* src);
