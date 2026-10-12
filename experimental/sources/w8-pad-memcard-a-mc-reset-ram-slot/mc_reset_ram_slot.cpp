@@ -1,6 +1,6 @@
 // Observed: MC_ResetRamSlot__Fv at 0x0025bb70 is 52 bytes. When the signed byte
 // MC_ProtectRamSlot is zero it calls memset on ramSlot with value 0 and length
-// 0xb29c8 (727,496 bytes). A nonzero byte does nothing.
+// 0xb29c8 (731,592 bytes). A nonzero byte does nothing.
 // Inferred: nothing.
 // Unknown: the record layout inside ramSlot.
 
