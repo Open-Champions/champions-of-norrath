@@ -58,7 +58,7 @@ struct Reach {
     float own_distance;       // squared distance from the creature to the object
     float own_home_distance;  // squared distance from the creature to the home point
 };
-inline Reach measure(Address base, Address other) {
+__attribute__((always_inline)) inline Reach measure(Address base, Address other) {
     const float x = read_single(base + 16u), y = read_single(base + 20u), z = read_single(base + 24u);
     const float hx = read_single(base + 776u), hy = read_single(base + 780u), hz = read_single(base + 784u);
     const float tx = read_single(other + 16u), ty = read_single(other + 20u), tz = read_single(other + 24u);
