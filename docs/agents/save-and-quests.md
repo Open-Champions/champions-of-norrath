@@ -19,3 +19,7 @@ Observed at `0x001d4060`, 36 bytes; the reviewed compile emits 16. It calls `str
 ## scriptAddDeferedCall__FPc
 
 Observed at `0x001d3d40`, 108 bytes; the reviewed compile emits 100. While `nextNmDeferedCalls` (int, `0x00486b9c`) is below 64, the string is copied into slot `nextNmDeferedCalls` of bank `(scriptFrame & 1) ^ 1` of `deferedCall` (`0x007d0de8`) and the count is incremented; a full list drops the call. `scriptFrame` is the int at `0x00485088`. Inferred from the strides: banks are 5120 bytes, slots 80 bytes, and `deferedCall` is 10240 bytes (it ends at the game-state table). The copy is unbounded. Opens imports `nextNmDeferedCalls`, `scriptFrame`, `deferedCall`.
+
+## scriptStart__FPc
+
+Observed at `0x001d3e88`, 132 bytes; the reviewed compile emits 188. A null name or null `curScriptPtr` returns -1. `amx_FindPublic(amx, name, &index)` nonzero returns -1 and, when the function-local static `complainFrame.672` (word `0x0048508c`, initially -10000) is below `drawFrameNm`, sets it to `drawFrameNm + 20`. A zero status runs `amx_Exec(amx, &result, index, 0, 0)` and returns the stored word. `result` starts as the zero status, so a run that stores nothing returns 0. The fourth and fifth argument registers are zero; reading them as parameter count and data follows the existing executor's declaration. Opens imports `amx_FindPublic`, `amx_Exec`; uses existing views `norrath_script_current_amx_word_view` and `norrath_script_complain_frame_word_view`.
