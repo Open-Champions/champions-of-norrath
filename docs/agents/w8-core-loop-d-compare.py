@@ -130,6 +130,49 @@ def symbol_address(elf, name):
     raise SystemExit('missing symbol ' + name)
 
 
+# Argument registers that carry a value; the others hold leftovers and are not logged.
+ARGC = {'memCheckHeapReal__FPCci': 2, 'strncmp': 3, 'strcmp': 2, 'strlen': 1, 'strrchr': 2, 'memcpy': 3,
+        'memmove': 3, 'scePrintf': 2, 'initFile__FPcPvi': 3, 'animMapAnimationSounds__FP15AnimationHeader': 1}
+STRING_ARGS = {'memCheckHeapReal__FPCci': (0,), 'scePrintf': (0,), 'strncmp': (0, 1), 'strcmp': (0, 1), 'strlen': (0,), 'strrchr': (0,)}
+
+
+def _memcpy(mm, a, cstr):
+    data = mm.read(a[1], a[2])
+    mm.write(a[0], data)
+    return a[0]
+
+
+def _strlen(mm, a, cstr):
+    return len(cstr(mm, a[0], 1 << 16))
+
+
+def _strncmp(mm, a, cstr):
+    for i in range(a[2]):
+        x, y = mm.u8(a[0] + i), mm.u8(a[1] + i)
+        if x != y:
+            return x - y
+        if x == 0:
+            return 0
+    return 0
+
+
+def _strcmp(mm, a, cstr):
+    return _strncmp(mm, [a[0], a[1], 1 << 16], cstr)
+
+
+def _strrchr(mm, a, cstr):
+    text = cstr(mm, a[0], 1 << 16)
+    c = a[1] & 0xFF
+    if c == 0:
+        return a[0] + len(text)
+    k = text.rfind(bytes([c]))
+    return 0 if k < 0 else a[0] + k
+
+
+LIBC = {'memcpy': _memcpy, 'memmove': _memcpy, 'strlen': _strlen, 'strncmp': _strncmp, 'strcmp': _strcmp,
+        'strrchr': _strrchr}
+
+
 def run_once(image, entry, stub_addrs, sc):
     mem = dict(sc['mem'])
     stubs = {}
@@ -137,11 +180,27 @@ def run_once(image, entry, stub_addrs, sc):
     m.log = []
     counts = {}
 
+    def cstr(mm, a, limit=96):
+        out = b''
+        while len(out) < limit:
+            c = mm.u8(a + len(out))
+            if c == 0:
+                break
+            out += bytes([c])
+        return out
+
     def make(name):
         def handler(mm):
             n = counts.get(name, 0)
             counts[name] = n + 1
-            mm.log.append((name, tuple(mm.g32(4 + i) for i in range(4)), mm.f[12], mm.f[13]))
+            args = [mm.g32(4 + i) for i in range(4)]
+            shown = list(args)[:ARGC.get(name, 4)]
+            for idx in STRING_ARGS.get(name, ()):
+                shown[idx] = cstr(mm, args[idx])
+            mm.log.append((name, tuple(shown), mm.f[12], mm.f[13]))
+            if name in LIBC:
+                mm.setr32(2, LIBC[name](mm, args, cstr))
+                return
             rets = sc.get('stub_ret', {}).get(name)
             mm.setr32(2, rets[n % len(rets)] if rets else 0)
         return handler
@@ -168,6 +227,7 @@ def compare(name, runs):
     entry_orig = syms[spec['symbol']][0]
     bad = 0
     total_calls = 0
+    seen = {}
     for seed in range(runs):
         sc = spec['scenario'](random.Random(seed), syms)
         res = []
@@ -185,6 +245,8 @@ def compare(name, runs):
         ret = (a.g32(2), b.g32(2)) if spec.get('returns') else (0, 0)
         fret = (a.f[0], b.f[0]) if spec.get('freturns') else (0, 0)
         total_calls += len(a.log)
+        for entry in a.log:
+            seen[entry[0]] = seen.get(entry[0], 0) + 1
         if a.log != b.log or ra != rb or ret[0] != ret[1] or fret[0] != fret[1]:
             bad += 1
             if bad <= 3:
@@ -199,6 +261,8 @@ def compare(name, runs):
                 if ret[0] != ret[1] or fret[0] != fret[1]:
                     print('  return', ret, fret)
     print('%s: %d runs, %d stub calls seen, %d mismatches' % (name, runs, total_calls, bad))
+    if os.environ.get('STATS'):
+        print('  calls seen in the image run:', seen)
     return 1 if bad else 0
 
 
@@ -231,11 +295,48 @@ def scenario_pan(rng, syms):
     return {'mem': mem, 'args': [SCN, SCN + 0x100, SCN + 0x104], 'fargs': {12: f2b(a), 13: f2b(b)}}
 
 
+def scenario_init_lump(rng, syms):
+    mem = {}
+    fill(rng, mem, SCN, 0x3000)
+    count = rng.choice([0, 1, 2, 3, 4, 5, 6, 7, 8])
+    mem[SCN] = count & 0xFF
+    mem[SCN + 1] = count >> 8
+    names = [b'ntsc_a.anm', b'pal_a.anm', b'pal_ntsc_b.anm', b'c.vif', b'd', b'ntsc_pal_x.anm', b'e.anm', b'pal_f.vif',
+             b'anm', b'g.h.anm', b'ntsc_']
+    data = 0x1000
+    last = 0
+    for k in range(count):
+        row = SCN + 4 + 12 * k
+        name = rng.choice(names) + b'\0'
+        for j, c in enumerate(name):
+            mem[SCN + 0x200 + 0x20 * k + j] = c
+        put32(mem, row, 0x200 + 0x20 * k)
+        r = rng.random()
+        if r < 0.2 and k:
+            off = last                      # alias of the previous data
+        elif r < 0.3 and k:
+            off = last - 0x40               # not above the previous one: skipped
+        else:
+            data += rng.choice([0, 0x20, 0x80, 0x100])
+            off = data
+        size = rng.choice([0, 0x40, 0x80, 0x90, 0x100, 0x7f, 0x81])
+        data += size if off == data else 0
+        last = off
+        put32(mem, row + 4, off)
+        put32(mem, row + 8, size)
+    if rng.random() < 0.3:
+        put32(mem, SCN + 4 + 12 * count, rng.randrange(1 << 32))
+    return {'mem': mem, 'args': [SCN],
+            'stub_ret': {'initFile__FPcPvi': [rng.choice([0, 0x20, 0x40, 0x80, 0xc0, 0x100, 0x180, 0x1f, 0x7f]) for _ in range(8)]}}
+
+
 SPECS = {
     'makeUnscrambleTable__Fv': dict(src=['w8-core-loop-d-unscramble-table/unscramble_table.cpp'],
                                     symbol='makeUnscrambleTable__Fv', scenario=scenario_unscramble),
     'pan__FG6Point3ffPfT3': dict(src=['w8-core-loop-d-pan/pan.cpp'], symbol='pan__FG6Point3ffPfT3',
                                  scenario=scenario_pan),
+    'initLump__FPv': dict(src=['w8-core-loop-d-init-lump/init_lump.cpp'], symbol='initLump__FPv',
+                          scenario=scenario_init_lump, returns=True),
 }
 
 
