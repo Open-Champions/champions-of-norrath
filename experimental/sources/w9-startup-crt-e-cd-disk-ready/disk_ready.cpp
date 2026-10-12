@@ -7,7 +7,7 @@
 // Otherwise sceSifInitRpc(0) runs. When _scmd_dr_bind (0x004460c8) is already
 // non-negative the bind step is skipped. When it is negative, sceSifBindRpc(cddr,
 // 0x8000059c, 0) is repeated: a negative bind result prints "Libcdvd bind err
-// CdDiskReady\n" under debug, spins for 0x100000 counts and retries without limit; a
+// CdDiskReady\n" under debug, spins for 0x100001 counts and retries without limit; a
 // non-negative result with the client's word at +36 nonzero stores 0 in _scmd_dr_bind and
 // goes on; a zero word waits the same spin and retries until the attempt counter, which
 // starts at 0 and is raised after each such spin, reaches 17. Once it has, the semaphore is
@@ -41,10 +41,12 @@ int sceSifCallRpc(void* client, unsigned function, unsigned mode, void* send, in
 int sceCdDiskReady_old(int mode);
 
 static void spin() {
-    for (int count = 0xfffff; count != -1; --count) {
+    for (int count = 0x100000;;) {
+        --count;
 #if defined(__mips__)
         asm volatile("nop\n\tnop\n\tnop\n\tnop");
 #endif
+        if (count == -1) break;
     }
 }
 
