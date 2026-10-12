@@ -1,0 +1,7 @@
+# w9-startup-crt-d
+
+Startup and runtime support (d). Sources are under `experimental/sources/w9-startup-crt-d-*`. Each unit compiled alone with the plan's `authored_cpp` flags; host checks (`host_test.cpp`) include host headers and stay out of the EE plan. Addresses are from the private executable whose SHA-256 is the snapshot `target_sha256`. Compiled sizes are `st_size` from the EE compile, not original-byte matches. Nothing was executed on the EE or in game.
+
+## Per-function notes
+
+- `free` (`0x003015a0`, 72 bytes; compiled 64). Observed: lock service, `_free_r` (`0x00300608`) with the pointer re-read, unlock service as a tail call; each `_impure_ptr` read is a fresh load. Callee for `_free_r` is the authored `norrath_player_free_reentrant`. Host check covers order, re-reads and the null pointer reaching `_free_r`.
