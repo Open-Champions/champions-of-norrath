@@ -122,6 +122,19 @@ extern unsigned char norrath_ctors_ant_lantern_view_4814f4[];
 extern unsigned char norrath_ctors_ant_lantern_view_4814f8[];
 extern unsigned char norrath_ctors_ant_lantern_view_34b474[];
 extern unsigned char norrath_creature_view_484cac[];
+unsigned norrath_construct_AutoObject(void* object, char* name, const void* point, short type, char** arguments);
+char* strcpy(char* destination, const char* source);
+char* strcat(char* destination, const char* source);
+extern unsigned char norrath_ctors_ant_lantern_view_44ece8[];
+extern unsigned char norrath_ctors_ant_lantern_view_46fd38[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854c8[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854d0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854d8[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854e0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854e8[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854f0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4854f8[];
+extern unsigned char norrath_ctors_ant_lantern_view_485500[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
