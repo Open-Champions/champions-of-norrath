@@ -283,6 +283,21 @@ extern unsigned char norrath_ctors_lava_wraith_view_471978[];
 extern unsigned char norrath_ctors_lava_wraith_view_471988[];
 extern unsigned char norrath_ctors_lava_wraith_view_471998[];
 unsigned norrath_construct_Orc(void* object, const void* point, short type, char** arguments, char* name, signed char variant);
+// Original gameLineGet__FPc at 0x279ad0, gameLineGetPtr__Fi at 0x279bf8, worldFindHeight__FP12_worldHeaderG6Point3f
+// at 0x176378, getWaveletMat__9WaveMakerifP8Matrix33 at 0x155e48 and matTransform__FP6Point3P8Matrix33T0 at
+// 0x159880. Not defined here.
+int norrath_game_line_get(char* name);
+void* norrath_game_line_get_ptr(int line);
+float norrath_world_find_height(void* world, const void* point, float radius);
+int norrath_world_check_for_water(void* world, const void* point, float radius, float* output);
+void norrath_wave_maker_get_wavelet_mat(void* object, int index, float fraction, void* matrix);
+void norrath_mat_transform(void* output, void* matrix, void* input);
+void* memset(void* destination, int value, __SIZE_TYPE__ size);
+extern unsigned char norrath_ctors_lava_wraith_view_44c7a0[];
+extern unsigned char norrath_ctors_lava_wraith_view_483e28[];
+extern unsigned char norrath_ctors_lava_wraith_view_601fd0[];
+extern unsigned char norrath_ctors_lava_wraith_view_601030[];
+unsigned norrath_construct_WaveMaker(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
