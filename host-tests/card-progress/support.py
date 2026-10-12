@@ -1,5 +1,6 @@
 """EE and host checks for the card-progress package. Not a partial-build input."""
 
+import os
 import struct
 import subprocess
 import tempfile
@@ -8,10 +9,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCES = ROOT / "experimental/sources"
-EE = Path(
-    "/Users/syndicatemike/Documents/Codex/projects/open-champions/"
-    "champions-of-norrath/work/toolchains/ee/bin/mips64r5900el-ps2-elf-g++"
-)
+EE = Path(os.environ.get(
+    "EE_TOOLCHAIN", "/Users/case/norrath-agents/repo/work/toolchains/ee"
+)) / "bin/mips64r5900el-ps2-elf-g++"
 FLAGS = [
     "-G0", "-O2", "-ffreestanding", "-fno-asynchronous-unwind-tables",
     "-fno-exceptions", "-fno-pic", "-fno-rtti", "-fno-stack-protector",
