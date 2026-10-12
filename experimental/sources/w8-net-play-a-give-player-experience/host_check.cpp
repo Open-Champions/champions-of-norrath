@@ -46,8 +46,8 @@ int main() {
     if (soundCalls != 1 || msgCalls != 20) return 7;
     // zero or negative float: untouched
     f[43] = 0.0f; f[44] = 5.0f;
-    givePlayerExperience__Fii(1, 100000 - 2000);
-    if (f[43] != 0.0f) return 8;
+    givePlayerExperience__Fii(1, 100);
+    if (f[43] != 0.0f || r[89] != 21) return 8;
     // a high level uses the +5 band
     r[89] = 40; *(int*)(r + 92) = 0; *(int*)(r + 236) = 0;
     experienceTable[40] = 10;
