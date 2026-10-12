@@ -75,3 +75,7 @@ Observed at `0x0014b808`, 472 bytes; the reviewed compile emits 648. Reads what 
 ## msg_save__16CosmeticPropAnimPc
 
 Observed at `0x00155200`, 200 bytes; the reviewed compile emits 308. Buffer order: four string-pool indexes (`objectSaveAddToStringPool__FPCc`) of the text pointers at object+76, +80, +84, +88; the words at object+12, +148, +144; the singles at object+32 and object+28 as truncated integers stored as halfwords. Returns 32. Opens import `objectSaveAddToStringPool__FPCc` (shared with the other save bodies).
+
+## msg_load__16CosmeticPropAnimPc
+
+Observed at `0x0014b1c0`, 356 bytes; the reviewed compile emits 652. Reads what `msg_save__16CosmeticPropAnimPc` wrote. Four pool lookups (`objectSaveGetFromStringPool__Fi`) become pointers at object+76, +80, +84, +88; words go to object+12, +148, +144; two signed halfwords become singles at object+32 and +28 and their low bytes go to object+41 and +40. `lumpFindResource__FPcT0(object+76, object+80)` goes to object+92 and `(object+76, object+84)` to object+96; `(object+76, object+88)` is the header given to `animAdd__FP14AnimationStateP15AnimationHeaderi` on the state at object+100 with count 4 if bit 1 of the word at object+148 is set, else 1. Bit 0 of that word adds `animSetToEnd__FP14AnimationState`. Then `objectAddToSlowRunList__FP10GameObject`. Returns 32. Opens imports `objectAddToSlowRunList__FP10GameObject`, `animAdd`, `animSetToEnd`, `lumpFindResource__FPcT0` (shared with other bodies).
