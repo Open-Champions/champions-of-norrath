@@ -1712,3 +1712,4 @@ and no startup stage has executed.
 - 2026-10-11 19:34 CDT — `agents/gs-dma-present` — 1007 unresolved imports
 - 2026-10-11 19:40 CDT — `agents/actor-view-tables` — 1019 unresolved imports
 - 2026-10-11 19:46 CDT — `agents/card-progress` — 999 unresolved imports
+- 2026-10-11 19:52 CDT — `agents/ctors-ant-lantern` — 999 unresolved imports
