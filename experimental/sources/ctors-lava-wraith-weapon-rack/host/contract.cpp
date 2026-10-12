@@ -29,14 +29,14 @@ extern "C" unsigned norrath_item_create(char* name, void* d, int a, int b) {
 static void run_case(float r_ramp, float g, int rnd, bool tag, float tf, int created) {
     calls.clear(); ramp = r_ramp; global_float = g; random_value = rnd; tag_present = tag; tag_float = tf; create_result = created;
     put(norrath_creature_view_484cac, fbits(g), 4);
-    Image<160> o, want; o.w(12, 0x44); want.w(12, 0x44 | 0x10001);
+    Image<160> o, want; o.w(12, 0x44); want.w(12, 0x44 | 0x100001);
     unsigned char pt[12] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
     char* args[] = {nullptr};
     const unsigned r = norrath_construct_WeaponRack(o.b, pt, -7, args);
     float level = r_ramp * (((float)rnd * f(0x37800000u)) * f(0x3dccccccu) + f(0x3f733333u));
     level = level * ((g * f(0x3e4cccccu) + f(0x3f4cccccu)) * 200.0f);
     if (tag) level = level * tf;
-    std::vector<std::string> w{"GameObject map=0 args=1", "ramp flags=00010045", "rand", "tag 1 0"};
+    std::vector<std::string> w{"GameObject map=0 args=1", "ramp flags=00100045", "rand", "tag 1 0"};
     char b[128];
     if (tag) w.push_back("tagf 1 0");
     std::snprintf(b, sizeof b, "random 80 level=%d 0 -1 1", (int)level); w.push_back(b);

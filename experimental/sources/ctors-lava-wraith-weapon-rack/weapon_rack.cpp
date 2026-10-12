@@ -3,7 +3,7 @@
 // GameObject receives a point snapshot, a null map and the argument list. View
 // 0x448fb0 goes to +72. Halves at +140, +132, +124 and +116 become -1; the
 // item description at +80 gets -1 bytes at +112/+113 and zero halves at +96,
-// +98, +100, +102 and +104..+110. Flags gain 0x10001, the low half of the int
+// +98, +100, +102 and +104..+110. Flags gain 0x100001, the low half of the int
 // goes to +56 and byte +40 becomes 40. The level is
 //   treasureRamp * ((rand * 2^-16 * 0.1f) + 0.95f) * ((g * 0.2f + 0.8f) * 200)
 // with rand from objectERand and g the float word at 0x484cac, multiplied once
@@ -26,7 +26,7 @@ extern "C" unsigned norrath_construct_WeaponRack(void* object, const void* point
         write_half(item + offset, 0u);
         write_half(item + 8u + offset, 0u);
     }
-    write_word(a + 12u, read_word(a + 12u) | 0x10001u);
+    write_word(a + 12u, read_word(a + 12u) | 0x100001u);
     write_half(a + 56u, static_cast<unsigned>(type));
     write_byte(a + 40u, 40u);
     float level = norrath_player_treasure_ramp();
