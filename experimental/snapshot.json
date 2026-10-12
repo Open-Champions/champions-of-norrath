@@ -20124,6 +20124,384 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/save-and-quests-in-post-action/in_post_action.cpp"
+    },
+    {
+      "input_order": 1570,
+      "component": "prop-poke-clone-clone-cosmetic-prop-anim",
+      "object_name": "ppc_clone-cosmetic-prop-anim.o",
+      "private_object_sha256": "774aad9f3db7f1a7866e28ab7a563fa5218aa8f580eca5e0bae55e006599ae54",
+      "emitted_functions": [
+        {
+          "name": "clone__16CosmeticPropAnim",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-clone-cosmetic-prop-anim/clone.cpp"
+    },
+    {
+      "input_order": 1571,
+      "component": "prop-poke-clone-clone-player1",
+      "object_name": "ppc_clone-player1.o",
+      "private_object_sha256": "112b9c6836add99bc45332fc3585de08995a13025e327f35ec18f2668b514170",
+      "emitted_functions": [
+        {
+          "name": "clone__7Player1",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-clone-player1/clone.cpp"
+    },
+    {
+      "input_order": 1572,
+      "component": "prop-poke-clone-clone-prop",
+      "object_name": "ppc_clone-prop.o",
+      "private_object_sha256": "636e67913b16d69ed8a55e719460da29a184381b0c08bb6a98cfbe8594ef017a",
+      "emitted_functions": [
+        {
+          "name": "clone__4Prop",
+          "compiled_body_bytes": 1232
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-clone-prop/clone.cpp"
+    },
+    {
+      "input_order": 1573,
+      "component": "prop-poke-clone-clone-user-param-prop",
+      "object_name": "ppc_clone-user-param-prop.o",
+      "private_object_sha256": "bfca2a359856e36cbb321e404ef56922f67ae466dd4c261df9e667135c4b696e",
+      "emitted_functions": [
+        {
+          "name": "clone__13UserParamProp",
+          "compiled_body_bytes": 800
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-clone-user-param-prop/clone.cpp"
+    },
+    {
+      "input_order": 1574,
+      "component": "prop-poke-clone-dtor-cosmetic-prop-anim",
+      "object_name": "ppc_dtor-cosmetic-prop-anim.o",
+      "private_object_sha256": "710b877918485751eab2f7d8bfab0616401648522cb47e93162fc4fe57f1556f",
+      "emitted_functions": [
+        {
+          "name": "_$_16CosmeticPropAnim",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-dtor-cosmetic-prop-anim/dtor.cpp"
+    },
+    {
+      "input_order": 1575,
+      "component": "prop-poke-clone-dtor-player1",
+      "object_name": "ppc_dtor-player1.o",
+      "private_object_sha256": "dfba035e6e21cbfb1c0ad6f37b59dde84e8b218f2fc18334e78d4f422f34e41a",
+      "emitted_functions": [
+        {
+          "name": "_$_7Player1",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-dtor-player1/dtor.cpp"
+    },
+    {
+      "input_order": 1576,
+      "component": "prop-poke-clone-dtor-prop",
+      "object_name": "ppc_dtor-prop.o",
+      "private_object_sha256": "0ae9aca40b5855d0f78f4e58a4a002df8a02b5eb2f31e309b0eac1d6d15c23d5",
+      "emitted_functions": [
+        {
+          "name": "_$_4Prop",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-dtor-prop/dtor.cpp"
+    },
+    {
+      "input_order": 1577,
+      "component": "prop-poke-clone-dtor-user-param-prop",
+      "object_name": "ppc_dtor-user-param-prop.o",
+      "private_object_sha256": "6ada63f84c59571d5162bfed8da4a8b1196b34c62637fa33556448d816377bda",
+      "emitted_functions": [
+        {
+          "name": "_$_13UserParamProp",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-dtor-user-param-prop/dtor.cpp"
+    },
+    {
+      "input_order": 1578,
+      "component": "prop-poke-clone-get-model",
+      "object_name": "ppc_get-model.o",
+      "private_object_sha256": "89b31fe91e5692aa01ac76d47a7d405a58d0b09f7e7bc3adabf86cd8684d8f23",
+      "emitted_functions": [
+        {
+          "name": "getModel__10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-get-model/get_model.cpp"
+    },
+    {
+      "input_order": 1579,
+      "component": "prop-poke-clone-get-poke-name-creature",
+      "object_name": "ppc_get-poke-name-creature.o",
+      "private_object_sha256": "4d4e381fc00544ae5feec0383f6d70384a426c7510a35a461a994f6c58388e8c",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__8CreaturePUsi",
+          "compiled_body_bytes": 1324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-get-poke-name-creature/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 1580,
+      "component": "prop-poke-clone-get-poke-name-lever",
+      "object_name": "ppc_get-poke-name-lever.o",
+      "private_object_sha256": "ff914e0c0298038cd73e05fd5d007aaea7e906de326614d66531bd0406ef36fe",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__5LeverPUsi",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-get-poke-name-lever/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 1581,
+      "component": "prop-poke-clone-get-poke-name-poke-reflector",
+      "object_name": "ppc_get-poke-name-poke-reflector.o",
+      "private_object_sha256": "bf53f7b7b79f2f2cdaf6c5ac77eab03bcaa4a56cc57888e06873e95118ca72a2",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__13PokeReflectorPUsi",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-get-poke-name-poke-reflector/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 1582,
+      "component": "prop-poke-clone-get-poke-name-user-param-prop",
+      "object_name": "ppc_get-poke-name-user-param-prop.o",
+      "private_object_sha256": "53126a9c66a4073eb08fe81ab6ca311e18f3e6b7b734d4d9451c9e824623e16f",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__13UserParamPropPUsi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-get-poke-name-user-param-prop/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 1583,
+      "component": "prop-poke-clone-msg-get-poke-name",
+      "object_name": "ppc_msg-get-poke-name.o",
+      "private_object_sha256": "74cf78a5567a7b973806304eb9deb668aff2797177e92430b0fc481076b46011",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__10GameObjectPUsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-get-poke-name/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 1584,
+      "component": "prop-poke-clone-msg-move-collision",
+      "object_name": "ppc_msg-move-collision.o",
+      "private_object_sha256": "7244a46019478c5f8297f0f0f4121a5cfd01b952e148c54f021eafd76f92ff4f",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__10GameObjectPP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-move-collision/msg_move_collision.cpp"
+    },
+    {
+      "input_order": 1585,
+      "component": "prop-poke-clone-msg-poke",
+      "object_name": "ppc_msg-poke.o",
+      "private_object_sha256": "71ee06754f367eb484ee29e863f8d0a13a20b80da14119ebe5eec88de2ac46e1",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-poke/msg_poke.cpp"
+    },
+    {
+      "input_order": 1586,
+      "component": "prop-poke-clone-msg-poke-lever",
+      "object_name": "ppc_msg-poke-lever.o",
+      "private_object_sha256": "acc6e4b147bf60ef9e46bffdbcf1785e18bbebd43230f55218a91b00de5e0008",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__5Leveri",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-poke-lever/msg_poke.cpp"
+    },
+    {
+      "input_order": 1587,
+      "component": "prop-poke-clone-msg-poke-poke-reflector",
+      "object_name": "ppc_msg-poke-poke-reflector.o",
+      "private_object_sha256": "a3c977fa897cfecb71ac28010bcccf173ed15946e4354d434ef98e5fbf290b07",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__13PokeReflectori",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-poke-poke-reflector/msg_poke.cpp"
+    },
+    {
+      "input_order": 1588,
+      "component": "prop-poke-clone-msg-poke-user-param-prop",
+      "object_name": "ppc_msg-poke-user-param-prop.o",
+      "private_object_sha256": "3ebbbdb2bb0a20c8b9130af536c1fc91fb2026695ee449ed969beda8ffb2e648",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__13UserParamPropi",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-poke-user-param-prop/msg_poke.cpp"
+    },
+    {
+      "input_order": 1589,
+      "component": "prop-poke-clone-msg-route",
+      "object_name": "ppc_msg-route.o",
+      "private_object_sha256": "1a7a9940b94cdabc9a495656fda2ccbe17edd1cb4f3e2f1f83670c91838603fb",
+      "emitted_functions": [
+        {
+          "name": "msg_route__10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-msg-route/msg_route.cpp"
+    },
+    {
+      "input_order": 1590,
+      "component": "prop-poke-clone-typeinfo-auto-prop",
+      "object_name": "ppc_typeinfo-auto-prop.o",
+      "private_object_sha256": "ae876bbfd97f71ed087db1dc5c6f5afac268b0cd6a52a5bc899eabdc686cea89",
+      "emitted_functions": [
+        {
+          "name": "__tf8AutoProp",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-auto-prop/typeinfo.cpp"
+    },
+    {
+      "input_order": 1591,
+      "component": "prop-poke-clone-typeinfo-cosmetic-prop-anim",
+      "object_name": "ppc_typeinfo-cosmetic-prop-anim.o",
+      "private_object_sha256": "48376a4d1863da4b7b0b2d1b676259a4e718706131aac146489ef57123a251d3",
+      "emitted_functions": [
+        {
+          "name": "__tf16CosmeticPropAnim",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-cosmetic-prop-anim/typeinfo.cpp"
+    },
+    {
+      "input_order": 1592,
+      "component": "prop-poke-clone-typeinfo-player1",
+      "object_name": "ppc_typeinfo-player1.o",
+      "private_object_sha256": "ceddd4c947280fbac82780469167079e856e6623864bf2d218ae3810fc43c00e",
+      "emitted_functions": [
+        {
+          "name": "__tf7Player1",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-player1/typeinfo.cpp"
+    },
+    {
+      "input_order": 1593,
+      "component": "prop-poke-clone-typeinfo-prop",
+      "object_name": "ppc_typeinfo-prop.o",
+      "private_object_sha256": "024ee697b381477312c1e62c09dc5cd1e90fdfcfe00f4e846e394e51d523300f",
+      "emitted_functions": [
+        {
+          "name": "__tf4Prop",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-prop/typeinfo.cpp"
+    },
+    {
+      "input_order": 1594,
+      "component": "prop-poke-clone-typeinfo-ptr-ph-prop",
+      "object_name": "ppc_typeinfo-ptr-ph-prop.o",
+      "private_object_sha256": "9fb647903af98c8448a0376f86d4b3a161206d685a836d665e0762c8011e6b06",
+      "emitted_functions": [
+        {
+          "name": "__tfP6PhProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-ptr-ph-prop/typeinfo.cpp"
+    },
+    {
+      "input_order": 1595,
+      "component": "prop-poke-clone-typeinfo-ptr-prop",
+      "object_name": "ppc_typeinfo-ptr-prop.o",
+      "private_object_sha256": "50c54f17adfe9d25f3f3e1015e9ac9e07d3abbe2789944843ae860642c7a2d84",
+      "emitted_functions": [
+        {
+          "name": "__tfP4Prop",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-ptr-prop/typeinfo.cpp"
+    },
+    {
+      "input_order": 1596,
+      "component": "prop-poke-clone-typeinfo-user-param-prop",
+      "object_name": "ppc_typeinfo-user-param-prop.o",
+      "private_object_sha256": "1697ca762c2b7e002d132ff84504fe2e2b6b2c07630fc5d7f1e1a3497635131b",
+      "emitted_functions": [
+        {
+          "name": "__tf13UserParamProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/prop-poke-clone-typeinfo-user-param-prop/typeinfo.cpp"
     }
   ],
   "drafts": [
@@ -23703,7 +24081,81 @@
     "sources/save-and-quests-in-post-action/in_post_action.cpp": "c4f7c7b0f654233bdbcec0e1529535f08a40a1063cc5d48dc78ecff49fd70eb7",
     "sources/save-and-quests-in-post-action/host_check.cpp": "0bd8c5f304cac2005356c885ac9c806749343ff1f257ed7491dc07d710c4b5c3",
     "sources/save-and-quests-lever-load/lever_load.cpp": "f92b53782c03e8bf450e7b41c36d751d508193eeb0abe33e55afc7b575aa66f0",
-    "sources/save-and-quests-lever-load/host_check.cpp": "be2fcd3c4e209c3a4e2bfb45c45c4efd77074e6264add58dd1f0a00e6bdb1b5c"
+    "sources/save-and-quests-lever-load/host_check.cpp": "be2fcd3c4e209c3a4e2bfb45c45c4efd77074e6264add58dd1f0a00e6bdb1b5c",
+    "sources/prop-poke-clone-clone-cosmetic-prop-anim/clone.cpp": "f17dbbeb11354b983ef06581019ff3129b9c8f608ec2411f36918286a269fa44",
+    "sources/prop-poke-clone-clone-cosmetic-prop-anim/host_check.cpp": "199045115c11d42895a23ad3d16827868de502d5a77b0a58feac02d6cb0d1bdb",
+    "sources/prop-poke-clone-clone-player1/clone.cpp": "97bf8c64ac5d7d87d675c150e0d6f10c7c51fdcbf12b2a3d5040688bd73520f9",
+    "sources/prop-poke-clone-clone-player1/host_check.cpp": "d4a0c2aa8b0211e0d0851159c871836a179cf0b4c145840af2d20eb295f32bd2",
+    "sources/prop-poke-clone-clone-prop/clone.cpp": "e93caa2726505dc57417962bfcb4eef8d5b9b713bdab5a2e1416fe261856a7bf",
+    "sources/prop-poke-clone-clone-prop/host_check.cpp": "6c4556f3d4b32de8bc92dac579a477bdf3cb4f3b1c99d220937c25f99db52377",
+    "sources/prop-poke-clone-clone-user-param-prop/clone.cpp": "e9bc8daafc45ed29050e271c3cb30efaaf0547429eec4acd5ed5fe567ebe4fb2",
+    "sources/prop-poke-clone-clone-user-param-prop/host_check.cpp": "a02314c0e895690a0177490f4efd7f5cf125ff4e0c7c2664a4212598f4e4c54a",
+    "sources/prop-poke-clone-dtor-cosmetic-prop-anim/dtor.cpp": "6ff1e4e8a7229a89688357939c83446a1c1fd8a019f2b6e73b30e7d14c86af77",
+    "sources/prop-poke-clone-dtor-cosmetic-prop-anim/host_check.cpp": "eaf935bb12602f93014c3941f5e474a0a9b5286462979e3dc8eff3b255732d79",
+    "sources/prop-poke-clone-dtor-player1/dtor.cpp": "106457dfa56c26f8d5264d0319231ec55ed22725ccd1f621813ee60cd21ccaef",
+    "sources/prop-poke-clone-dtor-player1/host_check.cpp": "68594a8386dcc7717e12880ca8a24e2c4c480ab44c93cb8f3cee8961cb294680",
+    "sources/prop-poke-clone-dtor-prop/dtor.cpp": "4c67b82ad8887e7979b6f89a4bbaf626d7d3a9734ff99eac9231d354dbd8ffaa",
+    "sources/prop-poke-clone-dtor-prop/host_check.cpp": "626bdc8a82e5962b547ad795bfac0adaeb815beb85d9a6edc1d2db10e868941a",
+    "sources/prop-poke-clone-dtor-user-param-prop/dtor.cpp": "be577a8252c63fdb117aeb46d1ea5dd91fa7ec233a1c8c7995f7f8d8c7f6c6c2",
+    "sources/prop-poke-clone-dtor-user-param-prop/host_check.cpp": "ad69d736cf0bb85457d92ee5330df9165845fac9e53fbc29babd41a34cac9716",
+    "sources/prop-poke-clone-get-model/get_model.cpp": "2461c190e69598d40e6e8e5f82b54a975b1229ab27d200e21e2ed5398b4aee5d",
+    "sources/prop-poke-clone-get-model/host_check.cpp": "9a69807415dba551f883c59259d14ada32d612e6af48ee0da63da84bbd081786",
+    "sources/prop-poke-clone-get-poke-name-creature/msg_get_poke_name.cpp": "eb11250cd6e9c024b627f377198abf825cc89769be0473e0b0ec1ff524cdcfc0",
+    "sources/prop-poke-clone-get-poke-name-creature/host_check.cpp": "fcec69a3336bd7b5f405dc3dd1ef98812340d98daf9cfb03dbf30c6a13e4b5dc",
+    "sources/prop-poke-clone-get-poke-name-lever/msg_get_poke_name.cpp": "52e077d610a482ee83815b33e1364f935a2384b9ef30035e80f62073b662e141",
+    "sources/prop-poke-clone-get-poke-name-lever/host_check.cpp": "957b2d725dbc2b544a06c6ed2bfdfdb6748f37061f92cb242167e870a4698040",
+    "sources/prop-poke-clone-get-poke-name-poke-reflector/msg_get_poke_name.cpp": "dd358ac56200a1417da991b392ac947ac439ab05e386cdc6ea248b436719efde",
+    "sources/prop-poke-clone-get-poke-name-poke-reflector/host_check.cpp": "1294e62fa5e7dc1cb06d9e39c916775c619abf5739eb6ddea47dd6f9f39ca6e0",
+    "sources/prop-poke-clone-get-poke-name-user-param-prop/msg_get_poke_name.cpp": "04d918c969335038609c1d6eced6bf97310fce5b0d06d86ec82e46b3c0a6ec8b",
+    "sources/prop-poke-clone-get-poke-name-user-param-prop/host_check.cpp": "a602e3ec2cfea3395041ab62822c7b02beb91c6b0a286b7f85f5f4188240f897",
+    "sources/prop-poke-clone-msg-get-poke-name/msg_get_poke_name.cpp": "36b637cef13df4b9412040dab13971ef91d83ddc85ea79f1e05870690c3d0eb1",
+    "sources/prop-poke-clone-msg-get-poke-name/host_check.cpp": "808cc636b50a29b5020d5da004cdb2621c2987e80b37425d70f84577ecbd6cf5",
+    "sources/prop-poke-clone-msg-move-collision/msg_move_collision.cpp": "0c1ad2a732b62a8a9a9766bcd620605e958764f6c6e7e230a772c4616f750ff1",
+    "sources/prop-poke-clone-msg-move-collision/host_check.cpp": "d68344e25d0465606ca30cf645c280b15bfda9cb94b15b34134c3ed199cf5680",
+    "sources/prop-poke-clone-msg-poke/msg_poke.cpp": "7129641c76e99abe1491824eae8b9c794c734b7d86ee30d8c758c49a6180bde7",
+    "sources/prop-poke-clone-msg-poke/host_check.cpp": "137e102d94302a6601f13f708857a766c68fc82dafbace5ef7fe98097673da91",
+    "sources/prop-poke-clone-msg-poke-lever/msg_poke.cpp": "5f58ac3a02d9385d9fe65e6e2fffdd71f2c80e2986b72d7f64392c06c724cb68",
+    "sources/prop-poke-clone-msg-poke-lever/host_check.cpp": "aa0fbeb97a6779ed46afd415487daf1b4e6a7077af0a36ab9054b0e2002a6d0a",
+    "sources/prop-poke-clone-msg-poke-poke-reflector/msg_poke.cpp": "8b352e16c6482f902886ba06d5fed687ecc9ab70f947afe1390451e53883ac26",
+    "sources/prop-poke-clone-msg-poke-poke-reflector/host_check.cpp": "e34a9cdeaed02570931321228400bbde47c05117203e89e294f567a3b3051fe7",
+    "sources/prop-poke-clone-msg-poke-user-param-prop/msg_poke.cpp": "1a38b472fd9e1f4d804c5480d2d805738d6029ccf8565c1b3ebd7374017c0f6d",
+    "sources/prop-poke-clone-msg-poke-user-param-prop/host_check.cpp": "c5dec705ec49ac4d8d9a29f4047d6fbc6713260f72eb2f287c59430c0387ed60",
+    "sources/prop-poke-clone-msg-route/msg_route.cpp": "8c3209cb809a906740a70d0b35d906a8d63489a0a5504966b04b0cc6807cadf0",
+    "sources/prop-poke-clone-msg-route/host_check.cpp": "4a8ed6467a90d6659acecf375a4cd769d4e640fa6b1181ea2addab2d23c9e97f",
+    "sources/prop-poke-clone-typeinfo-auto-prop/typeinfo.cpp": "8c5de9f967da3bc49fed9f14c3dd7439db6b0493ea0286c754bdab54020e297f",
+    "sources/prop-poke-clone-typeinfo-auto-prop/host_check.cpp": "3d637ef22b6ae62456262bce37dceaecb747ff36ad697441b3031d8adfc5ed5a",
+    "sources/prop-poke-clone-typeinfo-cosmetic-prop-anim/typeinfo.cpp": "2cb96296ede9ef58a789054840f7b70d5a8fa6d74b2d545b7d7a42f7a1d434e8",
+    "sources/prop-poke-clone-typeinfo-cosmetic-prop-anim/host_check.cpp": "2ac5ae1f757ab89b9ab3db2cd69607adddb62d0cbd677dbfe6793b3a882ae57e",
+    "sources/prop-poke-clone-typeinfo-player1/typeinfo.cpp": "d4f377019b16c03c0946a9fadeafa6a5350cec5bf480cd33e75f1475138cee74",
+    "sources/prop-poke-clone-typeinfo-player1/host_check.cpp": "cb97609894e1b94bb8d1677e696564b6ce954899b1f53d9aa1fc1c9a44af145f",
+    "sources/prop-poke-clone-typeinfo-prop/typeinfo.cpp": "58173c07e4defc9c959f2be274523080f7815a8f0f1c748b353d08b0d6ba1d88",
+    "sources/prop-poke-clone-typeinfo-prop/host_check.cpp": "1ebe72428a7349aa2622968fe5f3d54300eec658d552c6f3af0bbe8cc35ed9c0",
+    "sources/prop-poke-clone-typeinfo-ptr-ph-prop/typeinfo.cpp": "2ef2bc600751bf0dee72fc30192d77fb50b7bde9192eab8b8638e811f0bd743d",
+    "sources/prop-poke-clone-typeinfo-ptr-ph-prop/host_check.cpp": "b09f1f8cb6affb4a7a9cfb58e6adbebcc682bcf9cca01ccd88f8525b12456309",
+    "sources/prop-poke-clone-typeinfo-ptr-prop/typeinfo.cpp": "67c20865802399203810a8c3d60f54d16c3cc257dbe1576c92a768ac620ef9ce",
+    "sources/prop-poke-clone-typeinfo-ptr-prop/host_check.cpp": "6f611b9f24035ee96440fe1ce305be9e4bebc255a58e6080b526baa3513fd01f",
+    "sources/prop-poke-clone-typeinfo-user-param-prop/typeinfo.cpp": "be5a1f194294dac35df780eacbd7a90786e127e8136a38c23e61716c63d1cebf",
+    "sources/prop-poke-clone-typeinfo-user-param-prop/host_check.cpp": "002ef9547f7e7a0cd81db7f1dc33c11ced3e0c2b0c3dc7a4c573ad59ede86a02",
+    "sources/prop-poke-clone-clone-trigger-params/clone.cpp": "8f7bb149ad3aa88da0749a1e37c14a0bbc95132ac55f3759b6eb805ec4fb4363",
+    "sources/prop-poke-clone-clone-trigger-params/host_check.cpp": "758277cad324ad461fcd90b9021f0c1d6c7f5fb0b1dbc7d8dd4882fbd35a027c",
+    "sources/prop-poke-clone-clone-cat/clone.cpp": "0aea9bf392122baaee29e51238be53f559e24e9fe4865ee726b07811afd2b97d",
+    "sources/prop-poke-clone-clone-cat/host_check.cpp": "32f2b2f30921f0a77f03c97da5a62a8b2fd15e7332e4ff7da01a27b5cc3ae705",
+    "sources/prop-poke-clone-clone-poke-reflector/clone.cpp": "5a3545e43b70d24534ec7336fc8b6e019060d2222cfd3bd77d3b283b455c24fd",
+    "sources/prop-poke-clone-clone-poke-reflector/host_check.cpp": "e38d9f7cde812e8aececa82297a0612cd5abe8b57983a03be6ec220fd77b25c0",
+    "sources/prop-poke-clone-clone-small-spider/clone.cpp": "2cd6afa9fdd28171117d6926896f5d345ad9fdefda11b37ea4f452bb3b165270",
+    "sources/prop-poke-clone-clone-small-spider/host_check.cpp": "117090e3756f75d0c154f2a9ad5bdd71d7b8a4fc27d90547e65baadc55ab8f09",
+    "sources/prop-poke-clone-clone-counter/clone.cpp": "fb998dcdc4548e30ce3f3bc61c72ff773bc8f5a85e0f23966b539cdf222d5578",
+    "sources/prop-poke-clone-clone-counter/host_check.cpp": "f46ed21f00449fc39aefee7236c77131b74f29a0946617fee840ca84459e60a4",
+    "sources/prop-poke-clone-clone-game-object/clone.cpp": "f0aef69d2a771695bec2299d88aa4214cd14c1e6d2707a1b3203c9b398521a9e",
+    "sources/prop-poke-clone-clone-game-object/host_check.cpp": "e79656fb647cfec43c484b9a423f187682b861be6c57f4c5a49fe062ad1f7ace",
+    "sources/prop-poke-clone-clone-cd-eyeball/clone.cpp": "98adbd7b731a5a3d27bec696c5fc665dc88f225f14e9aa45d4eb051d15401c3c",
+    "sources/prop-poke-clone-clone-cd-eyeball/host_check.cpp": "106756f01883f944b7ba63dbc6cf7cbcb81445b736d575fa59ba8bc7489a8d4e",
+    "sources/prop-poke-clone-clone-creature/clone.cpp": "f5dd1c245480a1453829a537a6ff59e501984d7794297e257e32622d8863e979",
+    "sources/prop-poke-clone-clone-creature/host_check.cpp": "dea8bd95f08ef4950d0ff3c4234fd070cb6ee76593994413ff1795b39a970b1b",
+    "sources/prop-poke-clone-clone-timer/clone.cpp": "e902c69322ca6f10973e81a88aade80de439c64194c979316ca39ad52d2639b5",
+    "sources/prop-poke-clone-clone-timer/host_check.cpp": "34699ed7b1b7b55a50885d5d58e28c03edbf126d2fd4de64316038b42c0c50fd",
+    "sources/prop-poke-clone-clone-lever/clone.cpp": "ae6e33c90f7d52050e3c27694a6ce615609ae3ce7a8afdc25570c6cd758f6349",
+    "sources/prop-poke-clone-clone-lever/host_check.cpp": "ac89c4d6d67d363c230da1ed62aeb6709f1dfa275bfc769007aab34ac17c0e75"
   },
   "additional_implementations": [
     {
@@ -24145,11 +24597,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1570,
-    "authored_default_inputs": 1568,
+    "selected_inputs": 1597,
+    "authored_default_inputs": 1595,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1226,
-    "compiled_body_bytes_from_accepted_inputs": 571468,
+    "emitted_function_definitions_including_helpers": 1253,
+    "compiled_body_bytes_from_accepted_inputs": 578924,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -24162,7 +24614,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1257
+    "package_selected_inputs": 1284
   },
   "startup_implementations": [
     {
@@ -43543,6 +43995,465 @@
       "emitted_functions": [],
       "host_files": [
         "sources/save-and-quests-in-post-action/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-clone-cosmetic-prop-anim/clone.cpp",
+      "source_sha256": "f17dbbeb11354b983ef06581019ff3129b9c8f608ec2411f36918286a269fa44",
+      "object_sha256": "774aad9f3db7f1a7866e28ab7a563fa5218aa8f580eca5e0bae55e006599ae54",
+      "emitted_functions": [
+        {
+          "name": "clone__16CosmeticPropAnim",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-clone-cosmetic-prop-anim/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-clone-player1/clone.cpp",
+      "source_sha256": "97bf8c64ac5d7d87d675c150e0d6f10c7c51fdcbf12b2a3d5040688bd73520f9",
+      "object_sha256": "112b9c6836add99bc45332fc3585de08995a13025e327f35ec18f2668b514170",
+      "emitted_functions": [
+        {
+          "name": "clone__7Player1",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-clone-player1/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-clone-prop/clone.cpp",
+      "source_sha256": "e93caa2726505dc57417962bfcb4eef8d5b9b713bdab5a2e1416fe261856a7bf",
+      "object_sha256": "636e67913b16d69ed8a55e719460da29a184381b0c08bb6a98cfbe8594ef017a",
+      "emitted_functions": [
+        {
+          "name": "clone__4Prop",
+          "compiled_body_bytes": 1232
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-clone-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-clone-user-param-prop/clone.cpp",
+      "source_sha256": "e9bc8daafc45ed29050e271c3cb30efaaf0547429eec4acd5ed5fe567ebe4fb2",
+      "object_sha256": "bfca2a359856e36cbb321e404ef56922f67ae466dd4c261df9e667135c4b696e",
+      "emitted_functions": [
+        {
+          "name": "clone__13UserParamProp",
+          "compiled_body_bytes": 800
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-clone-user-param-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-dtor-cosmetic-prop-anim/dtor.cpp",
+      "source_sha256": "6ff1e4e8a7229a89688357939c83446a1c1fd8a019f2b6e73b30e7d14c86af77",
+      "object_sha256": "710b877918485751eab2f7d8bfab0616401648522cb47e93162fc4fe57f1556f",
+      "emitted_functions": [
+        {
+          "name": "_$_16CosmeticPropAnim",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-dtor-cosmetic-prop-anim/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-dtor-player1/dtor.cpp",
+      "source_sha256": "106457dfa56c26f8d5264d0319231ec55ed22725ccd1f621813ee60cd21ccaef",
+      "object_sha256": "dfba035e6e21cbfb1c0ad6f37b59dde84e8b218f2fc18334e78d4f422f34e41a",
+      "emitted_functions": [
+        {
+          "name": "_$_7Player1",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-dtor-player1/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-dtor-prop/dtor.cpp",
+      "source_sha256": "4c67b82ad8887e7979b6f89a4bbaf626d7d3a9734ff99eac9231d354dbd8ffaa",
+      "object_sha256": "0ae9aca40b5855d0f78f4e58a4a002df8a02b5eb2f31e309b0eac1d6d15c23d5",
+      "emitted_functions": [
+        {
+          "name": "_$_4Prop",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-dtor-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-dtor-user-param-prop/dtor.cpp",
+      "source_sha256": "be577a8252c63fdb117aeb46d1ea5dd91fa7ec233a1c8c7995f7f8d8c7f6c6c2",
+      "object_sha256": "6ada63f84c59571d5162bfed8da4a8b1196b34c62637fa33556448d816377bda",
+      "emitted_functions": [
+        {
+          "name": "_$_13UserParamProp",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-dtor-user-param-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-get-model/get_model.cpp",
+      "source_sha256": "2461c190e69598d40e6e8e5f82b54a975b1229ab27d200e21e2ed5398b4aee5d",
+      "object_sha256": "89b31fe91e5692aa01ac76d47a7d405a58d0b09f7e7bc3adabf86cd8684d8f23",
+      "emitted_functions": [
+        {
+          "name": "getModel__10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-get-model/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-get-poke-name-creature/msg_get_poke_name.cpp",
+      "source_sha256": "eb11250cd6e9c024b627f377198abf825cc89769be0473e0b0ec1ff524cdcfc0",
+      "object_sha256": "4d4e381fc00544ae5feec0383f6d70384a426c7510a35a461a994f6c58388e8c",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__8CreaturePUsi",
+          "compiled_body_bytes": 1324
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-get-poke-name-creature/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-get-poke-name-lever/msg_get_poke_name.cpp",
+      "source_sha256": "52e077d610a482ee83815b33e1364f935a2384b9ef30035e80f62073b662e141",
+      "object_sha256": "ff914e0c0298038cd73e05fd5d007aaea7e906de326614d66531bd0406ef36fe",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__5LeverPUsi",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-get-poke-name-lever/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-get-poke-name-poke-reflector/msg_get_poke_name.cpp",
+      "source_sha256": "dd358ac56200a1417da991b392ac947ac439ab05e386cdc6ea248b436719efde",
+      "object_sha256": "bf53f7b7b79f2f2cdaf6c5ac77eab03bcaa4a56cc57888e06873e95118ca72a2",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__13PokeReflectorPUsi",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-get-poke-name-poke-reflector/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-get-poke-name-user-param-prop/msg_get_poke_name.cpp",
+      "source_sha256": "04d918c969335038609c1d6eced6bf97310fce5b0d06d86ec82e46b3c0a6ec8b",
+      "object_sha256": "53126a9c66a4073eb08fe81ab6ca311e18f3e6b7b734d4d9451c9e824623e16f",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__13UserParamPropPUsi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-get-poke-name-user-param-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-get-poke-name/msg_get_poke_name.cpp",
+      "source_sha256": "36b637cef13df4b9412040dab13971ef91d83ddc85ea79f1e05870690c3d0eb1",
+      "object_sha256": "74cf78a5567a7b973806304eb9deb668aff2797177e92430b0fc481076b46011",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__10GameObjectPUsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-get-poke-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-move-collision/msg_move_collision.cpp",
+      "source_sha256": "0c1ad2a732b62a8a9a9766bcd620605e958764f6c6e7e230a772c4616f750ff1",
+      "object_sha256": "7244a46019478c5f8297f0f0f4121a5cfd01b952e148c54f021eafd76f92ff4f",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__10GameObjectPP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-move-collision/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-poke/msg_poke.cpp",
+      "source_sha256": "7129641c76e99abe1491824eae8b9c794c734b7d86ee30d8c758c49a6180bde7",
+      "object_sha256": "71ee06754f367eb484ee29e863f8d0a13a20b80da14119ebe5eec88de2ac46e1",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-poke/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-poke-lever/msg_poke.cpp",
+      "source_sha256": "5f58ac3a02d9385d9fe65e6e2fffdd71f2c80e2986b72d7f64392c06c724cb68",
+      "object_sha256": "acc6e4b147bf60ef9e46bffdbcf1785e18bbebd43230f55218a91b00de5e0008",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__5Leveri",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-poke-lever/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-poke-poke-reflector/msg_poke.cpp",
+      "source_sha256": "8b352e16c6482f902886ba06d5fed687ecc9ab70f947afe1390451e53883ac26",
+      "object_sha256": "a3c977fa897cfecb71ac28010bcccf173ed15946e4354d434ef98e5fbf290b07",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__13PokeReflectori",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-poke-poke-reflector/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-poke-user-param-prop/msg_poke.cpp",
+      "source_sha256": "1a38b472fd9e1f4d804c5480d2d805738d6029ccf8565c1b3ebd7374017c0f6d",
+      "object_sha256": "3ebbbdb2bb0a20c8b9130af536c1fc91fb2026695ee449ed969beda8ffb2e648",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__13UserParamPropi",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-poke-user-param-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-msg-route/msg_route.cpp",
+      "source_sha256": "8c3209cb809a906740a70d0b35d906a8d63489a0a5504966b04b0cc6807cadf0",
+      "object_sha256": "1a7a9940b94cdabc9a495656fda2ccbe17edd1cb4f3e2f1f83670c91838603fb",
+      "emitted_functions": [
+        {
+          "name": "msg_route__10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-msg-route/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-auto-prop/typeinfo.cpp",
+      "source_sha256": "8c5de9f967da3bc49fed9f14c3dd7439db6b0493ea0286c754bdab54020e297f",
+      "object_sha256": "ae876bbfd97f71ed087db1dc5c6f5afac268b0cd6a52a5bc899eabdc686cea89",
+      "emitted_functions": [
+        {
+          "name": "__tf8AutoProp",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-auto-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-cosmetic-prop-anim/typeinfo.cpp",
+      "source_sha256": "2cb96296ede9ef58a789054840f7b70d5a8fa6d74b2d545b7d7a42f7a1d434e8",
+      "object_sha256": "48376a4d1863da4b7b0b2d1b676259a4e718706131aac146489ef57123a251d3",
+      "emitted_functions": [
+        {
+          "name": "__tf16CosmeticPropAnim",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-cosmetic-prop-anim/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-player1/typeinfo.cpp",
+      "source_sha256": "d4f377019b16c03c0946a9fadeafa6a5350cec5bf480cd33e75f1475138cee74",
+      "object_sha256": "ceddd4c947280fbac82780469167079e856e6623864bf2d218ae3810fc43c00e",
+      "emitted_functions": [
+        {
+          "name": "__tf7Player1",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-player1/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-prop/typeinfo.cpp",
+      "source_sha256": "58173c07e4defc9c959f2be274523080f7815a8f0f1c748b353d08b0d6ba1d88",
+      "object_sha256": "024ee697b381477312c1e62c09dc5cd1e90fdfcfe00f4e846e394e51d523300f",
+      "emitted_functions": [
+        {
+          "name": "__tf4Prop",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-ptr-ph-prop/typeinfo.cpp",
+      "source_sha256": "2ef2bc600751bf0dee72fc30192d77fb50b7bde9192eab8b8638e811f0bd743d",
+      "object_sha256": "9fb647903af98c8448a0376f86d4b3a161206d685a836d665e0762c8011e6b06",
+      "emitted_functions": [
+        {
+          "name": "__tfP6PhProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-ptr-ph-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-ptr-prop/typeinfo.cpp",
+      "source_sha256": "67c20865802399203810a8c3d60f54d16c3cc257dbe1576c92a768ac620ef9ce",
+      "object_sha256": "50c54f17adfe9d25f3f3e1015e9ac9e07d3abbe2789944843ae860642c7a2d84",
+      "emitted_functions": [
+        {
+          "name": "__tfP4Prop",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-ptr-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "prop-poke-clone",
+      "source": "sources/prop-poke-clone-typeinfo-user-param-prop/typeinfo.cpp",
+      "source_sha256": "be5a1f194294dac35df780eacbd7a90786e127e8136a38c23e61716c63d1cebf",
+      "object_sha256": "1697ca762c2b7e002d132ff84504fe2e2b6b2c07630fc5d7f1e1a3497635131b",
+      "emitted_functions": [
+        {
+          "name": "__tf13UserParamProp",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/prop-poke-clone-typeinfo-user-param-prop/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

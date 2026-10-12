@@ -3225,6 +3225,44 @@ Opened: `Ascii2Sjis__FUc`, `__tf3Orc`, `amx_Exec`, `amx_FindPublic`, `deferedCal
 `quatNormalize__FP4Quat`, `quatToMat__FP8Matrix34P4Quat`, `scriptFrame`,
 `waiting`.
 
+## agents/prop-poke-clone
+
+Merged (the branch notes carry the five summary sections). Twenty-seven of
+the 37 units were selected with fresh `input_order` values 1568 through 1594
+(27 functions, 7456 compiled body bytes, not original-byte matches). Ten
+`clone__*` units were **not** selected: `clone__3Cat`, `clone__9CdEyeball`,
+`clone__7Counter`, `clone__8Creature`, `clone__10GameObject`, `clone__5Lever`,
+`clone__13PokeReflector`, `clone__11SmallSpider`, `clone__5Timer` and
+`clone__13TriggerParams` are already defined by inputs 958 through 967 from an
+earlier package, so selecting both would be a multiple definition. Their files
+stay in the source snapshot. Which body should own those names is for the
+authors to decide. All 37 `host_check.cpp` programs build and exit 0 here.
+No game binary or disassembly listing was committed. 1251 function bodies,
+1595 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1679 |
+| After | 1656 |
+| Closed | 28 |
+| Opened | 5 |
+
+Closed: `_$_13UserParamProp`, `_$_16CosmeticPropAnim`, `_$_4Prop`, `_$_7Player1`,
+`__tf13UserParamProp`, `__tf16CosmeticPropAnim`, `__tf4Prop`,
+`__tf7Player1`, `__tf8AutoProp`, `__tfP4Prop`, `__tfP6PhProp`,
+`clone__13UserParamProp`, `clone__16CosmeticPropAnim`, `clone__4Prop`,
+`clone__7Player1`, `getModel__10GameObject`,
+`msg_getPokeName__10GameObjectPUsi`, `msg_getPokeName__13PokeReflectorPUsi`,
+`msg_getPokeName__13UserParamPropPUsi`, `msg_getPokeName__5LeverPUsi`,
+`msg_getPokeName__8CreaturePUsi`,
+`msg_moveCollision__10GameObjectPP10GameObject`, `msg_poke__10GameObjecti`,
+`msg_poke__13PokeReflectori`, `msg_poke__13UserParamPropi`,
+`msg_poke__5Leveri`, `msg_route__10GameObjecti`, `norrath_ti_4Prop`.
+
+Opened: `__tf6PhProp`, `__tf9MummyKing`, `eRand__10GameObject`,
+`findTagFloat__10GameObjectPci`, `norrath_ti_6PhProp`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
