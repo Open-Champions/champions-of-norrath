@@ -4,7 +4,7 @@
 // argument list. View 0x449550 goes to +72, byte +81 becomes 1 and +145 zero.
 // The point snapshot is copied to +184. A light record at +136 is filled in
 // place: the float quotient 1.0f / 0.0f (a runtime divide on the target) at
-// +176, zeros at +164, +172 and +180, 1.0f at +168 (as a float word), halves
+// +176 and +168, zeros at +164, +172 and +180, halves
 // 300 at +158 and +150, -16 at +160 and +152, 140 at +146, +148, +154 and
 // +156, and byte +144 zero, then lightAdd receives +136. Byte +40 becomes 36,
 // flags gain 0x00100008, +132 is cleared, bytes +197/+198 are cleared and
@@ -29,7 +29,7 @@ extern "C" unsigned norrath_construct_Savepoint(void* object, const void* point,
     write_word(light + 40u, float_bits(quotient));
     write_word(light + 28u, float_bits(0.0f));
     write_word(light + 36u, float_bits(0.0f));
-    write_word(light + 32u, float_bits(1.0f));
+    write_word(light + 32u, float_bits(quotient));
     write_half(light + 22u, 300u);
     write_half(light + 24u, 0xfff0u);
     write_half(light + 14u, 300u);

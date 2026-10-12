@@ -40,7 +40,7 @@ int main() {
     want.w(36, model_low); want.w(12, 0x00100028u); want.w(72, low(norrath_ctors_lava_wraith_view_449550));
     want.w(81, 1, 1); want.w(145, 0, 1); want.w(144, 0, 1);
     volatile float zero = 0.0f; const float q = 1.0f / zero;
-    want.w(176, fbits(q)); want.w(180, 0); want.w(164, 0); want.w(172, 0); want.w(168, fbits(1.0f));
+    want.w(176, fbits(q)); want.w(180, 0); want.w(164, 0); want.w(172, 0); want.w(168, fbits(q));
     want.w(158, 300, 2); want.w(150, 300, 2); want.w(160, 0xfff0, 2); want.w(152, 0xfff0, 2);
     for (unsigned off : {146u, 148u, 154u, 156u}) want.w(off, 140, 2);
     want.w(40, 36, 1); want.w(132, 0); want.w(197, 0, 1); want.w(198, 0, 1);
