@@ -481,6 +481,34 @@ reg('lumpUnload__FPv', 0x164800, 'w8-render-world-a-lump-unload/lump_unload.cpp'
     stubs=UNLOAD_STUBS, stub_addr=UNLOAD_ADDR)
 
 
+FLOOR_ALIAS = {'norrath_floor_sprite_packet_view': 'sprPacket', 'norrath_floor_sprite_grid_view': 'sprGrid',
+               'norrath_floor_free_list_word_view': 'freeList', 'norrath_floor_sprite_count_word_view': 'spriteCount',
+               'norrath_floor_fade_packet_word_view': 'fadePacket', 'norrath_floor_program_start_view': 'vu1floorstart',
+               'norrath_floor_program_end_view': 'vu1floorend'}
+
+
+def scenario_floor_clear(rng):
+    mem = {}
+    pool = sym('sprPacket')
+    cmp_addrs = []
+    for i in range(128):
+        for off in (736, 740, 744, 748, 752, 756):
+            a = pool + 768 * i + off
+            put32(mem, a, rng.randrange(1 << 32))
+            cmp_addrs += list(range(a, a + 4))
+    for name in ('spriteCount', 'freeList', 'fadePacket'):
+        put32(mem, sym(name), rng.randrange(1 << 32))
+        cmp_addrs += list(range(sym(name), sym(name) + 4))
+    grid = sym('sprGrid')
+    put32(mem, grid, rng.randrange(1 << 32))
+    cmp_addrs += list(range(grid, grid + 4))
+    return {'mem': mem, 'args': [], 'compare': cmp_addrs}
+
+
+reg('floorClear__Fv', 0x191DE0, ['w8-render-world-a-floor-clear/floor_clear.cpp', 'game-floor-clear-source/floor_clear.cpp'],
+    scenario_floor_clear, stubs=MEMSET, stub_addr=MEMSET_ADDR, alias=FLOOR_ALIAS)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
