@@ -183,6 +183,18 @@ void norrath_web_construct(void* web, int first, int second);
 extern unsigned char norrath_ctors_lava_wraith_view_42c228[];
 extern unsigned char norrath_ctors_lava_wraith_view_44b350[];
 unsigned norrath_construct_SpiderQueen(void* object, const void* point, short type, char** arguments);
+// Original strticmp__FPCcT0 at 0x155ab8, initType__14WoodElfSoldier at 0x249c28 and
+// setState__14WoodElfSoldieri at 0x248690. Not defined here.
+int norrath_strticmp(const char* left, const char* right);
+void norrath_wood_elf_soldier_init_type(void* object);
+void norrath_wood_elf_soldier_set_state(void* object, int state);
+extern unsigned char norrath_ctors_lava_wraith_view_42dc40[];
+extern unsigned char norrath_ctors_lava_wraith_view_44af90[];
+extern unsigned char norrath_ctors_lava_wraith_view_474540[];
+extern unsigned char norrath_ctors_lava_wraith_view_474550[];
+extern unsigned char norrath_ctors_lava_wraith_view_474560[];
+extern unsigned char norrath_ctors_lava_wraith_view_474570[];
+unsigned norrath_construct_WoodElfSoldier(void* object, const void* point, short type, char** arguments, char* name);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
