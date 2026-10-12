@@ -3602,3 +3602,4 @@ and no startup stage has executed.
 - 2026-10-12 14:28 CDT — `agents/inventory-items` — 1686 unresolved imports
 - 2026-10-12 14:31 CDT — `agents/save-and-quests` — 1679 unresolved imports
 - 2026-10-12 14:36 CDT — `agents/prop-poke-clone` — 1656 unresolved imports
+- 2026-10-12 14:38 CDT — `agents/prop-run-draw` — 1658 unresolved imports
