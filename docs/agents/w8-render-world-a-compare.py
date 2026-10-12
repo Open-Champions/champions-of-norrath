@@ -146,7 +146,7 @@ class Stubs:
         sp = self.spec[name]
 
         def h(m):
-            entry = [name] + [m.g32(4 + i) for i in range(sp.get('nargs', 0))] + [m.f[12 + i] for i in range(sp.get('nf', 0))]
+            entry = [name] + [m.g32(4 + i) for i in sp.get('regs', range(sp.get('nargs', 0)))] + [m.f[12 + i] for i in range(sp.get('nf', 0))]
             for reg, n in sp.get('peek', []):
                 entry.append(m.read(m.g32(reg), n))
             for reg in sp.get('str', []):
@@ -507,6 +507,45 @@ def scenario_floor_clear(rng):
 
 reg('floorClear__Fv', 0x191DE0, ['w8-render-world-a-floor-clear/floor_clear.cpp', 'game-floor-clear-source/floor_clear.cpp'],
     scenario_floor_clear, stubs=MEMSET, stub_addr=MEMSET_ADDR, alias=FLOOR_ALIAS)
+
+
+def sector_effect(rng, m):
+    buf = m.g32(6)
+    for i in range(2048):
+        m.w8(buf + i, rng.randrange(256) if rng.random() < 0.5 else 0)
+    pos = 0
+    if rng.random() < 0.15:
+        m.w8(buf, 0)
+        return
+    for _ in range(rng.choice([1, 2, 3, 6, 12])):
+        nlen = rng.choice([0, 1, 5, 12, 15, 30])
+        rl = 34 + nlen + rng.choice([0, 0, 1, 4])
+        if pos + rl + 1 >= 2048:
+            break
+        m.w8(buf + pos, rl)
+        m.w8(buf + pos + 32, nlen)
+        for k in range(nlen):
+            m.w8(buf + pos + 33 + k, rng.randrange(1, 256))
+        pos += rl
+    m.w8(buf + pos, 0)
+
+
+LOADDIR_STUBS = {'sceCdRead': dict(regs=[0, 1, 3], effect=sector_effect, ret=lambda r, m: 1),
+                 'sceCdSync': dict(nargs=1, ret=lambda r, m: 0),
+                 'strcpy': dict(regs=[0], str=[5], effect=lambda r, m: [m.w8(m.g32(4) + i, m.u8(m.g32(5) + i)) for i in range(len(cstr(m, m.g32(5), 400)) + 1)] and None)}
+LOADDIR_ADDR = {'sceCdRead': 0x2E38E8, 'sceCdSync': 0x2E2ED8, 'strcpy': 0x304640}
+
+
+def scenario_load_directory(rng):
+    mem = {}
+    d = ARENA
+    fill(rng, mem, d, 24580)
+    n = rng.choice([0, 1, 2, 3])
+    return {'mem': mem, 'args': [d, rng.randrange(0, 1 << 20), n], 'compare': list(range(d, d + 24580)), 'steps': 3000000}
+
+
+reg('loadDirectory__FP9directoryii', 0x164C70, 'w8-render-world-a-load-directory/load_directory.cpp', scenario_load_directory,
+    stubs=LOADDIR_STUBS, stub_addr=LOADDIR_ADDR)
 
 
 if __name__ == '__main__':
