@@ -1,4 +1,4 @@
-// Observed scePadPortOpen at 0x002d3710, 488 bytes.
+// Observed scePadPortOpen at 0x002d3710, 484 bytes.
 //
 // A buffer address with any of the low six bits set prints the libpad
 // alignment message (only while the isWarning word at 0x004448fc is nonzero)

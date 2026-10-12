@@ -1,5 +1,5 @@
 // Observed soundPlaySequence__FP15AnimationHeaderP10GameObjectf at
-// 0x0024d308, 496 bytes.
+// 0x0024d308, 492 bytes.
 //
 // A null header returns -1. The group byte is header+60. All 32 sequence
 // records (76 bytes each, 0x007d8110) are scanned; a record whose byte +4 is

@@ -1,4 +1,4 @@
-// Observed sceMtapInit at 0x002d4840, 580 bytes.
+// Observed sceMtapInit at 0x002d4840, 576 bytes.
 //
 // sceSifInitRpc(0) runs first. Five RPC clients are then bound in order with
 // sceSifBindRpc and mode 0: port_open (0x008ddb40) with id 0x80000901,

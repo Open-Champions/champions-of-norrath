@@ -1,4 +1,4 @@
-// Observed soundComputeSequenceLength__FP15AnimationHeader at 0x0024c4c0, 316 bytes.
+// Observed soundComputeSequenceLength__FP15AnimationHeader at 0x0024c4c0, 308 bytes.
 // The header word at +56 points at 28-byte key entries that end at a first
 // word above 0x7ffffffe; a null pointer returns 0. Each entry starts with an
 // integer time that is converted to float and multiplied by the word

@@ -1,4 +1,4 @@
-// Observed soundPlaySound__FP10_vagHeaderP6Point3fff at 0x0024c6a8, 1384 bytes.
+// Observed soundPlaySound__FP10_vagHeaderP6Point3fff at 0x0024c6a8, 1380 bytes.
 // Arguments after the header and optional position are three floats: gain
 // (a), volume scale (b), and delay seconds (c). All data below is by address;
 // names are the executable's symbol names.
