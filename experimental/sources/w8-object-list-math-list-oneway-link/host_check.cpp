@@ -4,7 +4,7 @@
 #include <cstring>
 #include "../w8-object-list-math-common/list_types.hpp"
 
-extern "C" ListNode* norrath_constructor_list_pool_view = nullptr;
+extern "C" ListNode* freeNodes = nullptr;
 extern "C" ListNode* listOnewayLink__FP8ListHeadT0Pv(ListHead*, ListHead*, void*);
 
 static int failures = 0;
@@ -19,7 +19,7 @@ int main() {
     ListNode pool[4];
     std::memset(pool, 0xee, sizeof pool);
     for (int i = 0; i < 4; ++i) pool[i].next = i < 3 ? &pool[i + 1] : nullptr;
-    norrath_constructor_list_pool_view = &pool[0];
+    freeNodes = &pool[0];
 
     ListNode resident;
     std::memset(&resident, 0, sizeof resident);
@@ -30,7 +30,7 @@ int main() {
 
     ListNode* first = listOnewayLink__FP8ListHeadT0Pv(&head_a, &head_b, &payload);
     expect(first == &pool[0], "first node comes off the front of the free stack");
-    expect(norrath_constructor_list_pool_view == &pool[2], "two nodes were taken");
+    expect(freeNodes == &pool[2], "two nodes were taken");
     expect(first->flags == 0 && pool[1].flags == 0, "popped nodes have their halfword cleared");
     expect(head_a.first == first && first->next == &resident, "first node leads the first head");
     expect(resident.prev == first, "old first node now points back at the new node");
@@ -45,12 +45,12 @@ int main() {
     ListNode* again = listOnewayLink__FP8ListHeadT0Pv(&head_a, &head_b, nullptr);
     expect(again == &pool[2] && head_a.first == again && again->next == first, "front insertion on head a");
     expect(first->prev == again && head_b.first == &pool[3] && pool[3].next == &pool[1], "front insertion on head b");
-    expect(pool[1].prev == &pool[3] && norrath_constructor_list_pool_view == nullptr, "chain repaired, stack drained");
+    expect(pool[1].prev == &pool[3] && freeNodes == nullptr, "chain repaired, stack drained");
 
     // Both nodes on one head: the second push sees the first.
     ListNode extra[2] = {};
     extra[0].next = &extra[1];
-    norrath_constructor_list_pool_view = &extra[0];
+    freeNodes = &extra[0];
     ListHead shared = {nullptr};
     ListNode* n = listOnewayLink__FP8ListHeadT0Pv(&shared, &shared, nullptr);
     expect(shared.first == &extra[1] && extra[1].next == n && n->next == nullptr, "same head receives both nodes in order");

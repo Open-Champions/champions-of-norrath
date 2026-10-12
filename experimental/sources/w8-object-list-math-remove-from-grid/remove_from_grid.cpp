@@ -6,19 +6,19 @@
 // node when there is one; the push stores the head address as the previous
 // word and repairs the old first node. The object's own grid node is untouched.
 // Inferred: the partner is the off-grid twin that listOnewayLink pairs with the
-// grid node. The authored view of the head is norrath_constructor_default_head_view.
+// grid node. The head is the original-named offTheGrid defined by the particles package.
 #include "../w8-object-list-math-common/object_types.hpp"
 
 struct GameObject : GameObjectLinks {};
 
-extern "C" ListNode* norrath_constructor_default_head_view;
+extern "C" ListNode* offTheGrid;
 
 extern "C" void objectRemoveFromGrid__FP10GameObject(GameObject* object) {
     ListNode* node = object->grid_node->partner;
     node->prev->next = node->next;
     if (node->next) node->next->prev = node->prev;
-    node->prev = reinterpret_cast<ListNode*>(&norrath_constructor_default_head_view);
-    node->next = norrath_constructor_default_head_view;
-    norrath_constructor_default_head_view = node;
+    node->prev = reinterpret_cast<ListNode*>(&offTheGrid);
+    node->next = offTheGrid;
+    offTheGrid = node;
     if (node->next) node->next->prev = node;
 }

@@ -10,14 +10,14 @@
 // store. Unknown: who fills the stack.
 #include "../w8-object-list-math-common/list_types.hpp"
 
-// The reviewed view of freeNodes published by object-infra-state.
-extern "C" ListNode* norrath_constructor_list_pool_view;
+// freeNodes at 0x486a6c, defined under its original name by the particles package.
+extern "C" ListNode* freeNodes;
 
 namespace {
 ListNode* take_free_node() {
-    ListNode* node = norrath_constructor_list_pool_view;
+    ListNode* node = freeNodes;
     if (node) {
-        norrath_constructor_list_pool_view = node->next;
+        freeNodes = node->next;
         node->flags = 0;
     }
     return node;
