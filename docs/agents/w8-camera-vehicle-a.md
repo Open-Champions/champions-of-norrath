@@ -28,7 +28,7 @@ one or more deliberately wrong variants of the source that the check rejected
 | `BuildMatrix__6CamerafffP6Point3` | `0x0026c190` | 828 | `camera-build-matrix` |
 | `SetHold__7Vehiclei` | `0x00277b80` | 8 | `set-hold` |
 | `Reset__5Wheel` | `0x002783a8` | 20 | `wheel-reset` |
-| `doMyUniqueForces__7Vehicle` | base class | | `vehicle-unique-forces` |
+| `doMyUniqueForces__7Vehicle` | `0x003165e8` | 8 | `vehicle-unique-forces` |
 | `AddNPCDriver__7VehicleP3NPC` | `0x00277ad8` | 40 | `add-npc-driver` |
 | `GetNPCPosition__7VehicleP6Point3Ps` | `0x002779d0` | 84 | `get-npc-position` |
 | `GetPositionAndYaw__7VehicleP6Point3T1Ps` | `0x00277a28` | 176 | `get-position-and-yaw` |
@@ -44,9 +44,9 @@ one or more deliberately wrong variants of the source that the check rejected
 | `_GLOBAL_$I$__7VehicleG6Point3sPPci` | `0x00278460` | 32 (+652 helper) | `vehicle-global-init` |
 
 Directory names above are under `experimental/sources/w8-camera-vehicle-a-`.
-The first eight rows' addresses for the first-session commits (yaw, pitch
-accessors, SetHold, Reset__5Wheel, the base `doMyUniqueForces`) are recorded in
-the comment at the top of each source.
+The accessors, `SetHold`, `Reset__5Wheel`, the base `doMyUniqueForces` and
+`AddNPCDriver` were committed by an earlier interrupted run of this package.
+I reviewed their sources and kept them.
 
 Observed findings worth stating once:
 
@@ -75,11 +75,11 @@ Observed findings worth stating once:
   meaning of the other camera fields are not established.
 - `Push__6Camera` saves state in a slot at `+354..+376`; no matching restore
   was examined.
-- The table at `vehicle+960` with count at `+976` is searched for a player
+- `GetPlayerPosition__7Vehicle...` searches the table at `vehicle+960` with count at `+976` for a player
   value, and `vehicle+2088` holds a pointer table indexed the same way.
-  `BuildMatrix`'s `sqrt` replacement in `doMyUniqueForces__8SkulBoat` (square sum above zero in place
-  of the observed `sqrt.s` above zero) is an equivalence argument, not a
-  comparison on the EE.
+- `doMyUniqueForces__8SkulBoat` tests the squared length above zero where the
+  original takes `sqrt.s` and tests that above zero. That is an equivalence
+  argument, not a comparison on the EE.
 
 ## Build-plan entries needed
 
