@@ -1,6 +1,6 @@
 # Session roster
 
-Package `agents/session-roster`. Addresses are from the pinned `SLUS_205.65` image. Everything below was read from that image's code and data and compiled with the reviewed EE toolchain. Nothing was executed on an EE or in the game. The partial link before this package listed 950 unresolved imports (908 inputs); the same link with these 11 units added (private plan copy, outside git) lists 939.
+Package `agents/session-roster`. Addresses are from the pinned `SLUS_205.65` image. Everything below was read from that image's code and data and compiled with the reviewed EE toolchain. Nothing was executed on an EE or in the game. The partial link before this package listed 950 unresolved imports (908 inputs); the same link with these 13 units added (private plan copy, outside git) lists 939.
 
 ## Functions
 
@@ -64,7 +64,7 @@ Profile `authored_cpp`; the integrator assigns `input_order` and must add the so
 
 ## Authored but never executed
 
-All eleven source units that contain functions or data above were compiled with the reviewed EE toolchain and linked into the partial relocatable object only. Host checks ran on this machine against stubs. No EE, original-process or gameplay run. `playerSelectionStart` and `playerInit` were never run against the real callees.
+All thirteen source units that contain functions or data above were compiled with the reviewed EE toolchain and linked into the partial relocatable object only. Host checks ran on this machine against stubs. No EE, original-process or gameplay run. `playerSelectionStart` and `playerInit` were never run against the real callees.
 
 ## Unknown
 
