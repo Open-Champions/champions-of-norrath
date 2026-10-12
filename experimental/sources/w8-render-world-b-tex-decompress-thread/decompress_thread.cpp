@@ -63,7 +63,7 @@ extern "C" unsigned norrath_texdec_read_timer();
 #define TEXDEC_TIMER (*reinterpret_cast<volatile unsigned*>(0x10000000u))
 #endif
 
-struct Packet {
+struct TexDecodePacket {
     unsigned char* cursor;
     unsigned char* unknown;
     unsigned char* last;
@@ -86,7 +86,7 @@ extern unsigned char unscrambleTable[];
 
 int SleepThread();
 int vqDecompress__FP8_texturei(void* texture, int extra);
-void putBlock__FP8_textureP6PacketPPP9uncompMapPPii(void* texture, Packet* packet, void*** list, int** slot, int last);
+void putBlock__FP8_textureP6PacketPPP9uncompMapPPii(void* texture, TexDecodePacket* packet, void*** list, int** slot, int last);
 }
 
 namespace {
@@ -122,7 +122,7 @@ extern "C" void texDecompressThread__FPv(void*) {
     static int x1, y1, x2, y2, y;
     static signed char tab[5] = {-1, -16, -17, -15, -2};
 
-    Packet packet;
+    TexDecodePacket packet;
     unsigned char buffer[256];
     unsigned char* stream = nullptr;
     unsigned char* context = nullptr;

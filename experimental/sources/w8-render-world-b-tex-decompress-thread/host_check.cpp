@@ -3,7 +3,7 @@
 #include <cstring>
 #include <vector>
 
-struct Packet {
+struct TexDecodePacket {
     unsigned char* cursor;
     unsigned char* unknown;
     unsigned char* last;
@@ -59,7 +59,7 @@ extern "C" int vqDecompress__FP8_texturei(void* texture, int extra) {
     ++vq_calls; vq_texture = static_cast<unsigned char*>(texture); vq_extra = extra;
     return vq_result;
 }
-extern "C" void putBlock__FP8_textureP6PacketPPP9uncompMapPPii(void* texture, Packet* packet, void*** list, int** slot, int last) {
+extern "C" void putBlock__FP8_textureP6PacketPPP9uncompMapPPii(void* texture, TexDecodePacket* packet, void*** list, int** slot, int last) {
     ++put_calls;
     put_last_flags = (put_last_flags << 1) | (last ? 1 : 0);
     if (texture == nullptr) put_last_flags += 1000;
