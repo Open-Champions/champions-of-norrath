@@ -69,8 +69,8 @@ extern "C" unsigned norrath_construct_NPC(void* object, const void* point, short
         (void)sprintf(texture_name, reinterpret_cast<const char*>(norrath_ctors_lava_wraith_view_485820), base_name);
     }
     void* const texture = norrath_lump_find_resource(lump_name, texture_name);
-    norrath_actor_animation_initialize(bytes(a + 288u));
     store_pointer(a + 1060u, texture);
+    norrath_actor_animation_initialize(bytes(a + 288u));
     void* const idle = norrath_object_find_animation(object, reinterpret_cast<char*>(norrath_ctors_lava_wraith_view_485828));
     if (idle != nullptr) {
         norrath_actor_animation_add(bytes(a + 288u), idle, 1);
