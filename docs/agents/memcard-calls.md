@@ -260,4 +260,4 @@ Every function is checked only by its host contract and by compiling and linking
 
 ## Unknown
 
-Whether a reader consumes a command-queue slot during the full-queue countdown in `MCA_Cmd__Fiiii`. Whether the asynchronous mode handlers and `MCA_Process__FPi` write the state bytes in the order the browsers assume. See the Unknown lines in each source header for the rest.
+Whether a reader consumes a command-queue slot during the full-queue countdown in `MCA_Cmd__Fiiii`. See the Unknown lines in each source header for the rest.
