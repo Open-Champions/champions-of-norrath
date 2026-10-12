@@ -34,10 +34,10 @@ int main() {
     put(model + 12, low(chunk_source), 4);
     o.w(12, 0x20);
     const unsigned r = norrath_construct_Savepoint(o.b, pt, (short)0x8001, args);
-    expect_log({"GameObject map=1 args=1", "lightAdd 136", "lightDeactivate 136 flags=00010028 b196=5a",
+    expect_log({"GameObject map=1 args=1", "lightAdd 136", "lightDeactivate 136 flags=00100028 b196=5a",
                 "icon p=01 kind=0 name=1 type=0 0000", "animInit 76", "chunks 1 0", "run b196=5a"}, "savepoint");
     for (int i = 0; i < 12; ++i) { want.b[16 + i] = pt[i]; want.b[184 + i] = pt[i]; }
-    want.w(36, model_low); want.w(12, 0x00010028u); want.w(72, low(norrath_ctors_lava_wraith_view_449550));
+    want.w(36, model_low); want.w(12, 0x00100028u); want.w(72, low(norrath_ctors_lava_wraith_view_449550));
     want.w(81, 1, 1); want.w(145, 0, 1); want.w(144, 0, 1);
     volatile float zero = 0.0f; const float q = 1.0f / zero;
     want.w(176, fbits(q)); want.w(180, 0); want.w(164, 0); want.w(172, 0); want.w(168, fbits(1.0f));

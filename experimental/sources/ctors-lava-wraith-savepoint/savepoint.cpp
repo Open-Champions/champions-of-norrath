@@ -7,7 +7,7 @@
 // +176, zeros at +164, +172 and +180, 1.0f at +168 (as a float word), halves
 // 300 at +158 and +150, -16 at +160 and +152, 140 at +146, +148, +154 and
 // +156, and byte +144 zero, then lightAdd receives +136. Byte +40 becomes 36,
-// flags gain 0x00010008, +132 is cleared, bytes +197/+198 are cleared and
+// flags gain 0x00100008, +132 is cleared, bytes +197/+198 are cleared and
 // lightDeactivate receives +136. addIcon receives the point snapshot, kind 0,
 // the text at 0x4853b8 and zeros. The animation state at +76 is initialised,
 // the 64-bit modelGetActiveChunks (word at model+12, 0) goes to +120, the type
@@ -41,7 +41,7 @@ extern "C" unsigned norrath_construct_Savepoint(void* object, const void* point,
     write_byte(light + 8u, 0u);
     norrath_light_add(pointer(light));
     write_byte(a + 40u, 36u);
-    const unsigned flags = read_word(a + 12u) | 0x00010008u;
+    const unsigned flags = read_word(a + 12u) | 0x00100008u;
     write_word(a + 132u, 0u);
     write_word(a + 12u, flags);
     write_byte(a + 197u, 0u);
