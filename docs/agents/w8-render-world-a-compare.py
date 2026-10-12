@@ -441,6 +441,46 @@ reg('lumpQuery__FPc', 0x166E30, 'w8-render-world-a-lump-query/lump_query.cpp', s
     stubs={'strcmp': STRSTUBS['strcmp']}, stub_addr=STRSTUB_ADDR, returns=True)
 
 
+def nm_effect(rng, m):
+    if rng.random() < 0.25:
+        a = sym('nmLumps')
+        m.w32(a, m.u32(a) + rng.choice([-1, 1, 0]))
+
+
+UNLOAD_STUBS = dict(STRSTUBS)
+for _n in ('freeLump__FPv', 'memFree__FPv', 'textureFreeTexture__FP8_texture', 'worldFreeWorld__FP12_worldHeader',
+           'textRemoveText__FPv'):
+    UNLOAD_STUBS[_n] = dict(nargs=1, effect=nm_effect)
+UNLOAD_ADDR = dict(STRSTUB_ADDR, freeLump__FPv=0x1646F8, memFree__FPv=0x144558,
+                   textureFreeTexture__FP8_texture=0x1729C8, worldFreeWorld__FP12_worldHeader=0x1752F8,
+                   textRemoveText__FPv=0x166F98)
+
+
+def scenario_lump_unload(rng):
+    mem = {}
+    base = sym('lumps')
+    n = rng.choice([0, 1, 2, 3, 5, 7])
+    put32(mem, sym('nmLumps'), n)
+    texts = [b'a.tex', b'b.world', b'c.uni', b'd.bin', b'noext', b'e.tex.uni', b'f.TEX', b'.world']
+    ptrs = []
+    for i in range(8):
+        r = base + 40 * i
+        fill(rng, mem, r, 40)
+        data = STRARENA + 0x1000 * i
+        ptrs.append(data)
+        put_str(mem, data, rng.choice(texts))
+        put32(mem, r + 16, rng.choice([data, data, data, ptrs[0]]))
+        put32(mem, r + 20, rng.choice([0, 1, 2, 3, 0xFFFFFFFF, 0xFFFFFFFE]))
+        put32(mem, r + 36, rng.choice([0, 0, 1, 0xFFFFFFFF]))
+    arg = rng.choice(ptrs[:max(n, 1)] + [STRARENA + 0x9000, ptrs[-1]])
+    put_str(mem, STRARENA + 0x9000, b'zzz.tex')
+    return {'mem': mem, 'args': [arg], 'compare': list(range(base, base + 320)) + list(range(sym('nmLumps'), sym('nmLumps') + 4))}
+
+
+reg('lumpUnload__FPv', 0x164800, 'w8-render-world-a-lump-unload/lump_unload.cpp', scenario_lump_unload,
+    stubs=UNLOAD_STUBS, stub_addr=UNLOAD_ADDR)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
