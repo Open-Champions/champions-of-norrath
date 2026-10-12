@@ -82,6 +82,16 @@ extern unsigned char norrath_ctors_ant_lantern_view_485420[];
 extern unsigned char norrath_ctors_ant_lantern_view_485438[];
 extern unsigned char norrath_ctors_ant_lantern_view_485440[];
 extern unsigned char norrath_ctors_ant_lantern_view_4844c0[];
+unsigned norrath_construct_Gnome(void* object, const void* point, short type, char** arguments, char* name);
+int strticmp__FPCcT0(const char* left, const char* right);
+void initType__5Gnome(void* object);
+extern unsigned char norrath_ctors_ant_lantern_view_42ba00[];
+extern unsigned char norrath_ctors_ant_lantern_view_44b9f0[];
+extern unsigned char norrath_ctors_ant_lantern_view_480b10[];
+extern unsigned char norrath_ctors_ant_lantern_view_480b14[];
+extern unsigned char norrath_ctors_ant_lantern_view_46f310[];
+extern unsigned char norrath_ctors_ant_lantern_view_46f320[];
+extern unsigned char norrath_ctors_ant_lantern_view_46f330[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
