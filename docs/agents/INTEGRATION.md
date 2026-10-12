@@ -3710,6 +3710,36 @@ Opened: `MCA_Busy__Fv`, `MCA_DirContents`, `MCA_Result`, `__extendsfdf2`,
 `texturePrepareToLockCacheBuffer__Fv`, `textureReleaseCacheBuffer__Fv`,
 `unModifyRamSlotForNetSave__Fv`, `undoBrowser__Fv`.
 
+## agents/w8-pad-memcard-b
+
+Merged (the branch notes carry the five summary sections; their plan table is
+plain text without backticks). Eleven units with fresh `input_order` values
+1850 through 1860: 6 emitted functions (4488 compiled body bytes, not
+original-byte matches) and data words. All 11 host checks build and exit 0
+here (11 of 11). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1446 function bodies, 1861
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1607 |
+| After | 1615 |
+| Closed | 11 |
+| Opened | 19 |
+
+Closed: `padBigRumble__Fiff`, `padClear__Fv`, `padFrame.756`,
+`padGetUnprocessedData__FiP18padUnprocessedData`, `padIndexMap`,
+`padProcessData__FP3padP18padUnprocessedDataP12padStateData`,
+`resetQuickLoad__Fv`, `saveConfigEndGame`, `tapCount`, `updateRamSlot__Fii`,
+`whichPad`.
+
+Opened: `MC_SaveLevelEntities__FPc`, `Save__6CameraPc`, `actAlignData`,
+`actSendData`, `convertPointersToIndicies__Fi`, `jumpGateSave__FPc`,
+`needActAlign`, `padFilter`, `processAnalogInput__FiiPfT2`, `rdata`,
+`rumphole`, `scePadEnterPressMode`, `scePadInfoPressMode`, `scePadRead`,
+`scePadSetActAlign`, `scePadSetActDirect`, `scePadSetMainMode`,
+`scriptGameStateEntry__FiPi`, `startInhibit`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

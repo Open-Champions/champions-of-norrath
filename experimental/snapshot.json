@@ -23730,6 +23730,135 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-pad-memcard-a-async-change-players/async_change_players.cpp"
+    },
+    {
+      "input_order": 1852,
+      "component": "w8-pad-memcard-b-reset-quick-load",
+      "object_name": "reset_quick_load.o",
+      "private_object_sha256": "43875137e9e5f4a06a638c7aabe1bbb9958cb0e19171096e052c6385f0a0c52c",
+      "emitted_functions": [
+        {
+          "name": "resetQuickLoad__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-reset-quick-load/reset_quick_load.cpp"
+    },
+    {
+      "input_order": 1853,
+      "component": "w8-pad-memcard-b-pad-clear",
+      "object_name": "pad_clear.o",
+      "private_object_sha256": "85fc63a6e85d604a42d80c0426745d3c88b0a12a0729f2376de4c7b39a281c79",
+      "emitted_functions": [
+        {
+          "name": "padClear__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-clear/pad_clear.cpp"
+    },
+    {
+      "input_order": 1854,
+      "component": "w8-pad-memcard-b-pad-big-rumble",
+      "object_name": "pad_big_rumble.o",
+      "private_object_sha256": "79ad0bf7958334c011423bae7857bdc51d1c282ea8862ac98a7c65211d1394fd",
+      "emitted_functions": [
+        {
+          "name": "padBigRumble__Fiff",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-big-rumble/pad_big_rumble.cpp"
+    },
+    {
+      "input_order": 1855,
+      "component": "w8-pad-memcard-b-pad-get-unprocessed",
+      "object_name": "pad_get_unprocessed.o",
+      "private_object_sha256": "f90aaec32a6f2ce0dada9dd0ede55daadd5d4c1a0840d26e71ee17352de992e4",
+      "emitted_functions": [
+        {
+          "name": "padGetUnprocessedData__FiP18padUnprocessedData",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-get-unprocessed/pad_get_unprocessed.cpp"
+    },
+    {
+      "input_order": 1856,
+      "component": "w8-pad-memcard-b-pad-process-data",
+      "object_name": "pad_process_data.o",
+      "private_object_sha256": "5fcf0d72ad198adda013f35e66501067faa42d15ece674c2779273b1d5db3218",
+      "emitted_functions": [
+        {
+          "name": "padProcessData__FP3padP18padUnprocessedDataP12padStateData",
+          "compiled_body_bytes": 2172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-process-data/pad_process_data.cpp"
+    },
+    {
+      "input_order": 1857,
+      "component": "w8-pad-memcard-b-update-ram-slot",
+      "object_name": "update_ram_slot.o",
+      "private_object_sha256": "5e341697bf1a9a4166c3c9f55c59ba17e426a182f47d4a09bd8cce8146a7a656",
+      "emitted_functions": [
+        {
+          "name": "updateRamSlot__Fii",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-update-ram-slot/update_ram_slot.cpp"
+    },
+    {
+      "input_order": 1858,
+      "component": "w8-pad-memcard-b-tap-count",
+      "object_name": "tap_count.o",
+      "private_object_sha256": "d7360fa7c9fa2f62a0bc7c3ad803dfeb7c170f411886ff4611b1ae83afa7e6d6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-tap-count/tap_count.cpp"
+    },
+    {
+      "input_order": 1859,
+      "component": "w8-pad-memcard-b-pad-frame",
+      "object_name": "pad_frame.o",
+      "private_object_sha256": "532963096e92036e964f9557fb6633b7ded5b0df20b353f57508a806af8a11b7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-frame/pad_frame.cpp"
+    },
+    {
+      "input_order": 1860,
+      "component": "w8-pad-memcard-b-pad-index-map",
+      "object_name": "pad_index_map.o",
+      "private_object_sha256": "7e36e4bb3a7acc1eb78f66e03f0dc8e84021b2f8729527f10d3562af699d5202",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-pad-index-map/pad_index_map.cpp"
+    },
+    {
+      "input_order": 1861,
+      "component": "w8-pad-memcard-b-which-pad",
+      "object_name": "which_pad.o",
+      "private_object_sha256": "8093c4299c8f1745076d7e5e29a0375948f370f8fcd971032f65e9db9a844d3d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-which-pad/which_pad.cpp"
+    },
+    {
+      "input_order": 1862,
+      "component": "w8-pad-memcard-b-save-config-end-game",
+      "object_name": "save_config_end_game.o",
+      "private_object_sha256": "1e17d8edcac476071145458514f5c327b23ad204423953b7efdb896b1ed3c0ba",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-pad-memcard-b-save-config-end-game/save_config_end_game.cpp"
     }
   ],
   "drafts": [
@@ -27886,7 +28015,29 @@
     "sources/w8-pad-memcard-a-frontend-run-controller-config/frontend_run_controller_config.cpp": "abc1392436e8bf3c092afa17dc4b6b4a3bd8bb8f103038da234955e491ed39df",
     "sources/w8-pad-memcard-a-frontend-run-controller-config/host_contract.cpp": "471266e4513f1a0deff97c2be26fe41c1d8d44e1a482fabc04f04d7c9d68fc87",
     "sources/w8-pad-memcard-a-async-change-players/async_change_players.cpp": "1d9ad05cdb508042c9a40bb29d5254a6868e1523f1c4224d25d3063de7567853",
-    "sources/w8-pad-memcard-a-async-change-players/host_contract.cpp": "146f005be910da4217ce7e01bab7e01abee954badb0cd16ba108a843c1c85e77"
+    "sources/w8-pad-memcard-a-async-change-players/host_contract.cpp": "146f005be910da4217ce7e01bab7e01abee954badb0cd16ba108a843c1c85e77",
+    "sources/w8-pad-memcard-b-reset-quick-load/reset_quick_load.cpp": "345b1599fb2d6a284345a5d26eed57dcb8faef16788993a82225593179260536",
+    "sources/w8-pad-memcard-b-reset-quick-load/host_contract.cpp": "3cb9631a8ad34438ee5f0dac40737a811e436101770a1e44420e33cdf1345a52",
+    "sources/w8-pad-memcard-b-pad-clear/pad_clear.cpp": "2fa5722e8a3a0a18d2ddd054c7b2f555a524205d7177cdf7247287aeba3531ba",
+    "sources/w8-pad-memcard-b-pad-clear/host_contract.cpp": "ed9ba180acc5961c53f130250d7936ea19c66d76687ae483d5c97968163ce2ea",
+    "sources/w8-pad-memcard-b-pad-big-rumble/pad_big_rumble.cpp": "b24d0d584957915e5379dc5691a5c88c409b3866986d4af283c2bf698e0a09ad",
+    "sources/w8-pad-memcard-b-pad-big-rumble/host_contract.cpp": "27356827c8fa8d291c942b2871722e7d94659d402836ba4bc4ac16f4d561dc60",
+    "sources/w8-pad-memcard-b-pad-get-unprocessed/pad_get_unprocessed.cpp": "bd2f4ffdd00703fb8bb202ddf94facae6b3b4ff1d27770e85e9271232bac5a11",
+    "sources/w8-pad-memcard-b-pad-get-unprocessed/host_contract.cpp": "d75e19890c9a621fb4f793de9b20d1773bc5888838a0dd8b169094464af3d090",
+    "sources/w8-pad-memcard-b-pad-process-data/pad_process_data.cpp": "bb2a67bf488369b8e85bc805878baf5e30fb2402f3b20ae86ca2905138650fd4",
+    "sources/w8-pad-memcard-b-pad-process-data/host_contract.cpp": "b5798f2813e2c04dea13dc5b0c380ae67d2313526f2c92e430f09ddabac266ab",
+    "sources/w8-pad-memcard-b-update-ram-slot/update_ram_slot.cpp": "83d3f6dfd3f221413008ee2453d4dcd748fdcafde3b5d8b54ded85b98e4ec93b",
+    "sources/w8-pad-memcard-b-update-ram-slot/host_contract.cpp": "6d5cd0d9f3e371bf893fde8ca780e22ee0b07a9097bd532a063522155e9a00df",
+    "sources/w8-pad-memcard-b-tap-count/tap_count.cpp": "f16c9846ee0623218071e98d738d9e952eb160b0fda40732e408b0721620e84e",
+    "sources/w8-pad-memcard-b-tap-count/host_contract.cpp": "6262b8eb0553d574d6df5dfa0b0aee10ced6d8418123ff8d809c0f713171ee15",
+    "sources/w8-pad-memcard-b-pad-frame/pad_frame.cpp": "db2d845c49303dcb50ee96b1cb02efdb486a1cc469da622e22ed64202535707d",
+    "sources/w8-pad-memcard-b-pad-frame/host_contract.cpp": "4f2386d608f444bf49bc8f4c9a38c7ab383de44527a80fee2216a3a0a2838f3c",
+    "sources/w8-pad-memcard-b-pad-index-map/pad_index_map.cpp": "c1764a9120c28221db40f5dd31af378b6f70a42af180154f3309fbf498dd8e49",
+    "sources/w8-pad-memcard-b-pad-index-map/host_contract.cpp": "13376f051f7141dc12057d25279242d01d67a3fd4a78fece5632de715c395941",
+    "sources/w8-pad-memcard-b-which-pad/which_pad.cpp": "ca1688d752a45d6239b39ebe724de1981fcd88113b995169a309f8b686237ded",
+    "sources/w8-pad-memcard-b-which-pad/host_contract.cpp": "feb91e7d8a0265600bc09b86d8ca6287bfa13b39714fd96cfa592af452b038dc",
+    "sources/w8-pad-memcard-b-save-config-end-game/save_config_end_game.cpp": "bd6679fd5149088fe1294347dddf9dd3593992f256939ac36081bdfd2ec154bf",
+    "sources/w8-pad-memcard-b-save-config-end-game/host_contract.cpp": "3c106551fc519ce0782feb1cd9b44c066b07395f58f51dd7f63efd75e9da3490"
   },
   "additional_implementations": [
     {
@@ -28328,11 +28479,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1852,
-    "authored_default_inputs": 1850,
+    "selected_inputs": 1863,
+    "authored_default_inputs": 1861,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1442,
-    "compiled_body_bytes_from_accepted_inputs": 645832,
+    "emitted_function_definitions_including_helpers": 1448,
+    "compiled_body_bytes_from_accepted_inputs": 650320,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -28345,7 +28496,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1539
+    "package_selected_inputs": 1550
   },
   "startup_implementations": [
     {
@@ -52196,6 +52347,168 @@
       ],
       "host_files": [
         "sources/w8-pad-memcard-a-async-change-players/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-reset-quick-load/reset_quick_load.cpp",
+      "source_sha256": "345b1599fb2d6a284345a5d26eed57dcb8faef16788993a82225593179260536",
+      "object_sha256": "43875137e9e5f4a06a638c7aabe1bbb9958cb0e19171096e052c6385f0a0c52c",
+      "emitted_functions": [
+        {
+          "name": "resetQuickLoad__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-reset-quick-load/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-clear/pad_clear.cpp",
+      "source_sha256": "2fa5722e8a3a0a18d2ddd054c7b2f555a524205d7177cdf7247287aeba3531ba",
+      "object_sha256": "85fc63a6e85d604a42d80c0426745d3c88b0a12a0729f2376de4c7b39a281c79",
+      "emitted_functions": [
+        {
+          "name": "padClear__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-big-rumble/pad_big_rumble.cpp",
+      "source_sha256": "b24d0d584957915e5379dc5691a5c88c409b3866986d4af283c2bf698e0a09ad",
+      "object_sha256": "79ad0bf7958334c011423bae7857bdc51d1c282ea8862ac98a7c65211d1394fd",
+      "emitted_functions": [
+        {
+          "name": "padBigRumble__Fiff",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-big-rumble/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-get-unprocessed/pad_get_unprocessed.cpp",
+      "source_sha256": "bd2f4ffdd00703fb8bb202ddf94facae6b3b4ff1d27770e85e9271232bac5a11",
+      "object_sha256": "f90aaec32a6f2ce0dada9dd0ede55daadd5d4c1a0840d26e71ee17352de992e4",
+      "emitted_functions": [
+        {
+          "name": "padGetUnprocessedData__FiP18padUnprocessedData",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-get-unprocessed/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-process-data/pad_process_data.cpp",
+      "source_sha256": "bb2a67bf488369b8e85bc805878baf5e30fb2402f3b20ae86ca2905138650fd4",
+      "object_sha256": "5fcf0d72ad198adda013f35e66501067faa42d15ece674c2779273b1d5db3218",
+      "emitted_functions": [
+        {
+          "name": "padProcessData__FP3padP18padUnprocessedDataP12padStateData",
+          "compiled_body_bytes": 2172
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-process-data/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-update-ram-slot/update_ram_slot.cpp",
+      "source_sha256": "83d3f6dfd3f221413008ee2453d4dcd748fdcafde3b5d8b54ded85b98e4ec93b",
+      "object_sha256": "5e341697bf1a9a4166c3c9f55c59ba17e426a182f47d4a09bd8cce8146a7a656",
+      "emitted_functions": [
+        {
+          "name": "updateRamSlot__Fii",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "host_files": [
+        "sources/w8-pad-memcard-b-update-ram-slot/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-tap-count/tap_count.cpp",
+      "source_sha256": "f16c9846ee0623218071e98d738d9e952eb160b0fda40732e408b0721620e84e",
+      "object_sha256": "d7360fa7c9fa2f62a0bc7c3ad803dfeb7c170f411886ff4611b1ae83afa7e6d6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-b-tap-count/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-frame/pad_frame.cpp",
+      "source_sha256": "db2d845c49303dcb50ee96b1cb02efdb486a1cc469da622e22ed64202535707d",
+      "object_sha256": "532963096e92036e964f9557fb6633b7ded5b0df20b353f57508a806af8a11b7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-frame/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-pad-index-map/pad_index_map.cpp",
+      "source_sha256": "c1764a9120c28221db40f5dd31af378b6f70a42af180154f3309fbf498dd8e49",
+      "object_sha256": "7e36e4bb3a7acc1eb78f66e03f0dc8e84021b2f8729527f10d3562af699d5202",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-b-pad-index-map/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-which-pad/which_pad.cpp",
+      "source_sha256": "ca1688d752a45d6239b39ebe724de1981fcd88113b995169a309f8b686237ded",
+      "object_sha256": "8093c4299c8f1745076d7e5e29a0375948f370f8fcd971032f65e9db9a844d3d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-b-which-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-pad-memcard-b",
+      "source": "sources/w8-pad-memcard-b-save-config-end-game/save_config_end_game.cpp",
+      "source_sha256": "bd6679fd5149088fe1294347dddf9dd3593992f256939ac36081bdfd2ec154bf",
+      "object_sha256": "1e17d8edcac476071145458514f5c327b23ad204423953b7efdb896b1ed3c0ba",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-pad-memcard-b-save-config-end-game/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
