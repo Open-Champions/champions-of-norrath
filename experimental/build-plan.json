@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1457,
+  "default_authored_inputs": 1486,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -129,7 +129,7 @@
     "sources/cd-archive-lump-state/lump_state.cpp": "8589286206bb2d9b457ee6fea49da133c00922f88a3a4f58170bbf1ad7fd50b3",
     "sources/cd-archive-views/views.cpp": "7f0d88f9d9e74c570acad9e7bff8160aafc88ab00f4459316e907fbc24dc0a5d",
     "sources/ctors-ant-lantern-constructors/auto_chest_lp.cpp": "be93be3ab39e599d3b32a615ae8a30bf90c16db16df1c749feb7e8f497fd8001",
-    "sources/ctors-ant-lantern-constructors/detail.hpp": "e3fc83d133e1bf2462ff3072766329ad81533b60d3696f530a6e80095cd3140d",
+    "sources/ctors-ant-lantern-constructors/detail.hpp": "dedad055ae3c76926fed5499bf45a1a38d992026117123eb8e042d63965ed74b",
     "sources/data-views-symbols/norrath_actor_view_42b118.cpp": "fc4f0fbf6a17b470fcaaa73eb56e30bb87ba5cbdb796dc9bfa9cd8a32bdaaa08",
     "sources/data-views-symbols/norrath_actor_view_42b768.cpp": "4186e315568174b63c28472e6b0b3f63470d689b3a30cdbb5b1be4a4bb73b470",
     "sources/data-views-symbols/norrath_actor_view_42baa8.cpp": "35df379600a367754daa7796dc4a8648b22545f761eabe18190cfb2834b84bbb",
@@ -2194,7 +2194,36 @@
     "sources/level-anim-load-world-flags-word/storage.cpp": "71713aa33efb3534b88beb6a27505de5e382feb9a65edaaded4a66b2b1270e4d",
     "sources/level-anim-load-world-flags-word/storage.hpp": "d03b361b4224c4073d84b68b95bd929135262b29a62c1d45b90257ab47b94efa",
     "sources/level-anim-load-world-pointer-word/storage.cpp": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
-    "sources/level-anim-load-world-pointer-word/storage.hpp": "2cade5859b88f4436d8b092d388a8eb7f813138bb940baa1540674a0917b8308"
+    "sources/level-anim-load-world-pointer-word/storage.hpp": "2cade5859b88f4436d8b092d388a8eb7f813138bb940baa1540674a0917b8308",
+    "sources/ctors-ant-lantern-constructors/lamp.cpp": "e699562cf2b5bb3d1918610f405d29f70330a50bae094e4b1bc1758e6a98f3b1",
+    "sources/ctors-ant-lantern-constructors/lantern.cpp": "a19c0f92cf3c8633b7a42cf8c72ceed6ec7c38de5f099aa9295df8725874d9c8",
+    "sources/ctors-ant-lantern-constructors/generator.cpp": "7f5ef2c76055c9f88e97c130a144f6d0e52c25c8e0fbcc8ef89e3d801a651208",
+    "sources/ctors-ant-lantern-constructors/ice.cpp": "02e1e3cc3b8a05bae91577c5d9f9f20779c84923358bd7cd94fbea499713e4af",
+    "sources/ctors-ant-lantern-constructors/fire_fly.cpp": "4fdda530636f1af3b261899994e176027e7cf27457982fcc5bdbc4071e553a84",
+    "sources/ctors-ant-lantern-constructors/chest.cpp": "68fb4079e22d8db10461fc3457f9ab1ff8c5b3f49689b022f7100a33cd46ecba",
+    "sources/ctors-ant-lantern-constructors/gnome.cpp": "605178b3f8b63ab60387a138aac482b55578cbc21aa516741cd336e5a5a915e1",
+    "sources/ctors-ant-lantern-constructors/demon.cpp": "fed73d8ac1415bc0263573d0001c815f8879217ddffb4b374014780d765d7319",
+    "sources/ctors-ant-lantern-constructors/cyclops.cpp": "d43a3d3d210f1a9bb734209343f92db5f60b9dcc86c92f6d94586609296151a1",
+    "sources/ctors-ant-lantern-constructors/fire_beetle.cpp": "2c2b5af6cc978ec2b8280576a0cb391a4300899fa02606f5703de2ef2b4359de",
+    "sources/ctors-ant-lantern-constructors/auto_chest.cpp": "a921d51b7df7006ca1833c20c21241f11d0904850229977bcfb89a5c8bc83d44",
+    "sources/ctors-ant-lantern-constructors/auto_prop.cpp": "49f65e85cf20e80c14afcd665cb421f501a359c50e5d7604e30acafbed63ec82",
+    "sources/ctors-ant-lantern-constructors/auto_prop_lp.cpp": "94ab3b0b8551697103022a847caaeb4d4a8f040e64a6c25819877991957a0a1f",
+    "sources/ctors-ant-lantern-constructors/auto_container.cpp": "755c4131287e74d14af4234c18ff395089d39d6c766725fa7ced2f6b496b69d6",
+    "sources/ctors-ant-lantern-constructors/ant_queen.cpp": "b8708886b3f2f535c4ed83fb72181ecaca7f6f72faaedfc82a11b852c57860a8",
+    "sources/ctors-ant-lantern-constructors/cthulu.cpp": "4f5add1f2419bce139cdcdb794be130faf8c805a53c199e6fce2f1afc35a7cd3",
+    "sources/ctors-ant-lantern-constructors/arenabeast.cpp": "79410540ac8ec05661f14a93f2b2c294247d6ecce2ebd036b61a7faa1ff7ae6a",
+    "sources/ctors-ant-lantern-constructors/ghoul.cpp": "dcd8561f3b62d89461db09859d46d1a971662e89c52437ffced89262f3b93cc2",
+    "sources/ctors-ant-lantern-constructors/badger.cpp": "82b21131bc106be592822d587beaa6a121ae85ddefdc3b83303dfd000b9b01e1",
+    "sources/ctors-ant-lantern-constructors/black_widow.cpp": "7d5294ccabdedfe07ba739b9baeafe41bbd2fd9d84dfa6aebba9d933609c8bd0",
+    "sources/ctors-ant-lantern-constructors/froglock.cpp": "59e3d75582c155db40d7bb5f6b60381fa182c16df76324ff787d87fcc6af687d",
+    "sources/ctors-ant-lantern-constructors/catapult.cpp": "659e3fef90dcd79d9500ba4a2404bb3cd64d326404c1bf67d8b34b1908a85d24",
+    "sources/ctors-ant-lantern-constructors/innoruuk.cpp": "484f751831e71432cfbcdb6586a9b7e28f67ecfd42e8d436c4d17a475054c24d",
+    "sources/ctors-ant-lantern-constructors/jump_gate.cpp": "d79dc4bb0b7ce26594192630f99c6a4b1c11881bb1e74a3886acc288644971b6",
+    "sources/ctors-ant-lantern-constructors/female_dark_elf.cpp": "1f1be787465d6081ec3c9af8fed5fa569ed46a319a26156dde2d72294c3fcf98",
+    "sources/ctors-ant-lantern-constructors/goblin.cpp": "1dd20b03ad7a621cbd31eae78704fdc01c953baf68e44f2e14382c6157d81dda",
+    "sources/ctors-ant-lantern-constructors/ant.cpp": "01652d6e19eff17eaee8dffb3085d4247a14304becc51c691b2f18cb8d357c71",
+    "sources/ctors-ant-lantern-constructors/cloud_giant.cpp": "4b07e1f6a97f6ed8c508b9c3f1b63dd6379ce1419c63c22ee4bb8faf75b244b5",
+    "sources/ctors-ant-lantern-constructors/critter.cpp": "eff6f7af4f4241cff1aa2a375291c9d5f51ce06ed235024df54cfb0383367ada"
   },
   "inputs": [
     {
@@ -19285,6 +19314,499 @@
       "sha256": "e2db2cdd572be421e16f843c5ad70ce7e5c58b09c1f158a57df1d520208faf5e",
       "source": "sources/level-anim-load-world-pointer-word/storage.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1459,
+      "kind": "independently_authored_source",
+      "object_name": "lamp.o",
+      "profile": "authored_cpp",
+      "sha256": "e699562cf2b5bb3d1918610f405d29f70330a50bae094e4b1bc1758e6a98f3b1",
+      "source": "sources/ctors-ant-lantern-constructors/lamp.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Lamp",
+          "compiled_body_bytes": 628
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1460,
+      "kind": "independently_authored_source",
+      "object_name": "lantern.o",
+      "profile": "authored_cpp",
+      "sha256": "a19c0f92cf3c8633b7a42cf8c72ceed6ec7c38de5f099aa9295df8725874d9c8",
+      "source": "sources/ctors-ant-lantern-constructors/lantern.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Lantern",
+          "compiled_body_bytes": 744
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1461,
+      "kind": "independently_authored_source",
+      "object_name": "generator.o",
+      "profile": "authored_cpp",
+      "sha256": "7f5ef2c76055c9f88e97c130a144f6d0e52c25c8e0fbcc8ef89e3d801a651208",
+      "source": "sources/ctors-ant-lantern-constructors/generator.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Generator",
+          "compiled_body_bytes": 764
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1462,
+      "kind": "independently_authored_source",
+      "object_name": "ice.o",
+      "profile": "authored_cpp",
+      "sha256": "02e1e3cc3b8a05bae91577c5d9f9f20779c84923358bd7cd94fbea499713e4af",
+      "source": "sources/ctors-ant-lantern-constructors/ice.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Ice",
+          "compiled_body_bytes": 688
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1463,
+      "kind": "independently_authored_source",
+      "object_name": "fire_fly.o",
+      "profile": "authored_cpp",
+      "sha256": "4fdda530636f1af3b261899994e176027e7cf27457982fcc5bdbc4071e553a84",
+      "source": "sources/ctors-ant-lantern-constructors/fire_fly.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FireFly",
+          "compiled_body_bytes": 912
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1464,
+      "kind": "independently_authored_source",
+      "object_name": "chest.o",
+      "profile": "authored_cpp",
+      "sha256": "68fb4079e22d8db10461fc3457f9ab1ff8c5b3f49689b022f7100a33cd46ecba",
+      "source": "sources/ctors-ant-lantern-constructors/chest.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Chest",
+          "compiled_body_bytes": 880
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1465,
+      "kind": "independently_authored_source",
+      "object_name": "gnome.o",
+      "profile": "authored_cpp",
+      "sha256": "605178b3f8b63ab60387a138aac482b55578cbc21aa516741cd336e5a5a915e1",
+      "source": "sources/ctors-ant-lantern-constructors/gnome.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Gnome",
+          "compiled_body_bytes": 920
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1466,
+      "kind": "independently_authored_source",
+      "object_name": "demon.o",
+      "profile": "authored_cpp",
+      "sha256": "fed73d8ac1415bc0263573d0001c815f8879217ddffb4b374014780d765d7319",
+      "source": "sources/ctors-ant-lantern-constructors/demon.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Demon",
+          "compiled_body_bytes": 1068
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1467,
+      "kind": "independently_authored_source",
+      "object_name": "cyclops.o",
+      "profile": "authored_cpp",
+      "sha256": "d43a3d3d210f1a9bb734209343f92db5f60b9dcc86c92f6d94586609296151a1",
+      "source": "sources/ctors-ant-lantern-constructors/cyclops.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Cyclops",
+          "compiled_body_bytes": 1508
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1468,
+      "kind": "independently_authored_source",
+      "object_name": "fire_beetle.o",
+      "profile": "authored_cpp",
+      "sha256": "2c2b5af6cc978ec2b8280576a0cb391a4300899fa02606f5703de2ef2b4359de",
+      "source": "sources/ctors-ant-lantern-constructors/fire_beetle.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FireBeetle",
+          "compiled_body_bytes": 1652
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1469,
+      "kind": "independently_authored_source",
+      "object_name": "auto_chest.o",
+      "profile": "authored_cpp",
+      "sha256": "a921d51b7df7006ca1833c20c21241f11d0904850229977bcfb89a5c8bc83d44",
+      "source": "sources/ctors-ant-lantern-constructors/auto_chest.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoChest",
+          "compiled_body_bytes": 1052
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1470,
+      "kind": "independently_authored_source",
+      "object_name": "auto_prop.o",
+      "profile": "authored_cpp",
+      "sha256": "49f65e85cf20e80c14afcd665cb421f501a359c50e5d7604e30acafbed63ec82",
+      "source": "sources/ctors-ant-lantern-constructors/auto_prop.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoProp",
+          "compiled_body_bytes": 2260
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1471,
+      "kind": "independently_authored_source",
+      "object_name": "auto_prop_lp.o",
+      "profile": "authored_cpp",
+      "sha256": "94ab3b0b8551697103022a847caaeb4d4a8f040e64a6c25819877991957a0a1f",
+      "source": "sources/ctors-ant-lantern-constructors/auto_prop_lp.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoPropLP",
+          "compiled_body_bytes": 2124
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1472,
+      "kind": "independently_authored_source",
+      "object_name": "auto_container.o",
+      "profile": "authored_cpp",
+      "sha256": "755c4131287e74d14af4234c18ff395089d39d6c766725fa7ced2f6b496b69d6",
+      "source": "sources/ctors-ant-lantern-constructors/auto_container.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoContainer",
+          "compiled_body_bytes": 1700
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1473,
+      "kind": "independently_authored_source",
+      "object_name": "ant_queen.o",
+      "profile": "authored_cpp",
+      "sha256": "b8708886b3f2f535c4ed83fb72181ecaca7f6f72faaedfc82a11b852c57860a8",
+      "source": "sources/ctors-ant-lantern-constructors/ant_queen.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AntQueen",
+          "compiled_body_bytes": 1240
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1474,
+      "kind": "independently_authored_source",
+      "object_name": "cthulu.o",
+      "profile": "authored_cpp",
+      "sha256": "4f5add1f2419bce139cdcdb794be130faf8c805a53c199e6fce2f1afc35a7cd3",
+      "source": "sources/ctors-ant-lantern-constructors/cthulu.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Cthulu",
+          "compiled_body_bytes": 1392
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1475,
+      "kind": "independently_authored_source",
+      "object_name": "arenabeast.o",
+      "profile": "authored_cpp",
+      "sha256": "79410540ac8ec05661f14a93f2b2c294247d6ecce2ebd036b61a7faa1ff7ae6a",
+      "source": "sources/ctors-ant-lantern-constructors/arenabeast.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Arenabeast",
+          "compiled_body_bytes": 1380
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1476,
+      "kind": "independently_authored_source",
+      "object_name": "ghoul.o",
+      "profile": "authored_cpp",
+      "sha256": "dcd8561f3b62d89461db09859d46d1a971662e89c52437ffced89262f3b93cc2",
+      "source": "sources/ctors-ant-lantern-constructors/ghoul.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Ghoul",
+          "compiled_body_bytes": 1196
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1477,
+      "kind": "independently_authored_source",
+      "object_name": "badger.o",
+      "profile": "authored_cpp",
+      "sha256": "82b21131bc106be592822d587beaa6a121ae85ddefdc3b83303dfd000b9b01e1",
+      "source": "sources/ctors-ant-lantern-constructors/badger.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Badger",
+          "compiled_body_bytes": 1356
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1478,
+      "kind": "independently_authored_source",
+      "object_name": "black_widow.o",
+      "profile": "authored_cpp",
+      "sha256": "7d5294ccabdedfe07ba739b9baeafe41bbd2fd9d84dfa6aebba9d933609c8bd0",
+      "source": "sources/ctors-ant-lantern-constructors/black_widow.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_BlackWidow",
+          "compiled_body_bytes": 1364
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1479,
+      "kind": "independently_authored_source",
+      "object_name": "froglock.o",
+      "profile": "authored_cpp",
+      "sha256": "59e3d75582c155db40d7bb5f6b60381fa182c16df76324ff787d87fcc6af687d",
+      "source": "sources/ctors-ant-lantern-constructors/froglock.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Froglock",
+          "compiled_body_bytes": 1272
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1480,
+      "kind": "independently_authored_source",
+      "object_name": "catapult.o",
+      "profile": "authored_cpp",
+      "sha256": "659e3fef90dcd79d9500ba4a2404bb3cd64d326404c1bf67d8b34b1908a85d24",
+      "source": "sources/ctors-ant-lantern-constructors/catapult.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Catapult",
+          "compiled_body_bytes": 1388
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1481,
+      "kind": "independently_authored_source",
+      "object_name": "innoruuk.o",
+      "profile": "authored_cpp",
+      "sha256": "484f751831e71432cfbcdb6586a9b7e28f67ecfd42e8d436c4d17a475054c24d",
+      "source": "sources/ctors-ant-lantern-constructors/innoruuk.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Innoruuk",
+          "compiled_body_bytes": 2244
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1482,
+      "kind": "independently_authored_source",
+      "object_name": "jump_gate.o",
+      "profile": "authored_cpp",
+      "sha256": "d79dc4bb0b7ce26594192630f99c6a4b1c11881bb1e74a3886acc288644971b6",
+      "source": "sources/ctors-ant-lantern-constructors/jump_gate.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_JumpGate",
+          "compiled_body_bytes": 1424
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1483,
+      "kind": "independently_authored_source",
+      "object_name": "female_dark_elf.o",
+      "profile": "authored_cpp",
+      "sha256": "1f1be787465d6081ec3c9af8fed5fa569ed46a319a26156dde2d72294c3fcf98",
+      "source": "sources/ctors-ant-lantern-constructors/female_dark_elf.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_FemaleDarkElf",
+          "compiled_body_bytes": 1716
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1484,
+      "kind": "independently_authored_source",
+      "object_name": "goblin.o",
+      "profile": "authored_cpp",
+      "sha256": "1dd20b03ad7a621cbd31eae78704fdc01c953baf68e44f2e14382c6157d81dda",
+      "source": "sources/ctors-ant-lantern-constructors/goblin.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Goblin",
+          "compiled_body_bytes": 2808
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1485,
+      "kind": "independently_authored_source",
+      "object_name": "ant.o",
+      "profile": "authored_cpp",
+      "sha256": "01652d6e19eff17eaee8dffb3085d4247a14304becc51c691b2f18cb8d357c71",
+      "source": "sources/ctors-ant-lantern-constructors/ant.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Ant",
+          "compiled_body_bytes": 2720
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1486,
+      "kind": "independently_authored_source",
+      "object_name": "cloud_giant.o",
+      "profile": "authored_cpp",
+      "sha256": "4b07e1f6a97f6ed8c508b9c3f1b63dd6379ce1419c63c22ee4bb8faf75b244b5",
+      "source": "sources/ctors-ant-lantern-constructors/cloud_giant.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_CloudGiant",
+          "compiled_body_bytes": 2084
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/ctors-ant-lantern-constructors/detail.hpp"
+      ],
+      "input_order": 1487,
+      "kind": "independently_authored_source",
+      "object_name": "critter.o",
+      "profile": "authored_cpp",
+      "sha256": "eff6f7af4f4241cff1aa2a375291c9d5f51ce06ed235024df54cfb0383367ada",
+      "source": "sources/ctors-ant-lantern-constructors/critter.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_Critter",
+          "compiled_body_bytes": 2860
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -19384,7 +19906,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ebfc4ea249455e467bbcc55693129098ae0d12649a406920514ff9238f9f8891",
+  "snapshot_sha256": "eca34f81749b3ca51f36c109329a1a575772fc8a74e6154c3a3d9f7e68aa2934",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
