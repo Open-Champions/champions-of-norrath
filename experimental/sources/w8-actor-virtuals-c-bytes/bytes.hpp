@@ -93,7 +93,7 @@ inline int signed_word(unsigned value) {
 // Observed virtual calls load a signed halfword adjustment and the function
 // pointer four bytes later. Slot offsets are byte offsets from the vtable.
 template <typename Function>
-Function slot_function(void* self, unsigned slot_byte_offset, void** adjusted_self) {
+__attribute__((always_inline)) inline Function slot_function(void* self, unsigned slot_byte_offset, void** adjusted_self) {
     const unsigned table_bits = read_word(address(self) + 72u);
     const Address slot = address(pointer(table_bits)) + slot_byte_offset;
     const short adjustment = read_i16(slot);

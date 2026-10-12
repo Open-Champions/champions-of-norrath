@@ -29,14 +29,14 @@ extern "C" void P_AddParticle__FP11ParticleDefP6Point3T1f(void* definition, void
 extern "C" int frameNm;
 
 namespace w8c {
-inline float random_offset(void* object) {
+__attribute__((always_inline)) inline float random_offset(void* object) {
     float value = static_cast<float>(signed_word(norrath_actor_random(object)));
     value = value * single_from_bits(0x37800000u);
     value = value - single_from_bits(0x3f000000u);
     return value + value;
 }
 
-inline void hate_emit_particles(void* self, unsigned mask, int step, void* definition) {
+__attribute__((always_inline)) inline void hate_emit_particles(void* self, unsigned mask, int step, void* definition) {
     const Address base = address(self);
     void* const model = pointer(read_word(base + 144u));
     msg_run__8AutoProp(self);
