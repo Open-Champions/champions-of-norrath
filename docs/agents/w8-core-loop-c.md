@@ -24,20 +24,12 @@ Data: `engineDisable30fps`, `engineFullFrameMode`, `engineLastAITime`, `engineSc
 - `0x20000000` in `engineLoadEnvTex__FP8_texture` is taken to be the uncached alias, as in the other engine units.
 - `gameLineDebugDraw__Fv` is an empty hook; the image body is only a return.
 
-## Unknown
-
-- What `compositeAlpha`, `engineScissory1/2`, `engineYOffset`, `engineScreenSlide`, `fadeTimer`, `fadeIconY`, `flaredIn`, `flaredOut`, `gameAutoMapMode`, `gameCreatureThinkSpinner`, `gameDeathTimer` and the death-screen values mean beyond their use in the code read.
-- Whether `gameDeathTimer` is signed (the image uses both a signed and an unsigned halfword load; the file value is 0xffff).
-- The second object named `firstTime` at 0x00483e40 (one byte, file value 1, used by `msg_run__9WaveMaker`) is a different symbol from the one defined here (0x00486d88, used by player selection). Both have the plain symbol name `firstTime` in the image, so a flat link cannot hold both; this package defines only the 0x00486d88 one, which is the one the authored `session-roster-player-selection-start` imports. The other one needs a different binding when `msg_run__9WaveMaker` is authored.
-- The type of `levelName` beyond the two text fields at offsets 81 and 161 used by `gameGetFullLevelName__FPc`; the layout of the 80-byte-spaced fields is not established.
-- No runtime execution of any of this on an EE or in the game, and no comparison of generated and original instruction behavior (no R5900 interpreter comparison was run for this package).
-
 ## Verification run
 
 - Each of the 31 sources compiled with the reviewed toolchain and `authored_cpp` flags; sizes and symbol types of all 20 data objects (`B` for zero values, `D` for 447, 1 and -1) match the file values and sizes.
 - Each `host_check.cpp` compiled with `c++ -std=c++17 -Wall` and exited 0. Mutation spot checks (changed clamp bound, comparison direction, destructor flag, arguments of the reboot and death-start calls, field offsets 1328 and 161, shift amount, loop count) each made a numbered check fail.
 - A private `ld -m elf32lr5900 -r --warn-common` link of the 31 objects (outside git) defined exactly the 31 names with no COMMON symbols and left the 42 imports listed below undefined. The full `tools/build_partial.py` build was not run: it needs the shared snapshot, which this package must not edit.
-- `python3 -m unittest discover -s tools -p 'test_*.py'` results are recorded in the last section.
+- `python3 -m unittest discover -s tools -p 'test_*.py'` passed: 214 tests ran, all OK.
 
 ## Imports closed
 
@@ -92,3 +84,11 @@ Append to `experimental/build-plan.json` `inputs` (profile `authored_cpp`, empty
 ## Authored but never executed
 
 All 31 units. The functions were exercised on the host against mocks only. Nothing ran on an EE, in the original process, or as gameplay. `engineReboot__Fv` and `engineLoadEnvTex__FP8_texture` touch DMA, interrupts and `LoadExecPS2` that were never issued to hardware.
+
+## Unknown
+
+- What `compositeAlpha`, `engineScissory1/2`, `engineYOffset`, `engineScreenSlide`, `fadeTimer`, `fadeIconY`, `flaredIn`, `flaredOut`, `gameAutoMapMode`, `gameCreatureThinkSpinner`, `gameDeathTimer` and the death-screen values mean beyond their use in the code read.
+- Whether `gameDeathTimer` is signed (the image uses both a signed and an unsigned halfword load; the file value is 0xffff).
+- The second object named `firstTime` at 0x00483e40 (one byte, file value 1, used by `msg_run__9WaveMaker`) is a different symbol from the one defined here (0x00486d88, used by player selection). Both have the plain symbol name `firstTime` in the image, so a flat link cannot hold both; this package defines only the 0x00486d88 one, which is the one the authored `session-roster-player-selection-start` imports. The other one needs a different binding when `msg_run__9WaveMaker` is authored.
+- The type of `levelName` beyond the two text fields at offsets 81 and 161 used by `gameGetFullLevelName__FPc`; the layout of the 80-byte-spaced fields is not established.
+- No runtime execution of any of this on an EE or in the game, and no comparison of generated and original instruction behavior (no R5900 interpreter comparison was run for this package).
