@@ -54,6 +54,11 @@ extern unsigned char norrath_ctors_ant_lantern_view_46ded0[];
 extern unsigned char norrath_ctors_ant_lantern_view_46dee0[];
 extern unsigned char norrath_ctors_ant_lantern_view_46def0[];
 extern unsigned char norrath_ctors_ant_lantern_view_485230[];
+unsigned norrath_construct_Ice(void* object, const void* point, short type, char* first_lump, char* first_name, char* second_name, char* third_name, char* fourth_name);
+void* norrath_lump_find_resource(char* lump_name, char* resource_name);
+long long norrath_script_get_game_state(char* name);
+extern unsigned char norrath_ctors_ant_lantern_view_44cc28[];
+extern unsigned char norrath_ctors_ant_lantern_view_46d070[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }

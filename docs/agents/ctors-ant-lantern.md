@@ -29,8 +29,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/lamp.cpp` | `norrath_construct_Lamp` | `__4LampG6Point3` `0x2309e8`, 312 bytes | 628 | `e699562cf2b5bb3d1918610f405d29f70330a50bae094e4b1bc1758e6a98f3b1` |
 | `ctors-ant-lantern-constructors/lantern.cpp` | `norrath_construct_Lantern` | `__7LanternG6Point3` `0x230890`, 344 bytes | 744 | `a19c0f92cf3c8633b7a42cf8c72ceed6ec7c38de5f099aa9295df8725874d9c8` |
 | `ctors-ant-lantern-constructors/generator.cpp` | `norrath_construct_Generator` | `__9GeneratorG6Point3sPPc` `0x1f19c0`, 400 bytes | 764 | `7f5ef2c76055c9f88e97c130a144f6d0e52c25c8e0fbcc8ef89e3d801a651208` |
+| `ctors-ant-lantern-constructors/ice.cpp` | `norrath_construct_Ice` | `__3IceG6Point3sPcN43` `0x1e61f0`, 316 bytes | 688 | `02e1e3cc3b8a05bae91577c5d9f9f20779c84923358bd7cd94fbea499713e4af` |
 
-`detail.hpp` sha256 `e389cb1e0327fe48c5595c36922d9a57f0e03e0ee1840af277fa3d97656ebe23`.
+`detail.hpp` sha256 `e03f840656717881a5a7e9ad8c0f469141446e8b0c76852bf8ea37684e32b736`.
 
 ## Build-plan entries needed
 
@@ -130,6 +131,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "ice.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/ice.cpp",
+  "sha256": "02e1e3cc3b8a05bae91577c5d9f9f20779c84923358bd7cd94fbea499713e4af",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Ice",
+      "compiled_body_bytes": 688
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -158,9 +178,11 @@ Observed `__7LanternG6Point3` at `0x230890`, 344 bytes. Same light setup as Lamp
 
 Observed `__9GeneratorG6Point3sPPc` at `0x1f19c0`, 400 bytes. Calls the Creature constructor (null map, scale 8.0), stores type bytes and words including the vtable `0x44bbd0` (`_vt$9Generator`) and the global at `0x4844a4`, then `setParameters` with five 1.0 values and 1. Three tag lookups (a string at `0x46ded0`, integers at `0x46dee0` and `0x46def0`) fill object+960 and bits 1 and 2 of object+980. Then it joins the slow run list and compares the stored string with the text at `0x485230`; equality sets bit 2 again. Inferred, not confirmed: the three tags name a generator and two trigger flags. V0 is the comparison result when nonzero, otherwise the updated flag word.
 
+Observed `__3IceG6Point3sPcN43` at `0x1e61f0`, 316 bytes. The five trailing arguments are all char pointers. After GameObject (two nulls), byte 40 is 120 and the vtable is `0x44cc28` (`_vt$3Ice`). `scriptGetGameState` on the text at `0x46d070`: if its 64-bit result is nonzero the constructor calls virtual slot 3 of its own table (short adjustment at vtable+8, function at vtable+12, flag 3) and stops; otherwise it stores the arguments at 76/80/84/88/92, two `lumpFindResource` results at 96/100, 200.0 at 28 and 32, and the run-list V0 is returned.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`
 
 ## Imports opened
 
@@ -177,11 +199,12 @@ Observed `__9GeneratorG6Point3sPPc` at `0x1f19c0`, 400 bytes. Calls the Creature
 `norrath_ctors_ant_lantern_view_44a8a0` (`_vt$7Lantern`) and `norrath_ctors_ant_lantern_view_48198c` (tint global) — slots/bytes not defined here.
 `norrath_creature_construct`, `norrath_actor_set_parameters`, `norrath_actor_find_tag_string`, `norrath_game_object_find_tag_int`, `norrath_actor_add_slow_run_list`, `norrath_factory_strcasecmp` — existing names, also used by actors-b and others; `norrath_actor_view_4844a4` exists in other packages.
 `norrath_ctors_ant_lantern_view_44bbd0` (`_vt$9Generator`), `norrath_ctors_ant_lantern_view_46ded0`, `_46dee0`, `_46def0` (tag text) and `_485230` (comparison text) — address views only.
+`norrath_script_get_game_state`, `norrath_lump_find_resource` — existing names; `norrath_ctors_ant_lantern_view_44cc28` (`_vt$3Ice`) and `_46d070` (state text) — address views only.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
