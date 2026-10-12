@@ -3,8 +3,6 @@
 #include <cstdio>
 
 unsigned char quickLoadStamp[64];
-unsigned char guard_before[4];
-unsigned char guard_after[4];
 
 int main() {
     for (int index = 0; index < 64; ++index) quickLoadStamp[index] = static_cast<unsigned char>(index + 1);
