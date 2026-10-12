@@ -16,7 +16,7 @@ extern "C" int shopRunning;
 extern "C" unsigned char objectDrawEnable;
 extern "C" unsigned char floorDrawEnable;
 extern "C" int shopMouseDecay[2];
-extern "C" int norrath_shop_sell_mode_words[4];
+extern "C" int sellMode[4];
 extern "C" int gameNoDraw;
 extern "C" int gameControlPaused;
 extern "C" signed char interfaceOn;
@@ -38,7 +38,7 @@ extern "C" void shopKick__Fv() {
     gameNoDraw = 0;
     floorDrawEnable = 1;
     shopMouseDecay[0] = 0;
-    for (int i = 3; i >= 0; i--) norrath_shop_sell_mode_words[i] = 0;
+    for (int i = 3; i >= 0; i--) sellMode[i] = 0;
     gameControlPaused = 60;
     interfaceOn = 0;
     Pop__6Camera(gameCam);

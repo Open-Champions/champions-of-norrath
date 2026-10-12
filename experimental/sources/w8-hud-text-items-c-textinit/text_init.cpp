@@ -21,15 +21,15 @@ struct NorrathOutMsgHead {
 };
 
 extern "C" int frontEndRunning;
-extern "C" NorrathInMsgEntry norrath_in_msg_entries[8];
-extern "C" NorrathOutMsgHead norrath_out_msg_head;
+extern "C" NorrathInMsgEntry inMsg[8];
+extern "C" NorrathOutMsgHead outMsg;
 
 extern "C" void textInit__Fv() {
     if (frontEndRunning != 0) return;
-    memset(norrath_in_msg_entries, 0, sizeof norrath_in_msg_entries);
-    norrath_out_msg_head.fourth = 0;
-    norrath_out_msg_head.second = 0;
-    norrath_out_msg_head.first = 1;
-    norrath_out_msg_head.third = 32;
-    for (int i = 7; i >= 0; i--) norrath_in_msg_entries[i].marker = -2;
+    memset(inMsg, 0, sizeof inMsg);
+    outMsg.fourth = 0;
+    outMsg.second = 0;
+    outMsg.first = 1;
+    outMsg.third = 32;
+    for (int i = 7; i >= 0; i--) inMsg[i].marker = -2;
 }

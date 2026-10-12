@@ -1,7 +1,7 @@
 #include <cstring>
 #include <vector>
 #include <string>
-int shopRunning, gameNoDraw, gameControlPaused, gamePause, shopMouseDecay[2], norrath_shop_sell_mode_words[4];
+int shopRunning, gameNoDraw, gameControlPaused, gamePause, shopMouseDecay[2], sellMode[4];
 unsigned char objectDrawEnable, floorDrawEnable;
 signed char interfaceOn, netNetworkMode;
 void* gameCam;
@@ -19,7 +19,7 @@ static void prime() {
     calls.clear();
     shopRunning = 1; gameNoDraw = 7; gameControlPaused = 0; gamePause = 5;
     shopMouseDecay[0] = shopMouseDecay[1] = 9;
-    for (int& w : norrath_shop_sell_mode_words) w = 9;
+    for (int& w : sellMode) w = 9;
     objectDrawEnable = floorDrawEnable = 0; interfaceOn = 1;
     static int cam; gameCam = &cam; popped = 0; removed = 0;
 }
@@ -33,7 +33,7 @@ int main() {
     if (shopRunning || gameNoDraw || gameControlPaused != 60 || gamePause != 0) return 2;
     if (objectDrawEnable != 1 || floorDrawEnable != 1 || interfaceOn != 0) return 3;
     if (shopMouseDecay[0] || shopMouseDecay[1]) return 4;
-    for (int w : norrath_shop_sell_mode_words) if (w) return 5;
+    for (int w : sellMode) if (w) return 5;
     if (popped != gameCam || removed != shopFrame__Fv) return 6;
     if (calls != std::vector<std::string>{"pop", "unload", "remove"}) return 7;
     prime(); netNetworkMode = 2;

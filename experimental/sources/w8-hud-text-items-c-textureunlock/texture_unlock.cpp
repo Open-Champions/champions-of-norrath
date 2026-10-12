@@ -13,8 +13,8 @@ struct NorrathTextureLockView {
     short cacheIndex;
 };
 
-extern "C" NorrathCacheEntry norrath_texture_cache_slots[];
+extern "C" NorrathCacheEntry cache[];
 
 extern "C" void textureUnlock__FP8_texture(NorrathTextureLockView* texture) {
-    norrath_texture_cache_slots[texture->cacheIndex].lockCount--;
+    cache[texture->cacheIndex].lockCount--;
 }
