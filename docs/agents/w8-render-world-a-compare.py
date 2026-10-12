@@ -704,6 +704,18 @@ reg('megatileInit__FP12MegatileRootPv', 0x25E0E0, 'w8-render-world-a-megatile-in
     stubs=MEGA_STUBS, stub_addr=MEGA_ADDR)
 
 
+def scenario_global_init(rng):
+    mem = {}
+    z = sym('zeroTile')
+    fill(rng, mem, z, 0x48)
+    return {'mem': mem, 'args': [], 'compare': list(range(z, z + 0x48)) + list(range(sym('edgearray'), sym('edgearray') + 256))}
+
+
+reg('_GLOBAL_$I$edgearray', 0x266EC8, 'w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp', scenario_global_init)
+reg('_GLOBAL_$I$modelClippingOn', 0x16CE68,
+    'w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp', scenario_global_init)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
