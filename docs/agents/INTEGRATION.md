@@ -3199,3 +3199,4 @@ and no startup stage has executed.
 - 2026-10-12 13:55 CDT — `agents/actor-view-tables` — 1221 unresolved imports
 - 2026-10-12 14:09 CDT — `agents/level-anim-load` — 1208 unresolved imports
 - 2026-10-12 14:19 CDT — `frontend-shell contract fix` — 1208 unresolved imports
+- 2026-10-12 14:24 CDT — `agents/ctors-ant-lantern` — 1516 unresolved imports
