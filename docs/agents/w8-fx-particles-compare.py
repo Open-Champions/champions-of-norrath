@@ -752,6 +752,35 @@ reg('P_DrawParticles__FP8Matrix34', 0x186070, 'w8-fx-particles-draw-particles/dr
            'drawAddToList__FPviP8_textureP11_drawRecordi': (5, 0, 0),
            'drawLines__Fv': (0, 0, 0), 'drawDistortionParticles__Fv': (0, 0, 0)})
 
+# ---- P_Pop__Fv, fxClear__Fv, lightClear__Fv, lightDeactivate__FP5Light ----
+def scenario_plain(rng, seed):
+    mem = {}
+    fill(rng, mem, 0x484300, 16)
+    fill(rng, mem, INTERFACE_MODE, 4)
+    return {'mem': mem, 'args': []}
+
+
+reg('P_Pop__Fv', 0x180580, 'w8-fx-particles-p-pop/p_pop.cpp', scenario_plain, returns=True)
+reg('fxClear__Fv', 0x1E63D8, 'w8-fx-particles-fx-clear/fx_clear.cpp', scenario_plain,
+    stubs={'fxUpdateDust__Fiiiiiiii': (8, 0, 0)})
+reg('lightClear__Fv', 0x13E6F0, 'w8-fx-particles-light-clear/light_clear.cpp', scenario_plain,
+    stubs={'lightGlobalCharLightScale__Ff': (0, 1, 0)})
+
+
+def scenario_light_deactivate(rng, seed):
+    mem = {}
+    fill(rng, mem, ARENA, 0x400)
+    light = ARENA + 0x100
+    nxt = rng.choice([0, ARENA + 0x200, light + 4, light])
+    prv = rng.choice([0, ARENA + 0x300, light, light + 4, ARENA + 0x180])
+    put32(mem, light, nxt)
+    put32(mem, light + 4, prv)
+    return {'mem': mem, 'args': [light]}
+
+
+reg('lightDeactivate__FP5Light', 0x13EB28, 'w8-fx-particles-light-deactivate/light_deactivate.cpp',
+    scenario_light_deactivate)
+
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
