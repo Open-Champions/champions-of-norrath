@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2294,
+  "default_authored_inputs": 2316,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3045,7 +3045,29 @@
     "sources/w8-object-list-math-set-create-by-name-function/set_create_by_name_function.cpp": "430c9006087e04668dc44804f5c3eb170951beeb4f746eefb44bb9dfd8574d2d",
     "sources/w8-object-list-math-set-filter-function/set_filter_function.cpp": "7df005cd9fba4ac08d67616aba3b8adc1377bdff797f27bb3dab39f85b2264b3",
     "sources/w8-object-list-math-string-pool-state/string_pool_state.cpp": "ae7edf6742b597435c98b80af264b21d3264cbcb4d2b1c531a8a25bed92efe62",
-    "sources/w8-object-list-math-trigger-inside/trigger_inside.cpp": "db1ef793607df4c4cae9a1b28a6e8ee38509affbb88d954dca3b8a98e9d4147d"
+    "sources/w8-object-list-math-trigger-inside/trigger_inside.cpp": "db1ef793607df4c4cae9a1b28a6e8ee38509affbb88d954dca3b8a98e9d4147d",
+    "sources/w8-render-world-b-model-active-chunks/active_chunks.cpp": "971eeaa27603ad1ddd71eb137a0c0c0b0fe144a14dc016310180d77561971d7a",
+    "sources/w8-render-world-b-model-draw/model_draw.cpp": "b3e6ea7b79ad65954d6906ad32357a6bd1b98eea8d730c59486fbebf6f0fb7c1",
+    "sources/w8-render-world-b-model-reset-optional/reset_optional.cpp": "7d0c0e8a7409fd29c516ad1d245f4767cbf9cb1066781609ef5c3b977465d10b",
+    "sources/w8-render-world-b-model-shadow/shadow_brightness.cpp": "5ce4cbf654a89cb72db8d4b3ec67971e4d5a0443c539c698b2c9e2bd2187cdc9",
+    "sources/w8-render-world-b-tex-decompress-thread/decompress_thread.cpp": "4da8955f34ccb793bcbada73f9b04f9754fd5a9da0668c01db1a841e158ba537",
+    "sources/w8-render-world-b-tex-is-decompressing/is_decompressing.cpp": "f55bdcedf2483ab705edd52901a06c3fc01f60c5277ab4a23bb86baaf9d20f79",
+    "sources/w8-render-world-b-tex-is-loading/is_loading.cpp": "60d8146c76e7bbbb493bbfce6ac2157948817e17d421f432d9056a518d65cb5a",
+    "sources/w8-render-world-b-tex-process-decompress/process_decompress.cpp": "648dcc0e391831a061b74a2c7637ba0cba79de4272e41598523b380222d6803d",
+    "sources/w8-render-world-b-tex-process-load/process_load.cpp": "5f68f4a087594170df321f3e18fab71ea3e55b0dbf5c7611ed8d2430e4fca09a",
+    "sources/w8-render-world-b-texture-data/texture_data.cpp": "585ae32f18bc8936610c52066b4b75372ccb2639a93877cb03bf803d9f8e0783",
+    "sources/w8-render-world-b-world-allocate-water-patches/allocate_water_patches.cpp": "9c24e3d7308b9c91642357ef88886b4ef61567e088032d1ed443253056d6fe2f",
+    "sources/w8-render-world-b-world-clear/world_clear.cpp": "e4aefd057b1a8db83220e426fd062124e234ea0293079d99487de8a252b70920",
+    "sources/w8-render-world-b-world-clip-cube-to-clip-frustum/clip_cube_to_clip_frustum.cpp": "cc64db84fb7ccaea3b50b8215f0e4166f8dee8453b3cbd4069cd3a4e932112f6",
+    "sources/w8-render-world-b-world-data/world_data.cpp": "01ed314fa24ffb252f9801fb36edb7b06e565bd864b6ac607353246ad9e32ab2",
+    "sources/w8-render-world-b-world-draw-world/world_draw_world.cpp": "373c7ee201d6abb2737b97ce4e5a49b5cfc3eafdf5140d45b5898ec0e5027298",
+    "sources/w8-render-world-b-world-find-water-patches/find_water_patches.cpp": "1cb566a4b4756814206859d832f5e737bd5a09536894cc7aa7e54f84425d1dc9",
+    "sources/w8-render-world-b-world-move-door/move_door.cpp": "4706272e36de46737e6c835ebc15d84e535d868eeb78c50d47d8177235d6143d",
+    "sources/w8-render-world-b-world-reset/world_reset.cpp": "d7381df13c422a423c09365358f20b007171dc6df2d3b22a25eca3fb2274c5e8",
+    "sources/w8-render-world-b-world-run-water-task/run_water_task.cpp": "c47a9e0439acc4ab92abc9271dc62f22e13337ba7c8e520ec551f9db5b998ca4",
+    "sources/w8-render-world-b-world-set-door-collision/set_door_collision.cpp": "bf124942f0380a28c531c31e2fd2d072e6541c0c89d63023adba8cdcc75350e6",
+    "sources/w8-render-world-b-world-set-door-height/set_door_height.cpp": "5bfe0af3e7a727650c95b545c117aaf903b5bc8ce466a6c5db953d2667507acc",
+    "sources/w8-render-world-b-world-set-view-center/set_view_center.cpp": "7563832bbec751d7c5dbf28b6f23794d1b7eb4389303b8d8f4e5eda51d035329"
   },
   "inputs": [
     {
@@ -32522,6 +32544,326 @@
           "compiled_body_bytes": 112
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2296,
+      "kind": "independently_authored_source",
+      "object_name": "active_chunks.o",
+      "profile": "authored_cpp",
+      "sha256": "971eeaa27603ad1ddd71eb137a0c0c0b0fe144a14dc016310180d77561971d7a",
+      "source": "sources/w8-render-world-b-model-active-chunks/active_chunks.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelGetActiveChunks__FP12_modelHeaderi",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2297,
+      "kind": "independently_authored_source",
+      "object_name": "model_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "b3e6ea7b79ad65954d6906ad32357a6bd1b98eea8d730c59486fbebf6f0fb7c1",
+      "source": "sources/w8-render-world-b-model-draw/model_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi",
+          "compiled_body_bytes": 2092
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2298,
+      "kind": "independently_authored_source",
+      "object_name": "reset_optional.o",
+      "profile": "authored_cpp",
+      "sha256": "7d0c0e8a7409fd29c516ad1d245f4767cbf9cb1066781609ef5c3b977465d10b",
+      "source": "sources/w8-render-world-b-model-reset-optional/reset_optional.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelResetOptionalParams__Fv",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2299,
+      "kind": "independently_authored_source",
+      "object_name": "shadow_brightness.o",
+      "profile": "authored_cpp",
+      "sha256": "5ce4cbf654a89cb72db8d4b3ec67971e4d5a0443c539c698b2c9e2bd2187cdc9",
+      "source": "sources/w8-render-world-b-model-shadow/shadow_brightness.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelSetShadowBrightness__Ff",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2300,
+      "kind": "independently_authored_source",
+      "object_name": "decompress_thread.o",
+      "profile": "authored_cpp",
+      "sha256": "4da8955f34ccb793bcbada73f9b04f9754fd5a9da0668c01db1a841e158ba537",
+      "source": "sources/w8-render-world-b-tex-decompress-thread/decompress_thread.cpp",
+      "emitted_functions": [
+        {
+          "name": "texDecompressThread__FPv",
+          "compiled_body_bytes": 2852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2301,
+      "kind": "independently_authored_source",
+      "object_name": "is_decompressing.o",
+      "profile": "authored_cpp",
+      "sha256": "f55bdcedf2483ab705edd52901a06c3fc01f60c5277ab4a23bb86baaf9d20f79",
+      "source": "sources/w8-render-world-b-tex-is-decompressing/is_decompressing.cpp",
+      "emitted_functions": [
+        {
+          "name": "texIsDecompressing__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2302,
+      "kind": "independently_authored_source",
+      "object_name": "is_loading.o",
+      "profile": "authored_cpp",
+      "sha256": "60d8146c76e7bbbb493bbfce6ac2157948817e17d421f432d9056a518d65cb5a",
+      "source": "sources/w8-render-world-b-tex-is-loading/is_loading.cpp",
+      "emitted_functions": [
+        {
+          "name": "texIsLoading__Fv",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2303,
+      "kind": "independently_authored_source",
+      "object_name": "process_decompress.o",
+      "profile": "authored_cpp",
+      "sha256": "648dcc0e391831a061b74a2c7637ba0cba79de4272e41598523b380222d6803d",
+      "source": "sources/w8-render-world-b-tex-process-decompress/process_decompress.cpp",
+      "emitted_functions": [
+        {
+          "name": "texProcessDecompress__Fv",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2304,
+      "kind": "independently_authored_source",
+      "object_name": "process_load.o",
+      "profile": "authored_cpp",
+      "sha256": "5f68f4a087594170df321f3e18fab71ea3e55b0dbf5c7611ed8d2430e4fca09a",
+      "source": "sources/w8-render-world-b-tex-process-load/process_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "texProcessLoad__Fi",
+          "compiled_body_bytes": 2476
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2305,
+      "kind": "independently_authored_source",
+      "object_name": "texture_data.o",
+      "profile": "authored_cpp",
+      "sha256": "585ae32f18bc8936610c52066b4b75372ccb2639a93877cb03bf803d9f8e0783",
+      "source": "sources/w8-render-world-b-texture-data/texture_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2306,
+      "kind": "independently_authored_source",
+      "object_name": "allocate_water_patches.o",
+      "profile": "authored_cpp",
+      "sha256": "9c24e3d7308b9c91642357ef88886b4ef61567e088032d1ed443253056d6fe2f",
+      "source": "sources/w8-render-world-b-world-allocate-water-patches/allocate_water_patches.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldAllocateWaterPatches__Fi",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2307,
+      "kind": "independently_authored_source",
+      "object_name": "world_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "e4aefd057b1a8db83220e426fd062124e234ea0293079d99487de8a252b70920",
+      "source": "sources/w8-render-world-b-world-clear/world_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldClear__Fv",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2308,
+      "kind": "independently_authored_source",
+      "object_name": "clip_cube_to_clip_frustum.o",
+      "profile": "authored_cpp",
+      "sha256": "cc64db84fb7ccaea3b50b8215f0e4166f8dee8453b3cbd4069cd3a4e932112f6",
+      "source": "sources/w8-render-world-b-world-clip-cube-to-clip-frustum/clip_cube_to_clip_frustum.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldClipCubeToClipFrustum__FPA1_fi",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2309,
+      "kind": "independently_authored_source",
+      "object_name": "world_data.o",
+      "profile": "authored_cpp",
+      "sha256": "01ed314fa24ffb252f9801fb36edb7b06e565bd864b6ac607353246ad9e32ab2",
+      "source": "sources/w8-render-world-b-world-data/world_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2310,
+      "kind": "independently_authored_source",
+      "object_name": "world_draw_world.o",
+      "profile": "authored_cpp",
+      "sha256": "373c7ee201d6abb2737b97ce4e5a49b5cfc3eafdf5140d45b5898ec0e5027298",
+      "source": "sources/w8-render-world-b-world-draw-world/world_draw_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldDrawWorld__FP12_worldHeader",
+          "compiled_body_bytes": 1252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2311,
+      "kind": "independently_authored_source",
+      "object_name": "find_water_patches.o",
+      "profile": "authored_cpp",
+      "sha256": "1cb566a4b4756814206859d832f5e737bd5a09536894cc7aa7e54f84425d1dc9",
+      "source": "sources/w8-render-world-b-world-find-water-patches/find_water_patches.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2312,
+      "kind": "independently_authored_source",
+      "object_name": "move_door.o",
+      "profile": "authored_cpp",
+      "sha256": "4706272e36de46737e6c835ebc15d84e535d868eeb78c50d47d8177235d6143d",
+      "source": "sources/w8-render-world-b-world-move-door/move_door.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldMoveDoor__FP12_worldHeaderiG6Point3s",
+          "compiled_body_bytes": 600
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2313,
+      "kind": "independently_authored_source",
+      "object_name": "world_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "d7381df13c422a423c09365358f20b007171dc6df2d3b22a25eca3fb2274c5e8",
+      "source": "sources/w8-render-world-b-world-reset/world_reset.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldReset__FP12_worldHeader",
+          "compiled_body_bytes": 588
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2314,
+      "kind": "independently_authored_source",
+      "object_name": "run_water_task.o",
+      "profile": "authored_cpp",
+      "sha256": "c47a9e0439acc4ab92abc9271dc62f22e13337ba7c8e520ec551f9db5b998ca4",
+      "source": "sources/w8-render-world-b-world-run-water-task/run_water_task.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldRunWaterTask__Fv",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2315,
+      "kind": "independently_authored_source",
+      "object_name": "set_door_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "bf124942f0380a28c531c31e2fd2d072e6541c0c89d63023adba8cdcc75350e6",
+      "source": "sources/w8-render-world-b-world-set-door-collision/set_door_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldSetDoorCollision__FP12_worldHeaderii",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2316,
+      "kind": "independently_authored_source",
+      "object_name": "set_door_height.o",
+      "profile": "authored_cpp",
+      "sha256": "5bfe0af3e7a727650c95b545c117aaf903b5bc8ce466a6c5db953d2667507acc",
+      "source": "sources/w8-render-world-b-world-set-door-height/set_door_height.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldSetDoorHeight__FP12_worldHeaderif",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2317,
+      "kind": "independently_authored_source",
+      "object_name": "set_view_center.o",
+      "profile": "authored_cpp",
+      "sha256": "7563832bbec751d7c5dbf28b6f23794d1b7eb4389303b8d8f4e5eda51d035329",
+      "source": "sources/w8-render-world-b-world-set-view-center/set_view_center.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldSetViewCenter__Fv",
+          "compiled_body_bytes": 96
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -32621,7 +32963,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a58d2e57a5321bdbc41d96d85a89b231d63b454f99c2d52e172d8999f968cba3",
+  "snapshot_sha256": "c0283081aaa51c226fe3060d94e133059bbff7ef88a6a94772abc0abf7e22f26",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -4477,6 +4477,61 @@ Closed: `_$_16ListSafeIterator`, `_GLOBAL_$D$lastkey`,
 
 Opened: `_$_10VIKeyboard`, `__10VIKeyboard`.
 
+## agents/w8-render-world-b
+
+Merged (the branch notes carry the five summary sections). Twenty-two units
+with fresh `input_order` values 2294 through 2315: 20 emitted functions
+(11,584 compiled body bytes, not original-byte matches) and data units. All
+22 host checks build and exit 0 here (22 of 22). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1876 function bodies, 2316 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1491 |
+| After | 1511 |
+| Closed | 32 |
+| Opened | 52 |
+
+Closed: `megatile_ramkmax`, `modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix3
+4P14AnimationStateUlP11_drawRecordi`,
+`modelGetActiveChunks__FP12_modelHeaderi`, `modelResetOptionalParams__Fv`,
+`modelSetShadowBrightness__Ff`, `nmLumps`, `segmentUsed`,
+`texDecompressThread__FPv`, `texIsDecompressing__Fv`, `texIsLoading__Fv`,
+`texProcessDecompress__Fv`, `texProcessLoad__Fi`, `texdecompress`, `texmap`,
+`texmapend`, `texmapstart`, `uncompMap`, `uncompSpin`, `world`,
+`worldAllocateWaterPatches__Fi`, `worldClear__Fv`,
+`worldClipCubeToClipFrustum__FPA1_fi`, `worldDrawEnable`,
+`worldDrawWorld__FP12_worldHeader`,
+`worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`,
+`worldMoveDoor__FP12_worldHeaderiG6Point3s`, `worldReset__FP12_worldHeader`,
+`worldRunWaterTask__Fv`, `worldSetDoorCollision__FP12_worldHeaderii`,
+`worldSetDoorHeight__FP12_worldHeaderif`, `worldSetViewCenter__Fv`,
+`worldViewCenter`.
+
+Opened: `SleepThread`,
+`animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`,
+`animLoadBoneMatricies__FP6PacketP14AnimationState`, `cdEndStream__Fv`,
+`cdIsBusyStreamingNonwithstanding__Fv`, `cdStartStream__FPci`,
+`cdStreamLoadAsync__FPcT0i`, `clearing`, `clipFrustumNormalSign`, `decodeQ`,
+`defaultHalos`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`,
+`dumpMem__FPvi`, `globalShadowBrightness`, `halos`, `loadCompleteFlag`,
+`loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`,
+`loadSlot`, `modelDrawFade`,
+`modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`, `modelOption`,
+`modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`,
+`modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`,
+`modelShadowScale`, `nmHalos`, `nmWaterPatches`,
+`putBlock__FP8_textureP6PacketPPP9uncompMapPPii`, `reallyLoad.873`,
+`routeClearStart`, `routeEnable`, `rqHead`, `rqTail`, `scx1`, `scx2`,
+`scy1`, `scy2`, `shadowBrightness`, `texCacheData__FP8_texturei`,
+`texLastDecompressionTime`, `textureFreeTexture__FP8_texture`,
+`textureInitTexture__FP12_worldHeaderP8_texturePUcPc`,
+`vqDecompress__FP8_texturei`, `waterInit__Fv`, `waterPatch`,
+`worldAnimation`, `worldClipFrustum`, `worldLastDrawSucceded`,
+`worldRunWater__FP12_worldHeader`, `worldWaterRainTimer`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
