@@ -449,6 +449,17 @@ DOOR_STUBS = {'worldSetDoorCollision__FP12_worldHeaderii': (['i', 'i', 'i'], ('i
               'worldMoveDoor__FP12_worldHeaderiG6Point3s': (['i', 'i', 's12', 'i'], ('i', [0, 5, 77])),
               'worldSetDoorHeight__FP12_worldHeaderif': (['i', 'i', 'f'], ('i', [0, 3, 0xFFFFFFFF]))}
 
+def sc_container_save(rng):
+    mem = new_object(rng)
+    fill(rng, mem, EXTRA, 0x200)
+    for off in (76, 80, 84, 88, 92):
+        put32(mem, OBJ + off, rng.choice([0, 0x31F00000 + off, rng.randrange(1 << 32)]))
+    for off in (28, 32):
+        putf(mem, OBJ + off, rng.choice([0.0, 1.5, -1.5, 100.25, -70000.75, 40000.0, 32767.5, -32768.5, 65536.0, 123456.0]))
+    return {'mem': mem, 'args': [OBJ, EXTRA + rng.choice([0, 1, 2, 3, 4, 8])],
+            'compare': whole_object() + list(range(EXTRA, EXTRA + 0x200))}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -495,6 +506,9 @@ reg('setPassableState__10HateBridgeb', W + 'hate-bridge-passable/set_passable_st
     extra=['vehicle-actors-hate-bridge-passable/set_passable_state.cpp'])
 
 reg('setPassableState__8HateHoleb', W + 'hate-hole-passable/set_passable_state.cpp', sc_door_state, DOOR_STUBS)
+
+reg('msg_save__9ContainerPc', W + 'container-save/save.cpp', sc_container_save,
+    {'objectSaveAddToStringPool__FPCc': (['i'], ('i', [0, 1, 0x1234, 0xFFFFFFFF, 77, 78]))}, returns=True)
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
