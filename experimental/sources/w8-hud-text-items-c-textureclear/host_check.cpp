@@ -38,7 +38,7 @@ int main() {
     if (decodeQTail || decodeQHead || texturesAreLoading || texturesAreDecompressing) return 1;
     // The count shrinks after the first free so entry 2 is never visited.
     if (freed_count != 1 || freed[0] != &block || alwaysLoadedPage[0].pointer || alwaysLoadedPage[2].pointer != &other) return 2;
-    if (block[5] != 0 || other[5] != 0x22222222) return 3;
+    if (block[5] != 0 || other[5] != 0 || block[4] != 0x11111111 || other[6] != 0x22222222) return 3;
     if (uncompMap[2].target || uncompMap[9].target) return 4;
     if (uncompSpin) return 5;
     for (unsigned char b : texturePageTable) if (b != 0xff) return 6;
