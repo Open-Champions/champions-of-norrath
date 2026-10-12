@@ -36,6 +36,7 @@ static_assert(sizeof(Slot) == 72 && sizeof(List) == 4616, "observed strides");
 inline unsigned word_of(const void* object) {
     return static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(object));
 }
+inline unsigned char* player_record(int owner) { return player + owner * 23984; }
 inline List* player_lists(int owner) {
     return reinterpret_cast<List*>(player + owner * 23984 + 328);
 }
