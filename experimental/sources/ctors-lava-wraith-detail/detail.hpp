@@ -24,6 +24,9 @@ extern unsigned char norrath_actors_a_view_485358[];
 extern unsigned char norrath_factory_world_pointer_word[];
 extern unsigned char norrath_ctors_lava_wraith_view_449820[];
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
+unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
+extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
+extern unsigned char norrath_ctors_lava_wraith_view_449940[];
 }
 namespace norrath_ctors_lava_wraith {
 using Address = __UINTPTR_TYPE__;
@@ -65,6 +68,10 @@ inline void write_word(Address a, unsigned value) {
     p[2] = static_cast<unsigned char>(value >> 16);
     p[3] = static_cast<unsigned char>(value >> 24);
 }
+inline unsigned read_byte(Address a) { return bytes(a)[0]; }
+inline void write_byte(Address a, unsigned value) { bytes(a)[0] = static_cast<unsigned char>(value); }
+inline unsigned float_bits(float value) { return __builtin_bit_cast(unsigned, value); }
+inline float bits_float(unsigned value) { return __builtin_bit_cast(float, value); }
 inline void write_half(Address a, unsigned value) {
     unsigned char* p = bytes(a);
     p[0] = static_cast<unsigned char>(value);
