@@ -13,3 +13,6 @@ extern "C" void norrath_block_free(void* object) {
     write_word(head_address, pointer);
     write_word(pointer, prior_head);
 }
+// blockFree__FPv is this body: 0x001447d8, 84 bytes in the pinned image. The
+// original picks the row from the same start words and pushes onto the same list.
+extern "C" void blockFree__FPv(void* object) __attribute__((alias("norrath_block_free")));
