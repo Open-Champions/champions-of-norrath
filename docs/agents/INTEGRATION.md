@@ -3625,6 +3625,38 @@ Closed: `menuDraw__FiiP4MenuUiUiP4FontP8_texturei`, `menuModeRebootQuestion`,
 Opened: `lerpColor__FUiUif`, `norrath_menu_local_t_004844e8`,
 `norrath_menu_word_00484514`, `pauseStack`, `paused`.
 
+## agents/w8-net-play-a
+
+Merged (the branch notes carry the five summary sections). Eighteen units
+with fresh `input_order` values 1805 through 1822: 12 emitted functions (2692
+compiled body bytes, not original-byte matches) and data words. All 18 host
+checks build and exit 0 here (18 of 18). No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1420 function
+bodies, 1823 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1589 |
+| After | 1560 |
+| Closed | 35 |
+| Opened | 6 |
+
+Closed: `_GLOBAL_$I$nmPlayers`, `_GLOBAL_$I$playerSelectSuccessful`,
+`_GLOBAL_$I$playerStartPos`, `_GLOBAL_$I$wrathHammerCount`, `abilityTable`,
+`activePlayer`, `addSpell__8CreatureP5Spell`, `charAmbient`, `charDirect`,
+`charDirect2`, `charDirectDir`, `charDirectDir2`, `charScaleB`,
+`charScaleG`, `charScaleR`, `commInit__Fv`, `commMenu`, `commProcess__Fv`,
+`commandQueue`, `enumerateAlivePlayers__Fv`, `frameStatePacket`,
+`gameHidePlayers`, `gamePlayersPresent`, `givePlayerExperience__Fii`,
+`globalCharLightScale`, `hudNetLevelWarp__FPc`, `isNetGame`,
+`issueCommand__Fv`, `lastNmLocalPlayersAlive`, `launchPlayerSelect__Fv`,
+`localNmPlayersAlive`, `nmPlayersAlive`, `playerSelectSuccessful`,
+`playersAlive`, `validLocalPlayer`.
+
+Opened: `__11ParticleDefiiiiiiiifffiiiPFPv_v`, `commProcessReal__Fv`, `lgAudClose`,
+`netGetLocalPlayerNmSafe__Fi`, `sceCdRead`, `sceCdReadIOPm`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
