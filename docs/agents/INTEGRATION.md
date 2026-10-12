@@ -1971,6 +1971,28 @@ Opened: `tanf`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHea
 passed. Object hashes in the snapshot come from the fresh build and were
 identical on a second build. No EE or game execution.
 
+## agents/card-progress and agents/memcard-calls follow-up commits
+
+Merged. Both packages were already selected; these merges add no inputs.
+`agents/card-progress` gained one commit that makes the host-test support
+module read its EE toolchain from `EE_TOOLCHAIN` (its fallback is another
+contributor's absolute path; set `EE_TOOLCHAIN` on this machine). That file is
+a host test, not a plan input. `agents/memcard-calls` gained its own package
+notes (checks, closed and opened lists, build-plan entries) plus a trim of an
+unsupported unknown. The integrator's earlier `docs/agents/memcard-calls.md`
+collided with it on merge; both are kept, the worker's text first and the
+integrator's selection notes under their own heading at the end.
+
+| | |
+|---|---|
+| Before | 1142 |
+| After | 1142 |
+| Closed | 0 |
+| Opened | 0 |
+
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
