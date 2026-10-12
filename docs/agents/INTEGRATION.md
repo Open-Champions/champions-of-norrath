@@ -2211,6 +2211,92 @@ alone. Separately, the notes record that `runFrontEnd` binds the `menu` and
 `menuNm` locals of the original to the same-named globals of
 `dialog-hud-controls`; that aliasing would need a decision when it lands.
 
+## agents/kernel-patches
+
+Merged (the branch notes carry the five summary sections). Forty-three units
+with fresh `input_order` values 1325 through 1367: sixteen are authored
+assembly (eleven syscall wrappers, `kFindAddress`, and four `kCopy`
+pattern bodies), eight are C++ functions with a `host_contract.cpp`
+(`iGetTimerSystemTime`, `_InitAlarm`, `PatchIsNeeded`, `topThread`,
+`SetNextComp`, `cbTimerHandler`, `UnlinkAlarm`, `InsertAlarm`), and nineteen
+are data words with a Python test under `host-tests/kernel-patches`. The eight
+host contracts passed here and the 19 data tests pass (19 of 19). The sixteen
+assembly units are checked by the byte comparer in
+`gs-dma-kernel-body-check`, which needs the private executable; that
+comparison was **not** re-run by the integrator (integration does not read
+the executable), so the byte-match statements in the notes are the worker's
+and are recorded in the snapshot only as a host file reference, as for
+gs-dma-kernel. One shared-test fix: `host-tests/kernel-patches/support.py`
+hard-coded another contributor's absolute toolchain path, so all 19 data
+tests errored here; it now reads `EE_TOOLCHAIN` with the same default the
+card-progress tests use (the same fix as the earlier card-progress commit).
+No game code was edited. The worker's claim (1149 to 1120 on an older tip) is
+not the official delta. 1075 function bodies, 1368 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1227 |
+| After | 1197 |
+| Closed | 36 |
+| Opened | 6 |
+
+Closed: `PatchIsNeeded`, `SetNextComp`, `SignalSema`, `SysExecPS2Entry`,
+`_InitAlarm`, `_SyscallEntry`, `_kExecArg`, `cbTimerHandler`,
+`g_CounterBuf`, `g_SysRebootBuf`, `g_Timer`, `g_iUserRebootSize`,
+`g_pUserRebootBuf`, `iGetTimerSystemTime`, `kFindAddress`,
+`kernel_alarm_copy`, `kernel_alarm_get_entry`, `kernel_alarm_setup`,
+`kernel_alarm_sysentry`, `kernel_execps2_copy`, `kernel_execps2_get_entry`,
+`kernel_execps2_setup`, `kernel_syscall_pattern_kcopy`,
+`kernel_syscall_sysentry`, `kernel_syscall_table_setup`, `kernel_tlb_copy`,
+`kernel_tlb_get_entry`, `kernel_tlb_setup`, `kernel_tlb_sysentry`,
+`semaidRegFunc`, `semaid_timerfunc`, `sifParamOrd`, `topArg`, `topId`,
+`topSema`, `topThread`.
+
+Opened: `GetOsdConfigParam`, `SetOsdConfigParam`, `SuspendThread`, `WakeupThread`,
+`_kExitTLBHandler`, `kprintf`.
+
+## agents/frontend-shell
+
+Merged as a **partial package**: the notes carry the observed, inferred and
+unknown separation, the build-plan table and the import lists, but not the
+five separate summary sections (no standalone "Authored but never executed"
+or "Unknown" headings; unknowns are inline). Every committed function has a
+test: `runFrontEnd__Fv` has `host_contract.cpp` and the data words have
+`host_check.cpp`; both pass here (2 of 2) and 214 tool tests pass. Three units
+with fresh `input_order` values 1368 through 1370; one function (7060 body
+bytes, not an original-byte match; the original is 5656 bytes). No game binary
+or disassembly listing was committed. The notes say `menu` and `menuNm` are
+also defined by dialog-hud-controls; the link has no duplicate definition
+(they are externs here), so nothing was dropped. The worker's private
+trial (879 to 928) is not the official delta. 1076 function bodies, 1371
+authored inputs, zero COMMON. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1197 |
+| After | 1217 |
+| Closed | 14 |
+| Opened | 34 |
+
+Closed: `attemptLoadGame`, `autodemoTimer`, `creditMenu`, `creditsPosY`,
+`engineHoldMpeg`, `expWarnAlpha`, `frontEndRunning`,
+`frontEndStartInCredits`, `frontEndSuspend`, `frontEndWasRunning`,
+`frontMenu`, `frontendControllerConfigRunning`, `lineShift`,
+`runFrontEnd__Fv`.
+
+Opened: `commMenu`, `coreClearNetLogFuck`, `creditsText`, `curFocus`,
+`difficultyMenu`, `endInit`, `endTimer`, `engineReboot__Fv`,
+`frontEndCleanUp__Fi`, `gameTypeMenu`, `hudRunNoControllers__Fi`,
+`launchPlayerSelect__Fv`, `menuModeRebootQuestion`,
+`menuNetImportOrNewGame`, `menuNetImportOrNewPlayer`, `musicStart`,
+`netAttemptLaunch`, `netDoNewLaunch__Fv`, `optionMenu`, `paramRunning__Fv`,
+`playerMenu`, `playerSelectCount`, `playerSelectEnforce`,
+`playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`,
+`playerSelectStartPlayer`, `playerSelectSuccessful`, `setSRSInfo__Fv`,
+`soundClearStreamQue__Fi`, `startNetLaunch__Fv`, `statusPtr`,
+`stopCredits__Fv`, `textureSmoothBorder__FiiiiiUiiii`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
@@ -2479,4 +2565,6 @@ and no startup stage has executed.
 - 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
 - 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
 - 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
+- 2026-10-12 13:10 CDT — `agents/simloop-services` —  unresolved imports
+- 2026-10-12 13:13 CDT — `agents/kernel-patches` —  unresolved imports
 - 2026-10-12 13:12 CDT — `agents/frontend-shell` (rejected, not merged; log notes only) — 1201 unresolved imports
