@@ -1,12 +1,11 @@
 /* Observed sceSifExitRpc at 0x002d7aa8, 36 bytes. Calls sceSifExitCmd, then
- * stores zero in the local word at 0x00444968 (named _sceSifInitCheck in the
- * symbol table). Returns nothing.
+ * stores zero in the word _sceSifInitCheck at 0x00444968. That word is
+ * defined by the sony-cd unit. Returns nothing.
  */
 extern "C" void sceSifExitCmd();
-
-int sceSifInitCheck;
+extern "C" int _sceSifInitCheck;
 
 extern "C" void sceSifExitRpc() {
     sceSifExitCmd();
-    sceSifInitCheck = 0;
+    _sceSifInitCheck = 0;
 }

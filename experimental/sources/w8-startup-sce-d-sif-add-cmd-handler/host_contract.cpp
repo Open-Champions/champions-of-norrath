@@ -5,7 +5,7 @@
 #include <cstddef>
 
 unsigned norrath_host_gp = 0x00abcdefu;
-DataTable _data_table;
+DataTable norrath_sound_command_state_view;
 
 int main() {
 #if __SIZEOF_POINTER__ == 4
@@ -14,8 +14,8 @@ int main() {
     static_assert(sizeof(HandlerEntry) == 12, "entry");
 #endif
     HandlerEntry sys[4] = {}, user[4] = {};
-    _data_table.negative_ids = sys;
-    _data_table.nonnegative_ids = user;
+    norrath_sound_command_state_view.negative_ids = sys;
+    norrath_sound_command_state_view.nonnegative_ids = user;
     int a, b, c;
     sceSifAddCmdHandler(static_cast<int>(0x80000002u), &a, &b);
     if (sys[2].handler != &a || sys[2].argument != &b || sys[2].gp != 0x00abcdefu) return 1;
