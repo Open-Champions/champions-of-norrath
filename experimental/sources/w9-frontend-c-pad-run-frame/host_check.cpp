@@ -66,9 +66,9 @@ int main() {
     reset();
     padIndexMap[3] = 0;
     rumphole[0 * 6 + 0] = 1;
-    padRunFrame__Fv();  // index 0 sends (1,0) for record 0; index 3 reuses record 0, now idle, and sends (0,0) to port 1 slot 2
+    padRunFrame__Fv();  // index 0 sends (1,0) for record 0; index 3 reuses record 0, now idle, and sends (0,0)
     CHECK(ncalls == 2 && calls[0].port == 0 && calls[0].slot == 0 && calls[0].b0 == 1, 12);
-    CHECK(calls[1].port == 1 && calls[1].slot == 2 && calls[1].b0 == 0, 16);
+    CHECK(calls[1].port == 1 && calls[1].slot == -1 && calls[1].b0 == 0, 16);  // mapped 0 minus tapCount[0] 1
     // network mode: nonlocal indexes skipped, local ones use port 0 slot 0
     reset();
     netNetworkMode = 1; localMask = 0x4;
@@ -80,7 +80,7 @@ int main() {
     // slot at or beyond tapCount[port] is not sent but the cache is still updated
     reset();
     tapCount[1] = 1;  // port 1 has slots 0 only
-    rumphole[3 * 6 + 0] = 1;  // index 3 -> port 1 slot 2: out of range
+    rumphole[3 * 6 + 0] = 1;  // index 3 -> port 1 slot 2: not below tapCount[1]
     padRunFrame__Fv();
     CHECK(ncalls == 0 && rumphole[3 * 6 + 4] == 1, 15);
     return 0;

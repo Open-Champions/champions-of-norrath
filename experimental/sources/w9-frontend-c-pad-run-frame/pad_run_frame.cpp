@@ -14,12 +14,13 @@
 //     byte); otherwise actSendData[1] becomes 0.
 //   - record words 4 and 5 hold the pair last sent. If actSendData[0] equals
 //     word 4 and actSendData[1] equals word 5 nothing more happens. Otherwise
-//     both words take the new values and the pad is updated: port 0 and slot
-//     index while index is below tapCount[0], else port 1 and slot index minus
-//     tapCount[0]; in network mode both are 0. When slot is signed-less than
-//     tapCount[port], scePadSetActDirect(port, slot, actSendData) is called.
-// Note the port and slot are computed from the loop index, while the record
-// is picked by padIndexMap[index]; the original does the same.
+//     both words take the new values and the pad is updated: with
+//     mapped = padIndexMap[index], port 0 and slot mapped while index is
+//     below tapCount[0], else port 1 and slot mapped minus tapCount[0]; in
+//     network mode both are 0. When slot is signed-less than tapCount[port],
+//     scePadSetActDirect(port, slot, actSendData) is called.
+// Note the port is chosen from the loop index while the slot uses the mapped
+// value; a paired run against the original (1500 randomized states) agreed.
 // Inferred: words 0 and 1 are countdown ticks for the small and large motor;
 // the record layout is shared with padBigRumble and padClear.
 // Unknown: the intended meaning of the actSendData bytes beyond what the
@@ -78,11 +79,12 @@ void padRunFrame__Fv() {
         }
         record[4] = actSendData[0];
         record[5] = actSendData[1];
+        int mapped = padIndexMap[index];
         int port = 1;
-        int slot = index - tapCount[0];
+        int slot = mapped - tapCount[0];
         if (index < tapCount[0]) {
             port = 0;
-            slot = index;
+            slot = mapped;
         }
         if (netNetworkMode != 0) {
             port = 0;
