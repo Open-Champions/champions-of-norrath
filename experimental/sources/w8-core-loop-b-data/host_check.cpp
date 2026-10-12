@@ -1,5 +1,5 @@
 // Host contract for the core loop data definitions. Not an EE plan input.
-extern "C" unsigned char layer0Dir[24580];
+extern "C" unsigned char layer0Dir[24580] = {};
 #include "core_loop_data.cpp"
 
 static_assert(sizeof drawBustTexName == 32, "drawBustTexName");
