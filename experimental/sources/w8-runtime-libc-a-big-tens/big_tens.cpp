@@ -1,0 +1,14 @@
+// Observed __mprec_bigtens at 0x0047f5b8, a global read-only object of 40
+// bytes: five little-endian doubles, 1e16, 1e32, 1e64, 1e128 and 1e256 by
+// position. The decimal-to-double conversion indexes it as it scales by large
+// powers of ten.
+// Observed: the bytes of entries 1 to 4 are one unit in the last place below
+// the correctly rounded value of the power of ten; entry 0 (1e16) is exact.
+// The bytes are kept as found, not recomputed.
+extern "C" alignas(8) const unsigned char norrath_player_number_big_tens_view[40] = {
+    0x00, 0x80, 0xe0, 0x37, 0x79, 0xc3, 0x41, 0x43,
+    0x16, 0x6e, 0x05, 0xb5, 0xb5, 0xb8, 0x93, 0x46,
+    0xf4, 0xf9, 0x3f, 0xe9, 0x03, 0x4f, 0x38, 0x4d,
+    0x31, 0x1d, 0x30, 0xf9, 0x48, 0x77, 0x82, 0x5a,
+    0x3b, 0xbf, 0x73, 0x7f, 0xdd, 0x4f, 0x15, 0x75,
+};
