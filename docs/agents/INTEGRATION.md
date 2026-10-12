@@ -3946,7 +3946,7 @@ Opened: `CallRpc`, `GLibData`, `MemcpyS`, `_cd`, `_iob`, `_rcv_data_rpc`,
 
 Merged (the branch notes carry the five summary sections). Twenty-seven of
 the 29 units were selected with fresh `input_order` values 1987 through 2013
-(23 emitted functions, 6580 compiled body bytes
+(23 emitted functions, 6580 compiled body bytes,
 not original-byte matches). Twenty-five host programs run here; the
 `sif-get-reg` and `sif-set-reg` checks are byte comparers that take the
 private executable as an argument, so those two (like the 14 in
