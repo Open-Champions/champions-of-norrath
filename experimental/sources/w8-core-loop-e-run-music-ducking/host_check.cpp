@@ -30,7 +30,7 @@ int main() {
     runMusicDucking__Fv();
     if (trace != "G2G0V0") return 2;
     if (!near(desiredMusicDuckAmount, 0.2f + 1.0f / 60.0f) || !near(musicDuckAmount, 0.99f)) return 3;
-    if (!near(vol_seen, 0.99f * 0.5f * 0.46875f)) return 4;
+    if (vol_seen != musicDuckAmount * soundMusicVolume * 0.46875f) return 4;
     // Stream 0 without the bit: the amount still changes but no volume call.
     trace.clear(); status0 = 0;
     runMusicDucking__Fv();
