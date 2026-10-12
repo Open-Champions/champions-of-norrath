@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2061,
+  "default_authored_inputs": 2086,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2806,7 +2806,32 @@
     "sources/w8-audio-calls-start-stream/start_stream.cpp": "09c7eba1e007c89097b4368ddb7ee96f8ee318d9819a5922479f546c5b303fb1",
     "sources/w8-audio-calls-stop-sound/stop_sound.cpp": "d197d37ffebe5b46871b195e977a4688b6f30c02aa1b34ce1f593ddc376ce2a7",
     "sources/w8-audio-calls-transfer-vag/transfer_vag.cpp": "8062d2f9da167bca3a04001333df0eadeb7eff4ab0166a8f4c2fdb8953a7ffc7",
-    "sources/w8-audio-calls-update-adjustments-entry/update_adjustments.cpp": "d8fe163ccfd5d72bdd08c0c74d5e019ba2a77760bebf8fe6793543ee50119728"
+    "sources/w8-audio-calls-update-adjustments-entry/update_adjustments.cpp": "d8fe163ccfd5d72bdd08c0c74d5e019ba2a77760bebf8fe6793543ee50119728",
+    "sources/w8-camera-vehicle-a-add-npc-driver/add_npc_driver.cpp": "67e5c9a22693ef9ca950e17017200d65c1baebae0c16c44978f2a1a1e0341747",
+    "sources/w8-camera-vehicle-a-camera-build-matrix/build_matrix.cpp": "821c6abcd61064883c9a544fd9b7b644c5764d25be849fa0f71735da221b5c8c",
+    "sources/w8-camera-vehicle-a-camera-pitch/get_pitch.cpp": "fd89c793ab9735e14fac26fbe7b772294d0f48eb6ebf337dc868960a0a814736",
+    "sources/w8-camera-vehicle-a-camera-push/push.cpp": "98f1215d09ca0cd1cf7112e8fe8ff6bf2e0c97cac58b40c25b8e82c8673258c6",
+    "sources/w8-camera-vehicle-a-camera-reset/reset.cpp": "6b693ca6b1fed405a9a1b113cbf13132deb7c651cd57362214c517ca40bcf2ed",
+    "sources/w8-camera-vehicle-a-camera-set-mode/set_mode.cpp": "0dfda0b438aa3c9ef1dd02d5c531753e933c9006f74e4e91cf383ae3aee89693",
+    "sources/w8-camera-vehicle-a-camera-update/update.cpp": "5213fc1b22a2814ccb218dd56d8f34608843f414a31b2c5a4dad23ca9dbf16f2",
+    "sources/w8-camera-vehicle-a-camera-yaw/get_yaw.cpp": "ea04843e161df4af0592c3bdc63dbc4981b8b3dd16b268528bc5571324ecb14c",
+    "sources/w8-camera-vehicle-a-get-npc-position/get_npc_position.cpp": "68172be1e1f9b857ffe4ecfb0ace631a073e8a715db97099324c6d01f05d1de5",
+    "sources/w8-camera-vehicle-a-get-player-position/get_player_position.cpp": "c0c39447dda297ea4f7e30993e71c86a231fc065a4eee796020f704724dc06af",
+    "sources/w8-camera-vehicle-a-get-position-and-yaw/get_position_and_yaw.cpp": "409c278941e852674cff26c8373fa7fa218b0fe1966cce50808f146576399405",
+    "sources/w8-camera-vehicle-a-kick/kick.cpp": "b5e3b7f5b383a2342c52d0e6bd8a62d3b5ea117569d3781c6b3bbd33259a90ce",
+    "sources/w8-camera-vehicle-a-lavatractor-destructor/destructor.cpp": "c9735a6c221822fc51dc773757edf626f6bb9d4df267a50769fe8501ae798bfe",
+    "sources/w8-camera-vehicle-a-lavatractor-typeinfo/typeinfo.cpp": "eacef6831b07cc9c8e2dfcc13893eeef466db0ba9d060700c34cd6c0a04e6ecf",
+    "sources/w8-camera-vehicle-a-set-hold/set_hold.cpp": "8fa43eda3e9e47586529ab10430e53af65e668d26fc50473650509bb18fe3b96",
+    "sources/w8-camera-vehicle-a-set-pitch/set_pitch.cpp": "2700137af450bddb31ac82d059849509033b8dfa182c0f8458f2d9465314f07d",
+    "sources/w8-camera-vehicle-a-set-yaw/set_yaw.cpp": "8fe736b74e0d0c4d632947a0086f18ef1ebae6dd3dc59047ece297e2385d227b",
+    "sources/w8-camera-vehicle-a-skulboat-destructor/destructor.cpp": "fdebf98e3ecaaaf5deade4d4702d19ca1bea478211dcbe358d8ca7c5c0ac67ea",
+    "sources/w8-camera-vehicle-a-skulboat-typeinfo/typeinfo.cpp": "37213cb8f91776621b0783b5b6bd3765cd96433c97a645febc3d2b68d8564d34",
+    "sources/w8-camera-vehicle-a-skulboat-unique-forces/unique_forces.cpp": "3d208ee9ccb54da1323f2628e56dcefc786e188b0897e51971a2dbb04fa30b17",
+    "sources/w8-camera-vehicle-a-vehicle-destructor/destructor.cpp": "66e7b7e67f8f8a070ed2dd33cf845d21136863ff0c6a05f8df44457b2dd48e60",
+    "sources/w8-camera-vehicle-a-vehicle-global-init/global_init.cpp": "091db2b11bcd1d06bf2b4d505c53b09d329c7a8b88a38f2c54ae919ad7cc4244",
+    "sources/w8-camera-vehicle-a-vehicle-typeinfo/typeinfo.cpp": "a5b9d3e4dfaf235f91f30aaffb755fee89d1654d8e69560e0ff387cbac01d593",
+    "sources/w8-camera-vehicle-a-vehicle-unique-forces/unique_forces.cpp": "bd715202d919b3f8ccb627593e110855fa7bd05987463b2a2576f77f935d44d2",
+    "sources/w8-camera-vehicle-a-wheel-reset/reset_wheel.cpp": "dab70e61977498058a54e7b7df656b81997b0df3bd4fd0b84be30e0dc4e360d9"
   },
   "inputs": [
     {
@@ -28738,6 +28763,381 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2063,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_add_npc_driver.o",
+      "profile": "authored_cpp",
+      "sha256": "67e5c9a22693ef9ca950e17017200d65c1baebae0c16c44978f2a1a1e0341747",
+      "source": "sources/w8-camera-vehicle-a-add-npc-driver/add_npc_driver.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddNPCDriver__7VehicleP3NPC",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2064,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_build_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "821c6abcd61064883c9a544fd9b7b644c5764d25be849fa0f71735da221b5c8c",
+      "source": "sources/w8-camera-vehicle-a-camera-build-matrix/build_matrix.cpp",
+      "emitted_functions": [
+        {
+          "name": "BuildMatrix__6CamerafffP6Point3",
+          "compiled_body_bytes": 664
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2065,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_pitch.o",
+      "profile": "authored_cpp",
+      "sha256": "fd89c793ab9735e14fac26fbe7b772294d0f48eb6ebf337dc868960a0a814736",
+      "source": "sources/w8-camera-vehicle-a-camera-pitch/get_pitch.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetPitch__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2066,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_push.o",
+      "profile": "authored_cpp",
+      "sha256": "98f1215d09ca0cd1cf7112e8fe8ff6bf2e0c97cac58b40c25b8e82c8673258c6",
+      "source": "sources/w8-camera-vehicle-a-camera-push/push.cpp",
+      "emitted_functions": [
+        {
+          "name": "Push__6Camera",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2067,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "6b693ca6b1fed405a9a1b113cbf13132deb7c651cd57362214c517ca40bcf2ed",
+      "source": "sources/w8-camera-vehicle-a-camera-reset/reset.cpp",
+      "emitted_functions": [
+        {
+          "name": "Reset__6Cameraii",
+          "compiled_body_bytes": 476
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2068,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_set_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "0dfda0b438aa3c9ef1dd02d5c531753e933c9006f74e4e91cf383ae3aee89693",
+      "source": "sources/w8-camera-vehicle-a-camera-set-mode/set_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetMode__6Camerai",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2069,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_update.o",
+      "profile": "authored_cpp",
+      "sha256": "5213fc1b22a2814ccb218dd56d8f34608843f414a31b2c5a4dad23ca9dbf16f2",
+      "source": "sources/w8-camera-vehicle-a-camera-update/update.cpp",
+      "emitted_functions": [
+        {
+          "name": "Update__6Camera",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2070,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_camera_yaw.o",
+      "profile": "authored_cpp",
+      "sha256": "ea04843e161df4af0592c3bdc63dbc4981b8b3dd16b268528bc5571324ecb14c",
+      "source": "sources/w8-camera-vehicle-a-camera-yaw/get_yaw.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetYaw__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2071,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_get_npc_position.o",
+      "profile": "authored_cpp",
+      "sha256": "68172be1e1f9b857ffe4ecfb0ace631a073e8a715db97099324c6d01f05d1de5",
+      "source": "sources/w8-camera-vehicle-a-get-npc-position/get_npc_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetNPCPosition__7VehicleP6Point3Ps",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2072,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_get_player_position.o",
+      "profile": "authored_cpp",
+      "sha256": "c0c39447dda297ea4f7e30993e71c86a231fc065a4eee796020f704724dc06af",
+      "source": "sources/w8-camera-vehicle-a-get-player-position/get_player_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetPlayerPosition__7VehicleiP6Point3Ps",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2073,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_get_position_and_yaw.o",
+      "profile": "authored_cpp",
+      "sha256": "409c278941e852674cff26c8373fa7fa218b0fe1966cce50808f146576399405",
+      "source": "sources/w8-camera-vehicle-a-get-position-and-yaw/get_position_and_yaw.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetPositionAndYaw__7VehicleP6Point3T1Ps",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2074,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_kick.o",
+      "profile": "authored_cpp",
+      "sha256": "b5e3b7f5b383a2342c52d0e6bd8a62d3b5ea117569d3781c6b3bbd33259a90ce",
+      "source": "sources/w8-camera-vehicle-a-kick/kick.cpp",
+      "emitted_functions": [
+        {
+          "name": "Kick__7Vehicle",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2075,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_lavatractor_destructor.o",
+      "profile": "authored_cpp",
+      "sha256": "c9735a6c221822fc51dc773757edf626f6bb9d4df267a50769fe8501ae798bfe",
+      "source": "sources/w8-camera-vehicle-a-lavatractor-destructor/destructor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_11LavaTractor",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2076,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_lavatractor_typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "eacef6831b07cc9c8e2dfcc13893eeef466db0ba9d060700c34cd6c0a04e6ecf",
+      "source": "sources/w8-camera-vehicle-a-lavatractor-typeinfo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf11LavaTractor",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2077,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_set_hold.o",
+      "profile": "authored_cpp",
+      "sha256": "8fa43eda3e9e47586529ab10430e53af65e668d26fc50473650509bb18fe3b96",
+      "source": "sources/w8-camera-vehicle-a-set-hold/set_hold.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetHold__7Vehiclei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2078,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_set_pitch.o",
+      "profile": "authored_cpp",
+      "sha256": "2700137af450bddb31ac82d059849509033b8dfa182c0f8458f2d9465314f07d",
+      "source": "sources/w8-camera-vehicle-a-set-pitch/set_pitch.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPitch__6Camerai",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2079,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_set_yaw.o",
+      "profile": "authored_cpp",
+      "sha256": "8fe736b74e0d0c4d632947a0086f18ef1ebae6dd3dc59047ece297e2385d227b",
+      "source": "sources/w8-camera-vehicle-a-set-yaw/set_yaw.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetYaw__6Camerai",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2080,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_skulboat_destructor.o",
+      "profile": "authored_cpp",
+      "sha256": "fdebf98e3ecaaaf5deade4d4702d19ca1bea478211dcbe358d8ca7c5c0ac67ea",
+      "source": "sources/w8-camera-vehicle-a-skulboat-destructor/destructor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8SkulBoat",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2081,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_skulboat_typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "37213cb8f91776621b0783b5b6bd3765cd96433c97a645febc3d2b68d8564d34",
+      "source": "sources/w8-camera-vehicle-a-skulboat-typeinfo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf8SkulBoat",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2082,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_skulboat_unique_forces.o",
+      "profile": "authored_cpp",
+      "sha256": "3d208ee9ccb54da1323f2628e56dcefc786e188b0897e51971a2dbb04fa30b17",
+      "source": "sources/w8-camera-vehicle-a-skulboat-unique-forces/unique_forces.cpp",
+      "emitted_functions": [
+        {
+          "name": "doMyUniqueForces__8SkulBoat",
+          "compiled_body_bytes": 560
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2083,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_vehicle_destructor.o",
+      "profile": "authored_cpp",
+      "sha256": "66e7b7e67f8f8a070ed2dd33cf845d21136863ff0c6a05f8df44457b2dd48e60",
+      "source": "sources/w8-camera-vehicle-a-vehicle-destructor/destructor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_7Vehicle",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2084,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_vehicle_global_init.o",
+      "profile": "authored_cpp",
+      "sha256": "091db2b11bcd1d06bf2b4d505c53b09d329c7a8b88a38f2c54ae919ad7cc4244",
+      "source": "sources/w8-camera-vehicle-a-vehicle-global-init/global_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$__7VehicleG6Point3sPPci",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2085,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_vehicle_typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "a5b9d3e4dfaf235f91f30aaffb755fee89d1654d8e69560e0ff387cbac01d593",
+      "source": "sources/w8-camera-vehicle-a-vehicle-typeinfo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf7Vehicle",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2086,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_vehicle_unique_forces.o",
+      "profile": "authored_cpp",
+      "sha256": "bd715202d919b3f8ccb627593e110855fa7bd05987463b2a2576f77f935d44d2",
+      "source": "sources/w8-camera-vehicle-a-vehicle-unique-forces/unique_forces.cpp",
+      "emitted_functions": [
+        {
+          "name": "doMyUniqueForces__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2087,
+      "kind": "independently_authored_source",
+      "object_name": "w8_cv_a_wheel_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "dab70e61977498058a54e7b7df656b81997b0df3bd4fd0b84be30e0dc4e360d9",
+      "source": "sources/w8-camera-vehicle-a-wheel-reset/reset_wheel.cpp",
+      "emitted_functions": [
+        {
+          "name": "Reset__5Wheel",
+          "compiled_body_bytes": 20
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -28837,7 +29237,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8094e7087186145ef85c869a00f6889c0c22010e8a284d174baed478f8374582",
+  "snapshot_sha256": "fa49963012e9d854c56e06c69bc1b2227334303b2330a39600746441d7b556ed",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

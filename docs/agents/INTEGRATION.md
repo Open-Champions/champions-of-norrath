@@ -4078,6 +4078,42 @@ Closed: `_GLOBAL_$D$soundSfxVolume`, `_GLOBAL_$I$soundSfxVolume`, `findChannel__
 Opened: `desiredMusicDuckAmount`, `nextChannel`, `sceSdTransToIOP`,
 `soundSetAudioEffect__Fiiiii`.
 
+## agents/w8-camera-vehicle-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five units
+with fresh `input_order` values 2061 through 2085: 25 emitted functions (3900
+compiled body bytes, not original-byte matches). All 25 host checks build and
+exit 0 here (25 of 25). No duplicate definition was found at link time. No
+game binary or disassembly listing was committed. 1651 function bodies, 2086
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1540 |
+| After | 1537 |
+| Closed | 25 |
+| Opened | 22 |
+
+Closed: `AddNPCDriver__7VehicleP3NPC`, `BuildMatrix__6CamerafffP6Point3`,
+`GetNPCPosition__7VehicleP6Point3Ps`, `GetPitch__6Camera`,
+`GetPlayerPosition__7VehicleiP6Point3Ps`,
+`GetPositionAndYaw__7VehicleP6Point3T1Ps`, `GetYaw__6Camera`,
+`Kick__7Vehicle`, `Push__6Camera`, `Reset__5Wheel`, `Reset__6Cameraii`,
+`SetHold__7Vehiclei`, `SetMode__6Camerai`, `SetPitch__6Camerai`,
+`SetYaw__6Camerai`, `Update__6Camera`, `_$_11LavaTractor`, `_$_7Vehicle`,
+`_$_8SkulBoat`, `_GLOBAL_$I$__7VehicleG6Point3sPPci`, `__tf11LavaTractor`,
+`__tf7Vehicle`, `__tf8SkulBoat`, `doMyUniqueForces__7Vehicle`,
+`doMyUniqueForces__8SkulBoat`.
+
+Opened: `GetZoomDistance__6Camera`, `SetZoomDistance__6Cameraf`, `_$_10GameObject`,
+`__tf10GameObject`, `__tf11LavaVehicle`, `__ti10GameObject`,
+`__ti11LavaVehicle`, `_vt$11LavaVehicle`, `_vt$7Vehicle`, `_vt$8SkulBoat`,
+`accumForceAndTorque__7VehicleP6Point3T1i`, `blockFree__FPv`,
+`doDebugCam__6Camera`, `doInnorukCam__6Camera`, `doNormalCam__6Camera`,
+`getSeatPosition__7VehicleiP6Point3`, `hudDisplayNetCamToggle`,
+`playerLocalPlayerBusy__Fv`, `removePassenger__7Vehiclei`,
+`revealEntireMap__3mapv`, `vehicleCount`, `vehicleList`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
