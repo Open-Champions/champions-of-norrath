@@ -50,9 +50,9 @@ extern "C" unsigned norrath_construct_SuperOrc(void* object, const void* point, 
     norrath_creature_set_parameters(object, 24.0f, bits_float(0x3fb33333u), bits_float(0x3ff99999u), bits_float(0x40866666u), 10.5f, 1);
     write_word(a + 244u, 0u);
     const unsigned long long chunks = norrath_actor_model_active_chunks(load_pointer(address(load_pointer(a + 36u)) + 12u), 0);
-    norrath_actor_animation_initialize(bytes(a + 288u));
     write_word(a + 552u, static_cast<unsigned>(chunks));
     write_word(a + 556u, static_cast<unsigned>(chunks >> 32));
+    norrath_actor_animation_initialize(bytes(a + 288u));
     norrath_actor_animation_add(bytes(a + 288u), load_pointer(address(load_pointer(a + 36u)) + 68u), 1);
     (void)norrath_actor_add_slow_run_list(object);
     const float third = bits_float(0x3e999999u);
