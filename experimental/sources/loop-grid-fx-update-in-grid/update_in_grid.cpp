@@ -1,4 +1,4 @@
-// Observed objectUpdateInGrid__FP10GameObject at 0x143630, extent 232.
+// Observed objectUpdateInGrid__FP10GameObject at 0x143630, extent 240.
 // Object words: object+8 holds the object's own list node, whose word at +8
 // is the node linked into a grid cell list (see listOnewayLink at 0x194390:
 // node words are next 0, previous 4, partner 8, value 12). The cell node is

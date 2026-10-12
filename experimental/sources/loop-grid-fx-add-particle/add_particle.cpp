@@ -1,4 +1,4 @@
-// Observed P_AddParticle__FP11ParticleDefP6Point3T1f at 0x180da0, extent 728.
+// Observed P_AddParticle__FP11ParticleDefP6Point3T1f at 0x180da0, extent 732.
 // Arguments: the definition, a position, a velocity, and a float age.
 // Definition words used: +0 type index (a 16-byte entry of the current
 // system), +4 descriptor slot (its low halfword is stored), +8 use count,

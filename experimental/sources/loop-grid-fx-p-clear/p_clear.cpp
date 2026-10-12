@@ -1,4 +1,4 @@
-// Observed P_Clear__Fv at 0x180588, extent 656.
+// Observed P_Clear__Fv at 0x180588, extent 660.
 // Order of effects:
 //  1. A nonzero pushLevel (0x484304) calls P_Pop__Fv first.
 //  2. Descriptor slots 1 to 31: every descListMark word (0x780280) that is not

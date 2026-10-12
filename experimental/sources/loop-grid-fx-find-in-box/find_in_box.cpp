@@ -1,4 +1,4 @@
-// Observed objectFindInBox__FG6Point3T0PP10GameObjecti at 0x13ef30, extent 552.
+// Observed objectFindInBox__FG6Point3T0PP10GameObjecti at 0x13ef30, extent 548.
 // The two Point3 arguments arrive by address and are copied before use. Cells
 // are 256 wide over a 120 by 120 grid. Lower corner cells are
 // (int(min) + 15264) >> 8 and upper corner cells (int(max) + 15456) >> 8, for x

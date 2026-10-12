@@ -1,4 +1,4 @@
-// Observed hasLightOrParticleNumber__FPPci at 0x21df18, extent 832.
+// Observed hasLightOrParticleNumber__FPPci at 0x21df18, extent 828.
 // Looks for three tags named by number: ParticleEmitter<n>, DynamicLight<n>
 // and Halo<n> (formats at 0x470c90, 0x470ca8, 0x485468). For each, the name
 // is formatted into a 32-byte buffer even when the argument list is null,

@@ -1,4 +1,4 @@
-// Observed lightAdd__FP5Light at 0x13d230, extent 196. Light words: next at 0,
+// Observed lightAdd__FP5Light at 0x13d230, extent 200. Light words: next at 0,
 // previous-link at 4, x and y floats at 48 and 52. The light is first unlinked
 // from its current list: the word at previous+0 takes next, and the word at
 // next+4 takes previous. Both are then cleared. Cells are 256 units wide with

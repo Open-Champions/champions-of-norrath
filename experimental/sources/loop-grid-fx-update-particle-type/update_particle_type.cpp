@@ -1,5 +1,5 @@
 // Observed P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v at
-// 0x180ac0, extent 736. The 80 bytes of the definition are copied aside, then
+// 0x180ac0, extent 580. The 80 bytes of the definition are copied aside, then
 // setParticleDef (0x180820, same argument list) rewrites the definition. If
 // the descriptor slot word at +4 is -1 nothing more happens. If the 80 bytes
 // are unchanged (memcmp is zero) nothing more happens. Otherwise bytes 16 to
