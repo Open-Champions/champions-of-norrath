@@ -3276,6 +3276,50 @@ Closed: `_$_13UserParamProp`, `_$_16CosmeticPropAnim`, `_$_4Prop`, `_$_7Player1`
 Opened: `__tf6PhProp`, `__tf9MummyKing`, `eRand__10GameObject`,
 `findTagFloat__10GameObjectPci`, `norrath_ti_6PhProp`.
 
+## agents/prop-run-draw
+
+Merged (the branch notes carry the five summary sections, plus a host-check
+gaps section). Twenty-one units with fresh `input_order` values 1595 through
+1615: 23 emitted functions (including two file-local `set_state` helpers;
+10,600 compiled body bytes, not original-byte matches). No duplicate
+definition was found. Each unit has a `host_check.cpp`; all 21 build and exit
+0 here. The notes' own "host-check gaps" section is the author's account of
+what the checks do not cover and still applies. No game binary or
+disassembly listing was committed. 1274 function bodies, 1616 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1656 |
+| After | 1658 |
+| Closed | 21 |
+| Opened | 23 |
+
+Closed: `msg_draw__10GameObject`, `msg_draw__13UserParamProp`,
+`msg_draw__14GnomeNavigator`, `msg_draw__16CosmeticPropAnim`,
+`msg_draw__4Prop`, `msg_draw__5Lever`, `msg_draw__7Natasla`,
+`msg_draw__9CdEyeball`, `msg_run__10GameObject`, `msg_run__11SmallSpider`,
+`msg_run__13UserParamProp`, `msg_run__14GnomeNavigator`,
+`msg_run__16CosmeticPropAnim`, `msg_run__3Cat`, `msg_run__4Prop`,
+`msg_run__4Trap`, `msg_run__5Lever`, `msg_run__7Mermaid`,
+`msg_run__9CdEyeball`, `msg_trigger__10GameObjecti`,
+`msg_trigger__7Counteri`.
+
+Opened: `addTurnAnimation__3Cat`, `bExitStatePersueIdle__8Creature`,
+`bFarFromHome__8Creature`,
+`gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb`,
+`lightSetAmbientOffset__FPs`, `matIdent__FP8Matrix34`,
+`matMakeTransYawScale__FP8Matrix34G6Point3sf`, `matRot__FP8Matrix34is`,
+`matTrans__FP8Matrix34fff`, `matTransform__FP6Point3P8Matrix44T0`,
+`modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec`, `modelGetC
+harAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f`,
+`move2__8CreatureG6Point3`, `newDamageHandler__8CreatureP12_modelHeader`,
+`objectActiveProcessing__FP10GameObjectii`, `slideBack__8Creaturef`,
+`smartWander__8Creature`, `steerAndRouteToPosition__8CreatureG6Point3`,
+`subTurnAnimation__3Cat`, `switchToWalk__3Cat`,
+`worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`,
+`worldFindStandHeight__FP12_worldHeaderG6Point3f`, `worldViewMatrix`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

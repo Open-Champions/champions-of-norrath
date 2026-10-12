@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1595,
+  "default_authored_inputs": 1616,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2336,7 +2336,28 @@
     "sources/prop-poke-clone-typeinfo-prop/typeinfo.cpp": "58173c07e4defc9c959f2be274523080f7815a8f0f1c748b353d08b0d6ba1d88",
     "sources/prop-poke-clone-typeinfo-ptr-ph-prop/typeinfo.cpp": "2ef2bc600751bf0dee72fc30192d77fb50b7bde9192eab8b8638e811f0bd743d",
     "sources/prop-poke-clone-typeinfo-ptr-prop/typeinfo.cpp": "67c20865802399203810a8c3d60f54d16c3cc257dbe1576c92a768ac620ef9ce",
-    "sources/prop-poke-clone-typeinfo-user-param-prop/typeinfo.cpp": "be5a1f194294dac35df780eacbd7a90786e127e8136a38c23e61716c63d1cebf"
+    "sources/prop-poke-clone-typeinfo-user-param-prop/typeinfo.cpp": "be5a1f194294dac35df780eacbd7a90786e127e8136a38c23e61716c63d1cebf",
+    "sources/prop-run-draw-cat-run/msg_run.cpp": "d96169c1e5b4f67dbde5c25cc2069f6626808cbeb73c769abf88b6d5b2f5c2ba",
+    "sources/prop-run-draw-cdeyeball-draw/msg_draw.cpp": "8ace606b5bd2135c0819434908d4ca683d4b8a3ac0d55b051802496384da89c4",
+    "sources/prop-run-draw-cdeyeball-run/msg_run.cpp": "9bc368c2222ccd5e9ee6183f6ac4f55879a1efe7e2a8ab4517b7b6668f69a884",
+    "sources/prop-run-draw-cosmeticpropanim-draw/msg_draw.cpp": "4653103a81127bc6cd4a825c2823db389ce2075337a549a0ee16939ee05c2d1b",
+    "sources/prop-run-draw-cosmeticpropanim-run/msg_run.cpp": "145155757118fc73f506933914a834ad4a7ea6d157d42b98fa19bf1832b9650c",
+    "sources/prop-run-draw-counter-trigger/msg_trigger.cpp": "40aad4239644c3ee94f1e80ebb290c69e597e939e0060ff1ae6d59d073d282ac",
+    "sources/prop-run-draw-gnomenavigator-draw/msg_draw.cpp": "8e0d44eb79559cacccf0fe1f3faeae9236b534d26188c8e5780ca8dcde8c6e93",
+    "sources/prop-run-draw-gnomenavigator-run/msg_run.cpp": "195850c2f5a5c0504a0d04ab194ee1f41814d36c7afed62dfc287abe1b11d500",
+    "sources/prop-run-draw-lever-draw/msg_draw.cpp": "de1d6e34ba5e830eecdbf9a0b6b6dd2a41dd938652efc32032a5bcfd907e798e",
+    "sources/prop-run-draw-lever-run/msg_run.cpp": "2df9ebdb1856127b04502e631208d3c9821bc11ffca5d6c1e9e48518b4b3ac64",
+    "sources/prop-run-draw-mermaid-run/msg_run.cpp": "083bcce6d3481daa331ff7d91c3e4bdb82ce2ea6260d5f7827f0e3d07d41d5f6",
+    "sources/prop-run-draw-msg-draw-gameobject/msg_draw.cpp": "d975601a004b72d781e7c44a4539510872c2596f315ee73a0404ff5ef8a513a5",
+    "sources/prop-run-draw-msg-run-gameobject/msg_run.cpp": "2303affabb20c04035bbff7a63fccad6240dcfb817753a10951ffc358df66b9b",
+    "sources/prop-run-draw-msg-trigger-gameobject/msg_trigger.cpp": "a07d590c1a00df0c0d3b84cd600127e6d47c0eb412d8eb97e9dec55a7e7d92b1",
+    "sources/prop-run-draw-natasla-draw/msg_draw.cpp": "05c236ac28bf15b25677427f53963386159e7bd02cf2fca691f5196d16e52d44",
+    "sources/prop-run-draw-prop-draw/msg_draw.cpp": "b7d7e4c504cfd3c28b8e8dd1c64e328fb80c06bc2352f2d20e26b2d493e15a49",
+    "sources/prop-run-draw-prop-run/msg_run.cpp": "3d81796eeddb1bed90d285f28b720d03161389c0360c998e8cc3f682f7cad9c2",
+    "sources/prop-run-draw-smallspider-run/msg_run.cpp": "50cd7ec832ec9a9464c85aad61211c6f2ae51139155e3ad6588492d8d7e0da9d",
+    "sources/prop-run-draw-trap-run/msg_run.cpp": "e87cb9b7bf6feef6cc28fe2d08d585cc452409b693c2d42dda717e5f0ab73fb3",
+    "sources/prop-run-draw-userparamprop-draw/msg_draw.cpp": "1a63baeba128dd788e98f448e4dd19c6952a5a1293a03dc44d6f77b3ea60b51c",
+    "sources/prop-run-draw-userparamprop-run/msg_run.cpp": "8be57ecc67cd94a149d4e93199f2418f316477ca04b92674d2811bd878b68e78"
   },
   "inputs": [
     {
@@ -21655,6 +21676,365 @@
           "compiled_body_bytes": 92
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1597,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_cat_run.o",
+      "profile": "authored_cpp",
+      "sha256": "d96169c1e5b4f67dbde5c25cc2069f6626808cbeb73c769abf88b6d5b2f5c2ba",
+      "source": "sources/prop-run-draw-cat-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9set_stateEPvi",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "msg_run__3Cat",
+          "compiled_body_bytes": 1260
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1598,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_cdeyeball_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "8ace606b5bd2135c0819434908d4ca683d4b8a3ac0d55b051802496384da89c4",
+      "source": "sources/prop-run-draw-cdeyeball-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__9CdEyeball",
+          "compiled_body_bytes": 812
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1599,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_cdeyeball_run.o",
+      "profile": "authored_cpp",
+      "sha256": "9bc368c2222ccd5e9ee6183f6ac4f55879a1efe7e2a8ab4517b7b6668f69a884",
+      "source": "sources/prop-run-draw-cdeyeball-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__9CdEyeball",
+          "compiled_body_bytes": 340
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1600,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_cosmeticpropanim_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "4653103a81127bc6cd4a825c2823db389ce2075337a549a0ee16939ee05c2d1b",
+      "source": "sources/prop-run-draw-cosmeticpropanim-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__16CosmeticPropAnim",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1601,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_cosmeticpropanim_run.o",
+      "profile": "authored_cpp",
+      "sha256": "145155757118fc73f506933914a834ad4a7ea6d157d42b98fa19bf1832b9650c",
+      "source": "sources/prop-run-draw-cosmeticpropanim-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__16CosmeticPropAnim",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1602,
+      "kind": "independently_authored_source",
+      "object_name": "msg_trigger_counter_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "40aad4239644c3ee94f1e80ebb290c69e597e939e0060ff1ae6d59d073d282ac",
+      "source": "sources/prop-run-draw-counter-trigger/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__7Counteri",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1603,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_gnomenavigator_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "8e0d44eb79559cacccf0fe1f3faeae9236b534d26188c8e5780ca8dcde8c6e93",
+      "source": "sources/prop-run-draw-gnomenavigator-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14GnomeNavigator",
+          "compiled_body_bytes": 600
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1604,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_gnomenavigator_run.o",
+      "profile": "authored_cpp",
+      "sha256": "195850c2f5a5c0504a0d04ab194ee1f41814d36c7afed62dfc287abe1b11d500",
+      "source": "sources/prop-run-draw-gnomenavigator-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9set_stateEPvi",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "msg_run__14GnomeNavigator",
+          "compiled_body_bytes": 704
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1605,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_lever_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "de1d6e34ba5e830eecdbf9a0b6b6dd2a41dd938652efc32032a5bcfd907e798e",
+      "source": "sources/prop-run-draw-lever-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__5Lever",
+          "compiled_body_bytes": 340
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1606,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_lever_run.o",
+      "profile": "authored_cpp",
+      "sha256": "2df9ebdb1856127b04502e631208d3c9821bc11ffca5d6c1e9e48518b4b3ac64",
+      "source": "sources/prop-run-draw-lever-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Lever",
+          "compiled_body_bytes": 532
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1607,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_mermaid_run.o",
+      "profile": "authored_cpp",
+      "sha256": "083bcce6d3481daa331ff7d91c3e4bdb82ce2ea6260d5f7827f0e3d07d41d5f6",
+      "source": "sources/prop-run-draw-mermaid-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Mermaid",
+          "compiled_body_bytes": 568
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1608,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_msg_draw_gameobject.o",
+      "profile": "authored_cpp",
+      "sha256": "d975601a004b72d781e7c44a4539510872c2596f315ee73a0404ff5ef8a513a5",
+      "source": "sources/prop-run-draw-msg-draw-gameobject/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1609,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_msg_run_gameobject.o",
+      "profile": "authored_cpp",
+      "sha256": "2303affabb20c04035bbff7a63fccad6240dcfb817753a10951ffc358df66b9b",
+      "source": "sources/prop-run-draw-msg-run-gameobject/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1610,
+      "kind": "independently_authored_source",
+      "object_name": "msg_trigger_msg_trigger_gameobject.o",
+      "profile": "authored_cpp",
+      "sha256": "a07d590c1a00df0c0d3b84cd600127e6d47c0eb412d8eb97e9dec55a7e7d92b1",
+      "source": "sources/prop-run-draw-msg-trigger-gameobject/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1611,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_natasla_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "05c236ac28bf15b25677427f53963386159e7bd02cf2fca691f5196d16e52d44",
+      "source": "sources/prop-run-draw-natasla-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Natasla",
+          "compiled_body_bytes": 540
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1612,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_prop_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "b7d7e4c504cfd3c28b8e8dd1c64e328fb80c06bc2352f2d20e26b2d493e15a49",
+      "source": "sources/prop-run-draw-prop-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__4Prop",
+          "compiled_body_bytes": 420
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1613,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_prop_run.o",
+      "profile": "authored_cpp",
+      "sha256": "3d81796eeddb1bed90d285f28b720d03161389c0360c998e8cc3f682f7cad9c2",
+      "source": "sources/prop-run-draw-prop-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__4Prop",
+          "compiled_body_bytes": 2472
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1614,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_smallspider_run.o",
+      "profile": "authored_cpp",
+      "sha256": "50cd7ec832ec9a9464c85aad61211c6f2ae51139155e3ad6588492d8d7e0da9d",
+      "source": "sources/prop-run-draw-smallspider-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__11SmallSpider",
+          "compiled_body_bytes": 376
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1615,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_trap_run.o",
+      "profile": "authored_cpp",
+      "sha256": "e87cb9b7bf6feef6cc28fe2d08d585cc452409b693c2d42dda717e5f0ab73fb3",
+      "source": "sources/prop-run-draw-trap-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__4Trap",
+          "compiled_body_bytes": 484
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1616,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw_userparamprop_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "1a63baeba128dd788e98f448e4dd19c6952a5a1293a03dc44d6f77b3ea60b51c",
+      "source": "sources/prop-run-draw-userparamprop-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__13UserParamProp",
+          "compiled_body_bytes": 384
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 1617,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run_userparamprop_run.o",
+      "profile": "authored_cpp",
+      "sha256": "8be57ecc67cd94a149d4e93199f2418f316477ca04b92674d2811bd878b68e78",
+      "source": "sources/prop-run-draw-userparamprop-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__13UserParamProp",
+          "compiled_body_bytes": 100
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -21754,7 +22134,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a61a41f2f467bc9260dacd9f44e5e44a8ec90dffae346b4575c826e73e9d5809",
+  "snapshot_sha256": "1d89b47bfcd7926afa68e2d6fe9bb0536b73164f758667b774619f5521ae80d4",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
