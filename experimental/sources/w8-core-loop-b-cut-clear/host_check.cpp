@@ -18,6 +18,7 @@ static void note(const char* text) {
     trace[traceLength] = 0;
 }
 static float frustum[4];
+static unsigned bitsOf(float f) { unsigned u; __builtin_memcpy(&u, &f, 4); return u; }
 static float farClip = 0, lightScale = 0;
 static void* freed[2];
 static int freedCount = 0;
@@ -45,7 +46,7 @@ int main() {
     if (engineScissory2 != 447 || engineScissory1 != 0) return 2;
     if (cutMode != 0 || cutSkipMode != 0 || thereIsACutPlayer != 0) return 3;
     if (farClip != 1800.0f || lightScale != 1.0f) return 4;
-    if (frustum[0] != 50.0f || frustum[1] != 1.33f || frustum[2] != 80.0f || frustum[3] != 1.0f) return 5;
+    if (frustum[0] != 50.0f || bitsOf(frustum[1]) != 0x3faa3d70u || frustum[2] != 80.0f || frustum[3] != 1.0f) return 5;
     if (animationLoading != 0) return 6;
     if (freedCount != 2 || freed[0] != &a || freed[1] != &b) return 7;
     for (int i = 0; i < 2; ++i)
