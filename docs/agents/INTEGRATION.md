@@ -2532,3 +2532,4 @@ and no startup stage has executed.
 - 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
 - 2026-10-12 13:10 CDT — `agents/simloop-services` —  unresolved imports
 - 2026-10-12 13:13 CDT — `agents/kernel-patches` —  unresolved imports
+- 2026-10-12 13:15 CDT — `agents/frontend-shell` —  unresolved imports
