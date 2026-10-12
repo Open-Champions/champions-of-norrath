@@ -3876,6 +3876,42 @@ Opened: `AllocTimerCounter`, `InitTLB`, `SetTimerHandler`, `StartTimerCounter`,
 `sceCdCbPoff_Gp`, `sceCdDiskReady`, `sceCdPoffCbdata`, `sceCdPoffCbfunc`,
 `sceCdPowerOff`, `sceDevctl`, `sceGifPkEnd`, `sceGifPkRefLoadImage`.
 
+## agents/w8-startup-sce-b
+
+Merged (the branch notes carry the five summary sections). Eighteen of the 19
+units were selected with fresh `input_order` values 1942 through 1959 (18
+emitted functions, 3500 compiled body bytes less the unselected unit; not
+original-byte matches). All 18 host checks build and exit 0 here (18 of 18).
+w8-startup-sce-b-k-exit-tlb-handler (`_kExitTLBHandler`, assembly) was **not**
+selected: the notes' only evidence is a private link compared with the
+executable, with no check committed in its directory, so the snapshot
+checker rejects it (no host file); its source stays in the snapshot,
+unselected, which leaves `_kExitTLBHandler` open (kernel-patches' TLB table
+still points at it). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1531 function bodies, 1960
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1586 |
+| After | 1580 |
+| Closed | 24 |
+| Opened | 18 |
+
+Closed: `_mallinfo_r`, `_request_bind`, `_request_call`, `_request_end`,
+`_request_rdata`, `_sceCd_scmdsdata`, `_sceRpcFreePacket`,
+`_sceRpcGetPacket`, `_sceSifLoadModule`, `batchBuffer`, `cancelStreamWait`,
+`cdClear__Fv`, `cdWait__Fv`, `cdvd_exit`, `deci2Putchar`,
+`decompressThreadid`, `dmaGIF`, `eenull`, `gCd`, `initEzNetCtl`, `kprintf`,
+`lgAudInit`, `lgCodecEnumerate`, `lgCodecInit`.
+
+Opened: `InvalidDCache`, `__malloc_current_mallinfo`, `__malloc_lock`,
+`__malloc_unlock`, `__malloc_update_mallinfo`, `_alarm_bind`,
+`_alarm_rdata`, `_sceRpcGetFPacket`, `_sceRpcGetFPacket2`, `_search_svdata`,
+`iSetTimerAlarm`, `iWakeupThread`, `isceSifSendCmd`, `kputs`,
+`sceCdStPause`, `sceCdStStop`, `sceSifRemoveCmdHandler`, `streamPaused`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
