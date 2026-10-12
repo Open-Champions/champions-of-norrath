@@ -92,6 +92,26 @@ extern unsigned char norrath_ctors_ant_lantern_view_480b14[];
 extern unsigned char norrath_ctors_ant_lantern_view_46f310[];
 extern unsigned char norrath_ctors_ant_lantern_view_46f320[];
 extern unsigned char norrath_ctors_ant_lantern_view_46f330[];
+unsigned norrath_construct_Demon(void* object, const void* point, short type, char** arguments);
+unsigned norrath_construct_Cyclops(void* object, const void* point, short type, char** arguments, int kind);
+void setAnimEventFlags__8Creatureififififi(void* object, int a, float fa, int b, float fb, int c, float fc, int d, float fd, int e);
+void initAttackVariant__5Demon(void* object);
+extern unsigned char norrath_ctors_ant_lantern_view_42af70[];
+extern unsigned char norrath_ctors_ant_lantern_view_44dd68[];
+extern unsigned char norrath_ctors_ant_lantern_view_480ba8[];
+extern unsigned char norrath_ctors_ant_lantern_view_480bac[];
+extern unsigned char norrath_ctors_ant_lantern_view_480bb0[];
+extern unsigned char norrath_ctors_ant_lantern_view_480bb4[];
+extern unsigned char norrath_ctors_ant_lantern_view_42bb08[];
+extern unsigned char norrath_ctors_ant_lantern_view_44bf90[];
+extern unsigned char norrath_ctors_ant_lantern_view_481160[];
+extern unsigned char norrath_ctors_ant_lantern_view_481164[];
+extern unsigned char norrath_ctors_ant_lantern_view_481168[];
+extern unsigned char norrath_ctors_ant_lantern_view_48116c[];
+extern unsigned char norrath_ctors_ant_lantern_view_481170[];
+extern unsigned char norrath_ctors_ant_lantern_view_481174[];
+extern unsigned char norrath_ctors_ant_lantern_view_481178[];
+extern unsigned char norrath_ctors_ant_lantern_view_48117c[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
@@ -139,6 +159,12 @@ inline void write_word(Address a, unsigned value) {
     p[1] = static_cast<unsigned char>(value >> 8);
     p[2] = static_cast<unsigned char>(value >> 16);
     p[3] = static_cast<unsigned char>(value >> 24);
+}
+inline float read_single(const unsigned char* view) {
+    const unsigned bits = read_word(address(view));
+    float value;
+    __builtin_memcpy(&value, &bits, 4);
+    return value;
 }
 struct PointBytes { unsigned x, y, z; };
 inline PointBytes snapshot_point(const void* point) {
