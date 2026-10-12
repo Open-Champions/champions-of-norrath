@@ -76,6 +76,10 @@ CALLS = {
     'P_CreateParticleSystem__Fv': [],
     'lightAdd__FP5Light': [('r', 4), ('p', 4, 48)],
     'lumpFindResource__FPcT0': [('s', 4), ('s', 5)],
+    'getProxyMeshId__4itemPQ24item11description': [('r', 4), ('p', 4, 72)],
+    '__4PropG6Point3PcN22li': [('r', 4), ('p', 5, 12), ('s', 6), ('r', 7), ('r', 8), ('r', 9), ('r', 10)],
+    'objectUpdateInGrid__FP10GameObject': [('r', 4)],
+    'matMakeTransYaw__FP8Matrix34G6Point3s': [('r', 4), ('p', 5, 12), ('r', 6)],
     'soundPlaySequence__FP15AnimationHeaderG6Point3f': [('r', 4), ('p', 5, 12), ('f', 12)],
 }
 FUNCTIONS = {}
@@ -135,7 +139,7 @@ def run(image, entry, stub_addrs, sc, seed):
                 else:
                     row.append(mm.read(mm.g32(item[1]), item[2]))
             m.log.append(tuple(row))
-            mm.setr32(2, sc.get('returns', {}).get(name, rng.randrange(1 << 32)))
+            mm.setr32(2, rng.randrange(8) if name in sc.get('small', ()) else sc.get('returns', {}).get(name, rng.randrange(1 << 32)))
             if name in sc.get('writes', {}):
                 sc['writes'][name](mm, rng)
         stubs[addr] = stub
@@ -173,7 +177,9 @@ def compare(sym, runs, syms, exe):
             if bad <= 3:
                 print('MISMATCH seed %d' % seed)
                 if res[0][0] != res[1][0]:
-                    print('  log image %s\n  log built %s' % (res[0][0][:3], res[1][0][:3]))
+                    a, b = res[0][0], res[1][0]
+                    k = next((i for i in range(min(len(a), len(b))) if a[i] != b[i]), min(len(a), len(b)))
+                    print('  log differs at call %d (of %d and %d):\n   image %s\n   built %s' % (k, len(a), len(b), a[k:k + 1], b[k:k + 1]))
                 diff = [hex(x) for x in res[0][1] if res[0][1][x] != res[1][1][x]][:10]
                 if diff:
                     print('  memory differs at', diff)
@@ -216,7 +222,24 @@ def scenario_horn(rng):
 
 reg('__19SpellHornOmenEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-hornomen-ctor/ctor.cpp', scenario_horn)
 
+def scenario_item_prop(rng):
+    mem = {}
+    fill(rng, mem, OBJ, 512)
+    fill(rng, mem, OTHER, 128)
+    fill(rng, mem, OTHER + 0x400, 12)
+    for i in range(8):                       # first records of _4item$globalItem
+        for j in range(4):
+            put32(mem, 0x31F540 + 16 * i + 4 * j, rng.randrange(1 << 32))
+    # make the tested bit and flag word vary
+    mem[OTHER + 12] = rng.choice([0, 0x80, 0x7F, 0xFF, rng.randrange(256)])
+    args = [OBJ, OTHER + 0x400, OTHER, rng.choice([0, 1, -1, 77, rng.randrange(1 << 32)])]
+    return {'mem': mem, 'args': args,
+            'compare': list(range(OBJ, OBJ + 512)),
+            'small': ['getProxyMeshId__4itemPQ24item11description']}
+
+
 reg('__22SpellPlanarSteelEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-planarsteel-ctor/ctor.cpp', scenario_planar)
+reg('__8ItemPropG6Point3PQ24item11descriptioni', 'w8-spell-static-init-b-itemprop-ctor/ctor.cpp', scenario_item_prop)
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
