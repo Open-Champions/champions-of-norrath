@@ -1993,6 +1993,66 @@ integrator's selection notes under their own heading at the end.
 1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
 passed. No EE or game execution.
 
+## Baseline re-check before the 2026-10-12 afternoon pass
+
+The shared branch (`ca8050c`) was re-run before merging anything: 214 tool
+tests, the snapshot check (2951 files, 1282 authored inputs) and the default
+partial build (1282 compilations, one link, 1008 function bodies, zero COMMON)
+all passed, and the build reproduced the recorded **1142** unresolved imports.
+The generated `private_object_sha256` of the last plan entry also reproduced.
+No repo-rule break was found in the added files: no binaries, no disassembly
+files, no committed object files. The `.S` files are authored syscall
+sequences. One shared-file defect: the 22:19 push-log line was missing its
+trailing newline, so the next entry was fused onto it. Fixed below.
+
+## agents/game-loop closing pass
+
+Merged (the branch notes carry the five summary sections). Two functions were
+new since the first merge: `drawObjectsTask__Fv` and `gameLoop__Fv`, each with
+a host check that exits zero here. Only `gameLoop__Fv` was selected, with
+fresh `input_order` 1282. game-loop-draw-objects was **not** selected: the link
+fails with a multiple definition of `drawObjectsTask__Fv`, already defined by
+particles-draw-objects-task (input 922). Its files stay in the source snapshot
+beside game-loop-draw-particles and game-loop-object-draw-enable, which are
+still unselected for the same reason. Which body should own the name is a
+decision for the authors; the branch notes still say 15 imports closed, which
+no longer holds on this tip.
+
+The worker's private trial (879 to 963) is not the official count; this tip
+shows a different one.
+
+| | |
+|---|---|
+| Before | 1142 |
+| After | 1199 |
+| Closed | 1 |
+| Opened | 58 |
+
+Closed: `gameLoop__Fv`.
+
+Opened: `MC_FrontEndImport`, `animFrame__Fv`, `commProcess__Fv`,
+`coreGameStep__Fii`, `coreHeadsetResetTimer`, `coreLevelCommentTimer`,
+`coreLoadingStart`, `coreSwitchScene`, `coreSwitchSceneStart`,
+`cutRunFrame__Fb`, `engineGetAIStepCount__Fv`, `engineLastAITime`,
+`engineLoadEnvTex__FP8_texture`, `engineSetBlur__Fi`,
+`enumerateAlivePlayers__Fv`, `gameCreatureThinkSpinner`,
+`gameMiscTaskSync__Fv`, `gamePlayersPresent`, `gameSetObjectVis__Fv`,
+`inventoryInit__Fv`, `loadThreadID`, `loadingScreenRequestExit`,
+`lumpCheck__Fv`, `lumpFindByType__FPvPci`, `lumpQuery__FPc`,
+`mcProcessKick__Fv`, `musicTimer`, `netBroadCastStart`,
+`netClearContact__Fv`, `netGameStep__FbT0`, `netInContact__Fv`, `netInit__Fv`,
+`netStartLevel__Fv`, `netStartNetworkGameFrame__Fv`,
+`netStartNetworkGameInit__Fv`, `netStart__Fv`, `netTrouble`,
+`netWaitForPeersToCatchUp__Fv`, `picProcess__4itemv`,
+`playerDeallocateArmorCaches__Fv`, `playerRecalled`, `plotRouteTask__Fv`,
+`preCacheArmor__6Player`, `recallEnter`, `runMusic__Fv`, `scriptRun__Fv`,
+`scriptSetScript__FPv`, `startNewWorld__Fv`, `subDrawLoop__FPFv_i`,
+`superGamestateInit`, `texIsDecompressing__Fv`, `texIsLoading__Fv`,
+`texProcessDecompress__Fv`, `texProcessLoad__Fi`, `textMessageDraw__Fv`,
+`textMessageProcess__Fv`, `worldDrawEnable`, `worldRunWaterTask__Fv`.
+1009 function bodies, 1283 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
@@ -2246,6 +2306,7 @@ and no startup stage has executed.
 - 2026-10-11 20:20 CDT — `agents/pre-logo-dialog` — 1035 unresolved imports
 - 2026-10-11 20:28 CDT — `agents/simloop-services` — 1054 unresolved imports
 - 2026-10-11 21:21 CDT — `agents/gs-dma-present` — 1056 unresolved imports
-- 2026-10-11 22:19 CDT — `agents/pre-logo-dialog` — 1149 unresolved imports- 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
+- 2026-10-11 22:19 CDT — `agents/pre-logo-dialog` — 1149 unresolved imports
+- 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
 - 2026-10-12 12:39 CDT — `agents/floor-world-view` — 1142 unresolved imports
 - 2026-10-12 12:41 CDT — `agents/card-progress`, `agents/memcard-calls` (follow-up commits) — 1142 unresolved imports

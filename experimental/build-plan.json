@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1282,
+  "default_authored_inputs": 1283,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1998,7 +1998,8 @@
     "sources/floor-world-view-resource-map/resource_map.cpp": "8386a7a2bc0e7f53f353f0d4b505eecee49876e2a8fee6350d60fa4999181fb1",
     "sources/floor-world-view-set-far-clip/set_far_clip.cpp": "ab4da0f336e919cfd54d25f4766d7fc5e1db1c4b5c1c21ee5088d95e3244cdc9",
     "sources/floor-world-view-set-frustum/set_frustum.cpp": "2f8ee54a3b9e92fb97375682906d5db0655419f6cb5602d95af25298b15c57a3",
-    "sources/floor-world-view-world-matrix/world_matrix.cpp": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647"
+    "sources/floor-world-view-world-matrix/world_matrix.cpp": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647",
+    "sources/game-loop-game-loop/game_loop.cpp": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa"
   },
   "inputs": [
     {
@@ -16719,6 +16720,21 @@
       "sha256": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647",
       "source": "sources/floor-world-view-world-matrix/world_matrix.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1284,
+      "kind": "independently_authored_source",
+      "object_name": "game_loop.o",
+      "profile": "authored_cpp",
+      "sha256": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa",
+      "source": "sources/game-loop-game-loop/game_loop.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLoop__Fv",
+          "compiled_body_bytes": 3876
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -16818,7 +16834,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0bd6279263bbc23366ae3940cf3c2b9509f27f86bef7a0d5455d0d6b4cbd8e92",
+  "snapshot_sha256": "2ae64d5499db2643c6c053b91d73a054210f86bbeb73ce2b6ed8600c376b2c99",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -16479,6 +16479,20 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/floor-world-view-world-matrix/world_matrix.cpp"
+    },
+    {
+      "input_order": 1284,
+      "component": "game-loop-game-loop",
+      "object_name": "game_loop.o",
+      "private_object_sha256": "edecb74d5769d287d79963810d6ca727035691da2ecd69c11e867ddfa8077b37",
+      "emitted_functions": [
+        {
+          "name": "gameLoop__Fv",
+          "compiled_body_bytes": 3876
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/game-loop-game-loop/game_loop.cpp"
     }
   ],
   "drafts": [
@@ -19475,7 +19489,11 @@
     "sources/floor-world-view-camera-pos/camera_pos.cpp": "ef7a027af5cd4332c33185b02ddf0a3a125f63a1755764e93b86eb3346ce513f",
     "sources/floor-world-view-camera-pos/host_check.cpp": "932adf6528d6109baefc6d81c3f79c4137e10197d3519b04c8880dea42fcd739",
     "sources/floor-world-view-far-clip/far_clip.cpp": "1c0c197a50f03efa846b8ef03f8437c1ec642e511eb2fb01df178cd751565147",
-    "sources/floor-world-view-far-clip/host_check.cpp": "9ac571e5629c2277e187bf1d82610d4e48cd5737eac4005a1b6034156987928d"
+    "sources/floor-world-view-far-clip/host_check.cpp": "9ac571e5629c2277e187bf1d82610d4e48cd5737eac4005a1b6034156987928d",
+    "sources/game-loop-game-loop/game_loop.cpp": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa",
+    "sources/game-loop-game-loop/host_check.cpp": "b0c6054f07f48a12185afbf7b63fec5d4443fdaa5b3c7a983bff6df24fb13632",
+    "sources/game-loop-draw-objects/draw_objects.cpp": "26e86e74c356e3d8e4f293962c0bea53a0ceaff31750ff6b12d9f4940654ce89",
+    "sources/game-loop-draw-objects/host_check.cpp": "759a2c3ee5f5de2dcae1e9f898a155002f1dc03fe68c3bebd7fa8a33b3f1157d"
   },
   "additional_implementations": [
     {
@@ -19917,11 +19935,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1284,
-    "authored_default_inputs": 1282,
+    "selected_inputs": 1285,
+    "authored_default_inputs": 1283,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1010,
-    "compiled_body_bytes_from_accepted_inputs": 425636,
+    "emitted_function_definitions_including_helpers": 1011,
+    "compiled_body_bytes_from_accepted_inputs": 429512,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19934,7 +19952,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 971
+    "package_selected_inputs": 972
   },
   "startup_implementations": [
     {
@@ -34812,6 +34830,23 @@
       "emitted_functions": [],
       "host_files": [
         "sources/floor-world-view-world-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "game-loop",
+      "source": "sources/game-loop-game-loop/game_loop.cpp",
+      "source_sha256": "9d677437073f3f06c554946e38a93d7a27f1c491f2aef465a7e81bdad356f0fa",
+      "object_sha256": "edecb74d5769d287d79963810d6ca727035691da2ecd69c11e867ddfa8077b37",
+      "emitted_functions": [
+        {
+          "name": "gameLoop__Fv",
+          "compiled_body_bytes": 3876
+        }
+      ],
+      "host_files": [
+        "sources/game-loop-game-loop/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
