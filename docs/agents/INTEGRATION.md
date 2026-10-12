@@ -4683,6 +4683,37 @@ k__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`,
 `netCheckActivation__FG6Point3f`, `rainSplashParticle`, `routeQueue`,
 `textRemoveText__FPv`, `worldFreeWorld__FP12_worldHeader`.
 
+## Second-pass audit of merged host checks
+
+Added by the integrator that worked beside the one that merged most of the
+`w8-*` packages. At tip `ef62a71a` it ran every host check in the 577 source
+directories added since `5744679` (the tip when this pass started) on this
+machine, and changed one numeric literal at a time in each source (up to six
+mutants) to see whether the check notices. It did not read the executable, so
+the byte-comparison checks that need `SLUS_205.65` were not run.
+
+- Base failures, all already disclosed in the entries above: the 64-bit
+  pointer harness failures of `cdProcess`, `soundMapSound`,
+  `soundPlaySequence` and `soundComputeSequenceLength`; the
+  `_$_14AnimationState`, `MC_ResetRamSlot` and `sceCdGetError` checks, which
+  need `-fno-builtin` or a 32-bit pointer layout to run as intended.
+- Checks that could not run without the executable: the fourteen
+  `w8-startup-sce-a` syscall-stub comparisons and `SetArg`, and the
+  kernel-patches and gs-dma-kernel assembly units (their statements are the
+  workers').
+- Weak checks, which pass but would not notice a changed literal in the
+  source: `w8-runtime-libc-a-exit` and `w8-startup-sce-b-request-call` (0 of 6
+  mutants noticed; their structural literals are guarded by `static_assert`
+  at EE compile time instead, which a host mutation does not exercise).
+  Nineteen `tf`/type-info units and a few word tables noticed only 1 or 2 of 6
+  mutants.
+- Everything else: every unit with literals noticed at least half of its
+  mutants; `w8-spell-static-init-a` noticed 6 of 6 in all 31 units.
+
+The packages already rejected (`frontend-shell` before its fix and
+`w8-spell-static-init-b`) were the only ones found with checks that cannot
+fail or do not exist.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
