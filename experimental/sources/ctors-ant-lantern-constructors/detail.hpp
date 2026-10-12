@@ -165,6 +165,19 @@ extern unsigned char norrath_ctors_ant_lantern_view_470eb8[];
 extern unsigned char norrath_ctors_ant_lantern_view_485548[];
 extern unsigned char norrath_ctors_ant_lantern_view_481704[];
 extern unsigned char norrath_ctors_ant_lantern_view_481708[];
+unsigned norrath_construct_AutoPropLP(void* object, char* name, const void* point, short type, char** arguments);
+int hasLightOrParticleNumber__FPPci(char** arguments, int number);
+unsigned __11AddParticleG6Point3PPci(void* object, const void* point, char** arguments, int number);
+extern unsigned char norrath_ctors_ant_lantern_view_44e9d0[];
+extern unsigned char norrath_ctors_ant_lantern_view_4711f0[];
+extern unsigned char norrath_ctors_ant_lantern_view_471208[];
+extern unsigned char norrath_ctors_ant_lantern_view_471218[];
+extern unsigned char norrath_ctors_ant_lantern_view_471230[];
+extern unsigned char norrath_ctors_ant_lantern_view_485760[];
+extern unsigned char norrath_ctors_ant_lantern_view_471248[];
+extern unsigned char norrath_ctors_ant_lantern_view_471260[];
+extern unsigned char norrath_ctors_ant_lantern_view_485768[];
+extern unsigned char norrath_ctors_ant_lantern_view_471278[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
