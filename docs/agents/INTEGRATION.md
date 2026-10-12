@@ -4584,6 +4584,59 @@ Closed: `_GLOBAL_$I$__10HolyStrikesiG6Point3P10GameObjectP5Skill`,
 
 Opened: none
 
+## agents/w8-net-play-b
+
+Merged (the branch notes carry the five summary sections). Nineteen of the 20
+units were selected with fresh `input_order` values 2347 through 2365 (16
+emitted functions, 20,208 compiled body bytes, not original-byte matches).
+All 19 host checks pass here (19 of 19); `init` and `kick-player` only build
+as their header comment says, with `-fno-builtin` and the host check alone.
+`launch-state` was **not** selected: it defines `nmPlayersAlive`, already
+defined by w8-net-play-a, so the link fails with a multiple definition; its
+files stay in the snapshot, unselected, and `netBroadCastStart`,
+`netAttemptLaunch`, `netTrouble` and `multiHelpMessageOn` stay open. No game
+binary or disassembly listing was committed. 1923 function bodies, 2366
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1518 |
+| Closed | 19 |
+| Opened | 59 |
+
+Closed: `netClearContact__Fv`, `netDisconnectPlayer__Fi`, `netDoNewLaunch__Fv`,
+`netGameStep__FbT0`, `netInContact__Fv`, `netInit__Fv`, `netKickPlayer__Fi`,
+`netPlayerIsConnected__Fi`, `netRestoreButtonConfigs__Fv`,
+`netStartLevel__Fv`, `netStartNetworkGameFrame__Fv`,
+`netStartNetworkGameInit__Fv`, `netStart__Fv`,
+`netWaitForPeersToCatchUp__Fv`, `norrath_player_heap_pointer_word`,
+`norrath_player_proxy_mesh_id`, `norrath_player_services_view_48068c`,
+`player`, `playerClearSpellEffect__Fv`.
+
+Opened: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_ConvertTempPlayerToReal__Fi`,
+`MC_GetRamSlot__FPi`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`,
+`MC_ReplicateFirstPlayersImportantThings__Fv`, `MC_SetRamNmPlayers__Fi`,
+`advanceRealState__Fi`,
+`analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci`,
+`broadcastConnectionFlags`, `compressSize`, `currentTime`, `derivedFrameNm`,
+`hostForcedLaunch`, `hostLaunchMask`, `hostStartedWithoutMe`, `isModem`,
+`kickState`, `lastPingTime`, `launchPeers`, `lightInc`, `lightIntensity`,
+`lnet_buf`, `localNetFrameNm`, `localNetSentFrameNm`, `localPlayerPadState`,
+`localPredictedPlayer`, `logChecksum`, `msgBufferSent`, `myaddr`,
+`netCameraYaw`, `netKickedOut`, `netLaunchExpirationCount`,
+`netLaunchTimer`, `netLocalPadState`, `netNewLaunchMaybeLaunch`,
+`netNewLaunchMaybeQuit`, `noAdvanceTime`, `packetSendCycleLength`,
+`packetSendCycleTime`, `peerSendDataMsg__FPciiP14sceInetAddressi`,
+`playerSpecStorage`, `receivePackets__Fv`, `runPrediction__Fi`,
+`sceInetCreate`, `sceInetInterfaceControl`, `sceInetOpen`,
+`sceInetRecvFrom`, `sceInetSendTo`, `sceSifMInitRpc`,
+`sendControlPacket__FiiiiiR9CCompressb`, `sentStatePacketFrameNm`,
+`showNetPlayerStatus__Fv`, `spellAlpha`, `spellAlphaInc`,
+`totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`,
+`worldPlotRouteSetEnable__Fi`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

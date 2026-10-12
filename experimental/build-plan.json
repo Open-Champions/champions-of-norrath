@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2347,
+  "default_authored_inputs": 2366,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3099,7 +3099,26 @@
     "sources/w8-spell-static-init-a-skill-entangle/skill_entangle_static_init.cpp": "d1a7c6a8c8e401e204a558b4ea94ab29c49fe167cbf5dd870b0869cb573a85b4",
     "sources/w8-spell-static-init-a-skill-multi-fire/skill_multi_fire_static_init.cpp": "70f5ee509d3e9f8c8292b4b5c2be8c55bb4064b06f3efd754362bc880ffb8aeb",
     "sources/w8-spell-static-init-a-skill-cleric-root/skill_cleric_root_static_init.cpp": "9b06a1cc8d2beff6024ef7c1b91c7114b61c2ef1b9a062bee710622e06d534a8",
-    "sources/w8-spell-static-init-a-skill-repulse-undead/skill_repulse_undead_static_init.cpp": "de2945eb4a36fe66858673379585b9637a23a531557d0bbb8b01762d473a8368"
+    "sources/w8-spell-static-init-a-skill-repulse-undead/skill_repulse_undead_static_init.cpp": "de2945eb4a36fe66858673379585b9637a23a531557d0bbb8b01762d473a8368",
+    "sources/w8-net-play-b-clear-contact/net_clear_contact.cpp": "02da5f31225537a7e006e19992119e018b9f7a65ceba222fe6cca941f28a8c36",
+    "sources/w8-net-play-b-clear-spell-effect/player_clear_spell_effect.cpp": "3f085866278707c74ba2b97c879e515b397cde379416d3244c9b4b63716eab29",
+    "sources/w8-net-play-b-disconnect-player/net_disconnect_player.cpp": "90a8c92a8a48b83e92967e28ef9034fd5c6d55d46199029110a8e8fd289c8459",
+    "sources/w8-net-play-b-do-new-launch/net_do_new_launch.cpp": "abc2f381e95c350f3b548524e498fd1c8945552d9f629a2ebc0e084f772d9703",
+    "sources/w8-net-play-b-game-step/net_game_step.cpp": "e202f0243faf08240e3acaae8b14d3a45d27d8bcdd1f3e5568476fe769780281",
+    "sources/w8-net-play-b-heap-pointer/heap_pointer.cpp": "1376fe1814f9d4a477fe66470cdd48ba466e7198388c04a5c44305717a5fe799",
+    "sources/w8-net-play-b-in-contact/net_in_contact.cpp": "98df78b25463a585b6107c1efe0a6af6b5f19c850aa99e18307f94ca1dbba13f",
+    "sources/w8-net-play-b-init/net_init.cpp": "7eba1259eff246720d4f895064ff29a21cb1b725c27e7dcfb6ff524a93ebc715",
+    "sources/w8-net-play-b-kick-player/net_kick_player.cpp": "41c0658d130955433826c31bff2aca9e5ae862382f1d0299c565027b337eedc7",
+    "sources/w8-net-play-b-player-is-connected/net_player_is_connected.cpp": "8ca62d0b6334395ce9f1e033c8a16aa980a05a10b66d16f50df256fb7c75d243",
+    "sources/w8-net-play-b-player-storage/player_storage.cpp": "7d08470944cff4908b1ab0a27452b1b0347cc729611f2573f399e9decbd15772",
+    "sources/w8-net-play-b-proxy-mesh-id/proxy_mesh_id.cpp": "3c5f21a73b884a20cb5436bcce51b6ecdf2c3a442564fb71a674048d9b464bee",
+    "sources/w8-net-play-b-restore-button-configs/net_restore_button_configs.cpp": "edc8c2b54996fb9da4c72f8566ab0121d02dce1d44602755686aa17bdf926823",
+    "sources/w8-net-play-b-services-view/services_view.cpp": "fed2a57ec94e9f83c097b913450b09387c62eb8fec57fe7d84a55bd38e744666",
+    "sources/w8-net-play-b-start/net_start.cpp": "3af8bb7a06896014324b5d272bd413f18c7ca1e9be938627d5fac0c4264161da",
+    "sources/w8-net-play-b-start-level/net_start_level.cpp": "5831e10c793399648830b1ca88985f783decb89fbac673cad4b5716b2a884347",
+    "sources/w8-net-play-b-start-network-game-frame/net_start_network_game_frame.cpp": "3105b37675dfe124bbc36abb3314bf76559f76f27d17b5d4acb00c56bec898bd",
+    "sources/w8-net-play-b-start-network-game-init/net_start_network_game_init.cpp": "7d8dc279361afe83fb289df36e3b6422727568a78cfe4dd333b6e0a7eed1e6e6",
+    "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp": "559d20152df30df5de353994033c5c0ea5fdb07021e870a600f4a19d3d1f569a"
   },
   "inputs": [
     {
@@ -33423,6 +33442,276 @@
           "compiled_body_bytes": 308
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2349,
+      "kind": "independently_authored_source",
+      "object_name": "net_clear_contact.o",
+      "profile": "authored_cpp",
+      "sha256": "02da5f31225537a7e006e19992119e018b9f7a65ceba222fe6cca941f28a8c36",
+      "source": "sources/w8-net-play-b-clear-contact/net_clear_contact.cpp",
+      "emitted_functions": [
+        {
+          "name": "netClearContact__Fv",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2350,
+      "kind": "independently_authored_source",
+      "object_name": "player_clear_spell_effect.o",
+      "profile": "authored_cpp",
+      "sha256": "3f085866278707c74ba2b97c879e515b397cde379416d3244c9b4b63716eab29",
+      "source": "sources/w8-net-play-b-clear-spell-effect/player_clear_spell_effect.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerClearSpellEffect__Fv",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2351,
+      "kind": "independently_authored_source",
+      "object_name": "net_disconnect_player.o",
+      "profile": "authored_cpp",
+      "sha256": "90a8c92a8a48b83e92967e28ef9034fd5c6d55d46199029110a8e8fd289c8459",
+      "source": "sources/w8-net-play-b-disconnect-player/net_disconnect_player.cpp",
+      "emitted_functions": [
+        {
+          "name": "netDisconnectPlayer__Fi",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2352,
+      "kind": "independently_authored_source",
+      "object_name": "net_do_new_launch.o",
+      "profile": "authored_cpp",
+      "sha256": "abc2f381e95c350f3b548524e498fd1c8945552d9f629a2ebc0e084f772d9703",
+      "source": "sources/w8-net-play-b-do-new-launch/net_do_new_launch.cpp",
+      "emitted_functions": [
+        {
+          "name": "netDoNewLaunch__Fv",
+          "compiled_body_bytes": 7812
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2353,
+      "kind": "independently_authored_source",
+      "object_name": "net_game_step.o",
+      "profile": "authored_cpp",
+      "sha256": "e202f0243faf08240e3acaae8b14d3a45d27d8bcdd1f3e5568476fe769780281",
+      "source": "sources/w8-net-play-b-game-step/net_game_step.cpp",
+      "emitted_functions": [
+        {
+          "name": "netGameStep__FbT0",
+          "compiled_body_bytes": 6584
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2354,
+      "kind": "independently_authored_source",
+      "object_name": "heap_pointer.o",
+      "profile": "authored_cpp",
+      "sha256": "1376fe1814f9d4a477fe66470cdd48ba466e7198388c04a5c44305717a5fe799",
+      "source": "sources/w8-net-play-b-heap-pointer/heap_pointer.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2355,
+      "kind": "independently_authored_source",
+      "object_name": "net_in_contact.o",
+      "profile": "authored_cpp",
+      "sha256": "98df78b25463a585b6107c1efe0a6af6b5f19c850aa99e18307f94ca1dbba13f",
+      "source": "sources/w8-net-play-b-in-contact/net_in_contact.cpp",
+      "emitted_functions": [
+        {
+          "name": "netInContact__Fv",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2356,
+      "kind": "independently_authored_source",
+      "object_name": "net_init.o",
+      "profile": "authored_cpp",
+      "sha256": "7eba1259eff246720d4f895064ff29a21cb1b725c27e7dcfb6ff524a93ebc715",
+      "source": "sources/w8-net-play-b-init/net_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "netInit__Fv",
+          "compiled_body_bytes": 1440
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2357,
+      "kind": "independently_authored_source",
+      "object_name": "net_kick_player.o",
+      "profile": "authored_cpp",
+      "sha256": "41c0658d130955433826c31bff2aca9e5ae862382f1d0299c565027b337eedc7",
+      "source": "sources/w8-net-play-b-kick-player/net_kick_player.cpp",
+      "emitted_functions": [
+        {
+          "name": "netKickPlayer__Fi",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2358,
+      "kind": "independently_authored_source",
+      "object_name": "net_player_is_connected.o",
+      "profile": "authored_cpp",
+      "sha256": "8ca62d0b6334395ce9f1e033c8a16aa980a05a10b66d16f50df256fb7c75d243",
+      "source": "sources/w8-net-play-b-player-is-connected/net_player_is_connected.cpp",
+      "emitted_functions": [
+        {
+          "name": "netPlayerIsConnected__Fi",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2359,
+      "kind": "independently_authored_source",
+      "object_name": "player_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "7d08470944cff4908b1ab0a27452b1b0347cc729611f2573f399e9decbd15772",
+      "source": "sources/w8-net-play-b-player-storage/player_storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2360,
+      "kind": "independently_authored_source",
+      "object_name": "proxy_mesh_id.o",
+      "profile": "authored_cpp",
+      "sha256": "3c5f21a73b884a20cb5436bcce51b6ecdf2c3a442564fb71a674048d9b464bee",
+      "source": "sources/w8-net-play-b-proxy-mesh-id/proxy_mesh_id.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_player_proxy_mesh_id",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2361,
+      "kind": "independently_authored_source",
+      "object_name": "net_restore_button_configs.o",
+      "profile": "authored_cpp",
+      "sha256": "edc8c2b54996fb9da4c72f8566ab0121d02dce1d44602755686aa17bdf926823",
+      "source": "sources/w8-net-play-b-restore-button-configs/net_restore_button_configs.cpp",
+      "emitted_functions": [
+        {
+          "name": "netRestoreButtonConfigs__Fv",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2362,
+      "kind": "independently_authored_source",
+      "object_name": "services_view.o",
+      "profile": "authored_cpp",
+      "sha256": "fed2a57ec94e9f83c097b913450b09387c62eb8fec57fe7d84a55bd38e744666",
+      "source": "sources/w8-net-play-b-services-view/services_view.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2363,
+      "kind": "independently_authored_source",
+      "object_name": "net_start.o",
+      "profile": "authored_cpp",
+      "sha256": "3af8bb7a06896014324b5d272bd413f18c7ca1e9be938627d5fac0c4264161da",
+      "source": "sources/w8-net-play-b-start/net_start.cpp",
+      "emitted_functions": [
+        {
+          "name": "netStart__Fv",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2364,
+      "kind": "independently_authored_source",
+      "object_name": "net_start_level.o",
+      "profile": "authored_cpp",
+      "sha256": "5831e10c793399648830b1ca88985f783decb89fbac673cad4b5716b2a884347",
+      "source": "sources/w8-net-play-b-start-level/net_start_level.cpp",
+      "emitted_functions": [
+        {
+          "name": "netStartLevel__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2365,
+      "kind": "independently_authored_source",
+      "object_name": "net_start_network_game_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "3105b37675dfe124bbc36abb3314bf76559f76f27d17b5d4acb00c56bec898bd",
+      "source": "sources/w8-net-play-b-start-network-game-frame/net_start_network_game_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "netStartNetworkGameFrame__Fv",
+          "compiled_body_bytes": 1424
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2366,
+      "kind": "independently_authored_source",
+      "object_name": "net_start_network_game_init.o",
+      "profile": "authored_cpp",
+      "sha256": "7d8dc279361afe83fb289df36e3b6422727568a78cfe4dd333b6e0a7eed1e6e6",
+      "source": "sources/w8-net-play-b-start-network-game-init/net_start_network_game_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "netStartNetworkGameInit__Fv",
+          "compiled_body_bytes": 1732
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2367,
+      "kind": "independently_authored_source",
+      "object_name": "net_wait_for_peers.o",
+      "profile": "authored_cpp",
+      "sha256": "559d20152df30df5de353994033c5c0ea5fdb07021e870a600f4a19d3d1f569a",
+      "source": "sources/w8-net-play-b-wait-for-peers/net_wait_for_peers.cpp",
+      "emitted_functions": [
+        {
+          "name": "netWaitForPeersToCatchUp__Fv",
+          "compiled_body_bytes": 228
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -33522,7 +33811,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a2677ac541a8732faf87c92455004ee9024d68b1593bcd329d56a081902162a4",
+  "snapshot_sha256": "02079361f33eac072c9a5baf9f91240c793176a39af772ca0eb965bc1f229bfb",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
