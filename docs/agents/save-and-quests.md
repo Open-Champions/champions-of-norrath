@@ -31,3 +31,7 @@ Observed at `0x001d39c0`, 236 bytes; the reviewed compile emits 256. The name is
 ## scriptSetGameState__FPci
 
 Observed at `0x001d3ab0`, 248 bytes; the reviewed compile emits 296. The value is clamped to -128..127. The name is lower-cased exactly as in `scriptGetGameState__FPc` and searched in the same record table. The clamped value is stored in the byte after the terminator of the matching record, or of the newly appended key. Returns nothing.
+
+## addQuestToLog__FPcT0
+
+Observed at `0x001c1a60`, 236 bytes; the reviewed compile emits 296. Player records (`player`, `0x00408600`, 23984-byte stride) each hold a quest log: 64-byte entries from record byte 17768 (name text, then description text at entry byte 32) and an entry count word at record byte 21864. The 64-entry limit is observed from the compare and the count position. Walking `nmPlayers` records (re-read after each), a record with count 64 or more ends the whole call, and so does the first record already holding an entry with this name. Otherwise name and description are copied unbounded into the entry at the count and the count increments. Nothing in the record header is named.
