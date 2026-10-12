@@ -54,7 +54,7 @@ static void run_case(const char* level) {
     for (unsigned i = 0; i < 4; ++i) want.w(2684 - 8 * i, 0xffff, 2);
     want.w(2656, 0xff, 1); want.w(2657, 0xff, 1);
     for (unsigned i = 0; i < 4; ++i) { want.w(2640 + 2 * i, 0, 2); want.w(2648 + 2 * i, 0, 2); }
-    want.w(40, 20, 1); want.w(160, 0x21 | 0x20020000u); want.w(164, 0x4000 | 0x22u); want.w(172, 16, 1); want.w(168, 0x3f999999u);
+    want.w(40, 20, 1); want.w(160, 0x21 | 0x20020000u); want.w(164, 0x4000 | 0x220u); want.w(172, 16, 1); want.w(168, 0x3f999999u);
     want.w(248, 0xcafef00du); want.w(28, fbits(20.0f)); want.w(2556, 1); want.w(2696, 1); want.w(88, 0xbe4cccccu); want.w(96, 0x3f199999u);
     want.w(100, fbits(1.0f)); want.w(104, 0x3e999999u); want.w(224, 0x3fa66666u);
     for (unsigned off : {176u, 192u, 236u}) want.w(off, 0);

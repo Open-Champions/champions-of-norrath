@@ -9,7 +9,7 @@
 // +2544 and lightAdd receives +2496. The item description at +2624 gets -1
 // halves at +2684, +2676, +2668 and +2660, -1 bytes at +2656/+2657 and zero
 // halves at +2640..+2646 and +2648..+2654. Byte +40 becomes 20, the doubleword
-// at +160 gains 0x0000002220020000 (low word 0x20020000, high word 0x22), byte
+// at +160 gains 0x0000022020020000 (low word 0x20020000, high word 0x220), byte
 // +172 becomes 16, the literal 1.2f (0x3f999999) goes to +168, the word at
 // 0x4844a4 to +248, 20.0f to +28, 1 to +2556 and +2696, the literal -0.2f to
 // +88, 0.6f (0x3f199999) to +96, 1.0f to +100, 0.3f (0x3e999999) to +104, the
@@ -55,7 +55,7 @@ extern "C" unsigned norrath_construct_UndeadKnightClone(void* object, const void
     }
     write_byte(a + 40u, 20u);
     const unsigned low_word = read_word(a + 160u) | 0x20020000u;
-    const unsigned high_word = read_word(a + 164u) | 0x22u;
+    const unsigned high_word = read_word(a + 164u) | 0x220u;
     write_word(a + 248u, read_word(address(norrath_actor_view_4844a4)));
     write_word(a + 28u, float_bits(20.0f));
     write_byte(a + 172u, 16u);
