@@ -39,3 +39,7 @@ Observed at `0x001c1a60`, 236 bytes; the reviewed compile emits 296. Player reco
 ## removeQuestFromLog__FPc
 
 Observed at `0x001be638`, 364 bytes; the reviewed compile emits 432. Same record layout as `addQuestToLog__FPcT0`. For each of `nmPlayers` records, every entry whose name equals the argument has nine bytes copied over both its name and its description from an image constant at `0x00478d90` (observed bytes: `hit`, five zeros, `c`; the last byte is the first byte of the next literal). The constant is embedded as a nine-byte local; its purpose is unknown. The last matching index is kept; later entries are then moved down by `strcpy` of name and description, and the count word decrements. Unlike the add call, no record ends the walk, and a count of zero or less is not scanned.
+
+## AsciiString2Sjis__FPUcPUs
+
+Observed at `0x0024fc10`, 160 bytes; the reviewed compile emits 148. For each source byte it calls `Ascii2Sjis__FUc`, swaps the low two bytes of the result, and stores one halfword. A zero halfword terminates the output. The host check substitutes a stand-in for `Ascii2Sjis__FUc`; the real converter's table is not part of this package. Opens import `Ascii2Sjis__FUc` (and `strlen`).
