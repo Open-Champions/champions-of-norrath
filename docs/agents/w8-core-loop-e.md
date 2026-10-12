@@ -10,7 +10,7 @@ Host checks compile with `c++ -std=c++17`, define `NORRATH_HOST_CONTRACT` where 
 `norrath_host_pointer` hook maps 32-bit words into an arena; the EE build never defines it), mock every callee, and return
 non-zero on a wrong store, call order, bound or result. Mutants (changed constant, comparison, stride, bit, or removed
 store) were run against each function; the survivors that were not equivalent were closed with extra cases, and the one
-known equivalent mutant is noted under runAmbient below.
+known equivalent mutants are noted below.
 
 ## Functions
 
@@ -96,8 +96,9 @@ known equivalent mutant is noted under runAmbient below.
 - Each source compiled with the reviewed EE g++ and the `authored_cpp` flags; the emitted global functions are exactly the
   one named (helpers are `always_inline`, so no extra local functions are emitted).
 - Each `host_check.cpp` compiled with `c++ -std=c++17 -Wall` and exited 0; mutation spot checks failed a numbered case
-  per function. Equivalent mutant noted: removing the `amount < desired` clamp in `runAmbient`'s volume ladder is not
-  observable (the next branch re-clamps).
+  per function. Equivalent mutants noted: removing the `amount < desired` clamp in the downward step of `runMusicDucking` is not
+  observable (the upward step re-clamps), and swapping the two tags tried per entry in `runMusic`'s first search
+  (`_env_` / `mx_theme`) returns the same entry.
 - A private link check (not a build): all 30 objects were scanned against the `work/plan8-build` baseline object set.
   30 of the 31 package names resolved and none of the defined symbols duplicates a baseline definition.
 - `python3 -m unittest discover -s tools -p 'test_*.py'`: 214 tests, OK.
@@ -112,7 +113,7 @@ known equivalent mutant is noted under runAmbient below.
 `swooping`, `trippleBufferMode`, `waitForSound`, `worldDifficulty` — 30 of the 31 assigned names.
 
 Not closed: `srcfile` (`0x00445200`, 1856 bytes in `.data`). Observed: it is machine code, not data. `InitAlarm`
-(0x002ddd60 neighbourhood, see `docs/STARTUP_INITSYS.md`) copies these 1856 bytes to `0x80076000`, and the next symbols
+(0x002dddc8, see `docs/STARTUP_INITSYS.md`) copies these 1856 bytes to `0x80076000`, and the next symbols
 are `eenull`, `SysEntry`, `g_Timer` and `tlbsrc`, so it is the alarm kernel-patch body. Publishing it would be a
 byte-for-byte transcription of copied code, so it was not authored. It belongs with the `kernel-patches` package,
 which authored the other patch bodies as assembly and compared them byte for byte; it needs their decision on whether
