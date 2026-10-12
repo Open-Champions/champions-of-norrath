@@ -202,7 +202,7 @@ def compare(name, runs=200):
                 print('seed %d: stopped: %s' % (seed, e))
                 return 2
             region = {a: m.u8(a) for a in sc['compare']}
-            ret = (m.g32(2), m.f[0]) if spec.get('returns') else None
+            ret = {None: None, True: m.g32(2), 'f': m.f[0]}[spec.get('returns')]
             res.append((m.log, region, ret))
         for e in res[0][0]:
             seen[e[0]] = seen.get(e[0], 0) + 1
@@ -338,6 +338,14 @@ reg('blockAllocInit__Fv', 0x1440D8, ['w8-render-world-a-block-alloc-init/block_a
                                      'block-alloc-source-v2/initialization.cpp'],
     scenario_block_init, stubs=MEMSET, stub_addr=MEMSET_ADDR,
     alias={'norrath_block_region_view': 'region', 'norrath_block_data_pool_view': 'dataBlock'})
+
+
+def scenario_hermite(rng):
+    vals = [rng.choice([0.0, 1.0, 0.5, -1.0, 2.5, rng.uniform(-100, 100), rng.uniform(-1, 1)]) for _ in range(5)]
+    return {'mem': {}, 'args': [], 'fargs': {12 + i: f2b(v) for i, v in enumerate(vals)}, 'compare': []}
+
+
+reg('evalHermite__Ffffff', 0x159330, 'w8-render-world-a-eval-hermite/eval_hermite.cpp', scenario_hermite, returns='f')
 
 
 if __name__ == '__main__':
