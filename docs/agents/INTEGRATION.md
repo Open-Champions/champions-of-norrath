@@ -3391,6 +3391,40 @@ Opened: `__6PhPropG6Point3PcN22liPQ24item11descriptionf`, `addEffect__FiG6Point3
 `objectAlwaysDraw__FP10GameObject`, `objectCancelAllAlwaysDraw__Fv`,
 `teleportParticle1`, `teleportParticle2`.
 
+## agents/w8-core-loop-a
+
+Merged (the branch notes carry the five summary sections). Thirty-four units
+with fresh `input_order` values 1676 through 1709: 19 emitted functions (3484
+compiled body bytes, not original-byte matches, including static-initializer
+functions) and data words. Each unit has a host check; all 34 build and exit
+0 here (34 of 34). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1354 function bodies, 1710
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1613 |
+| After | 1592 |
+| Closed | 31 |
+| Opened | 10 |
+
+Closed: `_GLOBAL_$I$_3map$mapOffset`,
+`_GLOBAL_$I$animRemoveNonpermanentAnimations__FP14AnimationState`,
+`_GLOBAL_$I$cutMode`, `_GLOBAL_$I$engineLastAITime`,
+`_GLOBAL_$I$mcDisableStartupScript`, `_GLOBAL_$I$netInterfaceIsUp`,
+`_GLOBAL_$I$noAmbientOffset`, `_GLOBAL_$I$route_generation`, `act1`, `act2`,
+`act3`, `act4`, `act5`, `actionCoolOff`, `ambientOnly`, `anim`,
+`animFrame__Fv`, `animLoadingComplete`, `animStarted`, `c.1089`,
+`cleanUp__Fv`, `compositeAlpha`, `convertEnd__Fi`, `copyScreen`,
+`copyScreenAlpha`, `copyScreenColor`, `copyScreenFrame`,
+`coreClearNetLogFuck`, `coreGameStep__Fii`, `coreHeadsetResetTimer`,
+`coreInterfaceBrightness`.
+
+Opened: `__tf11PushTrigger`, `__tf9Savepoint`, `compImmediateCompressor`,
+`compImmediateDecompressor`, `compLocalCompressor`, `compLocalDecompressor`,
+`gameCheckForDeathScreen__Fv`, `groupVolumeScale`, `padRunFrame__Fv`,
+`tempPlayerStruct`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
