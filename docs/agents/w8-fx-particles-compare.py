@@ -81,6 +81,9 @@ class Mach(cr.Machine):
 
 
 _nm_cache = {}
+# Names the symbol table repeats (local statics in other units): the object this
+# package means.
+OVERRIDES = {'trail': 0x780B00, 'block': 0x700080, 'nodes': 0x7AD000}
 
 
 def exe_symbols():
@@ -89,6 +92,8 @@ def exe_symbols():
             parts = line.split()
             if len(parts) == 3:
                 _nm_cache.setdefault(parts[2], (int(parts[0], 16), parts[1]))
+        for name, addr in OVERRIDES.items():
+            _nm_cache[name] = (addr, 'b')
     return _nm_cache
 
 
@@ -356,6 +361,44 @@ def scenario_morph_ctor(rng, seed):
 reg('__19ParticleMorphEffectP8CreatureT1', 0x155F08, 'w8-fx-particles-morph-effect-ctor/morph_effect_ctor.cpp',
     scenario_morph_ctor, returns=True,
     stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), 'norrath_actor_add_run_list': (1, 0, 0)})
+
+# ---- updateTrails__Fv ----
+TRAIL = 0x780B00
+
+
+def scenario_update_trails(rng, seed):
+    mem = {}
+    for n in range(64):
+        rec = TRAIL + n * 1040
+        for k in range(1040):
+            mem[rec + k] = rng.randrange(256)
+        for e in range(128):
+            stamp = rng.randrange(0, 60) if rng.random() < 0.9 else rng.randrange(0, 0x10000)
+            mem[rec + 6 + e * 8] = stamp & 0xFF
+            mem[rec + 6 + e * 8 + 1] = stamp >> 8
+        count = rng.choice([0, 1, 5, 0x100, 0xFFFF])
+        mem[rec + 1024] = count & 0xFF
+        mem[rec + 1025] = count >> 8
+        age = rng.choice([0, 3, 20, 50, 70, 0x7FFF, 0xFFFF, 0x8000])
+        mem[rec + 1026] = age & 0xFF
+        mem[rec + 1027] = age >> 8
+        flags = rng.choice([0, 0, 2, 2, 0x10, 0x12, 1, 3, 0x13, rng.randrange(256)])
+        start = rng.choice([rng.randrange(128), rng.randrange(128), 126, 127, rng.randrange(256)])
+        end = rng.choice([rng.randrange(128), rng.randrange(128), 0, 3, start, (start + 4) & 0x7F])
+        if flags & 2 and end < 128:
+            end = (end & ~1) | (start & 1)     # a step of 2 keeps the parity of start
+        life = rng.choice([0, 1, 5, 10, 30, 0xFFFB, 0x7FFF])
+        if start >= 128 or end >= 128:
+            life = 0x7FFF                       # the scan stops at the first entry
+        mem[rec + 1028] = start
+        mem[rec + 1029] = end
+        mem[rec + 1031] = flags
+        mem[rec + 1032] = life & 0xFF
+        mem[rec + 1033] = life >> 8
+    return {'mem': mem, 'args': [], 'steps': 3000000}
+
+
+reg('updateTrails__Fv', 0x1840C0, 'w8-fx-particles-update-trails/update_trails.cpp', scenario_update_trails)
 
 
 if __name__ == '__main__':
