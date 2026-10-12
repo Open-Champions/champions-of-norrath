@@ -76,6 +76,7 @@ CALLS = {
     'P_CreateParticleSystem__Fv': [],
     'lightAdd__FP5Light': [('r', 4), ('p', 4, 48)],
     'lumpFindResource__FPcT0': [('s', 4), ('s', 5)],
+    'getFreeFrameState__Fv': [],
     'getProxyMeshId__4itemPQ24item11description': [('r', 4), ('p', 4, 72)],
     '__4PropG6Point3PcN22li': [('r', 4), ('p', 5, 12), ('s', 6), ('r', 7), ('r', 8), ('r', 9), ('r', 10)],
     'objectUpdateInGrid__FP10GameObject': [('r', 4)],
@@ -123,6 +124,7 @@ def run(image, entry, stub_addrs, sc, seed):
     stubs = {}
     m = cr.Machine(image, mem, stubs, cr.GP)
     rng = random.Random(seed ^ 0xC0FFEE)
+    counts = {}
     for name, addr in stub_addrs.items():
         def stub(mm, name=name):
             row = [name]
@@ -139,6 +141,10 @@ def run(image, entry, stub_addrs, sc, seed):
                 else:
                     row.append(mm.read(mm.g32(item[1]), item[2]))
             m.log.append(tuple(row))
+            if name in sc.get('seq', {}):
+                counts[name] = counts.get(name, -1) + 1
+                mm.setr32(2, sc['seq'][name][counts[name] % len(sc['seq'][name])])
+                return
             mm.setr32(2, rng.randrange(8) if name in sc.get('small', ()) else sc.get('returns', {}).get(name, rng.randrange(1 << 32)))
             if name in sc.get('writes', {}):
                 sc['writes'][name](mm, rng)
@@ -222,6 +228,24 @@ def scenario_horn(rng):
 
 reg('__19SpellHornOmenEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-hornomen-ctor/ctor.cpp', scenario_horn)
 
+def scenario_anim_copy(rng):
+    mem = {}
+    free, src_frames = 0x30200000, 0x30300000
+    fill(rng, mem, OBJ, 512)
+    fill(rng, mem, OTHER, 264)
+    fill(rng, mem, free, 8 * 0x1000)
+    fill(rng, mem, src_frames, 8 * 0x1000)
+    mem[OTHER + 5] = rng.choice([0, 1, 2, 3, 5, 8, 8, 0xFF, 0x80, rng.randrange(9)])
+    for i in range(8):
+        put32(mem, OTHER + 12 + 32 * i, rng.choice([0, src_frames + 0x1000 * i, src_frames + 0x1000 * i]))
+        flags = rng.choice([0, 0x4800, 0x4000, 0x0800, 0x0001, 0xB7FF, rng.randrange(1 << 16)])
+        mem[OTHER + 36 + 32 * i] = flags & 0xFF
+        mem[OTHER + 37 + 32 * i] = flags >> 8
+    return {'mem': mem, 'args': [OBJ, OTHER],
+            'compare': list(range(OBJ, OBJ + 512)) + list(range(free, free + 8 * 0x1000)),
+            'seq': {'getFreeFrameState__Fv': [free + 0x1000 * k for k in range(8)]}}
+
+
 def scenario_item_prop(rng):
     mem = {}
     fill(rng, mem, OBJ, 512)
@@ -240,6 +264,7 @@ def scenario_item_prop(rng):
 
 reg('__22SpellPlanarSteelEffectiP8CreatureP5Skill', 'w8-spell-static-init-b-planarsteel-ctor/ctor.cpp', scenario_planar)
 reg('__8ItemPropG6Point3PQ24item11descriptioni', 'w8-spell-static-init-b-itemprop-ctor/ctor.cpp', scenario_item_prop)
+reg('__15AnimationState8RC15AnimationState8', 'w8-spell-static-init-b-animstate-copy/copy.cpp', scenario_anim_copy)
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
