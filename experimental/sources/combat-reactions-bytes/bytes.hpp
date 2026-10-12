@@ -101,3 +101,7 @@ Function slot_function(void* self, unsigned slot_byte_offset, void** adjusted_se
     return reinterpret_cast<Function>(pointer(read_word(slot + 4u)));
 }
 }
+namespace combat_reactions {
+// A single-float literal given as its observed 32-bit pattern.
+constexpr float single_from_bits(unsigned bits) { return __builtin_bit_cast(float, bits); }
+}
