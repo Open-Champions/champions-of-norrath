@@ -23,9 +23,9 @@ int main() {
 
     ListNode resident;
     std::memset(&resident, 0, sizeof resident);
-    ListHead head_a = {&resident, 0};
+    ListHead head_a = {&resident};
     resident.prev = reinterpret_cast<ListNode*>(&head_a);
-    ListHead head_b = {nullptr, 0};
+    ListHead head_b = {nullptr};
     int payload;
 
     ListNode* first = listOnewayLink__FP8ListHeadT0Pv(&head_a, &head_b, &payload);
@@ -51,7 +51,7 @@ int main() {
     ListNode extra[2] = {};
     extra[0].next = &extra[1];
     norrath_constructor_list_pool_view = &extra[0];
-    ListHead shared = {nullptr, 0};
+    ListHead shared = {nullptr};
     ListNode* n = listOnewayLink__FP8ListHeadT0Pv(&shared, &shared, nullptr);
     expect(shared.first == &extra[1] && extra[1].next == n && n->next == nullptr, "same head receives both nodes in order");
     expect(n->prev == &extra[1] && extra[1].prev == reinterpret_cast<ListNode*>(&shared), "same head links");
