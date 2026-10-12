@@ -16335,6 +16335,150 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/iop-module-boot-comm/comm.cpp"
+    },
+    {
+      "input_order": 1273,
+      "component": "floor-world-view-check-water",
+      "object_name": "check_water.o",
+      "private_object_sha256": "d0cae2fc486202b78aaa0f841f4f64d60fb30b0bd6c439e6bd4a84a0019b8d56",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_check_for_water",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-check-water/check_water.cpp"
+    },
+    {
+      "input_order": 1274,
+      "component": "floor-world-view-clip-cube",
+      "object_name": "clip_cube.o",
+      "private_object_sha256": "d63771ecb96a06081b5eae6b6f39d405e44b77b74016c91bbe4906735f34d67c",
+      "emitted_functions": [
+        {
+          "name": "worldClipCubeToFrustum__FPA1_fi",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-clip-cube/clip_cube.cpp"
+    },
+    {
+      "input_order": 1275,
+      "component": "floor-world-view-closest-door",
+      "object_name": "closest_door.o",
+      "private_object_sha256": "e269fff25d49aca4d42a2ed21e3c9ac1a364dc412f9e2310218ec93ca74a250c",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_find_closest_door",
+          "compiled_body_bytes": 520
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-closest-door/closest_door.cpp"
+    },
+    {
+      "input_order": 1276,
+      "component": "floor-world-view-door-collision",
+      "object_name": "door_collision.o",
+      "private_object_sha256": "b7b64c690126752dee4dfa796d8126e7050f30c1a505028bb5dee69b67010b5e",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_set_door_collision",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-door-collision/door_collision.cpp"
+    },
+    {
+      "input_order": 1277,
+      "component": "floor-world-view-door-height",
+      "object_name": "door_height.o",
+      "private_object_sha256": "242d74d76a5158744a9763b04e6b6d7b181cdb3734be502e1249ac5add9fc18b",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_get_door_height",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-door-height/door_height.cpp"
+    },
+    {
+      "input_order": 1278,
+      "component": "floor-world-view-draw-add",
+      "object_name": "draw_add.o",
+      "private_object_sha256": "cf1fc882409d15190f9110a90472d3e277eaf88e9dea50e863d0aaf4856df6ef",
+      "emitted_functions": [
+        {
+          "name": "drawAddToList__FPviP8_textureP11_drawRecordi",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-draw-add/draw_add.cpp"
+    },
+    {
+      "input_order": 1279,
+      "component": "floor-world-view-program-views",
+      "object_name": "program_views.o",
+      "private_object_sha256": "718e707dbef49b12c13b43a69b095494b0fb46cb9be56180e58ad21039f26256",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-program-views/program_views.cpp"
+    },
+    {
+      "input_order": 1280,
+      "component": "floor-world-view-resource-map",
+      "object_name": "resource_map.o",
+      "private_object_sha256": "3e5f892d583b76d905985cf01965a9bfaad4f9321b9b8f651d3eeeae28d7939b",
+      "emitted_functions": [
+        {
+          "name": "__11ResourceMapPcT1",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-resource-map/resource_map.cpp"
+    },
+    {
+      "input_order": 1281,
+      "component": "floor-world-view-set-far-clip",
+      "object_name": "set_far_clip.o",
+      "private_object_sha256": "865acf557c8f4f270aece4c1b37e2dd97069cbf308e8a8950cc3bbf0e6032ccc",
+      "emitted_functions": [
+        {
+          "name": "worldSetFarClip__Ff",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-set-far-clip/set_far_clip.cpp"
+    },
+    {
+      "input_order": 1282,
+      "component": "floor-world-view-set-frustum",
+      "object_name": "set_frustum.o",
+      "private_object_sha256": "010d408fb59cebfa269846e9d2765a45acd8b3faa75bc31d340a4c6a74e3aa68",
+      "emitted_functions": [
+        {
+          "name": "worldSetFrustum__Fffff",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-set-frustum/set_frustum.cpp"
+    },
+    {
+      "input_order": 1283,
+      "component": "floor-world-view-world-matrix",
+      "object_name": "world_matrix.o",
+      "private_object_sha256": "ba37fd8156309c4bcc6740e130f6c3e089e3ef1d95fcb9d2733e826f1c7ca6f0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/floor-world-view-world-matrix/world_matrix.cpp"
     }
   ],
   "drafts": [
@@ -19303,7 +19447,35 @@
     "sources/iop-module-boot-keyboard-free/keyboard_free.cpp": "d39470e3feeaae226f5d1ded27fa31fc46a9b6579f1a8635d07990a24508c501",
     "sources/iop-module-boot-keyboard-free/host_contract.cpp": "be9371d41907f364cfdda6156d81c918144f24dd593aad882e73e6933f2712ba",
     "sources/iop-module-boot-comm/comm.cpp": "fe731db9f14a190b24d35fc1bb50893a2d4c8f70a22895b38769dcbd93386bac",
-    "sources/iop-module-boot-comm/host_contract.cpp": "18eec57da0c43075dd6452c6e58d7e4f78e92aae71e4f132e37ab6109560255c"
+    "sources/iop-module-boot-comm/host_contract.cpp": "18eec57da0c43075dd6452c6e58d7e4f78e92aae71e4f132e37ab6109560255c",
+    "sources/floor-world-view-check-water/check_water.cpp": "85714dc5b4df2594085ac495678fea2c9a64a5fd804fad3f4c7e18b8c85d4d13",
+    "sources/floor-world-view-check-water/host_check.cpp": "a41faffd186f5b8e577679cbc8c0555376fe68b28c90476e0881ea57d446954b",
+    "sources/floor-world-view-clip-cube/clip_cube.cpp": "8dbd2305cd82abfdfcd0a971a3878977a008e8cf232ff3e7a162e607f38992b0",
+    "sources/floor-world-view-clip-cube/host_check.cpp": "a39fb745b112a586da06e8b38da56b9fe0c21b6a44ab0bff3319a9c87fd33eb9",
+    "sources/floor-world-view-closest-door/closest_door.cpp": "857347960e97a79cea75d02169d4f6544157a9f430c9a39c61030215f6d51d18",
+    "sources/floor-world-view-closest-door/host_check.cpp": "52065ca8017ee2b63f388eba5da080fd00c285a27ef2d71aa26279761087a7a6",
+    "sources/floor-world-view-door-collision/door_collision.cpp": "8ed494859e3ac9c8a23b15cff9c6baa2619307a8dcda0168eacca4d716eb9502",
+    "sources/floor-world-view-door-collision/host_check.cpp": "2480ac4be7c6d9d377f07d9032d14f76f623b27b19ca76f4f4496c72e28972ee",
+    "sources/floor-world-view-door-height/door_height.cpp": "fe8f32ddedd5faebf08ee972310bcd2c4e09696586b3fc5eb51096fe490ceb18",
+    "sources/floor-world-view-door-height/host_check.cpp": "c8db960a5fbecae5eaf08c3f32cb6ff27abb70ca47aa64defb72c3e60d6aa4fe",
+    "sources/floor-world-view-draw-add/draw_add.cpp": "f96a83391370ebb608f7be4bbefd69699508510c335e65a3b9b52bd5067e9a6f",
+    "sources/floor-world-view-draw-add/host_check.cpp": "c96a6b190d8c06c6f15eda034a205bd393b36bced8d0768c8326aca4c7fbd230",
+    "sources/floor-world-view-program-views/program_views.cpp": "5ac6039a24b8668b123c7bc6fee8f8b621ba650ff55ee8284e2e43c582e5c8ae",
+    "sources/floor-world-view-program-views/host_check.cpp": "554c165243b159181da86b319fe67dffc9081fccba6d5e25b80a83a0144f990e",
+    "sources/floor-world-view-resource-map/resource_map.cpp": "8386a7a2bc0e7f53f353f0d4b505eecee49876e2a8fee6350d60fa4999181fb1",
+    "sources/floor-world-view-resource-map/host_check.cpp": "d1395ce353f5a7a164339ab67f8ebe6781ae8fea0c59a8df400161024ac1d70d",
+    "sources/floor-world-view-set-far-clip/set_far_clip.cpp": "ab4da0f336e919cfd54d25f4766d7fc5e1db1c4b5c1c21ee5088d95e3244cdc9",
+    "sources/floor-world-view-set-far-clip/host_check.cpp": "64b519e27d7501509936e715472c4ea782418c77c1a41bd881baefaeed1d76d9",
+    "sources/floor-world-view-set-frustum/set_frustum.cpp": "2f8ee54a3b9e92fb97375682906d5db0655419f6cb5602d95af25298b15c57a3",
+    "sources/floor-world-view-set-frustum/host_check.cpp": "5942fa174d9783c428953dc3e237a0976795215f5254f65417a9807f02501469",
+    "sources/floor-world-view-world-matrix/world_matrix.cpp": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647",
+    "sources/floor-world-view-world-matrix/host_check.cpp": "09f9c5d74236ae06a2fb480ba968d5cef583e6234ca2632db3bc73b336d6ab59",
+    "sources/floor-world-view-floor-add/floor_add.cpp": "260bb78d6812254808be307023cb99cfebe542ec710fc1eb691f45b2eb93a346",
+    "sources/floor-world-view-floor-add/host_check.cpp": "1a51d603129fa6f85d4eeb8a9064445b86962e0fdf022c85516b6f6c66bc089f",
+    "sources/floor-world-view-camera-pos/camera_pos.cpp": "ef7a027af5cd4332c33185b02ddf0a3a125f63a1755764e93b86eb3346ce513f",
+    "sources/floor-world-view-camera-pos/host_check.cpp": "932adf6528d6109baefc6d81c3f79c4137e10197d3519b04c8880dea42fcd739",
+    "sources/floor-world-view-far-clip/far_clip.cpp": "1c0c197a50f03efa846b8ef03f8437c1ec642e511eb2fb01df178cd751565147",
+    "sources/floor-world-view-far-clip/host_check.cpp": "9ac571e5629c2277e187bf1d82610d4e48cd5737eac4005a1b6034156987928d"
   },
   "additional_implementations": [
     {
@@ -19745,11 +19917,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1273,
-    "authored_default_inputs": 1271,
+    "selected_inputs": 1284,
+    "authored_default_inputs": 1282,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1001,
-    "compiled_body_bytes_from_accepted_inputs": 422904,
+    "emitted_function_definitions_including_helpers": 1010,
+    "compiled_body_bytes_from_accepted_inputs": 425636,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -19762,7 +19934,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 960
+    "package_selected_inputs": 971
   },
   "startup_implementations": [
     {
@@ -34463,6 +34635,183 @@
       ],
       "host_files": [
         "sources/iop-module-boot-comm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-check-water/check_water.cpp",
+      "source_sha256": "85714dc5b4df2594085ac495678fea2c9a64a5fd804fad3f4c7e18b8c85d4d13",
+      "object_sha256": "d0cae2fc486202b78aaa0f841f4f64d60fb30b0bd6c439e6bd4a84a0019b8d56",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_check_for_water",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-check-water/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-clip-cube/clip_cube.cpp",
+      "source_sha256": "8dbd2305cd82abfdfcd0a971a3878977a008e8cf232ff3e7a162e607f38992b0",
+      "object_sha256": "d63771ecb96a06081b5eae6b6f39d405e44b77b74016c91bbe4906735f34d67c",
+      "emitted_functions": [
+        {
+          "name": "worldClipCubeToFrustum__FPA1_fi",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-clip-cube/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-closest-door/closest_door.cpp",
+      "source_sha256": "857347960e97a79cea75d02169d4f6544157a9f430c9a39c61030215f6d51d18",
+      "object_sha256": "e269fff25d49aca4d42a2ed21e3c9ac1a364dc412f9e2310218ec93ca74a250c",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_find_closest_door",
+          "compiled_body_bytes": 520
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-closest-door/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-door-collision/door_collision.cpp",
+      "source_sha256": "8ed494859e3ac9c8a23b15cff9c6baa2619307a8dcda0168eacca4d716eb9502",
+      "object_sha256": "b7b64c690126752dee4dfa796d8126e7050f30c1a505028bb5dee69b67010b5e",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_set_door_collision",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-door-collision/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-door-height/door_height.cpp",
+      "source_sha256": "fe8f32ddedd5faebf08ee972310bcd2c4e09696586b3fc5eb51096fe490ceb18",
+      "object_sha256": "242d74d76a5158744a9763b04e6b6d7b181cdb3734be502e1249ac5add9fc18b",
+      "emitted_functions": [
+        {
+          "name": "norrath_world_get_door_height",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-door-height/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-draw-add/draw_add.cpp",
+      "source_sha256": "f96a83391370ebb608f7be4bbefd69699508510c335e65a3b9b52bd5067e9a6f",
+      "object_sha256": "cf1fc882409d15190f9110a90472d3e277eaf88e9dea50e863d0aaf4856df6ef",
+      "emitted_functions": [
+        {
+          "name": "drawAddToList__FPviP8_textureP11_drawRecordi",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-draw-add/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-program-views/program_views.cpp",
+      "source_sha256": "5ac6039a24b8668b123c7bc6fee8f8b621ba650ff55ee8284e2e43c582e5c8ae",
+      "object_sha256": "718e707dbef49b12c13b43a69b095494b0fb46cb9be56180e58ad21039f26256",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/floor-world-view-program-views/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-resource-map/resource_map.cpp",
+      "source_sha256": "8386a7a2bc0e7f53f353f0d4b505eecee49876e2a8fee6350d60fa4999181fb1",
+      "object_sha256": "3e5f892d583b76d905985cf01965a9bfaad4f9321b9b8f651d3eeeae28d7939b",
+      "emitted_functions": [
+        {
+          "name": "__11ResourceMapPcT1",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-resource-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-set-far-clip/set_far_clip.cpp",
+      "source_sha256": "ab4da0f336e919cfd54d25f4766d7fc5e1db1c4b5c1c21ee5088d95e3244cdc9",
+      "object_sha256": "865acf557c8f4f270aece4c1b37e2dd97069cbf308e8a8950cc3bbf0e6032ccc",
+      "emitted_functions": [
+        {
+          "name": "worldSetFarClip__Ff",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-set-far-clip/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-set-frustum/set_frustum.cpp",
+      "source_sha256": "2f8ee54a3b9e92fb97375682906d5db0655419f6cb5602d95af25298b15c57a3",
+      "object_sha256": "010d408fb59cebfa269846e9d2765a45acd8b3faa75bc31d340a4c6a74e3aa68",
+      "emitted_functions": [
+        {
+          "name": "worldSetFrustum__Fffff",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "host_files": [
+        "sources/floor-world-view-set-frustum/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "floor-world-view",
+      "source": "sources/floor-world-view-world-matrix/world_matrix.cpp",
+      "source_sha256": "b59373f74f452683706a4a709b5b6bba8ab2948b270b4ae855887057b5032647",
+      "object_sha256": "ba37fd8156309c4bcc6740e130f6c3e089e3ef1d95fcb9d2733e826f1c7ca6f0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/floor-world-view-world-matrix/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

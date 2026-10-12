@@ -1918,6 +1918,59 @@ exported `norrath_iop_heap_client`, `norrath_loadfile_client`, `_senddata` and
 `vik` instead of private statics). They change game code in another package,
 so the integrator did not make them; see Needs a decision.
 
+## agents/floor-world-view
+
+Merged, with three of the fourteen units left out of the plan. The notes
+carry the five summary sections, though the package never ran
+`build_partial.py` or the tool tests, so its closed and opened lists were
+not measured; the measured link delta below replaces them. All fourteen
+sources compile under `authored_cpp`. Thirteen host checks passed on this
+machine with ASan/UBSan. `floor-world-view-program-views` passes without
+the sanitizers and exits 2 under them, because its non-MIPS branch declares
+two separate arrays and only asserts that the host linker places them 816
+bytes apart. The real property holds in the EE object: `nm -S` of the fresh
+object puts `norrath_floor_program_end_view` at 0x330 and the start at 0.
+Mutating `worldGetDoorHeight`'s record offset made its check exit non-zero.
+No game binary or disassembly listing was committed.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `floor-world-view-floor-add` defines `floorAdd__FG6Point3sfii` as an
+  eight-byte forward to `norrath_floor_add`. The original is 956 bytes and the
+  notes list "whether `floorAdd` in the original differs from
+  `norrath_floor_add`" as unknown. Selecting it would close the import with a
+  placeholder, which is a symbol alias in all but name; the build driver
+  applies no aliases. Left unresolved until someone shows the two are one
+  function.
+- `floor-world-view-camera-pos` and `floor-world-view-far-clip` define
+  `worldCameraPos` and `farClip`, which `world_camera_pos.o` (input 957) and
+  `far_clip.o` (input 924) already define. Selecting them made the
+  relocatable link fail with multiple definitions. The notes' closed list
+  was taken from an older base and is stale on those two names.
+
+Eleven units were selected with fresh `input_order` values 1273 through
+1283.
+
+| | |
+|---|---|
+| Before | 1152 |
+| After | 1142 |
+| Closed | 12 |
+| Opened | 2 |
+
+Closed: `__11ResourceMapPcT1`,
+`drawAddToList__FPviP8_textureP11_drawRecordi`,
+`norrath_floor_program_end_view`, `norrath_floor_program_start_view`,
+`norrath_world_check_for_water`, `norrath_world_find_closest_door`,
+`norrath_world_get_door_height`, `norrath_world_set_door_collision`,
+`worldClipCubeToFrustum__FPA1_fi`, `worldSetFarClip__Ff`,
+`worldSetFrustum__Fffff`, `worldWorldViewMatrix`.
+
+Opened: `tanf`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`.
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. Object hashes in the snapshot come from the fresh build and were
+identical on a second build. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
