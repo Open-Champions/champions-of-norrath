@@ -4343,6 +4343,46 @@ Opened: `_4item$picBuffer`, `_4item$picInProgress`, `_4item$picList`,
 `playerGettinIt`, `restrictChars`, `scissored`, `shopGrid`,
 `vifDirectQWordCount`.
 
+## agents/w8-hud-text-items-c
+
+Merged (the branch notes carry the five summary sections; their plan table
+gives hash prefixes, so each full hash was taken from the file and checked
+against the prefix). Twenty-one units with fresh `input_order` values 2219
+through 2239: 20 emitted functions (7096 compiled body bytes, not
+original-byte matches) and a data unit. All 21 host checks build and exit 0
+here (21 of 21). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1798 function bodies, 2240
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1526 |
+| After | 1516 |
+| Closed | 30 |
+| Opened | 20 |
+
+Closed: `realDlgPos`, `rectangleDraw__FiiiiiUi`, `removeAllQuestsFromLog__Fv`,
+`shopActiveFrame`, `shopKick__Fv`, `textAddText__FPv`, `textBody`,
+`textBodyChars`, `textGetString__FPc`, `textInit__Fv`,
+`textMessageDraw__Fv`, `textMessageProcess__Fv`, `textPageDone`,
+`textureCacheIn__FP8_texture`, `textureClear__Fv`,
+`textureDrawBorder__FiiiiiUiPcii`, `textureLock__FP8_texture`,
+`texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`,
+`texturePageTable`, `textureSmoothBorder__FiiiiiUiiii`,
+`textureUncompBufferLocked`, `textureUnlock__FP8_texture`,
+`usprintf__FPUsT0ffffffff`, `ustrcat__FPUsT0`, `ustrcpy__FPUsPc`,
+`ustrcpy__FPUsT0`, `ustrcpy__FPcPUs`, `ustrlen__FPUs`.
+
+Opened: `TerminateThread`, `alwaysLoadedPage`, `decodeQHead`, `decodeQTail`,
+`drawUpFrom__FiiPCUcT2iUi`, `hudNetWaitMsgReady__Fv`, `inventoryUnload__Fv`,
+`keyboardGetNextKey__Fv`, `keyboardGetNextTranslatedKey__Fv`,
+`loadInProgress`, `nmAlwaysPages`, `norrath_text_hash_slots`,
+`norrath_text_missing_cursor`, `norrath_text_missing_entries`, `sellMode`,
+`texDecodeStarted`, `textSend__Fv`,
+`textureDrawSuperColor__FP8_textureiiiUiiiiicc`, `texturesAreDecompressing`,
+`texturesAreLoading`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

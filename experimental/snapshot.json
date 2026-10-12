@@ -28725,6 +28725,295 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-hud-text-items-b-pic-process/pic_process.cpp"
+    },
+    {
+      "input_order": 2221,
+      "component": "w8-hud-text-items-c-data",
+      "object_name": "w8-hud-text-items-c-data.o",
+      "private_object_sha256": "e84a7b94dc3caac3c9ca5b117f2eebc32c9422e7dd5afaf6c5d7caef689c7a63",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-data/text_texture_data.cpp"
+    },
+    {
+      "input_order": 2222,
+      "component": "w8-hud-text-items-c-rectangledraw",
+      "object_name": "w8-hud-text-items-c-rectangledraw.o",
+      "private_object_sha256": "93739c91711db8fc3ffc63a9519126de0c79cd12b60648b0de3fd329d8decd99",
+      "emitted_functions": [
+        {
+          "name": "rectangleDraw__FiiiiiUi",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-rectangledraw/rectangle_draw.cpp"
+    },
+    {
+      "input_order": 2223,
+      "component": "w8-hud-text-items-c-removeallquests",
+      "object_name": "w8-hud-text-items-c-removeallquests.o",
+      "private_object_sha256": "3db9399ca796caae8e8037dfaa018db16477ad41a1863dda0d9de0fc01da575e",
+      "emitted_functions": [
+        {
+          "name": "removeAllQuestsFromLog__Fv",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-removeallquests/remove_all_quests.cpp"
+    },
+    {
+      "input_order": 2224,
+      "component": "w8-hud-text-items-c-shopkick",
+      "object_name": "w8-hud-text-items-c-shopkick.o",
+      "private_object_sha256": "c2a0f9f84c6c55502c72431ad12d167ffe58df9be49c0090a67ad77649f6bd40",
+      "emitted_functions": [
+        {
+          "name": "shopKick__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-shopkick/shop_kick.cpp"
+    },
+    {
+      "input_order": 2225,
+      "component": "w8-hud-text-items-c-textaddtext",
+      "object_name": "w8-hud-text-items-c-textaddtext.o",
+      "private_object_sha256": "8996128fe7cfd7c283fa48f41c85465586b0c3abd3dd8e24b9a44854e4e01ce0",
+      "emitted_functions": [
+        {
+          "name": "textAddText__FPv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textaddtext/text_add_text.cpp"
+    },
+    {
+      "input_order": 2226,
+      "component": "w8-hud-text-items-c-textgetstring",
+      "object_name": "w8-hud-text-items-c-textgetstring.o",
+      "private_object_sha256": "18a719f5a0dca2d5a33c08cc74cd1b4a2bf5d6a0d02ac3850f3b8d833fa642e5",
+      "emitted_functions": [
+        {
+          "name": "textGetString__FPc",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textgetstring/text_get_string.cpp"
+    },
+    {
+      "input_order": 2227,
+      "component": "w8-hud-text-items-c-textinit",
+      "object_name": "w8-hud-text-items-c-textinit.o",
+      "private_object_sha256": "7ad7c59d506892fa0b8596e6ca3cbfd619f4cbe34865aad1529c67f9022d2a64",
+      "emitted_functions": [
+        {
+          "name": "textInit__Fv",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textinit/text_init.cpp"
+    },
+    {
+      "input_order": 2228,
+      "component": "w8-hud-text-items-c-textmessagedraw",
+      "object_name": "w8-hud-text-items-c-textmessagedraw.o",
+      "private_object_sha256": "72443d23c7cd9838a2c322578d51e319c86213702ff62ce4a1cf97769c712cfe",
+      "emitted_functions": [
+        {
+          "name": "textMessageDraw__Fv",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textmessagedraw/text_message_draw.cpp"
+    },
+    {
+      "input_order": 2229,
+      "component": "w8-hud-text-items-c-textmessageprocess",
+      "object_name": "w8-hud-text-items-c-textmessageprocess.o",
+      "private_object_sha256": "f23f52282e0a16574590812eacd8e6c9b51c3d71a5b77effb429a53a27c44fe8",
+      "emitted_functions": [
+        {
+          "name": "textMessageProcess__Fv",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textmessageprocess/text_message_process.cpp"
+    },
+    {
+      "input_order": 2230,
+      "component": "w8-hud-text-items-c-texturecachein",
+      "object_name": "w8-hud-text-items-c-texturecachein.o",
+      "private_object_sha256": "fc8cefe1e79bea944eb00f4c3056f964a96b1c7c0cfaf652c56299f982a92fbc",
+      "emitted_functions": [
+        {
+          "name": "textureCacheIn__FP8_texture",
+          "compiled_body_bytes": 640
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-texturecachein/texture_cache_in.cpp"
+    },
+    {
+      "input_order": 2231,
+      "component": "w8-hud-text-items-c-textureclear",
+      "object_name": "w8-hud-text-items-c-textureclear.o",
+      "private_object_sha256": "03932ccc551956eaf38bdd64442437f22596f84de457680ce5cd5d8c190034d8",
+      "emitted_functions": [
+        {
+          "name": "textureClear__Fv",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textureclear/texture_clear.cpp"
+    },
+    {
+      "input_order": 2232,
+      "component": "w8-hud-text-items-c-texturedrawborder",
+      "object_name": "w8-hud-text-items-c-texturedrawborder.o",
+      "private_object_sha256": "92aa10f3cb9433392219a725390d856ff4199c6560573ecb8dddb0bdf177df0d",
+      "emitted_functions": [
+        {
+          "name": "textureDrawBorder__FiiiiiUiPcii",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-texturedrawborder/texture_draw_border.cpp"
+    },
+    {
+      "input_order": 2233,
+      "component": "w8-hud-text-items-c-texturelock",
+      "object_name": "w8-hud-text-items-c-texturelock.o",
+      "private_object_sha256": "603aeb48e67abd71ae299e1ea6f97704d27c99401922421c5e220753dfc60d6c",
+      "emitted_functions": [
+        {
+          "name": "textureLock__FP8_texture",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-texturelock/texture_lock.cpp"
+    },
+    {
+      "input_order": 2234,
+      "component": "w8-hud-text-items-c-texturesmoothborder",
+      "object_name": "w8-hud-text-items-c-texturesmoothborder.o",
+      "private_object_sha256": "cff8053496d3af539a0f7f2f6db07dcd2e472c080dc43ae08e74753de4501d1b",
+      "emitted_functions": [
+        {
+          "name": "textureSmoothBorder__FiiiiiUiiii",
+          "compiled_body_bytes": 1744
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-texturesmoothborder/texture_smooth_border.cpp"
+    },
+    {
+      "input_order": 2235,
+      "component": "w8-hud-text-items-c-textureunlock",
+      "object_name": "w8-hud-text-items-c-textureunlock.o",
+      "private_object_sha256": "b6632821a5757ff4bc159472d25ef942b6455d24c2f0a48f0ef52ff4166e103a",
+      "emitted_functions": [
+        {
+          "name": "textureUnlock__FP8_texture",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-textureunlock/texture_unlock.cpp"
+    },
+    {
+      "input_order": 2236,
+      "component": "w8-hud-text-items-c-usprintf",
+      "object_name": "w8-hud-text-items-c-usprintf.o",
+      "private_object_sha256": "8e8ff4f62a8c8fab39daae65e0632d8396f0bc12025dad224cc981e114f19a5b",
+      "emitted_functions": [
+        {
+          "name": "usprintf__FPUsT0ffffffff",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-usprintf/usprintf.cpp"
+    },
+    {
+      "input_order": 2237,
+      "component": "w8-hud-text-items-c-ustrcat-uu",
+      "object_name": "w8-hud-text-items-c-ustrcat-uu.o",
+      "private_object_sha256": "08940667378f0d8f46d6cf43814174f8b2cf25f52c9c24f585f213dc6fc14375",
+      "emitted_functions": [
+        {
+          "name": "ustrcat__FPUsT0",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-ustrcat-uu/ustrcat_uu.cpp"
+    },
+    {
+      "input_order": 2238,
+      "component": "w8-hud-text-items-c-ustrcpy-narrow",
+      "object_name": "w8-hud-text-items-c-ustrcpy-narrow.o",
+      "private_object_sha256": "d7e8793b4b5ef3709901011d3a33df966c3c0995cd0eb36292ae7fa9e1ef8e56",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPcPUs",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-narrow/ustrcpy_narrow.cpp"
+    },
+    {
+      "input_order": 2239,
+      "component": "w8-hud-text-items-c-ustrcpy-uu",
+      "object_name": "w8-hud-text-items-c-ustrcpy-uu.o",
+      "private_object_sha256": "c240c45f4c2ae3a38131f44c9e8e8f3d3874ab8bb4fc0420af63e29a38175945",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPUsT0",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-uu/ustrcpy_uu.cpp"
+    },
+    {
+      "input_order": 2240,
+      "component": "w8-hud-text-items-c-ustrcpy-widen",
+      "object_name": "w8-hud-text-items-c-ustrcpy-widen.o",
+      "private_object_sha256": "42a9858a65dfcfc7bdb8c24a54a5f24b2af60760ab7dcb36bc00cf8657fd86d9",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPUsPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-widen/ustrcpy_widen.cpp"
+    },
+    {
+      "input_order": 2241,
+      "component": "w8-hud-text-items-c-ustrlen",
+      "object_name": "w8-hud-text-items-c-ustrlen.o",
+      "private_object_sha256": "694e49651ca771e7a6e3411cd972c7535f20dee3f0a396392a349f8abf44b3f0",
+      "emitted_functions": [
+        {
+          "name": "ustrlen__FPUs",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-hud-text-items-c-ustrlen/ustrlen.cpp"
     }
   ],
   "drafts": [
@@ -33644,7 +33933,49 @@
     "sources/w8-hud-text-items-b-msg-hud-recall/msg_hud_recall.cpp": "250fa8aabacd13e39cf40422e57c7f7662aa97015a6a68ec91cfc5717077c07c",
     "sources/w8-hud-text-items-b-msg-hud-recall/host_check.cpp": "aa3caa804b094c380408a938c4189420ac46381e4e41ea486eeb8608512e7053",
     "sources/w8-hud-text-items-b-pic-process/pic_process.cpp": "dd18f8f12cf10d6368a433650b1818a1702dcee96d282c2d79c8c596e317ba26",
-    "sources/w8-hud-text-items-b-pic-process/host_check.cpp": "a1e9c4572060ce15b4074fd3b617d1995f49cb10cf9a3395c42d7e64697c125a"
+    "sources/w8-hud-text-items-b-pic-process/host_check.cpp": "a1e9c4572060ce15b4074fd3b617d1995f49cb10cf9a3395c42d7e64697c125a",
+    "sources/w8-hud-text-items-c-data/text_texture_data.cpp": "a2553d4f0f31e86e76d3123a13da0793e1ab606120f7bb38d0d70e605e49607e",
+    "sources/w8-hud-text-items-c-data/host_check.cpp": "704f8611352846460c3cd69b379d515804fdf2b4def727cb24e0895e7efe86aa",
+    "sources/w8-hud-text-items-c-rectangledraw/rectangle_draw.cpp": "15b1aa62fc93734bef4df7e0f1d4237c263c805235e5b45e781daf03f720c016",
+    "sources/w8-hud-text-items-c-rectangledraw/host_check.cpp": "e19c0408ea3489c9a83a8b389c722cee97be1146f162d5dee6cb477baeedc9b2",
+    "sources/w8-hud-text-items-c-removeallquests/remove_all_quests.cpp": "da4a83a65b1ec9545e8bc18351308367583409b0268ede031b3b8d178b8954c1",
+    "sources/w8-hud-text-items-c-removeallquests/host_check.cpp": "161f63ad0a0084179ffcdb8d365f5184a1ed2e6f5e3e93d13dd284a41d5453ee",
+    "sources/w8-hud-text-items-c-shopkick/shop_kick.cpp": "405dc4e4f0a303717e1df1d0e700e14d3b551a20e15172a792f91f86efc6cb1f",
+    "sources/w8-hud-text-items-c-shopkick/host_check.cpp": "784a2a80f542d68a7cedd9796a5f8b654c4a6cd3457ff798c3660f2f5176eb50",
+    "sources/w8-hud-text-items-c-textaddtext/text_add_text.cpp": "4ec09718323c3f7c7e4fcbf5e4f53fd9df0a167bf76ec317b13bad6f7f239707",
+    "sources/w8-hud-text-items-c-textaddtext/host_check.cpp": "c5391a65ef22ea9dd00d5d866822a9f6ac0b2970de957616e0e4b22a89a74c7c",
+    "sources/w8-hud-text-items-c-textgetstring/text_get_string.cpp": "c672f2ec051e9e678d30da1afbb21935d2224937239f8d39102ee4c871783523",
+    "sources/w8-hud-text-items-c-textgetstring/host_check.cpp": "a01aa851e7e09744c5e81db9d57e20d6b8e5d1754516d9fac2ca4803ace062e3",
+    "sources/w8-hud-text-items-c-textinit/text_init.cpp": "9d41e7fd943870dd39443bf75f1999ef00862da59e2ea6c2fd47cca985266332",
+    "sources/w8-hud-text-items-c-textinit/host_check.cpp": "daa7a867c49166cb3c919340e81dfe0a85529e3a20e775114019a8551590b366",
+    "sources/w8-hud-text-items-c-textmessagedraw/text_message_draw.cpp": "4eab99e4d5c8d1577f337a3639fc8433da52bdcc5a2284bf9f16eb95d3d7ada2",
+    "sources/w8-hud-text-items-c-textmessagedraw/host_check.cpp": "e14d051fa6c411d157045ce4841356a9f6b47fa813f9770315a87c6ff795e281",
+    "sources/w8-hud-text-items-c-textmessageprocess/text_message_process.cpp": "05cccb13c6b3e69739f97325fe2ed539282fda6ba6850bfabec491fd22e7a4da",
+    "sources/w8-hud-text-items-c-textmessageprocess/host_check.cpp": "6c59b075b8bbbfbc5b912396969992a1d93125e93ff81ccfc3ed0a5625b9fdac",
+    "sources/w8-hud-text-items-c-texturecachein/texture_cache_in.cpp": "427a51b468085be13c90589c98bda0db03e239eb4adcf19450c2f9886048d42b",
+    "sources/w8-hud-text-items-c-texturecachein/host_check.cpp": "8b313d8a401bea9fd2e8833199625671b90d860d9fd562ecd37b8826c579592b",
+    "sources/w8-hud-text-items-c-textureclear/texture_clear.cpp": "da35b8fdd3b546b9d782f539efb26e102eedbd2c0aaf74d8b34cecfdd796f8fb",
+    "sources/w8-hud-text-items-c-textureclear/host_check.cpp": "25c84bdee28230096dba7e3b471be6fc708d5ddbc2e9bc69189657590cc7efa8",
+    "sources/w8-hud-text-items-c-texturedrawborder/texture_draw_border.cpp": "86ebb5d84bcf966d179a34235243363bf91d460bf3739410ea7cdff35907220d",
+    "sources/w8-hud-text-items-c-texturedrawborder/host_check.cpp": "c9dd6265746095d5291a33ade69f79a4b8bfcfd367b8fb54045a873ec724a9fb",
+    "sources/w8-hud-text-items-c-texturelock/texture_lock.cpp": "42004d4213fc6e40921ef420b74f71d958631eefe4de8c00dc66a975478b3c0d",
+    "sources/w8-hud-text-items-c-texturelock/host_check.cpp": "3cf00a221fd2d61b20ebbff04e512363479aeb9c032f7df7b285d833768d6ce9",
+    "sources/w8-hud-text-items-c-texturesmoothborder/texture_smooth_border.cpp": "1902692f307ba07865616598923fba3631c32b1dddb4fb016e68599683453be6",
+    "sources/w8-hud-text-items-c-texturesmoothborder/host_check.cpp": "05b08c776b6954ab9318255c5536eaf1d784f70a235702e4c4c41e6ea6f90ddf",
+    "sources/w8-hud-text-items-c-textureunlock/texture_unlock.cpp": "664482baccc5f65049b8399cff3d5d99f0e663ee31979bd159fd326f85b4d5d8",
+    "sources/w8-hud-text-items-c-textureunlock/host_check.cpp": "3b99f413ea00dd5b7cdcf3a936db346d770cc19e91c832272d593ecc1528bbdb",
+    "sources/w8-hud-text-items-c-usprintf/usprintf.cpp": "b814f990b8aadc3ef68d0a305b667e928ced9c813e857e3bc9e339abcf03123b",
+    "sources/w8-hud-text-items-c-usprintf/host_check.cpp": "dc0116a3a85ce50d11ea4f394b4fff771f359e45ff62ccca9806c49031ab278b",
+    "sources/w8-hud-text-items-c-ustrcat-uu/ustrcat_uu.cpp": "94e1b9bd0be37e5ef850c9e42ebc52be75f5d747b8adad07bc9ce36671c7dd02",
+    "sources/w8-hud-text-items-c-ustrcat-uu/host_check.cpp": "90590f67bb6f8ee359a1b6187c64c784a5d4249ea48f11137fe16ad6a211fd65",
+    "sources/w8-hud-text-items-c-ustrcpy-narrow/ustrcpy_narrow.cpp": "702376aee8ea9b70c644f878efd43b4a187c25b58e83f3577203a91a55a05574",
+    "sources/w8-hud-text-items-c-ustrcpy-narrow/host_check.cpp": "f7b2d4648bcb6bd8e3ae45f44e989c3fffb993c0507a8ef7b2f1ed1b646135ad",
+    "sources/w8-hud-text-items-c-ustrcpy-uu/ustrcpy_uu.cpp": "0d1d76afe741beb39564c4d0b66b4ff13fd64cf88e63841a531f8617214c6f62",
+    "sources/w8-hud-text-items-c-ustrcpy-uu/host_check.cpp": "7ef764f54a6cd2e4a1cc2c058c6ce803f95a12b3c820c3cd62c14aba02b5c208",
+    "sources/w8-hud-text-items-c-ustrcpy-widen/ustrcpy_widen.cpp": "31e4b725d58d708e2d9179f283e3c3443602a1d9c2f23dba48756f51dacb3c16",
+    "sources/w8-hud-text-items-c-ustrcpy-widen/host_check.cpp": "865261455b80bfa78c23c9d28af31307341cf59ed9bf19a14edf06931a853353",
+    "sources/w8-hud-text-items-c-ustrlen/ustrlen.cpp": "d24d71f344cc4024210e52db1aa2961f23d10ae7b1d1c24f8c1a53c2776f7ad4",
+    "sources/w8-hud-text-items-c-ustrlen/host_check.cpp": "d4cdbba82aacde67160b28462ab09c6d1f3b14fba3d78aa9e879597aa9ddfcfd"
   },
   "additional_implementations": [
     {
@@ -34086,11 +34417,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2221,
-    "authored_default_inputs": 2219,
+    "selected_inputs": 2242,
+    "authored_default_inputs": 2240,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1780,
-    "compiled_body_bytes_from_accepted_inputs": 754508,
+    "emitted_function_definitions_including_helpers": 1800,
+    "compiled_body_bytes_from_accepted_inputs": 761604,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -34103,7 +34434,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1908
+    "package_selected_inputs": 1929
   },
   "startup_implementations": [
     {
@@ -64056,6 +64387,358 @@
       ],
       "host_files": [
         "sources/w8-hud-text-items-b-pic-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-data/text_texture_data.cpp",
+      "source_sha256": "a2553d4f0f31e86e76d3123a13da0793e1ab606120f7bb38d0d70e605e49607e",
+      "object_sha256": "e84a7b94dc3caac3c9ca5b117f2eebc32c9422e7dd5afaf6c5d7caef689c7a63",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-hud-text-items-c-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-rectangledraw/rectangle_draw.cpp",
+      "source_sha256": "15b1aa62fc93734bef4df7e0f1d4237c263c805235e5b45e781daf03f720c016",
+      "object_sha256": "93739c91711db8fc3ffc63a9519126de0c79cd12b60648b0de3fd329d8decd99",
+      "emitted_functions": [
+        {
+          "name": "rectangleDraw__FiiiiiUi",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-rectangledraw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-removeallquests/remove_all_quests.cpp",
+      "source_sha256": "da4a83a65b1ec9545e8bc18351308367583409b0268ede031b3b8d178b8954c1",
+      "object_sha256": "3db9399ca796caae8e8037dfaa018db16477ad41a1863dda0d9de0fc01da575e",
+      "emitted_functions": [
+        {
+          "name": "removeAllQuestsFromLog__Fv",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-removeallquests/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-shopkick/shop_kick.cpp",
+      "source_sha256": "405dc4e4f0a303717e1df1d0e700e14d3b551a20e15172a792f91f86efc6cb1f",
+      "object_sha256": "c2a0f9f84c6c55502c72431ad12d167ffe58df9be49c0090a67ad77649f6bd40",
+      "emitted_functions": [
+        {
+          "name": "shopKick__Fv",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-shopkick/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textaddtext/text_add_text.cpp",
+      "source_sha256": "4ec09718323c3f7c7e4fcbf5e4f53fd9df0a167bf76ec317b13bad6f7f239707",
+      "object_sha256": "8996128fe7cfd7c283fa48f41c85465586b0c3abd3dd8e24b9a44854e4e01ce0",
+      "emitted_functions": [
+        {
+          "name": "textAddText__FPv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textaddtext/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textgetstring/text_get_string.cpp",
+      "source_sha256": "c672f2ec051e9e678d30da1afbb21935d2224937239f8d39102ee4c871783523",
+      "object_sha256": "18a719f5a0dca2d5a33c08cc74cd1b4a2bf5d6a0d02ac3850f3b8d833fa642e5",
+      "emitted_functions": [
+        {
+          "name": "textGetString__FPc",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textgetstring/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textinit/text_init.cpp",
+      "source_sha256": "9d41e7fd943870dd39443bf75f1999ef00862da59e2ea6c2fd47cca985266332",
+      "object_sha256": "7ad7c59d506892fa0b8596e6ca3cbfd619f4cbe34865aad1529c67f9022d2a64",
+      "emitted_functions": [
+        {
+          "name": "textInit__Fv",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textinit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textmessagedraw/text_message_draw.cpp",
+      "source_sha256": "4eab99e4d5c8d1577f337a3639fc8433da52bdcc5a2284bf9f16eb95d3d7ada2",
+      "object_sha256": "72443d23c7cd9838a2c322578d51e319c86213702ff62ce4a1cf97769c712cfe",
+      "emitted_functions": [
+        {
+          "name": "textMessageDraw__Fv",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textmessagedraw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textmessageprocess/text_message_process.cpp",
+      "source_sha256": "05cccb13c6b3e69739f97325fe2ed539282fda6ba6850bfabec491fd22e7a4da",
+      "object_sha256": "f23f52282e0a16574590812eacd8e6c9b51c3d71a5b77effb429a53a27c44fe8",
+      "emitted_functions": [
+        {
+          "name": "textMessageProcess__Fv",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textmessageprocess/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-texturecachein/texture_cache_in.cpp",
+      "source_sha256": "427a51b468085be13c90589c98bda0db03e239eb4adcf19450c2f9886048d42b",
+      "object_sha256": "fc8cefe1e79bea944eb00f4c3056f964a96b1c7c0cfaf652c56299f982a92fbc",
+      "emitted_functions": [
+        {
+          "name": "textureCacheIn__FP8_texture",
+          "compiled_body_bytes": 640
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-texturecachein/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textureclear/texture_clear.cpp",
+      "source_sha256": "da35b8fdd3b546b9d782f539efb26e102eedbd2c0aaf74d8b34cecfdd796f8fb",
+      "object_sha256": "03932ccc551956eaf38bdd64442437f22596f84de457680ce5cd5d8c190034d8",
+      "emitted_functions": [
+        {
+          "name": "textureClear__Fv",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textureclear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-texturedrawborder/texture_draw_border.cpp",
+      "source_sha256": "86ebb5d84bcf966d179a34235243363bf91d460bf3739410ea7cdff35907220d",
+      "object_sha256": "92aa10f3cb9433392219a725390d856ff4199c6560573ecb8dddb0bdf177df0d",
+      "emitted_functions": [
+        {
+          "name": "textureDrawBorder__FiiiiiUiPcii",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-texturedrawborder/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-texturelock/texture_lock.cpp",
+      "source_sha256": "42004d4213fc6e40921ef420b74f71d958631eefe4de8c00dc66a975478b3c0d",
+      "object_sha256": "603aeb48e67abd71ae299e1ea6f97704d27c99401922421c5e220753dfc60d6c",
+      "emitted_functions": [
+        {
+          "name": "textureLock__FP8_texture",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-texturelock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-texturesmoothborder/texture_smooth_border.cpp",
+      "source_sha256": "1902692f307ba07865616598923fba3631c32b1dddb4fb016e68599683453be6",
+      "object_sha256": "cff8053496d3af539a0f7f2f6db07dcd2e472c080dc43ae08e74753de4501d1b",
+      "emitted_functions": [
+        {
+          "name": "textureSmoothBorder__FiiiiiUiiii",
+          "compiled_body_bytes": 1744
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-texturesmoothborder/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-textureunlock/texture_unlock.cpp",
+      "source_sha256": "664482baccc5f65049b8399cff3d5d99f0e663ee31979bd159fd326f85b4d5d8",
+      "object_sha256": "b6632821a5757ff4bc159472d25ef942b6455d24c2f0a48f0ef52ff4166e103a",
+      "emitted_functions": [
+        {
+          "name": "textureUnlock__FP8_texture",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-textureunlock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-usprintf/usprintf.cpp",
+      "source_sha256": "b814f990b8aadc3ef68d0a305b667e928ced9c813e857e3bc9e339abcf03123b",
+      "object_sha256": "8e8ff4f62a8c8fab39daae65e0632d8396f0bc12025dad224cc981e114f19a5b",
+      "emitted_functions": [
+        {
+          "name": "usprintf__FPUsT0ffffffff",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-usprintf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-ustrcat-uu/ustrcat_uu.cpp",
+      "source_sha256": "94e1b9bd0be37e5ef850c9e42ebc52be75f5d747b8adad07bc9ce36671c7dd02",
+      "object_sha256": "08940667378f0d8f46d6cf43814174f8b2cf25f52c9c24f585f213dc6fc14375",
+      "emitted_functions": [
+        {
+          "name": "ustrcat__FPUsT0",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-ustrcat-uu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-narrow/ustrcpy_narrow.cpp",
+      "source_sha256": "702376aee8ea9b70c644f878efd43b4a187c25b58e83f3577203a91a55a05574",
+      "object_sha256": "d7e8793b4b5ef3709901011d3a33df966c3c0995cd0eb36292ae7fa9e1ef8e56",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPcPUs",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-ustrcpy-narrow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-uu/ustrcpy_uu.cpp",
+      "source_sha256": "0d1d76afe741beb39564c4d0b66b4ff13fd64cf88e63841a531f8617214c6f62",
+      "object_sha256": "c240c45f4c2ae3a38131f44c9e8e8f3d3874ab8bb4fc0420af63e29a38175945",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPUsT0",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-ustrcpy-uu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-ustrcpy-widen/ustrcpy_widen.cpp",
+      "source_sha256": "31e4b725d58d708e2d9179f283e3c3443602a1d9c2f23dba48756f51dacb3c16",
+      "object_sha256": "42a9858a65dfcfc7bdb8c24a54a5f24b2af60760ab7dcb36bc00cf8657fd86d9",
+      "emitted_functions": [
+        {
+          "name": "ustrcpy__FPUsPc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-ustrcpy-widen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-hud-text-items-c",
+      "source": "sources/w8-hud-text-items-c-ustrlen/ustrlen.cpp",
+      "source_sha256": "d24d71f344cc4024210e52db1aa2961f23d10ae7b1d1c24f8c1a53c2776f7ad4",
+      "object_sha256": "694e49651ca771e7a6e3411cd972c7535f20dee3f0a396392a349f8abf44b3f0",
+      "emitted_functions": [
+        {
+          "name": "ustrlen__FPUs",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w8-hud-text-items-c-ustrlen/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
