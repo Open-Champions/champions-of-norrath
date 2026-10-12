@@ -1950,3 +1950,4 @@ and no startup stage has executed.
 - 2026-10-11 20:05 CDT — `agents/memcard-calls` — 1011 unresolved imports
 - 2026-10-11 20:12 CDT — `agents/natives-b` — 1002 unresolved imports
 - 2026-10-11 20:20 CDT — `agents/pre-logo-dialog` — 1035 unresolved imports
+- 2026-10-11 20:28 CDT — `agents/simloop-services` — 1054 unresolved imports
