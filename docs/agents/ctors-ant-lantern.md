@@ -27,8 +27,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/auto_container_lp.cpp` | `norrath_construct_AutoContainerLP` | `__15AutoContainerLPPcG6Point3sPPc` `0x225518`, 144 bytes | 260 | `19b4b1be540573960671aa15ee944640e5a3b0d414f7c43ad13ce1f4b2ad2a51` |
 | `ctors-ant-lantern-constructors/boat.cpp` | `norrath_construct_Boat` | `__4BoatG6Point3sPPc` `0x2bfa20`, 208 bytes | 396 | `36b6d96cb284647a20d58e912d796d8f0c98781d3e00f81c87cc6e521323ab76` |
 | `ctors-ant-lantern-constructors/lamp.cpp` | `norrath_construct_Lamp` | `__4LampG6Point3` `0x2309e8`, 312 bytes | 628 | `e699562cf2b5bb3d1918610f405d29f70330a50bae094e4b1bc1758e6a98f3b1` |
+| `ctors-ant-lantern-constructors/lantern.cpp` | `norrath_construct_Lantern` | `__7LanternG6Point3` `0x230890`, 344 bytes | 744 | `a19c0f92cf3c8633b7a42cf8c72ceed6ec7c38de5f099aa9295df8725874d9c8` |
 
-`detail.hpp` sha256 `6157b3a39c6ecad8e2061219a7890c7cbc923b6951c6addabf20a5f6fcbcce96`.
+`detail.hpp` sha256 `0fe2700b89b871788d805c72fe8e591d6a76469c46fc38419fb879e290739e92`.
 
 ## Build-plan entries needed
 
@@ -90,6 +91,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "lantern.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/lantern.cpp",
+  "sha256": "a19c0f92cf3c8633b7a42cf8c72ceed6ec7c38de5f099aa9295df8725874d9c8",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Lantern",
+      "compiled_body_bytes": 744
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -114,9 +134,11 @@ those 12 bytes to object+1632, clears bit `0x00100000`, and returns
 
 Observed `__4LampG6Point3` at `0x2309e8`, 312 bytes. Same shape as the Candle constructor: GameObject with two null arguments, an embedded light at object+76 that is filled before `lightAdd`, then flag, byte and half stores and the run-list call. The light tint word comes from global `0x481990`. The vtable word is `0x44a810` (`_vt$4Lamp`). V0 is the run-list result.
 
+Observed `__7LanternG6Point3` at `0x230890`, 344 bytes. Same light setup as Lamp (vtable `0x44a8a0`, tint global `0x48198c`), but the flag bits set are `0x10001`, the 12 bytes at object+16 are copied to object+136 after `lightAdd`, and bytes 148 and 149 are cleared. V0 is the run-list result.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`
 
 ## Imports opened
 
@@ -130,11 +152,12 @@ Observed `__4LampG6Point3` at `0x2309e8`, 312 bytes. Same shape as the Candle co
 
 `norrath_game_object_construct`, `norrath_light_add`, `norrath_actor_add_run_list` — original GameObject constructor, `lightAdd__FP5Light`, `objectAddToRunList__FP10GameObject`; also used by actors-a.
 `norrath_ctors_ant_lantern_view_44a810`, `norrath_ctors_ant_lantern_view_481990` — `_vt$4Lamp` and the 4-byte tint global at `0x481990`.
+`norrath_ctors_ant_lantern_view_44a8a0` (`_vt$7Lantern`) and `norrath_ctors_ant_lantern_view_48198c` (tint global) — slots/bytes not defined here.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 

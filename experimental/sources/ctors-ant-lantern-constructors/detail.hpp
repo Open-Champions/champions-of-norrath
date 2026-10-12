@@ -38,6 +38,9 @@ extern unsigned char norrath_ctors_ant_lantern_view_44e940[];
 extern unsigned char norrath_ctors_ant_lantern_view_453328[];
 extern unsigned char norrath_ctors_ant_lantern_view_44a810[];
 extern unsigned char norrath_ctors_ant_lantern_view_481990[];
+unsigned norrath_construct_Lantern(void* object, const void* point);
+extern unsigned char norrath_ctors_ant_lantern_view_44a8a0[];
+extern unsigned char norrath_ctors_ant_lantern_view_48198c[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
