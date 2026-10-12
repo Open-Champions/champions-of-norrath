@@ -13,13 +13,22 @@ extern "C" int printf(const char* text, ...) {
     if (std::strcmp(text, "======= FREE KEYBOARD =======\n") != 0) std::exit(2);
     return 1;
 }
+static unsigned load_word(const unsigned char* slot) {
+    return slot[0] | (slot[1] << 8) | (slot[2] << 16) | (slot[3] << 24);
+}
+static void store_word(unsigned char* slot, unsigned value) {
+    slot[0] = static_cast<unsigned char>(value);
+    slot[1] = static_cast<unsigned char>(value >> 8);
+    slot[2] = static_cast<unsigned char>(value >> 16);
+    slot[3] = static_cast<unsigned char>(value >> 24);
+}
 extern "C" void lgKbdClose(int handle) {
     ++closes;
     closed_handle = handle;
 }
 
 int main() {
-    unsigned char object[16];
+    alignas(4) unsigned char object[16];
     std::memset(object, 0x5a, sizeof object);
     store_word(object + 4, 0xffffffffu);
     Free__10VIKeyboard(object);

@@ -5,23 +5,12 @@
 extern "C" int printf(const char* text, ...);
 extern "C" void lgKbdClose(int handle);
 
-static unsigned load_word(const unsigned char* slot) {
-    return slot[0] | (slot[1] << 8) | (slot[2] << 16) | (slot[3] << 24);
-}
-
-static void store_word(unsigned char* slot, unsigned value) {
-    slot[0] = static_cast<unsigned char>(value);
-    slot[1] = static_cast<unsigned char>(value >> 8);
-    slot[2] = static_cast<unsigned char>(value >> 16);
-    slot[3] = static_cast<unsigned char>(value >> 24);
-}
-
 extern "C" void Free__10VIKeyboard(void* keyboard) {
-    auto* object = static_cast<unsigned char*>(keyboard);
+    auto* words = static_cast<unsigned*>(keyboard);
     printf("======= FREE KEYBOARD =======\n");
-    const unsigned handle = load_word(object + 4);
+    const unsigned handle = words[1];
     if (handle != 0xffffffffu) {
         lgKbdClose(static_cast<int>(handle));
-        store_word(object + 4, 0xffffffffu);
+        words[1] = 0xffffffffu;
     }
 }
