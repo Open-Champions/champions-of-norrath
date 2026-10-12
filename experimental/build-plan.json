@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1751,
+  "default_authored_inputs": 1783,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2493,7 +2493,40 @@
     "sources/w8-core-loop-c-game-item-treasure-ramp/game_item_treasure_ramp.cpp": "e51163279293e7eebf70b1676c5551e45589aeba204a24cc077d30232447b4ff",
     "sources/w8-core-loop-c-game-level-loading/game_level_loading.cpp": "08d42097cfeb404ba7be3662cdfd2d96ed919ff27b69c07b2a451e2d63333402",
     "sources/w8-core-loop-c-game-line-clear/game_line_clear.cpp": "29b9bc1f673e5d34eba5987f5fecc85281466c8dc041fe5dc5d9995835ec4e2f",
-    "sources/w8-core-loop-c-game-line-debug-draw/game_line_debug_draw.cpp": "60394a906e1cc9f94586b3bf6c271e758730cc0d2f33541740cee291f705bb48"
+    "sources/w8-core-loop-c-game-line-debug-draw/game_line_debug_draw.cpp": "60394a906e1cc9f94586b3bf6c271e758730cc0d2f33541740cee291f705bb48",
+    "sources/w8-core-loop-d-misc-task-sync/misc_task_sync.cpp": "f46041f94bd1d43f69b9edad09a27304b66a06846fc3bd09a52056e9f582324c",
+    "sources/w8-core-loop-d-param-running/param_running.cpp": "2b23267803052e4fbee1ed3cab9b108418b58485fdf8258b496ec64088698682",
+    "sources/w8-core-loop-d-plot-route-task/plot_route_task.cpp": "695b9b7bffb534e3b54969b151a925593701a446df4515adff92b41e5c2ad75f",
+    "sources/w8-core-loop-d-reject-foreign-modules/reject_foreign_modules.cpp": "d75c31473fb86dcecd4527b64b37539ed209155965376ca70458673de28d1579",
+    "sources/w8-core-loop-d-reset-text-body/reset_text_body.cpp": "e49c14a607a7e4cf8a07d5eaae7de9b489730f88707fca8d3c3529eb83316e93",
+    "sources/w8-core-loop-d-jump-gate-clear/jump_gate_clear.cpp": "03ee72203217ce3599f12c706cc787c51d09acf6e6f583d4acf1c30d3359ed0d",
+    "sources/w8-core-loop-d-someone-in-shop/someone_in_shop.cpp": "4c130176bdc3b8f0a39e269216f22885f3c38a30933679a5128d31d2251a5ba1",
+    "sources/w8-core-loop-d-long-level-name/long_level_name.cpp": "dc18e217ee53935e31b9d95e59418c5ab0b15c6d59f46edae80c488df5813dfe",
+    "sources/w8-core-loop-d-config-stack/pushed_config.cpp": "9ad3aa86b6f2f3a64ddea9fb335981802817ecbe987ad816782723aa181febdd",
+    "sources/w8-core-loop-d-config-stack/pushed_config.hpp": "12cefb7ea366c4c14b2443b9b4bebb77ff96c45126bb2a512f6d355989d066d5",
+    "sources/w8-core-loop-d-config-stack/push_config.cpp": "c4638e6b5cd9b65a264b8f4ecbfcd365e2b58b1de4faf6f405d79b91b66722a5",
+    "sources/w8-core-loop-d-config-stack/pop_config.cpp": "16ffdf90bd5feb37448fc6f3ab247114a6ff4df9c8327686813557a9d4a4b7fc",
+    "sources/w8-core-loop-d-set-object-vis/set_object_vis.cpp": "0d69c049aaf2ded956f0c3f12fed1968af97d1e900f56f5285dca1eecf583d96",
+    "sources/w8-core-loop-d-init-animation/init_animation.cpp": "9cae9cf31fc8e9e2255b82a3c2aef6e51ff1c3496f219f062f8b15952b46fd1c",
+    "sources/w8-core-loop-d-unscramble-table/unscramble_table.cpp": "3c514b7e9c3b7c4a056121e8801868d172701992790867c2d70ecdb2eb26ef81",
+    "sources/w8-core-loop-d-pan/pan.cpp": "63bdacc5763308aef292ad5ebd79f6978fd1c17419783c7418c70205985ce65a",
+    "sources/w8-core-loop-d-data/game_show_enemies_in_map.cpp": "49f122d3c68e2bdbb532915f9b2d2f0d728a85ae6d5eb2a7b947d9cbe4794090",
+    "sources/w8-core-loop-d-data/interface_mode.cpp": "28c637757490f4a0dc96c63ee565956dc9980dadd8c250b0f3081665ea6c92ed",
+    "sources/w8-core-loop-d-data/interface_on.cpp": "40d1ac870875116bf2d16841fe8ea375cbea408a9b6655c4ae907d8918894b1a",
+    "sources/w8-core-loop-d-data/jumping.cpp": "c7bb63294b6805a4bdeea8a20643e5b6539d60cbf02e4597cfb6470494fc8242",
+    "sources/w8-core-loop-d-data/last_warp_pos.cpp": "9307817c6c3c57597af936652b8f0f6e35e548644fe0fab6061864c097cd078c",
+    "sources/w8-core-loop-d-data/layer0_dir.cpp": "a5b810f8a63d4e7cabf6f36e5e5deaba2a4d44cbc3cf9b41e84b1f8689db410b",
+    "sources/w8-core-loop-d-data/layer1_dir.cpp": "f5ab6995e05d9830238266866511c380eca2383c20ca8db24ee2c744f53f7c79",
+    "sources/w8-core-loop-d-data/level_seeds.cpp": "87e802c3125c8bb6d14da134dd252438dacb5e67dcf0cb13e1fcc7fbf8c2b58a",
+    "sources/w8-core-loop-d-data/loading_screen_request_exit.cpp": "8a85fc20b8a3708749e5ad0910addad605a6807a09fe64ab3258977e675e2964",
+    "sources/w8-core-loop-d-data/no_monsters.cpp": "abcca08a6c442156a5dfc5151f3dd3e4869a4444979ce5577b45bb0987722e0b",
+    "sources/w8-core-loop-d-data/opt_tbl.cpp": "6ed51a14d66932eb8050264dd93eb4953c54e56d85776b560e0694d3d73c02a9",
+    "sources/w8-core-loop-d-vtables/view_44e940.cpp": "735bf28f4671512ff1eea94b4a7f94c28b9465c8f8031e5b10f75bd0533da656",
+    "sources/w8-core-loop-d-vtables/view_44ea78.cpp": "0c42d62db86778a4915cb7291e1d56a30030893c6b1c7ceed059184b600107f3",
+    "sources/w8-core-loop-d-vtables/view_453328.cpp": "80f87abb07321d2381e7219267cc308629e387282a7cf40f6673a2b1ba4130bc",
+    "sources/w8-core-loop-d-vtables/factory_prop_vtable.cpp": "f39639ba9ede5d85577ebf0ef5c39951d83afdb51ef3f9239e0c627292aa8ac9",
+    "sources/w8-core-loop-d-init-lump/init_lump.cpp": "b722e2c05b5e2d79594ac813aba18705b534c729aff36dc1e5aa66ca4df586c0",
+    "sources/w8-core-loop-d-select-init/select_init.cpp": "475cb5f26a50ac979189808c8a3cb90b2f8a3955055b6d441bc339336f143534"
   },
   "inputs": [
     {
@@ -24026,6 +24059,412 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1753,
+      "kind": "independently_authored_source",
+      "object_name": "misc_task_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "f46041f94bd1d43f69b9edad09a27304b66a06846fc3bd09a52056e9f582324c",
+      "source": "sources/w8-core-loop-d-misc-task-sync/misc_task_sync.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameMiscTaskSync__Fv",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1754,
+      "kind": "independently_authored_source",
+      "object_name": "param_running.o",
+      "profile": "authored_cpp",
+      "sha256": "2b23267803052e4fbee1ed3cab9b108418b58485fdf8258b496ec64088698682",
+      "source": "sources/w8-core-loop-d-param-running/param_running.cpp",
+      "emitted_functions": [
+        {
+          "name": "paramRunning__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1755,
+      "kind": "independently_authored_source",
+      "object_name": "plot_route_task.o",
+      "profile": "authored_cpp",
+      "sha256": "695b9b7bffb534e3b54969b151a925593701a446df4515adff92b41e5c2ad75f",
+      "source": "sources/w8-core-loop-d-plot-route-task/plot_route_task.cpp",
+      "emitted_functions": [
+        {
+          "name": "plotRouteTask__Fv",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1756,
+      "kind": "independently_authored_source",
+      "object_name": "reject_foreign_modules.o",
+      "profile": "authored_cpp",
+      "sha256": "d75c31473fb86dcecd4527b64b37539ed209155965376ca70458673de28d1579",
+      "source": "sources/w8-core-loop-d-reject-foreign-modules/reject_foreign_modules.cpp",
+      "emitted_functions": [
+        {
+          "name": "rejectForeignModules__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1757,
+      "kind": "independently_authored_source",
+      "object_name": "reset_text_body.o",
+      "profile": "authored_cpp",
+      "sha256": "e49c14a607a7e4cf8a07d5eaae7de9b489730f88707fca8d3c3529eb83316e93",
+      "source": "sources/w8-core-loop-d-reset-text-body/reset_text_body.cpp",
+      "emitted_functions": [
+        {
+          "name": "resetTextBody__Fv",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1758,
+      "kind": "independently_authored_source",
+      "object_name": "jump_gate_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "03ee72203217ce3599f12c706cc787c51d09acf6e6f583d4acf1c30d3359ed0d",
+      "source": "sources/w8-core-loop-d-jump-gate-clear/jump_gate_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "jumpGateClear__Fv",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1759,
+      "kind": "independently_authored_source",
+      "object_name": "someone_in_shop.o",
+      "profile": "authored_cpp",
+      "sha256": "4c130176bdc3b8f0a39e269216f22885f3c38a30933679a5128d31d2251a5ba1",
+      "source": "sources/w8-core-loop-d-someone-in-shop/someone_in_shop.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameSomeoneInShop__Fv",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1760,
+      "kind": "independently_authored_source",
+      "object_name": "long_level_name.o",
+      "profile": "authored_cpp",
+      "sha256": "dc18e217ee53935e31b9d95e59418c5ab0b15c6d59f46edae80c488df5813dfe",
+      "source": "sources/w8-core-loop-d-long-level-name/long_level_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLongLevelName__FPc",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-core-loop-d-config-stack/pushed_config.hpp"
+      ],
+      "input_order": 1761,
+      "kind": "independently_authored_source",
+      "object_name": "pushed_config.o",
+      "profile": "authored_cpp",
+      "sha256": "9ad3aa86b6f2f3a64ddea9fb335981802817ecbe987ad816782723aa181febdd",
+      "source": "sources/w8-core-loop-d-config-stack/pushed_config.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w8-core-loop-d-config-stack/pushed_config.hpp"
+      ],
+      "input_order": 1762,
+      "kind": "independently_authored_source",
+      "object_name": "push_config.o",
+      "profile": "authored_cpp",
+      "sha256": "c4638e6b5cd9b65a264b8f4ecbfcd365e2b58b1de4faf6f405d79b91b66722a5",
+      "source": "sources/w8-core-loop-d-config-stack/push_config.cpp",
+      "emitted_functions": [
+        {
+          "name": "gamePushConfig__Fv",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-core-loop-d-config-stack/pushed_config.hpp"
+      ],
+      "input_order": 1763,
+      "kind": "independently_authored_source",
+      "object_name": "pop_config.o",
+      "profile": "authored_cpp",
+      "sha256": "16ffdf90bd5feb37448fc6f3ab247114a6ff4df9c8327686813557a9d4a4b7fc",
+      "source": "sources/w8-core-loop-d-config-stack/pop_config.cpp",
+      "emitted_functions": [
+        {
+          "name": "gamePopConfig__Fv",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1764,
+      "kind": "independently_authored_source",
+      "object_name": "set_object_vis.o",
+      "profile": "authored_cpp",
+      "sha256": "0d69c049aaf2ded956f0c3f12fed1968af97d1e900f56f5285dca1eecf583d96",
+      "source": "sources/w8-core-loop-d-set-object-vis/set_object_vis.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameSetObjectVis__Fv",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1765,
+      "kind": "independently_authored_source",
+      "object_name": "init_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "9cae9cf31fc8e9e2255b82a3c2aef6e51ff1c3496f219f062f8b15952b46fd1c",
+      "source": "sources/w8-core-loop-d-init-animation/init_animation.cpp",
+      "emitted_functions": [
+        {
+          "name": "initAnimation__Fv",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1766,
+      "kind": "independently_authored_source",
+      "object_name": "unscramble_table.o",
+      "profile": "authored_cpp",
+      "sha256": "3c514b7e9c3b7c4a056121e8801868d172701992790867c2d70ecdb2eb26ef81",
+      "source": "sources/w8-core-loop-d-unscramble-table/unscramble_table.cpp",
+      "emitted_functions": [
+        {
+          "name": "makeUnscrambleTable__Fv",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1767,
+      "kind": "independently_authored_source",
+      "object_name": "pan.o",
+      "profile": "authored_cpp",
+      "sha256": "63bdacc5763308aef292ad5ebd79f6978fd1c17419783c7418c70205985ce65a",
+      "source": "sources/w8-core-loop-d-pan/pan.cpp",
+      "emitted_functions": [
+        {
+          "name": "pan__FG6Point3ffPfT3",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1768,
+      "kind": "independently_authored_source",
+      "object_name": "game_show_enemies_in_map.o",
+      "profile": "authored_cpp",
+      "sha256": "49f122d3c68e2bdbb532915f9b2d2f0d728a85ae6d5eb2a7b947d9cbe4794090",
+      "source": "sources/w8-core-loop-d-data/game_show_enemies_in_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1769,
+      "kind": "independently_authored_source",
+      "object_name": "interface_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "28c637757490f4a0dc96c63ee565956dc9980dadd8c250b0f3081665ea6c92ed",
+      "source": "sources/w8-core-loop-d-data/interface_mode.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1770,
+      "kind": "independently_authored_source",
+      "object_name": "interface_on.o",
+      "profile": "authored_cpp",
+      "sha256": "40d1ac870875116bf2d16841fe8ea375cbea408a9b6655c4ae907d8918894b1a",
+      "source": "sources/w8-core-loop-d-data/interface_on.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1771,
+      "kind": "independently_authored_source",
+      "object_name": "jumping.o",
+      "profile": "authored_cpp",
+      "sha256": "c7bb63294b6805a4bdeea8a20643e5b6539d60cbf02e4597cfb6470494fc8242",
+      "source": "sources/w8-core-loop-d-data/jumping.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1772,
+      "kind": "independently_authored_source",
+      "object_name": "last_warp_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "9307817c6c3c57597af936652b8f0f6e35e548644fe0fab6061864c097cd078c",
+      "source": "sources/w8-core-loop-d-data/last_warp_pos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1773,
+      "kind": "independently_authored_source",
+      "object_name": "layer0_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "a5b810f8a63d4e7cabf6f36e5e5deaba2a4d44cbc3cf9b41e84b1f8689db410b",
+      "source": "sources/w8-core-loop-d-data/layer0_dir.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1774,
+      "kind": "independently_authored_source",
+      "object_name": "layer1_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "f5ab6995e05d9830238266866511c380eca2383c20ca8db24ee2c744f53f7c79",
+      "source": "sources/w8-core-loop-d-data/layer1_dir.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1775,
+      "kind": "independently_authored_source",
+      "object_name": "level_seeds.o",
+      "profile": "authored_cpp",
+      "sha256": "87e802c3125c8bb6d14da134dd252438dacb5e67dcf0cb13e1fcc7fbf8c2b58a",
+      "source": "sources/w8-core-loop-d-data/level_seeds.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1776,
+      "kind": "independently_authored_source",
+      "object_name": "loading_screen_request_exit.o",
+      "profile": "authored_cpp",
+      "sha256": "8a85fc20b8a3708749e5ad0910addad605a6807a09fe64ab3258977e675e2964",
+      "source": "sources/w8-core-loop-d-data/loading_screen_request_exit.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1777,
+      "kind": "independently_authored_source",
+      "object_name": "no_monsters.o",
+      "profile": "authored_cpp",
+      "sha256": "abcca08a6c442156a5dfc5151f3dd3e4869a4444979ce5577b45bb0987722e0b",
+      "source": "sources/w8-core-loop-d-data/no_monsters.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1778,
+      "kind": "independently_authored_source",
+      "object_name": "opt_tbl.o",
+      "profile": "authored_cpp",
+      "sha256": "6ed51a14d66932eb8050264dd93eb4953c54e56d85776b560e0694d3d73c02a9",
+      "source": "sources/w8-core-loop-d-data/opt_tbl.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1779,
+      "kind": "independently_authored_source",
+      "object_name": "view_44e940.o",
+      "profile": "authored_cpp",
+      "sha256": "735bf28f4671512ff1eea94b4a7f94c28b9465c8f8031e5b10f75bd0533da656",
+      "source": "sources/w8-core-loop-d-vtables/view_44e940.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1780,
+      "kind": "independently_authored_source",
+      "object_name": "view_44ea78.o",
+      "profile": "authored_cpp",
+      "sha256": "0c42d62db86778a4915cb7291e1d56a30030893c6b1c7ceed059184b600107f3",
+      "source": "sources/w8-core-loop-d-vtables/view_44ea78.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1781,
+      "kind": "independently_authored_source",
+      "object_name": "view_453328.o",
+      "profile": "authored_cpp",
+      "sha256": "80f87abb07321d2381e7219267cc308629e387282a7cf40f6673a2b1ba4130bc",
+      "source": "sources/w8-core-loop-d-vtables/view_453328.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1782,
+      "kind": "independently_authored_source",
+      "object_name": "factory_prop_vtable.o",
+      "profile": "authored_cpp",
+      "sha256": "f39639ba9ede5d85577ebf0ef5c39951d83afdb51ef3f9239e0c627292aa8ac9",
+      "source": "sources/w8-core-loop-d-vtables/factory_prop_vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1783,
+      "kind": "independently_authored_source",
+      "object_name": "init_lump.o",
+      "profile": "authored_cpp",
+      "sha256": "b722e2c05b5e2d79594ac813aba18705b534c729aff36dc1e5aa66ca4df586c0",
+      "source": "sources/w8-core-loop-d-init-lump/init_lump.cpp",
+      "emitted_functions": [
+        {
+          "name": "initLump__FPv",
+          "compiled_body_bytes": 1012
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1784,
+      "kind": "independently_authored_source",
+      "object_name": "select_init.o",
+      "profile": "authored_cpp",
+      "sha256": "475cb5f26a50ac979189808c8a3cb90b2f8a3955055b6d441bc339336f143534",
+      "source": "sources/w8-core-loop-d-select-init/select_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "init__Fv",
+          "compiled_body_bytes": 1812
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -24125,7 +24564,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "e8335e84ece81f617eca05b01fe9f5ade35b240c5a7b55ae0d1274964f62866c",
+  "snapshot_sha256": "10ed26b19668de6af49c748309eade8c39a7598b61cffdff7b5dfd9f8f4463ee",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

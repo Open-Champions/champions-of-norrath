@@ -3505,6 +3505,60 @@ Opened: `UnpreparePowerOff__Fv`, `_$_4Line`, `checkSave__FP10GameObject`,
 `objectIterateRunLists__FPFP10GameObject_v`, `saveOk`, `sceSifExitCmd`,
 `soundQuiet__Fv`, `texTerminateThread__Fv`.
 
+## agents/w8-core-loop-d
+
+Merged (the branch notes carry the five summary sections). Thirty-two units
+with fresh `input_order` values 1751 through 1782: 16 emitted functions (4972
+compiled body bytes, not original-byte matches) and data words. All 18 host
+programs under the package build and exit 0 here; the snapshot checker
+accepts a host reference for every unit. No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1390 function
+bodies, 1783 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1593 |
+| After | 1629 |
+| Closed | 31 |
+| Opened | 67 |
+
+Closed: `gameMiscTaskSync__Fv`, `gamePopConfig__Fv`, `gamePushConfig__Fv`,
+`gameSetObjectVis__Fv`, `gameShowEnemiesInMap`, `gameSomeoneInShop__Fv`,
+`getLongLevelName__FPc`, `initAnimation__Fv`, `initLump__FPv`, `init__Fv`,
+`interfaceMode`, `interfaceOn`, `jumpGateClear__Fv`, `jumping`,
+`lastWarpPos`, `layer0Dir`, `layer1Dir`, `levelSeeds`,
+`loadingScreenRequestExit`, `makeUnscrambleTable__Fv`, `noMonsters`,
+`norrath_ctors_ant_lantern_view_44e940`,
+`norrath_ctors_ant_lantern_view_44ea78`,
+`norrath_ctors_ant_lantern_view_453328`, `norrath_factory_prop_vtable`,
+`optTbl`, `pan__FG6Point3ffPfT3`, `paramRunning__Fv`, `plotRouteTask__Fv`,
+`rejectForeignModules__Fv`, `resetTextBody__Fv`.
+
+Opened: `DLG_GetDialogCreature__Fv`, `_$_11AutoChestLP`, `_$_15AutoContainerLP`,
+`_$_4Boat`, `__3NPCG6Point3sPcN33ifPPc`, `__tf11AutoChestLP`,
+`__tf15AutoContainerLP`, `__tf4Boat`,
+`animAddToEnd__FP14AnimationStateP15AnimationHeaderi`,
+`animMapAnimationSounds__FP15AnimationHeader`, `animUseBuffer`, `bodyAlpha`,
+`changeBeard__Fii`, `changeHairColor__Fii`, `changeHairStyle__Fii`,
+`changeSkin__Fii`, `curPlayer`, `doMyUniqueForces__4Boat`, `dummyList`,
+`getHairAndSkin__Fi`, `headerAlpha`, `hermDeltaScale`, `hermiteTime`,
+`hpos`, `hvecs`, `initFile__FPcPvi`, `initLightInfo__Fv`, `initNamePad__Fv`,
+`initPreSelect__Fv`, `jumpGateTaskDraw__Fv`, `jumpGateTaskRun__Fv`,
+`lightMats`, `memmove`, `msg_collision__13AutoContainerP10GameObject`,
+`msg_draw__11AutoChestLP`, `msg_draw__15AutoContainerLP`,
+`msg_getPokeName__13AutoContainerPUsi`, `msg_getPokeName__9AutoChestPUsi`,
+`msg_hurt__13AutoContainerfP10GameObjecti`, `msg_load__13AutoContainerPc`,
+`msg_load__9AutoChestPc`, `msg_poke__11AutoChestLPi`,
+`msg_poke__13AutoContaineri`, `msg_run__11AutoChestLP`,
+`msg_run__15AutoContainerLP`, `msg_save__13AutoContainerPc`,
+`msg_save__9AutoChestPc`, `nameTags`, `needEnforce`, `npcLumpName`,
+`objectVisCount`, `objectVisPoints`, `objectVisUseCamCenter`,
+`playerCheckRecallHotKey__Fv`, `playerRecallSpell__Fv`, `playerSelectInfo`,
+`pnums`, `requestToExit`, `set__4Boat`, `startExitFade`, `strrchr`,
+`targetObjs`, `targets`, `textBodyLen`, `unscrambleTable`,
+`worldPlotRouteProcess__Fi`, `yaws`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
