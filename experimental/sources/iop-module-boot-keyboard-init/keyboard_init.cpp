@@ -11,21 +11,14 @@ int gKeyboardAttached = 0;
 unsigned char sQueue[264] = {};
 }
 
-static void store_word(unsigned char* slot, unsigned value) {
-    slot[0] = static_cast<unsigned char>(value);
-    slot[1] = static_cast<unsigned char>(value >> 8);
-    slot[2] = static_cast<unsigned char>(value >> 16);
-    slot[3] = static_cast<unsigned char>(value >> 24);
-}
-
 extern "C" int Init__10VIKeyboard(void* keyboard) {
-    auto* object = static_cast<unsigned char*>(keyboard);
+    auto* words = static_cast<unsigned*>(keyboard);
     gKeyboardAttached = 0;
     printf("======= INIT KEYBOARD =======\n");
-    store_word(object + 4, static_cast<unsigned>(-1));
-    store_word(object + 8, static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(sQueue)));
-    store_word(object + 528, 0);
-    store_word(object + 12, 0);
-    store_word(object, 0);
+    words[1] = 0xffffffffu;
+    words[2] = static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(sQueue));
+    words[132] = 0;
+    words[3] = 0;
+    words[0] = 0;
     return 0;
 }
