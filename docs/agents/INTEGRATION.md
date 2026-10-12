@@ -2419,8 +2419,8 @@ committed.
 
 Nineteen units were selected with fresh `input_order` values 1409 through
 1427, component `actor-view-tables-views`. The six first-pass units were
-already selected and were not appended again. The four routine-pointer
-tables each name sized functions by assembler label, so closing the names
+already selected and were not appended again. The virtual tables
+each name sized functions by assembler label, so closing the names
 opens new function imports; the worker did not measure the link and the
 real net count goes up.
 
