@@ -4301,6 +4301,48 @@ Opened: `distanceToPlane__FP6Point3N20`, `fontCharAlpha`,
 `nmChars`, `nmDirectQWords`, `p`, `playerGetPotionsLeft__Fii`,
 `reglistLoopCount`.
 
+## agents/w8-hud-text-items-b
+
+Merged (the branch notes carry the five summary sections). Twenty-eight units
+with fresh `input_order` values 2191 through 2218: 25 emitted functions (6888
+compiled body bytes, not original-byte matches). All 28 host checks build and
+exit 0 here (28 of 28). No duplicate definition was found at link time. The
+official count is unchanged at 1526 because 30 names closed and 30 opened
+(the font and inventory-load routines these functions call). No game binary
+or disassembly listing was committed. 1778 function bodies, 2219 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1526 |
+| After | 1526 |
+| Closed | 30 |
+| Opened | 30 |
+
+Closed: `fontEnd__Fv`, `fontLastPrintedPosition`, `fontPrintCentered__FiiPci`,
+`fontPrintCenteredu__FiiPUsi`, `fontPrintWrapu__FiiPUsiiii`,
+`fontPrint__FiiPci`, `fontPrintu__FiiPUsi`, `fontRestrict__Fi`,
+`fontScissor__Fiiii`, `fontStart__FP4FontiUii`,
+`fontStringSizeu__FP4FontPUsi`, `getWeight__4itemPQ24item11description`,
+`hudAssignQuickSpell__Fiii`, `hudAssignSpellBookSpell__Fiiil`,
+`hudClearInfoMessage__Fv`, `hudFadeScreen__Fi`, `hudFinishGold__Fv`,
+`hudFooterUni`, `hudKick__Fv`, `hudResetFadeScreen__Fi`,
+`hudShowMsg__FPUsN20iii`, `infoMessage`, `infoMessageAlways`,
+`infoMessageTimer`, `invShutDown__Fi`, `inventoryInit__Fv`,
+`inventoryReset__Fv`, `msgHudPlayerExit__Fv`, `msgHudRecall__Fc`,
+`picProcess__4itemv`.
+
+Opened: `_4item$picBuffer`, `_4item$picInProgress`, `_4item$picList`,
+`_4item$picLoadBuffer`, `_4item$picLoadFinished`, `_4item$picsToLoad`,
+`_fontPrintu__FiiPUsi`, `_fontStringSize__FP4FontPci`,
+`_fontStringSizeu__FP4FontPUsi`, `countUp`, `curFont`, `drawBucket`,
+`fadeDownVal`, `givePlayerFeat__Fxii`, `goldAlpha`, `goldNumber`,
+`inventoryFrameDraw__Fv`, `inventoryFrameRun__Fv`, `inventoryLoadState`,
+`inventoryLoad__Fv`, `inventoryLump`, `lightPopSceneLights__Fv`,
+`picFind__4itemPc`, `picKickOneOut__4itemv`, `playerGetSkillRank__Fii`,
+`playerGettinIt`, `restrictChars`, `scissored`, `shopGrid`,
+`vifDirectQWordCount`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
