@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2014,
+  "default_authored_inputs": 2031,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2757,7 +2757,26 @@
     "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp": "a6f9fe35b80cd967e2e8266cd8a48ebf73d0f804553953562f976d36b59cf162",
     "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
     "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
-    "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9"
+    "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+    "sources/w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp": "a42cefd52d2bdaadea728f31c35c0bd5d654eac56c6018c0bafb3e9ee24e2bfd",
+    "sources/w8-actor-virtuals-c-bytes/bytes.hpp": "4a92921f20f017eb067bbf0bc09f8fd3883ac9b2f73805ce9362e41c386e2031",
+    "sources/w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp": "26c12186f86af4c8766fd1ed2f2dc1c036e05838296e3979feb4c5e31c3f0fa8",
+    "sources/w8-actor-virtuals-c-auto-prop-passable/set_passable_state.cpp": "3fa68153308ce8fca8e928d354ab22bd3ea7c5f02e1e0752c422d8b88faa3b0f",
+    "sources/w8-actor-virtuals-c-auto-prop-set-state/set_state.cpp": "41a0a6a8213fab0a378c0f82061696fc72221fade5d7ae3e97ef8999ca212184",
+    "sources/w8-actor-virtuals-c-auto-prop-trigger/trigger.cpp": "e7ac2e4ff49ee7c394c6d522b2d040bc63266a2a593fb027baf167db2f56ded6",
+    "sources/w8-actor-virtuals-c-auto-prop-run/run.cpp": "a122c4c030f6e751e518c6e13233307849dfafeffdf25f2324d3dbd8f76ba068",
+    "sources/w8-actor-virtuals-c-hate-hole-passable/set_passable_state.cpp": "7f3c40ac35bae8f912102f9d15ce6eb2da478da339b07d4446afd253193414f2",
+    "sources/w8-actor-virtuals-c-container-save/save.cpp": "b20e03f8ec244564321d8e74aca5c28f8d8124f57af80dc93e0d3da9636c8d80",
+    "sources/w8-actor-virtuals-c-hate-into-run/run.cpp": "2db51610a9f6d4d087d5cef57049c06980892063b8d7989a2f3b9827b31851da",
+    "sources/w8-actor-virtuals-c-hate-run-common/hate_run.hpp": "a1bd535e397fbc94eca03ab903204ad89ce51e9b1c04bc7a7025b51df1439505",
+    "sources/w8-actor-virtuals-c-hate-gate-run/run.cpp": "6feafa56d4df6a4221f4e1ad7e961909bec5970ea2f05303bb04e6c1c5e95d18",
+    "sources/w8-actor-virtuals-c-push-physics-prop-save/save.cpp": "281c54c9613cd35313f5368eb9e890deeb832182e4ec525f53b22ea15bf7151c",
+    "sources/w8-actor-virtuals-c-trigger-run/run.cpp": "7cf286451d6cced9b1507df831b87133ee84dd1c52ed711429fcbec1e1595c47",
+    "sources/w8-actor-virtuals-c-missile-trap-run/run.cpp": "df833bd81b4ef61f56abbec5876dbc67b5c9e07732f5ebe6b869639be50a3850",
+    "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp": "95f1e74ceb8399cd793220f6d5e6ef69616f40bf60b0fb716fe9809a70381138",
+    "sources/w8-actor-virtuals-c-shooter-run/run.cpp": "670619c50af39ea252ae34f65277ada57d2f38eff417db7219d533bc25a39ea2",
+    "sources/w8-actor-virtuals-c-container-run/run.cpp": "ae06d8184fc19e68ee420fbc38565b4f2ff6e78fd36ce6ce94212c9f9be572c1",
+    "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1"
   },
   "inputs": [
     {
@@ -27940,6 +27959,305 @@
       "sha256": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
       "source": "sources/w8-startup-sce-d-special-handler/special_handler.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2016,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_wake_monsters.o",
+      "profile": "authored_cpp",
+      "sha256": "a42cefd52d2bdaadea728f31c35c0bd5d654eac56c6018c0bafb3e9ee24e2bfd",
+      "source": "sources/w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L12wake_monsterEPv",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "wakeMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2017,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_sleep_monsters.o",
+      "profile": "authored_cpp",
+      "sha256": "26c12186f86af4c8766fd1ed2f2dc1c036e05838296e3979feb4c5e31c3f0fa8",
+      "source": "sources/w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13sleep_monsterEPv",
+          "compiled_body_bytes": 176
+        },
+        {
+          "name": "sleepMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2018,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_auto_prop_passable.o",
+      "profile": "authored_cpp",
+      "sha256": "3fa68153308ce8fca8e928d354ab22bd3ea7c5f02e1e0752c422d8b88faa3b0f",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-passable/set_passable_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8AutoPropb",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2019,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_auto_prop_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "41a0a6a8213fab0a378c0f82061696fc72221fade5d7ae3e97ef8999ca212184",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__8AutoPropi",
+          "compiled_body_bytes": 464
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2020,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_auto_prop_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "e7ac2e4ff49ee7c394c6d522b2d040bc63266a2a593fb027baf167db2f56ded6",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-trigger/trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8AutoPropi",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2021,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_auto_prop_run.o",
+      "profile": "authored_cpp",
+      "sha256": "a122c4c030f6e751e518c6e13233307849dfafeffdf25f2324d3dbd8f76ba068",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8AutoProp",
+          "compiled_body_bytes": 1056
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2022,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_hate_hole_passable.o",
+      "profile": "authored_cpp",
+      "sha256": "7f3c40ac35bae8f912102f9d15ce6eb2da478da339b07d4446afd253193414f2",
+      "source": "sources/w8-actor-virtuals-c-hate-hole-passable/set_passable_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8HateHoleb",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2023,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_container_save.o",
+      "profile": "authored_cpp",
+      "sha256": "b20e03f8ec244564321d8e74aca5c28f8d8124f57af80dc93e0d3da9636c8d80",
+      "source": "sources/w8-actor-virtuals-c-container-save/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9ContainerPc",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp",
+        "sources/w8-actor-virtuals-c-hate-run-common/hate_run.hpp"
+      ],
+      "input_order": 2024,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_hate_into_run.o",
+      "profile": "authored_cpp",
+      "sha256": "2db51610a9f6d4d087d5cef57049c06980892063b8d7989a2f3b9827b31851da",
+      "source": "sources/w8-actor-virtuals-c-hate-into-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateInto",
+          "compiled_body_bytes": 536
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp",
+        "sources/w8-actor-virtuals-c-hate-run-common/hate_run.hpp"
+      ],
+      "input_order": 2025,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_hate_gate_run.o",
+      "profile": "authored_cpp",
+      "sha256": "6feafa56d4df6a4221f4e1ad7e961909bec5970ea2f05303bb04e6c1c5e95d18",
+      "source": "sources/w8-actor-virtuals-c-hate-gate-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateGate",
+          "compiled_body_bytes": 536
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2026,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_push_physics_prop_save.o",
+      "profile": "authored_cpp",
+      "sha256": "281c54c9613cd35313f5368eb9e890deeb832182e4ec525f53b22ea15bf7151c",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-save/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__15PushPhysicsPropPc",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2027,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_trigger_run.o",
+      "profile": "authored_cpp",
+      "sha256": "7cf286451d6cced9b1507df831b87133ee84dd1c52ed711429fcbec1e1595c47",
+      "source": "sources/w8-actor-virtuals-c-trigger-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Trigger",
+          "compiled_body_bytes": 1284
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2028,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_missile_trap_run.o",
+      "profile": "authored_cpp",
+      "sha256": "df833bd81b4ef61f56abbec5876dbc67b5c9e07732f5ebe6b869639be50a3850",
+      "source": "sources/w8-actor-virtuals-c-missile-trap-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__11MissileTrap",
+          "compiled_body_bytes": 1088
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2029,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_fire_bomb_run.o",
+      "profile": "authored_cpp",
+      "sha256": "95f1e74ceb8399cd793220f6d5e6ef69616f40bf60b0fb716fe9809a70381138",
+      "source": "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8FireBomb",
+          "compiled_body_bytes": 1160
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2030,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_shooter_run.o",
+      "profile": "authored_cpp",
+      "sha256": "670619c50af39ea252ae34f65277ada57d2f38eff417db7219d533bc25a39ea2",
+      "source": "sources/w8-actor-virtuals-c-shooter-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Shooter",
+          "compiled_body_bytes": 3016
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2031,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_container_run.o",
+      "profile": "authored_cpp",
+      "sha256": "ae06d8184fc19e68ee420fbc38565b4f2ff6e78fd36ce6ce94212c9f9be572c1",
+      "source": "sources/w8-actor-virtuals-c-container-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__9Container",
+          "compiled_body_bytes": 5032
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-c-bytes/bytes.hpp"
+      ],
+      "input_order": 2032,
+      "kind": "independently_authored_source",
+      "object_name": "w8c_push_physics_prop_run.o",
+      "profile": "authored_cpp",
+      "sha256": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__15PushPhysicsProp",
+          "compiled_body_bytes": 6556
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -28039,7 +28357,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "29c2363aa762291ace8f0612b8e4dcdbbf190a04c141344d512583ca1eecb22e",
+  "snapshot_sha256": "99005f411e16a0deb08b96531bbfb5dcec60271bcf2e72732bdb2f34a2b0f4eb",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

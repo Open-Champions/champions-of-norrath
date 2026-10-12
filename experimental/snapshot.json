@@ -25889,6 +25889,252 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w8-startup-sce-d-special-handler/special_handler.cpp"
+    },
+    {
+      "input_order": 2016,
+      "component": "w8-actor-virtuals-c-wake-monsters",
+      "object_name": "w8c_wake_monsters.o",
+      "private_object_sha256": "a5eca79211976f3ec1388a8251a78e3994e46f7f0974f18edb594e76be745488",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L12wake_monsterEPv",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "wakeMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp"
+    },
+    {
+      "input_order": 2017,
+      "component": "w8-actor-virtuals-c-sleep-monsters",
+      "object_name": "w8c_sleep_monsters.o",
+      "private_object_sha256": "4dfdfd6ce4b4c6036bd68f0ba14bd81229e886ebb9da5cbcbfa0a5e2093c91bc",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13sleep_monsterEPv",
+          "compiled_body_bytes": 176
+        },
+        {
+          "name": "sleepMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp"
+    },
+    {
+      "input_order": 2018,
+      "component": "w8-actor-virtuals-c-auto-prop-passable",
+      "object_name": "w8c_auto_prop_passable.o",
+      "private_object_sha256": "b7f905bae8c8f53266809d37e097a0994a9eaa2b51162ffc1c09e1a4e89946f6",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8AutoPropb",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-passable/set_passable_state.cpp"
+    },
+    {
+      "input_order": 2019,
+      "component": "w8-actor-virtuals-c-auto-prop-set-state",
+      "object_name": "w8c_auto_prop_set_state.o",
+      "private_object_sha256": "edd2190107531794b9e605096d24de8d84b4fe83871481838b95920dd19d86bf",
+      "emitted_functions": [
+        {
+          "name": "setState__8AutoPropi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-set-state/set_state.cpp"
+    },
+    {
+      "input_order": 2020,
+      "component": "w8-actor-virtuals-c-auto-prop-trigger",
+      "object_name": "w8c_auto_prop_trigger.o",
+      "private_object_sha256": "71c6a9d97fcaf7d9d12e8a5f23e77e5bb3491de7d94d3e070aa94009d6128ea8",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8AutoPropi",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-trigger/trigger.cpp"
+    },
+    {
+      "input_order": 2021,
+      "component": "w8-actor-virtuals-c-auto-prop-run",
+      "object_name": "w8c_auto_prop_run.o",
+      "private_object_sha256": "f807cf2b878dddecf4e6742f9926c86fe1af377ce689ea516ecfb7289f1be9dc",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8AutoProp",
+          "compiled_body_bytes": 1056
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-run/run.cpp"
+    },
+    {
+      "input_order": 2022,
+      "component": "w8-actor-virtuals-c-hate-hole-passable",
+      "object_name": "w8c_hate_hole_passable.o",
+      "private_object_sha256": "cbdceea73374534be1ead84741773f59363d84f5565ce5d25c7ba6b0704a4a1a",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8HateHoleb",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-hate-hole-passable/set_passable_state.cpp"
+    },
+    {
+      "input_order": 2023,
+      "component": "w8-actor-virtuals-c-container-save",
+      "object_name": "w8c_container_save.o",
+      "private_object_sha256": "f917dcd03568092706655d0490ad44a9246c1fd6f604ad1bc8a9214a9e6ed130",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9ContainerPc",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-container-save/save.cpp"
+    },
+    {
+      "input_order": 2024,
+      "component": "w8-actor-virtuals-c-hate-into-run",
+      "object_name": "w8c_hate_into_run.o",
+      "private_object_sha256": "a82d305e764c0b603245e06d136527acf1467dad82f4e8d1f3fa713122c5805f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateInto",
+          "compiled_body_bytes": 536
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-hate-into-run/run.cpp"
+    },
+    {
+      "input_order": 2025,
+      "component": "w8-actor-virtuals-c-hate-gate-run",
+      "object_name": "w8c_hate_gate_run.o",
+      "private_object_sha256": "32bc89dfb88e38b2aaee4ae8b18559168224c111845d010cfdcdfaa889e7c31f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateGate",
+          "compiled_body_bytes": 536
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-hate-gate-run/run.cpp"
+    },
+    {
+      "input_order": 2026,
+      "component": "w8-actor-virtuals-c-push-physics-prop-save",
+      "object_name": "w8c_push_physics_prop_save.o",
+      "private_object_sha256": "c347c1822f7132e9bd38d31b368bb3817ae7efd379ea97574e6ed2bbe65d9215",
+      "emitted_functions": [
+        {
+          "name": "msg_save__15PushPhysicsPropPc",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-save/save.cpp"
+    },
+    {
+      "input_order": 2027,
+      "component": "w8-actor-virtuals-c-trigger-run",
+      "object_name": "w8c_trigger_run.o",
+      "private_object_sha256": "04841347a8576bf4ec4f313d9a5986e99b018e88248db6b735a5ce74c3c6e767",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Trigger",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-trigger-run/run.cpp"
+    },
+    {
+      "input_order": 2028,
+      "component": "w8-actor-virtuals-c-missile-trap-run",
+      "object_name": "w8c_missile_trap_run.o",
+      "private_object_sha256": "239b3d2cca0edfb4345497c981bfbe2ce25aa8f477522115dacdd393bdb756cd",
+      "emitted_functions": [
+        {
+          "name": "msg_run__11MissileTrap",
+          "compiled_body_bytes": 1088
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-missile-trap-run/run.cpp"
+    },
+    {
+      "input_order": 2029,
+      "component": "w8-actor-virtuals-c-fire-bomb-run",
+      "object_name": "w8c_fire_bomb_run.o",
+      "private_object_sha256": "2219a65962cedc3249e0cbb24ce34e89523335109370405fe53a1da613f7c31f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8FireBomb",
+          "compiled_body_bytes": 1160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp"
+    },
+    {
+      "input_order": 2030,
+      "component": "w8-actor-virtuals-c-shooter-run",
+      "object_name": "w8c_shooter_run.o",
+      "private_object_sha256": "0293b6a2c9e61c00bc6859f39e4849abac9e3fe26a49a9b1f7bac2bae8df9323",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Shooter",
+          "compiled_body_bytes": 3016
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-shooter-run/run.cpp"
+    },
+    {
+      "input_order": 2031,
+      "component": "w8-actor-virtuals-c-container-run",
+      "object_name": "w8c_container_run.o",
+      "private_object_sha256": "8cccc26dd3bdcd418416d824e1f835f766ffed00f74abb50ae9a2e3ac555121c",
+      "emitted_functions": [
+        {
+          "name": "msg_run__9Container",
+          "compiled_body_bytes": 5032
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-container-run/run.cpp"
+    },
+    {
+      "input_order": 2032,
+      "component": "w8-actor-virtuals-c-push-physics-prop-run",
+      "object_name": "w8c_push_physics_prop_run.o",
+      "private_object_sha256": "ac8f772d333838465dbbb1146a68b555cecf02b33220cfaef31fb1dc7e07dc31",
+      "emitted_functions": [
+        {
+          "name": "msg_run__15PushPhysicsProp",
+          "compiled_body_bytes": 6556
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp"
     }
   ],
   "drafts": [
@@ -30378,7 +30624,57 @@
     "sources/w8-startup-sce-d-special-handler/host_contract.cpp": "d6566ac3e477a4fb489261415520da5e43382b03a175f4beff9654fe388319ee",
     "sources/w8-startup-sce-d-body-check/reloc_check.cpp": "527df79a5950efc200d5d60e37593c568c632ef70cc8d1bce312cdaecc32ed82",
     "sources/w8-startup-sce-d-reset-tty-init/reset_tty_init.cpp": "2a047687aa199b6287742caab4f133bf05f4f4a3c1469a74da68ba6209bc2d6f",
-    "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp": "3d5a2dd076540dcd27ed979937aa0222cc09edd82a85a16c31126314c397a201"
+    "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp": "3d5a2dd076540dcd27ed979937aa0222cc09edd82a85a16c31126314c397a201",
+    "sources/w8-actor-virtuals-c-bytes/bytes.hpp": "4a92921f20f017eb067bbf0bc09f8fd3883ac9b2f73805ce9362e41c386e2031",
+    "sources/w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp": "a42cefd52d2bdaadea728f31c35c0bd5d654eac56c6018c0bafb3e9ee24e2bfd",
+    "sources/w8-actor-virtuals-c-wake-monsters/host_check.cpp": "48355fa06433fa64933fd083166d1d73d2d860b13d9f1246bad83f179efc9bef",
+    "sources/w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp": "26c12186f86af4c8766fd1ed2f2dc1c036e05838296e3979feb4c5e31c3f0fa8",
+    "sources/w8-actor-virtuals-c-sleep-monsters/host_check.cpp": "c35e9a72eacb83aa3fc7c5938e87d8f2972c95aede77723d5f9b113bdf385e16",
+    "sources/w8-actor-virtuals-c-auto-prop-passable/set_passable_state.cpp": "3fa68153308ce8fca8e928d354ab22bd3ea7c5f02e1e0752c422d8b88faa3b0f",
+    "sources/w8-actor-virtuals-c-auto-prop-passable/host_check.cpp": "f3efe93a6b6715805d70e65b6e638e3d31ff05e1ca4d750370f38f210f5372e6",
+    "sources/w8-actor-virtuals-c-auto-prop-set-state/set_state.cpp": "41a0a6a8213fab0a378c0f82061696fc72221fade5d7ae3e97ef8999ca212184",
+    "sources/w8-actor-virtuals-c-auto-prop-set-state/host_check.cpp": "c1a0e648803a935ae2d454c82eb7dc209fbb5d155ff55fdb9aa2dcf0e0664d50",
+    "sources/w8-actor-virtuals-c-auto-prop-trigger/trigger.cpp": "e7ac2e4ff49ee7c394c6d522b2d040bc63266a2a593fb027baf167db2f56ded6",
+    "sources/w8-actor-virtuals-c-auto-prop-trigger/host_check.cpp": "b30a137eb662f0e89975cfb063071f15b4ff7b25d2c2e0f1969d06eeb516223c",
+    "sources/w8-actor-virtuals-c-auto-prop-run/run.cpp": "a122c4c030f6e751e518c6e13233307849dfafeffdf25f2324d3dbd8f76ba068",
+    "sources/w8-actor-virtuals-c-auto-prop-run/host_check.cpp": "6078ac06f3f177b47d1deda48b9eb4b24f8607b5e1542d04e0f2ef707e290821",
+    "sources/w8-actor-virtuals-c-hate-hole-passable/set_passable_state.cpp": "7f3c40ac35bae8f912102f9d15ce6eb2da478da339b07d4446afd253193414f2",
+    "sources/w8-actor-virtuals-c-hate-hole-passable/host_check.cpp": "7002b440941bcbefce5192d2db82d74bbca0d4d978bd8b2e53314a8969fd0491",
+    "sources/w8-actor-virtuals-c-container-save/save.cpp": "b20e03f8ec244564321d8e74aca5c28f8d8124f57af80dc93e0d3da9636c8d80",
+    "sources/w8-actor-virtuals-c-container-save/host_check.cpp": "8894636694f1879f6ec90c6ee625d750666af04d5d32aca994db2f4d22cdf36a",
+    "sources/w8-actor-virtuals-c-hate-into-run/run.cpp": "2db51610a9f6d4d087d5cef57049c06980892063b8d7989a2f3b9827b31851da",
+    "sources/w8-actor-virtuals-c-hate-run-common/hate_run.hpp": "a1bd535e397fbc94eca03ab903204ad89ce51e9b1c04bc7a7025b51df1439505",
+    "sources/w8-actor-virtuals-c-hate-into-run/host_check.cpp": "9bb8c665780e9ee4499da867279bb46222709242f119d4f7ce20eb42accdc012",
+    "sources/w8-actor-virtuals-c-hate-gate-run/run.cpp": "6feafa56d4df6a4221f4e1ad7e961909bec5970ea2f05303bb04e6c1c5e95d18",
+    "sources/w8-actor-virtuals-c-hate-gate-run/host_check.cpp": "5220ddb1eb7e0507955d566c457a0ddcbe54739013e03050f6332b00bbe7aca6",
+    "sources/w8-actor-virtuals-c-push-physics-prop-save/save.cpp": "281c54c9613cd35313f5368eb9e890deeb832182e4ec525f53b22ea15bf7151c",
+    "sources/w8-actor-virtuals-c-push-physics-prop-save/host_check.cpp": "50f57d423daf6e097802c3df705fca5b28467b8aa570c97dad9f1310914b64db",
+    "sources/w8-actor-virtuals-c-trigger-run/run.cpp": "7cf286451d6cced9b1507df831b87133ee84dd1c52ed711429fcbec1e1595c47",
+    "sources/w8-actor-virtuals-c-trigger-run/host_check.cpp": "68bd98ba78cd7edc868dcd3679602ecdc9bc6202a3e9c4ee1672c9da12fd5d12",
+    "sources/w8-actor-virtuals-c-missile-trap-run/run.cpp": "df833bd81b4ef61f56abbec5876dbc67b5c9e07732f5ebe6b869639be50a3850",
+    "sources/w8-actor-virtuals-c-missile-trap-run/host_check.cpp": "9dc371ba6f279887fc91b87fa3fa182d549675be26d4ffabe9a1cbecd5ac3e17",
+    "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp": "95f1e74ceb8399cd793220f6d5e6ef69616f40bf60b0fb716fe9809a70381138",
+    "sources/w8-actor-virtuals-c-fire-bomb-run/host_check.cpp": "355815ae17b705afbb14fa9392541ac3c5f70c2ec6b01e89c60416cdaf71165b",
+    "sources/w8-actor-virtuals-c-shooter-run/run.cpp": "670619c50af39ea252ae34f65277ada57d2f38eff417db7219d533bc25a39ea2",
+    "sources/w8-actor-virtuals-c-shooter-run/host_check.cpp": "4a7934b82169b77c8771a7f65e081ea8ef502021b225ff2c5683e326899af128",
+    "sources/w8-actor-virtuals-c-container-run/run.cpp": "ae06d8184fc19e68ee420fbc38565b4f2ff6e78fd36ce6ce94212c9f9be572c1",
+    "sources/w8-actor-virtuals-c-container-run/host_check.cpp": "772d70d45d5cca8fab2f97835769d8aea1f872bf18de2a8254e844fd0288dab1",
+    "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1",
+    "sources/w8-actor-virtuals-c-push-physics-prop-run/host_check.cpp": "e2fd215c731ca739750ac249c8a996d60ff75581bfa6a5376aad883179325fb9",
+    "sources/w8-actor-virtuals-c-hack-door-passable/set_passable_state.cpp": "bef8417e3b67d649c146f3126adbd2e36261e922278acbe61fc859fa4b290757",
+    "sources/w8-actor-virtuals-c-goth-trap-passable/set_passable_state.cpp": "65e02833f97ccaf9a4da20ebc6e02a8a762b0d081777b9a06dad2d42c938ca94",
+    "sources/w8-actor-virtuals-c-teleporter-set-active-chunks/set_active_chunks.cpp": "c2ee29c8bfb45d428df671c4abcba5f6dc50e55a3add11763f2627bd53f36ca8",
+    "sources/w8-actor-virtuals-c-trigger-save/save.cpp": "d6eb0babdb3ad6b39a10ab994c6e1120cc4c87ce208933f04b033c040cbb8bf8",
+    "sources/w8-actor-virtuals-c-save-activate/save_activate.cpp": "5b93c665d61b7cf9cede5506c390ef6c6b1ec2ae8426a7701aab6096814cb395",
+    "sources/w8-actor-virtuals-c-hate-bridge-passable/set_passable_state.cpp": "beba2bb9a202554e5462c17104791f9b0628a1e3b626f3185726c154c17deb59",
+    "sources/w8-actor-virtuals-c-goth-trap-run/run.cpp": "d98953d34a8591c1c5a24134ff53192a8922845718be497cd0d935abc1f8c557",
+    "sources/w8-actor-virtuals-c-shooter-save/save.cpp": "0fb439ebd88d54429f015a43fd93a57898ef4833f2a525f109a384f60e0c0da4",
+    "sources/w8-actor-virtuals-c-bytes/host_vcall.hpp": "0d4c54f5a1ae435774994e02fcd37618975d140f7d9ed68b80c6c55effaa0653",
+    "sources/w8-actor-virtuals-c-teleporter-set-state/set_state.cpp": "102a106b18544f6ea8766f09c5d4408320d734b956bf3a407ac1e55e8ae98e1f",
+    "sources/w8-actor-virtuals-c-auto-prop-save/save.cpp": "0bc709b07e417fc3d317408eece73e5d635fca8159104f0ed3569d0d769bb2f9",
+    "sources/w8-actor-virtuals-c-missile-trap-trigger/trigger.cpp": "7180a7b63621df2687fe3262a854e1d7b3254a3d24c4efc93cab078b2bae14c2",
+    "sources/w8-actor-virtuals-c-hate-run-common/host_hate_check.hpp": "6a3ed3897e8a90465082a3921f805978bc806a2f6f5d2f28a5ca8c12f50c418d",
+    "sources/w8-actor-virtuals-c-hate-hole-run/run.cpp": "22e13b51cfb992512ab876e1f063a77016cbf77b905de82b46fad8419973b64c"
   },
   "additional_implementations": [
     {
@@ -30820,11 +31116,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2016,
-    "authored_default_inputs": 2014,
+    "selected_inputs": 2033,
+    "authored_default_inputs": 2031,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1579,
-    "compiled_body_bytes_from_accepted_inputs": 673024,
+    "emitted_function_definitions_including_helpers": 1598,
+    "compiled_body_bytes_from_accepted_inputs": 695440,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -30837,7 +31133,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1703
+    "package_selected_inputs": 1720
   },
   "startup_implementations": [
     {
@@ -57339,6 +57635,303 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w8-startup-sce-d-special-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-wake-monsters/wake_monsters.cpp",
+      "source_sha256": "a42cefd52d2bdaadea728f31c35c0bd5d654eac56c6018c0bafb3e9ee24e2bfd",
+      "object_sha256": "a5eca79211976f3ec1388a8251a78e3994e46f7f0974f18edb594e76be745488",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L12wake_monsterEPv",
+          "compiled_body_bytes": 48
+        },
+        {
+          "name": "wakeMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-wake-monsters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-sleep-monsters/sleep_monsters.cpp",
+      "source_sha256": "26c12186f86af4c8766fd1ed2f2dc1c036e05838296e3979feb4c5e31c3f0fa8",
+      "object_sha256": "4dfdfd6ce4b4c6036bd68f0ba14bd81229e886ebb9da5cbcbfa0a5e2093c91bc",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13sleep_monsterEPv",
+          "compiled_body_bytes": 176
+        },
+        {
+          "name": "sleepMonsters__8creaturev",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-sleep-monsters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-passable/set_passable_state.cpp",
+      "source_sha256": "3fa68153308ce8fca8e928d354ab22bd3ea7c5f02e1e0752c422d8b88faa3b0f",
+      "object_sha256": "b7f905bae8c8f53266809d37e097a0994a9eaa2b51162ffc1c09e1a4e89946f6",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8AutoPropb",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-auto-prop-passable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-set-state/set_state.cpp",
+      "source_sha256": "41a0a6a8213fab0a378c0f82061696fc72221fade5d7ae3e97ef8999ca212184",
+      "object_sha256": "edd2190107531794b9e605096d24de8d84b4fe83871481838b95920dd19d86bf",
+      "emitted_functions": [
+        {
+          "name": "setState__8AutoPropi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-auto-prop-set-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-trigger/trigger.cpp",
+      "source_sha256": "e7ac2e4ff49ee7c394c6d522b2d040bc63266a2a593fb027baf167db2f56ded6",
+      "object_sha256": "71c6a9d97fcaf7d9d12e8a5f23e77e5bb3491de7d94d3e070aa94009d6128ea8",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8AutoPropi",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-auto-prop-trigger/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-auto-prop-run/run.cpp",
+      "source_sha256": "a122c4c030f6e751e518c6e13233307849dfafeffdf25f2324d3dbd8f76ba068",
+      "object_sha256": "f807cf2b878dddecf4e6742f9926c86fe1af377ce689ea516ecfb7289f1be9dc",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8AutoProp",
+          "compiled_body_bytes": 1056
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-auto-prop-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-hate-hole-passable/set_passable_state.cpp",
+      "source_sha256": "7f3c40ac35bae8f912102f9d15ce6eb2da478da339b07d4446afd253193414f2",
+      "object_sha256": "cbdceea73374534be1ead84741773f59363d84f5565ce5d25c7ba6b0704a4a1a",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8HateHoleb",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-hate-hole-passable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-container-save/save.cpp",
+      "source_sha256": "b20e03f8ec244564321d8e74aca5c28f8d8124f57af80dc93e0d3da9636c8d80",
+      "object_sha256": "f917dcd03568092706655d0490ad44a9246c1fd6f604ad1bc8a9214a9e6ed130",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9ContainerPc",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-container-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-hate-into-run/run.cpp",
+      "source_sha256": "2db51610a9f6d4d087d5cef57049c06980892063b8d7989a2f3b9827b31851da",
+      "object_sha256": "a82d305e764c0b603245e06d136527acf1467dad82f4e8d1f3fa713122c5805f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateInto",
+          "compiled_body_bytes": 536
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-hate-into-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-hate-gate-run/run.cpp",
+      "source_sha256": "6feafa56d4df6a4221f4e1ad7e961909bec5970ea2f05303bb04e6c1c5e95d18",
+      "object_sha256": "32bc89dfb88e38b2aaee4ae8b18559168224c111845d010cfdcdfaa889e7c31f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8HateGate",
+          "compiled_body_bytes": 536
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-hate-gate-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-save/save.cpp",
+      "source_sha256": "281c54c9613cd35313f5368eb9e890deeb832182e4ec525f53b22ea15bf7151c",
+      "object_sha256": "c347c1822f7132e9bd38d31b368bb3817ae7efd379ea97574e6ed2bbe65d9215",
+      "emitted_functions": [
+        {
+          "name": "msg_save__15PushPhysicsPropPc",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-push-physics-prop-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-trigger-run/run.cpp",
+      "source_sha256": "7cf286451d6cced9b1507df831b87133ee84dd1c52ed711429fcbec1e1595c47",
+      "object_sha256": "04841347a8576bf4ec4f313d9a5986e99b018e88248db6b735a5ce74c3c6e767",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Trigger",
+          "compiled_body_bytes": 1284
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-trigger-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-missile-trap-run/run.cpp",
+      "source_sha256": "df833bd81b4ef61f56abbec5876dbc67b5c9e07732f5ebe6b869639be50a3850",
+      "object_sha256": "239b3d2cca0edfb4345497c981bfbe2ce25aa8f477522115dacdd393bdb756cd",
+      "emitted_functions": [
+        {
+          "name": "msg_run__11MissileTrap",
+          "compiled_body_bytes": 1088
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-missile-trap-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-fire-bomb-run/run.cpp",
+      "source_sha256": "95f1e74ceb8399cd793220f6d5e6ef69616f40bf60b0fb716fe9809a70381138",
+      "object_sha256": "2219a65962cedc3249e0cbb24ce34e89523335109370405fe53a1da613f7c31f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8FireBomb",
+          "compiled_body_bytes": 1160
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-fire-bomb-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-shooter-run/run.cpp",
+      "source_sha256": "670619c50af39ea252ae34f65277ada57d2f38eff417db7219d533bc25a39ea2",
+      "object_sha256": "0293b6a2c9e61c00bc6859f39e4849abac9e3fe26a49a9b1f7bac2bae8df9323",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Shooter",
+          "compiled_body_bytes": 3016
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-shooter-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-container-run/run.cpp",
+      "source_sha256": "ae06d8184fc19e68ee420fbc38565b4f2ff6e78fd36ce6ce94212c9f9be572c1",
+      "object_sha256": "8cccc26dd3bdcd418416d824e1f835f766ffed00f74abb50ae9a2e3ac555121c",
+      "emitted_functions": [
+        {
+          "name": "msg_run__9Container",
+          "compiled_body_bytes": 5032
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-container-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-actor-virtuals-c",
+      "source": "sources/w8-actor-virtuals-c-push-physics-prop-run/run.cpp",
+      "source_sha256": "fb6d6f587757287f4afe4b79e8658df0f26dbb2f16b6804152fe166a05426ac1",
+      "object_sha256": "ac8f772d333838465dbbb1146a68b555cecf02b33220cfaef31fb1dc7e07dc31",
+      "emitted_functions": [
+        {
+          "name": "msg_run__15PushPhysicsProp",
+          "compiled_body_bytes": 6556
+        }
+      ],
+      "host_files": [
+        "sources/w8-actor-virtuals-c-push-physics-prop-run/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

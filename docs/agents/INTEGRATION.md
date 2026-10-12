@@ -3984,6 +3984,63 @@ Opened: `MC_ByteCopy__FPvT0i`, `MC_GetNetGameInfo__FPiT0Pc`,
 `sceSifFreeSysMemory`, `sceSifMUnBindRpc`, `sceSifSetDChain`,
 `sceSifSetDma`, `sceSifStopDma`.
 
+## agents/w8-actor-virtuals-c
+
+Merged (the branch notes carry the five summary sections). Seventeen of the
+29 units were selected with fresh `input_order` values 2014 through 2030 (19
+emitted functions, 22,416 compiled body bytes, not original-byte matches).
+The 17 host checks build and exit 0 here (17 of 17). Twelve units were **not**
+selected because they have no check in the repository: the notes' evidence
+for them is a comparison script that ran the bodies in a private R5900
+interpreter against the executable, which is not committed, so there is no
+test the integrator can run, and the snapshot checker rejects a record with no
+host file. They are `auto-prop-save`, `goth-trap-passable`, `goth-trap-run`,
+`hack-door-passable`, `hate-bridge-passable`, `hate-hole-run`,
+`missile-trap-trigger`, `save-activate`, `shooter-save`,
+`teleporter-set-active-chunks`, `teleporter-set-state` and `trigger-save`;
+their sources stay in the snapshot, unselected. The notes' count of 29
+closed imports therefore does not apply. No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1596
+function bodies, 2031 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1551 |
+| After | 1562 |
+| Closed | 17 |
+| Opened | 28 |
+
+Closed: `msg_run__11MissileTrap`, `msg_run__15PushPhysicsProp`, `msg_run__7Shooter`,
+`msg_run__7Trigger`, `msg_run__8AutoProp`, `msg_run__8FireBomb`,
+`msg_run__8HateGate`, `msg_run__8HateInto`, `msg_run__9Container`,
+`msg_save__15PushPhysicsPropPc`, `msg_save__9ContainerPc`,
+`msg_trigger__8AutoPropi`, `setPassableState__8AutoPropb`,
+`setPassableState__8HateHoleb`, `setState__8AutoPropi`,
+`sleepMonsters__8creaturev`, `wakeMonsters__8creaturev`.
+
+Opened: `__11FireBombletG6Point3sPcT1P6Point3i`, `__13MissileWeaponiP12_modelHeaderP
+8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description`,
+`__4GoldG6Point3i`, `__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii`,
+`bodyAddForce__FP5_bodyP6Point3N31`, `bodyApplyForce__FP5_bodyG6Point3T1f`,
+`bodyApplyImpulse__FP5_bodyG6Point3T1f`,
+`bodyGetVelocity__FP5_bodyP6Point3T1`, `gameDifficultyScale__Fv`,
+`gamePositionVisible__FP6Point3f`, `gameTreasureRamp__Fv`,
+`genericMove__10GameObjectG6Point3P10GameObject`,
+`getProxyMeshId__4itemPQ24item11description`, `initStuff__6PhPropi`,
+`makeExplosion__FG6Point3f`, `makeRandomPotion__4itemPQ24item11description`,
+`matUntransform__FP6Point3P8Matrix33T0`,
+`modelGetNmShadowPoints__FP12_modelHeader`, `modelGetShadowPos__FP12_modelHe
+aderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f`,
+`norrath_anttrap_msg_run_FireParticle_bytes`,
+`norrath_anttrap_msg_run_HateGateParticle_bytes`,
+`norrath_container_msg_run_fuseParticle_bytes`,
+`norrath_container_msg_run_smokeParticle_bytes`,
+`objectRadialDamage__FP10GameObjectG6Point3iffiii`, `soundStopSound__Fi`,
+`worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
+`worldHitscan__FP12_worldHeaderG6Point3T1fi`,
+`worldPerturbWater__FP12_worldHeaderG6Point3ff`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
