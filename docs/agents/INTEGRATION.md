@@ -3880,7 +3880,7 @@ Opened: `AllocTimerCounter`, `InitTLB`, `SetTimerHandler`, `StartTimerCounter`,
 
 Merged (the branch notes carry the five summary sections). Eighteen of the 19
 units were selected with fresh `input_order` values 1942 through 1959 (18
-emitted functions, 3500 compiled body bytes less the unselected unit; not
+emitted functions, 3456 compiled body bytes; not
 original-byte matches). All 18 host checks build and exit 0 here (18 of 18).
 w8-startup-sce-b-k-exit-tlb-handler (`_kExitTLBHandler`, assembly) was **not**
 selected: the notes' only evidence is a private link compared with the
