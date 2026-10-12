@@ -548,6 +548,38 @@ reg('loadDirectory__FP9directoryii', 0x164C70, 'w8-render-world-a-load-directory
     stubs=LOADDIR_STUBS, stub_addr=LOADDIR_ADDR)
 
 
+def scenario_megatile_center(rng):
+    mem = {}
+    t = sym('mt_tiledata')
+    n = rng.choice([0, 1, 3, 8, 32])
+    for i in range(32):
+        rec = [rng.randrange(-20, 20) for _ in range(10)]
+        rec[7], rec[8] = rng.randrange(-8, 8), rng.randrange(-8, 8)
+        rec[4], rec[3] = rng.randrange(-1, 8), rng.randrange(-1, 8)
+        rec[2] = -1 if i == n else rng.choice([0, 1, 5, -2, 127])
+        for k, v in enumerate(rec):
+            mem[t + 10 * i + k] = v & 0xFF
+    res, pt = ARENA, ARENA + 0x100
+    fill(rng, mem, res, 16)
+    x = rng.choice([rng.uniform(-10, 10), float(rng.randrange(-8, 8))]) * 720.0
+    y = rng.choice([rng.uniform(-10, 10), float(rng.randrange(-8, 8))]) * 720.0
+    if n > 0 and rng.random() < 0.5:
+        # land on a rectangle edge of one of the listed records
+        k = rng.randrange(n)
+        sb = lambda a: (mem[t + 10 * k + a] ^ 0x80) - 0x80
+        x = float(rng.choice([sb(7), sb(7) + sb(4)])) * 720.0
+        y = float(rng.choice([sb(8), sb(8) + sb(3)])) * 720.0
+    putf(mem, pt, x)
+    putf(mem, pt + 4, y)
+    return {'mem': mem, 'args': [res, pt], 'compare': list(range(res, res + 16)) + list(range(pt, pt + 8))}
+
+
+reg('getMegatileCenter__FG6Point2', 0x265810, 'w8-render-world-a-get-megatile-center/get_megatile_center.cpp',
+    scenario_megatile_center)
+reg('getMegatileOriginalCenter__FG6Point2', 0x265968,
+    'w8-render-world-a-get-megatile-original-center/get_megatile_original_center.cpp', scenario_megatile_center)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
