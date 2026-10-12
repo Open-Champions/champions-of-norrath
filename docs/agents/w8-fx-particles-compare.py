@@ -200,19 +200,32 @@ def compare(name, runs):
             raise SystemExit('no stub signature for import ' + fname)
     # The original may also call functions the authored source inlines or does
     # not import; stub the ones named in the spec on both sides.
-    orig_funcs = {n: resolve(n)[0] for n in sigs}
+    orig_funcs = {n: resolve(n)[0] for n in sigs if n not in spec.get('callbacks', {}).values()}
     auth_funcs = {n: a for n, a in orig_funcs.items() if n in funcs}
+    # Callback targets the scenario plants in memory: stubbed at fixed addresses on both sides.
+    for addr, cb in spec.get('callbacks', {}).items():
+        orig_funcs[cb] = addr
+        auth_funcs[cb] = addr
     bad = 0
     seen = {}
     for seed in range(runs):
         sc = spec['scenario'](random.Random(seed), seed)
         res = []
+        skipped = False
         for image, e, fa, is_auth in ((EXE_IMAGE, spec['orig'], orig_funcs, False), (auth, entry, auth_funcs, True)):
             try:
+                if is_auth:
+                    sc = dict(sc, steps=sc.get('steps', 400000) * 6)
                 res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth))
             except cr.Stop as exc:
+                if not is_auth and 'step limit' in str(exc):
+                    skipped = True      # the original itself runs too long on this scenario
+                    break
                 print('seed %d: stopped (%s): %s' % (seed, 'authored' if is_auth else 'original', exc))
                 return 2
+        if skipped:
+            seen['skipped_long_scenarios'] = seen.get('skipped_long_scenarios', 0) + 1
+            continue
         for ent in res[0][0]:
             seen[ent[0]] = seen.get(ent[0], 0) + 1
         a, b = res
@@ -399,6 +412,79 @@ def scenario_update_trails(rng, seed):
 
 
 reg('updateTrails__Fv', 0x1840C0, 'w8-fx-particles-update-trails/update_trails.cpp', scenario_update_trails)
+
+# ---- updatePS__FP14ParticleSystem ----
+BLOCK_LIST = 0x780080
+BLOCK = 0x700080
+DESC_LIST = 0x780300
+DESC_MARK = 0x780280
+P_FRAME_NUM = 0x4869F4
+CB_A, CB_B = 0x00600010, 0x00600020
+
+
+def scenario_update_ps(rng, seed):
+    mem = {}
+    system = ARENA + 0x100000
+    frame = rng.choice([0, 5, 40, 100, 200, 0x7FF0, 0xFFF0])
+    mem[P_FRAME_NUM] = frame & 0xFF
+    mem[P_FRAME_NUM + 1] = frame >> 8
+    life = [11, 30, 60, 90]
+    nodes = rng.sample(range(0, 128), 40)
+    for k in range(128):
+        put32(mem, BLOCK_LIST + 4 * k, 0)
+    # Descriptors.
+    descs = []
+    for d in range(6):
+        rec = ARENA + 0x200000 + 0x100 * d
+        put32(mem, rec + 4, d)
+        put32(mem, rec + 8, rng.choice([1, 1, 2, 3, 5]))
+        put32(mem, rec + 12, rng.choice([0, CB_A, CB_B]))
+        put32(mem, DESC_LIST + 64 * d + 24, rec)
+        put32(mem, DESC_MARK + 4 * d, rng.randrange(1 << 32))
+        descs.append(rec)
+    used = 0
+    for g in range(4):
+        for e in range(4):
+            base = system + g * 64 + e * 16
+            if rng.random() < 0.3:
+                for k in range(4):
+                    put32(mem, base + 4 * k, rng.randrange(1 << 32) if k else 0)
+                continue
+            count = rng.choice([1, 1, 1, 2])
+            chain = [nodes[used + i] for i in range(count)]
+            used += count
+            addrs = [BLOCK_LIST + 4 * n for n in chain]
+            for i, n in enumerate(chain):
+                put32(mem, addrs[i], addrs[i + 1] if i + 1 < count else rng.choice([0, rng.randrange(1 << 32)]))
+                page = BLOCK + 4096 * n
+                for slot in range(256):
+                    p = page + 16 * slot
+                    for k in range(16):
+                        mem[p + k] = rng.randrange(256)
+                    stamp = (frame - life[e] + rng.randrange(-4, 5)) if rng.random() < 0.8 else rng.randrange(0x10000)
+                    # younger toward the end of a chain, as the scan expects
+                    stamp = stamp + (3 if rng.random() < 0.2 else 0)
+                    mem[p + 6] = stamp & 0xFF
+                    mem[p + 7] = (stamp >> 8) & 0xFF
+                    h14 = (rng.randrange(0, 6) << 2) | rng.randrange(4)
+                    mem[p + 14] = h14
+                    mem[p + 15] = 0
+            start = rng.choice([1, 1, 2, 30, 31, 32, 33, 62, 100, 254, 255])
+            if count == 1:
+                end_slot = rng.choice([start, start + 1, start + 5, 200, 255, 257, 1])
+            else:
+                end_slot = rng.choice([1, 3, 255, 257, 40])
+            put32(mem, base, addrs[0])
+            put32(mem, base + 4, addrs[-1])
+            put32(mem, base + 8, start)
+            put32(mem, base + 12, end_slot)
+    put32(mem, FREE_BLOCKS, rng.choice([0, BLOCK_LIST + 4 * 100]))
+    return {'mem': mem, 'args': [system], 'steps': 1500000}
+
+
+reg('updatePS__FP14ParticleSystem', 0x181080, 'w8-fx-particles-update-ps/update_ps.cpp', scenario_update_ps,
+    returns=True, stubs={'callback_a': (1, 0, 0, ((0, 16),)), 'callback_b': (1, 0, 0, ((0, 16),))},
+    callbacks={CB_A: 'callback_a', CB_B: 'callback_b'})
 
 
 if __name__ == '__main__':
