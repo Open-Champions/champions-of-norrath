@@ -3187,6 +3187,44 @@ Opened: `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `Pop__6Camera`,
 `unpack__4itemPQ24item11description`, `ustrcat__FPUsPc`,
 `waitingForStreamSpool`.
 
+## agents/save-and-quests
+
+Merged (the branch notes carry the five summary sections). Twenty-two of the
+23 units were selected with fresh `input_order` values 1546 through 1567: 20
+functions (including the file-local `call_slot` helper of `msg_load__8Creature`;
+6012 compiled body bytes, not original-byte matches) and three data words.
+Each has a `host_check.cpp`; all 23 host programs build and exit 0 here.
+save-and-quests-lever-load was **not** selected: the link fails with a
+multiple definition of `msg_load__5LeverPc`, already defined by input 910
+(an earlier package). Its files stay in the source snapshot. Which body should
+own the name is for the authors to decide. No game binary or disassembly
+listing was committed. 1224 function bodies, 1568 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1686 |
+| After | 1679 |
+| Closed | 22 |
+| Opened | 15 |
+
+Closed: `AsciiString2Sjis__FPUcPUs`, `addQuestToLog__FPcT0`, `amx_GetAddr`,
+`amx_GetString`, `dataHandle`, `msg_load__10GameObjectPc`,
+`msg_load__16CosmeticPropAnimPc`, `msg_load__4PropPc`,
+`msg_load__8CreaturePc`, `msg_save__10GameObjectPc`,
+`msg_save__16CosmeticPropAnimPc`, `msg_save__4PropPc`,
+`msg_save__8CreaturePc`, `removeQuestFromLog__FPc`,
+`scriptAddDeferedCall__FPc`, `scriptGetGameState__FPc`,
+`scriptInPostAction`, `scriptSetGameState__FPci`,
+`scriptSetPostAction__FPc`, `scriptStart__FPc`, `stateData`,
+`textHandler__FPUci`.
+
+Opened: `Ascii2Sjis__FUc`, `__tf3Orc`, `amx_Exec`, `amx_FindPublic`, `deferedCall`,
+`inMsg`, `lilog2__Fl`, `msgTimeout`, `nextNmDeferedCalls`,
+`objectAddToSlowRunList__FP10GameObject`, `outMsg`,
+`quatNormalize__FP4Quat`, `quatToMat__FP8Matrix34P4Quat`, `scriptFrame`,
+`waiting`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

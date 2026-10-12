@@ -19827,6 +19827,303 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/inventory-items-views/norrath_inventory_reset_resource_names_view.cpp"
+    },
+    {
+      "input_order": 1548,
+      "component": "save-and-quests-amx-get-addr",
+      "object_name": "amx_get_addr.o",
+      "private_object_sha256": "d023f0541cee9daf2a2329ed9c2509d44ac95e0f2d0770fae6e00dfced6c3ab3",
+      "emitted_functions": [
+        {
+          "name": "amx_GetAddr",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-amx-get-addr/amx_get_addr.cpp"
+    },
+    {
+      "input_order": 1549,
+      "component": "save-and-quests-amx-get-string",
+      "object_name": "amx_get_string.o",
+      "private_object_sha256": "f1b1eda4ccfc5218830bd55555c915fc91ec77c630af9847862fc522fb86e851",
+      "emitted_functions": [
+        {
+          "name": "amx_GetString",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-amx-get-string/amx_get_string.cpp"
+    },
+    {
+      "input_order": 1550,
+      "component": "save-and-quests-set-post-action",
+      "object_name": "set_post_action.o",
+      "private_object_sha256": "aca71fd001d16d7033557de7d40ce61aa03376525e49c5bfa8e26a1a48bd6bf0",
+      "emitted_functions": [
+        {
+          "name": "scriptSetPostAction__FPc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-set-post-action/set_post_action.cpp"
+    },
+    {
+      "input_order": 1551,
+      "component": "save-and-quests-add-defered-call",
+      "object_name": "add_defered_call.o",
+      "private_object_sha256": "2dc40af55de028a6a0567cc1936fcb937074402c63be129116e92dd6b4ab8f04",
+      "emitted_functions": [
+        {
+          "name": "scriptAddDeferedCall__FPc",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-add-defered-call/add_defered_call.cpp"
+    },
+    {
+      "input_order": 1552,
+      "component": "save-and-quests-script-start",
+      "object_name": "script_start.o",
+      "private_object_sha256": "932c7b7eb42fbdcf80fe754a518e4d19e4d78351d0bd849d22712ac8fbff09a4",
+      "emitted_functions": [
+        {
+          "name": "scriptStart__FPc",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-script-start/script_start.cpp"
+    },
+    {
+      "input_order": 1553,
+      "component": "save-and-quests-get-game-state",
+      "object_name": "get_game_state.o",
+      "private_object_sha256": "120b8cb814c3d95c096996c9c307353ad44eec4da572943a3bc05d3d01a43cb1",
+      "emitted_functions": [
+        {
+          "name": "scriptGetGameState__FPc",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-get-game-state/get_game_state.cpp"
+    },
+    {
+      "input_order": 1554,
+      "component": "save-and-quests-set-game-state",
+      "object_name": "set_game_state.o",
+      "private_object_sha256": "6beff9b01a2ea7464a3d5cb46264ffb9a6092f938de710c5122f75ad0232559e",
+      "emitted_functions": [
+        {
+          "name": "scriptSetGameState__FPci",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-set-game-state/set_game_state.cpp"
+    },
+    {
+      "input_order": 1555,
+      "component": "save-and-quests-add-quest",
+      "object_name": "add_quest.o",
+      "private_object_sha256": "b610742b3bc0ab87be984e79d345f36f737c8bd01e95da97e64da87e59dee77a",
+      "emitted_functions": [
+        {
+          "name": "addQuestToLog__FPcT0",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-add-quest/add_quest.cpp"
+    },
+    {
+      "input_order": 1556,
+      "component": "save-and-quests-remove-quest",
+      "object_name": "remove_quest.o",
+      "private_object_sha256": "20dab939fc6596dcd99f7c54b5ef7fadc6b9311baf51513b984a575fc089727e",
+      "emitted_functions": [
+        {
+          "name": "removeQuestFromLog__FPc",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-remove-quest/remove_quest.cpp"
+    },
+    {
+      "input_order": 1557,
+      "component": "save-and-quests-ascii-string-sjis",
+      "object_name": "ascii_string_sjis.o",
+      "private_object_sha256": "de432df192bd7e76a0129bf1a0975b860ca1cef62f11a909505bcbfd203cc90d",
+      "emitted_functions": [
+        {
+          "name": "AsciiString2Sjis__FPUcPUs",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-ascii-string-sjis/ascii_string_sjis.cpp"
+    },
+    {
+      "input_order": 1558,
+      "component": "save-and-quests-text-handler",
+      "object_name": "text_handler.o",
+      "private_object_sha256": "98662075a4db96a338711f27db1f8a10b46a9828e992c01081173e9b780e2a40",
+      "emitted_functions": [
+        {
+          "name": "textHandler__FPUci",
+          "compiled_body_bytes": 436
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-text-handler/text_handler.cpp"
+    },
+    {
+      "input_order": 1559,
+      "component": "save-and-quests-game-object-load",
+      "object_name": "game_object_load.o",
+      "private_object_sha256": "7d55e8ffc0c81a94c5a622959a53f5175152618dfbedf7abbdf855e7ab7724a5",
+      "emitted_functions": [
+        {
+          "name": "msg_load__10GameObjectPc",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-game-object-load/game_object_load.cpp"
+    },
+    {
+      "input_order": 1560,
+      "component": "save-and-quests-game-object-save",
+      "object_name": "game_object_save.o",
+      "private_object_sha256": "a46bc62bd04466b821f5bf94be05bca928c6c902b17719aceb09250e8959b729",
+      "emitted_functions": [
+        {
+          "name": "msg_save__10GameObjectPc",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-game-object-save/game_object_save.cpp"
+    },
+    {
+      "input_order": 1561,
+      "component": "save-and-quests-creature-save",
+      "object_name": "creature_save.o",
+      "private_object_sha256": "240463913e78a1156e40cbddb18540e9c5a4bce43dae67c7f6de53b02446cc3c",
+      "emitted_functions": [
+        {
+          "name": "msg_save__8CreaturePc",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-creature-save/creature_save.cpp"
+    },
+    {
+      "input_order": 1562,
+      "component": "save-and-quests-creature-load",
+      "object_name": "creature_load.o",
+      "private_object_sha256": "843bc6e2732d15c01c4449122e68494db0dc4f59c81d40da407bb75b851b54f7",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9call_slotEPhj",
+          "compiled_body_bytes": 52
+        },
+        {
+          "name": "msg_load__8CreaturePc",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-creature-load/creature_load.cpp"
+    },
+    {
+      "input_order": 1563,
+      "component": "save-and-quests-prop-save",
+      "object_name": "prop_save.o",
+      "private_object_sha256": "dd230017a253f61bb274d0c72855cde09cc45b0398b2ad0a540be53ed22ff144",
+      "emitted_functions": [
+        {
+          "name": "msg_save__4PropPc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-prop-save/prop_save.cpp"
+    },
+    {
+      "input_order": 1564,
+      "component": "save-and-quests-prop-load",
+      "object_name": "prop_load.o",
+      "private_object_sha256": "abcff6c97009527cd2e16e8577227e33c2ea850dc80c0106b346dc6806dd1b2b",
+      "emitted_functions": [
+        {
+          "name": "msg_load__4PropPc",
+          "compiled_body_bytes": 648
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-prop-load/prop_load.cpp"
+    },
+    {
+      "input_order": 1565,
+      "component": "save-and-quests-cosmetic-save",
+      "object_name": "cosmetic_save.o",
+      "private_object_sha256": "e4ff063ce5c7f8b46ac27f4b050587819e859ceee9af1527e86cbc2e73c3a65e",
+      "emitted_functions": [
+        {
+          "name": "msg_save__16CosmeticPropAnimPc",
+          "compiled_body_bytes": 308
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-cosmetic-save/cosmetic_save.cpp"
+    },
+    {
+      "input_order": 1566,
+      "component": "save-and-quests-cosmetic-load",
+      "object_name": "cosmetic_load.o",
+      "private_object_sha256": "906b6d62d3a037f2f5786e5f1786188d2bcaefe6f5f2cc14c504a8028901d25e",
+      "emitted_functions": [
+        {
+          "name": "msg_load__16CosmeticPropAnimPc",
+          "compiled_body_bytes": 652
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-cosmetic-load/cosmetic_load.cpp"
+    },
+    {
+      "input_order": 1567,
+      "component": "save-and-quests-state-data",
+      "object_name": "state_data.o",
+      "private_object_sha256": "035ff3ecf649aa133e637f97982186ac7125e9d4399b9cb5f79d693213cb7369",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-state-data/state_data.cpp"
+    },
+    {
+      "input_order": 1568,
+      "component": "save-and-quests-data-handle",
+      "object_name": "data_handle.o",
+      "private_object_sha256": "b6b4febd421268b5f63f2817dc5cbe72b3620e654d2bb44140da0b050fa8091f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-data-handle/data_handle.cpp"
+    },
+    {
+      "input_order": 1569,
+      "component": "save-and-quests-in-post-action",
+      "object_name": "in_post_action.o",
+      "private_object_sha256": "13519fa1655d57c86f54a5636419a576222f791a5069ccebfd02586ca8b88c6c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/save-and-quests-in-post-action/in_post_action.cpp"
     }
   ],
   "drafts": [
@@ -23359,7 +23656,54 @@
     "sources/inventory-items-views/norrath_inventory_ability_sound_lump_view.cpp": "180849e5b2655235861006fc88222c977c8c74ea80a475fa19a6409fc5a73e0b",
     "sources/inventory-items-views/host/check.cpp": "ffd7c6c5e0024df84d938905e292ccf62b0b002e6e04d72a4a5cd62450165072",
     "sources/inventory-items-views/norrath_inventory_ability_sound_resource_view.cpp": "ada6a7a4162ad0a5bc5afe9cb9e39832133ce19c26acd5cf49d046058c4fe27b",
-    "sources/inventory-items-views/norrath_inventory_reset_resource_names_view.cpp": "b3f2c12f9987b8d91a0e76b4345ede12b1ba2a662697f04de7984e01e1de0ecb"
+    "sources/inventory-items-views/norrath_inventory_reset_resource_names_view.cpp": "b3f2c12f9987b8d91a0e76b4345ede12b1ba2a662697f04de7984e01e1de0ecb",
+    "sources/save-and-quests-amx-get-addr/amx_get_addr.cpp": "89594d4051da58fdefc79f05562bd747f85604f98d09bd3161b2b4111e97b313",
+    "sources/save-and-quests-bytes/bytes.hpp": "dc984940fedd822330789ee092575ce3c60a013dbb68924ed1722ddb382a9c30",
+    "sources/save-and-quests-amx-get-addr/host_check.cpp": "287b4e9bdb037ea8c55cbde11500c93b0f94f31d95bd04db145a3e1ae86e1d32",
+    "sources/save-and-quests-amx-get-string/amx_get_string.cpp": "ee5f475cb38c289e06475af77a59707f3a2d09ffba490e4602a080a83f9b41b9",
+    "sources/save-and-quests-amx-get-string/host_check.cpp": "fc40e845ac18b538343eaea2592167b6047dcc4317b50b320c5fffe4baab6a99",
+    "sources/save-and-quests-set-post-action/set_post_action.cpp": "e8f36a2fad2523f4adde90c0d487d966fd055b2ec7fd08670decab485c983757",
+    "sources/save-and-quests-set-post-action/host_check.cpp": "3c0528f1a0853b60fee716e75c722ed8072cf698f08eeee68c03dbf54764ce56",
+    "sources/save-and-quests-add-defered-call/add_defered_call.cpp": "abd827398e803a5c4fe661a762c093795578444c591c806d69a36fa73a864f06",
+    "sources/save-and-quests-add-defered-call/host_check.cpp": "0a9e2b5e29929e3815f97236ce23e4a6b888a2dd5f089ac533fb0f83908a5085",
+    "sources/save-and-quests-script-start/script_start.cpp": "4fec6a7bafad43a874304c5b973f773b157d60ac8c48ea1a3b8b40218c95e0c1",
+    "sources/save-and-quests-script-start/host_check.cpp": "35cf204da891e502b66dfe5ec5f43aea1839bd34666fdc223f9e150abfcb3895",
+    "sources/save-and-quests-get-game-state/get_game_state.cpp": "1fc1723b2592068cf1ecb10f975360bec581c3e51e83aee0df3b213623667de1",
+    "sources/save-and-quests-get-game-state/host_check.cpp": "d3d8c44f7c0427fae2f6b29d25fbdffe3e815275249a9907336ac9083ee886c6",
+    "sources/save-and-quests-set-game-state/set_game_state.cpp": "abf955b1e052c52b867ef65fb6265aa341d46c3a235c972f1d9f7350ecad5314",
+    "sources/save-and-quests-set-game-state/host_check.cpp": "8825fa50b893628491b31d57253502ff522289440dace8ce861589646653668f",
+    "sources/save-and-quests-add-quest/add_quest.cpp": "039733aabbad82350024006d779fa0421724fa6d54ff39e1533af2ff7314cc7f",
+    "sources/save-and-quests-add-quest/host_check.cpp": "f60484b49fad06a4ab1f6c86ca92c7b19c465c14b49b38e789ad712c13023d8f",
+    "sources/save-and-quests-remove-quest/remove_quest.cpp": "a4e79d765342aae77dfb4832623d5d3829a5adadddb3edb823b62469478e39ef",
+    "sources/save-and-quests-remove-quest/host_check.cpp": "8fb2cb4ceccea30407ecdd4b1fcc83fe8fa42baed13d8bc56d6e0a2119fb2403",
+    "sources/save-and-quests-ascii-string-sjis/ascii_string_sjis.cpp": "eb5fb9c5873312ed948fb7ef3877ddb2e51235f28b7269c0aff4fb496d2dce99",
+    "sources/save-and-quests-ascii-string-sjis/host_check.cpp": "fd728599547471a51b3209f44cf5610b86fc880b1c2cf6ff8f39ce9c08b54d95",
+    "sources/save-and-quests-text-handler/text_handler.cpp": "5ee90f2807c4f38da187bc9d6493460293566530bba768d5869e02809e0c1585",
+    "sources/save-and-quests-text-handler/host_check.cpp": "85d21deecc595e64c9d86f9009f7c590ee19581f0fe17fe1aedac5cc1c7a6a8e",
+    "sources/save-and-quests-game-object-load/game_object_load.cpp": "8c095b9a7542316e73a1eeefdc2c6b724570148e87b764bd18f315adcfdf1e21",
+    "sources/save-and-quests-game-object-load/host_check.cpp": "f6d0c009ea14c006da3635bc8bada0cb9476d5bf7385f745f9fdcd93d3fa50d4",
+    "sources/save-and-quests-game-object-save/game_object_save.cpp": "2c7dc828fbd998c670ce84619b8e7e93fa0366b887690e4ead427f4201517adc",
+    "sources/save-and-quests-game-object-save/host_check.cpp": "82c0fa219177a1c7847dd00103625857776c5c1abdf288308bbbb9f7a315f243",
+    "sources/save-and-quests-creature-save/creature_save.cpp": "01b80406fe4e3a85e2d5b952a2ffed1af02be13896546646d2d8a46b6b5b46b5",
+    "sources/save-and-quests-creature-save/host_check.cpp": "b40169753740c16132254e3ec04662318f0387cdea44d0fcbf5111db5a96d496",
+    "sources/save-and-quests-creature-load/creature_load.cpp": "ba05211077291f65e81686775058f5e617bea64849a214b3dc5d62163b6b78fa",
+    "sources/save-and-quests-creature-load/host_check.cpp": "293fefdc16694e51f11669e70e5248a4e95bfebf890b4e853b2b0091ab14c87f",
+    "sources/save-and-quests-prop-save/prop_save.cpp": "b03b0fc5f7533a8804fcf3b6c3f8a08d8ce6fa41779b5eaef2a9c4f4393c7128",
+    "sources/save-and-quests-prop-save/host_check.cpp": "a9b5214b1d5a8f6a2318adf67a66f95282e3325f6dc9179229e6b9d1c76ad0bc",
+    "sources/save-and-quests-prop-load/prop_load.cpp": "1bd9b016495cbbb06b023a424b06e64ea55235c548771d1076bb1b4d93bc14a1",
+    "sources/save-and-quests-prop-load/host_check.cpp": "506f38b5ae6681adc700a181144cc0a5eb06b9dcaa2fd759103dd7e34fbfb24d",
+    "sources/save-and-quests-cosmetic-save/cosmetic_save.cpp": "40ea1cf182d9d35ca86efd0866741673002b40b12d3abc0d9054a18da95bf745",
+    "sources/save-and-quests-cosmetic-save/host_check.cpp": "1374f88b06d13b425ba1e8fb7d165723a1083f8cd9d4c120a24e550f0e255c4b",
+    "sources/save-and-quests-cosmetic-load/cosmetic_load.cpp": "d22d228ddf39cd6c5f016550126834df439ac367c6be066836425b0b6f31633b",
+    "sources/save-and-quests-cosmetic-load/host_check.cpp": "8c241f4d057d6a6232edb7f4e2c43748f93857b224f693895894bfb1a6855320",
+    "sources/save-and-quests-state-data/state_data.cpp": "3646a3e21270235486b84ee2eba05970975127ee7ed61c973368fcff25294ad6",
+    "sources/save-and-quests-state-data/host_check.cpp": "262c4215a3244cd241f093b60ab181bfa3ff4805c2e1cadfc9b462a3653f6f2d",
+    "sources/save-and-quests-data-handle/data_handle.cpp": "5a58ddb2994dd4c41733f6a896cc8353f28659402e0df71244fd547f0bc7e232",
+    "sources/save-and-quests-data-handle/host_check.cpp": "a898046be80d001dca244c9680c7bb7702d5330ccf417469e7b9baeed370d4b0",
+    "sources/save-and-quests-in-post-action/in_post_action.cpp": "c4f7c7b0f654233bdbcec0e1529535f08a40a1063cc5d48dc78ecff49fd70eb7",
+    "sources/save-and-quests-in-post-action/host_check.cpp": "0bd8c5f304cac2005356c885ac9c806749343ff1f257ed7491dc07d710c4b5c3",
+    "sources/save-and-quests-lever-load/lever_load.cpp": "f92b53782c03e8bf450e7b41c36d751d508193eeb0abe33e55afc7b575aa66f0",
+    "sources/save-and-quests-lever-load/host_check.cpp": "be2fcd3c4e209c3a4e2bfb45c45c4efd77074e6264add58dd1f0a00e6bdb1b5c"
   },
   "additional_implementations": [
     {
@@ -23801,11 +24145,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1548,
-    "authored_default_inputs": 1546,
+    "selected_inputs": 1570,
+    "authored_default_inputs": 1568,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1206,
-    "compiled_body_bytes_from_accepted_inputs": 565456,
+    "emitted_function_definitions_including_helpers": 1226,
+    "compiled_body_bytes_from_accepted_inputs": 571468,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -23818,7 +24162,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1235
+    "package_selected_inputs": 1257
   },
   "startup_implementations": [
     {
@@ -42836,6 +43180,369 @@
       "emitted_functions": [],
       "host_files": [
         "sources/inventory-items-views/host/check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-amx-get-addr/amx_get_addr.cpp",
+      "source_sha256": "89594d4051da58fdefc79f05562bd747f85604f98d09bd3161b2b4111e97b313",
+      "object_sha256": "d023f0541cee9daf2a2329ed9c2509d44ac95e0f2d0770fae6e00dfced6c3ab3",
+      "emitted_functions": [
+        {
+          "name": "amx_GetAddr",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-amx-get-addr/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-amx-get-string/amx_get_string.cpp",
+      "source_sha256": "ee5f475cb38c289e06475af77a59707f3a2d09ffba490e4602a080a83f9b41b9",
+      "object_sha256": "f1b1eda4ccfc5218830bd55555c915fc91ec77c630af9847862fc522fb86e851",
+      "emitted_functions": [
+        {
+          "name": "amx_GetString",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-amx-get-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-set-post-action/set_post_action.cpp",
+      "source_sha256": "e8f36a2fad2523f4adde90c0d487d966fd055b2ec7fd08670decab485c983757",
+      "object_sha256": "aca71fd001d16d7033557de7d40ce61aa03376525e49c5bfa8e26a1a48bd6bf0",
+      "emitted_functions": [
+        {
+          "name": "scriptSetPostAction__FPc",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-set-post-action/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-add-defered-call/add_defered_call.cpp",
+      "source_sha256": "abd827398e803a5c4fe661a762c093795578444c591c806d69a36fa73a864f06",
+      "object_sha256": "2dc40af55de028a6a0567cc1936fcb937074402c63be129116e92dd6b4ab8f04",
+      "emitted_functions": [
+        {
+          "name": "scriptAddDeferedCall__FPc",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-add-defered-call/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-script-start/script_start.cpp",
+      "source_sha256": "4fec6a7bafad43a874304c5b973f773b157d60ac8c48ea1a3b8b40218c95e0c1",
+      "object_sha256": "932c7b7eb42fbdcf80fe754a518e4d19e4d78351d0bd849d22712ac8fbff09a4",
+      "emitted_functions": [
+        {
+          "name": "scriptStart__FPc",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-script-start/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-get-game-state/get_game_state.cpp",
+      "source_sha256": "1fc1723b2592068cf1ecb10f975360bec581c3e51e83aee0df3b213623667de1",
+      "object_sha256": "120b8cb814c3d95c096996c9c307353ad44eec4da572943a3bc05d3d01a43cb1",
+      "emitted_functions": [
+        {
+          "name": "scriptGetGameState__FPc",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-get-game-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-set-game-state/set_game_state.cpp",
+      "source_sha256": "abf955b1e052c52b867ef65fb6265aa341d46c3a235c972f1d9f7350ecad5314",
+      "object_sha256": "6beff9b01a2ea7464a3d5cb46264ffb9a6092f938de710c5122f75ad0232559e",
+      "emitted_functions": [
+        {
+          "name": "scriptSetGameState__FPci",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-set-game-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-add-quest/add_quest.cpp",
+      "source_sha256": "039733aabbad82350024006d779fa0421724fa6d54ff39e1533af2ff7314cc7f",
+      "object_sha256": "b610742b3bc0ab87be984e79d345f36f737c8bd01e95da97e64da87e59dee77a",
+      "emitted_functions": [
+        {
+          "name": "addQuestToLog__FPcT0",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-add-quest/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-remove-quest/remove_quest.cpp",
+      "source_sha256": "a4e79d765342aae77dfb4832623d5d3829a5adadddb3edb823b62469478e39ef",
+      "object_sha256": "20dab939fc6596dcd99f7c54b5ef7fadc6b9311baf51513b984a575fc089727e",
+      "emitted_functions": [
+        {
+          "name": "removeQuestFromLog__FPc",
+          "compiled_body_bytes": 432
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-remove-quest/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-ascii-string-sjis/ascii_string_sjis.cpp",
+      "source_sha256": "eb5fb9c5873312ed948fb7ef3877ddb2e51235f28b7269c0aff4fb496d2dce99",
+      "object_sha256": "de432df192bd7e76a0129bf1a0975b860ca1cef62f11a909505bcbfd203cc90d",
+      "emitted_functions": [
+        {
+          "name": "AsciiString2Sjis__FPUcPUs",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-ascii-string-sjis/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-text-handler/text_handler.cpp",
+      "source_sha256": "5ee90f2807c4f38da187bc9d6493460293566530bba768d5869e02809e0c1585",
+      "object_sha256": "98662075a4db96a338711f27db1f8a10b46a9828e992c01081173e9b780e2a40",
+      "emitted_functions": [
+        {
+          "name": "textHandler__FPUci",
+          "compiled_body_bytes": 436
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-text-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-game-object-load/game_object_load.cpp",
+      "source_sha256": "8c095b9a7542316e73a1eeefdc2c6b724570148e87b764bd18f315adcfdf1e21",
+      "object_sha256": "7d55e8ffc0c81a94c5a622959a53f5175152618dfbedf7abbdf855e7ab7724a5",
+      "emitted_functions": [
+        {
+          "name": "msg_load__10GameObjectPc",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-game-object-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-game-object-save/game_object_save.cpp",
+      "source_sha256": "2c7dc828fbd998c670ce84619b8e7e93fa0366b887690e4ead427f4201517adc",
+      "object_sha256": "a46bc62bd04466b821f5bf94be05bca928c6c902b17719aceb09250e8959b729",
+      "emitted_functions": [
+        {
+          "name": "msg_save__10GameObjectPc",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-game-object-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-creature-save/creature_save.cpp",
+      "source_sha256": "01b80406fe4e3a85e2d5b952a2ffed1af02be13896546646d2d8a46b6b5b46b5",
+      "object_sha256": "240463913e78a1156e40cbddb18540e9c5a4bce43dae67c7f6de53b02446cc3c",
+      "emitted_functions": [
+        {
+          "name": "msg_save__8CreaturePc",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-creature-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-creature-load/creature_load.cpp",
+      "source_sha256": "ba05211077291f65e81686775058f5e617bea64849a214b3dc5d62163b6b78fa",
+      "object_sha256": "843bc6e2732d15c01c4449122e68494db0dc4f59c81d40da407bb75b851b54f7",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9call_slotEPhj",
+          "compiled_body_bytes": 52
+        },
+        {
+          "name": "msg_load__8CreaturePc",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-creature-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-prop-save/prop_save.cpp",
+      "source_sha256": "b03b0fc5f7533a8804fcf3b6c3f8a08d8ce6fa41779b5eaef2a9c4f4393c7128",
+      "object_sha256": "dd230017a253f61bb274d0c72855cde09cc45b0398b2ad0a540be53ed22ff144",
+      "emitted_functions": [
+        {
+          "name": "msg_save__4PropPc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-prop-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-prop-load/prop_load.cpp",
+      "source_sha256": "1bd9b016495cbbb06b023a424b06e64ea55235c548771d1076bb1b4d93bc14a1",
+      "object_sha256": "abcff6c97009527cd2e16e8577227e33c2ea850dc80c0106b346dc6806dd1b2b",
+      "emitted_functions": [
+        {
+          "name": "msg_load__4PropPc",
+          "compiled_body_bytes": 648
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-prop-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-cosmetic-save/cosmetic_save.cpp",
+      "source_sha256": "40ea1cf182d9d35ca86efd0866741673002b40b12d3abc0d9054a18da95bf745",
+      "object_sha256": "e4ff063ce5c7f8b46ac27f4b050587819e859ceee9af1527e86cbc2e73c3a65e",
+      "emitted_functions": [
+        {
+          "name": "msg_save__16CosmeticPropAnimPc",
+          "compiled_body_bytes": 308
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-cosmetic-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-cosmetic-load/cosmetic_load.cpp",
+      "source_sha256": "d22d228ddf39cd6c5f016550126834df439ac367c6be066836425b0b6f31633b",
+      "object_sha256": "906b6d62d3a037f2f5786e5f1786188d2bcaefe6f5f2cc14c504a8028901d25e",
+      "emitted_functions": [
+        {
+          "name": "msg_load__16CosmeticPropAnimPc",
+          "compiled_body_bytes": 652
+        }
+      ],
+      "host_files": [
+        "sources/save-and-quests-cosmetic-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-state-data/state_data.cpp",
+      "source_sha256": "3646a3e21270235486b84ee2eba05970975127ee7ed61c973368fcff25294ad6",
+      "object_sha256": "035ff3ecf649aa133e637f97982186ac7125e9d4399b9cb5f79d693213cb7369",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/save-and-quests-state-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-data-handle/data_handle.cpp",
+      "source_sha256": "5a58ddb2994dd4c41733f6a896cc8353f28659402e0df71244fd547f0bc7e232",
+      "object_sha256": "b6b4febd421268b5f63f2817dc5cbe72b3620e654d2bb44140da0b050fa8091f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/save-and-quests-data-handle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "save-and-quests",
+      "source": "sources/save-and-quests-in-post-action/in_post_action.cpp",
+      "source_sha256": "c4f7c7b0f654233bdbcec0e1529535f08a40a1063cc5d48dc78ecff49fd70eb7",
+      "object_sha256": "13519fa1655d57c86f54a5636419a576222f791a5069ccebfd02586ca8b88c6c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/save-and-quests-in-post-action/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
