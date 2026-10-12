@@ -4,11 +4,10 @@
 // coreInterfaceFlare__Fi(player), then: stores 1 in
 // multiHelpMessageOn[player] (the byte array symbol at 0x00483f38, size 4), stores side in multiSide[player], title in
 // multiTitle[player] and body in multiBody[player] (all 4-byte slots), and
-// stores 0 in the byte 9488 bytes into shopList plus player.
-// Inferred: multiHelpMessageOn is a per-player flag, from its name and the
-// store of 1; the shopList byte is a per-player cleared state, from the store
-// pattern only.
-// Unknown: what shopList + 9488 holds and the units of side.
+// stores 0 in multiRelease[player] (the byte array at 0x00486ae0).
+// Inferred: multiHelpMessageOn and multiRelease are per-player flags, from
+// their names and the stores of 1 and 0.
+// Unknown: what multiRelease means to its readers and the units of side.
 
 extern "C" int netPlayerIsLocal__Fi(int player);
 extern "C" void coreInterfaceFlare__Fi(int player);
@@ -16,7 +15,7 @@ extern "C" unsigned char multiHelpMessageOn[];
 extern "C" int multiSide[];
 extern "C" unsigned short* multiTitle[];
 extern "C" unsigned short* multiBody[];
-extern "C" unsigned char shopList[];
+extern "C" unsigned char multiRelease[];
 
 extern "C" void multiHudAddHelpMessage__FiPUsT1i(int player, unsigned short* title,
                                                  unsigned short* body, int side) {
@@ -26,5 +25,5 @@ extern "C" void multiHudAddHelpMessage__FiPUsT1i(int player, unsigned short* tit
     multiSide[player] = side;
     multiTitle[player] = title;
     multiBody[player] = body;
-    shopList[9488 + player] = 0;
+    multiRelease[player] = 0;
 }
