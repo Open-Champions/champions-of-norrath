@@ -25531,6 +25531,364 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp"
+    },
+    {
+      "input_order": 1989,
+      "component": "w8-startup-sce-d-fs-open",
+      "object_name": "fs_open.o",
+      "private_object_sha256": "2f69760448b7e3c852497854cf5f7b2106999b38f178fb43f3af2a1f0380452a",
+      "emitted_functions": [
+        {
+          "name": "sceOpen",
+          "compiled_body_bytes": 900
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-fs-open/fs_open.cpp"
+    },
+    {
+      "input_order": 1990,
+      "component": "w8-startup-sce-d-fs-read",
+      "object_name": "fs_read.o",
+      "private_object_sha256": "4f93c1794d09c9a73ad429e2797d090565270ea911205b036761d646ec67c876",
+      "emitted_functions": [
+        {
+          "name": "sceRead",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-fs-read/fs_read.cpp"
+    },
+    {
+      "input_order": 1991,
+      "component": "w8-startup-sce-d-libfs-state",
+      "object_name": "libfs_state.o",
+      "private_object_sha256": "c80310aad4a595ae8e3571add0e1c0472713d320078f6ff18a2c8a78d8fb60c2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-libfs-state/libfs_state.cpp"
+    },
+    {
+      "input_order": 1992,
+      "component": "w8-startup-sce-d-libmc-info-state",
+      "object_name": "libmc_info_state.o",
+      "private_object_sha256": "8ea7bb20a87f85e7073ad4d30ab5f73d706aac4452878c1076442b4dbd741d0e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-libmc-info-state/libmc_info_state.cpp"
+    },
+    {
+      "input_order": 1993,
+      "component": "w8-startup-sce-d-libnet-terminate",
+      "object_name": "libnet_terminate.o",
+      "private_object_sha256": "0f549f5ae5b6a7cb655b0afd1ec920c368627d693c8865bdc2b33d264f5d7acb",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetTerminate",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-libnet-terminate/libnet_terminate.cpp"
+    },
+    {
+      "input_order": 1994,
+      "component": "w8-startup-sce-d-mc-end",
+      "object_name": "mc_end.o",
+      "private_object_sha256": "054f6d7e54f0f832adf9f410fe12ba20b18b15d7aed2ccbb2b35f16f62787dcf",
+      "emitted_functions": [
+        {
+          "name": "sceMcEnd",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-mc-end/mc_end.cpp"
+    },
+    {
+      "input_order": 1995,
+      "component": "w8-startup-sce-d-mc-get-info",
+      "object_name": "mc_get_info.o",
+      "private_object_sha256": "9903efdb00c6642a356608b786f013988f0abe367c82c53e98b26fe771b83a35",
+      "emitted_functions": [
+        {
+          "name": "sceMcGetInfo",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-mc-get-info/mc_get_info.cpp"
+    },
+    {
+      "input_order": 1996,
+      "component": "w8-startup-sce-d-mtap-get-mod-version",
+      "object_name": "mtap_get_mod_version.o",
+      "private_object_sha256": "53dbaf4d21cd7f3f6a3a78b4b2795b4f09cc1592f359e1cd85909ce1a7489819",
+      "emitted_functions": [
+        {
+          "name": "sceMtapGetModVersion",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-mtap-get-mod-version/mtap_get_mod_version.cpp"
+    },
+    {
+      "input_order": 1997,
+      "component": "w8-startup-sce-d-pad-end",
+      "object_name": "pad_end.o",
+      "private_object_sha256": "3fbecd9758b8fbf0856e07e270c2adc605a07af4d98f31e43adbfc4759d17db5",
+      "emitted_functions": [
+        {
+          "name": "scePadEnd",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-pad-end/pad_end.cpp"
+    },
+    {
+      "input_order": 1998,
+      "component": "w8-startup-sce-d-pad-get-mod-version",
+      "object_name": "pad_get_mod_version.o",
+      "private_object_sha256": "e88e694b2656ff422e13dfb007b3f4037efa1141415be0c4065f25b9ca150e41",
+      "emitted_functions": [
+        {
+          "name": "scePadGetModVersion",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-pad-get-mod-version/pad_get_mod_version.cpp"
+    },
+    {
+      "input_order": 1999,
+      "component": "w8-startup-sce-d-pad-get-slot-max",
+      "object_name": "pad_get_slot_max.o",
+      "private_object_sha256": "b6fe7f9f98a1a3fb563f1dffa4287b9dcfae8eed88d0f69bcebdadeeb91d7e63",
+      "emitted_functions": [
+        {
+          "name": "scePadGetSlotMax",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-pad-get-slot-max/pad_get_slot_max.cpp"
+    },
+    {
+      "input_order": 2000,
+      "component": "w8-startup-sce-d-pad-init2",
+      "object_name": "pad_init2.o",
+      "private_object_sha256": "5974ad96e4cb9c0ffccaee21691a00358f9847259371a82525617a2503843269",
+      "emitted_functions": [
+        {
+          "name": "scePadInit2",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-pad-init2/pad_init2.cpp"
+    },
+    {
+      "input_order": 2001,
+      "component": "w8-startup-sce-d-scene-transition-ok",
+      "object_name": "scene_transition_ok.o",
+      "private_object_sha256": "938e70f0b5a0b2c9e112f3b9b4ea9a6cafb84a6b4d132efb6b7902cadb1d79ae",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-scene-transition-ok/scene_transition_ok.cpp"
+    },
+    {
+      "input_order": 2002,
+      "component": "w8-startup-sce-d-sd-remote",
+      "object_name": "sd_remote.o",
+      "private_object_sha256": "45d3b0b05a0bcd2522f2759c11fb5ed41b0ecebf84efa637fb8765924fcdd8b9",
+      "emitted_functions": [
+        {
+          "name": "sceSdRemote",
+          "compiled_body_bytes": 1504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sd-remote/sd_remote.cpp"
+    },
+    {
+      "input_order": 2003,
+      "component": "w8-startup-sce-d-serial-putchar",
+      "object_name": "serial_putchar.o",
+      "private_object_sha256": "6f5f1ce19e4b0a82f6bdcbc5f51ce39a85fdfc9102bd4a2d2b258126695cffc4",
+      "emitted_functions": [
+        {
+          "name": "serialPutchar",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-serial-putchar/serial_putchar.cpp"
+    },
+    {
+      "input_order": 2004,
+      "component": "w8-startup-sce-d-set-srs-info",
+      "object_name": "set_srs_info.o",
+      "private_object_sha256": "03d9d49d8109c7e9f735247ccd7dacc2e53b8c2b5d7ff714f3ad235bf3a1cb50",
+      "emitted_functions": [
+        {
+          "name": "setSRSInfo__Fv",
+          "compiled_body_bytes": 572
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-set-srs-info/set_srs_info.cpp"
+    },
+    {
+      "input_order": 2005,
+      "component": "w8-startup-sce-d-sif-add-cmd-handler",
+      "object_name": "sif_add_cmd_handler.o",
+      "private_object_sha256": "83deec3bd81d7215ba789f344b27cae656403df354a384f9bba33688a3e24e43",
+      "emitted_functions": [
+        {
+          "name": "sceSifAddCmdHandler",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-add-cmd-handler/sif_add_cmd_handler.cpp"
+    },
+    {
+      "input_order": 2006,
+      "component": "w8-startup-sce-d-sif-alloc-iop-heap",
+      "object_name": "sif_alloc_iop_heap.o",
+      "private_object_sha256": "26d4b4ef4e1b4dceb665158b7afcb5e05fdd6eb087fccf623070a6a15cc42d41",
+      "emitted_functions": [
+        {
+          "name": "sceSifAllocIopHeap",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-alloc-iop-heap/sif_alloc_iop_heap.cpp"
+    },
+    {
+      "input_order": 2007,
+      "component": "w8-startup-sce-d-sif-exec-notify-handler",
+      "object_name": "sif_exec_notify_handler.o",
+      "private_object_sha256": "fd8f216878f587f52cfa25b6f6e6cc95917b33f81110758e26e28e7d477bab78",
+      "emitted_functions": [
+        {
+          "name": "sceSifExecNotifyHandler",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-exec-notify-handler/sif_exec_notify_handler.cpp"
+    },
+    {
+      "input_order": 2008,
+      "component": "w8-startup-sce-d-sif-exit-rpc",
+      "object_name": "sif_exit_rpc.o",
+      "private_object_sha256": "7aa1c70be7ac8bb18370a66bf25e6c11cd8c04c901067106fc292919c7fca512",
+      "emitted_functions": [
+        {
+          "name": "sceSifExitRpc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-exit-rpc/sif_exit_rpc.cpp"
+    },
+    {
+      "input_order": 2009,
+      "component": "w8-startup-sce-d-sif-free-iop-heap",
+      "object_name": "sif_free_iop_heap.o",
+      "private_object_sha256": "5d1b9b894f130425f5498560896f842f16b3ed70d2a242751b8d1deb6eac0dd9",
+      "emitted_functions": [
+        {
+          "name": "sceSifFreeIopHeap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp"
+    },
+    {
+      "input_order": 2010,
+      "component": "w8-startup-sce-d-sif-get-reg",
+      "object_name": "sif_get_reg.o",
+      "private_object_sha256": "89e4d820b614a6a404c82b3a075c0fbec9960aaf91b00658ad1280608c4c5239",
+      "emitted_functions": [
+        {
+          "name": "sceSifGetReg",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S"
+    },
+    {
+      "input_order": 2011,
+      "component": "w8-startup-sce-d-sif-init-cmd",
+      "object_name": "sif_init_cmd.o",
+      "private_object_sha256": "2ce342b2f7b05ff671c54f8d97b0837c012310ef950e113ff1906372964f2d6d",
+      "emitted_functions": [
+        {
+          "name": "sceSifInitCmd",
+          "compiled_body_bytes": 600
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp"
+    },
+    {
+      "input_order": 2012,
+      "component": "w8-startup-sce-d-sif-reset-iop",
+      "object_name": "sif_reset_iop.o",
+      "private_object_sha256": "5e9f042d62f988f2d67b22f55f8644abf9c89e8da98c90b95e695e2291fc5ba3",
+      "emitted_functions": [
+        {
+          "name": "sceSifResetIop",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp"
+    },
+    {
+      "input_order": 2013,
+      "component": "w8-startup-sce-d-sif-send-cmd",
+      "object_name": "sif_send_cmd.o",
+      "private_object_sha256": "d6f4bcbf44b9883dde5258b01eaefe838963e0823a3cf59e8d7997683692aa62",
+      "emitted_functions": [
+        {
+          "name": "sceSifSendCmd",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp"
+    },
+    {
+      "input_order": 2014,
+      "component": "w8-startup-sce-d-sif-set-reg",
+      "object_name": "sif_set_reg.o",
+      "private_object_sha256": "5ed7f61981afccefad909d8fdc1a7a13436fd3919fcd3687f25202949aab1413",
+      "emitted_functions": [
+        {
+          "name": "sceSifSetReg",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S"
+    },
+    {
+      "input_order": 2015,
+      "component": "w8-startup-sce-d-special-handler",
+      "object_name": "w8d_special_handler.o",
+      "private_object_sha256": "6b0d1986a26a86d67bbf278ba258063a1a41411060b93f9d18a0c06aaf96195e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-special-handler/special_handler.cpp"
     }
   ],
   "drafts": [
@@ -29963,7 +30321,64 @@
     "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
     "sources/w8-startup-sce-c-lg-kbd-close/host_contract.cpp": "9dece063fd646e7543e14fadc7715b19e7f9bbe67999631919760360e3cfe2c4",
     "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c",
-    "sources/w8-startup-sce-c-libnet-initialize/host_contract.cpp": "cdda067b4ef34508a8abd4e45121007fd18a082d1d2f362fdd0c464e1c7df3df"
+    "sources/w8-startup-sce-c-libnet-initialize/host_contract.cpp": "cdda067b4ef34508a8abd4e45121007fd18a082d1d2f362fdd0c464e1c7df3df",
+    "sources/w8-startup-sce-d-fs-open/fs_open.cpp": "6148c93564c37e040e782fa71e5943c625d0cbf511f45f0f7ee1e7bdcb9a6ffe",
+    "sources/w8-startup-sce-d-fs-open/host_contract.cpp": "ad728c367524ad3992b451fc0c40e82239606dc2b1aed8b076dbcb14776706c1",
+    "sources/w8-startup-sce-d-fs-read/fs_read.cpp": "521a65204766f897387f74c350c841c30b782eb5ee9caeec2f8a7f7685d19dc8",
+    "sources/w8-startup-sce-d-fs-read/host_contract.cpp": "b44230984d657623ba2fdae0bd6b182cb1069faacc5c942b48eb3abee7d25379",
+    "sources/w8-startup-sce-d-libfs-state/libfs_state.cpp": "da3b42577fe63dc9f729b4162d3aff8065f58ee9c5567f4835932f24e47b5f3c",
+    "sources/w8-startup-sce-d-libfs-state/host_contract.cpp": "41d65456ef35d71fae65740fb67f7d60e93f84a8c0010cdd87ab16bd3332ac7a",
+    "sources/w8-startup-sce-d-libmc-info-state/libmc_info_state.cpp": "e2c8d3eb7fec16f5366a38991605ac41b229f9a282f8301596da4b7935f7f8eb",
+    "sources/w8-startup-sce-d-libmc-info-state/host_contract.cpp": "ed9f2da61e74c0c634eec9feda5c7babae5f055e38008f3b72e66351f0873b0a",
+    "sources/w8-startup-sce-d-libnet-terminate/libnet_terminate.cpp": "3c3cfc8c45bb664eb77bf047d9fc7cb354fa5ef828593e39022ce5c4bd6e6121",
+    "sources/w8-startup-sce-d-libnet-terminate/host_contract.cpp": "05512a420cdbc72ee825b5c86a404933dd135770e0ded5740cdb4e559601f5c2",
+    "sources/w8-startup-sce-d-mc-end/mc_end.cpp": "e3335305286c3fc861913376bb458be5b12ad41a851fd7def1692f3e390063ab",
+    "sources/w8-startup-sce-d-mc-end/host_contract.cpp": "5ea81a1c352c9d48cce45026baf55ed1e294ccdba557b06f380752f9c60f4020",
+    "sources/w8-startup-sce-d-mc-get-info/mc_get_info.cpp": "cbfc4b7c87a067821202e816a8debc6c8b2e9b44066d5d307785496484be3d8a",
+    "sources/w8-startup-sce-d-mc-get-info/host_contract.cpp": "6c80e6858f747109505be1ca7cc54d08999c3db0ef0b8889feaecc9a5b751d53",
+    "sources/w8-startup-sce-d-mtap-get-mod-version/mtap_get_mod_version.cpp": "3a8069d2e20238f367b98d9b2e3f34ee3dc88e5209b378738cf9eb0c8d4ec5d4",
+    "sources/w8-startup-sce-d-mtap-get-mod-version/host_contract.cpp": "57d3f283274d724a2fa0feafcfdddd2f90b65ef036393eee997696e92bb92280",
+    "sources/w8-startup-sce-d-pad-end/pad_end.cpp": "a532742268bc76691e1dc33f520f87e25e6d06f3e4f57f4df74bcff40ac05e34",
+    "sources/w8-startup-sce-d-pad-end/host_contract.cpp": "37ab62ef5c37741ee5378aa9419cf70f72d0eca65d88271afe1eff19c76fd27b",
+    "sources/w8-startup-sce-d-pad-get-mod-version/pad_get_mod_version.cpp": "422eb2e0f1833b8ce8a2fcbd13666e001854cc78c0aca46dc88f0acb0f42a763",
+    "sources/w8-startup-sce-d-pad-get-mod-version/host_contract.cpp": "9bc1d12127c0f0e479ef4bbae2f53fec2816d2d0fa2465f420d30c6a475ea4de",
+    "sources/w8-startup-sce-d-pad-get-slot-max/pad_get_slot_max.cpp": "c63e09ecf322ce286e63d3e8db5777ab4086ab07fcee68356435e369cf869d9b",
+    "sources/w8-startup-sce-d-pad-get-slot-max/host_contract.cpp": "638afaed598690c2a4654acaf8b2694d3558d75098fbcb702f03197f150ca1e5",
+    "sources/w8-startup-sce-d-pad-init2/pad_init2.cpp": "87565b0a23f263cfb39ffda5f1bf90e4fed3b70d82f0bc90dd38dbb6b5820e02",
+    "sources/w8-startup-sce-d-pad-init2/host_contract.cpp": "32d57b33ac661a96f10c54221d97bae3e0e5c46cfea36e495a3d00a4442fa7d8",
+    "sources/w8-startup-sce-d-scene-transition-ok/scene_transition_ok.cpp": "a3f254bfa898475498b52910426e03a3ebe011365414ee99b34bbc9e939a8de1",
+    "sources/w8-startup-sce-d-scene-transition-ok/host_contract.cpp": "c9f4ed371edfb79eba590fff17ef4a594cfd30550f3018aa2d4b560b36ac4045",
+    "sources/w8-startup-sce-d-sd-remote/sd_remote.cpp": "04d317cf5eb936e535d55fca7a2c5d967a732fc82a36a1d47f9394d58ae72acd",
+    "sources/w8-startup-sce-d-sd-remote/host_contract.cpp": "ea3e46ed16e51e3996073eba40d0604c0c3ff4e917b9c9966dead25fbc10997f",
+    "sources/w8-startup-sce-d-serial-putchar/serial_putchar.cpp": "554877d621dd5942c9e38e2c5e41cf75b017a78243a6c6304dedc792ff643bc1",
+    "sources/w8-startup-sce-d-serial-putchar/host_contract.cpp": "5666ef4acbf8fdf0bcb3f42b98bdde1c63e18ae8c3673087974e0cf85479c54a",
+    "sources/w8-startup-sce-d-set-srs-info/set_srs_info.cpp": "f82f12d67cd1318e558de7ef4b6a6d1b1039e9533896a48c734dde5e547accba",
+    "sources/w8-startup-sce-d-set-srs-info/host_contract.cpp": "0f8b34cc00b0a70cf0b72c5ab611c1bf967153bff6944d7cba92b64e0326285d",
+    "sources/w8-startup-sce-d-sif-add-cmd-handler/sif_add_cmd_handler.cpp": "9554a7eb59a452a765fcb2a9d2795075353fdd179640fece77ac85ca19754341",
+    "sources/w8-startup-sce-d-sif-add-cmd-handler/host_contract.cpp": "4b3163149e04e6495cee8af9dd1ae60ec86040e380b27ec4de7b7e91ac360109",
+    "sources/w8-startup-sce-d-sif-alloc-iop-heap/sif_alloc_iop_heap.cpp": "a4e7545c6d6dbed7613a54caf9b686af8e2baddc7a6268b6c4d0c22142377ff2",
+    "sources/w8-startup-sce-d-sif-alloc-iop-heap/host_contract.cpp": "244afde9bb1bd6314aca0bd7bc626dee53f056b9dc99dda2a257ef257966b732",
+    "sources/w8-startup-sce-d-sif-exec-notify-handler/sif_exec_notify_handler.cpp": "1ccdf85b5545d986db63f2232fbbc576b262ac5fdb87b1c03ec89994763afa5c",
+    "sources/w8-startup-sce-d-sif-exec-notify-handler/host_contract.cpp": "1ab119a86913ca06cff7dd2779b85a3b0bbda08e06292ddd362b576be67978b9",
+    "sources/w8-startup-sce-d-sif-exit-rpc/sif_exit_rpc.cpp": "c320f2f8db60e67fcf1c4b115f0c1530187090401ad98c7d540783fcd714ab76",
+    "sources/w8-startup-sce-d-sif-exit-rpc/host_contract.cpp": "0704e5464a6eb3af114a2ed06d3adc57dcdf1c6d83ed690abebc38450b8069db",
+    "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp": "3ffc0a2be16026cdcee163cbda83d1a8594de411cf16b4d3c2ce1251f91bd66c",
+    "sources/w8-startup-sce-d-sif-free-iop-heap/host_contract.cpp": "49cce95626acd95c195b72ab32ed44d4ae5b84bfb7daf9a59c1f618f632fa0f7",
+    "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S": "24ceae83ab577f3c24029d8258a6811115c04a6348cf0c4f60ca86df8c777d6c",
+    "sources/w8-startup-sce-d-sif-get-reg/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp": "e29386b0ea76fb12c1dc684a2d36f93dd9c6b594de71923d44ddde03708ec356",
+    "sources/w8-startup-sce-d-sif-init-cmd/host_contract.cpp": "57f51ed2c13c35e54a9298c6f40b09121034b0a4572b8813baacc7bafcb173ce",
+    "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp": "a6f9fe35b80cd967e2e8266cd8a48ebf73d0f804553953562f976d36b59cf162",
+    "sources/w8-startup-sce-d-sif-reset-iop/host_contract.cpp": "bc7e1e742d9cda0253e468533eac991ad2bf4a2b3a3acad2a5d51dc89f8441dd",
+    "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
+    "sources/w8-startup-sce-d-sif-send-cmd/host_contract.cpp": "de5e385719eeb5ec2c85661270e1dfe546980237617784cbdeaaf1fd95bbd5e3",
+    "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
+    "sources/w8-startup-sce-d-sif-set-reg/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+    "sources/w8-startup-sce-d-special-handler/host_contract.cpp": "d6566ac3e477a4fb489261415520da5e43382b03a175f4beff9654fe388319ee",
+    "sources/w8-startup-sce-d-body-check/reloc_check.cpp": "527df79a5950efc200d5d60e37593c568c632ef70cc8d1bce312cdaecc32ed82",
+    "sources/w8-startup-sce-d-reset-tty-init/reset_tty_init.cpp": "2a047687aa199b6287742caab4f133bf05f4f4a3c1469a74da68ba6209bc2d6f",
+    "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp": "3d5a2dd076540dcd27ed979937aa0222cc09edd82a85a16c31126314c397a201"
   },
   "additional_implementations": [
     {
@@ -30405,11 +30820,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1989,
-    "authored_default_inputs": 1987,
+    "selected_inputs": 2016,
+    "authored_default_inputs": 2014,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1556,
-    "compiled_body_bytes_from_accepted_inputs": 666444,
+    "emitted_function_definitions_including_helpers": 1579,
+    "compiled_body_bytes_from_accepted_inputs": 673024,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -30422,7 +30837,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1676
+    "package_selected_inputs": 1703
   },
   "startup_implementations": [
     {
@@ -56485,6 +56900,445 @@
       ],
       "host_files": [
         "sources/w8-startup-sce-c-libnet-initialize/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-fs-open/fs_open.cpp",
+      "source_sha256": "6148c93564c37e040e782fa71e5943c625d0cbf511f45f0f7ee1e7bdcb9a6ffe",
+      "object_sha256": "2f69760448b7e3c852497854cf5f7b2106999b38f178fb43f3af2a1f0380452a",
+      "emitted_functions": [
+        {
+          "name": "sceOpen",
+          "compiled_body_bytes": 900
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-fs-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-fs-read/fs_read.cpp",
+      "source_sha256": "521a65204766f897387f74c350c841c30b782eb5ee9caeec2f8a7f7685d19dc8",
+      "object_sha256": "4f93c1794d09c9a73ad429e2797d090565270ea911205b036761d646ec67c876",
+      "emitted_functions": [
+        {
+          "name": "sceRead",
+          "compiled_body_bytes": 836
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-fs-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-libfs-state/libfs_state.cpp",
+      "source_sha256": "da3b42577fe63dc9f729b4162d3aff8065f58ee9c5567f4835932f24e47b5f3c",
+      "object_sha256": "c80310aad4a595ae8e3571add0e1c0472713d320078f6ff18a2c8a78d8fb60c2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-d-libfs-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-libmc-info-state/libmc_info_state.cpp",
+      "source_sha256": "e2c8d3eb7fec16f5366a38991605ac41b229f9a282f8301596da4b7935f7f8eb",
+      "object_sha256": "8ea7bb20a87f85e7073ad4d30ab5f73d706aac4452878c1076442b4dbd741d0e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-d-libmc-info-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-libnet-terminate/libnet_terminate.cpp",
+      "source_sha256": "3c3cfc8c45bb664eb77bf047d9fc7cb354fa5ef828593e39022ce5c4bd6e6121",
+      "object_sha256": "0f549f5ae5b6a7cb655b0afd1ec920c368627d693c8865bdc2b33d264f5d7acb",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetTerminate",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-libnet-terminate/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-mc-end/mc_end.cpp",
+      "source_sha256": "e3335305286c3fc861913376bb458be5b12ad41a851fd7def1692f3e390063ab",
+      "object_sha256": "054f6d7e54f0f832adf9f410fe12ba20b18b15d7aed2ccbb2b35f16f62787dcf",
+      "emitted_functions": [
+        {
+          "name": "sceMcEnd",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-mc-end/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-mc-get-info/mc_get_info.cpp",
+      "source_sha256": "cbfc4b7c87a067821202e816a8debc6c8b2e9b44066d5d307785496484be3d8a",
+      "object_sha256": "9903efdb00c6642a356608b786f013988f0abe367c82c53e98b26fe771b83a35",
+      "emitted_functions": [
+        {
+          "name": "sceMcGetInfo",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-mc-get-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-mtap-get-mod-version/mtap_get_mod_version.cpp",
+      "source_sha256": "3a8069d2e20238f367b98d9b2e3f34ee3dc88e5209b378738cf9eb0c8d4ec5d4",
+      "object_sha256": "53dbaf4d21cd7f3f6a3a78b4b2795b4f09cc1592f359e1cd85909ce1a7489819",
+      "emitted_functions": [
+        {
+          "name": "sceMtapGetModVersion",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-mtap-get-mod-version/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-pad-end/pad_end.cpp",
+      "source_sha256": "a532742268bc76691e1dc33f520f87e25e6d06f3e4f57f4df74bcff40ac05e34",
+      "object_sha256": "3fbecd9758b8fbf0856e07e270c2adc605a07af4d98f31e43adbfc4759d17db5",
+      "emitted_functions": [
+        {
+          "name": "scePadEnd",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-pad-end/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-pad-get-mod-version/pad_get_mod_version.cpp",
+      "source_sha256": "422eb2e0f1833b8ce8a2fcbd13666e001854cc78c0aca46dc88f0acb0f42a763",
+      "object_sha256": "e88e694b2656ff422e13dfb007b3f4037efa1141415be0c4065f25b9ca150e41",
+      "emitted_functions": [
+        {
+          "name": "scePadGetModVersion",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-pad-get-mod-version/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-pad-get-slot-max/pad_get_slot_max.cpp",
+      "source_sha256": "c63e09ecf322ce286e63d3e8db5777ab4086ab07fcee68356435e369cf869d9b",
+      "object_sha256": "b6fe7f9f98a1a3fb563f1dffa4287b9dcfae8eed88d0f69bcebdadeeb91d7e63",
+      "emitted_functions": [
+        {
+          "name": "scePadGetSlotMax",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-pad-get-slot-max/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-pad-init2/pad_init2.cpp",
+      "source_sha256": "87565b0a23f263cfb39ffda5f1bf90e4fed3b70d82f0bc90dd38dbb6b5820e02",
+      "object_sha256": "5974ad96e4cb9c0ffccaee21691a00358f9847259371a82525617a2503843269",
+      "emitted_functions": [
+        {
+          "name": "scePadInit2",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-pad-init2/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-scene-transition-ok/scene_transition_ok.cpp",
+      "source_sha256": "a3f254bfa898475498b52910426e03a3ebe011365414ee99b34bbc9e939a8de1",
+      "object_sha256": "938e70f0b5a0b2c9e112f3b9b4ea9a6cafb84a6b4d132efb6b7902cadb1d79ae",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-d-scene-transition-ok/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sd-remote/sd_remote.cpp",
+      "source_sha256": "04d317cf5eb936e535d55fca7a2c5d967a732fc82a36a1d47f9394d58ae72acd",
+      "object_sha256": "45d3b0b05a0bcd2522f2759c11fb5ed41b0ecebf84efa637fb8765924fcdd8b9",
+      "emitted_functions": [
+        {
+          "name": "sceSdRemote",
+          "compiled_body_bytes": 1504
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sd-remote/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-serial-putchar/serial_putchar.cpp",
+      "source_sha256": "554877d621dd5942c9e38e2c5e41cf75b017a78243a6c6304dedc792ff643bc1",
+      "object_sha256": "6f5f1ce19e4b0a82f6bdcbc5f51ce39a85fdfc9102bd4a2d2b258126695cffc4",
+      "emitted_functions": [
+        {
+          "name": "serialPutchar",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-serial-putchar/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-set-srs-info/set_srs_info.cpp",
+      "source_sha256": "f82f12d67cd1318e558de7ef4b6a6d1b1039e9533896a48c734dde5e547accba",
+      "object_sha256": "03d9d49d8109c7e9f735247ccd7dacc2e53b8c2b5d7ff714f3ad235bf3a1cb50",
+      "emitted_functions": [
+        {
+          "name": "setSRSInfo__Fv",
+          "compiled_body_bytes": 572
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-set-srs-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-add-cmd-handler/sif_add_cmd_handler.cpp",
+      "source_sha256": "9554a7eb59a452a765fcb2a9d2795075353fdd179640fece77ac85ca19754341",
+      "object_sha256": "83deec3bd81d7215ba789f344b27cae656403df354a384f9bba33688a3e24e43",
+      "emitted_functions": [
+        {
+          "name": "sceSifAddCmdHandler",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-add-cmd-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-alloc-iop-heap/sif_alloc_iop_heap.cpp",
+      "source_sha256": "a4e7545c6d6dbed7613a54caf9b686af8e2baddc7a6268b6c4d0c22142377ff2",
+      "object_sha256": "26d4b4ef4e1b4dceb665158b7afcb5e05fdd6eb087fccf623070a6a15cc42d41",
+      "emitted_functions": [
+        {
+          "name": "sceSifAllocIopHeap",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-alloc-iop-heap/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-exec-notify-handler/sif_exec_notify_handler.cpp",
+      "source_sha256": "1ccdf85b5545d986db63f2232fbbc576b262ac5fdb87b1c03ec89994763afa5c",
+      "object_sha256": "fd8f216878f587f52cfa25b6f6e6cc95917b33f81110758e26e28e7d477bab78",
+      "emitted_functions": [
+        {
+          "name": "sceSifExecNotifyHandler",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-exec-notify-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-exit-rpc/sif_exit_rpc.cpp",
+      "source_sha256": "c320f2f8db60e67fcf1c4b115f0c1530187090401ad98c7d540783fcd714ab76",
+      "object_sha256": "7aa1c70be7ac8bb18370a66bf25e6c11cd8c04c901067106fc292919c7fca512",
+      "emitted_functions": [
+        {
+          "name": "sceSifExitRpc",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-exit-rpc/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp",
+      "source_sha256": "3ffc0a2be16026cdcee163cbda83d1a8594de411cf16b4d3c2ce1251f91bd66c",
+      "object_sha256": "5d1b9b894f130425f5498560896f842f16b3ed70d2a242751b8d1deb6eac0dd9",
+      "emitted_functions": [
+        {
+          "name": "sceSifFreeIopHeap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-free-iop-heap/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S",
+      "source_sha256": "24ceae83ab577f3c24029d8258a6811115c04a6348cf0c4f60ca86df8c777d6c",
+      "object_sha256": "89e4d820b614a6a404c82b3a075c0fbec9960aaf91b00658ad1280608c4c5239",
+      "emitted_functions": [
+        {
+          "name": "sceSifGetReg",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-get-reg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp",
+      "source_sha256": "e29386b0ea76fb12c1dc684a2d36f93dd9c6b594de71923d44ddde03708ec356",
+      "object_sha256": "2ce342b2f7b05ff671c54f8d97b0837c012310ef950e113ff1906372964f2d6d",
+      "emitted_functions": [
+        {
+          "name": "sceSifInitCmd",
+          "compiled_body_bytes": 600
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-init-cmd/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp",
+      "source_sha256": "a6f9fe35b80cd967e2e8266cd8a48ebf73d0f804553953562f976d36b59cf162",
+      "object_sha256": "5e9f042d62f988f2d67b22f55f8644abf9c89e8da98c90b95e695e2291fc5ba3",
+      "emitted_functions": [
+        {
+          "name": "sceSifResetIop",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-reset-iop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp",
+      "source_sha256": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
+      "object_sha256": "d6f4bcbf44b9883dde5258b01eaefe838963e0823a3cf59e8d7997683692aa62",
+      "emitted_functions": [
+        {
+          "name": "sceSifSendCmd",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-send-cmd/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S",
+      "source_sha256": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
+      "object_sha256": "5ed7f61981afccefad909d8fdc1a7a13436fd3919fcd3687f25202949aab1413",
+      "emitted_functions": [
+        {
+          "name": "sceSifSetReg",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-set-reg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-startup-sce-d",
+      "source": "sources/w8-startup-sce-d-special-handler/special_handler.cpp",
+      "source_sha256": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+      "object_sha256": "6b0d1986a26a86d67bbf278ba258063a1a41411060b93f9d18a0c06aaf96195e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-startup-sce-d-special-handler/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

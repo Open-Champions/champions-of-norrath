@@ -3942,6 +3942,48 @@ Opened: `CallRpc`, `GLibData`, `MemcpyS`, `_cd`, `_iob`, `_rcv_data_rpc`,
 `_sceFsSigSema`, `_sceFsWaitS`, `_send_data`, `get_iob`, `gsm_create`,
 `gsm_option`, `sceSifMBindRpcParam`.
 
+## agents/w8-startup-sce-d
+
+Merged (the branch notes carry the five summary sections). Twenty-seven of
+the 29 units were selected with fresh `input_order` values 1987 through 2013
+(23 emitted functions, 6580 compiled body bytes
+not original-byte matches). Twenty-five host programs run here; the
+`sif-get-reg` and `sif-set-reg` checks are byte comparers that take the
+private executable as an argument, so those two (like the 14 in
+startup-sce-a) were **not** run by the integrator and only exist as
+references. Two units were **not** selected because they have no committed
+check at all and the snapshot checker rejects a record without a host file:
+w8-startup-sce-d-reset-tty-init (`sceResetttyinit`, `ttyinit`) and
+w8-startup-sce-d-sif-get-sreg (`sceSifGetSreg`); their sources stay in the
+snapshot, unselected. No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1577 function bodies, 2014
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1563 |
+| After | 1551 |
+| Closed | 29 |
+| Opened | 17 |
+
+Closed: `_cd`, `_iob`, `_rcv_data_rpc`, `_send_data`, `sceLibnetTerminate`,
+`sceMcEnd`, `sceMcGetInfo`, `sceMtapGetModVersion`, `sceOpen`, `scePadEnd`,
+`scePadGetModVersion`, `scePadGetSlotMax`, `scePadInit2`, `sceRead`,
+`sceSdRemote`, `sceSifAddCmdHandler`, `sceSifAllocIopHeap`,
+`sceSifExecNotifyHandler`, `sceSifExitRpc`, `sceSifFreeIopHeap`,
+`sceSifGetReg`, `sceSifInitCmd`, `sceSifResetIop`, `sceSifSendCmd`,
+`sceSifSetReg`, `sceneTransitionOK.1041`, `serialPutchar`, `setSRSInfo__Fv`,
+`specialHandler`.
+
+Opened: `MC_ByteCopy__FPvT0i`, `MC_GetNetGameInfo__FPiT0Pc`,
+`MC_GetRamPlayerPtr__Fi`, `MC_GetTempPlayerStorage__Fi`, `_fs_version`,
+`_sceSifSendCmd`, `kputchar`, `mceGetInfoApdx`, `new_iob`,
+`norrath_sce_d_race_strings_view_4293e8`,
+`norrath_sce_d_unknown_sdata_word_view_4852d8`, `sceFsInit`,
+`sceSifFreeSysMemory`, `sceSifMUnBindRpc`, `sceSifSetDChain`,
+`sceSifSetDma`, `sceSifStopDma`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

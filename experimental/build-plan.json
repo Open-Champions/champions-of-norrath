@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1987,
+  "default_authored_inputs": 2014,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2730,7 +2730,34 @@
     "sources/w8-startup-sce-c-inet-get-interface-list/get_interface_list.cpp": "ce86366218a02df34a54f9f7fce6ac88f6ee029d5ac4b02e28bcefe9120e4966",
     "sources/w8-startup-sce-c-lg-codec-open/codec_open.cpp": "07e3486b445d6d087a26ae95b2c75b847a5d151c2e60c2263ad8d96a74df0851",
     "sources/w8-startup-sce-c-lg-kbd-close/kbd_close.cpp": "6c7ceb12f8650159ed8ea1aec37123ebcb50eca022cf4459eb385544253482cc",
-    "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c"
+    "sources/w8-startup-sce-c-libnet-initialize/libnet_initialize.cpp": "5e5943549765cc1cb6f87046bb032c58103853737d80fa262e7f9dc30f076a0c",
+    "sources/w8-startup-sce-d-fs-open/fs_open.cpp": "6148c93564c37e040e782fa71e5943c625d0cbf511f45f0f7ee1e7bdcb9a6ffe",
+    "sources/w8-startup-sce-d-fs-read/fs_read.cpp": "521a65204766f897387f74c350c841c30b782eb5ee9caeec2f8a7f7685d19dc8",
+    "sources/w8-startup-sce-d-libfs-state/libfs_state.cpp": "da3b42577fe63dc9f729b4162d3aff8065f58ee9c5567f4835932f24e47b5f3c",
+    "sources/w8-startup-sce-d-libmc-info-state/libmc_info_state.cpp": "e2c8d3eb7fec16f5366a38991605ac41b229f9a282f8301596da4b7935f7f8eb",
+    "sources/w8-startup-sce-d-libnet-terminate/libnet_terminate.cpp": "3c3cfc8c45bb664eb77bf047d9fc7cb354fa5ef828593e39022ce5c4bd6e6121",
+    "sources/w8-startup-sce-d-mc-end/mc_end.cpp": "e3335305286c3fc861913376bb458be5b12ad41a851fd7def1692f3e390063ab",
+    "sources/w8-startup-sce-d-mc-get-info/mc_get_info.cpp": "cbfc4b7c87a067821202e816a8debc6c8b2e9b44066d5d307785496484be3d8a",
+    "sources/w8-startup-sce-d-mtap-get-mod-version/mtap_get_mod_version.cpp": "3a8069d2e20238f367b98d9b2e3f34ee3dc88e5209b378738cf9eb0c8d4ec5d4",
+    "sources/w8-startup-sce-d-pad-end/pad_end.cpp": "a532742268bc76691e1dc33f520f87e25e6d06f3e4f57f4df74bcff40ac05e34",
+    "sources/w8-startup-sce-d-pad-get-mod-version/pad_get_mod_version.cpp": "422eb2e0f1833b8ce8a2fcbd13666e001854cc78c0aca46dc88f0acb0f42a763",
+    "sources/w8-startup-sce-d-pad-get-slot-max/pad_get_slot_max.cpp": "c63e09ecf322ce286e63d3e8db5777ab4086ab07fcee68356435e369cf869d9b",
+    "sources/w8-startup-sce-d-pad-init2/pad_init2.cpp": "87565b0a23f263cfb39ffda5f1bf90e4fed3b70d82f0bc90dd38dbb6b5820e02",
+    "sources/w8-startup-sce-d-scene-transition-ok/scene_transition_ok.cpp": "a3f254bfa898475498b52910426e03a3ebe011365414ee99b34bbc9e939a8de1",
+    "sources/w8-startup-sce-d-sd-remote/sd_remote.cpp": "04d317cf5eb936e535d55fca7a2c5d967a732fc82a36a1d47f9394d58ae72acd",
+    "sources/w8-startup-sce-d-serial-putchar/serial_putchar.cpp": "554877d621dd5942c9e38e2c5e41cf75b017a78243a6c6304dedc792ff643bc1",
+    "sources/w8-startup-sce-d-set-srs-info/set_srs_info.cpp": "f82f12d67cd1318e558de7ef4b6a6d1b1039e9533896a48c734dde5e547accba",
+    "sources/w8-startup-sce-d-sif-add-cmd-handler/sif_add_cmd_handler.cpp": "9554a7eb59a452a765fcb2a9d2795075353fdd179640fece77ac85ca19754341",
+    "sources/w8-startup-sce-d-sif-alloc-iop-heap/sif_alloc_iop_heap.cpp": "a4e7545c6d6dbed7613a54caf9b686af8e2baddc7a6268b6c4d0c22142377ff2",
+    "sources/w8-startup-sce-d-sif-exec-notify-handler/sif_exec_notify_handler.cpp": "1ccdf85b5545d986db63f2232fbbc576b262ac5fdb87b1c03ec89994763afa5c",
+    "sources/w8-startup-sce-d-sif-exit-rpc/sif_exit_rpc.cpp": "c320f2f8db60e67fcf1c4b115f0c1530187090401ad98c7d540783fcd714ab76",
+    "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp": "3ffc0a2be16026cdcee163cbda83d1a8594de411cf16b4d3c2ce1251f91bd66c",
+    "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S": "24ceae83ab577f3c24029d8258a6811115c04a6348cf0c4f60ca86df8c777d6c",
+    "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp": "e29386b0ea76fb12c1dc684a2d36f93dd9c6b594de71923d44ddde03708ec356",
+    "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp": "a6f9fe35b80cd967e2e8266cd8a48ebf73d0f804553953562f976d36b59cf162",
+    "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
+    "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
+    "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9"
   },
   "inputs": [
     {
@@ -27528,6 +27555,391 @@
           "compiled_body_bytes": 280
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1989,
+      "kind": "independently_authored_source",
+      "object_name": "fs_open.o",
+      "profile": "authored_cpp",
+      "sha256": "6148c93564c37e040e782fa71e5943c625d0cbf511f45f0f7ee1e7bdcb9a6ffe",
+      "source": "sources/w8-startup-sce-d-fs-open/fs_open.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceOpen",
+          "compiled_body_bytes": 900
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1990,
+      "kind": "independently_authored_source",
+      "object_name": "fs_read.o",
+      "profile": "authored_cpp",
+      "sha256": "521a65204766f897387f74c350c841c30b782eb5ee9caeec2f8a7f7685d19dc8",
+      "source": "sources/w8-startup-sce-d-fs-read/fs_read.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceRead",
+          "compiled_body_bytes": 836
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1991,
+      "kind": "independently_authored_source",
+      "object_name": "libfs_state.o",
+      "profile": "authored_cpp",
+      "sha256": "da3b42577fe63dc9f729b4162d3aff8065f58ee9c5567f4835932f24e47b5f3c",
+      "source": "sources/w8-startup-sce-d-libfs-state/libfs_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1992,
+      "kind": "independently_authored_source",
+      "object_name": "libmc_info_state.o",
+      "profile": "authored_cpp",
+      "sha256": "e2c8d3eb7fec16f5366a38991605ac41b229f9a282f8301596da4b7935f7f8eb",
+      "source": "sources/w8-startup-sce-d-libmc-info-state/libmc_info_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 1993,
+      "kind": "independently_authored_source",
+      "object_name": "libnet_terminate.o",
+      "profile": "authored_cpp",
+      "sha256": "3c3cfc8c45bb664eb77bf047d9fc7cb354fa5ef828593e39022ce5c4bd6e6121",
+      "source": "sources/w8-startup-sce-d-libnet-terminate/libnet_terminate.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetTerminate",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1994,
+      "kind": "independently_authored_source",
+      "object_name": "mc_end.o",
+      "profile": "authored_cpp",
+      "sha256": "e3335305286c3fc861913376bb458be5b12ad41a851fd7def1692f3e390063ab",
+      "source": "sources/w8-startup-sce-d-mc-end/mc_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMcEnd",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1995,
+      "kind": "independently_authored_source",
+      "object_name": "mc_get_info.o",
+      "profile": "authored_cpp",
+      "sha256": "cbfc4b7c87a067821202e816a8debc6c8b2e9b44066d5d307785496484be3d8a",
+      "source": "sources/w8-startup-sce-d-mc-get-info/mc_get_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMcGetInfo",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1996,
+      "kind": "independently_authored_source",
+      "object_name": "mtap_get_mod_version.o",
+      "profile": "authored_cpp",
+      "sha256": "3a8069d2e20238f367b98d9b2e3f34ee3dc88e5209b378738cf9eb0c8d4ec5d4",
+      "source": "sources/w8-startup-sce-d-mtap-get-mod-version/mtap_get_mod_version.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMtapGetModVersion",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1997,
+      "kind": "independently_authored_source",
+      "object_name": "pad_end.o",
+      "profile": "authored_cpp",
+      "sha256": "a532742268bc76691e1dc33f520f87e25e6d06f3e4f57f4df74bcff40ac05e34",
+      "source": "sources/w8-startup-sce-d-pad-end/pad_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadEnd",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1998,
+      "kind": "independently_authored_source",
+      "object_name": "pad_get_mod_version.o",
+      "profile": "authored_cpp",
+      "sha256": "422eb2e0f1833b8ce8a2fcbd13666e001854cc78c0aca46dc88f0acb0f42a763",
+      "source": "sources/w8-startup-sce-d-pad-get-mod-version/pad_get_mod_version.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadGetModVersion",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1999,
+      "kind": "independently_authored_source",
+      "object_name": "pad_get_slot_max.o",
+      "profile": "authored_cpp",
+      "sha256": "c63e09ecf322ce286e63d3e8db5777ab4086ab07fcee68356435e369cf869d9b",
+      "source": "sources/w8-startup-sce-d-pad-get-slot-max/pad_get_slot_max.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadGetSlotMax",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2000,
+      "kind": "independently_authored_source",
+      "object_name": "pad_init2.o",
+      "profile": "authored_cpp",
+      "sha256": "87565b0a23f263cfb39ffda5f1bf90e4fed3b70d82f0bc90dd38dbb6b5820e02",
+      "source": "sources/w8-startup-sce-d-pad-init2/pad_init2.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadInit2",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2001,
+      "kind": "independently_authored_source",
+      "object_name": "scene_transition_ok.o",
+      "profile": "authored_cpp",
+      "sha256": "a3f254bfa898475498b52910426e03a3ebe011365414ee99b34bbc9e939a8de1",
+      "source": "sources/w8-startup-sce-d-scene-transition-ok/scene_transition_ok.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2002,
+      "kind": "independently_authored_source",
+      "object_name": "sd_remote.o",
+      "profile": "authored_cpp",
+      "sha256": "04d317cf5eb936e535d55fca7a2c5d967a732fc82a36a1d47f9394d58ae72acd",
+      "source": "sources/w8-startup-sce-d-sd-remote/sd_remote.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSdRemote",
+          "compiled_body_bytes": 1504
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2003,
+      "kind": "independently_authored_source",
+      "object_name": "serial_putchar.o",
+      "profile": "authored_cpp",
+      "sha256": "554877d621dd5942c9e38e2c5e41cf75b017a78243a6c6304dedc792ff643bc1",
+      "source": "sources/w8-startup-sce-d-serial-putchar/serial_putchar.cpp",
+      "emitted_functions": [
+        {
+          "name": "serialPutchar",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2004,
+      "kind": "independently_authored_source",
+      "object_name": "set_srs_info.o",
+      "profile": "authored_cpp",
+      "sha256": "f82f12d67cd1318e558de7ef4b6a6d1b1039e9533896a48c734dde5e547accba",
+      "source": "sources/w8-startup-sce-d-set-srs-info/set_srs_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "setSRSInfo__Fv",
+          "compiled_body_bytes": 572
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2005,
+      "kind": "independently_authored_source",
+      "object_name": "sif_add_cmd_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "9554a7eb59a452a765fcb2a9d2795075353fdd179640fece77ac85ca19754341",
+      "source": "sources/w8-startup-sce-d-sif-add-cmd-handler/sif_add_cmd_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifAddCmdHandler",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2006,
+      "kind": "independently_authored_source",
+      "object_name": "sif_alloc_iop_heap.o",
+      "profile": "authored_cpp",
+      "sha256": "a4e7545c6d6dbed7613a54caf9b686af8e2baddc7a6268b6c4d0c22142377ff2",
+      "source": "sources/w8-startup-sce-d-sif-alloc-iop-heap/sif_alloc_iop_heap.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifAllocIopHeap",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2007,
+      "kind": "independently_authored_source",
+      "object_name": "sif_exec_notify_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "1ccdf85b5545d986db63f2232fbbc576b262ac5fdb87b1c03ec89994763afa5c",
+      "source": "sources/w8-startup-sce-d-sif-exec-notify-handler/sif_exec_notify_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifExecNotifyHandler",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2008,
+      "kind": "independently_authored_source",
+      "object_name": "sif_exit_rpc.o",
+      "profile": "authored_cpp",
+      "sha256": "c320f2f8db60e67fcf1c4b115f0c1530187090401ad98c7d540783fcd714ab76",
+      "source": "sources/w8-startup-sce-d-sif-exit-rpc/sif_exit_rpc.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifExitRpc",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2009,
+      "kind": "independently_authored_source",
+      "object_name": "sif_free_iop_heap.o",
+      "profile": "authored_cpp",
+      "sha256": "3ffc0a2be16026cdcee163cbda83d1a8594de411cf16b4d3c2ce1251f91bd66c",
+      "source": "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifFreeIopHeap",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2010,
+      "kind": "independently_authored_source",
+      "object_name": "sif_get_reg.o",
+      "profile": "authored_entry_asm",
+      "sha256": "24ceae83ab577f3c24029d8258a6811115c04a6348cf0c4f60ca86df8c777d6c",
+      "source": "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S",
+      "emitted_functions": [
+        {
+          "name": "sceSifGetReg",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2011,
+      "kind": "independently_authored_source",
+      "object_name": "sif_init_cmd.o",
+      "profile": "authored_cpp",
+      "sha256": "e29386b0ea76fb12c1dc684a2d36f93dd9c6b594de71923d44ddde03708ec356",
+      "source": "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifInitCmd",
+          "compiled_body_bytes": 600
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2012,
+      "kind": "independently_authored_source",
+      "object_name": "sif_reset_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "a6f9fe35b80cd967e2e8266cd8a48ebf73d0f804553953562f976d36b59cf162",
+      "source": "sources/w8-startup-sce-d-sif-reset-iop/sif_reset_iop.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifResetIop",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2013,
+      "kind": "independently_authored_source",
+      "object_name": "sif_send_cmd.o",
+      "profile": "authored_cpp",
+      "sha256": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
+      "source": "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifSendCmd",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2014,
+      "kind": "independently_authored_source",
+      "object_name": "sif_set_reg.o",
+      "profile": "authored_entry_asm",
+      "sha256": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
+      "source": "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S",
+      "emitted_functions": [
+        {
+          "name": "sceSifSetReg",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2015,
+      "kind": "independently_authored_source",
+      "object_name": "w8d_special_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+      "source": "sources/w8-startup-sce-d-special-handler/special_handler.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -27627,7 +28039,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "108055209543de1bcb612cfa919c26622f7d874ade363233c72274e34c8be774",
+  "snapshot_sha256": "29c2363aa762291ace8f0612b8e4dcdbbf190a04c141344d512583ca1eecb22e",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
