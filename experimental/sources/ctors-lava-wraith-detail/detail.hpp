@@ -126,6 +126,16 @@ extern unsigned char norrath_ctors_lava_wraith_view_485828[];
 extern unsigned char norrath_ctors_lava_wraith_view_472060[];
 extern unsigned char norrath_ctors_lava_wraith_view_472040[];
 unsigned norrath_construct_NPC(void* object, const void* point, short type, char** arguments);
+// Original init__10StaticFire at 0x28df70. Not defined here.
+void norrath_static_fire_init(void* object);
+extern unsigned char norrath_ctors_lava_wraith_view_449310[];
+extern unsigned char norrath_ctors_lava_wraith_view_486118[];
+extern unsigned char norrath_ctors_lava_wraith_view_4778c8[];
+extern unsigned char norrath_ctors_lava_wraith_view_4778d8[];
+extern unsigned char norrath_ctors_lava_wraith_view_486120[];
+extern unsigned char norrath_ctors_lava_wraith_view_486128[];
+extern unsigned char norrath_ctors_lava_wraith_view_486130[];
+unsigned norrath_construct_StaticFire(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
