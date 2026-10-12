@@ -2402,6 +2402,74 @@ Opened: `animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
 bodies, 1407 authored inputs, zero COMMON. 214 tool tests passed. Object
 hashes in the snapshot come from the fresh build. No EE or game execution.
 
+## agents/actor-view-tables second pass
+
+Merged. The branch notes carry the evidence, closed and opened lists,
+build-plan hashes, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. The integrator's earlier
+`docs/agents/actor-view-tables.md` collided with the worker's on merge; both
+are kept, the worker's text first and the integrator's selection notes under
+their own heading at the end. Nineteen new data views (virtual tables, tag
+strings, resource maps and the slow-run-list heads), each with a host file
+under `actor-view-tables-views/host/` that returns failure on a wrong size or
+nonzero byte; all 25 host files (six from the first pass) pass on this
+machine. They are data objects; no function was added, and the checks are
+size and zero-fill checks only. No game binary or disassembly listing was
+committed.
+
+Nineteen units were selected with fresh `input_order` values 1409 through
+1427, component `actor-view-tables-views`. The six first-pass units were
+already selected and were not appended again. The four routine-pointer
+tables each name sized functions by assembler label, so closing the names
+opens new function imports; the worker did not measure the link and the
+real net count goes up.
+
+The notes settle half of a "Needs a decision" item: `norrath_actor_view_50bfd0`
+is the 240-byte `slowRunList` object at `0x4fbfd0` (the import name carries a
+sign-extension misread of `lui 0x50 / addiu 0xbfd0`), which contradicts the
+`object-infra` note that it is not that list. `object-infra` still defines
+`norrath_object_slow_run_list_view` for the same original object, so the link
+now has two definitions of one object under two names. They are different
+symbols and no duplicate definition arises; which name should survive is still
+open.
+
+| | |
+|---|---|
+| Before | 1195 |
+| After | 1221 |
+| Closed | 19 |
+| Opened | 45 |
+
+Closed: `norrath_actor_view_50bfd0`, `norrath_actors_a_view_449790`,
+`norrath_actors_a_view_4498b0`, `norrath_actors_a_view_4499d8`,
+`norrath_actors_a_view_44a930`, `norrath_actors_a_view_44a9c0`,
+`norrath_actors_a_view_44c830`, `norrath_actors_a_view_44f1f8`,
+`norrath_actors_a_view_44f2a0`, `norrath_actors_a_view_470830`,
+`norrath_actors_a_view_471310`, `norrath_actors_a_view_477758`,
+`norrath_actors_a_view_481980`, `norrath_actors_a_view_483e5c`,
+`norrath_actors_a_view_485360`, `norrath_actors_a_view_485400`,
+`norrath_actors_a_view_485408`, `norrath_actors_a_view_4860b8`,
+`norrath_actors_a_view_4860c0`.
+
+Opened (all function labels from the virtual tables): `_$_10DoorSecret`,
+`_$_11FloorSwitch`, `_$_6Candle`, `_$_7AntTrap`, `_$_7Blocker`,
+`_$_7Candle2`, `_$_7EggSack`, `_$_9DoorSwing`, `__tf10DoorSecret`,
+`__tf11FloorSwitch`, `__tf6Candle`, `__tf7AntTrap`, `__tf7Blocker`,
+`__tf7Candle2`, `__tf7EggSack`, `__tf9DoorSwing`, `clone__10DoorSecret`,
+`clone__11FloorSwitch`, `clone__6Candle`, `clone__7Blocker`,
+`clone__7Candle2`, `clone__9DoorSwing`, `msg_draw__10AutoPropLP`,
+`msg_draw__6Candle`, `msg_draw__7Candle2`, `msg_getPokeName__10DoorSecretPUsi`,
+`msg_getPokeName__9DoorSwingPUsi`, `msg_load__10DoorSecretPc`,
+`msg_load__11FloorSwitchPc`, `msg_load__9DoorSwingPc`,
+`msg_poke__10DoorSecreti`, `msg_poke__9DoorSwingi`, `msg_presave__9DoorSwing`,
+`msg_run__10AutoPropLP`, `msg_run__10DoorSecret`, `msg_run__11FloorSwitch`,
+`msg_run__6Candle`, `msg_run__7AntTrap`, `msg_run__7Candle2`,
+`msg_run__9DoorSwing`, `msg_save__10DoorSecretPc`, `msg_save__11FloorSwitchPc`,
+`msg_save__9DoorSwingPc`, `msg_trigger__10DoorSecreti`,
+`msg_trigger__9DoorSwingi`. 1107 function bodies, 1426 authored inputs, zero
+COMMON. 214 tool tests passed. Object hashes in the snapshot come from the
+fresh build. No EE or game execution.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
