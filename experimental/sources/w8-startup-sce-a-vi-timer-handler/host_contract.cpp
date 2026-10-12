@@ -4,6 +4,8 @@
 #include <cstdio>
 #include <cstring>
 
+unsigned long long norrath_vi_timer_system_time;
+int norrath_vi_timer_mode;
 static char log_text[16];
 static unsigned stored_address, stored_value;
 static unsigned long long time_at_store;

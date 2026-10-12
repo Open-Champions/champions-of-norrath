@@ -4,7 +4,7 @@
  * read before that addition, is stored to the 32-bit location 0x10000010 (the
  * same location Init__7VITimer writes 1473 to). Then a sync and an ei
  * instruction run and the result is 0. What the location 0x10000010 is, and
- * why the time advances by 2, are unknown. Compiled output is not claimed to
+ * why the time advances by 2, are unknown. Both words are defined by vi-launcher-timer-init and imported here. Compiled output is not claimed to
  * match the original.
  */
 #if defined(NORRATH_HOST_CONTRACT)
@@ -24,8 +24,8 @@ extern "C" void norrath_host_ei();
 #endif
 
 extern "C" {
-unsigned long long norrath_vi_timer_system_time __asm__("_7VITimer$SystemTime");
-int norrath_vi_timer_mode __asm__("_7VITimer$TimerMode");
+extern unsigned long long norrath_vi_timer_system_time __asm__("_7VITimer$SystemTime");
+extern int norrath_vi_timer_mode __asm__("_7VITimer$TimerMode");
 
 int Handler__7VITimeri(int) {
     const int mode = norrath_vi_timer_mode;
