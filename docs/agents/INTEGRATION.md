@@ -4241,3 +4241,4 @@ and no startup stage has executed.
 - 2026-10-12 15:09 CDT — `agents/w8-spell-static-init-b (rejected, not merged; log notes only)` — 1593 unresolved imports
 - 2026-10-12 15:12 CDT — `agents/w8-startup-sce-a` — 1586 unresolved imports
 - 2026-10-12 15:15 CDT — `agents/w8-startup-sce-b` — 1580 unresolved imports
+- 2026-10-12 15:17 CDT — `agents/w8-startup-sce-c` — 1563 unresolved imports
