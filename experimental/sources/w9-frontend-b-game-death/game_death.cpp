@@ -2,9 +2,10 @@
 // switches on the signed byte deathState:
 //   0: calls hudFadeScreen__Fi(4); only when it returns exactly 128 does it add
 //      1 to deathState (read and stored as an unsigned byte).
-//   1: if the byte deathNetHack is nonzero it stores 1 in engineDisplayDisable
-//      (a word) and in netNetworkMode (a byte); then it calls MC_LoadRamSlot__Fv
-//      and adds 1 to deathState.
+//   1: stores 1 in engineDisplayDisable (a word; the store sits in a branch
+//      delay slot so it happens whether or not the next test passes); if the
+//      byte deathNetHack is nonzero it also stores 1 in netNetworkMode (a
+//      byte); then it calls MC_LoadRamSlot__Fv and adds 1 to deathState.
 //   2: if the first byte of levelName is zero, it fills a local 64-byte buffer
 //      with gameGetFullLevelName__FPc, compares it with MC_GetLoadName__Fv()
 //      using strcmp, and on equality calls engineRemoveTask__FPFv_v with this
@@ -34,10 +35,8 @@ extern "C" void gameDeath__Fv() {
             static_cast<unsigned char>(deathState) + 1);
         break;
     case 1:
-        if (deathNetHack != 0) {
-            engineDisplayDisable = 1;
-            netNetworkMode = 1;
-        }
+        engineDisplayDisable = 1;
+        if (deathNetHack != 0) netNetworkMode = 1;
         MC_LoadRamSlot__Fv();
         deathState = static_cast<signed char>(static_cast<unsigned char>(deathState) + 1);
         break;

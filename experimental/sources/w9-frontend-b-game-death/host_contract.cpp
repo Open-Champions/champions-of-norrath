@@ -29,7 +29,7 @@ int main() {
     if (deathState != 1) return 2;
     deathNetHack = 0;
     gameDeath__Fv();
-    if (deathState != 2 || loads != 1 || engineDisplayDisable != 0 || netNetworkMode != 0) return 3;
+    if (deathState != 2 || loads != 1 || engineDisplayDisable != 1 || netNetworkMode != 0) return 3;
     deathState = 1; deathNetHack = 1;
     gameDeath__Fv();
     if (engineDisplayDisable != 1 || netNetworkMode != 1 || deathState != 2 || loads != 2) return 4;
