@@ -24,7 +24,6 @@ extern unsigned char norrath_actors_a_view_485358[];
 extern unsigned char norrath_factory_world_pointer_word[];
 extern unsigned char norrath_ctors_lava_wraith_view_449820[];
 void norrath_light_add(void* light);
-extern unsigned char norrath_ctors_lava_wraith_view_481970[];
 extern unsigned char norrath_ctors_lava_wraith_view_44ab70[];
 unsigned norrath_construct_Torch(void* object, const void* point, char** arguments, int kind);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);

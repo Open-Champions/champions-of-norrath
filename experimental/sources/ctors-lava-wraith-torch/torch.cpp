@@ -2,7 +2,7 @@
 // __5TorchG6Point3PPci at 0x22f590, 368 bytes.
 // GameObject receives a point snapshot, a null resource map, and the argument
 // list. View 0x44ab70 goes to +72. A light record is filled in place at +76:
-// 240.0f, the float word at 0x481970 and 1.0f in two position/direction
+// 240.0f, the literal-pool float 0x3791a2b3 (about 1.736e-5) and 1.0f in two position/direction
 // triples (+104..+119), halves 200/150/50 at +86 and +94, zero halves at +92
 // and +100, and zero bytes at +84 and +85 before lightAdd receives +76. The
 // point snapshot is also copied to +124. The int is stored as a byte at +138;
@@ -15,7 +15,7 @@ extern "C" unsigned norrath_construct_Torch(void* object, const void* point, cha
     const PointBytes local = snapshot_point(point);
     (void)norrath_game_object_construct(object, &local, nullptr, arguments);
     const Address a = address(object);
-    const unsigned third = read_word(address(norrath_ctors_lava_wraith_view_481970));
+    const unsigned third = 0x3791a2b3u;
     const unsigned bright = float_bits(240.0f);
     const unsigned one = float_bits(1.0f);
     write_word(a + 72u, address_bits(norrath_ctors_lava_wraith_view_44ab70));
