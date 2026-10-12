@@ -2319,6 +2319,14 @@ different `vik` than `keyboardFree__Fv` frees. The package owner should make
 the three edits listed in `docs/agents/iop-module-boot.md`; they were not
 made here because they change game code.
 
+The `engine-restore-srs-main` host contract has the same harness flaw that
+kept `agents/frontend-shell` out: `reset()` clears `error`, and `main` returns
+`error` only after the first two scenarios and at the end. A failure in the
+scenarios at lines 249 to 273 of `host_contract.cpp` is erased by the next
+`reset()`. This was found by the integrator after that package had merged; it
+is a harness defect, not a source defect, and was not edited here. The owner
+should keep the first failing code across resets.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
