@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2108,
+  "default_authored_inputs": 2138,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2853,7 +2853,37 @@
     "sources/w8-camera-vehicle-b-vehicle-msg-get-poke-name/msg_get_poke_name.cpp": "eb87d3ea1c10591eee4d631060b0e683187eda4bcf6ae62315423f0aee683562",
     "sources/w8-camera-vehicle-b-vehicle-msg-poke/msg_poke.cpp": "ec4f93e804449f8bad748d12450b553c68eec6a1432e0ee84228abc43a1a25b2",
     "sources/w8-camera-vehicle-b-vehicle-msg-run/msg_run.cpp": "0bf0256d49a90ff0ea2882608d69bc94a4935c7639b058132b5f5ca1938d5b53",
-    "sources/w8-camera-vehicle-b-vehicle-refresh-settings/refresh_settings.cpp": "e60b144ee9bdc9348228bb1115a2e1fa7aabd2530523c13840d2c01a8a7aee72"
+    "sources/w8-camera-vehicle-b-vehicle-refresh-settings/refresh_settings.cpp": "e60b144ee9bdc9348228bb1115a2e1fa7aabd2530523c13840d2c01a8a7aee72",
+    "sources/w8-core-loop-e-cat-switch-to-run/switch_to_run.cpp": "f8259179c802008c4ddd5419fc15df3677a296230217b2473aa2012780f20e3d",
+    "sources/w8-core-loop-e-data-retval/retval.cpp": "53247057efa0679f830868055336d2a6e9e8f86216eb658744a6abd3a46e0aa5",
+    "sources/w8-core-loop-e-data-sent-end-msg/sent_end_msg.cpp": "639f1cc55b8fa86c7d60e0e0b5ff4d020e34a6aca6c88c2ce033164945943256",
+    "sources/w8-core-loop-e-data-stack-15/stack_15.cpp": "3881afcf5cd1d466a0d3ceda898b56bc92946c6443d319bee14588290cdac4a3",
+    "sources/w8-core-loop-e-data-start-entrance-name/start_entrance_name.cpp": "0ebeed7997281286a6e5a1490d6a5436b148c90fdee9c38e83f049d8d610b55b",
+    "sources/w8-core-loop-e-data-status-ptr/status_ptr.cpp": "7e4f4ed694f748d82ef209365287574dab68e5539389cdf4b680777ef3ad52ac",
+    "sources/w8-core-loop-e-data-super-gamestate-init/super_gamestate_init.cpp": "0975709ac43ad35de3374013e61f65308a0bead2d76d23501cf386d6b325470d",
+    "sources/w8-core-loop-e-data-swooping/swooping.cpp": "2842d14ef488f574d9c550d6fafc30970e9aa7506d42e61d5e156b20aceb8500",
+    "sources/w8-core-loop-e-data-tripple-buffer-mode/tripple_buffer_mode.cpp": "350e68bda58b77bf4a53c13d3e346ae1894419a5f472192d96d756fe76983206",
+    "sources/w8-core-loop-e-data-wait-for-sound/wait_for_sound.cpp": "7137e2265894932a8d22a7ec659e11385ff349076b41c21adcf8330debf0d58c",
+    "sources/w8-core-loop-e-data-world-difficulty/world_difficulty.cpp": "fdded875b7f97ad59db91ab2a999e62c9137112c70895ef3e6bd02184c10a938",
+    "sources/w8-core-loop-e-run-ambient/run_ambient.cpp": "174b1559eaba2ebbb5d3e443babe9d7bc6849a3296043fa1952fe729b154d8b9",
+    "sources/w8-core-loop-e-run-animation/run_animation.cpp": "a7487b943bc552b8982cfd0aa7d772ed036e2edcfa3be5cee8e3554690d95ba1",
+    "sources/w8-core-loop-e-run-music/run_music.cpp": "e9aa95b68c68442e409e20716b72ce482a0565da6705ea3444b7d7fdb62b8512",
+    "sources/w8-core-loop-e-run-music-ducking/run_music_ducking.cpp": "429f2d0f03ac007416c5e070c91002732eada706fe85da9bffe8e5a92a80709f",
+    "sources/w8-core-loop-e-run-screaming/run_screaming.cpp": "c4dde6b8143d50dd8e2cfb23e5234723401c213191d1761a39bf891a54c476bb",
+    "sources/w8-core-loop-e-run-sequences/run_sequences.cpp": "31e7c9ef7ae38ef9b9eb75d2923d9fb866c9c3d5b60112b275c0ae7cab319d1d",
+    "sources/w8-core-loop-e-script-activate-post-action/script_activate_post_action.cpp": "d850fc6e1aba0f43f5a4bad309fdea412f3594cc9017533633c0c399d3c88964",
+    "sources/w8-core-loop-e-script-clear/script_clear.cpp": "0942953b6ef4373986d129c1ec4c2cff7b45c8574e1931125756c71b43604af7",
+    "sources/w8-core-loop-e-script-clear-all-game-state/script_clear_all_game_state.cpp": "933e09597b1e2df9d9f1ea98b0f49b4bbed07d808dc1f98b9bcab06f1a6bcddd",
+    "sources/w8-core-loop-e-script-run/script_run.cpp": "1c09d05118d8241369a75d791cd0fe7454aa726a22daf28c1acd6899f1b4a9da",
+    "sources/w8-core-loop-e-script-set-script/script_set_script.cpp": "4ad713ace1edb21665b940112e933d60cbcf7ee0a7d36e8d62971ae195d79f26",
+    "sources/w8-core-loop-e-script-super-clear/script_super_clear.cpp": "6d8d17a6e557584849a490193d19c9a5e6410f5dd91dc2df52a3a2cca1ee5bae",
+    "sources/w8-core-loop-e-script-task/script_task.cpp": "a4971d19a18267068a36b2476c76bf119a8f89633b3f0841b30f7b86041ca5c2",
+    "sources/w8-core-loop-e-set-extra-params/set_extra_params.cpp": "e65ee8a705c20c2036a06539e3d7860a22c2051f39c14cc7600e19d734bb5cab",
+    "sources/w8-core-loop-e-setup-main/setup_main.cpp": "a45afd7e682eaac972b291b1954b8523b17e7fe01b40347fd7be56c4a7d048b2",
+    "sources/w8-core-loop-e-show-coords/show_coords.cpp": "eeeb6fd404f16c4ed7df7e6243d147684f37ab9e9b5054b8f8f32064aa39a047",
+    "sources/w8-core-loop-e-start-new-world/start_new_world.cpp": "961cd9768142a6427757128a161676eaaa6b477e1114cb8912bacbbe5c0a47de",
+    "sources/w8-core-loop-e-station-main/station_main.cpp": "63242cbb42aaaf0eed1c658df83d66d2b6a20dbf1674ac1199721b344166d29a",
+    "sources/w8-core-loop-e-sub-draw-loop/sub_draw_loop.cpp": "e478c7c35736b04f77a94e7f783d91784f8192c65e5e7fedaf14f8640e9e9e49"
   },
   "inputs": [
     {
@@ -29490,6 +29520,406 @@
           "compiled_body_bytes": 204
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2110,
+      "kind": "independently_authored_source",
+      "object_name": "switch_to_run.o",
+      "profile": "authored_cpp",
+      "sha256": "f8259179c802008c4ddd5419fc15df3677a296230217b2473aa2012780f20e3d",
+      "source": "sources/w8-core-loop-e-cat-switch-to-run/switch_to_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "switchToRun__3Cat",
+          "compiled_body_bytes": 348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2111,
+      "kind": "independently_authored_source",
+      "object_name": "retval.o",
+      "profile": "authored_cpp",
+      "sha256": "53247057efa0679f830868055336d2a6e9e8f86216eb658744a6abd3a46e0aa5",
+      "source": "sources/w8-core-loop-e-data-retval/retval.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2112,
+      "kind": "independently_authored_source",
+      "object_name": "sent_end_msg.o",
+      "profile": "authored_cpp",
+      "sha256": "639f1cc55b8fa86c7d60e0e0b5ff4d020e34a6aca6c88c2ce033164945943256",
+      "source": "sources/w8-core-loop-e-data-sent-end-msg/sent_end_msg.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2113,
+      "kind": "independently_authored_source",
+      "object_name": "stack_15.o",
+      "profile": "authored_cpp",
+      "sha256": "3881afcf5cd1d466a0d3ceda898b56bc92946c6443d319bee14588290cdac4a3",
+      "source": "sources/w8-core-loop-e-data-stack-15/stack_15.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2114,
+      "kind": "independently_authored_source",
+      "object_name": "start_entrance_name.o",
+      "profile": "authored_cpp",
+      "sha256": "0ebeed7997281286a6e5a1490d6a5436b148c90fdee9c38e83f049d8d610b55b",
+      "source": "sources/w8-core-loop-e-data-start-entrance-name/start_entrance_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2115,
+      "kind": "independently_authored_source",
+      "object_name": "status_ptr.o",
+      "profile": "authored_cpp",
+      "sha256": "7e4f4ed694f748d82ef209365287574dab68e5539389cdf4b680777ef3ad52ac",
+      "source": "sources/w8-core-loop-e-data-status-ptr/status_ptr.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2116,
+      "kind": "independently_authored_source",
+      "object_name": "super_gamestate_init.o",
+      "profile": "authored_cpp",
+      "sha256": "0975709ac43ad35de3374013e61f65308a0bead2d76d23501cf386d6b325470d",
+      "source": "sources/w8-core-loop-e-data-super-gamestate-init/super_gamestate_init.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2117,
+      "kind": "independently_authored_source",
+      "object_name": "swooping.o",
+      "profile": "authored_cpp",
+      "sha256": "2842d14ef488f574d9c550d6fafc30970e9aa7506d42e61d5e156b20aceb8500",
+      "source": "sources/w8-core-loop-e-data-swooping/swooping.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2118,
+      "kind": "independently_authored_source",
+      "object_name": "tripple_buffer_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "350e68bda58b77bf4a53c13d3e346ae1894419a5f472192d96d756fe76983206",
+      "source": "sources/w8-core-loop-e-data-tripple-buffer-mode/tripple_buffer_mode.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2119,
+      "kind": "independently_authored_source",
+      "object_name": "wait_for_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "7137e2265894932a8d22a7ec659e11385ff349076b41c21adcf8330debf0d58c",
+      "source": "sources/w8-core-loop-e-data-wait-for-sound/wait_for_sound.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2120,
+      "kind": "independently_authored_source",
+      "object_name": "world_difficulty.o",
+      "profile": "authored_cpp",
+      "sha256": "fdded875b7f97ad59db91ab2a999e62c9137112c70895ef3e6bd02184c10a938",
+      "source": "sources/w8-core-loop-e-data-world-difficulty/world_difficulty.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2121,
+      "kind": "independently_authored_source",
+      "object_name": "run_ambient.o",
+      "profile": "authored_cpp",
+      "sha256": "174b1559eaba2ebbb5d3e443babe9d7bc6849a3296043fa1952fe729b154d8b9",
+      "source": "sources/w8-core-loop-e-run-ambient/run_ambient.cpp",
+      "emitted_functions": [
+        {
+          "name": "runAmbient__Fv",
+          "compiled_body_bytes": 1532
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2122,
+      "kind": "independently_authored_source",
+      "object_name": "run_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "a7487b943bc552b8982cfd0aa7d772ed036e2edcfa3be5cee8e3554690d95ba1",
+      "source": "sources/w8-core-loop-e-run-animation/run_animation.cpp",
+      "emitted_functions": [
+        {
+          "name": "runAnimation__Fv",
+          "compiled_body_bytes": 412
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2123,
+      "kind": "independently_authored_source",
+      "object_name": "run_music.o",
+      "profile": "authored_cpp",
+      "sha256": "e9aa95b68c68442e409e20716b72ce482a0565da6705ea3444b7d7fdb62b8512",
+      "source": "sources/w8-core-loop-e-run-music/run_music.cpp",
+      "emitted_functions": [
+        {
+          "name": "runMusic__Fv",
+          "compiled_body_bytes": 4180
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2124,
+      "kind": "independently_authored_source",
+      "object_name": "run_music_ducking.o",
+      "profile": "authored_cpp",
+      "sha256": "429f2d0f03ac007416c5e070c91002732eada706fe85da9bffe8e5a92a80709f",
+      "source": "sources/w8-core-loop-e-run-music-ducking/run_music_ducking.cpp",
+      "emitted_functions": [
+        {
+          "name": "runMusicDucking__Fv",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2125,
+      "kind": "independently_authored_source",
+      "object_name": "run_screaming.o",
+      "profile": "authored_cpp",
+      "sha256": "c4dde6b8143d50dd8e2cfb23e5234723401c213191d1761a39bf891a54c476bb",
+      "source": "sources/w8-core-loop-e-run-screaming/run_screaming.cpp",
+      "emitted_functions": [
+        {
+          "name": "runScreaming__Fv",
+          "compiled_body_bytes": 1732
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2126,
+      "kind": "independently_authored_source",
+      "object_name": "run_sequences.o",
+      "profile": "authored_cpp",
+      "sha256": "31e7c9ef7ae38ef9b9eb75d2923d9fb866c9c3d5b60112b275c0ae7cab319d1d",
+      "source": "sources/w8-core-loop-e-run-sequences/run_sequences.cpp",
+      "emitted_functions": [
+        {
+          "name": "runSequences__Fv",
+          "compiled_body_bytes": 724
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2127,
+      "kind": "independently_authored_source",
+      "object_name": "script_activate_post_action.o",
+      "profile": "authored_cpp",
+      "sha256": "d850fc6e1aba0f43f5a4bad309fdea412f3594cc9017533633c0c399d3c88964",
+      "source": "sources/w8-core-loop-e-script-activate-post-action/script_activate_post_action.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptActivatePostAction__Fv",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2128,
+      "kind": "independently_authored_source",
+      "object_name": "script_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "0942953b6ef4373986d129c1ec4c2cff7b45c8574e1931125756c71b43604af7",
+      "source": "sources/w8-core-loop-e-script-clear/script_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptClear__Fv",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2129,
+      "kind": "independently_authored_source",
+      "object_name": "script_clear_all_game_state.o",
+      "profile": "authored_cpp",
+      "sha256": "933e09597b1e2df9d9f1ea98b0f49b4bbed07d808dc1f98b9bcab06f1a6bcddd",
+      "source": "sources/w8-core-loop-e-script-clear-all-game-state/script_clear_all_game_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptClearAllGameState__Fv",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2130,
+      "kind": "independently_authored_source",
+      "object_name": "script_run.o",
+      "profile": "authored_cpp",
+      "sha256": "1c09d05118d8241369a75d791cd0fe7454aa726a22daf28c1acd6899f1b4a9da",
+      "source": "sources/w8-core-loop-e-script-run/script_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptRun__Fv",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2131,
+      "kind": "independently_authored_source",
+      "object_name": "script_set_script.o",
+      "profile": "authored_cpp",
+      "sha256": "4ad713ace1edb21665b940112e933d60cbcf7ee0a7d36e8d62971ae195d79f26",
+      "source": "sources/w8-core-loop-e-script-set-script/script_set_script.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptSetScript__FPv",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2132,
+      "kind": "independently_authored_source",
+      "object_name": "script_super_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "6d8d17a6e557584849a490193d19c9a5e6410f5dd91dc2df52a3a2cca1ee5bae",
+      "source": "sources/w8-core-loop-e-script-super-clear/script_super_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptSuperClear__Fv",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2133,
+      "kind": "independently_authored_source",
+      "object_name": "script_task.o",
+      "profile": "authored_cpp",
+      "sha256": "a4971d19a18267068a36b2476c76bf119a8f89633b3f0841b30f7b86041ca5c2",
+      "source": "sources/w8-core-loop-e-script-task/script_task.cpp",
+      "emitted_functions": [
+        {
+          "name": "scriptTask__Fv",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2134,
+      "kind": "independently_authored_source",
+      "object_name": "set_extra_params.o",
+      "profile": "authored_cpp",
+      "sha256": "e65ee8a705c20c2036a06539e3d7860a22c2051f39c14cc7600e19d734bb5cab",
+      "source": "sources/w8-core-loop-e-set-extra-params/set_extra_params.cpp",
+      "emitted_functions": [
+        {
+          "name": "setExtraParams__FP8CreaturePc",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2135,
+      "kind": "independently_authored_source",
+      "object_name": "setup_main.o",
+      "profile": "authored_cpp",
+      "sha256": "a45afd7e682eaac972b291b1954b8523b17e7fe01b40347fd7be56c4a7d048b2",
+      "source": "sources/w8-core-loop-e-setup-main/setup_main.cpp",
+      "emitted_functions": [
+        {
+          "name": "setup_main__Fv",
+          "compiled_body_bytes": 712
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2136,
+      "kind": "independently_authored_source",
+      "object_name": "show_coords.o",
+      "profile": "authored_cpp",
+      "sha256": "eeeb6fd404f16c4ed7df7e6243d147684f37ab9e9b5054b8f8f32064aa39a047",
+      "source": "sources/w8-core-loop-e-show-coords/show_coords.cpp",
+      "emitted_functions": [
+        {
+          "name": "showCoords__Fv",
+          "compiled_body_bytes": 752
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2137,
+      "kind": "independently_authored_source",
+      "object_name": "start_new_world.o",
+      "profile": "authored_cpp",
+      "sha256": "961cd9768142a6427757128a161676eaaa6b477e1114cb8912bacbbe5c0a47de",
+      "source": "sources/w8-core-loop-e-start-new-world/start_new_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "startNewWorld__Fv",
+          "compiled_body_bytes": 1384
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2138,
+      "kind": "independently_authored_source",
+      "object_name": "station_main.o",
+      "profile": "authored_cpp",
+      "sha256": "63242cbb42aaaf0eed1c658df83d66d2b6a20dbf1674ac1199721b344166d29a",
+      "source": "sources/w8-core-loop-e-station-main/station_main.cpp",
+      "emitted_functions": [
+        {
+          "name": "station_main__FiPCcPcT2T1T1i",
+          "compiled_body_bytes": 464
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2139,
+      "kind": "independently_authored_source",
+      "object_name": "sub_draw_loop.o",
+      "profile": "authored_cpp",
+      "sha256": "e478c7c35736b04f77a94e7f783d91784f8192c65e5e7fedaf14f8640e9e9e49",
+      "source": "sources/w8-core-loop-e-sub-draw-loop/sub_draw_loop.cpp",
+      "emitted_functions": [
+        {
+          "name": "subDrawLoop__FPFv_i",
+          "compiled_body_bytes": 424
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -29589,7 +30019,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "799d777af4d4932b8b0cb9b79244712171321b22c93a47a0e6917ec1c998f73a",
+  "snapshot_sha256": "8eb17d56b6ca2658905bfc9413619e0913286576bbd70032fc407eb8e9104132",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

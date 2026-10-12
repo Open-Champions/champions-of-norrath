@@ -4163,6 +4163,54 @@ Opened: `addPassenger__7Vehiclei`, `backup__7Vehicle`,
 `objectIsOffGrid__FP10GameObject`, `soundChangeSequenceVolume__Fif`,
 `soundMakePersistant__Fi`, `startForces__7Vehicle`.
 
+## agents/w8-core-loop-e
+
+Merged (the branch notes carry the five summary sections). Thirty units
+with fresh `input_order` values 2108 through 2137: 20 emitted functions
+(14,164 compiled body bytes, not original-byte matches) and data words. All
+30 host checks build and exit 0 here (30 of 30). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1693 function bodies, 2138 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1541 |
+| After | 1560 |
+| Closed | 30 |
+| Opened | 49 |
+
+Closed: `retval`, `runAmbient__Fv`, `runAnimation__Fv`, `runMusicDucking__Fv`,
+`runMusic__Fv`, `runScreaming__Fv`, `runSequences__Fv`,
+`scriptActivatePostAction__Fv`, `scriptClearAllGameState__Fv`,
+`scriptClear__Fv`, `scriptRun__Fv`, `scriptSetScript__FPv`,
+`scriptSuperClear__Fv`, `scriptTask__Fv`, `sentEndMsg`,
+`setExtraParams__FP8CreaturePc`, `setup_main__Fv`, `showCoords__Fv`,
+`stack.15`, `startEntranceName`, `startNewWorld__Fv`,
+`station_main__FiPCcPcT2T1T1i`, `statusPtr`, `subDrawLoop__FPFv_i`,
+`superGamestateInit`, `switchToRun__3Cat`, `swooping`, `trippleBufferMode`,
+`waitForSound`, `worldDifficulty`.
+
+Opened: `Free__7VISetup`, `Free__9VIStation`, `Init__7VISetupi`,
+`Init__9VIStationiPCcPcT3T2T2i`, `MC_CheckPlayerImportOrChange__Fv`,
+`MC_SetActByLevelName__FPc`, `Process__7VISetup`, `Process__9VIStation`,
+`RestartConnect__7VISetup`, `RunPatcher__7VISetup`, `_$_7VISetup`,
+`_$_9VIStation`, `__6PlayerG6Point3sii`, `__7VISetup`, `__9VIStation`,
+`__builtin_new`, `ambientGroup`,
+`animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi`,
+`animFindComponentWithFlags__FP14AnimationStatei`,
+`animGetVolumeScale__Fii`, `cdCheckForFileInCurrentLayer__FPc`,
+`cdLoadAsyncIOP__FPciT0ii`, `currActivityScore`, `currScorePos`,
+`dialogLumpName`, `gameLoadWorld__FPc`,
+`getMegatileOriginalPosition__FG6Point3`, `gotPlayerStartThisLevel`,
+`initEzNetCnf`, `lastMusicState`, `megatileRot`, `megatileSeed`,
+`nmAmbientGroups`, `nmDeferedCalls`, `norrath_music_activity_ring_view`,
+`numEnvironments`, `playerSelectionEnforce__Fv`, `playerStartYaw`,
+`recallPos`, `runStreamQueing__Fv`, `sceSifMExitRpc`, `soundAllFlags__Fi`,
+`soundDisable__Ff`, `soundGetGlobalDialogDir__Fv`,
+`soundStartDialogStream__Fiii`, `startScorePos`, `timeLastTransition`,
+`unet_shutdown__Fv`, `worldFindHeight__FP12_worldHeaderG6Point3f`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
