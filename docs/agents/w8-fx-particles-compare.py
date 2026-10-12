@@ -101,16 +101,17 @@ def build_authored(rel, work, extra_flags=()):
     funcs = {}
     for line in subprocess.check_output([P + 'nm', '-u', obj], text=True).splitlines():
         name = line.split()[-1]
-        if name not in syms:
+        target = ALIASES.get(name, name)
+        if target not in syms:
             raise SystemExit('authored import with no original address: ' + name)
-        defsyms[name] = syms[name][0]
-        funcs[name] = syms[name][1] in 'Tt'
+        defsyms[name] = syms[target][0]
+        funcs[name] = syms[target][1] in 'Tt'
     out = os.path.join(work, base + '.elf')
     cmd = [P + 'ld', '-m', 'elf32lr5900', '-Ttext=%#x' % AUTH_BASE, '--no-warn-mismatch']
     cmd += ['--defsym=%s=%#x' % kv for kv in defsyms.items()]
     cmd += ['-o', out, obj]
     subprocess.check_call(cmd)
-    return out, {n: syms[n][0] for n, is_fn in funcs.items() if is_fn}
+    return out, {n: defsyms[n] for n, is_fn in funcs.items() if is_fn}
 
 
 def symbol_address(elf, name):
@@ -121,16 +122,34 @@ def symbol_address(elf, name):
     raise SystemExit('missing symbol ' + name)
 
 
+# Authored names that stand for an original function under another symbol.
+ALIASES = {
+    'norrath_game_object_construct': '__10GameObjectG6Point3PQ210GameObject11resourceMapPPc',
+    'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
+}
+
+
+def resolve(name):
+    return exe_symbols()[ALIASES.get(name, name)]
+
+
 def make_stub(name, sig, rng, log, answers):
-    """Logging stub. sig = (int_args, float_args, stack_words)."""
-    n_int, n_float, n_stack = sig
+    """Logging stub. sig = (int_args, float_args, stack_words[, peeks]).
+
+    peeks is a tuple of (argument register index, byte count): the bytes the
+    register points at are logged too."""
+    n_int, n_float, n_stack = sig[:3]
+    peeks = sig[3] if len(sig) > 3 else ()
 
     def handler(m):
-        ints = [m.g32(4 + i) for i in range(min(n_int, 8))]
+        def norm(v):
+            return 'stack' if stack_region(v) else v
+        ints = [norm(m.g32(4 + i)) for i in range(min(n_int, 8))]
         floats = [m.f[12 + i] for i in range(n_float)]
         sp = m.g32(29)
-        stack = [m.u32(sp + 8 * i) for i in range(n_stack)]
-        log.append((name, tuple(ints), tuple(floats), tuple(stack)))
+        stack = [norm(m.u32(sp + 8 * i)) for i in range(n_stack)]
+        seen = tuple(bytes(m.u8(m.g32(4 + r) + k) for k in range(n)) for r, n in peeks)
+        log.append((name, tuple(ints), tuple(floats), tuple(stack), seen))
         ret = answers.get(name)
         value = ret(rng) if callable(ret) else rng.randrange(1 << 32)
         m.setr32(2, value)
@@ -176,7 +195,7 @@ def compare(name, runs):
             raise SystemExit('no stub signature for import ' + fname)
     # The original may also call functions the authored source inlines or does
     # not import; stub the ones named in the spec on both sides.
-    orig_funcs = {n: exe_symbols()[n][0] for n in sigs}
+    orig_funcs = {n: resolve(n)[0] for n in sigs}
     auth_funcs = {n: a for n, a in orig_funcs.items() if n in funcs}
     bad = 0
     seen = {}
@@ -305,6 +324,38 @@ def scenario_push_scene_lights(rng, seed):
 reg('lightPushSceneLights__FG6Point3iiiiiiiii', 0x13CCC8,
     'w8-fx-particles-light-push-scene-lights/light_push_scene_lights.cpp', scenario_push_scene_lights,
     stubs={'transformSceneLightTask__Fv': (0, 0, 0), 'lightResetOptionalParams__Fv': (0, 0, 0)})
+
+# ---- __eq__19ParticleEmitterDataRC19ParticleEmitterData ----
+def scenario_emitter_eq(rng, seed):
+    mem = {}
+    left, right = ARENA, ARENA + 0x100
+    for k in range(20):
+        v = rng.randrange(256)
+        mem[left + k] = v
+        mem[right + k] = v
+    for _ in range(rng.choice([0, 0, 1, 1, 2])):
+        mem[right + rng.randrange(20)] ^= 1 << rng.randrange(8)
+    return {'mem': mem, 'args': [left, right]}
+
+
+reg('__eq__19ParticleEmitterDataRC19ParticleEmitterData', 0x186A70,
+    'w8-fx-particles-emitter-data-eq/emitter_data_eq.cpp', scenario_emitter_eq, returns=True)
+
+
+# ---- __19ParticleMorphEffectP8CreatureT1 ----
+FRAME_NM = 0x4844A4
+
+
+def scenario_morph_ctor(rng, seed):
+    mem = {}
+    fill(rng, mem, ARENA, 0x200)
+    put32(mem, FRAME_NM, rng.randrange(1 << 32))
+    return {'mem': mem, 'args': [ARENA, rng.randrange(1 << 32), rng.randrange(1 << 32)]}
+
+
+reg('__19ParticleMorphEffectP8CreatureT1', 0x155F08, 'w8-fx-particles-morph-effect-ctor/morph_effect_ctor.cpp',
+    scenario_morph_ctor, returns=True,
+    stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), 'norrath_actor_add_run_list': (1, 0, 0)})
 
 
 if __name__ == '__main__':
