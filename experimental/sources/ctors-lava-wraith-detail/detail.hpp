@@ -144,6 +144,10 @@ extern unsigned char norrath_ctors_lava_wraith_view_449c20[];
 extern unsigned char norrath_ctors_lava_wraith_view_485330[];
 extern unsigned char norrath_ctors_lava_wraith_view_470358[];
 unsigned norrath_construct_WebTrap(void* object, const void* point, short type, char** arguments);
+// Original dpmul at 0x2fb680, named by address like the other soft-double helpers. Not defined here.
+unsigned long long norrath_softdouble_multiply_2fb680(unsigned long long left, unsigned long long right);
+extern unsigned char norrath_ctors_lava_wraith_view_44a390[];
+unsigned norrath_construct_WaterSpout(void* object, const void* point, int type);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
