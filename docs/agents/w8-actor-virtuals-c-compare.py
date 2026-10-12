@@ -40,6 +40,10 @@ _old_cop1 = Machine.cop1
 
 
 def _cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
+    if rs == 0x10 and fn == 0x16:   # rsqrt.s fd, fs, ft = fs / sqrt(ft)
+        a, b = self.fv(rd), self.fv(rt)
+        self.setf(sa, a / b ** 0.5 if b > 0 else float('inf'))
+        return None
     if rs == 0x10 and fn == 4:
         a = self.fv(rt)  # the R5900 sqrt.s takes ft
         self.setf(sa, a ** 0.5 if a >= 0 else float('nan'))
@@ -90,11 +94,12 @@ ALIAS = {
     'norrath_animation_set_to_end': 'animSetToEnd__FP14AnimationState',
     'norrath_object_add_to_delete_list': 'objectAddToDeleteList__FP10GameObject',
     'norrath_actor_random': 'eRand__10GameObject',
+    'norrath_actor_find_tag_string': 'findTagString__10GameObjectPci',
     'norrath_block_alloc': 'blockAlloc__Fi',
     'norrath_game_object_find_tag_int': 'findTagInt__10GameObjectPci',
 }
 # data symbols the authored object may import -> original address
-DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
+DATA = {'norrath_actors_b_view_4844a0': 0x4844A0, 'player': 0x408600, 'nmPlayers': 0x484538, 'syncRandState': 0x483E5C, 'norrath_player_view_31f540': 0x31F540, 'activePlayer': 0x48453C, 'currentRunningObject': 0x483ACC,
         'frameNm': 0x4844A4, 'norrath_anttrap_msg_run_FireParticle_bytes': 0x7D7A40,
         'norrath_anttrap_msg_run_HateGateParticle_bytes': 0x7D7A90}
 
@@ -578,6 +583,19 @@ def sc_missile_run(rng):
     return {'mem': mem, 'args': [OBJ], 'compare': whole_object() + list(range(0x31F548, 0x31F550))}
 
 
+def sc_fire_bomb_run(rng):
+    mem = new_object(rng)
+    old = rng.choice([0, 1, 5, 0xFFFFFFFF])
+    put32(mem, OBJ + 84, old)
+    put32(mem, OBJ + 80, rng.choice([old, old, old, old + 1, 0]) & 0xFFFFFFFF)
+    mem[OBJ + 77], mem[OBJ + 78], mem[OBJ + 79] = rng.choice([1, 0xFF]), rng.choice([0, 1, 0x80, 0xFF]), rng.choice([0, 5, 0xFF, 0x80])
+    put32(mem, OBJ + 56, rng.choice([0, 0x1000, 0xFFFF8000, 0x7FFF, 0xFFFF]))
+    for off in (16, 20, 24):
+        putf(mem, OBJ + off, float(rng.randrange(-30, 30)))
+    put32(mem, 0x483E5C, rng.randrange(1 << 32))
+    return {'mem': mem, 'args': [OBJ], 'compare': whole_object() + list(range(0x483E5C, 0x483E60))}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -654,6 +672,15 @@ reg('msg_run__11MissileTrap', W + 'missile-trap-run/run.cpp', sc_missile_run,
      'sprintf': ([], None),
      'lumpFindResource__FPcT0': (['c', 'c'], ('i', [0x31F00000, 0x31F00010])),
      'soundPlaySequence__FP15AnimationHeaderP10GameObjectf': (['i', 'o', 'f'], None)})
+
+reg('msg_run__8FireBomb', W + 'fire-bomb-run/run.cpp', sc_fire_bomb_run,
+    {'findTagString__10GameObjectPci': (['o', 'c', 'i'], ('i', [0, 0x31F00300, 0x31F00300])),
+     'scriptStart__FPc': (['i'], ('i', [0, 1, 5])),
+     'gamePositionVisible__FP6Point3f': (['s12', 'f'], ('i', [0, 1, 1, 1])),
+     'icos__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1, 2, 3])),
+     'isin__Fi': (['i'], ('f', [0, 0.25, -0.25, 0.5, -0.5, 1, -1, 2, 4])),
+     'blockAlloc__Fi': (['i'], ('i', [0, 0x31F90000, 0x31FA0000, 0x31FA0000])),
+     '__11FireBombletG6Point3sPcT1P6Point3i': (['i', 's12', 'i', 'i', 's12', 's12', 'i'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
