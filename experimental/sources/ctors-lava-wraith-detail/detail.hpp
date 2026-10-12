@@ -195,6 +195,15 @@ extern unsigned char norrath_ctors_lava_wraith_view_474550[];
 extern unsigned char norrath_ctors_lava_wraith_view_474560[];
 extern unsigned char norrath_ctors_lava_wraith_view_474570[];
 unsigned norrath_construct_WoodElfSoldier(void* object, const void* point, short type, char** arguments, char* name);
+// Original getModel__11LavaMonster at 0x1ee280, objectUpdateInGrid__FP10GameObject at
+// 0x143630. Not defined here.
+void* norrath_lava_monster_get_model(void* object);
+void norrath_object_update_in_grid(void* object);
+extern unsigned char norrath_ctors_lava_wraith_view_42b010[];
+extern unsigned char norrath_ctors_lava_wraith_view_44b810[];
+extern unsigned char norrath_ctors_lava_wraith_view_46d7b8[];
+extern unsigned char norrath_ctors_lava_wraith_view_34b474[];
+unsigned norrath_construct_LavaMonster(void* object, const void* point, short type, char** arguments, char* name);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
