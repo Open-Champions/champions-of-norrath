@@ -1,7 +1,7 @@
 #include <cstdio>
 #include "st_init.cpp"
 extern "C" int stm_status = 9;
-extern "C" alignas(4) unsigned char dum_mode[40];
+extern "C" alignas(4) unsigned char dum_mode[40] = {};
 static unsigned a0, a1, cmd; static void* a2; static const unsigned char* m; static int status_seen;
 extern "C" unsigned sceCdStream(unsigned x, unsigned y, void* z, unsigned c, const unsigned char* mode) {
     a0 = x; a1 = y; a2 = z; cmd = c; m = mode; status_seen = stm_status; return 0xabcu;
