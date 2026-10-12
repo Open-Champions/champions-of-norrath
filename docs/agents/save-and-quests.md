@@ -11,3 +11,7 @@ Observed at `0x138758`, 76 bytes; the reviewed compile emits 128. Words at objec
 ## amx_GetString
 
 Observed at `0x138900`, 128 bytes; the reviewed compile emits 136. A first cell of 256 or more (signed) is a packed string: four characters per cell, high byte first, copied through the first zero character. Any other first cell is unpacked: a zero cell gives an empty string, otherwise the low byte of each cell is copied while the following cell is nonzero, then a zero is written. A negative first cell is therefore unpacked. The return is 0.
+
+## scriptSetPostAction__FPc
+
+Observed at `0x001d4060`, 36 bytes; the reviewed compile emits 16. It calls `strcpy` with the existing 200-byte `norrath_script_post_action_view` as destination and the argument as source. The copy is unbounded in the original; the 200-byte size is inferred from the next symbol.
