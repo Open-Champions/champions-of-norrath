@@ -58,7 +58,7 @@ static int setposPos = -1, statusResult = 0, statusCalls = 0;
 static int fadeCalls = 0, musCalls = 0, adjCalls = 0;
 static int seqCalls = 0, musicCalls = 0;
 static void *seqTex = nullptr, *musicName = nullptr;
-static int musicIdx = -1, localNm = 0, connectedMap[4] = {0, 0, 0, 0};
+static int musicIdx = -1, localNm = 0, connectedMap[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 static int browsers = 0, browserArg = -1, loads = 0, changes = 0;
 static int recalls = 0, recallArg = 0, warps = 0, cleans = 0, colorCalls = 0;
 static int kicks = 0, kickArg = -1, flares = 0, inits = 0, initArg = -1;
@@ -160,7 +160,7 @@ int soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* h, void*, float) 
 }
 void soundStartGlobalMusic__FPci(char* n, int i) { ++musicCalls; musicName = n; musicIdx = i; }
 int netGetLocalPlayerNm__Fi(int) { return localNm; }
-int netPlayerIsConnected__Fi(int i) { return (i >= 0 && i < 4) ? connectedMap[i] : 0; }
+int netPlayerIsConnected__Fi(int i) { return (i >= 0 && i < 8) ? connectedMap[i] : 0; }
 void MC_SaveGameBrowser__Fi(int p) { ++browsers; browserArg = p; }
 void MC_LoadGameBrowser__Fii(int p, int) { ++loads; browserArg = p; }
 void MC_ChangePlayers__FiPUsiii(int, unsigned short*, int, int, int) { ++changes; }
@@ -237,6 +237,17 @@ int main() {
         menu = menubuf; menuNm = 99;
         pauseMenuFrameRun__Fv();
         assert(load_u32(T1() + 12) == 3u);
+        // The fourth player slot counts too.
+        reset_state();
+        netNetworkMode = 1; localNm = 0; nmPlayers = 5;
+        connectedMap[4] = 1;
+        store_ptr(T1(), (void*)"menu_kickplayers");
+        store_u32(T1() + 12, 3);
+        store_ptr(T1() + 16, nullptr);
+        store_ptr(menubuf, nullptr);
+        menu = menubuf; menuNm = 99;
+        pauseMenuFrameRun__Fv();
+        assert(load_u32(T1() + 12) == 2u);
     }
     // Coordinates and controller config gates.
     {

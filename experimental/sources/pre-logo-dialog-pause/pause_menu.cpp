@@ -174,7 +174,7 @@ extern "C" void pauseMenuFrameRun__Fv() {
             continue;
         }
         int connected = 1;
-        for (int p = 1; p < static_cast<int>(nmPlayers) && p < 4; ++p)
+        for (int p = 1; p < static_cast<int>(nmPlayers) && p <= 4; ++p)
             if (netPlayerIsConnected__Fi(p) != 0) ++connected;
         if (connected < 2)
             store_word(record + 12, load_word(record + 12) | 1u);
@@ -389,7 +389,7 @@ draw:
             } else if (strcmp(entry, "menu_kickplayers") == 0) {
                 for (int k = 0; k < 4; ++k) store_pointer(kickMenu + 64 - k * 16, nullptr);
                 int n = 0;
-                for (int p = 1; p < static_cast<int>(nmPlayers) && p < 4; ++p) {
+                for (int p = 1; p < static_cast<int>(nmPlayers) && p <= 4; ++p) {
                     if (netPlayerIsConnected__Fi(p) == 0) continue;
                     kickMenuList[1 + n] = static_cast<unsigned char>(p);
                     unsigned char* focus = player + p * 23984 + 21104;
