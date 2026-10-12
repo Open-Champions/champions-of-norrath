@@ -1,4 +1,6 @@
-// Observed objectRemoveString__FPcP10GameObject at 0x140580, extent 244.
+// Observed objectRemoveString__FPcP10GameObject at 0x140580, extent 244. Its
+// importers (gameobject-base) call it norrath_object_remove_string, and the plan
+// rejects aliases, so it is published under that name.
 // objectStrings (0x486898) drops by one before anything else. The name hash is
 // the one objectFindObject uses (ctype bit 0 folding, 512 slots). The object
 // word table objectHash (0x518ac0) is probed from that slot, then at most 522
@@ -35,7 +37,7 @@ unsigned arithmetic_shift(unsigned value, unsigned bits) {
 }
 }
 
-extern "C" void objectRemoveString__FPcP10GameObject(char* name, void* object) {
+extern "C" void norrath_object_remove_string(char* name, void* object) {
     write_word(address(objectStrings), read_word(address(objectStrings)) - 1u);
     const unsigned length = norrath_factory_strlen(name);
     const Address query = address(name);

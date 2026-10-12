@@ -1,11 +1,11 @@
-// Host contract for objectRemoveString__FPcP10GameObject. Not an EE plan input.
+// Host contract for norrath_object_remove_string (objectRemoveString__FPcP10GameObject). Not an EE plan input.
 #include <cstdio>
 #include <cstring>
 
 extern "C" unsigned char objectHash[512 * 4] = {0};
 extern "C" unsigned char objectStrings[4] = {0};
 extern "C" unsigned char norrath_factory_ctype_minimum_view[384] = {0};
-extern "C" void objectRemoveString__FPcP10GameObject(char* name, void* object);
+extern "C" void norrath_object_remove_string(char* name, void* object);
 
 static int failures = 0;
 static void expect(bool ok, const char* message) {
@@ -51,7 +51,7 @@ int main() {
 
     set_word(objectStrings, 0, 10u);
     set_word(objectHash, slot, 0x1000u);
-    objectRemoveString__FPcP10GameObject(name, reinterpret_cast<void*>(0x1000u));
+    norrath_object_remove_string(name, reinterpret_cast<void*>(0x1000u));
     expect(word_at(objectStrings, 0) == 9u, "count drops by one");
     expect(word_at(objectHash, slot) == 0u, "direct hit is cleared");
 
@@ -60,7 +60,7 @@ int main() {
     set_word(objectHash, slot, 0x2000u);
     set_word(objectHash, (slot + 1u) & 511u, 0x3000u);
     set_word(objectHash, (slot + 2u) & 511u, 0x4000u);
-    objectRemoveString__FPcP10GameObject(name, reinterpret_cast<void*>(0x4000u));
+    norrath_object_remove_string(name, reinterpret_cast<void*>(0x4000u));
     expect(word_at(objectHash, slot) == 0x2000u && word_at(objectHash, (slot + 1u) & 511u) == 0x3000u,
            "earlier slots are untouched");
     expect(word_at(objectHash, (slot + 2u) & 511u) == 0u, "probed object is cleared");
@@ -70,7 +70,7 @@ int main() {
     std::memset(objectHash, 0, sizeof objectHash);
     set_word(objectHash, 0, 0x5000u);
     set_word(objectHash, 511, 0x6000u);
-    objectRemoveString__FPcP10GameObject(name, reinterpret_cast<void*>(0x9999u));
+    norrath_object_remove_string(name, reinterpret_cast<void*>(0x9999u));
     expect(word_at(objectHash, 0) == 0x5000u && word_at(objectHash, 511) == 0x6000u, "missing object leaves the table");
     expect(word_at(objectStrings, 0) == 7u, "missing object still drops the count");
 
@@ -78,7 +78,7 @@ int main() {
     std::memset(objectHash, 0, sizeof objectHash);
     set_word(objectHash, (slot + 3u) & 511u, 0x7000u);
     set_word(objectHash, (slot + 5u) & 511u, 0x7000u);
-    objectRemoveString__FPcP10GameObject(name, reinterpret_cast<void*>(0x7000u));
+    norrath_object_remove_string(name, reinterpret_cast<void*>(0x7000u));
     expect(word_at(objectHash, (slot + 3u) & 511u) == 0u && word_at(objectHash, (slot + 5u) & 511u) == 0x7000u,
            "only the first match is cleared");
 
@@ -86,7 +86,7 @@ int main() {
     // limit exceeds the 512 slots, so the limit itself is not observable here.
     std::memset(objectHash, 0, sizeof objectHash);
     set_word(objectHash, (slot + 300u) & 511u, 0x8000u);
-    objectRemoveString__FPcP10GameObject(name, reinterpret_cast<void*>(0x8000u));
+    norrath_object_remove_string(name, reinterpret_cast<void*>(0x8000u));
     expect(word_at(objectHash, (slot + 300u) & 511u) == 0u, "the wrapped slot is reached within 522 probes");
     if (failures != 0) return 1;
     std::printf("remove-string contract passed\n");
