@@ -147,13 +147,16 @@ class Stubs:
 
         def h(m):
             entry = [name] + [m.g32(4 + i) for i in sp.get('regs', range(sp.get('nargs', 0)))] + [m.f[12 + i] for i in range(sp.get('nf', 0))]
+            for reg in sp.get('regs64', []):
+                entry.append(m.r[reg] & crc.M64)
             for off in sp.get('stack', []):
                 entry.append(m.u32(m.g32(29) + off))
             for reg, n in sp.get('peek', []):
                 entry.append(m.read(m.g32(reg), n))
             for reg in sp.get('str', []):
                 entry.append(cstr(m, m.g32(reg)))
-            m.log.append(tuple(entry))
+            if not sp.get('silent'):
+                m.log.append(tuple(entry))
             if 'effect' in sp:
                 sp['effect'](self.rng, m)
             if 'ret' in sp:
@@ -192,6 +195,8 @@ def compare(name, runs=200):
     global SYMS
     orig_stubs = {n: spec['stub_addr'][n] for n in stub_names}
     auth_stubs = {n: STUB + 0x10 * stub_names.index(n) for n in stub_names}
+    for n, a in spec.get('fixed', {}).items():
+        orig_stubs[n] = auth_stubs[n] = a
     bad = 0
     seen = {}
     for seed in range(runs):
@@ -752,6 +757,133 @@ reg('_GLOBAL_$I$worldTileEntityLightScale', 0x17DD70, 'w8-render-world-a-global-
 reg('_GLOBAL_$D$worldTileEntityLightScale', 0x17DD90,
     'w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp', scenario_world_tile, stubs=WT_STUBS,
     stub_addr=WT_ADDR)
+
+def rnd_float(rng):
+    return rng.choice([0.0, 0.5, 1.0, 2.0, -1.0, 0.25, 3.5, 1.5, -0.5])
+
+
+def draw_stubs():
+    def f_rand_ptr(r, m):
+        return r.choice([0, 0x31000000, 0x31000040])
+
+    def mat_effect(r, m):
+        for i in range(48):
+            m.w8(m.g32(4) + i, r.randrange(256))
+        if r.random() < 0.3:
+            putf(m.mem, m.g32(5) + 8, rnd_float(r))
+
+    def shadow_pos_effect(r, m):
+        for i in range(12):
+            m.w8(m.g32(9) + i, r.randrange(256))
+        putf(m.mem, m.g32(10), rnd_float(r))
+
+    def iter_ctor(r, m):
+        m.w32(m.g32(4) + 4, m.u32(m.g32(5)))
+
+    def iter_next(r, m):
+        cur = m.u32(m.g32(4) + 4)
+        m.w32(m.g32(4) + 4, m.u32(cur) if cur else 0)
+
+    def sscanf_effect(r, m):
+        for reg in (6, 7, 8, 9, 10):
+            m.w32(m.g32(reg), r.choice([0, 1, 2, 5, 255, 256, 0x1FF, 0x8001, 0xFFFF, 100]))
+        putf(m.mem, m.g32(11), rnd_float(r))
+
+    return {
+        'icos__Fi': dict(nargs=1, fret=trig_fret),
+        'isin__Fi': dict(nargs=1, fret=trig_fret),
+        'matMakeTransYawScale__FP8Matrix34G6Point3sf': dict(regs=[2], nf=1, peek=[(5, 12)], effect=mat_effect),
+        'lightSetAmbientColor__FPs': dict(peek=[(4, 8)]),
+        'lightSetColorScale__Ffff': dict(nf=3),
+        'runStandardGlow__8Creature': dict(nargs=1),
+        'modelGetNmShadowPoints__FP12_modelHeader': dict(nargs=1, ret=lambda r, m: r.choice([0, 1, 2, 3])),
+        'modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f': dict(
+            regs=[0, 1, 3, 4, 7], nf=1, peek=[(6, 12)], effect=shadow_pos_effect),
+        'P_FaceSprite__FG6Point3ffiiiiP8_texturesi': dict(regs=[1, 2, 3, 4, 5, 6, 7], nf=2, peek=[(4, 12)]),
+        'lightSetAmbientOffset__FPs': dict(peek=[(4, 8)]),
+        'fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi': dict(
+            regs=[0, 1, 2, 4, 5], nf=4, peek=[(7, 12), (10, 8), (11, 8)], stack=[0, 8]),
+        'gameIsPaused__Fv': dict(ret=lambda r, m: r.choice([0, 0, 1])),
+        '__16ListSafeIteratorP8ListHeadi': dict(regs=[1, 2], effect=iter_ctor),
+        'next__16ListSafeIterator': dict(nargs=0, effect=iter_next),
+        '_$_16ListSafeIterator': dict(regs=[1]),
+        'vfunc': dict(nargs=1),
+        'modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec': dict(
+            regs=[0, 1, 3, 4], peek=[(6, 48)], ret=f_rand_ptr),
+        'findTagString__10GameObjectPci': dict(regs=[0, 2], str=[5], ret=lambda r, m: r.choice([0, STRARENA + 0x2000,
+                                                                                                  STRARENA + 0x2100])),
+        'sscanf': dict(str=[4, 5], effect=sscanf_effect, ret=lambda r, m: 6),
+        'setDirLight__Fsssssfb': dict(regs=[0, 1, 2, 3, 4, 5], nf=1),
+        'modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi': dict(
+            regs=[0, 1, 2, 5, 7], regs64=[10], peek=[(7, 12), (8, 48)], stack=[0], ret=f_rand_ptr),
+        'lightResetOptionalParams__Fv': dict(nargs=0),
+        'memset': dict(silent=True, effect=memset_effect),
+    }
+
+
+DRAW_ADDR = {
+    'icos__Fi': 0x15A070, 'isin__Fi': 0x15A100, 'matMakeTransYawScale__FP8Matrix34G6Point3sf': 0x1577D0,
+    'lightSetAmbientColor__FPs': 0x13E7A8, 'lightSetColorScale__Ffff': 0x13CA40, 'runStandardGlow__8Creature': 0x109710,
+    'modelGetNmShadowPoints__FP12_modelHeader': 0x16CD50,
+    'modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f': 0x16C238,
+    'P_FaceSprite__FG6Point3ffiiiiP8_texturesi': 0x1815C8, 'lightSetAmbientOffset__FPs': 0x13E730,
+    'fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi': 0x1DB2D8,
+    'gameIsPaused__Fv': 0x1D0E70, '__16ListSafeIteratorP8ListHeadi': 0x194660, 'next__16ListSafeIterator': 0x194750,
+    '_$_16ListSafeIterator': 0x194700, 'vfunc': 0x600000,
+    'modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec': 0x169848, 'findTagString__10GameObjectPci': 0x143A80,
+    'sscanf': 0x303F50, 'setDirLight__Fsssssfb': 0x109568,
+    'modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi': 0x16AE78,
+    'lightResetOptionalParams__Fv': 0x13CB88, 'memset': 0x3021B0}
+
+
+def scenario_creature_draw(rng):
+    mem = {}
+    obj = ARENA + 0x4000
+    fill(rng, mem, obj, 0x400)
+    for off in (16, 20, 24, 60, 32, 224, 228, 108, 112, 116, 120):
+        putf(mem, obj + off, rnd_float(rng))
+    for off in (860, 868, 872):
+        putf(mem, obj + off, rng.choice([0.0, 0.0, 0.5, 1.0, 2.0, -1.0, 0.9]))
+    put32(mem, obj + 12, rng.choice([0, 0x100, 0x02000000, 0x02000100, rng.randrange(1 << 32)]))
+    for off in (136, 144, 160, 552):
+        put32(mem, obj + off, rng.choice([0, 1, 0xFFFFFFFF, rng.randrange(1 << 32)]))
+        put32(mem, obj + off + 4, rng.choice([0, 0, 1, rng.randrange(1 << 32)]))
+    put32(mem, obj + 152, rng.choice([0, 0, 5]))
+    put32(mem, obj + 160, rng.choice([0, 0x200000, 0x40000000, 0x40200000, 0x00400000]))
+    put32(mem, obj + 164, rng.choice([0, 0, 1]))
+    put32(mem, obj + 252, rng.choice([0, 100, 4000]))
+    w = rng.randrange(1 << 16)
+    mem[obj + 56] = w & 0xFF; mem[obj + 57] = w >> 8
+    for k in range(16):
+        put32(mem, obj + 896 + 4 * k, rng.choice([0, 0, 0, 0, 1, 7, 90, 1000]) if rng.random() < 0.4 else 0)
+    put32(mem, obj + 924, rng.choice([0, 0, 0, 0, 0, 0, 0, 3]))
+    for off in (900, 904, 916, 920, 928, 932, 936, 940, 948):
+        if rng.random() < 0.12:
+            put32(mem, obj + off, rng.choice([1, 5, 200, 100000]))
+    put32(mem, obj + 888, ARENA + 0x8000 if rng.random() < 0.7 else 0)
+    # object list: node = [next, ?, ?, object], objects with a vtable entry at +24 (delta halfword, function pointer)
+    vt = ARENA + 0xB000
+    put32(mem, vt + 24, 0x00000010 if rng.random() < 0.5 else 0xFFF0)
+    put32(mem, vt + 28, 0x600000)
+    for i in range(3):
+        node = ARENA + 0x8000 + 0x20 * i
+        put32(mem, node, ARENA + 0x8000 + 0x20 * (i + 1) if i < rng.choice([0, 1, 2]) else 0)
+        put32(mem, node + 12, ARENA + 0x9000 + 0x100 * i)
+        put32(mem, ARENA + 0x9000 + 0x100 * i + 20, vt)
+    # the list head word at obj+888 is the first node
+    put32(mem, obj + 888, ARENA + 0x8000 if rng.random() < 0.7 else 0)
+    put32(mem, sym('frameNm'), rng.choice([0, 1, 100, 4100, 70000, 0xFFFF, 0x12345]))
+    put32(mem, sym('haloTexture1'), rng.randrange(1 << 32))
+    put32(mem, sym('haloTexture2'), rng.randrange(1 << 32))
+    model, tex, shadow = 0x31100000, 0x31200000, rng.choice([0, 0x31300000])
+    put_str(mem, STRARENA + 0x2000, b'1,2,3,4,5,0.5')
+    put_str(mem, STRARENA + 0x2100, b'9,8,7,6,5,0.25')
+    cmp_addrs = list(range(obj, obj + 0x400)) + list(range(sym('frameNm'), sym('frameNm') + 4))
+    return {'mem': mem, 'args': [obj, model, tex, shadow], 'compare': cmp_addrs, 'steps': 600000}
+
+
+reg('draw__8CreatureP12_modelHeaderP8_textureT1', 0x109808, 'w8-render-world-a-creature-draw/creature_draw.cpp',
+    scenario_creature_draw, stubs=draw_stubs(), stub_addr=DRAW_ADDR, fixed={'vfunc': 0x600000}, returns=True)
 
 
 if __name__ == '__main__':
