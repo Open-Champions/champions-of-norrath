@@ -749,6 +749,11 @@ reg('_GLOBAL_$I$worldTileEntityLightScale', 0x17DD70, 'w8-render-world-a-global-
     scenario_world_tile, stubs=WT_STUBS, stub_addr=WT_ADDR)
 
 
+reg('_GLOBAL_$D$worldTileEntityLightScale', 0x17DD90,
+    'w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp', scenario_world_tile, stubs=WT_STUBS,
+    stub_addr=WT_ADDR)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]

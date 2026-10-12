@@ -17,7 +17,12 @@
 //  5. sets byte +5 to 1 in each of the 64 48-byte records of worldAnimation
 //     (0x006ebb40);
 //  6. the full ParticleDef constructor on ParticleEmitterTestParticle (0x006ec740).
-// (The first argument 0 path is added with the destruction wrapper.)
+// With the first argument 0 it runs, in this order:
+//  7. AnimationState::~AnimationState(2) (0x00164050) on each worldAnimation
+//     record, last to first;
+//  8. listDestroy on the +40 member of each routeQueue record, last to first;
+//  9. Light::~Light(2) (0x0013eac8) on the +8 member of each DynamicLightArray
+//     record, last to first.
 // The constructor arguments are listed at the calls below; three floats of the
 // first one come from the unit's constant pool (10.68, 8.55, -60.03).
 // Inferred: the unit's globals are the objects above; their ParticleDef names
@@ -37,6 +42,9 @@ extern unsigned char ParticleEmitterTestParticle[];
 void __11ParticleDef(void* self);
 void __11ParticleDefiiiiiiiifffiiiPFPv_v(void* self, int a, int b, int c, int d, int e, int f, int g, int h, float x,
                                          float y, float z, int i, int j, int k, void (*callback)(void*));
+void _$_14AnimationState(void* self, int flags);
+void _$_5Light(void* self, int flags);
+void norrath_list_destroy(void* head);
 }
 
 #ifdef __clang__
@@ -65,9 +73,17 @@ static void NORRATH_W8_NOIPA static_initialization(int constructing, int priorit
         for (int index = 0; index < 64; ++index) worldAnimation[48 * index + 5] = 1;
         __11ParticleDefiiiiiiiifffiiiPFPv_v(ParticleEmitterTestParticle, 130, 130, 130, 0, 100, 100, 100, 205, 5.0f,
                                             5.0f, 1.0f, 3, 1, 4, nullptr);
+    } else if (constructing == 0) {
+        for (int index = 63; index >= 0; --index) _$_14AnimationState(worldAnimation + 48 * index, 2);
+        for (int index = 127; index >= 0; --index) norrath_list_destroy(routeQueue + 48 * index + 40);
+        for (int index = 15; index >= 0; --index) _$_5Light(DynamicLightArray + 68 * index + 8, 2);
     }
 }
 
 extern "C" void _GLOBAL_$I$worldTileEntityLightScale() {
     static_initialization(1, 0xffff);
+}
+
+extern "C" void _GLOBAL_$D$worldTileEntityLightScale() {
+    static_initialization(0, 0xffff);
 }

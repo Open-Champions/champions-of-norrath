@@ -24,9 +24,9 @@ extern "C" void __11ParticleDefiiiiiiiifffiiiPFPv_v(void* self, int a, int b, in
     calls.push_back(call);
     calls.push_back({"full-tail", reinterpret_cast<const void*>(callback), {i, j, k}, {}});
 }
-
-
-
+extern "C" void _$_14AnimationState(void* self, int flags) { calls.push_back({"anim", self, {flags}, {}}); }
+extern "C" void _$_5Light(void* self, int flags) { calls.push_back({"light", self, {flags}, {}}); }
+extern "C" void norrath_list_destroy(void* head) { calls.push_back({"list", head, {}, {}}); }
 #include "global_init_world_tile.cpp"
 static int failures;
 static void expect(bool ok, const char* m) { if (!ok) { std::fprintf(stderr, "fail: %s\n", m); ++failures; } }
@@ -53,5 +53,11 @@ int main() {
     for (int i = 0; i < 128; ++i) expect(*reinterpret_cast<unsigned*>(routeQueue + 48 * i + 40) == 0 && routeQueue[48 * i + 39] == 0xEE && routeQueue[48 * i + 44] == 0xEE, "route queue word cleared");
     for (int i = 0; i < 64; ++i) expect(worldAnimation[48 * i + 5] == 1 && worldAnimation[48 * i + 4] == 0xEE && worldAnimation[48 * i + 6] == 0xEE, "animation byte set");
 
+    calls.clear();
+    _GLOBAL_$D$worldTileEntityLightScale();
+    expect(calls.size() == 64 + 128 + 16, "64 animation, 128 list and 16 light destructors");
+    for (int i = 0; i < 64; ++i) expect(calls[i].name == "anim" && calls[i].self == worldAnimation + 48 * (63 - i) && calls[i].ints[0] == 2, "animation destructors last to first");
+    for (int i = 0; i < 128; ++i) expect(calls[64 + i].name == "list" && calls[64 + i].self == routeQueue + 48 * (127 - i) + 40, "lists last to first");
+    for (int i = 0; i < 16; ++i) expect(calls[192 + i].name == "light" && calls[192 + i].self == DynamicLightArray + 68 * (15 - i) + 8 && calls[192 + i].ints[0] == 2, "lights last to first");
     return failures;
 }
