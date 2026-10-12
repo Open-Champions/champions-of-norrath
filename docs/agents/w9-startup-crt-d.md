@@ -5,3 +5,4 @@ Startup and runtime support (d). Sources are under `experimental/sources/w9-star
 ## Per-function notes
 
 - `free` (`0x003015a0`, 72 bytes; compiled 64). Observed: lock service, `_free_r` (`0x00300608`) with the pointer re-read, unlock service as a tail call; each `_impure_ptr` read is a fresh load. Callee for `_free_r` is the authored `norrath_player_free_reentrant`. Host check covers order, re-reads and the null pointer reaching `_free_r`.
+- `memalign` (`0x00301318`, 100 bytes; compiled 88). Observed: lock, `_memalign_r` (`0x00301380`) with the pointer re-read, then (alignment, size), unlock; returns the `_memalign_r` result. `_memalign_r` is not authored and is a newly opened import.
