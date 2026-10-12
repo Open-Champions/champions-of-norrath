@@ -1084,6 +1084,27 @@ def scenario_standard_glow(rng):
 reg('runStandardGlow__8Creature', 0x109710, 'w8-render-world-a-run-standard-glow/run_standard_glow.cpp', scenario_standard_glow)
 
 
+SDL_STUBS = {'ef1Noise__Fi': dict(nargs=1, fret=trig_fret),
+             'icos__Fi': dict(nargs=1, fret=trig_fret), 'isin__Fi': dict(nargs=1, fret=trig_fret),
+             'lightSetSecondaryDirectional__FG6Point3Ps': dict(peek=[(4, 12), (5, 8)]),
+             'lightSetPrimaryDirectional__FG6Point3Ps': dict(peek=[(4, 12), (5, 8)])}
+SDL_ADDR = {'ef1Noise__Fi': 0x15A540, 'icos__Fi': 0x15A070, 'isin__Fi': 0x15A100,
+            'lightSetSecondaryDirectional__FG6Point3Ps': 0x13E8A0, 'lightSetPrimaryDirectional__FG6Point3Ps': 0x13E818}
+
+
+def scenario_set_dir_light(rng):
+    mem = {}
+    put32(mem, sym('frameNm'), rng.choice([0, 1, 100, 70000, 0xFFFF, 0x7FFFFFF, 12345]))
+    args = [rng.choice([0, 100, -100, 32767, -32768, 0x1234]) for _ in range(2)]
+    args += [rng.choice([0, 10, 255, 100, -5, 32767]) for _ in range(3)]
+    args += [rng.choice([0, 1, 2, 0xFF])]
+    return {'mem': mem, 'args': args, 'fargs': {12: f2b(rng.choice([0.0, 0.1, 0.25, 0.5, 1.0, 2.0, -1.0]))}, 'compare': []}
+
+
+reg('setDirLight__Fsssssfb', 0x109568, 'w8-render-world-a-set-dir-light/set_dir_light.cpp', scenario_set_dir_light,
+    stubs=SDL_STUBS, stub_addr=SDL_ADDR)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
