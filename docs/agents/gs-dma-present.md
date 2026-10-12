@@ -24,3 +24,14 @@ the first untouched word, and call order. Fresh EE compilation passed.
 
 Inferred: the register-number pairs are GS commands. Unknown: hardware timing,
 valid screen-slide range, interrupts, and actual frame presentation.
+
+## makeSamplePacket__Fb
+
+Observed at `0x0018f1f8`, 1492 bytes. Builds 577 quadwords, including two
+70-tile passes and the end controls. Full mode changes vertical destination
+scale and scissor height. The texture base is reloaded between passes.
+Publishes copyScreenFrame at byte 48, copyScreenColor at 144, and
+copyScreenAlpha at 180, then FlushCache(0). Every packet word and the first
+untouched word pass the two-mode host contract; reviewed EE compilation passed.
+No packet was submitted to hardware. Original alternate end-tag path is
+unreachable for these fixed loop bounds.
