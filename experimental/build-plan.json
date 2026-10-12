@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1037,
+  "default_authored_inputs": 1059,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1753,7 +1753,29 @@
     "sources/world-state-water-wavyness/word.cpp": "1694b4dfdd75990f7810c099b1929d8a18d165ddcc43c7c13a55bbbf484e5656",
     "sources/world-state-water-wavyness/word.hpp": "5743f8c32f0ef28d94aa1f798138c64ed981d00599aee85b62816e34ca40abeb",
     "sources/world-state-water-wavyness2/word.cpp": "178944290247893d090200826e0af6163f59274d803d642cd5fa89333b71dcb0",
-    "sources/world-state-water-wavyness2/word.hpp": "46e8099c57665987efdd116a953d9cab8d7b67f6b00824ac278df3c1bc57f4c6"
+    "sources/world-state-water-wavyness2/word.hpp": "46e8099c57665987efdd116a953d9cab8d7b67f6b00824ac278df3c1bc57f4c6",
+    "sources/game-state-is-paused/is_paused.cpp": "cd98ce9e5bdb0352cc0517fe424213a080c3cc89bc9252247fa04ae8a8f03c3b",
+    "sources/game-state-interface-flare/interface_flare.cpp": "10c92badac59ee46d12a978be49463f80a14fd0f588734c504dd1f6c8551cb06",
+    "sources/game-state-maybe-save-config/maybe_save.cpp": "98797751d2c59da159ba223d1f65d9341ae9f3ecac6cca26ae014b065bfc8810",
+    "sources/game-state-reset/reset.cpp": "822af2f142bae43e2130b1718d0f35def774cd2dd1cb47cc1f716228d3bac579",
+    "sources/game-state-clear/clear.cpp": "3413e3a1b48328223df72ed3127a472a8212d79e9666b8521a568ae926996e95",
+    "sources/game-state-jump-gate/jump_gate.cpp": "c3584ced7775235a58c9fce8153ed11ad560d821fbb2fe9ba472aff8b6599fc0",
+    "sources/game-state-draw-world/draw_world.cpp": "82d07cd6ef0767ecfc52542710ee29d1e25e4f7ea82aa99cbf799219c6f1fabb",
+    "sources/game-state-skill-ramps/skill_ramps.cpp": "516a140a4b20d4d4cdfb58a9bf053802b327d593e0d47387f2f63f8f0a5eadf3",
+    "sources/game-state-camera-ctor/camera_ctor.cpp": "d29e507645ab267eafedf0912bb51fb70a0c61854733db23e9b9f7b8e5377a07",
+    "sources/game-state-camera-task/camera_task.cpp": "a47e41ad208ee867274d744ce5cef353bd5e9e415b3d738bb562294d6adf0121",
+    "sources/game-state-default-config/default_config.cpp": "2ed9fec83b9d45f994fe5b4e99f74375eecd8dc671ab97bcc3b002e17bf4703a",
+    "sources/game-state-pause-word/pause_word.cpp": "60f6bd34c66aca050ed72b6f873254f6af3e2f4ceaa2e54b50804c48557b09b9",
+    "sources/game-state-control-paused/control_paused.cpp": "d103c8475d68449ed3a1b090cef34b32d87619183fc9c1b940f5bac65c456f51",
+    "sources/game-state-combat-camera/combat_camera.cpp": "d809f0e63698b1a00dfdb9a402f60f26928300802e1abcbe573d89b7f0f2d3ba",
+    "sources/game-state-multiplayer-markers/multiplayer_markers.cpp": "f5d9e390fbb9b9d0a9f5ef19ed25bffa527679fb81d74f4c4b2d54dddd62848a",
+    "sources/game-state-replicate-quest-items/replicate_quest_items.cpp": "5fea5459d8664d449f91a8d12ca82ce4685712efb2efa16dea60b87106dffaa7",
+    "sources/game-state-reverse-camera-yaw/reverse_camera_yaw.cpp": "2f391a6ad913d82e1e7bd50a75643cb08ce7b6fbb0eccd0283ef496f8b7f7bce",
+    "sources/game-state-core-loading/core_loading.cpp": "41600616cb5ac32d0ba747b847c5c97eb2e3db10af233d05833f9a377b334fe0",
+    "sources/game-state-exit-to-menu/exit_to_menu.cpp": "ad10736aaa58f9ee242bb3416d672ec5e51dc460ecf2165b8c82ee7db7503d32",
+    "sources/game-state-cut-mode/cut_mode.cpp": "18f2647a78c735b21e19047fd3f52c242586ca5c1c2ebfdc976356fd7021e129",
+    "sources/game-state-main-menu/main_menu.cpp": "a792c4b861df2b19a64f4e2517a29cfcd97fae4d5092ec3ef04b37a4010288dc",
+    "sources/game-state-bail/bail.cpp": "06c57fb3be0a6c2e2e78b08886c30f7051beb61f520e963d7b6c48261b5ae9a3"
   },
   "inputs": [
     {
@@ -13201,6 +13223,270 @@
       "profile": "authored_cpp",
       "sha256": "1923ed3d5fee31f3305499ded3c6d6025ededd14dce02b4e8e3647535d907dd9",
       "source": "sources/sound-rpc-views-wake-top-id/wake_top_id.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1039,
+      "kind": "independently_authored_source",
+      "object_name": "is_paused.o",
+      "profile": "authored_cpp",
+      "sha256": "cd98ce9e5bdb0352cc0517fe424213a080c3cc89bc9252247fa04ae8a8f03c3b",
+      "source": "sources/game-state-is-paused/is_paused.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameIsPaused__Fv",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1040,
+      "kind": "independently_authored_source",
+      "object_name": "interface_flare.o",
+      "profile": "authored_cpp",
+      "sha256": "10c92badac59ee46d12a978be49463f80a14fd0f588734c504dd1f6c8551cb06",
+      "source": "sources/game-state-interface-flare/interface_flare.cpp",
+      "emitted_functions": [
+        {
+          "name": "coreInterfaceFlare__Fi",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1041,
+      "kind": "independently_authored_source",
+      "object_name": "maybe_save.o",
+      "profile": "authored_cpp",
+      "sha256": "98797751d2c59da159ba223d1f65d9341ae9f3ecac6cca26ae014b065bfc8810",
+      "source": "sources/game-state-maybe-save-config/maybe_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameMaybeSaveConfig__Fii",
+          "compiled_body_bytes": 2216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1042,
+      "kind": "independently_authored_source",
+      "object_name": "reset.o",
+      "profile": "authored_cpp",
+      "sha256": "822af2f142bae43e2130b1718d0f35def774cd2dd1cb47cc1f716228d3bac579",
+      "source": "sources/game-state-reset/reset.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameResetGameState__Fv",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1043,
+      "kind": "independently_authored_source",
+      "object_name": "clear.o",
+      "profile": "authored_cpp",
+      "sha256": "3413e3a1b48328223df72ed3127a472a8212d79e9666b8521a568ae926996e95",
+      "source": "sources/game-state-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameClear__Fi",
+          "compiled_body_bytes": 584
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1044,
+      "kind": "independently_authored_source",
+      "object_name": "jump_gate.o",
+      "profile": "authored_cpp",
+      "sha256": "c3584ced7775235a58c9fce8153ed11ad560d821fbb2fe9ba472aff8b6599fc0",
+      "source": "sources/game-state-jump-gate/jump_gate.cpp",
+      "emitted_functions": [
+        {
+          "name": "jumpGateJumping__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1045,
+      "kind": "independently_authored_source",
+      "object_name": "draw_world.o",
+      "profile": "authored_cpp",
+      "sha256": "82d07cd6ef0767ecfc52542710ee29d1e25e4f7ea82aa99cbf799219c6f1fabb",
+      "source": "sources/game-state-draw-world/draw_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameDrawWorld__Fv",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1046,
+      "kind": "independently_authored_source",
+      "object_name": "skill_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "516a140a4b20d4d4cdfb58a9bf053802b327d593e0d47387f2f63f8f0a5eadf3",
+      "source": "sources/game-state-skill-ramps/skill_ramps.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameInitSkillRamps__Fv",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1047,
+      "kind": "independently_authored_source",
+      "object_name": "camera_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d29e507645ab267eafedf0912bb51fb70a0c61854733db23e9b9f7b8e5377a07",
+      "source": "sources/game-state-camera-ctor/camera_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__6Camera",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1048,
+      "kind": "independently_authored_source",
+      "object_name": "camera_task.o",
+      "profile": "authored_cpp",
+      "sha256": "a47e41ad208ee867274d744ce5cef353bd5e9e415b3d738bb562294d6adf0121",
+      "source": "sources/game-state-camera-task/camera_task.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameCameraTask__Fv",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1049,
+      "kind": "independently_authored_source",
+      "object_name": "default_config.o",
+      "profile": "authored_cpp",
+      "sha256": "2ed9fec83b9d45f994fe5b4e99f74375eecd8dc671ab97bcc3b002e17bf4703a",
+      "source": "sources/game-state-default-config/default_config.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameSetDefaultGameConfig__Fi",
+          "compiled_body_bytes": 1332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1050,
+      "kind": "independently_authored_source",
+      "object_name": "pause_word.o",
+      "profile": "authored_cpp",
+      "sha256": "60f6bd34c66aca050ed72b6f873254f6af3e2f4ceaa2e54b50804c48557b09b9",
+      "source": "sources/game-state-pause-word/pause_word.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1051,
+      "kind": "independently_authored_source",
+      "object_name": "control_paused.o",
+      "profile": "authored_cpp",
+      "sha256": "d103c8475d68449ed3a1b090cef34b32d87619183fc9c1b940f5bac65c456f51",
+      "source": "sources/game-state-control-paused/control_paused.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1052,
+      "kind": "independently_authored_source",
+      "object_name": "combat_camera.o",
+      "profile": "authored_cpp",
+      "sha256": "d809f0e63698b1a00dfdb9a402f60f26928300802e1abcbe573d89b7f0f2d3ba",
+      "source": "sources/game-state-combat-camera/combat_camera.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1053,
+      "kind": "independently_authored_source",
+      "object_name": "multiplayer_markers.o",
+      "profile": "authored_cpp",
+      "sha256": "f5d9e390fbb9b9d0a9f5ef19ed25bffa527679fb81d74f4c4b2d54dddd62848a",
+      "source": "sources/game-state-multiplayer-markers/multiplayer_markers.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1054,
+      "kind": "independently_authored_source",
+      "object_name": "replicate_quest_items.o",
+      "profile": "authored_cpp",
+      "sha256": "5fea5459d8664d449f91a8d12ca82ce4685712efb2efa16dea60b87106dffaa7",
+      "source": "sources/game-state-replicate-quest-items/replicate_quest_items.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1055,
+      "kind": "independently_authored_source",
+      "object_name": "reverse_camera_yaw.o",
+      "profile": "authored_cpp",
+      "sha256": "2f391a6ad913d82e1e7bd50a75643cb08ce7b6fbb0eccd0283ef496f8b7f7bce",
+      "source": "sources/game-state-reverse-camera-yaw/reverse_camera_yaw.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1056,
+      "kind": "independently_authored_source",
+      "object_name": "core_loading.o",
+      "profile": "authored_cpp",
+      "sha256": "41600616cb5ac32d0ba747b847c5c97eb2e3db10af233d05833f9a377b334fe0",
+      "source": "sources/game-state-core-loading/core_loading.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1057,
+      "kind": "independently_authored_source",
+      "object_name": "exit_to_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "ad10736aaa58f9ee242bb3416d672ec5e51dc460ecf2165b8c82ee7db7503d32",
+      "source": "sources/game-state-exit-to-menu/exit_to_menu.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1058,
+      "kind": "independently_authored_source",
+      "object_name": "cut_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "18f2647a78c735b21e19047fd3f52c242586ca5c1c2ebfdc976356fd7021e129",
+      "source": "sources/game-state-cut-mode/cut_mode.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1059,
+      "kind": "independently_authored_source",
+      "object_name": "main_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "a792c4b861df2b19a64f4e2517a29cfcd97fae4d5092ec3ef04b37a4010288dc",
+      "source": "sources/game-state-main-menu/main_menu.cpp"
+    },
+    {
+      "header_closure": [],
+      "input_order": 1060,
+      "kind": "independently_authored_source",
+      "object_name": "bail.o",
+      "profile": "authored_cpp",
+      "sha256": "06c57fb3be0a6c2e2e78b08886c30f7051beb61f520e963d7b6c48261b5ae9a3",
+      "source": "sources/game-state-bail/bail.cpp"
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -13300,7 +13586,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "6feb69560f82a5b76ab7a3f60ab0f06bca9a2fda3a79cce4c6b0a452825a2b49",
+  "snapshot_sha256": "50609e3f606cf78ddf12da2aef54b32a648a921d92610d39183898a54ac7e005",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

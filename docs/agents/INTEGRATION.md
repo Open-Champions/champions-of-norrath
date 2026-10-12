@@ -1208,6 +1208,64 @@ Closed: the 31 `norrath_sound_*_view` names listed in the package notes.
 Opened: none. 828 function bodies, 1037 authored inputs, zero COMMON. 214
 tool tests passed. No EE or game execution.
 
+## agents/game-state
+
+The previous integrator merged the branch and was cut off before the plan
+and snapshot edits. The merge commit is kept; this selection appends its 22
+units with fresh `input_order` values 1039 through 1060. All 22 sources
+compile under the reviewed `authored_cpp` flags with the function names and
+body bytes the notes claim, including `gameMaybeSaveConfig__Fii` at 2216
+bytes and `gameSetDefaultGameConfig__Fi` at 1332. All 22 host contracts
+passed on this machine. No game binary or disassembly listing was committed.
+The notes separate observed addresses from inferred names; the
+`0x00484eb8` byte is published as `norrath_game_state_byte_00484eb8` inside
+the reset unit and is not an ELF name. `gameLoop__Fv` stays unauthored.
+`gameCam` stays the natives-c definition.
+
+| | |
+|---|---|
+| Before | 858 |
+| After | 893 |
+| Closed | 22 |
+| Opened | 57 |
+
+Closed: `__6Camera`, `coreInterfaceFlare__Fi`, `coreLoading`, `cutMode`,
+`exitToMenuMode`, `gameBailFromGameLoop`, `gameCameraTask__Fv`,
+`gameClear__Fi`, `gameCombatCamera`, `gameControlPaused`,
+`gameDrawWorld__Fv`, `gameInitSkillRamps__Fv`, `gameIsPaused__Fv`,
+`gameMaybeSaveConfig__Fii`, `gameMultiPlayerMarkersOn`,
+`gameNetReplicateQuestItems`, `gamePause`, `gameResetGameState__Fv`,
+`gameReverseCameraYaw`, `gameSetDefaultGameConfig__Fi`,
+`jumpGateJumping__Fv`, `mainMenu`.
+
+Opened: `DLG_Clear__Fv`, `Reset__6Cameraii`, `SetMode__6Camerai`,
+`Update__6Camera`, `_listCheckAllIntegrity__FPCci`, `bossMeterAlpha`,
+`bossMeterCurrent`, `bossMeterMax`, `cdClear__Fv`, `cheatOn`,
+`commInit__Fv`, `coreInterfaceBrightness`, `cutClear__Fv`,
+`drawAutoMap__Fv`, `drawDome__Fv`, `drawListClear__Fv`, `floorClear__Fv`,
+`fxClear__Fv`, `gameAutoMapMode`, `gameCameraShake`, `gameDeathTimer`,
+`gameDeathTimerSingle`, `gameHidePlayers`, `gameLineClear__Fv`,
+`gameLineDebugDraw__Fv`, `gameShowEnemiesInMap`, `helpMessageOn`,
+`hudClearInfoMessage__Fv`, `hudFinishGold__Fv`, `hudNoController`,
+`inventoryReset__Fv`, `jumpGateClear__Fv`, `jumping`,
+`lastNmLocalPlayersAlive`, `levelSeeds`, `lightClear__Fv`,
+`localNmPlayersAlive`, `memCheckHeapReal__FPCci`, `multiHelpMessageOn`,
+`objectClear__Fv`, `padClear__Fv`, `playerClearSpellEffect__Fv`,
+`playerGlobalInit__Fv`, `removeAllQuestsFromLog__Fv`,
+`scriptClearAllGameState__Fv`, `scriptClear__Fv`, `scriptSuperClear__Fv`,
+`shopActiveFrame`, `skills`, `textInit__Fv`, `textureClear__Fv`, `world`,
+`worldAllocateWaterPatches__Fi`, `worldClear__Fv`,
+`worldDrawWorld__FP12_worldHeader`, `worldReset__FP12_worldHeader`,
+`worldSetViewCenter__Fv`.
+
+The notes list about a hundred opened names. The rest were already
+unresolved or already defined on this tip, including `DLG_Active__Fv`,
+`MC_GameConfig`, `MC_SaveConfig__Fv`, `coreLoadingScreenRunning`,
+`engineBrightnessCorrection`, `floorDrawEnable`, `gameNoDraw`,
+`gameOver`, `netNetworkMode`, `objectDrawEnable`, and `soundMusicVolume`.
+839 function bodies, 1059 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1311,6 +1369,19 @@ object for byte 8 of the command table already published as
 other. Decide whether the DMA word should become a view inside the command
 state object.
 
+`cutMode` is now the 1-byte ELF name from game-state. world-state still
+defines `norrath_game_cut_mode_byte_view` and data-views still defines
+`norrath_actor_view_484318` for the same address as separate objects.
+Decide whether the three should be one symbol.
+
+`coreLoading` is now the 4-byte ELF name from game-state. world-state still
+defines `norrath_game_core_loading_word_view` for the same address as a
+separate object. Decide whether they are one symbol.
+
+`gameBailFromGameLoop` is now the 4-byte ELF name from game-state.
+scheduler still defines `norrath_game_bail_from_loop_view` for the same
+address as a separate object. Decide whether they are one symbol.
+
 ## Disagreements
 
 The symbol disagreements are the items under Needs a decision. No selected
@@ -1322,7 +1393,7 @@ Every function and data object added by math, audio, memory, object-infra,
 megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
 engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
 scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
-frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, and sound-rpc-views. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, and game-state. The vehicle constructor is authored and not in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
