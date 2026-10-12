@@ -59,6 +59,15 @@ void* norrath_lump_find_resource(char* lump_name, char* resource_name);
 long long norrath_script_get_game_state(char* name);
 extern unsigned char norrath_ctors_ant_lantern_view_44cc28[];
 extern unsigned char norrath_ctors_ant_lantern_view_46d070[];
+unsigned norrath_construct_FireFly(void* object, const void* point, short type, char** arguments);
+unsigned norrath_construct_FireBeetle(void* object, const void* point, short type, char** arguments, int flag);
+void norrath_actor_animation_initialize(void* state);
+void norrath_actor_animation_randomize_time(void* state);
+void norrath_actor_animation_add(void* state, void* header, int flags);
+unsigned norrath_actor_finish_construction(void* object);
+extern unsigned char norrath_ctors_ant_lantern_view_44bdb0[];
+extern unsigned char norrath_ctors_ant_lantern_view_481540[];
+extern unsigned char norrath_ctors_ant_lantern_view_481544[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
