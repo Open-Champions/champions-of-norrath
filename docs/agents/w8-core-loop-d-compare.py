@@ -132,8 +132,14 @@ def symbol_address(elf, name):
 
 # Argument registers that carry a value; the others hold leftovers and are not logged.
 ARGC = {'memCheckHeapReal__FPCci': 2, 'strncmp': 3, 'strcmp': 2, 'strlen': 1, 'strrchr': 2, 'memcpy': 3,
-        'memmove': 3, 'scePrintf': 2, 'initFile__FPcPvi': 3, 'animMapAnimationSounds__FP15AnimationHeader': 1}
-STRING_ARGS = {'memCheckHeapReal__FPCci': (0,), 'scePrintf': (0,), 'strncmp': (0, 1), 'strcmp': (0, 1), 'strlen': (0,), 'strrchr': (0,)}
+        'memmove': 3, 'scePrintf': 2, 'strcpy': 2, 'memset': 3, 'textGetString__FPc': 1,
+        'engineRemoveTask__FPFv_v': 1, 'worldPlotRouteProcess__Fi': 1, 'DLG_GetDialogCreature__Fv': 0,
+        'objectFindAnimation__FP10GameObjectPc': 2, 'animInitAnimation__FP15AnimationHeader': 1,
+        'animAddToEnd__FP14AnimationStateP15AnimationHeaderi': 3,
+        'animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi': 3, 'playerRecallSpell__Fv': 0,
+        'playerCheckRecallHotKey__Fv': 0, 'initFile__FPcPvi': 3, 'animMapAnimationSounds__FP15AnimationHeader': 1}
+STRING_ARGS = {'textGetString__FPc': (0,), 'objectFindAnimation__FP10GameObjectPc': (1,), 'strcpy': (1,),
+               'memCheckHeapReal__FPCci': (0,), 'scePrintf': (0,), 'strncmp': (0, 1), 'strcmp': (0, 1), 'strlen': (0,), 'strrchr': (0,)}
 
 
 def _memcpy(mm, a, cstr):
@@ -169,7 +175,17 @@ def _strrchr(mm, a, cstr):
     return 0 if k < 0 else a[0] + k
 
 
-LIBC = {'memcpy': _memcpy, 'memmove': _memcpy, 'strlen': _strlen, 'strncmp': _strncmp, 'strcmp': _strcmp,
+def _strcpy(mm, a, cstr):
+    mm.write(a[0], cstr(mm, a[1], 1 << 16) + b'\0')
+    return a[0]
+
+
+def _memset(mm, a, cstr):
+    mm.write(a[0], bytes([a[1] & 0xFF]) * a[2])
+    return a[0]
+
+
+LIBC = {'strcpy': _strcpy, 'memset': _memset, 'memcpy': _memcpy, 'memmove': _memcpy, 'strlen': _strlen, 'strncmp': _strncmp, 'strcmp': _strcmp,
         'strrchr': _strrchr}
 
 
@@ -197,6 +213,7 @@ def run_once(image, entry, stub_addrs, sc):
             shown = list(args)[:ARGC.get(name, 4)]
             for idx in STRING_ARGS.get(name, ()):
                 shown[idx] = cstr(mm, args[idx])
+            shown = ['stack' if isinstance(v, int) and STACK_LO <= v < STACK_HI else v for v in shown]
             mm.log.append((name, tuple(shown), mm.f[12], mm.f[13]))
             if name in LIBC:
                 mm.setr32(2, LIBC[name](mm, args, cstr))
@@ -330,11 +347,149 @@ def scenario_init_lump(rng, syms):
             'stub_ret': {'initFile__FPcPvi': [rng.choice([0, 0x20, 0x40, 0x80, 0xc0, 0x100, 0x180, 0x1f, 0x7f]) for _ in range(8)]}}
 
 
+def put_player_objects(rng, mem, syms, objs, nulls=True):
+    base = sym(syms, 'player')
+    for i in range(4):
+        v = rng.choice(objs) if not (nulls and rng.random() < 0.2) else 0
+        put32(mem, base + 23984 * i + 21872, v)
+
+
+def scenario_set_object_vis(rng, syms):
+    mem = {}
+    objs = [SCN + 0x100 * k for k in range(1, 5)]
+    for o in objs:
+        fill(rng, mem, o, 0x40)
+        for k in range(3):
+            putf(mem, o + 16 + 4 * k, float(rng.randrange(-50, 50)))
+    cam = SCN + 0x800
+    fill(rng, mem, cam, 0x80)
+    put32(mem, cam + 52, rng.choice([0, 1, 1, 2, 0xFFFFFFFF]))
+    put32(mem, sym(syms, 'gameCam'), cam)
+    mem[sym(syms, 'netNetworkMode')] = rng.choice([0, 1, 0xFF])
+    mem[sym(syms, 'cutMode')] = rng.choice([0, 1, 0xFF])
+    put32(mem, sym(syms, 'nmPlayers'), rng.choice([-1, 0, 1, 2, 3, 4]))
+    put_player_objects(rng, mem, syms, objs)
+    fill(rng, mem, sym(syms, 'objectVisPoints'), 48)
+    mem[sym(syms, 'objectVisCount')] = rng.randrange(256)
+    mem[sym(syms, 'objectVisUseCamCenter')] = rng.randrange(256)
+    dlg = rng.choice([0, 0, objs[0], objs[1]])
+    return {'mem': mem, 'stub_ret': {'DLG_GetDialogCreature__Fv': [dlg]}}
+
+
+def scenario_init_animation(rng, syms):
+    mem = {}
+    creature = SCN + 0x100
+    fill(rng, mem, creature, 0x400)
+    mem[creature + 292] = rng.choice([0, 1, 2, 3, 0xFF, 0xFE])
+    put32(mem, sym(syms, 'dialogCreature'), rng.choice([0, creature, creature]))
+    put32(mem, sym(syms, 'dialogIdleAnimation'), rng.choice([0, SCN + 0x2000]))
+    mem[sym(syms, 'animUseBuffer')] = rng.choice([0, 1, 2, 0xFF])
+    base = sym(syms, 'anim')
+    for k in range(-1, 3):
+        row = base + 16 * k
+        put32(mem, row, SCN + 0x2100 + 0x40 * (k + 1))
+        put32(mem, row + 4, rng.choice([0, 0, 1, 7]))
+        put32(mem, row + 12, rng.choice([0, 1, 100, 1000, 0xFFFFFFF0]))
+    return {'mem': mem, 'stub_ret': {'objectFindAnimation__FP10GameObjectPc': [rng.choice([0, SCN + 0x2200])]}}
+
+
+def scenario_someone_in_shop(rng, syms):
+    mem = {}
+    objs = [SCN + 0x100 * k for k in range(1, 5)]
+    for o in objs:
+        fill(rng, mem, o, 0x20)
+        put32(mem, o + 12, rng.choice([0, 0x800000, 0xFF7FFFFF, 0xFFFFFFFF, 0x7FFFFF]))
+    mem[sym(syms, 'netNetworkMode')] = rng.choice([0, 1, 0xFF])
+    put32(mem, sym(syms, 'nmPlayersAlive'), rng.choice([-1, 0, 1, 2, 3, 4]))
+    for i in range(4):
+        put32(mem, sym(syms, 'playersAlive') + 4 * i, rng.randrange(4))
+    put_player_objects(rng, mem, syms, objs, nulls=False)
+    return {'mem': mem}
+
+
+def scenario_jump_gate_clear(rng, syms):
+    mem = {}
+    put32(mem, sym(syms, 'jumping'), rng.choice([0, 0, 1, 0x100, 0xFFFFFFFF]))
+    return {'mem': mem}
+
+
+CONFIG_INTS = ['soundStereoEnable', 'padVibrationEnable', 'DLG_ShowDialogText', 'subtitlesOn', 'damageDisplayOn',
+               'g_BloodLevel', 'gameMultiPlayerMarkersOn', 'gameCombatCamera', 'gameReverseCameraYaw', 'chatOn',
+               'commEnable', 'commEcho']
+CONFIG_FLOATS = ['soundSfxVolume', 'soundMusicVolume', 'engineBrightnessCorrection', 'commRecord', 'commThresh',
+                 'commPlayback']
+
+
+def scenario_config(rng, syms):
+    mem = {}
+    for n in CONFIG_INTS + CONFIG_FLOATS:
+        put32(mem, sym(syms, n), rng.randrange(1 << 32))
+    fill(rng, mem, sym(syms, 'pushedConfig'), 304)
+    return {'mem': mem}
+
+
+def scenario_reset_text_body(rng, syms):
+    mem = {}
+    fill(rng, mem, sym(syms, 'textBody'), 2048)
+    put32(mem, sym(syms, 'textBodyLen'), rng.randrange(1 << 32))
+    return {'mem': mem}
+
+
+def scenario_long_level_name(rng, syms):
+    mem = {}
+    key = rng.choice([b'', b'a', b'ab', b'level1', b'ntsc_level', b'x:y:z', b'abcdefghij'])
+    for j, c in enumerate(key + b'\0'):
+        mem[SCN + j] = c
+    results = []
+    for k in range(5):
+        o = SCN + 0x100 + 0x20 * k
+        fill(rng, mem, o, 0x20)
+        mem[o + 4] = rng.choice([0x3a, 0x3a, 0x41, 0x00])
+        mem[o + 5] = 0
+        results.append(o)
+    # A null result is not generated: the image would read address 4 and carry on, the source does not support it.
+    return {'mem': mem, 'args': [SCN], 'stub_ret': {'textGetString__FPc': results}, 'sentinel_ok': True}
+
+
+def scenario_plot_route(rng, syms):
+    mem = {}
+    mem[sym(syms, 'cutMode')] = rng.choice([0, 1, 0xFF, 2])
+    return {'mem': mem}
+
+
+def scenario_none(rng, syms):
+    return {'mem': {}}
+
+
 SPECS = {
     'makeUnscrambleTable__Fv': dict(src=['w8-core-loop-d-unscramble-table/unscramble_table.cpp'],
                                     symbol='makeUnscrambleTable__Fv', scenario=scenario_unscramble),
     'pan__FG6Point3ffPfT3': dict(src=['w8-core-loop-d-pan/pan.cpp'], symbol='pan__FG6Point3ffPfT3',
                                  scenario=scenario_pan),
+    'gameSetObjectVis__Fv': dict(src=['w8-core-loop-d-set-object-vis/set_object_vis.cpp'],
+                                 symbol='gameSetObjectVis__Fv', scenario=scenario_set_object_vis),
+    'initAnimation__Fv': dict(src=['w8-core-loop-d-init-animation/init_animation.cpp'], symbol='initAnimation__Fv',
+                              scenario=scenario_init_animation),
+    'gameSomeoneInShop__Fv': dict(src=['w8-core-loop-d-someone-in-shop/someone_in_shop.cpp'],
+                                  symbol='gameSomeoneInShop__Fv', scenario=scenario_someone_in_shop, returns=True),
+    'jumpGateClear__Fv': dict(src=['w8-core-loop-d-jump-gate-clear/jump_gate_clear.cpp'], symbol='jumpGateClear__Fv',
+                              scenario=scenario_jump_gate_clear),
+    'gamePushConfig__Fv': dict(src=['w8-core-loop-d-config-stack/push_config.cpp'], symbol='gamePushConfig__Fv',
+                               scenario=scenario_config),
+    'gamePopConfig__Fv': dict(src=['w8-core-loop-d-config-stack/pop_config.cpp'], symbol='gamePopConfig__Fv',
+                              scenario=scenario_config),
+    'resetTextBody__Fv': dict(src=['w8-core-loop-d-reset-text-body/reset_text_body.cpp'], symbol='resetTextBody__Fv',
+                              scenario=scenario_reset_text_body),
+    'getLongLevelName__FPc': dict(src=['w8-core-loop-d-long-level-name/long_level_name.cpp'],
+                                  symbol='getLongLevelName__FPc', scenario=scenario_long_level_name, returns=True),
+    'plotRouteTask__Fv': dict(src=['w8-core-loop-d-plot-route-task/plot_route_task.cpp'], symbol='plotRouteTask__Fv',
+                              scenario=scenario_plot_route),
+    'gameMiscTaskSync__Fv': dict(src=['w8-core-loop-d-misc-task-sync/misc_task_sync.cpp'],
+                                 symbol='gameMiscTaskSync__Fv', scenario=scenario_none),
+    'paramRunning__Fv': dict(src=['w8-core-loop-d-param-running/param_running.cpp'], symbol='paramRunning__Fv',
+                             scenario=scenario_none, returns=True),
+    'rejectForeignModules__Fv': dict(src=['w8-core-loop-d-reject-foreign-modules/reject_foreign_modules.cpp'],
+                                     symbol='rejectForeignModules__Fv', scenario=scenario_none),
     'initLump__FPv': dict(src=['w8-core-loop-d-init-lump/init_lump.cpp'], symbol='initLump__FPv',
                           scenario=scenario_init_lump, returns=True),
 }

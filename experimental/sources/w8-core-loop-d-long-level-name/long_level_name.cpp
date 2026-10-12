@@ -5,7 +5,8 @@
 // (':'), the last character of the copy is cut off and the loop repeats;
 // otherwise the loop stops. After the loop a nonzero kept result is returned,
 // and a zero one (no pass ran) returns textGetString__FPc of the original name.
-// Unknown: the buffer is never bounds checked here, as in the image; the
+// A null result from textGetString__FPc is not supported: the image would read address 4 and continue,
+// here the unit-2 read assumes a valid entry. Unknown: the buffer is never bounds checked here, as in the image; the
 // meaning of a ':' at unit 2 of a returned string is not established.
 extern "C" char* strcpy(char*, const char*);
 extern "C" __SIZE_TYPE__ strlen(const char*);
