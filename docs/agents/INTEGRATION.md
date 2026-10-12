@@ -2490,3 +2490,4 @@ and no startup stage has executed.
 - 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
 - 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
 - 2026-10-12 13:10 CDT — `agents/simloop-services` —  unresolved imports
+- 2026-10-12 13:13 CDT — `agents/kernel-patches` —  unresolved imports
