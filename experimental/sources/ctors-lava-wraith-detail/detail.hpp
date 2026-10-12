@@ -105,6 +105,27 @@ unsigned norrath_construct_Scorpion(void* object, const void* point, short type,
 extern unsigned char norrath_ctors_lava_wraith_view_42b478[];
 extern unsigned char norrath_ctors_lava_wraith_view_44dfe0[];
 unsigned norrath_construct_Ulthork(void* object, const void* point, short type, char** arguments);
+int sprintf(char* destination, const char* format, ...);
+char* strcpy(char* destination, const char* source);
+unsigned norrath_object_add_to_delete_list(void* object);
+// Original objectFindAnimation__FP10GameObjectPc at 0x152cc8 and
+// animRandomizeTime__FP14AnimationState at 0x1601f8. Not defined here.
+void* norrath_object_find_animation(void* object, char* name);
+void norrath_actor_animation_randomize_time(void* state);
+extern unsigned char norrath_ctors_lava_wraith_view_44adb0[];
+extern unsigned char norrath_ctors_lava_wraith_view_4857e8[];
+extern unsigned char norrath_ctors_lava_wraith_view_4857f0[];
+extern unsigned char norrath_ctors_lava_wraith_view_472050[];
+extern unsigned char norrath_ctors_lava_wraith_view_4857f8[];
+extern unsigned char norrath_ctors_lava_wraith_view_485800[];
+extern unsigned char norrath_ctors_lava_wraith_view_485808[];
+extern unsigned char norrath_ctors_lava_wraith_view_485810[];
+extern unsigned char norrath_ctors_lava_wraith_view_485818[];
+extern unsigned char norrath_ctors_lava_wraith_view_485820[];
+extern unsigned char norrath_ctors_lava_wraith_view_485828[];
+extern unsigned char norrath_ctors_lava_wraith_view_472060[];
+extern unsigned char norrath_ctors_lava_wraith_view_472040[];
+unsigned norrath_construct_NPC(void* object, const void* point, short type, char** arguments);
 unsigned norrath_construct_Switch(void* object, const void* point, char** arguments);
 unsigned norrath_construct_RollDoor(void* object, const void* point, short type, char** arguments);
 extern unsigned char norrath_ctors_lava_wraith_view_42c630[];
