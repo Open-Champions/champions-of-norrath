@@ -44,6 +44,11 @@ def f2b(x):
     return struct.unpack('<I', struct.pack('<f', x))[0]
 
 
+def s32(v):
+    v &= M32
+    return v - (1 << 32) if v & 0x80000000 else v
+
+
 def put32(mem, a, v):
     v &= M32
     for i in range(4):
@@ -65,6 +70,10 @@ class Machine(crc.Machine):
     def cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
         if rs == 0x10 and fn == 4:
             self.setf(sa, self.fv(rt) ** 0.5)
+            return None
+        if rs == 0x10 and fn == 0x16:      # rsqrt.s fd, fs, ft = fs / sqrt(ft)
+            root = self.fv(rt) ** 0.5
+            self.setf(sa, self.fv(rd) / root if root else float('inf'))
             return None
         return super().cop1(ins, pc, rs, rt, rd, sa, fn, tgt)
 
@@ -88,6 +97,8 @@ def exe_symbols():
         parts = line.split()
         if len(parts) == 3:
             out.setdefault(parts[2], (int(parts[0], 16), parts[1]))
+    # The image has two local symbols named flareDelta (0x486cb4, 0x486d44); init__Fv writes the second.
+    out['flareDelta'] = (0x486D44, 'b')
     return out
 
 
@@ -130,6 +141,11 @@ def symbol_address(elf, name):
     raise SystemExit('missing symbol ' + name)
 
 
+# Stubs whose first single-float argument (f12) is meaningful; elsewhere f12 holds leftovers.
+FLOAT_ARGS = {'__3NPCG6Point3sPcN33ifPPc', 'animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi'}
+STACK_ARGS = {'__3NPCG6Point3sPcN33ifPPc'}
+FRET = {'icos__Fi': lambda a: float(((a[0] & 0xFFFF) % 17) - 8) / 8.0,
+        'isin__Fi': lambda a: float(((a[0] & 0xFFFF) % 13) - 6) / 4.0}
 # Argument registers that carry a value; the others hold leftovers and are not logged.
 ARGC = {'memCheckHeapReal__FPCci': 2, 'strncmp': 3, 'strcmp': 2, 'strlen': 1, 'strrchr': 2, 'memcpy': 3,
         'memmove': 3, 'scePrintf': 2, 'strcpy': 2, 'memset': 3, 'textGetString__FPc': 1,
@@ -137,8 +153,15 @@ ARGC = {'memCheckHeapReal__FPCci': 2, 'strncmp': 3, 'strcmp': 2, 'strlen': 1, 's
         'objectFindAnimation__FP10GameObjectPc': 2, 'animInitAnimation__FP15AnimationHeader': 1,
         'animAddToEnd__FP14AnimationStateP15AnimationHeaderi': 3,
         'animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi': 3, 'playerRecallSpell__Fv': 0,
-        'playerCheckRecallHotKey__Fv': 0, 'initFile__FPcPvi': 3, 'animMapAnimationSounds__FP15AnimationHeader': 1}
-STRING_ARGS = {'textGetString__FPc': (0,), 'objectFindAnimation__FP10GameObjectPc': (1,), 'strcpy': (1,),
+        'playerCheckRecallHotKey__Fv': 0,
+        'sprintf': 2, 'objectFindObject__FPc': 1, 'scriptGetGameState__FPc': 1, 'lumpFindResource__FPcT0': 2,
+        'animAdd__FP14AnimationStateP15AnimationHeaderi': 3, 'icos__Fi': 1, 'isin__Fi': 1,
+        'getHairAndSkin__Fi': 1, 'changeHairStyle__Fii': 2, 'changeHairColor__Fii': 2, 'changeBeard__Fii': 2,
+        'changeSkin__Fii': 2, 'objectRemoveFromGrid__FP10GameObject': 1, 'blockAlloc__Fi': 1,
+        '__3NPCG6Point3sPcN33ifPPc': 8, 'objectAddToRunList__FP10GameObject': 1, 'initPreSelect__Fv': 0,
+        'initNamePad__Fv': 0, 'initLightInfo__Fv': 0, 'initFile__FPcPvi': 3, 'animMapAnimationSounds__FP15AnimationHeader': 1}
+STRING_ARGS = {'sprintf': (1,), 'scriptGetGameState__FPc': (0,), 'lumpFindResource__FPcT0': (0, 1),
+               '__3NPCG6Point3sPcN33ifPPc': (3, 4, 5, 6), 'textGetString__FPc': (0,), 'objectFindAnimation__FP10GameObjectPc': (1,), 'strcpy': (1,),
                'memCheckHeapReal__FPCci': (0,), 'scePrintf': (0,), 'strncmp': (0, 1), 'strcmp': (0, 1), 'strlen': (0,), 'strrchr': (0,)}
 
 
@@ -185,7 +208,27 @@ def _memset(mm, a, cstr):
     return a[0]
 
 
-LIBC = {'strcpy': _strcpy, 'memset': _memset, 'memcpy': _memcpy, 'memmove': _memcpy, 'strlen': _strlen, 'strncmp': _strncmp, 'strcmp': _strcmp,
+def _sprintf(mm, a, cstr):
+    fmt = cstr(mm, a[1], 256).decode('latin1')
+    values = list(a[2:])
+    out = ''
+    i = 0
+    while i < len(fmt):
+        if fmt[i] == '%' and i + 1 < len(fmt):
+            kind = fmt[i + 1]
+            v = values.pop(0)
+            out += cstr(mm, v, 256).decode('latin1') if kind == 's' else str(s32(v))
+            i += 2
+        else:
+            out += fmt[i]
+            i += 1
+    data = out.encode('latin1') + b'\0'
+    mm.write(a[0], data)
+    mm.log.append(('sprintf-out', data))
+    return len(out)
+
+
+LIBC = {'sprintf': _sprintf, 'strcpy': _strcpy, 'memset': _memset, 'memcpy': _memcpy, 'memmove': _memcpy, 'strlen': _strlen, 'strncmp': _strncmp, 'strcmp': _strcmp,
         'strrchr': _strrchr}
 
 
@@ -209,12 +252,16 @@ def run_once(image, entry, stub_addrs, sc):
         def handler(mm):
             n = counts.get(name, 0)
             counts[name] = n + 1
-            args = [mm.g32(4 + i) for i in range(4)]
+            args = [mm.g32(4 + i) for i in range(8)]
             shown = list(args)[:ARGC.get(name, 4)]
+            if name in STACK_ARGS:
+                shown.append(mm.u32(mm.g32(29)))
             for idx in STRING_ARGS.get(name, ()):
                 shown[idx] = cstr(mm, args[idx])
             shown = ['stack' if isinstance(v, int) and STACK_LO <= v < STACK_HI else v for v in shown]
-            mm.log.append((name, tuple(shown), mm.f[12], mm.f[13]))
+            mm.log.append((name, tuple(shown), mm.f[12] if name in FLOAT_ARGS else 0, 0))
+            if name in FRET:
+                mm.f[0] = f2b(FRET[name](args))
             if name in LIBC:
                 mm.setr32(2, LIBC[name](mm, args, cstr))
                 return
@@ -230,6 +277,16 @@ def run_once(image, entry, stub_addrs, sc):
         m.f[i] = v
     m.run(entry)
     return m
+
+
+def _cstr(mm, a, limit=96):
+    out = b''
+    while len(out) < limit:
+        c = mm.u8(a + len(out))
+        if c == 0:
+            break
+        out += bytes([c])
+    return out
 
 
 def compare(name, runs):
@@ -256,7 +313,13 @@ def compare(name, runs):
                 return 2
             res.append(m)
         a, b = res
-        written = sorted(x for x in set(a.mem) | set(b.mem) if not STACK_LO <= x < STACK_HI)
+        skip = set()
+        words = []
+        for wn in spec.get('string_words', ()):
+            wa = syms[wn][0]
+            skip.update(range(wa, wa + 4))
+            words.append((wn, bytes(_cstr(a, a.u32(wa))), bytes(_cstr(b, b.u32(wa)))))
+        written = sorted(x for x in set(a.mem) | set(b.mem) if not STACK_LO <= x < STACK_HI and x not in skip)
         ra = [(x, a.u8(x)) for x in written]
         rb = [(x, b.u8(x)) for x in written]
         ret = (a.g32(2), b.g32(2)) if spec.get('returns') else (0, 0)
@@ -264,7 +327,7 @@ def compare(name, runs):
         total_calls += len(a.log)
         for entry in a.log:
             seen[entry[0]] = seen.get(entry[0], 0) + 1
-        if a.log != b.log or ra != rb or ret[0] != ret[1] or fret[0] != fret[1]:
+        if any(x[1] != x[2] for x in words) or a.log != b.log or ra != rb or ret[0] != ret[1] or fret[0] != fret[1]:
             bad += 1
             if bad <= 3:
                 print('MISMATCH seed %d' % seed)
@@ -461,6 +524,52 @@ def scenario_none(rng, syms):
     return {'mem': {}}
 
 
+def scenario_select_init(rng, syms):
+    mem = {}
+    lvl = sym(syms, 'levelName') + 0x51
+    for j, c in enumerate(rng.choice([b'kelsel', b'kelsel2', b'other', b'kelsel2x']) + b'\0'):
+        mem[lvl + j] = c
+    tgt = sym(syms, 'targets')
+    for i in range(10):
+        name = SCN + 0x3000 + 0x20 * i
+        for j, c in enumerate(b'nm%d' % i + b'\0'):
+            mem[name + j] = c
+        put32(mem, tgt + 636 * i, name)
+    info = sym(syms, 'playerSelectInfo')
+    fill(rng, mem, info, 164)
+    for k in range(4):
+        mem[info + 41 * k + 32] = rng.randrange(10)
+        mem[info + 41 * k + 35] = rng.randrange(10)
+    objs = []
+    for i in range(14):
+        o = SCN + 0x100 * i
+        fill(rng, mem, o, 0x100)
+        mem[o + 56] = rng.randrange(256)
+        mem[o + 57] = rng.randrange(256)
+        for k in range(3):
+            putf(mem, o + 16 + 4 * k, float(rng.randrange(-300, 300)))
+        objs.append(o)
+    blocks = [rng.choice([0, SCN + 0x2000 + 0x400 * k]) for k in range(4)]
+    for b in blocks:
+        if b:
+            fill(rng, mem, b + 160, 8)
+    put32(mem, sym(syms, 'nmPlayers'), rng.choice([-1, 0, 1, 2, 3, 4]))
+    mem[sym(syms, 'playerSelectCount')] = rng.choice([0, 0, 1, 3])
+    mem[sym(syms, 'playerSelectStartPlayer')] = rng.randrange(4)
+    mem[sym(syms, 'playerSelectEnforce')] = rng.choice([0, 1, 0xFF])
+    mem[sym(syms, 'startExitFade')] = rng.randrange(256)
+    mem[sym(syms, 'playerSelectSuccessful')] = rng.randrange(256)
+    for n in ('requestToExit', 'needEnforce', 'curPlayer', 'engineDisable30fps', 'hermiteTime', 'headerAlpha',
+              'hermDeltaScale', 'flareDelta', 'bodyAlpha', 'npcLumpName'):
+        put32(mem, sym(syms, n), rng.randrange(1 << 32))
+    need = rng.random() < 0.4
+    return {'mem': mem, 'stub_ret': {
+        'objectFindObject__FPc': objs,
+        'scriptGetGameState__FPc': [1 if need else 0] * 11,
+        'lumpFindResource__FPcT0': [rng.choice([0, SCN + 0x2800, SCN + 0x2900]) for _ in range(10)],
+        'blockAlloc__Fi': blocks}}
+
+
 SPECS = {
     'makeUnscrambleTable__Fv': dict(src=['w8-core-loop-d-unscramble-table/unscramble_table.cpp'],
                                     symbol='makeUnscrambleTable__Fv', scenario=scenario_unscramble),
@@ -490,6 +599,8 @@ SPECS = {
                              scenario=scenario_none, returns=True),
     'rejectForeignModules__Fv': dict(src=['w8-core-loop-d-reject-foreign-modules/reject_foreign_modules.cpp'],
                                      symbol='rejectForeignModules__Fv', scenario=scenario_none),
+    'init__Fv': dict(src=['w8-core-loop-d-select-init/select_init.cpp'], symbol='init__Fv',
+                     scenario=scenario_select_init, string_words=['npcLumpName']),
     'initLump__FPv': dict(src=['w8-core-loop-d-init-lump/init_lump.cpp'], symbol='initLump__FPv',
                           scenario=scenario_init_lump, returns=True),
 }
