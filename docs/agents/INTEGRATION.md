@@ -1597,6 +1597,57 @@ Opened: `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
 bodies, 1183 authored inputs, zero COMMON. 214 tool tests passed. No EE
 or game execution.
 
+## agents/natives-b
+
+Merged. The middle third of the retail `amx*` natives: all 40 units
+were selected with fresh `input_order` values 1185 through 1224. Each
+unit compiles under `authored_cpp` with the hash the notes claim, and
+each has a host test that returns failure; all 40 passed on this
+machine. No game binary or disassembly listing was committed. The notes
+separate observed retail names and extents from inferred call shapes.
+The two file-local helpers in the random-item unit are recorded
+alongside it.
+
+| | |
+|---|---|
+| Before | 1011 |
+| After | 1002 |
+| Closed | 40 |
+| Opened | 31 |
+
+Closed: the 40 `amx*__FP5__amxPi` natives named in
+`docs/agents/natives-b.md` (`amxGetSaveInhibit` through
+`amxPutNPCInVehicle`).
+
+Opened: `AddNPCDriver__7VehicleP3NPC`, `DLG_NewWorld`,
+`SetHold__7Vehiclei`,
+`__11LightEffectG6Point3ffffffffffffP10GameObjecti`,
+`__19ParticleMorphEffectP8CreatureT1`,
+`__19SpellHornOmenEffectiP8CreatureP5Skill`,
+`__22SpellPlanarSteelEffectiP8CreatureP5Skill`,
+`__8ItemPropG6Point3PQ24item11descriptioni`,
+`addItemToInventory__FiPQ24item11descriptioni`,
+`addSpell__8CreatureP5Spell`, `blockAlloc__Fi`,
+`createRandom__4itemPQ24item11descriptioniiii`,
+`create__4itemPcPQ24item11descriptionii`, `currentRunningObject`,
+`doNewWorld__FPc`, `equipItem__FiPQ24item11descriptioni`,
+`gameControlDontResetPause`, `gameDeathStart__Fi`,
+`gameItemTreasureRamp__Fv`, `gameLevelLoading`,
+`getWeight__4itemPQ24item11description`, `givePlayerExperience__Fii`,
+`hudFadeScreen__Fi`, `hudResetFadeScreen__Fi`,
+`objectFindObjectByClass__FPcPP10GameObjecti`,
+`objectRemoveFromGrid__FP10GameObject`, `playerGetFeatRank__Fix`,
+`playerPlaySound__Fii`, `playerRecomputeWeight__Fi`,
+`playerSelectionRunning__Fv`, `worldDifficulty`. The other names the
+notes leave open were already unresolved or already defined, including
+`gameBailFromGameLoop`, `gameControlPaused`, `gameHidePlayers`,
+`gameRecallInhibit`, `gameNetKick__Fi`, `gameDifficulty`, `levelName`,
+`netNetworkMode`, `nmPlayers`, the player/route views, `strcpy`,
+`strncmp`, `strstr`, `amx_GetAddr`, `amx_GetString`,
+`lumpFindResource__FPcT0`, and `lumpLoad__FPc`. 951 function bodies,
+1223 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -1737,7 +1788,7 @@ data words are data, not functions. The shared constructor header now
 covers Boat and AutoContainerLP. The eleven selected game-loop units
 (eight functions, five words) are in the link; the two unselected
 game-loop units are authored and not in the link. The twenty-five
-memcard-calls units are in the link. `engineInit__Ff`,
+memcard-calls units are in the link. The forty natives-b units are in the link. `engineInit__Ff`,
 `_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
 not run. The held AMX draft remains uncompiled. The three unselected
 save-net-anim view units, the two unselected render-lights border units,
