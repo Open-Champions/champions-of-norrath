@@ -49,6 +49,27 @@ def _cop1(self, ins, pc, rs, rt, rd, sa, fn, tgt):
 
 Machine.cop1 = _cop1
 
+# --- Machine additions: 64-bit variable shifts -----------------------------------
+_old_exe = Machine.exe
+
+
+def _exe(self, ins, pc):
+    if (ins >> 26) == 0 and (ins & 63) in (0x14, 0x16, 0x17):
+        fn = ins & 63
+        rs, rt, rd = (ins >> 21) & 31, (ins >> 16) & 31, (ins >> 11) & 31
+        amount = self.g32(rs) & 63
+        if fn == 0x14:
+            self.setr(rd, self.r[rt] << amount)
+        elif fn == 0x16:
+            self.setr(rd, (self.r[rt] & cr.M64) >> amount)
+        else:
+            self.setr(rd, cr.s64(self.r[rt]) >> amount)
+        return None
+    return _old_exe(self, ins, pc)
+
+
+Machine.exe = _exe
+
 OBJ = 0x30000000
 OBJ_SIZE = 0x400
 OTHER = 0x30010000
@@ -138,6 +159,8 @@ def make_stub(name, kinds, ret, rng):
             val = rng.choice(pool)
             if kind == 'i':
                 m.setr32(2, val)
+            elif kind == 'q':
+                m.setr(2, val)
             elif kind == 'f':
                 m.f[0] = cr.f2b(float(val))
     return handler
@@ -345,6 +368,19 @@ def sc_auto_passable(rng):
             'compare': whole_object() + list(range(0x4844A0, 0x4844A4))}
 
 
+def sc_auto_set_state(rng):
+    mem = new_object(rng)
+    vtable(rng, mem, {152: (VSTUB, rng.choice([0, 8, -8, 0x70]))})
+    put32(mem, OBJ + 288, rng.choice([5, 8, 34, 40, 0, 0xFFFFFFFF, 3]))
+    for i in range(0, 42):
+        # keep table words inside the compared 0x400 object: 296 + 8*i < 0x400 only for i < 96
+        put32(mem, OBJ + 296 + 8 * i, rng.choice([0, 0, 0x31000000 + 16 * i]))
+        put32(mem, OBJ + 300 + 8 * i, rng.randrange(1 << 32))
+    state = rng.choice([0, 1, 2, 3, 4, 7, 30, 31, 32, 33, 39, -1, -3, 5])
+    return {'mem': mem, 'args': [OBJ, state], 'compare': whole_object(),
+            'vstubs': {VSTUB: ('virt152', ['o', 'i'], None)}}
+
+
 W = 'w8-actor-virtuals-c-'
 reg('saveActivate__9Savepoint', W + 'save-activate/save_activate.cpp', sc_save_activate, {})
 reg('setState__10Teleporteri', W + 'teleporter-set-state/set_state.cpp', sc_obj_int, {})
@@ -363,6 +399,11 @@ reg('setPassableState__8HackDoorb', W + 'hack-door-passable/set_passable_state.c
 reg('setPassableState__8AutoPropb', W + 'auto-prop-passable/set_passable_state.cpp', sc_auto_passable,
     {'worldSetDoorCollision__FP12_worldHeaderii': (['i', 'i', 'i'], ('i', [0, 1, 99])),
      'worldMoveDoor__FP12_worldHeaderiG6Point3s': (['i', 'i', 's12', 'i'], ('i', [0, 5, 77]))})
+
+reg('setState__8AutoPropi', W + 'auto-prop-set-state/set_state.cpp', sc_auto_set_state,
+    {'modelGetActiveChunks__FP12_modelHeaderi': (['i', 'i'], ('q', [0, 1, 0x8877665544332211, 0xFFFFFFFFFFFFFFFF, 0x80000000])),
+     'animAdd__FP14AnimationStateP15AnimationHeaderi': (['o', 'i', 'i'], None),
+     'animSetToEnd__FP14AnimationState': (['o'], None)})
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
