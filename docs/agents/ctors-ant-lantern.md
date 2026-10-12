@@ -37,8 +37,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/cyclops.cpp` | `norrath_construct_Cyclops` | `__7CyclopsG6Point3sPPci` `0x202678`, 912 bytes | 1508 | `d43a3d3d210f1a9bb734209343f92db5f60b9dcc86c92f6d94586609296151a1` |
 | `ctors-ant-lantern-constructors/fire_beetle.cpp` | `norrath_construct_FireBeetle` | `__10FireBeetleG6Point3sPPci` `0x20ff48`, 1008 bytes | 1652 | `2c2b5af6cc978ec2b8280576a0cb391a4300899fa02606f5703de2ef2b4359de` |
 | `ctors-ant-lantern-constructors/auto_chest.cpp` | `norrath_construct_AutoChest` | `__9AutoChestPcG6Point3sPPc` `0x21eee8`, 704 bytes | 1052 | `a921d51b7df7006ca1833c20c21241f11d0904850229977bcfb89a5c8bc83d44` |
+| `ctors-ant-lantern-constructors/auto_prop.cpp` | `norrath_construct_AutoProp` | `__8AutoPropPcG6Point3sPPc` `0x220278`, 1328 bytes | 2260 | `49f65e85cf20e80c14afcd665cb421f501a359c50e5d7604e30acafbed63ec82` |
 
-`detail.hpp` sha256 `686f60decf6914233e00f0d5e69cc21bda217c48b351efbd22928ba7e4448777`.
+`detail.hpp` sha256 `472ddb31f507bf5c011c300d8851668932f5b49f76ae419a5e010c62e8473fd8`.
 
 ## Build-plan entries needed
 
@@ -290,6 +291,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "auto_prop.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/auto_prop.cpp",
+  "sha256": "49f65e85cf20e80c14afcd665cb421f501a359c50e5d7604e30acafbed63ec82",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_AutoProp",
+      "compiled_body_bytes": 2260
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -334,9 +354,11 @@ Observed `__10FireBeetleG6Point3sPPci` at `0x20ff48`, 1008 bytes. `eRand` first,
 
 Observed `__9AutoChestPcG6Point3sPPc` at `0x21eee8`, 704 bytes. Calls AutoObject (`__10AutoObjectPcG6Point3sPPc` at `0x21e548`) with the name, a point snapshot, the sign-extended short and the argument list; stores flag bits `0x00100018` and vtable `0x44ece8` (`_vt$9AutoChest`). A mode tag (`0x4854c8`) matched against three texts sets byte 240 to 0/1/2; a text compared with the name sets word 236; the roll and class logic is the same as Chest (tags at `0x4854f0`/`0x4854f8`, levelFlags, treasure ramp) with an extra clear when a further roll is below 10000 and a name text at `0x46fd38` that clears byte 228. The name at +76 plus the suffix at `0x485500` is looked up in the lump named at +109 and stored at +244; the eight-byte chunk result is stored at +200. V0 after the last call is not established; this returns 0.
 
+Observed `__8AutoPropPcG6Point3sPPc` at `0x220278`, 1328 bytes. AutoObject first, then vtable `0x44ec40` (`_vt$8AutoProp`), a block of integer-tag tests that set bits in the word at +284 (and one that sets `0x10000` in +12), a count tag at `0x485538` that selects either one lump lookup (+296) or a counted series of lookups at an 8-byte stride from +296 using two format texts, a ten-character string tag whose '1' characters set bit 0 of the words at +300+8i, two alternative "door" and "switch" tag paths (the door path queries the world at `0x4844a0` and stores a door index at +396 and a height single at +400), animation add with flag 6 plus set-to-end or flag 1 plus randomise, name copies with two suffixes at +216/+248, the eight-byte chunk result at +200, `setPassableState`, an optional `setState`, the slow run list, and two name comparisons that either edit the resource header at +296 in place or set byte 40 to 0xa8. The tag texts at these addresses read as property names; that is inferred, not confirmed. V0 is not established; this returns 0.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`
 
 ## Imports opened
 
@@ -362,11 +384,12 @@ Observed `__9AutoChestPcG6Point3sPPc` at `0x21eee8`, 704 bytes. Calls AutoObject
 Address views `norrath_ctors_ant_lantern_view_42bb08`, `_44bf90`, `_481160` through `_48117c` (eight singles). `setAnimEventFlags__8Creatureififififi` as for Demon.
 Address views `norrath_ctors_ant_lantern_view_42c308`, `_44bea0`, `_4814e4` through `_4814f8` (six singles), `_34b474` (an object pointer word). Reuses `norrath_creature_view_484cac` (already defined by data-views).
 `norrath_construct_AutoObject` — original `__10AutoObjectPcG6Point3sPPc` at `0x21e548`; not in this package, unresolved. `strcpy`, `strcat` — libc names. `norrath_factory_strcasecmp` replaces the original `strcasecmp` call. Address views `norrath_ctors_ant_lantern_view_44ece8`, `_46fd38`, `_4854c8` through `_4854f8` and `_485500`.
+`norrath_factory_sprintf`, `norrath_world_find_closest_door`, `norrath_world_set_door_collision`, `norrath_world_get_door_height`, `norrath_animation_set_to_end`, `norrath_actor_animation_add` — existing names. `setPassableState__8AutoPropb` (original at `0x221040`) and `setState__8AutoPropi` (original at `0x220f30`) — original names, not defined here. Address views `norrath_ctors_ant_lantern_view_44ec40`, `_470df8`, `_470e08`, `_470e18`, `_470e28`, `_470e38`, `_470e48`, `_470e58`, `_470e68`, `_470e78`, `_470e88`, `_470e98`, `_470ea8`, `_470eb8`, `_485480`, `_485488`, `_485530`, `_485538`, `_485540`, `_485548`, `_481704`, `_481708`.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
