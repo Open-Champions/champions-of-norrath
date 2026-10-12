@@ -2,8 +2,9 @@
 // 1. If the word cacheLoadCache is nonzero, call cdWait__Fv() until the byte
 //    cacheCdDone is nonzero (no call at all if it already is), then clear
 //    cacheLoadCache.
-// 2. Walk a 3520-byte table that the image symbol table does not name (here the
-//    import norrath_player_armor_cache_view_7cb770, address 0x007cb770): for
+// 2. Walk a 3520-byte table at 0x007cb770 (the image symbol table lists only a
+//    local symbol `cache` there, with no size; this unit imports it as
+//    norrath_player_armor_cache_view_7cb770, a name chosen here): for
 //    group 0..3 (stride 88 bytes), then slot 0..9 (stride 352 bytes), take the
 //    pointer at the start of the 88-byte element; if nonzero call memFree__FPv on
 //    it, store 0 there and 0 to the halfword at element+10. Then in every case

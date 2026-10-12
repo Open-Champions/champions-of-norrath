@@ -10,7 +10,8 @@
 //    6, 7; also skip kinds 2, 0, 3 when interfaceOn is zero and levelFlags has
 //    bit 0x10000000.
 //  - Slots 4, 10, 9, 11, 12, 13 use cache element n = 0, 1, 2, 3, 4, 5 of the
-//    unnamed table at 0x007cb770 (element = base + 352*n + 88*idx), slot 3 uses
+//    table at 0x007cb770 (local image symbol `cache`, no size; imported here as
+//    norrath_player_armor_cache_view_7cb770) (element = base + 352*n + 88*idx), slot 3 uses
 //    n = 9. With gamePlayersPresent nonzero and the word entry[48] nonzero: the
 //    name is built by getPicName__4itemPciPQ24item11description(buffer,
 //    rec[84], item), its last four characters are cut off (buffer[strlen-4] =
