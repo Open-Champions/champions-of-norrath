@@ -4568,3 +4568,4 @@ and no startup stage has executed.
 - 2026-10-12 15:28 CDT — `agents/w8-camera-vehicle-a` — 1537 unresolved imports
 - 2026-10-12 15:34 CDT — `agents/w8-camera-vehicle-b` — 1541 unresolved imports
 - 2026-10-12 15:37 CDT — `agents/w8-core-loop-e` — 1560 unresolved imports
+- 2026-10-12 15:38 CDT — `agents/w8-fx-particles` — 1538 unresolved imports
