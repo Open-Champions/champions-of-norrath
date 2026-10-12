@@ -282,6 +282,30 @@ def scenario_delete_ps(rng, seed):
 reg('P_DeleteParticleSystem__Fi', 0x180468, 'w8-fx-particles-delete-particle-system/delete_particle_system.cpp',
     scenario_delete_ps)
 
+# ---- lightPushSceneLights__FG6Point3iiiiiiiii ----
+SCENE = 0x4F4060
+SAVED_SCENE = 0x4F4098
+INTERFACE_MODE = 0x483AAC
+
+
+def scenario_push_scene_lights(rng, seed):
+    mem = {}
+    fill(rng, mem, SCENE, 56)
+    fill(rng, mem, SAVED_SCENE, 56)
+    put32(mem, INTERFACE_MODE, rng.choice([0, 0, 0, 1, 5, 0xFFFFFFFF, 0xFFFFFFFE, 10]))
+    point = ARENA
+    for k in range(3):
+        put32(mem, point + 4 * k, f2b(float(rng.choice([-3, -1, 0, 1, 2, 4, 7, 12])) + rng.choice([0.0, 0.5])))
+    if all(get32(mem, point + 4 * k) in (0, 0x80000000) for k in range(3)):
+        put32(mem, point, f2b(1.0))
+    ints = [rng.randrange(1 << 32) if rng.random() < 0.5 else rng.randrange(300) for _ in range(9)]
+    return {'mem': mem, 'args': [point] + ints[:7], 'stack': {0: ints[7], 8: ints[8]}}
+
+
+reg('lightPushSceneLights__FG6Point3iiiiiiiii', 0x13CCC8,
+    'w8-fx-particles-light-push-scene-lights/light_push_scene_lights.cpp', scenario_push_scene_lights,
+    stubs={'transformSceneLightTask__Fv': (0, 0, 0), 'lightResetOptionalParams__Fv': (0, 0, 0)})
+
 
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
