@@ -131,6 +131,7 @@ def symbol_address(elf, name):
 ALIASES = {
     'norrath_game_object_construct': '__10GameObjectG6Point3PQ210GameObject11resourceMapPPc',
     'norrath_actor_add_run_list': 'objectAddToRunList__FP10GameObject',
+    'norrath_light_add': 'lightAdd__FP5Light',
 }
 
 
@@ -138,7 +139,7 @@ def resolve(name):
     return exe_symbols()[ALIASES.get(name, name)]
 
 
-def make_stub(name, sig, rng, log, answers):
+def make_stub(name, sig, rng, log, answers, effects=None):
     """Logging stub. sig = (int_args, float_args, stack_words[, peeks]).
 
     peeks is a tuple of (argument register index, byte count): the bytes the
@@ -156,6 +157,8 @@ def make_stub(name, sig, rng, log, answers):
         stack = [norm(m.u32(sp + 8 * i)) for i in range(n_stack)]
         seen = tuple(bytes(m.u8(m.g32(4 + r) + k) for k in range(n)) for r, n in peeks)
         log.append((name, tuple(ints), tuple(floats), tuple(stack), seen))
+        if effects and name in effects:
+            effects[name](m, rng)
         ret = answers.get(name)
         value = ret(rng) if callable(ret) else rng.randrange(1 << 32)
         m.setr32(2, value)
@@ -167,14 +170,14 @@ def stack_region(addr):
     return STACK - 0x10000 <= addr < STACK + 0x1000
 
 
-def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth):
+def run_image(image, entry, func_addrs, sigs, answers, scenario, seed, auth, effects=None):
     mem = dict(scenario['mem'])
     log = []
     rng = random.Random(seed ^ 0xface)
     stubs = {}
     m = Mach(Composite(image) if auth else image, mem, stubs, GP)
     for name, addr in func_addrs.items():
-        stubs[addr] = make_stub(name, sigs[name], rng, log, answers)
+        stubs[addr] = make_stub(name, sigs[name], rng, log, answers, effects)
     m.r[29] = STACK
     for i, v in enumerate(scenario.get('args', [])):
         m.r[4 + i] = v & M32
@@ -217,7 +220,7 @@ def compare(name, runs):
             try:
                 if is_auth:
                     sc = dict(sc, steps=sc.get('steps', 400000) * 6)
-                res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth))
+                res.append(run_image(image, e, fa, sigs, spec.get('answers', {}), sc, seed, is_auth, spec.get('effects')))
             except cr.Stop as exc:
                 if not is_auth and 'step limit' in str(exc):
                     skipped = True      # the original itself runs too long on this scenario
@@ -512,6 +515,31 @@ reg('setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v', 0x180820,
 reg('__11ParticleDefiiiiiiiifffiiiPFPv_v', 0x180D78, 'w8-fx-particles-particle-def-ctor/particle_def_ctor.cpp',
     scenario_set_particle_def,
     stubs={'setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v': (8, 3, 5)})
+
+# ---- __11AddParticleG6Point3PPc ----
+def effect_light_init(m, rng):
+    # lightInit decides whether there is a light: word +84 and the light inputs.
+    obj = m.g32(4)
+    m.w32(obj + 84, rng.choice([0, 0, 1, 0x1234]))
+    m.w32(obj + 324, rng.choice([0, 1, 5, 100, 0xFFFFFFFB]))
+    for off in (340, 344, 348, 352):
+        m.w32(obj + off, rng.randrange(1 << 32))
+
+
+def scenario_add_particle(rng, seed):
+    mem = {}
+    fill(rng, mem, ARENA, 0x180)
+    point = ARENA + 0x1000
+    for k in range(3):
+        put32(mem, point + 4 * k, f2b(float(rng.randrange(-500, 500))))
+    return {'mem': mem, 'args': [ARENA, point, ARENA + 0x2000]}
+
+
+reg('__11AddParticleG6Point3PPc', 0x222A40, 'w8-fx-particles-add-particle-ctor/add_particle_ctor.cpp',
+    scenario_add_particle, effects={'lightInit__11AddParticlePPc': effect_light_init},
+    stubs={'norrath_game_object_construct': (4, 0, 0, ((1, 12),)), '__11ParticleDef': (1, 0, 0),
+           'particleInit__11AddParticlePPc': (2, 0, 0), 'lightInit__11AddParticlePPc': (2, 0, 0),
+           'norrath_light_add': (1, 0, 0)})
 
 
 if __name__ == '__main__':
