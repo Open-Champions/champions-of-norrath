@@ -49,6 +49,7 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/froglock.cpp` | `norrath_construct_Froglock` | `__8FroglockG6Point3sPPcPc` `0x1ff820`, 880 bytes | 1272 | `59e3d75582c155db40d7bb5f6b60381fa182c16df76324ff787d87fcc6af687d` |
 | `ctors-ant-lantern-constructors/catapult.cpp` | `norrath_construct_Catapult` | `__8CatapultG6Point3sPPc` `0x28b858`, 944 bytes | 1388 | `659e3fef90dcd79d9500ba4a2404bb3cd64d326404c1bf67d8b34b1908a85d24` |
 | `ctors-ant-lantern-constructors/innoruuk.cpp` | `norrath_construct_Innoruuk` | `__8InnoruukG6Point3sPPc` `0x1f8c08`, 1348 bytes | 2244 | `484f751831e71432cfbcdb6586a9b7e28f67ecfd42e8d436c4d17a475054c24d` |
+| `ctors-ant-lantern-constructors/jump_gate.cpp` | `norrath_construct_JumpGate` | `__8JumpGateG6Point3sPPc` `0x282128`, 1016 bytes | 1424 | `e0386e99cf61bfac4fc779997d27908b6113d51ba81f6e71aaadcd71807aad86` |
 
 `detail.hpp` sha256 `cd986ca731afb73e3e71138e558c22fe4da689310f50f3909e85fa3d76dfaeb1`.
 
@@ -530,6 +531,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "jump_gate.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/jump_gate.cpp",
+  "sha256": "e0386e99cf61bfac4fc779997d27908b6113d51ba81f6e71aaadcd71807aad86",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_JumpGate",
+      "compiled_body_bytes": 1424
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -596,11 +616,13 @@ Observed `__8FroglockG6Point3sPPcPc` at `0x1ff820`, 880 bytes. The last argument
 
 Observed `__8CatapultG6Point3sPPc` at `0x28b858`, 944 bytes. GameObject with the table at `0x438eb8` and the argument list, vtable `0x4506b0` (`_vt$8Catapult`), several tag-driven fields (+240 single, +244 = 60 * a tag integer, +80 string pointer, byte 86 flag), run list, animation setup using a lump resource, and, when byte 86 is zero, a grid of 18 Blockers (columns -3..4, rows -1..1, middle row skipped for columns -2..3) placed at `object+16` offset by 22.5 along (icos, isin) of the short and of the short + 16384; each takes 0x4000 in +12 and 30.0 (38.0 when the column is negative) at +28 and is linked into the list at object+248. V0 is not established; this returns 0.
 
-Observed `__8InnoruukG6Point3sPPc` at `0x1f8c08`, 1348 bytes. Creature with table `0x42b870` and scale 10.0, vtable `0x44e550` (`_vt$8Innoruuk`), a light at object+1016 whose +32 and +40 fields hold 1.0 divided by 0.0 (an actual runtime single divide in the original; the reconstruction uses a volatile zero so the divide stays; the result on the R5900 is not observed here and the host check sees infinity), `lightAdd`, the four-halves / marker-bytes / zero-run block at 1160..1205, flag bits, many singles, an `invulnerable`-style tag at `0x46edb0` choosing one of two `setParameters` calls and +984, a level-text comparison at `0x485270` that clears +960, animation header from model+124, twelve `setAnimEventFlags` calls, the slow run list and `finishConstruction`'s V0. The tag text reads as a property name; that is inferred.
+Observed `__8InnoruukG6Point3sPPc` at `0x1f8c08`, 1348 bytes. Creature with table `0x42b870` and scale 10.0, vtable `0x44e550` (`_vt$8Innoruuk`), a light at object+1016 whose +32 and +40 fields hold 1.0 divided by 0.0 (an actual runtime single divide in the original; the reconstruction uses a volatile zero so the divide stays; the result on the R5900 is not observed here and the host check sees infinity), `lightAdd`, the four-halves / marker-bytes / zero-run block at 1160..1205, flag bits, many singles, a tag at `0x46edb0` choosing one of two `setParameters` calls and +984, a level-text comparison at `0x485270` that clears +960, animation header from model+124, twelve `setAnimEventFlags` calls, the slow run list and `finishConstruction`'s V0. The tag text reads as a property name; that is inferred.
+
+Observed `__8JumpGateG6Point3sPPc` at `0x282128`, 1016 bytes. GameObject (null map, argument list), vtable `0x4494c0` (`_vt$8JumpGate`), a light at object+256 filled before `lightAdd` (position copied to +304 is the snapshot lifted by 84.0 in z), flag bits, an optional `map::addIcon` call gated by a tag at `0x476b70`, byte 79 from a tag at `0x486040` which selects which of two nine-byte texts becomes the name at +80 (a string tag at `0x486048` can replace it), three formatted names (object+144 and two stack buffers) feeding two `lumpFindResource` lookups (+348, +352), light activation with 60.0 at +212 when byte 79 is nonzero, and a final block guarded by two globals that fills a 12-byte table at `0x429410` with `objectFindEmptySpot` results and a half table at `0x484f38` from a linear congruential generator held at `0x483e5c` (multiplier `0x19660d`, increment `0x3c6ef35f`), then stores 3 in the byte at `0x484ca8`. The names and the gate globals are not understood beyond that; their roles are unknown. V0 is not established; this returns 0.
 
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate`
 
 ## Imports opened
 
@@ -638,11 +660,12 @@ Address views `norrath_ctors_ant_lantern_view_42b1d0`, `_44c350`, `_46dbe0`, `_4
 `initAttackVariant__8Froglock` (original at `0x1ffb90`) — original name, not defined here. Address views `norrath_ctors_ant_lantern_view_42b958`, `_44bcc0`, `_46f120`, `_46f130`, `_48109c` through `_4810b0` (six singles).
 `norrath_list_oneway_link` (existing name), `norrath_construct_Blocker`, `icos__Fi`, `isin__Fi` (as for AutoContainer). Address views `norrath_ctors_ant_lantern_view_438eb8`, `_4506b0`, `_4777c8`, `_477798`, `_4777d8`, `_4825bc`, `_4825c0`, `_4860e0`, `_4860e8`, `_4860f0`, `_4860f8`.
 `norrath_light_add` (existing name) and `strcmp` as before. Address views `norrath_ctors_ant_lantern_view_42b870`, `_44e550`, `_46edb0`, `_485270`, `_480f4c` through `_480f84` (fifteen singles).
+`addIcon__3mapP6Point3iPciT3N33` (original at `0x15c320`), `lightActivate__FP5Light` (original at `0x13d2f8`), `lightDeactivate__FP5Light` (original at `0x13eb28`) and `objectFindEmptySpot__FG6Point3iiPc` (original at `0x13f2d0`, Point3 result through a hidden pointer) — original names, not defined here. Existing: `norrath_game_object_construct`, `norrath_light_add`, `norrath_actor_add_run_list`, `norrath_factory_sprintf`. Address views `norrath_ctors_ant_lantern_view_4494c0`, `_476b70`, `_476b80`, `_476b90`, `_486038`, `_486040`, `_486048`, `_486050`, `_486058`, `_486060`, `_48239c`, and the data views `_486030`, `_486da4`, `_484538`, `_483e5c`, `_484f38`, `_484ca8`, `_429410`.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`, `norrath_construct_FireBeetle`, `norrath_construct_AutoChest`, `norrath_construct_AutoProp`, `norrath_construct_AutoPropLP`, `norrath_construct_AutoContainer`, `norrath_construct_AntQueen`, `norrath_construct_Cthulu`, `norrath_construct_Arenabeast`, `norrath_construct_Ghoul`, `norrath_construct_Badger`, `norrath_construct_BlackWidow`, `norrath_construct_Froglock`, `norrath_construct_Catapult`, `norrath_construct_Innoruuk`, `norrath_construct_JumpGate` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
