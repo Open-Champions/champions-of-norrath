@@ -4114,6 +4114,55 @@ Opened: `GetZoomDistance__6Camera`, `SetZoomDistance__6Cameraf`, `_$_10GameObjec
 `playerLocalPlayerBusy__Fv`, `removePassenger__7Vehiclei`,
 `revealEntireMap__3mapv`, `vehicleCount`, `vehicleList`.
 
+## agents/w8-camera-vehicle-b
+
+Merged with two units removed (the branch notes carry the five summary
+sections). Twenty-two units were selected with fresh `input_order` values
+2086 through 2107 (22 emitted functions, not original-byte matches). All 22
+host checks build and exit 0 here (22 of 22). The units `lava-set` and
+`skul-set` (`set__11LavaTractor`, `set__8SkulBoat`) were **not** accepted:
+each unit's `host/contract.cpp` does `#include "table.inc"`, and no
+`table.inc` exists in the branch, so neither contract can be built (and the
+snapshot checker, which follows includes, fails on them). They have no
+runnable test, so the integrator deleted both unit directories in the merge
+commit's follow-up commit rather than recording files that cannot build; the
+branch history still has them, and a re-merge needs the missing table file
+committed. This is why the notes' count (24) does not apply. No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1673 function bodies, 2108 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1537 |
+| After | 1541 |
+| Closed | 22 |
+| Opened | 26 |
+
+Closed: `eventActivate__11LavaTractor`, `eventActivate__7Vehicle`,
+`eventCollisionGround__11LavaTractor`, `eventCollisionGround__7Vehicle`,
+`eventCollisionWall__11LavaTractorP6Point3T1`,
+`eventCollisionWall__7VehicleP6Point3T1`, `eventCurRPM__11LavaTractor`,
+`eventCurRPM__7Vehicle`, `eventDeActivate__11LavaTractor`,
+`eventDeActivate__7Vehicle`, `eventGasOff__11LavaTractor`,
+`eventGasOff__7Vehicle`, `eventGasOn__11LavaTractor`,
+`eventGasOn__7Vehicle`, `eventSteeringChange__11LavaTractor`,
+`eventSteeringChange__7Vehicle`, `msg_collision__7VehicleP10GameObject`,
+`msg_draw__7Vehicle`, `msg_getPokeName__7VehiclePUsi`,
+`msg_poke__7Vehiclei`, `msg_run__7Vehicle`, `refreshSettings__7Vehicle`.
+
+Opened: `addPassenger__7Vehiclei`, `backup__7Vehicle`,
+`buildCollisionInfo__7Vehicle`, `checkVehicleCollision__7Vehicle`,
+`checkWallCollision__7Vehicle`, `doAI__7Vehicle`, `doBrakes__7Vehicle`,
+`doDriveline__7Vehicle`, `doMisc__7Vehicle`, `doSteering__7Vehicle`,
+`doSuspension__7Vehicle`, `doThrottle__7Vehicle`, `dpcmp`, `dpsub`,
+`finalizePosition__7Vehicle`, `fptodp`, `gameButtonToIcon__Fi`,
+`gameLineUpdatePosition__FP17gameLinePathState`,
+`getNewRotAndPos__7VehicleP6Point3T1fii`, `haveRoom__7Vehicle`,
+`hudInfoMessageShowing__Fv`, `isPassenger__7Vehiclei`,
+`objectIsOffGrid__FP10GameObject`, `soundChangeSequenceVolume__Fif`,
+`soundMakePersistant__Fi`, `startForces__7Vehicle`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

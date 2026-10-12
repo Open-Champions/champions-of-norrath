@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2086,
+  "default_authored_inputs": 2108,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2831,7 +2831,29 @@
     "sources/w8-camera-vehicle-a-vehicle-global-init/global_init.cpp": "091db2b11bcd1d06bf2b4d505c53b09d329c7a8b88a38f2c54ae919ad7cc4244",
     "sources/w8-camera-vehicle-a-vehicle-typeinfo/typeinfo.cpp": "a5b9d3e4dfaf235f91f30aaffb755fee89d1654d8e69560e0ff387cbac01d593",
     "sources/w8-camera-vehicle-a-vehicle-unique-forces/unique_forces.cpp": "bd715202d919b3f8ccb627593e110855fa7bd05987463b2a2576f77f935d44d2",
-    "sources/w8-camera-vehicle-a-wheel-reset/reset_wheel.cpp": "dab70e61977498058a54e7b7df656b81997b0df3bd4fd0b84be30e0dc4e360d9"
+    "sources/w8-camera-vehicle-a-wheel-reset/reset_wheel.cpp": "dab70e61977498058a54e7b7df656b81997b0df3bd4fd0b84be30e0dc4e360d9",
+    "sources/w8-camera-vehicle-b-lava-event-activate/lava_event_activate.cpp": "9d0cdfdba1ad7630aae436abee4bab0b0758b9e346c28fd5261f43073db9da55",
+    "sources/w8-camera-vehicle-b-lava-event-collision-ground/lava_event_collision_ground.cpp": "79f98e202ff09ea6a0bc796a6d0402dba24251dd1b27b9c4f8fe2f5520b0b64b",
+    "sources/w8-camera-vehicle-b-lava-event-collision-wall/lava_event_collision_wall.cpp": "f42537198ddeab0006e9f75bdd077d059d096f055c4e56b95242da1515f8589f",
+    "sources/w8-camera-vehicle-b-lava-event-cur-rpm/lava_event_cur_rpm.cpp": "e15fc341e50d720be535890119e72405be661504ed666e974c711d58b7be057f",
+    "sources/w8-camera-vehicle-b-lava-event-deactivate/lava_event_deactivate.cpp": "2d2da957975fc77df67bb62288986700a80ba0e47cb2de7d0b1a5edd107d63cb",
+    "sources/w8-camera-vehicle-b-lava-event-gas-off/lava-event-gas-off.cpp": "ce6c72ee6d7abc4a651d1ea20b2a4aceba1d5225f707491cf5238be88e739b9e",
+    "sources/w8-camera-vehicle-b-lava-event-gas-on/lava-event-gas-on.cpp": "69da7f3ce15331ed6dc65228cb3aa193c929a34b0bd3fbfcf5c14061dc13224a",
+    "sources/w8-camera-vehicle-b-lava-event-steering-change/lava-event-steering-change.cpp": "090bbc89c367acf358ab287e5f0df8a90fe4d94d988a3acdd828d35ee8f2b458",
+    "sources/w8-camera-vehicle-b-vehicle-event-activate/vehicle-event-activate.cpp": "02baa7a6b3d0886b5e84d1adb870cff296254472120f23c73a73785d62ef8a7c",
+    "sources/w8-camera-vehicle-b-vehicle-event-collision-ground/vehicle-event-collision-ground.cpp": "8f7482049de685a3f409bb2f6a125cc4d5ca00d017d6b2ab0657f4ee2c7d372d",
+    "sources/w8-camera-vehicle-b-vehicle-event-collision-wall/vehicle-event-collision-wall.cpp": "efea49bff04690b1c6685519dfe400525838751a2ae3364a46a1669e72d72fff",
+    "sources/w8-camera-vehicle-b-vehicle-event-cur-rpm/vehicle-event-cur-rpm.cpp": "0582d2831648e5bbd8e70cee852cd9f4def228db2ea75b10b1e7e53ad5511d10",
+    "sources/w8-camera-vehicle-b-vehicle-event-deactivate/vehicle-event-deactivate.cpp": "feb8e874d5bde655ffff0167e58cfd577683afaa2532a5ea81785b755f9da092",
+    "sources/w8-camera-vehicle-b-vehicle-event-gas-off/vehicle-event-gas-off.cpp": "d29660108e1f32c319af00dab33667ea7f3fb029a25eecdf0dddc0ecb4f67e1d",
+    "sources/w8-camera-vehicle-b-vehicle-event-gas-on/vehicle-event-gas-on.cpp": "5062ea70705ceb360405e3b82c902bc05c708bd5bce44df227ac5b7554db8453",
+    "sources/w8-camera-vehicle-b-vehicle-event-steering-change/vehicle-event-steering-change.cpp": "d72182a9a2a7cf815ca4d81fe0ae2ceaca15f7eb78a2331e1d86414847031b05",
+    "sources/w8-camera-vehicle-b-vehicle-msg-collision/msg_collision.cpp": "274af66abf03290a12cf105f14c7849498bd267594b6867711a2eeaed1f04fed",
+    "sources/w8-camera-vehicle-b-vehicle-msg-draw/msg_draw.cpp": "73d37a96d426ad23707c6cb7dcfd7913e8f937a844ad074933c31e8448e62d6d",
+    "sources/w8-camera-vehicle-b-vehicle-msg-get-poke-name/msg_get_poke_name.cpp": "eb87d3ea1c10591eee4d631060b0e683187eda4bcf6ae62315423f0aee683562",
+    "sources/w8-camera-vehicle-b-vehicle-msg-poke/msg_poke.cpp": "ec4f93e804449f8bad748d12450b553c68eec6a1432e0ee84228abc43a1a25b2",
+    "sources/w8-camera-vehicle-b-vehicle-msg-run/msg_run.cpp": "0bf0256d49a90ff0ea2882608d69bc94a4935c7639b058132b5f5ca1938d5b53",
+    "sources/w8-camera-vehicle-b-vehicle-refresh-settings/refresh_settings.cpp": "e60b144ee9bdc9348228bb1115a2e1fa7aabd2530523c13840d2c01a8a7aee72"
   },
   "inputs": [
     {
@@ -29138,6 +29160,336 @@
           "compiled_body_bytes": 20
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2088,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_activate.o",
+      "profile": "authored_cpp",
+      "sha256": "9d0cdfdba1ad7630aae436abee4bab0b0758b9e346c28fd5261f43073db9da55",
+      "source": "sources/w8-camera-vehicle-b-lava-event-activate/lava_event_activate.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventActivate__11LavaTractor",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2089,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_collision_ground.o",
+      "profile": "authored_cpp",
+      "sha256": "79f98e202ff09ea6a0bc796a6d0402dba24251dd1b27b9c4f8fe2f5520b0b64b",
+      "source": "sources/w8-camera-vehicle-b-lava-event-collision-ground/lava_event_collision_ground.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCollisionGround__11LavaTractor",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2090,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_collision_wall.o",
+      "profile": "authored_cpp",
+      "sha256": "f42537198ddeab0006e9f75bdd077d059d096f055c4e56b95242da1515f8589f",
+      "source": "sources/w8-camera-vehicle-b-lava-event-collision-wall/lava_event_collision_wall.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCollisionWall__11LavaTractorP6Point3T1",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2091,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_cur_rpm.o",
+      "profile": "authored_cpp",
+      "sha256": "e15fc341e50d720be535890119e72405be661504ed666e974c711d58b7be057f",
+      "source": "sources/w8-camera-vehicle-b-lava-event-cur-rpm/lava_event_cur_rpm.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCurRPM__11LavaTractor",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2092,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_deactivate.o",
+      "profile": "authored_cpp",
+      "sha256": "2d2da957975fc77df67bb62288986700a80ba0e47cb2de7d0b1a5edd107d63cb",
+      "source": "sources/w8-camera-vehicle-b-lava-event-deactivate/lava_event_deactivate.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventDeActivate__11LavaTractor",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2093,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_gas_off.o",
+      "profile": "authored_cpp",
+      "sha256": "ce6c72ee6d7abc4a651d1ea20b2a4aceba1d5225f707491cf5238be88e739b9e",
+      "source": "sources/w8-camera-vehicle-b-lava-event-gas-off/lava-event-gas-off.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventGasOff__11LavaTractor",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2094,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_gas_on.o",
+      "profile": "authored_cpp",
+      "sha256": "69da7f3ce15331ed6dc65228cb3aa193c929a34b0bd3fbfcf5c14061dc13224a",
+      "source": "sources/w8-camera-vehicle-b-lava-event-gas-on/lava-event-gas-on.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventGasOn__11LavaTractor",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2095,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_lava_event_steering_change.o",
+      "profile": "authored_cpp",
+      "sha256": "090bbc89c367acf358ab287e5f0df8a90fe4d94d988a3acdd828d35ee8f2b458",
+      "source": "sources/w8-camera-vehicle-b-lava-event-steering-change/lava-event-steering-change.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventSteeringChange__11LavaTractor",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2096,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_activate.o",
+      "profile": "authored_cpp",
+      "sha256": "02baa7a6b3d0886b5e84d1adb870cff296254472120f23c73a73785d62ef8a7c",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-activate/vehicle-event-activate.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventActivate__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2097,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_collision_ground.o",
+      "profile": "authored_cpp",
+      "sha256": "8f7482049de685a3f409bb2f6a125cc4d5ca00d017d6b2ab0657f4ee2c7d372d",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-collision-ground/vehicle-event-collision-ground.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCollisionGround__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2098,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_collision_wall.o",
+      "profile": "authored_cpp",
+      "sha256": "efea49bff04690b1c6685519dfe400525838751a2ae3364a46a1669e72d72fff",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-collision-wall/vehicle-event-collision-wall.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCollisionWall__7VehicleP6Point3T1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2099,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_cur_rpm.o",
+      "profile": "authored_cpp",
+      "sha256": "0582d2831648e5bbd8e70cee852cd9f4def228db2ea75b10b1e7e53ad5511d10",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-cur-rpm/vehicle-event-cur-rpm.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventCurRPM__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2100,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_deactivate.o",
+      "profile": "authored_cpp",
+      "sha256": "feb8e874d5bde655ffff0167e58cfd577683afaa2532a5ea81785b755f9da092",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-deactivate/vehicle-event-deactivate.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventDeActivate__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2101,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_gas_off.o",
+      "profile": "authored_cpp",
+      "sha256": "d29660108e1f32c319af00dab33667ea7f3fb029a25eecdf0dddc0ecb4f67e1d",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-gas-off/vehicle-event-gas-off.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventGasOff__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2102,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_gas_on.o",
+      "profile": "authored_cpp",
+      "sha256": "5062ea70705ceb360405e3b82c902bc05c708bd5bce44df227ac5b7554db8453",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-gas-on/vehicle-event-gas-on.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventGasOn__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2103,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_event_steering_change.o",
+      "profile": "authored_cpp",
+      "sha256": "d72182a9a2a7cf815ca4d81fe0ae2ceaca15f7eb78a2331e1d86414847031b05",
+      "source": "sources/w8-camera-vehicle-b-vehicle-event-steering-change/vehicle-event-steering-change.cpp",
+      "emitted_functions": [
+        {
+          "name": "eventSteeringChange__7Vehicle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2104,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "274af66abf03290a12cf105f14c7849498bd267594b6867711a2eeaed1f04fed",
+      "source": "sources/w8-camera-vehicle-b-vehicle-msg-collision/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__7VehicleP10GameObject",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2105,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "73d37a96d426ad23707c6cb7dcfd7913e8f937a844ad074933c31e8448e62d6d",
+      "source": "sources/w8-camera-vehicle-b-vehicle-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Vehicle",
+          "compiled_body_bytes": 532
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2106,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_msg_get_poke_name.o",
+      "profile": "authored_cpp",
+      "sha256": "eb87d3ea1c10591eee4d631060b0e683187eda4bcf6ae62315423f0aee683562",
+      "source": "sources/w8-camera-vehicle-b-vehicle-msg-get-poke-name/msg_get_poke_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__7VehiclePUsi",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2107,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "ec4f93e804449f8bad748d12450b553c68eec6a1432e0ee84228abc43a1a25b2",
+      "source": "sources/w8-camera-vehicle-b-vehicle-msg-poke/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__7Vehiclei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2108,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "0bf0256d49a90ff0ea2882608d69bc94a4935c7639b058132b5f5ca1938d5b53",
+      "source": "sources/w8-camera-vehicle-b-vehicle-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Vehicle",
+          "compiled_body_bytes": 1740
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2109,
+      "kind": "independently_authored_source",
+      "object_name": "w8cvb_vehicle_refresh_settings.o",
+      "profile": "authored_cpp",
+      "sha256": "e60b144ee9bdc9348228bb1115a2e1fa7aabd2530523c13840d2c01a8a7aee72",
+      "source": "sources/w8-camera-vehicle-b-vehicle-refresh-settings/refresh_settings.cpp",
+      "emitted_functions": [
+        {
+          "name": "refreshSettings__7Vehicle",
+          "compiled_body_bytes": 204
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -29237,7 +29589,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fa49963012e9d854c56e06c69bc1b2227334303b2330a39600746441d7b556ed",
+  "snapshot_sha256": "799d777af4d4932b8b0cb9b79244712171321b22c93a47a0e6917ec1c998f73a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
