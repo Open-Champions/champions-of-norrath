@@ -2225,3 +2225,4 @@ and no startup stage has executed.
 - 2026-10-11 20:28 CDT — `agents/simloop-services` — 1054 unresolved imports
 - 2026-10-11 21:21 CDT — `agents/gs-dma-present` — 1056 unresolved imports
 - 2026-10-11 22:19 CDT — `agents/pre-logo-dialog` — 1149 unresolved imports- 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
+- 2026-10-12 12:39 CDT — `agents/floor-world-view` — 1142 unresolved imports
