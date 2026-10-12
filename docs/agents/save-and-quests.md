@@ -35,3 +35,7 @@ Observed at `0x001d3ab0`, 248 bytes; the reviewed compile emits 296. The value i
 ## addQuestToLog__FPcT0
 
 Observed at `0x001c1a60`, 236 bytes; the reviewed compile emits 296. Player records (`player`, `0x00408600`, 23984-byte stride) each hold a quest log: 64-byte entries from record byte 17768 (name text, then description text at entry byte 32) and an entry count word at record byte 21864. The 64-entry limit is observed from the compare and the count position. Walking `nmPlayers` records (re-read after each), a record with count 64 or more ends the whole call, and so does the first record already holding an entry with this name. Otherwise name and description are copied unbounded into the entry at the count and the count increments. Nothing in the record header is named.
+
+## removeQuestFromLog__FPc
+
+Observed at `0x001be638`, 364 bytes; the reviewed compile emits 432. Same record layout as `addQuestToLog__FPcT0`. For each of `nmPlayers` records, every entry whose name equals the argument has nine bytes copied over both its name and its description from an image constant at `0x00478d90` (observed bytes: `hit`, five zeros, `c`; the last byte is the first byte of the next literal). The constant is embedded as a nine-byte local; its purpose is unknown. The last matching index is kept; later entries are then moved down by `strcpy` of name and description, and the count word decrements. Unlike the add call, no record ends the walk, and a count of zero or less is not scanned.
