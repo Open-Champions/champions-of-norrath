@@ -55,9 +55,9 @@ extern "C" unsigned norrath_construct_Skelight(void* object, const void* point, 
     write_word(address(norrath_creature_view_484cac), saved);
     write_word(a + 244u, 0u);
     const unsigned long long chunks = norrath_actor_model_active_chunks(load_pointer(address(load_pointer(a + 36u)) + 12u), 0);
-    norrath_actor_animation_initialize(bytes(a + 288u));
     write_word(a + 552u, static_cast<unsigned>(chunks));
     write_word(a + 556u, static_cast<unsigned>(chunks >> 32));
+    norrath_actor_animation_initialize(bytes(a + 288u));
     norrath_actor_animation_add(bytes(a + 288u), load_pointer(address(load_pointer(a + 36u)) + 60u), 12);
     norrath_skelight_set_state(object, 13);
     (void)norrath_actor_add_run_list(object);

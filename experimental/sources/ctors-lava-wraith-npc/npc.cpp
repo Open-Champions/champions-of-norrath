@@ -86,9 +86,9 @@ extern "C" unsigned norrath_construct_NPC(void* object, const void* point, short
     }
     const unsigned long long chunks = norrath_actor_model_active_chunks(load_pointer(a + 1056u),
                                                                          static_cast<int>(read_word(a + 244u)));
-    (void)norrath_actor_add_run_list(object);
     write_word(a + 552u, static_cast<unsigned>(chunks));
     write_word(a + 556u, static_cast<unsigned>(chunks >> 32));
+    (void)norrath_actor_add_run_list(object);
     write_word(a + 236u, 1u);
     if (norrath_actor_find_tag_string(object, reinterpret_cast<char*>(norrath_ctors_lava_wraith_view_472040), 0) == nullptr) {
         write_word(a + 12u, read_word(a + 12u) & 0xffefffffu);

@@ -33,8 +33,8 @@ extern "C" unsigned norrath_construct_Vampire(void* object, const void* point, s
     write_word(a + 164u, high_word);
     write_word(a + 176u, 0u);
     write_word(a + 236u, 0u);
-    norrath_creature_set_parameters(object, bits_float(0x3f4cccccu), 1.0f, bits_float(0x3f4cccccu), 1.0f, 1.0f, 1);
     write_half(a + 572u, 0u);
+    norrath_creature_set_parameters(object, bits_float(0x3f4cccccu), 1.0f, bits_float(0x3f4cccccu), 1.0f, 1.0f, 1);
     norrath_actor_animation_initialize(bytes(a + 288u));
     norrath_actor_animation_add(bytes(a + 288u), load_pointer(address(load_pointer(a + 36u)) + 124u), 1);
     norrath_actor_animation_randomize_time(bytes(a + 288u));

@@ -35,8 +35,8 @@ extern "C" unsigned norrath_construct_Scorpion(void* object, const void* point, 
     write_word(a + 176u, 0u);
     write_word(a + 192u, 0u);
     write_word(a + 236u, 0u);
-    norrath_creature_set_parameters(object, bits_float(0x3fb33333u), bits_float(0x3f999999u), 1.0f, 1.0f, 1.0f, 1);
     write_half(a + 572u, 0u);
+    norrath_creature_set_parameters(object, bits_float(0x3fb33333u), bits_float(0x3f999999u), 1.0f, 1.0f, 1.0f, 1);
     write_word(a + 244u, 0u);
     write_word(a + 96u, 0x3eccccccu);
     const unsigned random = static_cast<unsigned>(norrath_game_object_e_rand(object));

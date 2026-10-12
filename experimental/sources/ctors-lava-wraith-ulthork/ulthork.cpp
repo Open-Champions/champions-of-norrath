@@ -66,9 +66,9 @@ extern "C" unsigned norrath_construct_Ulthork(void* object, const void* point, s
     norrath_creature_set_parameters(object, 8.0f, bits_float(0x3f999999u), 2.0f, 1.0f, 1.0f, 1);
     const unsigned long long chunks = norrath_actor_model_active_chunks(load_pointer(address(load_pointer(a + 36u)) + 12u),
                                                                          static_cast<int>(read_word(a + 244u)));
-    norrath_actor_animation_initialize(bytes(a + 288u));
     write_word(a + 552u, static_cast<unsigned>(chunks));
     write_word(a + 556u, static_cast<unsigned>(chunks >> 32));
+    norrath_actor_animation_initialize(bytes(a + 288u));
     norrath_actor_animation_add(bytes(a + 288u), load_pointer(address(load_pointer(a + 36u)) + 116u), 1);
     (void)norrath_actor_add_slow_run_list(object);
     const float short_gain = bits_float(0x3e4ccccc), long_gain = bits_float(0x3ecccccc);
