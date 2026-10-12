@@ -147,6 +147,8 @@ class Stubs:
 
         def h(m):
             entry = [name] + [m.g32(4 + i) for i in sp.get('regs', range(sp.get('nargs', 0)))] + [m.f[12 + i] for i in range(sp.get('nf', 0))]
+            for off in sp.get('stack', []):
+                entry.append(m.u32(m.g32(29) + off))
             for reg, n in sp.get('peek', []):
                 entry.append(m.read(m.g32(reg), n))
             for reg in sp.get('str', []):
@@ -714,6 +716,37 @@ def scenario_global_init(rng):
 reg('_GLOBAL_$I$edgearray', 0x266EC8, 'w8-render-world-a-global-init-edgearray/global_init_edgearray.cpp', scenario_global_init)
 reg('_GLOBAL_$I$modelClippingOn', 0x16CE68,
     'w8-render-world-a-global-init-model-clipping-on/global_init_model_clipping_on.cpp', scenario_global_init)
+
+
+WT_STUBS = {'__11ParticleDef': dict(nargs=1),
+            '__11ParticleDefiiiiiiiifffiiiPFPv_v': dict(nargs=8, nf=3, stack=[0, 8, 16, 24, 32]),
+            '_$_14AnimationState': dict(nargs=2), '_$_5Light': dict(nargs=2), 'norrath_list_destroy': dict(nargs=1)}
+WT_ADDR = {'__11ParticleDef': 0x180D08, '__11ParticleDefiiiiiiiifffiiiPFPv_v': 0x180D78, '_$_14AnimationState': 0x164050,
+           '_$_5Light': 0x13EAC8, 'norrath_list_destroy': 0x194300}
+
+
+def scenario_world_tile(rng):
+    mem = {}
+    cmp_addrs = []
+    for name, size in (('ParticleEmitterArray', 0x980), ('DynamicLightArray', 0x440), ('routeQueue', 0x1800),
+                       ('worldAnimation', 0xC00)):
+        a = sym(name)
+        fill(rng, mem, a, size)
+        cmp_addrs += list(range(a, a + size))
+    return {'mem': mem, 'args': [], 'compare': cmp_addrs}
+
+
+def scenario_world_tile_init(rng):
+    sc = scenario_world_tile(rng)
+    return sc
+
+
+def scenario_world_tile_destroy(rng):
+    return scenario_world_tile(rng)
+
+
+reg('_GLOBAL_$I$worldTileEntityLightScale', 0x17DD70, 'w8-render-world-a-global-init-world-tile/global_init_world_tile.cpp',
+    scenario_world_tile, stubs=WT_STUBS, stub_addr=WT_ADDR)
 
 
 if __name__ == '__main__':
