@@ -68,6 +68,20 @@ unsigned norrath_actor_finish_construction(void* object);
 extern unsigned char norrath_ctors_ant_lantern_view_44bdb0[];
 extern unsigned char norrath_ctors_ant_lantern_view_481540[];
 extern unsigned char norrath_ctors_ant_lantern_view_481544[];
+unsigned norrath_construct_Chest(void* object, const void* point, short type, char** arguments, int kind);
+unsigned norrath_actor_random(void* object);
+float norrath_player_find_tag_float(void* object, char* tag, int occurrence);
+float norrath_player_treasure_ramp();
+unsigned long long norrath_actor_model_active_chunks(void* model, int requested);
+int strcmp(const char* left, const char* right);
+extern unsigned char norrath_ctors_ant_lantern_view_42c8a0[];
+extern unsigned char norrath_ctors_ant_lantern_view_44cb98[];
+extern unsigned char norrath_ctors_ant_lantern_view_34b6b1[];
+extern unsigned char norrath_ctors_ant_lantern_view_485398[];
+extern unsigned char norrath_ctors_ant_lantern_view_485420[];
+extern unsigned char norrath_ctors_ant_lantern_view_485438[];
+extern unsigned char norrath_ctors_ant_lantern_view_485440[];
+extern unsigned char norrath_ctors_ant_lantern_view_4844c0[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }

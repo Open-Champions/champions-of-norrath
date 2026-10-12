@@ -31,8 +31,9 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/generator.cpp` | `norrath_construct_Generator` | `__9GeneratorG6Point3sPPc` `0x1f19c0`, 400 bytes | 764 | `7f5ef2c76055c9f88e97c130a144f6d0e52c25c8e0fbcc8ef89e3d801a651208` |
 | `ctors-ant-lantern-constructors/ice.cpp` | `norrath_construct_Ice` | `__3IceG6Point3sPcN43` `0x1e61f0`, 316 bytes | 688 | `02e1e3cc3b8a05bae91577c5d9f9f20779c84923358bd7cd94fbea499713e4af` |
 | `ctors-ant-lantern-constructors/fire_fly.cpp` | `norrath_construct_FireFly` | `__7FireFlyG6Point3sPPc` `0x2118e8`, 484 bytes | 912 | `4fdda530636f1af3b261899994e176027e7cf27457982fcc5bdbc4071e553a84` |
+| `ctors-ant-lantern-constructors/chest.cpp` | `norrath_construct_Chest` | `__5ChestG6Point3sPPci` `0x218790`, 596 bytes | 880 | `68fb4079e22d8db10461fc3457f9ab1ff8c5b3f49689b022f7100a33cd46ecba` |
 
-`detail.hpp` sha256 `86a635539b3e27494fe208e0a929802f5a1b89630db7cfcb3a42b7601abc284c`.
+`detail.hpp` sha256 `a333537e3c88ff815d648c38f2c1365700d54fcb0c1276cc2bc2d065993f6599`.
 
 ## Build-plan entries needed
 
@@ -170,6 +171,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "chest.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/chest.cpp",
+  "sha256": "68fb4079e22d8db10461fc3457f9ab1ff8c5b3f49689b022f7100a33cd46ecba",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Chest",
+      "compiled_body_bytes": 880
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -202,9 +222,11 @@ Observed `__3IceG6Point3sPcN43` at `0x1e61f0`, 316 bytes. The five trailing argu
 
 Observed `__7FireFlyG6Point3sPPc` at `0x2118e8`, 484 bytes. Calls the FireBeetle constructor with flag 0, stores vtable `0x44bdb0` (`_vt$7FireFly`), fills and registers a light at object+1064 (tint singles from globals `0x481540`/`0x481544`), calls `setParameters`, sets several singles and flag bits, initialises the animation state at object+288 with the header at (object+36)->+68, randomises its time, joins the slow run list and returns `finishConstruction`'s V0.
 
+Observed `__5ChestG6Point3sPPci` at `0x218790`, 596 bytes. GameObject gets the pointer-table entry at `0x42c8a0` indexed by the int argument and the argument list. Vtable `0x44cb98` (`_vt$5Chest`), byte 88 from `eRand < 2000`, overridden by two level-text comparisons (text at `0x34b6b1`, a field inside `levelName`), an optional float tag (`0x485438`) that scales the roll, an int tag (`0x485440`), and bits of `levelFlags` (`0x4844c0`). Half 76 is `(int)((eRand%12+12) * scale * gameTreasureRamp)`, mapped to a class (0/1/2/4, or 8 and 76 cleared when byte 88 is set) that goes to `modelGetActiveChunks`; animation state at object+92 is then initialised. V0 after the last call is not established; this returns 0. Whether R5900 float rounding changes the truncated amount is unknown.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`
 
 ## Imports opened
 
@@ -224,11 +246,12 @@ Observed `__7FireFlyG6Point3sPPc` at `0x2118e8`, 484 bytes. Calls the FireBeetle
 `norrath_script_get_game_state`, `norrath_lump_find_resource` — existing names; `norrath_ctors_ant_lantern_view_44cc28` (`_vt$3Ice`) and `_46d070` (state text) — address views only.
 `norrath_construct_FireBeetle` — original \`__10FireBeetleG6Point3sPPci\` at `0x20ff48`; defined later in this package. `norrath_actor_animation_initialize`, `norrath_actor_animation_randomize_time`, `norrath_actor_animation_add`, `norrath_actor_finish_construction`, `norrath_light_add`, `norrath_actor_set_parameters` — existing names from other packages.
 `norrath_ctors_ant_lantern_view_44bdb0` (`_vt$7FireFly`), `_481540` and `_481544` (single-precision globals) — address views only.
+`norrath_actor_random`, `norrath_player_find_tag_float`, `norrath_player_treasure_ramp`, `norrath_actor_model_active_chunks`, `strcmp` — existing names from other packages / libc. Address views: `norrath_ctors_ant_lantern_view_42c8a0`, `_44cb98`, `_34b6b1`, `_485398`, `_485420`, `_485438`, `_485440`, `_4844c0`.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
