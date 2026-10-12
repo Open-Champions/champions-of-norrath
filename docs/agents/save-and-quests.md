@@ -71,3 +71,7 @@ Observed at `0x0014b690`, 372 bytes; the reviewed compile emits 504. Buffer orde
 ## msg_load__4PropPc
 
 Observed at `0x0014b808`, 472 bytes; the reviewed compile emits 648. Reads what `msg_save__4PropPc` wrote. Three pool lookups (`objectSaveGetFromStringPool__Fi`) all happen before the three `strcpy` calls into object+84, +100, +164; object+12 gains bit 12 (0x1000); a signed byte of -1 introduces seven skipped bytes and an eight-byte value (then one more byte), any other byte stores `1 << byte` (count modulo 64) as the 64-bit value at object+232; three signed bytes times the observed constant `0x3c010204` and one signed halfword times `0x38d1b717` make a quaternion for `quatToMat__FP8Matrix34P4Quat` into object+272; three signed halfwords become singles at object+308, +312, +316 (unscaled); then `lumpFindResource__FPcT0(object+84, object+100)` goes to object+76 and `(object+84, object+164)` to object+80. Returns the byte count. Opens imports `quatToMat__FP8Matrix34P4Quat`, `lumpFindResource__FPcT0`.
+
+## msg_save__16CosmeticPropAnimPc
+
+Observed at `0x00155200`, 200 bytes; the reviewed compile emits 308. Buffer order: four string-pool indexes (`objectSaveAddToStringPool__FPCc`) of the text pointers at object+76, +80, +84, +88; the words at object+12, +148, +144; the singles at object+32 and object+28 as truncated integers stored as halfwords. Returns 32. Opens import `objectSaveAddToStringPool__FPCc` (shared with the other save bodies).
