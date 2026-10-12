@@ -348,6 +348,23 @@ def scenario_hermite(rng):
 reg('evalHermite__Ffffff', 0x159330, 'w8-render-world-a-eval-hermite/eval_hermite.cpp', scenario_hermite, returns='f')
 
 
+def scenario_check_descriptor(rng):
+    mem = {}
+    base = sym('descListMark')
+    free_at = rng.choice([None, 0, 1, 15, 30, 31, rng.randrange(32)])
+    for i in range(32):
+        put32(mem, base + 4 * i, rng.choice([0, 1, 0xFFFFFFFE, 0x31000000, 0xFFFF, 0x7FFFFFFF]))
+    if free_at is not None:
+        put32(mem, base + 4 * free_at, 0xFFFFFFFF)
+        if rng.random() < 0.3:
+            put32(mem, base + 4 * rng.randrange(32), 0xFFFFFFFF)
+    return {'mem': mem, 'args': [], 'compare': list(range(base, base + 128))}
+
+
+reg('checkCanAllocDescriptor__Fv', 0x187268, 'w8-render-world-a-check-can-alloc-descriptor/check_can_alloc_descriptor.cpp',
+    scenario_check_descriptor, returns=True)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
