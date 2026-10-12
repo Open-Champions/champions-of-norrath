@@ -51,3 +51,7 @@ Observed at `0x002ca8d0`, 488 bytes; the reviewed compile emits 436. Symbols (`n
 ## msg_load__10GameObjectPc and msg_save__10GameObjectPc
 
 Observed at `0x00312e78` and `0x00312e80`, 8 bytes each, weak symbols in the reference. Both return 0 and touch nothing, so the base object has no persistent state. The authored versions are ordinary (strong) definitions.
+
+## msg_load__5LeverPc
+
+Observed at `0x0021c9e0`, 112 bytes. Reads a four-byte value (bit pattern, stored at object+76), a word (object+12), a byte (object+80) and a byte (object+81) from the buffer and returns 10. If the byte at object+81 is nonzero it calls `objectAddToRunList__FP10GameObject` with the object. Mirrors `msg_save__5LeverPc` (`vslots-b-lever-save`). Opens import `objectAddToRunList__FP10GameObject`.
