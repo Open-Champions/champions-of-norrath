@@ -41,6 +41,19 @@ extern unsigned char norrath_ctors_ant_lantern_view_481990[];
 unsigned norrath_construct_Lantern(void* object, const void* point);
 extern unsigned char norrath_ctors_ant_lantern_view_44a8a0[];
 extern unsigned char norrath_ctors_ant_lantern_view_48198c[];
+unsigned norrath_creature_construct(void* object, const void* point, short type, void* resource_map, float scale, char** arguments);
+unsigned norrath_actor_set_parameters(void* object, float a, float b, float c, float d, float e, int flag);
+char* norrath_actor_find_tag_string(void* object, char* tag, int occurrence);
+int norrath_game_object_find_tag_int(void* object, char* tag, int occurrence);
+unsigned norrath_actor_add_slow_run_list(void* object);
+int norrath_factory_strcasecmp(const char* left, const char* right);
+extern unsigned char norrath_actor_view_4844a4[];
+unsigned norrath_construct_Generator(void* object, const void* point, short type, char** arguments);
+extern unsigned char norrath_ctors_ant_lantern_view_44bbd0[];
+extern unsigned char norrath_ctors_ant_lantern_view_46ded0[];
+extern unsigned char norrath_ctors_ant_lantern_view_46dee0[];
+extern unsigned char norrath_ctors_ant_lantern_view_46def0[];
+extern unsigned char norrath_ctors_ant_lantern_view_485230[];
 // Vtable objects. Slots stay unresolved.
 extern unsigned char norrath_ctors_ant_lantern_view_44ea78[];
 }
@@ -49,7 +62,30 @@ using Address = __UINTPTR_TYPE__;
 inline Address address(const void* p) { return reinterpret_cast<Address>(p); }
 inline unsigned address_bits(const void* p) { return static_cast<unsigned>(address(p)); }
 inline unsigned char* bytes(Address a) { return reinterpret_cast<unsigned char*>(a); }
+#if defined(NORRATH_CTORS_ANT_LANTERN_HOST)
+// Host pointers do not fit the 32-bit fields this code reloads. Tests record
+// the full pointer; EE builds keep the direct cast below.
+struct HostPointer { unsigned bits; void* full; };
+inline HostPointer host_rows[64] = {};
+inline void host_note(void* full) {
+    const unsigned bits = static_cast<unsigned>(reinterpret_cast<Address>(full));
+    for (unsigned index = 0u; index < 64u; ++index) {
+        if (host_rows[index].full == nullptr || host_rows[index].bits == bits) {
+            host_rows[index].bits = bits;
+            host_rows[index].full = full;
+            return;
+        }
+    }
+}
+inline void* pointer(Address a) {
+    const unsigned bits = static_cast<unsigned>(a);
+    for (unsigned index = 0u; index < 64u; ++index)
+        if (host_rows[index].full != nullptr && host_rows[index].bits == bits) return host_rows[index].full;
+    return reinterpret_cast<void*>(a);
+}
+#else
 inline void* pointer(Address a) { return reinterpret_cast<void*>(a); }
+#endif
 inline void write_half(Address a, unsigned value) {
     unsigned char* p = bytes(a);
     p[0] = static_cast<unsigned char>(value);
