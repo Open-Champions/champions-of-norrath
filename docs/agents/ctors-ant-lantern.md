@@ -34,6 +34,7 @@ reconstructions. Nothing here has run on the EE or as gameplay.
 | `ctors-ant-lantern-constructors/chest.cpp` | `norrath_construct_Chest` | `__5ChestG6Point3sPPci` `0x218790`, 596 bytes | 880 | `68fb4079e22d8db10461fc3457f9ab1ff8c5b3f49689b022f7100a33cd46ecba` |
 | `ctors-ant-lantern-constructors/gnome.cpp` | `norrath_construct_Gnome` | `__5GnomeG6Point3sPPcPc` `0x2011f8`, 472 bytes | 920 | `605178b3f8b63ab60387a138aac482b55578cbc21aa516741cd336e5a5a915e1` |
 | `ctors-ant-lantern-constructors/demon.cpp` | `norrath_construct_Demon` | `__5DemonG6Point3sPPc` `0x1e9bc0`, 740 bytes | 1068 | `fed73d8ac1415bc0263573d0001c815f8879217ddffb4b374014780d765d7319` |
+| `ctors-ant-lantern-constructors/cyclops.cpp` | `norrath_construct_Cyclops` | `__7CyclopsG6Point3sPPci` `0x202678`, 912 bytes | 1508 | `d43a3d3d210f1a9bb734209343f92db5f60b9dcc86c92f6d94586609296151a1` |
 
 `detail.hpp` sha256 `6900b600a2516132e9b5e1d5aba88b79c9562487bf3059d74484eb4b1154ad4b`.
 
@@ -230,6 +231,25 @@ Profile `authored_cpp`. Header closure is
 }
 ```
 
+```json
+{
+  "header_closure": [
+    "sources/ctors-ant-lantern-constructors/detail.hpp"
+  ],
+  "kind": "independently_authored_source",
+  "object_name": "cyclops.o",
+  "profile": "authored_cpp",
+  "source": "sources/ctors-ant-lantern-constructors/cyclops.cpp",
+  "sha256": "d43a3d3d210f1a9bb734209343f92db5f60b9dcc86c92f6d94586609296151a1",
+  "emitted_functions": [
+    {
+      "name": "norrath_construct_Cyclops",
+      "compiled_body_bytes": 1508
+    }
+  ]
+}
+```
+
 ## What was reconstructed
 
 Observed `__11AutoChestLPPcG6Point3sPPc` at `0x225250`, 144 bytes. The 12 point
@@ -268,9 +288,11 @@ Observed `__5GnomeG6Point3sPPcPc` at `0x2011f8`, 472 bytes. The last argument is
 
 Observed `__5DemonG6Point3sPPc` at `0x1e9bc0`, 740 bytes. Creature gets the table at `0x42af70` and scale 10.0; vtable `0x44dd68` (`_vt$5Demon`). It fills four halves with 0xffff, two bytes with 0xff and a 16-byte zero run in the object range 1048..1093, sets flag bits in the 64-bit word at +160, several singles and clears. A random roll scaled by 2^-16 under 0.5 triggers a second roll stored as (r&3)+1 at +208. `initAttackVariant__5Demon`, `setParameters`, animation setup with the header at model+68, the slow run list, five `setAnimEventFlags` calls (indexes 3, 4, 5, 14, 15), and `finishConstruction`'s V0.
 
+Observed `__7CyclopsG6Point3sPPci` at `0x202678`, 912 bytes. `eRand` is called before Creature; the Creature scale is `(eRand % 14) + 4` as a single and the map is the 216-byte record at `0x42bb08 + 216 * kind`. Vtable `0x44bf90` (`_vt$7Cyclops`). After `setParameters` a second roll builds the word at +244 from bits 1, 2, 4, 8 and 0x10. When bit 0x10 is clear the original replaces the whole word with 0x20 (the generated code ORs 0x20 into a register that holds zero); the reconstruction reproduces that. Then `modelGetActiveChunks` (eight-byte result stored at +552), animation setup with the header at model+108, slow run list, eight `setAnimEventFlags` calls (indexes 3, 4, 5, 6, 8, 9, 16, 18) and `finishConstruction`'s V0.
+
 ## Imports closed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops`
 
 ## Imports opened
 
@@ -293,11 +315,12 @@ Observed `__5DemonG6Point3sPPc` at `0x1e9bc0`, 740 bytes. Creature gets the tabl
 `norrath_actor_random`, `norrath_player_find_tag_float`, `norrath_player_treasure_ramp`, `norrath_actor_model_active_chunks`, `strcmp` — existing names from other packages / libc. Address views: `norrath_ctors_ant_lantern_view_42c8a0`, `_44cb98`, `_34b6b1`, `_485398`, `_485420`, `_485438`, `_485440`, `_4844c0`.
 `strticmp__FPCcT0` (original at `0x155ab8`) and `initType__5Gnome` (original at `0x2023e8`) — original names, not defined here. Address views `norrath_ctors_ant_lantern_view_42ba00`, `_44b9f0`, `_480b10`, `_480b14`, `_46f310`, `_46f320`, `_46f330`.
 `initAttackVariant__5Demon` (original at `0x1e9ea8`), `setAnimEventFlags__8Creatureififififi` (original at `0x1128a8`; argument order int, float, int, float, int, float, int, float, int is read from the call registers) — original names, not defined here. Address views `norrath_ctors_ant_lantern_view_42af70`, `_44dd68`, `_480ba8`, `_480bac`, `_480bb0`, `_480bb4`.
+Address views `norrath_ctors_ant_lantern_view_42bb08`, `_44bf90`, `_481160` through `_48117c` (eight singles). `setAnimEventFlags__8Creatureififififi` as for Demon.
 Already defined, so not opened: `norrath_block_alloc`, `norrath_construct_Vehicle`, `norrath_vehicle_reset`, `norrath_actors_b_view_4844a0`.
 
 ## Authored but never executed
 
-`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon` (host contracts and EE compilation only; not run as gameplay).
+`norrath_construct_AutoChestLP`, `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`, `norrath_construct_Lamp`, `norrath_construct_Lantern`, `norrath_construct_Generator`, `norrath_construct_Ice`, `norrath_construct_FireFly`, `norrath_construct_Chest`, `norrath_construct_Gnome`, `norrath_construct_Demon`, `norrath_construct_Cyclops` (host contracts and EE compilation only; not run as gameplay).
 
 ## Unknown
 
