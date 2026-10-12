@@ -538,6 +538,9 @@ reg('msg_save__9ContainerPc', W + 'container-save/save.cpp', sc_container_save,
 reg('msg_run__8HateInto', W + 'hate-into-run/run.cpp', sc_hate_run, HATE_STUBS)
 reg('msg_run__8HateGate', W + 'hate-gate-run/run.cpp', sc_hate_run, HATE_STUBS)
 
+reg('msg_save__15PushPhysicsPropPc', W + 'push-physics-prop-save/save.cpp', sc_save_buffer,
+    {'objectSaveAddToStringPool__FPCc': (['i'], ('i', [0, 1, 0x1234, 0xFFFFFFFF, 77, 78]))}, returns=True)
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
