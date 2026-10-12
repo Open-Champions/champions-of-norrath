@@ -1070,6 +1070,20 @@ reg('everyFrame__8CreatureP12_modelHeader', 0x10EBF8, 'w8-render-world-a-creatur
     returns=True)
 
 
+def scenario_standard_glow(rng):
+    mem = {}
+    obj = ARENA + 0x4000
+    fill(rng, mem, obj, 0x200)
+    mem[obj + 156] = rng.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0xFF, 0x80, rng.randrange(256)])
+    for off in (140, 142, 144, 146):
+        v = rng.choice([-30, -1, 0, 5, 10, 14, 15, 19, 20, 29, 30, 49, 50, 51, 32767, -32768, rng.randrange(-100, 100)]) & 0xFFFF
+        mem[obj + off] = v & 0xFF; mem[obj + off + 1] = v >> 8
+    return {'mem': mem, 'args': [obj], 'compare': list(range(obj, obj + 0x200))}
+
+
+reg('runStandardGlow__8Creature', 0x109710, 'w8-render-world-a-run-standard-glow/run_standard_glow.cpp', scenario_standard_glow)
+
+
 if __name__ == '__main__':
     runs = int(sys.argv[2]) if len(sys.argv) > 2 else 300
     names = list(FUNCTIONS) if sys.argv[1] == 'all' else [sys.argv[1]]
