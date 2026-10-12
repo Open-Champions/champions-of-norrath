@@ -3740,6 +3740,50 @@ Opened: `MC_SaveLevelEntities__FPc`, `Save__6CameraPc`, `actAlignData`,
 `scePadSetActAlign`, `scePadSetActDirect`, `scePadSetMainMode`,
 `scriptGameStateEntry__FiPi`, `startInhibit`.
 
+## agents/w8-runtime-libc-a
+
+Merged (the branch notes carry the five summary sections). Twenty-three units
+with fresh `input_order` values 1861 through 1883: 17 emitted functions (3568
+compiled body bytes, not original-byte matches) and data views. All 23 host
+checks build and exit 0 here (23 of 23). No duplicate definition was found at
+link time in the default build. One caveat: the package defines `floorf` and
+`ceilf` itself, as its notes say, so the optional Newlib inputs (plan entries
+85 and 89, only built with `--newlib-root`) would now define the same two
+names; that optional build was not run and would fail to link until one of
+the two sets is dropped. No game binary or disassembly listing was
+committed. 1463 function bodies, 1884 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1615 |
+| After | 1610 |
+| Closed | 23 |
+| Opened | 18 |
+
+Closed: `__assert__FPCcUiT0i`, `__builtin_delete`, `__eq__C9type_infoRC9type_info`,
+`__pure_virtual`, `__rtti_si`, `_listCheckAllIntegrity__FPCci`, `_printf`,
+`abort`, `atoi`, `ceilf`, `close`, `exit`, `floorf`, `lseek`, `malloc`,
+`memcmp`, `norrath_assert_context_word_view`, `norrath_assert_format_view`,
+`norrath_factory_sscanf`,
+`norrath_legacy_single_inheritance_type_info_vtable_view`,
+`norrath_legacy_user_type_info_vtable_view`,
+`norrath_player_bigint_small_powers5_view`,
+`norrath_player_number_big_tens_view`.
+
+Opened: `_$_14__si_type_info`, `_$_16__user_type_info`, `__divdi3`, `__moddi3`,
+`__terminate`, `__tf14__si_type_info`, `__tf16__user_type_info`,
+`__udivdi3`, `__umoddi3`, `_exit`, `do_dyncast__C14__si_type_infoiQ216__user
+_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_dyncast__C16__user_type_infoiQ216__user_type_info8sub_kindRC9type_infoPv
+T3T4RQ216__user_type_info14dyncast_result`,
+`do_find_public_subobj__C14__si_type_infoiRC9type_infoPvT3`,
+`do_find_public_subobj__C16__user_type_infoiRC9type_infoPvT3`, `do_upcast__C
+14__si_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_
+info13upcast_result`, `do_upcast__C16__user_type_infoQ216__user_type_info8su
+b_kindRC9type_infoPvRQ216__user_type_info13upcast_result`, `printfloat`,
+`raise`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
