@@ -125,6 +125,15 @@ int main() {
     reset(3); ambientGroup[64] = 1; ambientGroup[64 + 41] = 1;   // only entry 2 is free
     runAmbient__Fv();
     if (ambientGroup[64] != 0 || ambientGroup[64 + 41] != 0 || ambientGroup[64 + 82] != 1) return 20;
+    // Two free entries keep the other flags: the marked entry stays marked.
+    reset(4); ambientGroup[64 + 41 * 3] = 1;   // entries 0..2 free (three), mark one more
+    ambientGroup[64 + 41 * 2] = 1;             // now two free: 0 and 1
+    runAmbient__Fv();
+    if (ambientGroup[64 + 41 * 3] != 1 || ambientGroup[64 + 41 * 2] != 1) return 23;
+    // A countdown of one is the last skipped call.
+    reset(3); w32(ambientGroup + 12, 1);
+    runAmbient__Fv();
+    if (word_at(ambientGroup + 12) != 0 || trace != "G2;") return 24;
     // A single-entry group always uses entry 0.
     reset(1);
     runAmbient__Fv();
