@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1646,
+  "default_authored_inputs": 1676,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2387,7 +2387,38 @@
     "sources/w8-actor-virtuals-a-tf-8hategate/typeinfo.cpp": "f19076d006e2627e5cfc86886bd47d7d0d88c9783719fa9ae45afb46c164ad76",
     "sources/w8-actor-virtuals-a-tf-8hatehole/typeinfo.cpp": "4b4828ead5b7c3354b87377a65bd62dea08b54731a6120db86c78e4f6861e569",
     "sources/w8-actor-virtuals-a-tf-8hateinto/typeinfo.cpp": "0bbef1be713802ef3155890c18833297cc36d7a6e2379923c7be7c685f27dcb5",
-    "sources/w8-actor-virtuals-a-tf-9container/typeinfo.cpp": "8eda627ed8d7bbf373e800bd7c229e387cf8dc462f48e446dec067ffca8def06"
+    "sources/w8-actor-virtuals-a-tf-9container/typeinfo.cpp": "8eda627ed8d7bbf373e800bd7c229e387cf8dc462f48e446dec067ffca8def06",
+    "sources/w8-actor-virtuals-b-advance-state-autoprop/advance_state.cpp": "aafc23d959ab96884441b67f666fb39bc08404d33d79b36a6318b6a519873c3d",
+    "sources/w8-actor-virtuals-b-common/virtual_call.hpp": "6d841cbaa8cf2fe3d00e01010e4979a1e271f47a74e513a58f62e0f5618b4dab",
+    "sources/w8-actor-virtuals-b-clone-container/clone.cpp": "59c467e7a7359a1a1741422878a5a761953695cb3718ce35b6dc6ab92f3131ab",
+    "sources/w8-actor-virtuals-b-clone-firebomb/clone.cpp": "afeebc5e4f90103c6f8fe214aae863ce6713103530027cfe05f92e1bb5ba1620",
+    "sources/w8-actor-virtuals-b-clone-missiletrap/clone.cpp": "9f102b8046076fdc21817c0c9ff47c85b88b31547f7e1fcac1bc4d5a73e3ea61",
+    "sources/w8-actor-virtuals-b-clone-pushphysicsprop/clone.cpp": "ac2fa7d07b686ed585fd78b4c5941a1848315673c3fe257901ffde2ea7d9eb96",
+    "sources/w8-actor-virtuals-b-clone-shooter/clone.cpp": "8b07dd740f82a698f54ee5987f460a7531fffd91b90221610dd740112b7831ec",
+    "sources/w8-actor-virtuals-b-clone-teleporter/clone.cpp": "03a3a91b58d48ec9488d1e45c4ecf181f519e7d6962b85d6833a653f5ab499d4",
+    "sources/w8-actor-virtuals-b-clone-trigger/clone.cpp": "21f1629fbe804b36b17c78670816672a390dd49568688f37eeb8ca5972faaef7",
+    "sources/w8-actor-virtuals-b-clone-worldpart/clone.cpp": "ad8bf26acb592dc856eeee4b0066f6f541d0c195d739b7a210b17c206d8ea69c",
+    "sources/w8-actor-virtuals-b-get-model-autoobject/get_model.cpp": "8750f47f913b11ec314cac14de6d0ad155c9b4bb2f0675309d6f938e8048a6a3",
+    "sources/w8-actor-virtuals-b-msg-collision-container/msg_collision.cpp": "1ab4c8004a3b55a0e8baa4154b527246ea876aa852176fc4503e97574ecda98a",
+    "sources/w8-actor-virtuals-b-msg-collision-pushphysicsprop/msg_collision.cpp": "aec103ceca42812f22baab862b3a60e0769b04a4285af1bfaa9d1e2fc0b4c777",
+    "sources/w8-actor-virtuals-b-msg-draw-autoobject/msg_draw.cpp": "6c01771f616eb50cd6f46948e949335152679977b2fb6690d257fd141a4a9b25",
+    "sources/w8-actor-virtuals-b-msg-draw-container/msg_draw.cpp": "c294ab426d0ad209f45b1eef049315dd7a3f57cdecf4c3910a450fb42ccd3898",
+    "sources/w8-actor-virtuals-b-msg-draw-pushphysicsprop/msg_draw.cpp": "9052837f6c81cead3452811173a7db0151e68b2bd977e5d1b3bfc82ec3a7118b",
+    "sources/w8-actor-virtuals-b-msg-draw-teleporter/msg_draw.cpp": "f15a896d3c10ba9f90bd36c2b7cd59497fed19b98af4d25798dd79c8f8570742",
+    "sources/w8-actor-virtuals-b-msg-getpokename-autoprop/msg_get_poke_name.cpp": "87b92b5654e7dbc2e5f744e1d1b5d237532d7e83ede00f7161a1b793d3063180",
+    "sources/w8-actor-virtuals-b-msg-getpokename-container/msg_get_poke_name.cpp": "a8c5f45798c85177eb195274b1e7d838b245aa51f7d7ad7b8affc6f45104e739",
+    "sources/w8-actor-virtuals-b-msg-hurt-autoprop/msg_hurt.cpp": "8cd8a1155c691b36f8f78cad61e712946631d45f574a0235e06504a37b49afc6",
+    "sources/w8-actor-virtuals-b-msg-hurt-container/msg_hurt.cpp": "0c7dcdfb1af6de217dab6b5b5972a3b9337ff09d9e56dd40b387f4f3e7886dfc",
+    "sources/w8-actor-virtuals-b-msg-load-autoprop/msg_load.cpp": "6a6a4c66910ec5e265e1c31505902362042dd7ede107de1dbfff71d3748c36f8",
+    "sources/w8-actor-virtuals-b-msg-load-container/msg_load.cpp": "cf6f5e080608d1619ead3c58a8b11c96c1920fa61d7e776750f7fc351279be05",
+    "sources/w8-actor-virtuals-b-msg-load-pushphysicsprop/msg_load.cpp": "36b02c8e7b44563249f0e80186a90819f029dfb8ca0a99a8454418c82851c478",
+    "sources/w8-actor-virtuals-b-msg-load-shooter/msg_load.cpp": "4aaf70a11cad8199aa74eaa2f38a1cdc6a96a0d8cf5608f1234b30bc289f5834",
+    "sources/w8-actor-virtuals-b-msg-load-trigger/msg_load.cpp": "a4dc8a25c7faa4f37a1b0e6e871fe77e13ad1b049ba878773dae045f45c1c3df",
+    "sources/w8-actor-virtuals-b-msg-poke-autoprop/msg_poke.cpp": "7f36cb25bf6190a1a8e8b4f215ce8272422d65268a505cbcbcaf37327d00a845",
+    "sources/w8-actor-virtuals-b-msg-poke-container/msg_poke.cpp": "87de9370cce1c4c620e6c619d0d6ade8898b6924061a63d6ce619ae098d4117c",
+    "sources/w8-actor-virtuals-b-msg-run-hatebridge/msg_run.cpp": "e0d262812cc2c230479dc54d122816f746f9e56485a4d6179d7e5547b554251f",
+    "sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp": "8cf78dec23a238fadcfdc4ebcf0a837402f86f53537186c474cb968d44d7f4f0",
+    "sources/w8-actor-virtuals-b-tf-9worldpart/typeinfo.cpp": "81d1084c180bfaa99e8a7376c253f5f0259ce14e664aa2f056bfbe4b92e1b5ba"
   },
   "inputs": [
     {
@@ -22515,6 +22546,470 @@
           "compiled_body_bytes": 92
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-b-common/virtual_call.hpp"
+      ],
+      "input_order": 1648,
+      "kind": "independently_authored_source",
+      "object_name": "advance_state.o",
+      "profile": "authored_cpp",
+      "sha256": "aafc23d959ab96884441b67f666fb39bc08404d33d79b36a6318b6a519873c3d",
+      "source": "sources/w8-actor-virtuals-b-advance-state-autoprop/advance_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "advanceState__8AutoProp",
+          "compiled_body_bytes": 1088
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1649,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "59c467e7a7359a1a1741422878a5a761953695cb3718ce35b6dc6ab92f3131ab",
+      "source": "sources/w8-actor-virtuals-b-clone-container/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__9Container",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1650,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "afeebc5e4f90103c6f8fe214aae863ce6713103530027cfe05f92e1bb5ba1620",
+      "source": "sources/w8-actor-virtuals-b-clone-firebomb/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__8FireBomb",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1651,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "9f102b8046076fdc21817c0c9ff47c85b88b31547f7e1fcac1bc4d5a73e3ea61",
+      "source": "sources/w8-actor-virtuals-b-clone-missiletrap/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__11MissileTrap",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1652,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "ac2fa7d07b686ed585fd78b4c5941a1848315673c3fe257901ffde2ea7d9eb96",
+      "source": "sources/w8-actor-virtuals-b-clone-pushphysicsprop/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__15PushPhysicsProp",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1653,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "8b07dd740f82a698f54ee5987f460a7531fffd91b90221610dd740112b7831ec",
+      "source": "sources/w8-actor-virtuals-b-clone-shooter/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__7Shooter",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1654,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "03a3a91b58d48ec9488d1e45c4ecf181f519e7d6962b85d6833a653f5ab499d4",
+      "source": "sources/w8-actor-virtuals-b-clone-teleporter/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__10Teleporter",
+          "compiled_body_bytes": 572
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1655,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "21f1629fbe804b36b17c78670816672a390dd49568688f37eeb8ca5972faaef7",
+      "source": "sources/w8-actor-virtuals-b-clone-trigger/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__7Trigger",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1656,
+      "kind": "independently_authored_source",
+      "object_name": "clone.o",
+      "profile": "authored_cpp",
+      "sha256": "ad8bf26acb592dc856eeee4b0066f6f541d0c195d739b7a210b17c206d8ea69c",
+      "source": "sources/w8-actor-virtuals-b-clone-worldpart/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__9WorldPart",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1657,
+      "kind": "independently_authored_source",
+      "object_name": "get_model.o",
+      "profile": "authored_cpp",
+      "sha256": "8750f47f913b11ec314cac14de6d0ad155c9b4bb2f0675309d6f938e8048a6a3",
+      "source": "sources/w8-actor-virtuals-b-get-model-autoobject/get_model.cpp",
+      "emitted_functions": [
+        {
+          "name": "getModel__10AutoObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1658,
+      "kind": "independently_authored_source",
+      "object_name": "msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "1ab4c8004a3b55a0e8baa4154b527246ea876aa852176fc4503e97574ecda98a",
+      "source": "sources/w8-actor-virtuals-b-msg-collision-container/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__9ContainerP10GameObject",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-b-common/virtual_call.hpp"
+      ],
+      "input_order": 1659,
+      "kind": "independently_authored_source",
+      "object_name": "msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "aec103ceca42812f22baab862b3a60e0769b04a4285af1bfaa9d1e2fc0b4c777",
+      "source": "sources/w8-actor-virtuals-b-msg-collision-pushphysicsprop/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__15PushPhysicsPropP10GameObject",
+          "compiled_body_bytes": 456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1660,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "6c01771f616eb50cd6f46948e949335152679977b2fb6690d257fd141a4a9b25",
+      "source": "sources/w8-actor-virtuals-b-msg-draw-autoobject/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10AutoObject",
+          "compiled_body_bytes": 852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1661,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "c294ab426d0ad209f45b1eef049315dd7a3f57cdecf4c3910a450fb42ccd3898",
+      "source": "sources/w8-actor-virtuals-b-msg-draw-container/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__9Container",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1662,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "9052837f6c81cead3452811173a7db0151e68b2bd977e5d1b3bfc82ec3a7118b",
+      "source": "sources/w8-actor-virtuals-b-msg-draw-pushphysicsprop/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__15PushPhysicsProp",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1663,
+      "kind": "independently_authored_source",
+      "object_name": "msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "f15a896d3c10ba9f90bd36c2b7cd59497fed19b98af4d25798dd79c8f8570742",
+      "source": "sources/w8-actor-virtuals-b-msg-draw-teleporter/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10Teleporter",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1664,
+      "kind": "independently_authored_source",
+      "object_name": "msg_get_poke_name.o",
+      "profile": "authored_cpp",
+      "sha256": "87b92b5654e7dbc2e5f744e1d1b5d237532d7e83ede00f7161a1b793d3063180",
+      "source": "sources/w8-actor-virtuals-b-msg-getpokename-autoprop/msg_get_poke_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__8AutoPropPUsi",
+          "compiled_body_bytes": 384
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1665,
+      "kind": "independently_authored_source",
+      "object_name": "msg_get_poke_name.o",
+      "profile": "authored_cpp",
+      "sha256": "a8c5f45798c85177eb195274b1e7d838b245aa51f7d7ad7b8affc6f45104e739",
+      "source": "sources/w8-actor-virtuals-b-msg-getpokename-container/msg_get_poke_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__9ContainerPUsi",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-b-common/virtual_call.hpp"
+      ],
+      "input_order": 1666,
+      "kind": "independently_authored_source",
+      "object_name": "msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "8cd8a1155c691b36f8f78cad61e712946631d45f574a0235e06504a37b49afc6",
+      "source": "sources/w8-actor-virtuals-b-msg-hurt-autoprop/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__8AutoPropfP10GameObjecti",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1667,
+      "kind": "independently_authored_source",
+      "object_name": "msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "0c7dcdfb1af6de217dab6b5b5972a3b9337ff09d9e56dd40b387f4f3e7886dfc",
+      "source": "sources/w8-actor-virtuals-b-msg-hurt-container/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__9ContainerfP10GameObjecti",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-b-common/virtual_call.hpp"
+      ],
+      "input_order": 1668,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "6a6a4c66910ec5e265e1c31505902362042dd7ede107de1dbfff71d3748c36f8",
+      "source": "sources/w8-actor-virtuals-b-msg-load-autoprop/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__8AutoPropPc",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1669,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "cf6f5e080608d1619ead3c58a8b11c96c1920fa61d7e776750f7fc351279be05",
+      "source": "sources/w8-actor-virtuals-b-msg-load-container/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__9ContainerPc",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1670,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "36b02c8e7b44563249f0e80186a90819f029dfb8ca0a99a8454418c82851c478",
+      "source": "sources/w8-actor-virtuals-b-msg-load-pushphysicsprop/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__15PushPhysicsPropPc",
+          "compiled_body_bytes": 232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1671,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "4aaf70a11cad8199aa74eaa2f38a1cdc6a96a0d8cf5608f1234b30bc289f5834",
+      "source": "sources/w8-actor-virtuals-b-msg-load-shooter/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7ShooterPc",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1672,
+      "kind": "independently_authored_source",
+      "object_name": "msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "a4dc8a25c7faa4f37a1b0e6e871fe77e13ad1b049ba878773dae045f45c1c3df",
+      "source": "sources/w8-actor-virtuals-b-msg-load-trigger/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7TriggerPc",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-actor-virtuals-b-common/virtual_call.hpp"
+      ],
+      "input_order": 1673,
+      "kind": "independently_authored_source",
+      "object_name": "msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "7f36cb25bf6190a1a8e8b4f215ce8272422d65268a505cbcbcaf37327d00a845",
+      "source": "sources/w8-actor-virtuals-b-msg-poke-autoprop/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__8AutoPropi",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1674,
+      "kind": "independently_authored_source",
+      "object_name": "msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "87de9370cce1c4c620e6c619d0d6ade8898b6924061a63d6ce619ae098d4117c",
+      "source": "sources/w8-actor-virtuals-b-msg-poke-container/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__9Containeri",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1675,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "e0d262812cc2c230479dc54d122816f746f9e56485a4d6179d7e5547b554251f",
+      "source": "sources/w8-actor-virtuals-b-msg-run-hatebridge/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__10HateBridge",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1676,
+      "kind": "independently_authored_source",
+      "object_name": "msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "8cf78dec23a238fadcfdc4ebcf0a837402f86f53537186c474cb968d44d7f4f0",
+      "source": "sources/w8-actor-virtuals-b-msg-run-teleporter/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L4emitEPvPKh",
+          "compiled_body_bytes": 284
+        },
+        {
+          "name": "msg_run__10Teleporter",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1677,
+      "kind": "independently_authored_source",
+      "object_name": "typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "81d1084c180bfaa99e8a7376c253f5f0259ce14e664aa2f056bfbe4b92e1b5ba",
+      "source": "sources/w8-actor-virtuals-b-tf-9worldpart/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf9WorldPart",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -22614,7 +23109,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d88e0cd85ac9df4115eae648ebfedc17ea89ef22b5f7228d41ee041f8a509573",
+  "snapshot_sha256": "22a567fd8b010d58c30619643eda7c250e65945cd18196a3875a90dc995b523c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -3352,6 +3352,45 @@ Closed: `_$_10HateBridge`, `_$_10Teleporter`, `_$_11MissileTrap`,
 
 Opened: `_$_8AutoProp`, `__ti8AutoProp`, `worldReleaseDoor__FP12_worldHeaderi`.
 
+## agents/w8-actor-virtuals-b
+
+Merged (the branch notes carry the five summary sections). Thirty units with
+fresh `input_order` values 1646 through 1675 (31 emitted functions, 8204
+compiled body bytes, not original-byte matches): clone, collision, draw,
+hurt, load, poke, run and type-info methods of the actor classes. Each has a
+`host_check.cpp`; all 30 build and exit 0 here (30 of 30). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1335 function bodies, 1676 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1631 |
+| After | 1613 |
+| Closed | 30 |
+| Opened | 12 |
+
+Closed: `__tf9WorldPart`, `advanceState__8AutoProp`, `clone__10Teleporter`,
+`clone__11MissileTrap`, `clone__15PushPhysicsProp`, `clone__7Shooter`,
+`clone__7Trigger`, `clone__8FireBomb`, `clone__9Container`,
+`clone__9WorldPart`, `getModel__10AutoObject`,
+`msg_collision__15PushPhysicsPropP10GameObject`,
+`msg_collision__9ContainerP10GameObject`, `msg_draw__10AutoObject`,
+`msg_draw__10Teleporter`, `msg_draw__15PushPhysicsProp`,
+`msg_draw__9Container`, `msg_getPokeName__8AutoPropPUsi`,
+`msg_getPokeName__9ContainerPUsi`, `msg_hurt__8AutoPropfP10GameObjecti`,
+`msg_hurt__9ContainerfP10GameObjecti`, `msg_load__15PushPhysicsPropPc`,
+`msg_load__7ShooterPc`, `msg_load__7TriggerPc`, `msg_load__8AutoPropPc`,
+`msg_load__9ContainerPc`, `msg_poke__8AutoPropi`, `msg_poke__9Containeri`,
+`msg_run__10HateBridge`, `msg_run__10Teleporter`.
+
+Opened: `__6PhPropG6Point3PcN22liPQ24item11descriptionf`, `addEffect__FiG6Point3`,
+`bodyInit__FP5_bodyfffff`, `bodyUpdateMatrix__FP5_body`,
+`lightSetAmbientColor__FPs`, `lightSetAmbientOnly__Fv`,
+`modelSetShadowScale__Ff`, `objectAddToRunList__FP10GameObject`,
+`objectAlwaysDraw__FP10GameObject`, `objectCancelAllAlwaysDraw__Fv`,
+`teleportParticle1`, `teleportParticle2`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an
