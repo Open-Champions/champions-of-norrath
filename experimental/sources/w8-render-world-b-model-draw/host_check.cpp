@@ -1,7 +1,7 @@
 #include <cstring>
 #include <vector>
 
-struct Packet {
+struct ModelDrawPacket {
     unsigned char* cursor;
     unsigned char* last;
 };
@@ -32,7 +32,7 @@ static float setup_point[3];
 static signed char setup_fade;
 static const void* setup_model;
 static void* setup_matrix;
-static Packet* setup_packet;
+static ModelDrawPacket* setup_packet;
 static unsigned char* setup_start;
 static void* anim_arg;
 static int halo_count; static const void* halo_ptr; static signed char halo_flag; static const void* halo_model;
@@ -43,19 +43,19 @@ static unsigned char* anim_start;
 extern "C" void matMul__FP8Matrix44P8Matrix34T0(void* out, const void* a, const void* b) {
     ++mat_calls; mat_out = out; mat_a = const_cast<void*>(a); mat_b = const_cast<void*>(b);
 }
-extern "C" void modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc(Packet* p, void* m, const float* pt, const void* mdl, signed char fade) {
+extern "C" void modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc(ModelDrawPacket* p, void* m, const float* pt, const void* mdl, signed char fade) {
     ++setup_calls; setup_packet = p; setup_matrix = m; setup_model = mdl; setup_fade = fade;
     std::memcpy(setup_point, pt, sizeof setup_point);
     setup_start = p->cursor;
     std::memset(p->cursor, 0xab, 32);
     p->cursor += 32;
 }
-extern "C" void animLoadBoneMatricies__FP6PacketP14AnimationState(Packet* p, void* a) {
+extern "C" void animLoadBoneMatricies__FP6PacketP14AnimationState(ModelDrawPacket* p, void* a) {
     ++anim_calls; anim_arg = a; anim_start = p->cursor;
     std::memset(p->cursor, 0xcd, 16);
     p->cursor += 16;
 }
-extern "C" void modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi(Packet*, const void* m, signed char f, const void* h, int n) {
+extern "C" void modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi(ModelDrawPacket*, const void* m, signed char f, const void* h, int n) {
     ++halo_calls; halo_model = m; halo_flag = f; halo_ptr = h; halo_count = n;
 }
 extern "C" void modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34(const void* m, void* a, void* mat) {

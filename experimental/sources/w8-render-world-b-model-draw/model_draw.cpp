@@ -41,7 +41,7 @@
 // tag address, is written for each REF tag but nothing here reads it.) glistp is advanced and
 // drawAddToList(start, int, texture, drawRecord, 0) is called.
 // The meaning of the model and GS register values is not established here.
-struct Packet {
+struct ModelDrawPacket {
     unsigned char* cursor;
     unsigned char* last;
 };
@@ -63,9 +63,9 @@ extern int engineScissory2;
 extern unsigned char worldCharViewMatrix[64];
 
 void matMul__FP8Matrix44P8Matrix34T0(void* out, const void* a, const void* b);
-void modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc(Packet* packet, void* matrix, const float* point, const void* model, signed char fade);
-void animLoadBoneMatricies__FP6PacketP14AnimationState(Packet* packet, void* anim);
-void modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi(Packet* packet, const void* model, signed char flag, const void* halos, int count);
+void modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc(ModelDrawPacket* packet, void* matrix, const float* point, const void* model, signed char fade);
+void animLoadBoneMatricies__FP6PacketP14AnimationState(ModelDrawPacket* packet, void* anim);
+void modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi(ModelDrawPacket* packet, const void* model, signed char flag, const void* halos, int count);
 void modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34(const void* model, void* anim, void* matrix);
 void drawAddToList__FPviP8_textureP11_drawRecordi(void* list, int value, void* texture, void* record, int extra);
 }
@@ -93,7 +93,7 @@ struct State {
 // Starts a DMA packet: remembers its tag address, optionally stores a FLUSH
 // VIF word after the DMA tag, pads with zero bytes to offset 12 modulo 16,
 // then writes the DIRECT VIF word and an A+D GIF tag.
-inline State begin_packet(Packet& packet, bool flush) {
+inline State begin_packet(ModelDrawPacket& packet, bool flush) {
     State state;
     state.dma = packet.cursor;
     unsigned char* at = packet.cursor + 8;
@@ -111,13 +111,13 @@ inline State begin_packet(Packet& packet, bool flush) {
     return state;
 }
 
-inline void entry(Packet& packet, unsigned long long value, unsigned long long reg) {
+inline void entry(ModelDrawPacket& packet, unsigned long long value, unsigned long long reg) {
     store64(packet.cursor, value);
     store64(packet.cursor + 8, reg);
     packet.cursor += 16;
 }
 
-inline void finish_packet(const Packet& packet, const State& state) {
+inline void finish_packet(const ModelDrawPacket& packet, const State& state) {
     unsigned char* cursor = packet.cursor;
     const int gif_loop = (static_cast<int>(cursor - state.tag) / 8 - 2) >> 1;
     const int vif_count = (static_cast<int>(cursor - state.vif) - 4) >> 4;
@@ -132,7 +132,7 @@ extern "C" void modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14Anima
     unsigned char* model, void* texture, int value, const float* position, void* matrix, void* anim,
     unsigned long long flags, void* record, int level) {
     unsigned char matrix44[64];
-    Packet packet;
+    ModelDrawPacket packet;
     float point[3] = {position[0], position[1], position[2]};
 
     packet.cursor = glistp;
