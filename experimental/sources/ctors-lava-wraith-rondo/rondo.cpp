@@ -2,7 +2,8 @@
 // __5RondoG6Point3sPPc at 0x232818, 388 bytes.
 // Creature receives a point snapshot, the sign-extended type, the resource map
 // at 0x42d048, scale 10.0f and the argument list. Flags gain 0x01000000 and
-// the high word of the doubleword at +160 gains 0x00040004. View 0x44f3d8 goes
+// the doubleword at +160 gains 0x0000000400040000 (low word 0x00040000, high
+// word 4). View 0x44f3d8 goes
 // to +72, the literal-pool float 0x3f999999 to +168, 20.0f to +28 and the word
 // at 0x4844a4 to +248. +792 gets -1 as a half, +572 a zero half, and +176,
 // +192, +236, +256, +960 and +964 are zeroed. setParameters receives five
@@ -19,11 +20,13 @@ extern "C" unsigned norrath_construct_Rondo(void* object, const void* point, sho
     (void)norrath_creature_construct(object, &local, type, norrath_ctors_lava_wraith_view_42d048, 10.0f, arguments);
     const Address a = address(object);
     write_word(a + 12u, read_word(a + 12u) | 0x01000000u);
-    const unsigned high = read_word(a + 164u) | 0x00040004u;
+    const unsigned low_word = read_word(a + 160u) | 0x00040000u;
+    const unsigned high = read_word(a + 164u) | 0x4u;
     write_word(a + 72u, address_bits(norrath_ctors_lava_wraith_view_44f3d8));
     write_word(a + 168u, 0x3f999999u);
     write_word(a + 28u, float_bits(20.0f));
     write_word(a + 248u, read_word(address(norrath_actor_view_4844a4)));
+    write_word(a + 160u, low_word);
     write_word(a + 164u, high);
     write_half(a + 792u, 0xffffu);
     write_word(a + 960u, 0u);

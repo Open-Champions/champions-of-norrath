@@ -45,7 +45,7 @@ static void run_case(unsigned flags0, unsigned long long dword0) {
                 "events 3 3e999999 1 0 0 0 0 0 0", "finish"}, "rondo");
     for (int i = 0; i < 12; ++i) want.b[16 + i] = pt[i];
     want.w(36, stub_model_low); want.w(12, 0x01000006u);
-    want.w(160, 0x11); want.w(164, 0x2000 | 0x00040004u);
+    want.w(160, 0x11 | 0x00040000u); want.w(164, 0x2000 | 4u);
     want.w(72, low(norrath_ctors_lava_wraith_view_44f3d8)); want.w(168, 0x3f999999u); want.w(28, fbits(20.0f));
     want.w(248, 0xdeadbeefu); want.w(792, 0xffff, 2); want.w(572, 0, 2);
     for (unsigned off : {960u, 964u, 176u, 192u, 256u}) want.w(off, 0);
