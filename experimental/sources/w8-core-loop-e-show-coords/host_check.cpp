@@ -54,8 +54,10 @@ int main() {
     // Negative local player: nothing.
     validLocalPlayer = -1; showCoords__Fv();
     if (!trace.empty()) return 1;
+    w32(player + 2 * 23984 + 21872, 0x40);   // a valid entity, but the slot is not below nmPlayers
     validLocalPlayer = 2; showCoords__Fv();
     if (!trace.empty()) return 2;
+    w32(player + 2 * 23984 + 21872, 0);
     // Null entity word.
     validLocalPlayer = 0; showCoords__Fv();
     if (!trace.empty()) return 3;
