@@ -3784,6 +3784,40 @@ info13upcast_result`, `do_upcast__C16__user_type_infoQ216__user_type_info8su
 b_kindRC9type_infoPvRQ216__user_type_info13upcast_result`, `printfloat`,
 `raise`.
 
+## agents/w8-runtime-libc-b
+
+Merged (the branch notes carry the five summary sections). Twenty-four units
+with fresh `input_order` values 1884 through 1907: 16 emitted functions (1368
+compiled body bytes, not original-byte matches) and data views. Each unit has
+a `*_host_test.cpp`. All 24 build and exit 0 here (24 of 24) once the source
+is built with `-D<name>=w8_<name>` for the names that collide with the host C
+library, as the notes instruct (`strlen`, `strncmp` and `strncpy` need the
+source and the test compiled separately). No duplicate definition was found
+at link time. No game binary or disassembly listing was committed. 1479
+function bodies, 1908 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1610 |
+| After | 1593 |
+| Closed | 24 |
+| Opened | 7 |
+
+Closed: `norrath_player_number_half_lower_view`,
+`norrath_player_number_half_upper_view`,
+`norrath_player_number_overflow_view`,
+`norrath_player_number_quarter_lower_view`,
+`norrath_player_number_tens_view`, `norrath_player_number_tiny_tens_view`,
+`norrath_player_scan_base_normalization_view`,
+`norrath_player_scan_exponent_format_view`, `norrath_rtti_si`,
+`norrath_rtti_user`, `powf`, `printf`, `rand`, `read`,
+`readyToSwitch__3Cat`, `srand`, `strcasecmp`, `strcpy`, `strlen`, `strncmp`,
+`strncpy`, `strstr`, `tanf`, `write`.
+
+Opened: `__ieee754_powf`, `__ieee754_rem_pio2f`, `__kernel_tanf`, `sceTtyInit`,
+`sceTtyRead`, `sceTtyWrite`, `ttyinit`.
+
 ## Not merged: codex/norrath-runtime-binding
 
 `origin/codex/norrath-runtime-binding` (owner, one commit) adds an

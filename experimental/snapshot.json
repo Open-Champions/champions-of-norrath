@@ -24151,6 +24151,302 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w8-runtime-libc-a-user-vtable/user_vtable.cpp"
+    },
+    {
+      "input_order": 1886,
+      "component": "w8-runtime-libc-b-number-half-lower",
+      "object_name": "w8_runtime_libc_b_number_half_lower.o",
+      "private_object_sha256": "55583a1e16a126977fd23129b39f573f7e1d6a957ebb256c210cb6b5d7de7234",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-half-lower/number_half_lower.cpp"
+    },
+    {
+      "input_order": 1887,
+      "component": "w8-runtime-libc-b-number-half-upper",
+      "object_name": "w8_runtime_libc_b_number_half_upper.o",
+      "private_object_sha256": "b118823c12fdf4ad937b74212a8f9ec7248efa899af754aa8ae822f22259106f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-half-upper/number_half_upper.cpp"
+    },
+    {
+      "input_order": 1888,
+      "component": "w8-runtime-libc-b-number-overflow",
+      "object_name": "w8_runtime_libc_b_number_overflow.o",
+      "private_object_sha256": "67f3a9280264cb10c55b8114425c14e718118a24dada2a6d78f62fd3acf728cb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-overflow/number_overflow.cpp"
+    },
+    {
+      "input_order": 1889,
+      "component": "w8-runtime-libc-b-number-quarter-lower",
+      "object_name": "w8_runtime_libc_b_number_quarter_lower.o",
+      "private_object_sha256": "f463c86eb7fe08dc312b03675724d23fdc43947fceb635c624edf897a87348e5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower.cpp"
+    },
+    {
+      "input_order": 1890,
+      "component": "w8-runtime-libc-b-number-tens",
+      "object_name": "w8_runtime_libc_b_number_tens.o",
+      "private_object_sha256": "2d592bbb581df4ddc23f87571c7f28d9bb30c54a2844eb6cacc716aa88e4b17a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-tens/number_tens.cpp"
+    },
+    {
+      "input_order": 1891,
+      "component": "w8-runtime-libc-b-number-tiny-tens",
+      "object_name": "w8_runtime_libc_b_number_tiny_tens.o",
+      "private_object_sha256": "c4e37672cb712cfb99ef794d03a4faea23f882daf8156bdbb75f28593e9d22bf",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens.cpp"
+    },
+    {
+      "input_order": 1892,
+      "component": "w8-runtime-libc-b-powf",
+      "object_name": "w8_runtime_libc_b_powf.o",
+      "private_object_sha256": "22a17d8daaed49cdc0e5eeb447b06c04142a9d3609fbbc2c5bea9de397ceae56",
+      "emitted_functions": [
+        {
+          "name": "powf",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-powf/powf.cpp"
+    },
+    {
+      "input_order": 1893,
+      "component": "w8-runtime-libc-b-printf",
+      "object_name": "w8_runtime_libc_b_printf.o",
+      "private_object_sha256": "3b5bc78a95bb4c99150caf4f84660b7fc9a35d4a5df06096bda58c2ffc98fba8",
+      "emitted_functions": [
+        {
+          "name": "printf",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-printf/printf.cpp"
+    },
+    {
+      "input_order": 1894,
+      "component": "w8-runtime-libc-b-rand",
+      "object_name": "w8_runtime_libc_b_rand.o",
+      "private_object_sha256": "1ec8ab39f5ac3b4586f884d0b94f8651abd1ef3f17273638ddc0626a4bc099c4",
+      "emitted_functions": [
+        {
+          "name": "rand",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-rand/rand.cpp"
+    },
+    {
+      "input_order": 1895,
+      "component": "w8-runtime-libc-b-read",
+      "object_name": "w8_runtime_libc_b_read.o",
+      "private_object_sha256": "f2e32be6bcd287d4a25960981287405157e3f8e9d6fedd697a39f767898f3610",
+      "emitted_functions": [
+        {
+          "name": "read",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-read/read.cpp"
+    },
+    {
+      "input_order": 1896,
+      "component": "w8-runtime-libc-b-ready-to-switch",
+      "object_name": "w8_runtime_libc_b_ready_to_switch.o",
+      "private_object_sha256": "e3abc2d054cff5b95eca8d2b38e86da27e607e8c666a36d5035b2146518b8d97",
+      "emitted_functions": [
+        {
+          "name": "readyToSwitch__3Cat",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch.cpp"
+    },
+    {
+      "input_order": 1897,
+      "component": "w8-runtime-libc-b-rtti-si",
+      "object_name": "w8_runtime_libc_b_rtti_si.o",
+      "private_object_sha256": "d9c986d68493e88983a09fac5b54b59fe267b59dec7b37dbdf6580d922f00003",
+      "emitted_functions": [
+        {
+          "name": "norrath_rtti_si",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-rtti-si/rtti_si.cpp"
+    },
+    {
+      "input_order": 1898,
+      "component": "w8-runtime-libc-b-rtti-user",
+      "object_name": "w8_runtime_libc_b_rtti_user.o",
+      "private_object_sha256": "80379e007d86907877d6ce9fea1c8f1ff7b0842a1a0312ff3ebb19a0db94462b",
+      "emitted_functions": [
+        {
+          "name": "norrath_rtti_user",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-rtti-user/rtti_user.cpp"
+    },
+    {
+      "input_order": 1899,
+      "component": "w8-runtime-libc-b-scan-base-normalization",
+      "object_name": "w8_runtime_libc_b_scan_base_normalization.o",
+      "private_object_sha256": "56641faba3107e46e3d3897618c03b1be5357a5d297db8b36719552d0c0e367c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization.cpp"
+    },
+    {
+      "input_order": 1900,
+      "component": "w8-runtime-libc-b-scan-exponent-format",
+      "object_name": "w8_runtime_libc_b_scan_exponent_format.o",
+      "private_object_sha256": "072a20778292bacebd284139328bebad7a56e2789ab2c0a8f7dabf872f2b1b27",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format.cpp"
+    },
+    {
+      "input_order": 1901,
+      "component": "w8-runtime-libc-b-srand",
+      "object_name": "w8_runtime_libc_b_srand.o",
+      "private_object_sha256": "ac67222cd027eb3146d4f511c1476b424c9192ad1d119fa71e099cff06666209",
+      "emitted_functions": [
+        {
+          "name": "srand",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-srand/srand.cpp"
+    },
+    {
+      "input_order": 1902,
+      "component": "w8-runtime-libc-b-strcasecmp",
+      "object_name": "w8_runtime_libc_b_strcasecmp.o",
+      "private_object_sha256": "7c805119860cada755ea9154799e678847b36c8293d124ff66a7753a12ef845c",
+      "emitted_functions": [
+        {
+          "name": "strcasecmp",
+          "compiled_body_bytes": 292
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strcasecmp/strcasecmp.cpp"
+    },
+    {
+      "input_order": 1903,
+      "component": "w8-runtime-libc-b-strcpy",
+      "object_name": "w8_runtime_libc_b_strcpy.o",
+      "private_object_sha256": "cba967b02a61579de36cdb04e02e676924bcd68e3fe75474cfca004edf41b7a5",
+      "emitted_functions": [
+        {
+          "name": "strcpy",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strcpy/strcpy.cpp"
+    },
+    {
+      "input_order": 1904,
+      "component": "w8-runtime-libc-b-strlen",
+      "object_name": "w8_runtime_libc_b_strlen.o",
+      "private_object_sha256": "7937b1d74232d8c0cba80137a4437c9bb786949191f59720dd9e87397f472f8a",
+      "emitted_functions": [
+        {
+          "name": "strlen",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strlen/strlen.cpp"
+    },
+    {
+      "input_order": 1905,
+      "component": "w8-runtime-libc-b-strncmp",
+      "object_name": "w8_runtime_libc_b_strncmp.o",
+      "private_object_sha256": "30a0e1a0aae35305dd21e4065a8b2e0bca2059d72a3f9b2a816210404d4aa4b1",
+      "emitted_functions": [
+        {
+          "name": "strncmp",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strncmp/strncmp.cpp"
+    },
+    {
+      "input_order": 1906,
+      "component": "w8-runtime-libc-b-strncpy",
+      "object_name": "w8_runtime_libc_b_strncpy.o",
+      "private_object_sha256": "aa48d6b8569428cd39a4588e32cf67e7e9a30ecd1bfea02b8541cdcb1b819cb1",
+      "emitted_functions": [
+        {
+          "name": "strncpy",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strncpy/strncpy.cpp"
+    },
+    {
+      "input_order": 1907,
+      "component": "w8-runtime-libc-b-strstr",
+      "object_name": "w8_runtime_libc_b_strstr.o",
+      "private_object_sha256": "da0c25640f58a1e32193df290a45d78c4471f469d524cd4bda4a153fb2e412ee",
+      "emitted_functions": [
+        {
+          "name": "strstr",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-strstr/strstr.cpp"
+    },
+    {
+      "input_order": 1908,
+      "component": "w8-runtime-libc-b-tanf",
+      "object_name": "w8_runtime_libc_b_tanf.o",
+      "private_object_sha256": "b195b51a2faa79e22226fe7f2cdc663e8b3888394e14b7ec6c724df008d9de89",
+      "emitted_functions": [
+        {
+          "name": "tanf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-tanf/tanf.cpp"
+    },
+    {
+      "input_order": 1909,
+      "component": "w8-runtime-libc-b-write",
+      "object_name": "w8_runtime_libc_b_write.o",
+      "private_object_sha256": "5a477b12292c13639d208174962247edd11c41b3394cd46ad574cf32019b276d",
+      "emitted_functions": [
+        {
+          "name": "write",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-runtime-libc-b-write/write.cpp"
     }
   ],
   "drafts": [
@@ -28375,7 +28671,55 @@
     "sources/w8-runtime-libc-a-type-info-eq/type_info_eq.cpp": "255fd0c4c54ab772abb883a7440c0532771eda06532774289e0c1d602fca557b",
     "sources/w8-runtime-libc-a-type-info-eq/host_test.cpp": "82dfce99823d06ffaa2cd255a8cacfbcaad522a44a9109b63b770d27e31c9f1b",
     "sources/w8-runtime-libc-a-user-vtable/user_vtable.cpp": "dbd4690bfbafaac83ab38ba443913e6ed0a25ba9dac8fce6d2673250b3de8d96",
-    "sources/w8-runtime-libc-a-user-vtable/host_test.cpp": "c9cfbd5210ed52625576e5aaf89ceaa7aaae09f5bb20740fe1919eab10e1ae22"
+    "sources/w8-runtime-libc-a-user-vtable/host_test.cpp": "c9cfbd5210ed52625576e5aaf89ceaa7aaae09f5bb20740fe1919eab10e1ae22",
+    "sources/w8-runtime-libc-b-number-half-lower/number_half_lower.cpp": "666d640211220cf4ed5dce72d9c5b93fcd9bac1ef83ebce3f2a8180f41679e36",
+    "sources/w8-runtime-libc-b-number-half-lower/number_half_lower_host_test.cpp": "13bc1dd3a39ebeaf6c4279176b5903302c348c26892749143e3325a755788af4",
+    "sources/w8-runtime-libc-b-number-half-upper/number_half_upper.cpp": "8b6cf37723fc2b7f88c1f82d60351739406362a50c16dd5e242b94c98752d5eb",
+    "sources/w8-runtime-libc-b-number-half-upper/number_half_upper_host_test.cpp": "386d75d36c6e3cf73cc9fbc1ae1fc5534212ce8bebd790988e54a7c892e51909",
+    "sources/w8-runtime-libc-b-number-overflow/number_overflow.cpp": "fc6507e95e057b613e255fc8cb290057ef9ff514968efbcfb320fb15928c4b72",
+    "sources/w8-runtime-libc-b-number-overflow/number_overflow_host_test.cpp": "a558b5b73c154256a58d7112cf7162cae62603235aaabc6d35495d503935c23a",
+    "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower.cpp": "eda30cd9ed33c2b3e5df557eff368e7c29df1903775c3bf461d69e593c613b9d",
+    "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower_host_test.cpp": "60c3238e470aef3ed8df4c82e660afdfba624deb91c4c45c8a5034189cc813f6",
+    "sources/w8-runtime-libc-b-number-tens/number_tens.cpp": "cbc2264ce397265dd89d0b105236d9826a1a69cb16eb3334618cc42932cffca9",
+    "sources/w8-runtime-libc-b-number-tens/number_tens_host_test.cpp": "6e17f8ef012a711ba27c4a63c95567da7a918e8e1b57477834f7fe214793a20a",
+    "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens.cpp": "9e728cf48bb877cbdfc76cdad16101f96f06c95a1f5c7858b242bbf5183f80c5",
+    "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens_host_test.cpp": "e9a7b12d60c10f27fd11a0b9ec9276e13b567bf241e5c1a51cb3bfd6140b0766",
+    "sources/w8-runtime-libc-b-powf/powf.cpp": "240e3d711d59f7aa1eb1407d269e608f9999952c173d66a6aadd68a33e634e36",
+    "sources/w8-runtime-libc-b-powf/powf_host_test.cpp": "1ee57c4692be2ac8e255da8d9f621e97dc41c7b06be7217e60fe27f2ed072a84",
+    "sources/w8-runtime-libc-b-printf/printf.cpp": "c96b9847531d2160dba656a22f9de69f4b1cfacbea9c3fd955f5cb530674ccdc",
+    "sources/w8-runtime-libc-b-printf/printf_host_test.cpp": "4c9895387265cce35cf2bb13bc15d06f6c9882216189bac87eb7e643566fa291",
+    "sources/w8-runtime-libc-b-rand/rand.cpp": "c154c8f9614e04fe7ea6e6a919fa9078b27a6d62c37812e1edc8238388d710bb",
+    "sources/w8-runtime-libc-b-rand/rand_host_test.cpp": "d28e15810940a232345d981440e31455cbb5abe9ffd17e944992c5bb792c8e50",
+    "sources/w8-runtime-libc-b-read/read.cpp": "a449c1a5de26c794ef662f51cf8710739f6592932a3f1bad8f0822090f9520e2",
+    "sources/w8-runtime-libc-b-read/read_host_test.cpp": "8bde7a88da9953b05dbc6a831259511270204d7986eacf53aa57e32f1c58ea84",
+    "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch.cpp": "57079de9041ebe273916d2f3c88484ff49966f4b5adbbc5732e9d056ace290e8",
+    "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch_host_test.cpp": "42025faf74a8e63c1ebbd3dbbe353b8c7ba923d03b89c38780791a67e8db677c",
+    "sources/w8-runtime-libc-b-rtti-si/rtti_si.cpp": "516abdaea65178048da05917c4a227a789eb9eccebc7ccca40e3cd0419e2e448",
+    "sources/w8-runtime-libc-b-rtti-si/rtti_si_host_test.cpp": "a9a119ab81a627497b47c50863540c2cc97c748302f980969a51602b3bc9b866",
+    "sources/w8-runtime-libc-b-rtti-user/rtti_user.cpp": "e88cb330af9da6cabd5c6972f00c6c4d7bc72a0c1539cabaeb3bd408ff1d10fb",
+    "sources/w8-runtime-libc-b-rtti-user/rtti_user_host_test.cpp": "11cb66525d035b46a317a57b12d6b663954db920d5fca2328cbdedc9d6f4b848",
+    "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization.cpp": "5f3b38747263718d4e9288128ed247bdc004f1a784962a1edce76e95538694cd",
+    "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization_host_test.cpp": "b33939ccda47a436b1ab533241a994a76e515c89595a1d3a152a0d7bbb8e0941",
+    "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format.cpp": "94233e6d4b23a75fa5280a33b2a7b76204af3f9dfba1ad5c387103ba60dbba85",
+    "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format_host_test.cpp": "21ad191ca0bea6ab159bab1098fed974633572889384dcd4414e7a403136a080",
+    "sources/w8-runtime-libc-b-srand/srand.cpp": "aae8a64397da971e718df0e80b43d6e2628358323addb8a106f071cb8c2cae6b",
+    "sources/w8-runtime-libc-b-srand/srand_host_test.cpp": "3c473f02025bd157250d10f0600d7ee5ad9ab781fc9a6b131b833f5814ca1f5b",
+    "sources/w8-runtime-libc-b-strcasecmp/strcasecmp.cpp": "f80cb8370eeb5dc4c0f61f8bbca58624f281b9b10c75d0e9c41e3fdda6113426",
+    "sources/w8-runtime-libc-b-strcasecmp/strcasecmp_host_test.cpp": "1573038716e18ec22c759dd9cb76628f503bfee45ee3f8de302c3d892a81dd3c",
+    "sources/w8-runtime-libc-b-strcpy/strcpy.cpp": "eb69041d119cbde8e9bd947df2c5d87dfa5a27f4bf6f2733289f8d0272d4b585",
+    "sources/w8-runtime-libc-b-strcpy/strcpy_host_test.cpp": "7aaf182b97da75d2ab6130ff18809b95c7eec66ae76c230142570d6a2ea89e8f",
+    "sources/w8-runtime-libc-b-strlen/strlen.cpp": "c4dc90e3eb4aad48b522d191ff03068170c29fb107cbfb315ac7d36478c70492",
+    "sources/w8-runtime-libc-b-strlen/strlen_host_test.cpp": "3997f9a93886c1efc0876cc17ef8e640af0f4d55ceedf0a5138b1465e6a957c1",
+    "sources/w8-runtime-libc-b-strncmp/strncmp.cpp": "0ea23d12690cc64ef7902220809e34c8ecfe71296bc80dec15f204907b95b377",
+    "sources/w8-runtime-libc-b-strncmp/strncmp_host_test.cpp": "15827f2651f8ed245812398f02c2039b72fa7d969b0964776e3c981f3454042e",
+    "sources/w8-runtime-libc-b-strncpy/strncpy.cpp": "ce36476cb04530ea0f59d5742f15fd6f46ab2e702758d4a9dae21821adf735cc",
+    "sources/w8-runtime-libc-b-strncpy/strncpy_host_test.cpp": "fcb478766e7a7fa779777b716043a87f100e20e96f99db0167fe9baad1f5cb84",
+    "sources/w8-runtime-libc-b-strstr/strstr.cpp": "a1d33fb771e9a7e2af6656832fd1b288d579eb8d29ec7786f29c18a3e39d77c0",
+    "sources/w8-runtime-libc-b-strstr/strstr_host_test.cpp": "c7f5e32b7a1694fcbf4922cb9c37c368a381f5c21acaa2bb29c6a82f0c4b1674",
+    "sources/w8-runtime-libc-b-tanf/tanf.cpp": "5df92987562d6ce49e69d42209bfc9ae8fc702c34f013283c71c7713b69789d9",
+    "sources/w8-runtime-libc-b-tanf/tanf_host_test.cpp": "9fe1687a7f39f839d70fc6d6d4b516a63d46ee9790b2a0e148de4d6ff28cf967",
+    "sources/w8-runtime-libc-b-write/write.cpp": "4be20b3d199cf678ca2306a7d13528276f66205511c75dcde1eb110ae173ba03",
+    "sources/w8-runtime-libc-b-write/write_host_test.cpp": "f592cb8e8b9e57fe8c4a3479d6a42d5afdd3cb046b3fabb358245355584e49ad"
   },
   "additional_implementations": [
     {
@@ -28817,11 +29161,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 1886,
-    "authored_default_inputs": 1884,
+    "selected_inputs": 1910,
+    "authored_default_inputs": 1908,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1465,
-    "compiled_body_bytes_from_accepted_inputs": 653888,
+    "emitted_function_definitions_including_helpers": 1481,
+    "compiled_body_bytes_from_accepted_inputs": 655256,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -28834,7 +29178,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 1573
+    "package_selected_inputs": 1597
   },
   "startup_implementations": [
     {
@@ -53208,6 +53552,374 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w8-runtime-libc-a-user-vtable/host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-half-lower/number_half_lower.cpp",
+      "source_sha256": "666d640211220cf4ed5dce72d9c5b93fcd9bac1ef83ebce3f2a8180f41679e36",
+      "object_sha256": "55583a1e16a126977fd23129b39f573f7e1d6a957ebb256c210cb6b5d7de7234",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-half-lower/number_half_lower_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-half-upper/number_half_upper.cpp",
+      "source_sha256": "8b6cf37723fc2b7f88c1f82d60351739406362a50c16dd5e242b94c98752d5eb",
+      "object_sha256": "b118823c12fdf4ad937b74212a8f9ec7248efa899af754aa8ae822f22259106f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-half-upper/number_half_upper_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-overflow/number_overflow.cpp",
+      "source_sha256": "fc6507e95e057b613e255fc8cb290057ef9ff514968efbcfb320fb15928c4b72",
+      "object_sha256": "67f3a9280264cb10c55b8114425c14e718118a24dada2a6d78f62fd3acf728cb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-overflow/number_overflow_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower.cpp",
+      "source_sha256": "eda30cd9ed33c2b3e5df557eff368e7c29df1903775c3bf461d69e593c613b9d",
+      "object_sha256": "f463c86eb7fe08dc312b03675724d23fdc43947fceb635c624edf897a87348e5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-quarter-lower/number_quarter_lower_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-tens/number_tens.cpp",
+      "source_sha256": "cbc2264ce397265dd89d0b105236d9826a1a69cb16eb3334618cc42932cffca9",
+      "object_sha256": "2d592bbb581df4ddc23f87571c7f28d9bb30c54a2844eb6cacc716aa88e4b17a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-tens/number_tens_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens.cpp",
+      "source_sha256": "9e728cf48bb877cbdfc76cdad16101f96f06c95a1f5c7858b242bbf5183f80c5",
+      "object_sha256": "c4e37672cb712cfb99ef794d03a4faea23f882daf8156bdbb75f28593e9d22bf",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-number-tiny-tens/number_tiny_tens_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-powf/powf.cpp",
+      "source_sha256": "240e3d711d59f7aa1eb1407d269e608f9999952c173d66a6aadd68a33e634e36",
+      "object_sha256": "22a17d8daaed49cdc0e5eeb447b06c04142a9d3609fbbc2c5bea9de397ceae56",
+      "emitted_functions": [
+        {
+          "name": "powf",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-powf/powf_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-printf/printf.cpp",
+      "source_sha256": "c96b9847531d2160dba656a22f9de69f4b1cfacbea9c3fd955f5cb530674ccdc",
+      "object_sha256": "3b5bc78a95bb4c99150caf4f84660b7fc9a35d4a5df06096bda58c2ffc98fba8",
+      "emitted_functions": [
+        {
+          "name": "printf",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-printf/printf_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-rand/rand.cpp",
+      "source_sha256": "c154c8f9614e04fe7ea6e6a919fa9078b27a6d62c37812e1edc8238388d710bb",
+      "object_sha256": "1ec8ab39f5ac3b4586f884d0b94f8651abd1ef3f17273638ddc0626a4bc099c4",
+      "emitted_functions": [
+        {
+          "name": "rand",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-rand/rand_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-read/read.cpp",
+      "source_sha256": "a449c1a5de26c794ef662f51cf8710739f6592932a3f1bad8f0822090f9520e2",
+      "object_sha256": "f2e32be6bcd287d4a25960981287405157e3f8e9d6fedd697a39f767898f3610",
+      "emitted_functions": [
+        {
+          "name": "read",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-read/read_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch.cpp",
+      "source_sha256": "57079de9041ebe273916d2f3c88484ff49966f4b5adbbc5732e9d056ace290e8",
+      "object_sha256": "e3abc2d054cff5b95eca8d2b38e86da27e607e8c666a36d5035b2146518b8d97",
+      "emitted_functions": [
+        {
+          "name": "readyToSwitch__3Cat",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-ready-to-switch/ready_to_switch_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-rtti-si/rtti_si.cpp",
+      "source_sha256": "516abdaea65178048da05917c4a227a789eb9eccebc7ccca40e3cd0419e2e448",
+      "object_sha256": "d9c986d68493e88983a09fac5b54b59fe267b59dec7b37dbdf6580d922f00003",
+      "emitted_functions": [
+        {
+          "name": "norrath_rtti_si",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-rtti-si/rtti_si_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-rtti-user/rtti_user.cpp",
+      "source_sha256": "e88cb330af9da6cabd5c6972f00c6c4d7bc72a0c1539cabaeb3bd408ff1d10fb",
+      "object_sha256": "80379e007d86907877d6ce9fea1c8f1ff7b0842a1a0312ff3ebb19a0db94462b",
+      "emitted_functions": [
+        {
+          "name": "norrath_rtti_user",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-rtti-user/rtti_user_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization.cpp",
+      "source_sha256": "5f3b38747263718d4e9288128ed247bdc004f1a784962a1edce76e95538694cd",
+      "object_sha256": "56641faba3107e46e3d3897618c03b1be5357a5d297db8b36719552d0c0e367c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-scan-base-normalization/scan_base_normalization_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format.cpp",
+      "source_sha256": "94233e6d4b23a75fa5280a33b2a7b76204af3f9dfba1ad5c387103ba60dbba85",
+      "object_sha256": "072a20778292bacebd284139328bebad7a56e2789ab2c0a8f7dabf872f2b1b27",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w8-runtime-libc-b-scan-exponent-format/scan_exponent_format_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-srand/srand.cpp",
+      "source_sha256": "aae8a64397da971e718df0e80b43d6e2628358323addb8a106f071cb8c2cae6b",
+      "object_sha256": "ac67222cd027eb3146d4f511c1476b424c9192ad1d119fa71e099cff06666209",
+      "emitted_functions": [
+        {
+          "name": "srand",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-srand/srand_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strcasecmp/strcasecmp.cpp",
+      "source_sha256": "f80cb8370eeb5dc4c0f61f8bbca58624f281b9b10c75d0e9c41e3fdda6113426",
+      "object_sha256": "7c805119860cada755ea9154799e678847b36c8293d124ff66a7753a12ef845c",
+      "emitted_functions": [
+        {
+          "name": "strcasecmp",
+          "compiled_body_bytes": 292
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strcasecmp/strcasecmp_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strcpy/strcpy.cpp",
+      "source_sha256": "eb69041d119cbde8e9bd947df2c5d87dfa5a27f4bf6f2733289f8d0272d4b585",
+      "object_sha256": "cba967b02a61579de36cdb04e02e676924bcd68e3fe75474cfca004edf41b7a5",
+      "emitted_functions": [
+        {
+          "name": "strcpy",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strcpy/strcpy_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strlen/strlen.cpp",
+      "source_sha256": "c4dc90e3eb4aad48b522d191ff03068170c29fb107cbfb315ac7d36478c70492",
+      "object_sha256": "7937b1d74232d8c0cba80137a4437c9bb786949191f59720dd9e87397f472f8a",
+      "emitted_functions": [
+        {
+          "name": "strlen",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strlen/strlen_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strncmp/strncmp.cpp",
+      "source_sha256": "0ea23d12690cc64ef7902220809e34c8ecfe71296bc80dec15f204907b95b377",
+      "object_sha256": "30a0e1a0aae35305dd21e4065a8b2e0bca2059d72a3f9b2a816210404d4aa4b1",
+      "emitted_functions": [
+        {
+          "name": "strncmp",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strncmp/strncmp_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strncpy/strncpy.cpp",
+      "source_sha256": "ce36476cb04530ea0f59d5742f15fd6f46ab2e702758d4a9dae21821adf735cc",
+      "object_sha256": "aa48d6b8569428cd39a4588e32cf67e7e9a30ecd1bfea02b8541cdcb1b819cb1",
+      "emitted_functions": [
+        {
+          "name": "strncpy",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strncpy/strncpy_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-strstr/strstr.cpp",
+      "source_sha256": "a1d33fb771e9a7e2af6656832fd1b288d579eb8d29ec7786f29c18a3e39d77c0",
+      "object_sha256": "da0c25640f58a1e32193df290a45d78c4471f469d524cd4bda4a153fb2e412ee",
+      "emitted_functions": [
+        {
+          "name": "strstr",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-strstr/strstr_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-tanf/tanf.cpp",
+      "source_sha256": "5df92987562d6ce49e69d42209bfc9ae8fc702c34f013283c71c7713b69789d9",
+      "object_sha256": "b195b51a2faa79e22226fe7f2cdc663e8b3888394e14b7ec6c724df008d9de89",
+      "emitted_functions": [
+        {
+          "name": "tanf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-tanf/tanf_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w8-runtime-libc-b",
+      "source": "sources/w8-runtime-libc-b-write/write.cpp",
+      "source_sha256": "4be20b3d199cf678ca2306a7d13528276f66205511c75dcde1eb110ae173ba03",
+      "object_sha256": "5a477b12292c13639d208174962247edd11c41b3394cd46ad574cf32019b276d",
+      "emitted_functions": [
+        {
+          "name": "write",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w8-runtime-libc-b-write/write_host_test.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
