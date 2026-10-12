@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 1252,
+  "default_authored_inputs": 1256,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -1968,7 +1968,11 @@
     "sources/simloop-services-sound-stream-status/sound_stream_status.cpp": "481779478de69cb6214757aab9010c03df91ab88a8fff1829a2d2c0b33bf99de",
     "sources/gs-dma-present-do-super-sample/do_super_sample.cpp": "ac011ff6b83bd50350db910c9881069ae83123148d03df5ad3e0c2622da1dec3",
     "sources/gs-dma-present-light-vu0-stopped/light_vu0_stopped.cpp": "eb2762591ffbadefd7632107b295c782ac3cf284cbd42ca97dbe54168f94b551",
-    "sources/gs-dma-present-reload-dma/reload_dma.cpp": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d"
+    "sources/gs-dma-present-reload-dma/reload_dma.cpp": "b58c26a2084a2aeaf15ee9e5296561013562b84598113953984421f55c38262d",
+    "sources/pre-logo-dialog-msg/dialog_msg.cpp": "1b76de24cbb694400023c55c3fbc99bf78285315e12f8f334a70775fcf1bfa00",
+    "sources/pre-logo-dialog-pause/pause_menu.cpp": "555267983223f766bf7ce7894ded1183ee2689af6d6b3c07697ed7c05685e1e8",
+    "sources/pre-logo-dialog-run/run_dialog.cpp": "21db4ef831f53e092676d49c9694775583800e53efeaf07c7c3598f8664c6c44",
+    "sources/pre-logo-dialog-draw/draw_dialog.cpp": "04f9c5314cdb42e66ad8f957357586201cc00342daa2aede4a5f963be2d48688"
   },
   "inputs": [
     {
@@ -16249,6 +16253,66 @@
           "compiled_body_bytes": 2928
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1254,
+      "kind": "independently_authored_source",
+      "object_name": "dialog_msg.o",
+      "profile": "authored_cpp",
+      "sha256": "1b76de24cbb694400023c55c3fbc99bf78285315e12f8f334a70775fcf1bfa00",
+      "source": "sources/pre-logo-dialog-msg/dialog_msg.cpp",
+      "emitted_functions": [
+        {
+          "name": "dialogMsgCallback__FPUci",
+          "compiled_body_bytes": 3192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1255,
+      "kind": "independently_authored_source",
+      "object_name": "pause_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "555267983223f766bf7ce7894ded1183ee2689af6d6b3c07697ed7c05685e1e8",
+      "source": "sources/pre-logo-dialog-pause/pause_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "pauseMenuFrameRun__Fv",
+          "compiled_body_bytes": 4888
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1256,
+      "kind": "independently_authored_source",
+      "object_name": "run_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "21db4ef831f53e092676d49c9694775583800e53efeaf07c7c3598f8664c6c44",
+      "source": "sources/pre-logo-dialog-run/run_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "runDialog__Fv",
+          "compiled_body_bytes": 2100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 1257,
+      "kind": "independently_authored_source",
+      "object_name": "draw_dialog.o",
+      "profile": "authored_cpp",
+      "sha256": "04f9c5314cdb42e66ad8f957357586201cc00342daa2aede4a5f963be2d48688",
+      "source": "sources/pre-logo-dialog-draw/draw_dialog.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawDialog__Fv",
+          "compiled_body_bytes": 1632
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -16348,7 +16412,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "178cdc7b5e5ef868760e28e16bfe63828994f319d523a385b0ee2c2119a42e47",
+  "snapshot_sha256": "e8a1a15322a8a81254b4687b0bf02133f23b9c4833cba301a23f34aae1912f67",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
