@@ -1873,6 +1873,16 @@ and `soundGetStreamPlayStatus__Fi`. 984 function bodies, 1256 authored inputs, z
 objects are byte-identical to the recorded `object_sha256` values. No
 EE or game execution.
 
+## Not merged: codex/norrath-runtime-binding
+
+`origin/codex/norrath-runtime-binding` (owner, one commit) adds an
+opt-in `--defsym=memset=norrath_block_memory_set` binding to
+`tools/build_partial.py` with hash-checked provider/consumers plus docs.
+It is not an `agents/*` worker package, carries no agent notes, and
+changes the build driver itself, so it is left for the startup lead or
+owner to merge. The default authored partial link used for the official
+counts above does not take the opt-in flag and is unaffected.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
