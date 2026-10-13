@@ -4727,6 +4727,46 @@ Opened: `GetMemorySize`, `InitTLB32MB`, `P_ExtendTrail__FiG6Point3`,
 `_vt$13MissileWeapon`, `_vt$3NPC`, `iAllocTimerCounter`, `iSetTimerHandler`,
 `iStartTimerCounter`, `playedStinger`, `sceSifMCallRpc`
 
+## agents/w9-startup-crt-c
+
+Merged (the branch notes carry the five summary sections). Twenty-seven units
+with fresh `input_order` values 2415 through 2441, using the unique object
+names the notes asked for (three `typeinfo.cpp` units and `font_string_sizeu`
+would otherwise collide). Six virtual-table units and `impure_data` emit no
+function. No game binary or disassembly listing was committed. 29 host checks:
+28 run as is here; `k-exit-tlb-check` needs its two path arguments and passes
+with them (61 instructions). Both of its checks, and `ctype-check`, guard units
+that were already in the snapshot but unselected (`_ctype_`,
+`_kExitTLBHandler`); I did not select those units in this pass. The worker made
+no full-build claim; the real delta is above. 1988 function bodies, 2440
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1499 |
+| After | 1496 |
+| Closed | 27 |
+| Opened | 24 |
+
+Closed: `__tf11LavaVehicle`, `__tf9MummyKing`, `__tf9Savepoint`,
+`__throw_bad_typeid`, `__ti11LavaVehicle`, `__udivdi3`, `__umoddi3`,
+`_alarm_bind`, `_alarm_rdata`, `_exit`, `_fontPrintu__FiiPUsi`,
+`_fontStringSize__FP4FontPci`, `_fontStringSizeu__FP4FontPUsi`,
+`_fs_version`, `_impure_ptr`, `_sceFsSigSema`, `_sceFsWaitS`,
+`_sceRpcGetFPacket`, `_sceRpcGetFPacket2`, `_sceSifSendCmd`,
+`_search_svdata`, `_vt$11AddParticle`, `_vt$11LavaVehicle`,
+`_vt$11LightEffect`, `_vt$19ParticleMorphEffect`, `_vt$7Vehicle`,
+`_vt$8SkulBoat`
+
+Opened: `Exit`, `_$_10bad_typeid`, `_$_11AddParticle`, `_$_11LavaVehicle`,
+`_$_11LightEffect`, `_$_19ParticleMorphEffect`, `__cp_push_exception`,
+`__eh_alloc`, `__ps2_klibinfo__`, `__tf10bad_typeid`, `__tf11AddParticle`,
+`__tf11LightEffect`, `__tf19ParticleMorphEffect`, `__throw`,
+`_vt$10bad_typeid`, `clone__11LightEffect`, `debugReport__11AddParticle`,
+`draw__11AddParticleG6Point3P6Point3i`, `isceSifSetDma`,
+`msg_run__11LightEffect`, `msg_run__19ParticleMorphEffect`,
+`run__11AddParticleG6Point3`, `scanMask`, `subfontPrintu__FiiPUsi`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5074,3 +5114,4 @@ and no startup stage has executed.
 - 2026-10-12 15:56 CDT — `agents/w8-spell-static-init-a` — 1478 unresolved imports
 - 2026-10-12 16:15 CDT — `agents/w8-render-world-a` — 1514 unresolved imports
 - 2026-10-12 20:02 CDT — `agents/w9-startup-crt-a` — 1499 unresolved imports
+- 2026-10-12 20:05 CDT — `agents/w9-startup-crt-c` — 1496 unresolved imports

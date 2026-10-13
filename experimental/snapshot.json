@@ -31409,6 +31409,349 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-startup-crt-a-web-ctor/web_ctor.cpp"
+    },
+    {
+      "input_order": 2415,
+      "component": "w9-startup-crt-c-alarm-bind",
+      "object_name": "w9_startup_crt_c_alarm_bind.o",
+      "private_object_sha256": "77ebb47ae1ebeaa20e07cd2fd43607f293f2bbfe023e6fc4dbbac63c586f9bec",
+      "emitted_functions": [
+        {
+          "name": "_alarm_bind",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-alarm-bind/alarm_bind.cpp"
+    },
+    {
+      "input_order": 2416,
+      "component": "w9-startup-crt-c-alarm-rdata",
+      "object_name": "w9_startup_crt_c_alarm_rdata.o",
+      "private_object_sha256": "c9da364f5dd206b212bca091403e1730d19d79975b6c46b5c7b8b3958596fdbc",
+      "emitted_functions": [
+        {
+          "name": "_alarm_rdata",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-alarm-rdata/alarm_rdata.cpp"
+    },
+    {
+      "input_order": 2417,
+      "component": "w9-startup-crt-c-exit",
+      "object_name": "w9_startup_crt_c_exit.o",
+      "private_object_sha256": "914eb3f07d6f6753a99c4bdec2bfe3a3679ec000fd3ee3f8673bbc3fb76dfdba",
+      "emitted_functions": [
+        {
+          "name": "_exit",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-exit/exit_stub.cpp"
+    },
+    {
+      "input_order": 2418,
+      "component": "w9-startup-crt-c-font-printu-inner",
+      "object_name": "w9_startup_crt_c_font_printu_inner.o",
+      "private_object_sha256": "b70199336dc6db99e05462f721d4067b88dc1bb1fa1977c8dc02abed11b691c8",
+      "emitted_functions": [
+        {
+          "name": "_fontPrintu__FiiPUsi",
+          "compiled_body_bytes": 680
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-font-printu-inner/font_printu_inner.cpp"
+    },
+    {
+      "input_order": 2419,
+      "component": "w9-startup-crt-c-font-string-size",
+      "object_name": "w9_startup_crt_c_font_string_size.o",
+      "private_object_sha256": "ee11253768dceb1dbea091e1c4198835f7a128b1c38b4382a37fd2779dfa3f44",
+      "emitted_functions": [
+        {
+          "name": "_fontStringSize__FP4FontPci",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-font-string-size/font_string_size.cpp"
+    },
+    {
+      "input_order": 2420,
+      "component": "w9-startup-crt-c-font-string-sizeu",
+      "object_name": "w9_startup_crt_c_font_string_sizeu.o",
+      "private_object_sha256": "b9562405d348af6793275244b3be828375791dfb30b5a287b7e201e1a4ece224",
+      "emitted_functions": [
+        {
+          "name": "_fontStringSizeu__FP4FontPUsi",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-font-string-sizeu/font_string_sizeu.cpp"
+    },
+    {
+      "input_order": 2421,
+      "component": "w9-startup-crt-c-fs-sem-init",
+      "object_name": "w9_startup_crt_c_fs_sem_init.o",
+      "private_object_sha256": "d0a4bcca09ecb2791d386c3e63b08de1898a8d3c6625dd35c2c51fca0c6e4d6a",
+      "emitted_functions": [
+        {
+          "name": "_sceFsSemInit",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-fs-sem-init/fs_sem_init.cpp"
+    },
+    {
+      "input_order": 2422,
+      "component": "w9-startup-crt-c-fs-sig-sema",
+      "object_name": "w9_startup_crt_c_fs_sig_sema.o",
+      "private_object_sha256": "2ea348a5f7a90efce1a2dbd7e9a0bca2da4c93aaf715cddacf958d9d3a4aad91",
+      "emitted_functions": [
+        {
+          "name": "_sceFsSigSema",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-fs-sig-sema/fs_sig_sema.cpp"
+    },
+    {
+      "input_order": 2423,
+      "component": "w9-startup-crt-c-fs-version",
+      "object_name": "w9_startup_crt_c_fs_version.o",
+      "private_object_sha256": "dad10295736a49097eb74cf1689f37f72c03ff926edfb25d232e7a96189a603a",
+      "emitted_functions": [
+        {
+          "name": "_fs_version",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-fs-version/fs_version.cpp"
+    },
+    {
+      "input_order": 2424,
+      "component": "w9-startup-crt-c-fs-wait-s",
+      "object_name": "w9_startup_crt_c_fs_wait_s.o",
+      "private_object_sha256": "4f2096865b21f5f3e0b3df2891e7c78bda668c66fd5daf41bfc92889178d4fc3",
+      "emitted_functions": [
+        {
+          "name": "_sceFsWaitS",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-fs-wait-s/fs_wait_s.cpp"
+    },
+    {
+      "input_order": 2425,
+      "component": "w9-startup-crt-c-impure-data",
+      "object_name": "w9_startup_crt_c_impure_data.o",
+      "private_object_sha256": "14c4b78df9e5507e2bbe60057ab2ec3828a2c73e92ef8d86bf1326e581197b1c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-impure-data/impure_data.cpp"
+    },
+    {
+      "input_order": 2426,
+      "component": "w9-startup-crt-c-rpc-get-fpacket",
+      "object_name": "w9_startup_crt_c_rpc_get_fpacket.o",
+      "private_object_sha256": "1dadfcb3f7a1ce1cedf971d9c19051f9c49fd8710baee130265edf0e3c789e8d",
+      "emitted_functions": [
+        {
+          "name": "_sceRpcGetFPacket",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-rpc-get-fpacket/rpc_get_fpacket.cpp"
+    },
+    {
+      "input_order": 2427,
+      "component": "w9-startup-crt-c-rpc-get-fpacket2",
+      "object_name": "w9_startup_crt_c_rpc_get_fpacket2.o",
+      "private_object_sha256": "28255fc9b12636fbce1ea04b18c954196f7cd684c83778da3b2df063539bdd9b",
+      "emitted_functions": [
+        {
+          "name": "_sceRpcGetFPacket2",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-rpc-get-fpacket2/rpc_get_fpacket2.cpp"
+    },
+    {
+      "input_order": 2428,
+      "component": "w9-startup-crt-c-search-svdata",
+      "object_name": "w9_startup_crt_c_search_svdata.o",
+      "private_object_sha256": "3d26dd56849614a9465e552e224ae535564c5a738a84bf089dd190d4f3b510c5",
+      "emitted_functions": [
+        {
+          "name": "_search_svdata",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-search-svdata/search_svdata.cpp"
+    },
+    {
+      "input_order": 2429,
+      "component": "w9-startup-crt-c-sif-send-cmd-internal",
+      "object_name": "w9_startup_crt_c_sif_send_cmd_internal.o",
+      "private_object_sha256": "963880cca4ac75f152f5f243436c2734a96ce4648d1063fe1117615d5c0509a0",
+      "emitted_functions": [
+        {
+          "name": "_sceSifSendCmd",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-sif-send-cmd-internal/sif_send_cmd_internal.cpp"
+    },
+    {
+      "input_order": 2430,
+      "component": "w9-startup-crt-c-tf-lavavehicle",
+      "object_name": "w9_startup_crt_c_tf_lavavehicle.o",
+      "private_object_sha256": "57c2c511085626caad3418bd2dd1b6d1f0a01a830e80c9aac7bb4d630c9308fb",
+      "emitted_functions": [
+        {
+          "name": "__tf11LavaVehicle",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-tf-lavavehicle/typeinfo.cpp"
+    },
+    {
+      "input_order": 2431,
+      "component": "w9-startup-crt-c-tf-mummyking",
+      "object_name": "w9_startup_crt_c_tf_mummyking.o",
+      "private_object_sha256": "16fce74f618376784762e8a64ac783f9bb80cf41c101840cc847ee67ae5fe92d",
+      "emitted_functions": [
+        {
+          "name": "__tf9MummyKing",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-tf-mummyking/typeinfo.cpp"
+    },
+    {
+      "input_order": 2432,
+      "component": "w9-startup-crt-c-tf-savepoint",
+      "object_name": "w9_startup_crt_c_tf_savepoint.o",
+      "private_object_sha256": "58d32c026286077905c707633b7ff5143862142e9ff57d56c2368a8403b954a6",
+      "emitted_functions": [
+        {
+          "name": "__tf9Savepoint",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-tf-savepoint/typeinfo.cpp"
+    },
+    {
+      "input_order": 2433,
+      "component": "w9-startup-crt-c-throw-bad-typeid",
+      "object_name": "w9_startup_crt_c_throw_bad_typeid.o",
+      "private_object_sha256": "84d9fe52e6cd946e2c5f4b7b4de639077cab09d2e6cbd28501092f51dac30c28",
+      "emitted_functions": [
+        {
+          "name": "__throw_bad_typeid",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-throw-bad-typeid/throw_bad_typeid.cpp"
+    },
+    {
+      "input_order": 2434,
+      "component": "w9-startup-crt-c-udivdi3",
+      "object_name": "w9_startup_crt_c_udivdi3.o",
+      "private_object_sha256": "4d325bb8b322e750436aa14e1ecb256e9db5d9ed20a61122f65bb9bb42a003d7",
+      "emitted_functions": [
+        {
+          "name": "__udivdi3",
+          "compiled_body_bytes": 1464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-udivdi3/udivdi3.cpp"
+    },
+    {
+      "input_order": 2435,
+      "component": "w9-startup-crt-c-umoddi3",
+      "object_name": "w9_startup_crt_c_umoddi3.o",
+      "private_object_sha256": "6aee13d47afd6990ea1eaa030f00e8eb5449b3338cbcc63030f8f9e34bc3d7b0",
+      "emitted_functions": [
+        {
+          "name": "__umoddi3",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-umoddi3/umoddi3.cpp"
+    },
+    {
+      "input_order": 2436,
+      "component": "w9-startup-crt-c-vt-addparticle",
+      "object_name": "w9_startup_crt_c_vt_addparticle.o",
+      "private_object_sha256": "a01bac882b0153d413b718ad02f0f0303f2ecacd61f938917da9acfec41e272f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-addparticle/vt_addparticle.cpp"
+    },
+    {
+      "input_order": 2437,
+      "component": "w9-startup-crt-c-vt-lavavehicle",
+      "object_name": "w9_startup_crt_c_vt_lavavehicle.o",
+      "private_object_sha256": "135f53286f9da12e27c73af4da43dfe8d5bd51ca53f9c1457279cc9f153055b7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-lavavehicle/vt_lavavehicle.cpp"
+    },
+    {
+      "input_order": 2438,
+      "component": "w9-startup-crt-c-vt-lighteffect",
+      "object_name": "w9_startup_crt_c_vt_lighteffect.o",
+      "private_object_sha256": "8702efe75d3aa33b598e78842d3496750157e4a62ef4f58e947723f9aaed1eeb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-lighteffect/vt_lighteffect.cpp"
+    },
+    {
+      "input_order": 2439,
+      "component": "w9-startup-crt-c-vt-particlemorpheffect",
+      "object_name": "w9_startup_crt_c_vt_particlemorpheffect.o",
+      "private_object_sha256": "6a0409853842b48ffeb559d5637a314db9495d890957726eba01fd13af15b843",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-particlemorpheffect/vt_particlemorpheffect.cpp"
+    },
+    {
+      "input_order": 2440,
+      "component": "w9-startup-crt-c-vt-skulboat",
+      "object_name": "w9_startup_crt_c_vt_skulboat.o",
+      "private_object_sha256": "9196662c7cba60bb0cc318d567a0c2cdc07cd1d9bbda07ac35a275a372f96237",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-skulboat/vt_skulboat.cpp"
+    },
+    {
+      "input_order": 2441,
+      "component": "w9-startup-crt-c-vt-vehicle",
+      "object_name": "w9_startup_crt_c_vt_vehicle.o",
+      "private_object_sha256": "9c8d1891b5ac62a24786d5bab11bd5269e8f91f0e0cc2305dde11d7415f999c5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-c-vt-vehicle/vt_vehicle.cpp"
     }
   ],
   "drafts": [
@@ -36615,6 +36958,64 @@
     "sources/w9-startup-crt-a-unprepare-power-off/unprepare_power_off.cpp": "295b9dfbb2b59c231ecee204c03ec428eca38861e6307a5d68ab24583758447d",
     "sources/w9-startup-crt-a-web-ctor/host_contract.cpp": "a9ebfe48f422400068cc40e97884babb889c9d36f8480a93d6460b921941e44f",
     "sources/w9-startup-crt-a-web-ctor/web_ctor.cpp": "a945448f0aa8871fe1af2403388a0bfc318b0ee5a5529262e62d30d4c66863d6",
+    "sources/w9-startup-crt-c-alarm-bind/alarm_bind.cpp": "501c56a874c1663329c08e3c6a7657656ee9f4ae4bc7753fb1fc5d2b5fff3796",
+    "sources/w9-startup-crt-c-alarm-bind/host_check.cpp": "b7b53de876702740ef0353ebe5d73dbd34a6496e73b6c41cfca035f5eede46c4",
+    "sources/w9-startup-crt-c-alarm-rdata/alarm_rdata.cpp": "f013b9e56e8fa00be7eda9ed95c6d0a47730a12e12b1964e4da74ff5fae1a653",
+    "sources/w9-startup-crt-c-alarm-rdata/host_check.cpp": "ab2926ad7ae6317eedce81ca27800e4dd9646497803e16f09275b9a7adbca072",
+    "sources/w9-startup-crt-c-ctype-check/host_check.cpp": "ef399bf9d9e338b8be23045d726766e93947568525750882bf27d3d1c51c1617",
+    "sources/w9-startup-crt-c-exit/exit_stub.cpp": "90c677ce3aa460b36c8ff9554608fe01c592f35da00b35bdeff8f3ca725f01a0",
+    "sources/w9-startup-crt-c-exit/host_check.cpp": "e9e9ccc791b85d0c1a12604ffc49c77abbda7f557ad157c7f9449a520cc79368",
+    "sources/w9-startup-crt-c-font-printu-inner/font_printu_inner.cpp": "e76b6e41d97fa018442a30882e1e7c9b7e599a6472edc527a61073d0518f1b9b",
+    "sources/w9-startup-crt-c-font-printu-inner/host_check.cpp": "d546ba0ea4f0db237729d431771f1dc7925f5316a05dfbfdd4c527ced4cbbc0d",
+    "sources/w9-startup-crt-c-font-string-size/font_string_size.cpp": "2d5f9411c0e75f220a9ba81f674a7c12226f68f54a29555d338f3aed9500f3d8",
+    "sources/w9-startup-crt-c-font-string-size/host_check.cpp": "70a8167e52578c07e3f68e110a385fcd39304442570c15ce799f4c9b98a278f2",
+    "sources/w9-startup-crt-c-font-string-sizeu/font_string_sizeu.cpp": "e92e09c0ceac1157013e54658f295e0e4f0ad62d392851797df7e60fb5a0d5cb",
+    "sources/w9-startup-crt-c-font-string-sizeu/host_check.cpp": "80618a9c30deb42599d8b71ec25e3d4239611f6f69ab5b933bc2a143dafb37fb",
+    "sources/w9-startup-crt-c-fs-sem-init/fs_sem_init.cpp": "b42d4b1debd4c75f282acafca8ec649972189b288db8379fc8dd6c8eb601a054",
+    "sources/w9-startup-crt-c-fs-sem-init/host_check.cpp": "f8d622eefcd4a15e859dc3d2b7cfc39a10eb547899a77d9a1f618a2c6e84d7d4",
+    "sources/w9-startup-crt-c-fs-sig-sema/fs_sig_sema.cpp": "8ac79b2f2f4bd3c58f1433f91abc8f1fd737ed1777e3e9e0acc83c57b641e738",
+    "sources/w9-startup-crt-c-fs-sig-sema/host_check.cpp": "9dca8f55f585a9054588b9817142c8a79204bef98668a57a00150813cadbdcf1",
+    "sources/w9-startup-crt-c-fs-version/fs_version.cpp": "1beba06ea3664b9053105913b5077da07c96c2151e82681915b8550e4d3a6408",
+    "sources/w9-startup-crt-c-fs-version/host_check.cpp": "912dc6bae54aaff17e56b41146e5af24ffebbe46a64410665734c52c036aecec",
+    "sources/w9-startup-crt-c-fs-wait-s/fs_wait_s.cpp": "a50b09848a1d45b599e90d4e99d9df0e8430c122c6ec020e37ce7ac2d8303f2e",
+    "sources/w9-startup-crt-c-fs-wait-s/host_check.cpp": "1e6566d1fe7041fd91fe02ee32a736821a7aba2d84bde4a750868c7712eab7ec",
+    "sources/w9-startup-crt-c-impure-data/host_check.cpp": "70bb266bdbe970a897720fa6a3a306637d37bcd2da509a3e9c83ad0ac73130d9",
+    "sources/w9-startup-crt-c-impure-data/impure_data.cpp": "b7f08527676cdd1bcd905d8de762fb40b3e5d80ab1c1fa20aa8599dbc107fec8",
+    "sources/w9-startup-crt-c-impure-data/impure_data.hpp": "74603d1ba12cb6c300289719aacecee5d8cc224d09405e70d004cb71a0e1367b",
+    "sources/w9-startup-crt-c-k-exit-tlb-check/host_check.cpp": "2b8f4b6cd94b8d1819c695442454a25d03c05d98a8ad4da761a22a1f3b68ec03",
+    "sources/w9-startup-crt-c-libgcc-div-common/udivmod.hpp": "7f7a654a633565ca8c74457d0435eb6d22b5b77bca7b89aa5077a107510d04a7",
+    "sources/w9-startup-crt-c-rpc-get-fpacket/host_check.cpp": "6dc0e1fd0da6219d998211d2d09850fec8d526ee6120b4679a5a2d6fa1bd9a07",
+    "sources/w9-startup-crt-c-rpc-get-fpacket/rpc_get_fpacket.cpp": "bb0c60a7d7d3df31a929b72ee3f8493c4921f57b37eb573fc98c5b01326ebdd7",
+    "sources/w9-startup-crt-c-rpc-get-fpacket2/host_check.cpp": "70b6a6ef231a01148a54c56230163d427af25ca2f42c1fba0b946d617bf2c0c1",
+    "sources/w9-startup-crt-c-rpc-get-fpacket2/rpc_get_fpacket2.cpp": "9ac4a5138f35b4284160c21f5eb9dc8b18e4151246d7f3450f93f8a1fba5229b",
+    "sources/w9-startup-crt-c-search-svdata/host_check.cpp": "8829b57d98e495c8d750a7fd0d9bda7ef91af4758b05ee9b782c5c9a21672d3b",
+    "sources/w9-startup-crt-c-search-svdata/search_svdata.cpp": "276c0a4930e42cc02f226f48bed75102a8b67c49f639ef8ef092fcd3f32f5528",
+    "sources/w9-startup-crt-c-sif-send-cmd-internal/host_check.cpp": "18216a7f5aa64718d32687c7fd295158aa3069374f33bd19b3441512aefdf60e",
+    "sources/w9-startup-crt-c-sif-send-cmd-internal/sif_send_cmd_internal.cpp": "56b5abfcc559372fd3baed471dd009ac9e51f75b1c3cf3245d59e2bd084c9ccd",
+    "sources/w9-startup-crt-c-tf-lavavehicle/host_check.cpp": "8cac56b3757c01aaa28c143a31e29340e7c302b8acb774a68c9fecc32256db02",
+    "sources/w9-startup-crt-c-tf-lavavehicle/typeinfo.cpp": "c5fece91de45abbafb2c350d9f140f0f7db62320f273998b0da4ca2c9bf52096",
+    "sources/w9-startup-crt-c-tf-mummyking/host_check.cpp": "2ce3750c604ed67d0688b0ed79bef583f5449606ffa5c8b8ac2ebd314690f0ea",
+    "sources/w9-startup-crt-c-tf-mummyking/typeinfo.cpp": "02b819ad674e3caeb6ea6ed0e9495d99f436681a8917b7bb6274d46a62e8c30d",
+    "sources/w9-startup-crt-c-tf-savepoint/host_check.cpp": "8cccde1c40542d4b8b2b3b4f332a42e8c6e49a2cec6c864782602342a536647d",
+    "sources/w9-startup-crt-c-tf-savepoint/typeinfo.cpp": "c4d98f654ac3d5fbbf2adee983b065ed981aa188188f058ff5698307398ef6bc",
+    "sources/w9-startup-crt-c-throw-bad-typeid/host_check.cpp": "f42739b9e64851c3d5fbc3baee72ed72a23906b6793fcd8f9a51ecc5cc121d0a",
+    "sources/w9-startup-crt-c-throw-bad-typeid/throw_bad_typeid.cpp": "fd47727dac54fb47a46be0c2c2eb7873fa03e6713cb86fe1d4c21db34ef6e2fd",
+    "sources/w9-startup-crt-c-udivdi3/host_check.cpp": "5fc4e2d8bc4d4d9e77853f6feb11837b29a7de17a19879adcdfc6a1c317e82cc",
+    "sources/w9-startup-crt-c-udivdi3/udivdi3.cpp": "9dba28ac38723aa400664cedf9cd3e02536a65a54b9881f31353db79243f3770",
+    "sources/w9-startup-crt-c-umoddi3/host_check.cpp": "fb8d48f1c1e2d4ea74458d6cc5d7836562f5a2bddab968bedeae4eb4b7adf39e",
+    "sources/w9-startup-crt-c-umoddi3/umoddi3.cpp": "241414232c8e31c49ef9a269d7d8d67a8bb47952e336c1a73c9ae1586d82a9ab",
+    "sources/w9-startup-crt-c-vt-addparticle/host_check.cpp": "c6a5470740e1a8a67c1a3cef8eb862b32311046b346d42d2f1d18b6e7b6813fa",
+    "sources/w9-startup-crt-c-vt-addparticle/vt_addparticle.cpp": "b976586e2474c522aa8adf025ee0d5d824154ac0c1c120b3ab256b06e47870d6",
+    "sources/w9-startup-crt-c-vt-lavavehicle/host_check.cpp": "8ff7c159566e9bbd0fbb78bc94c9acd889e89c2d7d69acb1a2e61d41a1d67983",
+    "sources/w9-startup-crt-c-vt-lavavehicle/vt_lavavehicle.cpp": "febfd82e985cc8425dcec94fbfc95f2dac95f220503e4fd559392f54b2ec022a",
+    "sources/w9-startup-crt-c-vt-lighteffect/host_check.cpp": "85b77f734a3abbe75455f7cf8e1885eb6d87802bd96f1731d4ded2a6bad29cce",
+    "sources/w9-startup-crt-c-vt-lighteffect/vt_lighteffect.cpp": "2e0969a6a2fd11397f34deb827c34b949f15b40d0d40a86e58e4070dfa45a5c0",
+    "sources/w9-startup-crt-c-vt-particlemorpheffect/host_check.cpp": "48aa13189412bd3831d76cab97cccc6ba2da85800d25b25bf09c759cffa82fe5",
+    "sources/w9-startup-crt-c-vt-particlemorpheffect/vt_particlemorpheffect.cpp": "d545659c3a4b7a574bd857b9dad07470a21b0cd0c60c9a77c5adb45182fe287d",
+    "sources/w9-startup-crt-c-vt-skulboat/host_check.cpp": "92207caada88b0a8495e7651a5db50ceca204e28f5370b1e4e69d594796c005c",
+    "sources/w9-startup-crt-c-vt-skulboat/vt_skulboat.cpp": "ea6b751f56571a3d60cdef5cfe69c5b892936ac82ba8fa1c53aa2c38f5cf5879",
+    "sources/w9-startup-crt-c-vt-vehicle/host_check.cpp": "3f2efcb37ed12d6c4c43761751daad5b45b1f275557620f18b40381135f4a0ef",
+    "sources/w9-startup-crt-c-vt-vehicle/vt_vehicle.cpp": "a72a5024537ed7437c8774fb2368f76de4a71b600f8dfbce49c90ef38f7af779",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -37174,11 +37575,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2415,
-    "authored_default_inputs": 2413,
+    "selected_inputs": 2442,
+    "authored_default_inputs": 2440,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 1970,
-    "compiled_body_bytes_from_accepted_inputs": 836012,
+    "emitted_function_definitions_including_helpers": 1990,
+    "compiled_body_bytes_from_accepted_inputs": 841404,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -37191,7 +37592,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2102
+    "package_selected_inputs": 2129
   },
   "startup_implementations": [
     {
@@ -70410,6 +70811,430 @@
       ],
       "host_files": [
         "sources/w9-startup-crt-a-web-ctor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-alarm-bind/alarm_bind.cpp",
+      "source_sha256": "501c56a874c1663329c08e3c6a7657656ee9f4ae4bc7753fb1fc5d2b5fff3796",
+      "object_sha256": "77ebb47ae1ebeaa20e07cd2fd43607f293f2bbfe023e6fc4dbbac63c586f9bec",
+      "emitted_functions": [
+        {
+          "name": "_alarm_bind",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-alarm-bind/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-alarm-rdata/alarm_rdata.cpp",
+      "source_sha256": "f013b9e56e8fa00be7eda9ed95c6d0a47730a12e12b1964e4da74ff5fae1a653",
+      "object_sha256": "c9da364f5dd206b212bca091403e1730d19d79975b6c46b5c7b8b3958596fdbc",
+      "emitted_functions": [
+        {
+          "name": "_alarm_rdata",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-alarm-rdata/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-exit/exit_stub.cpp",
+      "source_sha256": "90c677ce3aa460b36c8ff9554608fe01c592f35da00b35bdeff8f3ca725f01a0",
+      "object_sha256": "914eb3f07d6f6753a99c4bdec2bfe3a3679ec000fd3ee3f8673bbc3fb76dfdba",
+      "emitted_functions": [
+        {
+          "name": "_exit",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-exit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-font-printu-inner/font_printu_inner.cpp",
+      "source_sha256": "e76b6e41d97fa018442a30882e1e7c9b7e599a6472edc527a61073d0518f1b9b",
+      "object_sha256": "b70199336dc6db99e05462f721d4067b88dc1bb1fa1977c8dc02abed11b691c8",
+      "emitted_functions": [
+        {
+          "name": "_fontPrintu__FiiPUsi",
+          "compiled_body_bytes": 680
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-font-printu-inner/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-font-string-size/font_string_size.cpp",
+      "source_sha256": "2d5f9411c0e75f220a9ba81f674a7c12226f68f54a29555d338f3aed9500f3d8",
+      "object_sha256": "ee11253768dceb1dbea091e1c4198835f7a128b1c38b4382a37fd2779dfa3f44",
+      "emitted_functions": [
+        {
+          "name": "_fontStringSize__FP4FontPci",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-font-string-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-font-string-sizeu/font_string_sizeu.cpp",
+      "source_sha256": "e92e09c0ceac1157013e54658f295e0e4f0ad62d392851797df7e60fb5a0d5cb",
+      "object_sha256": "b9562405d348af6793275244b3be828375791dfb30b5a287b7e201e1a4ece224",
+      "emitted_functions": [
+        {
+          "name": "_fontStringSizeu__FP4FontPUsi",
+          "compiled_body_bytes": 364
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-font-string-sizeu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-fs-sem-init/fs_sem_init.cpp",
+      "source_sha256": "b42d4b1debd4c75f282acafca8ec649972189b288db8379fc8dd6c8eb601a054",
+      "object_sha256": "d0a4bcca09ecb2791d386c3e63b08de1898a8d3c6625dd35c2c51fca0c6e4d6a",
+      "emitted_functions": [
+        {
+          "name": "_sceFsSemInit",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-fs-sem-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-fs-sig-sema/fs_sig_sema.cpp",
+      "source_sha256": "8ac79b2f2f4bd3c58f1433f91abc8f1fd737ed1777e3e9e0acc83c57b641e738",
+      "object_sha256": "2ea348a5f7a90efce1a2dbd7e9a0bca2da4c93aaf715cddacf958d9d3a4aad91",
+      "emitted_functions": [
+        {
+          "name": "_sceFsSigSema",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-fs-sig-sema/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-fs-version/fs_version.cpp",
+      "source_sha256": "1beba06ea3664b9053105913b5077da07c96c2151e82681915b8550e4d3a6408",
+      "object_sha256": "dad10295736a49097eb74cf1689f37f72c03ff926edfb25d232e7a96189a603a",
+      "emitted_functions": [
+        {
+          "name": "_fs_version",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-fs-version/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-fs-wait-s/fs_wait_s.cpp",
+      "source_sha256": "a50b09848a1d45b599e90d4e99d9df0e8430c122c6ec020e37ce7ac2d8303f2e",
+      "object_sha256": "4f2096865b21f5f3e0b3df2891e7c78bda668c66fd5daf41bfc92889178d4fc3",
+      "emitted_functions": [
+        {
+          "name": "_sceFsWaitS",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-fs-wait-s/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-impure-data/impure_data.cpp",
+      "source_sha256": "b7f08527676cdd1bcd905d8de762fb40b3e5d80ab1c1fa20aa8599dbc107fec8",
+      "object_sha256": "14c4b78df9e5507e2bbe60057ab2ec3828a2c73e92ef8d86bf1326e581197b1c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-impure-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-rpc-get-fpacket/rpc_get_fpacket.cpp",
+      "source_sha256": "bb0c60a7d7d3df31a929b72ee3f8493c4921f57b37eb573fc98c5b01326ebdd7",
+      "object_sha256": "1dadfcb3f7a1ce1cedf971d9c19051f9c49fd8710baee130265edf0e3c789e8d",
+      "emitted_functions": [
+        {
+          "name": "_sceRpcGetFPacket",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-rpc-get-fpacket/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-rpc-get-fpacket2/rpc_get_fpacket2.cpp",
+      "source_sha256": "9ac4a5138f35b4284160c21f5eb9dc8b18e4151246d7f3450f93f8a1fba5229b",
+      "object_sha256": "28255fc9b12636fbce1ea04b18c954196f7cd684c83778da3b2df063539bdd9b",
+      "emitted_functions": [
+        {
+          "name": "_sceRpcGetFPacket2",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-rpc-get-fpacket2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-search-svdata/search_svdata.cpp",
+      "source_sha256": "276c0a4930e42cc02f226f48bed75102a8b67c49f639ef8ef092fcd3f32f5528",
+      "object_sha256": "3d26dd56849614a9465e552e224ae535564c5a738a84bf089dd190d4f3b510c5",
+      "emitted_functions": [
+        {
+          "name": "_search_svdata",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-search-svdata/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-sif-send-cmd-internal/sif_send_cmd_internal.cpp",
+      "source_sha256": "56b5abfcc559372fd3baed471dd009ac9e51f75b1c3cf3245d59e2bd084c9ccd",
+      "object_sha256": "963880cca4ac75f152f5f243436c2734a96ce4648d1063fe1117615d5c0509a0",
+      "emitted_functions": [
+        {
+          "name": "_sceSifSendCmd",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-sif-send-cmd-internal/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-tf-lavavehicle/typeinfo.cpp",
+      "source_sha256": "c5fece91de45abbafb2c350d9f140f0f7db62320f273998b0da4ca2c9bf52096",
+      "object_sha256": "57c2c511085626caad3418bd2dd1b6d1f0a01a830e80c9aac7bb4d630c9308fb",
+      "emitted_functions": [
+        {
+          "name": "__tf11LavaVehicle",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-tf-lavavehicle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-tf-mummyking/typeinfo.cpp",
+      "source_sha256": "02b819ad674e3caeb6ea6ed0e9495d99f436681a8917b7bb6274d46a62e8c30d",
+      "object_sha256": "16fce74f618376784762e8a64ac783f9bb80cf41c101840cc847ee67ae5fe92d",
+      "emitted_functions": [
+        {
+          "name": "__tf9MummyKing",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-tf-mummyking/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-tf-savepoint/typeinfo.cpp",
+      "source_sha256": "c4d98f654ac3d5fbbf2adee983b065ed981aa188188f058ff5698307398ef6bc",
+      "object_sha256": "58d32c026286077905c707633b7ff5143862142e9ff57d56c2368a8403b954a6",
+      "emitted_functions": [
+        {
+          "name": "__tf9Savepoint",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-tf-savepoint/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-throw-bad-typeid/throw_bad_typeid.cpp",
+      "source_sha256": "fd47727dac54fb47a46be0c2c2eb7873fa03e6713cb86fe1d4c21db34ef6e2fd",
+      "object_sha256": "84d9fe52e6cd946e2c5f4b7b4de639077cab09d2e6cbd28501092f51dac30c28",
+      "emitted_functions": [
+        {
+          "name": "__throw_bad_typeid",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-throw-bad-typeid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-udivdi3/udivdi3.cpp",
+      "source_sha256": "9dba28ac38723aa400664cedf9cd3e02536a65a54b9881f31353db79243f3770",
+      "object_sha256": "4d325bb8b322e750436aa14e1ecb256e9db5d9ed20a61122f65bb9bb42a003d7",
+      "emitted_functions": [
+        {
+          "name": "__udivdi3",
+          "compiled_body_bytes": 1464
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-udivdi3/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-umoddi3/umoddi3.cpp",
+      "source_sha256": "241414232c8e31c49ef9a269d7d8d67a8bb47952e336c1a73c9ae1586d82a9ab",
+      "object_sha256": "6aee13d47afd6990ea1eaa030f00e8eb5449b3338cbcc63030f8f9e34bc3d7b0",
+      "emitted_functions": [
+        {
+          "name": "__umoddi3",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-c-umoddi3/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-addparticle/vt_addparticle.cpp",
+      "source_sha256": "b976586e2474c522aa8adf025ee0d5d824154ac0c1c120b3ab256b06e47870d6",
+      "object_sha256": "a01bac882b0153d413b718ad02f0f0303f2ecacd61f938917da9acfec41e272f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-addparticle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-lavavehicle/vt_lavavehicle.cpp",
+      "source_sha256": "febfd82e985cc8425dcec94fbfc95f2dac95f220503e4fd559392f54b2ec022a",
+      "object_sha256": "135f53286f9da12e27c73af4da43dfe8d5bd51ca53f9c1457279cc9f153055b7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-lavavehicle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-lighteffect/vt_lighteffect.cpp",
+      "source_sha256": "2e0969a6a2fd11397f34deb827c34b949f15b40d0d40a86e58e4070dfa45a5c0",
+      "object_sha256": "8702efe75d3aa33b598e78842d3496750157e4a62ef4f58e947723f9aaed1eeb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-lighteffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-particlemorpheffect/vt_particlemorpheffect.cpp",
+      "source_sha256": "d545659c3a4b7a574bd857b9dad07470a21b0cd0c60c9a77c5adb45182fe287d",
+      "object_sha256": "6a0409853842b48ffeb559d5637a314db9495d890957726eba01fd13af15b843",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-particlemorpheffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-skulboat/vt_skulboat.cpp",
+      "source_sha256": "ea6b751f56571a3d60cdef5cfe69c5b892936ac82ba8fa1c53aa2c38f5cf5879",
+      "object_sha256": "9196662c7cba60bb0cc318d567a0c2cdc07cd1d9bbda07ac35a275a372f96237",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-skulboat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-startup-crt-c",
+      "source": "sources/w9-startup-crt-c-vt-vehicle/vt_vehicle.cpp",
+      "source_sha256": "a72a5024537ed7437c8774fb2368f76de4a71b600f8dfbce49c90ef38f7af779",
+      "object_sha256": "9c8d1891b5ac62a24786d5bab11bd5269e8f91f0e0cc2305dde11d7415f999c5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-c-vt-vehicle/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
