@@ -8856,3 +8856,25 @@ Closed: `norrath_rtti_entities_a_view_482430`, `norrath_rtti_entities_a_view_482
 
 Opened: none
 - 2026-10-13 07:06 CDT — agents/w11-data-c — 900 unresolved imports
+
+## agents/w11-rend-b
+
+Merged (merge commit, branch tip `cb01786e`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 14 units (13 function bodies; one data unit) with fresh
+`input_order` values 4964 through 4978. All 14 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Seven units include `math_types.hpp`, which the header closure carries. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4976 authored inputs, 3764 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (26) reproduces; its opened list names four functions that are now unresolved (`attachmentLightPos` is a data name the new bodies read). `lightIntensity`, `lightStart` and `marble` stay unresolved because their sources (`w10-render-b-data-*`) are not in the plan. Three large routines were deliberately not attempted (`waterStep`, `vqDecompress__FP8_texturei`, `megatileGenerate__FP12_worldHeader`).
+
+| | |
+|---|---|
+| Before | 900 |
+| After | 878 |
+| Closed | 26 |
+| Opened | 4 |
+
+Closed: `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForCharacter__FP6PacketG6Point3`, `lightSetupForWorld__FP6PacketP13PolysetHeader`, `lightUpdatePosition__FP5Light`, `matInvert__FP8Matrix44T0`, `matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf`, `matUntransform34Vec__FP6Point3P8Matrix34T0`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3`, `modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f`, `modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf`, `modelSetFade__Fc`, `modelSetRelightAttachment__FG6Point3`, `mt_dyndat`, `mt_throwaway`, `scaleTex`, `splashInfoBits`, `waterList`, `waterListBack`, `waterTexture`, `waveFroth`, `waveMainAlternate`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`
+
+Opened: `attachmentLightPos`, `findLightsInBox_forWorld__FG3BoxPP5Lighti`, `modelSetupAttachment__FP6PacketP12_modelHeaderT1i`, `worldQueryLightMap__FP12_worldHeaderG6Point3`
+- 2026-10-13 07:10 CDT — agents/w11-rend-b — 878 unresolved imports

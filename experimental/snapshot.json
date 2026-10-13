@@ -63168,6 +63168,197 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w11-data-c-web-construct-name/web_construct_name.cpp"
+    },
+    {
+      "input_order": 4964,
+      "component": "w11-rend-b-data-globals",
+      "object_name": "w11_rend_b_data_globals.o",
+      "private_object_sha256": "6eaeadfd4a0900d9a00e1e53385fa27bb963a80a2af2d86d20324f6f1e8f50e6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-data-globals/data_globals.cpp"
+    },
+    {
+      "input_order": 4965,
+      "component": "w11-rend-b-light-setup-ambient-world",
+      "object_name": "w11_rend_b_light_setup_ambient_world.o",
+      "private_object_sha256": "91cf3dc031f0d47f0e3fb9d678c74ea733a7162ec9e3c6eaceecf2bb47afbf7f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "lightSetupAmbientWorld__FP6Packeti"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp"
+    },
+    {
+      "input_order": 4966,
+      "component": "w11-rend-b-light-setup-for-character",
+      "object_name": "w11_rend_b_light_setup_for_character.o",
+      "private_object_sha256": "96b41198f8af7701c43edc8add7bf424a7e0fa10353db8c952599e0724e769da",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1268,
+          "name": "lightSetupForCharacter__FP6PacketG6Point3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-light-setup-for-character/light_setup_for_character.cpp"
+    },
+    {
+      "input_order": 4967,
+      "component": "w11-rend-b-light-setup-for-world",
+      "object_name": "w11_rend_b_light_setup_for_world.o",
+      "private_object_sha256": "c1fa76a78bbe2066c81e17bbdcc30c1c781469f834af4fa74e2dbd69e7026140",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1020,
+          "name": "lightSetupForWorld__FP6PacketP13PolysetHeader"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-light-setup-for-world/light_setup_for_world.cpp"
+    },
+    {
+      "input_order": 4968,
+      "component": "w11-rend-b-light-update-position",
+      "object_name": "w11_rend_b_light_update_position.o",
+      "private_object_sha256": "2a3cdfdac97ab447ebf6af024c2fe6d04536a6715b5b5acda62b1bd42015f944",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 428,
+          "name": "lightUpdatePosition__FP5Light"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-light-update-position/light_update_position.cpp"
+    },
+    {
+      "input_order": 4969,
+      "component": "w11-rend-b-mat-invert44",
+      "object_name": "w11_rend_b_mat_invert44.o",
+      "private_object_sha256": "d60c3304f914df8c93dd325dab6e58ff8e22d0f6ad1c1b40be84e2d5cdfe01c5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 696,
+          "name": "matInvert__FP8Matrix44T0"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-mat-invert44/mat_invert44.cpp"
+    },
+    {
+      "input_order": 4970,
+      "component": "w11-rend-b-mat-make-ypr-scale34-really-slow",
+      "object_name": "w11_rend_b_mat_make_ypr_scale34_really_slow.o",
+      "private_object_sha256": "7f71d9f880939fa90c2f1430e4433a5c1f5d25155fb4174c865233e0cb72dd8e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/mat_make_ypr_scale34.cpp"
+    },
+    {
+      "input_order": 4971,
+      "component": "w11-rend-b-mat-untransform34-vec",
+      "object_name": "w11_rend_b_mat_untransform34_vec.o",
+      "private_object_sha256": "5e6268add7dec6528411298b771afc2d6422d4c03d5f3eca3d86684c2df7a980",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "matUntransform34Vec__FP6Point3P8Matrix34T0"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-mat-untransform34-vec/mat_untransform34_vec.cpp"
+    },
+    {
+      "input_order": 4972,
+      "component": "w11-rend-b-model-draw-attachment",
+      "object_name": "w11_rend_b_model_draw_attachment.o",
+      "private_object_sha256": "9315dcb750d31e83a1bd91d968bd5979c4d2b4d7b91a83c543c71cb9a9a1f0c7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 576,
+          "name": "modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-draw-attachment/model_draw_attachment.cpp"
+    },
+    {
+      "input_order": 4973,
+      "component": "w11-rend-b-model-get-attachment-pos",
+      "object_name": "w11_rend_b_model_get_attachment_pos.o",
+      "private_object_sha256": "cffebb6f00c2a8865fe5f73dbfa71baf72c068cedcc7162f7f0937e9e3c3169b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-get-attachment-pos/model_get_attachment_pos.cpp"
+    },
+    {
+      "input_order": 4974,
+      "component": "w11-rend-b-model-get-char-attachment-matrix",
+      "object_name": "w11_rend_b_model_get_char_attachment_matrix.o",
+      "private_object_sha256": "a70d84ac231434bd53462cdc20162dfdbbe58b162a3869df096937c6629006c8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 264,
+          "name": "modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-get-char-attachment-matrix/model_get_char_attachment_matrix.cpp"
+    },
+    {
+      "input_order": 4975,
+      "component": "w11-rend-b-model-get-shadow-pos",
+      "object_name": "w11_rend_b_model_get_shadow_pos.o",
+      "private_object_sha256": "7db00eae45a36776785249f43d0a1b2871826ef3b5ee0dba6357d8a2345db17a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 316,
+          "name": "modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-get-shadow-pos/model_get_shadow_pos.cpp"
+    },
+    {
+      "input_order": 4976,
+      "component": "w11-rend-b-model-set-fade",
+      "object_name": "w11_rend_b_model_set_fade.o",
+      "private_object_sha256": "9513758e06404efe5c23d8a7f80013639fa8199c864939c7df6806389542be06",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "modelSetFade__Fc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-set-fade/model_set_fade.cpp"
+    },
+    {
+      "input_order": 4977,
+      "component": "w11-rend-b-model-set-relight-attachment",
+      "object_name": "w11_rend_b_model_set_relight_attachment.o",
+      "private_object_sha256": "424f84e4e0780a6b0d2afb3440c1c780166d4060bef2ba243f987a991de4052e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "modelSetRelightAttachment__FG6Point3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-rend-b-model-set-relight-attachment/model_set_relight_attachment.cpp"
     }
   ],
   "drafts": [
@@ -69356,6 +69547,34 @@
     "sources/w11-game-a-world-get-door-height/world_get_door_height.cpp": "6b9a489f38ec8c9d0a3de4c0607d598b4cb8f31e3c4fae15687812d07bef8b9a",
     "sources/w11-game-a-world-hitscan-with-objects/host_check.cpp": "aa7da58aa7091b6299496b063c38f18fa804314b88d1d5531ce379122781f012",
     "sources/w11-game-a-world-hitscan-with-objects/world_hitscan_with_objects.cpp": "e761899063d459a21936e67ad89a283cef4b60a595f9249733016a29250aae64",
+    "sources/w11-rend-b-data-globals/data_globals.cpp": "5cd67166270dae55ead18385baee9cbdc47b7b4e765231ed0b15ceb24a7683e3",
+    "sources/w11-rend-b-data-globals/host_check.cpp": "8a1827288808b98e22241e66af9e3e7efe823fd46f4322e1e8d54848f68e5681",
+    "sources/w11-rend-b-light-setup-ambient-world/host_check.cpp": "4c32d380c21f0d0da47e64017a056130526d5da9c7da2f55caac0478220e867d",
+    "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp": "3dd0f9d53148d044c644ccff02a30bc4f976cdb0d409f790cda993f0574b20fb",
+    "sources/w11-rend-b-light-setup-for-character/host_check.cpp": "3152ce6434fb2702cd1a97eefc694036cdbc1408f6c14f49194b4bebad13e7da",
+    "sources/w11-rend-b-light-setup-for-character/light_setup_for_character.cpp": "f430bbcce3e4f7218e00db9cd30811ac2a291062a6844300ddc686e8c9c07dbe",
+    "sources/w11-rend-b-light-setup-for-world/host_check.cpp": "ee85ec77b915c220efe210031ea88a1045bf1119b10c1a255fa7629bcfbf60c6",
+    "sources/w11-rend-b-light-setup-for-world/light_setup_for_world.cpp": "45808bd3954e62ef1b1b6a40ac25d571dcecbc716f1fa04888487694ca88165c",
+    "sources/w11-rend-b-light-update-position/host_check.cpp": "2e2a8ce7f52d28b35e510b7f467ce765d0f547a7a7c81eee8db7c1b252ae274b",
+    "sources/w11-rend-b-light-update-position/light_update_position.cpp": "2660b7ba454fecf4deb8db112f766b832c26e614378a83e320267d836e6b6e58",
+    "sources/w11-rend-b-mat-invert44/host_check.cpp": "05b3d6dc6d59dd72ac0ec7399f0304afa6f02ddabe89fac931b58e0c803fe70a",
+    "sources/w11-rend-b-mat-invert44/mat_invert44.cpp": "5d9ca049b66e5bf2c8765794cd156dfad2d0e5788a599d0fd4ab1e89f12e87b5",
+    "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/host_check.cpp": "fa795222a0af43de4738464708823168ef3360e6b7cc592689596ac97ffbb6dc",
+    "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/mat_make_ypr_scale34.cpp": "92096d6b310ab94db485d4a0e946086b159a705a603c809982bab79ac1b829b0",
+    "sources/w11-rend-b-mat-untransform34-vec/host_check.cpp": "79ae31516fd64679bfae8788b485c971434c57d153a793ba769e658dbb519308",
+    "sources/w11-rend-b-mat-untransform34-vec/mat_untransform34_vec.cpp": "151e9843b576ff94d78435ab9f345cc3b0b00ab0ba56b4650ec1abdd6d9564cf",
+    "sources/w11-rend-b-model-draw-attachment/host_check.cpp": "9f5d29ec930113b9c53650db2ed8ed11bc11efeed02c8fd600972fbbcb6de5c3",
+    "sources/w11-rend-b-model-draw-attachment/model_draw_attachment.cpp": "e6362b13aeee4b33f0c90e4b25890a0ed3d214678756d677c3678f900bdb5295",
+    "sources/w11-rend-b-model-get-attachment-pos/host_check.cpp": "17030364749e4e7c841676a47209112a1d69ef8153280bb88346d98af551095b",
+    "sources/w11-rend-b-model-get-attachment-pos/model_get_attachment_pos.cpp": "e231b6ac29c9a65998893aa8b441b8875f781851e8b6d110f3033e19d0df7a4f",
+    "sources/w11-rend-b-model-get-char-attachment-matrix/host_check.cpp": "986642a1e92a68bc0e95d48ef2f8ee8e5a16c2352c055d0f8213f6d5dd2dd777",
+    "sources/w11-rend-b-model-get-char-attachment-matrix/model_get_char_attachment_matrix.cpp": "13f66a31855e99222c06352cc2c90fff8c22b933d9b52264c6fdea4db7d1f035",
+    "sources/w11-rend-b-model-get-shadow-pos/host_check.cpp": "2ee37557d410d7b792689d0704612ea19e12f6da11d9a6eb6b05393f0571fc20",
+    "sources/w11-rend-b-model-get-shadow-pos/model_get_shadow_pos.cpp": "4d2a1ef4547f2288d77980eb5c35c1b4531336d46c023890f56114e4d8e9d45b",
+    "sources/w11-rend-b-model-set-fade/host_check.cpp": "a8d24c8a1407a5ad04e6fc30664b9e368c50f7161993f6698041119e0ff1d17c",
+    "sources/w11-rend-b-model-set-fade/model_set_fade.cpp": "6ed763c5501276ff3149d52082403f3d683194acd68fd731dc884f1da5143a0c",
+    "sources/w11-rend-b-model-set-relight-attachment/host_check.cpp": "1d10ad4b26537353d82a9a989246279cf45b39a1492967c70863825f642a8303",
+    "sources/w11-rend-b-model-set-relight-attachment/model_set_relight_attachment.cpp": "cc47a0f20ce865fcd809828d92421ed8e82d5d756f4d29fba851bbeea39a3e21",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-array-int-clear/host_check.cpp": "26f53d68dea9cca8f01a5e74a48fbfd453fff089cf97630a8384274568e53ea8",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
@@ -74182,11 +74401,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4964,
-    "authored_default_inputs": 4962,
+    "selected_inputs": 4978,
+    "authored_default_inputs": 4976,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3753,
-    "compiled_body_bytes_from_accepted_inputs": 1627960,
+    "emitted_function_definitions_including_helpers": 3766,
+    "compiled_body_bytes_from_accepted_inputs": 1633280,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -74199,7 +74418,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4651
+    "package_selected_inputs": 4665
   },
   "startup_implementations": [
     {
@@ -146824,6 +147043,239 @@
       ],
       "host_files": [
         "sources/w11-data-c-web-construct-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-data-globals/data_globals.cpp",
+      "source_sha256": "5cd67166270dae55ead18385baee9cbdc47b7b4e765231ed0b15ceb24a7683e3",
+      "object_sha256": "6eaeadfd4a0900d9a00e1e53385fa27bb963a80a2af2d86d20324f6f1e8f50e6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-rend-b-data-globals/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp",
+      "source_sha256": "3dd0f9d53148d044c644ccff02a30bc4f976cdb0d409f790cda993f0574b20fb",
+      "object_sha256": "91cf3dc031f0d47f0e3fb9d678c74ea733a7162ec9e3c6eaceecf2bb47afbf7f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "lightSetupAmbientWorld__FP6Packeti"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-light-setup-ambient-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-light-setup-for-character/light_setup_for_character.cpp",
+      "source_sha256": "f430bbcce3e4f7218e00db9cd30811ac2a291062a6844300ddc686e8c9c07dbe",
+      "object_sha256": "96b41198f8af7701c43edc8add7bf424a7e0fa10353db8c952599e0724e769da",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1268,
+          "name": "lightSetupForCharacter__FP6PacketG6Point3"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-light-setup-for-character/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-light-setup-for-world/light_setup_for_world.cpp",
+      "source_sha256": "45808bd3954e62ef1b1b6a40ac25d571dcecbc716f1fa04888487694ca88165c",
+      "object_sha256": "c1fa76a78bbe2066c81e17bbdcc30c1c781469f834af4fa74e2dbd69e7026140",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1020,
+          "name": "lightSetupForWorld__FP6PacketP13PolysetHeader"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-light-setup-for-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-light-update-position/light_update_position.cpp",
+      "source_sha256": "2660b7ba454fecf4deb8db112f766b832c26e614378a83e320267d836e6b6e58",
+      "object_sha256": "2a3cdfdac97ab447ebf6af024c2fe6d04536a6715b5b5acda62b1bd42015f944",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 428,
+          "name": "lightUpdatePosition__FP5Light"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-light-update-position/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-mat-invert44/mat_invert44.cpp",
+      "source_sha256": "5d9ca049b66e5bf2c8765794cd156dfad2d0e5788a599d0fd4ab1e89f12e87b5",
+      "object_sha256": "d60c3304f914df8c93dd325dab6e58ff8e22d0f6ad1c1b40be84e2d5cdfe01c5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 696,
+          "name": "matInvert__FP8Matrix44T0"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-mat-invert44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/mat_make_ypr_scale34.cpp",
+      "source_sha256": "92096d6b310ab94db485d4a0e946086b159a705a603c809982bab79ac1b829b0",
+      "object_sha256": "7f71d9f880939fa90c2f1430e4433a5c1f5d25155fb4174c865233e0cb72dd8e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-mat-untransform34-vec/mat_untransform34_vec.cpp",
+      "source_sha256": "151e9843b576ff94d78435ab9f345cc3b0b00ab0ba56b4650ec1abdd6d9564cf",
+      "object_sha256": "5e6268add7dec6528411298b771afc2d6422d4c03d5f3eca3d86684c2df7a980",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "matUntransform34Vec__FP6Point3P8Matrix34T0"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-mat-untransform34-vec/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-draw-attachment/model_draw_attachment.cpp",
+      "source_sha256": "e6362b13aeee4b33f0c90e4b25890a0ed3d214678756d677c3678f900bdb5295",
+      "object_sha256": "9315dcb750d31e83a1bd91d968bd5979c4d2b4d7b91a83c543c71cb9a9a1f0c7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 576,
+          "name": "modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-draw-attachment/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-get-attachment-pos/model_get_attachment_pos.cpp",
+      "source_sha256": "e231b6ac29c9a65998893aa8b441b8875f781851e8b6d110f3033e19d0df7a4f",
+      "object_sha256": "cffebb6f00c2a8865fe5f73dbfa71baf72c068cedcc7162f7f0937e9e3c3169b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-get-attachment-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-get-char-attachment-matrix/model_get_char_attachment_matrix.cpp",
+      "source_sha256": "13f66a31855e99222c06352cc2c90fff8c22b933d9b52264c6fdea4db7d1f035",
+      "object_sha256": "a70d84ac231434bd53462cdc20162dfdbbe58b162a3869df096937c6629006c8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 264,
+          "name": "modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-get-char-attachment-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-get-shadow-pos/model_get_shadow_pos.cpp",
+      "source_sha256": "4d2a1ef4547f2288d77980eb5c35c1b4531336d46c023890f56114e4d8e9d45b",
+      "object_sha256": "7db00eae45a36776785249f43d0a1b2871826ef3b5ee0dba6357d8a2345db17a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 316,
+          "name": "modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-get-shadow-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-set-fade/model_set_fade.cpp",
+      "source_sha256": "6ed763c5501276ff3149d52082403f3d683194acd68fd731dc884f1da5143a0c",
+      "object_sha256": "9513758e06404efe5c23d8a7f80013639fa8199c864939c7df6806389542be06",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "modelSetFade__Fc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-set-fade/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-rend-b",
+      "source": "sources/w11-rend-b-model-set-relight-attachment/model_set_relight_attachment.cpp",
+      "source_sha256": "cc47a0f20ce865fcd809828d92421ed8e82d5d756f4d29fba851bbeea39a3e21",
+      "object_sha256": "424f84e4e0780a6b0d2afb3440c1c780166d4060bef2ba243f987a991de4052e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "modelSetRelightAttachment__FG6Point3"
+        }
+      ],
+      "host_files": [
+        "sources/w11-rend-b-model-set-relight-attachment/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4962,
+  "default_authored_inputs": 4976,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3546,6 +3546,20 @@
     "sources/w11-game-a-world-can-pass/world_can_pass.cpp": "e70d960e77c39107fa19b331c98d20c13de33766a1b18dd8c6d9734cba6134e8",
     "sources/w11-game-a-world-get-door-height/world_get_door_height.cpp": "6b9a489f38ec8c9d0a3de4c0607d598b4cb8f31e3c4fae15687812d07bef8b9a",
     "sources/w11-game-a-world-hitscan-with-objects/world_hitscan_with_objects.cpp": "e761899063d459a21936e67ad89a283cef4b60a595f9249733016a29250aae64",
+    "sources/w11-rend-b-data-globals/data_globals.cpp": "5cd67166270dae55ead18385baee9cbdc47b7b4e765231ed0b15ceb24a7683e3",
+    "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp": "3dd0f9d53148d044c644ccff02a30bc4f976cdb0d409f790cda993f0574b20fb",
+    "sources/w11-rend-b-light-setup-for-character/light_setup_for_character.cpp": "f430bbcce3e4f7218e00db9cd30811ac2a291062a6844300ddc686e8c9c07dbe",
+    "sources/w11-rend-b-light-setup-for-world/light_setup_for_world.cpp": "45808bd3954e62ef1b1b6a40ac25d571dcecbc716f1fa04888487694ca88165c",
+    "sources/w11-rend-b-light-update-position/light_update_position.cpp": "2660b7ba454fecf4deb8db112f766b832c26e614378a83e320267d836e6b6e58",
+    "sources/w11-rend-b-mat-invert44/mat_invert44.cpp": "5d9ca049b66e5bf2c8765794cd156dfad2d0e5788a599d0fd4ab1e89f12e87b5",
+    "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/mat_make_ypr_scale34.cpp": "92096d6b310ab94db485d4a0e946086b159a705a603c809982bab79ac1b829b0",
+    "sources/w11-rend-b-mat-untransform34-vec/mat_untransform34_vec.cpp": "151e9843b576ff94d78435ab9f345cc3b0b00ab0ba56b4650ec1abdd6d9564cf",
+    "sources/w11-rend-b-model-draw-attachment/model_draw_attachment.cpp": "e6362b13aeee4b33f0c90e4b25890a0ed3d214678756d677c3678f900bdb5295",
+    "sources/w11-rend-b-model-get-attachment-pos/model_get_attachment_pos.cpp": "e231b6ac29c9a65998893aa8b441b8875f781851e8b6d110f3033e19d0df7a4f",
+    "sources/w11-rend-b-model-get-char-attachment-matrix/model_get_char_attachment_matrix.cpp": "13f66a31855e99222c06352cc2c90fff8c22b933d9b52264c6fdea4db7d1f035",
+    "sources/w11-rend-b-model-get-shadow-pos/model_get_shadow_pos.cpp": "4d2a1ef4547f2288d77980eb5c35c1b4531336d46c023890f56114e4d8e9d45b",
+    "sources/w11-rend-b-model-set-fade/model_set_fade.cpp": "6ed763c5501276ff3149d52082403f3d683194acd68fd731dc884f1da5143a0c",
+    "sources/w11-rend-b-model-set-relight-attachment/model_set_relight_attachment.cpp": "cc47a0f20ce865fcd809828d92421ed8e82d5d756f4d29fba851bbeea39a3e21",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -72122,6 +72136,225 @@
           "name": "norrath_web_construct"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4964,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_data_globals.o",
+      "profile": "authored_cpp",
+      "sha256": "5cd67166270dae55ead18385baee9cbdc47b7b4e765231ed0b15ceb24a7683e3",
+      "source": "sources/w11-rend-b-data-globals/data_globals.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4965,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_light_setup_ambient_world.o",
+      "profile": "authored_cpp",
+      "sha256": "3dd0f9d53148d044c644ccff02a30bc4f976cdb0d409f790cda993f0574b20fb",
+      "source": "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "lightSetupAmbientWorld__FP6Packeti"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4966,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_light_setup_for_character.o",
+      "profile": "authored_cpp",
+      "sha256": "f430bbcce3e4f7218e00db9cd30811ac2a291062a6844300ddc686e8c9c07dbe",
+      "source": "sources/w11-rend-b-light-setup-for-character/light_setup_for_character.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1268,
+          "name": "lightSetupForCharacter__FP6PacketG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4967,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_light_setup_for_world.o",
+      "profile": "authored_cpp",
+      "sha256": "45808bd3954e62ef1b1b6a40ac25d571dcecbc716f1fa04888487694ca88165c",
+      "source": "sources/w11-rend-b-light-setup-for-world/light_setup_for_world.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1020,
+          "name": "lightSetupForWorld__FP6PacketP13PolysetHeader"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4968,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_light_update_position.o",
+      "profile": "authored_cpp",
+      "sha256": "2660b7ba454fecf4deb8db112f766b832c26e614378a83e320267d836e6b6e58",
+      "source": "sources/w11-rend-b-light-update-position/light_update_position.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 428,
+          "name": "lightUpdatePosition__FP5Light"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4969,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_mat_invert44.o",
+      "profile": "authored_cpp",
+      "sha256": "5d9ca049b66e5bf2c8765794cd156dfad2d0e5788a599d0fd4ab1e89f12e87b5",
+      "source": "sources/w11-rend-b-mat-invert44/mat_invert44.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 696,
+          "name": "matInvert__FP8Matrix44T0"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4970,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_mat_make_ypr_scale34_really_slow.o",
+      "profile": "authored_cpp",
+      "sha256": "92096d6b310ab94db485d4a0e946086b159a705a603c809982bab79ac1b829b0",
+      "source": "sources/w11-rend-b-mat-make-ypr-scale34-really-slow/mat_make_ypr_scale34.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4971,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_mat_untransform34_vec.o",
+      "profile": "authored_cpp",
+      "sha256": "151e9843b576ff94d78435ab9f345cc3b0b00ab0ba56b4650ec1abdd6d9564cf",
+      "source": "sources/w11-rend-b-mat-untransform34-vec/mat_untransform34_vec.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "matUntransform34Vec__FP6Point3P8Matrix34T0"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4972,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_draw_attachment.o",
+      "profile": "authored_cpp",
+      "sha256": "e6362b13aeee4b33f0c90e4b25890a0ed3d214678756d677c3678f900bdb5295",
+      "source": "sources/w11-rend-b-model-draw-attachment/model_draw_attachment.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 576,
+          "name": "modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4973,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_get_attachment_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "e231b6ac29c9a65998893aa8b441b8875f781851e8b6d110f3033e19d0df7a4f",
+      "source": "sources/w11-rend-b-model-get-attachment-pos/model_get_attachment_pos.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4974,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_get_char_attachment_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "13f66a31855e99222c06352cc2c90fff8c22b933d9b52264c6fdea4db7d1f035",
+      "source": "sources/w11-rend-b-model-get-char-attachment-matrix/model_get_char_attachment_matrix.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 264,
+          "name": "modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4975,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_get_shadow_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "4d2a1ef4547f2288d77980eb5c35c1b4531336d46c023890f56114e4d8e9d45b",
+      "source": "sources/w11-rend-b-model-get-shadow-pos/model_get_shadow_pos.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 316,
+          "name": "modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4976,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_set_fade.o",
+      "profile": "authored_cpp",
+      "sha256": "6ed763c5501276ff3149d52082403f3d683194acd68fd731dc884f1da5143a0c",
+      "source": "sources/w11-rend-b-model-set-fade/model_set_fade.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "modelSetFade__Fc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-render-math-b-common/math_types.hpp"
+      ],
+      "input_order": 4977,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_b_model_set_relight_attachment.o",
+      "profile": "authored_cpp",
+      "sha256": "cc47a0f20ce865fcd809828d92421ed8e82d5d756f4d29fba851bbeea39a3e21",
+      "source": "sources/w11-rend-b-model-set-relight-attachment/model_set_relight_attachment.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "modelSetRelightAttachment__FG6Point3"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -72221,7 +72454,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "79fd9df21f30c02770937929cc0679a34898d5b18cecd9fd03f8f3eb637d9e12",
+  "snapshot_sha256": "d67bf1121552bea15aefa4a1177465c13efb8a98a1a8c7029894eb57468b04f2",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
