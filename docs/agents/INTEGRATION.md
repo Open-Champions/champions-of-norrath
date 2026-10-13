@@ -8426,8 +8426,7 @@ Opened: `Allocate__t7VIArray1Zi`, `Allocate__t8VIVector1Z18VISceneDisplayElem`, 
 
 Merged (merge commit, branch tip `980680a4`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
-function body each (constructors and destructors), with fresh `input_order` values 4510 through
-4536. The checks here are named `host_contract.cpp` rather than `host_check.cpp`; all 27 build with
+function body each (constructors and destructors), with fresh `input_order` values 4510 through 4536. The checks here are named `host_contract.cpp` rather than `host_check.cpp`; all 27 build with
 `-std=c++17 -Wall -Wextra -Werror` and exit 0. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed (the notes say the
 destructors compile to 144 bytes against 116 in the image). The worker ran no full build; this
@@ -8517,7 +8516,7 @@ Opened: `getDataForAllObjects__FPciPiiT2T2`, `shopDrawTaskBar__FP12screenStruct`
 
 Merged (merge commit, branch tip `5a30e850`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 33 of the branch's 36 units selected (25 function bodies; the rest are data and layout units) with fresh
-`input_order` values 4588 through 4621. The host checks (no build line in the notes) build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the three tty queue checks also need -DNORRATH_HOST_CONTRACT). The branch is partial in one respect: its notes say no paired run was done this session, only host checks. The worker's private paired runs were not
+`input_order` values 4588 through 4620. The host checks (no build line in the notes) build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the three tty queue checks also need -DNORRATH_HOST_CONTRACT). The branch is partial in one respect: its notes say no paired run was done this session, only host checks. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4619 authored inputs, 3545 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8627,7 +8626,7 @@ Opened: `_vt$10SkillDodge`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$13S
 
 Merged (merge commit, branch tip `2f78ae9c`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 26 units from the branch (one constructor each) plus one unit from an earlier package (`w10-item-a-skill-life-tap-get-chance`, `getChance__12SkillLifeTapi`) with fresh
-`input_order` values 4710 through 4736. All 27 host checks in the branch build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The extra unit is the one the earlier integrator held out for having no committed check (see the w10-item-a entries): this branch adds that check (`w11-ctor-c-skill-life-tap-get-chance-check`, which plants two table entries so a swapped order, adjustment or argument fails) and the notes ask for the plan entry, so it is selected now, recorded under package `w10-item-a` with the new check as its host file. The notes' plan sizes were replaced by sizes measured here with the plan's compiler flags. The worker's private paired runs were not
+`input_order` values 4710 through 4735, and 4736 for the extra w10-item-a unit. All 27 host checks in the branch build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The extra unit is the one the earlier integrator held out for having no committed check (see the w10-item-a entries): this branch adds that check (`w11-ctor-c-skill-life-tap-get-chance-check`, which plants two table entries so a swapped order, adjustment or argument fails) and the notes ask for the plan entry, so it is selected now, recorded under package `w10-item-a` with the new check as its host file. The notes' plan sizes were replaced by sizes measured here with the plan's compiler flags. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4735 authored inputs, 3639 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8649,7 +8648,7 @@ Opened: `_vt$10SkillShock`, `_vt$10SpawnMummy`, `_vt$12SkillLifeTap`, `_vt$12Ski
 
 Merged (merge commit, branch tip `87716d50`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 31 units (33 function bodies including 2 compiler-emitted helpers) with fresh
-`input_order` values 4737 through 4768. All 31 host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The notes say the three large functions (`Render__16VIParticleSystemlR8VIRaster`, `GlobalInit__14VIEffectVolumeP7VIScene`, `Init__12VIAtmospherelR8VIRasteri`) were also paired against the original privately; that was not re-verified, and the notes record the authored `Init` as 2,292 bytes against 2,844 in the image, so it is a behaviour reconstruction, not a byte match. The worker's private paired runs were not
+`input_order` values 4737 through 4767. All 31 host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The notes say the three large functions (`Render__16VIParticleSystemlR8VIRaster`, `GlobalInit__14VIEffectVolumeP7VIScene`, `Init__12VIAtmospherelR8VIRasteri`) were also paired against the original privately; that was not re-verified, and the notes record the authored `Init` as 2,292 bytes against 2,844 in the image, so it is a behaviour reconstruction, not a byte match. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4766 authored inputs, 3672 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8707,7 +8706,7 @@ The owners can add committed host checks per function (as `w11-vi-misc-b`, `w11-
 
 Merged (merge commit, branch tip `bd741fbe`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 23 units (19 function bodies; the rest are data units) with fresh
-`input_order` values 4798 through 4821. All 23 host contracts build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs, so the x86_64 recipe used for earlier entries was not available; these checks are address-width independent and pass on arm64). The worker's private paired runs were not
+`input_order` values 4798 through 4820. All 23 host contracts build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs, so the x86_64 recipe used for earlier entries was not available; these checks are address-width independent and pass on arm64). The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4819 authored inputs, 3719 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8729,7 +8728,7 @@ Opened: `_vt$7AntWave`, `expandList`, `freeList`, `harm1`, `harm2`, `lightFloorS
 
 Merged (merge commit, branch tip `10003f24`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one constructor each with fresh
-`input_order` values 4821 through 4848. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's own generator script, run here with the repo toolchain. The worker's private paired runs were not
+`input_order` values 4821 through 4847. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's own generator script, run here with the repo toolchain. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4846 authored inputs, 3746 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8751,7 +8750,7 @@ Opened: `_vt$10MummySnake`, `_vt$10PoisonRain`, `_vt$11BoltGoRound`, `_vt$11Dise
 
 Merged (merge commit, branch tip `cbbc20c9`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 27 vtable data units (no function bodies) with fresh
-`input_order` values 4848 through 4875. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Each checks every slot through the table (name, zero adjustment, null last slot, slot count). The worker's second check, `docs/agents/w11-vt-a-object-check.py`, compares compiled objects with the private image; it was not run here (no image used) and is recorded only as the worker's claim. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+`input_order` values 4848 through 4874. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Each checks every slot through the table (name, zero adjustment, null last slot, slot count). The worker's second check, `docs/agents/w11-vt-a-object-check.py`, compares compiled objects with the private image; it was not run here (no image used) and is recorded only as the worker's claim. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4873 authored inputs, 3746 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8773,7 +8772,7 @@ Opened: `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_5PhIce`, `_$_7OniBall`
 
 Merged (merge commit, branch tip `dae218f9`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 26 vtable data units (no function bodies) with fresh
-`input_order` values 4875 through 4901. All 26 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs); each calls the table through every slot and fails on a wrong slot name, order, adjustment or null slot. The notes' image comparison of the compiled tables is a private script outside git and was not re-verified. The plan entries come from the notes' table (source and hash) with compiled sizes measured here. The worker's private paired runs were not
+`input_order` values 4875 through 4900. All 26 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs); each calls the table through every slot and fails on a wrong slot name, order, adjustment or null slot. The notes' image comparison of the compiled tables is a private script outside git and was not re-verified. The plan entries come from the notes' table (source and hash) with compiled sizes measured here. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4899 authored inputs, 3746 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8795,7 +8794,7 @@ Opened: `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarS
 
 Merged (merge commit, branch tip `4acd5c09`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 29 units (3 function bodies; the rest are data tables and zero-storage objects) with fresh
-`input_order` values 4901 through 4930. All 29 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). The notes point to `docs/agents/w11-data-a-plan-entries.json`, which is not in the branch, so the plan entries were derived here from the 29 unit directories (one source each, hash from the committed file, emitted functions measured with the plan's compiler flags). The item and named-item table units include the existing items-player `rows.hpp` headers instead of a second copy, so they add two names for bytes the `items-player` view units already carry; the old view units stay in the plan. The prefix and suffix tables hold attribute key strings in the same kind as the already-published item tables; their non-string words are unexplained (the notes say so). The worker's private paired runs for the three functions were not re-verified. The worker's private paired runs were not
+`input_order` values 4901 through 4929. All 29 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). The notes point to `docs/agents/w11-data-a-plan-entries.json`, which is not in the branch, so the plan entries were derived here from the 29 unit directories (one source each, hash from the committed file, emitted functions measured with the plan's compiler flags). The item and named-item table units include the existing items-player `rows.hpp` headers instead of a second copy, so they add two names for bytes the `items-player` view units already carry; the old view units stay in the plan. The prefix and suffix tables hold attribute key strings in the same kind as the already-published item tables; their non-string words are unexplained (the notes say so). The worker's private paired runs for the three functions were not re-verified. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4928 authored inputs, 3749 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8817,7 +8816,7 @@ Opened: none
 
 Merged (merge commit, branch tip `32244e82`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 7 units (1 function body, `norrath_construct_Vehicle`; the rest are five resource-map tables and one buffer) with fresh
-`input_order` values 4930 through 4937. All 7 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs; the notes say the Vehicle contract needs -O0 -fno-builtin -ffp-contract=off, which is in its Build line and was applied). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+`input_order` values 4930 through 4936. All 7 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs; the notes say the Vehicle contract needs -O0 -fno-builtin -ffp-contract=off, which is in its Build line and was applied). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4935 authored inputs, 3750 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8861,7 +8860,7 @@ Opened: none
 
 Merged (merge commit, branch tip `cb01786e`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 14 units (13 function bodies; one data unit) with fresh
-`input_order` values 4964 through 4978. All 14 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Seven units include `math_types.hpp`, which the header closure carries. The worker's private paired runs were not
+`input_order` values 4964 through 4977. All 14 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Seven units include `math_types.hpp`, which the header closure carries. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4976 authored inputs, 3764 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8883,7 +8882,7 @@ Opened: `attachmentLightPos`, `findLightsInBox_forWorld__FG3BoxPP5Lighti`, `mode
 
 Merged (merge commit, branch tip `e5d5b016`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 37 units (41 function bodies including compiler-emitted helpers) with fresh
-`input_order` values 4978 through 5015. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` as the notes require (Rosetta on this machine had stopped running x86_64 programs; without that flag the generateDust check fails on this host's fused multiply-adds, which is the flag requirement the notes state). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs and mutation runs were not re-verified. The worker's private paired runs were not
+`input_order` values 4978 through 5014. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` as the notes require (Rosetta on this machine had stopped running x86_64 programs; without that flag the generateDust check fails on this host's fused multiply-adds, which is the flag requirement the notes state). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs and mutation runs were not re-verified. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 5013 authored inputs, 3805 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8905,7 +8904,7 @@ Opened: `__12ParticlePropG6Point3i`, `__13FireBombletJrP11FireBomblet`, `__6PhPr
 
 Merged (merge commit, branch tip `9e1f3012`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 37 units, one function body each with fresh
-`input_order` values 5015 through 5052. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+`input_order` values 5015 through 5051. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 5050 authored inputs, 3842 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
@@ -8922,3 +8921,25 @@ Closed: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `_$_
 
 Opened: `__10StaticFireG6Point3fif`, `__8ItemPropG6Point3PQ24item11descriptionP8Matrix34`, `__tf11SpellCharge`, `__tf15SpellHolyShield`, `gameFlags`, `healColor`, `healPulse`, `hitSomething__11SpellChargeP10GameObject`, `inventoryItemCheckSlot__FiPQ24item11description`, `manaAbsorbOnHit__15SpellHolyShield`, `maybeDrawMultiPlayerMarkers__6Player`, `modelGetCollision__FP12_modelHeaderi`, `modelSetAttachmentFlip__Fv`, `playerItemScan__6PlayerP3padi`, `shipOn`
 - 2026-10-13 07:19 CDT — agents/w11-actor-b — 846 unresolved imports
+
+## agents/w11-actor-c
+
+Merged (merge commit, branch tip `4e4eb4ad`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 36 units (38 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 5052 through 5087. All 36 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5086 authored inputs, 3880 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Seven new `norrath_w11_actor_c_view_*` names are address-named data views the new bodies read; their definitions are not yet authored.
+
+| | |
+|---|---|
+| Before | 846 |
+| After | 830 |
+| Closed | 36 |
+| Opened | 20 |
+
+Closed: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`, `__tf14SpellHarmTouch`, `__tf6Sparks`, `addImpulse__7VehicleP6Point3T1i`, `addSmokelet__10StaticFire`, `bActive__3Web`, `breakWeb__3Web`, `canGrab__11SpiderQueen`, `clone__14WoodElfSoldier`, `clone__6Sparks`, `clone__6Wraith`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`, `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`, `doWavelet__9WaveMakerP6Point3P8Matrix33i`, `drawArrow__14WoodElfSoldier`, `draw__3WebG6Point3`, `dropItem__14WoodElfSoldieri`, `dropTreasure__4itemG6Point3iffffffPci`, `getMinibossName__6Wraith`, `getWaveletMat__9WaveMakerifP8Matrix33`, `msg_collision__6SparksP10GameObject`, `msg_draw__6Sparks`, `msg_run__14WoodElfSoldier`, `msg_run__6Sparks`, `msg_run__6Wraith`, `msg_trigger__14WoodElfSoldieri`, `reset__3Web`, `run__3WebG6Point3i`, `setState__14WoodElfSoldieri`, `setState__6Wraithi`, `start__3WebG6Point3P8Creaturefi`, `updateSmokelets__10StaticFire`
+
+Opened: `P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf`, `TurnToFaceEdge__14WoodElfSoldier`, `__7WebTrapG6Point3T1`, `__8SkeletonG6Point3sPPcPci`, `__tf5Spell`, `_vt$5Wheel`, `createNamedRandom__4itemPQ24item11descriptioniii`, `createRandomCombineableItem__4itemPQ24item11descriptionsPc`, `dropGold__4itemG6Point3i`, `joinCommander__14WoodElfSoldier`, `moveArrow__14WoodElfSoldier`, `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `norrath_w11_actor_c_view_7d7110`, `norrath_w11_actor_c_view_7d7540`, `norrath_w11_actor_c_view_7d7590`, `norrath_w11_actor_c_view_7d7630`, `norrath_w11_actor_c_view_7d7680`, `soundPan2D__FiP6Point3f`, `start__3WebG6Point3T1i`
+- 2026-10-13 07:23 CDT — agents/w11-actor-c — 830 unresolved imports

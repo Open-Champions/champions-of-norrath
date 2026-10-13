@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5050,
+  "default_authored_inputs": 5086,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3340,6 +3340,43 @@
     "sources/w11-actor-b-tf-10projectile/typeinfo.cpp": "c859486575c6f8ed861ad927d2b6998ba6f003eabd8871a61d62a17230f5d29a",
     "sources/w11-actor-b-tf-12recalleffect/typeinfo.cpp": "5b7094c4c503faecb74ebf2cf4195bbb9c946015c43c84e050ca14e6a3773130",
     "sources/w11-actor-b-tf-6player/typeinfo.cpp": "92aacdd31176f2dbc5047b4f942e538462c8aa739b92fce393a52a6e616b3bd6",
+    "sources/w11-actor-c-add-smokelet-10staticfire/add_smokelet.cpp": "d7a2cda44159838945fdc545128b6517fd14521f5f6c6a73c986d487285a0488",
+    "sources/w11-actor-c-can-grab-11spiderqueen/can_grab.cpp": "61f92b3905a73db1ed897a65e0facdf0d4ea562faba9403fd7b7cfac7e169e58",
+    "sources/w11-actor-c-clone-wes/clone.cpp": "819db6affe912f8a6eb5cda74e4389feaf976f994fd2bb4d212d7d462aa3acbd",
+    "sources/w11-actor-c-clone-wraith/clone.cpp": "8e30f04bfeec35963c15cc49d5ef68c7296fd2ccaba527c222b39d5d603ff019",
+    "sources/w11-actor-c-common/c.hpp": "dfa8ed93d862b2b8aaa0d818b2ae06be6535373e2ce2ebb8f7b27452ae5eea34",
+    "sources/w11-actor-c-convert-to-bat-11vampirelord/convert_to_bat.cpp": "5c5a7575ef1361cbce494c4a4abf947bc0b40442ff44c6129d36c319514a7a0d",
+    "sources/w11-actor-c-convert-to-lord-11vampirelord/convert_to_lord.cpp": "5c4150e090902ad7aee5760fde1cd6d2d57e8284aab0313f8285121aa4542b13",
+    "sources/w11-actor-c-get-miniboss-name-6wraith/get_miniboss_name.cpp": "0dca2e7feadf34f3419827bf1ad13fb599b6313dd3245f2fdf3a99a8d21733ea",
+    "sources/w11-actor-c-item-drop-treasure/drop_treasure.cpp": "50645522b601c27f55b62bc11584d8cc21ecc4a156c20d70cf11c48231af214a",
+    "sources/w11-actor-c-msg-draw-6sparks/msg_draw.cpp": "8eaf6bf177689dd12d562061702cb44abfc8976b03ccc8a608d1f4a69211e560",
+    "sources/w11-actor-c-sparks-clone/clone.cpp": "710b1ef48c1f778efc5379211c77a77d992ead616114dea240949dda8c64816a",
+    "sources/w11-actor-c-sparks-msg-collision/msg_collision.cpp": "c692320cd32fa954f27ca00712a9e8506bc157e3db2aba2aa789ef92bbcb86ec",
+    "sources/w11-actor-c-sparks-msg-run/msg_run.cpp": "263ad91980311c7ed6c69248a0556cccbce6b488ede8cdd15872c2a675713677",
+    "sources/w11-actor-c-tf-14spellharmtouch/typeinfo.cpp": "4c7f441af6e52f18c29a0a3f5c2836689d2601146872efb198c3f6c3be81c820",
+    "sources/w11-actor-c-tf-6sparks/typeinfo.cpp": "2a833e2291dd9fea76e1fe082d72df3c955f31d451a497365644634574828cc9",
+    "sources/w11-actor-c-update-smokelets-10staticfire/update_smokelets.cpp": "63357c8cd1dad89b708f9cc70833bb01eb4fb7bd21e91e3ec67f4a1933a5d8a3",
+    "sources/w11-actor-c-vehicle-add-impulse/add_impulse.cpp": "518b77a1646e317ebae1c20f9cf24e5bef61aaa5b5179b48a4c39323baf9af9d",
+    "sources/w11-actor-c-wavemaker-do-wavelet-collision/do_wavelet_collision.cpp": "0fd15100f69c829953572931156b8c40776e483063361be577bb14fa6b5e8ac1",
+    "sources/w11-actor-c-wavemaker-do-wavelet-reflection/do_wavelet_reflection.cpp": "6e2ee9c6c987364d0d5e4db51290409f3e77f3fda0b3d20a92eea850b2de2f6b",
+    "sources/w11-actor-c-wavemaker-do-wavelet/do_wavelet.cpp": "aca5656e8bc015bf496c90871175f2539ec1368a8c5a0bab8b6ea628d8cf266f",
+    "sources/w11-actor-c-wavemaker-get-wavelet-mat/get_wavelet_mat.cpp": "b5e4cf9cb2acf711a98ad5da24952539cea5950cd26b2501c33356afe5699cca",
+    "sources/w11-actor-c-web-b-active/b_active.cpp": "c9cceed3a8f7dcd60bb61aab7c25817a47182306b1b0b2d1966763f03f01f671",
+    "sources/w11-actor-c-web-break/break_web.cpp": "9259ba480bad0ddc3e2fd71a5361d166204d91471af5550dd810b6db3cee73ec",
+    "sources/w11-actor-c-web-draw-point/draw.cpp": "77e61fdc447e82c11e519b620721096973db3089bcb987baf5688eed10970673",
+    "sources/w11-actor-c-web-reset/reset.cpp": "4b91fa972b0274bf62cef3a1be77188e4a80d8b945bb7557a4784a17e9cb026b",
+    "sources/w11-actor-c-web-run-point-int/run.cpp": "60975fcf5dc4aaf31a450aec314c0d7e3aa010c0a8de2a2bc5bbdc24fd844466",
+    "sources/w11-actor-c-web-start-point-creature/start.cpp": "5264b58688d9d9219660ca216403b0241ac74b9317ae1c679ffb3c1adf1ed312",
+    "sources/w11-actor-c-wes-draw-arrow/draw_arrow.cpp": "aaa5a580b302d3f9b7ceaeeb7449ec53e2f5b556131e3a536345b72b19a3b98b",
+    "sources/w11-actor-c-wes-drop-item/drop_item.cpp": "97eb12dbaaff5ea991635468e2a0a60553e5b7ab8d9ad3d400c431ba1097151f",
+    "sources/w11-actor-c-wes-msg-run/msg_run.cpp": "8f84b1160185a69bc476cc64ec1865eef3728ec2e8924d298c68b7b3cc3cdad7",
+    "sources/w11-actor-c-wes-msg-trigger/msg_trigger.cpp": "98cab1912c010a9fba168997dac2f9e09be854d3803b5260aa411f85ec1a0d80",
+    "sources/w11-actor-c-wes-set-state/set_state.cpp": "98d187a970d0b61985d13932389c0fffe3e4513621405f2ea0c4d940ebb4b98b",
+    "sources/w11-actor-c-wheel-ctor/wheel_ctor.cpp": "80c0f02ed2f9651039851b005070193933532e46657a3a8046e8131677e97b97",
+    "sources/w11-actor-c-wheel-modify-rpm/modify_rpm.cpp": "c8d44d3cd94cb1b838e972da82f88d2af79ae5196a5ee205aa94004364697e1a",
+    "sources/w11-actor-c-wheel-set-natural-rpm/set_natural_rpm.cpp": "84e931c25b662bf8451da4fda851458017b967a55cd9efead5c2e6969338b72d",
+    "sources/w11-actor-c-wraith-msg-run/msg_run.cpp": "dacad4aa6851cad7f65ada337bfa6234e81e690563d4597c43f92bc616baca85",
+    "sources/w11-actor-c-wraith-set-state/set_state.cpp": "edde1a7b8951e9246edb378dded557ad563f49ecb70895639fcce0ea6a31aeac",
     "sources/w11-crt-a-args/args.cpp": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
     "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
     "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
@@ -73631,6 +73668,600 @@
           "name": "__tf6Player"
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5052,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_add_smokelet_10staticfire.o",
+      "profile": "authored_cpp",
+      "sha256": "d7a2cda44159838945fdc545128b6517fd14521f5f6c6a73c986d487285a0488",
+      "source": "sources/w11-actor-c-add-smokelet-10staticfire/add_smokelet.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 512,
+          "name": "addSmokelet__10StaticFire"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5053,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_can_grab_11spiderqueen.o",
+      "profile": "authored_cpp",
+      "sha256": "61f92b3905a73db1ed897a65e0facdf0d4ea562faba9403fd7b7cfac7e169e58",
+      "source": "sources/w11-actor-c-can-grab-11spiderqueen/can_grab.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "canGrab__11SpiderQueen"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5054,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_clone_wes.o",
+      "profile": "authored_cpp",
+      "sha256": "819db6affe912f8a6eb5cda74e4389feaf976f994fd2bb4d212d7d462aa3acbd",
+      "source": "sources/w11-actor-c-clone-wes/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 892,
+          "name": "clone__14WoodElfSoldier"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5055,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_clone_wraith.o",
+      "profile": "authored_cpp",
+      "sha256": "8e30f04bfeec35963c15cc49d5ef68c7296fd2ccaba527c222b39d5d603ff019",
+      "source": "sources/w11-actor-c-clone-wraith/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 840,
+          "name": "clone__6Wraith"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5056,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_convert_to_bat_11vampirelord.o",
+      "profile": "authored_cpp",
+      "sha256": "5c5a7575ef1361cbce494c4a4abf947bc0b40442ff44c6129d36c319514a7a0d",
+      "source": "sources/w11-actor-c-convert-to-bat-11vampirelord/convert_to_bat.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 108,
+          "name": "convertToBat__11VampireLord"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5057,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_convert_to_lord_11vampirelord.o",
+      "profile": "authored_cpp",
+      "sha256": "5c4150e090902ad7aee5760fde1cd6d2d57e8284aab0313f8285121aa4542b13",
+      "source": "sources/w11-actor-c-convert-to-lord-11vampirelord/convert_to_lord.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "convertToLord__11VampireLord"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5058,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_get_miniboss_name_6wraith.o",
+      "profile": "authored_cpp",
+      "sha256": "0dca2e7feadf34f3419827bf1ad13fb599b6313dd3245f2fdf3a99a8d21733ea",
+      "source": "sources/w11-actor-c-get-miniboss-name-6wraith/get_miniboss_name.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "getMinibossName__6Wraith"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5059,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_item_drop_treasure.o",
+      "profile": "authored_cpp",
+      "sha256": "50645522b601c27f55b62bc11584d8cc21ecc4a156c20d70cf11c48231af214a",
+      "source": "sources/w11-actor-c-item-drop-treasure/drop_treasure.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 224,
+          "name": "build_prop"
+        },
+        {
+          "compiled_body_bytes": 2092,
+          "name": "dropTreasure__4itemG6Point3iffffffPci"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5060,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_msg_draw_6sparks.o",
+      "profile": "authored_cpp",
+      "sha256": "8eaf6bf177689dd12d562061702cb44abfc8976b03ccc8a608d1f4a69211e560",
+      "source": "sources/w11-actor-c-msg-draw-6sparks/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "msg_draw__6Sparks"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5061,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_sparks_clone.o",
+      "profile": "authored_cpp",
+      "sha256": "710b1ef48c1f778efc5379211c77a77d992ead616114dea240949dda8c64816a",
+      "source": "sources/w11-actor-c-sparks-clone/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 464,
+          "name": "clone__6Sparks"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5062,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_sparks_msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "c692320cd32fa954f27ca00712a9e8506bc157e3db2aba2aa789ef92bbcb86ec",
+      "source": "sources/w11-actor-c-sparks-msg-collision/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 512,
+          "name": "msg_collision__6SparksP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5063,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_sparks_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "263ad91980311c7ed6c69248a0556cccbce6b488ede8cdd15872c2a675713677",
+      "source": "sources/w11-actor-c-sparks-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1468,
+          "name": "msg_run__6Sparks"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5064,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_tf_14spellharmtouch.o",
+      "profile": "authored_cpp",
+      "sha256": "4c7f441af6e52f18c29a0a3f5c2836689d2601146872efb198c3f6c3be81c820",
+      "source": "sources/w11-actor-c-tf-14spellharmtouch/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf14SpellHarmTouch"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5065,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_tf_6sparks.o",
+      "profile": "authored_cpp",
+      "sha256": "2a833e2291dd9fea76e1fe082d72df3c955f31d451a497365644634574828cc9",
+      "source": "sources/w11-actor-c-tf-6sparks/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "__tf6Sparks"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5066,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_update_smokelets_10staticfire.o",
+      "profile": "authored_cpp",
+      "sha256": "63357c8cd1dad89b708f9cc70833bb01eb4fb7bd21e91e3ec67f4a1933a5d8a3",
+      "source": "sources/w11-actor-c-update-smokelets-10staticfire/update_smokelets.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 212,
+          "name": "updateSmokelets__10StaticFire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5067,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_vehicle_add_impulse.o",
+      "profile": "authored_cpp",
+      "sha256": "518b77a1646e317ebae1c20f9cf24e5bef61aaa5b5179b48a4c39323baf9af9d",
+      "source": "sources/w11-actor-c-vehicle-add-impulse/add_impulse.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "addImpulse__7VehicleP6Point3T1i"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5068,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wavemaker_do_wavelet.o",
+      "profile": "authored_cpp",
+      "sha256": "aca5656e8bc015bf496c90871175f2539ec1368a8c5a0bab8b6ea628d8cf266f",
+      "source": "sources/w11-actor-c-wavemaker-do-wavelet/do_wavelet.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1740,
+          "name": "doWavelet__9WaveMakerP6Point3P8Matrix33i"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5069,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wavemaker_do_wavelet_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "0fd15100f69c829953572931156b8c40776e483063361be577bb14fa6b5e8ac1",
+      "source": "sources/w11-actor-c-wavemaker-do-wavelet-collision/do_wavelet_collision.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 528,
+          "name": "doWaveletCollision__9WaveMakerP6Point3i"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5070,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wavemaker_do_wavelet_reflection.o",
+      "profile": "authored_cpp",
+      "sha256": "6e2ee9c6c987364d0d5e4db51290409f3e77f3fda0b3d20a92eea850b2de2f6b",
+      "source": "sources/w11-actor-c-wavemaker-do-wavelet-reflection/do_wavelet_reflection.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 288,
+          "name": "doWaveletReflection__9WaveMakerP6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5071,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wavemaker_get_wavelet_mat.o",
+      "profile": "authored_cpp",
+      "sha256": "b5e4cf9cb2acf711a98ad5da24952539cea5950cd26b2501c33356afe5699cca",
+      "source": "sources/w11-actor-c-wavemaker-get-wavelet-mat/get_wavelet_mat.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 188,
+          "name": "getWaveletMat__9WaveMakerifP8Matrix33"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5072,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_b_active.o",
+      "profile": "authored_cpp",
+      "sha256": "c9cceed3a8f7dcd60bb61aab7c25817a47182306b1b0b2d1966763f03f01f671",
+      "source": "sources/w11-actor-c-web-b-active/b_active.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "bActive__3Web"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5073,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_break.o",
+      "profile": "authored_cpp",
+      "sha256": "9259ba480bad0ddc3e2fd71a5361d166204d91471af5550dd810b6db3cee73ec",
+      "source": "sources/w11-actor-c-web-break/break_web.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "breakWeb__3Web"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5074,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_draw_point.o",
+      "profile": "authored_cpp",
+      "sha256": "77e61fdc447e82c11e519b620721096973db3089bcb987baf5688eed10970673",
+      "source": "sources/w11-actor-c-web-draw-point/draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 424,
+          "name": "draw__3WebG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5075,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "4b91fa972b0274bf62cef3a1be77188e4a80d8b945bb7557a4784a17e9cb026b",
+      "source": "sources/w11-actor-c-web-reset/reset.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "reset__3Web"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5076,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_run_point_int.o",
+      "profile": "authored_cpp",
+      "sha256": "60975fcf5dc4aaf31a450aec314c0d7e3aa010c0a8de2a2bc5bbdc24fd844466",
+      "source": "sources/w11-actor-c-web-run-point-int/run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1008,
+          "name": "run__3WebG6Point3i"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5077,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_web_start_point_creature.o",
+      "profile": "authored_cpp",
+      "sha256": "5264b58688d9d9219660ca216403b0241ac74b9317ae1c679ffb3c1adf1ed312",
+      "source": "sources/w11-actor-c-web-start-point-creature/start.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "start__3WebG6Point3P8Creaturefi"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5078,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wes_draw_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "aaa5a580b302d3f9b7ceaeeb7449ec53e2f5b556131e3a536345b72b19a3b98b",
+      "source": "sources/w11-actor-c-wes-draw-arrow/draw_arrow.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 172,
+          "name": "drawArrow__14WoodElfSoldier"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5079,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wes_drop_item.o",
+      "profile": "authored_cpp",
+      "sha256": "97eb12dbaaff5ea991635468e2a0a60553e5b7ab8d9ad3d400c431ba1097151f",
+      "source": "sources/w11-actor-c-wes-drop-item/drop_item.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1088,
+          "name": "dropItem__14WoodElfSoldieri"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5080,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wes_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "8f84b1160185a69bc476cc64ec1865eef3728ec2e8924d298c68b7b3cc3cdad7",
+      "source": "sources/w11-actor-c-wes-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "_ZN4w11c13call_slot_intEPvji.isra.0"
+        },
+        {
+          "compiled_body_bytes": 3500,
+          "name": "msg_run__14WoodElfSoldier"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5081,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wes_msg_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "98cab1912c010a9fba168997dac2f9e09be854d3803b5260aa411f85ec1a0d80",
+      "source": "sources/w11-actor-c-wes-msg-trigger/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 428,
+          "name": "msg_trigger__14WoodElfSoldieri"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5082,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wes_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "98d187a970d0b61985d13932389c0fffe3e4513621405f2ea0c4d940ebb4b98b",
+      "source": "sources/w11-actor-c-wes-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 3204,
+          "name": "setState__14WoodElfSoldieri"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5083,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wheel_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "80c0f02ed2f9651039851b005070193933532e46657a3a8046e8131677e97b97",
+      "source": "sources/w11-actor-c-wheel-ctor/wheel_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 416,
+          "name": "__5WheelPcifP7Vehiclei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5084,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wheel_modify_rpm.o",
+      "profile": "authored_cpp",
+      "sha256": "c8d44d3cd94cb1b838e972da82f88d2af79ae5196a5ee205aa94004364697e1a",
+      "source": "sources/w11-actor-c-wheel-modify-rpm/modify_rpm.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "ModifyRPM__5Wheelf"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5085,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wheel_set_natural_rpm.o",
+      "profile": "authored_cpp",
+      "sha256": "84e931c25b662bf8451da4fda851458017b967a55cd9efead5c2e6969338b72d",
+      "source": "sources/w11-actor-c-wheel-set-natural-rpm/set_natural_rpm.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "SetNaturalRPM__5Wheel"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5086,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wraith_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "dacad4aa6851cad7f65ada337bfa6234e81e690563d4597c43f92bc616baca85",
+      "source": "sources/w11-actor-c-wraith-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 3492,
+          "name": "msg_run__6Wraith"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-c-common/c.hpp"
+      ],
+      "input_order": 5087,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_c_wraith_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "edde1a7b8951e9246edb378dded557ad563f49ecb70895639fcce0ea6a31aeac",
+      "source": "sources/w11-actor-c-wraith-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1120,
+          "name": "setState__6Wraithi"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -73730,7 +74361,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d0b5d62b8ddd00dbe43d262067db0b2a50e098990e540f0bd379ee1a1d4d1dd3",
+  "snapshot_sha256": "54ec3483ad15e7f7ba292477328c92a62b5953c7da794018e875dbb7da483120",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
