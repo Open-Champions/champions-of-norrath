@@ -9271,3 +9271,19 @@ Closed: `BeginBillboards__8VIRasterPP11VIBillboardi`, `Clear__13VIHSpriteAnim`, 
 
 Opened: `AddMaterial__8VIRasteriPP10_sceDmaTag`, `Begin__Ct6VIPool1ZP13VISpellEffect`, `Begin__Ct6VIPool1ZP20VIParticleDefinition`, `Cache__7VIRFontR8VIRasterPCciPi`, `CalcMatrices__8VIRaster`, `ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT`, `Clear__t6VIPool1ZP13VISpellEffect`, `Clear__t6VIPool1ZP20VIParticleDefinition`, `Destroy__13VISpellEffect`, `End__Ct6VIPool1ZP13VISpellEffect`, `End__Ct6VIPool1ZP20VIParticleDefinition`, `Erase__t6VIPool1ZP13VISpellEffecti`, `FlushDMABufferIfFull__8VIRaster`, `Length__C7VILList`, `Process__18VISpellEventDriver`, `ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary`, `Remove__12VIDictionaryR10VIResource`, `Restore2D__8VIRaster`, `SetFogRegisters__8VIRaster`, `Store2D__8VIRaster`, `UploadBillboardMicro__8VIRasterPP10_sceDmaTag`, `UploadMatrices__8VIRasterPP10_sceDmaTag`, `UploadRasterMicro__8VIRasterPP10_sceDmaTag`, `_$_13VISpellEffect`, `_$_18VISpellEventDriver`, `__ml__FRC7VIVect3RC10VIMatrix44`
 - 2026-10-13 11:29 CDT — agents/w12-visprite-a — 1116 unresolved imports
+
+## agents/w12-actor-spell-a
+
+Merged (merge commit, branch tip `1bf7e6f5`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 29 units with fresh `input_order` values 5434 through 5462 (actor and spell destructors, constructors and `__tf` type functions, the wood-elf-soldier edge turn). Their header closures reach shared headers (`w11-ctor-a-common`, `w10-actor-m-common`) that the plan already lists. All 29 committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names, `-ffp-contract=off -fno-builtin`). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5461 authored inputs, 4195 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (29) reproduces.
+
+| | |
+|---|---|
+| Before | 1116 |
+| After | 1098 |
+| Closed | 29 |
+| Opened | 11 |
+
+Closed: `TurnToFaceEdge__14WoodElfSoldier`, `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarSteelEffect`, `_$_5PhIce`, `_$_7OniBall`, `_$_7Weather`, `__10StaticFireG6Point3fif`, `__13FireBombletJrP11FireBomblet`, `__6PhPropG6Point3P12_modelHeaderP8_textureliPQ24item11descriptionf`, `__7CritterPcG6Point3sPPc`, `__7WebTrapG6Point3T1`, `__8GutChunkG6Point3sP12_modelHeaderP14AnimationStatePcN25liif`, `__8ItemPropG6Point3PQ24item11descriptionP8Matrix34`, `__8SkeletonG6Point3sPPcPci`, `__tf11SpellCharge`, `__tf13LooseIceChunk`, `__tf15GlowingCylinder`, `__tf15SpellHolyShield`, `__tf17VehicleBodySphere`, `__tf19SpellHornOmenEffect`, `__tf22SpellPlanarSteelEffect`, `__tf5PhIce`, `__tf5Spell`, `__tf7OniBall`, `__tf7Weather`, `_vt$10MummySnake`
+
+Opened: `_$_10MummySnake`, `__4PropG6Point3P12_modelHeaderP8_textureli`, `__tf10MummySnake`, `_vt$13FireBombletJr`, `_vt$5Spell`, `_vt$8Skeleton`, `bombResMap`, `initType__8Skeletonb`, `init__10StaticFire`, `msg_run__10MummySnake`, `skeletonResourceMap`
+- 2026-10-13 11:38 CDT — agents/w12-actor-spell-a — 1098 unresolved imports
