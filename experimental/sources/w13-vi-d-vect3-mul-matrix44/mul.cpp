@@ -1,4 +1,4 @@
-// Observed: __ml__FRC7VIVect3RC10VIMatrix44 at 0x010d0bc8 is 136 bytes in the pinned SLUS-20565 image. Arguments: a result buffer
+// Observed: __ml__FRC7VIVect3RC10VIMatrix44 at 0x010d0bc8 is 140 bytes in the pinned SLUS-20565 image. Arguments: a result buffer
 // (the hidden return pointer for a four-float value), a three-float vector and the matrix. A local four-float value is built from
 // the vector's x, y, z and the float 1.0 as its fourth lane (aligned local, 16 bytes). sceVu0ApplyMatrix(out, matrix, value) then
 // runs with a second local four-float buffer as destination, and its four floats are copied to the result buffer, which is
