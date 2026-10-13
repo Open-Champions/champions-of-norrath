@@ -7,9 +7,9 @@ ran on an EE.
 ## What the package found first
 
 A fresh partial build of the shared branch (5113 sources) reproduced 827 unresolved imports, all 28 names of the
-scope among them. 19 of the 28 already had an authored source that the build plan does not select (written by
-`simloop-services`, `sony-cd` and `w9-hud-inventory-items-b`), 3 more are aliases of objects defined elsewhere, and
-`norrath_loader_failure_word_view` is authored but unselected. Only 9 needed new authoring, plus one helper (`min`)
+scope among them. 16 of the 28 already had an authored source that the build plan does not select (`simloop-services`,
+`sony-cd`, `w9-hud-inventory-items-b`), one more (`norrath_loader_failure_word_view`) is authored but unselected, and two
+are aliases of objects defined elsewhere. Only 9 needed new authoring, plus one helper (`min`)
 that the new code opened. The measured effect is at the end.
 
 ## How each unit was checked
