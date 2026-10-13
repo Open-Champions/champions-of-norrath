@@ -61009,6 +61009,416 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w11-vi-render-a-radialflora-clear/clear.cpp"
+    },
+    {
+      "input_order": 4768,
+      "component": "w11-vi-render-c-get-env-flags",
+      "object_name": "w11_vi_render_c_get_env_flags.o",
+      "private_object_sha256": "c43e2b39537a6816ab6e00909863b527f8a663be571896ee6b6958a7d0af901f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "GetEnvFlags__7VISceneRC7VIVect3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-get-env-flags/get_env_flags.cpp"
+    },
+    {
+      "input_order": 4769,
+      "component": "w11-vi-render-c-init-time-of-day",
+      "object_name": "w11_vi_render_c_init_time_of_day.o",
+      "private_object_sha256": "5fdee797bc1060493520d3cb2142a0b89557a9562d1c6c19ba42d964354c6262",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 668,
+          "name": "InitTimeOfDay__7VIScene"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-init-time-of-day/init_time_of_day.cpp"
+    },
+    {
+      "input_order": 4770,
+      "component": "w11-vi-render-c-raster-dbuffer",
+      "object_name": "w11_vi_render_c_raster_dbuffer.o",
+      "private_object_sha256": "fe433ab2d2a405bf90fb9de268d32297f136f0fa3a4ed8ff2b5dd005f58cf414",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-raster-dbuffer/dbuffer.cpp"
+    },
+    {
+      "input_order": 4771,
+      "component": "w11-vi-render-c-render-shadows",
+      "object_name": "w11_vi_render_c_render_shadows.o",
+      "private_object_sha256": "d4b293863399e270fed7cab27e2a5d50e5e3debadd64a51a5498baabb723266c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "RenderShadows__7VIScene"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-render-shadows/render_shadows.cpp"
+    },
+    {
+      "input_order": 4772,
+      "component": "w11-vi-render-c-scene-create-sprite",
+      "object_name": "w11_vi_render_c_scene_create_sprite.o",
+      "private_object_sha256": "7c29ac00d9e2a9489483aca04f5cfb7a48f210b7c18a0c39a9a2fd5d9fa67449",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 692,
+          "name": "CreateSprite__7VIScene12VISpriteTypei"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-scene-create-sprite/create_sprite.cpp"
+    },
+    {
+      "input_order": 4773,
+      "component": "w11-vi-render-c-scene-render-deferred-list",
+      "object_name": "w11_vi_render_c_scene_render_deferred_list.o",
+      "private_object_sha256": "ed78e9dc9d974f2d01cfb25183d44dc5e8b6203b0c95d78c8f455a56526373fd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 612,
+          "name": "RenderDeferredList__7VISceneR8VICameraii"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-scene-render-deferred-list/render_deferred_list.cpp"
+    },
+    {
+      "input_order": 4774,
+      "component": "w11-vi-render-c-scene-setup-time-of-day-fog",
+      "object_name": "w11_vi_render_c_scene_setup_time_of_day_fog.o",
+      "private_object_sha256": "729a5913b89bc89693e3d5d59a661de50b7576ceefe46e27d2124f38dbaaa98f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1712,
+          "name": "SetupTimeOfDayFog__7VISceneR21VITerrainProfileBlendUi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-scene-setup-time-of-day-fog/setup_time_of_day_fog.cpp"
+    },
+    {
+      "input_order": 4775,
+      "component": "w11-vi-render-c-set-personal-light",
+      "object_name": "w11_vi_render_c_set_personal_light.o",
+      "private_object_sha256": "5407a58b89b12bd8be5719950641b92545222d1e02e434a8a0961628229e422b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "SetPersonalLight__7VISceneRC7VIVect3fRC10VIColor32F"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-set-personal-light/set_personal_light.cpp"
+    },
+    {
+      "input_order": 4776,
+      "component": "w11-vi-render-c-set-personal-light-mode",
+      "object_name": "w11_vi_render_c_set_personal_light_mode.o",
+      "private_object_sha256": "fc64457f4233068813d02399791065633564e0fc32e1b878030725a4626220b6",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "SetPersonalLightMode__7VIScene19VIPersonalLightMode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-set-personal-light-mode/set_personal_light_mode.cpp"
+    },
+    {
+      "input_order": 4777,
+      "component": "w11-vi-render-c-setup-time-of-day",
+      "object_name": "w11_vi_render_c_setup_time_of_day.o",
+      "private_object_sha256": "5a186afdea32acf11f73b5120252e007b5543499a4a09109b89401774a79cc55",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "SetupTimeOfDay__7VISceneR8VICameraR21VITerrainProfileBlendUi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-setup-time-of-day/setup_time_of_day.cpp"
+    },
+    {
+      "input_order": 4778,
+      "component": "w11-vi-render-c-sound-track-clear",
+      "object_name": "w11_vi_render_c_sound_track_clear.o",
+      "private_object_sha256": "62126fc7e8af4efdf9d6176c93a515c73247dd8fa6ac3feaf9e5ac46a049455f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 108,
+          "name": "Clear__17VISceneSoundTrack"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-sound-track-clear/sound_track_clear.cpp"
+    },
+    {
+      "input_order": 4779,
+      "component": "w11-vi-render-c-sound-track-init",
+      "object_name": "w11_vi_render_c_sound_track_init.o",
+      "private_object_sha256": "120ae1662409c5651b48666edb61900f4ab09a9f733b6aff7596ce09025ca861",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "Init__17VISceneSoundTrack"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-sound-track-init/sound_track_init.cpp"
+    },
+    {
+      "input_order": 4780,
+      "component": "w11-vi-render-c-spell-effect-system-clear",
+      "object_name": "w11_vi_render_c_spell_effect_system_clear.o",
+      "private_object_sha256": "0e26906f383ef2326777c681baacc97cec911e63eb2efcc9d95bdb4a5339dc29",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 156,
+          "name": "Clear__19VISpellEffectSystem"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-spell-effect-system-clear/clear.cpp"
+    },
+    {
+      "input_order": 4781,
+      "component": "w11-vi-render-c-spell-effect-system-ctor",
+      "object_name": "w11_vi_render_c_spell_effect_system_ctor.o",
+      "private_object_sha256": "3bad4c0df2bffc9adc867f68b1eeed26925a167d9ac9c611ca8a357d54e57bfb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "__19VISpellEffectSystem"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-spell-effect-system-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 4782,
+      "component": "w11-vi-render-c-spell-effect-system-dtor",
+      "object_name": "w11_vi_render_c_spell_effect_system_dtor.o",
+      "private_object_sha256": "566cc27d550349727677b60b7965e775d215d41b0c474cc5d4761c004783bb2b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_19VISpellEffectSystem"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-spell-effect-system-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 4783,
+      "component": "w11-vi-render-c-spell-effect-system-init",
+      "object_name": "w11_vi_render_c_spell_effect_system_init.o",
+      "private_object_sha256": "07c345216c5846fd97a49e83acea32a3cbc74bcd089f420de618c886e1c7a6bb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "Init__19VISpellEffectSystemP7VIScene"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-spell-effect-system-init/init.cpp"
+    },
+    {
+      "input_order": 4784,
+      "component": "w11-vi-render-c-spell-effect-system-process",
+      "object_name": "w11_vi_render_c_spell_effect_system_process.o",
+      "private_object_sha256": "f31140653b4890b49bc8d3800ef44bac34cb38ce4eb048597906b33b275108fe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "Process__19VISpellEffectSystem"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-spell-effect-system-process/process.cpp"
+    },
+    {
+      "input_order": 4785,
+      "component": "w11-vi-render-c-splash-fx-reset",
+      "object_name": "w11_vi_render_c_splash_fx_reset.o",
+      "private_object_sha256": "91cb676468f681f495dc03a9efa6e3433ffab960b30b3d401e28e28bd980a886",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "VISplashFxReset__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-splash-fx-reset/splash_fx_reset.cpp"
+    },
+    {
+      "input_order": 4786,
+      "component": "w11-vi-render-c-trail-fx-clear",
+      "object_name": "w11_vi_render_c_trail_fx_clear.o",
+      "private_object_sha256": "9ebf6729fb0f239b3c4f2805de3db9a2c3a7c5256c7da364c1af2d2a8bc4d524",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 188,
+          "name": "VITrailFxClear__FR8VIRasterR12VIDictionary"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-trail-fx-clear/trail_fx_clear.cpp"
+    },
+    {
+      "input_order": 4787,
+      "component": "w11-vi-render-c-trail-fx-init",
+      "object_name": "w11_vi_render_c_trail_fx_init.o",
+      "private_object_sha256": "4482fd46805b43fbff7b2be4a72bb51591998f9d9d0e7717fd9619e52e61c691",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "VITrailFxInit__FR8VIRasterR12VIDictionary"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-trail-fx-init/trail_fx_init.cpp"
+    },
+    {
+      "input_order": 4788,
+      "component": "w11-vi-render-c-trail-fx-render",
+      "object_name": "w11_vi_render_c_trail_fx_render.o",
+      "private_object_sha256": "d53e327f452e67adb9322951fccf29a564422fd1f3f2b240cafe7a38418166de",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "VITrailFxRender__FlR8VIRasterR8VICamera"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-trail-fx-render/trail_fx_render.cpp"
+    },
+    {
+      "input_order": 4789,
+      "component": "w11-vi-render-c-wnd-options-init",
+      "object_name": "w11_vi_render_c_wnd_options_init.o",
+      "private_object_sha256": "2b7b80f07a263deacd988c442875333ec1255cd4381480005771fa5097069cfe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "Init__12VIWndOptionsP7VIScene"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-wnd-options-init/init.cpp"
+    },
+    {
+      "input_order": 4790,
+      "component": "w11-vi-render-c-world-calc-profile-blend",
+      "object_name": "w11_vi_render_c_world_calc_profile_blend.o",
+      "private_object_sha256": "e3bcc29b3efa7ffe0eeb59d9100de2a52378960a8d053217ec47e3ad54d83cba",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 512,
+          "name": "CalcProfileBlend__7VIWorldRC7VIVect3R21VITerrainProfileBlend"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-calc-profile-blend/calc_profile_blend.cpp"
+    },
+    {
+      "input_order": 4791,
+      "component": "w11-vi-render-c-world-card-count",
+      "object_name": "w11_vi_render_c_world_card_count.o",
+      "private_object_sha256": "16a0bc498b611bc2eabb126828c0c189d20025754cf8761647efbeb609c3e674",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-card-count/card_count.cpp"
+    },
+    {
+      "input_order": 4792,
+      "component": "w11-vi-render-c-world-clear",
+      "object_name": "w11_vi_render_c_world_clear.o",
+      "private_object_sha256": "4e4cf6e2099d78882c3aaf6e79a888130d7c0f73b60efc6803f805d48b3d80d1",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Clear__7VIWorld"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-clear/world_clear.cpp"
+    },
+    {
+      "input_order": 4793,
+      "component": "w11-vi-render-c-world-ctor",
+      "object_name": "w11_vi_render_c_world_ctor.o",
+      "private_object_sha256": "42a813dbe8d806831c524030badf7aa1d48af1b73a2e833c37c80a4ca1bccd44",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "__7VIWorld"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-ctor/world_ctor.cpp"
+    },
+    {
+      "input_order": 4794,
+      "component": "w11-vi-render-c-world-dtor",
+      "object_name": "w11_vi_render_c_world_dtor.o",
+      "private_object_sha256": "474299038a3dd115f63d4c4854f0b2e79f697cc932878d4289e1d301fc877e21",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_7VIWorld"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-dtor/world_dtor.cpp"
+    },
+    {
+      "input_order": 4795,
+      "component": "w11-vi-render-c-world-init",
+      "object_name": "w11_vi_render_c_world_init.o",
+      "private_object_sha256": "e636e44e1c49a68fd61bb10348682bafd3fb96242cb798efb1658477e9c6b17e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 540,
+          "name": "Init__7VIWorldiiiifRC7VIVect3RC6VIBBox"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-init/world_init.cpp"
+    },
+    {
+      "input_order": 4796,
+      "component": "w11-vi-render-c-world-render-by-frustum",
+      "object_name": "w11_vi_render_c_world_render_by_frustum.o",
+      "private_object_sha256": "8bf6e5eb1ba26a94566a059529c890e020efedbddb29678885b4b64e07e9fb18",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "RenderByFrustum__7VIWorldR15VISceneRendVars"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-render-by-frustum/render_by_frustum.cpp"
+    },
+    {
+      "input_order": 4797,
+      "component": "w11-vi-render-c-world-render-by-portals",
+      "object_name": "w11_vi_render_c_world_render_by_portals.o",
+      "private_object_sha256": "786cf9ad0edd310d1266699f7472178f10a71003e424ca40bb4457738774b5fc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 344,
+          "name": "RenderByPortals__7VIWorldR15VISceneRendVars"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-vi-render-c-world-render-by-portals/render_by_portals.cpp"
     }
   ],
   "drafts": [
@@ -67258,6 +67668,68 @@
     "sources/w11-vi-render-a-querytrilist-init/init.cpp": "6bd9a38cf59b1fd6a4a18fba0f9b72a648006222426627e786ba3afb1ab1bf97",
     "sources/w11-vi-render-a-radialflora-clear/clear.cpp": "3ce3e9c30a0ab4952d10a64398ba99743e78458627aebd0bd36b14c5eed24056",
     "sources/w11-vi-render-a-radialflora-clear/host_contract.cpp": "e96a32438f47bf64724a74efb0763450274e50e39eea13f69392428eb6a832d1",
+    "sources/w11-vi-render-c-get-env-flags/get_env_flags.cpp": "816c32e96c75500837ab9e850b4296d3ec4853bfc6601ef5367a750fedb9d713",
+    "sources/w11-vi-render-c-get-env-flags/host_contract.cpp": "8f5bae4bfbeec6d1f2d82230810b0833533a15594f6a8ea51229c1ad4073e3d9",
+    "sources/w11-vi-render-c-init-time-of-day/host_contract.cpp": "18995b661594cf233502c19e56561fc2da4491504071925e11d8c7d4fb088439",
+    "sources/w11-vi-render-c-init-time-of-day/init_time_of_day.cpp": "2d61d2948408e7955fed48a6bd62aa6a9152192bc58edcb054509c4c568508f4",
+    "sources/w11-vi-render-c-raster-dbuffer/dbuffer.cpp": "38ea2bc6d1ed7b13f1005d7af2da5b97d93784cf8e2fe700e544c12f92839acd",
+    "sources/w11-vi-render-c-raster-dbuffer/host_contract.cpp": "07aa1ec52c13f85f35bd3f00c8e72318a3d8fb648b29f30fb7beee51322419d1",
+    "sources/w11-vi-render-c-render-shadows/host_contract.cpp": "832699d129c569a1411a8da59803701bbcc0c29257050bf8f027022e69f59521",
+    "sources/w11-vi-render-c-render-shadows/render_shadows.cpp": "e1369c52c9d91587f58349e76c28e5a5da447732ac89b2293d5fd9fb794d4e47",
+    "sources/w11-vi-render-c-scene-create-sprite/create_sprite.cpp": "e326dd56edc8d80092a27359d5e00b09e52728a22c7a9599aa1112d0924ffb99",
+    "sources/w11-vi-render-c-scene-create-sprite/host_contract.cpp": "163f203a9a05e3e4d06b87fd0222aaec0f166e1471a743d3aae64e95a97e75ce",
+    "sources/w11-vi-render-c-scene-render-deferred-list/host_contract.cpp": "99b7f8e12ab3750b11ef55f08882e930606eba8d32db58cdd2d97464f0f81866",
+    "sources/w11-vi-render-c-scene-render-deferred-list/render_deferred_list.cpp": "dcf07b95c074c16b495a8a80efa1365de01ce683347f70cedb2b3d851aff2dc7",
+    "sources/w11-vi-render-c-scene-setup-time-of-day-fog/host_contract.cpp": "0d146aa507e81367ffc8e84ad7129df2fa50f4e8aa26d806ba793f4e5661f801",
+    "sources/w11-vi-render-c-scene-setup-time-of-day-fog/setup_time_of_day_fog.cpp": "81e851a308614fdbd7b4995ca534836be9a3677ad54e5c3f488e793c9cd3f6eb",
+    "sources/w11-vi-render-c-scene-update-sound-emitters/host_contract.cpp": "57ee9778fd5a74f38337203a5735dbd89de3cf9da812aee4b1853ee2d3b922a1",
+    "sources/w11-vi-render-c-scene-update-sound-emitters/update_sound_emitters.cpp": "84f115f4e9dfebf99f30cad14a64d9e6c434842d64e93d63dfa77cb9b27f0cae",
+    "sources/w11-vi-render-c-set-personal-light-mode/host_contract.cpp": "d020f3d0c909d159f388f87e1bac93baf265469b53639b09cc8ae5589781b85d",
+    "sources/w11-vi-render-c-set-personal-light-mode/set_personal_light_mode.cpp": "df2eb1acb23e8de1746c64f320f225f43998d6fd8ad606e13f774112c95d11e6",
+    "sources/w11-vi-render-c-set-personal-light/host_contract.cpp": "b2f5daaf8ec85e7a54b9790a31a7a9dd34d69dbea039e3cdbac9796c5b4ac1e7",
+    "sources/w11-vi-render-c-set-personal-light/set_personal_light.cpp": "833ae745826abe097e6850beb9c0c16471f8016670d8e6a2ee7d3ae6cfffe408",
+    "sources/w11-vi-render-c-setup-time-of-day/host_contract.cpp": "db1f4f08f9e373873c61fc32f790aebeb17ce391f57c938faee4f87ab88be2c9",
+    "sources/w11-vi-render-c-setup-time-of-day/setup_time_of_day.cpp": "af10d6871b28046748ca6d12ad2b841ba7aa82de90dc5158533cab0f278cb018",
+    "sources/w11-vi-render-c-sound-track-clear/host_contract.cpp": "03ed4867050a6cf3daa1cc28898e803835da2b237dc57d08653cc8e1ec5409ea",
+    "sources/w11-vi-render-c-sound-track-clear/sound_track_clear.cpp": "b1f95df4d21b1a524bc4dfda0bcdef5caea9a35a5fd48e0e6d33dcbfe2f2efdf",
+    "sources/w11-vi-render-c-sound-track-init/host_contract.cpp": "d6282cfb8026816eb5c7cf84cb4b1400d5edc5cfd47354ec9feb604d17f1b468",
+    "sources/w11-vi-render-c-sound-track-init/sound_track_init.cpp": "996959147f8ca51a63a903dd561bdfb20103e8977780eb969b81c3b2f2cb16f9",
+    "sources/w11-vi-render-c-spell-effect-system-clear/clear.cpp": "770ba34ca1197eb3acf9dbcca6f31457c6b240e7afd7a1da62d92b55a75cec59",
+    "sources/w11-vi-render-c-spell-effect-system-clear/host_contract.cpp": "595503bc161520fd671cb0ad1b487ad3485cd6bf30af45715b3f561208ef2ce1",
+    "sources/w11-vi-render-c-spell-effect-system-ctor/ctor.cpp": "3a6eca62d4e8b7ac797ed40bceca59313d41d62b38da72fe7e721281403c6070",
+    "sources/w11-vi-render-c-spell-effect-system-ctor/host_contract.cpp": "e5e9e76993abe478083cdb83be9aa5634887a4936c216bf493964fa6bc5f3638",
+    "sources/w11-vi-render-c-spell-effect-system-dtor/dtor.cpp": "a1817e1357b761a04b0d2bc9aa457a2aa9e3147ebdd1998df8c90bd45e6f8c94",
+    "sources/w11-vi-render-c-spell-effect-system-dtor/host_contract.cpp": "8681b33710354e647d1c8a6a92963a351900844fb8b3356fb92b55600ed442e3",
+    "sources/w11-vi-render-c-spell-effect-system-init/host_contract.cpp": "76e6f27fc59cd1c0759c1d8db0f6e142abe48713cc4cccb57570388622ccc843",
+    "sources/w11-vi-render-c-spell-effect-system-init/init.cpp": "78f0088370783a442237133e853b10649628d3d9dbced4519aac32e8744d928d",
+    "sources/w11-vi-render-c-spell-effect-system-process/host_contract.cpp": "a6af34ec1df0ea9aba87521f146138d9d2f1a2c81e7d8675b229216b4f0f5ca2",
+    "sources/w11-vi-render-c-spell-effect-system-process/process.cpp": "dcb34c63b7d298535fee85ef0c1eef7382daf03058c963d6e38df7d06c0d6a17",
+    "sources/w11-vi-render-c-splash-fx-reset/host_contract.cpp": "99d11affd5c97bc1815c892b786eb007b0a92465deb1bbf4a718f9d65e06caa6",
+    "sources/w11-vi-render-c-splash-fx-reset/splash_fx_reset.cpp": "c6e88ba6f59c1f20e1dcb9d8945dad9bac889b245688439c0f9bd55eb7ad6b90",
+    "sources/w11-vi-render-c-trail-fx-clear/host_contract.cpp": "e560d429e0e7ac477bc531b6d7061003b3661c26b89bffea221f1f79aaab1b5b",
+    "sources/w11-vi-render-c-trail-fx-clear/trail_fx_clear.cpp": "ce4064c90aece7cfb2d666427f869404f8f681e572e0ea974e3ecf117c785702",
+    "sources/w11-vi-render-c-trail-fx-init/host_contract.cpp": "f7fa9292f9d1f0ddc04918621c1021c67b48c17e75d527414963b4fc9713a889",
+    "sources/w11-vi-render-c-trail-fx-init/trail_fx_init.cpp": "5a6af633dc69ba939f5874748a6f76336706c36bf183149ee6bd690fc3d3bfce",
+    "sources/w11-vi-render-c-trail-fx-render/host_contract.cpp": "bf3e8080aedb2b4642160035bd02487c29e21ba93f1357ecfc8f658a2dfe8bb5",
+    "sources/w11-vi-render-c-trail-fx-render/trail_fx_render.cpp": "37a8bc28c1621f348e9b5bde6515206e55c36f48c6b67a6c2ce868efb03f7429",
+    "sources/w11-vi-render-c-wnd-options-init/host_contract.cpp": "111f8893a7c25402f072945ecbfb9a64b48724125a60b18ad1c0eb6acddc663d",
+    "sources/w11-vi-render-c-wnd-options-init/init.cpp": "19febaa0ff380c0c4e95c25f6e0ae27e3e13f0f68c9e9e4c5da4d8a44e319d1a",
+    "sources/w11-vi-render-c-world-calc-profile-blend/calc_profile_blend.cpp": "75d8eec4fcfd0ca1778b81242a18edbcf2fde1d87746729d3ab25495f1c06d78",
+    "sources/w11-vi-render-c-world-calc-profile-blend/host_contract.cpp": "bb16bced271c06c4ee7ff92ab4f67e0ecbd4ea2e8908437aa9897a5c42b5a4f2",
+    "sources/w11-vi-render-c-world-card-count/card_count.cpp": "8fc282010552f1e07e3bec4884e4235f943e50308d7f7066d7d1d46f9a0565fa",
+    "sources/w11-vi-render-c-world-card-count/host_contract.cpp": "a02ee4f607f27f2b0b22ee0c07e66eecb48ffb3dcc6bc7083db81b516a9b2f70",
+    "sources/w11-vi-render-c-world-clear/host_contract.cpp": "af2f5ff81ced7578a67f35b8bf6f1637cd9d35fd2938dd4973769782a402b59d",
+    "sources/w11-vi-render-c-world-clear/world_clear.cpp": "1397e9d9a8bc0402605a4774d235d88d4fb85569c61f64bd21f89351f2ef039c",
+    "sources/w11-vi-render-c-world-ctor/host_contract.cpp": "8f2dfddd2c87aa0294b8b19778061473a561392737dc9a6b92493ca8cc0358f2",
+    "sources/w11-vi-render-c-world-ctor/world_ctor.cpp": "556f4f252cd3ce1b409dbcae5b8bafec062936d296050dad46f19112b50f560b",
+    "sources/w11-vi-render-c-world-dtor/host_contract.cpp": "edd3b2be63aa64262137db1da9387515e5e50ccc69713acfc41229721e340a79",
+    "sources/w11-vi-render-c-world-dtor/world_dtor.cpp": "fb2a235f6845d593765d79aed2d1bbfd860f27e96f810e4e307a9b403e9c5f95",
+    "sources/w11-vi-render-c-world-init/host_contract.cpp": "33cf5566d38fbc56388b1e7910600baa01e27d310ca75980c4d92af777fe384b",
+    "sources/w11-vi-render-c-world-init/world_init.cpp": "b587b40c65a61804cbb69eb4cbc8bb4f9307287c7c39c18cb2a2013b4a0c9382",
+    "sources/w11-vi-render-c-world-render-by-frustum/host_contract.cpp": "1fed2e2fa5698a0c48050b1a2c7706ad26fb417409237a28cddf3016275fa2c5",
+    "sources/w11-vi-render-c-world-render-by-frustum/render_by_frustum.cpp": "38ffee117d5169d7ee4b5485e86a0388bfd82f9a45ce1111cecd8d003807bce5",
+    "sources/w11-vi-render-c-world-render-by-portals/host_contract.cpp": "616506bf9e3be77ba11a1efafb26cfd61162802ea8743870e0566320f3473bfd",
+    "sources/w11-vi-render-c-world-render-by-portals/render_by_portals.cpp": "5d375b4e9aeb10c5126cb824d416bac0f39941eb340e1a983c62a0c9009180b4",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -71626,11 +72098,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4768,
-    "authored_default_inputs": 4766,
+    "selected_inputs": 4798,
+    "authored_default_inputs": 4796,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3674,
-    "compiled_body_bytes_from_accepted_inputs": 1596492,
+    "emitted_function_definitions_including_helpers": 3702,
+    "compiled_body_bytes_from_accepted_inputs": 1604668,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -71643,7 +72115,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4455
+    "package_selected_inputs": 4485
   },
   "startup_implementations": [
     {
@@ -141521,6 +141993,506 @@
       ],
       "host_files": [
         "sources/w11-vi-render-a-radialflora-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-get-env-flags/get_env_flags.cpp",
+      "source_sha256": "816c32e96c75500837ab9e850b4296d3ec4853bfc6601ef5367a750fedb9d713",
+      "object_sha256": "c43e2b39537a6816ab6e00909863b527f8a663be571896ee6b6958a7d0af901f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "GetEnvFlags__7VISceneRC7VIVect3"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-get-env-flags/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-init-time-of-day/init_time_of_day.cpp",
+      "source_sha256": "2d61d2948408e7955fed48a6bd62aa6a9152192bc58edcb054509c4c568508f4",
+      "object_sha256": "5fdee797bc1060493520d3cb2142a0b89557a9562d1c6c19ba42d964354c6262",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 668,
+          "name": "InitTimeOfDay__7VIScene"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-init-time-of-day/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-raster-dbuffer/dbuffer.cpp",
+      "source_sha256": "38ea2bc6d1ed7b13f1005d7af2da5b97d93784cf8e2fe700e544c12f92839acd",
+      "object_sha256": "fe433ab2d2a405bf90fb9de268d32297f136f0fa3a4ed8ff2b5dd005f58cf414",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-vi-render-c-raster-dbuffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-render-shadows/render_shadows.cpp",
+      "source_sha256": "e1369c52c9d91587f58349e76c28e5a5da447732ac89b2293d5fd9fb794d4e47",
+      "object_sha256": "d4b293863399e270fed7cab27e2a5d50e5e3debadd64a51a5498baabb723266c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "RenderShadows__7VIScene"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-render-shadows/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-scene-create-sprite/create_sprite.cpp",
+      "source_sha256": "e326dd56edc8d80092a27359d5e00b09e52728a22c7a9599aa1112d0924ffb99",
+      "object_sha256": "7c29ac00d9e2a9489483aca04f5cfb7a48f210b7c18a0c39a9a2fd5d9fa67449",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 692,
+          "name": "CreateSprite__7VIScene12VISpriteTypei"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-scene-create-sprite/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-scene-render-deferred-list/render_deferred_list.cpp",
+      "source_sha256": "dcf07b95c074c16b495a8a80efa1365de01ce683347f70cedb2b3d851aff2dc7",
+      "object_sha256": "ed78e9dc9d974f2d01cfb25183d44dc5e8b6203b0c95d78c8f455a56526373fd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 612,
+          "name": "RenderDeferredList__7VISceneR8VICameraii"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-scene-render-deferred-list/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-scene-setup-time-of-day-fog/setup_time_of_day_fog.cpp",
+      "source_sha256": "81e851a308614fdbd7b4995ca534836be9a3677ad54e5c3f488e793c9cd3f6eb",
+      "object_sha256": "729a5913b89bc89693e3d5d59a661de50b7576ceefe46e27d2124f38dbaaa98f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1712,
+          "name": "SetupTimeOfDayFog__7VISceneR21VITerrainProfileBlendUi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-scene-setup-time-of-day-fog/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-set-personal-light/set_personal_light.cpp",
+      "source_sha256": "833ae745826abe097e6850beb9c0c16471f8016670d8e6a2ee7d3ae6cfffe408",
+      "object_sha256": "5407a58b89b12bd8be5719950641b92545222d1e02e434a8a0961628229e422b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "SetPersonalLight__7VISceneRC7VIVect3fRC10VIColor32F"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-set-personal-light/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-set-personal-light-mode/set_personal_light_mode.cpp",
+      "source_sha256": "df2eb1acb23e8de1746c64f320f225f43998d6fd8ad606e13f774112c95d11e6",
+      "object_sha256": "fc64457f4233068813d02399791065633564e0fc32e1b878030725a4626220b6",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "SetPersonalLightMode__7VIScene19VIPersonalLightMode"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-set-personal-light-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-setup-time-of-day/setup_time_of_day.cpp",
+      "source_sha256": "af10d6871b28046748ca6d12ad2b841ba7aa82de90dc5158533cab0f278cb018",
+      "object_sha256": "5a186afdea32acf11f73b5120252e007b5543499a4a09109b89401774a79cc55",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "SetupTimeOfDay__7VISceneR8VICameraR21VITerrainProfileBlendUi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-setup-time-of-day/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-sound-track-clear/sound_track_clear.cpp",
+      "source_sha256": "b1f95df4d21b1a524bc4dfda0bcdef5caea9a35a5fd48e0e6d33dcbfe2f2efdf",
+      "object_sha256": "62126fc7e8af4efdf9d6176c93a515c73247dd8fa6ac3feaf9e5ac46a049455f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 108,
+          "name": "Clear__17VISceneSoundTrack"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-sound-track-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-sound-track-init/sound_track_init.cpp",
+      "source_sha256": "996959147f8ca51a63a903dd561bdfb20103e8977780eb969b81c3b2f2cb16f9",
+      "object_sha256": "120ae1662409c5651b48666edb61900f4ab09a9f733b6aff7596ce09025ca861",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "Init__17VISceneSoundTrack"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-sound-track-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-spell-effect-system-clear/clear.cpp",
+      "source_sha256": "770ba34ca1197eb3acf9dbcca6f31457c6b240e7afd7a1da62d92b55a75cec59",
+      "object_sha256": "0e26906f383ef2326777c681baacc97cec911e63eb2efcc9d95bdb4a5339dc29",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 156,
+          "name": "Clear__19VISpellEffectSystem"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-spell-effect-system-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-spell-effect-system-ctor/ctor.cpp",
+      "source_sha256": "3a6eca62d4e8b7ac797ed40bceca59313d41d62b38da72fe7e721281403c6070",
+      "object_sha256": "3bad4c0df2bffc9adc867f68b1eeed26925a167d9ac9c611ca8a357d54e57bfb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "__19VISpellEffectSystem"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-spell-effect-system-ctor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-spell-effect-system-dtor/dtor.cpp",
+      "source_sha256": "a1817e1357b761a04b0d2bc9aa457a2aa9e3147ebdd1998df8c90bd45e6f8c94",
+      "object_sha256": "566cc27d550349727677b60b7965e775d215d41b0c474cc5d4761c004783bb2b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_19VISpellEffectSystem"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-spell-effect-system-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-spell-effect-system-init/init.cpp",
+      "source_sha256": "78f0088370783a442237133e853b10649628d3d9dbced4519aac32e8744d928d",
+      "object_sha256": "07c345216c5846fd97a49e83acea32a3cbc74bcd089f420de618c886e1c7a6bb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "Init__19VISpellEffectSystemP7VIScene"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-spell-effect-system-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-spell-effect-system-process/process.cpp",
+      "source_sha256": "dcb34c63b7d298535fee85ef0c1eef7382daf03058c963d6e38df7d06c0d6a17",
+      "object_sha256": "f31140653b4890b49bc8d3800ef44bac34cb38ce4eb048597906b33b275108fe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "Process__19VISpellEffectSystem"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-spell-effect-system-process/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-splash-fx-reset/splash_fx_reset.cpp",
+      "source_sha256": "c6e88ba6f59c1f20e1dcb9d8945dad9bac889b245688439c0f9bd55eb7ad6b90",
+      "object_sha256": "91cb676468f681f495dc03a9efa6e3433ffab960b30b3d401e28e28bd980a886",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "VISplashFxReset__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-splash-fx-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-trail-fx-clear/trail_fx_clear.cpp",
+      "source_sha256": "ce4064c90aece7cfb2d666427f869404f8f681e572e0ea974e3ecf117c785702",
+      "object_sha256": "9ebf6729fb0f239b3c4f2805de3db9a2c3a7c5256c7da364c1af2d2a8bc4d524",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 188,
+          "name": "VITrailFxClear__FR8VIRasterR12VIDictionary"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-trail-fx-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-trail-fx-init/trail_fx_init.cpp",
+      "source_sha256": "5a6af633dc69ba939f5874748a6f76336706c36bf183149ee6bd690fc3d3bfce",
+      "object_sha256": "4482fd46805b43fbff7b2be4a72bb51591998f9d9d0e7717fd9619e52e61c691",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "VITrailFxInit__FR8VIRasterR12VIDictionary"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-trail-fx-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-trail-fx-render/trail_fx_render.cpp",
+      "source_sha256": "37a8bc28c1621f348e9b5bde6515206e55c36f48c6b67a6c2ce868efb03f7429",
+      "object_sha256": "d53e327f452e67adb9322951fccf29a564422fd1f3f2b240cafe7a38418166de",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "VITrailFxRender__FlR8VIRasterR8VICamera"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-trail-fx-render/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-wnd-options-init/init.cpp",
+      "source_sha256": "19febaa0ff380c0c4e95c25f6e0ae27e3e13f0f68c9e9e4c5da4d8a44e319d1a",
+      "object_sha256": "2b7b80f07a263deacd988c442875333ec1255cd4381480005771fa5097069cfe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "Init__12VIWndOptionsP7VIScene"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-wnd-options-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-calc-profile-blend/calc_profile_blend.cpp",
+      "source_sha256": "75d8eec4fcfd0ca1778b81242a18edbcf2fde1d87746729d3ab25495f1c06d78",
+      "object_sha256": "e3bcc29b3efa7ffe0eeb59d9100de2a52378960a8d053217ec47e3ad54d83cba",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 512,
+          "name": "CalcProfileBlend__7VIWorldRC7VIVect3R21VITerrainProfileBlend"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-calc-profile-blend/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-card-count/card_count.cpp",
+      "source_sha256": "8fc282010552f1e07e3bec4884e4235f943e50308d7f7066d7d1d46f9a0565fa",
+      "object_sha256": "16a0bc498b611bc2eabb126828c0c189d20025754cf8761647efbeb609c3e674",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-vi-render-c-world-card-count/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-clear/world_clear.cpp",
+      "source_sha256": "1397e9d9a8bc0402605a4774d235d88d4fb85569c61f64bd21f89351f2ef039c",
+      "object_sha256": "4e4cf6e2099d78882c3aaf6e79a888130d7c0f73b60efc6803f805d48b3d80d1",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Clear__7VIWorld"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-ctor/world_ctor.cpp",
+      "source_sha256": "556f4f252cd3ce1b409dbcae5b8bafec062936d296050dad46f19112b50f560b",
+      "object_sha256": "42a813dbe8d806831c524030badf7aa1d48af1b73a2e833c37c80a4ca1bccd44",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "__7VIWorld"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-ctor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-dtor/world_dtor.cpp",
+      "source_sha256": "fb2a235f6845d593765d79aed2d1bbfd860f27e96f810e4e307a9b403e9c5f95",
+      "object_sha256": "474299038a3dd115f63d4c4854f0b2e79f697cc932878d4289e1d301fc877e21",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_7VIWorld"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-init/world_init.cpp",
+      "source_sha256": "b587b40c65a61804cbb69eb4cbc8bb4f9307287c7c39c18cb2a2013b4a0c9382",
+      "object_sha256": "e636e44e1c49a68fd61bb10348682bafd3fb96242cb798efb1658477e9c6b17e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 540,
+          "name": "Init__7VIWorldiiiifRC7VIVect3RC6VIBBox"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-render-by-frustum/render_by_frustum.cpp",
+      "source_sha256": "38ffee117d5169d7ee4b5485e86a0388bfd82f9a45ce1111cecd8d003807bce5",
+      "object_sha256": "8bf6e5eb1ba26a94566a059529c890e020efedbddb29678885b4b64e07e9fb18",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "RenderByFrustum__7VIWorldR15VISceneRendVars"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-render-by-frustum/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-vi-render-c",
+      "source": "sources/w11-vi-render-c-world-render-by-portals/render_by_portals.cpp",
+      "source_sha256": "5d375b4e9aeb10c5126cb824d416bac0f39941eb340e1a983c62a0c9009180b4",
+      "object_sha256": "786cf9ad0edd310d1266699f7472178f10a71003e424ca40bb4457738774b5fc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 344,
+          "name": "RenderByPortals__7VIWorldR15VISceneRendVars"
+        }
+      ],
+      "host_files": [
+        "sources/w11-vi-render-c-world-render-by-portals/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
