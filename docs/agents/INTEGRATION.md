@@ -8111,3 +8111,25 @@ that could fail (same ground as `w9-render-math-a` and `w10-startup-d`). The bra
 merged locally to look at it and the merge was reset before anything was selected or
 pushed. The owner can add committed host checks per function (as `w10-actor-a` to
 `w10-actor-h` do) and push again.
+
+## agents/w10-actor-j
+
+Merged (merge commit, branch tip `bbcddf19`, 52 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (35 function bodies) with fresh `input_order` values 4193
+through 4223. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 23 under `-Werror`, 8 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4222 authored inputs, 3161 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Of the units on the branch, `msg-draw-3npc` (`msg_draw__3NPC`) was **not** selected because its committed host check fails on the committed source here: it expects the call log to go from the script call to the material call, and the function also calls the 'exclamationShort' tag (output ends `fail icon`, exit 1); its source stays in the snapshot. The notes carry only three of the five summary headings, so this is merged as a partial package under the tip-age rule (tip 52 minutes old); every selected unit has a committed check. Not selected (sources stay in the snapshot): w10-actor-j-msg-draw-3npc (excluded).
+
+| | |
+|---|---|
+| Before | 1082 |
+| After | 1075 |
+| Closed | 31 |
+| Opened | 24 |
+
+Closed: `_$_3NPC`, `_$_5Mummy`, `_$_9MummyKing`, `__7OniBallG6Point3iP10GameObjectP10_vagHeader`, `__tf5Mummy`, `_vt$13MissileWeapon`, `_vt$3NPC`, `clone__3NPC`, `dropWeapon__5Mummy`, `getMinibossName__5Mummy`, `getModel__3NPC`, `initMiniboss__5Mummy`, `msg_draw__5Mummy`, `msg_draw__9MummyKing`, `msg_hurt__3NPCfP10GameObjecti`, `msg_hurt__9MummyKingfP10GameObjecti`, `msg_load__3NPCPc`, `msg_load__5MummyPc`, `msg_run__3NPC`, `msg_run__5Mummy`, `msg_run__9MummyKing`, `msg_save__3NPCPc`, `msg_save__5MummyPc`, `msg_trigger__3NPCi`, `msg_trigger__6Minioni`, `msg_trigger__9MummyKingi`, `runSpells__5MummyG6Point3`, `setState__3NPCi`, `setState__5Mummyi`, `setState__6Minioni`, `setState__9MummyKingi`
+
+Opened: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `_$_13MissileWeapon`, `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10SpawnMummyG6Point3PcP10GameObject`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__9DustDevilG6Point3`, `__tf13MissileWeapon`, `_vt$5Mummy`, `_vt$7OniBall`, `_vt$9MummyKing`, `animRandomizeTime__FP14AnimationState`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__13MissileWeapon`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `initType__5Mummyb`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__13MissileWeapon`, `msg_run__13MissileWeapon`, `mummy_miniboss_name_buffer_7d7e20`, `npc_msg_run_particle_7d7dd0`
