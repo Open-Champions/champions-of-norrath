@@ -1,0 +1,27 @@
+// Host check only; not a build input. Callees return scripted results and record order.
+#include "init.cpp"
+#include <cstdio>
+#include <string>
+
+static std::string trace;
+static int clear_result, allocate_result;
+static int seen_count;
+extern "C" int Clear__t7VIArray1Zi(Container*) { trace += "clear;"; return clear_result; }
+extern "C" int Allocate__t7VIArray1Zi(Container* self) { trace += "alloc;"; seen_count = self->count; return allocate_result; }
+
+int main() {
+    bool ok = true;
+    const int results[] = {-5, -1, 0, 1, 7};
+    for (int c : results)
+        for (int a : results) {
+            trace.clear(); clear_result = c; allocate_result = a;
+            Container box = {0x1111};
+            int r = Init__t7VIArray1Zii(&box, 42);
+            int want = c < 0 ? -1 : (a < 0 ? -1 : 0);
+            std::string want_trace = c < 0 ? "clear;" : "clear;alloc;";
+            if (r != want || trace != want_trace) ok = false;
+            if (c < 0 ? box.count != 0x1111 : (box.count != 42 || seen_count != 42)) ok = false;
+        }
+    std::puts(ok ? "ok" : "FAIL");
+    return !ok;
+}
