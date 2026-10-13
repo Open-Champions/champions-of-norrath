@@ -5345,6 +5345,61 @@ Opened: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`,
 `showHiddenObjects__FP10GameObject`, `soundStartMusic__Fii`,
 `unremoveMonster__FP10GameObject`
 
+## agents/w9-hud-inventory-items-b
+
+Merged (the branch notes carry the five summary sections; the tip was 48
+minutes old). Thirty-three of its 34 units were selected with fresh
+`input_order` values 2707 through 2739: HUD and inventory functions and 12
+or so data definitions that emit no function (gold alpha, Hermite time, HUD
+header, inventory grid, name tags and similar). The 34th unit,
+`view-exit-sound-resource` (a 21-byte resource-name string view), was **not**
+selected: it has no host check, only a `static_assert` on its size, so a wrong
+byte in it would not be noticed; it stays in the snapshot, unselected. The
+selected units' host checks build and exit 0 here (33 of 33; the grid-drop check
+takes `-DNORRATH_INVENTORY_HOST=1`). The worker reports 1507 unresolved imports
+for its private plan copy; on the shared branch the real count after this
+merge is 1523 (the worker's plan did not contain the later packages). No game
+binary or disassembly listing was committed. 2217 function bodies, 2738
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1527 |
+| After | 1523 |
+| Closed | 33 |
+| Opened | 29 |
+
+Closed: `getName__4itemPQ24item11descriptioni`,
+`getPicName__4itemPciPQ24item11description`,
+`getProxyMeshId__4itemPQ24item11description`,
+`getValue__4itemPQ24item11description`, `givePlayerFeat__Fxii`, `goldAlpha`,
+`goldNumber`, `hermDeltaScale`, `hermiteTime`,
+`hudGivePlayerGold__FiG6Point3i`, `hudHeaderUni`,
+`hudInfoMessageShowing__Fv`, `invGrid`, `inventory`,
+`inventoryAdjustAbility__Fii`, `inventoryAdjustSkill__Ficx`,
+`inventoryCheckWieldingStatus__FiPQ24item11description`,
+`inventoryExit__Fiii`, `inventoryFrameDraw__Fv`, `inventoryFrameRun__Fv`,
+`inventoryGridDropItem__Fiiciiii`, `inventoryLoadState`,
+`inventoryLoad__Fv`, `inventoryLump`,
+`inventorySetAnim__FiP14AnimationStatei`, `inventoryUnload__Fv`,
+`lastFontCharAlpha`, `lastFontColor`, `lerpColor__FUiUif`,
+`lerpShortRot__Fssfff`, `makeRandomPotion__4itemPQ24item11description`,
+`msgTimeout`, `nameTags`
+
+Opened: `_4item$prefixTable`, `_4item$suffixTable`, `_shopCheck__Fi`,
+`animGetAnimComponent__FP14AnimationStateP15AnimationHeader`, `bevel`,
+`buySellVertSpacing`, `findAndStripGender__4itemPUs`,
+`getArmorBonus__4itemPQ24item11description`, `getAttributeName__4itemiPc`,
+`getDamageRangeAll__4itemPQ24item11descriptionPiT2i`,
+`givePlayerSkill__Fii`, `invHeader`, `invInitSharedInterfaceTextures__Fv`,
+`inventoryDrawDelay`, `inventoryDrawPlayerColor__Fiii`,
+`inventoryDrawPlayer__FiiP14AnimationStatei`, `inventoryDraw__Fi`,
+`inventoryRun__Fi`, `inventoryUnpack__Fiib`, `marble`,
+`norrath_inventory_exit_sound_resource_view`, `playerGoldx`, `playerGoldy`,
+`playerSetFeatRank__Fixi`, `playerSetSkillRank__Fiii`,
+`resetMenu__FP12screenStruct`, `shopUnpackToGrid__Fiii`, `stage`,
+`statsScreen`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5706,3 +5761,4 @@ and no startup stage has executed.
 - 2026-10-12 21:16 CDT — `agents/w9-frontend-d` — 1478 unresolved imports
 - 2026-10-12 21:19 CDT — `agents/w9-frontend-a` — 1525 unresolved imports
 - 2026-10-12 21:27 CDT — `agents/w9-camera-map` — 1527 unresolved imports
+- 2026-10-12 21:31 CDT — `agents/w9-hud-inventory-items-b` — 1523 unresolved imports
