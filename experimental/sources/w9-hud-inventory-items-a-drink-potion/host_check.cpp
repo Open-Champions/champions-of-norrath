@@ -67,7 +67,7 @@ int main() {
     if (trace != "lump:fx.lmp,spel_cas_curelw.anm;sound:1.000000;remove:1,2,0;left:0;pos:0,4;weight:0;") return 7;
     if (fadeTimer[4] != 240 || fadeIconY[4] != 1004) return 8;
     // no matching potion: banner slot 1
-    trace.clear(); *reinterpret_cast<int*>(rec + 14168) = 0;
+    trace.clear(); F(rec, 180) = 0.0f; *reinterpret_cast<int*>(rec + 14168) = 0;
     drinkPotion__6Playeriiii(self, 0, 0, 0, 0);
     if (trace != "pos:0,1;" || fadeTimer[1] != 120 || fadeIconY[1] != 1001) return 9;
     // mana potion (kind 1), nothing to drink -> slot 2
