@@ -56253,6 +56253,146 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-camveh-a-world-transform-frustum/world_transform_frustum.cpp"
+    },
+    {
+      "input_order": 4414,
+      "component": "w10-actor-q-creature-static-init",
+      "object_name": "w10_actor_q_creature_static_init.o",
+      "private_object_sha256": "0d64786b77c491568b17a18fa84ef962196db4ea376181f5d1aceafbd805fe64",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$numInRegion__8creatureG6Point3f",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-creature-static-init/static_init.cpp"
+    },
+    {
+      "input_order": 4415,
+      "component": "w10-actor-q-wes-add-commander",
+      "object_name": "w10_actor_q_wes_add_commander.o",
+      "private_object_sha256": "9bc89d2199b5d303474c3c4d326e2764b93665bad9459bcf601ccce7d5a98860",
+      "emitted_functions": [
+        {
+          "name": "addCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wes-add-commander/add_commander.cpp"
+    },
+    {
+      "input_order": 4416,
+      "component": "w10-actor-q-wes-b-next-to-edge",
+      "object_name": "w10_actor_q_wes_b_next_to_edge.o",
+      "private_object_sha256": "4363ecd768da49081ae34f93a8fffa4682ee2eeb324787fb4e5a71ab30e6b766",
+      "emitted_functions": [
+        {
+          "name": "bNextToEdge__14WoodElfSoldier",
+          "compiled_body_bytes": 548
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wes-b-next-to-edge/b_next_to_edge.cpp"
+    },
+    {
+      "input_order": 4417,
+      "component": "w10-actor-q-wes-leave-commander",
+      "object_name": "w10_actor_q_wes_leave_commander.o",
+      "private_object_sha256": "c89c1528f413771f25e83610e772a9c81c53d771cb6eac58fa51da43f4890a0d",
+      "emitted_functions": [
+        {
+          "name": "leaveCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wes-leave-commander/leave_commander.cpp"
+    },
+    {
+      "input_order": 4418,
+      "component": "w10-actor-q-wes-msg-draw",
+      "object_name": "w10_actor_q_wes_msg_draw.o",
+      "private_object_sha256": "ca2f958e47dde7cfc3a315d48f345d233d66b0b958c6d528ebcb7701258d1a86",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14WoodElfSoldier",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wes-msg-draw/msg_draw.cpp"
+    },
+    {
+      "input_order": 4419,
+      "component": "w10-actor-q-wes-msg-hurt",
+      "object_name": "w10_actor_q_wes_msg_hurt.o",
+      "private_object_sha256": "2cde9a0c7cf3d7c30fe84957dfb2321364bc422d06312090dc086c4e0e766fd4",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__14WoodElfSoldierfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wes-msg-hurt/msg_hurt.cpp"
+    },
+    {
+      "input_order": 4420,
+      "component": "w10-actor-q-wraith-dtor",
+      "object_name": "w10_actor_q_wraith_dtor.o",
+      "private_object_sha256": "2bcef9c288206bb4c8771a1ed9cca387c7cbd67c9213201e8389cbe4428f83ae",
+      "emitted_functions": [
+        {
+          "name": "_$_6Wraith",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wraith-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 4421,
+      "component": "w10-actor-q-wraith-init-miniboss",
+      "object_name": "w10_actor_q_wraith_init_miniboss.o",
+      "private_object_sha256": "2f76b9e7f1958c303d3ab6293db9250985e368a4c7b37ae3ba3d166318fc28fe",
+      "emitted_functions": [
+        {
+          "name": "initMiniboss__6Wraith",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wraith-init-miniboss/init_miniboss.cpp"
+    },
+    {
+      "input_order": 4422,
+      "component": "w10-actor-q-wraith-msg-draw",
+      "object_name": "w10_actor_q_wraith_msg_draw.o",
+      "private_object_sha256": "315083c99fc454c9d8b69af31b08d25e3c8119801dbc4b9dc32d921005b29420",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__6Wraith",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wraith-msg-draw/msg_draw.cpp"
+    },
+    {
+      "input_order": 4423,
+      "component": "w10-actor-q-wraith-tf",
+      "object_name": "w10_actor_q_wraith_tf.o",
+      "private_object_sha256": "364fdfb4988916cf7851c2a5f7e4de1ee32da9a80e2050f3427c4857f2c59e70",
+      "emitted_functions": [
+        {
+          "name": "__tf6Wraith",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-q-wraith-tf/typeinfo.cpp"
     }
   ],
   "drafts": [
@@ -60776,6 +60916,37 @@
     "sources/w10-actor-p-tf-7webtrap/typeinfo.cpp": "3d6953029187c45eae2d34d407ed9f07ce46b4f7c8b458f98f21d7c5065c3752",
     "sources/w10-actor-p-tf-9wavemaker/host_check.cpp": "15c292cb5b5242a86f8b6ab554dd35bba6eecc9fe58cf6fb5db23d24c913a799",
     "sources/w10-actor-p-tf-9wavemaker/typeinfo.cpp": "2cf0d36aa4a268469e105688d64151fd4859e8428ba1d80c6e43fd9ce86d3db5",
+    "sources/w10-actor-q-common/q.hpp": "3ebdfdf5c8746dcd91170ca28c89501e3c74a7dfd406be85a7a75218631ec894",
+    "sources/w10-actor-q-creature-static-init/host_check.cpp": "7ec1b582965988af420fdea38f8acb7cea610be7fd6baac5f999ec971a9da560",
+    "sources/w10-actor-q-creature-static-init/static_init.cpp": "edec0527f852d124d98cc97e37d59e41453197913fedbd0eeaa4568ebd02d095",
+    "sources/w10-actor-q-wes-add-commander/add_commander.cpp": "1bcd8b2c4294219b4568cbfc56af8ef49a2a6854d51e999adfcbcc068fece036",
+    "sources/w10-actor-q-wes-add-commander/host_check.cpp": "219ccc0772e65945288f2d08b4f6edef699facb722585c1fe0bbb2c2492121e3",
+    "sources/w10-actor-q-wes-b-next-to-edge/b_next_to_edge.cpp": "137e10eb8a3758db97c49bbc87d4735000ec45354bc289d5efb0cce6261707d1",
+    "sources/w10-actor-q-wes-b-next-to-edge/host_check.cpp": "4f209e16789238c0fa75641227b49bc3d689d6356680592085f32112b7aadea4",
+    "sources/w10-actor-q-wes-clone/clone.cpp": "e25c5fdc61c57683fd4fd09ac5014efe9dbf33c9958f6f07577e0afd502d7b5a",
+    "sources/w10-actor-q-wes-drop-item/drop_item.cpp": "280719d7acb97d4dde67a3444f41434dca80ca27d1ed2308d350acf4c73d0498",
+    "sources/w10-actor-q-wes-leave-commander/host_check.cpp": "f943c97f3ed1e49d1439873521cc8dd2b7e4b0ed7f62adb514766f63334e9cf5",
+    "sources/w10-actor-q-wes-leave-commander/leave_commander.cpp": "aa65a34a2bad9f432dd461fa83a6811bfc0a2b2e97936cf678f6328a1af93e48",
+    "sources/w10-actor-q-wes-msg-draw/host_check.cpp": "6c13d48415e0f586be54ca433d473e0bab061ec511fb8f567cc35d801ce8c7c9",
+    "sources/w10-actor-q-wes-msg-draw/msg_draw.cpp": "007a02db210b969d8727bc906e4e4b064b4f328ac37ca7fa04baeec9e3d28262",
+    "sources/w10-actor-q-wes-msg-hurt/host_check.cpp": "59e01ed09d1f5e71ac764ca0e078a179f1040b1ea0ffe728ed419d649c619c26",
+    "sources/w10-actor-q-wes-msg-hurt/msg_hurt.cpp": "1e6cc3d5b6fe63bce06e1e85a8d10a1b43cb1864346a73c9df20eaa6f94f1125",
+    "sources/w10-actor-q-wes-msg-run/msg_run.cpp": "64e5bc873d9e5e12c3d74b29878d9c8a2c358506078fc50f7d2957aa960aeff7",
+    "sources/w10-actor-q-wes-msg-trigger/msg_trigger.cpp": "0cc861ca9f0177c3a2da98086b603c7bbb17fcec3b7931365d29374087c13792",
+    "sources/w10-actor-q-wes-set-state/set_state.cpp": "c7b32ba43a1568ca920bcce63cc98bc7486768cf69b72775bffcf4a0ee20b46b",
+    "sources/w10-actor-q-wraith-clone/clone.cpp": "d03bda9edcba40d39184ca0fb5552e841404c528f38102b25f36bd222166b6ff",
+    "sources/w10-actor-q-wraith-dtor/dtor.cpp": "cda8a51778fe877d53185ce0aca4e8cba8bfb7d9afd6fbd283039c7d4e277ac4",
+    "sources/w10-actor-q-wraith-dtor/host_check.cpp": "15b6acf4430bf90e1a08ac0fc14cb3aa635c0dccda5c4148f230d95dd49ae5b2",
+    "sources/w10-actor-q-wraith-get-miniboss-name/get_miniboss_name.cpp": "110d43c10942cd2918a49a7606145e453e806bb5eab756b955a41f74f44b11c0",
+    "sources/w10-actor-q-wraith-get-miniboss-name/host_check.cpp": "2f2735e362880c6cdbb366266414e4594aec2117a08a3cb2047c45d1e2558b9d",
+    "sources/w10-actor-q-wraith-init-miniboss/host_check.cpp": "0901a41d9ce38a00bcf97701a8278438bcec19937d1998feb46e45d70cd91bd7",
+    "sources/w10-actor-q-wraith-init-miniboss/init_miniboss.cpp": "eddc6f6a36d2c48a46f47ee7563377b327c7e2e5a29d025b74603e2c25889a11",
+    "sources/w10-actor-q-wraith-msg-draw/host_check.cpp": "1480015524ebd380dcdb831e67dddefe81a49c7322718a38272808ab1af52ae8",
+    "sources/w10-actor-q-wraith-msg-draw/msg_draw.cpp": "2750b564ddd504379f1ddc39cdbd6aadfd56c48bee1097c8b8c6981a4de32030",
+    "sources/w10-actor-q-wraith-msg-run/msg_run.cpp": "30ff4bcfc6d22002c3f16e0cf08f6f1907b99437d23a853f7fdf9a8f4aa3aa9e",
+    "sources/w10-actor-q-wraith-set-state/set_state.cpp": "97cd8a39a63e8e5a75215c63e1ae310160f041452d12f2a56fe484ea97e5a0c1",
+    "sources/w10-actor-q-wraith-tf/host_check.cpp": "9d645e1a2e017f21a70fe703abd24a72ca3643a4f8a6a1dd5aecd3dedf4ec4d3",
+    "sources/w10-actor-q-wraith-tf/typeinfo.cpp": "5bf720218e349026e3e06f46c2cca831f611fa97052fbf6219a7e9bdd9b09ae5",
     "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
     "sources/w10-audio-a-ambient-state/host_contract.cpp": "67764a13f029afc0c9ebaf4615868ea972d9d6a8b4b8e2b30d976d9edee423f9",
     "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
@@ -66138,11 +66309,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4414,
-    "authored_default_inputs": 4412,
+    "selected_inputs": 4424,
+    "authored_default_inputs": 4422,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3358,
-    "compiled_body_bytes_from_accepted_inputs": 1524600,
+    "emitted_function_definitions_including_helpers": 3368,
+    "compiled_body_bytes_from_accepted_inputs": 1525976,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -66155,7 +66326,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4101
+    "package_selected_inputs": 4111
   },
   "startup_implementations": [
     {
@@ -130215,6 +130386,176 @@
       ],
       "host_files": [
         "sources/w10-camveh-a-world-transform-frustum/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-creature-static-init/static_init.cpp",
+      "source_sha256": "edec0527f852d124d98cc97e37d59e41453197913fedbd0eeaa4568ebd02d095",
+      "object_sha256": "0d64786b77c491568b17a18fa84ef962196db4ea376181f5d1aceafbd805fe64",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$numInRegion__8creatureG6Point3f",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-creature-static-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wes-add-commander/add_commander.cpp",
+      "source_sha256": "1bcd8b2c4294219b4568cbfc56af8ef49a2a6854d51e999adfcbcc068fece036",
+      "object_sha256": "9bc89d2199b5d303474c3c4d326e2764b93665bad9459bcf601ccce7d5a98860",
+      "emitted_functions": [
+        {
+          "name": "addCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wes-add-commander/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wes-b-next-to-edge/b_next_to_edge.cpp",
+      "source_sha256": "137e10eb8a3758db97c49bbc87d4735000ec45354bc289d5efb0cce6261707d1",
+      "object_sha256": "4363ecd768da49081ae34f93a8fffa4682ee2eeb324787fb4e5a71ab30e6b766",
+      "emitted_functions": [
+        {
+          "name": "bNextToEdge__14WoodElfSoldier",
+          "compiled_body_bytes": 548
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wes-b-next-to-edge/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wes-leave-commander/leave_commander.cpp",
+      "source_sha256": "aa65a34a2bad9f432dd461fa83a6811bfc0a2b2e97936cf678f6328a1af93e48",
+      "object_sha256": "c89c1528f413771f25e83610e772a9c81c53d771cb6eac58fa51da43f4890a0d",
+      "emitted_functions": [
+        {
+          "name": "leaveCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wes-leave-commander/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wes-msg-draw/msg_draw.cpp",
+      "source_sha256": "007a02db210b969d8727bc906e4e4b064b4f328ac37ca7fa04baeec9e3d28262",
+      "object_sha256": "ca2f958e47dde7cfc3a315d48f345d233d66b0b958c6d528ebcb7701258d1a86",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14WoodElfSoldier",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wes-msg-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wes-msg-hurt/msg_hurt.cpp",
+      "source_sha256": "1e6cc3d5b6fe63bce06e1e85a8d10a1b43cb1864346a73c9df20eaa6f94f1125",
+      "object_sha256": "2cde9a0c7cf3d7c30fe84957dfb2321364bc422d06312090dc086c4e0e766fd4",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__14WoodElfSoldierfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wes-msg-hurt/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wraith-dtor/dtor.cpp",
+      "source_sha256": "cda8a51778fe877d53185ce0aca4e8cba8bfb7d9afd6fbd283039c7d4e277ac4",
+      "object_sha256": "2bcef9c288206bb4c8771a1ed9cca387c7cbd67c9213201e8389cbe4428f83ae",
+      "emitted_functions": [
+        {
+          "name": "_$_6Wraith",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wraith-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wraith-init-miniboss/init_miniboss.cpp",
+      "source_sha256": "eddc6f6a36d2c48a46f47ee7563377b327c7e2e5a29d025b74603e2c25889a11",
+      "object_sha256": "2f76b9e7f1958c303d3ab6293db9250985e368a4c7b37ae3ba3d166318fc28fe",
+      "emitted_functions": [
+        {
+          "name": "initMiniboss__6Wraith",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wraith-init-miniboss/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wraith-msg-draw/msg_draw.cpp",
+      "source_sha256": "2750b564ddd504379f1ddc39cdbd6aadfd56c48bee1097c8b8c6981a4de32030",
+      "object_sha256": "315083c99fc454c9d8b69af31b08d25e3c8119801dbc4b9dc32d921005b29420",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__6Wraith",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wraith-msg-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-q",
+      "source": "sources/w10-actor-q-wraith-tf/typeinfo.cpp",
+      "source_sha256": "5bf720218e349026e3e06f46c2cca831f611fa97052fbf6219a7e9bdd9b09ae5",
+      "object_sha256": "364fdfb4988916cf7851c2a5f7e4de1ee32da9a80e2050f3427c4857f2c59e70",
+      "emitted_functions": [
+        {
+          "name": "__tf6Wraith",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-q-wraith-tf/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

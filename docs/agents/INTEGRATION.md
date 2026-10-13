@@ -8272,3 +8272,25 @@ Closed: `FinalizePosition__5Wheel`, `GetSaveFootPrint__6Camera`, `Load__6CameraP
 
 Opened: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`, `_vt$17VehicleBodySphere`, `addImpulse__7VehicleP6Point3T1i`, `clampZoomMag__6Camera`, `fastestRotDirection__FssPi`, `halfFrustumMode`, `matUntransform34Vec__FP6Point3P8Matrix34T0`, `shite`
 - 2026-10-13 03:35 CDT — `agents/w10-camveh-a` — 985 unresolved imports
+
+## agents/w10-actor-q
+
+Merged (merge commit, branch tip `4e4b4f4d`, 57 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 10 units (10 function bodies) with fresh `input_order` values 4414
+through 4423. 10 of 10 host checks pass here (x86_64, `-ffp-contract=off`): 9 under `-Werror`, 1 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4422 authored inputs, 3366 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Eight units on the branch were not selected because they carry no committed check (`wes-clone`, `wes-drop-item`, `wes-msg-run`, `wes-msg-trigger`, `wes-set-state`, `wraith-clone`, `wraith-msg-run`, `wraith-set-state`), and `wraith-get-miniboss-name` was not selected because its host check does not compile (it uses an undeclared `seen_dest`); their sources stay in the snapshot. The owner can add the missing checks and push again. The branch tip was 57 minutes old when read and had stopped moving. Not selected (sources stay in the snapshot): w10-actor-q-wes-clone (no host check), w10-actor-q-wes-drop-item (no host check), w10-actor-q-wes-msg-run (no host check), w10-actor-q-wes-msg-trigger (no host check), w10-actor-q-wes-set-state (no host check), w10-actor-q-wraith-clone (no host check), w10-actor-q-wraith-get-miniboss-name (excluded), w10-actor-q-wraith-msg-run (no host check), w10-actor-q-wraith-set-state (no host check).
+
+| | |
+|---|---|
+| Before | 985 |
+| After | 977 |
+| Closed | 10 |
+| Opened | 2 |
+
+Closed: `_$_6Wraith`, `_GLOBAL_$I$numInRegion__8creatureG6Point3f`, `__tf6Wraith`, `addCommander__14WoodElfSoldier`, `bNextToEdge__14WoodElfSoldier`, `initMiniboss__6Wraith`, `leaveCommander__14WoodElfSoldier`, `msg_draw__14WoodElfSoldier`, `msg_draw__6Wraith`, `msg_hurt__14WoodElfSoldierfP10GameObjecti`
+
+Opened: `_vt$6Wraith`, `drawArrow__14WoodElfSoldier`

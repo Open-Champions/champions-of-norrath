@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4412,
+  "default_authored_inputs": 4422,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2733,6 +2733,17 @@
     "sources/w10-actor-p-tf-14woodelfsoldier/typeinfo.cpp": "272879934037da4e20eb65e156678802d374ae8e386db6383e2a63189d043985",
     "sources/w10-actor-p-tf-7webtrap/typeinfo.cpp": "3d6953029187c45eae2d34d407ed9f07ce46b4f7c8b458f98f21d7c5065c3752",
     "sources/w10-actor-p-tf-9wavemaker/typeinfo.cpp": "2cf0d36aa4a268469e105688d64151fd4859e8428ba1d80c6e43fd9ce86d3db5",
+    "sources/w10-actor-q-common/q.hpp": "3ebdfdf5c8746dcd91170ca28c89501e3c74a7dfd406be85a7a75218631ec894",
+    "sources/w10-actor-q-creature-static-init/static_init.cpp": "edec0527f852d124d98cc97e37d59e41453197913fedbd0eeaa4568ebd02d095",
+    "sources/w10-actor-q-wes-add-commander/add_commander.cpp": "1bcd8b2c4294219b4568cbfc56af8ef49a2a6854d51e999adfcbcc068fece036",
+    "sources/w10-actor-q-wes-b-next-to-edge/b_next_to_edge.cpp": "137e10eb8a3758db97c49bbc87d4735000ec45354bc289d5efb0cce6261707d1",
+    "sources/w10-actor-q-wes-leave-commander/leave_commander.cpp": "aa65a34a2bad9f432dd461fa83a6811bfc0a2b2e97936cf678f6328a1af93e48",
+    "sources/w10-actor-q-wes-msg-draw/msg_draw.cpp": "007a02db210b969d8727bc906e4e4b064b4f328ac37ca7fa04baeec9e3d28262",
+    "sources/w10-actor-q-wes-msg-hurt/msg_hurt.cpp": "1e6cc3d5b6fe63bce06e1e85a8d10a1b43cb1864346a73c9df20eaa6f94f1125",
+    "sources/w10-actor-q-wraith-dtor/dtor.cpp": "cda8a51778fe877d53185ce0aca4e8cba8bfb7d9afd6fbd283039c7d4e277ac4",
+    "sources/w10-actor-q-wraith-init-miniboss/init_miniboss.cpp": "eddc6f6a36d2c48a46f47ee7563377b327c7e2e5a29d025b74603e2c25889a11",
+    "sources/w10-actor-q-wraith-msg-draw/msg_draw.cpp": "2750b564ddd504379f1ddc39cdbd6aadfd56c48bee1097c8b8c6981a4de32030",
+    "sources/w10-actor-q-wraith-tf/typeinfo.cpp": "5bf720218e349026e3e06f46c2cca831f611fa97052fbf6219a7e9bdd9b09ae5",
     "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
     "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
     "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp": "d69dc4c620c9cc907e11efb7f1411f8a7350ceaa800c5684cbf83dd6dc30c43a",
@@ -64004,6 +64015,166 @@
           "compiled_body_bytes": 1008
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4414,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_creature_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "edec0527f852d124d98cc97e37d59e41453197913fedbd0eeaa4568ebd02d095",
+      "source": "sources/w10-actor-q-creature-static-init/static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$numInRegion__8creatureG6Point3f",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4415,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wes_add_commander.o",
+      "profile": "authored_cpp",
+      "sha256": "1bcd8b2c4294219b4568cbfc56af8ef49a2a6854d51e999adfcbcc068fece036",
+      "source": "sources/w10-actor-q-wes-add-commander/add_commander.cpp",
+      "emitted_functions": [
+        {
+          "name": "addCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-q-common/q.hpp"
+      ],
+      "input_order": 4416,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wes_b_next_to_edge.o",
+      "profile": "authored_cpp",
+      "sha256": "137e10eb8a3758db97c49bbc87d4735000ec45354bc289d5efb0cce6261707d1",
+      "source": "sources/w10-actor-q-wes-b-next-to-edge/b_next_to_edge.cpp",
+      "emitted_functions": [
+        {
+          "name": "bNextToEdge__14WoodElfSoldier",
+          "compiled_body_bytes": 548
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-q-common/q.hpp"
+      ],
+      "input_order": 4417,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wes_leave_commander.o",
+      "profile": "authored_cpp",
+      "sha256": "aa65a34a2bad9f432dd461fa83a6811bfc0a2b2e97936cf678f6328a1af93e48",
+      "source": "sources/w10-actor-q-wes-leave-commander/leave_commander.cpp",
+      "emitted_functions": [
+        {
+          "name": "leaveCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-q-common/q.hpp"
+      ],
+      "input_order": 4418,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wes_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "007a02db210b969d8727bc906e4e4b064b4f328ac37ca7fa04baeec9e3d28262",
+      "source": "sources/w10-actor-q-wes-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14WoodElfSoldier",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4419,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wes_msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "1e6cc3d5b6fe63bce06e1e85a8d10a1b43cb1864346a73c9df20eaa6f94f1125",
+      "source": "sources/w10-actor-q-wes-msg-hurt/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__14WoodElfSoldierfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4420,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wraith_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "cda8a51778fe877d53185ce0aca4e8cba8bfb7d9afd6fbd283039c7d4e277ac4",
+      "source": "sources/w10-actor-q-wraith-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_6Wraith",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-q-common/q.hpp"
+      ],
+      "input_order": 4421,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wraith_init_miniboss.o",
+      "profile": "authored_cpp",
+      "sha256": "eddc6f6a36d2c48a46f47ee7563377b327c7e2e5a29d025b74603e2c25889a11",
+      "source": "sources/w10-actor-q-wraith-init-miniboss/init_miniboss.cpp",
+      "emitted_functions": [
+        {
+          "name": "initMiniboss__6Wraith",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-q-common/q.hpp"
+      ],
+      "input_order": 4422,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wraith_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "2750b564ddd504379f1ddc39cdbd6aadfd56c48bee1097c8b8c6981a4de32030",
+      "source": "sources/w10-actor-q-wraith-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__6Wraith",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4423,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_q_wraith_tf.o",
+      "profile": "authored_cpp",
+      "sha256": "5bf720218e349026e3e06f46c2cca831f611fa97052fbf6219a7e9bdd9b09ae5",
+      "source": "sources/w10-actor-q-wraith-tf/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf6Wraith",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -64103,7 +64274,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8030fd5d433dff2c7303c5dab09f9bab96e45a9ca4871fceca32aca01984abe8",
+  "snapshot_sha256": "bb51399f6d71ffe34f02db21104f1d93cbfe4f30ab432ece28cdf39f1d11c8c7",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
