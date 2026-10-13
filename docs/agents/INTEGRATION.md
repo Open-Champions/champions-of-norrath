@@ -9474,3 +9474,21 @@ Closed: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_Push__Fv`, `
 
 Opened: `_textureDrawFloat__FP8_textureffiUiff`
 - 2026-10-13 15:42 CDT — agents/w13-frontend-game-b — 1255 unresolved imports
+
+## agents/w13-m-data-a
+
+Merged (merge commit, branch tip `f21deeaf`; the notes have the checked, closed, opened, plan-entry, never-executed and unknown sections). 4 data units with fresh `input_order` values 5618 through 5621, each with a committed host check that builds and passes here: `w13-m-data-a-line-pos`, `-line-buffer`, `-full-count` and `-marble` (observed sizes and storage class; no behaviour). Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5620 authored inputs, 4305 function bodies, zero COMMON.
+
+NOT selected, as the notes themselves say: `w10-render-b-data-lava-particles` (closes `lavaGoopParticle` and `lavaSteamParticle`) is an earlier-wave data unit with no check of its own; this package adds none, so it stays unplanned. `w10-render-b-data-inventory-textures` stays out because it defines `invHeader` with a different type than the planned `w12-hud-loop-a-data-inv-header`. The notes' four closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1255 |
+| After | 1251 |
+| Closed | 4 |
+| Opened | 0 |
+
+Closed: `fullCount`, `lineBuffer`, `linePos`, `marble`
+
+Opened: none
+- 2026-10-13 15:47 CDT — agents/w13-m-data-a — 1251 unresolved imports

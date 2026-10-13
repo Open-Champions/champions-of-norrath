@@ -71795,6 +71795,42 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-frontend-game-b-texture-draw-float/texture_draw_float.cpp"
+    },
+    {
+      "input_order": 5618,
+      "component": "w13-m-data-a-full-count",
+      "object_name": "w13_m_data_a_full_count.o",
+      "private_object_sha256": "c649e10c82d5496ff12662b26263e036a474fdc263fd81901c037d8d7d5acf53",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-a-full-count/full_count.cpp"
+    },
+    {
+      "input_order": 5619,
+      "component": "w13-m-data-a-line-buffer",
+      "object_name": "w13_m_data_a_line_buffer.o",
+      "private_object_sha256": "1fe98760acd392a90e0421ec1b02a17a3f44762d74daf94588c1a82c8ff51d84",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-a-line-buffer/line_buffer.cpp"
+    },
+    {
+      "input_order": 5620,
+      "component": "w13-m-data-a-line-pos",
+      "object_name": "w13_m_data_a_line_pos.o",
+      "private_object_sha256": "006c419dda39f366c1964c86492d518fb2b3ca6a1d8aaa5b8a8a83a5f4bc5344",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-a-line-pos/line_pos.cpp"
+    },
+    {
+      "input_order": 5621,
+      "component": "w13-m-data-a-marble",
+      "object_name": "w13_m_data_a_marble.o",
+      "private_object_sha256": "0c1ca14959746107e49f94ed885f8f97270d9c34ef0a57e506e79e4beadd4c43",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-a-marble/marble.cpp"
     }
   ],
   "drafts": [
@@ -79659,6 +79695,14 @@
     "sources/w13-frontend-game-b-spell-draw/spell_draw.cpp": "1d16b680f9ccc9ee6c60fb97a673e6d82fc7dcf3e5e97fe256a144d2d0785591",
     "sources/w13-frontend-game-b-texture-draw-float/host_check.cpp": "48ac5eac492bf997b27eb837ff0a7b20678c192c82f5d8316a8be07f61e6e83c",
     "sources/w13-frontend-game-b-texture-draw-float/texture_draw_float.cpp": "8e67f66079a9988d9b670b767199c3c2cb2a47b72cae77fa333855d00a0ceaf2",
+    "sources/w13-m-data-a-full-count/full_count.cpp": "196fbec04e8db0e52d6e859f468e7a0b681d0899611448d2724ac4c20d21cd44",
+    "sources/w13-m-data-a-full-count/host_check.cpp": "9d2e4e5ae419addb4969752c4f263669239c45debb2234b577f5f51f25831db7",
+    "sources/w13-m-data-a-line-buffer/host_check.cpp": "5ed017bc867bf50fbc9b2ea1ffcc4d892aff309dc893c5aee2df5d3bf33275a8",
+    "sources/w13-m-data-a-line-buffer/line_buffer.cpp": "8a5d12f3a64a17a0a25e5dadc9671bec23a794ed7a5eb704413c7d6018189b73",
+    "sources/w13-m-data-a-line-pos/host_check.cpp": "f83579cad69c8ed6709737dfacfdadf8a2a4d56717c8d9f311795769ac383d14",
+    "sources/w13-m-data-a-line-pos/line_pos.cpp": "d7d9fecd79ac603d2666ab58c8c67aed2b6a0e1da1e8730e64b68ee4653de281",
+    "sources/w13-m-data-a-marble/host_check.cpp": "cf636159d57a147d7e9be63e7bcc509400895d64d39ca5b9609dfb958c2402fb",
+    "sources/w13-m-data-a-marble/marble.cpp": "41d2e9d781d1b0a099f1853de8c15a9aff0b370c4a79731ca04fce4f3293ec27",
     "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
     "sources/w13-m-startup-data-a-config-rand-words/host_check.cpp": "1be10655b1d05695dcd0b6a2a755bc681c1c0677071f08455ddf4f10fc1754c9",
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
@@ -84128,8 +84172,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5618,
-    "authored_default_inputs": 5616,
+    "selected_inputs": 5622,
+    "authored_default_inputs": 5620,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 4307,
     "compiled_body_bytes_from_accepted_inputs": 1872352,
@@ -84145,7 +84189,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5305
+    "package_selected_inputs": 5309
   },
   "startup_implementations": [
     {
@@ -167359,6 +167403,54 @@
       ],
       "host_files": [
         "sources/w13-frontend-game-b-texture-draw-float/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-a",
+      "source": "sources/w13-m-data-a-full-count/full_count.cpp",
+      "source_sha256": "196fbec04e8db0e52d6e859f468e7a0b681d0899611448d2724ac4c20d21cd44",
+      "object_sha256": "c649e10c82d5496ff12662b26263e036a474fdc263fd81901c037d8d7d5acf53",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-a-full-count/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-a",
+      "source": "sources/w13-m-data-a-line-buffer/line_buffer.cpp",
+      "source_sha256": "8a5d12f3a64a17a0a25e5dadc9671bec23a794ed7a5eb704413c7d6018189b73",
+      "object_sha256": "1fe98760acd392a90e0421ec1b02a17a3f44762d74daf94588c1a82c8ff51d84",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-a-line-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-a",
+      "source": "sources/w13-m-data-a-line-pos/line_pos.cpp",
+      "source_sha256": "d7d9fecd79ac603d2666ab58c8c67aed2b6a0e1da1e8730e64b68ee4653de281",
+      "object_sha256": "006c419dda39f366c1964c86492d518fb2b3ca6a1d8aaa5b8a8a83a5f4bc5344",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-a-line-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-a",
+      "source": "sources/w13-m-data-a-marble/marble.cpp",
+      "source_sha256": "41d2e9d781d1b0a099f1853de8c15a9aff0b370c4a79731ca04fce4f3293ec27",
+      "object_sha256": "0c1ca14959746107e49f94ed885f8f97270d9c34ef0a57e506e79e4beadd4c43",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-a-marble/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
