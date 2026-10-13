@@ -9689,3 +9689,19 @@ Closed: `getEnergyCost__16SkillDiseaseBolti`, `getEnergyCost__16SkillFireWeapons
 
 Opened: none
 - 2026-10-13 16:50 CDT — agents/w13-skill-stat-c — 936 unresolved imports
+
+## agents/w13-skill-stat-d
+
+Merged (merge commit, branch tip `9dcb63c3`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 37 units with fresh `input_order` values 5989 through 6025, each with a committed check that builds and passes here (37 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6024 authored inputs, 4707 function bodies, zero COMMON. The notes' 37 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 936 |
+| After | 899 |
+| Closed | 37 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__18SkillConvertUndeadi`, `getEnergyCost__18SkillDiseaseShieldi`, `getEnergyCost__18SkillDismissUndeadi`, `getEnergyCost__18SkillHammerOfWrathi`, `getEnergyCost__18SkillRepulseUndeadi`, `getEnergyCost__19SkillSummonSkeletoni`, `getEnergyCost__21SkillLightningWeaponsi`, `getEnergyCost__22SkillRangerCriticalHiti`, `getEnergyCost__9SkillBashi`, `getEnergyCost__9SkillRooti`, `getIcon__18SkillConvertUndead`, `getIcon__18SkillDiseaseShield`, `getIcon__18SkillDismissUndead`, `getIcon__18SkillHammerOfWrath`, `getIcon__18SkillRepulseUndead`, `getIcon__19SkillSummonSkeleton`, `getIcon__21SkillLightningWeapons`, `getIcon__22SkillRangerCriticalHit`, `getIcon__5Skill`, `getIcon__9SkillBash`, `getIcon__9SkillRoot`, `getLevelRequirement__18SkillDiseaseShieldi`, `getLevelRequirement__18SkillDismissUndeadi`, `getLevelRequirement__18SkillHammerOfWrathi`, `getLevelRequirement__18SkillRepulseUndeadi`, `getLevelRequirement__19SkillSummonSkeletoni`, `getLevelRequirement__21SkillLightningWeaponsi`, `getLevelRequirement__22SkillRangerCriticalHiti`, `getLevelRequirement__9SkillBashi`, `getLevelRequirement__9SkillRooti`, `getSkillPointCost__18SkillBlindingLighti`, `getSkillPointCost__18SkillDiseaseShieldi`, `getSkillPointCost__18SkillDismissUndeadi`, `getSkillPointCost__18SkillHammerOfWrathi`, `getSkillPointCost__18SkillRepulseUndeadi`, `getSkillPointCost__19SkillSummonSkeletoni`, `getSkillPointCost__21SkillLightningWeaponsi`
+
+Opened: none
+- 2026-10-13 16:55 CDT — agents/w13-skill-stat-d — 899 unresolved imports

@@ -76959,6 +76959,524 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-skill-stat-c-point-cost-skill-undead-shield/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 5989,
+      "component": "w13-skill-stat-d-base-icon",
+      "object_name": "w13_skill_stat_d_base_icon.o",
+      "private_object_sha256": "c45df770360fa0e477876ba710104e6b13919dbe00d5496455f2572ec572d1bf",
+      "emitted_functions": [
+        {
+          "name": "getIcon__5Skill",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-base-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 5990,
+      "component": "w13-skill-stat-d-bash-energy-cost",
+      "object_name": "w13_skill_stat_d_bash_energy_cost.o",
+      "private_object_sha256": "cbf723f1c0499ac2154bf9be29aefaeefb44ca010921ea0c13d1355b643a3f93",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__9SkillBashi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-bash-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 5991,
+      "component": "w13-skill-stat-d-bash-icon",
+      "object_name": "w13_skill_stat_d_bash_icon.o",
+      "private_object_sha256": "6d60425fda3ea3f9dad3fa2bde3ea896623f2c8018166f9e185647e10dd0b307",
+      "emitted_functions": [
+        {
+          "name": "getIcon__9SkillBash",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-bash-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 5992,
+      "component": "w13-skill-stat-d-bash-level-requirement",
+      "object_name": "w13_skill_stat_d_bash_level_requirement.o",
+      "private_object_sha256": "5b498f021802f5d5f79c7b2cd1f8d5f158e9de3041fffbf236a82bcbcac262c3",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__9SkillBashi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-bash-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 5993,
+      "component": "w13-skill-stat-d-blinding-light-point-cost",
+      "object_name": "w13_skill_stat_d_blinding_light_point_cost.o",
+      "private_object_sha256": "69dab92a056e5bbb2bedca36201d47d58988f092244a18a4db3a6179bdd5d1b0",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillBlindingLighti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-blinding-light-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 5994,
+      "component": "w13-skill-stat-d-convert-undead-energy-cost",
+      "object_name": "w13_skill_stat_d_convert_undead_energy_cost.o",
+      "private_object_sha256": "7caf56495f7cc0bc0f94eced03c49c8c3a7be505b6447aff2255d271b5e7ab73",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillConvertUndeadi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-convert-undead-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 5995,
+      "component": "w13-skill-stat-d-convert-undead-icon",
+      "object_name": "w13_skill_stat_d_convert_undead_icon.o",
+      "private_object_sha256": "0735ced2dafe01a64d9f28bb409312c5a1421a58bf3812e9c9097a22f6a57cde",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillConvertUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-convert-undead-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 5996,
+      "component": "w13-skill-stat-d-disease-shield-energy-cost",
+      "object_name": "w13_skill_stat_d_disease_shield_energy_cost.o",
+      "private_object_sha256": "02123a373db4172a3ab926ed00a5c562e3baba46330546a2c6fb87641d237c90",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-disease-shield-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 5997,
+      "component": "w13-skill-stat-d-disease-shield-icon",
+      "object_name": "w13_skill_stat_d_disease_shield_icon.o",
+      "private_object_sha256": "d18ecfe7a7b53c009e808916f0e14c3c09e9eccc84f4e93d1acf3ae1c74ff4b4",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillDiseaseShield",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-disease-shield-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 5998,
+      "component": "w13-skill-stat-d-disease-shield-level-requirement",
+      "object_name": "w13_skill_stat_d_disease_shield_level_requirement.o",
+      "private_object_sha256": "41dc9f5ec365913135ee4c53c29b5ceb74bee68a965a899f01d20021a81130d2",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-disease-shield-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 5999,
+      "component": "w13-skill-stat-d-disease-shield-point-cost",
+      "object_name": "w13_skill_stat_d_disease_shield_point_cost.o",
+      "private_object_sha256": "66c2e3fdc848f887a0d535848ec958a77cc6894b680e3c640bf30d246ccbca47",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-disease-shield-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6000,
+      "component": "w13-skill-stat-d-dismiss-undead-energy-cost",
+      "object_name": "w13_skill_stat_d_dismiss_undead_energy_cost.o",
+      "private_object_sha256": "a47ad51c4ac11b38da53796277063aeb4f3399bdcb1ddb75553b62d2545e7bfd",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillDismissUndeadi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6001,
+      "component": "w13-skill-stat-d-dismiss-undead-icon",
+      "object_name": "w13_skill_stat_d_dismiss_undead_icon.o",
+      "private_object_sha256": "98a5f5e3a2849757d3fdd67a370d30c331b236705b042ca800e00f15731b5aed",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillDismissUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6002,
+      "component": "w13-skill-stat-d-dismiss-undead-level-requirement",
+      "object_name": "w13_skill_stat_d_dismiss_undead_level_requirement.o",
+      "private_object_sha256": "c54e3aa2835e7004c1f3148b99044897a46b6a60f1007a40617af223dcf1526c",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillDismissUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6003,
+      "component": "w13-skill-stat-d-dismiss-undead-point-cost",
+      "object_name": "w13_skill_stat_d_dismiss_undead_point_cost.o",
+      "private_object_sha256": "be4d34285733226aa8007a070a143eff00e4a72e51fcca24af201b195cc9ff69",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillDismissUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6004,
+      "component": "w13-skill-stat-d-hammer-of-wrath-energy-cost",
+      "object_name": "w13_skill_stat_d_hammer_of_wrath_energy_cost.o",
+      "private_object_sha256": "8f25f737110da4a60b7e7e4f0e3fb7d0ca877bb9eb5e903d2527e59fbf9fd013",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6005,
+      "component": "w13-skill-stat-d-hammer-of-wrath-icon",
+      "object_name": "w13_skill_stat_d_hammer_of_wrath_icon.o",
+      "private_object_sha256": "782b93f0bbd050871416d2b8afc2a9139f589756b6d2d72b313121d0c2a7856c",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillHammerOfWrath",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6006,
+      "component": "w13-skill-stat-d-hammer-of-wrath-level-requirement",
+      "object_name": "w13_skill_stat_d_hammer_of_wrath_level_requirement.o",
+      "private_object_sha256": "767c86dc8d13df2fa5996ce231d5af4714ef84e9f0672ddd13f6fbe94a4377be",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6007,
+      "component": "w13-skill-stat-d-hammer-of-wrath-point-cost",
+      "object_name": "w13_skill_stat_d_hammer_of_wrath_point_cost.o",
+      "private_object_sha256": "9972b564308947e84924ad2ab0035880ad85e7539c91e2339c250589a6e6d8e6",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6008,
+      "component": "w13-skill-stat-d-lightning-weapons-energy-cost",
+      "object_name": "w13_skill_stat_d_lightning_weapons_energy_cost.o",
+      "private_object_sha256": "b97c82153a17bd0faaef903d853d37d3fdb8d6848a6af6cc9e4cc732c9d9548c",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6009,
+      "component": "w13-skill-stat-d-lightning-weapons-icon",
+      "object_name": "w13_skill_stat_d_lightning_weapons_icon.o",
+      "private_object_sha256": "b356d9fefb0321488d4ebfcd20dba46029e8055a03b3cbf0317f306d91ec0d81",
+      "emitted_functions": [
+        {
+          "name": "getIcon__21SkillLightningWeapons",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6010,
+      "component": "w13-skill-stat-d-lightning-weapons-level-requirement",
+      "object_name": "w13_skill_stat_d_lightning_weapons_level_requirement.o",
+      "private_object_sha256": "c9a8be20ce70a57a9fa4c75bd81b789a6f2e069f24170d214c5e8df520dec116",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6011,
+      "component": "w13-skill-stat-d-lightning-weapons-point-cost",
+      "object_name": "w13_skill_stat_d_lightning_weapons_point_cost.o",
+      "private_object_sha256": "24140c73d620c235c0ec2692b9707cc2b1b7fa87b3e89a9e584bdbbffb91edb9",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6012,
+      "component": "w13-skill-stat-d-ranger-critical-hit-energy-cost",
+      "object_name": "w13_skill_stat_d_ranger_critical_hit_energy_cost.o",
+      "private_object_sha256": "232c08eb3f307dc2777fa08e43a95e282c7d338ec43f733c3fde0b2a5ed5e32a",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__22SkillRangerCriticalHiti",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6013,
+      "component": "w13-skill-stat-d-ranger-critical-hit-icon",
+      "object_name": "w13_skill_stat_d_ranger_critical_hit_icon.o",
+      "private_object_sha256": "e0bbf400812681a03c43d2efadeac4483b2b2cf62222db68957de867591ea146",
+      "emitted_functions": [
+        {
+          "name": "getIcon__22SkillRangerCriticalHit",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6014,
+      "component": "w13-skill-stat-d-ranger-critical-hit-level-requirement",
+      "object_name": "w13_skill_stat_d_ranger_critical_hit_level_requirement.o",
+      "private_object_sha256": "27ff0ff4f64f6bc13d2b2ba172a84a54e5aaa65dd4a4ba1cb71ccb133e5b8ba6",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__22SkillRangerCriticalHiti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6015,
+      "component": "w13-skill-stat-d-repulse-undead-energy-cost",
+      "object_name": "w13_skill_stat_d_repulse_undead_energy_cost.o",
+      "private_object_sha256": "df5ee1330379613ef4be96aa26d536e5e7267df6062daf196322e78f9f736b54",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-repulse-undead-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6016,
+      "component": "w13-skill-stat-d-repulse-undead-icon",
+      "object_name": "w13_skill_stat_d_repulse_undead_icon.o",
+      "private_object_sha256": "edee2de75367475cde3022df14eba7cfc9c0ff2f9fbcfaea234f92b3f59470be",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillRepulseUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-repulse-undead-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6017,
+      "component": "w13-skill-stat-d-repulse-undead-level-requirement",
+      "object_name": "w13_skill_stat_d_repulse_undead_level_requirement.o",
+      "private_object_sha256": "179c824b676dc1dbc4e183625ff704b94ed669c5ff1beb7315176ae3b1dfc145",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-repulse-undead-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6018,
+      "component": "w13-skill-stat-d-repulse-undead-point-cost",
+      "object_name": "w13_skill_stat_d_repulse_undead_point_cost.o",
+      "private_object_sha256": "2e2ea1b5c9969e92d6551a164f710ea821f26dba6068ee4208b27b9c46fe63c4",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-repulse-undead-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6019,
+      "component": "w13-skill-stat-d-root-energy-cost",
+      "object_name": "w13_skill_stat_d_root_energy_cost.o",
+      "private_object_sha256": "ced3a87266f93624cfddb2d946c32a66deacb40ea7def7424b88b55812fe9c70",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__9SkillRooti",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-root-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6020,
+      "component": "w13-skill-stat-d-root-icon",
+      "object_name": "w13_skill_stat_d_root_icon.o",
+      "private_object_sha256": "53feb45b294a9307d2ff3f862adaba3f2c08aad5b85d04ef8711094a8732c92a",
+      "emitted_functions": [
+        {
+          "name": "getIcon__9SkillRoot",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-root-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6021,
+      "component": "w13-skill-stat-d-root-level-requirement",
+      "object_name": "w13_skill_stat_d_root_level_requirement.o",
+      "private_object_sha256": "63f213e55d13468a52b8301b1031fc041e998ac8db68ff1b4799a610af6b3980",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__9SkillRooti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-root-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6022,
+      "component": "w13-skill-stat-d-summon-skeleton-energy-cost",
+      "object_name": "w13_skill_stat_d_summon_skeleton_energy_cost.o",
+      "private_object_sha256": "c1cca011fa931b303cb19afeaa13075a716807942786bc8ed485e6f2e2e5b745",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-energy-cost/get_energy_cost.cpp"
+    },
+    {
+      "input_order": 6023,
+      "component": "w13-skill-stat-d-summon-skeleton-icon",
+      "object_name": "w13_skill_stat_d_summon_skeleton_icon.o",
+      "private_object_sha256": "8bcb567f66a482bfb2e763be9e23225782b958a1d69e2300f300a1571021383b",
+      "emitted_functions": [
+        {
+          "name": "getIcon__19SkillSummonSkeleton",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-icon/get_icon.cpp"
+    },
+    {
+      "input_order": 6024,
+      "component": "w13-skill-stat-d-summon-skeleton-level-requirement",
+      "object_name": "w13_skill_stat_d_summon_skeleton_level_requirement.o",
+      "private_object_sha256": "a46de5068ce662753ed0219d76b47f31cd3a6135bb358ddbc5b0a7d4f2a6240a",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-level-requirement/get_level_requirement.cpp"
+    },
+    {
+      "input_order": 6025,
+      "component": "w13-skill-stat-d-summon-skeleton-point-cost",
+      "object_name": "w13_skill_stat_d_summon_skeleton_point_cost.o",
+      "private_object_sha256": "1fb66de3491eaa46e8ee19f39fe897ec115b33ca461d426a112614ad61afcdac",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp"
     }
   ],
   "drafts": [
@@ -85617,6 +86135,80 @@
     "sources/w13-skill-stat-c-point-cost-skill-shock-of-frost/host_check.cpp": "913b3e1ce940a559fb50f3ef569264116d32de9f9c05b6cbae6be3daf3319b46",
     "sources/w13-skill-stat-c-point-cost-skill-undead-shield/get_skill_point_cost.cpp": "ae1bd36cecfa0bb09ed127c205679d63908804d2739f5e15cf5ce976de494710",
     "sources/w13-skill-stat-c-point-cost-skill-undead-shield/host_check.cpp": "1e46d23af59f033dd458b94b8b7fbdd6a5b276decbe1f5f221d52f5a78f2eec2",
+    "sources/w13-skill-stat-d-base-icon/get_icon.cpp": "d1751ff2a65a0860b85c0c2daabe1e2c30a96f46794ad3a25fc1e7c228bcbf21",
+    "sources/w13-skill-stat-d-base-icon/host_check.cpp": "c3bb9d5cdf786940c1998c17246789642b2a33a7821a6af5a3b16997c0cbc69c",
+    "sources/w13-skill-stat-d-bash-energy-cost/get_energy_cost.cpp": "1e6728dc76d8b9c0908295c71788d7e58868b2a7299eb9d16c8b3e363b093db5",
+    "sources/w13-skill-stat-d-bash-energy-cost/host_check.cpp": "0ae4540f1b5680df59b3014cbffd1c6d2d82287598fb20e87f18d2b49cd6ffd3",
+    "sources/w13-skill-stat-d-bash-icon/get_icon.cpp": "383a524bd1f85e8c77038beb25d383fcbc7f3ec119a4d12821e9dcf560a20678",
+    "sources/w13-skill-stat-d-bash-icon/host_check.cpp": "dd88054ba60b79290414c3cf4248141fb6c4593c1cc841871762cba1c34faa24",
+    "sources/w13-skill-stat-d-bash-level-requirement/get_level_requirement.cpp": "70f448ebb25cb8c019add4b36df2be312606a34e50d84d8991b663da07356884",
+    "sources/w13-skill-stat-d-bash-level-requirement/host_check.cpp": "c178ec381858526658c2b27e967ab68e30985bd98d4ee2d6074c3bb92120db40",
+    "sources/w13-skill-stat-d-blinding-light-point-cost/get_skill_point_cost.cpp": "46d59e4bd69ef1ee7a7d2441bc35c3cdb3b873ac0f4e6a349f2e9e5c63106409",
+    "sources/w13-skill-stat-d-blinding-light-point-cost/host_check.cpp": "d5060ad0c3952506088a7f5cd95ee0039c135ac819fefc96c5d4630ddc34be6f",
+    "sources/w13-skill-stat-d-convert-undead-energy-cost/get_energy_cost.cpp": "d95a129432d3bea778d88020bd87622f71525583d28676aa1516b044b54eec00",
+    "sources/w13-skill-stat-d-convert-undead-energy-cost/host_check.cpp": "289baa9d79d42f524593e421988207bf38794da6c973ee2deef83ce456ee29be",
+    "sources/w13-skill-stat-d-convert-undead-icon/get_icon.cpp": "9366e779978e9216376bed878c415ac544d42880a1f91d24463c48890f682b0a",
+    "sources/w13-skill-stat-d-convert-undead-icon/host_check.cpp": "c1993f9ec6bf944cb901235279c5a7e841d0e920b2de2b1eeb384bc24ba3d36e",
+    "sources/w13-skill-stat-d-disease-shield-energy-cost/get_energy_cost.cpp": "8f4924f4651e8f2c151c4c0f1a307529bf9967f407ac7755f506718de923bf91",
+    "sources/w13-skill-stat-d-disease-shield-energy-cost/host_check.cpp": "138ca4fb65aa14d4e8a8099e35eb5c5c4165e2d83b47d1e7f618d2ce92337fd7",
+    "sources/w13-skill-stat-d-disease-shield-icon/get_icon.cpp": "dc2df201151cc0235d55a91a996e83756e8b5696cfb74403de35ba310210ed17",
+    "sources/w13-skill-stat-d-disease-shield-icon/host_check.cpp": "33939d37d6b1f41b7b48c370a2446fb97cf56858ca4fa96fd330e50ba940a108",
+    "sources/w13-skill-stat-d-disease-shield-level-requirement/get_level_requirement.cpp": "af7d620f1f31deced68264ca699cb54be699a035bd9df3383a5f92ca2caf585e",
+    "sources/w13-skill-stat-d-disease-shield-level-requirement/host_check.cpp": "9a3c8babd7e154fbf199e15f47698f01ba6b7a8eaab1ea37bdaf133d4331899c",
+    "sources/w13-skill-stat-d-disease-shield-point-cost/get_skill_point_cost.cpp": "a26da00a8f1348b2697620eed3d2e92de6953ac61f6825fbc22321147420e09a",
+    "sources/w13-skill-stat-d-disease-shield-point-cost/host_check.cpp": "da2e60d6cd0b34926ea819e1db2b9bcc4fe167ef86563fc66cd91efaecc83588",
+    "sources/w13-skill-stat-d-dismiss-undead-energy-cost/get_energy_cost.cpp": "4f9e12c87bd6d494ad72cc79b6625fd4157593b5c5f1d75ea4116dfee76d2037",
+    "sources/w13-skill-stat-d-dismiss-undead-energy-cost/host_check.cpp": "830c3df6ed4be2e3c2a976049a0e769e6903fa0a5ad8450cd794e032447da531",
+    "sources/w13-skill-stat-d-dismiss-undead-icon/get_icon.cpp": "eb478b004b9a8f97ac265d43300a34b125227435f9061da20ff795d7ba953466",
+    "sources/w13-skill-stat-d-dismiss-undead-icon/host_check.cpp": "50dab2cf1661ccc5b1327ba0db7d360397198254cc9f24aae177f2f96e8a7dc4",
+    "sources/w13-skill-stat-d-dismiss-undead-level-requirement/get_level_requirement.cpp": "97760c2930c4ef48e1d32318435f40cca209b9d9a1bfaf4efe761c463f26aa59",
+    "sources/w13-skill-stat-d-dismiss-undead-level-requirement/host_check.cpp": "85b8f465ade3c325ef9cdcb7db86a670d29ea6360fbbb3ea10d020b7513a5e7c",
+    "sources/w13-skill-stat-d-dismiss-undead-point-cost/get_skill_point_cost.cpp": "5edf8772c86773c9b1597fdc351255b08d064bbee68234e55afdff221d20b936",
+    "sources/w13-skill-stat-d-dismiss-undead-point-cost/host_check.cpp": "65c9bd695e8a9280f8e9b1e393068e7d4e2c6de9f98670f9b99fb6902b3fc88b",
+    "sources/w13-skill-stat-d-hammer-of-wrath-energy-cost/get_energy_cost.cpp": "69eebd03eb2a24d038bc34c90691472178fe27f2504ba2d81f2efd58079b2536",
+    "sources/w13-skill-stat-d-hammer-of-wrath-energy-cost/host_check.cpp": "4738179196c8216c9c0b749d3206ec8b4084bbf20789aa37612373cc10a412d5",
+    "sources/w13-skill-stat-d-hammer-of-wrath-icon/get_icon.cpp": "10a3e75fae3099295e96f90be63bac7e3e2d428ac5ab6bc5cd627f43bd29e3b2",
+    "sources/w13-skill-stat-d-hammer-of-wrath-icon/host_check.cpp": "3af5fc229206de6f67c46045ca168bf44df9149fd6c2cc2662e78012c6391c68",
+    "sources/w13-skill-stat-d-hammer-of-wrath-level-requirement/get_level_requirement.cpp": "6f40933366f260534e744360bda088d252826564a00b578cdddbc31db5ee8d94",
+    "sources/w13-skill-stat-d-hammer-of-wrath-level-requirement/host_check.cpp": "5762623b15af91f95a75405c969d153a4386dcf7a0a32f4d4d386a30c43231fb",
+    "sources/w13-skill-stat-d-hammer-of-wrath-point-cost/get_skill_point_cost.cpp": "797d1f851fb67d8115209cb2680944dfad20c83f3697d6c610da3a63da9839c7",
+    "sources/w13-skill-stat-d-hammer-of-wrath-point-cost/host_check.cpp": "77a8800344865be3b838176aaf95ff1b07bc7f1ea2ecc4e5de9406255537a5a2",
+    "sources/w13-skill-stat-d-lightning-weapons-energy-cost/get_energy_cost.cpp": "a4dd0a637f67b65cba03e24292ece73f2055c65c0cbb0ffe9d7b92bba3976d9e",
+    "sources/w13-skill-stat-d-lightning-weapons-energy-cost/host_check.cpp": "7732566155d27271020e4ecec10e30c5bbbfd2d0546d902b5dd241c842e12980",
+    "sources/w13-skill-stat-d-lightning-weapons-icon/get_icon.cpp": "dbe14c264088101bc8719c277c6940dc30b9990408e564b57bfbc2e9521f470c",
+    "sources/w13-skill-stat-d-lightning-weapons-icon/host_check.cpp": "90f4859f27c9bd6bb08fe40d46b03e26d4e6f4cbf6beda450ff7e5d3a537e94a",
+    "sources/w13-skill-stat-d-lightning-weapons-level-requirement/get_level_requirement.cpp": "4dc2ade11fcf64e81e09182cc733aeb7296ea4531c2a901279594d4533cc7cd4",
+    "sources/w13-skill-stat-d-lightning-weapons-level-requirement/host_check.cpp": "988425aa57fc5b02cbdd27a7d80fc0d50926b560bcb47ef7b6d0d0e5d9c28d0a",
+    "sources/w13-skill-stat-d-lightning-weapons-point-cost/get_skill_point_cost.cpp": "f080cee04800bf21ca746adacbdee962dd4dc19c5de19d3a1737bfb3906c23b3",
+    "sources/w13-skill-stat-d-lightning-weapons-point-cost/host_check.cpp": "3b45f5dd2c5bd4cd25fdc37b6d9b4a1410ba762cca5b7bfbe2c84c7f259f75b8",
+    "sources/w13-skill-stat-d-ranger-critical-hit-energy-cost/get_energy_cost.cpp": "da64aab9d449a77c96053f55ca11cf075cae6b0a795d1f6414df1f255b94fa8b",
+    "sources/w13-skill-stat-d-ranger-critical-hit-energy-cost/host_check.cpp": "c7b0ee752a5d03a907525dadf784eb301b6c3abc27bbf52a0f7fb2472487e913",
+    "sources/w13-skill-stat-d-ranger-critical-hit-icon/get_icon.cpp": "fba48ab929e37ca8de9e8cbe9ac49842576b5fa6a78d6b2319cc83ef1d9e38e3",
+    "sources/w13-skill-stat-d-ranger-critical-hit-icon/host_check.cpp": "1b9052afbd08a16e052528fdae2f2be677ea4d0411ce506be9ad19a5d03599cf",
+    "sources/w13-skill-stat-d-ranger-critical-hit-level-requirement/get_level_requirement.cpp": "0df6d95b813e565c4f9df9edf8e7800efb621c1971c31ccd9c9f6e2dd099c263",
+    "sources/w13-skill-stat-d-ranger-critical-hit-level-requirement/host_check.cpp": "8ac98be3092cb604c018a98eb774ad5e9bbc3bcb0b798d79f7a2a32767b17345",
+    "sources/w13-skill-stat-d-repulse-undead-energy-cost/get_energy_cost.cpp": "c22eb207ed77b161778c5e488589efdd497debb82d725e01690c460dee27d82d",
+    "sources/w13-skill-stat-d-repulse-undead-energy-cost/host_check.cpp": "7176bd8b0d4442fd15443a9294e34dfbc9114b2c623a3b7ba0ea4e20383d9ef9",
+    "sources/w13-skill-stat-d-repulse-undead-icon/get_icon.cpp": "b63d2c72a89795d61d580b93f95902021dac27b1e9733c2db089c6a7bfc736a7",
+    "sources/w13-skill-stat-d-repulse-undead-icon/host_check.cpp": "dc84220693d31f66058c7d05328f3fcddf4b61b9d8e9043ba7b63b642f83d773",
+    "sources/w13-skill-stat-d-repulse-undead-level-requirement/get_level_requirement.cpp": "4a2c98bc9c46531420454de456948059d720c648eb4d85ff6af0c2dd081c8b35",
+    "sources/w13-skill-stat-d-repulse-undead-level-requirement/host_check.cpp": "6a684c5e832202076572d20af8df08c31039437c65849c167be76a8237daa7bd",
+    "sources/w13-skill-stat-d-repulse-undead-point-cost/get_skill_point_cost.cpp": "b45b38414edb2f154d82af5867aa66591cf3d44d0d935a7371ea2fe36d7e099c",
+    "sources/w13-skill-stat-d-repulse-undead-point-cost/host_check.cpp": "ac1eae7c62baa1f64314521f09676239e8fc268bab2dcee9e38940ea53f02c4d",
+    "sources/w13-skill-stat-d-root-energy-cost/get_energy_cost.cpp": "9b9ad2bb128f08d29bbd7806b21b46159a610ac36bc2495cd948849a2c8282b2",
+    "sources/w13-skill-stat-d-root-energy-cost/host_check.cpp": "b390fda51a44c52f859213222511c90c5d976d0237117dcec09391c4a9a3cea2",
+    "sources/w13-skill-stat-d-root-icon/get_icon.cpp": "3d29f4dc0d26a09ef3f7f4aca90088864cd5dd4f126698c3e68c950c09af5687",
+    "sources/w13-skill-stat-d-root-icon/host_check.cpp": "a55904c4080389156a852e1b1c4ba4170b95c28122c209467d7eddced600ddec",
+    "sources/w13-skill-stat-d-root-level-requirement/get_level_requirement.cpp": "db0af088a47a3ce25fba606e193b8fad0da454d6c72213bb5639b9e86dc251e2",
+    "sources/w13-skill-stat-d-root-level-requirement/host_check.cpp": "d14f6e906b043f8a5019bd5d75263b15da61272bf58887c3526b5bef17812dff",
+    "sources/w13-skill-stat-d-summon-skeleton-energy-cost/get_energy_cost.cpp": "c0bd1bd71fdeb656e8544580581ab813c7456771ef31b7b97b900a4a4cf54454",
+    "sources/w13-skill-stat-d-summon-skeleton-energy-cost/host_check.cpp": "ca44bc5f278a6d3f9bc60624c6aecb902841050dc4779e2211649d8dae08be9d",
+    "sources/w13-skill-stat-d-summon-skeleton-icon/get_icon.cpp": "cd18845e24ffd6988d89fd179a9c9ae23c99632a9e5f19a855d84f84ad95ff6a",
+    "sources/w13-skill-stat-d-summon-skeleton-icon/host_check.cpp": "792b67d8e0788c9819699017ec2051f079e3a404a911dcc26326108fdb2d0e0c",
+    "sources/w13-skill-stat-d-summon-skeleton-level-requirement/get_level_requirement.cpp": "9e4aadc34f6b311ad611b993f76c494b170afc2b1f8fa2c50b77f02e460da429",
+    "sources/w13-skill-stat-d-summon-skeleton-level-requirement/host_check.cpp": "ad05d0ecce8348025d6ee046f9c709ff1696f0111137fde4ed4f41bd3d86ab34",
+    "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp": "7a1b9c39f588119e7b3db6e08030cc709ac8ce5f7e854e449db8c2307bbc83e8",
+    "sources/w13-skill-stat-d-summon-skeleton-point-cost/host_check.cpp": "c2bf178e6705597a03c40b5b7ae06123d85cb13270f94c9cfea99c6bb2a5ac45",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-addhour/host_contract.cpp": "c13e4688ed5547913d95886d1182c6176a843849e7c60479a0a5c0fb496f2bfe",
     "sources/w13-startup-fn-a-check-for-modifier-key-events/check_for_modifier_key_events.cpp": "51973cc179882c4652abd423742eabdede64f7623bde208ab6db5514944c17bc",
@@ -90036,11 +90628,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5989,
-    "authored_default_inputs": 5987,
+    "selected_inputs": 6026,
+    "authored_default_inputs": 6024,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4672,
-    "compiled_body_bytes_from_accepted_inputs": 1925592,
+    "emitted_function_definitions_including_helpers": 4709,
+    "compiled_body_bytes_from_accepted_inputs": 1926276,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -90053,7 +90645,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5676
+    "package_selected_inputs": 5713
   },
   "startup_implementations": [
     {
@@ -179544,6 +180136,635 @@
       ],
       "host_files": [
         "sources/w13-skill-stat-c-point-cost-skill-undead-shield/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-base-icon/get_icon.cpp",
+      "source_sha256": "d1751ff2a65a0860b85c0c2daabe1e2c30a96f46794ad3a25fc1e7c228bcbf21",
+      "object_sha256": "c45df770360fa0e477876ba710104e6b13919dbe00d5496455f2572ec572d1bf",
+      "emitted_functions": [
+        {
+          "name": "getIcon__5Skill",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-base-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-bash-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "1e6728dc76d8b9c0908295c71788d7e58868b2a7299eb9d16c8b3e363b093db5",
+      "object_sha256": "cbf723f1c0499ac2154bf9be29aefaeefb44ca010921ea0c13d1355b643a3f93",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__9SkillBashi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-bash-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-bash-icon/get_icon.cpp",
+      "source_sha256": "383a524bd1f85e8c77038beb25d383fcbc7f3ec119a4d12821e9dcf560a20678",
+      "object_sha256": "6d60425fda3ea3f9dad3fa2bde3ea896623f2c8018166f9e185647e10dd0b307",
+      "emitted_functions": [
+        {
+          "name": "getIcon__9SkillBash",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-bash-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-bash-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "70f448ebb25cb8c019add4b36df2be312606a34e50d84d8991b663da07356884",
+      "object_sha256": "5b498f021802f5d5f79c7b2cd1f8d5f158e9de3041fffbf236a82bcbcac262c3",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__9SkillBashi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-bash-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-blinding-light-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "46d59e4bd69ef1ee7a7d2441bc35c3cdb3b873ac0f4e6a349f2e9e5c63106409",
+      "object_sha256": "69dab92a056e5bbb2bedca36201d47d58988f092244a18a4db3a6179bdd5d1b0",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillBlindingLighti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-blinding-light-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-convert-undead-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "d95a129432d3bea778d88020bd87622f71525583d28676aa1516b044b54eec00",
+      "object_sha256": "7caf56495f7cc0bc0f94eced03c49c8c3a7be505b6447aff2255d271b5e7ab73",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillConvertUndeadi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-convert-undead-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-convert-undead-icon/get_icon.cpp",
+      "source_sha256": "9366e779978e9216376bed878c415ac544d42880a1f91d24463c48890f682b0a",
+      "object_sha256": "0735ced2dafe01a64d9f28bb409312c5a1421a58bf3812e9c9097a22f6a57cde",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillConvertUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-convert-undead-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-disease-shield-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "8f4924f4651e8f2c151c4c0f1a307529bf9967f407ac7755f506718de923bf91",
+      "object_sha256": "02123a373db4172a3ab926ed00a5c562e3baba46330546a2c6fb87641d237c90",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-disease-shield-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-disease-shield-icon/get_icon.cpp",
+      "source_sha256": "dc2df201151cc0235d55a91a996e83756e8b5696cfb74403de35ba310210ed17",
+      "object_sha256": "d18ecfe7a7b53c009e808916f0e14c3c09e9eccc84f4e93d1acf3ae1c74ff4b4",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillDiseaseShield",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-disease-shield-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-disease-shield-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "af7d620f1f31deced68264ca699cb54be699a035bd9df3383a5f92ca2caf585e",
+      "object_sha256": "41dc9f5ec365913135ee4c53c29b5ceb74bee68a965a899f01d20021a81130d2",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-disease-shield-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-disease-shield-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "a26da00a8f1348b2697620eed3d2e92de6953ac61f6825fbc22321147420e09a",
+      "object_sha256": "66c2e3fdc848f887a0d535848ec958a77cc6894b680e3c640bf30d246ccbca47",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillDiseaseShieldi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-disease-shield-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "4f9e12c87bd6d494ad72cc79b6625fd4157593b5c5f1d75ea4116dfee76d2037",
+      "object_sha256": "a47ad51c4ac11b38da53796277063aeb4f3399bdcb1ddb75553b62d2545e7bfd",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillDismissUndeadi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-dismiss-undead-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-icon/get_icon.cpp",
+      "source_sha256": "eb478b004b9a8f97ac265d43300a34b125227435f9061da20ff795d7ba953466",
+      "object_sha256": "98a5f5e3a2849757d3fdd67a370d30c331b236705b042ca800e00f15731b5aed",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillDismissUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-dismiss-undead-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "97760c2930c4ef48e1d32318435f40cca209b9d9a1bfaf4efe761c463f26aa59",
+      "object_sha256": "c54e3aa2835e7004c1f3148b99044897a46b6a60f1007a40617af223dcf1526c",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillDismissUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-dismiss-undead-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-dismiss-undead-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "5edf8772c86773c9b1597fdc351255b08d064bbee68234e55afdff221d20b936",
+      "object_sha256": "be4d34285733226aa8007a070a143eff00e4a72e51fcca24af201b195cc9ff69",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillDismissUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-dismiss-undead-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "69eebd03eb2a24d038bc34c90691472178fe27f2504ba2d81f2efd58079b2536",
+      "object_sha256": "8f25f737110da4a60b7e7e4f0e3fb7d0ca877bb9eb5e903d2527e59fbf9fd013",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-hammer-of-wrath-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-icon/get_icon.cpp",
+      "source_sha256": "10a3e75fae3099295e96f90be63bac7e3e2d428ac5ab6bc5cd627f43bd29e3b2",
+      "object_sha256": "782b93f0bbd050871416d2b8afc2a9139f589756b6d2d72b313121d0c2a7856c",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillHammerOfWrath",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-hammer-of-wrath-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "6f40933366f260534e744360bda088d252826564a00b578cdddbc31db5ee8d94",
+      "object_sha256": "767c86dc8d13df2fa5996ce231d5af4714ef84e9f0672ddd13f6fbe94a4377be",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-hammer-of-wrath-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-hammer-of-wrath-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "797d1f851fb67d8115209cb2680944dfad20c83f3697d6c610da3a63da9839c7",
+      "object_sha256": "9972b564308947e84924ad2ab0035880ad85e7539c91e2339c250589a6e6d8e6",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillHammerOfWrathi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-hammer-of-wrath-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "a4dd0a637f67b65cba03e24292ece73f2055c65c0cbb0ffe9d7b92bba3976d9e",
+      "object_sha256": "b97c82153a17bd0faaef903d853d37d3fdb8d6848a6af6cc9e4cc732c9d9548c",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-lightning-weapons-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-icon/get_icon.cpp",
+      "source_sha256": "dbe14c264088101bc8719c277c6940dc30b9990408e564b57bfbc2e9521f470c",
+      "object_sha256": "b356d9fefb0321488d4ebfcd20dba46029e8055a03b3cbf0317f306d91ec0d81",
+      "emitted_functions": [
+        {
+          "name": "getIcon__21SkillLightningWeapons",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-lightning-weapons-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "4dc2ade11fcf64e81e09182cc733aeb7296ea4531c2a901279594d4533cc7cd4",
+      "object_sha256": "c9a8be20ce70a57a9fa4c75bd81b789a6f2e069f24170d214c5e8df520dec116",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-lightning-weapons-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-lightning-weapons-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "f080cee04800bf21ca746adacbdee962dd4dc19c5de19d3a1737bfb3906c23b3",
+      "object_sha256": "24140c73d620c235c0ec2692b9707cc2b1b7fa87b3e89a9e584bdbbffb91edb9",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__21SkillLightningWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-lightning-weapons-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "da64aab9d449a77c96053f55ca11cf075cae6b0a795d1f6414df1f255b94fa8b",
+      "object_sha256": "232c08eb3f307dc2777fa08e43a95e282c7d338ec43f733c3fde0b2a5ed5e32a",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__22SkillRangerCriticalHiti",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-ranger-critical-hit-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-icon/get_icon.cpp",
+      "source_sha256": "fba48ab929e37ca8de9e8cbe9ac49842576b5fa6a78d6b2319cc83ef1d9e38e3",
+      "object_sha256": "e0bbf400812681a03c43d2efadeac4483b2b2cf62222db68957de867591ea146",
+      "emitted_functions": [
+        {
+          "name": "getIcon__22SkillRangerCriticalHit",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-ranger-critical-hit-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-ranger-critical-hit-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "0df6d95b813e565c4f9df9edf8e7800efb621c1971c31ccd9c9f6e2dd099c263",
+      "object_sha256": "27ff0ff4f64f6bc13d2b2ba172a84a54e5aaa65dd4a4ba1cb71ccb133e5b8ba6",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__22SkillRangerCriticalHiti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-ranger-critical-hit-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-repulse-undead-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "c22eb207ed77b161778c5e488589efdd497debb82d725e01690c460dee27d82d",
+      "object_sha256": "df5ee1330379613ef4be96aa26d536e5e7267df6062daf196322e78f9f736b54",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-repulse-undead-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-repulse-undead-icon/get_icon.cpp",
+      "source_sha256": "b63d2c72a89795d61d580b93f95902021dac27b1e9733c2db089c6a7bfc736a7",
+      "object_sha256": "edee2de75367475cde3022df14eba7cfc9c0ff2f9fbcfaea234f92b3f59470be",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillRepulseUndead",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-repulse-undead-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-repulse-undead-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "4a2c98bc9c46531420454de456948059d720c648eb4d85ff6af0c2dd081c8b35",
+      "object_sha256": "179c824b676dc1dbc4e183625ff704b94ed669c5ff1beb7315176ae3b1dfc145",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-repulse-undead-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-repulse-undead-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "b45b38414edb2f154d82af5867aa66591cf3d44d0d935a7371ea2fe36d7e099c",
+      "object_sha256": "2e2ea1b5c9969e92d6551a164f710ea821f26dba6068ee4208b27b9c46fe63c4",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__18SkillRepulseUndeadi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-repulse-undead-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-root-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "9b9ad2bb128f08d29bbd7806b21b46159a610ac36bc2495cd948849a2c8282b2",
+      "object_sha256": "ced3a87266f93624cfddb2d946c32a66deacb40ea7def7424b88b55812fe9c70",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__9SkillRooti",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-root-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-root-icon/get_icon.cpp",
+      "source_sha256": "3d29f4dc0d26a09ef3f7f4aca90088864cd5dd4f126698c3e68c950c09af5687",
+      "object_sha256": "53feb45b294a9307d2ff3f862adaba3f2c08aad5b85d04ef8711094a8732c92a",
+      "emitted_functions": [
+        {
+          "name": "getIcon__9SkillRoot",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-root-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-root-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "db0af088a47a3ce25fba606e193b8fad0da454d6c72213bb5639b9e86dc251e2",
+      "object_sha256": "63f213e55d13468a52b8301b1031fc041e998ac8db68ff1b4799a610af6b3980",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__9SkillRooti",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-root-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-energy-cost/get_energy_cost.cpp",
+      "source_sha256": "c0bd1bd71fdeb656e8544580581ab813c7456771ef31b7b97b900a4a4cf54454",
+      "object_sha256": "c1cca011fa931b303cb19afeaa13075a716807942786bc8ed485e6f2e2e5b745",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-summon-skeleton-energy-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-icon/get_icon.cpp",
+      "source_sha256": "cd18845e24ffd6988d89fd179a9c9ae23c99632a9e5f19a855d84f84ad95ff6a",
+      "object_sha256": "8bcb567f66a482bfb2e763be9e23225782b958a1d69e2300f300a1571021383b",
+      "emitted_functions": [
+        {
+          "name": "getIcon__19SkillSummonSkeleton",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-summon-skeleton-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-level-requirement/get_level_requirement.cpp",
+      "source_sha256": "9e4aadc34f6b311ad611b993f76c494b170afc2b1f8fa2c50b77f02e460da429",
+      "object_sha256": "a46de5068ce662753ed0219d76b47f31cd3a6135bb358ddbc5b0a7d4f2a6240a",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-summon-skeleton-level-requirement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-skill-stat-d",
+      "source": "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp",
+      "source_sha256": "7a1b9c39f588119e7b3db6e08030cc709ac8ce5f7e854e449db8c2307bbc83e8",
+      "object_sha256": "1fb66de3491eaa46e8ee19f39fe897ec115b33ca461d426a112614ad61afcdac",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__19SkillSummonSkeletoni",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-skill-stat-d-summon-skeleton-point-cost/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
