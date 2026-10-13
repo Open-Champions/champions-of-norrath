@@ -10,3 +10,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 |---|---|---|---|
 | `erand` | `eRand__10GameObject` | 0x153fa8 | 40 |
 | `b-exit-state-persue-idle` | `bExitStatePersueIdle__8Creature` | 0x112e08 | 12 |
+| `b-far-from-home` | `bFarFromHome__8Creature` | 0x112da8 | 88 |
