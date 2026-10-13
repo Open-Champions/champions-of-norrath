@@ -16,3 +16,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `anim-add-hairy` | `animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi` | 0x1638b8 | 120 |
 | `anim-add-one-shot` | `animAddOneShot__FP14AnimationStateP15AnimationHeaderffi` | 0x160010 | 280 |
 | `anim-global-sync` | `animGlobalSync__FP14AnimationState` | 0x1639e8 | 248 |
+| `anim-advance-animation` | `animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps` | 0x1639c8 | 28 |
