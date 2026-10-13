@@ -9721,3 +9721,19 @@ Closed: `clone__14poisonGasSpell`, `clone__15FrostStormSpell`, `clone__16beetleP
 
 Opened: none
 - 2026-10-13 16:59 CDT — agents/w13-spell-msg-a — 896 unresolved imports
+
+## agents/w13-spell-msg-b
+
+Merged (merge commit, branch tip `81485f7d`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 6029 through 6057, each with a committed check that builds and passes here (29 host contracts (the 29th and 30th directories include one shared header; the package adds 32 function bodies including helpers)). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6056 authored inputs, 4742 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly. The 19 opened names are the projectile `terminate__` virtuals, trail and particle storage, and `persue2` that the new bodies call.
+
+| | |
+|---|---|
+| Before | 896 |
+| After | 886 |
+| Closed | 29 |
+| Opened | 19 |
+
+Closed: `clone__7AntWave`, `clone__9dustCloud`, `msg_collision__16beetleProjectileP10GameObject`, `msg_collision__19ColdArrowProjectileP10GameObject`, `msg_collision__19FireArrowProjectileP10GameObject`, `msg_collision__19MultiFireProjectileP10GameObject`, `msg_collision__21PoisonArrowProjectileP10GameObject`, `msg_collision__22ExplodeArrowProjectileP10GameObject`, `msg_draw__19ColdArrowProjectile`, `msg_draw__19FireArrowProjectile`, `msg_draw__19MultiFireProjectile`, `msg_draw__21PoisonArrowProjectile`, `msg_draw__22ExplodeArrowProjectile`, `msg_draw__5Wheel`, `msg_draw__7AntWave`, `msg_draw__7OniBall`, `msg_run__19ColdArrowProjectile`, `msg_run__19FireArrowProjectile`, `msg_run__19MultiFireProjectile`, `msg_run__21PoisonArrowProjectile`, `msg_run__22ExplodeArrowProjectile`, `msg_run__5Wheel`, `msg_run__7AntWave`, `msg_run__8HateBeam`, `msg_run__8HateSoul`, `msg_run__9DustDevil`, `msg_run__9FireStorm`, `msg_run__9dustCloud`, `run__18SpellDiseaseShieldG6Point3s`
+
+Opened: `P_SetTrailWidth__Fii`, `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__tf15SpellHateEffect`, `_vt$14FireStormFlare`, `coldSmoke`, `coldSpeck`, `diseaseshield_run_particle_8d69b0`, `diseaseshield_run_particle_8d6a00`, `dustcloud_msg_run_particle_7d69c0`, `explode_arrow_msg_run_particle_8d7090`, `multifire_msg_run_particle_8d7040`, `persue2__8CreatureP10GameObjectfff`, `poisonFleck`, `poisonSmoke`, `terminate__19ColdArrowProjectilei`, `terminate__19FireArrowProjectilei`, `terminate__19MultiFireProjectilei`, `terminate__21PoisonArrowProjectilei`, `terminate__22ExplodeArrowProjectilei`
+- 2026-10-13 17:05 CDT — agents/w13-spell-msg-b — 886 unresolved imports
