@@ -50,6 +50,14 @@ that file's symbol values and extents (local evidence). Nothing here ran on an E
 | `w10-actor-p-msg-draw-7webtrap/msg_draw.cpp` | `msg_draw__7WebTrap` | 412 |
 | `w10-actor-p-msg-hurt-11vampirelord/msg_hurt.cpp` | `msg_hurt__11VampireLordfP10GameObjecti` | 200 |
 | `w10-actor-p-msg-run-10waterspout/msg_run.cpp` | `msg_run__10WaterSpout` | 2096 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L10aim_targetEPhb` | 252 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L10spawn_batsEPh` | 428 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L11attack_waitEPhiiii` | 404 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L11choose_nextEPhii` | 396 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L12weapon_blockEPhjj.constprop.0` | 504 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN12_GLOBAL__N_1L13approach_stepEPhS0_jjjj.constprop.0` | 488 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `_ZN4w10p10call_entryEPhjm.isra.0` | 28 |
+| `w10-actor-p-msg-run-11vampirelord/msg_run.cpp` | `msg_run__11VampireLord` | 4672 |
 | `w10-actor-p-msg-run-7webtrap/msg_run.cpp` | `msg_run__7WebTrap` | 1804 |
 | `w10-actor-p-msg-run-9wavemaker/msg_run.cpp` | `msg_run__9WaveMaker` | 2836 |
 | `w10-actor-p-msg-trigger-11vampirelord/msg_trigger.cpp` | `msg_trigger__11VampireLordi` | 684 |
@@ -65,56 +73,70 @@ that file's symbol values and extents (local evidence). Nothing here ran on an E
 
 ## Imports closed
 
-`_$_11VampireLord`, `__tf11VampireLord`, `clone__11VampireLord`, `getModel__11VampireLord`,
-`msg_draw__11VampireLord`, `msg_hurt__11VampireLordfP10GameObjecti`, `msg_trigger__11VampireLordi`,
-`setState__11VampireLordi`, `_$_10WaterSpout`, `__tf10WaterSpout`, `clone__10WaterSpout`,
-`msg_draw__10WaterSpout`, `msg_run__10WaterSpout`, `_$_9WaveMaker`, `__tf9WaveMaker`, `clone__9WaveMaker`,
-`msg_run__9WaveMaker`, `_$_10WeaponRack`, `__tf10WeaponRack`, `clone__10WeaponRack`, `msg_draw__10WeaponRack`,
-`msg_getPokeName__10WeaponRackPUsi`, `msg_poke__10WeaponRacki`, `__7Weatheri`, `_$_7WebTrap`, `__tf7WebTrap`,
-`clone__7WebTrap`, `msg_draw__7WebTrap`, `msg_run__7WebTrap`, `_$_14WoodElfSoldier`, `__tf14WoodElfSoldier`.
+All 32 names of the package, each as an observed symbol:
 
-Still open: `msg_run__11VampireLord` (see Unknown).
+`_$_11VampireLord`, `__tf11VampireLord`, `clone__11VampireLord`, `getModel__11VampireLord`,
+`msg_draw__11VampireLord`, `msg_hurt__11VampireLordfP10GameObjecti`, `msg_run__11VampireLord`,
+`msg_trigger__11VampireLordi`, `setState__11VampireLordi`, `_$_10WaterSpout`, `__tf10WaterSpout`,
+`clone__10WaterSpout`, `msg_draw__10WaterSpout`, `msg_run__10WaterSpout`, `_$_9WaveMaker`, `__tf9WaveMaker`,
+`clone__9WaveMaker`, `msg_run__9WaveMaker`, `_$_10WeaponRack`, `__tf10WeaponRack`, `clone__10WeaponRack`,
+`msg_draw__10WeaponRack`, `msg_getPokeName__10WeaponRackPUsi`, `msg_poke__10WeaponRacki`, `__7Weatheri`,
+`_$_7WebTrap`, `__tf7WebTrap`, `clone__7WebTrap`, `msg_draw__7WebTrap`, `msg_run__7WebTrap`,
+`_$_14WoodElfSoldier`, `__tf14WoodElfSoldier`.
 
 Defined data, not an import: `__ti11VampireLord`, `__ti14WoodElfSoldier`, `__ti7WebTrap`, `__ti9WaveMaker`,
 `__ti10WaterSpout`, `__ti10WeaponRack` (12-byte zero-initialised typeinfo objects), and the private data of
-WaterSpout's run function (three 80-byte particle definitions and three first-use flags).
+WaterSpout's run function (three 80-byte, 16-byte-aligned particle definitions and three first-use flags).
+A mini link of all 32 units (`ld -r`) had no duplicate definitions.
 
 ## Imports opened
 
-New names that no other source on the shared branch mentions: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`,
-`_$vt$7Weather` (spelled `_vt$7Weather`), `batParams`, `convertToLord__11VampireLord`,
+Names that no other source on this branch's base mentions (other agents' branches may define some of them
+under the same or an `norrath_` spelling): `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`,
+`_vt$7Weather`, `batParams`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`,
 `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`,
-`doWavelet__9WaveMakerP6Point3P8Matrix33i`, `dptoli`, `litodp`,
-`modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `modelSetRelightAttachment__FG6Point3`,
-`waveFroth`, `waveMainAlternate`, `waveMainParticle`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`,
-`waveTrail`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`.
-Also used by name, as private (static) data of the original WaveMaker translation unit, and possibly
-already named differently by another package: `range`, `splashInfoBits`, `firstTime` (the symbol table has
-two `firstTime`; the flag read by WaveMaker's run function is the initialised byte at the lower address) and
-`batParams` (an 8-byte table of two text pointers, the second null). Every other callee is used under its
-observed mangled name; where another package defines the same function under an authored `norrath_` name
-(for example `norrath_game_object_construct` for the GameObject constructor) both spellings will be
-unresolved until one provider is chosen. The GameObject constructor is called by its observed name
-`__10GameObjectG6Point3PQ210GameObject11resourceMapPPc` in the Weather constructor.
+`doWavelet__9WaveMakerP6Point3P8Matrix33i`, `dptoli`, `enemyInZone__8Creaturefs`,
+`flee2__8CreatureP10GameObject`,
+`fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`,
+`litodp`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`,
+`modelSetRelightAttachment__FG6Point3`, `produceMeleeDamage__8CreaturefiiiiPQ24item11description`,
+`steerAndRouteToEnemy__8Creature`, `turnToFaceEnemy__8Creature`, `waveFroth`, `waveMainAlternate`,
+`waveMainParticle`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`,
+`worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`.
+Also used by name, as private (static) data of the original WaveMaker/VampireLord translation units:
+`range`, `splashInfoBits`, `firstTime` (the symbol table has two; the flag read by WaveMaker's run function is
+the initialised byte at the lower address, `0x483e40`), `smokeParticle` (seven local statics share the name; the
+VampireLord run function uses the one at `0x7d7f20`) and `batParams` (an 8-byte table whose first entry is a
+text pointer and second is null). The private paired runs bound these by address; the relocatable link cannot
+tell the duplicates apart, so a data provider has to give each a distinct name. Every other callee is used under
+its observed mangled name; where another package defines the same function under an authored `norrath_` name (for
+example `norrath_game_object_construct`) both spellings stay unresolved until one provider is chosen. The Weather
+constructor calls the GameObject constructor by its observed name
+`__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`.
 
 ## Authored but never executed
 
 All of it. No function ran on an EE or in the game. The differential checks above are interpreter runs against
-the original image with stubbed callees; they do not exercise the callees' own behaviour, interrupts, the
-R5900's non-IEEE float arithmetic (`mul.s`, `add.s`, `rsqrt.s` rounding) or hardware timing. WaveMaker's two
-short nop delay loops are reproduced as `asm volatile` loops with no effect other than time. The WaveMaker
-run function, with the closing flag at the line block's offset 8 clear, reads stack storage that the original
-never writes; the paired run compared only the case where that storage is zero.
+the original image with stubbed callees; they do not exercise the callees' own behaviour, interrupts, the R5900's
+non-IEEE float arithmetic (`mul.s`, `add.s`, rounding of `rsqrt.s` and `sqrt.s`) or hardware timing. NaN payloads
+differ with operand order; the runs avoided NaN inputs. WaveMaker's two short nop delay loops are reproduced as
+`asm volatile` loops with no effect other than time. WaveMaker's run function, with the closing flag at the line
+block's offset 8 clear, reads stack storage that the original never writes; the paired run compared that case
+only where the storage is zero. The function-local statics of WaterSpout's run function are manual flags and
+byte arrays, not C++ guarded statics.
 
 ## Unknown
 
 - What any field, flag or timer in these classes means; no field names are claimed. The state numbers of
-  VampireLord's state function are unnamed.
-- The meaning of the float and integer constants in the run and draw functions (all read as literals,
-  several from the original's small-data pool, which has no symbols).
+  VampireLord's state functions are unnamed; the state summaries in the source headers are inferred from calls.
+- The meaning of the float and integer constants in the run and draw functions (all read as literals, several
+  from the original's small-data pool, which has no symbols).
 - Whether `batParams`, `range`, `splashInfoBits`, the particle definitions and `firstTime` are owned by one
-  WaveMaker/VampireLord data unit, and their layouts beyond what the code reads.
-- `msg_run__11VampireLord` (8064 bytes, 23-state dispatch) is not authored. See the final message.
+  WaveMaker/VampireLord data unit, and their layouts beyond what the code reads (the ParticleDef size 80 and the
+  16-byte alignment are read from the addresses of the three WaterSpout statics only).
+- The size of the strike description structure used by VampireLord's weapon block (at most 80 bytes by the stack
+  layout; the compared fields are at offsets 16..33 and 36..63).
+- `DrawWebSplay` (1864 bytes) is called by WebTrap's draw function and is not part of this package.
 
 ## Build-plan entries needed
 
@@ -141,6 +163,7 @@ Profile `authored_cpp`, kind `independently_authored_source`; the integrator ass
 {"source":"sources/w10-actor-p-msg-draw-7webtrap/msg_draw.cpp","object_name":"w10p_msg-draw-7webtrap.o","sha256":"aace0e42ffd9bdfda8d47ec22c08cfb2ff26077c51255585a3dd7a6dbc279dd0","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_draw__7WebTrap","compiled_body_bytes":412}]}
 {"source":"sources/w10-actor-p-msg-hurt-11vampirelord/msg_hurt.cpp","object_name":"w10p_msg-hurt-11vampirelord.o","sha256":"5eca7b5a98b856aae1cad488e7cafa2f5013976c3112a1f8b92f3a790792240f","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_hurt__11VampireLordfP10GameObjecti","compiled_body_bytes":200}]}
 {"source":"sources/w10-actor-p-msg-run-10waterspout/msg_run.cpp","object_name":"w10p_msg-run-10waterspout.o","sha256":"962412cd46eb754ff5dd6a0d7c58b60932eb1808954e4f809a1f589888d6aafc","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_run__10WaterSpout","compiled_body_bytes":2096}]}
+{"source":"sources/w10-actor-p-msg-run-11vampirelord/msg_run.cpp","object_name":"w10p_msg-run-11vampirelord.o","sha256":"d5067a97c0ce400e6f432c449f8b12efb35b8caf421fb8ca2581f786b3d18a94","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"_ZN12_GLOBAL__N_1L10aim_targetEPhb","compiled_body_bytes":252},{"name":"_ZN12_GLOBAL__N_1L10spawn_batsEPh","compiled_body_bytes":428},{"name":"_ZN12_GLOBAL__N_1L11attack_waitEPhiiii","compiled_body_bytes":404},{"name":"_ZN12_GLOBAL__N_1L11choose_nextEPhii","compiled_body_bytes":396},{"name":"_ZN12_GLOBAL__N_1L12weapon_blockEPhjj.constprop.0","compiled_body_bytes":504},{"name":"_ZN12_GLOBAL__N_1L13approach_stepEPhS0_jjjj.constprop.0","compiled_body_bytes":488},{"name":"_ZN4w10p10call_entryEPhjm.isra.0","compiled_body_bytes":28},{"name":"msg_run__11VampireLord","compiled_body_bytes":4672}]}
 {"source":"sources/w10-actor-p-msg-run-7webtrap/msg_run.cpp","object_name":"w10p_msg-run-7webtrap.o","sha256":"2685807417a1ee5c62f52028c91608184b9d733b2b9c2decba9bf800ca699c30","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_run__7WebTrap","compiled_body_bytes":1804}]}
 {"source":"sources/w10-actor-p-msg-run-9wavemaker/msg_run.cpp","object_name":"w10p_msg-run-9wavemaker.o","sha256":"c95694d6f9adf3b7a6ead9c299a8fcd0d5ad70ab9f27778077be44fcb95618dd","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_run__9WaveMaker","compiled_body_bytes":2836}]}
 {"source":"sources/w10-actor-p-msg-trigger-11vampirelord/msg_trigger.cpp","object_name":"w10p_msg-trigger-11vampirelord.o","sha256":"29ad774bb16f88754b97bc6d959e1970fe3b7c4239997912c3b038da66abdc71","header_closure":["sources/w10-actor-p-common/access.hpp"],"profile":"authored_cpp","kind":"independently_authored_source","emitted_functions":[{"name":"msg_trigger__11VampireLordi","compiled_body_bytes":684}]}
