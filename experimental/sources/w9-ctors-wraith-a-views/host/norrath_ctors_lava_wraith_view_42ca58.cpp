@@ -1,0 +1,54 @@
+// Host comparison only. Not an EE build input.
+struct ResourceSlot { char* name; unsigned unused; };
+int same(const char* a, const char* b) { for (unsigned i = 0;; ++i) { if (a[i] != b[i]) return 0; if (a[i] == 0) return 1; } }
+extern "C" ResourceSlot norrath_ctors_lava_wraith_view_42ca58[47];
+int main() {
+    if (norrath_ctors_lava_wraith_view_42ca58[0].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[0].name, "orc_vari.lmp") || norrath_ctors_lava_wraith_view_42ca58[0].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[1].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[1].name, "orc2.vif") || norrath_ctors_lava_wraith_view_42ca58[1].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[2].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[2].name, "orc2.tex") || norrath_ctors_lava_wraith_view_42ca58[2].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[3].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[3].name, "odeath1.anm") || norrath_ctors_lava_wraith_view_42ca58[3].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[4].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[4].name, "odeath2.anm") || norrath_ctors_lava_wraith_view_42ca58[4].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[5].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[5].name, "odeath3.anm") || norrath_ctors_lava_wraith_view_42ca58[5].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[6].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[6].name, "odeath4.anm") || norrath_ctors_lava_wraith_view_42ca58[6].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[7].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[7].name, "odeath5.anm") || norrath_ctors_lava_wraith_view_42ca58[7].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[8].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[8].name, "odeath6.anm") || norrath_ctors_lava_wraith_view_42ca58[8].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[9].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[9].name, "faceplant1.anm") || norrath_ctors_lava_wraith_view_42ca58[9].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[10].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[10].name, "faceplant2.anm") || norrath_ctors_lava_wraith_view_42ca58[10].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[11].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[11].name, "ohitreact1.anm") || norrath_ctors_lava_wraith_view_42ca58[11].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[12].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[12].name, "ohitreact2.anm") || norrath_ctors_lava_wraith_view_42ca58[12].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[13].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[13].name, "ohitreact3.anm") || norrath_ctors_lava_wraith_view_42ca58[13].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[14].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[14].name, "ohitreact4.anm") || norrath_ctors_lava_wraith_view_42ca58[14].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[15].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[15].name, "orun1.anm") || norrath_ctors_lava_wraith_view_42ca58[15].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[16].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[16].name, "orun2.anm") || norrath_ctors_lava_wraith_view_42ca58[16].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[17].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[17].name, "orun3.anm") || norrath_ctors_lava_wraith_view_42ca58[17].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[18].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[18].name, "orun4.anm") || norrath_ctors_lava_wraith_view_42ca58[18].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[19].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[19].name, "oattack1.anm") || norrath_ctors_lava_wraith_view_42ca58[19].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[20].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[20].name, "oattack2.anm") || norrath_ctors_lava_wraith_view_42ca58[20].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[21].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[21].name, "oattack3.anm") || norrath_ctors_lava_wraith_view_42ca58[21].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[22].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[22].name, "oattack4.anm") || norrath_ctors_lava_wraith_view_42ca58[22].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[23].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[23].name, "o6attack.anm") || norrath_ctors_lava_wraith_view_42ca58[23].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[24].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[24].name, "oattackseq1.anm") || norrath_ctors_lava_wraith_view_42ca58[24].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[25].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[25].name, "oattackseq2.anm") || norrath_ctors_lava_wraith_view_42ca58[25].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[26].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[26].name, "oattackseq3.anm") || norrath_ctors_lava_wraith_view_42ca58[26].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[27].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[27].name, "attack_xy.anm") || norrath_ctors_lava_wraith_view_42ca58[27].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[28].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[28].name, "oblock.anm") || norrath_ctors_lava_wraith_view_42ca58[28].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[29].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[29].name, "oroar.anm") || norrath_ctors_lava_wraith_view_42ca58[29].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[30].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[30].name, "o1idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[30].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[31].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[31].name, "o1idleb.anm") || norrath_ctors_lava_wraith_view_42ca58[31].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[32].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[32].name, "o2idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[32].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[33].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[33].name, "o2idleb.anm") || norrath_ctors_lava_wraith_view_42ca58[33].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[34].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[34].name, "o3idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[34].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[35].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[35].name, "o3idleb.anm") || norrath_ctors_lava_wraith_view_42ca58[35].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[36].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[36].name, "o5idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[36].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[37].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[37].name, "o5idleb.anm") || norrath_ctors_lava_wraith_view_42ca58[37].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[38].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[38].name, "o4idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[38].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[39].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[39].name, "o4idleb.anm") || norrath_ctors_lava_wraith_view_42ca58[39].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[40].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[40].name, "o6idlea.anm") || norrath_ctors_lava_wraith_view_42ca58[40].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[41].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[41].name, "owalk1.anm") || norrath_ctors_lava_wraith_view_42ca58[41].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[42].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[42].name, "owalk2.anm") || norrath_ctors_lava_wraith_view_42ca58[42].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[43].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[43].name, "owalk3.anm") || norrath_ctors_lava_wraith_view_42ca58[43].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[44].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[44].name, "owalk4.anm") || norrath_ctors_lava_wraith_view_42ca58[44].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[45].name == nullptr || !same(norrath_ctors_lava_wraith_view_42ca58[45].name, "spel_poisonrain.anm") || norrath_ctors_lava_wraith_view_42ca58[45].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42ca58[46].name != nullptr || norrath_ctors_lava_wraith_view_42ca58[46].unused != 0u) return 1;
+    return 0;
+}
