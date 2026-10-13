@@ -27,3 +27,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `in-msg-data` | data: `inMsg` | 0x8d8938 | 1008 |
 | `has-light-or-particle-number` | `hasLightOrParticleNumber__FPPci` | 0x21df18 | 828 |
 | `game-line-update-position` | `gameLineUpdatePosition__FP17gameLinePathState` | 0x278c38 | 716 |
+| `convert-pointers-to-indicies` | `convertPointersToIndicies__Fi` | 0x24fcb0 | 808 |
