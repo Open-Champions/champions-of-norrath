@@ -70132,6 +70132,216 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w12-actor-spell-b-vtable-wheel/vt_wheel.cpp"
+    },
+    {
+      "input_order": 5492,
+      "component": "w12-startup-rt-c-gs-put-draw-env",
+      "object_name": "w12_startup_rt_c_gs_put_draw_env.o",
+      "private_object_sha256": "e47b47d03402258ded15ac0536b1c0be45f0ac901c0c880389d72bcdb896ee65",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sceGsPutDrawEnv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-gs-put-draw-env/gs_put_draw_env.cpp"
+    },
+    {
+      "input_order": 5493,
+      "component": "w12-startup-rt-c-gs-set-def-clear",
+      "object_name": "w12_startup_rt_c_gs_set_def_clear.o",
+      "private_object_sha256": "53b16ab06a18fe98588d2dfcc235579fd17a4a7b36db5c070e7360f8bce7dc60",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 292,
+          "name": "sceGsSetDefClear"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-gs-set-def-clear/gs_set_def_clear.cpp"
+    },
+    {
+      "input_order": 5494,
+      "component": "w12-startup-rt-c-gs-set-def-draw-env",
+      "object_name": "w12_startup_rt_c_gs_set_def_draw_env.o",
+      "private_object_sha256": "dc1565409d67c0890f400c8eae240e89af255ed1123746c4b9872fbb0408de96",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "sceGsSetDefDrawEnv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env/gs_set_def_draw_env.cpp"
+    },
+    {
+      "input_order": 5495,
+      "component": "w12-startup-rt-c-gs-set-def-draw-env2",
+      "object_name": "w12_startup_rt_c_gs_set_def_draw_env2.o",
+      "private_object_sha256": "250b45fb26cfed1bf4e4183b408870d7e58f84cc686ed5b6d7e60fadbc7e3930",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 476,
+          "name": "sceGsSetDefDrawEnv2"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env2/gs_set_def_draw_env2.cpp"
+    },
+    {
+      "input_order": 5496,
+      "component": "w12-startup-rt-c-process-kbd-data",
+      "object_name": "w12_startup_rt_c_process_kbd_data.o",
+      "private_object_sha256": "b9dafe963e49c178134f997857c0465f7a1aa1a58ffecd9c8971fa71edd6404a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 556,
+          "name": "process_kbd_data"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-process-kbd-data/process_kbd_data.cpp"
+    },
+    {
+      "input_order": 5497,
+      "component": "w12-startup-rt-c-process-mouse-data",
+      "object_name": "w12_startup_rt_c_process_mouse_data.o",
+      "private_object_sha256": "d1eecaf8303ec88f8e66b3cc3dbe23f92dc81a29ecb4fca40198144570fdbef7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "process_mouse_data"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-process-mouse-data/process_mouse_data.cpp"
+    },
+    {
+      "input_order": 5498,
+      "component": "w12-startup-rt-c-qsort",
+      "object_name": "w12_startup_rt_c_qsort.o",
+      "private_object_sha256": "0dcb2b4ba1ada48393d465dddb2d6648652b8fcefa70fde36ed26c01af803729",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2632,
+          "name": "qsort"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-qsort/qsort.cpp"
+    },
+    {
+      "input_order": 5499,
+      "component": "w12-startup-rt-c-scf-summer-time",
+      "object_name": "w12_startup_rt_c_scf_summer_time.o",
+      "private_object_sha256": "f365859f385fcd3919de2354068a6c920e4be8e73f5fcb3ab45a6969cf6c58b0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "sceScfGetSummerTime"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-scf-summer-time/scf_summer_time.cpp"
+    },
+    {
+      "input_order": 5500,
+      "component": "w12-startup-rt-c-scf-time-zone",
+      "object_name": "w12_startup_rt_c_scf_time_zone.o",
+      "private_object_sha256": "446c0c65dbd40cad2c040133dd009f087577260b312766a6cd01258df1d1ede3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "sceScfGetTimeZone"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-scf-time-zone/scf_time_zone.cpp"
+    },
+    {
+      "input_order": 5501,
+      "component": "w12-startup-rt-c-setup-kbd-device",
+      "object_name": "w12_startup_rt_c_setup_kbd_device.o",
+      "private_object_sha256": "bd3eebd04c06cb2d64c2a29acf6487d507914785f84ac38338edcc501be5453d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 280,
+          "name": "setup_kbd_device"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-setup-kbd-device/setup_kbd_device.cpp"
+    },
+    {
+      "input_order": 5502,
+      "component": "w12-startup-rt-c-setup-mouse-device",
+      "object_name": "w12_startup_rt_c_setup_mouse_device.o",
+      "private_object_sha256": "2c07c618b549b2179345442fd0f10f818b45e59a32daffb4717ff157f89745ae",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "setup_mouse_device"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-setup-mouse-device/setup_mouse_device.cpp"
+    },
+    {
+      "input_order": 5503,
+      "component": "w12-startup-rt-c-sif-set-sreg",
+      "object_name": "w12_startup_rt_c_sif_set_sreg.o",
+      "private_object_sha256": "56d5f0d6b9ade7428288f1ce5ad47d2d76a3d251ce312f8045d4267f57d9c4dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "sceSifSetSreg"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-sif-set-sreg/sif_set_sreg.cpp"
+    },
+    {
+      "input_order": 5504,
+      "component": "w12-startup-rt-c-sin",
+      "object_name": "w12_startup_rt_c_sin.o",
+      "private_object_sha256": "dec11e36540bdbf649a2552e7a1a71c3f5937211208046573460995d06b10725",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sin"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-sin/sin.cpp"
+    },
+    {
+      "input_order": 5505,
+      "component": "w12-startup-rt-c-sinf",
+      "object_name": "w12_startup_rt_c_sinf.o",
+      "private_object_sha256": "64f0f956bfcca69e1b6318be26f1d664f156959b011106a056afe0c8be106cdb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "sinf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-sinf/sinf.cpp"
+    },
+    {
+      "input_order": 5506,
+      "component": "w12-startup-rt-c-vu0-copy-matrix",
+      "object_name": "w12_startup_rt_c_vu0_copy_matrix.o",
+      "private_object_sha256": "728ce55f2dc526bb06614b40d82874df4a9fff92988c59bbf506d90cb8b4da40",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "sceVu0CopyMatrix"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-c-vu0-copy-matrix/vu0_copy_matrix.cpp"
     }
   ],
   "drafts": [
@@ -77570,6 +77780,40 @@
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/host_check.cpp": "a84fc34ded48ea630bcc91f3ce5fe9562478740105f99f7fb189a2cc576768e6",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-startup-rt-c-deci2-ex-recv/deci2_ex_recv.cpp": "15dfaad192bf6f76177acadfd6725c8853ab6ce2ef97d2bf336b68cf43e21fd2",
+    "sources/w12-startup-rt-c-deci2-ex-send/deci2_ex_send.cpp": "71a0bd1c360554778e50c676c830fb9dd95125bb7482419f4f5314fd2a6251b0",
+    "sources/w12-startup-rt-c-gs-put-draw-env/gs_put_draw_env.cpp": "07f5ab5bd311db2ac5f62d89528b35583c88aa278cd34f35408e962679acb20e",
+    "sources/w12-startup-rt-c-gs-put-draw-env/host_contract.cpp": "04f988c50b9608ced73c88d743a5695389072920faabd218c8e5d409627656f2",
+    "sources/w12-startup-rt-c-gs-put-draw-env/host_regs.hpp": "be3e5e9e3c8c43b227c7be62024820ed9b0d43e700027cacc07b2028766342fe",
+    "sources/w12-startup-rt-c-gs-set-def-clear/gs_set_def_clear.cpp": "08374fa0b6396edf1fcc1f97203e2f5ff0251cc16235fe554db4fead00a8365a",
+    "sources/w12-startup-rt-c-gs-set-def-clear/host_contract.cpp": "74806f2c27576aefac0917d03f3a87fcd4679f7afea90dab626fd916e9b80c57",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env/gs_set_def_draw_env.cpp": "c19d18e55deb7ea7646ceb94e63e1686c8bb4e166a86842ceb4d56c8fe0bd213",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env/host_contract.cpp": "f288bf94dd5aed1f00d97a2c4ccd49f0c63ebff1868b5c67f71146a8ead80181",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env2/gs_set_def_draw_env2.cpp": "1c2138b25d15b95104a83d6a28da3d26b560f88bb2a0448c3ba34439a98e548b",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env2/host_contract.cpp": "9622903eb91398ee241feabd88cef1d7736789781889094e5f6ad2c55cd9213f",
+    "sources/w12-startup-rt-c-overlay-iop-buffers/iop_buffers.cpp": "fc7413ff45dc6f19cc98af171e197e6b30cf1842938e7c3df77f1b138a218711",
+    "sources/w12-startup-rt-c-process-kbd-data/host_contract.cpp": "2bb0847e3eb70af9c71af1558e13afba14bb758b83bd857f6fca59d5f282565d",
+    "sources/w12-startup-rt-c-process-kbd-data/process_kbd_data.cpp": "a3819a9b97deeec0fffd53f39212972c94f04c056c76bac17ab0ee0eec7bbf71",
+    "sources/w12-startup-rt-c-process-mouse-data/host_contract.cpp": "c8b1e513f67a053cd8d891ed34ddba7221ffae8eb71e65a15c98d6e10a984a30",
+    "sources/w12-startup-rt-c-process-mouse-data/process_mouse_data.cpp": "a03a3312c1e58f0215d92c3d5e57fd24a0411fde3bd0ed475c55eac73bff16e7",
+    "sources/w12-startup-rt-c-qsort/host_contract.cpp": "a0fbc4587a2e3d70d8e54ced994fae329eaf937775eed18fe27cf65d9322e1d1",
+    "sources/w12-startup-rt-c-qsort/qsort.cpp": "a7716b2e173486d0fbc5e4e2edcc1b597a0a363462be6e61b5a1eb3ca210423c",
+    "sources/w12-startup-rt-c-scf-summer-time/host_contract.cpp": "260a1ba682c2fdb317d69ff3dba70f4a1994a7ffef833790c7b2dfb704462527",
+    "sources/w12-startup-rt-c-scf-summer-time/scf_summer_time.cpp": "e43690bcfc51454775112ae50010ae493d97a6f37c1fa3958236accbbf87cfd5",
+    "sources/w12-startup-rt-c-scf-time-zone/host_contract.cpp": "5e8e7e86c5a4f8668035cd0ca41b5f7ca46fee311fac3575f523a876882951d3",
+    "sources/w12-startup-rt-c-scf-time-zone/scf_time_zone.cpp": "582f255841e680dbdc084cdf468344c25307e42b7e13d5785246b0bbd3514532",
+    "sources/w12-startup-rt-c-setup-kbd-device/host_contract.cpp": "d49c5310b6dd261c1ae1486be5c1c109f4c18cbabac708bd34ffcf17b96dadca",
+    "sources/w12-startup-rt-c-setup-kbd-device/setup_kbd_device.cpp": "b1931dd1b8cc454411f02df9801dc21a2e26577fc5cbc328cf4a89b7489e4ccd",
+    "sources/w12-startup-rt-c-setup-mouse-device/host_contract.cpp": "d3d7647cf86dd39d62239e935b55e96c8764551a028ec9c3033ad8344bbe53cf",
+    "sources/w12-startup-rt-c-setup-mouse-device/setup_mouse_device.cpp": "74990d4ae6cb7995147a97031182ac3c9880ebb81b8a4703acb4213de83e56da",
+    "sources/w12-startup-rt-c-sif-set-sreg/host_contract.cpp": "48b5e795f59356118f15fcef0fa18a555c75ecb1cceeaa022560e5e7dddea83a",
+    "sources/w12-startup-rt-c-sif-set-sreg/sif_set_sreg.cpp": "bafa07fb0f5a79693bb8904a225c3090da07aa6b1047c224627f25d9b9d6e198",
+    "sources/w12-startup-rt-c-sin/host_contract.cpp": "d6a4a0e44c3290e808f191a355db5539459c48bf9bc82ce53746405dac167185",
+    "sources/w12-startup-rt-c-sin/sin.cpp": "be1ee0334cb619b347b082b4640d0ce11accc1d4e9834ac626cbe077f737db89",
+    "sources/w12-startup-rt-c-sinf/host_contract.cpp": "1db45b0c966371189d3150d020fd1198576d93ba61a98599c96b16ffe4b1c348",
+    "sources/w12-startup-rt-c-sinf/sinf.cpp": "550c2926963854da2676fe2c6a91ff587f2be76544454db7fbb737b8a165c370",
+    "sources/w12-startup-rt-c-vu0-copy-matrix/host_contract.cpp": "adc24771210580fe85f8b337b31bdbee80a076a9a3724839f72a245b2ed13fad",
+    "sources/w12-startup-rt-c-vu0-copy-matrix/vu0_copy_matrix.cpp": "59b6bf4b411bee51b4625f1526557603557fc1e6951ab57497a09cd9f8f7eb3b",
     "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
     "sources/w12-vimath-a-camera-calc-frustum/host_contract.cpp": "b65d96b3f7706a7371a651f44afed726d6052549e52afab677e10f20ebb09ba4",
     "sources/w12-vimath-a-clipper-init/host_contract.cpp": "fcc5bb4325abdeac1948488622057aeb233394ee8561b040fdb7501e4939224a",
@@ -82206,11 +82450,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5492,
-    "authored_default_inputs": 5490,
+    "selected_inputs": 5507,
+    "authored_default_inputs": 5505,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4200,
-    "compiled_body_bytes_from_accepted_inputs": 1818992,
+    "emitted_function_definitions_including_helpers": 4215,
+    "compiled_body_bytes_from_accepted_inputs": 1825444,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -82223,7 +82467,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5179
+    "package_selected_inputs": 5194
   },
   "startup_implementations": [
     {
@@ -163396,6 +163640,261 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w12-actor-spell-b-vtable-wheel/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-gs-put-draw-env/gs_put_draw_env.cpp",
+      "source_sha256": "07f5ab5bd311db2ac5f62d89528b35583c88aa278cd34f35408e962679acb20e",
+      "object_sha256": "e47b47d03402258ded15ac0536b1c0be45f0ac901c0c880389d72bcdb896ee65",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sceGsPutDrawEnv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-gs-put-draw-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-gs-set-def-clear/gs_set_def_clear.cpp",
+      "source_sha256": "08374fa0b6396edf1fcc1f97203e2f5ff0251cc16235fe554db4fead00a8365a",
+      "object_sha256": "53b16ab06a18fe98588d2dfcc235579fd17a4a7b36db5c070e7360f8bce7dc60",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 292,
+          "name": "sceGsSetDefClear"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-gs-set-def-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env/gs_set_def_draw_env.cpp",
+      "source_sha256": "c19d18e55deb7ea7646ceb94e63e1686c8bb4e166a86842ceb4d56c8fe0bd213",
+      "object_sha256": "dc1565409d67c0890f400c8eae240e89af255ed1123746c4b9872fbb0408de96",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "sceGsSetDefDrawEnv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-gs-set-def-draw-env/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env2/gs_set_def_draw_env2.cpp",
+      "source_sha256": "1c2138b25d15b95104a83d6a28da3d26b560f88bb2a0448c3ba34439a98e548b",
+      "object_sha256": "250b45fb26cfed1bf4e4183b408870d7e58f84cc686ed5b6d7e60fadbc7e3930",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 476,
+          "name": "sceGsSetDefDrawEnv2"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-gs-set-def-draw-env2/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-process-kbd-data/process_kbd_data.cpp",
+      "source_sha256": "a3819a9b97deeec0fffd53f39212972c94f04c056c76bac17ab0ee0eec7bbf71",
+      "object_sha256": "b9dafe963e49c178134f997857c0465f7a1aa1a58ffecd9c8971fa71edd6404a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 556,
+          "name": "process_kbd_data"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-process-kbd-data/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-process-mouse-data/process_mouse_data.cpp",
+      "source_sha256": "a03a3312c1e58f0215d92c3d5e57fd24a0411fde3bd0ed475c55eac73bff16e7",
+      "object_sha256": "d1eecaf8303ec88f8e66b3cc3dbe23f92dc81a29ecb4fca40198144570fdbef7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "process_mouse_data"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-process-mouse-data/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-qsort/qsort.cpp",
+      "source_sha256": "a7716b2e173486d0fbc5e4e2edcc1b597a0a363462be6e61b5a1eb3ca210423c",
+      "object_sha256": "0dcb2b4ba1ada48393d465dddb2d6648652b8fcefa70fde36ed26c01af803729",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2632,
+          "name": "qsort"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-qsort/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-scf-summer-time/scf_summer_time.cpp",
+      "source_sha256": "e43690bcfc51454775112ae50010ae493d97a6f37c1fa3958236accbbf87cfd5",
+      "object_sha256": "f365859f385fcd3919de2354068a6c920e4be8e73f5fcb3ab45a6969cf6c58b0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "sceScfGetSummerTime"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-scf-summer-time/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-scf-time-zone/scf_time_zone.cpp",
+      "source_sha256": "582f255841e680dbdc084cdf468344c25307e42b7e13d5785246b0bbd3514532",
+      "object_sha256": "446c0c65dbd40cad2c040133dd009f087577260b312766a6cd01258df1d1ede3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "sceScfGetTimeZone"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-scf-time-zone/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-setup-kbd-device/setup_kbd_device.cpp",
+      "source_sha256": "b1931dd1b8cc454411f02df9801dc21a2e26577fc5cbc328cf4a89b7489e4ccd",
+      "object_sha256": "bd3eebd04c06cb2d64c2a29acf6487d507914785f84ac38338edcc501be5453d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 280,
+          "name": "setup_kbd_device"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-setup-kbd-device/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-setup-mouse-device/setup_mouse_device.cpp",
+      "source_sha256": "74990d4ae6cb7995147a97031182ac3c9880ebb81b8a4703acb4213de83e56da",
+      "object_sha256": "2c07c618b549b2179345442fd0f10f818b45e59a32daffb4717ff157f89745ae",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "setup_mouse_device"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-setup-mouse-device/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-sif-set-sreg/sif_set_sreg.cpp",
+      "source_sha256": "bafa07fb0f5a79693bb8904a225c3090da07aa6b1047c224627f25d9b9d6e198",
+      "object_sha256": "56d5f0d6b9ade7428288f1ce5ad47d2d76a3d251ce312f8045d4267f57d9c4dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "sceSifSetSreg"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-sif-set-sreg/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-sin/sin.cpp",
+      "source_sha256": "be1ee0334cb619b347b082b4640d0ce11accc1d4e9834ac626cbe077f737db89",
+      "object_sha256": "dec11e36540bdbf649a2552e7a1a71c3f5937211208046573460995d06b10725",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sin"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-sin/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-sinf/sinf.cpp",
+      "source_sha256": "550c2926963854da2676fe2c6a91ff587f2be76544454db7fbb737b8a165c370",
+      "object_sha256": "64f0f956bfcca69e1b6318be26f1d664f156959b011106a056afe0c8be106cdb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "sinf"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-sinf/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-c",
+      "source": "sources/w12-startup-rt-c-vu0-copy-matrix/vu0_copy_matrix.cpp",
+      "source_sha256": "59b6bf4b411bee51b4625f1526557603557fc1e6951ab57497a09cd9f8f7eb3b",
+      "object_sha256": "728ce55f2dc526bb06614b40d82874df4a9fff92988c59bbf506d90cb8b4da40",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "sceVu0CopyMatrix"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-c-vu0-copy-matrix/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

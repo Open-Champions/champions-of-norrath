@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5490,
+  "default_authored_inputs": 5505,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4172,6 +4172,21 @@
     "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-startup-rt-c-gs-put-draw-env/gs_put_draw_env.cpp": "07f5ab5bd311db2ac5f62d89528b35583c88aa278cd34f35408e962679acb20e",
+    "sources/w12-startup-rt-c-gs-set-def-clear/gs_set_def_clear.cpp": "08374fa0b6396edf1fcc1f97203e2f5ff0251cc16235fe554db4fead00a8365a",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env/gs_set_def_draw_env.cpp": "c19d18e55deb7ea7646ceb94e63e1686c8bb4e166a86842ceb4d56c8fe0bd213",
+    "sources/w12-startup-rt-c-gs-set-def-draw-env2/gs_set_def_draw_env2.cpp": "1c2138b25d15b95104a83d6a28da3d26b560f88bb2a0448c3ba34439a98e548b",
+    "sources/w12-startup-rt-c-process-kbd-data/process_kbd_data.cpp": "a3819a9b97deeec0fffd53f39212972c94f04c056c76bac17ab0ee0eec7bbf71",
+    "sources/w12-startup-rt-c-process-mouse-data/process_mouse_data.cpp": "a03a3312c1e58f0215d92c3d5e57fd24a0411fde3bd0ed475c55eac73bff16e7",
+    "sources/w12-startup-rt-c-qsort/qsort.cpp": "a7716b2e173486d0fbc5e4e2edcc1b597a0a363462be6e61b5a1eb3ca210423c",
+    "sources/w12-startup-rt-c-scf-summer-time/scf_summer_time.cpp": "e43690bcfc51454775112ae50010ae493d97a6f37c1fa3958236accbbf87cfd5",
+    "sources/w12-startup-rt-c-scf-time-zone/scf_time_zone.cpp": "582f255841e680dbdc084cdf468344c25307e42b7e13d5785246b0bbd3514532",
+    "sources/w12-startup-rt-c-setup-kbd-device/setup_kbd_device.cpp": "b1931dd1b8cc454411f02df9801dc21a2e26577fc5cbc328cf4a89b7489e4ccd",
+    "sources/w12-startup-rt-c-setup-mouse-device/setup_mouse_device.cpp": "74990d4ae6cb7995147a97031182ac3c9880ebb81b8a4703acb4213de83e56da",
+    "sources/w12-startup-rt-c-sif-set-sreg/sif_set_sreg.cpp": "bafa07fb0f5a79693bb8904a225c3090da07aa6b1047c224627f25d9b9d6e198",
+    "sources/w12-startup-rt-c-sin/sin.cpp": "be1ee0334cb619b347b082b4640d0ce11accc1d4e9834ac626cbe077f737db89",
+    "sources/w12-startup-rt-c-sinf/sinf.cpp": "550c2926963854da2676fe2c6a91ff587f2be76544454db7fbb737b8a165c370",
+    "sources/w12-startup-rt-c-vu0-copy-matrix/vu0_copy_matrix.cpp": "59b6bf4b411bee51b4625f1526557603557fc1e6951ab57497a09cd9f8f7eb3b",
     "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
     "sources/w12-vimath-a-clipper-init/init.cpp": "24fac72f62f8a85ae3468985d9b20d7adbd50ae095e08029f9e9a4214ce037df",
     "sources/w12-vimath-a-clipstack-gettop/gettop.cpp": "5d092ffb31c8d29ccfdef6ef3fd0e8c079f0b6ab851d84111004b197bbf2ce2b",
@@ -80348,6 +80363,231 @@
       "sha256": "463589cd31666a5c019a4a13003145569307166b46b7ce06441d747b16ccaef2",
       "source": "sources/w12-actor-spell-b-vtable-wheel/vt_wheel.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5492,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_gs_put_draw_env.o",
+      "profile": "authored_cpp",
+      "sha256": "07f5ab5bd311db2ac5f62d89528b35583c88aa278cd34f35408e962679acb20e",
+      "source": "sources/w12-startup-rt-c-gs-put-draw-env/gs_put_draw_env.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sceGsPutDrawEnv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5493,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_gs_set_def_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "08374fa0b6396edf1fcc1f97203e2f5ff0251cc16235fe554db4fead00a8365a",
+      "source": "sources/w12-startup-rt-c-gs-set-def-clear/gs_set_def_clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 292,
+          "name": "sceGsSetDefClear"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5494,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_gs_set_def_draw_env.o",
+      "profile": "authored_cpp",
+      "sha256": "c19d18e55deb7ea7646ceb94e63e1686c8bb4e166a86842ceb4d56c8fe0bd213",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env/gs_set_def_draw_env.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "sceGsSetDefDrawEnv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5495,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_gs_set_def_draw_env2.o",
+      "profile": "authored_cpp",
+      "sha256": "1c2138b25d15b95104a83d6a28da3d26b560f88bb2a0448c3ba34439a98e548b",
+      "source": "sources/w12-startup-rt-c-gs-set-def-draw-env2/gs_set_def_draw_env2.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 476,
+          "name": "sceGsSetDefDrawEnv2"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5496,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_process_kbd_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a3819a9b97deeec0fffd53f39212972c94f04c056c76bac17ab0ee0eec7bbf71",
+      "source": "sources/w12-startup-rt-c-process-kbd-data/process_kbd_data.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 556,
+          "name": "process_kbd_data"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5497,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_process_mouse_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a03a3312c1e58f0215d92c3d5e57fd24a0411fde3bd0ed475c55eac73bff16e7",
+      "source": "sources/w12-startup-rt-c-process-mouse-data/process_mouse_data.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "process_mouse_data"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5498,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_qsort.o",
+      "profile": "authored_cpp",
+      "sha256": "a7716b2e173486d0fbc5e4e2edcc1b597a0a363462be6e61b5a1eb3ca210423c",
+      "source": "sources/w12-startup-rt-c-qsort/qsort.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2632,
+          "name": "qsort"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5499,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_scf_summer_time.o",
+      "profile": "authored_cpp",
+      "sha256": "e43690bcfc51454775112ae50010ae493d97a6f37c1fa3958236accbbf87cfd5",
+      "source": "sources/w12-startup-rt-c-scf-summer-time/scf_summer_time.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "sceScfGetSummerTime"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5500,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_scf_time_zone.o",
+      "profile": "authored_cpp",
+      "sha256": "582f255841e680dbdc084cdf468344c25307e42b7e13d5785246b0bbd3514532",
+      "source": "sources/w12-startup-rt-c-scf-time-zone/scf_time_zone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "sceScfGetTimeZone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5501,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_setup_kbd_device.o",
+      "profile": "authored_cpp",
+      "sha256": "b1931dd1b8cc454411f02df9801dc21a2e26577fc5cbc328cf4a89b7489e4ccd",
+      "source": "sources/w12-startup-rt-c-setup-kbd-device/setup_kbd_device.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 280,
+          "name": "setup_kbd_device"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5502,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_setup_mouse_device.o",
+      "profile": "authored_cpp",
+      "sha256": "74990d4ae6cb7995147a97031182ac3c9880ebb81b8a4703acb4213de83e56da",
+      "source": "sources/w12-startup-rt-c-setup-mouse-device/setup_mouse_device.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "setup_mouse_device"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5503,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_sif_set_sreg.o",
+      "profile": "authored_cpp",
+      "sha256": "bafa07fb0f5a79693bb8904a225c3090da07aa6b1047c224627f25d9b9d6e198",
+      "source": "sources/w12-startup-rt-c-sif-set-sreg/sif_set_sreg.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "sceSifSetSreg"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5504,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_sin.o",
+      "profile": "authored_cpp",
+      "sha256": "be1ee0334cb619b347b082b4640d0ce11accc1d4e9834ac626cbe077f737db89",
+      "source": "sources/w12-startup-rt-c-sin/sin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "sin"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5505,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_sinf.o",
+      "profile": "authored_cpp",
+      "sha256": "550c2926963854da2676fe2c6a91ff587f2be76544454db7fbb737b8a165c370",
+      "source": "sources/w12-startup-rt-c-sinf/sinf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "sinf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5506,
+      "kind": "independently_authored_source",
+      "object_name": "w12_startup_rt_c_vu0_copy_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "59b6bf4b411bee51b4625f1526557603557fc1e6951ab57497a09cd9f8f7eb3b",
+      "source": "sources/w12-startup-rt-c-vu0-copy-matrix/vu0_copy_matrix.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "sceVu0CopyMatrix"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -80447,7 +80687,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "63821de5c08fe5806baec7d4d6915b0f3d1067b0712e253882018ae7c12dc3c0",
+  "snapshot_sha256": "1f7484e73f848bb3d9bcb523152366343fe77babb92cd9aaa6d3abf9d18d3dc9",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
