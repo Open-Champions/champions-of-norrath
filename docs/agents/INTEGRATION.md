@@ -8512,3 +8512,25 @@ Closed: `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ
 
 Opened: `getDataForAllObjects__FPciPiiT2T2`, `shopDrawTaskBar__FP12screenStruct`, `sin`, `updateCursor__FiiiiiP12screenStructi`
 - 2026-10-13 05:16 CDT — agents/w11-front-b — 872 unresolved imports
+
+## agents/w11-crt-a
+
+Merged (merge commit, branch tip `5a30e850`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 of the branch's 36 units selected (25 function bodies; the rest are data and layout units) with fresh
+`input_order` values 4588 through 4621. The host checks (no build line in the notes) build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the three tty queue checks also need -DNORRATH_HOST_CONTRACT). The branch is partial in one respect: its notes say no paired run was done this session, only host checks. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4619 authored inputs, 3545 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected, three units. (1) `w11-crt-a-eh-frame-begin` (`__EH_FRAME_BEGIN__`, a zero-length marker in .eh_frame): with it in the plan the relocatable link dies with a BFD assertion (`elflink.c:9839`, link command 4624); bisecting the link showed it is the only unit that triggers it, and the link passes without it. It is left in the tree and unplanned; the owner needs a different way to express the marker. (2) `w11-crt-a-exit-stub` (`_Exit`) and (3) `w11-crt-a-set-tlb-entry` (`_SetTLBEntry`): authored assembly stubs with no host check at all, so no test that could fail; left in the tree and unplanned. The notes' closed list therefore does not reproduce for `_Exit`, `_SetTLBEntry` and `__EH_FRAME_BEGIN__`; `__throw` and `_ctype_` were attributed to older drafts that are not in the plan and are still unresolved. Also not planned on purpose: the host-only `ctype-check`, `throw-check` and `data-check` directories. The 29 names closed here are the real ones.
+
+| | |
+|---|---|
+| Before | 872 |
+| After | 864 |
+| Closed | 29 |
+| Opened | 21 |
+
+Closed: `DLG_CheckMutex__Fv`, `FlushIopCommand__Fb`, `KbmReaderThread`, `LoadSRSServer__Fv`, `MemcpyD`, `PadData`, `QueueInit`, `QueuePeekReadDone`, `SurfCache`, `TLBInfo`, `VIEEDMASync__Fi`, `_$_19__pointer_type_info`, `__builtin_vec_delete`, `__builtin_vec_new`, `__cplus_type_matcher`, `__extendsfdf2`, `__floatdidf`, `__floatdisf`, `__get_eh_context`, `__get_eh_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__malloc_current_mallinfo`, `__pack_f`, `__tf19__pointer_type_info`, `__ti5Spell`, `_args`
+
+Opened: `Close__6VIFile`, `InitialiseIopDriver`, `LocalData`, `Read__6VIFilePvi`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `__ieee754_sqrt`, `__throw_type_match_rtti_2`, `atanf`, `dpdiv`, `get_eh_context`, `kdm_rpccall_end`, `mark_device_unplugged`, `process_kbd_data`, `process_mouse_data`, `sFunctionIndex`, `sRecv`, `sSend`, `sSifClient`, `setup_kbd_device`, `setup_mouse_device`
+- 2026-10-13 05:27 CDT — agents/w11-crt-a — 864 unresolved imports

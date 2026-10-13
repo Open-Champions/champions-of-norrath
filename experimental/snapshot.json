@@ -58636,6 +58636,426 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w11-front-b-level-list/level_list.cpp"
+    },
+    {
+      "input_order": 4588,
+      "component": "w11-crt-a-args",
+      "object_name": "w11_crt_a_args.o",
+      "private_object_sha256": "c23371a9757d13fd3596947ff1dd672e16e22d678705078582c2f50c7cc00f74",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-args/args.cpp"
+    },
+    {
+      "input_order": 4589,
+      "component": "w11-crt-a-builtin-vec-delete",
+      "object_name": "w11_crt_a_builtin_vec_delete.o",
+      "private_object_sha256": "bc55a158e6c9f5489d36c378122fb406f0d91e1c90362243e9d2ff5f064178d2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_delete"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp"
+    },
+    {
+      "input_order": 4590,
+      "component": "w11-crt-a-builtin-vec-new",
+      "object_name": "w11_crt_a_builtin_vec_new.o",
+      "private_object_sha256": "cc28a80d76ea6af751b85483640d275cd0da0c3d70c59a2290cd6598e972e4cd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_new"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp"
+    },
+    {
+      "input_order": 4591,
+      "component": "w11-crt-a-cplus-type-matcher",
+      "object_name": "w11_crt_a_cplus_type_matcher.o",
+      "private_object_sha256": "dfd03d9c2b292b9340ab455d6af4384f133af74ac67db3acffd4ec9b304c3b48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "__cplus_type_matcher"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-cplus-type-matcher/cplus_type_matcher.cpp"
+    },
+    {
+      "input_order": 4592,
+      "component": "w11-crt-a-default-tlb",
+      "object_name": "w11_crt_a_default_tlb.o",
+      "private_object_sha256": "448ef3f3de1e8d5f4df37f37eaba031d706d8885e40358f7b5fc83e13a3b28dd",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-default-tlb/default_tlb.cpp"
+    },
+    {
+      "input_order": 4593,
+      "component": "w11-crt-a-dlg-check-mutex",
+      "object_name": "w11_crt_a_dlg_check_mutex.o",
+      "private_object_sha256": "289c5d1c22adb83ea041395af140d571956c5d3e23db56b0d4b157d0abc7332d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "DLG_CheckMutex__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-dlg-check-mutex/check_mutex.cpp"
+    },
+    {
+      "input_order": 4594,
+      "component": "w11-crt-a-dtor-19-pointer-type-info",
+      "object_name": "w11_crt_a_dtor_19_pointer_type_info.o",
+      "private_object_sha256": "2e4fb2633e2a288715a8a13c27a91c6395592645a59032f510d41d7ccb082c3a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_19__pointer_type_info"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-dtor-19-pointer-type-info/dtor.cpp"
+    },
+    {
+      "input_order": 4595,
+      "component": "w11-crt-a-extend-tlb",
+      "object_name": "w11_crt_a_extend_tlb.o",
+      "private_object_sha256": "cfef9cfbaa48ed04ea948cb09ca281291cc1a60d85183f04e814fee46a6a3d13",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-extend-tlb/extend_tlb.cpp"
+    },
+    {
+      "input_order": 4596,
+      "component": "w11-crt-a-extendsfdf2",
+      "object_name": "w11_crt_a_extendsfdf2.o",
+      "private_object_sha256": "963942ad85004543f4434b1c4a439cf2c227e91e1bf6242da04a2bdc824b904a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__extendsfdf2"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-extendsfdf2/extendsfdf2.cpp"
+    },
+    {
+      "input_order": 4597,
+      "component": "w11-crt-a-floatdidf",
+      "object_name": "w11_crt_a_floatdidf.o",
+      "private_object_sha256": "93ab2d87cd95a75b17c00bdb0e7f82ce74ec291fa2f01b5e56425ca53f885c9e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "__floatdidf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-floatdidf/floatdidf.cpp"
+    },
+    {
+      "input_order": 4598,
+      "component": "w11-crt-a-floatdisf",
+      "object_name": "w11_crt_a_floatdisf.o",
+      "private_object_sha256": "e7b50f725edbae59f114fa6af258cffbdbd5151c2ad44b07f91c37e0764ed27f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "__floatdisf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-floatdisf/floatdisf.cpp"
+    },
+    {
+      "input_order": 4599,
+      "component": "w11-crt-a-flush-iop-command",
+      "object_name": "w11_crt_a_flush_iop_command.o",
+      "private_object_sha256": "9dec2c9ce45ee6da4369b488e295d3ba396ac996a1084a69bbfc01bd02f575c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "FlushIopCommand__Fb"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-flush-iop-command/flush_iop_command.cpp"
+    },
+    {
+      "input_order": 4600,
+      "component": "w11-crt-a-get-eh-context",
+      "object_name": "w11_crt_a_get_eh_context.o",
+      "private_object_sha256": "1b43800fc54abfce9dc06269cab2aaed9662bd1bf4f620efdb9dfeb33b0cfab3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__get_eh_context"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-get-eh-context/get_eh_context.cpp"
+    },
+    {
+      "input_order": 4601,
+      "component": "w11-crt-a-get-eh-info",
+      "object_name": "w11_crt_a_get_eh_info.o",
+      "private_object_sha256": "bcc41318efdad26e7c7b37e2739f2a8b303bfe1e30a2a4e2866c3f52f7092a81",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "__get_eh_info"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-get-eh-info/get_eh_info.cpp"
+    },
+    {
+      "input_order": 4602,
+      "component": "w11-crt-a-ieee754-acos",
+      "object_name": "w11_crt_a_ieee754_acos.o",
+      "private_object_sha256": "2ad7e32bd1fc11299c041747167fb81b40b52fe11464225f6924b6c700cacf4e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "rational_parts"
+        },
+        {
+          "compiled_body_bytes": 832,
+          "name": "__ieee754_acos"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-ieee754-acos/ieee754_acos.cpp"
+    },
+    {
+      "input_order": 4603,
+      "component": "w11-crt-a-ieee754-acosf",
+      "object_name": "w11_crt_a_ieee754_acosf.o",
+      "private_object_sha256": "ffc70707891ded190141e0cbbb7edb2f1f8b9daec4a2e17cb0ddceed876bf25b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 980,
+          "name": "__ieee754_acosf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-ieee754-acosf/ieee754_acosf.cpp"
+    },
+    {
+      "input_order": 4604,
+      "component": "w11-crt-a-ieee754-atan2f",
+      "object_name": "w11_crt_a_ieee754_atan2f.o",
+      "private_object_sha256": "c2a6df0f2ee65fcb8299ccfd88ca3da8cb05f5775f3d6959f2dc6f0cfc623ef8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 456,
+          "name": "__ieee754_atan2f"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-ieee754-atan2f/ieee754_atan2f.cpp"
+    },
+    {
+      "input_order": 4605,
+      "component": "w11-crt-a-ieee754-fmodf",
+      "object_name": "w11_crt_a_ieee754_fmodf.o",
+      "private_object_sha256": "3fc48d1242e71e772467b2d23bc544e8f35ec496fbf24cd706686f94fd9247fa",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 384,
+          "name": "__ieee754_fmodf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-ieee754-fmodf/ieee754_fmodf.cpp"
+    },
+    {
+      "input_order": 4606,
+      "component": "w11-crt-a-kbm-reader-thread",
+      "object_name": "w11_crt_a_kbm_reader_thread.o",
+      "private_object_sha256": "95b3562955db01e3d622d3d7c16e3d1706459936218b0d0390bbfaf2b885ac48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 328,
+          "name": "_ZL12poll_devicesPhS_.constprop.0"
+        },
+        {
+          "compiled_body_bytes": 648,
+          "name": "KbmReaderThread"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-kbm-reader-thread/kbm_reader_thread.cpp"
+    },
+    {
+      "input_order": 4607,
+      "component": "w11-crt-a-kernel-tlb",
+      "object_name": "w11_crt_a_kernel_tlb.o",
+      "private_object_sha256": "0f1b9cda30d6184af489495298dc6b14275ca1634d34919c5cf28c1565829d23",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-kernel-tlb/kernel_tlb.cpp"
+    },
+    {
+      "input_order": 4608,
+      "component": "w11-crt-a-load-srs-server",
+      "object_name": "w11_crt_a_load_srs_server.o",
+      "private_object_sha256": "16f0d26e25eca3284d6439d7a05cdea613c1425890e9e50b1b126671595027ca",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 296,
+          "name": "LoadSRSServer__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-load-srs-server/load_srs_server.cpp"
+    },
+    {
+      "input_order": 4609,
+      "component": "w11-crt-a-malloc-current-mallinfo",
+      "object_name": "w11_crt_a_malloc_current_mallinfo.o",
+      "private_object_sha256": "b4b8c6a81c71720f43d2a071b2be4b15acb2f78fc0b9fd9166029b10a7306d3a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-malloc-current-mallinfo/malloc_current_mallinfo.cpp"
+    },
+    {
+      "input_order": 4610,
+      "component": "w11-crt-a-memcpy-d",
+      "object_name": "w11_crt_a_memcpy_d.o",
+      "private_object_sha256": "ee52d57705f718c15e5a407987d2dea1dc84ff6e6d14f8bd7d2ea65ab93e686f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "MemcpyD"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-memcpy-d/memcpy_d.cpp"
+    },
+    {
+      "input_order": 4611,
+      "component": "w11-crt-a-pack-f",
+      "object_name": "w11_crt_a_pack_f.o",
+      "private_object_sha256": "e664bd8c7b314100260e95bc1fbf3a436ad2c6c99ce5ee514ef44ba3f3e35754",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "__pack_f"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-pack-f/pack_f.cpp"
+    },
+    {
+      "input_order": 4612,
+      "component": "w11-crt-a-pad-data",
+      "object_name": "w11_crt_a_pad_data.o",
+      "private_object_sha256": "cd5eda8ca1731e75bf2a47dac67239901b96e4427640a1ca8e819aef29eaafe2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-pad-data/pad_data.cpp"
+    },
+    {
+      "input_order": 4613,
+      "component": "w11-crt-a-queue-init",
+      "object_name": "w11_crt_a_queue_init.o",
+      "private_object_sha256": "a3f49d4ee2b35a0ca5feaa1ac8f643a7f16a325bfe2bfefa5397e469653ea334",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "QueueInit"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-queue-init/queue_init.cpp"
+    },
+    {
+      "input_order": 4614,
+      "component": "w11-crt-a-queue-peek-read-done",
+      "object_name": "w11_crt_a_queue_peek_read_done.o",
+      "private_object_sha256": "a8505994f32b31bd069e0d5cf207133281219f278a45232f20a1d958799310df",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "QueuePeekReadDone"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-queue-peek-read-done/queue_peek_read_done.cpp"
+    },
+    {
+      "input_order": 4615,
+      "component": "w11-crt-a-surf-cache",
+      "object_name": "w11_crt_a_surf_cache.o",
+      "private_object_sha256": "751167872efb7b44083af0b4bef7ca9cc015cbd768a006c3ce771fe86746d839",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-surf-cache/surf_cache.cpp"
+    },
+    {
+      "input_order": 4616,
+      "component": "w11-crt-a-tf-19-pointer-type-info",
+      "object_name": "w11_crt_a_tf_19_pointer_type_info.o",
+      "private_object_sha256": "6e340129d578c78ab6bb0d4d26361387f49579b5dedc414f4e7302f5b87dd761",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf19__pointer_type_info"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-tf-19-pointer-type-info/typeinfo.cpp"
+    },
+    {
+      "input_order": 4617,
+      "component": "w11-crt-a-ti-spell",
+      "object_name": "w11_crt_a_ti_spell.o",
+      "private_object_sha256": "292fa8244be66cb83a45762ed526a5286741bcb125005a87c26f25afeb3fa670",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-ti-spell/ti_spell.cpp"
+    },
+    {
+      "input_order": 4618,
+      "component": "w11-crt-a-tlb-info",
+      "object_name": "w11_crt_a_tlb_info.o",
+      "private_object_sha256": "a6f37fc2a25d87393d908496c982fd97b39763a1b3bfb697c24602499d3eed3c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-tlb-info/tlb_info.cpp"
+    },
+    {
+      "input_order": 4619,
+      "component": "w11-crt-a-tty-queue-storage",
+      "object_name": "w11_crt_a_tty_queue_storage.o",
+      "private_object_sha256": "5961acd4987efaebc9fad06d9674fc0135efecb3c86d47f4a38d38afa6e0196a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.cpp"
+    },
+    {
+      "input_order": 4620,
+      "component": "w11-crt-a-vieedmasync",
+      "object_name": "w11_crt_a_vieedmasync.o",
+      "private_object_sha256": "6190a677cea5f6ccca6daa9800b721df221b508436d50122ff24e12d0f9c2e24",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "VIEEDMASync__Fi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-crt-a-vieedmasync/vieedmasync.cpp"
     }
   ],
   "drafts": [
@@ -64249,6 +64669,80 @@
     "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
     "sources/w10-world-d-world-state-words/host_check.cpp": "4fed4ce4785e42426f80af2c8ef7116b83b0a111c1decd7e2a4989b31a6f7e02",
     "sources/w10-world-d-world-state-words/world_state_words.cpp": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
+    "sources/w11-crt-a-args/args.cpp": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
+    "sources/w11-crt-a-args/host_check.cpp": "9d288524da727c5c3caecdf6bc9cf711b1607711be7c4176a23b43b8d5651b9f",
+    "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
+    "sources/w11-crt-a-builtin-vec-delete/host_check.cpp": "37612d4314cdf15cef43502eee4be35c5571f938e08129751b2511f97b005f12",
+    "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
+    "sources/w11-crt-a-builtin-vec-new/host_check.cpp": "cf1f4b047b6ec5e59b76fa736bbab6ae6d1a5eb423dbfc4165d5eb59b66f9e69",
+    "sources/w11-crt-a-cplus-type-matcher/cplus_type_matcher.cpp": "d08778d419f59f3a52f78c28c5e0169433c3e1433575c0a87a3f16cd78db7bac",
+    "sources/w11-crt-a-cplus-type-matcher/host_check.cpp": "6e254c7bb31eebba8fde44776d566418ea33f7a1bb0f88a41cbf909a22fada20",
+    "sources/w11-crt-a-ctype-check/host_check.cpp": "942c7bf1e5259be84c9b8a700574cd0bfcdc7b9d136b0e5c245369e2b9d3b736",
+    "sources/w11-crt-a-data-check/data_check.cpp": "d93477fabb52a04299800c6d0470377d36e88c0d267c07172544806f3035d92f",
+    "sources/w11-crt-a-default-tlb/default_tlb.cpp": "7b214f289694808488e061d0fe91e3db46019223c486d2cab3379c66406dbbf8",
+    "sources/w11-crt-a-default-tlb/host_check.cpp": "5818a564a8484a01d1f39fd0495632f4e35faa485e9affbeaf78227d2f28dbe8",
+    "sources/w11-crt-a-dlg-check-mutex/check_mutex.cpp": "721914f99b814ca4fa2877b0a6843cd6988891a6ae039310052a3b525de86944",
+    "sources/w11-crt-a-dlg-check-mutex/host_check.cpp": "a663cc772ee9b73594ab55502621186ba474dfecf0c7cb55904accbbf9720a01",
+    "sources/w11-crt-a-dtor-19-pointer-type-info/dtor.cpp": "888120104d7aa6f5774cd1eb1de932d9da8da884a54a134a13238b614ed26289",
+    "sources/w11-crt-a-dtor-19-pointer-type-info/host_check.cpp": "7e7dbc87603436fcb8c34dc31c028f958be341a4e21572ea188f24faa5fca79c",
+    "sources/w11-crt-a-eh-frame-begin/eh_frame_begin.cpp": "81e4e70bed6f8776ce66e81811dddd6ac8930b8847554d9dec6a9d6d50b184bb",
+    "sources/w11-crt-a-eh-frame-begin/host_check.cpp": "526017b5aa10d18a35c0ac6f256f45ffb4c5edc881a6d4fc9af2853e4ac78a3b",
+    "sources/w11-crt-a-exit-stub/exit_stub.S": "c97f4ac0b589759c819b88917a83a78e7dccc3b6f472f0e0c9c10f2851947cd1",
+    "sources/w11-crt-a-extend-tlb/extend_tlb.cpp": "7c34a6d7fb9e3b95e27e4f08efb9c3e0451edc049ace936a5b2b84beec721b67",
+    "sources/w11-crt-a-extend-tlb/host_check.cpp": "6b580e2a6f19176e4b358ebd2b9ebb218c0e5138de10aefe10a02d06f25cb384",
+    "sources/w11-crt-a-extendsfdf2/extendsfdf2.cpp": "587c8f58219503aade9cb76eb764afe94b0a229a1d6ce9d8f749d796c7c1807f",
+    "sources/w11-crt-a-extendsfdf2/host_check.cpp": "7192b9892a3c7638232f94814b49bc657aec4dcec10f8779766e89e3b9f608aa",
+    "sources/w11-crt-a-floatdidf/floatdidf.cpp": "8a11ea4f22e2ee32d1a436b1e7f606d50bdc8d2de1f0baaf748ff8b11b7069db",
+    "sources/w11-crt-a-floatdidf/host_check.cpp": "9e03a0e816506632204d671b6512dedef56e91e2138c6521462aec8bc25082e5",
+    "sources/w11-crt-a-floatdisf/floatdisf.cpp": "e7c12fb475039e02703a18c5a9c264177f68bbb42de439de11de5aefbe94bccd",
+    "sources/w11-crt-a-floatdisf/host_check.cpp": "b317cb075ca74ef729cf49d42ae8a3069767e6066fcf005d15b989942550d8b3",
+    "sources/w11-crt-a-flush-iop-command/flush_iop_command.cpp": "6aa472f82c9699759ad27b4a39d73578206e5a541f6734c038d9a413d67c8b73",
+    "sources/w11-crt-a-flush-iop-command/host_check.cpp": "5dd187a25cba8ca753b3dd1e0749392ca19c7837bd4d17a938280ab61f78a628",
+    "sources/w11-crt-a-get-eh-context/get_eh_context.cpp": "4d551bd32a269de16dde04fa2c56f0c8b499aea679e4902bda6a059d1258a2a4",
+    "sources/w11-crt-a-get-eh-context/host_check.cpp": "20d4c365954ab4b958c22ba054b812847b832094cc40cc8e2683ba09cd7a3054",
+    "sources/w11-crt-a-get-eh-info/get_eh_info.cpp": "d65ffdd7b7e1f90aefa989b624e06c9f06126b5228375b96435507ae29bc808e",
+    "sources/w11-crt-a-get-eh-info/host_check.cpp": "cfee0c46b924b33e6890bae58233a16ac9310f30936301c10f32ba34a6eb4765",
+    "sources/w11-crt-a-ieee754-acos/host_check.cpp": "6cd7bff8b005af133d07d43c44b3980a1cf5f6d2afe4a54465820728d47abbcc",
+    "sources/w11-crt-a-ieee754-acos/ieee754_acos.cpp": "a8d7540924c8bfa34fe35c085fc9eabf1673a8006d46edbcac5aeb55eb14aea8",
+    "sources/w11-crt-a-ieee754-acosf/host_check.cpp": "3bd787e61fa119ed26d6c1b6cde6f407834e7051e3124551bb40064120348b01",
+    "sources/w11-crt-a-ieee754-acosf/ieee754_acosf.cpp": "e16b3dceb488057cec576ccf8ea296cb9076013d3fd852750f4075854c378bfd",
+    "sources/w11-crt-a-ieee754-atan2f/host_check.cpp": "c6ef0bedac15c1cdd6e274e2d8e50400bce8b9d6e786d739af167560b53a0094",
+    "sources/w11-crt-a-ieee754-atan2f/ieee754_atan2f.cpp": "9a1b37257f6be3eaa42c3ba1adc59117083cc4d977c4678a8dcbef188bd06cc5",
+    "sources/w11-crt-a-ieee754-fmodf/host_check.cpp": "3fa1fa41b883d7d861e5d4dca94197c55808d46eb764b033046d61fb79b50bd2",
+    "sources/w11-crt-a-ieee754-fmodf/ieee754_fmodf.cpp": "93ffdd8b55a825ba7f36b14fe165fe23d10a324b256cec708ec86e1d3e824e0e",
+    "sources/w11-crt-a-kbm-reader-thread/host_check.cpp": "167f8233ac8db10aa95b485e452b2e0abbda44aad8129697a80c12bd4d535411",
+    "sources/w11-crt-a-kbm-reader-thread/kbm_reader_thread.cpp": "fe16976a29e1173129f48adcf0dcdc4833ccb08a5f49ac2fe63cf8e40220e1c6",
+    "sources/w11-crt-a-kernel-tlb/host_check.cpp": "ace1627dd8230c4c55c6014f6b39381c2a882afd950dfe2aa0dd2593fb5fbc69",
+    "sources/w11-crt-a-kernel-tlb/kernel_tlb.cpp": "9699c83b2e381fbcffcbd6670f28f47783568a06110b5e59c3aa0ec608c36bf7",
+    "sources/w11-crt-a-load-srs-server/host_check.cpp": "05cf9d44805b45b27aec9129db68af5c20246b88f4c59f053067e00078ebfa2c",
+    "sources/w11-crt-a-load-srs-server/load_srs_server.cpp": "6b641d9613e10356206198922fb38a07b26993abb39baad5b0b88d60cea4fa59",
+    "sources/w11-crt-a-malloc-current-mallinfo/host_check.cpp": "540bab57049b05715e6fadf820ff975a55aa7abbeee986c2b2a342af0db068c2",
+    "sources/w11-crt-a-malloc-current-mallinfo/malloc_current_mallinfo.cpp": "42b88969c074370c0937ef1979d25a46b6c4feec37729cb2ee6a6055e5b4b529",
+    "sources/w11-crt-a-memcpy-d/host_check.cpp": "a3670a28ad4a827232043f112402f15ff139eeb1f8fff259d1dac0153c89cc66",
+    "sources/w11-crt-a-memcpy-d/memcpy_d.cpp": "d4d5668cd26474f5278dd15e5eefe4164dee73d17c0267f415f0cc5afb14a5ba",
+    "sources/w11-crt-a-pack-f/host_check.cpp": "0dfb50504d5c84799f70c3fc0b1270bd1e674052cec357354e04411ecc8eb906",
+    "sources/w11-crt-a-pack-f/pack_f.cpp": "8fd0c9fcabdcce63514666b082c108cbb6ab1002a93b709e3b988576e982032e",
+    "sources/w11-crt-a-pad-data/host_check.cpp": "8ff581b6a1f3334cb8338b823ed0d52b2148a93709c04dc081d9a43ea9501c02",
+    "sources/w11-crt-a-pad-data/pad_data.cpp": "9bc8c1194f2e4f2111957717993237def6cf61e1741c717860bd2255cf945d2d",
+    "sources/w11-crt-a-queue-init/host_check.cpp": "e73854648984c89eeb64087c9e400466818a62d1664fc93e78240aee7e1c39b7",
+    "sources/w11-crt-a-queue-init/queue_init.cpp": "bf8f0a2605dae397ef039fdaaaee037609a52e50677b9a1bef810c991d297504",
+    "sources/w11-crt-a-queue-peek-read-done/host_check.cpp": "9af679ef8312f13cfa75b8873389593ba56f441d92fd59580937947983c7208b",
+    "sources/w11-crt-a-queue-peek-read-done/queue_peek_read_done.cpp": "d154c5b14d3ee0f2509a357b21b707d0866b8ee68749a9f8c4fcc80a5b4478e4",
+    "sources/w11-crt-a-set-tlb-entry/set_tlb_entry.S": "803d0b1ad125789b997946024cfdfd6703945b66e2f9ab1fc2f4ae2e38c4fd25",
+    "sources/w11-crt-a-surf-cache/host_check.cpp": "52dc37b5f56c0c1e9c7c277956b5a9d185ae2504b3d1666831e6ed2d6a63c06c",
+    "sources/w11-crt-a-surf-cache/surf_cache.cpp": "88d824d46aa355b93d9a3ee8e30e940387e0df9628af4025e9405fcd48788088",
+    "sources/w11-crt-a-tf-19-pointer-type-info/host_check.cpp": "b3fa7d709ecfe6f4456e4c71319f23ba87781d9b2f6df047fda43c73352b4975",
+    "sources/w11-crt-a-tf-19-pointer-type-info/typeinfo.cpp": "75c8a9fb09d3a4d324d9ac71ccc751773cf3738f317f3ebc8ce21b71bdbb4e32",
+    "sources/w11-crt-a-throw-check/host_check.cpp": "dbdc80dedefc08cbb1e6495870cf008a71655f7cf379cdbcd600a31bb3fa1689",
+    "sources/w11-crt-a-ti-spell/host_check.cpp": "175b626c8fb34ef8352d8f8266ddb10e88c64a1652e630e5395195a6f78de12f",
+    "sources/w11-crt-a-ti-spell/ti_spell.cpp": "ae8f783c3d724265660d5f0e57d4e2747df65000a8daffe69cbd3791593664e8",
+    "sources/w11-crt-a-tlb-info/host_check.cpp": "eae8efaeb6b7394961deac85021636b03e58bacca71b1dfc10a23fdf2c1f3351",
+    "sources/w11-crt-a-tlb-info/tlb_info.cpp": "a1fc9838ac06c7181b098f2578ae5520eac60cdd2acbb0d4924ee8011c1e64ec",
+    "sources/w11-crt-a-tty-queue-storage/host_check.cpp": "b9f3f15cd94cb1ffd32aa75175f6046a678080977a60906b3415dd8b11ffb3d3",
+    "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.cpp": "3364a32884aa5916afa294dd0ccb1263c9680091c8a03f7a106ca9067de4393d",
+    "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.hpp": "c673943ce484dc547d0836033132b5ab44fbb96a8040ea3aa833c2051d06e602",
+    "sources/w11-crt-a-vieedmasync/host_check.cpp": "8eac3ff2ebddd8dc0ca85e3764764fc70d75fc1b8f2cd413928c54c292f01c28",
+    "sources/w11-crt-a-vieedmasync/vieedmasync.cpp": "be6cbf3d40c85e2298911cea00c3dcd2366863e2d15abadf0c7635e827906414",
     "sources/w11-crt-b-dptoli/dptoli.cpp": "fb57acfb83df937d99aed50c892d7af265ff9c7756c7cb0bee96261494f6b4ec",
     "sources/w11-crt-b-dptoli/host_check.cpp": "8e34fc7ea9bbe4eecf2f047a6978d51a5869b688220aa31d06a779ea61efe616",
     "sources/w11-crt-b-dptoul/dptoul.cpp": "eebd308a17186aa69c595d34b1b08d04b16081ba0aead7e61d4fcafda90a0c89",
@@ -68881,11 +69375,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4588,
-    "authored_default_inputs": 4586,
+    "selected_inputs": 4621,
+    "authored_default_inputs": 4619,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3522,
-    "compiled_body_bytes_from_accepted_inputs": 1563188,
+    "emitted_function_definitions_including_helpers": 3547,
+    "compiled_body_bytes_from_accepted_inputs": 1568988,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -68898,7 +69392,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4275
+    "package_selected_inputs": 4308
   },
   "startup_implementations": [
     {
@@ -135863,6 +136357,525 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w11-front-b-level-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-args/args.cpp",
+      "source_sha256": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
+      "object_sha256": "c23371a9757d13fd3596947ff1dd672e16e22d678705078582c2f50c7cc00f74",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-args/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp",
+      "source_sha256": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
+      "object_sha256": "bc55a158e6c9f5489d36c378122fb406f0d91e1c90362243e9d2ff5f064178d2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_delete"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-builtin-vec-delete/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp",
+      "source_sha256": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
+      "object_sha256": "cc28a80d76ea6af751b85483640d275cd0da0c3d70c59a2290cd6598e972e4cd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_new"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-builtin-vec-new/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-cplus-type-matcher/cplus_type_matcher.cpp",
+      "source_sha256": "d08778d419f59f3a52f78c28c5e0169433c3e1433575c0a87a3f16cd78db7bac",
+      "object_sha256": "dfd03d9c2b292b9340ab455d6af4384f133af74ac67db3acffd4ec9b304c3b48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "__cplus_type_matcher"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-cplus-type-matcher/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-default-tlb/default_tlb.cpp",
+      "source_sha256": "7b214f289694808488e061d0fe91e3db46019223c486d2cab3379c66406dbbf8",
+      "object_sha256": "448ef3f3de1e8d5f4df37f37eaba031d706d8885e40358f7b5fc83e13a3b28dd",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-default-tlb/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-dlg-check-mutex/check_mutex.cpp",
+      "source_sha256": "721914f99b814ca4fa2877b0a6843cd6988891a6ae039310052a3b525de86944",
+      "object_sha256": "289c5d1c22adb83ea041395af140d571956c5d3e23db56b0d4b157d0abc7332d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "DLG_CheckMutex__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-dlg-check-mutex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-dtor-19-pointer-type-info/dtor.cpp",
+      "source_sha256": "888120104d7aa6f5774cd1eb1de932d9da8da884a54a134a13238b614ed26289",
+      "object_sha256": "2e4fb2633e2a288715a8a13c27a91c6395592645a59032f510d41d7ccb082c3a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_19__pointer_type_info"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-dtor-19-pointer-type-info/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-extend-tlb/extend_tlb.cpp",
+      "source_sha256": "7c34a6d7fb9e3b95e27e4f08efb9c3e0451edc049ace936a5b2b84beec721b67",
+      "object_sha256": "cfef9cfbaa48ed04ea948cb09ca281291cc1a60d85183f04e814fee46a6a3d13",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-extend-tlb/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-extendsfdf2/extendsfdf2.cpp",
+      "source_sha256": "587c8f58219503aade9cb76eb764afe94b0a229a1d6ce9d8f749d796c7c1807f",
+      "object_sha256": "963942ad85004543f4434b1c4a439cf2c227e91e1bf6242da04a2bdc824b904a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__extendsfdf2"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-extendsfdf2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-floatdidf/floatdidf.cpp",
+      "source_sha256": "8a11ea4f22e2ee32d1a436b1e7f606d50bdc8d2de1f0baaf748ff8b11b7069db",
+      "object_sha256": "93ab2d87cd95a75b17c00bdb0e7f82ce74ec291fa2f01b5e56425ca53f885c9e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "__floatdidf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-floatdidf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-floatdisf/floatdisf.cpp",
+      "source_sha256": "e7c12fb475039e02703a18c5a9c264177f68bbb42de439de11de5aefbe94bccd",
+      "object_sha256": "e7b50f725edbae59f114fa6af258cffbdbd5151c2ad44b07f91c37e0764ed27f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "__floatdisf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-floatdisf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-flush-iop-command/flush_iop_command.cpp",
+      "source_sha256": "6aa472f82c9699759ad27b4a39d73578206e5a541f6734c038d9a413d67c8b73",
+      "object_sha256": "9dec2c9ce45ee6da4369b488e295d3ba396ac996a1084a69bbfc01bd02f575c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "FlushIopCommand__Fb"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-flush-iop-command/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-get-eh-context/get_eh_context.cpp",
+      "source_sha256": "4d551bd32a269de16dde04fa2c56f0c8b499aea679e4902bda6a059d1258a2a4",
+      "object_sha256": "1b43800fc54abfce9dc06269cab2aaed9662bd1bf4f620efdb9dfeb33b0cfab3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__get_eh_context"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-get-eh-context/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-get-eh-info/get_eh_info.cpp",
+      "source_sha256": "d65ffdd7b7e1f90aefa989b624e06c9f06126b5228375b96435507ae29bc808e",
+      "object_sha256": "bcc41318efdad26e7c7b37e2739f2a8b303bfe1e30a2a4e2866c3f52f7092a81",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "__get_eh_info"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-get-eh-info/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-ieee754-acos/ieee754_acos.cpp",
+      "source_sha256": "a8d7540924c8bfa34fe35c085fc9eabf1673a8006d46edbcac5aeb55eb14aea8",
+      "object_sha256": "2ad7e32bd1fc11299c041747167fb81b40b52fe11464225f6924b6c700cacf4e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "rational_parts"
+        },
+        {
+          "compiled_body_bytes": 832,
+          "name": "__ieee754_acos"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-ieee754-acos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-ieee754-acosf/ieee754_acosf.cpp",
+      "source_sha256": "e16b3dceb488057cec576ccf8ea296cb9076013d3fd852750f4075854c378bfd",
+      "object_sha256": "ffc70707891ded190141e0cbbb7edb2f1f8b9daec4a2e17cb0ddceed876bf25b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 980,
+          "name": "__ieee754_acosf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-ieee754-acosf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-ieee754-atan2f/ieee754_atan2f.cpp",
+      "source_sha256": "9a1b37257f6be3eaa42c3ba1adc59117083cc4d977c4678a8dcbef188bd06cc5",
+      "object_sha256": "c2a6df0f2ee65fcb8299ccfd88ca3da8cb05f5775f3d6959f2dc6f0cfc623ef8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 456,
+          "name": "__ieee754_atan2f"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-ieee754-atan2f/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-ieee754-fmodf/ieee754_fmodf.cpp",
+      "source_sha256": "93ffdd8b55a825ba7f36b14fe165fe23d10a324b256cec708ec86e1d3e824e0e",
+      "object_sha256": "3fc48d1242e71e772467b2d23bc544e8f35ec496fbf24cd706686f94fd9247fa",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 384,
+          "name": "__ieee754_fmodf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-ieee754-fmodf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-kbm-reader-thread/kbm_reader_thread.cpp",
+      "source_sha256": "fe16976a29e1173129f48adcf0dcdc4833ccb08a5f49ac2fe63cf8e40220e1c6",
+      "object_sha256": "95b3562955db01e3d622d3d7c16e3d1706459936218b0d0390bbfaf2b885ac48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 328,
+          "name": "_ZL12poll_devicesPhS_.constprop.0"
+        },
+        {
+          "compiled_body_bytes": 648,
+          "name": "KbmReaderThread"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-kbm-reader-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-kernel-tlb/kernel_tlb.cpp",
+      "source_sha256": "9699c83b2e381fbcffcbd6670f28f47783568a06110b5e59c3aa0ec608c36bf7",
+      "object_sha256": "0f1b9cda30d6184af489495298dc6b14275ca1634d34919c5cf28c1565829d23",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-kernel-tlb/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-load-srs-server/load_srs_server.cpp",
+      "source_sha256": "6b641d9613e10356206198922fb38a07b26993abb39baad5b0b88d60cea4fa59",
+      "object_sha256": "16f0d26e25eca3284d6439d7a05cdea613c1425890e9e50b1b126671595027ca",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 296,
+          "name": "LoadSRSServer__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-load-srs-server/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-malloc-current-mallinfo/malloc_current_mallinfo.cpp",
+      "source_sha256": "42b88969c074370c0937ef1979d25a46b6c4feec37729cb2ee6a6055e5b4b529",
+      "object_sha256": "b4b8c6a81c71720f43d2a071b2be4b15acb2f78fc0b9fd9166029b10a7306d3a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-malloc-current-mallinfo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-memcpy-d/memcpy_d.cpp",
+      "source_sha256": "d4d5668cd26474f5278dd15e5eefe4164dee73d17c0267f415f0cc5afb14a5ba",
+      "object_sha256": "ee52d57705f718c15e5a407987d2dea1dc84ff6e6d14f8bd7d2ea65ab93e686f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "MemcpyD"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-memcpy-d/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-pack-f/pack_f.cpp",
+      "source_sha256": "8fd0c9fcabdcce63514666b082c108cbb6ab1002a93b709e3b988576e982032e",
+      "object_sha256": "e664bd8c7b314100260e95bc1fbf3a436ad2c6c99ce5ee514ef44ba3f3e35754",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "__pack_f"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-pack-f/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-pad-data/pad_data.cpp",
+      "source_sha256": "9bc8c1194f2e4f2111957717993237def6cf61e1741c717860bd2255cf945d2d",
+      "object_sha256": "cd5eda8ca1731e75bf2a47dac67239901b96e4427640a1ca8e819aef29eaafe2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-pad-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-queue-init/queue_init.cpp",
+      "source_sha256": "bf8f0a2605dae397ef039fdaaaee037609a52e50677b9a1bef810c991d297504",
+      "object_sha256": "a3f49d4ee2b35a0ca5feaa1ac8f643a7f16a325bfe2bfefa5397e469653ea334",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "QueueInit"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-queue-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-queue-peek-read-done/queue_peek_read_done.cpp",
+      "source_sha256": "d154c5b14d3ee0f2509a357b21b707d0866b8ee68749a9f8c4fcc80a5b4478e4",
+      "object_sha256": "a8505994f32b31bd069e0d5cf207133281219f278a45232f20a1d958799310df",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "QueuePeekReadDone"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-queue-peek-read-done/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-surf-cache/surf_cache.cpp",
+      "source_sha256": "88d824d46aa355b93d9a3ee8e30e940387e0df9628af4025e9405fcd48788088",
+      "object_sha256": "751167872efb7b44083af0b4bef7ca9cc015cbd768a006c3ce771fe86746d839",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-surf-cache/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-tf-19-pointer-type-info/typeinfo.cpp",
+      "source_sha256": "75c8a9fb09d3a4d324d9ac71ccc751773cf3738f317f3ebc8ce21b71bdbb4e32",
+      "object_sha256": "6e340129d578c78ab6bb0d4d26361387f49579b5dedc414f4e7302f5b87dd761",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf19__pointer_type_info"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-tf-19-pointer-type-info/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-ti-spell/ti_spell.cpp",
+      "source_sha256": "ae8f783c3d724265660d5f0e57d4e2747df65000a8daffe69cbd3791593664e8",
+      "object_sha256": "292fa8244be66cb83a45762ed526a5286741bcb125005a87c26f25afeb3fa670",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-ti-spell/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-tlb-info/tlb_info.cpp",
+      "source_sha256": "a1fc9838ac06c7181b098f2578ae5520eac60cdd2acbb0d4924ee8011c1e64ec",
+      "object_sha256": "a6f37fc2a25d87393d908496c982fd97b39763a1b3bfb697c24602499d3eed3c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-tlb-info/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.cpp",
+      "source_sha256": "3364a32884aa5916afa294dd0ccb1263c9680091c8a03f7a106ca9067de4393d",
+      "object_sha256": "5961acd4987efaebc9fad06d9674fc0135efecb3c86d47f4a38d38afa6e0196a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-crt-a-tty-queue-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-crt-a",
+      "source": "sources/w11-crt-a-vieedmasync/vieedmasync.cpp",
+      "source_sha256": "be6cbf3d40c85e2298911cea00c3dcd2366863e2d15abadf0c7635e827906414",
+      "object_sha256": "6190a677cea5f6ccca6daa9800b721df221b508436d50122ff24e12d0f9c2e24",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "VIEEDMASync__Fi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-crt-a-vieedmasync/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
