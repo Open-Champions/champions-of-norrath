@@ -6,6 +6,13 @@
 // Inferred: this is the base-class key-release handler that forwards the event up the window tree,
 // and the table entry at offset 32 is the OnKeyUp slot (the class tables list it fifth).
 // Unknown: the key argument's range and what the McErr window does with it.
+#if defined(NORRATH_HOST_CONTRACT)
+extern "C" char* norrath_host_translate(unsigned address);
+#define NORRATH_TRANSLATE(address) norrath_host_translate(address)
+#else
+#define NORRATH_TRANSLATE(address) reinterpret_cast<char*>(static_cast<unsigned long>(address))
+#endif
+
 extern "C" {
 extern unsigned char sWndMcErr[];
 void OnKeyUp__10VIWndMcErri(void* self, int key);
@@ -22,10 +29,10 @@ void OnKeyUp__5VIWndi(void* self, int key) {
         return;
     }
     unsigned char* object = static_cast<unsigned char*>(self);
-    unsigned char* parent = reinterpret_cast<unsigned char*>(static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(object + 20)));
+    unsigned char* parent = reinterpret_cast<unsigned char*>(NORRATH_TRANSLATE(*reinterpret_cast<unsigned*>(object + 20)));
     if (parent) {
         const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-                                   static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(parent + 32))) + 4;
+                                   NORRATH_TRANSLATE(*reinterpret_cast<unsigned*>(parent + 32))) + 4;
         entry->function(parent + entry->delta, key);
     }
 }
