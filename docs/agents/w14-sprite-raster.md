@@ -46,10 +46,6 @@ Not in the brief: `Raster__8VISprite...` (0x1008128, 8 bytes, `move v0,zero`) wa
 - The 64-byte matrix locals are `VIMatrix44` objects: each is zero-filled inline and destroyed with `_$_10VIMatrix44(local, 2)`. The source models them as aligned `float[16]` plus those destructor calls; the real constructor is inlined in the image and not called.
 - The rigid-inverse formula and the 4-length row clamp are described by shape only.
 
-## Unknown
-
-Field names for every sprite/camera/raster offset used (sprite +48, +64, +68, +72, +80, +88, +96, +1072; camera +28, +48), what the sprite-kind answer 1 means, what `Process`/`SetBlendMatrices` answers mean, the `VIRect` layout, the lifetime/owner of `NameDefers`, what the mode word at particle +1072 means, and the R5900 `rsqrt.s` rounding (host checks use IEEE division and `sqrt`). The `Raster` argument "flags" is only known as an unsigned word passed through or tested with bit 0 / bit 1.
-
 ## Imports closed
 
 - `GetInstType__C13VIGroupSpriteR7VIScene`
@@ -408,3 +404,7 @@ All 21 functions: they are host-checked only with mocks for the callees and with
 ## Mutation checks
 
 `Raster__20VIEffectVolumeSprite` was run against two hand-made mutants (swapped `Mul` operands, wrong index in the fourth-row formula); both were caught. Other host checks assert order, argument identity, thresholds on both sides of each compare, and untouched-state cases, but were not each mutation-tested.
+
+## Unknown
+
+Field names for every sprite/camera/raster offset used (sprite +48, +64, +68, +72, +80, +88, +96, +1072; camera +28, +48), what the sprite-kind answer 1 means, what `Process`/`SetBlendMatrices` answers mean, the `VIRect` layout, the lifetime/owner of `NameDefers`, what the mode word at particle +1072 means, and the R5900 `rsqrt.s` rounding (host checks use IEEE division and `sqrt`). The `Raster` argument "flags" is only known as an unsigned word passed through or tested with bit 0 / bit 1.
