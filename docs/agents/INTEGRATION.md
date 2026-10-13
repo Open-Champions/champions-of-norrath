@@ -5780,6 +5780,68 @@ Opened: `_4item$itemTable`, `beardSetting`, `cacheLoadDelayTime`, `cacheLoadName
 `hairStyleSetting`, `hudGetFadeIconPos__Fii`,
 `msgInventoryGridDropItem__Fiiciiii`, `skinSetting`
 
+## agents/w9-ctors-lantern-c
+
+Merged (the branch notes carry the five summary sections; the tip was 45
+minutes old). Forty data units (view objects) with fresh `input_order` values
+2898 through 2937, so the function-body count is unchanged at 2336. Each has a
+comparison under `views/host/`; all 40 build (linked with the unit, no source
+change) and exit 0 here (40 of 40). Forty imports closed and none opened. The
+notes say the string `norrath_ctors_ant_lantern_view_476b90` and other view
+names outside the worker's list were not defined. No game binary or
+disassembly listing was committed. 2936 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1525 |
+| After | 1485 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_46fa38`,
+`norrath_ctors_ant_lantern_view_46fa48`,
+`norrath_ctors_ant_lantern_view_46fa58`,
+`norrath_ctors_ant_lantern_view_46fd38`,
+`norrath_ctors_ant_lantern_view_46ffe0`,
+`norrath_ctors_ant_lantern_view_470df8`,
+`norrath_ctors_ant_lantern_view_470e08`,
+`norrath_ctors_ant_lantern_view_470e18`,
+`norrath_ctors_ant_lantern_view_470e28`,
+`norrath_ctors_ant_lantern_view_470e38`,
+`norrath_ctors_ant_lantern_view_470e48`,
+`norrath_ctors_ant_lantern_view_470e58`,
+`norrath_ctors_ant_lantern_view_470e68`,
+`norrath_ctors_ant_lantern_view_470e78`,
+`norrath_ctors_ant_lantern_view_470e88`,
+`norrath_ctors_ant_lantern_view_470e98`,
+`norrath_ctors_ant_lantern_view_470ea8`,
+`norrath_ctors_ant_lantern_view_470eb8`,
+`norrath_ctors_ant_lantern_view_470ff0`,
+`norrath_ctors_ant_lantern_view_471000`,
+`norrath_ctors_ant_lantern_view_471010`,
+`norrath_ctors_ant_lantern_view_471020`,
+`norrath_ctors_ant_lantern_view_471030`,
+`norrath_ctors_ant_lantern_view_471150`,
+`norrath_ctors_ant_lantern_view_4711f0`,
+`norrath_ctors_ant_lantern_view_471208`,
+`norrath_ctors_ant_lantern_view_471218`,
+`norrath_ctors_ant_lantern_view_471230`,
+`norrath_ctors_ant_lantern_view_471248`,
+`norrath_ctors_ant_lantern_view_471260`,
+`norrath_ctors_ant_lantern_view_471278`,
+`norrath_ctors_ant_lantern_view_471ed0`,
+`norrath_ctors_ant_lantern_view_471ee0`,
+`norrath_ctors_ant_lantern_view_471ef0`,
+`norrath_ctors_ant_lantern_view_471f00`,
+`norrath_ctors_ant_lantern_view_471f10`,
+`norrath_ctors_ant_lantern_view_471f20`,
+`norrath_ctors_ant_lantern_view_476ac8`,
+`norrath_ctors_ant_lantern_view_476b70`,
+`norrath_ctors_ant_lantern_view_476b80`
+
+Opened: none
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6161,3 +6223,4 @@ and no startup stage has executed.
 - 2026-10-12 21:48 CDT — `agents/w9-animation-object-c` — 1564 unresolved imports
 - 2026-10-12 21:53 CDT — `agents/w9-render-math-c` — 1544 unresolved imports
 - 2026-10-12 21:55 CDT — `agents/w9-hud-inventory-items-a` — 1525 unresolved imports
+- 2026-10-12 21:58 CDT — `agents/w9-ctors-lantern-c` — 1485 unresolved imports
