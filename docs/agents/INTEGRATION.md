@@ -6140,6 +6140,96 @@ Closed: `norrath_ctors_ant_lantern_view_485420`,
 
 Opened: none
 
+## agents/w9-ctors-wraith-a
+
+Merged (the branch notes carry a build-plan section, imports and a summary,
+but not all five named sections; the tip was 34 minutes old, and the notes
+tell the checks apart clearly, so I took it as a package whose every unit has
+a committed check). Thirty-eight data units (virtual tables and shared
+pointers) with fresh `input_order` values 3134 through 3171; the function-body
+count stays at 2336. Each has a host program under `views/host/`. On this
+machine they only link after the `asm("name")` labels are given the macOS
+leading underscore (I rebuilt them from a copy with `asm("_name")`; no source
+change); built that way all 38 exit 0. They guard the source's shape against
+the notes' extraction, as the notes say; the comparison against the original
+(`docs/agents/w9-ctors-wraith-a-compare.py`, which reads the private
+executable) was not run, and I did not run the plan-entries helper script. The
+opened set rises by 72 because each virtual table names its class's slot
+functions, which are not defined in this package. No game binary or
+disassembly listing was committed. 3170 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1289 |
+| After | 1323 |
+| Closed | 38 |
+| Opened | 72 |
+
+Closed: `norrath_ctors_lava_wraith_view_34b474`,
+`norrath_ctors_lava_wraith_view_42b010`,
+`norrath_ctors_lava_wraith_view_42b330`,
+`norrath_ctors_lava_wraith_view_42b3d8`,
+`norrath_ctors_lava_wraith_view_42b478`,
+`norrath_ctors_lava_wraith_view_42b7e8`,
+`norrath_ctors_lava_wraith_view_42bcb8`,
+`norrath_ctors_lava_wraith_view_42bd18`,
+`norrath_ctors_lava_wraith_view_42c228`,
+`norrath_ctors_lava_wraith_view_42c570`,
+`norrath_ctors_lava_wraith_view_42c630`,
+`norrath_ctors_lava_wraith_view_42c8e0`,
+`norrath_ctors_lava_wraith_view_42ca58`,
+`norrath_ctors_lava_wraith_view_42cbd0`,
+`norrath_ctors_lava_wraith_view_42ccf0`,
+`norrath_ctors_lava_wraith_view_42ce60`,
+`norrath_ctors_lava_wraith_view_42d048`,
+`norrath_ctors_lava_wraith_view_42d138`,
+`norrath_ctors_lava_wraith_view_42d2b0`,
+`norrath_ctors_lava_wraith_view_42d480`,
+`norrath_ctors_lava_wraith_view_42d578`,
+`norrath_ctors_lava_wraith_view_42d650`,
+`norrath_ctors_lava_wraith_view_42d700`,
+`norrath_ctors_lava_wraith_view_42d7d0`,
+`norrath_ctors_lava_wraith_view_42d8d0`,
+`norrath_ctors_lava_wraith_view_42dbf0`,
+`norrath_ctors_lava_wraith_view_42dc40`,
+`norrath_ctors_lava_wraith_view_438c70`,
+`norrath_ctors_lava_wraith_view_448fb0`,
+`norrath_ctors_lava_wraith_view_449310`,
+`norrath_ctors_lava_wraith_view_449550`,
+`norrath_ctors_lava_wraith_view_449820`,
+`norrath_ctors_lava_wraith_view_449940`,
+`norrath_ctors_lava_wraith_view_449c20`,
+`norrath_ctors_lava_wraith_view_44a390`,
+`norrath_ctors_lava_wraith_view_44ab70`,
+`norrath_ctors_lava_wraith_view_44adb0`,
+`norrath_ctors_lava_wraith_view_44aea0`
+
+Opened: `_$_10StaticFire`, `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_3NPC`,
+`_$_5Torch`, `_$_6Switch`, `_$_6Wraith`, `_$_7WebTrap`, `_$_8RollDoor`,
+`_$_9Savepoint`, `__tf10StaticFire`, `__tf10WaterSpout`, `__tf10WeaponRack`,
+`__tf5Torch`, `__tf6Switch`, `__tf6Wraith`, `__tf7WebTrap`, `__tf8RollDoor`,
+`clone__10StaticFire`, `clone__10WaterSpout`, `clone__10WeaponRack`,
+`clone__3NPC`, `clone__5Torch`, `clone__6Switch`, `clone__6Wraith`,
+`clone__7WebTrap`, `clone__8RollDoor`, `clone__9Savepoint`,
+`getMinibossName__6Wraith`, `getModel__3NPC`, `initMiniboss__6Wraith`,
+`isEnemy__6WraithP10GameObject`, `msg_collision__5TorchP10GameObject`,
+`msg_draw__10StaticFire`, `msg_draw__10WaterSpout`,
+`msg_draw__10WeaponRack`, `msg_draw__3NPC`, `msg_draw__5Torch`,
+`msg_draw__6Wraith`, `msg_draw__7WebTrap`, `msg_draw__8RollDoor`,
+`msg_draw__9Savepoint`, `msg_getPokeName__10WeaponRackPUsi`,
+`msg_getPokeName__6SwitchPUsi`, `msg_getPokeName__8RollDoorPUsi`,
+`msg_getPokeName__9SavepointPUsi`, `msg_hurt__3NPCfP10GameObjecti`,
+`msg_load__3NPCPc`, `msg_load__5TorchPc`, `msg_load__8RollDoorPc`,
+`msg_load__9SavepointPc`, `msg_poke__10WeaponRacki`, `msg_poke__6Switchi`,
+`msg_poke__8RollDoori`, `msg_poke__9Savepointi`, `msg_presave__8RollDoor`,
+`msg_run__10StaticFire`, `msg_run__10WaterSpout`, `msg_run__3NPC`,
+`msg_run__5Torch`, `msg_run__6Wraith`, `msg_run__7WebTrap`,
+`msg_run__8RollDoor`, `msg_run__9Savepoint`, `msg_save__3NPCPc`,
+`msg_save__5TorchPc`, `msg_save__8RollDoorPc`, `msg_save__9SavepointPc`,
+`msg_trigger__3NPCi`, `msg_trigger__8RollDoori`, `setState__3NPCi`,
+`setState__6Wraithi`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6527,3 +6617,4 @@ and no startup stage has executed.
 - 2026-10-12 22:05 CDT — `agents/w9-ctors-lantern-f` — 1365 unresolved imports
 - 2026-10-12 22:08 CDT — `agents/w9-ctors-lantern-g` — 1325 unresolved imports
 - 2026-10-12 22:10 CDT — `agents/w9-ctors-lantern-h` — 1289 unresolved imports
+- 2026-10-12 22:13 CDT — `agents/w9-ctors-wraith-a` — 1323 unresolved imports
