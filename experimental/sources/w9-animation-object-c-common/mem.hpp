@@ -13,6 +13,8 @@ static_assert(sizeof(void*) == 4 && sizeof(__UINTPTR_TYPE__) == 4,
 #ifdef NORRATH_HOST_ARENA
 extern "C" unsigned char* norrath_host_pointer(unsigned address);
 extern "C" unsigned norrath_host_address(const unsigned char* pointer);
+// Stand-in for calling a target function word whose arguments are (pointer, int).
+extern "C" void norrath_host_call_pointer_int(unsigned function, unsigned char* first, int second);
 #endif
 namespace norrath_aoc {
 typedef unsigned __attribute__((may_alias)) word_t;
@@ -40,6 +42,18 @@ inline void store_pointer(unsigned char* p, const unsigned char* value) {
     store_word(p, value == nullptr ? 0u : norrath_host_address(value));
 #else
     store_word(p, static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(value)));
+#endif
+}
+// Calls the virtual slot at byte `slot` of the vtable word at self+72. A slot is eight
+// bytes: a signed halfword that adjusts `this`, then the function word at +4.
+inline void call_virtual_pointer_int(unsigned char* self, unsigned slot, int argument) {
+    const unsigned char* entry = load_pointer(self + 72) + slot;
+    const int adjust = load_signed_half(entry);
+    const unsigned function = load_word(entry + 4);
+#ifdef NORRATH_HOST_ARENA
+    norrath_host_call_pointer_int(function, self + adjust, argument);
+#else
+    reinterpret_cast<void (*)(unsigned char*, int)>(static_cast<__UINTPTR_TYPE__>(function))(self + adjust, argument);
 #endif
 }
 }
