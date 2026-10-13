@@ -8671,7 +8671,7 @@ Opened: `Allocate__14VIQueryTriList`, `BeginBillboards__8VIRasterPP11VIBillboard
 
 Merged (merge commit, branch tip `996f6e80`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 30 of the branch's 31 units (28 function bodies) with fresh
-`input_order` values 4768 through 4797. 29 of the 30 host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000); the remaining selected one is among the 30 and also passes. The worker's private paired runs were not
+`input_order` values 4768 through 4797. All 30 selected host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4796 authored inputs, 3700 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
