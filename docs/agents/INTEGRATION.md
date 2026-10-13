@@ -5611,9 +5611,9 @@ minutes old, so this reflects the tip at that time). Twenty-two of its 24
 units were selected with fresh `input_order` values 2824 through 2845.
 `e-rand` and `find-tag-float` were **not** selected: each defines a function
 that is already supplied (`findTagFloat__10GameObjectPci` by
-`w9-animation-object-a-find-tag-float`; the link error named the same pair for
-`eRand__10GameObject`, whose earlier definer I did not pin down beyond the
-plan), and with both selected the link failed with multiple definitions; their
+`w9-animation-object-a-find-tag-float`; the link also reported `e-rand` (which
+defines `eRand__10GameObject`) as a duplicate; I did not pin down its other
+definer), and with both selected the link failed with multiple definitions; their
 files stay in the snapshot, unselected. Host checks: 22 of 24 build and exit 0 as is;
 `cancel-all-always-draw` and `lump-add` pass when built the way their header
 comments say (the first with three `w8-object-list-math-safe-iterator-*`
