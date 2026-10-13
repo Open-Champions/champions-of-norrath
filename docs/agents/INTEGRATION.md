@@ -5407,8 +5407,9 @@ minutes old). Twenty-five units with fresh `input_order` values 2740 through
 2764: 22 function units (render and model math, scissor and megatile helpers)
 and three data units (camera angles, map scissor, megatile seed rotation) that
 emit no function. All 25 host checks build and exit 0 here (25 of 25). The
-notes' "Strings kept" section lists text the worker kept in sources; I did not
-find dialogue in the units, but I did not audit every literal. No game binary
+notes' "Strings kept" section says the only literals are one engine level
+identifier and two resource file names in `modelDrawShadow` (engine
+identifiers, not dialogue); I read that section but did not grep every unit. No game binary
 or disassembly listing was committed. 2241 function bodies, 2763 authored
 inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
 
