@@ -9,3 +9,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | source directory (`experimental/sources/w9-animation-object-a-…`) | emitted function | image address | image extent |
 |---|---|---|---|
 | `erand` | `eRand__10GameObject` | 0x153fa8 | 40 |
+| `b-exit-state-persue-idle` | `bExitStatePersueIdle__8Creature` | 0x112e08 | 12 |
