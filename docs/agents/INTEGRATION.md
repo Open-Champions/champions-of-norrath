@@ -4964,6 +4964,84 @@ Closed: `srcfile`
 
 Opened: none
 
+## agents/w9-startup-crt-b
+
+Merged (the branch notes carry the five summary sections; the tip was 33
+minutes old, so this reflects the tip at that time). Thirty-three of its 34
+units were selected with fresh `input_order` values 2544 through 2576: the
+newlib-style float kernels and the allocator, constructor and type-info
+pieces, one data-only unit. `tf-11lavavehicle` was **not** selected: it
+defines `__tf11LavaVehicle` and `__ti11LavaVehicle`, which
+`w9-startup-crt-c` already supplies, so the link failed with a multiple
+definition; its files stay in the snapshot, unselected. Host checks: 34 of 34
+pass here once built as each file's header says. Three float checks
+(`ieee754-powf`, `kernel-tanf`, `rem-pio2f`) compare recorded result bits and
+fail by one or two ulps on this machine unless built with
+`-ffp-contract=off` (the host compiler fuses multiply-add); with it they pass
+(992 vectors, 1.00 ulp worst, and the recorded reduction cases). Their recorded
+vectors come from the worker's private interpreter run and were not reproduced.
+Five link-style checks (`builtin-new`, `malloc-lock`, `malloc-unlock`,
+`terminate`, `update-mallinfo`) need their implementation file on the
+command line (two also need a `-D`); they pass that way. The net import count
+rises because the float kernels and allocator pieces reference many more
+unresolved names than they close. No game binary or disassembly listing was
+committed. 2073 function bodies, 2575 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1436 |
+| After | 1472 |
+| Closed | 32 |
+| Opened | 68 |
+
+Closed: `__4GoldG6Point3i`, `__6PhPropG6Point3PcN22liPQ24item11descriptionf`,
+`__6PlayerG6Point3sii`, `__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii`,
+`__7VISetup`, `__8GutChunkG6Point3iif`, `__9VIStation`, `__builtin_new`,
+`__ieee754_powf`, `__ieee754_rem_pio2f`, `__kernel_tanf`, `__malloc_lock`,
+`__malloc_unlock`, `__malloc_update_mallinfo`, `__terminate`,
+`__tf10DoorSecret`, `__tf10GameObject`, `__tf11AutoChestLP`,
+`__tf11FloorSwitch`, `__tf11PushTrigger`, `__tf14__si_type_info`,
+`__tf15AutoContainerLP`, `__tf16__user_type_info`, `__tf3Orc`, `__tf4Boat`,
+`__tf6Candle`, `__tf6PhProp`, `__tf7AntTrap`, `__tf7Blocker`,
+`__tf7Candle2`, `__tf7EggSack`, `__tf9DoorSwing`
+
+Opened: `_$_9bad_alloc`, `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`,
+`__10ProjectileG6Point3P10GameObjectPQ210GameObject11resourceMap`,
+`__10VIWndLegal`, `__11VIWndSplash`, `__12VIDictionary`, `__12VIWndPatcher`,
+`__13VISoundDevice`, `__15VIWindowManager`, `__20VIWndGenericRenderer`,
+`__4PropG6Point3PcN22li`, `__4VIUI`, `__5VIPad`, `__6VIFont`, `__7VIFader`,
+`__7VIScene`, `__8CreatureG6Point3sPQ210GameObject11resourceMapfPPc`,
+`__8VIRaster`, `__9VICollide`, `__9VIWndDnas`, `__9VIWndEula`,
+`__ieee754_sqrtf`, `__kernel_rem_pio2f`, `__new_handler`, `__rtti_user`,
+`__terminate_func`, `__tf10AutoPropLP`, `__tf9bad_alloc`, `__tf9type_info`,
+`__ti10AutoPropLP`, `__ti9type_info`, `_vt$4Gold`, `_vt$6PhProp`,
+`_vt$6Player`, `_vt$6Sparks`, `_vt$8GutChunk`, `_vt$9bad_alloc`,
+`coreForceSmallCharacters`, `fabsf`, `fxResourceMap`, `goldAnm`,
+`lightAdd__FP5Light`, `norrath_w9_startup_crt_b_view_11c3ae8`,
+`norrath_w9_startup_crt_b_view_462260`,
+`norrath_w9_startup_crt_b_view_4644c0`,
+`norrath_w9_startup_crt_b_view_464ab8`,
+`norrath_w9_startup_crt_b_view_464ac8`,
+`norrath_w9_startup_crt_b_view_464ad8`,
+`norrath_w9_startup_crt_b_view_464ae8`,
+`norrath_w9_startup_crt_b_view_464af8`,
+`norrath_w9_startup_crt_b_view_464b10`,
+`norrath_w9_startup_crt_b_view_464b20`,
+`norrath_w9_startup_crt_b_view_464b30`,
+`norrath_w9_startup_crt_b_view_464b48`,
+`norrath_w9_startup_crt_b_view_464b58`,
+`norrath_w9_startup_crt_b_view_464b68`,
+`norrath_w9_startup_crt_b_view_464b78`,
+`norrath_w9_startup_crt_b_view_464b88`,
+`norrath_w9_startup_crt_b_view_464b98`,
+`norrath_w9_startup_crt_b_view_4708d0`,
+`norrath_w9_startup_crt_b_view_4801f8`,
+`norrath_w9_startup_crt_b_view_4816dc`,
+`norrath_w9_startup_crt_b_view_483b70`,
+`norrath_w9_startup_crt_b_view_485380`, `racePrefix`, `scalbnf`,
+`selectLumpName`, `typeToResource`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5318,3 +5396,4 @@ and no startup stage has executed.
 - 2026-10-12 20:32 CDT — `agents/w9-other-a` — 1461 unresolved imports
 - 2026-10-12 20:37 CDT — `agents/w9-other-b` — 1437 unresolved imports
 - 2026-10-12 20:45 CDT — `agents/runtime-tables` — 1436 unresolved imports
+- 2026-10-12 20:59 CDT — `agents/w9-startup-crt-b` — 1472 unresolved imports
