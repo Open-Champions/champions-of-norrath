@@ -19,7 +19,8 @@ int main() {
     if (scePadInfoAct(1, 0, 0, 1) != 0 || scePadInfoAct(0, 1, 0, 1) != 0 || calls != 0) return 2;
     if (scePadInfoAct(1, 1, 0, 1) != b[48] || calls != 1 || seen_port != 1 || seen_slot != 1) return 3;
     if (scePadInfoAct(1, 1, 0, 2) != b[49] || scePadInfoAct(1, 1, 0, 3) != b[50] || scePadInfoAct(1, 1, 0, 4) != b[51]) return 4;
-    if (scePadInfoAct(1, 1, 2, 1) != b[56] || scePadInfoAct(1, 1, 2, 4) != b[59]) return 5;   // 4 bytes per index
+    if (scePadInfoAct(1, 1, 2, 1) != b[56] || scePadInfoAct(1, 1, 2, 2) != b[57] || scePadInfoAct(1, 1, 2, 3) != b[58] ||
+        scePadInfoAct(1, 1, 2, 4) != b[59]) return 5;   // 4 bytes per index
     if (scePadInfoAct(1, 1, 1, 0) != 0 || scePadInfoAct(1, 1, 1, 5) != 0 || scePadInfoAct(1, 1, 1, -1) != 0) return 6;
     if (scePadInfoAct(1, 1, 3, 1) != 0 || scePadInfoAct(1, 1, 100, 1) != 0) return 7;       // index >= count
     if (scePadInfoAct(1, 1, -1, 1) != 3 || scePadInfoAct(1, 1, -1, 9) != 3) return 8;        // -1 returns the count

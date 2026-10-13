@@ -33,7 +33,9 @@ int main() {
     b[105] = 2;
     if (scePadInfoMode(1, 1, 4, -1) != 4) return 9;                                 // count
     if (scePadInfoMode(1, 1, 4, 0) != 0xa000 || scePadInfoMode(1, 1, 4, 3) != 0xa333) return 10;
-    if (scePadInfoMode(1, 1, 4, 4) != 0 || scePadInfoMode(1, 1, 4, 99) != 0 || scePadInfoMode(1, 1, 4, -2) != 0) return 11;
+    if (scePadInfoMode(1, 1, 4, 4) != 0 || scePadInfoMode(1, 1, 4, 99) != 0) return 11;
+    unsigned short before; std::memcpy(&before, b + 76, 2);
+    if (scePadInfoMode(1, 1, 4, -2) != before) return 20;                           // other negatives are in range
     half(b, 80, 0xffee);
     if (scePadInfoMode(1, 1, 4, 0) != 0xffee) return 12;                            // unsigned halfword
     b[104] = 200;
