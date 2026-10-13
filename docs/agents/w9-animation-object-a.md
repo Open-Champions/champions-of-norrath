@@ -18,3 +18,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `anim-global-sync` | `animGlobalSync__FP14AnimationState` | 0x1639e8 | 248 |
 | `anim-advance-animation` | `animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps` | 0x1639c8 | 28 |
 | `game-line-init-path-state` | `gameLineInitPathState__FP17gameLinePathStatePcP6Point3` | 0x279b58 | 88 |
+| `find-tag-float` | `findTagFloat__10GameObjectPci` | 0x1410a0 | 328 |
