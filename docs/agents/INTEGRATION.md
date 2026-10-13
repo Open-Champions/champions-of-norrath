@@ -7473,3 +7473,36 @@ Closed: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `Exit`, `GetMemorySiz
 
 Opened: `KbmReaderThread`, `TLBInfo`, `_Exit`, `_SetTLBEntry`, `__cplus_type_matcher`, `__floatdidf`, `__get_eh_context`, `__get_eh_info`, `__pack_f`, `dptoul`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
 - 2026-10-13 01:02 CDT — `agents/w10-startup-a` — 1454 unresolved imports
+
+## agents/w10-front-a
+
+Merged (merge commit, branch tip `e1be7c72`, 79 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Front-end, save and player-select code: 18 units (11 functions,
+the rest data tables and strings) with fresh `input_order` values 3629 through 3646. 18 of
+18 selected host contracts build and exit 0 here (x86_64, `-ffp-contract=off`,
+`-Werror`). Eight units were **not** selected, and their sources stay in the snapshot:
+seven have no committed check (`core-start-loading-screen`, `load-player-lumps`,
+`mc-build-packed-player`, `mc-convert-temp-player-to-real`, `mc-net-pack`,
+`mc-net-un-pack`, `mc-set-ram-nm-players`; the notes say their only test is a private
+paired run outside git, which a reviewer cannot repeat), and `mc-load-level-entities`
+has a host contract that fails on this machine: it stores 4-byte pointers into a table
+that the source reads as `void*`, so on a 64-bit host the pointer is overwritten and the
+trace ends at the script step (`script ?`). It needs a 32-bit host; it is not a defect
+that integration may fix, so it was left out. The owner can make the contract
+pointer-width independent and add committed checks for the seven others, then push again.
+The notes' count (28 closed, 25 opened, 1332 to 1329) does not apply to what was
+selected. Compiled sizes are not image sizes and no byte match is claimed. The worker did
+not run a full build; this integration did: 3645 authored inputs, 2640 function bodies,
+zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1454 |
+| After | 1439 |
+| Closed | 20 |
+| Opened | 5 |
+
+Closed: `MC_GetLoadName__Fv`, `MC_GetRamSlot__FPi`, `MC_LoadRamSlot__Fv`, `MC_ReplicateFirstPlayersImportantThings__Fv`, `MC_ResetAutoCheckPointSave__FPc`, `ascii_special`, `ascii_table`, `browserDelete`, `browserOverwrite`, `coreForceSmallCharacters`, `debugStartMenuIsOn__Fv`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`, `eqFind__FPci`, `gameInitPostFrontend__Fv`, `getSaveTableEntry__FPc`, `getSlotName__FiiPc`, `hubNames`, `importInfoHeader`, `loadSlot`, `markFileName`
+
+Opened: `eqGroup`, `globalIcons`, `nmEqGroups`, `nmWGroups`, `wGroup`

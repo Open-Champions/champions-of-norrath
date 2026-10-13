@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3627,
+  "default_authored_inputs": 3645,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2279,6 +2279,24 @@
     "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+    "sources/w10-front-a-ascii-tables/ascii_tables.cpp": "0af701afb51a60b34ec553a156743e42211e5f571c7fa70609bce6c9283d702f",
+    "sources/w10-front-a-browser-flags/browser_flags.cpp": "d70cc837a2dabb540b2f8452c95a9638ef7ee4e60510b4c2ddf4d30023553cc4",
+    "sources/w10-front-a-core-force-small-characters/core_force_small_characters.cpp": "1d6029afc065c9e593212919c06b96eced7ca63538eb878c6d5dbb96b5274293",
+    "sources/w10-front-a-debug-start-menu-is-on/debug_start_menu_is_on.cpp": "1e1cd09d98fef1f78e7b3105ab46e5ede2aa18967de6e4feaf832e9b27709383",
+    "sources/w10-front-a-dir-entry-is-quick-load/dir_entry_is_quick_load.cpp": "ab19ecbc5b016f0f727f2f3c9c97d8fdc90a5e30a15aa700c0299d6605a49c50",
+    "sources/w10-front-a-eq-find/eq_find.cpp": "7a2274a96fe5cc8e8e04b4e5011117794434e7cf5d0b538075a5ad68a802381b",
+    "sources/w10-front-a-game-init-post-frontend/game_init_post_frontend.cpp": "c4f2c74ce16d868fc3192f40843c47f990238247e17d4142f1cd71cb99b1df21",
+    "sources/w10-front-a-get-save-table-entry/get_save_table_entry.cpp": "a0d4a5f9b52027b1d927adc847a9d5d5a9cc55392b674b319ae4857efce5b165",
+    "sources/w10-front-a-get-slot-name/get_slot_name.cpp": "eb0d4992c459179cf46bf7bd0641968b8ba23681c78f6945ca1bd84a6072468a",
+    "sources/w10-front-a-hub-names/hub_names.cpp": "71859f0d3a62a69b83d588261d0203d73b95415542d843820bbcfbffb0bd6f82",
+    "sources/w10-front-a-import-info-header/import_info_header.cpp": "9120a600b41923a7718665cfff208549e4dedeabae1a1905a55bf49d31d386b5",
+    "sources/w10-front-a-load-slot/load_slot.cpp": "4b82c4e6b5473dff1083eb8904637256cb6ae56fb2e95a8047708a2325625b98",
+    "sources/w10-front-a-mark-file-name/mark_file_name.cpp": "c60be0e8525c90db93272a75daf6cd315710ee64d5f8793b83819073d07016fa",
+    "sources/w10-front-a-mc-get-load-name/mc_get_load_name.cpp": "78b061e36b5c77c93013007bd99a2c0d9fde96230c0cb53397da6411b7fd3198",
+    "sources/w10-front-a-mc-get-ram-slot/mc_get_ram_slot.cpp": "2d474ebc3ef69546903f9709d5255d1e51e11820283544909cf9ed6051e20c29",
+    "sources/w10-front-a-mc-load-ram-slot/mc_load_ram_slot.cpp": "6a3bb05b32527a53fd60442d00504802656d742c6b093e1255451e4f345b2017",
+    "sources/w10-front-a-mc-replicate-first-players-important-things/mc_replicate_first_players_important_things.cpp": "9d3af6391c6f5086b89a51d0f137e84dc84096712866209124aef01ceb240614",
+    "sources/w10-front-a-mc-reset-auto-check-point-save/mc_reset_auto_check_point_save.cpp": "8356b35202efd7996664208fbae721fc60b47795270de0c6a4454c2b799095e7",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
     "sources/w10-startup-a-create-reader-thread/create_reader_thread.cpp": "f13780c7296ac7212abe35072cb85b53714fc6b1979120a6e91581e38e7995d7",
@@ -51310,6 +51328,241 @@
           "compiled_body_bytes": 84
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3629,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_ascii_tables.o",
+      "profile": "authored_cpp",
+      "sha256": "0af701afb51a60b34ec553a156743e42211e5f571c7fa70609bce6c9283d702f",
+      "source": "sources/w10-front-a-ascii-tables/ascii_tables.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3630,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_browser_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "d70cc837a2dabb540b2f8452c95a9638ef7ee4e60510b4c2ddf4d30023553cc4",
+      "source": "sources/w10-front-a-browser-flags/browser_flags.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3631,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_core_force_small_characters.o",
+      "profile": "authored_cpp",
+      "sha256": "1d6029afc065c9e593212919c06b96eced7ca63538eb878c6d5dbb96b5274293",
+      "source": "sources/w10-front-a-core-force-small-characters/core_force_small_characters.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3632,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_debug_start_menu_is_on.o",
+      "profile": "authored_cpp",
+      "sha256": "1e1cd09d98fef1f78e7b3105ab46e5ede2aa18967de6e4feaf832e9b27709383",
+      "source": "sources/w10-front-a-debug-start-menu-is-on/debug_start_menu_is_on.cpp",
+      "emitted_functions": [
+        {
+          "name": "debugStartMenuIsOn__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3633,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_dir_entry_is_quick_load.o",
+      "profile": "authored_cpp",
+      "sha256": "ab19ecbc5b016f0f727f2f3c9c97d8fdc90a5e30a15aa700c0299d6605a49c50",
+      "source": "sources/w10-front-a-dir-entry-is-quick-load/dir_entry_is_quick_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "dirEntryIsQuickLoad__FP14sceMcTblGetDir",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3634,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_eq_find.o",
+      "profile": "authored_cpp",
+      "sha256": "7a2274a96fe5cc8e8e04b4e5011117794434e7cf5d0b538075a5ad68a802381b",
+      "source": "sources/w10-front-a-eq-find/eq_find.cpp",
+      "emitted_functions": [
+        {
+          "name": "eqFind__FPci",
+          "compiled_body_bytes": 468
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3635,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_game_init_post_frontend.o",
+      "profile": "authored_cpp",
+      "sha256": "c4f2c74ce16d868fc3192f40843c47f990238247e17d4142f1cd71cb99b1df21",
+      "source": "sources/w10-front-a-game-init-post-frontend/game_init_post_frontend.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameInitPostFrontend__Fv",
+          "compiled_body_bytes": 340
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3636,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_get_save_table_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "a0d4a5f9b52027b1d927adc847a9d5d5a9cc55392b674b319ae4857efce5b165",
+      "source": "sources/w10-front-a-get-save-table-entry/get_save_table_entry.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSaveTableEntry__FPc",
+          "compiled_body_bytes": 268
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3637,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_get_slot_name.o",
+      "profile": "authored_cpp",
+      "sha256": "eb0d4992c459179cf46bf7bd0641968b8ba23681c78f6945ca1bd84a6072468a",
+      "source": "sources/w10-front-a-get-slot-name/get_slot_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSlotName__FiiPc",
+          "compiled_body_bytes": 220
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3638,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_hub_names.o",
+      "profile": "authored_cpp",
+      "sha256": "71859f0d3a62a69b83d588261d0203d73b95415542d843820bbcfbffb0bd6f82",
+      "source": "sources/w10-front-a-hub-names/hub_names.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3639,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_import_info_header.o",
+      "profile": "authored_cpp",
+      "sha256": "9120a600b41923a7718665cfff208549e4dedeabae1a1905a55bf49d31d386b5",
+      "source": "sources/w10-front-a-import-info-header/import_info_header.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3640,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_load_slot.o",
+      "profile": "authored_cpp",
+      "sha256": "4b82c4e6b5473dff1083eb8904637256cb6ae56fb2e95a8047708a2325625b98",
+      "source": "sources/w10-front-a-load-slot/load_slot.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3641,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mark_file_name.o",
+      "profile": "authored_cpp",
+      "sha256": "c60be0e8525c90db93272a75daf6cd315710ee64d5f8793b83819073d07016fa",
+      "source": "sources/w10-front-a-mark-file-name/mark_file_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3642,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mc_get_load_name.o",
+      "profile": "authored_cpp",
+      "sha256": "78b061e36b5c77c93013007bd99a2c0d9fde96230c0cb53397da6411b7fd3198",
+      "source": "sources/w10-front-a-mc-get-load-name/mc_get_load_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_GetLoadName__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3643,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mc_get_ram_slot.o",
+      "profile": "authored_cpp",
+      "sha256": "2d474ebc3ef69546903f9709d5255d1e51e11820283544909cf9ed6051e20c29",
+      "source": "sources/w10-front-a-mc-get-ram-slot/mc_get_ram_slot.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_GetRamSlot__FPi",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3644,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mc_load_ram_slot.o",
+      "profile": "authored_cpp",
+      "sha256": "6a3bb05b32527a53fd60442d00504802656d742c6b093e1255451e4f345b2017",
+      "source": "sources/w10-front-a-mc-load-ram-slot/mc_load_ram_slot.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadRamSlot__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3645,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mc_replicate_first_players_important_things.o",
+      "profile": "authored_cpp",
+      "sha256": "9d3af6391c6f5086b89a51d0f137e84dc84096712866209124aef01ceb240614",
+      "source": "sources/w10-front-a-mc-replicate-first-players-important-things/mc_replicate_first_players_important_things.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_ReplicateFirstPlayersImportantThings__Fv",
+          "compiled_body_bytes": 348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3646,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_a_mc_reset_auto_check_point_save.o",
+      "profile": "authored_cpp",
+      "sha256": "8356b35202efd7996664208fbae721fc60b47795270de0c6a4454c2b799095e7",
+      "source": "sources/w10-front-a-mc-reset-auto-check-point-save/mc_reset_auto_check_point_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "MC_ResetAutoCheckPointSave__FPc",
+          "compiled_body_bytes": 140
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -51409,7 +51662,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0a18f36dbbed3817ffb964a87242c7557ba3d842855a4ac321ade708f24241fd",
+  "snapshot_sha256": "b8657484701b515584cf92eef7c99e184aa6255c4ef96ceb274e611da5d1a977",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
