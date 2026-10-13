@@ -45986,6 +45986,131 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w10-front-b-stats-screen/stats_screen.cpp"
+    },
+    {
+      "input_order": 3662,
+      "component": "w10-net-a-advance-real-state",
+      "object_name": "w10_net_a_advance_real_state.o",
+      "private_object_sha256": "469f8f698b554a3f6bafdb46cc61f8913f7669f90f72b4f3f85acea446ba7192",
+      "emitted_functions": [
+        {
+          "name": "advanceRealState__Fi",
+          "compiled_body_bytes": 4464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-advance-real-state/advance_real_state.cpp"
+    },
+    {
+      "input_order": 3663,
+      "component": "w10-net-a-anal-compress",
+      "object_name": "w10_net_a_anal_compress.o",
+      "private_object_sha256": "30eb24e9e29eac7e37cf36602741e6097c030ee84b5ad9f788656879998b9c5e",
+      "emitted_functions": [
+        {
+          "name": "analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci",
+          "compiled_body_bytes": 1308
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-anal-compress/anal_compress.cpp"
+    },
+    {
+      "input_order": 3664,
+      "component": "w10-net-a-comm-state-data",
+      "object_name": "w10_net_a_comm_state_data.o",
+      "private_object_sha256": "258cfb17733163a07f4b23945315252ae2eb19623916bd6e5288668be41115f7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-comm-state-data/comm_state_data.cpp"
+    },
+    {
+      "input_order": 3665,
+      "component": "w10-net-a-commander-valid",
+      "object_name": "w10_net_a_commander_valid.o",
+      "private_object_sha256": "d3bffe70f337db39a171595510389a1540234baacf182e26c27668bf0b662b1f",
+      "emitted_functions": [
+        {
+          "name": "commanderValid__14WoodElfSoldier",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-commander-valid/commander_valid.cpp"
+    },
+    {
+      "input_order": 3666,
+      "component": "w10-net-a-frame-state-data",
+      "object_name": "w10_net_a_frame_state_data.o",
+      "private_object_sha256": "53295935f3b0e622239443d262688419d37cf5dc0f5842e08d7923d431e9225c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-frame-state-data/frame_state_data.cpp"
+    },
+    {
+      "input_order": 3667,
+      "component": "w10-net-a-launch-state-data",
+      "object_name": "w10_net_a_launch_state_data.o",
+      "private_object_sha256": "5ae25d6d0edde5d1c1f6f58a63445d365da2791094e73544f49376ca983855c5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-launch-state-data/launch_state_data.cpp"
+    },
+    {
+      "input_order": 3668,
+      "component": "w10-net-a-net-check-activation",
+      "object_name": "w10_net_a_net_check_activation.o",
+      "private_object_sha256": "d17a8a17495e359aaf2520ecf6b2d8086cc59f3bc327ecf32421c6db76db3a09",
+      "emitted_functions": [
+        {
+          "name": "netCheckActivation__FG6Point3f",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-net-check-activation/net_check_activation.cpp"
+    },
+    {
+      "input_order": 3669,
+      "component": "w10-net-a-net-get-camera-custom-control",
+      "object_name": "w10_net_a_net_get_camera_custom_control.o",
+      "private_object_sha256": "68f774a02078b6bfff57ba028a4df435d7165dff5b75aa211c8364ec78339d1c",
+      "emitted_functions": [
+        {
+          "name": "netGetCameraCustomControl__Fi",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-net-get-camera-custom-control/net_get_camera_custom_control.cpp"
+    },
+    {
+      "input_order": 3670,
+      "component": "w10-net-a-net-get-nm-connected-partners",
+      "object_name": "w10_net_a_net_get_nm_connected_partners.o",
+      "private_object_sha256": "603dbfa3e2832286cc625f8a0b7507caf7cc0fb311cdc6bb42b0abe67c3799ca",
+      "emitted_functions": [
+        {
+          "name": "netGetNmConnectedPartners__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-net-get-nm-connected-partners/net_get_nm_connected_partners.cpp"
+    },
+    {
+      "input_order": 3671,
+      "component": "w10-net-a-net-is-modem",
+      "object_name": "w10_net_a_net_is_modem.o",
+      "private_object_sha256": "4d40c741eb718ea83279c26c5b8b0de7310f0d5cf687d6665c47950ad4a2add4",
+      "emitted_functions": [
+        {
+          "name": "netIsModem__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-a-net-is-modem/net_is_modem.cpp"
     }
   ],
   "drafts": [
@@ -49685,6 +49810,26 @@
     "sources/w10-front-b-skirmish-init/skirmish_init.cpp": "b84b064222edf1e8b398f8fa01a1b632271b40cd47e2731db71e6ae1e3bedd73",
     "sources/w10-front-b-stats-screen/host_check.cpp": "519d276b9f8352c375ced2b66763eb195e821d50d6213b4445b0ab7f9c39de69",
     "sources/w10-front-b-stats-screen/stats_screen.cpp": "33e1789bef8708babd7d80bd7787666e251f3abe28d2d3733a44a29bc88c731e",
+    "sources/w10-net-a-advance-real-state/advance_real_state.cpp": "bf2e973d4fddf543b0faa699ee122930f83b6b6f09952919b2b4f9de0c0db6f3",
+    "sources/w10-net-a-advance-real-state/host_check.cpp": "69449352fefdf2f8232c0c6fa831cd1d7a9712ba12f9184c61c3be587fe23796",
+    "sources/w10-net-a-anal-compress/anal_compress.cpp": "0406144e8f20c2d9b303290b7ca75a3ee8a0ad137827f769380d63eb96d77e8b",
+    "sources/w10-net-a-anal-compress/host_check.cpp": "70a22bc9aed9de63aec4e2382dfdc48882dec7c6799be63b38a859ba94999152",
+    "sources/w10-net-a-comm-state-data/comm_state_data.cpp": "8991989e57ee696055e0ff10565ce3a75cd6a45a9a3eced7ed195a88eb616d55",
+    "sources/w10-net-a-comm-state-data/host_check.cpp": "6585429f81d7ecc52aa4405f873897fbe518d84ff03ad70558314dc192cc7da4",
+    "sources/w10-net-a-commander-valid/commander_valid.cpp": "85ccf6230c61c883412b7f471bab36264f238c106243a77ab763a2543cebdcc3",
+    "sources/w10-net-a-commander-valid/host_check.cpp": "5fd7323e5f6c083faaf9b48b84f8ff9c51296d6582dfa3f271c689e61af020ec",
+    "sources/w10-net-a-frame-state-data/frame_state_data.cpp": "6573a76ad93935d330bf6f187d6d0c5b0376bfb13f2f23a5bef0938efbf66fb9",
+    "sources/w10-net-a-frame-state-data/host_check.cpp": "0a8a65414e7ba1e5909b0b14d5cce8a82772c89924599ae3eff19743a59723f3",
+    "sources/w10-net-a-launch-state-data/host_check.cpp": "033968f584ffa66e31d7fbd49399695d3d471a82322e996e5fede732a4cd3ebe",
+    "sources/w10-net-a-launch-state-data/launch_state_data.cpp": "51bb72b90778f3adffcc4bd1ed6540edc7d738ca75c4d43d5ed75137bf2b0e05",
+    "sources/w10-net-a-net-check-activation/host_check.cpp": "2d9852593eac795185928ea13e1d819eea650d63d44072f88a19801b9f6906dd",
+    "sources/w10-net-a-net-check-activation/net_check_activation.cpp": "6147ba6b4901394f2c2dc41836cabbf758176c5505051c2ca7bfbc5015553328",
+    "sources/w10-net-a-net-get-camera-custom-control/host_check.cpp": "5ab4e668efc1cd73d7ac10eb2c3dcc48bd9e6a4a4f15b41b903c1e2b35dfe2d9",
+    "sources/w10-net-a-net-get-camera-custom-control/net_get_camera_custom_control.cpp": "5898128e0861fb469b5608879e610484437d0ff6ecfd4ab592204b7cfbc830a8",
+    "sources/w10-net-a-net-get-nm-connected-partners/host_check.cpp": "d51cfc7f1e92a7e7b3beb99f30883c2bc042f5b318587a344a312bf676c1ad27",
+    "sources/w10-net-a-net-get-nm-connected-partners/net_get_nm_connected_partners.cpp": "cd5d62f807bea92ae3ed423a76614a9fc046505fe57291a6f4239fa3d16f7c21",
+    "sources/w10-net-a-net-is-modem/host_check.cpp": "70ab0e892fb4e5914c3197de517e4f9912dfe510a265c856b3451b0899df62e9",
+    "sources/w10-net-a-net-is-modem/net_is_modem.cpp": "cb1f345c4953da71df991b3d4c4facf23d9a2cdcf57e04d76ab57e6285298215",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-alarm-handler/host_check.cpp": "5ca8848f2edfe82b793f8a286db7e433c802fdc16849939aa2436cb4ab3012e5",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
@@ -54352,11 +54497,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3662,
-    "authored_default_inputs": 3660,
+    "selected_inputs": 3672,
+    "authored_default_inputs": 3670,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2647,
-    "compiled_body_bytes_from_accepted_inputs": 1133268,
+    "emitted_function_definitions_including_helpers": 2654,
+    "compiled_body_bytes_from_accepted_inputs": 1139428,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -54369,7 +54514,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3349
+    "package_selected_inputs": 3359
   },
   "startup_implementations": [
     {
@@ -105906,6 +106051,161 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w10-front-b-stats-screen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-advance-real-state/advance_real_state.cpp",
+      "source_sha256": "bf2e973d4fddf543b0faa699ee122930f83b6b6f09952919b2b4f9de0c0db6f3",
+      "object_sha256": "469f8f698b554a3f6bafdb46cc61f8913f7669f90f72b4f3f85acea446ba7192",
+      "emitted_functions": [
+        {
+          "name": "advanceRealState__Fi",
+          "compiled_body_bytes": 4464
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-advance-real-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-anal-compress/anal_compress.cpp",
+      "source_sha256": "0406144e8f20c2d9b303290b7ca75a3ee8a0ad137827f769380d63eb96d77e8b",
+      "object_sha256": "30eb24e9e29eac7e37cf36602741e6097c030ee84b5ad9f788656879998b9c5e",
+      "emitted_functions": [
+        {
+          "name": "analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci",
+          "compiled_body_bytes": 1308
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-anal-compress/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-comm-state-data/comm_state_data.cpp",
+      "source_sha256": "8991989e57ee696055e0ff10565ce3a75cd6a45a9a3eced7ed195a88eb616d55",
+      "object_sha256": "258cfb17733163a07f4b23945315252ae2eb19623916bd6e5288668be41115f7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-a-comm-state-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-commander-valid/commander_valid.cpp",
+      "source_sha256": "85ccf6230c61c883412b7f471bab36264f238c106243a77ab763a2543cebdcc3",
+      "object_sha256": "d3bffe70f337db39a171595510389a1540234baacf182e26c27668bf0b662b1f",
+      "emitted_functions": [
+        {
+          "name": "commanderValid__14WoodElfSoldier",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-commander-valid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-frame-state-data/frame_state_data.cpp",
+      "source_sha256": "6573a76ad93935d330bf6f187d6d0c5b0376bfb13f2f23a5bef0938efbf66fb9",
+      "object_sha256": "53295935f3b0e622239443d262688419d37cf5dc0f5842e08d7923d431e9225c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-a-frame-state-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-launch-state-data/launch_state_data.cpp",
+      "source_sha256": "51bb72b90778f3adffcc4bd1ed6540edc7d738ca75c4d43d5ed75137bf2b0e05",
+      "object_sha256": "5ae25d6d0edde5d1c1f6f58a63445d365da2791094e73544f49376ca983855c5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-a-launch-state-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-net-check-activation/net_check_activation.cpp",
+      "source_sha256": "6147ba6b4901394f2c2dc41836cabbf758176c5505051c2ca7bfbc5015553328",
+      "object_sha256": "d17a8a17495e359aaf2520ecf6b2d8086cc59f3bc327ecf32421c6db76db3a09",
+      "emitted_functions": [
+        {
+          "name": "netCheckActivation__FG6Point3f",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-net-check-activation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-net-get-camera-custom-control/net_get_camera_custom_control.cpp",
+      "source_sha256": "5898128e0861fb469b5608879e610484437d0ff6ecfd4ab592204b7cfbc830a8",
+      "object_sha256": "68f774a02078b6bfff57ba028a4df435d7165dff5b75aa211c8364ec78339d1c",
+      "emitted_functions": [
+        {
+          "name": "netGetCameraCustomControl__Fi",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-net-get-camera-custom-control/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-net-get-nm-connected-partners/net_get_nm_connected_partners.cpp",
+      "source_sha256": "cd5d62f807bea92ae3ed423a76614a9fc046505fe57291a6f4239fa3d16f7c21",
+      "object_sha256": "603dbfa3e2832286cc625f8a0b7507caf7cc0fb311cdc6bb42b0abe67c3799ca",
+      "emitted_functions": [
+        {
+          "name": "netGetNmConnectedPartners__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-net-get-nm-connected-partners/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-a",
+      "source": "sources/w10-net-a-net-is-modem/net_is_modem.cpp",
+      "source_sha256": "cb1f345c4953da71df991b3d4c4facf23d9a2cdcf57e04d76ab57e6285298215",
+      "object_sha256": "4d40c741eb718ea83279c26c5b8b0de7310f0d5cf687d6665c47950ad4a2add4",
+      "emitted_functions": [
+        {
+          "name": "netIsModem__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-a-net-is-modem/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

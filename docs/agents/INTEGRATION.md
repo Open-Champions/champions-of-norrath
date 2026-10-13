@@ -7540,3 +7540,31 @@ Closed: `multiRelease`, `multiSide`, `multiTitle`, `nameGridCount`, `nameGridW`,
 
 Opened: `floorGetSaveInfo__FPci`, `objectGetSaveData__FPci`, `writeMap__3mapPUc`
 - 2026-10-13 01:13 CDT — `agents/w10-front-b` — 1409 unresolved imports
+
+## agents/w10-net-a
+
+Merged (merge commit, branch tip `6d9134f0`, over an hour old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Network play part 1: 10 units (7 functions, including the
+5,488-byte `advanceRealState__Fi`, and three data units) with fresh `input_order` values
+3662 through 3671. 10 of 10 host checks pass here (x86_64, `-ffp-contract=off`):
+eight under `-Werror`, `anal-compress` only without `-Werror` (a variable-length array
+that clang warns about), and `advance-real-state` only with the build line in its own
+header (`-Wno-vla-cxx-extension -DNORRATH_W10NA_HOST=1 host_check.cpp
+../w10-net-a-anal-compress/anal_compress.cpp`), which links the authored compressor.
+That check's decompressor is a stand-in that inverts the compressor for one frame, as
+its header says; the check does not exercise a real decompressor. Compiled sizes are not
+image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3670 authored inputs, 2652 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1409 |
+| After | 1385 |
+| Closed | 30 |
+| Opened | 6 |
+
+Closed: `advanceRealState__Fi`, `analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci`, `broadcastConnectionFlags`, `commCVol`, `commNameMask`, `commRVInternalLast`, `commanderValid__14WoodElfSoldier`, `compressSize`, `hostForcedLaunch`, `hostLaunchMask`, `hostStartedWithoutMe`, `isModem`, `kickState`, `lastPingTime`, `launchPeers`, `lnet_buf`, `localNetFrameNm`, `localNetSentFrameNm`, `localPlayerPadState`, `localPredictedPlayer`, `logChecksum`, `msgBufferSent`, `myaddr`, `netAttemptLaunch`, `netBroadCastStart`, `netCameraYaw`, `netCheckActivation__FG6Point3f`, `netGetCameraCustomControl__Fi`, `netGetNmConnectedPartners__Fv`, `netIsModem__Fv`
+
+Opened: `analDecompress__11CDecompressP15BitBufferReaderPQ211CDecompress9analStatePUcii`, `compareStatePackets__FP11statePacketT0i`, `netLogDisable`, `netPrediction`, `netTrueStep`, `objectAddToGrid__FP10GameObject`
