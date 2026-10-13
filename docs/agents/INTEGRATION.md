@@ -8100,7 +8100,7 @@ Opened: `DLG_CheckMutex__Fv`, `P_DeleteTrail__Fi`, `P_RevolveTrail__FiG6Point3N3
 
 ## Not merged: agents/w10-actor-i
 
-Rejected at tip `79202008`'s successor `e1ad5dba` (34 minutes old when read; its notes
+Rejected at tip `e1ad5dba` (34 minutes old when read; its notes
 have all five summary sections). Its 32 units (`clone`, `dtor`, `msg_*` and `setState`
 bodies for the lantern, lava monster, lava vehicle, male dark elf and minion) have no
 committed check of any kind: the diff holds no `host_check.cpp`, `host_contract.cpp` or
