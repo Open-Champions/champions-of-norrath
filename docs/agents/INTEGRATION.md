@@ -7696,3 +7696,26 @@ Closed: `connect_to_iop_server`, `lgAudARead`, `lgAudASync`, `lgAudAWrite`, `lgA
 
 Opened: `MemcpyD`, `QueueInit`, `QueuePeekReadDone`, `_iopnotify`, `_send_to_iop`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `scePadGetDmaStr`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`
 - 2026-10-13 01:33 CDT — `agents/w10-sce-a` — 1293 unresolved imports
+
+## agents/w10-world-a
+
+Merged (merge commit, branch tip `102ef7d8`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game-loop part 1 of 4: 36 units (10 functions
+and 26 data/storage units) with fresh `input_order` values 3760 through 3795. 36 of 36
+host checks pass here (x86_64, `-ffp-contract=off`): 34 under `-Werror`, two only without
+it (warnings). The worker's private paired runs were not re-verified. Compiled sizes are
+not image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3794 authored inputs, 2737 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1293 |
+| After | 1266 |
+| Closed | 36 |
+| Opened | 9 |
+
+Closed: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `actor`, `addpmlist__FPc`, `addpmlistptrscap__Fv`, `alwaysLoadedPage`, `asyncRandState`, `blockFree__FPv`, `blocksFree`, `bossMeterName`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`, `cacheLoadDelayTime`, `cacheLoadName`, `cacheLoadValid`, `clearing`, `collisionFrame`, `convertIndiciesToPointers__Fi`, `curDest`, `currentDir`, `currentTime`, `cursorTime`, `decodeQ`, `delta`, `derivedFrameNm`, `doJumpEffect__Fi`, `dumpMem__FPvi`, `engineGetField__Fv`, `executeAction__FP6Action`, `file`, `findCutDialog__Fv`, `findTagInt__10GameObjectPci`
+
+Opened: `GetToggle__6Camera`, `SetNoTargetUpdates__6Camerai`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `jumpGatePos`, `jumpHidden`, `jumpParticleJump`, `pmlistchars`, `pmlistcharsused`, `soundGetDialogSize__Fi`
