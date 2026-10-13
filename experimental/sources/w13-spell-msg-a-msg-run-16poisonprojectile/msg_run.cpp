@@ -4,7 +4,7 @@
 //  2. Four times: a random direction is drawn by rejection. Each component is eRand__10GameObject(O) * 2^-16 doubled
 //     minus 1.0 (x, y, z in that order, each call separate); the draw repeats while 1.0 < (x*x + y*y) + z*z. The
 //     direction is scaled by 8.0 on every component, copied, and given to P_AddParticle__FP11ParticleDefP6Point3T1f
-//     (particlePoisonDrop, P, &copy, 0.0).
+//     (norrath_w13_spell_msg_a_view_7d7260, P, &copy, 0.0).
 //  3. The single at O+148 drops by 4.95 (the pool constant bits 0x409e6664, no symbol names it). Then
 //     move__10ProjectileG6Point3(O, copy of the point at O+140) returns r.
 //  4. When r is non-zero:
@@ -22,12 +22,14 @@
 //     is called on O (adjusted by the entry's signed halfword) with the argument 3.
 // Inferred: this is the per-frame run of a poison projectile (spits particles, moves, lands). Unknown: what the words
 // at O+96, +152, +156 and +164, the two radial-damage floats and the entry at offset 8 mean. Nothing here ran on the EE.
+// The particle definition is the 80-byte bss object at 0x007d7260 (a file-local symbol named particlePoisonDrop in the image);
+// the local name cannot be linked to, so it is imported through the address-named view norrath_w13_spell_msg_a_view_7d7260.
 #include "../w12-actor-spell-c-common/access.hpp"
 
 extern "C" {
 extern int frameNm;
 extern void* world;
-extern unsigned char particlePoisonDrop[];
+extern unsigned char norrath_w13_spell_msg_a_view_7d7260[80];
 int eRand__10GameObject(void* object);
 int animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps(void* state, void* point, void* other, short* extra);
 void P_AddParticle__FP11ParticleDefP6Point3T1f(void* definition, Point3* position, Point3* velocity, float f);
@@ -59,7 +61,7 @@ void msg_run__16PoisonProjectile(void* self) {
         v.x = v.x * 8.0f;
         v.y = v.y * 8.0f;
         v.z = v.z * 8.0f;
-        P_AddParticle__FP11ParticleDefP6Point3T1f(particlePoisonDrop, position, &v, 0.0f);
+        P_AddParticle__FP11ParticleDefP6Point3T1f(norrath_w13_spell_msg_a_view_7d7260, position, &v, 0.0f);
     }
     real(o, 148) = real(o, 148) - bits(0x409e6664u);
     Point3 delta = *reinterpret_cast<Point3*>(o + 140);
