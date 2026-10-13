@@ -1,0 +1,9 @@
+// Host check only; not a build input. Compared with the original in a private interpreter run.
+#include "init.cpp"
+#include <cstdio>
+int main() {
+    unsigned char storage[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+    const bool ok = Init__10VIWndLegal(storage) == 0 && storage[0] == 1 && storage[7] == 8;
+    std::puts(ok ? "ok" : "FAIL");
+    return !ok;
+}
