@@ -23,7 +23,7 @@ void lightUpdatePosition__FP5Light(void* light);
 void P_AddParticle__FP11ParticleDefP6Point3T1f(void* definition, Point3* position, Point3* velocity, float age);
 
 namespace {
-void emit(unsigned char* o, void* definition) {
+static void emit(unsigned char* o, void* definition) {
     using namespace w13smb;
     auto rand = [](unsigned char* object) { return static_cast<unsigned>(eRand__10GameObject(object)); };
     Point3 d;
