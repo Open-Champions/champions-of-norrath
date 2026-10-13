@@ -18,6 +18,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-dtor-5spell` | `_$_5Spell` | `0x00314990`, 100 bytes | 92 |
 | `w14-m-spell-ctors-a-ctor-hate-effect` | `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill` | `0x001ff6f8`, 264 bytes | 260 |
 | `w14-m-spell-ctors-a-ctor-cone-of-frost` | `__16SpellConeOfFrostiP8CreatureP5Skill` | `0x002af390`, 376 bytes | 328 |
+| `w14-m-spell-ctors-a-ctor-critical-hit` | `__16SpellCriticalHitiP8CreatureP5Skill` | `0x002ad3f8`, 304 bytes | 288 |
 
 ## Observed shape shared by the spell constructors
 
@@ -71,10 +72,18 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   mismatches. Two mutations (drop the `+ 0.0f` on x, and 155.0 for the first light float) give 24 and 72
   mismatches.
 
+- **Critical hit.** `__16SpellCriticalHitiP8CreatureP5Skill` (`0x002ad3f8`). The Spell base, a copy of the creature
+  position to +76, a light at +28 (it ends where the copy begins), then the skill's secondary call with level 2, the
+  int result converted to float at +24, and the particle system at +88. The light's float constant at
+  `0x00482c20` is an unnamed global, written as its bit pattern (`0x3891a2b3`). Host contract passes. Paired
+  comparison: 120 scenarios (6 kinds, 5 adjustments, 4 seeds), 0 mismatches. Mutation (call level 1 instead of 2)
+  gives 120 of 120 mismatches.
+
 ## Imports closed
 
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
-`__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`.
+`__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`,
+`__16SpellCriticalHitiP8CreatureP5Skill`.
 
 ## Imports opened
 
