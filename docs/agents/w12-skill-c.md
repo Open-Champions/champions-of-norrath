@@ -4,7 +4,7 @@ Branch: `agents/w12-skill-c`. Work is limited to the Skill class method/ramp fam
 
 ## Observed
 
-- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
+- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii`, `initRamps__18SkillDiseaseEffect` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
 - The authored source defines that symbol and is self-contained. The reviewed EE toolchain compiled it as an 8-byte function. Its generated second instruction uses `or` where the original uses `addu`; this is a semantic reconstruction, not a byte match.
 - The host contract calls it for `INT_MIN`, negative, zero, positive, and `INT_MAX` inputs and checks the returned integer equals the argument. The host check passed. The test and source are `experimental/sources/w12-skill-c-base-point-cost/`.
 - `getLevelRequirement__5Skilli` at `0x00313250` has an 8-byte extent. It returns zero for every integer argument and does not read the receiver. Its reviewed EE compilation succeeded; the host contract passed on seven boundary and representative integer inputs. The test and source are `experimental/sources/w12-skill-c-base-level-requirement/`.
@@ -96,3 +96,7 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sourc
 - `initRamps__19SkillDiseaseWeapons` at `0x0015e9a0` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 4 at +66. The host test checks those bytes and confirms all other fixture bytes are unchanged. Reviewed EE compilation succeeded; object reports: `00000000 00000020 T initRamps__19SkillDiseaseWeapons`. Source/test: `experimental/sources/w12-skill-c-init-ramps-disease-weapons/`.
 
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__19SkillDiseaseWeapons`, SHA-256 `16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6`; add source hash to `files`, then assign order in integration.
+
+- `initRamps__18SkillDiseaseEffect` at `0x0015eae0` has a 44-byte extent and writes halfword 1 at receiver+66, float 1.0 at +76, halfword 3 at +24, halfword 1 at +14, float 1.0 at +36, and halfword 1 at +56. The host test checks each changed byte and verifies all other bytes in an 80-byte aligned fixture are unchanged. Reviewed EE compilation emitted 44 bytes. Source/test: `experimental/sources/w12-skill-c-init-ramps-disease-effect/`.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__18SkillDiseaseEffect` (44 bytes), SHA-256 `5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479`; add source hash to `files`, then assign order in integration.
