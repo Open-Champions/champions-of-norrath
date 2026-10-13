@@ -9625,3 +9625,19 @@ Closed: `getRankDescription__10SkillBluntPUsi`, `getRankDescription__10SkillDodg
 
 Opened: `getEnemyWord__Fi`
 - 2026-10-13 16:30 CDT — agents/w13-skill-rank-a — 1084 unresolved imports
+
+## agents/w13-skill-rank-b
+
+Merged (merge commit, branch tip `5f0265cc`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 28 units with fresh `input_order` values 5841 through 5868, each with a committed check that builds and passes here (28 host contracts for the rank-description functions). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5867 authored inputs, 4550 function bodies, zero COMMON. The notes' 28 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1084 |
+| After | 1056 |
+| Closed | 28 |
+| Opened | 0 |
+
+Closed: `getRankDescription__16SkillConeOfFrostPUsi`, `getRankDescription__16SkillCriticalHitPUsi`, `getRankDescription__16SkillDiseaseBoltPUsi`, `getRankDescription__16SkillFireWeaponsPUsi`, `getRankDescription__16SkillGroundPoundPUsi`, `getRankDescription__16SkillPoisonArrowPUsi`, `getRankDescription__16SkillShockOfFirePUsi`, `getRankDescription__17SkillConvertEnemyPUsi`, `getRankDescription__17SkillDiseaseTrailPUsi`, `getRankDescription__17SkillExplodeArrowPUsi`, `getRankDescription__17SkillMinorHealingPUsi`, `getRankDescription__17SkillRegenerationPUsi`, `getRankDescription__17SkillResistPoisonPUsi`, `getRankDescription__17SkillShockOfFrostPUsi`, `getRankDescription__17SkillUndeadShieldPUsi`, `getRankDescription__18SkillAncestralCallPUsi`, `getRankDescription__18SkillBlindingLightPUsi`, `getRankDescription__18SkillConvertUndeadPUsi`, `getRankDescription__18SkillDiseaseShieldPUsi`, `getRankDescription__18SkillDismissUndeadPUsi`, `getRankDescription__18SkillHammerOfWrathPUsi`, `getRankDescription__18SkillRepulseUndeadPUsi`, `getRankDescription__19SkillSummonSkeletonPUsi`, `getRankDescription__21SkillLightningWeaponsPUsi`, `getRankDescription__22SkillRangerCriticalHitPUsi`, `getRankDescription__5SkillPUsi`, `getRankDescription__9SkillBashPUsi`, `getRankDescription__9SkillRootPUsi`
+
+Opened: none
+- 2026-10-13 16:35 CDT — agents/w13-skill-rank-b — 1056 unresolved imports
