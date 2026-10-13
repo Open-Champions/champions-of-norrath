@@ -11,6 +11,7 @@ struct Point3 { float x, y, z; };
 extern "C" void* w11_host_pointer(unsigned address);
 extern "C" unsigned w11_host_word(const void* pointer);
 extern "C" int w11_host_call_int4(unsigned function, void* self, int a, int b, int c);
+extern "C" int w11_host_call_int3(unsigned function, void* self, int a, int b);
 #endif
 
 namespace w11 {
@@ -37,7 +38,7 @@ inline unsigned char& u8(void* o, int off) { return static_cast<unsigned char*>(
 
 // Calls the entry at byte `slot` of the table whose address is the word at self+96 (the layout
 // the skill objects use): a signed halfword adjusts `this`, the function word is at +4. The
-// function takes (this + adjust, a, b, c) and returns an int.
+// function takes (this + adjust, a, b, c) and returns an int (skill_call_int3: no c).
 inline int skill_call_int4(void* self, int slot, int a, int b, int c) {
     const unsigned char* entry = static_cast<const unsigned char*>(pointer(u32(self, 96))) + slot;
     const int adjust = *reinterpret_cast<const short*>(entry);
@@ -48,6 +49,46 @@ inline int skill_call_int4(void* self, int slot, int a, int b, int c) {
 #else
     return reinterpret_cast<int (*)(void*, int, int, int)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a, b, c);
 #endif
+}
+
+inline int skill_call_int3(void* self, int slot, int a, int b) {
+    const unsigned char* entry = static_cast<const unsigned char*>(pointer(u32(self, 96))) + slot;
+    const int adjust = *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+    void* const adjusted = static_cast<unsigned char*>(self) + adjust;
+#ifdef W11_HOST
+    return w11_host_call_int3(function, adjusted, a, b);
+#else
+    return reinterpret_cast<int (*)(void*, int, int)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a, b);
+#endif
+}
+
+// Fills the 64-byte-or-larger light record that the three timed arrow projectiles keep at
+// object+112 (lightAdd__FP5Light takes its address): bytes +8 and +9 are cleared, halfwords
+// +10/+12/+14 take (a, b, c), +16 is cleared, +18/+20/+22 take the same (a, b, c), +24 is cleared,
+// floats +28 and +36 take `big`, +32 and +40 take `small`, +44 is cleared and the three floats
+// at +48 take the projectile's position. Observed in the Cold, Poison and Fire arrow
+// constructors; the roles of the fields are not established here.
+inline void fill_arrow_light(void* object, short a, short b, short c, float big, float small, const Point3& position) {
+    unsigned char* const light = static_cast<unsigned char*>(object) + 112;
+    u8(light, 9) = 0;
+    f32(light, 36) = big;
+    i16(light, 22) = c;
+    f32(light, 28) = big;
+    i16(light, 14) = c;
+    f32(light, 40) = small;
+    i16(light, 20) = b;
+    f32(light, 32) = small;
+    i16(light, 12) = b;
+    i16(light, 18) = a;
+    f32(light, 44) = 0.0f;
+    i16(light, 10) = a;
+    i16(light, 16) = 0;
+    i16(light, 24) = 0;
+    u8(light, 8) = 0;
+    f32(light, 48) = position.x;
+    f32(light, 52) = position.y;
+    f32(light, 56) = position.z;
 }
 }  // namespace w11
 

@@ -16,6 +16,10 @@ inline std::map<unsigned, std::function<int(void*, int, int, int)>>& functions()
     static std::map<unsigned, std::function<int(void*, int, int, int)>> m;
     return m;
 }
+inline std::map<unsigned, std::function<int(void*, int, int)>>& functions3() {
+    static std::map<unsigned, std::function<int(void*, int, int)>> m;
+    return m;
+}
 inline std::string& calls() { static std::string s; return s; }
 }  // namespace w11_host
 
@@ -27,4 +31,7 @@ extern "C" void* w11_host_pointer(unsigned address) {
 }
 extern "C" int w11_host_call_int4(unsigned function, void* self, int a, int b, int c) {
     return w11_host::functions().at(function)(self, a, b, c);
+}
+extern "C" int w11_host_call_int3(unsigned function, void* self, int a, int b) {
+    return w11_host::functions3().at(function)(self, a, b);
 }
