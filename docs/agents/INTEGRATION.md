@@ -8134,3 +8134,25 @@ Closed: `_$_3NPC`, `_$_5Mummy`, `_$_9MummyKing`, `__7OniBallG6Point3iP10GameObje
 
 Opened: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `_$_13MissileWeapon`, `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10SpawnMummyG6Point3PcP10GameObject`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__9DustDevilG6Point3`, `__tf13MissileWeapon`, `_vt$5Mummy`, `_vt$7OniBall`, `_vt$9MummyKing`, `animRandomizeTime__FP14AnimationState`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__13MissileWeapon`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `initType__5Mummyb`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__13MissileWeapon`, `msg_run__13MissileWeapon`, `mummy_miniboss_name_buffer_7d7e20`, `npc_msg_run_particle_7d7dd0`
 - 2026-10-13 03:06 CDT — `agents/w10-actor-j` — 1075 unresolved imports
+
+## agents/w10-actor-k
+
+Merged (merge commit, branch tip `0186c28e`, 62 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (31 function bodies) with fresh `input_order` values 4224
+through 4255. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 25 under `-Werror`, 7 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4254 authored inputs, 3192 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The unresolved count rises by 7 (39 names open against 32 closed): the new virtual-table units reference method slots (player, projectile, prop and recall-effect clones, destructors and draw/run routines) that no package defines yet.
+
+| | |
+|---|---|
+| Before | 1075 |
+| After | 1082 |
+| Closed | 32 |
+| Opened | 39 |
+
+Closed: `_$_11PushTrigger`, `_$_19ParticleMorphEffect`, `_$_3Orc`, `_$_8RollDoor`, `_GLOBAL_$I$move__10ProjectileG6Point3`, `__10ProjectileG6Point3P10GameObjectPQ210GameObject11resourceMap`, `__4PropG6Point3PcN22li`, `__tf19ParticleMorphEffect`, `__tf8RollDoor`, `_vt$10Projectile`, `_vt$12RecallEffect`, `_vt$6PhProp`, `_vt$6Player`, `clone__11PushTrigger`, `clone__3Orc`, `clone__8RollDoor`, `dismount__6Player`, `getMinibossName__3Orc`, `initMiniboss__3Orc`, `msg_alert__3OrcifG6Point3P10GameObject`, `msg_draw__3Orc`, `msg_draw__8RollDoor`, `msg_getPokeName__11PushTriggerPUsi`, `msg_getPokeName__8RollDoorPUsi`, `msg_hurt__3OrcfP10GameObjecti`, `msg_load__3OrcPc`, `msg_load__8RollDoorPc`, `msg_poke__11PushTriggeri`, `msg_run__19ParticleMorphEffect`, `msg_run__3Orc`, `msg_save__3OrcPc`, `setState__3Orci`
+
+Opened: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `__tf10Projectile`, `__tf12RecallEffect`, `__tf6Player`, `_vt$11PushTrigger`, `_vt$3Orc`, `_vt$4Prop`, `_vt$8RollDoor`, `clone__10Projectile`, `clone__12RecallEffect`, `clone__6PhProp`, `clone__6Player`, `commanderValid__3Orc`, `deleteCommander__3Orc`, `dropItem__3Orci`, `findCommander__3Orc`, `getModel__6Player`, `getSkillRank__6Playeri`, `initType__3Orcb`, `init__4Propi`, `isEnemy__6PlayerP10GameObject`, `joinCommander__3Orc`, `leaveCommander__3Orc`, `msg_collision__6PlayerP10GameObject`, `msg_draw__12RecallEffect`, `msg_draw__6PhProp`, `msg_draw__6Player`, `msg_hurt__6PlayerfP10GameObjecti`, `msg_run__12RecallEffect`, `msg_run__6PhProp`, `msg_run__6Player`, `setActiveChunks__6Player`, `setState__6Playeri`, `setWeapon__3Orc`, `stun__6Playeri`, `worldGetDoorHeight__FP12_worldHeaderi`
