@@ -138,6 +138,13 @@ Already unresolved at the tip and still imported here (12 names): `P_FaceSprite_
 The other external names the units reference (111) are defined by the shared tip. The units do not
 redefine any symbol that the tip defines.
 
+Link check (private, not a full rebuild): the shared tip's partial object from a clean build of
+`cc78a45e` (1,332 unresolved names) was relocatably linked with the 32 compiled units using
+the driver's own link flags. The link reports no multiple definitions, and the unresolved count
+becomes 1,351 (the 32 scope names close, 51 names open). `build_partial.py --check-plan` accepts a
+private plan and snapshot copy that contain the entries below. `tools/check_source_snapshot.py`
+rejects the new directories until the integrator records them, as with the other packages.
+
 Notes on the opened names: `_vt$5Mummy`, `_vt$9MummyKing`, `_vt$7OniBall`, `_vt$8Creature` and
 `_vt$10GameObject` are table data referenced by the destructors, the clone and the OniBall
 constructor; the spell, projectile and effect constructors (`__9FireStormi...`, `__6Sparks...`,
