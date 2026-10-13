@@ -11,8 +11,8 @@
 // Unknown: whether the original source wrote the polynomial as one expression.
 extern "C" {
 namespace {
-float from_bits(unsigned bits) { return __builtin_bit_cast(float, bits); }
-unsigned to_bits(float value) { return __builtin_bit_cast(unsigned, value); }
+static float from_bits(unsigned bits) { return __builtin_bit_cast(float, bits); }
+static unsigned to_bits(float value) { return __builtin_bit_cast(unsigned, value); }
 }
 
 float __kernel_sinf(float x, float y, int iy) {
