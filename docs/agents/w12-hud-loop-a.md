@@ -67,8 +67,8 @@ Every source starts with its own observed / inferred / unknown comment. Short fo
   unless stated. The same harness re-ran the earlier-wave functions: `MC_SetRamNmPlayers` 12, `MC_ConvertTempPlayerToReal` 9,
   `MC_BuildPackedPlayer` 10, `MC_NetPack` 16 (133 of 135), `MC_NetUnPack` 46 (202 of 213),
   `coreStartLoadingScreen` 60 (390 of 391), `MC_LoadLevelEntities` 60 (161 of 162), `MC_CheckPlayerImportOrChange` 120
-  (661 of 714; 48 of the 53 uncovered words are the not-8-byte-aligned variants of the two inlined 4100-byte block
-  copies, which cannot run because player records are 8-byte aligned, and the rest are nops or delay slots): all
+  (661 of 714; 49 of the 53 uncovered words are the not-8-byte-aligned variants of the two inlined 4100-byte block
+  copies, which cannot run because player records are 8-byte aligned, and the other four are nops): all
   zero mismatches. In `MC_CheckPlayerImportOrChange` the original inlines the player-record copies and the "None" copy
   where the source calls `memcpy` / `strcpy`; those calls were not logged for comparison, which is the only difference
   from the original that the harness is told to ignore.
