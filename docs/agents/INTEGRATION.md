@@ -7774,3 +7774,29 @@ Closed: `lastkey`, `lastlastCE`, `lasttime`, `loadCompleteFlag`, `loadKillList`,
 
 Opened: `norrath_world_c_view_4861e8`, `sceScfGetLocalTimefromRTC`
 - 2026-10-13 01:47 CDT — `agents/w10-world-c` — 1213 unresolved imports
+
+## agents/w10-world-d
+
+Merged (merge commit, branch tip `5974066d`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 4: 19 units (15 functions and
+four storage/word units) with fresh `input_order` values 3844 through 3862. 19 of 19
+host checks pass here (x86_64, `-ffp-contract=off`); four
+(`allocate-segments`, `find-point-height`, `precache-world`, `test-forbidden`) crash
+unless built as their first comment says, with `-DNORRATH_HOST_ARENA` (or
+`-DNORRATH_HOST_WORLD` for `precache-world`) and the unit source on the command line,
+and pass that way. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3861 authored inputs, 2784 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1213 |
+| After | 1199 |
+| Closed | 31 |
+| Opened | 17 |
+
+Closed: `routeClear__Fv`, `routeEnable`, `routeMakeLattice__Fv`, `routeQueue`, `rqHead`, `rqTail`, `scale`, `selectLumpName`, `selectMode`, `showHiddenObjects__FP10GameObject`, `skeletonResMap`, `stage`, `thisLevel`, `typeToResource`, `unremoveMonster__FP10GameObject`, `userFilterFunction`, `wallAndObjectSteering__FP8CreatureffP10GameObject`, `wasFormatting`, `worldActivityLevel`, `worldAllocateSegments__FP12_worldHeader`, `worldAnimation`, `worldBoundingBox`, `worldDeactivateUntakenDoors__FP12_worldHeader`, `worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2`, `worldFindPointHeight__FP12_worldHeaderG6Point3`, `worldFreeWorld__FP12_worldHeader`, `worldLastDrawSucceded`, `worldPlotRouteSetEnable__Fi`, `worldPrecacheWorld__FP12_worldHeaderP8Matrix34`, `worldTestForbidden__FP12_worldHeaderG6Point3f`, `worldWaterRainTimer`
+
+Opened: `femBarbResourceMap`, `femaleDarkElfResourceMap`, `femaleEruditeResourceMap`, `femaleHighElfResourceMap`, `femaleWoodElfResourceMap`, `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap`, `maleHighElfResourceMap`, `maleWoodElfResourceMap`, `mt_dyndat`, `mt_throwaway`, `route_dirs`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `worldCanPass__FP12_worldHeaderG6Point3T1fi`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`

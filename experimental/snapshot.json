@@ -48240,6 +48240,252 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w10-world-c-texture-load-state/texture_load_state.cpp"
+    },
+    {
+      "input_order": 3844,
+      "component": "w10-world-d-allocate-segments",
+      "object_name": "w10_world_d_allocate_segments.o",
+      "private_object_sha256": "a4d031c3770bcd0ea2aac54df9d4245a8e7bd9e66d9fcd871c6ebf0d26c6b059",
+      "emitted_functions": [
+        {
+          "name": "worldAllocateSegments__FP12_worldHeader",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-allocate-segments/world_allocate_segments.cpp"
+    },
+    {
+      "input_order": 3845,
+      "component": "w10-world-d-deactivate-untaken-doors",
+      "object_name": "w10_world_d_deactivate_untaken_doors.o",
+      "private_object_sha256": "459a578067a8ad42c1997954c8c6624894567275bbece92ca8a209184ab1e391",
+      "emitted_functions": [
+        {
+          "name": "worldDeactivateUntakenDoors__FP12_worldHeader",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-deactivate-untaken-doors/world_deactivate_untaken_doors.cpp"
+    },
+    {
+      "input_order": 3846,
+      "component": "w10-world-d-find-door-bounding-box",
+      "object_name": "w10_world_d_find_door_bounding_box.o",
+      "private_object_sha256": "a3cd37ac37cfdd84a7be86696354aa25afb17ef39c77cca3979a90e7a187821c",
+      "emitted_functions": [
+        {
+          "name": "worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2",
+          "compiled_body_bytes": 428
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-find-door-bounding-box/world_find_door_bounding_box.cpp"
+    },
+    {
+      "input_order": 3847,
+      "component": "w10-world-d-find-point-height",
+      "object_name": "w10_world_d_find_point_height.o",
+      "private_object_sha256": "586c153b3ba987889ebcfa389cb1da3f67480beca9006000fc79e4e3a80fd4c6",
+      "emitted_functions": [
+        {
+          "name": "worldFindPointHeight__FP12_worldHeaderG6Point3",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-find-point-height/world_find_point_height.cpp"
+    },
+    {
+      "input_order": 3848,
+      "component": "w10-world-d-free-world",
+      "object_name": "w10_world_d_free_world.o",
+      "private_object_sha256": "2edd43b4e9c058fb1e07ccaee0af5c606c7c6a6439d0f880cbd03fb28aacdd1e",
+      "emitted_functions": [
+        {
+          "name": "worldFreeWorld__FP12_worldHeader",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-free-world/world_free_world.cpp"
+    },
+    {
+      "input_order": 3849,
+      "component": "w10-world-d-plot-route-set-enable",
+      "object_name": "w10_world_d_plot_route_set_enable.o",
+      "private_object_sha256": "15a2f3287f9d9739cbe06e361ce226f2c71bb96ba0fa1e0f944646f417482a1b",
+      "emitted_functions": [
+        {
+          "name": "worldPlotRouteSetEnable__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-plot-route-set-enable/world_plot_route_set_enable.cpp"
+    },
+    {
+      "input_order": 3850,
+      "component": "w10-world-d-precache-world",
+      "object_name": "w10_world_d_precache_world.o",
+      "private_object_sha256": "9af30045eb5c21b06bdd09a41c5948ab5922ca6ff9c54658ba47e196b617c15f",
+      "emitted_functions": [
+        {
+          "name": "worldPrecacheWorld__FP12_worldHeaderP8Matrix34",
+          "compiled_body_bytes": 1032
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-precache-world/world_precache_world.cpp"
+    },
+    {
+      "input_order": 3851,
+      "component": "w10-world-d-resource-tables",
+      "object_name": "w10_world_d_resource_tables.o",
+      "private_object_sha256": "7b5cc3ddef65a51359bbb74bd435d342b05b1483a2cafd54750831d14588d245",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-resource-tables/resource_tables.cpp"
+    },
+    {
+      "input_order": 3852,
+      "component": "w10-world-d-route-clear",
+      "object_name": "w10_world_d_route_clear.o",
+      "private_object_sha256": "91dca94d6f52df207efbdc4278d140e8484882d56ff8ed1447ebf0d1413efed9",
+      "emitted_functions": [
+        {
+          "name": "routeClear__Fv",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-route-clear/route_clear.cpp"
+    },
+    {
+      "input_order": 3853,
+      "component": "w10-world-d-route-make-lattice",
+      "object_name": "w10_world_d_route_make_lattice.o",
+      "private_object_sha256": "a1968c2c6b794705e8ca818a8dc33d97121b002c5ee01e7b61a837bc76547c0a",
+      "emitted_functions": [
+        {
+          "name": "routeMakeLattice__Fv",
+          "compiled_body_bytes": 1600
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-route-make-lattice/route_make_lattice.cpp"
+    },
+    {
+      "input_order": 3854,
+      "component": "w10-world-d-route-state",
+      "object_name": "w10_world_d_route_state.o",
+      "private_object_sha256": "1802e53327a8d4faf8e229496df185f361ad4f46b3bc932f661e0c0badfbb95e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-route-state/route_state.cpp"
+    },
+    {
+      "input_order": 3855,
+      "component": "w10-world-d-select-state",
+      "object_name": "w10_world_d_select_state.o",
+      "private_object_sha256": "a9f7ec2dbb075c5df1ad8a7ad574d024265856f7d6177b8a1df75169a5df04bb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-select-state/select_state.cpp"
+    },
+    {
+      "input_order": 3856,
+      "component": "w10-world-d-show-hidden-objects",
+      "object_name": "w10_world_d_show_hidden_objects.o",
+      "private_object_sha256": "faf2a8b673fc96340dcc395281dd7cc158f58266f97c3e810a4713e40b234cde",
+      "emitted_functions": [
+        {
+          "name": "showHiddenObjects__FP10GameObject",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-show-hidden-objects/show_hidden_objects.cpp"
+    },
+    {
+      "input_order": 3857,
+      "component": "w10-world-d-swap-float",
+      "object_name": "w10_world_d_swap_float.o",
+      "private_object_sha256": "d4c151ed723491fd975b97562ab722a316d9355e2589903612aee09014c6f106",
+      "emitted_functions": [
+        {
+          "name": "swap__H1Zf_RX01T0_v",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-swap-float/swap_float.cpp"
+    },
+    {
+      "input_order": 3858,
+      "component": "w10-world-d-swap-short",
+      "object_name": "w10_world_d_swap_short.o",
+      "private_object_sha256": "210638bbac8813e0da036137d564da00e3461d876fe1e45af569e8658ffbe4c7",
+      "emitted_functions": [
+        {
+          "name": "swap__H1Zs_RX01T0_v",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-swap-short/swap_short.cpp"
+    },
+    {
+      "input_order": 3859,
+      "component": "w10-world-d-test-forbidden",
+      "object_name": "w10_world_d_test_forbidden.o",
+      "private_object_sha256": "d760b82f6bd12723458002d8f0f7bdee5daf6db89e2d2d6e3d64087a802dc01d",
+      "emitted_functions": [
+        {
+          "name": "worldTestForbidden__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 728
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-test-forbidden/world_test_forbidden.cpp"
+    },
+    {
+      "input_order": 3860,
+      "component": "w10-world-d-unremove-monster",
+      "object_name": "w10_world_d_unremove_monster.o",
+      "private_object_sha256": "eae2e25e1a7878b48e2203d69cdc098337525d6799705334eac23c42cf71a24f",
+      "emitted_functions": [
+        {
+          "name": "unremoveMonster__FP10GameObject",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-unremove-monster/unremove_monster.cpp"
+    },
+    {
+      "input_order": 3861,
+      "component": "w10-world-d-wall-and-object-steering",
+      "object_name": "w10_world_d_wall_and_object_steering.o",
+      "private_object_sha256": "e387e65bcf385886d4da8a7df1eb615e27585b6145425f0f0bbc3b6e08efb321",
+      "emitted_functions": [
+        {
+          "name": "wallAndObjectSteering__FP8CreatureffP10GameObject",
+          "compiled_body_bytes": 1524
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp"
+    },
+    {
+      "input_order": 3862,
+      "component": "w10-world-d-world-state-words",
+      "object_name": "w10_world_d_world_state_words.o",
+      "private_object_sha256": "00680f45f4a9e63b34186495b740c3ceb9d48c0c57382d4171b266bd269807a5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-world-d-world-state-words/world_state_words.cpp"
     }
   ],
   "drafts": [
@@ -52602,6 +52848,44 @@
     "sources/w10-world-c-remove-monster/remove_monster.cpp": "a071a40b273cf6c50f8ebce39e33e169ffdaa416e1a966d574f3f0cf6a829932",
     "sources/w10-world-c-texture-load-state/host_check.cpp": "f470907768a9267a4a96767a2ead442b59f6a08769bdf031385a2d08403b8523",
     "sources/w10-world-c-texture-load-state/texture_load_state.cpp": "933a318823aacf14919ed520f140df2af281660ad8e1de5e7ebf42ee95e0aa4a",
+    "sources/w10-world-d-allocate-segments/host_check.cpp": "5d02c0d67e9147c76c5c9de9b0ad16f52b2ba85150919cf5c1f692b155104d9d",
+    "sources/w10-world-d-allocate-segments/world_allocate_segments.cpp": "372dab84f96c8601ba7ec7b8b643f167eda6c22a3223161f1dc106941b2db72a",
+    "sources/w10-world-d-deactivate-untaken-doors/host_check.cpp": "af75aaf122743cdc65f25b20e9790b4dfb2115154638f6d066f4d2764e59c721",
+    "sources/w10-world-d-deactivate-untaken-doors/world_deactivate_untaken_doors.cpp": "9546b1aad476cdd8c779577c3c977f6b5fbaca8a513fc81fcd0b90b79b7dbf39",
+    "sources/w10-world-d-find-door-bounding-box/host_check.cpp": "e31d8c847ca3a59a1e6ba826409eb5e8a317c0816ab63d5b91d3d05141013eab",
+    "sources/w10-world-d-find-door-bounding-box/world_find_door_bounding_box.cpp": "bbb6f1975e2e420e80df9548084ecdda9095b014fc1b81506e4fc3a56d95c890",
+    "sources/w10-world-d-find-point-height/host_check.cpp": "c1d660061345daccc37f146c29e93bb60650f3275a74c6e86e4d3f62d73a6e60",
+    "sources/w10-world-d-find-point-height/world_find_point_height.cpp": "9b34ab5bccdcce543144b072b428d0448083e7412d3da907fa5fbacd251e4e4c",
+    "sources/w10-world-d-free-world/host_check.cpp": "1dda57910460ba1ad991998aab51d5f74fa2ca8897ee7f7b43832fd6b8e6269a",
+    "sources/w10-world-d-free-world/world_free_world.cpp": "52b80ac63de9ff4d6f6162cf06ea0553c39bf379a0102401576711656a829bc3",
+    "sources/w10-world-d-plot-route-set-enable/host_check.cpp": "fbbe11a35496b9c57af362ddb52df31645f3dee77867f2a55d002adc472c7dfe",
+    "sources/w10-world-d-plot-route-set-enable/world_plot_route_set_enable.cpp": "70e0ded43ce42099bb81dedc92e744d59d1aaded06b844d35f1f50ea53d7ef36",
+    "sources/w10-world-d-precache-world/host_check.cpp": "6d46d6f714a86fe77610a25c81e5c14e859ed3116b1020fa6b0e06428220f706",
+    "sources/w10-world-d-precache-world/world_precache_world.cpp": "1122b4520522ee51e7466e40dd3e3425202ad40c0289c45d0da0c4afdfce43fd",
+    "sources/w10-world-d-resource-tables/host_check.cpp": "485f6557712917b30f65edf0f704480f19ca612a2d4bea7c6a3ee8600c0f084b",
+    "sources/w10-world-d-resource-tables/resource_tables.cpp": "d3626c1eede766f986d0849e2fddd3f23e22ea550a3d5925ee74aab9ed44382b",
+    "sources/w10-world-d-route-clear/host_check.cpp": "c4908e4ebfe734ba4b12a41d0f49348e3a4cfd98436defaf4faf6cd3374925bb",
+    "sources/w10-world-d-route-clear/route_clear.cpp": "75d0a6798ec3df0e85e2589429695454773c3ae7afb0a7f1c7bbc232bacc330e",
+    "sources/w10-world-d-route-make-lattice/host_check.cpp": "42119c32513bb67b446cde627a5aed7615a6713c1ddf84664b4656e15e13e083",
+    "sources/w10-world-d-route-make-lattice/route_make_lattice.cpp": "348d8c5ed9c3bfe7d293b0481e1ed8bdad81e8b1161e469a4949a5ddd425cc14",
+    "sources/w10-world-d-route-state/host_check.cpp": "63809fa3a16ffe53bc816fb6945672f9c8e0b5af01fe331a180830b719a6bd1c",
+    "sources/w10-world-d-route-state/route_state.cpp": "c4a8fffb9220d237bf9492b918d14d3e2035163d1f2288532ee3c9540a8840d2",
+    "sources/w10-world-d-select-state/host_check.cpp": "7c6e32a0333fb566cc2ab882732609312634a9e50366aff1fa4f5210e67eb48d",
+    "sources/w10-world-d-select-state/select_state.cpp": "4ec16c1b3b2fc3314b77873daafdb99481df62d89fd85379a119d071b82561ab",
+    "sources/w10-world-d-show-hidden-objects/host_check.cpp": "d95b526beedbfe0df3b7c731448e2cd03876819dbc1407b92f504a7e9b8a6c32",
+    "sources/w10-world-d-show-hidden-objects/show_hidden_objects.cpp": "fcf1283db31fa713e07b8493ed258802d268cdc5152eae971243fbb6f50afd23",
+    "sources/w10-world-d-swap-float/host_check.cpp": "b7b52f8afdf8fcbd3815d7a54adceccb621701f14322792756a7f6e23e0e8627",
+    "sources/w10-world-d-swap-float/swap_float.cpp": "6d2b4730dec2611ffbc6f2983b185c1217530c87b28a136b050cd1a327879590",
+    "sources/w10-world-d-swap-short/host_check.cpp": "2745168be4cef3dbf6693aeb1de760a75c663a2ec99cde1623360f12d55cee11",
+    "sources/w10-world-d-swap-short/swap_short.cpp": "6d9462931a37863431e16d3152a54264ed8208c0ec6e59d2b81c0cc17fa7112f",
+    "sources/w10-world-d-test-forbidden/host_check.cpp": "14c9339c5da6f662dce6ad4cd6391f0295f23f3ae1798b2c1cc25290e83cb4fd",
+    "sources/w10-world-d-test-forbidden/world_test_forbidden.cpp": "0c1121baa5d9c4e33686530e04369c05ce73aeffdd036b7274d075f24d825e3e",
+    "sources/w10-world-d-unremove-monster/host_check.cpp": "57b0e452b7f5d274942cd2e6de03673053bc2a8be77fed2d210a8a9f9d914b4e",
+    "sources/w10-world-d-unremove-monster/unremove_monster.cpp": "40b8dab34c80f4d7df02600f5e29dfa13c4e3235dc45a96cf1a7a5cbea41a72e",
+    "sources/w10-world-d-wall-and-object-steering/host_check.cpp": "d49a861795fd3031c692e8b8898012f70a7948acdcc541d933ee9d8d3b54245e",
+    "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
+    "sources/w10-world-d-world-state-words/host_check.cpp": "4fed4ce4785e42426f80af2c8ef7116b83b0a111c1decd7e2a4989b31a6f7e02",
+    "sources/w10-world-d-world-state-words/world_state_words.cpp": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -56970,11 +57254,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3844,
-    "authored_default_inputs": 3842,
+    "selected_inputs": 3863,
+    "authored_default_inputs": 3861,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2771,
-    "compiled_body_bytes_from_accepted_inputs": 1186560,
+    "emitted_function_definitions_including_helpers": 2786,
+    "compiled_body_bytes_from_accepted_inputs": 1194012,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -56987,7 +57271,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3531
+    "package_selected_inputs": 3550
   },
   "startup_implementations": [
     {
@@ -111324,6 +111608,309 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w10-world-c-texture-load-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-allocate-segments/world_allocate_segments.cpp",
+      "source_sha256": "372dab84f96c8601ba7ec7b8b643f167eda6c22a3223161f1dc106941b2db72a",
+      "object_sha256": "a4d031c3770bcd0ea2aac54df9d4245a8e7bd9e66d9fcd871c6ebf0d26c6b059",
+      "emitted_functions": [
+        {
+          "name": "worldAllocateSegments__FP12_worldHeader",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-allocate-segments/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-deactivate-untaken-doors/world_deactivate_untaken_doors.cpp",
+      "source_sha256": "9546b1aad476cdd8c779577c3c977f6b5fbaca8a513fc81fcd0b90b79b7dbf39",
+      "object_sha256": "459a578067a8ad42c1997954c8c6624894567275bbece92ca8a209184ab1e391",
+      "emitted_functions": [
+        {
+          "name": "worldDeactivateUntakenDoors__FP12_worldHeader",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-deactivate-untaken-doors/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-find-door-bounding-box/world_find_door_bounding_box.cpp",
+      "source_sha256": "bbb6f1975e2e420e80df9548084ecdda9095b014fc1b81506e4fc3a56d95c890",
+      "object_sha256": "a3cd37ac37cfdd84a7be86696354aa25afb17ef39c77cca3979a90e7a187821c",
+      "emitted_functions": [
+        {
+          "name": "worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2",
+          "compiled_body_bytes": 428
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-find-door-bounding-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-find-point-height/world_find_point_height.cpp",
+      "source_sha256": "9b34ab5bccdcce543144b072b428d0448083e7412d3da907fa5fbacd251e4e4c",
+      "object_sha256": "586c153b3ba987889ebcfa389cb1da3f67480beca9006000fc79e4e3a80fd4c6",
+      "emitted_functions": [
+        {
+          "name": "worldFindPointHeight__FP12_worldHeaderG6Point3",
+          "compiled_body_bytes": 832
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-find-point-height/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-free-world/world_free_world.cpp",
+      "source_sha256": "52b80ac63de9ff4d6f6162cf06ea0553c39bf379a0102401576711656a829bc3",
+      "object_sha256": "2edd43b4e9c058fb1e07ccaee0af5c606c7c6a6439d0f880cbd03fb28aacdd1e",
+      "emitted_functions": [
+        {
+          "name": "worldFreeWorld__FP12_worldHeader",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-free-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-plot-route-set-enable/world_plot_route_set_enable.cpp",
+      "source_sha256": "70e0ded43ce42099bb81dedc92e744d59d1aaded06b844d35f1f50ea53d7ef36",
+      "object_sha256": "15a2f3287f9d9739cbe06e361ce226f2c71bb96ba0fa1e0f944646f417482a1b",
+      "emitted_functions": [
+        {
+          "name": "worldPlotRouteSetEnable__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-plot-route-set-enable/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-precache-world/world_precache_world.cpp",
+      "source_sha256": "1122b4520522ee51e7466e40dd3e3425202ad40c0289c45d0da0c4afdfce43fd",
+      "object_sha256": "9af30045eb5c21b06bdd09a41c5948ab5922ca6ff9c54658ba47e196b617c15f",
+      "emitted_functions": [
+        {
+          "name": "worldPrecacheWorld__FP12_worldHeaderP8Matrix34",
+          "compiled_body_bytes": 1032
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-precache-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-resource-tables/resource_tables.cpp",
+      "source_sha256": "d3626c1eede766f986d0849e2fddd3f23e22ea550a3d5925ee74aab9ed44382b",
+      "object_sha256": "7b5cc3ddef65a51359bbb74bd435d342b05b1483a2cafd54750831d14588d245",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-world-d-resource-tables/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-route-clear/route_clear.cpp",
+      "source_sha256": "75d0a6798ec3df0e85e2589429695454773c3ae7afb0a7f1c7bbc232bacc330e",
+      "object_sha256": "91dca94d6f52df207efbdc4278d140e8484882d56ff8ed1447ebf0d1413efed9",
+      "emitted_functions": [
+        {
+          "name": "routeClear__Fv",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-route-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-route-make-lattice/route_make_lattice.cpp",
+      "source_sha256": "348d8c5ed9c3bfe7d293b0481e1ed8bdad81e8b1161e469a4949a5ddd425cc14",
+      "object_sha256": "a1968c2c6b794705e8ca818a8dc33d97121b002c5ee01e7b61a837bc76547c0a",
+      "emitted_functions": [
+        {
+          "name": "routeMakeLattice__Fv",
+          "compiled_body_bytes": 1600
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-route-make-lattice/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-route-state/route_state.cpp",
+      "source_sha256": "c4a8fffb9220d237bf9492b918d14d3e2035163d1f2288532ee3c9540a8840d2",
+      "object_sha256": "1802e53327a8d4faf8e229496df185f361ad4f46b3bc932f661e0c0badfbb95e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-world-d-route-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-select-state/select_state.cpp",
+      "source_sha256": "4ec16c1b3b2fc3314b77873daafdb99481df62d89fd85379a119d071b82561ab",
+      "object_sha256": "a9f7ec2dbb075c5df1ad8a7ad574d024265856f7d6177b8a1df75169a5df04bb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-world-d-select-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-show-hidden-objects/show_hidden_objects.cpp",
+      "source_sha256": "fcf1283db31fa713e07b8493ed258802d268cdc5152eae971243fbb6f50afd23",
+      "object_sha256": "faf2a8b673fc96340dcc395281dd7cc158f58266f97c3e810a4713e40b234cde",
+      "emitted_functions": [
+        {
+          "name": "showHiddenObjects__FP10GameObject",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-show-hidden-objects/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-swap-float/swap_float.cpp",
+      "source_sha256": "6d2b4730dec2611ffbc6f2983b185c1217530c87b28a136b050cd1a327879590",
+      "object_sha256": "d4c151ed723491fd975b97562ab722a316d9355e2589903612aee09014c6f106",
+      "emitted_functions": [
+        {
+          "name": "swap__H1Zf_RX01T0_v",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-swap-float/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-swap-short/swap_short.cpp",
+      "source_sha256": "6d9462931a37863431e16d3152a54264ed8208c0ec6e59d2b81c0cc17fa7112f",
+      "object_sha256": "210638bbac8813e0da036137d564da00e3461d876fe1e45af569e8658ffbe4c7",
+      "emitted_functions": [
+        {
+          "name": "swap__H1Zs_RX01T0_v",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-swap-short/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-test-forbidden/world_test_forbidden.cpp",
+      "source_sha256": "0c1121baa5d9c4e33686530e04369c05ce73aeffdd036b7274d075f24d825e3e",
+      "object_sha256": "d760b82f6bd12723458002d8f0f7bdee5daf6db89e2d2d6e3d64087a802dc01d",
+      "emitted_functions": [
+        {
+          "name": "worldTestForbidden__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 728
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-test-forbidden/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-unremove-monster/unremove_monster.cpp",
+      "source_sha256": "40b8dab34c80f4d7df02600f5e29dfa13c4e3235dc45a96cf1a7a5cbea41a72e",
+      "object_sha256": "eae2e25e1a7878b48e2203d69cdc098337525d6799705334eac23c42cf71a24f",
+      "emitted_functions": [
+        {
+          "name": "unremoveMonster__FP10GameObject",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-unremove-monster/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp",
+      "source_sha256": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
+      "object_sha256": "e387e65bcf385886d4da8a7df1eb615e27585b6145425f0f0bbc3b6e08efb321",
+      "emitted_functions": [
+        {
+          "name": "wallAndObjectSteering__FP8CreatureffP10GameObject",
+          "compiled_body_bytes": 1524
+        }
+      ],
+      "host_files": [
+        "sources/w10-world-d-wall-and-object-steering/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-world-d",
+      "source": "sources/w10-world-d-world-state-words/world_state_words.cpp",
+      "source_sha256": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
+      "object_sha256": "00680f45f4a9e63b34186495b740c3ceb9d48c0c57382d4171b266bd269807a5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-world-d-world-state-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
