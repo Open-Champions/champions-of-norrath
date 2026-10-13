@@ -1,5 +1,5 @@
 #include "../w9-rtti-vtables-entities-c-bytes/bytes.hpp"
-// Observed setState__13FemaleDarkElfi at 0x2861f8, 1828 bytes. The animation state is at object+288, the word
+// Observed setState__13FemaleDarkElfi at 0x2861f8, 1832 bytes. The animation state is at object+288, the word
 // at +36 points to a header table T, and the signed byte at +960 is the elf kind. The requested state lives in
 // a stack word.
 //  1. setStateProcessing__8CreaturePi(object, &state); a nonzero result returns at once.
