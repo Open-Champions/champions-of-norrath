@@ -8843,7 +8843,7 @@ closed, imports opened, plan entries, authored but never executed, unknown). 27 
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 4962 authored inputs, 3751 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
-produced. No EE or game execution. Closed 29, opened none, and four of the names closed here were opened by earlier merges (the six particle objects and `udkResourceMap` the w10-actor-o entry named). `norrath_web_construct` is a second copy of the body of `__3Webii` (the notes explain an alias-only unit does not work in this object format). `w11-data-c-rtti-literals-482430` overlaps the unselected `w9-rtti-vtables-entities-a-view-482424`; only the w11 one is selected. The particle objects are global 80-byte zero objects that are not placed at the original addresses and whose same-named file-local twins elsewhere are different objects, as the notes say.
+produced. No EE or game execution. Closed 29, opened none, and seven of the names closed here were opened by the w10-actor-o merge (six `*_msg_run_particle_7d7*` objects and `udkResourceMap`). `norrath_web_construct` is a second copy of the body of `__3Webii` (the notes explain an alias-only unit does not work in this object format). `w11-data-c-rtti-literals-482430` overlaps the unselected `w9-rtti-vtables-entities-a-view-482424`; only the w11 one is selected. The particle objects are global 80-byte zero objects that are not placed at the original addresses and whose same-named file-local twins elsewhere are different objects, as the notes say.
 
 | | |
 |---|---|
