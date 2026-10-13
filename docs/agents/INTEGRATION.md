@@ -8203,3 +8203,25 @@ Closed: `_$_4Soul`, `_$_8Skeleton`, `_$_8Skelight`, `__tf4Soul`, `__tf8Skeleton`
 
 Opened: `__19MultiFireProjectileG6Point3sP10GameObjectiP5Skill`, `__6PhPropG6Point3sP12_modelHeaderP14AnimationStatePcN25liPQ24item11descriptionf`, `partlist.1103`
 - 2026-10-13 03:20 CDT — `agents/w10-actor-m` — 1027 unresolved imports
+
+## agents/w10-actor-n
+
+Merged (merge commit, branch tip `4aa495e3`, 48 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (36 function bodies) with fresh `input_order` values 4319
+through 4350. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 19 under `-Werror`, 13 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4349 authored inputs, 3291 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1027 |
+| After | 1013 |
+| Closed | 32 |
+| Opened | 18 |
+
+Closed: `_$_10StaticFire`, `_$_11SpiderQueen`, `_$_5Torch`, `_$_6Switch`, `_$_8SuperOrc`, `__tf10StaticFire`, `__tf11SpiderQueen`, `__tf5Torch`, `__tf6Switch`, `__tf8SuperOrc`, `_vt$6Sparks`, `clone__10StaticFire`, `clone__11SpiderQueen`, `clone__6Switch`, `clone__8SuperOrc`, `msg_draw__10StaticFire`, `msg_draw__11SpiderQueen`, `msg_draw__8SuperOrc`, `msg_getPokeName__6SwitchPUsi`, `msg_hurt__11SpiderQueenfP10GameObjecti`, `msg_hurt__8SuperOrcfP10GameObjecti`, `msg_poke__6Switchi`, `msg_run__10StaticFire`, `msg_run__11SpiderQueen`, `msg_run__8SuperOrc`, `msg_trigger__11SpiderQueeni`, `msg_trigger__8SuperOrci`, `newWind__10StaticFirei`, `setActiveChunks__10Teleporter`, `setState__11SpiderQueeni`, `setState__4Souli`, `setState__8SuperOrci`
+
+Opened: `_$_6Sparks`, `__tf6Sparks`, `_vt$10StaticFire`, `_vt$11SpiderQueen`, `_vt$5Torch`, `_vt$6Switch`, `_vt$8SuperOrc`, `addSmokelet__10StaticFire`, `canGrab__11SpiderQueen`, `clone__6Sparks`, `msg_collision__6SparksP10GameObject`, `msg_draw__6Sparks`, `msg_run__6Sparks`, `norrath_w10_actor_n_view_7d6d80`, `norrath_w10_actor_n_view_8d63c0`, `norrath_w10_actor_n_view_8d6460`, `superorcSlamEffect__8SuperOrcP8Creaturei`, `updateSmokelets__10StaticFire`

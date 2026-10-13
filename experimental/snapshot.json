@@ -54906,6 +54906,469 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-actor-m-tf-8skelight/typeinfo.cpp"
+    },
+    {
+      "input_order": 4319,
+      "component": "w10-actor-n-clone-10staticfire",
+      "object_name": "w10_actor_n_clone_10staticfire.o",
+      "private_object_sha256": "a65102f6bf9254c219a63e1757518e6182b3cd759c77f4af7e365e633a7a44be",
+      "emitted_functions": [
+        {
+          "name": "clone__10StaticFire",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-clone-10staticfire/clone.cpp"
+    },
+    {
+      "input_order": 4320,
+      "component": "w10-actor-n-clone-11spiderqueen",
+      "object_name": "w10_actor_n_clone_11spiderqueen.o",
+      "private_object_sha256": "95e1a60c2e3910fbe49adfc69a1f9ba15952deb08649de3a4d94476ec26b177b",
+      "emitted_functions": [
+        {
+          "name": "clone__11SpiderQueen",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-clone-11spiderqueen/clone.cpp"
+    },
+    {
+      "input_order": 4321,
+      "component": "w10-actor-n-clone-6switch",
+      "object_name": "w10_actor_n_clone_6switch.o",
+      "private_object_sha256": "f4a4831736004ae797d306e007c3c70d4590200e47910ff59f17182642344cc8",
+      "emitted_functions": [
+        {
+          "name": "clone__6Switch",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-clone-6switch/clone.cpp"
+    },
+    {
+      "input_order": 4322,
+      "component": "w10-actor-n-clone-8superorc",
+      "object_name": "w10_actor_n_clone_8superorc.o",
+      "private_object_sha256": "f73ff6e38c7955d540b5fd77499e1db113e82f2426dd4608c2445b8601bd0cbc",
+      "emitted_functions": [
+        {
+          "name": "clone__8SuperOrc",
+          "compiled_body_bytes": 816
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-clone-8superorc/clone.cpp"
+    },
+    {
+      "input_order": 4323,
+      "component": "w10-actor-n-dtor-10staticfire",
+      "object_name": "w10_actor_n_dtor_10staticfire.o",
+      "private_object_sha256": "db0e35fdadfa99aea5c2256c0f60161ba052eabcf8d5ab311cce12b4cb49c515",
+      "emitted_functions": [
+        {
+          "name": "_$_10StaticFire",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-dtor-10staticfire/dtor.cpp"
+    },
+    {
+      "input_order": 4324,
+      "component": "w10-actor-n-dtor-11spiderqueen",
+      "object_name": "w10_actor_n_dtor_11spiderqueen.o",
+      "private_object_sha256": "a6b4972a78635845c96f1f10cd394bac97347874591b9d7bddc690be3e203354",
+      "emitted_functions": [
+        {
+          "name": "_$_11SpiderQueen",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-dtor-11spiderqueen/dtor.cpp"
+    },
+    {
+      "input_order": 4325,
+      "component": "w10-actor-n-dtor-5torch",
+      "object_name": "w10_actor_n_dtor_5torch.o",
+      "private_object_sha256": "2aae8d4a3bcc23a8abe326709f9b597191383326aac2438c8a30ceec247655e3",
+      "emitted_functions": [
+        {
+          "name": "_$_5Torch",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-dtor-5torch/dtor.cpp"
+    },
+    {
+      "input_order": 4326,
+      "component": "w10-actor-n-dtor-6switch",
+      "object_name": "w10_actor_n_dtor_6switch.o",
+      "private_object_sha256": "cc2adba5442d4b4d07107c239ad8ec70b2e548629881cc66196e498b8df33ec2",
+      "emitted_functions": [
+        {
+          "name": "_$_6Switch",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-dtor-6switch/dtor.cpp"
+    },
+    {
+      "input_order": 4327,
+      "component": "w10-actor-n-dtor-8superorc",
+      "object_name": "w10_actor_n_dtor_8superorc.o",
+      "private_object_sha256": "2b855580f7ed3e9a32deed74aaf07f88fd94738b7ba8db805c086af280af0116",
+      "emitted_functions": [
+        {
+          "name": "_$_8SuperOrc",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-dtor-8superorc/dtor.cpp"
+    },
+    {
+      "input_order": 4328,
+      "component": "w10-actor-n-get-poke-name-6switch",
+      "object_name": "w10_actor_n_get_poke_name_6switch.o",
+      "private_object_sha256": "bcbdfdf9bc497b07cbdb14e9698bf1d1d9103ef7c2fcc3e62d4b71d2e695fbc5",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__6SwitchPUsi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-get-poke-name-6switch/get_poke_name.cpp"
+    },
+    {
+      "input_order": 4329,
+      "component": "w10-actor-n-msg-draw-10staticfire",
+      "object_name": "w10_actor_n_msg_draw_10staticfire.o",
+      "private_object_sha256": "413bc12206ddf1e5be2ddc08537a1684b5442f3fa82da3fdc0f46365217a26bd",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10StaticFire",
+          "compiled_body_bytes": 1288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-draw-10staticfire/msg_draw.cpp"
+    },
+    {
+      "input_order": 4330,
+      "component": "w10-actor-n-msg-draw-11spiderqueen",
+      "object_name": "w10_actor_n_msg_draw_11spiderqueen.o",
+      "private_object_sha256": "102a2270616f3bb521a8fa62641668c9ff3e8f179346e5bfa7b4d2b73f0ec00e",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__11SpiderQueen",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-draw-11spiderqueen/msg_draw.cpp"
+    },
+    {
+      "input_order": 4331,
+      "component": "w10-actor-n-msg-draw-8superorc",
+      "object_name": "w10_actor_n_msg_draw_8superorc.o",
+      "private_object_sha256": "38fde77ba177ca172f7e4ee7609393972fb5cece8559e2589bb26be4a71f5402",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__8SuperOrc",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-draw-8superorc/msg_draw.cpp"
+    },
+    {
+      "input_order": 4332,
+      "component": "w10-actor-n-msg-hurt-11spiderqueen",
+      "object_name": "w10_actor_n_msg_hurt_11spiderqueen.o",
+      "private_object_sha256": "58d4cb83286e30c8b27b070a5e0d13ae850833366529e1e01e5f8b4676f1156d",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__11SpiderQueenfP10GameObjecti",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-hurt-11spiderqueen/msg_hurt.cpp"
+    },
+    {
+      "input_order": 4333,
+      "component": "w10-actor-n-msg-hurt-8superorc",
+      "object_name": "w10_actor_n_msg_hurt_8superorc.o",
+      "private_object_sha256": "e7b1545794486c54057075a060f1a388cfbe2711424603e3b138360f0d15ed8a",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__8SuperOrcfP10GameObjecti",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-hurt-8superorc/msg_hurt.cpp"
+    },
+    {
+      "input_order": 4334,
+      "component": "w10-actor-n-msg-run-10staticfire",
+      "object_name": "w10_actor_n_msg_run_10staticfire.o",
+      "private_object_sha256": "e8a4703810bbcd34b3cb91d8d296b245a371bcf116729edb8c86f28fa0c0bd3f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__10StaticFire",
+          "compiled_body_bytes": 2516
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-run-10staticfire/msg_run.cpp"
+    },
+    {
+      "input_order": 4335,
+      "component": "w10-actor-n-msg-run-11spiderqueen",
+      "object_name": "w10_actor_n_msg_run_11spiderqueen.o",
+      "private_object_sha256": "3737692107334d0ee4b011167053aacea7d74045e1d22e897bb1826ac87235b0",
+      "emitted_functions": [
+        {
+          "name": "attack",
+          "compiled_body_bytes": 336
+        },
+        {
+          "name": "approach.isra.0",
+          "compiled_body_bytes": 332
+        },
+        {
+          "name": "msg_run__11SpiderQueen",
+          "compiled_body_bytes": 4084
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-run-11spiderqueen/msg_run.cpp"
+    },
+    {
+      "input_order": 4336,
+      "component": "w10-actor-n-msg-run-8superorc",
+      "object_name": "w10_actor_n_msg_run_8superorc.o",
+      "private_object_sha256": "13bf36a914d12056eec2a273dd44d6c220abef33eaeed791ddbfdafc75edc7ba",
+      "emitted_functions": [
+        {
+          "name": "melee_round",
+          "compiled_body_bytes": 268
+        },
+        {
+          "name": "decide",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "face_and_leave",
+          "compiled_body_bytes": 128
+        },
+        {
+          "name": "msg_run__8SuperOrc",
+          "compiled_body_bytes": 2628
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-run-8superorc/msg_run.cpp"
+    },
+    {
+      "input_order": 4337,
+      "component": "w10-actor-n-msg-trigger-11spiderqueen",
+      "object_name": "w10_actor_n_msg_trigger_11spiderqueen.o",
+      "private_object_sha256": "aefdc522150de66903734ee7e928e03ab95601ad4a4fbbaaf3c308d67efcb7d2",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__11SpiderQueeni",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-trigger-11spiderqueen/msg_trigger.cpp"
+    },
+    {
+      "input_order": 4338,
+      "component": "w10-actor-n-msg-trigger-8superorc",
+      "object_name": "w10_actor_n_msg_trigger_8superorc.o",
+      "private_object_sha256": "9466162f833c1ba7552b6d1f83810375f9de3b434289a13f01dcd6ff71bb8f2e",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8SuperOrci",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-msg-trigger-8superorc/msg_trigger.cpp"
+    },
+    {
+      "input_order": 4339,
+      "component": "w10-actor-n-new-wind-10staticfire",
+      "object_name": "w10_actor_n_new_wind_10staticfire.o",
+      "private_object_sha256": "53736836121ff97add3f0ebdf814942b084d5c79fe329d32520d4f028919eff0",
+      "emitted_functions": [
+        {
+          "name": "newWind__10StaticFirei",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-new-wind-10staticfire/new_wind.cpp"
+    },
+    {
+      "input_order": 4340,
+      "component": "w10-actor-n-poke-6switch",
+      "object_name": "w10_actor_n_poke_6switch.o",
+      "private_object_sha256": "3ee825405c7060bea2d1cc38293f89122fc3efddc1e23777f1f9dffc12fb2926",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__6Switchi",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-poke-6switch/poke.cpp"
+    },
+    {
+      "input_order": 4341,
+      "component": "w10-actor-n-set-active-chunks-10teleporter",
+      "object_name": "w10_actor_n_set_active_chunks_10teleporter.o",
+      "private_object_sha256": "7dfa93330a1214967c9230d04eca209bb72d004aa57fda175ed7bfcdfe3c6ca2",
+      "emitted_functions": [
+        {
+          "name": "setActiveChunks__10Teleporter",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-set-active-chunks-10teleporter/set_active_chunks.cpp"
+    },
+    {
+      "input_order": 4342,
+      "component": "w10-actor-n-set-state-11spiderqueen",
+      "object_name": "w10_actor_n_set_state_11spiderqueen.o",
+      "private_object_sha256": "3d02f3966f3c37e86077d0b69190afaa5a621f3d0eee8dcf816f7ed19c77eb37",
+      "emitted_functions": [
+        {
+          "name": "setState__11SpiderQueeni",
+          "compiled_body_bytes": 1640
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-set-state-11spiderqueen/set_state.cpp"
+    },
+    {
+      "input_order": 4343,
+      "component": "w10-actor-n-set-state-4soul",
+      "object_name": "w10_actor_n_set_state_4soul.o",
+      "private_object_sha256": "7c668408b1a459ca82109f5aa6be7a7c3350786ab978e84b55465ae4f9a80d03",
+      "emitted_functions": [
+        {
+          "name": "setState__4Souli",
+          "compiled_body_bytes": 1664
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-set-state-4soul/set_state.cpp"
+    },
+    {
+      "input_order": 4344,
+      "component": "w10-actor-n-set-state-8superorc",
+      "object_name": "w10_actor_n_set_state_8superorc.o",
+      "private_object_sha256": "c52510c7c15a303a4c2f4f03da2775946e171e66005ec79af83150fb7f9810db",
+      "emitted_functions": [
+        {
+          "name": "setState__8SuperOrci",
+          "compiled_body_bytes": 1012
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-set-state-8superorc/set_state.cpp"
+    },
+    {
+      "input_order": 4345,
+      "component": "w10-actor-n-tf-10staticfire",
+      "object_name": "w10_actor_n_tf_10staticfire.o",
+      "private_object_sha256": "afb73c5c0b15fbca776059edc9788f6784a743043115139c01f54cd1c2660349",
+      "emitted_functions": [
+        {
+          "name": "__tf10StaticFire",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-tf-10staticfire/typeinfo.cpp"
+    },
+    {
+      "input_order": 4346,
+      "component": "w10-actor-n-tf-11spiderqueen",
+      "object_name": "w10_actor_n_tf_11spiderqueen.o",
+      "private_object_sha256": "197ef740fc4d85b3fcac88e01dff2cdb9a0dd9266551a8ade2fbdaeb93d312cc",
+      "emitted_functions": [
+        {
+          "name": "__tf11SpiderQueen",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-tf-11spiderqueen/typeinfo.cpp"
+    },
+    {
+      "input_order": 4347,
+      "component": "w10-actor-n-tf-5torch",
+      "object_name": "w10_actor_n_tf_5torch.o",
+      "private_object_sha256": "003a36761333edd0596908aae2b96947b73cdaf6540e31ee7d90ae194ffce755",
+      "emitted_functions": [
+        {
+          "name": "__tf5Torch",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-tf-5torch/typeinfo.cpp"
+    },
+    {
+      "input_order": 4348,
+      "component": "w10-actor-n-tf-6switch",
+      "object_name": "w10_actor_n_tf_6switch.o",
+      "private_object_sha256": "5934b567c62ba5188b3024fe97d1929570cc8fd3797ff3dd33d8d09630df6e0e",
+      "emitted_functions": [
+        {
+          "name": "__tf6Switch",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-tf-6switch/typeinfo.cpp"
+    },
+    {
+      "input_order": 4349,
+      "component": "w10-actor-n-tf-8superorc",
+      "object_name": "w10_actor_n_tf_8superorc.o",
+      "private_object_sha256": "5a960ad0f7bd211fa4f2f9574212aa245abd53081d5df74d213a90926dc1ff78",
+      "emitted_functions": [
+        {
+          "name": "__tf8SuperOrc",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-tf-8superorc/typeinfo.cpp"
+    },
+    {
+      "input_order": 4350,
+      "component": "w10-actor-n-vt-6sparks",
+      "object_name": "w10_actor_n_vt_6sparks.o",
+      "private_object_sha256": "5cde53ef731be35cfed50a2b2d6fffe7ae7d2300786070d9b70ae87689647754",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-actor-n-vt-6sparks/vtable.cpp"
     }
   ],
   "drafts": [
@@ -59299,6 +59762,71 @@
     "sources/w10-actor-m-tf-8skeleton/typeinfo.cpp": "7fba6477e2aff04fc54e925ff53278c97dd16a9b5639583d79e908746dc55507",
     "sources/w10-actor-m-tf-8skelight/host_check.cpp": "322139ae63a1f6be48fd7dd6c5c1eeb1c20389a3f4214cdeb0b640f29be3e998",
     "sources/w10-actor-m-tf-8skelight/typeinfo.cpp": "b18dae8abfe8b75726c6904f946928ca38edd094d03dac4974539627fefed9f0",
+    "sources/w10-actor-n-clone-10staticfire/clone.cpp": "b695668c809df96456290c1e4fd94fdf25f6c93fda173912f20587e1dd7844c2",
+    "sources/w10-actor-n-clone-10staticfire/host_check.cpp": "254b4e6956772fe11f2e20abac2452b1624ce5975014101959bcdc2a97bc4db9",
+    "sources/w10-actor-n-clone-11spiderqueen/clone.cpp": "97c6dbe83283fb14418e7d396810b0ad7c7184a0faef39a5b5ad807cac1d3558",
+    "sources/w10-actor-n-clone-11spiderqueen/host_check.cpp": "ab4044520f112ec0680077e17a809bdaf99ab58b98302c929c2abfaaeb3ec021",
+    "sources/w10-actor-n-clone-6switch/clone.cpp": "7da98022553b33c00b616b79d05974a18934cc413589eef10817f76bb87079f5",
+    "sources/w10-actor-n-clone-6switch/host_check.cpp": "a61111d75a174e2a119dcc1cc5b12b150546e19aa0c6611a73bbb6798f68b519",
+    "sources/w10-actor-n-clone-8superorc/clone.cpp": "45d16383e64c930f0f363a800f6a8c84cd4ccf7cf0006b7d9feeaf1dc436d598",
+    "sources/w10-actor-n-clone-8superorc/host_check.cpp": "3f7fbc039e0863f3ca375889967c6126b4990ff7a77e0e313d0cc09d614bc3ae",
+    "sources/w10-actor-n-common/access.hpp": "35ab04beff7d9e91733a30ab83fb387489e0980a58c6eae59331d0b1144441b2",
+    "sources/w10-actor-n-dtor-10staticfire/dtor.cpp": "9c06709cbea83cda356537813e8091c88df591dd5e0fa4446e667d27e5e6fd0c",
+    "sources/w10-actor-n-dtor-10staticfire/host_check.cpp": "7468b3f9b767af6a0a7311a66aa7dc360513f3f8bc7be99d571675d23415b86c",
+    "sources/w10-actor-n-dtor-11spiderqueen/dtor.cpp": "8bc195beaac28df67fafda9bd0592000c64484ca654d34297a1d930a12c1dc51",
+    "sources/w10-actor-n-dtor-11spiderqueen/host_check.cpp": "c7b0037effca60376f1e6dcbf3acecdf14596bd06b8f3d5a0b7bbb1df3ac2081",
+    "sources/w10-actor-n-dtor-5torch/dtor.cpp": "3ca21327622b0341745eddd47f92f7e9c9851447260956f43ff17d2a179aff22",
+    "sources/w10-actor-n-dtor-5torch/host_check.cpp": "6dd80993d39c60f7c7cc9f989d61482e99be294631702804b92754a493b3c68d",
+    "sources/w10-actor-n-dtor-6switch/dtor.cpp": "6affd90cfc7a04e417de98d8a8719de5771a7fa53f2a8c774fdb75d84ce0d8b0",
+    "sources/w10-actor-n-dtor-6switch/host_check.cpp": "05e52f0b4c2a5ed383254528db75b4b52180da41837859422458bdb195afa959",
+    "sources/w10-actor-n-dtor-8superorc/dtor.cpp": "bb8a9cc3aed92924f8e56ac22eeb031756da8ebe6f2c966311a66efa5537c65c",
+    "sources/w10-actor-n-dtor-8superorc/host_check.cpp": "231be154f088a8ee565e584f332b1c47e89a0731ca842d85bd7a122f6de91706",
+    "sources/w10-actor-n-get-poke-name-6switch/get_poke_name.cpp": "7feaaf5d5d5761a8e3b0c83f2340b132165817131266b2eaf3f7e990a02dabe3",
+    "sources/w10-actor-n-get-poke-name-6switch/host_check.cpp": "d67fda52d4b56a6574bb2d37abd7251ffce9ea98148a0b94d8ac1fce8b3a2156",
+    "sources/w10-actor-n-msg-draw-10staticfire/host_check.cpp": "1f752d77a62c60f35c3da7067828ecc8c5991f0b3960ff9654f32f6628de2932",
+    "sources/w10-actor-n-msg-draw-10staticfire/msg_draw.cpp": "a3902b2e192fe08ceca37bcd50dbd0174caa55e78754cec565739fe9ea04e1b6",
+    "sources/w10-actor-n-msg-draw-11spiderqueen/host_check.cpp": "2a8cb0d432c33f61236500c94d5b468ac03bf45ebdc3e43366b45fe94bf002a3",
+    "sources/w10-actor-n-msg-draw-11spiderqueen/msg_draw.cpp": "2785033e74875828faafd2dc7cfc8e521d888aa2b27c35cf3a759e36fce0ca89",
+    "sources/w10-actor-n-msg-draw-8superorc/host_check.cpp": "71b43abb52a6ca508ad01ba954db6fe140bd4eee7c709cf65c4fedb78648f353",
+    "sources/w10-actor-n-msg-draw-8superorc/msg_draw.cpp": "074aa6fd8e152d552560e8490e698eac88390de3ee0d6d3a925a82e958565a8c",
+    "sources/w10-actor-n-msg-hurt-11spiderqueen/host_check.cpp": "3f2a8c9bc54d1c1001a3f215158590db482196bd83c22272d86e0f7934c70b8f",
+    "sources/w10-actor-n-msg-hurt-11spiderqueen/msg_hurt.cpp": "2b1090248239a6c0fc176e6b2d29238c1d4b23215f7991be285501790d8e53d5",
+    "sources/w10-actor-n-msg-hurt-8superorc/host_check.cpp": "ad032e7e13d5d2dbeb159e49d49ce8d431787c27d7fc71743fe7f8ffd5d34cc8",
+    "sources/w10-actor-n-msg-hurt-8superorc/msg_hurt.cpp": "b076d1a02eabc567bb12512702de15b7d62e1e9c3efa4bd6ee860d58f3ecf542",
+    "sources/w10-actor-n-msg-run-10staticfire/host_check.cpp": "883c469a443b401ad8863329bbb0bddd022c8fe50e6a0bde57472014b4ec7a83",
+    "sources/w10-actor-n-msg-run-10staticfire/msg_run.cpp": "9f0d2fc87955c1fb84f3cd5032fa7e2a97a599de30eb8aafb5eccddf2d94a0bf",
+    "sources/w10-actor-n-msg-run-11spiderqueen/host_check.cpp": "902553ca2b465e6499dc0d21871c79f971528ff361513ebcaf22cbcbdcee184b",
+    "sources/w10-actor-n-msg-run-11spiderqueen/msg_run.cpp": "0c6f3a370496b499df344903fa34b9ab68844acdb5537d05d7f4d7a81f7dd3d1",
+    "sources/w10-actor-n-msg-run-8superorc/host_check.cpp": "42a8e8755a9caa299608e5c68a1b8023eff832716190c85f806246100d416de9",
+    "sources/w10-actor-n-msg-run-8superorc/msg_run.cpp": "873dbd96748b36e41d024a5a61f5c3a19ac858795f94a7ec783ef20a9e91763b",
+    "sources/w10-actor-n-msg-trigger-11spiderqueen/host_check.cpp": "b6a61e51d8faff3cc6da0262a6b2a621f0623b969ac4755b5d6e22c9ad893c7b",
+    "sources/w10-actor-n-msg-trigger-11spiderqueen/msg_trigger.cpp": "e6a0d74d58537071f80d65e9e3f25f8c8fc155404b6a04d6cd6d35385b7890e2",
+    "sources/w10-actor-n-msg-trigger-8superorc/host_check.cpp": "81a82c0be12dbe44ffdb67de73d20374e2ca664c2539473087f7e50717cb8a32",
+    "sources/w10-actor-n-msg-trigger-8superorc/msg_trigger.cpp": "a994bd96c9fcaaffe6c3847011a829350016d0b8ed0eff0da8b95fc233ec1352",
+    "sources/w10-actor-n-new-wind-10staticfire/host_check.cpp": "c36650bf292d41f834163ef7b4141d818d910c155a5cbd39520fd753dd66ac5b",
+    "sources/w10-actor-n-new-wind-10staticfire/new_wind.cpp": "82f0f6e63b3d75222fa3b5b41f379c748382e1621463a22b28f6c7ca66046920",
+    "sources/w10-actor-n-poke-6switch/host_check.cpp": "001de136311b549106c0f141dc4d5a0c2deb3b28c279599367db6b4267e1252f",
+    "sources/w10-actor-n-poke-6switch/poke.cpp": "4e906f888076fb7a9c239c028612c89af539bf4177ed872a24734b9fa6648437",
+    "sources/w10-actor-n-set-active-chunks-10teleporter/host_check.cpp": "eadbf7c908e35a096e78a59768fb77850b3e91f8751ab651df7bb3b83a7a3aed",
+    "sources/w10-actor-n-set-active-chunks-10teleporter/set_active_chunks.cpp": "57dcdc1854164220c66c2bb43e8f5a2ad71c7410b02ce65ab93e140760dd36c8",
+    "sources/w10-actor-n-set-state-11spiderqueen/host_check.cpp": "6c3eaf59a6d285ac975533160748d6e0b9b79d248d42182ed8598e4ba86b7b7d",
+    "sources/w10-actor-n-set-state-11spiderqueen/set_state.cpp": "cecdfb7d66d299c034fa8611880a92d3c8dc4926ef6a792d37828e8e3c105798",
+    "sources/w10-actor-n-set-state-4soul/host_check.cpp": "811e4e385a61386eff9594e27d636120eaf4abe36a7784be1a2166379dff8b57",
+    "sources/w10-actor-n-set-state-4soul/set_state.cpp": "9bc638a9edc6fbafde975acfe06d958eaba58280fe332b9c52cfec7866b703d5",
+    "sources/w10-actor-n-set-state-8superorc/host_check.cpp": "fec9f1b679e11bd0aaf1d3aa28959a65901e92ca885c216da7ad1b9e84fb84e9",
+    "sources/w10-actor-n-set-state-8superorc/set_state.cpp": "b819f721d0f6679d75cdc4f8a341d83cd671b5f0aab60d974215a14e5c8213db",
+    "sources/w10-actor-n-tf-10staticfire/host_check.cpp": "446f9b8ccc2070b05088cacf441ab361e24bf0a639e3bd6b7634a1781070ca2f",
+    "sources/w10-actor-n-tf-10staticfire/typeinfo.cpp": "6d8e7ecf77dfe2ff17d050e1fadfcaa2c43fbee1ed009c4178438cd39ff35a44",
+    "sources/w10-actor-n-tf-11spiderqueen/host_check.cpp": "106e4078d31f562e1722b216759ca4c1846dcba47cc95f0d9b4c0b055f1b64d1",
+    "sources/w10-actor-n-tf-11spiderqueen/typeinfo.cpp": "372e57323020a995725c2f1426fa451aeea9f78b443080ef2ef07a5dc78191a5",
+    "sources/w10-actor-n-tf-5torch/host_check.cpp": "c0bf7c627f9a12cc94ce5334d003a6b1123c60dcb2d337673c5ea7d61085cff5",
+    "sources/w10-actor-n-tf-5torch/typeinfo.cpp": "67e1ca10a1c545deb5e741d6e91a334f2c5c489457db8690da0dcb9cf83bd4cf",
+    "sources/w10-actor-n-tf-6switch/host_check.cpp": "0d7dcc32f50bc78437f216c4e1b99bd74027b2d54f8f8759592d193d82005871",
+    "sources/w10-actor-n-tf-6switch/typeinfo.cpp": "01d2fa6a81b0d80e095429c93a02707c75c4acc923536500e85fee95ec84e011",
+    "sources/w10-actor-n-tf-8superorc/host_check.cpp": "d90b4daa9079d952be2eeb1a1dc3daf1d519b75f77188cc85deb202bbd785e90",
+    "sources/w10-actor-n-tf-8superorc/typeinfo.cpp": "f1c028af8c78c70210b34a465a58b8a1085fb6aa21f610a3bab7673eee150976",
+    "sources/w10-actor-n-vt-6sparks/host_check.cpp": "df364c296652af263967018a411d154b5bf9059d5eb032b335e0bba90916dd8a",
+    "sources/w10-actor-n-vt-6sparks/vtable.cpp": "ba24fe050150dc824e6026303ffd8e7f8179bc0d8417a366bb8d6ac5a2884d9e",
     "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
     "sources/w10-audio-a-ambient-state/host_contract.cpp": "67764a13f029afc0c9ebaf4615868ea972d9d6a8b4b8e2b30d976d9edee423f9",
     "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
@@ -64597,11 +65125,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4319,
-    "authored_default_inputs": 4317,
+    "selected_inputs": 4351,
+    "authored_default_inputs": 4349,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3257,
-    "compiled_body_bytes_from_accepted_inputs": 1466548,
+    "emitted_function_definitions_including_helpers": 3293,
+    "compiled_body_bytes_from_accepted_inputs": 1487648,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -64614,7 +65142,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4006
+    "package_selected_inputs": 4038
   },
   "startup_implementations": [
     {
@@ -127042,6 +127570,565 @@
       ],
       "host_files": [
         "sources/w10-actor-m-tf-8skelight/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-clone-10staticfire/clone.cpp",
+      "source_sha256": "b695668c809df96456290c1e4fd94fdf25f6c93fda173912f20587e1dd7844c2",
+      "object_sha256": "a65102f6bf9254c219a63e1757518e6182b3cd759c77f4af7e365e633a7a44be",
+      "emitted_functions": [
+        {
+          "name": "clone__10StaticFire",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-clone-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-clone-11spiderqueen/clone.cpp",
+      "source_sha256": "97c6dbe83283fb14418e7d396810b0ad7c7184a0faef39a5b5ad807cac1d3558",
+      "object_sha256": "95e1a60c2e3910fbe49adfc69a1f9ba15952deb08649de3a4d94476ec26b177b",
+      "emitted_functions": [
+        {
+          "name": "clone__11SpiderQueen",
+          "compiled_body_bytes": 824
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-clone-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-clone-6switch/clone.cpp",
+      "source_sha256": "7da98022553b33c00b616b79d05974a18934cc413589eef10817f76bb87079f5",
+      "object_sha256": "f4a4831736004ae797d306e007c3c70d4590200e47910ff59f17182642344cc8",
+      "emitted_functions": [
+        {
+          "name": "clone__6Switch",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-clone-6switch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-clone-8superorc/clone.cpp",
+      "source_sha256": "45d16383e64c930f0f363a800f6a8c84cd4ccf7cf0006b7d9feeaf1dc436d598",
+      "object_sha256": "f73ff6e38c7955d540b5fd77499e1db113e82f2426dd4608c2445b8601bd0cbc",
+      "emitted_functions": [
+        {
+          "name": "clone__8SuperOrc",
+          "compiled_body_bytes": 816
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-clone-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-dtor-10staticfire/dtor.cpp",
+      "source_sha256": "9c06709cbea83cda356537813e8091c88df591dd5e0fa4446e667d27e5e6fd0c",
+      "object_sha256": "db0e35fdadfa99aea5c2256c0f60161ba052eabcf8d5ab311cce12b4cb49c515",
+      "emitted_functions": [
+        {
+          "name": "_$_10StaticFire",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-dtor-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-dtor-11spiderqueen/dtor.cpp",
+      "source_sha256": "8bc195beaac28df67fafda9bd0592000c64484ca654d34297a1d930a12c1dc51",
+      "object_sha256": "a6b4972a78635845c96f1f10cd394bac97347874591b9d7bddc690be3e203354",
+      "emitted_functions": [
+        {
+          "name": "_$_11SpiderQueen",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-dtor-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-dtor-5torch/dtor.cpp",
+      "source_sha256": "3ca21327622b0341745eddd47f92f7e9c9851447260956f43ff17d2a179aff22",
+      "object_sha256": "2aae8d4a3bcc23a8abe326709f9b597191383326aac2438c8a30ceec247655e3",
+      "emitted_functions": [
+        {
+          "name": "_$_5Torch",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-dtor-5torch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-dtor-6switch/dtor.cpp",
+      "source_sha256": "6affd90cfc7a04e417de98d8a8719de5771a7fa53f2a8c774fdb75d84ce0d8b0",
+      "object_sha256": "cc2adba5442d4b4d07107c239ad8ec70b2e548629881cc66196e498b8df33ec2",
+      "emitted_functions": [
+        {
+          "name": "_$_6Switch",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-dtor-6switch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-dtor-8superorc/dtor.cpp",
+      "source_sha256": "bb8a9cc3aed92924f8e56ac22eeb031756da8ebe6f2c966311a66efa5537c65c",
+      "object_sha256": "2b855580f7ed3e9a32deed74aaf07f88fd94738b7ba8db805c086af280af0116",
+      "emitted_functions": [
+        {
+          "name": "_$_8SuperOrc",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-dtor-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-get-poke-name-6switch/get_poke_name.cpp",
+      "source_sha256": "7feaaf5d5d5761a8e3b0c83f2340b132165817131266b2eaf3f7e990a02dabe3",
+      "object_sha256": "bcbdfdf9bc497b07cbdb14e9698bf1d1d9103ef7c2fcc3e62d4b71d2e695fbc5",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__6SwitchPUsi",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-get-poke-name-6switch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-draw-10staticfire/msg_draw.cpp",
+      "source_sha256": "a3902b2e192fe08ceca37bcd50dbd0174caa55e78754cec565739fe9ea04e1b6",
+      "object_sha256": "413bc12206ddf1e5be2ddc08537a1684b5442f3fa82da3fdc0f46365217a26bd",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10StaticFire",
+          "compiled_body_bytes": 1288
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-draw-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-draw-11spiderqueen/msg_draw.cpp",
+      "source_sha256": "2785033e74875828faafd2dc7cfc8e521d888aa2b27c35cf3a759e36fce0ca89",
+      "object_sha256": "102a2270616f3bb521a8fa62641668c9ff3e8f179346e5bfa7b4d2b73f0ec00e",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__11SpiderQueen",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-draw-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-draw-8superorc/msg_draw.cpp",
+      "source_sha256": "074aa6fd8e152d552560e8490e698eac88390de3ee0d6d3a925a82e958565a8c",
+      "object_sha256": "38fde77ba177ca172f7e4ee7609393972fb5cece8559e2589bb26be4a71f5402",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__8SuperOrc",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-draw-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-hurt-11spiderqueen/msg_hurt.cpp",
+      "source_sha256": "2b1090248239a6c0fc176e6b2d29238c1d4b23215f7991be285501790d8e53d5",
+      "object_sha256": "58d4cb83286e30c8b27b070a5e0d13ae850833366529e1e01e5f8b4676f1156d",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__11SpiderQueenfP10GameObjecti",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-hurt-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-hurt-8superorc/msg_hurt.cpp",
+      "source_sha256": "b076d1a02eabc567bb12512702de15b7d62e1e9c3efa4bd6ee860d58f3ecf542",
+      "object_sha256": "e7b1545794486c54057075a060f1a388cfbe2711424603e3b138360f0d15ed8a",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__8SuperOrcfP10GameObjecti",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-hurt-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-run-10staticfire/msg_run.cpp",
+      "source_sha256": "9f0d2fc87955c1fb84f3cd5032fa7e2a97a599de30eb8aafb5eccddf2d94a0bf",
+      "object_sha256": "e8a4703810bbcd34b3cb91d8d296b245a371bcf116729edb8c86f28fa0c0bd3f",
+      "emitted_functions": [
+        {
+          "name": "msg_run__10StaticFire",
+          "compiled_body_bytes": 2516
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-run-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-run-11spiderqueen/msg_run.cpp",
+      "source_sha256": "0c6f3a370496b499df344903fa34b9ab68844acdb5537d05d7f4d7a81f7dd3d1",
+      "object_sha256": "3737692107334d0ee4b011167053aacea7d74045e1d22e897bb1826ac87235b0",
+      "emitted_functions": [
+        {
+          "name": "attack",
+          "compiled_body_bytes": 336
+        },
+        {
+          "name": "approach.isra.0",
+          "compiled_body_bytes": 332
+        },
+        {
+          "name": "msg_run__11SpiderQueen",
+          "compiled_body_bytes": 4084
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-run-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-run-8superorc/msg_run.cpp",
+      "source_sha256": "873dbd96748b36e41d024a5a61f5c3a19ac858795f94a7ec783ef20a9e91763b",
+      "object_sha256": "13bf36a914d12056eec2a273dd44d6c220abef33eaeed791ddbfdafc75edc7ba",
+      "emitted_functions": [
+        {
+          "name": "melee_round",
+          "compiled_body_bytes": 268
+        },
+        {
+          "name": "decide",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "face_and_leave",
+          "compiled_body_bytes": 128
+        },
+        {
+          "name": "msg_run__8SuperOrc",
+          "compiled_body_bytes": 2628
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-run-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-trigger-11spiderqueen/msg_trigger.cpp",
+      "source_sha256": "e6a0d74d58537071f80d65e9e3f25f8c8fc155404b6a04d6cd6d35385b7890e2",
+      "object_sha256": "aefdc522150de66903734ee7e928e03ab95601ad4a4fbbaaf3c308d67efcb7d2",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__11SpiderQueeni",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-trigger-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-msg-trigger-8superorc/msg_trigger.cpp",
+      "source_sha256": "a994bd96c9fcaaffe6c3847011a829350016d0b8ed0eff0da8b95fc233ec1352",
+      "object_sha256": "9466162f833c1ba7552b6d1f83810375f9de3b434289a13f01dcd6ff71bb8f2e",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8SuperOrci",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-msg-trigger-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-new-wind-10staticfire/new_wind.cpp",
+      "source_sha256": "82f0f6e63b3d75222fa3b5b41f379c748382e1621463a22b28f6c7ca66046920",
+      "object_sha256": "53736836121ff97add3f0ebdf814942b084d5c79fe329d32520d4f028919eff0",
+      "emitted_functions": [
+        {
+          "name": "newWind__10StaticFirei",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-new-wind-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-poke-6switch/poke.cpp",
+      "source_sha256": "4e906f888076fb7a9c239c028612c89af539bf4177ed872a24734b9fa6648437",
+      "object_sha256": "3ee825405c7060bea2d1cc38293f89122fc3efddc1e23777f1f9dffc12fb2926",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__6Switchi",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-poke-6switch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-set-active-chunks-10teleporter/set_active_chunks.cpp",
+      "source_sha256": "57dcdc1854164220c66c2bb43e8f5a2ad71c7410b02ce65ab93e140760dd36c8",
+      "object_sha256": "7dfa93330a1214967c9230d04eca209bb72d004aa57fda175ed7bfcdfe3c6ca2",
+      "emitted_functions": [
+        {
+          "name": "setActiveChunks__10Teleporter",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-set-active-chunks-10teleporter/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-set-state-11spiderqueen/set_state.cpp",
+      "source_sha256": "cecdfb7d66d299c034fa8611880a92d3c8dc4926ef6a792d37828e8e3c105798",
+      "object_sha256": "3d02f3966f3c37e86077d0b69190afaa5a621f3d0eee8dcf816f7ed19c77eb37",
+      "emitted_functions": [
+        {
+          "name": "setState__11SpiderQueeni",
+          "compiled_body_bytes": 1640
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-set-state-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-set-state-4soul/set_state.cpp",
+      "source_sha256": "9bc638a9edc6fbafde975acfe06d958eaba58280fe332b9c52cfec7866b703d5",
+      "object_sha256": "7c668408b1a459ca82109f5aa6be7a7c3350786ab978e84b55465ae4f9a80d03",
+      "emitted_functions": [
+        {
+          "name": "setState__4Souli",
+          "compiled_body_bytes": 1664
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-set-state-4soul/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-set-state-8superorc/set_state.cpp",
+      "source_sha256": "b819f721d0f6679d75cdc4f8a341d83cd671b5f0aab60d974215a14e5c8213db",
+      "object_sha256": "c52510c7c15a303a4c2f4f03da2775946e171e66005ec79af83150fb7f9810db",
+      "emitted_functions": [
+        {
+          "name": "setState__8SuperOrci",
+          "compiled_body_bytes": 1012
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-set-state-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-tf-10staticfire/typeinfo.cpp",
+      "source_sha256": "6d8e7ecf77dfe2ff17d050e1fadfcaa2c43fbee1ed009c4178438cd39ff35a44",
+      "object_sha256": "afb73c5c0b15fbca776059edc9788f6784a743043115139c01f54cd1c2660349",
+      "emitted_functions": [
+        {
+          "name": "__tf10StaticFire",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-tf-10staticfire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-tf-11spiderqueen/typeinfo.cpp",
+      "source_sha256": "372e57323020a995725c2f1426fa451aeea9f78b443080ef2ef07a5dc78191a5",
+      "object_sha256": "197ef740fc4d85b3fcac88e01dff2cdb9a0dd9266551a8ade2fbdaeb93d312cc",
+      "emitted_functions": [
+        {
+          "name": "__tf11SpiderQueen",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-tf-11spiderqueen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-tf-5torch/typeinfo.cpp",
+      "source_sha256": "67e1ca10a1c545deb5e741d6e91a334f2c5c489457db8690da0dcb9cf83bd4cf",
+      "object_sha256": "003a36761333edd0596908aae2b96947b73cdaf6540e31ee7d90ae194ffce755",
+      "emitted_functions": [
+        {
+          "name": "__tf5Torch",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-tf-5torch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-tf-6switch/typeinfo.cpp",
+      "source_sha256": "01d2fa6a81b0d80e095429c93a02707c75c4acc923536500e85fee95ec84e011",
+      "object_sha256": "5934b567c62ba5188b3024fe97d1929570cc8fd3797ff3dd33d8d09630df6e0e",
+      "emitted_functions": [
+        {
+          "name": "__tf6Switch",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-tf-6switch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-tf-8superorc/typeinfo.cpp",
+      "source_sha256": "f1c028af8c78c70210b34a465a58b8a1085fb6aa21f610a3bab7673eee150976",
+      "object_sha256": "5a960ad0f7bd211fa4f2f9574212aa245abd53081d5df74d213a90926dc1ff78",
+      "emitted_functions": [
+        {
+          "name": "__tf8SuperOrc",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-actor-n-tf-8superorc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-actor-n",
+      "source": "sources/w10-actor-n-vt-6sparks/vtable.cpp",
+      "source_sha256": "ba24fe050150dc824e6026303ffd8e7f8179bc0d8417a366bb8d6ac5a2884d9e",
+      "object_sha256": "5cde53ef731be35cfed50a2b2d6fffe7ae7d2300786070d9b70ae87689647754",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-actor-n-vt-6sparks/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
