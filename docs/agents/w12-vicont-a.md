@@ -60,24 +60,32 @@ Field meanings come from how the words are used and are named only in comments. 
 
 ## Imports opened
 
-Callees the new sources need (42 distinct, from an `nm -u` of every compiled unit), not defined by this package. Names that a source elsewhere in this branch already defines are listed second; the integrator should confirm that those definitions are the ones the plan selects.
-
-Still undefined:
+Callees the new sources need (42 distinct, from an `nm -u` of every compiled unit), not defined by this package. Some of these may already be defined by other selected sources (a text search found candidate sources for a few of the pool Begin/End/Next helpers, the three DestroyPool instances of the plane, vect3 and scene display element arrays, and the allocator functions, but declarations and test mocks look the same to it). The integrator should settle this against the `unresolved-imports.json` of the combined build.
 
 - `Begin__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`
 - `Begin__Ct5VIMap2ZiZi`
 - `Begin__Ct6VIPool1Z19VIRasterMaterialLRU`
 - `Begin__Ct6VIPool1ZP12VIPrimBuffer`
 - `Begin__Ct6VIPool1ZP13VIColorBuffer`
+- `Begin__Ct6VIPool1ZP13VIHSpriteAnim`
+- `Begin__Ct6VIPool1ZP16VIStaticLighting`
+- `Begin__Ct6VIPool1ZP8VIRefMap`
 - `DestroyPool__t6VIPool1ZP8VISprite`
 - `DestroyPool__t7VIArray1Z11VIClipEntry`
 - `DestroyPool__t7VIArray1Z13VIWorldRegion`
 - `DestroyPool__t7VIArray1Z6VIZone`
+- `DestroyPool__t7VIArray1Z7VIPlane`
+- `DestroyPool__t7VIArray1Z7VIVect3`
+- `DestroyPool__t8VIVector1Z18VISceneDisplayElem`
 - `End__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`
 - `End__Ct5VIMap2ZiZi`
 - `End__Ct6VIPool1Z19VIRasterMaterialLRU`
+- `End__Ct6VIPool1ZP12VICollBuffer`
 - `End__Ct6VIPool1ZP12VIPrimBuffer`
 - `End__Ct6VIPool1ZP13VIColorBuffer`
+- `End__Ct6VIPool1ZP13VIHSpriteAnim`
+- `End__Ct6VIPool1ZP16VIStaticLighting`
+- `End__Ct6VIPool1ZP8VIRefMap`
 - `LinkFreeChain__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`
 - `LinkFreeChain__t6VIPool1ZP13VIHSpriteAnimi`
 - `LinkFreeChain__t6VIPool1ZP16VIStaticLightingi`
@@ -89,26 +97,13 @@ Still undefined:
 - `Next__Ct6VIPool1ZP12VICollBufferi`
 - `Next__Ct6VIPool1ZP12VIPrimBufferi`
 - `Next__Ct6VIPool1ZP13VIColorBufferi`
+- `Next__Ct6VIPool1ZP13VIHSpriteAnimi`
+- `Next__Ct6VIPool1ZP16VIStaticLightingi`
+- `Next__Ct6VIPool1ZP8VIRefMapi`
 - `_$_10VIMatrix33`
-
-Defined elsewhere in the branch:
-
-- `Begin__Ct6VIPool1ZP13VIHSpriteAnim` (defined in `w10-vi-b-scene-clear`)
-- `Begin__Ct6VIPool1ZP16VIStaticLighting` (defined in `w10-vi-b-scene-clear`)
-- `Begin__Ct6VIPool1ZP8VIRefMap` (defined in `w10-vi-b-scene-clear`)
-- `DestroyPool__t7VIArray1Z7VIPlane` (defined in `w11-tmpl-c-array-plane-dtor`)
-- `DestroyPool__t7VIArray1Z7VIVect3` (defined in `w11-tmpl-c-array-vect3-dtor`)
-- `DestroyPool__t8VIVector1Z18VISceneDisplayElem` (defined in `w11-tmpl-c-vector-scene-display-elem-dtor`)
-- `End__Ct6VIPool1ZP12VICollBuffer` (defined in `w11-vi-render-a-collide-clear`)
-- `End__Ct6VIPool1ZP13VIHSpriteAnim` (defined in `w10-vi-b-scene-clear`)
-- `End__Ct6VIPool1ZP16VIStaticLighting` (defined in `w10-vi-b-scene-clear`)
-- `End__Ct6VIPool1ZP8VIRefMap` (defined in `w10-vi-b-scene-clear`)
-- `Next__Ct6VIPool1ZP13VIHSpriteAnimi` (defined in `w10-vi-b-scene-clear`)
-- `Next__Ct6VIPool1ZP16VIStaticLightingi` (defined in `w10-vi-b-scene-clear`)
-- `Next__Ct6VIPool1ZP8VIRefMapi` (defined in `w10-vi-b-scene-clear`)
-- `__builtin_delete` (defined in `w10-vi-a-esfparse-dtor`)
-- `__builtin_vec_delete` (defined in `w11-tmpl-c-array-plane-dtor`)
-- `__builtin_vec_new` (defined in `w11-crt-a-builtin-vec-new`)
+- `__builtin_delete`
+- `__builtin_vec_delete`
+- `__builtin_vec_new`
 
 ## Build-plan entries needed
 
