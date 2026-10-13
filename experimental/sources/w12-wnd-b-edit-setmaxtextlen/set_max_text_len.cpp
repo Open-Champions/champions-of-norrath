@@ -13,13 +13,20 @@
 // record array; +436, +400 and the caret offset are reset because the contents changed.
 // Unknown: the record fields' meaning; the fields at +400 and +436; behavior for a failed
 // allocation (the result is used unchecked).
+#if defined(NORRATH_HOST_CONTRACT)
+extern "C" char* norrath_host_translate(unsigned address);
+#define NORRATH_TRANSLATE(address) norrath_host_translate(address)
+#else
+#define NORRATH_TRANSLATE(address) reinterpret_cast<char*>(static_cast<unsigned long>(address))
+#endif
+
 extern "C" {
 void* __builtin_vec_new(unsigned long size);
 void __builtin_vec_delete(void* pointer);
 void SetCaretOffset__9VIWndEditi(void* self, int offset);
 
 static inline void* pointer_of(unsigned word) {
-    return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(word));
+    return NORRATH_TRANSLATE(word);
 }
 static inline unsigned word_of(void* pointer) {
     return static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(pointer));
