@@ -1,4 +1,4 @@
-// Observed evaluateRampAtRank__5Skillii at 0x00313548, 120 bytes (extent to the next symbol 128).
+// Observed evaluateRampAtRank__5Skillii at 0x00313548, 156 bytes (symbol size).
 // The first integer argument (here "slot") selects one of five entries and the second ("level") is
 // the point count to evaluate. Reads only, from the receiver and its arguments:
 //  - level 0 returns 0;
