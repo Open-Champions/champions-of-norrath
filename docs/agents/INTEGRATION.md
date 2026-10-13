@@ -7801,3 +7801,32 @@ Closed: `routeClear__Fv`, `routeEnable`, `routeMakeLattice__Fv`, `routeQueue`, `
 
 Opened: `femBarbResourceMap`, `femaleDarkElfResourceMap`, `femaleEruditeResourceMap`, `femaleHighElfResourceMap`, `femaleWoodElfResourceMap`, `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap`, `maleHighElfResourceMap`, `maleWoodElfResourceMap`, `mt_dyndat`, `mt_throwaway`, `route_dirs`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `worldCanPass__FP12_worldHeaderG6Point3T1fi`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`
 - 2026-10-13 01:51 CDT — `agents/w10-world-d` — 1199 unresolved imports
+
+## agents/w10-item-a
+
+Merged (merge commit, branch tip `142c6566`, 47 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Items, inventory and skills: 23 units (25 function bodies,
+including the skills static-initialiser `_GLOBAL_$I$skills`) with fresh `input_order`
+values 3863 through 3885. 23 of 23 host checks pass here (x86_64, `-ffp-contract=off`):
+18 under `-Werror`, five only without it (warnings). One unit,
+`w10-item-a-skill-life-tap-get-chance` (`getChance__12SkillLifeTapi`), has no committed
+check (the notes cite only the private paired run), so it was not selected and its source
+stays in the snapshot. **The unresolved count rises by 58**: the skills static initialiser
+calls 52 skill constructors and reads further item and particle objects that no package
+defines yet, so 88 names open against 30 closed. The notes warn that some opened names
+may be defined elsewhere; none of the 88 were defined in the shared plan. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3884 authored inputs, 2809 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1199 |
+| After | 1257 |
+| Closed | 30 |
+| Opened | 88 |
+
+Closed: `_GLOBAL_$I$skills`, `_shopCheck__Fi`, `armorDebug`, `buySellVertSpacing`, `create__4itemPcPQ24item11descriptionii`, `findAndStripGender__4itemPUs`, `gSkillTree`, `getArmorBonus__4itemPQ24item11description`, `getAttributeName__4itemiPc`, `getDamageRangeAll__4itemPQ24item11descriptionPiT2i`, `givePlayerSkill__Fii`, `goldAnm`, `healthPotionsLeft`, `init__4itemv`, `invInitSharedInterfaceTextures__Fv`, `inventoryDrawDelay`, `inventoryDrawPlayerColor__Fiii`, `inventoryDrawPlayer__FiiP14AnimationStatei`, `inventoryDraw__Fi`, `inventoryRun__Fi`, `inventorySwitchDualWield__FiPQ24item11description`, `inventorySyncQuestItems__Fi`, `inventoryUnpack__Fiib`, `manaPotionsLeft`, `msgInventoryGridDropItem__Fiiciiii`, `playerSetFeatRank__Fixi`, `playerSetSkillRank__Fiii`, `shopRun__Fi`, `shopUnpackToGrid__Fiii`, `skills`
+
+Opened: `_4item$namedItemTable`, `_4item$undEnable`, `__10SkillDodge`, `__10SkillShock`, `__11SkillCharge`, `__12SkillArchery`, `__12SkillBlessed`, `__12SkillCyclone`, `__12SkillHealing`, `__12SkillLifeTap`, `__12SkillRiposte`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__14SkillMultiFire`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__15SkillPoisonRain`, `__15SkillShieldBash`, `__15SkillWizardBeam`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__16SkillPoisonArrow`, `__16SkillShockOfFire`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__17SkillMinorHealing`, `__17SkillRegeneration`, `__17SkillShockOfFrost`, `__17SkillUndeadShield`, `__18SkillAncestralCall`, `__18SkillBlindingLight`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`, `__18SkillRepulseUndead`, `__19SkillSummonSkeleton`, `__21SkillLightningWeapons`, `__22SkillRangerCriticalHit`, `__9SkillBash`, `__9SkillRoot`, `_vt$10SkillBlunt`, `_vt$13SkillHateBeam`, `_vt$13SkillSlashing`, `_vt$15SkillBallOfHate`, `_vt$15SkillHateEffect`, `_vt$17SkillResistPoison`, `_vt$18SkillDiseaseEffect`, `_vt$18SkillPoisonWeapons`, `_vt$19SkillDiseaseWeapons`, `arrowLeft`, `arrowRight`, `charAnimTest`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `drawAttachments__6PlayerP11_drawRecordf`, `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `mainMenu__Fii`, `matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf`, `moneyTex`, `msgInventoryExit__Fiii`, `playerDrawWeaponEffects__6Playerf`, `rcursor`, `scaleTex`, `selectionBox`, `taskBar`, `tinyIcon`

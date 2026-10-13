@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3861,
+  "default_authored_inputs": 3884,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2324,6 +2324,29 @@
     "sources/w10-front-b-skin-setting/skin_setting.cpp": "324bcc83989c3120efa2c9fcf838f9a8db84cde518df484016aacee836467bcc",
     "sources/w10-front-b-skirmish-init/skirmish_init.cpp": "b84b064222edf1e8b398f8fa01a1b632271b40cd47e2731db71e6ae1e3bedd73",
     "sources/w10-front-b-stats-screen/stats_screen.cpp": "33e1789bef8708babd7d80bd7787666e251f3abe28d2d3733a44a29bc88c731e",
+    "sources/w10-item-a-find-and-strip-gender/find_and_strip_gender.cpp": "05c735041122ccd33b0d3bd35cf9ef69ddd1557597a1134d8ffa8549d9b8711d",
+    "sources/w10-item-a-get-armor-bonus/get_armor_bonus.cpp": "b9a4989814dffa22232edf34e2207bf7ee25e969beac2094abb0d4509d0b5bc5",
+    "sources/w10-item-a-get-attribute-name/get_attribute_name.cpp": "bb560f525889fa669985230013112bb6125cee607f554d68ed93a4758eec4379",
+    "sources/w10-item-a-get-damage-range-all/get_damage_range_all.cpp": "107548a1f978b1fc2a0e547bab7a8cacc13d251eb48c639464c23c7fcde5f581",
+    "sources/w10-item-a-give-player-skill/give_player_skill.cpp": "25237cb16c58c186430bbf402fed516ce9012a154ea817d13a30fb3bf93c4642",
+    "sources/w10-item-a-grid-drop-message/grid_drop_message.cpp": "d2a51f86b6696a5bd531202f2cef0a9d595029741cb08d05344ae710b97c6fc8",
+    "sources/w10-item-a-inv-init-shared-textures/inv_init_shared_textures.cpp": "be26b84578a1d6596c8b3f8f0b9261afb4a566369435fe63822f152f021fe26f",
+    "sources/w10-item-a-inventory-data/inventory_data.cpp": "b3073923fcfe1c5f54e342ae46fb9b704cc337a1b52fb198820d4540d426e281",
+    "sources/w10-item-a-inventory-draw-player-color/draw_player_color.cpp": "1a947b80f0fe379f862ef5b29b62a5606e2e2e810d8f1d4426a78530fde70cd9",
+    "sources/w10-item-a-inventory-draw-player/inventory_draw_player.cpp": "8539a712a02eddf04e19f2d0047345dcc05562579bd56397f8e54836b7ace274",
+    "sources/w10-item-a-inventory-draw/inventory_draw.cpp": "3e8c8a15d9d6a3c71df97d88c3dae10131b5f3c3b176a49e87a88a13fcb0f60f",
+    "sources/w10-item-a-inventory-run/inventory_run.cpp": "80359faeaf5039982d507697675923e1c6e065570185bb24db8a1f9bd87d1232",
+    "sources/w10-item-a-inventory-unpack/inventory_unpack.cpp": "ca005c4520e535e07140ca503b5e2968eec2d5f26195ea7ea3205ee6500710a8",
+    "sources/w10-item-a-item-create/item_create.cpp": "0a4abdaef004c5251bba7c4f22f85694a06900a6b8062dbde5c8685c5ca1a7b9",
+    "sources/w10-item-a-item-init/item_init.cpp": "61a63903c619f57348733e3e82524a2ffcab6b4fbe904ba7717e0a087659b49f",
+    "sources/w10-item-a-set-feat-rank/set_feat_rank.cpp": "fb5f247e159a4c2bf6a499635f24a075f1ca6494bdd28e3d9566db2cf6995078",
+    "sources/w10-item-a-set-skill-rank/set_skill_rank.cpp": "56c3cc1b84c71fc9137b4f0468a97ac7418adb78aba8ed3382fcaf28accf62d3",
+    "sources/w10-item-a-shop-check/shop_check.cpp": "599aedb64f7a434f3f2e4d81f1e46b6c7381a732afb4093dacb802b4248045d2",
+    "sources/w10-item-a-shop-run/shop_run.cpp": "645cd0d5353d0d14e8727327452370fd2ad112e5b1051ecaca5eeb353af6007f",
+    "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp": "6df69a6fcbd28b78d0d7084900706b025baadb94bb4ef143e6154f7f36e2608b",
+    "sources/w10-item-a-skills/skills.cpp": "9d89e9ece0a10712f72a6c100ff69abcbfd8a8f23deb203e2033bd91c3a461c3",
+    "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp": "0346b9bc5af643bf878364d43cb105ccfe23a112bb3c97afb7242f34740cee8e",
+    "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp": "8d8d501db022a138e453ab0e8c6ee83f8751dc9a821f082d051ed5a266910df2",
     "sources/w10-net-a-advance-real-state/advance_real_state.cpp": "bf2e973d4fddf543b0faa699ee122930f83b6b6f09952919b2b4f9de0c0db6f3",
     "sources/w10-net-a-anal-compress/anal_compress.cpp": "0406144e8f20c2d9b303290b7ca75a3ee8a0ad137827f769380d63eb96d77e8b",
     "sources/w10-net-a-comm-state-data/comm_state_data.cpp": "8991989e57ee696055e0ff10565ce3a75cd6a45a9a3eced7ed195a88eb616d55",
@@ -54697,6 +54720,362 @@
       "sha256": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
       "source": "sources/w10-world-d-world-state-words/world_state_words.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3863,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_find_and_strip_gender.o",
+      "profile": "authored_cpp",
+      "sha256": "05c735041122ccd33b0d3bd35cf9ef69ddd1557597a1134d8ffa8549d9b8711d",
+      "source": "sources/w10-item-a-find-and-strip-gender/find_and_strip_gender.cpp",
+      "emitted_functions": [
+        {
+          "name": "findAndStripGender__4itemPUs",
+          "compiled_body_bytes": 452
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 3864,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_get_armor_bonus.o",
+      "profile": "authored_cpp",
+      "sha256": "b9a4989814dffa22232edf34e2207bf7ee25e969beac2094abb0d4509d0b5bc5",
+      "source": "sources/w10-item-a-get-armor-bonus/get_armor_bonus.cpp",
+      "emitted_functions": [
+        {
+          "name": "getArmorBonus__4itemPQ24item11description",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3865,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_get_attribute_name.o",
+      "profile": "authored_cpp",
+      "sha256": "bb560f525889fa669985230013112bb6125cee607f554d68ed93a4758eec4379",
+      "source": "sources/w10-item-a-get-attribute-name/get_attribute_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getAttributeName__4itemiPc",
+          "compiled_body_bytes": 568
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3866,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_get_damage_range_all.o",
+      "profile": "authored_cpp",
+      "sha256": "107548a1f978b1fc2a0e547bab7a8cacc13d251eb48c639464c23c7fcde5f581",
+      "source": "sources/w10-item-a-get-damage-range-all/get_damage_range_all.cpp",
+      "emitted_functions": [
+        {
+          "name": "getDamageRangeAll__4itemPQ24item11descriptionPiT2i",
+          "compiled_body_bytes": 1056
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3867,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_give_player_skill.o",
+      "profile": "authored_cpp",
+      "sha256": "25237cb16c58c186430bbf402fed516ce9012a154ea817d13a30fb3bf93c4642",
+      "source": "sources/w10-item-a-give-player-skill/give_player_skill.cpp",
+      "emitted_functions": [
+        {
+          "name": "givePlayerSkill__Fii",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3868,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_grid_drop_message.o",
+      "profile": "authored_cpp",
+      "sha256": "d2a51f86b6696a5bd531202f2cef0a9d595029741cb08d05344ae710b97c6fc8",
+      "source": "sources/w10-item-a-grid-drop-message/grid_drop_message.cpp",
+      "emitted_functions": [
+        {
+          "name": "msgInventoryGridDropItem__Fiiciiii",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3869,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inv_init_shared_textures.o",
+      "profile": "authored_cpp",
+      "sha256": "be26b84578a1d6596c8b3f8f0b9261afb4a566369435fe63822f152f021fe26f",
+      "source": "sources/w10-item-a-inv-init-shared-textures/inv_init_shared_textures.cpp",
+      "emitted_functions": [
+        {
+          "name": "invInitSharedInterfaceTextures__Fv",
+          "compiled_body_bytes": 1040
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3870,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_data.o",
+      "profile": "authored_cpp",
+      "sha256": "b3073923fcfe1c5f54e342ae46fb9b704cc337a1b52fb198820d4540d426e281",
+      "source": "sources/w10-item-a-inventory-data/inventory_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3871,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "3e8c8a15d9d6a3c71df97d88c3dae10131b5f3c3b176a49e87a88a13fcb0f60f",
+      "source": "sources/w10-item-a-inventory-draw/inventory_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryDraw__Fi",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3872,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_draw_player.o",
+      "profile": "authored_cpp",
+      "sha256": "8539a712a02eddf04e19f2d0047345dcc05562579bd56397f8e54836b7ace274",
+      "source": "sources/w10-item-a-inventory-draw-player/inventory_draw_player.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayer__FiiP14AnimationStatei",
+          "compiled_body_bytes": 1600
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3873,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_draw_player_color.o",
+      "profile": "authored_cpp",
+      "sha256": "1a947b80f0fe379f862ef5b29b62a5606e2e2e810d8f1d4426a78530fde70cd9",
+      "source": "sources/w10-item-a-inventory-draw-player-color/draw_player_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayerColor__Fiii",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3874,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_run.o",
+      "profile": "authored_cpp",
+      "sha256": "80359faeaf5039982d507697675923e1c6e065570185bb24db8a1f9bd87d1232",
+      "source": "sources/w10-item-a-inventory-run/inventory_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryRun__Fi",
+          "compiled_body_bytes": 592
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3875,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_inventory_unpack.o",
+      "profile": "authored_cpp",
+      "sha256": "ca005c4520e535e07140ca503b5e2968eec2d5f26195ea7ea3205ee6500710a8",
+      "source": "sources/w10-item-a-inventory-unpack/inventory_unpack.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventoryUnpack__Fiib",
+          "compiled_body_bytes": 264
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3876,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_item_create.o",
+      "profile": "authored_cpp",
+      "sha256": "0a4abdaef004c5251bba7c4f22f85694a06900a6b8062dbde5c8685c5ca1a7b9",
+      "source": "sources/w10-item-a-item-create/item_create.cpp",
+      "emitted_functions": [
+        {
+          "name": "three",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "one",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "two",
+          "compiled_body_bytes": 184
+        },
+        {
+          "name": "create__4itemPcPQ24item11descriptionii",
+          "compiled_body_bytes": 2144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3877,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_item_init.o",
+      "profile": "authored_cpp",
+      "sha256": "61a63903c619f57348733e3e82524a2ffcab6b4fbe904ba7717e0a087659b49f",
+      "source": "sources/w10-item-a-item-init/item_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "init__4itemv",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3878,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_set_feat_rank.o",
+      "profile": "authored_cpp",
+      "sha256": "fb5f247e159a4c2bf6a499635f24a075f1ca6494bdd28e3d9566db2cf6995078",
+      "source": "sources/w10-item-a-set-feat-rank/set_feat_rank.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerSetFeatRank__Fixi",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3879,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_set_skill_rank.o",
+      "profile": "authored_cpp",
+      "sha256": "56c3cc1b84c71fc9137b4f0468a97ac7418adb78aba8ed3382fcaf28accf62d3",
+      "source": "sources/w10-item-a-set-skill-rank/set_skill_rank.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerSetSkillRank__Fiii",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3880,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_shop_check.o",
+      "profile": "authored_cpp",
+      "sha256": "599aedb64f7a434f3f2e4d81f1e46b6c7381a732afb4093dacb802b4248045d2",
+      "source": "sources/w10-item-a-shop-check/shop_check.cpp",
+      "emitted_functions": [
+        {
+          "name": "_shopCheck__Fi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3881,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_shop_run.o",
+      "profile": "authored_cpp",
+      "sha256": "645cd0d5353d0d14e8727327452370fd2ad112e5b1051ecaca5eeb353af6007f",
+      "source": "sources/w10-item-a-shop-run/shop_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopRun__Fi",
+          "compiled_body_bytes": 1156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3882,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_shop_unpack_to_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "6df69a6fcbd28b78d0d7084900706b025baadb94bb4ef143e6154f7f36e2608b",
+      "source": "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopUnpackToGrid__Fiii",
+          "compiled_body_bytes": 1112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3883,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_skills.o",
+      "profile": "authored_cpp",
+      "sha256": "9d89e9ece0a10712f72a6c100ff69abcbfd8a8f23deb203e2033bd91c3a461c3",
+      "source": "sources/w10-item-a-skills/skills.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$skills",
+          "compiled_body_bytes": 1000
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3884,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_switch_dual_wield.o",
+      "profile": "authored_cpp",
+      "sha256": "0346b9bc5af643bf878364d43cb105ccfe23a112bb3c97afb7242f34740cee8e",
+      "source": "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventorySwitchDualWield__FiPQ24item11description",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/inventory-items-record/record.hpp"
+      ],
+      "input_order": 3885,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_sync_quest_items.o",
+      "profile": "authored_cpp",
+      "sha256": "8d8d501db022a138e453ab0e8c6ee83f8751dc9a821f082d051ed5a266910df2",
+      "source": "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp",
+      "emitted_functions": [
+        {
+          "name": "inventorySyncQuestItems__Fi",
+          "compiled_body_bytes": 400
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -54796,7 +55175,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f2ec1a11aa2386ca64750cd70a2c7bb43a7bab7e292fca5da5c8ca000e806f8d",
+  "snapshot_sha256": "c3ccfbf79fde67d5674344a61d1de65520acc306f5c3cf94d7762a1d16828e09",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

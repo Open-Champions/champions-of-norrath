@@ -48486,6 +48486,335 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w10-world-d-world-state-words/world_state_words.cpp"
+    },
+    {
+      "input_order": 3863,
+      "component": "w10-item-a-find-and-strip-gender",
+      "object_name": "w10_item_a_find_and_strip_gender.o",
+      "private_object_sha256": "1ba432923302a8579081ba699f79c6939c81030b9699c6804252d1f73309956f",
+      "emitted_functions": [
+        {
+          "name": "findAndStripGender__4itemPUs",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-find-and-strip-gender/find_and_strip_gender.cpp"
+    },
+    {
+      "input_order": 3864,
+      "component": "w10-item-a-get-armor-bonus",
+      "object_name": "w10_item_a_get_armor_bonus.o",
+      "private_object_sha256": "b746bf80a3b2525f64fee2cf1a93e50ea01a4006d1d4f5582a84576039abe0bd",
+      "emitted_functions": [
+        {
+          "name": "getArmorBonus__4itemPQ24item11description",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-get-armor-bonus/get_armor_bonus.cpp"
+    },
+    {
+      "input_order": 3865,
+      "component": "w10-item-a-get-attribute-name",
+      "object_name": "w10_item_a_get_attribute_name.o",
+      "private_object_sha256": "78492c246f0022166865d5bb61d1e3e3f98502b60af2efa5e0f4f6dcef582ea9",
+      "emitted_functions": [
+        {
+          "name": "getAttributeName__4itemiPc",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-get-attribute-name/get_attribute_name.cpp"
+    },
+    {
+      "input_order": 3866,
+      "component": "w10-item-a-get-damage-range-all",
+      "object_name": "w10_item_a_get_damage_range_all.o",
+      "private_object_sha256": "7204ecbb7e3e202b6baf4a7d1d9cc252ce90123519f7b300c6130dbb2b75e222",
+      "emitted_functions": [
+        {
+          "name": "getDamageRangeAll__4itemPQ24item11descriptionPiT2i",
+          "compiled_body_bytes": 1056
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-get-damage-range-all/get_damage_range_all.cpp"
+    },
+    {
+      "input_order": 3867,
+      "component": "w10-item-a-give-player-skill",
+      "object_name": "w10_item_a_give_player_skill.o",
+      "private_object_sha256": "2d3713230ed2cc483ac1f7ca23986c2dd24c743bbecb0f6a692870000f5a6428",
+      "emitted_functions": [
+        {
+          "name": "givePlayerSkill__Fii",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-give-player-skill/give_player_skill.cpp"
+    },
+    {
+      "input_order": 3868,
+      "component": "w10-item-a-grid-drop-message",
+      "object_name": "w10_item_a_grid_drop_message.o",
+      "private_object_sha256": "a2d6734cefe6495916b4c4c8820fee69a800eaa066330b9135a6e10439e78fe0",
+      "emitted_functions": [
+        {
+          "name": "msgInventoryGridDropItem__Fiiciiii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-grid-drop-message/grid_drop_message.cpp"
+    },
+    {
+      "input_order": 3869,
+      "component": "w10-item-a-inv-init-shared-textures",
+      "object_name": "w10_item_a_inv_init_shared_textures.o",
+      "private_object_sha256": "4afa985bfa9bec1a25281cd1d897b84c099c89ee0037ffe0513cc23d3eb2af21",
+      "emitted_functions": [
+        {
+          "name": "invInitSharedInterfaceTextures__Fv",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inv-init-shared-textures/inv_init_shared_textures.cpp"
+    },
+    {
+      "input_order": 3870,
+      "component": "w10-item-a-inventory-data",
+      "object_name": "w10_item_a_inventory_data.o",
+      "private_object_sha256": "0034e5ed9d4e5d6334914bd2df980a55a74cbe2f2fef58574d6f3481340dcc4a",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-data/inventory_data.cpp"
+    },
+    {
+      "input_order": 3871,
+      "component": "w10-item-a-inventory-draw",
+      "object_name": "w10_item_a_inventory_draw.o",
+      "private_object_sha256": "42be813be3ce6bc5619f21125487a09d180d139f538c9af8264486e07ace02b5",
+      "emitted_functions": [
+        {
+          "name": "inventoryDraw__Fi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-draw/inventory_draw.cpp"
+    },
+    {
+      "input_order": 3872,
+      "component": "w10-item-a-inventory-draw-player",
+      "object_name": "w10_item_a_inventory_draw_player.o",
+      "private_object_sha256": "2c45f9b8ee86ba80f92281356442106e3b7a64373edc7a179847d116a7d347d0",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayer__FiiP14AnimationStatei",
+          "compiled_body_bytes": 1600
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-draw-player/inventory_draw_player.cpp"
+    },
+    {
+      "input_order": 3873,
+      "component": "w10-item-a-inventory-draw-player-color",
+      "object_name": "w10_item_a_inventory_draw_player_color.o",
+      "private_object_sha256": "f6e401164bf8d603c9ce912360ee60a9dbc754a2f93aea66ea7b12175dcec890",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayerColor__Fiii",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-draw-player-color/draw_player_color.cpp"
+    },
+    {
+      "input_order": 3874,
+      "component": "w10-item-a-inventory-run",
+      "object_name": "w10_item_a_inventory_run.o",
+      "private_object_sha256": "6a09e074107b41cb3f6a4642b43bb8eee2304004e71e6e1a660b12a821c7b3f9",
+      "emitted_functions": [
+        {
+          "name": "inventoryRun__Fi",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-run/inventory_run.cpp"
+    },
+    {
+      "input_order": 3875,
+      "component": "w10-item-a-inventory-unpack",
+      "object_name": "w10_item_a_inventory_unpack.o",
+      "private_object_sha256": "7ab2f307e6791d8b7e52267ddc82f49557e26312b4dab318b4435d0772cf268a",
+      "emitted_functions": [
+        {
+          "name": "inventoryUnpack__Fiib",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-inventory-unpack/inventory_unpack.cpp"
+    },
+    {
+      "input_order": 3876,
+      "component": "w10-item-a-item-create",
+      "object_name": "w10_item_a_item_create.o",
+      "private_object_sha256": "ef1be8bb5eade624f635a71ecd1dcd9e2503ae84d1e1362335913d2e485d8fec",
+      "emitted_functions": [
+        {
+          "name": "three",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "one",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "two",
+          "compiled_body_bytes": 184
+        },
+        {
+          "name": "create__4itemPcPQ24item11descriptionii",
+          "compiled_body_bytes": 2144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-item-create/item_create.cpp"
+    },
+    {
+      "input_order": 3877,
+      "component": "w10-item-a-item-init",
+      "object_name": "w10_item_a_item_init.o",
+      "private_object_sha256": "6fc9482853e0cc0a3314e4fcd871e3a3d97c572c918f1e479df7a5485e1edefe",
+      "emitted_functions": [
+        {
+          "name": "init__4itemv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-item-init/item_init.cpp"
+    },
+    {
+      "input_order": 3878,
+      "component": "w10-item-a-set-feat-rank",
+      "object_name": "w10_item_a_set_feat_rank.o",
+      "private_object_sha256": "c90a189bfc6f0d1ee0f9af1b40d28ab0411c617b46d4d4c0014b8edb05d3eb85",
+      "emitted_functions": [
+        {
+          "name": "playerSetFeatRank__Fixi",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-set-feat-rank/set_feat_rank.cpp"
+    },
+    {
+      "input_order": 3879,
+      "component": "w10-item-a-set-skill-rank",
+      "object_name": "w10_item_a_set_skill_rank.o",
+      "private_object_sha256": "dedcc0f191c0ff065a1ef8993d75acac2682efd5bbc4a7c2de3783b4a2cf4639",
+      "emitted_functions": [
+        {
+          "name": "playerSetSkillRank__Fiii",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-set-skill-rank/set_skill_rank.cpp"
+    },
+    {
+      "input_order": 3880,
+      "component": "w10-item-a-shop-check",
+      "object_name": "w10_item_a_shop_check.o",
+      "private_object_sha256": "f023f0a44a8214f729d30f6cdfed0eac37362435e4c8e128f16f40705cff47e2",
+      "emitted_functions": [
+        {
+          "name": "_shopCheck__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-shop-check/shop_check.cpp"
+    },
+    {
+      "input_order": 3881,
+      "component": "w10-item-a-shop-run",
+      "object_name": "w10_item_a_shop_run.o",
+      "private_object_sha256": "2feb887e13f94eed384046d80bed99495eb41283e7b67594562ef27a60b1ca7a",
+      "emitted_functions": [
+        {
+          "name": "shopRun__Fi",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-shop-run/shop_run.cpp"
+    },
+    {
+      "input_order": 3882,
+      "component": "w10-item-a-shop-unpack-to-grid",
+      "object_name": "w10_item_a_shop_unpack_to_grid.o",
+      "private_object_sha256": "1525d84a3395d976b4848a0e5ce4e81c8405cf1fc488801576dc0d8780ab4f3b",
+      "emitted_functions": [
+        {
+          "name": "shopUnpackToGrid__Fiii",
+          "compiled_body_bytes": 1112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp"
+    },
+    {
+      "input_order": 3883,
+      "component": "w10-item-a-skills",
+      "object_name": "w10_item_a_skills.o",
+      "private_object_sha256": "c50ae8638ab1fce92858279b2b75c8d3e100ac4bb245f592d1352490faee7a6a",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$skills",
+          "compiled_body_bytes": 1000
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-skills/skills.cpp"
+    },
+    {
+      "input_order": 3884,
+      "component": "w10-item-a-switch-dual-wield",
+      "object_name": "w10_item_a_switch_dual_wield.o",
+      "private_object_sha256": "a8949ecbfe8f5472a95cda16c885e6e5849182a3b20ca7ac1b53f84880256e3a",
+      "emitted_functions": [
+        {
+          "name": "inventorySwitchDualWield__FiPQ24item11description",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp"
+    },
+    {
+      "input_order": 3885,
+      "component": "w10-item-a-sync-quest-items",
+      "object_name": "w10_item_a_sync_quest_items.o",
+      "private_object_sha256": "28c6de08e9d986487aac10317ff11e2d9e77baac7ef10c10e36ad02d0da76805",
+      "emitted_functions": [
+        {
+          "name": "inventorySyncQuestItems__Fi",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp"
     }
   ],
   "drafts": [
@@ -52208,6 +52537,53 @@
     "sources/w10-front-b-skirmish-init/skirmish_init.cpp": "b84b064222edf1e8b398f8fa01a1b632271b40cd47e2731db71e6ae1e3bedd73",
     "sources/w10-front-b-stats-screen/host_check.cpp": "519d276b9f8352c375ced2b66763eb195e821d50d6213b4445b0ab7f9c39de69",
     "sources/w10-front-b-stats-screen/stats_screen.cpp": "33e1789bef8708babd7d80bd7787666e251f3abe28d2d3733a44a29bc88c731e",
+    "sources/w10-item-a-find-and-strip-gender/find_and_strip_gender.cpp": "05c735041122ccd33b0d3bd35cf9ef69ddd1557597a1134d8ffa8549d9b8711d",
+    "sources/w10-item-a-find-and-strip-gender/host_check.cpp": "6d7de6705f7b030cfa3e03715d0c1b74b0e13dcc3ffe3b5d73bc5fb15e9b6a60",
+    "sources/w10-item-a-get-armor-bonus/get_armor_bonus.cpp": "b9a4989814dffa22232edf34e2207bf7ee25e969beac2094abb0d4509d0b5bc5",
+    "sources/w10-item-a-get-armor-bonus/host_check.cpp": "82e70d81d206ac873bc0dfc84965b2f20523d4de9ac264321f63df2d46af6235",
+    "sources/w10-item-a-get-attribute-name/get_attribute_name.cpp": "bb560f525889fa669985230013112bb6125cee607f554d68ed93a4758eec4379",
+    "sources/w10-item-a-get-attribute-name/host_check.cpp": "70483bcfe848fab969066ca3b79eb288252dbae871444921304ea938b514d55a",
+    "sources/w10-item-a-get-damage-range-all/get_damage_range_all.cpp": "107548a1f978b1fc2a0e547bab7a8cacc13d251eb48c639464c23c7fcde5f581",
+    "sources/w10-item-a-get-damage-range-all/host_check.cpp": "ec30659cfdb0f2207b57ffb37bb9fd1a1f71517d3f579c2cdc41a2224e1f0f60",
+    "sources/w10-item-a-give-player-skill/give_player_skill.cpp": "25237cb16c58c186430bbf402fed516ce9012a154ea817d13a30fb3bf93c4642",
+    "sources/w10-item-a-give-player-skill/host_check.cpp": "b3d4f8dcd80e506903518da5ebffc4b5ced253b74aab82921c44e3508a046ea6",
+    "sources/w10-item-a-grid-drop-message/grid_drop_message.cpp": "d2a51f86b6696a5bd531202f2cef0a9d595029741cb08d05344ae710b97c6fc8",
+    "sources/w10-item-a-grid-drop-message/host_check.cpp": "64116ac8c09707df154a4dfba0ea5d5508f939b3437b857c2bbb7c548386c281",
+    "sources/w10-item-a-inv-init-shared-textures/host_check.cpp": "4b0e445df823d797646ba321ee1f3a3f09b7a181a6dea68fae2cdcabe8c47c6a",
+    "sources/w10-item-a-inv-init-shared-textures/inv_init_shared_textures.cpp": "be26b84578a1d6596c8b3f8f0b9261afb4a566369435fe63822f152f021fe26f",
+    "sources/w10-item-a-inventory-data/host_check.cpp": "c3984a8da8580b4e3e40fdfd041d89efc15414caa5a1c71ed406fecc4532f174",
+    "sources/w10-item-a-inventory-data/inventory_data.cpp": "b3073923fcfe1c5f54e342ae46fb9b704cc337a1b52fb198820d4540d426e281",
+    "sources/w10-item-a-inventory-draw-player-color/draw_player_color.cpp": "1a947b80f0fe379f862ef5b29b62a5606e2e2e810d8f1d4426a78530fde70cd9",
+    "sources/w10-item-a-inventory-draw-player-color/host_check.cpp": "f80c7e716dc4a67d95d88da70166ebf8ea2251b16feb22ab33b9746248182d79",
+    "sources/w10-item-a-inventory-draw-player/host_check.cpp": "ef28b611cc0cf11b082e5117de1cc43c724844e7ce306fdcbc7d9c56faae04c3",
+    "sources/w10-item-a-inventory-draw-player/inventory_draw_player.cpp": "8539a712a02eddf04e19f2d0047345dcc05562579bd56397f8e54836b7ace274",
+    "sources/w10-item-a-inventory-draw/host_check.cpp": "ee65aa8d4d6506b5d7f81ff91da959fc9bc93d2c792ea13a652ecac14d0b1f7e",
+    "sources/w10-item-a-inventory-draw/inventory_draw.cpp": "3e8c8a15d9d6a3c71df97d88c3dae10131b5f3c3b176a49e87a88a13fcb0f60f",
+    "sources/w10-item-a-inventory-run/host_check.cpp": "00b573d0b087cfabb2f11661d4639a2512a4d3d27bde7c206aeba4f9fc08cc77",
+    "sources/w10-item-a-inventory-run/inventory_run.cpp": "80359faeaf5039982d507697675923e1c6e065570185bb24db8a1f9bd87d1232",
+    "sources/w10-item-a-inventory-unpack/host_check.cpp": "136d077ca7ed492a5d64b37ab7094630763ca138d02c7578f36a1b7858f8dfb7",
+    "sources/w10-item-a-inventory-unpack/inventory_unpack.cpp": "ca005c4520e535e07140ca503b5e2968eec2d5f26195ea7ea3205ee6500710a8",
+    "sources/w10-item-a-item-create/host_check.cpp": "f70389181b4c6bc2b33750d6a14397fb4798d8bc1e3f3a6d62e57da78118ea40",
+    "sources/w10-item-a-item-create/item_create.cpp": "0a4abdaef004c5251bba7c4f22f85694a06900a6b8062dbde5c8685c5ca1a7b9",
+    "sources/w10-item-a-item-init/host_check.cpp": "f2d1da81bf32027e3a5c09f58a96470baeff20330a8d768bfe864d24032a9b17",
+    "sources/w10-item-a-item-init/item_init.cpp": "61a63903c619f57348733e3e82524a2ffcab6b4fbe904ba7717e0a087659b49f",
+    "sources/w10-item-a-set-feat-rank/host_check.cpp": "eeef91e1c4d9d2f8e904bb4725df62d2fcc3a2f1d5b7cb8f0db83a8b69eb8d3a",
+    "sources/w10-item-a-set-feat-rank/set_feat_rank.cpp": "fb5f247e159a4c2bf6a499635f24a075f1ca6494bdd28e3d9566db2cf6995078",
+    "sources/w10-item-a-set-skill-rank/host_check.cpp": "6f7b85f0f9be509ddbcc0948f74b45a1f34a520ed806f6a0c5b82dcd34029cee",
+    "sources/w10-item-a-set-skill-rank/set_skill_rank.cpp": "56c3cc1b84c71fc9137b4f0468a97ac7418adb78aba8ed3382fcaf28accf62d3",
+    "sources/w10-item-a-shop-check/host_check.cpp": "5c8f274981ed0ee89bcf7781e74f3086fd1084d904e595a83259ac4a97f6bd14",
+    "sources/w10-item-a-shop-check/shop_check.cpp": "599aedb64f7a434f3f2e4d81f1e46b6c7381a732afb4093dacb802b4248045d2",
+    "sources/w10-item-a-shop-run/host_check.cpp": "a10b15925054c88c72ce2a3bd63f15d408750d6e1ec30c287d2cae9af527e1e0",
+    "sources/w10-item-a-shop-run/shop_run.cpp": "645cd0d5353d0d14e8727327452370fd2ad112e5b1051ecaca5eeb353af6007f",
+    "sources/w10-item-a-shop-unpack-to-grid/host_check.cpp": "5b9b2c45bc0dac6daba207da826ad3d3bf902c3503ab1a85d1f329c15e786feb",
+    "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp": "6df69a6fcbd28b78d0d7084900706b025baadb94bb4ef143e6154f7f36e2608b",
+    "sources/w10-item-a-skill-life-tap-get-chance/get_chance.cpp": "56c3f2f73d8e39197b4bf6500ebe2de10a57cdb3263f9cbfc31a41832657f614",
+    "sources/w10-item-a-skills/host_check.cpp": "8f88c951529eba68b64421226dec91fd94aa821482294b9fcbd59efd55819141",
+    "sources/w10-item-a-skills/skills.cpp": "9d89e9ece0a10712f72a6c100ff69abcbfd8a8f23deb203e2033bd91c3a461c3",
+    "sources/w10-item-a-switch-dual-wield/host_check.cpp": "a15f3503a8333b9785ddd134ba63315907faea1b909d2ffb871fc261e880ca62",
+    "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp": "0346b9bc5af643bf878364d43cb105ccfe23a112bb3c97afb7242f34740cee8e",
+    "sources/w10-item-a-sync-quest-items/host_check.cpp": "41046990cc7f3842520bf902b1b01ab9dd9ef675ef06b1c0a2d6ebba4a35cc07",
+    "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp": "8d8d501db022a138e453ab0e8c6ee83f8751dc9a821f082d051ed5a266910df2",
     "sources/w10-net-a-advance-real-state/advance_real_state.cpp": "bf2e973d4fddf543b0faa699ee122930f83b6b6f09952919b2b4f9de0c0db6f3",
     "sources/w10-net-a-advance-real-state/host_check.cpp": "69449352fefdf2f8232c0c6fa831cd1d7a9712ba12f9184c61c3be587fe23796",
     "sources/w10-net-a-anal-compress/anal_compress.cpp": "0406144e8f20c2d9b303290b7ca75a3ee8a0ad137827f769380d63eb96d77e8b",
@@ -57254,11 +57630,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3863,
-    "authored_default_inputs": 3861,
+    "selected_inputs": 3886,
+    "authored_default_inputs": 3884,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2786,
-    "compiled_body_bytes_from_accepted_inputs": 1194012,
+    "emitted_function_definitions_including_helpers": 2811,
+    "compiled_body_bytes_from_accepted_inputs": 1207684,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -57271,7 +57647,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3550
+    "package_selected_inputs": 3573
   },
   "startup_implementations": [
     {
@@ -111911,6 +112287,404 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w10-world-d-world-state-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-find-and-strip-gender/find_and_strip_gender.cpp",
+      "source_sha256": "05c735041122ccd33b0d3bd35cf9ef69ddd1557597a1134d8ffa8549d9b8711d",
+      "object_sha256": "1ba432923302a8579081ba699f79c6939c81030b9699c6804252d1f73309956f",
+      "emitted_functions": [
+        {
+          "name": "findAndStripGender__4itemPUs",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-find-and-strip-gender/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-get-armor-bonus/get_armor_bonus.cpp",
+      "source_sha256": "b9a4989814dffa22232edf34e2207bf7ee25e969beac2094abb0d4509d0b5bc5",
+      "object_sha256": "b746bf80a3b2525f64fee2cf1a93e50ea01a4006d1d4f5582a84576039abe0bd",
+      "emitted_functions": [
+        {
+          "name": "getArmorBonus__4itemPQ24item11description",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-get-armor-bonus/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-get-attribute-name/get_attribute_name.cpp",
+      "source_sha256": "bb560f525889fa669985230013112bb6125cee607f554d68ed93a4758eec4379",
+      "object_sha256": "78492c246f0022166865d5bb61d1e3e3f98502b60af2efa5e0f4f6dcef582ea9",
+      "emitted_functions": [
+        {
+          "name": "getAttributeName__4itemiPc",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-get-attribute-name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-get-damage-range-all/get_damage_range_all.cpp",
+      "source_sha256": "107548a1f978b1fc2a0e547bab7a8cacc13d251eb48c639464c23c7fcde5f581",
+      "object_sha256": "7204ecbb7e3e202b6baf4a7d1d9cc252ce90123519f7b300c6130dbb2b75e222",
+      "emitted_functions": [
+        {
+          "name": "getDamageRangeAll__4itemPQ24item11descriptionPiT2i",
+          "compiled_body_bytes": 1056
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-get-damage-range-all/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-give-player-skill/give_player_skill.cpp",
+      "source_sha256": "25237cb16c58c186430bbf402fed516ce9012a154ea817d13a30fb3bf93c4642",
+      "object_sha256": "2d3713230ed2cc483ac1f7ca23986c2dd24c743bbecb0f6a692870000f5a6428",
+      "emitted_functions": [
+        {
+          "name": "givePlayerSkill__Fii",
+          "compiled_body_bytes": 360
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-give-player-skill/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-grid-drop-message/grid_drop_message.cpp",
+      "source_sha256": "d2a51f86b6696a5bd531202f2cef0a9d595029741cb08d05344ae710b97c6fc8",
+      "object_sha256": "a2d6734cefe6495916b4c4c8820fee69a800eaa066330b9135a6e10439e78fe0",
+      "emitted_functions": [
+        {
+          "name": "msgInventoryGridDropItem__Fiiciiii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-grid-drop-message/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inv-init-shared-textures/inv_init_shared_textures.cpp",
+      "source_sha256": "be26b84578a1d6596c8b3f8f0b9261afb4a566369435fe63822f152f021fe26f",
+      "object_sha256": "4afa985bfa9bec1a25281cd1d897b84c099c89ee0037ffe0513cc23d3eb2af21",
+      "emitted_functions": [
+        {
+          "name": "invInitSharedInterfaceTextures__Fv",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inv-init-shared-textures/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-data/inventory_data.cpp",
+      "source_sha256": "b3073923fcfe1c5f54e342ae46fb9b704cc337a1b52fb198820d4540d426e281",
+      "object_sha256": "0034e5ed9d4e5d6334914bd2df980a55a74cbe2f2fef58574d6f3481340dcc4a",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-item-a-inventory-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-draw/inventory_draw.cpp",
+      "source_sha256": "3e8c8a15d9d6a3c71df97d88c3dae10131b5f3c3b176a49e87a88a13fcb0f60f",
+      "object_sha256": "42be813be3ce6bc5619f21125487a09d180d139f538c9af8264486e07ace02b5",
+      "emitted_functions": [
+        {
+          "name": "inventoryDraw__Fi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inventory-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-draw-player/inventory_draw_player.cpp",
+      "source_sha256": "8539a712a02eddf04e19f2d0047345dcc05562579bd56397f8e54836b7ace274",
+      "object_sha256": "2c45f9b8ee86ba80f92281356442106e3b7a64373edc7a179847d116a7d347d0",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayer__FiiP14AnimationStatei",
+          "compiled_body_bytes": 1600
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inventory-draw-player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-draw-player-color/draw_player_color.cpp",
+      "source_sha256": "1a947b80f0fe379f862ef5b29b62a5606e2e2e810d8f1d4426a78530fde70cd9",
+      "object_sha256": "f6e401164bf8d603c9ce912360ee60a9dbc754a2f93aea66ea7b12175dcec890",
+      "emitted_functions": [
+        {
+          "name": "inventoryDrawPlayerColor__Fiii",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inventory-draw-player-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-run/inventory_run.cpp",
+      "source_sha256": "80359faeaf5039982d507697675923e1c6e065570185bb24db8a1f9bd87d1232",
+      "object_sha256": "6a09e074107b41cb3f6a4642b43bb8eee2304004e71e6e1a660b12a821c7b3f9",
+      "emitted_functions": [
+        {
+          "name": "inventoryRun__Fi",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inventory-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-inventory-unpack/inventory_unpack.cpp",
+      "source_sha256": "ca005c4520e535e07140ca503b5e2968eec2d5f26195ea7ea3205ee6500710a8",
+      "object_sha256": "7ab2f307e6791d8b7e52267ddc82f49557e26312b4dab318b4435d0772cf268a",
+      "emitted_functions": [
+        {
+          "name": "inventoryUnpack__Fiib",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-inventory-unpack/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-item-create/item_create.cpp",
+      "source_sha256": "0a4abdaef004c5251bba7c4f22f85694a06900a6b8062dbde5c8685c5ca1a7b9",
+      "object_sha256": "ef1be8bb5eade624f635a71ecd1dcd9e2503ae84d1e1362335913d2e485d8fec",
+      "emitted_functions": [
+        {
+          "name": "three",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "one",
+          "compiled_body_bytes": 172
+        },
+        {
+          "name": "two",
+          "compiled_body_bytes": 184
+        },
+        {
+          "name": "create__4itemPcPQ24item11descriptionii",
+          "compiled_body_bytes": 2144
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-item-create/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-item-init/item_init.cpp",
+      "source_sha256": "61a63903c619f57348733e3e82524a2ffcab6b4fbe904ba7717e0a087659b49f",
+      "object_sha256": "6fc9482853e0cc0a3314e4fcd871e3a3d97c572c918f1e479df7a5485e1edefe",
+      "emitted_functions": [
+        {
+          "name": "init__4itemv",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-item-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-set-feat-rank/set_feat_rank.cpp",
+      "source_sha256": "fb5f247e159a4c2bf6a499635f24a075f1ca6494bdd28e3d9566db2cf6995078",
+      "object_sha256": "c90a189bfc6f0d1ee0f9af1b40d28ab0411c617b46d4d4c0014b8edb05d3eb85",
+      "emitted_functions": [
+        {
+          "name": "playerSetFeatRank__Fixi",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-set-feat-rank/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-set-skill-rank/set_skill_rank.cpp",
+      "source_sha256": "56c3cc1b84c71fc9137b4f0468a97ac7418adb78aba8ed3382fcaf28accf62d3",
+      "object_sha256": "dedcc0f191c0ff065a1ef8993d75acac2682efd5bbc4a7c2de3783b4a2cf4639",
+      "emitted_functions": [
+        {
+          "name": "playerSetSkillRank__Fiii",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-set-skill-rank/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-shop-check/shop_check.cpp",
+      "source_sha256": "599aedb64f7a434f3f2e4d81f1e46b6c7381a732afb4093dacb802b4248045d2",
+      "object_sha256": "f023f0a44a8214f729d30f6cdfed0eac37362435e4c8e128f16f40705cff47e2",
+      "emitted_functions": [
+        {
+          "name": "_shopCheck__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-shop-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-shop-run/shop_run.cpp",
+      "source_sha256": "645cd0d5353d0d14e8727327452370fd2ad112e5b1051ecaca5eeb353af6007f",
+      "object_sha256": "2feb887e13f94eed384046d80bed99495eb41283e7b67594562ef27a60b1ca7a",
+      "emitted_functions": [
+        {
+          "name": "shopRun__Fi",
+          "compiled_body_bytes": 1156
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-shop-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp",
+      "source_sha256": "6df69a6fcbd28b78d0d7084900706b025baadb94bb4ef143e6154f7f36e2608b",
+      "object_sha256": "1525d84a3395d976b4848a0e5ce4e81c8405cf1fc488801576dc0d8780ab4f3b",
+      "emitted_functions": [
+        {
+          "name": "shopUnpackToGrid__Fiii",
+          "compiled_body_bytes": 1112
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-shop-unpack-to-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-skills/skills.cpp",
+      "source_sha256": "9d89e9ece0a10712f72a6c100ff69abcbfd8a8f23deb203e2033bd91c3a461c3",
+      "object_sha256": "c50ae8638ab1fce92858279b2b75c8d3e100ac4bb245f592d1352490faee7a6a",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$skills",
+          "compiled_body_bytes": 1000
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-skills/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp",
+      "source_sha256": "0346b9bc5af643bf878364d43cb105ccfe23a112bb3c97afb7242f34740cee8e",
+      "object_sha256": "a8949ecbfe8f5472a95cda16c885e6e5849182a3b20ca7ac1b53f84880256e3a",
+      "emitted_functions": [
+        {
+          "name": "inventorySwitchDualWield__FiPQ24item11description",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-switch-dual-wield/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-item-a",
+      "source": "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp",
+      "source_sha256": "8d8d501db022a138e453ab0e8c6ee83f8751dc9a821f082d051ed5a266910df2",
+      "object_sha256": "28c6de08e9d986487aac10317ff11e2d9e77baac7ef10c10e36ad02d0da76805",
+      "emitted_functions": [
+        {
+          "name": "inventorySyncQuestItems__Fi",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "host_files": [
+        "sources/w10-item-a-sync-quest-items/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
