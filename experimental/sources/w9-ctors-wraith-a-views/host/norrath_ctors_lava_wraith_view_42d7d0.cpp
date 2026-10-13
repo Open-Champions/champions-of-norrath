@@ -1,0 +1,53 @@
+// Host comparison only. Not an EE build input.
+struct ResourceSlot { char* name; unsigned unused; };
+int same(const char* a, const char* b) { for (unsigned i = 0;; ++i) { if (a[i] != b[i]) return 0; if (a[i] == 0) return 1; } }
+extern "C" ResourceSlot norrath_ctors_lava_wraith_view_42d7d0[32];
+int main() {
+    if (norrath_ctors_lava_wraith_view_42d7d0[0].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[0].name, "skelnorm.lmp") || norrath_ctors_lava_wraith_view_42d7d0[0].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[1].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[1].name, "skeleton.vif") || norrath_ctors_lava_wraith_view_42d7d0[1].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[2].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[2].name, "skeleton.tex") || norrath_ctors_lava_wraith_view_42d7d0[2].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[3].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[3].name, "1_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[3].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[4].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[4].name, "2_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[4].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[5].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[5].name, "3_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[5].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[6].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[6].name, "4_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[6].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[7].name != nullptr || norrath_ctors_lava_wraith_view_42d7d0[7].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[8].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[8].name, "skelwat.lmp") || norrath_ctors_lava_wraith_view_42d7d0[8].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[9].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[9].name, "skeleton.vif") || norrath_ctors_lava_wraith_view_42d7d0[9].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[10].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[10].name, "skeleton.tex") || norrath_ctors_lava_wraith_view_42d7d0[10].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[11].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[11].name, "1_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[11].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[12].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[12].name, "2_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[12].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[13].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[13].name, "3_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[13].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[14].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[14].name, "4_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[14].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[15].name != nullptr || norrath_ctors_lava_wraith_view_42d7d0[15].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[16].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[16].name, "skelred.lmp") || norrath_ctors_lava_wraith_view_42d7d0[16].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[17].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[17].name, "skele_v3.vif") || norrath_ctors_lava_wraith_view_42d7d0[17].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[18].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[18].name, "skele_v3.tex") || norrath_ctors_lava_wraith_view_42d7d0[18].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[19].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[19].name, "1_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[19].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[20].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[20].name, "2_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[20].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[21].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[21].name, "3_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[21].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[22].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[22].name, "4_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[22].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[23].name != nullptr || norrath_ctors_lava_wraith_view_42d7d0[23].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[24].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[24].name, "skelblue.lmp") || norrath_ctors_lava_wraith_view_42d7d0[24].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[25].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[25].name, "skele_v2.vif") || norrath_ctors_lava_wraith_view_42d7d0[25].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[26].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[26].name, "skele_v2.tex") || norrath_ctors_lava_wraith_view_42d7d0[26].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[27].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[27].name, "1_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[27].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[28].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[28].name, "2_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[28].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[29].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[29].name, "3_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[29].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[30].name == nullptr || !same(norrath_ctors_lava_wraith_view_42d7d0[30].name, "4_rally.anm") || norrath_ctors_lava_wraith_view_42d7d0[30].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[31].name != nullptr || norrath_ctors_lava_wraith_view_42d7d0[31].unused != 0u) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[9].name != norrath_ctors_lava_wraith_view_42d7d0[1].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[10].name != norrath_ctors_lava_wraith_view_42d7d0[2].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[11].name != norrath_ctors_lava_wraith_view_42d7d0[3].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[12].name != norrath_ctors_lava_wraith_view_42d7d0[4].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[13].name != norrath_ctors_lava_wraith_view_42d7d0[5].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[14].name != norrath_ctors_lava_wraith_view_42d7d0[6].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[19].name != norrath_ctors_lava_wraith_view_42d7d0[3].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[20].name != norrath_ctors_lava_wraith_view_42d7d0[4].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[21].name != norrath_ctors_lava_wraith_view_42d7d0[5].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[22].name != norrath_ctors_lava_wraith_view_42d7d0[6].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[27].name != norrath_ctors_lava_wraith_view_42d7d0[3].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[28].name != norrath_ctors_lava_wraith_view_42d7d0[4].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[29].name != norrath_ctors_lava_wraith_view_42d7d0[5].name) return 1;
+    if (norrath_ctors_lava_wraith_view_42d7d0[30].name != norrath_ctors_lava_wraith_view_42d7d0[6].name) return 1;
+    return 0;
+}
