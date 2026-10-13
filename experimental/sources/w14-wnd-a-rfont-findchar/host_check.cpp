@@ -1,4 +1,4 @@
-// Host check only; not a build input.
+// Host check only; not a build input. Build: c++ -std=c++17 -arch x86_64 -Wl,-pagezero_size,0x1000 host_check.cpp (statics must sit below 4 GiB).
 #include "findchar.cpp"
 #include <cstdio>
 #include <cstring>
