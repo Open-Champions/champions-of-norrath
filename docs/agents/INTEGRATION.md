@@ -9609,3 +9609,19 @@ Closed: `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `ev
 
 Opened: none
 - 2026-10-13 16:25 CDT — agents/w13-skill-ramp-b — 1111 unresolved imports
+
+## agents/w13-skill-rank-a
+
+Merged (merge commit, branch tip `d72e9ecc`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 28 units with fresh `input_order` values 5813 through 5840, each with a committed check that builds and passes here (28 host contracts for the rank-description functions). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5839 authored inputs, 4522 function bodies, zero COMMON. The notes' 28 closed names reproduce exactly. The one opened name is `getEnemyWord__Fi`.
+
+| | |
+|---|---|
+| Before | 1111 |
+| After | 1084 |
+| Closed | 28 |
+| Opened | 1 |
+
+Closed: `getRankDescription__10SkillBluntPUsi`, `getRankDescription__10SkillDodgePUsi`, `getRankDescription__10SkillShockPUsi`, `getRankDescription__11SkillChargePUsi`, `getRankDescription__12SkillArcheryPUsi`, `getRankDescription__12SkillBlessedPUsi`, `getRankDescription__12SkillCyclonePUsi`, `getRankDescription__12SkillHealingPUsi`, `getRankDescription__12SkillLifeTapPUsi`, `getRankDescription__12SkillRipostePUsi`, `getRankDescription__13SkillDarknessPUsi`, `getRankDescription__13SkillEntanglePUsi`, `getRankDescription__13SkillSlashingPUsi`, `getRankDescription__14SkillColdArrowPUsi`, `getRankDescription__14SkillFireArrowPUsi`, `getRankDescription__14SkillFireStormPUsi`, `getRankDescription__14SkillHarmTouchPUsi`, `getRankDescription__14SkillMultiFirePUsi`, `getRankDescription__15SkillClericRootPUsi`, `getRankDescription__15SkillConeOfFirePUsi`, `getRankDescription__15SkillFireFlaresPUsi`, `getRankDescription__15SkillFrostStormPUsi`, `getRankDescription__15SkillHolyShieldPUsi`, `getRankDescription__15SkillHolyStrikePUsi`, `getRankDescription__15SkillPoisonRainPUsi`, `getRankDescription__15SkillShieldBashPUsi`, `getRankDescription__15SkillWizardBeamPUsi`, `getRankDescription__16SkillColdWeaponsPUsi`
+
+Opened: `getEnemyWord__Fi`
+- 2026-10-13 16:30 CDT — agents/w13-skill-rank-a — 1084 unresolved imports
