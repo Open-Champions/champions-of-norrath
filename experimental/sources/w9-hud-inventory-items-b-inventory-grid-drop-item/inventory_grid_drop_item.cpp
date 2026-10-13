@@ -52,7 +52,13 @@
 // objects are not defined here.
 #include "../inventory-items-record/record.hpp"
 
-struct DropPoint { float x, y, z; };
+// A user-provided copy constructor makes this type non-trivial, so (as in the original)
+// it is passed by invisible reference and returned through a hidden pointer.
+struct DropPoint {
+    float x, y, z;
+    DropPoint() {}
+    DropPoint(const DropPoint& other) : x(other.x), y(other.y), z(other.z) {}
+};
 
 extern "C" {
 extern unsigned invGrid;
@@ -171,7 +177,7 @@ extern "C" void inventoryGridDropItem__Fiiciiii(int p, int slot, char list, int 
     }
     if (mode == 0) {
         const unsigned char* object = bytesOf(objectWord);
-        DropPoint position = *reinterpret_cast<const DropPoint*>(object + 16);
+        DropPoint position(*reinterpret_cast<const DropPoint*>(object + 16));
         DropPoint spot = objectFindEmptySpot__FG6Point3iiPc(position, 48, 12, nullptr);
         void* prop = blockAlloc__Fi(400);
         if (prop != nullptr) {

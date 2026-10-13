@@ -14,8 +14,12 @@ int invMsgHandle = 77;
 unsigned char animState[264 * 2];
 const unsigned char norrath_inventory_ability_sound_lump_view[8] = {'f', 'x', '.', 'l', 'm', 'p', 0, 0};
 void inventoryGridDropItem__Fiiciiii(int, int, char, int, int, int, int);
-struct DropPoint { float x, y, z; };
 }
+struct DropPoint {
+    float x, y, z;
+    DropPoint() {}
+    DropPoint(const DropPoint& other) : x(other.x), y(other.y), z(other.z) {}
+};
 
 using namespace inventory_items;
 
@@ -53,7 +57,7 @@ extern "C" int compareToItem__Q24item11descriptionPQ24item11description(const vo
 }
 extern "C" DropPoint objectFindEmptySpot__FG6Point3iiPc(DropPoint p, int a, int b, char* c) {
     add("SPOT(" + std::to_string((int)p.x) + "," + std::to_string((int)p.y) + "," + std::to_string((int)p.z) + "," + std::to_string(a) + "," + std::to_string(b) + "," + std::to_string(c == nullptr) + ")");
-    return DropPoint{p.x + 1, p.y + 1, p.z + 1};
+    DropPoint r; r.x = p.x + 1; r.y = p.y + 1; r.z = p.z + 1; return r;
 }
 extern "C" void* blockAlloc__Fi(int n) { add("ALLOC" + std::to_string(n)); return allocFail ? nullptr : propBuf; }
 extern "C" void __8ItemPropG6Point3PQ24item11descriptioni(void* t, DropPoint p, const void* item, int z) {
