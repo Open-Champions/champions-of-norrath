@@ -176,6 +176,7 @@ int main() {
     }
     // 4. an empty directory
     buildFile({}, 0x200);
+    setRecord(0, "x0.lmp", 0, 0); setRecord(1, "x1.lmp", 1, 0x300000); setRecord(2, "x2.lmp", 0, 0x300000);
     nmLumps = 3; trace.clear();
     CHECK(lumpPartialLoad__FPcT0(lump, a) == nullptr && trace == "alloc 1048576 rec3;cd level.lmp +0 32768 @0;free;");
     // 5. a directory that extends past the first 0x8000 bytes reads the rest, and the count again
