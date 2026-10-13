@@ -11,6 +11,7 @@ struct Point3 { float x, y, z; };
 extern unsigned char* w13_skill_cast_b_host_base;
 int w13_skill_cast_b_host_call(unsigned function_word, void* adjusted_skill, int rank, int constant);
 int w13_skill_cast_b_host_call_object(unsigned function_word, void* adjusted_object, void* argument);
+void* w13_skill_cast_b_host_call_object0(unsigned function_word, void* adjusted_object);
 int w13_skill_cast_b_host_call_ramp(unsigned function_word, void* adjusted_skill, int index, int rank, float scale, int zero, int* low, int* high);
 #endif
 
@@ -60,6 +61,18 @@ inline int call_object_entry(unsigned char* object, unsigned tableField, unsigne
     return w13_skill_cast_b_host_call_object(function, adjusted, argument);
 #else
     return reinterpret_cast<int (*)(void*, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, argument);
+#endif
+}
+
+// Same entry layout, called with only the adjusted object; returns the pointer result.
+inline void* call_object_entry0(unsigned char* object, unsigned tableField, unsigned tableOffset) {
+    const unsigned char* entry = from_word(*reinterpret_cast<unsigned*>(object + tableField)) + tableOffset;
+    unsigned char* adjusted = object + *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W13_SKILL_CAST_B_HOST)
+    return w13_skill_cast_b_host_call_object0(function, adjusted);
+#else
+    return reinterpret_cast<void* (*)(void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted);
 #endif
 }
 
