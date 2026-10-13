@@ -6472,6 +6472,47 @@ Closed: `norrath_ctors_lava_wraith_view_477568`,
 
 Opened: none
 
+## agents/w9-hud-inventory-items-c
+
+Merged (the branch notes carry the five summary sections; the tip was 52
+minutes old). Twenty-two of its 23 units were selected with fresh
+`input_order` values 3284 through 3305. `create-random` was **not** selected:
+it defines `createRandom__4itemPQ24item11descriptioniiii`, which
+`w9-hud-inventory-items-a-create-random` already supplies, so the link failed
+with a multiple definition; its files stay in the snapshot, unselected (the
+two are independent authorings of the same observed function). Host checks: 23
+of 23 build and exit 0 here once the link-style ones get their implementation
+file (`unpack` also needs `pack.cpp` from the sibling unit). No game binary or
+disassembly listing was committed. 2357 function bodies, 3304 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1381 |
+| After | 1356 |
+| Closed | 31 |
+| Opened | 6 |
+
+Closed: `norrath_player_armor_cache_view_7cb770`, `norrath_text_hash_slots`,
+`norrath_text_missing_cursor`, `norrath_text_missing_entries`,
+`pack__4itemPQ24item11description`, `picFind__4itemPc`,
+`picKickOneOut__4itemv`, `playerCheckRecallHotKey__Fv`,
+`playerGetMarkerColor__Fii`, `playerGetPotionsLeft__Fii`,
+`playerGetSkillRank__Fii`, `playerGettinIt`,
+`playerIsAnimPlaying__6PlayerPc`, `playerLogInventory__Fi`,
+`playerMaybeGetItem__FiPQ24item11description`,
+`recomputePaperDollModifiers__Fi`, `resetPlayerAnimations__Fi`, `sellMode`,
+`setupDefaultEquipment__Fi`, `setupHalo__4itemPQ24item11descriptionf`,
+`shop`, `shopBuy__FcPQ24item11description`, `shopDisableMouse`,
+`shopFrame__Fv`, `shopGrid`, `shopIntro`,
+`shopItemSetAttributes__FiiPcPQ24item11description`, `shopMouseDecay`,
+`shopTick`, `unequipItem__FiPQ24item11description`,
+`unpack__4itemPQ24item11description`
+
+Opened: `armorDebug`, `healthPotionsLeft`,
+`inventorySwitchDualWield__FiPQ24item11description`, `manaPotionsLeft`,
+`netGetCameraCustomControl__Fi`, `shopRun__Fi`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6863,3 +6904,4 @@ and no startup stage has executed.
 - 2026-10-12 22:16 CDT — `agents/w9-ctors-wraith-b` — 1455 unresolved imports
 - 2026-10-12 22:19 CDT — `agents/w9-ctors-wraith-c` — 1417 unresolved imports
 - 2026-10-12 22:22 CDT — `agents/w9-ctors-wraith-d` — 1381 unresolved imports
+- 2026-10-12 22:27 CDT — `agents/w9-hud-inventory-items-c` — 1356 unresolved imports

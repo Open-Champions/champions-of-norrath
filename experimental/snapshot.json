@@ -41042,6 +41042,307 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w9-ctors-wraith-d-views/norrath_ctors_lava_wraith_view_601fd0.cpp"
+    },
+    {
+      "input_order": 3284,
+      "component": "w9-hud-inventory-items-c-armor-cache-storage",
+      "object_name": "w9_hud_inventory_items_c_armor_cache_storage_armor_cache_storage.o",
+      "private_object_sha256": "10d4a8b2e6ed3420ad893133b25ff9bc82c7c4220d949a4115725e3ff5c953a9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-armor-cache-storage/armor_cache_storage.cpp"
+    },
+    {
+      "input_order": 3285,
+      "component": "w9-hud-inventory-items-c-pack",
+      "object_name": "w9_hud_inventory_items_c_pack_pack.o",
+      "private_object_sha256": "9508d95151d74560d713aac609bef2b96f01df5edafcd28d88206d01b2b2501c",
+      "emitted_functions": [
+        {
+          "name": "pack__4itemPQ24item11description",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-pack/pack.cpp"
+    },
+    {
+      "input_order": 3286,
+      "component": "w9-hud-inventory-items-c-pic-find",
+      "object_name": "w9_hud_inventory_items_c_pic_find_pic_find.o",
+      "private_object_sha256": "776f481372a9e7c638403becbe290736f817fe9a4bfba6fc1309fdc779905997",
+      "emitted_functions": [
+        {
+          "name": "picFind__4itemPc",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-pic-find/pic_find.cpp"
+    },
+    {
+      "input_order": 3287,
+      "component": "w9-hud-inventory-items-c-pic-kick-one-out",
+      "object_name": "w9_hud_inventory_items_c_pic_kick_one_out_pic_kick_one_out.o",
+      "private_object_sha256": "f248511816d83dc3aaebf2d99b373716fc6bacfe1adcfb4285e44d7d97005679",
+      "emitted_functions": [
+        {
+          "name": "picKickOneOut__4itemv",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-pic-kick-one-out/pic_kick_one_out.cpp"
+    },
+    {
+      "input_order": 3288,
+      "component": "w9-hud-inventory-items-c-player-check-recall-hot-key",
+      "object_name": "w9_hud_inventory_items_c_player_check_recall_hot_key_player_check_recall_hot_key.o",
+      "private_object_sha256": "e03d22bcf095b42250527cffdad976ec9da5760fb145a81f703d6c21298d3cdc",
+      "emitted_functions": [
+        {
+          "name": "playerCheckRecallHotKey__Fv",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-check-recall-hot-key/player_check_recall_hot_key.cpp"
+    },
+    {
+      "input_order": 3289,
+      "component": "w9-hud-inventory-items-c-player-get-marker-color",
+      "object_name": "w9_hud_inventory_items_c_player_get_marker_color_player_get_marker_color.o",
+      "private_object_sha256": "abd3f501d5935baf757e74312d2723a814054cc3a9ed486b071b9e22d3ba1845",
+      "emitted_functions": [
+        {
+          "name": "playerGetMarkerColor__Fii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-get-marker-color/player_get_marker_color.cpp"
+    },
+    {
+      "input_order": 3290,
+      "component": "w9-hud-inventory-items-c-player-get-potions-left",
+      "object_name": "w9_hud_inventory_items_c_player_get_potions_left_player_get_potions_left.o",
+      "private_object_sha256": "2111003e0181b68cab5848983fdafc0ba12f475c27a158644e30ffd31d90dbf5",
+      "emitted_functions": [
+        {
+          "name": "playerGetPotionsLeft__Fii",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-get-potions-left/player_get_potions_left.cpp"
+    },
+    {
+      "input_order": 3291,
+      "component": "w9-hud-inventory-items-c-player-get-skill-rank",
+      "object_name": "w9_hud_inventory_items_c_player_get_skill_rank_player_get_skill_rank.o",
+      "private_object_sha256": "982f62b0d917c9f2eb24bedaa076df0bd36c00a0c6d15130f502018167c0d44b",
+      "emitted_functions": [
+        {
+          "name": "playerGetSkillRank__Fii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-get-skill-rank/player_get_skill_rank.cpp"
+    },
+    {
+      "input_order": 3292,
+      "component": "w9-hud-inventory-items-c-player-is-anim-playing",
+      "object_name": "w9_hud_inventory_items_c_player_is_anim_playing_player_is_anim_playing.o",
+      "private_object_sha256": "0ae35e259be0370397220eec5452ba859755918d70651f8f66b10b025ba80bcd",
+      "emitted_functions": [
+        {
+          "name": "playerIsAnimPlaying__6PlayerPc",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-is-anim-playing/player_is_anim_playing.cpp"
+    },
+    {
+      "input_order": 3293,
+      "component": "w9-hud-inventory-items-c-player-log-inventory",
+      "object_name": "w9_hud_inventory_items_c_player_log_inventory_player_log_inventory.o",
+      "private_object_sha256": "2aaca8a43f03b650d3d828f2491e287448a612cef02161dd102e2ec002282edf",
+      "emitted_functions": [
+        {
+          "name": "playerLogInventory__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-log-inventory/player_log_inventory.cpp"
+    },
+    {
+      "input_order": 3294,
+      "component": "w9-hud-inventory-items-c-player-maybe-get-item",
+      "object_name": "w9_hud_inventory_items_c_player_maybe_get_item_player_maybe_get_item.o",
+      "private_object_sha256": "26eb7ac27b01fa52b016a22c277096ede234da5d0536f705530e460858aec8f6",
+      "emitted_functions": [
+        {
+          "name": "playerMaybeGetItem__FiPQ24item11description",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-player-maybe-get-item/player_maybe_get_item.cpp"
+    },
+    {
+      "input_order": 3295,
+      "component": "w9-hud-inventory-items-c-recompute-paper-doll-modifiers",
+      "object_name": "w9_hud_inventory_items_c_recompute_paper_doll_modifiers_recompute_paper_doll_modifiers.o",
+      "private_object_sha256": "b3293e97d2962e744c02fff1966018185023392096ec9ab63b38c2aac381b7c6",
+      "emitted_functions": [
+        {
+          "name": "recomputePaperDollModifiers__Fi",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-recompute-paper-doll-modifiers/recompute_paper_doll_modifiers.cpp"
+    },
+    {
+      "input_order": 3296,
+      "component": "w9-hud-inventory-items-c-reset-player-animations",
+      "object_name": "w9_hud_inventory_items_c_reset_player_animations_reset_player_animations.o",
+      "private_object_sha256": "783cbf1e52cbe3fd4d732713ee9cbbb18f343ed6b5d2d08f32c14c61fc7afcf3",
+      "emitted_functions": [
+        {
+          "name": "resetPlayerAnimations__Fi",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-reset-player-animations/reset_player_animations.cpp"
+    },
+    {
+      "input_order": 3297,
+      "component": "w9-hud-inventory-items-c-setup-default-equipment",
+      "object_name": "w9_hud_inventory_items_c_setup_default_equipment_setup_default_equipment.o",
+      "private_object_sha256": "0ac319edab41fd945761f73f39d2e6d26a829b3dd33eb85e0774506261aebdf7",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9armor_setERNS_3KitEPKPKciii",
+          "compiled_body_bytes": 236
+        },
+        {
+          "name": "setupDefaultEquipment__Fi",
+          "compiled_body_bytes": 8396
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-setup-default-equipment/setup_default_equipment.cpp"
+    },
+    {
+      "input_order": 3298,
+      "component": "w9-hud-inventory-items-c-setup-halo",
+      "object_name": "w9_hud_inventory_items_c_setup_halo_setup_halo.o",
+      "private_object_sha256": "b579a3618898b0ad5c56357a2c3450807b237a23a17e3dff518e5488f8ea29d0",
+      "emitted_functions": [
+        {
+          "name": "setupHalo__4itemPQ24item11descriptionf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-setup-halo/setup_halo.cpp"
+    },
+    {
+      "input_order": 3299,
+      "component": "w9-hud-inventory-items-c-shop-buy",
+      "object_name": "w9_hud_inventory_items_c_shop_buy_shop_buy.o",
+      "private_object_sha256": "b8d91861d44b25b405bee22ba34b6a2faadcbab1c332028c25df98cb90ab2953",
+      "emitted_functions": [
+        {
+          "name": "shopBuy__FcPQ24item11description",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-shop-buy/shop_buy.cpp"
+    },
+    {
+      "input_order": 3300,
+      "component": "w9-hud-inventory-items-c-shop-data",
+      "object_name": "w9_hud_inventory_items_c_shop_data_shop_data.o",
+      "private_object_sha256": "b925295d1ed6e88916ae49abe4cb9750ab386f144f8ff2150d48a8bf327ddd29",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-shop-data/shop_data.cpp"
+    },
+    {
+      "input_order": 3301,
+      "component": "w9-hud-inventory-items-c-shop-frame",
+      "object_name": "w9_hud_inventory_items_c_shop_frame_shop_frame.o",
+      "private_object_sha256": "0f5f7b49bdf827757e3ff5c95e4eae9837c53fe1fefb7267687eeb386d198ed9",
+      "emitted_functions": [
+        {
+          "name": "shopFrame__Fv",
+          "compiled_body_bytes": 1060
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-shop-frame/shop_frame.cpp"
+    },
+    {
+      "input_order": 3302,
+      "component": "w9-hud-inventory-items-c-shop-item-set-attributes",
+      "object_name": "w9_hud_inventory_items_c_shop_item_set_attributes_shop_item_set_attributes.o",
+      "private_object_sha256": "6ed6691369b263ca23974d50ae5eee27b76c1ab797f99cac0370e7e421b43775",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6refuseEiPKc.isra.0",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "shopItemSetAttributes__FiiPcPQ24item11description",
+          "compiled_body_bytes": 1308
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-shop-item-set-attributes/shop_item_set_attributes.cpp"
+    },
+    {
+      "input_order": 3303,
+      "component": "w9-hud-inventory-items-c-text-storage",
+      "object_name": "w9_hud_inventory_items_c_text_storage_text_storage.o",
+      "private_object_sha256": "3166cb9dbb85c574d5b320f81ac01d0add5ebd5b6a169afa630f287e5abbc5ec",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-text-storage/text_storage.cpp"
+    },
+    {
+      "input_order": 3304,
+      "component": "w9-hud-inventory-items-c-unequip-item",
+      "object_name": "w9_hud_inventory_items_c_unequip_item_unequip_item.o",
+      "private_object_sha256": "22db422a9df174a8f85e068f2effdb0241ae75510503adf2eed66e9b6cebf30b",
+      "emitted_functions": [
+        {
+          "name": "unequipItem__FiPQ24item11description",
+          "compiled_body_bytes": 896
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-unequip-item/unequip_item.cpp"
+    },
+    {
+      "input_order": 3305,
+      "component": "w9-hud-inventory-items-c-unpack",
+      "object_name": "w9_hud_inventory_items_c_unpack_unpack.o",
+      "private_object_sha256": "2720cb0898bb212a1767ca3b31d5eb6c889c749ea586cc9d74ebe78feb691d95",
+      "emitted_functions": [
+        {
+          "name": "unpack__4itemPQ24item11description",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-hud-inventory-items-c-unpack/unpack.cpp"
     }
   ],
   "drafts": [
@@ -47557,6 +47858,52 @@
     "sources/w9-hud-inventory-items-b-lerp-short-rot/host_check.cpp": "6fa8b382e292316c90c1cc5c279a4d20ea3df16c1fd0f2466650c1855abe10a5",
     "sources/w9-hud-inventory-items-b-lerp-short-rot/lerp_short_rot.cpp": "b133e967a234cafc8ef6ad71afc88c3df596b15cb4b3d1b927122bd0a3271017",
     "sources/w9-hud-inventory-items-b-view-exit-sound-resource/norrath_inventory_exit_sound_resource_view.cpp": "a690c5595078ef6f4b3bd0078aff01b135f41e6d2776bb01a988bb30dbc0c800",
+    "sources/w9-hud-inventory-items-c-armor-cache-storage/armor_cache_storage.cpp": "4ec29b6959b42abb9607a69f7aadef8a07ce4c2a9cfb5e401194e594519ab2b1",
+    "sources/w9-hud-inventory-items-c-armor-cache-storage/host_check.cpp": "bff45dbc7566540fddaa87c4adffd0632c730f0fed78be6c7c0585ae5455f19a",
+    "sources/w9-hud-inventory-items-c-create-random/create_random.cpp": "1aa0a71dc51773b5544ada38f4f289aa20ffc49f7ce029c0e54e9c6b50ea9bae",
+    "sources/w9-hud-inventory-items-c-create-random/host_check.cpp": "084d7b5425aa247ca3a99b57e8ab93862ca240e5176b6ee293c5266305b4cfc6",
+    "sources/w9-hud-inventory-items-c-pack/host_check.cpp": "190d698d5645262ce2db44044e71338fb969a6a7ddb84a1ca284295e0f34ee35",
+    "sources/w9-hud-inventory-items-c-pack/pack.cpp": "5f40ad870ca7a96de8215f78b3f1688e9ecea07556d601edbf0b9d4dad159737",
+    "sources/w9-hud-inventory-items-c-pic-find/host_check.cpp": "d368ba95dd288b05e1d8104984801ccebe7e55c5806a8bcfa0c277809cc46ca3",
+    "sources/w9-hud-inventory-items-c-pic-find/pic_find.cpp": "7e5e75f8a84458206ef0372d9bf0d283ce489960401353b5e34d4c4aced690a0",
+    "sources/w9-hud-inventory-items-c-pic-kick-one-out/host_check.cpp": "281c361497ef2f66287656b1c9ded3a27b2d6e1f030eb6bf01cda1e6694c78b1",
+    "sources/w9-hud-inventory-items-c-pic-kick-one-out/pic_kick_one_out.cpp": "9624b3d83ac6d8357002e2d652a4db164950287748fca69fe15bc4bb2c1df897",
+    "sources/w9-hud-inventory-items-c-player-check-recall-hot-key/host_check.cpp": "c0709d251e8e4bff943eb5ed2adfdcda47ae8595a2b07549a062dc735b3118d4",
+    "sources/w9-hud-inventory-items-c-player-check-recall-hot-key/player_check_recall_hot_key.cpp": "d20abca43d33dc3464fcc671228157ce119dd05f39653cd4cde838a39443ac51",
+    "sources/w9-hud-inventory-items-c-player-get-marker-color/host_check.cpp": "4283c7fc340a4e1691cdfb6da82fdab0e8379c56bfbd76efb22434be8cc4e065",
+    "sources/w9-hud-inventory-items-c-player-get-marker-color/player_get_marker_color.cpp": "97c058a235e4be5f2e25a63305669ef0e5d7839345a851975171c740971d34ca",
+    "sources/w9-hud-inventory-items-c-player-get-potions-left/host_check.cpp": "a70e2b62e59e811665b47733f8d649917eea6090b08019743a6362d2839894ce",
+    "sources/w9-hud-inventory-items-c-player-get-potions-left/player_get_potions_left.cpp": "d273b4e3eb7c4fe3bd3d989867edbe5768593cafafba780706b228497a5b47c1",
+    "sources/w9-hud-inventory-items-c-player-get-skill-rank/host_check.cpp": "3b882095d0c66b858f2969089f32f1c1e361e2d35aff56d72136260d751b3563",
+    "sources/w9-hud-inventory-items-c-player-get-skill-rank/player_get_skill_rank.cpp": "df9d3acdff3f923c833174f36f6965533a0dede1c8a62442743cac48e3127dd7",
+    "sources/w9-hud-inventory-items-c-player-is-anim-playing/host_check.cpp": "65709c4a12c86b116b00b993dcd8e0b6cf5aea2558bf977f00710c97e0f5c1b9",
+    "sources/w9-hud-inventory-items-c-player-is-anim-playing/player_is_anim_playing.cpp": "7d92d7b75acee94dae8fa3eede1f1d20afe3a4d5769715cbffa8ea0105e61ca3",
+    "sources/w9-hud-inventory-items-c-player-log-inventory/host_check.cpp": "7c2d16dd5b299d77d077e4429ead286e1f44ec17d665d5175b3dad5b9fb6da06",
+    "sources/w9-hud-inventory-items-c-player-log-inventory/player_log_inventory.cpp": "567027509c72c350a6cbf7041b063eef4b3200b10999bb7352b76ed81b6f523c",
+    "sources/w9-hud-inventory-items-c-player-maybe-get-item/host_check.cpp": "376c25f98f5f62c5c926910110bf76d34ce33bdfab86668001d329a05042f621",
+    "sources/w9-hud-inventory-items-c-player-maybe-get-item/player_maybe_get_item.cpp": "9436e9e520d1774acdfaa08e1d76d7217028ad9f72c04ce9e19cb50cbea16ec2",
+    "sources/w9-hud-inventory-items-c-recompute-paper-doll-modifiers/host_check.cpp": "2e9bd8877d1bae525d0509246e15547d697569be5099763cc59781537a64d6c1",
+    "sources/w9-hud-inventory-items-c-recompute-paper-doll-modifiers/recompute_paper_doll_modifiers.cpp": "24e66fb5b3ca3c9d6bafea811a4b6b3dfc7a0187fad8b22cc609f06145e7dcfb",
+    "sources/w9-hud-inventory-items-c-reset-player-animations/host_check.cpp": "79282e6af42836168bceca90b498a6defc8706af988148f17d0b790038a7263f",
+    "sources/w9-hud-inventory-items-c-reset-player-animations/reset_player_animations.cpp": "375fbeb2757d1a295b485c93a75b79e68fd1d769ec4986c1afb9d37049a83b83",
+    "sources/w9-hud-inventory-items-c-setup-default-equipment/host_check.cpp": "1145ddb9819f5ffcc2925595f882bcf6774ca5d177e6ce69f452ed10a23ab75e",
+    "sources/w9-hud-inventory-items-c-setup-default-equipment/setup_default_equipment.cpp": "1b61c223556d3eb7e3fe01a9170d3b90c34d63b76e631be10567f51fa64d49ed",
+    "sources/w9-hud-inventory-items-c-setup-halo/host_check.cpp": "ec2d9ade8c88bf7ed40d3361d580599650d6558daab9c07a7a8275d7413f4a6c",
+    "sources/w9-hud-inventory-items-c-setup-halo/setup_halo.cpp": "f7b0f605bd06bba3c7e36361dfdd7568def59ba01019e79009d315b5478876bc",
+    "sources/w9-hud-inventory-items-c-shop-buy/host_check.cpp": "f07e6e81364ae3d03ef8e3eb3d9ac4d6354294161cad23fc96e82c1f0cc54a7f",
+    "sources/w9-hud-inventory-items-c-shop-buy/shop_buy.cpp": "253a1336173c513ec80561a13911b724cadf346dbf693566831bf4c9ee242413",
+    "sources/w9-hud-inventory-items-c-shop-data/host_check.cpp": "bb718c3ac50ae80f66817c1ae47b8568283cb49e7727683516be10dc0ed2597a",
+    "sources/w9-hud-inventory-items-c-shop-data/shop_data.cpp": "f134c68a0a4c1c9a74d13cb1f9eb5fcb086af0cf790433360a640351b8bc798b",
+    "sources/w9-hud-inventory-items-c-shop-frame/host_check.cpp": "19005af5ba748bccccb7e2b513659fcbef6a96f4079e0739c5c46b085784857c",
+    "sources/w9-hud-inventory-items-c-shop-frame/shop_frame.cpp": "21f2d0c81ddc6254fdea642f02bce2d26f5dace80469fdc05b433e9d054748a3",
+    "sources/w9-hud-inventory-items-c-shop-item-set-attributes/host_check.cpp": "9502211452832e3d0840bf5223aac4e988dee4ae6eb3a61cc0b50e7032a48b2d",
+    "sources/w9-hud-inventory-items-c-shop-item-set-attributes/shop_item_set_attributes.cpp": "ff4a23235d157165d845772bdb7f9d4221ffc5044d1db29f8c4ac9af1134f10c",
+    "sources/w9-hud-inventory-items-c-text-storage/host_check.cpp": "2b4643326958806e889eadc23317a17009fd044d6ca7891710122c0f76a19345",
+    "sources/w9-hud-inventory-items-c-text-storage/text_storage.cpp": "1b671b43000229ff6a63cf812f053ce54bdb6808f0bdac5438e4007a6ce522a0",
+    "sources/w9-hud-inventory-items-c-unequip-item/host_check.cpp": "de085002528e08fae4d77148cfa2c22d730cb19196f0fa2262fc77189622749f",
+    "sources/w9-hud-inventory-items-c-unequip-item/unequip_item.cpp": "ea8996b295e500357114e4d18420a7421adb2e7faa5fb1062faf20b45c2872dd",
+    "sources/w9-hud-inventory-items-c-unpack/host_check.cpp": "a158428f1de4498ef3b047fa99b8ae375bc7958726411f876165c61f89ff89bb",
+    "sources/w9-hud-inventory-items-c-unpack/unpack.cpp": "f97b8db96656614b2a5460ca5a84b91e34c92b6a44b3dab856eab8c4433be8c1",
     "sources/w9-other-a-advance-frame/advance_frame.cpp": "48d1aae68216e413ff3c6b2ee774aae40feb766bacd618b8a4488c440e7f47b9",
     "sources/w9-other-a-advance-frame/host_check.cpp": "237fafbb6d330279f218b3b944d7624ea70cd6f66cdb75d9dd6095265a40585d",
     "sources/w9-other-a-cheat-invulnerability/cheat_invulnerability.cpp": "05c6ea0f32215bce6a8fe8dc61a9fc818c8f2125aafecc4c6015eca916032664",
@@ -48628,11 +48975,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3284,
-    "authored_default_inputs": 3282,
+    "selected_inputs": 3306,
+    "authored_default_inputs": 3304,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2338,
-    "compiled_body_bytes_from_accepted_inputs": 1013392,
+    "emitted_function_definitions_including_helpers": 2359,
+    "compiled_body_bytes_from_accepted_inputs": 1029628,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -48645,7 +48992,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2971
+    "package_selected_inputs": 2993
   },
   "startup_implementations": [
     {
@@ -94104,6 +94451,373 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w9-ctors-wraith-d-views/host/norrath_ctors_lava_wraith_view_601fd0.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-armor-cache-storage/armor_cache_storage.cpp",
+      "source_sha256": "4ec29b6959b42abb9607a69f7aadef8a07ce4c2a9cfb5e401194e594519ab2b1",
+      "object_sha256": "10d4a8b2e6ed3420ad893133b25ff9bc82c7c4220d949a4115725e3ff5c953a9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-armor-cache-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-pack/pack.cpp",
+      "source_sha256": "5f40ad870ca7a96de8215f78b3f1688e9ecea07556d601edbf0b9d4dad159737",
+      "object_sha256": "9508d95151d74560d713aac609bef2b96f01df5edafcd28d88206d01b2b2501c",
+      "emitted_functions": [
+        {
+          "name": "pack__4itemPQ24item11description",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-pack/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-pic-find/pic_find.cpp",
+      "source_sha256": "7e5e75f8a84458206ef0372d9bf0d283ce489960401353b5e34d4c4aced690a0",
+      "object_sha256": "776f481372a9e7c638403becbe290736f817fe9a4bfba6fc1309fdc779905997",
+      "emitted_functions": [
+        {
+          "name": "picFind__4itemPc",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-pic-find/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-pic-kick-one-out/pic_kick_one_out.cpp",
+      "source_sha256": "9624b3d83ac6d8357002e2d652a4db164950287748fca69fe15bc4bb2c1df897",
+      "object_sha256": "f248511816d83dc3aaebf2d99b373716fc6bacfe1adcfb4285e44d7d97005679",
+      "emitted_functions": [
+        {
+          "name": "picKickOneOut__4itemv",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-pic-kick-one-out/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-check-recall-hot-key/player_check_recall_hot_key.cpp",
+      "source_sha256": "d20abca43d33dc3464fcc671228157ce119dd05f39653cd4cde838a39443ac51",
+      "object_sha256": "e03d22bcf095b42250527cffdad976ec9da5760fb145a81f703d6c21298d3cdc",
+      "emitted_functions": [
+        {
+          "name": "playerCheckRecallHotKey__Fv",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-check-recall-hot-key/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-get-marker-color/player_get_marker_color.cpp",
+      "source_sha256": "97c058a235e4be5f2e25a63305669ef0e5d7839345a851975171c740971d34ca",
+      "object_sha256": "abd3f501d5935baf757e74312d2723a814054cc3a9ed486b071b9e22d3ba1845",
+      "emitted_functions": [
+        {
+          "name": "playerGetMarkerColor__Fii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-get-marker-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-get-potions-left/player_get_potions_left.cpp",
+      "source_sha256": "d273b4e3eb7c4fe3bd3d989867edbe5768593cafafba780706b228497a5b47c1",
+      "object_sha256": "2111003e0181b68cab5848983fdafc0ba12f475c27a158644e30ffd31d90dbf5",
+      "emitted_functions": [
+        {
+          "name": "playerGetPotionsLeft__Fii",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-get-potions-left/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-get-skill-rank/player_get_skill_rank.cpp",
+      "source_sha256": "df9d3acdff3f923c833174f36f6965533a0dede1c8a62442743cac48e3127dd7",
+      "object_sha256": "982f62b0d917c9f2eb24bedaa076df0bd36c00a0c6d15130f502018167c0d44b",
+      "emitted_functions": [
+        {
+          "name": "playerGetSkillRank__Fii",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-get-skill-rank/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-is-anim-playing/player_is_anim_playing.cpp",
+      "source_sha256": "7d92d7b75acee94dae8fa3eede1f1d20afe3a4d5769715cbffa8ea0105e61ca3",
+      "object_sha256": "0ae35e259be0370397220eec5452ba859755918d70651f8f66b10b025ba80bcd",
+      "emitted_functions": [
+        {
+          "name": "playerIsAnimPlaying__6PlayerPc",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-is-anim-playing/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-log-inventory/player_log_inventory.cpp",
+      "source_sha256": "567027509c72c350a6cbf7041b063eef4b3200b10999bb7352b76ed81b6f523c",
+      "object_sha256": "2aaca8a43f03b650d3d828f2491e287448a612cef02161dd102e2ec002282edf",
+      "emitted_functions": [
+        {
+          "name": "playerLogInventory__Fi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-log-inventory/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-player-maybe-get-item/player_maybe_get_item.cpp",
+      "source_sha256": "9436e9e520d1774acdfaa08e1d76d7217028ad9f72c04ce9e19cb50cbea16ec2",
+      "object_sha256": "26eb7ac27b01fa52b016a22c277096ede234da5d0536f705530e460858aec8f6",
+      "emitted_functions": [
+        {
+          "name": "playerMaybeGetItem__FiPQ24item11description",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-player-maybe-get-item/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-recompute-paper-doll-modifiers/recompute_paper_doll_modifiers.cpp",
+      "source_sha256": "24e66fb5b3ca3c9d6bafea811a4b6b3dfc7a0187fad8b22cc609f06145e7dcfb",
+      "object_sha256": "b3293e97d2962e744c02fff1966018185023392096ec9ab63b38c2aac381b7c6",
+      "emitted_functions": [
+        {
+          "name": "recomputePaperDollModifiers__Fi",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-recompute-paper-doll-modifiers/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-reset-player-animations/reset_player_animations.cpp",
+      "source_sha256": "375fbeb2757d1a295b485c93a75b79e68fd1d769ec4986c1afb9d37049a83b83",
+      "object_sha256": "783cbf1e52cbe3fd4d732713ee9cbbb18f343ed6b5d2d08f32c14c61fc7afcf3",
+      "emitted_functions": [
+        {
+          "name": "resetPlayerAnimations__Fi",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-reset-player-animations/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-setup-default-equipment/setup_default_equipment.cpp",
+      "source_sha256": "1b61c223556d3eb7e3fe01a9170d3b90c34d63b76e631be10567f51fa64d49ed",
+      "object_sha256": "0ac319edab41fd945761f73f39d2e6d26a829b3dd33eb85e0774506261aebdf7",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9armor_setERNS_3KitEPKPKciii",
+          "compiled_body_bytes": 236
+        },
+        {
+          "name": "setupDefaultEquipment__Fi",
+          "compiled_body_bytes": 8396
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-setup-default-equipment/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-setup-halo/setup_halo.cpp",
+      "source_sha256": "f7b0f605bd06bba3c7e36361dfdd7568def59ba01019e79009d315b5478876bc",
+      "object_sha256": "b579a3618898b0ad5c56357a2c3450807b237a23a17e3dff518e5488f8ea29d0",
+      "emitted_functions": [
+        {
+          "name": "setupHalo__4itemPQ24item11descriptionf",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-setup-halo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-shop-buy/shop_buy.cpp",
+      "source_sha256": "253a1336173c513ec80561a13911b724cadf346dbf693566831bf4c9ee242413",
+      "object_sha256": "b8d91861d44b25b405bee22ba34b6a2faadcbab1c332028c25df98cb90ab2953",
+      "emitted_functions": [
+        {
+          "name": "shopBuy__FcPQ24item11description",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-shop-buy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-shop-data/shop_data.cpp",
+      "source_sha256": "f134c68a0a4c1c9a74d13cb1f9eb5fcb086af0cf790433360a640351b8bc798b",
+      "object_sha256": "b925295d1ed6e88916ae49abe4cb9750ab386f144f8ff2150d48a8bf327ddd29",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-shop-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-shop-frame/shop_frame.cpp",
+      "source_sha256": "21f2d0c81ddc6254fdea642f02bce2d26f5dace80469fdc05b433e9d054748a3",
+      "object_sha256": "0f5f7b49bdf827757e3ff5c95e4eae9837c53fe1fefb7267687eeb386d198ed9",
+      "emitted_functions": [
+        {
+          "name": "shopFrame__Fv",
+          "compiled_body_bytes": 1060
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-shop-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-shop-item-set-attributes/shop_item_set_attributes.cpp",
+      "source_sha256": "ff4a23235d157165d845772bdb7f9d4221ffc5044d1db29f8c4ac9af1134f10c",
+      "object_sha256": "6ed6691369b263ca23974d50ae5eee27b76c1ab797f99cac0370e7e421b43775",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6refuseEiPKc.isra.0",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "shopItemSetAttributes__FiiPcPQ24item11description",
+          "compiled_body_bytes": 1308
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-shop-item-set-attributes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-text-storage/text_storage.cpp",
+      "source_sha256": "1b671b43000229ff6a63cf812f053ce54bdb6808f0bdac5438e4007a6ce522a0",
+      "object_sha256": "3166cb9dbb85c574d5b320f81ac01d0add5ebd5b6a169afa630f287e5abbc5ec",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-text-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-unequip-item/unequip_item.cpp",
+      "source_sha256": "ea8996b295e500357114e4d18420a7421adb2e7faa5fb1062faf20b45c2872dd",
+      "object_sha256": "22db422a9df174a8f85e068f2effdb0241ae75510503adf2eed66e9b6cebf30b",
+      "emitted_functions": [
+        {
+          "name": "unequipItem__FiPQ24item11description",
+          "compiled_body_bytes": 896
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-unequip-item/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-hud-inventory-items-c",
+      "source": "sources/w9-hud-inventory-items-c-unpack/unpack.cpp",
+      "source_sha256": "f97b8db96656614b2a5460ca5a84b91e34c92b6a44b3dab856eab8c4433be8c1",
+      "object_sha256": "2720cb0898bb212a1767ca3b31d5eb6c889c749ea586cc9d74ebe78feb691d95",
+      "emitted_functions": [
+        {
+          "name": "unpack__4itemPQ24item11description",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w9-hud-inventory-items-c-unpack/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
