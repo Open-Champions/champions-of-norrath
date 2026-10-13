@@ -8948,7 +8948,7 @@ Opened: `P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf`, `TurnToFaceEdge__14WoodElfSoldie
 
 Merged (merge commit, branch tip `c61650d0`; the notes have the five summary sections: imports
 closed, imports opened, plan entries, authored but never executed, unknown). 27 of the branch's 28 units (29 function bodies including compiler-emitted helpers) with fresh
-`input_order` values 5088 through 5114. 26 of the 27 selected host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs); the other selected checks are pure data/word checks that also pass. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+`input_order` values 5088 through 5114. All 27 selected host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not re-verified. The worker's private paired runs were not
 re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
 full build; this integration did: 5113 authored inputs, 3909 function bodies, zero COMMON,
 214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
