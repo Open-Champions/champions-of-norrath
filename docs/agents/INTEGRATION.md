@@ -9705,3 +9705,19 @@ Closed: `getEnergyCost__18SkillConvertUndeadi`, `getEnergyCost__18SkillDiseaseSh
 
 Opened: none
 - 2026-10-13 16:55 CDT — agents/w13-skill-stat-d — 899 unresolved imports
+
+## agents/w13-spell-msg-a
+
+Merged (merge commit, branch tip `b53d1a8b`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 3 units with fresh `input_order` values 6026 through 6028, each with a committed check that builds and passes here (partial package: only the three `clone__` units (poisonGasSpell, FrostStormSpell, beetleProjectile) have a committed host check). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6027 authored inputs, 4710 function bodies, zero COMMON. The notes' 29 closed names do not reproduce as such: 3 close here. NOT selected (sources stay in the snapshot file list only, no plan entry): the other 26 units (`msg_run`, `msg_draw`, `msg_collision`, `run` and `clone__15ShockProjectile`) have no committed check; the notes' evidence for them is the private paired run, and the notes list known weak spots of that comparison. The notes' 29 closed names therefore do not reproduce: 3 close here.
+
+| | |
+|---|---|
+| Before | 899 |
+| After | 896 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `clone__14poisonGasSpell`, `clone__15FrostStormSpell`, `clone__16beetleProjectile`
+
+Opened: none
+- 2026-10-13 16:59 CDT — agents/w13-spell-msg-a — 896 unresolved imports

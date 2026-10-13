@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6024,
+  "default_authored_inputs": 6027,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4820,6 +4820,9 @@
     "sources/w13-skill-stat-d-summon-skeleton-icon/get_icon.cpp": "cd18845e24ffd6988d89fd179a9c9ae23c99632a9e5f19a855d84f84ad95ff6a",
     "sources/w13-skill-stat-d-summon-skeleton-level-requirement/get_level_requirement.cpp": "9e4aadc34f6b311ad611b993f76c494b170afc2b1f8fa2c50b77f02e460da429",
     "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp": "7a1b9c39f588119e7b3db6e08030cc709ac8ce5f7e854e449db8c2307bbc83e8",
+    "sources/w13-spell-msg-a-clone-14poisongasspell/clone.cpp": "116236fdb62dea447c52975de0d46fbc6a7b23702b5c1f62a7aa0832179345df",
+    "sources/w13-spell-msg-a-clone-15froststormspell/clone.cpp": "256ea81ff77cd8069a9838f88921b6ad085cdffbdbedeeefa3d5393178969a07",
+    "sources/w13-spell-msg-a-clone-16beetleprojectile/clone.cpp": "56ad5aab815dc72e503b74e64f8d641f75475d906da13c7084cf948ebf07037c",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
     "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
@@ -88852,6 +88855,51 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6026,
+      "kind": "independently_authored_source",
+      "object_name": "w13_spell_msg_a_clone_14poisongasspell.o",
+      "profile": "authored_cpp",
+      "sha256": "116236fdb62dea447c52975de0d46fbc6a7b23702b5c1f62a7aa0832179345df",
+      "source": "sources/w13-spell-msg-a-clone-14poisongasspell/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__14poisonGasSpell",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6027,
+      "kind": "independently_authored_source",
+      "object_name": "w13_spell_msg_a_clone_15froststormspell.o",
+      "profile": "authored_cpp",
+      "sha256": "256ea81ff77cd8069a9838f88921b6ad085cdffbdbedeeefa3d5393178969a07",
+      "source": "sources/w13-spell-msg-a-clone-15froststormspell/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__15FrostStormSpell",
+          "compiled_body_bytes": 356
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6028,
+      "kind": "independently_authored_source",
+      "object_name": "w13_spell_msg_a_clone_16beetleprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "56ad5aab815dc72e503b74e64f8d641f75475d906da13c7084cf948ebf07037c",
+      "source": "sources/w13-spell-msg-a-clone-16beetleprojectile/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__16beetleProjectile",
+          "compiled_body_bytes": 772
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -88951,7 +88999,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b9c684f6a033fceb846fde1e34f510620af36f01d2111aa1272b87716a143a84",
+  "snapshot_sha256": "6344b3cbc3d4b9c309adc49224bf320f6e0ed6b637ec05c904017a74a6930f36",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

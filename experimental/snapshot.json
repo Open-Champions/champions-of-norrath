@@ -77477,6 +77477,48 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp"
+    },
+    {
+      "input_order": 6026,
+      "component": "w13-spell-msg-a-clone-14poisongasspell",
+      "object_name": "w13_spell_msg_a_clone_14poisongasspell.o",
+      "private_object_sha256": "53fe94524bc0eca7a48e4e7c170deb05c50b0728a54cddb4a88ebf5061659a2f",
+      "emitted_functions": [
+        {
+          "name": "clone__14poisonGasSpell",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-spell-msg-a-clone-14poisongasspell/clone.cpp"
+    },
+    {
+      "input_order": 6027,
+      "component": "w13-spell-msg-a-clone-15froststormspell",
+      "object_name": "w13_spell_msg_a_clone_15froststormspell.o",
+      "private_object_sha256": "81345b7527f9a9022d2f251d5aaf3f9efb90d7e944c314cdbb180598df1d5054",
+      "emitted_functions": [
+        {
+          "name": "clone__15FrostStormSpell",
+          "compiled_body_bytes": 356
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-spell-msg-a-clone-15froststormspell/clone.cpp"
+    },
+    {
+      "input_order": 6028,
+      "component": "w13-spell-msg-a-clone-16beetleprojectile",
+      "object_name": "w13_spell_msg_a_clone_16beetleprojectile.o",
+      "private_object_sha256": "c039ca9ff92a9b267f689cdbfd25de1a5411a2431a39e6906ba606a03190f59a",
+      "emitted_functions": [
+        {
+          "name": "clone__16beetleProjectile",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-spell-msg-a-clone-16beetleprojectile/clone.cpp"
     }
   ],
   "drafts": [
@@ -86209,6 +86251,39 @@
     "sources/w13-skill-stat-d-summon-skeleton-level-requirement/host_check.cpp": "ad05d0ecce8348025d6ee046f9c709ff1696f0111137fde4ed4f41bd3d86ab34",
     "sources/w13-skill-stat-d-summon-skeleton-point-cost/get_skill_point_cost.cpp": "7a1b9c39f588119e7b3db6e08030cc709ac8ce5f7e854e449db8c2307bbc83e8",
     "sources/w13-skill-stat-d-summon-skeleton-point-cost/host_check.cpp": "c2bf178e6705597a03c40b5b7ae06123d85cb13270f94c9cfea99c6bb2a5ac45",
+    "sources/w13-spell-msg-a-clone-14poisongasspell/clone.cpp": "116236fdb62dea447c52975de0d46fbc6a7b23702b5c1f62a7aa0832179345df",
+    "sources/w13-spell-msg-a-clone-14poisongasspell/host_check.cpp": "89fb3824a9efcf3a2b273feb48abacd8a5e83bd4464bca9f3c2c0e2ffca51981",
+    "sources/w13-spell-msg-a-clone-15froststormspell/clone.cpp": "256ea81ff77cd8069a9838f88921b6ad085cdffbdbedeeefa3d5393178969a07",
+    "sources/w13-spell-msg-a-clone-15froststormspell/host_check.cpp": "54f8fec640af048efe2787f79559c0eac864c8fe04c076c9220ff5de534779e8",
+    "sources/w13-spell-msg-a-clone-15shockprojectile/clone.cpp": "39b1a9e101f788180e4c675c01d18cdf656b16e189089f1c14c8891d65cbe7e6",
+    "sources/w13-spell-msg-a-clone-16beetleprojectile/clone.cpp": "56ad5aab815dc72e503b74e64f8d641f75475d906da13c7084cf948ebf07037c",
+    "sources/w13-spell-msg-a-clone-16beetleprojectile/host_check.cpp": "534d57181e27c331cbb96f8f9f6366c2ae027d77b7b02defb98436a28bc6b2f1",
+    "sources/w13-spell-msg-a-common/spell.hpp": "c34cae87a23ae414e9b562e3c1bf51137d4363922978b70a263f1f0a6139f220",
+    "sources/w13-spell-msg-a-msg-collision-11diseasebolt/msg_collision.cpp": "2c772576a73c12fef95ba113b6f4ae3cd7a27e3c83caec15ccc5964f1b1cdeda",
+    "sources/w13-spell-msg-a-msg-collision-12shockoffrost/msg_collision.cpp": "7f3af7d3f65a91007807d675c6edd9cd2503f071ea640dee903ca6e76fb88c32",
+    "sources/w13-spell-msg-a-msg-collision-16poisonprojectile/msg_collision.cpp": "43f7b9c17f7ff78debc4670b62d9ea503013db0a05b1c1d763e96daea6c7b7e2",
+    "sources/w13-spell-msg-a-msg-draw-11diseasebolt/msg_draw.cpp": "34f72dce4ee0ee7936a3ebd9a64df9f0a10e38628ad39c1115df7f4949678a5e",
+    "sources/w13-spell-msg-a-msg-draw-12shockoffrost/msg_draw.cpp": "b7096eaf7902bc75d6efe532435129a852ba070eb9191d246f291aea4175cc38",
+    "sources/w13-spell-msg-a-msg-draw-14hateprojectile/msg_draw.cpp": "b0ccfc0afe9aaa6f66a90b6870dc7c7250a07644e8f2b55280f19d21afcb1756",
+    "sources/w13-spell-msg-a-msg-draw-14poisongasspell/msg_draw.cpp": "2d06ad154d871d3d68e54501ac090e3fd43bc91d0fb905b602d4ff27537bf3e7",
+    "sources/w13-spell-msg-a-msg-draw-15froststormspell/msg_draw.cpp": "4b2f935bb98c3a28828c444c159f86ce1215f30389d41cdb5b8a7e7e95aa3505",
+    "sources/w13-spell-msg-a-msg-draw-15shockprojectile/msg_draw.cpp": "f7be6d8ab9e74b0fb3729f2544eab75a1872aa6df4e48d3f7cefdf7c6b693a54",
+    "sources/w13-spell-msg-a-msg-draw-16beetleprojectile/msg_draw.cpp": "39b49ff0165d012a0cb304ed66edb705ee1162c8fca98d9650cc83001e045553",
+    "sources/w13-spell-msg-a-msg-draw-16poisonprojectile/msg_draw.cpp": "9ca4ba73c0355f96908a478da2496905ea3550723c2dd739aa4697e6ca8df1f4",
+    "sources/w13-spell-msg-a-msg-run-10mummysnake/msg_run.cpp": "83de642f3dbb49aae0978fc66593783409de4667b8d2d3a2199376e87724eafa",
+    "sources/w13-spell-msg-a-msg-run-10poisonrain/msg_run.cpp": "a48e3549b3da8632972fb305547a3c129ff317398d2e871aa0112d410b217da8",
+    "sources/w13-spell-msg-a-msg-run-10spawnmummy/msg_run.cpp": "ba31f74ff15637200d819eee1bf277331ea90426faa8e102401b22980cbb3452",
+    "sources/w13-spell-msg-a-msg-run-11boltgoround/msg_run.cpp": "ddcee39c06ddbcf7424f49932602302fe6ed4333cce682799890804e2c45b671",
+    "sources/w13-spell-msg-a-msg-run-11diseasebolt/msg_run.cpp": "ffa578a9f18482d91b27b280ee593da96f18edac322e3eefe34bbfdbe0dff191",
+    "sources/w13-spell-msg-a-msg-run-12shockoffrost/msg_run.cpp": "411ada210c569b8ccfe2e780e0d37cb2fd4393a7584dbf6507543eae794f27da",
+    "sources/w13-spell-msg-a-msg-run-14hateprojectile/msg_run.cpp": "c9307d38eb74f35627ec5cd5de79b77e64875f735e308f3ad335b789ab4e5f18",
+    "sources/w13-spell-msg-a-msg-run-14poisongasspell/msg_run.cpp": "3fb43fb33bbefffbed86e0e93a8163a7a2fc65690e44c07a7ef2df3002e573ab",
+    "sources/w13-spell-msg-a-msg-run-15froststormspell/msg_run.cpp": "d8029b0d9095917fe392faad9c32866e103f424690edbd7d86c488a26f90bae1",
+    "sources/w13-spell-msg-a-msg-run-15shockprojectile/msg_run.cpp": "edee6c4b80fa3a63004c1e6f996ddcf7d9d82cb65d58a7d0a26389d20fc0fa77",
+    "sources/w13-spell-msg-a-msg-run-16beetleprojectile/msg_run.cpp": "edb33900fa41dc2b561190004d7444d156e2d482c2c7d6ebd87bfca553a46fab",
+    "sources/w13-spell-msg-a-msg-run-16poisonprojectile/msg_run.cpp": "a0ea19b9cfb8b1378de99864ad79d2c71ddfdbab597b8264506bdda0029d6657",
+    "sources/w13-spell-msg-a-run-14spellharmtouch/run.cpp": "a2da54b0c91d15d8a8c7a7b43facf24b7ef1799395b9a64f8654c4071795fe73",
+    "sources/w13-spell-msg-a-run-15spellconeoffire/run.cpp": "c798ee4d26d34f333581ad9e4b809ca0a648b312289cead6505f0af8c9248291",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-addhour/host_contract.cpp": "c13e4688ed5547913d95886d1182c6176a843849e7c60479a0a5c0fb496f2bfe",
     "sources/w13-startup-fn-a-check-for-modifier-key-events/check_for_modifier_key_events.cpp": "51973cc179882c4652abd423742eabdede64f7623bde208ab6db5514944c17bc",
@@ -90628,11 +90703,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6026,
-    "authored_default_inputs": 6024,
+    "selected_inputs": 6029,
+    "authored_default_inputs": 6027,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4709,
-    "compiled_body_bytes_from_accepted_inputs": 1926276,
+    "emitted_function_definitions_including_helpers": 4712,
+    "compiled_body_bytes_from_accepted_inputs": 1927692,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -90645,7 +90720,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5713
+    "package_selected_inputs": 5716
   },
   "startup_implementations": [
     {
@@ -180765,6 +180840,57 @@
       ],
       "host_files": [
         "sources/w13-skill-stat-d-summon-skeleton-point-cost/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-spell-msg-a",
+      "source": "sources/w13-spell-msg-a-clone-14poisongasspell/clone.cpp",
+      "source_sha256": "116236fdb62dea447c52975de0d46fbc6a7b23702b5c1f62a7aa0832179345df",
+      "object_sha256": "53fe94524bc0eca7a48e4e7c170deb05c50b0728a54cddb4a88ebf5061659a2f",
+      "emitted_functions": [
+        {
+          "name": "clone__14poisonGasSpell",
+          "compiled_body_bytes": 288
+        }
+      ],
+      "host_files": [
+        "sources/w13-spell-msg-a-clone-14poisongasspell/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-spell-msg-a",
+      "source": "sources/w13-spell-msg-a-clone-15froststormspell/clone.cpp",
+      "source_sha256": "256ea81ff77cd8069a9838f88921b6ad085cdffbdbedeeefa3d5393178969a07",
+      "object_sha256": "81345b7527f9a9022d2f251d5aaf3f9efb90d7e944c314cdbb180598df1d5054",
+      "emitted_functions": [
+        {
+          "name": "clone__15FrostStormSpell",
+          "compiled_body_bytes": 356
+        }
+      ],
+      "host_files": [
+        "sources/w13-spell-msg-a-clone-15froststormspell/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-spell-msg-a",
+      "source": "sources/w13-spell-msg-a-clone-16beetleprojectile/clone.cpp",
+      "source_sha256": "56ad5aab815dc72e503b74e64f8d641f75475d906da13c7084cf948ebf07037c",
+      "object_sha256": "c039ca9ff92a9b267f689cdbfd25de1a5411a2431a39e6906ba606a03190f59a",
+      "emitted_functions": [
+        {
+          "name": "clone__16beetleProjectile",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "host_files": [
+        "sources/w13-spell-msg-a-clone-16beetleprojectile/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
