@@ -1,0 +1,373 @@
+// _4item$suffixTable at 0x332770, 1820 bytes of initialized .data: 91 rows of 20 bytes, the last row
+// all zero. Observed: the pointer words are text keys (strings) that are relocated here to string
+// literals; strings shared inside the table are written once. The remaining words keep their
+// observed bits. Pointer identity with strings of other tables is not preserved.
+// Inferred: item::getName reads word 0 as the key text of the attribute row indexed by an item's
+// prefix or suffix byte. Unknown: the meaning of every other word.
+struct Row {
+    const char* p0;
+    unsigned w1;
+    const char* p2;
+    const char* p3;
+    const char* p4;
+};
+#if defined(__mips__)
+static_assert(sizeof(Row) == 20, "suffixTable row");
+#endif
+static char s0[] = "embers";
+static char s1[] = "+firedamage10-15";
+static char s2[] = "+resistfire10";
+static char s3[] = "+resistfire12";
+static char s4[] = "flame";
+static char s5[] = "+firedamage16-25";
+static char s6[] = "+resistfire20";
+static char s7[] = "+resistfire24";
+static char s8[] = "fire";
+static char s9[] = "+firedamage22-35";
+static char s10[] = "+resistfire30";
+static char s11[] = "+resistfire34";
+static char s12[] = "blaze";
+static char s13[] = "+firedamage37-45";
+static char s14[] = "+resistfire40";
+static char s15[] = "+resistfire45";
+static char s16[] = "inferno";
+static char s17[] = "+firedamage42-70";
+static char s18[] = "+resistfire60";
+static char s19[] = "+resistfire55";
+static char s20[] = "sleet";
+static char s21[] = "+colddamage7-12";
+static char s22[] = "+resistcold10";
+static char s23[] = "hail";
+static char s24[] = "+colddamage14-23";
+static char s25[] = "+resistcold20";
+static char s26[] = "cold";
+static char s27[] = "+colddamage20-31";
+static char s28[] = "+resistcold25";
+static char s29[] = "+resistcold30";
+static char s30[] = "frost";
+static char s31[] = "+colddamage34-40";
+static char s32[] = "+resistcold32";
+static char s33[] = "+resistcold37";
+static char s34[] = "freezing";
+static char s35[] = "+colddamage42-50";
+static char s36[] = "+resistcold45";
+static char s37[] = "+resistcold48";
+static char s38[] = "tainting";
+static char s39[] = "+poisondamage8-13";
+static char s40[] = "+resistpoison12";
+static char s41[] = "+resistpoison25";
+static char s42[] = "acidity";
+static char s43[] = "+poisondamage14-23";
+static char s44[] = "+resistpoison24";
+static char s45[] = "+resistpoison30";
+static char s46[] = "poison";
+static char s47[] = "+poisondamage24-30";
+static char s48[] = "+resistpoison37";
+static char s49[] = "venom";
+static char s50[] = "+poisondamage35-41";
+static char s51[] = "+resistpoison45";
+static char s52[] = "toxin";
+static char s53[] = "+poisondamage40-51";
+static char s54[] = "+resistpoison50";
+static char s55[] = "taintedhaze";
+static char s56[] = "+poisonburst8,0";
+static char s57[] = "+resistpoison10";
+static char s58[] = "+resistpoison23";
+static char s59[] = "acidicmist";
+static char s60[] = "+poisonburst10,1";
+static char s61[] = "+resistpoison20";
+static char s62[] = "+resistpoison28";
+static char s63[] = "poisoncloud";
+static char s64[] = "+poisonburst10,2";
+static char s65[] = "+resistpoison35";
+static char s66[] = "venomspray";
+static char s67[] = "+poisonburst10,3";
+static char s68[] = "+resistpoison42";
+static char s69[] = "toxicbrume";
+static char s70[] = "+poisonburst17,3";
+static char s71[] = "+resistpoison47";
+static char s72[] = "jolts";
+static char s73[] = "+shockdamage6-12";
+static char s74[] = "+resistmagic8";
+static char s75[] = "+resistmagic10";
+static char s76[] = "volts";
+static char s77[] = "+shockdamage13-19";
+static char s78[] = "+resistmagic15";
+static char s79[] = "+resistmagic18";
+static char s80[] = "shock";
+static char s81[] = "+shockdamage22-30";
+static char s82[] = "+resistmagic20";
+static char s83[] = "+resistmagic23";
+static char s84[] = "current";
+static char s85[] = "+shockdamage32-40";
+static char s86[] = "+resistmagic30";
+static char s87[] = "+resistmagic32";
+static char s88[] = "lightning";
+static char s89[] = "+shockdamage42-49";
+static char s90[] = "+resistmagic35";
+static char s91[] = "+resistmagic37";
+static char s92[] = "depletion";
+static char s93[] = "dispersion";
+static char s94[] = "dissipation";
+static char s95[] = "+resistmagic45";
+static char s96[] = "+resistmagic47";
+static char s97[] = "negation";
+static char s98[] = "+resistmagic55";
+static char s99[] = "+resistmagic56";
+static char s100[] = "dissolution";
+static char s101[] = "+resistmagic65";
+static char s102[] = "+resistmagic70";
+static char s103[] = "fitness";
+static char s104[] = "+healthbonus15";
+static char s105[] = "+healthbonus5";
+static char s106[] = "wellbeing";
+static char s107[] = "+healthbonus35";
+static char s108[] = "+healthbonus10";
+static char s109[] = "health";
+static char s110[] = "+healthbonus55";
+static char s111[] = "resiliance";
+static char s112[] = "+healthbonus75";
+static char s113[] = "+healthbonus20";
+static char s114[] = "life";
+static char s115[] = "+healthbonus95";
+static char s116[] = "+healthbonus25";
+static char s117[] = "lessermana";
+static char s118[] = "+manabonus15";
+static char s119[] = "+manabonus5";
+static char s120[] = "balance";
+static char s121[] = "+manabonus35";
+static char s122[] = "+manabonus10";
+static char s123[] = "mana";
+static char s124[] = "+manabonus55";
+static char s125[] = "energy";
+static char s126[] = "+manabonus75";
+static char s127[] = "+manabonus20";
+static char s128[] = "greatermana";
+static char s129[] = "+manabonus95";
+static char s130[] = "+manabonus25";
+static char s131[] = "fortitude";
+static char s132[] = "+strengthbonus5";
+static char s133[] = "+strengthbonus2";
+static char s134[] = "bull";
+static char s135[] = "+strengthbonus10";
+static char s136[] = "+strengthbonus6";
+static char s137[] = "strength";
+static char s138[] = "+strengthbonus15";
+static char s139[] = "+strengthbonus12";
+static char s140[] = "power";
+static char s141[] = "+strengthbonus20";
+static char s142[] = "+strengthbonus21";
+static char s143[] = "giant";
+static char s144[] = "+strengthbonus30";
+static char s145[] = "+strengthbonus29";
+static char s146[] = "godlystrength";
+static char s147[] = "+strengthbonus50";
+static char s148[] = "+strengthbonus38";
+static char s149[] = "cunning";
+static char s150[] = "+intelligencebonus5";
+static char s151[] = "+intelligencebonus2";
+static char s152[] = "wisdom";
+static char s153[] = "+intelligencebonus10";
+static char s154[] = "+intelligencebonus6";
+static char s155[] = "intellect";
+static char s156[] = "+intelligencebonus15";
+static char s157[] = "+intelligencebonus12";
+static char s158[] = "brilliance";
+static char s159[] = "+intelligencebonus25";
+static char s160[] = "+intelligencebonus21";
+static char s161[] = "genius";
+static char s162[] = "+intelligencebonus40";
+static char s163[] = "+intelligencebonus29";
+static char s164[] = "poise";
+static char s165[] = "+dexteritybonus5";
+static char s166[] = "+dexteritybonus2";
+static char s167[] = "agility";
+static char s168[] = "+dexteritybonus10";
+static char s169[] = "+dexteritybonus6";
+static char s170[] = "dexterity";
+static char s171[] = "+dexteritybonus15";
+static char s172[] = "+dexteritybonus12";
+static char s173[] = "+dexteritybonus20";
+static char s174[] = "+dexteritybonus21";
+static char s175[] = "precision";
+static char s176[] = "+dexteritybonus25";
+static char s177[] = "+dexteritybonus29";
+static char s178[] = "godlyreflexes";
+static char s179[] = "+dexteritybonus39";
+static char s180[] = "+dexteritybonus38";
+static char s181[] = "+staminabonus5";
+static char s182[] = "+staminabonus2";
+static char s183[] = "resilience";
+static char s184[] = "+staminabonus10";
+static char s185[] = "+staminabonus6";
+static char s186[] = "stamina";
+static char s187[] = "+staminabonus15";
+static char s188[] = "+staminabonus12";
+static char s189[] = "vigor";
+static char s190[] = "+staminabonus20";
+static char s191[] = "+staminabonus21";
+static char s192[] = "vitality";
+static char s193[] = "+staminabonus25";
+static char s194[] = "+staminabonus29";
+static char s195[] = "rhino";
+static char s196[] = "+staminabonus50";
+static char s197[] = "+staminabonus38";
+static char s198[] = "perk";
+static char s199[] = "+healthregeneration15";
+static char s200[] = "+healthregeneration5";
+static char s201[] = "mending";
+static char s202[] = "+healthregeneration25";
+static char s203[] = "+healthregeneration10";
+static char s204[] = "healing";
+static char s205[] = "+healthregeneration35";
+static char s206[] = "rejuvenation";
+static char s207[] = "+healthregeneration45";
+static char s208[] = "+healthregeneration20";
+static char s209[] = "restoration";
+static char s210[] = "+healthregeneration55";
+static char s211[] = "calm";
+static char s212[] = "+manaregeneration15";
+static char s213[] = "+manaregeneration5";
+static char s214[] = "trance";
+static char s215[] = "+manaregeneration25";
+static char s216[] = "+manaregeneration10";
+static char s217[] = "concentration";
+static char s218[] = "+manaregeneration35";
+static char s219[] = "focus";
+static char s220[] = "+manaregeneration45";
+static char s221[] = "+manaregeneration20";
+static char s222[] = "will";
+static char s223[] = "+manaregeneration55";
+static char s224[] = "warding";
+static char s225[] = "+armorbonus10";
+static char s226[] = "guarding";
+static char s227[] = "+armorbonus25";
+static char s228[] = "defense";
+static char s229[] = "+armorbonus30";
+static char s230[] = "shielding";
+static char s231[] = "+armorbonus35";
+static char s232[] = "protection";
+static char s233[] = "+armorbonus40";
+static char s234[] = "striking";
+static char s235[] = "+attackspeed1";
+static char s236[] = "haste";
+static char s237[] = "+attackspeed2";
+static char s238[] = "zeal";
+static char s239[] = "+attackspeed3";
+static char s240[] = "speed";
+static char s241[] = "+attackspeed4";
+static char s242[] = "impairing";
+static char s243[] = "+critical3";
+static char s244[] = "mangling";
+static char s245[] = "+critical5";
+static char s246[] = "cleaving";
+static char s247[] = "+critical7";
+static char s248[] = "gouging";
+static char s249[] = "+critical9";
+static char s250[] = "mauling";
+static char s251[] = "+critical12";
+static char s252[] = "justice";
+static char s253[] = "+undeaddestroy3";
+static char s254[] = "requital";
+static char s255[] = "+undeaddestroy5";
+static char s256[] = "wrath";
+static char s257[] = "+undeaddestroy15";
+
+extern "C" {
+Row _4item$suffixTable[91] = {
+    {s0, 0x3u, s1, s2, s3},
+    {s4, 0xfu, s5, s6, s7},
+    {s8, 0x14u, s9, s10, s11},
+    {s12, 0x1eu, s13, s14, s15},
+    {s16, 0x28u, s17, s18, s19},
+    {s20, 0x3u, s21, s22, s22},
+    {s23, 0xdu, s24, s25, s25},
+    {s26, 0x12u, s27, s28, s29},
+    {s30, 0x1cu, s31, s32, s33},
+    {s34, 0x26u, s35, s36, s37},
+    {s38, 0x4u, s39, s40, s41},
+    {s42, 0xeu, s43, s44, s45},
+    {s46, 0x13u, s47, s45, s48},
+    {s49, 0x1du, s50, s48, s51},
+    {s52, 0x27u, s53, s51, s54},
+    {s55, 0x3u, s56, s57, s58},
+    {s59, 0xfu, s60, s61, s62},
+    {s63, 0x14u, s64, s45, s65},
+    {s66, 0x1eu, s67, s65, s68},
+    {s69, 0x28u, s70, s68, s71},
+    {s72, 0x3u, s73, s74, s75},
+    {s76, 0xdu, s77, s78, s79},
+    {s80, 0x12u, s81, s82, s83},
+    {s84, 0x1cu, s85, s86, s87},
+    {s88, 0x26u, s89, s90, s91},
+    {s92, 0x5u, nullptr, s82, s82},
+    {s93, 0xfu, nullptr, s86, s91},
+    {s94, 0x14u, nullptr, s95, s96},
+    {s97, 0x1eu, nullptr, s98, s99},
+    {s100, 0x28u, nullptr, s101, s102},
+    {s103, 0x3u, s104, s105, s105},
+    {s106, 0xfu, s107, s108, s108},
+    {s109, 0x14u, s110, s104, s104},
+    {s111, 0x1eu, s112, s113, s113},
+    {s114, 0x28u, s115, s116, s116},
+    {s117, 0x3u, s118, s119, s119},
+    {s120, 0xfu, s121, s122, s122},
+    {s123, 0x14u, s124, s118, s118},
+    {s125, 0x1eu, s126, s127, s127},
+    {s128, 0x28u, s129, s130, s130},
+    {s131, 0x3u, s132, s133, s133},
+    {s134, 0x5u, s135, s136, s136},
+    {s137, 0xfu, s138, s139, s139},
+    {s140, 0x14u, s141, s142, s142},
+    {s143, 0x1eu, s144, s145, s145},
+    {s146, 0x28u, s147, s148, s148},
+    {s149, 0x3u, s150, s151, s151},
+    {s152, 0xau, s153, s154, s154},
+    {s155, 0xfu, s156, s157, s157},
+    {s158, 0x14u, s159, s160, s160},
+    {s161, 0x1eu, s162, s163, s163},
+    {s164, 0x3u, s165, s166, s166},
+    {s167, 0xau, s168, s169, s169},
+    {s170, 0xfu, s171, s172, s172},
+    {s120, 0x14u, s173, s174, s174},
+    {s175, 0x19u, s176, s177, s177},
+    {s178, 0x23u, s179, s180, s180},
+    {s103, 0x3u, s181, s182, s182},
+    {s183, 0xau, s184, s185, s185},
+    {s186, 0xfu, s187, s188, s188},
+    {s189, 0x14u, s190, s191, s191},
+    {s192, 0x19u, s193, s194, s194},
+    {s195, 0x23u, s196, s197, s197},
+    {s198, 0x3u, s199, s200, s200},
+    {s201, 0xau, s202, s203, s203},
+    {s204, 0xfu, s205, s199, s199},
+    {s206, 0x14u, s207, s208, s208},
+    {s209, 0x1eu, s210, s202, s202},
+    {s211, 0x3u, s212, s213, s213},
+    {s214, 0xau, s215, s216, s216},
+    {s217, 0xfu, s218, s212, s212},
+    {s219, 0x14u, s220, s221, s221},
+    {s222, 0x1eu, s223, s215, s215},
+    {s224, 0x3u, nullptr, nullptr, s225},
+    {s226, 0xfu, nullptr, nullptr, s227},
+    {s228, 0x14u, nullptr, nullptr, s229},
+    {s230, 0x19u, nullptr, nullptr, s231},
+    {s232, 0x1eu, nullptr, nullptr, s233},
+    {s234, 0x5u, s235, nullptr, nullptr},
+    {s236, 0xfu, s237, nullptr, nullptr},
+    {s238, 0x14u, s239, nullptr, nullptr},
+    {s240, 0x1eu, s241, nullptr, nullptr},
+    {s242, 0x1u, s243, nullptr, nullptr},
+    {s244, 0xau, s245, nullptr, nullptr},
+    {s246, 0x14u, s247, nullptr, nullptr},
+    {s248, 0x20u, s249, nullptr, nullptr},
+    {s250, 0x20u, s251, nullptr, nullptr},
+    {s252, 0x3u, s253, nullptr, nullptr},
+    {s254, 0x8u, s255, nullptr, nullptr},
+    {s256, 0xfu, s257, nullptr, nullptr},
+    {nullptr, 0x0u, nullptr, nullptr, nullptr},
+};
+}
+#if defined(__mips__)
+static_assert(sizeof(_4item$suffixTable) == 1820, "suffixTable extent");
+#endif
