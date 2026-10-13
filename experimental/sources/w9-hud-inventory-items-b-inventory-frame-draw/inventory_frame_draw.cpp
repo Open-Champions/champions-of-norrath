@@ -2,7 +2,7 @@
 // The per-frame draw of the inventory screens. `inventory` (0x00427288) is an
 // array of 116-byte screen records; the word at +52 of a record is a player index
 // (call it its player) and the word at +76 is a mode value of which only the
-// value 2 is tested. animState (0x007dc5c8) is an array of 264-byte
+// value 2 is tested. animState (0x007cc5c8; the name is also used by other file-local objects) is an array of 264-byte
 // AnimationState records indexed by player. Steps:
 //  1. inventoryLump zero: call inventoryLoad__Fv and stop.
 //  2. inventoryDrawDelay (0x00484830) positive: decrement it and stop.
