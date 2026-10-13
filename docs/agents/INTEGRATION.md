@@ -8556,3 +8556,25 @@ Closed: `pitch1`, `pitch2`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `pm
 
 Opened: `animPlaySound__FPvP6Point3P9animSoundi`
 - 2026-10-13 05:34 CDT — agents/w11-front-c — 842 unresolved imports
+
+## agents/w11-vi-misc-b
+
+Merged (merge commit, branch tip `d330e54a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 units (25 function bodies; the rest are class-table and data units) with fresh
+`input_order` values 4634 through 4666. All 33 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4665 authored inputs, 3574 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 28 here, not down: the class-table units (`_vt$...`) name their slot functions, so each table opens its not-yet-authored slot bodies (`OnDrawSelf`, `OnKeyDown`, `OnKeyUp`, `OnMessage`, `__tf...`, VISet helpers) as new unresolved imports while closing only the table symbol. The worker's closed list (33) reproduces; its private count of 985 was measured on a different base and is not comparable. Counts of unresolved names measure link closure, not progress in authored code, and this merge adds 25 verified function bodies plus the tables.
+
+| | |
+|---|---|
+| Before | 842 |
+| After | 870 |
+| Closed | 33 |
+| Opened | 61 |
+
+Closed: `AddChild__5VIWndP5VIWnd`, `EndConnect__12VIWndConnect`, `Free__12VIWndConnect`, `Free__12VIWndMessage`, `Free__12VIWndOptions`, `Init__12VIWndConnect`, `Init__12VIWndMessage`, `Init__16VIWndReadMessage`, `OnMessage__10VIWndMcErrP5VIWndiii`, `ReloadWords__4VIUI`, `RemoveChild__5VIWndP5VIWnd`, `_$_10VIUIWindow`, `_$_12VIWndConnect`, `_$_12VIWndMessage`, `_$_12VIWndOptions`, `_$_16VIWndReadMessage`, `_$_5VIWnd`, `_$_9VIWndEdit`, `_11VIGUIObject$m_alphaFillMaterial`, `__10VIUIWindow`, `__12VIWndConnect`, `__12VIWndMessage`, `__12VIWndOptions`, `__16VIWndReadMessage`, `__5VIWnd`, `__9VIWndEdit`, `_vt$10VIWndLegal`, `_vt$11VIWndSplash`, `_vt$12VIWndPatcher`, `_vt$15VIWindowManager`, `_vt$20VIWndGenericRenderer`, `_vt$9VIWndDnas`, `_vt$9VIWndEula`
+
+Opened: `Begin__Ct5VISet1ZP5VIWnd`, `ClearText__9VIWndEdit`, `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `Free__13VIBattleMusic`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `_$_13VIBattleMusic`, `_$_t5VISet1ZP5VIWnd`, `__13VIBattleMusic`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
+- 2026-10-13 05:38 CDT — agents/w11-vi-misc-b — 870 unresolved imports
