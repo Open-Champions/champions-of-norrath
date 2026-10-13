@@ -7884,3 +7884,31 @@ Closed: `matTransform__FP6Point3P8Matrix34T0`, `megatileBankInit__FP16MegatileIn
 
 Opened: `lightSetupForCharacter__FP6PacketG6Point3`
 - 2026-10-13 02:12 CDT — `agents/w10-render-c` — 1222 unresolved imports
+
+## agents/w10-render-d
+
+Merged (merge commit, branch tip `0cffe8de`, 41 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown; the package may still be growing). Animation, model, light and
+render part 4: 20 units (19 function bodies and one data unit) with fresh `input_order`
+values 3920 through 3939. 20 of 20 host checks pass here (x86_64, `-ffp-contract=off`):
+15 as is or with the unit source added, and five (`light-effect-msg-run`,
+`subfont-printu`, `texture-init-texture`, `water-init`, `world-run-water`) only with the
+define their own header names (`-DNORRATH_HOST_LIGHTEFFECT`, `_SUBFONT`, `_TEXTURE`,
+`_WATER`, `_WATERRUN`) and the unit source on the command line; without it they crash
+or report mismatches because the stored link words are 64-bit pointers on this host.
+The worker's private paired runs were not re-verified. Compiled sizes are not image
+sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3938 authored inputs, 2859 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1222 |
+| After | 1206 |
+| Closed | 24 |
+| Opened | 8 |
+
+Closed: `_$_11AddParticle`, `_$_11LightEffect`, `_$_5Light`, `__tf11AddParticle`, `__tf11LightEffect`, `clone__11LightEffect`, `debugReport__11AddParticle`, `draw__11AddParticleG6Point3P6Point3i`, `msg_run__11LightEffect`, `run__11AddParticleG6Point3`, `spellAlpha`, `spellAlphaInc`, `subfontPrintu__FiiPUsi`, `texCacheData__FP8_texturei`, `texLastDecompressionTime`, `textRemoveText__FPv`, `textureFreeTexture__FP8_texture`, `textureInitTexture__FP12_worldHeaderP8_texturePUcPc`, `usprintf__FPUsPcffffffff`, `waterInit__Fv`, `waterPatch`, `worldRunWater__FP12_worldHeader`, `worldSetWaterProperties__FP8_texture`, `worldTileEntityLightScale`
+
+Opened: `__8ListHeadRC8ListHead`, `_vt$10GameObject`, `drawParticleEmitter__FG6Point3P11ParticleDefP19ParticleEmitterDataisbN25`, `drawTexture__FR6Packetiiiiiiiii`, `waterList`, `waterListBack`, `waterStep`, `waterTexture`

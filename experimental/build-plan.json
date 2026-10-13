@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3918,
+  "default_authored_inputs": 3938,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2422,6 +2422,26 @@
     "sources/w10-render-c-ray-hit/ray_hit.cpp": "acde722795440c84466f5c15e7582a0fceb111b8440e08ef0a66edd1e66616e8",
     "sources/w10-render-c-reset-scissor/reset_scissor.cpp": "2d34356399455a3faa4ddb6ca09d701d5abb7d8d7cc6259cff7c3a9a4744712d",
     "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp": "1277094f1cc6038a9f981e6507e883e383c03362e57b0c18052270e54fab0b08",
+    "sources/w10-render-d-add-particle-debug-report/debug_report.cpp": "3db064b764399ee8412aeb133c1f77b7b060f37c1af0f25a37440aa0fe84f479",
+    "sources/w10-render-d-add-particle-draw/draw.cpp": "4dfe8243912317333f725ee1a5e5dff12717fd9ce90c1eb918330a990660438e",
+    "sources/w10-render-d-add-particle-dtor/dtor.cpp": "68491f132092140b3d6b3a3bc09c3e69ca911673b7e2b4251b662d5749b70870",
+    "sources/w10-render-d-add-particle-run/run.cpp": "384dc271dcfe502f9d1c36aa4a8e5187923a01e5923190e0e66602d93f9897b9",
+    "sources/w10-render-d-add-particle-typeinfo/typeinfo.cpp": "7536bffddccc6ed039e447483fccf94c4c944d6733e85e49e177c84bf36920d9",
+    "sources/w10-render-d-light-dtor/light_dtor.cpp": "c88e1deb739981d0f3a0bf5706493059c5030b16da28f87c6c3a56dfbcfa7779",
+    "sources/w10-render-d-light-effect-clone/clone.cpp": "72b6e37c22d68bac78332aa07840f1f886f3532eb97fb3d80bf192358b002063",
+    "sources/w10-render-d-light-effect-dtor/dtor.cpp": "3b7b378532bc3ab8afb8163c69e5c324852086f2ab433bc2b66afff2b2efebb8",
+    "sources/w10-render-d-light-effect-msg-run/msg_run.cpp": "25d0247748f04336338d4709bf387fdd47691ce935f34df2fb937c5980543a69",
+    "sources/w10-render-d-light-effect-typeinfo/typeinfo.cpp": "d68cd4031e725571b6a14b089a6345757dfeae4bb86997a78d1968289cd76b45",
+    "sources/w10-render-d-render-data/render_data.cpp": "4bb4ad5140c2b6c776fbede2ca223f7f2f51fd45e217c4277ed98f10ebb8af36",
+    "sources/w10-render-d-subfont-printu/subfont_printu.cpp": "ede1e8dff12f6591b4da85d42b90e26bf2e65e6183f008d91b7c804b60133672",
+    "sources/w10-render-d-tex-cache-data/tex_cache_data.cpp": "08e0b1619ced485de6ad9e43ac67832b190e7949faf1f3b5646e10c3c239cdb0",
+    "sources/w10-render-d-text-remove-text/text_remove_text.cpp": "ea1a776508c7c58f26c1115c65333f00dec370a339e61a7a19c6db793dd109b1",
+    "sources/w10-render-d-texture-free-texture/texture_free_texture.cpp": "cd9821b4afebba6055e89ca6e537e1089caefe30bab273e5763759946e535572",
+    "sources/w10-render-d-texture-init-texture/texture_init_texture.cpp": "388cf776d4466477265b33b3ac7c04351e7048566c07c9132d4811c081d1dc36",
+    "sources/w10-render-d-usprintf-char/usprintf_char.cpp": "212e97e0970e20913e3d6ca2774d1897556f24c0a6ad448f303b6a776ad635a5",
+    "sources/w10-render-d-water-init/water_init.cpp": "a4303e894d6e73f9d359d7219b8d1f8d0e42ce1f886e3d1d5511f6759836e62a",
+    "sources/w10-render-d-world-run-water/world_run_water.cpp": "6eda96016e8250d9f4bfcb07433700089fd364204750df68b779050e895fb0fb",
+    "sources/w10-render-d-world-set-water-properties/world_set_water_properties.cpp": "16698ef8aa84c8d069165431c7d374b4d5606452914a6529150fd0d801336ce5",
     "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp": "d7ab203ff55c0a73127139a47d346ba4d6118dc7f4293d57f345755663b1e518",
     "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp": "4b8f2f25370e3b900f29e96efd41ac21c5752be83a49d48da0288302a76cf959",
     "sources/w10-sce-a-gif-pk-add-gs-ad/pk_add_gs_ad.cpp": "dde8e5f35b552e5c4a0b1d495087abfdb19cf780a141c294d6dab3bde4a0fa8e",
@@ -55629,6 +55649,301 @@
           "compiled_body_bytes": 464
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3920,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_add_particle_debug_report.o",
+      "profile": "authored_cpp",
+      "sha256": "3db064b764399ee8412aeb133c1f77b7b060f37c1af0f25a37440aa0fe84f479",
+      "source": "sources/w10-render-d-add-particle-debug-report/debug_report.cpp",
+      "emitted_functions": [
+        {
+          "name": "debugReport__11AddParticle",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3921,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_add_particle_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "4dfe8243912317333f725ee1a5e5dff12717fd9ce90c1eb918330a990660438e",
+      "source": "sources/w10-render-d-add-particle-draw/draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "draw__11AddParticleG6Point3P6Point3i",
+          "compiled_body_bytes": 1232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3922,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_add_particle_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "68491f132092140b3d6b3a3bc09c3e69ca911673b7e2b4251b662d5749b70870",
+      "source": "sources/w10-render-d-add-particle-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_11AddParticle",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3923,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_add_particle_run.o",
+      "profile": "authored_cpp",
+      "sha256": "384dc271dcfe502f9d1c36aa4a8e5187923a01e5923190e0e66602d93f9897b9",
+      "source": "sources/w10-render-d-add-particle-run/run.cpp",
+      "emitted_functions": [
+        {
+          "name": "run__11AddParticleG6Point3",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3924,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_add_particle_typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "7536bffddccc6ed039e447483fccf94c4c944d6733e85e49e177c84bf36920d9",
+      "source": "sources/w10-render-d-add-particle-typeinfo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf11AddParticle",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3925,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_light_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "c88e1deb739981d0f3a0bf5706493059c5030b16da28f87c6c3a56dfbcfa7779",
+      "source": "sources/w10-render-d-light-dtor/light_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_5Light",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3926,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_light_effect_clone.o",
+      "profile": "authored_cpp",
+      "sha256": "72b6e37c22d68bac78332aa07840f1f886f3532eb97fb3d80bf192358b002063",
+      "source": "sources/w10-render-d-light-effect-clone/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__11LightEffect",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3927,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_light_effect_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "3b7b378532bc3ab8afb8163c69e5c324852086f2ab433bc2b66afff2b2efebb8",
+      "source": "sources/w10-render-d-light-effect-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_11LightEffect",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3928,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_light_effect_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "25d0247748f04336338d4709bf387fdd47691ce935f34df2fb937c5980543a69",
+      "source": "sources/w10-render-d-light-effect-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__11LightEffect",
+          "compiled_body_bytes": 436
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3929,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_light_effect_typeinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "d68cd4031e725571b6a14b089a6345757dfeae4bb86997a78d1968289cd76b45",
+      "source": "sources/w10-render-d-light-effect-typeinfo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf11LightEffect",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3930,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_render_data.o",
+      "profile": "authored_cpp",
+      "sha256": "4bb4ad5140c2b6c776fbede2ca223f7f2f51fd45e217c4277ed98f10ebb8af36",
+      "source": "sources/w10-render-d-render-data/render_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3931,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_subfont_printu.o",
+      "profile": "authored_cpp",
+      "sha256": "ede1e8dff12f6591b4da85d42b90e26bf2e65e6183f008d91b7c804b60133672",
+      "source": "sources/w10-render-d-subfont-printu/subfont_printu.cpp",
+      "emitted_functions": [
+        {
+          "name": "subfontPrintu__FiiPUsi",
+          "compiled_body_bytes": 1468
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3932,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_tex_cache_data.o",
+      "profile": "authored_cpp",
+      "sha256": "08e0b1619ced485de6ad9e43ac67832b190e7949faf1f3b5646e10c3c239cdb0",
+      "source": "sources/w10-render-d-tex-cache-data/tex_cache_data.cpp",
+      "emitted_functions": [
+        {
+          "name": "texCacheData__FP8_texturei",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3933,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_text_remove_text.o",
+      "profile": "authored_cpp",
+      "sha256": "ea1a776508c7c58f26c1115c65333f00dec370a339e61a7a19c6db793dd109b1",
+      "source": "sources/w10-render-d-text-remove-text/text_remove_text.cpp",
+      "emitted_functions": [
+        {
+          "name": "textRemoveText__FPv",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3934,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_texture_free_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "cd9821b4afebba6055e89ca6e537e1089caefe30bab273e5763759946e535572",
+      "source": "sources/w10-render-d-texture-free-texture/texture_free_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "textureFreeTexture__FP8_texture",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3935,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_texture_init_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "388cf776d4466477265b33b3ac7c04351e7048566c07c9132d4811c081d1dc36",
+      "source": "sources/w10-render-d-texture-init-texture/texture_init_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "textureInitTexture__FP12_worldHeaderP8_texturePUcPc",
+          "compiled_body_bytes": 428
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3936,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_usprintf_char.o",
+      "profile": "authored_cpp",
+      "sha256": "212e97e0970e20913e3d6ca2774d1897556f24c0a6ad448f303b6a776ad635a5",
+      "source": "sources/w10-render-d-usprintf-char/usprintf_char.cpp",
+      "emitted_functions": [
+        {
+          "name": "usprintf__FPUsPcffffffff",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3937,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_water_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a4303e894d6e73f9d359d7219b8d1f8d0e42ce1f886e3d1d5511f6759836e62a",
+      "source": "sources/w10-render-d-water-init/water_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "waterInit__Fv",
+          "compiled_body_bytes": 424
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3938,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_world_run_water.o",
+      "profile": "authored_cpp",
+      "sha256": "6eda96016e8250d9f4bfcb07433700089fd364204750df68b779050e895fb0fb",
+      "source": "sources/w10-render-d-world-run-water/world_run_water.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldRunWater__FP12_worldHeader",
+          "compiled_body_bytes": 1456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3939,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_d_world_set_water_properties.o",
+      "profile": "authored_cpp",
+      "sha256": "16698ef8aa84c8d069165431c7d374b4d5606452914a6529150fd0d801336ce5",
+      "source": "sources/w10-render-d-world-set-water-properties/world_set_water_properties.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldSetWaterProperties__FP8_texture",
+          "compiled_body_bytes": 288
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -55728,7 +56043,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c043d5ffd560ea4e0462aa26ca9b2dd973c4b833191995e22223657b9e9375a9",
+  "snapshot_sha256": "c567f2f6cc8bce936bc85136d3f1775ac62c35ec8f31597872dd21d3a4f35c28",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
