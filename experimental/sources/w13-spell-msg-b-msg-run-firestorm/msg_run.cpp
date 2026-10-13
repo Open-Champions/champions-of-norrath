@@ -50,7 +50,7 @@ void* lumpFindResource__FPcT0(char* lump, char* name);
 void soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* header, void* object, float volume);
 
 namespace {
-unsigned roll(unsigned char* o) { return eRand__10GameObject(o); }
+static unsigned roll(unsigned char* o) { return eRand__10GameObject(o); }
 }  // namespace
 
 void msg_run__9FireStorm(void* self) {
