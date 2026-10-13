@@ -24,7 +24,7 @@ unsigned long long modelGetActiveChunks__FP12_modelHeaderi(void* model, int requ
 }
 
 namespace {
-void make_piece(void* self, long long value) {
+__attribute__((always_inline)) inline void make_piece(void* self, long long value) {
     using namespace w10q;
     void* block = blockAlloc__Fi(584);
     if (block == nullptr) return;
