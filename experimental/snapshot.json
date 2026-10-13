@@ -67898,6 +67898,286 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w10-render-b-data-model-globals/data_model_globals.cpp"
+    },
+    {
+      "input_order": 5316,
+      "component": "w12-vimath-a-camera-calc-frustum",
+      "object_name": "w12vma_camera_calc_frustum.o",
+      "private_object_sha256": "b69d265eab18e7dc8a8a4940fe87d48b1a377c6ef5958a4d93f578ddd54a9c16",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "CalcFrustum__8VICameraRC10VIMatrix44T1"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp"
+    },
+    {
+      "input_order": 5317,
+      "component": "w12-vimath-a-clipper-init",
+      "object_name": "w12vma_clipper_init.o",
+      "private_object_sha256": "00e6bd7e3963262bf644823fef0c3859525634c862116efba139782416ae95cb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__9VIClipperi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-clipper-init/init.cpp"
+    },
+    {
+      "input_order": 5318,
+      "component": "w12-vimath-a-clipstack-gettop",
+      "object_name": "w12vma_clipstack_gettop.o",
+      "private_object_sha256": "5fec51a84a1d88995d433e5ea1483de7287deba0250da980bc0025450d2b7df4",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-clipstack-gettop/gettop.cpp"
+    },
+    {
+      "input_order": 5319,
+      "component": "w12-vimath-a-clipstack-pop",
+      "object_name": "w12vma_clipstack_pop.o",
+      "private_object_sha256": "152dd19f6889f9b6ef897dbbe04eaf6bb25b9d8c7e61a37d64621b6f81ddd619",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "Pop__11VIClipStack"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-clipstack-pop/pop.cpp"
+    },
+    {
+      "input_order": 5320,
+      "component": "w12-vimath-a-clipstack-pushfrustum",
+      "object_name": "w12vma_clipstack_pushfrustum.o",
+      "private_object_sha256": "87709be31d04df68f4f85c7cb6eea6ae0a2ec1b2f04cc705d4ec175c76b322dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 320,
+          "name": "PushFrustum__11VIClipStackR8VICamera"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-clipstack-pushfrustum/push_frustum.cpp"
+    },
+    {
+      "input_order": 5321,
+      "component": "w12-vimath-a-csffile-decompress",
+      "object_name": "w12vma_csffile_decompress.o",
+      "private_object_sha256": "185df574c54606d3c7aa8e9a0b6932c030b30888a7590e78b6121a0bcd9b5364",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 700,
+          "name": "Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-csffile-decompress/decompress.cpp"
+    },
+    {
+      "input_order": 5322,
+      "component": "w12-vimath-a-esfparse-parse",
+      "object_name": "w12vma_esfparse_parse.o",
+      "private_object_sha256": "a9e6f18504bcd6deb667e9925989505d523fe138ed97fb961971d1d0e2fada53",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 232,
+          "name": "Parse__10VIESFParseR9VIObjFileR7VIScene"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-esfparse-parse/parse.cpp"
+    },
+    {
+      "input_order": 5323,
+      "component": "w12-vimath-a-file-close",
+      "object_name": "w12vma_file_close.o",
+      "private_object_sha256": "869c38f48dd2627acac2003aab2bedb21b14d29571077c3aaed481b927f73268",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 268,
+          "name": "Close__6VIFile"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-file-close/close.cpp"
+    },
+    {
+      "input_order": 5324,
+      "component": "w12-vimath-a-frustum-init",
+      "object_name": "w12vma_frustum_init.o",
+      "private_object_sha256": "729dd18770564bccdde4a79f908d378f5d9c4498a74b45e0508e349144c57dc1",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "Init__9VIFrustum"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-frustum-init/init.cpp"
+    },
+    {
+      "input_order": 5325,
+      "component": "w12-vimath-a-frustum-plane",
+      "object_name": "w12vma_frustum_plane.o",
+      "private_object_sha256": "5642a957d9293b6ebbdf2507ffffab82262f16222d507f81f6a4b7f473518e2d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "Plane__C9VIFrustumi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-frustum-plane/plane.cpp"
+    },
+    {
+      "input_order": 5326,
+      "component": "w12-vimath-a-matrix33-identity",
+      "object_name": "w12vma_matrix33_identity.o",
+      "private_object_sha256": "5c98e88dcedf9cdccc1fb9cf3edca4d7f519a26b5e18b6004c4c4022bad6aeb8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "Identity__10VIMatrix33"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-matrix33-identity/identity.cpp"
+    },
+    {
+      "input_order": 5327,
+      "component": "w12-vimath-a-matrix44-invert",
+      "object_name": "w12vma_matrix44_invert.o",
+      "private_object_sha256": "e88ab20f0e6262383eaa502a3f7b5ba7c8c0cd256aca8c927d55f1b59d974343",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 780,
+          "name": "Invert__10VIMatrix44RC10VIMatrix44"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-matrix44-invert/invert.cpp"
+    },
+    {
+      "input_order": 5328,
+      "component": "w12-vimath-a-matrix44-mul-matrix",
+      "object_name": "w12vma_matrix44_mul_matrix.o",
+      "private_object_sha256": "dd74582c96308daa7a11581afedc6516c51f4c529dd2366c2a185ee1d7b923b7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "Mul__10VIMatrix44RC10VIMatrix44T1"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-matrix44-mul-matrix/mul_matrix.cpp"
+    },
+    {
+      "input_order": 5329,
+      "component": "w12-vimath-a-matrix44-mul-vect3",
+      "object_name": "w12vma_matrix44_mul_vect3.o",
+      "private_object_sha256": "cd9b8af87b5ee83476374fcf2afdeda1fdd85d820744609cf7498e57d318fd01",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "Mul__C10VIMatrix44RC7VIVect3R7VIVect3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect3/mul_vect3.cpp"
+    },
+    {
+      "input_order": 5330,
+      "component": "w12-vimath-a-matrix44-mul-vect4",
+      "object_name": "w12vma_matrix44_mul_vect4.o",
+      "private_object_sha256": "d954b9dd2aee06a18350bcf42a45bfba343f5da713ab2772064341a652c014eb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect4"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect4/mul_vect4.cpp"
+    },
+    {
+      "input_order": 5331,
+      "component": "w12-vimath-a-objfile-open",
+      "object_name": "w12vma_objfile_open.o",
+      "private_object_sha256": "67627dd20f0fcc85b965f3817536506f36b1cb389ed3256f6ccd57d6bfb1fd4b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-objfile-open/open.cpp"
+    },
+    {
+      "input_order": 5332,
+      "component": "w12-vimath-a-rect-intersects",
+      "object_name": "w12vma_rect_intersects.o",
+      "private_object_sha256": "26b11ecb8caba578e93ebeb238e9f309397f6d7ac05ad8a3c9c0c549703c3a03",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Intersects__C6VIRectRC6VIRect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-rect-intersects/intersects.cpp"
+    },
+    {
+      "input_order": 5333,
+      "component": "w12-vimath-a-vect3-normalize",
+      "object_name": "w12vma_vect3_normalize.o",
+      "private_object_sha256": "05ffeebb2e181cd432e3be79b0b4274d791723f9d80c4e26e6aa32c3f28570b3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "Normalize__7VIVect3"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-vect3-normalize/normalize.cpp"
+    },
+    {
+      "input_order": 5334,
+      "component": "w12-vimath-a-world-find-leaf",
+      "object_name": "w12vma_world_find_leaf.o",
+      "private_object_sha256": "a5d6ac044b73b2fe6affe1b6a6fb9a329be8dc4aa635dfb20bc1f3f5c0d0294d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 260,
+          "name": "FindLeaf__C7VIWorldRC7VIVect3RiT2"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp"
+    },
+    {
+      "input_order": 5335,
+      "component": "w12-vimath-a-zone-init",
+      "object_name": "w12vma_zone_init.o",
+      "private_object_sha256": "0d5968bd7098683ee4f6b875829faad97b1b25c79a7de0a1369db18b9b38e38c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "Init__6VIZone"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vimath-a-zone-init/init.cpp"
     }
   ],
   "drafts": [
@@ -75114,6 +75394,46 @@
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/host_check.cpp": "a84fc34ded48ea630bcc91f3ce5fe9562478740105f99f7fb189a2cc576768e6",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
+    "sources/w12-vimath-a-camera-calc-frustum/host_contract.cpp": "b65d96b3f7706a7371a651f44afed726d6052549e52afab677e10f20ebb09ba4",
+    "sources/w12-vimath-a-clipper-init/host_contract.cpp": "fcc5bb4325abdeac1948488622057aeb233394ee8561b040fdb7501e4939224a",
+    "sources/w12-vimath-a-clipper-init/init.cpp": "24fac72f62f8a85ae3468985d9b20d7adbd50ae095e08029f9e9a4214ce037df",
+    "sources/w12-vimath-a-clipstack-gettop/gettop.cpp": "5d092ffb31c8d29ccfdef6ef3fd0e8c079f0b6ab851d84111004b197bbf2ce2b",
+    "sources/w12-vimath-a-clipstack-gettop/host_contract.cpp": "f194cd771395e34ad447df4f12699790250bfcb53e225625a4e3ab8b32c65471",
+    "sources/w12-vimath-a-clipstack-pop/host_contract.cpp": "862030d7474d4702e870f3c7e5be7323988712a8c4ee0a0825d0e3929e75b9aa",
+    "sources/w12-vimath-a-clipstack-pop/pop.cpp": "8d29d01ab7e1a01a94a35bbd941bf717b30dc59b259102276dd4cf6fe26bbbcb",
+    "sources/w12-vimath-a-clipstack-pushfrustum/host_contract.cpp": "842097a0116b6e932f7aa73e9f8216ad95efa38a720ecf69a2e18949c304b2f3",
+    "sources/w12-vimath-a-clipstack-pushfrustum/push_frustum.cpp": "47b4b66c516928669445979f73ec6dd5a9e24ee05953e9913d68f87f635265ed",
+    "sources/w12-vimath-a-csffile-decompress/decompress.cpp": "45cc20585791eb4c7e8ebf5094ef2a6da0b083632cd3ecd3bff264afaed9d842",
+    "sources/w12-vimath-a-csffile-decompress/host_contract.cpp": "52e4ff4ba8e53ba439845ec65b8bc6deeb2cf54c8e529672e74d10677c6d8c16",
+    "sources/w12-vimath-a-esfparse-parse/host_contract.cpp": "93fddb8c8c4aa881c51de2cb3f317af8c40ee1a898b864ed6add72e8ab040e14",
+    "sources/w12-vimath-a-esfparse-parse/parse.cpp": "59df4b3e1348c5441691f5a52c978c56e5c7bab248c480a94a4380575535a7be",
+    "sources/w12-vimath-a-file-close/close.cpp": "be618c0a87c526f5799a969db24f8f6fd32eeafa5c48854276112e2d02b6fe60",
+    "sources/w12-vimath-a-file-close/host_contract.cpp": "1d9b1c25696d11b929d18ba12754f20b8391eb2d5d1debcfc692a580c7d48e42",
+    "sources/w12-vimath-a-frustum-init/host_contract.cpp": "333fe4230bfd6c9b716701f8eb6dfb700762546fadf401fa858c0038fff45eee",
+    "sources/w12-vimath-a-frustum-init/init.cpp": "4b0fa392cd2ec54f1ffa664d03a772710363a8b760be8c8da924fddfcf80c7b9",
+    "sources/w12-vimath-a-frustum-plane/host_contract.cpp": "9813573f06a44e73488cf4ee83467b930ed32a6df9b1294b7618afca4f7744c5",
+    "sources/w12-vimath-a-frustum-plane/plane.cpp": "842c969b3da94a68623dc20363a839e4232caffed71dafbcfd308d1c97deb79f",
+    "sources/w12-vimath-a-matrix33-identity/host_contract.cpp": "5ede030ac537683406f1c00cba0a57a180a209641b88c1c25613f6bb4951810f",
+    "sources/w12-vimath-a-matrix33-identity/identity.cpp": "a81d51eb2ce3136ca4c90e5f7e88046d92b36cbb9e23fc73e1ac78777a340c70",
+    "sources/w12-vimath-a-matrix44-invert/host_contract.cpp": "936616fc25d2d67c0c224d45bc3c70de2e2523adcdb3a3f9bd4f36632b044205",
+    "sources/w12-vimath-a-matrix44-invert/invert.cpp": "68b78252057ce36f150883840743e1d8829120732977919d53509a1feb94a5ec",
+    "sources/w12-vimath-a-matrix44-mul-matrix/host_contract.cpp": "9b7c1d2edde724af39c798eb6907732286c7338c5c534fc5ddf022fc9c32239b",
+    "sources/w12-vimath-a-matrix44-mul-matrix/mul_matrix.cpp": "661d1ada29434214f210dbb7f62bf150ddab32a1343bf3e882d92ca8968d729b",
+    "sources/w12-vimath-a-matrix44-mul-vect3/host_contract.cpp": "1091ceb04a9c38d6b39f96309b70586a7f35be1e1dc6c3945a51371ca6b8edb1",
+    "sources/w12-vimath-a-matrix44-mul-vect3/mul_vect3.cpp": "6e3b7341d67bb0ab56ba1b2c80d7be87c4b402ade8e7e6f690f2545439683036",
+    "sources/w12-vimath-a-matrix44-mul-vect4/host_contract.cpp": "ed7dd723684fe0c9114375f082b98d852b83e9f4ad0c1ee01cf541c0e6fb1c87",
+    "sources/w12-vimath-a-matrix44-mul-vect4/mul_vect4.cpp": "d61fb667b30fdc88e851969ef2d2746528cdb6bcad35399aa5629cf6d473a752",
+    "sources/w12-vimath-a-objfile-open/host_contract.cpp": "c13eff59e021d8446a4fc74d71081c0becbe2db87e86455ba21963fb417a0782",
+    "sources/w12-vimath-a-objfile-open/open.cpp": "c6a23ccc6064a2bc4e8f610d7512a10e8ffabf49dbda91599da07f7a40b15345",
+    "sources/w12-vimath-a-rect-intersects/host_contract.cpp": "f8eb4136200cb97429b793c18873aa4a65507e7fbc72dd5feffa4760e23c0242",
+    "sources/w12-vimath-a-rect-intersects/intersects.cpp": "eeb0266826eb40f006ad3c104d6b384d78f1f7e1c53fdbea31dc7c5c3ecf7321",
+    "sources/w12-vimath-a-vect3-normalize/host_contract.cpp": "8a0b342727d7cc9776d4235284e2c4125cf4bc401e7f19e6c0f3e25be58b53dc",
+    "sources/w12-vimath-a-vect3-normalize/normalize.cpp": "23d1f1a5b680c1b2c661d419a0e13ad5ee05d9a2b3c14767082c54d3ccb790ff",
+    "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp": "3362983c702e7470270bd2adba871b92d0435804b34d1636e1999ec2b1dce7ac",
+    "sources/w12-vimath-a-world-find-leaf/host_contract.cpp": "48adfd91f984f113e48bfb13c29e1c6a901ac54ff2bb1375a933a6076ddb8bad",
+    "sources/w12-vimath-a-zone-init/host_contract.cpp": "55b9ac8f2d252aa89a9b9969adea955e4fb60820af844aa6edd8a1c53ea82e7f",
+    "sources/w12-vimath-a-zone-init/init.cpp": "4619985999e0723e46ef985a4d6b4f7162e22e803a7b5244ae6555bf2c6b889b",
     "sources/w12-visky-b-battle-music-ctor/ctor.cpp": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
     "sources/w12-visky-b-battle-music-ctor/host_check.cpp": "be69ed74b2fad4f752a639b71a018b19df1e89086c800d2c92b100af47a45e41",
     "sources/w12-visky-b-battle-music-dtor/dtor.cpp": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
@@ -79620,11 +79940,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5316,
-    "authored_default_inputs": 5314,
+    "selected_inputs": 5336,
+    "authored_default_inputs": 5334,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4069,
-    "compiled_body_bytes_from_accepted_inputs": 1782972,
+    "emitted_function_definitions_including_helpers": 4089,
+    "compiled_body_bytes_from_accepted_inputs": 1786968,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -79637,7 +79957,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5003
+    "package_selected_inputs": 5023
   },
   "startup_implementations": [
     {
@@ -158048,6 +158368,346 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w12-light-model-data-check/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp",
+      "source_sha256": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
+      "object_sha256": "b69d265eab18e7dc8a8a4940fe87d48b1a377c6ef5958a4d93f578ddd54a9c16",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "CalcFrustum__8VICameraRC10VIMatrix44T1"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-camera-calc-frustum/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-clipper-init/init.cpp",
+      "source_sha256": "24fac72f62f8a85ae3468985d9b20d7adbd50ae095e08029f9e9a4214ce037df",
+      "object_sha256": "00e6bd7e3963262bf644823fef0c3859525634c862116efba139782416ae95cb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__9VIClipperi"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-clipper-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-clipstack-gettop/gettop.cpp",
+      "source_sha256": "5d092ffb31c8d29ccfdef6ef3fd0e8c079f0b6ab851d84111004b197bbf2ce2b",
+      "object_sha256": "5fec51a84a1d88995d433e5ea1483de7287deba0250da980bc0025450d2b7df4",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-clipstack-gettop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-clipstack-pop/pop.cpp",
+      "source_sha256": "8d29d01ab7e1a01a94a35bbd941bf717b30dc59b259102276dd4cf6fe26bbbcb",
+      "object_sha256": "152dd19f6889f9b6ef897dbbe04eaf6bb25b9d8c7e61a37d64621b6f81ddd619",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "Pop__11VIClipStack"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-clipstack-pop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-clipstack-pushfrustum/push_frustum.cpp",
+      "source_sha256": "47b4b66c516928669445979f73ec6dd5a9e24ee05953e9913d68f87f635265ed",
+      "object_sha256": "87709be31d04df68f4f85c7cb6eea6ae0a2ec1b2f04cc705d4ec175c76b322dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 320,
+          "name": "PushFrustum__11VIClipStackR8VICamera"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-clipstack-pushfrustum/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-csffile-decompress/decompress.cpp",
+      "source_sha256": "45cc20585791eb4c7e8ebf5094ef2a6da0b083632cd3ecd3bff264afaed9d842",
+      "object_sha256": "185df574c54606d3c7aa8e9a0b6932c030b30888a7590e78b6121a0bcd9b5364",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 700,
+          "name": "Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-csffile-decompress/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-esfparse-parse/parse.cpp",
+      "source_sha256": "59df4b3e1348c5441691f5a52c978c56e5c7bab248c480a94a4380575535a7be",
+      "object_sha256": "a9e6f18504bcd6deb667e9925989505d523fe138ed97fb961971d1d0e2fada53",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 232,
+          "name": "Parse__10VIESFParseR9VIObjFileR7VIScene"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-esfparse-parse/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-file-close/close.cpp",
+      "source_sha256": "be618c0a87c526f5799a969db24f8f6fd32eeafa5c48854276112e2d02b6fe60",
+      "object_sha256": "869c38f48dd2627acac2003aab2bedb21b14d29571077c3aaed481b927f73268",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 268,
+          "name": "Close__6VIFile"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-file-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-frustum-init/init.cpp",
+      "source_sha256": "4b0fa392cd2ec54f1ffa664d03a772710363a8b760be8c8da924fddfcf80c7b9",
+      "object_sha256": "729dd18770564bccdde4a79f908d378f5d9c4498a74b45e0508e349144c57dc1",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "Init__9VIFrustum"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-frustum-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-frustum-plane/plane.cpp",
+      "source_sha256": "842c969b3da94a68623dc20363a839e4232caffed71dafbcfd308d1c97deb79f",
+      "object_sha256": "5642a957d9293b6ebbdf2507ffffab82262f16222d507f81f6a4b7f473518e2d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "Plane__C9VIFrustumi"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-frustum-plane/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-matrix33-identity/identity.cpp",
+      "source_sha256": "a81d51eb2ce3136ca4c90e5f7e88046d92b36cbb9e23fc73e1ac78777a340c70",
+      "object_sha256": "5c98e88dcedf9cdccc1fb9cf3edca4d7f519a26b5e18b6004c4c4022bad6aeb8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "Identity__10VIMatrix33"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-matrix33-identity/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-matrix44-invert/invert.cpp",
+      "source_sha256": "68b78252057ce36f150883840743e1d8829120732977919d53509a1feb94a5ec",
+      "object_sha256": "e88ab20f0e6262383eaa502a3f7b5ba7c8c0cd256aca8c927d55f1b59d974343",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 780,
+          "name": "Invert__10VIMatrix44RC10VIMatrix44"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-matrix44-invert/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-matrix44-mul-matrix/mul_matrix.cpp",
+      "source_sha256": "661d1ada29434214f210dbb7f62bf150ddab32a1343bf3e882d92ca8968d729b",
+      "object_sha256": "dd74582c96308daa7a11581afedc6516c51f4c529dd2366c2a185ee1d7b923b7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "Mul__10VIMatrix44RC10VIMatrix44T1"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-matrix44-mul-matrix/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect3/mul_vect3.cpp",
+      "source_sha256": "6e3b7341d67bb0ab56ba1b2c80d7be87c4b402ade8e7e6f690f2545439683036",
+      "object_sha256": "cd9b8af87b5ee83476374fcf2afdeda1fdd85d820744609cf7498e57d318fd01",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "Mul__C10VIMatrix44RC7VIVect3R7VIVect3"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-matrix44-mul-vect3/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect4/mul_vect4.cpp",
+      "source_sha256": "d61fb667b30fdc88e851969ef2d2746528cdb6bcad35399aa5629cf6d473a752",
+      "object_sha256": "d954b9dd2aee06a18350bcf42a45bfba343f5da713ab2772064341a652c014eb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect4"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-matrix44-mul-vect4/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-objfile-open/open.cpp",
+      "source_sha256": "c6a23ccc6064a2bc4e8f610d7512a10e8ffabf49dbda91599da07f7a40b15345",
+      "object_sha256": "67627dd20f0fcc85b965f3817536506f36b1cb389ed3256f6ccd57d6bfb1fd4b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-objfile-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-rect-intersects/intersects.cpp",
+      "source_sha256": "eeb0266826eb40f006ad3c104d6b384d78f1f7e1c53fdbea31dc7c5c3ecf7321",
+      "object_sha256": "26b11ecb8caba578e93ebeb238e9f309397f6d7ac05ad8a3c9c0c549703c3a03",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Intersects__C6VIRectRC6VIRect"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-rect-intersects/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-vect3-normalize/normalize.cpp",
+      "source_sha256": "23d1f1a5b680c1b2c661d419a0e13ad5ee05d9a2b3c14767082c54d3ccb790ff",
+      "object_sha256": "05ffeebb2e181cd432e3be79b0b4274d791723f9d80c4e26e6aa32c3f28570b3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "Normalize__7VIVect3"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-vect3-normalize/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp",
+      "source_sha256": "3362983c702e7470270bd2adba871b92d0435804b34d1636e1999ec2b1dce7ac",
+      "object_sha256": "a5d6ac044b73b2fe6affe1b6a6fb9a329be8dc4aa635dfb20bc1f3f5c0d0294d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 260,
+          "name": "FindLeaf__C7VIWorldRC7VIVect3RiT2"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-world-find-leaf/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vimath-a",
+      "source": "sources/w12-vimath-a-zone-init/init.cpp",
+      "source_sha256": "4619985999e0723e46ef985a4d6b4f7162e22e803a7b5244ae6555bf2c6b889b",
+      "object_sha256": "0d5968bd7098683ee4f6b875829faad97b1b25c79a7de0a1369db18b9b38e38c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "Init__6VIZone"
+        }
+      ],
+      "host_files": [
+        "sources/w12-vimath-a-zone-init/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

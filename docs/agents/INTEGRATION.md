@@ -9201,3 +9201,19 @@ Closed: `P_ExtendSwoosh__FiG6Point3T1f`, `P_LightningIsLive__Fi`, `P_Line__FG6Po
 
 Opened: `_vt$12VIPointLight`, `lineBuffer`, `linePos`, `startFractalLine__FP4Boltfi`
 - 2026-10-13 10:54 CDT — agents/w12-light-model — 984 unresolved imports
+
+## agents/w12-vimath-a
+
+Merged (merge commit, branch tip `da5355a3`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 20 units (VI matrix, vector, frustum, clip-stack, rect, zone and file-parse methods) with fresh `input_order` values 5316 through 5335. All 20 committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names, `-ffp-contract=off -fno-builtin`). The worker's private paired runs, which needed a model of VU0 macro mode, were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5334 authored inputs, 4087 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 20 closed names reproduce. The count does not move: 20 close and 20 open, because the new bodies call further VI file, zone and matrix routines nobody has authored yet.
+
+| | |
+|---|---|
+| Before | 984 |
+| After | 984 |
+| Closed | 20 |
+| Opened | 20 |
+
+Closed: `CalcFrustum__8VICameraRC10VIMatrix44T1`, `Close__6VIFile`, `Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm`, `FindLeaf__C7VIWorldRC7VIVect3RiT2`, `GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane`, `Identity__10VIMatrix33`, `Init__6VIZone`, `Init__9VIClipperi`, `Init__9VIFrustum`, `Intersects__C6VIRectRC6VIRect`, `Invert__10VIMatrix44RC10VIMatrix44`, `Mul__10VIMatrix44RC10VIMatrix44T1`, `Mul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect4`, `Normalize__7VIVect3`, `Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode`, `Parse__10VIESFParseR9VIObjFileR7VIScene`, `Plane__C9VIFrustumi`, `Pop__11VIClipStack`, `PushFrustum__11VIClipStackR8VICamera`
+
+Opened: `BufferFlush__6VIFile`, `CalcPlanes__9VIFrustum`, `Close__9VIObjFile`, `FileType__9VIObjFile`, `FindLeaf__C6VIZoneRC7VIVect3`, `Init__10VIZoneRoomiiUiUiR6VIBBox`, `Init__10VIZoneTreeii`, `Init__t7VIArray1Z10VIZoneRoomi`, `IsAsynchComplete__6VIFile`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect3`, `NumObjects__9VIObjFile`, `Open__6VIFileiPQ26VIFile7MemSegmil`, `ParseObject__10VIESFParse`, `PostOpen__9VIObjFile`, `SwapRows__10VIMatrix44ii`, `VIBufferSwap__FiPUc`, `VIEndian`, `Zero__10VIMatrix33`, `__ml__FRC7VIVect4RC10VIMatrix44`, `uncompress`
+- 2026-10-13 11:03 CDT — agents/w12-vimath-a — 984 unresolved imports

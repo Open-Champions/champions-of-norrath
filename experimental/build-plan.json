@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5314,
+  "default_authored_inputs": 5334,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4061,6 +4061,26 @@
     "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
+    "sources/w12-vimath-a-clipper-init/init.cpp": "24fac72f62f8a85ae3468985d9b20d7adbd50ae095e08029f9e9a4214ce037df",
+    "sources/w12-vimath-a-clipstack-gettop/gettop.cpp": "5d092ffb31c8d29ccfdef6ef3fd0e8c079f0b6ab851d84111004b197bbf2ce2b",
+    "sources/w12-vimath-a-clipstack-pop/pop.cpp": "8d29d01ab7e1a01a94a35bbd941bf717b30dc59b259102276dd4cf6fe26bbbcb",
+    "sources/w12-vimath-a-clipstack-pushfrustum/push_frustum.cpp": "47b4b66c516928669445979f73ec6dd5a9e24ee05953e9913d68f87f635265ed",
+    "sources/w12-vimath-a-csffile-decompress/decompress.cpp": "45cc20585791eb4c7e8ebf5094ef2a6da0b083632cd3ecd3bff264afaed9d842",
+    "sources/w12-vimath-a-esfparse-parse/parse.cpp": "59df4b3e1348c5441691f5a52c978c56e5c7bab248c480a94a4380575535a7be",
+    "sources/w12-vimath-a-file-close/close.cpp": "be618c0a87c526f5799a969db24f8f6fd32eeafa5c48854276112e2d02b6fe60",
+    "sources/w12-vimath-a-frustum-init/init.cpp": "4b0fa392cd2ec54f1ffa664d03a772710363a8b760be8c8da924fddfcf80c7b9",
+    "sources/w12-vimath-a-frustum-plane/plane.cpp": "842c969b3da94a68623dc20363a839e4232caffed71dafbcfd308d1c97deb79f",
+    "sources/w12-vimath-a-matrix33-identity/identity.cpp": "a81d51eb2ce3136ca4c90e5f7e88046d92b36cbb9e23fc73e1ac78777a340c70",
+    "sources/w12-vimath-a-matrix44-invert/invert.cpp": "68b78252057ce36f150883840743e1d8829120732977919d53509a1feb94a5ec",
+    "sources/w12-vimath-a-matrix44-mul-matrix/mul_matrix.cpp": "661d1ada29434214f210dbb7f62bf150ddab32a1343bf3e882d92ca8968d729b",
+    "sources/w12-vimath-a-matrix44-mul-vect3/mul_vect3.cpp": "6e3b7341d67bb0ab56ba1b2c80d7be87c4b402ade8e7e6f690f2545439683036",
+    "sources/w12-vimath-a-matrix44-mul-vect4/mul_vect4.cpp": "d61fb667b30fdc88e851969ef2d2746528cdb6bcad35399aa5629cf6d473a752",
+    "sources/w12-vimath-a-objfile-open/open.cpp": "c6a23ccc6064a2bc4e8f610d7512a10e8ffabf49dbda91599da07f7a40b15345",
+    "sources/w12-vimath-a-rect-intersects/intersects.cpp": "eeb0266826eb40f006ad3c104d6b384d78f1f7e1c53fdbea31dc7c5c3ecf7321",
+    "sources/w12-vimath-a-vect3-normalize/normalize.cpp": "23d1f1a5b680c1b2c661d419a0e13ad5ee05d9a2b3c14767082c54d3ccb790ff",
+    "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp": "3362983c702e7470270bd2adba871b92d0435804b34d1636e1999ec2b1dce7ac",
+    "sources/w12-vimath-a-zone-init/init.cpp": "4619985999e0723e46ef985a4d6b4f7162e22e803a7b5244ae6555bf2c6b889b",
     "sources/w12-visky-b-battle-music-ctor/ctor.cpp": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
     "sources/w12-visky-b-battle-music-dtor/dtor.cpp": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
     "sources/w12-visky-b-effect-volume-scene/scene_global.cpp": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
@@ -77742,6 +77762,306 @@
       "sha256": "5d1e5e1c26e8eb3b09ff5f37a766139fd859fb32eb06f3ec250dad203b2d4763",
       "source": "sources/w10-render-b-data-model-globals/data_model_globals.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5316,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_camera_calc_frustum.o",
+      "profile": "authored_cpp",
+      "sha256": "1b5dd5089e99c221a1c9455cabaeea506891a52a6b62b8f0681b5b6995ed7351",
+      "source": "sources/w12-vimath-a-camera-calc-frustum/calc_frustum.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 276,
+          "name": "CalcFrustum__8VICameraRC10VIMatrix44T1"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5317,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_clipper_init.o",
+      "profile": "authored_cpp",
+      "sha256": "24fac72f62f8a85ae3468985d9b20d7adbd50ae095e08029f9e9a4214ce037df",
+      "source": "sources/w12-vimath-a-clipper-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__9VIClipperi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5318,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_clipstack_gettop.o",
+      "profile": "authored_cpp",
+      "sha256": "5d092ffb31c8d29ccfdef6ef3fd0e8c079f0b6ab851d84111004b197bbf2ce2b",
+      "source": "sources/w12-vimath-a-clipstack-gettop/gettop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5319,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_clipstack_pop.o",
+      "profile": "authored_cpp",
+      "sha256": "8d29d01ab7e1a01a94a35bbd941bf717b30dc59b259102276dd4cf6fe26bbbcb",
+      "source": "sources/w12-vimath-a-clipstack-pop/pop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "Pop__11VIClipStack"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5320,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_clipstack_pushfrustum.o",
+      "profile": "authored_cpp",
+      "sha256": "47b4b66c516928669445979f73ec6dd5a9e24ee05953e9913d68f87f635265ed",
+      "source": "sources/w12-vimath-a-clipstack-pushfrustum/push_frustum.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 320,
+          "name": "PushFrustum__11VIClipStackR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5321,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_csffile_decompress.o",
+      "profile": "authored_cpp",
+      "sha256": "45cc20585791eb4c7e8ebf5094ef2a6da0b083632cd3ecd3bff264afaed9d842",
+      "source": "sources/w12-vimath-a-csffile-decompress/decompress.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 700,
+          "name": "Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5322,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_esfparse_parse.o",
+      "profile": "authored_cpp",
+      "sha256": "59df4b3e1348c5441691f5a52c978c56e5c7bab248c480a94a4380575535a7be",
+      "source": "sources/w12-vimath-a-esfparse-parse/parse.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 232,
+          "name": "Parse__10VIESFParseR9VIObjFileR7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5323,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_file_close.o",
+      "profile": "authored_cpp",
+      "sha256": "be618c0a87c526f5799a969db24f8f6fd32eeafa5c48854276112e2d02b6fe60",
+      "source": "sources/w12-vimath-a-file-close/close.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 268,
+          "name": "Close__6VIFile"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5324,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_frustum_init.o",
+      "profile": "authored_cpp",
+      "sha256": "4b0fa392cd2ec54f1ffa664d03a772710363a8b760be8c8da924fddfcf80c7b9",
+      "source": "sources/w12-vimath-a-frustum-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "Init__9VIFrustum"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5325,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_frustum_plane.o",
+      "profile": "authored_cpp",
+      "sha256": "842c969b3da94a68623dc20363a839e4232caffed71dafbcfd308d1c97deb79f",
+      "source": "sources/w12-vimath-a-frustum-plane/plane.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "Plane__C9VIFrustumi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5326,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_matrix33_identity.o",
+      "profile": "authored_cpp",
+      "sha256": "a81d51eb2ce3136ca4c90e5f7e88046d92b36cbb9e23fc73e1ac78777a340c70",
+      "source": "sources/w12-vimath-a-matrix33-identity/identity.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "Identity__10VIMatrix33"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5327,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_matrix44_invert.o",
+      "profile": "authored_cpp",
+      "sha256": "68b78252057ce36f150883840743e1d8829120732977919d53509a1feb94a5ec",
+      "source": "sources/w12-vimath-a-matrix44-invert/invert.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 780,
+          "name": "Invert__10VIMatrix44RC10VIMatrix44"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5328,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_matrix44_mul_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "661d1ada29434214f210dbb7f62bf150ddab32a1343bf3e882d92ca8968d729b",
+      "source": "sources/w12-vimath-a-matrix44-mul-matrix/mul_matrix.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "Mul__10VIMatrix44RC10VIMatrix44T1"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5329,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_matrix44_mul_vect3.o",
+      "profile": "authored_cpp",
+      "sha256": "6e3b7341d67bb0ab56ba1b2c80d7be87c4b402ade8e7e6f690f2545439683036",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect3/mul_vect3.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "Mul__C10VIMatrix44RC7VIVect3R7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5330,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_matrix44_mul_vect4.o",
+      "profile": "authored_cpp",
+      "sha256": "d61fb667b30fdc88e851969ef2d2746528cdb6bcad35399aa5629cf6d473a752",
+      "source": "sources/w12-vimath-a-matrix44-mul-vect4/mul_vect4.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect4"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5331,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_objfile_open.o",
+      "profile": "authored_cpp",
+      "sha256": "c6a23ccc6064a2bc4e8f610d7512a10e8ffabf49dbda91599da07f7a40b15345",
+      "source": "sources/w12-vimath-a-objfile-open/open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5332,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_rect_intersects.o",
+      "profile": "authored_cpp",
+      "sha256": "eeb0266826eb40f006ad3c104d6b384d78f1f7e1c53fdbea31dc7c5c3ecf7321",
+      "source": "sources/w12-vimath-a-rect-intersects/intersects.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Intersects__C6VIRectRC6VIRect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5333,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_vect3_normalize.o",
+      "profile": "authored_cpp",
+      "sha256": "23d1f1a5b680c1b2c661d419a0e13ad5ee05d9a2b3c14767082c54d3ccb790ff",
+      "source": "sources/w12-vimath-a-vect3-normalize/normalize.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "Normalize__7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5334,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_world_find_leaf.o",
+      "profile": "authored_cpp",
+      "sha256": "3362983c702e7470270bd2adba871b92d0435804b34d1636e1999ec2b1dce7ac",
+      "source": "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 260,
+          "name": "FindLeaf__C7VIWorldRC7VIVect3RiT2"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5335,
+      "kind": "independently_authored_source",
+      "object_name": "w12vma_zone_init.o",
+      "profile": "authored_cpp",
+      "sha256": "4619985999e0723e46ef985a4d6b4f7162e22e803a7b5244ae6555bf2c6b889b",
+      "source": "sources/w12-vimath-a-zone-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "Init__6VIZone"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -77841,7 +78161,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "1d374ea07ae874785222b042bde910d25db6d5849e76c9b9b8be81edd984f002",
+  "snapshot_sha256": "aa0f035bfd2340b20083e556bf69c2f0af6163e85e1b113a25c57b518bc454df",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
