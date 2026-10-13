@@ -7858,3 +7858,28 @@ Closed: `HUDInit__Fv`, `P_ExtendTrail__FiG6Point3`, `P_StartTrail__Fiifiiiii`, `
 
 Opened: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `_vt$13LooseIceChunk`, `bustAlpha`, `cFireParticle`, `cSmokeParticle`, `crystalTex`, `drawWaterPatch__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldDynamicLight__FP13PolysetHeader`, `drawWorldObject__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldParticleEmitter__FP13PolysetHeader`, `emergencyResult`, `evaluateAnimation__FP14AnimationStateb`, `hudBustCovered`, `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForWorld__FP6PacketP13PolysetHeader`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `soundGroupLimit`, `soundLimit`
 - 2026-10-13 02:08 CDT — `agents/w10-render-a` — 1249 unresolved imports
+
+## agents/w10-render-c
+
+Merged (merge commit, branch tip `59dbdaa3`, 53 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Animation, model, light and render part 3: 15 units (14
+function bodies and one data unit) with fresh `input_order` values 3905 through 3919. 15
+of 15 host checks pass here (x86_64, `-ffp-contract=off`), 13 as is or with the unit
+source added, and `megatile-bank-init` and `put-block` only with the define in their own
+build line (put-block carries a MIPS `sync` that the host build must replace). The
+worker's private paired runs were not re-verified. Compiled sizes are not image sizes and
+no byte match is claimed. The worker did not run a full build; this integration did: 3918
+authored inputs, 2840 function bodies, zero COMMON, 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1249 |
+| After | 1222 |
+| Closed | 28 |
+| Opened | 1 |
+
+Closed: `matTransform__FP6Point3P8Matrix34T0`, `megatileBankInit__FP16MegatileInstBankPv`, `megatileItemInit__FP8MegatilePv`, `modelDrawFade`, `modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`, `modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f`, `modelGetBoundingBox__FP12_modelHeaderlPiN52`, `modelOption`, `modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`, `modelSetGlobalShadowBrightness__Ff`, `modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`, `modelShadowScale`, `putBlock__FP8_textureP6PacketPPP9uncompMapPPii`, `quatMul__FP4QuatN20`, `rainSplashParticle`, `rayHit__FP6Point3N30`, `resetScissor__Fv`, `scissor`, `scx1`, `scx2`, `scy1`, `scy2`, `segmentLineHit__FP6Point3N50`, `shadowBrightness`, `slideDustParticle`, `slideDustParticleBig`, `slideDustParticleBigDark`, `slideDustParticleDark`
+
+Opened: `lightSetupForCharacter__FP6PacketG6Point3`

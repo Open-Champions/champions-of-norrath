@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3903,
+  "default_authored_inputs": 3918,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2407,6 +2407,21 @@
     "sources/w10-render-b-mat-scale34/mat_scale34.cpp": "a419384df8d30031cce0bc08e10ef2923073360f9d8d7b6b8ac26290831809d9",
     "sources/w10-render-b-mat-scale44/mat_scale44.cpp": "5971be2f5b4ac352aed0cf239e06b9ec3f7356d5c57a3d6a78e5c5677bddd5d2",
     "sources/w10-render-b-mat-trans/mat_trans.cpp": "c9884a4c2e1d3ca3cb901745b712a97760ff32684267c3b0bd8cc8fce64641fe",
+    "sources/w10-render-c-data-render-globals/data_render_globals.cpp": "293cf37bbd69f2957e4b4edd226d68cb29438bfe0d97e4da72b5f919882dedf8",
+    "sources/w10-render-c-mat-transform34/mat_transform34.cpp": "b88541e6b5aa613d4d0bf2c7c218f395fca8b641533650e0dad59eeede9abb2c",
+    "sources/w10-render-c-megatile-bank-init/megatile_bank_init.cpp": "90c0e6043a6d7f06db522c7b43eef7f434b2eee5f805fe7ad9d013e7cf5b90d2",
+    "sources/w10-render-c-megatile-item-init/megatile_item_init.cpp": "c0d7fb6ccc22c74e8ef765cde06f07959575520594e60ef48eccee31492a2e00",
+    "sources/w10-render-c-model-draw-halo/model_draw_halo.cpp": "db14b8185856dc980d4a57d67d4a2bec6f45c4910e0d1b247ecffcaf1e17c134",
+    "sources/w10-render-c-model-get-attachment-matrix/model_get_attachment_matrix.cpp": "dbb6fda1b25819a2036f9a9fc2767d7281f65e387708be5935d8ca072f544ed6",
+    "sources/w10-render-c-model-get-bounding-box/model_get_bounding_box.cpp": "fc34814be41a71f56de524a2c9f2d4b0105d11d7ced74b95901754c699263979",
+    "sources/w10-render-c-model-process-glows/model_process_glows.cpp": "6c001f0ef84f3dda9aef2e70f6ae9ebef0c0e1d1198712e9358278085c96c974",
+    "sources/w10-render-c-model-set-global-shadow-brightness/model_set_global_shadow_brightness.cpp": "9840e6dcbec217dfd3a739645c96af50bc7c5ba60d0831c8cb41225b2cc9cd2c",
+    "sources/w10-render-c-model-setup-character/model_setup_character.cpp": "fa9588918a5453fc30481cfc306b8232978ddb2823079e200ba5713bc29f0acd",
+    "sources/w10-render-c-put-block/put_block.cpp": "9bf6042573c8eb93c3d41103d0864d4844f7d3999b7f537329416f61bec48c91",
+    "sources/w10-render-c-quat-mul/quat_mul.cpp": "157d9fd3e5daf1484f835433bba04d89b862c2432bbae22fbc26af0895f05a9f",
+    "sources/w10-render-c-ray-hit/ray_hit.cpp": "acde722795440c84466f5c15e7582a0fceb111b8440e08ef0a66edd1e66616e8",
+    "sources/w10-render-c-reset-scissor/reset_scissor.cpp": "2d34356399455a3faa4ddb6ca09d701d5abb7d8d7cc6259cff7c3a9a4744712d",
+    "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp": "1277094f1cc6038a9f981e6507e883e383c03362e57b0c18052270e54fab0b08",
     "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp": "d7ab203ff55c0a73127139a47d346ba4d6118dc7f4293d57f345755663b1e518",
     "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp": "4b8f2f25370e3b900f29e96efd41ac21c5752be83a49d48da0288302a76cf959",
     "sources/w10-sce-a-gif-pk-add-gs-ad/pk_add_gs_ad.cpp": "dde8e5f35b552e5c4a0b1d495087abfdb19cf780a141c294d6dab3bde4a0fa8e",
@@ -55394,6 +55409,226 @@
           "compiled_body_bytes": 240
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3905,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_data_render_globals.o",
+      "profile": "authored_cpp",
+      "sha256": "293cf37bbd69f2957e4b4edd226d68cb29438bfe0d97e4da72b5f919882dedf8",
+      "source": "sources/w10-render-c-data-render-globals/data_render_globals.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3906,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_mat_transform34.o",
+      "profile": "authored_cpp",
+      "sha256": "b88541e6b5aa613d4d0bf2c7c218f395fca8b641533650e0dad59eeede9abb2c",
+      "source": "sources/w10-render-c-mat-transform34/mat_transform34.cpp",
+      "emitted_functions": [
+        {
+          "name": "matTransform__FP6Point3P8Matrix34T0",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3907,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_megatile_bank_init.o",
+      "profile": "authored_cpp",
+      "sha256": "90c0e6043a6d7f06db522c7b43eef7f434b2eee5f805fe7ad9d013e7cf5b90d2",
+      "source": "sources/w10-render-c-megatile-bank-init/megatile_bank_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "megatileBankInit__FP16MegatileInstBankPv",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3908,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_megatile_item_init.o",
+      "profile": "authored_cpp",
+      "sha256": "c0d7fb6ccc22c74e8ef765cde06f07959575520594e60ef48eccee31492a2e00",
+      "source": "sources/w10-render-c-megatile-item-init/megatile_item_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "megatileItemInit__FP8MegatilePv",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3909,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_draw_halo.o",
+      "profile": "authored_cpp",
+      "sha256": "db14b8185856dc980d4a57d67d4a2bec6f45c4910e0d1b247ecffcaf1e17c134",
+      "source": "sources/w10-render-c-model-draw-halo/model_draw_halo.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi",
+          "compiled_body_bytes": 884
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3910,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_get_attachment_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "dbb6fda1b25819a2036f9a9fc2767d7281f65e387708be5935d8ca072f544ed6",
+      "source": "sources/w10-render-c-model-get-attachment-matrix/model_get_attachment_matrix.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f",
+          "compiled_body_bytes": 180
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3911,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_get_bounding_box.o",
+      "profile": "authored_cpp",
+      "sha256": "fc34814be41a71f56de524a2c9f2d4b0105d11d7ced74b95901754c699263979",
+      "source": "sources/w10-render-c-model-get-bounding-box/model_get_bounding_box.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelGetBoundingBox__FP12_modelHeaderlPiN52",
+          "compiled_body_bytes": 392
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3912,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_process_glows.o",
+      "profile": "authored_cpp",
+      "sha256": "6c001f0ef84f3dda9aef2e70f6ae9ebef0c0e1d1198712e9358278085c96c974",
+      "source": "sources/w10-render-c-model-process-glows/model_process_glows.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34",
+          "compiled_body_bytes": 472
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3913,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_set_global_shadow_brightness.o",
+      "profile": "authored_cpp",
+      "sha256": "9840e6dcbec217dfd3a739645c96af50bc7c5ba60d0831c8cb41225b2cc9cd2c",
+      "source": "sources/w10-render-c-model-set-global-shadow-brightness/model_set_global_shadow_brightness.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelSetGlobalShadowBrightness__Ff",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3914,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_model_setup_character.o",
+      "profile": "authored_cpp",
+      "sha256": "fa9588918a5453fc30481cfc306b8232978ddb2823079e200ba5713bc29f0acd",
+      "source": "sources/w10-render-c-model-setup-character/model_setup_character.cpp",
+      "emitted_functions": [
+        {
+          "name": "modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc",
+          "compiled_body_bytes": 504
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3915,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_put_block.o",
+      "profile": "authored_cpp",
+      "sha256": "9bf6042573c8eb93c3d41103d0864d4844f7d3999b7f537329416f61bec48c91",
+      "source": "sources/w10-render-c-put-block/put_block.cpp",
+      "emitted_functions": [
+        {
+          "name": "putBlock__FP8_textureP6PacketPPP9uncompMapPPii",
+          "compiled_body_bytes": 764
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3916,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_quat_mul.o",
+      "profile": "authored_cpp",
+      "sha256": "157d9fd3e5daf1484f835433bba04d89b862c2432bbae22fbc26af0895f05a9f",
+      "source": "sources/w10-render-c-quat-mul/quat_mul.cpp",
+      "emitted_functions": [
+        {
+          "name": "quatMul__FP4QuatN20",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3917,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_ray_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "acde722795440c84466f5c15e7582a0fceb111b8440e08ef0a66edd1e66616e8",
+      "source": "sources/w10-render-c-ray-hit/ray_hit.cpp",
+      "emitted_functions": [
+        {
+          "name": "rayHit__FP6Point3N30",
+          "compiled_body_bytes": 292
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3918,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_reset_scissor.o",
+      "profile": "authored_cpp",
+      "sha256": "2d34356399455a3faa4ddb6ca09d701d5abb7d8d7cc6259cff7c3a9a4744712d",
+      "source": "sources/w10-render-c-reset-scissor/reset_scissor.cpp",
+      "emitted_functions": [
+        {
+          "name": "resetScissor__Fv",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3919,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_c_segment_line_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "1277094f1cc6038a9f981e6507e883e383c03362e57b0c18052270e54fab0b08",
+      "source": "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp",
+      "emitted_functions": [
+        {
+          "name": "segmentLineHit__FP6Point3N50",
+          "compiled_body_bytes": 464
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -55493,7 +55728,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2157c681b5b67fdc4d27582333c53cb103532a7a993b9d6b0862092dab3a4249",
+  "snapshot_sha256": "c043d5ffd560ea4e0462aa26ca9b2dd973c4b833191995e22223657b9e9375a9",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

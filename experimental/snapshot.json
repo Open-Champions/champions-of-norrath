@@ -49071,6 +49071,211 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-render-a-p-start-trail/p_start_trail.cpp"
+    },
+    {
+      "input_order": 3905,
+      "component": "w10-render-c-data-render-globals",
+      "object_name": "w10_render_c_data_render_globals.o",
+      "private_object_sha256": "9628e0559166cf314f2a3dc2f5d6469b4d3166277d08bac2aa7f86af8b3f595d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-data-render-globals/data_render_globals.cpp"
+    },
+    {
+      "input_order": 3906,
+      "component": "w10-render-c-mat-transform34",
+      "object_name": "w10_render_c_mat_transform34.o",
+      "private_object_sha256": "0c3c8fdcc3714093105fd1b52f3295ff347b0896f893257190e1cb1ed6beefd0",
+      "emitted_functions": [
+        {
+          "name": "matTransform__FP6Point3P8Matrix34T0",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-mat-transform34/mat_transform34.cpp"
+    },
+    {
+      "input_order": 3907,
+      "component": "w10-render-c-megatile-bank-init",
+      "object_name": "w10_render_c_megatile_bank_init.o",
+      "private_object_sha256": "a8777ba60abfca63c4d40dd0684199b272a3af23c98b05bf456ade5c1c2e01d6",
+      "emitted_functions": [
+        {
+          "name": "megatileBankInit__FP16MegatileInstBankPv",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-megatile-bank-init/megatile_bank_init.cpp"
+    },
+    {
+      "input_order": 3908,
+      "component": "w10-render-c-megatile-item-init",
+      "object_name": "w10_render_c_megatile_item_init.o",
+      "private_object_sha256": "e34226d172ebf73d3a56976e251076fff59e24fc4fa7bc35bf051dd7ddb99de9",
+      "emitted_functions": [
+        {
+          "name": "megatileItemInit__FP8MegatilePv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-megatile-item-init/megatile_item_init.cpp"
+    },
+    {
+      "input_order": 3909,
+      "component": "w10-render-c-model-draw-halo",
+      "object_name": "w10_render_c_model_draw_halo.o",
+      "private_object_sha256": "e1a2e6a4aa83cc17ec829c78ca6c8039533503ff86621195a06f47c9552b8282",
+      "emitted_functions": [
+        {
+          "name": "modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi",
+          "compiled_body_bytes": 884
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-draw-halo/model_draw_halo.cpp"
+    },
+    {
+      "input_order": 3910,
+      "component": "w10-render-c-model-get-attachment-matrix",
+      "object_name": "w10_render_c_model_get_attachment_matrix.o",
+      "private_object_sha256": "912fa747047dd0582a2176e231a86a775878226db269320901402867476fa9bd",
+      "emitted_functions": [
+        {
+          "name": "modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-get-attachment-matrix/model_get_attachment_matrix.cpp"
+    },
+    {
+      "input_order": 3911,
+      "component": "w10-render-c-model-get-bounding-box",
+      "object_name": "w10_render_c_model_get_bounding_box.o",
+      "private_object_sha256": "a059293e3c5507906e24ca9466b04e36cdd5f63f2126a4beb3084cdb1222c819",
+      "emitted_functions": [
+        {
+          "name": "modelGetBoundingBox__FP12_modelHeaderlPiN52",
+          "compiled_body_bytes": 392
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-get-bounding-box/model_get_bounding_box.cpp"
+    },
+    {
+      "input_order": 3912,
+      "component": "w10-render-c-model-process-glows",
+      "object_name": "w10_render_c_model_process_glows.o",
+      "private_object_sha256": "237c1f308d35116556d7a20f376ee98746b79ee036dedbf028a339d346ca2a46",
+      "emitted_functions": [
+        {
+          "name": "modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-process-glows/model_process_glows.cpp"
+    },
+    {
+      "input_order": 3913,
+      "component": "w10-render-c-model-set-global-shadow-brightness",
+      "object_name": "w10_render_c_model_set_global_shadow_brightness.o",
+      "private_object_sha256": "61823db2546ee8fe98fe615c55c3fd7029fb0efd89dbea84e2b340c9156ebff3",
+      "emitted_functions": [
+        {
+          "name": "modelSetGlobalShadowBrightness__Ff",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-set-global-shadow-brightness/model_set_global_shadow_brightness.cpp"
+    },
+    {
+      "input_order": 3914,
+      "component": "w10-render-c-model-setup-character",
+      "object_name": "w10_render_c_model_setup_character.o",
+      "private_object_sha256": "973e47b1344ac55582bea8a898f4781b00462cfa417e21daf776dbbae320b4b1",
+      "emitted_functions": [
+        {
+          "name": "modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-model-setup-character/model_setup_character.cpp"
+    },
+    {
+      "input_order": 3915,
+      "component": "w10-render-c-put-block",
+      "object_name": "w10_render_c_put_block.o",
+      "private_object_sha256": "330bcf586a1f09c8065c50712ccf5983b52c8fdfcadfdbf59b5bff94417d108a",
+      "emitted_functions": [
+        {
+          "name": "putBlock__FP8_textureP6PacketPPP9uncompMapPPii",
+          "compiled_body_bytes": 764
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-put-block/put_block.cpp"
+    },
+    {
+      "input_order": 3916,
+      "component": "w10-render-c-quat-mul",
+      "object_name": "w10_render_c_quat_mul.o",
+      "private_object_sha256": "4faf548b2676d82f1fecfad4d153373c727ec5135b763a2b718c5ff15bbe4c58",
+      "emitted_functions": [
+        {
+          "name": "quatMul__FP4QuatN20",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-quat-mul/quat_mul.cpp"
+    },
+    {
+      "input_order": 3917,
+      "component": "w10-render-c-ray-hit",
+      "object_name": "w10_render_c_ray_hit.o",
+      "private_object_sha256": "c0cdfe3bc52fbed06af811ddea43c13f2882337c5df468eb53f01107aaaf01fd",
+      "emitted_functions": [
+        {
+          "name": "rayHit__FP6Point3N30",
+          "compiled_body_bytes": 292
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-ray-hit/ray_hit.cpp"
+    },
+    {
+      "input_order": 3918,
+      "component": "w10-render-c-reset-scissor",
+      "object_name": "w10_render_c_reset_scissor.o",
+      "private_object_sha256": "e0c11348ed04aeca37da448b09d435e4716b29ef38d54ca41731cbbaf087ccae",
+      "emitted_functions": [
+        {
+          "name": "resetScissor__Fv",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-reset-scissor/reset_scissor.cpp"
+    },
+    {
+      "input_order": 3919,
+      "component": "w10-render-c-segment-line-hit",
+      "object_name": "w10_render_c_segment_line_hit.o",
+      "private_object_sha256": "a6e880555a7922dee55945e3c0ad2a7582c4c9cb93c993b0ef7f4a62b8e343c3",
+      "emitted_functions": [
+        {
+          "name": "segmentLineHit__FP6Point3N50",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp"
     }
   ],
   "drafts": [
@@ -52967,6 +53172,36 @@
     "sources/w10-render-b-mat-scale44/mat_scale44.cpp": "5971be2f5b4ac352aed0cf239e06b9ec3f7356d5c57a3d6a78e5c5677bddd5d2",
     "sources/w10-render-b-mat-trans/host_check.cpp": "e59240641ddbbc104f22e8b3be83d51bc43b466278260a8040d479caa0ee10e0",
     "sources/w10-render-b-mat-trans/mat_trans.cpp": "c9884a4c2e1d3ca3cb901745b712a97760ff32684267c3b0bd8cc8fce64641fe",
+    "sources/w10-render-c-data-render-globals/data_render_globals.cpp": "293cf37bbd69f2957e4b4edd226d68cb29438bfe0d97e4da72b5f919882dedf8",
+    "sources/w10-render-c-data-render-globals/host_check.cpp": "d53963e6702759a0f681a2ac085f2c32ac7b25f6ff681c7d3f10dd538e199106",
+    "sources/w10-render-c-mat-transform34/host_check.cpp": "5fff2abb8be0b70950a618f82c074f2358fdc9b5843aad08f47af42feb795a57",
+    "sources/w10-render-c-mat-transform34/mat_transform34.cpp": "b88541e6b5aa613d4d0bf2c7c218f395fca8b641533650e0dad59eeede9abb2c",
+    "sources/w10-render-c-megatile-bank-init/host_check.cpp": "9440a674b9fcbe07aedccce8d6598d26fccd03eb149afd4e8e205c6284b4819e",
+    "sources/w10-render-c-megatile-bank-init/megatile_bank_init.cpp": "90c0e6043a6d7f06db522c7b43eef7f434b2eee5f805fe7ad9d013e7cf5b90d2",
+    "sources/w10-render-c-megatile-item-init/host_check.cpp": "f06f4c772385d0a3f139e4f97a582fbedcbc5674451e79690d16c6f95d868a61",
+    "sources/w10-render-c-megatile-item-init/megatile_item_init.cpp": "c0d7fb6ccc22c74e8ef765cde06f07959575520594e60ef48eccee31492a2e00",
+    "sources/w10-render-c-model-draw-halo/host_check.cpp": "bf3fb02b0ceac9d00fea88c9760e2b2b7b43d8af615db59fb285dede45ee3128",
+    "sources/w10-render-c-model-draw-halo/model_draw_halo.cpp": "db14b8185856dc980d4a57d67d4a2bec6f45c4910e0d1b247ecffcaf1e17c134",
+    "sources/w10-render-c-model-get-attachment-matrix/host_check.cpp": "c5f5c0ed6b015abd00fb6b69e1dbd53e78d39815ecb658605f73b6817ed5e795",
+    "sources/w10-render-c-model-get-attachment-matrix/model_get_attachment_matrix.cpp": "dbb6fda1b25819a2036f9a9fc2767d7281f65e387708be5935d8ca072f544ed6",
+    "sources/w10-render-c-model-get-bounding-box/host_check.cpp": "b133ef35cf5c058c445d9fdb03137c7750186623cf65ae13456d44fab05b9232",
+    "sources/w10-render-c-model-get-bounding-box/model_get_bounding_box.cpp": "fc34814be41a71f56de524a2c9f2d4b0105d11d7ced74b95901754c699263979",
+    "sources/w10-render-c-model-process-glows/host_check.cpp": "5050fd57d0b70685afd75b915270b762e8900392fba9588804bbe8ef91419115",
+    "sources/w10-render-c-model-process-glows/model_process_glows.cpp": "6c001f0ef84f3dda9aef2e70f6ae9ebef0c0e1d1198712e9358278085c96c974",
+    "sources/w10-render-c-model-set-global-shadow-brightness/host_check.cpp": "92af27a24efe4e168ce7778dd67bea01c484b082fda66b85b49cfda72f24851e",
+    "sources/w10-render-c-model-set-global-shadow-brightness/model_set_global_shadow_brightness.cpp": "9840e6dcbec217dfd3a739645c96af50bc7c5ba60d0831c8cb41225b2cc9cd2c",
+    "sources/w10-render-c-model-setup-character/host_check.cpp": "6615ea8c19025d3cc2ba784bf6bd261b0a0c1726485a9d588e743d7b4066122d",
+    "sources/w10-render-c-model-setup-character/model_setup_character.cpp": "fa9588918a5453fc30481cfc306b8232978ddb2823079e200ba5713bc29f0acd",
+    "sources/w10-render-c-put-block/host_check.cpp": "e448bef4a46c5448445e88f10458b26828459d8ce6b214690cfcd128cb31932a",
+    "sources/w10-render-c-put-block/put_block.cpp": "9bf6042573c8eb93c3d41103d0864d4844f7d3999b7f537329416f61bec48c91",
+    "sources/w10-render-c-quat-mul/host_check.cpp": "c3f34698964fd83b9f52772134bb8aa58079e8ce5380beec694461b3aee2146c",
+    "sources/w10-render-c-quat-mul/quat_mul.cpp": "157d9fd3e5daf1484f835433bba04d89b862c2432bbae22fbc26af0895f05a9f",
+    "sources/w10-render-c-ray-hit/host_check.cpp": "662b70220eeee800d893b22439b5d49def453f93c265b57e87dc4f88245941f2",
+    "sources/w10-render-c-ray-hit/ray_hit.cpp": "acde722795440c84466f5c15e7582a0fceb111b8440e08ef0a66edd1e66616e8",
+    "sources/w10-render-c-reset-scissor/host_check.cpp": "a0b2e61949fdd78d184a81bb9405d7aa715f534abc759affcfbfd2dae60d3651",
+    "sources/w10-render-c-reset-scissor/reset_scissor.cpp": "2d34356399455a3faa4ddb6ca09d701d5abb7d8d7cc6259cff7c3a9a4744712d",
+    "sources/w10-render-c-segment-line-hit/host_check.cpp": "e64b75f15b1313110224fb01dffb01c9ed1b053078320401988084bca6542ab0",
+    "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp": "1277094f1cc6038a9f981e6507e883e383c03362e57b0c18052270e54fab0b08",
     "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp": "d7ab203ff55c0a73127139a47d346ba4d6118dc7f4293d57f345755663b1e518",
     "sources/w10-sce-a-cd-disk-ready-old/host_contract.cpp": "ae50bc3f65d60aa66a1c1b442a0f0d8c8df069adf47692101e79249e4d75c1e5",
     "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp": "4b8f2f25370e3b900f29e96efd41ac21c5752be83a49d48da0288302a76cf959",
@@ -57924,11 +58159,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3905,
-    "authored_default_inputs": 3903,
+    "selected_inputs": 3920,
+    "authored_default_inputs": 3918,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2828,
-    "compiled_body_bytes_from_accepted_inputs": 1226476,
+    "emitted_function_definitions_including_helpers": 2842,
+    "compiled_body_bytes_from_accepted_inputs": 1231052,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -57941,7 +58176,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3592
+    "package_selected_inputs": 3607
   },
   "startup_implementations": [
     {
@@ -113292,6 +113527,256 @@
       ],
       "host_files": [
         "sources/w10-render-a-p-start-trail/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-data-render-globals/data_render_globals.cpp",
+      "source_sha256": "293cf37bbd69f2957e4b4edd226d68cb29438bfe0d97e4da72b5f919882dedf8",
+      "object_sha256": "9628e0559166cf314f2a3dc2f5d6469b4d3166277d08bac2aa7f86af8b3f595d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-render-c-data-render-globals/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-mat-transform34/mat_transform34.cpp",
+      "source_sha256": "b88541e6b5aa613d4d0bf2c7c218f395fca8b641533650e0dad59eeede9abb2c",
+      "object_sha256": "0c3c8fdcc3714093105fd1b52f3295ff347b0896f893257190e1cb1ed6beefd0",
+      "emitted_functions": [
+        {
+          "name": "matTransform__FP6Point3P8Matrix34T0",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-mat-transform34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-megatile-bank-init/megatile_bank_init.cpp",
+      "source_sha256": "90c0e6043a6d7f06db522c7b43eef7f434b2eee5f805fe7ad9d013e7cf5b90d2",
+      "object_sha256": "a8777ba60abfca63c4d40dd0684199b272a3af23c98b05bf456ade5c1c2e01d6",
+      "emitted_functions": [
+        {
+          "name": "megatileBankInit__FP16MegatileInstBankPv",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-megatile-bank-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-megatile-item-init/megatile_item_init.cpp",
+      "source_sha256": "c0d7fb6ccc22c74e8ef765cde06f07959575520594e60ef48eccee31492a2e00",
+      "object_sha256": "e34226d172ebf73d3a56976e251076fff59e24fc4fa7bc35bf051dd7ddb99de9",
+      "emitted_functions": [
+        {
+          "name": "megatileItemInit__FP8MegatilePv",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-megatile-item-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-draw-halo/model_draw_halo.cpp",
+      "source_sha256": "db14b8185856dc980d4a57d67d4a2bec6f45c4910e0d1b247ecffcaf1e17c134",
+      "object_sha256": "e1a2e6a4aa83cc17ec829c78ca6c8039533503ff86621195a06f47c9552b8282",
+      "emitted_functions": [
+        {
+          "name": "modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi",
+          "compiled_body_bytes": 884
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-draw-halo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-get-attachment-matrix/model_get_attachment_matrix.cpp",
+      "source_sha256": "dbb6fda1b25819a2036f9a9fc2767d7281f65e387708be5935d8ca072f544ed6",
+      "object_sha256": "912fa747047dd0582a2176e231a86a775878226db269320901402867476fa9bd",
+      "emitted_functions": [
+        {
+          "name": "modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-get-attachment-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-get-bounding-box/model_get_bounding_box.cpp",
+      "source_sha256": "fc34814be41a71f56de524a2c9f2d4b0105d11d7ced74b95901754c699263979",
+      "object_sha256": "a059293e3c5507906e24ca9466b04e36cdd5f63f2126a4beb3084cdb1222c819",
+      "emitted_functions": [
+        {
+          "name": "modelGetBoundingBox__FP12_modelHeaderlPiN52",
+          "compiled_body_bytes": 392
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-get-bounding-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-process-glows/model_process_glows.cpp",
+      "source_sha256": "6c001f0ef84f3dda9aef2e70f6ae9ebef0c0e1d1198712e9358278085c96c974",
+      "object_sha256": "237c1f308d35116556d7a20f376ee98746b79ee036dedbf028a339d346ca2a46",
+      "emitted_functions": [
+        {
+          "name": "modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-process-glows/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-set-global-shadow-brightness/model_set_global_shadow_brightness.cpp",
+      "source_sha256": "9840e6dcbec217dfd3a739645c96af50bc7c5ba60d0831c8cb41225b2cc9cd2c",
+      "object_sha256": "61823db2546ee8fe98fe615c55c3fd7029fb0efd89dbea84e2b340c9156ebff3",
+      "emitted_functions": [
+        {
+          "name": "modelSetGlobalShadowBrightness__Ff",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-set-global-shadow-brightness/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-model-setup-character/model_setup_character.cpp",
+      "source_sha256": "fa9588918a5453fc30481cfc306b8232978ddb2823079e200ba5713bc29f0acd",
+      "object_sha256": "973e47b1344ac55582bea8a898f4781b00462cfa417e21daf776dbbae320b4b1",
+      "emitted_functions": [
+        {
+          "name": "modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-model-setup-character/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-put-block/put_block.cpp",
+      "source_sha256": "9bf6042573c8eb93c3d41103d0864d4844f7d3999b7f537329416f61bec48c91",
+      "object_sha256": "330bcf586a1f09c8065c50712ccf5983b52c8fdfcadfdbf59b5bff94417d108a",
+      "emitted_functions": [
+        {
+          "name": "putBlock__FP8_textureP6PacketPPP9uncompMapPPii",
+          "compiled_body_bytes": 764
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-put-block/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-quat-mul/quat_mul.cpp",
+      "source_sha256": "157d9fd3e5daf1484f835433bba04d89b862c2432bbae22fbc26af0895f05a9f",
+      "object_sha256": "4faf548b2676d82f1fecfad4d153373c727ec5135b763a2b718c5ff15bbe4c58",
+      "emitted_functions": [
+        {
+          "name": "quatMul__FP4QuatN20",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-quat-mul/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-ray-hit/ray_hit.cpp",
+      "source_sha256": "acde722795440c84466f5c15e7582a0fceb111b8440e08ef0a66edd1e66616e8",
+      "object_sha256": "c0cdfe3bc52fbed06af811ddea43c13f2882337c5df468eb53f01107aaaf01fd",
+      "emitted_functions": [
+        {
+          "name": "rayHit__FP6Point3N30",
+          "compiled_body_bytes": 292
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-ray-hit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-reset-scissor/reset_scissor.cpp",
+      "source_sha256": "2d34356399455a3faa4ddb6ca09d701d5abb7d8d7cc6259cff7c3a9a4744712d",
+      "object_sha256": "e0c11348ed04aeca37da448b09d435e4716b29ef38d54ca41731cbbaf087ccae",
+      "emitted_functions": [
+        {
+          "name": "resetScissor__Fv",
+          "compiled_body_bytes": 164
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-reset-scissor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-c",
+      "source": "sources/w10-render-c-segment-line-hit/segment_line_hit.cpp",
+      "source_sha256": "1277094f1cc6038a9f981e6507e883e383c03362e57b0c18052270e54fab0b08",
+      "object_sha256": "a6e880555a7922dee55945e3c0ad2a7582c4c9cb93c993b0ef7f4a62b8e343c3",
+      "emitted_functions": [
+        {
+          "name": "segmentLineHit__FP6Point3N50",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-c-segment-line-hit/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
