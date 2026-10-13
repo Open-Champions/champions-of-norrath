@@ -1,6 +1,7 @@
 // Observed EndScene__8VIRaster at 0x01112e60, 192 bytes. Let S be the word at
 // offset 19504 of the raster.
-//  1. If bit 0 of S is set: Flush__8VIRaster(raster), then VIEEDMASync(1).
+//  1. If bit 0 of S is set: Flush__8VIRaster(raster). VIEEDMASync(1) then
+//     runs in either case.
 //  2. If S is now 2: S is cleared and the counter at offset 17880 is
 //     incremented. Otherwise Flip__8VIRaster(raster) runs.
 //  3. If S is now zero: Flush__8VIRaster runs and S is read again.
@@ -19,10 +20,8 @@ int ReleaseDeferred__8VIRaster(VIRaster* raster);
 int EndScene__8VIRaster(VIRaster* raster) {
     char* base = reinterpret_cast<char*>(raster);
     volatile int* state = reinterpret_cast<volatile int*>(base + 19504);
-    if (*state & 1) {
-        Flush__8VIRaster(raster);
-        VIEEDMASync__Fi(1);
-    }
+    if (*state & 1) Flush__8VIRaster(raster);
+    VIEEDMASync__Fi(1);
     if (*state == 2) {
         *state = 0;
         *reinterpret_cast<int*>(base + 17880) += 1;

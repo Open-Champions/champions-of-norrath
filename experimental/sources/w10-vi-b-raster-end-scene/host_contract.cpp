@@ -49,12 +49,12 @@ static int run(int state, int flush0, int flush1, int flip, int release, int exp
 
 int main() {
     // S=2: cleared, counter incremented, no Flip; then S==0 -> Flush.
-    if (int e = run(2, 0, 0, 9, 0, 0, "F;R;", 0, 41)) return e;
-    if (int e = run(2, 1, 0, 9, 0, 0, "F;R;", 2, 41)) return 10 + e;
+    if (int e = run(2, 0, 0, 9, 0, 0, "S1;F;R;", 0, 41)) return e;
+    if (int e = run(2, 1, 0, 9, 0, 0, "S1;F;R;", 2, 41)) return 10 + e;
     // S=0: Flip then (Flip leaves 0) Flush.
-    if (int e = run(0, 1, 0, 0, 0, 0, "P;F;R;", 2, 40)) return 20 + e;
+    if (int e = run(0, 1, 0, 0, 0, 0, "S1;P;F;R;", 2, 40)) return 20 + e;
     // S=0, Flip sets 1: no second Flush; S becomes 2.
-    if (int e = run(0, 5, 0, 1, 0, 0, "P;R;", 2, 40)) return 30 + e;
+    if (int e = run(0, 5, 0, 1, 0, 0, "S1;P;R;", 2, 40)) return 30 + e;
     // S=1: Flush + sync first (Flush leaves 1), then Flip leaves 1 -> 2.
     if (int e = run(1, 1, 0, 1, 0, 0, "F;S1;P;R;", 2, 40)) return 40 + e;
     // S=3: first branch runs; Flip sets 3 -> not 1 -> cleared.
@@ -62,7 +62,7 @@ int main() {
     // Flush in step 1 sets 2: that counts as the S==2 case.
     if (int e = run(1, 2, 0, 9, 0, 0, "F;S1;F;R;", 0, 41)) return 60 + e;
     // Release result sign.
-    if (int e = run(2, 0, 0, 0, -3, -1, "F;R;", 0, 41)) return 70 + e;
-    if (int e = run(2, 0, 0, 0, 12, 0, "F;R;", 0, 41)) return 80 + e;
+    if (int e = run(2, 0, 0, 0, -3, -1, "S1;F;R;", 0, 41)) return 70 + e;
+    if (int e = run(2, 0, 0, 0, 12, 0, "S1;F;R;", 0, 41)) return 80 + e;
     return 0;
 }
