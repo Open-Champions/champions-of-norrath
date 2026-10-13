@@ -1,114 +1,115 @@
 # Skill class family (w12-skill-c)
 
-Branch: `agents/w12-skill-c`. Work is limited to the Skill class method/ramp family. The private reference is the hash-pinned SLUS-20565 executable (`9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0`); no binary, raw disassembly or generated decompiler output is included here.
+Branch: `agents/w12-skill-c`. All files are independently authored. Private reference: hash-pinned executable `SLUS-20565-sha256-9a60f13c5c31` (`9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0`). No game binary, raw disassembly, decompiler output, or extracted asset is included.
 
-## Observed
+## Observed and checked
 
-- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill`, `cast__5SkilliP8CreatureG6Point3s`, `piggyBackCast__5SkilliP8CreatureG6Point3s` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
-- The authored source defines that symbol and is self-contained. The reviewed EE toolchain compiled it as an 8-byte function. Its generated second instruction uses `or` where the original uses `addu`; this is a semantic reconstruction, not a byte match.
-- The host contract calls it for `INT_MIN`, negative, zero, positive, and `INT_MAX` inputs and checks the returned integer equals the argument. The host check passed. The test and source are `experimental/sources/w12-skill-c-base-point-cost/`.
-- `getLevelRequirement__5Skilli` at `0x00313250` has an 8-byte extent. It returns zero for every integer argument and does not read the receiver. Its reviewed EE compilation succeeded; the host contract passed on seven boundary and representative integer inputs. The test and source are `experimental/sources/w12-skill-c-base-level-requirement/`.
-- `getEnergyCost__5Skilli` at `0x00313258` has a 16-byte extent and returns `1.0f` for every integer argument. Its reviewed EE compilation succeeded with a 12-byte body; the host contract passed on five representative/boundary inputs. The body-size difference is not an exact match. The test and source are `experimental/sources/w12-skill-c-base-energy-cost/`.
-- A fresh partial build of this branch selected 5,113 input files and reported 827 unresolved symbols. All 31 symbols in the requested Skill list were unresolved at that baseline.
+The initial 5,113-input partial build completed with 827 unresolved symbols. At that baseline, all 31 names in this package were unresolved. Each function below was authored from its complete private symbol extent, compiled separately with the reviewed EE toolchain, and tested through a host contract. The table reports the original declared extent and generated source body separately. These are semantic reconstructions, not original-byte matches.
+
+| Function | Original address / bytes | Compiled bytes | Source | SHA-256 |
+|---|---:|---:|---|---|
+| `cast__5SkilliP8CreatureG6Point3s` | `0x003131c0` / 40 | 8 | `experimental/sources/w12-skill-c-base-cast/cast.cpp`; host test `experimental/sources/w12-skill-c-base-cast/host_check.cpp` | `86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7` |
+| `getEnergyCost__5Skilli` | `0x00313258` / 16 | 12 | `experimental/sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp`; host test `experimental/sources/w12-skill-c-base-energy-cost/host_check.cpp` | `738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e` |
+| `getLevelRequirement__5Skilli` | `0x00313250` / 8 | 8 | `experimental/sources/w12-skill-c-base-level-requirement/get_level_requirement.cpp`; host test `experimental/sources/w12-skill-c-base-level-requirement/host_check.cpp` | `2d798d9d99254a95dc7abb2fb36d16bd3e7f378f19b305fe55ec8801f909330d` |
+| `piggyBackCast__5SkilliP8CreatureG6Point3s` | `0x003131e8` / 40 | 8 | `experimental/sources/w12-skill-c-base-piggyback-cast/piggyback_cast.cpp`; host test `experimental/sources/w12-skill-c-base-piggyback-cast/host_check.cpp` | `f35c8269ab75757ced83981edeb2ccd2ff635b6549b9f882474f7977ad9f89db` |
+| `getSkillPointCost__5Skilli` | `0x00313248` / 8 | 8 | `experimental/sources/w12-skill-c-base-point-cost/get_skill_point_cost.cpp`; host test `experimental/sources/w12-skill-c-base-point-cost/host_check.cpp` | `e15fe82c7f4a11da37131f4e985a6f57a980b1305be2170b291168557461b95c` |
+| `getLevelRequirement__10SkillBlunti` | `0x00313b40` / 8 | 8 | `experimental/sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp`; host test `experimental/sources/w12-skill-c-blunt-level-requirement/host_check.cpp` | `fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5` |
+| `getSkillPointCost__10SkillBlunti` | `0x00313b38` / 8 | 8 | `experimental/sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp`; host test `experimental/sources/w12-skill-c-blunt-point-cost/host_check.cpp` | `5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47` |
+| `initRamps__15SkillBallOfHate` | `0x0015ea90` / 32 | 32 | `experimental/sources/w12-skill-c-init-ramps-ball-of-hate/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-ball-of-hate/host_check.cpp` | `3d2095075a595cf93baadef362c8f474e884c61bc2bea1db4f33c41d06cb7d04` |
+| `initRamps__5Skill` | `0x00313a08` / 76 | 60 | `experimental/sources/w12-skill-c-init-ramps-base/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-base/host_check.cpp` | `c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1` |
+| `initRamps__18SkillDiseaseEffect` | `0x0015eae0` / 44 | 44 | `experimental/sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-disease-effect/host_check.cpp` | `5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479` |
+| `initRamps__19SkillDiseaseWeapons` | `0x0015e9a0` / 32 | 32 | `experimental/sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-disease-weapons/host_check.cpp` | `16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6` |
+| `initRamps__13SkillHateBeam` | `0x0015ea40` / 32 | 32 | `experimental/sources/w12-skill-c-init-ramps-hate-beam/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-hate-beam/host_check.cpp` | `f14114a26c694c6a510ea01fcd48505cf5e6ee8b2b617424ee4c463306203501` |
+| `initRamps__15SkillHateEffect` | `0x0015eb40` / 32 | 32 | `experimental/sources/w12-skill-c-init-ramps-hate-effect/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-hate-effect/host_check.cpp` | `e68a44c87632cc9dd7334d5a966af52f00362985c647427c3004beab5a377d1d` |
+| `initRamps__18SkillPoisonWeapons` | `0x0015e9f0` / 32 | 32 | `experimental/sources/w12-skill-c-init-ramps-poison-weapons/init_ramps.cpp`; host test `experimental/sources/w12-skill-c-init-ramps-poison-weapons/host_check.cpp` | `dfc173f94468b33ba823303494f239a8f62721689d5f40a73598d5dbf077fecb` |
+| `getLevelRequirement__17SkillResistPoisoni` | `0x00313d18` / 8 | 8 | `experimental/sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp`; host test `experimental/sources/w12-skill-c-resist-poison-level-requirement/host_check.cpp` | `8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf` |
+| `getSkillPointCost__17SkillResistPoisoni` | `0x00313d10` / 8 | 8 | `experimental/sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp`; host test `experimental/sources/w12-skill-c-resist-poison-point-cost/host_check.cpp` | `438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e` |
+| `getLevelRequirement__13SkillSlashingi` | `0x00313c30` / 8 | 8 | `experimental/sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp`; host test `experimental/sources/w12-skill-c-slashing-level-requirement/host_check.cpp` | `8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf` |
+| `getSkillPointCost__13SkillSlashingi` | `0x00313c28` / 8 | 8 | `experimental/sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp`; host test `experimental/sources/w12-skill-c-slashing-point-cost/host_check.cpp` | `d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352` |
+| `tweekRank__5Skillii` | `0x00313780` / 8 | 8 | `experimental/sources/w12-skill-c-tweek-rank/tweek_rank.cpp`; host test `experimental/sources/w12-skill-c-tweek-rank/host_check.cpp` | `6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1` |
+
+Host contracts passed for all 19 functions. Scalar checks cover signed boundary values and wraparound shift inputs. Ramp initialization checks every byte of guarded aligned fixtures. Cast checks zero returns with inaccessible receiver/creature pointers and valid by-value point inputs. The contracts do not establish invalid-pointer fault equivalence or execution on the PS2.
 
 ## Inferred
 
-- The member behaves as a rank-to-point-cost identity mapping for every 32-bit input. No gameplay range or use is established.
-- The base level-requirement method returns zero for all 32-bit inputs. Its gameplay interpretation is not established.
-- The base energy-cost method returns the single-precision value 1.0 for every 32-bit input. Its gameplay interpretation is not established. The base rank tweak returns its second integer argument unchanged; effect on the first integer is absent in the observed routine.
-
-## Unknown
-
-- Runtime dispatch, gameplay meaning, object layout, and all other Skill methods/ramp behavior remain unverified. No game execution was performed.
+- Base and three class override point costs return their integer argument unchanged.
+- Base level requirement returns zero; Blunt, Slashing and Resist Poison level requirements shift the low 32 input bits left by two.
+- Base energy cost returns `1.0f`; `tweekRank` returns its second integer argument.
+- The authored base cast and piggyback cast return zero for valid arguments and produce no observed state writes.
+- The six authored per-class ramp initializers write only the documented halfword and float values at offsets in their source comments; the base initializer performs five repetitions at three offsets. The byte offsets are observed; member names and a complete class layout are unknown.
 
 ## Imports closed
 
+`cast__5SkilliP8CreatureG6Point3s`
+`getEnergyCost__5Skilli`
+`getLevelRequirement__5Skilli`
+`piggyBackCast__5SkilliP8CreatureG6Point3s`
 `getSkillPointCost__5Skilli`
+`getLevelRequirement__10SkillBlunti`
+`getSkillPointCost__10SkillBlunti`
+`initRamps__15SkillBallOfHate`
+`initRamps__5Skill`
+`initRamps__18SkillDiseaseEffect`
+`initRamps__19SkillDiseaseWeapons`
+`initRamps__13SkillHateBeam`
+`initRamps__15SkillHateEffect`
+`initRamps__18SkillPoisonWeapons`
+`getLevelRequirement__17SkillResistPoisoni`
+`getSkillPointCost__17SkillResistPoisoni`
+`getLevelRequirement__13SkillSlashingi`
+`getSkillPointCost__13SkillSlashingi`
+`tweekRank__5Skillii`
+
+These 19 names have authored definitions in this branch. They are not yet selected by the shared plan, so no post-integration import-count reduction is claimed.
 
 ## Imports opened
 
-None. The implementation has no external references.
+None. The 19 implementation translation units have no external symbol references.
 
 ## Build-plan entries needed
 
-Add three `independently_authored_source` inputs using profile `authored_cpp`, each with empty `header_closure`: `sources/w12-skill-c-base-point-cost/get_skill_point_cost.cpp` (`get_skill_point_cost.o`, symbol `getSkillPointCost__5Skilli`, 8 compiled bytes, SHA-256 `e15fe82c7f4a11da37131f4e985a6f57a980b1305be2170b291168557461b95c`) and `sources/w12-skill-c-base-level-requirement/get_level_requirement.cpp` (`get_level_requirement.o`, symbol `getLevelRequirement__5Skilli`, 8 compiled bytes, SHA-256 `2d798d9d99254a95dc7abb2fb36d16bd3e7f378f19b305fe55ec8801f909330d`), and `sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp` (`get_energy_cost.o`, symbol `getEnergyCost__5Skilli`, 12 compiled bytes, SHA-256 `738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e`). Add all three hashes to `files`; the integrator assigns `input_order` and updates snapshot metadata.
+The integrator should add these entries under the private plan update. Each source uses `authored_cpp`, has empty `header_closure`, and needs the matching hash in the plan `files` map. The integrator assigns `input_order`.
+
+```json
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"cast__5SkilliP8CreatureG6Point3s"}],"header_closure":[],"kind":"independently_authored_source","object_name":"cast.o","profile":"authored_cpp","sha256":"86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7","source":"sources/w12-skill-c-base-cast/cast.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":12,"name":"getEnergyCost__5Skilli"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_energy_cost.o","profile":"authored_cpp","sha256":"738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e","source":"sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getLevelRequirement__5Skilli"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_level_requirement.o","profile":"authored_cpp","sha256":"2d798d9d99254a95dc7abb2fb36d16bd3e7f378f19b305fe55ec8801f909330d","source":"sources/w12-skill-c-base-level-requirement/get_level_requirement.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"piggyBackCast__5SkilliP8CreatureG6Point3s"}],"header_closure":[],"kind":"independently_authored_source","object_name":"piggyback_cast.o","profile":"authored_cpp","sha256":"f35c8269ab75757ced83981edeb2ccd2ff635b6549b9f882474f7977ad9f89db","source":"sources/w12-skill-c-base-piggyback-cast/piggyback_cast.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getSkillPointCost__5Skilli"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_skill_point_cost.o","profile":"authored_cpp","sha256":"e15fe82c7f4a11da37131f4e985a6f57a980b1305be2170b291168557461b95c","source":"sources/w12-skill-c-base-point-cost/get_skill_point_cost.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getLevelRequirement__10SkillBlunti"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_level_requirement.o","profile":"authored_cpp","sha256":"fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5","source":"sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getSkillPointCost__10SkillBlunti"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_skill_point_cost.o","profile":"authored_cpp","sha256":"5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47","source":"sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":32,"name":"initRamps__15SkillBallOfHate"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"3d2095075a595cf93baadef362c8f474e884c61bc2bea1db4f33c41d06cb7d04","source":"sources/w12-skill-c-init-ramps-ball-of-hate/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":60,"name":"initRamps__5Skill"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1","source":"sources/w12-skill-c-init-ramps-base/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":44,"name":"initRamps__18SkillDiseaseEffect"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479","source":"sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":32,"name":"initRamps__19SkillDiseaseWeapons"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6","source":"sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":32,"name":"initRamps__13SkillHateBeam"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"f14114a26c694c6a510ea01fcd48505cf5e6ee8b2b617424ee4c463306203501","source":"sources/w12-skill-c-init-ramps-hate-beam/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":32,"name":"initRamps__15SkillHateEffect"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"e68a44c87632cc9dd7334d5a966af52f00362985c647427c3004beab5a377d1d","source":"sources/w12-skill-c-init-ramps-hate-effect/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":32,"name":"initRamps__18SkillPoisonWeapons"}],"header_closure":[],"kind":"independently_authored_source","object_name":"init_ramps.o","profile":"authored_cpp","sha256":"dfc173f94468b33ba823303494f239a8f62721689d5f40a73598d5dbf077fecb","source":"sources/w12-skill-c-init-ramps-poison-weapons/init_ramps.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getLevelRequirement__17SkillResistPoisoni"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_level_requirement.o","profile":"authored_cpp","sha256":"8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf","source":"sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getSkillPointCost__17SkillResistPoisoni"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_skill_point_cost.o","profile":"authored_cpp","sha256":"438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e","source":"sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getLevelRequirement__13SkillSlashingi"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_level_requirement.o","profile":"authored_cpp","sha256":"8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf","source":"sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"getSkillPointCost__13SkillSlashingi"}],"header_closure":[],"kind":"independently_authored_source","object_name":"get_skill_point_cost.o","profile":"authored_cpp","sha256":"d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352","source":"sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp"},
+{"emitted_functions":[{"compiled_body_bytes":8,"name":"tweekRank__5Skillii"}],"header_closure":[],"kind":"independently_authored_source","object_name":"tweek_rank.o","profile":"authored_cpp","sha256":"6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1","source":"sources/w12-skill-c-tweek-rank/tweek_rank.cpp"},
+```
 
 ## Authored but never executed
 
-All three methods were compiled by the reviewed EE toolchain and exercised through their host contracts. None was run on the EE or through game dispatch.
+All 19 authored functions compiled with the reviewed EE toolchain and passed their host contracts. None ran on an EE, through game dispatch, or in a game session. The emitted functions are not claimed as byte matches.
 
-- `getSkillPointCost__10SkillBlunti` at `0x00313b38` has an 8-byte extent and returns its integer argument unchanged. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-blunt-point-cost/`. No byte match or game execution is claimed.
+## Unknown and unfinished
 
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__10SkillBlunti` (8 bytes), SHA-256 `5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47`; add the source hash to `files` and let the integrator assign order.
+The remaining 12 requested imports are not authored:
+- `energyCostRamp4__5Skillii`
+- `evaluateCreatureRampAtRank__5Skillii`
+- `evaluateRampAtRank__5Skillii`
+- `evaluateRampAtRank__5SkilliiP10GameObject`
+- `evaluateRampAtRank__5SkilliiP8ListHead`
+- `getDeflectionChance__10SkillDodgei`
+- `getIcon__5Skill`
+- `getRampDamage__5SkilliifiPiT5`
+- `getRankDescription__10SkillBluntPUsi`
+- `getRankDescription__13SkillSlashingPUsi`
+- `getRankDescription__17SkillResistPoisonPUsi`
+- `getRankDescription__5SkillPUsi`
 
-- Inferred: `getSkillPointCost__10SkillBlunti` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
-
-- `getLevelRequirement__10SkillBlunti` at `0x00313b40` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-blunt-level-requirement/`. No byte match or game execution is claimed.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__10SkillBlunti` (8 bytes), SHA-256 `fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5`; add the source hash to `files` and let the integrator assign order.
-
-- Inferred: `getLevelRequirement__10SkillBlunti` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
-
-- `getSkillPointCost__13SkillSlashingi` at `0x00313c28` has an 8-byte extent and returns its integer argument unchanged. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-slashing-point-cost/`. No byte match or game execution is claimed.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__13SkillSlashingi` (8 bytes), SHA-256 `d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352`; add the source hash to `files` and let the integrator assign order.
-
-- Inferred: `getSkillPointCost__13SkillSlashingi` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
-
-- `getLevelRequirement__13SkillSlashingi` at `0x00313c30` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-slashing-level-requirement/`. No byte match or game execution is claimed.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__13SkillSlashingi` (8 bytes), SHA-256 `8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf`; add the source hash to `files` and let the integrator assign order.
-
-- Inferred: `getLevelRequirement__13SkillSlashingi` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
-
-- `getSkillPointCost__17SkillResistPoisoni` at `0x00313d10` has an 8-byte extent and returns its integer argument unchanged. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-resist-poison-point-cost/`. No byte match or game execution is claimed.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__17SkillResistPoisoni` (8 bytes), SHA-256 `438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e`; add the source hash to `files` and let the integrator assign order.
-
-- Inferred: `getSkillPointCost__17SkillResistPoisoni` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
-
-- `getLevelRequirement__17SkillResistPoisoni` at `0x00313d18` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-resist-poison-level-requirement/`. No byte match or game execution is claimed.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__17SkillResistPoisoni` (8 bytes), SHA-256 `8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf`; add the source hash to `files` and let the integrator assign order.
-
-- Inferred: `getLevelRequirement__17SkillResistPoisoni` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
-
-- `tweekRank__5Skillii` at `0x00313780` has an 8-byte extent and returns its second integer argument unchanged; its receiver and first integer are not read. Reviewed EE compilation emitted 8 bytes; the host test passed the cross-product of six boundary and representative values for both integer arguments. Source/test: `experimental/sources/w12-skill-c-tweek-rank/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-tweek-rank/tweek_rank.cpp`, object `tweek_rank.o`, empty `header_closure`, emitted function `tweekRank__5Skillii` (8 bytes), SHA-256 `6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1`; add the source hash to `files` and let the integrator assign order.
-
-- `initRamps__13SkillHateBeam` at `0x0015ea40` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 2 at +66. The host test checks these bytes and that every other byte in an 80-byte aligned fixture remains unchanged. Reviewed EE compilation succeeded; generated extent: 32 bytes. Source/test: `experimental/sources/w12-skill-c-init-ramps-hate-beam/`. No field names are inferred; no runtime/dispatch execution.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-hate-beam/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__13SkillHateBeam`, SHA-256 `f14114a26c694c6a510ea01fcd48505cf5e6ee8b2b617424ee4c463306203501`; add source hash to `files`, then integrator assigns order.
-
-- `initRamps__18SkillPoisonWeapons` at `0x0015e9f0` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 2 at +66. The host test checks these bytes and that every other byte in an 80-byte aligned fixture remains unchanged. Reviewed EE compilation succeeded; generated extent: 32 bytes. Source/test: `experimental/sources/w12-skill-c-init-ramps-poison-weapons/`. No field names are inferred; no runtime/dispatch execution.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-poison-weapons/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__18SkillPoisonWeapons`, SHA-256 `dfc173f94468b33ba823303494f239a8f62721689d5f40a73598d5dbf077fecb`; add source hash to `files`, then integrator assigns order.
-
-- `initRamps__15SkillHateEffect` at `0x0015eb40` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 2 at +66. The host test checks those bytes and confirms all other fixture bytes are unchanged. Reviewed EE compilation succeeded; object reports: `00000000 00000020 T initRamps__15SkillHateEffect`. Source/test: `experimental/sources/w12-skill-c-init-ramps-hate-effect/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-hate-effect/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__15SkillHateEffect`, SHA-256 `e68a44c87632cc9dd7334d5a966af52f00362985c647427c3004beab5a377d1d`; add source hash to `files`, then assign order in integration.
-
-- `initRamps__15SkillBallOfHate` at `0x0015ea90` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 2 at +66. The host test checks those bytes and confirms all other fixture bytes are unchanged. Reviewed EE compilation succeeded; object reports: `00000000 00000020 T initRamps__15SkillBallOfHate`. Source/test: `experimental/sources/w12-skill-c-init-ramps-ball-of-hate/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-ball-of-hate/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__15SkillBallOfHate`, SHA-256 `3d2095075a595cf93baadef362c8f474e884c61bc2bea1db4f33c41d06cb7d04`; add source hash to `files`, then assign order in integration.
-
-- `initRamps__19SkillDiseaseWeapons` at `0x0015e9a0` has a 32-byte extent and writes halfword 1 at receiver+56, single-precision 2.0 at +76, and halfword 4 at +66. The host test checks those bytes and confirms all other fixture bytes are unchanged. Reviewed EE compilation succeeded; object reports: `00000000 00000020 T initRamps__19SkillDiseaseWeapons`. Source/test: `experimental/sources/w12-skill-c-init-ramps-disease-weapons/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__19SkillDiseaseWeapons`, SHA-256 `16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6`; add source hash to `files`, then assign order in integration.
-
-- `initRamps__18SkillDiseaseEffect` at `0x0015eae0` has a 44-byte extent and writes halfword 1 at receiver+66, float 1.0 at +76, halfword 3 at +24, halfword 1 at +14, float 1.0 at +36, and halfword 1 at +56. The host test checks each changed byte and verifies all other bytes in an 80-byte aligned fixture are unchanged. Reviewed EE compilation emitted 44 bytes. Source/test: `experimental/sources/w12-skill-c-init-ramps-disease-effect/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__18SkillDiseaseEffect` (44 bytes), SHA-256 `5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479`; add source hash to `files`, then assign order in integration.
-
-- `initRamps__5Skill` at `0x00313a08` has a 76-byte extent. For five iterations it writes zero halfwords at offsets +14 through +22, float 2.0 values at +36 through +52, and halfword ones at +24 through +32. The host test checks all 80 fixture bytes. Reviewed EE compilation emitted a 60-byte function; this is not a byte match. Source/test: `experimental/sources/w12-skill-c-init-ramps-base/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-base/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__5Skill` (60 compiled bytes), SHA-256 `c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1`; add source hash to `files`, then assign order in integration.
-
-- `cast__5SkilliP8CreatureG6Point3s` at `0x003131c0` has a 40-byte extent. With valid arguments it returns zero and has no receiver or creature state writes; the call signature carries `Point3` by value. The host contract uses inaccessible receiver/creature sentinels, valid point values and four ranks; it passed. Reviewed EE compilation emitted an 8-byte body. This is behavioral evidence for valid inputs, not a fault-equivalence or byte match. Source/test: `experimental/sources/w12-skill-c-base-cast/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-base-cast/cast.cpp`, object `cast.o`, empty `header_closure`, emitted function `cast__5SkilliP8CreatureG6Point3s` (8 compiled bytes), SHA-256 `86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7`; add source hash to `files`, then assign order in integration.
-
-- `piggyBackCast__5SkilliP8CreatureG6Point3s` at `0x003131e8` has a 40-byte extent and shares the observed valid-input behavior of the base cast method: return zero without receiver or creature state writes. The host contract uses inaccessible receiver/creature sentinels, a valid by-value point and four rank inputs; it passed. Reviewed EE compilation emitted 8 bytes; no byte match or fault equivalence is claimed. Source/test: `experimental/sources/w12-skill-c-base-piggyback-cast/`.
-
-Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-base-piggyback-cast/piggyback_cast.cpp`, object `piggyback_cast.o`, empty `header_closure`, emitted function `piggyBackCast__5SkilliP8CreatureG6Point3s` (8 compiled bytes), SHA-256 `f35c8269ab75757ced83981edeb2ccd2ff635b6549b9f882474f7977ad9f89db`; add source hash to `files`, then assign order in integration.
+Their behavior remains unknown here. The rank-description and icon methods depend on private text/resource data; the ramp evaluators and damage/deflection methods need more verified ramp/class layout and interaction evidence. No source placeholders or guessed data were added. Object layouts beyond observed stores, gameplay ranges, runtime dispatch, and private-to-public plan integration remain unknown. No game runtime was executed.
