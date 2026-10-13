@@ -1,0 +1,9 @@
+// Observed in SLUS-20565-sha256-9a60f13c5c31 at 0x00316e90 (36 bytes):
+// tail-call lumpFindResource("icons.lmp", "icdiseasetrail.tex") and return its result.
+// The receiver is not read. What the returned record is, is not established here.
+struct SkillDiseaseTrail;
+extern "C" void* lump_find_resource(const char*, const char*) asm("lumpFindResource__FPcT0");
+extern "C" void* get_icon(const SkillDiseaseTrail*) asm("getIcon__17SkillDiseaseTrail");
+extern "C" void* get_icon(const SkillDiseaseTrail*) {
+    return lump_find_resource("icons.lmp", "icdiseasetrail.tex");
+}
