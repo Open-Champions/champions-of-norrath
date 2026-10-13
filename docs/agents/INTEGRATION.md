@@ -6416,6 +6416,62 @@ Closed: `norrath_ctors_lava_wraith_view_471968`,
 
 Opened: none
 
+## agents/w9-ctors-wraith-d
+
+Merged (the branch notes carry the five summary sections; the tip was 36
+minutes old). Thirty-six data units (view objects) with fresh `input_order`
+values 3248 through 3283; the function-body count stays at 2336. All 36 host
+checks under `views/host/` build (linked with the unit) and exit 0 here (36 of
+36). No imports opened. No game binary or disassembly listing was committed.
+3282 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1417 |
+| After | 1381 |
+| Closed | 36 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_lava_wraith_view_477568`,
+`norrath_ctors_lava_wraith_view_477580`,
+`norrath_ctors_lava_wraith_view_477598`,
+`norrath_ctors_lava_wraith_view_4775b0`,
+`norrath_ctors_lava_wraith_view_4775c8`,
+`norrath_ctors_lava_wraith_view_4775d8`,
+`norrath_ctors_lava_wraith_view_4778c8`,
+`norrath_ctors_lava_wraith_view_4778d8`,
+`norrath_ctors_lava_wraith_view_483e28`,
+`norrath_ctors_lava_wraith_view_483f88`,
+`norrath_ctors_lava_wraith_view_484fa0`,
+`norrath_ctors_lava_wraith_view_484fa8`,
+`norrath_ctors_lava_wraith_view_485240`,
+`norrath_ctors_lava_wraith_view_4852a8`,
+`norrath_ctors_lava_wraith_view_485330`,
+`norrath_ctors_lava_wraith_view_4853b8`,
+`norrath_ctors_lava_wraith_view_4853d0`,
+`norrath_ctors_lava_wraith_view_4853d8`,
+`norrath_ctors_lava_wraith_view_4857e8`,
+`norrath_ctors_lava_wraith_view_4857f0`,
+`norrath_ctors_lava_wraith_view_4857f8`,
+`norrath_ctors_lava_wraith_view_485800`,
+`norrath_ctors_lava_wraith_view_485808`,
+`norrath_ctors_lava_wraith_view_485810`,
+`norrath_ctors_lava_wraith_view_485818`,
+`norrath_ctors_lava_wraith_view_485820`,
+`norrath_ctors_lava_wraith_view_485828`,
+`norrath_ctors_lava_wraith_view_4858b8`,
+`norrath_ctors_lava_wraith_view_4858c0`,
+`norrath_ctors_lava_wraith_view_4858c8`,
+`norrath_ctors_lava_wraith_view_486118`,
+`norrath_ctors_lava_wraith_view_486120`,
+`norrath_ctors_lava_wraith_view_486128`,
+`norrath_ctors_lava_wraith_view_486130`,
+`norrath_ctors_lava_wraith_view_601030`,
+`norrath_ctors_lava_wraith_view_601fd0`
+
+Opened: none
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6806,3 +6862,4 @@ and no startup stage has executed.
 - 2026-10-12 22:13 CDT — `agents/w9-ctors-wraith-a` — 1323 unresolved imports
 - 2026-10-12 22:16 CDT — `agents/w9-ctors-wraith-b` — 1455 unresolved imports
 - 2026-10-12 22:19 CDT — `agents/w9-ctors-wraith-c` — 1417 unresolved imports
+- 2026-10-12 22:22 CDT — `agents/w9-ctors-wraith-d` — 1381 unresolved imports
