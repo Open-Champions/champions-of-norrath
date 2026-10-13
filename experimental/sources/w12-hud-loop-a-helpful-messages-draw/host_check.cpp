@@ -105,6 +105,11 @@ int main() {
     helpfulMessagesDraw__Fv();
     if ((rc = expect(3, "S1,7,801e6464,-1;P320,78,1,1000000;E;W1,1,1000000;B50,76,540,32,7,40000000,0,0,0;"))) return rc;
     if (messageAlpha != 128) return 4;
+    // timer >= 32 below the cap: the stored alpha plus 3, odd values halve toward zero for the border.
+    reset(); infoMessageTimer = 32; messageAlpha = 10;
+    helpfulMessagesDraw__Fv();
+    if ((rc = expect(17, "S1,6,d1e6464,-1;P320,78,1,1000000;E;W1,1,1000000;B150,76,340,32,6,6000000,0,0,0;"))) return rc;
+    if (messageAlpha != 13) return 18;
     reset(); infoMessageTimer = 1; hudNoDraw = 1;
     helpfulMessagesDraw__Fv();
     if ((rc = expect(5, ""))) return rc;
@@ -125,6 +130,10 @@ int main() {
     helpfulMessagesDraw__Fv();
     if ((rc = expect(10, "S2,5,4e464646,-1;KBoss;P320,408,2,1000000;E;R218,414,319,429,5,4e808080;T1,209,409,6,80808080;"))) return rc;
     if (lastBossHealth != 25 || mapCount != 2) return 11;
+    // equal health is not a drop: normal colour.
+    reset(); bossMeterCurrent = 40; bossMeterMax = 50; bossMeterAlpha = 78; bossInitFlag = 1; lastBossHealth = 40;
+    helpfulMessagesDraw__Fv();
+    if ((rc = expect(19, "S2,5,4e464646,-1;KBoss;P320,408,2,1000000;E;R218,414,380,429,5,4e181850;T1,209,409,6,80808080;"))) return rc;
     // health rose: normal colour. Language 4 uses the wide bar and the second texture.
     reset(); bossMeterCurrent = 40; bossMeterMax = 50; bossMeterAlpha = 78; language = 4;
     helpfulMessagesDraw__Fv();
