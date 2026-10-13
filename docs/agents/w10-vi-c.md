@@ -18,7 +18,7 @@ original was built by a different compiler and schedules differently).
   logging stubs, comparing the call log (callee, arguments), every changed byte outside the stack
   and, for value-returning functions, the result. Scenario counts: constructors, destructors
   (flags 0 to 3), Init and Free units 2 to 4 randomised object fills each; GenericRenderer
-  destructor 17 scenarios (empty list, several pages, a null page, absent child, absent word at
+  destructor 16 scenarios (two fills each) (empty list, several pages, a null page, absent child, absent word at
   +56, flags 0 to 3); SetFocus all 16 combinations of focus, window, force and mcErrOn (78 of 79
   instruction words reached, the rest is a branch-delay nop); Update 120 randomised scenarios
   (167 of 170 words reached, the rest are nops). Mutating a stored offset made the comparison
