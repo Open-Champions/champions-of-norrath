@@ -4863,6 +4863,46 @@ Closed: `newSel`, `nmActions`, `nmDialogNodes`, `padRunFrame__Fv`, `pauseStack`,
 
 Opened: `castLightColor`, `haloColor`, `undoQuickLoadStamp`
 
+## agents/w9-other-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five of the
+26 units were selected with fresh `input_order` values 2492 through 2516; 19
+of them emit no function (cheat flags, compressor/decompressor storage and
+similar data views), seven function units were selected. `line-to-y` was
+**not** selected: it defines `lineToY__Fi`, which `w8-object-list-math`
+already supplies (input 2268), so the link fails with a multiple definition.
+Its files stay in the snapshot, unselected. The two sources are independent
+authorings of the same observed function (both read 18 * line + 295); which
+one to keep is for the owners. All 26 host checks build and exit 0 here (26 of
+26). No game binary or disassembly listing was committed. 2040 function
+bodies, 2515 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1453 |
+| After | 1461 |
+| Closed | 25 |
+| Opened | 33 |
+
+Closed: `DLG_GetDialogCreature__Fv`, `GLibData`, `advanceFrame__Ff`,
+`cheatInvulnerability`, `cheatMode`, `commProcessReal__Fv`,
+`commandQueueEmpty__Fv`, `compImmediateCompressor`,
+`compImmediateDecompressor`, `compLocalCompressor`, `compLocalDecompressor`,
+`curDlgStart`, `curPlayer`, `decodeQHead`, `decodeQTail`, `deferedCall`,
+`displayDialogPos`, `dlgDir`, `flags`, `get__11ResourceMap`, `headerAlpha`,
+`hpos`, `initLightInfo__Fv`, `lastYAnchor`, `nextFrameDrop`
+
+Opened: `action`, `actor`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`,
+`commCVol`, `commNameMask`, `commRVInternalLast`,
+`executeAction__FP6Action`, `framestart`, `lastCE`, `lastlastCE`,
+`lgAudARead`, `lgAudASync`, `lgAudAWrite`, `lgAudEnumHint`,
+`lgAudEnumerate`, `lgAudOpen`, `lgAudSetRecordingVolume`,
+`lgAudStartPlayback`, `lgAudStartRecording`, `lgCodecDecode`,
+`lgCodecEncode`, `lightInfo`, `netGetNmConnectedPartners__Fv`,
+`netIsModem__Fv`, `netSendPacket__FiiPUci`, `nmActors`, `readcount`,
+`resourceFrame`, `timeout`, `writecount`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5214,3 +5254,4 @@ and no startup stage has executed.
 - 2026-10-12 20:10 CDT — `agents/w9-startup-crt-e` — 1484 unresolved imports
 - 2026-10-12 20:16 CDT — `agents/w9-audio` — 1473 unresolved imports
 - 2026-10-12 20:23 CDT — `agents/w9-frontend-c` — 1453 unresolved imports
+- 2026-10-12 20:32 CDT — `agents/w9-other-a` — 1461 unresolved imports
