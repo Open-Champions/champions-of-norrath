@@ -65726,6 +65726,38 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w12-skill-b-vtables/skill_vtables.cpp"
+    },
+    {
+      "input_order": 5146,
+      "component": "w12-particle-data-a-ctor-particle-prop",
+      "object_name": "w12_particle_prop_ctor.o",
+      "private_object_sha256": "79a640f94cae06a4e1ee37dc5a4d4d30bea772b5163ad374f150133451d22a6e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "__12ParticlePropG6Point3i"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-particle-data-a-ctor-particle-prop/particle_prop.cpp"
+    },
+    {
+      "input_order": 5147,
+      "component": "w12-particle-data-a-bat-params",
+      "object_name": "w12_bat_params.o",
+      "private_object_sha256": "47cae810f87eac21efc40417ce088ecf0c004cfc796451b4127d9a74533832c3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-particle-data-a-bat-params/bat_params.cpp"
+    },
+    {
+      "input_order": 5148,
+      "component": "w12-particle-data-a-heal-pulse",
+      "object_name": "w12_heal_state.o",
+      "private_object_sha256": "a21e2bdbd9df47aacc85cab8b217f5e22488855cb7121ecb7a4d31773b314985",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-particle-data-a-heal-pulse/heal_state.cpp"
     }
   ],
   "drafts": [
@@ -72680,6 +72712,12 @@
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/host_check.cpp": "1831238c4bd3639dc64e8696118712745b3d342bebf331f612aba8e499fd5ba3",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-particle-data-a-bat-params/bat_params.cpp": "dad9c657776c3c91848e00a7b7e7fff1d29e360dd69ba9a9500538ff96bc5763",
+    "sources/w12-particle-data-a-bat-params/host_check.cpp": "944c3b7dff2b1c6a7c1e74bfe3f6257481f7c9a9b8a92e086ad2889478bd6fab",
+    "sources/w12-particle-data-a-ctor-particle-prop/host_check.cpp": "1009847e1b03ecf30300723634a6aee2943b3e1d891a717f75488b2e8bfb7c46",
+    "sources/w12-particle-data-a-ctor-particle-prop/particle_prop.cpp": "a8cb63b96ed6b53a678d7e9cbe0b175cbc23c1fb297d62c58b5d135c99052c3c",
+    "sources/w12-particle-data-a-heal-pulse/heal_state.cpp": "e9e5d1d7831df4c76ddebfb66c2e74dc4f60be9b38ac4346112c9650f7f09c12",
+    "sources/w12-particle-data-a-heal-pulse/host_check.cpp": "0d9ed0df3437f1cbab88ec3bb870e9abce2b1203c0fb66270381ea46fa10e6d5",
     "sources/w12-skill-b-can-cast/can_cast.cpp": "635764b40aaa03f530118fcb3100b64bd29541781790a5169eea1d3fa28ef1fd",
     "sources/w12-skill-b-can-cast/host_check.cpp": "759704759b69b6c790d1aaf5b97dba0d1d205de5441501a70f4f17dcc5477239",
     "sources/w12-skill-b-vtables/host_check.cpp": "186fcc4e98b7c47f466695ef9709ceed6b3e35570e5735ea602269045c7f48a6",
@@ -77110,11 +77148,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5146,
-    "authored_default_inputs": 5144,
+    "selected_inputs": 5149,
+    "authored_default_inputs": 5147,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3939,
-    "compiled_body_bytes_from_accepted_inputs": 1723812,
+    "emitted_function_definitions_including_helpers": 3940,
+    "compiled_body_bytes_from_accepted_inputs": 1723956,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -77127,7 +77165,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4833
+    "package_selected_inputs": 4836
   },
   "startup_implementations": [
     {
@@ -152856,6 +152894,47 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w12-skill-b-vtables/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-particle-data-a",
+      "source": "sources/w12-particle-data-a-ctor-particle-prop/particle_prop.cpp",
+      "source_sha256": "a8cb63b96ed6b53a678d7e9cbe0b175cbc23c1fb297d62c58b5d135c99052c3c",
+      "object_sha256": "79a640f94cae06a4e1ee37dc5a4d4d30bea772b5163ad374f150133451d22a6e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "__12ParticlePropG6Point3i"
+        }
+      ],
+      "host_files": [
+        "sources/w12-particle-data-a-ctor-particle-prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-particle-data-a",
+      "source": "sources/w12-particle-data-a-bat-params/bat_params.cpp",
+      "source_sha256": "dad9c657776c3c91848e00a7b7e7fff1d29e360dd69ba9a9500538ff96bc5763",
+      "object_sha256": "47cae810f87eac21efc40417ce088ecf0c004cfc796451b4127d9a74533832c3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-particle-data-a-bat-params/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-particle-data-a",
+      "source": "sources/w12-particle-data-a-heal-pulse/heal_state.cpp",
+      "source_sha256": "e9e5d1d7831df4c76ddebfb66c2e74dc4f60be9b38ac4346112c9650f7f09c12",
+      "object_sha256": "a21e2bdbd9df47aacc85cab8b217f5e22488855cb7121ecb7a4d31773b314985",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-particle-data-a-heal-pulse/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
