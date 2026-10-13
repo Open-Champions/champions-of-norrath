@@ -25,9 +25,10 @@ the sources are independently written C++ and prose.
   hash of the object memory at each call) and every changed byte outside the stack are identical. Where a
   function has several paths, the scenario generator was biased until the original's instruction
   coverage stopped growing. The interpreter's float model is double arithmetic rounded to single, not the
-  R5900 FPU, so scenarios that reach infinity or NaN are not evidence; none of the reported coverage
-  relies on them (the one function that divides by a value that can be zero, `msg_run__4Lamp`'s size,
-  cannot be zero there).
+  R5900 FPU, so scenarios that reach infinity or NaN are not evidence. One exception is known: the prologue
+  of `msg_run__8Innoruuk` computes 1.0 / (size * size) for a light whose size is held at zero in some scenarios;
+  both sides then produce the interpreter's canonical infinity, so those scenarios agree only in that model,
+  not on hardware.
 - **Mutations.** One-constant changes were caught for `clone__4Lamp` (a copy range), `msg_trigger__8Innoruuki`
   (the music mode) and `msg_run__8Innoruuk` (the ring angle step and a shock-field halfword).
 - **Vtables.** `_vt$4Gold` and `_vt$8GutChunk` are data: the units were linked with every slot symbol
