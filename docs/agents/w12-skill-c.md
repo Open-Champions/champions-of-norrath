@@ -42,3 +42,9 @@ All three methods were compiled by the reviewed EE toolchain and exercised throu
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__10SkillBlunti` (8 bytes), SHA-256 `5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47`; add the source hash to `files` and let the integrator assign order.
 
 - Inferred: `getSkillPointCost__10SkillBlunti` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
+
+- `getLevelRequirement__10SkillBlunti` at `0x00313b40` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-blunt-level-requirement/`. No byte match or game execution is claimed.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__10SkillBlunti` (8 bytes), SHA-256 `fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5`; add the source hash to `files` and let the integrator assign order.
+
+- Inferred: `getLevelRequirement__10SkillBlunti` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
