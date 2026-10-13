@@ -454,4 +454,4 @@ words.
   feature-flag bit 0x200, and the font control codes ("|q", "|w", "|x ", "|t ").
 - Whether `FillRectangle` is given (x0, y0, x1, y1) or a position and size (the vertex order only fixes the first
   and last points), and the true result types of most of these functions (void or int).
-- Which hosts' textures and fonts the real tables hold; BringUpNetwork__12VIWndConnect and all callees listed above.
+- The behaviour of BringUpNetwork__12VIWndConnect and of every callee listed under imports opened; the contents of the UI texture and string tables.
