@@ -54,3 +54,9 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `exper
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__13SkillSlashingi` (8 bytes), SHA-256 `d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352`; add the source hash to `files` and let the integrator assign order.
 
 - Inferred: `getSkillPointCost__13SkillSlashingi` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
+
+- `getLevelRequirement__13SkillSlashingi` at `0x00313c30` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-slashing-level-requirement/`. No byte match or game execution is claimed.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__13SkillSlashingi` (8 bytes), SHA-256 `8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf`; add the source hash to `files` and let the integrator assign order.
+
+- Inferred: `getLevelRequirement__13SkillSlashingi` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
