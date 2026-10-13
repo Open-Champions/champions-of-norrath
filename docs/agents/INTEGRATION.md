@@ -8943,3 +8943,25 @@ Closed: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`,
 
 Opened: `P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf`, `TurnToFaceEdge__14WoodElfSoldier`, `__7WebTrapG6Point3T1`, `__8SkeletonG6Point3sPPcPci`, `__tf5Spell`, `_vt$5Wheel`, `createNamedRandom__4itemPQ24item11descriptioniii`, `createRandomCombineableItem__4itemPQ24item11descriptionsPc`, `dropGold__4itemG6Point3i`, `joinCommander__14WoodElfSoldier`, `moveArrow__14WoodElfSoldier`, `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `norrath_w11_actor_c_view_7d7110`, `norrath_w11_actor_c_view_7d7540`, `norrath_w11_actor_c_view_7d7590`, `norrath_w11_actor_c_view_7d7630`, `norrath_w11_actor_c_view_7d7680`, `soundPan2D__FiP6Point3f`, `start__3WebG6Point3T1i`
 - 2026-10-13 07:23 CDT — agents/w11-actor-c — 830 unresolved imports
+
+## agents/w11-rend-a
+
+Merged (merge commit, branch tip `c61650d0`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 of the branch's 28 units (29 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 5088 through 5114. 26 of the 27 selected host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs); the other selected checks are pure data/word checks that also pass. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5113 authored inputs, 3909 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-rend-a-p-start-lightning` (`P_StartLightning__FG6Point3T0iiffUi`). Its host check (through `w11-rend-a-common/rend.hpp`) has a `static_assert(sizeof(void*) == 4)`, so it only builds as 32-bit-pointer x86_64, and x86_64 programs would not run on this machine at the time (Rosetta stalled; native arm64 fails the static_assert). The test exists but was not run here, so the unit is held back until someone can run it; its source stays in the tree unplanned. The notes' closed list otherwise reproduces. The five light/halo data objects (`globalShadowBrightness`, `halos`, `haloColor`, `lightInc`, `lightInfo`) stay unresolved: their sources are the `w10-render-b-data-*` units that were not selected earlier for lacking a committed check.
+
+| | |
+|---|---|
+| Before | 830 |
+| After | 827 |
+| Closed | 27 |
+| Opened | 24 |
+
+Closed: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`, `GetLastTarget__6Camera`, `GetToggle__6Camera`, `P_DeleteTrail__Fi`, `P_MoveLightning__FiG6Point3T1ii`, `P_RevolveTrail__FiG6Point3N31i`, `SetNoTargetUpdates__6Camerai`, `__4LineP4LineT1i`, `analDecompress__11CDecompressP15BitBufferReaderPQ211CDecompress9analStatePUcii`, `animRandomizeTime__FP14AnimationState`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `checkYawReset__6Camera`, `clampZoomMag__6Camera`, `crystalTex`, `drawTexture__FR6Packetiiiiiiiii`, `drawWaterPatch__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldDynamicLight__FP13PolysetHeader`, `drawWorldObject__FP12_worldHeaderP13PolysetHeaderi`, `evaluateAnimation__FP14AnimationStateb`, `fastestRotDirection__FssPi`, `findLightsAtPoint__FG6Point3PP5Lighti`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `gameCloseToCamera__FP6Point3`, `halfFrustumMode`, `lightAdd__FP5Light`
+
+Opened: `P_ExtendSwoosh__FiG6Point3T1f`, `P_LightningIsLive__Fi`, `extractRotation__FP4Quat`, `getDynamicLightNumber__FP13PolysetHeader`, `iceSwordParticle`, `lightDisableVolumetricLighting__Fv`, `lightGrid`, `lightSetupAmbientAndDirOnly__FP6PacketG6Point3f`, `lightSetupAmbientOnly__FP6Packet`, `lightSetupNonDirectionalDirectional__FP6Packet`, `lightningSwordParticle`, `makeQuaternion__FP4Quatsfff`, `modelDrawCharacter__FP6PacketP12_modelHeaderli`, `modelGetWeaponTrailPos__FP12_modelHeaderP6Point3T1`, `newFlameSwordParticle1`, `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2`, `particleWeaponBlood`, `particleWeaponEcto`, `particleWeaponSlime`, `quatTransform__FP6Point3P4QuatT0`, `smoothPatch__FP12_worldHeaderP16WaterPolysetData`
+- 2026-10-13 07:28 CDT — agents/w11-rend-a — 827 unresolved imports
