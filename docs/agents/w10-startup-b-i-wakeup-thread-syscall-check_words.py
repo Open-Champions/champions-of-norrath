@@ -4,7 +4,7 @@ usage: check_words.py <ee-toolchain-root>
 """
 import re, subprocess, sys, tempfile, pathlib
 root = pathlib.Path(sys.argv[1])
-src = pathlib.Path(__file__).with_name('i_wakeup_thread_syscall.S')
+src = pathlib.Path(__file__).resolve().parents[2] / 'experimental/sources/w10-startup-b-i-wakeup-thread-syscall' / 'i_wakeup_thread_syscall.S'
 with tempfile.TemporaryDirectory() as t:
     obj = pathlib.Path(t) / 'x.o'
     subprocess.check_call([str(root / 'bin/mips64r5900el-ps2-elf-gcc'), '-c', '-x', 'assembler-with-cpp', str(src), '-o', str(obj)])

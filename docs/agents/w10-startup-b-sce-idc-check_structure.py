@@ -3,7 +3,7 @@ usage: check_structure.py <ee-toolchain-root>
 """
 import pathlib, re, subprocess, sys, tempfile
 root = pathlib.Path(sys.argv[1])
-src = pathlib.Path(__file__).with_name('sce_idc.S')
+src = pathlib.Path(__file__).resolve().parents[2] / 'experimental/sources/w10-startup-b-sce-idc' / 'sce_idc.S'
 with tempfile.TemporaryDirectory() as t:
     obj = pathlib.Path(t) / 'x.o'
     subprocess.check_call([str(root / 'bin/mips64r5900el-ps2-elf-gcc'), '-c', '-x', 'assembler-with-cpp', str(src), '-o', str(obj)])

@@ -7383,3 +7383,59 @@ and no startup stage has executed.
 - 2026-10-12 23:29 CDT — `agents/w10-vi-a` — 1326 unresolved imports
 - 2026-10-12 23:35 CDT — `agents/w10-vi-b` — 1461 unresolved imports
 - 2026-10-12 23:40 CDT — `agents/w10-vi-c` — 1477 unresolved imports
+
+## Baseline re-check before the w10-startup-b selection
+
+At shared tip `bd379279` this integrator (a different model from the earlier
+ones) re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 3573
+authored inputs) and the full default partial build in a clean worktree (3573
+compilations, 2579 function bodies, zero COMMON). The recorded **1477**
+reproduced exactly. No repo-rule break was found in the last ten entries. The
+worktree this integrator inherited held an unfinished, unrecorded
+`w10-startup-b` merge: the merge commit `3a1d0bda` was in place with 28 of its
+plan entries added, and the snapshot check failed. That state was finished as
+described below.
+
+## agents/w10-startup-b
+
+Merged (merge commit `3a1d0bda`, branch tip `0b7ce578`, about 60 minutes old when
+read; the notes have the five summary sections: imports closed, imports opened,
+plan entries, authored but never executed, unknown). The package is C runtime,
+libgcc, libm, RTTI and startup code: 28 units (functions, forwarders and
+two data views) are selected with fresh `input_order` values 3575 through 3602. Each C++ unit has
+a `host_contract.cpp` and each of the three assembly units has a check script
+(`check_words.py` / `check_structure.py`, moved to `docs/agents/` because the
+snapshot checker only accepts `.cpp`, `.hpp` and `.S` under `experimental/sources`;
+they take the toolchain root as an argument). All 25 host contracts and the 3
+assembly checks pass here (x86_64, `-ffp-contract=off`); three contracts
+(`kill-r`, `sce-fs-poff-intr`, `sce-fs-rcv-intr`) only fail under `-Werror` for an
+unused variable or parameter and pass without it. The worker's claim that the
+four assembled words of `_iWakeupThread` and `isceSifSetDma` equal the original
+was not re-verified (integration does not read the executable); compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full
+build; this integration did: 3601 authored inputs, 2606 function bodies, zero
+COMMON, 214 tool tests passed. No EE or game execution.
+
+Six units named in the notes were **not** selected, and their sources stay in
+the snapshot: `w10-startup-b-cb-poff-gp`, `-ee-timer-state`, `-fs-reply-selector`
+and `-sif-m-init-check` are zero-initialised data words with no host file, which
+the snapshot checker rejects (every package record needs one); the same
+decision as for `w8-startup-sce-b-k-exit-tlb-handler` earlier (no check
+committed). `sony-cd-vblank-views` redefines the three `norrath_archive_vblank_*`
+views already defined by cd-archive, so it was not added. The notes' counts
+(27 closed, 9 opened, 1332 to 1314) therefore do not apply: the real delta is
+below. Because `ee_retbuf_sel`, `rollover_counter`, `timer_handle` and
+`sceCbPoff_Gp` are referenced by selected code but not defined, they appear as
+four opened names. The owner can add a committed host check per data unit and
+push again.
+
+| | |
+|---|---|
+| Before | 1477 |
+| After | 1467 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`, `_sceFs_Rcv_Intr`, `_sceIDC`, `acos`, `acosf`, `atan2f`, `dpmul`, `fabsf`, `fmodf`, `ftoi`, `get_time`, `iAllocTimerCounter`, `iSetTimerHandler`, `iStartTimerCounter`, `init_ee_timer`, `isceSifSetDma`, `norrath_legacy_pointer_type_info_vtable_view`
+
+Opened: `_$_19__pointer_type_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__tf19__pointer_type_info`, `_free_r`, `_malloc_r`, `ee_retbuf_sel`, `rollover_counter`, `sceCbPoff_Gp`, `timer_handle`
