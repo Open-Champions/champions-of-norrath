@@ -64,7 +64,7 @@ int main() {
         if (calls() != want) { std::puts(calls().c_str()); std::puts(want.c_str()); bad = 1; }
         if (h != -300 || f28 != 8.0f || w11::u32(the_obj, 104) != static_cast<unsigned>(amount) ||
             w11::u32(the_obj, 112) != w11::word(skill) || w11::u32(the_obj, 92) != 0 || w11::u32(the_obj, 108) != 0 ||
-            w11::u32(the_obj, 96) != 0 || w11::u32(the_obj, 116) != 0x2301 || the_obj[127] != 0x21 || the_obj[116] != 0x21) bad = 1;
+            w11::u32(the_obj, 96) != 0 || w11::u32(the_obj, 116) != 0x2301 || the_obj[127] != 0x21 || the_obj[120] != 0x21) bad = 1;
     }
     return bad;
 }
