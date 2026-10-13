@@ -68,7 +68,28 @@ worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjecti
 
 ## Not closed
 
-`gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` (9184 bytes) and `routePlot__FR10RouteQueue` (19812 bytes) are not authored yet.
+Two symbols of the package are not authored. Both were read and measured; neither was started as source, because a partial
+body would not be a verifiable function and the notes say "no credit for placeholders".
+
+- `gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` at 0x001ce218, 9184 bytes (2297 instructions, about
+  240 branches). Observed outline of the first ~45% of the body, for whoever takes it: the arguments are victim, attacker,
+  a low and high damage float, four ints (the first is read as a rating, the third as a flag word with bits 0x40, 0x20000,
+  0x08000000, 0x01000000 and 0x40000000 tested), an optional item description (null selects a zeroed local with four
+  8-byte modifier slots at +36: a type short at +0, three value shorts at +2, +4, +6; empty slots hold -1) and a bool. It
+  uses soft-double arithmetic (`litodp`, `fptodp`, `fmod`, `dpadd`, `dptofp`) for the random damage roll in
+  [low, high], RTTI comparisons through vtable slot 1 (`__tf8Innoruuk`, `__eq__` on `type_info`), about 13
+  `lumpFindResource` plus `soundPlaySequence` effect plays, 50-iteration spark loops using `eRand`, a recursive call to
+  itself (reflect back at the attacker), `playerGetSkillRank` with the two critical-chance routines, and `blockAlloc`
+  calls that build `poisonGasSpell`, `SpellDiseaseEffect` and `FlyingText` objects. A modifier lookup (scan of the four
+  slots for one type number, then a value short scaled by an unnamed float constant and used as a roll threshold against a
+  16-bit random number) is inlined about two dozen times with the out-of-line "found" blocks the compiler placed after the
+  loops, so a faithful reconstruction needs a full control-flow map first. Unknown: the item description layout beyond the
+  modifier slots, the names of the rating and flag arguments, and what most modifier types (27, 29, 31 to 34, 41 and others)
+  mean.
+- `routePlot__FR10RouteQueue` at 0x002c0a10, 19812 bytes (4954 instructions, 319 branches). It inlines the `RouteHeap`
+  template code (`swap__H1Z9RouteHeap_RX01T0_v` and the int/float/`RouteBuffer` swaps), calls `routeUnrollVnode__Fi` twelve
+  times, `qsort` four times, `worldHitscan` four times and `worldHitscanWithObjects` twice, and uses soft-double compares.
+  It was not decoded.
 
 ## Imports opened (undefined in my units and not defined by them)
 
