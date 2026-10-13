@@ -7621,3 +7621,4 @@ passed. No EE or game execution.
 Closed: `ambientGroup`, `cdEndStream__Fv`, `cdIsBusyStreamingNonwithstanding__Fv`, `cdStartStream__FPci`, `cdStreamLoadAsync__FPcT0i`, `cutLoadedDialogStream`, `cutStartMusic`, `delaySoundList`, `desiredMusicDuckAmount`, `disableSoundPlaying`, `displayMusicPos`, `gameSetMusicTimer__Fi`, `groupVolumeScale`, `lastMusicState`, `musicDuckAmount`, `musicPlaying`, `musicStart`, `musicTimer`, `nextChannel`, `nmAmbientGroups`, `nmBatchCommands`, `norrath_music_activity_ring_view`, `playedStinger`, `sequence`, `sequenceInProgress`, `sequenceVolume`, `soundFrameNm`, `soundSetAmbientData__FPc`, `soundStartMusic__Fii`, `stream`, `streamOutput`, `streamPaused`, `streamSizeLeft`, `streamVolume`, `streaming`
 
 Opened: `sceCdStResume`, `sceCdStStart`
+- 2026-10-13 01:23 CDT — `agents/w10-audio-a` — 1327 unresolved imports
