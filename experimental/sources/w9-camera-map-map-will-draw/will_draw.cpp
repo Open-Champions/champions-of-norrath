@@ -1,4 +1,4 @@
-// Observed willDraw__3mapP12_worldHeaderf at 0x0015e140, 84 bytes.
+// Observed willDraw__3mapP12_worldHeaderf at 0x0015e140, 88 bytes.
 // With the header words at +108 and +112: if the word at +108 is zero and the
 // word at +112 is zero, returns 0. Otherwise let used = (glistp - gstart) >> 3
 // (arithmetic shift of the byte difference of the two words glistp 0x004844c8
