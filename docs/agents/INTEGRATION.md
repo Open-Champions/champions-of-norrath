@@ -9545,3 +9545,19 @@ Closed: `_$_9dustCloud`, `__tf10MummySnake`, `__tf10PoisonRain`, `__tf10SpawnMum
 
 Opened: none
 - 2026-10-13 16:06 CDT — agents/w13-m-spell-dtor-b — 1193 unresolved imports
+
+## agents/w13-skill-cast-a
+
+Merged (merge commit, branch tip `7c3093cb`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 38 units with fresh `input_order` values 5680 through 5717, each with a committed check that builds and passes here (38 host contracts that log every callee call with arguments against an independent expectation). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5716 authored inputs, 4399 function bodies, zero COMMON. The notes' 38 closed names reproduce exactly. The 20 opened names are the spell constructors and accessors the new casts call.
+
+| | |
+|---|---|
+| Before | 1193 |
+| After | 1175 |
+| Closed | 38 |
+| Opened | 20 |
+
+Closed: `canCast__12SkillBlessedP8Creature`, `canCast__12SkillCycloneP8Creature`, `canCast__14SkillFireStormP8Creature`, `canCast__15SkillConeOfFireP8Creature`, `canCast__15SkillFireFlaresP8Creature`, `canCast__15SkillHolyStrikeP8Creature`, `canCast__15SkillPoisonRainP8Creature`, `canCast__15SkillShieldBashP8Creature`, `canCast__16SkillColdWeaponsP8Creature`, `canCast__16SkillCriticalHitP8Creature`, `canCast__16SkillDiseaseBoltP8Creature`, `cast__10SkillShockiP8CreatureG6Point3s`, `cast__11SkillChargeiP8CreatureG6Point3s`, `cast__12SkillBlessediP8CreatureG6Point3s`, `cast__12SkillCycloneiP8CreatureG6Point3s`, `cast__12SkillHealingiP8CreatureG6Point3s`, `cast__12SkillLifeTapiP8CreatureG6Point3s`, `cast__12SkillRiposteiP8CreatureG6Point3s`, `cast__13SkillDarknessiP8CreatureG6Point3s`, `cast__13SkillEntangleiP8CreatureG6Point3s`, `cast__14SkillColdArrowiP8CreatureG6Point3s`, `cast__14SkillFireArrowiP8CreatureG6Point3s`, `cast__14SkillFireStormiP8CreatureG6Point3s`, `cast__14SkillHarmTouchiP8CreatureG6Point3s`, `cast__14SkillMultiFireiP8CreatureG6Point3s`, `cast__15SkillClericRootiP8CreatureG6Point3s`, `cast__15SkillConeOfFireiP8CreatureG6Point3s`, `cast__15SkillFireFlaresiP8CreatureG6Point3s`, `cast__15SkillFrostStormiP8CreatureG6Point3s`, `cast__15SkillHolyShieldiP8CreatureG6Point3s`, `cast__15SkillHolyStrikeiP8CreatureG6Point3s`, `cast__15SkillPoisonRainiP8CreatureG6Point3s`, `cast__15SkillShieldBashiP8CreatureG6Point3s`, `cast__15SkillWizardBeamiP8CreatureG6Point3s`, `cast__16SkillColdWeaponsiP8CreatureG6Point3s`, `cast__16SkillConeOfFrostiP8CreatureG6Point3s`, `cast__16SkillCriticalHitiP8CreatureG6Point3s`, `cast__16SkillDiseaseBoltiP8CreatureG6Point3s`
+
+Opened: `__10HolyStrikesiG6Point3P10GameObjectP5Skill`, `__11SpellChargeiP8CreatureP5Skill`, `__12SpellBlessediP8CreatureP5Skill`, `__12SpellCycloneiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `__15SpellClericRootiP8CreatureP5Skill`, `__15SpellFireFlaresiP8CreatureG6Point3P5Skill`, `__15SpellHolyShieldiP8CreatureP5Skill`, `__15SpellShieldBashiP8CreatureP5Skill`, `__15SpellWizardBeamiP8CreatureP5Skill`, `__16SpellColdWeaponsiP8CreatureP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`, `__16SpellCriticalHitiP8CreatureP5Skill`, `__18DarknessProjectileG6Point3T1P5SkilliP10GameObject`, `__tf12SpellBlessed`, `__tf15SpellFireFlares`, `__tf16SpellColdWeapons`, `__tf16SpellCriticalHit`, `getAttackBonus__4itemPQ24item11description`
+- 2026-10-13 16:11 CDT — agents/w13-skill-cast-a — 1175 unresolved imports
