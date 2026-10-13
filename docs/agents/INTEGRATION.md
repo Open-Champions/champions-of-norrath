@@ -7596,3 +7596,4 @@ bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
 Closed: `netKickedOut`, `netLaunchExpirationCount`, `netLaunchTimer`, `netLocalPadState`, `netNewLaunchMaybeLaunch`, `netNewLaunchMaybeQuit`, `netSendPacket__FiiPUci`, `netTrouble`, `net_buf`, `packetSendCycleLength`, `packetSendCycleTime`, `peerSendDataMsg__FPciiP14sceInetAddressi`, `readcount`, `receivePackets__Fv`, `runPrediction__Fi`, `sLibNetInitialized`, `scanMask`, `sendAlertMessage__FifG6Point3P10GameObject`, `sendControlPacket__FiiiiiR9CCompressb`, `sentStatePacketFrameNm`, `sessionMark`, `showNetPlayerStatus__Fv`, `timeout`, `totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`, `writecount`
 
 Opened: `netPredictionFastForward`, `receiveControlPacket__FPiib`
+- 2026-10-13 01:20 CDT — `agents/w10-net-b` — 1360 unresolved imports
