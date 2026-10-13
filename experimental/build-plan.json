@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2858,
+  "default_authored_inputs": 2878,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3386,6 +3386,26 @@
     "sources/w9-render-math-b-model-set-halo/model_set_halo.cpp": "7a841a26ccb959a6b876ebac23c624be8f04eea8496890c2809654558e1e5478",
     "sources/w9-render-math-b-model-set-no-z-write/model_set_no_z_write.cpp": "b556dd9591e65b1434a5303bc4442d806d8d4bb8a20f50ed78602570b75d016c",
     "sources/w9-render-math-b-model-set-shadow-scale/model_set_shadow_scale.cpp": "4ea40d63cff92effadb029659238eab022ba5c3518062ea1309f48b657023dc8",
+    "sources/w9-render-math-c-add-particle-init/add_particle_init.cpp": "b01bbb1f5e0ba08fca6027e8f470290546f17eef0151b9586f7f93a35fdd51bd",
+    "sources/w9-render-math-c-anttrap-static-init/anttrap_static_init.cpp": "5c50f9775666edb9a4b783a31a62f6b5d32b55556e1b1d08c674849bd22aa4b4",
+    "sources/w9-render-math-c-body-init/body_init.cpp": "80ddc10e879f689699d3f17ded4c9a862c78e7a1a4b3e94e5f603f144c6d259f",
+    "sources/w9-render-math-c-light-deactivate/light_deactivate.cpp": "58e136a01139c27b309e0acdf0ca129d6b9fdff5b5f59e600e32f65c9ca24971",
+    "sources/w9-render-math-c-mat-transform/mat_transform.cpp": "91797311486310533b2304b09187a1851b26895bf19ad12470a8758680dec984",
+    "sources/w9-render-math-c-quat-normalize/quat_normalize.cpp": "99e54d75667ccd06c52253b396b42af270e37b6b3cf743a7958b498fb8567b40",
+    "sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp": "ff7ee1e53af63368dc3ae3d74334398097edb7000f203653af43162caf8058ca",
+    "sources/w9-render-math-c-set-camera/set_camera.cpp": "b6e3f2b908ef583851fce11dda86a80ce7ccdeb4889023686db23febacfe5a0c",
+    "sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp": "81dfd14d484a474e6e5dbe08fe5203ed172562f4791a9768e5ae47cece7720ff",
+    "sources/w9-render-math-c-view-data/view_data.cpp": "6dde635d44b1a6f770f5a4cb4d7cecbde6cc9b3b09c59ecbdbe9f2c30184c078",
+    "sources/w9-render-math-c-wavelet-mat/wavelet_mat.cpp": "5fe06a766bf0ed2566fe1ecf530b1c733e3f71a4bd4c4c320d5a389a12ce5695",
+    "sources/w9-render-math-c-world-check-for-water/world_check_for_water.cpp": "3636e16c537152bbcf4f96586c338790587c219a1436bf87326e19080c6c2f68",
+    "sources/w9-render-math-c-world-clip-motion/world_clip_motion.cpp": "de7b985ebeea9ba85db0f15b467007409a2edab8dc7d38b65ff52d7454ae61ae",
+    "sources/w9-render-math-c-world-find-height/world_find_height.cpp": "d932a196d668baa9e114d28d44d73d64013efde794bd1ee726261e56dc0afe03",
+    "sources/w9-render-math-c-world-find-stand-height/world_find_stand_height.cpp": "cbc15d70b2a33424c27a596ee03355967039ba2572883f7267c719af4b60f0b8",
+    "sources/w9-render-math-c-world-hitscan/world_hitscan.cpp": "2561e23ed459f132159b849d5594e9868957c3f1fe8157bafc745c6a489c5c08",
+    "sources/w9-render-math-c-world-perturb-water/world_perturb_water.cpp": "b871d4ecc2ffba24d6878b33a8ba478759f08af15672b57273f832b9592048b5",
+    "sources/w9-render-math-c-world-plot-route-process/world_plot_route_process.cpp": "32eddfe062a8e4f1e5cd631d86bfdb2cc75125ca005367155d101f6bd06ff0bb",
+    "sources/w9-render-math-c-world-release-door/world_release_door.cpp": "683583d0d7c99c486f634758795cc2801833e2b5abba73af2ce360ceca276944",
+    "sources/w9-render-math-c-world-set-view-matricies/world_set_view_matricies.cpp": "f52b93e6d03d591e8711a5219fe65483cf3b341cb284f8ea16381e564d973f07",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
     "sources/w9-startup-crt-a-animation-state-copy-ctor/animation_state_copy_ctor.cpp": "e1c3c2152f5e431ce8b01656efb9289a9e3d065a10d4ad9ba4e9a5771dae5fb8",
@@ -41060,6 +41080,321 @@
       "sha256": "a8bb946c4185e0eb30145f3d5eb45681f3d4dac5d851c1abe29ec837abd9cb53",
       "source": "sources/w9-animation-object-c-w-lump-header-data/w_lump_header_data.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2860,
+      "kind": "independently_authored_source",
+      "object_name": "add_particle_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b01bbb1f5e0ba08fca6027e8f470290546f17eef0151b9586f7f93a35fdd51bd",
+      "source": "sources/w9-render-math-c-add-particle-init/add_particle_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "particleInit__11AddParticlePPc",
+          "compiled_body_bytes": 1764
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2861,
+      "kind": "independently_authored_source",
+      "object_name": "anttrap_static_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5c50f9775666edb9a4b783a31a62f6b5d32b55556e1b1d08c674849bd22aa4b4",
+      "source": "sources/w9-render-math-c-anttrap-static-init/anttrap_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL41__static_initialization_and_destruction_0ii.constprop.0",
+          "compiled_body_bytes": 224
+        },
+        {
+          "name": "_GLOBAL_$I$msg_run__7AntTrap",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2862,
+      "kind": "independently_authored_source",
+      "object_name": "body_init.o",
+      "profile": "authored_cpp",
+      "sha256": "80ddc10e879f689699d3f17ded4c9a862c78e7a1a4b3e94e5f603f144c6d259f",
+      "source": "sources/w9-render-math-c-body-init/body_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_body_init",
+          "compiled_body_bytes": 488
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2863,
+      "kind": "independently_authored_source",
+      "object_name": "light_deactivate.o",
+      "profile": "authored_cpp",
+      "sha256": "58e136a01139c27b309e0acdf0ca129d6b9fdff5b5f59e600e32f65c9ca24971",
+      "source": "sources/w9-render-math-c-light-deactivate/light_deactivate.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_deactivate",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2864,
+      "kind": "independently_authored_source",
+      "object_name": "mat_transform.o",
+      "profile": "authored_cpp",
+      "sha256": "91797311486310533b2304b09187a1851b26895bf19ad12470a8758680dec984",
+      "source": "sources/w9-render-math-c-mat-transform/mat_transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_mat_transform",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2865,
+      "kind": "independently_authored_source",
+      "object_name": "quat_normalize.o",
+      "profile": "authored_cpp",
+      "sha256": "99e54d75667ccd06c52253b396b42af270e37b6b3cf743a7958b498fb8567b40",
+      "source": "sources/w9-render-math-c-quat-normalize/quat_normalize.cpp",
+      "emitted_functions": [
+        {
+          "name": "quatNormalize__FP4Quat",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2866,
+      "kind": "independently_authored_source",
+      "object_name": "quat_to_mat34.o",
+      "profile": "authored_cpp",
+      "sha256": "ff7ee1e53af63368dc3ae3d74334398097edb7000f203653af43162caf8058ca",
+      "source": "sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp",
+      "emitted_functions": [
+        {
+          "name": "quatToMat__FP8Matrix34P4Quat",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2867,
+      "kind": "independently_authored_source",
+      "object_name": "set_camera.o",
+      "profile": "authored_cpp",
+      "sha256": "b6e3f2b908ef583851fce11dda86a80ce7ccdeb4889023686db23febacfe5a0c",
+      "source": "sources/w9-render-math-c-set-camera/set_camera.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7look_atEPK6ActionRfS3_",
+          "compiled_body_bytes": 344
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L9find_keysERKNS_4ListEiiffff.constprop.0.isra.0",
+          "compiled_body_bytes": 1024
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14scalar_channelERKNS_4ListEiiffffNS_11ChannelKindERNS_5FlagsEPi.constprop.0",
+          "compiled_body_bytes": 2312
+        },
+        {
+          "name": "setCamera__Ff",
+          "compiled_body_bytes": 5968
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2868,
+      "kind": "independently_authored_source",
+      "object_name": "tex_terminate_thread.o",
+      "profile": "authored_cpp",
+      "sha256": "81dfd14d484a474e6e5dbe08fe5203ed172562f4791a9768e5ae47cece7720ff",
+      "source": "sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp",
+      "emitted_functions": [
+        {
+          "name": "texTerminateThread__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2869,
+      "kind": "independently_authored_source",
+      "object_name": "view_data.o",
+      "profile": "authored_cpp",
+      "sha256": "6dde635d44b1a6f770f5a4cb4d7cecbde6cc9b3b09c59ecbdbe9f2c30184c078",
+      "source": "sources/w9-render-math-c-view-data/view_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2870,
+      "kind": "independently_authored_source",
+      "object_name": "wavelet_mat.o",
+      "profile": "authored_cpp",
+      "sha256": "5fe06a766bf0ed2566fe1ecf530b1c733e3f71a4bd4c4c320d5a389a12ce5695",
+      "source": "sources/w9-render-math-c-wavelet-mat/wavelet_mat.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_wave_maker_get_wavelet_mat",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2871,
+      "kind": "independently_authored_source",
+      "object_name": "world_check_for_water.o",
+      "profile": "authored_cpp",
+      "sha256": "3636e16c537152bbcf4f96586c338790587c219a1436bf87326e19080c6c2f68",
+      "source": "sources/w9-render-math-c-world-check-for-water/world_check_for_water.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldCheckForWater__FP12_worldHeaderG6Point3fPf",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2872,
+      "kind": "independently_authored_source",
+      "object_name": "world_clip_motion.o",
+      "profile": "authored_cpp",
+      "sha256": "de7b985ebeea9ba85db0f15b467007409a2edab8dc7d38b65ff52d7454ae61ae",
+      "source": "sources/w9-render-math-c-world-clip-motion/world_clip_motion.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3",
+          "compiled_body_bytes": 1644
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2873,
+      "kind": "independently_authored_source",
+      "object_name": "world_find_height.o",
+      "profile": "authored_cpp",
+      "sha256": "d932a196d668baa9e114d28d44d73d64013efde794bd1ee726261e56dc0afe03",
+      "source": "sources/w9-render-math-c-world-find-height/world_find_height.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldFindHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 788
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2874,
+      "kind": "independently_authored_source",
+      "object_name": "world_find_stand_height.o",
+      "profile": "authored_cpp",
+      "sha256": "cbc15d70b2a33424c27a596ee03355967039ba2572883f7267c719af4b60f0b8",
+      "source": "sources/w9-render-math-c-world-find-stand-height/world_find_stand_height.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldFindStandHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 884
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2875,
+      "kind": "independently_authored_source",
+      "object_name": "world_hitscan.o",
+      "profile": "authored_cpp",
+      "sha256": "2561e23ed459f132159b849d5594e9868957c3f1fe8157bafc745c6a489c5c08",
+      "source": "sources/w9-render-math-c-world-hitscan/world_hitscan.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldHitscan__FP12_worldHeaderG6Point3T1fi",
+          "compiled_body_bytes": 1804
+        },
+        {
+          "name": "norrath_world_hitscan",
+          "compiled_body_bytes": 1804
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2876,
+      "kind": "independently_authored_source",
+      "object_name": "world_perturb_water.o",
+      "profile": "authored_cpp",
+      "sha256": "b871d4ecc2ffba24d6878b33a8ba478759f08af15672b57273f832b9592048b5",
+      "source": "sources/w9-render-math-c-world-perturb-water/world_perturb_water.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldPerturbWater__FP12_worldHeaderG6Point3ff",
+          "compiled_body_bytes": 732
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2877,
+      "kind": "independently_authored_source",
+      "object_name": "world_plot_route_process.o",
+      "profile": "authored_cpp",
+      "sha256": "32eddfe062a8e4f1e5cd631d86bfdb2cc75125ca005367155d101f6bd06ff0bb",
+      "source": "sources/w9-render-math-c-world-plot-route-process/world_plot_route_process.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldPlotRouteProcess__Fi",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2878,
+      "kind": "independently_authored_source",
+      "object_name": "world_release_door.o",
+      "profile": "authored_cpp",
+      "sha256": "683583d0d7c99c486f634758795cc2801833e2b5abba73af2ce360ceca276944",
+      "source": "sources/w9-render-math-c-world-release-door/world_release_door.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldReleaseDoor__FP12_worldHeaderi",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2879,
+      "kind": "independently_authored_source",
+      "object_name": "world_set_view_matricies.o",
+      "profile": "authored_cpp",
+      "sha256": "f52b93e6d03d591e8711a5219fe65483cf3b341cb284f8ea16381e564d973f07",
+      "source": "sources/w9-render-math-c-world-set-view-matricies/world_set_view_matricies.cpp",
+      "emitted_functions": [
+        {
+          "name": "worldSetViewMatricies__FP6Point3P8Matrix34",
+          "compiled_body_bytes": 440
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -41159,7 +41494,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "65192314f87533cee22860b51b5647ef551a1703801d3a2060b85c5bef6ae290",
+  "snapshot_sha256": "209b8d503448ed7cfc645829c76ceb6949541817fe8bcd6b15b4f1f0b0e30160",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

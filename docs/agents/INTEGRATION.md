@@ -5689,6 +5689,55 @@ Opened: `addpmlist__FPc`, `addpmlistptrscap__Fv`, `fsListBack`,
 `wallAndObjectSteering__FP8CreatureffP10GameObject`,
 `worldTestForbidden__FP12_worldHeaderG6Point3f`
 
+## agents/w9-render-math-c
+
+Merged (the branch notes carry the five summary sections; the tip was 44
+minutes old). Twenty of its 22 units were selected with fresh `input_order`
+values 2860 through 2879: matrix and quaternion math, light deactivation,
+body init, view-matrix setup and one data unit. Two were **not** selected
+because the same function is already defined by a merged unit, which made the
+link fail with a multiple definition: `quat-to-mat33` (`quatToMat__FP8Matrix33P4Quat`,
+also in `w8-object-list-math-quat-to-mat33`) and `switch-static-init`
+(`_GLOBAL_$I$__6SwitchG6Point3PPc`, also in `w8-spell-static-init-a-switch`).
+Their files stay in the snapshot, unselected. All 22 host checks build and
+exit 0 here (22 of 22). The notes mention the worker disassembled each
+function privately and committed nothing derived; I saw no listing in the
+sources. 2316 function bodies, 2878 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1564 |
+| After | 1544 |
+| Closed | 29 |
+| Opened | 9 |
+
+Closed: `_GLOBAL_$I$msg_run__7AntTrap`, `myYaw`,
+`norrath_anttrap_msg_run_FireParticle_bytes`,
+`norrath_anttrap_msg_run_HateGateParticle_bytes`, `norrath_body_init`,
+`norrath_light_deactivate`, `norrath_mat_transform`,
+`norrath_wave_maker_get_wavelet_mat`, `norrath_world_hitscan`,
+`particleInit__11AddParticlePPc`, `quatNormalize__FP4Quat`,
+`quatToMat__FP8Matrix34P4Quat`, `scissored`, `setCamera__Ff`,
+`texDecodeStarted`, `texTerminateThread__Fv`, `vifDirectQWordCount`,
+`worldCharViewMatrix`, `worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
+`worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`,
+`worldFindHeight__FP12_worldHeaderG6Point3f`,
+`worldFindStandHeight__FP12_worldHeaderG6Point3f`,
+`worldHitscan__FP12_worldHeaderG6Point3T1fi`,
+`worldPerturbWater__FP12_worldHeaderG6Point3ff`,
+`worldPlotRouteProcess__Fi`, `worldReleaseDoor__FP12_worldHeaderi`,
+`worldSetViewMatricies__FP6Point3P8Matrix34`, `worldViewMatrix`, `yaws`
+
+Opened: `collisionFrame`,
+`makeCollisionList__FP12_worldHeaderffffPP13collisionParti`,
+`matMakeCharViewMatrix__FP8Matrix44fffffff`,
+`matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matScale__FP8Matrix34f`,
+`routePlot__FR10RouteQueue`,
+`worldFindPointHeight__FP12_worldHeaderG6Point3`,
+`worldPrecacheWorld__FP12_worldHeaderP8Matrix34`,
+`worldTransformFrustum__FP8Matrix34`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6068,3 +6117,4 @@ and no startup stage has executed.
 - 2026-10-12 21:40 CDT — `agents/w9-ctors-lantern-a` — 1584 unresolved imports
 - 2026-10-12 21:44 CDT — `agents/w9-animation-object-b` — 1567 unresolved imports
 - 2026-10-12 21:48 CDT — `agents/w9-animation-object-c` — 1564 unresolved imports
+- 2026-10-12 21:53 CDT — `agents/w9-render-math-c` — 1544 unresolved imports

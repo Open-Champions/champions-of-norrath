@@ -37016,6 +37016,301 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w9-animation-object-c-w-lump-header-data/w_lump_header_data.cpp"
+    },
+    {
+      "input_order": 2860,
+      "component": "w9-render-math-c-add-particle-init",
+      "object_name": "add_particle_init.o",
+      "private_object_sha256": "ff22c045ee85761096879f9877e41f6b80bb32c949778a28849ee629f8d85c71",
+      "emitted_functions": [
+        {
+          "name": "particleInit__11AddParticlePPc",
+          "compiled_body_bytes": 1764
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-add-particle-init/add_particle_init.cpp"
+    },
+    {
+      "input_order": 2861,
+      "component": "w9-render-math-c-anttrap-static-init",
+      "object_name": "anttrap_static_init.o",
+      "private_object_sha256": "82ec420f71b6fe74cea62012023658f9d38cc28219eb7681db1cd8e4409d32b2",
+      "emitted_functions": [
+        {
+          "name": "_ZL41__static_initialization_and_destruction_0ii.constprop.0",
+          "compiled_body_bytes": 224
+        },
+        {
+          "name": "_GLOBAL_$I$msg_run__7AntTrap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-anttrap-static-init/anttrap_static_init.cpp"
+    },
+    {
+      "input_order": 2862,
+      "component": "w9-render-math-c-body-init",
+      "object_name": "body_init.o",
+      "private_object_sha256": "dcfe9d1262a6641b1426212e4d243124077db86ee17495f4ff70e68a9aa51320",
+      "emitted_functions": [
+        {
+          "name": "norrath_body_init",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-body-init/body_init.cpp"
+    },
+    {
+      "input_order": 2863,
+      "component": "w9-render-math-c-light-deactivate",
+      "object_name": "light_deactivate.o",
+      "private_object_sha256": "0a3d69debffc386dfe3bada45814d7ae2eea21965bf4cd2413602ddba04c77a8",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_deactivate",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-light-deactivate/light_deactivate.cpp"
+    },
+    {
+      "input_order": 2864,
+      "component": "w9-render-math-c-mat-transform",
+      "object_name": "mat_transform.o",
+      "private_object_sha256": "bfd503a7beb3cd9b565104170064d6e808989fbdc8380fb032a07d4ebc3433da",
+      "emitted_functions": [
+        {
+          "name": "norrath_mat_transform",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-mat-transform/mat_transform.cpp"
+    },
+    {
+      "input_order": 2865,
+      "component": "w9-render-math-c-quat-normalize",
+      "object_name": "quat_normalize.o",
+      "private_object_sha256": "2143cd5f005f342718c7c9e1600963f6c742aef844d6ba8fcd53553eda6876dd",
+      "emitted_functions": [
+        {
+          "name": "quatNormalize__FP4Quat",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-quat-normalize/quat_normalize.cpp"
+    },
+    {
+      "input_order": 2866,
+      "component": "w9-render-math-c-quat-to-mat34",
+      "object_name": "quat_to_mat34.o",
+      "private_object_sha256": "3aa1f9782b594d7ebb690b1df836fadd3866b7351374958b82be74611954ad0f",
+      "emitted_functions": [
+        {
+          "name": "quatToMat__FP8Matrix34P4Quat",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp"
+    },
+    {
+      "input_order": 2867,
+      "component": "w9-render-math-c-set-camera",
+      "object_name": "set_camera.o",
+      "private_object_sha256": "52c4e36163332f7641556b56a341266f885e6ec0de6be0c7827a0d71816ab903",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7look_atEPK6ActionRfS3_",
+          "compiled_body_bytes": 344
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L9find_keysERKNS_4ListEiiffff.constprop.0.isra.0",
+          "compiled_body_bytes": 1024
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14scalar_channelERKNS_4ListEiiffffNS_11ChannelKindERNS_5FlagsEPi.constprop.0",
+          "compiled_body_bytes": 2312
+        },
+        {
+          "name": "setCamera__Ff",
+          "compiled_body_bytes": 5968
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-set-camera/set_camera.cpp"
+    },
+    {
+      "input_order": 2868,
+      "component": "w9-render-math-c-tex-terminate-thread",
+      "object_name": "tex_terminate_thread.o",
+      "private_object_sha256": "f0f958bb8e1a5ecbb004dd682b8ff5eed329eb0427c047527341d006b7106d1c",
+      "emitted_functions": [
+        {
+          "name": "texTerminateThread__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp"
+    },
+    {
+      "input_order": 2869,
+      "component": "w9-render-math-c-view-data",
+      "object_name": "view_data.o",
+      "private_object_sha256": "fa1ae756863f6fd095841dd460f44133dfee9693fbb6b65a253a0c7f637e4528",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-view-data/view_data.cpp"
+    },
+    {
+      "input_order": 2870,
+      "component": "w9-render-math-c-wavelet-mat",
+      "object_name": "wavelet_mat.o",
+      "private_object_sha256": "a627a8bcc7726af8aea1d975ca3d801e142a632c36fa78eb9b2aa0b011240d2b",
+      "emitted_functions": [
+        {
+          "name": "norrath_wave_maker_get_wavelet_mat",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-wavelet-mat/wavelet_mat.cpp"
+    },
+    {
+      "input_order": 2871,
+      "component": "w9-render-math-c-world-check-for-water",
+      "object_name": "world_check_for_water.o",
+      "private_object_sha256": "9cd308944dbdc6676080863aad8e18d4bc9c01540fe609165959a3ab896f3ea4",
+      "emitted_functions": [
+        {
+          "name": "worldCheckForWater__FP12_worldHeaderG6Point3fPf",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-check-for-water/world_check_for_water.cpp"
+    },
+    {
+      "input_order": 2872,
+      "component": "w9-render-math-c-world-clip-motion",
+      "object_name": "world_clip_motion.o",
+      "private_object_sha256": "6cdab9b69213f9416bce44d6c85735a7e7c14be0e34149b25d4df04323e9cae6",
+      "emitted_functions": [
+        {
+          "name": "worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3",
+          "compiled_body_bytes": 1644
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-clip-motion/world_clip_motion.cpp"
+    },
+    {
+      "input_order": 2873,
+      "component": "w9-render-math-c-world-find-height",
+      "object_name": "world_find_height.o",
+      "private_object_sha256": "456585d65d86886cc5f51b23fd1d0543fba8ca62515ce0bf8f8457e3e2aa22dc",
+      "emitted_functions": [
+        {
+          "name": "worldFindHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 788
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-find-height/world_find_height.cpp"
+    },
+    {
+      "input_order": 2874,
+      "component": "w9-render-math-c-world-find-stand-height",
+      "object_name": "world_find_stand_height.o",
+      "private_object_sha256": "49b0f9546d1f886f88f2189e7b3645dab3f89d90dbee9cb10c27ae16c1be7184",
+      "emitted_functions": [
+        {
+          "name": "worldFindStandHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 884
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-find-stand-height/world_find_stand_height.cpp"
+    },
+    {
+      "input_order": 2875,
+      "component": "w9-render-math-c-world-hitscan",
+      "object_name": "world_hitscan.o",
+      "private_object_sha256": "cd552c2f1a0cd6ae27f39ba6a10e56f10a65e0e03b0365c0d14ff53e7727e3ec",
+      "emitted_functions": [
+        {
+          "name": "worldHitscan__FP12_worldHeaderG6Point3T1fi",
+          "compiled_body_bytes": 1804
+        },
+        {
+          "name": "norrath_world_hitscan",
+          "compiled_body_bytes": 1804
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-hitscan/world_hitscan.cpp"
+    },
+    {
+      "input_order": 2876,
+      "component": "w9-render-math-c-world-perturb-water",
+      "object_name": "world_perturb_water.o",
+      "private_object_sha256": "840de9e2d9ffb245cb584d8d5bfb0db12ddea53e76559949247ea2adb6c7e99b",
+      "emitted_functions": [
+        {
+          "name": "worldPerturbWater__FP12_worldHeaderG6Point3ff",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-perturb-water/world_perturb_water.cpp"
+    },
+    {
+      "input_order": 2877,
+      "component": "w9-render-math-c-world-plot-route-process",
+      "object_name": "world_plot_route_process.o",
+      "private_object_sha256": "6ba07b7ad336d09f89f256c6b477c54b7bb2cd021ae57fb98d04b032f863b857",
+      "emitted_functions": [
+        {
+          "name": "worldPlotRouteProcess__Fi",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-plot-route-process/world_plot_route_process.cpp"
+    },
+    {
+      "input_order": 2878,
+      "component": "w9-render-math-c-world-release-door",
+      "object_name": "world_release_door.o",
+      "private_object_sha256": "2c3c9a1431f55db0dba6bd10d687da920e8a24a7fb39ce8267c4610b05e7c048",
+      "emitted_functions": [
+        {
+          "name": "worldReleaseDoor__FP12_worldHeaderi",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-release-door/world_release_door.cpp"
+    },
+    {
+      "input_order": 2879,
+      "component": "w9-render-math-c-world-set-view-matricies",
+      "object_name": "world_set_view_matricies.o",
+      "private_object_sha256": "9f88d8b89f9e444a2158fde919a02343da65b4fb4b4293c51ec3e08051fb8563",
+      "emitted_functions": [
+        {
+          "name": "worldSetViewMatricies__FP6Point3P8Matrix34",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-c-world-set-view-matricies/world_set_view_matricies.cpp"
     }
   ],
   "drafts": [
@@ -42877,6 +43172,50 @@
     "sources/w9-render-math-b-model-set-no-z-write/model_set_no_z_write.cpp": "b556dd9591e65b1434a5303bc4442d806d8d4bb8a20f50ed78602570b75d016c",
     "sources/w9-render-math-b-model-set-shadow-scale/host_check.cpp": "7791e7a888a81e060f53d9bbb8e2791545c31690714e043fcda7a37c5bade5c0",
     "sources/w9-render-math-b-model-set-shadow-scale/model_set_shadow_scale.cpp": "4ea40d63cff92effadb029659238eab022ba5c3518062ea1309f48b657023dc8",
+    "sources/w9-render-math-c-add-particle-init/add_particle_init.cpp": "b01bbb1f5e0ba08fca6027e8f470290546f17eef0151b9586f7f93a35fdd51bd",
+    "sources/w9-render-math-c-add-particle-init/host_check.cpp": "56fd321145fff3f6e4ff06bd76bcc842a7fcc7a2065ae92e8ee97124dc154d84",
+    "sources/w9-render-math-c-anttrap-static-init/anttrap_static_init.cpp": "5c50f9775666edb9a4b783a31a62f6b5d32b55556e1b1d08c674849bd22aa4b4",
+    "sources/w9-render-math-c-anttrap-static-init/host_check.cpp": "734867d4a05db88298ce9a939d0776218d77b99d252552c1843591650a79312d",
+    "sources/w9-render-math-c-body-init/body_init.cpp": "80ddc10e879f689699d3f17ded4c9a862c78e7a1a4b3e94e5f603f144c6d259f",
+    "sources/w9-render-math-c-body-init/host_check.cpp": "095300be191cb7aef41ade9a4f4223a36c867b7dbebbb60541afc77b455ad931",
+    "sources/w9-render-math-c-light-deactivate/host_check.cpp": "9307d548c9db373acf09098e4ae16e1c62914f32f03a399c16c9dbcbaf67dfc4",
+    "sources/w9-render-math-c-light-deactivate/light_deactivate.cpp": "58e136a01139c27b309e0acdf0ca129d6b9fdff5b5f59e600e32f65c9ca24971",
+    "sources/w9-render-math-c-mat-transform/host_check.cpp": "05fe37b67875720f7f1e7553794ce95ace9a75ccee556e65cb5031ed9308de6f",
+    "sources/w9-render-math-c-mat-transform/mat_transform.cpp": "91797311486310533b2304b09187a1851b26895bf19ad12470a8758680dec984",
+    "sources/w9-render-math-c-quat-normalize/host_check.cpp": "b25b0353f06f15be95c88bb210d5eb149bc84337466b2fefedbddfd02cf5be01",
+    "sources/w9-render-math-c-quat-normalize/quat_normalize.cpp": "99e54d75667ccd06c52253b396b42af270e37b6b3cf743a7958b498fb8567b40",
+    "sources/w9-render-math-c-quat-to-mat33/host_check.cpp": "b71a49d894b948c4bf328d407be7e589f225fc1918aa694571579d3049035b5e",
+    "sources/w9-render-math-c-quat-to-mat33/quat_to_mat33.cpp": "01a43036be29ad9b132b0e74bc763441b9d9120a95c7307fec669fc3f90087a3",
+    "sources/w9-render-math-c-quat-to-mat34/host_check.cpp": "fb6121e2d198b36e968c7bc94a0afbfc318dcaf02759a860edcae3276965d626",
+    "sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp": "ff7ee1e53af63368dc3ae3d74334398097edb7000f203653af43162caf8058ca",
+    "sources/w9-render-math-c-set-camera/host_check.cpp": "7209a8186612796369ddd4d4a879a9089efe3c3e5f7b4a9ae03ef4f40d888aee",
+    "sources/w9-render-math-c-set-camera/set_camera.cpp": "b6e3f2b908ef583851fce11dda86a80ce7ccdeb4889023686db23febacfe5a0c",
+    "sources/w9-render-math-c-switch-static-init/host_check.cpp": "b09b1e93e71bab9826a0abcadf76fa244c11531005b8a4131950855b7700ecfa",
+    "sources/w9-render-math-c-switch-static-init/switch_static_init.cpp": "03205ea041081c32f37bb3d364d97583e0d1483b57050cf2d366ee8629fbaf03",
+    "sources/w9-render-math-c-tex-terminate-thread/host_check.cpp": "eb27175bec4e96783d69510fa544a9dffa4317c268153b291ef905d57b2228d7",
+    "sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp": "81dfd14d484a474e6e5dbe08fe5203ed172562f4791a9768e5ae47cece7720ff",
+    "sources/w9-render-math-c-view-data/host_check.cpp": "0502734844e42dc36a588b605283cb4f0a5664dc8801a5c14f3e5ebb0a7cded3",
+    "sources/w9-render-math-c-view-data/view_data.cpp": "6dde635d44b1a6f770f5a4cb4d7cecbde6cc9b3b09c59ecbdbe9f2c30184c078",
+    "sources/w9-render-math-c-wavelet-mat/host_check.cpp": "eea38167f35435d51b79df97163fcfd38cde23ab85d1d56ab81a2b2e006eef6a",
+    "sources/w9-render-math-c-wavelet-mat/wavelet_mat.cpp": "5fe06a766bf0ed2566fe1ecf530b1c733e3f71a4bd4c4c320d5a389a12ce5695",
+    "sources/w9-render-math-c-world-check-for-water/host_check.cpp": "be7eb511ac55918f0fa684606e05c14e03091d4e923769628a11daa8b793c9ac",
+    "sources/w9-render-math-c-world-check-for-water/world_check_for_water.cpp": "3636e16c537152bbcf4f96586c338790587c219a1436bf87326e19080c6c2f68",
+    "sources/w9-render-math-c-world-clip-motion/host_check.cpp": "860fd90833d657742b9369cadf67616f1069d0751f6950a9120a8e1b5a608d72",
+    "sources/w9-render-math-c-world-clip-motion/world_clip_motion.cpp": "de7b985ebeea9ba85db0f15b467007409a2edab8dc7d38b65ff52d7454ae61ae",
+    "sources/w9-render-math-c-world-find-height/host_check.cpp": "2011690b78e53ef7fcc41f5a2ee4033c53ece30783f3ebb8132b7e227252d88b",
+    "sources/w9-render-math-c-world-find-height/world_find_height.cpp": "d932a196d668baa9e114d28d44d73d64013efde794bd1ee726261e56dc0afe03",
+    "sources/w9-render-math-c-world-find-stand-height/host_check.cpp": "91f25039069bf13d08dc15b1f1a372190eb1ec74bf51b45e7f3dab3c8fcfed75",
+    "sources/w9-render-math-c-world-find-stand-height/world_find_stand_height.cpp": "cbc15d70b2a33424c27a596ee03355967039ba2572883f7267c719af4b60f0b8",
+    "sources/w9-render-math-c-world-hitscan/host_check.cpp": "f0d0efecb0a9f4499c9eaa471ddc0b79dedc887c1a74f8ba70bbcaa38399be9b",
+    "sources/w9-render-math-c-world-hitscan/world_hitscan.cpp": "2561e23ed459f132159b849d5594e9868957c3f1fe8157bafc745c6a489c5c08",
+    "sources/w9-render-math-c-world-perturb-water/host_check.cpp": "1cee21f8e6109489102b4fbb9ee7d3d583eb529d1f7037e78cb2ffffc4dbef5f",
+    "sources/w9-render-math-c-world-perturb-water/world_perturb_water.cpp": "b871d4ecc2ffba24d6878b33a8ba478759f08af15672b57273f832b9592048b5",
+    "sources/w9-render-math-c-world-plot-route-process/host_check.cpp": "a23f34591739fc840f2077ddf50e1a1fe4680aec48a9cdb6965728d9bd523d82",
+    "sources/w9-render-math-c-world-plot-route-process/world_plot_route_process.cpp": "32eddfe062a8e4f1e5cd631d86bfdb2cc75125ca005367155d101f6bd06ff0bb",
+    "sources/w9-render-math-c-world-release-door/host_check.cpp": "00c876552e762d1465f342fb5290fd74a6724287bdaf2a1a0080c5792e197b41",
+    "sources/w9-render-math-c-world-release-door/world_release_door.cpp": "683583d0d7c99c486f634758795cc2801833e2b5abba73af2ce360ceca276944",
+    "sources/w9-render-math-c-world-set-view-matricies/host_check.cpp": "8a8caf23cddf2d5cc0a0200d6f5bc746ea69d7ffcf3ec2afd88b513a630ffbfa",
+    "sources/w9-render-math-c-world-set-view-matricies/world_set_view_matricies.cpp": "f52b93e6d03d591e8711a5219fe65483cf3b341cb284f8ea16381e564d973f07",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/host_check.cpp": "06546ebfb0c21dfecfb70ac33f87993fe6717d18163a01776e59caafe96f7011",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
@@ -43749,11 +44088,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2860,
-    "authored_default_inputs": 2858,
+    "selected_inputs": 2880,
+    "authored_default_inputs": 2878,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2294,
-    "compiled_body_bytes_from_accepted_inputs": 981360,
+    "emitted_function_definitions_including_helpers": 2318,
+    "compiled_body_bytes_from_accepted_inputs": 1002664,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -43766,7 +44105,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2547
+    "package_selected_inputs": 2567
   },
   "startup_implementations": [
     {
@@ -83927,6 +84266,361 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w9-animation-object-c-w-lump-header-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-add-particle-init/add_particle_init.cpp",
+      "source_sha256": "b01bbb1f5e0ba08fca6027e8f470290546f17eef0151b9586f7f93a35fdd51bd",
+      "object_sha256": "ff22c045ee85761096879f9877e41f6b80bb32c949778a28849ee629f8d85c71",
+      "emitted_functions": [
+        {
+          "name": "particleInit__11AddParticlePPc",
+          "compiled_body_bytes": 1764
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-add-particle-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-anttrap-static-init/anttrap_static_init.cpp",
+      "source_sha256": "5c50f9775666edb9a4b783a31a62f6b5d32b55556e1b1d08c674849bd22aa4b4",
+      "object_sha256": "82ec420f71b6fe74cea62012023658f9d38cc28219eb7681db1cd8e4409d32b2",
+      "emitted_functions": [
+        {
+          "name": "_ZL41__static_initialization_and_destruction_0ii.constprop.0",
+          "compiled_body_bytes": 224
+        },
+        {
+          "name": "_GLOBAL_$I$msg_run__7AntTrap",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-anttrap-static-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-body-init/body_init.cpp",
+      "source_sha256": "80ddc10e879f689699d3f17ded4c9a862c78e7a1a4b3e94e5f603f144c6d259f",
+      "object_sha256": "dcfe9d1262a6641b1426212e4d243124077db86ee17495f4ff70e68a9aa51320",
+      "emitted_functions": [
+        {
+          "name": "norrath_body_init",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-body-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-light-deactivate/light_deactivate.cpp",
+      "source_sha256": "58e136a01139c27b309e0acdf0ca129d6b9fdff5b5f59e600e32f65c9ca24971",
+      "object_sha256": "0a3d69debffc386dfe3bada45814d7ae2eea21965bf4cd2413602ddba04c77a8",
+      "emitted_functions": [
+        {
+          "name": "norrath_light_deactivate",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-light-deactivate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-mat-transform/mat_transform.cpp",
+      "source_sha256": "91797311486310533b2304b09187a1851b26895bf19ad12470a8758680dec984",
+      "object_sha256": "bfd503a7beb3cd9b565104170064d6e808989fbdc8380fb032a07d4ebc3433da",
+      "emitted_functions": [
+        {
+          "name": "norrath_mat_transform",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-mat-transform/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-quat-normalize/quat_normalize.cpp",
+      "source_sha256": "99e54d75667ccd06c52253b396b42af270e37b6b3cf743a7958b498fb8567b40",
+      "object_sha256": "2143cd5f005f342718c7c9e1600963f6c742aef844d6ba8fcd53553eda6876dd",
+      "emitted_functions": [
+        {
+          "name": "quatNormalize__FP4Quat",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-quat-normalize/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp",
+      "source_sha256": "ff7ee1e53af63368dc3ae3d74334398097edb7000f203653af43162caf8058ca",
+      "object_sha256": "3aa1f9782b594d7ebb690b1df836fadd3866b7351374958b82be74611954ad0f",
+      "emitted_functions": [
+        {
+          "name": "quatToMat__FP8Matrix34P4Quat",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-quat-to-mat34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-set-camera/set_camera.cpp",
+      "source_sha256": "b6e3f2b908ef583851fce11dda86a80ce7ccdeb4889023686db23febacfe5a0c",
+      "object_sha256": "52c4e36163332f7641556b56a341266f885e6ec0de6be0c7827a0d71816ab903",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7look_atEPK6ActionRfS3_",
+          "compiled_body_bytes": 344
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L9find_keysERKNS_4ListEiiffff.constprop.0.isra.0",
+          "compiled_body_bytes": 1024
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L14scalar_channelERKNS_4ListEiiffffNS_11ChannelKindERNS_5FlagsEPi.constprop.0",
+          "compiled_body_bytes": 2312
+        },
+        {
+          "name": "setCamera__Ff",
+          "compiled_body_bytes": 5968
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-set-camera/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp",
+      "source_sha256": "81dfd14d484a474e6e5dbe08fe5203ed172562f4791a9768e5ae47cece7720ff",
+      "object_sha256": "f0f958bb8e1a5ecbb004dd682b8ff5eed329eb0427c047527341d006b7106d1c",
+      "emitted_functions": [
+        {
+          "name": "texTerminateThread__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-tex-terminate-thread/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-view-data/view_data.cpp",
+      "source_sha256": "6dde635d44b1a6f770f5a4cb4d7cecbde6cc9b3b09c59ecbdbe9f2c30184c078",
+      "object_sha256": "fa1ae756863f6fd095841dd460f44133dfee9693fbb6b65a253a0c7f637e4528",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-render-math-c-view-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-wavelet-mat/wavelet_mat.cpp",
+      "source_sha256": "5fe06a766bf0ed2566fe1ecf530b1c733e3f71a4bd4c4c320d5a389a12ce5695",
+      "object_sha256": "a627a8bcc7726af8aea1d975ca3d801e142a632c36fa78eb9b2aa0b011240d2b",
+      "emitted_functions": [
+        {
+          "name": "norrath_wave_maker_get_wavelet_mat",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-wavelet-mat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-check-for-water/world_check_for_water.cpp",
+      "source_sha256": "3636e16c537152bbcf4f96586c338790587c219a1436bf87326e19080c6c2f68",
+      "object_sha256": "9cd308944dbdc6676080863aad8e18d4bc9c01540fe609165959a3ab896f3ea4",
+      "emitted_functions": [
+        {
+          "name": "worldCheckForWater__FP12_worldHeaderG6Point3fPf",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-check-for-water/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-clip-motion/world_clip_motion.cpp",
+      "source_sha256": "de7b985ebeea9ba85db0f15b467007409a2edab8dc7d38b65ff52d7454ae61ae",
+      "object_sha256": "6cdab9b69213f9416bce44d6c85735a7e7c14be0e34149b25d4df04323e9cae6",
+      "emitted_functions": [
+        {
+          "name": "worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3",
+          "compiled_body_bytes": 1644
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-clip-motion/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-find-height/world_find_height.cpp",
+      "source_sha256": "d932a196d668baa9e114d28d44d73d64013efde794bd1ee726261e56dc0afe03",
+      "object_sha256": "456585d65d86886cc5f51b23fd1d0543fba8ca62515ce0bf8f8457e3e2aa22dc",
+      "emitted_functions": [
+        {
+          "name": "worldFindHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 788
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-find-height/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-find-stand-height/world_find_stand_height.cpp",
+      "source_sha256": "cbc15d70b2a33424c27a596ee03355967039ba2572883f7267c719af4b60f0b8",
+      "object_sha256": "49b0f9546d1f886f88f2189e7b3645dab3f89d90dbee9cb10c27ae16c1be7184",
+      "emitted_functions": [
+        {
+          "name": "worldFindStandHeight__FP12_worldHeaderG6Point3f",
+          "compiled_body_bytes": 884
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-find-stand-height/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-hitscan/world_hitscan.cpp",
+      "source_sha256": "2561e23ed459f132159b849d5594e9868957c3f1fe8157bafc745c6a489c5c08",
+      "object_sha256": "cd552c2f1a0cd6ae27f39ba6a10e56f10a65e0e03b0365c0d14ff53e7727e3ec",
+      "emitted_functions": [
+        {
+          "name": "worldHitscan__FP12_worldHeaderG6Point3T1fi",
+          "compiled_body_bytes": 1804
+        },
+        {
+          "name": "norrath_world_hitscan",
+          "compiled_body_bytes": 1804
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-hitscan/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-perturb-water/world_perturb_water.cpp",
+      "source_sha256": "b871d4ecc2ffba24d6878b33a8ba478759f08af15672b57273f832b9592048b5",
+      "object_sha256": "840de9e2d9ffb245cb584d8d5bfb0db12ddea53e76559949247ea2adb6c7e99b",
+      "emitted_functions": [
+        {
+          "name": "worldPerturbWater__FP12_worldHeaderG6Point3ff",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-perturb-water/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-plot-route-process/world_plot_route_process.cpp",
+      "source_sha256": "32eddfe062a8e4f1e5cd631d86bfdb2cc75125ca005367155d101f6bd06ff0bb",
+      "object_sha256": "6ba07b7ad336d09f89f256c6b477c54b7bb2cd021ae57fb98d04b032f863b857",
+      "emitted_functions": [
+        {
+          "name": "worldPlotRouteProcess__Fi",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-plot-route-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-release-door/world_release_door.cpp",
+      "source_sha256": "683583d0d7c99c486f634758795cc2801833e2b5abba73af2ce360ceca276944",
+      "object_sha256": "2c3c9a1431f55db0dba6bd10d687da920e8a24a7fb39ce8267c4610b05e7c048",
+      "emitted_functions": [
+        {
+          "name": "worldReleaseDoor__FP12_worldHeaderi",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-release-door/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-c",
+      "source": "sources/w9-render-math-c-world-set-view-matricies/world_set_view_matricies.cpp",
+      "source_sha256": "f52b93e6d03d591e8711a5219fe65483cf3b341cb284f8ea16381e564d973f07",
+      "object_sha256": "9f88d8b89f9e444a2158fde919a02343da65b4fb4b4293c51ec3e08051fb8563",
+      "emitted_functions": [
+        {
+          "name": "worldSetViewMatricies__FP6Point3P8Matrix34",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-c-world-set-view-matricies/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
