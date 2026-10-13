@@ -7959,3 +7959,25 @@ Closed: `_$_10Arenabeast`, `_$_10AutoObject`, `_$_13AutoContainer`, `_$_8AntQuee
 
 Opened: `__7AntWaveP10GameObjectG6Point3si`, `addTurnAnimation__8AntQueen`, `alternateEnemyInZone__8Creatureffss`, `dropTreasure__4itemG6Point3iffffffPci`, `enemyInZone2__8Creatureffssfi`, `findEvadeDestination__8AntQueen`, `norrath_auto_chest_msg_run_fuseParticle_bytes`, `norrath_auto_chest_msg_run_smokeParticle_bytes`, `produceGeneralDamage__8CreatureffssiiiiPQ24item11description`, `setOnFire__6PhPropi`, `spawnItems__9AutoChest`, `subTurnAnimation__8AntQueen`
 - 2026-10-13 02:32 CDT — `agents/w10-actor-b` — 1170 unresolved imports
+
+## agents/w10-actor-c
+
+Merged (merge commit, branch tip `8a3e5d01`, 12 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (36 function bodies) with fresh `input_order` values 4002
+through 4032. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, three only without it. Most need `-DNORRATH_W10AC_HOST` (named in each check's first comment) so the source maps 32-bit pointer words to host addresses, and the unit source on the command line; without that they crash. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4031 authored inputs, 2951 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1170 |
+| After | 1148 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `_$_10AutoPropLP`, `_$_10BlackWidow`, `_$_5Chest`, `_$_6Badger`, `_$_8Catapult`, `__tf10AutoPropLP`, `__tf10BlackWidow`, `__tf5Chest`, `__tf6Badger`, `__tf8Catapult`, `__ti10AutoPropLP`, `__ti8AutoProp`, `clone__10BlackWidow`, `clone__5Chest`, `clone__6Badger`, `msg_draw__10BlackWidow`, `msg_draw__5Chest`, `msg_draw__6Badger`, `msg_draw__8Catapult`, `msg_getPokeName__5ChestPUsi`, `msg_hurt__8CatapultfP10GameObjecti`, `msg_load__8CatapultPc`, `msg_moveCollision__6BadgerPP10GameObject`, `msg_run__10AutoObject`, `msg_run__10BlackWidow`, `msg_run__6Badger`, `msg_run__8Catapult`, `msg_save__10AutoObjectPc`, `msg_save__8CatapultPc`, `msg_trigger__8Catapulti`, `setState__10BlackWidowi`, `setState__6Badgeri`
+
+Opened: `bActive__3Web`, `breakWeb__3Web`, `detach__11FireBomblet`, `draw__3WebG6Point3`, `ectopileParticle1`, `loseBodyPart__10BlackWidowi`, `reset__3Web`, `run__3WebG6Point3i`, `setHold__11FireBombleti`, `start__3WebG6Point3P8Creaturefi`
