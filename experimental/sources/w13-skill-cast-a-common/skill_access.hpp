@@ -11,6 +11,7 @@ struct Point3 { float x, y, z; };
 extern unsigned char* w13_skill_cast_a_host_base;
 int w13_skill_cast_a_host_call(unsigned function_word, void* adjusted_skill, int rank, int constant);
 int w13_skill_cast_a_host_call3(unsigned function_word, void* adjusted_skill, int a1, int a2, void* a3);
+int w13_skill_cast_a_host_call_object(unsigned function_word, void* adjusted_object, void* a1);
 #endif
 
 namespace w13sca {
@@ -45,6 +46,19 @@ inline int call_skill_entry3(unsigned char* skill, unsigned tableOffset, int a1,
     return w13_skill_cast_a_host_call3(function, adjusted, a1, a2, a3);
 #else
     return reinterpret_cast<int (*)(void*, int, int, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a1, a2, a3);
+#endif
+}
+
+// Same table layout on another object: the table address is the word at object+tableWordOffset and the entry at
+// tableOffset takes one pointer argument besides the adjusted receiver.
+inline int call_object_entry(unsigned char* object, unsigned tableWordOffset, unsigned tableOffset, void* a1) {
+    const unsigned char* entry = from_word(*reinterpret_cast<unsigned*>(object + tableWordOffset)) + tableOffset;
+    unsigned char* adjusted = object + *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W13_SKILL_CAST_A_HOST)
+    return w13_skill_cast_a_host_call_object(function, adjusted, a1);
+#else
+    return reinterpret_cast<int (*)(void*, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a1);
 #endif
 }
 
