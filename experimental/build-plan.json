@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4735,
+  "default_authored_inputs": 4766,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3545,6 +3545,37 @@
     "sources/w11-vi-misc-b-wnd-ctor/ctor.cpp": "3c3777bacd9ad3db9c3b560168180e8be2631dd9f806ddab14e76e4f68650191",
     "sources/w11-vi-misc-b-wnd-dtor/dtor.cpp": "1c9448b9d7741842c603b8852d229597218f75d7852b5b60e699a9cbe55aad07",
     "sources/w11-vi-misc-b-wnd-remove-child/remove_child.cpp": "4dd29023061f0d7d60a63c48da378512f896cd7a4f505e266df20fb38dba1e81",
+    "sources/w11-vi-render-a-atmosphere-clear/clear.cpp": "638962c95867338f1f06fe2a92469ce4301c8a0388b026fadd7eaaf8ad78af85",
+    "sources/w11-vi-render-a-atmosphere-ctor/ctor.cpp": "490ef43ef1128328c68b492ec092fa3a2f6ab521c6631827144551a56e14d4e6",
+    "sources/w11-vi-render-a-atmosphere-dtor/dtor.cpp": "cd0f32dd1fc47c6d078800cec47bba882cd208e068045bf75e3d3a82591303e4",
+    "sources/w11-vi-render-a-atmosphere-init/init.cpp": "bb325ddd31110cd09d73397c71ef0606dc13dad68f4254730b9111a134bedaaa",
+    "sources/w11-vi-render-a-atmosphere-render-sky/render_sky.cpp": "8b3c33203b34a3c529fb0fb06a75c72b7c13b2bb51201dccc7c999bf0a8796ef",
+    "sources/w11-vi-render-a-atmosphere-render-weather/render_weather.cpp": "4d49026fa8861dcf5ca4e4f137be12803e013e81f3a8a9aace9a5cacda5d3420",
+    "sources/w11-vi-render-a-atmosphere-update/update.cpp": "103480a79cf953d5332ea06b7dd27c9f6242ef294e32789ee21961e3821a34c2",
+    "sources/w11-vi-render-a-camera-calc-axes/calc_axes.cpp": "e5e7245b91f65fbc17b104a863ac8c95581ef218262158f908e138d4b7b93d03",
+    "sources/w11-vi-render-a-camera-update/update.cpp": "cfe1cb620891577242c7192de62b5d4b75d5819727dca68508edd283238a0d0c",
+    "sources/w11-vi-render-a-clipstack-clear/clear.cpp": "4c428fe0273838dbd1ba2c651fa0e4840e1a526db21405a83bf1ea0ca5a2d5bb",
+    "sources/w11-vi-render-a-clipstack-init/init.cpp": "38bbdca4b5103060eeb4f2616d66e8afed800799d4fd69961a5fc14b4ebd05fa",
+    "sources/w11-vi-render-a-clipstack-reset/reset.cpp": "1d6f39cc250bea219ad3fdff78b3ad76eb469a45e5c7f486a8fea955fc138e62",
+    "sources/w11-vi-render-a-collide-clear/clear.cpp": "7ddabba3df47c6ab141d6085c2449db59ddde1b6721b763137efb5664b76e6a4",
+    "sources/w11-vi-render-a-csffile-parse/parse.cpp": "4fb6248f1cba66d24acc83e6b754459e3ad766ba610bdb71ba5a5eb8f34ddf06",
+    "sources/w11-vi-render-a-effectvolume-global-free/global_free.cpp": "cf52d0b4fe20b5ac824791db26bba119f6135c923274944a17b5c5a532417b58",
+    "sources/w11-vi-render-a-effectvolume-global-init/global_init.cpp": "daabd950534900f055a6d6d008cd2f80e8a159bc979663e65d53656a2d0f2354",
+    "sources/w11-vi-render-a-hspriteanim-dtor/dtor.cpp": "b09a03b49bf0a69c3b0969892cbe8321d78231a44b7cf58064674915d2729859",
+    "sources/w11-vi-render-a-material-init-solid-fill/init_solid_fill.cpp": "5b9be6d42b9adc79c6ef71d8c2a9efe51e48714e3b99e05206bbaf0efbc8da30",
+    "sources/w11-vi-render-a-material-set-layer-blend-mode/set_layer_blend_mode.cpp": "a52f4dd50045c2a8cf75b6043611eaf7aaf1c0f8f23abc1a1aeb70603c9af24f",
+    "sources/w11-vi-render-a-matrix44-identity/identity.cpp": "f66aaed9557c3e3f2afec858dc70c07ef4397dcf301e1ae6eb589b5e212d3fea",
+    "sources/w11-vi-render-a-namesprite-raster-deferred/raster_deferred.cpp": "54266a68c4bbf6b5998bcbd6cca91e1d51ca25ccbf6b5afe446d7ab06fb951a7",
+    "sources/w11-vi-render-a-particlesystem-clear/clear.cpp": "615a78a59bb35d7118ac33fdc84337532727dab7d3415963bd163dda49e2e14e",
+    "sources/w11-vi-render-a-particlesystem-ctor/ctor.cpp": "de8e188a96cff4f4ad69f49b66dfba75097c93c90c7d8c86515f9eacb55886d0",
+    "sources/w11-vi-render-a-particlesystem-dtor/dtor.cpp": "5d6cd9ec148c115d88838b022d33fdc768343b41a73ff9dbcdc623c3d4355e5b",
+    "sources/w11-vi-render-a-particlesystem-init/init.cpp": "5365bf26b4e5069c6a9bd1f2035a11a028c3eb36fea46b0e23ebc411a9c51624",
+    "sources/w11-vi-render-a-particlesystem-render/render.cpp": "8e94e7e1a14478807f0337b09bc4097caaad12ab42e2b3331ee637c8137d1fc2",
+    "sources/w11-vi-render-a-querytrilist-clear/clear.cpp": "9312715980480e20e62175aab5cfc1a10a9cd20b37ef6dbe0b4408d4af2ad782",
+    "sources/w11-vi-render-a-querytrilist-ctor/ctor.cpp": "0e779708d3147106dd22999d88c36a9b46254fda16af762b8be2ba1d862855c0",
+    "sources/w11-vi-render-a-querytrilist-dtor/dtor.cpp": "a3f07b267f6d024d54005a1357e124a5327b2132c1d098a42736e97dc79c69fd",
+    "sources/w11-vi-render-a-querytrilist-init/init.cpp": "6bd9a38cf59b1fd6a4a18fba0f9b72a648006222426627e786ba3afb1ab1bf97",
+    "sources/w11-vi-render-a-radialflora-clear/clear.cpp": "3ce3e9c30a0ab4952d10a64398ba99743e78458627aebd0bd36b14c5eed24056",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -69019,6 +69050,479 @@
           "name": "getChance__12SkillLifeTapi"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4737,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "638962c95867338f1f06fe2a92469ce4301c8a0388b026fadd7eaaf8ad78af85",
+      "source": "sources/w11-vi-render-a-atmosphere-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 424,
+          "name": "Clear__12VIAtmosphereR7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4738,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "490ef43ef1128328c68b492ec092fa3a2f6ab521c6631827144551a56e14d4e6",
+      "source": "sources/w11-vi-render-a-atmosphere-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "__12VIAtmosphere"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4739,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "cd0f32dd1fc47c6d078800cec47bba882cd208e068045bf75e3d3a82591303e4",
+      "source": "sources/w11-vi-render-a-atmosphere-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "_$_12VIAtmosphere"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4740,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_init.o",
+      "profile": "authored_cpp",
+      "sha256": "bb325ddd31110cd09d73397c71ef0606dc13dad68f4254730b9111a134bedaaa",
+      "source": "sources/w11-vi-render-a-atmosphere-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 196,
+          "name": "setup_material.isra.0"
+        },
+        {
+          "compiled_body_bytes": 2292,
+          "name": "Init__12VIAtmospherelR8VIRasteri"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4741,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_render_sky.o",
+      "profile": "authored_cpp",
+      "sha256": "8b3c33203b34a3c529fb0fb06a75c72b7c13b2bb51201dccc7c999bf0a8796ef",
+      "source": "sources/w11-vi-render-a-atmosphere-render-sky/render_sky.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 616,
+          "name": "RenderSky__12VIAtmosphereR7VISceneR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4742,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_render_weather.o",
+      "profile": "authored_cpp",
+      "sha256": "4d49026fa8861dcf5ca4e4f137be12803e013e81f3a8a9aace9a5cacda5d3420",
+      "source": "sources/w11-vi-render-a-atmosphere-render-weather/render_weather.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 444,
+          "name": "draw_group"
+        },
+        {
+          "compiled_body_bytes": 860,
+          "name": "RenderWeather__12VIAtmosphereR7VISceneR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4743,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_atmosphere_update.o",
+      "profile": "authored_cpp",
+      "sha256": "103480a79cf953d5332ea06b7dd27c9f6242ef294e32789ee21961e3821a34c2",
+      "source": "sources/w11-vi-render-a-atmosphere-update/update.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 432,
+          "name": "Update__12VIAtmosphereR7VISceneR8VICameralff"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4744,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_camera_calc_axes.o",
+      "profile": "authored_cpp",
+      "sha256": "e5e7245b91f65fbc17b104a863ac8c95581ef218262158f908e138d4b7b93d03",
+      "source": "sources/w11-vi-render-a-camera-calc-axes/calc_axes.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 332,
+          "name": "CalcAxes__8VICameraRC7VIVect3R7VIVect3N22"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4745,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_camera_update.o",
+      "profile": "authored_cpp",
+      "sha256": "cfe1cb620891577242c7192de62b5d4b75d5819727dca68508edd283238a0d0c",
+      "source": "sources/w11-vi-render-a-camera-update/update.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 536,
+          "name": "Update__8VICameraRC7VIVect3R7VIVect3N22R10VIMatrix44"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4746,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_clipstack_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "4c428fe0273838dbd1ba2c651fa0e4840e1a526db21405a83bf1ea0ca5a2d5bb",
+      "source": "sources/w11-vi-render-a-clipstack-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "Clear__11VIClipStack"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4747,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_clipstack_init.o",
+      "profile": "authored_cpp",
+      "sha256": "38bbdca4b5103060eeb4f2616d66e8afed800799d4fd69961a5fc14b4ebd05fa",
+      "source": "sources/w11-vi-render-a-clipstack-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "Init__11VIClipStack"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4748,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_clipstack_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "1d6f39cc250bea219ad3fdff78b3ad76eb469a45e5c7f486a8fea955fc138e62",
+      "source": "sources/w11-vi-render-a-clipstack-reset/reset.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "Reset__11VIClipStack"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4749,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_collide_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "7ddabba3df47c6ab141d6085c2449db59ddde1b6721b763137efb5664b76e6a4",
+      "source": "sources/w11-vi-render-a-collide-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "Clear__9VICollide"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4750,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_csffile_parse.o",
+      "profile": "authored_cpp",
+      "sha256": "4fb6248f1cba66d24acc83e6b754459e3ad766ba610bdb71ba5a5eb8f34ddf06",
+      "source": "sources/w11-vi-render-a-csffile-parse/parse.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "Parse__9VICSFFileR6VIFileR10VIESFParseR7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4751,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_effectvolume_global_free.o",
+      "profile": "authored_cpp",
+      "sha256": "cf52d0b4fe20b5ac824791db26bba119f6135c923274944a17b5c5a532417b58",
+      "source": "sources/w11-vi-render-a-effectvolume-global-free/global_free.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "GlobalFree__14VIEffectVolume"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4752,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_effectvolume_global_init.o",
+      "profile": "authored_cpp",
+      "sha256": "daabd950534900f055a6d6d008cd2f80e8a159bc979663e65d53656a2d0f2354",
+      "source": "sources/w11-vi-render-a-effectvolume-global-init/global_init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1536,
+          "name": "GlobalInit__14VIEffectVolumeP7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4753,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_hspriteanim_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "b09a03b49bf0a69c3b0969892cbe8321d78231a44b7cf58064674915d2729859",
+      "source": "sources/w11-vi-render-a-hspriteanim-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4754,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_material_init_solid_fill.o",
+      "profile": "authored_cpp",
+      "sha256": "5b9be6d42b9adc79c6ef71d8c2a9efe51e48714e3b99e05206bbaf0efbc8da30",
+      "source": "sources/w11-vi-render-a-material-init-solid-fill/init_solid_fill.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "InitSolidFill__10VIMaterial"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4755,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_material_set_layer_blend_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "a52f4dd50045c2a8cf75b6043611eaf7aaf1c0f8f23abc1a1aeb70603c9af24f",
+      "source": "sources/w11-vi-render-a-material-set-layer-blend-mode/set_layer_blend_mode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "SetLayerBlendMode__10VIMateriali16VIAlphaBlendMode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4756,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_matrix44_identity.o",
+      "profile": "authored_cpp",
+      "sha256": "f66aaed9557c3e3f2afec858dc70c07ef4397dcf301e1ae6eb589b5e212d3fea",
+      "source": "sources/w11-vi-render-a-matrix44-identity/identity.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "Identity__10VIMatrix44"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4757,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_namesprite_raster_deferred.o",
+      "profile": "authored_cpp",
+      "sha256": "54266a68c4bbf6b5998bcbd6cca91e1d51ca25ccbf6b5afe446d7ab06fb951a7",
+      "source": "sources/w11-vi-render-a-namesprite-raster-deferred/raster_deferred.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 556,
+          "name": "RasterDeferred__12VINameSpriteR8VIRaster"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4758,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_particlesystem_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "615a78a59bb35d7118ac33fdc84337532727dab7d3415963bd163dda49e2e14e",
+      "source": "sources/w11-vi-render-a-particlesystem-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 308,
+          "name": "Clear__16VIParticleSystemR12VIDictionary"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4759,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_particlesystem_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "de8e188a96cff4f4ad69f49b66dfba75097c93c90c7d8c86515f9eacb55886d0",
+      "source": "sources/w11-vi-render-a-particlesystem-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "__16VIParticleSystem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4760,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_particlesystem_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "5d6cd9ec148c115d88838b022d33fdc768343b41a73ff9dbcdc623c3d4355e5b",
+      "source": "sources/w11-vi-render-a-particlesystem-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_16VIParticleSystem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4761,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_particlesystem_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5365bf26b4e5069c6a9bd1f2035a11a028c3eb36fea46b0e23ebc411a9c51624",
+      "source": "sources/w11-vi-render-a-particlesystem-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 304,
+          "name": "Init__16VIParticleSystemlP8VIRasteri"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4762,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_particlesystem_render.o",
+      "profile": "authored_cpp",
+      "sha256": "8e94e7e1a14478807f0337b09bc4097caaad12ab42e2b3331ee637c8137d1fc2",
+      "source": "sources/w11-vi-render-a-particlesystem-render/render.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1268,
+          "name": "Render__16VIParticleSystemlR8VIRaster"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4763,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_querytrilist_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "9312715980480e20e62175aab5cfc1a10a9cd20b37ef6dbe0b4408d4af2ad782",
+      "source": "sources/w11-vi-render-a-querytrilist-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 80,
+          "name": "Clear__14VIQueryTriList"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4764,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_querytrilist_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "0e779708d3147106dd22999d88c36a9b46254fda16af762b8be2ba1d862855c0",
+      "source": "sources/w11-vi-render-a-querytrilist-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "__14VIQueryTriList"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4765,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_querytrilist_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "a3f07b267f6d024d54005a1357e124a5327b2132c1d098a42736e97dc79c69fd",
+      "source": "sources/w11-vi-render-a-querytrilist-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_14VIQueryTriList"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4766,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_querytrilist_init.o",
+      "profile": "authored_cpp",
+      "sha256": "6bd9a38cf59b1fd6a4a18fba0f9b72a648006222426627e786ba3afb1ab1bf97",
+      "source": "sources/w11-vi-render-a-querytrilist-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "Init__14VIQueryTriListiRC6VIBBoxRC7VIVect3f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4767,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_render_a_radialflora_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "3ce3e9c30a0ab4952d10a64398ba99743e78458627aebd0bd36b14c5eed24056",
+      "source": "sources/w11-vi-render-a-radialflora-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "Clear__19VIRadialFloraSystem"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -69118,7 +69622,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "7b2507e89d99765d779d89e4c76c86273232b99c1de30e988cc66cc927d13e78",
+  "snapshot_sha256": "63917be7fc1e081ba59d88f1db9956a821a915784258112bb68111281a7e229b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
