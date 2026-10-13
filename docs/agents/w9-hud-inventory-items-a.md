@@ -36,6 +36,7 @@ behavior reconstructions, not byte matches.
 | `w9-hud-inventory-items-a-get-best-slot-name` | `getBestSlotName__FPc` | 0x25ba20 |
 | `w9-hud-inventory-items-a-drink-potion` | `drinkPotion__6Playeriiii` | 0x1a8358, 2088 bytes |
 | `w9-hud-inventory-items-a-get-hair-and-skin` | `getHairAndSkin__Fi` | 0x27ed50, 1120 bytes |
+| `w9-hud-inventory-items-a-create-random` | `createRandom__4itemPQ24item11descriptioniiii` | 0x104440, 4220 bytes |
 
 ## Data objects defined
 
@@ -67,10 +68,49 @@ the +20 name is, and the text buffer size (128 bytes here).
   `docs/agents/w8-hud-text-items-a.md`). It is the same function under its mangled name;
   I did not write a duplicate. The integrator should alias the two names, or
   that package should export the mangled name.
-- `createRandom__4itemPQ24item11descriptioniiii` (0x104440, 4220 bytes): see the end of
-  this file for the state of the attempt.
 - `gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` (0x1ce218, 9184
   bytes): not attempted; it is the largest function in the package and its callers are
   outside it (Trap run and the auto prop run units).
 
+## createRandom
+
+Compared against the image over 300 scenarios (before a readability refactor) and 120 (after),
+0 differences in call log (create, getValue, powf, strstr, strcpy, strcat with arguments),
+changed bytes and result; 1043 of 1055 instructions covered. Scenarios mutate the real item,
+prefix and suffix tables (flags, categories, masks, null texts, levels). Uncovered: the empty
+prefix-table case, the path where mode 2 meets a non-"potion" row with a set suffix text
+(the tables rarely allow it; covered only by the mutated runs partly), and padding.
+Observed: table layouts (item rows 64 bytes, prefix 40, suffix 20), random step formula,
+all branches. Unknown: meaning of modes, categories, flag bits, kinds.
+
 ## End summary
+
+- Imports closed: ClericSkillTree, RangerSkillTree, ShadowKnightSkillTree, WarriorSkillTree,
+  WizardSkillTree, gSkillTree, bossMeterAlpha, bossMeterCurrent, bossMeterMax,
+  cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture, cacheLoadCache,
+  changeBeard__Fii, changeHairColor__Fii, changeHairStyle__Fii, changeSkin__Fii, coins,
+  compareToItem__Q24item11descriptionPQ24item11description, countUp,
+  createRandom__4itemPQ24item11descriptioniiii, curFont, currActivityScore, currScorePos,
+  drinkPotion__6Playeriiii, finishFrameCount, fontCharAlpha,
+  fontPrintWrapCentered__FiiPciiii, fontPrintWrapCenteredu__FiiPUsiiii, gameButtonToIcon__Fi,
+  gameDifficultyScale__Fv, gameTreasureRamp__Fv, getBestSlotName__FPc, getHairAndSkin__Fi.
+- Still open: `create__4itemPcPQ24item11descriptionii` (same function as `norrath_player_create_item`;
+  needs an alias) and `gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb`
+  (0x1ce218, 9184 bytes, not attempted: it is by far the largest function and I judged it
+  would not get a verified result in this sitting).
+- Imports opened: `_4item$itemTable` (authored by items-player-item-table as
+  `norrath_item_table_view`; needs alias), `_4item$prefixTable`, `_4item$suffixTable`,
+  `getValue__4itemPQ24item11description`, `powf`, `strstr`, `strcpy`, `strcat`,
+  `syncRandState`, `nmPlayers`, `player`, `getVifAndTex__FPcT0PP12_modelHeaderPP8_texture`,
+  `lumpFindResource__FPcT0`, `npcLumpName` (local symbol), `targets`, `targetObjs`,
+  `sortedDir`, `sortedDirCount`, `scriptGetGameState__FPc`, `scriptSetGameState__FPci`,
+  `textGetString__FPc`, `multiHudAddHelpMessage__FiPUsT1i`, `hudGetFadeIconPos__Fii`,
+  `soundPlaySequence__FP15AnimationHeaderP10GameObjectf`, `netPlayerIsLocal__Fi`,
+  `msgInventoryGridDropItem__Fiiciiii`, `removeItemFromInventory__Fiiii`,
+  `playerGetPotionsLeft__Fii`, `playerRecomputeWeight__Fi`, `fadeTimer`, `fadeIconY`,
+  `invGrid`, `interfaceOn`, plus those of the earlier font/cache units.
+- Build-plan entries needed: one `authored_cpp` entry per directory listed above (sources
+  `<dir>/<main>.cpp`; `host_check.cpp` files are not inputs). I did not edit the plan.
+- Authored but never executed on hardware: all of it. Only host checks and the private
+  paired interpreter runs were done.
+- Unknown: meanings noted in each source header.
