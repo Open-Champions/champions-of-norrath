@@ -28,9 +28,9 @@ on hardware or inside the game.
 
 | Function | Address, original size | Notes |
 | --- | --- | --- |
-| `quatMul__FP4QuatN20` | | Hamilton product, result staged so the destination may alias |
-| `matTransform__FP6Point3P8Matrix34T0` | | point times 3x4 matrix, translation row last |
-| `rayHit__FP6Point3N30` | | float result; two pool literals are not the nearest floats, written as exact hex floats |
+| `quatMul__FP4QuatN20` | 0x00159ec0, 208 | Hamilton product, result staged so the destination may alias |
+| `matTransform__FP6Point3P8Matrix34T0` | 0x00159ae0, 184 | point times 3x4 matrix, translation row last |
+| `rayHit__FP6Point3N30` | 0x00157308, 292 | float result; two pool literals are not the nearest floats, written as exact hex floats |
 | `segmentLineHit__FP6Point3N50` | 0x00157430, 564 | segment against plane with clamped denominator, then a span check |
 | `resetScissor__Fv` | 0x0018bf30, 328 | GIF packet setting two registers to a 0x4ff by 0x1bf area, queued on list 4 |
 | `modelSetGlobalShadowBrightness__Ff` | 0x0016ccf8, 24 | argument times 0.25f stored to `shadowBrightness` and `globalShadowBrightness` |
