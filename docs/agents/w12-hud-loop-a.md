@@ -8,12 +8,13 @@ claimed to match the original bytes.
 
 ## What was found about the list
 
-Of the 33 names, 8 functions and 3 data objects already had authored sources in the tree from earlier waves
-(`w10-front-a-*`, `w11-front-a-*`, `w9-frontend-a-*`, `w9-hud-inventory-items-a-*`, `w10-render-b-*`) that were never
-selected into `experimental/build-plan.json`. Their committed host checks (the `w11-front-a-*` directories) pass here.
-I did not rewrite them. I re-ran a private paired comparison with the original for all eight functions (details below)
-and I list them in the plan entries. The other 22 names (10 functions, 12 data objects, one more data object being
-`creditsText`, not authored) are new in this package.
+Of the 33 names, 18 are functions and 15 are data objects. Eight of the functions (the `MC_*` group and
+`coreStartLoadingScreen__Fv`) already had authored sources in the tree from earlier waves (`w10-front-a-*`, `w9-frontend-a-*`,
+`w11-front-a-*`) that were never selected into `experimental/build-plan.json`; their committed host checks (the `w11-front-a-*`
+directories) pass here. I did not rewrite them: I re-ran a private paired comparison with the original for all eight
+(below) and list them in the plan entries. Four of the data objects (`hairStyleSetting`, `hairColorSetting`, `beardSetting`,
+`invHeader`) also had unselected sources, with no host check, so this package supplies checked replacements. The other ten
+functions and ten more data objects are new; `creditsText` is not authored (see Unknown).
 
 ## Observed, inferred, unknown: per function
 
@@ -66,7 +67,8 @@ Every source starts with its own observed / inferred / unknown comment. Short fo
   unless stated. The same harness re-ran the earlier-wave functions: `MC_SetRamNmPlayers` 12, `MC_ConvertTempPlayerToReal` 9,
   `MC_BuildPackedPlayer` 10, `MC_NetPack` 16 (133 of 135), `MC_NetUnPack` 46 (202 of 213),
   `coreStartLoadingScreen` 60 (390 of 391), `MC_LoadLevelEntities` 60 (161 of 162), `MC_CheckPlayerImportOrChange` 120
-  (661 of 714; the 100-slot default initialisation the source omits on purpose is not reachable as a difference): all
+  (661 of 714; 48 of the 53 uncovered words are the not-8-byte-aligned variants of the two inlined 4100-byte block
+  copies, which cannot run because player records are 8-byte aligned, and the rest are nops or delay slots): all
   zero mismatches. In `MC_CheckPlayerImportOrChange` the original inlines the player-record copies and the "None" copy
   where the source calls `memcpy` / `strcpy`; those calls were not logged for comparison, which is the only difference
   from the original that the harness is told to ignore.
