@@ -73,15 +73,14 @@ unsigned eRand__10GameObject(void* self);
 float icos__Fi(int angle);
 float isin__Fi(int angle);
 
-namespace {
 using namespace w10n;
 
-void set_colors(unsigned char* o) {
+static void set_colors(unsigned char* o) {
     half(o, 1066) = 183; half(o, 1058) = 183; half(o, 1064) = 110; half(o, 1068) = 255;
     half(o, 1070) = 100; half(o, 1056) = 110; half(o, 1060) = 255; half(o, 1062) = 100;
 }
 
-void melee_round(void* self, unsigned char* o, float range, unsigned limit) {
+static void melee_round(void* self, unsigned char* o, float range, unsigned limit) {
     set_colors(o);
     if (eRand__10GameObject(self) % 100u < limit) {
         produceMeleeDamage__8CreaturefiiiiPQ24item11description(self, range, half(o, 200), half(o, 202), half(o, 204), 0x40008, nullptr);
@@ -90,25 +89,25 @@ void melee_round(void* self, unsigned char* o, float range, unsigned limit) {
     }
 }
 
-void set_state(unsigned char* o, int n) { call_entry(o, 184, static_cast<unsigned long>(n)); }
+static void set_state(unsigned char* o, int n) { call_entry(o, 184, static_cast<unsigned long>(n)); }
 
 // The shared ending of the attack states: face the enemy if needed, then leave the state.
-void leave(unsigned char* o) {
+static void leave(unsigned char* o) {
     if ((static_cast<unsigned short>(half(o, 294)) & 8u) == 0u) set_state(o, 3);
 }
 
-void face_and_leave(void* self, unsigned char* o) {
+static void face_and_leave(void* self, unsigned char* o) {
     if ((static_cast<unsigned short>(half(o, 294)) & 8u) == 0u) { set_state(o, 3); return; }
     turnToFaceEnemy__8Creature(self);
     if ((static_cast<unsigned short>(half(o, 294)) & 8u) == 0u) set_state(o, 3);
 }
 
-void decide(void* self, unsigned char* o) {
+static void decide(void* self, unsigned char* o) {
     if (word(o, 964) == 0u) { set_state(o, 3); return; }
     if (eRand__10GameObject(self) % 100u < 30u) set_state(o, 15);
     else set_state(o, 3);
 }
-}  // namespace
+
 
 void msg_run__8SuperOrc(void* self) {
     unsigned char* const o = static_cast<unsigned char*>(self);
