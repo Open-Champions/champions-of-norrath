@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4976,
+  "default_authored_inputs": 5013,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3264,6 +3264,44 @@
     "sources/w10-world-d-unremove-monster/unremove_monster.cpp": "40b8dab34c80f4d7df02600f5e29dfa13c4e3235dc45a96cf1a7a5cbea41a72e",
     "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
     "sources/w10-world-d-world-state-words/world_state_words.cpp": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
+    "sources/w11-actor-a-add-turn-animation-8antqueen/add_turn_animation.cpp": "70fe010154b6155bbea831aebba0808fbe0a01060e12477d796fb521deff8513",
+    "sources/w11-actor-a-b-crossing-water-8froglock/b_crossing_water.cpp": "85e4ff514fdb57c3882bb22b0f847cb92289efe6e2df4a7363dfa3b69978e19f",
+    "sources/w11-actor-a-b-spawn-mummy-9mummyking/b_spawn_mummy.cpp": "0c282cf4ac92bfe93f62540af73d7b6a74c1a715f23e1db743d371eb798c082b",
+    "sources/w11-actor-a-b-spawn-snake-9mummyking/b_spawn_snake.cpp": "d5698d69ed5744f59286d2ccf28f57d043791a29b4b00c87a51c9fddadb29a46",
+    "sources/w11-actor-a-clone-11firebomblet/clone.cpp": "47f9d40b9c34061de377d357987157945f676cf6e4e0f1557e6fc1c4a2f6c4f9",
+    "sources/w11-actor-a-clone-13missileweapon/clone.cpp": "91903954f3bb8c34a5b4e05dbfc59a569554f0aa9ca6a53909f5baea553593b8",
+    "sources/w11-actor-a-clone-8gutchunk/clone.cpp": "b9809c5d62b259576acff9ff466c39a2e8685cd67e715a5e702064e224486c57",
+    "sources/w11-actor-a-commander-valid-3orc/commander_valid.cpp": "e5d69eb090e4a511eba6a7861aaa14ffb7c26b9f715cff0dcd76f37a0df6a7de",
+    "sources/w11-actor-a-common/access.hpp": "3f202dbdaa9deda800f860d98c3f24edb6e2c84c865c4a8c012d1614ad50382b",
+    "sources/w11-actor-a-death-effect-8innoruuk/death_effect.cpp": "9b00420493a464078cfe313fb656959b3a047d3978838c21fe5e8074d2b34219",
+    "sources/w11-actor-a-delete-commander-3orc/delete_commander.cpp": "156003e98653602444d0b080d99b9ea2ef8d472f3a687cddecc48ee797758efc",
+    "sources/w11-actor-a-detach-11firebomblet/detach.cpp": "bbd06cb7173bcda58155bd904f2a7e2e79f78cf79e438ce479b03e56a2940162",
+    "sources/w11-actor-a-drop-item-3orc/drop_item.cpp": "c0eec73a365d8dd05d8d8c9aea2cc17eced2942e767a898f6be060417a93f2e7",
+    "sources/w11-actor-a-drop-item-6goblin/drop_item.cpp": "e389f00ec41db6838543e163138d460d8d1685b951e747cbc8c1dfc3f3abe4ae",
+    "sources/w11-actor-a-drop-weapon-5demon/drop_weapon.cpp": "052d5fdc50d82555ba3b94fe3e0550f44bf2443f2bb5af83a62decd8fd888686",
+    "sources/w11-actor-a-dtor-11firebomblet/dtor.cpp": "6d491fd38e9d8c95eca21925aa066cca535e5e465c7a6d7449cda176b82dcbb7",
+    "sources/w11-actor-a-dtor-13missileweapon/dtor.cpp": "16108e5f751c9644efbe10b56ace844819e6151874ce8de2315d4a8cf31badc3",
+    "sources/w11-actor-a-dtor-8gutchunk/dtor.cpp": "3e068ec8ad76239caba84f7d555cd58419efdf96a44635b403e84076a35d8d1a",
+    "sources/w11-actor-a-find-closest-shadow-ball-13missileweapon/find_closest_shadow_ball.cpp": "bd26a87e2e4a9a6987a78e19186e90a65d2fe1c3be08af94f0d0cec5d535b185",
+    "sources/w11-actor-a-find-evade-destination-8antqueen/find_evade_destination.cpp": "3d47e386011df24070c665abbdcb3f4d72989699c79740c708d11e4b6c2e2909",
+    "sources/w11-actor-a-generate-dust-7cyclops/generate_dust.cpp": "59458cff2529c88f884437b536dc67e5cf617a24f35e909e5e2ba689af3f7625",
+    "sources/w11-actor-a-lose-body-part-10blackwidow/lose_body_part.cpp": "56613979c97ea6adf9910ec75671a5641eea88dc2490c2ab58d9b563fb4e8670",
+    "sources/w11-actor-a-lose-body-part-10firebeetle/lose_body_part.cpp": "fa611a6bcc9f3629b7c8c9c21f11e32cdf1c66c6dbf077ffe771ec90afb30524",
+    "sources/w11-actor-a-lose-body-part-3anti/lose_body_part.cpp": "17577837e6f6ab21a07f89871039f4ed1d0019c30589b2ff6457e785a5942f5b",
+    "sources/w11-actor-a-msg-collision-13missileweapon/msg_collision.cpp": "835d59d18a55619c280d3ad8d28e49820251b1b2557902fa61989a19c49de7a6",
+    "sources/w11-actor-a-msg-draw-11firebomblet/msg_draw.cpp": "8b641efdda2d24f5fec9a5f992c8af335ecd7d68f7f182bdef346ee35a4a16ab",
+    "sources/w11-actor-a-msg-draw-13missileweapon/msg_draw.cpp": "c85aa5b4bea1adf3a46a78a237f4a57a939aacd5f8634c6c8f5ca1b13be2c8ac",
+    "sources/w11-actor-a-msg-draw-3npc/msg_draw.cpp": "7734056a6d12f23b182d5609fa60bcb711632ed5452a2b4afd27125ba4b3c864",
+    "sources/w11-actor-a-msg-draw-8gutchunk/msg_draw.cpp": "bd821190fbd6669da7062992904568f1dd5d41e1fbc1f49fcfd71552e2f45f95",
+    "sources/w11-actor-a-msg-run-11firebomblet/msg_run.cpp": "8b217cb23830356ec987cc2457fa355fc758f387d6888ca71073269d4edf0801",
+    "sources/w11-actor-a-msg-run-13missileweapon/msg_run.cpp": "1d41950564cac70aa5cc2c249f075a811960ef10ce6bab791756d52d7aed3fab",
+    "sources/w11-actor-a-msg-run-8gutchunk/msg_run.cpp": "998d98fd1b0e7e379ddfcae7741d98b45cb7eb0a26ad6edae98e2abb07b32e66",
+    "sources/w11-actor-a-set-hold-11firebomblet/set_hold.cpp": "6d163db97c8f178a3d569b6d810c4fd7cef7f9434802f6f4868fc3360babcd97",
+    "sources/w11-actor-a-spawn-items-9autochest/spawn_items.cpp": "73f8221f3387e59c30c18d8d894d1095b8e3bc90ea964b70d8094ccb989465d7",
+    "sources/w11-actor-a-sub-turn-animation-8antqueen/sub_turn_animation.cpp": "f001e0a6958d8d0392ff8d45d96f9bb2e68720ed955b8fa963f4ce8095687a0c",
+    "sources/w11-actor-a-tf-11firebomblet/typeinfo.cpp": "129162d5f065dbf122c25194198799c3bc68d49752a89ece79810b476db57ac5",
+    "sources/w11-actor-a-tf-13missileweapon/typeinfo.cpp": "88b879f4527df0329edb84ca8bd96a24a0b2f4495200cb8e68354dacead85346",
+    "sources/w11-actor-a-tf-8gutchunk/typeinfo.cpp": "7d81814c7f2fba7fdcaa19e91d8d6f0aa90e4f6365a317cedbfd34945cc79352",
     "sources/w11-crt-a-args/args.cpp": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
     "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
     "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
@@ -72355,6 +72393,621 @@
           "name": "modelSetRelightAttachment__FG6Point3"
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4978,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_add_turn_animation_8antqueen.o",
+      "profile": "authored_cpp",
+      "sha256": "70fe010154b6155bbea831aebba0808fbe0a01060e12477d796fb521deff8513",
+      "source": "sources/w11-actor-a-add-turn-animation-8antqueen/add_turn_animation.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 468,
+          "name": "addTurnAnimation__8AntQueen"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4979,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_b_crossing_water_8froglock.o",
+      "profile": "authored_cpp",
+      "sha256": "85e4ff514fdb57c3882bb22b0f847cb92289efe6e2df4a7363dfa3b69978e19f",
+      "source": "sources/w11-actor-a-b-crossing-water-8froglock/b_crossing_water.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "bCrossingWater__8Froglock"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4980,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_b_spawn_mummy_9mummyking.o",
+      "profile": "authored_cpp",
+      "sha256": "0c282cf4ac92bfe93f62540af73d7b6a74c1a715f23e1db743d371eb798c082b",
+      "source": "sources/w11-actor-a-b-spawn-mummy-9mummyking/b_spawn_mummy.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "bSpawnMummy__9MummyKing"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4981,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_b_spawn_snake_9mummyking.o",
+      "profile": "authored_cpp",
+      "sha256": "d5698d69ed5744f59286d2ccf28f57d043791a29b4b00c87a51c9fddadb29a46",
+      "source": "sources/w11-actor-a-b-spawn-snake-9mummyking/b_spawn_snake.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "bSpawnSnake__9MummyKing"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4982,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_clone_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "47f9d40b9c34061de377d357987157945f676cf6e4e0f1557e6fc1c4a2f6c4f9",
+      "source": "sources/w11-actor-a-clone-11firebomblet/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 392,
+          "name": "clone__11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4983,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_clone_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "91903954f3bb8c34a5b4e05dbfc59a569554f0aa9ca6a53909f5baea553593b8",
+      "source": "sources/w11-actor-a-clone-13missileweapon/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 976,
+          "name": "clone__13MissileWeapon"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4984,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_clone_8gutchunk.o",
+      "profile": "authored_cpp",
+      "sha256": "b9809c5d62b259576acff9ff466c39a2e8685cd67e715a5e702064e224486c57",
+      "source": "sources/w11-actor-a-clone-8gutchunk/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 444,
+          "name": "clone__8GutChunk"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4985,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_commander_valid_3orc.o",
+      "profile": "authored_cpp",
+      "sha256": "e5d69eb090e4a511eba6a7861aaa14ffb7c26b9f715cff0dcd76f37a0df6a7de",
+      "source": "sources/w11-actor-a-commander-valid-3orc/commander_valid.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "commanderValid__3Orc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4986,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_death_effect_8innoruuk.o",
+      "profile": "authored_cpp",
+      "sha256": "9b00420493a464078cfe313fb656959b3a047d3978838c21fe5e8074d2b34219",
+      "source": "sources/w11-actor-a-death-effect-8innoruuk/death_effect.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 828,
+          "name": "deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4987,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_delete_commander_3orc.o",
+      "profile": "authored_cpp",
+      "sha256": "156003e98653602444d0b080d99b9ea2ef8d472f3a687cddecc48ee797758efc",
+      "source": "sources/w11-actor-a-delete-commander-3orc/delete_commander.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "deleteCommander__3Orc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4988,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_detach_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "bbd06cb7173bcda58155bd904f2a7e2e79f78cf79e438ce479b03e56a2940162",
+      "source": "sources/w11-actor-a-detach-11firebomblet/detach.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "detach__11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4989,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_drop_item_3orc.o",
+      "profile": "authored_cpp",
+      "sha256": "c0eec73a365d8dd05d8d8c9aea2cc17eced2942e767a898f6be060417a93f2e7",
+      "source": "sources/w11-actor-a-drop-item-3orc/drop_item.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1036,
+          "name": "dropItem__3Orci"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4990,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_drop_item_6goblin.o",
+      "profile": "authored_cpp",
+      "sha256": "e389f00ec41db6838543e163138d460d8d1685b951e747cbc8c1dfc3f3abe4ae",
+      "source": "sources/w11-actor-a-drop-item-6goblin/drop_item.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "dropItem__6Goblini"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4991,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_drop_weapon_5demon.o",
+      "profile": "authored_cpp",
+      "sha256": "052d5fdc50d82555ba3b94fe3e0550f44bf2443f2bb5af83a62decd8fd888686",
+      "source": "sources/w11-actor-a-drop-weapon-5demon/drop_weapon.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 196,
+          "name": "dropWeapon__5Demon"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4992,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_dtor_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "6d491fd38e9d8c95eca21925aa066cca535e5e465c7a6d7449cda176b82dcbb7",
+      "source": "sources/w11-actor-a-dtor-11firebomblet/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "_$_11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4993,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_dtor_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "16108e5f751c9644efbe10b56ace844819e6151874ce8de2315d4a8cf31badc3",
+      "source": "sources/w11-actor-a-dtor-13missileweapon/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 224,
+          "name": "_$_13MissileWeapon"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4994,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_dtor_8gutchunk.o",
+      "profile": "authored_cpp",
+      "sha256": "3e068ec8ad76239caba84f7d555cd58419efdf96a44635b403e84076a35d8d1a",
+      "source": "sources/w11-actor-a-dtor-8gutchunk/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_8GutChunk"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4995,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_find_closest_shadow_ball_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "bd26a87e2e4a9a6987a78e19186e90a65d2fe1c3be08af94f0d0cec5d535b185",
+      "source": "sources/w11-actor-a-find-closest-shadow-ball-13missileweapon/find_closest_shadow_ball.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 520,
+          "name": "findClosestShadowBall__13MissileWeaponP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4996,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_find_evade_destination_8antqueen.o",
+      "profile": "authored_cpp",
+      "sha256": "3d47e386011df24070c665abbdcb3f4d72989699c79740c708d11e4b6c2e2909",
+      "source": "sources/w11-actor-a-find-evade-destination-8antqueen/find_evade_destination.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 496,
+          "name": "findEvadeDestination__8AntQueen"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4997,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_generate_dust_7cyclops.o",
+      "profile": "authored_cpp",
+      "sha256": "59458cff2529c88f884437b536dc67e5cf617a24f35e909e5e2ba689af3f7625",
+      "source": "sources/w11-actor-a-generate-dust-7cyclops/generate_dust.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 728,
+          "name": "generateDust__7CyclopsG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4998,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_lose_body_part_10blackwidow.o",
+      "profile": "authored_cpp",
+      "sha256": "56613979c97ea6adf9910ec75671a5641eea88dc2490c2ab58d9b563fb4e8670",
+      "source": "sources/w11-actor-a-lose-body-part-10blackwidow/lose_body_part.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 296,
+          "name": "loseBodyPart__10BlackWidowi"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 4999,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_lose_body_part_10firebeetle.o",
+      "profile": "authored_cpp",
+      "sha256": "fa611a6bcc9f3629b7c8c9c21f11e32cdf1c66c6dbf077ffe771ec90afb30524",
+      "source": "sources/w11-actor-a-lose-body-part-10firebeetle/lose_body_part.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 240,
+          "name": "loseBodyPart__10FireBeetlei"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5000,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_lose_body_part_3anti.o",
+      "profile": "authored_cpp",
+      "sha256": "17577837e6f6ab21a07f89871039f4ed1d0019c30589b2ff6457e785a5942f5b",
+      "source": "sources/w11-actor-a-lose-body-part-3anti/lose_body_part.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 244,
+          "name": "loseBodyPart__3Anti"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5001,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_collision_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "835d59d18a55619c280d3ad8d28e49820251b1b2557902fa61989a19c49de7a6",
+      "source": "sources/w11-actor-a-msg-collision-13missileweapon/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1788,
+          "name": "msg_collision__13MissileWeaponP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5002,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_draw_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "8b641efdda2d24f5fec9a5f992c8af335ecd7d68f7f182bdef346ee35a4a16ab",
+      "source": "sources/w11-actor-a-msg-draw-11firebomblet/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 172,
+          "name": "msg_draw__11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5003,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_draw_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "c85aa5b4bea1adf3a46a78a237f4a57a939aacd5f8634c6c8f5ca1b13be2c8ac",
+      "source": "sources/w11-actor-a-msg-draw-13missileweapon/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1012,
+          "name": "msg_draw__13MissileWeapon"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5004,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_draw_3npc.o",
+      "profile": "authored_cpp",
+      "sha256": "7734056a6d12f23b182d5609fa60bcb711632ed5452a2b4afd27125ba4b3c864",
+      "source": "sources/w11-actor-a-msg-draw-3npc/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1756,
+          "name": "msg_draw__3NPC"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5005,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_draw_8gutchunk.o",
+      "profile": "authored_cpp",
+      "sha256": "bd821190fbd6669da7062992904568f1dd5d41e1fbc1f49fcfd71552e2f45f95",
+      "source": "sources/w11-actor-a-msg-draw-8gutchunk/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "msg_draw__8GutChunk"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5006,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_run_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "8b217cb23830356ec987cc2457fa355fc758f387d6888ca71073269d4edf0801",
+      "source": "sources/w11-actor-a-msg-run-11firebomblet/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2424,
+          "name": "msg_run__11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5007,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_run_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "1d41950564cac70aa5cc2c249f075a811960ef10ce6bab791756d52d7aed3fab",
+      "source": "sources/w11-actor-a-msg-run-13missileweapon/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "_ZN12_GLOBAL__N_1L10light_blueE6Point3"
+        },
+        {
+          "compiled_body_bytes": 164,
+          "name": "_ZN12_GLOBAL__N_1L12light_orangeE6Point3"
+        },
+        {
+          "compiled_body_bytes": 3612,
+          "name": "msg_run__13MissileWeapon"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5008,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_msg_run_8gutchunk.o",
+      "profile": "authored_cpp",
+      "sha256": "998d98fd1b0e7e379ddfcae7741d98b45cb7eb0a26ad6edae98e2abb07b32e66",
+      "source": "sources/w11-actor-a-msg-run-8gutchunk/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1264,
+          "name": "msg_run__8GutChunk"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5009,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_set_hold_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "6d163db97c8f178a3d569b6d810c4fd7cef7f9434802f6f4868fc3360babcd97",
+      "source": "sources/w11-actor-a-set-hold-11firebomblet/set_hold.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "setHold__11FireBombleti"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5010,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_spawn_items_9autochest.o",
+      "profile": "authored_cpp",
+      "sha256": "73f8221f3387e59c30c18d8d894d1095b8e3bc90ea964b70d8094ccb989465d7",
+      "source": "sources/w11-actor-a-spawn-items-9autochest/spawn_items.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "_ZN12_GLOBAL__N_1L17clear_descriptionEPh"
+        },
+        {
+          "compiled_body_bytes": 328,
+          "name": "_ZN12_GLOBAL__N_1L5spawnEPhS0_"
+        },
+        {
+          "compiled_body_bytes": 980,
+          "name": "spawnItems__9AutoChest"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-actor-a-common/access.hpp"
+      ],
+      "input_order": 5011,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_sub_turn_animation_8antqueen.o",
+      "profile": "authored_cpp",
+      "sha256": "f001e0a6958d8d0392ff8d45d96f9bb2e68720ed955b8fa963f4ce8095687a0c",
+      "source": "sources/w11-actor-a-sub-turn-animation-8antqueen/sub_turn_animation.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 132,
+          "name": "subTurnAnimation__8AntQueen"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5012,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_tf_11firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "129162d5f065dbf122c25194198799c3bc68d49752a89ece79810b476db57ac5",
+      "source": "sources/w11-actor-a-tf-11firebomblet/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf11FireBomblet"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5013,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_tf_13missileweapon.o",
+      "profile": "authored_cpp",
+      "sha256": "88b879f4527df0329edb84ca8bd96a24a0b2f4495200cb8e68354dacead85346",
+      "source": "sources/w11-actor-a-tf-13missileweapon/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "__tf13MissileWeapon"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5014,
+      "kind": "independently_authored_source",
+      "object_name": "w11_actor_a_tf_8gutchunk.o",
+      "profile": "authored_cpp",
+      "sha256": "7d81814c7f2fba7fdcaa19e91d8d6f0aa90e4f6365a317cedbfd34945cc79352",
+      "source": "sources/w11-actor-a-tf-8gutchunk/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 224,
+          "name": "__tf8GutChunk"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -72454,7 +73107,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d67bf1121552bea15aefa4a1177465c13efb8a98a1a8c7029894eb57468b04f2",
+  "snapshot_sha256": "a894876eea7ef0a606bb410552e8a9755a570b0e27d08402540c3e794744cb3a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

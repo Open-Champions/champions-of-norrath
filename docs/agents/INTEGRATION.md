@@ -8878,3 +8878,25 @@ Closed: `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForCharacter__FP6Packet
 
 Opened: `attachmentLightPos`, `findLightsInBox_forWorld__FG3BoxPP5Lighti`, `modelSetupAttachment__FP6PacketP12_modelHeaderT1i`, `worldQueryLightMap__FP12_worldHeaderG6Point3`
 - 2026-10-13 07:10 CDT — agents/w11-rend-b — 878 unresolved imports
+
+## agents/w11-actor-a
+
+Merged (merge commit, branch tip `e5d5b016`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 37 units (41 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 4978 through 5015. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` as the notes require (Rosetta on this machine had stopped running x86_64 programs; without that flag the generateDust check fails on this host's fused multiply-adds, which is the flag requirement the notes state). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs and mutation runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5013 authored inputs, 3805 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (37 of 38) reproduces. Opened 28: bounce/move/projectile, a few particle and resource-map objects that are file-local in the image, and the helper matrix and effect routines the new bodies call.
+
+| | |
+|---|---|
+| Before | 878 |
+| After | 869 |
+| Closed | 37 |
+| Opened | 28 |
+
+Closed: `_$_11FireBomblet`, `_$_13MissileWeapon`, `_$_8GutChunk`, `__tf11FireBomblet`, `__tf13MissileWeapon`, `__tf8GutChunk`, `addTurnAnimation__8AntQueen`, `bCrossingWater__8Froglock`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__11FireBomblet`, `clone__13MissileWeapon`, `clone__8GutChunk`, `commanderValid__3Orc`, `deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff`, `deleteCommander__3Orc`, `detach__11FireBomblet`, `dropItem__3Orci`, `dropItem__6Goblini`, `dropWeapon__5Demon`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `findEvadeDestination__8AntQueen`, `generateDust__7CyclopsG6Point3`, `loseBodyPart__10BlackWidowi`, `loseBodyPart__10FireBeetlei`, `loseBodyPart__3Anti`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__11FireBomblet`, `msg_draw__13MissileWeapon`, `msg_draw__3NPC`, `msg_draw__8GutChunk`, `msg_run__11FireBomblet`, `msg_run__13MissileWeapon`, `msg_run__8GutChunk`, `setHold__11FireBombleti`, `spawnItems__9AutoChest`, `subTurnAnimation__8AntQueen`
+
+Opened: `__12ParticlePropG6Point3i`, `__13FireBombletJrP11FireBomblet`, `__6PhPropG6Point3P12_modelHeaderP8_textureliPQ24item11descriptionf`, `__8GutChunkG6Point3sP12_modelHeaderP14AnimationStatePcN25liif`, `__ti10Projectile`, `bounce__11FireBomblet`, `disintoInnoruukParticle`, `fxFlyingFire__FP6Point3T0ffb`, `fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii`, `getDeflectionChance__10SkillDodgei`, `goblinWeaponResourceMap`, `hitParticleDust2`, `matMul__FP8Matrix33N20`, `matMul__FP8Matrix34P8Matrix33T0`, `matScale__FP8Matrix34fff`, `matTranspose__FP8Matrix33T0`, `move__10ProjectileG6Point3`, `particleBloodDrop`, `particleEctoDrop`, `particleSlimeDrop`, `playerBlockSparks__6Playeri`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `snowParticle1`, `sparkParticle`, `trailParticleFire`, `trailParticleSmoke`
+- 2026-10-13 07:15 CDT — agents/w11-actor-a — 869 unresolved imports
