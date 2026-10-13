@@ -5489,8 +5489,8 @@ Merged (the branch notes carry the five summary sections; the tip was 31
 minutes old). Thirty-eight units with fresh `input_order` values 2786 through
 2823: 22 resource maps, 14 virtual tables and two pointer/list tables, all data
 (no function bodies, so the body count stays at 2258). Each unit has a host
-comparison under `views/host/`; the notes' build-plan section lists no plan
-rows, so the units were read from the files. All 38 host comparisons build
+comparison under `views/host/`; the notes' build-plan section is a table of
+sources and hashes, and the same 38 units were found in the files. All 38 host comparisons build
 (linked against the unit, no source change) and exit 0 here (38 of 38). The
 count of opened imports is large because each virtual table points at its
 class's slot functions, which are not defined in this package, so every slot
