@@ -8490,3 +8490,25 @@ Closed: `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sc
 
 Opened: `AdjustTime`, `QueuePeekWriteDone`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `sceGsPutDrawEnv`, `sceGsSetDefClear`, `sceGsSetDefDrawEnv`, `sceGsSetDefDrawEnv2`, `sceScfGetSummerTime`, `sceScfGetTimeZone`
 - 2026-10-13 05:12 CDT — agents/w11-crt-c — 887 unresolved imports
+
+## agents/w11-front-b
+
+Merged (merge commit, branch tip `db0444d2`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 units (8 function bodies, 7 data-object units) with fresh
+`input_order` values 4573 through 4587. All 15 host checks build with -std=c++17 -Wall -Wextra -Werror (x86_64, -no_pie, pagezero 0x1000) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4586 authored inputs, 3520 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed (19) and opened (4) lists and its private count of 957 to 942 reproduce in kind; here the base was already 887, so the count went 887 to 872. The notes record that the data objects compile to .bss where the image keeps four of them in file-backed .data, so no data-layout match is claimed. Seven more of the package's names close only when sources already in the tree from earlier waves (listed in the notes) are planned; they were not selected here.
+
+| | |
+|---|---|
+| Before | 887 |
+| After | 872 |
+| Closed | 19 |
+| Opened | 4 |
+
+Closed: `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `globalIcons`, `hudBustCovered`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `list.1073`, `mainMenu__Fii`, `moneyTex`, `msgHudSavePoint__FP9Savepoint`, `msgInventoryExit__Fiii`, `objectGetSaveData__FPci`, `p1`, `p2`, `partlist.1103`, `writeMap__3mapPUc`
+
+Opened: `getDataForAllObjects__FPciPiiT2T2`, `shopDrawTaskBar__FP12screenStruct`, `sin`, `updateCursor__FiiiiiP12screenStructi`
+- 2026-10-13 05:16 CDT — agents/w11-front-b — 872 unresolved imports

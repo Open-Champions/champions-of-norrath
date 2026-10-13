@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4571,
+  "default_authored_inputs": 4586,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3299,6 +3299,21 @@
     "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
     "sources/w11-crt-c-src-word/src_word.cpp": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
     "sources/w11-crt-c-tty-handler/tty_handler.cpp": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
+    "sources/w11-front-b-get-damage-multiplier/get_damage_multiplier.cpp": "de7509124c526d2cc941eaf02f268b4f1c1857af6c926299503ad4aa732872f5",
+    "sources/w11-front-b-get-pic-size/get_pic_size.cpp": "62c0bdaf6752ad4fe8d6856a8d49e9bf2c1828b1f8ad1f1917e504a1a1b2673b",
+    "sources/w11-front-b-global-icons/global_icons.cpp": "fbf1717302cc55047b3d3c6ce6f4b55de47e5d53470005cfc0afa192c1fc64c8",
+    "sources/w11-front-b-hermite-points/hermite_points.cpp": "ddbfc147c46157e36a8ceedffbc335f38445fdbe1706c245c29f79c0408807ea",
+    "sources/w11-front-b-hud-bust-covered/hud_bust_covered.cpp": "2cea23a69f1e9681917303f2c3f6ec3d7ca06381a53f5490312aa27ab3d6d559",
+    "sources/w11-front-b-icon-name/icon_name.cpp": "c070b2ba4da98825fffe14ec1ceb795b5bb8dd5574bef6f55ee6e5f735ab6f74",
+    "sources/w11-front-b-inventory-pad-find-button/inventory_pad_find_button.cpp": "c8a5c11a2ad19361777c1bb940559f08a7b1d3019a657f958ea0e2fb82f32c5c",
+    "sources/w11-front-b-inventory-texture-words/inventory_texture_words.cpp": "6da00de7a5b2a68fbe2cbd4cff5e35653af8cead343d2ff335078780bdd8f2e3",
+    "sources/w11-front-b-level-list/level_list.cpp": "3fabd025beab93e19bdcdd741fcf9c9ebb42b07fe3476e8451efa9351e830565",
+    "sources/w11-front-b-main-menu/main_menu.cpp": "32cf696400ec18dd38a5ddf209e3d4b1cbba727b36f88b92d3db53d1f810f46b",
+    "sources/w11-front-b-msg-hud-save-point/msg_hud_save_point.cpp": "6a5f347ad1c286a531c563aa254a7967a94a7224bbb83a22f97d4e8689df0d1f",
+    "sources/w11-front-b-msg-inventory-exit/msg_inventory_exit.cpp": "308765d5eb395c0843855fc7596cf63fee147ed0f25fc6ce4ca38875bda12d71",
+    "sources/w11-front-b-object-get-save-data/object_get_save_data.cpp": "372e7fd2756dce6181fca7b4d59a05a72756ebdf41c0508b64e9afb5554653c2",
+    "sources/w11-front-b-skelight-partlist/skelight_partlist.cpp": "f02be8f598b198668970e75a16afd88c3edc23c7408f76de153d663d02030d7b",
+    "sources/w11-front-b-write-map/write_map.cpp": "7f389daa1b01c10e8732797cf1db7fa26f2d1270c5e3f75f2bcb0f57e618cda2",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -66576,6 +66591,196 @@
           "name": "sceTtyHandler"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4573,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_get_damage_multiplier.o",
+      "profile": "authored_cpp",
+      "sha256": "de7509124c526d2cc941eaf02f268b4f1c1857af6c926299503ad4aa732872f5",
+      "source": "sources/w11-front-b-get-damage-multiplier/get_damage_multiplier.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "getDamageMultiplier__4itemPQ24item11description"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4574,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_msg_inventory_exit.o",
+      "profile": "authored_cpp",
+      "sha256": "308765d5eb395c0843855fc7596cf63fee147ed0f25fc6ce4ca38875bda12d71",
+      "source": "sources/w11-front-b-msg-inventory-exit/msg_inventory_exit.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "msgInventoryExit__Fiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4575,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_msg_hud_save_point.o",
+      "profile": "authored_cpp",
+      "sha256": "6a5f347ad1c286a531c563aa254a7967a94a7224bbb83a22f97d4e8689df0d1f",
+      "source": "sources/w11-front-b-msg-hud-save-point/msg_hud_save_point.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "msgHudSavePoint__FP9Savepoint"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4576,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_write_map.o",
+      "profile": "authored_cpp",
+      "sha256": "7f389daa1b01c10e8732797cf1db7fa26f2d1270c5e3f75f2bcb0f57e618cda2",
+      "source": "sources/w11-front-b-write-map/write_map.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "writeMap__3mapPUc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4577,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_get_pic_size.o",
+      "profile": "authored_cpp",
+      "sha256": "62c0bdaf6752ad4fe8d6856a8d49e9bf2c1828b1f8ad1f1917e504a1a1b2673b",
+      "source": "sources/w11-front-b-get-pic-size/get_pic_size.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "getPicSize__4itemiPQ24item11descriptionPiT3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4578,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_inventory_pad_find_button.o",
+      "profile": "authored_cpp",
+      "sha256": "c8a5c11a2ad19361777c1bb940559f08a7b1d3019a657f958ea0e2fb82f32c5c",
+      "source": "sources/w11-front-b-inventory-pad-find-button/inventory_pad_find_button.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 244,
+          "name": "inventoryPadFindButton__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4579,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_object_get_save_data.o",
+      "profile": "authored_cpp",
+      "sha256": "372e7fd2756dce6181fca7b4d59a05a72756ebdf41c0508b64e9afb5554653c2",
+      "source": "sources/w11-front-b-object-get-save-data/object_get_save_data.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "objectGetSaveData__FPci"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4580,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_main_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "32cf696400ec18dd38a5ddf209e3d4b1cbba727b36f88b92d3db53d1f810f46b",
+      "source": "sources/w11-front-b-main-menu/main_menu.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1428,
+          "name": "mainMenu__Fii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4581,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_icon_name.o",
+      "profile": "authored_cpp",
+      "sha256": "c070b2ba4da98825fffe14ec1ceb795b5bb8dd5574bef6f55ee6e5f735ab6f74",
+      "source": "sources/w11-front-b-icon-name/icon_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4582,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_inventory_texture_words.o",
+      "profile": "authored_cpp",
+      "sha256": "6da00de7a5b2a68fbe2cbd4cff5e35653af8cead343d2ff335078780bdd8f2e3",
+      "source": "sources/w11-front-b-inventory-texture-words/inventory_texture_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4583,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_global_icons.o",
+      "profile": "authored_cpp",
+      "sha256": "fbf1717302cc55047b3d3c6ce6f4b55de47e5d53470005cfc0afa192c1fc64c8",
+      "source": "sources/w11-front-b-global-icons/global_icons.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4584,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_hud_bust_covered.o",
+      "profile": "authored_cpp",
+      "sha256": "2cea23a69f1e9681917303f2c3f6ec3d7ca06381a53f5490312aa27ab3d6d559",
+      "source": "sources/w11-front-b-hud-bust-covered/hud_bust_covered.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4585,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_hermite_points.o",
+      "profile": "authored_cpp",
+      "sha256": "ddbfc147c46157e36a8ceedffbc335f38445fdbe1706c245c29f79c0408807ea",
+      "source": "sources/w11-front-b-hermite-points/hermite_points.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4586,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_skelight_partlist.o",
+      "profile": "authored_cpp",
+      "sha256": "f02be8f598b198668970e75a16afd88c3edc23c7408f76de153d663d02030d7b",
+      "source": "sources/w11-front-b-skelight-partlist/skelight_partlist.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4587,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_level_list.o",
+      "profile": "authored_cpp",
+      "sha256": "3fabd025beab93e19bdcdd741fcf9c9ebb42b07fe3476e8451efa9351e830565",
+      "source": "sources/w11-front-b-level-list/level_list.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -66675,7 +66880,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d9b9c6e3d5942a77fd3234110f887374fb495eee0634adc2017a656b0f5f1c9f",
+  "snapshot_sha256": "b3e3203c9e62a1548899c12e2257a6b1e70526c5d24b8412aa76e2e9f6c24026",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
