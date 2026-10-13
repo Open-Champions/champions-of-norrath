@@ -13,3 +13,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `b-far-from-home` | `bFarFromHome__8Creature` | 0x112da8 | 88 |
 | `anim-find-component-with-flags` | `animFindComponentWithFlags__FP14AnimationStatei` | 0x164130 | 76 |
 | `anim-add-to-end` | `animAddToEnd__FP14AnimationStateP15AnimationHeaderi` | 0x163930 | 148 |
+| `anim-add-hairy` | `animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi` | 0x1638b8 | 120 |
