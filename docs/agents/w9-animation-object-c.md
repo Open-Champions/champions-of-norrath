@@ -16,3 +16,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 |---|---|---|---|
 | `reset-routing` | `resetRouting__8Creature` | 0x113460 | 40 |
 | `set-anim-event-flags` | `setAnimEventFlags__8Creatureififififi` | 0x1128a8 | 88 |
+| `set-state-processing` | `setStateProcessing__8CreaturePi` | 0x1129f0 | 108 |
