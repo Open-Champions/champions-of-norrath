@@ -4,4 +4,6 @@
  * Unknown: whether anything reads it (nothing authored does). Placement differs from
  * the original: a zero-initialised definition here lands in uninitialised data.
  */
-extern "C" int ee_retbuf_sel = 0;
+extern "C" {
+int ee_retbuf_sel = 0;
+}

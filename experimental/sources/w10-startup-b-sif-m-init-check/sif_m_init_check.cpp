@@ -4,4 +4,6 @@
  * Placement differs from the original: a zero-initialised definition here lands in
  * uninitialised data.
  */
-extern "C" int _sceSifMInitCheck = 0;
+extern "C" {
+int _sceSifMInitCheck = 0;
+}
