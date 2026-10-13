@@ -7,6 +7,13 @@
 // Inferred: the base-class message handler forwards unhandled messages to the parent window; the
 // entry at offset 48 is the OnMessage slot (the class tables list it seventh).
 // Unknown: the return value (nothing is read from the forwarded call) and message meanings.
+#if defined(NORRATH_HOST_CONTRACT)
+extern "C" char* norrath_host_translate(unsigned address);
+#define NORRATH_TRANSLATE(address) norrath_host_translate(address)
+#else
+#define NORRATH_TRANSLATE(address) reinterpret_cast<char*>(static_cast<unsigned long>(address))
+#endif
+
 extern "C" {
 extern unsigned char sWndMcErr[];
 void OnMessage__10VIWndMcErrP5VIWndiii(void* self, void* from, int message, int a, int b);
@@ -23,10 +30,10 @@ void OnMessage__5VIWndP5VIWndiii(void* self, void* from, int message, int a, int
         return;
     }
     unsigned char* object = static_cast<unsigned char*>(self);
-    unsigned char* parent = reinterpret_cast<unsigned char*>(static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(object + 20)));
+    unsigned char* parent = reinterpret_cast<unsigned char*>(NORRATH_TRANSLATE(*reinterpret_cast<unsigned*>(object + 20)));
     if (parent) {
         const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-                                   static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(parent + 32))) + 6;
+                                   NORRATH_TRANSLATE(*reinterpret_cast<unsigned*>(parent + 32))) + 6;
         entry->function(parent + entry->delta, from, message, a, b);
     }
 }
