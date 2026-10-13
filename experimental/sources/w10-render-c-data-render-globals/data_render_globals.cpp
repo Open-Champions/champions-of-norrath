@@ -10,15 +10,17 @@
 //                        followed by the same six again (two groups of six)
 //   scx1 scy1 scx2 scy2  0x00486938, 0x0048693c, 0x00486940, 0x00486944, 4 bytes each,
 //                        uninitialised (word access)
-//   rainSplashParticle   0x006ebaf0, 80 bytes, uninitialised (distance to the next symbol)
+//   rainSplashParticle   0x006ebaf0, 80 bytes, uninitialised (distance to the next symbol); the
+//                        file-local objects of the same name at 0x007d7440 are not this one
 //   slideDustParticle    0x008d55b8, slideDustParticleDark 0x008d5608, slideDustParticleBig
 //   slideDustParticleBig 0x008d5658, slideDustParticleBigDark 0x008d56a8, 80 bytes each,
 //                        uninitialised
-//   norrath_container_msg_run_fuseParticle_bytes   the 80-byte uninitialised object at
-//   norrath_container_msg_run_smokeParticle_bytes  0x007d7720 (fuseParticle) and 0x007d7770
-//                        (smokeParticle), the two particle definitions msg_run__9Container
-//                        passes to P_AddParticle; the names are the authored caller's
-//                        placeholders, not image symbols.
+// Not defined here: norrath_container_msg_run_fuseParticle_bytes and
+// norrath_container_msg_run_smokeParticle_bytes, the 80-byte objects at 0x007d7720
+// (fuseParticle) and 0x007d7770 (smokeParticle) that msg_run__9Container passes to
+// P_AddParticle; the existing source w9-render-math-c-switch-static-init already defines them
+// (the names are the authored caller's placeholders, not image symbols), so defining them again
+// would clash once both units are in a plan.
 // Not defined here: globalShadowBrightness (0x00484090, file 0.25f) and halos, which the
 // w10-render-b data unit defines. The meanings of the scissor values, scx1..scy2 and
 // modelOption are unknown; the particle objects are filled by static-initialiser code outside
@@ -39,6 +41,4 @@ unsigned char slideDustParticle[80];
 unsigned char slideDustParticleDark[80];
 unsigned char slideDustParticleBig[80];
 unsigned char slideDustParticleBigDark[80];
-unsigned char norrath_container_msg_run_fuseParticle_bytes[80];
-unsigned char norrath_container_msg_run_smokeParticle_bytes[80];
 }
