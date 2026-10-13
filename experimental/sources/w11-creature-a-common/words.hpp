@@ -16,13 +16,23 @@ typedef float __attribute__((may_alias)) F32;
 typedef unsigned long long __attribute__((may_alias)) U64;
 typedef void* __attribute__((may_alias)) Ptr;
 
-struct Point3 {
+struct __attribute__((may_alias)) Point3 {
     float x, y, z;
 };
 
 template <typename T>
-inline T& at(void* object, unsigned offset) {
-    return *reinterpret_cast<T*>(static_cast<unsigned char*>(object) + offset);
+struct Alias {
+    typedef T __attribute__((may_alias)) Type;
+};
+
+template <>
+struct Alias<Point3> {
+    typedef Point3 Type;
+};
+
+template <typename T>
+inline typename Alias<T>::Type& at(void* object, unsigned offset) {
+    return *reinterpret_cast<typename Alias<T>::Type*>(static_cast<unsigned char*>(object) + offset);
 }
 
 // A virtual slot of the table pointed to by object+72 is an 8-byte entry: a signed halfword
