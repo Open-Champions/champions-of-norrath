@@ -8097,3 +8097,17 @@ Closed: `_$_3Ice`, `_$_4Lamp`, `_$_8Innoruuk`, `_$_8JumpGate`, `__8ItemPropG6Poi
 
 Opened: `DLG_CheckMutex__Fv`, `P_DeleteTrail__Fi`, `P_RevolveTrail__FiG6Point3N31i`, `_$_8GutChunk`, `__14HateProjectileG6Point3sP10GameObjectP5SkilliP15AnimationHeader`, `__6PhPropG6Point3P8Matrix34PcN23liPQ24item11descriptionf`, `__8HateBeamiG6Point3T2P8CreatureP5Skill`, `__8HateSoulG6Point3T1iii`, `__tf8GutChunk`, `_vt$3Ice`, `_vt$4Lamp`, `_vt$5PhIce`, `_vt$8Innoruuk`, `_vt$8ItemProp`, `_vt$8JumpGate`, `clone__8GutChunk`, `deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff`, `innoruukParticle2`, `innoruukParticle3`, `innoruukResourceMap`, `jumpGateAddDestination__Fv`, `jumpGateInit__FiPcc`, `jumpParticle2`, `jumpParticleOn`, `lampParticle`, `lightUpdatePosition__FP5Light`, `litodp`, `modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3`, `modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f`, `modelSetRelightAttachment__FG6Point3`, `msg_draw__8GutChunk`, `msg_getPokeName__6PhPropPUsi`, `msg_poke__6PhPropi`, `msg_run__8GutChunk`, `netDisconnect__Fv`, `shockwaveInnoruukParticle`, `shockwaveInnoruukParticle2`, `summonhammerParticle`, `vaporParticle`
 - 2026-10-13 02:58 CDT — `agents/w10-actor-h` — 1082 unresolved imports
+
+## Not merged: agents/w10-actor-i
+
+Rejected at tip `79202008`'s successor `e1ad5dba` (34 minutes old when read; its notes
+have all five summary sections). Its 32 units (`clone`, `dtor`, `msg_*` and `setState`
+bodies for the lantern, lava monster, lava vehicle, male dark elf and minion) have no
+committed check of any kind: the diff holds no `host_check.cpp`, `host_contract.cpp` or
+other test file, and the notes say "No host test files are included because the
+comparison needs the private image". The only evidence is a private R5900 interpreter
+run outside git, which a reviewer cannot repeat, so no committed function has a test
+that could fail (same ground as `w9-render-math-a` and `w10-startup-d`). The branch was
+merged locally to look at it and the merge was reset before anything was selected or
+pushed. The owner can add committed host checks per function (as `w10-actor-a` to
+`w10-actor-h` do) and push again.
