@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6132,
+  "default_authored_inputs": 6170,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4951,6 +4951,44 @@
     "sources/w13-vi-b-world-query-emitters/query_emitters.cpp": "35d2933ed672fb8ba1f3bd3c1aeed14ec19c7a4a22719bbd42b60fa882ee467e",
     "sources/w13-vi-b-world-render-by-volume/render_by_volume.cpp": "f24126bc780b5eeb15a6429b0e53e83d31b66de7b7f5f5c105b43a5c568d2f92",
     "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp": "3e2f5855f70e06e89df0d07e6a32d5e6424bcdd3e21f0f3e9308b063f00bfc63",
+    "sources/w13-vi-c-bbox-distance-squared/bbox-distance-squared.cpp": "d6fea333c0b8988d68c8f53c395ac574a8a17ffd57f1ecb9ff751423e17a5554",
+    "sources/w13-vi-c-bbox-transform/bbox-transform.cpp": "df816b87f145fe3276697a1dc8fa7f89c6b247013d82e557fec63050671741b9",
+    "sources/w13-vi-c-collbuffer-dtor/dtor.cpp": "43eb2482e1065cf0f9be7ce8638047f5f11cab6e69ae9a7e76eb730eed13fa78",
+    "sources/w13-vi-c-collray-get-hit-point/collray-get-hit-point.cpp": "163c9c62a92823bd092c93bdc0314cb85329c6c8640a5afbcbbef9921f3d84ac",
+    "sources/w13-vi-c-collray-init/collray-init.cpp": "00e61cefd58cfb9ab185765e177750fb09dd50b7442c6a96a937f30c5553a563",
+    "sources/w13-vi-c-csprite-calc-slot-world-transform/csprite-calc-slot-world-transform.cpp": "fb1670e1143613210ae43a314b4ebf9f06c135b574c52d77bbeeed25ab785c53",
+    "sources/w13-vi-c-envray-get-hit-point/envray-get-hit-point.cpp": "d7966b1830ccb3551d2ada5b7f50c84a2cfb2218c1422346df22a52508294d0b",
+    "sources/w13-vi-c-frustum-calc-planes/frustum-calc-planes.cpp": "e875f334c1bc883883fa17c4af7f60be695c9f2b71577000288ee60b8a0631de",
+    "sources/w13-vi-c-llist-length/llist-length.cpp": "14814f631771fca3a1a7fa49bae3173276c82882b711dbeda1a126e72741ef41",
+    "sources/w13-vi-c-material-get-layer-color/material-get-layer-color.cpp": "98205108f2c4224a8875ff7cd54e35ccd02632d536194ce570e6f89cf587a4e6",
+    "sources/w13-vi-c-matrix33-dtor/dtor.cpp": "95224b77d1fcdef1e7ba2a363db86c2ac4dadd8f2f5c7451eac83e9f9fcbea83",
+    "sources/w13-vi-c-matrix44-mul-vect4-vect3/mul_vect4_vect3.cpp": "fbe6152b1d5aa500b7e5c4f2144bdb3471aa5c7440795439315cf46610e7d2d0",
+    "sources/w13-vi-c-multimap-begin-emitterentry/multimap-begin-emitterentry.cpp": "3d8ad7b00283818e326474264c09a7b01a1f251090a730a510f4faafce5347e5",
+    "sources/w13-vi-c-multimap-end-emitterentry/multimap-end-emitterentry.cpp": "ed12d3c01458fde917a559d6126e75fc7016bae16ffbb19aa5a456717df88ca3",
+    "sources/w13-vi-c-multimap-next-emitterentry/multimap-next-emitterentry.cpp": "88db95d9608e7149e3b06542413b8ecf34e1b49d0906a7591d5c539f83d86dbf",
+    "sources/w13-vi-c-objfile-close/objfile-close.cpp": "7aae1c6bc56908523b2fb2d408ea0220d903b793dbf78ab6811349a3b8321a91",
+    "sources/w13-vi-c-objfile-file-type/objfile-file-type.cpp": "a3d32de88d8f1dfbba564ee112aa4b6769921d14291e16e1eab497b32580183e",
+    "sources/w13-vi-c-objfile-num-objects/objfile-num-objects.cpp": "439f47d6a3b7a5130ec2d525803ff0a3a864caec899c7f492604290179668e7f",
+    "sources/w13-vi-c-objfile-post-open/objfile-post-open.cpp": "f5ec3378e9b787f88104be5e7eb59b99e3a8202c4fe1b8469dd96d272d69fb18",
+    "sources/w13-vi-c-pool-begin-particledefinition/pool-begin-particledefinition.cpp": "a1fbe16b9ee51df37150de0bece5294f897f5f0cf50066a3fd9a7fe33b021ea6",
+    "sources/w13-vi-c-pool-begin-spelleffect/pool-begin-spelleffect.cpp": "09b673bd74039fa896221d6021afc3f0bd76d718f5eb64e67e59dd703fac85fa",
+    "sources/w13-vi-c-pool-end-particledefinition/pool-end-particledefinition.cpp": "977793760d434ac4a0c653d9470505d5300283ba51d5d5a9a94bd81469555571",
+    "sources/w13-vi-c-pool-end-spelleffect/pool-end-spelleffect.cpp": "96d5f156d804ebbef167ef2ed96f348e2de3521132664c56619262129bd34aaf",
+    "sources/w13-vi-c-raster-enable-point-light/raster-enable-point-light.cpp": "6525ffcefff34bf47541f7e0b9b6cb06056ff67d6f2fe3924250f43455110aa5",
+    "sources/w13-vi-c-raster-get-material-pal-entry/raster-get-material-pal-entry.cpp": "631aabea2c8abb0206e77bb4ca9226dd991d7f95534ba3fedd079c831971c85e",
+    "sources/w13-vi-c-raster-set-point-light/raster-set-point-light.cpp": "a7bb5c957f3696427d5989e489f1533c6a21ae587a9c256b7ed7378bc29b7efc",
+    "sources/w13-vi-c-scene-get-actor-location/scene-get-actor-location.cpp": "7c33a18769c97c10016b8e4a2434593e47ec9243855df90bea4da3491e113cfc",
+    "sources/w13-vi-c-scene-get-actor-sprite-ptr/scene-get-actor-sprite-ptr.cpp": "0f80065870af8005bfed6c048c0ea100fbbb7b79d3dd6733f17895b4be9559a0",
+    "sources/w13-vi-c-simplesprite-get-material-pal/simplesprite-get-material-pal.cpp": "04dc10a99cb8a9b8a937b46a9c99748582b60203bb0d465d2c84108c80995036",
+    "sources/w13-vi-c-soundsprite-attenuation-mode/soundsprite-attenuation-mode.cpp": "bb998db55be61202ea6c307178f3a9f5e455721b8b283525304d5e9c80e79f32",
+    "sources/w13-vi-c-soundsprite-is-pan-enabled/soundsprite-is-pan-enabled.cpp": "8a880ec2e34d0bc00eabe0e4fb17f26bc932a0bd0698c5b12f0e666968c6370c",
+    "sources/w13-vi-c-streamaudio-get-priority/streamaudio-get-priority.cpp": "0c24a5b5ad47dc7f9e7270cee2bb1c7a5e42482af6d99584aac6ad7a097fd7ec",
+    "sources/w13-vi-c-streamaudio-get-relative-pathname/streamaudio-get-relative-pathname.cpp": "3b52fb8f06fee0a436fae1d9fb3951af5e49f8047964f2e0c47f21b3b802feb5",
+    "sources/w13-vi-c-streamaudio-is-looping/streamaudio-is-looping.cpp": "ae069567dccc40d495e2ae8e038f4885dc830a32ab8b41ff5a255482d06ee80a",
+    "sources/w13-vi-c-trailfx-clear-segments-forward/trailfx-clear-segments-forward.cpp": "8ac9f57a6fddf846c1ac453bcf27a3753086ed0d54a54967507e1bebeef73f7e",
+    "sources/w13-vi-c-trailfx-clear/trailfx-clear.cpp": "1166790340ae0c056f53b42b59ead1dab254a32395ce47035064d56da45eaee1",
+    "sources/w13-vi-c-vect3-distance/vect3-distance.cpp": "0b8c461e68b5ec43f41a34f288eb5d71dca40f7d88ab8ec676c487e1e7f65919",
+    "sources/w13-vi-c-zone-find-leaf/zone-find-leaf.cpp": "146eb37d32e0cc962f8ad6b7afb0e687b2407db50713147b809cc7dfe8eafd8f",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -90645,6 +90683,576 @@
           "compiled_body_bytes": 776
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6134,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_bbox_distance_squared.o",
+      "profile": "authored_cpp",
+      "sha256": "d6fea333c0b8988d68c8f53c395ac574a8a17ffd57f1ecb9ff751423e17a5554",
+      "source": "sources/w13-vi-c-bbox-distance-squared/bbox-distance-squared.cpp",
+      "emitted_functions": [
+        {
+          "name": "DistanceSquared__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 212
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6135,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_bbox_transform.o",
+      "profile": "authored_cpp",
+      "sha256": "df816b87f145fe3276697a1dc8fa7f89c6b247013d82e557fec63050671741b9",
+      "source": "sources/w13-vi-c-bbox-transform/bbox-transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "Transform__C6VIBBoxRC10VIMatrix44R6VIBBox",
+          "compiled_body_bytes": 348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6136,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_collbuffer_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "43eb2482e1065cf0f9be7ce8638047f5f11cab6e69ae9a7e76eb730eed13fa78",
+      "source": "sources/w13-vi-c-collbuffer-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_12VICollBuffer",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6137,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_collray_get_hit_point.o",
+      "profile": "authored_cpp",
+      "sha256": "163c9c62a92823bd092c93bdc0314cb85329c6c8640a5afbcbbef9921f3d84ac",
+      "source": "sources/w13-vi-c-collray-get-hit-point/collray-get-hit-point.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__9VICollRay",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6138,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_collray_init.o",
+      "profile": "authored_cpp",
+      "sha256": "00e61cefd58cfb9ab185765e177750fb09dd50b7442c6a96a937f30c5553a563",
+      "source": "sources/w13-vi-c-collray-init/collray-init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollRayRC7VIVect3T1",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6139,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_csprite_calc_slot_world_transform.o",
+      "profile": "authored_cpp",
+      "sha256": "fb1670e1143613210ae43a314b4ebf9f06c135b574c52d77bbeeed25ab785c53",
+      "source": "sources/w13-vi-c-csprite-calc-slot-world-transform/csprite-calc-slot-world-transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "CalcSlotWorldTransform__9VICSprite15VICSpriteNodeIDiR7VISceneR10VIMatrix44",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6140,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_envray_get_hit_point.o",
+      "profile": "authored_cpp",
+      "sha256": "d7966b1830ccb3551d2ada5b7f50c84a2cfb2218c1422346df22a52508294d0b",
+      "source": "sources/w13-vi-c-envray-get-hit-point/envray-get-hit-point.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__C8VIEnvRay",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6141,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_frustum_calc_planes.o",
+      "profile": "authored_cpp",
+      "sha256": "e875f334c1bc883883fa17c4af7f60be695c9f2b71577000288ee60b8a0631de",
+      "source": "sources/w13-vi-c-frustum-calc-planes/frustum-calc-planes.cpp",
+      "emitted_functions": [
+        {
+          "name": "CalcPlanes__9VIFrustum",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6142,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_llist_length.o",
+      "profile": "authored_cpp",
+      "sha256": "14814f631771fca3a1a7fa49bae3173276c82882b711dbeda1a126e72741ef41",
+      "source": "sources/w13-vi-c-llist-length/llist-length.cpp",
+      "emitted_functions": [
+        {
+          "name": "Length__C7VILList",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6143,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_material_get_layer_color.o",
+      "profile": "authored_cpp",
+      "sha256": "98205108f2c4224a8875ff7cd54e35ccd02632d536194ce570e6f89cf587a4e6",
+      "source": "sources/w13-vi-c-material-get-layer-color/material-get-layer-color.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetLayerColor__C10VIMateriali",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6144,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_matrix33_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "95224b77d1fcdef1e7ba2a363db86c2ac4dadd8f2f5c7451eac83e9f9fcbea83",
+      "source": "sources/w13-vi-c-matrix33-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6145,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_matrix44_mul_vect4_vect3.o",
+      "profile": "authored_cpp",
+      "sha256": "fbe6152b1d5aa500b7e5c4f2144bdb3471aa5c7440795439315cf46610e7d2d0",
+      "source": "sources/w13-vi-c-matrix44-mul-vect4-vect3/mul_vect4_vect3.cpp",
+      "emitted_functions": [
+        {
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6146,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_multimap_begin_emitterentry.o",
+      "profile": "authored_cpp",
+      "sha256": "3d8ad7b00283818e326474264c09a7b01a1f251090a730a510f4faafce5347e5",
+      "source": "sources/w13-vi-c-multimap-begin-emitterentry/multimap-begin-emitterentry.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6147,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_multimap_end_emitterentry.o",
+      "profile": "authored_cpp",
+      "sha256": "ed12d3c01458fde917a559d6126e75fc7016bae16ffbb19aa5a456717df88ca3",
+      "source": "sources/w13-vi-c-multimap-end-emitterentry/multimap-end-emitterentry.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6148,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_multimap_next_emitterentry.o",
+      "profile": "authored_cpp",
+      "sha256": "88db95d9608e7149e3b06542413b8ecf34e1b49d0906a7591d5c539f83d86dbf",
+      "source": "sources/w13-vi-c-multimap-next-emitterentry/multimap-next-emitterentry.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6149,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_objfile_close.o",
+      "profile": "authored_cpp",
+      "sha256": "7aae1c6bc56908523b2fb2d408ea0220d903b793dbf78ab6811349a3b8321a91",
+      "source": "sources/w13-vi-c-objfile-close/objfile-close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__9VIObjFile",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6150,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_objfile_file_type.o",
+      "profile": "authored_cpp",
+      "sha256": "a3d32de88d8f1dfbba564ee112aa4b6769921d14291e16e1eab497b32580183e",
+      "source": "sources/w13-vi-c-objfile-file-type/objfile-file-type.cpp",
+      "emitted_functions": [
+        {
+          "name": "FileType__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6151,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_objfile_num_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "439f47d6a3b7a5130ec2d525803ff0a3a864caec899c7f492604290179668e7f",
+      "source": "sources/w13-vi-c-objfile-num-objects/objfile-num-objects.cpp",
+      "emitted_functions": [
+        {
+          "name": "NumObjects__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6152,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_objfile_post_open.o",
+      "profile": "authored_cpp",
+      "sha256": "f5ec3378e9b787f88104be5e7eb59b99e3a8202c4fe1b8469dd96d272d69fb18",
+      "source": "sources/w13-vi-c-objfile-post-open/objfile-post-open.cpp",
+      "emitted_functions": [
+        {
+          "name": "PostOpen__9VIObjFile",
+          "compiled_body_bytes": 320
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6153,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_pool_begin_particledefinition.o",
+      "profile": "authored_cpp",
+      "sha256": "a1fbe16b9ee51df37150de0bece5294f897f5f0cf50066a3fd9a7fe33b021ea6",
+      "source": "sources/w13-vi-c-pool-begin-particledefinition/pool-begin-particledefinition.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6154,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_pool_begin_spelleffect.o",
+      "profile": "authored_cpp",
+      "sha256": "09b673bd74039fa896221d6021afc3f0bd76d718f5eb64e67e59dd703fac85fa",
+      "source": "sources/w13-vi-c-pool-begin-spelleffect/pool-begin-spelleffect.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6155,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_pool_end_particledefinition.o",
+      "profile": "authored_cpp",
+      "sha256": "977793760d434ac4a0c653d9470505d5300283ba51d5d5a9a94bd81469555571",
+      "source": "sources/w13-vi-c-pool-end-particledefinition/pool-end-particledefinition.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6156,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_pool_end_spelleffect.o",
+      "profile": "authored_cpp",
+      "sha256": "96d5f156d804ebbef167ef2ed96f348e2de3521132664c56619262129bd34aaf",
+      "source": "sources/w13-vi-c-pool-end-spelleffect/pool-end-spelleffect.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6157,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_raster_enable_point_light.o",
+      "profile": "authored_cpp",
+      "sha256": "6525ffcefff34bf47541f7e0b9b6cb06056ff67d6f2fe3924250f43455110aa5",
+      "source": "sources/w13-vi-c-raster-enable-point-light/raster-enable-point-light.cpp",
+      "emitted_functions": [
+        {
+          "name": "EnablePointLight__8VIRasterii",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6158,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_raster_get_material_pal_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "631aabea2c8abb0206e77bb4ca9226dd991d7f95534ba3fedd079c831971c85e",
+      "source": "sources/w13-vi-c-raster-get-material-pal-entry/raster-get-material-pal-entry.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPalEntry__8VIRasterii",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6159,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_raster_set_point_light.o",
+      "profile": "authored_cpp",
+      "sha256": "a7bb5c957f3696427d5989e489f1533c6a21ae587a9c256b7ed7378bc29b7efc",
+      "source": "sources/w13-vi-c-raster-set-point-light/raster-set-point-light.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6160,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_scene_get_actor_location.o",
+      "profile": "authored_cpp",
+      "sha256": "7c33a18769c97c10016b8e4a2434593e47ec9243855df90bea4da3491e113cfc",
+      "source": "sources/w13-vi-c-scene-get-actor-location/scene-get-actor-location.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetActorLocation__C7VIScenei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6161,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_scene_get_actor_sprite_ptr.o",
+      "profile": "authored_cpp",
+      "sha256": "0f80065870af8005bfed6c048c0ea100fbbb7b79d3dd6733f17895b4be9559a0",
+      "source": "sources/w13-vi-c-scene-get-actor-sprite-ptr/scene-get-actor-sprite-ptr.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetActorSpritePtr__C7VIScenei",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6162,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_simplesprite_get_material_pal.o",
+      "profile": "authored_cpp",
+      "sha256": "04dc10a99cb8a9b8a937b46a9c99748582b60203bb0d465d2c84108c80995036",
+      "source": "sources/w13-vi-c-simplesprite-get-material-pal/simplesprite-get-material-pal.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPal__C14VISimpleSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6163,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_soundsprite_attenuation_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "bb998db55be61202ea6c307178f3a9f5e455721b8b283525304d5e9c80e79f32",
+      "source": "sources/w13-vi-c-soundsprite-attenuation-mode/soundsprite-attenuation-mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "AttenuationMode__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6164,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_soundsprite_is_pan_enabled.o",
+      "profile": "authored_cpp",
+      "sha256": "8a880ec2e34d0bc00eabe0e4fb17f26bc932a0bd0698c5b12f0e666968c6370c",
+      "source": "sources/w13-vi-c-soundsprite-is-pan-enabled/soundsprite-is-pan-enabled.cpp",
+      "emitted_functions": [
+        {
+          "name": "IsPanEnabled__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6165,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_streamaudio_get_priority.o",
+      "profile": "authored_cpp",
+      "sha256": "0c24a5b5ad47dc7f9e7270cee2bb1c7a5e42482af6d99584aac6ad7a097fd7ec",
+      "source": "sources/w13-vi-c-streamaudio-get-priority/streamaudio-get-priority.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetPriority__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6166,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_streamaudio_get_relative_pathname.o",
+      "profile": "authored_cpp",
+      "sha256": "3b52fb8f06fee0a436fae1d9fb3951af5e49f8047964f2e0c47f21b3b802feb5",
+      "source": "sources/w13-vi-c-streamaudio-get-relative-pathname/streamaudio-get-relative-pathname.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetRelativePathname__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6167,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_streamaudio_is_looping.o",
+      "profile": "authored_cpp",
+      "sha256": "ae069567dccc40d495e2ae8e038f4885dc830a32ab8b41ff5a255482d06ee80a",
+      "source": "sources/w13-vi-c-streamaudio-is-looping/streamaudio-is-looping.cpp",
+      "emitted_functions": [
+        {
+          "name": "IsLooping__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6168,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_trailfx_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "1166790340ae0c056f53b42b59ead1dab254a32395ce47035064d56da45eaee1",
+      "source": "sources/w13-vi-c-trailfx-clear/trailfx-clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__9VITrailFx",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6169,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_trailfx_clear_segments_forward.o",
+      "profile": "authored_cpp",
+      "sha256": "8ac9f57a6fddf846c1ac453bcf27a3753086ed0d54a54967507e1bebeef73f7e",
+      "source": "sources/w13-vi-c-trailfx-clear-segments-forward/trailfx-clear-segments-forward.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6170,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_vect3_distance.o",
+      "profile": "authored_cpp",
+      "sha256": "0b8c461e68b5ec43f41a34f288eb5d71dca40f7d88ab8ec676c487e1e7f65919",
+      "source": "sources/w13-vi-c-vect3-distance/vect3-distance.cpp",
+      "emitted_functions": [
+        {
+          "name": "Distance__C7VIVect3RC7VIVect3",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6171,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_c_zone_find_leaf.o",
+      "profile": "authored_cpp",
+      "sha256": "146eb37d32e0cc962f8ad6b7afb0e687b2407db50713147b809cc7dfe8eafd8f",
+      "source": "sources/w13-vi-c-zone-find-leaf/zone-find-leaf.cpp",
+      "emitted_functions": [
+        {
+          "name": "FindLeaf__C6VIZoneRC7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -90744,7 +91352,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "55b3e3ddbb26e26c9578315eddc83fe717967a2c83b2e26126297742c4f1c3b2",
+  "snapshot_sha256": "b503967724ecc87ab414702dd41a097a8d56bb821d3f6c8817a0e1a50ee7b3c7",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

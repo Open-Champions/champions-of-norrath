@@ -79001,6 +79001,538 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp"
+    },
+    {
+      "input_order": 6134,
+      "component": "w13-vi-c-bbox-distance-squared",
+      "object_name": "w13_vi_c_bbox_distance_squared.o",
+      "private_object_sha256": "e66478fa7f8bad25d3bb8190c372b868e7ffa57996216a3576cc6d414e5549f1",
+      "emitted_functions": [
+        {
+          "name": "DistanceSquared__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-bbox-distance-squared/bbox-distance-squared.cpp"
+    },
+    {
+      "input_order": 6135,
+      "component": "w13-vi-c-bbox-transform",
+      "object_name": "w13_vi_c_bbox_transform.o",
+      "private_object_sha256": "6f1aa4086e561e09344a4a8f9fd942b38a5ba1b8c7bfdae35b4c6cfadd6aa2c0",
+      "emitted_functions": [
+        {
+          "name": "Transform__C6VIBBoxRC10VIMatrix44R6VIBBox",
+          "compiled_body_bytes": 348
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-bbox-transform/bbox-transform.cpp"
+    },
+    {
+      "input_order": 6136,
+      "component": "w13-vi-c-collbuffer-dtor",
+      "object_name": "w13_vi_c_collbuffer_dtor.o",
+      "private_object_sha256": "87d6eb648973d34cbad4b77b54694523fccfce4f904366959b97c5fa583c41b4",
+      "emitted_functions": [
+        {
+          "name": "_$_12VICollBuffer",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-collbuffer-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 6137,
+      "component": "w13-vi-c-collray-get-hit-point",
+      "object_name": "w13_vi_c_collray_get_hit_point.o",
+      "private_object_sha256": "5bf78f086396d9c2e5da1eeab7b72991f571aeb2e6ef2e8c0d80582b137ccfaf",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__9VICollRay",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-collray-get-hit-point/collray-get-hit-point.cpp"
+    },
+    {
+      "input_order": 6138,
+      "component": "w13-vi-c-collray-init",
+      "object_name": "w13_vi_c_collray_init.o",
+      "private_object_sha256": "5ff69101b6f114ee81bab18704de9ae625860b8f40b862dfea2eabc422936780",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollRayRC7VIVect3T1",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-collray-init/collray-init.cpp"
+    },
+    {
+      "input_order": 6139,
+      "component": "w13-vi-c-csprite-calc-slot-world-transform",
+      "object_name": "w13_vi_c_csprite_calc_slot_world_transform.o",
+      "private_object_sha256": "34884a0d423a0db5fd12ebcfcaff439f8f65a1a8619547826856ecfa86efa519",
+      "emitted_functions": [
+        {
+          "name": "CalcSlotWorldTransform__9VICSprite15VICSpriteNodeIDiR7VISceneR10VIMatrix44",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-csprite-calc-slot-world-transform/csprite-calc-slot-world-transform.cpp"
+    },
+    {
+      "input_order": 6140,
+      "component": "w13-vi-c-envray-get-hit-point",
+      "object_name": "w13_vi_c_envray_get_hit_point.o",
+      "private_object_sha256": "262b1076a32968bc50bf1c1bfd3571814268d0fc795071a1f47bc52f3a792485",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__C8VIEnvRay",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-envray-get-hit-point/envray-get-hit-point.cpp"
+    },
+    {
+      "input_order": 6141,
+      "component": "w13-vi-c-frustum-calc-planes",
+      "object_name": "w13_vi_c_frustum_calc_planes.o",
+      "private_object_sha256": "85aca934512d3dd3fc3624786f9ccd8c4d93e78dffeaa5acfeadfa7b54fae29b",
+      "emitted_functions": [
+        {
+          "name": "CalcPlanes__9VIFrustum",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-frustum-calc-planes/frustum-calc-planes.cpp"
+    },
+    {
+      "input_order": 6142,
+      "component": "w13-vi-c-llist-length",
+      "object_name": "w13_vi_c_llist_length.o",
+      "private_object_sha256": "692b8d76cc96a61f0763c9ab57f26b1f788ce7561c552b3bbba847d1a91aa643",
+      "emitted_functions": [
+        {
+          "name": "Length__C7VILList",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-llist-length/llist-length.cpp"
+    },
+    {
+      "input_order": 6143,
+      "component": "w13-vi-c-material-get-layer-color",
+      "object_name": "w13_vi_c_material_get_layer_color.o",
+      "private_object_sha256": "b05a7dca0ae75a780683c86a6061945bff0fec00e34096ca2dcd5460d6b88a77",
+      "emitted_functions": [
+        {
+          "name": "GetLayerColor__C10VIMateriali",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-material-get-layer-color/material-get-layer-color.cpp"
+    },
+    {
+      "input_order": 6144,
+      "component": "w13-vi-c-matrix33-dtor",
+      "object_name": "w13_vi_c_matrix33_dtor.o",
+      "private_object_sha256": "463a7151efa541c952897c081edf058a254c2ef0200106829407517efe8e7a2b",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-matrix33-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 6145,
+      "component": "w13-vi-c-matrix44-mul-vect4-vect3",
+      "object_name": "w13_vi_c_matrix44_mul_vect4_vect3.o",
+      "private_object_sha256": "e6a1931b0b24d9778f281bce33eceb82e0c8b9d129fa788bdcd365a3e8c26122",
+      "emitted_functions": [
+        {
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-matrix44-mul-vect4-vect3/mul_vect4_vect3.cpp"
+    },
+    {
+      "input_order": 6146,
+      "component": "w13-vi-c-multimap-begin-emitterentry",
+      "object_name": "w13_vi_c_multimap_begin_emitterentry.o",
+      "private_object_sha256": "4e7c90e708d9a20555e145d8e3573f9394352c577a526f4c1342b7958bec262b",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-multimap-begin-emitterentry/multimap-begin-emitterentry.cpp"
+    },
+    {
+      "input_order": 6147,
+      "component": "w13-vi-c-multimap-end-emitterentry",
+      "object_name": "w13_vi_c_multimap_end_emitterentry.o",
+      "private_object_sha256": "4c39bf1b5b0cdfd14411390236463a8b83d04f35abba26bb9362fb39d9b39e95",
+      "emitted_functions": [
+        {
+          "name": "End__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-multimap-end-emitterentry/multimap-end-emitterentry.cpp"
+    },
+    {
+      "input_order": 6148,
+      "component": "w13-vi-c-multimap-next-emitterentry",
+      "object_name": "w13_vi_c_multimap_next_emitterentry.o",
+      "private_object_sha256": "86fd77f42405d27f5952e62ded8c58aba3df62449039c286b0d2935a639e9782",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-multimap-next-emitterentry/multimap-next-emitterentry.cpp"
+    },
+    {
+      "input_order": 6149,
+      "component": "w13-vi-c-objfile-close",
+      "object_name": "w13_vi_c_objfile_close.o",
+      "private_object_sha256": "0554692b46c2b12269519e719f7d05454fe49797497eb736786459dbdf4c26ed",
+      "emitted_functions": [
+        {
+          "name": "Close__9VIObjFile",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-objfile-close/objfile-close.cpp"
+    },
+    {
+      "input_order": 6150,
+      "component": "w13-vi-c-objfile-file-type",
+      "object_name": "w13_vi_c_objfile_file_type.o",
+      "private_object_sha256": "f87a5180d61ff1f209d206a938712ee48ab889db15ed7feaad5691d5e9c32238",
+      "emitted_functions": [
+        {
+          "name": "FileType__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-objfile-file-type/objfile-file-type.cpp"
+    },
+    {
+      "input_order": 6151,
+      "component": "w13-vi-c-objfile-num-objects",
+      "object_name": "w13_vi_c_objfile_num_objects.o",
+      "private_object_sha256": "3b5a0f565b5ef4d1cecc0e04df1ab45b2eaeb85ffa6de3044c5cdb1e848d6611",
+      "emitted_functions": [
+        {
+          "name": "NumObjects__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-objfile-num-objects/objfile-num-objects.cpp"
+    },
+    {
+      "input_order": 6152,
+      "component": "w13-vi-c-objfile-post-open",
+      "object_name": "w13_vi_c_objfile_post_open.o",
+      "private_object_sha256": "bdac0b0da81e5432604694a749af02df59e1db650d3720cd9c88aa049b9b420e",
+      "emitted_functions": [
+        {
+          "name": "PostOpen__9VIObjFile",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-objfile-post-open/objfile-post-open.cpp"
+    },
+    {
+      "input_order": 6153,
+      "component": "w13-vi-c-pool-begin-particledefinition",
+      "object_name": "w13_vi_c_pool_begin_particledefinition.o",
+      "private_object_sha256": "26b23186ecd3fb29f32dde68d7d31a353c1a43ce98761534ea3333a5e27a10df",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-pool-begin-particledefinition/pool-begin-particledefinition.cpp"
+    },
+    {
+      "input_order": 6154,
+      "component": "w13-vi-c-pool-begin-spelleffect",
+      "object_name": "w13_vi_c_pool_begin_spelleffect.o",
+      "private_object_sha256": "aa797984f4eea1c48aba32df59e60be92231424a50c2c0b68c9452caf46b62b4",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-pool-begin-spelleffect/pool-begin-spelleffect.cpp"
+    },
+    {
+      "input_order": 6155,
+      "component": "w13-vi-c-pool-end-particledefinition",
+      "object_name": "w13_vi_c_pool_end_particledefinition.o",
+      "private_object_sha256": "7f2080e3a9d236c4aa1991649a31e1cc7d6e82c34ed744e7c2eb60a561737795",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-pool-end-particledefinition/pool-end-particledefinition.cpp"
+    },
+    {
+      "input_order": 6156,
+      "component": "w13-vi-c-pool-end-spelleffect",
+      "object_name": "w13_vi_c_pool_end_spelleffect.o",
+      "private_object_sha256": "32c7b9a4298c13589e4791d68548185319749bc6b236d6e60d74c2ebbf902620",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-pool-end-spelleffect/pool-end-spelleffect.cpp"
+    },
+    {
+      "input_order": 6157,
+      "component": "w13-vi-c-raster-enable-point-light",
+      "object_name": "w13_vi_c_raster_enable_point_light.o",
+      "private_object_sha256": "5cb1fb75eb7a9bd9a1cebc80f4d08888b698e3c8428046157c5d336fd1442ed5",
+      "emitted_functions": [
+        {
+          "name": "EnablePointLight__8VIRasterii",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-raster-enable-point-light/raster-enable-point-light.cpp"
+    },
+    {
+      "input_order": 6158,
+      "component": "w13-vi-c-raster-get-material-pal-entry",
+      "object_name": "w13_vi_c_raster_get_material_pal_entry.o",
+      "private_object_sha256": "cbf09230cecf765b36719acad600ad5af16e0a4c54fc5399af9f6ebd737437b5",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPalEntry__8VIRasterii",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-raster-get-material-pal-entry/raster-get-material-pal-entry.cpp"
+    },
+    {
+      "input_order": 6159,
+      "component": "w13-vi-c-raster-set-point-light",
+      "object_name": "w13_vi_c_raster_set_point_light.o",
+      "private_object_sha256": "1e595631a5bcf55d18716754fb615bc8ea0fe1a593025126b40e0f863b8502b2",
+      "emitted_functions": [
+        {
+          "name": "SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-raster-set-point-light/raster-set-point-light.cpp"
+    },
+    {
+      "input_order": 6160,
+      "component": "w13-vi-c-scene-get-actor-location",
+      "object_name": "w13_vi_c_scene_get_actor_location.o",
+      "private_object_sha256": "26e4825e386665211346d56209954f211fff595b7fe52b945d06aa6f4c5ca482",
+      "emitted_functions": [
+        {
+          "name": "GetActorLocation__C7VIScenei",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-scene-get-actor-location/scene-get-actor-location.cpp"
+    },
+    {
+      "input_order": 6161,
+      "component": "w13-vi-c-scene-get-actor-sprite-ptr",
+      "object_name": "w13_vi_c_scene_get_actor_sprite_ptr.o",
+      "private_object_sha256": "1b63233bea7c3ce1490b89e37d458fa2dd17c0c4169ce6cf04fbfdbbc5648d1f",
+      "emitted_functions": [
+        {
+          "name": "GetActorSpritePtr__C7VIScenei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-scene-get-actor-sprite-ptr/scene-get-actor-sprite-ptr.cpp"
+    },
+    {
+      "input_order": 6162,
+      "component": "w13-vi-c-simplesprite-get-material-pal",
+      "object_name": "w13_vi_c_simplesprite_get_material_pal.o",
+      "private_object_sha256": "d183dfbab6d42fa77a4adaace43cacbe1cef19a12cfa1c11659e15184e7d86e1",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPal__C14VISimpleSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-simplesprite-get-material-pal/simplesprite-get-material-pal.cpp"
+    },
+    {
+      "input_order": 6163,
+      "component": "w13-vi-c-soundsprite-attenuation-mode",
+      "object_name": "w13_vi_c_soundsprite_attenuation_mode.o",
+      "private_object_sha256": "13de83c591e718d2bb55d452b015a04e16d85e5127f046caf5914f57bb351867",
+      "emitted_functions": [
+        {
+          "name": "AttenuationMode__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-soundsprite-attenuation-mode/soundsprite-attenuation-mode.cpp"
+    },
+    {
+      "input_order": 6164,
+      "component": "w13-vi-c-soundsprite-is-pan-enabled",
+      "object_name": "w13_vi_c_soundsprite_is_pan_enabled.o",
+      "private_object_sha256": "630141bf1e3c4d04be5debc762c4c8812ce166520e645105ea1eb2c33bbc3494",
+      "emitted_functions": [
+        {
+          "name": "IsPanEnabled__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-soundsprite-is-pan-enabled/soundsprite-is-pan-enabled.cpp"
+    },
+    {
+      "input_order": 6165,
+      "component": "w13-vi-c-streamaudio-get-priority",
+      "object_name": "w13_vi_c_streamaudio_get_priority.o",
+      "private_object_sha256": "c534c2b407b2c18c618971869952a97cee826ba5b3372919d2eb835c14f64239",
+      "emitted_functions": [
+        {
+          "name": "GetPriority__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-streamaudio-get-priority/streamaudio-get-priority.cpp"
+    },
+    {
+      "input_order": 6166,
+      "component": "w13-vi-c-streamaudio-get-relative-pathname",
+      "object_name": "w13_vi_c_streamaudio_get_relative_pathname.o",
+      "private_object_sha256": "2f0480967ced8641847d4077c44ea1d1ed735fe5b3f54978351c78cab15e1539",
+      "emitted_functions": [
+        {
+          "name": "GetRelativePathname__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-streamaudio-get-relative-pathname/streamaudio-get-relative-pathname.cpp"
+    },
+    {
+      "input_order": 6167,
+      "component": "w13-vi-c-streamaudio-is-looping",
+      "object_name": "w13_vi_c_streamaudio_is_looping.o",
+      "private_object_sha256": "899911cfc133b2268e529a997e9c32a5f52c43c758dab9426590c2bf9b074031",
+      "emitted_functions": [
+        {
+          "name": "IsLooping__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-streamaudio-is-looping/streamaudio-is-looping.cpp"
+    },
+    {
+      "input_order": 6168,
+      "component": "w13-vi-c-trailfx-clear",
+      "object_name": "w13_vi_c_trailfx_clear.o",
+      "private_object_sha256": "d342b3b205008daeb5fef8fda1818203cab308c9ed692c9b4adfb821ff35a5f6",
+      "emitted_functions": [
+        {
+          "name": "Clear__9VITrailFx",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-trailfx-clear/trailfx-clear.cpp"
+    },
+    {
+      "input_order": 6169,
+      "component": "w13-vi-c-trailfx-clear-segments-forward",
+      "object_name": "w13_vi_c_trailfx_clear_segments_forward.o",
+      "private_object_sha256": "d0ed103e785151543f0bcd37e7d84250c6ea7eda5e9666f41e9df8ea81176a03",
+      "emitted_functions": [
+        {
+          "name": "ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-trailfx-clear-segments-forward/trailfx-clear-segments-forward.cpp"
+    },
+    {
+      "input_order": 6170,
+      "component": "w13-vi-c-vect3-distance",
+      "object_name": "w13_vi_c_vect3_distance.o",
+      "private_object_sha256": "a74cecb8b591696750d94898271116e66b4a912c9454f837833f85c7788f3668",
+      "emitted_functions": [
+        {
+          "name": "Distance__C7VIVect3RC7VIVect3",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-vect3-distance/vect3-distance.cpp"
+    },
+    {
+      "input_order": 6171,
+      "component": "w13-vi-c-zone-find-leaf",
+      "object_name": "w13_vi_c_zone_find_leaf.o",
+      "private_object_sha256": "eb02fc483526f01f058be95dc076c9968850733eacac9f07135569d2b51cb811",
+      "emitted_functions": [
+        {
+          "name": "FindLeaf__C6VIZoneRC7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-c-zone-find-leaf/zone-find-leaf.cpp"
     }
   ],
   "drafts": [
@@ -88028,6 +88560,82 @@
     "sources/w13-vi-b-world-render-by-volume/render_by_volume.cpp": "f24126bc780b5eeb15a6429b0e53e83d31b66de7b7f5f5c105b43a5c568d2f92",
     "sources/w13-vi-b-zone-render-through-portals/host_contract.cpp": "805f7b0bde9deb522f4717494d7dce963e2ab055058dfc4b021d5811c2818639",
     "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp": "3e2f5855f70e06e89df0d07e6a32d5e6424bcdd3e21f0f3e9308b063f00bfc63",
+    "sources/w13-vi-c-bbox-distance-squared/bbox-distance-squared.cpp": "d6fea333c0b8988d68c8f53c395ac574a8a17ffd57f1ecb9ff751423e17a5554",
+    "sources/w13-vi-c-bbox-distance-squared/host_contract.cpp": "33d6c2f13cb973ea93ecde6c73fb4f8efbc6a27112b8f2057859fb70d89f99a7",
+    "sources/w13-vi-c-bbox-transform/bbox-transform.cpp": "df816b87f145fe3276697a1dc8fa7f89c6b247013d82e557fec63050671741b9",
+    "sources/w13-vi-c-bbox-transform/host_contract.cpp": "5cb0fcaff989d9c2a2d52b34662e5a5bcf4d9af12fe698e005326f48229ee409",
+    "sources/w13-vi-c-collbuffer-dtor/dtor.cpp": "43eb2482e1065cf0f9be7ce8638047f5f11cab6e69ae9a7e76eb730eed13fa78",
+    "sources/w13-vi-c-collbuffer-dtor/host_contract.cpp": "043710d9288dc81f95230dafd43e37d464e7f91246a7f94cd0845489abdd7f36",
+    "sources/w13-vi-c-collray-get-hit-point/collray-get-hit-point.cpp": "163c9c62a92823bd092c93bdc0314cb85329c6c8640a5afbcbbef9921f3d84ac",
+    "sources/w13-vi-c-collray-get-hit-point/host_contract.cpp": "425d8976ec9ada0aac755830a202cf3ac7e03c40897d4eeaecffa088ac6bcae5",
+    "sources/w13-vi-c-collray-init/collray-init.cpp": "00e61cefd58cfb9ab185765e177750fb09dd50b7442c6a96a937f30c5553a563",
+    "sources/w13-vi-c-collray-init/host_contract.cpp": "3c0d17af0719cc039b42eb53e8a0c7ac431d60ca6530d4360d60020be349aec8",
+    "sources/w13-vi-c-csprite-calc-slot-world-transform/csprite-calc-slot-world-transform.cpp": "fb1670e1143613210ae43a314b4ebf9f06c135b574c52d77bbeeed25ab785c53",
+    "sources/w13-vi-c-csprite-calc-slot-world-transform/host_contract.cpp": "55cfd5f5eddc0bea2af3edd510765502992d4cdb3433781ab0e0249556233494",
+    "sources/w13-vi-c-envray-get-hit-point/envray-get-hit-point.cpp": "d7966b1830ccb3551d2ada5b7f50c84a2cfb2218c1422346df22a52508294d0b",
+    "sources/w13-vi-c-envray-get-hit-point/host_contract.cpp": "1adaf1f20fc651065c2a9645d8cd34d6bb79626a5a81a859dca33826f2896310",
+    "sources/w13-vi-c-frustum-calc-planes/frustum-calc-planes.cpp": "e875f334c1bc883883fa17c4af7f60be695c9f2b71577000288ee60b8a0631de",
+    "sources/w13-vi-c-frustum-calc-planes/host_contract.cpp": "ec650986aff65cda9ba2b590bc4debdb5ba38e2d17d8a3d71b52a192ece000d2",
+    "sources/w13-vi-c-llist-length/host_contract.cpp": "053afe4879e588d42b23eb9a42e8681579b17cce546a974d3f7fee972d9de3b1",
+    "sources/w13-vi-c-llist-length/llist-length.cpp": "14814f631771fca3a1a7fa49bae3173276c82882b711dbeda1a126e72741ef41",
+    "sources/w13-vi-c-material-get-layer-color/host_contract.cpp": "f5db6fd78f1f3b70cdfd6c547831cecbd59ddbf9e9cd765248a6303687a6e1aa",
+    "sources/w13-vi-c-material-get-layer-color/material-get-layer-color.cpp": "98205108f2c4224a8875ff7cd54e35ccd02632d536194ce570e6f89cf587a4e6",
+    "sources/w13-vi-c-matrix33-dtor/dtor.cpp": "95224b77d1fcdef1e7ba2a363db86c2ac4dadd8f2f5c7451eac83e9f9fcbea83",
+    "sources/w13-vi-c-matrix33-dtor/host_contract.cpp": "f58b5b625001a71a0ad9d835f0506dc7e7f69f95421627f343f117052d5d90cd",
+    "sources/w13-vi-c-matrix44-mul-vect4-vect3/host_contract.cpp": "8933ea3102e5c16faf75743da1ca7667e434b7ee353a4c7e87ff3b7375ed866e",
+    "sources/w13-vi-c-matrix44-mul-vect4-vect3/mul_vect4_vect3.cpp": "fbe6152b1d5aa500b7e5c4f2144bdb3471aa5c7440795439315cf46610e7d2d0",
+    "sources/w13-vi-c-multimap-begin-emitterentry/host_contract.cpp": "5be0170798b1d077583bb76f3249e0cf79f6b71a1358f9ddfdced723ab38c934",
+    "sources/w13-vi-c-multimap-begin-emitterentry/multimap-begin-emitterentry.cpp": "3d8ad7b00283818e326474264c09a7b01a1f251090a730a510f4faafce5347e5",
+    "sources/w13-vi-c-multimap-end-emitterentry/host_contract.cpp": "f24da097842804762f3271222fb63ad912ee22da4d63f1ba626fc34f8adcc899",
+    "sources/w13-vi-c-multimap-end-emitterentry/multimap-end-emitterentry.cpp": "ed12d3c01458fde917a559d6126e75fc7016bae16ffbb19aa5a456717df88ca3",
+    "sources/w13-vi-c-multimap-next-emitterentry/host_contract.cpp": "d69a2930dc4aedb14bbe255cc2d7effb8ebe3b1b18bf47f825861bc0998499a5",
+    "sources/w13-vi-c-multimap-next-emitterentry/multimap-next-emitterentry.cpp": "88db95d9608e7149e3b06542413b8ecf34e1b49d0906a7591d5c539f83d86dbf",
+    "sources/w13-vi-c-objfile-close/host_contract.cpp": "1c12a9fe0f18917c7e38a60a0f7ef4915c896074f104b79c8f48bda12d589663",
+    "sources/w13-vi-c-objfile-close/objfile-close.cpp": "7aae1c6bc56908523b2fb2d408ea0220d903b793dbf78ab6811349a3b8321a91",
+    "sources/w13-vi-c-objfile-file-type/host_contract.cpp": "31f5d1bc5b4d7af64e0705936a64a71030d466adc0f9ee9eff543c522fcd02cb",
+    "sources/w13-vi-c-objfile-file-type/objfile-file-type.cpp": "a3d32de88d8f1dfbba564ee112aa4b6769921d14291e16e1eab497b32580183e",
+    "sources/w13-vi-c-objfile-num-objects/host_contract.cpp": "8354fd54a996168b25c3b97f9129f8bc57254510a96f54b79a65364605162161",
+    "sources/w13-vi-c-objfile-num-objects/objfile-num-objects.cpp": "439f47d6a3b7a5130ec2d525803ff0a3a864caec899c7f492604290179668e7f",
+    "sources/w13-vi-c-objfile-post-open/host_contract.cpp": "1f48214f9196274f6fb1d3311b3159a4b9101618359ae631006755c750138054",
+    "sources/w13-vi-c-objfile-post-open/objfile-post-open.cpp": "f5ec3378e9b787f88104be5e7eb59b99e3a8202c4fe1b8469dd96d272d69fb18",
+    "sources/w13-vi-c-pool-begin-particledefinition/host_contract.cpp": "4d2dc6114bbe8832124bea7c26aba76e185f1ce04ce0ea76fe6bcb9c8ebf906a",
+    "sources/w13-vi-c-pool-begin-particledefinition/pool-begin-particledefinition.cpp": "a1fbe16b9ee51df37150de0bece5294f897f5f0cf50066a3fd9a7fe33b021ea6",
+    "sources/w13-vi-c-pool-begin-spelleffect/host_contract.cpp": "35a8ff08d7bea13157114d247906b6b5f642d70c5d867a893d1244439bbb0b19",
+    "sources/w13-vi-c-pool-begin-spelleffect/pool-begin-spelleffect.cpp": "09b673bd74039fa896221d6021afc3f0bd76d718f5eb64e67e59dd703fac85fa",
+    "sources/w13-vi-c-pool-end-particledefinition/host_contract.cpp": "cd5db1b564de87a779882812957d949dcff219d3fd0a9c8017986f57d274d440",
+    "sources/w13-vi-c-pool-end-particledefinition/pool-end-particledefinition.cpp": "977793760d434ac4a0c653d9470505d5300283ba51d5d5a9a94bd81469555571",
+    "sources/w13-vi-c-pool-end-spelleffect/host_contract.cpp": "a3df17fe9031a32bf5a7143cf167d322b73daa0462e6ee50442c8eab3342fb41",
+    "sources/w13-vi-c-pool-end-spelleffect/pool-end-spelleffect.cpp": "96d5f156d804ebbef167ef2ed96f348e2de3521132664c56619262129bd34aaf",
+    "sources/w13-vi-c-raster-enable-point-light/host_contract.cpp": "fb6b52eaa282c9819ef2741ff6e9c9077663d0ffd275e020bbaacc0da03f3bd1",
+    "sources/w13-vi-c-raster-enable-point-light/raster-enable-point-light.cpp": "6525ffcefff34bf47541f7e0b9b6cb06056ff67d6f2fe3924250f43455110aa5",
+    "sources/w13-vi-c-raster-get-material-pal-entry/host_contract.cpp": "fac577659f9f4d3fd0804e6ab5ef2a8af9bb719f3f3cc2a9752c3a43aaf83c72",
+    "sources/w13-vi-c-raster-get-material-pal-entry/raster-get-material-pal-entry.cpp": "631aabea2c8abb0206e77bb4ca9226dd991d7f95534ba3fedd079c831971c85e",
+    "sources/w13-vi-c-raster-set-point-light/host_contract.cpp": "6d1f15b9cf39b09681d0f6001c7c75edc78937b6c7a37ce1abfd7e9b3da9c6b6",
+    "sources/w13-vi-c-raster-set-point-light/raster-set-point-light.cpp": "a7bb5c957f3696427d5989e489f1533c6a21ae587a9c256b7ed7378bc29b7efc",
+    "sources/w13-vi-c-scene-get-actor-location/host_contract.cpp": "79075a477fec564c5f3ffc82d8bbb0984c3005e2e009e8b93722301316b1625a",
+    "sources/w13-vi-c-scene-get-actor-location/scene-get-actor-location.cpp": "7c33a18769c97c10016b8e4a2434593e47ec9243855df90bea4da3491e113cfc",
+    "sources/w13-vi-c-scene-get-actor-sprite-ptr/host_contract.cpp": "124b507e6303d2583b5bedf1cfaccf4373802e7523398690bb8dc796afa35ee8",
+    "sources/w13-vi-c-scene-get-actor-sprite-ptr/scene-get-actor-sprite-ptr.cpp": "0f80065870af8005bfed6c048c0ea100fbbb7b79d3dd6733f17895b4be9559a0",
+    "sources/w13-vi-c-simplesprite-get-material-pal/host_contract.cpp": "f5828a2385d02d6186041777784cd56a46d8949d4b9673b8c0e4848112f0efe8",
+    "sources/w13-vi-c-simplesprite-get-material-pal/simplesprite-get-material-pal.cpp": "04dc10a99cb8a9b8a937b46a9c99748582b60203bb0d465d2c84108c80995036",
+    "sources/w13-vi-c-soundsprite-attenuation-mode/host_contract.cpp": "69c4fc88d2e28b4f2162d7d913818a80a33090230801e4652846277902c911ab",
+    "sources/w13-vi-c-soundsprite-attenuation-mode/soundsprite-attenuation-mode.cpp": "bb998db55be61202ea6c307178f3a9f5e455721b8b283525304d5e9c80e79f32",
+    "sources/w13-vi-c-soundsprite-is-pan-enabled/host_contract.cpp": "cd1a12d64b82d515e4687a7c6db7251916c158af1f4b6ef664d2472faea9b3b4",
+    "sources/w13-vi-c-soundsprite-is-pan-enabled/soundsprite-is-pan-enabled.cpp": "8a880ec2e34d0bc00eabe0e4fb17f26bc932a0bd0698c5b12f0e666968c6370c",
+    "sources/w13-vi-c-streamaudio-get-priority/host_contract.cpp": "9fb6d81868d8dc0b96ed814e60d2d002f792e1f91ad9d045eb8a82befc463f76",
+    "sources/w13-vi-c-streamaudio-get-priority/streamaudio-get-priority.cpp": "0c24a5b5ad47dc7f9e7270cee2bb1c7a5e42482af6d99584aac6ad7a097fd7ec",
+    "sources/w13-vi-c-streamaudio-get-relative-pathname/host_contract.cpp": "5baebf115f4df8105a8d684580a1b200ee2387e3b9809eefa14c012cf8d5036e",
+    "sources/w13-vi-c-streamaudio-get-relative-pathname/streamaudio-get-relative-pathname.cpp": "3b52fb8f06fee0a436fae1d9fb3951af5e49f8047964f2e0c47f21b3b802feb5",
+    "sources/w13-vi-c-streamaudio-is-looping/host_contract.cpp": "9fe00f10095f64695c3e5cfb99966afd8435d38c3426127a95e9b6e6b92e9c01",
+    "sources/w13-vi-c-streamaudio-is-looping/streamaudio-is-looping.cpp": "ae069567dccc40d495e2ae8e038f4885dc830a32ab8b41ff5a255482d06ee80a",
+    "sources/w13-vi-c-trailfx-clear-segments-forward/host_contract.cpp": "03957c3f7215a1a2f06efcb1461268c1bdcb4b2b79868323d89b0432421ad798",
+    "sources/w13-vi-c-trailfx-clear-segments-forward/trailfx-clear-segments-forward.cpp": "8ac9f57a6fddf846c1ac453bcf27a3753086ed0d54a54967507e1bebeef73f7e",
+    "sources/w13-vi-c-trailfx-clear/host_contract.cpp": "4a94114bc22ecfa5917efa34e79df7391b2768834f4faa778c58f477f21bba82",
+    "sources/w13-vi-c-trailfx-clear/trailfx-clear.cpp": "1166790340ae0c056f53b42b59ead1dab254a32395ce47035064d56da45eaee1",
+    "sources/w13-vi-c-vect3-distance/host_contract.cpp": "30cc7c752110c727b3e2905ca95c05dcbe3d328b9cbddd649933c5f77a9f55ad",
+    "sources/w13-vi-c-vect3-distance/vect3-distance.cpp": "0b8c461e68b5ec43f41a34f288eb5d71dca40f7d88ab8ec676c487e1e7f65919",
+    "sources/w13-vi-c-zone-find-leaf/host_contract.cpp": "d154b641c8e364b7950fc3ad50da644fdd01fe39cc53dd9825e59d789551ca36",
+    "sources/w13-vi-c-zone-find-leaf/zone-find-leaf.cpp": "146eb37d32e0cc962f8ad6b7afb0e687b2407db50713147b809cc7dfe8eafd8f",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -92396,11 +93004,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6134,
-    "authored_default_inputs": 6132,
+    "selected_inputs": 6172,
+    "authored_default_inputs": 6170,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4820,
-    "compiled_body_bytes_from_accepted_inputs": 1967452,
+    "emitted_function_definitions_including_helpers": 4858,
+    "compiled_body_bytes_from_accepted_inputs": 1970704,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -92413,7 +93021,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5821
+    "package_selected_inputs": 5859
   },
   "startup_implementations": [
     {
@@ -184381,6 +184989,652 @@
       ],
       "host_files": [
         "sources/w13-vi-b-zone-render-through-portals/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-bbox-distance-squared/bbox-distance-squared.cpp",
+      "source_sha256": "d6fea333c0b8988d68c8f53c395ac574a8a17ffd57f1ecb9ff751423e17a5554",
+      "object_sha256": "e66478fa7f8bad25d3bb8190c372b868e7ffa57996216a3576cc6d414e5549f1",
+      "emitted_functions": [
+        {
+          "name": "DistanceSquared__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-bbox-distance-squared/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-bbox-transform/bbox-transform.cpp",
+      "source_sha256": "df816b87f145fe3276697a1dc8fa7f89c6b247013d82e557fec63050671741b9",
+      "object_sha256": "6f1aa4086e561e09344a4a8f9fd942b38a5ba1b8c7bfdae35b4c6cfadd6aa2c0",
+      "emitted_functions": [
+        {
+          "name": "Transform__C6VIBBoxRC10VIMatrix44R6VIBBox",
+          "compiled_body_bytes": 348
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-bbox-transform/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-collbuffer-dtor/dtor.cpp",
+      "source_sha256": "43eb2482e1065cf0f9be7ce8638047f5f11cab6e69ae9a7e76eb730eed13fa78",
+      "object_sha256": "87d6eb648973d34cbad4b77b54694523fccfce4f904366959b97c5fa583c41b4",
+      "emitted_functions": [
+        {
+          "name": "_$_12VICollBuffer",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-collbuffer-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-collray-get-hit-point/collray-get-hit-point.cpp",
+      "source_sha256": "163c9c62a92823bd092c93bdc0314cb85329c6c8640a5afbcbbef9921f3d84ac",
+      "object_sha256": "5bf78f086396d9c2e5da1eeab7b72991f571aeb2e6ef2e8c0d80582b137ccfaf",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__9VICollRay",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-collray-get-hit-point/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-collray-init/collray-init.cpp",
+      "source_sha256": "00e61cefd58cfb9ab185765e177750fb09dd50b7442c6a96a937f30c5553a563",
+      "object_sha256": "5ff69101b6f114ee81bab18704de9ae625860b8f40b862dfea2eabc422936780",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollRayRC7VIVect3T1",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-collray-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-csprite-calc-slot-world-transform/csprite-calc-slot-world-transform.cpp",
+      "source_sha256": "fb1670e1143613210ae43a314b4ebf9f06c135b574c52d77bbeeed25ab785c53",
+      "object_sha256": "34884a0d423a0db5fd12ebcfcaff439f8f65a1a8619547826856ecfa86efa519",
+      "emitted_functions": [
+        {
+          "name": "CalcSlotWorldTransform__9VICSprite15VICSpriteNodeIDiR7VISceneR10VIMatrix44",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-csprite-calc-slot-world-transform/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-envray-get-hit-point/envray-get-hit-point.cpp",
+      "source_sha256": "d7966b1830ccb3551d2ada5b7f50c84a2cfb2218c1422346df22a52508294d0b",
+      "object_sha256": "262b1076a32968bc50bf1c1bfd3571814268d0fc795071a1f47bc52f3a792485",
+      "emitted_functions": [
+        {
+          "name": "GetHitPoint__C8VIEnvRay",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-envray-get-hit-point/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-frustum-calc-planes/frustum-calc-planes.cpp",
+      "source_sha256": "e875f334c1bc883883fa17c4af7f60be695c9f2b71577000288ee60b8a0631de",
+      "object_sha256": "85aca934512d3dd3fc3624786f9ccd8c4d93e78dffeaa5acfeadfa7b54fae29b",
+      "emitted_functions": [
+        {
+          "name": "CalcPlanes__9VIFrustum",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-frustum-calc-planes/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-llist-length/llist-length.cpp",
+      "source_sha256": "14814f631771fca3a1a7fa49bae3173276c82882b711dbeda1a126e72741ef41",
+      "object_sha256": "692b8d76cc96a61f0763c9ab57f26b1f788ce7561c552b3bbba847d1a91aa643",
+      "emitted_functions": [
+        {
+          "name": "Length__C7VILList",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-llist-length/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-material-get-layer-color/material-get-layer-color.cpp",
+      "source_sha256": "98205108f2c4224a8875ff7cd54e35ccd02632d536194ce570e6f89cf587a4e6",
+      "object_sha256": "b05a7dca0ae75a780683c86a6061945bff0fec00e34096ca2dcd5460d6b88a77",
+      "emitted_functions": [
+        {
+          "name": "GetLayerColor__C10VIMateriali",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-material-get-layer-color/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-matrix33-dtor/dtor.cpp",
+      "source_sha256": "95224b77d1fcdef1e7ba2a363db86c2ac4dadd8f2f5c7451eac83e9f9fcbea83",
+      "object_sha256": "463a7151efa541c952897c081edf058a254c2ef0200106829407517efe8e7a2b",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-matrix33-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-matrix44-mul-vect4-vect3/mul_vect4_vect3.cpp",
+      "source_sha256": "fbe6152b1d5aa500b7e5c4f2144bdb3471aa5c7440795439315cf46610e7d2d0",
+      "object_sha256": "e6a1931b0b24d9778f281bce33eceb82e0c8b9d129fa788bdcd365a3e8c26122",
+      "emitted_functions": [
+        {
+          "name": "Mul__C10VIMatrix44RC7VIVect4R7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-matrix44-mul-vect4-vect3/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-multimap-begin-emitterentry/multimap-begin-emitterentry.cpp",
+      "source_sha256": "3d8ad7b00283818e326474264c09a7b01a1f251090a730a510f4faafce5347e5",
+      "object_sha256": "4e7c90e708d9a20555e145d8e3573f9394352c577a526f4c1342b7958bec262b",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-multimap-begin-emitterentry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-multimap-end-emitterentry/multimap-end-emitterentry.cpp",
+      "source_sha256": "ed12d3c01458fde917a559d6126e75fc7016bae16ffbb19aa5a456717df88ca3",
+      "object_sha256": "4c39bf1b5b0cdfd14411390236463a8b83d04f35abba26bb9362fb39d9b39e95",
+      "emitted_functions": [
+        {
+          "name": "End__Ct10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-multimap-end-emitterentry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-multimap-next-emitterentry/multimap-next-emitterentry.cpp",
+      "source_sha256": "88db95d9608e7149e3b06542413b8ecf34e1b49d0906a7591d5c539f83d86dbf",
+      "object_sha256": "86fd77f42405d27f5952e62ded8c58aba3df62449039c286b0d2935a639e9782",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-multimap-next-emitterentry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-objfile-close/objfile-close.cpp",
+      "source_sha256": "7aae1c6bc56908523b2fb2d408ea0220d903b793dbf78ab6811349a3b8321a91",
+      "object_sha256": "0554692b46c2b12269519e719f7d05454fe49797497eb736786459dbdf4c26ed",
+      "emitted_functions": [
+        {
+          "name": "Close__9VIObjFile",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-objfile-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-objfile-file-type/objfile-file-type.cpp",
+      "source_sha256": "a3d32de88d8f1dfbba564ee112aa4b6769921d14291e16e1eab497b32580183e",
+      "object_sha256": "f87a5180d61ff1f209d206a938712ee48ab889db15ed7feaad5691d5e9c32238",
+      "emitted_functions": [
+        {
+          "name": "FileType__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-objfile-file-type/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-objfile-num-objects/objfile-num-objects.cpp",
+      "source_sha256": "439f47d6a3b7a5130ec2d525803ff0a3a864caec899c7f492604290179668e7f",
+      "object_sha256": "3b5a0f565b5ef4d1cecc0e04df1ab45b2eaeb85ffa6de3044c5cdb1e848d6611",
+      "emitted_functions": [
+        {
+          "name": "NumObjects__9VIObjFile",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-objfile-num-objects/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-objfile-post-open/objfile-post-open.cpp",
+      "source_sha256": "f5ec3378e9b787f88104be5e7eb59b99e3a8202c4fe1b8469dd96d272d69fb18",
+      "object_sha256": "bdac0b0da81e5432604694a749af02df59e1db650d3720cd9c88aa049b9b420e",
+      "emitted_functions": [
+        {
+          "name": "PostOpen__9VIObjFile",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-objfile-post-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-pool-begin-particledefinition/pool-begin-particledefinition.cpp",
+      "source_sha256": "a1fbe16b9ee51df37150de0bece5294f897f5f0cf50066a3fd9a7fe33b021ea6",
+      "object_sha256": "26b23186ecd3fb29f32dde68d7d31a353c1a43ce98761534ea3333a5e27a10df",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-pool-begin-particledefinition/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-pool-begin-spelleffect/pool-begin-spelleffect.cpp",
+      "source_sha256": "09b673bd74039fa896221d6021afc3f0bd76d718f5eb64e67e59dd703fac85fa",
+      "object_sha256": "aa797984f4eea1c48aba32df59e60be92231424a50c2c0b68c9452caf46b62b4",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-pool-begin-spelleffect/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-pool-end-particledefinition/pool-end-particledefinition.cpp",
+      "source_sha256": "977793760d434ac4a0c653d9470505d5300283ba51d5d5a9a94bd81469555571",
+      "object_sha256": "7f2080e3a9d236c4aa1991649a31e1cc7d6e82c34ed744e7c2eb60a561737795",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP20VIParticleDefinition",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-pool-end-particledefinition/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-pool-end-spelleffect/pool-end-spelleffect.cpp",
+      "source_sha256": "96d5f156d804ebbef167ef2ed96f348e2de3521132664c56619262129bd34aaf",
+      "object_sha256": "32c7b9a4298c13589e4791d68548185319749bc6b236d6e60d74c2ebbf902620",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-pool-end-spelleffect/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-raster-enable-point-light/raster-enable-point-light.cpp",
+      "source_sha256": "6525ffcefff34bf47541f7e0b9b6cb06056ff67d6f2fe3924250f43455110aa5",
+      "object_sha256": "5cb1fb75eb7a9bd9a1cebc80f4d08888b698e3c8428046157c5d336fd1442ed5",
+      "emitted_functions": [
+        {
+          "name": "EnablePointLight__8VIRasterii",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-raster-enable-point-light/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-raster-get-material-pal-entry/raster-get-material-pal-entry.cpp",
+      "source_sha256": "631aabea2c8abb0206e77bb4ca9226dd991d7f95534ba3fedd079c831971c85e",
+      "object_sha256": "cbf09230cecf765b36719acad600ad5af16e0a4c54fc5399af9f6ebd737437b5",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPalEntry__8VIRasterii",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-raster-get-material-pal-entry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-raster-set-point-light/raster-set-point-light.cpp",
+      "source_sha256": "a7bb5c957f3696427d5989e489f1533c6a21ae587a9c256b7ed7378bc29b7efc",
+      "object_sha256": "1e595631a5bcf55d18716754fb615bc8ea0fe1a593025126b40e0f863b8502b2",
+      "emitted_functions": [
+        {
+          "name": "SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-raster-set-point-light/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-scene-get-actor-location/scene-get-actor-location.cpp",
+      "source_sha256": "7c33a18769c97c10016b8e4a2434593e47ec9243855df90bea4da3491e113cfc",
+      "object_sha256": "26e4825e386665211346d56209954f211fff595b7fe52b945d06aa6f4c5ca482",
+      "emitted_functions": [
+        {
+          "name": "GetActorLocation__C7VIScenei",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-scene-get-actor-location/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-scene-get-actor-sprite-ptr/scene-get-actor-sprite-ptr.cpp",
+      "source_sha256": "0f80065870af8005bfed6c048c0ea100fbbb7b79d3dd6733f17895b4be9559a0",
+      "object_sha256": "1b63233bea7c3ce1490b89e37d458fa2dd17c0c4169ce6cf04fbfdbbc5648d1f",
+      "emitted_functions": [
+        {
+          "name": "GetActorSpritePtr__C7VIScenei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-scene-get-actor-sprite-ptr/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-simplesprite-get-material-pal/simplesprite-get-material-pal.cpp",
+      "source_sha256": "04dc10a99cb8a9b8a937b46a9c99748582b60203bb0d465d2c84108c80995036",
+      "object_sha256": "d183dfbab6d42fa77a4adaace43cacbe1cef19a12cfa1c11659e15184e7d86e1",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPal__C14VISimpleSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-simplesprite-get-material-pal/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-soundsprite-attenuation-mode/soundsprite-attenuation-mode.cpp",
+      "source_sha256": "bb998db55be61202ea6c307178f3a9f5e455721b8b283525304d5e9c80e79f32",
+      "object_sha256": "13de83c591e718d2bb55d452b015a04e16d85e5127f046caf5914f57bb351867",
+      "emitted_functions": [
+        {
+          "name": "AttenuationMode__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-soundsprite-attenuation-mode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-soundsprite-is-pan-enabled/soundsprite-is-pan-enabled.cpp",
+      "source_sha256": "8a880ec2e34d0bc00eabe0e4fb17f26bc932a0bd0698c5b12f0e666968c6370c",
+      "object_sha256": "630141bf1e3c4d04be5debc762c4c8812ce166520e645105ea1eb2c33bbc3494",
+      "emitted_functions": [
+        {
+          "name": "IsPanEnabled__C13VISoundSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-soundsprite-is-pan-enabled/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-streamaudio-get-priority/streamaudio-get-priority.cpp",
+      "source_sha256": "0c24a5b5ad47dc7f9e7270cee2bb1c7a5e42482af6d99584aac6ad7a097fd7ec",
+      "object_sha256": "c534c2b407b2c18c618971869952a97cee826ba5b3372919d2eb835c14f64239",
+      "emitted_functions": [
+        {
+          "name": "GetPriority__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-streamaudio-get-priority/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-streamaudio-get-relative-pathname/streamaudio-get-relative-pathname.cpp",
+      "source_sha256": "3b52fb8f06fee0a436fae1d9fb3951af5e49f8047964f2e0c47f21b3b802feb5",
+      "object_sha256": "2f0480967ced8641847d4077c44ea1d1ed735fe5b3f54978351c78cab15e1539",
+      "emitted_functions": [
+        {
+          "name": "GetRelativePathname__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-streamaudio-get-relative-pathname/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-streamaudio-is-looping/streamaudio-is-looping.cpp",
+      "source_sha256": "ae069567dccc40d495e2ae8e038f4885dc830a32ab8b41ff5a255482d06ee80a",
+      "object_sha256": "899911cfc133b2268e529a997e9c32a5f52c43c758dab9426590c2bf9b074031",
+      "emitted_functions": [
+        {
+          "name": "IsLooping__C19VIStreamAudioSprite",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-streamaudio-is-looping/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-trailfx-clear/trailfx-clear.cpp",
+      "source_sha256": "1166790340ae0c056f53b42b59ead1dab254a32395ce47035064d56da45eaee1",
+      "object_sha256": "d342b3b205008daeb5fef8fda1818203cab308c9ed692c9b4adfb821ff35a5f6",
+      "emitted_functions": [
+        {
+          "name": "Clear__9VITrailFx",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-trailfx-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-trailfx-clear-segments-forward/trailfx-clear-segments-forward.cpp",
+      "source_sha256": "8ac9f57a6fddf846c1ac453bcf27a3753086ed0d54a54967507e1bebeef73f7e",
+      "object_sha256": "d0ed103e785151543f0bcd37e7d84250c6ea7eda5e9666f41e9df8ea81176a03",
+      "emitted_functions": [
+        {
+          "name": "ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-trailfx-clear-segments-forward/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-vect3-distance/vect3-distance.cpp",
+      "source_sha256": "0b8c461e68b5ec43f41a34f288eb5d71dca40f7d88ab8ec676c487e1e7f65919",
+      "object_sha256": "a74cecb8b591696750d94898271116e66b4a912c9454f837833f85c7788f3668",
+      "emitted_functions": [
+        {
+          "name": "Distance__C7VIVect3RC7VIVect3",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-vect3-distance/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-c",
+      "source": "sources/w13-vi-c-zone-find-leaf/zone-find-leaf.cpp",
+      "source_sha256": "146eb37d32e0cc962f8ad6b7afb0e687b2407db50713147b809cc7dfe8eafd8f",
+      "object_sha256": "eb02fc483526f01f058be95dc076c9968850733eacac9f07135569d2b51cb811",
+      "emitted_functions": [
+        {
+          "name": "FindLeaf__C6VIZoneRC7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-c-zone-find-leaf/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
