@@ -71831,6 +71831,24 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w13-m-data-a-marble/marble.cpp"
+    },
+    {
+      "input_order": 5622,
+      "component": "w13-m-data-b-max-distance",
+      "object_name": "w13_m_data_b_max_distance.o",
+      "private_object_sha256": "7f0d93481db61a43ec11b738830d34a4957aac901203a9e335e37418ac34be02",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-b-max-distance/max_distance.cpp"
+    },
+    {
+      "input_order": 5623,
+      "component": "w13-m-data-b-zero-pad",
+      "object_name": "w13_m_data_b_zero_pad.o",
+      "private_object_sha256": "12786bbb805654e1cafd783eb9d775f3057f43e15013ff3617c8c316c7b2455e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-data-b-zero-pad/zero_pad.cpp"
     }
   ],
   "drafts": [
@@ -79703,6 +79721,10 @@
     "sources/w13-m-data-a-line-pos/line_pos.cpp": "d7d9fecd79ac603d2666ab58c8c67aed2b6a0e1da1e8730e64b68ee4653de281",
     "sources/w13-m-data-a-marble/host_check.cpp": "cf636159d57a147d7e9be63e7bcc509400895d64d39ca5b9609dfb958c2402fb",
     "sources/w13-m-data-a-marble/marble.cpp": "41d2e9d781d1b0a099f1853de8c15a9aff0b370c4a79731ca04fce4f3293ec27",
+    "sources/w13-m-data-b-max-distance/host_check.cpp": "413d19ad5812e502609aa0b3067329ffec1a2077c6475dfef4cfe724315dbd1d",
+    "sources/w13-m-data-b-max-distance/max_distance.cpp": "6c6dcaeca317f6eb14f5a47f8a85a8633a6a41f3dd77e0e6fc2995b7ec981e96",
+    "sources/w13-m-data-b-zero-pad/host_check.cpp": "c6c227390ddcd66534edeea5353d8c2b7055864ff73f221b11d3f03e2ce93406",
+    "sources/w13-m-data-b-zero-pad/zero_pad.cpp": "0dcf510eae96ad2cd3be76375214b71814ce82da6b862eef5a3fa1d2ce03f194",
     "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
     "sources/w13-m-startup-data-a-config-rand-words/host_check.cpp": "1be10655b1d05695dcd0b6a2a755bc681c1c0677071f08455ddf4f10fc1754c9",
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
@@ -84172,8 +84194,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5622,
-    "authored_default_inputs": 5620,
+    "selected_inputs": 5624,
+    "authored_default_inputs": 5622,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 4307,
     "compiled_body_bytes_from_accepted_inputs": 1872352,
@@ -84189,7 +84211,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5309
+    "package_selected_inputs": 5311
   },
   "startup_implementations": [
     {
@@ -167451,6 +167473,30 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w13-m-data-a-marble/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-b",
+      "source": "sources/w13-m-data-b-max-distance/max_distance.cpp",
+      "source_sha256": "6c6dcaeca317f6eb14f5a47f8a85a8633a6a41f3dd77e0e6fc2995b7ec981e96",
+      "object_sha256": "7f0d93481db61a43ec11b738830d34a4957aac901203a9e335e37418ac34be02",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-b-max-distance/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-data-b",
+      "source": "sources/w13-m-data-b-zero-pad/zero_pad.cpp",
+      "source_sha256": "0dcf510eae96ad2cd3be76375214b71814ce82da6b862eef5a3fa1d2ce03f194",
+      "object_sha256": "12786bbb805654e1cafd783eb9d775f3057f43e15013ff3617c8c316c7b2455e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-data-b-zero-pad/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

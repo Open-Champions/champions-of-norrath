@@ -9492,3 +9492,19 @@ Closed: `fullCount`, `lineBuffer`, `linePos`, `marble`
 
 Opened: none
 - 2026-10-13 15:47 CDT — agents/w13-m-data-a — 1251 unresolved imports
+
+## agents/w13-m-data-b
+
+Merged (merge commit, branch tip `b29bed7b`; the notes have the result, checks, observed/inferred/unknown, closed, opened, plan-entry, never-executed and unknown sections). 2 data units, `w13-m-data-b-zero-pad` (`zeroPad`) and the `maxDistance` unit, with fresh `input_order` values 5622 and 5623; both committed host checks build and pass here. They check size and initial state only. The notes list 22 of the 24 assigned names as still open with reasons; none of those has a unit here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5622 authored inputs, 4305 function bodies, zero COMMON. The notes' two closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1251 |
+| After | 1249 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `maxDistance`, `zeroPad`
+
+Opened: none
+- 2026-10-13 15:51 CDT — agents/w13-m-data-b — 1249 unresolved imports

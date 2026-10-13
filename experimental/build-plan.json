@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5620,
+  "default_authored_inputs": 5622,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4389,6 +4389,8 @@
     "sources/w13-m-data-a-line-buffer/line_buffer.cpp": "8a5d12f3a64a17a0a25e5dadc9671bec23a794ed7a5eb704413c7d6018189b73",
     "sources/w13-m-data-a-line-pos/line_pos.cpp": "d7d9fecd79ac603d2666ab58c8c67aed2b6a0e1da1e8730e64b68ee4653de281",
     "sources/w13-m-data-a-marble/marble.cpp": "41d2e9d781d1b0a099f1853de8c15a9aff0b370c4a79731ca04fce4f3293ec27",
+    "sources/w13-m-data-b-max-distance/max_distance.cpp": "6c6dcaeca317f6eb14f5a47f8a85a8633a6a41f3dd77e0e6fc2995b7ec981e96",
+    "sources/w13-m-data-b-zero-pad/zero_pad.cpp": "0dcf510eae96ad2cd3be76375214b71814ce82da6b862eef5a3fa1d2ce03f194",
     "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
     "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
@@ -82342,6 +82344,26 @@
       "sha256": "41d2e9d781d1b0a099f1853de8c15a9aff0b370c4a79731ca04fce4f3293ec27",
       "source": "sources/w13-m-data-a-marble/marble.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5622,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_data_b_max_distance.o",
+      "profile": "authored_cpp",
+      "sha256": "6c6dcaeca317f6eb14f5a47f8a85a8633a6a41f3dd77e0e6fc2995b7ec981e96",
+      "source": "sources/w13-m-data-b-max-distance/max_distance.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5623,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_data_b_zero_pad.o",
+      "profile": "authored_cpp",
+      "sha256": "0dcf510eae96ad2cd3be76375214b71814ce82da6b862eef5a3fa1d2ce03f194",
+      "source": "sources/w13-m-data-b-zero-pad/zero_pad.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -82441,7 +82463,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "9e7e54bd109e8ea3c59951b21f9c9d93f036f0f9fc0e2a0e533b06ea27db0642",
+  "snapshot_sha256": "656bb69c49eca941898a4fcc1667e4fcf7cdb57cb3b30255b03757fdf4815c19",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
