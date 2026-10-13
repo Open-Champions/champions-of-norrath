@@ -89,7 +89,7 @@ The names below are no longer unresolved once the build-plan entries are added (
 
 `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `addEffect__FiG6Point3`, `bodyAddForce__FP5_bodyP6Point3N31`, `bodyAlpha`, `bodyApplyForce__FP5_bodyG6Point3T1f`, `bodyApplyImpulse__FP5_bodyG6Point3T1f`, `bodyGetVelocity__FP5_bodyP6Point3T1`, `bodyInit__FP5_bodyfffff`, `bodyUpdateMatrix__FP5_body`, `cutCameraPos`, `disintegrationEffect__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sffi`, `distanceToPlane__FP6Point3N20`, `drawBucket`, `drawCharacterCallBack__FiP6Point3PsPiN23`, `drawDistortionParticles__Fv`, `drawLines__Fv`, `drawPS__FR6PacketP14ParticleSystem`, `drawSingleParticles__Fi`, `drawTrails__Fv`, `drawUpFrom__FiiPCUcT2iUi`, `dummyList`, `fadeDownVal`, `frameNumWrappedPS__FP14ParticleSystem`, `gamePositionVisible__FP6Point3f`, `getMegatileOriginalPosition__FG6Point3`, `hvecs`, `lightActivate__FP5Light`, `lightDisableLocalLights__Fv`, `lightGlobalCharLightScale__Ff`, `lightInit__11AddParticlePPc`, `lightMats`, `lightPopSceneLights__Fv`.
 
-The private partial build compiled 2,347 authored inputs (the 2,316 selected plus these 32) and linked once: 1,901 function bodies and 1,500 unresolved imports. Every name above was absent from `unresolved-imports.json`, and every name listed under "Imports opened" was present in it (the 17 imports of the first 31 units on the first build, and the four added by `addEffect` on a second build that included it). The build used a private plan and snapshot kept outside git.
+The private partial build compiled 2,348 authored inputs (the 2,316 selected plus these 32) and linked once: 1,901 function bodies and 1,500 unresolved imports. Every name above was absent from `unresolved-imports.json`, and every name listed under "Imports opened" was present in it (the 17 imports of the first 31 units on the first build, and the four added by `addEffect` on a second build that included it). The build used a private plan and snapshot kept outside git.
 
 Still open from the package list: `draw__3mapP12_worldHeaderfffffffG6Point2PFiP6Point3PsPiPiPi_is`. `icos__Fi` and `iatan2__Fff` are closed by other units.
 
@@ -146,3 +146,11 @@ Append these 32 authored inputs and assign fresh `input_order` values (the priva
 All 25 functions and 7 data objects. Everything ran only on the private interpreter against the original image's data, with the stubs described above; nothing ran on the EE, under the original process, or in gameplay. The interpreter is a small model: it does not model the FPU rounding mode beyond truncation, exceptions, the R5900 `madd`/VU0 forms, interrupts, DMA, VIF, GS or VU1. The packet-building routines were compared byte for byte in memory, but no GS, VIF or DMA hardware consumed those packets, and the VU1 program and its uploaded data were not run. Calls through unresolved imports are symbolic. The compiled unit for each function matches the paired run only for the inputs sampled.
 
 The `memset` reached by `bodyInit` and the `sprintf`, `strcat` and `findTagInt` reached by `lightInit` were stubs on both sides.
+
+## Unknown
+
+- Why blocks skip indices 31 and 32, 63 and 64, and so on (three drawing routines and the frame-number wrap share it).
+- What the descriptor, trail, bolt and particle flag fields mean beyond the offsets read; what the VIF/GIF word sequences achieve beyond their command encodings; the ParticleDef constructor arguments.
+- The extent and role of the bytes in `hvecs`, `lightMats` and `cutCameraPos` that no authored caller touches, and the exact layout of `ParticleSystem`, `Packet`, `Light`, `AddParticle` and `GameObject` beyond the fields read.
+- The behaviour of `draw__3mapP12_worldHeaderfffffffG6Point2PFiP6Point3PsPiPiPi_is`, which is not reconstructed, and the contents of the unnamed float tables it reads.
+- Whether the real hardware, GS, VIF, VU1, interrupts or the original float environment disagree with the interpreter on any compared path. None of that was exercised.
