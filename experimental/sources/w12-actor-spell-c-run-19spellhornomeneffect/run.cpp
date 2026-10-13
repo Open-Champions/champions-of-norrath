@@ -43,7 +43,7 @@ void P_AddParticle__FP11ParticleDefP6Point3T1f(void* definition, Point3* positio
 namespace {
 using namespace w12c;
 
-void draw_direction(unsigned char* s, Point3& d) {
+static void draw_direction(unsigned char* s, Point3& d) {
     do {
         float t = static_cast<float>(eRand__5Spell(s)) * bits(0x37800000u);
         d.x = t + t - 1.0f;
@@ -54,7 +54,7 @@ void draw_direction(unsigned char* s, Point3& d) {
     } while (1.0f < d.x * d.x + d.y * d.y + d.z * d.z);
 }
 
-void emit_one(unsigned char* s, int count, const Point3& zero) {
+static void emit_one(unsigned char* s, int count, const Point3& zero) {
     unsigned char* owner = from_word(word(s, 12));
     void* const model = reinterpret_cast<void*>(call_entry(owner, 128));
     const int r = eRand__5Spell(s);
