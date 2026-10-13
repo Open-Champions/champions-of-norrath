@@ -5082,6 +5082,47 @@ Opened: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `KbdMapTable`,
 `connect_to_iop_server`, `get_time`, `init_ee_timer`,
 `qsort_translate_table`
 
+## agents/w9-startup-crt-f
+
+Merged (the branch notes carry the five summary sections; the tip was 66
+minutes old). Twenty-two of its 30 units were selected with fresh
+`input_order` values 2599 through 2620, including three assembler stubs
+(`authored_entry_asm`). Eight units were **not** selected because the branch
+commits no host test for them; the notes say they were checked only in a
+private paired run outside git, which this repository cannot re-run:
+`mc-read`, `mc-write`, `pad-read`, `pad-set-act-direct`, `tty-init`,
+`tty-read`, `tty-write` and the `tty-state` data unit that the three tty
+functions depend on. Their sources stay in the snapshot, unselected, and
+`sceMcRead`, `sceMcWrite`, `scePadRead`, `scePadSetActDirect` and the tty
+functions stay open until a committed test exists. Of the 22 selected, 19 host
+tests build and exit 0 here (the link-style ones need their implementation file
+on the command line, two need a `-D` from the file's first lines). The three
+assembler comparisons `sif-set-d-chain`, `sif-set-dma` and `sif-stop-dma` take
+the private executable as an argument and were not run. No game binary or
+disassembly listing was committed (the notes explain that `srcfile` and
+`tlbsrc` are machine code and were deliberately not authored). 2117 function
+bodies, 2619 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1467 |
+| After | 1455 |
+| Closed | 22 |
+| Opened | 10 |
+
+Closed: `sceMcOpen`, `sceMcSeek`, `scePadEnterPressMode`, `scePadInfoPressMode`,
+`scePadSetActAlign`, `scePadSetMainMode`, `sceSdTransToIOP`,
+`sceSifExitCmd`, `sceSifFreeSysMemory`, `sceSifMBindRpcParam`,
+`sceSifMExitRpc`, `sceSifMUnBindRpc`, `sceSifRemoveCmdHandler`,
+`sceSifSetDChain`, `sceSifSetDma`, `sceSifStopDma`, `strcat`, `strchr`,
+`strrchr`, `strticmp__FPCcT0`, `unet_shutdown__Fv`, `ustrcat__FPUsPc`
+
+Opened: `VIFreeUSocketExApi__Fv`, `_sceSifMInitCheck`, `net_buf`,
+`norrath_sif_m_rpc_packet_pool_view`, `sLibNetInitialized`,
+`scePadGetButtonMask`, `scePadSetButtonInfo`, `scePadSetReqState`,
+`sceSifDmaStat`, `sceSifRemoveRebootNotifyHandler`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5438,3 +5479,4 @@ and no startup stage has executed.
 - 2026-10-12 20:45 CDT — `agents/runtime-tables` — 1436 unresolved imports
 - 2026-10-12 20:59 CDT — `agents/w9-startup-crt-b` — 1472 unresolved imports
 - 2026-10-12 21:06 CDT — `agents/w9-startup-crt-d` — 1467 unresolved imports
+- 2026-10-12 21:10 CDT — `agents/w9-startup-crt-f` — 1455 unresolved imports

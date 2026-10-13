@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2597,
+  "default_authored_inputs": 2619,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3272,6 +3272,28 @@
     "sources/w9-startup-crt-e-raise/raise.cpp": "b0816a17d1f506cdc28b9ed4c5a75eec8231882a376953063b1e10e745162b21",
     "sources/w9-startup-crt-e-softdouble-names/softdouble_names.cpp": "a01c29e00b104a75b802ae8749b42d3b7cca0bb6452a918dc383e2287dde53eb",
     "sources/w9-startup-crt-e-strticmp/strticmp.cpp": "d5a4e6d2a98aa70209d5a2d6927bea32629a03e1a9e0663853f95f1c1ae5ec51",
+    "sources/w9-startup-crt-f-mc-open/mc_open.cpp": "798f83464a3dc9a377483adf80aa1858a94201bd3481ee15c14d4bb9c0ac41d9",
+    "sources/w9-startup-crt-f-mc-seek/mc_seek.cpp": "3ad1105759d4a643f0903ea43b14e5936730fd935d3d0454bb27d48ed6c466bb",
+    "sources/w9-startup-crt-f-pad-enter-press-mode/pad_enter_press_mode.cpp": "e33b80a177d4c96a91210eeafee71a342822775c35b99c7407ad7c1ffe755bef",
+    "sources/w9-startup-crt-f-pad-info-press-mode/pad_info_press_mode.cpp": "8b8ee119848bcce47e7e286c51fe31a3187f8264e0d256c9522d2d3677b070d4",
+    "sources/w9-startup-crt-f-pad-set-act-align/pad_set_act_align.cpp": "a3296e5d9e7c85c809eaa809665342b85c37deee8de6fe3360f6e4c0af8cba1d",
+    "sources/w9-startup-crt-f-pad-set-main-mode/pad_set_main_mode.cpp": "22b5a7477401e9f6bc30eb2abc9bea29e298f84defe4e0fa64b93e8c747e3cf8",
+    "sources/w9-startup-crt-f-sd-trans-to-iop/sd_trans_to_iop.cpp": "eb52f2ac0074f771e7cc888a1558b73db9583c8f0f8fd28d3a2bdc9bd536a0c2",
+    "sources/w9-startup-crt-f-sif-exit-cmd/sif_exit_cmd.cpp": "0c476c4e85a0a4766281df3dbad7529f39fded0d4eaa1761f08abc344fd0246f",
+    "sources/w9-startup-crt-f-sif-free-sys-memory/sif_free_sys_memory.cpp": "0b7e4ed496c24aa4f89d7475bc979a15a8ce61cd9cbf8568682f55aa436e0b1a",
+    "sources/w9-startup-crt-f-sif-m-bind-rpc-param/sif_m_bind_rpc_param.cpp": "7f2bb190d322fe08272246320fc5dfb853a6416f4d272999379928facbdbc0d3",
+    "sources/w9-startup-crt-f-sif-m-exit-rpc/sif_m_exit_rpc.cpp": "0e0fb752e14e2ca73afa75cb9d3b8db20304a54d53511ef702c78b53b98435af",
+    "sources/w9-startup-crt-f-sif-m-un-bind-rpc/sif_m_un_bind_rpc.cpp": "b244f1a69cb607c0fa856c4fe37124558d410fe7fefefa1393dbe67b2b2e836c",
+    "sources/w9-startup-crt-f-sif-remove-cmd-handler/sif_remove_cmd_handler.cpp": "0140dff38fb23e662494af78bb92c27582a0a30243c5b825ffacee1ecf5afe7c",
+    "sources/w9-startup-crt-f-sif-set-d-chain/sif_set_d_chain.S": "2a542403f1a9fc8d65ab6b4f11d17903cb0a5c54911974c2bf1cc436056062d8",
+    "sources/w9-startup-crt-f-sif-set-dma/sif_set_dma.S": "f2416bf89d9fcb3adc5fe06160b4011ed9eaf3841a4795ef1ade6ff0337d1489",
+    "sources/w9-startup-crt-f-sif-stop-dma/sif_stop_dma.S": "021f4d6fc58d84da8de88a96be185829b22c8de35ff8d4cac4c60b0f03976de6",
+    "sources/w9-startup-crt-f-strcat/strcat.cpp": "ee646e1903fb520787f4fbbee6a6b7de804cd79aeef55b630f7b7baaae055dec",
+    "sources/w9-startup-crt-f-strchr/strchr.cpp": "a51fef37ef168c9d27234f7e939252dbac72fed831991aa57be0f4f1ca9e2528",
+    "sources/w9-startup-crt-f-strrchr/strrchr.cpp": "e053978ddae101c971eb1e29b21b05f6ad19f1d2e2ab083af323df07a001cc28",
+    "sources/w9-startup-crt-f-strticmp/strticmp.cpp": "1d4ac81937ac64caa8ed8802269857df412917c04ebba6a4c64c337628970273",
+    "sources/w9-startup-crt-f-unet-shutdown/unet_shutdown.cpp": "833aa3b8f60b432ed54f46c12c8e679a7771c5936c2aaddaddbf81eb8355ead0",
+    "sources/w9-startup-crt-f-ustrcat/ustrcat.cpp": "5819f7283950de60941bb75da514da52549789009975b1c1bbde244cd885bd2f",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -37114,6 +37136,336 @@
           "compiled_body_bytes": 160
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2599,
+      "kind": "independently_authored_source",
+      "object_name": "mc_open.o",
+      "profile": "authored_cpp",
+      "sha256": "798f83464a3dc9a377483adf80aa1858a94201bd3481ee15c14d4bb9c0ac41d9",
+      "source": "sources/w9-startup-crt-f-mc-open/mc_open.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMcOpen",
+          "compiled_body_bytes": 352
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2600,
+      "kind": "independently_authored_source",
+      "object_name": "mc_seek.o",
+      "profile": "authored_cpp",
+      "sha256": "3ad1105759d4a643f0903ea43b14e5936730fd935d3d0454bb27d48ed6c466bb",
+      "source": "sources/w9-startup-crt-f-mc-seek/mc_seek.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceMcSeek",
+          "compiled_body_bytes": 264
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2601,
+      "kind": "independently_authored_source",
+      "object_name": "pad_enter_press_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "e33b80a177d4c96a91210eeafee71a342822775c35b99c7407ad7c1ffe755bef",
+      "source": "sources/w9-startup-crt-f-pad-enter-press-mode/pad_enter_press_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadEnterPressMode",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2602,
+      "kind": "independently_authored_source",
+      "object_name": "pad_info_press_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "8b8ee119848bcce47e7e286c51fe31a3187f8264e0d256c9522d2d3677b070d4",
+      "source": "sources/w9-startup-crt-f-pad-info-press-mode/pad_info_press_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadInfoPressMode",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2603,
+      "kind": "independently_authored_source",
+      "object_name": "pad_set_act_align.o",
+      "profile": "authored_cpp",
+      "sha256": "a3296e5d9e7c85c809eaa809665342b85c37deee8de6fe3360f6e4c0af8cba1d",
+      "source": "sources/w9-startup-crt-f-pad-set-act-align/pad_set_act_align.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadSetActAlign",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2604,
+      "kind": "independently_authored_source",
+      "object_name": "pad_set_main_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "22b5a7477401e9f6bc30eb2abc9bea29e298f84defe4e0fa64b93e8c747e3cf8",
+      "source": "sources/w9-startup-crt-f-pad-set-main-mode/pad_set_main_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "scePadSetMainMode",
+          "compiled_body_bytes": 244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2605,
+      "kind": "independently_authored_source",
+      "object_name": "sd_trans_to_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "eb52f2ac0074f771e7cc888a1558b73db9583c8f0f8fd28d3a2bdc9bd536a0c2",
+      "source": "sources/w9-startup-crt-f-sd-trans-to-iop/sd_trans_to_iop.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSdTransToIOP",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2606,
+      "kind": "independently_authored_source",
+      "object_name": "sif_exit_cmd.o",
+      "profile": "authored_cpp",
+      "sha256": "0c476c4e85a0a4766281df3dbad7529f39fded0d4eaa1761f08abc344fd0246f",
+      "source": "sources/w9-startup-crt-f-sif-exit-cmd/sif_exit_cmd.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifExitCmd",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2607,
+      "kind": "independently_authored_source",
+      "object_name": "sif_free_sys_memory.o",
+      "profile": "authored_cpp",
+      "sha256": "0b7e4ed496c24aa4f89d7475bc979a15a8ce61cd9cbf8568682f55aa436e0b1a",
+      "source": "sources/w9-startup-crt-f-sif-free-sys-memory/sif_free_sys_memory.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifFreeSysMemory",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2608,
+      "kind": "independently_authored_source",
+      "object_name": "sif_m_bind_rpc_param.o",
+      "profile": "authored_cpp",
+      "sha256": "7f2bb190d322fe08272246320fc5dfb853a6416f4d272999379928facbdbc0d3",
+      "source": "sources/w9-startup-crt-f-sif-m-bind-rpc-param/sif_m_bind_rpc_param.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifMBindRpcParam",
+          "compiled_body_bytes": 432
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2609,
+      "kind": "independently_authored_source",
+      "object_name": "sif_m_exit_rpc.o",
+      "profile": "authored_cpp",
+      "sha256": "0e0fb752e14e2ca73afa75cb9d3b8db20304a54d53511ef702c78b53b98435af",
+      "source": "sources/w9-startup-crt-f-sif-m-exit-rpc/sif_m_exit_rpc.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifMExitRpc",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2610,
+      "kind": "independently_authored_source",
+      "object_name": "sif_m_un_bind_rpc.o",
+      "profile": "authored_cpp",
+      "sha256": "b244f1a69cb607c0fa856c4fe37124558d410fe7fefefa1393dbe67b2b2e836c",
+      "source": "sources/w9-startup-crt-f-sif-m-un-bind-rpc/sif_m_un_bind_rpc.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifMUnBindRpc",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2611,
+      "kind": "independently_authored_source",
+      "object_name": "sif_remove_cmd_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "0140dff38fb23e662494af78bb92c27582a0a30243c5b825ffacee1ecf5afe7c",
+      "source": "sources/w9-startup-crt-f-sif-remove-cmd-handler/sif_remove_cmd_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceSifRemoveCmdHandler",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2612,
+      "kind": "independently_authored_source",
+      "object_name": "sif_set_d_chain.o",
+      "profile": "authored_entry_asm",
+      "sha256": "2a542403f1a9fc8d65ab6b4f11d17903cb0a5c54911974c2bf1cc436056062d8",
+      "source": "sources/w9-startup-crt-f-sif-set-d-chain/sif_set_d_chain.S",
+      "emitted_functions": [
+        {
+          "name": "sceSifSetDChain",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2613,
+      "kind": "independently_authored_source",
+      "object_name": "sif_set_dma.o",
+      "profile": "authored_entry_asm",
+      "sha256": "f2416bf89d9fcb3adc5fe06160b4011ed9eaf3841a4795ef1ade6ff0337d1489",
+      "source": "sources/w9-startup-crt-f-sif-set-dma/sif_set_dma.S",
+      "emitted_functions": [
+        {
+          "name": "sceSifSetDma",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2614,
+      "kind": "independently_authored_source",
+      "object_name": "sif_stop_dma.o",
+      "profile": "authored_entry_asm",
+      "sha256": "021f4d6fc58d84da8de88a96be185829b22c8de35ff8d4cac4c60b0f03976de6",
+      "source": "sources/w9-startup-crt-f-sif-stop-dma/sif_stop_dma.S",
+      "emitted_functions": [
+        {
+          "name": "sceSifStopDma",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2615,
+      "kind": "independently_authored_source",
+      "object_name": "strcat.o",
+      "profile": "authored_cpp",
+      "sha256": "ee646e1903fb520787f4fbbee6a6b7de804cd79aeef55b630f7b7baaae055dec",
+      "source": "sources/w9-startup-crt-f-strcat/strcat.cpp",
+      "emitted_functions": [
+        {
+          "name": "strcat",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2616,
+      "kind": "independently_authored_source",
+      "object_name": "strchr.o",
+      "profile": "authored_cpp",
+      "sha256": "a51fef37ef168c9d27234f7e939252dbac72fed831991aa57be0f4f1ca9e2528",
+      "source": "sources/w9-startup-crt-f-strchr/strchr.cpp",
+      "emitted_functions": [
+        {
+          "name": "strchr",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2617,
+      "kind": "independently_authored_source",
+      "object_name": "strrchr.o",
+      "profile": "authored_cpp",
+      "sha256": "e053978ddae101c971eb1e29b21b05f6ad19f1d2e2ab083af323df07a001cc28",
+      "source": "sources/w9-startup-crt-f-strrchr/strrchr.cpp",
+      "emitted_functions": [
+        {
+          "name": "strrchr",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2618,
+      "kind": "independently_authored_source",
+      "object_name": "strticmp.o",
+      "profile": "authored_cpp",
+      "sha256": "1d4ac81937ac64caa8ed8802269857df412917c04ebba6a4c64c337628970273",
+      "source": "sources/w9-startup-crt-f-strticmp/strticmp.cpp",
+      "emitted_functions": [
+        {
+          "name": "strticmp__FPCcT0",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2619,
+      "kind": "independently_authored_source",
+      "object_name": "unet_shutdown.o",
+      "profile": "authored_cpp",
+      "sha256": "833aa3b8f60b432ed54f46c12c8e679a7771c5936c2aaddaddbf81eb8355ead0",
+      "source": "sources/w9-startup-crt-f-unet-shutdown/unet_shutdown.cpp",
+      "emitted_functions": [
+        {
+          "name": "unet_shutdown__Fv",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2620,
+      "kind": "independently_authored_source",
+      "object_name": "ustrcat.o",
+      "profile": "authored_cpp",
+      "sha256": "5819f7283950de60941bb75da514da52549789009975b1c1bbde244cd885bd2f",
+      "source": "sources/w9-startup-crt-f-ustrcat/ustrcat.cpp",
+      "emitted_functions": [
+        {
+          "name": "ustrcat__FPUsPc",
+          "compiled_body_bytes": 84
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -37213,7 +37565,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "89d2b4c191afa04329de38aef125a4d9562d7f3f790de95b49ba6472430e8d25",
+  "snapshot_sha256": "899351e6a59e20c239978cd037017c267578330fefc184d8a6fafc45323b9069",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
