@@ -4767,6 +4767,45 @@ Opened: `Exit`, `_$_10bad_typeid`, `_$_11AddParticle`, `_$_11LavaVehicle`,
 `msg_run__11LightEffect`, `msg_run__19ParticleMorphEffect`,
 `run__11AddParticleG6Point3`, `scanMask`, `subfontPrintu__FiiPUsi`
 
+## agents/w9-startup-crt-e
+
+Merged (the branch notes carry the five summary sections). Twenty-three units
+with fresh `input_order` values 2442 through 2464: 17 function units, one
+four-entry soft-double pass-through unit, and four storage/data-view units
+that emit no function (the notes list a table, not JSON, so the units were read
+from the files and cross-checked against the notes' table: same 23). All 23
+host contracts build and exit 0 here (23 of 23). The notes' compiled sizes are
+from a private trial; the plan build is authoritative. The worker's
+`w8-startup-sce-d-set-srs-info` remark (its host stub text for the race table
+does not match the image) is the worker's observation and I did not touch that
+package. No game binary or disassembly listing was committed. 2011 function
+bodies, 2463 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1496 |
+| After | 1484 |
+| Closed | 29 |
+| Opened | 17 |
+
+Closed: `norrath_sce_d_race_strings_view_4293e8`,
+`norrath_sce_d_unknown_sdata_word_view_4852d8`,
+`norrath_softdouble_add_2fb5c0`, `norrath_softdouble_compare_2fba48`,
+`norrath_softdouble_multiply_2fb680`, `norrath_softdouble_to_float_2fbc20`,
+`norrath_strticmp`, `padFilter`, `printfloat`, `raise`, `rdata`,
+`reglistLoopCount`, `sceCdDiskReady`, `sceCdPowerOff`, `sceCdRead`,
+`sceCdReadIOPm`, `sceCdStPause`, `sceCdStStop`, `sceDevctl`,
+`sceDmaCurrentEnv`, `sceFsInit`, `sceGifPkEnd`, `sceGifPkRefLoadImage`,
+`sceMcChdir`, `sceMcClose`, `sceMcDelete`, `sceMcFormat`, `sceMcGetDir`,
+`sceMcMkdir`
+
+Opened: `__fixunsdfdi`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`,
+`_sceFs_Rcv_Intr`, `currentDir`, `ftoi`, `mceSifRpcEndFunc`, `mceStorePwd`,
+`sceCdDiskReady_old`, `sceGifPkAddGsAD`, `sceGifPkCloseGifTag`,
+`sceGifPkCnt`, `sceGifPkOpenGifTag`, `sceGifPkRef`, `sceGifPkReserve`,
+`sifParamFname`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5115,3 +5154,4 @@ and no startup stage has executed.
 - 2026-10-12 16:15 CDT — `agents/w8-render-world-a` — 1514 unresolved imports
 - 2026-10-12 20:02 CDT — `agents/w9-startup-crt-a` — 1499 unresolved imports
 - 2026-10-12 20:05 CDT — `agents/w9-startup-crt-c` — 1496 unresolved imports
+- 2026-10-12 20:10 CDT — `agents/w9-startup-crt-e` — 1484 unresolved imports
