@@ -8369,3 +8369,28 @@ unmerged worker branches are at the tips recorded above (`w10-actor-i` `e1ad5dba
 `adff0bdc`), so their rejections stand: none has a committed check that could fail.
 Nothing was merged.
 - 2026-10-13 04:26 CDT — integrator re-check, nothing merged — 957 unresolved imports
+
+## agents/w11-tmpl-a
+
+Merged (merge commit, branch tip `90f391ec`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each, with fresh `input_order` values 4456 through 4482. All 27 host checks build
+and exit 0 here (x86_64, `-w`, `-no_pie`, pagezero 0x1000, as the notes direct). The worker's
+private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is
+claimed. The worker ran no full build; this integration did: 4481 authored inputs, 3428 function
+bodies, zero COMMON, 214 tool tests passed. Per-unit object hashes in the snapshot are the ones
+the full build produced. The plan object names are made unique from the component directory
+(the notes' `clear.o`/`init.o` repeat). No EE or game execution. Every unit has a host check.
+
+The worker's closed list (27) and opened list (13) both reproduce exactly.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 943 |
+| Closed | 27 |
+| Opened | 13 |
+
+Closed: `Begin__Ct6VIList1ZP9VIGUIPage`, `Begin__Ct6VIPool1ZP13VIHSpriteAnim`, `Begin__Ct6VIPool1ZP16VIStaticLighting`, `Begin__Ct6VIPool1ZP8VIRefMap`, `Begin__Ct6VIPool1ZP8VISprite`, `Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Clear__t6VIList1Z7VIActor`, `Clear__t6VIList1ZQ27VIScene12VISceneOccup`, `Clear__t6VIPool1ZP13VIHSpriteAnim`, `Clear__t6VIPool1ZP16VIStaticLighting`, `Clear__t6VIPool1ZP8VIRefMap`, `Clear__t6VIPool1ZP8VISprite`, `Clear__t7VIArray1Zi`, `Clear__t8VIVector1Z18VISceneDisplayElem`, `End__Ct6VIList1ZP9VIGUIPage`, `End__Ct6VIPool1ZP13VIHSpriteAnim`, `End__Ct6VIPool1ZP16VIStaticLighting`, `End__Ct6VIPool1ZP8VIRefMap`, `End__Ct6VIPool1ZP8VISprite`, `Erase__t6VIList1ZP9VIGUIPagei`, `Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Init__t6VIList1Z7VIActor`, `Init__t6VIList1ZQ27VIScene12VISceneOccup`, `Init__t6VIPool1ZP13VIHSpriteAnimi`, `Init__t6VIPool1ZP16VIStaticLightingi`, `Init__t6VIPool1ZP8VIRefMapi`, `Init__t6VIPool1ZP8VISpritei`
+
+Opened: `Allocate__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Allocate__t6VIPool1ZP13VIHSpriteAnim`, `Allocate__t6VIPool1ZP16VIStaticLighting`, `Allocate__t6VIPool1ZP8VIRefMap`, `Allocate__t6VIPool1ZP8VISprite`, `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__t6VIPool1ZP13VIHSpriteAnim`, `DestroyPool__t6VIPool1ZP16VIStaticLighting`, `DestroyPool__t6VIPool1ZP8VIRefMap`, `DestroyPool__t6VIPool1ZP8VISprite`, `DestroyPool__t7VIArray1Zi`, `DestroyPool__t8VIVector1Z18VISceneDisplayElem`, `_$_7VIActor`
