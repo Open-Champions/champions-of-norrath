@@ -1,4 +1,4 @@
-// Observed evaluateRampAtRank__5SkilliiP10GameObject at 0x00313688, 112 bytes (extent to the next symbol 120).
+// Observed evaluateRampAtRank__5SkilliiP10GameObject at 0x00313688, 116 bytes (symbol size).
 // Arguments: the receiver, a slot index, a level and a game-object pointer that may be null. The receiver holds
 // the address of a table of 8-byte slots at +96 (a signed halfword adjustment at +0 added to the receiver,
 // a function word at +4). The word at +12 of the game object is tested against the bit 0x40:
