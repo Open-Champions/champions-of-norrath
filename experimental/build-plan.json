@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5263,
+  "default_authored_inputs": 5285,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4049,6 +4049,28 @@
     "sources/w12-visky-b-world-set-profiles/set_profiles.cpp": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
     "sources/w12-visky-b-world-tree-ctor/ctor.cpp": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
     "sources/w12-visky-b-world-tree-dtor/dtor.cpp": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
+    "sources/w12-visprite-b-actor-dtor/dtor.cpp": "a4ce48724ee0c25f976b24ea6f6b21b2f64f2c7ed32081cbd9266d35f3e077c4",
+    "sources/w12-visprite-b-csprite-ctor/ctor.cpp": "68f5380524f1a89e66fa91b4b192d54cc641976f8779319cdfe710d5a0bc4986",
+    "sources/w12-visprite-b-flora-sprite-ctor/ctor.cpp": "d4b6f8ad052a186d43085493c3c846d6a2dc53fa0cf5c107d4951c51c2518440",
+    "sources/w12-visprite-b-group-sprite-ctor/ctor.cpp": "3d418f68947ab9ed7dadead75a8a03fb483682cd27370443c91487ce45dfef53",
+    "sources/w12-visprite-b-hsprite-ctor/ctor.cpp": "ca593df3d66728f8e9c158fc60f6cdd53b2b8875b5e729990d06c5dcc79124bb",
+    "sources/w12-visprite-b-light-floor-sprite/light_floor_sprite.cpp": "fcdc6ba138c96942266b32270035d0f8d729f1a1cd30906cf1d04975ad0fab93",
+    "sources/w12-visprite-b-lod-sprite-ctor/ctor.cpp": "e9d5abe2c4cfc8d9f932cc9c682996fc7ec7f73b131115813fb07b86730cc9fc",
+    "sources/w12-visprite-b-particle-emitter-ctor/ctor.cpp": "2ed4c7a610ab7ffb0a8283f72d2f97c9fefd8bc3c6931d28ab3f0f71db6aba7b",
+    "sources/w12-visprite-b-particle-emitter-dtor/dtor.cpp": "273410995bf3cc5afc908397b61f284f6fd005877f6ce4e2a227b7f7ef4d6523",
+    "sources/w12-visprite-b-particle-sprite-ctor/ctor.cpp": "f66beb9206c86d2e2c92ba0dfab4f5825887002543016fdc4ccb96e4510086a5",
+    "sources/w12-visprite-b-point-sprite-ctor/ctor.cpp": "aa6b124f8337a76c53618adefb0388ffc144c52d18f563479c740626e5ee38fb",
+    "sources/w12-visprite-b-simple-sprite-ctor/ctor.cpp": "9d3fa7711111008f72ee2c4dcb7a5a31751c76527aebfe875496f3405f9541b7",
+    "sources/w12-visprite-b-skin-sprite-ctor/ctor.cpp": "bf97bcc19a38d8850e8f3246ff32f4e015fbf1681f4f55dbe8bc74d2ba08d442",
+    "sources/w12-visprite-b-sound-sprite-ctor/ctor.cpp": "f543dff0b6ac5d1d4e1aef236c171154df121f7e340592908e5d891d67f34204",
+    "sources/w12-visprite-b-spell-effect-driver-dtor/dtor.cpp": "0b6293e6c3fe42fdcc957d0f5406e024a09280b222e5947b24322163f63ed13e",
+    "sources/w12-visprite-b-stream-audio-sprite-ctor/ctor.cpp": "9deb687deb49e2c25abc5351761b497486469bc5613b95ed6bb78d55cb61f6b0",
+    "sources/w12-visprite-b-trail-fx-ctor/ctor.cpp": "d5f6afc511b6c1ee8e953df61d319dbb71bd6c11dd6467759bf8493352439f89",
+    "sources/w12-visprite-b-trail-fx-dtor/dtor.cpp": "92e0c45568c772e84dab64e6d8d4bd10897de328fb8d6ef831ed7f4d9d65d313",
+    "sources/w12-visprite-b-trail-fx-free-word/free.cpp": "b35f0d4bd4f26c334a9ea2b6f9598b05a3d541153970ff125273cbdfdf6fd5e2",
+    "sources/w12-visprite-b-trail-fx-inactive-word/inactive.cpp": "3290267e3ca035369e290eb2c38a3a60a96e633cdba6626caafecedaab2072ad",
+    "sources/w12-visprite-b-trail-fx-material-word/material.cpp": "56cf9d3d21e39d5df5e3075492fe8471b588ca5d7848d0bf3ae18be607975850",
+    "sources/w12-visprite-b-trail-fx-pool-word/pool.cpp": "81fb213e06bb7414f61ffb489d3269b5a623fa99642b07a4a5efdf72ec2ed423",
     "sources/w12-wnd-b-dnas-onkeyup/onkeyup.cpp": "9540bd627b710954caedfde7ab6d519de387acb829e8ce92c054f3274a0683fc",
     "sources/w12-wnd-b-dnas-onmessage/onmessage.cpp": "c3ae8bc98a210a180adccf8611df9ccd4bbf1f0eebb6f12c2035c17ad5de9baf",
     "sources/w12-wnd-b-edit-setdisplayrows/set_display_rows.cpp": "1f8ed5110a305f42a1924a04c23da7c7cc430883a35067cce23a9396d72ecc16",
@@ -76974,6 +76996,316 @@
           "name": "_$_11VIWorldTree"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5265,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_actor_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "a4ce48724ee0c25f976b24ea6f6b21b2f64f2c7ed32081cbd9266d35f3e077c4",
+      "source": "sources/w12-visprite-b-actor-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5266,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_csprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "68f5380524f1a89e66fa91b4b192d54cc641976f8779319cdfe710d5a0bc4986",
+      "source": "sources/w12-visprite-b-csprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 540,
+          "name": "__9VICSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5267,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_flora_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d4b6f8ad052a186d43085493c3c846d6a2dc53fa0cf5c107d4951c51c2518440",
+      "source": "sources/w12-visprite-b-flora-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "__13VIFloraSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5268,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_group_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "3d418f68947ab9ed7dadead75a8a03fb483682cd27370443c91487ce45dfef53",
+      "source": "sources/w12-visprite-b-group-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "__13VIGroupSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5269,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_hsprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "ca593df3d66728f8e9c158fc60f6cdd53b2b8875b5e729990d06c5dcc79124bb",
+      "source": "sources/w12-visprite-b-hsprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 284,
+          "name": "__9VIHSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5270,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_light_floor_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "fcdc6ba138c96942266b32270035d0f8d729f1a1cd30906cf1d04975ad0fab93",
+      "source": "sources/w12-visprite-b-light-floor-sprite/light_floor_sprite.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 604,
+          "name": "lightFloorSprite__FG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5271,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_lod_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e9d5abe2c4cfc8d9f932cc9c682996fc7ec7f73b131115813fb07b86730cc9fc",
+      "source": "sources/w12-visprite-b-lod-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "__11VILODSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5272,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_particle_emitter_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "2ed4c7a610ab7ffb0a8283f72d2f97c9fefd8bc3c6931d28ab3f0f71db6aba7b",
+      "source": "sources/w12-visprite-b-particle-emitter-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "__17VIParticleEmitter"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5273,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_particle_emitter_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "273410995bf3cc5afc908397b61f284f6fd005877f6ce4e2a227b7f7ef4d6523",
+      "source": "sources/w12-visprite-b-particle-emitter-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_17VIParticleEmitter"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5274,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_particle_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f66beb9206c86d2e2c92ba0dfab4f5825887002543016fdc4ccb96e4510086a5",
+      "source": "sources/w12-visprite-b-particle-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "__16VIParticleSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5275,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_point_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "aa6b124f8337a76c53618adefb0388ffc144c52d18f563479c740626e5ee38fb",
+      "source": "sources/w12-visprite-b-point-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "__13VIPointSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5276,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_simple_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9d3fa7711111008f72ee2c4dcb7a5a31751c76527aebfe875496f3405f9541b7",
+      "source": "sources/w12-visprite-b-simple-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "__14VISimpleSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5277,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_skin_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "bf97bcc19a38d8850e8f3246ff32f4e015fbf1681f4f55dbe8bc74d2ba08d442",
+      "source": "sources/w12-visprite-b-skin-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "__12VISkinSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5278,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_sound_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f543dff0b6ac5d1d4e1aef236c171154df121f7e340592908e5d891d67f34204",
+      "source": "sources/w12-visprite-b-sound-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "__13VISoundSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5279,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_spell_effect_driver_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "0b6293e6c3fe42fdcc957d0f5406e024a09280b222e5947b24322163f63ed13e",
+      "source": "sources/w12-visprite-b-spell-effect-driver-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "_$_19VISpellEffectDriver"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5280,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_stream_audio_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9deb687deb49e2c25abc5351761b497486469bc5613b95ed6bb78d55cb61f6b0",
+      "source": "sources/w12-visprite-b-stream-audio-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "__19VIStreamAudioSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5281,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d5f6afc511b6c1ee8e953df61d319dbb71bd6c11dd6467759bf8493352439f89",
+      "source": "sources/w12-visprite-b-trail-fx-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "__9VITrailFx"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5282,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "92e0c45568c772e84dab64e6d8d4bd10897de328fb8d6ef831ed7f4d9d65d313",
+      "source": "sources/w12-visprite-b-trail-fx-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_9VITrailFx"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5283,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_free_word.o",
+      "profile": "authored_cpp",
+      "sha256": "b35f0d4bd4f26c334a9ea2b6f9598b05a3d541153970ff125273cbdfdf6fd5e2",
+      "source": "sources/w12-visprite-b-trail-fx-free-word/free.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5284,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_inactive_word.o",
+      "profile": "authored_cpp",
+      "sha256": "3290267e3ca035369e290eb2c38a3a60a96e633cdba6626caafecedaab2072ad",
+      "source": "sources/w12-visprite-b-trail-fx-inactive-word/inactive.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5285,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_material_word.o",
+      "profile": "authored_cpp",
+      "sha256": "56cf9d3d21e39d5df5e3075492fe8471b588ca5d7848d0bf3ae18be607975850",
+      "source": "sources/w12-visprite-b-trail-fx-material-word/material.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5286,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visprite_b_trail_fx_pool_word.o",
+      "profile": "authored_cpp",
+      "sha256": "81fb213e06bb7414f61ffb489d3269b5a623fa99642b07a4a5efdf72ec2ed423",
+      "source": "sources/w12-visprite-b-trail-fx-pool-word/pool.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -77073,7 +77405,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "daa3f0c580ba1326ee4617dfd80347e33c721daa622d8772ba79992930fbf0c4",
+  "snapshot_sha256": "f66015d54a700a450aa6973667632e4b852e06f13aed6e317fd756586820d0ef",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

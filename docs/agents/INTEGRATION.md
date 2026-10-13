@@ -9167,3 +9167,21 @@ Closed: `SetProfiles__7VIWorld`, `SetTracks__17VISceneSoundTrack`, `SetupTimeOfD
 
 Opened: `AttenuationMode__C13VISoundSprite`, `Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `Clear__12VINameSprite`, `DeallocateChannels__13VISoundDeviceUl`, `DeletePlayback__13VISoundDeviceP10VIPlayback`, `Distance__C7VIVect3RC7VIVect3`, `EnableAllDirLights__8VIRasteri`, `EnableAmbient__8VIRasteri`, `EnablePointLight__8VIRasterii`, `EnableSunLight__8VIRasteri`, `EnableTessellation__8VIRasteri`, `End__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `GetLightning__12VIAtmospherePf`, `GetPriority__C19VIStreamAudioSprite`, `GetRelativePathname__C19VIStreamAudioSprite`, `Init__14VIEmitterQueryi12VISpriteType`, `IsIopStreamingEnabled__6VIFile`, `IsLooping__C19VIStreamAudioSprite`, `IsPanEnabled__C13VISoundSprite`, `MaxPointLights__8VIRaster`, `Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi`, `PlayBgm__13VISoundDeviceiPCc`, `Play__13VISoundDeviceii12VISOUNDCLASS`, `Playback__13VISoundDevicei`, `QueryEmittersAtLocation__7VISceneRC8VICameraR14VIEmitterQuery`, `QueryEmitters__7VIWorldR23VISceneEmitterQueryVars`, `SetAmbient__8VIRasterRC10VIColor32F`, `SetPan__13VISoundDeviceif`, `SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight`, `SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32`, `SetSunLight__8VIRasterRC10VIMatrix44RC16VIRasterDirLight`, `SetVolume__13VISoundDeviceif`, `StopBgm__13VISoundDevicei`, `StopChannels__13VISoundDeviceUl`, `_$_t10VIMultiMap2ZfZ14VIEmitterEntry`, `_$_t7VIArray1Z11VIWorldLeaf`, `_$_t7VIArray1Z11VIWorldNode`, `__14VIEffectVolume`, `__8VISprite`, `__t10VIMultiMap2ZfZ14VIEmitterEntry`, `__t7VIArray1Z11VIWorldLeaf`, `__t7VIArray1Z11VIWorldNode`, `_vt$12VINameSprite`, `_vt$20VIEffectVolumeSprite`
 - 2026-10-13 10:29 CDT — agents/w12-visky-b — 1009 unresolved imports
+
+## agents/w12-visprite-b
+
+Merged (merge commit, branch tip `14f5c54e`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 22 units (VI sprite constructors, trail-effect pool data, emitter and actor destructors, `lightFloorSprite`) with fresh `input_order` values 5265 through 5286. All 22 committed host checks build and exit 0 here (native arm64, `-DNORRATH_HOST_CONTRACT -DW12_HUD_HOST -fno-builtin -ffp-contract=off`). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5285 authored inputs, 4046 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (22) reproduces.
+
+The count **rises** by 3 net: the new constructors install vtables and call matrix, attribute and container routines nobody has authored yet (25 opened, among them nine `_vt$*Sprite` tables).
+
+| | |
+|---|---|
+| Before | 1009 |
+| After | 1012 |
+| Closed | 22 |
+| Opened | 25 |
+
+Closed: `VITrailFx$sFreeTrailFx`, `VITrailFx$sInactiveTrailFx`, `VITrailFx$sMaterialHandle`, `VITrailFx$sTrailFxPool`, `_$_17VIParticleEmitter`, `_$_19VISpellEffectDriver`, `_$_7VIActor`, `_$_9VITrailFx`, `__11VILODSprite`, `__12VISkinSprite`, `__13VIFloraSprite`, `__13VIGroupSprite`, `__13VIPointSprite`, `__13VISoundSprite`, `__14VISimpleSprite`, `__16VIParticleSprite`, `__17VIParticleEmitter`, `__19VIStreamAudioSprite`, `__9VICSprite`, `__9VIHSprite`, `__9VITrailFx`, `lightFloorSprite__FG6Point3`
+
+Opened: `Clear__9VITrailFx`, `Destroy__17VIParticleEmitter`, `Destroy__19VISpellEffectDriver`, `_$_10VIMatrix33`, `_$_20VIParticleAttributes`, `__10VIMatrix33`, `__20VIParticleAttributes`, `__t6VIPool1Z13VIHSpritePlay`, `__t6VIPool1Z17VIHSpritePlayNode`, `__t6VIPool1Z19VIHSpriteAttachment`, `__t7VIArray1Z16VIHSpriteTrigger`, `__t7VIArray1Z20VICSpritePartEmitter`, `__t8VIVector1Z10VIMatrix44`, `__t8VIVector1Z13VIHSpriteNode`, `_vt$11VILODSprite`, `_vt$12VISkinSprite`, `_vt$13VIFloraSprite`, `_vt$13VIGroupSprite`, `_vt$13VIPointSprite`, `_vt$13VISoundSprite`, `_vt$14VISimpleSprite`, `_vt$16VIParticleSprite`, `_vt$19VIStreamAudioSprite`, `_vt$9VICSprite`, `_vt$9VIHSprite`
+- 2026-10-13 10:38 CDT — agents/w12-visprite-b — 1012 unresolved imports
