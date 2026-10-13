@@ -6,7 +6,7 @@
 //     a. R grows by 0.5 when R < (float)n.
 //     b. Repeat n/10 times (signed division, re-read from O+96 after each pass; none when n/10 <= 0): draw a unit-ball
 //        vector U and set W = U * R + P; draw a second unit-ball vector V and scale it by 5.0 on every component; call
-//        P_AddParticle__FP11ParticleDefP6Point3T1f(gasParticle, &W, &V, 0.0).
+//        P_AddParticle__FP11ParticleDefP6Point3T1f(norrath_w13_spell_msg_a_view_7d6970, &W, &V, 0.0).
 //     c. When frameNm % 30 == 0 and the word at O+76 (Q) is non-zero: m = (int)R; the box from P - (float)m to P + (float)m
 //        is searched with objectFindInBox__FG6Point3T0PP10GameObjecti(low, high, list, 64). For each non-null entry X of the
 //        list in order: the entry at table offset 160 of the object that is the word at Q+12 is called on that object
@@ -18,11 +18,13 @@
 // Inferred: a lingering gas cloud that spawns particles for as long as it lives and hurts what the owner treats as an
 // enemy once per 30 frames (slot 160 of the combat-reactions record is called isEnemy there). Unknown: what the words at O+92,
 // +96, +100, +108 and the flag 0x01000040 mean. Nothing here ran on the EE.
+// The particle definition is the 80-byte bss object at 0x007d6970 (a file-local symbol named gasParticle in the image); the
+// local name cannot be linked to, so it is imported through the address-named view norrath_w13_spell_msg_a_view_7d6970.
 #include "../w13-spell-msg-a-common/spell.hpp"
 
 extern "C" {
 extern int frameNm;
-extern unsigned char gasParticle[];
+extern unsigned char norrath_w13_spell_msg_a_view_7d6970[80];
 int eRand__10GameObject(void* object);
 void P_AddParticle__FP11ParticleDefP6Point3T1f(void* definition, Point3* position, Point3* velocity, float f);
 void objectFindInBox__FG6Point3T0PP10GameObjecti(Point3* low, Point3* high, void** list, int capacity);
@@ -54,7 +56,7 @@ extern "C" void msg_run__14poisonGasSpell(void* self) {
             v.x = v.x * 5.0f;
             v.y = v.y * 5.0f;
             v.z = v.z * 5.0f;
-            P_AddParticle__FP11ParticleDefP6Point3T1f(gasParticle, &w, &v, 0.0f);
+            P_AddParticle__FP11ParticleDefP6Point3T1f(norrath_w13_spell_msg_a_view_7d6970, &w, &v, 0.0f);
         }
         if (frameNm % 30 == 0 && word(o, 76) != 0) {
             const float m = static_cast<float>(static_cast<int>(real(o, 100)));
