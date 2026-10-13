@@ -2,9 +2,10 @@
 
 Branch `agents/w10-render-d`. Private executable `work/private/SLUS_205.65` (the Champions of Norrath
 image the other notes name; GP `0x004879f0`). Addresses, sizes and names are the image's own symbol table.
-Nothing here ran on hardware or inside the game. The first three commits (usprintf, texCacheData and, in this
-run's first step, textureFreeTexture) come from an interrupted earlier run of this package; the paired runs of
-the first two were repeated at the start of this run and still matched.
+Nothing here ran on hardware or inside the game. The sources of `usprintf`, `texCacheData` and `textureFreeTexture`
+come from an interrupted earlier run of this package (the last one was uncommitted; I re-ran its host check, fixed a
+non-terminating paired scenario that made cyclic chains, and committed it). The paired runs of `texCacheData` and `usprintf`
+were repeated at the start of this run and still matched.
 
 ## Method and checks performed
 
@@ -20,12 +21,12 @@ the first two were repeated at the start of this run and still matched.
   compiled one from the same memory snapshot with identical stub callees, then compared the call log
   (argument registers including float registers, the bytes behind pointer arguments), the return value where
   it is meaningful, and every changed byte outside the stack. Scenario counts per function are in the commit
-  messages. For `draw__11AddParticle...`, `worldRunWater`, `subfontPrintu` and `msg_run__11LightEffect` the
+  messages. For `draw__11AddParticle...`, `worldRunWater` and `subfontPrintu` the
   original's instruction coverage was measured: only annulled branch-delay slots and padding nops were never
-  executed (3 words, 1 word, 4 words and 0 words respectively).
-- A mutated copy of nearly every unit was run through the same comparison and was detected (the exceptions are
-  the three empty or dead-copy bodies, and `texture_free_texture` and `usprintf_char`, whose mutation checks were
-  done in the earlier run). For `textRemoveText` the hash start has no visible effect unless a decoy copy of the
+  executed (3 words, 1 word and 4 words respectively).
+- A mutated copy of most units was run through the same comparison and was detected. Not mutated: the two empty or
+  dead-copy bodies, `_$_11AddParticle`'s siblings other than the flag test, the render data, and `texCacheData`,
+  `textureFreeTexture` and `usprintf` (a mutation script for `usprintf` exists from the earlier run; I did not repeat it). For `textRemoveText` the hash start has no visible effect unless a decoy copy of the
   address sits elsewhere in the table, so the scenarios add decoys.
 - The private interpreter needed `mult1`, `mflo1` and `mfhi1` (MMI) for `worldRunWater`; they were added to my private
   copy only. Earlier notes already warn about `sqrt.s`, `rsqrt.s`, saturating `cvt.w.s` and the halt-counts-as-pass
@@ -156,9 +157,9 @@ and not in the game, with every collaborator replaced by a stub that logs its ar
 these ran together with the real `waterStep`, `drawTexture`, `fontColor`, `lightAdd` or the allocator. Float
 behaviour was compared under the interpreter's single-precision model; NaN and infinity inputs were not sampled
 (`msg_run__11LightEffect` and `draw__11AddParticle...` use plain compares for their clamps, the original uses
-`min.s`/`max.s` in places, so NaN behaviour is not established). The retained zero-count and zero-radius
-cases (`worldWaterBumpTimer` zero in `worldRunWater`, a zero `fontCharAlpha` ratio) were not run: the original
-divides without a trap check and a fresh compile may trap.
+`min.s`/`max.s` in places, so NaN behaviour is not established). A zero `worldWaterBumpTimer` in `worldRunWater`
+(a signed remainder) and a zero ripple radius were not run: the original divides without a trap check and a fresh
+compile may trap or behave differently.
 
 ## Unknown
 
