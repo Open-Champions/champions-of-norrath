@@ -10,6 +10,7 @@ struct Point3 { float x, y, z; };
 #if defined(W13_SKILL_CAST_A_HOST)
 extern unsigned char* w13_skill_cast_a_host_base;
 int w13_skill_cast_a_host_call(unsigned function_word, void* adjusted_skill, int rank, int constant);
+int w13_skill_cast_a_host_call3(unsigned function_word, void* adjusted_skill, int a1, int a2, void* a3);
 #endif
 
 namespace w13sca {
@@ -32,6 +33,18 @@ inline int call_skill_entry(unsigned char* skill, unsigned tableOffset, int a1, 
     return w13_skill_cast_a_host_call(function, adjusted, a1, a2);
 #else
     return reinterpret_cast<int (*)(void*, int, int)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a1, a2);
+#endif
+}
+
+// Same, for an entry that takes a third argument.
+inline int call_skill_entry3(unsigned char* skill, unsigned tableOffset, int a1, int a2, void* a3) {
+    const unsigned char* entry = from_word(*reinterpret_cast<unsigned*>(skill + 96)) + tableOffset;
+    unsigned char* adjusted = skill + *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W13_SKILL_CAST_A_HOST)
+    return w13_skill_cast_a_host_call3(function, adjusted, a1, a2, a3);
+#else
+    return reinterpret_cast<int (*)(void*, int, int, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a1, a2, a3);
 #endif
 }
 
