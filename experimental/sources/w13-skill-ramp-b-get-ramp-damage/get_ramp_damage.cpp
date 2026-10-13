@@ -1,4 +1,4 @@
-// Observed getRampDamage__5SkilliifiPiT5 at 0x00313290, 688 bytes (extent to the next symbol 696).
+// Observed getRampDamage__5SkilliifiPiT5 at 0x00313290, 692 bytes (symbol size).
 // Arguments after the receiver: an integer slot index, an integer level, a float spread fraction, an integer
 // "randomize" flag, and two int output pointers (low and high). The receiver holds the address of a table of
 // 8-byte slots at +96 (a signed halfword adjustment at +0, a function word at +4).
