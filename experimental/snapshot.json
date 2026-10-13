@@ -34340,6 +34340,222 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w9-frontend-b-state-words/state_words.cpp"
+    },
+    {
+      "input_order": 2646,
+      "component": "w9-frontend-d-buffers",
+      "object_name": "buffers.o",
+      "private_object_sha256": "7f3c5247a0a3208f767fa7da0f3085a151db755d385f73cc37155e8fd6fa8168",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-buffers/buffers.cpp"
+    },
+    {
+      "input_order": 2647,
+      "component": "w9-frontend-d-launcher-statics",
+      "object_name": "launcher_statics.o",
+      "private_object_sha256": "8c57958f22c955fb559bcc6cd28f77f937f3cceb5804f59d50ecd80c0989dc78",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-launcher-statics/launcher_statics.cpp"
+    },
+    {
+      "input_order": 2648,
+      "component": "w9-frontend-d-reset-with-close",
+      "object_name": "reset_with_close.o",
+      "private_object_sha256": "c03220f6bbb3e81a2090f5c46a87560e2edd26019d71401797f12e38bfba22ed",
+      "emitted_functions": [
+        {
+          "name": "resetWithClose__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-reset-with-close/reset_with_close.cpp"
+    },
+    {
+      "input_order": 2649,
+      "component": "w9-frontend-d-run-browser",
+      "object_name": "run_browser.o",
+      "private_object_sha256": "68e8de5cd67376c1bf00007f822e873d25d8b3c69e369667da4d76ec9dd8d8ad",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13sayAcceptBackEPtPKc",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "runBrowser__FPUs",
+          "compiled_body_bytes": 8872
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-run-browser/run_browser.cpp"
+    },
+    {
+      "input_order": 2650,
+      "component": "w9-frontend-d-run-configure",
+      "object_name": "run_configure.o",
+      "private_object_sha256": "275fc76a84064e121ab34f513841ddae28d5488c9a9818f73d0157d37fbef849",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L14deleteMatchingEPKcb",
+          "compiled_body_bytes": 244
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L16footerAcceptBackEPKc",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "runConfigure__FiPUsi",
+          "compiled_body_bytes": 8416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-run-configure/run_configure.cpp"
+    },
+    {
+      "input_order": 2651,
+      "component": "w9-frontend-d-script-game-state-entry",
+      "object_name": "script_game_state_entry.o",
+      "private_object_sha256": "9be9d95eb7fd4149b0a7f082bfee222956a98471bdf98ca87c3dfdf2ab0fa602",
+      "emitted_functions": [
+        {
+          "name": "scriptGameStateEntry__FiPi",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-script-game-state-entry/script_game_state_entry.cpp"
+    },
+    {
+      "input_order": 2652,
+      "component": "w9-frontend-d-start-progress",
+      "object_name": "start_progress.o",
+      "private_object_sha256": "7836a95a89921f05b0febba6d129b692b8d10399b7eefc220992486630c92f0e",
+      "emitted_functions": [
+        {
+          "name": "startProgress__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-start-progress/start_progress.cpp"
+    },
+    {
+      "input_order": 2653,
+      "component": "w9-frontend-d-state-words",
+      "object_name": "state_words.o",
+      "private_object_sha256": "10ae04558d0ae50245a7ffcafb887e68543fe0866bc16a8ddf655bf14044385c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-state-words/state_words.cpp"
+    },
+    {
+      "input_order": 2654,
+      "component": "w9-frontend-d-tex-strings",
+      "object_name": "tex_strings.o",
+      "private_object_sha256": "fbf09c6c608e939ce993455bce958a922fc0c6f6abe9180dbd258f096a37f00f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-tex-strings/tex_strings.cpp"
+    },
+    {
+      "input_order": 2655,
+      "component": "w9-frontend-d-text-send",
+      "object_name": "text_send.o",
+      "private_object_sha256": "79bc41bf306553ef920656611d20b34c80c4d9447a8b735be3e3eb3d220fdb29",
+      "emitted_functions": [
+        {
+          "name": "textSend__Fv",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-text-send/text_send.cpp"
+    },
+    {
+      "input_order": 2656,
+      "component": "w9-frontend-d-texture-draw-super-color",
+      "object_name": "texture_draw_super_color.o",
+      "private_object_sha256": "0bda072869eb8aee9424f639beb3c28032b7e13f171203d0d9d80be94795eaac",
+      "emitted_functions": [
+        {
+          "name": "textureDrawSuperColor__FP8_textureiiiUiiiiicc",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-texture-draw-super-color/texture_draw_super_color.cpp"
+    },
+    {
+      "input_order": 2657,
+      "component": "w9-frontend-d-texture-lock-cache-buffer",
+      "object_name": "texture_lock_cache_buffer.o",
+      "private_object_sha256": "498879f41ae9bccfa8eae550c7600de22aafa1de18842ce15aa10295b9af1ac9",
+      "emitted_functions": [
+        {
+          "name": "textureLockCacheBuffer__Fv",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-texture-lock-cache-buffer/texture_lock_cache_buffer.cpp"
+    },
+    {
+      "input_order": 2658,
+      "component": "w9-frontend-d-texture-prepare-to-lock-cache-buffer",
+      "object_name": "texture_prepare_to_lock_cache_buffer.o",
+      "private_object_sha256": "c55e2ba774f2b5d11113a68bb84b05d033f9dc24d8f5970740433fc4bbffdfdb",
+      "emitted_functions": [
+        {
+          "name": "texturePrepareToLockCacheBuffer__Fv",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-texture-prepare-to-lock-cache-buffer/texture_prepare_to_lock_cache_buffer.cpp"
+    },
+    {
+      "input_order": 2659,
+      "component": "w9-frontend-d-texture-release-cache-buffer",
+      "object_name": "texture_release_cache_buffer.o",
+      "private_object_sha256": "75e40fa4feac150bcc5a1ea51bfe89ac7bffcc1273089c29bc36f788dd382408",
+      "emitted_functions": [
+        {
+          "name": "textureReleaseCacheBuffer__Fv",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-texture-release-cache-buffer/texture_release_cache_buffer.cpp"
+    },
+    {
+      "input_order": 2660,
+      "component": "w9-frontend-d-un-modify-ram-slot-for-net-save",
+      "object_name": "un_modify_ram_slot_for_net_save.o",
+      "private_object_sha256": "341f6caae560854183589c902f0fd363e1034185bda4c1936405429fb8a61d35",
+      "emitted_functions": [
+        {
+          "name": "unModifyRamSlotForNetSave__Fv",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/un_modify_ram_slot_for_net_save.cpp"
+    },
+    {
+      "input_order": 2661,
+      "component": "w9-frontend-d-undo-browser",
+      "object_name": "undo_browser.o",
+      "private_object_sha256": "79a7609e7375abf7bfe1c4832075e74510809c42f6ca67e834c05da0f9f2e9f5",
+      "emitted_functions": [
+        {
+          "name": "undoBrowser__Fv",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-d-undo-browser/undo_browser.cpp"
     }
   ],
   "drafts": [
@@ -39652,6 +39868,34 @@
     "sources/w9-frontend-c-process-analog-input/process_analog_input.cpp": "199d284d355f05674528b01eb6eef034643e71a756aed59e43b31cf3b2fb11a0",
     "sources/w9-frontend-c-select-words/host_check.cpp": "c376e7f29a7d48cf41f87de06cf84565310bdc02c8ec1eab5f5b1151e82eec7d",
     "sources/w9-frontend-c-select-words/select_words.cpp": "a133c7a4b6e972ba203378476915543e8c5cfc451a3e54d6bebab598e6cb2740",
+    "sources/w9-frontend-d-buffers/buffers.cpp": "004db45b5d72662807c8ca653d69b984a0bea4f21e81a66ca5271f4ff78d8b72",
+    "sources/w9-frontend-d-launcher-statics/launcher_statics.cpp": "a2ecd2d532e55612c3eb1f2f56e0f3ade00ef51d082675d154da8b14e42d9f9d",
+    "sources/w9-frontend-d-reset-with-close/host_contract.cpp": "058a33156bdac4b45bdbb5055be43cc865b0ebfcd057d96fb05a3d2fa3399215",
+    "sources/w9-frontend-d-reset-with-close/reset_with_close.cpp": "1cec612f3943671b3e744a08aebb62ee2092968c874f3eaa628533ded68c4be8",
+    "sources/w9-frontend-d-run-browser/host_contract.cpp": "feb34801e4351bd9ba4a78608bec3e3ec07396d13cac53f30fcdbe3e98fe8498",
+    "sources/w9-frontend-d-run-browser/run_browser.cpp": "a874b7348df1099ce0d00b38013b6607ce725e228699e4aa62c369df2fa34313",
+    "sources/w9-frontend-d-run-configure/host_contract.cpp": "3272d8a14508f40001d6c9b1f3cf0fc1f465b5a14f0e3f55662e83d9767d0064",
+    "sources/w9-frontend-d-run-configure/run_configure.cpp": "289ae1792eb9ac84903d17bdbf360e1e289e6149e87da0a269bf344757f16b92",
+    "sources/w9-frontend-d-script-game-state-entry/host_contract.cpp": "342e99a5dba6d7d58341ea108b7e629d6cb39a55a5d54f5638ff8b4f2be50903",
+    "sources/w9-frontend-d-script-game-state-entry/script_game_state_entry.cpp": "e380060cc9ac5282ee1d7e27ef89af4699a72fa57c95004804bfd28d9a77517c",
+    "sources/w9-frontend-d-start-progress/host_contract.cpp": "deb7cdea70a80651b79a447d2574ca0ba523f6dce8f4f199a016b3337e4fa661",
+    "sources/w9-frontend-d-start-progress/start_progress.cpp": "f7b2c779c7008fff862f849b75bca28b919685f5d2de6b4bd70228af1ae3c9c0",
+    "sources/w9-frontend-d-state-words/state_words.cpp": "8c96d4294d89b450ad449ec89c97b2e96129371f96f64578c4aa420a378b076b",
+    "sources/w9-frontend-d-tex-strings/tex_strings.cpp": "cf8cb4b28751c89066d93ef74ba8aceafba628f15f546eb1819289b10f3e2e7e",
+    "sources/w9-frontend-d-text-send/host_contract.cpp": "c8862c8d9ed12cbac340b98469d6f0265f4eb9721bc22fe7adf8b1d7c22d399d",
+    "sources/w9-frontend-d-text-send/text_send.cpp": "a8305b897965df081612155ffd5d804a742e636b8a6306c985bc642d61bfaa18",
+    "sources/w9-frontend-d-texture-draw-super-color/host_contract.cpp": "dfa0a2aec565fafd9b77eb77a5d3d1e63881762ec04e6b963e6d8a94616cdc78",
+    "sources/w9-frontend-d-texture-draw-super-color/texture_draw_super_color.cpp": "16390cc2005b1bc8b4306dec6b1141214ba0de55b51c919c8920cad276b127fc",
+    "sources/w9-frontend-d-texture-lock-cache-buffer/host_contract.cpp": "0d8ece912943e7720a28370292ce752fc0e144fea807891bd95e2be9ec2ddfab",
+    "sources/w9-frontend-d-texture-lock-cache-buffer/texture_lock_cache_buffer.cpp": "3b390d14f749833ab4f5e2c9ad085ee787e7a4a1423171de8d5328e810aa97b5",
+    "sources/w9-frontend-d-texture-prepare-to-lock-cache-buffer/host_contract.cpp": "91c317fdd6ee2ed42c9dcfd9f232522ef455477f523c6c82d804dced387d3212",
+    "sources/w9-frontend-d-texture-prepare-to-lock-cache-buffer/texture_prepare_to_lock_cache_buffer.cpp": "460d236767659decbf6c24691bd91b16ede3e9090c1f8796b14ce51bdb64af62",
+    "sources/w9-frontend-d-texture-release-cache-buffer/host_contract.cpp": "75f852182b6ba00d0cf5e7418a9151e10757269e8849bb47dfe42bb0fb43c3d2",
+    "sources/w9-frontend-d-texture-release-cache-buffer/texture_release_cache_buffer.cpp": "c5846332dcd3533af042feb074962c0f6ff762492ff039e4026fc8da0e8ddd68",
+    "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/host_contract.cpp": "afcc00ecb84e61416f3d7e2afba66b520b6ad87825186f123a52af049c02156e",
+    "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/un_modify_ram_slot_for_net_save.cpp": "b16c6211cc52a4bad35369870c18c82db330374f42bb8e1e00966ff6617142c4",
+    "sources/w9-frontend-d-undo-browser/host_contract.cpp": "35df5b8d9a153afefa6c0ec593e4e00b3437dbc13098f9bfffd88a71dc4a3174",
+    "sources/w9-frontend-d-undo-browser/undo_browser.cpp": "059b77c8a255f551afb8fc175aaf93c716c4a0be8c7b580182b068711a4c9816",
     "sources/w9-other-a-advance-frame/advance_frame.cpp": "48d1aae68216e413ff3c6b2ee774aae40feb766bacd618b8a4488c440e7f47b9",
     "sources/w9-other-a-advance-frame/host_check.cpp": "237fafbb6d330279f218b3b944d7624ea70cd6f66cdb75d9dd6095265a40585d",
     "sources/w9-other-a-cheat-invulnerability/cheat_invulnerability.cpp": "05c6ea0f32215bce6a8fe8dc61a9fc818c8f2125aafecc4c6015eca916032664",
@@ -40628,11 +40872,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2646,
-    "authored_default_inputs": 2644,
+    "selected_inputs": 2662,
+    "authored_default_inputs": 2660,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2141,
-    "compiled_body_bytes_from_accepted_inputs": 888092,
+    "emitted_function_definitions_including_helpers": 2156,
+    "compiled_body_bytes_from_accepted_inputs": 908008,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -40645,7 +40889,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2333
+    "package_selected_inputs": 2349
   },
   "startup_implementations": [
     {
@@ -77488,6 +77732,270 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w9-frontend-b-state-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-buffers/buffers.cpp",
+      "source_sha256": "004db45b5d72662807c8ca653d69b984a0bea4f21e81a66ca5271f4ff78d8b72",
+      "object_sha256": "7f3c5247a0a3208f767fa7da0f3085a151db755d385f73cc37155e8fd6fa8168",
+      "emitted_functions": [],
+      "host_files": [
+        "host-tests/w9-frontend-d/test_data.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-launcher-statics/launcher_statics.cpp",
+      "source_sha256": "a2ecd2d532e55612c3eb1f2f56e0f3ade00ef51d082675d154da8b14e42d9f9d",
+      "object_sha256": "8c57958f22c955fb559bcc6cd28f77f937f3cceb5804f59d50ecd80c0989dc78",
+      "emitted_functions": [],
+      "host_files": [
+        "host-tests/w9-frontend-d/test_data.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-reset-with-close/reset_with_close.cpp",
+      "source_sha256": "1cec612f3943671b3e744a08aebb62ee2092968c874f3eaa628533ded68c4be8",
+      "object_sha256": "c03220f6bbb3e81a2090f5c46a87560e2edd26019d71401797f12e38bfba22ed",
+      "emitted_functions": [
+        {
+          "name": "resetWithClose__Fv",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-reset-with-close/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-run-browser/run_browser.cpp",
+      "source_sha256": "a874b7348df1099ce0d00b38013b6607ce725e228699e4aa62c369df2fa34313",
+      "object_sha256": "68e8de5cd67376c1bf00007f822e873d25d8b3c69e369667da4d76ec9dd8d8ad",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L13sayAcceptBackEPtPKc",
+          "compiled_body_bytes": 112
+        },
+        {
+          "name": "runBrowser__FPUs",
+          "compiled_body_bytes": 8872
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-run-browser/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-run-configure/run_configure.cpp",
+      "source_sha256": "289ae1792eb9ac84903d17bdbf360e1e289e6149e87da0a269bf344757f16b92",
+      "object_sha256": "275fc76a84064e121ab34f513841ddae28d5488c9a9818f73d0157d37fbef849",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L14deleteMatchingEPKcb",
+          "compiled_body_bytes": 244
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L16footerAcceptBackEPKc",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "runConfigure__FiPUsi",
+          "compiled_body_bytes": 8416
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-run-configure/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-script-game-state-entry/script_game_state_entry.cpp",
+      "source_sha256": "e380060cc9ac5282ee1d7e27ef89af4699a72fa57c95004804bfd28d9a77517c",
+      "object_sha256": "9be9d95eb7fd4149b0a7f082bfee222956a98471bdf98ca87c3dfdf2ab0fa602",
+      "emitted_functions": [
+        {
+          "name": "scriptGameStateEntry__FiPi",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-script-game-state-entry/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-start-progress/start_progress.cpp",
+      "source_sha256": "f7b2c779c7008fff862f849b75bca28b919685f5d2de6b4bd70228af1ae3c9c0",
+      "object_sha256": "7836a95a89921f05b0febba6d129b692b8d10399b7eefc220992486630c92f0e",
+      "emitted_functions": [
+        {
+          "name": "startProgress__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-start-progress/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-state-words/state_words.cpp",
+      "source_sha256": "8c96d4294d89b450ad449ec89c97b2e96129371f96f64578c4aa420a378b076b",
+      "object_sha256": "10ae04558d0ae50245a7ffcafb887e68543fe0866bc16a8ddf655bf14044385c",
+      "emitted_functions": [],
+      "host_files": [
+        "host-tests/w9-frontend-d/test_data.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-tex-strings/tex_strings.cpp",
+      "source_sha256": "cf8cb4b28751c89066d93ef74ba8aceafba628f15f546eb1819289b10f3e2e7e",
+      "object_sha256": "fbf09c6c608e939ce993455bce958a922fc0c6f6abe9180dbd258f096a37f00f",
+      "emitted_functions": [],
+      "host_files": [
+        "host-tests/w9-frontend-d/test_data.py"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-text-send/text_send.cpp",
+      "source_sha256": "a8305b897965df081612155ffd5d804a742e636b8a6306c985bc642d61bfaa18",
+      "object_sha256": "79bc41bf306553ef920656611d20b34c80c4d9447a8b735be3e3eb3d220fdb29",
+      "emitted_functions": [
+        {
+          "name": "textSend__Fv",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-text-send/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-texture-draw-super-color/texture_draw_super_color.cpp",
+      "source_sha256": "16390cc2005b1bc8b4306dec6b1141214ba0de55b51c919c8920cad276b127fc",
+      "object_sha256": "0bda072869eb8aee9424f639beb3c28032b7e13f171203d0d9d80be94795eaac",
+      "emitted_functions": [
+        {
+          "name": "textureDrawSuperColor__FP8_textureiiiUiiiiicc",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-texture-draw-super-color/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-texture-lock-cache-buffer/texture_lock_cache_buffer.cpp",
+      "source_sha256": "3b390d14f749833ab4f5e2c9ad085ee787e7a4a1423171de8d5328e810aa97b5",
+      "object_sha256": "498879f41ae9bccfa8eae550c7600de22aafa1de18842ce15aa10295b9af1ac9",
+      "emitted_functions": [
+        {
+          "name": "textureLockCacheBuffer__Fv",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-texture-lock-cache-buffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-texture-prepare-to-lock-cache-buffer/texture_prepare_to_lock_cache_buffer.cpp",
+      "source_sha256": "460d236767659decbf6c24691bd91b16ede3e9090c1f8796b14ce51bdb64af62",
+      "object_sha256": "c55e2ba774f2b5d11113a68bb84b05d033f9dc24d8f5970740433fc4bbffdfdb",
+      "emitted_functions": [
+        {
+          "name": "texturePrepareToLockCacheBuffer__Fv",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-texture-prepare-to-lock-cache-buffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-texture-release-cache-buffer/texture_release_cache_buffer.cpp",
+      "source_sha256": "c5846332dcd3533af042feb074962c0f6ff762492ff039e4026fc8da0e8ddd68",
+      "object_sha256": "75e40fa4feac150bcc5a1ea51bfe89ac7bffcc1273089c29bc36f788dd382408",
+      "emitted_functions": [
+        {
+          "name": "textureReleaseCacheBuffer__Fv",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-texture-release-cache-buffer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/un_modify_ram_slot_for_net_save.cpp",
+      "source_sha256": "b16c6211cc52a4bad35369870c18c82db330374f42bb8e1e00966ff6617142c4",
+      "object_sha256": "341f6caae560854183589c902f0fd363e1034185bda4c1936405429fb8a61d35",
+      "emitted_functions": [
+        {
+          "name": "unModifyRamSlotForNetSave__Fv",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-d",
+      "source": "sources/w9-frontend-d-undo-browser/undo_browser.cpp",
+      "source_sha256": "059b77c8a255f551afb8fc175aaf93c716c4a0be8c7b580182b068711a4c9816",
+      "object_sha256": "79a7609e7375abf7bfe1c4832075e74510809c42f6ca67e834c05da0f9f2e9f5",
+      "emitted_functions": [
+        {
+          "name": "undoBrowser__Fv",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-d-undo-browser/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

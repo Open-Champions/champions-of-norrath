@@ -5188,6 +5188,49 @@ Opened: `GetSaveFootPrint__6Camera`, `HUDInit__Fv`, `Load__6CameraPc`,
 `worldBoundingBox`, `worldDeactivateUntakenDoors__FP12_worldHeader`,
 `worldSetWaterProperties__FP8_texture`, `worldTileEntityLightScale`
 
+## agents/w9-frontend-d
+
+Merged (the branch notes carry the five summary sections; the tip was 45
+minutes old). Sixteen units with fresh `input_order` values 2646 through 2661:
+twelve function units and four data units (`buffers`, `launcher-statics`,
+`state-words`, `tex-strings`). The twelve function units' host checks build and
+exit 0 here (12 of 12). The four data units have no source-side check; their
+test is `host-tests/w9-frontend-d/test_data.py`, which compiles each with the
+EE toolchain and checks symbol sizes, contents and relocations. It runs
+(4 tests, OK) and is recorded as their host file. The branch also touched
+`.gitignore` to track that test directory's `.py` files only; that is the only
+non-source file besides the notes. The worker's remark about differences from
+the original (see its "Deliberate differences" section) stands as written and
+was not independently checked. No game binary or disassembly listing was
+committed. 2154 function bodies, 2660 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1495 |
+| After | 1478 |
+| Closed | 32 |
+| Opened | 15 |
+
+Closed: `requestToExit`, `resetWithClose__Fv`, `restrictChars`, `rumphole`,
+`runBrowser__FPUs`, `runConfigure__FiPUsi`, `sCdRmode`, `sGameOptions`,
+`saveOk`, `savedScene`, `scriptFrame`, `scriptGameStateEntry__FiPi`,
+`slotInfoHeaders`, `startExitFade`, `startFrame`, `startInhibit`,
+`startProgress__Fv`, `startScorePos`, `tempPlayerStruct`, `texStrings`,
+`textBodyLen`, `textSend__Fv`,
+`textureDrawSuperColor__FP8_textureiiiUiiiiicc`,
+`textureLockCacheBuffer__Fv`, `texturePrepareToLockCacheBuffer__Fv`,
+`textureReleaseCacheBuffer__Fv`, `texturesAreDecompressing`,
+`texturesAreLoading`, `unModifyRamSlotForNetSave__Fv`, `undoBrowser__Fv`,
+`waiting`, `waitingForStreamSpool`
+
+Opened: `blocksFree`, `browserDelete`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`,
+`engineGetField__Fv`, `gameStateData`,
+`generateSortedListAndInfoHeaders__Fv`, `markFileName`,
+`needToClearCacheBuffer`, `patchSortedListWithLocalTime__Fv`, `sessionMark`,
+`slotsCorrupted`, `sortedPlayerRace`, `swap__H1Zi_RX01T0_v`,
+`usprintf__FPUsPcffffffff`, `wasFormatting`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5546,3 +5589,4 @@ and no startup stage has executed.
 - 2026-10-12 21:06 CDT — `agents/w9-startup-crt-d` — 1467 unresolved imports
 - 2026-10-12 21:10 CDT — `agents/w9-startup-crt-f` — 1455 unresolved imports
 - 2026-10-12 21:13 CDT — `agents/w9-frontend-b` — 1495 unresolved imports
+- 2026-10-12 21:16 CDT — `agents/w9-frontend-d` — 1478 unresolved imports
