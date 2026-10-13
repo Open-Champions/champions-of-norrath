@@ -9641,3 +9641,19 @@ Closed: `getRankDescription__16SkillConeOfFrostPUsi`, `getRankDescription__16Ski
 
 Opened: none
 - 2026-10-13 16:35 CDT — agents/w13-skill-rank-b — 1056 unresolved imports
+
+## agents/w13-skill-stat-a
+
+Merged (merge commit, branch tip `e936ff11`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5869 through 5908, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5907 authored inputs, 4590 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1056 |
+| After | 1016 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getAmount__12SkillLifeTapi`, `getDeflectionChance__10SkillDodgei`, `getEnergyCost__10SkillDodgei`, `getEnergyCost__10SkillShocki`, `getEnergyCost__11SkillChargei`, `getEnergyCost__12SkillArcheryi`, `getEnergyCost__12SkillBlessedi`, `getEnergyCost__12SkillCyclonei`, `getEnergyCost__12SkillHealingi`, `getEnergyCost__12SkillLifeTapi`, `getEnergyCost__13SkillDarknessi`, `getEnergyCost__13SkillEntanglei`, `getEnergyCost__14SkillColdArrowi`, `getEnergyCost__14SkillFireArrowi`, `getEnergyCost__14SkillFireStormi`, `getEnergyCost__14SkillHarmTouchi`, `getIcon__10SkillShock`, `getIcon__11SkillCharge`, `getIcon__12SkillBlessed`, `getIcon__12SkillCyclone`, `getIcon__12SkillHealing`, `getIcon__12SkillLifeTap`, `getIcon__13SkillDarkness`, `getIcon__13SkillEntangle`, `getIcon__14SkillColdArrow`, `getIcon__14SkillFireArrow`, `getIcon__14SkillFireStorm`, `getIcon__14SkillHarmTouch`, `getIcon__14SkillMultiFire`, `getLevelRequirement__12SkillBlessedi`, `getLevelRequirement__12SkillCyclonei`, `getLevelRequirement__12SkillHealingi`, `getLevelRequirement__12SkillRipostei`, `getLevelRequirement__13SkillDarknessi`, `getLevelRequirement__13SkillEntanglei`, `getLevelRequirement__14SkillFireStormi`, `getSkillPointCost__12SkillBlessedi`, `getSkillPointCost__12SkillRipostei`, `getSkillPointCost__13SkillDarknessi`, `getSkillPointCost__14SkillFireStormi`
+
+Opened: none
+- 2026-10-13 16:40 CDT — agents/w13-skill-stat-a — 1016 unresolved imports

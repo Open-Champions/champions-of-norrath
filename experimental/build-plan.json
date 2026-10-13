@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5867,
+  "default_authored_inputs": 5907,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4663,6 +4663,46 @@
     "sources/w13-skill-rank-b-skill-base/get_rank_description.cpp": "2d564e3dfd768feaada01cfc115a94883421ad908fec555bcf52b1517f6d7228",
     "sources/w13-skill-rank-b-summon-skeleton/get_rank_description.cpp": "a5e69af6eb55701fd687421d2f8d82a037b77e9c55f26689083207d7e328ccbb",
     "sources/w13-skill-rank-b-undead-shield/get_rank_description.cpp": "4208c9019f7cd537280eb877e9246d67bbfb5303536f61c1b8a3e42d5420e58f",
+    "sources/w13-skill-stat-a-amount-skill-life-tap/get_amount.cpp": "80fe57de428dc533b6145b65237b2da0da87b32970d202e52f5cc075269281be",
+    "sources/w13-skill-stat-a-deflection-chance-skill-dodge/get_deflection_chance.cpp": "bb67402338ed2e43de2f3a97f40001f9ef512d81847e876e27a15cd3054a4151",
+    "sources/w13-skill-stat-a-energy-cost-skill-archery/get_energy_cost.cpp": "33c9c57058bebc4b19d19bf4d3642410ab405e9973cc479e99d63e9f22b034e4",
+    "sources/w13-skill-stat-a-energy-cost-skill-blessed/get_energy_cost.cpp": "90b7c40397931b4c92b7dc23ac331ce79aa2ea43901519aab4f85a2cbdbf6413",
+    "sources/w13-skill-stat-a-energy-cost-skill-charge/get_energy_cost.cpp": "bdac36bc9ce319e20e5fed9026338193595bb41dca406a6e695624744e1c2e1a",
+    "sources/w13-skill-stat-a-energy-cost-skill-cold-arrow/get_energy_cost.cpp": "510e64714c5c4babb9d9ad30e71eac0a867bc73b652fff71fc4f00e5157dfd23",
+    "sources/w13-skill-stat-a-energy-cost-skill-cyclone/get_energy_cost.cpp": "ac1317501dbcbf3b9b76654dc31319a1cc99c08b89f0369d341a4c756af92715",
+    "sources/w13-skill-stat-a-energy-cost-skill-darkness/get_energy_cost.cpp": "fb67caf1e86a6909255c85d554a469d560edfeb88aaad1f53d13019be06aa2ed",
+    "sources/w13-skill-stat-a-energy-cost-skill-dodge/get_energy_cost.cpp": "845b0b8f49807d2349d726f73c4a5a6fb865e3827fbdb18b577202bfbdc037ef",
+    "sources/w13-skill-stat-a-energy-cost-skill-entangle/get_energy_cost.cpp": "66c62fcbf835c7457fa9d53bd380d49c0451d05e1dda99f59b86880c589d2a36",
+    "sources/w13-skill-stat-a-energy-cost-skill-fire-arrow/get_energy_cost.cpp": "6b599f235fb07e67eeb61c3492eb078742cd3da8a1856ea94434ad6678c62323",
+    "sources/w13-skill-stat-a-energy-cost-skill-fire-storm/get_energy_cost.cpp": "c2a70148c976ae84b3b7a3bbd6f576baac6840b393c177b0cd06cfe1861b5c70",
+    "sources/w13-skill-stat-a-energy-cost-skill-harm-touch/get_energy_cost.cpp": "2c088895d1e4a99e35d81658f0700b1871195806a9898758fb90834216a7f796",
+    "sources/w13-skill-stat-a-energy-cost-skill-healing/get_energy_cost.cpp": "9a83422a644330c18252edf1dca79143b4f600e3db69b8cf827efcd193e7d45d",
+    "sources/w13-skill-stat-a-energy-cost-skill-life-tap/get_energy_cost.cpp": "a6ceab076335f5e6500de3f5303300ed2af398220e4ccee3c570f84331aea7a2",
+    "sources/w13-skill-stat-a-energy-cost-skill-shock/get_energy_cost.cpp": "52928ec744bf26dbcde39a78cae940ad491f7f2de843b6fac48198a0aaacc976",
+    "sources/w13-skill-stat-a-icon-skill-blessed/get_icon.cpp": "601b204a345b63d00c670c518c5ac34ac5e760cffee32e172e8a5448a0abb14a",
+    "sources/w13-skill-stat-a-icon-skill-charge/get_icon.cpp": "573b0e891d112ad6ea5df3090a3ad132da9ffc0c20b0a533ddb2034a5e71828a",
+    "sources/w13-skill-stat-a-icon-skill-cold-arrow/get_icon.cpp": "57fc03bc4d125babb07bedd5db4f15095675c867de63707e7a02cb08e7101b01",
+    "sources/w13-skill-stat-a-icon-skill-cyclone/get_icon.cpp": "728963e43c986c48570da2287ed6f77338b6814be8088799683ed6e5e0f2cd29",
+    "sources/w13-skill-stat-a-icon-skill-darkness/get_icon.cpp": "cdc997487d5a3c7a44ef06a1aa1d90782a0e7f9abdb85819e5540afffd694725",
+    "sources/w13-skill-stat-a-icon-skill-entangle/get_icon.cpp": "34078e9992866c2d196670a507f0a8e31b1955260fa34c712b8fa74fe737d446",
+    "sources/w13-skill-stat-a-icon-skill-fire-arrow/get_icon.cpp": "770d7fbd54ea18f2d92ad2a6b1f620939255b5b3158e3ca628f25aef388e3088",
+    "sources/w13-skill-stat-a-icon-skill-fire-storm/get_icon.cpp": "88f0cbb4eebb532094b132fc5102644b4cb5236053153f235c786ae69d53440d",
+    "sources/w13-skill-stat-a-icon-skill-harm-touch/get_icon.cpp": "9255fea81658e6d61c35a1df0228bf378861449225f6ee7f1de2b79698ce1393",
+    "sources/w13-skill-stat-a-icon-skill-healing/get_icon.cpp": "95abb603fc77bbefd2929fd35d91e8ab158930b8efe67bef8effac609b10eee2",
+    "sources/w13-skill-stat-a-icon-skill-life-tap/get_icon.cpp": "b820f313b4cf89c195b369c24909e70af6383544cece75aa2fee4c491628e7f7",
+    "sources/w13-skill-stat-a-icon-skill-multi-fire/get_icon.cpp": "667d1328814331d2cfb193992b40081535c310ee16f02c038971ab195d473856",
+    "sources/w13-skill-stat-a-icon-skill-shock/get_icon.cpp": "87a38b7812ec4eabaa724cba8c69eb00de8a6e0551fca7c404d4ea2d211fdce3",
+    "sources/w13-skill-stat-a-level-requirement-skill-blessed/get_level_requirement.cpp": "b193b4e437704fbc08b6b6ed195acf86e000f04be93aedea82a1926075e20d77",
+    "sources/w13-skill-stat-a-level-requirement-skill-cyclone/get_level_requirement.cpp": "fdb9afd1f0ca6caa943181d1f4246c206c6425e34893f44304ee760d5b17a6ea",
+    "sources/w13-skill-stat-a-level-requirement-skill-darkness/get_level_requirement.cpp": "e097b74d17d5e26d697b57997caac13d4080abb617a839dbd9a60878e4a63c50",
+    "sources/w13-skill-stat-a-level-requirement-skill-entangle/get_level_requirement.cpp": "61d3d7cc2f1f1e2548019f425701f9b2a97381131eda8d5d3204dabe9e974d5e",
+    "sources/w13-skill-stat-a-level-requirement-skill-fire-storm/get_level_requirement.cpp": "f093d51b1b643ae667bfa79ad2c388ddfe77c60d18b8d37ae92133f2f37547de",
+    "sources/w13-skill-stat-a-level-requirement-skill-healing/get_level_requirement.cpp": "b206f1f921ad0cd0e3723b25b5cea523dc20f50bef14a1d55751166495753673",
+    "sources/w13-skill-stat-a-level-requirement-skill-riposte/get_level_requirement.cpp": "6fc97d3518b7af4ca080b0cbcafd0baffd2a65ef13998bc87eabf99ecf6110a2",
+    "sources/w13-skill-stat-a-point-cost-skill-blessed/get_skill_point_cost.cpp": "0ada00caa4151a4a68e2c7e9366f4c861c191c3583cce5ab391d189ea92c74fe",
+    "sources/w13-skill-stat-a-point-cost-skill-darkness/get_skill_point_cost.cpp": "bab2ea9633ec73bd5756f7d0816e22c3c821ab4b1d2b6d83a972aff844e44590",
+    "sources/w13-skill-stat-a-point-cost-skill-fire-storm/get_skill_point_cost.cpp": "b5477981e7c9dd6811646cf0b2782adc6bf6bb3c6150ced60141fdaa3494affc",
+    "sources/w13-skill-stat-a-point-cost-skill-riposte/get_skill_point_cost.cpp": "a41a18ee2ea96eee0c9337a79e8681a1533478e33be4ffd4692c71a22f62e8db",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
     "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
@@ -86340,6 +86380,606 @@
           "compiled_body_bytes": 468
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5869,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_amount_skill_life_tap.o",
+      "profile": "authored_cpp",
+      "sha256": "80fe57de428dc533b6145b65237b2da0da87b32970d202e52f5cc075269281be",
+      "source": "sources/w13-skill-stat-a-amount-skill-life-tap/get_amount.cpp",
+      "emitted_functions": [
+        {
+          "name": "getAmount__12SkillLifeTapi",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5870,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_deflection_chance_skill_dodge.o",
+      "profile": "authored_cpp",
+      "sha256": "bb67402338ed2e43de2f3a97f40001f9ef512d81847e876e27a15cd3054a4151",
+      "source": "sources/w13-skill-stat-a-deflection-chance-skill-dodge/get_deflection_chance.cpp",
+      "emitted_functions": [
+        {
+          "name": "getDeflectionChance__10SkillDodgei",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5871,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_archery.o",
+      "profile": "authored_cpp",
+      "sha256": "33c9c57058bebc4b19d19bf4d3642410ab405e9973cc479e99d63e9f22b034e4",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-archery/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__12SkillArcheryi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5872,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_blessed.o",
+      "profile": "authored_cpp",
+      "sha256": "90b7c40397931b4c92b7dc23ac331ce79aa2ea43901519aab4f85a2cbdbf6413",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-blessed/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__12SkillBlessedi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5873,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_charge.o",
+      "profile": "authored_cpp",
+      "sha256": "bdac36bc9ce319e20e5fed9026338193595bb41dca406a6e695624744e1c2e1a",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-charge/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__11SkillChargei",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5874,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_cold_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "510e64714c5c4babb9d9ad30e71eac0a867bc73b652fff71fc4f00e5157dfd23",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-cold-arrow/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__14SkillColdArrowi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5875,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_cyclone.o",
+      "profile": "authored_cpp",
+      "sha256": "ac1317501dbcbf3b9b76654dc31319a1cc99c08b89f0369d341a4c756af92715",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-cyclone/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__12SkillCyclonei",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5876,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_darkness.o",
+      "profile": "authored_cpp",
+      "sha256": "fb67caf1e86a6909255c85d554a469d560edfeb88aaad1f53d13019be06aa2ed",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-darkness/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__13SkillDarknessi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5877,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_dodge.o",
+      "profile": "authored_cpp",
+      "sha256": "845b0b8f49807d2349d726f73c4a5a6fb865e3827fbdb18b577202bfbdc037ef",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-dodge/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__10SkillDodgei",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5878,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_entangle.o",
+      "profile": "authored_cpp",
+      "sha256": "66c62fcbf835c7457fa9d53bd380d49c0451d05e1dda99f59b86880c589d2a36",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-entangle/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__13SkillEntanglei",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5879,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_fire_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "6b599f235fb07e67eeb61c3492eb078742cd3da8a1856ea94434ad6678c62323",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-fire-arrow/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__14SkillFireArrowi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5880,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_fire_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "c2a70148c976ae84b3b7a3bbd6f576baac6840b393c177b0cd06cfe1861b5c70",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-fire-storm/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__14SkillFireStormi",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5881,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_harm_touch.o",
+      "profile": "authored_cpp",
+      "sha256": "2c088895d1e4a99e35d81658f0700b1871195806a9898758fb90834216a7f796",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-harm-touch/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__14SkillHarmTouchi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5882,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "9a83422a644330c18252edf1dca79143b4f600e3db69b8cf827efcd193e7d45d",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-healing/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__12SkillHealingi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5883,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_life_tap.o",
+      "profile": "authored_cpp",
+      "sha256": "a6ceab076335f5e6500de3f5303300ed2af398220e4ccee3c570f84331aea7a2",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-life-tap/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__12SkillLifeTapi",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5884,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_energy_cost_skill_shock.o",
+      "profile": "authored_cpp",
+      "sha256": "52928ec744bf26dbcde39a78cae940ad491f7f2de843b6fac48198a0aaacc976",
+      "source": "sources/w13-skill-stat-a-energy-cost-skill-shock/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__10SkillShocki",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5885,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_blessed.o",
+      "profile": "authored_cpp",
+      "sha256": "601b204a345b63d00c670c518c5ac34ac5e760cffee32e172e8a5448a0abb14a",
+      "source": "sources/w13-skill-stat-a-icon-skill-blessed/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__12SkillBlessed",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5886,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_charge.o",
+      "profile": "authored_cpp",
+      "sha256": "573b0e891d112ad6ea5df3090a3ad132da9ffc0c20b0a533ddb2034a5e71828a",
+      "source": "sources/w13-skill-stat-a-icon-skill-charge/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__11SkillCharge",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5887,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_cold_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "57fc03bc4d125babb07bedd5db4f15095675c867de63707e7a02cb08e7101b01",
+      "source": "sources/w13-skill-stat-a-icon-skill-cold-arrow/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__14SkillColdArrow",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5888,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_cyclone.o",
+      "profile": "authored_cpp",
+      "sha256": "728963e43c986c48570da2287ed6f77338b6814be8088799683ed6e5e0f2cd29",
+      "source": "sources/w13-skill-stat-a-icon-skill-cyclone/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__12SkillCyclone",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5889,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_darkness.o",
+      "profile": "authored_cpp",
+      "sha256": "cdc997487d5a3c7a44ef06a1aa1d90782a0e7f9abdb85819e5540afffd694725",
+      "source": "sources/w13-skill-stat-a-icon-skill-darkness/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__13SkillDarkness",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5890,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_entangle.o",
+      "profile": "authored_cpp",
+      "sha256": "34078e9992866c2d196670a507f0a8e31b1955260fa34c712b8fa74fe737d446",
+      "source": "sources/w13-skill-stat-a-icon-skill-entangle/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__13SkillEntangle",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5891,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_fire_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "770d7fbd54ea18f2d92ad2a6b1f620939255b5b3158e3ca628f25aef388e3088",
+      "source": "sources/w13-skill-stat-a-icon-skill-fire-arrow/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__14SkillFireArrow",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5892,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_fire_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "88f0cbb4eebb532094b132fc5102644b4cb5236053153f235c786ae69d53440d",
+      "source": "sources/w13-skill-stat-a-icon-skill-fire-storm/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__14SkillFireStorm",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5893,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_harm_touch.o",
+      "profile": "authored_cpp",
+      "sha256": "9255fea81658e6d61c35a1df0228bf378861449225f6ee7f1de2b79698ce1393",
+      "source": "sources/w13-skill-stat-a-icon-skill-harm-touch/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__14SkillHarmTouch",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5894,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "95abb603fc77bbefd2929fd35d91e8ab158930b8efe67bef8effac609b10eee2",
+      "source": "sources/w13-skill-stat-a-icon-skill-healing/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__12SkillHealing",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5895,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_life_tap.o",
+      "profile": "authored_cpp",
+      "sha256": "b820f313b4cf89c195b369c24909e70af6383544cece75aa2fee4c491628e7f7",
+      "source": "sources/w13-skill-stat-a-icon-skill-life-tap/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__12SkillLifeTap",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5896,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_multi_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "667d1328814331d2cfb193992b40081535c310ee16f02c038971ab195d473856",
+      "source": "sources/w13-skill-stat-a-icon-skill-multi-fire/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__14SkillMultiFire",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5897,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_icon_skill_shock.o",
+      "profile": "authored_cpp",
+      "sha256": "87a38b7812ec4eabaa724cba8c69eb00de8a6e0551fca7c404d4ea2d211fdce3",
+      "source": "sources/w13-skill-stat-a-icon-skill-shock/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__10SkillShock",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5898,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_blessed.o",
+      "profile": "authored_cpp",
+      "sha256": "b193b4e437704fbc08b6b6ed195acf86e000f04be93aedea82a1926075e20d77",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-blessed/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__12SkillBlessedi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5899,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_cyclone.o",
+      "profile": "authored_cpp",
+      "sha256": "fdb9afd1f0ca6caa943181d1f4246c206c6425e34893f44304ee760d5b17a6ea",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-cyclone/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__12SkillCyclonei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5900,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_darkness.o",
+      "profile": "authored_cpp",
+      "sha256": "e097b74d17d5e26d697b57997caac13d4080abb617a839dbd9a60878e4a63c50",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-darkness/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__13SkillDarknessi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5901,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_entangle.o",
+      "profile": "authored_cpp",
+      "sha256": "61d3d7cc2f1f1e2548019f425701f9b2a97381131eda8d5d3204dabe9e974d5e",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-entangle/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__13SkillEntanglei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5902,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_fire_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "f093d51b1b643ae667bfa79ad2c388ddfe77c60d18b8d37ae92133f2f37547de",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-fire-storm/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__14SkillFireStormi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5903,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "b206f1f921ad0cd0e3723b25b5cea523dc20f50bef14a1d55751166495753673",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-healing/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__12SkillHealingi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5904,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_level_requirement_skill_riposte.o",
+      "profile": "authored_cpp",
+      "sha256": "6fc97d3518b7af4ca080b0cbcafd0baffd2a65ef13998bc87eabf99ecf6110a2",
+      "source": "sources/w13-skill-stat-a-level-requirement-skill-riposte/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__12SkillRipostei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5905,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_point_cost_skill_blessed.o",
+      "profile": "authored_cpp",
+      "sha256": "0ada00caa4151a4a68e2c7e9366f4c861c191c3583cce5ab391d189ea92c74fe",
+      "source": "sources/w13-skill-stat-a-point-cost-skill-blessed/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__12SkillBlessedi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5906,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_point_cost_skill_darkness.o",
+      "profile": "authored_cpp",
+      "sha256": "bab2ea9633ec73bd5756f7d0816e22c3c821ab4b1d2b6d83a972aff844e44590",
+      "source": "sources/w13-skill-stat-a-point-cost-skill-darkness/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__13SkillDarknessi",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5907,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_point_cost_skill_fire_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "b5477981e7c9dd6811646cf0b2782adc6bf6bb3c6150ced60141fdaa3494affc",
+      "source": "sources/w13-skill-stat-a-point-cost-skill-fire-storm/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__14SkillFireStormi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5908,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_a_point_cost_skill_riposte.o",
+      "profile": "authored_cpp",
+      "sha256": "a41a18ee2ea96eee0c9337a79e8681a1533478e33be4ffd4692c71a22f62e8db",
+      "source": "sources/w13-skill-stat-a-point-cost-skill-riposte/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__12SkillRipostei",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -86439,7 +87079,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2ee61308caefa381f3e75f0b91a11c745e7b0a38a3cb058d272b05be95a9352a",
+  "snapshot_sha256": "fd6b7538583ec6201677318f1a70996b21eb2071e7cecb0ff3ee9872c7f322e2",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
