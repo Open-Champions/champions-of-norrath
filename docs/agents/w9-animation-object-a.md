@@ -25,3 +25,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `lump-data` | data: `domeLump`, `dialogLumpName`, `eqLumpHeader` | 0x486b00, 0x48500c, 0x4845a0 | 4 each |
 | `game-line-data` | data: `gameLineCount`, `gameLines` (100 pointers) | 0x485ea8, 0x8d57a8 | 4, 400 |
 | `in-msg-data` | data: `inMsg` | 0x8d8938 | 1008 |
+| `has-light-or-particle-number` | `hasLightOrParticleNumber__FPPci` | 0x21df18 | 828 |
