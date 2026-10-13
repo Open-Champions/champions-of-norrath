@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4254,
+  "default_authored_inputs": 4285,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2602,6 +2602,38 @@
     "sources/w10-actor-k-vtable-12recalleffect/vtable.cpp": "5c018d2efa51708e52e504897329c1758557bb0832df9aae4d84909206d5a982",
     "sources/w10-actor-k-vtable-6phprop/vtable.cpp": "a54ad79ba8ca4d92c8412c170ccba29d3e671f5b0bc09face7eaabd2e9871981",
     "sources/w10-actor-k-vtable-6player/vtable.cpp": "7ad11dc7f04682096acc94209f6ef4ba9a9c6381b48548bd0311ae30a552970d",
+    "sources/w10-actor-l-clone-8scorpion/clone.cpp": "d73fb2fbbf72f09aa2600ecbe027310d8bfc3d976e94ba1ab0794e4bb893d270",
+    "sources/w10-actor-l-clone-9savepoint/clone.cpp": "97ee5301bc03a24ffb394b592bd629cba533cde105f22b2d6395d0262c1ab2f9",
+    "sources/w10-actor-l-common/access.hpp": "8be79dcea430631e5930200692bf2b9e4e0cc500944d8f1f8f2adb1b0a83bd5f",
+    "sources/w10-actor-l-dtor-10seamonster/dtor.cpp": "9a3887b489a90dc9fa31e7840efaaeffa6a581d8de9eb0f1088ecef7e057eb6a",
+    "sources/w10-actor-l-dtor-5rondo/dtor.cpp": "315ab74aa6c95e8b81be23f3d9257ca8d874468914fca395ce083fd46c6c3660",
+    "sources/w10-actor-l-dtor-8scorpion/dtor.cpp": "2a97b506dc9d689d7ffef7af11038a6af7067c99f3946911c411a54707554ef3",
+    "sources/w10-actor-l-dtor-9savepoint/dtor.cpp": "7cefa0e2288debb4d4ffc2fdb43d0fdd85199083d57e7a7a5d491a0afab113fd",
+    "sources/w10-actor-l-get-miniboss-name-10seamonster/get_miniboss_name.cpp": "9e52e569376e3fe9a9650e6866fe2ef7c136ba4a5232a83859ed5a9d90b5ae5b",
+    "sources/w10-actor-l-init-miniboss-10seamonster/init_miniboss.cpp": "3c451c37672ccf9dab9a4592fe65a135bafa59226b12d999c1215b97a49a4e0b",
+    "sources/w10-actor-l-msg-draw-10seamonster/msg_draw.cpp": "bf2c1a6e3aa0393c826031aa3692b33e072c0a6d127cfd85a416bcf3dcd9a0ec",
+    "sources/w10-actor-l-msg-draw-5rondo/msg_draw.cpp": "310dbb2b1c903efc6485ceec643ea4964713a7f2756c143c2116bd334e3ef19c",
+    "sources/w10-actor-l-msg-draw-8scorpion/msg_draw.cpp": "6bdeada0635fc0bb8845718fb34c5b3a1b0cdbe11ea53f979205f2d755f6632e",
+    "sources/w10-actor-l-msg-draw-9savepoint/msg_draw.cpp": "bc243d7febff270ac5afeb860dc84eb2dfa32b0cf21e6e41ace1eb53b972c644",
+    "sources/w10-actor-l-msg-get-poke-name-9savepoint/msg_get_poke_name.cpp": "4bb67a0dabbef625e669db652192ddd13e3b82e91d231938fb6b1feb48c7e9a7",
+    "sources/w10-actor-l-msg-load-9savepoint/msg_load.cpp": "7db52ed23793429d53c31788107c80a757639ba382613b77040af81fd712505f",
+    "sources/w10-actor-l-msg-move-collision-10seamonster/msg_move_collision.cpp": "35998d66ce56dd6a487ec89fe3c92ac44978328a2c298f7462229db0291a74e3",
+    "sources/w10-actor-l-msg-poke-8rolldoor/msg_poke.cpp": "a3c599918e9c972b2f3312dd8d2a180b45487bc462179f43235a4d5fc7073e64",
+    "sources/w10-actor-l-msg-poke-9savepoint/msg_poke.cpp": "59109a44ce8b997cdb8a0819db26e7f5cf8fe0f3431b98c29f56ebd6628ba90e",
+    "sources/w10-actor-l-msg-presave-8rolldoor/msg_presave.cpp": "68f24e08e5605062c0efab2bc6cf85981df1171f7bd106256e2eea93b3c50a72",
+    "sources/w10-actor-l-msg-run-5rondo/msg_run.cpp": "a4fde7ff7b6cb00818d40ea3976af25145b2872e0278862e9073fd4cf53e2466",
+    "sources/w10-actor-l-msg-run-8rolldoor/msg_run.cpp": "074bba6b18568b9753039ebf93d8438d2769e279c72a172e42309309fd91eb33",
+    "sources/w10-actor-l-msg-run-8scorpion/msg_run.cpp": "dbec639fb9ab8ab1dc1ca76cf7cc89064fe12d1626a194b340cdedcc312b3b40",
+    "sources/w10-actor-l-msg-run-9savepoint/msg_run.cpp": "2be0eb7aeda08a176af508ae9e424be5098b8b21b9f66567f3637424171bd5e3",
+    "sources/w10-actor-l-msg-save-8rolldoor/msg_save.cpp": "519dd761e7239473abe4b1a051e5d63f68f1c4d5866e1a956f8c0f5f0baae9de",
+    "sources/w10-actor-l-msg-save-9savepoint/msg_save.cpp": "b3141f744de22dc47650280cca39f1930137d5addf81b936643b88689ceb1835",
+    "sources/w10-actor-l-msg-trigger-5rondo/msg_trigger.cpp": "cc5f781788b421c0bca46a5709b8ddf09192087b6a59f071b9c15738804d443d",
+    "sources/w10-actor-l-msg-trigger-8rolldoor/msg_trigger.cpp": "cb41be4d294ecb4a7886493ee80f784a43196a5891d1615821bd85776026b369",
+    "sources/w10-actor-l-set-state-5rondo/set_state.cpp": "fb706cefb5e05b3354053c10783b17941eb4892770fe302da42f1e320a2433ae",
+    "sources/w10-actor-l-set-state-8scorpion/set_state.cpp": "7b50156c1e92b75145f0f731430ece38790f0b16f895f60aeb4d5b1ccffed32f",
+    "sources/w10-actor-l-tf-10seamonster/typeinfo.cpp": "18d01195c6d22c37b173d0f8205c45f31f9b2b15f70a472818783ddc00e1d87b",
+    "sources/w10-actor-l-tf-5rondo/typeinfo.cpp": "739260a6c25a67fd41377c3e555872f62c30736f2b82c93f24d1079440bdf6b3",
+    "sources/w10-actor-l-tf-8scorpion/typeinfo.cpp": "276d5a1eeaaeb79c429936bb9a4cd3992645be68894acb65cf6377d9795f5e87",
     "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
     "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
     "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp": "d69dc4c620c9cc907e11efb7f1411f8a7350ceaa800c5684cbf83dd6dc30c43a",
@@ -61335,6 +61367,501 @@
       "sha256": "7ad11dc7f04682096acc94209f6ef4ba9a9c6381b48548bd0311ae30a552970d",
       "source": "sources/w10-actor-k-vtable-6player/vtable.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4256,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_clone_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "d73fb2fbbf72f09aa2600ecbe027310d8bfc3d976e94ba1ab0794e4bb893d270",
+      "source": "sources/w10-actor-l-clone-8scorpion/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__8Scorpion",
+          "compiled_body_bytes": 788
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4257,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_clone_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "97ee5301bc03a24ffb394b592bd629cba533cde105f22b2d6395d0262c1ab2f9",
+      "source": "sources/w10-actor-l-clone-9savepoint/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__9Savepoint",
+          "compiled_body_bytes": 404
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4258,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_dtor_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "9a3887b489a90dc9fa31e7840efaaeffa6a581d8de9eb0f1088ecef7e057eb6a",
+      "source": "sources/w10-actor-l-dtor-10seamonster/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10SeaMonster",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4259,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_dtor_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "315ab74aa6c95e8b81be23f3d9257ca8d874468914fca395ce083fd46c6c3660",
+      "source": "sources/w10-actor-l-dtor-5rondo/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_5Rondo",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4260,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_dtor_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "2a97b506dc9d689d7ffef7af11038a6af7067c99f3946911c411a54707554ef3",
+      "source": "sources/w10-actor-l-dtor-8scorpion/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8Scorpion",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4261,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_dtor_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "7cefa0e2288debb4d4ffc2fdb43d0fdd85199083d57e7a7a5d491a0afab113fd",
+      "source": "sources/w10-actor-l-dtor-9savepoint/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_9Savepoint",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4262,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_get_miniboss_name_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "9e52e569376e3fe9a9650e6866fe2ef7c136ba4a5232a83859ed5a9d90b5ae5b",
+      "source": "sources/w10-actor-l-get-miniboss-name-10seamonster/get_miniboss_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getMinibossName__10SeaMonster",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4263,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_init_miniboss_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "3c451c37672ccf9dab9a4592fe65a135bafa59226b12d999c1215b97a49a4e0b",
+      "source": "sources/w10-actor-l-init-miniboss-10seamonster/init_miniboss.cpp",
+      "emitted_functions": [
+        {
+          "name": "initMiniboss__10SeaMonster",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4264,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_draw_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "bf2c1a6e3aa0393c826031aa3692b33e072c0a6d127cfd85a416bcf3dcd9a0ec",
+      "source": "sources/w10-actor-l-msg-draw-10seamonster/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10SeaMonster",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4265,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_draw_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "310dbb2b1c903efc6485ceec643ea4964713a7f2756c143c2116bd334e3ef19c",
+      "source": "sources/w10-actor-l-msg-draw-5rondo/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__5Rondo",
+          "compiled_body_bytes": 480
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4266,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_draw_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "6bdeada0635fc0bb8845718fb34c5b3a1b0cdbe11ea53f979205f2d755f6632e",
+      "source": "sources/w10-actor-l-msg-draw-8scorpion/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__8Scorpion",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4267,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_draw_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "bc243d7febff270ac5afeb860dc84eb2dfa32b0cf21e6e41ace1eb53b972c644",
+      "source": "sources/w10-actor-l-msg-draw-9savepoint/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__9Savepoint",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4268,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_get_poke_name_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "4bb67a0dabbef625e669db652192ddd13e3b82e91d231938fb6b1feb48c7e9a7",
+      "source": "sources/w10-actor-l-msg-get-poke-name-9savepoint/msg_get_poke_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_getPokeName__9SavepointPUsi",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4269,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_load_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "7db52ed23793429d53c31788107c80a757639ba382613b77040af81fd712505f",
+      "source": "sources/w10-actor-l-msg-load-9savepoint/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__9SavepointPc",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4270,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_move_collision_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "35998d66ce56dd6a487ec89fe3c92ac44978328a2c298f7462229db0291a74e3",
+      "source": "sources/w10-actor-l-msg-move-collision-10seamonster/msg_move_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__10SeaMonsterPP10GameObject",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4271,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_poke_8rolldoor.o",
+      "profile": "authored_cpp",
+      "sha256": "a3c599918e9c972b2f3312dd8d2a180b45487bc462179f43235a4d5fc7073e64",
+      "source": "sources/w10-actor-l-msg-poke-8rolldoor/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__8RollDoori",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4272,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_poke_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "59109a44ce8b997cdb8a0819db26e7f5cf8fe0f3431b98c29f56ebd6628ba90e",
+      "source": "sources/w10-actor-l-msg-poke-9savepoint/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__9Savepointi",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4273,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_presave_8rolldoor.o",
+      "profile": "authored_cpp",
+      "sha256": "68f24e08e5605062c0efab2bc6cf85981df1171f7bd106256e2eea93b3c50a72",
+      "source": "sources/w10-actor-l-msg-presave-8rolldoor/msg_presave.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_presave__8RollDoor",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4274,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_run_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "a4fde7ff7b6cb00818d40ea3976af25145b2872e0278862e9073fd4cf53e2466",
+      "source": "sources/w10-actor-l-msg-run-5rondo/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Rondo",
+          "compiled_body_bytes": 736
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4275,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_run_8rolldoor.o",
+      "profile": "authored_cpp",
+      "sha256": "074bba6b18568b9753039ebf93d8438d2769e279c72a172e42309309fd91eb33",
+      "source": "sources/w10-actor-l-msg-run-8rolldoor/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8RollDoor",
+          "compiled_body_bytes": 264
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4276,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_run_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "dbec639fb9ab8ab1dc1ca76cf7cc89064fe12d1626a194b340cdedcc312b3b40",
+      "source": "sources/w10-actor-l-msg-run-8scorpion/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__8Scorpion",
+          "compiled_body_bytes": 1516
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4277,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_run_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "2be0eb7aeda08a176af508ae9e424be5098b8b21b9f66567f3637424171bd5e3",
+      "source": "sources/w10-actor-l-msg-run-9savepoint/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__9Savepoint",
+          "compiled_body_bytes": 2192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4278,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_save_8rolldoor.o",
+      "profile": "authored_cpp",
+      "sha256": "519dd761e7239473abe4b1a051e5d63f68f1c4d5866e1a956f8c0f5f0baae9de",
+      "source": "sources/w10-actor-l-msg-save-8rolldoor/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__8RollDoorPc",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4279,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_save_9savepoint.o",
+      "profile": "authored_cpp",
+      "sha256": "b3141f744de22dc47650280cca39f1930137d5addf81b936643b88689ceb1835",
+      "source": "sources/w10-actor-l-msg-save-9savepoint/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9SavepointPc",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4280,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_trigger_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "cc5f781788b421c0bca46a5709b8ddf09192087b6a59f071b9c15738804d443d",
+      "source": "sources/w10-actor-l-msg-trigger-5rondo/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__5Rondoi",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4281,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_msg_trigger_8rolldoor.o",
+      "profile": "authored_cpp",
+      "sha256": "cb41be4d294ecb4a7886493ee80f784a43196a5891d1615821bd85776026b369",
+      "source": "sources/w10-actor-l-msg-trigger-8rolldoor/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__8RollDoori",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4282,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_set_state_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "fb706cefb5e05b3354053c10783b17941eb4892770fe302da42f1e320a2433ae",
+      "source": "sources/w10-actor-l-set-state-5rondo/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__5Rondoi",
+          "compiled_body_bytes": 824
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-l-common/access.hpp"
+      ],
+      "input_order": 4283,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_set_state_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "7b50156c1e92b75145f0f731430ece38790f0b16f895f60aeb4d5b1ccffed32f",
+      "source": "sources/w10-actor-l-set-state-8scorpion/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__8Scorpioni",
+          "compiled_body_bytes": 1388
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4284,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_tf_10seamonster.o",
+      "profile": "authored_cpp",
+      "sha256": "18d01195c6d22c37b173d0f8205c45f31f9b2b15f70a472818783ddc00e1d87b",
+      "source": "sources/w10-actor-l-tf-10seamonster/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10SeaMonster",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4285,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_tf_5rondo.o",
+      "profile": "authored_cpp",
+      "sha256": "739260a6c25a67fd41377c3e555872f62c30736f2b82c93f24d1079440bdf6b3",
+      "source": "sources/w10-actor-l-tf-5rondo/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf5Rondo",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4286,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_l_tf_8scorpion.o",
+      "profile": "authored_cpp",
+      "sha256": "276d5a1eeaaeb79c429936bb9a4cd3992645be68894acb65cf6377d9795f5e87",
+      "source": "sources/w10-actor-l-tf-8scorpion/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf8Scorpion",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -61434,7 +61961,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "1af7da18153ede7ad56ea93d9dcc7ba4e2b2fe036645c6fa8d5e15dbd0c26be6",
+  "snapshot_sha256": "efd8ade18b6fd26b7c918af71d7d921f68e599338262ad162ac1267a4686675d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

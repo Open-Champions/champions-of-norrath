@@ -8157,3 +8157,25 @@ Closed: `_$_11PushTrigger`, `_$_19ParticleMorphEffect`, `_$_3Orc`, `_$_8RollDoor
 
 Opened: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `__tf10Projectile`, `__tf12RecallEffect`, `__tf6Player`, `_vt$11PushTrigger`, `_vt$3Orc`, `_vt$4Prop`, `_vt$8RollDoor`, `clone__10Projectile`, `clone__12RecallEffect`, `clone__6PhProp`, `clone__6Player`, `commanderValid__3Orc`, `deleteCommander__3Orc`, `dropItem__3Orci`, `findCommander__3Orc`, `getModel__6Player`, `getSkillRank__6Playeri`, `initType__3Orcb`, `init__4Propi`, `isEnemy__6PlayerP10GameObject`, `joinCommander__3Orc`, `leaveCommander__3Orc`, `msg_collision__6PlayerP10GameObject`, `msg_draw__12RecallEffect`, `msg_draw__6PhProp`, `msg_draw__6Player`, `msg_hurt__6PlayerfP10GameObjecti`, `msg_run__12RecallEffect`, `msg_run__6PhProp`, `msg_run__6Player`, `setActiveChunks__6Player`, `setState__6Playeri`, `setWeapon__3Orc`, `stun__6Playeri`, `worldGetDoorHeight__FP12_worldHeaderi`
 - 2026-10-13 03:10 CDT — `agents/w10-actor-k` — 1082 unresolved imports
+
+## agents/w10-actor-l
+
+Merged (merge commit, branch tip `f1d2d59a`, 65 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (31 function bodies) with fresh `input_order` values 4256
+through 4286. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 20 under `-Werror`, 11 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4285 authored inputs, 3223 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1082 |
+| After | 1055 |
+| Closed | 31 |
+| Opened | 4 |
+
+Closed: `_$_10SeaMonster`, `_$_5Rondo`, `_$_8Scorpion`, `_$_9Savepoint`, `__tf10SeaMonster`, `__tf5Rondo`, `__tf8Scorpion`, `clone__8Scorpion`, `clone__9Savepoint`, `getMinibossName__10SeaMonster`, `initMiniboss__10SeaMonster`, `msg_draw__10SeaMonster`, `msg_draw__5Rondo`, `msg_draw__8Scorpion`, `msg_draw__9Savepoint`, `msg_getPokeName__9SavepointPUsi`, `msg_load__9SavepointPc`, `msg_moveCollision__10SeaMonsterPP10GameObject`, `msg_poke__8RollDoori`, `msg_poke__9Savepointi`, `msg_presave__8RollDoor`, `msg_run__5Rondo`, `msg_run__8RollDoor`, `msg_run__8Scorpion`, `msg_run__9Savepoint`, `msg_save__8RollDoorPc`, `msg_save__9SavepointPc`, `msg_trigger__5Rondoi`, `msg_trigger__8RollDoori`, `setState__5Rondoi`, `setState__8Scorpioni`
+
+Opened: `loseBodyPart__8Scorpioni`, `msgHudSavePoint__FP9Savepoint`, `playerRaisePlayer__FiG6Point3`, `updatePlayersReady__9Savepoint`
