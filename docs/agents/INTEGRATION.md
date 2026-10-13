@@ -9673,3 +9673,19 @@ Closed: `getEnergyCost__14SkillMultiFirei`, `getEnergyCost__15SkillClericRooti`,
 
 Opened: none
 - 2026-10-13 16:45 CDT — agents/w13-skill-stat-b — 976 unresolved imports
+
+## agents/w13-skill-stat-c
+
+Merged (merge commit, branch tip `2608e413`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5949 through 5988, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5987 authored inputs, 4670 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 976 |
+| After | 936 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__16SkillDiseaseBolti`, `getEnergyCost__16SkillFireWeaponsi`, `getEnergyCost__16SkillGroundPoundi`, `getEnergyCost__16SkillPoisonArrowi`, `getEnergyCost__16SkillShockOfFirei`, `getEnergyCost__17SkillConvertEnemyi`, `getEnergyCost__17SkillDiseaseTraili`, `getEnergyCost__17SkillExplodeArrowi`, `getEnergyCost__17SkillMinorHealingi`, `getEnergyCost__17SkillShockOfFrosti`, `getEnergyCost__17SkillUndeadShieldi`, `getEnergyCost__18SkillAncestralCalli`, `getEnergyCost__18SkillBlindingLighti`, `getIcon__16SkillFireWeapons`, `getIcon__16SkillGroundPound`, `getIcon__16SkillPoisonArrow`, `getIcon__16SkillShockOfFire`, `getIcon__17SkillConvertEnemy`, `getIcon__17SkillDiseaseTrail`, `getIcon__17SkillExplodeArrow`, `getIcon__17SkillMinorHealing`, `getIcon__17SkillShockOfFrost`, `getIcon__17SkillUndeadShield`, `getIcon__18SkillAncestralCall`, `getIcon__18SkillBlindingLight`, `getLevelRequirement__16SkillDiseaseBolti`, `getLevelRequirement__16SkillFireWeaponsi`, `getLevelRequirement__16SkillShockOfFirei`, `getLevelRequirement__17SkillDiseaseTraili`, `getLevelRequirement__17SkillMinorHealingi`, `getLevelRequirement__17SkillRegenerationi`, `getLevelRequirement__17SkillShockOfFrosti`, `getLevelRequirement__17SkillUndeadShieldi`, `getLevelRequirement__18SkillBlindingLighti`, `getSkillPointCost__16SkillDiseaseBolti`, `getSkillPointCost__16SkillFireWeaponsi`, `getSkillPointCost__17SkillDiseaseTraili`, `getSkillPointCost__17SkillRegenerationi`, `getSkillPointCost__17SkillShockOfFrosti`, `getSkillPointCost__17SkillUndeadShieldi`
+
+Opened: none
+- 2026-10-13 16:50 CDT — agents/w13-skill-stat-c — 936 unresolved imports

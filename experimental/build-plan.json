@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5947,
+  "default_authored_inputs": 5987,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4743,6 +4743,46 @@
     "sources/w13-skill-stat-b-point-cost-skill-holy-strike/get_skill_point_cost.cpp": "145cd1ae05085ad9a32ce0dbae79bf4c114b91a608915d1b852d06ec9f0a257e",
     "sources/w13-skill-stat-b-point-cost-skill-poison-rain/get_skill_point_cost.cpp": "e83b4a07b9dbb4f5069d0de561718e70ea488d575c74ce96000e26f9b9ea4106",
     "sources/w13-skill-stat-b-point-cost-skill-wizard-beam/get_skill_point_cost.cpp": "554103eefa88a6d2af82a6757661da5cd7642d60cc98235c7eda6d14ddd79df5",
+    "sources/w13-skill-stat-c-energy-cost-skill-ancestral-call/get_energy_cost.cpp": "ab5e38adbdbe695e2524927f0c92edb8407bc938d07cc6e0e00b7e1c1a62eef0",
+    "sources/w13-skill-stat-c-energy-cost-skill-blinding-light/get_energy_cost.cpp": "f3a27244e72fd96c2cecbaf083c41608b84586ae11810a5ac7fe5575d12c0c2a",
+    "sources/w13-skill-stat-c-energy-cost-skill-convert-enemy/get_energy_cost.cpp": "6ec6c821a9bf92d065f740d67f730ec231e58cf45fe91252a5b86f5260d5a9cc",
+    "sources/w13-skill-stat-c-energy-cost-skill-disease-bolt/get_energy_cost.cpp": "381112979fa4055dcb191c2e3fad9e492869372a4f6059762f7a008ee03e48de",
+    "sources/w13-skill-stat-c-energy-cost-skill-disease-trail/get_energy_cost.cpp": "4561d3a4f3b53a8de74088e0b9b7e9bf751a00da4e95c4323cf10d3f70ede636",
+    "sources/w13-skill-stat-c-energy-cost-skill-explode-arrow/get_energy_cost.cpp": "ab73290bd63cbb932176185b72658e152431b5c0bc8c64b17562a578045bc9a6",
+    "sources/w13-skill-stat-c-energy-cost-skill-fire-weapons/get_energy_cost.cpp": "3ba59e7f084cbc5cd9b855048f12324fac066b26ffc38445f37d202ea8ce629d",
+    "sources/w13-skill-stat-c-energy-cost-skill-ground-pound/get_energy_cost.cpp": "df0dce2abc11e04b65d3412887813fd60d78ec046c38e3b74217fc083dcf8178",
+    "sources/w13-skill-stat-c-energy-cost-skill-minor-healing/get_energy_cost.cpp": "76537bf495f12c6a31f7647f7b3529fa647d81056e090b9f049d0527737f9a8e",
+    "sources/w13-skill-stat-c-energy-cost-skill-poison-arrow/get_energy_cost.cpp": "93a9206726737334ce895d67d94d70b1e42fb43fc4d585dddd511ba056e0be54",
+    "sources/w13-skill-stat-c-energy-cost-skill-shock-of-fire/get_energy_cost.cpp": "ddca4df1455ddefa6a36a5b486d3aee7e5c55a6fe19c1d500b79d64f0f0df97a",
+    "sources/w13-skill-stat-c-energy-cost-skill-shock-of-frost/get_energy_cost.cpp": "7071af0f07d2f31d0831bbc97ba5d21a526ac679e7306a4fd8d8dc25cf2e8df6",
+    "sources/w13-skill-stat-c-energy-cost-skill-undead-shield/get_energy_cost.cpp": "62565a7b476149b2075031d75c651552fa8f15380095d23099f0d591b4509e14",
+    "sources/w13-skill-stat-c-icon-skill-ancestral-call/get_icon.cpp": "b0c40bdf5b37dd78610ced5d6c843b35ee6a64d43ae924e45547d254ce131215",
+    "sources/w13-skill-stat-c-icon-skill-blinding-light/get_icon.cpp": "6d0f9b59e3d9ec7102faa5e321f81229e1546c92a4e3f594e7d91abbd63be52b",
+    "sources/w13-skill-stat-c-icon-skill-convert-enemy/get_icon.cpp": "40538e7ca22ed4fb95db9b190078c156250e047bedaad1b4d926d59a107bed3f",
+    "sources/w13-skill-stat-c-icon-skill-disease-trail/get_icon.cpp": "b097798597ef94b93dbe9ef2ed9b0cc7f1ddfe6cc3ac8eba29f3ed5082b09444",
+    "sources/w13-skill-stat-c-icon-skill-explode-arrow/get_icon.cpp": "3e9aa9e832633ca3a9c2468e6546a058a7cee9c11271caa99d230af949334022",
+    "sources/w13-skill-stat-c-icon-skill-fire-weapons/get_icon.cpp": "a749693eb266c81625029b8f694d8b3d27bf2d9f77fdcc9a2fa2c1b318939189",
+    "sources/w13-skill-stat-c-icon-skill-ground-pound/get_icon.cpp": "488c3364f21164344d5b9ac99ef480635b60de96ff67c6c514abc1718a49b8df",
+    "sources/w13-skill-stat-c-icon-skill-minor-healing/get_icon.cpp": "b99e98a0806be7843c6108ffe8ba1e4461a80e4825c2ea138afdd84ebcfe6880",
+    "sources/w13-skill-stat-c-icon-skill-poison-arrow/get_icon.cpp": "5af2543c7c92800df575aa5bde0672ed0dca746bfbfb3c56d369238772c566f8",
+    "sources/w13-skill-stat-c-icon-skill-shock-of-fire/get_icon.cpp": "ffc1b450f1f3059c0c3ccc27a6a486fe7447869923cf35789ef75ccbb8f28f4f",
+    "sources/w13-skill-stat-c-icon-skill-shock-of-frost/get_icon.cpp": "d6253483d46073fdae71524f3076b2ad4c27c92a923c010f469b68382ec4ebc7",
+    "sources/w13-skill-stat-c-icon-skill-undead-shield/get_icon.cpp": "cd399dd4f87634fa5d990c0cc53acf7ca7b1af30efa42e661d8f8277b5b65202",
+    "sources/w13-skill-stat-c-level-requirement-skill-blinding-light/get_level_requirement.cpp": "60b40e457055040ffc4bb6282af50c45a301f4bd24355ae105a883447fea70fb",
+    "sources/w13-skill-stat-c-level-requirement-skill-disease-bolt/get_level_requirement.cpp": "ee8dfa6c3a415b2c865e3fbee66ae495aa0c14bbe3e25b345f055be72fcd5fea",
+    "sources/w13-skill-stat-c-level-requirement-skill-disease-trail/get_level_requirement.cpp": "a463572cd52905c6055d2aba5945bc6e1c0a899fa22dcb6cd560b0c62e734254",
+    "sources/w13-skill-stat-c-level-requirement-skill-fire-weapons/get_level_requirement.cpp": "772775259685ca1a95adf65f6634ea8cddbbde4bce9a3f26ee6733f1601becfb",
+    "sources/w13-skill-stat-c-level-requirement-skill-minor-healing/get_level_requirement.cpp": "f6a4aad9942d7ab75850fc29470db5c9d3a43e33035c1f1ba5d5a29772e97cb2",
+    "sources/w13-skill-stat-c-level-requirement-skill-regeneration/get_level_requirement.cpp": "86e9681627062bcc564af5163d391ede1c1398f12374e8a3ce7e118c90cf04e4",
+    "sources/w13-skill-stat-c-level-requirement-skill-shock-of-fire/get_level_requirement.cpp": "67d5784b47a2e0659048bf0171442ec8b629afb870a9fcf49e6dee1c6dd21658",
+    "sources/w13-skill-stat-c-level-requirement-skill-shock-of-frost/get_level_requirement.cpp": "a20e82728a569df3ae6dc01b4c4bd30981b0ede5d69f446c4837d16d0a035aff",
+    "sources/w13-skill-stat-c-level-requirement-skill-undead-shield/get_level_requirement.cpp": "5563aa48e84f04fd0bb6f802a1061b23f071e1c67c9f96372e007e28cfa16e46",
+    "sources/w13-skill-stat-c-point-cost-skill-disease-bolt/get_skill_point_cost.cpp": "a9a7b9a273ba6c73114ffab81c3c91d45562fbf0b282787e4efbc2ba4eab5f20",
+    "sources/w13-skill-stat-c-point-cost-skill-disease-trail/get_skill_point_cost.cpp": "1f7c5dfc2f4e5482379965e08cd8fc2cb370d04402cb434bf3ed5a16d6847834",
+    "sources/w13-skill-stat-c-point-cost-skill-fire-weapons/get_skill_point_cost.cpp": "45f08b441400207c2d007d992b07767cc939cd521eddb5d444cfeb9b9060c36d",
+    "sources/w13-skill-stat-c-point-cost-skill-regeneration/get_skill_point_cost.cpp": "df29e453fa93b2360c9107e02d8a1ef9c12fd555f54cf61d6c33fa90cda0f053",
+    "sources/w13-skill-stat-c-point-cost-skill-shock-of-frost/get_skill_point_cost.cpp": "cb292728f0c6a31bac563606bceecefc87d2293e9c3805fbe27faf2e2107bb28",
+    "sources/w13-skill-stat-c-point-cost-skill-undead-shield/get_skill_point_cost.cpp": "ae1bd36cecfa0bb09ed127c205679d63908804d2739f5e15cf5ce976de494710",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
     "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
@@ -87620,6 +87660,606 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5949,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_ancestral_call.o",
+      "profile": "authored_cpp",
+      "sha256": "ab5e38adbdbe695e2524927f0c92edb8407bc938d07cc6e0e00b7e1c1a62eef0",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-ancestral-call/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillAncestralCalli",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5950,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_blinding_light.o",
+      "profile": "authored_cpp",
+      "sha256": "f3a27244e72fd96c2cecbaf083c41608b84586ae11810a5ac7fe5575d12c0c2a",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-blinding-light/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__18SkillBlindingLighti",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5951,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_convert_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "6ec6c821a9bf92d065f740d67f730ec231e58cf45fe91252a5b86f5260d5a9cc",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-convert-enemy/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillConvertEnemyi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5952,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_disease_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "381112979fa4055dcb191c2e3fad9e492869372a4f6059762f7a008ee03e48de",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-disease-bolt/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillDiseaseBolti",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5953,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "4561d3a4f3b53a8de74088e0b9b7e9bf751a00da4e95c4323cf10d3f70ede636",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-disease-trail/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillDiseaseTraili",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5954,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_explode_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "ab73290bd63cbb932176185b72658e152431b5c0bc8c64b17562a578045bc9a6",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-explode-arrow/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillExplodeArrowi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5955,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "3ba59e7f084cbc5cd9b855048f12324fac066b26ffc38445f37d202ea8ce629d",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-fire-weapons/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillFireWeaponsi",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5956,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_ground_pound.o",
+      "profile": "authored_cpp",
+      "sha256": "df0dce2abc11e04b65d3412887813fd60d78ec046c38e3b74217fc083dcf8178",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-ground-pound/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillGroundPoundi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5957,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_minor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "76537bf495f12c6a31f7647f7b3529fa647d81056e090b9f049d0527737f9a8e",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-minor-healing/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillMinorHealingi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5958,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_poison_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "93a9206726737334ce895d67d94d70b1e42fb43fc4d585dddd511ba056e0be54",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-poison-arrow/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillPoisonArrowi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5959,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_shock_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "ddca4df1455ddefa6a36a5b486d3aee7e5c55a6fe19c1d500b79d64f0f0df97a",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-shock-of-fire/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillShockOfFirei",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5960,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_shock_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "7071af0f07d2f31d0831bbc97ba5d21a526ac679e7306a4fd8d8dc25cf2e8df6",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-shock-of-frost/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillShockOfFrosti",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5961,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_energy_cost_skill_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "62565a7b476149b2075031d75c651552fa8f15380095d23099f0d591b4509e14",
+      "source": "sources/w13-skill-stat-c-energy-cost-skill-undead-shield/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__17SkillUndeadShieldi",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5962,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_ancestral_call.o",
+      "profile": "authored_cpp",
+      "sha256": "b0c40bdf5b37dd78610ced5d6c843b35ee6a64d43ae924e45547d254ce131215",
+      "source": "sources/w13-skill-stat-c-icon-skill-ancestral-call/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillAncestralCall",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5963,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_blinding_light.o",
+      "profile": "authored_cpp",
+      "sha256": "6d0f9b59e3d9ec7102faa5e321f81229e1546c92a4e3f594e7d91abbd63be52b",
+      "source": "sources/w13-skill-stat-c-icon-skill-blinding-light/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__18SkillBlindingLight",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5964,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_convert_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "40538e7ca22ed4fb95db9b190078c156250e047bedaad1b4d926d59a107bed3f",
+      "source": "sources/w13-skill-stat-c-icon-skill-convert-enemy/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillConvertEnemy",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5965,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "b097798597ef94b93dbe9ef2ed9b0cc7f1ddfe6cc3ac8eba29f3ed5082b09444",
+      "source": "sources/w13-skill-stat-c-icon-skill-disease-trail/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillDiseaseTrail",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5966,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_explode_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "3e9aa9e832633ca3a9c2468e6546a058a7cee9c11271caa99d230af949334022",
+      "source": "sources/w13-skill-stat-c-icon-skill-explode-arrow/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillExplodeArrow",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5967,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "a749693eb266c81625029b8f694d8b3d27bf2d9f77fdcc9a2fa2c1b318939189",
+      "source": "sources/w13-skill-stat-c-icon-skill-fire-weapons/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillFireWeapons",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5968,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_ground_pound.o",
+      "profile": "authored_cpp",
+      "sha256": "488c3364f21164344d5b9ac99ef480635b60de96ff67c6c514abc1718a49b8df",
+      "source": "sources/w13-skill-stat-c-icon-skill-ground-pound/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillGroundPound",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5969,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_minor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "b99e98a0806be7843c6108ffe8ba1e4461a80e4825c2ea138afdd84ebcfe6880",
+      "source": "sources/w13-skill-stat-c-icon-skill-minor-healing/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillMinorHealing",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5970,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_poison_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "5af2543c7c92800df575aa5bde0672ed0dca746bfbfb3c56d369238772c566f8",
+      "source": "sources/w13-skill-stat-c-icon-skill-poison-arrow/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillPoisonArrow",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5971,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_shock_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "ffc1b450f1f3059c0c3ccc27a6a486fe7447869923cf35789ef75ccbb8f28f4f",
+      "source": "sources/w13-skill-stat-c-icon-skill-shock-of-fire/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillShockOfFire",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5972,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_shock_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "d6253483d46073fdae71524f3076b2ad4c27c92a923c010f469b68382ec4ebc7",
+      "source": "sources/w13-skill-stat-c-icon-skill-shock-of-frost/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillShockOfFrost",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5973,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_icon_skill_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "cd399dd4f87634fa5d990c0cc53acf7ca7b1af30efa42e661d8f8277b5b65202",
+      "source": "sources/w13-skill-stat-c-icon-skill-undead-shield/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__17SkillUndeadShield",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5974,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_blinding_light.o",
+      "profile": "authored_cpp",
+      "sha256": "60b40e457055040ffc4bb6282af50c45a301f4bd24355ae105a883447fea70fb",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-blinding-light/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__18SkillBlindingLighti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5975,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_disease_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "ee8dfa6c3a415b2c865e3fbee66ae495aa0c14bbe3e25b345f055be72fcd5fea",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-disease-bolt/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__16SkillDiseaseBolti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5976,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "a463572cd52905c6055d2aba5945bc6e1c0a899fa22dcb6cd560b0c62e734254",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-disease-trail/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__17SkillDiseaseTraili",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5977,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "772775259685ca1a95adf65f6634ea8cddbbde4bce9a3f26ee6733f1601becfb",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-fire-weapons/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__16SkillFireWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5978,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_minor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "f6a4aad9942d7ab75850fc29470db5c9d3a43e33035c1f1ba5d5a29772e97cb2",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-minor-healing/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__17SkillMinorHealingi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5979,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_regeneration.o",
+      "profile": "authored_cpp",
+      "sha256": "86e9681627062bcc564af5163d391ede1c1398f12374e8a3ce7e118c90cf04e4",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-regeneration/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__17SkillRegenerationi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5980,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_shock_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "67d5784b47a2e0659048bf0171442ec8b629afb870a9fcf49e6dee1c6dd21658",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-shock-of-fire/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__16SkillShockOfFirei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5981,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_shock_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "a20e82728a569df3ae6dc01b4c4bd30981b0ede5d69f446c4837d16d0a035aff",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-shock-of-frost/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__17SkillShockOfFrosti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5982,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_level_requirement_skill_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "5563aa48e84f04fd0bb6f802a1061b23f071e1c67c9f96372e007e28cfa16e46",
+      "source": "sources/w13-skill-stat-c-level-requirement-skill-undead-shield/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__17SkillUndeadShieldi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5983,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_disease_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "a9a7b9a273ba6c73114ffab81c3c91d45562fbf0b282787e4efbc2ba4eab5f20",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-disease-bolt/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__16SkillDiseaseBolti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5984,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "1f7c5dfc2f4e5482379965e08cd8fc2cb370d04402cb434bf3ed5a16d6847834",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-disease-trail/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__17SkillDiseaseTraili",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5985,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "45f08b441400207c2d007d992b07767cc939cd521eddb5d444cfeb9b9060c36d",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-fire-weapons/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__16SkillFireWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5986,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_regeneration.o",
+      "profile": "authored_cpp",
+      "sha256": "df29e453fa93b2360c9107e02d8a1ef9c12fd555f54cf61d6c33fa90cda0f053",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-regeneration/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__17SkillRegenerationi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5987,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_shock_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "cb292728f0c6a31bac563606bceecefc87d2293e9c3805fbe27faf2e2107bb28",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-shock-of-frost/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__17SkillShockOfFrosti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5988,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_c_point_cost_skill_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "ae1bd36cecfa0bb09ed127c205679d63908804d2739f5e15cf5ce976de494710",
+      "source": "sources/w13-skill-stat-c-point-cost-skill-undead-shield/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__17SkillUndeadShieldi",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -87719,7 +88359,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "95c54e7b9c76b565c95189d7dc34286adfcf2369797bc2ca68e70145647b8e8c",
+  "snapshot_sha256": "c1110b7081f11c6495953d60448c5b8ab5123e2c46374eee0b73c5a67243e418",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
