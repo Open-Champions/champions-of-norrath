@@ -5651,6 +5651,44 @@ Opened: `__7OniBallG6Point3iP10GameObjectP10_vagHeader`,
 `getChance__12SkillLifeTapi`, `sendAlertMessage__FifG6Point3P10GameObject`,
 `trailParticleSpark`
 
+## agents/w9-animation-object-c
+
+Merged (the branch notes carry the five summary sections; the tip was 33
+minutes old). Fourteen of its 15 units were selected with fresh `input_order`
+values 2846 through 2859, three of them data (object visibility, outgoing
+message and world-lump header data). `set-anim-event-flags` was **not**
+selected: it defines `setAnimEventFlags__8Creatureififififi`, which
+`w9-animation-object-b-set-anim-event-flags` (merged just before) already
+defines, so the link failed
+with a multiple definition; its files stay in the snapshot, unselected. All 15
+host checks build and exit 0 here (15 of 15). No game binary or disassembly
+listing was committed. 2292 function bodies, 2858 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1567 |
+| After | 1564 |
+| Closed | 16 |
+| Opened | 13 |
+
+Closed: `objectFindEmptySpot__FG6Point3iiPc`, `objectIsOffGrid__FP10GameObject`,
+`objectIterateRunLists__FPFP10GameObject_v`,
+`objectRadialDamage__FP10GameObjectG6Point3iffiii`, `objectVisCount`,
+`objectVisPoints`, `objectVisUseCamCenter`, `outMsg`,
+`resetRouting__8Creature`, `setStateProcessing__8CreaturePi`,
+`slideBack__8Creaturef`, `smartWander__8Creature`,
+`spawn__FG6Point3iisPcbPPci`, `steerAndRouteToPosition__8CreatureG6Point3`,
+`updateAnimation__FP13animComponent`, `wLumpHeader`
+
+Opened: `addpmlist__FPc`, `addpmlistptrscap__Fv`, `fsListBack`,
+`getClearradius__FPCc`, `getCurrentRoutePoint__8Creature`,
+`getFreeFrameState__Fv`, `getNextRoutePoint__8CreatureP6Point3G6Point3ffi`,
+`objectFindEmptySpotMonsterspawn__FG6Point3iiiiPc`, `pmlistptrs`,
+`pmlistptrsused`, `userFilterFunction`,
+`wallAndObjectSteering__FP8CreatureffP10GameObject`,
+`worldTestForbidden__FP12_worldHeaderG6Point3f`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6017,3 +6055,4 @@ and no startup stage has executed.
 - 2026-10-12 21:37 CDT — `agents/w9-animation-object-a` — 1478 unresolved imports
 - 2026-10-12 21:40 CDT — `agents/w9-ctors-lantern-a` — 1584 unresolved imports
 - 2026-10-12 21:44 CDT — `agents/w9-animation-object-b` — 1567 unresolved imports
+- 2026-10-12 21:48 CDT — `agents/w9-animation-object-c` — 1564 unresolved imports

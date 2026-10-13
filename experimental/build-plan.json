@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2844,
+  "default_authored_inputs": 2858,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3110,6 +3110,21 @@
     "sources/w9-animation-object-b-set-anim-event-flags-res-map/set_anim_event_flags_res_map.cpp": "5b2e4dfbd37a70216e985b8a67495f644c6fa94974c26195bb0b27f5590b0625",
     "sources/w9-animation-object-b-set-anim-event-flags/set_anim_event_flags.cpp": "537be6c11aba77f7f48f2de538f339cf7dc8ed2d5e2ad391bec063a7fd299ae9",
     "sources/w9-animation-object-b-set-parameters/set_parameters.cpp": "bdf0bcd6d98c36a1a1cb1126ad8e0536a398bcdc4c26856f47a396746337d214",
+    "sources/w9-animation-object-c-common/mem.hpp": "cb6c7f89b89d73f5305c93a9f844216ae0d44cda953ce78f2ec2d46c245ee042",
+    "sources/w9-animation-object-c-find-empty-spot/find_empty_spot.cpp": "3ccf2f9fb0d20b96bed1eb6f3d8c4baba5e919bddcdd66773e76971368a39c5a",
+    "sources/w9-animation-object-c-iterate-run-lists/iterate_run_lists.cpp": "1fe180910f0746ae6cdef2cda4acd0349369f38c0bf794fee3c2a4b16c562c2e",
+    "sources/w9-animation-object-c-object-is-off-grid/object_is_off_grid.cpp": "4ffea20fc916e907653a79ba9813e50cb663472718bec261abbf9833041648b2",
+    "sources/w9-animation-object-c-object-vis-data/object_vis_data.cpp": "7a498e769a10daa1ad313f9e8ebf8cb542553238f4b821e8522abcfa0c8cef3c",
+    "sources/w9-animation-object-c-out-msg-data/out_msg_data.cpp": "37dc166f37d37a3ca85c35ff0e2a069ad8113a4fc7aeac548a85bb9fd8540050",
+    "sources/w9-animation-object-c-radial-damage/radial_damage.cpp": "ab738a81581138d1697141879c8f702c6bbb42d044d504a2695dcfc337eeb9b8",
+    "sources/w9-animation-object-c-reset-routing/reset_routing.cpp": "82356106da53a3c4a8219f742b28feb572badf65e678c345d64d50dcecdfdc13",
+    "sources/w9-animation-object-c-set-state-processing/set_state_processing.cpp": "a423fdbb59906eab23362e7b37adcb51103e0391ec8202dc3269cf8ed081d9ae",
+    "sources/w9-animation-object-c-slide-back/slide_back.cpp": "0d9f4c195be1fc974bff0acef134d9acb805393afe029f3fc15792930fc67588",
+    "sources/w9-animation-object-c-smart-wander/smart_wander.cpp": "9c3b3eaa062196e5e2743fc560b2d8a23ea65f55f72f580fc7026f90e9dcfba6",
+    "sources/w9-animation-object-c-spawn/spawn.cpp": "77cfb4b46456c77d252eaf5185c5d18d24ddf9e6351401e95ae80a991834dbbf",
+    "sources/w9-animation-object-c-steer-and-route/steer_and_route.cpp": "bb0a311d438d36b794b99f5109f4680eced6b4a2eeab0c1d6720dbcee3eeac8e",
+    "sources/w9-animation-object-c-update-animation/update_animation.cpp": "dfed32bb444cddaac1ac7d7145c5a3541ba2d83e153e5c64cff8e214883b528d",
+    "sources/w9-animation-object-c-w-lump-header-data/w_lump_header_data.cpp": "a8bb946c4185e0eb30145f3d5eb45681f3d4dac5d851c1abe29ec837abd9cb53",
     "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
     "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
     "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
@@ -40828,6 +40843,223 @@
           "compiled_body_bytes": 752
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2846,
+      "kind": "independently_authored_source",
+      "object_name": "find_empty_spot.o",
+      "profile": "authored_cpp",
+      "sha256": "3ccf2f9fb0d20b96bed1eb6f3d8c4baba5e919bddcdd66773e76971368a39c5a",
+      "source": "sources/w9-animation-object-c-find-empty-spot/find_empty_spot.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindEmptySpot__FG6Point3iiPc",
+          "compiled_body_bytes": 844
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2847,
+      "kind": "independently_authored_source",
+      "object_name": "iterate_run_lists.o",
+      "profile": "authored_cpp",
+      "sha256": "1fe180910f0746ae6cdef2cda4acd0349369f38c0bf794fee3c2a4b16c562c2e",
+      "source": "sources/w9-animation-object-c-iterate-run-lists/iterate_run_lists.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectIterateRunLists__FPFP10GameObject_v",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2848,
+      "kind": "independently_authored_source",
+      "object_name": "object_is_off_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "4ffea20fc916e907653a79ba9813e50cb663472718bec261abbf9833041648b2",
+      "source": "sources/w9-animation-object-c-object-is-off-grid/object_is_off_grid.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectIsOffGrid__FP10GameObject",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2849,
+      "kind": "independently_authored_source",
+      "object_name": "object_vis_data.o",
+      "profile": "authored_cpp",
+      "sha256": "7a498e769a10daa1ad313f9e8ebf8cb542553238f4b821e8522abcfa0c8cef3c",
+      "source": "sources/w9-animation-object-c-object-vis-data/object_vis_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2850,
+      "kind": "independently_authored_source",
+      "object_name": "out_msg_data.o",
+      "profile": "authored_cpp",
+      "sha256": "37dc166f37d37a3ca85c35ff0e2a069ad8113a4fc7aeac548a85bb9fd8540050",
+      "source": "sources/w9-animation-object-c-out-msg-data/out_msg_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2851,
+      "kind": "independently_authored_source",
+      "object_name": "radial_damage.o",
+      "profile": "authored_cpp",
+      "sha256": "ab738a81581138d1697141879c8f702c6bbb42d044d504a2695dcfc337eeb9b8",
+      "source": "sources/w9-animation-object-c-radial-damage/radial_damage.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectRadialDamage__FP10GameObjectG6Point3iffiii",
+          "compiled_body_bytes": 500
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2852,
+      "kind": "independently_authored_source",
+      "object_name": "reset_routing.o",
+      "profile": "authored_cpp",
+      "sha256": "82356106da53a3c4a8219f742b28feb572badf65e678c345d64d50dcecdfdc13",
+      "source": "sources/w9-animation-object-c-reset-routing/reset_routing.cpp",
+      "emitted_functions": [
+        {
+          "name": "resetRouting__8Creature",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2853,
+      "kind": "independently_authored_source",
+      "object_name": "set_state_processing.o",
+      "profile": "authored_cpp",
+      "sha256": "a423fdbb59906eab23362e7b37adcb51103e0391ec8202dc3269cf8ed081d9ae",
+      "source": "sources/w9-animation-object-c-set-state-processing/set_state_processing.cpp",
+      "emitted_functions": [
+        {
+          "name": "setStateProcessing__8CreaturePi",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2854,
+      "kind": "independently_authored_source",
+      "object_name": "slide_back.o",
+      "profile": "authored_cpp",
+      "sha256": "0d9f4c195be1fc974bff0acef134d9acb805393afe029f3fc15792930fc67588",
+      "source": "sources/w9-animation-object-c-slide-back/slide_back.cpp",
+      "emitted_functions": [
+        {
+          "name": "slideBack__8Creaturef",
+          "compiled_body_bytes": 1468
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2855,
+      "kind": "independently_authored_source",
+      "object_name": "smart_wander.o",
+      "profile": "authored_cpp",
+      "sha256": "9c3b3eaa062196e5e2743fc560b2d8a23ea65f55f72f580fc7026f90e9dcfba6",
+      "source": "sources/w9-animation-object-c-smart-wander/smart_wander.cpp",
+      "emitted_functions": [
+        {
+          "name": "smartWander__8Creature",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2856,
+      "kind": "independently_authored_source",
+      "object_name": "spawn.o",
+      "profile": "authored_cpp",
+      "sha256": "77cfb4b46456c77d252eaf5185c5d18d24ddf9e6351401e95ae80a991834dbbf",
+      "source": "sources/w9-animation-object-c-spawn/spawn.cpp",
+      "emitted_functions": [
+        {
+          "name": "spawn__FG6Point3iisPcbPPci",
+          "compiled_body_bytes": 932
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2857,
+      "kind": "independently_authored_source",
+      "object_name": "steer_and_route.o",
+      "profile": "authored_cpp",
+      "sha256": "bb0a311d438d36b794b99f5109f4680eced6b4a2eeab0c1d6720dbcee3eeac8e",
+      "source": "sources/w9-animation-object-c-steer-and-route/steer_and_route.cpp",
+      "emitted_functions": [
+        {
+          "name": "steerAndRouteToPosition__8CreatureG6Point3",
+          "compiled_body_bytes": 1580
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 2858,
+      "kind": "independently_authored_source",
+      "object_name": "update_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "dfed32bb444cddaac1ac7d7145c5a3541ba2d83e153e5c64cff8e214883b528d",
+      "source": "sources/w9-animation-object-c-update-animation/update_animation.cpp",
+      "emitted_functions": [
+        {
+          "name": "updateAnimation__FP13animComponent",
+          "compiled_body_bytes": 1788
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2859,
+      "kind": "independently_authored_source",
+      "object_name": "w_lump_header_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a8bb946c4185e0eb30145f3d5eb45681f3d4dac5d851c1abe29ec837abd9cb53",
+      "source": "sources/w9-animation-object-c-w-lump-header-data/w_lump_header_data.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -40927,7 +41159,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c2e3516c9103c92da34609a549d823a6ede7c4981e63c41bce0bbea2b205c0b3",
+  "snapshot_sha256": "65192314f87533cee22860b51b5647ef551a1703801d3a2060b85c5bef6ae290",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
