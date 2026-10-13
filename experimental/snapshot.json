@@ -46111,6 +46111,171 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-net-a-net-is-modem/net_is_modem.cpp"
+    },
+    {
+      "input_order": 3672,
+      "component": "w10-net-b-comm-counters",
+      "object_name": "w10_net_b_comm_counters.o",
+      "private_object_sha256": "4904457dad134d230e294decb45cb2f54b4b6191f2e92a38f8ca47e9137ec4d2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-comm-counters/comm_counters.cpp"
+    },
+    {
+      "input_order": 3673,
+      "component": "w10-net-b-frame-counters",
+      "object_name": "w10_net_b_frame_counters.o",
+      "private_object_sha256": "881f7661c9bf19dc55fd88f36a209a40b93b3f732eed8d4ab3cdab31d2aa1036",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-frame-counters/frame_counters.cpp"
+    },
+    {
+      "input_order": 3674,
+      "component": "w10-net-b-launch-state",
+      "object_name": "w10_net_b_launch_state.o",
+      "private_object_sha256": "e6c66b120137a05963e6986826260a1bd6aec47c3345c7384c5f8bb47cb6bfe2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-launch-state/launch_state.cpp"
+    },
+    {
+      "input_order": 3675,
+      "component": "w10-net-b-lib-net",
+      "object_name": "w10_net_b_lib_net.o",
+      "private_object_sha256": "a4344847bc9d77b49b5526a6b61a7fca5fce73e150238a4344853bac9c3e02ad",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-lib-net/lib_net.cpp"
+    },
+    {
+      "input_order": 3676,
+      "component": "w10-net-b-net-flags",
+      "object_name": "w10_net_b_net_flags.o",
+      "private_object_sha256": "fff591ccc5495564ff897757df13f8ff6784b2bc933f7f628575db319633ec32",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-net-flags/net_flags.cpp"
+    },
+    {
+      "input_order": 3677,
+      "component": "w10-net-b-net-send-packet",
+      "object_name": "w10_net_b_net_send_packet.o",
+      "private_object_sha256": "e2d5b1a5cb37a8b37cf58fba2f9f9c2ff72cadcdc3bfcb0546e0fa3aac1bf7e5",
+      "emitted_functions": [
+        {
+          "name": "netSendPacket__FiiPUci",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-net-send-packet/net_send_packet.cpp"
+    },
+    {
+      "input_order": 3678,
+      "component": "w10-net-b-pad-state",
+      "object_name": "w10_net_b_pad_state.o",
+      "private_object_sha256": "b33d436610f913156d24f978f2ad8824b5842273195476531fa486373092fdb7",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-pad-state/pad_state.cpp"
+    },
+    {
+      "input_order": 3679,
+      "component": "w10-net-b-peer-send-data-msg",
+      "object_name": "w10_net_b_peer_send_data_msg.o",
+      "private_object_sha256": "021226efc682c0266cf1264051b6b39600ced2a98afd998118e4f83c0559db8e",
+      "emitted_functions": [
+        {
+          "name": "peerSendDataMsg__FPciiP14sceInetAddressi",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-peer-send-data-msg/peer_send_data_msg.cpp"
+    },
+    {
+      "input_order": 3680,
+      "component": "w10-net-b-receive-packets",
+      "object_name": "w10_net_b_receive_packets.o",
+      "private_object_sha256": "a3ee5c0f4b0d43e3e76a923663b9533ce8cadccb14f29833e270b62ba7c7e23e",
+      "emitted_functions": [
+        {
+          "name": "receivePackets__Fv",
+          "compiled_body_bytes": 776
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-receive-packets/receive_packets.cpp"
+    },
+    {
+      "input_order": 3681,
+      "component": "w10-net-b-run-prediction",
+      "object_name": "w10_net_b_run_prediction.o",
+      "private_object_sha256": "7b56d52eb7422fa33e6fcdc3cbbf8c917a5b00dd16b08aa02be7e1cbb8dcb9ec",
+      "emitted_functions": [
+        {
+          "name": "runPrediction__Fi",
+          "compiled_body_bytes": 3068
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-run-prediction/run_prediction.cpp"
+    },
+    {
+      "input_order": 3682,
+      "component": "w10-net-b-scan-session",
+      "object_name": "w10_net_b_scan_session.o",
+      "private_object_sha256": "14a9c8c6051443c0ce12701c1365b7b8e6426fff24dece925013b436e0c5cc38",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-scan-session/scan_session.cpp"
+    },
+    {
+      "input_order": 3683,
+      "component": "w10-net-b-send-alert-message",
+      "object_name": "w10_net_b_send_alert_message.o",
+      "private_object_sha256": "824a78428a610f6f222f0cdaf79841819acff3de4034ce0156d2292914f9b667",
+      "emitted_functions": [
+        {
+          "name": "sendAlertMessage__FifG6Point3P10GameObject",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-send-alert-message/send_alert_message.cpp"
+    },
+    {
+      "input_order": 3684,
+      "component": "w10-net-b-send-control-packet",
+      "object_name": "w10_net_b_send_control_packet.o",
+      "private_object_sha256": "578625c4fe0be42b1be22523296371dcce948f432d65a4761fd1086a226cae9c",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6encodeEPhS0_PKNS_5FrameEiPNS_9BitWriterE",
+          "compiled_body_bytes": 2140
+        },
+        {
+          "name": "sendControlPacket__FiiiiiR9CCompressb",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-send-control-packet/send_control_packet.cpp"
+    },
+    {
+      "input_order": 3685,
+      "component": "w10-net-b-show-net-player-status",
+      "object_name": "w10_net_b_show_net_player_status.o",
+      "private_object_sha256": "27e6ffa0ef2cbc795aa37ad460f6d0e795b2c9963b2c75a4485beebe1e3a56d7",
+      "emitted_functions": [
+        {
+          "name": "showNetPlayerStatus__Fv",
+          "compiled_body_bytes": 2008
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp"
     }
   ],
   "drafts": [
@@ -49830,6 +49995,34 @@
     "sources/w10-net-a-net-get-nm-connected-partners/net_get_nm_connected_partners.cpp": "cd5d62f807bea92ae3ed423a76614a9fc046505fe57291a6f4239fa3d16f7c21",
     "sources/w10-net-a-net-is-modem/host_check.cpp": "70ab0e892fb4e5914c3197de517e4f9912dfe510a265c856b3451b0899df62e9",
     "sources/w10-net-a-net-is-modem/net_is_modem.cpp": "cb1f345c4953da71df991b3d4c4facf23d9a2cdcf57e04d76ab57e6285298215",
+    "sources/w10-net-b-comm-counters/comm_counters.cpp": "e1ab6863403a09e1670db48cf3b2df834e4c40ab8e6f5e503f3f311d57039ec7",
+    "sources/w10-net-b-comm-counters/host_check.cpp": "8efa184fcd788ea4a8edae35a5b80e49375192bfe8cda7e7266b67242318d587",
+    "sources/w10-net-b-frame-counters/frame_counters.cpp": "488be05e055b5013d650d435b15b4a1e3e4ad555112c0528baaf9abafe6c29fa",
+    "sources/w10-net-b-frame-counters/host_check.cpp": "8bd81fd101e2c65ac7011c9bd67c077e30ff3bcd16ea05d530a89b68bda73f33",
+    "sources/w10-net-b-launch-state/host_check.cpp": "b49e205424bdf41b769a9414054ada90a7537b9955f91feaa243709471c8a8f9",
+    "sources/w10-net-b-launch-state/launch_state.cpp": "ebc2de80b8cecf5b24837693405db84d2f44f22876540b74544f6c8bce22b820",
+    "sources/w10-net-b-lib-net/host_check.cpp": "b4eeae485ecf222826e743ded0ca3e5bc0a0d2db31720dfb03adc40566f18092",
+    "sources/w10-net-b-lib-net/lib_net.cpp": "378915c329d9b69712f9811e6f8a52dab82537e826f43e10fb704704feb4c26a",
+    "sources/w10-net-b-net-flags/host_check.cpp": "ad5109fc752b3bea7484dbea66fcc704a620f68f6500af60b4c68c7d81431087",
+    "sources/w10-net-b-net-flags/net_flags.cpp": "fa8eca728fbe4ec7fd5dfac79ac4342f4bd2e04a2ac578584ce2e90085ed9c22",
+    "sources/w10-net-b-net-send-packet/host_check.cpp": "b7b9365afe492b964a6994b764bea04b7aeb08992c0df6fac9864b247cdd90a0",
+    "sources/w10-net-b-net-send-packet/net_send_packet.cpp": "9bb42dd0b11979d54c7b4f2a26c4c01ed17606653d3d1154fa07d1d13957c068",
+    "sources/w10-net-b-pad-state/host_check.cpp": "a8fc51a312f7995598cdc25af3c8fd0a9be2a320bb7b137f57d92d816e919a19",
+    "sources/w10-net-b-pad-state/pad_state.cpp": "4db34660753d044ec53cdc8b9d13c3ab69f97188695e0b08041b44370c16d8bc",
+    "sources/w10-net-b-peer-send-data-msg/host_check.cpp": "6a660b9194fa64c9af01396d6ac47af4f907ed4a901f8a90e9f4dbc5343596b6",
+    "sources/w10-net-b-peer-send-data-msg/peer_send_data_msg.cpp": "3d05e5d81c9a308262b61eeecb51500f1c05ebbdb23562ed14677fb4b324e71b",
+    "sources/w10-net-b-receive-packets/host_check.cpp": "8bb7c2893305911c7ace7b2ee9d5dc54d7e448e9552c39f74edad687061acbc8",
+    "sources/w10-net-b-receive-packets/receive_packets.cpp": "06981c97bf1828a61a66d9bec56fc4d42a85ca37bc186682b8252d7bb1291109",
+    "sources/w10-net-b-run-prediction/host_check.cpp": "36244206d6c5d852653943297298e2d547631921839b8cd80a8e8023c2716b44",
+    "sources/w10-net-b-run-prediction/run_prediction.cpp": "32d6a21e2481533ae12888640a41cb008e13f64e7733954b1cbce31a3b9dfe0e",
+    "sources/w10-net-b-scan-session/host_check.cpp": "7a28fb1343d0aff3de6d5d2fe77d2ef98db958f7dfa71529a5fade6bbb9bcbd0",
+    "sources/w10-net-b-scan-session/scan_session.cpp": "b5cd3a1f358738bfbdc1def1da9829ae33ab9add43bb96a379da25cf68a450d9",
+    "sources/w10-net-b-send-alert-message/host_check.cpp": "3aba192b3bd745360c4f654d0da77a2c611876f6dc13ead6b43dbb91b18b6985",
+    "sources/w10-net-b-send-alert-message/send_alert_message.cpp": "8faeb5b7035b8d0f353e0bd82479e26a128ce4e938343ab1ed2232f70ec3bd4e",
+    "sources/w10-net-b-send-control-packet/host_check.cpp": "38dee02e71ffb651b726a744238ea11ba934602a01fe3070bad1ef7fcd2afa67",
+    "sources/w10-net-b-send-control-packet/send_control_packet.cpp": "4c130668ca269a63cdde4f9b9d05692a03343260c0d1d09fa4541283ba4f0c83",
+    "sources/w10-net-b-show-net-player-status/host_check.cpp": "78b0b6c8e01491a65093d9b860b56460b46fbda6bb9b5d9641f0b44b9675411e",
+    "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp": "e4c717a6be98a1dbf471d21c6b2903eb8777c17f9424b55226b20197639746e3",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-alarm-handler/host_check.cpp": "5ca8848f2edfe82b793f8a286db7e433c802fdc16849939aa2436cb4ab3012e5",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
@@ -54497,11 +54690,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3672,
-    "authored_default_inputs": 3670,
+    "selected_inputs": 3686,
+    "authored_default_inputs": 3684,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2654,
-    "compiled_body_bytes_from_accepted_inputs": 1139428,
+    "emitted_function_definitions_including_helpers": 2662,
+    "compiled_body_bytes_from_accepted_inputs": 1149716,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -54514,7 +54707,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3359
+    "package_selected_inputs": 3373
   },
   "startup_implementations": [
     {
@@ -106206,6 +106399,213 @@
       ],
       "host_files": [
         "sources/w10-net-a-net-is-modem/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-comm-counters/comm_counters.cpp",
+      "source_sha256": "e1ab6863403a09e1670db48cf3b2df834e4c40ab8e6f5e503f3f311d57039ec7",
+      "object_sha256": "4904457dad134d230e294decb45cb2f54b4b6191f2e92a38f8ca47e9137ec4d2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-comm-counters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-frame-counters/frame_counters.cpp",
+      "source_sha256": "488be05e055b5013d650d435b15b4a1e3e4ad555112c0528baaf9abafe6c29fa",
+      "object_sha256": "881f7661c9bf19dc55fd88f36a209a40b93b3f732eed8d4ab3cdab31d2aa1036",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-frame-counters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-launch-state/launch_state.cpp",
+      "source_sha256": "ebc2de80b8cecf5b24837693405db84d2f44f22876540b74544f6c8bce22b820",
+      "object_sha256": "e6c66b120137a05963e6986826260a1bd6aec47c3345c7384c5f8bb47cb6bfe2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-launch-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-lib-net/lib_net.cpp",
+      "source_sha256": "378915c329d9b69712f9811e6f8a52dab82537e826f43e10fb704704feb4c26a",
+      "object_sha256": "a4344847bc9d77b49b5526a6b61a7fca5fce73e150238a4344853bac9c3e02ad",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-lib-net/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-net-flags/net_flags.cpp",
+      "source_sha256": "fa8eca728fbe4ec7fd5dfac79ac4342f4bd2e04a2ac578584ce2e90085ed9c22",
+      "object_sha256": "fff591ccc5495564ff897757df13f8ff6784b2bc933f7f628575db319633ec32",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-net-flags/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-net-send-packet/net_send_packet.cpp",
+      "source_sha256": "9bb42dd0b11979d54c7b4f2a26c4c01ed17606653d3d1154fa07d1d13957c068",
+      "object_sha256": "e2d5b1a5cb37a8b37cf58fba2f9f9c2ff72cadcdc3bfcb0546e0fa3aac1bf7e5",
+      "emitted_functions": [
+        {
+          "name": "netSendPacket__FiiPUci",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-net-send-packet/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-pad-state/pad_state.cpp",
+      "source_sha256": "4db34660753d044ec53cdc8b9d13c3ab69f97188695e0b08041b44370c16d8bc",
+      "object_sha256": "b33d436610f913156d24f978f2ad8824b5842273195476531fa486373092fdb7",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-pad-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-peer-send-data-msg/peer_send_data_msg.cpp",
+      "source_sha256": "3d05e5d81c9a308262b61eeecb51500f1c05ebbdb23562ed14677fb4b324e71b",
+      "object_sha256": "021226efc682c0266cf1264051b6b39600ced2a98afd998118e4f83c0559db8e",
+      "emitted_functions": [
+        {
+          "name": "peerSendDataMsg__FPciiP14sceInetAddressi",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-peer-send-data-msg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-receive-packets/receive_packets.cpp",
+      "source_sha256": "06981c97bf1828a61a66d9bec56fc4d42a85ca37bc186682b8252d7bb1291109",
+      "object_sha256": "a3ee5c0f4b0d43e3e76a923663b9533ce8cadccb14f29833e270b62ba7c7e23e",
+      "emitted_functions": [
+        {
+          "name": "receivePackets__Fv",
+          "compiled_body_bytes": 776
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-receive-packets/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-run-prediction/run_prediction.cpp",
+      "source_sha256": "32d6a21e2481533ae12888640a41cb008e13f64e7733954b1cbce31a3b9dfe0e",
+      "object_sha256": "7b56d52eb7422fa33e6fcdc3cbbf8c917a5b00dd16b08aa02be7e1cbb8dcb9ec",
+      "emitted_functions": [
+        {
+          "name": "runPrediction__Fi",
+          "compiled_body_bytes": 3068
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-run-prediction/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-scan-session/scan_session.cpp",
+      "source_sha256": "b5cd3a1f358738bfbdc1def1da9829ae33ab9add43bb96a379da25cf68a450d9",
+      "object_sha256": "14a9c8c6051443c0ce12701c1365b7b8e6426fff24dece925013b436e0c5cc38",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-net-b-scan-session/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-send-alert-message/send_alert_message.cpp",
+      "source_sha256": "8faeb5b7035b8d0f353e0bd82479e26a128ce4e938343ab1ed2232f70ec3bd4e",
+      "object_sha256": "824a78428a610f6f222f0cdaf79841819acff3de4034ce0156d2292914f9b667",
+      "emitted_functions": [
+        {
+          "name": "sendAlertMessage__FifG6Point3P10GameObject",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-send-alert-message/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-send-control-packet/send_control_packet.cpp",
+      "source_sha256": "4c130668ca269a63cdde4f9b9d05692a03343260c0d1d09fa4541283ba4f0c83",
+      "object_sha256": "578625c4fe0be42b1be22523296371dcce948f432d65a4761fd1086a226cae9c",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6encodeEPhS0_PKNS_5FrameEiPNS_9BitWriterE",
+          "compiled_body_bytes": 2140
+        },
+        {
+          "name": "sendControlPacket__FiiiiiR9CCompressb",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-send-control-packet/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-net-b",
+      "source": "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp",
+      "source_sha256": "e4c717a6be98a1dbf471d21c6b2903eb8777c17f9424b55226b20197639746e3",
+      "object_sha256": "27e6ffa0ef2cbc795aa37ad460f6d0e795b2c9963b2c75a4485beebe1e3a56d7",
+      "emitted_functions": [
+        {
+          "name": "showNetPlayerStatus__Fv",
+          "compiled_body_bytes": 2008
+        }
+      ],
+      "host_files": [
+        "sources/w10-net-b-show-net-player-status/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

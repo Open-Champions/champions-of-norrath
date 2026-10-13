@@ -7569,3 +7569,30 @@ Closed: `advanceRealState__Fi`, `analCompress__9CCompressP15BitBufferWriterPQ29C
 
 Opened: `analDecompress__11CDecompressP15BitBufferReaderPQ211CDecompress9analStatePUcii`, `compareStatePackets__FP11statePacketT0i`, `netLogDisable`, `netPrediction`, `netTrueStep`, `objectAddToGrid__FP10GameObject`
 - 2026-10-13 01:17 CDT — `agents/w10-net-a` — 1385 unresolved imports
+
+## agents/w10-net-b
+
+Merged (merge commit, branch tip `bf301e1e`, 33 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Network play part 2: 14 units (8 functions, including
+`sendControlPacket__FiiiiiR9CCompressb` at 5,532 bytes in the image and `runPrediction__Fi`
+at 3,920, and six storage units) with fresh `input_order` values 3672 through 3685. 14 of
+14 host checks build and exit 0 here (x86_64, `-ffp-contract=off`); 12 under `-Werror`
+and two (`send-control-packet`, `show-net-player-status`) only without it (warnings). The
+worker says a mutated constant makes `sendControlPacket` and `runPrediction` checks fail;
+that was not repeated here. The paired runs against the image are private and were not
+re-verified. The worker's closed count of 27 reproduced exactly, and its two opened
+names match. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3684 authored inputs, 2660 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1385 |
+| After | 1360 |
+| Closed | 27 |
+| Opened | 2 |
+
+Closed: `netKickedOut`, `netLaunchExpirationCount`, `netLaunchTimer`, `netLocalPadState`, `netNewLaunchMaybeLaunch`, `netNewLaunchMaybeQuit`, `netSendPacket__FiiPUci`, `netTrouble`, `net_buf`, `packetSendCycleLength`, `packetSendCycleTime`, `peerSendDataMsg__FPciiP14sceInetAddressi`, `readcount`, `receivePackets__Fv`, `runPrediction__Fi`, `sLibNetInitialized`, `scanMask`, `sendAlertMessage__FifG6Point3P10GameObject`, `sendControlPacket__FiiiiiR9CCompressb`, `sentStatePacketFrameNm`, `sessionMark`, `showNetPlayerStatus__Fv`, `timeout`, `totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`, `writecount`
+
+Opened: `netPredictionFastForward`, `receiveControlPacket__FPiib`
