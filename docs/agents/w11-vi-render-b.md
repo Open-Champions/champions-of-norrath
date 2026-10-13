@@ -18,9 +18,10 @@ compiler and schedules differently), so sizes differ from the image's.
   (callee, arguments, and the memory they point at), every changed byte outside the stack and the
   result. Scratchpad (0x7000xxxx) and GS privileged-register (0x1200xxxx) stores are inside the compared
   memory. Mutating a stored offset, constant, or condition in an authored copy made the comparison fail
-  for every unit that was tried (all but the one-line functions were mutated at least once).
+  for every unit that was tried. Not mutated: `ClearShadowQueue`, `Material`, `SetModelView`, `End2D`,
+  `SetOverrideMaterial` and `SetMaterial`.
   Scenario counts: the nine one-to-few-instruction functions 3 to 6 each; End2D 3; Begin2D 4;
-  BeginTriStrip 18; Frustum 20 random float sets; SetOverrideMaterial 81 combinations; Flush 8;
+  BeginTriStrip 18; Frustum 20 random float sets; SetOverrideMaterial 27 combinations; Flush 8;
   Vertex 12; CreateMaterial 12; SetMaterial 4; EndTriStrip 6; SetGSScissoring 14; ReleaseDeferred 14
   random list shapes (including null elements and a failing Erase); ReleaseSurface 98 (every
   combination of the four callee results); ReleaseMaterial 240; Flip 10; Clear 24 (each failing step in
