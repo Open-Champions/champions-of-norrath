@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5285,
+  "default_authored_inputs": 5314,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2919,6 +2919,11 @@
     "sources/w10-render-a-hud-init/hud_init.cpp": "972e576019444434f1a9b7e182a92402af62ddb063728f939e9a18fee10de679",
     "sources/w10-render-a-p-extend-trail/p_extend_trail.cpp": "b4aaaab68cc5e899299575f39dfffce0bc681518d858262192455a2a58fa0496",
     "sources/w10-render-a-p-start-trail/p_start_trail.cpp": "260c85e11c2b7b6e841d69295e1d040e2df98b2ae3b9b650afc910ba00a72c43",
+    "sources/w10-render-b-data-halo-color/data_halo_color.cpp": "9a12d6fd71420ad10923ddd6dd6a37541437d18e02e36898daab8748db3e428c",
+    "sources/w10-render-b-data-light-info/data_light_info.cpp": "cd803a4c2eb225e89ce468368a9c2c8a7694d7d79d8b5de4f141024159f62844",
+    "sources/w10-render-b-data-light-slots/data_light_slots.cpp": "b8da875a196430e9c1b900acfdafce6d53db28b58b22be27c47eb6e9f240b479",
+    "sources/w10-render-b-data-lock-alpha/data_lock_alpha.cpp": "285891ab0ff47876c9627ac743c6efbb5b1085bbd1fd8e051ee1713762c40212",
+    "sources/w10-render-b-data-model-globals/data_model_globals.cpp": "5d1e5e1c26e8eb3b09ff5f37a766139fd859fb32eb06f3ec250dad203b2d4763",
     "sources/w10-render-b-fx-run-creature-glow/fx_run_creature_glow.cpp": "c0d670ef406be948ba2b4257729abaf0c7de58ea5166dee419872f904ad1fb60",
     "sources/w10-render-b-fx-run-creature-shock/fx_run_creature_shock.cpp": "1f40cf877738872487e81e2ea3714c46c06b450c4dd259bdec9689dd0e9dd2a3",
     "sources/w10-render-b-get-vif-and-tex/get_vif_and_tex.cpp": "5b2531f4429801e194473e51bf23fc49185e127d7d2f64d98dfb14a523b1ca69",
@@ -3686,6 +3691,7 @@
     "sources/w11-rend-a-p-delete-trail/p_delete_trail.cpp": "1b640c2c9151a1e49c15af49a1a0eb9b62bc4c34678f82005ce52ded4e694612",
     "sources/w11-rend-a-p-move-lightning/p_move_lightning.cpp": "e1da4906cb30bc4b27e027a2265e195a2172966908afd50f520a7e743a57d894",
     "sources/w11-rend-a-p-revolve-trail/p_revolve_trail.cpp": "c0138035fbc7348add92faf36dee8ae818230985c2bc9a1c6ffbc32409edaf10",
+    "sources/w11-rend-a-p-start-lightning/p_start_lightning.cpp": "ec9fd7ab5722635cf7732be4a823b11354404d57dc9e1da8aede4267cd18cc6c",
     "sources/w11-rend-a-set-no-target-updates/set_no_target_updates.cpp": "59c17c11bbfdbfe40331bf7952a742d15021e7e10d1cef6805f80118aed54fd9",
     "sources/w11-rend-b-data-globals/data_globals.cpp": "5cd67166270dae55ead18385baee9cbdc47b7b4e765231ed0b15ceb24a7683e3",
     "sources/w11-rend-b-light-setup-ambient-world/light_setup_ambient_world.cpp": "3dd0f9d53148d044c644ccff02a30bc4f976cdb0d409f790cda993f0574b20fb",
@@ -3975,6 +3981,29 @@
     "sources/w12-hud-loop-b-sprite-grid/sprite_grid.cpp": "54a4129f9b03597994a01ecaf62ae71cb9b980ff17e6c9e044f3ad9e882acf5e",
     "sources/w12-hud-loop-b-update-cursor/update_cursor.cpp": "528f8989a49833c54ecd6eada67f34116643be98870fc6159023cfe369dc0667",
     "sources/w12-hud-loop-b-update-players-ready/update_players_ready.cpp": "3b4ce073a29288fcd3142c0d72107a8a4dede4daca659ce9148bbc3fb10a179d",
+    "sources/w12-light-model-anim-play-sound/anim_play_sound.cpp": "87a0e54f1f204f4651e99018ca528fdd07588a51913af572825c91c71f0a2d18",
+    "sources/w12-light-model-data-attachment-light-pos/attachment_light_pos.cpp": "073e5a2c2cf2e381139df476c1630ab0926394dbb5e0608016cf6ef4a3b66fa5",
+    "sources/w12-light-model-data-light-grid/light_grid.cpp": "d87dd2a43ef76f6f81c0935a67bf77158513c34deedb815004e19dc24d5c37b2",
+    "sources/w12-light-model-data-lightning-sword-particle/lightning_sword_particle.cpp": "fda64951339b1b439dc1da5d01534c58771ddb078baa75487fa400cd49f0be34",
+    "sources/w12-light-model-find-lights-in-box-for-world/find_lights_in_box_for_world.cpp": "e141468d77f8d71ad4a51e64249d5da02e76fc149a1819cdd14cc3554c7ef1e9",
+    "sources/w12-light-model-get-dynamic-light-number/get_dynamic_light_number.cpp": "cc2f07c31c749260f5dede6f9c76b2b8066ec8933f84b4f58c63d9b01f7ea597",
+    "sources/w12-light-model-light-disable-volumetric/light_disable_volumetric.cpp": "8c63cf6e20c23e54d6468126f02cba56545da127dda5324ef0076d556ac6a5de",
+    "sources/w12-light-model-light-setup-ambient-and-dir-only/light_setup_ambient_and_dir_only.cpp": "d41d2c128c234d220d53d476850031c0e7f9332a27b8f697e67766cae2b5669f",
+    "sources/w12-light-model-light-setup-ambient-only/light_setup_ambient_only.cpp": "eb8b95682fee69da32d4fe5598c244aeb1c11235fb5d98e9c4c55e8ddb67a586",
+    "sources/w12-light-model-light-setup-non-directional-directional/light_setup_non_directional_directional.cpp": "078f1ec9380336b8d527b7b80f3670e6af169e84d3b0d3eeb94b811d1c043b82",
+    "sources/w12-light-model-model-draw-character/model_draw_character.cpp": "8294c9fb1526b09534edb60ae517d8711a809cc0d4b18e37bcc46456be82456f",
+    "sources/w12-light-model-model-get-collision/model_get_collision.cpp": "1e012aee7ed6234197532746f5b5376986efecc9507013e0c8d3e275e987e5d3",
+    "sources/w12-light-model-model-get-primary-bone/model_get_primary_bone.cpp": "a00902d49f3cdb5f694f0f1f36d84dadabc0657b18335a423761fb360453dafe",
+    "sources/w12-light-model-model-get-weapon-trail-pos/model_get_weapon_trail_pos.cpp": "1d7dcd7afdd6c9bd3d3773694b97d828e9051eb96e211839f3c4c5f236a5fe9c",
+    "sources/w12-light-model-model-set-attachment-flip/model_set_attachment_flip.cpp": "4d8e1cc524d3adc3b3acd243fafc9fc730c4651c9225ea0491833dada206ce08",
+    "sources/w12-light-model-model-setup-attachment/model_setup_attachment.cpp": "0e574865a9eb9ef00a9684bb8f6e348f804407a8e6bb2e0788ccb09181cddd5f",
+    "sources/w12-light-model-p-extend-swoosh/p_extend_swoosh.cpp": "83438dd7c1cc3b7093dfc4d2cbb72c85e6dfd87840e0423d0233ea99892e3d3d",
+    "sources/w12-light-model-p-lightning-is-live/p_lightning_is_live.cpp": "c146f98ce4d30051e86c11dd73352ee7d8088103b8d8b9ef5d94fe05e84a4b3b",
+    "sources/w12-light-model-p-line/p_line.cpp": "bf9800d2b7a3a490b69114df5f184004bfb3e2f8503a4a4e8020a5614a04b20d",
+    "sources/w12-light-model-smooth-patch/smooth_patch.cpp": "f665a14e6149498721a0b320b4d66186795b2afef6f05db30a9b84882d7beee9",
+    "sources/w12-light-model-sound-pan-2d/sound_pan_2d.cpp": "4761ec3dd919f24baf8c0a2f3f311900120301625b7d14da559b343110e0ebd1",
+    "sources/w12-light-model-vi-point-light-ctor/vi_point_light_ctor.cpp": "05f5da5b4eb7a03849b66d5b8b54545ac5cf54580899f8cf7587ebced13373f5",
+    "sources/w12-light-model-world-query-light-map/world_query_light_map.cpp": "92d852b39e5f57ce32edf91cb59ba35736c25b157786c93086d0e8455eafd7e0",
     "sources/w12-particle-data-a-bat-params/bat_params.cpp": "dad9c657776c3c91848e00a7b7e7fff1d29e360dd69ba9a9500538ff96bc5763",
     "sources/w12-particle-data-a-ctor-particle-prop/particle_prop.cpp": "a8cb63b96ed6b53a678d7e9cbe0b175cbc23c1fb297d62c58b5d135c99052c3c",
     "sources/w12-particle-data-a-heal-pulse/heal_state.cpp": "e9e5d1d7831df4c76ddebfb66c2e74dc4f60be9b38ac4346112c9650f7f09c12",
@@ -77306,6 +77335,413 @@
       "sha256": "81fb213e06bb7414f61ffb489d3269b5a623fa99642b07a4a5efdf72ec2ed423",
       "source": "sources/w12-visprite-b-trail-fx-pool-word/pool.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5287,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_anim_play_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "87a0e54f1f204f4651e99018ca528fdd07588a51913af572825c91c71f0a2d18",
+      "source": "sources/w12-light-model-anim-play-sound/anim_play_sound.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 608,
+          "name": "animPlaySound__FPvP6Point3P9animSoundi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5288,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_data_attachment_light_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "073e5a2c2cf2e381139df476c1630ab0926394dbb5e0608016cf6ef4a3b66fa5",
+      "source": "sources/w12-light-model-data-attachment-light-pos/attachment_light_pos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5289,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_data_light_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "d87dd2a43ef76f6f81c0935a67bf77158513c34deedb815004e19dc24d5c37b2",
+      "source": "sources/w12-light-model-data-light-grid/light_grid.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5290,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_data_lightning_sword_particle.o",
+      "profile": "authored_cpp",
+      "sha256": "fda64951339b1b439dc1da5d01534c58771ddb078baa75487fa400cd49f0be34",
+      "source": "sources/w12-light-model-data-lightning-sword-particle/lightning_sword_particle.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5291,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_find_lights_in_box_for_world.o",
+      "profile": "authored_cpp",
+      "sha256": "e141468d77f8d71ad4a51e64249d5da02e76fc149a1819cdd14cc3554c7ef1e9",
+      "source": "sources/w12-light-model-find-lights-in-box-for-world/find_lights_in_box_for_world.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 544,
+          "name": "findLightsInBox_forWorld__FG3BoxPP5Lighti"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5292,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_get_dynamic_light_number.o",
+      "profile": "authored_cpp",
+      "sha256": "cc2f07c31c749260f5dede6f9c76b2b8066ec8933f84b4f58c63d9b01f7ea597",
+      "source": "sources/w12-light-model-get-dynamic-light-number/get_dynamic_light_number.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 212,
+          "name": "getDynamicLightNumber__FP13PolysetHeader"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5293,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_light_disable_volumetric.o",
+      "profile": "authored_cpp",
+      "sha256": "8c63cf6e20c23e54d6468126f02cba56545da127dda5324ef0076d556ac6a5de",
+      "source": "sources/w12-light-model-light-disable-volumetric/light_disable_volumetric.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "lightDisableVolumetricLighting__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5294,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_light_setup_ambient_and_dir_only.o",
+      "profile": "authored_cpp",
+      "sha256": "d41d2c128c234d220d53d476850031c0e7f9332a27b8f697e67766cae2b5669f",
+      "source": "sources/w12-light-model-light-setup-ambient-and-dir-only/light_setup_ambient_and_dir_only.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 392,
+          "name": "lightSetupAmbientAndDirOnly__FP6PacketG6Point3f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5295,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_light_setup_ambient_only.o",
+      "profile": "authored_cpp",
+      "sha256": "eb8b95682fee69da32d4fe5598c244aeb1c11235fb5d98e9c4c55e8ddb67a586",
+      "source": "sources/w12-light-model-light-setup-ambient-only/light_setup_ambient_only.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 156,
+          "name": "lightSetupAmbientOnly__FP6Packet"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5296,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_light_setup_non_directional_directional.o",
+      "profile": "authored_cpp",
+      "sha256": "078f1ec9380336b8d527b7b80f3670e6af169e84d3b0d3eeb94b811d1c043b82",
+      "source": "sources/w12-light-model-light-setup-non-directional-directional/light_setup_non_directional_directional.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 156,
+          "name": "lightSetupNonDirectionalDirectional__FP6Packet"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5297,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_draw_character.o",
+      "profile": "authored_cpp",
+      "sha256": "8294c9fb1526b09534edb60ae517d8711a809cc0d4b18e37bcc46456be82456f",
+      "source": "sources/w12-light-model-model-draw-character/model_draw_character.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "modelDrawCharacter__FP6PacketP12_modelHeaderli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5298,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_get_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "1e012aee7ed6234197532746f5b5376986efecc9507013e0c8d3e275e987e5d3",
+      "source": "sources/w12-light-model-model-get-collision/model_get_collision.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "modelGetCollision__FP12_modelHeaderi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5299,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_get_primary_bone.o",
+      "profile": "authored_cpp",
+      "sha256": "a00902d49f3cdb5f694f0f1f36d84dadabc0657b18335a423761fb360453dafe",
+      "source": "sources/w12-light-model-model-get-primary-bone/model_get_primary_bone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "modelGetPrimaryBone__FP12_modelHeaderi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5300,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_get_weapon_trail_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "1d7dcd7afdd6c9bd3d3773694b97d828e9051eb96e211839f3c4c5f236a5fe9c",
+      "source": "sources/w12-light-model-model-get-weapon-trail-pos/model_get_weapon_trail_pos.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "modelGetWeaponTrailPos__FP12_modelHeaderP6Point3T1"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5301,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_set_attachment_flip.o",
+      "profile": "authored_cpp",
+      "sha256": "4d8e1cc524d3adc3b3acd243fafc9fc730c4651c9225ea0491833dada206ce08",
+      "source": "sources/w12-light-model-model-set-attachment-flip/model_set_attachment_flip.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "modelSetAttachmentFlip__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5302,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_model_setup_attachment.o",
+      "profile": "authored_cpp",
+      "sha256": "0e574865a9eb9ef00a9684bb8f6e348f804407a8e6bb2e0788ccb09181cddd5f",
+      "source": "sources/w12-light-model-model-setup-attachment/model_setup_attachment.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 840,
+          "name": "modelSetupAttachment__FP6PacketP12_modelHeaderT1i"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5303,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_p_extend_swoosh.o",
+      "profile": "authored_cpp",
+      "sha256": "83438dd7c1cc3b7093dfc4d2cbb72c85e6dfd87840e0423d0233ea99892e3d3d",
+      "source": "sources/w12-light-model-p-extend-swoosh/p_extend_swoosh.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 372,
+          "name": "P_ExtendSwoosh__FiG6Point3T1f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5304,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_p_lightning_is_live.o",
+      "profile": "authored_cpp",
+      "sha256": "c146f98ce4d30051e86c11dd73352ee7d8088103b8d8b9ef5d94fe05e84a4b3b",
+      "source": "sources/w12-light-model-p-lightning-is-live/p_lightning_is_live.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "P_LightningIsLive__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5305,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_p_line.o",
+      "profile": "authored_cpp",
+      "sha256": "bf9800d2b7a3a490b69114df5f184004bfb3e2f8503a4a4e8020a5614a04b20d",
+      "source": "sources/w12-light-model-p-line/p_line.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5306,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_smooth_patch.o",
+      "profile": "authored_cpp",
+      "sha256": "f665a14e6149498721a0b320b4d66186795b2afef6f05db30a9b84882d7beee9",
+      "source": "sources/w12-light-model-smooth-patch/smooth_patch.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 968,
+          "name": "smoothPatch__FP12_worldHeaderP16WaterPolysetData"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5307,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_sound_pan_2d.o",
+      "profile": "authored_cpp",
+      "sha256": "4761ec3dd919f24baf8c0a2f3f311900120301625b7d14da559b343110e0ebd1",
+      "source": "sources/w12-light-model-sound-pan-2d/sound_pan_2d.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "soundPan2D__FiP6Point3f"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5308,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_vi_point_light_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "05f5da5b4eb7a03849b66d5b8b54545ac5cf54580899f8cf7587ebced13373f5",
+      "source": "sources/w12-light-model-vi-point-light-ctor/vi_point_light_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "__12VIPointLight"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5309,
+      "kind": "independently_authored_source",
+      "object_name": "w12_light_model_world_query_light_map.o",
+      "profile": "authored_cpp",
+      "sha256": "92d852b39e5f57ce32edf91cb59ba35736c25b157786c93086d0e8455eafd7e0",
+      "source": "sources/w12-light-model-world-query-light-map/world_query_light_map.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "worldQueryLightMap__FP12_worldHeaderG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w11-rend-a-common/rend.hpp"
+      ],
+      "input_order": 5310,
+      "kind": "independently_authored_source",
+      "object_name": "w11_rend_a_p_start_lightning.o",
+      "profile": "authored_cpp",
+      "sha256": "ec9fd7ab5722635cf7732be4a823b11354404d57dc9e1da8aede4267cd18cc6c",
+      "source": "sources/w11-rend-a-p-start-lightning/p_start_lightning.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 664,
+          "name": "P_StartLightning__FG6Point3T0iiffUi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5311,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_b_data_halo_color.o",
+      "profile": "authored_cpp",
+      "sha256": "9a12d6fd71420ad10923ddd6dd6a37541437d18e02e36898daab8748db3e428c",
+      "source": "sources/w10-render-b-data-halo-color/data_halo_color.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5312,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_b_data_light_info.o",
+      "profile": "authored_cpp",
+      "sha256": "cd803a4c2eb225e89ce468368a9c2c8a7694d7d79d8b5de4f141024159f62844",
+      "source": "sources/w10-render-b-data-light-info/data_light_info.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5313,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_b_data_light_slots.o",
+      "profile": "authored_cpp",
+      "sha256": "b8da875a196430e9c1b900acfdafce6d53db28b58b22be27c47eb6e9f240b479",
+      "source": "sources/w10-render-b-data-light-slots/data_light_slots.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5314,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_b_data_lock_alpha.o",
+      "profile": "authored_cpp",
+      "sha256": "285891ab0ff47876c9627ac743c6efbb5b1085bbd1fd8e051ee1713762c40212",
+      "source": "sources/w10-render-b-data-lock-alpha/data_lock_alpha.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5315,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_b_data_model_globals.o",
+      "profile": "authored_cpp",
+      "sha256": "5d1e5e1c26e8eb3b09ff5f37a766139fd859fb32eb06f3ec250dad203b2d4763",
+      "source": "sources/w10-render-b-data-model-globals/data_model_globals.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -77405,7 +77841,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f66015d54a700a450aa6973667632e4b852e06f13aed6e317fd756586820d0ef",
+  "snapshot_sha256": "1d374ea07ae874785222b042bde910d25db6d5849e76c9b9b8be81edd984f002",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
