@@ -1,4 +1,4 @@
-// Observed: matMul__FP8Matrix34P8Matrix33T0 at 0x00156230 is 276 bytes. The mangled name types the
+// Observed: matMul__FP8Matrix34P8Matrix33T0 at 0x00156230 is 280 bytes. The mangled name types the
 // arguments (Matrix34*, Matrix33*, Matrix33*); the body treats the first as a twelve-float
 // destination. A twelve-float temporary receives
 //   t[3i+j] = a[3i]*b[j] + a[3i+1]*b[3+j] + a[3i+2]*b[6+j]   (i, j in 0..2, summed left to right)
