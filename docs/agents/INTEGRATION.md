@@ -8294,3 +8294,4 @@ tests passed. No EE or game execution. Eight units on the branch were not select
 Closed: `_$_6Wraith`, `_GLOBAL_$I$numInRegion__8creatureG6Point3f`, `__tf6Wraith`, `addCommander__14WoodElfSoldier`, `bNextToEdge__14WoodElfSoldier`, `initMiniboss__6Wraith`, `leaveCommander__14WoodElfSoldier`, `msg_draw__14WoodElfSoldier`, `msg_draw__6Wraith`, `msg_hurt__14WoodElfSoldierfP10GameObjecti`
 
 Opened: `_vt$6Wraith`, `drawArrow__14WoodElfSoldier`
+- 2026-10-13 03:39 CDT — `agents/w10-actor-q` — 977 unresolved imports
