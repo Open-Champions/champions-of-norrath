@@ -70,25 +70,36 @@ offsets, not guessed names.
   reading of the pad record fields (+20/+24/+28/+32 floats, +8/+12 words)
   as stick and button inputs is inferred from use, not established.
 
-## Unknown
+## Imports closed (names)
 
-- What the camera fields mean beyond the offsets used (all unit comments say so).
-- The meaning of the action kinds `-100` and `-99`, the action types 0 to 11,
-  the scene flag bits 1, 2, 4, 8, 0x10, and the actor record byte +42 and +43.
-- `cutDrawFrame__Fv` reads `*(float*)prev` through a null pointer in the original
-  when no previous marker record is found; the authored source uses 0.0 for that
-  case instead and the case is not exercised. Whether low memory holds zero on
-  the EE is not established.
-- `cutInitScene__FP9_cutscene` contains an unreachable null test that calls
-  `__throw_bad_typeid` before a virtual type-record call; it is not reproduced.
-- The original passes two incidental registers around some calls; they are not
-  modelled (no claim on incidental A2/A3 or low64 state).
-- `SetZoomDistance__6Cameraf`: the original uses the EE `min.s` for the blend limit;
-  the authored `if` form compiles to a compare and branch instead. They are the same
-  for non-NaN values.
-- Indexing of `mapButtonWasDown` by player and the ownership of `mapScissorX` and
-  `mapScissorY` (`0x00486b10`, `0x00486b14`), which sit next to my three floats and
-  are not defined by any unit of mine.
+`GetTargetNum__6Camera`, `GetZoomDistance__6Camera`, `Pop__6Camera`,
+`Save__6CameraPc`, `SetCutWasActive__6Camera`, `SetZoomDistance__6Cameraf`,
+`addIcon__3mapP6Point3iPciT3N33`, `cutDrawFrame__Fv`, `cutInitScene__FP9_cutscene`,
+`cutRunFrameTask__Fv`, `cutStop__Fv`, `doDebugCam__6Camera`,
+`doInnorukCam__6Camera`, `doNormalCam__6Camera`, `isRevealed__3mapv`,
+`mapButtonWasDown`, `mapObjList`, `mapScale`, `mapX`, `mapY`,
+`norrath_map_add_icon`, `norrath_web_construct`, `revealEntireMap__3mapv`,
+`revealMap__3mapG6Point3`, `willDraw__3mapP12_worldHeaderf`. That is all 25
+names of the package scope. Two helpers, `worldToMap__3mapP6Point2PfT2` and
+`__3Webii`, are also defined; neither was in the scope list.
+
+## Imports opened (referenced, left unresolved)
+
+Classified against `work/plan9-build/unresolved-imports.json` and
+`partial-inventory.json` of the lead's checkout, which are older than the current
+shared branch; I did not re-link, so the third group may contain names that other
+packages define or already reference.
+
+- Already in that unresolved list (32): `_3map$mapOffset`, `_3map$mapheight`, `_3map$maptiles`, `_3map$mapwidth`, `__6PlayerG6Point3sii`, `animationLoadPos`, `animationLoading`, `blockAlloc__Fi`, `dialogPacket`, `displayDialogPos`, `dlgDir`, `flags`, `fontPrintWrapCenteredu__FiiPUsiiii`, `icos__Fi`, `isin__Fi`, `lightGlobalCharLightScale__Ff`, `memAlloc__FiPc`, `memFree__FPv`, `memmove`, `myFOV`, `myPitch`, `myRoll`, `myYaw`, `nmActions`, `nmDialogNodes`, `objectCancelAllAlwaysDraw__Fv`, `objectFindEmptySpot__FG6Point3iiPc`, `objectIterateRunLists__FPFP10GameObject_v`, `player`, `thereIsACutPlayer`, `world`, `worldFindHeight__FP12_worldHeaderG6Point3f`.
+- Defined as functions in that baseline (33): `BuildMatrix__6CamerafffP6Point3`, `GetPitch__6Camera`, `GetYaw__6Camera`, `SetMode__6Camerai`, `SetPitch__6Camerai`, `SetYaw__6Camerai`, `cdWait__Fv`, `cutRunFrame__Fb`, `engineRemoveTask__FPFv_v`, `findTagString__10GameObjectPci`, `fontEnd__Fv`, `fontScissor__Fiiii`, `fontStart__FP4FontiUii`, `lumpFindResource__FPcT0`, `objectFindInBox__FG6Point3T0PP10GameObjecti`, `objectFindObject__FPc`, `objectFindObject__FPcPP10GameObjecti`, `objectUpdateInGrid__FP10GameObject`, `sleepMonsters__8creaturev`, `soundClearStreamQue__Fi`, `soundGetDialogDir__Fv`, `soundGetStreamPlayStatus__Fi`, `soundResetStream__Fi`, `soundStartDialogStream__FiPci`, `sprintf`, `sscanf`, `strcmp`, `strcpy`, `strncmp`, `textGetString__FPc`, `wakeMonsters__8creaturev`, `worldSetFarClip__Ff`, `worldSetFrustum__Fffff`.
+- In neither (62); data symbols and functions that no earlier unit referenced or
+  that other packages of this wave own: `GLISTSIZE`, `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `actor`, `anim`, `animRemoveNonpermanentAnimations__FP14AnimationState`, `checkYawReset__6Camera`, `coreLoadingScreenRunning`, `cutInit`, `cutLoadedDialogStream`, `cutMode`, `cutSceneName`, `cutSkipMode`, `cutStartMusic`, `determineBestController__6Camera`, `dialogActor`, `displayActionPos`, `displayFrame`, `displayMusicPos`, `displayTextDisable`, `doAutoPitch__6Camera`, `doUserYaw__6Camera`, `doUserZoom__6Camera`, `eRandState`, `enforceMaxSpeed__6CameraP6Point3`, `engineScissory1`, `engineScissory2`, `engineScreenSlide`, `findCutDialog__Fv`, `frameNm`, `frontEndRunning`, `gameCam`, `gamePlayersPresent`, `glistp`, `gstart`, `hideHiddenObjects__FP10GameObject`, `hudLetterBox__Fv`, `levelName`, `localNmPlayersAlive`, `localPlayersAlive`, `musicSize`, `netNetworkMode`, `nmActors`, `nmPlayers`, `nmPlayersAlive`, `objectCreateByName__FPcG6Point3sPPc`, `obtainTarget__6CameraP6Point3`, `pad`, `playerCountChanged__6Camera`, `playersAlive`, `rayHit__FP6Point3N30`, `removeMonster__FP10GameObject`, `resetScissor__Fv`, `showHiddenObjects__FP10GameObject`, `smallFont`, `soundStartMusic__Fii`, `subtitlesOn`, `unremoveMonster__FP10GameObject`, `worldCameraMatrix`, `worldCameraPos`.
+
+Layout assumptions I made for data owned elsewhere: `player` is a table of four
+23984-byte records (object pointer word at `+21872`, a float at `+172`); `pad` a table of
+88-byte records; `actor` a pointer to 44-byte records and `action` a pointer to 20-byte
+records; `anim` two 8-byte slots (`0x00790f60`); `worldCameraMatrix` and
+`worldCameraPos` float arrays. The unit comments say where each is read.
 
 ## Build-plan entries needed
 
@@ -127,37 +138,6 @@ Host-check notes for the integrator: `cut-init-scene/host_check.cpp` must be
 built for x86_64 with `-Wl,-pagezero_size,0x10000` (it keeps fake objects below
 4 GiB, like `w8-net-play-c-start-packet`). The others build with a plain host `c++ -std=c++17`.
 
-## Imports closed (names)
-
-`GetTargetNum__6Camera`, `GetZoomDistance__6Camera`, `Pop__6Camera`,
-`Save__6CameraPc`, `SetCutWasActive__6Camera`, `SetZoomDistance__6Cameraf`,
-`addIcon__3mapP6Point3iPciT3N33`, `cutDrawFrame__Fv`, `cutInitScene__FP9_cutscene`,
-`cutRunFrameTask__Fv`, `cutStop__Fv`, `doDebugCam__6Camera`,
-`doInnorukCam__6Camera`, `doNormalCam__6Camera`, `isRevealed__3mapv`,
-`mapButtonWasDown`, `mapObjList`, `mapScale`, `mapX`, `mapY`,
-`norrath_map_add_icon`, `norrath_web_construct`, `revealEntireMap__3mapv`,
-`revealMap__3mapG6Point3`, `willDraw__3mapP12_worldHeaderf`. That is all 25
-names of the package scope. Two helpers, `worldToMap__3mapP6Point2PfT2` and
-`__3Webii`, are also defined; neither was in the scope list.
-
-## Imports opened (referenced, left unresolved)
-
-Classified against `work/plan9-build/unresolved-imports.json` and
-`partial-inventory.json` of the lead's checkout, which are older than the current
-shared branch; I did not re-link, so the third group may contain names that other
-packages define or already reference.
-
-- Already in that unresolved list (32): `_3map$mapOffset`, `_3map$mapheight`, `_3map$maptiles`, `_3map$mapwidth`, `__6PlayerG6Point3sii`, `animationLoadPos`, `animationLoading`, `blockAlloc__Fi`, `dialogPacket`, `displayDialogPos`, `dlgDir`, `flags`, `fontPrintWrapCenteredu__FiiPUsiiii`, `icos__Fi`, `isin__Fi`, `lightGlobalCharLightScale__Ff`, `memAlloc__FiPc`, `memFree__FPv`, `memmove`, `myFOV`, `myPitch`, `myRoll`, `myYaw`, `nmActions`, `nmDialogNodes`, `objectCancelAllAlwaysDraw__Fv`, `objectFindEmptySpot__FG6Point3iiPc`, `objectIterateRunLists__FPFP10GameObject_v`, `player`, `thereIsACutPlayer`, `world`, `worldFindHeight__FP12_worldHeaderG6Point3f`.
-- Defined as functions in that baseline (33): `BuildMatrix__6CamerafffP6Point3`, `GetPitch__6Camera`, `GetYaw__6Camera`, `SetMode__6Camerai`, `SetPitch__6Camerai`, `SetYaw__6Camerai`, `cdWait__Fv`, `cutRunFrame__Fb`, `engineRemoveTask__FPFv_v`, `findTagString__10GameObjectPci`, `fontEnd__Fv`, `fontScissor__Fiiii`, `fontStart__FP4FontiUii`, `lumpFindResource__FPcT0`, `objectFindInBox__FG6Point3T0PP10GameObjecti`, `objectFindObject__FPc`, `objectFindObject__FPcPP10GameObjecti`, `objectUpdateInGrid__FP10GameObject`, `sleepMonsters__8creaturev`, `soundClearStreamQue__Fi`, `soundGetDialogDir__Fv`, `soundGetStreamPlayStatus__Fi`, `soundResetStream__Fi`, `soundStartDialogStream__FiPci`, `sprintf`, `sscanf`, `strcmp`, `strcpy`, `strncmp`, `textGetString__FPc`, `wakeMonsters__8creaturev`, `worldSetFarClip__Ff`, `worldSetFrustum__Fffff`.
-- In neither (62); data symbols and functions that no earlier unit referenced or
-  that other packages of this wave own: `GLISTSIZE`, `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `actor`, `anim`, `animRemoveNonpermanentAnimations__FP14AnimationState`, `checkYawReset__6Camera`, `coreLoadingScreenRunning`, `cutInit`, `cutLoadedDialogStream`, `cutMode`, `cutSceneName`, `cutSkipMode`, `cutStartMusic`, `determineBestController__6Camera`, `dialogActor`, `displayActionPos`, `displayFrame`, `displayMusicPos`, `displayTextDisable`, `doAutoPitch__6Camera`, `doUserYaw__6Camera`, `doUserZoom__6Camera`, `eRandState`, `enforceMaxSpeed__6CameraP6Point3`, `engineScissory1`, `engineScissory2`, `engineScreenSlide`, `findCutDialog__Fv`, `frameNm`, `frontEndRunning`, `gameCam`, `gamePlayersPresent`, `glistp`, `gstart`, `hideHiddenObjects__FP10GameObject`, `hudLetterBox__Fv`, `levelName`, `localNmPlayersAlive`, `localPlayersAlive`, `musicSize`, `netNetworkMode`, `nmActors`, `nmPlayers`, `nmPlayersAlive`, `objectCreateByName__FPcG6Point3sPPc`, `obtainTarget__6CameraP6Point3`, `pad`, `playerCountChanged__6Camera`, `playersAlive`, `rayHit__FP6Point3N30`, `removeMonster__FP10GameObject`, `resetScissor__Fv`, `showHiddenObjects__FP10GameObject`, `smallFont`, `soundStartMusic__Fii`, `subtitlesOn`, `unremoveMonster__FP10GameObject`, `worldCameraMatrix`, `worldCameraPos`.
-
-Layout assumptions I made for data owned elsewhere: `player` is a table of four
-23984-byte records (object pointer word at `+21872`, a float at `+172`); `pad` a table of
-88-byte records; `actor` a pointer to 44-byte records and `action` a pointer to 20-byte
-records; `anim` two 8-byte slots (`0x00790f60`); `worldCameraMatrix` and
-`worldCameraPos` float arrays. The unit comments say where each is read.
-
 ## Authored but never executed
 
 All of it. Every unit was compared only by its host check against stubbed callees and
@@ -167,3 +147,23 @@ paired-run harness, or in the game. In particular `doNormalCam__6Camera`,
 checks cover their branches but are written from the same reading of the disassembly
 as the source. Float literal constants that the file holds one unit below the nearest
 float of a decimal are written as hexadecimal floats.
+
+## Unknown
+
+- What the camera fields mean beyond the offsets used (all unit comments say so).
+- The meaning of the action kinds `-100` and `-99`, the action types 0 to 11,
+  the scene flag bits 1, 2, 4, 8, 0x10, and the actor record byte +42 and +43.
+- `cutDrawFrame__Fv` reads `*(float*)prev` through a null pointer in the original
+  when no previous marker record is found; the authored source uses 0.0 for that
+  case instead and the case is not exercised. Whether low memory holds zero on
+  the EE is not established.
+- `cutInitScene__FP9_cutscene` contains an unreachable null test that calls
+  `__throw_bad_typeid` before a virtual type-record call; it is not reproduced.
+- The original passes two incidental registers around some calls; they are not
+  modelled (no claim on incidental A2/A3 or low64 state).
+- `SetZoomDistance__6Cameraf`: the original uses the EE `min.s` for the blend limit;
+  the authored `if` form compiles to a compare and branch instead. They are the same
+  for non-NaN values.
+- Indexing of `mapButtonWasDown` by player and the ownership of `mapScissorX` and
+  `mapScissorY` (`0x00486b10`, `0x00486b14`), which sit next to my three floats and
+  are not defined by any unit of mine.
