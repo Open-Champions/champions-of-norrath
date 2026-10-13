@@ -75,6 +75,11 @@ int main() {
     if (sceSifMCallRpc(client, 3, 0, area, 64, area + 65, 64, nullptr, nullptr) != -1 || !log_is("wp")) return 5;
     std::snprintf(expect, sizeof expect, "sceSifMCallRpc: receive buffer addr is not 64 byte align. %08x=n", bits(area + 65));
     if (std::strcmp(printed[0], expect) != 0) return 6;
+    // 64-byte alignment, not just 32: offsets 32 are refused for both buffers, 64 is accepted
+    reset();
+    if (sceSifMCallRpc(client, 3, 0, area + 32, 64, area + 128, 64, nullptr, nullptr) != -1 || print_count != 1) return 28;
+    reset();
+    if (sceSifMCallRpc(client, 3, 0, area, 64, area + 160, 64, nullptr, nullptr) != -1 || print_count != 1) return 29;
     // send checked first
     reset();
     sceSifMCallRpc(client, 3, 0, area + 1, 64, area + 65, 64, nullptr, nullptr);
