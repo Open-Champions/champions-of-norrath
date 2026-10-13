@@ -18,6 +18,9 @@ extern "C" void norrath_host_call_pointer_int(unsigned function, unsigned char* 
 // Stand-in for a target function word taking (pointer, pointer, int, float).
 extern "C" void norrath_host_call_pointer_pointer_int_float(unsigned function, unsigned char* first,
                                                            unsigned char* second, int third, float fourth);
+// Stand-in for a target function word taking (pointer, int, pointer) and returning int.
+extern "C" int norrath_host_call_pointer_int_pointer_ret_int(unsigned function, unsigned char* first, int second,
+                                                            const float* third);
 #endif
 namespace norrath_aoc {
 typedef unsigned __attribute__((may_alias)) word_t;
@@ -70,6 +73,28 @@ inline void call_virtual_pointer_pointer_int_float(unsigned char* self, unsigned
 #else
     reinterpret_cast<void (*)(unsigned char*, unsigned char*, int, float)>(static_cast<__UINTPTR_TYPE__>(function))(
         self + adjust, second, third, fourth);
+#endif
+}
+// Same lookup for a slot called as (this + adjust, second, third pointer) with an int result.
+inline int call_virtual_int_pointer_returning_int(unsigned char* self, unsigned slot, int second, const float* third) {
+    const unsigned char* entry = load_pointer(self + 72) + slot;
+    const int adjust = load_signed_half(entry);
+    const unsigned function = load_word(entry + 4);
+#ifdef NORRATH_HOST_ARENA
+    return norrath_host_call_pointer_int_pointer_ret_int(function, self + adjust, second, third);
+#else
+    return reinterpret_cast<int (*)(unsigned char*, int, const float*)>(static_cast<__UINTPTR_TYPE__>(function))(
+        self + adjust, second, third);
+#endif
+}
+// sqrt.s on the EE (no errno path); the host uses the library square root.
+inline float square_root(float value) {
+#if defined(__mips__)
+    float result;
+    __asm__("sqrt.s %0, %1" : "=f"(result) : "f"(value));
+    return result;
+#else
+    return __builtin_sqrtf(value);
 #endif
 }
 }
