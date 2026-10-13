@@ -64,7 +64,7 @@ Not added to the shared plan. Each needs an `inputs` entry with `kind: independe
 
 ## Authored but never executed
 
-Everything above. The paired runs execute the authored code in a private interpreter against the original image, with stubbed callees; nothing has run on a real EE, in the linked game or in gameplay. The string functions ran on the host only. The `.S` stubs were checked only for their call shape on the host, and `sceSifSetDma`/`sceSifSetDChain`/`sceSifStopDma` have not been compared with the original bytes in a paired run.
+Everything above. The paired runs execute the authored code in a private interpreter against the original image, with stubbed callees; nothing has run on a real EE, in the linked game or in gameplay. The string functions ran on the host only. The three `.S` stubs (`sceSifSetDma`, `sceSifSetDChain`, `sceSifStopDma`) were assembled with the EE toolchain (`-mno-abicalls`) and their four instruction words compared with the original's 16 bytes at each address: identical, no relocations.
 
 ## Unknown
 
