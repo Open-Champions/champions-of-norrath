@@ -54,8 +54,8 @@ on the EE or as gameplay; compiled sizes come from the reviewed EE `authored_cpp
 
 ## Observed, inferred, unknown
 
-* Observed: 21 of the 30 are the collision virtuals of simple sprite classes. Nineteen return 0 without touching anything (the rest of this
-  package builds on that). `VISimpleSprite` tail-calls `CollideObj__9VICollide...` with the word at +68; `VICSprite` (sphere) returns 0 if the word at +4456
+* Observed: 22 of the 30 are small collision virtuals. Nineteen return 0 without touching anything (the rest of this
+  package is larger). `VISimpleSprite` tail-calls `CollideObj__9VICollide...` with the word at +68; `VICSprite` (sphere) returns 0 if the word at +4456
   is set and otherwise tail-calls the capsule overload with the address +4424.
 * Observed: `VILODSprite` (+76 holds a sprite index), `VIGroupSprite` (count at +64, 32-byte entries from +68) and `VIHSprite` (pool at +96, record array
   at +104, transform array at +72) fetch child sprites with `Sprite__7VIScenei` and call the child's virtual through a vtable-like table: the word at
