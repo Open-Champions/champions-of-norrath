@@ -8028,3 +8028,25 @@ Closed: `_$_10CloudGiant`, `_$_6Cthulu`, `_$_7Critter`, `__8CreatureG6Point3sPQ2
 
 Opened: `__11BoltGoRoundG6Point3siP15AnimationHeader`, `_vt$10CloudGiant`, `_vt$6Cthulu`, `_vt$7Critter`, `chestResourceList`, `modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf`, `modelSetFade__Fc`, `norrath_w10_actor_d_view_7d6c40`, `norrath_w10_actor_d_view_7d7720`, `norrath_w10_actor_d_view_7d7770`, `plotRoute__8CreatureG6Point3ffi`, `pointInZone__8CreatureG6Point3ffss`, `setResource__10GameObjectPQ210GameObject11resourceMap`, `steerToPosition__8CreatureG6Point3`
 - 2026-10-13 02:49 CDT — `agents/w10-actor-d` — 1116 unresolved imports
+
+## agents/w10-actor-f
+
+Merged (merge commit, branch tip `c0f4f100`, 59 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (42 function bodies) with fresh `input_order` values 4097
+through 4128. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, 4 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4127 authored inputs, 3057 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1116 |
+| After | 1097 |
+| Closed | 32 |
+| Opened | 13 |
+
+Closed: `_$_7FireFly`, `_$_8Froglock`, `_$_9Generator`, `_GLOBAL_$I$msg_draw__10FrostShard`, `_GLOBAL_$I$msg_run__14FireStormFlare`, `_GLOBAL_$I$msg_run__9FireFlare`, `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`, `__tf7FireFly`, `__tf8Froglock`, `__tf9Generator`, `__ti10GameObject`, `_vt$11FireBomblet`, `clone__7FireFly`, `clone__8Froglock`, `clone__9Generator`, `getModel__9Generator`, `msg_draw__10FireBeetle`, `msg_draw__7FireFly`, `msg_draw__8Froglock`, `msg_draw__9Generator`, `msg_load__8FroglockPc`, `msg_load__9GeneratorPc`, `msg_moveCollision__10FireBeetlePP10GameObject`, `msg_moveCollision__7FireFlyPP10GameObject`, `msg_run__10FireBeetle`, `msg_run__7FireFly`, `msg_run__8Froglock`, `msg_run__9Generator`, `msg_save__8FroglockPc`, `setState__10FireBeetlei`, `setState__7FireFlyi`, `setState__8Froglocki`
+
+Opened: `_$_11FireBomblet`, `__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader`, `__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19FireArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__21PoisonArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__22ExplodeArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__tf11FireBomblet`, `bCrossingWater__8Froglock`, `clone__11FireBomblet`, `loseBodyPart__10FireBeetlei`, `msg_draw__11FireBomblet`, `msg_run__11FireBomblet`, `objectAddString__FPcP10GameObject`
