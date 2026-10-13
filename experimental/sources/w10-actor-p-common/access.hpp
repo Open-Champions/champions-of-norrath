@@ -99,6 +99,19 @@ inline void unit_ball(unsigned char* o, Point3& p, Rand rand) {
     } while (1.0f < p.x * p.x + p.y * p.y + p.z * p.z);
 }
 
+
+// The EE reciprocal square root: rsqrt.s computes numerator / sqrt(denominator) (here the numerator is
+// 1). A host contract uses the portable quotient instead.
+inline float reciprocal_sqrt(float squared) {
+#if defined(W10_ACTOR_P_HOST)
+    return 1.0f / __builtin_sqrtf(squared);
+#else
+    float result;
+    __asm__("rsqrt.s %0,%1,%2" : "=f"(result) : "f"(1.0f), "f"(squared));
+    return result;
+#endif
+}
+
 }  // namespace w10p
 
 #endif
