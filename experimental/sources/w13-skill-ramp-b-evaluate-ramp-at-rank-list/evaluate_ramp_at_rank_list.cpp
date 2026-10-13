@@ -1,4 +1,4 @@
-// Observed evaluateRampAtRank__5SkilliiP8ListHead at 0x00313700, 112 bytes (extent to the next symbol 136).
+// Observed evaluateRampAtRank__5SkilliiP8ListHead at 0x00313700, 124 bytes (symbol size).
 // Arguments: the receiver, a slot index, a level and a list-head pointer. The receiver holds the address of a
 // table of 8-byte slots at +96 (a signed halfword adjustment at +0 added to the receiver, a function word at +4).
 // The first word of the list head is a node pointer, which may be null. When it is not null the word at +12 of
