@@ -57,7 +57,7 @@ namespace {
 using namespace w13smb;
 
 // A bolt end point near W: used when there is no target creature.
-void random_end(unsigned char* o, unsigned char* w, Point3& end) {
+static void random_end(unsigned char* o, unsigned char* w, Point3& end) {
     const int heading = half(w, 56);
     int angle = heading + static_cast<int>((eRand__10GameObject(o) % 11000u) << 1) - 11000;
     float f20 = icos__Fi(angle) * 200.0f;
@@ -75,7 +75,7 @@ void random_end(unsigned char* o, unsigned char* w, Point3& end) {
 }
 
 // A bolt end point at a target: its position with half its float at +32 added to z.
-void target_end(unsigned char* target, Point3& end) {
+static void target_end(unsigned char* target, Point3& end) {
     Point3 lift;
     lift.x = 0.0f;
     lift.y = 0.0f;
@@ -85,7 +85,7 @@ void target_end(unsigned char* target, Point3& end) {
     end.z = real(target, 24) + lift.z;
 }
 
-void add_hate_effect(unsigned char* creature) {
+static void add_hate_effect(unsigned char* creature) {
     if (checkIfSpellIsRunning__8CreatureRC9type_info(creature, __tf15SpellHateEffect()) != 0) return;
     void* const block = blockAlloc__Fi(48);
     if (block != nullptr) SpellHateEffect_construct(block, 3, static_cast<int>(worldDifficulty), creature, nullptr, reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(skills[30])));
