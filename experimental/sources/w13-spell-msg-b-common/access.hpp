@@ -9,6 +9,7 @@ struct Point3 { float x, y, z; };
 
 #if defined(W13_SPELL_MSG_B_HOST)
 extern unsigned char* w13_spell_msg_b_host_base;
+void w13_spell_msg_b_host_hurt(unsigned function_word, void* adjusted_object, float amount, void* source, int flags);
 unsigned w13_spell_msg_b_host_call(unsigned function_word, void* adjusted_object, int argument_count, unsigned long a1, unsigned long a2);
 #endif
 
@@ -90,6 +91,18 @@ inline unsigned call_entry_from(unsigned char* o, unsigned tableWordOffset, unsi
     return w13_spell_msg_b_host_call(fn, adjusted, 2, a1, a2);
 #else
     return reinterpret_cast<unsigned (*)(void*, unsigned long, unsigned long)>(static_cast<__UINTPTR_TYPE__>(fn))(adjusted, a1, a2);
+#endif
+}
+
+// Calls the entry at table byte 16 (a hurt-style slot) on o with a float amount, a source object and flags.
+inline void call_hurt(unsigned char* o, float amount, void* source, int flags) {
+    unsigned char* e = table_entry(o, 16);
+    unsigned char* adjusted = o + *reinterpret_cast<short*>(e);
+    const unsigned fn = *reinterpret_cast<unsigned*>(e + 4);
+#if defined(W13_SPELL_MSG_B_HOST)
+    w13_spell_msg_b_host_hurt(fn, adjusted, amount, source, flags);
+#else
+    reinterpret_cast<void (*)(void*, float, void*, int)>(static_cast<__UINTPTR_TYPE__>(fn))(adjusted, amount, source, flags);
 #endif
 }
 
