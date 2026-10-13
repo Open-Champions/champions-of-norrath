@@ -1,4 +1,4 @@
-// Observed clone__14WoodElfSoldier at 0x00121578, 1416 bytes.
+// Observed clone__14WoodElfSoldier at 0x00121578, 1420 bytes.
 // Allocates 992 bytes with blockAlloc__Fi. A null allocation returns null and writes nothing.
 // Otherwise, in the order of the image (n is the new object, s the source):
 //  - the GameObject table pointer (_vt$10GameObject) goes to n+72, then the ListHead copy
