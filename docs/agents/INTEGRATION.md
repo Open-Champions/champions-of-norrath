@@ -9323,3 +9323,23 @@ Closed: `process_kbd_data`, `process_mouse_data`, `qsort`, `sceGsPutDrawEnv`, `s
 
 Opened: `CheckforModifierKeyEvents`, `GetOsdConfigParam2`, `IsT10K`, `__ieee754_rem_pio2`, `__kernel_cos`, `__kernel_sin`, `gConfig`, `generate_key_press_events`, `generate_key_release_events`
 - 2026-10-13 11:57 CDT — agents/w12-startup-rt-c — 1169 unresolved imports
+
+## agents/w12-actor-spell-c
+
+Merged (merge commit, branch tip `f83f48be`, over an hour old; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 27 units with fresh `input_order` values 5507 through 5529 (actor and spell methods: clones, `msg_run`/`msg_draw`/`msg_collision`, `run`, `start`, `move`, `eRand`, `initType`, `processParams` and similar), using the entries the notes print, which already list the compiler-emitted file-local helpers (`register_effect`, `draw_direction`, `emit_one.constprop.0`). All 23 selected committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names). The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5528 authored inputs, 4240 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (files stay in the snapshot, with no plan entry): four 8-to-36-byte units with no committed check of any kind: `w12-actor-spell-c-draw-5spell` (`draw__5Spell`), `w12-actor-spell-c-fx-run-ball-lightning` (`fxRunBallLightning`), `w12-actor-spell-c-msg-draw-7oniball` (`msg_draw__7OniBall`) and `w12-actor-spell-c-msg-run-7weather` (`msg_run__7Weather`). Those four names stay unresolved. The owner can add host checks and push again. The notes' closed list reproduces except for those four names (23 close here).
+
+The opened names include address-named data views the new bodies read (`*_particle_7d6830` style); their definitions are not yet authored.
+
+| | |
+|---|---|
+| Before | 1169 |
+| After | 1168 |
+| Closed | 23 |
+| Opened | 22 |
+
+Closed: `clone__15GlowingCylinder`, `clone__17VehicleBodySphere`, `clone__5PhIce`, `clone__7OniBall`, `clone__7Weather`, `eRand__5Spell`, `fxFlyingFire__FP6Point3T0ffb`, `hitSomething__11SpellChargeP10GameObject`, `initType__5Mummyb`, `joinCommander__14WoodElfSoldier`, `manaAbsorbOnHit__15SpellHolyShield`, `moveArrow__14WoodElfSoldier`, `move__10ProjectileG6Point3`, `msg_collision__17VehicleBodySphereP10GameObject`, `msg_collision__7OniBallP10GameObject`, `msg_draw__15GlowingCylinder`, `msg_run__15GlowingCylinder`, `msg_run__5PhIce`, `msg_run__7OniBall`, `processParams__7VehiclePPc`, `run__19SpellHornOmenEffectG6Point3s`, `run__22SpellPlanarSteelEffectG6Point3s`, `start__3WebG6Point3T1i`
+
+Opened: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_SetParticleSystemMatrix__FiP8Matrix34`, `P_SetTrailColor__Fiiiii`, `findCommander__14WoodElfSoldier`, `fxflyingfire_particle_7d6830`, `fxflyingfire_particle_7d6880`, `fxflyingfire_particle_7d68d0`, `fxflyingfire_particle_7d6920`, `getAmount__12SkillLifeTapi`, `holyshield_particle_8d7720`, `hornomen_run_particle_8d8650`, `modelDrawEffect__FP12_modelHeaderP8_textureiP8Matrix34fP14AnimationStateUl`, `oniball_msg_run_particle_7d7810`, `oniball_msg_run_particle_7d78b0`, `phice_msg_run_particle_7d6740`, `phice_msg_run_particle_7d6790`, `planarsteel_run_particle_8d8510`, `planarsteel_run_particle_8d8560`, `planarsteel_run_particle_8d85b0`, `planarsteel_run_particle_8d8600`, `spellcharge_hit_something_particle_8d6780`
+- 2026-10-13 12:06 CDT — agents/w12-actor-spell-c — 1168 unresolved imports
