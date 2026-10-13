@@ -9,6 +9,8 @@
 //                       image; counted down by the per-frame inventory run)
 //   healthPotionsLeft   0x0034b8a8, four ints, start 0 (one per player)
 //   manaPotionsLeft     0x0034b8b8, four ints, start 0 (one per player)
+//   gSkillTree          0x00422b90, 17960 bytes (40 + 5 * 3592), all zero in the image;
+//                       the player global init fills the class rows at run time
 //   goldAnm             0x00600d20, 16 bytes of bss, the first of the gold
 //                       resource-map labels (goldModel and goldTex follow it at
 //                       16-byte steps); its layout is unknown
@@ -21,4 +23,5 @@ int inventoryDrawDelay;
 int healthPotionsLeft[4];
 int manaPotionsLeft[4];
 unsigned char goldAnm[16];
+alignas(8) unsigned char gSkillTree[17960];
 }
