@@ -8996,3 +8996,8 @@ Re-ran at `c7243a6d` (equal to `origin/codex/norrath-first-reconstruction`): 214
 
 At 07:55 CDT seven new branches were waiting: `agents/w12-hud-loop-a` (`1654eba2`), `w12-hud-loop-b` (`efa42429`), `w12-startup-rt-a` (`a622417f`), `w12-startup-rt-b` (`e063d409`), `w12-startup-rt-c` (`d0780019`), `w12-wnd-a` (`a66ae9b0`) and `w12-wnd-b` (`98f10627`). Every tip is under 10 minutes old and none has a notes file yet (so no five summary sections), so by the merge rule none qualifies. Nothing was merged or reviewed for rules; they need a later pass once they have notes or their tips are over 45 minutes old. Shared-branch code is unchanged since the re-verification above (only log commits followed), so the 827 count was not re-measured in this pass.
 - 2026-10-13 07:56 CDT — w12-* deferred as in progress, nothing merged — 827 unresolved imports
+
+## Pass at 08:00 CDT (third integrator restart)
+
+Shared branch `a9d34022` differs from the fully re-verified `c7243a6d` only by this log file, so the 827 count was not re-measured by a new build. Re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 5113 authored inputs) and `--check-plan` (valid). The eight `w12-*` branches (`hud-loop-a/b`, `startup-rt-a/b/c`, `vicont-a`, `wnd-a/b`) still have tips seconds to minutes old and no notes file, so none qualifies under the merge rule; they are still being pushed to. The seven earlier rejections stand at their recorded tips. Nothing merged.
+- 2026-10-13 08:02 CDT — w12-* still in progress, nothing merged — 827 unresolved imports
