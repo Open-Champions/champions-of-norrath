@@ -77,3 +77,12 @@ extern "C" void addIcon__3mapP6Point3iPciT3N33(const float* point, int kind, cha
     *reinterpret_cast<AliasedUnsigned*>(entry + 20) = extra_a;
     *reinterpret_cast<AliasedUnsigned*>(entry + 24) = extra_b;
 }
+
+// One function, two authored names: authored callers name it norrath_map_add_icon.
+// The EE assembler and the host assembler both accept .set; Mach-O adds the
+// leading underscore.
+#if defined(__APPLE__)
+asm(".globl _norrath_map_add_icon\n.set _norrath_map_add_icon, _addIcon__3mapP6Point3iPciT3N33\n");
+#else
+asm(".globl norrath_map_add_icon\n.set norrath_map_add_icon, addIcon__3mapP6Point3iPciT3N33\n");
+#endif

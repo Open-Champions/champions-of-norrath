@@ -28,6 +28,8 @@ static void expect(int ok, const char* message) {
 static float getf(int rec, int off) { float v; std::memcpy(&v, _3map$iconList + 28 * rec + off, 4); return v; }
 static unsigned getu(int rec, int off) { unsigned v; std::memcpy(&v, _3map$iconList + 28 * rec + off, 4); return v; }
 
+extern "C" void norrath_map_add_icon(const float* point, int kind, char* name, int type, char* offset_text, char* flag_text, unsigned extra_a, unsigned extra_b);
+
 int main() {
     const float point[3] = {10.5f, -20.25f, 99.0f};
     // Direction names rotate by type / 16384.
@@ -87,6 +89,13 @@ int main() {
         addIcon__3mapP6Point3iPciT3N33(point, 3, name, 0, nullptr, flagn, 9, 8);
         expect(getf(2, 16) == 0.65f, "any nonzero flag");
         expect(_3map$iconListCount == 3, "three records");
+    }
+    // The second authored name reaches the same function.
+    {
+        _3map$iconListCount = 0;
+        char name[] = "torch";
+        norrath_map_add_icon(point, 9, name, 0, nullptr, nullptr, 3, 4);
+        expect(_3map$iconListCount == 1 && getu(0, 12) == 9 && getu(0, 20) == 3 && getu(0, 24) == 4, "alias reaches addIcon");
     }
     // Null name: nothing at all.
     {
