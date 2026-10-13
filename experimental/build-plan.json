@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5147,
+  "default_authored_inputs": 5170,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3953,6 +3953,29 @@
     "sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp": "8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf",
     "sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp": "d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352",
     "sources/w12-skill-c-tweek-rank/tweek_rank.cpp": "6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1",
+    "sources/w12-startup-rt-a-adjust-time/adjust_time.cpp": "cfc1aa89871bc66ee77f215f7b5a7b10454e6f5edf149de39180ea0926bfd0d7",
+    "sources/w12-startup-rt-a-amx-exec/amx_exec.cpp": "4c8eed7d1b51bce9b71c1e272129ad3f287bb71a8bb6ea446f8b0d6063282d78",
+    "sources/w12-startup-rt-a-atanf/atanf.cpp": "3045d60d7860f8eeb7c82c0d178b968b98c4bfd9c8e603e15cc55e02a9c349c8",
+    "sources/w12-startup-rt-a-cosf/cosf.cpp": "10e28052a7ec228797e344f45414ebb8e1225ee76ea10c4d0bedcc40f6b73c5c",
+    "sources/w12-startup-rt-a-ctype-table/ctype_table.cpp": "591f8da0f9d303993de720d4ef98b837a6752b3e5518366dd95a99b7e0c8ee5b",
+    "sources/w12-startup-rt-a-dpdiv/dpdiv.cpp": "8d8cec10ae956ca8a4427e5d4927232140100049e39a963d3a599b4df595e887",
+    "sources/w12-startup-rt-a-dwarf-reg-size-flag/dwarf_reg_size_flag.cpp": "c158ac2fda23ec7b4bf9e92ac03d904bd87f48874562f7a9f8217f68a5ac4cc6",
+    "sources/w12-startup-rt-a-ee-retbuf-sel/ee_retbuf_sel.cpp": "7a6931cf4a97f51f648f3239ec431f33dc720b8c20c5a6fc6821745c3c17fa4a",
+    "sources/w12-startup-rt-a-eh-context-initialize/eh_context_initialize.cpp": "723897d1892091a364a79b33aa91b9295e5fe9ee5a7c307013fe82c2656b2326",
+    "sources/w12-startup-rt-a-exit-stub/exit_stub.S": "4cf9474058369e4129027f37f61a3a8295bc16975ea65e53fecfae66e7eff2b6",
+    "sources/w12-startup-rt-a-free-r/free_r.cpp": "8a24d2352d9440670908fc1268e31a832ffb63830028b51b758bc36d3e642851",
+    "sources/w12-startup-rt-a-get-eh-context-word/get_eh_context_word.cpp": "6604c3bcae56ec368dde4ded19f4b6f658d2b4727a621a94f291d08e53e8abbb",
+    "sources/w12-startup-rt-a-initialise-iop-driver/initialise_iop_driver.cpp": "839a6f52529d983b99e5bf3789ba0644bce7a42ea902c598f65339f5d6bd5511",
+    "sources/w12-startup-rt-a-is-event-modifier/is_event_modifier.cpp": "6a082a926c07bdf7d6a86dbfaefeafdad5ac2836a0467bfa47a7fdf5002281bd",
+    "sources/w12-startup-rt-a-k-exit-tlb-handler/k_exit_tlb_handler.S": "0859e2088557970f27e842b1214ea5b75591a1941b9274a6eb27f390e821e592",
+    "sources/w12-startup-rt-a-local-data/local_data.cpp": "f9667a78be693d6efd5f14b0d6d0cfcb11b24fb48db9b60eb49528c92bddd107",
+    "sources/w12-startup-rt-a-malloc-r/malloc_r.cpp": "0422f3bf4b5e740e5c8c50c4203975d3dcf5e97c52ee9dab3d8792e3a81f531d",
+    "sources/w12-startup-rt-a-modifier-codes/modifier_codes.cpp": "e8e184f4c7a41c1e95650bf9c385263637f22d61d984a08d68f24b8f64531f5f",
+    "sources/w12-startup-rt-a-queue-peek-write-done/queue_peek_write_done.cpp": "4b47dd0f953ec740088f85681ce956075b2e9b98c84c6b0e7eefbd005fbfb643",
+    "sources/w12-startup-rt-a-set-tlb-entry/set_tlb_entry.S": "2fa6013c54fb7fbb8d36e17fc65695c5b7645f8e55d5054281e24db14be13b86",
+    "sources/w12-startup-rt-a-sif-m-init-check/sif_m_init_check.cpp": "78ed2c9fa5838168a0d232b61fd49b99df282325d29699e8867390dfaa9c5863",
+    "sources/w12-startup-rt-a-sync-dcache/sync_dcache.cpp": "e218f811dabd5abb5ee25469959dbac618bad97a8d970cd2834edc313e544b2b",
+    "sources/w12-startup-rt-a-throw-type-match-rtti-2/throw_type_match_rtti_2.cpp": "27a40f6d7626c11fe9aa93642aa42fe9543b212c1724baafbbc85a6ec6e1a826",
     "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
     "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
     "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
@@ -75254,6 +75277,318 @@
       "sha256": "e9e5d1d7831df4c76ddebfb66c2e74dc4f60be9b38ac4346112c9650f7f09c12",
       "source": "sources/w12-particle-data-a-heal-pulse/heal_state.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5149,
+      "kind": "independently_authored_source",
+      "object_name": "adjust_time.o",
+      "profile": "authored_cpp",
+      "sha256": "cfc1aa89871bc66ee77f215f7b5a7b10454e6f5edf149de39180ea0926bfd0d7",
+      "source": "sources/w12-startup-rt-a-adjust-time/adjust_time.cpp",
+      "emitted_functions": [
+        {
+          "name": "AdjustTime",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5150,
+      "kind": "independently_authored_source",
+      "object_name": "amx_exec.o",
+      "profile": "authored_cpp",
+      "sha256": "4c8eed7d1b51bce9b71c1e272129ad3f287bb71a8bb6ea446f8b0d6063282d78",
+      "source": "sources/w12-startup-rt-a-amx-exec/amx_exec.cpp",
+      "emitted_functions": [
+        {
+          "name": "amx_Exec",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5151,
+      "kind": "independently_authored_source",
+      "object_name": "atanf.o",
+      "profile": "authored_cpp",
+      "sha256": "3045d60d7860f8eeb7c82c0d178b968b98c4bfd9c8e603e15cc55e02a9c349c8",
+      "source": "sources/w12-startup-rt-a-atanf/atanf.cpp",
+      "emitted_functions": [
+        {
+          "name": "atanf",
+          "compiled_body_bytes": 648
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5152,
+      "kind": "independently_authored_source",
+      "object_name": "cosf.o",
+      "profile": "authored_cpp",
+      "sha256": "10e28052a7ec228797e344f45414ebb8e1225ee76ea10c4d0bedcc40f6b73c5c",
+      "source": "sources/w12-startup-rt-a-cosf/cosf.cpp",
+      "emitted_functions": [
+        {
+          "name": "cosf",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5153,
+      "kind": "independently_authored_source",
+      "object_name": "ctype_table.o",
+      "profile": "authored_cpp",
+      "sha256": "591f8da0f9d303993de720d4ef98b837a6752b3e5518366dd95a99b7e0c8ee5b",
+      "source": "sources/w12-startup-rt-a-ctype-table/ctype_table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5154,
+      "kind": "independently_authored_source",
+      "object_name": "dpdiv.o",
+      "profile": "authored_cpp",
+      "sha256": "8d8cec10ae956ca8a4427e5d4927232140100049e39a963d3a599b4df595e887",
+      "source": "sources/w12-startup-rt-a-dpdiv/dpdiv.cpp",
+      "emitted_functions": [
+        {
+          "name": "dpdiv",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5155,
+      "kind": "independently_authored_source",
+      "object_name": "dwarf_reg_size_flag.o",
+      "profile": "authored_cpp",
+      "sha256": "c158ac2fda23ec7b4bf9e92ac03d904bd87f48874562f7a9f8217f68a5ac4cc6",
+      "source": "sources/w12-startup-rt-a-dwarf-reg-size-flag/dwarf_reg_size_flag.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5156,
+      "kind": "independently_authored_source",
+      "object_name": "ee_retbuf_sel.o",
+      "profile": "authored_cpp",
+      "sha256": "7a6931cf4a97f51f648f3239ec431f33dc720b8c20c5a6fc6821745c3c17fa4a",
+      "source": "sources/w12-startup-rt-a-ee-retbuf-sel/ee_retbuf_sel.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5157,
+      "kind": "independently_authored_source",
+      "object_name": "eh_context_initialize.o",
+      "profile": "authored_cpp",
+      "sha256": "723897d1892091a364a79b33aa91b9295e5fe9ee5a7c307013fe82c2656b2326",
+      "source": "sources/w12-startup-rt-a-eh-context-initialize/eh_context_initialize.cpp",
+      "emitted_functions": [
+        {
+          "name": "eh_context_initialize",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5158,
+      "kind": "independently_authored_source",
+      "object_name": "exit_stub.o",
+      "profile": "authored_entry_asm",
+      "sha256": "4cf9474058369e4129027f37f61a3a8295bc16975ea65e53fecfae66e7eff2b6",
+      "source": "sources/w12-startup-rt-a-exit-stub/exit_stub.S",
+      "emitted_functions": [
+        {
+          "name": "_Exit",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5159,
+      "kind": "independently_authored_source",
+      "object_name": "free_r.o",
+      "profile": "authored_cpp",
+      "sha256": "8a24d2352d9440670908fc1268e31a832ffb63830028b51b758bc36d3e642851",
+      "source": "sources/w12-startup-rt-a-free-r/free_r.cpp",
+      "emitted_functions": [
+        {
+          "name": "_free_r",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5160,
+      "kind": "independently_authored_source",
+      "object_name": "get_eh_context_word.o",
+      "profile": "authored_cpp",
+      "sha256": "6604c3bcae56ec368dde4ded19f4b6f658d2b4727a621a94f291d08e53e8abbb",
+      "source": "sources/w12-startup-rt-a-get-eh-context-word/get_eh_context_word.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5161,
+      "kind": "independently_authored_source",
+      "object_name": "initialise_iop_driver.o",
+      "profile": "authored_cpp",
+      "sha256": "839a6f52529d983b99e5bf3789ba0644bce7a42ea902c598f65339f5d6bd5511",
+      "source": "sources/w12-startup-rt-a-initialise-iop-driver/initialise_iop_driver.cpp",
+      "emitted_functions": [
+        {
+          "name": "InitialiseIopDriver",
+          "compiled_body_bytes": 220
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5162,
+      "kind": "independently_authored_source",
+      "object_name": "is_event_modifier.o",
+      "profile": "authored_cpp",
+      "sha256": "6a082a926c07bdf7d6a86dbfaefeafdad5ac2836a0467bfa47a7fdf5002281bd",
+      "source": "sources/w12-startup-rt-a-is-event-modifier/is_event_modifier.cpp",
+      "emitted_functions": [
+        {
+          "name": "IsEventModifier",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5163,
+      "kind": "independently_authored_source",
+      "object_name": "k_exit_tlb_handler.o",
+      "profile": "authored_entry_asm",
+      "sha256": "0859e2088557970f27e842b1214ea5b75591a1941b9274a6eb27f390e821e592",
+      "source": "sources/w12-startup-rt-a-k-exit-tlb-handler/k_exit_tlb_handler.S",
+      "emitted_functions": [
+        {
+          "name": "_kExitTLBHandler",
+          "compiled_body_bytes": 244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5164,
+      "kind": "independently_authored_source",
+      "object_name": "local_data.o",
+      "profile": "authored_cpp",
+      "sha256": "f9667a78be693d6efd5f14b0d6d0cfcb11b24fb48db9b60eb49528c92bddd107",
+      "source": "sources/w12-startup-rt-a-local-data/local_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5165,
+      "kind": "independently_authored_source",
+      "object_name": "malloc_r.o",
+      "profile": "authored_cpp",
+      "sha256": "0422f3bf4b5e740e5c8c50c4203975d3dcf5e97c52ee9dab3d8792e3a81f531d",
+      "source": "sources/w12-startup-rt-a-malloc-r/malloc_r.cpp",
+      "emitted_functions": [
+        {
+          "name": "_malloc_r",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5166,
+      "kind": "independently_authored_source",
+      "object_name": "modifier_codes.o",
+      "profile": "authored_cpp",
+      "sha256": "e8e184f4c7a41c1e95650bf9c385263637f22d61d984a08d68f24b8f64531f5f",
+      "source": "sources/w12-startup-rt-a-modifier-codes/modifier_codes.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 5167,
+      "kind": "independently_authored_source",
+      "object_name": "queue_peek_write_done.o",
+      "profile": "authored_cpp",
+      "sha256": "4b47dd0f953ec740088f85681ce956075b2e9b98c84c6b0e7eefbd005fbfb643",
+      "source": "sources/w12-startup-rt-a-queue-peek-write-done/queue_peek_write_done.cpp",
+      "emitted_functions": [
+        {
+          "name": "QueuePeekWriteDone",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5168,
+      "kind": "independently_authored_source",
+      "object_name": "set_tlb_entry.o",
+      "profile": "authored_entry_asm",
+      "sha256": "2fa6013c54fb7fbb8d36e17fc65695c5b7645f8e55d5054281e24db14be13b86",
+      "source": "sources/w12-startup-rt-a-set-tlb-entry/set_tlb_entry.S",
+      "emitted_functions": [
+        {
+          "name": "_SetTLBEntry",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5169,
+      "kind": "independently_authored_source",
+      "object_name": "sif_m_init_check.o",
+      "profile": "authored_cpp",
+      "sha256": "78ed2c9fa5838168a0d232b61fd49b99df282325d29699e8867390dfaa9c5863",
+      "source": "sources/w12-startup-rt-a-sif-m-init-check/sif_m_init_check.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5170,
+      "kind": "independently_authored_source",
+      "object_name": "sync_dcache.o",
+      "profile": "authored_cpp",
+      "sha256": "e218f811dabd5abb5ee25469959dbac618bad97a8d970cd2834edc313e544b2b",
+      "source": "sources/w12-startup-rt-a-sync-dcache/sync_dcache.cpp",
+      "emitted_functions": [
+        {
+          "name": "SyncDCache",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5171,
+      "kind": "independently_authored_source",
+      "object_name": "throw_type_match_rtti_2.o",
+      "profile": "authored_cpp",
+      "sha256": "27a40f6d7626c11fe9aa93642aa42fe9543b212c1724baafbbc85a6ec6e1a826",
+      "source": "sources/w12-startup-rt-a-throw-type-match-rtti-2/throw_type_match_rtti_2.cpp",
+      "emitted_functions": [
+        {
+          "name": "__throw_type_match_rtti_2",
+          "compiled_body_bytes": 1636
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -75353,7 +75688,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "305a1d6b728e456b7f322fa57768782f134eeb47a8daa0715390d7e606795047",
+  "snapshot_sha256": "040aae0bb30cd2e3000adbb4f4d8d411474138c047e8a4c35fb1cdb50fb00731",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

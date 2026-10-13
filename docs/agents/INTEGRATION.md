@@ -9075,3 +9075,23 @@ Closed: `__12ParticlePropG6Point3i`, `batParams`, `healColor`, `healPulse`
 
 Opened: none
 - 2026-10-13 09:27 CDT — agents/w12-particle-data-a — 1001 unresolved imports
+
+## agents/w12-startup-rt-a
+
+Merged (merge commit, branch tip `fa82cbf7`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 25 units with fresh `input_order` values 5149 through 5171 (three assembly units use the `authored_entry_asm` profile, the rest `authored_cpp`; entries come from the branch's `w12-startup-rt-a-plan-entries.json`, hashes re-checked here). All committed checks run here and pass: 20 host contracts or checks run natively; the object checks run against objects compiled here with the repo EE toolchain and the plan flags; `dpdiv` links the authored `__unpack_d`/`__pack_d`. `SyncDCache`, `QueuePeekWriteDone` and `InitialiseIopDriver` need `-DNORRATH_HOST_CONTRACT`, as their headers say. The worker's private interpreter comparisons were not re-verified. The two shared check headers and the unselected units' files were added to the snapshot file list (the checker requires every source file recorded). Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5170 authored inputs, 3954 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (files stay in the snapshot, with no plan entry): `w12-startup-rt-a-throw` (`__throw`), whose notes state it does not match the original at the handler entry (`$v0`, `$ra` and argument registers differ; the equivalent `w10-startup-a-throw` was rejected for the same gap), and `w12-startup-rt-a-eh-frame-begin` (`__EH_FRAME_BEGIN__`), whose notes say its zero-length object in the `.eh_frame` input section crashes `ld -r` with a BFD assertion once another object relocates against it, and the replacement lives in a non-standard section that needs a linker-script ordering nobody has reviewed. Both names stay unresolved. The linker-defined symbols (`_gp`, `_fbss`, `_end`, `_bssend`, `_srsctorsstart`, `_srsctorsend`) stay unresolved by design. `_malloc_r`, `_free_r` and `amx_Exec` are name providers that forward to existing authored functions; the notes record a defect in the `amx_Exec` forward (the authored executor keeps opcode numbers in cells and stores its own dispatch table, and one count loop differs), which belongs to the script-amx owner.
+
+The notes' count (21 closed, 17 opened, 827 to 823) does not apply: with `__throw` and `__EH_FRAME_BEGIN__` left out, 20 close here and 15 open.
+
+| | |
+|---|---|
+| Before | 1001 |
+| After | 996 |
+| Closed | 20 |
+| Opened | 15 |
+
+Closed: `AdjustTime`, `InitialiseIopDriver`, `IsEventModifier`, `LocalData`, `QueuePeekWriteDone`, `SyncDCache`, `_Exit`, `_SetTLBEntry`, `__throw_type_match_rtti_2`, `_ctype_`, `_free_r`, `_kExitTLBHandler`, `_malloc_r`, `_sceSifMInitCheck`, `amx_Exec`, `atanf`, `cosf`, `dpdiv`, `ee_retbuf_sel`, `get_eh_context`
+
+Opened: `__dynamic_cast_2`, `__kernel_cosf`, `__kernel_sinf`, `__tf16__attr_type_info`, `__tf16__func_type_info`, `__tfv`, `_sceSDC`, `addhour`, `convertfrombcd`, `converttobcd`, `eh_context_static`, `init_reg_size_table`, `norrath_ee_exception_frame`, `subhour`, `upcast__C16__user_type_infoRC9type_infoPvPPv`
+- 2026-10-13 09:40 CDT — agents/w12-startup-rt-a — 996 unresolved imports
