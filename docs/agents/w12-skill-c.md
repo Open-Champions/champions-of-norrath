@@ -66,3 +66,9 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `exper
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__17SkillResistPoisoni` (8 bytes), SHA-256 `438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e`; add the source hash to `files` and let the integrator assign order.
 
 - Inferred: `getSkillPointCost__17SkillResistPoisoni` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
+
+- `getLevelRequirement__17SkillResistPoisoni` at `0x00313d18` has an 8-byte extent and returns the low 32 bits shifted left by two. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-resist-poison-level-requirement/`. No byte match or game execution is claimed.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__17SkillResistPoisoni` (8 bytes), SHA-256 `8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf`; add the source hash to `files` and let the integrator assign order.
+
+- Inferred: `getLevelRequirement__17SkillResistPoisoni` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
