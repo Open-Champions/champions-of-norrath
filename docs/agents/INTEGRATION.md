@@ -9577,3 +9577,19 @@ Closed: `canCast__16SkillFireWeaponsP8Creature`, `canCast__16SkillGroundPoundP8C
 
 Opened: `__12GlowingShaftG6Point3iiii`, `__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`, `__16SpellFireWeaponsiP8CreatureP5Skill`, `__17SpellConvertEnemyiP8CreatureP5Skill`, `__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__17SpellUndeadShieldiP8CreatureP5Skill`, `__18SpellAncestralCalliP8CreatureP5Skill`, `__18SpellConvertUndeadiP8CreatureP5Skill`, `__19BlindingLightEffectG6Point3iP8CreatureP5Skill`, `__21SpellLightningWeaponsiP8CreatureP5Skill`, `__22SpellRangerCriticalHitiP8CreatureP5Skill`, `__8HolyBoltG6Point3iiP8CreatureP5Skill`, `__8LostSoulG6Point3T1iP10_vagHeaderii`, `__8SkelightG6Point3sPPcci`, `__9SpellBashiP8CreatureP5Skill`, `__9SpellRootiP8CreatureP5Skill`, `__tf16SpellFireWeapons`, `__tf17SpellDiseaseTrail`, `__tf17SpellUndeadShield`, `__tf18SpellAncestralCall`, `__tf18SpellHammerOfWrath`, `__tf21SpellLightningWeapons`, `__tf22SpellRangerCriticalHit`, `_vt$18SpellHammerOfWrath`, `_vt$19SpellSummonSkeleton`, `gameRadialDamage__FP10GameObjectG6Point3iffiii`, `skelightName`, `skelightParams`, `summonskeletonParticle1`, `summonskeletonParticle2`
 - 2026-10-13 16:16 CDT — agents/w13-skill-cast-b — 1169 unresolved imports
+
+## agents/w13-skill-ramp-a
+
+Merged (merge commit, branch tip `aeca344e`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 5755 through 5783, each with a committed check that builds and passes here (29 host contracts that fill a guarded buffer with a sentinel and compare every byte against an independent bit-pattern table). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5782 authored inputs, 4465 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1169 |
+| After | 1140 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `initRamps__10SkillDodge`, `initRamps__10SkillShock`, `initRamps__11SkillCharge`, `initRamps__12SkillArchery`, `initRamps__12SkillBlessed`, `initRamps__12SkillCyclone`, `initRamps__12SkillHealing`, `initRamps__12SkillLifeTap`, `initRamps__12SkillRiposte`, `initRamps__13SkillDarkness`, `initRamps__13SkillEntangle`, `initRamps__14SkillColdArrow`, `initRamps__14SkillFireArrow`, `initRamps__14SkillFireStorm`, `initRamps__14SkillHarmTouch`, `initRamps__14SkillMultiFire`, `initRamps__15SkillClericRoot`, `initRamps__15SkillConeOfFire`, `initRamps__15SkillFireFlares`, `initRamps__15SkillFrostStorm`, `initRamps__15SkillHolyShield`, `initRamps__15SkillHolyStrike`, `initRamps__15SkillPoisonRain`, `initRamps__15SkillShieldBash`, `initRamps__15SkillWizardBeam`, `initRamps__16SkillColdWeapons`, `initRamps__16SkillConeOfFrost`, `initRamps__16SkillCriticalHit`, `initRamps__16SkillDiseaseBolt`
+
+Opened: none
+- 2026-10-13 16:20 CDT — agents/w13-skill-ramp-a — 1140 unresolved imports
