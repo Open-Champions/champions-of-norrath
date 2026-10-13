@@ -24,6 +24,5 @@ int main() {
     std::memcpy(camera + 144, &other, 4);
     std::memcpy(camera + 136, &other, 4);
     expect(GetZoomDistance__6Camera(camera) == 0.0f, "neighbours are not read");
-    expect(camera[141] == 0 && camera[139] == 0x11 || true, "no-op");
     return failures ? 1 : 0;
 }
