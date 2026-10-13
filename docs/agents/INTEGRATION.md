@@ -9593,3 +9593,19 @@ Closed: `initRamps__10SkillDodge`, `initRamps__10SkillShock`, `initRamps__11Skil
 
 Opened: none
 - 2026-10-13 16:20 CDT — agents/w13-skill-ramp-a — 1140 unresolved imports
+
+## agents/w13-skill-ramp-b
+
+Merged (merge commit, branch tip `4a21b04f`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 5784 through 5812, each with a committed check that builds and passes here (29 host contracts (ramp initialisers against an independent bit-pattern table; the evaluators against computed expectations)). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5811 authored inputs, 4494 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1140 |
+| After | 1111 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `evaluateRampAtRank__5Skillii`, `evaluateRampAtRank__5SkilliiP10GameObject`, `evaluateRampAtRank__5SkilliiP8ListHead`, `getRampDamage__5SkilliifiPiT5`, `initRamps__16SkillFireWeapons`, `initRamps__16SkillGroundPound`, `initRamps__16SkillPoisonArrow`, `initRamps__16SkillShockOfFire`, `initRamps__17SkillConvertEnemy`, `initRamps__17SkillDiseaseTrail`, `initRamps__17SkillExplodeArrow`, `initRamps__17SkillMinorHealing`, `initRamps__17SkillRegeneration`, `initRamps__17SkillShockOfFrost`, `initRamps__17SkillUndeadShield`, `initRamps__18SkillAncestralCall`, `initRamps__18SkillBlindingLight`, `initRamps__18SkillConvertUndead`, `initRamps__18SkillDiseaseShield`, `initRamps__18SkillDismissUndead`, `initRamps__18SkillHammerOfWrath`, `initRamps__18SkillRepulseUndead`, `initRamps__19SkillSummonSkeleton`, `initRamps__21SkillLightningWeapons`, `initRamps__22SkillRangerCriticalHit`, `initRamps__9SkillBash`, `initRamps__9SkillRoot`
+
+Opened: none
+- 2026-10-13 16:25 CDT — agents/w13-skill-ramp-b — 1111 unresolved imports
