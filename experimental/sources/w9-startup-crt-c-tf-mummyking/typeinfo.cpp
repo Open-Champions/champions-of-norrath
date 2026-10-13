@@ -1,4 +1,4 @@
-// Observed __tf9MummyKing at 0x00316040, 76 bytes. The 12-byte typeinfo object is __ti9MummyKing
+// Observed __tf9MummyKing at 0x00316040, 80 bytes. The 12-byte typeinfo object is __ti9MummyKing
 // at 0x008eb618; it is zero in the file image and is defined here. Its first word gates
 // initialization. A zero word calls __tf8Creature, then __rtti_si with this object, the
 // class-name text "9MummyKing", and the base typeinfo __ti8Creature. A nonzero first word
