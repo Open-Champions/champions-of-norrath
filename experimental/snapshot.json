@@ -70680,6 +70680,52 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-actor-spell-c-start-3web/start.cpp"
+    },
+    {
+      "input_order": 5530,
+      "component": "w13-m-startup-data-a-sce-dcache-sweep",
+      "object_name": "w13msd_sce_dcache.o",
+      "private_object_sha256": "b2dc14776d3894b26ebfe358d9ee362d75032ca9606ee86a616a96c00ca3f0a3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "_sceSDC"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp"
+    },
+    {
+      "input_order": 5531,
+      "component": "w13-m-startup-data-a-eh-context-static",
+      "object_name": "w13msd_eh_context_static.o",
+      "private_object_sha256": "fcebef2d1431166148e6abec982ced1627e76fe75548c80d36455a20021a001e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "eh_context_static"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp"
+    },
+    {
+      "input_order": 5532,
+      "component": "w13-m-startup-data-a-config-rand-words",
+      "object_name": "w13msd_config_rand_words.o",
+      "private_object_sha256": "fa540ec3d241ada2729b9e9243e81bf90b11356987a931c790296cb54b36f304",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp"
+    },
+    {
+      "input_order": 5533,
+      "component": "w13-m-startup-data-a-ee-exception-frame",
+      "object_name": "w13msd_ee_exception_frame.o",
+      "private_object_sha256": "145e94e81db785f9fde8a9b78973580a702ef57ba64d1209f017804a75479429",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp"
     }
   ],
   "drafts": [
@@ -78471,6 +78517,14 @@
     "sources/w12-wnd-b-wnd-onkeyup/onkeyup.cpp": "5c25e17a9b270a16383a58a6db2e3e791e516fe40ebc45b66ae3749274a91c2c",
     "sources/w12-wnd-b-wnd-onmessage/host_check.cpp": "59c0f0ee8cda030cc6859e35884811ee64ba8c1771fb31ad903f4d7fbfeee470",
     "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp": "d10f92085f941ee49a2c97f3bf85e55bf2290d6048591393c0df6df69ed3ff93",
+    "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
+    "sources/w13-m-startup-data-a-config-rand-words/host_check.cpp": "1be10655b1d05695dcd0b6a2a755bc681c1c0677071f08455ddf4f10fc1754c9",
+    "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
+    "sources/w13-m-startup-data-a-ee-exception-frame/host_check.cpp": "cdea2089de9bbc4bdc12730fb611500db8b9ec068b81f83f1dada8b8d3986ef9",
+    "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
+    "sources/w13-m-startup-data-a-eh-context-static/host_contract.cpp": "44c2c3897b8f92120f764b626a6d201bee9f6e6f091371649d8ccf499b63b748",
+    "sources/w13-m-startup-data-a-sce-dcache-sweep/host_contract.cpp": "c521b299e1177edbd3f3b9883b41fd8ba55a888397bde1014827ee5e63e25310",
+    "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -82839,11 +82893,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5530,
-    "authored_default_inputs": 5528,
+    "selected_inputs": 5534,
+    "authored_default_inputs": 5532,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4242,
-    "compiled_body_bytes_from_accepted_inputs": 1842032,
+    "emitted_function_definitions_including_helpers": 4244,
+    "compiled_body_bytes_from_accepted_inputs": 1842268,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -82856,7 +82910,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5217
+    "package_selected_inputs": 5221
   },
   "startup_implementations": [
     {
@@ -164691,6 +164745,64 @@
       ],
       "host_files": [
         "sources/w12-actor-spell-c-start-3web/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-startup-data-a",
+      "source": "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp",
+      "source_sha256": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
+      "object_sha256": "b2dc14776d3894b26ebfe358d9ee362d75032ca9606ee86a616a96c00ca3f0a3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "_sceSDC"
+        }
+      ],
+      "host_files": [
+        "sources/w13-m-startup-data-a-sce-dcache-sweep/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-startup-data-a",
+      "source": "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp",
+      "source_sha256": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
+      "object_sha256": "fcebef2d1431166148e6abec982ced1627e76fe75548c80d36455a20021a001e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "eh_context_static"
+        }
+      ],
+      "host_files": [
+        "sources/w13-m-startup-data-a-eh-context-static/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-startup-data-a",
+      "source": "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp",
+      "source_sha256": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
+      "object_sha256": "fa540ec3d241ada2729b9e9243e81bf90b11356987a931c790296cb54b36f304",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-startup-data-a-config-rand-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-m-startup-data-a",
+      "source": "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp",
+      "source_sha256": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
+      "object_sha256": "145e94e81db785f9fde8a9b78973580a702ef57ba64d1209f017804a75479429",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w13-m-startup-data-a-ee-exception-frame/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

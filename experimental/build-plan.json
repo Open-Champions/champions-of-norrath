@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5528,
+  "default_authored_inputs": 5532,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4345,6 +4345,10 @@
     "sources/w12-wnd-b-vt-wnd/vtable.cpp": "e7f1c42d8d09545f7438820944cbd814039775a9ed1888d8039f45bb084bac0a",
     "sources/w12-wnd-b-wnd-onkeyup/onkeyup.cpp": "5c25e17a9b270a16383a58a6db2e3e791e516fe40ebc45b66ae3749274a91c2c",
     "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp": "d10f92085f941ee49a2c97f3bf85e55bf2290d6048591393c0df6df69ed3ff93",
+    "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
+    "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
+    "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
+    "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -81003,6 +81007,56 @@
           "name": "start__3WebG6Point3T1i"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5530,
+      "kind": "independently_authored_source",
+      "object_name": "w13msd_sce_dcache.o",
+      "profile": "authored_cpp",
+      "sha256": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
+      "source": "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "_sceSDC"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5531,
+      "kind": "independently_authored_source",
+      "object_name": "w13msd_eh_context_static.o",
+      "profile": "authored_cpp",
+      "sha256": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
+      "source": "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "eh_context_static"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5532,
+      "kind": "independently_authored_source",
+      "object_name": "w13msd_config_rand_words.o",
+      "profile": "authored_cpp",
+      "sha256": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
+      "source": "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5533,
+      "kind": "independently_authored_source",
+      "object_name": "w13msd_ee_exception_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
+      "source": "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -81102,7 +81156,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "4c9f98a0c22076fd940be17c656b8d0376d430522bc8669c82d8899fc4447a1b",
+  "snapshot_sha256": "efc8d47c7ad9d24e7f06bdeb9817fa0375c0ba5cfc29871ea0c3c628886dd267",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

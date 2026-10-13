@@ -9370,3 +9370,21 @@ At `e189b249` (the shared branch tip) the checks were re-run before touching any
 
 At `0f1a1ca6` (shared branch tip, no new commits on origin) the checks were re-run: 214 tool tests passed, `check_source_snapshot.py` passed (11672 files, 5528 authored inputs), and the full default partial build (toolchain `work/toolchains/ee`, no Newlib) gave 5528 source compilations, one link, 4240 function bodies, zero COMMON and **1168** unresolved imports, matching the recorded count. The twelve remaining `agents/*` tips are unchanged from the standing rejections above (all more than three hours old), so nothing was eligible and nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker packages.
 - 2026-10-13 12:40 CDT — third pass, no branches eligible, nothing merged — 1168 unresolved imports
+
+## agents/w13-m-startup-data-a
+
+Merged (merge commit, branch tip `a21a2a73`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 4 of the branch's units with fresh `input_order` values 5530 through 5533: `w13-m-startup-data-a-sce-dcache-sweep` (`_sceSDC`, 160 bytes), `w13-m-startup-data-a-eh-context-static` (`eh_context_static`, 76 bytes), `w13-m-startup-data-a-config-rand-words` (`gConfig`, `iRandState`, `localRandState`, data) and `w13-m-startup-data-a-ee-exception-frame` (`norrath_ee_exception_frame`, data). All four committed host checks build and exit 0 here. The worker's mutation check of `_sceSDC` was not re-run, and nothing was executed on the EE; compiled sizes are not image sizes and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5532 authored inputs, 4242 function bodies, zero COMMON.
+
+NOT selected (sources stay as they were): the notes also count eight names as closed by existing, earlier-wave sources (`__EH_FRAME_BEGIN__`, three `norrath_archive_vblank_*` views, twelve libpad/libmtap views, `norrath_loader_failure_word_view`). Those units stay unplanned for the reasons earlier entries recorded: `w12-startup-rt-a-eh-frame-begin` breaks `ld -r` and needs unreviewed linker ordering, `sony-cd-vblank-views` redefines names cd-archive already defines, `simloop-services-pad-mtap-state` is data-only with no host check, and `level-anim-load-loader-failure-word` is an absolute-symbol alias forbidden by PORTABLE_BUILD. The notes' 23 closed therefore does not reproduce; 6 close here (1168 to 1162).
+
+| | |
+|---|---|
+| Before | 1168 |
+| After | 1162 |
+| Closed | 6 |
+| Opened | 0 |
+
+Closed: `_sceSDC`, `eh_context_static`, `gConfig`, `iRandState`, `localRandState`, `norrath_ee_exception_frame`
+
+Opened: none
+- 2026-10-13 14:54 CDT — agents/w13-m-startup-data-a — 1162 unresolved imports
