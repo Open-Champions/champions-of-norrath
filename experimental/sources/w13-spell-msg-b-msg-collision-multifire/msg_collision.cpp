@@ -28,7 +28,7 @@ int gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb(void* a, vo
 void terminate__19MultiFireProjectilei(void* self, int hit);
 
 namespace {
-int round_half_away(float v) {
+static int round_half_away(float v) {
     if (0.0f <= v) return static_cast<int>(v + 0.5f);
     return static_cast<int>(v - 0.5f);
 }
