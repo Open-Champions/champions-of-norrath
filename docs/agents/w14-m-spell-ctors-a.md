@@ -19,6 +19,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-ctor-hate-effect` | `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill` | `0x001ff6f8`, 264 bytes | 260 |
 | `w14-m-spell-ctors-a-ctor-cone-of-frost` | `__16SpellConeOfFrostiP8CreatureP5Skill` | `0x002af390`, 376 bytes | 328 |
 | `w14-m-spell-ctors-a-ctor-critical-hit` | `__16SpellCriticalHitiP8CreatureP5Skill` | `0x002ad3f8`, 304 bytes | 288 |
+| `w14-m-spell-ctors-a-ctor-minor-healing` | `__17SpellMinorHealingiP8CreatureP5Skill` | `0x002a7068`, 340 bytes | 352 |
 
 ## Observed shape shared by the spell constructors
 
@@ -79,11 +80,24 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   comparison: 120 scenarios (6 kinds, 5 adjustments, 4 seeds), 0 mismatches. Mutation (call level 1 instead of 2)
   gives 120 of 120 mismatches.
 
+- **Minor healing.** `__17SpellMinorHealingiP8CreatureP5Skill` (`0x002a7068`). The Spell base; then
+  `lumpFindResource("fx.lmp", "spel_he_heal.anm")` and `soundPlaySequence` with the creature pointer and volume 1.0;
+  `blockAlloc(92)` and, when it is non-null, `__12GlowingShaftG6Point3iiii` with a copy of the creature position and
+  90, 250, 200, 100; then the skill's secondary call with level 0. The float at +32 is
+  `(player[0xb0 + w] * K_a) * (result * K_b)`, where `w` is the creature word at +960 times 23984. The constants are
+  unnamed and written as bit patterns (`0x3c888888`, `0x3c23d70a`). The table is read at `0x004086b0 + w`, which
+  lies in `player` at offset 0xb0; this offset is observed, the table's own name is unknown.
+  **Finding:** the three-operand R5900 `mult rd,rs,rt` also writes its low word into `rd`. My first reading treated
+  the result as discarded, which failed the paired comparison (200 mismatches on a mutation check, 120 on the
+  first pass); the source now multiplies by 23984 as the image does. Host contract passes (blocks absent and present).
+  Paired comparison: 288 scenarios (4 kinds, block present or absent, 6 indexes including two that wrap the 32-bit
+  product, 2 seeds, 3 call results) with 0 mismatches. Mutation (23985 for 23984) gives 200 of 288.
+
 ## Imports closed
 
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
 `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`,
-`__16SpellCriticalHitiP8CreatureP5Skill`.
+`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`.
 
 ## Imports opened
 
