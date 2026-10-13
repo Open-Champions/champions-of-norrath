@@ -1,5 +1,5 @@
 #include "../w9-rtti-vtables-entities-c-bytes/bytes.hpp"
-// Observed setState__6Cthului at 0x281b20, 1272 bytes. The animation state is at object+288 and the word at
+// Observed setState__6Cthului at 0x281b20, 1260 bytes. The animation state is at object+288 and the word at
 // +36 points to a header table T. The requested state lives in a stack word. The word at +964 selects between
 // two animation sets in several states below ("flag").
 //  1. setStateProcessing__8CreaturePi(object, &state); a nonzero result returns at once.
