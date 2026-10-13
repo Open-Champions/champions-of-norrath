@@ -20,3 +20,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `game-line-init-path-state` | `gameLineInitPathState__FP17gameLinePathStatePcP6Point3` | 0x279b58 | 88 |
 | `find-tag-float` | `findTagFloat__10GameObjectPci` | 0x1410a0 | 328 |
 | `get-smart-random-destination` | `getSmartRandomDestination__8Creaturei` | 0x10d250 | 464 |
+| `anim-map-animation-sounds` | `animMapAnimationSounds__FP15AnimationHeader` | 0x15fd98 | 624 |
