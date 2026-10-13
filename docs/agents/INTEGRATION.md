@@ -4903,6 +4903,36 @@ Opened: `action`, `actor`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`,
 `netIsModem__Fv`, `netSendPacket__FiiPUci`, `nmActors`, `readcount`,
 `resourceFrame`, `timeout`, `writecount`
 
+## agents/w9-other-b
+
+Merged (the branch notes carry the five summary sections; the tip was four
+hours old). Twenty-six units with fresh `input_order` values 2517 through
+2542, 25 of them data definitions (memory-card error text pointer, packet
+buffers and counters, environment tables and similar) and one function unit,
+so the function-body count moves by one. The notes list plan entries as
+JSON/prose, so the units were read from the files. All 26 host checks build and
+exit 0 here (26 of 26); for the data units those checks assert sizes and
+initial values only. No game binary or disassembly listing was committed. No
+duplicate definition against `w9-other-a` or earlier packages. 2041 function
+bodies, 2541 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1461 |
+| After | 1437 |
+| Closed | 25 |
+| Opened | 1 |
+
+Closed: `nextNmDeferedCalls`, `nmDeferedCalls`, `nmDirectQWords`, `nullBuff`,
+`numEnvironments`, `p`, `packetbuffer`, `packetshift`, `pnums`,
+`raceStrings`, `recallEnter`, `recallPos`, `scaleScale`,
+`serviceResult__FP8queueCmdPi`, `sortedDir`, `sortedDirCount`,
+`syncRandState`, `syncState`, `t`, `targetObjs`, `targets`, `tempBuffer`,
+`thereIsACutPlayer`, `timeLastTransition`, `unscrambleTable`
+
+Opened: `file`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5255,3 +5285,4 @@ and no startup stage has executed.
 - 2026-10-12 20:16 CDT — `agents/w9-audio` — 1473 unresolved imports
 - 2026-10-12 20:23 CDT — `agents/w9-frontend-c` — 1453 unresolved imports
 - 2026-10-12 20:32 CDT — `agents/w9-other-a` — 1461 unresolved imports
+- 2026-10-12 20:37 CDT — `agents/w9-other-b` — 1437 unresolved imports
