@@ -7212,3 +7212,4 @@ and no startup stage has executed.
 - 2026-10-12 22:35 CDT — `agents/w9-vehicle` — 1324 unresolved imports
 - 2026-10-12 22:38 CDT — `agents/w9-rtti-vtables-entities-c` — 1308 unresolved imports
 - 2026-10-12 22:41 CDT — `agents/w9-ctors-lantern-b` — 1332 unresolved imports
+- 2026-10-12 22:43 CDT — baseline re-check and rejection notes (no package) — 1332 unresolved imports
