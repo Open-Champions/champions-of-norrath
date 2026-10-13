@@ -72,6 +72,18 @@ inline unsigned call_entry(unsigned char* o, unsigned tableOffset, unsigned long
 #endif
 }
 
+// Same, for a table whose address is the word at tableWordOffset instead of +72.
+inline unsigned call_entry_from(unsigned char* o, unsigned tableWordOffset, unsigned tableOffset, unsigned long a1, unsigned long a2) {
+    unsigned char* e = from_word(word(o, tableWordOffset)) + tableOffset;
+    unsigned char* adjusted = o + *reinterpret_cast<short*>(e);
+    const unsigned fn = *reinterpret_cast<unsigned*>(e + 4);
+#if defined(W10_ACTOR_J_HOST)
+    return w10_actor_j_host_call(fn, adjusted, 2, a1, a2);
+#else
+    return reinterpret_cast<unsigned (*)(void*, unsigned long, unsigned long)>(static_cast<__UINTPTR_TYPE__>(fn))(adjusted, a1, a2);
+#endif
+}
+
 // A random component in [-1, 1): twice (eRand * 2^-16) minus one. eRand must be supplied.
 template <class Rand>
 inline float unit_component(unsigned char* o, Rand rand) {
