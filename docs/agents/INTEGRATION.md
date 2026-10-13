@@ -9524,3 +9524,8 @@ Closed: `__tf15SkillPoisonRain`, `__tf15SkillShieldBash`, `__tf15SkillWizardBeam
 
 Opened: none
 - 2026-10-13 15:56 CDT — agents/w13-m-skill-tf-a — 1219 unresolved imports
+
+## agents/w13-m-spell-dtor-a (rejected)
+
+Not merged (branch tip `3701a6db`; the notes have the status, closed, not-closed, referenced-imports, plan-entry, checks, never-executed and unknown sections). It adds 26 spell destructor units and a shared header, and none of the 26 has a committed check: the notes' evidence is the private R5900 paired run (36 scenarios per unit), the worker's hand mutations and a private link check, none of which can be repeated from the repository. A destructor unit that cannot fail in the repository's own checks is a function with no test that could fail, so nothing was merged, planned or selected. No game code was changed. If the owner wants the units, each needs a committed host contract (call log against stubs for the base destructor and list release, as `w13-m-spell-dtor-b` does for its units); the rest of the package is untouched. The notes' 26 closed names were not rebuilt. Count unchanged at 1219.
+- 2026-10-13 16:15 CDT — agents/w13-m-spell-dtor-a rejected, nothing merged — 1219 unresolved imports
