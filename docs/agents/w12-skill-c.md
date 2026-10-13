@@ -4,7 +4,7 @@ Branch: `agents/w12-skill-c`. Work is limited to the Skill class method/ramp fam
 
 ## Observed
 
-- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
+- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
 - The authored source defines that symbol and is self-contained. The reviewed EE toolchain compiled it as an 8-byte function. Its generated second instruction uses `or` where the original uses `addu`; this is a semantic reconstruction, not a byte match.
 - The host contract calls it for `INT_MIN`, negative, zero, positive, and `INT_MAX` inputs and checks the returned integer equals the argument. The host check passed. The test and source are `experimental/sources/w12-skill-c-base-point-cost/`.
 - `getLevelRequirement__5Skilli` at `0x00313250` has an 8-byte extent. It returns zero for every integer argument and does not read the receiver. Its reviewed EE compilation succeeded; the host contract passed on seven boundary and representative integer inputs. The test and source are `experimental/sources/w12-skill-c-base-level-requirement/`.
@@ -15,7 +15,7 @@ Branch: `agents/w12-skill-c`. Work is limited to the Skill class method/ramp fam
 
 - The member behaves as a rank-to-point-cost identity mapping for every 32-bit input. No gameplay range or use is established.
 - The base level-requirement method returns zero for all 32-bit inputs. Its gameplay interpretation is not established.
-- The base energy-cost method returns the single-precision value 1.0 for every 32-bit input. Its gameplay interpretation is not established.
+- The base energy-cost method returns the single-precision value 1.0 for every 32-bit input. Its gameplay interpretation is not established. The base rank tweak returns its second integer argument unchanged; effect on the first integer is absent in the observed routine.
 
 ## Unknown
 
@@ -72,3 +72,7 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `exper
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__17SkillResistPoisoni` (8 bytes), SHA-256 `8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf`; add the source hash to `files` and let the integrator assign order.
 
 - Inferred: `getLevelRequirement__17SkillResistPoisoni` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
+
+- `tweekRank__5Skillii` at `0x00313780` has an 8-byte extent and returns its second integer argument unchanged; its receiver and first integer are not read. Reviewed EE compilation emitted 8 bytes; the host test passed the cross-product of six boundary and representative values for both integer arguments. Source/test: `experimental/sources/w12-skill-c-tweek-rank/`.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-tweek-rank/tweek_rank.cpp`, object `tweek_rank.o`, empty `header_closure`, emitted function `tweekRank__5Skillii` (8 bytes), SHA-256 `6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1`; add the source hash to `files` and let the integrator assign order.
