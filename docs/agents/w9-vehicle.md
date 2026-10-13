@@ -138,10 +138,9 @@ What the code shows:
   use as a flag is shown.
 - The exact sign-of-zero and overflow behaviour on the EE FPU for the places
   where the interpreter model differs (see above).
-- The reason `doDriveline` reads `player[-1]`-style data is not relevant here; but
-  `doSteering` and `doThrottle` index `pad` and `player` with the driver index
-  even when it is −1, reading the words just before those arrays; the sources
-  keep that behaviour.
+- `doSteering` and `doThrottle` index `pad` and `player` with the driver index even
+  when it is −1, reading the words just before those arrays; the sources keep that
+  behaviour (the paired runs set those words so the comparison is meaningful).
 
 ## Imports closed (names)
 
