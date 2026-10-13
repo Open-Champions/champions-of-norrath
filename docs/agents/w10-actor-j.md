@@ -126,7 +126,26 @@ The table in this package uses the real symbol name and was compared with the im
 way. A build must keep only one of the two (or alias them); otherwise the NPC constructor and the
 NPC destructor/clone store different table addresses.
 
-OPENED_PLACEHOLDER
+Opened by this package (names the units reference that are neither defined nor already
+unresolved at the shared tip `cc78a45e`; computed from the baseline link of that tip and the
+undefined symbols of the compiled units, 51 names; the two file-local views are my own
+invention of a name for an unnamed bss block):
+
+`ISeeDeadPeople__8Creaturef`, `RandomTeleportSpell__FP10GameObjectP6Point3f`, `_$_13MissileWeapon`, `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__10SpawnMummyG6Point3PcP10GameObject`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__8ListHeadRC8ListHead`, `__9DustDevilG6Point3`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__tf13MissileWeapon`, `_vt$10GameObject`, `_vt$5Mummy`, `_vt$7OniBall`, `_vt$8Creature`, `_vt$9MummyKing`, `alternateEnemyInZone__8Creatureffss`, `animRandomizeTime__FP14AnimationState`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__13MissileWeapon`, `creatureFindLeadYaw__8CreatureP10GameObjectf`, `creatureSlamEffect__8CreatureP8Creaturei`, `enemyInZone2__8Creatureffssfi`, `enemyInZone__8Creaturefs`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `findEnemyLeadPosition__8CreaturefP6Point3`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `initType__5Mummyb`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `modelSetRelightAttachment__FG6Point3`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__13MissileWeapon`, `msg_run__13MissileWeapon`, `mummy_miniboss_name_buffer_7d7e20`, `npc_msg_run_particle_7d7dd0`, `numInRegion__8creatureG6Point3f`, `objectIsCrowded__8CreatureP10GameObjectffi`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `produceGeneralDamage__8CreatureffssiiiiPQ24item11description`, `produceMeleeDamage__8CreaturefiiiiPQ24item11description`, `steerAndRouteToEnemy__8Creature`, `turnToFaceEnemy__8Creature`.
+
+Already unresolved at the tip and still imported here (12 names): `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `__10ProjectileG6Point3P10GameObjectPQ210GameObject11resourceMap`, `__15AnimationState8RC15AnimationState8`, `__tf15SpellConeOfFire`, `blockFree__FPv`, `bossMeterName`, `dropTreasure__8CreatureG6Point3iffffffPc`, `ef1Noise__Fi`, `fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff`, `playedStinger`, `skills`, `terminateSpell__8CreatureRC9type_info`.
+
+The other external names the units reference (111) are defined by the shared tip. The units do not
+redefine any symbol that the tip defines.
+
+Notes on the opened names: `_vt$5Mummy`, `_vt$9MummyKing`, `_vt$7OniBall`, `_vt$8Creature` and
+`_vt$10GameObject` are table data referenced by the destructors, the clone and the OniBall
+constructor; the spell, projectile and effect constructors (`__9FireStormi...`, `__6Sparks...`,
+`__15SpellConeOfFirei...`, `__10MummySnake...`, `__10SpawnMummy...`, `__9DustDevil...`) and the
+Creature/Mummy helpers (`enemyInZone`, `produceGeneralDamage`, `initType__5Mummyb`, `bSpawnMummy`,
+...) belong to the spell, Creature and MummyKing packages; the MissileWeapon methods
+(`msg_run__13MissileWeapon`, `clone__13MissileWeapon`, ...) appear only as slots of
+`_vt$13MissileWeapon`.
 
 ## Build-plan entries needed
 
