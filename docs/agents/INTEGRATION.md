@@ -7913,3 +7913,25 @@ Closed: `_$_11AddParticle`, `_$_11LightEffect`, `_$_5Light`, `__tf11AddParticle`
 
 Opened: `__8ListHeadRC8ListHead`, `_vt$10GameObject`, `drawParticleEmitter__FG6Point3P11ParticleDefP19ParticleEmitterDataisbN25`, `drawTexture__FR6Packetiiiiiiiii`, `waterList`, `waterListBack`, `waterStep`, `waterTexture`
 - 2026-10-13 02:16 CDT — `agents/w10-render-d` — 1206 unresolved imports
+
+## agents/w10-actor-a
+
+Merged (merge commit, branch tip `ded7a93d`, 55 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 30 units (30 function bodies) with fresh `input_order` values 3940
+through 3969. 30 of 30 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, two only without it (warnings). The actor package covers the Ant creature, skill and spell constructors, static-initialiser stubs and two layout-view objects. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3968 authored inputs, 2889 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1206 |
+| After | 1190 |
+| Closed | 30 |
+| Opened | 14 |
+
+Closed: `_$_3Ant`, `_GLOBAL_$I$cast__19SkillSummonSkeletoniP8CreatureG6Point3s`, `_GLOBAL_$I$cast__9SkillRootiP8CreatureG6Point3s`, `_GLOBAL_$I$getCriticalChance__16SkillCriticalHitP6Playeri`, `_GLOBAL_$I$getRankDescription__10SkillShockPUsi`, `_GLOBAL_$I$getRankDescription__11SkillChargePUsi`, `_GLOBAL_$I$getRankDescription__12SkillHealingPUsi`, `_GLOBAL_$I$getRankDescription__12SkillRipostePUsi`, `_GLOBAL_$I$getRankDescription__15SkillHolyShieldPUsi`, `_GLOBAL_$I$getRankDescription__15SkillShieldBashPUsi`, `_GLOBAL_$I$getRankDescription__16SkillGroundPoundPUsi`, `_GLOBAL_$I$getRankDescription__16SkillPoisonArrowPUsi`, `_GLOBAL_$I$getRankDescription__18SkillAncestralCallPUsi`, `_GLOBAL_$I$getRankDescription__22SkillRangerCriticalHitPUsi`, `_GLOBAL_$I$getRankDescription__9SkillBashPUsi`, `_GLOBAL_$I$run__19SpellHornOmenEffectG6Point3s`, `__15AnimationState8RC15AnimationState8`, `__19SpellHornOmenEffectiP8CreatureP5Skill`, `__22SpellPlanarSteelEffectiP8CreatureP5Skill`, `__tf15SpellConeOfFire`, `__tf3Ant`, `clone__3Ant`, `msg_draw__3Ant`, `msg_load__3AntPc`, `msg_run__3Ant`, `msg_save__3AntPc`, `norrath_ctors_ant_lantern_view_42c760`, `norrath_ctors_ant_lantern_view_42c788`, `setState__3Anti`, `terminateSpell__8CreatureRC9type_info`
+
+Opened: `P_CreateParticleSystem__Fv`, `__16PoisonProjectilePQ210GameObject11resourceMapiiiiG6Point3T6ifP8Creature`, `__ti5Spell`, `_vt$19SpellHornOmenEffect`, `_vt$22SpellPlanarSteelEffect`, `_vt$3Ant`, `_vt$8Creature`, `ant_msg_run_particle_7d7170`, `checkIfSpellIsRunning__8CreatureRC9type_info`, `enemyInZone__8Creaturefs`, `loseBodyPart__3Anti`, `produceMeleeDamage__8CreaturefiiiiPQ24item11description`, `steerAndRouteToEnemy__8Creature`, `turnToFaceEnemy__8Creature`
