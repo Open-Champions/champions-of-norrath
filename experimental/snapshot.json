@@ -32281,6 +32281,154 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp"
+    },
+    {
+      "input_order": 2480,
+      "component": "w9-frontend-c-card-buffers",
+      "object_name": "card_buffers.o",
+      "private_object_sha256": "485c4a63287427d66509ba2e9793e5788ad70380aae20480584be39763770237",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-card-buffers/card_buffers.cpp"
+    },
+    {
+      "input_order": 2481,
+      "component": "w9-frontend-c-pad-run-frame",
+      "object_name": "pad_run_frame.o",
+      "private_object_sha256": "bbd529f904cc0cf838781346b4aea73b4d35980dd9a595356e38e888c790e3a2",
+      "emitted_functions": [
+        {
+          "name": "padRunFrame__Fv",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-pad-run-frame/pad_run_frame.cpp"
+    },
+    {
+      "input_order": 2482,
+      "component": "w9-frontend-c-pause-words",
+      "object_name": "pause_words.o",
+      "private_object_sha256": "a6d60550b67e339bdd8f1f6b6c14af3447b6eb962533ae95db40a6b986859d84",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-pause-words/pause_words.cpp"
+    },
+    {
+      "input_order": 2483,
+      "component": "w9-frontend-c-player-change-words",
+      "object_name": "player_change_words.o",
+      "private_object_sha256": "7d5f4bb0b1240b941fcbf8ef9a28c6048ee1eebf30ed2cb6c11865c4a7ef0be0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-player-change-words/player_change_words.cpp"
+    },
+    {
+      "input_order": 2484,
+      "component": "w9-frontend-c-player-local-busy",
+      "object_name": "player_local_busy.o",
+      "private_object_sha256": "28db1f867be0070c6433c34bf2166ca75a51c47abb04b167c750a275bc411f99",
+      "emitted_functions": [
+        {
+          "name": "playerLocalPlayerBusy__Fv",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-player-local-busy/player_local_busy.cpp"
+    },
+    {
+      "input_order": 2485,
+      "component": "w9-frontend-c-player-net-dead",
+      "object_name": "player_net_dead.o",
+      "private_object_sha256": "7751b51801db96e51adc33f35541702f0653d7d07b9eff505cf7aa84a97ea042",
+      "emitted_functions": [
+        {
+          "name": "playerNetDead__Fv",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-player-net-dead/player_net_dead.cpp"
+    },
+    {
+      "input_order": 2486,
+      "component": "w9-frontend-c-player-recall-spell",
+      "object_name": "player_recall_spell.o",
+      "private_object_sha256": "e6d609f2e3826910f27305df5b9d4847d5a71782a8bf5fe503d5811b045b441f",
+      "emitted_functions": [
+        {
+          "name": "playerRecallSpell__Fv",
+          "compiled_body_bytes": 1448
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-player-recall-spell/player_recall_spell.cpp"
+    },
+    {
+      "input_order": 2487,
+      "component": "w9-frontend-c-player-selection-enforce",
+      "object_name": "player_selection_enforce.o",
+      "private_object_sha256": "19b111ab13558a14ac176000caecf961566dacad5dcabe3ed66a89bdfb1f07e5",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionEnforce__Fv",
+          "compiled_body_bytes": 276
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-player-selection-enforce/player_selection_enforce.cpp"
+    },
+    {
+      "input_order": 2488,
+      "component": "w9-frontend-c-pop-pause",
+      "object_name": "pop_pause.o",
+      "private_object_sha256": "eb3359b23571560f7b83172dcc084e9590299179fc230c6066be5226037d3e86",
+      "emitted_functions": [
+        {
+          "name": "popPause__Fi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-pop-pause/pop_pause.cpp"
+    },
+    {
+      "input_order": 2489,
+      "component": "w9-frontend-c-prepare-browser-undo",
+      "object_name": "prepare_browser_undo.o",
+      "private_object_sha256": "f977e154c7af62591d3c1eb8f469d8dcd315d5305cca25eed3c575247b3d96be",
+      "emitted_functions": [
+        {
+          "name": "prepareBrowserUndo__Fv",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-prepare-browser-undo/prepare_browser_undo.cpp"
+    },
+    {
+      "input_order": 2490,
+      "component": "w9-frontend-c-process-analog-input",
+      "object_name": "process_analog_input.o",
+      "private_object_sha256": "807dc3066882b92d9e2301547ac9feefbc91afe416688920cee66ddf0c18b04d",
+      "emitted_functions": [
+        {
+          "name": "processAnalogInput__FiiPfT2",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-process-analog-input/process_analog_input.cpp"
+    },
+    {
+      "input_order": 2491,
+      "component": "w9-frontend-c-select-words",
+      "object_name": "select_words.o",
+      "private_object_sha256": "1c28fc5bbd8d99e3e7c5b58ebd8a59e418489b13e596120cc118258f1e9b0add",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-c-select-words/select_words.cpp"
     }
   ],
   "drafts": [
@@ -37473,6 +37621,30 @@
     "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
     "sources/w9-audio-start-global-dialog-stream/host_contract.cpp": "ead288c06a3995d5e9e5c2e9f9282d8606cd0117a5e5c4b7a09c4383b60de0c0",
     "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
+    "sources/w9-frontend-c-card-buffers/card_buffers.cpp": "e123ed83be60b6daa14db84ed62abe0969d0bb904b914d6a8e0ec871ffc2ed77",
+    "sources/w9-frontend-c-card-buffers/host_check.cpp": "8e8981a071dcec901899b45262e2f6694986b022192f0f1c7cbb155c8d8b0236",
+    "sources/w9-frontend-c-pad-run-frame/host_check.cpp": "cfa0a01ccea656e828b7b7ed6bbf38ec7ad8377ad4b52eb212a38907f8740c1e",
+    "sources/w9-frontend-c-pad-run-frame/pad_run_frame.cpp": "eae6a9c0876bc3655c0b136c20faff67e23b51b9eefc032bd76074de7aab7f06",
+    "sources/w9-frontend-c-pause-words/host_check.cpp": "6b557bf55ae0c19916c0ff696a92b5d1a1af1c22ef3a0321ea359bb046299014",
+    "sources/w9-frontend-c-pause-words/pause_words.cpp": "e8255d309d3b3537e713e4a217fb1e79b2760d626587ce6ef8c2c53ac27f23c3",
+    "sources/w9-frontend-c-player-change-words/host_check.cpp": "bc1d3b2e50a3aacccf7c9d63d5e31ad8bfa025781577f548b2d633c6dce942d9",
+    "sources/w9-frontend-c-player-change-words/player_change_words.cpp": "3f8bec8946c82503282344bec82820f5161788aff65f47ae6dfc8dfc100116cb",
+    "sources/w9-frontend-c-player-local-busy/host_check.cpp": "44a4b13687977f038eca8885bca749a03e0bb8817f53b38647a89b2c2ca25aca",
+    "sources/w9-frontend-c-player-local-busy/player_local_busy.cpp": "9c9efa078ffd94cb848f667fa648030283ac2497042c9cdb153f60fa8c09eba8",
+    "sources/w9-frontend-c-player-net-dead/host_check.cpp": "a412bb12a5c53c0c534cc6e89b5eaf5f80ff2da1fee7a47eeb1fc86a40cbf06a",
+    "sources/w9-frontend-c-player-net-dead/player_net_dead.cpp": "a74de54fe4cc1d6b1bb4fc44b15222a4642248d6f8c49fd30d953f573c6f95f8",
+    "sources/w9-frontend-c-player-recall-spell/host_check.cpp": "a1de9ea3cce050a91339d382750e193b9ca4ead1b505507b7bcd08534cdd315a",
+    "sources/w9-frontend-c-player-recall-spell/player_recall_spell.cpp": "7b4bd34b7a2b204671957e673cc3fcb66070c0e6bd8e9ac871a883a4969bcd29",
+    "sources/w9-frontend-c-player-selection-enforce/host_check.cpp": "cfe3de84fdb28737b6edd620e90da69881f07a9a643319e1379091da62acef0c",
+    "sources/w9-frontend-c-player-selection-enforce/player_selection_enforce.cpp": "1ca578d309b42be6d283bc4ab94abe04307285003ad4a21d2d8d34ce35ea9a6a",
+    "sources/w9-frontend-c-pop-pause/host_check.cpp": "b494e9ca6ec356b24cc633bd2e38583abecbd901d67a3d70676933f876d89823",
+    "sources/w9-frontend-c-pop-pause/pop_pause.cpp": "b8f02f1e2a21f8214e821a1ee93a96cff269120eb8e6e995ac6f31f263bdbd7f",
+    "sources/w9-frontend-c-prepare-browser-undo/host_check.cpp": "ac0fef72863696b97dfb9623b795f42a0e3fbceb7ed0d1ca2a07e836e0223563",
+    "sources/w9-frontend-c-prepare-browser-undo/prepare_browser_undo.cpp": "6de0750c6d98ce16ee3adf1a9016bc28fce8d7c4cb629fa99caa3cd42b1fed9e",
+    "sources/w9-frontend-c-process-analog-input/host_check.cpp": "aa29a79e3b60214415c526998f9e3cf361e2d13c4d0b8b3c8d898cbf3c22b804",
+    "sources/w9-frontend-c-process-analog-input/process_analog_input.cpp": "199d284d355f05674528b01eb6eef034643e71a756aed59e43b31cf3b2fb11a0",
+    "sources/w9-frontend-c-select-words/host_check.cpp": "c376e7f29a7d48cf41f87de06cf84565310bdc02c8ec1eab5f5b1151e82eec7d",
+    "sources/w9-frontend-c-select-words/select_words.cpp": "a133c7a4b6e972ba203378476915543e8c5cfc451a3e54d6bebab598e6cb2740",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/host_check.cpp": "06546ebfb0c21dfecfb70ac33f87993fe6717d18163a01776e59caafe96f7011",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
@@ -38180,11 +38352,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2480,
-    "authored_default_inputs": 2478,
+    "selected_inputs": 2492,
+    "authored_default_inputs": 2490,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2028,
-    "compiled_body_bytes_from_accepted_inputs": 853608,
+    "emitted_function_definitions_including_helpers": 2036,
+    "compiled_body_bytes_from_accepted_inputs": 856628,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -38197,7 +38369,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2167
+    "package_selected_inputs": 2179
   },
   "startup_implementations": [
     {
@@ -72483,6 +72655,190 @@
       ],
       "host_files": [
         "sources/w9-audio-start-global-dialog-stream/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-card-buffers/card_buffers.cpp",
+      "source_sha256": "e123ed83be60b6daa14db84ed62abe0969d0bb904b914d6a8e0ec871ffc2ed77",
+      "object_sha256": "485c4a63287427d66509ba2e9793e5788ad70380aae20480584be39763770237",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-c-card-buffers/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-pad-run-frame/pad_run_frame.cpp",
+      "source_sha256": "eae6a9c0876bc3655c0b136c20faff67e23b51b9eefc032bd76074de7aab7f06",
+      "object_sha256": "bbd529f904cc0cf838781346b4aea73b4d35980dd9a595356e38e888c790e3a2",
+      "emitted_functions": [
+        {
+          "name": "padRunFrame__Fv",
+          "compiled_body_bytes": 560
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-pad-run-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-pause-words/pause_words.cpp",
+      "source_sha256": "e8255d309d3b3537e713e4a217fb1e79b2760d626587ce6ef8c2c53ac27f23c3",
+      "object_sha256": "a6d60550b67e339bdd8f1f6b6c14af3447b6eb962533ae95db40a6b986859d84",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-c-pause-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-player-change-words/player_change_words.cpp",
+      "source_sha256": "3f8bec8946c82503282344bec82820f5161788aff65f47ae6dfc8dfc100116cb",
+      "object_sha256": "7d5f4bb0b1240b941fcbf8ef9a28c6048ee1eebf30ed2cb6c11865c4a7ef0be0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-c-player-change-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-player-local-busy/player_local_busy.cpp",
+      "source_sha256": "9c9efa078ffd94cb848f667fa648030283ac2497042c9cdb153f60fa8c09eba8",
+      "object_sha256": "28db1f867be0070c6433c34bf2166ca75a51c47abb04b167c750a275bc411f99",
+      "emitted_functions": [
+        {
+          "name": "playerLocalPlayerBusy__Fv",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-player-local-busy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-player-net-dead/player_net_dead.cpp",
+      "source_sha256": "a74de54fe4cc1d6b1bb4fc44b15222a4642248d6f8c49fd30d953f573c6f95f8",
+      "object_sha256": "7751b51801db96e51adc33f35541702f0653d7d07b9eff505cf7aa84a97ea042",
+      "emitted_functions": [
+        {
+          "name": "playerNetDead__Fv",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-player-net-dead/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-player-recall-spell/player_recall_spell.cpp",
+      "source_sha256": "7b4bd34b7a2b204671957e673cc3fcb66070c0e6bd8e9ac871a883a4969bcd29",
+      "object_sha256": "e6d609f2e3826910f27305df5b9d4847d5a71782a8bf5fe503d5811b045b441f",
+      "emitted_functions": [
+        {
+          "name": "playerRecallSpell__Fv",
+          "compiled_body_bytes": 1448
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-player-recall-spell/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-player-selection-enforce/player_selection_enforce.cpp",
+      "source_sha256": "1ca578d309b42be6d283bc4ab94abe04307285003ad4a21d2d8d34ce35ea9a6a",
+      "object_sha256": "19b111ab13558a14ac176000caecf961566dacad5dcabe3ed66a89bdfb1f07e5",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionEnforce__Fv",
+          "compiled_body_bytes": 276
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-player-selection-enforce/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-pop-pause/pop_pause.cpp",
+      "source_sha256": "b8f02f1e2a21f8214e821a1ee93a96cff269120eb8e6e995ac6f31f263bdbd7f",
+      "object_sha256": "eb3359b23571560f7b83172dcc084e9590299179fc230c6066be5226037d3e86",
+      "emitted_functions": [
+        {
+          "name": "popPause__Fi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-pop-pause/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-prepare-browser-undo/prepare_browser_undo.cpp",
+      "source_sha256": "6de0750c6d98ce16ee3adf1a9016bc28fce8d7c4cb629fa99caa3cd42b1fed9e",
+      "object_sha256": "f977e154c7af62591d3c1eb8f469d8dcd315d5305cca25eed3c575247b3d96be",
+      "emitted_functions": [
+        {
+          "name": "prepareBrowserUndo__Fv",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-prepare-browser-undo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-process-analog-input/process_analog_input.cpp",
+      "source_sha256": "199d284d355f05674528b01eb6eef034643e71a756aed59e43b31cf3b2fb11a0",
+      "object_sha256": "807dc3066882b92d9e2301547ac9feefbc91afe416688920cee66ddf0c18b04d",
+      "emitted_functions": [
+        {
+          "name": "processAnalogInput__FiiPfT2",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-c-process-analog-input/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-c",
+      "source": "sources/w9-frontend-c-select-words/select_words.cpp",
+      "source_sha256": "a133c7a4b6e972ba203378476915543e8c5cfc451a3e54d6bebab598e6cb2740",
+      "object_sha256": "1c28fc5bbd8d99e3e7c5b58ebd8a59e418489b13e596120cc118258f1e9b0add",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-c-select-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -4833,6 +4833,36 @@ Closed: `animGetVolumeScale__Fii`, `playSoundForDlg__FP9DlgPacket`,
 
 Opened: `animLoadBuffer`, `effectModeSize`, `pitchTab`
 
+## agents/w9-frontend-c
+
+Merged (the branch notes carry the five summary sections). Twelve units with
+fresh `input_order` values 2480 through 2491: eight function units and four
+data units (card buffers, pause words, player-change words, select words) that
+emit no function. The notes list the plan entries as JSON, so the units were
+read from the files and checked against the notes' count of 12. All 12 host
+checks build and exit 0 here (12 of 12). The paired-run interpreter results
+the notes cite are private and were not reproduced. Array lengths inferred only
+from the distance to the next symbol are the worker's own caveat. No game binary
+or disassembly listing was committed. 2034 function bodies, 2490 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1473 |
+| After | 1453 |
+| Closed | 23 |
+| Opened | 3 |
+
+Closed: `newSel`, `nmActions`, `nmDialogNodes`, `padRunFrame__Fv`, `pauseStack`,
+`paused`, `pcLaunch`, `pcNmPlayers`, `pcTitle`, `playerChangeOldPos`,
+`playerChangeOldYaw`, `playerLocalPlayerBusy__Fv`, `playerNetDead__Fv`,
+`playerRace`, `playerRecallSpell__Fv`, `playerSelectInfo`,
+`playerSelectionEnforce__Fv`, `playerStatus`, `popPause__Fi`,
+`prepareBrowserUndo__Fv`, `processAnalogInput__FiiPfT2`, `quickLoadStamp`,
+`ramSlot`
+
+Opened: `castLightColor`, `haloColor`, `undoQuickLoadStamp`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5183,3 +5213,4 @@ and no startup stage has executed.
 - 2026-10-12 20:05 CDT — `agents/w9-startup-crt-c` — 1496 unresolved imports
 - 2026-10-12 20:10 CDT — `agents/w9-startup-crt-e` — 1484 unresolved imports
 - 2026-10-12 20:16 CDT — `agents/w9-audio` — 1473 unresolved imports
+- 2026-10-12 20:23 CDT — `agents/w9-frontend-c` — 1453 unresolved imports
