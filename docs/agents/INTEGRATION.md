@@ -7439,3 +7439,4 @@ push again.
 Closed: `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`, `_sceFs_Rcv_Intr`, `_sceIDC`, `acos`, `acosf`, `atan2f`, `dpmul`, `fabsf`, `fmodf`, `ftoi`, `get_time`, `iAllocTimerCounter`, `iSetTimerHandler`, `iStartTimerCounter`, `init_ee_timer`, `isceSifSetDma`, `norrath_legacy_pointer_type_info_vtable_view`
 
 Opened: `_$_19__pointer_type_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__tf19__pointer_type_info`, `_free_r`, `_malloc_r`, `ee_retbuf_sel`, `rollover_counter`, `sceCbPoff_Gp`, `timer_handle`
+- 2026-10-13 00:56 CDT — `agents/w10-startup-b` — 1467 unresolved imports
