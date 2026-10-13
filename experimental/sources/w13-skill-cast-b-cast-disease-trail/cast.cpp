@@ -1,4 +1,4 @@
-// Observed cast__17SkillDiseaseTrailiP8CreatureG6Point3s at 0x00295490, 148 bytes in .text.
+// Observed cast__17SkillDiseaseTrailiP8CreatureG6Point3s at 0x00295490, 156 bytes in .text.
 // Steps, in order: (1) the by-value Point3 is copied to the frame; (2) four halfwords of the creature are written:
 // -100 at byte offsets 148, 150 and 152 and zero at 154 (the same group the disease shield cast sets); (3) 48 bytes
 // are allocated with blockAlloc__Fi; (4) when the block is not null, __17SpellDiseaseTrailG6Point3iP8CreatureP5Skill is

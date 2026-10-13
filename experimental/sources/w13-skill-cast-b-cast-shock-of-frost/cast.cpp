@@ -1,4 +1,4 @@
-// Observed cast__17SkillShockOfFrostiP8CreatureG6Point3s at 0x002be0c8, 120 bytes in .text.
+// Observed cast__17SkillShockOfFrostiP8CreatureG6Point3s at 0x002be0c8, 144 bytes in .text.
 // Allocates 208 bytes with blockAlloc__Fi and, when the block is not null, calls
 // __12ShockOfFrostG6Point3siP10GameObjectP5Skill with (block, the frame copy of the point passed by reference, the
 // trailing short argument sign-extended, rank, creature, skill). It returns zero in every case, including success;
