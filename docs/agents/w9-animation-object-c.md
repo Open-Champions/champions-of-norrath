@@ -15,3 +15,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | source directory (`experimental/sources/w9-animation-object-c-…`) | emitted symbol | image address | image extent |
 |---|---|---|---|
 | `reset-routing` | `resetRouting__8Creature` | 0x113460 | 40 |
+| `set-anim-event-flags` | `setAnimEventFlags__8Creatureififififi` | 0x1128a8 | 88 |
