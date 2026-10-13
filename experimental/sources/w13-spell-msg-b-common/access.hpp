@@ -133,6 +133,17 @@ inline void unit_ball(unsigned char* o, Point3& p, Rand rand) {
     } while (1.0f < p.x * p.x + p.y * p.y + p.z * p.z);
 }
 
+// 1.0 / sqrt(v): the EE rsqrt.s on the target (fs / sqrt(ft), as the original executes), a plain division on a host.
+inline float inverse_length(float squared) {
+#if defined(__mips__) && !defined(W13_SPELL_MSG_B_HOST)
+    float result;
+    __asm__("rsqrt.s %0,%1,%2" : "=f"(result) : "f"(1.0f), "f"(squared));
+    return result;
+#else
+    return 1.0f / __builtin_sqrtf(squared);
+#endif
+}
+
 }  // namespace w13smb
 
 #endif
