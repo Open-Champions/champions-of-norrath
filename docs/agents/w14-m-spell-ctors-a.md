@@ -15,6 +15,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 |---|---|---|---|
 | `w14-m-spell-ctors-a-ctor-cleric-root` | `__15SpellClericRootiP8CreatureP5Skill` | `0x002c6320`, 164 bytes | 172 |
 | `w14-m-spell-ctors-a-ctor-entangle` | `__13SpellEntangleiP8CreatureP5Skill` | `0x002c6f98`, 164 bytes | 172 |
+| `w14-m-spell-ctors-a-dtor-5spell` | `_$_5Spell` | `0x00314990`, 100 bytes | 92 |
 
 ## Observed shape shared by the spell constructors
 
@@ -46,9 +47,14 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
 - **Entangle.** The same host contract and paired comparison (210 scenarios, 0 mismatches, no HALT) for
   `__13SpellEntangleiP8CreatureP5Skill`. The host contract also passes.
 
+- **Base destructor.** `_$_5Spell` (`0x00314990`): stores `_vt$5Spell` at +20, calls `listDestroy__FP8ListHead` on
+  +4, and calls `blockFree__FPv` only when bit 0 of the flags is set. Host contract: 7 flag values, passes. Paired
+  comparison: 24 scenarios (8 flag values x 3 fills), 0 mismatches. Mutation (test bit 1 instead of bit 0) gives 12
+  mismatches.
+
 ## Imports closed
 
-`__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`.
+`__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`.
 
 ## Imports opened
 
