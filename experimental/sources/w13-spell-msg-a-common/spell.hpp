@@ -41,6 +41,15 @@ inline int call_entry_112(unsigned char* object, int halfword, void* address) {
         object + *reinterpret_cast<short*>(entry), 0, halfword, address);
 }
 
+// Same call with a mode word in the second position: the entry at offset 112 of the table that is the word at +96 of the object
+// is called on the object (adjusted by the entry's signed halfword) with (mode, signed halfword, address).
+inline int call_entry_112_mode(unsigned char* object, int mode, int halfword, void* address) {
+    unsigned char* const entry = w12c::from_word(w12c::word(object, 96)) + 112;
+    const unsigned function = *reinterpret_cast<unsigned*>(entry + 4);
+    return reinterpret_cast<int (*)(void*, int, int, void*)>(static_cast<__UINTPTR_TYPE__>(function))(
+        object + *reinterpret_cast<short*>(entry), mode, halfword, address);
+}
+
 }  // namespace w13a
 
 #endif
