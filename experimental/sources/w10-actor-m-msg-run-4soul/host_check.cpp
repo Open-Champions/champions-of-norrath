@@ -214,6 +214,7 @@ int main() {
         }
         if (log_ != e) { bad = 1; continue; }
         if (!near_(got.x, p.x) || !near_(got.y, p.y) || !near_(got.z, p.z)) bad = 1;
+        if (shadows.empty() || shadows[0].index != -1 || shadows[0].angle != 100 + 24384 || shadows[0].scale != 3.0f || shadows[0].src.x != 10.0f || shadows[0].src.y != 20.0f || shadows[0].src.z != 30.0f) bad = 1;
         if (log_.find("h;") != std::string::npos && (height_arg != 6.0f || world_seen != world || !near_(height_pt.x, got.x) || !near_(height_pt.z, got.z))) bad = 1;
         if (linked) {
             if (!near_(turn_arg.x, 50.0f + 10.0f * 0.2f) || !near_(turn_arg.y, 60.0f + 20.0f * 0.2f) || turn_arg.z != 70.0f || turn_a1 != 0) bad = 1;
