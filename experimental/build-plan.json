@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5907,
+  "default_authored_inputs": 5947,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4703,6 +4703,46 @@
     "sources/w13-skill-stat-a-point-cost-skill-darkness/get_skill_point_cost.cpp": "bab2ea9633ec73bd5756f7d0816e22c3c821ab4b1d2b6d83a972aff844e44590",
     "sources/w13-skill-stat-a-point-cost-skill-fire-storm/get_skill_point_cost.cpp": "b5477981e7c9dd6811646cf0b2782adc6bf6bb3c6150ced60141fdaa3494affc",
     "sources/w13-skill-stat-a-point-cost-skill-riposte/get_skill_point_cost.cpp": "a41a18ee2ea96eee0c9337a79e8681a1533478e33be4ffd4692c71a22f62e8db",
+    "sources/w13-skill-stat-b-energy-cost-skill-cleric-root/get_energy_cost.cpp": "0cd219bebc767c66e7a977a7de68e898034c2ad89700cd91cf7bb849ec0c95e2",
+    "sources/w13-skill-stat-b-energy-cost-skill-cold-weapons/get_energy_cost.cpp": "65978d75a441abe9bbf14e7abad25aa95d09b865bc7eb1e228832d5ca5b108aa",
+    "sources/w13-skill-stat-b-energy-cost-skill-cone-of-fire/get_energy_cost.cpp": "d4ba5eeb78da306799713cba0b30677f23dbecd15553c3bdf2f5ac09de8ed23a",
+    "sources/w13-skill-stat-b-energy-cost-skill-cone-of-frost/get_energy_cost.cpp": "44de88cce6448863894730599f9728462a77b4049654db9c4838f3ac8a6d782b",
+    "sources/w13-skill-stat-b-energy-cost-skill-critical-hit/get_energy_cost.cpp": "4645e1a0fb122d5a40e8980c3591b39de9fb96e6175617f107cc0f656cbcc749",
+    "sources/w13-skill-stat-b-energy-cost-skill-fire-flares/get_energy_cost.cpp": "63d4886124dbf40fcc7614322e58e99c4b5787fa0adc40fc03ba7fbeb543f035",
+    "sources/w13-skill-stat-b-energy-cost-skill-frost-storm/get_energy_cost.cpp": "2a37c8ecf9e204bdff7500729271fd0f344a5177324d5e7fb1d6b55872a3f548",
+    "sources/w13-skill-stat-b-energy-cost-skill-holy-shield/get_energy_cost.cpp": "0a07e6388e4ec29d4ebee84286254aeda17629130e6710756ec68b4784b1c5dc",
+    "sources/w13-skill-stat-b-energy-cost-skill-holy-strike/get_energy_cost.cpp": "7dfd8e12bbbf597ecdd5983e27aa91070938fbdb8f9e738d65cfef4a56921f33",
+    "sources/w13-skill-stat-b-energy-cost-skill-multi-fire/get_energy_cost.cpp": "41a1fd66b949fbf3dabbc6c339371d45eee56f5bab4792857cab5af22db44dd9",
+    "sources/w13-skill-stat-b-energy-cost-skill-poison-rain/get_energy_cost.cpp": "e270d4feffb4083d848f81c244a5f6b14491be05b6ff145e6309a15452b4f49b",
+    "sources/w13-skill-stat-b-energy-cost-skill-shield-bash/get_energy_cost.cpp": "f83d1ba009ba8daa2cecddd52e00dcaa246f2f7ae71897214ad45eaf65d5532e",
+    "sources/w13-skill-stat-b-energy-cost-skill-wizard-beam/get_energy_cost.cpp": "520095cab69df8a59089f1f8bfccd041fdd2055524726aa2033744a778b2b8d7",
+    "sources/w13-skill-stat-b-icon-skill-cleric-root/get_icon.cpp": "e68f7a20e2356ce4976b2e1eb4b75354c343122bfc70c53bdd17ab52960e5b9e",
+    "sources/w13-skill-stat-b-icon-skill-cold-weapons/get_icon.cpp": "733a99463119343709a34f7d385fc726f87bd75b5feb4404229ef22635e0731e",
+    "sources/w13-skill-stat-b-icon-skill-cone-of-fire/get_icon.cpp": "1436baa7f7d8ef06fcf0928d39541ef9b09226ba5da55ae2aa435ef0359cccf1",
+    "sources/w13-skill-stat-b-icon-skill-cone-of-frost/get_icon.cpp": "87e9a7c5ef38d6d6baa973ac496cd009549b34eaaf05fa5928b6dd5e015512e4",
+    "sources/w13-skill-stat-b-icon-skill-critical-hit/get_icon.cpp": "a17d7f319a2c1680a3cd2e5dc53cd4871e2e29ef9f8f4b416272a86f8fafb048",
+    "sources/w13-skill-stat-b-icon-skill-disease-bolt/get_icon.cpp": "5760eccbb44f8ed2de6059d550ca107fc9b08ec484e52afbeee1e51665a947eb",
+    "sources/w13-skill-stat-b-icon-skill-fire-flares/get_icon.cpp": "d40f083939cba834acce08500f01a6fb2c23c17f022e82f4b2f8c6ef2af7ab4e",
+    "sources/w13-skill-stat-b-icon-skill-frost-storm/get_icon.cpp": "655b7663d0448a5086bc8ee1d8aa896cfec431d0135a1b8aab42b5d3cf32b44a",
+    "sources/w13-skill-stat-b-icon-skill-holy-shield/get_icon.cpp": "7875aab066747fe1248f277138532d1712423f21f8d12d6c80430d6360987ab6",
+    "sources/w13-skill-stat-b-icon-skill-holy-strike/get_icon.cpp": "bcd5987255cc60d75187917a9e76e97caf2a462add02bdb45a80bc728a4b11af",
+    "sources/w13-skill-stat-b-icon-skill-shield-bash/get_icon.cpp": "0f1673cdd1e8d4fb66450ff979396dc678f767a3afe7e049d2970e452b49b819",
+    "sources/w13-skill-stat-b-icon-skill-wizard-beam/get_icon.cpp": "f98827690870cd6ca56788c55baed0c2d5a2898d13695edfcb1b36e55d11889f",
+    "sources/w13-skill-stat-b-level-requirement-skill-cleric-root/get_level_requirement.cpp": "ec6cdce78c1850753be46a804fa08752fb7f5d2566241b48ed0ac27bfa8c04bf",
+    "sources/w13-skill-stat-b-level-requirement-skill-cold-weapons/get_level_requirement.cpp": "9812e50d34f8d7054953e99d939b7e6fe16b8622202808da83690471765e6777",
+    "sources/w13-skill-stat-b-level-requirement-skill-cone-of-fire/get_level_requirement.cpp": "e1e8a1aa6f8182b0e6c1c48d08e55f61f50a72af889984a9af2708cdcfa7d24d",
+    "sources/w13-skill-stat-b-level-requirement-skill-critical-hit/get_level_requirement.cpp": "0e3ca7deac11c7bf959aac595904f3166f43f60b8f08f5585d47904a15eeeaf2",
+    "sources/w13-skill-stat-b-level-requirement-skill-fire-flares/get_level_requirement.cpp": "f4f576c950e6c0550171f396b525f2f4ea6f00a0efd228aac4f7935a55a88db3",
+    "sources/w13-skill-stat-b-level-requirement-skill-holy-strike/get_level_requirement.cpp": "854986a4163ed62130e0c22515984b3d092e81130cd69e05b7964f9a710d9c78",
+    "sources/w13-skill-stat-b-level-requirement-skill-poison-rain/get_level_requirement.cpp": "76cde877a4656c56a8dac2daa1af899a2540ff58bd6880cbd1c4ae7c35d3019b",
+    "sources/w13-skill-stat-b-level-requirement-skill-shield-bash/get_level_requirement.cpp": "390de3668fbf97a774ce3fbd73ca705c8f49af3a155573cdb1fd2b502cf1cfc0",
+    "sources/w13-skill-stat-b-level-requirement-skill-wizard-beam/get_level_requirement.cpp": "9e322f93f4c48dc047ae4e4935566e6198ba2020c48d9cc5508c0d034469daa0",
+    "sources/w13-skill-stat-b-point-cost-skill-cold-weapons/get_skill_point_cost.cpp": "e5474e7c5c31bd918280dfb105e38cabca47fe230d25def7a40aa2f44648f9d9",
+    "sources/w13-skill-stat-b-point-cost-skill-cone-of-fire/get_skill_point_cost.cpp": "9487fc0fc69615ade3c708b6dd21510c3f6524c0fb5c3199c5e4f340bfcb3bf4",
+    "sources/w13-skill-stat-b-point-cost-skill-fire-flares/get_skill_point_cost.cpp": "76733ec95cc1a553748152c522146633183364189f8bcf5d9161ae7b598b8cc6",
+    "sources/w13-skill-stat-b-point-cost-skill-holy-strike/get_skill_point_cost.cpp": "145cd1ae05085ad9a32ce0dbae79bf4c114b91a608915d1b852d06ec9f0a257e",
+    "sources/w13-skill-stat-b-point-cost-skill-poison-rain/get_skill_point_cost.cpp": "e83b4a07b9dbb4f5069d0de561718e70ea488d575c74ce96000e26f9b9ea4106",
+    "sources/w13-skill-stat-b-point-cost-skill-wizard-beam/get_skill_point_cost.cpp": "554103eefa88a6d2af82a6757661da5cd7642d60cc98235c7eda6d14ddd79df5",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
     "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
@@ -86980,6 +87020,606 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5909,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_cleric_root.o",
+      "profile": "authored_cpp",
+      "sha256": "0cd219bebc767c66e7a977a7de68e898034c2ad89700cd91cf7bb849ec0c95e2",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-cleric-root/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillClericRooti",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5910,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "65978d75a441abe9bbf14e7abad25aa95d09b865bc7eb1e228832d5ca5b108aa",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-cold-weapons/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillColdWeaponsi",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5911,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "d4ba5eeb78da306799713cba0b30677f23dbecd15553c3bdf2f5ac09de8ed23a",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-cone-of-fire/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillConeOfFirei",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5912,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_cone_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "44de88cce6448863894730599f9728462a77b4049654db9c4838f3ac8a6d782b",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-cone-of-frost/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillConeOfFrosti",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5913,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "4645e1a0fb122d5a40e8980c3591b39de9fb96e6175617f107cc0f656cbcc749",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-critical-hit/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__16SkillCriticalHiti",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5914,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "63d4886124dbf40fcc7614322e58e99c4b5787fa0adc40fc03ba7fbeb543f035",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-fire-flares/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillFireFlaresi",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5915,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_frost_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "2a37c8ecf9e204bdff7500729271fd0f344a5177324d5e7fb1d6b55872a3f548",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-frost-storm/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillFrostStormi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5916,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_holy_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "0a07e6388e4ec29d4ebee84286254aeda17629130e6710756ec68b4784b1c5dc",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-holy-shield/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillHolyShieldi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5917,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_holy_strike.o",
+      "profile": "authored_cpp",
+      "sha256": "7dfd8e12bbbf597ecdd5983e27aa91070938fbdb8f9e738d65cfef4a56921f33",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-holy-strike/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillHolyStrikei",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5918,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_multi_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "41a1fd66b949fbf3dabbc6c339371d45eee56f5bab4792857cab5af22db44dd9",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-multi-fire/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__14SkillMultiFirei",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5919,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_poison_rain.o",
+      "profile": "authored_cpp",
+      "sha256": "e270d4feffb4083d848f81c244a5f6b14491be05b6ff145e6309a15452b4f49b",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-poison-rain/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillPoisonRaini",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5920,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_shield_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "f83d1ba009ba8daa2cecddd52e00dcaa246f2f7ae71897214ad45eaf65d5532e",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-shield-bash/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillShieldBashi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5921,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_energy_cost_skill_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "520095cab69df8a59089f1f8bfccd041fdd2055524726aa2033744a778b2b8d7",
+      "source": "sources/w13-skill-stat-b-energy-cost-skill-wizard-beam/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getEnergyCost__15SkillWizardBeami",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5922,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_cleric_root.o",
+      "profile": "authored_cpp",
+      "sha256": "e68f7a20e2356ce4976b2e1eb4b75354c343122bfc70c53bdd17ab52960e5b9e",
+      "source": "sources/w13-skill-stat-b-icon-skill-cleric-root/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillClericRoot",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5923,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "733a99463119343709a34f7d385fc726f87bd75b5feb4404229ef22635e0731e",
+      "source": "sources/w13-skill-stat-b-icon-skill-cold-weapons/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillColdWeapons",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5924,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "1436baa7f7d8ef06fcf0928d39541ef9b09226ba5da55ae2aa435ef0359cccf1",
+      "source": "sources/w13-skill-stat-b-icon-skill-cone-of-fire/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillConeOfFire",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5925,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_cone_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "87e9a7c5ef38d6d6baa973ac496cd009549b34eaaf05fa5928b6dd5e015512e4",
+      "source": "sources/w13-skill-stat-b-icon-skill-cone-of-frost/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillConeOfFrost",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5926,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "a17d7f319a2c1680a3cd2e5dc53cd4871e2e29ef9f8f4b416272a86f8fafb048",
+      "source": "sources/w13-skill-stat-b-icon-skill-critical-hit/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillCriticalHit",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5927,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_disease_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "5760eccbb44f8ed2de6059d550ca107fc9b08ec484e52afbeee1e51665a947eb",
+      "source": "sources/w13-skill-stat-b-icon-skill-disease-bolt/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__16SkillDiseaseBolt",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5928,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "d40f083939cba834acce08500f01a6fb2c23c17f022e82f4b2f8c6ef2af7ab4e",
+      "source": "sources/w13-skill-stat-b-icon-skill-fire-flares/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillFireFlares",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5929,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_frost_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "655b7663d0448a5086bc8ee1d8aa896cfec431d0135a1b8aab42b5d3cf32b44a",
+      "source": "sources/w13-skill-stat-b-icon-skill-frost-storm/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillFrostStorm",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5930,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_holy_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "7875aab066747fe1248f277138532d1712423f21f8d12d6c80430d6360987ab6",
+      "source": "sources/w13-skill-stat-b-icon-skill-holy-shield/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillHolyShield",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5931,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_holy_strike.o",
+      "profile": "authored_cpp",
+      "sha256": "bcd5987255cc60d75187917a9e76e97caf2a462add02bdb45a80bc728a4b11af",
+      "source": "sources/w13-skill-stat-b-icon-skill-holy-strike/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillHolyStrike",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5932,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_shield_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "0f1673cdd1e8d4fb66450ff979396dc678f767a3afe7e049d2970e452b49b819",
+      "source": "sources/w13-skill-stat-b-icon-skill-shield-bash/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillShieldBash",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5933,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_icon_skill_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "f98827690870cd6ca56788c55baed0c2d5a2898d13695edfcb1b36e55d11889f",
+      "source": "sources/w13-skill-stat-b-icon-skill-wizard-beam/get_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "getIcon__15SkillWizardBeam",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5934,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_cleric_root.o",
+      "profile": "authored_cpp",
+      "sha256": "ec6cdce78c1850753be46a804fa08752fb7f5d2566241b48ed0ac27bfa8c04bf",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-cleric-root/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillClericRooti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5935,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "9812e50d34f8d7054953e99d939b7e6fe16b8622202808da83690471765e6777",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-cold-weapons/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__16SkillColdWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5936,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "e1e8a1aa6f8182b0e6c1c48d08e55f61f50a72af889984a9af2708cdcfa7d24d",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-cone-of-fire/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillConeOfFirei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5937,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "0e3ca7deac11c7bf959aac595904f3166f43f60b8f08f5585d47904a15eeeaf2",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-critical-hit/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__16SkillCriticalHiti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5938,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "f4f576c950e6c0550171f396b525f2f4ea6f00a0efd228aac4f7935a55a88db3",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-fire-flares/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillFireFlaresi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5939,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_holy_strike.o",
+      "profile": "authored_cpp",
+      "sha256": "854986a4163ed62130e0c22515984b3d092e81130cd69e05b7964f9a710d9c78",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-holy-strike/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillHolyStrikei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5940,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_poison_rain.o",
+      "profile": "authored_cpp",
+      "sha256": "76cde877a4656c56a8dac2daa1af899a2540ff58bd6880cbd1c4ae7c35d3019b",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-poison-rain/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillPoisonRaini",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5941,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_shield_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "390de3668fbf97a774ce3fbd73ca705c8f49af3a155573cdb1fd2b502cf1cfc0",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-shield-bash/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillShieldBashi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5942,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_level_requirement_skill_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "9e322f93f4c48dc047ae4e4935566e6198ba2020c48d9cc5508c0d034469daa0",
+      "source": "sources/w13-skill-stat-b-level-requirement-skill-wizard-beam/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "name": "getLevelRequirement__15SkillWizardBeami",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5943,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "e5474e7c5c31bd918280dfb105e38cabca47fe230d25def7a40aa2f44648f9d9",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-cold-weapons/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__16SkillColdWeaponsi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5944,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "9487fc0fc69615ade3c708b6dd21510c3f6524c0fb5c3199c5e4f340bfcb3bf4",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-cone-of-fire/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__15SkillConeOfFirei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5945,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "76733ec95cc1a553748152c522146633183364189f8bcf5d9161ae7b598b8cc6",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-fire-flares/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__15SkillFireFlaresi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5946,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_holy_strike.o",
+      "profile": "authored_cpp",
+      "sha256": "145cd1ae05085ad9a32ce0dbae79bf4c114b91a608915d1b852d06ec9f0a257e",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-holy-strike/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__15SkillHolyStrikei",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5947,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_poison_rain.o",
+      "profile": "authored_cpp",
+      "sha256": "e83b4a07b9dbb4f5069d0de561718e70ea488d575c74ce96000e26f9b9ea4106",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-poison-rain/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__15SkillPoisonRaini",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5948,
+      "kind": "independently_authored_source",
+      "object_name": "w13_skill_stat_b_point_cost_skill_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "554103eefa88a6d2af82a6757661da5cd7642d60cc98235c7eda6d14ddd79df5",
+      "source": "sources/w13-skill-stat-b-point-cost-skill-wizard-beam/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSkillPointCost__15SkillWizardBeami",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -87079,7 +87719,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fd6b7538583ec6201677318f1a70996b21eb2071e7cecb0ff3ee9872c7f322e2",
+  "snapshot_sha256": "95c54e7b9c76b565c95189d7dc34286adfcf2369797bc2ca68e70145647b8e8c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -9657,3 +9657,19 @@ Closed: `getAmount__12SkillLifeTapi`, `getDeflectionChance__10SkillDodgei`, `get
 
 Opened: none
 - 2026-10-13 16:40 CDT — agents/w13-skill-stat-a — 1016 unresolved imports
+
+## agents/w13-skill-stat-b
+
+Merged (merge commit, branch tip `1216be76`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5909 through 5948, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5947 authored inputs, 4630 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1016 |
+| After | 976 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__14SkillMultiFirei`, `getEnergyCost__15SkillClericRooti`, `getEnergyCost__15SkillConeOfFirei`, `getEnergyCost__15SkillFireFlaresi`, `getEnergyCost__15SkillFrostStormi`, `getEnergyCost__15SkillHolyShieldi`, `getEnergyCost__15SkillHolyStrikei`, `getEnergyCost__15SkillPoisonRaini`, `getEnergyCost__15SkillShieldBashi`, `getEnergyCost__15SkillWizardBeami`, `getEnergyCost__16SkillColdWeaponsi`, `getEnergyCost__16SkillConeOfFrosti`, `getEnergyCost__16SkillCriticalHiti`, `getIcon__15SkillClericRoot`, `getIcon__15SkillConeOfFire`, `getIcon__15SkillFireFlares`, `getIcon__15SkillFrostStorm`, `getIcon__15SkillHolyShield`, `getIcon__15SkillHolyStrike`, `getIcon__15SkillShieldBash`, `getIcon__15SkillWizardBeam`, `getIcon__16SkillColdWeapons`, `getIcon__16SkillConeOfFrost`, `getIcon__16SkillCriticalHit`, `getIcon__16SkillDiseaseBolt`, `getLevelRequirement__15SkillClericRooti`, `getLevelRequirement__15SkillConeOfFirei`, `getLevelRequirement__15SkillFireFlaresi`, `getLevelRequirement__15SkillHolyStrikei`, `getLevelRequirement__15SkillPoisonRaini`, `getLevelRequirement__15SkillShieldBashi`, `getLevelRequirement__15SkillWizardBeami`, `getLevelRequirement__16SkillColdWeaponsi`, `getLevelRequirement__16SkillCriticalHiti`, `getSkillPointCost__15SkillConeOfFirei`, `getSkillPointCost__15SkillFireFlaresi`, `getSkillPointCost__15SkillHolyStrikei`, `getSkillPointCost__15SkillPoisonRaini`, `getSkillPointCost__15SkillWizardBeami`, `getSkillPointCost__16SkillColdWeaponsi`
+
+Opened: none
+- 2026-10-13 16:45 CDT — agents/w13-skill-stat-b — 976 unresolved imports
