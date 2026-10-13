@@ -6085,6 +6085,61 @@ Closed: `norrath_ctors_ant_lantern_view_4818a8`,
 
 Opened: none
 
+## agents/w9-ctors-lantern-h
+
+Merged (the branch notes carry the five summary sections; the tip was 39
+minutes old). Thirty-six data units (`view_*.cpp` objects) with fresh
+`input_order` values 3098 through 3133; the function-body count stays at 2336.
+All 36 host checks build (linked with the unit) and exit 0 here (36 of 36). No
+imports opened. No game binary or disassembly listing was committed. 3132
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1325 |
+| After | 1289 |
+| Closed | 36 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_485420`,
+`norrath_ctors_ant_lantern_view_485438`,
+`norrath_ctors_ant_lantern_view_485440`,
+`norrath_ctors_ant_lantern_view_485480`,
+`norrath_ctors_ant_lantern_view_485488`,
+`norrath_ctors_ant_lantern_view_4854c8`,
+`norrath_ctors_ant_lantern_view_4854d0`,
+`norrath_ctors_ant_lantern_view_4854d8`,
+`norrath_ctors_ant_lantern_view_4854e0`,
+`norrath_ctors_ant_lantern_view_4854e8`,
+`norrath_ctors_ant_lantern_view_4854f0`,
+`norrath_ctors_ant_lantern_view_4854f8`,
+`norrath_ctors_ant_lantern_view_485500`,
+`norrath_ctors_ant_lantern_view_485530`,
+`norrath_ctors_ant_lantern_view_485538`,
+`norrath_ctors_ant_lantern_view_485540`,
+`norrath_ctors_ant_lantern_view_485548`,
+`norrath_ctors_ant_lantern_view_485560`,
+`norrath_ctors_ant_lantern_view_485568`,
+`norrath_ctors_ant_lantern_view_485570`,
+`norrath_ctors_ant_lantern_view_485578`,
+`norrath_ctors_ant_lantern_view_485580`,
+`norrath_ctors_ant_lantern_view_485760`,
+`norrath_ctors_ant_lantern_view_485768`,
+`norrath_ctors_ant_lantern_view_486030`,
+`norrath_ctors_ant_lantern_view_486038`,
+`norrath_ctors_ant_lantern_view_486040`,
+`norrath_ctors_ant_lantern_view_486048`,
+`norrath_ctors_ant_lantern_view_486050`,
+`norrath_ctors_ant_lantern_view_486058`,
+`norrath_ctors_ant_lantern_view_486060`,
+`norrath_ctors_ant_lantern_view_4860e0`,
+`norrath_ctors_ant_lantern_view_4860e8`,
+`norrath_ctors_ant_lantern_view_4860f0`,
+`norrath_ctors_ant_lantern_view_4860f8`,
+`norrath_ctors_ant_lantern_view_486da4`
+
+Opened: none
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6471,3 +6526,4 @@ and no startup stage has executed.
 - 2026-10-12 22:03 CDT — `agents/w9-ctors-lantern-e` — 1405 unresolved imports
 - 2026-10-12 22:05 CDT — `agents/w9-ctors-lantern-f` — 1365 unresolved imports
 - 2026-10-12 22:08 CDT — `agents/w9-ctors-lantern-g` — 1325 unresolved imports
+- 2026-10-12 22:10 CDT — `agents/w9-ctors-lantern-h` — 1289 unresolved imports
