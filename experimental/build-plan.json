@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3373,
+  "default_authored_inputs": 3399,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4053,6 +4053,32 @@
     "sources/w9-startup-crt-f-strticmp/strticmp.cpp": "1d4ac81937ac64caa8ed8802269857df412917c04ebba6a4c64c337628970273",
     "sources/w9-startup-crt-f-unet-shutdown/unet_shutdown.cpp": "833aa3b8f60b432ed54f46c12c8e679a7771c5936c2aaddaddbf81eb8355ead0",
     "sources/w9-startup-crt-f-ustrcat/ustrcat.cpp": "5819f7283950de60941bb75da514da52549789009975b1c1bbde244cd885bd2f",
+    "sources/w9-vehicle-accum-force-and-torque/accum_force_and_torque.cpp": "5548726b6d235e76119b6a67c323ff718223d65ef29fec70f5188c048a6f0d75",
+    "sources/w9-vehicle-add-passenger/add_passenger.cpp": "346a3b25637d754ddfd97fce0d2ee0ed9f903aa4d193742a8106c0091e0ad1c8",
+    "sources/w9-vehicle-backup/backup.cpp": "d17ab32ec7516f7bc47a172c22d6c391d21c49abb03977adc377cfd3da7cfd3e",
+    "sources/w9-vehicle-boat-destructor/destructor.cpp": "aaa0bf2f72fd952869835bc785a5e29e81af4b27ae372060bcbc9b8193a0f9b6",
+    "sources/w9-vehicle-boat-set/boat_set.cpp": "f5fbaa66e7116c3bb413f6842e5a78d22ec1a73b7d4cee9e9a4a7051c4ec1885",
+    "sources/w9-vehicle-boat-unique-forces/unique_forces.cpp": "86d2f926a5b9e2501dc7f6372ff4e2a5a6efa4555e5ce13eef81015301fe830e",
+    "sources/w9-vehicle-build-collision-info/build_collision_info.cpp": "9bbd636975b4b57c1637746cbf4baed4121a20e6d225c71987025e3a68840081",
+    "sources/w9-vehicle-check-vehicle-collision/check_vehicle_collision.cpp": "919792fc015919e2c7253091cc0e031a1f134bc5dd751dd36c7f6d5127cbb672",
+    "sources/w9-vehicle-check-wall-collision/check_wall_collision.cpp": "826d4aadbec1c6837e02775078bb8d936c56eab01698e4e291e0cd4ab90e2be9",
+    "sources/w9-vehicle-do-ai/do_ai.cpp": "d923ac5a97c9134ddb6d59529a8323c4def91352a1bd905cf9fc9b07e19d385e",
+    "sources/w9-vehicle-do-brakes/do_brakes.cpp": "749c9dfef0d2411d8914c6cb49cc4084539e9536bd06ff52f6d7bf47e29e5ece",
+    "sources/w9-vehicle-do-driveline/do_driveline.cpp": "ba4080659dae6ab72fbc9ff5d8211b0d49b263b23acf2c0b01b071aaef3a1ef0",
+    "sources/w9-vehicle-do-misc/do_misc.cpp": "2ba513ca9062addeaf0eeaba7a1630d668de24635ea68573451bcf8ec8036ecc",
+    "sources/w9-vehicle-do-steering/do_steering.cpp": "7feb0fd15271e9c8af8ff98597db7d091f6f40d0d1eb4d548a29ebb16f8f55b8",
+    "sources/w9-vehicle-do-suspension/do_suspension.cpp": "31947982cea618860cb22fd4db87c5096692ff55203af01b28a62b5a7daac76f",
+    "sources/w9-vehicle-do-throttle/do_throttle.cpp": "a247bca27736e8b4a263ab18890c6c587b2a00816a3af3e9ab817005dd89713d",
+    "sources/w9-vehicle-finalize-position/finalize_position.cpp": "8210d4864f4556948fa2d9b7863943c4526643ad84e26447f38f0a0b7887530a",
+    "sources/w9-vehicle-get-new-rot-and-pos/get_new_rot_and_pos.cpp": "4b2c06c40a9ad382d03457dd74dc09518e05bf9c2b2eb12438e5b78e475e366f",
+    "sources/w9-vehicle-get-seat-position/get_seat_position.cpp": "033f25d7f3e87d88718e3cbe78ad416522b731e49f084f343bfe46aa2282fe92",
+    "sources/w9-vehicle-globals/vehicle_globals.cpp": "a277cd748a40e79368fdeedc7636a9dc102d1c1c19bc93ab9ea1e9696ab58650",
+    "sources/w9-vehicle-have-room/have_room.cpp": "3c2dabc14a429c63837eeead15145ec564135837abed5013a3188781fcc7fb7d",
+    "sources/w9-vehicle-is-passenger/is_passenger.cpp": "595b15f9a80473cb5c5e83a100bbb861b8879f88419df1e1f4491b5db7b3ff0c",
+    "sources/w9-vehicle-lavatractor-set/lavatractor_set.cpp": "65971286e4ad7e8ad39a08d4c4fe2a5f68fca5801e519af1134a211b1b20d4ea",
+    "sources/w9-vehicle-remove-passenger/remove_passenger.cpp": "80dd1a7cfe4516b39ebb89db6755ddb2cb3cc1f78c909614a0f7203cace8c1d7",
+    "sources/w9-vehicle-skulboat-set/skulboat_set.cpp": "3cb8307fc3e882a0c6ed1c4aa312a8b2f4fc6d45fb43a62629cd332d98407daa",
+    "sources/w9-vehicle-start-forces/start_forces.cpp": "e91885cdcda43c3f4b83f154cfe771971aa0ac0d2a6953d6d9a2c983bd411a67",
     "sources/world-find-height-source-v2/find_height.cpp": "1212eb90bfd1b3acbabeee9f1f803b671249c4022f7951106823a59670af383d",
     "sources/world-find-height-source-v2/find_height.hpp": "3fc4732ee37ac4cf88e660d82708448dbd6dbcc937b972e691b670fdf63cbcbf",
     "sources/world-load-level-entities-build-v2/load_entities.cpp": "ae523168f5b9bee5991eb793808f9b5de242a9b775e681ff1154846e26e0011e",
@@ -47424,6 +47450,391 @@
           "compiled_body_bytes": 16
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3375,
+      "kind": "independently_authored_source",
+      "object_name": "accum_force_and_torque.o",
+      "profile": "authored_cpp",
+      "sha256": "5548726b6d235e76119b6a67c323ff718223d65ef29fec70f5188c048a6f0d75",
+      "source": "sources/w9-vehicle-accum-force-and-torque/accum_force_and_torque.cpp",
+      "emitted_functions": [
+        {
+          "name": "accumForceAndTorque__7VehicleP6Point3T1i",
+          "compiled_body_bytes": 284
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3376,
+      "kind": "independently_authored_source",
+      "object_name": "add_passenger.o",
+      "profile": "authored_cpp",
+      "sha256": "346a3b25637d754ddfd97fce0d2ee0ed9f903aa4d193742a8106c0091e0ad1c8",
+      "source": "sources/w9-vehicle-add-passenger/add_passenger.cpp",
+      "emitted_functions": [
+        {
+          "name": "addPassenger__7Vehiclei",
+          "compiled_body_bytes": 636
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3377,
+      "kind": "independently_authored_source",
+      "object_name": "backup.o",
+      "profile": "authored_cpp",
+      "sha256": "d17ab32ec7516f7bc47a172c22d6c391d21c49abb03977adc377cfd3da7cfd3e",
+      "source": "sources/w9-vehicle-backup/backup.cpp",
+      "emitted_functions": [
+        {
+          "name": "backup__7Vehicle",
+          "compiled_body_bytes": 300
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3378,
+      "kind": "independently_authored_source",
+      "object_name": "destructor.o",
+      "profile": "authored_cpp",
+      "sha256": "aaa0bf2f72fd952869835bc785a5e29e81af4b27ae372060bcbc9b8193a0f9b6",
+      "source": "sources/w9-vehicle-boat-destructor/destructor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_4Boat",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3379,
+      "kind": "independently_authored_source",
+      "object_name": "boat_set.o",
+      "profile": "authored_cpp",
+      "sha256": "f5fbaa66e7116c3bb413f6842e5a78d22ec1a73b7d4cee9e9a4a7051c4ec1885",
+      "source": "sources/w9-vehicle-boat-set/boat_set.cpp",
+      "emitted_functions": [
+        {
+          "name": "set__4Boat",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3380,
+      "kind": "independently_authored_source",
+      "object_name": "unique_forces.o",
+      "profile": "authored_cpp",
+      "sha256": "86d2f926a5b9e2501dc7f6372ff4e2a5a6efa4555e5ce13eef81015301fe830e",
+      "source": "sources/w9-vehicle-boat-unique-forces/unique_forces.cpp",
+      "emitted_functions": [
+        {
+          "name": "doMyUniqueForces__4Boat",
+          "compiled_body_bytes": 540
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3381,
+      "kind": "independently_authored_source",
+      "object_name": "build_collision_info.o",
+      "profile": "authored_cpp",
+      "sha256": "9bbd636975b4b57c1637746cbf4baed4121a20e6d225c71987025e3a68840081",
+      "source": "sources/w9-vehicle-build-collision-info/build_collision_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "buildCollisionInfo__7Vehicle",
+          "compiled_body_bytes": 960
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3382,
+      "kind": "independently_authored_source",
+      "object_name": "check_vehicle_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "919792fc015919e2c7253091cc0e031a1f134bc5dd751dd36c7f6d5127cbb672",
+      "source": "sources/w9-vehicle-check-vehicle-collision/check_vehicle_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "checkVehicleCollision__7Vehicle",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3383,
+      "kind": "independently_authored_source",
+      "object_name": "check_wall_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "826d4aadbec1c6837e02775078bb8d936c56eab01698e4e291e0cd4ab90e2be9",
+      "source": "sources/w9-vehicle-check-wall-collision/check_wall_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "checkWallCollision__7Vehicle",
+          "compiled_body_bytes": 1020
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3384,
+      "kind": "independently_authored_source",
+      "object_name": "do_ai.o",
+      "profile": "authored_cpp",
+      "sha256": "d923ac5a97c9134ddb6d59529a8323c4def91352a1bd905cf9fc9b07e19d385e",
+      "source": "sources/w9-vehicle-do-ai/do_ai.cpp",
+      "emitted_functions": [
+        {
+          "name": "doAI__7Vehicle",
+          "compiled_body_bytes": 612
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3385,
+      "kind": "independently_authored_source",
+      "object_name": "do_brakes.o",
+      "profile": "authored_cpp",
+      "sha256": "749c9dfef0d2411d8914c6cb49cc4084539e9536bd06ff52f6d7bf47e29e5ece",
+      "source": "sources/w9-vehicle-do-brakes/do_brakes.cpp",
+      "emitted_functions": [
+        {
+          "name": "doBrakes__7Vehicle",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3386,
+      "kind": "independently_authored_source",
+      "object_name": "do_driveline.o",
+      "profile": "authored_cpp",
+      "sha256": "ba4080659dae6ab72fbc9ff5d8211b0d49b263b23acf2c0b01b071aaef3a1ef0",
+      "source": "sources/w9-vehicle-do-driveline/do_driveline.cpp",
+      "emitted_functions": [
+        {
+          "name": "doDriveline__7Vehicle",
+          "compiled_body_bytes": 3200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3387,
+      "kind": "independently_authored_source",
+      "object_name": "do_misc.o",
+      "profile": "authored_cpp",
+      "sha256": "2ba513ca9062addeaf0eeaba7a1630d668de24635ea68573451bcf8ec8036ecc",
+      "source": "sources/w9-vehicle-do-misc/do_misc.cpp",
+      "emitted_functions": [
+        {
+          "name": "doMisc__7Vehicle",
+          "compiled_body_bytes": 1348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3388,
+      "kind": "independently_authored_source",
+      "object_name": "do_steering.o",
+      "profile": "authored_cpp",
+      "sha256": "7feb0fd15271e9c8af8ff98597db7d091f6f40d0d1eb4d548a29ebb16f8f55b8",
+      "source": "sources/w9-vehicle-do-steering/do_steering.cpp",
+      "emitted_functions": [
+        {
+          "name": "doSteering__7Vehicle",
+          "compiled_body_bytes": 1516
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3389,
+      "kind": "independently_authored_source",
+      "object_name": "do_suspension.o",
+      "profile": "authored_cpp",
+      "sha256": "31947982cea618860cb22fd4db87c5096692ff55203af01b28a62b5a7daac76f",
+      "source": "sources/w9-vehicle-do-suspension/do_suspension.cpp",
+      "emitted_functions": [
+        {
+          "name": "doSuspension__7Vehicle",
+          "compiled_body_bytes": 1244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3390,
+      "kind": "independently_authored_source",
+      "object_name": "do_throttle.o",
+      "profile": "authored_cpp",
+      "sha256": "a247bca27736e8b4a263ab18890c6c587b2a00816a3af3e9ab817005dd89713d",
+      "source": "sources/w9-vehicle-do-throttle/do_throttle.cpp",
+      "emitted_functions": [
+        {
+          "name": "doThrottle__7Vehicle",
+          "compiled_body_bytes": 888
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3391,
+      "kind": "independently_authored_source",
+      "object_name": "finalize_position.o",
+      "profile": "authored_cpp",
+      "sha256": "8210d4864f4556948fa2d9b7863943c4526643ad84e26447f38f0a0b7887530a",
+      "source": "sources/w9-vehicle-finalize-position/finalize_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "finalizePosition__7Vehicle",
+          "compiled_body_bytes": 912
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3392,
+      "kind": "independently_authored_source",
+      "object_name": "get_new_rot_and_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "4b2c06c40a9ad382d03457dd74dc09518e05bf9c2b2eb12438e5b78e475e366f",
+      "source": "sources/w9-vehicle-get-new-rot-and-pos/get_new_rot_and_pos.cpp",
+      "emitted_functions": [
+        {
+          "name": "getNewRotAndPos__7VehicleP6Point3T1fii",
+          "compiled_body_bytes": 908
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3393,
+      "kind": "independently_authored_source",
+      "object_name": "get_seat_position.o",
+      "profile": "authored_cpp",
+      "sha256": "033f25d7f3e87d88718e3cbe78ad416522b731e49f084f343bfe46aa2282fe92",
+      "source": "sources/w9-vehicle-get-seat-position/get_seat_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSeatPosition__7VehicleiP6Point3",
+          "compiled_body_bytes": 528
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3394,
+      "kind": "independently_authored_source",
+      "object_name": "vehicle_globals.o",
+      "profile": "authored_cpp",
+      "sha256": "a277cd748a40e79368fdeedc7636a9dc102d1c1c19bc93ab9ea1e9696ab58650",
+      "source": "sources/w9-vehicle-globals/vehicle_globals.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3395,
+      "kind": "independently_authored_source",
+      "object_name": "have_room.o",
+      "profile": "authored_cpp",
+      "sha256": "3c2dabc14a429c63837eeead15145ec564135837abed5013a3188781fcc7fb7d",
+      "source": "sources/w9-vehicle-have-room/have_room.cpp",
+      "emitted_functions": [
+        {
+          "name": "haveRoom__7Vehicle",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3396,
+      "kind": "independently_authored_source",
+      "object_name": "is_passenger.o",
+      "profile": "authored_cpp",
+      "sha256": "595b15f9a80473cb5c5e83a100bbb861b8879f88419df1e1f4491b5db7b3ff0c",
+      "source": "sources/w9-vehicle-is-passenger/is_passenger.cpp",
+      "emitted_functions": [
+        {
+          "name": "isPassenger__7Vehiclei",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3397,
+      "kind": "independently_authored_source",
+      "object_name": "lavatractor_set.o",
+      "profile": "authored_cpp",
+      "sha256": "65971286e4ad7e8ad39a08d4c4fe2a5f68fca5801e519af1134a211b1b20d4ea",
+      "source": "sources/w9-vehicle-lavatractor-set/lavatractor_set.cpp",
+      "emitted_functions": [
+        {
+          "name": "set__11LavaTractor",
+          "compiled_body_bytes": 648
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3398,
+      "kind": "independently_authored_source",
+      "object_name": "remove_passenger.o",
+      "profile": "authored_cpp",
+      "sha256": "80dd1a7cfe4516b39ebb89db6755ddb2cb3cc1f78c909614a0f7203cace8c1d7",
+      "source": "sources/w9-vehicle-remove-passenger/remove_passenger.cpp",
+      "emitted_functions": [
+        {
+          "name": "removePassenger__7Vehiclei",
+          "compiled_body_bytes": 416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3399,
+      "kind": "independently_authored_source",
+      "object_name": "skulboat_set.o",
+      "profile": "authored_cpp",
+      "sha256": "3cb8307fc3e882a0c6ed1c4aa312a8b2f4fc6d45fb43a62629cd332d98407daa",
+      "source": "sources/w9-vehicle-skulboat-set/skulboat_set.cpp",
+      "emitted_functions": [
+        {
+          "name": "set__8SkulBoat",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3400,
+      "kind": "independently_authored_source",
+      "object_name": "start_forces.o",
+      "profile": "authored_cpp",
+      "sha256": "e91885cdcda43c3f4b83f154cfe771971aa0ac0d2a6953d6d9a2c983bd411a67",
+      "source": "sources/w9-vehicle-start-forces/start_forces.cpp",
+      "emitted_functions": [
+        {
+          "name": "startForces__7Vehicle",
+          "compiled_body_bytes": 32
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -47523,7 +47934,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "227211a211face7a73e8769f32efad87d5f2c895b82ea7eaab42781adff84924",
+  "snapshot_sha256": "d166dff46e4abd67634f6ed4d5958fcc3469c5c318c12266d8a2597678d9f90a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

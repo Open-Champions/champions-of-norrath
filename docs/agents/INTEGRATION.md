@@ -6611,6 +6611,53 @@ Opened: `candle2Particle`, `msg_poke__9AutoChesti`, `msg_run__13AutoContainer`,
 `msg_run__9AutoChest`, `objectAddToMediumRunList__FP10GameObject`,
 `worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2`
 
+## agents/w9-vehicle
+
+Merged (the branch notes carry the five summary sections; the tip was 59
+minutes old). Twenty-six units with fresh `input_order` values 3375 through
+3400: vehicle and boat functions (force accumulation, passengers, backup,
+destructor, setters) and one globals data unit that emits no function. All 26
+host checks build and exit 0 here (26 of 26). The notes' "Toolchain facts found
+on the way" section is the worker's own and was not checked. No duplicate
+definition was found at link time. The opened set grows because the vehicle
+code calls into physics and camera areas not yet reconstructed. No game binary
+or disassembly listing was committed. 2450 function bodies, 3399 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1318 |
+| After | 1324 |
+| Closed | 27 |
+| Opened | 33 |
+
+Closed: `_$_4Boat`, `accumForceAndTorque__7VehicleP6Point3T1i`,
+`addPassenger__7Vehiclei`, `backup__7Vehicle`,
+`buildCollisionInfo__7Vehicle`, `checkVehicleCollision__7Vehicle`,
+`checkWallCollision__7Vehicle`, `doAI__7Vehicle`, `doBrakes__7Vehicle`,
+`doDriveline__7Vehicle`, `doMisc__7Vehicle`, `doMyUniqueForces__4Boat`,
+`doSteering__7Vehicle`, `doSuspension__7Vehicle`, `doThrottle__7Vehicle`,
+`finalizePosition__7Vehicle`, `getNewRotAndPos__7VehicleP6Point3T1fii`,
+`getSeatPosition__7VehicleiP6Point3`, `haveRoom__7Vehicle`,
+`isPassenger__7Vehiclei`, `removePassenger__7Vehiclei`,
+`set__11LavaTractor`, `set__4Boat`, `set__8SkulBoat`,
+`startForces__7Vehicle`, `vehicleCount`, `vehicleList`
+
+Opened: `FinalizePosition__5Wheel`, `__17VehicleBodySphereP7Vehicleff`, `_vt$4Boat`,
+`acos`, `acosf`, `addWheel__7VehiclePciffff`, `atan2f`,
+`backupJustForces__7Vehicle`, `buildCollisionBox__7Vehicle`,
+`changeOrientation__7VehicleG6Point3`, `dismount__6Player`,
+`doDifferential__7Vehicle`, `dpmul`,
+`dualImpulse__7VehicleP7VehicleT1P6Point3T3`,
+`gameLineRayCollision__FP6Point3T0P23gameLineCollisionPacketi`,
+`getBlockingVehicle__7VehiclePf`, `getEngineTorque__7Vehicle`,
+`getParticleVelocity__7VehicleP6Point3`, `impulse__7VehicleP6Point3N21fii`,
+`lavaGoopParticle`, `lavaSteamParticle`, `nullp`, `quatMul__FP4QuatN20`,
+`rayHit__7VehicleP6Point3T1fT1`, `resolveCreatureCollisions__7Vehicle`,
+`scalePatchLimit__7VehicleiP6Point3`, `segmentLineHit__FP6Point3N50`,
+`setMassAndIBody__7Vehicle`, `slideDustParticle`, `slideDustParticleBig`,
+`slideDustParticleBigDark`, `slideDustParticleDark`, `sqrt`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -7005,3 +7052,4 @@ and no startup stage has executed.
 - 2026-10-12 22:27 CDT — `agents/w9-hud-inventory-items-c` — 1356 unresolved imports
 - 2026-10-12 22:30 CDT — `agents/w9-rtti-vtables-entities-a` — 1344 unresolved imports
 - 2026-10-12 22:33 CDT — `agents/w9-rtti-vtables-entities-b` — 1318 unresolved imports
+- 2026-10-12 22:35 CDT — `agents/w9-vehicle` — 1324 unresolved imports
