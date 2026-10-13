@@ -6513,6 +6513,62 @@ Opened: `armorDebug`, `healthPotionsLeft`,
 `inventorySwitchDualWield__FiPQ24item11description`, `manaPotionsLeft`,
 `netGetCameraCustomControl__Fi`, `shopRun__Fi`
 
+## agents/w9-rtti-vtables-entities-a
+
+Merged (the branch notes carry the five summary sections; the tip was 71
+minutes old). Thirty-seven of its 44 units were selected with fresh
+`input_order` values 3306 through 3342: entity `initType` functions, type-info
+destructors, `_$_9type_info`, and two vtable data views. Seven data units were
+**not** selected because they have no committed check: single-float literal
+views `480bb8`, `480cb4`, `4810b4`, `4810b8`, `481710`, `4818ac` and `482424`
+(values such as 0x3e4ccccc); they stay in the snapshot, unselected. The worker's
+paired-run counts (scenarios per function, 1487 imports) are for its private
+tree and were not reproduced; the real count after this merge is above. The 37
+selected units' host checks build and exit 0 here (37 of 37). No game binary
+or disassembly listing was committed. 2392 function bodies, 3341 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1356 |
+| After | 1344 |
+| Closed | 34 |
+| Opened | 22 |
+
+Closed: `_$_10DoorSecret`, `_$_10GameObject`, `_$_11AutoChestLP`,
+`_$_11FloorSwitch`, `_$_14__si_type_info`, `_$_15AutoContainerLP`,
+`_$_16__user_type_info`, `_$_4Line`, `_$_6Candle`, `_$_7AntTrap`,
+`_$_7Blocker`, `_$_7Candle2`, `_$_7EggSack`, `_$_8AutoProp`,
+`_$_9DoorSwing`, `addTurnAnimation__3Cat`, `clone__10DoorSecret`,
+`clone__11FloorSwitch`, `clone__6Candle`, `clone__7Blocker`,
+`clone__7Candle2`, `clone__9DoorSwing`,
+`do_dyncast__C14__si_type_infoiQ216__user_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_dyncast__C16__user_type_infoiQ216__user_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_find_public_subobj__C14__si_type_infoiRC9type_infoPvT3`,
+`do_find_public_subobj__C16__user_type_infoiRC9type_infoPvT3`,
+`do_upcast__C14__si_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_info13upcast_result`,
+`do_upcast__C16__user_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_info13upcast_result`,
+`initAttackVariant__5Demon`, `initAttackVariant__8Froglock`,
+`initType__13FemaleDarkElfb`, `initType__5Gnome`, `initType__6Goblinb`,
+`msg_collision__13AutoContainerP10GameObject`
+
+Opened: `_$_10AutoObject`, `_$_10AutoPropLP`, `_$_13AutoContainer`,
+`__tf10AutoObject`, `msg_load__10AutoObjectPc`, `msg_run__10AutoObject`,
+`msg_save__10AutoObjectPc`, `norrath_rtti_entities_a_view_480bb8`,
+`norrath_rtti_entities_a_view_480cb4`,
+`norrath_rtti_entities_a_view_480cb8`,
+`norrath_rtti_entities_a_view_480cbc`,
+`norrath_rtti_entities_a_view_480cc0`,
+`norrath_rtti_entities_a_view_4810b4`,
+`norrath_rtti_entities_a_view_4810b8`,
+`norrath_rtti_entities_a_view_481710`,
+`norrath_rtti_entities_a_view_4818ac`,
+`norrath_rtti_entities_a_view_482424`,
+`norrath_rtti_entities_a_view_482428`,
+`norrath_rtti_entities_a_view_48242c`,
+`norrath_rtti_entities_a_view_482430`,
+`norrath_rtti_entities_a_view_482434`, `norrath_rtti_entities_a_view_482438`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6905,3 +6961,4 @@ and no startup stage has executed.
 - 2026-10-12 22:19 CDT — `agents/w9-ctors-wraith-c` — 1417 unresolved imports
 - 2026-10-12 22:22 CDT — `agents/w9-ctors-wraith-d` — 1381 unresolved imports
 - 2026-10-12 22:27 CDT — `agents/w9-hud-inventory-items-c` — 1356 unresolved imports
+- 2026-10-12 22:30 CDT — `agents/w9-rtti-vtables-entities-a` — 1344 unresolved imports
