@@ -4683,6 +4683,50 @@ k__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`,
 `netCheckActivation__FG6Point3f`, `rainSplashParticle`, `routeQueue`,
 `textRemoveText__FPv`, `worldFreeWorld__FP12_worldHeader`.
 
+## agents/w9-startup-crt-a
+
+Merged (the branch notes carry the five summary sections). Twenty-two units with
+fresh `input_order` values 2393 through 2414: 18 function units and four data
+units (commander lists, item global table, item picture state, map data) that
+emit no function. Sources are authored C++/assembly; no game binary or
+disassembly listing was committed. Host contracts: 20 of 22 run here. The
+`add-particle-ctor-numbered` check fails to link on this machine only because
+macOS prefixes the `__asm__` label of `_vt$11AddParticle` with an underscore (a
+platform artifact, not a source defect). The `terminate-thread` check compares
+against the pinned executable and was not run. The data units' only comparison
+is `docs/agents/w9-startup-crt-a-check.py`, which needs the private executable
+and was not run; the item-name table is an identifier table, not dialogue.
+The worker's claimed closed list reproduces (32 closed); 17 opened. 1968
+function bodies, 2413 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+| | |
+|---|---|
+| Before | 1514 |
+| After | 1499 |
+| Closed | 32 |
+| Opened | 17 |
+
+Closed: `AllocTimerCounter`, `CallRpc`, `InitTLB`, `InvalidDCache`, `MemcpyS`,
+`SetTimerHandler`, `StartTimerCounter`, `TerminateThread`,
+`UnpreparePowerOff__Fv`, `_14WoodElfSoldier$m_commanderList`,
+`_3Orc$m_commanderList`, `_3map$mapOffset`, `_3map$mapheight`,
+`_3map$maptiles`, `_3map$mapwidth`, `_4item$globalItem`, `_4item$picBuffer`,
+`_4item$picInProgress`, `_4item$picList`, `_4item$picLoadBuffer`,
+`_4item$picLoadFinished`, `_4item$picsToLoad`, `_6Wraith$s_rWraithList`,
+`_GLOBAL_$I$hudNoDraw`, `__11AddParticleG6Point3PPci`,
+`__11FireBombletG6Point3sPcT1P6Point3i`, `__11ParticleDef`,
+`__12RecallEffectG6Point3`,
+`__13MissileWeaponiP12_modelHeaderP8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description`,
+`__14AnimationStateRC14AnimationState`, `__3NPCG6Point3sPcN33ifPPc`,
+`__3Webii`
+
+Opened: `GetMemorySize`, `InitTLB32MB`, `P_ExtendTrail__FiG6Point3`,
+`P_StartTrail__Fiifiiiii`, `_InitTLB`, `__15GlowingCylinderG6Point3iiii`,
+`_sceIDC`, `_vt$10Projectile`, `_vt$11FireBomblet`, `_vt$12RecallEffect`,
+`_vt$13MissileWeapon`, `_vt$3NPC`, `iAllocTimerCounter`, `iSetTimerHandler`,
+`iStartTimerCounter`, `playedStinger`, `sceSifMCallRpc`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
