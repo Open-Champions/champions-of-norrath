@@ -1,5 +1,5 @@
 #include "../w9-animation-object-c-common/mem.hpp"
-// Observed slideBack__8Creaturef at 0x00111490, 920 bytes. Arguments: the creature and a
+// Observed slideBack__8Creaturef at 0x00111490, 924 bytes. Arguments: the creature and a
 // float scale `t`. Does nothing unless t > 0, the float at +756 is nonzero and bit 1 of the
 // word at +12 is clear. Then:
 //  1. push = (icos(h) * v * t, isin(h) * v * t, 0) where h is the signed halfword at +748 and
