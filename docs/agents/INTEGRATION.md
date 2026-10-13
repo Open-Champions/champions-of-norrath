@@ -7506,3 +7506,4 @@ zero COMMON, 214 tool tests passed. No EE or game execution.
 Closed: `MC_GetLoadName__Fv`, `MC_GetRamSlot__FPi`, `MC_LoadRamSlot__Fv`, `MC_ReplicateFirstPlayersImportantThings__Fv`, `MC_ResetAutoCheckPointSave__FPc`, `ascii_special`, `ascii_table`, `browserDelete`, `browserOverwrite`, `coreForceSmallCharacters`, `debugStartMenuIsOn__Fv`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`, `eqFind__FPci`, `gameInitPostFrontend__Fv`, `getSaveTableEntry__FPc`, `getSlotName__FiiPc`, `hubNames`, `importInfoHeader`, `loadSlot`, `markFileName`
 
 Opened: `eqGroup`, `globalIcons`, `nmEqGroups`, `nmWGroups`, `wGroup`
+- 2026-10-13 01:10 CDT — `agents/w10-front-a` — 1439 unresolved imports
