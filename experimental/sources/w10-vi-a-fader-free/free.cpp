@@ -4,7 +4,9 @@
 // calls ReleaseMaterial__8VIRasteri R12VIDictionary with (raster, index, the
 // dictionary pointer stored at offset 4). It then clears the raster pointer and
 // sets the index to -1; the index is -1 afterwards on every path.
-// Inferred: offset 4 is the dictionary that Init__7VIFader receives.
+// Observed: Init__7VIFader receives a dictionary pointer but never stores it, so
+// offset 4 is written by some other code. Inferred: offset 4 holds a VIDictionary
+// pointer, from the parameter type of ReleaseMaterial.
 // Unknown: the rest of the VIFader layout is established per field by the
 // other w10-vi-a fader units.
 extern "C" {
