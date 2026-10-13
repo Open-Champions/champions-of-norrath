@@ -8299,7 +8299,7 @@ Opened: `_vt$6Wraith`, `drawArrow__14WoodElfSoldier`
 ## Not merged: agents/w10-actor-o
 
 Held at tip `c7de8712` (45 minutes old when read). The branch holds 31 units with
-host checks (26 built and exited 0 here, the rest were not run) but **no notes
+host checks (all 31 built and exited 0 here) but **no notes
 file**: `docs/agents/w10-actor-o.md` does not exist, so there are no observed,
 inferred and unknown lists, no imports closed or opened, and the snapshot checker
 fails because every package record needs its review file (`docs/agents/<package>.md`).
