@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3477,
+  "default_authored_inputs": 3510,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2282,6 +2282,39 @@
     "sources/w10-startup-c-name-literals/name_literals.cpp": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
     "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp": "ff9747ff9d44e6f3a7b35154890bb2e48507a3c12e2b314d66deabdf3a756191",
     "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp": "61438e0df54b2c5258c9b538b4395c3d738114a4e3533a98d678c4f88e1ed404",
+    "sources/w10-vi-a-camera-call/call.cpp": "1a50524e0b4a1d9b98c91116a27182d0f04ef263a5b1cb8a7825ddea346bbf68",
+    "sources/w10-vi-a-camera-init/init.cpp": "d860d1b104fcff8bf660aecae6e434dfb29da13b74cec5c391767bca6ba90dc7",
+    "sources/w10-vi-a-collide-close/close.cpp": "0663aedc570951d6691a7a395024fbf95d6c01d873f43581e83c90f9f3559aa8",
+    "sources/w10-vi-a-collide-ctor/ctor.cpp": "1db43c304783e5dcfa906ad31caf86f528e8292c720e04554799cbbd7eec6a7d",
+    "sources/w10-vi-a-collide-dtor/dtor.cpp": "9f70ea6c886b75176877b18c6ede9eaf63ad130df85a1d8d1b143b9ff3cb53ce",
+    "sources/w10-vi-a-collide-init/init.cpp": "04803d174ce252f4d4847d8fd02ff1f23fbd0279692d2615fbf5d4dc31ee641b",
+    "sources/w10-vi-a-csffile-ctor/ctor.cpp": "a251c3239f7881b96dae1e7bffa7702c17301173ecf111891392b2dd04e8856a",
+    "sources/w10-vi-a-csffile-parse/parse.cpp": "47f0bf24558ce6d1338a618f10e02de4efcc196077ae794b78c4bfcba3c8dfe7",
+    "sources/w10-vi-a-dict-clear/clear.cpp": "c6576c27711c2f1d0556c5696c8345f960187a0075abdd234091557e8c518d65",
+    "sources/w10-vi-a-dict-ctor/ctor.cpp": "384a3cc1c1169d81117b8d3a014244ba1c194ae258852e50e265a1eeba88a906",
+    "sources/w10-vi-a-dict-dtor/dtor.cpp": "5de5831bb0b0a3c244718d6d56996d3156216d44d7ee0e39d014290cf71d2b18",
+    "sources/w10-vi-a-dict-init/init.cpp": "00362e3b852a17fcb6ca38b580788cfe8b983fc9aaff41b0c5c1ebb0eb57fed8",
+    "sources/w10-vi-a-esfparse-ctor/ctor.cpp": "9db047d44a8ea2185cdb8508c3b770875602317882345c04f2759158d0d39dc9",
+    "sources/w10-vi-a-esfparse-dtor/dtor.cpp": "e44d87e1aeb29fcfe60536893525b144f2a6cc565e084d5bff14e6c6daa4ece4",
+    "sources/w10-vi-a-fader-begin/begin.cpp": "cf86875cee06e24c49a480d956fe13b71498616c524881e7f962f2ac7cd85aef",
+    "sources/w10-vi-a-fader-ctor/ctor.cpp": "4167ecc1c8187ce959f2c6063e59c8d13f651424ea6e01b71af248aa8a38dfac",
+    "sources/w10-vi-a-fader-dtor/dtor.cpp": "8996e87f8b66c04afc8eb2f16b54e4b7070aeabcb58caefbc21dbb098014f02b",
+    "sources/w10-vi-a-fader-free/free.cpp": "1cd6fb6ee3c7de6ed7cfdab2aa7def8d6b80a0459ff39cb81cda2f490eac14e6",
+    "sources/w10-vi-a-fader-init/init.cpp": "be557bc62ee188ebc116a0bf9b8f59e2c243b3fc1ea51c63a62573255373a408",
+    "sources/w10-vi-a-fader-update/update.cpp": "e58b7a40d89482f801a8699d8d9fb7d18e37d3610ae66549f9d87fb1deeff726",
+    "sources/w10-vi-a-font-ctor/ctor.cpp": "fb5239d8fe6796b6687acee140307760be735802d86d4260c6398406657b7e61",
+    "sources/w10-vi-a-gameoptions-load/load.cpp": "95b74efff5edc584ea28049e829537d459f3619e37ec59b96d59ac715b9fe4a1",
+    "sources/w10-vi-a-guiobject-cleanup/cleanup.cpp": "1b9a82a61f56308535d55521c94904bccf9d08c39f7879aebe4213b7af293fb0",
+    "sources/w10-vi-a-kbd-map-table/kbd_map_table.cpp": "9a5b0f01af9f0eb8582e3ba15cf39abb504b88751abf775ad8a2fb6bf450682b",
+    "sources/w10-vi-a-keyboard-ctor/ctor.cpp": "a987fa0319e5b144a062cc2152236c8f36b586317350149502f898e2e2568db5",
+    "sources/w10-vi-a-keyboard-dtor/dtor.cpp": "fe54c83d7f5c5cd28d07d5af1ded829ca9245c1d56d67bd485bad447734fb5a7",
+    "sources/w10-vi-a-keyboard-read/read.cpp": "ec5a8e76da0fbeaa563dd09ff84e52c7642e30ef3cc1dcc664a26d27867a88ce",
+    "sources/w10-vi-a-matrix44-dtor/dtor.cpp": "86e224177f37b185575420ef0719230409d9bd3754121b765d852601c4ec3b07",
+    "sources/w10-vi-a-pad-close/close.cpp": "1fcd13ab7b5b7ca1c5a0104ef39aec4ecc5c6198249c1ed9185f1ad8733ed74e",
+    "sources/w10-vi-a-pad-dtor/dtor.cpp": "cfee29cbd5ca1ae459ad34c5e1f14056a41feea2154080ff38d3472426618ce5",
+    "sources/w10-vi-a-pad-init/init.cpp": "a2304cfbc9b8b1b55c0f86682421153f274953df1e9af624d213fb3e4923df22",
+    "sources/w10-vi-a-pad-read/read.cpp": "31dcd488adf2950680da9abc02cfbf8e8ae390e971600f5f41f26158559e9247",
+    "sources/w10-vi-a-usocket-free/free.cpp": "0b20aa57407f1c61534f1d4085e5315b0a59c7d1d251cefb660dae0a550fef8e",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -48931,6 +48964,496 @@
       "sha256": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
       "source": "sources/w10-startup-c-name-literals/name_literals.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3479,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_camera_call.o",
+      "profile": "authored_cpp",
+      "sha256": "1a50524e0b4a1d9b98c91116a27182d0f04ef263a5b1cb8a7825ddea346bbf68",
+      "source": "sources/w10-vi-a-camera-call/call.cpp",
+      "emitted_functions": [
+        {
+          "name": "__cl__8VICameraR7VIVect3T1",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3480,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_camera_init.o",
+      "profile": "authored_cpp",
+      "sha256": "d860d1b104fcff8bf660aecae6e434dfb29da13b74cec5c391767bca6ba90dc7",
+      "source": "sources/w10-vi-a-camera-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__8VICameraR8VIRasterRC7VIVect3T2ffff",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3481,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_collide_close.o",
+      "profile": "authored_cpp",
+      "sha256": "0663aedc570951d6691a7a395024fbf95d6c01d873f43581e83c90f9f3559aa8",
+      "source": "sources/w10-vi-a-collide-close/close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__9VICollide",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3482,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_collide_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "1db43c304783e5dcfa906ad31caf86f528e8292c720e04554799cbbd7eec6a7d",
+      "source": "sources/w10-vi-a-collide-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__9VICollide",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3483,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_collide_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "9f70ea6c886b75176877b18c6ede9eaf63ad130df85a1d8d1b143b9ff3cb53ce",
+      "source": "sources/w10-vi-a-collide-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_9VICollide",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3484,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_collide_init.o",
+      "profile": "authored_cpp",
+      "sha256": "04803d174ce252f4d4847d8fd02ff1f23fbd0279692d2615fbf5d4dc31ee641b",
+      "source": "sources/w10-vi-a-collide-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollide",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3485,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_csffile_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a251c3239f7881b96dae1e7bffa7702c17301173ecf111891392b2dd04e8856a",
+      "source": "sources/w10-vi-a-csffile-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__9VICSFFile",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3486,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_csffile_parse.o",
+      "profile": "authored_cpp",
+      "sha256": "47f0bf24558ce6d1338a618f10e02de4efcc196077ae794b78c4bfcba3c8dfe7",
+      "source": "sources/w10-vi-a-csffile-parse/parse.cpp",
+      "emitted_functions": [
+        {
+          "name": "Parse__9VICSFFilePCcR10VIESFParseR7VIScene",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3487,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_dict_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "c6576c27711c2f1d0556c5696c8345f960187a0075abdd234091557e8c518d65",
+      "source": "sources/w10-vi-a-dict-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__12VIDictionary",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3488,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_dict_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "384a3cc1c1169d81117b8d3a014244ba1c194ae258852e50e265a1eeba88a906",
+      "source": "sources/w10-vi-a-dict-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12VIDictionary",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3489,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_dict_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "5de5831bb0b0a3c244718d6d56996d3156216d44d7ee0e39d014290cf71d2b18",
+      "source": "sources/w10-vi-a-dict-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_12VIDictionary",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3490,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_dict_init.o",
+      "profile": "authored_cpp",
+      "sha256": "00362e3b852a17fcb6ca38b580788cfe8b983fc9aaff41b0c5c1ebb0eb57fed8",
+      "source": "sources/w10-vi-a-dict-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__12VIDictionaryi",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3491,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_esfparse_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9db047d44a8ea2185cdb8508c3b770875602317882345c04f2759158d0d39dc9",
+      "source": "sources/w10-vi-a-esfparse-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__10VIESFParse",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3492,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_esfparse_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "e44d87e1aeb29fcfe60536893525b144f2a6cc565e084d5bff14e6c6daa4ece4",
+      "source": "sources/w10-vi-a-esfparse-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIESFParse",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3493,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "cf86875cee06e24c49a480d956fe13b71498616c524881e7f962f2ac7cd85aef",
+      "source": "sources/w10-vi-a-fader-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__7VIFaderff",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3494,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "4167ecc1c8187ce959f2c6063e59c8d13f651424ea6e01b71af248aa8a38dfac",
+      "source": "sources/w10-vi-a-fader-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__7VIFader",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3495,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "8996e87f8b66c04afc8eb2f16b54e4b7070aeabcb58caefbc21dbb098014f02b",
+      "source": "sources/w10-vi-a-fader-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_7VIFader",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3496,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_free.o",
+      "profile": "authored_cpp",
+      "sha256": "1cd6fb6ee3c7de6ed7cfdab2aa7def8d6b80a0459ff39cb81cda2f490eac14e6",
+      "source": "sources/w10-vi-a-fader-free/free.cpp",
+      "emitted_functions": [
+        {
+          "name": "Free__7VIFader",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3497,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_init.o",
+      "profile": "authored_cpp",
+      "sha256": "be557bc62ee188ebc116a0bf9b8f59e2c243b3fc1ea51c63a62573255373a408",
+      "source": "sources/w10-vi-a-fader-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__7VIFaderP8VIRasterP12VIDictionaryf",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3498,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_fader_update.o",
+      "profile": "authored_cpp",
+      "sha256": "e58b7a40d89482f801a8699d8d9fb7d18e37d3610ae66549f9d87fb1deeff726",
+      "source": "sources/w10-vi-a-fader-update/update.cpp",
+      "emitted_functions": [
+        {
+          "name": "Update__7VIFader",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3499,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_font_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "fb5239d8fe6796b6687acee140307760be735802d86d4260c6398406657b7e61",
+      "source": "sources/w10-vi-a-font-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__6VIFont",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3500,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_gameoptions_load.o",
+      "profile": "authored_cpp",
+      "sha256": "95b74efff5edc584ea28049e829537d459f3619e37ec59b96d59ac715b9fe4a1",
+      "source": "sources/w10-vi-a-gameoptions-load/load.cpp",
+      "emitted_functions": [
+        {
+          "name": "Load__13VIGameOptions",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3501,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_guiobject_cleanup.o",
+      "profile": "authored_cpp",
+      "sha256": "1b9a82a61f56308535d55521c94904bccf9d08c39f7879aebe4213b7af293fb0",
+      "source": "sources/w10-vi-a-guiobject-cleanup/cleanup.cpp",
+      "emitted_functions": [
+        {
+          "name": "CleanUp__11VIGUIObject",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3502,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_kbd_map_table.o",
+      "profile": "authored_cpp",
+      "sha256": "9a5b0f01af9f0eb8582e3ba15cf39abb504b88751abf775ad8a2fb6bf450682b",
+      "source": "sources/w10-vi-a-kbd-map-table/kbd_map_table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3503,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_keyboard_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a987fa0319e5b144a062cc2152236c8f36b586317350149502f898e2e2568db5",
+      "source": "sources/w10-vi-a-keyboard-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__10VIKeyboard",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3504,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_keyboard_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "fe54c83d7f5c5cd28d07d5af1ded829ca9245c1d56d67bd485bad447734fb5a7",
+      "source": "sources/w10-vi-a-keyboard-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIKeyboard",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3505,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_keyboard_read.o",
+      "profile": "authored_cpp",
+      "sha256": "ec5a8e76da0fbeaa563dd09ff84e52c7642e30ef3cc1dcc664a26d27867a88ce",
+      "source": "sources/w10-vi-a-keyboard-read/read.cpp",
+      "emitted_functions": [
+        {
+          "name": "Read__10VIKeyboardR12VIConsoleKey",
+          "compiled_body_bytes": 1092
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3506,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_matrix44_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "86e224177f37b185575420ef0719230409d9bd3754121b765d852601c4ec3b07",
+      "source": "sources/w10-vi-a-matrix44-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIMatrix44",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3507,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_pad_close.o",
+      "profile": "authored_cpp",
+      "sha256": "1fcd13ab7b5b7ca1c5a0104ef39aec4ecc5c6198249c1ed9185f1ad8733ed74e",
+      "source": "sources/w10-vi-a-pad-close/close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__5VIPad",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3508,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_pad_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "cfee29cbd5ca1ae459ad34c5e1f14056a41feea2154080ff38d3472426618ce5",
+      "source": "sources/w10-vi-a-pad-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_5VIPad",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3509,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_pad_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a2304cfbc9b8b1b55c0f86682421153f274953df1e9af624d213fb3e4923df22",
+      "source": "sources/w10-vi-a-pad-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__5VIPadii",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3510,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_pad_read.o",
+      "profile": "authored_cpp",
+      "sha256": "31dcd488adf2950680da9abc02cfbf8e8ae390e971600f5f41f26158559e9247",
+      "source": "sources/w10-vi-a-pad-read/read.cpp",
+      "emitted_functions": [
+        {
+          "name": "Read__5VIPadR12VIConsolePad",
+          "compiled_body_bytes": 1348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3511,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_a_usocket_free.o",
+      "profile": "authored_cpp",
+      "sha256": "0b20aa57407f1c61534f1d4085e5315b0a59c7d1d251cefb660dae0a550fef8e",
+      "source": "sources/w10-vi-a-usocket-free/free.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIFreeUSocketExApi__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -49030,7 +49553,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8e1c72377e20ffddc30750c97c2112b1425487f39f48ab938b02f423208f5ec6",
+  "snapshot_sha256": "529007a1d20c2e83eb093cb729e717541c32f2b87404a0d946dcccb865034b5e",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -6949,6 +6949,37 @@ host checks per function and push again; the notes also mention a plan-entry
 generator script and fifteen `w9-rtti-vtables-entities-a` view units "missing
 from the shared plan", which this integrator did not verify.
 
+## agents/w10-vi-a
+
+Merged (merge commit, tip `c1b408ff`, 10 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries,
+authored but never executed, unknown). 32 functions and one initialised data
+table (`KbdMapTable`, 750 bytes) from the VI front-end framework classes, with
+fresh `input_order` values 3479 through 3511. Each unit has a
+`host_contract.cpp` (33 of 33). All 33 compile with `-Wall -Wextra -Werror`
+and exit 0 here (x86_64, `-pagezero_size`, `-ffp-contract=off`); one mutation
+of `Close__9VICollide` (swapped the two return values) made its contract
+fail. The `KbdMapTable` check carries a hash and three spot records of the
+table; the worker's claim that the bytes equal the image was not re-verified
+(integration does not read the executable). Compiled sizes are not the
+image sizes, and the notes say so; no byte match is claimed. The worker did
+not run a full build; this integration did: 3510 authored inputs, 2516
+function bodies, zero COMMON. 214 tool tests passed. Worker's closed count of
+33 reproduced exactly; its opened list (47 here) also matches the new
+undefined names. The notes count `gKeyboardAttached` as already defined,
+which it is. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1312 |
+| After | 1326 |
+| Closed | 33 |
+| Opened | 47 |
+
+Closed: `Begin__7VIFaderff`, `CleanUp__11VIGUIObject`, `Clear__12VIDictionary`, `Close__5VIPad`, `Close__9VICollide`, `Free__7VIFader`, `Init__12VIDictionaryi`, `Init__5VIPadii`, `Init__7VIFaderP8VIRasterP12VIDictionaryf`, `Init__8VICameraR8VIRasterRC7VIVect3T2ffff`, `Init__9VICollide`, `KbdMapTable`, `Load__13VIGameOptions`, `Parse__9VICSFFilePCcR10VIESFParseR7VIScene`, `Read__10VIKeyboardR12VIConsoleKey`, `Read__5VIPadR12VIConsolePad`, `Update__7VIFader`, `VIFreeUSocketExApi__Fv`, `_$_10VIESFParse`, `_$_10VIKeyboard`, `_$_10VIMatrix44`, `_$_12VIDictionary`, `_$_5VIPad`, `_$_7VIFader`, `_$_9VICollide`, `__10VIESFParse`, `__10VIKeyboard`, `__12VIDictionary`, `__6VIFont`, `__7VIFader`, `__9VICSFFile`, `__9VICollide`, `__cl__8VICameraR7VIVect3T1`
+
+Opened: `Begin2D__8VIRaster`, `BeginTriStrip__8VIRaster`, `CalcAxes__8VICameraRC7VIVect3R7VIVect3N22`, `Clear__9VICollide`, `Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Color__8VIRasterRC10VIColor32F`, `CreateMaterial__8VIRasteri`, `DequeueKeyEvent__10VIKeyboardP12VIConsoleKey`, `End2D__8VIRaster`, `EndTriStrip__8VIRaster`, `Frustum__8VIRasterR10VIMatrix44ffffff`, `Identity__10VIMatrix44`, `InitSolidFill__10VIMaterial`, `Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Material__8VIRasteri`, `Open__6VIFilePCci`, `PadData`, `Parse__9VICSFFileR6VIFileR10VIESFParseR7VIScene`, `PrepareQueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ReleaseMaterial__8VIRasteriR12VIDictionary`, `ScaleStick__5VIPadUc`, `SetDefaults__13VIGameOptions`, `SetLayerBlendMode__10VIMateriali16VIAlphaBlendMode`, `SetMaterial__8VIRasteri`, `TranslateEvent__10VIKeyboardP11_lgKbdEvent`, `Update__8VICameraRC7VIVect3R7VIVect3N22R10VIMatrix44`, `VIMemCardReadFile__FPCcPvi`, `Vertex__8VIRasterRC8VIVect2I`, `_$_6VIFile`, `_$_t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `_$_t6VIPool1ZP12VICollBuffer`, `_11VIGUIObject$m_alphaFillMaterial`, `__6VIFile`, `__floatdisf`, `__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `__t6VIPool1ZP12VICollBuffer`, `lgKbdEnumHint`, `lgKbdEnumerate`, `lgKbdOpen`, `lgKbdRead`, `lgKbdSetRepeatRate`, `sMessagePool`, `scePadGetReqState`, `scePadGetState`, `scePadInfoAct`, `scePadInfoMode`, `scePadPortClose`
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -7297,3 +7328,4 @@ and no startup stage has executed.
 - 2026-10-12 22:55 CDT — second baseline re-check, no branches left to merge — 1332 unresolved imports
 - 2026-10-12 23:05 CDT — third baseline re-check, no branches left to merge — 1332 unresolved imports
 - 2026-10-12 23:21 CDT — `agents/w10-startup-c` — 1312 unresolved imports
+- 2026-10-12 23:29 CDT — `agents/w10-vi-a` — 1326 unresolved imports
