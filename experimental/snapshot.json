@@ -46648,6 +46648,633 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-render-b-mat-trans/mat_trans.cpp"
+    },
+    {
+      "input_order": 3714,
+      "component": "simloop-services-pad-dma-buffer",
+      "object_name": "simloop_services_pad_dma_buffer.o",
+      "private_object_sha256": "54d4473efe96bc97e7652a3d6956c980cdfa3ce63d14004676a16c62ad5538f4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/simloop-services-pad-dma-buffer/pad_dma_buffer.cpp"
+    },
+    {
+      "input_order": 3715,
+      "component": "w10-sce-a-cd-disk-ready-old",
+      "object_name": "w10_sce_a_cd_disk_ready_old.o",
+      "private_object_sha256": "a3dfeaf72f04b67b65f226da548ef569bd3b885d36ab2a899a1bb0a14ee04ebf",
+      "emitted_functions": [
+        {
+          "name": "sceCdDiskReady_old",
+          "compiled_body_bytes": 672
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp"
+    },
+    {
+      "input_order": 3716,
+      "component": "w10-sce-a-connect-to-iop-server",
+      "object_name": "w10_sce_a_connect_to_iop_server.o",
+      "private_object_sha256": "bc8dc34abff9679895b9c5c67e4ce0f26b0b2cd9bab921465b4c08bc19fa86bd",
+      "emitted_functions": [
+        {
+          "name": "connect_to_iop_server",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp"
+    },
+    {
+      "input_order": 3717,
+      "component": "w10-sce-a-gif-pk-add-gs-ad",
+      "object_name": "w10_sce_a_gif_pk_add_gs_ad.o",
+      "private_object_sha256": "40881a9df31da4a0906907fa2560ad4af922007070cb539e8f38fa218cea4469",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkAddGsAD",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-add-gs-ad/pk_add_gs_ad.cpp"
+    },
+    {
+      "input_order": 3718,
+      "component": "w10-sce-a-gif-pk-close-gif-tag",
+      "object_name": "w10_sce_a_gif_pk_close_gif_tag.o",
+      "private_object_sha256": "bb99ce6ea94406b1dcebe1d8f97cb6ec42624a1104dfa3502165560a9072390d",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkCloseGifTag",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-close-gif-tag/pk_close_gif_tag.cpp"
+    },
+    {
+      "input_order": 3719,
+      "component": "w10-sce-a-gif-pk-cnt",
+      "object_name": "w10_sce_a_gif_pk_cnt.o",
+      "private_object_sha256": "25c58a89e16732b94c360d53e3dc1a6c45345756a82db0b4fe8cc08da163bd60",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkCnt",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-cnt/pk_cnt.cpp"
+    },
+    {
+      "input_order": 3720,
+      "component": "w10-sce-a-gif-pk-open-gif-tag",
+      "object_name": "w10_sce_a_gif_pk_open_gif_tag.o",
+      "private_object_sha256": "8109c2edf38224c26e2c349e136a23d4f5e63c7830953fea2dd371c22a24736a",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkOpenGifTag",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-open-gif-tag/pk_open_gif_tag.S"
+    },
+    {
+      "input_order": 3721,
+      "component": "w10-sce-a-gif-pk-ref",
+      "object_name": "w10_sce_a_gif_pk_ref.o",
+      "private_object_sha256": "ba1f3479b2b00daac384f562925eff82f6c3e40c48eebe2ed07bd4a3aac848ea",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkRef",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-ref/pk_ref.cpp"
+    },
+    {
+      "input_order": 3722,
+      "component": "w10-sce-a-gif-pk-reserve",
+      "object_name": "w10_sce_a_gif_pk_reserve.o",
+      "private_object_sha256": "70fc4779dd0f98a4e40ec1fa5940f77f8f2a89d68c5b301c95349c9132094c54",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkReserve",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-gif-pk-reserve/pk_reserve.cpp"
+    },
+    {
+      "input_order": 3723,
+      "component": "w10-sce-a-inet-create",
+      "object_name": "w10_sce_a_inet_create.o",
+      "private_object_sha256": "5db6da2a13adf133ef56dad381aa8078b6352175b9ff60fda7697d78c6a1d8ae",
+      "emitted_functions": [
+        {
+          "name": "sceInetCreate",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-inet-create/inet_create.cpp"
+    },
+    {
+      "input_order": 3724,
+      "component": "w10-sce-a-inet-interface-control",
+      "object_name": "w10_sce_a_inet_interface_control.o",
+      "private_object_sha256": "506501efa5536b40308264b247f91689639971e4e0f6ea229bbea9c504243472",
+      "emitted_functions": [
+        {
+          "name": "sceInetInterfaceControl",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-inet-interface-control/inet_interface_control.cpp"
+    },
+    {
+      "input_order": 3725,
+      "component": "w10-sce-a-inet-open",
+      "object_name": "w10_sce_a_inet_open.o",
+      "private_object_sha256": "42c7603c8870b142b101fd35f2cb5d01733371c253adaed56051b4809bcac247",
+      "emitted_functions": [
+        {
+          "name": "sceInetOpen",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-inet-open/inet_open.cpp"
+    },
+    {
+      "input_order": 3726,
+      "component": "w10-sce-a-inet-recv-from",
+      "object_name": "w10_sce_a_inet_recv_from.o",
+      "private_object_sha256": "709386382eaa6fbaf26cd6be3577950ea9f8ca01bebcb56e059f5f8e51ee4f2d",
+      "emitted_functions": [
+        {
+          "name": "sceInetRecvFrom",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-inet-recv-from/inet_recv_from.cpp"
+    },
+    {
+      "input_order": 3727,
+      "component": "w10-sce-a-inet-send-to",
+      "object_name": "w10_sce_a_inet_send_to.o",
+      "private_object_sha256": "43c96a3924dd7f89837ed2e42be253459f0e539470334c2a417be96087dfdfcf",
+      "emitted_functions": [
+        {
+          "name": "sceInetSendTo",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-inet-send-to/inet_send_to.cpp"
+    },
+    {
+      "input_order": 3728,
+      "component": "w10-sce-a-lgaud-a-read",
+      "object_name": "w10_sce_a_lgaud_a_read.o",
+      "private_object_sha256": "e331be1b5cd0ec7fc3fcc469f5722fb103539c7f15f73ec2cc0fca5a320d9966",
+      "emitted_functions": [
+        {
+          "name": "read_done",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "lgAudARead",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-a-read/lgaud_a_read.cpp"
+    },
+    {
+      "input_order": 3729,
+      "component": "w10-sce-a-lgaud-a-sync",
+      "object_name": "w10_sce_a_lgaud_a_sync.o",
+      "private_object_sha256": "9215f1b0f0f471d6c6e4e1a164b79d28ba8be5d191cd940c0c9507a30153b0ce",
+      "emitted_functions": [
+        {
+          "name": "lgAudASync",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-a-sync/lgaud_a_sync.cpp"
+    },
+    {
+      "input_order": 3730,
+      "component": "w10-sce-a-lgaud-a-write",
+      "object_name": "w10_sce_a_lgaud_a_write.o",
+      "private_object_sha256": "fc9d03da67223b84b75ac80c8b8d0a1fb0349ee0cb8033a7bc94a355e088c779",
+      "emitted_functions": [
+        {
+          "name": "write_done",
+          "compiled_body_bytes": 40
+        },
+        {
+          "name": "lgAudAWrite",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-a-write/lgaud_a_write.cpp"
+    },
+    {
+      "input_order": 3731,
+      "component": "w10-sce-a-lgaud-enum-hint",
+      "object_name": "w10_sce_a_lgaud_enum_hint.o",
+      "private_object_sha256": "366ec94ae0ae6612cb23ff82108dd73fb864f8f43f12166056150669150be329",
+      "emitted_functions": [
+        {
+          "name": "lgAudEnumHint",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-enum-hint/lgaud_enum_hint.cpp"
+    },
+    {
+      "input_order": 3732,
+      "component": "w10-sce-a-lgaud-enumerate",
+      "object_name": "w10_sce_a_lgaud_enumerate.o",
+      "private_object_sha256": "5436684d44e96a6fc51baab2afd4c0e8d95423e3cf0b0f793b13995ceedb7cf1",
+      "emitted_functions": [
+        {
+          "name": "lgAudEnumerate",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-enumerate/lgaud_enumerate.cpp"
+    },
+    {
+      "input_order": 3733,
+      "component": "w10-sce-a-lgaud-open",
+      "object_name": "w10_sce_a_lgaud_open.o",
+      "private_object_sha256": "6add2ee7127a001501a3020a84b08591469dd838787c1c4e686e8c19371ed601",
+      "emitted_functions": [
+        {
+          "name": "lgAudOpen",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-open/lgaud_open.cpp"
+    },
+    {
+      "input_order": 3734,
+      "component": "w10-sce-a-lgaud-set-recording-volume",
+      "object_name": "w10_sce_a_lgaud_set_recording_volume.o",
+      "private_object_sha256": "ab1d5c7ccd52c6e6137035daa200d6e3f8d408341e95ad4b7c63f7fc6ccb6185",
+      "emitted_functions": [
+        {
+          "name": "lgAudSetRecordingVolume",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-set-recording-volume/lgaud_set_recording_volume.cpp"
+    },
+    {
+      "input_order": 3735,
+      "component": "w10-sce-a-lgaud-start-playback",
+      "object_name": "w10_sce_a_lgaud_start_playback.o",
+      "private_object_sha256": "9e3c03385ae262edf19ac1aeddb27457c6f21c69641b0fc89f5f2077bb86a7f4",
+      "emitted_functions": [
+        {
+          "name": "lgAudStartPlayback",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-start-playback/lgaud_start_playback.cpp"
+    },
+    {
+      "input_order": 3736,
+      "component": "w10-sce-a-lgaud-start-recording",
+      "object_name": "w10_sce_a_lgaud_start_recording.o",
+      "private_object_sha256": "9612c98107a847d655488fa11647e3a68d284513b41d106ac3e906bb501bb3f0",
+      "emitted_functions": [
+        {
+          "name": "lgAudStartRecording",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-start-recording/lgaud_start_recording.cpp"
+    },
+    {
+      "input_order": 3737,
+      "component": "w10-sce-a-lgaud-state",
+      "object_name": "w10_sce_a_lgaud_state.o",
+      "private_object_sha256": "ce50208ab74f07f024de39db9a7412de975113a51cc61b629494ca1f5756bc71",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgaud-state/lgaud_state.cpp"
+    },
+    {
+      "input_order": 3738,
+      "component": "w10-sce-a-lgcodec-decode",
+      "object_name": "w10_sce_a_lgcodec_decode.o",
+      "private_object_sha256": "6c0eb4b038bb4eb5d0f3f1938ddc430bae34cdaa2963439decdb81375b60a2f3",
+      "emitted_functions": [
+        {
+          "name": "lgCodecDecode",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgcodec-decode/lgcodec_decode.cpp"
+    },
+    {
+      "input_order": 3739,
+      "component": "w10-sce-a-lgcodec-encode",
+      "object_name": "w10_sce_a_lgcodec_encode.o",
+      "private_object_sha256": "1c3054130b5f4ead8f0316da495e8b5bf0e3c961bc97827856b0a4c6fb43bfc3",
+      "emitted_functions": [
+        {
+          "name": "lgCodecEncode",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-lgcodec-encode/lgcodec_encode.cpp"
+    },
+    {
+      "input_order": 3740,
+      "component": "w10-sce-a-mce-sif-rpc-end-func",
+      "object_name": "w10_sce_a_mce_sif_rpc_end_func.o",
+      "private_object_sha256": "34213f453455c665da573c4bf3bd889c4924e2a2fef0b688e1ba05a7ad4c496e",
+      "emitted_functions": [
+        {
+          "name": "mceSifRpcEndFunc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-mce-sif-rpc-end-func/mce_sif_rpc_end_func.cpp"
+    },
+    {
+      "input_order": 3741,
+      "component": "w10-sce-a-mce-store-pwd",
+      "object_name": "w10_sce_a_mce_store_pwd.o",
+      "private_object_sha256": "e7790ef55bf1514c903049a9ace4bd15cd168317f4aa43defffd3bd8045edaf3",
+      "emitted_functions": [
+        {
+          "name": "mceStorePwd",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-mce-store-pwd/mce_store_pwd.cpp"
+    },
+    {
+      "input_order": 3742,
+      "component": "w10-sce-a-pad-get-button-mask",
+      "object_name": "w10_sce_a_pad_get_button_mask.o",
+      "private_object_sha256": "140d131c74bc559c58b8798c3f9651feaeba73fcbac5bbadad16172a86a4bb35",
+      "emitted_functions": [
+        {
+          "name": "scePadGetButtonMask",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-pad-get-button-mask/pad_get_button_mask.cpp"
+    },
+    {
+      "input_order": 3743,
+      "component": "w10-sce-a-pad-set-button-info",
+      "object_name": "w10_sce_a_pad_set_button_info.o",
+      "private_object_sha256": "3944049499d66adcc04e557b34100b20573e5b12eb67d7644c7e4351ab5dc293",
+      "emitted_functions": [
+        {
+          "name": "scePadSetButtonInfo",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-pad-set-button-info/pad_set_button_info.cpp"
+    },
+    {
+      "input_order": 3744,
+      "component": "w10-sce-a-pad-set-req-state",
+      "object_name": "w10_sce_a_pad_set_req_state.o",
+      "private_object_sha256": "d2dfd0f8ab9066a6e988e559abefb609d6711b541475973a1b0f35a8b4fa2350",
+      "emitted_functions": [
+        {
+          "name": "scePadSetReqState",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-pad-set-req-state/pad_set_req_state.cpp"
+    },
+    {
+      "input_order": 3745,
+      "component": "w10-sce-a-s-pad",
+      "object_name": "w10_sce_a_s_pad.o",
+      "private_object_sha256": "ec740175b7aeaa357a3dcf410880024015ff5e8cb0f7df1251acbf7331068f32",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-s-pad/s_pad.cpp"
+    },
+    {
+      "input_order": 3746,
+      "component": "w10-sce-a-sif-dma-stat",
+      "object_name": "w10_sce_a_sif_dma_stat.o",
+      "private_object_sha256": "21c7032706cc964f435c4452b023a457846e033ef104061e1c8cc293920492ea",
+      "emitted_functions": [
+        {
+          "name": "sceSifDmaStat",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-sif-dma-stat/sif_dma_stat.S"
+    },
+    {
+      "input_order": 3747,
+      "component": "w10-sce-a-sif-m-call-rpc",
+      "object_name": "w10_sce_a_sif_m_call_rpc.o",
+      "private_object_sha256": "f81910d53bacb0594b8e3faa0f6d15c1b03c34f5ae27c995c84badb58a7e7f47",
+      "emitted_functions": [
+        {
+          "name": "sceSifMCallRpc",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-sif-m-call-rpc/sif_m_call_rpc.cpp"
+    },
+    {
+      "input_order": 3748,
+      "component": "w10-sce-a-sif-m-init-rpc",
+      "object_name": "w10_sce_a_sif_m_init_rpc.o",
+      "private_object_sha256": "5c2fa1a7eeb9b69dd5eda27009da3de9c5b15056a225785026c24044e09e7aa0",
+      "emitted_functions": [
+        {
+          "name": "sceSifMInitRpc",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-sif-m-init-rpc/sif_m_init_rpc.cpp"
+    },
+    {
+      "input_order": 3749,
+      "component": "w10-sce-a-sif-param-fname",
+      "object_name": "w10_sce_a_sif_param_fname.o",
+      "private_object_sha256": "f75f027b8d2e0017a9d728a3136f14749733c73f6794ab15c2add93f224bc6d3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-sif-param-fname/sif_param_fname.cpp"
+    },
+    {
+      "input_order": 3750,
+      "component": "w10-sce-a-sif-remove-reboot-notify-handler",
+      "object_name": "w10_sce_a_sif_remove_reboot_notify_handler.o",
+      "private_object_sha256": "6d86c7e3515f2b7119bad064e3c214ee9e3ca7bb325257633c682505e54ddf2e",
+      "emitted_functions": [
+        {
+          "name": "sceSifRemoveRebootNotifyHandler",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-sce-a-sif-remove-reboot-notify-handler/sif_remove_reboot_notify_handler.cpp"
+    },
+    {
+      "input_order": 3751,
+      "component": "w8-startup-sce-d-sif-get-sreg",
+      "object_name": "w8_startup_sce_d_sif_get_sreg.o",
+      "private_object_sha256": "690f43f27bd2787659490de2bb5f63ec026cb7cce8349ceac2c9e361aee8a456",
+      "emitted_functions": [
+        {
+          "name": "sceSifGetSreg",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp"
+    },
+    {
+      "input_order": 3752,
+      "component": "w9-startup-crt-f-mc-read",
+      "object_name": "w9_startup_crt_f_mc_read.o",
+      "private_object_sha256": "c4af1beffa2ef43ef349c400d190eb591bb07e8755ad56ecd3a495610b6dbfa2",
+      "emitted_functions": [
+        {
+          "name": "sceMcRead",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-mc-read/mc_read.cpp"
+    },
+    {
+      "input_order": 3753,
+      "component": "w9-startup-crt-f-mc-write",
+      "object_name": "w9_startup_crt_f_mc_write.o",
+      "private_object_sha256": "f58bbf7203b1b55d55f2aa8f59182f884ba0e0e17c5ab5a58c2fb0e2ee04009c",
+      "emitted_functions": [
+        {
+          "name": "sceMcWrite",
+          "compiled_body_bytes": 396
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-mc-write/mc_write.cpp"
+    },
+    {
+      "input_order": 3754,
+      "component": "w9-startup-crt-f-pad-read",
+      "object_name": "w9_startup_crt_f_pad_read.o",
+      "private_object_sha256": "77305a4788b4970d7ee3e4a7c60c4c7ca41fd69160b68f43ce6099a7857a796b",
+      "emitted_functions": [
+        {
+          "name": "scePadRead",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-pad-read/pad_read.cpp"
+    },
+    {
+      "input_order": 3755,
+      "component": "w9-startup-crt-f-pad-set-act-direct",
+      "object_name": "w9_startup_crt_f_pad_set_act_direct.o",
+      "private_object_sha256": "a84987a387abedad88427277f815410088dbc14efa77d9357fd9e4510dd977be",
+      "emitted_functions": [
+        {
+          "name": "scePadSetActDirect",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-pad-set-act-direct/pad_set_act_direct.cpp"
+    },
+    {
+      "input_order": 3756,
+      "component": "w9-startup-crt-f-tty-init",
+      "object_name": "w9_startup_crt_f_tty_init.o",
+      "private_object_sha256": "b3abbc85c784bf3c29a5d41d2456951d20cf056c4b87bc0e2bf75854a382c1ef",
+      "emitted_functions": [
+        {
+          "name": "sceTtyInit",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-tty-init/tty_init.cpp"
+    },
+    {
+      "input_order": 3757,
+      "component": "w9-startup-crt-f-tty-read",
+      "object_name": "w9_startup_crt_f_tty_read.o",
+      "private_object_sha256": "a79ab7073b461254af68573e01d81114904132a4c490a80cad51e4a27fc9f5dd",
+      "emitted_functions": [
+        {
+          "name": "sceTtyRead",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-tty-read/tty_read.cpp"
+    },
+    {
+      "input_order": 3758,
+      "component": "w9-startup-crt-f-tty-state",
+      "object_name": "w9_startup_crt_f_tty_state.o",
+      "private_object_sha256": "95c1837356422a027993cc89b6acdaad242f202c4e97103c5bd1a14540ebad66",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-tty-state/tty_state.cpp"
+    },
+    {
+      "input_order": 3759,
+      "component": "w9-startup-crt-f-tty-write",
+      "object_name": "w9_startup_crt_f_tty_write.o",
+      "private_object_sha256": "1f4d2a76b8920e42c0e948d33609502a741d1ac1870745e9c74263ff21a1c4f8",
+      "emitted_functions": [
+        {
+          "name": "sceTtyWrite",
+          "compiled_body_bytes": 412
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-startup-crt-f-tty-write/tty_write.cpp"
     }
   ],
   "drafts": [
@@ -49861,6 +50488,7 @@
     "sources/simloop-services-cd-directory-lookup/host_check.cpp": "72a4ea2f20d340b208d3831efec2a5053d0799ae1c0de98222865f42bc0a9478",
     "sources/simloop-services-cd-process/cd_process.cpp": "b8df8d554014274b732a3cbb8ccd2a3c4da06301967aa231eb8a7d3b52c5ac89",
     "sources/simloop-services-cd-process/host_check.cpp": "0455170fbd8e52300ff013cc40923d188c1d8283eaa06a9d7a97b0706935faf3",
+    "sources/simloop-services-pad-dma-buffer/host_check.cpp": "7470b99a9ad7bcb83acf4db3a22d0ceab692309e72d9a5b397c3f5c9107df397",
     "sources/simloop-services-pad-dma-buffer/pad_dma_buffer.cpp": "5de751d33077b2f59d498c66f38b809407b16293c09dbab0a6e0bd1026726e4c",
     "sources/simloop-services-pad-index-map/host_check.cpp": "e6d1ddf771f7632f29869f97e707d3db6d29f51601233d83c98db2154c712cca",
     "sources/simloop-services-pad-index-map/pad_index_map.cpp": "e5ac920eef39151e112bbed2727a4937034a5bf8d9983d601ca06e90f493efec",
@@ -50458,6 +51086,78 @@
     "sources/w10-render-b-mat-scale44/mat_scale44.cpp": "5971be2f5b4ac352aed0cf239e06b9ec3f7356d5c57a3d6a78e5c5677bddd5d2",
     "sources/w10-render-b-mat-trans/host_check.cpp": "e59240641ddbbc104f22e8b3be83d51bc43b466278260a8040d479caa0ee10e0",
     "sources/w10-render-b-mat-trans/mat_trans.cpp": "c9884a4c2e1d3ca3cb901745b712a97760ff32684267c3b0bd8cc8fce64641fe",
+    "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp": "d7ab203ff55c0a73127139a47d346ba4d6118dc7f4293d57f345755663b1e518",
+    "sources/w10-sce-a-cd-disk-ready-old/host_contract.cpp": "ae50bc3f65d60aa66a1c1b442a0f0d8c8df069adf47692101e79249e4d75c1e5",
+    "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp": "4b8f2f25370e3b900f29e96efd41ac21c5752be83a49d48da0288302a76cf959",
+    "sources/w10-sce-a-connect-to-iop-server/host_contract.cpp": "3c47ade131e1e11ef3ed2c8b445b7e3beb4909d75cf6bfb4f8549fb123d9ee45",
+    "sources/w10-sce-a-gif-pk-add-gs-ad/host_contract.cpp": "342cea0a3390eba0abe4e036d68b4a2f7a5108ec2ce13c0c6d50321dd5b1738b",
+    "sources/w10-sce-a-gif-pk-add-gs-ad/pk_add_gs_ad.cpp": "dde8e5f35b552e5c4a0b1d495087abfdb19cf780a141c294d6dab3bde4a0fa8e",
+    "sources/w10-sce-a-gif-pk-close-gif-tag/host_contract.cpp": "96d4616c0760b57df2573b45c5b72d745d1367f3f264915b34eae50860e92c20",
+    "sources/w10-sce-a-gif-pk-close-gif-tag/pk_close_gif_tag.cpp": "559240b3d41f2b5aba1b884b3f9ccd137a296d9dde8fadba1c996c9c5f421dee",
+    "sources/w10-sce-a-gif-pk-cnt/host_contract.cpp": "0d7695f6fc6d1e04d3330f0befd2647c9189fd09893e101cd938827074803dfe",
+    "sources/w10-sce-a-gif-pk-cnt/pk_cnt.cpp": "84da8143a924ee1ca53e5d1a4b69ea8ee48a3d8f21adf307cc9a60f8837125c6",
+    "sources/w10-sce-a-gif-pk-open-gif-tag/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w10-sce-a-gif-pk-open-gif-tag/pk_open_gif_tag.S": "f5803c9a5f7bbf4d6b31ea12c979159ae04ecda9879c970fca17443ab679c166",
+    "sources/w10-sce-a-gif-pk-ref/host_contract.cpp": "ecce856123189cdb4ff7548f22d3f744640774272f37e465d77bd2cf3e2766e0",
+    "sources/w10-sce-a-gif-pk-ref/pk_ref.cpp": "e6073ba5c460be13a14d294b6759d4b429c5dba43f32e2c7f734edecb37c435c",
+    "sources/w10-sce-a-gif-pk-reserve/host_contract.cpp": "9fc2499890adfa287c2b924b2fee394141fc730932cc2c52622e83bcfcd93552",
+    "sources/w10-sce-a-gif-pk-reserve/pk_reserve.cpp": "9a42f078955fd354a5cb79a3e0510afe6b1710beaab25c9839a2d0905635ffe9",
+    "sources/w10-sce-a-inet-create/host_contract.cpp": "ec4f93cb291fe2ab442dddb2b577bd2be687b61f154c2e24d6043762ca2bfaee",
+    "sources/w10-sce-a-inet-create/inet_create.cpp": "c2f45b29d3011424a3b1de0a535de3c3f667ea8900c96271d936e073761a8b74",
+    "sources/w10-sce-a-inet-interface-control/host_contract.cpp": "9b1fbd0f20e9be0ffe75b6ad843affca0614eb9e513277792daf5f430332fb49",
+    "sources/w10-sce-a-inet-interface-control/inet_interface_control.cpp": "9450f73209fd2dbd35367e6d0c1d0588f1671190e6dbaad5fdc60cf0e5a523a9",
+    "sources/w10-sce-a-inet-open/host_contract.cpp": "7e32d5e6de4db1d00d041f3507903ec34c80ec31c78a7ffc2ecd0c236be9fb47",
+    "sources/w10-sce-a-inet-open/inet_open.cpp": "9ba779b54138f6ceef638e70bd491d63b4c0995fe5f88fc08bb78e2bfc01c62d",
+    "sources/w10-sce-a-inet-recv-from/host_contract.cpp": "5fb5075a6ed91b61ce684346962005e9ab502bea1647d1b9858401ab1555dddd",
+    "sources/w10-sce-a-inet-recv-from/inet_recv_from.cpp": "19d6c3016c0e57ee7fac0159a8443895774e6f82a4743a941c75e952b4e7e1d3",
+    "sources/w10-sce-a-inet-send-to/host_contract.cpp": "8a9af4ff808a181ca0b0605da4280a9f28ed60f708d63b767021d037f653f918",
+    "sources/w10-sce-a-inet-send-to/inet_send_to.cpp": "154ecc3ca5097d17658638972f689ab551f04e131c2ba430bc5e66a6394be41c",
+    "sources/w10-sce-a-lgaud-a-read/host_contract.cpp": "be862b17b7f524378584ea4cca06f3d77db84acb5c090c88709d58a710ce26f7",
+    "sources/w10-sce-a-lgaud-a-read/lgaud_a_read.cpp": "c808b73289fd2ae112c1c1f46bb4fa6ded7ae407a0fa4d86a43f0103b2548879",
+    "sources/w10-sce-a-lgaud-a-sync/host_contract.cpp": "5916bf3c71aa05a7635ee3c0b2e3ef7f5ccc7fe5a905db39e507b71668daceee",
+    "sources/w10-sce-a-lgaud-a-sync/lgaud_a_sync.cpp": "6aa79378643aa10895b8c08d251cef545eeb26a8d0cabc4e39ca0b7ae37da6af",
+    "sources/w10-sce-a-lgaud-a-write/host_contract.cpp": "eca1e1070bf4f591c9bf0de9f84a9e50bd7dffd7a84156cc6052f435fd5f0105",
+    "sources/w10-sce-a-lgaud-a-write/lgaud_a_write.cpp": "d84a67a2951a2e010c13e9fe91b783fa89413e65cebb27400ade5685fc585114",
+    "sources/w10-sce-a-lgaud-enum-hint/host_contract.cpp": "4fbc1588cea6ee1356e12c94e63463b6456f1e8635c0ea57b4d50a4f70a2fc2f",
+    "sources/w10-sce-a-lgaud-enum-hint/lgaud_enum_hint.cpp": "abec6035475e0a6e62b6079b046597a9cdb6d8bdd8d8f587a295cb1ccd83ce8f",
+    "sources/w10-sce-a-lgaud-enumerate/host_contract.cpp": "23e871811e8e9fef18f0dd0c9b8e5ed5d601917f35c268ca1f966eb43a29d26f",
+    "sources/w10-sce-a-lgaud-enumerate/lgaud_enumerate.cpp": "27f0b52d7bb58daae76a797c3211f3f81b10af5acdee39c50b003c12e51b710d",
+    "sources/w10-sce-a-lgaud-open/host_contract.cpp": "068ee914a3f9c8242956a449860e175f8c54d386e04efac19a74a321ce78cd4a",
+    "sources/w10-sce-a-lgaud-open/lgaud_open.cpp": "af3d661770f3bed02d37a15b2cb07be4981db97351f1d2f63905210e81b99ffb",
+    "sources/w10-sce-a-lgaud-set-recording-volume/host_contract.cpp": "2aedb4a968c5f618fcfb9a34f32cab36b77bdc895296db3e3fcc86e86441ea12",
+    "sources/w10-sce-a-lgaud-set-recording-volume/lgaud_set_recording_volume.cpp": "08adf2c13435d6aa8ea1ac7cf86d89cfb48523f49459aed8b729f3e60ff68e85",
+    "sources/w10-sce-a-lgaud-start-playback/host_contract.cpp": "ecf1b13e27d6fff79f465b0f6c51ca773e508108ff3647ddb85874a039a7ba22",
+    "sources/w10-sce-a-lgaud-start-playback/lgaud_start_playback.cpp": "38fa11eb505a8df02c6ddb3eb6ea715d92e8d0fa6bdb73a43dd75f1886f00eb3",
+    "sources/w10-sce-a-lgaud-start-recording/host_contract.cpp": "01f60c9b984a51f9f0aa4087524e936c2e22e5c4224078f96f5262151909e059",
+    "sources/w10-sce-a-lgaud-start-recording/lgaud_start_recording.cpp": "50e545bccf771e37ddd4dbe69bb5f65ce66b2a5bb08c88e61e3ab81e04cbebfb",
+    "sources/w10-sce-a-lgaud-state/host_check.cpp": "50a623699326bc93c7231c360b899171d51e89f0975332e1d10bfab8d3086ba8",
+    "sources/w10-sce-a-lgaud-state/lgaud_state.cpp": "9cacdfc405ae1c13e4d0c66f11f7570079ad191eeb015234502f4f5058e66bd9",
+    "sources/w10-sce-a-lgcodec-decode/host_contract.cpp": "b1806b5293019ca283adb583877d4eab1796207db0fb0f2de4fc43aefc96fe51",
+    "sources/w10-sce-a-lgcodec-decode/lgcodec_decode.cpp": "626a90ad9b71d9ce01de8840679cebc9c0adf99e2210fc128750e92c83ab234c",
+    "sources/w10-sce-a-lgcodec-encode/host_contract.cpp": "d22dcdcdf24f01f4d368e0eeca6fa064b6b2451fa56ee892eba072eb04381705",
+    "sources/w10-sce-a-lgcodec-encode/lgcodec_encode.cpp": "299bf104d7f16beeb2c1abf3b6a660fc275a35f499957ad0119e12121f8da171",
+    "sources/w10-sce-a-mce-sif-rpc-end-func/host_contract.cpp": "93dd972146dc3f441d76e0da1d1d2a1fd391f9a74899656cf9e7dc3f6c0dca20",
+    "sources/w10-sce-a-mce-sif-rpc-end-func/mce_sif_rpc_end_func.cpp": "00e6439a0bea49d7465aea26a13c94cd835a2eaaa82ef8200b6a89dfbfc19dcb",
+    "sources/w10-sce-a-mce-store-pwd/host_contract.cpp": "920ecd09513e2217343d45014ebeaf773d03516c901d49d73bcaa880b2082c28",
+    "sources/w10-sce-a-mce-store-pwd/mce_store_pwd.cpp": "27d58a3c179d9fa91527d963cfdfbc398aa8a00c344ec500a832cab7b9045f1b",
+    "sources/w10-sce-a-pad-get-button-mask/host_contract.cpp": "504292f266823546b2e931153c2191c88ea7d280575f2a520f4263d6e611f9da",
+    "sources/w10-sce-a-pad-get-button-mask/pad_get_button_mask.cpp": "b11305ab717a871fe0c8d201dea53a370b36263dc14e0ad15d2dfaa27f058d73",
+    "sources/w10-sce-a-pad-set-button-info/host_contract.cpp": "bb7fcc407acb80284d5c9418fc7ae5eff013ce7b9d543a29a797b73412931ab2",
+    "sources/w10-sce-a-pad-set-button-info/pad_set_button_info.cpp": "fe240bbed063502ce65c51a8d8fb4401b5d98d63814be0266217c03d5b41567b",
+    "sources/w10-sce-a-pad-set-req-state/host_contract.cpp": "866d1e877d0fb1af28f3e316e35ddabf8695e22fc6dbd6e150110e9b097cdf6e",
+    "sources/w10-sce-a-pad-set-req-state/pad_set_req_state.cpp": "0efcd58044ff81a0a6dcbe32995f565a94d69cc9e725f217ad80d588d500d77a",
+    "sources/w10-sce-a-s-pad/host_check.cpp": "eab7e19a41129c06707d1a7eac9fbea5c6580cba5ad75945926d8d150e8bcb72",
+    "sources/w10-sce-a-s-pad/s_pad.cpp": "59dd360ededee6d17e92bd29105a1e94c6df3f27d7e800252760d028b9cf9359",
+    "sources/w10-sce-a-sif-dma-stat/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
+    "sources/w10-sce-a-sif-dma-stat/sif_dma_stat.S": "7a9cf1cec54865bf6a04fffa9ecbc6fadc88e8cc00768d66a5f60aa62e79194b",
+    "sources/w10-sce-a-sif-m-call-rpc/host_contract.cpp": "2cf1c56f5265a10de0f3b18adb59e5f1bf21ae09a2748a05e261aaefb33b08c4",
+    "sources/w10-sce-a-sif-m-call-rpc/sif_m_call_rpc.cpp": "9735ad2eef67f1904deda01ce892a6d7cbe8077fb3b515986b6d6ddeeb1ac0f6",
+    "sources/w10-sce-a-sif-m-init-rpc/host_contract.cpp": "1b7fedec6f1f661662f775e58f4e5af4616fd4070d0b20331a808ee2f67d588a",
+    "sources/w10-sce-a-sif-m-init-rpc/sif_m_init_rpc.cpp": "5b1e358ceae3b2da30c7e1033e2fa187e08017094643ccbd8a4346b7015c4f77",
+    "sources/w10-sce-a-sif-param-fname/host_check.cpp": "83301f9b181e4323e88a47bcc9be5a213e292ac85cfe03ff79a5d27f346167a0",
+    "sources/w10-sce-a-sif-param-fname/sif_param_fname.cpp": "452a158661fc516a4c311283c4052e9bf86f7d2026706498132fcf63a44ba148",
+    "sources/w10-sce-a-sif-remove-reboot-notify-handler/host_contract.cpp": "e8190e8fdb3b4ec253d249c1456a68b6bb4c9b19517319854085a8313f8d8871",
+    "sources/w10-sce-a-sif-remove-reboot-notify-handler/sif_remove_reboot_notify_handler.cpp": "071bbd9e31a108011e7b70c105b3d6202c05e5dd6303dd529c3b6f3654db6600",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-alarm-handler/host_check.cpp": "5ca8848f2edfe82b793f8a286db7e433c802fdc16849939aa2436cb4ab3012e5",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
@@ -52339,6 +53039,7 @@
     "sources/w8-startup-sce-d-sif-free-iop-heap/sif_free_iop_heap.cpp": "3ffc0a2be16026cdcee163cbda83d1a8594de411cf16b4d3c2ce1251f91bd66c",
     "sources/w8-startup-sce-d-sif-get-reg/host_check.cpp": "825c837a08a09a8ec171af1efce3bbf837f9a488c65043c643d92de6571fa763",
     "sources/w8-startup-sce-d-sif-get-reg/sif_get_reg.S": "24ceae83ab577f3c24029d8258a6811115c04a6348cf0c4f60ca86df8c777d6c",
+    "sources/w8-startup-sce-d-sif-get-sreg/host_contract.cpp": "6064a3651f45569c3ee4c22a2f81b396aaf27792fa874c10fbd73f7e328e990d",
     "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp": "3d5a2dd076540dcd27ed979937aa0222cc09edd82a85a16c31126314c397a201",
     "sources/w8-startup-sce-d-sif-init-cmd/host_contract.cpp": "57f51ed2c13c35e54a9298c6f40b09121034b0a4572b8813baacc7bafcb173ce",
     "sources/w8-startup-sce-d-sif-init-cmd/sif_init_cmd.cpp": "e29386b0ea76fb12c1dc684a2d36f93dd9c6b594de71923d44ddde03708ec356",
@@ -54463,18 +55164,22 @@
     "sources/w9-startup-crt-e-strticmp/strticmp.cpp": "d5a4e6d2a98aa70209d5a2d6927bea32629a03e1a9e0663853f95f1c1ae5ec51",
     "sources/w9-startup-crt-f-mc-open/host_contract.cpp": "55fc53347b7d624b97b462b717e6aa2c885fb9717b52742d7b9b7a76f230dde0",
     "sources/w9-startup-crt-f-mc-open/mc_open.cpp": "798f83464a3dc9a377483adf80aa1858a94201bd3481ee15c14d4bb9c0ac41d9",
+    "sources/w9-startup-crt-f-mc-read/host_contract.cpp": "f900cf392dbdaeebb86455d0be05f45a9523171d8291e97f98f199bd022abfd3",
     "sources/w9-startup-crt-f-mc-read/mc_read.cpp": "ca8da0b1e9e2594887d6356ade7bb33daf267e5c2367633803add6b6c757e05a",
     "sources/w9-startup-crt-f-mc-seek/host_contract.cpp": "83cf02fc270d679e16023808ac6b3005abc1874b201dae752bc3492299368066",
     "sources/w9-startup-crt-f-mc-seek/mc_seek.cpp": "3ad1105759d4a643f0903ea43b14e5936730fd935d3d0454bb27d48ed6c466bb",
+    "sources/w9-startup-crt-f-mc-write/host_contract.cpp": "d109876b5cbc94b43457769d61f7661ce25f49fe2533274a45d5e065e714a1c4",
     "sources/w9-startup-crt-f-mc-write/mc_write.cpp": "6630fbf3a10aa09030708f2da5825c81d9e848f4a8e576e9036a9dbf55292aac",
     "sources/w9-startup-crt-f-pad-enter-press-mode/host_contract.cpp": "e472818d750b6eb02d226be4e7a201e84a658d08c8ceb0c9751b5654b803f529",
     "sources/w9-startup-crt-f-pad-enter-press-mode/pad_enter_press_mode.cpp": "e33b80a177d4c96a91210eeafee71a342822775c35b99c7407ad7c1ffe755bef",
     "sources/w9-startup-crt-f-pad-info-press-mode/host_contract.cpp": "fb3a9b8aadf02c793a7e32f5f3406acbe8981a04bfedb19822972aa3145fdab7",
     "sources/w9-startup-crt-f-pad-info-press-mode/pad_info_press_mode.cpp": "8b8ee119848bcce47e7e286c51fe31a3187f8264e0d256c9522d2d3677b070d4",
+    "sources/w9-startup-crt-f-pad-read/host_contract.cpp": "a7b5500ea70531d0c9fa89c18754fe6d21b4a4d48917a03b7fc0e27a608a4ca0",
     "sources/w9-startup-crt-f-pad-read/pad_read.cpp": "70542f095450df1beb2ffa48f0cf169eec83c40d95f23417cf6ab6cd4d945266",
     "sources/w9-startup-crt-f-pad-set-act-align/host_contract.cpp": "15ef0f8b3714bdfef7c6772254e4d02989bbb1cd5a6f2a54db5ccd19ac239b37",
     "sources/w9-startup-crt-f-pad-set-act-align/pad_set_act_align.cpp": "a3296e5d9e7c85c809eaa809665342b85c37deee8de6fe3360f6e4c0af8cba1d",
-    "sources/w9-startup-crt-f-pad-set-act-direct/pad_set_act_direct.cpp": "f2a4fb941a0df20c8ee7336bef060de1a32a939a8ff9e7c55bff8652708ede6b",
+    "sources/w9-startup-crt-f-pad-set-act-direct/host_contract.cpp": "94e10ade610f57abb478b99df69c2abc5fd7165d30850d14aa36c2861ecbc9d6",
+    "sources/w9-startup-crt-f-pad-set-act-direct/pad_set_act_direct.cpp": "1023e5e6a1697c3282f2a7c68f0844939a49f641f86379d926deabbaa1757cd2",
     "sources/w9-startup-crt-f-pad-set-main-mode/host_contract.cpp": "a23298331f94dc7736d16db0c0f5a3179851b83eced0c1c0458645e4d1a2aae7",
     "sources/w9-startup-crt-f-pad-set-main-mode/pad_set_main_mode.cpp": "22b5a7477401e9f6bc30eb2abc9bea29e298f84defe4e0fa64b93e8c747e3cf8",
     "sources/w9-startup-crt-f-sd-trans-to-iop/host_contract.cpp": "e66144b3c3fcd9b017785dc3140b52ade968b4c953c83de49ac13a6a4b230e14",
@@ -54505,11 +55210,15 @@
     "sources/w9-startup-crt-f-strrchr/strrchr_host_test.cpp": "eef6e0b1d71d147d9ddca40b4eecdbb78b945b749030ddc9f115643dcf2b9b9b",
     "sources/w9-startup-crt-f-strticmp/strticmp.cpp": "1d4ac81937ac64caa8ed8802269857df412917c04ebba6a4c64c337628970273",
     "sources/w9-startup-crt-f-strticmp/strticmp_host_test.cpp": "cc82f220bea3bc554a7586571b20cb1ea07e88c4762101b8b69bc1a1006acc6c",
-    "sources/w9-startup-crt-f-tty-init/tty_init.cpp": "010a504470d95b6ad12ed8d532ee554ec39faab7d0dc0da92ef39a7da4c58463",
+    "sources/w9-startup-crt-f-tty-init/host_contract.cpp": "e72c52dc5773cb724a66dcdc487faa1e85d2844b96ffcc25e2d31e2dcb84be88",
+    "sources/w9-startup-crt-f-tty-init/tty_init.cpp": "14cd11107a15a079d377abf266ed375891dc2f9653d23a74abe928d19b4ae75c",
+    "sources/w9-startup-crt-f-tty-read/host_contract.cpp": "63d5e67e58b86f72e050a98d3e6744c4b44c7b7eda933f8acd84da4dca2b68cf",
     "sources/w9-startup-crt-f-tty-read/tty_read.cpp": "12d0ca3da4b4b6fc2555b7cc33c621ab03bf55ff59c227591f2bbe9e288f0bb6",
+    "sources/w9-startup-crt-f-tty-state/host_contract.cpp": "2ac34981d289f74a1e7fdf2e5d64248895da05b342556d348b8696b8dc70c5a1",
     "sources/w9-startup-crt-f-tty-state/tty_state.cpp": "22b10554112bda4eab039abfcf07a7bc4c82c491617eff55221e389b0543711b",
-    "sources/w9-startup-crt-f-tty-state/tty_state.hpp": "4787f73b09dc923dcb5d2eff91c76bfac0f645189f7512db8aac9e243c1300b7",
-    "sources/w9-startup-crt-f-tty-write/tty_write.cpp": "5d07d63b2f168a09e28c30285f2bb04806c24b6dd3b9d582cc5749c2a5e9c0b5",
+    "sources/w9-startup-crt-f-tty-state/tty_state.hpp": "fc88d38617b25be5e9a0008346515f3c27980831c53005ca884072f52b687a23",
+    "sources/w9-startup-crt-f-tty-write/host_contract.cpp": "0ee196b419d9c63d6e32dd69a92f744490530b4d06445a00e3416c1af63d745c",
+    "sources/w9-startup-crt-f-tty-write/tty_write.cpp": "d18ccd23ffab3b46ece8e2c3988b9c8586e819772366c881059cb92705e0fad8",
     "sources/w9-startup-crt-f-unet-shutdown/host_contract.cpp": "9ca4d0ba958a12d2e77df496cacf4ebe80f7632cf68ae167e674281a004daeff",
     "sources/w9-startup-crt-f-unet-shutdown/unet_shutdown.cpp": "833aa3b8f60b432ed54f46c12c8e679a7771c5936c2aaddaddbf81eb8355ead0",
     "sources/w9-startup-crt-f-ustrcat/ustrcat.cpp": "5819f7283950de60941bb75da514da52549789009975b1c1bbde244cd885bd2f",
@@ -55125,11 +55834,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3714,
-    "authored_default_inputs": 3712,
+    "selected_inputs": 3760,
+    "authored_default_inputs": 3758,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2686,
-    "compiled_body_bytes_from_accepted_inputs": 1157876,
+    "emitted_function_definitions_including_helpers": 2729,
+    "compiled_body_bytes_from_accepted_inputs": 1166784,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -55142,7 +55851,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3401
+    "package_selected_inputs": 3447
   },
   "startup_implementations": [
     {
@@ -107497,6 +108206,771 @@
       ],
       "host_files": [
         "sources/w10-render-b-mat-trans/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/simloop-services-pad-dma-buffer/pad_dma_buffer.cpp",
+      "source_sha256": "5de751d33077b2f59d498c66f38b809407b16293c09dbab0a6e0bd1026726e4c",
+      "object_sha256": "54d4473efe96bc97e7652a3d6956c980cdfa3ce63d14004676a16c62ad5538f4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/simloop-services-pad-dma-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-cd-disk-ready-old/disk_ready_old.cpp",
+      "source_sha256": "d7ab203ff55c0a73127139a47d346ba4d6118dc7f4293d57f345755663b1e518",
+      "object_sha256": "a3dfeaf72f04b67b65f226da548ef569bd3b885d36ab2a899a1bb0a14ee04ebf",
+      "emitted_functions": [
+        {
+          "name": "sceCdDiskReady_old",
+          "compiled_body_bytes": 672
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-cd-disk-ready-old/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-connect-to-iop-server/connect_to_iop_server.cpp",
+      "source_sha256": "4b8f2f25370e3b900f29e96efd41ac21c5752be83a49d48da0288302a76cf959",
+      "object_sha256": "bc8dc34abff9679895b9c5c67e4ce0f26b0b2cd9bab921465b4c08bc19fa86bd",
+      "emitted_functions": [
+        {
+          "name": "connect_to_iop_server",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-connect-to-iop-server/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-add-gs-ad/pk_add_gs_ad.cpp",
+      "source_sha256": "dde8e5f35b552e5c4a0b1d495087abfdb19cf780a141c294d6dab3bde4a0fa8e",
+      "object_sha256": "40881a9df31da4a0906907fa2560ad4af922007070cb539e8f38fa218cea4469",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkAddGsAD",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-add-gs-ad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-close-gif-tag/pk_close_gif_tag.cpp",
+      "source_sha256": "559240b3d41f2b5aba1b884b3f9ccd137a296d9dde8fadba1c996c9c5f421dee",
+      "object_sha256": "bb99ce6ea94406b1dcebe1d8f97cb6ec42624a1104dfa3502165560a9072390d",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkCloseGifTag",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-close-gif-tag/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-cnt/pk_cnt.cpp",
+      "source_sha256": "84da8143a924ee1ca53e5d1a4b69ea8ee48a3d8f21adf307cc9a60f8837125c6",
+      "object_sha256": "25c58a89e16732b94c360d53e3dc1a6c45345756a82db0b4fe8cc08da163bd60",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkCnt",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-cnt/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-open-gif-tag/pk_open_gif_tag.S",
+      "source_sha256": "f5803c9a5f7bbf4d6b31ea12c979159ae04ecda9879c970fca17443ab679c166",
+      "object_sha256": "8109c2edf38224c26e2c349e136a23d4f5e63c7830953fea2dd371c22a24736a",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkOpenGifTag",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-open-gif-tag/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-ref/pk_ref.cpp",
+      "source_sha256": "e6073ba5c460be13a14d294b6759d4b429c5dba43f32e2c7f734edecb37c435c",
+      "object_sha256": "ba1f3479b2b00daac384f562925eff82f6c3e40c48eebe2ed07bd4a3aac848ea",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkRef",
+          "compiled_body_bytes": 124
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-ref/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-gif-pk-reserve/pk_reserve.cpp",
+      "source_sha256": "9a42f078955fd354a5cb79a3e0510afe6b1710beaab25c9839a2d0905635ffe9",
+      "object_sha256": "70fc4779dd0f98a4e40ec1fa5940f77f8f2a89d68c5b301c95349c9132094c54",
+      "emitted_functions": [
+        {
+          "name": "sceGifPkReserve",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-gif-pk-reserve/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-inet-create/inet_create.cpp",
+      "source_sha256": "c2f45b29d3011424a3b1de0a535de3c3f667ea8900c96271d936e073761a8b74",
+      "object_sha256": "5db6da2a13adf133ef56dad381aa8078b6352175b9ff60fda7697d78c6a1d8ae",
+      "emitted_functions": [
+        {
+          "name": "sceInetCreate",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-inet-create/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-inet-interface-control/inet_interface_control.cpp",
+      "source_sha256": "9450f73209fd2dbd35367e6d0c1d0588f1671190e6dbaad5fdc60cf0e5a523a9",
+      "object_sha256": "506501efa5536b40308264b247f91689639971e4e0f6ea229bbea9c504243472",
+      "emitted_functions": [
+        {
+          "name": "sceInetInterfaceControl",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-inet-interface-control/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-inet-open/inet_open.cpp",
+      "source_sha256": "9ba779b54138f6ceef638e70bd491d63b4c0995fe5f88fc08bb78e2bfc01c62d",
+      "object_sha256": "42c7603c8870b142b101fd35f2cb5d01733371c253adaed56051b4809bcac247",
+      "emitted_functions": [
+        {
+          "name": "sceInetOpen",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-inet-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-inet-recv-from/inet_recv_from.cpp",
+      "source_sha256": "19d6c3016c0e57ee7fac0159a8443895774e6f82a4743a941c75e952b4e7e1d3",
+      "object_sha256": "709386382eaa6fbaf26cd6be3577950ea9f8ca01bebcb56e059f5f8e51ee4f2d",
+      "emitted_functions": [
+        {
+          "name": "sceInetRecvFrom",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-inet-recv-from/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-inet-send-to/inet_send_to.cpp",
+      "source_sha256": "154ecc3ca5097d17658638972f689ab551f04e131c2ba430bc5e66a6394be41c",
+      "object_sha256": "43c96a3924dd7f89837ed2e42be253459f0e539470334c2a417be96087dfdfcf",
+      "emitted_functions": [
+        {
+          "name": "sceInetSendTo",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-inet-send-to/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-a-read/lgaud_a_read.cpp",
+      "source_sha256": "c808b73289fd2ae112c1c1f46bb4fa6ded7ae407a0fa4d86a43f0103b2548879",
+      "object_sha256": "e331be1b5cd0ec7fc3fcc469f5722fb103539c7f15f73ec2cc0fca5a320d9966",
+      "emitted_functions": [
+        {
+          "name": "read_done",
+          "compiled_body_bytes": 100
+        },
+        {
+          "name": "lgAudARead",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-a-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-a-sync/lgaud_a_sync.cpp",
+      "source_sha256": "6aa79378643aa10895b8c08d251cef545eeb26a8d0cabc4e39ca0b7ae37da6af",
+      "object_sha256": "9215f1b0f0f471d6c6e4e1a164b79d28ba8be5d191cd940c0c9507a30153b0ce",
+      "emitted_functions": [
+        {
+          "name": "lgAudASync",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-a-sync/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-a-write/lgaud_a_write.cpp",
+      "source_sha256": "d84a67a2951a2e010c13e9fe91b783fa89413e65cebb27400ade5685fc585114",
+      "object_sha256": "fc9d03da67223b84b75ac80c8b8d0a1fb0349ee0cb8033a7bc94a355e088c779",
+      "emitted_functions": [
+        {
+          "name": "write_done",
+          "compiled_body_bytes": 40
+        },
+        {
+          "name": "lgAudAWrite",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-a-write/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-enum-hint/lgaud_enum_hint.cpp",
+      "source_sha256": "abec6035475e0a6e62b6079b046597a9cdb6d8bdd8d8f587a295cb1ccd83ce8f",
+      "object_sha256": "366ec94ae0ae6612cb23ff82108dd73fb864f8f43f12166056150669150be329",
+      "emitted_functions": [
+        {
+          "name": "lgAudEnumHint",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-enum-hint/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-enumerate/lgaud_enumerate.cpp",
+      "source_sha256": "27f0b52d7bb58daae76a797c3211f3f81b10af5acdee39c50b003c12e51b710d",
+      "object_sha256": "5436684d44e96a6fc51baab2afd4c0e8d95423e3cf0b0f793b13995ceedb7cf1",
+      "emitted_functions": [
+        {
+          "name": "lgAudEnumerate",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-enumerate/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-open/lgaud_open.cpp",
+      "source_sha256": "af3d661770f3bed02d37a15b2cb07be4981db97351f1d2f63905210e81b99ffb",
+      "object_sha256": "6add2ee7127a001501a3020a84b08591469dd838787c1c4e686e8c19371ed601",
+      "emitted_functions": [
+        {
+          "name": "lgAudOpen",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-open/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-set-recording-volume/lgaud_set_recording_volume.cpp",
+      "source_sha256": "08adf2c13435d6aa8ea1ac7cf86d89cfb48523f49459aed8b729f3e60ff68e85",
+      "object_sha256": "ab1d5c7ccd52c6e6137035daa200d6e3f8d408341e95ad4b7c63f7fc6ccb6185",
+      "emitted_functions": [
+        {
+          "name": "lgAudSetRecordingVolume",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-set-recording-volume/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-start-playback/lgaud_start_playback.cpp",
+      "source_sha256": "38fa11eb505a8df02c6ddb3eb6ea715d92e8d0fa6bdb73a43dd75f1886f00eb3",
+      "object_sha256": "9e3c03385ae262edf19ac1aeddb27457c6f21c69641b0fc89f5f2077bb86a7f4",
+      "emitted_functions": [
+        {
+          "name": "lgAudStartPlayback",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-start-playback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-start-recording/lgaud_start_recording.cpp",
+      "source_sha256": "50e545bccf771e37ddd4dbe69bb5f65ce66b2a5bb08c88e61e3ab81e04cbebfb",
+      "object_sha256": "9612c98107a847d655488fa11647e3a68d284513b41d106ac3e906bb501bb3f0",
+      "emitted_functions": [
+        {
+          "name": "lgAudStartRecording",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-start-recording/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgaud-state/lgaud_state.cpp",
+      "source_sha256": "9cacdfc405ae1c13e4d0c66f11f7570079ad191eeb015234502f4f5058e66bd9",
+      "object_sha256": "ce50208ab74f07f024de39db9a7412de975113a51cc61b629494ca1f5756bc71",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-sce-a-lgaud-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgcodec-decode/lgcodec_decode.cpp",
+      "source_sha256": "626a90ad9b71d9ce01de8840679cebc9c0adf99e2210fc128750e92c83ab234c",
+      "object_sha256": "6c0eb4b038bb4eb5d0f3f1938ddc430bae34cdaa2963439decdb81375b60a2f3",
+      "emitted_functions": [
+        {
+          "name": "lgCodecDecode",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgcodec-decode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-lgcodec-encode/lgcodec_encode.cpp",
+      "source_sha256": "299bf104d7f16beeb2c1abf3b6a660fc275a35f499957ad0119e12121f8da171",
+      "object_sha256": "1c3054130b5f4ead8f0316da495e8b5bf0e3c961bc97827856b0a4c6fb43bfc3",
+      "emitted_functions": [
+        {
+          "name": "lgCodecEncode",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-lgcodec-encode/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-mce-sif-rpc-end-func/mce_sif_rpc_end_func.cpp",
+      "source_sha256": "00e6439a0bea49d7465aea26a13c94cd835a2eaaa82ef8200b6a89dfbfc19dcb",
+      "object_sha256": "34213f453455c665da573c4bf3bd889c4924e2a2fef0b688e1ba05a7ad4c496e",
+      "emitted_functions": [
+        {
+          "name": "mceSifRpcEndFunc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-mce-sif-rpc-end-func/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-mce-store-pwd/mce_store_pwd.cpp",
+      "source_sha256": "27d58a3c179d9fa91527d963cfdfbc398aa8a00c344ec500a832cab7b9045f1b",
+      "object_sha256": "e7790ef55bf1514c903049a9ace4bd15cd168317f4aa43defffd3bd8045edaf3",
+      "emitted_functions": [
+        {
+          "name": "mceStorePwd",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-mce-store-pwd/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-pad-get-button-mask/pad_get_button_mask.cpp",
+      "source_sha256": "b11305ab717a871fe0c8d201dea53a370b36263dc14e0ad15d2dfaa27f058d73",
+      "object_sha256": "140d131c74bc559c58b8798c3f9651feaeba73fcbac5bbadad16172a86a4bb35",
+      "emitted_functions": [
+        {
+          "name": "scePadGetButtonMask",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-pad-get-button-mask/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-pad-set-button-info/pad_set_button_info.cpp",
+      "source_sha256": "fe240bbed063502ce65c51a8d8fb4401b5d98d63814be0266217c03d5b41567b",
+      "object_sha256": "3944049499d66adcc04e557b34100b20573e5b12eb67d7644c7e4351ab5dc293",
+      "emitted_functions": [
+        {
+          "name": "scePadSetButtonInfo",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-pad-set-button-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-pad-set-req-state/pad_set_req_state.cpp",
+      "source_sha256": "0efcd58044ff81a0a6dcbe32995f565a94d69cc9e725f217ad80d588d500d77a",
+      "object_sha256": "d2dfd0f8ab9066a6e988e559abefb609d6711b541475973a1b0f35a8b4fa2350",
+      "emitted_functions": [
+        {
+          "name": "scePadSetReqState",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-pad-set-req-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-s-pad/s_pad.cpp",
+      "source_sha256": "59dd360ededee6d17e92bd29105a1e94c6df3f27d7e800252760d028b9cf9359",
+      "object_sha256": "ec740175b7aeaa357a3dcf410880024015ff5e8cb0f7df1251acbf7331068f32",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-sce-a-s-pad/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-sif-dma-stat/sif_dma_stat.S",
+      "source_sha256": "7a9cf1cec54865bf6a04fffa9ecbc6fadc88e8cc00768d66a5f60aa62e79194b",
+      "object_sha256": "21c7032706cc964f435c4452b023a457846e033ef104061e1c8cc293920492ea",
+      "emitted_functions": [
+        {
+          "name": "sceSifDmaStat",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-sif-dma-stat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-sif-m-call-rpc/sif_m_call_rpc.cpp",
+      "source_sha256": "9735ad2eef67f1904deda01ce892a6d7cbe8077fb3b515986b6d6ddeeb1ac0f6",
+      "object_sha256": "f81910d53bacb0594b8e3faa0f6d15c1b03c34f5ae27c995c84badb58a7e7f47",
+      "emitted_functions": [
+        {
+          "name": "sceSifMCallRpc",
+          "compiled_body_bytes": 568
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-sif-m-call-rpc/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-sif-m-init-rpc/sif_m_init_rpc.cpp",
+      "source_sha256": "5b1e358ceae3b2da30c7e1033e2fa187e08017094643ccbd8a4346b7015c4f77",
+      "object_sha256": "5c2fa1a7eeb9b69dd5eda27009da3de9c5b15056a225785026c24044e09e7aa0",
+      "emitted_functions": [
+        {
+          "name": "sceSifMInitRpc",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-sif-m-init-rpc/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-sif-param-fname/sif_param_fname.cpp",
+      "source_sha256": "452a158661fc516a4c311283c4052e9bf86f7d2026706498132fcf63a44ba148",
+      "object_sha256": "f75f027b8d2e0017a9d728a3136f14749733c73f6794ab15c2add93f224bc6d3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-sce-a-sif-param-fname/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w10-sce-a-sif-remove-reboot-notify-handler/sif_remove_reboot_notify_handler.cpp",
+      "source_sha256": "071bbd9e31a108011e7b70c105b3d6202c05e5dd6303dd529c3b6f3654db6600",
+      "object_sha256": "6d86c7e3515f2b7119bad064e3c214ee9e3ca7bb325257633c682505e54ddf2e",
+      "emitted_functions": [
+        {
+          "name": "sceSifRemoveRebootNotifyHandler",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w10-sce-a-sif-remove-reboot-notify-handler/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w8-startup-sce-d-sif-get-sreg/sif_get_sreg.cpp",
+      "source_sha256": "3d5a2dd076540dcd27ed979937aa0222cc09edd82a85a16c31126314c397a201",
+      "object_sha256": "690f43f27bd2787659490de2bb5f63ec026cb7cce8349ceac2c9e361aee8a456",
+      "emitted_functions": [
+        {
+          "name": "sceSifGetSreg",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w8-startup-sce-d-sif-get-sreg/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-mc-read/mc_read.cpp",
+      "source_sha256": "ca8da0b1e9e2594887d6356ade7bb33daf267e5c2367633803add6b6c757e05a",
+      "object_sha256": "c4af1beffa2ef43ef349c400d190eb591bb07e8755ad56ecd3a495610b6dbfa2",
+      "emitted_functions": [
+        {
+          "name": "sceMcRead",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-mc-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-mc-write/mc_write.cpp",
+      "source_sha256": "6630fbf3a10aa09030708f2da5825c81d9e848f4a8e576e9036a9dbf55292aac",
+      "object_sha256": "f58bbf7203b1b55d55f2aa8f59182f884ba0e0e17c5ab5a58c2fb0e2ee04009c",
+      "emitted_functions": [
+        {
+          "name": "sceMcWrite",
+          "compiled_body_bytes": 396
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-mc-write/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-pad-read/pad_read.cpp",
+      "source_sha256": "70542f095450df1beb2ffa48f0cf169eec83c40d95f23417cf6ab6cd4d945266",
+      "object_sha256": "77305a4788b4970d7ee3e4a7c60c4c7ca41fd69160b68f43ce6099a7857a796b",
+      "emitted_functions": [
+        {
+          "name": "scePadRead",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-pad-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-pad-set-act-direct/pad_set_act_direct.cpp",
+      "source_sha256": "1023e5e6a1697c3282f2a7c68f0844939a49f641f86379d926deabbaa1757cd2",
+      "object_sha256": "a84987a387abedad88427277f815410088dbc14efa77d9357fd9e4510dd977be",
+      "emitted_functions": [
+        {
+          "name": "scePadSetActDirect",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-pad-set-act-direct/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-tty-init/tty_init.cpp",
+      "source_sha256": "14cd11107a15a079d377abf266ed375891dc2f9653d23a74abe928d19b4ae75c",
+      "object_sha256": "b3abbc85c784bf3c29a5d41d2456951d20cf056c4b87bc0e2bf75854a382c1ef",
+      "emitted_functions": [
+        {
+          "name": "sceTtyInit",
+          "compiled_body_bytes": 180
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-tty-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-tty-read/tty_read.cpp",
+      "source_sha256": "12d0ca3da4b4b6fc2555b7cc33c621ab03bf55ff59c227591f2bbe9e288f0bb6",
+      "object_sha256": "a79ab7073b461254af68573e01d81114904132a4c490a80cad51e4a27fc9f5dd",
+      "emitted_functions": [
+        {
+          "name": "sceTtyRead",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-tty-read/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-tty-state/tty_state.cpp",
+      "source_sha256": "22b10554112bda4eab039abfcf07a7bc4c82c491617eff55221e389b0543711b",
+      "object_sha256": "95c1837356422a027993cc89b6acdaad242f202c4e97103c5bd1a14540ebad66",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-startup-crt-f-tty-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-sce-a",
+      "source": "sources/w9-startup-crt-f-tty-write/tty_write.cpp",
+      "source_sha256": "d18ccd23ffab3b46ece8e2c3988b9c8586e819772366c881059cb92705e0fad8",
+      "object_sha256": "1f4d2a76b8920e42c0e948d33609502a741d1ac1870745e9c74263ff21a1c4f8",
+      "emitted_functions": [
+        {
+          "name": "sceTtyWrite",
+          "compiled_body_bytes": 412
+        }
+      ],
+      "host_files": [
+        "sources/w9-startup-crt-f-tty-write/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

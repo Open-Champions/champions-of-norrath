@@ -7653,3 +7653,45 @@ Closed: `fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Poin
 
 Opened: `P_MoveLightning__FiG6Point3T1ii`, `P_StartLightning__FG6Point3T0iiffUi`, `ballSmokeParticle`, `ballSparkParticle`, `findLightsAtPoint__FG6Point3PP5Lighti`, `gameCloseToCamera__FP6Point3`, `matInvert__FP8Matrix44T0`, `saveBestList`, `saveValid`
 - 2026-10-13 01:27 CDT — `agents/w10-render-b` — 1319 unresolved imports
+
+## agents/w10-sce-a
+
+Merged (merge commit, branch tip `84c1da82`, 2 hours old when read; the notes carry
+Observed, Inferred, Imports closed, Imports opened, Build-plan entries and an
+authored-but-never-executed section, but not under the five standard headings, so the
+package is merged as partial under the tip-age rule; every selected unit has a committed
+check). SCE library and audio-codec calls: 46 units (43 functions plus three data
+objects) with fresh `input_order` values 3714 through 3759. Thirty-six are new
+`w10-sce-a-*` units; ten are sources written by earlier packages
+(`w8-startup-sce-d-sif-get-sreg`, `w9-startup-crt-f-{mc-read, mc-write, pad-read,
+pad-set-act-direct, tty-init, tty-read, tty-write, tty-state}`,
+`simloop-services-pad-dma-buffer`) that earlier integrations had left out of the plan for
+lack of a committed check; this branch adds host contracts to them. The branch also
+edited four of those earlier sources (`pad_set_act_direct.cpp`, `tty_init.cpp`,
+`tty_write.cpp`, `tty_state.hpp`) so they can run on a 64-bit host
+(a hook under `NORRATH_HOST_CONTRACT`; the OR with 0x20000000 moved into
+`ttyUncached()`); the snapshot hashes for those four files were updated, and none was
+in the plan before, so no earlier object changed. Host checks: the first comment of each
+file holds its build line (`-DNORRATH_HOST_CONTRACT`, sometimes `-fno-builtin`, and the
+unit source on the command line); built that way, 44 of 46 selected units pass here
+(x86_64, `-pagezero_size`, `-ffp-contract=off`), together with the contracts the branch
+added to the earlier units. The other two, `sceSifDmaStat` and `sceGifPkOpenGifTag`
+(both assembly), are compared with the original executable's bytes by
+`host_check.cpp <executable> <address> <object> <symbol>`; this integration does not
+read the executable, so those two were compiled and selected but **not run**, and the
+worker's byte-match statement for them is unverified here. Mutation runs and the
+private paired runs are the worker's and were not repeated. Compiled sizes are not image
+sizes (except the two routines above) and no byte match is claimed. The worker did not
+run a full build; this integration did: 3758 authored inputs, 2727 function bodies, zero
+COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1319 |
+| After | 1293 |
+| Closed | 44 |
+| Opened | 18 |
+
+Closed: `connect_to_iop_server`, `lgAudARead`, `lgAudASync`, `lgAudAWrite`, `lgAudEnumHint`, `lgAudEnumerate`, `lgAudOpen`, `lgAudSetRecordingVolume`, `lgAudStartPlayback`, `lgAudStartRecording`, `lgCodecDecode`, `lgCodecEncode`, `mceSifRpcEndFunc`, `mceStorePwd`, `pad_dma_buf`, `sPad`, `sceCdDiskReady_old`, `sceGifPkAddGsAD`, `sceGifPkCloseGifTag`, `sceGifPkCnt`, `sceGifPkOpenGifTag`, `sceGifPkRef`, `sceGifPkReserve`, `sceInetCreate`, `sceInetInterfaceControl`, `sceInetOpen`, `sceInetRecvFrom`, `sceInetSendTo`, `sceMcRead`, `sceMcWrite`, `scePadGetButtonMask`, `scePadRead`, `scePadSetActDirect`, `scePadSetButtonInfo`, `scePadSetReqState`, `sceSifDmaStat`, `sceSifGetSreg`, `sceSifMCallRpc`, `sceSifMInitRpc`, `sceSifRemoveRebootNotifyHandler`, `sceTtyInit`, `sceTtyRead`, `sceTtyWrite`, `sifParamFname`
+
+Opened: `MemcpyD`, `QueueInit`, `QueuePeekReadDone`, `_iopnotify`, `_send_to_iop`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `scePadGetDmaStr`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`
