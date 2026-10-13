@@ -8622,3 +8622,25 @@ Closed: `__10SkillDodge`, `__12SkillCyclone`, `__12SkillHealing`, `__13SkillDark
 
 Opened: `_vt$10SkillDodge`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$13SkillDarkness`, `_vt$13SkillEntangle`, `_vt$14SkillColdArrow`, `_vt$14SkillFireArrow`, `_vt$14SkillFireStorm`, `_vt$14SkillHarmTouch`, `_vt$15SkillClericRoot`, `_vt$15SkillConeOfFire`, `_vt$15SkillFireFlares`, `_vt$15SkillFrostStorm`, `_vt$15SkillHolyShield`, `_vt$15SkillHolyStrike`, `_vt$16SkillColdWeapons`, `_vt$16SkillConeOfFrost`, `_vt$16SkillCriticalHit`, `_vt$16SkillDiseaseBolt`, `_vt$16SkillFireWeapons`, `_vt$16SkillGroundPound`, `_vt$17SkillConvertEnemy`, `_vt$17SkillDiseaseTrail`, `_vt$17SkillExplodeArrow`, `_vt$18SkillConvertUndead`, `_vt$18SkillDiseaseShield`, `_vt$18SkillDismissUndead`, `_vt$18SkillHammerOfWrath`
 - 2026-10-13 05:51 CDT — agents/w11-ctor-b — 879 unresolved imports
+
+## agents/w11-ctor-c
+
+Merged (merge commit, branch tip `2f78ae9c`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 26 units from the branch (one constructor each) plus one unit from an earlier package (`w10-item-a-skill-life-tap-get-chance`, `getChance__12SkillLifeTapi`) with fresh
+`input_order` values 4710 through 4736. All 27 host checks in the branch build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The extra unit is the one the earlier integrator held out for having no committed check (see the w10-item-a entries): this branch adds that check (`w11-ctor-c-skill-life-tap-get-chance-check`, which plants two table entries so a swapped order, adjustment or argument fails) and the notes ask for the plan entry, so it is selected now, recorded under package `w10-item-a` with the new check as its host file. The notes' plan sizes were replaced by sizes measured here with the plan's compiler flags. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4735 authored inputs, 3639 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Net count unchanged at 879: the 26 constructors close their 26 names (plus `getChance__12SkillLifeTapi`) and open the matching class tables (`_vt$...`) and `eRand__5Spell`. The worker's other opened names (`lumpFindResource`, `strcmp`, etc.) were already unresolved.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 27 |
+| Opened | 27 |
+
+Closed: `__10SkillShock`, `__10SpawnMummyG6Point3PcP10GameObject`, `__12SkillLifeTap`, `__12SkillRiposte`, `__14SkillMultiFire`, `__14SpellHarmTouchiP8CreatureP5Skill`, `__14poisonGasSpellG6Point3iiiP10GameObjecti`, `__15SkillPoisonRain`, `__15SkillShieldBash`, `__15SkillWizardBeam`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__16SkillPoisonArrow`, `__16SkillShockOfFire`, `__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader`, `__17SkillMinorHealing`, `__17SkillRegeneration`, `__17SkillShockOfFrost`, `__17SkillUndeadShield`, `__17UndeadKnightCloneG6Point3sPPc`, `__18SkillRepulseUndead`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__19SkillSummonSkeleton`, `__21SkillLightningWeapons`, `__22SkillRangerCriticalHit`, `__9SkillRoot`, `__9dustCloudG6Point3iiii`, `getChance__12SkillLifeTapi`
+
+Opened: `_vt$10SkillShock`, `_vt$10SpawnMummy`, `_vt$12SkillLifeTap`, `_vt$12SkillRiposte`, `_vt$14SkillMultiFire`, `_vt$14SpellHarmTouch`, `_vt$14poisonGasSpell`, `_vt$15SkillPoisonRain`, `_vt$15SkillShieldBash`, `_vt$15SkillWizardBeam`, `_vt$15SpellConeOfFire`, `_vt$16SkillPoisonArrow`, `_vt$16SkillShockOfFire`, `_vt$16beetleProjectile`, `_vt$17SkillMinorHealing`, `_vt$17SkillRegeneration`, `_vt$17SkillShockOfFrost`, `_vt$17SkillUndeadShield`, `_vt$18SkillRepulseUndead`, `_vt$18SpellDiseaseShield`, `_vt$19SkillSummonSkeleton`, `_vt$21SkillLightningWeapons`, `_vt$22SkillRangerCriticalHit`, `_vt$9DustDevil`, `_vt$9SkillRoot`, `_vt$9dustCloud`, `eRand__5Spell`
+- 2026-10-13 05:56 CDT — agents/w11-ctor-c — 879 unresolved imports

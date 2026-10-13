@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4708,
+  "default_authored_inputs": 4735,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2872,6 +2872,7 @@
     "sources/w10-item-a-shop-check/shop_check.cpp": "599aedb64f7a434f3f2e4d81f1e46b6c7381a732afb4093dacb802b4248045d2",
     "sources/w10-item-a-shop-run/shop_run.cpp": "645cd0d5353d0d14e8727327452370fd2ad112e5b1051ecaca5eeb353af6007f",
     "sources/w10-item-a-shop-unpack-to-grid/shop_unpack_to_grid.cpp": "6df69a6fcbd28b78d0d7084900706b025baadb94bb4ef143e6154f7f36e2608b",
+    "sources/w10-item-a-skill-life-tap-get-chance/get_chance.cpp": "56c3f2f73d8e39197b4bf6500ebe2de10a57cdb3263f9cbfc31a41832657f614",
     "sources/w10-item-a-skills/skills.cpp": "9d89e9ece0a10712f72a6c100ff69abcbfd8a8f23deb203e2033bd91c3a461c3",
     "sources/w10-item-a-switch-dual-wield/switch_dual_wield.cpp": "0346b9bc5af643bf878364d43cb105ccfe23a112bb3c97afb7242f34740cee8e",
     "sources/w10-item-a-sync-quest-items/sync_quest_items.cpp": "8d8d501db022a138e453ab0e8c6ee83f8751dc9a821f082d051ed5a266910df2",
@@ -3361,6 +3362,32 @@
     "sources/w11-ctor-b-skill-healing/skill_healing.cpp": "1d406ae267bf728d17b8ac9e2ca82df852c75ca4d7de15d2fc51caa1d54285e4",
     "sources/w11-ctor-b-skill-holy-shield/skill_holy_shield.cpp": "6109c7804ae9f6b6f5842aab44bfab377e428fcc9592c280b5618290ec96f67b",
     "sources/w11-ctor-b-skill-holy-strike/skill_holy_strike.cpp": "7f53def9be04037b3da6f5a8e4d2f154d1703f5449f095b4ec1dc1003aaac5be",
+    "sources/w11-ctor-c-beetle-projectile/beetle_projectile_ctor.cpp": "299386711064dc2a9c4929721a43b72994f9a0b146c26a64e3b93b62daa626a9",
+    "sources/w11-ctor-c-dust-cloud/dust_cloud_ctor.cpp": "8e6803797fb2d9bcedda385c8b000f0ca3408e5988d76e4dff550a9f1f86a306",
+    "sources/w11-ctor-c-poison-gas-spell/poison_gas_spell_ctor.cpp": "f00b3ee7024d1d55e22ed30b0a8424397f88183f36ad1e57d3424e6e53c8106d",
+    "sources/w11-ctor-c-skill-life-tap/ctor.cpp": "9cc35a8723b50404cdb992f5a5dbd48666e7c33a69e7db137b5a95ffb8e0354b",
+    "sources/w11-ctor-c-skill-lightning-weapons/ctor.cpp": "2e63d1b41958fc7a6fbe8c5d9f19438157c794bc1b82992802671f28b7aea017",
+    "sources/w11-ctor-c-skill-minor-healing/ctor.cpp": "e36410d0c19626ddfb36e701ee12d20d77c79d86ca94905fcc697d911c9ea1c9",
+    "sources/w11-ctor-c-skill-multi-fire/ctor.cpp": "e4593c4f6db06bd1e27d2a5651cff3974705ada8083035907d08afbc8332abb0",
+    "sources/w11-ctor-c-skill-poison-arrow/ctor.cpp": "a5677f714c593cd30b535c4f71d91d73b4e0c9a0b3256254240d1ff7aa866461",
+    "sources/w11-ctor-c-skill-poison-rain/ctor.cpp": "f599cb0645a8f5f2992716b670eae32078bc8e84d48c97b808574d9baddabd9f",
+    "sources/w11-ctor-c-skill-ranger-critical-hit/ctor.cpp": "4eb9c31c51ac1b81615aa456074f7ac7bee538bbba1b8a3ce190f0e77b8edc31",
+    "sources/w11-ctor-c-skill-regeneration/ctor.cpp": "2d97bb6c17a905d72fab14b9c74e101454b73f62c0f061754fde0a125bc1fb5f",
+    "sources/w11-ctor-c-skill-repulse-undead/ctor.cpp": "366e1d7f7f2c68aab06f2c38fe56b068715fe64ffe362b59a7553492279634ca",
+    "sources/w11-ctor-c-skill-riposte/ctor.cpp": "e81a960d64a621982846645ec774e021fc45ecc1d8fc7f922f7645e52a26d1df",
+    "sources/w11-ctor-c-skill-root/ctor.cpp": "13a9c84117fd3f3a4288934091e1b3ffed8969437cbc03f07775b6244ea60cf2",
+    "sources/w11-ctor-c-skill-shield-bash/ctor.cpp": "32cf89baa4f6c1007dde4cce4bda61b537cfd90afb70e3fb01272b1e0d55805a",
+    "sources/w11-ctor-c-skill-shock-of-fire/ctor.cpp": "06a134677a9eba97ae52c8b1a71f2b8d097f193655d12b5bfa13274a60c0435d",
+    "sources/w11-ctor-c-skill-shock-of-frost/ctor.cpp": "5e147ec13c01de05f13388684e0facc386a307aa4dffb13583efb092b73295f8",
+    "sources/w11-ctor-c-skill-shock/ctor.cpp": "9f7d6f5e44c075685757f6c1e80d5b9946228a72341b7208c36978ce07cea68b",
+    "sources/w11-ctor-c-skill-summon-skeleton/ctor.cpp": "e315442390f62f4ec834b0b0bbcbfd6dabf913147e6377c8018f0748d2439b37",
+    "sources/w11-ctor-c-skill-undead-shield/ctor.cpp": "d50e00b1d4293f5b844656dc6f5ea6fcd7ddf7afd616343866f785ee33f587cb",
+    "sources/w11-ctor-c-skill-wizard-beam/ctor.cpp": "85b37e7df744b11afa27c876585bf2cc71a6309ce2c90b8551a96b696c71c33b",
+    "sources/w11-ctor-c-spawn-mummy/spawn_mummy_ctor.cpp": "1138f73f90a5475ea3762c6f00b845e50f4efff40131aeae9f814ac1e628d3ec",
+    "sources/w11-ctor-c-spell-cone-of-fire/spell_cone_of_fire_ctor.cpp": "e580d0b3ab51902894bc9ab96367a5b3b433bcef9ae8a8d631ea7c617ce4282f",
+    "sources/w11-ctor-c-spell-disease-shield/spell_disease_shield_ctor.cpp": "e0a22f9bf50d85828b93aa6ebba3c33a49fbc64530a4f798802033f450038c96",
+    "sources/w11-ctor-c-spell-harm-touch/spell_harm_touch_ctor.cpp": "af8c80ad61ceddbc801ca615b8c47df58f5f4703a667d7ed24f88597f478c0a9",
+    "sources/w11-ctor-c-undead-knight-clone/undead_knight_clone_ctor.cpp": "13c9e647ccb2593249b6e915babd5b87bf2fddb9d15255134609295e63d0c843",
     "sources/w11-front-a-display-gold/display_gold.cpp": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
     "sources/w11-front-a-display-items/display_items.cpp": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
     "sources/w11-front-a-display-weight/display_weight.cpp": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
@@ -68587,6 +68614,411 @@
           "name": "__15SkillHolyStrike"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4710,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_beetle_projectile.o",
+      "profile": "authored_cpp",
+      "sha256": "299386711064dc2a9c4929721a43b72994f9a0b146c26a64e3b93b62daa626a9",
+      "source": "sources/w11-ctor-c-beetle-projectile/beetle_projectile_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4711,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_dust_cloud.o",
+      "profile": "authored_cpp",
+      "sha256": "8e6803797fb2d9bcedda385c8b000f0ca3408e5988d76e4dff550a9f1f86a306",
+      "source": "sources/w11-ctor-c-dust-cloud/dust_cloud_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "__9dustCloudG6Point3iiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4712,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_poison_gas_spell.o",
+      "profile": "authored_cpp",
+      "sha256": "f00b3ee7024d1d55e22ed30b0a8424397f88183f36ad1e57d3424e6e53c8106d",
+      "source": "sources/w11-ctor-c-poison-gas-spell/poison_gas_spell_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "__14poisonGasSpellG6Point3iiiP10GameObjecti"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4713,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_life_tap.o",
+      "profile": "authored_cpp",
+      "sha256": "9cc35a8723b50404cdb992f5a5dbd48666e7c33a69e7db137b5a95ffb8e0354b",
+      "source": "sources/w11-ctor-c-skill-life-tap/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__12SkillLifeTap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4714,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_lightning_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "2e63d1b41958fc7a6fbe8c5d9f19438157c794bc1b82992802671f28b7aea017",
+      "source": "sources/w11-ctor-c-skill-lightning-weapons/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__21SkillLightningWeapons"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4715,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_minor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "e36410d0c19626ddfb36e701ee12d20d77c79d86ca94905fcc697d911c9ea1c9",
+      "source": "sources/w11-ctor-c-skill-minor-healing/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__17SkillMinorHealing"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4716,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_multi_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "e4593c4f6db06bd1e27d2a5651cff3974705ada8083035907d08afbc8332abb0",
+      "source": "sources/w11-ctor-c-skill-multi-fire/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__14SkillMultiFire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4717,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_poison_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "a5677f714c593cd30b535c4f71d91d73b4e0c9a0b3256254240d1ff7aa866461",
+      "source": "sources/w11-ctor-c-skill-poison-arrow/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__16SkillPoisonArrow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4718,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_poison_rain.o",
+      "profile": "authored_cpp",
+      "sha256": "f599cb0645a8f5f2992716b670eae32078bc8e84d48c97b808574d9baddabd9f",
+      "source": "sources/w11-ctor-c-skill-poison-rain/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillPoisonRain"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4719,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_ranger_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "4eb9c31c51ac1b81615aa456074f7ac7bee538bbba1b8a3ce190f0e77b8edc31",
+      "source": "sources/w11-ctor-c-skill-ranger-critical-hit/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__22SkillRangerCriticalHit"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4720,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_regeneration.o",
+      "profile": "authored_cpp",
+      "sha256": "2d97bb6c17a905d72fab14b9c74e101454b73f62c0f061754fde0a125bc1fb5f",
+      "source": "sources/w11-ctor-c-skill-regeneration/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__17SkillRegeneration"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4721,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_repulse_undead.o",
+      "profile": "authored_cpp",
+      "sha256": "366e1d7f7f2c68aab06f2c38fe56b068715fe64ffe362b59a7553492279634ca",
+      "source": "sources/w11-ctor-c-skill-repulse-undead/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__18SkillRepulseUndead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4722,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_riposte.o",
+      "profile": "authored_cpp",
+      "sha256": "e81a960d64a621982846645ec774e021fc45ecc1d8fc7f922f7645e52a26d1df",
+      "source": "sources/w11-ctor-c-skill-riposte/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__12SkillRiposte"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4723,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_root.o",
+      "profile": "authored_cpp",
+      "sha256": "13a9c84117fd3f3a4288934091e1b3ffed8969437cbc03f07775b6244ea60cf2",
+      "source": "sources/w11-ctor-c-skill-root/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__9SkillRoot"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4724,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_shield_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "32cf89baa4f6c1007dde4cce4bda61b537cfd90afb70e3fb01272b1e0d55805a",
+      "source": "sources/w11-ctor-c-skill-shield-bash/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillShieldBash"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4725,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_shock_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "06a134677a9eba97ae52c8b1a71f2b8d097f193655d12b5bfa13274a60c0435d",
+      "source": "sources/w11-ctor-c-skill-shock-of-fire/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillShockOfFire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4726,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_shock_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "5e147ec13c01de05f13388684e0facc386a307aa4dffb13583efb092b73295f8",
+      "source": "sources/w11-ctor-c-skill-shock-of-frost/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__17SkillShockOfFrost"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4727,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_shock.o",
+      "profile": "authored_cpp",
+      "sha256": "9f7d6f5e44c075685757f6c1e80d5b9946228a72341b7208c36978ce07cea68b",
+      "source": "sources/w11-ctor-c-skill-shock/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__10SkillShock"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4728,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_summon_skeleton.o",
+      "profile": "authored_cpp",
+      "sha256": "e315442390f62f4ec834b0b0bbcbfd6dabf913147e6377c8018f0748d2439b37",
+      "source": "sources/w11-ctor-c-skill-summon-skeleton/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__19SkillSummonSkeleton"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4729,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "d50e00b1d4293f5b844656dc6f5ea6fcd7ddf7afd616343866f785ee33f587cb",
+      "source": "sources/w11-ctor-c-skill-undead-shield/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__17SkillUndeadShield"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4730,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_skill_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "85b37e7df744b11afa27c876585bf2cc71a6309ce2c90b8551a96b696c71c33b",
+      "source": "sources/w11-ctor-c-skill-wizard-beam/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__15SkillWizardBeam"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4731,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_spawn_mummy.o",
+      "profile": "authored_cpp",
+      "sha256": "1138f73f90a5475ea3762c6f00b845e50f4efff40131aeae9f814ac1e628d3ec",
+      "source": "sources/w11-ctor-c-spawn-mummy/spawn_mummy_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 196,
+          "name": "__10SpawnMummyG6Point3PcP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4732,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_spell_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "e580d0b3ab51902894bc9ab96367a5b3b433bcef9ae8a8d631ea7c617ce4282f",
+      "source": "sources/w11-ctor-c-spell-cone-of-fire/spell_cone_of_fire_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "__15SpellConeOfFireiP8CreatureP5Skill"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4733,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_spell_disease_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "e0a22f9bf50d85828b93aa6ebba3c33a49fbc64530a4f798802033f450038c96",
+      "source": "sources/w11-ctor-c-spell-disease-shield/spell_disease_shield_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 720,
+          "name": "__18SpellDiseaseShieldiP8CreatureP5Skill"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4734,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_spell_harm_touch.o",
+      "profile": "authored_cpp",
+      "sha256": "af8c80ad61ceddbc801ca615b8c47df58f5f4703a667d7ed24f88597f478c0a9",
+      "source": "sources/w11-ctor-c-spell-harm-touch/spell_harm_touch_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "__14SpellHarmTouchiP8CreatureP5Skill"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4735,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_c_undead_knight_clone.o",
+      "profile": "authored_cpp",
+      "sha256": "13c9e647ccb2593249b6e915babd5b87bf2fddb9d15255134609295e63d0c843",
+      "source": "sources/w11-ctor-c-undead-knight-clone/undead_knight_clone_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 868,
+          "name": "__17UndeadKnightCloneG6Point3sPPc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4736,
+      "kind": "independently_authored_source",
+      "object_name": "w10_item_a_skill_life_tap_get_chance.o",
+      "profile": "authored_cpp",
+      "sha256": "56c3f2f73d8e39197b4bf6500ebe2de10a57cdb3263f9cbfc31a41832657f614",
+      "source": "sources/w10-item-a-skill-life-tap-get-chance/get_chance.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "getChance__12SkillLifeTapi"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -68686,7 +69118,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "a30e538de51585e24e21d89e2093ebb7a968ca8886f7f3f968e29fef69da21be",
+  "snapshot_sha256": "7b2507e89d99765d779d89e4c76c86273232b99c1de30e988cc66cc927d13e78",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
