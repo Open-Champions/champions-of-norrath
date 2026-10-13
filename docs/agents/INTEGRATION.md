@@ -7936,3 +7936,25 @@ Closed: `_$_3Ant`, `_GLOBAL_$I$cast__19SkillSummonSkeletoniP8CreatureG6Point3s`,
 
 Opened: `P_CreateParticleSystem__Fv`, `__16PoisonProjectilePQ210GameObject11resourceMapiiiiG6Point3T6ifP8Creature`, `__ti5Spell`, `_vt$19SpellHornOmenEffect`, `_vt$22SpellPlanarSteelEffect`, `_vt$3Ant`, `_vt$8Creature`, `ant_msg_run_particle_7d7170`, `checkIfSpellIsRunning__8CreatureRC9type_info`, `enemyInZone__8Creaturefs`, `loseBodyPart__3Anti`, `produceMeleeDamage__8CreaturefiiiiPQ24item11description`, `steerAndRouteToEnemy__8Creature`, `turnToFaceEnemy__8Creature`
 - 2026-10-13 02:22 CDT — `agents/w10-actor-a` — 1190 unresolved imports
+
+## agents/w10-actor-b
+
+Merged (merge commit, branch tip `4322dd8f`, 19 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (26 function bodies) with fresh `input_order` values 3970
+through 4001. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): the 26 function units (21 under `-Werror`, five only without it) and the six layout-view units, whose comparisons sit in a `host/` subfolder and each link against the unit source (string table contents and slot count). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4000 authored inputs, 2915 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1190 |
+| After | 1170 |
+| Closed | 32 |
+| Opened | 12 |
+
+Closed: `_$_10Arenabeast`, `_$_10AutoObject`, `_$_13AutoContainer`, `_$_8AntQueen`, `_$_9AutoChest`, `__tf10Arenabeast`, `__tf10AutoObject`, `__tf13AutoContainer`, `__tf8AntQueen`, `__tf9AutoChest`, `clone__8AntQueen`, `msg_draw__10Arenabeast`, `msg_draw__8AntQueen`, `msg_hurt__10ArenabeastfP10GameObjecti`, `msg_hurt__8AntQueenfP10GameObjecti`, `msg_load__10AutoObjectPc`, `msg_moveCollision__10ArenabeastPP10GameObject`, `msg_poke__9AutoChesti`, `msg_run__10Arenabeast`, `msg_run__13AutoContainer`, `msg_run__8AntQueen`, `msg_run__9AutoChest`, `msg_trigger__10Arenabeasti`, `msg_trigger__8AntQueeni`, `norrath_ctors_ant_lantern_view_42c7b0`, `norrath_ctors_ant_lantern_view_42c7d8`, `norrath_ctors_ant_lantern_view_42c800`, `norrath_ctors_ant_lantern_view_42c828`, `norrath_ctors_ant_lantern_view_42c850`, `norrath_ctors_ant_lantern_view_42c878`, `setState__10Arenabeasti`, `setState__8AntQueeni`
+
+Opened: `__7AntWaveP10GameObjectG6Point3si`, `addTurnAnimation__8AntQueen`, `alternateEnemyInZone__8Creatureffss`, `dropTreasure__4itemG6Point3iffffffPci`, `enemyInZone2__8Creatureffssfi`, `findEvadeDestination__8AntQueen`, `norrath_auto_chest_msg_run_fuseParticle_bytes`, `norrath_auto_chest_msg_run_smokeParticle_bytes`, `produceGeneralDamage__8CreatureffssiiiiPQ24item11description`, `setOnFire__6PhPropi`, `spawnItems__9AutoChest`, `subTurnAnimation__8AntQueen`
