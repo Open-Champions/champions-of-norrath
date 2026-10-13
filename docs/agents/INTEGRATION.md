@@ -7472,3 +7472,4 @@ function bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
 Closed: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `Exit`, `GetMemorySize`, `InitTLB32MB`, `SleepThread`, `_InitTLB`, `__cp_push_exception`, `__divdi3`, `__eh_alloc`, `__fixunsdfdi`, `__fpcmp_parts_d`, `__ieee754_sqrtf`, `__kernel_rem_pio2f`, `__make_dp`, `__make_fp`, `__moddi3`, `__new_handler`, `__pack_d`, `__ps2_klibinfo__`, `__rtti_user`, `__terminate_func`, `__unpack_d`, `__unpack_f`
 
 Opened: `KbmReaderThread`, `TLBInfo`, `_Exit`, `_SetTLBEntry`, `__cplus_type_matcher`, `__floatdidf`, `__get_eh_context`, `__get_eh_info`, `__pack_f`, `dptoul`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
+- 2026-10-13 01:02 CDT — `agents/w10-startup-a` — 1454 unresolved imports
