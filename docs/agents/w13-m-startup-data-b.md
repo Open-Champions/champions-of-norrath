@@ -104,6 +104,8 @@ Unit: `experimental/sources/w13-m-startup-data-b-sif-overlay-buffers/`.
 
 - Vtable `_vt$8Skeleton` (240 bytes, 30 slots, 29 named functions): unit `w13-m-startup-data-b-vt-skeleton`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
 
+- Vtable `_vt$13FireBombletJr` (144 bytes, 18 slots, 17 named functions): unit `w13-m-startup-data-b-vt-firebomblet`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
+
 ## Imports opened by this package
 
 None so far.
