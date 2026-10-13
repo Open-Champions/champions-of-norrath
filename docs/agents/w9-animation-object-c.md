@@ -24,3 +24,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `out-msg-data` | data: `outMsg` | 0x8d88b8 | 128 |
 | `w-lump-header-data` | data: `wLumpHeader` | 0x4845a4 | 4 |
 | `radial-damage` | `objectRadialDamage__FP10GameObjectG6Point3iffiii` | 0x13f708 | 548 |
+| `find-empty-spot` | `objectFindEmptySpot__FG6Point3iiPc` | 0x13f2d0 | 1076 |
