@@ -8812,3 +8812,25 @@ Closed: `P_CreateParticleSystem__Fv`, `_4item$itemTable`, `_4item$namedItemTable
 
 Opened: none
 - 2026-10-13 06:58 CDT — agents/w11-data-a — 935 unresolved imports
+
+## agents/w11-data-b
+
+Merged (merge commit, branch tip `32244e82`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 7 units (1 function body, `norrath_construct_Vehicle`; the rest are five resource-map tables and one buffer) with fresh
+`input_order` values 4930 through 4937. All 7 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs; the notes say the Vehicle contract needs -O0 -fno-builtin -ffp-contract=off, which is in its Build line and was applied). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4935 authored inputs, 3750 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed (7) and opened (1) lists reproduce; its private count (879 to 873) was measured on an older base, here the effect is 935 to 929. `norrath_construct_Vehicle` carries two storage objects it needs whose original names are not established (`norrath_vehicle_count_word`, `norrath_vehicle_list_bytes`), recorded as an inferred authored name in the notes. The five resource maps are file-name tables of the kind already published for `skeletonResMap`.
+
+| | |
+|---|---|
+| Before | 935 |
+| After | 929 |
+| Closed | 7 |
+| Opened | 1 |
+
+Closed: `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap`, `maleHighElfResourceMap`, `maleWoodElfResourceMap`, `mummy_miniboss_name_buffer_7d7e20`, `norrath_construct_Vehicle`
+
+Opened: `processParams__7VehiclePPc`
+- 2026-10-13 07:02 CDT — agents/w11-data-b — 929 unresolved imports

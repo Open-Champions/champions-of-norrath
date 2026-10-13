@@ -62852,6 +62852,74 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w11-data-a-wraith-count/wraith_count.cpp"
+    },
+    {
+      "input_order": 4930,
+      "component": "w11-data-b-mummy-name-buffer",
+      "object_name": "w11_data_b_mummy_name_buffer.o",
+      "private_object_sha256": "92e5902f08ad27c4e8e7cf78f157f50eb452412a311bbcd10b0f3a8d6b37fb8d",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-mummy-name-buffer/name_buffer.cpp"
+    },
+    {
+      "input_order": 4931,
+      "component": "w11-data-b-resource-map-male-barb",
+      "object_name": "w11_data_b_resource_map_male_barb.o",
+      "private_object_sha256": "30487a801c8b04cfe5e7a339f42f55899758c19a042487e6dc2e4f76c8460a6c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-resource-map-male-barb/resource_map.cpp"
+    },
+    {
+      "input_order": 4932,
+      "component": "w11-data-b-resource-map-male-dark-elf",
+      "object_name": "w11_data_b_resource_map_male_dark_elf.o",
+      "private_object_sha256": "8323b955bf8e0ba19a17413c4be4caa5d422bc9e88e33766d09cc0ffa4959453",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-resource-map-male-dark-elf/resource_map.cpp"
+    },
+    {
+      "input_order": 4933,
+      "component": "w11-data-b-resource-map-male-erudite",
+      "object_name": "w11_data_b_resource_map_male_erudite.o",
+      "private_object_sha256": "68f13cf88b6fda56d265f0977583ec420509d52f2fadafbffcb01b180120b6a3",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-resource-map-male-erudite/resource_map.cpp"
+    },
+    {
+      "input_order": 4934,
+      "component": "w11-data-b-resource-map-male-high-elf",
+      "object_name": "w11_data_b_resource_map_male_high_elf.o",
+      "private_object_sha256": "8f9ba498f2d8c334f132aefad63aa8db3002b5fc5d7733c1ca5ab3f9c2dc61c6",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-resource-map-male-high-elf/resource_map.cpp"
+    },
+    {
+      "input_order": 4935,
+      "component": "w11-data-b-resource-map-male-wood-elf",
+      "object_name": "w11_data_b_resource_map_male_wood_elf.o",
+      "private_object_sha256": "4399b9a07501214dd1692f7080aa96a8338c9b63d9649e1fa3cf090a28f6bf94",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-resource-map-male-wood-elf/resource_map.cpp"
+    },
+    {
+      "input_order": 4936,
+      "component": "w11-data-b-vehicle-construct",
+      "object_name": "w11_data_b_vehicle_construct.o",
+      "private_object_sha256": "eabce7fdc5b43c55e4425a0a36d26fcef3a4cba7a6fafd2f33305a00f940a4ff",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1172,
+          "name": "norrath_construct_Vehicle"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-data-b-vehicle-construct/construct_vehicle.cpp"
     }
   ],
   "drafts": [
@@ -68835,6 +68903,20 @@
     "sources/w11-data-a-suffix-table/suffixTable.cpp": "d61c1e28555662fa069027f20089aabebcb7e616060bcf7e3a5439cfddeea35e",
     "sources/w11-data-a-wraith-count/host_check.cpp": "613d5e024dceee1b7dcf19c32400ad931ddd327c998c1a76ac1eb4d4c07c3b19",
     "sources/w11-data-a-wraith-count/wraith_count.cpp": "fd5d6db7508509da4cc4f8a3ef39165b4d91e0f91aab43862273671c91ba9732",
+    "sources/w11-data-b-mummy-name-buffer/host_check.cpp": "ada1187525bfa2dadec758f8329f1208c395edb719505818024021654f4fe55d",
+    "sources/w11-data-b-mummy-name-buffer/name_buffer.cpp": "0c6daec649da4aa0419f4484335bea3f4e6775d85c88be4126a8c90e3e4c836c",
+    "sources/w11-data-b-resource-map-male-barb/host_check.cpp": "d7e19c8baf9662c874745e78b408e5021756793d6fef295aec27561e26dd311b",
+    "sources/w11-data-b-resource-map-male-barb/resource_map.cpp": "974f4248ef9f29b483857994796c5fc175663fad8b41db01d8f5712bfbc8e026",
+    "sources/w11-data-b-resource-map-male-dark-elf/host_check.cpp": "3cd0a2de45aca12e8251334b97d138b5dc8a5e4b4889b59fd550fe72f93f4ca5",
+    "sources/w11-data-b-resource-map-male-dark-elf/resource_map.cpp": "b8cba7c7899e52f355e51c4f2bf769767b010cf735a4dea0f9391a6f141c7b8c",
+    "sources/w11-data-b-resource-map-male-erudite/host_check.cpp": "07cf68874f556a87f1d9c85a8dcfbbf70e5e491e3377c2d27dc0b18b5847e10c",
+    "sources/w11-data-b-resource-map-male-erudite/resource_map.cpp": "da9b626fe3d567417e88584845e617779cb58d9fe0e805ab85bd4096b07dcdc5",
+    "sources/w11-data-b-resource-map-male-high-elf/host_check.cpp": "9115e771e7a7737630d385b556f561a02d342a0c3b9d46b50ebb45c329555c38",
+    "sources/w11-data-b-resource-map-male-high-elf/resource_map.cpp": "07da2b1139e355f0ef456e7dd185b880b146b4144aa9d3a4cdc1d77f0a145a70",
+    "sources/w11-data-b-resource-map-male-wood-elf/host_check.cpp": "adec499b542f1082d6d6501ae20084f506a3523043b88e4839c58269e7c5fc66",
+    "sources/w11-data-b-resource-map-male-wood-elf/resource_map.cpp": "0e93018abb4ec2613aec61994087ce55fb8b411a8a183b422c55705a514141eb",
+    "sources/w11-data-b-vehicle-construct/construct_vehicle.cpp": "32ffb8eceddc9a3eaad95f232c817c98cf8a2243e6e99058147ffa907d27b549",
+    "sources/w11-data-b-vehicle-construct/host_check.cpp": "6e75f9ac36799496ad701017e825c44753537d0cd8acd94b8e259155b1141771",
     "sources/w11-front-a-core-start-loading-screen/host_check.cpp": "e91a19602a9cb3ef5a761f67260ac18c9a6d4b9740e990a2005cd970e76a097e",
     "sources/w11-front-a-display-gold/display_gold.cpp": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
     "sources/w11-front-a-display-gold/host_check.cpp": "dc48a15ac113039058bd943795e5127c3424b37bc397210a71a1a0b15e9cc4a6",
@@ -73798,11 +73880,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4930,
-    "authored_default_inputs": 4928,
+    "selected_inputs": 4937,
+    "authored_default_inputs": 4935,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3751,
-    "compiled_body_bytes_from_accepted_inputs": 1626764,
+    "emitted_function_definitions_including_helpers": 3752,
+    "compiled_body_bytes_from_accepted_inputs": 1627936,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -73815,7 +73897,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4617
+    "package_selected_inputs": 4624
   },
   "startup_implementations": [
     {
@@ -146022,6 +146104,95 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w11-data-a-wraith-count/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-mummy-name-buffer/name_buffer.cpp",
+      "source_sha256": "0c6daec649da4aa0419f4484335bea3f4e6775d85c88be4126a8c90e3e4c836c",
+      "object_sha256": "92e5902f08ad27c4e8e7cf78f157f50eb452412a311bbcd10b0f3a8d6b37fb8d",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-mummy-name-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-resource-map-male-barb/resource_map.cpp",
+      "source_sha256": "974f4248ef9f29b483857994796c5fc175663fad8b41db01d8f5712bfbc8e026",
+      "object_sha256": "30487a801c8b04cfe5e7a339f42f55899758c19a042487e6dc2e4f76c8460a6c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-resource-map-male-barb/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-resource-map-male-dark-elf/resource_map.cpp",
+      "source_sha256": "b8cba7c7899e52f355e51c4f2bf769767b010cf735a4dea0f9391a6f141c7b8c",
+      "object_sha256": "8323b955bf8e0ba19a17413c4be4caa5d422bc9e88e33766d09cc0ffa4959453",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-resource-map-male-dark-elf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-resource-map-male-erudite/resource_map.cpp",
+      "source_sha256": "da9b626fe3d567417e88584845e617779cb58d9fe0e805ab85bd4096b07dcdc5",
+      "object_sha256": "68f13cf88b6fda56d265f0977583ec420509d52f2fadafbffcb01b180120b6a3",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-resource-map-male-erudite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-resource-map-male-high-elf/resource_map.cpp",
+      "source_sha256": "07da2b1139e355f0ef456e7dd185b880b146b4144aa9d3a4cdc1d77f0a145a70",
+      "object_sha256": "8f9ba498f2d8c334f132aefad63aa8db3002b5fc5d7733c1ca5ab3f9c2dc61c6",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-resource-map-male-high-elf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-resource-map-male-wood-elf/resource_map.cpp",
+      "source_sha256": "0e93018abb4ec2613aec61994087ce55fb8b411a8a183b422c55705a514141eb",
+      "object_sha256": "4399b9a07501214dd1692f7080aa96a8338c9b63d9649e1fa3cf090a28f6bf94",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w11-data-b-resource-map-male-wood-elf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-data-b",
+      "source": "sources/w11-data-b-vehicle-construct/construct_vehicle.cpp",
+      "source_sha256": "32ffb8eceddc9a3eaad95f232c817c98cf8a2243e6e99058147ffa907d27b549",
+      "object_sha256": "eabce7fdc5b43c55e4425a0a36d26fcef3a4cba7a6fafd2f33305a00f940a4ff",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1172,
+          "name": "norrath_construct_Vehicle"
+        }
+      ],
+      "host_files": [
+        "sources/w11-data-b-vehicle-construct/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

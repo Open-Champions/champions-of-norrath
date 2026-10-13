@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4928,
+  "default_authored_inputs": 4935,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3446,6 +3446,13 @@
     "sources/w11-data-a-prefix-table/prefixTable.cpp": "0ea0e86401fb87aef91b1e693d709b1f3e7b2970819480e73d3f604209195693",
     "sources/w11-data-a-suffix-table/suffixTable.cpp": "d61c1e28555662fa069027f20089aabebcb7e616060bcf7e3a5439cfddeea35e",
     "sources/w11-data-a-wraith-count/wraith_count.cpp": "fd5d6db7508509da4cc4f8a3ef39165b4d91e0f91aab43862273671c91ba9732",
+    "sources/w11-data-b-mummy-name-buffer/name_buffer.cpp": "0c6daec649da4aa0419f4484335bea3f4e6775d85c88be4126a8c90e3e4c836c",
+    "sources/w11-data-b-resource-map-male-barb/resource_map.cpp": "974f4248ef9f29b483857994796c5fc175663fad8b41db01d8f5712bfbc8e026",
+    "sources/w11-data-b-resource-map-male-dark-elf/resource_map.cpp": "b8cba7c7899e52f355e51c4f2bf769767b010cf735a4dea0f9391a6f141c7b8c",
+    "sources/w11-data-b-resource-map-male-erudite/resource_map.cpp": "da9b626fe3d567417e88584845e617779cb58d9fe0e805ab85bd4096b07dcdc5",
+    "sources/w11-data-b-resource-map-male-high-elf/resource_map.cpp": "07da2b1139e355f0ef456e7dd185b880b146b4144aa9d3a4cdc1d77f0a145a70",
+    "sources/w11-data-b-resource-map-male-wood-elf/resource_map.cpp": "0e93018abb4ec2613aec61994087ce55fb8b411a8a183b422c55705a514141eb",
+    "sources/w11-data-b-vehicle-construct/construct_vehicle.cpp": "32ffb8eceddc9a3eaad95f232c817c98cf8a2243e6e99058147ffa907d27b549",
     "sources/w11-front-a-display-gold/display_gold.cpp": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
     "sources/w11-front-a-display-items/display_items.cpp": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
     "sources/w11-front-a-display-weight/display_weight.cpp": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
@@ -71738,6 +71745,81 @@
       "sha256": "fd5d6db7508509da4cc4f8a3ef39165b4d91e0f91aab43862273671c91ba9732",
       "source": "sources/w11-data-a-wraith-count/wraith_count.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4930,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_mummy_name_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "0c6daec649da4aa0419f4484335bea3f4e6775d85c88be4126a8c90e3e4c836c",
+      "source": "sources/w11-data-b-mummy-name-buffer/name_buffer.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4931,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_resource_map_male_barb.o",
+      "profile": "authored_cpp",
+      "sha256": "974f4248ef9f29b483857994796c5fc175663fad8b41db01d8f5712bfbc8e026",
+      "source": "sources/w11-data-b-resource-map-male-barb/resource_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4932,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_resource_map_male_dark_elf.o",
+      "profile": "authored_cpp",
+      "sha256": "b8cba7c7899e52f355e51c4f2bf769767b010cf735a4dea0f9391a6f141c7b8c",
+      "source": "sources/w11-data-b-resource-map-male-dark-elf/resource_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4933,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_resource_map_male_erudite.o",
+      "profile": "authored_cpp",
+      "sha256": "da9b626fe3d567417e88584845e617779cb58d9fe0e805ab85bd4096b07dcdc5",
+      "source": "sources/w11-data-b-resource-map-male-erudite/resource_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4934,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_resource_map_male_high_elf.o",
+      "profile": "authored_cpp",
+      "sha256": "07da2b1139e355f0ef456e7dd185b880b146b4144aa9d3a4cdc1d77f0a145a70",
+      "source": "sources/w11-data-b-resource-map-male-high-elf/resource_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4935,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_resource_map_male_wood_elf.o",
+      "profile": "authored_cpp",
+      "sha256": "0e93018abb4ec2613aec61994087ce55fb8b411a8a183b422c55705a514141eb",
+      "source": "sources/w11-data-b-resource-map-male-wood-elf/resource_map.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4936,
+      "kind": "independently_authored_source",
+      "object_name": "w11_data_b_vehicle_construct.o",
+      "profile": "authored_cpp",
+      "sha256": "32ffb8eceddc9a3eaad95f232c817c98cf8a2243e6e99058147ffa907d27b549",
+      "source": "sources/w11-data-b-vehicle-construct/construct_vehicle.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1172,
+          "name": "norrath_construct_Vehicle"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -71837,7 +71919,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "aa40e95336480e51fe370fc4c7f102781d3f402ecf30a86de032f980ae4a0733",
+  "snapshot_sha256": "a29038fea7a6618295ca3ef469dd307ae1fc520d4969c0d30bdc57a1698f3d37",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
