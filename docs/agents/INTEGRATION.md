@@ -8724,3 +8724,25 @@ Closed: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `SetIopFunction__FUii`, 
 
 Opened: `_vt$7AntWave`, `expandList`, `freeList`, `harm1`, `harm2`, `lightFloorSprite__FG6Point3`, `norrath_net_flag_bytes_48681c`, `norrath_overlay_sFunctionIndex_11edf00`, `norrath_overlay_sIopFunctionData_11edf08`, `norrath_overlay_sSend_11edb00`, `resurectEffect__6Player`, `spriteCount`
 - 2026-10-13 06:41 CDT — agents/w11-game-a — 945 unresolved imports
+
+## agents/w11-ctor-a
+
+Merged (merge commit, branch tip `10003f24`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one constructor each with fresh
+`input_order` values 4821 through 4848. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's own generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4846 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (27) reproduces. The two PhProp units add `sources/w11-ctor-a-common/phprop.hpp` to their header closure, as the notes say.
+
+| | |
+|---|---|
+| Before | 945 |
+| After | 943 |
+| Closed | 27 |
+| Opened | 25 |
+
+Closed: `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__11BoltGoRoundG6Point3siP15AnimationHeader`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__11SkillCharge`, `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__12SkillArchery`, `__12SkillBlessed`, `__14HateProjectileG6Point3sP10GameObjectP5SkilliP15AnimationHeader`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15ShockProjectileG6Point3sP10GameObjectP5Skilli`, `__16PoisonProjectilePQ210GameObject11resourceMapiiiiG6Point3T6ifP8Creature`, `__18SkillAncestralCall`, `__18SkillBlindingLight`, `__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19FireArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19MultiFireProjectileG6Point3sP10GameObjectiP5Skill`, `__21PoisonArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__22ExplodeArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__6PhPropG6Point3P8Matrix34PcN23liPQ24item11descriptionf`, `__6PhPropG6Point3sP12_modelHeaderP14AnimationStatePcN25liPQ24item11descriptionf`, `__8HateBeamiG6Point3T2P8CreatureP5Skill`, `__8HateSoulG6Point3T1iii`, `__9DustDevilG6Point3`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__9SkillBash`, `getSkillRank__6Playeri`
+
+Opened: `_vt$10MummySnake`, `_vt$10PoisonRain`, `_vt$11BoltGoRound`, `_vt$11DiseaseBolt`, `_vt$11SkillCharge`, `_vt$12ShockOfFrost`, `_vt$12SkillArchery`, `_vt$12SkillBlessed`, `_vt$14HateProjectile`, `_vt$15FrostStormSpell`, `_vt$15ShockProjectile`, `_vt$16PoisonProjectile`, `_vt$18SkillAncestralCall`, `_vt$18SkillBlindingLight`, `_vt$19ColdArrowProjectile`, `_vt$19FireArrowProjectile`, `_vt$19MultiFireProjectile`, `_vt$21PoisonArrowProjectile`, `_vt$22ExplodeArrowProjectile`, `_vt$8HateBeam`, `_vt$8HateSoul`, `_vt$9FireStorm`, `_vt$9SkillBash`, `modelGetPrimaryBone__FP12_modelHeaderi`, `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`
+- 2026-10-13 06:45 CDT — agents/w11-ctor-a — 943 unresolved imports
