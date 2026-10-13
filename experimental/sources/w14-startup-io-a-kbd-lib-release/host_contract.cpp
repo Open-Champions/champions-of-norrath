@@ -1,0 +1,66 @@
+#include "release.cpp"
+#include <cstdlib>
+#include <cstring>
+#include <set>
+
+struct Block {
+    alignas(8) unsigned char state[512];
+    alignas(8) unsigned char report[64];
+};
+
+static void fill(Block& b, int round) {
+    for (unsigned char& c : b.state) c = static_cast<unsigned char>(rand());
+    for (unsigned char& c : b.report) c = static_cast<unsigned char>(rand());
+    int held = rand() % 6, now = rand() % 6;
+    if (round % 7 == 0) { held = 0; }
+    if (round % 11 == 0) { now = 0; }
+    *reinterpret_cast<int*>(b.state + 256) = held;
+    *reinterpret_cast<short*>(b.report + 16) = static_cast<short>(now);
+    for (int i = 0; i < 8; ++i) { b.state[260 + i] = static_cast<unsigned char>(rand() % 12); b.report[20 + i] = static_cast<unsigned char>(rand() % 12); }
+    unsigned queued = rand() % 13;
+    if (round % 5 == 0) queued = 9;
+    if (round % 9 == 0) queued = 10;
+    *reinterpret_cast<unsigned short*>(b.state + 38) = static_cast<unsigned short>(queued);
+}
+
+
+static void push(unsigned char* state, const unsigned char* report, unsigned code, unsigned dir, bool* full) {
+    unsigned short n = *reinterpret_cast<unsigned short*>(state + 38);
+    if (n >= 10) { if (full) *full = true; return; }
+    unsigned char* e = state + 40 + 16 * n;
+    std::memcpy(e, report, 4);
+    unsigned short v[4] = {static_cast<unsigned short>(code), report[10], report[11], static_cast<unsigned short>(dir)};
+    std::memcpy(e + 4, &v[0], 2); std::memcpy(e + 8, &v[1], 2); std::memcpy(e + 10, &v[2], 2); std::memcpy(e + 12, &v[3], 2);
+    *reinterpret_cast<unsigned short*>(state + 38) = n + 1;
+}
+
+static int model(unsigned char* state, const unsigned char* report) {
+    int held = *reinterpret_cast<int*>(state + 256);
+    int now = *reinterpret_cast<const short*>(report + 16);
+    std::set<int> current;
+    for (int i = 0; i < now; ++i) current.insert(report[20 + i]);
+    int status = 0;
+    for (int i = 0; i < held; ++i) {
+        int code = state[260 + i];
+        if (current.count(code)) continue;
+        state[224 + code / 8] &= static_cast<unsigned char>(~(1 << (code % 8)));
+        bool full = false;
+        push(state, report, code, 2, &full);
+        status = full ? static_cast<int>(0x80000000u | 13) : 0;
+    }
+    return status;
+}
+
+int main() {
+    srand(21);
+    for (int round = 0; round < 20000; ++round) {
+        Block got, want;
+        fill(got, round);
+        std::memcpy(&want, &got, sizeof got);
+        int r = generate_key_release_events(got.state, got.report);
+        int w = model(want.state, want.report); if (r != w) return 2;
+        if (std::memcmp(&got, &want, sizeof got) != 0) return 1;
+
+    }
+    return 0;
+}
