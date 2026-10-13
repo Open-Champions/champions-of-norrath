@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6056,
+  "default_authored_inputs": 6094,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4875,6 +4875,44 @@
     "sources/w13-startup-fn-a-uncompress/uncompress.cpp": "eb752e078ca2a95d588d4ebcef3518221ead17d53e927af73d3b38b9bd0377df",
     "sources/w13-startup-fn-a-vi-buffer-swap/vi_buffer_swap.cpp": "659eeb2aa0034e877e97c30f19e765862410a760efa0fb84b570a8438f773f27",
     "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
+    "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp": "9ba9767400deef816912257543a44d185c9c5aa101f8700997d45ccaeb3ba30e",
+    "sources/w13-vi-a-atmosphere-getlightning/get_lightning.cpp": "04a5c3705286f12b1a1a308a4a046b7a1031c489ae44e76eac002c39bfdd98b6",
+    "sources/w13-vi-a-atmosphere-processlavastorm/process_lavastorm.cpp": "918af1f58f5b5451adb551156be59b1a4a697cc66f921cb1e5afa19d45427110",
+    "sources/w13-vi-a-atmosphere-resetlightning/reset_lightning.cpp": "a0ecb91439166cc8721a4aa2a93f8fe1ba98edd292cbdba02cd1bffd049449ca",
+    "sources/w13-vi-a-atmosphere-setskycolor/set_sky_color.cpp": "8149e10cb5eedaef9b2afd8e8d6e9962fb190e1f768792c1ab548debd8140b3d",
+    "sources/w13-vi-a-battlemusic-unload/unload.cpp": "de2179cac08d129fe5f15c6a7132b78df69abf5e4d8fb6c93eaff66808f78e69",
+    "sources/w13-vi-a-bbox-init/init.cpp": "407ccef2a7c82c3ce68c392fe2e4d09ad184ebe587ade8a153db6db07201b049",
+    "sources/w13-vi-a-clipstack-cullbytop/cull_by_top.cpp": "e3aaa19c07a3e54927920a6d2e93543e5742b763ebcfa7610533bc053a32382b",
+    "sources/w13-vi-a-dictionary-remove/remove.cpp": "177eee0ba34114cad44071c585517c8de02c897779e66442c9d970ca7d40193b",
+    "sources/w13-vi-a-emitterquery-init/init.cpp": "b417ac6ba758a7240a2ed74e3f4a0e0e7d261f7df1030d91cbc189537d71fc3b",
+    "sources/w13-vi-a-esfparse-parseobject/parse_object.cpp": "d892daa0637ab92c06543f368fbdaee6ce44b2d43481d7c7072720579a70afe2",
+    "sources/w13-vi-a-file-bufferflush/buffer_flush.cpp": "5e5779466b321b591358cae962036fd13079052a07680878169d58da2866abfb",
+    "sources/w13-vi-a-file-isasynchcomplete/is_asynch_complete.cpp": "93071421965becce028779e7a24a7021d0909a6389effb72a604c6c6a221be48",
+    "sources/w13-vi-a-material-copylayer/copy_layer.cpp": "50538dc2f48e1962117db7a03191649bf1614ee8338b73b25e42b4faf2d2ee8d",
+    "sources/w13-vi-a-material-setlayercolor/set_layer_color.cpp": "323b14a79775e9e37f98a92aa9a7cacaf4105f3793b27d03c807e7701bc548b1",
+    "sources/w13-vi-a-material-setlayertexture/set_layer_texture.cpp": "1a4b0d17c52969662a7b40e7b45a6dc771b24c1426f808a72437c3925271f7d5",
+    "sources/w13-vi-a-material-setnumlayers/set_num_layers.cpp": "92b13a8cdfb4aa1942575de251c2b4c398363b6343cc50b47ac277bf38bf14d1",
+    "sources/w13-vi-a-matrix33-zero/zero.cpp": "141a9fcee52f104697323550955544d86f8cc61112a5000a28859bb6f42d5ecc",
+    "sources/w13-vi-a-matrix44-swaprows/swap_rows.cpp": "22d6f9b6d6e6921304759df722f0d397840178809e2d8f7b84474cdc16c1a9d8",
+    "sources/w13-vi-a-namesprite-clear/clear.cpp": "05b15d80242c9dfb8471d9b27f38991ebbafb9d1e885ff2a8d8a6df6f6ba3553",
+    "sources/w13-vi-a-particleemitter-destroy/destroy.cpp": "c2bfd7b961bb555e36de8b7e2f7e1aefb8a0b2d8dc51f534dbad48d490832875",
+    "sources/w13-vi-a-particlesystem-releasedefinition/release_definition.cpp": "bc25996322e1d75241f3ff5cf8ee8265060caa6071b2bfc57626c4fe427bfdad",
+    "sources/w13-vi-a-querytrilist-reset/reset.cpp": "ee3799e45a2d1279ed80421ecc239792a7985557aca6f1f86a2c1eb56cf07d3e",
+    "sources/w13-vi-a-sounddevice-deallocatechannels/deallocate_channels.cpp": "cb035cb9798512df49e9e549d9d2ae70dde658c534ad65fdc443194a90fae7c7",
+    "sources/w13-vi-a-sounddevice-deleteplayback/delete_playback.cpp": "b00c11245356742017dda83df3fdedef9929a2477609bce9eae56f69f948f446",
+    "sources/w13-vi-a-sounddevice-play/play.cpp": "e7ac882bd278cfdbafbe74efcd08f125ffff2c9c9b865518c21572afd690a90e",
+    "sources/w13-vi-a-sounddevice-playback/playback.cpp": "f35bfc161139dae4a3347cd946623e7e75ac638f1c82b24151cd3a61e67969c7",
+    "sources/w13-vi-a-sounddevice-playbgm/play_bgm.cpp": "4cd96702ed22e0df31aa143ee5b434d01009172401d919a9e83cfcfd7aaff2b2",
+    "sources/w13-vi-a-sounddevice-setpan/set_pan.cpp": "2da56271d2304974884b0f8249af1ef424da37af7619e32900db42a155812acf",
+    "sources/w13-vi-a-sounddevice-setpitch/set_pitch.cpp": "86e9aff14ba558aec6cb2fa86970e4ad7c58598f60a8175ba05a43efd3ceeeb5",
+    "sources/w13-vi-a-sounddevice-setvolume/set_volume.cpp": "0b391f09a6925dfdffc42c12ceba093d2f212cef722773abdc0542383a500484",
+    "sources/w13-vi-a-sounddevice-stopbgm/stop_bgm.cpp": "e0ad0a6d908b473bb184781b1ae41b74bbc2a5ee17eee08faa89c7c775f4f264",
+    "sources/w13-vi-a-sounddevice-stopchannels/stop_channels.cpp": "2a658890fb1327dc087f4c5ee4f4cc855f22de33d01ef368aab393873158ceb7",
+    "sources/w13-vi-a-spelleffect-destroy/destroy.cpp": "803172adc59a0781cf364a7f66efd8b4778720d09ad85b49272b00bfc3bce850",
+    "sources/w13-vi-a-spelleffectdriver-destroy/destroy.cpp": "e775c48681936462566bd55626247966df2de305bf1465fe365beec3c1b09155",
+    "sources/w13-vi-a-spelleventdriver-process/process.cpp": "cf4887743f0da614c14d465b4ca0e84abd0beefdf9e3fb6e0c3418706909b6ee",
+    "sources/w13-vi-a-zoneroom-init/init.cpp": "810f7769fc38e00db7e9ac5928cfb8fac6f51b7e0a49861809090cfe65f58be0",
+    "sources/w13-vi-a-zonetree-init/init.cpp": "0cb2ab6e0a0fa2771551b192865aec06b5b395dff6906c456c3aacce805a24a4",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -89429,6 +89467,576 @@
           "compiled_body_bytes": 2468
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6058,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_atmosphere_addsplash.o",
+      "profile": "authored_cpp",
+      "sha256": "9ba9767400deef816912257543a44d185c9c5aa101f8700997d45ccaeb3ba30e",
+      "source": "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddSplash__12VIAtmosphereR7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6059,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_atmosphere_getlightning.o",
+      "profile": "authored_cpp",
+      "sha256": "04a5c3705286f12b1a1a308a4a046b7a1031c489ae44e76eac002c39bfdd98b6",
+      "source": "sources/w13-vi-a-atmosphere-getlightning/get_lightning.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetLightning__12VIAtmospherePf",
+          "compiled_body_bytes": 768
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6060,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_atmosphere_processlavastorm.o",
+      "profile": "authored_cpp",
+      "sha256": "918af1f58f5b5451adb551156be59b1a4a697cc66f921cb1e5afa19d45427110",
+      "source": "sources/w13-vi-a-atmosphere-processlavastorm/process_lavastorm.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessLavastorm__12VIAtmosphereR7VISceneR8VICamera",
+          "compiled_body_bytes": 1416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6061,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_atmosphere_resetlightning.o",
+      "profile": "authored_cpp",
+      "sha256": "a0ecb91439166cc8721a4aa2a93f8fe1ba98edd292cbdba02cd1bffd049449ca",
+      "source": "sources/w13-vi-a-atmosphere-resetlightning/reset_lightning.cpp",
+      "emitted_functions": [
+        {
+          "name": "ResetLightning__12VIAtmosphere",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6062,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_atmosphere_setskycolor.o",
+      "profile": "authored_cpp",
+      "sha256": "8149e10cb5eedaef9b2afd8e8d6e9962fb190e1f768792c1ab548debd8140b3d",
+      "source": "sources/w13-vi-a-atmosphere-setskycolor/set_sky_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32",
+          "compiled_body_bytes": 344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6063,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_battlemusic_unload.o",
+      "profile": "authored_cpp",
+      "sha256": "de2179cac08d129fe5f15c6a7132b78df69abf5e4d8fb6c93eaff66808f78e69",
+      "source": "sources/w13-vi-a-battlemusic-unload/unload.cpp",
+      "emitted_functions": [
+        {
+          "name": "Unload__13VIBattleMusic",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6064,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_bbox_init.o",
+      "profile": "authored_cpp",
+      "sha256": "407ccef2a7c82c3ce68c392fe2e4d09ad184ebe587ade8a153db6db07201b049",
+      "source": "sources/w13-vi-a-bbox-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__6VIBBoxiP7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6065,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_clipstack_cullbytop.o",
+      "profile": "authored_cpp",
+      "sha256": "e3aaa19c07a3e54927920a6d2e93543e5742b763ebcfa7610533bc053a32382b",
+      "source": "sources/w13-vi-a-clipstack-cullbytop/cull_by_top.cpp",
+      "emitted_functions": [
+        {
+          "name": "CullByTop__11VIClipStackRC6VIBBox",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6066,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_dictionary_remove.o",
+      "profile": "authored_cpp",
+      "sha256": "177eee0ba34114cad44071c585517c8de02c897779e66442c9d970ca7d40193b",
+      "source": "sources/w13-vi-a-dictionary-remove/remove.cpp",
+      "emitted_functions": [
+        {
+          "name": "Remove__12VIDictionaryR10VIResource",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6067,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_emitterquery_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b417ac6ba758a7240a2ed74e3f4a0e0e7d261f7df1030d91cbc189537d71fc3b",
+      "source": "sources/w13-vi-a-emitterquery-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEmitterQueryi12VISpriteType",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6068,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_esfparse_parseobject.o",
+      "profile": "authored_cpp",
+      "sha256": "d892daa0637ab92c06543f368fbdaee6ce44b2d43481d7c7072720579a70afe2",
+      "source": "sources/w13-vi-a-esfparse-parseobject/parse_object.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseObject__10VIESFParse",
+          "compiled_body_bytes": 920
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6069,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_file_bufferflush.o",
+      "profile": "authored_cpp",
+      "sha256": "5e5779466b321b591358cae962036fd13079052a07680878169d58da2866abfb",
+      "source": "sources/w13-vi-a-file-bufferflush/buffer_flush.cpp",
+      "emitted_functions": [
+        {
+          "name": "BufferFlush__6VIFile",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6070,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_file_isasynchcomplete.o",
+      "profile": "authored_cpp",
+      "sha256": "93071421965becce028779e7a24a7021d0909a6389effb72a604c6c6a221be48",
+      "source": "sources/w13-vi-a-file-isasynchcomplete/is_asynch_complete.cpp",
+      "emitted_functions": [
+        {
+          "name": "IsAsynchComplete__6VIFile",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6071,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_material_copylayer.o",
+      "profile": "authored_cpp",
+      "sha256": "50538dc2f48e1962117db7a03191649bf1614ee8338b73b25e42b4faf2d2ee8d",
+      "source": "sources/w13-vi-a-material-copylayer/copy_layer.cpp",
+      "emitted_functions": [
+        {
+          "name": "CopyLayer__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6072,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_material_setlayercolor.o",
+      "profile": "authored_cpp",
+      "sha256": "323b14a79775e9e37f98a92aa9a7cacaf4105f3793b27d03c807e7701bc548b1",
+      "source": "sources/w13-vi-a-material-setlayercolor/set_layer_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetLayerColor__10VIMaterialiRC9VIColor32",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6073,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_material_setlayertexture.o",
+      "profile": "authored_cpp",
+      "sha256": "1a4b0d17c52969662a7b40e7b45a6dc771b24c1426f808a72437c3925271f7d5",
+      "source": "sources/w13-vi-a-material-setlayertexture/set_layer_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetLayerTexture__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6074,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_material_setnumlayers.o",
+      "profile": "authored_cpp",
+      "sha256": "92b13a8cdfb4aa1942575de251c2b4c398363b6343cc50b47ac277bf38bf14d1",
+      "source": "sources/w13-vi-a-material-setnumlayers/set_num_layers.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetNumLayers__10VIMaterialiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6075,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_matrix33_zero.o",
+      "profile": "authored_cpp",
+      "sha256": "141a9fcee52f104697323550955544d86f8cc61112a5000a28859bb6f42d5ecc",
+      "source": "sources/w13-vi-a-matrix33-zero/zero.cpp",
+      "emitted_functions": [
+        {
+          "name": "Zero__10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6076,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_matrix44_swaprows.o",
+      "profile": "authored_cpp",
+      "sha256": "22d6f9b6d6e6921304759df722f0d397840178809e2d8f7b84474cdc16c1a9d8",
+      "source": "sources/w13-vi-a-matrix44-swaprows/swap_rows.cpp",
+      "emitted_functions": [
+        {
+          "name": "SwapRows__10VIMatrix44ii",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6077,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_namesprite_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "05b15d80242c9dfb8471d9b27f38991ebbafb9d1e885ff2a8d8a6df6f6ba3553",
+      "source": "sources/w13-vi-a-namesprite-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__12VINameSprite",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6078,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_particleemitter_destroy.o",
+      "profile": "authored_cpp",
+      "sha256": "c2bfd7b961bb555e36de8b7e2f7e1aefb8a0b2d8dc51f534dbad48d490832875",
+      "source": "sources/w13-vi-a-particleemitter-destroy/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "Destroy__17VIParticleEmitter",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6079,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_particlesystem_releasedefinition.o",
+      "profile": "authored_cpp",
+      "sha256": "bc25996322e1d75241f3ff5cf8ee8265060caa6071b2bfc57626c4fe427bfdad",
+      "source": "sources/w13-vi-a-particlesystem-releasedefinition/release_definition.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6080,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_querytrilist_reset.o",
+      "profile": "authored_cpp",
+      "sha256": "ee3799e45a2d1279ed80421ecc239792a7985557aca6f1f86a2c1eb56cf07d3e",
+      "source": "sources/w13-vi-a-querytrilist-reset/reset.cpp",
+      "emitted_functions": [
+        {
+          "name": "Reset__14VIQueryTriListRC6VIBBoxRC7VIVect3f",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6081,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_deallocatechannels.o",
+      "profile": "authored_cpp",
+      "sha256": "cb035cb9798512df49e9e549d9d2ae70dde658c534ad65fdc443194a90fae7c7",
+      "source": "sources/w13-vi-a-sounddevice-deallocatechannels/deallocate_channels.cpp",
+      "emitted_functions": [
+        {
+          "name": "DeallocateChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6082,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_deleteplayback.o",
+      "profile": "authored_cpp",
+      "sha256": "b00c11245356742017dda83df3fdedef9929a2477609bce9eae56f69f948f446",
+      "source": "sources/w13-vi-a-sounddevice-deleteplayback/delete_playback.cpp",
+      "emitted_functions": [
+        {
+          "name": "DeletePlayback__13VISoundDeviceP10VIPlayback",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6083,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_play.o",
+      "profile": "authored_cpp",
+      "sha256": "e7ac882bd278cfdbafbe74efcd08f125ffff2c9c9b865518c21572afd690a90e",
+      "source": "sources/w13-vi-a-sounddevice-play/play.cpp",
+      "emitted_functions": [
+        {
+          "name": "Play__13VISoundDeviceii12VISOUNDCLASS",
+          "compiled_body_bytes": 1196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6084,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_playback.o",
+      "profile": "authored_cpp",
+      "sha256": "f35bfc161139dae4a3347cd946623e7e75ac638f1c82b24151cd3a61e67969c7",
+      "source": "sources/w13-vi-a-sounddevice-playback/playback.cpp",
+      "emitted_functions": [
+        {
+          "name": "Playback__13VISoundDevicei",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6085,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_playbgm.o",
+      "profile": "authored_cpp",
+      "sha256": "4cd96702ed22e0df31aa143ee5b434d01009172401d919a9e83cfcfd7aaff2b2",
+      "source": "sources/w13-vi-a-sounddevice-playbgm/play_bgm.cpp",
+      "emitted_functions": [
+        {
+          "name": "PlayBgm__13VISoundDeviceiPCc",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6086,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_setpan.o",
+      "profile": "authored_cpp",
+      "sha256": "2da56271d2304974884b0f8249af1ef424da37af7619e32900db42a155812acf",
+      "source": "sources/w13-vi-a-sounddevice-setpan/set_pan.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPan__13VISoundDeviceif",
+          "compiled_body_bytes": 724
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6087,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_setpitch.o",
+      "profile": "authored_cpp",
+      "sha256": "86e9aff14ba558aec6cb2fa86970e4ad7c58598f60a8175ba05a43efd3ceeeb5",
+      "source": "sources/w13-vi-a-sounddevice-setpitch/set_pitch.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPitch__13VISoundDeviceii",
+          "compiled_body_bytes": 452
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6088,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_setvolume.o",
+      "profile": "authored_cpp",
+      "sha256": "0b391f09a6925dfdffc42c12ceba093d2f212cef722773abdc0542383a500484",
+      "source": "sources/w13-vi-a-sounddevice-setvolume/set_volume.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetVolume__13VISoundDeviceif",
+          "compiled_body_bytes": 732
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6089,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_stopbgm.o",
+      "profile": "authored_cpp",
+      "sha256": "e0ad0a6d908b473bb184781b1ae41b74bbc2a5ee17eee08faa89c7c775f4f264",
+      "source": "sources/w13-vi-a-sounddevice-stopbgm/stop_bgm.cpp",
+      "emitted_functions": [
+        {
+          "name": "StopBgm__13VISoundDevicei",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6090,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_sounddevice_stopchannels.o",
+      "profile": "authored_cpp",
+      "sha256": "2a658890fb1327dc087f4c5ee4f4cc855f22de33d01ef368aab393873158ceb7",
+      "source": "sources/w13-vi-a-sounddevice-stopchannels/stop_channels.cpp",
+      "emitted_functions": [
+        {
+          "name": "StopChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6091,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_spelleffect_destroy.o",
+      "profile": "authored_cpp",
+      "sha256": "803172adc59a0781cf364a7f66efd8b4778720d09ad85b49272b00bfc3bce850",
+      "source": "sources/w13-vi-a-spelleffect-destroy/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "Destroy__13VISpellEffect",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6092,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_spelleffectdriver_destroy.o",
+      "profile": "authored_cpp",
+      "sha256": "e775c48681936462566bd55626247966df2de305bf1465fe365beec3c1b09155",
+      "source": "sources/w13-vi-a-spelleffectdriver-destroy/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "Destroy__19VISpellEffectDriver",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6093,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_spelleventdriver_process.o",
+      "profile": "authored_cpp",
+      "sha256": "cf4887743f0da614c14d465b4ca0e84abd0beefdf9e3fb6e0c3418706909b6ee",
+      "source": "sources/w13-vi-a-spelleventdriver-process/process.cpp",
+      "emitted_functions": [
+        {
+          "name": "Process__18VISpellEventDriver",
+          "compiled_body_bytes": 1340
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6094,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_zoneroom_init.o",
+      "profile": "authored_cpp",
+      "sha256": "810f7769fc38e00db7e9ac5928cfb8fac6f51b7e0a49861809090cfe65f58be0",
+      "source": "sources/w13-vi-a-zoneroom-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneRoomiiUiUiR6VIBBox",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6095,
+      "kind": "independently_authored_source",
+      "object_name": "w13_vi_a_zonetree_init.o",
+      "profile": "authored_cpp",
+      "sha256": "0cb2ab6e0a0fa2771551b192865aec06b5b395dff6906c456c3aacce805a24a4",
+      "source": "sources/w13-vi-a-zonetree-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneTreeii",
+          "compiled_body_bytes": 80
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -89528,7 +90136,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "294de6bcb5873854e81cb46212230fbe48334a12d0dbf14b74a946ba1490f1ed",
+  "snapshot_sha256": "65949553d86f16bcb0662b4330ca061fac3a9270427cf2905f443223d9f5ada4",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

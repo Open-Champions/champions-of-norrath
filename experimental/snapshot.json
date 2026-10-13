@@ -77937,6 +77937,538 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-spell-msg-b-run-disease-shield/run.cpp"
+    },
+    {
+      "input_order": 6058,
+      "component": "w13-vi-a-atmosphere-addsplash",
+      "object_name": "w13_vi_a_atmosphere_addsplash.o",
+      "private_object_sha256": "aa669c2ac661fdf45f72210b836951b5afe00a4ae09efc0e6127b7545eb411a6",
+      "emitted_functions": [
+        {
+          "name": "AddSplash__12VIAtmosphereR7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp"
+    },
+    {
+      "input_order": 6059,
+      "component": "w13-vi-a-atmosphere-getlightning",
+      "object_name": "w13_vi_a_atmosphere_getlightning.o",
+      "private_object_sha256": "6b5d2a39f2d8e6bbb5720a40672f685daa6a1431cb095869ec607ab660691dca",
+      "emitted_functions": [
+        {
+          "name": "GetLightning__12VIAtmospherePf",
+          "compiled_body_bytes": 768
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-atmosphere-getlightning/get_lightning.cpp"
+    },
+    {
+      "input_order": 6060,
+      "component": "w13-vi-a-atmosphere-processlavastorm",
+      "object_name": "w13_vi_a_atmosphere_processlavastorm.o",
+      "private_object_sha256": "0790f4ba7b52523b903bd00626ffa373d0b161b95db52692784c617a88ca9d1f",
+      "emitted_functions": [
+        {
+          "name": "ProcessLavastorm__12VIAtmosphereR7VISceneR8VICamera",
+          "compiled_body_bytes": 1416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-atmosphere-processlavastorm/process_lavastorm.cpp"
+    },
+    {
+      "input_order": 6061,
+      "component": "w13-vi-a-atmosphere-resetlightning",
+      "object_name": "w13_vi_a_atmosphere_resetlightning.o",
+      "private_object_sha256": "e287ae92b4c307148fffafd225c5be8b83fc0c31b13735bb9e949b35cbfa8a46",
+      "emitted_functions": [
+        {
+          "name": "ResetLightning__12VIAtmosphere",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-atmosphere-resetlightning/reset_lightning.cpp"
+    },
+    {
+      "input_order": 6062,
+      "component": "w13-vi-a-atmosphere-setskycolor",
+      "object_name": "w13_vi_a_atmosphere_setskycolor.o",
+      "private_object_sha256": "e7b8bbfc53709e7200847827e2a058dbc1264b0c5b984a7c725d17c2795bf4f6",
+      "emitted_functions": [
+        {
+          "name": "SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-atmosphere-setskycolor/set_sky_color.cpp"
+    },
+    {
+      "input_order": 6063,
+      "component": "w13-vi-a-battlemusic-unload",
+      "object_name": "w13_vi_a_battlemusic_unload.o",
+      "private_object_sha256": "9606dc225fa7e0878563a34e0dec5658f5d6806ecce47bb9a5dbc862128ed4c0",
+      "emitted_functions": [
+        {
+          "name": "Unload__13VIBattleMusic",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-battlemusic-unload/unload.cpp"
+    },
+    {
+      "input_order": 6064,
+      "component": "w13-vi-a-bbox-init",
+      "object_name": "w13_vi_a_bbox_init.o",
+      "private_object_sha256": "5fcf34253352a1c9659b8f93d0e0046333ac7073b54b7aca44334d18452dc741",
+      "emitted_functions": [
+        {
+          "name": "Init__6VIBBoxiP7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-bbox-init/init.cpp"
+    },
+    {
+      "input_order": 6065,
+      "component": "w13-vi-a-clipstack-cullbytop",
+      "object_name": "w13_vi_a_clipstack_cullbytop.o",
+      "private_object_sha256": "1a6963c53dab2b9d7c3405cc69ce84ebceb1c59e68f5315e677a88a9d5db21ca",
+      "emitted_functions": [
+        {
+          "name": "CullByTop__11VIClipStackRC6VIBBox",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-clipstack-cullbytop/cull_by_top.cpp"
+    },
+    {
+      "input_order": 6066,
+      "component": "w13-vi-a-dictionary-remove",
+      "object_name": "w13_vi_a_dictionary_remove.o",
+      "private_object_sha256": "a8c1a172956ea7458c4f1829e09f72d34c56e34c4f91134ebbf94b326bb730c2",
+      "emitted_functions": [
+        {
+          "name": "Remove__12VIDictionaryR10VIResource",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-dictionary-remove/remove.cpp"
+    },
+    {
+      "input_order": 6067,
+      "component": "w13-vi-a-emitterquery-init",
+      "object_name": "w13_vi_a_emitterquery_init.o",
+      "private_object_sha256": "87a05201a0b94dfd58c664dd816fe52b3c36a50901b03a9b0cba3c4c132d18dc",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEmitterQueryi12VISpriteType",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-emitterquery-init/init.cpp"
+    },
+    {
+      "input_order": 6068,
+      "component": "w13-vi-a-esfparse-parseobject",
+      "object_name": "w13_vi_a_esfparse_parseobject.o",
+      "private_object_sha256": "8a4aa181ad3b5ef640f617159a9dc48181507f028929b1ede2fc1efaa42f3b71",
+      "emitted_functions": [
+        {
+          "name": "ParseObject__10VIESFParse",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-esfparse-parseobject/parse_object.cpp"
+    },
+    {
+      "input_order": 6069,
+      "component": "w13-vi-a-file-bufferflush",
+      "object_name": "w13_vi_a_file_bufferflush.o",
+      "private_object_sha256": "d9c118ce9ee012be2ea9b16bafb6a66834584f5055e13704e8b43c5a3b97b704",
+      "emitted_functions": [
+        {
+          "name": "BufferFlush__6VIFile",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-file-bufferflush/buffer_flush.cpp"
+    },
+    {
+      "input_order": 6070,
+      "component": "w13-vi-a-file-isasynchcomplete",
+      "object_name": "w13_vi_a_file_isasynchcomplete.o",
+      "private_object_sha256": "8492e07563d967935e54a4bf1a08aa0566fec63d8426d6198cadf23e991bac80",
+      "emitted_functions": [
+        {
+          "name": "IsAsynchComplete__6VIFile",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-file-isasynchcomplete/is_asynch_complete.cpp"
+    },
+    {
+      "input_order": 6071,
+      "component": "w13-vi-a-material-copylayer",
+      "object_name": "w13_vi_a_material_copylayer.o",
+      "private_object_sha256": "f25e23611e0f7d5cd6c5dd6381d7ec96124e5f50b0b6cb12dd747b80d0580606",
+      "emitted_functions": [
+        {
+          "name": "CopyLayer__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 368
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-material-copylayer/copy_layer.cpp"
+    },
+    {
+      "input_order": 6072,
+      "component": "w13-vi-a-material-setlayercolor",
+      "object_name": "w13_vi_a_material_setlayercolor.o",
+      "private_object_sha256": "a217e8eaf51787eb2a6c9b70cdb31599188b0bc996ffc66dffb94dbac17909c5",
+      "emitted_functions": [
+        {
+          "name": "SetLayerColor__10VIMaterialiRC9VIColor32",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-material-setlayercolor/set_layer_color.cpp"
+    },
+    {
+      "input_order": 6073,
+      "component": "w13-vi-a-material-setlayertexture",
+      "object_name": "w13_vi_a_material_setlayertexture.o",
+      "private_object_sha256": "b10f9aa65ce58b610bcb2f40676fda082bd10a757c76abd3991c294e05272335",
+      "emitted_functions": [
+        {
+          "name": "SetLayerTexture__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-material-setlayertexture/set_layer_texture.cpp"
+    },
+    {
+      "input_order": 6074,
+      "component": "w13-vi-a-material-setnumlayers",
+      "object_name": "w13_vi_a_material_setnumlayers.o",
+      "private_object_sha256": "6724cc09d9e2012fffb08675ff464f2bc4a761d7ee8567738fe5f5e38725d02c",
+      "emitted_functions": [
+        {
+          "name": "SetNumLayers__10VIMaterialiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-material-setnumlayers/set_num_layers.cpp"
+    },
+    {
+      "input_order": 6075,
+      "component": "w13-vi-a-matrix33-zero",
+      "object_name": "w13_vi_a_matrix33_zero.o",
+      "private_object_sha256": "56a6ff3564ef1d4530c0aa7718b25ae397e58d53dbc47af6541f261d5c0602e2",
+      "emitted_functions": [
+        {
+          "name": "Zero__10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-matrix33-zero/zero.cpp"
+    },
+    {
+      "input_order": 6076,
+      "component": "w13-vi-a-matrix44-swaprows",
+      "object_name": "w13_vi_a_matrix44_swaprows.o",
+      "private_object_sha256": "e36efcc7fe9a8edeaed55490bfbb0b4fb184d3a178cc27129bec0554fc4a75d5",
+      "emitted_functions": [
+        {
+          "name": "SwapRows__10VIMatrix44ii",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-matrix44-swaprows/swap_rows.cpp"
+    },
+    {
+      "input_order": 6077,
+      "component": "w13-vi-a-namesprite-clear",
+      "object_name": "w13_vi_a_namesprite_clear.o",
+      "private_object_sha256": "96253d8aab52521d44b3ca137b54e12b92e25cf0cc916ebf9d8d6e6ed0955eae",
+      "emitted_functions": [
+        {
+          "name": "Clear__12VINameSprite",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-namesprite-clear/clear.cpp"
+    },
+    {
+      "input_order": 6078,
+      "component": "w13-vi-a-particleemitter-destroy",
+      "object_name": "w13_vi_a_particleemitter_destroy.o",
+      "private_object_sha256": "c946b4cb50255624667de7ec5813aa58bdaf26512739e911f1084e19aaf9bd05",
+      "emitted_functions": [
+        {
+          "name": "Destroy__17VIParticleEmitter",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-particleemitter-destroy/destroy.cpp"
+    },
+    {
+      "input_order": 6079,
+      "component": "w13-vi-a-particlesystem-releasedefinition",
+      "object_name": "w13_vi_a_particlesystem_releasedefinition.o",
+      "private_object_sha256": "70d8585ce421a4bf52f00c7c2c17dd1321fdaaa5e3e236801289434530d9b7e7",
+      "emitted_functions": [
+        {
+          "name": "ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-particlesystem-releasedefinition/release_definition.cpp"
+    },
+    {
+      "input_order": 6080,
+      "component": "w13-vi-a-querytrilist-reset",
+      "object_name": "w13_vi_a_querytrilist_reset.o",
+      "private_object_sha256": "9e9a568b6e6d56033988e35636f87a424700b3d249bbf4eb6b11b75be5889cdf",
+      "emitted_functions": [
+        {
+          "name": "Reset__14VIQueryTriListRC6VIBBoxRC7VIVect3f",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-querytrilist-reset/reset.cpp"
+    },
+    {
+      "input_order": 6081,
+      "component": "w13-vi-a-sounddevice-deallocatechannels",
+      "object_name": "w13_vi_a_sounddevice_deallocatechannels.o",
+      "private_object_sha256": "6b898bcee274cf3a8940be297ea2e4de228ba1e88570bad85b8ba175fc5f9deb",
+      "emitted_functions": [
+        {
+          "name": "DeallocateChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-deallocatechannels/deallocate_channels.cpp"
+    },
+    {
+      "input_order": 6082,
+      "component": "w13-vi-a-sounddevice-deleteplayback",
+      "object_name": "w13_vi_a_sounddevice_deleteplayback.o",
+      "private_object_sha256": "6f49b275322b50eed5b75598e0fd3668b04db812f9c8cba4aaab8e1a92633044",
+      "emitted_functions": [
+        {
+          "name": "DeletePlayback__13VISoundDeviceP10VIPlayback",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-deleteplayback/delete_playback.cpp"
+    },
+    {
+      "input_order": 6083,
+      "component": "w13-vi-a-sounddevice-play",
+      "object_name": "w13_vi_a_sounddevice_play.o",
+      "private_object_sha256": "7b62e5f1d40b09e86cd49170f14760bd40cce84f077f71eb8994948981fc3e8f",
+      "emitted_functions": [
+        {
+          "name": "Play__13VISoundDeviceii12VISOUNDCLASS",
+          "compiled_body_bytes": 1196
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-play/play.cpp"
+    },
+    {
+      "input_order": 6084,
+      "component": "w13-vi-a-sounddevice-playback",
+      "object_name": "w13_vi_a_sounddevice_playback.o",
+      "private_object_sha256": "6f9771b88b3e07b8ca47c53d1e6d5653f629117bd1868efce4b493b419b9fe53",
+      "emitted_functions": [
+        {
+          "name": "Playback__13VISoundDevicei",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-playback/playback.cpp"
+    },
+    {
+      "input_order": 6085,
+      "component": "w13-vi-a-sounddevice-playbgm",
+      "object_name": "w13_vi_a_sounddevice_playbgm.o",
+      "private_object_sha256": "5f237b72602b7667f22570c3eb7e5e6fbd1401ef4ba8be5f9ce784e7436bb64b",
+      "emitted_functions": [
+        {
+          "name": "PlayBgm__13VISoundDeviceiPCc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-playbgm/play_bgm.cpp"
+    },
+    {
+      "input_order": 6086,
+      "component": "w13-vi-a-sounddevice-setpan",
+      "object_name": "w13_vi_a_sounddevice_setpan.o",
+      "private_object_sha256": "5e097c2601987dfe1debf98c91b587c6e63dcdaa0ce25ac1fc733d1092fb4b89",
+      "emitted_functions": [
+        {
+          "name": "SetPan__13VISoundDeviceif",
+          "compiled_body_bytes": 724
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-setpan/set_pan.cpp"
+    },
+    {
+      "input_order": 6087,
+      "component": "w13-vi-a-sounddevice-setpitch",
+      "object_name": "w13_vi_a_sounddevice_setpitch.o",
+      "private_object_sha256": "f404ee77302f6dd0187a407ab3ea8b2cff9283ae009fe34d01e23b4e4f510c40",
+      "emitted_functions": [
+        {
+          "name": "SetPitch__13VISoundDeviceii",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-setpitch/set_pitch.cpp"
+    },
+    {
+      "input_order": 6088,
+      "component": "w13-vi-a-sounddevice-setvolume",
+      "object_name": "w13_vi_a_sounddevice_setvolume.o",
+      "private_object_sha256": "b13d72b267116a7b69ba3c058621933ba0feffeb085bd4c0386ebc6afda3a231",
+      "emitted_functions": [
+        {
+          "name": "SetVolume__13VISoundDeviceif",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-setvolume/set_volume.cpp"
+    },
+    {
+      "input_order": 6089,
+      "component": "w13-vi-a-sounddevice-stopbgm",
+      "object_name": "w13_vi_a_sounddevice_stopbgm.o",
+      "private_object_sha256": "b57c479688274786bc0ce7bc059152b6e1c44bdaa017f3c5f5680f064a87da8f",
+      "emitted_functions": [
+        {
+          "name": "StopBgm__13VISoundDevicei",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-stopbgm/stop_bgm.cpp"
+    },
+    {
+      "input_order": 6090,
+      "component": "w13-vi-a-sounddevice-stopchannels",
+      "object_name": "w13_vi_a_sounddevice_stopchannels.o",
+      "private_object_sha256": "b89ba7ae8608e2dbc09f65f80e2f70f03b12d360ebee05db36a49958987bf9ee",
+      "emitted_functions": [
+        {
+          "name": "StopChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-sounddevice-stopchannels/stop_channels.cpp"
+    },
+    {
+      "input_order": 6091,
+      "component": "w13-vi-a-spelleffect-destroy",
+      "object_name": "w13_vi_a_spelleffect_destroy.o",
+      "private_object_sha256": "cbad073ec77ae60c448e1c37621661aab91e61e2eeb9eb902fd0d9ab762b69cf",
+      "emitted_functions": [
+        {
+          "name": "Destroy__13VISpellEffect",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-spelleffect-destroy/destroy.cpp"
+    },
+    {
+      "input_order": 6092,
+      "component": "w13-vi-a-spelleffectdriver-destroy",
+      "object_name": "w13_vi_a_spelleffectdriver_destroy.o",
+      "private_object_sha256": "bc15b210abbf0cea3cc3a385797f8ec942d102635b1b6739df708c11477f1db4",
+      "emitted_functions": [
+        {
+          "name": "Destroy__19VISpellEffectDriver",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-spelleffectdriver-destroy/destroy.cpp"
+    },
+    {
+      "input_order": 6093,
+      "component": "w13-vi-a-spelleventdriver-process",
+      "object_name": "w13_vi_a_spelleventdriver_process.o",
+      "private_object_sha256": "97b5632a8f70a467ae277293bb0ec6846e327ebe7c264cb24d0ef2b41f717416",
+      "emitted_functions": [
+        {
+          "name": "Process__18VISpellEventDriver",
+          "compiled_body_bytes": 1340
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-spelleventdriver-process/process.cpp"
+    },
+    {
+      "input_order": 6094,
+      "component": "w13-vi-a-zoneroom-init",
+      "object_name": "w13_vi_a_zoneroom_init.o",
+      "private_object_sha256": "c7c3dd1356d49ccb1ff39fa5de0cdfab623c85e8a61fd5a283aaf250cf1d7ce7",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneRoomiiUiUiR6VIBBox",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-zoneroom-init/init.cpp"
+    },
+    {
+      "input_order": 6095,
+      "component": "w13-vi-a-zonetree-init",
+      "object_name": "w13_vi_a_zonetree_init.o",
+      "private_object_sha256": "00ac4fb7f542413904d59ec6a4c73a17803163bbfe197e2117d1b7ddd6ecc3ea",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneTreeii",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-a-zonetree-init/init.cpp"
     }
   ],
   "drafts": [
@@ -86812,6 +87344,82 @@
     "sources/w13-startup-fn-a-vi-buffer-swap/vi_buffer_swap.cpp": "659eeb2aa0034e877e97c30f19e765862410a760efa0fb84b570a8438f773f27",
     "sources/w13-startup-fn-a-vi-endian/host_check.cpp": "d05e2d4eb98dbbf2b32a8a737d50a11460ef3594e4cd06b7dced2b9a7d68ec90",
     "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
+    "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp": "9ba9767400deef816912257543a44d185c9c5aa101f8700997d45ccaeb3ba30e",
+    "sources/w13-vi-a-atmosphere-addsplash/host_contract.cpp": "ec47d3b1b605c7a33b3ed66fd84e21ae7368324f21185c63f547eb5d3a6fadea",
+    "sources/w13-vi-a-atmosphere-getlightning/get_lightning.cpp": "04a5c3705286f12b1a1a308a4a046b7a1031c489ae44e76eac002c39bfdd98b6",
+    "sources/w13-vi-a-atmosphere-getlightning/host_contract.cpp": "e4e8975029eb55013876282c1c7827a6bf4d94c8ece12283775baa4410b3d6b2",
+    "sources/w13-vi-a-atmosphere-processlavastorm/host_contract.cpp": "bf4fbc31a6e3e3bcef2600d6b1390b1ad3b898e1032ab7ccf759910473feb2d2",
+    "sources/w13-vi-a-atmosphere-processlavastorm/process_lavastorm.cpp": "918af1f58f5b5451adb551156be59b1a4a697cc66f921cb1e5afa19d45427110",
+    "sources/w13-vi-a-atmosphere-resetlightning/host_contract.cpp": "19bae634d62f78112b4edef766859e3e35a76c1184388fec9137c8dfed8acab4",
+    "sources/w13-vi-a-atmosphere-resetlightning/reset_lightning.cpp": "a0ecb91439166cc8721a4aa2a93f8fe1ba98edd292cbdba02cd1bffd049449ca",
+    "sources/w13-vi-a-atmosphere-setskycolor/host_contract.cpp": "d27c042e06f6b44d7f56edfc86c096d6ae7b892d4461798221b781eaafcbc583",
+    "sources/w13-vi-a-atmosphere-setskycolor/set_sky_color.cpp": "8149e10cb5eedaef9b2afd8e8d6e9962fb190e1f768792c1ab548debd8140b3d",
+    "sources/w13-vi-a-battlemusic-unload/host_contract.cpp": "a14d1328b7086054cc3ce0dbcff6e13778cffb359eae9e3cc83d0efb2125b307",
+    "sources/w13-vi-a-battlemusic-unload/unload.cpp": "de2179cac08d129fe5f15c6a7132b78df69abf5e4d8fb6c93eaff66808f78e69",
+    "sources/w13-vi-a-bbox-init/host_contract.cpp": "83234a911e0c2ef235db8493f5b70586b1241f1552f285dc2ffd2f21c7f7151b",
+    "sources/w13-vi-a-bbox-init/init.cpp": "407ccef2a7c82c3ce68c392fe2e4d09ad184ebe587ade8a153db6db07201b049",
+    "sources/w13-vi-a-clipstack-cullbytop/cull_by_top.cpp": "e3aaa19c07a3e54927920a6d2e93543e5742b763ebcfa7610533bc053a32382b",
+    "sources/w13-vi-a-clipstack-cullbytop/host_contract.cpp": "b168e4556ce9862a7cc5f75c79aa6919e3fb6e15f756d7e3f01a10a0c3790735",
+    "sources/w13-vi-a-dictionary-remove/host_contract.cpp": "b42bfb75afb23a12938e481b23605b6460fc5e931335701ddae076c2bcc7bea9",
+    "sources/w13-vi-a-dictionary-remove/remove.cpp": "177eee0ba34114cad44071c585517c8de02c897779e66442c9d970ca7d40193b",
+    "sources/w13-vi-a-emitterquery-init/host_contract.cpp": "8bd5e77307a9b67d003c8cbac0a98205ee07f36b24a0fdb2979f3f3332d256cd",
+    "sources/w13-vi-a-emitterquery-init/init.cpp": "b417ac6ba758a7240a2ed74e3f4a0e0e7d261f7df1030d91cbc189537d71fc3b",
+    "sources/w13-vi-a-esfparse-parseobject/host_contract.cpp": "6bf1f209c04bb43cf1a45e96e01e478bf68f138c0753a57ff7621dcd00a2c9e2",
+    "sources/w13-vi-a-esfparse-parseobject/parse_object.cpp": "d892daa0637ab92c06543f368fbdaee6ce44b2d43481d7c7072720579a70afe2",
+    "sources/w13-vi-a-file-bufferflush/buffer_flush.cpp": "5e5779466b321b591358cae962036fd13079052a07680878169d58da2866abfb",
+    "sources/w13-vi-a-file-bufferflush/host_contract.cpp": "6ef118ae777e65c2137103325132cc0a5829168b8ee98b0c990b211c7f3a8cd9",
+    "sources/w13-vi-a-file-isasynchcomplete/host_contract.cpp": "60bd6174eee87b51440bdc768ca5376aaf8c3714b81f3b90ed30c57c5a9ba756",
+    "sources/w13-vi-a-file-isasynchcomplete/is_asynch_complete.cpp": "93071421965becce028779e7a24a7021d0909a6389effb72a604c6c6a221be48",
+    "sources/w13-vi-a-material-copylayer/copy_layer.cpp": "50538dc2f48e1962117db7a03191649bf1614ee8338b73b25e42b4faf2d2ee8d",
+    "sources/w13-vi-a-material-copylayer/host_contract.cpp": "4c953e3f81ab8add0647d8bb79a0707671a0640e7b8973ddeecd97f9546d6be6",
+    "sources/w13-vi-a-material-setlayercolor/host_contract.cpp": "ffaf035663f7ff1bcd24a5728e7652cdb8533d977dae717331abaf9976e23dd7",
+    "sources/w13-vi-a-material-setlayercolor/set_layer_color.cpp": "323b14a79775e9e37f98a92aa9a7cacaf4105f3793b27d03c807e7701bc548b1",
+    "sources/w13-vi-a-material-setlayertexture/host_contract.cpp": "011d61d68085d1f2d8a5571769d8332c63373f2da68b77dffe37b55ca2605e62",
+    "sources/w13-vi-a-material-setlayertexture/set_layer_texture.cpp": "1a4b0d17c52969662a7b40e7b45a6dc771b24c1426f808a72437c3925271f7d5",
+    "sources/w13-vi-a-material-setnumlayers/host_contract.cpp": "89e74bb6f74e29c4110810ce7dae01036aa8c70f0e13b2a491cd439e2ef1c10e",
+    "sources/w13-vi-a-material-setnumlayers/set_num_layers.cpp": "92b13a8cdfb4aa1942575de251c2b4c398363b6343cc50b47ac277bf38bf14d1",
+    "sources/w13-vi-a-matrix33-zero/host_contract.cpp": "8ad9d238a2dd42725df79d62c74b4689efcabfc47edb6a9671178a5412834d48",
+    "sources/w13-vi-a-matrix33-zero/zero.cpp": "141a9fcee52f104697323550955544d86f8cc61112a5000a28859bb6f42d5ecc",
+    "sources/w13-vi-a-matrix44-swaprows/host_contract.cpp": "4a712aa1ebdc4d457b8145713f9cde29ff2e6fce264318ed3be1ab0ab74c63ae",
+    "sources/w13-vi-a-matrix44-swaprows/swap_rows.cpp": "22d6f9b6d6e6921304759df722f0d397840178809e2d8f7b84474cdc16c1a9d8",
+    "sources/w13-vi-a-namesprite-clear/clear.cpp": "05b15d80242c9dfb8471d9b27f38991ebbafb9d1e885ff2a8d8a6df6f6ba3553",
+    "sources/w13-vi-a-namesprite-clear/host_contract.cpp": "cbab1d428b6c1898cbb03066341a0d52830ccc58f720654e9322d00243b0099e",
+    "sources/w13-vi-a-particleemitter-destroy/destroy.cpp": "c2bfd7b961bb555e36de8b7e2f7e1aefb8a0b2d8dc51f534dbad48d490832875",
+    "sources/w13-vi-a-particleemitter-destroy/host_contract.cpp": "018466f7d2d3b44958cb430ab0564b558447548ae688ab0b48827ab35952d5db",
+    "sources/w13-vi-a-particlesystem-releasedefinition/host_contract.cpp": "02d35e77f7925ed3182e62c5c465671d151f41e5dfbb687f5694aff263845842",
+    "sources/w13-vi-a-particlesystem-releasedefinition/release_definition.cpp": "bc25996322e1d75241f3ff5cf8ee8265060caa6071b2bfc57626c4fe427bfdad",
+    "sources/w13-vi-a-querytrilist-reset/host_contract.cpp": "4d3bbd91bbbc3d3e29c81592d5d2459798d0ed1c3ab6c43c8742988af8cf341c",
+    "sources/w13-vi-a-querytrilist-reset/reset.cpp": "ee3799e45a2d1279ed80421ecc239792a7985557aca6f1f86a2c1eb56cf07d3e",
+    "sources/w13-vi-a-sounddevice-deallocatechannels/deallocate_channels.cpp": "cb035cb9798512df49e9e549d9d2ae70dde658c534ad65fdc443194a90fae7c7",
+    "sources/w13-vi-a-sounddevice-deallocatechannels/host_contract.cpp": "a309705533a331cd2c67885769e652420eea1234e9e64afa0bf61975ee1a591a",
+    "sources/w13-vi-a-sounddevice-deleteplayback/delete_playback.cpp": "b00c11245356742017dda83df3fdedef9929a2477609bce9eae56f69f948f446",
+    "sources/w13-vi-a-sounddevice-deleteplayback/host_contract.cpp": "be0fbb72fd841db20d3f91e8b500cf227b4c6886db0771366e5b89d9395b1c64",
+    "sources/w13-vi-a-sounddevice-play/host_contract.cpp": "a8c98ab1eefd082e8899cc55ac45d506aeb91cd3b541258ea7e1869f7d38f5f2",
+    "sources/w13-vi-a-sounddevice-play/play.cpp": "e7ac882bd278cfdbafbe74efcd08f125ffff2c9c9b865518c21572afd690a90e",
+    "sources/w13-vi-a-sounddevice-playback/host_contract.cpp": "2f5b6fe2eded2833541ce878089e4a332d5193f1908c1cfff94f5798d5c41272",
+    "sources/w13-vi-a-sounddevice-playback/playback.cpp": "f35bfc161139dae4a3347cd946623e7e75ac638f1c82b24151cd3a61e67969c7",
+    "sources/w13-vi-a-sounddevice-playbgm/host_contract.cpp": "dac20d4d5db6e41f185d5f3441ef18a0e116096e277143746722da3f95019feb",
+    "sources/w13-vi-a-sounddevice-playbgm/play_bgm.cpp": "4cd96702ed22e0df31aa143ee5b434d01009172401d919a9e83cfcfd7aaff2b2",
+    "sources/w13-vi-a-sounddevice-setpan/host_contract.cpp": "0d4aaf59526dbcf9feee3750204524f9775e560f15a4aee8f51366e8b36c1ac1",
+    "sources/w13-vi-a-sounddevice-setpan/set_pan.cpp": "2da56271d2304974884b0f8249af1ef424da37af7619e32900db42a155812acf",
+    "sources/w13-vi-a-sounddevice-setpitch/host_contract.cpp": "885b8efed068e1d6ef02375bf939d306adb84edc3bc52bd85c097a06f3a8e399",
+    "sources/w13-vi-a-sounddevice-setpitch/set_pitch.cpp": "86e9aff14ba558aec6cb2fa86970e4ad7c58598f60a8175ba05a43efd3ceeeb5",
+    "sources/w13-vi-a-sounddevice-setvolume/host_contract.cpp": "b1edbc582cc4c4bbab15a2d90c4a76030a788039c23715043d152bab73f30e23",
+    "sources/w13-vi-a-sounddevice-setvolume/set_volume.cpp": "0b391f09a6925dfdffc42c12ceba093d2f212cef722773abdc0542383a500484",
+    "sources/w13-vi-a-sounddevice-stopbgm/host_contract.cpp": "3479fd3e5b5c95132b0c2d49773d44427c616f1cab8359cc0b7424a9c43280d6",
+    "sources/w13-vi-a-sounddevice-stopbgm/stop_bgm.cpp": "e0ad0a6d908b473bb184781b1ae41b74bbc2a5ee17eee08faa89c7c775f4f264",
+    "sources/w13-vi-a-sounddevice-stopchannels/host_contract.cpp": "6e904a398cd68569a332f3c98b7797a1237f3de9306b666f968979b9738e532e",
+    "sources/w13-vi-a-sounddevice-stopchannels/stop_channels.cpp": "2a658890fb1327dc087f4c5ee4f4cc855f22de33d01ef368aab393873158ceb7",
+    "sources/w13-vi-a-spelleffect-destroy/destroy.cpp": "803172adc59a0781cf364a7f66efd8b4778720d09ad85b49272b00bfc3bce850",
+    "sources/w13-vi-a-spelleffect-destroy/host_contract.cpp": "88ead35f1b758ab3a26fa8a20ada6ff61e1222aedbae3532f189cbd322e26b87",
+    "sources/w13-vi-a-spelleffectdriver-destroy/destroy.cpp": "e775c48681936462566bd55626247966df2de305bf1465fe365beec3c1b09155",
+    "sources/w13-vi-a-spelleffectdriver-destroy/host_contract.cpp": "0ccd6102453bc08f556a98070ebb9924fda2576bb66de37beb53583487e28254",
+    "sources/w13-vi-a-spelleventdriver-process/host_contract.cpp": "ec07e7bf6adb563a1864f2aa8dd42c6de8bc8fe454adde092649246e8851cf84",
+    "sources/w13-vi-a-spelleventdriver-process/process.cpp": "cf4887743f0da614c14d465b4ca0e84abd0beefdf9e3fb6e0c3418706909b6ee",
+    "sources/w13-vi-a-zoneroom-init/host_contract.cpp": "a2ab5f6e93907ca9e5ad55c249ae36c70761feef52b31389eae1794c09081e65",
+    "sources/w13-vi-a-zoneroom-init/init.cpp": "810f7769fc38e00db7e9ac5928cfb8fac6f51b7e0a49861809090cfe65f58be0",
+    "sources/w13-vi-a-zonetree-init/host_contract.cpp": "ea9f3b9da7bbd1cd342f9c83bc9df339acb36fe3e87525371af7f0a14ce3e952",
+    "sources/w13-vi-a-zonetree-init/init.cpp": "0cb2ab6e0a0fa2771551b192865aec06b5b395dff6906c456c3aacce805a24a4",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -91180,11 +91788,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6058,
-    "authored_default_inputs": 6056,
+    "selected_inputs": 6096,
+    "authored_default_inputs": 6094,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4744,
-    "compiled_body_bytes_from_accepted_inputs": 1947084,
+    "emitted_function_definitions_including_helpers": 4782,
+    "compiled_body_bytes_from_accepted_inputs": 1959328,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -91197,7 +91805,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5745
+    "package_selected_inputs": 5783
   },
   "startup_implementations": [
     {
@@ -181873,6 +182481,652 @@
       ],
       "host_files": [
         "sources/w13-spell-msg-b-run-disease-shield/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp",
+      "source_sha256": "9ba9767400deef816912257543a44d185c9c5aa101f8700997d45ccaeb3ba30e",
+      "object_sha256": "aa669c2ac661fdf45f72210b836951b5afe00a4ae09efc0e6127b7545eb411a6",
+      "emitted_functions": [
+        {
+          "name": "AddSplash__12VIAtmosphereR7VIVect3",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-atmosphere-addsplash/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-atmosphere-getlightning/get_lightning.cpp",
+      "source_sha256": "04a5c3705286f12b1a1a308a4a046b7a1031c489ae44e76eac002c39bfdd98b6",
+      "object_sha256": "6b5d2a39f2d8e6bbb5720a40672f685daa6a1431cb095869ec607ab660691dca",
+      "emitted_functions": [
+        {
+          "name": "GetLightning__12VIAtmospherePf",
+          "compiled_body_bytes": 768
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-atmosphere-getlightning/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-atmosphere-processlavastorm/process_lavastorm.cpp",
+      "source_sha256": "918af1f58f5b5451adb551156be59b1a4a697cc66f921cb1e5afa19d45427110",
+      "object_sha256": "0790f4ba7b52523b903bd00626ffa373d0b161b95db52692784c617a88ca9d1f",
+      "emitted_functions": [
+        {
+          "name": "ProcessLavastorm__12VIAtmosphereR7VISceneR8VICamera",
+          "compiled_body_bytes": 1416
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-atmosphere-processlavastorm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-atmosphere-resetlightning/reset_lightning.cpp",
+      "source_sha256": "a0ecb91439166cc8721a4aa2a93f8fe1ba98edd292cbdba02cd1bffd049449ca",
+      "object_sha256": "e287ae92b4c307148fffafd225c5be8b83fc0c31b13735bb9e949b35cbfa8a46",
+      "emitted_functions": [
+        {
+          "name": "ResetLightning__12VIAtmosphere",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-atmosphere-resetlightning/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-atmosphere-setskycolor/set_sky_color.cpp",
+      "source_sha256": "8149e10cb5eedaef9b2afd8e8d6e9962fb190e1f768792c1ab548debd8140b3d",
+      "object_sha256": "e7b8bbfc53709e7200847827e2a058dbc1264b0c5b984a7c725d17c2795bf4f6",
+      "emitted_functions": [
+        {
+          "name": "SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-atmosphere-setskycolor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-battlemusic-unload/unload.cpp",
+      "source_sha256": "de2179cac08d129fe5f15c6a7132b78df69abf5e4d8fb6c93eaff66808f78e69",
+      "object_sha256": "9606dc225fa7e0878563a34e0dec5658f5d6806ecce47bb9a5dbc862128ed4c0",
+      "emitted_functions": [
+        {
+          "name": "Unload__13VIBattleMusic",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-battlemusic-unload/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-bbox-init/init.cpp",
+      "source_sha256": "407ccef2a7c82c3ce68c392fe2e4d09ad184ebe587ade8a153db6db07201b049",
+      "object_sha256": "5fcf34253352a1c9659b8f93d0e0046333ac7073b54b7aca44334d18452dc741",
+      "emitted_functions": [
+        {
+          "name": "Init__6VIBBoxiP7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-bbox-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-clipstack-cullbytop/cull_by_top.cpp",
+      "source_sha256": "e3aaa19c07a3e54927920a6d2e93543e5742b763ebcfa7610533bc053a32382b",
+      "object_sha256": "1a6963c53dab2b9d7c3405cc69ce84ebceb1c59e68f5315e677a88a9d5db21ca",
+      "emitted_functions": [
+        {
+          "name": "CullByTop__11VIClipStackRC6VIBBox",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-clipstack-cullbytop/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-dictionary-remove/remove.cpp",
+      "source_sha256": "177eee0ba34114cad44071c585517c8de02c897779e66442c9d970ca7d40193b",
+      "object_sha256": "a8c1a172956ea7458c4f1829e09f72d34c56e34c4f91134ebbf94b326bb730c2",
+      "emitted_functions": [
+        {
+          "name": "Remove__12VIDictionaryR10VIResource",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-dictionary-remove/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-emitterquery-init/init.cpp",
+      "source_sha256": "b417ac6ba758a7240a2ed74e3f4a0e0e7d261f7df1030d91cbc189537d71fc3b",
+      "object_sha256": "87a05201a0b94dfd58c664dd816fe52b3c36a50901b03a9b0cba3c4c132d18dc",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEmitterQueryi12VISpriteType",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-emitterquery-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-esfparse-parseobject/parse_object.cpp",
+      "source_sha256": "d892daa0637ab92c06543f368fbdaee6ce44b2d43481d7c7072720579a70afe2",
+      "object_sha256": "8a4aa181ad3b5ef640f617159a9dc48181507f028929b1ede2fc1efaa42f3b71",
+      "emitted_functions": [
+        {
+          "name": "ParseObject__10VIESFParse",
+          "compiled_body_bytes": 920
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-esfparse-parseobject/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-file-bufferflush/buffer_flush.cpp",
+      "source_sha256": "5e5779466b321b591358cae962036fd13079052a07680878169d58da2866abfb",
+      "object_sha256": "d9c118ce9ee012be2ea9b16bafb6a66834584f5055e13704e8b43c5a3b97b704",
+      "emitted_functions": [
+        {
+          "name": "BufferFlush__6VIFile",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-file-bufferflush/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-file-isasynchcomplete/is_asynch_complete.cpp",
+      "source_sha256": "93071421965becce028779e7a24a7021d0909a6389effb72a604c6c6a221be48",
+      "object_sha256": "8492e07563d967935e54a4bf1a08aa0566fec63d8426d6198cadf23e991bac80",
+      "emitted_functions": [
+        {
+          "name": "IsAsynchComplete__6VIFile",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-file-isasynchcomplete/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-material-copylayer/copy_layer.cpp",
+      "source_sha256": "50538dc2f48e1962117db7a03191649bf1614ee8338b73b25e42b4faf2d2ee8d",
+      "object_sha256": "f25e23611e0f7d5cd6c5dd6381d7ec96124e5f50b0b6cb12dd747b80d0580606",
+      "emitted_functions": [
+        {
+          "name": "CopyLayer__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 368
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-material-copylayer/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-material-setlayercolor/set_layer_color.cpp",
+      "source_sha256": "323b14a79775e9e37f98a92aa9a7cacaf4105f3793b27d03c807e7701bc548b1",
+      "object_sha256": "a217e8eaf51787eb2a6c9b70cdb31599188b0bc996ffc66dffb94dbac17909c5",
+      "emitted_functions": [
+        {
+          "name": "SetLayerColor__10VIMaterialiRC9VIColor32",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-material-setlayercolor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-material-setlayertexture/set_layer_texture.cpp",
+      "source_sha256": "1a4b0d17c52969662a7b40e7b45a6dc771b24c1426f808a72437c3925271f7d5",
+      "object_sha256": "b10f9aa65ce58b610bcb2f40676fda082bd10a757c76abd3991c294e05272335",
+      "emitted_functions": [
+        {
+          "name": "SetLayerTexture__10VIMaterialiiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-material-setlayertexture/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-material-setnumlayers/set_num_layers.cpp",
+      "source_sha256": "92b13a8cdfb4aa1942575de251c2b4c398363b6343cc50b47ac277bf38bf14d1",
+      "object_sha256": "6724cc09d9e2012fffb08675ff464f2bc4a761d7ee8567738fe5f5e38725d02c",
+      "emitted_functions": [
+        {
+          "name": "SetNumLayers__10VIMaterialiR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-material-setnumlayers/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-matrix33-zero/zero.cpp",
+      "source_sha256": "141a9fcee52f104697323550955544d86f8cc61112a5000a28859bb6f42d5ecc",
+      "object_sha256": "56a6ff3564ef1d4530c0aa7718b25ae397e58d53dbc47af6541f261d5c0602e2",
+      "emitted_functions": [
+        {
+          "name": "Zero__10VIMatrix33",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-matrix33-zero/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-matrix44-swaprows/swap_rows.cpp",
+      "source_sha256": "22d6f9b6d6e6921304759df722f0d397840178809e2d8f7b84474cdc16c1a9d8",
+      "object_sha256": "e36efcc7fe9a8edeaed55490bfbb0b4fb184d3a178cc27129bec0554fc4a75d5",
+      "emitted_functions": [
+        {
+          "name": "SwapRows__10VIMatrix44ii",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-matrix44-swaprows/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-namesprite-clear/clear.cpp",
+      "source_sha256": "05b15d80242c9dfb8471d9b27f38991ebbafb9d1e885ff2a8d8a6df6f6ba3553",
+      "object_sha256": "96253d8aab52521d44b3ca137b54e12b92e25cf0cc916ebf9d8d6e6ed0955eae",
+      "emitted_functions": [
+        {
+          "name": "Clear__12VINameSprite",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-namesprite-clear/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-particleemitter-destroy/destroy.cpp",
+      "source_sha256": "c2bfd7b961bb555e36de8b7e2f7e1aefb8a0b2d8dc51f534dbad48d490832875",
+      "object_sha256": "c946b4cb50255624667de7ec5813aa58bdaf26512739e911f1084e19aaf9bd05",
+      "emitted_functions": [
+        {
+          "name": "Destroy__17VIParticleEmitter",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-particleemitter-destroy/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-particlesystem-releasedefinition/release_definition.cpp",
+      "source_sha256": "bc25996322e1d75241f3ff5cf8ee8265060caa6071b2bfc57626c4fe427bfdad",
+      "object_sha256": "70d8585ce421a4bf52f00c7c2c17dd1321fdaaa5e3e236801289434530d9b7e7",
+      "emitted_functions": [
+        {
+          "name": "ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary",
+          "compiled_body_bytes": 376
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-particlesystem-releasedefinition/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-querytrilist-reset/reset.cpp",
+      "source_sha256": "ee3799e45a2d1279ed80421ecc239792a7985557aca6f1f86a2c1eb56cf07d3e",
+      "object_sha256": "9e9a568b6e6d56033988e35636f87a424700b3d249bbf4eb6b11b75be5889cdf",
+      "emitted_functions": [
+        {
+          "name": "Reset__14VIQueryTriListRC6VIBBoxRC7VIVect3f",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-querytrilist-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-deallocatechannels/deallocate_channels.cpp",
+      "source_sha256": "cb035cb9798512df49e9e549d9d2ae70dde658c534ad65fdc443194a90fae7c7",
+      "object_sha256": "6b898bcee274cf3a8940be297ea2e4de228ba1e88570bad85b8ba175fc5f9deb",
+      "emitted_functions": [
+        {
+          "name": "DeallocateChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-deallocatechannels/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-deleteplayback/delete_playback.cpp",
+      "source_sha256": "b00c11245356742017dda83df3fdedef9929a2477609bce9eae56f69f948f446",
+      "object_sha256": "6f49b275322b50eed5b75598e0fd3668b04db812f9c8cba4aaab8e1a92633044",
+      "emitted_functions": [
+        {
+          "name": "DeletePlayback__13VISoundDeviceP10VIPlayback",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-deleteplayback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-play/play.cpp",
+      "source_sha256": "e7ac882bd278cfdbafbe74efcd08f125ffff2c9c9b865518c21572afd690a90e",
+      "object_sha256": "7b62e5f1d40b09e86cd49170f14760bd40cce84f077f71eb8994948981fc3e8f",
+      "emitted_functions": [
+        {
+          "name": "Play__13VISoundDeviceii12VISOUNDCLASS",
+          "compiled_body_bytes": 1196
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-play/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-playback/playback.cpp",
+      "source_sha256": "f35bfc161139dae4a3347cd946623e7e75ac638f1c82b24151cd3a61e67969c7",
+      "object_sha256": "6f9771b88b3e07b8ca47c53d1e6d5653f629117bd1868efce4b493b419b9fe53",
+      "emitted_functions": [
+        {
+          "name": "Playback__13VISoundDevicei",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-playback/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-playbgm/play_bgm.cpp",
+      "source_sha256": "4cd96702ed22e0df31aa143ee5b434d01009172401d919a9e83cfcfd7aaff2b2",
+      "object_sha256": "5f237b72602b7667f22570c3eb7e5e6fbd1401ef4ba8be5f9ce784e7436bb64b",
+      "emitted_functions": [
+        {
+          "name": "PlayBgm__13VISoundDeviceiPCc",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-playbgm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-setpan/set_pan.cpp",
+      "source_sha256": "2da56271d2304974884b0f8249af1ef424da37af7619e32900db42a155812acf",
+      "object_sha256": "5e097c2601987dfe1debf98c91b587c6e63dcdaa0ce25ac1fc733d1092fb4b89",
+      "emitted_functions": [
+        {
+          "name": "SetPan__13VISoundDeviceif",
+          "compiled_body_bytes": 724
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-setpan/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-setpitch/set_pitch.cpp",
+      "source_sha256": "86e9aff14ba558aec6cb2fa86970e4ad7c58598f60a8175ba05a43efd3ceeeb5",
+      "object_sha256": "f404ee77302f6dd0187a407ab3ea8b2cff9283ae009fe34d01e23b4e4f510c40",
+      "emitted_functions": [
+        {
+          "name": "SetPitch__13VISoundDeviceii",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-setpitch/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-setvolume/set_volume.cpp",
+      "source_sha256": "0b391f09a6925dfdffc42c12ceba093d2f212cef722773abdc0542383a500484",
+      "object_sha256": "b13d72b267116a7b69ba3c058621933ba0feffeb085bd4c0386ebc6afda3a231",
+      "emitted_functions": [
+        {
+          "name": "SetVolume__13VISoundDeviceif",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-setvolume/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-stopbgm/stop_bgm.cpp",
+      "source_sha256": "e0ad0a6d908b473bb184781b1ae41b74bbc2a5ee17eee08faa89c7c775f4f264",
+      "object_sha256": "b57c479688274786bc0ce7bc059152b6e1c44bdaa017f3c5f5680f064a87da8f",
+      "emitted_functions": [
+        {
+          "name": "StopBgm__13VISoundDevicei",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-stopbgm/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-sounddevice-stopchannels/stop_channels.cpp",
+      "source_sha256": "2a658890fb1327dc087f4c5ee4f4cc855f22de33d01ef368aab393873158ceb7",
+      "object_sha256": "b89ba7ae8608e2dbc09f65f80e2f70f03b12d360ebee05db36a49958987bf9ee",
+      "emitted_functions": [
+        {
+          "name": "StopChannels__13VISoundDeviceUl",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-sounddevice-stopchannels/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-spelleffect-destroy/destroy.cpp",
+      "source_sha256": "803172adc59a0781cf364a7f66efd8b4778720d09ad85b49272b00bfc3bce850",
+      "object_sha256": "cbad073ec77ae60c448e1c37621661aab91e61e2eeb9eb902fd0d9ab762b69cf",
+      "emitted_functions": [
+        {
+          "name": "Destroy__13VISpellEffect",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-spelleffect-destroy/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-spelleffectdriver-destroy/destroy.cpp",
+      "source_sha256": "e775c48681936462566bd55626247966df2de305bf1465fe365beec3c1b09155",
+      "object_sha256": "bc15b210abbf0cea3cc3a385797f8ec942d102635b1b6739df708c11477f1db4",
+      "emitted_functions": [
+        {
+          "name": "Destroy__19VISpellEffectDriver",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-spelleffectdriver-destroy/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-spelleventdriver-process/process.cpp",
+      "source_sha256": "cf4887743f0da614c14d465b4ca0e84abd0beefdf9e3fb6e0c3418706909b6ee",
+      "object_sha256": "97b5632a8f70a467ae277293bb0ec6846e327ebe7c264cb24d0ef2b41f717416",
+      "emitted_functions": [
+        {
+          "name": "Process__18VISpellEventDriver",
+          "compiled_body_bytes": 1340
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-spelleventdriver-process/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-zoneroom-init/init.cpp",
+      "source_sha256": "810f7769fc38e00db7e9ac5928cfb8fac6f51b7e0a49861809090cfe65f58be0",
+      "object_sha256": "c7c3dd1356d49ccb1ff39fa5de0cdfab623c85e8a61fd5a283aaf250cf1d7ce7",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneRoomiiUiUiR6VIBBox",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-zoneroom-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-a",
+      "source": "sources/w13-vi-a-zonetree-init/init.cpp",
+      "source_sha256": "0cb2ab6e0a0fa2771551b192865aec06b5b395dff6906c456c3aacce805a24a4",
+      "object_sha256": "00ac4fb7f542413904d59ec6a4c73a17803163bbfe197e2117d1b7ddd6ecc3ea",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIZoneTreeii",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-a-zonetree-init/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
