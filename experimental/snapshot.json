@@ -78469,6 +78469,538 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-vi-a-zonetree-init/init.cpp"
+    },
+    {
+      "input_order": 6096,
+      "component": "w13-vi-b-envray-init",
+      "object_name": "w13_vi_b_envray_init.o",
+      "private_object_sha256": "3e9420bf5f476688fc75aaa0649c9dbfc7ad8f0f60b2a35a458b8bd475543eba",
+      "emitted_functions": [
+        {
+          "name": "Init__8VIEnvRayRC7VIVect3T1Ui",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-envray-init/init.cpp"
+    },
+    {
+      "input_order": 6097,
+      "component": "w13-vi-b-file-is-iop-streaming-enabled",
+      "object_name": "w13_vi_b_file_is_iop_streaming_enabled.o",
+      "private_object_sha256": "a1bab2df62e43989cb5367148291446c39fda4518731a8215938d8577c0a0188",
+      "emitted_functions": [
+        {
+          "name": "IsIopStreamingEnabled__6VIFile",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-file-is-iop-streaming-enabled/is_iop_streaming_enabled.cpp"
+    },
+    {
+      "input_order": 6098,
+      "component": "w13-vi-b-file-open-memseg",
+      "object_name": "w13_vi_b_file_open_memseg.o",
+      "private_object_sha256": "fd0ab80e6a4d6e245d212de6c0b8164db46636ce1825c1e36ca0639d8f924cb4",
+      "emitted_functions": [
+        {
+          "name": "Open__6VIFileiPQ26VIFile7MemSegmil",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-file-open-memseg/open_memseg.cpp"
+    },
+    {
+      "input_order": 6099,
+      "component": "w13-vi-b-list-rem-head",
+      "object_name": "w13_vi_b_list_rem_head.o",
+      "private_object_sha256": "a5ed025fbbb018dd0e820a66c65eec771b02af019d636dea01985e47842e4c1f",
+      "emitted_functions": [
+        {
+          "name": "RemHead__7VILList",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-list-rem-head/rem_head.cpp"
+    },
+    {
+      "input_order": 6100,
+      "component": "w13-vi-b-raster-add-material",
+      "object_name": "w13_vi_b_raster_add_material.o",
+      "private_object_sha256": "81a0087c59bbbba4d74ca985ce2e2c5bb700bb88ed58b1dbce246572683cb680",
+      "emitted_functions": [
+        {
+          "name": "AddMaterial__8VIRasteriPP10_sceDmaTag",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-add-material/add_material.cpp"
+    },
+    {
+      "input_order": 6101,
+      "component": "w13-vi-b-raster-begin-tri-fan",
+      "object_name": "w13_vi_b_raster_begin_tri_fan.o",
+      "private_object_sha256": "dbd17fac66849258f2e128f0961fdb52aa5730f7c11594b15e8c2a92b5c79cb6",
+      "emitted_functions": [
+        {
+          "name": "BeginTriFan__8VIRaster",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-begin-tri-fan/begin_tri_fan.cpp"
+    },
+    {
+      "input_order": 6102,
+      "component": "w13-vi-b-raster-calc-matrices",
+      "object_name": "w13_vi_b_raster_calc_matrices.o",
+      "private_object_sha256": "7e515091c98dd9eb2c3ef8bc927e04ae2452faf9cf672c7cca3591c894c6ae0e",
+      "emitted_functions": [
+        {
+          "name": "CalcMatrices__8VIRaster",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-calc-matrices/calc_matrices.cpp"
+    },
+    {
+      "input_order": 6103,
+      "component": "w13-vi-b-raster-enable-all-dir-lights",
+      "object_name": "w13_vi_b_raster_enable_all_dir_lights.o",
+      "private_object_sha256": "4c6aa74ba5fabb2ae76320f6c15b2d18a2ae462ae26987196a14b9e360fcf8d0",
+      "emitted_functions": [
+        {
+          "name": "EnableAllDirLights__8VIRasteri",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-enable-all-dir-lights/enable_all_dir_lights.cpp"
+    },
+    {
+      "input_order": 6104,
+      "component": "w13-vi-b-raster-enable-ambient",
+      "object_name": "w13_vi_b_raster_enable_ambient.o",
+      "private_object_sha256": "9178b2e120344736f118b211764faab1a21439cd2532cc4b61acc39bc299f63e",
+      "emitted_functions": [
+        {
+          "name": "EnableAmbient__8VIRasteri",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-enable-ambient/enable_ambient.cpp"
+    },
+    {
+      "input_order": 6105,
+      "component": "w13-vi-b-raster-enable-sun-light",
+      "object_name": "w13_vi_b_raster_enable_sun_light.o",
+      "private_object_sha256": "7901935a88309c471751b134c116ff03b04e0d8314799545e462d4a10e60543f",
+      "emitted_functions": [
+        {
+          "name": "EnableSunLight__8VIRasteri",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-enable-sun-light/enable_sun_light.cpp"
+    },
+    {
+      "input_order": 6106,
+      "component": "w13-vi-b-raster-enable-tessellation",
+      "object_name": "w13_vi_b_raster_enable_tessellation.o",
+      "private_object_sha256": "a077644e504ba8747f410b4ddf7f1af3d8fd68a3576121e14e87c3eb0406e756",
+      "emitted_functions": [
+        {
+          "name": "EnableTessellation__8VIRasteri",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-enable-tessellation/enable_tessellation.cpp"
+    },
+    {
+      "input_order": 6107,
+      "component": "w13-vi-b-raster-end-tri-fan",
+      "object_name": "w13_vi_b_raster_end_tri_fan.o",
+      "private_object_sha256": "e8e3eac2e381b4f1e1a49c871f55aa6047009bc7ed369ea7b6ad56b4c1cda7e5",
+      "emitted_functions": [
+        {
+          "name": "EndTriFan__8VIRaster",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-end-tri-fan/end_tri_fan.cpp"
+    },
+    {
+      "input_order": 6108,
+      "component": "w13-vi-b-raster-flush-dma-buffer-if-full",
+      "object_name": "w13_vi_b_raster_flush_dma_buffer_if_full.o",
+      "private_object_sha256": "ebd66cc81a7503ee959ae4222a2842ee7b03d075f5bd8308ccad68af350bc99e",
+      "emitted_functions": [
+        {
+          "name": "FlushDMABufferIfFull__8VIRaster",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-flush-dma-buffer-if-full/flush_dma_buffer_if_full.cpp"
+    },
+    {
+      "input_order": 6109,
+      "component": "w13-vi-b-raster-get-material-pal-size",
+      "object_name": "w13_vi_b_raster_get_material_pal_size.o",
+      "private_object_sha256": "174b6e00c0ee95b8531ddb5a9d255e41171fdf88e928f3cfaf25a2c9e42feba5",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPalSize__8VIRasteri",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-get-material-pal-size/get_material_pal_size.cpp"
+    },
+    {
+      "input_order": 6110,
+      "component": "w13-vi-b-raster-max-point-lights",
+      "object_name": "w13_vi_b_raster_max_point_lights.o",
+      "private_object_sha256": "2a79d11d950ff5e8cd5c496467886632bced6d190428919e3a563b1886fc906c",
+      "emitted_functions": [
+        {
+          "name": "MaxPointLights__8VIRaster",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-max-point-lights/max_point_lights.cpp"
+    },
+    {
+      "input_order": 6111,
+      "component": "w13-vi-b-raster-restore-2d",
+      "object_name": "w13_vi_b_raster_restore_2d.o",
+      "private_object_sha256": "78025cd5863b7b73ff28aed1da6985563cc33c38389773cd250517313aad3474",
+      "emitted_functions": [
+        {
+          "name": "Restore2D__8VIRaster",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-restore-2d/restore_2d.cpp"
+    },
+    {
+      "input_order": 6112,
+      "component": "w13-vi-b-raster-set-ambient",
+      "object_name": "w13_vi_b_raster_set_ambient.o",
+      "private_object_sha256": "b281689917e397238ddf91a03425bec1327690c620ae20000fb5161d28ef0e0b",
+      "emitted_functions": [
+        {
+          "name": "SetAmbient__8VIRasterRC10VIColor32F",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-set-ambient/set_ambient.cpp"
+    },
+    {
+      "input_order": 6113,
+      "component": "w13-vi-b-raster-set-fog-registers",
+      "object_name": "w13_vi_b_raster_set_fog_registers.o",
+      "private_object_sha256": "f368b891f070b9102b4ce985de4c6e35f2f179e2ce6f0900908286fc1b53f166",
+      "emitted_functions": [
+        {
+          "name": "SetFogRegisters__8VIRaster",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-set-fog-registers/set_fog_registers.cpp"
+    },
+    {
+      "input_order": 6114,
+      "component": "w13-vi-b-raster-set-pre-translations",
+      "object_name": "w13_vi_b_raster_set_pre_translations.o",
+      "private_object_sha256": "d910195eb331d5d1820e5fdc144d7f3bf38f18b416089aefe1620ff89cbf4ec1",
+      "emitted_functions": [
+        {
+          "name": "SetPreTranslations__8VIRasteriP7VIVect3RC7VIVect3",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-set-pre-translations/set_pre_translations.cpp"
+    },
+    {
+      "input_order": 6115,
+      "component": "w13-vi-b-raster-set-sun-light",
+      "object_name": "w13_vi_b_raster_set_sun_light.o",
+      "private_object_sha256": "50789427b52e2815a0664380ad457cb23ca41deebb804fa9c4d1ff60f30508b2",
+      "emitted_functions": [
+        {
+          "name": "SetSunLight__8VIRasterRC10VIMatrix44RC16VIRasterDirLight",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-set-sun-light/set_sun_light.cpp"
+    },
+    {
+      "input_order": 6116,
+      "component": "w13-vi-b-raster-set-z-bias",
+      "object_name": "w13_vi_b_raster_set_z_bias.o",
+      "private_object_sha256": "824d1aad12cc2851b31d5d1fb712ae5ee94a932a8fba41217775cea98a8ab1d8",
+      "emitted_functions": [
+        {
+          "name": "SetZBias__8VIRasteri",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-set-z-bias/set_z_bias.cpp"
+    },
+    {
+      "input_order": 6117,
+      "component": "w13-vi-b-raster-store-2d",
+      "object_name": "w13_vi_b_raster_store_2d.o",
+      "private_object_sha256": "39d12f337a401cdd5f4a71928515171dabf979f149ca86133f98d16a845f7120",
+      "emitted_functions": [
+        {
+          "name": "Store2D__8VIRaster",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-store-2d/store_2d.cpp"
+    },
+    {
+      "input_order": 6118,
+      "component": "w13-vi-b-raster-upload-billboard-micro",
+      "object_name": "w13_vi_b_raster_upload_billboard_micro.o",
+      "private_object_sha256": "d3440f9150395aaadeca5a5982a4bd006b2292eddf7544d37c45771b6a77698d",
+      "emitted_functions": [
+        {
+          "name": "UploadBillboardMicro__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-upload-billboard-micro/upload_billboard_micro.cpp"
+    },
+    {
+      "input_order": 6119,
+      "component": "w13-vi-b-raster-upload-matrices",
+      "object_name": "w13_vi_b_raster_upload_matrices.o",
+      "private_object_sha256": "234d4c0ccc6eccd538c6d6d4f5fe0f4a21df1f15d0357168120387a009696fab",
+      "emitted_functions": [
+        {
+          "name": "UploadMatrices__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-upload-matrices/upload_matrices.cpp"
+    },
+    {
+      "input_order": 6120,
+      "component": "w13-vi-b-raster-upload-raster-micro",
+      "object_name": "w13_vi_b_raster_upload_raster_micro.o",
+      "private_object_sha256": "b9f03b2e12099bdbda05f8420ea94f98b0cda52e68158aac7ca37aa42d06e4ea",
+      "emitted_functions": [
+        {
+          "name": "UploadRasterMicro__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-upload-raster-micro/upload_raster_micro.cpp"
+    },
+    {
+      "input_order": 6121,
+      "component": "w13-vi-b-raster-uv",
+      "object_name": "w13_vi_b_raster_uv.o",
+      "private_object_sha256": "9f9c958cdc7d5b5b1efc12bcecce8e6df72146d142693b1ad861a2ae2eb97399",
+      "emitted_functions": [
+        {
+          "name": "UV__8VIRasterRC7VIVect2",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-uv/uv.cpp"
+    },
+    {
+      "input_order": 6122,
+      "component": "w13-vi-b-raster-vertex",
+      "object_name": "w13_vi_b_raster_vertex.o",
+      "private_object_sha256": "6b1cf318ea154624a343cf3b3831aa7178548a01139df164e95d8dc6399493bd",
+      "emitted_functions": [
+        {
+          "name": "Vertex__8VIRasterRC7VIVect3",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-raster-vertex/vertex.cpp"
+    },
+    {
+      "input_order": 6123,
+      "component": "w13-vi-b-rfont-cache",
+      "object_name": "w13_vi_b_rfont_cache.o",
+      "private_object_sha256": "23c287b640d5150891e25656c3b7cf42c2460e4e559671148a1d0bcab2de7c03",
+      "emitted_functions": [
+        {
+          "name": "Cache__7VIRFontR8VIRasterPCciPi",
+          "compiled_body_bytes": 1048
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-rfont-cache/cache.cpp"
+    },
+    {
+      "input_order": 6124,
+      "component": "w13-vi-b-scene-collide-coll-ray",
+      "object_name": "w13_vi_b_scene_collide_coll_ray.o",
+      "private_object_sha256": "f7dd7701b250ede8c41d9e96daa1055b5efd4ee2db02638f9093eec40589247a",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VISceneR9VICollRayR13VISceneFilter",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-collide-coll-ray/collide_coll_ray.cpp"
+    },
+    {
+      "input_order": 6125,
+      "component": "w13-vi-b-scene-collide-env-ray",
+      "object_name": "w13_vi_b_scene_collide_env_ray.o",
+      "private_object_sha256": "cdc9f5732b4fc6ec3e63ec22aebf338e828b04144d3c3fca644d73cbe23f48bc",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VISceneR8VIEnvRay",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-collide-env-ray/collide_env_ray.cpp"
+    },
+    {
+      "input_order": 6126,
+      "component": "w13-vi-b-scene-get-actor-transform",
+      "object_name": "w13_vi_b_scene_get_actor_transform.o",
+      "private_object_sha256": "ccc5b63fcac5cefa62c61643d0cdf4b644c81e50a536126a9092af0298d9f485",
+      "emitted_functions": [
+        {
+          "name": "GetActorTransform__7VISceneiR10VIMatrix44",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-get-actor-transform/get_actor_transform.cpp"
+    },
+    {
+      "input_order": 6127,
+      "component": "w13-vi-b-scene-query-emitters-at-location",
+      "object_name": "w13_vi_b_scene_query_emitters_at_location.o",
+      "private_object_sha256": "e5f690c8697bcd6d068f0adb9b606aa834bfc15382580ddf18ed4a9a810785e6",
+      "emitted_functions": [
+        {
+          "name": "QueryEmittersAtLocation__7VISceneRC8VICameraR14VIEmitterQuery",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-query-emitters-at-location/query_emitters_at_location.cpp"
+    },
+    {
+      "input_order": 6128,
+      "component": "w13-vi-b-scene-query-intersection",
+      "object_name": "w13_vi_b_scene_query_intersection.o",
+      "private_object_sha256": "938a2ef024a1cf26d03bcb8afc7671c0fe94443773af2cbdf6ab671aeb028773",
+      "emitted_functions": [
+        {
+          "name": "QueryIntersection__7VISceneR6VIBBoxR13VIActorFilterR14VIQueryTriList",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-query-intersection/query_intersection.cpp"
+    },
+    {
+      "input_order": 6129,
+      "component": "w13-vi-b-scene-raster-actor",
+      "object_name": "w13_vi_b_scene_raster_actor.o",
+      "private_object_sha256": "7a8cb7d5654ad11fffbe4a323b495a9f3a149af14990dab2dea8d89c80769908",
+      "emitted_functions": [
+        {
+          "name": "RasterActor__7VISceneR8VICameraiR11VIClipStack",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-raster-actor/raster_actor.cpp"
+    },
+    {
+      "input_order": 6130,
+      "component": "w13-vi-b-scene-raster-sprite",
+      "object_name": "w13_vi_b_scene_raster_sprite.o",
+      "private_object_sha256": "80786d63a5474116dcc343752ad37becdb0c5600f218337b4f7fed4c456a02c1",
+      "emitted_functions": [
+        {
+          "name": "RasterSprite__7VISceneR8VICameraiUi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-scene-raster-sprite/raster_sprite.cpp"
+    },
+    {
+      "input_order": 6131,
+      "component": "w13-vi-b-world-query-emitters",
+      "object_name": "w13_vi_b_world_query_emitters.o",
+      "private_object_sha256": "7c5c5cbd83d55bbcd3f2e1d72f00ab74741c1ceec5ec34ad853a7a30ddec4ca4",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__7VIWorldR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-world-query-emitters/query_emitters.cpp"
+    },
+    {
+      "input_order": 6132,
+      "component": "w13-vi-b-world-render-by-volume",
+      "object_name": "w13_vi_b_world_render_by_volume.o",
+      "private_object_sha256": "e2db18d22a92f294a82a32e648e1cddb4804568047fed470935f49f7c8a0e01a",
+      "emitted_functions": [
+        {
+          "name": "RenderByVolume__7VIWorldiR15VISceneRendVars",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-world-render-by-volume/render_by_volume.cpp"
+    },
+    {
+      "input_order": 6133,
+      "component": "w13-vi-b-zone-render-through-portals",
+      "object_name": "w13_vi_b_zone_render_through_portals.o",
+      "private_object_sha256": "b2b27119f7abfde44342a293f078da2fada5b4164dc1b0bc85b939f23f1070cc",
+      "emitted_functions": [
+        {
+          "name": "RenderThroughPortals__6VIZoneiR15VISceneRendVars",
+          "compiled_body_bytes": 776
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp"
     }
   ],
   "drafts": [
@@ -87420,6 +87952,82 @@
     "sources/w13-vi-a-zoneroom-init/init.cpp": "810f7769fc38e00db7e9ac5928cfb8fac6f51b7e0a49861809090cfe65f58be0",
     "sources/w13-vi-a-zonetree-init/host_contract.cpp": "ea9f3b9da7bbd1cd342f9c83bc9df339acb36fe3e87525371af7f0a14ce3e952",
     "sources/w13-vi-a-zonetree-init/init.cpp": "0cb2ab6e0a0fa2771551b192865aec06b5b395dff6906c456c3aacce805a24a4",
+    "sources/w13-vi-b-envray-init/host_contract.cpp": "e96e21e6143799212b7a99347a8bd31bcf8a4d59fb32b11d0fbc13ae57ffcc46",
+    "sources/w13-vi-b-envray-init/init.cpp": "227a6d176dc32249bad6df7a6c9a650d369e24ea9d9f3261b2ac54673f2ca398",
+    "sources/w13-vi-b-file-is-iop-streaming-enabled/host_contract.cpp": "79b7545e1a99e31aedaafcfbd07ee563e2dcf921077bdaf8353667e5dd1e6b15",
+    "sources/w13-vi-b-file-is-iop-streaming-enabled/is_iop_streaming_enabled.cpp": "057d4996c81c70f31dfa2186b9dd2d00d1eac02e6e366118cd8634e3364a6a6c",
+    "sources/w13-vi-b-file-open-memseg/host_contract.cpp": "5c0375d6d89dee292d283f573129abe555d9a00b8cae958f59ccb992828000d7",
+    "sources/w13-vi-b-file-open-memseg/open_memseg.cpp": "daed8033ffb413c8ea4c000b56812dc306b57afe19f7971cff7e7c6c0326c8ab",
+    "sources/w13-vi-b-list-rem-head/host_contract.cpp": "40a961a8220a2878d8d9ad80761f0c0129717ff33098d726c47cf98b81f368da",
+    "sources/w13-vi-b-list-rem-head/rem_head.cpp": "ffd729880db544720c801d4b595a74bbfb53f2d270b6f71416b4b5a0db3edadc",
+    "sources/w13-vi-b-raster-add-material/add_material.cpp": "71bc55440d6ba266c22cfa02ff68c51a6a3a7461537e2df3a861bdbfd9a795a8",
+    "sources/w13-vi-b-raster-add-material/host_contract.cpp": "c830c2d1b81b615b31c2fa3fb1162a4cc472bfa680e9c0c344fdc83b18031df7",
+    "sources/w13-vi-b-raster-begin-tri-fan/begin_tri_fan.cpp": "48e837fceefaa5664ecd6927d2f872b6338f05cb409c11bec1e16b69f30d32ef",
+    "sources/w13-vi-b-raster-begin-tri-fan/host_contract.cpp": "6ae2e8b87ba4d14d68df5023ee838163b903b00cfd646a944d00747cea6e463a",
+    "sources/w13-vi-b-raster-calc-matrices/calc_matrices.cpp": "9e716668fe8b8ac107bda84e3ca09e67400df7c872ce675a67ef71d385177117",
+    "sources/w13-vi-b-raster-calc-matrices/host_contract.cpp": "02b43045f50320fb9fa05b423c0cb1296f9e9f4eb39168df604eedb2b90b119b",
+    "sources/w13-vi-b-raster-enable-all-dir-lights/enable_all_dir_lights.cpp": "535068e28b2e9647b25115f7ee3648e0d6081a85e0caeb6357088d8b78068a1a",
+    "sources/w13-vi-b-raster-enable-all-dir-lights/host_contract.cpp": "cf5c499b3bfdc8824ba23f054f530604cd40c1889b03cdfb5ea6281cf55e6625",
+    "sources/w13-vi-b-raster-enable-ambient/enable_ambient.cpp": "9d47db12b580f21e58183f19f1fbf4652dc4466c30508901927a958aa8734267",
+    "sources/w13-vi-b-raster-enable-ambient/host_contract.cpp": "b6b512061dbac134daf41740030949aad388e674e51aaab46e05e9d7b571323e",
+    "sources/w13-vi-b-raster-enable-sun-light/enable_sun_light.cpp": "6313dfdafb2bde7768ee0cf10a800ac20914dec870e2e4959929c76db72cbbc8",
+    "sources/w13-vi-b-raster-enable-sun-light/host_contract.cpp": "3e6e1637f5859dd013fed17cc223652e7aa9a255a7004d5d39e1fecb7109eda7",
+    "sources/w13-vi-b-raster-enable-tessellation/enable_tessellation.cpp": "85923c31cc83032f91e80dd473c892d722aa832b7d9563116ae34846886e3a24",
+    "sources/w13-vi-b-raster-enable-tessellation/host_contract.cpp": "4d32ed6ed88149661a79913bcef304b74ac010dd91be4772e632352b55b1b20f",
+    "sources/w13-vi-b-raster-end-tri-fan/end_tri_fan.cpp": "60dd31f3f6672f338876e76e43514e1fb3cec0f61b98ddd5cafe098bfd5bcc28",
+    "sources/w13-vi-b-raster-end-tri-fan/host_contract.cpp": "f0f7bc2682be3fd94138e3f71006441a427a86b5c88b3f653daa34a40fecc493",
+    "sources/w13-vi-b-raster-flush-dma-buffer-if-full/flush_dma_buffer_if_full.cpp": "5817602c83874d6aac5005177041bc303306916789ddf40ba8e92e52a4ad3c21",
+    "sources/w13-vi-b-raster-flush-dma-buffer-if-full/host_contract.cpp": "cb058908ad7671644d4b30731246047715f8e4b3524262dc6b4dde1330fe9c6f",
+    "sources/w13-vi-b-raster-get-material-pal-size/get_material_pal_size.cpp": "262f8e9c9feafb3c4e8349cf159bb723bcf5f2ceeded5beba36054b7212dbcbc",
+    "sources/w13-vi-b-raster-get-material-pal-size/host_contract.cpp": "0764985ddf9fc316fb3534bcaee327f091cd6e463610f6491b14f86418a73082",
+    "sources/w13-vi-b-raster-max-point-lights/host_contract.cpp": "4ca114ad1a849bd3bebd9fadf010b00670b6c1ea3741b08068eef247b59f0b35",
+    "sources/w13-vi-b-raster-max-point-lights/max_point_lights.cpp": "feba043777e15f81da29ef218450e696e5c5e4a6cce634080328fa1eae720714",
+    "sources/w13-vi-b-raster-restore-2d/host_contract.cpp": "54457ab4add4b813ffbb3759448e228aac789b5919836e1cea716c302c0f7cba",
+    "sources/w13-vi-b-raster-restore-2d/restore_2d.cpp": "689705b62bc48cc7f5bd2625b2dfce7b14450b4679d02a0eac5f6de1dfde34b4",
+    "sources/w13-vi-b-raster-set-ambient/host_contract.cpp": "f14add49ba2061ab0d90f629a6b900e886ad50ff99ddf6075f2e3fc99b5cc232",
+    "sources/w13-vi-b-raster-set-ambient/set_ambient.cpp": "0bb3365bc367491c2aee95ff408ffbf6e1bc622eb09a8730a15836587bf30486",
+    "sources/w13-vi-b-raster-set-fog-registers/host_contract.cpp": "f81560030a4de914d51425514e6df6ee4891395f2bb50e555344123362e3598c",
+    "sources/w13-vi-b-raster-set-fog-registers/set_fog_registers.cpp": "c9d0f81b054ca70a5ae7039d10476a1b21bd8dd7edc49ad2448368238f7c0399",
+    "sources/w13-vi-b-raster-set-pre-translations/host_contract.cpp": "115b234e25670eb228fafb6701fd2b7fdaa1cbc081b93f067393d6637df6681e",
+    "sources/w13-vi-b-raster-set-pre-translations/set_pre_translations.cpp": "9c982357bd4268021fb401cac9ef2063e478c41070d87e5f59f28dd3a810a9f6",
+    "sources/w13-vi-b-raster-set-sun-light/host_contract.cpp": "dd790f306ccb20fc1b6b6d440f68d8a53ab2d9c5bee463be2291c48939b41829",
+    "sources/w13-vi-b-raster-set-sun-light/set_sun_light.cpp": "1440bae042ffe3d0597b10bb124109305cb747c7d4b0290abc92cadd895f6cb2",
+    "sources/w13-vi-b-raster-set-z-bias/host_contract.cpp": "8bc9fa115392d8def3eeca039c208a2b20fb7832fd367a8e49f536f51b390f7e",
+    "sources/w13-vi-b-raster-set-z-bias/set_z_bias.cpp": "9cc87d82f312e0f1c287fcdf208d334c1850293342e30424595141296e75c5c6",
+    "sources/w13-vi-b-raster-store-2d/host_contract.cpp": "9ba5a87631d72511a758e59e5edb23e93a0455d33096ceb7bbf66ebf0904cf30",
+    "sources/w13-vi-b-raster-store-2d/store_2d.cpp": "cd754609f8798391e3d98a0a11f7b3dedb70898214a797b5be79c7e7e77fa00d",
+    "sources/w13-vi-b-raster-upload-billboard-micro/host_contract.cpp": "c130376aa3c6647ec0951afdf69019944ce6d73371c74e998f29266c891ffc2b",
+    "sources/w13-vi-b-raster-upload-billboard-micro/upload_billboard_micro.cpp": "175d2dd1d1314df7c9161e7c1840ff5adc592cb45807c6e824f3d79f0c0a59be",
+    "sources/w13-vi-b-raster-upload-matrices/host_contract.cpp": "5733d28823c93337e61d44af29377326cd0fb343989906c939d1a328dbd1ec1b",
+    "sources/w13-vi-b-raster-upload-matrices/upload_matrices.cpp": "750a057c43f30bdb85eed2c9799b799817f2b5e5db0882e0b534d75e428f4ecd",
+    "sources/w13-vi-b-raster-upload-raster-micro/host_contract.cpp": "b9bf568174f017e7e59d3d5006fbec99ebb869528d193390a54e101a10ec21ec",
+    "sources/w13-vi-b-raster-upload-raster-micro/upload_raster_micro.cpp": "8f10e80297292eae1ae352b3b886d4f18a746b8f48d06963c844de85cdcbaf3d",
+    "sources/w13-vi-b-raster-uv/host_contract.cpp": "84d7723ba9800a581ee768f6f66beb37efc94abbe54581dfd6514ed4b3310658",
+    "sources/w13-vi-b-raster-uv/uv.cpp": "81bca2ebe80e81471f68d821f9fa24c92c8eef2115dabaa982c2e857222934d3",
+    "sources/w13-vi-b-raster-vertex/host_contract.cpp": "3869b48aec177c4828b99e316c259fbdf559e15e4f08817eee25b4025dad8729",
+    "sources/w13-vi-b-raster-vertex/vertex.cpp": "305b87d5d6719c5d2e9896a80bc1a8597c6343e3a219d4bd452875a08d3276bb",
+    "sources/w13-vi-b-rfont-cache/cache.cpp": "7073dc6ba3202db1d67c25deb43d2a8c8794a5cf3c81de5937776b564ad6354a",
+    "sources/w13-vi-b-rfont-cache/host_contract.cpp": "c129377cb6da780364fa490df8fc8ebd44db2f2bca45a1d7125766607b74697f",
+    "sources/w13-vi-b-scene-collide-coll-ray/collide_coll_ray.cpp": "77ef54806e44a3c4004f4a63018869c546d9d504ae0b1b377e4e8c662546b18a",
+    "sources/w13-vi-b-scene-collide-coll-ray/host_contract.cpp": "f17b7339b31aa13085ebfbf0bfda5d0de864685b3de4ecdc64985a13cbc0560d",
+    "sources/w13-vi-b-scene-collide-env-ray/collide_env_ray.cpp": "a6bff6c0d628646faa17d59f53f3b29984fa4456522f9297c02b193b97473009",
+    "sources/w13-vi-b-scene-collide-env-ray/host_contract.cpp": "4d27a7fb7f2a3622ed4951034ac77c43a15720704787a75f12c90b1b48dbc59e",
+    "sources/w13-vi-b-scene-get-actor-transform/get_actor_transform.cpp": "418d4e8d9d4e124b38a0af10b7c16e34c9c3a8b2b869d1c0598e54db8d196fba",
+    "sources/w13-vi-b-scene-get-actor-transform/host_contract.cpp": "b34f2983b8f97c1b9f4e622a935c19040082cac0977240d6c1a43b9dc92cddbf",
+    "sources/w13-vi-b-scene-query-emitters-at-location/host_contract.cpp": "1a83755ffa3902fd0f351fa95577a8d0328157ff8a7b583c6cc2183fb0074815",
+    "sources/w13-vi-b-scene-query-emitters-at-location/query_emitters_at_location.cpp": "62e259889062c3709b5f8a26ca3ac8c1d4353ef8da198958e557821844b075ab",
+    "sources/w13-vi-b-scene-query-intersection/host_contract.cpp": "a97ba3d5a3420502e8dd0b680d51ea9e4b0bb200250e57db421e96044a5a567f",
+    "sources/w13-vi-b-scene-query-intersection/query_intersection.cpp": "fa89ac3d49b29102ec7bfb1314430e4f04ac99d18ccbcf0572fb64c8ba48ea1c",
+    "sources/w13-vi-b-scene-raster-actor/host_contract.cpp": "b33fe5aaecbc311d6245b50535ce38da32a4c79f53db3b9bfef16ebd1261985c",
+    "sources/w13-vi-b-scene-raster-actor/raster_actor.cpp": "2eaa2da3000623f916f54d9ac482bc2a6cadc2b065eabf419fa28f3409d36a7d",
+    "sources/w13-vi-b-scene-raster-sprite/host_contract.cpp": "85b79684a8944d28d97b86ba7dc4f2c4dc37fe96d0c55bdccdc935b686d630f7",
+    "sources/w13-vi-b-scene-raster-sprite/raster_sprite.cpp": "b3edc24301436bc86d772aa852e7a30c200b38189356df06d4f898749a0e2163",
+    "sources/w13-vi-b-world-query-emitters/host_contract.cpp": "cac8636592c62468af3fa9f674619363df73926c96e2ff14db1d9e98d13f5e2d",
+    "sources/w13-vi-b-world-query-emitters/query_emitters.cpp": "35d2933ed672fb8ba1f3bd3c1aeed14ec19c7a4a22719bbd42b60fa882ee467e",
+    "sources/w13-vi-b-world-render-by-volume/host_contract.cpp": "c9e25883f946d05b7cf06221bb0f6e15ac4d33e43485b69a8d1941ca3e92705a",
+    "sources/w13-vi-b-world-render-by-volume/render_by_volume.cpp": "f24126bc780b5eeb15a6429b0e53e83d31b66de7b7f5f5c105b43a5c568d2f92",
+    "sources/w13-vi-b-zone-render-through-portals/host_contract.cpp": "805f7b0bde9deb522f4717494d7dce963e2ab055058dfc4b021d5811c2818639",
+    "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp": "3e2f5855f70e06e89df0d07e6a32d5e6424bcdd3e21f0f3e9308b063f00bfc63",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -91788,11 +92396,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6096,
-    "authored_default_inputs": 6094,
+    "selected_inputs": 6134,
+    "authored_default_inputs": 6132,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4782,
-    "compiled_body_bytes_from_accepted_inputs": 1959328,
+    "emitted_function_definitions_including_helpers": 4820,
+    "compiled_body_bytes_from_accepted_inputs": 1967452,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -91805,7 +92413,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5783
+    "package_selected_inputs": 5821
   },
   "startup_implementations": [
     {
@@ -183127,6 +183735,652 @@
       ],
       "host_files": [
         "sources/w13-vi-a-zonetree-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-envray-init/init.cpp",
+      "source_sha256": "227a6d176dc32249bad6df7a6c9a650d369e24ea9d9f3261b2ac54673f2ca398",
+      "object_sha256": "3e9420bf5f476688fc75aaa0649c9dbfc7ad8f0f60b2a35a458b8bd475543eba",
+      "emitted_functions": [
+        {
+          "name": "Init__8VIEnvRayRC7VIVect3T1Ui",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-envray-init/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-file-is-iop-streaming-enabled/is_iop_streaming_enabled.cpp",
+      "source_sha256": "057d4996c81c70f31dfa2186b9dd2d00d1eac02e6e366118cd8634e3364a6a6c",
+      "object_sha256": "a1bab2df62e43989cb5367148291446c39fda4518731a8215938d8577c0a0188",
+      "emitted_functions": [
+        {
+          "name": "IsIopStreamingEnabled__6VIFile",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-file-is-iop-streaming-enabled/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-file-open-memseg/open_memseg.cpp",
+      "source_sha256": "daed8033ffb413c8ea4c000b56812dc306b57afe19f7971cff7e7c6c0326c8ab",
+      "object_sha256": "fd0ab80e6a4d6e245d212de6c0b8164db46636ce1825c1e36ca0639d8f924cb4",
+      "emitted_functions": [
+        {
+          "name": "Open__6VIFileiPQ26VIFile7MemSegmil",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-file-open-memseg/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-list-rem-head/rem_head.cpp",
+      "source_sha256": "ffd729880db544720c801d4b595a74bbfb53f2d270b6f71416b4b5a0db3edadc",
+      "object_sha256": "a5ed025fbbb018dd0e820a66c65eec771b02af019d636dea01985e47842e4c1f",
+      "emitted_functions": [
+        {
+          "name": "RemHead__7VILList",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-list-rem-head/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-add-material/add_material.cpp",
+      "source_sha256": "71bc55440d6ba266c22cfa02ff68c51a6a3a7461537e2df3a861bdbfd9a795a8",
+      "object_sha256": "81a0087c59bbbba4d74ca985ce2e2c5bb700bb88ed58b1dbce246572683cb680",
+      "emitted_functions": [
+        {
+          "name": "AddMaterial__8VIRasteriPP10_sceDmaTag",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-add-material/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-begin-tri-fan/begin_tri_fan.cpp",
+      "source_sha256": "48e837fceefaa5664ecd6927d2f872b6338f05cb409c11bec1e16b69f30d32ef",
+      "object_sha256": "dbd17fac66849258f2e128f0961fdb52aa5730f7c11594b15e8c2a92b5c79cb6",
+      "emitted_functions": [
+        {
+          "name": "BeginTriFan__8VIRaster",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-begin-tri-fan/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-calc-matrices/calc_matrices.cpp",
+      "source_sha256": "9e716668fe8b8ac107bda84e3ca09e67400df7c872ce675a67ef71d385177117",
+      "object_sha256": "7e515091c98dd9eb2c3ef8bc927e04ae2452faf9cf672c7cca3591c894c6ae0e",
+      "emitted_functions": [
+        {
+          "name": "CalcMatrices__8VIRaster",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-calc-matrices/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-enable-all-dir-lights/enable_all_dir_lights.cpp",
+      "source_sha256": "535068e28b2e9647b25115f7ee3648e0d6081a85e0caeb6357088d8b78068a1a",
+      "object_sha256": "4c6aa74ba5fabb2ae76320f6c15b2d18a2ae462ae26987196a14b9e360fcf8d0",
+      "emitted_functions": [
+        {
+          "name": "EnableAllDirLights__8VIRasteri",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-enable-all-dir-lights/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-enable-ambient/enable_ambient.cpp",
+      "source_sha256": "9d47db12b580f21e58183f19f1fbf4652dc4466c30508901927a958aa8734267",
+      "object_sha256": "9178b2e120344736f118b211764faab1a21439cd2532cc4b61acc39bc299f63e",
+      "emitted_functions": [
+        {
+          "name": "EnableAmbient__8VIRasteri",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-enable-ambient/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-enable-sun-light/enable_sun_light.cpp",
+      "source_sha256": "6313dfdafb2bde7768ee0cf10a800ac20914dec870e2e4959929c76db72cbbc8",
+      "object_sha256": "7901935a88309c471751b134c116ff03b04e0d8314799545e462d4a10e60543f",
+      "emitted_functions": [
+        {
+          "name": "EnableSunLight__8VIRasteri",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-enable-sun-light/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-enable-tessellation/enable_tessellation.cpp",
+      "source_sha256": "85923c31cc83032f91e80dd473c892d722aa832b7d9563116ae34846886e3a24",
+      "object_sha256": "a077644e504ba8747f410b4ddf7f1af3d8fd68a3576121e14e87c3eb0406e756",
+      "emitted_functions": [
+        {
+          "name": "EnableTessellation__8VIRasteri",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-enable-tessellation/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-end-tri-fan/end_tri_fan.cpp",
+      "source_sha256": "60dd31f3f6672f338876e76e43514e1fb3cec0f61b98ddd5cafe098bfd5bcc28",
+      "object_sha256": "e8e3eac2e381b4f1e1a49c871f55aa6047009bc7ed369ea7b6ad56b4c1cda7e5",
+      "emitted_functions": [
+        {
+          "name": "EndTriFan__8VIRaster",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-end-tri-fan/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-flush-dma-buffer-if-full/flush_dma_buffer_if_full.cpp",
+      "source_sha256": "5817602c83874d6aac5005177041bc303306916789ddf40ba8e92e52a4ad3c21",
+      "object_sha256": "ebd66cc81a7503ee959ae4222a2842ee7b03d075f5bd8308ccad68af350bc99e",
+      "emitted_functions": [
+        {
+          "name": "FlushDMABufferIfFull__8VIRaster",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-flush-dma-buffer-if-full/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-get-material-pal-size/get_material_pal_size.cpp",
+      "source_sha256": "262f8e9c9feafb3c4e8349cf159bb723bcf5f2ceeded5beba36054b7212dbcbc",
+      "object_sha256": "174b6e00c0ee95b8531ddb5a9d255e41171fdf88e928f3cfaf25a2c9e42feba5",
+      "emitted_functions": [
+        {
+          "name": "GetMaterialPalSize__8VIRasteri",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-get-material-pal-size/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-max-point-lights/max_point_lights.cpp",
+      "source_sha256": "feba043777e15f81da29ef218450e696e5c5e4a6cce634080328fa1eae720714",
+      "object_sha256": "2a79d11d950ff5e8cd5c496467886632bced6d190428919e3a563b1886fc906c",
+      "emitted_functions": [
+        {
+          "name": "MaxPointLights__8VIRaster",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-max-point-lights/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-restore-2d/restore_2d.cpp",
+      "source_sha256": "689705b62bc48cc7f5bd2625b2dfce7b14450b4679d02a0eac5f6de1dfde34b4",
+      "object_sha256": "78025cd5863b7b73ff28aed1da6985563cc33c38389773cd250517313aad3474",
+      "emitted_functions": [
+        {
+          "name": "Restore2D__8VIRaster",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-restore-2d/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-set-ambient/set_ambient.cpp",
+      "source_sha256": "0bb3365bc367491c2aee95ff408ffbf6e1bc622eb09a8730a15836587bf30486",
+      "object_sha256": "b281689917e397238ddf91a03425bec1327690c620ae20000fb5161d28ef0e0b",
+      "emitted_functions": [
+        {
+          "name": "SetAmbient__8VIRasterRC10VIColor32F",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-set-ambient/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-set-fog-registers/set_fog_registers.cpp",
+      "source_sha256": "c9d0f81b054ca70a5ae7039d10476a1b21bd8dd7edc49ad2448368238f7c0399",
+      "object_sha256": "f368b891f070b9102b4ce985de4c6e35f2f179e2ce6f0900908286fc1b53f166",
+      "emitted_functions": [
+        {
+          "name": "SetFogRegisters__8VIRaster",
+          "compiled_body_bytes": 460
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-set-fog-registers/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-set-pre-translations/set_pre_translations.cpp",
+      "source_sha256": "9c982357bd4268021fb401cac9ef2063e478c41070d87e5f59f28dd3a810a9f6",
+      "object_sha256": "d910195eb331d5d1820e5fdc144d7f3bf38f18b416089aefe1620ff89cbf4ec1",
+      "emitted_functions": [
+        {
+          "name": "SetPreTranslations__8VIRasteriP7VIVect3RC7VIVect3",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-set-pre-translations/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-set-sun-light/set_sun_light.cpp",
+      "source_sha256": "1440bae042ffe3d0597b10bb124109305cb747c7d4b0290abc92cadd895f6cb2",
+      "object_sha256": "50789427b52e2815a0664380ad457cb23ca41deebb804fa9c4d1ff60f30508b2",
+      "emitted_functions": [
+        {
+          "name": "SetSunLight__8VIRasterRC10VIMatrix44RC16VIRasterDirLight",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-set-sun-light/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-set-z-bias/set_z_bias.cpp",
+      "source_sha256": "9cc87d82f312e0f1c287fcdf208d334c1850293342e30424595141296e75c5c6",
+      "object_sha256": "824d1aad12cc2851b31d5d1fb712ae5ee94a932a8fba41217775cea98a8ab1d8",
+      "emitted_functions": [
+        {
+          "name": "SetZBias__8VIRasteri",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-set-z-bias/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-store-2d/store_2d.cpp",
+      "source_sha256": "cd754609f8798391e3d98a0a11f7b3dedb70898214a797b5be79c7e7e77fa00d",
+      "object_sha256": "39d12f337a401cdd5f4a71928515171dabf979f149ca86133f98d16a845f7120",
+      "emitted_functions": [
+        {
+          "name": "Store2D__8VIRaster",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-store-2d/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-upload-billboard-micro/upload_billboard_micro.cpp",
+      "source_sha256": "175d2dd1d1314df7c9161e7c1840ff5adc592cb45807c6e824f3d79f0c0a59be",
+      "object_sha256": "d3440f9150395aaadeca5a5982a4bd006b2292eddf7544d37c45771b6a77698d",
+      "emitted_functions": [
+        {
+          "name": "UploadBillboardMicro__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-upload-billboard-micro/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-upload-matrices/upload_matrices.cpp",
+      "source_sha256": "750a057c43f30bdb85eed2c9799b799817f2b5e5db0882e0b534d75e428f4ecd",
+      "object_sha256": "234d4c0ccc6eccd538c6d6d4f5fe0f4a21df1f15d0357168120387a009696fab",
+      "emitted_functions": [
+        {
+          "name": "UploadMatrices__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-upload-matrices/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-upload-raster-micro/upload_raster_micro.cpp",
+      "source_sha256": "8f10e80297292eae1ae352b3b886d4f18a746b8f48d06963c844de85cdcbaf3d",
+      "object_sha256": "b9f03b2e12099bdbda05f8420ea94f98b0cda52e68158aac7ca37aa42d06e4ea",
+      "emitted_functions": [
+        {
+          "name": "UploadRasterMicro__8VIRasterPP10_sceDmaTag",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-upload-raster-micro/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-uv/uv.cpp",
+      "source_sha256": "81bca2ebe80e81471f68d821f9fa24c92c8eef2115dabaa982c2e857222934d3",
+      "object_sha256": "9f9c958cdc7d5b5b1efc12bcecce8e6df72146d142693b1ad861a2ae2eb97399",
+      "emitted_functions": [
+        {
+          "name": "UV__8VIRasterRC7VIVect2",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-uv/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-raster-vertex/vertex.cpp",
+      "source_sha256": "305b87d5d6719c5d2e9896a80bc1a8597c6343e3a219d4bd452875a08d3276bb",
+      "object_sha256": "6b1cf318ea154624a343cf3b3831aa7178548a01139df164e95d8dc6399493bd",
+      "emitted_functions": [
+        {
+          "name": "Vertex__8VIRasterRC7VIVect3",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-raster-vertex/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-rfont-cache/cache.cpp",
+      "source_sha256": "7073dc6ba3202db1d67c25deb43d2a8c8794a5cf3c81de5937776b564ad6354a",
+      "object_sha256": "23c287b640d5150891e25656c3b7cf42c2460e4e559671148a1d0bcab2de7c03",
+      "emitted_functions": [
+        {
+          "name": "Cache__7VIRFontR8VIRasterPCciPi",
+          "compiled_body_bytes": 1048
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-rfont-cache/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-collide-coll-ray/collide_coll_ray.cpp",
+      "source_sha256": "77ef54806e44a3c4004f4a63018869c546d9d504ae0b1b377e4e8c662546b18a",
+      "object_sha256": "f7dd7701b250ede8c41d9e96daa1055b5efd4ee2db02638f9093eec40589247a",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VISceneR9VICollRayR13VISceneFilter",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-collide-coll-ray/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-collide-env-ray/collide_env_ray.cpp",
+      "source_sha256": "a6bff6c0d628646faa17d59f53f3b29984fa4456522f9297c02b193b97473009",
+      "object_sha256": "cdc9f5732b4fc6ec3e63ec22aebf338e828b04144d3c3fca644d73cbe23f48bc",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VISceneR8VIEnvRay",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-collide-env-ray/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-get-actor-transform/get_actor_transform.cpp",
+      "source_sha256": "418d4e8d9d4e124b38a0af10b7c16e34c9c3a8b2b869d1c0598e54db8d196fba",
+      "object_sha256": "ccc5b63fcac5cefa62c61643d0cdf4b644c81e50a536126a9092af0298d9f485",
+      "emitted_functions": [
+        {
+          "name": "GetActorTransform__7VISceneiR10VIMatrix44",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-get-actor-transform/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-query-emitters-at-location/query_emitters_at_location.cpp",
+      "source_sha256": "62e259889062c3709b5f8a26ca3ac8c1d4353ef8da198958e557821844b075ab",
+      "object_sha256": "e5f690c8697bcd6d068f0adb9b606aa834bfc15382580ddf18ed4a9a810785e6",
+      "emitted_functions": [
+        {
+          "name": "QueryEmittersAtLocation__7VISceneRC8VICameraR14VIEmitterQuery",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-query-emitters-at-location/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-query-intersection/query_intersection.cpp",
+      "source_sha256": "fa89ac3d49b29102ec7bfb1314430e4f04ac99d18ccbcf0572fb64c8ba48ea1c",
+      "object_sha256": "938a2ef024a1cf26d03bcb8afc7671c0fe94443773af2cbdf6ab671aeb028773",
+      "emitted_functions": [
+        {
+          "name": "QueryIntersection__7VISceneR6VIBBoxR13VIActorFilterR14VIQueryTriList",
+          "compiled_body_bytes": 228
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-query-intersection/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-raster-actor/raster_actor.cpp",
+      "source_sha256": "2eaa2da3000623f916f54d9ac482bc2a6cadc2b065eabf419fa28f3409d36a7d",
+      "object_sha256": "7a8cb7d5654ad11fffbe4a323b495a9f3a149af14990dab2dea8d89c80769908",
+      "emitted_functions": [
+        {
+          "name": "RasterActor__7VISceneR8VICameraiR11VIClipStack",
+          "compiled_body_bytes": 552
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-raster-actor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-scene-raster-sprite/raster_sprite.cpp",
+      "source_sha256": "b3edc24301436bc86d772aa852e7a30c200b38189356df06d4f898749a0e2163",
+      "object_sha256": "80786d63a5474116dcc343752ad37becdb0c5600f218337b4f7fed4c456a02c1",
+      "emitted_functions": [
+        {
+          "name": "RasterSprite__7VISceneR8VICameraiUi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-scene-raster-sprite/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-world-query-emitters/query_emitters.cpp",
+      "source_sha256": "35d2933ed672fb8ba1f3bd3c1aeed14ec19c7a4a22719bbd42b60fa882ee467e",
+      "object_sha256": "7c5c5cbd83d55bbcd3f2e1d72f00ab74741c1ceec5ec34ad853a7a30ddec4ca4",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__7VIWorldR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-world-query-emitters/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-world-render-by-volume/render_by_volume.cpp",
+      "source_sha256": "f24126bc780b5eeb15a6429b0e53e83d31b66de7b7f5f5c105b43a5c568d2f92",
+      "object_sha256": "e2db18d22a92f294a82a32e648e1cddb4804568047fed470935f49f7c8a0e01a",
+      "emitted_functions": [
+        {
+          "name": "RenderByVolume__7VIWorldiR15VISceneRendVars",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-world-render-by-volume/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-vi-b",
+      "source": "sources/w13-vi-b-zone-render-through-portals/render_through_portals.cpp",
+      "source_sha256": "3e2f5855f70e06e89df0d07e6a32d5e6424bcdd3e21f0f3e9308b063f00bfc63",
+      "object_sha256": "b2b27119f7abfde44342a293f078da2fada5b4164dc1b0bc85b939f23f1070cc",
+      "emitted_functions": [
+        {
+          "name": "RenderThroughPortals__6VIZoneiR15VISceneRendVars",
+          "compiled_body_bytes": 776
+        }
+      ],
+      "host_files": [
+        "sources/w13-vi-b-zone-render-through-portals/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
