@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5409,
+  "default_authored_inputs": 5432,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4173,6 +4173,29 @@
     "sources/w12-visky-b-world-set-profiles/set_profiles.cpp": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
     "sources/w12-visky-b-world-tree-ctor/ctor.cpp": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
     "sources/w12-visky-b-world-tree-dtor/dtor.cpp": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
+    "sources/w12-visprite-a-hspriteanim-clear/clear.cpp": "d7a427b174e7bdee75cea2a113ad0b4d50bf7fff37f99c5c0f8c425660843b7b",
+    "sources/w12-visprite-a-material-init/init.cpp": "9230970fa4a1683550caf9d5ece69f682fe42389fd194a00c7b6963eb241d7a0",
+    "sources/w12-visprite-a-material-set-dither/set_dither.cpp": "f1f505cb40e7ab501b5fe435484bbdc2e7cffe75999ace32cce334e96fe878e3",
+    "sources/w12-visprite-a-material-set-layer-fill-type/set_layer_fill_type.cpp": "74eea721d0f753b8cb010e1ace804e828cafbef4497d11f4c84cbffbc2687eb8",
+    "sources/w12-visprite-a-material-set-layer-modulate/set_layer_modulate.cpp": "0c1d751e39bec2a88a7bd58b35a5f61bddf3df0146569e3be96b6cea0b50d9e4",
+    "sources/w12-visprite-a-material-set-layer-texture-lod-bias/set_layer_texture_lod_bias.cpp": "4963b07b251ade9562cd010a61a2e3e25964db9545f189418ecbd8cb36250640",
+    "sources/w12-visprite-a-material-set-z-test/set_z_test.cpp": "8de105632aa620f29adb0c95bb6c3b15e633e6ad555692e3bb4969d293bbf8e0",
+    "sources/w12-visprite-a-material-set-z-write/set_z_write.cpp": "15c17966597e7eb6a59e2bec5ff068aac8d942b37a4c196a836b7ba51604c576",
+    "sources/w12-visprite-a-particlesystem-release-all-definitions/release_all.cpp": "dfd6612db524e74619c62af3f868ccb60174ce6890b813bc849893dcad9e5276",
+    "sources/w12-visprite-a-raster-begin-billboards/begin_billboards.cpp": "e1ed24f81c145c134c6086eb32fd6dca6bde1a7c08a81e076ede673aa0e7af27",
+    "sources/w12-visprite-a-raster-draw-centered-string/draw_centered_string.cpp": "16fa77ed440e6752c0761fbe7b31665c45f28949d077c88e62c25124c591f3b7",
+    "sources/w12-visprite-a-raster-end-billboards/end_billboards.cpp": "b8b956ac9978c048e3d56100bacae3cc5e2405fd6af3d8798783fbc220d6307c",
+    "sources/w12-visprite-a-raster-set-fog/set_fog.cpp": "6d3f08ef02b6d60baa97c2a534043fc8b674664b0018af30bc0371f0986031a7",
+    "sources/w12-visprite-a-spell-effect-delete-playback/delete_playback.cpp": "6ce960741037c1a07d6511a4bd15209be2878d48368bd937087046b349d32d8e",
+    "sources/w12-visprite-a-spell-effect-driver-process/process.cpp": "9489f383259b6deed41e3e1c83f8d50bdbdfa8024bbe54ef77e6e882317da8b8",
+    "sources/w12-visprite-a-spell-effect-first-playback/first_playback.cpp": "8f076e8dd63f85995ba9bca75d77e755741ec13febb9f8e32b19800b3039d65e",
+    "sources/w12-visprite-a-spell-effect-next-playback/next_playback.cpp": "3f2db4eace73373883c71d0191b93a6a2cff68a608d1c306af9a6d660cd4bbc4",
+    "sources/w12-visprite-a-spell-effect-playback/playback.cpp": "06f6916f458901bc95315db2b9055db75f3ced7daad213e28f5dcba4cb2e7410",
+    "sources/w12-visprite-a-spell-effect-release-all/release_all.cpp": "90614a57f2cb30b33f001159d4e911c726b0d84cbe16b89a64bbca814daa67b3",
+    "sources/w12-visprite-a-spell-effect-stop/stop.cpp": "5a1f127a049493ff10b6dd6482ce24d79a5ed4410713666177671703af0abfc6",
+    "sources/w12-visprite-a-trailfx-active-list/active_list.cpp": "1b4cac57e6bb1d4e99a974f7d126f01abcd18511bf498f7789c0aa02b1c5f287",
+    "sources/w12-visprite-a-trailfx-render/render.cpp": "e712dadd9ad9a1aba327af0990ea8763b9b35b92144eebf32b59edcc7394c4b0",
+    "sources/w12-visprite-a-trailfx-update/update.cpp": "8d2965dc91b8a709a5fd729eaae82150f14c9cc85bb1cb5773f2ad57e9ee596b",
     "sources/w12-visprite-b-actor-dtor/dtor.cpp": "a4ce48724ee0c25f976b24ea6f6b21b2f64f2c7ed32081cbd9266d35f3e077c4",
     "sources/w12-visprite-b-csprite-ctor/ctor.cpp": "68f5380524f1a89e66fa91b4b192d54cc641976f8779319cdfe710d5a0bc4986",
     "sources/w12-visprite-b-flora-sprite-ctor/ctor.cpp": "d4b6f8ad052a186d43085493c3c846d6a2dc53fa0cf5c107d4951c51c2518440",
@@ -79164,6 +79187,354 @@
           "name": "SetPretranslations__6VIZoneR8VIRasterR8VICamera"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5411,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_hspriteanim_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "d7a427b174e7bdee75cea2a113ad0b4d50bf7fff37f99c5c0f8c425660843b7b",
+      "source": "sources/w12-visprite-a-hspriteanim-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "Clear__13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5412,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_init.o",
+      "profile": "authored_cpp",
+      "sha256": "9230970fa4a1683550caf9d5ece69f682fe42389fd194a00c7b6963eb241d7a0",
+      "source": "sources/w12-visprite-a-material-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "Init__10VIMateriali"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5413,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_dither.o",
+      "profile": "authored_cpp",
+      "sha256": "f1f505cb40e7ab501b5fe435484bbdc2e7cffe75999ace32cce334e96fe878e3",
+      "source": "sources/w12-visprite-a-material-set-dither/set_dither.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "SetDither__10VIMateriali"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5414,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_layer_fill_type.o",
+      "profile": "authored_cpp",
+      "sha256": "74eea721d0f753b8cb010e1ace804e828cafbef4497d11f4c84cbffbc2687eb8",
+      "source": "sources/w12-visprite-a-material-set-layer-fill-type/set_layer_fill_type.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "SetLayerFillType__10VIMateriali18VIMaterialFillType"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5415,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_layer_modulate.o",
+      "profile": "authored_cpp",
+      "sha256": "0c1d751e39bec2a88a7bd58b35a5f61bddf3df0146569e3be96b6cea0b50d9e4",
+      "source": "sources/w12-visprite-a-material-set-layer-modulate/set_layer_modulate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "SetLayerModulate__10VIMaterialii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5416,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_layer_texture_lod_bias.o",
+      "profile": "authored_cpp",
+      "sha256": "4963b07b251ade9562cd010a61a2e3e25964db9545f189418ecbd8cb36250640",
+      "source": "sources/w12-visprite-a-material-set-layer-texture-lod-bias/set_layer_texture_lod_bias.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "SetLayerTextureLODBias__10VIMaterialif"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5417,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_z_test.o",
+      "profile": "authored_cpp",
+      "sha256": "8de105632aa620f29adb0c95bb6c3b15e633e6ad555692e3bb4969d293bbf8e0",
+      "source": "sources/w12-visprite-a-material-set-z-test/set_z_test.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "SetZTest__10VIMateriali"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5418,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_material_set_z_write.o",
+      "profile": "authored_cpp",
+      "sha256": "15c17966597e7eb6a59e2bec5ff068aac8d942b37a4c196a836b7ba51604c576",
+      "source": "sources/w12-visprite-a-material-set-z-write/set_z_write.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "SetZWrite__10VIMateriali"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5419,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_particlesystem_release_all_definitions.o",
+      "profile": "authored_cpp",
+      "sha256": "dfd6612db524e74619c62af3f868ccb60174ce6890b813bc849893dcad9e5276",
+      "source": "sources/w12-visprite-a-particlesystem-release-all-definitions/release_all.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 124,
+          "name": "ReleaseAllParticleDefinitions__16VIParticleSystemR12VIDictionary"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5420,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_raster_begin_billboards.o",
+      "profile": "authored_cpp",
+      "sha256": "e1ed24f81c145c134c6086eb32fd6dca6bde1a7c08a81e076ede673aa0e7af27",
+      "source": "sources/w12-visprite-a-raster-begin-billboards/begin_billboards.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 888,
+          "name": "BeginBillboards__8VIRasterPP11VIBillboardi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5421,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_raster_draw_centered_string.o",
+      "profile": "authored_cpp",
+      "sha256": "16fa77ed440e6752c0761fbe7b31665c45f28949d077c88e62c25124c591f3b7",
+      "source": "sources/w12-visprite-a-raster-draw-centered-string/draw_centered_string.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1140,
+          "name": "DrawCenteredString__8VIRasteriRC7VIVect3RC10VIColor32FPCc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5422,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_raster_end_billboards.o",
+      "profile": "authored_cpp",
+      "sha256": "b8b956ac9978c048e3d56100bacae3cc5e2405fd6af3d8798783fbc220d6307c",
+      "source": "sources/w12-visprite-a-raster-end-billboards/end_billboards.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "EndBillboards__8VIRaster"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5423,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_raster_set_fog.o",
+      "profile": "authored_cpp",
+      "sha256": "6d3f08ef02b6d60baa97c2a534043fc8b674664b0018af30bc0371f0986031a7",
+      "source": "sources/w12-visprite-a-raster-set-fog/set_fog.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 172,
+          "name": "SetFog__8VIRasteriffRC10VIColor32F"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5424,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_delete_playback.o",
+      "profile": "authored_cpp",
+      "sha256": "6ce960741037c1a07d6511a4bd15209be2878d48368bd937087046b349d32d8e",
+      "source": "sources/w12-visprite-a-spell-effect-delete-playback/delete_playback.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "DeletePlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5425,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_driver_process.o",
+      "profile": "authored_cpp",
+      "sha256": "9489f383259b6deed41e3e1c83f8d50bdbdfa8024bbe54ef77e6e882317da8b8",
+      "source": "sources/w12-visprite-a-spell-effect-driver-process/process.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "Process__19VISpellEffectDriver"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5426,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_first_playback.o",
+      "profile": "authored_cpp",
+      "sha256": "8f076e8dd63f85995ba9bca75d77e755741ec13febb9f8e32b19800b3039d65e",
+      "source": "sources/w12-visprite-a-spell-effect-first-playback/first_playback.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "FirstPlayback__19VISpellEffectSystem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5427,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_next_playback.o",
+      "profile": "authored_cpp",
+      "sha256": "3f2db4eace73373883c71d0191b93a6a2cff68a608d1c306af9a6d660cd4bbc4",
+      "source": "sources/w12-visprite-a-spell-effect-next-playback/next_playback.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "NextPlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5428,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_playback.o",
+      "profile": "authored_cpp",
+      "sha256": "06f6916f458901bc95315db2b9055db75f3ced7daad213e28f5dcba4cb2e7410",
+      "source": "sources/w12-visprite-a-spell-effect-playback/playback.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 108,
+          "name": "Playback__19VISpellEffectSystemi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5429,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_release_all.o",
+      "profile": "authored_cpp",
+      "sha256": "90614a57f2cb30b33f001159d4e911c726b0d84cbe16b89a64bbca814daa67b3",
+      "source": "sources/w12-visprite-a-spell-effect-release-all/release_all.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "ReleaseAllSpellEffects__19VISpellEffectSystemR12VIDictionary"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5430,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_spell_effect_stop.o",
+      "profile": "authored_cpp",
+      "sha256": "5a1f127a049493ff10b6dd6482ce24d79a5ed4410713666177671703af0abfc6",
+      "source": "sources/w12-visprite-a-spell-effect-stop/stop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "Stop__19VISpellEffectSystemi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5431,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_trailfx_active_list.o",
+      "profile": "authored_cpp",
+      "sha256": "1b4cac57e6bb1d4e99a974f7d126f01abcd18511bf498f7789c0aa02b1c5f287",
+      "source": "sources/w12-visprite-a-trailfx-active-list/active_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5432,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_trailfx_render.o",
+      "profile": "authored_cpp",
+      "sha256": "e712dadd9ad9a1aba327af0990ea8763b9b35b92144eebf32b59edcc7394c4b0",
+      "source": "sources/w12-visprite-a-trailfx-render/render.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 248,
+          "name": "Render__9VITrailFxR8VIRasterR8VICamera"
+        },
+        {
+          "compiled_body_bytes": 148,
+          "name": "emitPair"
+        },
+        {
+          "compiled_body_bytes": 356,
+          "name": "pass.constprop.0"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5433,
+      "kind": "independently_authored_source",
+      "object_name": "w12va_trailfx_update.o",
+      "profile": "authored_cpp",
+      "sha256": "8d2965dc91b8a709a5fd729eaae82150f14c9cc85bb1cb5773f2ad57e9ee596b",
+      "source": "sources/w12-visprite-a-trailfx-update/update.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "Update__9VITrailFxl"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -79263,7 +79634,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0013ee567a1e5a5a37f2996819f7351f9a92948d8824f4f5be9f7b7143727a36",
+  "snapshot_sha256": "c56bc969be3a21f01b88cb1622ed59a37f55965245be721c01271b212a13d60f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
