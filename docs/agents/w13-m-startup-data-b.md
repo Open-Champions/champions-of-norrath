@@ -100,6 +100,8 @@ Unit: `experimental/sources/w13-m-startup-data-b-sif-overlay-buffers/`.
 
 - Vtable `_vt$13WeatherFilter` (24 bytes, 3 slots, 2 named functions): unit `w13-m-startup-data-b-vt-weatherfilter`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
 
+- Vtable `_vt$5Spell` (48 bytes, 6 slots, 5 named functions): unit `w13-m-startup-data-b-vt-spell`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
+
 ## Imports opened by this package
 
 None so far.
