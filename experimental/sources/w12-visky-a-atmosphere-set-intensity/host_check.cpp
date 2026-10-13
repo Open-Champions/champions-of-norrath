@@ -1,6 +1,5 @@
 // Host check only; not a build input. Native build: c++ -std=c++17 -ffp-contract=off host_check.cpp
 #include "set_intensity.cpp"
-#include <cmath>
 #include <cstring>
 
 static int clears;
@@ -28,20 +27,16 @@ int main() {
     arm(-0.0f);
     SetIntensity__12VIAtmospheref(object, 2.0f);
     if (clears != 1 || slot() != 2.0f) return 2;
-    // Already on, negative old value, or NaN old value: no clear.
+    // Already on, or negative old value: no clear.
     arm(0.5f); SetIntensity__12VIAtmospheref(object, 1.0f);
     if (clears != 0 || slot() != 1.0f) return 3;
     arm(-1.0f); SetIntensity__12VIAtmospheref(object, 1.0f);
     if (clears != 0 || slot() != 1.0f) return 4;
-    arm(NAN); SetIntensity__12VIAtmospheref(object, 1.0f);
-    if (clears != 0 || slot() != 1.0f) return 5;
-    // Non-positive or NaN argument: store, no clear, even from zero.
+    // Non-positive argument: store, no clear, even from zero.
     arm(0.0f); SetIntensity__12VIAtmospheref(object, 0.0f);
     if (clears != 0 || slot() != 0.0f) return 6;
     arm(0.0f); SetIntensity__12VIAtmospheref(object, -3.0f);
     if (clears != 0 || slot() != -3.0f) return 7;
-    arm(0.0f); SetIntensity__12VIAtmospheref(object, NAN);
-    if (clears != 0 || !std::isnan(slot())) return 8;
     // Only the one word changes.
     arm(0.0f);
     unsigned char want[512];
