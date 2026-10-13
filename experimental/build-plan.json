@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3399,
+  "default_authored_inputs": 3434,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3902,6 +3902,43 @@
     "sources/w9-rtti-vtables-entities-b-save-10doorsecret/save.cpp": "5b3269e315379a11fe42540a733a6074b0dbf6538ddc2453aa44d31e2d699c69",
     "sources/w9-rtti-vtables-entities-b-save-11floorswitch/save.cpp": "d776254128c163a356ae7bd9382f19c55f8e5c8546e1c61d3f7b9b2e455ff1b6",
     "sources/w9-rtti-vtables-entities-b-save-13autocontainer/save.cpp": "99362353c3d383308a7ccd28b3d1e138dbe9f9dea9bbb0a8f2b8e7cf136e5c81",
+    "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp": "7ab77f72720c6a549323b5e1a46692c42d4a946022c8ac4eea044874481ded7d",
+    "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp": "556763e6f4f8ec64568891ba6a0b17e82afd951769d80242952398c32ac357e7",
+    "sources/w9-rtti-vtables-entities-c-cat-sub-turn-animation/sub_turn.cpp": "46e14340cc6757d758ff763c3c623b668caf490540ca25b7694286ac170d423f",
+    "sources/w9-rtti-vtables-entities-c-cat-switch-to-walk/switch_to_walk.cpp": "c3615679d8c5640577484bb0c7b721180a0c3ccb48d966a6bf7b5fd177042c01",
+    "sources/w9-rtti-vtables-entities-c-construct-auto-object/construct.cpp": "b6a9d5b88e38267bb7eb01b6a4efb46e26e2b7b6b9896aa08574e05a22f1fa0d",
+    "sources/w9-rtti-vtables-entities-c-critter-set-state/set_state.cpp": "9267ec5197740f1ca60e6cb0efe158ecd69310f06a6bb76b9d3f9ec68aaa8f92",
+    "sources/w9-rtti-vtables-entities-c-critter-specific-init/specific_init.cpp": "4352e5375a517cf5866e5c856980ffb073c675760d0259833c8ce65d2aaea138",
+    "sources/w9-rtti-vtables-entities-c-goblin-set-weapons/set_weapons.cpp": "76bac7113c39e44267d6acd9bfd1aa19ffaca58852e61c6bc5ea443b091afb5d",
+    "sources/w9-rtti-vtables-entities-c-lava-monster-get-model/get_model.cpp": "38cff7b735bb3869f261e5fc3ab7408b6d530c38b613a90516a8fd9d4a1453cd",
+    "sources/w9-rtti-vtables-entities-c-male-dark-elf-init-type/init_type.cpp": "07702c497b460196baf8b30ac53830ecc59d8e27856b48caa9cea62306477e9a",
+    "sources/w9-rtti-vtables-entities-c-male-dark-elf-set-state/set_state.cpp": "3fb5653b3595a87f788c6c03300404a429fc5d286d0f797338fcd14546d5a4cd",
+    "sources/w9-rtti-vtables-entities-c-mummy-init-type/init_type.cpp": "b1b6c6a481d125b51469e6df9db85e8b67b85a27184d4c283d3143e736a70953",
+    "sources/w9-rtti-vtables-entities-c-mummy-set-state/set_state.cpp": "ba3debbff189535e1ed5848439e572ba0bc4cdbcec1eadcc5df146be1409051d",
+    "sources/w9-rtti-vtables-entities-c-mummy-set-weapon/set_weapon.cpp": "f2db4d8d2f1301d9554ec5ad6256079daa49955c41ebc4f388a53c3a6e768fdf",
+    "sources/w9-rtti-vtables-entities-c-orc-init-type/init_type.cpp": "8001c7849c19590a6da05453d3a0e8194f5b44fa4227846c5b6c8df4cc7774b0",
+    "sources/w9-rtti-vtables-entities-c-orc-set-weapon/set_weapon.cpp": "a17eb68b78897ac0ff48a479db9561d832900d4ffdadc14d6bfda3565e3eb329",
+    "sources/w9-rtti-vtables-entities-c-passable-goth-trap/passable.cpp": "b7e8787dc44351c5e8b4eaecf982a6d6da21eee88f76af2d9dca143933533d71",
+    "sources/w9-rtti-vtables-entities-c-passable-hack-door/passable.cpp": "e5f8c0eba89a3ee8637c74718c9c78fe26dfcd10a1357ac2c0106177adfff022",
+    "sources/w9-rtti-vtables-entities-c-passable-hate-bridge/passable.cpp": "e92c9aa9a116743ce16cbfc798ca7bc8a15dbae7a220dfe5522f80d2069e0d72",
+    "sources/w9-rtti-vtables-entities-c-rtti-ptr/rtti_ptr.cpp": "df8c45c1161c83dd3a98eafed7c6a57410113121fd6d810d7bfd979511aa1129",
+    "sources/w9-rtti-vtables-entities-c-save-auto-chest/save.cpp": "cc652f65f6891c972caf20559a6019285a19db6f1393f0f14986aa39614a29c1",
+    "sources/w9-rtti-vtables-entities-c-save-auto-prop/save.cpp": "ef0e4f635432e1d64598411d01d09c86ab6c30387eec4b2d83dd18485585c705",
+    "sources/w9-rtti-vtables-entities-c-save-door-swing/save.cpp": "c403465c4712d54a44a0f31c7b50589dde3457a0bc7b27d1e9f20d09d207f2c5",
+    "sources/w9-rtti-vtables-entities-c-save-trigger/save.cpp": "6034462f436483d890a36d33e797e416e0eac30642c99ba7b7406831d3c789a5",
+    "sources/w9-rtti-vtables-entities-c-skeleton-init-type/init_type.cpp": "866a07c993eedb0c1f2d008465ae710d53a1916824f20c8beafc1cbb7fe366b8",
+    "sources/w9-rtti-vtables-entities-c-skeleton-set-state/set_state.cpp": "a6d4722fb31f9fa74749fea66607c2484fd34597b8014268725c0188fb875a1b",
+    "sources/w9-rtti-vtables-entities-c-skelight-init-weapon/init_weapon.cpp": "1741cedd0998c9ab61a6a6a3e90c86ecfd7873585884f7504ae3610c45e7a6ad",
+    "sources/w9-rtti-vtables-entities-c-skelight-set-state/set_state.cpp": "461a50aa661db9f5723d2c82b0b42eec08e6ad292860f0433b7efaa6339ebc85",
+    "sources/w9-rtti-vtables-entities-c-soul-set-state/set_state.cpp": "23c0298685ccbfe9aff74060ff8c4db4021b30c758e1786aedfcf42a56ccad7e",
+    "sources/w9-rtti-vtables-entities-c-static-fire-init/init.cpp": "488c7c5ff82ab8b2740753045c50657ba097992e8849554053b7ad34f2ad99f8",
+    "sources/w9-rtti-vtables-entities-c-teleporter-set-state/set_state.cpp": "5652b0545d94423f79f08837682f0dffd91cc804e6faef320b3218825afbfbc3",
+    "sources/w9-rtti-vtables-entities-c-ti-ph-prop/storage.cpp": "a5d881ca9b98ce7c7e3fc3dc026fdc623336140c9dd1fe283c0ba2f68e50a0c0",
+    "sources/w9-rtti-vtables-entities-c-trigger-door-secret/trigger.cpp": "10d0812d2dc581d8444aad1f4b9eda47aa63a9eb230517307c74e16f3fb10606",
+    "sources/w9-rtti-vtables-entities-c-trigger-door-swing/trigger.cpp": "53314848ffcfb71b75d8f79ce082463ba75aa4fcaae72dcd1bdaa0a38fb67114",
+    "sources/w9-rtti-vtables-entities-c-trigger-missile-trap/trigger.cpp": "5260c2a4600bee0b9e4b15230d3ae4c9708da5da3adf9bd549549efeaf19bb6e",
+    "sources/w9-rtti-vtables-entities-c-wood-elf-init-type/init_type.cpp": "020b5f7e7ab375bf26e68eff3fbba1a73d6918d21f59059129d72adeeb174fb8",
+    "sources/w9-rtti-vtables-entities-c-wood-elf-set-state/set_state.cpp": "e355de427403f9ea6ea196326853c64d0c408bb665e1c4a9eb63c5ef8d92e669",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
     "sources/w9-startup-crt-a-animation-state-copy-ctor/animation_state_copy_ctor.cpp": "e1c3c2152f5e431ce8b01656efb9289a9e3d065a10d4ad9ba4e9a5771dae5fb8",
@@ -47835,6 +47872,592 @@
           "compiled_body_bytes": 32
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3401,
+      "kind": "independently_authored_source",
+      "object_name": "sub_turn.o",
+      "profile": "authored_cpp",
+      "sha256": "46e14340cc6757d758ff763c3c623b668caf490540ca25b7694286ac170d423f",
+      "source": "sources/w9-rtti-vtables-entities-c-cat-sub-turn-animation/sub_turn.cpp",
+      "emitted_functions": [
+        {
+          "name": "subTurnAnimation__3Cat",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3402,
+      "kind": "independently_authored_source",
+      "object_name": "switch_to_walk.o",
+      "profile": "authored_cpp",
+      "sha256": "c3615679d8c5640577484bb0c7b721180a0c3ccb48d966a6bf7b5fd177042c01",
+      "source": "sources/w9-rtti-vtables-entities-c-cat-switch-to-walk/switch_to_walk.cpp",
+      "emitted_functions": [
+        {
+          "name": "switchToWalk__3Cat",
+          "compiled_body_bytes": 488
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3403,
+      "kind": "independently_authored_source",
+      "object_name": "construct.o",
+      "profile": "authored_cpp",
+      "sha256": "b6a9d5b88e38267bb7eb01b6a4efb46e26e2b7b6b9896aa08574e05a22f1fa0d",
+      "source": "sources/w9-rtti-vtables-entities-c-construct-auto-object/construct.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_construct_AutoObject",
+          "compiled_body_bytes": 2192
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3404,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "9267ec5197740f1ca60e6cb0efe158ecd69310f06a6bb76b9d3f9ec68aaa8f92",
+      "source": "sources/w9-rtti-vtables-entities-c-critter-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__7Critteri",
+          "compiled_body_bytes": 1636
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3405,
+      "kind": "independently_authored_source",
+      "object_name": "specific_init.o",
+      "profile": "authored_cpp",
+      "sha256": "4352e5375a517cf5866e5c856980ffb073c675760d0259833c8ce65d2aaea138",
+      "source": "sources/w9-rtti-vtables-entities-c-critter-specific-init/specific_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "specificInit__7CritterPcT1",
+          "compiled_body_bytes": 2984
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3406,
+      "kind": "independently_authored_source",
+      "object_name": "set_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "76bac7113c39e44267d6acd9bfd1aa19ffaca58852e61c6bc5ea443b091afb5d",
+      "source": "sources/w9-rtti-vtables-entities-c-goblin-set-weapons/set_weapons.cpp",
+      "emitted_functions": [
+        {
+          "name": "setWeapons__6Goblin",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3407,
+      "kind": "independently_authored_source",
+      "object_name": "get_model.o",
+      "profile": "authored_cpp",
+      "sha256": "38cff7b735bb3869f261e5fc3ab7408b6d530c38b613a90516a8fd9d4a1453cd",
+      "source": "sources/w9-rtti-vtables-entities-c-lava-monster-get-model/get_model.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_lava_monster_get_model",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp",
+        "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp"
+      ],
+      "input_order": 3408,
+      "kind": "independently_authored_source",
+      "object_name": "init_type.o",
+      "profile": "authored_cpp",
+      "sha256": "07702c497b460196baf8b30ac53830ecc59d8e27856b48caa9cea62306477e9a",
+      "source": "sources/w9-rtti-vtables-entities-c-male-dark-elf-init-type/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_male_dark_elf_init_type",
+          "compiled_body_bytes": 1920
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3409,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "3fb5653b3595a87f788c6c03300404a429fc5d286d0f797338fcd14546d5a4cd",
+      "source": "sources/w9-rtti-vtables-entities-c-male-dark-elf-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_male_dark_elf_set_state",
+          "compiled_body_bytes": 4892
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp",
+        "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp"
+      ],
+      "input_order": 3410,
+      "kind": "independently_authored_source",
+      "object_name": "init_type.o",
+      "profile": "authored_cpp",
+      "sha256": "b1b6c6a481d125b51469e6df9db85e8b67b85a27184d4c283d3143e736a70953",
+      "source": "sources/w9-rtti-vtables-entities-c-mummy-init-type/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_mummy_init_type",
+          "compiled_body_bytes": 1512
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3411,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "ba3debbff189535e1ed5848439e572ba0bc4cdbcec1eadcc5df146be1409051d",
+      "source": "sources/w9-rtti-vtables-entities-c-mummy-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_mummy_set_state",
+          "compiled_body_bytes": 3480
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3412,
+      "kind": "independently_authored_source",
+      "object_name": "set_weapon.o",
+      "profile": "authored_cpp",
+      "sha256": "f2db4d8d2f1301d9554ec5ad6256079daa49955c41ebc4f388a53c3a6e768fdf",
+      "source": "sources/w9-rtti-vtables-entities-c-mummy-set-weapon/set_weapon.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_mummy_set_weapon",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp",
+        "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp"
+      ],
+      "input_order": 3413,
+      "kind": "independently_authored_source",
+      "object_name": "init_type.o",
+      "profile": "authored_cpp",
+      "sha256": "8001c7849c19590a6da05453d3a0e8194f5b44fa4227846c5b6c8df4cc7774b0",
+      "source": "sources/w9-rtti-vtables-entities-c-orc-init-type/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_orc_init_type",
+          "compiled_body_bytes": 2200
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3414,
+      "kind": "independently_authored_source",
+      "object_name": "set_weapon.o",
+      "profile": "authored_cpp",
+      "sha256": "a17eb68b78897ac0ff48a479db9561d832900d4ffdadc14d6bfda3565e3eb329",
+      "source": "sources/w9-rtti-vtables-entities-c-orc-set-weapon/set_weapon.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_orc_set_weapon",
+          "compiled_body_bytes": 452
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3415,
+      "kind": "independently_authored_source",
+      "object_name": "passable.o",
+      "profile": "authored_cpp",
+      "sha256": "b7e8787dc44351c5e8b4eaecf982a6d6da21eee88f76af2d9dca143933533d71",
+      "source": "sources/w9-rtti-vtables-entities-c-passable-goth-trap/passable.cpp",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8GothTrapb",
+          "compiled_body_bytes": 504
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3416,
+      "kind": "independently_authored_source",
+      "object_name": "passable.o",
+      "profile": "authored_cpp",
+      "sha256": "e5f8c0eba89a3ee8637c74718c9c78fe26dfcd10a1357ac2c0106177adfff022",
+      "source": "sources/w9-rtti-vtables-entities-c-passable-hack-door/passable.cpp",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__8HackDoorb",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3417,
+      "kind": "independently_authored_source",
+      "object_name": "passable.o",
+      "profile": "authored_cpp",
+      "sha256": "e92c9aa9a116743ce16cbfc798ca7bc8a15dbae7a220dfe5522f80d2069e0d72",
+      "source": "sources/w9-rtti-vtables-entities-c-passable-hate-bridge/passable.cpp",
+      "emitted_functions": [
+        {
+          "name": "setPassableState__10HateBridgeb",
+          "compiled_body_bytes": 456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3418,
+      "kind": "independently_authored_source",
+      "object_name": "rtti_ptr.o",
+      "profile": "authored_cpp",
+      "sha256": "df8c45c1161c83dd3a98eafed7c6a57410113121fd6d810d7bfd979511aa1129",
+      "source": "sources/w9-rtti-vtables-entities-c-rtti-ptr/rtti_ptr.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_rtti_ptr",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3419,
+      "kind": "independently_authored_source",
+      "object_name": "save.o",
+      "profile": "authored_cpp",
+      "sha256": "cc652f65f6891c972caf20559a6019285a19db6f1393f0f14986aa39614a29c1",
+      "source": "sources/w9-rtti-vtables-entities-c-save-auto-chest/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9AutoChestPc",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3420,
+      "kind": "independently_authored_source",
+      "object_name": "save.o",
+      "profile": "authored_cpp",
+      "sha256": "ef0e4f635432e1d64598411d01d09c86ab6c30387eec4b2d83dd18485585c705",
+      "source": "sources/w9-rtti-vtables-entities-c-save-auto-prop/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__8AutoPropPc",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3421,
+      "kind": "independently_authored_source",
+      "object_name": "save.o",
+      "profile": "authored_cpp",
+      "sha256": "c403465c4712d54a44a0f31c7b50589dde3457a0bc7b27d1e9f20d09d207f2c5",
+      "source": "sources/w9-rtti-vtables-entities-c-save-door-swing/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__9DoorSwingPc",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3422,
+      "kind": "independently_authored_source",
+      "object_name": "save.o",
+      "profile": "authored_cpp",
+      "sha256": "6034462f436483d890a36d33e797e416e0eac30642c99ba7b7406831d3c789a5",
+      "source": "sources/w9-rtti-vtables-entities-c-save-trigger/save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__7TriggerPc",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp",
+        "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp"
+      ],
+      "input_order": 3423,
+      "kind": "independently_authored_source",
+      "object_name": "init_type.o",
+      "profile": "authored_cpp",
+      "sha256": "866a07c993eedb0c1f2d008465ae710d53a1916824f20c8beafc1cbb7fe366b8",
+      "source": "sources/w9-rtti-vtables-entities-c-skeleton-init-type/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_skeleton_init_type",
+          "compiled_body_bytes": 1488
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3424,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "a6d4722fb31f9fa74749fea66607c2484fd34597b8014268725c0188fb875a1b",
+      "source": "sources/w9-rtti-vtables-entities-c-skeleton-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_skeleton_set_state",
+          "compiled_body_bytes": 1900
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3425,
+      "kind": "independently_authored_source",
+      "object_name": "init_weapon.o",
+      "profile": "authored_cpp",
+      "sha256": "1741cedd0998c9ab61a6a6a3e90c86ecfd7873585884f7504ae3610c45e7a6ad",
+      "source": "sources/w9-rtti-vtables-entities-c-skelight-init-weapon/init_weapon.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_skelight_init_weapon",
+          "compiled_body_bytes": 476
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3426,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "461a50aa661db9f5723d2c82b0b42eec08e6ad292860f0433b7efaa6339ebc85",
+      "source": "sources/w9-rtti-vtables-entities-c-skelight-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_skelight_set_state",
+          "compiled_body_bytes": 780
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3427,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "23c0298685ccbfe9aff74060ff8c4db4021b30c758e1786aedfcf42a56ccad7e",
+      "source": "sources/w9-rtti-vtables-entities-c-soul-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_soul_set_state",
+          "compiled_body_bytes": 2256
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3428,
+      "kind": "independently_authored_source",
+      "object_name": "init.o",
+      "profile": "authored_cpp",
+      "sha256": "488c7c5ff82ab8b2740753045c50657ba097992e8849554053b7ad34f2ad99f8",
+      "source": "sources/w9-rtti-vtables-entities-c-static-fire-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_static_fire_init",
+          "compiled_body_bytes": 640
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3429,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "5652b0545d94423f79f08837682f0dffd91cc804e6faef320b3218825afbfbc3",
+      "source": "sources/w9-rtti-vtables-entities-c-teleporter-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__10Teleporteri",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3430,
+      "kind": "independently_authored_source",
+      "object_name": "storage.o",
+      "profile": "authored_cpp",
+      "sha256": "a5d881ca9b98ce7c7e3fc3dc026fdc623336140c9dd1fe283c0ba2f68e50a0c0",
+      "source": "sources/w9-rtti-vtables-entities-c-ti-ph-prop/storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3431,
+      "kind": "independently_authored_source",
+      "object_name": "trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "10d0812d2dc581d8444aad1f4b9eda47aa63a9eb230517307c74e16f3fb10606",
+      "source": "sources/w9-rtti-vtables-entities-c-trigger-door-secret/trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__10DoorSecreti",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3432,
+      "kind": "independently_authored_source",
+      "object_name": "trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "53314848ffcfb71b75d8f79ce082463ba75aa4fcaae72dcd1bdaa0a38fb67114",
+      "source": "sources/w9-rtti-vtables-entities-c-trigger-door-swing/trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__9DoorSwingi",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3433,
+      "kind": "independently_authored_source",
+      "object_name": "trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "5260c2a4600bee0b9e4b15230d3ae4c9708da5da3adf9bd549549efeaf19bb6e",
+      "source": "sources/w9-rtti-vtables-entities-c-trigger-missile-trap/trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__11MissileTrapi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3434,
+      "kind": "independently_authored_source",
+      "object_name": "init_type.o",
+      "profile": "authored_cpp",
+      "sha256": "020b5f7e7ab375bf26e68eff3fbba1a73d6918d21f59059129d72adeeb174fb8",
+      "source": "sources/w9-rtti-vtables-entities-c-wood-elf-init-type/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_wood_elf_soldier_init_type",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 3435,
+      "kind": "independently_authored_source",
+      "object_name": "set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "e355de427403f9ea6ea196326853c64d0c408bb665e1c4a9eb63c5ef8d92e669",
+      "source": "sources/w9-rtti-vtables-entities-c-wood-elf-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_wood_elf_soldier_set_state",
+          "compiled_body_bytes": 4276
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -47934,7 +48557,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "d166dff46e4abd67634f6ed4d5958fcc3469c5c318c12266d8a2597678d9f90a",
+  "snapshot_sha256": "fc3c1811ddffa061c2e3ac00e7eb25db26ab70ee77c858a120db3f9e820ea247",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

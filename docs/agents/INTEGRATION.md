@@ -6658,6 +6658,53 @@ Opened: `FinalizePosition__5Wheel`, `__17VehicleBodySphereP7Vehicleff`, `_vt$4Bo
 `setMassAndIBody__7Vehicle`, `slideDustParticle`, `slideDustParticleBig`,
 `slideDustParticleBigDark`, `slideDustParticleDark`, `sqrt`
 
+## agents/w9-rtti-vtables-entities-c
+
+Merged (the branch notes carry the five summary sections; the tip was 35
+minutes old, so this is the tip at that time). Thirty-five units with fresh
+`input_order` values 3401 through 3435: entity `setState`/`initType` style
+functions and one storage unit (`ti-ph-prop`) that emits no function. All 35
+host checks build and exit 0 here (35 of 35). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed. 2484
+function bodies, 3434 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1324 |
+| After | 1308 |
+| Closed | 35 |
+| Opened | 19 |
+
+Closed: `msg_save__7TriggerPc`, `msg_save__8AutoPropPc`, `msg_save__9AutoChestPc`,
+`msg_save__9DoorSwingPc`, `msg_trigger__10DoorSecreti`,
+`msg_trigger__11MissileTrapi`, `msg_trigger__9DoorSwingi`,
+`norrath_construct_AutoObject`, `norrath_lava_monster_get_model`,
+`norrath_male_dark_elf_init_type`, `norrath_male_dark_elf_set_state`,
+`norrath_mummy_init_type`, `norrath_mummy_set_state`,
+`norrath_mummy_set_weapon`, `norrath_orc_init_type`,
+`norrath_orc_set_weapon`, `norrath_rtti_ptr`, `norrath_skeleton_init_type`,
+`norrath_skeleton_set_state`, `norrath_skelight_init_weapon`,
+`norrath_skelight_set_state`, `norrath_soul_set_state`,
+`norrath_static_fire_init`, `norrath_ti_6PhProp`,
+`norrath_wood_elf_soldier_init_type`, `norrath_wood_elf_soldier_set_state`,
+`setPassableState__10HateBridgeb`, `setPassableState__8GothTrapb`,
+`setPassableState__8HackDoorb`, `setState__10Teleporteri`,
+`setState__7Critteri`, `setWeapons__6Goblin`, `specificInit__7CritterPcT1`,
+`subTurnAnimation__3Cat`, `switchToWalk__3Cat`
+
+Opened: `__tf15SpellConeOfFire`, `addCommander__14WoodElfSoldier`,
+`bNextToEdge__14WoodElfSoldier`, `commanderValid__14WoodElfSoldier`,
+`dropItem__14WoodElfSoldieri`, `dropItem__8Skeletoni`,
+`dropItem__8Skelighti`, `dropTreasure__8CreatureG6Point3iffffffPc`,
+`dropWeapon__5Mummy`,
+`fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff`,
+`getSoulAttachMatrix__6MinionP8Matrix34`,
+`leaveCommander__14WoodElfSoldier`, `matInvert__FP8Matrix34T0`,
+`modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f`,
+`newWind__10StaticFirei`, `norrath_legacy_pointer_type_info_vtable_view`,
+`skeletonResMap`, `soulParticle`, `terminateSpell__8CreatureRC9type_info`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -7053,3 +7100,4 @@ and no startup stage has executed.
 - 2026-10-12 22:30 CDT — `agents/w9-rtti-vtables-entities-a` — 1344 unresolved imports
 - 2026-10-12 22:33 CDT — `agents/w9-rtti-vtables-entities-b` — 1318 unresolved imports
 - 2026-10-12 22:35 CDT — `agents/w9-vehicle` — 1324 unresolved imports
+- 2026-10-12 22:38 CDT — `agents/w9-rtti-vtables-entities-c` — 1308 unresolved imports
