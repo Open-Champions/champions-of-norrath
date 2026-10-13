@@ -7440,3 +7440,35 @@ Closed: `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`, `_raise_r`, `_sceFsIobS
 
 Opened: `_$_19__pointer_type_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__tf19__pointer_type_info`, `_free_r`, `_malloc_r`, `ee_retbuf_sel`, `rollover_counter`, `sceCbPoff_Gp`, `timer_handle`
 - 2026-10-13 00:56 CDT — `agents/w10-startup-b` — 1467 unresolved imports
+
+## agents/w10-startup-a
+
+Merged (merge commit, branch tip `aeced4f3`, 21 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). 26 units (23 functions, three data or view units) from the C
+runtime, libgcc, libm, C++ RTTI and kernel-call stubs, with fresh `input_order` values
+3603 through 3628 (the two external Newlib inputs keep their place, so authored inputs
+are 3627). Each has a `host_check.cpp`. 22 of the 26 build and exit 0 here (x86_64,
+`-ffp-contract=off`, `-Werror`). The other four (`deci2-call`, `get-memory-size`,
+`init-tlb-call`, `sleep-thread`) take `<executable> <address> <object> <symbol>` and compare
+the assembled stub with the original executable's bytes; this integration does not read
+the executable, so those four were compiled but **not run**, and the worker's statement
+that they match is unverified here. `w10-startup-a-throw` (`__throw`) was **not** selected:
+it has no host check at all (the notes say the exception-return builtins have no host
+equivalent), and the notes record that the authored version does not set v0 to the
+context at handler entry, so it is not a faithful function; its source stays in the
+snapshot, unselected. The worker's claim that `__throw` closes is therefore not reflected
+in the count. Compiled sizes are not image sizes and no byte match is claimed. The
+worker did not run a full build; this integration did: 3627 authored inputs, 2629
+function bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1467 |
+| After | 1454 |
+| Closed | 25 |
+| Opened | 12 |
+
+Closed: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `Exit`, `GetMemorySize`, `InitTLB32MB`, `SleepThread`, `_InitTLB`, `__cp_push_exception`, `__divdi3`, `__eh_alloc`, `__fixunsdfdi`, `__fpcmp_parts_d`, `__ieee754_sqrtf`, `__kernel_rem_pio2f`, `__make_dp`, `__make_fp`, `__moddi3`, `__new_handler`, `__pack_d`, `__ps2_klibinfo__`, `__rtti_user`, `__terminate_func`, `__unpack_d`, `__unpack_f`
+
+Opened: `KbmReaderThread`, `TLBInfo`, `_Exit`, `_SetTLBEntry`, `__cplus_type_matcher`, `__floatdidf`, `__get_eh_context`, `__get_eh_info`, `__pack_f`, `dptoul`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
