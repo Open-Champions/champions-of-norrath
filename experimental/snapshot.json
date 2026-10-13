@@ -32071,6 +32071,216 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-startup-crt-e-strticmp/strticmp.cpp"
+    },
+    {
+      "input_order": 2465,
+      "component": "w9-audio-anim-get-volume-scale",
+      "object_name": "anim_get_volume_scale.o",
+      "private_object_sha256": "4bd2900d0c27edb859117e343c7f05304dec25656d1992b6e5e37e6682c9adbc",
+      "emitted_functions": [
+        {
+          "name": "animGetVolumeScale__Fii",
+          "compiled_body_bytes": 352
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp"
+    },
+    {
+      "input_order": 2466,
+      "component": "w9-audio-get-global-dialog-dir",
+      "object_name": "get_global_dialog_dir.o",
+      "private_object_sha256": "24888d33029847431e8a18ada9e230ae9f3bf8abd137b4a4290f55b84676bd5c",
+      "emitted_functions": [
+        {
+          "name": "soundGetGlobalDialogDir__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp"
+    },
+    {
+      "input_order": 2467,
+      "component": "w9-audio-play-sound-for-dlg",
+      "object_name": "play_sound_for_dlg.o",
+      "private_object_sha256": "b83a544a4055503833f15d7abb93da23daa2476beeee8379210daeb2db677a31",
+      "emitted_functions": [
+        {
+          "name": "playSoundForDlg__FP9DlgPacket",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp"
+    },
+    {
+      "input_order": 2468,
+      "component": "w9-audio-run-stream-queing",
+      "object_name": "run_stream_queing.o",
+      "private_object_sha256": "2a76bd76cf1f7aebbb183dac2283fa9145f2720a0305e4fb4497592a39a3962b",
+      "emitted_functions": [
+        {
+          "name": "runStreamQueing__Fv",
+          "compiled_body_bytes": 1720
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-run-stream-queing/run_stream_queing.cpp"
+    },
+    {
+      "input_order": 2469,
+      "component": "w9-audio-sound-all-flags",
+      "object_name": "sound_all_flags.o",
+      "private_object_sha256": "1b465b61b347b537d2fb5ef136b31ce6b04514691d2099e80b019eb5e690c57d",
+      "emitted_functions": [
+        {
+          "name": "soundAllFlags__Fi",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-all-flags/sound_all_flags.cpp"
+    },
+    {
+      "input_order": 2470,
+      "component": "w9-audio-sound-change-sequence-volume",
+      "object_name": "sound_change_sequence_volume.o",
+      "private_object_sha256": "78320247712ee13dbe68e4a5997452d63320ba6d77e7d26b25762a132fdfa89b",
+      "emitted_functions": [
+        {
+          "name": "soundChangeSequenceVolume__Fif",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-change-sequence-volume/sound_change_sequence_volume.cpp"
+    },
+    {
+      "input_order": 2471,
+      "component": "w9-audio-sound-disable",
+      "object_name": "sound_disable.o",
+      "private_object_sha256": "96ff1204284eade61b4d80859f9aba44022bc39f59e95c8fcac2aba86fe69f15",
+      "emitted_functions": [
+        {
+          "name": "soundDisable__Ff",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-disable/sound_disable.cpp"
+    },
+    {
+      "input_order": 2472,
+      "component": "w9-audio-sound-make-persistant",
+      "object_name": "sound_make_persistant.o",
+      "private_object_sha256": "b085c5066aa50656dfb04dc43efb5ddf22a139d3e70b29be74bb03b39a37faee",
+      "emitted_functions": [
+        {
+          "name": "soundMakePersistant__Fi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-make-persistant/sound_make_persistant.cpp"
+    },
+    {
+      "input_order": 2473,
+      "component": "w9-audio-sound-quiet",
+      "object_name": "sound_quiet.o",
+      "private_object_sha256": "080101b5d21cd5bf452563e99a8d9f7c485af615b196e87663a2450bf4a6f43f",
+      "emitted_functions": [
+        {
+          "name": "soundQuiet__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-quiet/sound_quiet.cpp"
+    },
+    {
+      "input_order": 2474,
+      "component": "w9-audio-sound-really-all-flags",
+      "object_name": "sound_really_all_flags.o",
+      "private_object_sha256": "ca93cf4eebe3ffc7aa01d830cc8878a7c0e294534c022afc79375ce63b1dd328",
+      "emitted_functions": [
+        {
+          "name": "soundReallyAllFlags__Fi",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-really-all-flags/sound_really_all_flags.cpp"
+    },
+    {
+      "input_order": 2475,
+      "component": "w9-audio-sound-set-audio-effect",
+      "object_name": "sound_set_audio_effect.o",
+      "private_object_sha256": "fb1f636bcb366f38e6ea42d16d363a29b503021ae0a44edce5511f6e9002d8aa",
+      "emitted_functions": [
+        {
+          "name": "soundSetAudioEffect__Fiiiii",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-sound-set-audio-effect/sound_set_audio_effect.cpp"
+    },
+    {
+      "input_order": 2476,
+      "component": "w9-audio-start-dialog-stream",
+      "object_name": "start_dialog_stream.o",
+      "private_object_sha256": "ee22909339d3528bc5069bdd2c6bb1f8e2e604ff55b8531d65d704c9eac89e42",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__Fiii",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-start-dialog-stream/start_dialog_stream.cpp"
+    },
+    {
+      "input_order": 2477,
+      "component": "w9-audio-start-dlg-random",
+      "object_name": "start_dlg_random.o",
+      "private_object_sha256": "91929413d639f6b79863fa97d2492b1e587e158bd09c73f6670234eb0e0b5519",
+      "emitted_functions": [
+        {
+          "name": "startDlgRandom__FP9dialogDirPciT1i",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-start-dlg-random/start_dlg_random.cpp"
+    },
+    {
+      "input_order": 2478,
+      "component": "w9-audio-start-global-dialog-stream-random",
+      "object_name": "start_global_dialog_stream_random.o",
+      "private_object_sha256": "b8b49b4c882e6ed7f3c6c391811508e068bbb37f68d8ed7dac397bd0f1dad0e9",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStreamRandom__FiPci",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp"
+    },
+    {
+      "input_order": 2479,
+      "component": "w9-audio-start-global-dialog-stream",
+      "object_name": "start_global_dialog_stream.o",
+      "private_object_sha256": "e3a409589ef1e744d6078c26aff684b6ad0819b639129312a6ce9e36d1eeb04a",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStream__FiPci",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp"
     }
   ],
   "drafts": [
@@ -37233,6 +37443,36 @@
     "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
     "sources/w8-startup-sce-d-special-handler/host_contract.cpp": "d6566ac3e477a4fb489261415520da5e43382b03a175f4beff9654fe388319ee",
     "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+    "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
+    "sources/w9-audio-anim-get-volume-scale/host_contract.cpp": "1ea4f0b473348b4f84eb8d40af71f65bb30ee6e6c579bdf62d0c1d853f160f20",
+    "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
+    "sources/w9-audio-get-global-dialog-dir/host_contract.cpp": "0a94b3700161b7a66977b26432187a38e2d5e6a69c2b0bb7eb33bbeda265da0a",
+    "sources/w9-audio-play-sound-for-dlg/host_contract.cpp": "6b88886e20f5e9dc897ef604aeabe2f922352f1ac5579929fec111365aced54a",
+    "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
+    "sources/w9-audio-run-stream-queing/host_contract.cpp": "930ee9d2f986449dfab08a407e551a08fa66966cfe7629072662977f8497f057",
+    "sources/w9-audio-run-stream-queing/run_stream_queing.cpp": "5f6fe3b660546aeb7f84a87f0763aebc05bd8d6cb846692b5e25260a97b84572",
+    "sources/w9-audio-sound-all-flags/host_contract.cpp": "749811c9239ce43164d522dca843dda9f83a8dc43190cfac014fcb64b074f64c",
+    "sources/w9-audio-sound-all-flags/sound_all_flags.cpp": "514faf7bfcb37868c16218db38e8e522fb033ba2b34ef84b6d55fd4c9c19883c",
+    "sources/w9-audio-sound-change-sequence-volume/host_contract.cpp": "8da3621c9a7ad3d5a525e7239b03c0d32155fcaa69b178ce446c6fd94e8dab13",
+    "sources/w9-audio-sound-change-sequence-volume/sound_change_sequence_volume.cpp": "77c8ce11c484c2052a3baad15051224db1e5802d49bb7cb4a48b56f0b226e39d",
+    "sources/w9-audio-sound-disable/host_contract.cpp": "2f2c1d0918cb6f71848653de78d00ddb44d269eece74b54b2e0f214a06ba2f05",
+    "sources/w9-audio-sound-disable/sound_disable.cpp": "4449053753eb387880a66565780715aed0b9abc5a4627b6f79649f4ecdb1b0d7",
+    "sources/w9-audio-sound-make-persistant/host_contract.cpp": "12361da8ed85368a31b7045d669d783f13f4d3ab173ff79abb867fed277de497",
+    "sources/w9-audio-sound-make-persistant/sound_make_persistant.cpp": "ae97d0f7df890c38822c881b662a5d52a2ab0c9d5f75a1ac6c089862bf643697",
+    "sources/w9-audio-sound-quiet/host_contract.cpp": "03b317c1c97f694174eb372607d8b54ce7c95f36c07e6d5b48b28b5f67c13e1f",
+    "sources/w9-audio-sound-quiet/sound_quiet.cpp": "79183b4c21d4bdc366c8ed4e79b3245a95a4197e6d6edfc434dd673535174477",
+    "sources/w9-audio-sound-really-all-flags/host_contract.cpp": "ae25afa621901a55c1f6bf330088b5a37c5281c09af47fb7ef20b188b13b5fad",
+    "sources/w9-audio-sound-really-all-flags/sound_really_all_flags.cpp": "01e3c730fa634458eac564be45db5110425b4c653f3b6a1978a9d29c78e70e22",
+    "sources/w9-audio-sound-set-audio-effect/host_contract.cpp": "7666774041d2f0e014f8373dbbb7575a81e89f29bcd5703154a595ad2c7443dc",
+    "sources/w9-audio-sound-set-audio-effect/sound_set_audio_effect.cpp": "8c445323ee37a97daa2913ce5a885d552ec19a31d565c0cf4fb9a8092e38b703",
+    "sources/w9-audio-start-dialog-stream/host_contract.cpp": "3fc4cfa27725a1c8b4d6ca21cd4bc31b950bcab12a425be2657fd8fe2f7813e8",
+    "sources/w9-audio-start-dialog-stream/start_dialog_stream.cpp": "e11ceaf9023339762e6f157b70ecf7e38e3e043a5d8a277bc74af8e71d58d530",
+    "sources/w9-audio-start-dlg-random/host_contract.cpp": "96e95bfb8114a31478757dd0635217000e7675f8524d6bbd0c2e4771b2647071",
+    "sources/w9-audio-start-dlg-random/start_dlg_random.cpp": "0300322a3e8055f3fd324b2173f7fa4e9dec91fc9cd1e59b0f45488c82587670",
+    "sources/w9-audio-start-global-dialog-stream-random/host_contract.cpp": "979266dbbb33fa28d59362e62413fc94a87bac377ea65908d4c16db33fdb31d9",
+    "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
+    "sources/w9-audio-start-global-dialog-stream/host_contract.cpp": "ead288c06a3995d5e9e5c2e9f9282d8606cd0117a5e5c4b7a09c4383b60de0c0",
+    "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/host_check.cpp": "06546ebfb0c21dfecfb70ac33f87993fe6717d18163a01776e59caafe96f7011",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
@@ -37940,11 +38180,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2465,
-    "authored_default_inputs": 2463,
+    "selected_inputs": 2480,
+    "authored_default_inputs": 2478,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2013,
-    "compiled_body_bytes_from_accepted_inputs": 847780,
+    "emitted_function_definitions_including_helpers": 2028,
+    "compiled_body_bytes_from_accepted_inputs": 853608,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -37957,7 +38197,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2152
+    "package_selected_inputs": 2167
   },
   "startup_implementations": [
     {
@@ -71988,6 +72228,261 @@
       ],
       "host_files": [
         "sources/w9-startup-crt-e-strticmp/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp",
+      "source_sha256": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
+      "object_sha256": "4bd2900d0c27edb859117e343c7f05304dec25656d1992b6e5e37e6682c9adbc",
+      "emitted_functions": [
+        {
+          "name": "animGetVolumeScale__Fii",
+          "compiled_body_bytes": 352
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-anim-get-volume-scale/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp",
+      "source_sha256": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
+      "object_sha256": "24888d33029847431e8a18ada9e230ae9f3bf8abd137b4a4290f55b84676bd5c",
+      "emitted_functions": [
+        {
+          "name": "soundGetGlobalDialogDir__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-get-global-dialog-dir/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp",
+      "source_sha256": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
+      "object_sha256": "b83a544a4055503833f15d7abb93da23daa2476beeee8379210daeb2db677a31",
+      "emitted_functions": [
+        {
+          "name": "playSoundForDlg__FP9DlgPacket",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-play-sound-for-dlg/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-run-stream-queing/run_stream_queing.cpp",
+      "source_sha256": "5f6fe3b660546aeb7f84a87f0763aebc05bd8d6cb846692b5e25260a97b84572",
+      "object_sha256": "2a76bd76cf1f7aebbb183dac2283fa9145f2720a0305e4fb4497592a39a3962b",
+      "emitted_functions": [
+        {
+          "name": "runStreamQueing__Fv",
+          "compiled_body_bytes": 1720
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-run-stream-queing/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-all-flags/sound_all_flags.cpp",
+      "source_sha256": "514faf7bfcb37868c16218db38e8e522fb033ba2b34ef84b6d55fd4c9c19883c",
+      "object_sha256": "1b465b61b347b537d2fb5ef136b31ce6b04514691d2099e80b019eb5e690c57d",
+      "emitted_functions": [
+        {
+          "name": "soundAllFlags__Fi",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-all-flags/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-change-sequence-volume/sound_change_sequence_volume.cpp",
+      "source_sha256": "77c8ce11c484c2052a3baad15051224db1e5802d49bb7cb4a48b56f0b226e39d",
+      "object_sha256": "78320247712ee13dbe68e4a5997452d63320ba6d77e7d26b25762a132fdfa89b",
+      "emitted_functions": [
+        {
+          "name": "soundChangeSequenceVolume__Fif",
+          "compiled_body_bytes": 540
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-change-sequence-volume/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-disable/sound_disable.cpp",
+      "source_sha256": "4449053753eb387880a66565780715aed0b9abc5a4627b6f79649f4ecdb1b0d7",
+      "object_sha256": "96ff1204284eade61b4d80859f9aba44022bc39f59e95c8fcac2aba86fe69f15",
+      "emitted_functions": [
+        {
+          "name": "soundDisable__Ff",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-disable/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-make-persistant/sound_make_persistant.cpp",
+      "source_sha256": "ae97d0f7df890c38822c881b662a5d52a2ab0c9d5f75a1ac6c089862bf643697",
+      "object_sha256": "b085c5066aa50656dfb04dc43efb5ddf22a139d3e70b29be74bb03b39a37faee",
+      "emitted_functions": [
+        {
+          "name": "soundMakePersistant__Fi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-make-persistant/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-quiet/sound_quiet.cpp",
+      "source_sha256": "79183b4c21d4bdc366c8ed4e79b3245a95a4197e6d6edfc434dd673535174477",
+      "object_sha256": "080101b5d21cd5bf452563e99a8d9f7c485af615b196e87663a2450bf4a6f43f",
+      "emitted_functions": [
+        {
+          "name": "soundQuiet__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-quiet/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-really-all-flags/sound_really_all_flags.cpp",
+      "source_sha256": "01e3c730fa634458eac564be45db5110425b4c653f3b6a1978a9d29c78e70e22",
+      "object_sha256": "ca93cf4eebe3ffc7aa01d830cc8878a7c0e294534c022afc79375ce63b1dd328",
+      "emitted_functions": [
+        {
+          "name": "soundReallyAllFlags__Fi",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-really-all-flags/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-sound-set-audio-effect/sound_set_audio_effect.cpp",
+      "source_sha256": "8c445323ee37a97daa2913ce5a885d552ec19a31d565c0cf4fb9a8092e38b703",
+      "object_sha256": "fb1f636bcb366f38e6ea42d16d363a29b503021ae0a44edce5511f6e9002d8aa",
+      "emitted_functions": [
+        {
+          "name": "soundSetAudioEffect__Fiiiii",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-sound-set-audio-effect/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-start-dialog-stream/start_dialog_stream.cpp",
+      "source_sha256": "e11ceaf9023339762e6f157b70ecf7e38e3e043a5d8a277bc74af8e71d58d530",
+      "object_sha256": "ee22909339d3528bc5069bdd2c6bb1f8e2e604ff55b8531d65d704c9eac89e42",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__Fiii",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-start-dialog-stream/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-start-dlg-random/start_dlg_random.cpp",
+      "source_sha256": "0300322a3e8055f3fd324b2173f7fa4e9dec91fc9cd1e59b0f45488c82587670",
+      "object_sha256": "91929413d639f6b79863fa97d2492b1e587e158bd09c73f6670234eb0e0b5519",
+      "emitted_functions": [
+        {
+          "name": "startDlgRandom__FP9dialogDirPciT1i",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-start-dlg-random/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp",
+      "source_sha256": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
+      "object_sha256": "b8b49b4c882e6ed7f3c6c391811508e068bbb37f68d8ed7dac397bd0f1dad0e9",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStreamRandom__FiPci",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-start-global-dialog-stream-random/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-audio",
+      "source": "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp",
+      "source_sha256": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
+      "object_sha256": "e3a409589ef1e744d6078c26aff684b6ad0819b639129312a6ce9e36d1eeb04a",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStream__FiPci",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w9-audio-start-global-dialog-stream/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

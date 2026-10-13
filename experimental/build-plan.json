@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2463,
+  "default_authored_inputs": 2478,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3064,6 +3064,21 @@
     "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
     "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
     "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+    "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
+    "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
+    "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
+    "sources/w9-audio-run-stream-queing/run_stream_queing.cpp": "5f6fe3b660546aeb7f84a87f0763aebc05bd8d6cb846692b5e25260a97b84572",
+    "sources/w9-audio-sound-all-flags/sound_all_flags.cpp": "514faf7bfcb37868c16218db38e8e522fb033ba2b34ef84b6d55fd4c9c19883c",
+    "sources/w9-audio-sound-change-sequence-volume/sound_change_sequence_volume.cpp": "77c8ce11c484c2052a3baad15051224db1e5802d49bb7cb4a48b56f0b226e39d",
+    "sources/w9-audio-sound-disable/sound_disable.cpp": "4449053753eb387880a66565780715aed0b9abc5a4627b6f79649f4ecdb1b0d7",
+    "sources/w9-audio-sound-make-persistant/sound_make_persistant.cpp": "ae97d0f7df890c38822c881b662a5d52a2ab0c9d5f75a1ac6c089862bf643697",
+    "sources/w9-audio-sound-quiet/sound_quiet.cpp": "79183b4c21d4bdc366c8ed4e79b3245a95a4197e6d6edfc434dd673535174477",
+    "sources/w9-audio-sound-really-all-flags/sound_really_all_flags.cpp": "01e3c730fa634458eac564be45db5110425b4c653f3b6a1978a9d29c78e70e22",
+    "sources/w9-audio-sound-set-audio-effect/sound_set_audio_effect.cpp": "8c445323ee37a97daa2913ce5a885d552ec19a31d565c0cf4fb9a8092e38b703",
+    "sources/w9-audio-start-dialog-stream/start_dialog_stream.cpp": "e11ceaf9023339762e6f157b70ecf7e38e3e043a5d8a277bc74af8e71d58d530",
+    "sources/w9-audio-start-dlg-random/start_dlg_random.cpp": "0300322a3e8055f3fd324b2173f7fa4e9dec91fc9cd1e59b0f45488c82587670",
+    "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
+    "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
     "sources/w9-startup-crt-a-animation-state-copy-ctor/animation_state_copy_ctor.cpp": "e1c3c2152f5e431ce8b01656efb9289a9e3d065a10d4ad9ba4e9a5771dae5fb8",
@@ -35220,6 +35235,231 @@
           "compiled_body_bytes": 104
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2465,
+      "kind": "independently_authored_source",
+      "object_name": "anim_get_volume_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
+      "source": "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "animGetVolumeScale__Fii",
+          "compiled_body_bytes": 352
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2466,
+      "kind": "independently_authored_source",
+      "object_name": "get_global_dialog_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
+      "source": "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundGetGlobalDialogDir__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2467,
+      "kind": "independently_authored_source",
+      "object_name": "play_sound_for_dlg.o",
+      "profile": "authored_cpp",
+      "sha256": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
+      "source": "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp",
+      "emitted_functions": [
+        {
+          "name": "playSoundForDlg__FP9DlgPacket",
+          "compiled_body_bytes": 508
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2468,
+      "kind": "independently_authored_source",
+      "object_name": "run_stream_queing.o",
+      "profile": "authored_cpp",
+      "sha256": "5f6fe3b660546aeb7f84a87f0763aebc05bd8d6cb846692b5e25260a97b84572",
+      "source": "sources/w9-audio-run-stream-queing/run_stream_queing.cpp",
+      "emitted_functions": [
+        {
+          "name": "runStreamQueing__Fv",
+          "compiled_body_bytes": 1720
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2469,
+      "kind": "independently_authored_source",
+      "object_name": "sound_all_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "514faf7bfcb37868c16218db38e8e522fb033ba2b34ef84b6d55fd4c9c19883c",
+      "source": "sources/w9-audio-sound-all-flags/sound_all_flags.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundAllFlags__Fi",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2470,
+      "kind": "independently_authored_source",
+      "object_name": "sound_change_sequence_volume.o",
+      "profile": "authored_cpp",
+      "sha256": "77c8ce11c484c2052a3baad15051224db1e5802d49bb7cb4a48b56f0b226e39d",
+      "source": "sources/w9-audio-sound-change-sequence-volume/sound_change_sequence_volume.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundChangeSequenceVolume__Fif",
+          "compiled_body_bytes": 540
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2471,
+      "kind": "independently_authored_source",
+      "object_name": "sound_disable.o",
+      "profile": "authored_cpp",
+      "sha256": "4449053753eb387880a66565780715aed0b9abc5a4627b6f79649f4ecdb1b0d7",
+      "source": "sources/w9-audio-sound-disable/sound_disable.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundDisable__Ff",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2472,
+      "kind": "independently_authored_source",
+      "object_name": "sound_make_persistant.o",
+      "profile": "authored_cpp",
+      "sha256": "ae97d0f7df890c38822c881b662a5d52a2ab0c9d5f75a1ac6c089862bf643697",
+      "source": "sources/w9-audio-sound-make-persistant/sound_make_persistant.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundMakePersistant__Fi",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2473,
+      "kind": "independently_authored_source",
+      "object_name": "sound_quiet.o",
+      "profile": "authored_cpp",
+      "sha256": "79183b4c21d4bdc366c8ed4e79b3245a95a4197e6d6edfc434dd673535174477",
+      "source": "sources/w9-audio-sound-quiet/sound_quiet.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundQuiet__Fv",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2474,
+      "kind": "independently_authored_source",
+      "object_name": "sound_really_all_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "01e3c730fa634458eac564be45db5110425b4c653f3b6a1978a9d29c78e70e22",
+      "source": "sources/w9-audio-sound-really-all-flags/sound_really_all_flags.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundReallyAllFlags__Fi",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2475,
+      "kind": "independently_authored_source",
+      "object_name": "sound_set_audio_effect.o",
+      "profile": "authored_cpp",
+      "sha256": "8c445323ee37a97daa2913ce5a885d552ec19a31d565c0cf4fb9a8092e38b703",
+      "source": "sources/w9-audio-sound-set-audio-effect/sound_set_audio_effect.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundSetAudioEffect__Fiiiii",
+          "compiled_body_bytes": 1176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2476,
+      "kind": "independently_authored_source",
+      "object_name": "start_dialog_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "e11ceaf9023339762e6f157b70ecf7e38e3e043a5d8a277bc74af8e71d58d530",
+      "source": "sources/w9-audio-start-dialog-stream/start_dialog_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartDialogStream__Fiii",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2477,
+      "kind": "independently_authored_source",
+      "object_name": "start_dlg_random.o",
+      "profile": "authored_cpp",
+      "sha256": "0300322a3e8055f3fd324b2173f7fa4e9dec91fc9cd1e59b0f45488c82587670",
+      "source": "sources/w9-audio-start-dlg-random/start_dlg_random.cpp",
+      "emitted_functions": [
+        {
+          "name": "startDlgRandom__FP9dialogDirPciT1i",
+          "compiled_body_bytes": 504
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2478,
+      "kind": "independently_authored_source",
+      "object_name": "start_global_dialog_stream_random.o",
+      "profile": "authored_cpp",
+      "sha256": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
+      "source": "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStreamRandom__FiPci",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2479,
+      "kind": "independently_authored_source",
+      "object_name": "start_global_dialog_stream.o",
+      "profile": "authored_cpp",
+      "sha256": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
+      "source": "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp",
+      "emitted_functions": [
+        {
+          "name": "soundStartGlobalDialogStream__FiPci",
+          "compiled_body_bytes": 120
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -35319,7 +35559,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3285d06bd18092bcd3763e54797f1849510fb6071b12602ce2536d7887ef8070",
+  "snapshot_sha256": "0479bda3759c4d3e458d17f265de1ff23a140162c2d6687952d4af3fe2890809",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

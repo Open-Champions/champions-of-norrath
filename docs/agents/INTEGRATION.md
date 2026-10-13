@@ -4806,6 +4806,33 @@ Opened: `__fixunsdfdi`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`,
 `sceGifPkCnt`, `sceGifPkOpenGifTag`, `sceGifPkRef`, `sceGifPkReserve`,
 `sifParamFname`
 
+## agents/w9-audio
+
+Merged (the branch notes carry the five summary sections). Fifteen function
+units with fresh `input_order` values 2465 through 2479. The worker's
+paired-run interpreter results are private and were not reproduced here; what
+I ran is the host contracts, all 15 of which build and exit 0 (15 of 15). The
+data symbols the notes list as unauthored stay open. No game binary or
+disassembly listing was committed. 2026 function bodies, 2478 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1484 |
+| After | 1473 |
+| Closed | 14 |
+| Opened | 3 |
+
+Closed: `animGetVolumeScale__Fii`, `playSoundForDlg__FP9DlgPacket`,
+`runStreamQueing__Fv`, `soundAllFlags__Fi`,
+`soundChangeSequenceVolume__Fif`, `soundDisable__Ff`,
+`soundGetGlobalDialogDir__Fv`, `soundMakePersistant__Fi`, `soundQuiet__Fv`,
+`soundReallyAllFlags__Fi`, `soundSetAudioEffect__Fiiiii`,
+`soundStartDialogStream__Fiii`, `soundStartGlobalDialogStreamRandom__FiPci`,
+`soundStartGlobalDialogStream__FiPci`
+
+Opened: `animLoadBuffer`, `effectModeSize`, `pitchTab`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5155,3 +5182,4 @@ and no startup stage has executed.
 - 2026-10-12 20:02 CDT — `agents/w9-startup-crt-a` — 1499 unresolved imports
 - 2026-10-12 20:05 CDT — `agents/w9-startup-crt-c` — 1496 unresolved imports
 - 2026-10-12 20:10 CDT — `agents/w9-startup-crt-e` — 1484 unresolved imports
+- 2026-10-12 20:16 CDT — `agents/w9-audio` — 1473 unresolved imports
