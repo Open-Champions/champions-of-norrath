@@ -24,9 +24,23 @@
 //      h202, h204, 8, description at +1032); turnToFaceEnemy; setState(3) unless +294 bit 3 is set.
 //   8: move2(zero); setState(3) unless +294 bit 4 is set.   9: w804 < t -> setState(3).
 //   10: move2(zero); +294 bit 7 -> objectRemoveFromRunList.
-//   13: casts a spell chosen by k (1, 3 or 5) and rolls; see the blocks below.
-//   15, 17: see the blocks below.
-//  3. Afterwards (cases 13 and 5.. only, see below) the shared tail runs.
+//   15: X bit 0 builds a DustDevil at the position; X bit 1 sets flag bit 41 and 0x800 in the 64-bit word,
+//      sets the word +12 bits 0..1, plays R[444], then returns to the home point (+776) when the distance
+//      to it exceeds float +788, or else calls RandomTeleportSpell(this, target position or null, 400),
+//      and builds a second DustDevil; without +294 bit 3 the bits are cleared again and setState(3) runs.
+//   17: w576 == 0 -> setState(0). Z(B + 40, 6000) -> setState(6), k == 4 and Z(100, 4000) -> setState(14),
+//      otherwise one roll in thirty with the target within 1.33 units of the remembered point at +1116 ->
+//      setState(3), else steerAndRouteToEnemy; the target position is then stored at +1116.
+//   13: move2(zero); with w576: halfwords 1048..1062 are set when X bit 0 or w1104 is non-zero; a point 300
+//      ahead along the heading is moved by findEnemyLeadPosition(this, 400); with X bit 0,
+//      ISeeDeadPeople(this, 300) may (on a roll under one half) call the other object's setState(16) and
+//      play "spel_he_heal.anm" of "fx.lmp"; otherwise k picks a spell and a roll chooses which: k = 1
+//      (sparks, fire storm or cone of fire), k = 3 (disease bolt, poison rain or disease shield), k = 5
+//      (shock of frost, frost storm, sparks or fire storm). The table entry at (word +72)+176 then runs
+//      with (0, T). Without w576 only the tail runs.
+//  3. Tail of state 13: unless t < w1108, w1104 is cleared and the SpellConeOfFire spell is terminated; then
+//     w256 > 0 counts down (and with w1112 < t and Z(72, 32767) ends the cone spell and calls setState(15)),
+//     otherwise the cone spell is ended and setState(3) runs.
 // The meaning of the states and fields is unknown. Nothing here ran on the EE.
 #include "../w10-actor-j-common/access.hpp"
 
