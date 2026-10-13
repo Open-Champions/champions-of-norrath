@@ -27,3 +27,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `find-empty-spot` | `objectFindEmptySpot__FG6Point3iiPc` | 0x13f2d0 | 1076 |
 | `slide-back` | `slideBack__8Creaturef` | 0x111490 | 920 |
 | `steer-and-route` | `steerAndRouteToPosition__8CreatureG6Point3` | 0x1102b8 | 1572 |
+| `spawn` | `spawn__FG6Point3iisPcbPPci` | 0x26a738 | 840 |
