@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5170,
+  "default_authored_inputs": 5200,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3986,6 +3986,36 @@
     "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-wnd-b-dnas-onkeyup/onkeyup.cpp": "9540bd627b710954caedfde7ab6d519de387acb829e8ce92c054f3274a0683fc",
+    "sources/w12-wnd-b-dnas-onmessage/onmessage.cpp": "c3ae8bc98a210a180adccf8611df9ccd4bbf1f0eebb6f12c2035c17ad5de9baf",
+    "sources/w12-wnd-b-edit-setdisplayrows/set_display_rows.cpp": "1f8ed5110a305f42a1924a04c23da7c7cc430883a35067cce23a9396d72ecc16",
+    "sources/w12-wnd-b-edit-setmaxtextlen/set_max_text_len.cpp": "4c2bf8a52ab79a27e93fbb4ec1600c3dd19345fd53928a3f570542bf3379ca1b",
+    "sources/w12-wnd-b-eula-onkeyup/onkeyup.cpp": "a1ab4f2907ee4d367c26aca122b3a50048823b35aeeab66c8cb4045882a8c1b6",
+    "sources/w12-wnd-b-eula-onmessage/onmessage.cpp": "1f5b29326b63d90b51e2afca3e7b637898de6c883a89605bef1f2267289d4130",
+    "sources/w12-wnd-b-genericrenderer-onmessage/onmessage.cpp": "2fbac09f63ae73c2d038839417c35f59b48894a53e3eacf221676fbcfb1bb386",
+    "sources/w12-wnd-b-legal-onmessage/onmessage.cpp": "f9d0d0bc86b97ae9f10f01366717d95872f81e69b5f605eba962076d26d6055d",
+    "sources/w12-wnd-b-options-battle-music-text/data.cpp": "800d9f2876d07eec808898e91c7e1a25a6eec297e71cf7df1d9210ebc557acce",
+    "sources/w12-wnd-b-patcher-onmessage/onmessage.cpp": "12c4e11dfba65e2caf488d3f260e8eb19691362601483f837cd838154cc2aa6e",
+    "sources/w12-wnd-b-set-ctor/ctor.cpp": "5dcf5186fc2c3aa3a8f7066745b53f7504fa6067c2035e242a0ac50912e6fbc8",
+    "sources/w12-wnd-b-set-dtor/dtor.cpp": "75a7f98098850277da26b6003351f854779ebbaef0d9fd17e30f16a33718884f",
+    "sources/w12-wnd-b-splash-onmessage/onmessage.cpp": "42c617aeebc5fd3747be802ebc4a185df7243f108c45c86ae21f52406c0b904e",
+    "sources/w12-wnd-b-tf-dnas/typeinfo.cpp": "66f03363a2d2105b250825cc7a5c8807c6e3c65468417ac12ab7f98972bc2ebc",
+    "sources/w12-wnd-b-tf-eula/typeinfo.cpp": "77551ded25b2d1e77545a836b36a292dab960fe60168da0d7c7a8fc5350a95a5",
+    "sources/w12-wnd-b-tf-genericrenderer/typeinfo.cpp": "9a1a8c744812a4d92ff2167a4fcc9404fe334870396e3c68a977c89be1ec76bd",
+    "sources/w12-wnd-b-tf-legal/typeinfo.cpp": "d1186baa5bed00c3ddc4f1b0a2723143d9c7647755bc5e480e65f7f31a346ba3",
+    "sources/w12-wnd-b-tf-patcher/typeinfo.cpp": "e1458100447c0dd482f028021283f013032e9c9273afc4ec9c1251e287f401c9",
+    "sources/w12-wnd-b-tf-splash/typeinfo.cpp": "f6604988b88270ad8f184853e7433fc0fe11c70788455f9d06dad042656e14dc",
+    "sources/w12-wnd-b-tf-windowmanager/typeinfo.cpp": "6517fdd8750bc84a88158d34324aeeaffefa30c4b78b1ed0af9954e7d6080ea8",
+    "sources/w12-wnd-b-tf-wnd/typeinfo.cpp": "9f6f7a0f8a7498abf36b35b5470d02a9efa99e039a1aa473b10f728c8bf1dff1",
+    "sources/w12-wnd-b-uiwindow-open/open.cpp": "291ea680b4f6ee3870c239b9d94e5bef6c450a7c4612af4e6f3256f58aa1863c",
+    "sources/w12-wnd-b-vt-connect/vtable.cpp": "3470d16b90ae4d232ef590a41e4a8d420012f934451b699b8ef71950d32e27e1",
+    "sources/w12-wnd-b-vt-edit/vtable.cpp": "09f42621d39a512cd5ff74935c2ee2f0ef9506826281047495b9e89719c19e39",
+    "sources/w12-wnd-b-vt-message/vtable.cpp": "e15a7f1f1834a3dfba7add86e7aeec7db2a31f4798c8a2199608287c16d49283",
+    "sources/w12-wnd-b-vt-options/vtable.cpp": "4da0bd312fa405debeaa01cc4c0c0f4f996ed4e8b2c8780830a3f0fa8b7cf04d",
+    "sources/w12-wnd-b-vt-readmessage/vtable.cpp": "e858c29cf1f0e90b63db950dd8ddd5aba341c245e4b58021afb5ece19203e81a",
+    "sources/w12-wnd-b-vt-wnd/vtable.cpp": "e7f1c42d8d09545f7438820944cbd814039775a9ed1888d8039f45bb084bac0a",
+    "sources/w12-wnd-b-wnd-onkeyup/onkeyup.cpp": "5c25e17a9b270a16383a58a6db2e3e791e516fe40ebc45b66ae3749274a91c2c",
+    "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp": "d10f92085f941ee49a2c97f3bf85e55bf2290d6048591393c0df6df69ed3ff93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -75589,6 +75619,421 @@
           "compiled_body_bytes": 1636
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5172,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_dnas_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "9540bd627b710954caedfde7ab6d519de387acb829e8ce92c054f3274a0683fc",
+      "source": "sources/w12-wnd-b-dnas-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "OnKeyUp__9VIWndDnasi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5173,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_dnas_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "c3ae8bc98a210a180adccf8611df9ccd4bbf1f0eebb6f12c2035c17ad5de9baf",
+      "source": "sources/w12-wnd-b-dnas-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 384,
+          "name": "OnMessage__9VIWndDnasP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5174,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_edit_setdisplayrows.o",
+      "profile": "authored_cpp",
+      "sha256": "1f8ed5110a305f42a1924a04c23da7c7cc430883a35067cce23a9396d72ecc16",
+      "source": "sources/w12-wnd-b-edit-setdisplayrows/set_display_rows.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "SetDisplayRows__9VIWndEditi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5175,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_edit_setmaxtextlen.o",
+      "profile": "authored_cpp",
+      "sha256": "4c2bf8a52ab79a27e93fbb4ec1600c3dd19345fd53928a3f570542bf3379ca1b",
+      "source": "sources/w12-wnd-b-edit-setmaxtextlen/set_max_text_len.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 204,
+          "name": "SetMaxTextLen__9VIWndEditi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5176,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_eula_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "a1ab4f2907ee4d367c26aca122b3a50048823b35aeeab66c8cb4045882a8c1b6",
+      "source": "sources/w12-wnd-b-eula-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "OnKeyUp__9VIWndEulai"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5177,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_eula_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "1f5b29326b63d90b51e2afca3e7b637898de6c883a89605bef1f2267289d4130",
+      "source": "sources/w12-wnd-b-eula-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "OnMessage__9VIWndEulaP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5178,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_genericrenderer_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "2fbac09f63ae73c2d038839417c35f59b48894a53e3eacf221676fbcfb1bb386",
+      "source": "sources/w12-wnd-b-genericrenderer-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 552,
+          "name": "OnMessage__20VIWndGenericRendererP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5179,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_legal_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "f9d0d0bc86b97ae9f10f01366717d95872f81e69b5f605eba962076d26d6055d",
+      "source": "sources/w12-wnd-b-legal-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "OnMessage__10VIWndLegalP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5180,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_options_battle_music_text.o",
+      "profile": "authored_cpp",
+      "sha256": "800d9f2876d07eec808898e91c7e1a25a6eec297e71cf7df1d9210ebc557acce",
+      "source": "sources/w12-wnd-b-options-battle-music-text/data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5181,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_patcher_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "12c4e11dfba65e2caf488d3f260e8eb19691362601483f837cd838154cc2aa6e",
+      "source": "sources/w12-wnd-b-patcher-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 536,
+          "name": "OnMessage__12VIWndPatcherP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5182,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_set_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "5dcf5186fc2c3aa3a8f7066745b53f7504fa6067c2035e242a0ac50912e6fbc8",
+      "source": "sources/w12-wnd-b-set-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "__t5VISet1ZP5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5183,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_set_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "75a7f98098850277da26b6003351f854779ebbaef0d9fd17e30f16a33718884f",
+      "source": "sources/w12-wnd-b-set-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "_$_t5VISet1ZP5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5184,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_splash_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "42c617aeebc5fd3747be802ebc4a185df7243f108c45c86ae21f52406c0b904e",
+      "source": "sources/w12-wnd-b-splash-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 740,
+          "name": "OnMessage__11VIWndSplashP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5185,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_dnas.o",
+      "profile": "authored_cpp",
+      "sha256": "66f03363a2d2105b250825cc7a5c8807c6e3c65468417ac12ab7f98972bc2ebc",
+      "source": "sources/w12-wnd-b-tf-dnas/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf9VIWndDnas"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5186,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_eula.o",
+      "profile": "authored_cpp",
+      "sha256": "77551ded25b2d1e77545a836b36a292dab960fe60168da0d7c7a8fc5350a95a5",
+      "source": "sources/w12-wnd-b-tf-eula/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf9VIWndEula"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5187,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_genericrenderer.o",
+      "profile": "authored_cpp",
+      "sha256": "9a1a8c744812a4d92ff2167a4fcc9404fe334870396e3c68a977c89be1ec76bd",
+      "source": "sources/w12-wnd-b-tf-genericrenderer/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf20VIWndGenericRenderer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5188,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_legal.o",
+      "profile": "authored_cpp",
+      "sha256": "d1186baa5bed00c3ddc4f1b0a2723143d9c7647755bc5e480e65f7f31a346ba3",
+      "source": "sources/w12-wnd-b-tf-legal/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf10VIWndLegal"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5189,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_patcher.o",
+      "profile": "authored_cpp",
+      "sha256": "e1458100447c0dd482f028021283f013032e9c9273afc4ec9c1251e287f401c9",
+      "source": "sources/w12-wnd-b-tf-patcher/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf12VIWndPatcher"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5190,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_splash.o",
+      "profile": "authored_cpp",
+      "sha256": "f6604988b88270ad8f184853e7433fc0fe11c70788455f9d06dad042656e14dc",
+      "source": "sources/w12-wnd-b-tf-splash/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf11VIWndSplash"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5191,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_windowmanager.o",
+      "profile": "authored_cpp",
+      "sha256": "6517fdd8750bc84a88158d34324aeeaffefa30c4b78b1ed0af9954e7d6080ea8",
+      "source": "sources/w12-wnd-b-tf-windowmanager/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf15VIWindowManager"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5192,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_tf_wnd.o",
+      "profile": "authored_cpp",
+      "sha256": "9f6f7a0f8a7498abf36b35b5470d02a9efa99e039a1aa473b10f728c8bf1dff1",
+      "source": "sources/w12-wnd-b-tf-wnd/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "__tf5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5193,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_uiwindow_open.o",
+      "profile": "authored_cpp",
+      "sha256": "291ea680b4f6ee3870c239b9d94e5bef6c450a7c4612af4e6f3256f58aa1863c",
+      "source": "sources/w12-wnd-b-uiwindow-open/open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "Open__10VIUIWindowb"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5194,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_connect.o",
+      "profile": "authored_cpp",
+      "sha256": "3470d16b90ae4d232ef590a41e4a8d420012f934451b699b8ef71950d32e27e1",
+      "source": "sources/w12-wnd-b-vt-connect/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5195,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_edit.o",
+      "profile": "authored_cpp",
+      "sha256": "09f42621d39a512cd5ff74935c2ee2f0ef9506826281047495b9e89719c19e39",
+      "source": "sources/w12-wnd-b-vt-edit/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5196,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_message.o",
+      "profile": "authored_cpp",
+      "sha256": "e15a7f1f1834a3dfba7add86e7aeec7db2a31f4798c8a2199608287c16d49283",
+      "source": "sources/w12-wnd-b-vt-message/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5197,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_options.o",
+      "profile": "authored_cpp",
+      "sha256": "4da0bd312fa405debeaa01cc4c0c0f4f996ed4e8b2c8780830a3f0fa8b7cf04d",
+      "source": "sources/w12-wnd-b-vt-options/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5198,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_readmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "e858c29cf1f0e90b63db950dd8ddd5aba341c245e4b58021afb5ece19203e81a",
+      "source": "sources/w12-wnd-b-vt-readmessage/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5199,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_vt_wnd.o",
+      "profile": "authored_cpp",
+      "sha256": "e7f1c42d8d09545f7438820944cbd814039775a9ed1888d8039f45bb084bac0a",
+      "source": "sources/w12-wnd-b-vt-wnd/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5200,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_wnd_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "5c25e17a9b270a16383a58a6db2e3e791e516fe40ebc45b66ae3749274a91c2c",
+      "source": "sources/w12-wnd-b-wnd-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "OnKeyUp__5VIWndi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5201,
+      "kind": "independently_authored_source",
+      "object_name": "w12wb_wnd_onmessage.o",
+      "profile": "authored_cpp",
+      "sha256": "d10f92085f941ee49a2c97f3bf85e55bf2290d6048591393c0df6df69ed3ff93",
+      "source": "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "OnMessage__5VIWndP5VIWndiii"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -75688,7 +76133,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "040aae0bb30cd2e3000adbb4f4d8d411474138c047e8a4c35fb1cdb50fb00731",
+  "snapshot_sha256": "195966abe4b05c4c728ed783c2a700a3bbcb5ac993cd96df036bc0afa6f48f08",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

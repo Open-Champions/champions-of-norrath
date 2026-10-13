@@ -9095,3 +9095,21 @@ Closed: `AdjustTime`, `InitialiseIopDriver`, `IsEventModifier`, `LocalData`, `Qu
 
 Opened: `__dynamic_cast_2`, `__kernel_cosf`, `__kernel_sinf`, `__tf16__attr_type_info`, `__tf16__func_type_info`, `__tfv`, `_sceSDC`, `addhour`, `convertfrombcd`, `converttobcd`, `eh_context_static`, `init_reg_size_table`, `norrath_ee_exception_frame`, `subhour`, `upcast__C16__user_type_infoRC9type_infoPvPPv`
 - 2026-10-13 09:40 CDT — agents/w12-startup-rt-a — 996 unresolved imports
+
+## agents/w12-wnd-b
+
+Merged (merge commit, branch tip `2e92b9e2`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 30 units, one function body or data object each (23 window-handler, type-function and set-template functions, `VIWndOptions$sBattleMusicText`, and the five class tables `_vt$5VIWnd`, `_vt$9VIWndEdit`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`; the notes' `__tf5VIWnd` is in the branch but its symbol was already defined elsewhere), with fresh `input_order` values 5172 through 5201. All 30 committed host checks run natively here and pass. `w12-wnd-b-dnas-onmessage` needs `-fno-builtin-memset` with this host's clang: its check replaces `memset` to record the call, and clang inlines the constant 16-byte `memset` at -O0 before the stub sees it, so the trace misses it; with the flag the check passes (a host compiler artifact, not an authored-code defect). The worker's private paired runs and mutation runs were not re-verified. The notes say three commits (`_vt$5VIWnd`, `_vt$9VIWndEdit`, `VIWndOptions$sBattleMusicText`) plus `__tf5VIWnd` were pushed to the branch by someone else and not re-verified by the worker; each carries a host check that passes here. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5200 authored inputs, 3977 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+The count **rises** here, as the notes' own build also showed (29 closed, 33 opened): the new class tables reference the per-class slot methods (`OnDrawSelf`, `OnKeyDown`, `OnMessage`, `__tf` for Connect, Message, Options, ReadMessage and Edit) that nobody has authored yet.
+
+| | |
+|---|---|
+| Before | 996 |
+| After | 1000 |
+| Closed | 29 |
+| Opened | 33 |
+
+Closed: `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `VIWndOptions$sBattleMusicText`, `_$_t5VISet1ZP5VIWnd`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
+
+Opened: `DestroyPool__t5VISet1ZP5VIWnd`, `GetString__13VIStringTableii`, `IsOpen__11VIGUIDialog`, `McErrWnd__Fv`, `OnDrawSelf__12VIWndConnect`, `OnDrawSelf__12VIWndMessage`, `OnDrawSelf__12VIWndOptions`, `OnDrawSelf__16VIWndReadMessage`, `OnDrawSelf__9VIWndEdit`, `OnKeyDown__12VIWndConnecti`, `OnKeyDown__12VIWndMessagei`, `OnKeyDown__12VIWndOptionsi`, `OnKeyDown__16VIWndReadMessagei`, `OnKeyDown__9VIWndEditi`, `OnKeyUp__10VIWndMcErri`, `OnKeyUp__12VIWndConnecti`, `OnKeyUp__12VIWndMessagei`, `OnKeyUp__12VIWndOptionsi`, `OnKeyUp__9VIWndEditi`, `OnMessage__12VIWndConnectP5VIWndiii`, `OnMessage__12VIWndMessageP5VIWndiii`, `OnMessage__12VIWndOptionsP5VIWndiii`, `OnMessage__16VIWndReadMessageP5VIWndiii`, `OnMessage__9VIWndEditP5VIWndiii`, `SetCaretOffset__9VIWndEditi`, `SetTitle__10VIUIWindowPCUs`, `__tf12VIWndConnect`, `__tf12VIWndMessage`, `__tf12VIWndOptions`, `__tf16VIWndReadMessage`, `__tf9VIWndEdit`, `mcerring`, `mcerror`
+- 2026-10-13 09:53 CDT — agents/w12-wnd-b — 1000 unresolved imports
