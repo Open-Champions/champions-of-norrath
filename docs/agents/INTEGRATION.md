@@ -8834,3 +8834,25 @@ Closed: `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap
 
 Opened: `processParams__7VehiclePPc`
 - 2026-10-13 07:02 CDT — agents/w11-data-b — 929 unresolved imports
+
+## agents/w11-data-c
+
+Merged (merge commit, branch tip `5a7c9b69`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units (1 function body, `norrath_web_construct`; the rest are particle objects, view objects, a resource map and literals) with fresh
+`input_order` values 4937 through 4963. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan sizes were measured here with the plan's compiler flags. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4962 authored inputs, 3751 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Closed 29, opened none, and four of the names closed here were opened by earlier merges (the six particle objects and `udkResourceMap` the w10-actor-o entry named). `norrath_web_construct` is a second copy of the body of `__3Webii` (the notes explain an alias-only unit does not work in this object format). `w11-data-c-rtti-literals-482430` overlaps the unselected `w9-rtti-vtables-entities-a-view-482424`; only the w11 one is selected. The particle objects are global 80-byte zero objects that are not placed at the original addresses and whose same-named file-local twins elsewhere are different objects, as the notes say.
+
+| | |
+|---|---|
+| Before | 929 |
+| After | 900 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `norrath_rtti_entities_a_view_482430`, `norrath_rtti_entities_a_view_482434`, `norrath_rtti_entities_a_view_482438`, `norrath_w10_actor_d_view_7d6c40`, `norrath_w10_actor_d_view_7d7720`, `norrath_w10_actor_d_view_7d7770`, `norrath_w10_actor_n_view_7d6d80`, `norrath_w10_actor_n_view_8d63c0`, `norrath_w10_actor_n_view_8d6460`, `norrath_w9_startup_crt_b_view_483b70`, `norrath_w9_startup_crt_b_view_485380`, `norrath_web_construct`, `npc_msg_run_particle_7d7dd0`, `shockwaveInnoruukParticle`, `shockwaveInnoruukParticle2`, `smokeParticle`, `soulParticle`, `summonhammerParticle`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `trailParticle`, `trailParticleSpark`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`, `vaporParticle`, `waveMainParticle`
+
+Opened: none
+- 2026-10-13 07:06 CDT — agents/w11-data-c — 900 unresolved imports
