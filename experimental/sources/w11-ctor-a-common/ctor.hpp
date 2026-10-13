@@ -107,5 +107,8 @@ int soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* header, void* obj
 int P_StartTrail__Fiifiiiii(int a, int b, float c, int d, int e, int f, int g, int h);
 void P_ExtendTrail__FiG6Point3(int trail, Point3 position);
 void lightAdd__FP5Light(void* light);
+void animInitState__FP14AnimationState(void* state);
+void animAdd__FP14AnimationStateP15AnimationHeaderi(void* state, void* header, int flags);
+void animRandomizeTime__FP14AnimationState(void* state);
 extern int frameNm;
 }
