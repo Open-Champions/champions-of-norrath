@@ -70,6 +70,8 @@ Unit: `experimental/sources/w13-m-startup-data-b-sif-overlay-buffers/`.
 - Timer words `rollover_counter` (8 bytes) and `timer_handle` (4 bytes): unit `w13-m-startup-data-b-ee-timer-words`. Host check passes; the EE object has both as 8- and 4-byte global objects. Signedness of `timer_handle` and the split of the 8-byte counter are not established; they are held as bytes and an int.
 - Pointer word `sceCbPoff_Gp`: unit `w13-m-startup-data-b-cb-poff-gp-span`, a 64-byte, 64-aligned span to the next label at 0x008e1cc0. Only the first word is used by known code; the rest are zero and unread.
 
+- Vtable `_vt$13VISoundSprite` (96 bytes, 12 slots, 11 named functions): unit `w13-m-startup-data-b-vt-visound`. Host check passes; the EE object's relocations in the table match the observed slot order (checked with a private script). Its function slots are imports opened by this unit.
+
 ## Imports opened by this package
 
 None so far.
