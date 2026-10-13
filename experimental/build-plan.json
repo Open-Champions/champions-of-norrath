@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5123,
+  "default_authored_inputs": 5142,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3929,6 +3929,25 @@
     "sources/w11-vt-b-vt-webtrap/vt_webtrap.cpp": "21f8060e905fe997600de5b7ab78e00bcc6a8c4089c011750658f88da2439bf7",
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-skill-c-base-cast/cast.cpp": "86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7",
+    "sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp": "738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e",
+    "sources/w12-skill-c-base-level-requirement/get_level_requirement.cpp": "2d798d9d99254a95dc7abb2fb36d16bd3e7f378f19b305fe55ec8801f909330d",
+    "sources/w12-skill-c-base-piggyback-cast/piggyback_cast.cpp": "f35c8269ab75757ced83981edeb2ccd2ff635b6549b9f882474f7977ad9f89db",
+    "sources/w12-skill-c-base-point-cost/get_skill_point_cost.cpp": "e15fe82c7f4a11da37131f4e985a6f57a980b1305be2170b291168557461b95c",
+    "sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp": "fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5",
+    "sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp": "5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47",
+    "sources/w12-skill-c-init-ramps-ball-of-hate/init_ramps.cpp": "3d2095075a595cf93baadef362c8f474e884c61bc2bea1db4f33c41d06cb7d04",
+    "sources/w12-skill-c-init-ramps-base/init_ramps.cpp": "c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1",
+    "sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp": "5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479",
+    "sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp": "16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6",
+    "sources/w12-skill-c-init-ramps-hate-beam/init_ramps.cpp": "f14114a26c694c6a510ea01fcd48505cf5e6ee8b2b617424ee4c463306203501",
+    "sources/w12-skill-c-init-ramps-hate-effect/init_ramps.cpp": "e68a44c87632cc9dd7334d5a966af52f00362985c647427c3004beab5a377d1d",
+    "sources/w12-skill-c-init-ramps-poison-weapons/init_ramps.cpp": "dfc173f94468b33ba823303494f239a8f62721689d5f40a73598d5dbf077fecb",
+    "sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp": "8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf",
+    "sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp": "438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e",
+    "sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp": "8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf",
+    "sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp": "d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352",
+    "sources/w12-skill-c-tweek-rank/tweek_rank.cpp": "6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1",
     "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
     "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
     "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
@@ -74885,6 +74904,291 @@
       "sha256": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
       "source": "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5125,
+      "kind": "independently_authored_source",
+      "object_name": "cast.o",
+      "profile": "authored_cpp",
+      "sha256": "86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7",
+      "source": "sources/w12-skill-c-base-cast/cast.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "cast__5SkilliP8CreatureG6Point3s"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5126,
+      "kind": "independently_authored_source",
+      "object_name": "get_energy_cost.o",
+      "profile": "authored_cpp",
+      "sha256": "738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e",
+      "source": "sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "getEnergyCost__5Skilli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5127,
+      "kind": "independently_authored_source",
+      "object_name": "get_level_requirement.o",
+      "profile": "authored_cpp",
+      "sha256": "2d798d9d99254a95dc7abb2fb36d16bd3e7f378f19b305fe55ec8801f909330d",
+      "source": "sources/w12-skill-c-base-level-requirement/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getLevelRequirement__5Skilli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5128,
+      "kind": "independently_authored_source",
+      "object_name": "piggyback_cast.o",
+      "profile": "authored_cpp",
+      "sha256": "f35c8269ab75757ced83981edeb2ccd2ff635b6549b9f882474f7977ad9f89db",
+      "source": "sources/w12-skill-c-base-piggyback-cast/piggyback_cast.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "piggyBackCast__5SkilliP8CreatureG6Point3s"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5129,
+      "kind": "independently_authored_source",
+      "object_name": "get_skill_point_cost.o",
+      "profile": "authored_cpp",
+      "sha256": "e15fe82c7f4a11da37131f4e985a6f57a980b1305be2170b291168557461b95c",
+      "source": "sources/w12-skill-c-base-point-cost/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getSkillPointCost__5Skilli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5130,
+      "kind": "independently_authored_source",
+      "object_name": "get_level_requirement.o",
+      "profile": "authored_cpp",
+      "sha256": "fe74c131e903a8b9dd14e54a32c992e47dcb734eb99f281080a12a1a1c2723f5",
+      "source": "sources/w12-skill-c-blunt-level-requirement/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getLevelRequirement__10SkillBlunti"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5131,
+      "kind": "independently_authored_source",
+      "object_name": "get_skill_point_cost.o",
+      "profile": "authored_cpp",
+      "sha256": "5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47",
+      "source": "sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getSkillPointCost__10SkillBlunti"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5132,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "3d2095075a595cf93baadef362c8f474e884c61bc2bea1db4f33c41d06cb7d04",
+      "source": "sources/w12-skill-c-init-ramps-ball-of-hate/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "initRamps__15SkillBallOfHate"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5133,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1",
+      "source": "sources/w12-skill-c-init-ramps-base/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "initRamps__5Skill"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5134,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "5b6b1ec563bdd13172b31c412822918b50b4ccc27b37ba78acef973fe639b479",
+      "source": "sources/w12-skill-c-init-ramps-disease-effect/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "initRamps__18SkillDiseaseEffect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5135,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "16462c39c6bc401b6830d2cdd7b3cba15c721e8da80a7bb216c8e41358426dc6",
+      "source": "sources/w12-skill-c-init-ramps-disease-weapons/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "initRamps__19SkillDiseaseWeapons"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5136,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "f14114a26c694c6a510ea01fcd48505cf5e6ee8b2b617424ee4c463306203501",
+      "source": "sources/w12-skill-c-init-ramps-hate-beam/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "initRamps__13SkillHateBeam"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5137,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "e68a44c87632cc9dd7334d5a966af52f00362985c647427c3004beab5a377d1d",
+      "source": "sources/w12-skill-c-init-ramps-hate-effect/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "initRamps__15SkillHateEffect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5138,
+      "kind": "independently_authored_source",
+      "object_name": "init_ramps.o",
+      "profile": "authored_cpp",
+      "sha256": "dfc173f94468b33ba823303494f239a8f62721689d5f40a73598d5dbf077fecb",
+      "source": "sources/w12-skill-c-init-ramps-poison-weapons/init_ramps.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "initRamps__18SkillPoisonWeapons"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5139,
+      "kind": "independently_authored_source",
+      "object_name": "get_level_requirement.o",
+      "profile": "authored_cpp",
+      "sha256": "8a70fc9f7376de0317ee2761b0bc6d678b632697abc169424cd18f2dfd5c7daf",
+      "source": "sources/w12-skill-c-resist-poison-level-requirement/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getLevelRequirement__17SkillResistPoisoni"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5140,
+      "kind": "independently_authored_source",
+      "object_name": "get_skill_point_cost.o",
+      "profile": "authored_cpp",
+      "sha256": "438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e",
+      "source": "sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getSkillPointCost__17SkillResistPoisoni"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5141,
+      "kind": "independently_authored_source",
+      "object_name": "get_level_requirement.o",
+      "profile": "authored_cpp",
+      "sha256": "8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf",
+      "source": "sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getLevelRequirement__13SkillSlashingi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5142,
+      "kind": "independently_authored_source",
+      "object_name": "get_skill_point_cost.o",
+      "profile": "authored_cpp",
+      "sha256": "d79579ad1b15aea0dac46fd634ca9c0e6b2c2b4facd8ed7811225154a5c1d352",
+      "source": "sources/w12-skill-c-slashing-point-cost/get_skill_point_cost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getSkillPointCost__13SkillSlashingi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5143,
+      "kind": "independently_authored_source",
+      "object_name": "tweek_rank.o",
+      "profile": "authored_cpp",
+      "sha256": "6ec28c2d9bfea4a35a20d0f346442c954e864460695f83a38ea46794da8c32f1",
+      "source": "sources/w12-skill-c-tweek-rank/tweek_rank.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "tweekRank__5Skillii"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -74984,7 +75288,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f8aad57c03b0de3da4556a1f6a6f3305c1addf486dbaa2ad34ff7036462973ce",
+  "snapshot_sha256": "214d7c3e9368d692abee05708bfab882bf9ad0a27b0ad5f05ff0d0276a59cd6f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

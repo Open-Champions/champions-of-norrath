@@ -9025,3 +9025,18 @@ Closed: `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `kdm_rp
 
 Opened: `gsm_decode`, `gsm_encode` (the codec routines the new adapters tail-call; nobody has authored them).
 - 2026-10-13 08:32 CDT — agents/w12-startup-rt-b — 820 unresolved imports
+
+## agents/w12-skill-c
+
+Merged (merge commit, branch tip `5ac9b853`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 19 units, one function body each, with fresh `input_order` values 5125 through 5143. All 19 committed host checks build (linked with the unit's source) and exit 0 here, native arm64 with `-ffp-contract=off`. Compiled sizes are not image sizes and no byte match is claimed. The branch also carried commit `b36220f6` (`w12-particle-data-a-ctor-particle-prop`), a unit owned by `agents/w12-particle-data-a`; its two files were left out of the merge commit and arrive with that package. Full build with the final snapshot: 5142 authored inputs, 3936 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (19) reproduces; the 12 other requested skill names stay open.
+
+| | |
+|---|---|
+| Before | 820 |
+| After | 801 |
+| Closed | 19 |
+| Opened | 0 |
+
+Closed: `cast__5SkilliP8CreatureG6Point3s`, `getEnergyCost__5Skilli`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getLevelRequirement__5Skilli`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `getSkillPointCost__5Skilli`, `initRamps__13SkillHateBeam`, `initRamps__15SkillBallOfHate`, `initRamps__15SkillHateEffect`, `initRamps__18SkillDiseaseEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `initRamps__5Skill`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`.
+
+Opened: none.
