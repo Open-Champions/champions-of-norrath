@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4796,
+  "default_authored_inputs": 4819,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3431,6 +3431,29 @@
     "sources/w11-front-c-vehicle-shite/vehicle_shite.cpp": "a591931d7c9b9bf9ffe212e14d244db1db996e2a53013a945458182e586be9bf",
     "sources/w11-front-c-vi-words/vi_words.cpp": "079442f4853ffdbbb96d0d3206e47c1fe97bc0539c6f2dcbd67debe32d4b7375",
     "sources/w11-front-c-wavemaker-range/wavemaker_range.cpp": "d8919ffe426d2d1d48f397c69d5b5851fbad2fa7ad0d82b6031b6b29444831e5",
+    "sources/w11-game-a-ant-wave-ctor/ant_wave_ctor.cpp": "22f41a3d548fd9ae24406ddf55fde7a861f6bd0d3eb8350fa640e00503ecfab2",
+    "sources/w11-game-a-compare-state-packets/compare_state_packets.cpp": "a22f808fe93439df9d2ee349e29099a8ae56780ce8668dfccfa74c429e2f27dc",
+    "sources/w11-game-a-floor-add/floor_add.cpp": "861460b34cdf72d525921b4cffe1d2186361212907d88d7ff479a2367591b66d",
+    "sources/w11-game-a-group-tables/group_tables.cpp": "c62078bf015d0b3ceaabe0246fbbf57bf150806f6ac37bc22af675215154657e",
+    "sources/w11-game-a-jump-gate-add-destination/jump_gate_add_destination.cpp": "9fc4fe36ce18d21c3062ef7d423a2ccb345443d6ba08b57dce3bd71096dba07e",
+    "sources/w11-game-a-jump-gate-init/jump_gate_init.cpp": "fb1e140e1550f3684df470475ff96d84c912922dfd3ac13265fbc4bfcf884309",
+    "sources/w11-game-a-jump-gate-pos-hidden/jump_gate_pos_hidden.cpp": "30500d2d99bd3a2f283e0b8f9f4bd90dcc614e466d763f7631a6d029bc6638c4",
+    "sources/w11-game-a-list-head-copy/list_head_copy.cpp": "7116294624a09d10d57cf53abf37f0a1abb93e3b225f2d0bb3e278d8fa7904fe",
+    "sources/w11-game-a-more-recent/more_recent.cpp": "b502742a16207f95ede8afdbcd61e282f558d8f12756d042271ec7fba2118db5",
+    "sources/w11-game-a-net-disconnect/net_disconnect.cpp": "b065bda709cd5aabc12c9e2294d97a5a83e03f84c6ed56d84e3983b7660ef0af",
+    "sources/w11-game-a-net-flags/net_flags.cpp": "1bdf03c0bb70eff1bdf28eb03865320c989774d3e215a88ab90efc83b0f59d1f",
+    "sources/w11-game-a-object-add-string/object_add_string.cpp": "2fc7f42fe45776cd53f5612c3d76f8c85ab9f1bed6ac1ff929f21036392dc14d",
+    "sources/w11-game-a-object-add-to-grid/object_add_to_grid.cpp": "fde8f700fdce603df71e97227b3e9374a2928f03cc1fcbfd692cf7d60abd35db",
+    "sources/w11-game-a-player-raise-player/player_raise_player.cpp": "4cb09d395738c38c3dbe54220dfaecf0706ef802e806975f1f61d92418e77830",
+    "sources/w11-game-a-random-teleport-spell/random_teleport_spell.cpp": "16422d02250e19f52814dc75468088023ed3b4fbcbd08c8c647a2e5c82ced1e3",
+    "sources/w11-game-a-receive-control-packet/receive_control_packet.cpp": "1ca2d321af5f0217ad9b3bf4994250611e27e40c7776fd6ef2138c731624a597",
+    "sources/w11-game-a-route-dirs/route_dirs.cpp": "3e753455f981f83528964354835dc7d2b6919a818801631d96b3d7b51967f24c",
+    "sources/w11-game-a-set-iop-function/set_iop_function.cpp": "42d66956606b5a8b81716cd5d295e3699e95a83fce537a97f3d41da94ce958ad",
+    "sources/w11-game-a-set-resource/set_resource.cpp": "7cce08ba449be8a0764d01570c8c3d32ca35de5c26ca632feea37ae08740b6c6",
+    "sources/w11-game-a-spell-harm-touch-attack/spell_harm_touch_attack.cpp": "52e6368da57c9a7eb6043c0435e34854488623d8ce1ced49989a7e72e5b9a826",
+    "sources/w11-game-a-world-can-pass/world_can_pass.cpp": "e70d960e77c39107fa19b331c98d20c13de33766a1b18dd8c6d9734cba6134e8",
+    "sources/w11-game-a-world-get-door-height/world_get_door_height.cpp": "6b9a489f38ec8c9d0a3de4c0607d598b4cb8f31e3c4fae15687812d07bef8b9a",
+    "sources/w11-game-a-world-hitscan-with-objects/world_hitscan_with_objects.cpp": "e761899063d459a21936e67ad89a283cef4b60a595f9249733016a29250aae64",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -69993,6 +70016,331 @@
           "name": "RenderByPortals__7VIWorldR15VISceneRendVars"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4798,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_ant_wave_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "22f41a3d548fd9ae24406ddf55fde7a861f6bd0d3eb8350fa640e00503ecfab2",
+      "source": "sources/w11-game-a-ant-wave-ctor/ant_wave_ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 236,
+          "name": "__7AntWaveP10GameObjectG6Point3si"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4799,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_compare_state_packets.o",
+      "profile": "authored_cpp",
+      "sha256": "a22f808fe93439df9d2ee349e29099a8ae56780ce8668dfccfa74c429e2f27dc",
+      "source": "sources/w11-game-a-compare-state-packets/compare_state_packets.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 292,
+          "name": "compareStatePackets__FP11statePacketT0i"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4800,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_floor_add.o",
+      "profile": "authored_cpp",
+      "sha256": "861460b34cdf72d525921b4cffe1d2186361212907d88d7ff479a2367591b66d",
+      "source": "sources/w11-game-a-floor-add/floor_add.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 840,
+          "name": "floorAdd__FG6Point3sfii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4801,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_group_tables.o",
+      "profile": "authored_cpp",
+      "sha256": "c62078bf015d0b3ceaabe0246fbbf57bf150806f6ac37bc22af675215154657e",
+      "source": "sources/w11-game-a-group-tables/group_tables.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4802,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_jump_gate_add_destination.o",
+      "profile": "authored_cpp",
+      "sha256": "9fc4fe36ce18d21c3062ef7d423a2ccb345443d6ba08b57dce3bd71096dba07e",
+      "source": "sources/w11-game-a-jump-gate-add-destination/jump_gate_add_destination.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "jumpGateAddDestination__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4803,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_jump_gate_init.o",
+      "profile": "authored_cpp",
+      "sha256": "fb1e140e1550f3684df470475ff96d84c912922dfd3ac13265fbc4bfcf884309",
+      "source": "sources/w11-game-a-jump-gate-init/jump_gate_init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 172,
+          "name": "jumpGateInit__FiPcc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4804,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_jump_gate_pos_hidden.o",
+      "profile": "authored_cpp",
+      "sha256": "30500d2d99bd3a2f283e0b8f9f4bd90dcc614e466d763f7631a6d029bc6638c4",
+      "source": "sources/w11-game-a-jump-gate-pos-hidden/jump_gate_pos_hidden.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4805,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_list_head_copy.o",
+      "profile": "authored_cpp",
+      "sha256": "7116294624a09d10d57cf53abf37f0a1abb93e3b225f2d0bb3e278d8fa7904fe",
+      "source": "sources/w11-game-a-list-head-copy/list_head_copy.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__8ListHeadRC8ListHead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4806,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_more_recent.o",
+      "profile": "authored_cpp",
+      "sha256": "b502742a16207f95ede8afdbcd61e282f558d8f12756d042271ec7fba2118db5",
+      "source": "sources/w11-game-a-more-recent/more_recent.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 208,
+          "name": "moreRecent__Fii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4807,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_net_disconnect.o",
+      "profile": "authored_cpp",
+      "sha256": "b065bda709cd5aabc12c9e2294d97a5a83e03f84c6ed56d84e3983b7660ef0af",
+      "source": "sources/w11-game-a-net-disconnect/net_disconnect.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "netDisconnect__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4808,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_net_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "1bdf03c0bb70eff1bdf28eb03865320c989774d3e215a88ab90efc83b0f59d1f",
+      "source": "sources/w11-game-a-net-flags/net_flags.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4809,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_object_add_string.o",
+      "profile": "authored_cpp",
+      "sha256": "2fc7f42fe45776cd53f5612c3d76f8c85ab9f1bed6ac1ff929f21036392dc14d",
+      "source": "sources/w11-game-a-object-add-string/object_add_string.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 444,
+          "name": "objectAddString__FPcP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4810,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_object_add_to_grid.o",
+      "profile": "authored_cpp",
+      "sha256": "fde8f700fdce603df71e97227b3e9374a2928f03cc1fcbfd692cf7d60abd35db",
+      "source": "sources/w11-game-a-object-add-to-grid/object_add_to_grid.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "objectAddToGrid__FP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4811,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_player_raise_player.o",
+      "profile": "authored_cpp",
+      "sha256": "4cb09d395738c38c3dbe54220dfaecf0706ef802e806975f1f61d92418e77830",
+      "source": "sources/w11-game-a-player-raise-player/player_raise_player.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 440,
+          "name": "playerRaisePlayer__FiG6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4812,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_random_teleport_spell.o",
+      "profile": "authored_cpp",
+      "sha256": "16422d02250e19f52814dc75468088023ed3b4fbcbd08c8c647a2e5c82ced1e3",
+      "source": "sources/w11-game-a-random-teleport-spell/random_teleport_spell.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 812,
+          "name": "RandomTeleportSpell__FP10GameObjectP6Point3f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4813,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_receive_control_packet.o",
+      "profile": "authored_cpp",
+      "sha256": "1ca2d321af5f0217ad9b3bf4994250611e27e40c7776fd6ef2138c731624a597",
+      "source": "sources/w11-game-a-receive-control-packet/receive_control_packet.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2796,
+          "name": "receiveControlPacket__FPiib"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4814,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_route_dirs.o",
+      "profile": "authored_cpp",
+      "sha256": "3e753455f981f83528964354835dc7d2b6919a818801631d96b3d7b51967f24c",
+      "source": "sources/w11-game-a-route-dirs/route_dirs.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4815,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_set_iop_function.o",
+      "profile": "authored_cpp",
+      "sha256": "42d66956606b5a8b81716cd5d295e3699e95a83fce537a97f3d41da94ce958ad",
+      "source": "sources/w11-game-a-set-iop-function/set_iop_function.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "SetIopFunction__FUii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4816,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_set_resource.o",
+      "profile": "authored_cpp",
+      "sha256": "7cce08ba449be8a0764d01570c8c3d32ca35de5c26ca632feea37ae08740b6c6",
+      "source": "sources/w11-game-a-set-resource/set_resource.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 224,
+          "name": "setResource__10GameObjectPQ210GameObject11resourceMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4817,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_spell_harm_touch_attack.o",
+      "profile": "authored_cpp",
+      "sha256": "52e6368da57c9a7eb6043c0435e34854488623d8ce1ced49989a7e72e5b9a826",
+      "source": "sources/w11-game-a-spell-harm-touch-attack/spell_harm_touch_attack.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 884,
+          "name": "attack__14SpellHarmTouchP10GameObjectPiT2"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4818,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_world_can_pass.o",
+      "profile": "authored_cpp",
+      "sha256": "e70d960e77c39107fa19b331c98d20c13de33766a1b18dd8c6d9734cba6134e8",
+      "source": "sources/w11-game-a-world-can-pass/world_can_pass.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 680,
+          "name": "worldCanPass__FP12_worldHeaderG6Point3T1fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4819,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_world_get_door_height.o",
+      "profile": "authored_cpp",
+      "sha256": "6b9a489f38ec8c9d0a3de4c0607d598b4cb8f31e3c4fae15687812d07bef8b9a",
+      "source": "sources/w11-game-a-world-get-door-height/world_get_door_height.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "worldGetDoorHeight__FP12_worldHeaderi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4820,
+      "kind": "independently_authored_source",
+      "object_name": "w11_game_a_world_hitscan_with_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "e761899063d459a21936e67ad89a283cef4b60a595f9249733016a29250aae64",
+      "source": "sources/w11-game-a-world-hitscan-with-objects/world_hitscan_with_objects.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1056,
+          "name": "worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -70092,7 +70440,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "6a89edb4360f0b32fe1d720543a435ae42c642febc5410a031ffb87e2ea8e4ef",
+  "snapshot_sha256": "195983c8df2e0453b77f4c0f53cd6b159a66f053f9083feb2106307d879b690a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

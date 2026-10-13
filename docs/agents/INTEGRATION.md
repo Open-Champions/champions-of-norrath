@@ -8702,3 +8702,25 @@ merged locally to look at it and the merge was reset before anything was selecte
 The owners can add committed host checks per function (as `w11-vi-misc-b`, `w11-vi-render-a` and
 `w11-vi-render-c` do) and push again; the units could then be selected unchanged.
 - 2026-10-13 06:16 CDT — rejection notes (vi-misc-a, vi-render-b), no package — 963 unresolved imports
+
+## agents/w11-game-a
+
+Merged (merge commit, branch tip `bd741fbe`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 23 units (19 function bodies; the rest are data units) with fresh
+`input_order` values 4798 through 4821. All 23 host contracts build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs, so the x86_64 recipe used for earlier entries was not available; these checks are address-width independent and pass on arm64). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4819 authored inputs, 3719 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list reproduces (30 names here). Four names the worker introduced are not image symbol names (`norrath_net_flag_bytes_48681c`, three `norrath_overlay_sSend/sFunctionIndex/sIopFunctionData` buffers); they are authored placeholders for unnamed image addresses, listed among the opened names. Two large functions (`gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` and `routePlot__FR10RouteQueue`) were deliberately not attempted and stay unresolved.
+
+| | |
+|---|---|
+| Before | 963 |
+| After | 945 |
+| Closed | 30 |
+| Opened | 12 |
+
+Closed: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `SetIopFunction__FUii`, `__7AntWaveP10GameObjectG6Point3si`, `__8ListHeadRC8ListHead`, `attack__14SpellHarmTouchP10GameObjectPiT2`, `compareStatePackets__FP11statePacketT0i`, `eqGroup`, `floorAdd__FG6Point3sfii`, `jumpGateAddDestination__Fv`, `jumpGateInit__FiPcc`, `jumpGatePos`, `jumpHidden`, `moreRecent__Fii`, `netDisconnect__Fv`, `netLogDisable`, `netPrediction`, `netPredictionFastForward`, `netTrueStep`, `nmEqGroups`, `nmWGroups`, `objectAddString__FPcP10GameObject`, `objectAddToGrid__FP10GameObject`, `playerRaisePlayer__FiG6Point3`, `receiveControlPacket__FPiib`, `route_dirs`, `setResource__10GameObjectPQ210GameObject11resourceMap`, `wGroup`, `worldCanPass__FP12_worldHeaderG6Point3T1fi`, `worldGetDoorHeight__FP12_worldHeaderi`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`
+
+Opened: `_vt$7AntWave`, `expandList`, `freeList`, `harm1`, `harm2`, `lightFloorSprite__FG6Point3`, `norrath_net_flag_bytes_48681c`, `norrath_overlay_sFunctionIndex_11edf00`, `norrath_overlay_sIopFunctionData_11edf08`, `norrath_overlay_sSend_11edb00`, `resurectEffect__6Player`, `spriteCount`
+- 2026-10-13 06:41 CDT — agents/w11-game-a — 945 unresolved imports
