@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4551,
+  "default_authored_inputs": 4571,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3279,6 +3279,26 @@
     "sources/w11-crt-b-litodp/litodp.cpp": "09615d9bb9013fce34fb6a1e2a39889e7d504868ae26300142454613c20ae569",
     "sources/w11-crt-b-mce-intr-read-fix-align/mce_intr_read_fix_align.cpp": "d33c5aa493376e6dc99dfa87dbb4080ea690f6754601de6ad2e2c064fe3d6fdc",
     "sources/w11-crt-b-send-to-iop/send_to_iop.cpp": "f70a8443f0b88291ef82997773e1caf4d88076316dbb4cc5b14aa0a2a9c2fe02",
+    "sources/w11-crt-c-cd-st-resume/cd_st_resume.cpp": "46c0e9ebd76f6cc111d70d3337699387201050313ae608fcdfa1f3f130968b22",
+    "sources/w11-crt-c-cd-st-start/cd_st_start.cpp": "2ac431fc4b20a7fad04208f067c210f497513f7f2959f47463aa9ac57172b21a",
+    "sources/w11-crt-c-deci2-open/deci2_open.cpp": "74ee97d86ece56e8aa9481b3635992dcdd815ff6ecb18f5a8b860ba3b884a373",
+    "sources/w11-crt-c-deci2-poll/deci2_poll.cpp": "98396596d69d7aa009b0f025df4b69d4d3a90427719c7242dc6b074481c5d0e1",
+    "sources/w11-crt-c-deci2-req-send/deci2_req_send.cpp": "c168629739c52223ad1b6bb3d9c3a4abff9adae99ee65496c570ca48eb6d8c0d",
+    "sources/w11-crt-c-deci2-user-area/deci2_user_area.cpp": "2d8bd98967f25e96e176265eae2b79ab453f1f0394be1bee5fdba19f69d8fa11",
+    "sources/w11-crt-c-gs-set-def-dbuff-dc/gs_set_def_dbuff_dc.cpp": "e0cc2877fc2249f64e1ff84890d01312d0c81087d2748884395db346d255776f",
+    "sources/w11-crt-c-gs-swap-dbuff-dc/gs_swap_dbuff_dc.cpp": "0fbe9b98131007a7d1b8a1363563ed06d275771f8e7e4334987af49b9399c508",
+    "sources/w11-crt-c-pad-get-dma-str/pad_get_dma_str.cpp": "4a7a2299709dea759a9029b382fac5c4847943a042b74fec0cfc3d9875b76b0f",
+    "sources/w11-crt-c-pad-get-req-state/pad_get_req_state.cpp": "bbd0c6d9bace35b1300b67d3d9264bb6105f5229739d067b19b933f0ccecce96",
+    "sources/w11-crt-c-pad-get-state/pad_get_state.cpp": "1c458df3223d1dfdd66dd15fa0c130d09e4828a5ecd8a64fe9fc4bbf742d99cb",
+    "sources/w11-crt-c-pad-info-act/pad_info_act.cpp": "ecf5eb3487b78caa60bf95eb4193c2e0386c01a2e0c3b7f43254d03b9ae81bca",
+    "sources/w11-crt-c-pad-info-mode/pad_info_mode.cpp": "e851b256e291705a085dfbb080bae7b026a77767ed058e954a59eaefb8031f7b",
+    "sources/w11-crt-c-pad-port-close/pad_port_close.cpp": "360a51a5594a39a85e36d7d7d4e488b648d945cb7d6bc4b0d044052c027eae68",
+    "sources/w11-crt-c-scf-local-time/scf_local_time.cpp": "9aa309187526efbd48559285e4cda2d9a24dca5bea2134dc468c54e3d07744d7",
+    "sources/w11-crt-c-sif-add-reboot-notify-handler/sif_add_reboot_notify_handler.cpp": "ab34e96c5769d2e6da85ae0d9efb680d425fcf5bf73281f947e7b2cf5cab2bf2",
+    "sources/w11-crt-c-sif-m-packet-buffer/packet_buffer.cpp": "45c432adbab2f770052e9ed74c2020f446531391f841a2cea4b966bcfd92f60b",
+    "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
+    "sources/w11-crt-c-src-word/src_word.cpp": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
+    "sources/w11-crt-c-tty-handler/tty_handler.cpp": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -66269,6 +66289,293 @@
           "name": "_send_to_iop"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4553,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_cd_st_resume.o",
+      "profile": "authored_cpp",
+      "sha256": "46c0e9ebd76f6cc111d70d3337699387201050313ae608fcdfa1f3f130968b22",
+      "source": "sources/w11-crt-c-cd-st-resume/cd_st_resume.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "sceCdStResume"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4554,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_cd_st_start.o",
+      "profile": "authored_cpp",
+      "sha256": "2ac431fc4b20a7fad04208f067c210f497513f7f2959f47463aa9ac57172b21a",
+      "source": "sources/w11-crt-c-cd-st-start/cd_st_start.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "sceCdStStart"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4555,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_open.o",
+      "profile": "authored_cpp",
+      "sha256": "74ee97d86ece56e8aa9481b3635992dcdd815ff6ecb18f5a8b860ba3b884a373",
+      "source": "sources/w11-crt-c-deci2-open/deci2_open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "sceDeci2Open"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4556,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_poll.o",
+      "profile": "authored_cpp",
+      "sha256": "98396596d69d7aa009b0f025df4b69d4d3a90427719c7242dc6b074481c5d0e1",
+      "source": "sources/w11-crt-c-deci2-poll/deci2_poll.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "sceDeci2Poll"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4557,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_req_send.o",
+      "profile": "authored_cpp",
+      "sha256": "c168629739c52223ad1b6bb3d9c3a4abff9adae99ee65496c570ca48eb6d8c0d",
+      "source": "sources/w11-crt-c-deci2-req-send/deci2_req_send.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "sceDeci2ReqSend"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4558,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_user_area.o",
+      "profile": "authored_cpp",
+      "sha256": "2d8bd98967f25e96e176265eae2b79ab453f1f0394be1bee5fdba19f69d8fa11",
+      "source": "sources/w11-crt-c-deci2-user-area/deci2_user_area.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4559,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_gs_set_def_dbuff_dc.o",
+      "profile": "authored_cpp",
+      "sha256": "e0cc2877fc2249f64e1ff84890d01312d0c81087d2748884395db346d255776f",
+      "source": "sources/w11-crt-c-gs-set-def-dbuff-dc/gs_set_def_dbuff_dc.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 604,
+          "name": "sceGsSetDefDBuffDc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4560,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_gs_swap_dbuff_dc.o",
+      "profile": "authored_cpp",
+      "sha256": "0fbe9b98131007a7d1b8a1363563ed06d275771f8e7e4334987af49b9399c508",
+      "source": "sources/w11-crt-c-gs-swap-dbuff-dc/gs_swap_dbuff_dc.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "sceGsSwapDBuffDc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4561,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_dma_str.o",
+      "profile": "authored_cpp",
+      "sha256": "4a7a2299709dea759a9029b382fac5c4847943a042b74fec0cfc3d9875b76b0f",
+      "source": "sources/w11-crt-c-pad-get-dma-str/pad_get_dma_str.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 100,
+          "name": "scePadGetDmaStr"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4562,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_req_state.o",
+      "profile": "authored_cpp",
+      "sha256": "bbd0c6d9bace35b1300b67d3d9264bb6105f5229739d067b19b933f0ccecce96",
+      "source": "sources/w11-crt-c-pad-get-req-state/pad_get_req_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "scePadGetReqState"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4563,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_state.o",
+      "profile": "authored_cpp",
+      "sha256": "1c458df3223d1dfdd66dd15fa0c130d09e4828a5ecd8a64fe9fc4bbf742d99cb",
+      "source": "sources/w11-crt-c-pad-get-state/pad_get_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "scePadGetState"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4564,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_info_act.o",
+      "profile": "authored_cpp",
+      "sha256": "ecf5eb3487b78caa60bf95eb4193c2e0386c01a2e0c3b7f43254d03b9ae81bca",
+      "source": "sources/w11-crt-c-pad-info-act/pad_info_act.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 304,
+          "name": "scePadInfoAct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4565,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_info_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "e851b256e291705a085dfbb080bae7b026a77767ed058e954a59eaefb8031f7b",
+      "source": "sources/w11-crt-c-pad-info-mode/pad_info_mode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 340,
+          "name": "scePadInfoMode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4566,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_port_close.o",
+      "profile": "authored_cpp",
+      "sha256": "360a51a5594a39a85e36d7d7d4e488b648d945cb7d6bc4b0d044052c027eae68",
+      "source": "sources/w11-crt-c-pad-port-close/pad_port_close.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "scePadPortClose"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4567,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_scf_local_time.o",
+      "profile": "authored_cpp",
+      "sha256": "9aa309187526efbd48559285e4cda2d9a24dca5bea2134dc468c54e3d07744d7",
+      "source": "sources/w11-crt-c-scf-local-time/scf_local_time.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "sceScfGetLocalTimefromRTC"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4568,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_add_reboot_notify_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "ab34e96c5769d2e6da85ae0d9efb680d425fcf5bf73281f947e7b2cf5cab2bf2",
+      "source": "sources/w11-crt-c-sif-add-reboot-notify-handler/sif_add_reboot_notify_handler.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 180,
+          "name": "sceSifAddRebootNotifyHandler"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4569,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_m_packet_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "45c432adbab2f770052e9ed74c2020f446531391f841a2cea4b966bcfd92f60b",
+      "source": "sources/w11-crt-c-sif-m-packet-buffer/packet_buffer.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4570,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_m_request_end.o",
+      "profile": "authored_cpp",
+      "sha256": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
+      "source": "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "norrath_sif_m_request_end"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4571,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_src_word.o",
+      "profile": "authored_cpp",
+      "sha256": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
+      "source": "sources/w11-crt-c-src-word/src_word.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 4572,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_tty_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
+      "source": "sources/w11-crt-c-tty-handler/tty_handler.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 480,
+          "name": "sceTtyHandler"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -66368,7 +66675,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3787260b7045874161e6051bff29f574e9d3ea79737ef0650a270452232e1b69",
+  "snapshot_sha256": "d9b9c6e3d5942a77fd3234110f887374fb495eee0634adc2017a656b0f5f1c9f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -8468,3 +8468,25 @@ Closed: `_iopnotify`, `_send_to_iop`, `dptoli`, `dptoul`, `dst`, `lgCodecGSMDeco
 
 Opened: `IsEventModifier`, `SyncDCache`, `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `lgFrameDecode`, `lgFrameEncode`, `sceSifSetSreg`
 - 2026-10-13 05:08 CDT — agents/w11-crt-b — 896 unresolved imports
+
+## agents/w11-crt-c
+
+Merged (merge commit, branch tip `1173f7cd`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 20 units (17 function bodies, 3 data units) with fresh
+`input_order` values 4553 through 4572. All 20 host contracts and checks build with the command in each file's header (x86_64, -w, -no_pie, pagezero 0x1000; the tty handler also needs the w9 tty state source) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4571 authored inputs, 3512 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes' private measurement (957 to 933) included four earlier units that are not in the shared plan, so it does not apply here; the closed list for this package's own 19 names reproduces. Names the notes expected to close once other owners' units are planned (libpad/libmtap views, the loader failure word, sceCbPoff_Gp, timer_handle) are still unresolved.
+
+| | |
+|---|---|
+| Before | 896 |
+| After | 887 |
+| Closed | 19 |
+| Opened | 10 |
+
+Closed: `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceCdStResume`, `sceCdStStart`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `sceGsSetDefDBuffDc`, `sceGsSwapDBuffDc`, `scePadGetDmaStr`, `scePadGetReqState`, `scePadGetState`, `scePadInfoAct`, `scePadInfoMode`, `scePadPortClose`, `sceScfGetLocalTimefromRTC`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`, `src`
+
+Opened: `AdjustTime`, `QueuePeekWriteDone`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `sceGsPutDrawEnv`, `sceGsSetDefClear`, `sceGsSetDefDrawEnv`, `sceGsSetDefDrawEnv2`, `sceScfGetSummerTime`, `sceScfGetTimeZone`
+- 2026-10-13 05:12 CDT — agents/w11-crt-c — 887 unresolved imports
