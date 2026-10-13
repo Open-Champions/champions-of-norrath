@@ -4983,8 +4983,10 @@ vectors come from the worker's private interpreter run and were not reproduced.
 Five link-style checks (`builtin-new`, `malloc-lock`, `malloc-unlock`,
 `terminate`, `update-mallinfo`) need their implementation file on the
 command line (two also need a `-D`); they pass that way. The net import count
-rises because the float kernels and allocator pieces reference many more
-unresolved names than they close. No game binary or disassembly listing was
+rises because the new constructor, vtable and `norrath_w9_startup_crt_b_view_*`
+units reference more names (base constructors of the `VI*` classes, `__tf`/`__ti`
+objects, float helpers such as `fabsf` and `__ieee754_sqrtf`, and the view
+addresses) than they close. No game binary or disassembly listing was
 committed. 2073 function bodies, 2575 authored inputs, zero COMMON. 214 tool
 tests passed. No EE or game execution.
 
