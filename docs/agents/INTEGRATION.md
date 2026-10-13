@@ -9040,3 +9040,4 @@ Merged (merge commit, branch tip `5ac9b853`; the notes have the five summary sec
 Closed: `cast__5SkilliP8CreatureG6Point3s`, `getEnergyCost__5Skilli`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getLevelRequirement__5Skilli`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `getSkillPointCost__5Skilli`, `initRamps__13SkillHateBeam`, `initRamps__15SkillBallOfHate`, `initRamps__15SkillHateEffect`, `initRamps__18SkillDiseaseEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `initRamps__5Skill`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`.
 
 Opened: none.
+- 2026-10-13 09:03 CDT — agents/w12-skill-c — 801 unresolved imports
