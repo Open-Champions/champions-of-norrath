@@ -1,4 +1,4 @@
-// Observed findTagFloat__10GameObjectPci at 0x1410a0, extent 324.
+// Observed findTagFloat__10GameObjectPci at 0x1410a0, extent 332.
 // Looks up a "name=value" tag on an object and returns the value as a float.
 // The object's tag list is the word at object+44: a zero-terminated array of
 // string pointers. In order:

@@ -1,4 +1,4 @@
-// Observed gameLineGetPtr__Fi at 0x279bf8, extent 20.
+// Observed gameLineGetPtr__Fi at 0x279bf8, extent 24.
 // Returns the pointer stored at index `line` of the table gameLines (0x8d57a8).
 // There is no bounds check and the index is not compared with gameLineCount, so a
 // negative or large index reads outside the table. norrath_game_line_get_ptr is

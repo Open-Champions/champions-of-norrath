@@ -1,4 +1,4 @@
-// Observed objectAlwaysDraw__FP10GameObject at 0x143498, extent 64.
+// Observed objectAlwaysDraw__FP10GameObject at 0x143498, extent 60.
 // Links the object onto alwaysDrawList (0x486888) through listOnewayLink with
 // the OBJECT ADDRESS as the second head (as the delete-list routine does) and
 // the object as the value, then sets bit 1 (0x2) of the flag word at object+12.

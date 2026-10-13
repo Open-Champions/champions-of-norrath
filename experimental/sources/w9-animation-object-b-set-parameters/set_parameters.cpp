@@ -1,4 +1,4 @@
-// Observed setParameters__8Creaturefffffi at 0x1092f0, extent 600.
+// Observed setParameters__8Creaturefffffi at 0x1092f0, extent 632.
 // Derives a creature's combat numbers from five scale floats and a flag, then
 // returns the result of a tag query. Arguments after the creature: first, second,
 // third, fourth, fifth (floats) and `randomize` (int). Words used on the creature:
