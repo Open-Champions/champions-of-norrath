@@ -36,3 +36,9 @@ Add three `independently_authored_source` inputs using profile `authored_cpp`, e
 ## Authored but never executed
 
 All three methods were compiled by the reviewed EE toolchain and exercised through their host contracts. None was run on the EE or through game dispatch.
+
+- `getSkillPointCost__10SkillBlunti` at `0x00313b38` has an 8-byte extent and returns its integer argument unchanged. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-blunt-point-cost/`. No byte match or game execution is claimed.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-blunt-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__10SkillBlunti` (8 bytes), SHA-256 `5693b5d4a1a5384643351c21c7ccc088dc752cbe1f3a22385da3cffdbc4a4e47`; add the source hash to `files` and let the integrator assign order.
+
+- Inferred: `getSkillPointCost__10SkillBlunti` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
