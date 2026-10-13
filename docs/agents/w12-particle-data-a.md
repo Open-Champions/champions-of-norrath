@@ -2,7 +2,7 @@
 
 Package branch: `agents/w12-particle-data-a`. Private reference: `work/private/SLUS_205.65`, SHA-256 `9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0`. Findings below use this pinned image; none of its bytes, compiler listings, or extracted assets are committed.
 
-The current shared plan builds 5,113 authored inputs and leaves 827 unresolved imports. All 30 names in the task's starting list remain unresolved in that baseline. This package closes four of them in three independent source units. The function and data objects were compiled with the reviewed EE toolchain. Their host checks passed. The objects are not integrated into the shared plan, and none ran in the game.
+The current shared plan builds 5,113 authored inputs and leaves 827 unresolved imports. All 29 names in the task's starting list remain unresolved in that baseline. This package closes four of them in three independent source units. The function and data objects were compiled with the reviewed EE toolchain. Their host checks passed. The objects are not integrated into the shared plan, and none ran in the game.
 
 ## Observed, inferred, unknown
 
@@ -32,7 +32,7 @@ The constructor source has object-level references to `__10GameObjectG6Point3PQ2
 
 ## Imports still open
 
-These 26 assigned names remain unresolved. They need an export from the translation unit or data owner identified below; a separate zero-filled copy would not share the storage initialized by the existing static initializer.
+These 25 assigned names remain unresolved. They need an export from the translation unit or data owner identified below; a separate zero-filled copy would not share the storage initialized by the existing static initializer.
 
 - Particle objects filled by existing static initializers: `disintoInnoruukParticle` (`w8-fx-particles-init-innoruuk`), `harm1`, `harm2` (`w8-spell-static-init-a-spell-harm-touch`), `hitParticleDust2`, `iceSwordParticle`, `newFlameSwordParticle1`, `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2` (`w8-fx-particles-init-fx`), and `lampParticle` (`w8-spell-static-init-a-torch`). Export the initialized object from its owning unit.
 - Particle objects with existing source providers whose plan entries or owning spelling still need integration: `lavaGoopParticle`, `lavaSteamParticle` (`w10-render-b-data-lava-particles`); `norrath_container_msg_run_fuseParticle_bytes`, `norrath_container_msg_run_smokeParticle_bytes` (`w9-render-math-c-switch-static-init`).
