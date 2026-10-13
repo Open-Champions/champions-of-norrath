@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5387,
+  "default_authored_inputs": 5409,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4134,6 +4134,28 @@
     "sources/w12-vimath-a-vect3-normalize/normalize.cpp": "23d1f1a5b680c1b2c661d419a0e13ad5ee05d9a2b3c14767082c54d3ccb790ff",
     "sources/w12-vimath-a-world-find-leaf/find_leaf.cpp": "3362983c702e7470270bd2adba871b92d0435804b34d1636e1999ec2b1dce7ac",
     "sources/w12-vimath-a-zone-init/init.cpp": "4619985999e0723e46ef985a4d6b4f7162e22e803a7b5244ae6555bf2c6b889b",
+    "sources/w12-visky-a-atmosphere-clear-all-fireballs/clear_all_fireballs.cpp": "da276d02dedfd2f3ed2e9f2037b46041260e846118f8fac2d0ed3703a12935ca",
+    "sources/w12-visky-a-atmosphere-clear-all-splashes/clear_all_splashes.cpp": "cad1901a1a9c3bc5990316a4db68c6285a40ff927831ffdbde6a5cecf4696592",
+    "sources/w12-visky-a-atmosphere-get-overcast-interp/get_overcast_interp.cpp": "c3c432417b4a40c8c9bd22a5947d3a3245ecbad0ef1c826391853f7ae29bbb04",
+    "sources/w12-visky-a-atmosphere-process-transitions/process_transitions.cpp": "5a8e9ccd63c695ef39a6c3f0a6cb4ec0f19e862a1ca643232aaafd958238571a",
+    "sources/w12-visky-a-atmosphere-process-weather/process_weather.cpp": "5bfe6fe1d77f0ee049a9c4c5a71b10f58f5de4670738347036d341c21c080eb7",
+    "sources/w12-visky-a-atmosphere-render-splashes/render_splashes.cpp": "ee77555cce124cd0f3fd2110852c731a5e1a458afa92c12143fe16e6857327dc",
+    "sources/w12-visky-a-atmosphere-render-stars/render_stars.cpp": "9c7803ce356bc6840e62dea322449818073bf3cd789e3d8a919634fe2a3a8890",
+    "sources/w12-visky-a-atmosphere-set-effect-mix/set_effect_mix.cpp": "b1663efd462759f925f2b5615d36b664dce5e34d512dddcbb97a2fe64107ebf8",
+    "sources/w12-visky-a-atmosphere-set-intensity/set_intensity.cpp": "5e174d426c8dddfdc98fc842530e009086de5b19df6fdb562e2d0c0678e418a9",
+    "sources/w12-visky-a-atmosphere-set-lavastorm-intensity/set_lavastorm_intensity.cpp": "746a94b138437d1c27b24ead54ba1c60a50532b1268096c22c44458dfae68e89",
+    "sources/w12-visky-a-battle-music-free/free.cpp": "4f45ebfa87f1cd8273a8fd7c84c067b8faa0d6b03ff9373371a3a7d1e8dea7ae",
+    "sources/w12-visky-a-battle-music-init/init.cpp": "41187fcc8ae0cff8fa1a7daadce015901e70306201dd2c617e7d1bebc6682252",
+    "sources/w12-visky-a-coll-release-buffer/release_coll_buffer.cpp": "b7e5707b46972f82bf57adc665dae0f8fcd629b97fa26d0fe4aa0a4b2d913540",
+    "sources/w12-visky-a-query-tri-list-allocate/allocate.cpp": "cc1468c96d17ef6b1a5d134e946ef30e604e8e190c76313245fbd103f4f9a194",
+    "sources/w12-visky-a-scene-calc-time-of-day-clip-planes/calc.cpp": "43898d2d6bcba03f93aa23b3b4814b5d546c0f9abf6ad11d1d54fa8828826e7a",
+    "sources/w12-visky-a-scene-get-time/get_time.cpp": "12561c67d3cce49b205dd68ae5c667f40747e5cea2a5b9494766956aefb06e90",
+    "sources/w12-visky-a-scene-render-shadow/render_shadow.cpp": "1e9cb10eca67959dfbdf9740b22bda02e00b2597c9e9c5741a559d2e819042a6",
+    "sources/w12-visky-a-world-render-by-volume/render_by_volume.cpp": "ade3aa5bc568a2785c4e3c2a33c195bb885095c3cbbe9e3950ed37f07e4e2f52",
+    "sources/w12-visky-a-world-tree-clear/clear.cpp": "b1d75d308d831e7448febf38ec9f3d3f27587c73e8d16500455347fb72c3729b",
+    "sources/w12-visky-a-world-tree-init/init.cpp": "d2eddc6885204f017f734ced02a06b5a0b7e17aaf55912a4b2b571c53f25f053",
+    "sources/w12-visky-a-zone-render-room/render_room.cpp": "b189094cc280bcc26a48eb341d803b8bf1f06d996af93740770e4bb2e6d85ba7",
+    "sources/w12-visky-a-zone-set-pretranslations/set_pretranslations.cpp": "efa9e1fcacca2d59c4989f7c137dfeae00272160b231dd8798d5c6da46a61793",
     "sources/w12-visky-b-battle-music-ctor/ctor.cpp": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
     "sources/w12-visky-b-battle-music-dtor/dtor.cpp": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
     "sources/w12-visky-b-effect-volume-scene/scene_global.cpp": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
@@ -78800,6 +78822,348 @@
       "sha256": "0be7ebe43d4054805ddb623d070251238f2266f1685f2f55b5386ad765dd2f77",
       "source": "sources/w12-skill-a-vt-skill-shock/vt_skill_shock.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5389,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_clear_all_fireballs.o",
+      "profile": "authored_cpp",
+      "sha256": "da276d02dedfd2f3ed2e9f2037b46041260e846118f8fac2d0ed3703a12935ca",
+      "source": "sources/w12-visky-a-atmosphere-clear-all-fireballs/clear_all_fireballs.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "ClearAllFireballs__12VIAtmosphere"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5390,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_clear_all_splashes.o",
+      "profile": "authored_cpp",
+      "sha256": "cad1901a1a9c3bc5990316a4db68c6285a40ff927831ffdbde6a5cecf4696592",
+      "source": "sources/w12-visky-a-atmosphere-clear-all-splashes/clear_all_splashes.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 176,
+          "name": "ClearAllSplashes__12VIAtmosphere"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5391,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_get_overcast_interp.o",
+      "profile": "authored_cpp",
+      "sha256": "c3c432417b4a40c8c9bd22a5947d3a3245ecbad0ef1c826391853f7ae29bbb04",
+      "source": "sources/w12-visky-a-atmosphere-get-overcast-interp/get_overcast_interp.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 100,
+          "name": "GetOvercastInterp__12VIAtmosphere"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5392,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_process_transitions.o",
+      "profile": "authored_cpp",
+      "sha256": "5a8e9ccd63c695ef39a6c3f0a6cb4ec0f19e862a1ca643232aaafd958238571a",
+      "source": "sources/w12-visky-a-atmosphere-process-transitions/process_transitions.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 3312,
+          "name": "ProcessTransitions__12VIAtmosphereR7VISceneff"
+        },
+        {
+          "compiled_body_bytes": 276,
+          "name": "fade_sprite"
+        },
+        {
+          "compiled_body_bytes": 192,
+          "name": "refresh_volumes"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5393,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_process_weather.o",
+      "profile": "authored_cpp",
+      "sha256": "5bfe6fe1d77f0ee049a9c4c5a71b10f58f5de4670738347036d341c21c080eb7",
+      "source": "sources/w12-visky-a-atmosphere-process-weather/process_weather.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1580,
+          "name": "ProcessWeather__12VIAtmosphereR7VISceneR8VICamera"
+        },
+        {
+          "compiled_body_bytes": 624,
+          "name": "cast_drop"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5394,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_render_splashes.o",
+      "profile": "authored_cpp",
+      "sha256": "ee77555cce124cd0f3fd2110852c731a5e1a458afa92c12143fe16e6857327dc",
+      "source": "sources/w12-visky-a-atmosphere-render-splashes/render_splashes.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 472,
+          "name": "RenderSplashes__12VIAtmosphereR7VISceneR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5395,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_render_stars.o",
+      "profile": "authored_cpp",
+      "sha256": "9c7803ce356bc6840e62dea322449818073bf3cd789e3d8a919634fe2a3a8890",
+      "source": "sources/w12-visky-a-atmosphere-render-stars/render_stars.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1620,
+          "name": "RenderStars__12VIAtmosphereR7VISceneR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5396,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_set_effect_mix.o",
+      "profile": "authored_cpp",
+      "sha256": "b1663efd462759f925f2b5615d36b664dce5e34d512dddcbb97a2fe64107ebf8",
+      "source": "sources/w12-visky-a-atmosphere-set-effect-mix/set_effect_mix.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "SetEffectMix__12VIAtmospheref"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5397,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_set_intensity.o",
+      "profile": "authored_cpp",
+      "sha256": "5e174d426c8dddfdc98fc842530e009086de5b19df6fdb562e2d0c0678e418a9",
+      "source": "sources/w12-visky-a-atmosphere-set-intensity/set_intensity.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 100,
+          "name": "SetIntensity__12VIAtmospheref"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5398,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_atmosphere_set_lavastorm_intensity.o",
+      "profile": "authored_cpp",
+      "sha256": "746a94b138437d1c27b24ead54ba1c60a50532b1268096c22c44458dfae68e89",
+      "source": "sources/w12-visky-a-atmosphere-set-lavastorm-intensity/set_lavastorm_intensity.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 132,
+          "name": "SetLavastormIntensity__12VIAtmospheref"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5399,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_battle_music_free.o",
+      "profile": "authored_cpp",
+      "sha256": "4f45ebfa87f1cd8273a8fd7c84c067b8faa0d6b03ff9373371a3a7d1e8dea7ae",
+      "source": "sources/w12-visky-a-battle-music-free/free.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Free__13VIBattleMusic"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5400,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_battle_music_init.o",
+      "profile": "authored_cpp",
+      "sha256": "41187fcc8ae0cff8fa1a7daadce015901e70306201dd2c617e7d1bebc6682252",
+      "source": "sources/w12-visky-a-battle-music-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "Init__13VIBattleMusicP7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5401,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_coll_release_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "b7e5707b46972f82bf57adc665dae0f8fcd629b97fa26d0fe4aa0a4b2d913540",
+      "source": "sources/w12-visky-a-coll-release-buffer/release_coll_buffer.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 132,
+          "name": "ReleaseCollBuffer__9VICollidei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5402,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_query_tri_list_allocate.o",
+      "profile": "authored_cpp",
+      "sha256": "cc1468c96d17ef6b1a5d134e946ef30e604e8e190c76313245fbd103f4f9a194",
+      "source": "sources/w12-visky-a-query-tri-list-allocate/allocate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "Allocate__14VIQueryTriList"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5403,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_scene_calc_time_of_day_clip_planes.o",
+      "profile": "authored_cpp",
+      "sha256": "43898d2d6bcba03f93aa23b3b4814b5d546c0f9abf6ad11d1d54fa8828826e7a",
+      "source": "sources/w12-visky-a-scene-calc-time-of-day-clip-planes/calc.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 240,
+          "name": "CalcTimeOfDayClipPlanes__7VISceneR21VITerrainProfileBlendRfT2"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5404,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_scene_get_time.o",
+      "profile": "authored_cpp",
+      "sha256": "12561c67d3cce49b205dd68ae5c667f40747e5cea2a5b9494766956aefb06e90",
+      "source": "sources/w12-visky-a-scene-get-time/get_time.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "GetTime__7VIScene"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5405,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_scene_render_shadow.o",
+      "profile": "authored_cpp",
+      "sha256": "1e9cb10eca67959dfbdf9740b22bda02e00b2597c9e9c5741a559d2e819042a6",
+      "source": "sources/w12-visky-a-scene-render-shadow/render_shadow.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1580,
+          "name": "RenderShadow__7VIScenei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5406,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_world_render_by_volume.o",
+      "profile": "authored_cpp",
+      "sha256": "ade3aa5bc568a2785c4e3c2a33c195bb885095c3cbbe9e3950ed37f07e4e2f52",
+      "source": "sources/w12-visky-a-world-render-by-volume/render_by_volume.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "RenderByVolume__7VIWorldR15VISceneRendVars"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5407,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_world_tree_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "b1d75d308d831e7448febf38ec9f3d3f27587c73e8d16500455347fb72c3729b",
+      "source": "sources/w12-visky-a-world-tree-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "Clear__11VIWorldTree"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5408,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_world_tree_init.o",
+      "profile": "authored_cpp",
+      "sha256": "d2eddc6885204f017f734ced02a06b5a0b7e17aaf55912a4b2b571c53f25f053",
+      "source": "sources/w12-visky-a-world-tree-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 80,
+          "name": "Init__11VIWorldTreeii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5409,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_zone_render_room.o",
+      "profile": "authored_cpp",
+      "sha256": "b189094cc280bcc26a48eb341d803b8bf1f06d996af93740770e4bb2e6d85ba7",
+      "source": "sources/w12-visky-a-zone-render-room/render_room.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 528,
+          "name": "RenderRoom__6VIZoneiR15VISceneRendVars"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5410,
+      "kind": "independently_authored_source",
+      "object_name": "w12_visky_a_zone_set_pretranslations.o",
+      "profile": "authored_cpp",
+      "sha256": "efa9e1fcacca2d59c4989f7c137dfeae00272160b231dd8798d5c6da46a61793",
+      "source": "sources/w12-visky-a-zone-set-pretranslations/set_pretranslations.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "SetPretranslations__6VIZoneR8VIRasterR8VICamera"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -78899,7 +79263,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fd4acdbe2ba73f10775532029c340f55691de420f2e5658fed270af7759213e4",
+  "snapshot_sha256": "0013ee567a1e5a5a37f2996819f7351f9a92948d8824f4f5be9f7b7143727a36",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
