@@ -1,4 +1,4 @@
-// Observed evaluateCreatureRampAtRank__5Skillii at 0x003135e8, 120 bytes (extent to the next symbol 128).
+// Observed evaluateCreatureRampAtRank__5Skillii at 0x003135e8, 156 bytes (symbol size).
 // Same computation as evaluateRampAtRank__5Skillii at 0x00313548 over a second set of three runs:
 //  - level 0 returns 0;
 //  - a threshold halfword at +56+2*slot (signed); level below it returns 0;
