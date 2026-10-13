@@ -9458,3 +9458,19 @@ Closed: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_CheckPlayerImportOrChange_
 
 Opened: `commaString__FPc`, `floorPutSaveInfo__FPc`, `getPackChecksum__Fv`, `loadBuffer`, `mcDisableStartupScript`, `megatileEntitize__FPci`, `objectPutSaveData__FPci`, `padChangeIndex__Fii`, `playerGoldIconx`, `readMap__3mapPUc`
 - 2026-10-13 15:33 CDT — agents/w13-frontend-game-a (follow-up) — 1266 unresolved imports
+
+## agents/w13-frontend-game-b
+
+Merged (merge commit, branch tip `4cbc84cc`; the notes have the authored, closed, opened, plan-entry, never-executed and unknown sections). 12 units with fresh `input_order` values 5606 through 5617, each with a committed host contract that passes here (built together with its unit, since the contracts call the unit as a linked function). The contracts are small (eight-byte no-op bodies check that nothing is touched; the arithmetic units check results); the private paired runs in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5616 authored inputs, 4305 function bodies, zero COMMON. The notes' 12 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1266 |
+| After | 1255 |
+| Closed | 12 |
+| Opened | 1 |
+
+Closed: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_Push__Fv`, `P_SetParticleSystemMatrix__FiP8Matrix34`, `P_SetTrailColor__Fiiiii`, `distanceToPlane2__FP6Point3P6Point2T0`, `draw__5Spell`, `findCommander__14WoodElfSoldier`, `matUntransform__FP6Point3P8Matrix44T0`, `modelSetNoZRead__Fv`, `playerCheckArmorCacheRaces__Fv`, `textureDrawFloat__FP8_textureffiUiff`
+
+Opened: `_textureDrawFloat__FP8_textureffiUiff`
+- 2026-10-13 15:42 CDT — agents/w13-frontend-game-b — 1255 unresolved imports

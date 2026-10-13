@@ -71627,6 +71627,174 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-actor-spell-c-msg-run-7weather/msg_run.cpp"
+    },
+    {
+      "input_order": 5606,
+      "component": "w13-frontend-game-b-distance-to-plane2",
+      "object_name": "w13_frontend_game_b_distance_to_plane2.o",
+      "private_object_sha256": "eec7d1cf428c4d39a9dfd2c0f7e338d6e610d5fa93845ff8b593e482055f12fd",
+      "emitted_functions": [
+        {
+          "name": "distanceToPlane2__FP6Point3P6Point2T0",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-distance-to-plane2/distance_to_plane2.cpp"
+    },
+    {
+      "input_order": 5607,
+      "component": "w13-frontend-game-b-find-commander-wes",
+      "object_name": "w13_frontend_game_b_find_commander_wes.o",
+      "private_object_sha256": "1d4fa9189a6fe63c0db6c1fe7ffc2c571a896211ef5de71779687272e09732a5",
+      "emitted_functions": [
+        {
+          "name": "findCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-find-commander-wes/find_commander.cpp"
+    },
+    {
+      "input_order": 5608,
+      "component": "w13-frontend-game-b-mat-untransform44",
+      "object_name": "w13_frontend_game_b_mat_untransform44.o",
+      "private_object_sha256": "54974e094f0b4302877734dd460e1324b888b613212084f0dadd9f10cafd4f1e",
+      "emitted_functions": [
+        {
+          "name": "matUntransform__FP6Point3P8Matrix44T0",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-mat-untransform44/mat_untransform44.cpp"
+    },
+    {
+      "input_order": 5609,
+      "component": "w13-frontend-game-b-model-set-no-z-read",
+      "object_name": "w13_frontend_game_b_model_set_no_z_read.o",
+      "private_object_sha256": "da5dc6120e33f571f69b8a7b20e6af731592cc99077d565c216397e247d9028f",
+      "emitted_functions": [
+        {
+          "name": "modelSetNoZRead__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-model-set-no-z-read/model_set_no_z_read.cpp"
+    },
+    {
+      "input_order": 5610,
+      "component": "w13-frontend-game-b-p-close-ps",
+      "object_name": "w13_frontend_game_b_p_close_ps.o",
+      "private_object_sha256": "24f2146786e0bc668536d87b8e592617567887b533c474542833348047a0d499",
+      "emitted_functions": [
+        {
+          "name": "P_CloseParticleSystem__Fi",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-p-close-ps/p_close_ps.cpp"
+    },
+    {
+      "input_order": 5611,
+      "component": "w13-frontend-game-b-p-open-ps",
+      "object_name": "w13_frontend_game_b_p_open_ps.o",
+      "private_object_sha256": "18cf1331f408bd335918c86885c44ebd4cb918f2524511d7776bba16d60409b0",
+      "emitted_functions": [
+        {
+          "name": "P_OpenParticleSystem__Fi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-p-open-ps/p_open_ps.cpp"
+    },
+    {
+      "input_order": 5612,
+      "component": "w13-frontend-game-b-p-push",
+      "object_name": "w13_frontend_game_b_p_push.o",
+      "private_object_sha256": "674135256d0eff40807008cea2366b2e9e177db5ed336c94e5bd978009f30350",
+      "emitted_functions": [
+        {
+          "name": "P_Push__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-p-push/p_push.cpp"
+    },
+    {
+      "input_order": 5613,
+      "component": "w13-frontend-game-b-p-set-ps-matrix",
+      "object_name": "w13_frontend_game_b_p_set_ps_matrix.o",
+      "private_object_sha256": "9d49b905fcea96dcd13a96a5072f28e2ee1fbfaf851c6b5c21e154273f9a6afd",
+      "emitted_functions": [
+        {
+          "name": "P_SetParticleSystemMatrix__FiP8Matrix34",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-p-set-ps-matrix/p_set_ps_matrix.cpp"
+    },
+    {
+      "input_order": 5614,
+      "component": "w13-frontend-game-b-p-set-trail-color",
+      "object_name": "w13_frontend_game_b_p_set_trail_color.o",
+      "private_object_sha256": "ea16260cbd02f3f5615abee758a82fd527ab077de1d4eff5fdaa3dc659c660b5",
+      "emitted_functions": [
+        {
+          "name": "P_SetTrailColor__Fiiiii",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-p-set-trail-color/p_set_trail_color.cpp"
+    },
+    {
+      "input_order": 5615,
+      "component": "w13-frontend-game-b-player-check-armor-cache-races",
+      "object_name": "w13_frontend_game_b_player_check_armor_cache_races.o",
+      "private_object_sha256": "c10ed6c52caa3ba4928b17f7f3f83b601e9a10c116486d2fad5f4e0745cd99fd",
+      "emitted_functions": [
+        {
+          "name": "playerCheckArmorCacheRaces__Fv",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-player-check-armor-cache-races/check_armor_cache_races.cpp"
+    },
+    {
+      "input_order": 5616,
+      "component": "w13-frontend-game-b-spell-draw",
+      "object_name": "w13_frontend_game_b_spell_draw.o",
+      "private_object_sha256": "8f3b4051a409253cda6e6e4be8032eed99c32d39ce813121dd2e00e212a0ed23",
+      "emitted_functions": [
+        {
+          "name": "draw__5Spell",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-spell-draw/spell_draw.cpp"
+    },
+    {
+      "input_order": 5617,
+      "component": "w13-frontend-game-b-texture-draw-float",
+      "object_name": "w13_frontend_game_b_texture_draw_float.o",
+      "private_object_sha256": "95a2905423e540a29b32bf8934d133b6e39436e6251642aacf930499965e4f65",
+      "emitted_functions": [
+        {
+          "name": "textureDrawFloat__FP8_textureffiUiff",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w13-frontend-game-b-texture-draw-float/texture_draw_float.cpp"
     }
   ],
   "drafts": [
@@ -79467,6 +79635,30 @@
     "sources/w13-frontend-game-a-shop-run-mouse-logic/shop_run_mouse_logic.cpp": "c1df9949d33554d8d1f4aeb3b8ce63d722a7725e65c61ec6ecfeb1d054abf42c",
     "sources/w13-frontend-game-a-update-task-bar/host_check.cpp": "616ef33d5c8d773e1fe9c34f3ab00e73482693a716ea217f99d0521e27aac6f0",
     "sources/w13-frontend-game-a-update-task-bar/update_task_bar.cpp": "da5a72b87eaf904876cf95413a2bcf269f78af44c8b4e0e818c2bc70cc8f79a5",
+    "sources/w13-frontend-game-b-distance-to-plane2/distance_to_plane2.cpp": "c88c1970dc4a8db5d47c8aa6b3ecfb952b6cf3e7eee72a1c4089f8778cb1b87b",
+    "sources/w13-frontend-game-b-distance-to-plane2/host_check.cpp": "4da449f67022d9eeab178f78bd01485827ecb45cae558ea949609f3dde910ebb",
+    "sources/w13-frontend-game-b-find-commander-wes/find_commander.cpp": "ee79671a29963558e260ebbe8e0296e643e045a18f390980b641c1726672d8b5",
+    "sources/w13-frontend-game-b-find-commander-wes/host_check.cpp": "24ea31a136acbb1b8fa6bf1e67265592fa9c5954bb7086406049b3cc9dd08411",
+    "sources/w13-frontend-game-b-mat-untransform44/host_check.cpp": "de53ca1e56bf88e4a92e26ba1e46e706af065069a27af4d45668c5ef0821adf7",
+    "sources/w13-frontend-game-b-mat-untransform44/mat_untransform44.cpp": "1e18d9e6dd59d92fd2f1fe4a268b712fe602ca45a6b032b38fbe20cbf95175a0",
+    "sources/w13-frontend-game-b-model-set-no-z-read/host_check.cpp": "d4c293b177a40dc7dfb2e1dcd5124727553aea764cd3e326054603906ff7f39c",
+    "sources/w13-frontend-game-b-model-set-no-z-read/model_set_no_z_read.cpp": "2e32ab7bb29663f893cb6ea022f95d51f88a5721f1d9d15cb559814bdffab985",
+    "sources/w13-frontend-game-b-p-close-ps/host_check.cpp": "27733bed81def455ed5a4c4b29d85eb1ec86062a01a3ba42b734f1020cf6c277",
+    "sources/w13-frontend-game-b-p-close-ps/p_close_ps.cpp": "6aa93517fe7094c116f354d7e8afaf1f32abafb6e71d8e1b014c4d3efec509f7",
+    "sources/w13-frontend-game-b-p-open-ps/host_check.cpp": "d2863e0e5443e39eb3f1f689d52f26bc2dc1adb68d395d75d96b7a7f0089dfa1",
+    "sources/w13-frontend-game-b-p-open-ps/p_open_ps.cpp": "e349c3c401a7ef0dcf66f600d2aa086f3377389de653ef810a9c0d6652592c9b",
+    "sources/w13-frontend-game-b-p-push/host_check.cpp": "d6d347ab45094f886bf455b748b0549d36f1a3d91f6e67b4f41e7d8c1d7f425e",
+    "sources/w13-frontend-game-b-p-push/p_push.cpp": "3accb1c8cb21f91c8be3807c0d8a982d9bd8ead1188287035f7951697eda273b",
+    "sources/w13-frontend-game-b-p-set-ps-matrix/host_check.cpp": "0934faf172aa6061538ea055f11cbba854e6c051f600df6870af4be4ed1564c1",
+    "sources/w13-frontend-game-b-p-set-ps-matrix/p_set_ps_matrix.cpp": "e8b8611e11a30916b349b6f4b86f7158494aba572660c1ce53302e5921630e66",
+    "sources/w13-frontend-game-b-p-set-trail-color/host_check.cpp": "ef5cc01cf22568732867f6a6e53837c815b1858b9eda7b677460e904b0b926fb",
+    "sources/w13-frontend-game-b-p-set-trail-color/p_set_trail_color.cpp": "2c1029223152b790af69e69880591d0625cdf7ce34b4b0e036fdaed2ff0f6117",
+    "sources/w13-frontend-game-b-player-check-armor-cache-races/check_armor_cache_races.cpp": "40e36f91d23c2bce5b8bb2bdc498212cfafdf0c2df33f6dcaf92cf75028abbbb",
+    "sources/w13-frontend-game-b-player-check-armor-cache-races/host_check.cpp": "131378824d48cc6bf4b29471da7cfa7c906f824d834179817583924d33cb8c7c",
+    "sources/w13-frontend-game-b-spell-draw/host_check.cpp": "9416dc79bc9683986e00deb2fde368552077c271ed1cde4e9acee6aa98994d86",
+    "sources/w13-frontend-game-b-spell-draw/spell_draw.cpp": "1d16b680f9ccc9ee6c60fb97a673e6d82fc7dcf3e5e97fe256a144d2d0785591",
+    "sources/w13-frontend-game-b-texture-draw-float/host_check.cpp": "48ac5eac492bf997b27eb837ff0a7b20678c192c82f5d8316a8be07f61e6e83c",
+    "sources/w13-frontend-game-b-texture-draw-float/texture_draw_float.cpp": "8e67f66079a9988d9b670b767199c3c2cb2a47b72cae77fa333855d00a0ceaf2",
     "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
     "sources/w13-m-startup-data-a-config-rand-words/host_check.cpp": "1be10655b1d05695dcd0b6a2a755bc681c1c0677071f08455ddf4f10fc1754c9",
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
@@ -83936,11 +84128,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5606,
-    "authored_default_inputs": 5604,
+    "selected_inputs": 5618,
+    "authored_default_inputs": 5616,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4295,
-    "compiled_body_bytes_from_accepted_inputs": 1871240,
+    "emitted_function_definitions_including_helpers": 4307,
+    "compiled_body_bytes_from_accepted_inputs": 1872352,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -83953,7 +84145,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5293
+    "package_selected_inputs": 5305
   },
   "startup_implementations": [
     {
@@ -166963,6 +167155,210 @@
       ],
       "host_files": [
         "sources/w13-frontend-game-a-msg-run-7weather/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-distance-to-plane2/distance_to_plane2.cpp",
+      "source_sha256": "c88c1970dc4a8db5d47c8aa6b3ecfb952b6cf3e7eee72a1c4089f8778cb1b87b",
+      "object_sha256": "eec7d1cf428c4d39a9dfd2c0f7e338d6e610d5fa93845ff8b593e482055f12fd",
+      "emitted_functions": [
+        {
+          "name": "distanceToPlane2__FP6Point3P6Point2T0",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-distance-to-plane2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-find-commander-wes/find_commander.cpp",
+      "source_sha256": "ee79671a29963558e260ebbe8e0296e643e045a18f390980b641c1726672d8b5",
+      "object_sha256": "1d4fa9189a6fe63c0db6c1fe7ffc2c571a896211ef5de71779687272e09732a5",
+      "emitted_functions": [
+        {
+          "name": "findCommander__14WoodElfSoldier",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-find-commander-wes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-mat-untransform44/mat_untransform44.cpp",
+      "source_sha256": "1e18d9e6dd59d92fd2f1fe4a268b712fe602ca45a6b032b38fbe20cbf95175a0",
+      "object_sha256": "54974e094f0b4302877734dd460e1324b888b613212084f0dadd9f10cafd4f1e",
+      "emitted_functions": [
+        {
+          "name": "matUntransform__FP6Point3P8Matrix44T0",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-mat-untransform44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-model-set-no-z-read/model_set_no_z_read.cpp",
+      "source_sha256": "2e32ab7bb29663f893cb6ea022f95d51f88a5721f1d9d15cb559814bdffab985",
+      "object_sha256": "da5dc6120e33f571f69b8a7b20e6af731592cc99077d565c216397e247d9028f",
+      "emitted_functions": [
+        {
+          "name": "modelSetNoZRead__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-model-set-no-z-read/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-p-close-ps/p_close_ps.cpp",
+      "source_sha256": "6aa93517fe7094c116f354d7e8afaf1f32abafb6e71d8e1b014c4d3efec509f7",
+      "object_sha256": "24f2146786e0bc668536d87b8e592617567887b533c474542833348047a0d499",
+      "emitted_functions": [
+        {
+          "name": "P_CloseParticleSystem__Fi",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-p-close-ps/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-p-open-ps/p_open_ps.cpp",
+      "source_sha256": "e349c3c401a7ef0dcf66f600d2aa086f3377389de653ef810a9c0d6652592c9b",
+      "object_sha256": "18cf1331f408bd335918c86885c44ebd4cb918f2524511d7776bba16d60409b0",
+      "emitted_functions": [
+        {
+          "name": "P_OpenParticleSystem__Fi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-p-open-ps/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-p-push/p_push.cpp",
+      "source_sha256": "3accb1c8cb21f91c8be3807c0d8a982d9bd8ead1188287035f7951697eda273b",
+      "object_sha256": "674135256d0eff40807008cea2366b2e9e177db5ed336c94e5bd978009f30350",
+      "emitted_functions": [
+        {
+          "name": "P_Push__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-p-push/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-p-set-ps-matrix/p_set_ps_matrix.cpp",
+      "source_sha256": "e8b8611e11a30916b349b6f4b86f7158494aba572660c1ce53302e5921630e66",
+      "object_sha256": "9d49b905fcea96dcd13a96a5072f28e2ee1fbfaf851c6b5c21e154273f9a6afd",
+      "emitted_functions": [
+        {
+          "name": "P_SetParticleSystemMatrix__FiP8Matrix34",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-p-set-ps-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-p-set-trail-color/p_set_trail_color.cpp",
+      "source_sha256": "2c1029223152b790af69e69880591d0625cdf7ce34b4b0e036fdaed2ff0f6117",
+      "object_sha256": "ea16260cbd02f3f5615abee758a82fd527ab077de1d4eff5fdaa3dc659c660b5",
+      "emitted_functions": [
+        {
+          "name": "P_SetTrailColor__Fiiiii",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-p-set-trail-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-player-check-armor-cache-races/check_armor_cache_races.cpp",
+      "source_sha256": "40e36f91d23c2bce5b8bb2bdc498212cfafdf0c2df33f6dcaf92cf75028abbbb",
+      "object_sha256": "c10ed6c52caa3ba4928b17f7f3f83b601e9a10c116486d2fad5f4e0745cd99fd",
+      "emitted_functions": [
+        {
+          "name": "playerCheckArmorCacheRaces__Fv",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-player-check-armor-cache-races/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-spell-draw/spell_draw.cpp",
+      "source_sha256": "1d16b680f9ccc9ee6c60fb97a673e6d82fc7dcf3e5e97fe256a144d2d0785591",
+      "object_sha256": "8f3b4051a409253cda6e6e4be8032eed99c32d39ce813121dd2e00e212a0ed23",
+      "emitted_functions": [
+        {
+          "name": "draw__5Spell",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-spell-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-b",
+      "source": "sources/w13-frontend-game-b-texture-draw-float/texture_draw_float.cpp",
+      "source_sha256": "8e67f66079a9988d9b670b767199c3c2cb2a47b72cae77fa333855d00a0ceaf2",
+      "object_sha256": "95a2905423e540a29b32bf8934d133b6e39436e6251642aacf930499965e4f65",
+      "emitted_functions": [
+        {
+          "name": "textureDrawFloat__FP8_textureffiUiff",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-b-texture-draw-float/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
