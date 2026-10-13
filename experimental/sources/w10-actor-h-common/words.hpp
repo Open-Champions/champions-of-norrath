@@ -51,4 +51,10 @@ inline void* adjusted(void* object, unsigned offset) {
     return static_cast<unsigned char*>(object) + entry_adjust(object, offset);
 }
 
+inline void copy_bytes(void* to, const void* from, unsigned count) {
+    unsigned char* d = static_cast<unsigned char*>(to);
+    const unsigned char* s = static_cast<const unsigned char*>(from);
+    for (unsigned i = 0; i < count; ++i) d[i] = s[i];
+}
+
 }  // namespace w10h
