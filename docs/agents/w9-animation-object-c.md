@@ -25,3 +25,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `w-lump-header-data` | data: `wLumpHeader` | 0x4845a4 | 4 |
 | `radial-damage` | `objectRadialDamage__FP10GameObjectG6Point3iffiii` | 0x13f708 | 548 |
 | `find-empty-spot` | `objectFindEmptySpot__FG6Point3iiPc` | 0x13f2d0 | 1076 |
+| `slide-back` | `slideBack__8Creaturef` | 0x111490 | 920 |
