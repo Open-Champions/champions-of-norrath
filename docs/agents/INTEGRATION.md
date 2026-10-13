@@ -8421,3 +8421,28 @@ Closed: `Init__t7VIArray1Zii`, `Init__t8VIVector1Z18VISceneDisplayElemi`, `Next_
 
 Opened: `Allocate__t7VIArray1Zi`, `Allocate__t8VIVector1Z18VISceneDisplayElem`, `Clear__t6VIList1Z10VIMaterial`, `Clear__t6VIList1ZP12VIPrimBuffer`, `Clear__t6VIList1ZP9VIGUIPage`, `Clear__t6VIList1ZP9VISurface`, `DestroyPool__t5VIMap2ZiZi`, `DestroyPool__t6VIPool1Z19VIRasterMaterialLRU`, `DestroyPool__t6VIPool1ZP12VICollBuffer`, `DestroyPool__t6VIPool1ZP12VIPrimBuffer`, `DestroyPool__t6VIPool1ZP13VIColorBuffer`, `DestroyPool__t6VIPool1ZP13VIMaterialPal`, `DestroyPool__t6VIPool1ZP7VIRFont`, `DestroyPool__t6VIPool1ZP9VISurface`, `DestroyPool__t7VIArray1Z11VIClipEntry`
 - 2026-10-13 05:01 CDT — agents/w11-tmpl-b — 931 unresolved imports
+
+## agents/w11-tmpl-c
+
+Merged (merge commit, branch tip `980680a4`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each (constructors and destructors), with fresh `input_order` values 4510 through
+4536. The checks here are named `host_contract.cpp` rather than `host_check.cpp`; all 27 build with
+`-std=c++17 -Wall -Wextra -Werror` and exit 0. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed (the notes say the
+destructors compile to 144 bytes against 116 in the image). The worker ran no full build; this
+integration did: 4535 authored inputs, 3482 function bodies, zero COMMON, 214 tool tests passed.
+Per-unit object hashes in the snapshot are the ones the full build produced. No EE or game
+execution. Every unit has a host contract.
+
+| | |
+|---|---|
+| Before | 931 |
+| After | 906 |
+| Closed | 27 |
+| Opened | 2 |
+
+Closed: `_$_t7VIArray1Z7VIPlane`, `_$_t7VIArray1Z7VIVect3`, `_$_t7VIArray1Zi`, `_$_t8VIVector1Z18VISceneDisplayElem`, `__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `__t6VIList1Z10VIMaterial`, `__t6VIList1Z7VIActor`, `__t6VIList1ZP12VIPrimBuffer`, `__t6VIList1ZP9VIGUIPage`, `__t6VIList1ZP9VISurface`, `__t6VIList1ZQ27VIScene12VISceneOccup`, `__t6VIPool1Z19VIRasterMaterialLRU`, `__t6VIPool1ZP12VICollBuffer`, `__t6VIPool1ZP12VIPrimBuffer`, `__t6VIPool1ZP13VIColorBuffer`, `__t6VIPool1ZP13VIHSpriteAnim`, `__t6VIPool1ZP13VIMaterialPal`, `__t6VIPool1ZP16VIStaticLighting`, `__t6VIPool1ZP7VIRFont`, `__t6VIPool1ZP8VIRefMap`, `__t6VIPool1ZP8VISprite`, `__t6VIPool1ZP9VISurface`, `__t7VIArray1Z11VIClipEntry`, `__t7VIArray1Z7VIPlane`, `__t7VIArray1Z7VIVect3`, `__t7VIArray1Zi`, `__t8VIVector1Z18VISceneDisplayElem`
+
+Opened: `DestroyPool__t7VIArray1Z7VIPlane`, `DestroyPool__t7VIArray1Z7VIVect3`
+- 2026-10-13 05:04 CDT — agents/w11-tmpl-c — 906 unresolved imports

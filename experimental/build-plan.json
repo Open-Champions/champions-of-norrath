@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4508,
+  "default_authored_inputs": 4535,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3317,6 +3317,33 @@
     "sources/w11-tmpl-b-pool-dtor-p8visprite/dtor.cpp": "58e11a107175f841ea0bbadc58a5e9d42eb5510ab102609ba8584d5a9cc1b7cc",
     "sources/w11-tmpl-b-pool-dtor-p9visurface/dtor.cpp": "6d11adc76b01d3b3ab4d26a9db0da0d8e5f1bbee4a911e831d68f57fb57d306d",
     "sources/w11-tmpl-b-vector-init-scenedisplayelem/init.cpp": "97a8d5534749e324c076993967744202ee4eab15e5fd15f61a50ad08dc4f0064",
+    "sources/w11-tmpl-c-array-clip-entry-ctor/ctor.cpp": "b2a75bbf57eb7c879d0a25663100894dc5cb651aa1030d01adc903e096edfddf",
+    "sources/w11-tmpl-c-array-int-ctor/ctor.cpp": "68e09d10b34422909f370abd146abb82dc457f5606a0bf866d1047cb3f1ec9e7",
+    "sources/w11-tmpl-c-array-int-dtor/dtor.cpp": "183c280c91971bde90cf5728671cf2d24d0b6f45f4773624c1fe35dfd560566f",
+    "sources/w11-tmpl-c-array-plane-ctor/ctor.cpp": "a6790380eba7d1856a93759e50fa82c8ca2b0d8d0154a8d1c5206db7ee57e133",
+    "sources/w11-tmpl-c-array-plane-dtor/dtor.cpp": "02a956abaff91a632769bd850c703bee26dc44f3a94ce15ce6c5fdaf47e2b225",
+    "sources/w11-tmpl-c-array-vect3-ctor/ctor.cpp": "60aa796236cde3b93b5cbe48f58fe8432cd9bf56df9d1368aff9e36a521eb872",
+    "sources/w11-tmpl-c-array-vect3-dtor/dtor.cpp": "05213d3a6e16d505ef115676daa1aed89f189dea748494db0e2e2486bb06d8ca",
+    "sources/w11-tmpl-c-list-actor-ctor/ctor.cpp": "e027822bfd24468f127a6307d1fd37b730dafcce33f9367b2423a28181091c3e",
+    "sources/w11-tmpl-c-list-material-ctor/ctor.cpp": "e17754cd3b0a6a36b17bb896a13068f72e05a295d3e23754436a6a3f1dc5c8e1",
+    "sources/w11-tmpl-c-list-p-gui-page-ctor/ctor.cpp": "d08fbef4410012e3641704439524f90dff0f586eb69b89c6a08ac96e2e8c659d",
+    "sources/w11-tmpl-c-list-p-prim-buffer-ctor/ctor.cpp": "9ccebda4e1e7bd3b8aa36c5dd7f512d6047e9a956653a58b4b2c90f5c9e8b5b1",
+    "sources/w11-tmpl-c-list-p-surface-ctor/ctor.cpp": "a77bc89befb866fd1b71c4b999555eddb823a988e58f76c26bcad58d903f2ebc",
+    "sources/w11-tmpl-c-list-scene-occup-ctor/ctor.cpp": "62102e29d938192e77a836a7db142d145d0ef87ea7b123b216d8820c5514082f",
+    "sources/w11-tmpl-c-map-dict-entry-ctor/ctor.cpp": "6d80b319b50ec4d4a7c9c68fa1b5ffa434e99203a4f2656cff0fe6ef9de7b592",
+    "sources/w11-tmpl-c-pool-p-coll-buffer-ctor/ctor.cpp": "9e2aec6dd3a6b3089912912096a8af9d2ff6c4db9d5762fa75023b98d77fc207",
+    "sources/w11-tmpl-c-pool-p-color-buffer-ctor/ctor.cpp": "f8e0e8625f5578590cda18d269f6a2ae5658085a6c130eaf87ba06709795f215",
+    "sources/w11-tmpl-c-pool-p-hsprite-anim-ctor/ctor.cpp": "43b60affc57b3df28d5a041ff49102b0a4a2ee23a899a9eb21ecd152e8a1ded5",
+    "sources/w11-tmpl-c-pool-p-material-pal-ctor/ctor.cpp": "3476390fb60b7be9b6cd75e6dee31cb72a44747694593478fdd401e4a71d0235",
+    "sources/w11-tmpl-c-pool-p-prim-buffer-ctor/ctor.cpp": "b4b40fcd5e1cfbfd6c3ff3ed5be6b576de80ff67a1cc0391859a1a9b53fac30d",
+    "sources/w11-tmpl-c-pool-p-ref-map-ctor/ctor.cpp": "40d9705d7739b7ff5ecb95d9e1760c87a8e67a35c33da2302e944227094265b9",
+    "sources/w11-tmpl-c-pool-p-rfont-ctor/ctor.cpp": "f5974d891504cdb28c1b3822d26335469471332d696dcb12f90bd23776a634c7",
+    "sources/w11-tmpl-c-pool-p-sprite-ctor/ctor.cpp": "e1dccf59ebc4ff9a4326a9090fee4e65ce08bb977a2795014a60c02c026fd1f1",
+    "sources/w11-tmpl-c-pool-p-static-lighting-ctor/ctor.cpp": "57b679e64458664e154c094f46b3a4380a231bfe94761253c443c87cd88538fa",
+    "sources/w11-tmpl-c-pool-p-surface-ctor/ctor.cpp": "a34d8c93402b7fbab27004a98a2160511901c1704b9d8327e07e0b571f341fb6",
+    "sources/w11-tmpl-c-pool-raster-material-lru-ctor/ctor.cpp": "d2470b8274182b9c35617bea3cebac22027f5fa6acaed836d6533ef5bc139d18",
+    "sources/w11-tmpl-c-vector-scene-display-elem-ctor/ctor.cpp": "cd2175280e47c2c176e5763792b7de1a810e916b8b65ccaa8647b753f0b3f8c1",
+    "sources/w11-tmpl-c-vector-scene-display-elem-dtor/dtor.cpp": "730421f90adb04b68c30bd9a9f1090badf2d6b2b992e400313ac73b680766716",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -65596,6 +65623,411 @@
           "name": "Init__t8VIVector1Z18VISceneDisplayElemi"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4510,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_clip_entry_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "b2a75bbf57eb7c879d0a25663100894dc5cb651aa1030d01adc903e096edfddf",
+      "source": "sources/w11-tmpl-c-array-clip-entry-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z11VIClipEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4511,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_int_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "68e09d10b34422909f370abd146abb82dc457f5606a0bf866d1047cb3f1ec9e7",
+      "source": "sources/w11-tmpl-c-array-int-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Zi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4512,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_int_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "183c280c91971bde90cf5728671cf2d24d0b6f45f4773624c1fe35dfd560566f",
+      "source": "sources/w11-tmpl-c-array-int-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Zi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4513,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_plane_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a6790380eba7d1856a93759e50fa82c8ca2b0d8d0154a8d1c5206db7ee57e133",
+      "source": "sources/w11-tmpl-c-array-plane-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z7VIPlane"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4514,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_plane_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "02a956abaff91a632769bd850c703bee26dc44f3a94ce15ce6c5fdaf47e2b225",
+      "source": "sources/w11-tmpl-c-array-plane-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Z7VIPlane"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4515,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_vect3_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "60aa796236cde3b93b5cbe48f58fe8432cd9bf56df9d1368aff9e36a521eb872",
+      "source": "sources/w11-tmpl-c-array-vect3-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4516,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_vect3_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "05213d3a6e16d505ef115676daa1aed89f189dea748494db0e2e2486bb06d8ca",
+      "source": "sources/w11-tmpl-c-array-vect3-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Z7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4517,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_actor_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e027822bfd24468f127a6307d1fd37b730dafcce33f9367b2423a28181091c3e",
+      "source": "sources/w11-tmpl-c-list-actor-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1Z7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4518,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_material_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e17754cd3b0a6a36b17bb896a13068f72e05a295d3e23754436a6a3f1dc5c8e1",
+      "source": "sources/w11-tmpl-c-list-material-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1Z10VIMaterial"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4519,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_gui_page_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d08fbef4410012e3641704439524f90dff0f586eb69b89c6a08ac96e2e8c659d",
+      "source": "sources/w11-tmpl-c-list-p-gui-page-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP9VIGUIPage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4520,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_prim_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9ccebda4e1e7bd3b8aa36c5dd7f512d6047e9a956653a58b4b2c90f5c9e8b5b1",
+      "source": "sources/w11-tmpl-c-list-p-prim-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4521,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_surface_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a77bc89befb866fd1b71c4b999555eddb823a988e58f76c26bcad58d903f2ebc",
+      "source": "sources/w11-tmpl-c-list-p-surface-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4522,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_scene_occup_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "62102e29d938192e77a836a7db142d145d0ef87ea7b123b216d8820c5514082f",
+      "source": "sources/w11-tmpl-c-list-scene-occup-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZQ27VIScene12VISceneOccup"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4523,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_map_dict_entry_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "6d80b319b50ec4d4a7c9c68fa1b5ffa434e99203a4f2656cff0fe6ef9de7b592",
+      "source": "sources/w11-tmpl-c-map-dict-entry-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4524,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_coll_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9e2aec6dd3a6b3089912912096a8af9d2ff6c4db9d5762fa75023b98d77fc207",
+      "source": "sources/w11-tmpl-c-pool-p-coll-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP12VICollBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4525,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_color_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f8e0e8625f5578590cda18d269f6a2ae5658085a6c130eaf87ba06709795f215",
+      "source": "sources/w11-tmpl-c-pool-p-color-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIColorBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4526,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_hsprite_anim_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "43b60affc57b3df28d5a041ff49102b0a4a2ee23a899a9eb21ecd152e8a1ded5",
+      "source": "sources/w11-tmpl-c-pool-p-hsprite-anim-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4527,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_material_pal_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "3476390fb60b7be9b6cd75e6dee31cb72a44747694593478fdd401e4a71d0235",
+      "source": "sources/w11-tmpl-c-pool-p-material-pal-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIMaterialPal"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4528,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_prim_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "b4b40fcd5e1cfbfd6c3ff3ed5be6b576de80ff67a1cc0391859a1a9b53fac30d",
+      "source": "sources/w11-tmpl-c-pool-p-prim-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4529,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_ref_map_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "40d9705d7739b7ff5ecb95d9e1760c87a8e67a35c33da2302e944227094265b9",
+      "source": "sources/w11-tmpl-c-pool-p-ref-map-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4530,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_rfont_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f5974d891504cdb28c1b3822d26335469471332d696dcb12f90bd23776a634c7",
+      "source": "sources/w11-tmpl-c-pool-p-rfont-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP7VIRFont"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4531,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e1dccf59ebc4ff9a4326a9090fee4e65ce08bb977a2795014a60c02c026fd1f1",
+      "source": "sources/w11-tmpl-c-pool-p-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4532,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_static_lighting_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "57b679e64458664e154c094f46b3a4380a231bfe94761253c443c87cd88538fa",
+      "source": "sources/w11-tmpl-c-pool-p-static-lighting-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4533,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_surface_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a34d8c93402b7fbab27004a98a2160511901c1704b9d8327e07e0b571f341fb6",
+      "source": "sources/w11-tmpl-c-pool-p-surface-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4534,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_raster_material_lru_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d2470b8274182b9c35617bea3cebac22027f5fa6acaed836d6533ef5bc139d18",
+      "source": "sources/w11-tmpl-c-pool-raster-material-lru-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1Z19VIRasterMaterialLRU"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4535,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_vector_scene_display_elem_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "cd2175280e47c2c176e5763792b7de1a810e916b8b65ccaa8647b753f0b3f8c1",
+      "source": "sources/w11-tmpl-c-vector-scene-display-elem-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t8VIVector1Z18VISceneDisplayElem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4536,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_vector_scene_display_elem_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "730421f90adb04b68c30bd9a9f1090badf2d6b2b992e400313ac73b680766716",
+      "source": "sources/w11-tmpl-c-vector-scene-display-elem-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t8VIVector1Z18VISceneDisplayElem"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -65695,7 +66127,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "703c7e331ce5e649981a2aae892f41e3a8c466c2a81fb6cae335dc9e98f44c45",
+  "snapshot_sha256": "c6328237fd642bec2fd337a07e04f10c003bf9a85dcef96b1c95a910f160803f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
