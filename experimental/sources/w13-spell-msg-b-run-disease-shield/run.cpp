@@ -45,7 +45,7 @@ void* lumpFindResource__FPcT0(char* lump, char* name);
 void soundPlaySequence__FP15AnimationHeaderG6Point3f(void* header, Point3 position, float volume);
 
 namespace {
-unsigned roll(unsigned char* o) { return eRand__5Spell(o); }
+static unsigned roll(unsigned char* o) { return eRand__5Spell(o); }
 }  // namespace
 
 void run__18SpellDiseaseShieldG6Point3s(void* self, Point3 where, short) {
