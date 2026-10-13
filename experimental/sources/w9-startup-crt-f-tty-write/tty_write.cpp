@@ -28,8 +28,7 @@ int sceTtyWrite(const char* source, int count) {
     if (tinfo.busy != 0) return -1;
     const int interrupts = DIntr();
     tinfo.busy = 1;
-    TtyPacketHeader* const header =
-        reinterpret_cast<TtyPacketHeader*>(reinterpret_cast<unsigned>(wbuf) | 0x20000000u);
+    TtyPacketHeader* const header = reinterpret_cast<TtyPacketHeader*>(ttyUncached(wbuf));
     tinfo.sendCursor = reinterpret_cast<unsigned char*>(header);
     char* destination = reinterpret_cast<char*>(header) + 12;
     while (--count != -1) {
