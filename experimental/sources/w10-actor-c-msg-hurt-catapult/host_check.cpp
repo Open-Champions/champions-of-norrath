@@ -25,6 +25,7 @@ static void expect(bool ok, const char* message) {
     if (!ok) { std::fprintf(stderr, "fail: %s\n", message); ++failures; }
 }
 static std::string off(const void* p) { return std::to_string(static_cast<const unsigned char*>(p) - memory); }
+static std::string fl(float v) { char b[32]; std::snprintf(b, sizeof b, "%g", v); return b; }
 extern "C" void objectAddToRunList__FP10GameObject(void* o) { events.push_back("runlist:" + off(o)); }
 static char reduce_text[] = "reduceCarnage";
 static char death_text[] = "deathScript";
