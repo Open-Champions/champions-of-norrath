@@ -12,11 +12,11 @@ int main() {
         std::memset(object, 0x5a, sizeof object);
         rtti_c::write_word(rtti_c::address(object) + 960u, v);
         rtti_c::write_word(rtti_c::address(object) + 964u, 0x11223344u);
-        setWeapon__5Mummy(object);
+        norrath_mummy_set_weapon(object);
         const unsigned expect = v < 6 ? want[v] : 0x11223344u;
         if (rtti_c::read_word(rtti_c::address(object) + 964u) != expect) { std::printf("variant %u\n", v); ++bad; }
         if (object[959] != 0x5a || object[968] != 0x5a) { std::printf("neighbours\n"); ++bad; }
     }
-    std::printf(bad ? "failed\n" : "setWeapon__5Mummy passed\n");
+    std::printf(bad ? "failed\n" : "norrath_mummy_set_weapon passed\n");
     return bad != 0;
 }
