@@ -24,7 +24,63 @@ builds and passes natively on arm64 macOS (command lines in the table).
 Observed / inferred / unknown are kept separate inside each source file header; the short form is
 in the last three sections of this file.
 
-## Units, build-plan entries and checks
+## Not closed from the assigned list, and why
+
+* `runStats__Fii` (0x001bcb38, 4508 bytes): read in full, not authored. Observed outline: arguments are a player and a
+  mode (1, 2 or 3); the screen record is `statsScreen + 116 * player`, whose word 13 names the player record shown;
+  mode 2 handles the level-up point allocation (text keys for the stat names, `printStat__FiPUsiiii`,
+  `msgInventoryAdjustAbility__Fii`, `updateCursor__FiiiiiP12screenStructi`, `engineRemoveTask__FPFv_v(statsFrame__Fv)`,
+  `givePlayerExperience__Fii`), modes 2 and 3 end in `statsRunSkillTree__Fi`, and mode 1 draws the statistics page
+  (health, energy, armour, damage and the four stats, `displayResistances__Fi`, `playerRecomputeAbilityModifiers__Fv`).
+  The cursor bob uses the soft-double routines (`litodp`, `dpmul`, `fptodp`, `dpadd`, `sin`, `dptoli`) through 64-bit
+  register values, and the page uses `usprintf` with eight float arguments and about forty text keys. Authoring it
+  needs the same treatment as `do_driveline` (declare the soft-double routines as `unsigned long long` functions) and
+  every key string read from the image. Nothing was written because of its size next to the rest of the package.
+* `megatileGenerate__FP12_worldHeader` (19,680 bytes), `routePlot__FR10RouteQueue` (19,812 bytes) and
+  `msg_run__6Player` (27,496 bytes): not started. Each is several times larger than anything authored here and needs
+  its own bounded task; none has an authored partial source in the snapshot. They remain unresolved imports.
+
+## Honest corrections to commit messages
+
+Four commit messages quote mutation counts that were loosely tallied while the checks were still being extended:
+`Add getPic`, `Add lumpPartialLoad`, `Add drawNewestQuickSpellMenu` and `Add host check for MC_CheckPlayerImportOrChange`.
+The accurate statement is the one in this file: every single-line source mutation that was not equivalent (or a
+match inside a header comment) was caught by the final committed checks; the checks were extended once after a first
+round of mutations left a few cases undetected (boundary values in the quick-spell fade and the item-prefix digit
+trimming, among others). `Add lumpPartialLoad` was followed by a fix commit because its first check failed in one
+case (stale lump records left by an earlier case); every later commit was gated on its check passing.
+
+## Imports closed
+
+28 names, all with a committed host check:
+
+`ChangeNetCam__6Camerai`, `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_CheckPlayerImportOrChange__Fv`, `MC_ConvertTempPlayerToReal__Fi`, `MC_LoadLevelEntities__FPcT0`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`, `MC_SetRamNmPlayers__Fi`, `McErrWnd__Fv`, `coreStartLoadingScreen__Fv`, `countItems__FP10GameObject`, `drawGold__Fv`, `drawNewestQuickSpellMenu__Fiiicl`, `getMoveDir__FiiiP12screenStruct`, `getPic__4itemiPQ24item11description`, `listInsert__FP8ListHeadP10__listNodePv`, `lumpPartialLoad__FPcT0`, `lumpRename__FPcT0`, `msgEquipItem__FiPQ24item11descriptioni`, `msgInvItemSetAttributes__FiiPcPQ24item11description`, `msgUnequipItem__FiPQ24item11description`, `msg_run__7Weather`, `objGet__FP10GameObjectPc`, `playerAllocateArmorCache__Fii`, `shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii`, `shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii`, `shopRunMouseLogic__FiiP12screenStructi`, `updateTaskBar__FiP12screenStruct`.
+
+Not closed from the assigned list (not attempted or not finished, see the end of this file):
+`msg_run__6Player`, `megatileGenerate__FP12_worldHeader`, `routePlot__FR10RouteQueue`, `runStats__Fii`.
+
+## Imports opened
+
+Symbols the new sources reference that neither the shared partial build defines nor its unresolved list
+already named (computed from `nm` of each unit against the integrator's `game-components-partial.o`):
+
+`a.1122`, `blackoutTexCopy`, `commaString__FPc`, `curBoxOld`, `displayItemStats__FiiiPQ24item11descriptioniii`, `drewBitmap`, `floorPutSaveInfo__FPc`, `foregrndTexCopy`, `getPackChecksum__Fv`, `hudGetRemappedButtonIcon__Fii`, `hudQuickSpellOn`, `loadBuffer`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `mcDisableStartupScript`, `megatileEntitize__FPci`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell__Fiiil`, `objectPutSaveData__FPci`, `padChangeIndex__Fii`, `picAdd__4itemPc`, `playerGoldIconx`, `readMap__3mapPUc`, `scrollmapTexCopy`, `shopClipGridCoordinates__FPiN30`, `shopDrawItemBitmapGlow__FP8_textureii`, `shopMouseOnHotSpot__FP12screenStruct`, `titleloadTexCopy`.
+
+`a.1122` and `curBoxOld` are file-local variables of the quick-spell menu in the image (`a.1122` at 0x007d0568, four
+ints, per-player fade alpha; `curBoxOld` at 0x00428290, four ints); `titleloadTexCopy`, `scrollmapTexCopy`,
+`blackoutTexCopy`, `foregrndTexCopy` are the 64-byte texture copies of the loading screen (defined in the sources
+as `Texture64` objects of those names but not in any data unit). `commaString__FPc` is called by `drawGold`.
+Names already open before this package that these sources also need (so no new import): 
+`fullCount`, `hideAbilityAdjustMouse`, `iRandState`, `itemInfoHeight`, `itemToDestroy`, `maxDistance`, `zeroPad`.
+
+`armorName.1138` and `equipmentSlot2Cache.1137` are defined by `w13-frontend-game-a-armor-cache-locals` (not on the
+original unresolved list because they were only reachable through the not-yet-authored allocator).
+
+`zeroPad` is ambiguous in the image (three local objects at 0x007cc570, 0x007d03e8 and 0x007d04e0): the
+functions here that read it (`shopRunMouseLogic`) use the one at 0x007d03e8; the integrator must keep that
+object under the name `zeroPad` for them (earlier-wave sources use the same name).
+
+## Build-plan entries needed
 
 All entries use profile `authored_cpp`, an empty header closure and `kind` independently_authored_source.
 Add them to `snapshot.json` as well; the integrator assigns `input_order`. The `Object` column is the
@@ -79,36 +135,6 @@ Notes on the entries:
   searched for a call order the source never produces, so it exited 10 on every host).
 * The compiler emits no helper symbols for these units except where the table shows more than one function.
 
-## Imports closed
-
-28 names, all with a committed host check:
-
-`ChangeNetCam__6Camerai`, `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_CheckPlayerImportOrChange__Fv`, `MC_ConvertTempPlayerToReal__Fi`, `MC_LoadLevelEntities__FPcT0`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`, `MC_SetRamNmPlayers__Fi`, `McErrWnd__Fv`, `coreStartLoadingScreen__Fv`, `countItems__FP10GameObject`, `drawGold__Fv`, `drawNewestQuickSpellMenu__Fiiicl`, `getMoveDir__FiiiP12screenStruct`, `getPic__4itemiPQ24item11description`, `listInsert__FP8ListHeadP10__listNodePv`, `lumpPartialLoad__FPcT0`, `lumpRename__FPcT0`, `msgEquipItem__FiPQ24item11descriptioni`, `msgInvItemSetAttributes__FiiPcPQ24item11description`, `msgUnequipItem__FiPQ24item11description`, `msg_run__7Weather`, `objGet__FP10GameObjectPc`, `playerAllocateArmorCache__Fii`, `shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii`, `shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii`, `shopRunMouseLogic__FiiP12screenStructi`, `updateTaskBar__FiP12screenStruct`.
-
-Not closed from the assigned list (not attempted or not finished, see the end of this file):
-`msg_run__6Player`, `megatileGenerate__FP12_worldHeader`, `routePlot__FR10RouteQueue`, `runStats__Fii`.
-
-## Imports opened
-
-Symbols the new sources reference that neither the shared partial build defines nor its unresolved list
-already named (computed from `nm` of each unit against the integrator's `game-components-partial.o`):
-
-`a.1122`, `blackoutTexCopy`, `commaString__FPc`, `curBoxOld`, `displayItemStats__FiiiPQ24item11descriptioniii`, `drewBitmap`, `floorPutSaveInfo__FPc`, `foregrndTexCopy`, `getPackChecksum__Fv`, `hudGetRemappedButtonIcon__Fii`, `hudQuickSpellOn`, `loadBuffer`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `mcDisableStartupScript`, `megatileEntitize__FPci`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell__Fiiil`, `objectPutSaveData__FPci`, `padChangeIndex__Fii`, `picAdd__4itemPc`, `playerGoldIconx`, `readMap__3mapPUc`, `scrollmapTexCopy`, `shopClipGridCoordinates__FPiN30`, `shopDrawItemBitmapGlow__FP8_textureii`, `shopMouseOnHotSpot__FP12screenStruct`, `titleloadTexCopy`.
-
-`a.1122` and `curBoxOld` are file-local variables of the quick-spell menu in the image (`a.1122` at 0x007d0568, four
-ints, per-player fade alpha; `curBoxOld` at 0x00428290, four ints); `titleloadTexCopy`, `scrollmapTexCopy`,
-`blackoutTexCopy`, `foregrndTexCopy` are the 64-byte texture copies of the loading screen (defined in the sources
-as `Texture64` objects of those names but not in any data unit). `commaString__FPc` is called by `drawGold`.
-Names already open before this package that these sources also need (so no new import): 
-`fullCount`, `hideAbilityAdjustMouse`, `iRandState`, `itemInfoHeight`, `itemToDestroy`, `maxDistance`, `zeroPad`.
-
-`armorName.1138` and `equipmentSlot2Cache.1137` are defined by `w13-frontend-game-a-armor-cache-locals` (not on the
-original unresolved list because they were only reachable through the not-yet-authored allocator).
-
-`zeroPad` is ambiguous in the image (three local objects at 0x007cc570, 0x007d03e8 and 0x007d04e0): the
-functions here that read it (`shopRunMouseLogic`) use the one at 0x007d03e8; the integrator must keep that
-object under the name `zeroPad` for them (earlier-wave sources use the same name).
-
 ## Authored but never executed
 
 Everything. No function here has run on the EE, in an emulator, or inside the game. The only execution evidence is
@@ -129,30 +155,4 @@ which is not the console's truncating behaviour). Specifically not exercised: th
 * The original code's inlined thousands-separator routine puts the first comma at `len % 3`, or `len / 2` when that is
   zero, so a nine-digit price prints wrongly; the authored code reproduces that (observed, probably a defect).
 * Section placement of the two local tables follows the build profile rather than the original `.data` split.
-
-## Not closed, and why
-
-* `runStats__Fii` (0x001bcb38, 4508 bytes): read in full, not authored. Observed outline: arguments are a player and a
-  mode (1, 2 or 3); the screen record is `statsScreen + 116 * player`, whose word 13 names the player record shown;
-  mode 2 handles the level-up point allocation (text keys for the stat names, `printStat__FiPUsiiii`,
-  `msgInventoryAdjustAbility__Fii`, `updateCursor__FiiiiiP12screenStructi`, `engineRemoveTask__FPFv_v(statsFrame__Fv)`,
-  `givePlayerExperience__Fii`), modes 2 and 3 end in `statsRunSkillTree__Fi`, and mode 1 draws the statistics page
-  (health, energy, armour, damage and the four stats, `displayResistances__Fi`, `playerRecomputeAbilityModifiers__Fv`).
-  The cursor bob uses the soft-double routines (`litodp`, `dpmul`, `fptodp`, `dpadd`, `sin`, `dptoli`) through 64-bit
-  register values, and the page uses `usprintf` with eight float arguments and about forty text keys. Authoring it
-  needs the same treatment as `do_driveline` (declare the soft-double routines as `unsigned long long` functions) and
-  every key string read from the image. Nothing was written because of its size next to the rest of the package.
-* `megatileGenerate__FP12_worldHeader` (19,680 bytes), `routePlot__FR10RouteQueue` (19,812 bytes) and
-  `msg_run__6Player` (27,496 bytes): not started. Each is several times larger than anything authored here and needs
-  its own bounded task; none has an authored partial source in the snapshot. They remain unresolved imports.
-
-## Honest corrections to commit messages
-
-Four commit messages quote mutation counts that were loosely tallied while the checks were still being extended:
-`Add getPic`, `Add lumpPartialLoad`, `Add drawNewestQuickSpellMenu` and `Add host check for MC_CheckPlayerImportOrChange`.
-The accurate statement is the one in this file: every single-line source mutation that was not equivalent (or a
-match inside a header comment) was caught by the final committed checks; the checks were extended once after a first
-round of mutations left a few cases undetected (boundary values in the quick-spell fade and the item-prefix digit
-trimming, among others). `Add lumpPartialLoad` was followed by a fix commit because its first check failed in one
-case (stale lump records left by an earlier case); every later commit was gated on its check passing.
 
