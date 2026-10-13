@@ -8600,3 +8600,25 @@ Closed: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `displayGold__FP12playerStructP12
 
 Opened: `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drawGold__Fv`, `drewHelpfulMessageHelpBar`, `fontStringSize__FP4FontPci`, `helpfulMessagesDraw__Fv`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `runGold__Fv`, `runHUD__Fi`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`
 - 2026-10-13 05:43 CDT — agents/w11-front-a — 879 unresolved imports
+
+## agents/w11-ctor-b
+
+Merged (merge commit, branch tip `1ed345d7`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 28 units, one constructor each with fresh
+`input_order` values 4682 through 4709. All 28 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4708 authored inputs, 3612 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The count is unchanged at 879 because each constructor stores its class-table address, so the 28 constructors close 28 names and open the 28 matching `_vt$...` tables. The notes' plan entries give 48 compiled bytes for every constructor; the compiler here gives 44 for 20 of the 28 (48 for 8), and the build rejected the notes' numbers, so the measured sizes are recorded.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 28 |
+| Opened | 28 |
+
+Closed: `__10SkillDodge`, `__12SkillCyclone`, `__12SkillHealing`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`
+
+Opened: `_vt$10SkillDodge`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$13SkillDarkness`, `_vt$13SkillEntangle`, `_vt$14SkillColdArrow`, `_vt$14SkillFireArrow`, `_vt$14SkillFireStorm`, `_vt$14SkillHarmTouch`, `_vt$15SkillClericRoot`, `_vt$15SkillConeOfFire`, `_vt$15SkillFireFlares`, `_vt$15SkillFrostStorm`, `_vt$15SkillHolyShield`, `_vt$15SkillHolyStrike`, `_vt$16SkillColdWeapons`, `_vt$16SkillConeOfFrost`, `_vt$16SkillCriticalHit`, `_vt$16SkillDiseaseBolt`, `_vt$16SkillFireWeapons`, `_vt$16SkillGroundPound`, `_vt$17SkillConvertEnemy`, `_vt$17SkillDiseaseTrail`, `_vt$17SkillExplodeArrow`, `_vt$18SkillConvertUndead`, `_vt$18SkillDiseaseShield`, `_vt$18SkillDismissUndead`, `_vt$18SkillHammerOfWrath`
+- 2026-10-13 05:51 CDT — agents/w11-ctor-b — 879 unresolved imports
