@@ -71497,6 +71497,136 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w13-frontend-game-a-update-task-bar/update_task_bar.cpp"
+    },
+    {
+      "input_order": 5597,
+      "component": "w12-hud-loop-a-draw-gold",
+      "object_name": "w12_hud_loop_a_draw_gold.o",
+      "private_object_sha256": "4366c18494c232d05edcd09eba2ccc8633d424a00a30a671ae0d74352e98c6a5",
+      "emitted_functions": [
+        {
+          "name": "drawGold__Fv",
+          "compiled_body_bytes": 1388
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-draw-gold/draw_gold.cpp"
+    },
+    {
+      "input_order": 5598,
+      "component": "w10-front-a-mc-build-packed-player",
+      "object_name": "w10_front_a_mc_build_packed_player.o",
+      "private_object_sha256": "62b63cb5e8618e430b444c40a1e482677acb7ff83c3e158303722893fed705a1",
+      "emitted_functions": [
+        {
+          "name": "MC_BuildPackedPlayer__FP11playerEntryi",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-front-a-mc-build-packed-player/mc_build_packed_player.cpp"
+    },
+    {
+      "input_order": 5599,
+      "component": "w9-frontend-a-mc-check-player-import-or-change",
+      "object_name": "w9_frontend_a_mc_check_player_import_or_change.o",
+      "private_object_sha256": "794d440af66f82e78a2a03b0499f8beac91b561b9da62248fbbe49eccda1d6f1",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L14remove_flaggedEi",
+          "compiled_body_bytes": 192
+        },
+        {
+          "name": "MC_CheckPlayerImportOrChange__Fv",
+          "compiled_body_bytes": 2248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-a-mc-check-player-import-or-change/check_player_import_or_change.cpp"
+    },
+    {
+      "input_order": 5600,
+      "component": "w10-front-a-mc-convert-temp-player-to-real",
+      "object_name": "w10_front_a_mc_convert_temp_player_to_real.o",
+      "private_object_sha256": "997ea6a1677c72c2f15aa29caf57aa27b48109ea54f00793a7b64c9ad6d00f94",
+      "emitted_functions": [
+        {
+          "name": "MC_ConvertTempPlayerToReal__Fi",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-front-a-mc-convert-temp-player-to-real/mc_convert_temp_player_to_real.cpp"
+    },
+    {
+      "input_order": 5601,
+      "component": "w11-front-a-mc-load-level-entities",
+      "object_name": "w11_front_a_mc_load_level_entities.o",
+      "private_object_sha256": "a2f688e205cbacfa7bd9bba9538b89768421964a6c93196c0f78d2903ca65d81",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadLevelEntities__FPcT0",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-front-a-mc-load-level-entities/mc_load_level_entities.cpp"
+    },
+    {
+      "input_order": 5602,
+      "component": "w10-front-a-mc-net-pack",
+      "object_name": "w10_front_a_mc_net_pack.o",
+      "private_object_sha256": "e8e820ffb6a209f00abbe95c7aa15f2fc9631fb52438749c126961e6b50e1dc3",
+      "emitted_functions": [
+        {
+          "name": "MC_NetPack__Fv",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-front-a-mc-net-pack/mc_net_pack.cpp"
+    },
+    {
+      "input_order": 5603,
+      "component": "w10-front-a-mc-net-un-pack",
+      "object_name": "w10_front_a_mc_net_un_pack.o",
+      "private_object_sha256": "98c66485e0f7bdd8b3d0aefa01f54f8bed32274db20cadff893c50b4effae34d",
+      "emitted_functions": [
+        {
+          "name": "MC_NetUnPack__Fv",
+          "compiled_body_bytes": 808
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-front-a-mc-net-un-pack/mc_net_un_pack.cpp"
+    },
+    {
+      "input_order": 5604,
+      "component": "w10-front-a-mc-set-ram-nm-players",
+      "object_name": "w10_front_a_mc_set_ram_nm_players.o",
+      "private_object_sha256": "82d2d64c9a598c30c32507544545d4d53c43e101e92183ee3e17a8d6b58d59ae",
+      "emitted_functions": [
+        {
+          "name": "MC_SetRamNmPlayers__Fi",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-front-a-mc-set-ram-nm-players/mc_set_ram_nm_players.cpp"
+    },
+    {
+      "input_order": 5605,
+      "component": "w12-actor-spell-c-msg-run-7weather",
+      "object_name": "w12_actor_spell_c_msg_run_7weather.o",
+      "private_object_sha256": "c1004c6f6af8a462bc6003fd04d500739c0f55a992779b18598aa444d9538dba",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Weather",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-actor-spell-c-msg-run-7weather/msg_run.cpp"
     }
   ],
   "drafts": [
@@ -83806,11 +83936,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5597,
-    "authored_default_inputs": 5595,
+    "selected_inputs": 5606,
+    "authored_default_inputs": 5604,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4285,
-    "compiled_body_bytes_from_accepted_inputs": 1864968,
+    "emitted_function_definitions_including_helpers": 4295,
+    "compiled_body_bytes_from_accepted_inputs": 1871240,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -83823,7 +83953,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 5284
+    "package_selected_inputs": 5293
   },
   "startup_implementations": [
     {
@@ -166676,6 +166806,163 @@
       ],
       "host_files": [
         "sources/w13-frontend-game-a-update-task-bar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w12-hud-loop-a-draw-gold/draw_gold.cpp",
+      "source_sha256": "507a3e3eca845c2dc765e85f35123d6bef6d93adf48d8493253eecca8d30fd90",
+      "object_sha256": "4366c18494c232d05edcd09eba2ccc8633d424a00a30a671ae0d74352e98c6a5",
+      "emitted_functions": [
+        {
+          "name": "drawGold__Fv",
+          "compiled_body_bytes": 1388
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-draw-gold/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w10-front-a-mc-build-packed-player/mc_build_packed_player.cpp",
+      "source_sha256": "b76eda68f2819d15051a1e41b9d551ee332e7a57bbb41d5e21218832befcdf57",
+      "object_sha256": "62b63cb5e8618e430b444c40a1e482677acb7ff83c3e158303722893fed705a1",
+      "emitted_functions": [
+        {
+          "name": "MC_BuildPackedPlayer__FP11playerEntryi",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-build-packed-player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w9-frontend-a-mc-check-player-import-or-change/check_player_import_or_change.cpp",
+      "source_sha256": "232ae541045e730b711e7bcaa8e8459ac700829ca57e3c9de780394b28ce2b33",
+      "object_sha256": "794d440af66f82e78a2a03b0499f8beac91b561b9da62248fbbe49eccda1d6f1",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L14remove_flaggedEi",
+          "compiled_body_bytes": 192
+        },
+        {
+          "name": "MC_CheckPlayerImportOrChange__Fv",
+          "compiled_body_bytes": 2248
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-check-player-import-or-change/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w10-front-a-mc-convert-temp-player-to-real/mc_convert_temp_player_to_real.cpp",
+      "source_sha256": "eaa32379cec41b516348f17f2b4c0ce05ca48c965e2f7cda07d18eb07f33d55f",
+      "object_sha256": "997ea6a1677c72c2f15aa29caf57aa27b48109ea54f00793a7b64c9ad6d00f94",
+      "emitted_functions": [
+        {
+          "name": "MC_ConvertTempPlayerToReal__Fi",
+          "compiled_body_bytes": 100
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-convert-temp-player-to-real/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w11-front-a-mc-load-level-entities/mc_load_level_entities.cpp",
+      "source_sha256": "54c5a5cdffa7e72aa22166eb19faae0b11234abb0b85d36efb7f84d41d6987da",
+      "object_sha256": "a2f688e205cbacfa7bd9bba9538b89768421964a6c93196c0f78d2903ca65d81",
+      "emitted_functions": [
+        {
+          "name": "MC_LoadLevelEntities__FPcT0",
+          "compiled_body_bytes": 812
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-load-level-entities/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w10-front-a-mc-net-pack/mc_net_pack.cpp",
+      "source_sha256": "648cd7f877ccd63e4c377227ad5f386c5bd7b9b8c617cd21b7d84b298f993878",
+      "object_sha256": "e8e820ffb6a209f00abbe95c7aa15f2fc9631fb52438749c126961e6b50e1dc3",
+      "emitted_functions": [
+        {
+          "name": "MC_NetPack__Fv",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-net-pack/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w10-front-a-mc-net-un-pack/mc_net_un_pack.cpp",
+      "source_sha256": "29c9db525a6091d36e4bdfcd5320ee0fbc4da05ecc8e80e1b5daf0e07a0ac7ef",
+      "object_sha256": "98c66485e0f7bdd8b3d0aefa01f54f8bed32274db20cadff893c50b4effae34d",
+      "emitted_functions": [
+        {
+          "name": "MC_NetUnPack__Fv",
+          "compiled_body_bytes": 808
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-net-un-pack/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w10-front-a-mc-set-ram-nm-players/mc_set_ram_nm_players.cpp",
+      "source_sha256": "f74276bd8ee26825c1122d5f4c6d0dd71d2405a2b4566273d26dfdd82e9045e6",
+      "object_sha256": "82d2d64c9a598c30c32507544545d4d53c43e101e92183ee3e17a8d6b58d59ae",
+      "emitted_functions": [
+        {
+          "name": "MC_SetRamNmPlayers__Fi",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-mc-set-ram-nm-players/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w13-frontend-game-a",
+      "source": "sources/w12-actor-spell-c-msg-run-7weather/msg_run.cpp",
+      "source_sha256": "fb04c25e63b82c008efbd3fc4227d21afba0dc1b9a4cd35764f18ffe0c3d56c6",
+      "object_sha256": "c1004c6f6af8a462bc6003fd04d500739c0f55a992779b18598aa444d9538dba",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Weather",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w13-frontend-game-a-msg-run-7weather/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
