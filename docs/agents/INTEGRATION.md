@@ -6230,6 +6230,134 @@ Opened: `_$_10StaticFire`, `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_3NPC`,
 `msg_trigger__3NPCi`, `msg_trigger__8RollDoori`, `setState__3NPCi`,
 `setState__6Wraithi`
 
+## agents/w9-ctors-wraith-b
+
+Merged (the branch notes carry the five summary sections; the tip was 38
+minutes old). Thirty-eight data units (virtual tables and shared objects) with
+fresh `input_order` values 3172 through 3209; the function-body count stays at
+2336. As with `w9-ctors-wraith-a`, the `views/host/` programs link here only
+after the `asm("name")` labels get the macOS leading underscore (rebuilt from
+a copy, no source change); built that way all 38 exit 0. The opened set rises
+by 170 because each virtual table names its class's slot functions
+(destructors, `__tf*` type-info, `msg_*` handlers), which are not defined in
+this package, so the official count goes up by 132 net. No game binary or
+disassembly listing was committed. 3208 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1323 |
+| After | 1455 |
+| Closed | 38 |
+| Opened | 170 |
+
+Closed: `norrath_ctors_lava_wraith_view_44af90`,
+`norrath_ctors_lava_wraith_view_44b080`,
+`norrath_ctors_lava_wraith_view_44b260`,
+`norrath_ctors_lava_wraith_view_44b350`,
+`norrath_ctors_lava_wraith_view_44b630`,
+`norrath_ctors_lava_wraith_view_44b720`,
+`norrath_ctors_lava_wraith_view_44b810`,
+`norrath_ctors_lava_wraith_view_44c710`,
+`norrath_ctors_lava_wraith_view_44c7a0`,
+`norrath_ctors_lava_wraith_view_44def0`,
+`norrath_ctors_lava_wraith_view_44dfe0`,
+`norrath_ctors_lava_wraith_view_44e2b0`,
+`norrath_ctors_lava_wraith_view_44f3d8`,
+`norrath_ctors_lava_wraith_view_44f5b8`,
+`norrath_ctors_lava_wraith_view_44f798`,
+`norrath_ctors_lava_wraith_view_44fa38`,
+`norrath_ctors_lava_wraith_view_44fb28`,
+`norrath_ctors_lava_wraith_view_44fc18`,
+`norrath_ctors_lava_wraith_view_44fd08`,
+`norrath_ctors_lava_wraith_view_44fdf8`,
+`norrath_ctors_lava_wraith_view_44fee8`,
+`norrath_ctors_lava_wraith_view_450440`,
+`norrath_ctors_lava_wraith_view_46cd20`,
+`norrath_ctors_lava_wraith_view_46cd30`,
+`norrath_ctors_lava_wraith_view_46cd40`,
+`norrath_ctors_lava_wraith_view_46cd50`,
+`norrath_ctors_lava_wraith_view_46cd60`,
+`norrath_ctors_lava_wraith_view_46cd70`,
+`norrath_ctors_lava_wraith_view_46d7b8`,
+`norrath_ctors_lava_wraith_view_470358`,
+`norrath_ctors_lava_wraith_view_4718e8`,
+`norrath_ctors_lava_wraith_view_4718f8`,
+`norrath_ctors_lava_wraith_view_471908`,
+`norrath_ctors_lava_wraith_view_471918`,
+`norrath_ctors_lava_wraith_view_471928`,
+`norrath_ctors_lava_wraith_view_471938`,
+`norrath_ctors_lava_wraith_view_471948`,
+`norrath_ctors_lava_wraith_view_471958`
+
+Opened: `_$_10SeaMonster`, `_$_11LavaMonster`, `_$_11MaleDarkElf`,
+`_$_11PushTrigger`, `_$_11SpiderQueen`, `_$_11VampireLord`,
+`_$_12UndeadKnight`, `_$_14WoodElfSoldier`, `_$_17UndeadKnightClone`,
+`_$_3Orc`, `_$_4Soul`, `_$_5Mummy`, `_$_5Rondo`, `_$_6Minion`,
+`_$_7Ulthork`, `_$_7Vampire`, `_$_8Scorpion`, `_$_8Skeleton`,
+`_$_8Skelight`, `_$_8SuperOrc`, `_$_9MummyKing`, `_$_9WaveMaker`,
+`__tf10SeaMonster`, `__tf11LavaMonster`, `__tf11MaleDarkElf`,
+`__tf11SpiderQueen`, `__tf11VampireLord`, `__tf12UndeadKnight`,
+`__tf14WoodElfSoldier`, `__tf17UndeadKnightClone`, `__tf4Soul`,
+`__tf5Mummy`, `__tf5Rondo`, `__tf6Minion`, `__tf7Ulthork`, `__tf7Vampire`,
+`__tf8Scorpion`, `__tf8Skeleton`, `__tf8Skelight`, `__tf8SuperOrc`,
+`__tf9WaveMaker`, `clone__11LavaMonster`, `clone__11MaleDarkElf`,
+`clone__11PushTrigger`, `clone__11SpiderQueen`, `clone__11VampireLord`,
+`clone__12UndeadKnight`, `clone__14WoodElfSoldier`, `clone__3Orc`,
+`clone__7Vampire`, `clone__8Scorpion`, `clone__8Skeleton`,
+`clone__8Skelight`, `clone__8SuperOrc`, `clone__9WaveMaker`,
+`getMinibossName__10SeaMonster`, `getMinibossName__11MaleDarkElf`,
+`getMinibossName__3Orc`, `getMinibossName__5Mummy`,
+`getModel__11LavaMonster`, `getModel__11VampireLord`, `getModel__4Soul`,
+`initMiniboss__10SeaMonster`, `initMiniboss__11MaleDarkElf`,
+`initMiniboss__3Orc`, `initMiniboss__5Mummy`,
+`isEnemy__8SkeletonP10GameObject`,
+`msg_alert__11MaleDarkElfifG6Point3P10GameObject`,
+`msg_alert__3OrcifG6Point3P10GameObject`,
+`msg_alert__8SkeletonifG6Point3P10GameObject`, `msg_draw__10SeaMonster`,
+`msg_draw__11LavaMonster`, `msg_draw__11MaleDarkElf`,
+`msg_draw__11SpiderQueen`, `msg_draw__11VampireLord`,
+`msg_draw__12UndeadKnight`, `msg_draw__14WoodElfSoldier`,
+`msg_draw__17UndeadKnightClone`, `msg_draw__3Orc`, `msg_draw__4Soul`,
+`msg_draw__5Mummy`, `msg_draw__5Rondo`, `msg_draw__6Minion`,
+`msg_draw__7Ulthork`, `msg_draw__7Vampire`, `msg_draw__8Scorpion`,
+`msg_draw__8Skeleton`, `msg_draw__8Skelight`, `msg_draw__8SuperOrc`,
+`msg_draw__9MummyKing`, `msg_getPokeName__11PushTriggerPUsi`,
+`msg_hurt__11SpiderQueenfP10GameObjecti`,
+`msg_hurt__11VampireLordfP10GameObjecti`,
+`msg_hurt__12UndeadKnightfP10GameObjecti`,
+`msg_hurt__14WoodElfSoldierfP10GameObjecti`,
+`msg_hurt__3OrcfP10GameObjecti`, `msg_hurt__4SoulfP10GameObjecti`,
+`msg_hurt__6MinionfP10GameObjecti`, `msg_hurt__8SkeletonfP10GameObjecti`,
+`msg_hurt__8SuperOrcfP10GameObjecti`, `msg_hurt__9MummyKingfP10GameObjecti`,
+`msg_load__11LavaMonsterPc`, `msg_load__11MaleDarkElfPc`,
+`msg_load__3OrcPc`, `msg_load__4SoulPc`, `msg_load__5MummyPc`,
+`msg_load__7UlthorkPc`, `msg_load__8SkeletonPc`, `msg_load__8SkelightPc`,
+`msg_moveCollision__10SeaMonsterPP10GameObject`, `msg_poke__11PushTriggeri`,
+`msg_run__10SeaMonster`, `msg_run__11LavaMonster`, `msg_run__11MaleDarkElf`,
+`msg_run__11SpiderQueen`, `msg_run__11VampireLord`,
+`msg_run__12UndeadKnight`, `msg_run__14WoodElfSoldier`,
+`msg_run__17UndeadKnightClone`, `msg_run__3Orc`, `msg_run__4Soul`,
+`msg_run__5Mummy`, `msg_run__5Rondo`, `msg_run__6Minion`,
+`msg_run__7Ulthork`, `msg_run__7Vampire`, `msg_run__8Scorpion`,
+`msg_run__8Skeleton`, `msg_run__8Skelight`, `msg_run__8SuperOrc`,
+`msg_run__9MummyKing`, `msg_run__9WaveMaker`, `msg_save__11LavaMonsterPc`,
+`msg_save__11MaleDarkElfPc`, `msg_save__3OrcPc`, `msg_save__4SoulPc`,
+`msg_save__5MummyPc`, `msg_save__7UlthorkPc`, `msg_save__8SkeletonPc`,
+`msg_save__8SkelightPc`, `msg_trigger__11SpiderQueeni`,
+`msg_trigger__11VampireLordi`, `msg_trigger__12UndeadKnighti`,
+`msg_trigger__14WoodElfSoldieri`, `msg_trigger__4Souli`,
+`msg_trigger__5Rondoi`, `msg_trigger__6Minioni`, `msg_trigger__8SuperOrci`,
+`msg_trigger__9MummyKingi`, `runSpells__5MummyG6Point3`,
+`setState__10SeaMonsteri`, `setState__11LavaMonsteri`,
+`setState__11MaleDarkElfi`, `setState__11SpiderQueeni`,
+`setState__11VampireLordi`, `setState__12UndeadKnighti`,
+`setState__14WoodElfSoldieri`, `setState__17UndeadKnightClonei`,
+`setState__3Orci`, `setState__4Souli`, `setState__5Mummyi`,
+`setState__5Rondoi`, `setState__6Minioni`, `setState__7Ulthorki`,
+`setState__7Vampirei`, `setState__8Scorpioni`, `setState__8Skeletoni`,
+`setState__8Skelighti`, `setState__8SuperOrci`, `setState__9MummyKingi`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6618,3 +6746,4 @@ and no startup stage has executed.
 - 2026-10-12 22:08 CDT — `agents/w9-ctors-lantern-g` — 1325 unresolved imports
 - 2026-10-12 22:10 CDT — `agents/w9-ctors-lantern-h` — 1289 unresolved imports
 - 2026-10-12 22:13 CDT — `agents/w9-ctors-wraith-a` — 1323 unresolved imports
+- 2026-10-12 22:16 CDT — `agents/w9-ctors-wraith-b` — 1455 unresolved imports
