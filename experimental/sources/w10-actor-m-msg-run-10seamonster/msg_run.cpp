@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed msg_run__10SeaMonster at 0x1f82a0, 1228 bytes. Nothing is returned. T is the table at the word at
+// Observed msg_run__10SeaMonster at 0x1f82a0, 1232 bytes. Nothing is returned. T is the table at the word at
 // object+36 (entry 12 is the model header). "setState(n)" is table entry 184 of the object's table called on the
 // adjusted object with n. h294 is the unsigned halfword at +294; word256 and word808 are compared as signed.
 //  1. When the word at +236 is nonzero, the word at +960 is zero and bit 0 of the 64-bit word at +160 is set:

@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed msg_hurt__4SoulfP10GameObjecti at 0x1f4430, 660 bytes. Arguments: object, float amount, source
+// Observed msg_hurt__4SoulfP10GameObjecti at 0x1f4430, 664 bytes. Arguments: object, float amount, source
 // object, int. Nothing is returned.
 //  1. A null source calls __throw_bad_typeid (it does not return).
 //  2. The function word at byte 4 of the source's table (word at source+72, slot 0) is called with the first

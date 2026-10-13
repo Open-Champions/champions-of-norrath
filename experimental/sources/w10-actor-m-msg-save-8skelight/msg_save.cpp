@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed msg_save__8SkelightPc at 0x247288, 128 bytes. The base routine msg_save__8CreaturePc runs
+// Observed msg_save__8SkelightPc at 0x247288, 132 bytes. The base routine msg_save__8CreaturePc runs
 // first and returns a byte count n. At output+n it then writes, in order: the signed byte at
 // object+85 widened to a word, the word at +1104, the word at +960, the word at +208, and one byte that is
 // 1 when the 64-bit word at +160 has any bit of 0x00c00000 set and 0 otherwise. The result is n + 17.

@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed msg_load__8SkeletonPc at 0x246f80, 140 bytes. The base routine msg_load__8CreaturePc runs
+// Observed msg_load__8SkeletonPc at 0x246f80, 144 bytes. The base routine msg_load__8CreaturePc runs
 // first and returns a byte count n. Four words are then read from input+n, in order, into the words at
 // object+968, +976, +1120 and +208 (the last store happens just before the next call). Then
 // initType__8Skeletonb runs with (object, 1); it is the routine the authored sources emit as

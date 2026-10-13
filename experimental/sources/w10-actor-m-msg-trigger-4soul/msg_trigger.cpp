@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed msg_trigger__4Souli at 0x1f4ee8, 80 bytes. Only argument 0 does anything: the signed byte at
+// Observed msg_trigger__4Souli at 0x1f4ee8, 84 bytes. Only argument 0 does anything: the signed byte at
 // object+570 is saved and cleared, the table entry at byte 184 of the object's table (word at +72) is
 // called on the adjusted object with the argument 10, and the saved byte is stored back. Any other
 // trigger value returns at once. Nothing is returned. Observed: slot 23 (byte 184) of the Soul table

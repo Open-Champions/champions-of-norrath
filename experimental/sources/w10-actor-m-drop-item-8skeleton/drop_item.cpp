@@ -1,5 +1,5 @@
 #include "../w10-actor-m-common/access.hpp"
-// Observed dropItem__8Skeletoni at 0x245938, 976 bytes. Arguments: the object and an int kind. Nothing is
+// Observed dropItem__8Skeletoni at 0x245938, 984 bytes. Arguments: the object and an int kind. Nothing is
 // returned. The object's 64-bit word at +552 holds bits that select things to drop.
 //  1. A zero-terminated list of 64-bit masks (the file-local data object partlist.1069, 0x7d7f70, 160 bytes
 //     in the image; here a local static) is filled by kind. Its first entry is always cleared first.
