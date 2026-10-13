@@ -7748,3 +7748,28 @@ Closed: `framedone`, `framestart`, `freeLump__FPv`, `fsListBack`, `gameDeathHeig
 
 Opened: `GetLastTarget__6Camera`, `_6Wraith$s_wraithCount`, `__4LineP4LineT1i`, `dst`, `endPos`, `moreRecent__Fii`, `p1`, `p2`, `pitch1`, `pitch2`, `src`, `startPos`, `v1`, `v2`
 - 2026-10-13 01:43 CDT — `agents/w10-world-b` — 1245 unresolved imports
+
+## agents/w10-world-c
+
+Merged (merge commit, branch tip `b87a3424`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 3 of 4: 22 units (12 functions
+and ten storage/word units) with fresh `input_order` values 3822 through 3843. 22 of 22
+host checks pass here (x86_64, `-ffp-contract=off`), using the build line in each file's
+first comment where one is given (the function checks need the unit source on the command
+line, and `find-empty-spot-monsterspawn` needs `-DNORRATH_HOST_ARENA`); 20 under
+`-Werror`, the rest only without it (warnings). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3842 authored inputs, 2769 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1245 |
+| After | 1213 |
+| Closed | 34 |
+| Opened | 2 |
+
+Closed: `lastkey`, `lastlastCE`, `lasttime`, `loadCompleteFlag`, `loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`, `loc`, `lumpLoadGlob__FPc`, `makeCollisionList__FP12_worldHeaderffffPP13collisionParti`, `mtcInitialize__Fv`, `needToClearCacheBuffer`, `nmActors`, `nmAlwaysPages`, `nmChars`, `nmHalos`, `nmWaterPatches`, `noAdvanceTime`, `norrath_game_object_e_rand`, `norrath_game_object_find_tag_float`, `nullp`, `objectAddToMediumRunList__FP10GameObject`, `objectCreateByName__FPcG6Point3sPPc`, `objectFindEmptySpotMonsterspawn__FG6Point3iiiiPc`, `objectMoveWithWorldCollision__FP6Point3G6Point3fiT0`, `patchSortedListWithLocalTime__Fv`, `pmlistptrs`, `pmlistptrsused`, `progress`, `reallyLoad.873`, `removeMonster__FP10GameObject`, `resourceFrame`, `routeClearStart`
+
+Opened: `norrath_world_c_view_4861e8`, `sceScfGetLocalTimefromRTC`

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3820,
+  "default_authored_inputs": 3842,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2617,6 +2617,28 @@
     "sources/w10-world-b-map-init/map_init.cpp": "0d0f1c28cbcadb5f376c320923ebdbbc7cd9c85900f54ab8ffa9d565d3343a9e",
     "sources/w10-world-b-skeleton-is-enemy/skeleton_is_enemy.cpp": "29aaf3a24c6810ab9e2da90b0ee1dd26d89075bdb8a286d36c62af1e9f7c76da",
     "sources/w10-world-b-wraith-is-enemy/wraith_is_enemy.cpp": "7fdf3896b68fbac8b202b5ded773e69d1b22a5af09e5ca4a485dada22f291c2a",
+    "sources/w10-world-c-add-to-medium-run-list/add_to_medium_run_list.cpp": "0c9a17e9d052e34c5dddbb39fd761f04cca5f137522d57bbee11aa3c0157a67e",
+    "sources/w10-world-c-auto-map-locations/auto_map_locations.cpp": "f0d5c00840e972fee93684ffe4d8f395a6e756bb623fcf6e5ff2ccc778c7f0da",
+    "sources/w10-world-c-comm-last-words/comm_last_words.cpp": "2b40e0e605cacbacec8d9ed87cda72be768ec5c3d7110ad825175b73b1ca8045",
+    "sources/w10-world-c-count-words/count_words.cpp": "ca373fffa709f9deda19c3e7abd367e47ab3a888e1175fe6e5bd6b35d5e75220",
+    "sources/w10-world-c-create-by-name/create_by_name.cpp": "112ee04007652405407638afedf02086e87ff38802dc8d405b7f55fe3344669f",
+    "sources/w10-world-c-find-empty-spot-monsterspawn/find_empty_spot_monsterspawn.cpp": "73bd91c5346b5a0febad1bb9db50b2b33077ce181ecccae8200b773ce4c6d6d4",
+    "sources/w10-world-c-frame-words/frame_words.cpp": "0490a7c36a92d4dd446d6595df203e54a01553328d9c8a419bd0155cf05029d7",
+    "sources/w10-world-c-game-object-e-rand/e_rand.cpp": "04de79f3b9b951f1ec88d5d65fd0d90202b3aff77e561f4aac416c49f73e1b43",
+    "sources/w10-world-c-game-object-find-tag-float/find_tag_float.cpp": "bc87d16cd4673bc2f4e6f304803c1f55191e8f6761e5b5b4f1987514cac7cf17",
+    "sources/w10-world-c-glob-dir/glob_dir.cpp": "77e7a9e901c29016951e184d1453507a529bebe593fd9b0b8f005880a9e461f0",
+    "sources/w10-world-c-keyboard-repeat-words/keyboard_repeat_words.cpp": "8503ceb4ddc3090a10a3d55c71962bdfe6fdf3cc5a60bb69b242431dc7350b90",
+    "sources/w10-world-c-lump-load-glob/lump_load_glob.cpp": "9d9f73f1ea5cd34d73108aeb385f2cf930acb682c9c4def76afb0d8cbdf36e06",
+    "sources/w10-world-c-make-collision-list/make_collision_list.cpp": "fbf83a302edaadadc238c5059335428d22ec6624eb2d4dbb0f3afdb88280ba11",
+    "sources/w10-world-c-mtc-initialize/mtc_initialize.cpp": "8458b6d473cfe6091b701b4bd12217c5eb27dac687daca8e0dd57aa61c0efa2c",
+    "sources/w10-world-c-mtc-words/mtc_words.cpp": "612ddb6c5b47c7d99da10bf04070fbbf303dc4e83f36f5ae8ca855acd22a9d00",
+    "sources/w10-world-c-null-point/null_point.cpp": "d52f351f690c4db95cc0cc271291fb34d7e3da9f3609598857ac15f3cbdb4da4",
+    "sources/w10-world-c-object-move-with-world-collision/object_move.cpp": "b47b8e3908714c216b62bbfe3f37a6888507b61bbb9ed510418e2c80f5986f35",
+    "sources/w10-world-c-patch-sorted-list/patch_sorted_list.cpp": "ecc86934e19a304310c93b740f2d52882be2f73fdb588d58dc6f371aff195b03",
+    "sources/w10-world-c-pm-list-pointers/pm_list_pointers.cpp": "2680cb8ca5bdbd5a066b4f688688f10d6a1e643e10612682b01d31e36158c226",
+    "sources/w10-world-c-progress-word/progress_word.cpp": "13ad97bf56b6009e5e8f096b18656c07d9a3b0033b89ab9d6afc19bec61a6aef",
+    "sources/w10-world-c-remove-monster/remove_monster.cpp": "a071a40b273cf6c50f8ebce39e33e169ffdaa416e1a966d574f3f0cf6a829932",
+    "sources/w10-world-c-texture-load-state/texture_load_state.cpp": "933a318823aacf14919ed520f140df2af281660ad8e1de5e7ebf42ee95e0aa4a",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -54104,6 +54126,293 @@
           "compiled_body_bytes": 508
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-object-list-math-common/object_types.hpp",
+        "sources/w8-object-list-math-common/list_types.hpp"
+      ],
+      "input_order": 3822,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_add_to_medium_run_list.o",
+      "profile": "authored_cpp",
+      "sha256": "0c9a17e9d052e34c5dddbb39fd761f04cca5f137522d57bbee11aa3c0157a67e",
+      "source": "sources/w10-world-c-add-to-medium-run-list/add_to_medium_run_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectAddToMediumRunList__FP10GameObject",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3823,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_auto_map_locations.o",
+      "profile": "authored_cpp",
+      "sha256": "f0d5c00840e972fee93684ffe4d8f395a6e756bb623fcf6e5ff2ccc778c7f0da",
+      "source": "sources/w10-world-c-auto-map-locations/auto_map_locations.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3824,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_comm_last_words.o",
+      "profile": "authored_cpp",
+      "sha256": "2b40e0e605cacbacec8d9ed87cda72be768ec5c3d7110ad825175b73b1ca8045",
+      "source": "sources/w10-world-c-comm-last-words/comm_last_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3825,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_count_words.o",
+      "profile": "authored_cpp",
+      "sha256": "ca373fffa709f9deda19c3e7abd367e47ab3a888e1175fe6e5bd6b35d5e75220",
+      "source": "sources/w10-world-c-count-words/count_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w8-object-list-math-common/object_types.hpp",
+        "sources/w8-object-list-math-common/list_types.hpp"
+      ],
+      "input_order": 3826,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_create_by_name.o",
+      "profile": "authored_cpp",
+      "sha256": "112ee04007652405407638afedf02086e87ff38802dc8d405b7f55fe3344669f",
+      "source": "sources/w10-world-c-create-by-name/create_by_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectCreateByName__FPcG6Point3sPPc",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3827,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_find_empty_spot_monsterspawn.o",
+      "profile": "authored_cpp",
+      "sha256": "73bd91c5346b5a0febad1bb9db50b2b33077ce181ecccae8200b773ce4c6d6d4",
+      "source": "sources/w10-world-c-find-empty-spot-monsterspawn/find_empty_spot_monsterspawn.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectFindEmptySpotMonsterspawn__FG6Point3iiiiPc",
+          "compiled_body_bytes": 896
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3828,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_frame_words.o",
+      "profile": "authored_cpp",
+      "sha256": "0490a7c36a92d4dd446d6595df203e54a01553328d9c8a419bd0155cf05029d7",
+      "source": "sources/w10-world-c-frame-words/frame_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3829,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_game_object_e_rand.o",
+      "profile": "authored_cpp",
+      "sha256": "04de79f3b9b951f1ec88d5d65fd0d90202b3aff77e561f4aac416c49f73e1b43",
+      "source": "sources/w10-world-c-game-object-e-rand/e_rand.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_game_object_e_rand",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3830,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_game_object_find_tag_float.o",
+      "profile": "authored_cpp",
+      "sha256": "bc87d16cd4673bc2f4e6f304803c1f55191e8f6761e5b5b4f1987514cac7cf17",
+      "source": "sources/w10-world-c-game-object-find-tag-float/find_tag_float.cpp",
+      "emitted_functions": [
+        {
+          "name": "norrath_game_object_find_tag_float",
+          "compiled_body_bytes": 376
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3831,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_glob_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "77e7a9e901c29016951e184d1453507a529bebe593fd9b0b8f005880a9e461f0",
+      "source": "sources/w10-world-c-glob-dir/glob_dir.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3832,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_keyboard_repeat_words.o",
+      "profile": "authored_cpp",
+      "sha256": "8503ceb4ddc3090a10a3d55c71962bdfe6fdf3cc5a60bb69b242431dc7350b90",
+      "source": "sources/w10-world-c-keyboard-repeat-words/keyboard_repeat_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-b-lumps/lumps.hpp"
+      ],
+      "input_order": 3833,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_lump_load_glob.o",
+      "profile": "authored_cpp",
+      "sha256": "9d9f73f1ea5cd34d73108aeb385f2cf930acb682c9c4def76afb0d8cbdf36e06",
+      "source": "sources/w10-world-c-lump-load-glob/lump_load_glob.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpLoadGlob__FPc",
+          "compiled_body_bytes": 784
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3834,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_make_collision_list.o",
+      "profile": "authored_cpp",
+      "sha256": "fbf83a302edaadadc238c5059335428d22ec6624eb2d4dbb0f3afdb88280ba11",
+      "source": "sources/w10-world-c-make-collision-list/make_collision_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "makeCollisionList__FP12_worldHeaderffffPP13collisionParti",
+          "compiled_body_bytes": 688
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3835,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_mtc_initialize.o",
+      "profile": "authored_cpp",
+      "sha256": "8458b6d473cfe6091b701b4bd12217c5eb27dac687daca8e0dd57aa61c0efa2c",
+      "source": "sources/w10-world-c-mtc-initialize/mtc_initialize.cpp",
+      "emitted_functions": [
+        {
+          "name": "mtcInitialize__Fv",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3836,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_mtc_words.o",
+      "profile": "authored_cpp",
+      "sha256": "612ddb6c5b47c7d99da10bf04070fbbf303dc4e83f36f5ae8ca855acd22a9d00",
+      "source": "sources/w10-world-c-mtc-words/mtc_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3837,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_null_point.o",
+      "profile": "authored_cpp",
+      "sha256": "d52f351f690c4db95cc0cc271291fb34d7e3da9f3609598857ac15f3cbdb4da4",
+      "source": "sources/w10-world-c-null-point/null_point.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3838,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_object_move_with_world_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "b47b8e3908714c216b62bbfe3f37a6888507b61bbb9ed510418e2c80f5986f35",
+      "source": "sources/w10-world-c-object-move-with-world-collision/object_move.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectMoveWithWorldCollision__FP6Point3G6Point3fiT0",
+          "compiled_body_bytes": 520
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3839,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_patch_sorted_list.o",
+      "profile": "authored_cpp",
+      "sha256": "ecc86934e19a304310c93b740f2d52882be2f73fdb588d58dc6f371aff195b03",
+      "source": "sources/w10-world-c-patch-sorted-list/patch_sorted_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7convertEPhPKhS0_",
+          "compiled_body_bytes": 572
+        },
+        {
+          "name": "patchSortedListWithLocalTime__Fv",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3840,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_pm_list_pointers.o",
+      "profile": "authored_cpp",
+      "sha256": "2680cb8ca5bdbd5a066b4f688688f10d6a1e643e10612682b01d31e36158c226",
+      "source": "sources/w10-world-c-pm-list-pointers/pm_list_pointers.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3841,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_progress_word.o",
+      "profile": "authored_cpp",
+      "sha256": "13ad97bf56b6009e5e8f096b18656c07d9a3b0033b89ab9d6afc19bec61a6aef",
+      "source": "sources/w10-world-c-progress-word/progress_word.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3842,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_remove_monster.o",
+      "profile": "authored_cpp",
+      "sha256": "a071a40b273cf6c50f8ebce39e33e169ffdaa416e1a966d574f3f0cf6a829932",
+      "source": "sources/w10-world-c-remove-monster/remove_monster.cpp",
+      "emitted_functions": [
+        {
+          "name": "removeMonster__FP10GameObject",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3843,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_c_texture_load_state.o",
+      "profile": "authored_cpp",
+      "sha256": "933a318823aacf14919ed520f140df2af281660ad8e1de5e7ebf42ee95e0aa4a",
+      "source": "sources/w10-world-c-texture-load-state/texture_load_state.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -54203,7 +54512,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "dc02d28cbc03e995ca9c6d1e89e4b590c9187f9a2d2432fd5a4fda4fd4865d5f",
+  "snapshot_sha256": "83569ed4422995d3a69718491b6bb78b9421f633fe6bfc4081663f3a21bd9738",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
