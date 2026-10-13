@@ -28,3 +28,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `has-light-or-particle-number` | `hasLightOrParticleNumber__FPPci` | 0x21df18 | 828 |
 | `game-line-update-position` | `gameLineUpdatePosition__FP17gameLinePathState` | 0x278c38 | 716 |
 | `convert-pointers-to-indicies` | `convertPointersToIndicies__Fi` | 0x24fcb0 | 808 |
+| `generic-move` | `genericMove__10GameObjectG6Point3P10GameObject` | 0x141b70 | 1508 |
