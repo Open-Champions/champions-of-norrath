@@ -8180,3 +8180,25 @@ Closed: `_$_10SeaMonster`, `_$_5Rondo`, `_$_8Scorpion`, `_$_9Savepoint`, `__tf10
 
 Opened: `loseBodyPart__8Scorpioni`, `msgHudSavePoint__FP9Savepoint`, `playerRaisePlayer__FiG6Point3`, `updatePlayersReady__9Savepoint`
 - 2026-10-13 03:14 CDT — `agents/w10-actor-l` — 1055 unresolved imports
+
+## agents/w10-actor-m
+
+Merged (merge commit, branch tip `5f135204`, 33 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4287
+through 4318. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 25 under `-Werror`, 7 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4317 authored inputs, 3255 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Two checks (`msg-load-4soul`, `msg-save-4soul`) do not link on their own because they reference `levelName` and `norrath_ctors_lava_wraith_view_485240` without defining them; they pass here when linked with `items-player-level-name/level_name.cpp` and `w9-ctors-wraith-d-views/norrath_ctors_lava_wraith_view_485240.cpp`, which the checks do not say.
+
+| | |
+|---|---|
+| Before | 1055 |
+| After | 1027 |
+| Closed | 31 |
+| Opened | 3 |
+
+Closed: `_$_4Soul`, `_$_8Skeleton`, `_$_8Skelight`, `__tf4Soul`, `__tf8Skeleton`, `__tf8Skelight`, `clone__8Skeleton`, `clone__8Skelight`, `dropItem__8Skeletoni`, `dropItem__8Skelighti`, `getModel__4Soul`, `msg_alert__8SkeletonifG6Point3P10GameObject`, `msg_draw__4Soul`, `msg_draw__8Skeleton`, `msg_draw__8Skelight`, `msg_hurt__4SoulfP10GameObjecti`, `msg_hurt__8SkeletonfP10GameObjecti`, `msg_load__4SoulPc`, `msg_load__8SkeletonPc`, `msg_load__8SkelightPc`, `msg_run__10SeaMonster`, `msg_run__4Soul`, `msg_run__8Skeleton`, `msg_run__8Skelight`, `msg_save__4SoulPc`, `msg_save__8SkeletonPc`, `msg_save__8SkelightPc`, `msg_trigger__4Souli`, `setState__10SeaMonsteri`, `setState__8Skeletoni`, `setState__8Skelighti`
+
+Opened: `__19MultiFireProjectileG6Point3sP10GameObjectiP5Skill`, `__6PhPropG6Point3sP12_modelHeaderP14AnimationStatePcN25liPQ24item11descriptionf`, `partlist.1103`
