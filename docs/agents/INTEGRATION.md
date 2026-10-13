@@ -7982,3 +7982,25 @@ Closed: `_$_10AutoPropLP`, `_$_10BlackWidow`, `_$_5Chest`, `_$_6Badger`, `_$_8Ca
 
 Opened: `bActive__3Web`, `breakWeb__3Web`, `detach__11FireBomblet`, `draw__3WebG6Point3`, `ectopileParticle1`, `loseBodyPart__10BlackWidowi`, `reset__3Web`, `run__3WebG6Point3i`, `setHold__11FireBombleti`, `start__3WebG6Point3P8Creaturefi`
 - 2026-10-13 02:39 CDT — `agents/w10-actor-c` — 1148 unresolved imports
+
+## agents/w10-actor-e
+
+Merged (merge commit, branch tip `6d879a12`, 26 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4033
+through 4064. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 20 under `-Werror`, eight only without it (warnings), and four destructor checks (`dtor-10firebeetle`, `dtor-13femaledarkelf`, `dtor-5demon`, `dtor-7cyclops`) only with `-DNORRATH_VSLOTS_A_HOST`, a define named in the unit source rather than in the check; without it they report that the vtable word was stored wrongly. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4063 authored inputs, 2983 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1148 |
+| After | 1134 |
+| Closed | 32 |
+| Opened | 18 |
+
+Closed: `_$_10FireBeetle`, `_$_13FemaleDarkElf`, `_$_5Demon`, `_$_7Cyclops`, `_GLOBAL_$I$msg_run__12DiseaseTrail`, `_GLOBAL_$I$msg_run__13DiseaseCorpse`, `_GLOBAL_$I$msg_run__22ExplodeArrowProjectile`, `__tf10FireBeetle`, `__tf13FemaleDarkElf`, `__tf5Demon`, `__tf7Cyclops`, `clone__10FireBeetle`, `clone__13FemaleDarkElf`, `clone__7Cyclops`, `getMinibossName__7Cyclops`, `initMiniboss__7Cyclops`, `msg_alert__13FemaleDarkElfifG6Point3P10GameObject`, `msg_draw__13FemaleDarkElf`, `msg_draw__5Demon`, `msg_draw__7Cyclops`, `msg_load__13FemaleDarkElfPc`, `msg_load__5DemonPc`, `msg_load__7CyclopsPc`, `msg_run__13FemaleDarkElf`, `msg_run__5Demon`, `msg_run__7Cyclops`, `msg_save__13FemaleDarkElfPc`, `msg_save__5DemonPc`, `setState__13FemaleDarkElfi`, `setState__5Demoni`, `setState__6Cthului`, `setState__7Cyclopsi`
+
+Opened: `ISeeDeadPeople__8Creaturef`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__14SpellHarmTouchiP8CreatureP5Skill`, `__14poisonGasSpellG6Point3iiiP10GameObjecti`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__9dustCloudG6Point3iiii`, `__tf14SpellHarmTouch`, `attack__14SpellHarmTouchP10GameObjectPiT2`, `creatureFindLeadYaw__8CreatureP10GameObjectf`, `creatureSlamEffect__8CreatureP8Creaturei`, `dropWeapon__5Demon`, `findEnemyLeadPosition__8CreaturefP6Point3`, `flee2__8CreatureP10GameObject`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `generateDust__7CyclopsG6Point3`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `objectIsCrowded__8CreatureP10GameObjectffi`

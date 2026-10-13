@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4031,
+  "default_authored_inputs": 4063,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2374,6 +2374,38 @@
     "sources/w10-actor-c-tf-6badger/typeinfo.cpp": "f40c4643f11a87dd7e28e816b9b5de786c6de85dc86951763843a6a409af9828",
     "sources/w10-actor-c-tf-8catapult/typeinfo.cpp": "77e9cfbca29d9910068d12aa73096691be4f431c7bd00ee8dcc9e6990df26a94",
     "sources/w10-actor-c-ti-8autoprop/ti.cpp": "f515d4db1562d145cb7cb3682fc7fa6dc0365edd7ec6439b1d2ce9b704a136d7",
+    "sources/w10-actor-e-clone-10firebeetle/clone.cpp": "29037247a18e65600e2c73f2acb2b6f36620c8c23ff6be306638f765c2884c11",
+    "sources/w10-actor-e-clone-13femaledarkelf/clone.cpp": "7e22695c98d11023bf84ad27153b7a5b23d625de118cd14bc348e8778a4e10d1",
+    "sources/w10-actor-e-clone-7cyclops/clone.cpp": "ae75d4562af91963833c54a3a80e2cebf65ff9429b6e7fd7c0f7aca45244c014",
+    "sources/w10-actor-e-cthulu-set-state/set_state.cpp": "8242658d21df6a5c696b1fd91a408b1852f9677a12a1f45a1bd5413a27fd9acf",
+    "sources/w10-actor-e-cyclops-get-miniboss-name/get_miniboss_name.cpp": "f0028f1faeec1a10686a2abc43fd0a13bdec726435be0e462d9e86cad86872f4",
+    "sources/w10-actor-e-cyclops-init-miniboss/init_miniboss.cpp": "ed431385786fd8edcf64878d5b0d86ad5989ad45097ad8090a131489eacd4081",
+    "sources/w10-actor-e-cyclops-msg-draw/msg_draw.cpp": "cce025250a6d296b342ba1f343b2328e38caa6cbc42b34f43a32aa6704686b65",
+    "sources/w10-actor-e-cyclops-msg-load/msg_load.cpp": "ec1aaa54d432a6b79b2e08e84ab027a7a930a82849444f7008f462695210a6fa",
+    "sources/w10-actor-e-cyclops-msg-run/msg_run.cpp": "9bcbac8cc6772de3b3efd4a6ea4f3854016726f7222c3b2a8439ec9f860ca6f5",
+    "sources/w10-actor-e-cyclops-set-state/set_state.cpp": "ce8f82485b3a95e1e1c1667da52f6d964bdc4f37aba6013046fde6987deba3b1",
+    "sources/w10-actor-e-demon-msg-draw/msg_draw.cpp": "ce9be11cfe7755da7019b3c9ce151c62268cf102fee064df4d546becc727630e",
+    "sources/w10-actor-e-demon-msg-load/msg_load.cpp": "02c30a09f6f6f6fc7ece960f93b04431f3fabef1b697e177349c68d90df15ceb",
+    "sources/w10-actor-e-demon-msg-run/msg_run.cpp": "750efa1b48a37bf2e80a140c5fa766fc3ea048c3d4c5dcb4b5709e2770baad1f",
+    "sources/w10-actor-e-demon-msg-save/msg_save.cpp": "a58b57c8c91d78c65c4a2634fcff4719cccf5dbe3dc62a4e8a0504fa7d3c9b6a",
+    "sources/w10-actor-e-demon-set-state/set_state.cpp": "2cfd2b9884ca6d82c45cf5555540d6b5d542ca62a6ebf83a18638cd0b58a318b",
+    "sources/w10-actor-e-dtor-10firebeetle/dtor.cpp": "7e99d77496287563333e245bba3552d9e4423b4856f7c7037490514363da3c5d",
+    "sources/w10-actor-e-dtor-13femaledarkelf/dtor.cpp": "c97b2a3ed80ec2d80fd09ba4ce5cef44fbf408cbf989b9ed27672f62703b141a",
+    "sources/w10-actor-e-dtor-5demon/dtor.cpp": "e58241b8916ef57f2771f382fea77b4f7e39a85b90fe60ea0f2069e50d326a12",
+    "sources/w10-actor-e-dtor-7cyclops/dtor.cpp": "f1eafad4e8bbc918226b6f9273fb5a11804cfc0db11ccfbc832135fad9a83008",
+    "sources/w10-actor-e-fdelf-msg-alert/msg_alert.cpp": "5a47090986848624fabac6f138e4424de7b9bcd30e0b1199642d76ba9d349645",
+    "sources/w10-actor-e-fdelf-msg-draw/msg_draw.cpp": "5700974559546b6d3c771ace4b2f9f0255114623b7ab3c6571b267111287b91f",
+    "sources/w10-actor-e-fdelf-msg-load/msg_load.cpp": "99272aca840b276f2bb750e83c2a667045cdc91a6050143f5a8cda69fb98bd94",
+    "sources/w10-actor-e-fdelf-msg-run/msg_run.cpp": "19dcf2ceafe69832236c95f94589b4930b48151b47f7a565ec98181b3efa7448",
+    "sources/w10-actor-e-fdelf-msg-save/msg_save.cpp": "98c03ebd730b675380e8b707c5db1e359b02417222182d655b9b1462c959a081",
+    "sources/w10-actor-e-fdelf-set-state/set_state.cpp": "e8ec026bb56d0cca61302a2213fb742d4698b388cd39ec2a13b4a30f1b14725b",
+    "sources/w10-actor-e-static-init-disease-corpse/disease_corpse_static_init.cpp": "5b5db230dfd2c0cd24374fd6a27ea4f1b0bcfd2c0ab1308b089dadd33a65f310",
+    "sources/w10-actor-e-static-init-disease-trail/disease_trail_static_init.cpp": "d95f83dc1754a91110e1e6de9f5ee3677fcd090ad8e874574ec3c358dc21bddb",
+    "sources/w10-actor-e-static-init-explode-arrow-projectile/explode_arrow_projectile_static_init.cpp": "03d0174258bd838fb9d2439bdd896f2844e43eecf0dea3b374705f817c9dd061",
+    "sources/w10-actor-e-tf-10firebeetle/typeinfo.cpp": "94cec23a396fc737ccf72e06ab2330b40d3a93bada84531111e46fd98a8d61fb",
+    "sources/w10-actor-e-tf-13femaledarkelf/typeinfo.cpp": "29cabe46043068d23e83c33e1f03074ab13ea94787efb6b6f54d73a6b63da593",
+    "sources/w10-actor-e-tf-5demon/typeinfo.cpp": "6258852c1093210214a5f8b5fb3453813c488230fb218a498cd1b181e9197ea5",
+    "sources/w10-actor-e-tf-7cyclops/typeinfo.cpp": "c490bdc98ca734d609e54cd253312859f578ac6ea09a3e3a109dae6a3c9ee3f2",
     "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
     "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
     "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp": "d69dc4c620c9cc907e11efb7f1411f8a7350ceaa800c5684cbf83dd6dc30c43a",
@@ -57510,6 +57542,528 @@
       "sha256": "f515d4db1562d145cb7cb3682fc7fa6dc0365edd7ec6439b1d2ce9b704a136d7",
       "source": "sources/w10-actor-c-ti-8autoprop/ti.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4033,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_clone_10firebeetle.o",
+      "profile": "authored_cpp",
+      "sha256": "29037247a18e65600e2c73f2acb2b6f36620c8c23ff6be306638f765c2884c11",
+      "source": "sources/w10-actor-e-clone-10firebeetle/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__10FireBeetle",
+          "compiled_body_bytes": 816
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4034,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_clone_13femaledarkelf.o",
+      "profile": "authored_cpp",
+      "sha256": "7e22695c98d11023bf84ad27153b7a5b23d625de118cd14bc348e8778a4e10d1",
+      "source": "sources/w10-actor-e-clone-13femaledarkelf/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__13FemaleDarkElf",
+          "compiled_body_bytes": 816
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4035,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_clone_7cyclops.o",
+      "profile": "authored_cpp",
+      "sha256": "ae75d4562af91963833c54a3a80e2cebf65ff9429b6e7fd7c0f7aca45244c014",
+      "source": "sources/w10-actor-e-clone-7cyclops/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__7Cyclops",
+          "compiled_body_bytes": 776
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4036,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cthulu_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "8242658d21df6a5c696b1fd91a408b1852f9677a12a1f45a1bd5413a27fd9acf",
+      "source": "sources/w10-actor-e-cthulu-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__6Cthului",
+          "compiled_body_bytes": 2056
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4037,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_get_miniboss_name.o",
+      "profile": "authored_cpp",
+      "sha256": "f0028f1faeec1a10686a2abc43fd0a13bdec726435be0e462d9e86cad86872f4",
+      "source": "sources/w10-actor-e-cyclops-get-miniboss-name/get_miniboss_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getMinibossName__7Cyclops",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4038,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_init_miniboss.o",
+      "profile": "authored_cpp",
+      "sha256": "ed431385786fd8edcf64878d5b0d86ad5989ad45097ad8090a131489eacd4081",
+      "source": "sources/w10-actor-e-cyclops-init-miniboss/init_miniboss.cpp",
+      "emitted_functions": [
+        {
+          "name": "initMiniboss__7Cyclops",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4039,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "cce025250a6d296b342ba1f343b2328e38caa6cbc42b34f43a32aa6704686b65",
+      "source": "sources/w10-actor-e-cyclops-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Cyclops",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4040,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "ec1aaa54d432a6b79b2e08e84ab027a7a930a82849444f7008f462695210a6fa",
+      "source": "sources/w10-actor-e-cyclops-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7CyclopsPc",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4041,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "9bcbac8cc6772de3b3efd4a6ea4f3854016726f7222c3b2a8439ec9f860ca6f5",
+      "source": "sources/w10-actor-e-cyclops-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Cyclops",
+          "compiled_body_bytes": 4104
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4042,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_cyclops_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "ce8f82485b3a95e1e1c1667da52f6d964bdc4f37aba6013046fde6987deba3b1",
+      "source": "sources/w10-actor-e-cyclops-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__7Cyclopsi",
+          "compiled_body_bytes": 1680
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4043,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_demon_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "ce9be11cfe7755da7019b3c9ce151c62268cf102fee064df4d546becc727630e",
+      "source": "sources/w10-actor-e-demon-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__5Demon",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4044,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_demon_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "02c30a09f6f6f6fc7ece960f93b04431f3fabef1b697e177349c68d90df15ceb",
+      "source": "sources/w10-actor-e-demon-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__5DemonPc",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4045,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_demon_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "750efa1b48a37bf2e80a140c5fa766fc3ea048c3d4c5dcb4b5709e2770baad1f",
+      "source": "sources/w10-actor-e-demon-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Demon",
+          "compiled_body_bytes": 5496
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4046,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_demon_msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "a58b57c8c91d78c65c4a2634fcff4719cccf5dbe3dc62a4e8a0504fa7d3c9b6a",
+      "source": "sources/w10-actor-e-demon-msg-save/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__5DemonPc",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4047,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_demon_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "2cfd2b9884ca6d82c45cf5555540d6b5d542ca62a6ebf83a18638cd0b58a318b",
+      "source": "sources/w10-actor-e-demon-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__5Demoni",
+          "compiled_body_bytes": 1896
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4048,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_dtor_10firebeetle.o",
+      "profile": "authored_cpp",
+      "sha256": "7e99d77496287563333e245bba3552d9e4423b4856f7c7037490514363da3c5d",
+      "source": "sources/w10-actor-e-dtor-10firebeetle/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10FireBeetle",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4049,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_dtor_13femaledarkelf.o",
+      "profile": "authored_cpp",
+      "sha256": "c97b2a3ed80ec2d80fd09ba4ce5cef44fbf408cbf989b9ed27672f62703b141a",
+      "source": "sources/w10-actor-e-dtor-13femaledarkelf/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_13FemaleDarkElf",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4050,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_dtor_5demon.o",
+      "profile": "authored_cpp",
+      "sha256": "e58241b8916ef57f2771f382fea77b4f7e39a85b90fe60ea0f2069e50d326a12",
+      "source": "sources/w10-actor-e-dtor-5demon/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_5Demon",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4051,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_dtor_7cyclops.o",
+      "profile": "authored_cpp",
+      "sha256": "f1eafad4e8bbc918226b6f9273fb5a11804cfc0db11ccfbc832135fad9a83008",
+      "source": "sources/w10-actor-e-dtor-7cyclops/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_7Cyclops",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4052,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_msg_alert.o",
+      "profile": "authored_cpp",
+      "sha256": "5a47090986848624fabac6f138e4424de7b9bcd30e0b1199642d76ba9d349645",
+      "source": "sources/w10-actor-e-fdelf-msg-alert/msg_alert.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_alert__13FemaleDarkElfifG6Point3P10GameObject",
+          "compiled_body_bytes": 380
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4053,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "5700974559546b6d3c771ace4b2f9f0255114623b7ab3c6571b267111287b91f",
+      "source": "sources/w10-actor-e-fdelf-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__13FemaleDarkElf",
+          "compiled_body_bytes": 440
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4054,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "99272aca840b276f2bb750e83c2a667045cdc91a6050143f5a8cda69fb98bd94",
+      "source": "sources/w10-actor-e-fdelf-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__13FemaleDarkElfPc",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4055,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "19dcf2ceafe69832236c95f94589b4930b48151b47f7a565ec98181b3efa7448",
+      "source": "sources/w10-actor-e-fdelf-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__13FemaleDarkElf",
+          "compiled_body_bytes": 3840
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/vslots-b-bytes/bytes.hpp"
+      ],
+      "input_order": 4056,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "98c03ebd730b675380e8b707c5db1e359b02417222182d655b9b1462c959a081",
+      "source": "sources/w10-actor-e-fdelf-msg-save/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__13FemaleDarkElfPc",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 4057,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_fdelf_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "e8ec026bb56d0cca61302a2213fb742d4698b388cd39ec2a13b4a30f1b14725b",
+      "source": "sources/w10-actor-e-fdelf-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__13FemaleDarkElfi",
+          "compiled_body_bytes": 3008
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-spell-static-init-a-common/particle_def.hpp"
+      ],
+      "input_order": 4058,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_static_init_disease_corpse.o",
+      "profile": "authored_cpp",
+      "sha256": "5b5db230dfd2c0cd24374fd6a27ea4f1b0bcfd2c0ab1308b089dadd33a65f310",
+      "source": "sources/w10-actor-e-static-init-disease-corpse/disease_corpse_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$msg_run__13DiseaseCorpse",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-spell-static-init-a-common/particle_def.hpp"
+      ],
+      "input_order": 4059,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_static_init_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "d95f83dc1754a91110e1e6de9f5ee3677fcd090ad8e874574ec3c358dc21bddb",
+      "source": "sources/w10-actor-e-static-init-disease-trail/disease_trail_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$msg_run__12DiseaseTrail",
+          "compiled_body_bytes": 292
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w8-spell-static-init-a-common/particle_def.hpp"
+      ],
+      "input_order": 4060,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_static_init_explode_arrow_projectile.o",
+      "profile": "authored_cpp",
+      "sha256": "03d0174258bd838fb9d2439bdd896f2844e43eecf0dea3b374705f817c9dd061",
+      "source": "sources/w10-actor-e-static-init-explode-arrow-projectile/explode_arrow_projectile_static_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "_GLOBAL_$I$msg_run__22ExplodeArrowProjectile",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4061,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_tf_10firebeetle.o",
+      "profile": "authored_cpp",
+      "sha256": "94cec23a396fc737ccf72e06ab2330b40d3a93bada84531111e46fd98a8d61fb",
+      "source": "sources/w10-actor-e-tf-10firebeetle/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10FireBeetle",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4062,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_tf_13femaledarkelf.o",
+      "profile": "authored_cpp",
+      "sha256": "29cabe46043068d23e83c33e1f03074ab13ea94787efb6b6f54d73a6b63da593",
+      "source": "sources/w10-actor-e-tf-13femaledarkelf/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf13FemaleDarkElf",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4063,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_tf_5demon.o",
+      "profile": "authored_cpp",
+      "sha256": "6258852c1093210214a5f8b5fb3453813c488230fb218a498cd1b181e9197ea5",
+      "source": "sources/w10-actor-e-tf-5demon/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf5Demon",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4064,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_e_tf_7cyclops.o",
+      "profile": "authored_cpp",
+      "sha256": "c490bdc98ca734d609e54cd253312859f578ac6ea09a3e3a109dae6a3c9ee3f2",
+      "source": "sources/w10-actor-e-tf-7cyclops/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf7Cyclops",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -57609,7 +58163,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c99c60aaf7d2e70077154b169ec31cb02b4eda2a00dd1e54dbb681cc13456847",
+  "snapshot_sha256": "8f96f881babb8b03b855a5c361b7bbecdfd8b81c6b2337400e099d8ac8a646b9",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
