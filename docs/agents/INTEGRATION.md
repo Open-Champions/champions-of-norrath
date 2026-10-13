@@ -6892,6 +6892,49 @@ unmerged `agents/*` branches are unchanged since their recorded rejections
 still lack committed per-function checks). `codex/norrath-runtime-binding` and
 `integration/wave` are not worker packages. Nothing was merged in this pass.
 
+## Fourth baseline re-check
+
+At shared tip `29284f93` this integrator (a different model from the earlier
+ones) re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 3474
+authored inputs) and the full default partial build (3474 compilations, 2484
+function bodies, zero COMMON). The recorded **1332** reproduced exactly. No
+repo-rule break in the last ten entries; no shared file needed a fix. All
+twelve `agents/w10-*` branches had tips under 45 minutes old when read; only
+`w10-startup-c` had a notes file with the five summary sections (Observed,
+Inferred, Unknown, Imports closed, Imports opened), so it was taken first.
+`w10-front-b` and `w10-startup-d` have notes without all five sections and
+their tips are fresh; the other nine have no notes file yet. They stay
+unmerged for now.
+
+## agents/w10-startup-c
+
+Merged (merge commit, tip `f0164f69`, 11 minutes old, five summary sections
+present). Three data units, no functions: the multi-client SIF RPC packet pool
+(64 bytes, zero-initialised .bss), the Player constructor's 15 literals and
+six-float table, and three single-use name literals. Each has a committed
+`host_check.cpp` (the notes say not to add one, but the branch contains them);
+all three build and exit 0 here (3 of 3). The checks compare literal text and
+float bit patterns with the source; they would fail on a changed string, but
+the worker's claim that the bytes match the private image was not
+re-verified (integration does not read the executable). Roles of the literals
+are the worker's inference from constructor use. New `input_order` values 3476
+through 3478; function-body count stays 2484. Worker's claim of 20 closed
+and none opened reproduced exactly. The 12 libpad/libmtap names listed as
+"closed once in the plan" were already closed by an earlier package. The
+worker did not run a full build; this integration did. 3477 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1332 |
+| After | 1312 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_sif_m_rpc_packet_pool_view`, `norrath_w9_startup_crt_b_view_11c3ae8`, `norrath_w9_startup_crt_b_view_462260`, `norrath_w9_startup_crt_b_view_4644c0`, `norrath_w9_startup_crt_b_view_464ab8`, `norrath_w9_startup_crt_b_view_464ac8`, `norrath_w9_startup_crt_b_view_464ad8`, `norrath_w9_startup_crt_b_view_464ae8`, `norrath_w9_startup_crt_b_view_464af8`, `norrath_w9_startup_crt_b_view_464b10`, `norrath_w9_startup_crt_b_view_464b20`, `norrath_w9_startup_crt_b_view_464b30`, `norrath_w9_startup_crt_b_view_464b48`, `norrath_w9_startup_crt_b_view_464b58`, `norrath_w9_startup_crt_b_view_464b68`, `norrath_w9_startup_crt_b_view_464b78`, `norrath_w9_startup_crt_b_view_464b88`, `norrath_w9_startup_crt_b_view_464b98`, `norrath_w9_startup_crt_b_view_4708d0`, `norrath_w9_startup_crt_b_view_4801f8`
+
+Opened: none
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -7239,3 +7282,4 @@ and no startup stage has executed.
 - 2026-10-12 22:43 CDT — baseline re-check and rejection notes (no package) — 1332 unresolved imports
 - 2026-10-12 22:55 CDT — second baseline re-check, no branches left to merge — 1332 unresolved imports
 - 2026-10-12 23:05 CDT — third baseline re-check, no branches left to merge — 1332 unresolved imports
+- 2026-10-12 23:30 CDT — `agents/w10-startup-c` — 1312 unresolved imports

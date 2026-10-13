@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3474,
+  "default_authored_inputs": 3477,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2279,6 +2279,9 @@
     "sources/vslots-b-trigger-params/trigger_params.cpp": "f22de0042b8aff85dd238a02d2436ed17ff89dcc41c85be40b40f82438483158",
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+    "sources/w10-startup-c-name-literals/name_literals.cpp": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
+    "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp": "ff9747ff9d44e6f3a7b35154890bb2e48507a3c12e2b314d66deabdf3a756191",
+    "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp": "61438e0df54b2c5258c9b538b4395c3d738114a4e3533a98d678c4f88e1ed404",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -48898,6 +48901,36 @@
       "sha256": "ebbdc78c19008b0f30fd7f87a461cde885249e35f885f3250cf858c984acd797",
       "source": "sources/w9-ctors-lantern-b-vtables/view_4506b0.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3476,
+      "kind": "independently_authored_source",
+      "object_name": "packet_pool.o",
+      "profile": "authored_cpp",
+      "sha256": "61438e0df54b2c5258c9b538b4395c3d738114a4e3533a98d678c4f88e1ed404",
+      "source": "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3477,
+      "kind": "independently_authored_source",
+      "object_name": "player_ctor_data.o",
+      "profile": "authored_cpp",
+      "sha256": "ff9747ff9d44e6f3a7b35154890bb2e48507a3c12e2b314d66deabdf3a756191",
+      "source": "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3478,
+      "kind": "independently_authored_source",
+      "object_name": "name_literals.o",
+      "profile": "authored_cpp",
+      "sha256": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
+      "source": "sources/w10-startup-c-name-literals/name_literals.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -48997,7 +49030,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "7367a221530cd012fc376ad19ab3c995a4f7f9bddcccf64fa411a61cee50ea9d",
+  "snapshot_sha256": "8e1c72377e20ffddc30750c97c2112b1425487f39f48ab938b02f423208f5ec6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

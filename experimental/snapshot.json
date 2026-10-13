@@ -43507,6 +43507,33 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w9-ctors-lantern-b-vtables/view_4506b0.cpp"
+    },
+    {
+      "input_order": 3476,
+      "component": "w10-startup-c-sif-m-packet-pool",
+      "object_name": "packet_pool.o",
+      "private_object_sha256": "5bd400acb3e19800615de342b0ce6e2ae942f22d55137ae3852515f4777cdb44",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp"
+    },
+    {
+      "input_order": 3477,
+      "component": "w10-startup-c-player-ctor-data",
+      "object_name": "player_ctor_data.o",
+      "private_object_sha256": "b8ed853b16fad07f29485dc3e7c433ae535da79d16b76e27de9ac54fe5e468d1",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp"
+    },
+    {
+      "input_order": 3478,
+      "component": "w10-startup-c-name-literals",
+      "object_name": "name_literals.o",
+      "private_object_sha256": "eac4a8cfcd1e7b859942ab8b2d03d9fb4853e466b273a457c0aea9ce4415bf24",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-startup-c-name-literals/name_literals.cpp"
     }
   ],
   "drafts": [
@@ -47131,6 +47158,12 @@
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/vslots-b-turn-to-face/host_check.cpp": "509db91ea87ca4a01848b5af80c3ef4d31ca40f4b39f74bef0cdd30c0cee114d",
     "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+    "sources/w10-startup-c-name-literals/host_check.cpp": "558545e66bca03af7f47fd250266d5e7d82eb2fafe2ab80dfc1997ede7c1cf57",
+    "sources/w10-startup-c-name-literals/name_literals.cpp": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
+    "sources/w10-startup-c-player-ctor-data/host_check.cpp": "e5b57010061162ef601548fcf39c00ea6169f603ba0603d125e3628b07e9f044",
+    "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp": "ff9747ff9d44e6f3a7b35154890bb2e48507a3c12e2b314d66deabdf3a756191",
+    "sources/w10-startup-c-sif-m-packet-pool/host_check.cpp": "e8926dcf6e422a6fadcac1c48d83db4002b13ea6aec973a9577ea4f4ad17388b",
+    "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp": "61438e0df54b2c5258c9b538b4395c3d738114a4e3533a98d678c4f88e1ed404",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -51490,8 +51523,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3476,
-    "authored_default_inputs": 3474,
+    "selected_inputs": 3479,
+    "authored_default_inputs": 3477,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 2486,
     "compiled_body_bytes_from_accepted_inputs": 1102192,
@@ -51507,7 +51540,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3163
+    "package_selected_inputs": 3166
   },
   "startup_implementations": [
     {
@@ -100007,6 +100040,42 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w9-ctors-lantern-b-vtables/host/view_4506b0_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-startup-c",
+      "source": "sources/w10-startup-c-sif-m-packet-pool/packet_pool.cpp",
+      "source_sha256": "61438e0df54b2c5258c9b538b4395c3d738114a4e3533a98d678c4f88e1ed404",
+      "object_sha256": "5bd400acb3e19800615de342b0ce6e2ae942f22d55137ae3852515f4777cdb44",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-startup-c-sif-m-packet-pool/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-startup-c",
+      "source": "sources/w10-startup-c-player-ctor-data/player_ctor_data.cpp",
+      "source_sha256": "ff9747ff9d44e6f3a7b35154890bb2e48507a3c12e2b314d66deabdf3a756191",
+      "object_sha256": "b8ed853b16fad07f29485dc3e7c433ae535da79d16b76e27de9ac54fe5e468d1",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-startup-c-player-ctor-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-startup-c",
+      "source": "sources/w10-startup-c-name-literals/name_literals.cpp",
+      "source_sha256": "25a4a15acecd42824ab876d626ab19e9636a5073b5893ab84e4ccfde0042735e",
+      "object_sha256": "eac4a8cfcd1e7b859942ab8b2d03d9fb4853e466b273a457c0aea9ce4415bf24",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-startup-c-name-literals/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
