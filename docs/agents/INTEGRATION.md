@@ -5442,6 +5442,47 @@ Opened: `animGetBoneMatrix__FP14AnimationStateiP8Matrix34`, `ballParticle`,
 `matTrans__FP8Matrix44fff`, `matTransform__FP6Point3P8Matrix34T0`,
 `trailParticle`
 
+## agents/w9-animation-object-a
+
+Merged (the branch notes carry the five summary sections; the tip was 43
+minutes old). Twenty-one units with fresh `input_order` values 2765 through
+2785: 17 function units and four data units (animation state, game line,
+in-message and lump data) that emit no function. The branch also carries
+`docs/agents/w9-animation-object-a-plan-entries.py`, a helper that prints plan
+entries and writes a private plan copy; I did not use or run it (the entries
+here come from compiling each unit). All 21 host checks build and exit 0 here
+(21 of 21). No game binary or disassembly listing was committed. 2258 function
+bodies, 2784 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1502 |
+| After | 1478 |
+| Closed | 28 |
+| Opened | 4 |
+
+Closed: `animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi`,
+`animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
+`animAddToEnd__FP14AnimationStateP15AnimationHeaderi`,
+`animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps`,
+`animFindComponentWithFlags__FP14AnimationStatei`,
+`animGlobalSync__FP14AnimationState`,
+`animMapAnimationSounds__FP15AnimationHeader`, `animState`, `animStatePtr`,
+`animUseBuffer`, `animationLoadPos`, `animationLoading`,
+`bExitStatePersueIdle__8Creature`, `bFarFromHome__8Creature`,
+`convertPointersToIndicies__Fi`, `dialogLumpName`, `domeLump`,
+`eRand__10GameObject`, `eqLumpHeader`, `findTagFloat__10GameObjectPci`,
+`gameLineCount`, `gameLineInitPathState__FP17gameLinePathStatePcP6Point3`,
+`gameLineUpdatePosition__FP17gameLinePathState`, `gameLines`,
+`genericMove__10GameObjectG6Point3P10GameObject`,
+`getSmartRandomDestination__8Creaturei`, `hasLightOrParticleNumber__FPPci`,
+`inMsg`
+
+Opened: `fmodf`, `gameLineGetNextPoint__FP17gameLinePathStateiP6Point3`,
+`objectMoveWithWorldCollision__FP6Point3G6Point3fiT0`,
+`playerPrintPaperDoll__Fi`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5805,3 +5846,4 @@ and no startup stage has executed.
 - 2026-10-12 21:27 CDT — `agents/w9-camera-map` — 1527 unresolved imports
 - 2026-10-12 21:31 CDT — `agents/w9-hud-inventory-items-b` — 1523 unresolved imports
 - 2026-10-12 21:34 CDT — `agents/w9-render-math-b` — 1502 unresolved imports
+- 2026-10-12 21:37 CDT — `agents/w9-animation-object-a` — 1478 unresolved imports

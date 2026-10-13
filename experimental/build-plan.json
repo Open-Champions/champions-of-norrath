@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2763,
+  "default_authored_inputs": 2784,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3065,6 +3065,28 @@
     "sources/w8-startup-sce-d-sif-send-cmd/sif_send_cmd.cpp": "b9b62e7d96a1781fcc82e188cc75377b99a11b0e0898b75c964e6a41b0b4c77b",
     "sources/w8-startup-sce-d-sif-set-reg/sif_set_reg.S": "2993a69c2420dcde9222ab528302445440ea5bbf481925d87bb8059eb2abb472",
     "sources/w8-startup-sce-d-special-handler/special_handler.cpp": "da24db9a1f9549b1aecd1a242c7067c4f625404d678c29db12c3a015cd6b29a9",
+    "sources/w9-animation-object-a-anim-add-hairy/anim_add_hairy.cpp": "d786f57b54826bb6f59de4893aee5cf7c8c44e0842d8b4d55c8a01bd2d371d66",
+    "sources/w9-animation-object-a-anim-add-one-shot/anim_add_one_shot.cpp": "d64c045b6359e934de92dfcb1b384fc9e8a428fae8153ed3cee4d1a281598aa3",
+    "sources/w9-animation-object-a-anim-add-to-end/anim_add_to_end.cpp": "d415bbc5b9f3a08df21ca8691fd4a077b645684f3ba27028eddef38c2aba21c5",
+    "sources/w9-animation-object-a-anim-advance-animation/anim_advance_animation.cpp": "65e13edd799065cf16f9a6d568eac561b56c29dba603e791796bf0de4a4bccda",
+    "sources/w9-animation-object-a-anim-find-component-with-flags/anim_find_component_with_flags.cpp": "40ee72924925ed56b5086f7df2371a86d817df2e1dd0d4627536026e2ae26019",
+    "sources/w9-animation-object-a-anim-global-sync/anim_global_sync.cpp": "98b2aa4c873858e9a3328add93d8c1486592b1327c68d7bbde225418c815ca66",
+    "sources/w9-animation-object-a-anim-map-animation-sounds/anim_map_animation_sounds.cpp": "0b4d677c28a9fe8cdabdede216dd18ffd8a86714c396e1c370604d3039cabb94",
+    "sources/w9-animation-object-a-anim-state-data/anim_state_data.cpp": "16e416b8a53cc61123436e44d420072ec2ea66bc2ea6b78e9a2eccc84086f84a",
+    "sources/w9-animation-object-a-b-exit-state-persue-idle/b_exit_state_persue_idle.cpp": "20e226a258a75cfa10c9e03f32ec98dd14e3d1a8d8a81cce5e416155ecff981b",
+    "sources/w9-animation-object-a-b-far-from-home/b_far_from_home.cpp": "9535a766748a655fb361017808d85f3f4699fe648c0f20637418e192c9180b38",
+    "sources/w9-animation-object-a-common/mem.hpp": "918ce3955950a1e48079d11bfbb2f6ad79b0c69e2aa4db9b3b758e68d6cdc9dc",
+    "sources/w9-animation-object-a-convert-pointers-to-indicies/convert_pointers_to_indicies.cpp": "6a46e948336ff90d1dd765f3bc818db553b6fceb4124e8693990fcf2efe0edd8",
+    "sources/w9-animation-object-a-erand/erand.cpp": "c03a1da5adb0ab77d1d2aba77875fec00c30226dc363de22be86f577b97af445",
+    "sources/w9-animation-object-a-find-tag-float/find_tag_float.cpp": "f3356437ed117247e9fafcb4de272fb5737a96a616fcf936a62d5319f2317b6a",
+    "sources/w9-animation-object-a-game-line-data/game_line_data.cpp": "58b84f3bd5702f8ae46e94ca67fbe7575acc0f583e6bb0ebf0c490c23910b4b5",
+    "sources/w9-animation-object-a-game-line-init-path-state/game_line_init_path_state.cpp": "61c930eee0de3915832f23dc037741776ca8b80a7db28ecc596f0d38ba8ef93b",
+    "sources/w9-animation-object-a-game-line-update-position/game_line_update_position.cpp": "d07a6a0deb37127012b8bc7e98edb86aa2d3a481637f99fa5bda1af2c0975a92",
+    "sources/w9-animation-object-a-generic-move/generic_move.cpp": "4471d1b7ebf96e4b4798662e63a77f240d55fbb3a3e748a707757234cd6f1959",
+    "sources/w9-animation-object-a-get-smart-random-destination/get_smart_random_destination.cpp": "0df42ef8886b1d8287e931e7abbfd956d0df560e9b1d70a8d6b3a615d1517755",
+    "sources/w9-animation-object-a-has-light-or-particle-number/has_light_or_particle_number.cpp": "b9dae1a907630de85514b22079eca1717150acf349d4d5b8c19e5798d3cb982d",
+    "sources/w9-animation-object-a-in-msg-data/in_msg_data.cpp": "a2ef728e8fed39edd46da2518cc98f01171390b2a797d37a0b2f4532f5bad4b6",
+    "sources/w9-animation-object-a-lump-data/lump_data.cpp": "ed4483393864177d379e8706a76cee017ab75bcbe9e3b2b90a8f354d989d52e8",
     "sources/w9-audio-anim-get-volume-scale/anim_get_volume_scale.cpp": "a8b3c7efde4da9958a94b287c8bb1c6ae7691d95bc0f0bf55d817709bd323da2",
     "sources/w9-audio-get-global-dialog-dir/get_global_dialog_dir.cpp": "65b84cebc00c2f2587408d9fec181757443e7e7295581691e6445ed05bf16be8",
     "sources/w9-audio-play-sound-for-dlg/play_sound_for_dlg.cpp": "c0e2bf6cbb6cd53d1f5ba54374e421e5bdc581cb7dfb0564c1cd0350e5061559",
@@ -39692,6 +39714,331 @@
           "compiled_body_bytes": 12
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2765,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_add_hairy.o",
+      "profile": "authored_cpp",
+      "sha256": "d786f57b54826bb6f59de4893aee5cf7c8c44e0842d8b4d55c8a01bd2d371d66",
+      "source": "sources/w9-animation-object-a-anim-add-hairy/anim_add_hairy.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi",
+          "compiled_body_bytes": 408
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2766,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_add_one_shot.o",
+      "profile": "authored_cpp",
+      "sha256": "d64c045b6359e934de92dfcb1b384fc9e8a428fae8153ed3cee4d1a281598aa3",
+      "source": "sources/w9-animation-object-a-anim-add-one-shot/anim_add_one_shot.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAddOneShot__FP14AnimationStateP15AnimationHeaderffi",
+          "compiled_body_bytes": 596
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2767,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_add_to_end.o",
+      "profile": "authored_cpp",
+      "sha256": "d415bbc5b9f3a08df21ca8691fd4a077b645684f3ba27028eddef38c2aba21c5",
+      "source": "sources/w9-animation-object-a-anim-add-to-end/anim_add_to_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAddToEnd__FP14AnimationStateP15AnimationHeaderi",
+          "compiled_body_bytes": 376
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2768,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_advance_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "65e13edd799065cf16f9a6d568eac561b56c29dba603e791796bf0de4a4bccda",
+      "source": "sources/w9-animation-object-a-anim-advance-animation/anim_advance_animation.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2769,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_find_component_with_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "40ee72924925ed56b5086f7df2371a86d817df2e1dd0d4627536026e2ae26019",
+      "source": "sources/w9-animation-object-a-anim-find-component-with-flags/anim_find_component_with_flags.cpp",
+      "emitted_functions": [
+        {
+          "name": "animFindComponentWithFlags__FP14AnimationStatei",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2770,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_global_sync.o",
+      "profile": "authored_cpp",
+      "sha256": "98b2aa4c873858e9a3328add93d8c1486592b1327c68d7bbde225418c815ca66",
+      "source": "sources/w9-animation-object-a-anim-global-sync/anim_global_sync.cpp",
+      "emitted_functions": [
+        {
+          "name": "animGlobalSync__FP14AnimationState",
+          "compiled_body_bytes": 468
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2771,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_map_animation_sounds.o",
+      "profile": "authored_cpp",
+      "sha256": "0b4d677c28a9fe8cdabdede216dd18ffd8a86714c396e1c370604d3039cabb94",
+      "source": "sources/w9-animation-object-a-anim-map-animation-sounds/anim_map_animation_sounds.cpp",
+      "emitted_functions": [
+        {
+          "name": "animMapAnimationSounds__FP15AnimationHeader",
+          "compiled_body_bytes": 1000
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2772,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_anim_state_data.o",
+      "profile": "authored_cpp",
+      "sha256": "16e416b8a53cc61123436e44d420072ec2ea66bc2ea6b78e9a2eccc84086f84a",
+      "source": "sources/w9-animation-object-a-anim-state-data/anim_state_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2773,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_b_exit_state_persue_idle.o",
+      "profile": "authored_cpp",
+      "sha256": "20e226a258a75cfa10c9e03f32ec98dd14e3d1a8d8a81cce5e416155ecff981b",
+      "source": "sources/w9-animation-object-a-b-exit-state-persue-idle/b_exit_state_persue_idle.cpp",
+      "emitted_functions": [
+        {
+          "name": "bExitStatePersueIdle__8Creature",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2774,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_b_far_from_home.o",
+      "profile": "authored_cpp",
+      "sha256": "9535a766748a655fb361017808d85f3f4699fe648c0f20637418e192c9180b38",
+      "source": "sources/w9-animation-object-a-b-far-from-home/b_far_from_home.cpp",
+      "emitted_functions": [
+        {
+          "name": "bFarFromHome__8Creature",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2775,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_convert_pointers_to_indicies.o",
+      "profile": "authored_cpp",
+      "sha256": "6a46e948336ff90d1dd765f3bc818db553b6fceb4124e8693990fcf2efe0edd8",
+      "source": "sources/w9-animation-object-a-convert-pointers-to-indicies/convert_pointers_to_indicies.cpp",
+      "emitted_functions": [
+        {
+          "name": "convertPointersToIndicies__Fi",
+          "compiled_body_bytes": 400
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2776,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_erand.o",
+      "profile": "authored_cpp",
+      "sha256": "c03a1da5adb0ab77d1d2aba77875fec00c30226dc363de22be86f577b97af445",
+      "source": "sources/w9-animation-object-a-erand/erand.cpp",
+      "emitted_functions": [
+        {
+          "name": "eRand__10GameObject",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2777,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_find_tag_float.o",
+      "profile": "authored_cpp",
+      "sha256": "f3356437ed117247e9fafcb4de272fb5737a96a616fcf936a62d5319f2317b6a",
+      "source": "sources/w9-animation-object-a-find-tag-float/find_tag_float.cpp",
+      "emitted_functions": [
+        {
+          "name": "findTagFloat__10GameObjectPci",
+          "compiled_body_bytes": 392
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2778,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_game_line_data.o",
+      "profile": "authored_cpp",
+      "sha256": "58b84f3bd5702f8ae46e94ca67fbe7575acc0f583e6bb0ebf0c490c23910b4b5",
+      "source": "sources/w9-animation-object-a-game-line-data/game_line_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2779,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_game_line_init_path_state.o",
+      "profile": "authored_cpp",
+      "sha256": "61c930eee0de3915832f23dc037741776ca8b80a7db28ecc596f0d38ba8ef93b",
+      "source": "sources/w9-animation-object-a-game-line-init-path-state/game_line_init_path_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineInitPathState__FP17gameLinePathStatePcP6Point3",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2780,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_game_line_update_position.o",
+      "profile": "authored_cpp",
+      "sha256": "d07a6a0deb37127012b8bc7e98edb86aa2d3a481637f99fa5bda1af2c0975a92",
+      "source": "sources/w9-animation-object-a-game-line-update-position/game_line_update_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineUpdatePosition__FP17gameLinePathState",
+          "compiled_body_bytes": 1412
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2781,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_generic_move.o",
+      "profile": "authored_cpp",
+      "sha256": "4471d1b7ebf96e4b4798662e63a77f240d55fbb3a3e748a707757234cd6f1959",
+      "source": "sources/w9-animation-object-a-generic-move/generic_move.cpp",
+      "emitted_functions": [
+        {
+          "name": "genericMove__10GameObjectG6Point3P10GameObject",
+          "compiled_body_bytes": 2316
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-a-common/mem.hpp"
+      ],
+      "input_order": 2782,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_get_smart_random_destination.o",
+      "profile": "authored_cpp",
+      "sha256": "0df42ef8886b1d8287e931e7abbfd956d0df560e9b1d70a8d6b3a615d1517755",
+      "source": "sources/w9-animation-object-a-get-smart-random-destination/get_smart_random_destination.cpp",
+      "emitted_functions": [
+        {
+          "name": "getSmartRandomDestination__8Creaturei",
+          "compiled_body_bytes": 672
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2783,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_has_light_or_particle_number.o",
+      "profile": "authored_cpp",
+      "sha256": "b9dae1a907630de85514b22079eca1717150acf349d4d5b8c19e5798d3cb982d",
+      "source": "sources/w9-animation-object-a-has-light-or-particle-number/has_light_or_particle_number.cpp",
+      "emitted_functions": [
+        {
+          "name": "hasLightOrParticleNumber__FPPci",
+          "compiled_body_bytes": 864
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2784,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_in_msg_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a2ef728e8fed39edd46da2518cc98f01171390b2a797d37a0b2f4532f5bad4b6",
+      "source": "sources/w9-animation-object-a-in-msg-data/in_msg_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2785,
+      "kind": "independently_authored_source",
+      "object_name": "w9ao_lump_data.o",
+      "profile": "authored_cpp",
+      "sha256": "ed4483393864177d379e8706a76cee017ab75bcbe9e3b2b90a8f354d989d52e8",
+      "source": "sources/w9-animation-object-a-lump-data/lump_data.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -39791,7 +40138,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "583ff6b1841a2d4c74af3927ae5e021773455ae74b08a7229f7c15f89347dabb",
+  "snapshot_sha256": "e840d7e3275ab973a1f9ece5b47f99320aa09760b3496fc2a7a5d153ea929269",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
