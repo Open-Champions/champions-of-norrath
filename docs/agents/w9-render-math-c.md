@@ -57,12 +57,18 @@ Each source header carries the full detail. Highlights:
   Reproduced as found; it is probably unintended.
 - The particle objects built in the two static initializers are zero in the file image and filled at
   startup; their argument tuples came from running the original initializer with the constructor recorded.
+- `setCamera__Ff` is a cut-scene camera evaluator over a list of 20-byte action records (see the header of
+  `w9-render-math-c-set-camera/set_camera.cpp`). Eight channels (position, yaw, pitch, roll, field of view, look-at,
+  screen colour, blur) are evaluated in that order with cubic Hermite blending between keys; the transcription was
+  checked against the original over about 6,000 random action lists with 3,669 of 3,727 original words executed (the
+  rest are nops, branch delay slots, and the second pass of the look-at turn-wrap loop, which needs a delta over two
+  turns that the angle range cannot produce).
 - Unknown: all structure and field names; what the cell low bits and the hitscan/clip mode mask select;
   the meaning of the 0.25 cell scale beyond "four world units".
 
 ## Build-plan entries needed
 
-Append these authored inputs with fresh `input_order` values after the current tip. `default_authored_inputs` grows by 21. `header_closure` is empty for every unit, `profile` is `authored_cpp`, and no `host_check.cpp` is an input (each includes host headers). Body sizes are from the reviewed EE g++ `authored_cpp` profile, not from the original executable. No `private_object_sha256` is claimed.
+Append these authored inputs with fresh `input_order` values after the current tip. `default_authored_inputs` grows by 22. `header_closure` is empty for every unit, `profile` is `authored_cpp`, and no `host_check.cpp` is an input (each includes host headers). Body sizes are from the reviewed EE g++ `authored_cpp` profile, not from the original executable. No `private_object_sha256` is claimed.
 
 ```json
 {"source":"sources/w9-render-math-c-add-particle-init/add_particle_init.cpp","object_name":"add_particle_init.o","sha256":"b01bbb1f5e0ba08fca6027e8f470290546f17eef0151b9586f7f93a35fdd51bd","emitted_functions":[{"name":"particleInit__11AddParticlePPc","compiled_body_bytes":1764}]}
@@ -73,6 +79,7 @@ Append these authored inputs with fresh `input_order` values after the current t
 {"source":"sources/w9-render-math-c-quat-normalize/quat_normalize.cpp","object_name":"quat_normalize.o","sha256":"99e54d75667ccd06c52253b396b42af270e37b6b3cf743a7958b498fb8567b40","emitted_functions":[{"name":"quatNormalize__FP4Quat","compiled_body_bytes":92}]}
 {"source":"sources/w9-render-math-c-quat-to-mat33/quat_to_mat33.cpp","object_name":"quat_to_mat33.o","sha256":"01a43036be29ad9b132b0e74bc763441b9d9120a95c7307fec669fc3f90087a3","emitted_functions":[{"name":"quatToMat__FP8Matrix33P4Quat","compiled_body_bytes":200}]}
 {"source":"sources/w9-render-math-c-quat-to-mat34/quat_to_mat34.cpp","object_name":"quat_to_mat34.o","sha256":"ff7ee1e53af63368dc3ae3d74334398097edb7000f203653af43162caf8058ca","emitted_functions":[{"name":"quatToMat__FP8Matrix34P4Quat","compiled_body_bytes":212}]}
+{"source":"sources/w9-render-math-c-set-camera/set_camera.cpp","object_name":"set_camera.o","sha256":"b6e3f2b908ef583851fce11dda86a80ce7ccdeb4889023686db23febacfe5a0c","emitted_functions":[{"name":"_ZN12_GLOBAL__N_1L14scalar_channelERKNS_4ListEiiffffNS_11ChannelKindERNS_5FlagsEPi.constprop.0","compiled_body_bytes":2312},{"name":"_ZN12_GLOBAL__N_1L7look_atEPK6ActionRfS3_","compiled_body_bytes":344},{"name":"_ZN12_GLOBAL__N_1L9find_keysERKNS_4ListEiiffff.constprop.0.isra.0","compiled_body_bytes":1024},{"name":"setCamera__Ff","compiled_body_bytes":5968}]}
 {"source":"sources/w9-render-math-c-switch-static-init/switch_static_init.cpp","object_name":"switch_static_init.o","sha256":"03205ea041081c32f37bb3d364d97583e0d1483b57050cf2d366ee8629fbaf03","emitted_functions":[{"name":"_GLOBAL_$I$__6SwitchG6Point3PPc","compiled_body_bytes":8},{"name":"_ZL41__static_initialization_and_destruction_0ii.constprop.0","compiled_body_bytes":2044}]}
 {"source":"sources/w9-render-math-c-tex-terminate-thread/tex_terminate_thread.cpp","object_name":"tex_terminate_thread.o","sha256":"81dfd14d484a474e6e5dbe08fe5203ed172562f4791a9768e5ae47cece7720ff","emitted_functions":[{"name":"texTerminateThread__Fv","compiled_body_bytes":12}]}
 {"source":"sources/w9-render-math-c-view-data/view_data.cpp","object_name":"view_data.o","sha256":"6dde635d44b1a6f770f5a4cb4d7cecbde6cc9b3b09c59ecbdbe9f2c30184c078","emitted_functions":[]}
@@ -90,7 +97,7 @@ Append these authored inputs with fresh `input_order` values after the current t
 
 ## Imports opened
 
-Symbols the new sources reference but do not define, from an `ld -r` link of only my objects (others own them under these names): `P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `TerminateThread`, `__11ParticleDefiiiiiiiifffiiiPFPv_v`, `ceilf`, `collisionFrame`, `cutSkipMode`, `decompressThreadid`, `eRandState`, `findTagInt__10GameObjectPci`, `floorf`, `frameNm`, `makeCollisionList__FP12_worldHeaderffffPP13collisionParti`, `matMakeCharViewMatrix__FP8Matrix44fffffff`, `matMakeViewMatrix__FP8Matrix44fffffff`, `matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix44P8Matrix34T0`, `matScale__FP8Matrix34f`, `matTrans__FP8Matrix34fff`, `matUntransform__FP6Point3P8Matrix33T0`, `memset`, `routePlot__FR10RouteQueue`, `routeQueue`, `rqHead`, `rqTail`, `sprintf`, `strcat`, `worldCameraMatrix`, `worldCameraPos`, `worldFindPointHeight__FP12_worldHeaderG6Point3`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`, `worldScrz`, `worldTransformFrustum__FP8Matrix34`, `worldWorldViewMatrix`.
+Symbols the new sources reference but do not define, from an `ld -r` link of only my objects (others own them under these names): `P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `TerminateThread`, `__11ParticleDefiiiiiiiifffiiiPFPv_v`, `action`, `actor`, `ceilf`, `collisionFrame`, `coreStartSwitchScene__Fi`, `cutCameraPos`, `cutSkipMode`, `decompressThreadid`, `displayActionPos`, `displayCutPos`, `eRandState`, `engineSetBlur__Fi`, `engineSetScreenColor__Fiiii`, `evalHermite__Ffffff`, `findTagInt__10GameObjectPci`, `floorf`, `frameNm`, `iatan2__Fff`, `makeCollisionList__FP12_worldHeaderffffPP13collisionParti`, `matIdent__FP8Matrix34`, `matMakeCharViewMatrix__FP8Matrix44fffffff`, `matMakeViewMatrix__FP8Matrix44fffffff`, `matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix44P8Matrix34T0`, `matRot__FP8Matrix34is`, `matScale__FP8Matrix34f`, `matTrans__FP8Matrix34fff`, `matUntransform__FP6Point3P8Matrix33T0`, `memset`, `myFOV`, `myPitch`, `myRoll`, `nmActions`, `routePlot__FR10RouteQueue`, `routeQueue`, `rqHead`, `rqTail`, `sprintf`, `strcat`, `world`, `worldCameraMatrix`, `worldCameraPos`, `worldFindPointHeight__FP12_worldHeaderG6Point3`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`, `worldPrecacheWorld__FP12_worldHeaderP8Matrix34`, `worldScrz`, `worldTransformFrustum__FP8Matrix34`, `worldWorldViewMatrix`.
 
 ## Imports closed
 
@@ -100,7 +107,7 @@ Symbols the new sources reference but do not define, from an `ld -r` link of onl
 `norrath_wave_maker_get_wavelet_mat`, `norrath_world_hitscan`, `particleInit__11AddParticlePPc`,
 `quatNormalize__FP4Quat`, `quatToMat__FP8Matrix33P4Quat`, `quatToMat__FP8Matrix34P4Quat`, `scissored`,
 `teleportParticle1`, `teleportParticle2`, `texDecodeStarted`, `texTerminateThread__Fv`,
-`vifDirectQWordCount`, `worldCharViewMatrix`, `worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
+`vifDirectQWordCount`, `setCamera__Ff`, `worldCharViewMatrix`, `worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
 `worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`, `worldFindHeight__FP12_worldHeaderG6Point3f`,
 `worldFindStandHeight__FP12_worldHeaderG6Point3f`, `worldHitscan__FP12_worldHeaderG6Point3T1fi`,
 `worldPerturbWater__FP12_worldHeaderG6Point3ff`, `worldPlotRouteProcess__Fi`,
@@ -116,8 +123,7 @@ Eighteen further 80-byte particle objects are file-local to the Switch initializ
 
 ## Not closed
 
-- `setCamera__Ff` (0x001884f0, 14,908 bytes, 3,728 instructions).
-  Not attempted to completion yet; see the final section if updated.
+Nothing in my import list remains open.
 
 ## Authored but never executed
 
@@ -142,5 +148,11 @@ zero wavelet count where the original silently divides.
 - Who initializes `decompressThreadid` and clears it after `texTerminateThread`.
 - The meaning of each three-letter particle emitter tag name read by `particleInit`.
 - The original translation unit that owns the Switch initializer's 23 particle objects.
+- `setCamera__Ff`: the meaning of record kinds 4 and 5 (they are only tested for equality with a key's time),
+  the actor slot layout beyond the three fields read (a 44-byte slot whose first word points at an object with a
+  position at +16 and a float at +32), and the names of every field. The look-at channel's use of the current yaw
+  and pitch when no actor is named is reproduced as found. When the look-at key's next key is missing the end time is
+  1,000,000.0, and a next key at time 0 with no cur key divides zero by zero; the interpreter saturated the
+  conversion, the EE's behaviour there was not checked.
 - `yaws` has 24 bytes between its symbol and the next (twelve halfwords here); the select-screen
   authored source declares ten.
