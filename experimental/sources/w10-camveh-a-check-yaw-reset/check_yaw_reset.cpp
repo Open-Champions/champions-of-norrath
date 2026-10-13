@@ -38,7 +38,7 @@ extern "C" void checkYawReset__6Camera(unsigned char* camera) {
     if ((*reinterpret_cast<const AliasedInt*>(entry + 12) & 0x200) == 0) return;
     const float x = *reinterpret_cast<const AliasedFloat*>(entry + 20);
     const float y = *reinterpret_cast<const AliasedFloat*>(entry + 24);
-    if (!(x * x + y * y < 0.03199999779462814f)) return;
+    if (!(x * x + y * y < 0x1.0624dcp-5f /* bits 0x3d03126e */)) return;
 
     int yaw;
     unsigned char* target = *reinterpret_cast<AliasedPtr*>(player + 23984 * i + 21872);
