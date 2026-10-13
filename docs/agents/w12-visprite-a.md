@@ -87,13 +87,13 @@ BeginBillboards__8VIRasterPP11VIBillboardi, Clear__13VIHSpriteAnim, DeletePlayba
 ## Imports opened
 
 These are undefined in the private build and not defined by this package (callees owned elsewhere); 29 were not previously on the
-list. `Identity__10VIMatrix33`, `Identity__10VIMatrix44`, `Material__8VIRasteri`, `Mul__10VIMatrix44RC10VIMatrix44T1`,
+list. `Identity__10VIMatrix33`, `Material__8VIRasteri`, `Mul__10VIMatrix44RC10VIMatrix44T1`,
 `Remove__7VILNode`, `AddTail__7VILListP7VILNode`, `SetMaterial__8VIRasteri`, `SetModelView__8VIRasterRC10VIMatrix44`, `Color__8VIRasterRC10VIColor32F`,
-`BeginTriStrip__8VIRaster`, `EndTriStrip__8VIRaster`, `__builtin_vec_delete` and `VITrailFx$sMaterialHandle` were already on the list.
+`BeginTriStrip__8VIRaster`, `EndTriStrip__8VIRaster` and `VITrailFx$sMaterialHandle` were already on the list. `Identity__10VIMatrix44` and `__builtin_vec_delete` are called too but are already defined in the shared selection.
 
 AddMaterial__8VIRasteriPP10_sceDmaTag, Begin__Ct6VIPool1ZP13VISpellEffect, Begin__Ct6VIPool1ZP20VIParticleDefinition, Cache__7VIRFontR8VIRasterPCciPi, CalcMatrices__8VIRaster, ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT, Clear__t6VIPool1ZP13VISpellEffect, Clear__t6VIPool1ZP20VIParticleDefinition, Destroy__13VISpellEffect, EndTriFan__8VIRaster, End__Ct6VIPool1ZP13VISpellEffect, End__Ct6VIPool1ZP20VIParticleDefinition, Erase__t6VIPool1ZP13VISpellEffecti, FlushDMABufferIfFull__8VIRaster, Length__C7VILList, Process__18VISpellEventDriver, ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary, Remove__12VIDictionaryR10VIResource, Restore2D__8VIRaster, SetFogRegisters__8VIRaster, Store2D__8VIRaster, UploadBillboardMicro__8VIRasterPP10_sceDmaTag, UploadMatrices__8VIRasterPP10_sceDmaTag, UploadRasterMicro__8VIRasterPP10_sceDmaTag, Vertex__8VIRasterRC7VIVect3, _$_13VISpellEffect, _$_18VISpellEventDriver, __ml__FRC7VIVect3RC10VIMatrix44, __ml__FRC7VIVect4RC10VIMatrix44.
 
-`ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT` is called by `Update__9VITrailFxl`; the image defines it at 0x01027618 (100 bytes).
+`ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT` is called by `Update__9VITrailFxl`; the image defines it at 0x01027618 (104 bytes).
 Nothing in the shared selection defines it, so it appears as a new import; it belongs to this package's area but was not in the scope list.
 
 ## Build-plan entries needed
