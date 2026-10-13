@@ -1,0 +1,36 @@
+// Host contract for cast__18SkillDiseaseShieldiP8CreatureG6Point3s; not an EE input.
+#include <cstring>
+#include <string>
+static std::string calls;
+static void* fake_block;
+extern "C" {
+void* blockAlloc__Fi(int size) { calls += "alloc(" + std::to_string(size) + ");"; return fake_block; }
+void spell_ctor_disease_shield(void* self, int rank, void* creature, void* skill) asm("__18SpellDiseaseShieldiP8CreatureP5Skill");
+void spell_ctor_disease_shield(void* self, int rank, void* creature, void* skill) {
+    calls += "ctor(" + std::to_string(self == fake_block) + "," + std::to_string(rank) + "," + std::to_string(reinterpret_cast<unsigned long>(creature)) + "," +
+             std::to_string(reinterpret_cast<unsigned long>(skill)) + ");";
+}
+struct Point3 { float x, y, z; };
+void* cast_disease_shield(void* skill, int rank, void* creature, Point3 point, short angle) asm("cast__18SkillDiseaseShieldiP8CreatureG6Point3s");
+}
+int main() {
+    char block, skill;
+    alignas(8) unsigned char creature[256];
+    const int ranks[] = {-3, 0, 1, 99};
+    for (int rank : ranks) {
+        for (int alloc_ok = 0; alloc_ok < 2; ++alloc_ok) {
+            std::memset(creature, 0x5a, sizeof creature);
+            fake_block = alloc_ok ? &block : nullptr; calls.clear();
+            void* r = cast_disease_shield(&skill, rank, creature, Point3{1.0f, 2.0f, 3.0f}, 7);
+            std::string expected = "alloc(432);";
+            if (alloc_ok) expected += "ctor(1," + std::to_string(rank) + "," + std::to_string(reinterpret_cast<unsigned long>(creature)) + "," + std::to_string(reinterpret_cast<unsigned long>(&skill)) + ");";
+            if (r != fake_block || calls != expected) return 1;
+            short group[4];
+            std::memcpy(group, creature + 148, 8);
+            if (group[0] != -100 || group[1] != -100 || group[2] != -100 || group[3] != 0) return 2;
+            for (int i = 0; i < 256; ++i)
+                if ((i < 148 || i >= 156) && creature[i] != 0x5a) return 3;
+        }
+    }
+    return 0;
+}
