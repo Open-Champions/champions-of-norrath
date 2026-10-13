@@ -63,6 +63,21 @@ inline int skill_call_int3(void* self, int slot, int a, int b) {
 #endif
 }
 
+// Calls the entry at byte `slot` of the table whose address is the word at self+72 (the layout
+// the game objects use): a signed halfword adjusts `this`, the function word is at +4. The
+// function takes (this + adjust, argument) and returns an int.
+inline int object_call_int1(void* self, int slot, void* argument) {
+    const unsigned char* entry = static_cast<const unsigned char*>(pointer(u32(self, 72))) + slot;
+    const int adjust = *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+    void* const adjusted = static_cast<unsigned char*>(self) + adjust;
+#ifdef W11_HOST
+    return w11_host_call_int4(function, adjusted, static_cast<int>(word(argument)), 0, 0);
+#else
+    return reinterpret_cast<int (*)(void*, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, argument);
+#endif
+}
+
 // Fills the 64-byte-or-larger light record that the three timed arrow projectiles keep at
 // object+112 (lightAdd__FP5Light takes its address): bytes +8 and +9 are cleared, halfwords
 // +10/+12/+14 take (a, b, c), +16 is cleared, +18/+20/+22 take the same (a, b, c), +24 is cleared,
@@ -107,6 +122,8 @@ int soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* header, void* obj
 int P_StartTrail__Fiifiiiii(int a, int b, float c, int d, int e, int f, int g, int h);
 void P_ExtendTrail__FiG6Point3(int trail, Point3 position);
 void lightAdd__FP5Light(void* light);
+void objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature(Point3 position, short heading, float a, float b, void* list, void* creature);
+void listDestroy__FP8ListHead(void* head);
 void animInitState__FP14AnimationState(void* state);
 void animAdd__FP14AnimationStateP15AnimationHeaderi(void* state, void* header, int flags);
 void animRandomizeTime__FP14AnimationState(void* state);
