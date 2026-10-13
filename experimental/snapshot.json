@@ -63893,6 +63893,524 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w11-actor-a-tf-8gutchunk/typeinfo.cpp"
+    },
+    {
+      "input_order": 5015,
+      "component": "w11-actor-b-clone-10projectile",
+      "object_name": "w11_actor_b_clone_10projectile.o",
+      "private_object_sha256": "206847247dcf094d6dbab97456ff603c5db951d6044add32b3e4377c4e76e9d3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "clone__10Projectile"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-clone-10projectile/clone.cpp"
+    },
+    {
+      "input_order": 5016,
+      "component": "w11-actor-b-clone-12recalleffect",
+      "object_name": "w11_actor_b_clone_12recalleffect.o",
+      "private_object_sha256": "59ece5756c78e0980f3757c5e08019428bdca0292a2316888ffdae0465d5301a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "clone__12RecallEffect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-clone-12recalleffect/clone.cpp"
+    },
+    {
+      "input_order": 5017,
+      "component": "w11-actor-b-clone-6phprop",
+      "object_name": "w11_actor_b_clone_6phprop.o",
+      "private_object_sha256": "276636f5efa1ef86c66e83bcdf8581c437f45c39b335467482c8e323eac7d9fb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 400,
+          "name": "clone__6PhProp"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-clone-6phprop/clone.cpp"
+    },
+    {
+      "input_order": 5018,
+      "component": "w11-actor-b-clone-6player",
+      "object_name": "w11_actor_b_clone_6player.o",
+      "private_object_sha256": "7301eb79d340f580528fd3b624af4ce24df20ae95d7835caa569fe28871d350e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1444,
+          "name": "clone__6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-clone-6player/clone.cpp"
+    },
+    {
+      "input_order": 5019,
+      "component": "w11-actor-b-collision-6player",
+      "object_name": "w11_actor_b_collision_6player.o",
+      "private_object_sha256": "198358773cfff45fec85f1ee5f2fe6d751747a3ad5e58e540dc06d3aa0ec08d7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "msg_collision__6PlayerP10GameObject"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-collision-6player/msg_collision.cpp"
+    },
+    {
+      "input_order": 5020,
+      "component": "w11-actor-b-draw-12recalleffect",
+      "object_name": "w11_actor_b_draw_12recalleffect.o",
+      "private_object_sha256": "4a7d112b8dac495912f82938f7eeb41e0a047eeb1d5ed8c9a1c28fe3a39be527",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "msg_draw__12RecallEffect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-draw-12recalleffect/msg_draw.cpp"
+    },
+    {
+      "input_order": 5021,
+      "component": "w11-actor-b-draw-6phprop",
+      "object_name": "w11_actor_b_draw_6phprop.o",
+      "private_object_sha256": "93d62f19d38e53aaa4742e768b72fd717da7a5b359546c9735d8fe7bb51c6072",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 448,
+          "name": "msg_draw__6PhProp"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-draw-6phprop/msg_draw.cpp"
+    },
+    {
+      "input_order": 5022,
+      "component": "w11-actor-b-draw-6player",
+      "object_name": "w11_actor_b_draw_6player.o",
+      "private_object_sha256": "803bf3147bcb3899bd1faf3d01cd5b56cc6a4ab9b21af794c187f0a7229d26eb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2368,
+          "name": "msg_draw__6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-draw-6player/msg_draw.cpp"
+    },
+    {
+      "input_order": 5023,
+      "component": "w11-actor-b-draw-attachments-6player",
+      "object_name": "w11_actor_b_draw_attachments_6player.o",
+      "private_object_sha256": "ddffca0147087ab46be7d949d29b702e1fb43da9a8022f45480d4f88054a217c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2000,
+          "name": "drawAttachments__6PlayerP11_drawRecordf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-draw-attachments-6player/draw_attachments.cpp"
+    },
+    {
+      "input_order": 5024,
+      "component": "w11-actor-b-draw-effects-6player",
+      "object_name": "w11_actor_b_draw_effects_6player.o",
+      "private_object_sha256": "24d5f881050962c09ce3ad835ec1a4557c44f5dceb70aa5e8b47be01b836b7a8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 940,
+          "name": "playerDrawWeaponEffects__6Playerf"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-draw-effects-6player/weapon_effects.cpp"
+    },
+    {
+      "input_order": 5025,
+      "component": "w11-actor-b-dtor-10projectile",
+      "object_name": "w11_actor_b_dtor_10projectile.o",
+      "private_object_sha256": "69714969d8f028af0d5abb701914b67ad2ceba672755e83744f0006759c153c0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_10Projectile"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-dtor-10projectile/dtor.cpp"
+    },
+    {
+      "input_order": 5026,
+      "component": "w11-actor-b-dtor-12recalleffect",
+      "object_name": "w11_actor_b_dtor_12recalleffect.o",
+      "private_object_sha256": "eedb5779cd264e6c2cb8aa5e0cc7007f4fd9a1295136952b4ef5f623cb8276b6",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_12RecallEffect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-dtor-12recalleffect/dtor.cpp"
+    },
+    {
+      "input_order": 5027,
+      "component": "w11-actor-b-dtor-6phprop",
+      "object_name": "w11_actor_b_dtor_6phprop.o",
+      "private_object_sha256": "da53709d9a606170f11dbe2e4fe6e367894bde25587be575ec82ea8ff261b0af",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_6PhProp"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-dtor-6phprop/dtor.cpp"
+    },
+    {
+      "input_order": 5028,
+      "component": "w11-actor-b-dtor-6player",
+      "object_name": "w11_actor_b_dtor_6player.o",
+      "private_object_sha256": "de8aabc2199cfb2433233bf7305fc7294761a3a59c6fcba1b46eadc049ac79f3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "_$_6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-dtor-6player/dtor.cpp"
+    },
+    {
+      "input_order": 5029,
+      "component": "w11-actor-b-dtor-6sparks",
+      "object_name": "w11_actor_b_dtor_6sparks.o",
+      "private_object_sha256": "3af56eb57096ceaa2572941207fc2b1ef9104862033c98d8a7101b630a376e4c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "_$_6Sparks"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-dtor-6sparks/dtor.cpp"
+    },
+    {
+      "input_order": 5030,
+      "component": "w11-actor-b-find-commander-3orc",
+      "object_name": "w11_actor_b_find_commander_3orc.o",
+      "private_object_sha256": "6aa07badbf2b3942b94cfffe897cd7d826aef456e754cae08eb76d899815ed9d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "findCommander__3Orc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-find-commander-3orc/find_commander.cpp"
+    },
+    {
+      "input_order": 5031,
+      "component": "w11-actor-b-get-model-6player",
+      "object_name": "w11_actor_b_get_model_6player.o",
+      "private_object_sha256": "fc73f0572cdcfac8699c364aeed1dbaa4a40713cbec037070aabc52364d2acaa",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getModel__6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-get-model-6player/get_model.cpp"
+    },
+    {
+      "input_order": 5032,
+      "component": "w11-actor-b-get-poke-name-6phprop",
+      "object_name": "w11_actor_b_get_poke_name_6phprop.o",
+      "private_object_sha256": "97b1dab1de8a2164d94f7c005b1ce7ae1534ecd0738ea0b83f1230f0a5a2a635",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "msg_getPokeName__6PhPropPUsi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-get-poke-name-6phprop/msg_get_poke_name.cpp"
+    },
+    {
+      "input_order": 5033,
+      "component": "w11-actor-b-hurt-6player",
+      "object_name": "w11_actor_b_hurt_6player.o",
+      "private_object_sha256": "a9b0977f59a7fae5e8e34b3c7b5a591b66770cc35a0b158603814452c144d9c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1204,
+          "name": "msg_hurt__6PlayerfP10GameObjecti"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-hurt-6player/msg_hurt.cpp"
+    },
+    {
+      "input_order": 5034,
+      "component": "w11-actor-b-init-4prop",
+      "object_name": "w11_actor_b_init_4prop.o",
+      "private_object_sha256": "34485ad084f9378e5deec3c8d071f363cad30f7df334f3f6d360f389057eebfe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1088,
+          "name": "init__4Propi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-init-4prop/init.cpp"
+    },
+    {
+      "input_order": 5035,
+      "component": "w11-actor-b-init-type-3orc",
+      "object_name": "w11_actor_b_init_type_3orc.o",
+      "private_object_sha256": "a8bac5e8f77dcdf41f003343d91c140165c1e984adbfe70b4c6ec809ae45b4d8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1612,
+          "name": "initType__3Orcb"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-init-type-3orc/init_type.cpp"
+    },
+    {
+      "input_order": 5036,
+      "component": "w11-actor-b-is-enemy-6player",
+      "object_name": "w11_actor_b_is_enemy_6player.o",
+      "private_object_sha256": "251c01a171d0ccfccf7c9740a3bcae0e99e8675f19d81920eaf34b8bff4534c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "isEnemy__6PlayerP10GameObject"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-is-enemy-6player/is_enemy.cpp"
+    },
+    {
+      "input_order": 5037,
+      "component": "w11-actor-b-join-commander-3orc",
+      "object_name": "w11_actor_b_join_commander_3orc.o",
+      "private_object_sha256": "529678f66fb7785524446b90fd212ed213fb0738f193e5ad80201d390c8adc8f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "joinCommander__3Orc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-join-commander-3orc/join_commander.cpp"
+    },
+    {
+      "input_order": 5038,
+      "component": "w11-actor-b-leave-commander-3orc",
+      "object_name": "w11_actor_b_leave_commander_3orc.o",
+      "private_object_sha256": "b13b42f6cd5ef7bf350103df68ab298674799276916768ff1fdca478f944072b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "leaveCommander__3Orc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-leave-commander-3orc/leave_commander.cpp"
+    },
+    {
+      "input_order": 5039,
+      "component": "w11-actor-b-lose-body-part-8scorpion",
+      "object_name": "w11_actor_b_lose_body_part_8scorpion.o",
+      "private_object_sha256": "a6bd34e464f0e2f411618e950ee05da61293c974c79f72c5c8ce57a8184fd123",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "loseBodyPart__8Scorpioni"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-lose-body-part-8scorpion/lose_body_part.cpp"
+    },
+    {
+      "input_order": 5040,
+      "component": "w11-actor-b-poke-6phprop",
+      "object_name": "w11_actor_b_poke_6phprop.o",
+      "private_object_sha256": "db1017aa9ae482630f5eb89ecfac7a5e48d289372d27da8db1a0cb2dfa07eda4",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 236,
+          "name": "msg_poke__6PhPropi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-poke-6phprop/msg_poke.cpp"
+    },
+    {
+      "input_order": 5041,
+      "component": "w11-actor-b-run-12recalleffect",
+      "object_name": "w11_actor_b_run_12recalleffect.o",
+      "private_object_sha256": "60610de2a37107e44e52e279fd1bcb71008770a68ab8b3c7d691663655e0bd3e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "msg_run__12RecallEffect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-run-12recalleffect/msg_run.cpp"
+    },
+    {
+      "input_order": 5042,
+      "component": "w11-actor-b-run-6phprop",
+      "object_name": "w11_actor_b_run_6phprop.o",
+      "private_object_sha256": "8f0d334cf6c3a22507c6074e0214ef10baf36f6726d48d5135a6ba2da651b7b9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 3644,
+          "name": "msg_run__6PhProp"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-run-6phprop/msg_run.cpp"
+    },
+    {
+      "input_order": 5043,
+      "component": "w11-actor-b-save-7shooter",
+      "object_name": "w11_actor_b_save_7shooter.o",
+      "private_object_sha256": "34394711d4c16805d6fb7346715db37ca282c86f9be7d421b64965df66d6eea8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "msg_save__7ShooterPc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-save-7shooter/msg_save.cpp"
+    },
+    {
+      "input_order": 5044,
+      "component": "w11-actor-b-set-active-chunks-6player",
+      "object_name": "w11_actor_b_set_active_chunks_6player.o",
+      "private_object_sha256": "b33d98080d8590d3ab85d124fed3f4c562f0bd7f1a8822171c1a7839a28eea3d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "setActiveChunks__6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-set-active-chunks-6player/set_active_chunks.cpp"
+    },
+    {
+      "input_order": 5045,
+      "component": "w11-actor-b-set-on-fire-6phprop",
+      "object_name": "w11_actor_b_set_on_fire_6phprop.o",
+      "private_object_sha256": "5389aa4a5277083b896483ab4a1a43c0621d11c8ef12c40a885d819f6e7ae650",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "setOnFire__6PhPropi"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-set-on-fire-6phprop/set_on_fire.cpp"
+    },
+    {
+      "input_order": 5046,
+      "component": "w11-actor-b-set-state-6player",
+      "object_name": "w11_actor_b_set_state_6player.o",
+      "private_object_sha256": "9bbd756ce28cddb37141658b5c1b94fe8e3c9173a7cfa771d5f7a547992b582a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "setState__6Playeri"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-set-state-6player/set_state.cpp"
+    },
+    {
+      "input_order": 5047,
+      "component": "w11-actor-b-set-weapon-3orc",
+      "object_name": "w11_actor_b_set_weapon_3orc.o",
+      "private_object_sha256": "e1ba457ccf7c0a6c84e7ad171a62caad19523cb60481bf761988f49ca6892c48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 320,
+          "name": "setWeapon__3Orc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-set-weapon-3orc/set_weapon.cpp"
+    },
+    {
+      "input_order": 5048,
+      "component": "w11-actor-b-stun-6player",
+      "object_name": "w11_actor_b_stun_6player.o",
+      "private_object_sha256": "2a1099f74b0eecab9365ff548f6bbc5ee09b1f603e3e314db3727c510be8f70c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "stun__6Playeri"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-stun-6player/stun.cpp"
+    },
+    {
+      "input_order": 5049,
+      "component": "w11-actor-b-tf-10projectile",
+      "object_name": "w11_actor_b_tf_10projectile.o",
+      "private_object_sha256": "b3612a439d7172fadab41a34419eafe0c11df1ee0fb093b9071e82f76f570682",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf10Projectile"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-tf-10projectile/typeinfo.cpp"
+    },
+    {
+      "input_order": 5050,
+      "component": "w11-actor-b-tf-12recalleffect",
+      "object_name": "w11_actor_b_tf_12recalleffect.o",
+      "private_object_sha256": "e345cb003d6aff3d0be12b7072cb6240f77f582a982cd5e9d016b089053b4f85",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf12RecallEffect"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-tf-12recalleffect/typeinfo.cpp"
+    },
+    {
+      "input_order": 5051,
+      "component": "w11-actor-b-tf-6player",
+      "object_name": "w11_actor_b_tf_6player.o",
+      "private_object_sha256": "d6142db12e53472bd40aaad0c871b3aa77c83bbe2a7f4739acaba6d6ab0ce221",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf6Player"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w11-actor-b-tf-6player/typeinfo.cpp"
     }
   ],
   "drafts": [
@@ -69581,6 +70099,81 @@
     "sources/w11-actor-a-tf-13missileweapon/typeinfo.cpp": "88b879f4527df0329edb84ca8bd96a24a0b2f4495200cb8e68354dacead85346",
     "sources/w11-actor-a-tf-8gutchunk/host_check.cpp": "724cf31e4215d898f92e5b57949f218862e1ba4299bf8d59cec2c8fd8e13b9c5",
     "sources/w11-actor-a-tf-8gutchunk/typeinfo.cpp": "7d81814c7f2fba7fdcaa19e91d8d6f0aa90e4f6365a317cedbfd34945cc79352",
+    "sources/w11-actor-b-clone-10projectile/clone.cpp": "e067c14ab5c8dd0dc2dbe3a8d19bab7107fb2eef12ac2f1e781af6589d10e633",
+    "sources/w11-actor-b-clone-10projectile/host_check.cpp": "519085f997807940f8e5defbb3ec58cfde77d302a2a19421aba882dc2bc15aef",
+    "sources/w11-actor-b-clone-12recalleffect/clone.cpp": "6c7e43dcef9e7edb72c0fb9981edb9ece240b8d695ef81e585002502fba6312c",
+    "sources/w11-actor-b-clone-12recalleffect/host_check.cpp": "56a69f7af23d912c2b47aa6ad3666034a304b930cedf16260f9f148e9717decb",
+    "sources/w11-actor-b-clone-6phprop/clone.cpp": "0f6f904409d44cdd53e5a79dca30102e3cf53e9699f7097328380400d2ad1da8",
+    "sources/w11-actor-b-clone-6phprop/host_check.cpp": "baea9e553afd8a75135117c1c8b9c4cfea4f097e0ca6c8963659b60865a238df",
+    "sources/w11-actor-b-clone-6player/clone.cpp": "e5b7a89f152594b307b17292c4550114298d71891cc7b40b05ae36a312d1f306",
+    "sources/w11-actor-b-clone-6player/host_check.cpp": "efb5232e0aa4b8c374c3c5a0360535fbc987f53f88ead0461434517c99fd1176",
+    "sources/w11-actor-b-collision-6player/host_check.cpp": "bef9780f99b0c05f8e7c9b8951ea35a15cec2bf195bed1dac1427b646b63dfce",
+    "sources/w11-actor-b-collision-6player/msg_collision.cpp": "6d1e3494c74f8730a8db7a5265d2b2fc54aa79f9f7b3dd0d93cbdb6e6c4db11e",
+    "sources/w11-actor-b-common/access.hpp": "e43f0f5c38b5fcd409e77c90ad58a68bd5c197589c38a2101d8974a3d9e02ed0",
+    "sources/w11-actor-b-draw-12recalleffect/host_check.cpp": "d9bc7b423dc7534676d4047e706b327c12443bd5f08fe0900486d83a546c5192",
+    "sources/w11-actor-b-draw-12recalleffect/msg_draw.cpp": "f59ed758e029f426507ff2360fe262f27565092c79d07e45b980ce83c23a27d9",
+    "sources/w11-actor-b-draw-6phprop/host_check.cpp": "b408e762b862b34b65644c334061dc9fe60aef6451f9b84437886e18bc2a7b3f",
+    "sources/w11-actor-b-draw-6phprop/msg_draw.cpp": "5cd3e3f232171773f6755c558e00351053053507ce76c73ff489bc8f0ed00331",
+    "sources/w11-actor-b-draw-6player/host_check.cpp": "bd399b6648bb9c5d4debe30ca78813d60c4377cd3a634a0ec0792f3d45ac0088",
+    "sources/w11-actor-b-draw-6player/msg_draw.cpp": "d39d67fef96488eac6be541290dd39e41b88fc7ca9eae2ee2629ce6ca7e82523",
+    "sources/w11-actor-b-draw-attachments-6player/draw_attachments.cpp": "00f6e4402fc25276eecec880f78f1b294f0b26bb7bcebbe55ae19d54166d5f8f",
+    "sources/w11-actor-b-draw-attachments-6player/host_check.cpp": "07de5b4d538054f4328e5e31507f5ab12c0be8806a7f8d6fb83aec662188d16a",
+    "sources/w11-actor-b-draw-effects-6player/host_check.cpp": "de5db82a7ef0b589dbc1b95c8be3d947741a070ec331aeb974f6523bb37ec6a5",
+    "sources/w11-actor-b-draw-effects-6player/weapon_effects.cpp": "6932f90960a0284dda303115579f2a3b28a06713563a02020c428ae91e11453d",
+    "sources/w11-actor-b-dtor-10projectile/dtor.cpp": "060cca5a2b3cc86f79bd92cbd43d5cccf77bca2ee6a4dd8f2c825c23fa9ec9a3",
+    "sources/w11-actor-b-dtor-10projectile/host_check.cpp": "e80ae8c994c2c8ebaa8f30c920b790bdb08d979a63f112b27ac798ae66a0a3a5",
+    "sources/w11-actor-b-dtor-12recalleffect/dtor.cpp": "ebb4bcbb7d8f81f338191c0526a24bd221a2bc3e6796eb0d3d0bd45a55edec5d",
+    "sources/w11-actor-b-dtor-12recalleffect/host_check.cpp": "c93e7dbd0a3315b7c08bb1129386c8bc931e3606a64d5144b518e20cc4df67f2",
+    "sources/w11-actor-b-dtor-6phprop/dtor.cpp": "829611a7a20109175f7d2e257cc8df7ed7f5c2c25865f30695a4bbfa21aba2b2",
+    "sources/w11-actor-b-dtor-6phprop/host_check.cpp": "b9615761671753edb32332de6e8614587f7a2add38636e0dc3efb0cf03b389db",
+    "sources/w11-actor-b-dtor-6player/dtor.cpp": "917a1e3e6124805382e420f47c8640484b4493bf619f57b61b17ea4ac5644c79",
+    "sources/w11-actor-b-dtor-6player/host_check.cpp": "8c7ccf92a5f320d8f9fb3126a54ddcd7383366aad1f09e14155cfb3eaff45aed",
+    "sources/w11-actor-b-dtor-6sparks/dtor.cpp": "a189ba1053b0a41286029bf6205eebdd50f960eaabf4b8fdc6524c6c304fd601",
+    "sources/w11-actor-b-dtor-6sparks/host_check.cpp": "b8af6302c70a91415dd0226d53bb15a3198cccc589eb228bc29df69c80f353ba",
+    "sources/w11-actor-b-find-commander-3orc/find_commander.cpp": "08ca892cba7130979a8da4874444b129f1b3251f05072d411121c23976543e0e",
+    "sources/w11-actor-b-find-commander-3orc/host_check.cpp": "b777dd212e3942cc47c602e67c66ed1726e190af2b061ee5c87519c9dd25b459",
+    "sources/w11-actor-b-get-model-6player/get_model.cpp": "995be1a0a3d21d3095f57d199f75c53583c22a1a004690a377958ddd582672b3",
+    "sources/w11-actor-b-get-model-6player/host_check.cpp": "2db0399a650519906f37f17de621238d3090b2de9475cbcd79953298300d9983",
+    "sources/w11-actor-b-get-poke-name-6phprop/host_check.cpp": "1e9bd9d18394731510516e4dd988e1cb3ef2781f73f5c8290c305f12f5170c6e",
+    "sources/w11-actor-b-get-poke-name-6phprop/msg_get_poke_name.cpp": "e8644ad5b5e7d4955d19e07735b849a62a27f36bd03a8c412b967c4dbb0fc029",
+    "sources/w11-actor-b-hurt-6player/host_check.cpp": "249eff3eb723e8098ae3b4ce306e4f9fb6894b6a66cfc423607246cb9542fdeb",
+    "sources/w11-actor-b-hurt-6player/msg_hurt.cpp": "1a41fa3fc4552abf0d7dbd18ec741a23124a07f5499f673b16668de144f933b4",
+    "sources/w11-actor-b-init-4prop/host_check.cpp": "401ab1a0a94d166e77d5873fd1e66e4ad5be64d34f2194001e95f351d0b9034c",
+    "sources/w11-actor-b-init-4prop/init.cpp": "ee5df90bf14a7944861ef60011cfef26ed18fea5b914f49b2249db8ccdb22390",
+    "sources/w11-actor-b-init-type-3orc/host_check.cpp": "fa9224be85be269284f3c91514c4906314d02c24b2e41d9e290f339170b6fcda",
+    "sources/w11-actor-b-init-type-3orc/init_type.cpp": "8651acfca7786f9de781f0af35a92a513deea8e8dfd103d131e42bd81faf330b",
+    "sources/w11-actor-b-is-enemy-6player/host_check.cpp": "4bf57c31cffd28f7543f816a0974894ff37beb467bef9a5b6dfbd023b6f2ec8d",
+    "sources/w11-actor-b-is-enemy-6player/is_enemy.cpp": "deecae678315a068899f82ba6d9ecad2397909afe75e613c8c4470b1cfbaa122",
+    "sources/w11-actor-b-join-commander-3orc/host_check.cpp": "7fe7c10363ceb5aadd11eeea9ed83f1473d9e9a78aacbd0ccd2fa06adb30ef3a",
+    "sources/w11-actor-b-join-commander-3orc/join_commander.cpp": "45056f09c60871e2ef742a88c516b4bc3a3bd440b62e88e7e010160c4a3cfc37",
+    "sources/w11-actor-b-leave-commander-3orc/host_check.cpp": "7ccf357586d8383354be726ded88924688893528ac0ee5ca00ea216e8062fec8",
+    "sources/w11-actor-b-leave-commander-3orc/leave_commander.cpp": "47424aed7b4132da02479a5939e5a477b02d0066014998a964438b1a36e494d8",
+    "sources/w11-actor-b-lose-body-part-8scorpion/host_check.cpp": "22b9f4d76e45013865bb8463e59d07fdfebc57cb4693d0e2a9f2f42a117a915b",
+    "sources/w11-actor-b-lose-body-part-8scorpion/lose_body_part.cpp": "dccf534637701bd91ad0f292df778744aee083ec8effaaa1b3a82b47aa3dcbd1",
+    "sources/w11-actor-b-poke-6phprop/host_check.cpp": "b5cbb9328fc22f02a461d1a8e6962113fa291dc5ce3c4451b105538868108df2",
+    "sources/w11-actor-b-poke-6phprop/msg_poke.cpp": "562744d82b2f968b41718cee729ff18898294165829f5559cd8be5350b0f6f5f",
+    "sources/w11-actor-b-run-12recalleffect/host_check.cpp": "042bca1d5ef87cef1321bbf5dd0654b47b09f93728d92811fdbb4d2492e7aa3c",
+    "sources/w11-actor-b-run-12recalleffect/msg_run.cpp": "dce5dc282317c90e102bf5e7811a76e364008f386d94be5782f0b80ee017768c",
+    "sources/w11-actor-b-run-6phprop/host_check.cpp": "f2f60fc9db2a88206c52c3e2cb38d383d9c6b4c8050d266095889c9ca5d8ca94",
+    "sources/w11-actor-b-run-6phprop/msg_run.cpp": "22c92f272402f473b3dffe62675c150a3d7b7c4b758cbbe57e68ffd46acbf159",
+    "sources/w11-actor-b-save-7shooter/host_check.cpp": "5c15c1f300577ada33a428d739ee214852de13a9a804e0fdd55984f16a845f69",
+    "sources/w11-actor-b-save-7shooter/msg_save.cpp": "fa67b4364b6612d51b6658b00d19904f5d4c2f4c59ba7cef7b05530058e98539",
+    "sources/w11-actor-b-set-active-chunks-6player/host_check.cpp": "6815d58d4592a993d257cd789c143098f4bab69bf34557de09c1d742db5db6ba",
+    "sources/w11-actor-b-set-active-chunks-6player/set_active_chunks.cpp": "57b5e35d4a2018841c625be6de0a51df8516e1d8438d53c9d9efd52797707b82",
+    "sources/w11-actor-b-set-on-fire-6phprop/host_check.cpp": "96f4f7f75419511d1accbc54dd7f3ca7c220109bb4127b51ebe60629eb2dd850",
+    "sources/w11-actor-b-set-on-fire-6phprop/set_on_fire.cpp": "cf97163e5d1efb147c34bd05ef4461cabf3a5fbcfe3063a192609fdb7d468d38",
+    "sources/w11-actor-b-set-state-6player/host_check.cpp": "ce480c028c9defe748e4c567b0a43349593a290e16a6f4324170b971bf4a0fad",
+    "sources/w11-actor-b-set-state-6player/set_state.cpp": "986218707a347047efc25b4f2baa869d0d323bb5cc123d973374b1f89c9c4b7c",
+    "sources/w11-actor-b-set-weapon-3orc/host_check.cpp": "5aab1392393116951368113601e70c8df1c7468701983dd880bb4d2a78e41644",
+    "sources/w11-actor-b-set-weapon-3orc/set_weapon.cpp": "b7e19d082a07295e8ced8ba7603bb6a0af86441cd44f7b1e718ec09d2e6383cb",
+    "sources/w11-actor-b-stun-6player/host_check.cpp": "7ee496b5fecad3135afde714144d4858ffba6ba94ae20ecf91e64c53f4e9a0c0",
+    "sources/w11-actor-b-stun-6player/stun.cpp": "337c26e06f4ea718cf1934199efb29471b170e4f699c44579017c748a3e10990",
+    "sources/w11-actor-b-tf-10projectile/host_check.cpp": "8c1e2c8fb5d93bc6a28805409314e65222588d3d0aa42e50d18a14992ea75541",
+    "sources/w11-actor-b-tf-10projectile/typeinfo.cpp": "c859486575c6f8ed861ad927d2b6998ba6f003eabd8871a61d62a17230f5d29a",
+    "sources/w11-actor-b-tf-12recalleffect/host_check.cpp": "4bb7d7fbc47d4b590c58ee0e17156df9c212c6cd779b308e35048a5c4d5adead",
+    "sources/w11-actor-b-tf-12recalleffect/typeinfo.cpp": "5b7094c4c503faecb74ebf2cf4195bbb9c946015c43c84e050ca14e6a3773130",
+    "sources/w11-actor-b-tf-6player/host_check.cpp": "9585c16ad65379af3e93b43d0221f970a63d65372b45f47c8bda1e495c1eac3f",
+    "sources/w11-actor-b-tf-6player/typeinfo.cpp": "92aacdd31176f2dbc5047b4f942e538462c8aa739b92fce393a52a6e616b3bd6",
     "sources/w11-crt-a-args/args.cpp": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
     "sources/w11-crt-a-args/host_check.cpp": "9d288524da727c5c3caecdf6bc9cf711b1607711be7c4176a23b43b8d5651b9f",
     "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
@@ -75010,11 +75603,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5015,
-    "authored_default_inputs": 5013,
+    "selected_inputs": 5052,
+    "authored_default_inputs": 5050,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3807,
-    "compiled_body_bytes_from_accepted_inputs": 1655720,
+    "emitted_function_definitions_including_helpers": 3844,
+    "compiled_body_bytes_from_accepted_inputs": 1674476,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -75027,7 +75620,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4702
+    "package_selected_inputs": 4739
   },
   "startup_implementations": [
     {
@@ -148530,6 +149123,635 @@
       ],
       "host_files": [
         "sources/w11-actor-a-tf-8gutchunk/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-clone-10projectile/clone.cpp",
+      "source_sha256": "e067c14ab5c8dd0dc2dbe3a8d19bab7107fb2eef12ac2f1e781af6589d10e633",
+      "object_sha256": "206847247dcf094d6dbab97456ff603c5db951d6044add32b3e4377c4e76e9d3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "clone__10Projectile"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-clone-10projectile/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-clone-12recalleffect/clone.cpp",
+      "source_sha256": "6c7e43dcef9e7edb72c0fb9981edb9ece240b8d695ef81e585002502fba6312c",
+      "object_sha256": "59ece5756c78e0980f3757c5e08019428bdca0292a2316888ffdae0465d5301a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "clone__12RecallEffect"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-clone-12recalleffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-clone-6phprop/clone.cpp",
+      "source_sha256": "0f6f904409d44cdd53e5a79dca30102e3cf53e9699f7097328380400d2ad1da8",
+      "object_sha256": "276636f5efa1ef86c66e83bcdf8581c437f45c39b335467482c8e323eac7d9fb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 400,
+          "name": "clone__6PhProp"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-clone-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-clone-6player/clone.cpp",
+      "source_sha256": "e5b7a89f152594b307b17292c4550114298d71891cc7b40b05ae36a312d1f306",
+      "object_sha256": "7301eb79d340f580528fd3b624af4ce24df20ae95d7835caa569fe28871d350e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1444,
+          "name": "clone__6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-clone-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-collision-6player/msg_collision.cpp",
+      "source_sha256": "6d1e3494c74f8730a8db7a5265d2b2fc54aa79f9f7b3dd0d93cbdb6e6c4db11e",
+      "object_sha256": "198358773cfff45fec85f1ee5f2fe6d751747a3ad5e58e540dc06d3aa0ec08d7",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "msg_collision__6PlayerP10GameObject"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-collision-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-draw-12recalleffect/msg_draw.cpp",
+      "source_sha256": "f59ed758e029f426507ff2360fe262f27565092c79d07e45b980ce83c23a27d9",
+      "object_sha256": "4a7d112b8dac495912f82938f7eeb41e0a047eeb1d5ed8c9a1c28fe3a39be527",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "msg_draw__12RecallEffect"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-draw-12recalleffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-draw-6phprop/msg_draw.cpp",
+      "source_sha256": "5cd3e3f232171773f6755c558e00351053053507ce76c73ff489bc8f0ed00331",
+      "object_sha256": "93d62f19d38e53aaa4742e768b72fd717da7a5b359546c9735d8fe7bb51c6072",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 448,
+          "name": "msg_draw__6PhProp"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-draw-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-draw-6player/msg_draw.cpp",
+      "source_sha256": "d39d67fef96488eac6be541290dd39e41b88fc7ca9eae2ee2629ce6ca7e82523",
+      "object_sha256": "803bf3147bcb3899bd1faf3d01cd5b56cc6a4ab9b21af794c187f0a7229d26eb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2368,
+          "name": "msg_draw__6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-draw-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-draw-attachments-6player/draw_attachments.cpp",
+      "source_sha256": "00f6e4402fc25276eecec880f78f1b294f0b26bb7bcebbe55ae19d54166d5f8f",
+      "object_sha256": "ddffca0147087ab46be7d949d29b702e1fb43da9a8022f45480d4f88054a217c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2000,
+          "name": "drawAttachments__6PlayerP11_drawRecordf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-draw-attachments-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-draw-effects-6player/weapon_effects.cpp",
+      "source_sha256": "6932f90960a0284dda303115579f2a3b28a06713563a02020c428ae91e11453d",
+      "object_sha256": "24d5f881050962c09ce3ad835ec1a4557c44f5dceb70aa5e8b47be01b836b7a8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 940,
+          "name": "playerDrawWeaponEffects__6Playerf"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-draw-effects-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-dtor-10projectile/dtor.cpp",
+      "source_sha256": "060cca5a2b3cc86f79bd92cbd43d5cccf77bca2ee6a4dd8f2c825c23fa9ec9a3",
+      "object_sha256": "69714969d8f028af0d5abb701914b67ad2ceba672755e83744f0006759c153c0",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_10Projectile"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-dtor-10projectile/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-dtor-12recalleffect/dtor.cpp",
+      "source_sha256": "ebb4bcbb7d8f81f338191c0526a24bd221a2bc3e6796eb0d3d0bd45a55edec5d",
+      "object_sha256": "eedb5779cd264e6c2cb8aa5e0cc7007f4fd9a1295136952b4ef5f623cb8276b6",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_12RecallEffect"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-dtor-12recalleffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-dtor-6phprop/dtor.cpp",
+      "source_sha256": "829611a7a20109175f7d2e257cc8df7ed7f5c2c25865f30695a4bbfa21aba2b2",
+      "object_sha256": "da53709d9a606170f11dbe2e4fe6e367894bde25587be575ec82ea8ff261b0af",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_6PhProp"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-dtor-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-dtor-6player/dtor.cpp",
+      "source_sha256": "917a1e3e6124805382e420f47c8640484b4493bf619f57b61b17ea4ac5644c79",
+      "object_sha256": "de8aabc2199cfb2433233bf7305fc7294761a3a59c6fcba1b46eadc049ac79f3",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "_$_6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-dtor-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-dtor-6sparks/dtor.cpp",
+      "source_sha256": "a189ba1053b0a41286029bf6205eebdd50f960eaabf4b8fdc6524c6c304fd601",
+      "object_sha256": "3af56eb57096ceaa2572941207fc2b1ef9104862033c98d8a7101b630a376e4c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "_$_6Sparks"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-dtor-6sparks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-find-commander-3orc/find_commander.cpp",
+      "source_sha256": "08ca892cba7130979a8da4874444b129f1b3251f05072d411121c23976543e0e",
+      "object_sha256": "6aa07badbf2b3942b94cfffe897cd7d826aef456e754cae08eb76d899815ed9d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 200,
+          "name": "findCommander__3Orc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-find-commander-3orc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-get-model-6player/get_model.cpp",
+      "source_sha256": "995be1a0a3d21d3095f57d199f75c53583c22a1a004690a377958ddd582672b3",
+      "object_sha256": "fc73f0572cdcfac8699c364aeed1dbaa4a40713cbec037070aabc52364d2acaa",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "getModel__6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-get-model-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-get-poke-name-6phprop/msg_get_poke_name.cpp",
+      "source_sha256": "e8644ad5b5e7d4955d19e07735b849a62a27f36bd03a8c412b967c4dbb0fc029",
+      "object_sha256": "97b1dab1de8a2164d94f7c005b1ce7ae1534ecd0738ea0b83f1230f0a5a2a635",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "msg_getPokeName__6PhPropPUsi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-get-poke-name-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-hurt-6player/msg_hurt.cpp",
+      "source_sha256": "1a41fa3fc4552abf0d7dbd18ec741a23124a07f5499f673b16668de144f933b4",
+      "object_sha256": "a9b0977f59a7fae5e8e34b3c7b5a591b66770cc35a0b158603814452c144d9c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1204,
+          "name": "msg_hurt__6PlayerfP10GameObjecti"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-hurt-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-init-4prop/init.cpp",
+      "source_sha256": "ee5df90bf14a7944861ef60011cfef26ed18fea5b914f49b2249db8ccdb22390",
+      "object_sha256": "34485ad084f9378e5deec3c8d071f363cad30f7df334f3f6d360f389057eebfe",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1088,
+          "name": "init__4Propi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-init-4prop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-init-type-3orc/init_type.cpp",
+      "source_sha256": "8651acfca7786f9de781f0af35a92a513deea8e8dfd103d131e42bd81faf330b",
+      "object_sha256": "a8bac5e8f77dcdf41f003343d91c140165c1e984adbfe70b4c6ec809ae45b4d8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1612,
+          "name": "initType__3Orcb"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-init-type-3orc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-is-enemy-6player/is_enemy.cpp",
+      "source_sha256": "deecae678315a068899f82ba6d9ecad2397909afe75e613c8c4470b1cfbaa122",
+      "object_sha256": "251c01a171d0ccfccf7c9740a3bcae0e99e8675f19d81920eaf34b8bff4534c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "isEnemy__6PlayerP10GameObject"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-is-enemy-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-join-commander-3orc/join_commander.cpp",
+      "source_sha256": "45056f09c60871e2ef742a88c516b4bc3a3bd440b62e88e7e010160c4a3cfc37",
+      "object_sha256": "529678f66fb7785524446b90fd212ed213fb0738f193e5ad80201d390c8adc8f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "joinCommander__3Orc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-join-commander-3orc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-leave-commander-3orc/leave_commander.cpp",
+      "source_sha256": "47424aed7b4132da02479a5939e5a477b02d0066014998a964438b1a36e494d8",
+      "object_sha256": "b13b42f6cd5ef7bf350103df68ab298674799276916768ff1fdca478f944072b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "leaveCommander__3Orc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-leave-commander-3orc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-lose-body-part-8scorpion/lose_body_part.cpp",
+      "source_sha256": "dccf534637701bd91ad0f292df778744aee083ec8effaaa1b3a82b47aa3dcbd1",
+      "object_sha256": "a6bd34e464f0e2f411618e950ee05da61293c974c79f72c5c8ce57a8184fd123",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 252,
+          "name": "loseBodyPart__8Scorpioni"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-lose-body-part-8scorpion/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-poke-6phprop/msg_poke.cpp",
+      "source_sha256": "562744d82b2f968b41718cee729ff18898294165829f5559cd8be5350b0f6f5f",
+      "object_sha256": "db1017aa9ae482630f5eb89ecfac7a5e48d289372d27da8db1a0cb2dfa07eda4",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 236,
+          "name": "msg_poke__6PhPropi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-poke-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-run-12recalleffect/msg_run.cpp",
+      "source_sha256": "dce5dc282317c90e102bf5e7811a76e364008f386d94be5782f0b80ee017768c",
+      "object_sha256": "60610de2a37107e44e52e279fd1bcb71008770a68ab8b3c7d691663655e0bd3e",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "msg_run__12RecallEffect"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-run-12recalleffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-run-6phprop/msg_run.cpp",
+      "source_sha256": "22c92f272402f473b3dffe62675c150a3d7b7c4b758cbbe57e68ffd46acbf159",
+      "object_sha256": "8f0d334cf6c3a22507c6074e0214ef10baf36f6726d48d5135a6ba2da651b7b9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 3644,
+          "name": "msg_run__6PhProp"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-run-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-save-7shooter/msg_save.cpp",
+      "source_sha256": "fa67b4364b6612d51b6658b00d19904f5d4c2f4c59ba7cef7b05530058e98539",
+      "object_sha256": "34394711d4c16805d6fb7346715db37ca282c86f9be7d421b64965df66d6eea8",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "msg_save__7ShooterPc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-save-7shooter/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-set-active-chunks-6player/set_active_chunks.cpp",
+      "source_sha256": "57b5e35d4a2018841c625be6de0a51df8516e1d8438d53c9d9efd52797707b82",
+      "object_sha256": "b33d98080d8590d3ab85d124fed3f4c562f0bd7f1a8822171c1a7839a28eea3d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "setActiveChunks__6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-set-active-chunks-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-set-on-fire-6phprop/set_on_fire.cpp",
+      "source_sha256": "cf97163e5d1efb147c34bd05ef4461cabf3a5fbcfe3063a192609fdb7d468d38",
+      "object_sha256": "5389aa4a5277083b896483ab4a1a43c0621d11c8ef12c40a885d819f6e7ae650",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "setOnFire__6PhPropi"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-set-on-fire-6phprop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-set-state-6player/set_state.cpp",
+      "source_sha256": "986218707a347047efc25b4f2baa869d0d323bb5cc123d973374b1f89c9c4b7c",
+      "object_sha256": "9bbd756ce28cddb37141658b5c1b94fe8e3c9173a7cfa771d5f7a547992b582a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 312,
+          "name": "setState__6Playeri"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-set-state-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-set-weapon-3orc/set_weapon.cpp",
+      "source_sha256": "b7e19d082a07295e8ced8ba7603bb6a0af86441cd44f7b1e718ec09d2e6383cb",
+      "object_sha256": "e1ba457ccf7c0a6c84e7ad171a62caad19523cb60481bf761988f49ca6892c48",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 320,
+          "name": "setWeapon__3Orc"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-set-weapon-3orc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-stun-6player/stun.cpp",
+      "source_sha256": "337c26e06f4ea718cf1934199efb29471b170e4f699c44579017c748a3e10990",
+      "object_sha256": "2a1099f74b0eecab9365ff548f6bbc5ee09b1f603e3e314db3727c510be8f70c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "stun__6Playeri"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-stun-6player/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-tf-10projectile/typeinfo.cpp",
+      "source_sha256": "c859486575c6f8ed861ad927d2b6998ba6f003eabd8871a61d62a17230f5d29a",
+      "object_sha256": "b3612a439d7172fadab41a34419eafe0c11df1ee0fb093b9071e82f76f570682",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf10Projectile"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-tf-10projectile/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-tf-12recalleffect/typeinfo.cpp",
+      "source_sha256": "5b7094c4c503faecb74ebf2cf4195bbb9c946015c43c84e050ca14e6a3773130",
+      "object_sha256": "e345cb003d6aff3d0be12b7072cb6240f77f582a982cd5e9d016b089053b4f85",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf12RecallEffect"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-tf-12recalleffect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w11-actor-b",
+      "source": "sources/w11-actor-b-tf-6player/typeinfo.cpp",
+      "source_sha256": "92aacdd31176f2dbc5047b4f942e538462c8aa739b92fce393a52a6e616b3bd6",
+      "object_sha256": "d6142db12e53472bd40aaad0c871b3aa77c83bbe2a7f4739acaba6d6ab0ce221",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf6Player"
+        }
+      ],
+      "host_files": [
+        "sources/w11-actor-b-tf-6player/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

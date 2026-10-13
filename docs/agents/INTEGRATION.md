@@ -8900,3 +8900,25 @@ Closed: `_$_11FireBomblet`, `_$_13MissileWeapon`, `_$_8GutChunk`, `__tf11FireBom
 
 Opened: `__12ParticlePropG6Point3i`, `__13FireBombletJrP11FireBomblet`, `__6PhPropG6Point3P12_modelHeaderP8_textureliPQ24item11descriptionf`, `__8GutChunkG6Point3sP12_modelHeaderP14AnimationStatePcN25liif`, `__ti10Projectile`, `bounce__11FireBomblet`, `disintoInnoruukParticle`, `fxFlyingFire__FP6Point3T0ffb`, `fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii`, `getDeflectionChance__10SkillDodgei`, `goblinWeaponResourceMap`, `hitParticleDust2`, `matMul__FP8Matrix33N20`, `matMul__FP8Matrix34P8Matrix33T0`, `matScale__FP8Matrix34fff`, `matTranspose__FP8Matrix33T0`, `move__10ProjectileG6Point3`, `particleBloodDrop`, `particleEctoDrop`, `particleSlimeDrop`, `playerBlockSparks__6Playeri`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `snowParticle1`, `sparkParticle`, `trailParticleFire`, `trailParticleSmoke`
 - 2026-10-13 07:15 CDT — agents/w11-actor-a — 869 unresolved imports
+
+## agents/w11-actor-b
+
+Merged (merge commit, branch tip `9e1f3012`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 37 units, one function body each with fresh
+`input_order` values 5015 through 5052. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5050 authored inputs, 3842 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Closed 38 here against the worker's 37 (one extra name, already a callee of an earlier package, now defined). `msg_run__6Player` (27,496 bytes) was deliberately not attempted by the worker and stays unresolved.
+
+| | |
+|---|---|
+| Before | 869 |
+| After | 846 |
+| Closed | 38 |
+| Opened | 15 |
+
+Closed: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `_$_6Sparks`, `__tf10Projectile`, `__tf12RecallEffect`, `__tf6Player`, `__ti10Projectile`, `clone__10Projectile`, `clone__12RecallEffect`, `clone__6PhProp`, `clone__6Player`, `drawAttachments__6PlayerP11_drawRecordf`, `findCommander__3Orc`, `getModel__6Player`, `initType__3Orcb`, `init__4Propi`, `isEnemy__6PlayerP10GameObject`, `joinCommander__3Orc`, `leaveCommander__3Orc`, `loseBodyPart__8Scorpioni`, `msg_collision__6PlayerP10GameObject`, `msg_draw__12RecallEffect`, `msg_draw__6PhProp`, `msg_draw__6Player`, `msg_getPokeName__6PhPropPUsi`, `msg_hurt__6PlayerfP10GameObjecti`, `msg_poke__6PhPropi`, `msg_run__12RecallEffect`, `msg_run__6PhProp`, `msg_save__7ShooterPc`, `playerDrawWeaponEffects__6Playerf`, `setActiveChunks__6Player`, `setOnFire__6PhPropi`, `setState__6Playeri`, `setWeapon__3Orc`, `stun__6Playeri`
+
+Opened: `__10StaticFireG6Point3fif`, `__8ItemPropG6Point3PQ24item11descriptionP8Matrix34`, `__tf11SpellCharge`, `__tf15SpellHolyShield`, `gameFlags`, `healColor`, `healPulse`, `hitSomething__11SpellChargeP10GameObject`, `inventoryItemCheckSlot__FiPQ24item11description`, `manaAbsorbOnHit__15SpellHolyShield`, `maybeDrawMultiPlayerMarkers__6Player`, `modelGetCollision__FP12_modelHeaderi`, `modelSetAttachmentFlip__Fv`, `playerItemScan__6PlayerP3padi`, `shipOn`
+- 2026-10-13 07:19 CDT — agents/w11-actor-b — 846 unresolved imports
