@@ -5044,6 +5044,44 @@ Opened: `_$_9bad_alloc`, `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`
 `norrath_w9_startup_crt_b_view_485380`, `racePrefix`, `scalbnf`,
 `selectLumpName`, `typeToResource`
 
+## agents/w9-startup-crt-d
+
+Merged as a **partial package**: its notes have only the per-function notes and
+a summary, not the five summary sections, but the tip was 68 minutes old, every
+committed function has a host test, the tool tests pass, and the partial build
+passes. The summary's build-plan list was used to read the 22 units (cross
+checked against the files: same 22), selected with fresh `input_order` values
+2577 through 2598. All 22 host tests build and exit 0 here (22 of 22), including
+the soft-double `dpadd`/`dpsub`/`dpcmp`/`dptofp`/`fptodp` set. The branch also
+added a `blockFree__FPv` alias to the existing
+`block-allocator-lifecycle-build/block_free.cpp`. That file is input 6 of the
+264-input historical prefix, whose record digest `check_source_snapshot.py`
+pins, and the alias would also change the pinned function inventory, so I
+restored the file to its shared-branch contents in a separate commit and did not
+select that alias; `blockFree__FPv` stays open until its owner supplies a
+standalone unit. The worker's per-function compiled sizes (for example `free`
+64, `memmove` 132) come from its own trial and were not used. No game binary or
+disassembly listing was committed. 2095 function bodies, 2597 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1472 |
+| After | 1467 |
+| Closed | 22 |
+| Opened | 17 |
+
+Closed: `amx_FindPublic`, `dpadd`, `dpcmp`, `dpsub`, `dptofp`, `fptodp`, `free`,
+`get_iob`, `gsm_create`, `gsm_option`, `iSetTimerAlarm`, `iWakeupThread`,
+`initEzNetCnf`, `isceSifSendCmd`, `kputchar`, `kputs`, `lgAudClose`,
+`lgKbMInit`, `mceGetInfoApdx`, `memalign`, `memmove`, `new_iob`
+
+Opened: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `KbdMapTable`,
+`__fpcmp_parts_d`, `__make_dp`, `__make_fp`, `__pack_d`, `__unpack_d`,
+`__unpack_f`, `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`,
+`connect_to_iop_server`, `get_time`, `init_ee_timer`,
+`qsort_translate_table`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5399,3 +5437,4 @@ and no startup stage has executed.
 - 2026-10-12 20:37 CDT — `agents/w9-other-b` — 1437 unresolved imports
 - 2026-10-12 20:45 CDT — `agents/runtime-tables` — 1436 unresolved imports
 - 2026-10-12 20:59 CDT — `agents/w9-startup-crt-b` — 1472 unresolved imports
+- 2026-10-12 21:06 CDT — `agents/w9-startup-crt-d` — 1467 unresolved imports
