@@ -5738,6 +5738,48 @@ Opened: `collisionFrame`,
 `worldPrecacheWorld__FP12_worldHeaderP8Matrix34`,
 `worldTransformFrustum__FP8Matrix34`
 
+## agents/w9-hud-inventory-items-a
+
+Merged as a **partial package**: its notes have function, data, "not authored"
+and "End summary" sections but not the five summary sections, and the tip was
+47 minutes old when read. Every selected function has a committed host check,
+the tool tests pass, and the partial build passes. Eighteen of its 19 units were
+selected with fresh `input_order` values 2880 through 2897 (14 function units,
+and data units for boss meter words, HUD words and skill trees that emit no
+function). `appearance-settings` (four local BSS settings: hair style, hair
+colour, beard, skin) was **not** selected because it has no committed check;
+it stays in the snapshot, unselected. The 18 selected units' host checks build
+and exit 0 here (18 of 18). No game binary or disassembly listing was
+committed. 2336 function bodies, 2896 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1544 |
+| After | 1525 |
+| Closed | 31 |
+| Opened | 12 |
+
+Closed: `ClericSkillTree`, `RangerSkillTree`, `ShadowKnightSkillTree`,
+`WarriorSkillTree`, `WizardSkillTree`, `bossMeterAlpha`, `bossMeterCurrent`,
+`bossMeterMax`,
+`cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture`,
+`cacheLoadCache`, `changeBeard__Fii`, `changeHairColor__Fii`,
+`changeHairStyle__Fii`, `changeSkin__Fii`, `coins`,
+`compareToItem__Q24item11descriptionPQ24item11description`, `countUp`,
+`createRandom__4itemPQ24item11descriptioniiii`, `curFont`,
+`currActivityScore`, `currScorePos`, `drinkPotion__6Playeriiii`,
+`finishFrameCount`, `fontCharAlpha`, `fontPrintWrapCentered__FiiPciiii`,
+`fontPrintWrapCenteredu__FiiPUsiiii`, `gameButtonToIcon__Fi`,
+`gameDifficultyScale__Fv`, `gameTreasureRamp__Fv`, `getBestSlotName__FPc`,
+`getHairAndSkin__Fi`
+
+Opened: `_4item$itemTable`, `beardSetting`, `cacheLoadDelayTime`, `cacheLoadName`,
+`cacheLoadValid`, `eqFind__FPci`,
+`getVifAndTex__FPcT0PP12_modelHeaderPP8_texture`, `hairColorSetting`,
+`hairStyleSetting`, `hudGetFadeIconPos__Fii`,
+`msgInventoryGridDropItem__Fiiciiii`, `skinSetting`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6118,3 +6160,4 @@ and no startup stage has executed.
 - 2026-10-12 21:44 CDT — `agents/w9-animation-object-b` — 1567 unresolved imports
 - 2026-10-12 21:48 CDT — `agents/w9-animation-object-c` — 1564 unresolved imports
 - 2026-10-12 21:53 CDT — `agents/w9-render-math-c` — 1544 unresolved imports
+- 2026-10-12 21:55 CDT — `agents/w9-hud-inventory-items-a` — 1525 unresolved imports

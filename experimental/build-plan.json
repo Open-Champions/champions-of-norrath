@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 2878,
+  "default_authored_inputs": 2896,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3276,6 +3276,24 @@
     "sources/w9-frontend-d-texture-release-cache-buffer/texture_release_cache_buffer.cpp": "c5846332dcd3533af042feb074962c0f6ff762492ff039e4026fc8da0e8ddd68",
     "sources/w9-frontend-d-un-modify-ram-slot-for-net-save/un_modify_ram_slot_for_net_save.cpp": "b16c6211cc52a4bad35369870c18c82db330374f42bb8e1e00966ff6617142c4",
     "sources/w9-frontend-d-undo-browser/undo_browser.cpp": "059b77c8a255f551afb8fc175aaf93c716c4a0be8c7b580182b068711a4c9816",
+    "sources/w9-hud-inventory-items-a-boss-meter-words/boss_meter_words.cpp": "e51ac2b05f19a6386a4cc8e5b6076a0587a23415eaed9f15b709ab61c4eca748",
+    "sources/w9-hud-inventory-items-a-cache-equipment/cache_equipment.cpp": "289bfb030d94894817fe050e3bd5627ff4cb9fec3b5a5d23bbd9e843cc134894",
+    "sources/w9-hud-inventory-items-a-change-beard/change_beard.cpp": "9078e0e4b9c28b7b2d98f867fe5d450fdf7d317fdb9c9bdc53faf4f67d98d2ba",
+    "sources/w9-hud-inventory-items-a-change-hair-color/change_hair_color.cpp": "a0cf995bfdf2640b55e20dd47ec8a67c3bf55d6880c677c9b0a7dfe66e21ce36",
+    "sources/w9-hud-inventory-items-a-change-hair-style/change_hair_style.cpp": "0fbbf7af7f4796f20ae2e22600d20325872d8e1d0e0272fdb887dc2bc994ec24",
+    "sources/w9-hud-inventory-items-a-change-skin/change_skin.cpp": "9d87d1e2bdb2adacf30a7cecbb42306c237a360ce197121c88ac07f95f33e77a",
+    "sources/w9-hud-inventory-items-a-compare-to-item/compare_to_item.cpp": "a96268c9cfdd8c1d8890842e21059941edf0e63cb22dee9ff1215b8fc6f7dbf8",
+    "sources/w9-hud-inventory-items-a-create-random/create_random.cpp": "02e2b7179ea759a7bf301aa5f4edd4522893dc49b5a77ad74f8420c25f6b50e7",
+    "sources/w9-hud-inventory-items-a-drink-potion/drink_potion.cpp": "e3874a1038ce469d011f43e0145d098d77e6f5635d512445941a0e772a855e56",
+    "sources/w9-hud-inventory-items-a-font-print-wrap-centered/font_print_wrap_centered.cpp": "d62f04442a726ccc07016f75a37f1fb4f3b4ec191e815978443e0ba730d02797",
+    "sources/w9-hud-inventory-items-a-font-print-wrap-centeredu/font_print_wrap_centeredu.cpp": "be982e767abcef05f5b5b1563ff1eb98bf84956a75ce11b57e40316ac4078902",
+    "sources/w9-hud-inventory-items-a-game-button-to-icon/game_button_to_icon.cpp": "85874bd1c0fd3d5872193e99745d836b6cdabf0b5882fa8c9d01a2aadafe744f",
+    "sources/w9-hud-inventory-items-a-game-difficulty-scale/game_difficulty_scale.cpp": "8dcc2fb93c66d2470a25909d92229bd8a485b6cb65209d2c239e3ff146ff6ba2",
+    "sources/w9-hud-inventory-items-a-game-treasure-ramp/game_treasure_ramp.cpp": "d223037afbd249306c33e7f1e98e59b8635ba950b87a50ec571ee99bd318ae9c",
+    "sources/w9-hud-inventory-items-a-get-best-slot-name/get_best_slot_name.cpp": "221e2ada54d0973debeb3a2c6cc6bf16087c6f33ef85550ce8423899b2f8d889",
+    "sources/w9-hud-inventory-items-a-get-hair-and-skin/get_hair_and_skin.cpp": "f36a37878100527c13f702b1edf34282ab26bd7440461c523f1f56ac61fe88f2",
+    "sources/w9-hud-inventory-items-a-hud-words/hud_words.cpp": "420ab01b094779a1f0c1fced4e4ae3db0542d81ce1ca39d4c774e6c3414938f2",
+    "sources/w9-hud-inventory-items-a-skill-trees/skill_trees.cpp": "fd7867d147037634aa54bab735a7709659c79c5089eb06d6a317040b62141ff8",
     "sources/w9-hud-inventory-items-b-data-goldalpha/data_goldAlpha.cpp": "347160415eb40ee0ff12a4890e53351f056f5bab41b3e06588b7adb2e71207ae",
     "sources/w9-hud-inventory-items-b-data-goldnumber/data_goldNumber.cpp": "d90af906f6961d97a9a7ad72f10c38759b8e2dbeec2820e8e4dccce88b4d8020",
     "sources/w9-hud-inventory-items-b-data-hermdeltascale/data_hermDeltaScale.cpp": "8d58f6ba1e456551e60fd0c619e830d924dce1b8f505b99bbab5b8ac2f548159",
@@ -41395,6 +41413,281 @@
           "compiled_body_bytes": 440
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2880,
+      "kind": "independently_authored_source",
+      "object_name": "boss_meter_words.o",
+      "profile": "authored_cpp",
+      "sha256": "e51ac2b05f19a6386a4cc8e5b6076a0587a23415eaed9f15b709ab61c4eca748",
+      "source": "sources/w9-hud-inventory-items-a-boss-meter-words/boss_meter_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2881,
+      "kind": "independently_authored_source",
+      "object_name": "cache_equipment.o",
+      "profile": "authored_cpp",
+      "sha256": "289bfb030d94894817fe050e3bd5627ff4cb9fec3b5a5d23bbd9e843cc134894",
+      "source": "sources/w9-hud-inventory-items-a-cache-equipment/cache_equipment.cpp",
+      "emitted_functions": [
+        {
+          "name": "cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture",
+          "compiled_body_bytes": 724
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2882,
+      "kind": "independently_authored_source",
+      "object_name": "change_beard.o",
+      "profile": "authored_cpp",
+      "sha256": "9078e0e4b9c28b7b2d98f867fe5d450fdf7d317fdb9c9bdc53faf4f67d98d2ba",
+      "source": "sources/w9-hud-inventory-items-a-change-beard/change_beard.cpp",
+      "emitted_functions": [
+        {
+          "name": "changeBeard__Fii",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2883,
+      "kind": "independently_authored_source",
+      "object_name": "change_hair_color.o",
+      "profile": "authored_cpp",
+      "sha256": "a0cf995bfdf2640b55e20dd47ec8a67c3bf55d6880c677c9b0a7dfe66e21ce36",
+      "source": "sources/w9-hud-inventory-items-a-change-hair-color/change_hair_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "changeHairColor__Fii",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2884,
+      "kind": "independently_authored_source",
+      "object_name": "change_hair_style.o",
+      "profile": "authored_cpp",
+      "sha256": "0fbbf7af7f4796f20ae2e22600d20325872d8e1d0e0272fdb887dc2bc994ec24",
+      "source": "sources/w9-hud-inventory-items-a-change-hair-style/change_hair_style.cpp",
+      "emitted_functions": [
+        {
+          "name": "changeHairStyle__Fii",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2885,
+      "kind": "independently_authored_source",
+      "object_name": "change_skin.o",
+      "profile": "authored_cpp",
+      "sha256": "9d87d1e2bdb2adacf30a7cecbb42306c237a360ce197121c88ac07f95f33e77a",
+      "source": "sources/w9-hud-inventory-items-a-change-skin/change_skin.cpp",
+      "emitted_functions": [
+        {
+          "name": "changeSkin__Fii",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2886,
+      "kind": "independently_authored_source",
+      "object_name": "compare_to_item.o",
+      "profile": "authored_cpp",
+      "sha256": "a96268c9cfdd8c1d8890842e21059941edf0e63cb22dee9ff1215b8fc6f7dbf8",
+      "source": "sources/w9-hud-inventory-items-a-compare-to-item/compare_to_item.cpp",
+      "emitted_functions": [
+        {
+          "name": "compareToItem__Q24item11descriptionPQ24item11description",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2887,
+      "kind": "independently_authored_source",
+      "object_name": "create_random.o",
+      "profile": "authored_cpp",
+      "sha256": "02e2b7179ea759a7bf301aa5f4edd4522893dc49b5a77ad74f8420c25f6b50e7",
+      "source": "sources/w9-hud-inventory-items-a-create-random/create_random.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL15optionFromValueR11Descriptionif.constprop.0",
+          "compiled_body_bytes": 252
+        },
+        {
+          "name": "_ZL8eligibleRK7ItemRowiiiiii",
+          "compiled_body_bytes": 672
+        },
+        {
+          "name": "createRandom__4itemPQ24item11descriptioniiii",
+          "compiled_body_bytes": 3172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2888,
+      "kind": "independently_authored_source",
+      "object_name": "drink_potion.o",
+      "profile": "authored_cpp",
+      "sha256": "e3874a1038ce469d011f43e0145d098d77e6f5635d512445941a0e772a855e56",
+      "source": "sources/w9-hud-inventory-items-a-drink-potion/drink_potion.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL11findPotionsPhPKPKcPi",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "_ZL11drinkChosenPhS_iiii",
+          "compiled_body_bytes": 404
+        },
+        {
+          "name": "_ZL10finishListPhi",
+          "compiled_body_bytes": 148
+        },
+        {
+          "name": "drinkPotion__6Playeriiii",
+          "compiled_body_bytes": 1384
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2889,
+      "kind": "independently_authored_source",
+      "object_name": "font_print_wrap_centered.o",
+      "profile": "authored_cpp",
+      "sha256": "d62f04442a726ccc07016f75a37f1fb4f3b4ec191e815978443e0ba730d02797",
+      "source": "sources/w9-hud-inventory-items-a-font-print-wrap-centered/font_print_wrap_centered.cpp",
+      "emitted_functions": [
+        {
+          "name": "fontPrintWrapCentered__FiiPciiii",
+          "compiled_body_bytes": 688
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2890,
+      "kind": "independently_authored_source",
+      "object_name": "font_print_wrap_centeredu.o",
+      "profile": "authored_cpp",
+      "sha256": "be982e767abcef05f5b5b1563ff1eb98bf84956a75ce11b57e40316ac4078902",
+      "source": "sources/w9-hud-inventory-items-a-font-print-wrap-centeredu/font_print_wrap_centeredu.cpp",
+      "emitted_functions": [
+        {
+          "name": "fontPrintWrapCenteredu__FiiPUsiiii",
+          "compiled_body_bytes": 680
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2891,
+      "kind": "independently_authored_source",
+      "object_name": "game_button_to_icon.o",
+      "profile": "authored_cpp",
+      "sha256": "85874bd1c0fd3d5872193e99745d836b6cdabf0b5882fa8c9d01a2aadafe744f",
+      "source": "sources/w9-hud-inventory-items-a-game-button-to-icon/game_button_to_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameButtonToIcon__Fi",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2892,
+      "kind": "independently_authored_source",
+      "object_name": "game_difficulty_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "8dcc2fb93c66d2470a25909d92229bd8a485b6cb65209d2c239e3ff146ff6ba2",
+      "source": "sources/w9-hud-inventory-items-a-game-difficulty-scale/game_difficulty_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameDifficultyScale__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2893,
+      "kind": "independently_authored_source",
+      "object_name": "game_treasure_ramp.o",
+      "profile": "authored_cpp",
+      "sha256": "d223037afbd249306c33e7f1e98e59b8635ba950b87a50ec571ee99bd318ae9c",
+      "source": "sources/w9-hud-inventory-items-a-game-treasure-ramp/game_treasure_ramp.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameTreasureRamp__Fv",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2894,
+      "kind": "independently_authored_source",
+      "object_name": "get_best_slot_name.o",
+      "profile": "authored_cpp",
+      "sha256": "221e2ada54d0973debeb3a2c6cc6bf16087c6f33ef85550ce8423899b2f8d889",
+      "source": "sources/w9-hud-inventory-items-a-get-best-slot-name/get_best_slot_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "getBestSlotName__FPc",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2895,
+      "kind": "independently_authored_source",
+      "object_name": "get_hair_and_skin.o",
+      "profile": "authored_cpp",
+      "sha256": "f36a37878100527c13f702b1edf34282ab26bd7440461c523f1f56ac61fe88f2",
+      "source": "sources/w9-hud-inventory-items-a-get-hair-and-skin/get_hair_and_skin.cpp",
+      "emitted_functions": [
+        {
+          "name": "getHairAndSkin__Fi",
+          "compiled_body_bytes": 992
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 2896,
+      "kind": "independently_authored_source",
+      "object_name": "hud_words.o",
+      "profile": "authored_cpp",
+      "sha256": "420ab01b094779a1f0c1fced4e4ae3db0542d81ce1ca39d4c774e6c3414938f2",
+      "source": "sources/w9-hud-inventory-items-a-hud-words/hud_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 2897,
+      "kind": "independently_authored_source",
+      "object_name": "skill_trees.o",
+      "profile": "authored_cpp",
+      "sha256": "fd7867d147037634aa54bab735a7709659c79c5089eb06d6a317040b62141ff8",
+      "source": "sources/w9-hud-inventory-items-a-skill-trees/skill_trees.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -41494,7 +41787,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "209b8d503448ed7cfc645829c76ceb6949541817fe8bcd6b15b4f1f0b0e30160",
+  "snapshot_sha256": "e8d2184865857c5cbdc26a1d039b513cdda88b742a23f9fff07492dec6454b5d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
