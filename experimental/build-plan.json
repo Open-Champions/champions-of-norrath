@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5554,
+  "default_authored_inputs": 5575,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4349,6 +4349,27 @@
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
     "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
     "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
+    "sources/w13-m-startup-data-b-cb-poff-gp-span/cb_poff_gp_span.cpp": "7c320daaab41aeb13e6e15d11f634e681dbcd80b8375dc64c4869051b702974f",
+    "sources/w13-m-startup-data-b-ee-timer-words/ee_timer_words.cpp": "08e8270915a9536c02f18cbfc6218009b107a7f4bba17ee17aa89cc12987cf02",
+    "sources/w13-m-startup-data-b-sif-overlay-buffers/sif_overlay_buffers.cpp": "c075f0f33342b68099fb89cbd9d675cc98377a114b93fe6a1478999a6a50907f",
+    "sources/w13-m-startup-data-b-vt-firebomblet/vt_firebomblet.cpp": "75825b601adfeda6e9c5a95637032f021adb707dfc7bd56cc7b7de04d50e2d9c",
+    "sources/w13-m-startup-data-b-vt-skeleton/vt_skeleton.cpp": "76508e88033ee62c6c167600e165690a54665c17cb2134e0fe98d78825d78e00",
+    "sources/w13-m-startup-data-b-vt-spell/vt_spell.cpp": "d3d3af2dcd541e009bf9f2e708b5148d2707ab976e8d310bca37c43593f4b438",
+    "sources/w13-m-startup-data-b-vt-vicsprite/vt_vicsprite.cpp": "afffca27ef0425dbd55897f39615bd7ee63b8d1e9ea206fcedaf15191a2706f4",
+    "sources/w13-m-startup-data-b-vt-vieffectvolume/vt_vieffectvolume.cpp": "f048fe599c2012ed703ef4f36392aeb02883dc421c629a89ceac9ab62b264019",
+    "sources/w13-m-startup-data-b-vt-viflora/vt_viflora.cpp": "8bfa47995f060f3f5c5fd9d91cbf5714322d9e1d34f77834c6dfe001bddda3c6",
+    "sources/w13-m-startup-data-b-vt-vigroup/vt_vigroup.cpp": "8e0e0e1623251f5fd348830fd250d1fe0b02ebd893f4557fd5741603e59f18e9",
+    "sources/w13-m-startup-data-b-vt-vihsprite/vt_vihsprite.cpp": "f490ba6a9ff99536c431dcc4e85ce1cf7fc3478c2b0052a266025ccfb55ba203",
+    "sources/w13-m-startup-data-b-vt-vilod/vt_vilod.cpp": "786c805fe90e98dcd59e84eb81eb43e6a7d67c22bd6582e92ab0f64c1d3774a6",
+    "sources/w13-m-startup-data-b-vt-viname/vt_viname.cpp": "6f71e9856f43ea1162c3e93d395422c1887ceb4d01b3d16264c7292c86dc5359",
+    "sources/w13-m-startup-data-b-vt-viparticle/vt_viparticle.cpp": "71da664b1797d1cbd2a280aa69f8bfc964e165690542cdda5e849ce328df1dc7",
+    "sources/w13-m-startup-data-b-vt-vipoint/vt_vipoint.cpp": "d11aaf102ba02ba83866d859ece49ebc55ac5b692e06863c62624da9994f236b",
+    "sources/w13-m-startup-data-b-vt-vipointlight/vt_vipointlight.cpp": "a6662e161de25245ff3eb87f90bbc62ca7abf2d7498d0e5493308346b96e6e9f",
+    "sources/w13-m-startup-data-b-vt-visimple/vt_visimple.cpp": "00556834ad5072d4f7bc55d032f10af36cd5ca4d90042f715396abf3bcc023bf",
+    "sources/w13-m-startup-data-b-vt-viskin/vt_viskin.cpp": "9998a9e54867773d039b2c5f6e28665af0110658498637e556d22dc57e1e3cfe",
+    "sources/w13-m-startup-data-b-vt-visound/vt_visound.cpp": "2b55877719dd71eebded7a35266174344da4fba6593658d58fa379bd995efaee",
+    "sources/w13-m-startup-data-b-vt-vistreamaudio/vt_vistreamaudio.cpp": "d49b13972ff283e77e079bc25a5e7890f1201f26087b8f8e061d840321f8c188",
+    "sources/w13-m-startup-data-b-vt-weatherfilter/vt_weatherfilter.cpp": "431d2dd4fa1b437d9df8e41e16b14d4662347e347c4169a5c99f67ed5d0c366e",
     "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
     "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
     "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
@@ -81404,6 +81425,216 @@
       "sha256": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
       "source": "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5556,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_cb_poff_gp_span.o",
+      "profile": "authored_cpp",
+      "sha256": "7c320daaab41aeb13e6e15d11f634e681dbcd80b8375dc64c4869051b702974f",
+      "source": "sources/w13-m-startup-data-b-cb-poff-gp-span/cb_poff_gp_span.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5557,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_ee_timer_words.o",
+      "profile": "authored_cpp",
+      "sha256": "08e8270915a9536c02f18cbfc6218009b107a7f4bba17ee17aa89cc12987cf02",
+      "source": "sources/w13-m-startup-data-b-ee-timer-words/ee_timer_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5558,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_sif_overlay_buffers.o",
+      "profile": "authored_cpp",
+      "sha256": "c075f0f33342b68099fb89cbd9d675cc98377a114b93fe6a1478999a6a50907f",
+      "source": "sources/w13-m-startup-data-b-sif-overlay-buffers/sif_overlay_buffers.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5559,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_firebomblet.o",
+      "profile": "authored_cpp",
+      "sha256": "75825b601adfeda6e9c5a95637032f021adb707dfc7bd56cc7b7de04d50e2d9c",
+      "source": "sources/w13-m-startup-data-b-vt-firebomblet/vt_firebomblet.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5560,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_skeleton.o",
+      "profile": "authored_cpp",
+      "sha256": "76508e88033ee62c6c167600e165690a54665c17cb2134e0fe98d78825d78e00",
+      "source": "sources/w13-m-startup-data-b-vt-skeleton/vt_skeleton.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5561,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_spell.o",
+      "profile": "authored_cpp",
+      "sha256": "d3d3af2dcd541e009bf9f2e708b5148d2707ab976e8d310bca37c43593f4b438",
+      "source": "sources/w13-m-startup-data-b-vt-spell/vt_spell.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5562,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vicsprite.o",
+      "profile": "authored_cpp",
+      "sha256": "afffca27ef0425dbd55897f39615bd7ee63b8d1e9ea206fcedaf15191a2706f4",
+      "source": "sources/w13-m-startup-data-b-vt-vicsprite/vt_vicsprite.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5563,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vieffectvolume.o",
+      "profile": "authored_cpp",
+      "sha256": "f048fe599c2012ed703ef4f36392aeb02883dc421c629a89ceac9ab62b264019",
+      "source": "sources/w13-m-startup-data-b-vt-vieffectvolume/vt_vieffectvolume.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5564,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_viflora.o",
+      "profile": "authored_cpp",
+      "sha256": "8bfa47995f060f3f5c5fd9d91cbf5714322d9e1d34f77834c6dfe001bddda3c6",
+      "source": "sources/w13-m-startup-data-b-vt-viflora/vt_viflora.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5565,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vigroup.o",
+      "profile": "authored_cpp",
+      "sha256": "8e0e0e1623251f5fd348830fd250d1fe0b02ebd893f4557fd5741603e59f18e9",
+      "source": "sources/w13-m-startup-data-b-vt-vigroup/vt_vigroup.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5566,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vihsprite.o",
+      "profile": "authored_cpp",
+      "sha256": "f490ba6a9ff99536c431dcc4e85ce1cf7fc3478c2b0052a266025ccfb55ba203",
+      "source": "sources/w13-m-startup-data-b-vt-vihsprite/vt_vihsprite.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5567,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vilod.o",
+      "profile": "authored_cpp",
+      "sha256": "786c805fe90e98dcd59e84eb81eb43e6a7d67c22bd6582e92ab0f64c1d3774a6",
+      "source": "sources/w13-m-startup-data-b-vt-vilod/vt_vilod.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5568,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_viname.o",
+      "profile": "authored_cpp",
+      "sha256": "6f71e9856f43ea1162c3e93d395422c1887ceb4d01b3d16264c7292c86dc5359",
+      "source": "sources/w13-m-startup-data-b-vt-viname/vt_viname.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5569,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_viparticle.o",
+      "profile": "authored_cpp",
+      "sha256": "71da664b1797d1cbd2a280aa69f8bfc964e165690542cdda5e849ce328df1dc7",
+      "source": "sources/w13-m-startup-data-b-vt-viparticle/vt_viparticle.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5570,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vipoint.o",
+      "profile": "authored_cpp",
+      "sha256": "d11aaf102ba02ba83866d859ece49ebc55ac5b692e06863c62624da9994f236b",
+      "source": "sources/w13-m-startup-data-b-vt-vipoint/vt_vipoint.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5571,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vipointlight.o",
+      "profile": "authored_cpp",
+      "sha256": "a6662e161de25245ff3eb87f90bbc62ca7abf2d7498d0e5493308346b96e6e9f",
+      "source": "sources/w13-m-startup-data-b-vt-vipointlight/vt_vipointlight.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5572,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_visimple.o",
+      "profile": "authored_cpp",
+      "sha256": "00556834ad5072d4f7bc55d032f10af36cd5ca4d90042f715396abf3bcc023bf",
+      "source": "sources/w13-m-startup-data-b-vt-visimple/vt_visimple.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5573,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_viskin.o",
+      "profile": "authored_cpp",
+      "sha256": "9998a9e54867773d039b2c5f6e28665af0110658498637e556d22dc57e1e3cfe",
+      "source": "sources/w13-m-startup-data-b-vt-viskin/vt_viskin.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5574,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_visound.o",
+      "profile": "authored_cpp",
+      "sha256": "2b55877719dd71eebded7a35266174344da4fba6593658d58fa379bd995efaee",
+      "source": "sources/w13-m-startup-data-b-vt-visound/vt_visound.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5575,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_vistreamaudio.o",
+      "profile": "authored_cpp",
+      "sha256": "d49b13972ff283e77e079bc25a5e7890f1201f26087b8f8e061d840321f8c188",
+      "source": "sources/w13-m-startup-data-b-vt-vistreamaudio/vt_vistreamaudio.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5576,
+      "kind": "independently_authored_source",
+      "object_name": "w13_m_startup_data_b_vt_weatherfilter.o",
+      "profile": "authored_cpp",
+      "sha256": "431d2dd4fa1b437d9df8e41e16b14d4662347e347c4169a5c99f67ed5d0c366e",
+      "source": "sources/w13-m-startup-data-b-vt-weatherfilter/vt_weatherfilter.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -81503,7 +81734,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f5331150478f9c4619f4ca0f25631f4558e2e669a3415e07a7d10db8ae75dc5d",
+  "snapshot_sha256": "6c7fb892733d81fbabf0b5a37ba836d45d9e3f0636c1ac04c2ad1af59f4777e1",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
