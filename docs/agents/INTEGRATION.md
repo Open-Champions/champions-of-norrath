@@ -5483,6 +5483,127 @@ Opened: `fmodf`, `gameLineGetNextPoint__FP17gameLinePathStateiP6Point3`,
 `objectMoveWithWorldCollision__FP6Point3G6Point3fiT0`,
 `playerPrintPaperDoll__Fi`
 
+## agents/w9-ctors-lantern-a
+
+Merged (the branch notes carry the five summary sections; the tip was 31
+minutes old). Thirty-eight units with fresh `input_order` values 2786 through
+2823: 22 resource maps, 14 virtual tables and two pointer/list tables, all data
+(no function bodies, so the body count stays at 2258). Each unit has a host
+comparison under `views/host/`; the notes' build-plan section lists no plan
+rows, so the units were read from the files. All 38 host comparisons build
+(linked against the unit, no source change) and exit 0 here (38 of 38). The
+count of opened imports is large because each virtual table points at its
+class's slot functions, which are not defined in this package, so every slot
+function becomes an unresolved import; the notes do not claim otherwise. The
+worker's per-object size equality with the original symbol was checked at EE
+compile time by the worker and was not re-measured here. The worker did not
+define the three offsets it lists as blocked (they are interior offsets of
+the `skills` object, not separate objects). No game binary or disassembly
+listing was committed. 2258 function bodies, 2822 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1584 |
+| Closed | 38 |
+| Opened | 144 |
+
+Closed: `norrath_ctors_ant_lantern_view_42ae60`,
+`norrath_ctors_ant_lantern_view_42af70`,
+`norrath_ctors_ant_lantern_view_42b1d0`,
+`norrath_ctors_ant_lantern_view_42b548`,
+`norrath_ctors_ant_lantern_view_42b630`,
+`norrath_ctors_ant_lantern_view_42b870`,
+`norrath_ctors_ant_lantern_view_42b958`,
+`norrath_ctors_ant_lantern_view_42ba00`,
+`norrath_ctors_ant_lantern_view_42bb08`,
+`norrath_ctors_ant_lantern_view_42be08`,
+`norrath_ctors_ant_lantern_view_42beb0`,
+`norrath_ctors_ant_lantern_view_42bf58`,
+`norrath_ctors_ant_lantern_view_42c188`,
+`norrath_ctors_ant_lantern_view_42c308`,
+`norrath_ctors_ant_lantern_view_42c8a0`,
+`norrath_ctors_ant_lantern_view_42cef0`,
+`norrath_ctors_ant_lantern_view_42cfc8`,
+`norrath_ctors_ant_lantern_view_42d200`,
+`norrath_ctors_ant_lantern_view_438a38`,
+`norrath_ctors_ant_lantern_view_438b28`,
+`norrath_ctors_ant_lantern_view_438eb8`,
+`norrath_ctors_ant_lantern_view_4494c0`,
+`norrath_ctors_ant_lantern_view_44a810`,
+`norrath_ctors_ant_lantern_view_44a8a0`,
+`norrath_ctors_ant_lantern_view_44b900`,
+`norrath_ctors_ant_lantern_view_44b9f0`,
+`norrath_ctors_ant_lantern_view_44bae0`,
+`norrath_ctors_ant_lantern_view_44bbd0`,
+`norrath_ctors_ant_lantern_view_44bcc0`,
+`norrath_ctors_ant_lantern_view_44bdb0`,
+`norrath_ctors_ant_lantern_view_44bea0`,
+`norrath_ctors_ant_lantern_view_44bf90`,
+`norrath_ctors_ant_lantern_view_44c080`,
+`norrath_ctors_ant_lantern_view_44c260`,
+`norrath_ctors_ant_lantern_view_44c350`,
+`norrath_ctors_ant_lantern_view_44c440`,
+`norrath_ctors_ant_lantern_view_44c530`,
+`norrath_ctors_ant_lantern_view_44cb98`
+
+Opened: `_$_10BlackWidow`, `_$_10FireBeetle`, `_$_3Ant`, `_$_4Lamp`, `_$_5Chest`,
+`_$_5Ghoul`, `_$_5Gnome`, `_$_6Badger`, `_$_6Goblin`, `_$_7Critter`,
+`_$_7Cyclops`, `_$_7FireFly`, `_$_7Lantern`, `_$_8AntQueen`, `_$_8Froglock`,
+`_$_8JumpGate`, `_$_9Generator`, `__tf10BlackWidow`, `__tf10FireBeetle`,
+`__tf3Ant`, `__tf4Lamp`, `__tf5Chest`, `__tf5Ghoul`, `__tf5Gnome`,
+`__tf6Badger`, `__tf6Goblin`, `__tf7Critter`, `__tf7Cyclops`,
+`__tf7FireFly`, `__tf7Lantern`, `__tf8AntQueen`, `__tf8Froglock`,
+`__tf8JumpGate`, `__tf9Generator`, `clone__10BlackWidow`,
+`clone__10FireBeetle`, `clone__3Ant`, `clone__4Lamp`, `clone__5Chest`,
+`clone__5Ghoul`, `clone__5Gnome`, `clone__6Badger`, `clone__6Goblin`,
+`clone__7Critter`, `clone__7Cyclops`, `clone__7FireFly`, `clone__7Lantern`,
+`clone__8AntQueen`, `clone__8Froglock`, `clone__8JumpGate`,
+`clone__9Generator`, `getMinibossName__6Goblin`,
+`getMinibossName__7Cyclops`, `getModel__7Critter`, `getModel__9Generator`,
+`initMiniboss__6Goblin`, `initMiniboss__7Cyclops`,
+`msg_alert__5GhoulifG6Point3P10GameObject`,
+`msg_alert__6GoblinifG6Point3P10GameObject`,
+`msg_collisionWorld__6GoblinG6Point3`, `msg_collision__5GnomeP10GameObject`,
+`msg_collision__7CritterP10GameObject`, `msg_draw__10BlackWidow`,
+`msg_draw__10FireBeetle`, `msg_draw__3Ant`, `msg_draw__4Lamp`,
+`msg_draw__5Chest`, `msg_draw__5Ghoul`, `msg_draw__5Gnome`,
+`msg_draw__6Badger`, `msg_draw__6Goblin`, `msg_draw__7Critter`,
+`msg_draw__7Cyclops`, `msg_draw__7FireFly`, `msg_draw__7Lantern`,
+`msg_draw__8AntQueen`, `msg_draw__8Froglock`, `msg_draw__8JumpGate`,
+`msg_draw__9Generator`, `msg_getPokeName__5ChestPUsi`,
+`msg_getPokeName__8JumpGatePUsi`, `msg_hurt__7CritterfP10GameObjecti`,
+`msg_hurt__8AntQueenfP10GameObjecti`, `msg_load__3AntPc`,
+`msg_load__5ChestPc`, `msg_load__6GoblinPc`, `msg_load__7CritterPc`,
+`msg_load__7CyclopsPc`, `msg_load__8FroglockPc`, `msg_load__8JumpGatePc`,
+`msg_load__9GeneratorPc`, `msg_moveCollision__10FireBeetlePP10GameObject`,
+`msg_moveCollision__5GnomePP10GameObject`,
+`msg_moveCollision__6BadgerPP10GameObject`,
+`msg_moveCollision__6GoblinPP10GameObject`,
+`msg_moveCollision__7FireFlyPP10GameObject`, `msg_poke__5Chesti`,
+`msg_poke__8JumpGatei`, `msg_run__10BlackWidow`, `msg_run__10FireBeetle`,
+`msg_run__3Ant`, `msg_run__4Lamp`, `msg_run__5Chest`, `msg_run__5Ghoul`,
+`msg_run__5Gnome`, `msg_run__6Badger`, `msg_run__6Goblin`,
+`msg_run__7Critter`, `msg_run__7Cyclops`, `msg_run__7FireFly`,
+`msg_run__7Lantern`, `msg_run__8AntQueen`, `msg_run__8Froglock`,
+`msg_run__8JumpGate`, `msg_run__9Generator`, `msg_save__3AntPc`,
+`msg_save__5ChestPc`, `msg_save__6GoblinPc`, `msg_save__7CritterPc`,
+`msg_save__8FroglockPc`, `msg_save__8JumpGatePc`, `msg_save__9GeneratorPc`,
+`msg_trigger__8AntQueeni`, `msg_trigger__9Generatori`,
+`norrath_ctors_ant_lantern_view_42c760`,
+`norrath_ctors_ant_lantern_view_42c788`,
+`norrath_ctors_ant_lantern_view_42c7b0`,
+`norrath_ctors_ant_lantern_view_42c7d8`,
+`norrath_ctors_ant_lantern_view_42c800`,
+`norrath_ctors_ant_lantern_view_42c828`,
+`norrath_ctors_ant_lantern_view_42c850`,
+`norrath_ctors_ant_lantern_view_42c878`, `setState__10BlackWidowi`,
+`setState__10FireBeetlei`, `setState__3Anti`, `setState__5Ghouli`,
+`setState__5Gnomei`, `setState__6Badgeri`, `setState__6Goblini`,
+`setState__7Cyclopsi`, `setState__7FireFlyi`, `setState__8AntQueeni`,
+`setState__8Froglocki`, `setState__9Generatori`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5847,3 +5968,4 @@ and no startup stage has executed.
 - 2026-10-12 21:31 CDT — `agents/w9-hud-inventory-items-b` — 1523 unresolved imports
 - 2026-10-12 21:34 CDT — `agents/w9-render-math-b` — 1502 unresolved imports
 - 2026-10-12 21:37 CDT — `agents/w9-animation-object-a` — 1478 unresolved imports
+- 2026-10-12 21:40 CDT — `agents/w9-ctors-lantern-a` — 1584 unresolved imports
