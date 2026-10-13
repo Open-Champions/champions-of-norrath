@@ -8965,3 +8965,19 @@ Closed: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationS
 
 Opened: `P_ExtendSwoosh__FiG6Point3T1f`, `P_LightningIsLive__Fi`, `extractRotation__FP4Quat`, `getDynamicLightNumber__FP13PolysetHeader`, `iceSwordParticle`, `lightDisableVolumetricLighting__Fv`, `lightGrid`, `lightSetupAmbientAndDirOnly__FP6PacketG6Point3f`, `lightSetupAmbientOnly__FP6Packet`, `lightSetupNonDirectionalDirectional__FP6Packet`, `lightningSwordParticle`, `makeQuaternion__FP4Quatsfff`, `modelDrawCharacter__FP6PacketP12_modelHeaderli`, `modelGetWeaponTrailPos__FP12_modelHeaderP6Point3T1`, `newFlameSwordParticle1`, `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2`, `particleWeaponBlood`, `particleWeaponEcto`, `particleWeaponSlime`, `quatTransform__FP6Point3P4QuatT0`, `smoothPatch__FP12_worldHeaderP16WaterPolysetData`
 - 2026-10-13 07:28 CDT — agents/w11-rend-a — 827 unresolved imports
+
+## Not merged: agents/w11-creature-a (and standing rejections)
+
+Rejected at tip `a91fc08f` (over an hour old; notes with all five summary sections). Its 20 units
+have no committed check of any kind: the diff holds only sources, one shared header
+(`w11-creature-a-common/words.hpp`) and the notes file. The only evidence is a private R5900
+interpreter comparison outside git, which a reviewer cannot repeat, so no committed function has a
+test that could fail. Not merged, nothing selected. The owner can add per-function host checks and
+push again.
+
+The other unmerged branches are at the tips recorded in their earlier entries, so those rejections
+stand: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w8-spell-static-init-b`
+(`ed20fab5`), `w9-render-math-a` (`adff0bdc`, one of 26 units has a check), `w11-vi-misc-a`
+(`9549e91d`) and `w11-vi-render-b` (`dc3d80c6`). `codex/norrath-runtime-binding` and
+`integration/wave` are not worker packages and stay with their owners.
+- 2026-10-13 07:28 CDT — rejection notes (creature-a), nothing merged — 827 unresolved imports
