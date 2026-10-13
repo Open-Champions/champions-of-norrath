@@ -18,7 +18,7 @@ namespace w13scb {
 
 inline unsigned char* from_word(unsigned value) {
 #if defined(W13_SKILL_CAST_B_HOST)
-    return w13_skill_cast_b_host_base + value;
+    return value ? w13_skill_cast_b_host_base + value : nullptr;
 #else
     return reinterpret_cast<unsigned char*>(static_cast<__UINTPTR_TYPE__>(value));
 #endif
