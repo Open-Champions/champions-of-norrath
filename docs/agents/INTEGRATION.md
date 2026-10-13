@@ -5400,6 +5400,47 @@ Opened: `_4item$prefixTable`, `_4item$suffixTable`, `_shopCheck__Fi`,
 `resetMenu__FP12screenStruct`, `shopUnpackToGrid__Fiii`, `stage`,
 `statsScreen`
 
+## agents/w9-render-math-b
+
+Merged (the branch notes carry the five summary sections; the tip was 54
+minutes old). Twenty-five units with fresh `input_order` values 2740 through
+2764: 22 function units (render and model math, scissor and megatile helpers)
+and three data units (camera angles, map scissor, megatile seed rotation) that
+emit no function. All 25 host checks build and exit 0 here (25 of 25). The
+notes' "Strings kept" section lists text the worker kept in sources; I did not
+find dialogue in the units, but I did not audit every literal. No game binary
+or disassembly listing was committed. 2241 function bodies, 2763 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1523 |
+| After | 1502 |
+| Closed | 29 |
+| Opened | 8 |
+
+Closed: `lightSetAmbientColor__FPs`, `lightSetAmbientOffset__FPs`,
+`lightSetAmbientOnly__Fv`, `lilog2__Fl`, `makeExplosion__FG6Point3f`,
+`mapScissorX`, `mapScissorY`, `matIdent__FP8Matrix34`,
+`matMakeTransYawScale__FP8Matrix34G6Point3sf`,
+`matMakeTrans__FP8Matrix34G6Point3`,
+`matMakeViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix34N20`,
+`matMul__FP8Matrix44P8Matrix34T0`, `matRot__FP8Matrix34is`,
+`matTrans__FP8Matrix34fff`, `matTransform__FP6Point3P8Matrix44T0`,
+`matUntransform__FP6Point3P8Matrix33T0`, `megatileRot`, `megatileSeed`,
+`modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec`,
+`modelGetCharAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f`,
+`modelGetNmShadowPoints__FP12_modelHeader`,
+`modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f`,
+`modelSetHalo__FP7HaloDefi`, `modelSetNoZWrite__Fv`,
+`modelSetShadowScale__Ff`, `myFOV`, `myPitch`, `myRoll`
+
+Opened: `animGetBoneMatrix__FP14AnimationStateiP8Matrix34`, `ballParticle`,
+`lightCharacterShadow__FG6Point3P11LightResult`,
+`matPostRot__FP8Matrix33is`, `matScale__FP8Matrix44f`,
+`matTrans__FP8Matrix44fff`, `matTransform__FP6Point3P8Matrix34T0`,
+`trailParticle`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5762,3 +5803,4 @@ and no startup stage has executed.
 - 2026-10-12 21:19 CDT — `agents/w9-frontend-a` — 1525 unresolved imports
 - 2026-10-12 21:27 CDT — `agents/w9-camera-map` — 1527 unresolved imports
 - 2026-10-12 21:31 CDT — `agents/w9-hud-inventory-items-b` — 1523 unresolved imports
+- 2026-10-12 21:34 CDT — `agents/w9-render-math-b` — 1502 unresolved imports

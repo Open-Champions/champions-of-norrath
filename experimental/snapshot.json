@@ -35570,6 +35570,349 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-hud-inventory-items-b-lerp-short-rot/lerp_short_rot.cpp"
+    },
+    {
+      "input_order": 2740,
+      "component": "w9-render-math-b-camera-angles",
+      "object_name": "camera_angles.o",
+      "private_object_sha256": "3cb347f76a8f58c805076e19d0e55e70d0bd10d84abc9d220868455dc6ca85d2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-camera-angles/camera_angles.cpp"
+    },
+    {
+      "input_order": 2741,
+      "component": "w9-render-math-b-light-set-ambient-color",
+      "object_name": "light_set_ambient_color.o",
+      "private_object_sha256": "536da8ce65b9744b963b67dbc1bac037a6f34cf681243451b4b2af087348a9e0",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientColor__FPs",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-light-set-ambient-color/light_set_ambient_color.cpp"
+    },
+    {
+      "input_order": 2742,
+      "component": "w9-render-math-b-light-set-ambient-offset",
+      "object_name": "light_set_ambient_offset.o",
+      "private_object_sha256": "d1cc8436219361c005ebf7d802b0b9dfed6c1b0e13d4801e858d45355b69ed55",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientOffset__FPs",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-light-set-ambient-offset/light_set_ambient_offset.cpp"
+    },
+    {
+      "input_order": 2743,
+      "component": "w9-render-math-b-light-set-ambient-only",
+      "object_name": "light_set_ambient_only.o",
+      "private_object_sha256": "d6f7ce0ad48220c4bb644813e2fd135fba6dc234fe1faf21c942e679ea71b93e",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientOnly__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-light-set-ambient-only/light_set_ambient_only.cpp"
+    },
+    {
+      "input_order": 2744,
+      "component": "w9-render-math-b-lilog2",
+      "object_name": "lilog2.o",
+      "private_object_sha256": "3406c33a6017f89fa5c47f11f91f43ceace967aa25933cf00eedec9f269e7d1a",
+      "emitted_functions": [
+        {
+          "name": "lilog2__Fl",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-lilog2/lilog2.cpp"
+    },
+    {
+      "input_order": 2745,
+      "component": "w9-render-math-b-make-explosion",
+      "object_name": "make_explosion.o",
+      "private_object_sha256": "858569b24d68a8d37fe95d71bade7eb71bda42dc503f2792c5dc918db290e631",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9ballPointERjR6Point3",
+          "compiled_body_bytes": 196
+        },
+        {
+          "name": "makeExplosion__FG6Point3f",
+          "compiled_body_bytes": 892
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-make-explosion/make_explosion.cpp"
+    },
+    {
+      "input_order": 2746,
+      "component": "w9-render-math-b-map-scissor",
+      "object_name": "map_scissor.o",
+      "private_object_sha256": "8adba841684b5ee4efce70e3db98ed3cd116cbb857f2a170a1ec88c6ce1bda58",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-map-scissor/map_scissor.cpp"
+    },
+    {
+      "input_order": 2747,
+      "component": "w9-render-math-b-mat-ident34",
+      "object_name": "mat_ident34.o",
+      "private_object_sha256": "a21f0a4ff40d56dd5e19a8df581f38c4f86ae230cc2138bbc8ddfe8640ea2ce3",
+      "emitted_functions": [
+        {
+          "name": "matIdent__FP8Matrix34",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-ident34/mat_ident34.cpp"
+    },
+    {
+      "input_order": 2748,
+      "component": "w9-render-math-b-mat-make-trans-yaw-scale",
+      "object_name": "mat_make_trans_yaw_scale.o",
+      "private_object_sha256": "81432c16626347f84c9e1a9b000c685f00dc466e7f8cd44d317579c14db7d0df",
+      "emitted_functions": [
+        {
+          "name": "matMakeTransYawScale__FP8Matrix34G6Point3sf",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-make-trans-yaw-scale/mat_make_trans_yaw_scale.cpp"
+    },
+    {
+      "input_order": 2749,
+      "component": "w9-render-math-b-mat-make-trans",
+      "object_name": "mat_make_trans.o",
+      "private_object_sha256": "73b55da8cafb0c656d63ff267931b30741af309e2eeae042546b109328f1e7c1",
+      "emitted_functions": [
+        {
+          "name": "matMakeTrans__FP8Matrix34G6Point3",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-make-trans/mat_make_trans.cpp"
+    },
+    {
+      "input_order": 2750,
+      "component": "w9-render-math-b-mat-make-view-matrix",
+      "object_name": "mat_make_view_matrix.o",
+      "private_object_sha256": "fa612208ed33161552880a98fe74b82b7251e6d970b2b0015323cc9d531d1133",
+      "emitted_functions": [
+        {
+          "name": "matMakeViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-make-view-matrix/mat_make_view_matrix.cpp"
+    },
+    {
+      "input_order": 2751,
+      "component": "w9-render-math-b-mat-mul34",
+      "object_name": "mat_mul34.o",
+      "private_object_sha256": "095bf3a8fc1d2ca0105b3eaa441fad3a1b7be847438a4bbf94a859a25db9d0fa",
+      "emitted_functions": [
+        {
+          "name": "matMul__FP8Matrix34N20",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-mul34/mat_mul34.cpp"
+    },
+    {
+      "input_order": 2752,
+      "component": "w9-render-math-b-mat-mul44",
+      "object_name": "mat_mul44.o",
+      "private_object_sha256": "b074cd64daaca73b110e02d51555bd75e0245c07f36a524ff11c7261e38f69d1",
+      "emitted_functions": [
+        {
+          "name": "matMul__FP8Matrix44P8Matrix34T0",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-mul44/mat_mul44.cpp"
+    },
+    {
+      "input_order": 2753,
+      "component": "w9-render-math-b-mat-rot34",
+      "object_name": "mat_rot34.o",
+      "private_object_sha256": "411048c0d82b4d19824f9b04e90c53bf4337bd5a18451f827b91ea7cd24b56d4",
+      "emitted_functions": [
+        {
+          "name": "matRot__FP8Matrix34is",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-rot34/mat_rot34.cpp"
+    },
+    {
+      "input_order": 2754,
+      "component": "w9-render-math-b-mat-trans",
+      "object_name": "mat_trans.o",
+      "private_object_sha256": "cd304ee8d3ccdfe6347ee5388453e439666946a2e85d6c4e2e7ff0dc3c82a35b",
+      "emitted_functions": [
+        {
+          "name": "matTrans__FP8Matrix34fff",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-trans/mat_trans.cpp"
+    },
+    {
+      "input_order": 2755,
+      "component": "w9-render-math-b-mat-transform44",
+      "object_name": "mat_transform44.o",
+      "private_object_sha256": "fb20cde14707bd009d61e43e7c64af09bd114152d5ddf5d57462f3634a3588ff",
+      "emitted_functions": [
+        {
+          "name": "matTransform__FP6Point3P8Matrix44T0",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-transform44/mat_transform44.cpp"
+    },
+    {
+      "input_order": 2756,
+      "component": "w9-render-math-b-mat-untransform33",
+      "object_name": "mat_untransform33.o",
+      "private_object_sha256": "e0285ac6130f00981fa2c4bdbc59e63fdc980a2e375365547e864caec13631f6",
+      "emitted_functions": [
+        {
+          "name": "matUntransform__FP6Point3P8Matrix33T0",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-mat-untransform33/mat_untransform33.cpp"
+    },
+    {
+      "input_order": 2757,
+      "component": "w9-render-math-b-megatile-seed-rot",
+      "object_name": "megatile_seed_rot.o",
+      "private_object_sha256": "07de2726fd46d56f386c72120843985f4edd811c45490eb29c2cb8623c139485",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-megatile-seed-rot/megatile_seed_rot.cpp"
+    },
+    {
+      "input_order": 2758,
+      "component": "w9-render-math-b-model-draw-shadow",
+      "object_name": "model_draw_shadow.o",
+      "private_object_sha256": "24597603022b73dad3b9b40858cb871280d4b9c386e3bba5de8391977356b785",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6finishER12ShadowPacketRKNS_4OpenE",
+          "compiled_body_bytes": 156
+        },
+        {
+          "name": "modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec",
+          "compiled_body_bytes": 3584
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-draw-shadow/model_draw_shadow.cpp"
+    },
+    {
+      "input_order": 2759,
+      "component": "w9-render-math-b-model-get-char-attachment-pos",
+      "object_name": "model_get_char_attachment_pos.o",
+      "private_object_sha256": "703a915ec8e79584908ca61ec1346d51acf7967fb95b7f4f84c3c73aa147d163",
+      "emitted_functions": [
+        {
+          "name": "modelGetCharAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-get-char-attachment-pos/model_get_char_attachment_pos.cpp"
+    },
+    {
+      "input_order": 2760,
+      "component": "w9-render-math-b-model-get-nm-shadow-points",
+      "object_name": "model_get_nm_shadow_points.o",
+      "private_object_sha256": "5031fe0cbca235aeb929382beb02b985d2fde1ce4c7e140d827c71fd3eb7a57a",
+      "emitted_functions": [
+        {
+          "name": "modelGetNmShadowPoints__FP12_modelHeader",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-get-nm-shadow-points/model_get_nm_shadow_points.cpp"
+    },
+    {
+      "input_order": 2761,
+      "component": "w9-render-math-b-model-get-shadow-pos",
+      "object_name": "model_get_shadow_pos.o",
+      "private_object_sha256": "d488631709c2e644e59e8ffc7b2f30da54b4103a393fd38e9bf9f9362fdbaa43",
+      "emitted_functions": [
+        {
+          "name": "modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f",
+          "compiled_body_bytes": 696
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-get-shadow-pos/model_get_shadow_pos.cpp"
+    },
+    {
+      "input_order": 2762,
+      "component": "w9-render-math-b-model-set-halo",
+      "object_name": "model_set_halo.o",
+      "private_object_sha256": "0f43467a544ea2a2b04275adbf034489d65d4718ffc89beaabc5a4e5befc5334",
+      "emitted_functions": [
+        {
+          "name": "modelSetHalo__FP7HaloDefi",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-set-halo/model_set_halo.cpp"
+    },
+    {
+      "input_order": 2763,
+      "component": "w9-render-math-b-model-set-no-z-write",
+      "object_name": "model_set_no_z_write.o",
+      "private_object_sha256": "c475cb84f5b740c8eb57f4756443c915902a299c8bcc0172dd9326c3a587b772",
+      "emitted_functions": [
+        {
+          "name": "modelSetNoZWrite__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-set-no-z-write/model_set_no_z_write.cpp"
+    },
+    {
+      "input_order": 2764,
+      "component": "w9-render-math-b-model-set-shadow-scale",
+      "object_name": "model_set_shadow_scale.o",
+      "private_object_sha256": "680ae8aa4d50eb0f0555f8c0b77bdc3b70a0bc43504632175cf1a3f81c5df365",
+      "emitted_functions": [
+        {
+          "name": "modelSetShadowScale__Ff",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-render-math-b-model-set-shadow-scale/model_set_shadow_scale.cpp"
     }
   ],
   "drafts": [
@@ -41177,6 +41520,57 @@
     "sources/w9-other-b-time-last-transition/time_last_transition.cpp": "cfd76c87e8c5b3c36acb1a01a74e2f6192c06a3d30f3eaf4a9736e44df1412b5",
     "sources/w9-other-b-unscramble-table/host_check.cpp": "646aaba11bc0446f8972b884542ce8ca7e34d113dd56566955c054a7e0a8d7f7",
     "sources/w9-other-b-unscramble-table/unscramble_table.cpp": "6f8cf2cf884961ff3b93d54b683aad0c111a4d7f3e65e5af97468f1299e58733",
+    "sources/w9-render-math-b-camera-angles/camera_angles.cpp": "b90459b7c8726f9c321e2c201cbed8c6e034d64cc37e5b26554a24eb72c52ae8",
+    "sources/w9-render-math-b-camera-angles/host_check.cpp": "d052025c91b39cdbd2906fad7b7aed3286a11fb1005e72cc9699cdbd1df75502",
+    "sources/w9-render-math-b-common/math_types.hpp": "7185ef1b3277757da6f213ff0a470f9fa9bbc29c982ed3ef8a392353d9a4b1c9",
+    "sources/w9-render-math-b-light-set-ambient-color/host_check.cpp": "9b577f75730a33d66a4f3ec1202a19fbbebd0b7363ca24100114aaec944a2c8e",
+    "sources/w9-render-math-b-light-set-ambient-color/light_set_ambient_color.cpp": "4589525fa275433bf991d24b3fab45453c8fbd9363eafbbfc8694bce013951fc",
+    "sources/w9-render-math-b-light-set-ambient-offset/host_check.cpp": "2d3686a97a2b559c8b619a930542a2d3763c65fc1043e5e036aaa8b298c70441",
+    "sources/w9-render-math-b-light-set-ambient-offset/light_set_ambient_offset.cpp": "b78f2b17eec862260cf155a8a58f24023e8a40eb83804e33671fb8a242ee525b",
+    "sources/w9-render-math-b-light-set-ambient-only/host_check.cpp": "5548fd97042b55a694ee7f8ceb2d72d68c0977120f9d17e197ad65dcf9bd41bf",
+    "sources/w9-render-math-b-light-set-ambient-only/light_set_ambient_only.cpp": "d7d0195012d1b5088a7239a616af7dcd184c7de9e8e8550aa25b920a3adcc2c6",
+    "sources/w9-render-math-b-lilog2/host_check.cpp": "5a54a3de9241a270954cabe8866bde23e84f41308bb6bdb3fd2b8f212f4d477a",
+    "sources/w9-render-math-b-lilog2/lilog2.cpp": "98d9f12539418281ee407fc76a8e45a09a182d1680b3ae536c63493cc2f9852d",
+    "sources/w9-render-math-b-make-explosion/host_check.cpp": "37474397365026ff1f6fb6a643c545636c77c5dfc24f3e2707217bed3078e707",
+    "sources/w9-render-math-b-make-explosion/make_explosion.cpp": "3d50257f745a1590668311f07ec5794e158fc0081022ec535a20c4f6a08cc64b",
+    "sources/w9-render-math-b-map-scissor/host_check.cpp": "9c12bfe5488d451d339e93b8c3ae304bf6bf6fccaa283b538fa3aefc458ccb97",
+    "sources/w9-render-math-b-map-scissor/map_scissor.cpp": "210137bc4315e267d23ad663f26524a9959f5878f3c2132a74aa25f5fee2294f",
+    "sources/w9-render-math-b-mat-ident34/host_check.cpp": "bf71f326a28daa343c301f2dc2e0bf4e466822ed60588d3b197db01cc42134cf",
+    "sources/w9-render-math-b-mat-ident34/mat_ident34.cpp": "25fee9fd1bb776d55ef1b803a60e414797ca9386e867e1f722410b015326e4f4",
+    "sources/w9-render-math-b-mat-make-trans-yaw-scale/host_check.cpp": "3075a1a28a1eb9970daf5025f5bf97798d1cc7e82f45320eac3b1b612572239c",
+    "sources/w9-render-math-b-mat-make-trans-yaw-scale/mat_make_trans_yaw_scale.cpp": "9c6164f6bed56f6a62026678c9cc009a75e8114d7f65e0d43fedd786cf17852a",
+    "sources/w9-render-math-b-mat-make-trans/host_check.cpp": "4de3248a2d705dc4db4e8301160c98b9c4526e813fa820e1be4337ad2d978e57",
+    "sources/w9-render-math-b-mat-make-trans/mat_make_trans.cpp": "94ec7b5cb0eaf6f94268ce09ff68fb6fea1862bace91332dd79c732880cad728",
+    "sources/w9-render-math-b-mat-make-view-matrix/host_check.cpp": "0bd47fbc12de5ff48065943e34dcf10ace23ebf15ab7ad0caad1f1f58b418202",
+    "sources/w9-render-math-b-mat-make-view-matrix/mat_make_view_matrix.cpp": "f3ef67d70b9dc32ee4e88850fc316b675284f19b4658ba6fc1acd122bea6ff8f",
+    "sources/w9-render-math-b-mat-mul34/host_check.cpp": "1d1c8fb5af7f7468cfe56d3f18410f66b2445021fdb47e669d367cb787db5824",
+    "sources/w9-render-math-b-mat-mul34/mat_mul34.cpp": "922bc0ddf52c96f248b3a2e299fae163bf1823127801e144ebe0e88c313b7c3b",
+    "sources/w9-render-math-b-mat-mul44/host_check.cpp": "4f8fa683a3b36aa8077eb4d3f022ff5ce14d88557d00b2bb47e73634ca5bf7c3",
+    "sources/w9-render-math-b-mat-mul44/mat_mul44.cpp": "02f31dd1ba0b19b6bd36b9f506de08f3d4c4f752b8c2d1f8ffcb853e9e3bcefe",
+    "sources/w9-render-math-b-mat-rot34/host_check.cpp": "b15cf29f0e60b779302803b52af65dbf998db11998021d233acacf713c155f61",
+    "sources/w9-render-math-b-mat-rot34/mat_rot34.cpp": "2574bd71028e8ead0882ac1d2ae89084113091a3dde1d3f06dac37126934ce2c",
+    "sources/w9-render-math-b-mat-trans/host_check.cpp": "9b7c75dacb241cac739583b8382f10ea80b23827dfee0286b7ab59c5c6e63966",
+    "sources/w9-render-math-b-mat-trans/mat_trans.cpp": "c541f54c0de98105834740ef8ef7302e2b48988e1a41db866f7b45c1b34f2728",
+    "sources/w9-render-math-b-mat-transform44/host_check.cpp": "c3c91aecb3c5a32ac3401ab67a9809baf3afeef8a3c6f9c778087600bc24e7c7",
+    "sources/w9-render-math-b-mat-transform44/mat_transform44.cpp": "6650b8e7661fe55e1bcb844b98521ef283a58e6260c985b6d4f3915966f3dc02",
+    "sources/w9-render-math-b-mat-untransform33/host_check.cpp": "b54803672dbdead761e913d95a77eae07a97190c9aeb6a225fff4e3f1c0b7466",
+    "sources/w9-render-math-b-mat-untransform33/mat_untransform33.cpp": "0b90c1a61fbd9918f1678b8b751d3b5ec3e43862b368db38e7f9f64fd9a83c2d",
+    "sources/w9-render-math-b-megatile-seed-rot/host_check.cpp": "344bf7d7aa896153e420acb7281c1adae87015f3150ef8668aaa3fee30cb43fc",
+    "sources/w9-render-math-b-megatile-seed-rot/megatile_seed_rot.cpp": "f50b2396c1f227931e332fbe173e388c81320237f8c141436f7ff3cd8a446df6",
+    "sources/w9-render-math-b-model-draw-shadow/host_check.cpp": "1db6da5f0226b345efad86fc225aef455cfb9fbb3f3c2d0dc64d780c44360faa",
+    "sources/w9-render-math-b-model-draw-shadow/model_draw_shadow.cpp": "fe6e9a2e71f8468c2a5775f270a0341d8158947e5e474d93d0a3cb7cb00205b3",
+    "sources/w9-render-math-b-model-get-char-attachment-pos/host_check.cpp": "c8d0fce800a85a71d29f3f2e9b4fbabca10adbffffc9f6e038f32514120aba8a",
+    "sources/w9-render-math-b-model-get-char-attachment-pos/model_get_char_attachment_pos.cpp": "5bb67b555548af5e01159dd67047bb5d01867476a8870af8d48191ff45220356",
+    "sources/w9-render-math-b-model-get-nm-shadow-points/host_check.cpp": "4d0722439a4dabd908d9a8a623ef4bb2dfdd07178bfab9412b43363a30d1a3cf",
+    "sources/w9-render-math-b-model-get-nm-shadow-points/model_get_nm_shadow_points.cpp": "fb81e79907f1f37ff53ff557c0cb05236b6ee6f7ee10dabc135a590ce163d245",
+    "sources/w9-render-math-b-model-get-shadow-pos/host_check.cpp": "eaf42630b80b0d660a8e6be94be0133e85d39be3e19c9f21260656f7402076eb",
+    "sources/w9-render-math-b-model-get-shadow-pos/model_get_shadow_pos.cpp": "6651b65b9a86d8286e2c7a0efadd408a4715aea7f28138adc508c84ec6a07a51",
+    "sources/w9-render-math-b-model-set-halo/host_check.cpp": "71aa5ff218241afb95870f8fe2d731efded597fe35d5f66503a0cd209a01f707",
+    "sources/w9-render-math-b-model-set-halo/model_set_halo.cpp": "7a841a26ccb959a6b876ebac23c624be8f04eea8496890c2809654558e1e5478",
+    "sources/w9-render-math-b-model-set-no-z-write/host_check.cpp": "1f3029d1b7e420eb0f5d917620ad375082bf95d8e73425127d0783bab45b8812",
+    "sources/w9-render-math-b-model-set-no-z-write/model_set_no_z_write.cpp": "b556dd9591e65b1434a5303bc4442d806d8d4bb8a20f50ed78602570b75d016c",
+    "sources/w9-render-math-b-model-set-shadow-scale/host_check.cpp": "7791e7a888a81e060f53d9bbb8e2791545c31690714e043fcda7a37c5bade5c0",
+    "sources/w9-render-math-b-model-set-shadow-scale/model_set_shadow_scale.cpp": "4ea40d63cff92effadb029659238eab022ba5c3518062ea1309f48b657023dc8",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/add_particle_ctor_numbered.cpp": "ef69c0719893b65c33a645209ac5d10849e08c9d2aae84eb4c53721ed0b662ca",
     "sources/w9-startup-crt-a-add-particle-ctor-numbered/host_check.cpp": "06546ebfb0c21dfecfb70ac33f87993fe6717d18163a01776e59caafe96f7011",
     "sources/w9-startup-crt-a-alloc-timer-counter/alloc_timer_counter.cpp": "bfe72a278e20d6847830a912d081e2329d5cd6e7190cb664a28cadef2f843f65",
@@ -42049,11 +42443,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2740,
-    "authored_default_inputs": 2738,
+    "selected_inputs": 2765,
+    "authored_default_inputs": 2763,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2219,
-    "compiled_body_bytes_from_accepted_inputs": 943732,
+    "emitted_function_definitions_including_helpers": 2243,
+    "compiled_body_bytes_from_accepted_inputs": 952048,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -42066,7 +42460,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2427
+    "package_selected_inputs": 2452
   },
   "startup_implementations": [
     {
@@ -80421,6 +80815,424 @@
       ],
       "host_files": [
         "sources/w9-hud-inventory-items-b-lerp-short-rot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-camera-angles/camera_angles.cpp",
+      "source_sha256": "b90459b7c8726f9c321e2c201cbed8c6e034d64cc37e5b26554a24eb72c52ae8",
+      "object_sha256": "3cb347f76a8f58c805076e19d0e55e70d0bd10d84abc9d220868455dc6ca85d2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-render-math-b-camera-angles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-light-set-ambient-color/light_set_ambient_color.cpp",
+      "source_sha256": "4589525fa275433bf991d24b3fab45453c8fbd9363eafbbfc8694bce013951fc",
+      "object_sha256": "536da8ce65b9744b963b67dbc1bac037a6f34cf681243451b4b2af087348a9e0",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientColor__FPs",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-light-set-ambient-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-light-set-ambient-offset/light_set_ambient_offset.cpp",
+      "source_sha256": "b78f2b17eec862260cf155a8a58f24023e8a40eb83804e33671fb8a242ee525b",
+      "object_sha256": "d1cc8436219361c005ebf7d802b0b9dfed6c1b0e13d4801e858d45355b69ed55",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientOffset__FPs",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-light-set-ambient-offset/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-light-set-ambient-only/light_set_ambient_only.cpp",
+      "source_sha256": "d7d0195012d1b5088a7239a616af7dcd184c7de9e8e8550aa25b920a3adcc2c6",
+      "object_sha256": "d6f7ce0ad48220c4bb644813e2fd135fba6dc234fe1faf21c942e679ea71b93e",
+      "emitted_functions": [
+        {
+          "name": "lightSetAmbientOnly__Fv",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-light-set-ambient-only/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-lilog2/lilog2.cpp",
+      "source_sha256": "98d9f12539418281ee407fc76a8e45a09a182d1680b3ae536c63493cc2f9852d",
+      "object_sha256": "3406c33a6017f89fa5c47f11f91f43ceace967aa25933cf00eedec9f269e7d1a",
+      "emitted_functions": [
+        {
+          "name": "lilog2__Fl",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-lilog2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-make-explosion/make_explosion.cpp",
+      "source_sha256": "3d50257f745a1590668311f07ec5794e158fc0081022ec535a20c4f6a08cc64b",
+      "object_sha256": "858569b24d68a8d37fe95d71bade7eb71bda42dc503f2792c5dc918db290e631",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L9ballPointERjR6Point3",
+          "compiled_body_bytes": 196
+        },
+        {
+          "name": "makeExplosion__FG6Point3f",
+          "compiled_body_bytes": 892
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-make-explosion/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-map-scissor/map_scissor.cpp",
+      "source_sha256": "210137bc4315e267d23ad663f26524a9959f5878f3c2132a74aa25f5fee2294f",
+      "object_sha256": "8adba841684b5ee4efce70e3db98ed3cd116cbb857f2a170a1ec88c6ce1bda58",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-render-math-b-map-scissor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-ident34/mat_ident34.cpp",
+      "source_sha256": "25fee9fd1bb776d55ef1b803a60e414797ca9386e867e1f722410b015326e4f4",
+      "object_sha256": "a21f0a4ff40d56dd5e19a8df581f38c4f86ae230cc2138bbc8ddfe8640ea2ce3",
+      "emitted_functions": [
+        {
+          "name": "matIdent__FP8Matrix34",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-ident34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-make-trans-yaw-scale/mat_make_trans_yaw_scale.cpp",
+      "source_sha256": "9c6164f6bed56f6a62026678c9cc009a75e8114d7f65e0d43fedd786cf17852a",
+      "object_sha256": "81432c16626347f84c9e1a9b000c685f00dc466e7f8cd44d317579c14db7d0df",
+      "emitted_functions": [
+        {
+          "name": "matMakeTransYawScale__FP8Matrix34G6Point3sf",
+          "compiled_body_bytes": 384
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-make-trans-yaw-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-make-trans/mat_make_trans.cpp",
+      "source_sha256": "94ec7b5cb0eaf6f94268ce09ff68fb6fea1862bace91332dd79c732880cad728",
+      "object_sha256": "73b55da8cafb0c656d63ff267931b30741af309e2eeae042546b109328f1e7c1",
+      "emitted_functions": [
+        {
+          "name": "matMakeTrans__FP8Matrix34G6Point3",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-make-trans/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-make-view-matrix/mat_make_view_matrix.cpp",
+      "source_sha256": "f3ef67d70b9dc32ee4e88850fc316b675284f19b4658ba6fc1acd122bea6ff8f",
+      "object_sha256": "fa612208ed33161552880a98fe74b82b7251e6d970b2b0015323cc9d531d1133",
+      "emitted_functions": [
+        {
+          "name": "matMakeViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-make-view-matrix/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-mul34/mat_mul34.cpp",
+      "source_sha256": "922bc0ddf52c96f248b3a2e299fae163bf1823127801e144ebe0e88c313b7c3b",
+      "object_sha256": "095bf3a8fc1d2ca0105b3eaa441fad3a1b7be847438a4bbf94a859a25db9d0fa",
+      "emitted_functions": [
+        {
+          "name": "matMul__FP8Matrix34N20",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-mul34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-mul44/mat_mul44.cpp",
+      "source_sha256": "02f31dd1ba0b19b6bd36b9f506de08f3d4c4f752b8c2d1f8ffcb853e9e3bcefe",
+      "object_sha256": "b074cd64daaca73b110e02d51555bd75e0245c07f36a524ff11c7261e38f69d1",
+      "emitted_functions": [
+        {
+          "name": "matMul__FP8Matrix44P8Matrix34T0",
+          "compiled_body_bytes": 252
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-mul44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-rot34/mat_rot34.cpp",
+      "source_sha256": "2574bd71028e8ead0882ac1d2ae89084113091a3dde1d3f06dac37126934ce2c",
+      "object_sha256": "411048c0d82b4d19824f9b04e90c53bf4337bd5a18451f827b91ea7cd24b56d4",
+      "emitted_functions": [
+        {
+          "name": "matRot__FP8Matrix34is",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-rot34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-trans/mat_trans.cpp",
+      "source_sha256": "c541f54c0de98105834740ef8ef7302e2b48988e1a41db866f7b45c1b34f2728",
+      "object_sha256": "cd304ee8d3ccdfe6347ee5388453e439666946a2e85d6c4e2e7ff0dc3c82a35b",
+      "emitted_functions": [
+        {
+          "name": "matTrans__FP8Matrix34fff",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-trans/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-transform44/mat_transform44.cpp",
+      "source_sha256": "6650b8e7661fe55e1bcb844b98521ef283a58e6260c985b6d4f3915966f3dc02",
+      "object_sha256": "fb20cde14707bd009d61e43e7c64af09bd114152d5ddf5d57462f3634a3588ff",
+      "emitted_functions": [
+        {
+          "name": "matTransform__FP6Point3P8Matrix44T0",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-transform44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-mat-untransform33/mat_untransform33.cpp",
+      "source_sha256": "0b90c1a61fbd9918f1678b8b751d3b5ec3e43862b368db38e7f9f64fd9a83c2d",
+      "object_sha256": "e0285ac6130f00981fa2c4bdbc59e63fdc980a2e375365547e864caec13631f6",
+      "emitted_functions": [
+        {
+          "name": "matUntransform__FP6Point3P8Matrix33T0",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-mat-untransform33/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-megatile-seed-rot/megatile_seed_rot.cpp",
+      "source_sha256": "f50b2396c1f227931e332fbe173e388c81320237f8c141436f7ff3cd8a446df6",
+      "object_sha256": "07de2726fd46d56f386c72120843985f4edd811c45490eb29c2cb8623c139485",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-render-math-b-megatile-seed-rot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-draw-shadow/model_draw_shadow.cpp",
+      "source_sha256": "fe6e9a2e71f8468c2a5775f270a0341d8158947e5e474d93d0a3cb7cb00205b3",
+      "object_sha256": "24597603022b73dad3b9b40858cb871280d4b9c386e3bba5de8391977356b785",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L6finishER12ShadowPacketRKNS_4OpenE",
+          "compiled_body_bytes": 156
+        },
+        {
+          "name": "modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec",
+          "compiled_body_bytes": 3584
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-draw-shadow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-get-char-attachment-pos/model_get_char_attachment_pos.cpp",
+      "source_sha256": "5bb67b555548af5e01159dd67047bb5d01867476a8870af8d48191ff45220356",
+      "object_sha256": "703a915ec8e79584908ca61ec1346d51acf7967fb95b7f4f84c3c73aa147d163",
+      "emitted_functions": [
+        {
+          "name": "modelGetCharAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-get-char-attachment-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-get-nm-shadow-points/model_get_nm_shadow_points.cpp",
+      "source_sha256": "fb81e79907f1f37ff53ff557c0cb05236b6ee6f7ee10dabc135a590ce163d245",
+      "object_sha256": "5031fe0cbca235aeb929382beb02b985d2fde1ce4c7e140d827c71fd3eb7a57a",
+      "emitted_functions": [
+        {
+          "name": "modelGetNmShadowPoints__FP12_modelHeader",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-get-nm-shadow-points/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-get-shadow-pos/model_get_shadow_pos.cpp",
+      "source_sha256": "6651b65b9a86d8286e2c7a0efadd408a4715aea7f28138adc508c84ec6a07a51",
+      "object_sha256": "d488631709c2e644e59e8ffc7b2f30da54b4103a393fd38e9bf9f9362fdbaa43",
+      "emitted_functions": [
+        {
+          "name": "modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f",
+          "compiled_body_bytes": 696
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-get-shadow-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-set-halo/model_set_halo.cpp",
+      "source_sha256": "7a841a26ccb959a6b876ebac23c624be8f04eea8496890c2809654558e1e5478",
+      "object_sha256": "0f43467a544ea2a2b04275adbf034489d65d4718ffc89beaabc5a4e5befc5334",
+      "emitted_functions": [
+        {
+          "name": "modelSetHalo__FP7HaloDefi",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-set-halo/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-set-no-z-write/model_set_no_z_write.cpp",
+      "source_sha256": "b556dd9591e65b1434a5303bc4442d806d8d4bb8a20f50ed78602570b75d016c",
+      "object_sha256": "c475cb84f5b740c8eb57f4756443c915902a299c8bcc0172dd9326c3a587b772",
+      "emitted_functions": [
+        {
+          "name": "modelSetNoZWrite__Fv",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-set-no-z-write/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-render-math-b",
+      "source": "sources/w9-render-math-b-model-set-shadow-scale/model_set_shadow_scale.cpp",
+      "source_sha256": "4ea40d63cff92effadb029659238eab022ba5c3518062ea1309f48b657023dc8",
+      "object_sha256": "680ae8aa4d50eb0f0555f8c0b77bdc3b70a0bc43504632175cf1a3f81c5df365",
+      "emitted_functions": [
+        {
+          "name": "modelSetShadowScale__Ff",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-render-math-b-model-set-shadow-scale/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
