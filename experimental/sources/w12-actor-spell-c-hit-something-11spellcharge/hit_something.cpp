@@ -46,7 +46,7 @@ void gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb(void* targ
 namespace {
 // Slot byte 16 of the object's table (word at +72), called on the adjusted object with the owner word, 0x40000 and the
 // float 0.0 (the float argument is not part of the host contract's call record).
-void call_slot16(unsigned char* o, unsigned owner_word) {
+static void call_slot16(unsigned char* o, unsigned owner_word) {
     using namespace w12c;
     unsigned char* const e = table_entry(o, 16);
     unsigned char* const adjusted = o + *reinterpret_cast<short*>(e);
@@ -58,7 +58,7 @@ void call_slot16(unsigned char* o, unsigned owner_word) {
 #endif
 }
 
-void damage(unsigned char* spell, void* victim, unsigned char* owner, float amount) {
+static void damage(unsigned char* spell, void* victim, unsigned char* owner, float amount) {
     using namespace w12c;
     const float roll = static_cast<float>(eRand__5Spell(spell)) * bits(0x37800000u);
     const float spread = amount * roll * bits(0x3e4cccccu);
