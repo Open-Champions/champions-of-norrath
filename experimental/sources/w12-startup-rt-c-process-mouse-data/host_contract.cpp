@@ -37,6 +37,9 @@ int main() {
     w12_pmd(rec);
     if (e[32 + 7] != 0x5a || e[32 + 4] != rec[20] || get32(SLOT1 + 36) != 0) return 4;
     if (get32(SLOT1 + 32) != 1 || get16(SLOT1 + 60) != 9) return 5;           // caught up: read position moves
+    reset(0x0000, 3, 4);                                                      // read position wraps past 4
+    w12_pmd(rec);
+    if (get32(SLOT1 + 36) != 4 || get32(SLOT1 + 32) != 0 || get16(SLOT1 + 60) != 9) return 15;
     reset(0x8000, 1, 3);                                                      // bit 15: leading byte must be 1
     rec[20] = 1;
     w12_pmd(rec);
