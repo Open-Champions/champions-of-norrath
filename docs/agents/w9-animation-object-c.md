@@ -28,3 +28,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `slide-back` | `slideBack__8Creaturef` | 0x111490 | 920 |
 | `steer-and-route` | `steerAndRouteToPosition__8CreatureG6Point3` | 0x1102b8 | 1572 |
 | `spawn` | `spawn__FG6Point3iisPcbPPci` | 0x26a738 | 840 |
+| `update-animation` | `updateAnimation__FP13animComponent` | 0x161528 | 2248 |
