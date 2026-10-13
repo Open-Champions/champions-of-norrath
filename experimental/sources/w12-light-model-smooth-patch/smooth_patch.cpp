@@ -1,5 +1,5 @@
 #include "../w11-rend-a-common/rend.hpp"
-// Observed smoothPatch__FP12_worldHeaderP16WaterPolysetData at 0x00178840, extent 632. Arguments: a
+// Observed smoothPatch__FP12_worldHeaderP16WaterPolysetData at 0x00178840, extent 636. Arguments: a
 // world header and a water polyset record d. Returns nothing. Record words used: signed halfwords
 // d+0, +2, +4, +6 (four neighbour patch numbers, -1 for none) and the word d+8, the address of
 // this patch's grid. world+36 is a table of 60-byte patch records; word 0 of a record points
