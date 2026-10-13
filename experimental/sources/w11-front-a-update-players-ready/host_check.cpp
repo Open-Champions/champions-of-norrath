@@ -113,6 +113,10 @@ int main() {
         std::memcpy(target[0] + 16, nearpt, 12);
         updatePlayersReady__9Savepoint(object);
         if (object[200] != 1) return 21;
+        const float farz[3] = {1.f, 2.f, 3.f + 121.f};  // too far along z alone
+        std::memcpy(target[0] + 16, farz, 12);
+        updatePlayersReady__9Savepoint(object);
+        if (object[200] != 1) return 22;
     }
     if (rc) return rc;
     std::puts("update players ready passed");
