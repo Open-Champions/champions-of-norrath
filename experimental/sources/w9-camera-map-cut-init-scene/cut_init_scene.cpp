@@ -1,4 +1,4 @@
-// Observed cutInitScene__FP9_cutscene at 0x0018d350, 4264 bytes. Nothing here
+// Observed cutInitScene__FP9_cutscene at 0x0018d350, 3696 bytes. Nothing here
 // was executed on the EE. Scene fields (byte offsets): +0 flag word, +4 offset
 // of the action array, +8 action count, +12 offset of the actor array, +16
 // actor count, +112 an int, +116 text. An action is 20 bytes: +0 float time,
@@ -64,12 +64,12 @@
 //    - byte +43 zero: objectFindInBox__FG6Point3T0PP10GameObjecti with the box
 //      (x-240, y-240, z-100000) .. (x+240, y+240, z+100000) and up to 64
 //      objects; among them skip objects with 0x80000 in +12, pick the nearest
-//      in the xy plane within 600.0, requiring either the object's text
-//      pointer at +52 to equal the actor name, or (when no named match yet)
-//      its class name, taken as the text of the type record returned by the
-//      function at the +4 entry of its table at +72 with leading digits
-//      skipped, to equal it; a named match always wins the tie rules above only
-//      by being tested first. A winner is stored as the actor's object and word
+//      in the xy plane within 600.0, requiring either the object's text pointer
+//      at +52 to equal the actor name, or (only while no named match is held) its
+//      class name, taken as the text of the type record returned by the function
+//      at the +4 entry of its table at +72 with leading digits skipped, to equal
+//      the actor name. A named match is held from the moment it becomes the
+//      nearest, and class names are then no longer consulted. A winner is stored as the actor's object and word
 //      +4 = winner's word +44; unless findTagString__10GameObjectPci finds the
 //      tags "autoprop" or "autodoor" its halfword +56 and floats +16..+24 are
 //      set from the actor and objectUpdateInGrid is called; its flags word
