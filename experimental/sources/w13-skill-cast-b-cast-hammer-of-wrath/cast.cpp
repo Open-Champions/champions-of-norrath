@@ -35,7 +35,7 @@ extern char vt_spell_base[] asm("_vt$5Spell");
 extern char vt_spell_hammer_of_wrath[] asm("_vt$18SpellHammerOfWrath");
 void* cast_hammer_of_wrath(void* skill, int rank, void* creature, Point3 point, short angle) asm("cast__18SkillHammerOfWrathiP8CreatureG6Point3s");
 }
-static unsigned word_of(const void* p) { return static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(p)); }
+static inline __attribute__((always_inline)) unsigned word_of(const void* p) { return static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(p)); }
 extern "C" void* cast_hammer_of_wrath(void* skill, int rank, void* creature, Point3 point, short angle) {
     short* colours = reinterpret_cast<short*>(static_cast<unsigned char*>(creature) + 140);
     colours[2] = -100;
