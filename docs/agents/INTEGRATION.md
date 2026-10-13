@@ -8295,3 +8295,15 @@ Closed: `_$_6Wraith`, `_GLOBAL_$I$numInRegion__8creatureG6Point3f`, `__tf6Wraith
 
 Opened: `_vt$6Wraith`, `drawArrow__14WoodElfSoldier`
 - 2026-10-13 03:39 CDT — `agents/w10-actor-q` — 977 unresolved imports
+
+## Not merged: agents/w10-actor-o
+
+Held at tip `c7de8712` (45 minutes old when read). The branch holds 31 units with
+host checks (26 built and exited 0 here, the rest were not run) but **no notes
+file**: `docs/agents/w10-actor-o.md` does not exist, so there are no observed,
+inferred and unknown lists, no imports closed or opened, and the snapshot checker
+fails because every package record needs its review file (`docs/agents/<package>.md`).
+Writing those notes is the worker's job and this integrator did not invent them. The
+branch was merged locally, failed `check_source_snapshot.py`, and the merge was reset
+before anything was pushed. The owner can add the notes and push again; the units
+could then be selected unchanged.
