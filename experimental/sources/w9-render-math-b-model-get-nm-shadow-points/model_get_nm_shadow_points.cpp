@@ -1,12 +1,14 @@
 // Observed modelGetNmShadowPoints__FP12_modelHeader at 0x0016cd50, extent 20.
 // Reads the unsigned byte at header+36, multiplies it by 16, adds that to the
-// header address, and returns the pointer-sized word at that address plus 4.
-// Nothing is written.
-// Inferred: the byte at +36 counts 16-byte records that follow the header start
-// (a table of records), and the word at +4 of the record after them is the shadow
-// point data pointer named by the function. Unknown: the record layout and the
-// pointee type; the result is returned as an untyped pointer.
-extern "C" const void* modelGetNmShadowPoints__FP12_modelHeader(const unsigned char* header) {
-    const unsigned char* record = header + header[36] * 16;
-    return *reinterpret_cast<const void* const*>(record + 4);
+// header address, and returns the 32-bit word at that address plus 4. Nothing is
+// written.
+// Observed use: modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f
+// reads the same word and compares it, signed, with its index argument before it
+// addresses a record, so the word is an entry count. "Nm" in the engine's names
+// appears to mean a number (nmHalos is a count). The result is returned as int.
+// Inferred: the number of shadow points of the model. Unknown: the record layout
+// before the count and the meaning of the byte at +36 beyond the 16-byte unit.
+extern "C" int modelGetNmShadowPoints__FP12_modelHeader(const unsigned char* header) {
+    const unsigned char* table = header + header[36] * 16;
+    return *reinterpret_cast<const int*>(table + 4);
 }
