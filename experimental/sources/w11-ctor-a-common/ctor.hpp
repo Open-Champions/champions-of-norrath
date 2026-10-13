@@ -122,6 +122,10 @@ int soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* header, void* obj
 int P_StartTrail__Fiifiiiii(int a, int b, float c, int d, int e, int f, int g, int h);
 void P_ExtendTrail__FiG6Point3(int trail, Point3 position);
 void lightAdd__FP5Light(void* light);
+void* blockAlloc__Fi(int size);
+void light_effect_construct(void* self, Point3 position, float a, float b, float c, float d, float e, float f, float g, float h,
+                            float i, float j, float k, float l, void* owner, int flag)
+    __asm__("__11LightEffectG6Point3ffffffffffffP10GameObjecti");
 int P_StartLightning__FG6Point3T0iiffUi(Point3 from, Point3 to, int a, int b, float c, float d, unsigned color);
 extern int nmPlayersAlive;
 extern int playersAlive[];
