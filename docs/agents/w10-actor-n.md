@@ -107,6 +107,48 @@ Append these 32 authored inputs with fresh `input_order` values after the curren
 {"emitted_functions":[],"header_closure":[],"kind":"independently_authored_source","object_name":"vtable.o","profile":"authored_cpp","sha256":"ba24fe050150dc824e6026303ffd8e7f8179bc0d8417a366bb8d6ac5a2884d9e","source":"sources/w10-actor-n-vt-6sparks/vtable.cpp"}
 ```
 
+The plan's `files` map also needs these path-to-hash pairs (sources and the one header; the `host_check.cpp` files are not listed because they are not inputs):
+
+```json
+{
+ "sources/w10-actor-n-clone-10staticfire/clone.cpp": "b695668c809df96456290c1e4fd94fdf25f6c93fda173912f20587e1dd7844c2",
+ "sources/w10-actor-n-clone-11spiderqueen/clone.cpp": "97c6dbe83283fb14418e7d396810b0ad7c7184a0faef39a5b5ad807cac1d3558",
+ "sources/w10-actor-n-clone-6switch/clone.cpp": "7da98022553b33c00b616b79d05974a18934cc413589eef10817f76bb87079f5",
+ "sources/w10-actor-n-clone-8superorc/clone.cpp": "45d16383e64c930f0f363a800f6a8c84cd4ccf7cf0006b7d9feeaf1dc436d598",
+ "sources/w10-actor-n-common/access.hpp": "35ab04beff7d9e91733a30ab83fb387489e0980a58c6eae59331d0b1144441b2",
+ "sources/w10-actor-n-dtor-10staticfire/dtor.cpp": "9c06709cbea83cda356537813e8091c88df591dd5e0fa4446e667d27e5e6fd0c",
+ "sources/w10-actor-n-dtor-11spiderqueen/dtor.cpp": "8bc195beaac28df67fafda9bd0592000c64484ca654d34297a1d930a12c1dc51",
+ "sources/w10-actor-n-dtor-5torch/dtor.cpp": "3ca21327622b0341745eddd47f92f7e9c9851447260956f43ff17d2a179aff22",
+ "sources/w10-actor-n-dtor-6switch/dtor.cpp": "6affd90cfc7a04e417de98d8a8719de5771a7fa53f2a8c774fdb75d84ce0d8b0",
+ "sources/w10-actor-n-dtor-8superorc/dtor.cpp": "bb8a9cc3aed92924f8e56ac22eeb031756da8ebe6f2c966311a66efa5537c65c",
+ "sources/w10-actor-n-get-poke-name-6switch/get_poke_name.cpp": "7feaaf5d5d5761a8e3b0c83f2340b132165817131266b2eaf3f7e990a02dabe3",
+ "sources/w10-actor-n-msg-draw-10staticfire/msg_draw.cpp": "a3902b2e192fe08ceca37bcd50dbd0174caa55e78754cec565739fe9ea04e1b6",
+ "sources/w10-actor-n-msg-draw-11spiderqueen/msg_draw.cpp": "2785033e74875828faafd2dc7cfc8e521d888aa2b27c35cf3a759e36fce0ca89",
+ "sources/w10-actor-n-msg-draw-8superorc/msg_draw.cpp": "074aa6fd8e152d552560e8490e698eac88390de3ee0d6d3a925a82e958565a8c",
+ "sources/w10-actor-n-msg-hurt-11spiderqueen/msg_hurt.cpp": "2b1090248239a6c0fc176e6b2d29238c1d4b23215f7991be285501790d8e53d5",
+ "sources/w10-actor-n-msg-hurt-8superorc/msg_hurt.cpp": "b076d1a02eabc567bb12512702de15b7d62e1e9c3efa4bd6ee860d58f3ecf542",
+ "sources/w10-actor-n-msg-run-10staticfire/msg_run.cpp": "9f0d2fc87955c1fb84f3cd5032fa7e2a97a599de30eb8aafb5eccddf2d94a0bf",
+ "sources/w10-actor-n-msg-run-11spiderqueen/msg_run.cpp": "0c6f3a370496b499df344903fa34b9ab68844acdb5537d05d7f4d7a81f7dd3d1",
+ "sources/w10-actor-n-msg-run-8superorc/msg_run.cpp": "873dbd96748b36e41d024a5a61f5c3a19ac858795f94a7ec783ef20a9e91763b",
+ "sources/w10-actor-n-msg-trigger-11spiderqueen/msg_trigger.cpp": "e6a0d74d58537071f80d65e9e3f25f8c8fc155404b6a04d6cd6d35385b7890e2",
+ "sources/w10-actor-n-msg-trigger-8superorc/msg_trigger.cpp": "a994bd96c9fcaaffe6c3847011a829350016d0b8ed0eff0da8b95fc233ec1352",
+ "sources/w10-actor-n-new-wind-10staticfire/new_wind.cpp": "82f0f6e63b3d75222fa3b5b41f379c748382e1621463a22b28f6c7ca66046920",
+ "sources/w10-actor-n-poke-6switch/poke.cpp": "4e906f888076fb7a9c239c028612c89af539bf4177ed872a24734b9fa6648437",
+ "sources/w10-actor-n-set-active-chunks-10teleporter/set_active_chunks.cpp": "57dcdc1854164220c66c2bb43e8f5a2ad71c7410b02ce65ab93e140760dd36c8",
+ "sources/w10-actor-n-set-state-11spiderqueen/set_state.cpp": "cecdfb7d66d299c034fa8611880a92d3c8dc4926ef6a792d37828e8e3c105798",
+ "sources/w10-actor-n-set-state-4soul/set_state.cpp": "9bc638a9edc6fbafde975acfe06d958eaba58280fe332b9c52cfec7866b703d5",
+ "sources/w10-actor-n-set-state-8superorc/set_state.cpp": "b819f721d0f6679d75cdc4f8a341d83cd671b5f0aab60d974215a14e5c8213db",
+ "sources/w10-actor-n-tf-10staticfire/typeinfo.cpp": "6d8e7ecf77dfe2ff17d050e1fadfcaa2c43fbee1ed009c4178438cd39ff35a44",
+ "sources/w10-actor-n-tf-11spiderqueen/typeinfo.cpp": "372e57323020a995725c2f1426fa451aeea9f78b443080ef2ef07a5dc78191a5",
+ "sources/w10-actor-n-tf-5torch/typeinfo.cpp": "67e1ca10a1c545deb5e741d6e91a334f2c5c489457db8690da0dcb9cf83bd4cf",
+ "sources/w10-actor-n-tf-6switch/typeinfo.cpp": "01d2fa6a81b0d80e095429c93a02707c75c4acc923536500e85fee95ec84e011",
+ "sources/w10-actor-n-tf-8superorc/typeinfo.cpp": "f1c028af8c78c70210b34a465a58b8a1085fb6aa21f610a3bab7673eee150976",
+ "sources/w10-actor-n-vt-6sparks/vtable.cpp": "ba24fe050150dc824e6026303ffd8e7f8179bc0d8417a366bb8d6ac5a2884d9e"
+}
+```
+
+No full partial build was run: the shared plan now has about 3,500 inputs and the brief asked for single-unit compiles. Each unit compiled alone with the reviewed `authored_cpp` flags, and an `ld -r` link of all my objects was used to list defined and unresolved symbols.
+
 ## Imports closed
 
 32 of the 32 names in the task list are now defined by my objects (checked with `ld -r` over all of them): `setState__4Souli`, `_vt$6Sparks`, `_$_11SpiderQueen`, `__tf11SpiderQueen`, `clone__11SpiderQueen`, `msg_draw__11SpiderQueen`, `msg_hurt__11SpiderQueenfP10GameObjecti`, `msg_run__11SpiderQueen`, `msg_trigger__11SpiderQueeni`, `setState__11SpiderQueeni`, `_$_10StaticFire`, `__tf10StaticFire`, `clone__10StaticFire`, `msg_draw__10StaticFire`, `msg_run__10StaticFire`, `newWind__10StaticFirei`, `_$_8SuperOrc`, `__tf8SuperOrc`, `clone__8SuperOrc`, `msg_draw__8SuperOrc`, `msg_hurt__8SuperOrcfP10GameObjecti`, `msg_run__8SuperOrc`, `msg_trigger__8SuperOrci`, `setState__8SuperOrci`, `_$_6Switch`, `__tf6Switch`, `clone__6Switch`, `msg_getPokeName__6SwitchPUsi`, `msg_poke__6Switchi`, `setActiveChunks__10Teleporter`, `_$_5Torch`, `__tf5Torch`.
@@ -176,3 +218,11 @@ Nothing has run on a PS2 or inside the game. Specifically not exercised by any r
   its own object. They are not the original storage, so any other reader of those addresses
   would see a different object; none was found in my scope.
 - `skills` (index 26) and `world` are read as in the original; they are other packages' data.
+
+## Summary
+
+- Imports closed: all 32 of 32 task-list names (setState__4Souli, _vt$6Sparks, _$_11SpiderQueen, ...).
+- Imports opened: 134 unresolved references from my objects (listed under "Imports opened"), none of which I define; three are file-local data objects of the original that need an integrator decision.
+- Build-plan entries needed: 32 entries and 33 `files` hashes, given above; none were added to shared files.
+- Authored but never executed: everything on the EE or in the game; see "Authored but never executed". Paired private-interpreter runs and host contracts passed for every unit.
+- Unknown: field and state meanings, the end-marker slot of the Sparks vtable, the `P_FaceSprite` and attachment argument meanings, the Soul state-23 matrix branch reachability, and the real ownership of the particle records and `levelName`/`skills` interior addresses.
