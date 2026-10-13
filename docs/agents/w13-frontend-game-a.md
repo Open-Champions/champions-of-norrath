@@ -130,4 +130,29 @@ which is not the console's truncating behaviour). Specifically not exercised: th
   zero, so a nine-digit price prints wrongly; the authored code reproduces that (observed, probably a defect).
 * Section placement of the two local tables follows the build profile rather than the original `.data` split.
 
+## Not closed, and why
+
+* `runStats__Fii` (0x001bcb38, 4508 bytes): read in full, not authored. Observed outline: arguments are a player and a
+  mode (1, 2 or 3); the screen record is `statsScreen + 116 * player`, whose word 13 names the player record shown;
+  mode 2 handles the level-up point allocation (text keys for the stat names, `printStat__FiPUsiiii`,
+  `msgInventoryAdjustAbility__Fii`, `updateCursor__FiiiiiP12screenStructi`, `engineRemoveTask__FPFv_v(statsFrame__Fv)`,
+  `givePlayerExperience__Fii`), modes 2 and 3 end in `statsRunSkillTree__Fi`, and mode 1 draws the statistics page
+  (health, energy, armour, damage and the four stats, `displayResistances__Fi`, `playerRecomputeAbilityModifiers__Fv`).
+  The cursor bob uses the soft-double routines (`litodp`, `dpmul`, `fptodp`, `dpadd`, `sin`, `dptoli`) through 64-bit
+  register values, and the page uses `usprintf` with eight float arguments and about forty text keys. Authoring it
+  needs the same treatment as `do_driveline` (declare the soft-double routines as `unsigned long long` functions) and
+  every key string read from the image. Nothing was written because of its size next to the rest of the package.
+* `megatileGenerate__FP12_worldHeader` (19,680 bytes), `routePlot__FR10RouteQueue` (19,812 bytes) and
+  `msg_run__6Player` (27,496 bytes): not started. Each is several times larger than anything authored here and needs
+  its own bounded task; none has an authored partial source in the snapshot. They remain unresolved imports.
+
+## Honest corrections to commit messages
+
+Four commit messages quote mutation counts that were loosely tallied while the checks were still being extended:
+`Add getPic`, `Add lumpPartialLoad`, `Add drawNewestQuickSpellMenu` and `Add host check for MC_CheckPlayerImportOrChange`.
+The accurate statement is the one in this file: every single-line source mutation that was not equivalent (or a
+match inside a header comment) was caught by the final committed checks; the checks were extended once after a first
+round of mutations left a few cases undetected (boundary values in the quick-spell fade and the item-prefix digit
+trimming, among others). `Add lumpPartialLoad` was followed by a fix commit because its first check failed in one
+case (stale lump records left by an earlier case); every later commit was gated on its check passing.
 
