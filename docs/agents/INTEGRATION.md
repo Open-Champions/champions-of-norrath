@@ -8249,3 +8249,25 @@ Closed: `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_11VampireLord`, `_$_14WoodElfS
 
 Opened: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`, `__7CritterPcG6Point3sPPc`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11VampireLord`, `_vt$14WoodElfSoldier`, `_vt$7Weather`, `_vt$7WebTrap`, `_vt$9WaveMaker`, `batParams`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`, `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`, `doWavelet__9WaveMakerP6Point3P8Matrix33i`, `dptoli`, `getWaveletMat__9WaveMakerifP8Matrix33`, `range`, `smokeParticle`, `splashInfoBits`, `waveFroth`, `waveMainAlternate`, `waveMainParticle`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`
 - 2026-10-13 03:29 CDT — `agents/w10-actor-p` — 1008 unresolved imports
+
+## agents/w10-camveh-a
+
+Merged (merge commit, branch tip `fc73e09e`, 2 hours old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (25 function bodies) with fresh `input_order` values 4383
+through 4413. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 30 under `-Werror`, 2 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4412 authored inputs, 3356 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The notes use different headings (Observed/inferred/unknown, Imports, Build-plan entries, Authored but never executed, Blockers) instead of the five standard ones, so the package is merged as partial under the tip-age rule (tip over two hours old); every selected unit has a committed check, and the 33 closed names include a few that this branch's data units define.
+
+| | |
+|---|---|
+| Before | 1008 |
+| After | 985 |
+| Closed | 33 |
+| Opened | 10 |
+
+Closed: `FinalizePosition__5Wheel`, `GetSaveFootPrint__6Camera`, `Load__6CameraPc`, `__17VehicleBodySphereP7Vehicleff`, `_vt$4Boat`, `addWheel__7VehiclePciffff`, `backupJustForces__7Vehicle`, `buildCollisionBox__7Vehicle`, `changeOrientation__7VehicleG6Point3`, `clipFrustumNormalSign`, `determineBestController__6Camera`, `doAutoPitch__6Camera`, `doDifferential__7Vehicle`, `doUserYaw__6Camera`, `doUserZoom__6Camera`, `dualImpulse__7VehicleP7VehicleT1P6Point3T3`, `enforceMaxSpeed__6CameraP6Point3`, `gameMaxCamHeight`, `gameMinCamHeight`, `getBlockingVehicle__7VehiclePf`, `getEngineTorque__7Vehicle`, `getParticleVelocity__7VehicleP6Point3`, `impulse__7VehicleP6Point3N21fii`, `obtainTarget__6CameraP6Point3`, `originalPos`, `originalYaw`, `pitchTab`, `rayHit__7VehicleP6Point3T1fT1`, `resolveCreatureCollisions__7Vehicle`, `scalePatchLimit__7VehicleiP6Point3`, `setMassAndIBody__7Vehicle`, `worldClipFrustum`, `worldTransformFrustum__FP8Matrix34`
+
+Opened: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`, `_vt$17VehicleBodySphere`, `addImpulse__7VehicleP6Point3T1i`, `clampZoomMag__6Camera`, `fastestRotDirection__FssPi`, `halfFrustumMode`, `matUntransform34Vec__FP6Point3P8Matrix34T0`, `shite`

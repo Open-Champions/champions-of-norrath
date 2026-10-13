@@ -55849,6 +55849,410 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-actor-p-tf-9wavemaker/typeinfo.cpp"
+    },
+    {
+      "input_order": 4383,
+      "component": "w10-camveh-a-add-wheel",
+      "object_name": "w10_camveh_a_add_wheel.o",
+      "private_object_sha256": "19a14ef61b9debcbb6206b995f87c573fa22ed4e26bc084a10791c629622a531",
+      "emitted_functions": [
+        {
+          "name": "addWheel__7VehiclePciffff",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-add-wheel/add_wheel.cpp"
+    },
+    {
+      "input_order": 4384,
+      "component": "w10-camveh-a-backup-just-forces",
+      "object_name": "w10_camveh_a_backup_just_forces.o",
+      "private_object_sha256": "d80c81bdf90bde9609670766730084707764a1382c0c68fb82ad2be825036d92",
+      "emitted_functions": [
+        {
+          "name": "backupJustForces__7Vehicle",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-backup-just-forces/backup_just_forces.cpp"
+    },
+    {
+      "input_order": 4385,
+      "component": "w10-camveh-a-build-collision-box",
+      "object_name": "w10_camveh_a_build_collision_box.o",
+      "private_object_sha256": "92aa004cac00508b6856f2d41304b43b453f2cef10014febb284ee93081b9b6e",
+      "emitted_functions": [
+        {
+          "name": "buildCollisionBox__7Vehicle",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-build-collision-box/build_collision_box.cpp"
+    },
+    {
+      "input_order": 4386,
+      "component": "w10-camveh-a-camera-load",
+      "object_name": "w10_camveh_a_camera_load.o",
+      "private_object_sha256": "9d1d166b7557c966e5ebbcbbbe58b5d6a241406a5bb539328b868e2cb1a2c74d",
+      "emitted_functions": [
+        {
+          "name": "Load__6CameraPc",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-camera-load/camera_load.cpp"
+    },
+    {
+      "input_order": 4387,
+      "component": "w10-camveh-a-change-orientation",
+      "object_name": "w10_camveh_a_change_orientation.o",
+      "private_object_sha256": "887fb2ea85ae4e7fb0fd2ab4a3ce0e918b17289fb7d473f9d73b7b0530233e06",
+      "emitted_functions": [
+        {
+          "name": "changeOrientation__7VehicleG6Point3",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-change-orientation/change_orientation.cpp"
+    },
+    {
+      "input_order": 4388,
+      "component": "w10-camveh-a-determine-best-controller",
+      "object_name": "w10_camveh_a_determine_best_controller.o",
+      "private_object_sha256": "e19adb2866227b0dfc7c74bdf432fbbf17f465b1278c7859b689e8e56df5e809",
+      "emitted_functions": [
+        {
+          "name": "determineBestController__6Camera",
+          "compiled_body_bytes": 796
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-determine-best-controller/determine_best_controller.cpp"
+    },
+    {
+      "input_order": 4389,
+      "component": "w10-camveh-a-do-auto-pitch",
+      "object_name": "w10_camveh_a_do_auto_pitch.o",
+      "private_object_sha256": "85fa29ba38d842716624c03b0186e0aa731a4004f94368261f32fce5eb6d718d",
+      "emitted_functions": [
+        {
+          "name": "doAutoPitch__6Camera",
+          "compiled_body_bytes": 1992
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-do-auto-pitch/do_auto_pitch.cpp"
+    },
+    {
+      "input_order": 4390,
+      "component": "w10-camveh-a-do-differential",
+      "object_name": "w10_camveh_a_do_differential.o",
+      "private_object_sha256": "5ee78b7b420e961770e5f98b743a12a0c6b1899819ec71607f44f3f5b5406869",
+      "emitted_functions": [
+        {
+          "name": "doDifferential__7Vehicle",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-do-differential/do_differential.cpp"
+    },
+    {
+      "input_order": 4391,
+      "component": "w10-camveh-a-do-user-yaw",
+      "object_name": "w10_camveh_a_do_user_yaw.o",
+      "private_object_sha256": "ade1900a475fd0df283258eac185f565ae815653b0087c58181ecec7dd5c72cf",
+      "emitted_functions": [
+        {
+          "name": "doUserYaw__6Camera",
+          "compiled_body_bytes": 1604
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-do-user-yaw/do_user_yaw.cpp"
+    },
+    {
+      "input_order": 4392,
+      "component": "w10-camveh-a-do-user-zoom",
+      "object_name": "w10_camveh_a_do_user_zoom.o",
+      "private_object_sha256": "3e6bdc2fbf187d713ff6bd86ca3956f6aa92dd2f2692bd46da4bd537cb5985ef",
+      "emitted_functions": [
+        {
+          "name": "doUserZoom__6Camera",
+          "compiled_body_bytes": 1264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-do-user-zoom/do_user_zoom.cpp"
+    },
+    {
+      "input_order": 4393,
+      "component": "w10-camveh-a-dual-impulse",
+      "object_name": "w10_camveh_a_dual_impulse.o",
+      "private_object_sha256": "d39c9a4212cf79ad7156c1927b337a1f696fe418b3fc5a97cc091a0604d48657",
+      "emitted_functions": [
+        {
+          "name": "dualImpulse__7VehicleP7VehicleT1P6Point3T3",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-dual-impulse/dual_impulse.cpp"
+    },
+    {
+      "input_order": 4394,
+      "component": "w10-camveh-a-enforce-max-speed",
+      "object_name": "w10_camveh_a_enforce_max_speed.o",
+      "private_object_sha256": "eb59f32baeccbbf1c5cbabe49ec8161e54b8e14c22e86e91c97c28493b2662b0",
+      "emitted_functions": [
+        {
+          "name": "enforceMaxSpeed__6CameraP6Point3",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-enforce-max-speed/enforce_max_speed.cpp"
+    },
+    {
+      "input_order": 4395,
+      "component": "w10-camveh-a-get-blocking-vehicle",
+      "object_name": "w10_camveh_a_get_blocking_vehicle.o",
+      "private_object_sha256": "ac47d0239c913222c5064d598606c195c30f4b1c92626fc439964863bc558ee1",
+      "emitted_functions": [
+        {
+          "name": "getBlockingVehicle__7VehiclePf",
+          "compiled_body_bytes": 580
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-get-blocking-vehicle/get_blocking_vehicle.cpp"
+    },
+    {
+      "input_order": 4396,
+      "component": "w10-camveh-a-get-engine-torque",
+      "object_name": "w10_camveh_a_get_engine_torque.o",
+      "private_object_sha256": "eed3d929c008e78583be6eb476d3c9614b974c2b9699a6b3043dcd427261c64b",
+      "emitted_functions": [
+        {
+          "name": "getEngineTorque__7Vehicle",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-get-engine-torque/get_engine_torque.cpp"
+    },
+    {
+      "input_order": 4397,
+      "component": "w10-camveh-a-get-particle-velocity",
+      "object_name": "w10_camveh_a_get_particle_velocity.o",
+      "private_object_sha256": "507ee549969d6c6bff1f8ad78c905192b80afcdcb69bc77f40f817b015a57402",
+      "emitted_functions": [
+        {
+          "name": "getParticleVelocity__7VehicleP6Point3",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-get-particle-velocity/get_particle_velocity.cpp"
+    },
+    {
+      "input_order": 4398,
+      "component": "w10-camveh-a-get-save-foot-print",
+      "object_name": "w10_camveh_a_get_save_foot_print.o",
+      "private_object_sha256": "c935fe1c13a71b14d2135944f77776af1cd008d2ef885900558ca2375f2ce29b",
+      "emitted_functions": [
+        {
+          "name": "GetSaveFootPrint__6Camera",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-get-save-foot-print/get_save_foot_print.cpp"
+    },
+    {
+      "input_order": 4399,
+      "component": "w10-camveh-a-impulse",
+      "object_name": "w10_camveh_a_impulse.o",
+      "private_object_sha256": "51a3d87930f943e29e0fab1731bc5ce9346e50d5b5e5552b92b810dccc08c4ef",
+      "emitted_functions": [
+        {
+          "name": "impulse__7VehicleP6Point3N21fii",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-impulse/impulse.cpp"
+    },
+    {
+      "input_order": 4400,
+      "component": "w10-camveh-a-obtain-target",
+      "object_name": "w10_camveh_a_obtain_target.o",
+      "private_object_sha256": "418fee8b012a5e4b8e6c7efb508db2bb3c955d16f727eca40a2d2166cc70355b",
+      "emitted_functions": [
+        {
+          "name": "obtainTarget__6CameraP6Point3",
+          "compiled_body_bytes": 1748
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-obtain-target/obtain_target.cpp"
+    },
+    {
+      "input_order": 4401,
+      "component": "w10-camveh-a-ray-hit",
+      "object_name": "w10_camveh_a_ray_hit.o",
+      "private_object_sha256": "e4bee0f507076581642a907ceab32c7448fadbc442da55867dc1fac593062ce1",
+      "emitted_functions": [
+        {
+          "name": "rayHit__7VehicleP6Point3T1fT1",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-ray-hit/ray_hit.cpp"
+    },
+    {
+      "input_order": 4402,
+      "component": "w10-camveh-a-resolve-creature-collisions",
+      "object_name": "w10_camveh_a_resolve_creature_collisions.o",
+      "private_object_sha256": "bf80ba7381c5c2a61acb4c89aa62958f65292cf791e392efb62bd8e171a21f0d",
+      "emitted_functions": [
+        {
+          "name": "resolveCreatureCollisions__7Vehicle",
+          "compiled_body_bytes": 1280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-resolve-creature-collisions/resolve_creature_collisions.cpp"
+    },
+    {
+      "input_order": 4403,
+      "component": "w10-camveh-a-scale-patch-limit",
+      "object_name": "w10_camveh_a_scale_patch_limit.o",
+      "private_object_sha256": "8303fddefe9943cfb3e0990c2601feae440b655c17618123d40a528fdae539ad",
+      "emitted_functions": [
+        {
+          "name": "scalePatchLimit__7VehicleiP6Point3",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-scale-patch-limit/scale_patch_limit.cpp"
+    },
+    {
+      "input_order": 4404,
+      "component": "w10-camveh-a-set-mass-and-ibody",
+      "object_name": "w10_camveh_a_set_mass_and_ibody.o",
+      "private_object_sha256": "0effb3726167e6457fcfb8825051799dca2969b4841ec7b8b01003aa31134142",
+      "emitted_functions": [
+        {
+          "name": "setMassAndIBody__7Vehicle",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-set-mass-and-ibody/set_mass_and_ibody.cpp"
+    },
+    {
+      "input_order": 4405,
+      "component": "w10-camveh-a-storage-cam-height",
+      "object_name": "w10_camveh_a_storage_cam_height.o",
+      "private_object_sha256": "358a6ae2da99a001a801117be54a5656e25d0945af8e33877c9318f641492686",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-storage-cam-height/storage.cpp"
+    },
+    {
+      "input_order": 4406,
+      "component": "w10-camveh-a-storage-clip-normal-sign",
+      "object_name": "w10_camveh_a_storage_clip_normal_sign.o",
+      "private_object_sha256": "1d8f08b1e19338c0c02824f2a3e8f1672e64dc5c43a88766d58664ba8b58088c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-storage-clip-normal-sign/storage.cpp"
+    },
+    {
+      "input_order": 4407,
+      "component": "w10-camveh-a-storage-original-net",
+      "object_name": "w10_camveh_a_storage_original_net.o",
+      "private_object_sha256": "1e1821428e766b816e6ba3e9b09470fb7a758f4a9f3196e48960a9de45216a11",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-storage-original-net/storage.cpp"
+    },
+    {
+      "input_order": 4408,
+      "component": "w10-camveh-a-storage-pitch-tab",
+      "object_name": "w10_camveh_a_storage_pitch_tab.o",
+      "private_object_sha256": "45e9d7ab9f81e7551c19bc499620ce26463bb4ca8f51270c7997abe6119b2d38",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-storage-pitch-tab/storage.cpp"
+    },
+    {
+      "input_order": 4409,
+      "component": "w10-camveh-a-storage-world-clip-frustum",
+      "object_name": "w10_camveh_a_storage_world_clip_frustum.o",
+      "private_object_sha256": "f977f605f574cbfa5b64339531dbf6d2ca6b649e50c512b6ce8a718163e689e2",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-storage-world-clip-frustum/storage.cpp"
+    },
+    {
+      "input_order": 4410,
+      "component": "w10-camveh-a-vehicle-body-sphere",
+      "object_name": "w10_camveh_a_vehicle_body_sphere.o",
+      "private_object_sha256": "f80bdd25dbc30de557bc95ea145a1f2f81e144c7605b76fbb1a016e87a90c52c",
+      "emitted_functions": [
+        {
+          "name": "__17VehicleBodySphereP7Vehicleff",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-vehicle-body-sphere/vehicle_body_sphere.cpp"
+    },
+    {
+      "input_order": 4411,
+      "component": "w10-camveh-a-vt-boat",
+      "object_name": "w10_camveh_a_vt_boat.o",
+      "private_object_sha256": "87a112a688e378a1f7aacde32a2e4a259a046bbee85b5987ce5f76cd4d08d9b9",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-vt-boat/vt_boat.cpp"
+    },
+    {
+      "input_order": 4412,
+      "component": "w10-camveh-a-wheel-finalize-position",
+      "object_name": "w10_camveh_a_wheel_finalize_position.o",
+      "private_object_sha256": "026544f11e598ae9914eb0e2f544a537d98a0852d32ac80642d27bdcad660882",
+      "emitted_functions": [
+        {
+          "name": "FinalizePosition__5Wheel",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-wheel-finalize-position/finalize_position.cpp"
+    },
+    {
+      "input_order": 4413,
+      "component": "w10-camveh-a-world-transform-frustum",
+      "object_name": "w10_camveh_a_world_transform_frustum.o",
+      "private_object_sha256": "38283b7bdc06bf22606229f9ca73d92e4700ee1af18d5099f18f244c0474e791",
+      "emitted_functions": [
+        {
+          "name": "worldTransformFrustum__FP8Matrix34",
+          "compiled_body_bytes": 1008
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-camveh-a-world-transform-frustum/world_transform_frustum.cpp"
     }
   ],
   "drafts": [
@@ -60394,6 +60798,70 @@
     "sources/w10-audio-a-sound-start-music-id/sound_start_music_id.cpp": "a9e38b8b6e2eaa053e1f91f8071043657dca4da5292cddafc22c6b8d8272f447",
     "sources/w10-audio-a-stream-state/host_contract.cpp": "b54051750dfd0114fec9e58c3e81fe0182c924781704c931e1173dd79efba2cb",
     "sources/w10-audio-a-stream-state/stream_state.cpp": "84e53f96c731446c5b2b68d6f6b4102321db138a974c07ca539e1cd50065be09",
+    "sources/w10-camveh-a-add-wheel/add_wheel.cpp": "33f2baaedffaad7f50c829e524a6d085c8676ee398e4f012df370acec9d4046f",
+    "sources/w10-camveh-a-add-wheel/host_check.cpp": "85706c6436bdc811bbe7109cf78879f3f384e2299424ea8237d48ffcc7f04529",
+    "sources/w10-camveh-a-backup-just-forces/backup_just_forces.cpp": "7571f7fa9aebbea17c044439538e65c166595e2ba6cddcd56a6b537f9d7a0f71",
+    "sources/w10-camveh-a-backup-just-forces/host_check.cpp": "c5e130db473d82b4c6c75362977a4376517e39c88019139269f4f083ad570373",
+    "sources/w10-camveh-a-build-collision-box/build_collision_box.cpp": "2df0ee18da98adec6658f403301b4a1ef0f9f1d777766d0a5cd250f1d7dedd1b",
+    "sources/w10-camveh-a-build-collision-box/host_check.cpp": "4c0aa2fe75333adda77908488338b5072db512111ca5464f08d4e91fd5a14aca",
+    "sources/w10-camveh-a-camera-load/camera_load.cpp": "803653dac5a75499dc7d2c36581a955ca6300f7150ddc9b881716009567149bf",
+    "sources/w10-camveh-a-camera-load/host_check.cpp": "96328a0ef4a25b9e632fa1935e4574bc8a7e0477b15406de9fa8b63986d4ce2e",
+    "sources/w10-camveh-a-change-orientation/change_orientation.cpp": "e01b6fe4d3c47499d5433b88e2ea444e21439957b8a41b75a04875604f9b6e77",
+    "sources/w10-camveh-a-change-orientation/host_check.cpp": "70cb95252b8889cf27b68dd9a1c928d4a5fa0e0e51d1302b70172f861caaf78c",
+    "sources/w10-camveh-a-check-yaw-reset/check_yaw_reset.cpp": "7eab8585e85cb2bf0adbe10654410cbb2233889c0f49cb5a26c71707112f1f57",
+    "sources/w10-camveh-a-check-yaw-reset/host_check.cpp": "1311668d45502457726694c3a82ce59949cd3f422351b844ac6d616fd34c61f9",
+    "sources/w10-camveh-a-determine-best-controller/determine_best_controller.cpp": "6e4a79cf0285ddcf94be2f3a6642ff7d3ab806633da1381b0ce3a57197ce07d3",
+    "sources/w10-camveh-a-determine-best-controller/host_check.cpp": "41c311642e4eb83cc14c8e3ed938a9646d5c15adeda5bd144dd7cbd6aaccbc93",
+    "sources/w10-camveh-a-do-auto-pitch/do_auto_pitch.cpp": "49f199d6c62229105ce8df8986e0bbea9985b53cc6220b6db0710e6981d4888c",
+    "sources/w10-camveh-a-do-auto-pitch/host_check.cpp": "20668e791a7738122cd11f0adb96cecd044d072b73e4239b7ae8605d3ad11efd",
+    "sources/w10-camveh-a-do-differential/do_differential.cpp": "54735434d35bb4f3918002dadf8234f87bdc4f8185fca495983ef8c584211a6b",
+    "sources/w10-camveh-a-do-differential/host_check.cpp": "0d58ef15129d31e828cd9610319fffa901995e357dd743f8364a0e1bfd882283",
+    "sources/w10-camveh-a-do-user-yaw/do_user_yaw.cpp": "c144140d0586983fb1f2158a02ab638cba47625e4e481f7be33a83f3e768f94e",
+    "sources/w10-camveh-a-do-user-yaw/host_check.cpp": "bfd51d6af148b53155d42a3201a6b48eb184effa9fb42e76509cad4a6a05ab8f",
+    "sources/w10-camveh-a-do-user-zoom/do_user_zoom.cpp": "e30bf896fd8708e4df808b9b1dceb40bd44c0ef10129530c5b28d39c73b07f9b",
+    "sources/w10-camveh-a-do-user-zoom/host_check.cpp": "fb59a2ee0b1d913e30bd88b300749487bbe0cc94f37d554d1510b7c2ca3ab3f0",
+    "sources/w10-camveh-a-dual-impulse/dual_impulse.cpp": "46d5a555488122b98a98c5ba71741a5f34235af5a95fcd115b4375bb5fac92e3",
+    "sources/w10-camveh-a-dual-impulse/host_check.cpp": "514df5cd0f6f74fe6d409cdcf5863493cfaabc6f3b53bcc052e4f3335088adaf",
+    "sources/w10-camveh-a-enforce-max-speed/enforce_max_speed.cpp": "5706950ce949005a8503ed3387279c4b85d66e08527ce9b4432c1eec95816642",
+    "sources/w10-camveh-a-enforce-max-speed/host_check.cpp": "3f75a0706637fc5fdb337cd50469ff9ce76448e5f25a502bac0448f96feffde5",
+    "sources/w10-camveh-a-get-blocking-vehicle/get_blocking_vehicle.cpp": "f6af66e69f91006b0320fce45ecb5241ae61469674ae1daaa58b320d89c89de9",
+    "sources/w10-camveh-a-get-blocking-vehicle/host_check.cpp": "52c06970fc9c24fc3d78ab93b990a50264117d922ce1572c2a38926145216138",
+    "sources/w10-camveh-a-get-engine-torque/get_engine_torque.cpp": "d2047dbb887fa04210864325e8449298493bb2bc71363707d444164063da22bf",
+    "sources/w10-camveh-a-get-engine-torque/host_check.cpp": "9e49ba563132a2b5302aabef1a28b38f84fbdfa5a5cf78af4e53e6e21278cf98",
+    "sources/w10-camveh-a-get-particle-velocity/get_particle_velocity.cpp": "788da19d0cb7d8b36278be88f01256959b5789bbcdc490a7f56027cfa22bc106",
+    "sources/w10-camveh-a-get-particle-velocity/host_check.cpp": "518c115b8dd32196baf8d946028c6f6a90e92299ae933c180af7b2186be229a1",
+    "sources/w10-camveh-a-get-save-foot-print/get_save_foot_print.cpp": "c27c5463df7dc68e03350ea1a2a269c0b139f6878c4c005d2a7ff87e0e05512d",
+    "sources/w10-camveh-a-get-save-foot-print/host_check.cpp": "2767a3bf5c53b0f43d31e0fc52d5ac739889d3760a0ec4b39663d890c2eaab4c",
+    "sources/w10-camveh-a-impulse/host_check.cpp": "ebe63a018547371da731d55a4314c296db931ee3baff7380bc05d005731d5744",
+    "sources/w10-camveh-a-impulse/impulse.cpp": "3d5b769bd95d348ebc78f3ee537a35ac0ba631cfc839bda42a168fded4ec32e5",
+    "sources/w10-camveh-a-obtain-target/host_check.cpp": "7ddefbf6b2c0957213ad2559b1cfe27933190171db119364d94c8541c0d3639b",
+    "sources/w10-camveh-a-obtain-target/obtain_target.cpp": "ba3f818aa7e4246419509c4a381a8e1efed8bea91918bd5f1d6d39121616444a",
+    "sources/w10-camveh-a-ray-hit/host_check.cpp": "60575c236ff867d782224ca9f90c27fc791dfd6c286f4156c600fa71018ee03a",
+    "sources/w10-camveh-a-ray-hit/ray_hit.cpp": "4b13d92b551e99ddd4dea51ff2424adf0a1245f2ebfa85728629c453b59c1a36",
+    "sources/w10-camveh-a-resolve-creature-collisions/host_check.cpp": "40408f9fa2297f5cab8e3c6223da8ccb149e81a2d054f784d9fbbfbaf2e69cd6",
+    "sources/w10-camveh-a-resolve-creature-collisions/resolve_creature_collisions.cpp": "8fee82378f14e2c036b1282a573840183cd455d2ca40e995483123f758434ae5",
+    "sources/w10-camveh-a-scale-patch-limit/host_check.cpp": "8ad1a6bf1a3316cc759d89255ac553ad0876a855aae8fa2613cb0128f6bce441",
+    "sources/w10-camveh-a-scale-patch-limit/scale_patch_limit.cpp": "8b85d80204223318c97885db911f10f07e899eacdbadda76869e418e07c2b778",
+    "sources/w10-camveh-a-set-mass-and-ibody/host_check.cpp": "09bcfbd607e3a9aa152116ae2a7285ec618b81dc50afa29a3dd9df658a8f97e8",
+    "sources/w10-camveh-a-set-mass-and-ibody/set_mass_and_ibody.cpp": "4cd1db030b98da53424fb3824e4ff8411aa68abe91eee9a89656c3860085d31e",
+    "sources/w10-camveh-a-storage-cam-height/host_check.cpp": "8e4002f08be0528db04d2cd5900719154e4d657832a6192ba3b1118cb0e0a5ca",
+    "sources/w10-camveh-a-storage-cam-height/storage.cpp": "57ea782f351f1bc762519a4723a78ad763303800af3f6afba7a977e1e3f122b2",
+    "sources/w10-camveh-a-storage-clip-normal-sign/host_check.cpp": "ba1402e8b0a5468d8ac6d0379f1e136b6399f50aa82f3b8284aa4a3835268992",
+    "sources/w10-camveh-a-storage-clip-normal-sign/storage.cpp": "bb3fc8dd22e5f6b1534975ce82b9edf802d4569c8dfaf4d6d5f46323f0416812",
+    "sources/w10-camveh-a-storage-original-net/host_check.cpp": "df94c23692335be4fdc93d92a5e9246c749048fe206bf279c28806dd3df2f4bf",
+    "sources/w10-camveh-a-storage-original-net/storage.cpp": "614d14f538cf651ce71e2dfe57cdcb5750809df5b9ec92e94353cb3cd3fc68f1",
+    "sources/w10-camveh-a-storage-pitch-tab/host_check.cpp": "b6a92191b8b71e256e51593c2761de2f73f0c2d14055682a7f5cbe9004064d97",
+    "sources/w10-camveh-a-storage-pitch-tab/storage.cpp": "a0412434ec608172c3e8df8fd8ffd1c259906640202e505bdf69b092b81c9b3f",
+    "sources/w10-camveh-a-storage-world-clip-frustum/host_check.cpp": "0491c2bc9b6a63091098de58da65a33fdc42041bab6ea694ea2901a75a7364b4",
+    "sources/w10-camveh-a-storage-world-clip-frustum/storage.cpp": "0a3b8075dcc0e0ec607a7b3ac017caf1ae1df3a29b46a22de218aa5641db8ed4",
+    "sources/w10-camveh-a-vehicle-body-sphere/host_check.cpp": "02c722628189df8c43ce0379adfca7dc5b568971eb3a9487317bd911e5586512",
+    "sources/w10-camveh-a-vehicle-body-sphere/vehicle_body_sphere.cpp": "b38f1ee3e96dcbb40fd5425b6a9cdf8bc7ae9410e55a7699fb29e3f587838485",
+    "sources/w10-camveh-a-vt-boat/host_check.cpp": "ce9abd6340e7808fc3efc1ed1c3aabc41530087bdf2838783cd856cc0165cc5b",
+    "sources/w10-camveh-a-vt-boat/vt_boat.cpp": "6c8956661d5ff2a60cf33507ea71e5507714871f30a8d9026532019a829eaab9",
+    "sources/w10-camveh-a-wheel-finalize-position/finalize_position.cpp": "28b63cec31e8e4053b47287abfc3438a9b1b6082df6f5a8d2ae0fe1ca3082ee9",
+    "sources/w10-camveh-a-wheel-finalize-position/host_check.cpp": "29df200d86ba4836fea77e15d8c73bdb284c93268fb3affc42cdb669a9fddaf8",
+    "sources/w10-camveh-a-world-transform-frustum/host_check.cpp": "3571d6fedc4f1ecc2327d322d3355f89f2f7c4000d906ccf0e3cba1cc04e19a0",
+    "sources/w10-camveh-a-world-transform-frustum/world_transform_frustum.cpp": "bb55f95fc32a301c764c4c5b1c77e62a6568179a4c6e1f62d61df850b731ad3e",
     "sources/w10-front-a-ascii-tables/ascii_tables.cpp": "0af701afb51a60b34ec553a156743e42211e5f571c7fa70609bce6c9283d702f",
     "sources/w10-front-a-ascii-tables/host_contract.cpp": "14545171f0558c3bfeded069fe69a12c6bba85c6bfadcbc4aa1f0a080f8c0663",
     "sources/w10-front-a-browser-flags/browser_flags.cpp": "d70cc837a2dabb540b2f8452c95a9638ef7ee4e60510b4c2ddf4d30023553cc4",
@@ -65670,11 +66138,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 4383,
-    "authored_default_inputs": 4381,
+    "selected_inputs": 4414,
+    "authored_default_inputs": 4412,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3333,
-    "compiled_body_bytes_from_accepted_inputs": 1509140,
+    "emitted_function_definitions_including_helpers": 3358,
+    "compiled_body_bytes_from_accepted_inputs": 1524600,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -65687,7 +66155,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4070
+    "package_selected_inputs": 4101
   },
   "startup_implementations": [
     {
@@ -129250,6 +129718,503 @@
       ],
       "host_files": [
         "sources/w10-actor-p-tf-9wavemaker/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-add-wheel/add_wheel.cpp",
+      "source_sha256": "33f2baaedffaad7f50c829e524a6d085c8676ee398e4f012df370acec9d4046f",
+      "object_sha256": "19a14ef61b9debcbb6206b995f87c573fa22ed4e26bc084a10791c629622a531",
+      "emitted_functions": [
+        {
+          "name": "addWheel__7VehiclePciffff",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-add-wheel/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-backup-just-forces/backup_just_forces.cpp",
+      "source_sha256": "7571f7fa9aebbea17c044439538e65c166595e2ba6cddcd56a6b537f9d7a0f71",
+      "object_sha256": "d80c81bdf90bde9609670766730084707764a1382c0c68fb82ad2be825036d92",
+      "emitted_functions": [
+        {
+          "name": "backupJustForces__7Vehicle",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-backup-just-forces/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-build-collision-box/build_collision_box.cpp",
+      "source_sha256": "2df0ee18da98adec6658f403301b4a1ef0f9f1d777766d0a5cd250f1d7dedd1b",
+      "object_sha256": "92aa004cac00508b6856f2d41304b43b453f2cef10014febb284ee93081b9b6e",
+      "emitted_functions": [
+        {
+          "name": "buildCollisionBox__7Vehicle",
+          "compiled_body_bytes": 452
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-build-collision-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-camera-load/camera_load.cpp",
+      "source_sha256": "803653dac5a75499dc7d2c36581a955ca6300f7150ddc9b881716009567149bf",
+      "object_sha256": "9d1d166b7557c966e5ebbcbbbe58b5d6a241406a5bb539328b868e2cb1a2c74d",
+      "emitted_functions": [
+        {
+          "name": "Load__6CameraPc",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-camera-load/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-change-orientation/change_orientation.cpp",
+      "source_sha256": "e01b6fe4d3c47499d5433b88e2ea444e21439957b8a41b75a04875604f9b6e77",
+      "object_sha256": "887fb2ea85ae4e7fb0fd2ab4a3ce0e918b17289fb7d473f9d73b7b0530233e06",
+      "emitted_functions": [
+        {
+          "name": "changeOrientation__7VehicleG6Point3",
+          "compiled_body_bytes": 188
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-change-orientation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-determine-best-controller/determine_best_controller.cpp",
+      "source_sha256": "6e4a79cf0285ddcf94be2f3a6642ff7d3ab806633da1381b0ce3a57197ce07d3",
+      "object_sha256": "e19adb2866227b0dfc7c74bdf432fbbf17f465b1278c7859b689e8e56df5e809",
+      "emitted_functions": [
+        {
+          "name": "determineBestController__6Camera",
+          "compiled_body_bytes": 796
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-determine-best-controller/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-do-auto-pitch/do_auto_pitch.cpp",
+      "source_sha256": "49f199d6c62229105ce8df8986e0bbea9985b53cc6220b6db0710e6981d4888c",
+      "object_sha256": "85fa29ba38d842716624c03b0186e0aa731a4004f94368261f32fce5eb6d718d",
+      "emitted_functions": [
+        {
+          "name": "doAutoPitch__6Camera",
+          "compiled_body_bytes": 1992
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-do-auto-pitch/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-do-differential/do_differential.cpp",
+      "source_sha256": "54735434d35bb4f3918002dadf8234f87bdc4f8185fca495983ef8c584211a6b",
+      "object_sha256": "5ee78b7b420e961770e5f98b743a12a0c6b1899819ec71607f44f3f5b5406869",
+      "emitted_functions": [
+        {
+          "name": "doDifferential__7Vehicle",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-do-differential/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-do-user-yaw/do_user_yaw.cpp",
+      "source_sha256": "c144140d0586983fb1f2158a02ab638cba47625e4e481f7be33a83f3e768f94e",
+      "object_sha256": "ade1900a475fd0df283258eac185f565ae815653b0087c58181ecec7dd5c72cf",
+      "emitted_functions": [
+        {
+          "name": "doUserYaw__6Camera",
+          "compiled_body_bytes": 1604
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-do-user-yaw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-do-user-zoom/do_user_zoom.cpp",
+      "source_sha256": "e30bf896fd8708e4df808b9b1dceb40bd44c0ef10129530c5b28d39c73b07f9b",
+      "object_sha256": "3e6bdc2fbf187d713ff6bd86ca3956f6aa92dd2f2692bd46da4bd537cb5985ef",
+      "emitted_functions": [
+        {
+          "name": "doUserZoom__6Camera",
+          "compiled_body_bytes": 1264
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-do-user-zoom/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-dual-impulse/dual_impulse.cpp",
+      "source_sha256": "46d5a555488122b98a98c5ba71741a5f34235af5a95fcd115b4375bb5fac92e3",
+      "object_sha256": "d39c9a4212cf79ad7156c1927b337a1f696fe418b3fc5a97cc091a0604d48657",
+      "emitted_functions": [
+        {
+          "name": "dualImpulse__7VehicleP7VehicleT1P6Point3T3",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-dual-impulse/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-enforce-max-speed/enforce_max_speed.cpp",
+      "source_sha256": "5706950ce949005a8503ed3387279c4b85d66e08527ce9b4432c1eec95816642",
+      "object_sha256": "eb59f32baeccbbf1c5cbabe49ec8161e54b8e14c22e86e91c97c28493b2662b0",
+      "emitted_functions": [
+        {
+          "name": "enforceMaxSpeed__6CameraP6Point3",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-enforce-max-speed/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-get-blocking-vehicle/get_blocking_vehicle.cpp",
+      "source_sha256": "f6af66e69f91006b0320fce45ecb5241ae61469674ae1daaa58b320d89c89de9",
+      "object_sha256": "ac47d0239c913222c5064d598606c195c30f4b1c92626fc439964863bc558ee1",
+      "emitted_functions": [
+        {
+          "name": "getBlockingVehicle__7VehiclePf",
+          "compiled_body_bytes": 580
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-get-blocking-vehicle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-get-engine-torque/get_engine_torque.cpp",
+      "source_sha256": "d2047dbb887fa04210864325e8449298493bb2bc71363707d444164063da22bf",
+      "object_sha256": "eed3d929c008e78583be6eb476d3c9614b974c2b9699a6b3043dcd427261c64b",
+      "emitted_functions": [
+        {
+          "name": "getEngineTorque__7Vehicle",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-get-engine-torque/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-get-particle-velocity/get_particle_velocity.cpp",
+      "source_sha256": "788da19d0cb7d8b36278be88f01256959b5789bbcdc490a7f56027cfa22bc106",
+      "object_sha256": "507ee549969d6c6bff1f8ad78c905192b80afcdcb69bc77f40f817b015a57402",
+      "emitted_functions": [
+        {
+          "name": "getParticleVelocity__7VehicleP6Point3",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-get-particle-velocity/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-get-save-foot-print/get_save_foot_print.cpp",
+      "source_sha256": "c27c5463df7dc68e03350ea1a2a269c0b139f6878c4c005d2a7ff87e0e05512d",
+      "object_sha256": "c935fe1c13a71b14d2135944f77776af1cd008d2ef885900558ca2375f2ce29b",
+      "emitted_functions": [
+        {
+          "name": "GetSaveFootPrint__6Camera",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-get-save-foot-print/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-impulse/impulse.cpp",
+      "source_sha256": "3d5b769bd95d348ebc78f3ee537a35ac0ba631cfc839bda42a168fded4ec32e5",
+      "object_sha256": "51a3d87930f943e29e0fab1731bc5ce9346e50d5b5e5552b92b810dccc08c4ef",
+      "emitted_functions": [
+        {
+          "name": "impulse__7VehicleP6Point3N21fii",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-impulse/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-obtain-target/obtain_target.cpp",
+      "source_sha256": "ba3f818aa7e4246419509c4a381a8e1efed8bea91918bd5f1d6d39121616444a",
+      "object_sha256": "418fee8b012a5e4b8e6c7efb508db2bb3c955d16f727eca40a2d2166cc70355b",
+      "emitted_functions": [
+        {
+          "name": "obtainTarget__6CameraP6Point3",
+          "compiled_body_bytes": 1748
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-obtain-target/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-ray-hit/ray_hit.cpp",
+      "source_sha256": "4b13d92b551e99ddd4dea51ff2424adf0a1245f2ebfa85728629c453b59c1a36",
+      "object_sha256": "e4bee0f507076581642a907ceab32c7448fadbc442da55867dc1fac593062ce1",
+      "emitted_functions": [
+        {
+          "name": "rayHit__7VehicleP6Point3T1fT1",
+          "compiled_body_bytes": 260
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-ray-hit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-resolve-creature-collisions/resolve_creature_collisions.cpp",
+      "source_sha256": "8fee82378f14e2c036b1282a573840183cd455d2ca40e995483123f758434ae5",
+      "object_sha256": "bf80ba7381c5c2a61acb4c89aa62958f65292cf791e392efb62bd8e171a21f0d",
+      "emitted_functions": [
+        {
+          "name": "resolveCreatureCollisions__7Vehicle",
+          "compiled_body_bytes": 1280
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-resolve-creature-collisions/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-scale-patch-limit/scale_patch_limit.cpp",
+      "source_sha256": "8b85d80204223318c97885db911f10f07e899eacdbadda76869e418e07c2b778",
+      "object_sha256": "8303fddefe9943cfb3e0990c2601feae440b655c17618123d40a528fdae539ad",
+      "emitted_functions": [
+        {
+          "name": "scalePatchLimit__7VehicleiP6Point3",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-scale-patch-limit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-set-mass-and-ibody/set_mass_and_ibody.cpp",
+      "source_sha256": "4cd1db030b98da53424fb3824e4ff8411aa68abe91eee9a89656c3860085d31e",
+      "object_sha256": "0effb3726167e6457fcfb8825051799dca2969b4841ec7b8b01003aa31134142",
+      "emitted_functions": [
+        {
+          "name": "setMassAndIBody__7Vehicle",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-set-mass-and-ibody/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-storage-cam-height/storage.cpp",
+      "source_sha256": "57ea782f351f1bc762519a4723a78ad763303800af3f6afba7a977e1e3f122b2",
+      "object_sha256": "358a6ae2da99a001a801117be54a5656e25d0945af8e33877c9318f641492686",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-storage-cam-height/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-storage-clip-normal-sign/storage.cpp",
+      "source_sha256": "bb3fc8dd22e5f6b1534975ce82b9edf802d4569c8dfaf4d6d5f46323f0416812",
+      "object_sha256": "1d8f08b1e19338c0c02824f2a3e8f1672e64dc5c43a88766d58664ba8b58088c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-storage-clip-normal-sign/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-storage-original-net/storage.cpp",
+      "source_sha256": "614d14f538cf651ce71e2dfe57cdcb5750809df5b9ec92e94353cb3cd3fc68f1",
+      "object_sha256": "1e1821428e766b816e6ba3e9b09470fb7a758f4a9f3196e48960a9de45216a11",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-storage-original-net/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-storage-pitch-tab/storage.cpp",
+      "source_sha256": "a0412434ec608172c3e8df8fd8ffd1c259906640202e505bdf69b092b81c9b3f",
+      "object_sha256": "45e9d7ab9f81e7551c19bc499620ce26463bb4ca8f51270c7997abe6119b2d38",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-storage-pitch-tab/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-storage-world-clip-frustum/storage.cpp",
+      "source_sha256": "0a3b8075dcc0e0ec607a7b3ac017caf1ae1df3a29b46a22de218aa5641db8ed4",
+      "object_sha256": "f977f605f574cbfa5b64339531dbf6d2ca6b649e50c512b6ce8a718163e689e2",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-storage-world-clip-frustum/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-vehicle-body-sphere/vehicle_body_sphere.cpp",
+      "source_sha256": "b38f1ee3e96dcbb40fd5425b6a9cdf8bc7ae9410e55a7699fb29e3f587838485",
+      "object_sha256": "f80bdd25dbc30de557bc95ea145a1f2f81e144c7605b76fbb1a016e87a90c52c",
+      "emitted_functions": [
+        {
+          "name": "__17VehicleBodySphereP7Vehicleff",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-vehicle-body-sphere/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-vt-boat/vt_boat.cpp",
+      "source_sha256": "6c8956661d5ff2a60cf33507ea71e5507714871f30a8d9026532019a829eaab9",
+      "object_sha256": "87a112a688e378a1f7aacde32a2e4a259a046bbee85b5987ce5f76cd4d08d9b9",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-camveh-a-vt-boat/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-wheel-finalize-position/finalize_position.cpp",
+      "source_sha256": "28b63cec31e8e4053b47287abfc3438a9b1b6082df6f5a8d2ae0fe1ca3082ee9",
+      "object_sha256": "026544f11e598ae9914eb0e2f544a537d98a0852d32ac80642d27bdcad660882",
+      "emitted_functions": [
+        {
+          "name": "FinalizePosition__5Wheel",
+          "compiled_body_bytes": 408
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-wheel-finalize-position/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-camveh-a",
+      "source": "sources/w10-camveh-a-world-transform-frustum/world_transform_frustum.cpp",
+      "source_sha256": "bb55f95fc32a301c764c4c5b1c77e62a6568179a4c6e1f62d61df850b731ad3e",
+      "object_sha256": "38283b7bdc06bf22606229f9ca73d92e4700ee1af18d5099f18f244c0474e791",
+      "emitted_functions": [
+        {
+          "name": "worldTransformFrustum__FP8Matrix34",
+          "compiled_body_bytes": 1008
+        }
+      ],
+      "host_files": [
+        "sources/w10-camveh-a-world-transform-frustum/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
