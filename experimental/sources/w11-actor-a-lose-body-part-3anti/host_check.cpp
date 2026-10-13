@@ -1,6 +1,6 @@
 // Host contract for loseBodyPart__3Anti; not an EE input. Words that hold addresses are offsets from a host base;
 // the callees are stubs that log. The authored function was also compared with the original in a private R5900
-// run (56 scenarios over parts -2..13 and large values). Returns non-zero when wrong.
+// run (76 scenarios over parts -2..13 and large values). Returns non-zero when wrong.
 #define W11_ACTOR_A_HOST 1
 #include <cstdio>
 #include <cstring>
