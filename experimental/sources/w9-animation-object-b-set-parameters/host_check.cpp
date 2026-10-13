@@ -32,7 +32,9 @@ static void reset() {
 static short as_short(float v) { return static_cast<short>(static_cast<int>(v)); }
 
 int main() {
-    const float c13 = 1.3f, c035 = 0.35f, c08 = 0x1.999998p-1f, c11 = 0x1.199998p+0f, c132 = 0x1.526e96p+0f;
+    auto bits = [](unsigned word) { float f; std::memcpy(&f, &word, 4); return f; };
+    // The five observed constant words at 0x47fb58..0x47fb68.
+    const float c13 = bits(0x3fa66666u), c035 = bits(0x3eb33333u), c08 = bits(0x3f4ccccc), c11 = bits(0x3f8ccccc), c132 = bits(0x3fa9374bu);
     worldDifficulty = 1.5f; gameDifficulty = 0; nmPlayers = 1; netNetworkMode = 0;
 
     // Plain call: no boss, one player, no randomization.

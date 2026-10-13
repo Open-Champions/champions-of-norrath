@@ -67,7 +67,7 @@ extern "C" int setParameters__8Creaturefffffi(ParameterCreature* creature, float
                                                float fifth, int randomize) {
     if ((creature->flags & 1u) != 0) {
         first = first * 15.0f;
-        third = third * 0x1.4ccccep+0f;
+        third = third * 0x1.4cccccp+0f;
         fourth = fourth * 3.0f;
         fifth = fifth * 7.0f;
     }
