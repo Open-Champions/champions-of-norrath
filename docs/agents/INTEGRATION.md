@@ -8051,3 +8051,25 @@ Closed: `_$_7FireFly`, `_$_8Froglock`, `_$_9Generator`, `_GLOBAL_$I$msg_draw__10
 
 Opened: `_$_11FireBomblet`, `__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader`, `__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19FireArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__21PoisonArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__22ExplodeArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__tf11FireBomblet`, `bCrossingWater__8Froglock`, `clone__11FireBomblet`, `loseBodyPart__10FireBeetlei`, `msg_draw__11FireBomblet`, `msg_run__11FireBomblet`, `objectAddString__FPcP10GameObject`
 - 2026-10-13 02:52 CDT — `agents/w10-actor-f` — 1097 unresolved imports
+
+## agents/w10-actor-g
+
+Merged (merge commit, branch tip `41cdf55a`, 60 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (33 function bodies) with fresh `input_order` values 4129
+through 4160. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 26 under `-Werror`, 6 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4159 authored inputs, 3090 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1097 |
+| After | 1075 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `_$_5Ghoul`, `_$_5Gnome`, `_$_6Goblin`, `__15GlowingCylinderG6Point3iiii`, `__tf5Ghoul`, `__tf5Gnome`, `__tf6Goblin`, `clone__5Ghoul`, `clone__5Gnome`, `clone__6Goblin`, `getMinibossName__6Goblin`, `initMiniboss__6Goblin`, `msg_alert__5GhoulifG6Point3P10GameObject`, `msg_alert__6GoblinifG6Point3P10GameObject`, `msg_collisionWorld__6GoblinG6Point3`, `msg_collision__5GnomeP10GameObject`, `msg_draw__5Ghoul`, `msg_draw__5Gnome`, `msg_draw__6Goblin`, `msg_load__6GoblinPc`, `msg_moveCollision__5GnomePP10GameObject`, `msg_moveCollision__6GoblinPP10GameObject`, `msg_run__5Ghoul`, `msg_run__5Gnome`, `msg_run__6Goblin`, `msg_save__6GoblinPc`, `msg_save__9GeneratorPc`, `msg_trigger__9Generatori`, `setState__5Ghouli`, `setState__5Gnomei`, `setState__6Goblini`, `setState__9Generatori`
+
+Opened: `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15ShockProjectileG6Point3sP10GameObjectP5Skilli`, `_vt$15GlowingCylinder`, `_vt$5Ghoul`, `_vt$5Gnome`, `_vt$6Goblin`, `dropItem__6Goblini`, `findClearPath__8CreatureG6Point3scf`, `numInRegion__8creatureG6Point3f`
