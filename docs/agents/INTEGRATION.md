@@ -9824,3 +9824,19 @@ Read the last ten entries (`w13-skill-stat-d` through `w13-wnd-a`) and re-ran th
 
 Eligibility at this time: the twelve older `agents/*` tips (`w8`, `w9`, `w10`, `w11`, `w12`, `w13-m-spell-dtor-a`) are unchanged from the standing rejections above. The eleven `agents/w14-*` branches are still being pushed to (tips between 11 seconds and 15 minutes old) and none has a notes file with the five summary sections (`w14-startup-io-b` has a notes file only), so none was eligible and nothing was merged.
 - 2026-10-13 17:59 CDT — re-verification, no branches eligible, nothing merged — 957 unresolved imports
+
+## agents/w14-startup-io-a
+
+Merged (merge commit, branch tip `3bbf70d4`; the notes have the how-checked/functions, closed, opened, plan-entry, never-executed and unknown sections). 21 units with fresh `input_order` values 6237 through 6257: 14 functions (startup file open/sync, load thread, memory card, pad stick scaling, keyboard queue and library routines) and 7 data symbols, each unit with a committed host contract that builds and passes here (21 of 21). The private paired runs in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed (the notes themselves record several compiled sizes that differ from the image). Plan entries and object hashes come from this integrator's own compiles; the compiled sizes reproduce the notes' 4908 bytes. The `w13-startup-fn-a` copies of the three keyboard-library functions are not in the plan, so there is no duplicate definition; the `save-net-anim-views` pair of `mc_load_buffer` names is not planned either. Full build with the final snapshot: 6256 authored inputs, zero COMMON. The count rises (957 to 962) because the 26 opened names are callees and data of the new bodies.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 962 |
+| Closed | 21 |
+| Opened | 26 |
+
+Closed: `CDSync__6VIFilei`, `CheckforModifierKeyEvents`, `DequeueKeyEvent__10VIKeyboardP12VIConsoleKey`, `MemorySegmOpen__6VIFileiPQ26VIFile7MemSegmil`, `Open__6VIFilePCci`, `PrepareQueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ScaleStick__5VIPadUc`, `TranslateEvent__10VIKeyboardP11_lgKbdEvent`, `VIMemCardReadFile__FPCcPvi`, `VIMemCardStatus__FPi`, `_6VIFile$sIopStream`, `generate_key_press_events`, `generate_key_release_events`, `getPackChecksum__Fv`, `loadBuffer`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `mcDisableStartupScript`, `mcerring`
+
+Opened: `BufferClear__6VIFile`, `CDDiskReady__6VIFilei`, `CDSearchFile__6VIFileP10sceCdlFILEPCc`, `CombineDeadkey__10VIKeyboardUc`, `MemorySegmCalcSegm__6VIFile`, `QueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `SetIcon__16VIIconDefinitionPvi`, `SetTitle__16VIIconDefinitionPCc`, `USEnglishKbdMapTable`, `VICdStreamDiskReady__Fv`, `VICdStreamRead__FUiUiPvi`, `VICdStreamStatus__Fv`, `VICdStreamSync__Fi`, `VIEEFileDelay__Fi`, `VIMemCardReadFileAsync__FPCcPvi`, `sAsyncFd`, `sFrDeadkey`, `sIconDefinition`, `sListIcon`, `sMemCardInitialized`, `sProductTitle`, `sUsDeadkeyCount`, `snprintf__8VIStringPciPCce`, `strupr__8VIStringPc`, `texNormalizedHeight__FP8_texture`, `texNormalizedWidth__FP8_texture`
+- 2026-10-13 18:45 CDT — agents/w14-startup-io-a — 962 unresolved imports
