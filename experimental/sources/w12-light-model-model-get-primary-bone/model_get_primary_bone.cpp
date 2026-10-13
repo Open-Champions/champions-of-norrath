@@ -1,4 +1,4 @@
-// Observed modelGetPrimaryBone__FP12_modelHeaderi at 0x0016c778, extent 44. Arguments: a model
+// Observed modelGetPrimaryBone__FP12_modelHeaderi at 0x0016c778, extent 48. Arguments: a model
 // header and an index. Signed header bytes at +18 (a) and +38 (b) give a stride of
 // b * (a * 4 + 4). The result is the signed byte at header + 46 + index * 10 + stride, widened
 // to int. No bounds check is made on either value.
