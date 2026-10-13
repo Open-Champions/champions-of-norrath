@@ -8308,3 +8308,21 @@ branch was merged locally, failed `check_source_snapshot.py`, and the merge was 
 before anything was pushed. The owner can add the notes and push again; the units
 could then be selected unchanged.
 - 2026-10-13 03:50 CDT — rejection and hold notes (actor-i, actor-o), no package — 977 unresolved imports
+
+## Integrator re-check (2026-10-13 04:05 CDT)
+
+Re-ran the checks on the shared branch tip `ce6c4327` before any merge: 214 tool tests
+passed, `check_source_snapshot.py` passed (9429 files, 4422 authored inputs), and the
+full partial build gave 4422 compilations, 3366 function bodies, zero COMMON and
+**977 unresolved imports**, matching the recorded count. The recent merges added no
+binaries or raw disassembly; the nine `.S` files are short authored syscall stubs
+that say what is observed and what is unknown. No shared-file fix was needed.
+
+Unmerged branches re-read: `agents/w10-actor-i` (`e1ad5dba`), `agents/w10-actor-o`
+(`c7de8712`), `agents/w10-startup-d` (`cb1c9c26`), `agents/w8-spell-static-init-b`
+(`ed20fab5`) and `agents/w9-render-math-a` (`adff0bdc`) are all at the tips recorded
+in their rejection or hold notes above, so those decisions stand (no committed
+checks for actor-i, startup-d, w8 and w9; no notes file for actor-o). Nothing was
+merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker
+packages and stay with their owners.
+- 2026-10-13 04:05 CDT — integrator re-check, nothing merged — 977 unresolved imports
