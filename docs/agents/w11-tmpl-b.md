@@ -33,7 +33,7 @@ Unknown comments.
   for `Next` and `Init`. Scenarios: list destructors 10 flag values each; pool/map/array destructors
   storage word null or set x DestroyPool leaving or clearing the word x 7 flag values (28 of 29
   original words reached; the rest is a delay-slot nop); `Next` 24 index/value combinations per pool
-  instance and 6 values for the list instance; `Init` array 64 and vector 96 combinations of callee results
+  instance and 6 values for the list instance; `Init` array 64 and vector 192 combinations of callee results
   (-3, -1, 0, 2) (22 of 23 and 35 of 35 words). Mutating a branch condition, the end marker or the flags
   mask in a scratch copy made the comparison fail, so the checks are not vacuous. No HALT occurred.
 - `python3 -m unittest discover -s tools -p 'test_*.py'` passes (214 tests). No partial build was run.
