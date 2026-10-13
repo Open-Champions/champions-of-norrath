@@ -1,10 +1,10 @@
 // Observed: Init__9VIWndDnasP7VIScene at 0x010a8510 is 84 bytes. With (this, scene) it stores
-// scene at this+776, calls Init__12VIWndMessage(this+1176) (the scene is still in the second
-// argument register at that point but nothing here sets it up as an argument), stores 0 at
-// (this+1176)+28, calls AddChild__5VIWndP5VIWnd(this, this+1176), stores -1 at this+780, and
-// returns 0. The result of the message-window Init is ignored.
-// Unknown: what words 776, 780 and +28 of the child mean; whether Init__12VIWndMessage reads
-// its second argument (unresolved here; a private paired run only holds if it does not).
+// scene at this+776, calls Init__12VIWndMessage(this+1176), stores 0 at (this+1176)+28, calls
+// AddChild__5VIWndP5VIWnd(this, this+1176), stores -1 at this+780, and returns 0. The result of
+// the message-window Init is ignored. The scene stays in the second argument register across
+// the Init__12VIWndMessage call, but that routine (0x010c1470, 12 bytes) only uses its first
+// argument, so it is declared with one.
+// Unknown: what words 776, 780 and +28 of the child mean.
 extern "C" {
 void Init__12VIWndMessage(void* self);
 void AddChild__5VIWndP5VIWnd(void* self, void* child);
