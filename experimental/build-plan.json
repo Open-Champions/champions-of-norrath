@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4619,
+  "default_authored_inputs": 4632,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3348,6 +3348,19 @@
     "sources/w11-front-b-object-get-save-data/object_get_save_data.cpp": "372e7fd2756dce6181fca7b4d59a05a72756ebdf41c0508b64e9afb5554653c2",
     "sources/w11-front-b-skelight-partlist/skelight_partlist.cpp": "f02be8f598b198668970e75a16afd88c3edc23c7408f76de153d663d02030d7b",
     "sources/w11-front-b-write-map/write_map.cpp": "7f389daa1b01c10e8732797cf1db7fa26f2d1270c5e3f75f2bcb0f57e618cda2",
+    "sources/w11-front-c-camera-words/camera_words.cpp": "bbfe30d13112d3c249aee8161a0967713ff68527c2ca2d942b78dbf56f8edf92",
+    "sources/w11-front-c-inventory-texture-words/inventory_texture_words.cpp": "62a2b298c61b32852db402bf66f8bc8556bb89b76bdd317f5687fcaf6d66d28f",
+    "sources/w11-front-c-jump-start-pos/jump_start_pos.cpp": "f68b93a7ab3f1bd1dde36d9085ac9a1d91a7709e69a0227be53cc83c1ad1bf3a",
+    "sources/w11-front-c-light-shadow-words/light_shadow_words.cpp": "937d7e6878b27b0155b84401fd5b739c469317fd400986abe2203c1e6ae4b923",
+    "sources/w11-front-c-play-sound-group/play_sound_group.cpp": "2086279d0cfe41d362d5a5bff3a9398255ee652a4bbe9f9db3f319a18fa90bd4",
+    "sources/w11-front-c-pm-list-words/pm_list_words.cpp": "ac39084a9d378d19139947a650e1caba76a00e3302d741da2ecd408a1b512a42",
+    "sources/w11-front-c-sound-get-dialog-size/sound_get_dialog_size.cpp": "6b43328850d5e6b01d4dcfdb0b127ac7a4e3184d424ffaf250900bb104a76de0",
+    "sources/w11-front-c-sound-limit-words/sound_limit_words.cpp": "5a1becee8dcf39ad80461b2ef4c5b371f77c1f0c89f971d19e9a8e073358a8b7",
+    "sources/w11-front-c-tex-clear-always-loaded/tex_clear_always_loaded.cpp": "eaefda566476637ec004299a1128c00bd4e29e9fb773133ef15411c93744c24b",
+    "sources/w11-front-c-tex-load-always-loaded/tex_load_always_loaded.cpp": "bf71936a62cd8dc336e89fd600db6099327c0680c681cafa500b937b623a57e5",
+    "sources/w11-front-c-vehicle-shite/vehicle_shite.cpp": "a591931d7c9b9bf9ffe212e14d244db1db996e2a53013a945458182e586be9bf",
+    "sources/w11-front-c-vi-words/vi_words.cpp": "079442f4853ffdbbb96d0d3206e47c1fe97bc0539c6f2dcbd67debe32d4b7375",
+    "sources/w11-front-c-wavemaker-range/wavemaker_range.cpp": "d8919ffe426d2d1d48f397c69d5b5851fbad2fa7ad0d82b6031b6b29444831e5",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -67276,6 +67289,156 @@
           "name": "VIEEDMASync__Fi"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4621,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_camera_words.o",
+      "profile": "authored_cpp",
+      "sha256": "bbfe30d13112d3c249aee8161a0967713ff68527c2ca2d942b78dbf56f8edf92",
+      "source": "sources/w11-front-c-camera-words/camera_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4622,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_inventory_texture_words.o",
+      "profile": "authored_cpp",
+      "sha256": "62a2b298c61b32852db402bf66f8bc8556bb89b76bdd317f5687fcaf6d66d28f",
+      "source": "sources/w11-front-c-inventory-texture-words/inventory_texture_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4623,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_jump_start_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "f68b93a7ab3f1bd1dde36d9085ac9a1d91a7709e69a0227be53cc83c1ad1bf3a",
+      "source": "sources/w11-front-c-jump-start-pos/jump_start_pos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4624,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_light_shadow_words.o",
+      "profile": "authored_cpp",
+      "sha256": "937d7e6878b27b0155b84401fd5b739c469317fd400986abe2203c1e6ae4b923",
+      "source": "sources/w11-front-c-light-shadow-words/light_shadow_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4625,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_play_sound_group.o",
+      "profile": "authored_cpp",
+      "sha256": "2086279d0cfe41d362d5a5bff3a9398255ee652a4bbe9f9db3f319a18fa90bd4",
+      "source": "sources/w11-front-c-play-sound-group/play_sound_group.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 548,
+          "name": "playSoundGroup__FP15AnimationHeaderiiP6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4626,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_pm_list_words.o",
+      "profile": "authored_cpp",
+      "sha256": "ac39084a9d378d19139947a650e1caba76a00e3302d741da2ecd408a1b512a42",
+      "source": "sources/w11-front-c-pm-list-words/pm_list_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4627,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_sound_get_dialog_size.o",
+      "profile": "authored_cpp",
+      "sha256": "6b43328850d5e6b01d4dcfdb0b127ac7a4e3184d424ffaf250900bb104a76de0",
+      "source": "sources/w11-front-c-sound-get-dialog-size/sound_get_dialog_size.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "soundGetDialogSize__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4628,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_sound_limit_words.o",
+      "profile": "authored_cpp",
+      "sha256": "5a1becee8dcf39ad80461b2ef4c5b371f77c1f0c89f971d19e9a8e073358a8b7",
+      "source": "sources/w11-front-c-sound-limit-words/sound_limit_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4629,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_tex_clear_always_loaded.o",
+      "profile": "authored_cpp",
+      "sha256": "eaefda566476637ec004299a1128c00bd4e29e9fb773133ef15411c93744c24b",
+      "source": "sources/w11-front-c-tex-clear-always-loaded/tex_clear_always_loaded.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "texClearAlwaysLoadedPages__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4630,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_tex_load_always_loaded.o",
+      "profile": "authored_cpp",
+      "sha256": "bf71936a62cd8dc336e89fd600db6099327c0680c681cafa500b937b623a57e5",
+      "source": "sources/w11-front-c-tex-load-always-loaded/tex_load_always_loaded.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 460,
+          "name": "texLoadAlwaysLoadedPages__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4631,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_vehicle_shite.o",
+      "profile": "authored_cpp",
+      "sha256": "a591931d7c9b9bf9ffe212e14d244db1db996e2a53013a945458182e586be9bf",
+      "source": "sources/w11-front-c-vehicle-shite/vehicle_shite.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4632,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_vi_words.o",
+      "profile": "authored_cpp",
+      "sha256": "079442f4853ffdbbb96d0d3206e47c1fe97bc0539c6f2dcbd67debe32d4b7375",
+      "source": "sources/w11-front-c-vi-words/vi_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4633,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_wavemaker_range.o",
+      "profile": "authored_cpp",
+      "sha256": "d8919ffe426d2d1d48f397c69d5b5851fbad2fa7ad0d82b6031b6b29444831e5",
+      "source": "sources/w11-front-c-wavemaker-range/wavemaker_range.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -67375,7 +67538,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "cbccaaca80a4fd7f7ca5bff3e559b047e4e5be799c720e11bcb468f483b8bd26",
+  "snapshot_sha256": "6f738dd19b8644e64d2d78097b07e527fb6cb5cbb8e05ba0accebe8a5d1e9c2b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

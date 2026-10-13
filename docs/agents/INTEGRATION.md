@@ -8534,3 +8534,25 @@ Closed: `DLG_CheckMutex__Fv`, `FlushIopCommand__Fb`, `KbmReaderThread`, `LoadSRS
 
 Opened: `Close__6VIFile`, `InitialiseIopDriver`, `LocalData`, `Read__6VIFilePvi`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `__ieee754_sqrt`, `__throw_type_match_rtti_2`, `atanf`, `dpdiv`, `get_eh_context`, `kdm_rpccall_end`, `mark_device_unplugged`, `process_kbd_data`, `process_mouse_data`, `sFunctionIndex`, `sRecv`, `sSend`, `sSifClient`, `setup_kbd_device`, `setup_mouse_device`
 - 2026-10-13 05:27 CDT — agents/w11-crt-a — 864 unresolved imports
+
+## agents/w11-front-c
+
+Merged (merge commit, branch tip `fb3c4166`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 13 units (4 function bodies, 9 data-word units) with fresh
+`input_order` values 4621 through 4633. All 13 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the data checks need the unit source linked in). The notes give no compiled sizes, so the plan's emitted-function records were measured here with the plan's own compiler flags and the repo's ELF reader. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4632 authored inputs, 3549 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes say 24 names closed; 23 reproduce (the 24th, `rollover_counter`, was already defined by w10-startup-b and is not a change of this merge). `playerSelectionTask__Fv` was deliberately not attempted by the worker, which is honest and leaves it unresolved. The data-word layouts come from symbol extents and gaps, as each file's header says.
+
+| | |
+|---|---|
+| Before | 864 |
+| After | 842 |
+| Closed | 23 |
+| Opened | 1 |
+
+Closed: `pitch1`, `pitch2`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `pmlistchars`, `pmlistcharsused`, `range`, `rcursor`, `sMessagePool`, `sWndMcErr`, `saveBestList`, `saveValid`, `selectionBox`, `shite`, `soundGetDialogSize__Fi`, `soundGroupLimit`, `soundLimit`, `startPos`, `taskBar`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `tinyIcon`, `v1`, `v2`
+
+Opened: `animPlaySound__FPvP6Point3P9animSoundi`
+- 2026-10-13 05:34 CDT — agents/w11-front-c — 842 unresolved imports
