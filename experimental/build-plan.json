@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4535,
+  "default_authored_inputs": 4551,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3263,6 +3263,22 @@
     "sources/w10-world-d-unremove-monster/unremove_monster.cpp": "40b8dab34c80f4d7df02600f5e29dfa13c4e3235dc45a96cf1a7a5cbea41a72e",
     "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
     "sources/w10-world-d-world-state-words/world_state_words.cpp": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
+    "sources/w11-crt-b-dptoli/dptoli.cpp": "fb57acfb83df937d99aed50c892d7af265ff9c7756c7cb0bee96261494f6b4ec",
+    "sources/w11-crt-b-dptoul/dptoul.cpp": "eebd308a17186aa69c595d34b1b08d04b16081ba0aead7e61d4fcafda90a0c89",
+    "sources/w11-crt-b-dst-word/dst.cpp": "c40111a3139cc43b9950e295bc08560f47e28ba5fd034c9938eba1d72fde1eff",
+    "sources/w11-crt-b-iopnotify/iopnotify.cpp": "d4ecb24cc095521388962498a6dbd54623b9c7e69934548de4534eada5b76e0a",
+    "sources/w11-crt-b-lg-codec-gsm-decode/lg_codec_gsm_decode.cpp": "f0369b0b7fbf440ed132287f2e30d14e4fd46c88c38b0df77e95bd7497161270",
+    "sources/w11-crt-b-lg-codec-gsm-encode/lg_codec_gsm_encode.cpp": "80148666fbb8b0ae237a3c839b97ede6cb3186fcfcebcb6811c1c097b4fd246a",
+    "sources/w11-crt-b-lg-kbd-enum-hint/lg_kbd_enum_hint.cpp": "c7e48c50a2c85be84726b0e64fdef613ee9915b40ab60ced567b43a09eec6827",
+    "sources/w11-crt-b-lg-kbd-enumerate/lg_kbd_enumerate.cpp": "4d6b6ec4586468b829996c81f0a10c76edf1ba1b8203a694142f0b39be09e633",
+    "sources/w11-crt-b-lg-kbd-open/lg_kbd_open.cpp": "163d47b71461d3b4e8d2314fd68ec66d7cb9bf347ff0dad693a0e213d45ec902",
+    "sources/w11-crt-b-lg-kbd-read/lg_kbd_read.cpp": "f5f2eed87e996dea5b0d24b1e1cd320f03f5aa1536ac27a5c4ba9a0c7a77bddc",
+    "sources/w11-crt-b-lg-kbd-set-repeat-rate/lg_kbd_set_repeat_rate.cpp": "e30b1f17c245b7c7020ea38eaa0378368c44927194f5dad9ad1f57ae5f38a941",
+    "sources/w11-crt-b-lgaud-data/lgaud_data.cpp": "3759ea0b8a821e7c8cb45609491878a6a4e2b0ed6f4ca9da873ad97ad718e6eb",
+    "sources/w11-crt-b-lgkbm-reader-thread-data/reader_thread_data.cpp": "6c64351bee856d2417c0707c2a73a6cd0bbac26fa4a52e7b0029615bc1caea69",
+    "sources/w11-crt-b-litodp/litodp.cpp": "09615d9bb9013fce34fb6a1e2a39889e7d504868ae26300142454613c20ae569",
+    "sources/w11-crt-b-mce-intr-read-fix-align/mce_intr_read_fix_align.cpp": "d33c5aa493376e6dc99dfa87dbb4080ea690f6754601de6ad2e2c064fe3d6fdc",
+    "sources/w11-crt-b-send-to-iop/send_to_iop.cpp": "f70a8443f0b88291ef82997773e1caf4d88076316dbb4cc5b14aa0a2a9c2fe02",
     "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
     "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
     "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
@@ -66028,6 +66044,231 @@
           "name": "_$_t8VIVector1Z18VISceneDisplayElem"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4537,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dptoli.o",
+      "profile": "authored_cpp",
+      "sha256": "fb57acfb83df937d99aed50c892d7af265ff9c7756c7cb0bee96261494f6b4ec",
+      "source": "sources/w11-crt-b-dptoli/dptoli.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "dptoli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4538,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dptoul.o",
+      "profile": "authored_cpp",
+      "sha256": "eebd308a17186aa69c595d34b1b08d04b16081ba0aead7e61d4fcafda90a0c89",
+      "source": "sources/w11-crt-b-dptoul/dptoul.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "dptoul"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4539,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dst_word.o",
+      "profile": "authored_cpp",
+      "sha256": "c40111a3139cc43b9950e295bc08560f47e28ba5fd034c9938eba1d72fde1eff",
+      "source": "sources/w11-crt-b-dst-word/dst.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4540,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_iopnotify.o",
+      "profile": "authored_cpp",
+      "sha256": "d4ecb24cc095521388962498a6dbd54623b9c7e69934548de4534eada5b76e0a",
+      "source": "sources/w11-crt-b-iopnotify/iopnotify.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "_iopnotify"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4541,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_codec_gsm_decode.o",
+      "profile": "authored_cpp",
+      "sha256": "f0369b0b7fbf440ed132287f2e30d14e4fd46c88c38b0df77e95bd7497161270",
+      "source": "sources/w11-crt-b-lg-codec-gsm-decode/lg_codec_gsm_decode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "lgCodecGSMDecode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4542,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_codec_gsm_encode.o",
+      "profile": "authored_cpp",
+      "sha256": "80148666fbb8b0ae237a3c839b97ede6cb3186fcfcebcb6811c1c097b4fd246a",
+      "source": "sources/w11-crt-b-lg-codec-gsm-encode/lg_codec_gsm_encode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "lgCodecGSMEncode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4543,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_enum_hint.o",
+      "profile": "authored_cpp",
+      "sha256": "c7e48c50a2c85be84726b0e64fdef613ee9915b40ab60ced567b43a09eec6827",
+      "source": "sources/w11-crt-b-lg-kbd-enum-hint/lg_kbd_enum_hint.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "lgKbdEnumHint"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4544,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_enumerate.o",
+      "profile": "authored_cpp",
+      "sha256": "4d6b6ec4586468b829996c81f0a10c76edf1ba1b8203a694142f0b39be09e633",
+      "source": "sources/w11-crt-b-lg-kbd-enumerate/lg_kbd_enumerate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 356,
+          "name": "lgKbdEnumerate"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4545,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_open.o",
+      "profile": "authored_cpp",
+      "sha256": "163d47b71461d3b4e8d2314fd68ec66d7cb9bf347ff0dad693a0e213d45ec902",
+      "source": "sources/w11-crt-b-lg-kbd-open/lg_kbd_open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 328,
+          "name": "lgKbdOpen"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4546,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_read.o",
+      "profile": "authored_cpp",
+      "sha256": "f5f2eed87e996dea5b0d24b1e1cd320f03f5aa1536ac27a5c4ba9a0c7a77bddc",
+      "source": "sources/w11-crt-b-lg-kbd-read/lg_kbd_read.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 608,
+          "name": "lgKbdRead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4547,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_set_repeat_rate.o",
+      "profile": "authored_cpp",
+      "sha256": "e30b1f17c245b7c7020ea38eaa0378368c44927194f5dad9ad1f57ae5f38a941",
+      "source": "sources/w11-crt-b-lg-kbd-set-repeat-rate/lg_kbd_set_repeat_rate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "lgKbdSetRepeatRate"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4548,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lgaud_data.o",
+      "profile": "authored_cpp",
+      "sha256": "3759ea0b8a821e7c8cb45609491878a6a4e2b0ed6f4ca9da873ad97ad718e6eb",
+      "source": "sources/w11-crt-b-lgaud-data/lgaud_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4549,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lgkbm_reader_thread_data.o",
+      "profile": "authored_cpp",
+      "sha256": "6c64351bee856d2417c0707c2a73a6cd0bbac26fa4a52e7b0029615bc1caea69",
+      "source": "sources/w11-crt-b-lgkbm-reader-thread-data/reader_thread_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4550,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_litodp.o",
+      "profile": "authored_cpp",
+      "sha256": "09615d9bb9013fce34fb6a1e2a39889e7d504868ae26300142454613c20ae569",
+      "source": "sources/w11-crt-b-litodp/litodp.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "litodp"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4551,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_mce_intr_read_fix_align.o",
+      "profile": "authored_cpp",
+      "sha256": "d33c5aa493376e6dc99dfa87dbb4080ea690f6754601de6ad2e2c064fe3d6fdc",
+      "source": "sources/w11-crt-b-mce-intr-read-fix-align/mce_intr_read_fix_align.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "mceIntrReadFixAlign"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4552,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_send_to_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "f70a8443f0b88291ef82997773e1caf4d88076316dbb4cc5b14aa0a2a9c2fe02",
+      "source": "sources/w11-crt-b-send-to-iop/send_to_iop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 340,
+          "name": "_send_to_iop"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -66127,7 +66368,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c6328237fd642bec2fd337a07e04f10c003bf9a85dcef96b1c95a910f160803f",
+  "snapshot_sha256": "3787260b7045874161e6051bff29f574e9d3ea79737ef0650a270452232e1b69",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

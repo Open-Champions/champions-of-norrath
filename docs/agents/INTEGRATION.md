@@ -8446,3 +8446,25 @@ Closed: `_$_t7VIArray1Z7VIPlane`, `_$_t7VIArray1Z7VIVect3`, `_$_t7VIArray1Zi`, `
 
 Opened: `DestroyPool__t7VIArray1Z7VIPlane`, `DestroyPool__t7VIArray1Z7VIVect3`
 - 2026-10-13 05:04 CDT — agents/w11-tmpl-c — 906 unresolved imports
+
+## agents/w11-crt-b
+
+Merged (merge commit, branch tip `7813bf6a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 16 units (13 function bodies, 3 data-object units) with fresh
+`input_order` values 4537 through 4552. All 16 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000); the three data units have checks too. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4551 authored inputs, 3495 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (18) reproduces. Opened: eight names the new bodies call that nobody defines yet.
+
+| | |
+|---|---|
+| Before | 906 |
+| After | 896 |
+| Closed | 18 |
+| Opened | 8 |
+
+Closed: `_iopnotify`, `_send_to_iop`, `dptoli`, `dptoul`, `dst`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `lgKbdEnumHint`, `lgKbdEnumerate`, `lgKbdOpen`, `lgKbdRead`, `lgKbdSetRepeatRate`, `litodp`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
+
+Opened: `IsEventModifier`, `SyncDCache`, `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `lgFrameDecode`, `lgFrameEncode`, `sceSifSetSreg`
+- 2026-10-13 05:08 CDT — agents/w11-crt-b — 896 unresolved imports
