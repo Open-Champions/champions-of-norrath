@@ -5123,6 +5123,71 @@ Opened: `VIFreeUSocketExApi__Fv`, `_sceSifMInitCheck`, `net_buf`,
 `scePadGetButtonMask`, `scePadSetButtonInfo`, `scePadSetReqState`,
 `sceSifDmaStat`, `sceSifRemoveRebootNotifyHandler`
 
+## agents/w9-frontend-b
+
+Merged (the branch notes carry the five summary sections; the tip was 61
+minutes old). Twenty-five units with fresh `input_order` values 2621 through
+2645: 22 function units (front-end loading, death screen, jump gates, progress
+drawing, HUD and similar) and three data units (`cd-file`, `config-strings`
+and `state-words`). The `config-strings` table holds nine controller-row key
+identifiers (`c_attack` and so on), not dialogue. The notes list plan entries
+in prose, so the units were read from the files. All 25 host checks build and
+exit 0 here (25 of 25). The notes name the opened symbols and ask the
+integrator to confirm them; the real opened set is the 76 listed below: they
+are other packages' functions and data (`HUDInit__Fv`, `Load__6Camera`,
+`MC_LoadRamSlot__Fv`, `lumpLoadGlob__FPc`, the `jumpGate*` and light/model
+helpers and so on). The count rises because these loading and HUD functions
+call into areas not yet reconstructed. No game binary or disassembly listing
+was committed. 2139 function bodies, 2644 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1455 |
+| After | 1495 |
+| Closed | 36 |
+| Opened | 76 |
+
+Closed: `configMode`, `configStrings`, `coreStartLoading__Fv`, `curSel`,
+`deathNetHack`, `deathState`, `dialogPacket`, `drawProgress__Fv`,
+`emergencyMusicWaitAbort`, `gCdFile`, `gameCheckForDeathScreen__Fv`,
+`gameDeath__Fv`, `gameLoadWorld__FPc`, `gotPlayerStartThisLevel`,
+`hudDisplayNetCamToggle`, `hudNetWaitMsgReady__Fv`,
+`inGameConfigShuttingDown`, `initNamePad__Fv`, `initPreSelect__Fv`,
+`initStuff__6PhPropi`, `jumpGateHubReset__Fi`, `jumpGateSave__FPc`,
+`jumpGateTaskDraw__Fv`, `jumpGateTaskRun__Fv`, `keyboardGetNextKey__Fv`,
+`keyboardGetNextTranslatedKey__Fv`, `loadPlayerInfo__FiPiP12playerStruct`,
+`loadRamSlot__Fv`, `memcardTitle__FPUs`, `modifyRamSlotForNetSave__Fv`,
+`multiHudAddHelpMessage__FiPUsT1i`, `needActAlign`, `needEnforce`,
+`netForceLocalUpdate`, `netGetLocalObject__FP8Creature`,
+`netGetLocalPlayerNmSafe__Fi`
+
+Opened: `GetSaveFootPrint__6Camera`, `HUDInit__Fv`, `Load__6CameraPc`,
+`MC_GetLoadName__Fv`, `MC_LoadLevelEntities__FPcT0`, `MC_LoadRamSlot__Fv`,
+`MC_ResetAutoCheckPointSave__FPc`, `Read__10VIKeyboardR12VIConsoleKey`,
+`__7Weatheri`, `boxAdd__FP3BoxT0`, `boxSetEmpty__FP3Box`,
+`browserOverwrite`, `convertIndiciesToPointers__Fi`,
+`coreStartLoadingScreen__Fv`, `curDest`, `cursorTime`,
+`debugStartMenuIsOn__Fv`, `delta`, `doJumpEffect__Fi`, `fontGrid`,
+`framedone`, `gameDeathHeight`, `gameInitPostFrontend__Fv`,
+`gameLineFuse__Fv`, `gameMaxCamHeight`, `gameMinCamHeight`,
+`gameSetMusicTimer__Fi`, `getSlotName__FiiPc`, `groundType`, `hubNames`,
+`importInfoHeader`, `inesc`, `initJumpEffect__Fv`, `initPosition__Fii`,
+`init__3mapi`, `init__4itemv`, `inventorySyncQuestItems__Fi`,
+`jumpGateDestCount`, `jumpGateEntries`, `jumpGateHurtDest`,
+`jumpGateLoad__FPc`, `jumpGateSaveFootPrint__Fv`, `jumpGateState`,
+`jumpGateTime`, `jumpGateWho`, `lastDest`, `lastkey`, `lasttime`,
+`lightSetSceneLights__FG6Point3iiiiiiiii`, `lightStart`, `list.1073`,
+`loadPlayerLumps__Fv`, `loc`, `lockAlpha`, `lumpLoadGlob__FPc`,
+`modelGetBoundingBox__FP12_modelHeaderlPiN52`,
+`modelSetGlobalShadowBrightness__Ff`, `nameGridCount`, `nameGridW`,
+`originalPos`, `originalYaw`, `progress`, `routeClear__Fv`,
+`routeMakeLattice__Fv`, `scale`, `scissor`, `selectMode`,
+`skirmishInit__Fv`, `soundSetAmbientData__FPc`, `thisLevel`,
+`worldActivityLevel`, `worldAllocateSegments__FP12_worldHeader`,
+`worldBoundingBox`, `worldDeactivateUntakenDoors__FP12_worldHeader`,
+`worldSetWaterProperties__FP8_texture`, `worldTileEntityLightScale`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5480,3 +5545,4 @@ and no startup stage has executed.
 - 2026-10-12 20:59 CDT — `agents/w9-startup-crt-b` — 1472 unresolved imports
 - 2026-10-12 21:06 CDT — `agents/w9-startup-crt-d` — 1467 unresolved imports
 - 2026-10-12 21:10 CDT — `agents/w9-startup-crt-f` — 1455 unresolved imports
+- 2026-10-12 21:13 CDT — `agents/w9-frontend-b` — 1495 unresolved imports

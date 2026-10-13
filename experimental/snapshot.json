@@ -34005,6 +34005,341 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-startup-crt-f-ustrcat/ustrcat.cpp"
+    },
+    {
+      "input_order": 2621,
+      "component": "w9-frontend-b-cd-file",
+      "object_name": "cd_file.o",
+      "private_object_sha256": "08bf0979053acbbfa46f09c0b076f753a95a44a9c448fd8adba2a84908bb9ecc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-cd-file/cd_file.cpp"
+    },
+    {
+      "input_order": 2622,
+      "component": "w9-frontend-b-config-strings",
+      "object_name": "config_strings.o",
+      "private_object_sha256": "5c6faeccbf8ae345a7fa107df6cde92bb88bcd74a48ecd09261553fa99265065",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-config-strings/config_strings.cpp"
+    },
+    {
+      "input_order": 2623,
+      "component": "w9-frontend-b-core-start-loading",
+      "object_name": "core_start_loading.o",
+      "private_object_sha256": "c23714aa9d4665fc7c45054632ba1ff71caa9ee4bde60a9f996b4283bedbdf58",
+      "emitted_functions": [
+        {
+          "name": "coreStartLoading__Fv",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-core-start-loading/core_start_loading.cpp"
+    },
+    {
+      "input_order": 2624,
+      "component": "w9-frontend-b-draw-progress",
+      "object_name": "draw_progress.o",
+      "private_object_sha256": "ea52c97784f2515e9cea1d3b00a1da3b1993e9ea89b87753dd526c38502b39e5",
+      "emitted_functions": [
+        {
+          "name": "drawProgress__Fv",
+          "compiled_body_bytes": 404
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-draw-progress/draw_progress.cpp"
+    },
+    {
+      "input_order": 2625,
+      "component": "w9-frontend-b-game-check-for-death-screen",
+      "object_name": "game_check_for_death_screen.o",
+      "private_object_sha256": "11702fa5deef080a0721f34b2ef62cf7806a0ea917ccb2144f01e91c61b01f0b",
+      "emitted_functions": [
+        {
+          "name": "gameCheckForDeathScreen__Fv",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-game-check-for-death-screen/game_check_for_death_screen.cpp"
+    },
+    {
+      "input_order": 2626,
+      "component": "w9-frontend-b-game-death",
+      "object_name": "game_death.o",
+      "private_object_sha256": "a2956a635fcf1450547db9fbe903fdcf69a180914e1cbd50e6095a1b43ccf6fc",
+      "emitted_functions": [
+        {
+          "name": "gameDeath__Fv",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-game-death/game_death.cpp"
+    },
+    {
+      "input_order": 2627,
+      "component": "w9-frontend-b-game-load-world",
+      "object_name": "game_load_world.o",
+      "private_object_sha256": "88f38ba33fe017dffaa44a24be3d10a9b90bdf2169a88943a45e1eb291dabbf4",
+      "emitted_functions": [
+        {
+          "name": "gameLoadWorld__FPc",
+          "compiled_body_bytes": 3080
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-game-load-world/game_load_world.cpp"
+    },
+    {
+      "input_order": 2628,
+      "component": "w9-frontend-b-hud-net-wait-msg-ready",
+      "object_name": "hud_net_wait_msg_ready.o",
+      "private_object_sha256": "cfe0c8fc1a97b63ab58772637405588ffdf8b10e1ee81006129ec26c0c39ef86",
+      "emitted_functions": [
+        {
+          "name": "hudNetWaitMsgReady__Fv",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-hud-net-wait-msg-ready/hud_net_wait_msg_ready.cpp"
+    },
+    {
+      "input_order": 2629,
+      "component": "w9-frontend-b-init-name-pad",
+      "object_name": "init_name_pad.o",
+      "private_object_sha256": "ee9a2a35f7f87edaacde5f54feb12a71d74a1874c4cea7d946062cb59c642900",
+      "emitted_functions": [
+        {
+          "name": "initNamePad__Fv",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-init-name-pad/init_name_pad.cpp"
+    },
+    {
+      "input_order": 2630,
+      "component": "w9-frontend-b-init-pre-select",
+      "object_name": "init_pre_select.o",
+      "private_object_sha256": "ef017c70df916a8363d50fac94e47c6dcb62171e61ab2aef5cf8324696db17a9",
+      "emitted_functions": [
+        {
+          "name": "initPreSelect__Fv",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-init-pre-select/init_pre_select.cpp"
+    },
+    {
+      "input_order": 2631,
+      "component": "w9-frontend-b-jump-gate-hub-reset",
+      "object_name": "jump_gate_hub_reset.o",
+      "private_object_sha256": "e2aca9e956adacdbbdb21f70365a843c2e5dcc41bd37891ead0eb40c0749913a",
+      "emitted_functions": [
+        {
+          "name": "jumpGateHubReset__Fi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-jump-gate-hub-reset/jump_gate_hub_reset.cpp"
+    },
+    {
+      "input_order": 2632,
+      "component": "w9-frontend-b-jump-gate-save",
+      "object_name": "jump_gate_save.o",
+      "private_object_sha256": "7c43aae3b576f4c87d3c769e9993c6d7d47878b46386c9db4b5e8efa8bfb654b",
+      "emitted_functions": [
+        {
+          "name": "jumpGateSave__FPc",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-jump-gate-save/jump_gate_save.cpp"
+    },
+    {
+      "input_order": 2633,
+      "component": "w9-frontend-b-jump-gate-task-draw",
+      "object_name": "jump_gate_task_draw.o",
+      "private_object_sha256": "1dbcc36d6cb9e5e5c5c0e59f7ffbe8788f8903545d94bf624d5c7d2e191f7859",
+      "emitted_functions": [
+        {
+          "name": "jumpGateTaskDraw__Fv",
+          "compiled_body_bytes": 1072
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-jump-gate-task-draw/jump_gate_task_draw.cpp"
+    },
+    {
+      "input_order": 2634,
+      "component": "w9-frontend-b-jump-gate-task-run",
+      "object_name": "jump_gate_task_run.o",
+      "private_object_sha256": "823957b54b6ae750b1ecbce5e60df9a2415b6d3b18113e45a57db46300f91384",
+      "emitted_functions": [
+        {
+          "name": "jumpGateTaskRun__Fv",
+          "compiled_body_bytes": 1468
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-jump-gate-task-run/jump_gate_task_run.cpp"
+    },
+    {
+      "input_order": 2635,
+      "component": "w9-frontend-b-keyboard-get-next-key",
+      "object_name": "keyboard_get_next_key.o",
+      "private_object_sha256": "0dd6f01dcd298d7ebd36e1ae38cb84befcbf56c2dddc66f413de34e0108d445e",
+      "emitted_functions": [
+        {
+          "name": "keyboardGetNextKey__Fv",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-keyboard-get-next-key/keyboard_get_next_key.cpp"
+    },
+    {
+      "input_order": 2636,
+      "component": "w9-frontend-b-keyboard-get-next-translated-key",
+      "object_name": "keyboard_get_next_translated_key.o",
+      "private_object_sha256": "d27a0708cf26462fb680452fd81592c2316794b98550d6f95dac4160c4a76261",
+      "emitted_functions": [
+        {
+          "name": "keyboardGetNextTranslatedKey__Fv",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-keyboard-get-next-translated-key/keyboard_get_next_translated_key.cpp"
+    },
+    {
+      "input_order": 2637,
+      "component": "w9-frontend-b-load-player-info",
+      "object_name": "load_player_info.o",
+      "private_object_sha256": "f80747cd53eb67b958bd7ab790e2b601f7faff366c09463b5f6513dac30dd5bd",
+      "emitted_functions": [
+        {
+          "name": "loadPlayerInfo__FiPiP12playerStruct",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-load-player-info/load_player_info.cpp"
+    },
+    {
+      "input_order": 2638,
+      "component": "w9-frontend-b-load-ram-slot",
+      "object_name": "load_ram_slot.o",
+      "private_object_sha256": "b45508464407d37c7f033ce74af02128739efe2efd286af7a14e6a8af9b66cd5",
+      "emitted_functions": [
+        {
+          "name": "loadRamSlot__Fv",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-load-ram-slot/load_ram_slot.cpp"
+    },
+    {
+      "input_order": 2639,
+      "component": "w9-frontend-b-memcard-title",
+      "object_name": "memcard_title.o",
+      "private_object_sha256": "8a30ea6d41d3f914d5cc84d40cc454009ae68088df63f394a862373a27e88565",
+      "emitted_functions": [
+        {
+          "name": "memcardTitle__FPUs",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-memcard-title/memcard_title.cpp"
+    },
+    {
+      "input_order": 2640,
+      "component": "w9-frontend-b-modify-ram-slot-for-net-save",
+      "object_name": "modify_ram_slot_for_net_save.o",
+      "private_object_sha256": "2bd10d64d9b723f42c973f9b2fb7c53b8ec82510f232a9b7f2f83ba981035b0f",
+      "emitted_functions": [
+        {
+          "name": "modifyRamSlotForNetSave__Fv",
+          "compiled_body_bytes": 656
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-modify-ram-slot-for-net-save/modify_ram_slot_for_net_save.cpp"
+    },
+    {
+      "input_order": 2641,
+      "component": "w9-frontend-b-multi-hud-add-help-message",
+      "object_name": "multi_hud_add_help_message.o",
+      "private_object_sha256": "4c05182d92ee724cfbbe7953f09ca413a11bc3975c708dae3ca1ab7c714576e0",
+      "emitted_functions": [
+        {
+          "name": "multiHudAddHelpMessage__FiPUsT1i",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-multi-hud-add-help-message/multi_hud_add_help_message.cpp"
+    },
+    {
+      "input_order": 2642,
+      "component": "w9-frontend-b-net-get-local-object",
+      "object_name": "net_get_local_object.o",
+      "private_object_sha256": "17b56025adccde7294bb84c4b707286e29706f402baabe76bb91963a1a5d28b4",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalObject__FP8Creature",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-net-get-local-object/net_get_local_object.cpp"
+    },
+    {
+      "input_order": 2643,
+      "component": "w9-frontend-b-net-get-local-player-nm-safe",
+      "object_name": "net_get_local_player_nm_safe.o",
+      "private_object_sha256": "443908aee5c680da7602403bec7b12ccf5aa34b06f8078f4c44851130da75724",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalPlayerNmSafe__Fi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-net-get-local-player-nm-safe/net_get_local_player_nm_safe.cpp"
+    },
+    {
+      "input_order": 2644,
+      "component": "w9-frontend-b-ph-prop-init-stuff",
+      "object_name": "init_stuff.o",
+      "private_object_sha256": "7befbe2cf0d848019c4315d25818a17e97ef02a85c694c0f13912b2c486973d9",
+      "emitted_functions": [
+        {
+          "name": "initStuff__6PhPropi",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-ph-prop-init-stuff/init_stuff.cpp"
+    },
+    {
+      "input_order": 2645,
+      "component": "w9-frontend-b-state-words",
+      "object_name": "state_words.o",
+      "private_object_sha256": "a98ebc08ce15f88a685b2fb500955309dfcd3163be223efe2fc0019867348081",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-frontend-b-state-words/state_words.cpp"
     }
   ],
   "drafts": [
@@ -39243,6 +39578,56 @@
     "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
     "sources/w9-audio-start-global-dialog-stream/host_contract.cpp": "ead288c06a3995d5e9e5c2e9f9282d8606cd0117a5e5c4b7a09c4383b60de0c0",
     "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
+    "sources/w9-frontend-b-cd-file/cd_file.cpp": "17af56826f2c2e764782ac27d38d5bd4588cfa4dd78ebe0d19b90c5a9d97f36f",
+    "sources/w9-frontend-b-cd-file/host_check.cpp": "50b0e21105527540204f01574ac9942d55d1c9893064b7769e03a81fbe6dc6e6",
+    "sources/w9-frontend-b-config-strings/config_strings.cpp": "98ce2b64f32ca7488a8ade3de1a062ddbe8f15460efb5dc5537dc346ec167a39",
+    "sources/w9-frontend-b-config-strings/host_check.cpp": "70e412f20db2bc41c3813d175c31e0d5de2e92c9d62c92bca9e16cbeb7bb8151",
+    "sources/w9-frontend-b-core-start-loading/core_start_loading.cpp": "5a838a8f3cfd98caaad70008740c0179f23783e9e94c3e1a8ef77275790c267c",
+    "sources/w9-frontend-b-core-start-loading/host_contract.cpp": "30c14e3b0c5630293344a81e6e2644c363ca06a9c93633a41bf989d09fe216a6",
+    "sources/w9-frontend-b-draw-progress/draw_progress.cpp": "1aebdb96a0e0b6d43c95f7c8e8fa336f61c4cf4b896b46fd3a06721e793babb4",
+    "sources/w9-frontend-b-draw-progress/host_contract.cpp": "d94688cd963aa5e4d1898eed27ab93027a93af8a74dc6d4584b1a4989f67ec20",
+    "sources/w9-frontend-b-game-check-for-death-screen/game_check_for_death_screen.cpp": "3767d912821d178e083e446fbbae2da0a98a7747df32c01ab364fa9abccc04e1",
+    "sources/w9-frontend-b-game-check-for-death-screen/host_contract.cpp": "7ffb858b86c20e613f6fc5df7d17e734c5a17ff174e13ef7b20fef0e3b434b13",
+    "sources/w9-frontend-b-game-death/game_death.cpp": "13745954a1117024c44fefbd165232f393a5871e12dc84eb916efb65ea2e7a0d",
+    "sources/w9-frontend-b-game-death/host_contract.cpp": "13147983375dcce13d26a8e95ce42d6ae98d2d7a4cabd6b76763bc5e2eb6249f",
+    "sources/w9-frontend-b-game-load-world/game_load_world.cpp": "e33c692a96b51da28f95544f0cd35e06547f6ca4a9b3ed7a5fd80f32651d0d40",
+    "sources/w9-frontend-b-game-load-world/host_contract.cpp": "db274afa3721b4b3722961d5321a3a744bb1c1bf1ef3d62b381aa039c9471b49",
+    "sources/w9-frontend-b-hud-net-wait-msg-ready/host_contract.cpp": "8f063b2db41ad1559386b60bdda841dc489dfe3e68b988a715256273aafa0900",
+    "sources/w9-frontend-b-hud-net-wait-msg-ready/hud_net_wait_msg_ready.cpp": "dbe5ab40bd8f1b07ff1ef1d7be951cf3f106a2d5e16516c5e172bca96de8c8ca",
+    "sources/w9-frontend-b-init-name-pad/host_contract.cpp": "5e8dfd6040d45fabdb2571ad3577ca2a9a329b1571d4e5601419718c2932679c",
+    "sources/w9-frontend-b-init-name-pad/init_name_pad.cpp": "00845f8d96638ad3baf43e67777bd842039cac47aa3ad23e41db32c08c3487ab",
+    "sources/w9-frontend-b-init-pre-select/host_contract.cpp": "17762989b4ae621a6f851359163b8c19e8c0c7e9fc24d1255c503d3e3e1d4e86",
+    "sources/w9-frontend-b-init-pre-select/init_pre_select.cpp": "4d86cc776e4d9b3b68212dc3441f3d32bac4a04c8ce6445946bd4e42461bd406",
+    "sources/w9-frontend-b-jump-gate-hub-reset/host_contract.cpp": "d9b343719e9f5231e7bff62e1761da2bcb47a1de16ab860ab5d2885d1e83777c",
+    "sources/w9-frontend-b-jump-gate-hub-reset/jump_gate_hub_reset.cpp": "545fdd397f780a6c121a3144c4d5d83b9d5432a460c153ba3f480f95514e210e",
+    "sources/w9-frontend-b-jump-gate-save/host_contract.cpp": "c686ace845045a158beae63371daf1b18fe896ba2b1662403e7f9321de86e7be",
+    "sources/w9-frontend-b-jump-gate-save/jump_gate_save.cpp": "f29ebcf7c6a6705f16bd9534be2fa54da2dcb7d7c7b339027e363365bf731c69",
+    "sources/w9-frontend-b-jump-gate-task-draw/host_contract.cpp": "c5af39cccd0c98c6d9a8ee7370b56238b308155efa10c8944640b6de735a1889",
+    "sources/w9-frontend-b-jump-gate-task-draw/jump_gate_task_draw.cpp": "fb1e5c676acf6493409e99957a4bfe9f3cd8187192997a4000bd2426101e5304",
+    "sources/w9-frontend-b-jump-gate-task-run/host_contract.cpp": "a075088b264eb27ad29e13a9482ef02d1320b1015def7cab5d17c1253122c3ab",
+    "sources/w9-frontend-b-jump-gate-task-run/jump_gate_task_run.cpp": "04e1d124638e0b9ab09b6add090767a41fb530120d273c1782932a6ea92ece8b",
+    "sources/w9-frontend-b-keyboard-get-next-key/host_contract.cpp": "f2cbe59ae6f3d1d4ba830ada0b97bcfb4cb28f28bcef2f4b74023cf7a4227d81",
+    "sources/w9-frontend-b-keyboard-get-next-key/keyboard_get_next_key.cpp": "b069e0f7a3bb5de8c0b4c6e39d253976380ec9395fedd718eec7100c4958cba3",
+    "sources/w9-frontend-b-keyboard-get-next-translated-key/host_contract.cpp": "cb2811fc5cd9a0552f428568aeca3c08efd253e8f10231450e40f18e141c2473",
+    "sources/w9-frontend-b-keyboard-get-next-translated-key/keyboard_get_next_translated_key.cpp": "920b741bc9dd72a6da580bc49ca0e4922fb494a88faa0da9d86b67bf6712753c",
+    "sources/w9-frontend-b-load-player-info/host_contract.cpp": "659a639e6a9b9ed55f7b87b43e93a9842ae27b4d11218989caf47704d8fb17a2",
+    "sources/w9-frontend-b-load-player-info/load_player_info.cpp": "5c40ac4153e8207ee5e6b026a1679ec6b8a16d451f0a46ce72de1a0bfd5454c4",
+    "sources/w9-frontend-b-load-ram-slot/host_contract.cpp": "a503c848f67cdade2834859c81e610dd6302cbc8630156b949dd2edbf8682ffb",
+    "sources/w9-frontend-b-load-ram-slot/load_ram_slot.cpp": "212177d472f78a7c90ecd21f73050e4a1bc7cf6472f167cdb11767fbb51f4764",
+    "sources/w9-frontend-b-memcard-title/host_contract.cpp": "026d1a1f8d2496c1952c43a330d7dfddbaa4b9952a41e5c705f93040f2144326",
+    "sources/w9-frontend-b-memcard-title/memcard_title.cpp": "e9d52391538b42b93aba7e2ffc72b1d0325be93f49e82be34209c48efac6d85c",
+    "sources/w9-frontend-b-modify-ram-slot-for-net-save/host_contract.cpp": "b3f801f8120e2c7db11c02416fc67d116c75c007595b8a448f31469108b56b4b",
+    "sources/w9-frontend-b-modify-ram-slot-for-net-save/modify_ram_slot_for_net_save.cpp": "24d83560766b12cae1b5c220f26b847662aa80e9ce3eb29750bd87ed667ead30",
+    "sources/w9-frontend-b-multi-hud-add-help-message/host_contract.cpp": "e94ece705409f7a463cd3a65ef34e183286b15ffe59f4b118a05806544e99141",
+    "sources/w9-frontend-b-multi-hud-add-help-message/multi_hud_add_help_message.cpp": "9490940164f57beb1bcb3e9ad4a4a1965b3d92837b97723560560ee21da9398c",
+    "sources/w9-frontend-b-net-get-local-object/host_contract.cpp": "83d9dedd3ed8ab374058b62ebaa06191472e9a83d6c6a42fb63fa9376d8fff16",
+    "sources/w9-frontend-b-net-get-local-object/net_get_local_object.cpp": "0c57c390933ac6078de4af3169de85475d8a731b865de80459741b0b2d0dd7f1",
+    "sources/w9-frontend-b-net-get-local-player-nm-safe/host_contract.cpp": "c3e8eb0fdd48ea103985f4a2b51c7b1ed6ee09b4911acac9523e198520cb0159",
+    "sources/w9-frontend-b-net-get-local-player-nm-safe/net_get_local_player_nm_safe.cpp": "9740f22a493c5d025306e4120ee527924b6272c063ee6cc3f484a10df17afbcc",
+    "sources/w9-frontend-b-ph-prop-init-stuff/host_contract.cpp": "7259b3fffc83ab7edac9ee9812ce8aedb4056d303c1564d45bc2f2bf760b5dcb",
+    "sources/w9-frontend-b-ph-prop-init-stuff/init_stuff.cpp": "fac229b35b2c7fe1063ee1ac5ef187ab97ec3ff90cbbdc50d776238da36de3ff",
+    "sources/w9-frontend-b-state-words/host_check.cpp": "6d480ad375cebb81f8222ab0e9f1d69626cb54dbaa169081da30dc993012dec7",
+    "sources/w9-frontend-b-state-words/state_words.cpp": "ddb3a6489b73e397242d71d66fe804375b41c17a452f4d1b177d630f6ea02be0",
     "sources/w9-frontend-c-card-buffers/card_buffers.cpp": "e123ed83be60b6daa14db84ed62abe0969d0bb904b914d6a8e0ec871ffc2ed77",
     "sources/w9-frontend-c-card-buffers/host_check.cpp": "8e8981a071dcec901899b45262e2f6694986b022192f0f1c7cbb155c8d8b0236",
     "sources/w9-frontend-c-pad-run-frame/host_check.cpp": "cfa0a01ccea656e828b7b7ed6bbf38ec7ad8377ad4b52eb212a38907f8740c1e",
@@ -40243,11 +40628,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2621,
-    "authored_default_inputs": 2619,
+    "selected_inputs": 2646,
+    "authored_default_inputs": 2644,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2119,
-    "compiled_body_bytes_from_accepted_inputs": 876804,
+    "emitted_function_definitions_including_helpers": 2141,
+    "compiled_body_bytes_from_accepted_inputs": 888092,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -40260,7 +40645,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2308
+    "package_selected_inputs": 2333
   },
   "startup_implementations": [
     {
@@ -76693,6 +77078,416 @@
       ],
       "host_files": [
         "sources/w9-startup-crt-f-ustrcat/ustrcat_host_test.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-cd-file/cd_file.cpp",
+      "source_sha256": "17af56826f2c2e764782ac27d38d5bd4588cfa4dd78ebe0d19b90c5a9d97f36f",
+      "object_sha256": "08bf0979053acbbfa46f09c0b076f753a95a44a9c448fd8adba2a84908bb9ecc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-b-cd-file/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-config-strings/config_strings.cpp",
+      "source_sha256": "98ce2b64f32ca7488a8ade3de1a062ddbe8f15460efb5dc5537dc346ec167a39",
+      "object_sha256": "5c6faeccbf8ae345a7fa107df6cde92bb88bcd74a48ecd09261553fa99265065",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-b-config-strings/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-core-start-loading/core_start_loading.cpp",
+      "source_sha256": "5a838a8f3cfd98caaad70008740c0179f23783e9e94c3e1a8ef77275790c267c",
+      "object_sha256": "c23714aa9d4665fc7c45054632ba1ff71caa9ee4bde60a9f996b4283bedbdf58",
+      "emitted_functions": [
+        {
+          "name": "coreStartLoading__Fv",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-core-start-loading/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-draw-progress/draw_progress.cpp",
+      "source_sha256": "1aebdb96a0e0b6d43c95f7c8e8fa336f61c4cf4b896b46fd3a06721e793babb4",
+      "object_sha256": "ea52c97784f2515e9cea1d3b00a1da3b1993e9ea89b87753dd526c38502b39e5",
+      "emitted_functions": [
+        {
+          "name": "drawProgress__Fv",
+          "compiled_body_bytes": 404
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-draw-progress/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-game-check-for-death-screen/game_check_for_death_screen.cpp",
+      "source_sha256": "3767d912821d178e083e446fbbae2da0a98a7747df32c01ab364fa9abccc04e1",
+      "object_sha256": "11702fa5deef080a0721f34b2ef62cf7806a0ea917ccb2144f01e91c61b01f0b",
+      "emitted_functions": [
+        {
+          "name": "gameCheckForDeathScreen__Fv",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-game-check-for-death-screen/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-game-death/game_death.cpp",
+      "source_sha256": "13745954a1117024c44fefbd165232f393a5871e12dc84eb916efb65ea2e7a0d",
+      "object_sha256": "a2956a635fcf1450547db9fbe903fdcf69a180914e1cbd50e6095a1b43ccf6fc",
+      "emitted_functions": [
+        {
+          "name": "gameDeath__Fv",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-game-death/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-game-load-world/game_load_world.cpp",
+      "source_sha256": "e33c692a96b51da28f95544f0cd35e06547f6ca4a9b3ed7a5fd80f32651d0d40",
+      "object_sha256": "88f38ba33fe017dffaa44a24be3d10a9b90bdf2169a88943a45e1eb291dabbf4",
+      "emitted_functions": [
+        {
+          "name": "gameLoadWorld__FPc",
+          "compiled_body_bytes": 3080
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-game-load-world/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-hud-net-wait-msg-ready/hud_net_wait_msg_ready.cpp",
+      "source_sha256": "dbe5ab40bd8f1b07ff1ef1d7be951cf3f106a2d5e16516c5e172bca96de8c8ca",
+      "object_sha256": "cfe0c8fc1a97b63ab58772637405588ffdf8b10e1ee81006129ec26c0c39ef86",
+      "emitted_functions": [
+        {
+          "name": "hudNetWaitMsgReady__Fv",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-hud-net-wait-msg-ready/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-init-name-pad/init_name_pad.cpp",
+      "source_sha256": "00845f8d96638ad3baf43e67777bd842039cac47aa3ad23e41db32c08c3487ab",
+      "object_sha256": "ee9a2a35f7f87edaacde5f54feb12a71d74a1874c4cea7d946062cb59c642900",
+      "emitted_functions": [
+        {
+          "name": "initNamePad__Fv",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-init-name-pad/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-init-pre-select/init_pre_select.cpp",
+      "source_sha256": "4d86cc776e4d9b3b68212dc3441f3d32bac4a04c8ce6445946bd4e42461bd406",
+      "object_sha256": "ef017c70df916a8363d50fac94e47c6dcb62171e61ab2aef5cf8324696db17a9",
+      "emitted_functions": [
+        {
+          "name": "initPreSelect__Fv",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-init-pre-select/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-jump-gate-hub-reset/jump_gate_hub_reset.cpp",
+      "source_sha256": "545fdd397f780a6c121a3144c4d5d83b9d5432a460c153ba3f480f95514e210e",
+      "object_sha256": "e2aca9e956adacdbbdb21f70365a843c2e5dcc41bd37891ead0eb40c0749913a",
+      "emitted_functions": [
+        {
+          "name": "jumpGateHubReset__Fi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-jump-gate-hub-reset/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-jump-gate-save/jump_gate_save.cpp",
+      "source_sha256": "f29ebcf7c6a6705f16bd9534be2fa54da2dcb7d7c7b339027e363365bf731c69",
+      "object_sha256": "7c43aae3b576f4c87d3c769e9993c6d7d47878b46386c9db4b5e8efa8bfb654b",
+      "emitted_functions": [
+        {
+          "name": "jumpGateSave__FPc",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-jump-gate-save/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-jump-gate-task-draw/jump_gate_task_draw.cpp",
+      "source_sha256": "fb1e5c676acf6493409e99957a4bfe9f3cd8187192997a4000bd2426101e5304",
+      "object_sha256": "1dbcc36d6cb9e5e5c5c0e59f7ffbe8788f8903545d94bf624d5c7d2e191f7859",
+      "emitted_functions": [
+        {
+          "name": "jumpGateTaskDraw__Fv",
+          "compiled_body_bytes": 1072
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-jump-gate-task-draw/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-jump-gate-task-run/jump_gate_task_run.cpp",
+      "source_sha256": "04e1d124638e0b9ab09b6add090767a41fb530120d273c1782932a6ea92ece8b",
+      "object_sha256": "823957b54b6ae750b1ecbce5e60df9a2415b6d3b18113e45a57db46300f91384",
+      "emitted_functions": [
+        {
+          "name": "jumpGateTaskRun__Fv",
+          "compiled_body_bytes": 1468
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-jump-gate-task-run/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-keyboard-get-next-key/keyboard_get_next_key.cpp",
+      "source_sha256": "b069e0f7a3bb5de8c0b4c6e39d253976380ec9395fedd718eec7100c4958cba3",
+      "object_sha256": "0dd6f01dcd298d7ebd36e1ae38cb84befcbf56c2dddc66f413de34e0108d445e",
+      "emitted_functions": [
+        {
+          "name": "keyboardGetNextKey__Fv",
+          "compiled_body_bytes": 416
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-keyboard-get-next-key/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-keyboard-get-next-translated-key/keyboard_get_next_translated_key.cpp",
+      "source_sha256": "920b741bc9dd72a6da580bc49ca0e4922fb494a88faa0da9d86b67bf6712753c",
+      "object_sha256": "d27a0708cf26462fb680452fd81592c2316794b98550d6f95dac4160c4a76261",
+      "emitted_functions": [
+        {
+          "name": "keyboardGetNextTranslatedKey__Fv",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-keyboard-get-next-translated-key/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-load-player-info/load_player_info.cpp",
+      "source_sha256": "5c40ac4153e8207ee5e6b026a1679ec6b8a16d451f0a46ce72de1a0bfd5454c4",
+      "object_sha256": "f80747cd53eb67b958bd7ab790e2b601f7faff366c09463b5f6513dac30dd5bd",
+      "emitted_functions": [
+        {
+          "name": "loadPlayerInfo__FiPiP12playerStruct",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-load-player-info/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-load-ram-slot/load_ram_slot.cpp",
+      "source_sha256": "212177d472f78a7c90ecd21f73050e4a1bc7cf6472f167cdb11767fbb51f4764",
+      "object_sha256": "b45508464407d37c7f033ce74af02128739efe2efd286af7a14e6a8af9b66cd5",
+      "emitted_functions": [
+        {
+          "name": "loadRamSlot__Fv",
+          "compiled_body_bytes": 976
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-load-ram-slot/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-memcard-title/memcard_title.cpp",
+      "source_sha256": "e9d52391538b42b93aba7e2ffc72b1d0325be93f49e82be34209c48efac6d85c",
+      "object_sha256": "8a30ea6d41d3f914d5cc84d40cc454009ae68088df63f394a862373a27e88565",
+      "emitted_functions": [
+        {
+          "name": "memcardTitle__FPUs",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-memcard-title/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-modify-ram-slot-for-net-save/modify_ram_slot_for_net_save.cpp",
+      "source_sha256": "24d83560766b12cae1b5c220f26b847662aa80e9ce3eb29750bd87ed667ead30",
+      "object_sha256": "2bd10d64d9b723f42c973f9b2fb7c53b8ec82510f232a9b7f2f83ba981035b0f",
+      "emitted_functions": [
+        {
+          "name": "modifyRamSlotForNetSave__Fv",
+          "compiled_body_bytes": 656
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-modify-ram-slot-for-net-save/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-multi-hud-add-help-message/multi_hud_add_help_message.cpp",
+      "source_sha256": "9490940164f57beb1bcb3e9ad4a4a1965b3d92837b97723560560ee21da9398c",
+      "object_sha256": "4c05182d92ee724cfbbe7953f09ca413a11bc3975c708dae3ca1ab7c714576e0",
+      "emitted_functions": [
+        {
+          "name": "multiHudAddHelpMessage__FiPUsT1i",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-multi-hud-add-help-message/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-net-get-local-object/net_get_local_object.cpp",
+      "source_sha256": "0c57c390933ac6078de4af3169de85475d8a731b865de80459741b0b2d0dd7f1",
+      "object_sha256": "17b56025adccde7294bb84c4b707286e29706f402baabe76bb91963a1a5d28b4",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalObject__FP8Creature",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-net-get-local-object/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-net-get-local-player-nm-safe/net_get_local_player_nm_safe.cpp",
+      "source_sha256": "9740f22a493c5d025306e4120ee527924b6272c063ee6cc3f484a10df17afbcc",
+      "object_sha256": "443908aee5c680da7602403bec7b12ccf5aa34b06f8078f4c44851130da75724",
+      "emitted_functions": [
+        {
+          "name": "netGetLocalPlayerNmSafe__Fi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-net-get-local-player-nm-safe/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-ph-prop-init-stuff/init_stuff.cpp",
+      "source_sha256": "fac229b35b2c7fe1063ee1ac5ef187ab97ec3ff90cbbdc50d776238da36de3ff",
+      "object_sha256": "7befbe2cf0d848019c4315d25818a17e97ef02a85c694c0f13912b2c486973d9",
+      "emitted_functions": [
+        {
+          "name": "initStuff__6PhPropi",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "host_files": [
+        "sources/w9-frontend-b-ph-prop-init-stuff/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-frontend-b",
+      "source": "sources/w9-frontend-b-state-words/state_words.cpp",
+      "source_sha256": "ddb3a6489b73e397242d71d66fe804375b41c17a452f4d1b177d630f6ea02be0",
+      "object_sha256": "a98ebc08ce15f88a685b2fb500955309dfcd3163be223efe2fc0019867348081",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-frontend-b-state-words/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
