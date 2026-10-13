@@ -8,6 +8,8 @@ typedef void* (*W11ActorCHostSlot)(void*);
 extern W11ActorCHostSlot w11_actor_c_host_slots[];
 typedef void* (*W11ActorCHostSlotInt)(void*, int);
 extern W11ActorCHostSlotInt w11_actor_c_host_slots_int[];
+typedef void* (*W11ActorCHostSlotIntPtr)(void*, int, const void*);
+extern W11ActorCHostSlotIntPtr w11_actor_c_host_slots_int_ptr[];
 #endif
 namespace w11c {
 typedef unsigned __attribute__((may_alias)) Word;
@@ -64,6 +66,17 @@ inline void* call_slot_int(void* object, unsigned slot_byte_offset, int argument
     return w11_actor_c_host_slots_int[function](bytes(object) + adjustment, argument);
 #else
     return reinterpret_cast<void* (*)(void*, int)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment, argument);
+#endif
+}
+// The same slot called with an int and a pointer after the adjusted object.
+inline void* call_slot_int_ptr(void* object, unsigned slot_byte_offset, int argument, const void* pointer) {
+    const unsigned char* entry = link(object, 72) + slot_byte_offset;
+    const short adjustment = *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W11_ACTOR_C_HOST)
+    return w11_actor_c_host_slots_int_ptr[function](bytes(object) + adjustment, argument, pointer);
+#else
+    return reinterpret_cast<void* (*)(void*, int, const void*)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment, argument, pointer);
 #endif
 }
 }  // namespace w11c
