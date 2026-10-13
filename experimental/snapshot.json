@@ -46410,6 +46410,244 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w10-audio-a-stream-state/stream_state.cpp"
+    },
+    {
+      "input_order": 3697,
+      "component": "w10-render-b-fx-run-creature-glow",
+      "object_name": "w10_render_b_fx_run_creature_glow.o",
+      "private_object_sha256": "48f29df0d905f1d2d4e123557cef8cb233fbbe784c76bd040aa09588c1fbcbc3",
+      "emitted_functions": [
+        {
+          "name": "fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi",
+          "compiled_body_bytes": 904
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-fx-run-creature-glow/fx_run_creature_glow.cpp"
+    },
+    {
+      "input_order": 3698,
+      "component": "w10-render-b-fx-run-creature-shock",
+      "object_name": "w10_render_b_fx_run_creature_shock.o",
+      "private_object_sha256": "886e92baa10706f001fbbd680e0a0699bbe239fba57e00b3417e253788df8812",
+      "emitted_functions": [
+        {
+          "name": "fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi",
+          "compiled_body_bytes": 1884
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-fx-run-creature-shock/fx_run_creature_shock.cpp"
+    },
+    {
+      "input_order": 3699,
+      "component": "w10-render-b-get-vif-and-tex",
+      "object_name": "w10_render_b_get_vif_and_tex.o",
+      "private_object_sha256": "5aa60a8d0e4239dc70bea1296ef0f78d930811a58805beef054d40df2937f88f",
+      "emitted_functions": [
+        {
+          "name": "getVifAndTex__FPcT0PP12_modelHeaderPP8_texture",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-get-vif-and-tex/get_vif_and_tex.cpp"
+    },
+    {
+      "input_order": 3700,
+      "component": "w10-render-b-hud-get-fade-icon-pos",
+      "object_name": "w10_render_b_hud_get_fade_icon_pos.o",
+      "private_object_sha256": "c5bbfadffe72ef5d7cf01d2043fd890e171965f8d47c7f04215c4a89857c8ac0",
+      "emitted_functions": [
+        {
+          "name": "hudGetFadeIconPos__Fii",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-hud-get-fade-icon-pos/hud_get_fade_icon_pos.cpp"
+    },
+    {
+      "input_order": 3701,
+      "component": "w10-render-b-hud-letter-box",
+      "object_name": "w10_render_b_hud_letter_box.o",
+      "private_object_sha256": "6b5bce19bc98d91b6829aa58434c72a680bf4ea39381fab144cd7dd43ab9d967",
+      "emitted_functions": [
+        {
+          "name": "hudLetterBox__Fv",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-hud-letter-box/hud_letter_box.cpp"
+    },
+    {
+      "input_order": 3702,
+      "component": "w10-render-b-light-character-shadow",
+      "object_name": "w10_render_b_light_character_shadow.o",
+      "private_object_sha256": "4fc3657b61f59d996f691d719475313ee39a4cdda6b8080ce26d1635b188fcf4",
+      "emitted_functions": [
+        {
+          "name": "lightCharacterShadow__FG6Point3P11LightResult",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-light-character-shadow/light_character_shadow.cpp"
+    },
+    {
+      "input_order": 3703,
+      "component": "w10-render-b-light-set-color-scale",
+      "object_name": "w10_render_b_light_set_color_scale.o",
+      "private_object_sha256": "eaacdaf754e91d31f95b28aae13a6ea596030981b43292f472e7d1794d085604",
+      "emitted_functions": [
+        {
+          "name": "lightSetColorScale__Ffff",
+          "compiled_body_bytes": 628
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-light-set-color-scale/light_set_color_scale.cpp"
+    },
+    {
+      "input_order": 3704,
+      "component": "w10-render-b-light-set-primary-directional",
+      "object_name": "w10_render_b_light_set_primary_directional.o",
+      "private_object_sha256": "c82022975fcd0f067e352019a1387d5346b927e0a8aaeb68a601e97565b74ef7",
+      "emitted_functions": [
+        {
+          "name": "lightSetPrimaryDirectional__FG6Point3Ps",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-light-set-primary-directional/light_set_primary_directional.cpp"
+    },
+    {
+      "input_order": 3705,
+      "component": "w10-render-b-light-set-scene-lights",
+      "object_name": "w10_render_b_light_set_scene_lights.o",
+      "private_object_sha256": "c73eb912d9b8d0351d965cae961e42904262555cedce3a5b8d53ea29eb37e68d",
+      "emitted_functions": [
+        {
+          "name": "lightSetSceneLights__FG6Point3iiiiiiiii",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-light-set-scene-lights/light_set_scene_lights.cpp"
+    },
+    {
+      "input_order": 3706,
+      "component": "w10-render-b-light-set-secondary-directional",
+      "object_name": "w10_render_b_light_set_secondary_directional.o",
+      "private_object_sha256": "242410f7d0920fe289c319d9920e60b0476c5bf769837f0acb7b6db1a75ec40d",
+      "emitted_functions": [
+        {
+          "name": "lightSetSecondaryDirectional__FG6Point3Ps",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-light-set-secondary-directional/light_set_secondary_directional.cpp"
+    },
+    {
+      "input_order": 3707,
+      "component": "w10-render-b-mat-invert34",
+      "object_name": "w10_render_b_mat_invert34.o",
+      "private_object_sha256": "15a5b0303b0113ab4ab534433be2ae20cff47f4722a69bec12f099e82b2a3f84",
+      "emitted_functions": [
+        {
+          "name": "matInvert__FP8Matrix34T0",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-invert34/mat_invert34.cpp"
+    },
+    {
+      "input_order": 3708,
+      "component": "w10-render-b-mat-make-char-view",
+      "object_name": "w10_render_b_mat_make_char_view.o",
+      "private_object_sha256": "77645cbeabb55b4782042be69d920c40f24fe8c5176db24403960c94e24ec790",
+      "emitted_functions": [
+        {
+          "name": "matMakeCharViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-make-char-view/mat_make_char_view.cpp"
+    },
+    {
+      "input_order": 3709,
+      "component": "w10-render-b-mat-make-world-view",
+      "object_name": "w10_render_b_mat_make_world_view.o",
+      "private_object_sha256": "3ffa75a15f0b24dc750c8c5a4e03b506d992f50f44e6db18431dbb2ffa4a9ece",
+      "emitted_functions": [
+        {
+          "name": "matMakeWorldViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-make-world-view/mat_make_world_view.cpp"
+    },
+    {
+      "input_order": 3710,
+      "component": "w10-render-b-mat-post-rot",
+      "object_name": "w10_render_b_mat_post_rot.o",
+      "private_object_sha256": "0568d55dd241f72bb8323d0726cdada05bb1acfbce01a57b0f9ad452e3e5aa9c",
+      "emitted_functions": [
+        {
+          "name": "matPostRot__FP8Matrix33is",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-post-rot/mat_post_rot.cpp"
+    },
+    {
+      "input_order": 3711,
+      "component": "w10-render-b-mat-scale34",
+      "object_name": "w10_render_b_mat_scale34.o",
+      "private_object_sha256": "35a04bbc751ca55e5b011ac75f88787bc48f2e483661f73a105cb72a47ce3bc9",
+      "emitted_functions": [
+        {
+          "name": "matScale__FP8Matrix34f",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-scale34/mat_scale34.cpp"
+    },
+    {
+      "input_order": 3712,
+      "component": "w10-render-b-mat-scale44",
+      "object_name": "w10_render_b_mat_scale44.o",
+      "private_object_sha256": "ccca0f9d701959f15124944fcd634a465746035960744c0e48a237140578361c",
+      "emitted_functions": [
+        {
+          "name": "matScale__FP8Matrix44f",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-scale44/mat_scale44.cpp"
+    },
+    {
+      "input_order": 3713,
+      "component": "w10-render-b-mat-trans",
+      "object_name": "w10_render_b_mat_trans.o",
+      "private_object_sha256": "08b3ee92add60517c2734f7cf45bee799fd1d50e4c8f00cea4685b453b6462f5",
+      "emitted_functions": [
+        {
+          "name": "matTrans__FP8Matrix44fff",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-render-b-mat-trans/mat_trans.cpp"
     }
   ],
   "drafts": [
@@ -50179,6 +50417,47 @@
     "sources/w10-net-b-send-control-packet/send_control_packet.cpp": "4c130668ca269a63cdde4f9b9d05692a03343260c0d1d09fa4541283ba4f0c83",
     "sources/w10-net-b-show-net-player-status/host_check.cpp": "78b0b6c8e01491a65093d9b860b56460b46fbda6bb9b5d9641f0b44b9675411e",
     "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp": "e4c717a6be98a1dbf471d21c6b2903eb8777c17f9424b55226b20197639746e3",
+    "sources/w10-render-b-data-halo-color/data_halo_color.cpp": "9a12d6fd71420ad10923ddd6dd6a37541437d18e02e36898daab8748db3e428c",
+    "sources/w10-render-b-data-inventory-textures/data_inventory_textures.cpp": "b7c8662d2e84a7d0227c54bdafae2eebf45dd41f503160f5510413cc6535e757",
+    "sources/w10-render-b-data-lava-particles/data_lava_particles.cpp": "24b2fa42d858969747819bee88daf95271267ce18e6b7b99a924e9b155a82350",
+    "sources/w10-render-b-data-light-info/data_light_info.cpp": "cd803a4c2eb225e89ce468368a9c2c8a7694d7d79d8b5de4f141024159f62844",
+    "sources/w10-render-b-data-light-slots/data_light_slots.cpp": "b8da875a196430e9c1b900acfdafce6d53db28b58b22be27c47eb6e9f240b479",
+    "sources/w10-render-b-data-lock-alpha/data_lock_alpha.cpp": "285891ab0ff47876c9627ac743c6efbb5b1085bbd1fd8e051ee1713762c40212",
+    "sources/w10-render-b-data-model-globals/data_model_globals.cpp": "5d1e5e1c26e8eb3b09ff5f37a766139fd859fb32eb06f3ec250dad203b2d4763",
+    "sources/w10-render-b-fx-run-creature-glow/fx_run_creature_glow.cpp": "c0d670ef406be948ba2b4257729abaf0c7de58ea5166dee419872f904ad1fb60",
+    "sources/w10-render-b-fx-run-creature-glow/host_check.cpp": "0d1a69a49f020791dd431cd8818a88a4e77c7ce6f67e323efd6634b97f400a99",
+    "sources/w10-render-b-fx-run-creature-shock/fx_run_creature_shock.cpp": "1f40cf877738872487e81e2ea3714c46c06b450c4dd259bdec9689dd0e9dd2a3",
+    "sources/w10-render-b-fx-run-creature-shock/host_check.cpp": "1c2e1ffda2dabbfe715321d8459c254ba873205fbbdd114abd10718124a8dd0b",
+    "sources/w10-render-b-get-vif-and-tex/get_vif_and_tex.cpp": "5b2531f4429801e194473e51bf23fc49185e127d7d2f64d98dfb14a523b1ca69",
+    "sources/w10-render-b-get-vif-and-tex/host_check.cpp": "44694d64aa944b64f82682d8a06119793142998817aa2d8842c3e5464eafed1c",
+    "sources/w10-render-b-hud-get-fade-icon-pos/host_check.cpp": "1768043f21347111a7f40f78c2deb81f9fe80b3051036c05e919afcfc677177b",
+    "sources/w10-render-b-hud-get-fade-icon-pos/hud_get_fade_icon_pos.cpp": "a189dcd3ba8abf054997bb6c6ffb73e4f81a4ab9cbfd827a5049e226806c3e92",
+    "sources/w10-render-b-hud-letter-box/host_check.cpp": "caedc444d3f7b9fcc3a5b1291d929d8bfaf79346d952c7ea251c8ca2ebb6ab4c",
+    "sources/w10-render-b-hud-letter-box/hud_letter_box.cpp": "83034241cdcc05cb0d6ca9bca7630857a92555ffd7daa6c3b12f8ef624c9bf84",
+    "sources/w10-render-b-light-character-shadow/host_check.cpp": "504f50063429d93701a45ac488667c2e27e1218b1ebf290e39bf0778c182b658",
+    "sources/w10-render-b-light-character-shadow/light_character_shadow.cpp": "04cfdd9bcef2da97bcfd520fb0f53fefa2772243b013a7110495a993ba713f04",
+    "sources/w10-render-b-light-set-color-scale/host_check.cpp": "6dea19505fa4b5642c41eef7e3282bca664762a1258ac8cdc0ad5c39fe61956e",
+    "sources/w10-render-b-light-set-color-scale/light_set_color_scale.cpp": "fe6c4a23fdda4d842998ab633c694e00d2fda1a93227a19d756b2a84119b8177",
+    "sources/w10-render-b-light-set-primary-directional/host_check.cpp": "09b78fde7e779de0a8d02dbe83e7017497fcc1dd7b8de28089b8b8c68c402ae5",
+    "sources/w10-render-b-light-set-primary-directional/light_set_primary_directional.cpp": "9464d69fa40c9732074087b96957bf5725cbc3ed5a5d77b0a28de97aef3e3463",
+    "sources/w10-render-b-light-set-scene-lights/host_check.cpp": "4aa011fca90dbed3e7de882e4ad7bd031597bc637fcfe8b3f3c8e989d477542e",
+    "sources/w10-render-b-light-set-scene-lights/light_set_scene_lights.cpp": "c320eccee1242242579dcf7ac331f9b0c322a2e47460c4cb648f11eec0033af5",
+    "sources/w10-render-b-light-set-secondary-directional/host_check.cpp": "7a622abb6333ba8cc0d9567a15cae3b3ba33ce81b1231f3f68a862a4205dcff1",
+    "sources/w10-render-b-light-set-secondary-directional/light_set_secondary_directional.cpp": "e61e42d1f8b952fb195752bfb2a43c96178c2a664016aa2bf5cb50abe9f2bfd1",
+    "sources/w10-render-b-mat-invert34/host_check.cpp": "4bc3184f233eaa63d77261a2551a0f3b91449ee577b85b6f4e92424f540f47fe",
+    "sources/w10-render-b-mat-invert34/mat_invert34.cpp": "a8e66e48b2a3349e714574daf96717798c3e88767f2bc9d540d6d1f45358aa7c",
+    "sources/w10-render-b-mat-make-char-view/host_check.cpp": "ea8df0e1493a0613b356991bf5bf9e8cfd0a65cda159ccb841b6a530dc039645",
+    "sources/w10-render-b-mat-make-char-view/mat_make_char_view.cpp": "434167499c0dba208e0ef2f91b3aaf4b6a05b6488724597b0abc8a759c3fbcc4",
+    "sources/w10-render-b-mat-make-world-view/host_check.cpp": "b4efe08690c8166f2012d7dc477af4a2a2f12c3c944961f0f2b17190491ef65a",
+    "sources/w10-render-b-mat-make-world-view/mat_make_world_view.cpp": "77cb16df8ff350ded8e1ad6249ec4e08ce59f461c046ed5287cec06ba4cd76ee",
+    "sources/w10-render-b-mat-post-rot/host_check.cpp": "7895101839b9b97294c003ad120f3dc235a7be8a67d02a55fcec830c3f74d0c4",
+    "sources/w10-render-b-mat-post-rot/mat_post_rot.cpp": "08bda9aa1fa1942ac0dd65f4545025c76b77c78daa653ce1b918d93977f711dc",
+    "sources/w10-render-b-mat-scale34/host_check.cpp": "cb90ff195fb33d36a1a6079c112509f405be3ceed21cad1192e4948b1217734e",
+    "sources/w10-render-b-mat-scale34/mat_scale34.cpp": "a419384df8d30031cce0bc08e10ef2923073360f9d8d7b6b8ac26290831809d9",
+    "sources/w10-render-b-mat-scale44/host_check.cpp": "71643cc6ad7ad381c6ae2fe0c4c3605524c8c5e10bd2a9237597a0ec1bfa86bb",
+    "sources/w10-render-b-mat-scale44/mat_scale44.cpp": "5971be2f5b4ac352aed0cf239e06b9ec3f7356d5c57a3d6a78e5c5677bddd5d2",
+    "sources/w10-render-b-mat-trans/host_check.cpp": "e59240641ddbbc104f22e8b3be83d51bc43b466278260a8040d479caa0ee10e0",
+    "sources/w10-render-b-mat-trans/mat_trans.cpp": "c9884a4c2e1d3ca3cb901745b712a97760ff32684267c3b0bd8cc8fce64641fe",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-alarm-handler/host_check.cpp": "5ca8848f2edfe82b793f8a286db7e433c802fdc16849939aa2436cb4ab3012e5",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
@@ -54846,11 +55125,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3697,
-    "authored_default_inputs": 3695,
+    "selected_inputs": 3714,
+    "authored_default_inputs": 3712,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2669,
-    "compiled_body_bytes_from_accepted_inputs": 1151620,
+    "emitted_function_definitions_including_helpers": 2686,
+    "compiled_body_bytes_from_accepted_inputs": 1157876,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -54863,7 +55142,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3384
+    "package_selected_inputs": 3401
   },
   "startup_implementations": [
     {
@@ -106929,6 +107208,295 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w10-audio-a-stream-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-fx-run-creature-glow/fx_run_creature_glow.cpp",
+      "source_sha256": "c0d670ef406be948ba2b4257729abaf0c7de58ea5166dee419872f904ad1fb60",
+      "object_sha256": "48f29df0d905f1d2d4e123557cef8cb233fbbe784c76bd040aa09588c1fbcbc3",
+      "emitted_functions": [
+        {
+          "name": "fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi",
+          "compiled_body_bytes": 904
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-fx-run-creature-glow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-fx-run-creature-shock/fx_run_creature_shock.cpp",
+      "source_sha256": "1f40cf877738872487e81e2ea3714c46c06b450c4dd259bdec9689dd0e9dd2a3",
+      "object_sha256": "886e92baa10706f001fbbd680e0a0699bbe239fba57e00b3417e253788df8812",
+      "emitted_functions": [
+        {
+          "name": "fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi",
+          "compiled_body_bytes": 1884
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-fx-run-creature-shock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-get-vif-and-tex/get_vif_and_tex.cpp",
+      "source_sha256": "5b2531f4429801e194473e51bf23fc49185e127d7d2f64d98dfb14a523b1ca69",
+      "object_sha256": "5aa60a8d0e4239dc70bea1296ef0f78d930811a58805beef054d40df2937f88f",
+      "emitted_functions": [
+        {
+          "name": "getVifAndTex__FPcT0PP12_modelHeaderPP8_texture",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-get-vif-and-tex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-hud-get-fade-icon-pos/hud_get_fade_icon_pos.cpp",
+      "source_sha256": "a189dcd3ba8abf054997bb6c6ffb73e4f81a4ab9cbfd827a5049e226806c3e92",
+      "object_sha256": "c5bbfadffe72ef5d7cf01d2043fd890e171965f8d47c7f04215c4a89857c8ac0",
+      "emitted_functions": [
+        {
+          "name": "hudGetFadeIconPos__Fii",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-hud-get-fade-icon-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-hud-letter-box/hud_letter_box.cpp",
+      "source_sha256": "83034241cdcc05cb0d6ca9bca7630857a92555ffd7daa6c3b12f8ef624c9bf84",
+      "object_sha256": "6b5bce19bc98d91b6829aa58434c72a680bf4ea39381fab144cd7dd43ab9d967",
+      "emitted_functions": [
+        {
+          "name": "hudLetterBox__Fv",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-hud-letter-box/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-light-character-shadow/light_character_shadow.cpp",
+      "source_sha256": "04cfdd9bcef2da97bcfd520fb0f53fefa2772243b013a7110495a993ba713f04",
+      "object_sha256": "4fc3657b61f59d996f691d719475313ee39a4cdda6b8080ce26d1635b188fcf4",
+      "emitted_functions": [
+        {
+          "name": "lightCharacterShadow__FG6Point3P11LightResult",
+          "compiled_body_bytes": 732
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-light-character-shadow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-light-set-color-scale/light_set_color_scale.cpp",
+      "source_sha256": "fe6c4a23fdda4d842998ab633c694e00d2fda1a93227a19d756b2a84119b8177",
+      "object_sha256": "eaacdaf754e91d31f95b28aae13a6ea596030981b43292f472e7d1794d085604",
+      "emitted_functions": [
+        {
+          "name": "lightSetColorScale__Ffff",
+          "compiled_body_bytes": 628
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-light-set-color-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-light-set-primary-directional/light_set_primary_directional.cpp",
+      "source_sha256": "9464d69fa40c9732074087b96957bf5725cbc3ed5a5d77b0a28de97aef3e3463",
+      "object_sha256": "c82022975fcd0f067e352019a1387d5346b927e0a8aaeb68a601e97565b74ef7",
+      "emitted_functions": [
+        {
+          "name": "lightSetPrimaryDirectional__FG6Point3Ps",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-light-set-primary-directional/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-light-set-scene-lights/light_set_scene_lights.cpp",
+      "source_sha256": "c320eccee1242242579dcf7ac331f9b0c322a2e47460c4cb648f11eec0033af5",
+      "object_sha256": "c73eb912d9b8d0351d965cae961e42904262555cedce3a5b8d53ea29eb37e68d",
+      "emitted_functions": [
+        {
+          "name": "lightSetSceneLights__FG6Point3iiiiiiiii",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-light-set-scene-lights/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-light-set-secondary-directional/light_set_secondary_directional.cpp",
+      "source_sha256": "e61e42d1f8b952fb195752bfb2a43c96178c2a664016aa2bf5cb50abe9f2bfd1",
+      "object_sha256": "242410f7d0920fe289c319d9920e60b0476c5bf769837f0acb7b6db1a75ec40d",
+      "emitted_functions": [
+        {
+          "name": "lightSetSecondaryDirectional__FG6Point3Ps",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-light-set-secondary-directional/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-invert34/mat_invert34.cpp",
+      "source_sha256": "a8e66e48b2a3349e714574daf96717798c3e88767f2bc9d540d6d1f45358aa7c",
+      "object_sha256": "15a5b0303b0113ab4ab534433be2ae20cff47f4722a69bec12f099e82b2a3f84",
+      "emitted_functions": [
+        {
+          "name": "matInvert__FP8Matrix34T0",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-invert34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-make-char-view/mat_make_char_view.cpp",
+      "source_sha256": "434167499c0dba208e0ef2f91b3aaf4b6a05b6488724597b0abc8a759c3fbcc4",
+      "object_sha256": "77645cbeabb55b4782042be69d920c40f24fe8c5176db24403960c94e24ec790",
+      "emitted_functions": [
+        {
+          "name": "matMakeCharViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-make-char-view/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-make-world-view/mat_make_world_view.cpp",
+      "source_sha256": "77cb16df8ff350ded8e1ad6249ec4e08ce59f461c046ed5287cec06ba4cd76ee",
+      "object_sha256": "3ffa75a15f0b24dc750c8c5a4e03b506d992f50f44e6db18431dbb2ffa4a9ece",
+      "emitted_functions": [
+        {
+          "name": "matMakeWorldViewMatrix__FP8Matrix44fffffff",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-make-world-view/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-post-rot/mat_post_rot.cpp",
+      "source_sha256": "08bda9aa1fa1942ac0dd65f4545025c76b77c78daa653ce1b918d93977f711dc",
+      "object_sha256": "0568d55dd241f72bb8323d0726cdada05bb1acfbce01a57b0f9ad452e3e5aa9c",
+      "emitted_functions": [
+        {
+          "name": "matPostRot__FP8Matrix33is",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-post-rot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-scale34/mat_scale34.cpp",
+      "source_sha256": "a419384df8d30031cce0bc08e10ef2923073360f9d8d7b6b8ac26290831809d9",
+      "object_sha256": "35a04bbc751ca55e5b011ac75f88787bc48f2e483661f73a105cb72a47ce3bc9",
+      "emitted_functions": [
+        {
+          "name": "matScale__FP8Matrix34f",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-scale34/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-scale44/mat_scale44.cpp",
+      "source_sha256": "5971be2f5b4ac352aed0cf239e06b9ec3f7356d5c57a3d6a78e5c5677bddd5d2",
+      "object_sha256": "ccca0f9d701959f15124944fcd634a465746035960744c0e48a237140578361c",
+      "emitted_functions": [
+        {
+          "name": "matScale__FP8Matrix44f",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-scale44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-render-b",
+      "source": "sources/w10-render-b-mat-trans/mat_trans.cpp",
+      "source_sha256": "c9884a4c2e1d3ca3cb901745b712a97760ff32684267c3b0bd8cc8fce64641fe",
+      "object_sha256": "08b3ee92add60517c2734f7cf45bee799fd1d50e4c8f00cea4685b453b6462f5",
+      "emitted_functions": [
+        {
+          "name": "matTrans__FP8Matrix44fff",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w10-render-b-mat-trans/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

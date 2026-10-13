@@ -7622,3 +7622,33 @@ Closed: `ambientGroup`, `cdEndStream__Fv`, `cdIsBusyStreamingNonwithstanding__Fv
 
 Opened: `sceCdStResume`, `sceCdStStart`
 - 2026-10-13 01:23 CDT — `agents/w10-audio-a` — 1327 unresolved imports
+
+## agents/w10-render-b
+
+Merged (merge commit, branch tip `69d35ed5`, 41 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Animation, model, light and render part 2: 17 functions
+(matrix, light, HUD and creature-effect routines) with fresh `input_order` values 3697
+through 3713. 17 of 17 host checks pass here (x86_64, `-ffp-contract=off`); they declare
+the function `extern "C"` and need the unit source compiled and linked with them, which
+the check headers do not state, so each was built as `host_check.cpp <unit>.cpp`; 16
+under `-Werror` and one (`fx-run-creature-glow`) only without it. Seven data units
+(`data-halo-color`, `data-inventory-textures`, `data-lava-particles`, `data-light-info`,
+`data-light-slots`, `data-lock-alpha`, `data-model-globals`) have no committed check
+(the notes call them data-only), which the snapshot checker rejects, so they were not
+selected and their sources stay in the snapshot; the names they would define stay
+unresolved. The notes' closed list therefore overstates. The worker's paired runs are
+private and were not re-verified. Compiled sizes are not image sizes and no byte match is
+claimed. The worker did not run a full build; this integration did: 3712 authored inputs,
+2684 function bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1327 |
+| After | 1319 |
+| Closed | 17 |
+| Opened | 9 |
+
+Closed: `fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi`, `fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`, `getVifAndTex__FPcT0PP12_modelHeaderPP8_texture`, `hudGetFadeIconPos__Fii`, `hudLetterBox__Fv`, `lightCharacterShadow__FG6Point3P11LightResult`, `lightSetColorScale__Ffff`, `lightSetPrimaryDirectional__FG6Point3Ps`, `lightSetSceneLights__FG6Point3iiiiiiiii`, `lightSetSecondaryDirectional__FG6Point3Ps`, `matInvert__FP8Matrix34T0`, `matMakeCharViewMatrix__FP8Matrix44fffffff`, `matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matPostRot__FP8Matrix33is`, `matScale__FP8Matrix34f`, `matScale__FP8Matrix44f`, `matTrans__FP8Matrix44fff`
+
+Opened: `P_MoveLightning__FiG6Point3T1ii`, `P_StartLightning__FG6Point3T0iiffUi`, `ballSmokeParticle`, `ballSparkParticle`, `findLightsAtPoint__FG6Point3PP5Lighti`, `gameCloseToCamera__FP6Point3`, `matInvert__FP8Matrix44T0`, `saveBestList`, `saveValid`
