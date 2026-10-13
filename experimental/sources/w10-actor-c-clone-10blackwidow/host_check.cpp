@@ -53,13 +53,14 @@ extern "C" void __15AnimationState8RC15AnimationState8(void* destination, const 
 
 int main() {
     unsigned char source[kSize];
-    unsigned char created[kSize];
+    unsigned char created[kSize + 16];
     for (unsigned i = 0; i < kSize; ++i) source[i] = static_cast<unsigned char>(0x10 + i * 3);
     std::memset(created, 0xa5, sizeof created);
     for (unsigned i = 0; i < kSize; ++i) if (source[i] == 0xa5 || source[i] == 0) source[i] = 0x11;
     buffer = created;
     source_base = source;
     void* result = clone__10BlackWidow(source);
+    for (unsigned i = kSize; i < kSize + 16; ++i) expect(created[i] == 0xa5, "nothing is written past the allocation");
     expect(result == created, "returns the allocation");
     expect(requests == int(kSize), "allocation size");
     std::vector<std::string> want = {"head:0:same:object", "head:4:same:object", "head:8:same:object", "state:288:same:creature", "head:576:same:creature", "head:752:same:creature", "head:888:same:creature", "head:1004:same:blackwidow"};

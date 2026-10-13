@@ -1,4 +1,4 @@
-// Observed __tf8Catapult at 0x003169d8, 80 bytes.
+// Observed __tf8Catapult at 0x003169d8, 76 bytes.
 // Returns the 12-byte __ti8Catapult object (COMMON in the image, zero in the file).
 // When its first word is zero, calls the 10GameObject type-info function, then __rtti_si with
 // this object, the bytes "8Catapult" (at 0x00477838) and the 10GameObject type-info object.

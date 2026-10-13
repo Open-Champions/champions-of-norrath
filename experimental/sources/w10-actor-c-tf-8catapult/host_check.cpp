@@ -38,8 +38,13 @@ int main() {
     expect(base_calls == 1 && rtti_calls == 1, "nonzero first byte skips registration");
     base_calls = rtti_calls = 0;
     std::memset(__ti8Catapult, 0, 12);
-    __ti8Catapult[3] = 0x80;
-    expect(__tf8Catapult() == __ti8Catapult && base_calls == 0 && rtti_calls == 0, "any byte of the first word gates");
+    for (int byte = 0; byte < 4; ++byte) {
+        std::memset(__ti8Catapult, 0, 12);
+        __ti8Catapult[byte] = 0x01;
+        base_calls = rtti_calls = 0;
+        expect(__tf8Catapult() == __ti8Catapult && base_calls == 0 && rtti_calls == 0, "any byte of the first word gates");
+    }
+    base_calls = rtti_calls = 0;
     std::memset(__ti8Catapult, 0, 12);
     __ti8Catapult[4] = 9;
     __ti8Catapult[11] = 9;

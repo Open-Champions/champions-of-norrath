@@ -54,11 +54,12 @@ extern "C" void __14AnimationStateRC14AnimationState(void* destination, const vo
 
 int main() {
     unsigned char source[kSize];
-    unsigned char created[kSize];
+    unsigned char created[kSize + 16];
     for (unsigned i = 0; i < kSize; ++i) source[i] = static_cast<unsigned char>(0x10 + i);
     std::memset(created, 0xa5, sizeof created);
     buffer = created;
     void* result = clone__5Chest(source);
+    for (unsigned i = kSize; i < kSize + 16; ++i) expect(created[i] == 0xa5, "nothing is written past the allocation");
     expect(result == created, "returns the allocation");
     expect(requests == int(kSize), "allocation size");
     expect(heads.size() == 3u && heads[0] == created && heads[1] == created + 4 && heads[2] == created + 8,

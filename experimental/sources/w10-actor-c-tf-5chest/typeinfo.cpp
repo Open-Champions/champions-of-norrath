@@ -1,4 +1,4 @@
-// Observed __tf5Chest at 0x0030e198, 80 bytes.
+// Observed __tf5Chest at 0x0030e198, 76 bytes.
 // Returns the 12-byte __ti5Chest object (COMMON in the image, zero in the file).
 // When its first word is zero, calls the 10GameObject type-info function, then __rtti_si with
 // this object, the bytes "5Chest" (at 0x00483940) and the 10GameObject type-info object.
