@@ -35,6 +35,16 @@ struct TtyPacketHeader {   // the first 12 bytes of wbuf
     unsigned int word8;    // +8
 };
 
+// The original reaches wbuf and rbuf through the uncached alias (address OR 0x20000000).
+// A host check defines NORRATH_HOST_CONTRACT and gets the plain pointer instead.
+#if defined(NORRATH_HOST_CONTRACT)
+inline unsigned char* ttyUncached(unsigned char* pointer) { return pointer; }
+#else
+inline unsigned char* ttyUncached(unsigned char* pointer) {
+    return reinterpret_cast<unsigned char*>(reinterpret_cast<unsigned>(pointer) | 0x20000000u);
+}
+#endif
+
 extern TtyInfo tinfo;
 extern unsigned char wbuf[320];
 extern unsigned char rbuf[];
