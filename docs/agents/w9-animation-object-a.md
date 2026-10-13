@@ -21,3 +21,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `find-tag-float` | `findTagFloat__10GameObjectPci` | 0x1410a0 | 328 |
 | `get-smart-random-destination` | `getSmartRandomDestination__8Creaturei` | 0x10d250 | 464 |
 | `anim-map-animation-sounds` | `animMapAnimationSounds__FP15AnimationHeader` | 0x15fd98 | 624 |
+| `anim-state-data` | data: `animState` (264 bytes), `animStatePtr`, `animUseBuffer`, `animationLoading`, `animationLoadPos` | 0x7ccad8, 0x486aa4, 0x48501f, 0x484358, 0x486a08 | 264, 4, 1, 1, 4 |
