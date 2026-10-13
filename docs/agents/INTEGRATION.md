@@ -6569,6 +6569,48 @@ Opened: `_$_10AutoObject`, `_$_10AutoPropLP`, `_$_13AutoContainer`,
 `norrath_rtti_entities_a_view_482430`,
 `norrath_rtti_entities_a_view_482434`, `norrath_rtti_entities_a_view_482438`
 
+## agents/w9-rtti-vtables-entities-b
+
+Merged (the branch notes carry the five summary sections; the tip was 57
+minutes old). Thirty-two units with fresh `input_order` values 3343 through
+3374: entity `msg_save`/`msg_run` virtuals and similar, all function units.
+All 32 host checks build and exit 0 here (32 of 32). The notes also list three
+older `w8-actor-virtuals-c` units (`msg_run__8GothTrap`, `msg_run__8HateHole`,
+`msg_save__7ShooterPc`) as "re-verified, not yet in the build plan". The
+verification they cite is the worker's private paired run, and the branch adds
+no committed check for them (the three sources are unchanged), so, as with the
+earlier log for `w8-actor-virtuals-c`, I left them unselected. The worker's
+notes name `candle2Particle` and similar as opened; the real opened set is
+above. No game binary or disassembly listing was committed. 2425 function
+bodies, 3373 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1344 |
+| After | 1318 |
+| Closed | 32 |
+| Opened | 6 |
+
+Closed: `msg_draw__10AutoPropLP`, `msg_draw__11AutoChestLP`,
+`msg_draw__15AutoContainerLP`, `msg_draw__6Candle`, `msg_draw__7Candle2`,
+`msg_getPokeName__10DoorSecretPUsi`, `msg_getPokeName__13AutoContainerPUsi`,
+`msg_getPokeName__9AutoChestPUsi`, `msg_getPokeName__9DoorSwingPUsi`,
+`msg_hurt__13AutoContainerfP10GameObjecti`, `msg_load__10DoorSecretPc`,
+`msg_load__11FloorSwitchPc`, `msg_load__13AutoContainerPc`,
+`msg_load__9AutoChestPc`, `msg_load__9DoorSwingPc`,
+`msg_poke__10DoorSecreti`, `msg_poke__11AutoChestLPi`,
+`msg_poke__13AutoContaineri`, `msg_poke__9DoorSwingi`,
+`msg_presave__9DoorSwing`, `msg_run__10AutoPropLP`, `msg_run__10DoorSecret`,
+`msg_run__11AutoChestLP`, `msg_run__11FloorSwitch`,
+`msg_run__15AutoContainerLP`, `msg_run__6Candle`, `msg_run__7AntTrap`,
+`msg_run__7Candle2`, `msg_run__9DoorSwing`, `msg_save__10DoorSecretPc`,
+`msg_save__11FloorSwitchPc`, `msg_save__13AutoContainerPc`
+
+Opened: `candle2Particle`, `msg_poke__9AutoChesti`, `msg_run__13AutoContainer`,
+`msg_run__9AutoChest`, `objectAddToMediumRunList__FP10GameObject`,
+`worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -6962,3 +7004,4 @@ and no startup stage has executed.
 - 2026-10-12 22:22 CDT — `agents/w9-ctors-wraith-d` — 1381 unresolved imports
 - 2026-10-12 22:27 CDT — `agents/w9-hud-inventory-items-c` — 1356 unresolved imports
 - 2026-10-12 22:30 CDT — `agents/w9-rtti-vtables-entities-a` — 1344 unresolved imports
+- 2026-10-12 22:33 CDT — `agents/w9-rtti-vtables-entities-b` — 1318 unresolved imports
