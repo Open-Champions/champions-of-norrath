@@ -1,0 +1,81 @@
+// Host comparison only. Not an EE build input.
+int same(const char* a, const char* b) {
+    for (unsigned i = 0;; ++i) {
+        if (a[i] != b[i]) return 0;
+        if (a[i] == 0) return 1;
+    }
+}
+struct ResourceSlot { char* name; unsigned unused; };
+extern "C" ResourceSlot norrath_ctors_ant_lantern_view_42ae60[34];
+int main() {
+    if (sizeof norrath_ctors_ant_lantern_view_42ae60 != 34u * sizeof(ResourceSlot)) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[0].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[0].name, "cloud_g.lmp")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[1].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[1].name, "g1.vif")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[2].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[2].name, "g1.tex")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[3].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[3].name, "180atak.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[4].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[4].name, "atakwind1.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[5].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[5].name, "atakwind2.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[6].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[6].name, "boltconjure.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[7].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[7].name, "bolthrow.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[8].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[8].name, "boltsalm.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[9].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[9].name, "boltwalk.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[10].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[10].name, "death_a.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[11].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[11].name, "death_b.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[12].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[12].name, "hamtak1.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[13].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[13].name, "hamtak2.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[14].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[14].name, "hitleft.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[15].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[15].name, "hitright.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[16].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[16].name, "idle1.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[17].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[17].name, "idle2.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[18].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[18].name, "kick.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[19].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[19].name, "quake.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[20].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[20].name, "throw.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[21].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[21].name, "walk.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[22].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[22].name, "bolt.vif")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[23].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[23].name, "bolt.tex")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[24].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[24].name, "hammer.vif")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[25].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[25].name, "hammer.tex")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[26].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[26].name, "rock.vif")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[27].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[27].name, "rock.tex")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[28].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[28].name, "spel_cloudg_bolt_conjure.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[29].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[29].name, "spel_cloudg_bolt_hit.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[30].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[30].name, "spel_cloudg_bolt_slam.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[31].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[31].name, "spel_cloudg_throw.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[32].unused != 0u) return 1;
+    if (!same(norrath_ctors_ant_lantern_view_42ae60[32].name, "spel_cloudg_wind.anm")) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[33].unused != 0u) return 1;
+    if (norrath_ctors_ant_lantern_view_42ae60[33].name != nullptr) return 1;
+    return 0;
+}
