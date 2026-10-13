@@ -5730,6 +5730,18 @@ changes the build driver itself, so it is left for the startup lead or
 owner to merge. The default authored partial link used for the official
 counts above does not take the opt-in flag and is unaffected.
 
+## Not merged: agents/w9-render-math-a
+
+Rejected at tip `adff0bdc` (47 minutes old when read). Its 32 units hold
+about 25 function sources and seven data files, but the notes say the only
+check is a paired run on a private interpreter outside git, and that "no
+`host_check.cpp` was added" because the comparison "cannot be published". A
+reviewer cannot repeat that, so no committed function in the package has a test
+that could fail. The branch was merged locally to look at it and the merge was
+reset before anything was selected or pushed. The code is not changed; the
+owner can add committed host checks per function (as the other w9 packages do)
+and push again.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
