@@ -33,7 +33,7 @@ int eRand__10GameObject(void* self);
 void setParameters__8Creaturefffffi(void* self, float a, float b, float c, float d, float e, int flag);
 
 namespace {
-void register_effect(unsigned char* m, int slot, short id) {
+static void register_effect(unsigned char* m, int slot, short id) {
     using namespace w12c;
     unsigned char* const skill = from_word(skills[slot]);
     const int amount = static_cast<int>(call_entry_from(skill, 96, 96, 0, static_cast<unsigned long>(static_cast<int>(worldDifficulty))));
