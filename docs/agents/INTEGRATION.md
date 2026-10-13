@@ -8790,3 +8790,25 @@ Closed: `_vt$10StaticFire`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11Spide
 
 Opened: `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarSteelEffect`, `_$_7Weather`, `__tf13SkillHateBeam`, `__tf13SkillSlashing`, `__tf15SkillHateEffect`, `__tf17SkillResistPoison`, `__tf17VehicleBodySphere`, `__tf18SkillPoisonWeapons`, `__tf19SkillDiseaseWeapons`, `__tf19SpellHornOmenEffect`, `__tf22SpellPlanarSteelEffect`, `__tf7Weather`, `canQueue__5Spell`, `clone__17VehicleBodySphere`, `clone__7Weather`, `draw__5Spell`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getRankDescription__13SkillSlashingPUsi`, `getRankDescription__17SkillResistPoisonPUsi`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `initRamps__13SkillHateBeam`, `initRamps__15SkillHateEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `msg_collision__17VehicleBodySphereP10GameObject`, `msg_run__7Weather`, `run__19SpellHornOmenEffectG6Point3s`, `run__22SpellPlanarSteelEffectG6Point3s`
 - 2026-10-13 06:53 CDT — agents/w11-vt-b — 964 unresolved imports
+
+## agents/w11-data-a
+
+Merged (merge commit, branch tip `4acd5c09`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 29 units (3 function bodies; the rest are data tables and zero-storage objects) with fresh
+`input_order` values 4901 through 4930. All 29 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). The notes point to `docs/agents/w11-data-a-plan-entries.json`, which is not in the branch, so the plan entries were derived here from the 29 unit directories (one source each, hash from the committed file, emitted functions measured with the plan's compiler flags). The item and named-item table units include the existing items-player `rows.hpp` headers instead of a second copy, so they add two names for bytes the `items-player` view units already carry; the old view units stay in the plan. The prefix and suffix tables hold attribute key strings in the same kind as the already-published item tables; their non-string words are unexplained (the notes say so). The worker's private paired runs for the three functions were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4928 authored inputs, 3749 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (29) reproduces and nothing new opened (the callees it names were already unresolved).
+
+| | |
+|---|---|
+| Before | 964 |
+| After | 935 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `P_CreateParticleSystem__Fv`, `_4item$itemTable`, `_4item$namedItemTable`, `_4item$prefixTable`, `_4item$suffixTable`, `_4item$undEnable`, `_6Wraith$s_wraithCount`, `ant_msg_run_particle_7d7170`, `ballParticle`, `ballSmokeParticle`, `ballSparkParticle`, `cFireParticle`, `cSmokeParticle`, `candle2Particle`, `chestResourceList`, `drawParticleEmitter__FG6Point3P11ParticleDefP19ParticleEmitterDataisbN25`, `drawWorldParticleEmitter__FP13PolysetHeader`, `ectopileParticle1`, `femBarbResourceMap`, `femaleDarkElfResourceMap`, `femaleEruditeResourceMap`, `femaleHighElfResourceMap`, `femaleWoodElfResourceMap`, `innoruukParticle2`, `innoruukParticle3`, `innoruukResourceMap`, `jumpParticle2`, `jumpParticleJump`, `jumpParticleOn`
+
+Opened: none
+- 2026-10-13 06:58 CDT — agents/w11-data-a — 935 unresolved imports
