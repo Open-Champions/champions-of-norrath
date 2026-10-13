@@ -6705,6 +6705,96 @@ Opened: `__tf15SpellConeOfFire`, `addCommander__14WoodElfSoldier`,
 `newWind__10StaticFirei`, `norrath_legacy_pointer_type_info_vtable_view`,
 `skeletonResMap`, `soulParticle`, `terminateSpell__8CreatureRC9type_info`
 
+## agents/w9-ctors-lantern-b
+
+Merged as a **partial package**: its notes have the virtual-table and string
+sections and a closing summary, but not the five summary sections; the tip was
+80 minutes old, every unit has a committed check, the tool tests pass, and the
+partial build passes. Forty data units (12 virtual tables and 28 string
+literals; the notes say the strings are short tag, lump and animation-name
+templates, not dialogue) with fresh `input_order` values 3436 through 3475;
+the function-body count stays at 2484. All 40 checks under `vtables/host/` and
+`strings/host/` build (linked with the unit) and exit 0 here (40 of 40). The 64
+opened names are the vtable slot functions of the twelve classes, not defined in
+this package. No game binary or disassembly listing was committed. 3474
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1308 |
+| After | 1332 |
+| Closed | 40 |
+| Opened | 64 |
+
+Closed: `norrath_ctors_ant_lantern_view_44cc28`,
+`norrath_ctors_ant_lantern_view_44dbe8`,
+`norrath_ctors_ant_lantern_view_44dd68`,
+`norrath_ctors_ant_lantern_view_44e550`,
+`norrath_ctors_ant_lantern_view_44e9d0`,
+`norrath_ctors_ant_lantern_view_44ebb0`,
+`norrath_ctors_ant_lantern_view_44ec40`,
+`norrath_ctors_ant_lantern_view_44ece8`,
+`norrath_ctors_ant_lantern_view_44f6a8`,
+`norrath_ctors_ant_lantern_view_450160`,
+`norrath_ctors_ant_lantern_view_450530`,
+`norrath_ctors_ant_lantern_view_4506b0`,
+`norrath_ctors_ant_lantern_view_46d070`,
+`norrath_ctors_ant_lantern_view_46d300`,
+`norrath_ctors_ant_lantern_view_46dbe0`,
+`norrath_ctors_ant_lantern_view_46dc90`,
+`norrath_ctors_ant_lantern_view_46dca0`,
+`norrath_ctors_ant_lantern_view_46dcb0`,
+`norrath_ctors_ant_lantern_view_46dcc0`,
+`norrath_ctors_ant_lantern_view_46dcd0`,
+`norrath_ctors_ant_lantern_view_46dce0`,
+`norrath_ctors_ant_lantern_view_46dcf0`,
+`norrath_ctors_ant_lantern_view_46dd00`,
+`norrath_ctors_ant_lantern_view_46dd10`,
+`norrath_ctors_ant_lantern_view_46dd20`,
+`norrath_ctors_ant_lantern_view_46dd30`,
+`norrath_ctors_ant_lantern_view_46dd40`,
+`norrath_ctors_ant_lantern_view_46dd50`,
+`norrath_ctors_ant_lantern_view_46dd60`,
+`norrath_ctors_ant_lantern_view_46dd70`,
+`norrath_ctors_ant_lantern_view_46ded0`,
+`norrath_ctors_ant_lantern_view_46dee0`,
+`norrath_ctors_ant_lantern_view_46def0`,
+`norrath_ctors_ant_lantern_view_46edb0`,
+`norrath_ctors_ant_lantern_view_46f120`,
+`norrath_ctors_ant_lantern_view_46f130`,
+`norrath_ctors_ant_lantern_view_46f310`,
+`norrath_ctors_ant_lantern_view_46f320`,
+`norrath_ctors_ant_lantern_view_46f330`,
+`norrath_ctors_ant_lantern_view_46fa28`
+
+Opened: `_$_10Arenabeast`, `_$_10CloudGiant`, `_$_13FemaleDarkElf`, `_$_3Ice`,
+`_$_5Demon`, `_$_6Cthulu`, `_$_8Catapult`, `_$_8Innoruuk`, `_$_9AutoChest`,
+`__tf10Arenabeast`, `__tf10CloudGiant`, `__tf13AutoContainer`,
+`__tf13FemaleDarkElf`, `__tf3Ice`, `__tf5Demon`, `__tf6Cthulu`,
+`__tf8Catapult`, `__tf8Innoruuk`, `__tf9AutoChest`,
+`clone__13FemaleDarkElf`, `clone__3Ice`, `isEnemy__5DemonP10GameObject`,
+`msg_alert__13FemaleDarkElfifG6Point3P10GameObject`,
+`msg_draw__10Arenabeast`, `msg_draw__10CloudGiant`,
+`msg_draw__13FemaleDarkElf`, `msg_draw__3Ice`, `msg_draw__5Demon`,
+`msg_draw__6Cthulu`, `msg_draw__8Catapult`, `msg_draw__8Innoruuk`,
+`msg_hurt__10ArenabeastfP10GameObjecti`,
+`msg_hurt__10CloudGiantfP10GameObjecti`,
+`msg_hurt__8CatapultfP10GameObjecti`, `msg_hurt__8InnoruukfP10GameObjecti`,
+`msg_load__10CloudGiantPc`, `msg_load__13FemaleDarkElfPc`,
+`msg_load__5DemonPc`, `msg_load__8CatapultPc`,
+`msg_moveCollision__10ArenabeastPP10GameObject`,
+`msg_moveCollision__6CthuluPP10GameObject`, `msg_run__10Arenabeast`,
+`msg_run__10CloudGiant`, `msg_run__13FemaleDarkElf`, `msg_run__3Ice`,
+`msg_run__5Demon`, `msg_run__6Cthulu`, `msg_run__8Catapult`,
+`msg_run__8Innoruuk`, `msg_save__10CloudGiantPc`,
+`msg_save__13FemaleDarkElfPc`, `msg_save__5DemonPc`,
+`msg_save__8CatapultPc`, `msg_trigger__10Arenabeasti`,
+`msg_trigger__10CloudGianti`, `msg_trigger__8Catapulti`,
+`msg_trigger__8Innoruuki`, `setState__10Arenabeasti`,
+`setState__10CloudGianti`, `setState__13FemaleDarkElfi`,
+`setState__5Demoni`, `setState__6Cthului`, `setState__8Innoruuki`,
+`updateEnemy__8Innoruuk`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -7101,3 +7191,4 @@ and no startup stage has executed.
 - 2026-10-12 22:33 CDT — `agents/w9-rtti-vtables-entities-b` — 1318 unresolved imports
 - 2026-10-12 22:35 CDT — `agents/w9-vehicle` — 1324 unresolved imports
 - 2026-10-12 22:38 CDT — `agents/w9-rtti-vtables-entities-c` — 1308 unresolved imports
+- 2026-10-12 22:41 CDT — `agents/w9-ctors-lantern-b` — 1332 unresolved imports
