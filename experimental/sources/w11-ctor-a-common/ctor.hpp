@@ -124,6 +124,8 @@ void P_ExtendTrail__FiG6Point3(int trail, Point3 position);
 void lightAdd__FP5Light(void* light);
 void objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature(Point3 position, short heading, float a, float b, void* list, void* creature);
 void listDestroy__FP8ListHead(void* head);
+unsigned eRand__10GameObject(void* object);
+void lightDeactivate__FP5Light(void* light);
 void animInitState__FP14AnimationState(void* state);
 void animAdd__FP14AnimationStateP15AnimationHeaderi(void* state, void* header, int flags);
 void animRandomizeTime__FP14AnimationState(void* state);
