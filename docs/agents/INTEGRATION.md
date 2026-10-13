@@ -9529,3 +9529,19 @@ Opened: none
 
 Not merged (branch tip `3701a6db`; the notes have the status, closed, not-closed, referenced-imports, plan-entry, checks, never-executed and unknown sections). It adds 26 spell destructor units and a shared header, and none of the 26 has a committed check: the notes' evidence is the private R5900 paired run (36 scenarios per unit), the worker's hand mutations and a private link check, none of which can be repeated from the repository. A destructor unit that cannot fail in the repository's own checks is a function with no test that could fail, so nothing was merged, planned or selected. No game code was changed. If the owner wants the units, each needs a committed host contract (a call log against stubs for the base destructor and any list release); the rest of the package is untouched. The notes' 26 closed names were not rebuilt. Count unchanged at 1219.
 - 2026-10-13 16:01 CDT — agents/w13-m-spell-dtor-a rejected, nothing merged — 1219 unresolved imports
+
+## agents/w13-m-spell-dtor-b
+
+Merged (merge commit, branch tip `f0031a98`; the notes have the done, units, observed behaviour, checks, closed, opened, plan-entry, never-executed and unknown sections). 26 units (25 type_info accessors and the `dustCloud` destructor) with fresh `input_order` values 5654 through 5679. Each has a committed host contract that enumerates the node states or flag values and checks the callee-call sequence and result; all 26 build and pass here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5678 authored inputs, 4361 function bodies, zero COMMON. The notes' 26 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1219 |
+| After | 1193 |
+| Closed | 26 |
+| Opened | 0 |
+
+Closed: `_$_9dustCloud`, `__tf10MummySnake`, `__tf10PoisonRain`, `__tf10SpawnMummy`, `__tf11BoltGoRound`, `__tf11DiseaseBolt`, `__tf12ShockOfFrost`, `__tf14HateProjectile`, `__tf14poisonGasSpell`, `__tf15FrostStormSpell`, `__tf15ShockProjectile`, `__tf16PoisonProjectile`, `__tf16beetleProjectile`, `__tf18SpellDiseaseShield`, `__tf19ColdArrowProjectile`, `__tf19FireArrowProjectile`, `__tf19MultiFireProjectile`, `__tf21PoisonArrowProjectile`, `__tf22ExplodeArrowProjectile`, `__tf5Wheel`, `__tf7AntWave`, `__tf8HateBeam`, `__tf8HateSoul`, `__tf9DustDevil`, `__tf9FireStorm`, `__tf9dustCloud`
+
+Opened: none
+- 2026-10-13 16:06 CDT — agents/w13-m-spell-dtor-b — 1193 unresolved imports
