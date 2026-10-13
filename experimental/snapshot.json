@@ -65307,6 +65307,136 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w11-rend-a-set-no-target-updates/set_no_target_updates.cpp"
+    },
+    {
+      "input_order": 5115,
+      "component": "w12-startup-rt-b-gsm-frame-decode",
+      "object_name": "gsm_frame_decode.o",
+      "private_object_sha256": "7a32e4903ec3773f615c7b8f6fb518a3f8af9e0979c3f4f4b79f47c6c5e1b6c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_decode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp"
+    },
+    {
+      "input_order": 5116,
+      "component": "w12-startup-rt-b-gsm-frame-encode",
+      "object_name": "gsm_frame_encode.o",
+      "private_object_sha256": "22ec215501af289e9bb268edc2d8edf69a42a14dfac109950371b8265e46f145",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_encode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp"
+    },
+    {
+      "input_order": 5117,
+      "component": "w12-startup-rt-b-initialise-event-list",
+      "object_name": "initialise_event_list.o",
+      "private_object_sha256": "d8b178d445c6838bb508a03deeaf08f113d3a1f469e60e478342b032d830ca38",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "initialise_event_list"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp"
+    },
+    {
+      "input_order": 5118,
+      "component": "w12-startup-rt-b-kdm-rpccall-end",
+      "object_name": "kdm_rpccall_end.o",
+      "private_object_sha256": "d11fadddf0edb4b7547dc93ff222644b00c9a933888d2bef6310587fa667a06a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "kdm_rpccall_end"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-kdm-rpccall-end/kdm_rpccall_end.cpp"
+    },
+    {
+      "input_order": 5119,
+      "component": "w12-startup-rt-b-lg-frame-decode",
+      "object_name": "lg_frame_decode.o",
+      "private_object_sha256": "dc2fa7a7612b731a418f0fa3c044159160403f1ca4946495ef882e18a946684c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "lgFrameDecode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-lg-frame-decode/lg_frame_decode.cpp"
+    },
+    {
+      "input_order": 5120,
+      "component": "w12-startup-rt-b-lg-frame-encode",
+      "object_name": "lg_frame_encode.o",
+      "private_object_sha256": "d4814fa729d517e0dcc0b5b19dba335e5e1b042bdf4ba6de7dd4e51ccced9c80",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 528,
+          "name": "lgFrameEncode"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-lg-frame-encode/lg_frame_encode.cpp"
+    },
+    {
+      "input_order": 5121,
+      "component": "w12-startup-rt-b-mark-device-unplugged",
+      "object_name": "mark_device_unplugged.o",
+      "private_object_sha256": "c68e7ccd11e1a547f79d6a70f768f21e5521af2809d95f0b8a67991f20beb4b2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "mark_device_unplugged"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-mark-device-unplugged/mark_device_unplugged.cpp"
+    },
+    {
+      "input_order": 5122,
+      "component": "w12-startup-rt-b-mc-err-on",
+      "object_name": "mc_err_on.o",
+      "private_object_sha256": "28472aa04a55e6844d867d6f1b7e9e7b9b46f36a05d96031162f9c0ec7b7ba3b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp"
+    },
+    {
+      "input_order": 5123,
+      "component": "w12-startup-rt-b-min",
+      "object_name": "min.o",
+      "private_object_sha256": "282ebdb283fad6a837bbf69bf015b889f2223c5ecc3b6edad48957530681d869",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "min"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-min/min.cpp"
+    },
+    {
+      "input_order": 5124,
+      "component": "w12-startup-rt-b-overlay-function-index",
+      "object_name": "overlay_function_index.o",
+      "private_object_sha256": "2410bd99ef88e77900150b785db9e9a4cf447820eac555b6998188e76a8fecbb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp"
     }
   ],
   "drafts": [
@@ -72261,6 +72391,26 @@
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/host_check.cpp": "1831238c4bd3639dc64e8696118712745b3d342bebf331f612aba8e499fd5ba3",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
+    "sources/w12-startup-rt-b-gsm-frame-decode/host_check.cpp": "2b1a87b67de382ce709fa582ea255c039f9aab12f1fe6de91c96d6ec87b0448d",
+    "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
+    "sources/w12-startup-rt-b-gsm-frame-encode/host_check.cpp": "2156d6ab015d09db2ccc0d2c45d396c9047e198293bed63a19f8faf77249b417",
+    "sources/w12-startup-rt-b-initialise-event-list/host_check.cpp": "e98efd34c6a5324ef665ad29ecc35e6177b80fd74b662175ea92e8d5057e9add",
+    "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
+    "sources/w12-startup-rt-b-kdm-rpccall-end/host_check.cpp": "a89511b413f8f088c53d4b7300ea9cfbd4afd3ceaaa7f37f8d9c3d00f63f87c8",
+    "sources/w12-startup-rt-b-kdm-rpccall-end/kdm_rpccall_end.cpp": "c88086bdb4357ea4fae7b9b3f730279d5950a0d993ab65814ee439ac939a94ef",
+    "sources/w12-startup-rt-b-lg-frame-decode/host_check.cpp": "ca08e99cee8a3268f14ce674d948c5fd67a5d93e195cf9da149811c6b768559d",
+    "sources/w12-startup-rt-b-lg-frame-decode/lg_frame_decode.cpp": "8240adba55bf3d7297a6de4bc3bf37cfbea068acff298bed307b4263a15a6daf",
+    "sources/w12-startup-rt-b-lg-frame-encode/host_check.cpp": "04ef46e0fcb35a8462b36bd50794f92c9da367ddd3b584fd1041341b761e7bf6",
+    "sources/w12-startup-rt-b-lg-frame-encode/lg_frame_encode.cpp": "a0e2b69e0f884c9d00916839ad2efa042bdf3f47515e3b26508dae113c23cad4",
+    "sources/w12-startup-rt-b-mark-device-unplugged/host_check.cpp": "dfb316a21c27213f63901ebacaa081d247d418fd34e9ec7692560efb308c3a9b",
+    "sources/w12-startup-rt-b-mark-device-unplugged/mark_device_unplugged.cpp": "10fdc312a3433677cdac0a54e21a61d56e181197c01cbe3dc945d6e6a5c1fd6c",
+    "sources/w12-startup-rt-b-mc-err-on/host_check.cpp": "8463d223a2c5c7fd931fa5f8aedb33797bddfc61ce0beb5c94086de0813d049b",
+    "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
+    "sources/w12-startup-rt-b-min/host_check.cpp": "acc4e4d5430c383365018a78ac0d816e94a3c3ffd4fbca243bd5a02975304d80",
+    "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
+    "sources/w12-startup-rt-b-overlay-function-index/host_check.cpp": "a84fc34ded48ea630bcc91f3ce5fe9562478740105f99f7fb189a2cc576768e6",
+    "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/host_check.cpp": "9905e8faa6cbb4e715197d7f9b1519d8e2213d880ae40146b77bf8091384b0ba",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
@@ -76629,11 +76779,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5115,
-    "authored_default_inputs": 5113,
+    "selected_inputs": 5125,
+    "authored_default_inputs": 5123,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3911,
-    "compiled_body_bytes_from_accepted_inputs": 1722020,
+    "emitted_function_definitions_including_helpers": 3919,
+    "compiled_body_bytes_from_accepted_inputs": 1723440,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -76646,7 +76796,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4802
+    "package_selected_inputs": 4812
   },
   "startup_implementations": [
     {
@@ -151863,6 +152013,166 @@
       ],
       "host_files": [
         "sources/w11-rend-a-set-no-target-updates/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp",
+      "source_sha256": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
+      "object_sha256": "7a32e4903ec3773f615c7b8f6fb518a3f8af9e0979c3f4f4b79f47c6c5e1b6c9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_decode"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-gsm-frame-decode/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp",
+      "source_sha256": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
+      "object_sha256": "22ec215501af289e9bb268edc2d8edf69a42a14dfac109950371b8265e46f145",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_encode"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-gsm-frame-encode/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp",
+      "source_sha256": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
+      "object_sha256": "d8b178d445c6838bb508a03deeaf08f113d3a1f469e60e478342b032d830ca38",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "initialise_event_list"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-initialise-event-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-kdm-rpccall-end/kdm_rpccall_end.cpp",
+      "source_sha256": "c88086bdb4357ea4fae7b9b3f730279d5950a0d993ab65814ee439ac939a94ef",
+      "object_sha256": "d11fadddf0edb4b7547dc93ff222644b00c9a933888d2bef6310587fa667a06a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "kdm_rpccall_end"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-kdm-rpccall-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-lg-frame-decode/lg_frame_decode.cpp",
+      "source_sha256": "8240adba55bf3d7297a6de4bc3bf37cfbea068acff298bed307b4263a15a6daf",
+      "object_sha256": "dc2fa7a7612b731a418f0fa3c044159160403f1ca4946495ef882e18a946684c",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "lgFrameDecode"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-lg-frame-decode/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-lg-frame-encode/lg_frame_encode.cpp",
+      "source_sha256": "a0e2b69e0f884c9d00916839ad2efa042bdf3f47515e3b26508dae113c23cad4",
+      "object_sha256": "d4814fa729d517e0dcc0b5b19dba335e5e1b042bdf4ba6de7dd4e51ccced9c80",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 528,
+          "name": "lgFrameEncode"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-lg-frame-encode/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-mark-device-unplugged/mark_device_unplugged.cpp",
+      "source_sha256": "10fdc312a3433677cdac0a54e21a61d56e181197c01cbe3dc945d6e6a5c1fd6c",
+      "object_sha256": "c68e7ccd11e1a547f79d6a70f768f21e5521af2809d95f0b8a67991f20beb4b2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "mark_device_unplugged"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-mark-device-unplugged/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp",
+      "source_sha256": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
+      "object_sha256": "28472aa04a55e6844d867d6f1b7e9e7b9b46f36a05d96031162f9c0ec7b7ba3b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-startup-rt-b-mc-err-on/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-min/min.cpp",
+      "source_sha256": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
+      "object_sha256": "282ebdb283fad6a837bbf69bf015b889f2223c5ecc3b6edad48957530681d869",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "min"
+        }
+      ],
+      "host_files": [
+        "sources/w12-startup-rt-b-min/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-startup-rt-b",
+      "source": "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp",
+      "source_sha256": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+      "object_sha256": "2410bd99ef88e77900150b785db9e9a4cf447820eac555b6998188e76a8fecbb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-startup-rt-b-overlay-function-index/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

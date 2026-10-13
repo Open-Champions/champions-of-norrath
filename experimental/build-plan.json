@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5113,
+  "default_authored_inputs": 5123,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3929,6 +3929,16 @@
     "sources/w11-vt-b-vt-webtrap/vt_webtrap.cpp": "21f8060e905fe997600de5b7ab78e00bcc6a8c4089c011750658f88da2439bf7",
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
+    "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
+    "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
+    "sources/w12-startup-rt-b-kdm-rpccall-end/kdm_rpccall_end.cpp": "c88086bdb4357ea4fae7b9b3f730279d5950a0d993ab65814ee439ac939a94ef",
+    "sources/w12-startup-rt-b-lg-frame-decode/lg_frame_decode.cpp": "8240adba55bf3d7297a6de4bc3bf37cfbea068acff298bed307b4263a15a6daf",
+    "sources/w12-startup-rt-b-lg-frame-encode/lg_frame_encode.cpp": "a0e2b69e0f884c9d00916839ad2efa042bdf3f47515e3b26508dae113c23cad4",
+    "sources/w12-startup-rt-b-mark-device-unplugged/mark_device_unplugged.cpp": "10fdc312a3433677cdac0a54e21a61d56e181197c01cbe3dc945d6e6a5c1fd6c",
+    "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
+    "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
+    "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -74735,6 +74745,146 @@
           "name": "SetNoTargetUpdates__6Camerai"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5115,
+      "kind": "independently_authored_source",
+      "object_name": "gsm_frame_decode.o",
+      "profile": "authored_cpp",
+      "sha256": "9cd4f005032f1a5da1da1684478b7f7e55efaee68ac7ad508ef0db72f7fddd7b",
+      "source": "sources/w12-startup-rt-b-gsm-frame-decode/gsm_frame_decode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_decode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5116,
+      "kind": "independently_authored_source",
+      "object_name": "gsm_frame_encode.o",
+      "profile": "authored_cpp",
+      "sha256": "ffa0c69069dd4e5867ccad38a1a24c8e5bbabc83b68e5d46d2d79d0bc6a5d9ad",
+      "source": "sources/w12-startup-rt-b-gsm-frame-encode/gsm_frame_encode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "gsm_frame_encode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5117,
+      "kind": "independently_authored_source",
+      "object_name": "initialise_event_list.o",
+      "profile": "authored_cpp",
+      "sha256": "c24a18d1de9ecc95c3ee485c348618f1f67d799f3f96297152b922bf3bb68311",
+      "source": "sources/w12-startup-rt-b-initialise-event-list/initialise_event_list.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "initialise_event_list"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5118,
+      "kind": "independently_authored_source",
+      "object_name": "kdm_rpccall_end.o",
+      "profile": "authored_cpp",
+      "sha256": "c88086bdb4357ea4fae7b9b3f730279d5950a0d993ab65814ee439ac939a94ef",
+      "source": "sources/w12-startup-rt-b-kdm-rpccall-end/kdm_rpccall_end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "kdm_rpccall_end"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5119,
+      "kind": "independently_authored_source",
+      "object_name": "lg_frame_decode.o",
+      "profile": "authored_cpp",
+      "sha256": "8240adba55bf3d7297a6de4bc3bf37cfbea068acff298bed307b4263a15a6daf",
+      "source": "sources/w12-startup-rt-b-lg-frame-decode/lg_frame_decode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 484,
+          "name": "lgFrameDecode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5120,
+      "kind": "independently_authored_source",
+      "object_name": "lg_frame_encode.o",
+      "profile": "authored_cpp",
+      "sha256": "a0e2b69e0f884c9d00916839ad2efa042bdf3f47515e3b26508dae113c23cad4",
+      "source": "sources/w12-startup-rt-b-lg-frame-encode/lg_frame_encode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 528,
+          "name": "lgFrameEncode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5121,
+      "kind": "independently_authored_source",
+      "object_name": "mark_device_unplugged.o",
+      "profile": "authored_cpp",
+      "sha256": "10fdc312a3433677cdac0a54e21a61d56e181197c01cbe3dc945d6e6a5c1fd6c",
+      "source": "sources/w12-startup-rt-b-mark-device-unplugged/mark_device_unplugged.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 300,
+          "name": "mark_device_unplugged"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5122,
+      "kind": "independently_authored_source",
+      "object_name": "mc_err_on.o",
+      "profile": "authored_cpp",
+      "sha256": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
+      "source": "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5123,
+      "kind": "independently_authored_source",
+      "object_name": "min.o",
+      "profile": "authored_cpp",
+      "sha256": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
+      "source": "sources/w12-startup-rt-b-min/min.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "min"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5124,
+      "kind": "independently_authored_source",
+      "object_name": "overlay_function_index.o",
+      "profile": "authored_cpp",
+      "sha256": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+      "source": "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -74834,7 +74984,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "e54b96ae839e94b10bf30802bbf34b8278f34cdd1d533a2a8eb88f5421ad6334",
+  "snapshot_sha256": "f8aad57c03b0de3da4556a1f6a6f3305c1addf486dbaa2ad34ff7036462973ce",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

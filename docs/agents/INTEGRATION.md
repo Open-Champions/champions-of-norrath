@@ -9001,3 +9001,26 @@ At 07:55 CDT seven new branches were waiting: `agents/w12-hud-loop-a` (`1654eba2
 
 Shared branch `a9d34022` differs from the fully re-verified `c7243a6d` only by this log file, so the 827 count was not re-measured by a new build. Re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 5113 authored inputs) and `--check-plan` (valid). The eight `w12-*` branches (`hud-loop-a/b`, `startup-rt-a/b/c`, `vicont-a`, `wnd-a/b`) still have tips seconds to minutes old and no notes file, so none qualifies under the merge rule; they are still being pushed to. The seven earlier rejections stand at their recorded tips. Nothing merged.
 - 2026-10-13 08:02 CDT — w12-* still in progress, nothing merged — 827 unresolved imports
+
+## Re-verification by the replacement integrator (08:06 CDT) and rejection of agents/w12-vicont-a
+
+Re-ran on `7d4ad0c6` (equal to `origin/codex/norrath-first-reconstruction`) before any merge: 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded 827 reproduces. The earlier entries record no broken repo rule; no non-text files in recent merges.
+
+Not merged: `agents/w12-vicont-a` (tip `5e5bf51e`, notes have all five summary sections). 26 functions, but only the seven `DestroyPool` instances have a committed host check. The other 19 (all `Allocate`, `Clear`, `Add`, `Begin` instances) rely only on a private R5900 interpreter comparison outside git, which a reviewer cannot repeat, so no committed function among them has a test that could fail. Same reasoning as `w11-creature-a`. The owner can add host checks per function and push again.
+
+## agents/w12-startup-rt-b
+
+Merged (merge commit, branch tip `be23f36c`; notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 10 units (8 functions, 2 data objects: `mcErrOn`, `norrath_overlay_sFunctionIndex_11edf00`) with fresh `input_order` values 5115 through 5124. Every unit has a committed `host_check.cpp`; all 10 build and exit 0 here (native arm64, `-ffp-contract=off`). The worker's private interpreter comparisons of `lgFrameEncode`, `lgFrameDecode` and `mark_device_unplugged` were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5123 authored inputs, 3917 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+The notes' measured count (804) does not reproduce: it assumed selecting three further existing units. These stay unselected, for the reasons earlier entries recorded: `simloop-services-pad-mtap-state` (data-only, no host check), `view-exit-sound-resource` (no host check), `sony-cd-vblank-views` (redefines names cd-archive already defines), and `level-anim-load-loader-failure-word` (absolute-symbol alias, forbidden by PORTABLE_BUILD). The real result is 827 to 820.
+
+| | |
+|---|---|
+| Before | 827 |
+| After | 820 |
+| Closed | 9 |
+| Opened | 2 |
+
+Closed: `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `kdm_rpccall_end`, `lgFrameDecode`, `lgFrameEncode`, `mark_device_unplugged`, `mcErrOn`, `norrath_overlay_sFunctionIndex_11edf00`.
+
+Opened: `gsm_decode`, `gsm_encode` (the codec routines the new adapters tail-call; nobody has authored them).
