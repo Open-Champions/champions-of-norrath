@@ -72,6 +72,18 @@ inline unsigned call_entry(unsigned char* o, unsigned tableOffset, unsigned long
 #endif
 }
 
+// Calls the function word at tableOffset+4 of the table whose address is the word at tableOwner+72,
+// with a0 = arg0 exactly as given (no halfword adjustment is applied and nothing else is passed).
+inline unsigned call_entry_plain(unsigned char* tableOwner, unsigned tableOffset, void* arg0) {
+    unsigned char* e = table_entry(tableOwner, tableOffset);
+    const unsigned fn = *reinterpret_cast<unsigned*>(e + 4);
+#if defined(W10_ACTOR_M_HOST)
+    return w10_actor_m_host_call(fn, arg0, 0, 0, 0);
+#else
+    return reinterpret_cast<unsigned (*)(void*)>(static_cast<__UINTPTR_TYPE__>(fn))(arg0);
+#endif
+}
+
 // Same, for a table whose address is the word at tableWordOffset instead of +72.
 inline unsigned call_entry_from(unsigned char* o, unsigned tableWordOffset, unsigned tableOffset, unsigned long a1, unsigned long a2) {
     unsigned char* e = from_word(word(o, tableWordOffset)) + tableOffset;
