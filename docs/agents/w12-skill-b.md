@@ -20,7 +20,7 @@ Branch: `agents/w12-skill-b`. Address evidence came from the hash-pinned private
 
 - Host `canCast`: nine pointer pairs returned 1. EE body comparison matched all 8 bytes.
 - Host table check passed for all 30 tables and 510 non-null slots. EE object check passed all sizes and slot relocations.
-- Fresh partial build completed with 5113 compiler inputs and 827 unresolved imports. Relinking the partial object with these two EE objects closed 31 imports and introduced 235 distinct imports.
+- The branch-tip build baseline completed with 5113 compiler inputs and 827 unresolved imports. A separate private-plan build added both units and completed with 5115 compilations, one relocatable link, 3910 function bodies, 1031 unresolved imports, and zero COMMON symbols. No requested import remains unresolved. The new vtable references introduce 235 distinct imports.
 - `python3 -m unittest discover -s tools -p 'test_*.py'`: 214 tests passed. No authored code ran on EE hardware or in the game.
 
 ## Imports closed
@@ -35,7 +35,7 @@ The vtables introduce 235 distinct unresolved slot imports:
 
 ## Build-plan entries needed
 
-The shared plan and snapshot were not edited. Append the two inputs below, add the shown source hashes to each `files` map, and use input orders 5115–5116.
+The shared plan and snapshot were not edited. Append the two inputs below, add the shown source hashes to each `files` map, and use input orders 5115–5116. The private plan and source copies used for the full build are under ignored `work/w12-skill-b-private-source/`; its plan SHA-256 is `d01e633cbbcd41648b097478f0fa75bc16b832551dad0c9dd632f33b3b2ed375`, snapshot SHA-256 is `eb1251c753c96dd06a63542a890a91280e073959f6bb801ca78d600cf20171c8`. The partial build output is under ignored `work/w12-skill-b-private-plan-build/`.
 
 Plan entries:
 
