@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3510,
+  "default_authored_inputs": 3540,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2315,6 +2315,36 @@
     "sources/w10-vi-a-pad-init/init.cpp": "a2304cfbc9b8b1b55c0f86682421153f274953df1e9af624d213fb3e4923df22",
     "sources/w10-vi-a-pad-read/read.cpp": "31dcd488adf2950680da9abc02cfbf8e8ae390e971600f5f41f26158559e9247",
     "sources/w10-vi-a-usocket-free/free.cpp": "0b20aa57407f1c61534f1d4085e5315b0a59c7d1d251cefb660dae0a550fef8e",
+    "sources/w10-vi-b-pad-ctor/pad_ctor.cpp": "31247aaa8d4704e374059e9d43ad2a6943a3b0b4d46ae4eb565cd2690b27629f",
+    "sources/w10-vi-b-raster-begin-scene/raster_begin_scene.cpp": "0b6193444016693045db4220d4cfb0b653c357e1651fdf114c6bdf56b431defc",
+    "sources/w10-vi-b-raster-close/raster_close.cpp": "ead3341ddcf58b819d38ff7f2acc98aa54ac272440312b5e00df8251425dacf1",
+    "sources/w10-vi-b-raster-ctor/raster_ctor.cpp": "611183f19b5e6c8cf26648c66fec6fdd99a12a91d4356b25a26e7b1c98b46a58",
+    "sources/w10-vi-b-raster-dtor/raster_dtor.cpp": "523b2a44da9c9d011df7e63a76b3f5ed1c441df2e17157b7580555a6156c9453",
+    "sources/w10-vi-b-raster-end-scene/raster_end_scene.cpp": "17ff66b93549a3d71bface3ec582b0047ed09dd82857e7514cdc4a01f38c351c",
+    "sources/w10-vi-b-raster-init/raster_init.cpp": "3612ab1b2adde3f7ee6f3895d0d90db5dd98df40c4d7d15dbf78fa69a32664f4",
+    "sources/w10-vi-b-raster-set-clear-color/set_clear_color.cpp": "c1f02fb9d8f017b00d8a64cd69638dd2a0b05e3ba081ed0b35996c164a270300",
+    "sources/w10-vi-b-raster-set-wireframe/set_wireframe.cpp": "90eadba3b338fa80136d660ff691756ae34c9c71c1f28dde9d66d93e32fb52dc",
+    "sources/w10-vi-b-scene-clear/scene_clear.cpp": "c4f5503ca681fd73378fc5285adb1962234e1b6d900479c6b4427bb40dbccf14",
+    "sources/w10-vi-b-scene-ctor/scene_ctor.cpp": "2eaa6f70869983799df71ebd7466ffcdada0dd324fae17932ee35ff024987921",
+    "sources/w10-vi-b-scene-dtor/scene_dtor.cpp": "64ca10bc0b869c8c75beb2a199a1fe186951c062911df21da0df26f180c569ca",
+    "sources/w10-vi-b-scene-init/scene_init.cpp": "63f3efaf5caa55db06667475be46458c2e7f7af3e6877f334c7f46af548c9dba",
+    "sources/w10-vi-b-scene-render/scene_render.cpp": "5163315d30f4c73431aeea1a3c3263e5c9553251f78a89ac4ede174ab70dff8f",
+    "sources/w10-vi-b-scene-set-time-of-day/set_time_of_day.cpp": "9354ecd3cddbaf6c185a08d438888fd158ab0a4494fd396c491cb6c4fdd8adec",
+    "sources/w10-vi-b-scene-set-time/set_time.cpp": "7872f7310775e414917a02cbaec7b6a4e161534c6a6bb36eb757a9bb86c1ee8e",
+    "sources/w10-vi-b-setup-start-ambient/start_ambient.cpp": "a20325c6632e6cff41d0233744a14b1273c9d0988ba138af322022a1d4f8c191",
+    "sources/w10-vi-b-setup-stop-ambient/stop_ambient.cpp": "e0401fe8b5b22316bf0f8df22a7ba5dc8d155f7ba8ae96d87a114eefda59587a",
+    "sources/w10-vi-b-sound-device-close/close.cpp": "bda3eb878645fdee889ff68dc0aabc5c27485e164753e4335d5fa19d2ab2900f",
+    "sources/w10-vi-b-sound-device-ctor/sound_device_ctor.cpp": "a907a67e1e52cfef2537a0f2d39b946157593e51b6555bdf72157d7063bf4459",
+    "sources/w10-vi-b-sound-device-dtor/sound_device_dtor.cpp": "4bf7d74d3d6c8e2fc2765027590cce855c60037b24c358d08fc03784d07eaddc",
+    "sources/w10-vi-b-sound-device-flush/sound_device_flush.cpp": "0cf808fcfcf1d2bbdf289e17fb18a991e4718c2795a701de82896b6ed80b6e5e",
+    "sources/w10-vi-b-sound-device-init/sound_device_init.cpp": "f451e79e5d283e0ff786761b31d34bb66fc49178368a2d170f538f7578f448f6",
+    "sources/w10-vi-b-sound-device-process/process.cpp": "24e74ad98ad3035885e0c990105bd4b8a99f4ef9f5dd65ccfc3ab9a81e64552d",
+    "sources/w10-vi-b-splash-fx-free/splash_fx_free.cpp": "5de125559fba7aa3633f0b5b03879d244fc48f36aebec93ff4163fa7491ea5fe",
+    "sources/w10-vi-b-splash-fx-init/splash_fx_init.cpp": "3f30430dab2beb5857cad1e7648866a42b2943d8ecedd73f630fae5f810a352f",
+    "sources/w10-vi-b-timer-get-time/get_time.cpp": "4051aba264825e93a53c751a43f7de1135e31cf7cc90bcf10b29f2228c8f5020",
+    "sources/w10-vi-b-ui-close/ui_close.cpp": "e841d46c623632cee465196c91932e854701a64f73e56f246af05b7d278f1217",
+    "sources/w10-vi-b-ui-init/ui_init.cpp": "556a649d6ff93abfb41f4d3dafb1348d4ad1caa53ae55406427ed271e38a32f7",
+    "sources/w10-vi-b-window-ui/window_ui.cpp": "c4798286da3b51b9847d8ce0d457cea2258048396f6ba13fca759b9ff30a3a94",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -49454,6 +49484,456 @@
           "compiled_body_bytes": 12
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3512,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_pad_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "31247aaa8d4704e374059e9d43ad2a6943a3b0b4d46ae4eb565cd2690b27629f",
+      "source": "sources/w10-vi-b-pad-ctor/pad_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__5VIPad",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3513,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_begin_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "0b6193444016693045db4220d4cfb0b653c357e1651fdf114c6bdf56b431defc",
+      "source": "sources/w10-vi-b-raster-begin-scene/raster_begin_scene.cpp",
+      "emitted_functions": [
+        {
+          "name": "BeginScene__8VIRaster",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3514,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_close.o",
+      "profile": "authored_cpp",
+      "sha256": "ead3341ddcf58b819d38ff7f2acc98aa54ac272440312b5e00df8251425dacf1",
+      "source": "sources/w10-vi-b-raster-close/raster_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__8VIRaster",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3515,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "611183f19b5e6c8cf26648c66fec6fdd99a12a91d4356b25a26e7b1c98b46a58",
+      "source": "sources/w10-vi-b-raster-ctor/raster_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__8VIRaster",
+          "compiled_body_bytes": 572
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3516,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "523b2a44da9c9d011df7e63a76b3f5ed1c441df2e17157b7580555a6156c9453",
+      "source": "sources/w10-vi-b-raster-dtor/raster_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8VIRaster",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3517,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_end_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "17ff66b93549a3d71bface3ec582b0047ed09dd82857e7514cdc4a01f38c351c",
+      "source": "sources/w10-vi-b-raster-end-scene/raster_end_scene.cpp",
+      "emitted_functions": [
+        {
+          "name": "EndScene__8VIRaster",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3518,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_init.o",
+      "profile": "authored_cpp",
+      "sha256": "3612ab1b2adde3f7ee6f3895d0d90db5dd98df40c4d7d15dbf78fa69a32664f4",
+      "source": "sources/w10-vi-b-raster-init/raster_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__8VIRasterPviii",
+          "compiled_body_bytes": 1000
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3519,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_set_clear_color.o",
+      "profile": "authored_cpp",
+      "sha256": "c1f02fb9d8f017b00d8a64cd69638dd2a0b05e3ba081ed0b35996c164a270300",
+      "source": "sources/w10-vi-b-raster-set-clear-color/set_clear_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetClearColor__8VIRasterRC10VIColor32F",
+          "compiled_body_bytes": 560
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3520,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_raster_set_wireframe.o",
+      "profile": "authored_cpp",
+      "sha256": "90eadba3b338fa80136d660ff691756ae34c9c71c1f28dde9d66d93e32fb52dc",
+      "source": "sources/w10-vi-b-raster-set-wireframe/set_wireframe.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetWireframe__8VIRasteri",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3521,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "c4f5503ca681fd73378fc5285adb1962234e1b6d900479c6b4427bb40dbccf14",
+      "source": "sources/w10-vi-b-scene-clear/scene_clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__7VIScene",
+          "compiled_body_bytes": 920
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3522,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "2eaa6f70869983799df71ebd7466ffcdada0dd324fae17932ee35ff024987921",
+      "source": "sources/w10-vi-b-scene-ctor/scene_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__7VIScene",
+          "compiled_body_bytes": 336
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3523,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "64ca10bc0b869c8c75beb2a199a1fe186951c062911df21da0df26f180c569ca",
+      "source": "sources/w10-vi-b-scene-dtor/scene_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_7VIScene",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3524,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_init.o",
+      "profile": "authored_cpp",
+      "sha256": "63f3efaf5caa55db06667475be46458c2e7f7af3e6877f334c7f46af548c9dba",
+      "source": "sources/w10-vi-b-scene-init/scene_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__7VIScenelR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide",
+          "compiled_body_bytes": 800
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3525,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_render.o",
+      "profile": "authored_cpp",
+      "sha256": "5163315d30f4c73431aeea1a3c3263e5c9553251f78a89ac4ede174ab70dff8f",
+      "source": "sources/w10-vi-b-scene-render/scene_render.cpp",
+      "emitted_functions": [
+        {
+          "name": "Render__7VISceneR8VICamera",
+          "compiled_body_bytes": 852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3526,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_set_time.o",
+      "profile": "authored_cpp",
+      "sha256": "7872f7310775e414917a02cbaec7b6a4e161534c6a6bb36eb757a9bb86c1ee8e",
+      "source": "sources/w10-vi-b-scene-set-time/set_time.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetTime__7VIScenel",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3527,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_scene_set_time_of_day.o",
+      "profile": "authored_cpp",
+      "sha256": "9354ecd3cddbaf6c185a08d438888fd158ab0a4494fd396c491cb6c4fdd8adec",
+      "source": "sources/w10-vi-b-scene-set-time-of-day/set_time_of_day.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetTimeOfDay__7VIScenef",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3528,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_setup_start_ambient.o",
+      "profile": "authored_cpp",
+      "sha256": "a20325c6632e6cff41d0233744a14b1273c9d0988ba138af322022a1d4f8c191",
+      "source": "sources/w10-vi-b-setup-start-ambient/start_ambient.cpp",
+      "emitted_functions": [
+        {
+          "name": "StartAmbientSoundtrack__7VISetup",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3529,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_setup_stop_ambient.o",
+      "profile": "authored_cpp",
+      "sha256": "e0401fe8b5b22316bf0f8df22a7ba5dc8d155f7ba8ae96d87a114eefda59587a",
+      "source": "sources/w10-vi-b-setup-stop-ambient/stop_ambient.cpp",
+      "emitted_functions": [
+        {
+          "name": "StopAmbientSoundtrack__7VISetup",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3530,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_close.o",
+      "profile": "authored_cpp",
+      "sha256": "bda3eb878645fdee889ff68dc0aabc5c27485e164753e4335d5fa19d2ab2900f",
+      "source": "sources/w10-vi-b-sound-device-close/close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__13VISoundDevice",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3531,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a907a67e1e52cfef2537a0f2d39b946157593e51b6555bdf72157d7063bf4459",
+      "source": "sources/w10-vi-b-sound-device-ctor/sound_device_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13VISoundDevice",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3532,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "4bf7d74d3d6c8e2fc2765027590cce855c60037b24c358d08fc03784d07eaddc",
+      "source": "sources/w10-vi-b-sound-device-dtor/sound_device_dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_13VISoundDevice",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3533,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_flush.o",
+      "profile": "authored_cpp",
+      "sha256": "0cf808fcfcf1d2bbdf289e17fb18a991e4718c2795a701de82896b6ed80b6e5e",
+      "source": "sources/w10-vi-b-sound-device-flush/sound_device_flush.cpp",
+      "emitted_functions": [
+        {
+          "name": "Flush__13VISoundDevice",
+          "compiled_body_bytes": 380
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3534,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_init.o",
+      "profile": "authored_cpp",
+      "sha256": "f451e79e5d283e0ff786761b31d34bb66fc49178368a2d170f538f7578f448f6",
+      "source": "sources/w10-vi-b-sound-device-init/sound_device_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__13VISoundDevice",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3535,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_sound_device_process.o",
+      "profile": "authored_cpp",
+      "sha256": "24e74ad98ad3035885e0c990105bd4b8a99f4ef9f5dd65ccfc3ab9a81e64552d",
+      "source": "sources/w10-vi-b-sound-device-process/process.cpp",
+      "emitted_functions": [
+        {
+          "name": "Process__13VISoundDevice",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3536,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_splash_fx_free.o",
+      "profile": "authored_cpp",
+      "sha256": "5de125559fba7aa3633f0b5b03879d244fc48f36aebec93ff4163fa7491ea5fe",
+      "source": "sources/w10-vi-b-splash-fx-free/splash_fx_free.cpp",
+      "emitted_functions": [
+        {
+          "name": "VISplashFxFree__Fv",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3537,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_splash_fx_init.o",
+      "profile": "authored_cpp",
+      "sha256": "3f30430dab2beb5857cad1e7648866a42b2943d8ecedd73f630fae5f810a352f",
+      "source": "sources/w10-vi-b-splash-fx-init/splash_fx_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "VISplashFxInit__FP8VIRasterP12VIDictionary",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3538,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_timer_get_time.o",
+      "profile": "authored_cpp",
+      "sha256": "4051aba264825e93a53c751a43f7de1135e31cf7cc90bcf10b29f2228c8f5020",
+      "source": "sources/w10-vi-b-timer-get-time/get_time.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetTime__7VITimer",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3539,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_ui_close.o",
+      "profile": "authored_cpp",
+      "sha256": "e841d46c623632cee465196c91932e854701a64f73e56f246af05b7d278f1217",
+      "source": "sources/w10-vi-b-ui-close/ui_close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__4VIUI",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3540,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_ui_init.o",
+      "profile": "authored_cpp",
+      "sha256": "556a649d6ff93abfb41f4d3dafb1348d4ad1caa53ae55406427ed271e38a32f7",
+      "source": "sources/w10-vi-b-ui-init/ui_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__4VIUIP8VIRasterP13VISoundDeviceP12VIDictionary",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3541,
+      "kind": "independently_authored_source",
+      "object_name": "w10_vi_b_window_ui.o",
+      "profile": "authored_cpp",
+      "sha256": "c4798286da3b51b9847d8ce0d457cea2258048396f6ba13fca759b9ff30a3a94",
+      "source": "sources/w10-vi-b-window-ui/window_ui.cpp",
+      "emitted_functions": [
+        {
+          "name": "VISetWindowUI__FP4VIUI",
+          "compiled_body_bytes": 20
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -49553,7 +50033,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "529007a1d20c2e83eb093cb729e717541c32f2b87404a0d946dcccb865034b5e",
+  "snapshot_sha256": "971b10d165c6bd30547ef3979cf2f9ff5a8c28066f2a6fe857fded655c686318",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
