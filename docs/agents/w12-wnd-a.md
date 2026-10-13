@@ -33,47 +33,7 @@ compiler and schedules differently); no byte-match is claimed.
 
 `Begin__Ct5VISet1ZP5VIWnd`, `ClearText__9VIWndEdit`, `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`.
 
-Two data words were added so those functions can import them: `renderCount.3634` and `lastPadState.2196`.
-
-## Imports not closed (0)
-
-none.
-
-## Not closed
-
- — all assigned imports are closed by the units above.
-
-## Authored but never executed
-
-All of them. They ran only in the private interpreter against logging stand-ins (and four of them in host
-checks). None has run on the EE or in gameplay; no window object built by a real caller has passed through
-them; virtual calls through the class tables, and the dialog, sound, message and realm callees, ran only
-against fabricated tables and stand-ins. In particular the inlined reference-counted string handling in
-`OnKeyDown__20VIWndGenericRendereri` was checked against the image's own free-list memory but with stand-ins
-for the string library's `clone`, `replace`, `resize` and `alloc` routines.
-
-## Unknown
-
-- The size and field layout of every window class beyond the offsets used; the names and meaning of the
-  words used as flags and counters (for example `VIWnd` +28 as a shown flag is inferred from its use in the
-  draw walk and the "show message" sequences, not from the class itself).
-- The container layout of `VISet<VIWnd*>` (20-byte elements: +0 colour, +4 parent, +8 left, +12 right, +16
-  key, index 0 nil; set +8 array base, +12 root) is inferred from the index arithmetic of Begin, Next, Find,
-  Insert and Erase, not from the container's own constructor; the colour polarity (1 red, 0 black) comes
-  from the fix-up logic. `AddNode`, `FreeNode`, `EraseFixup` and the rotations are not authored here.
-- Key code names (132, 134 to 139, 144) and the meaning of sound ids 9, 11, 13 and 15, message ids 4354 and
-  4358, string ids and the "|q", "|w", "|x", "|-", "|t" text escapes beyond their use as numbers and strings here.
-- Local statics (`renderCount.3634`, `lastPadState.2196`, `ellipseCount.2103`, `dot.2110`, `dot_delay.2111`)
-  are defined by small data units under the image's own local names; their link-time placement and whether the
-  original keeps them in `.sbss`/`.bss` is not established (the paired runs bound them to the image addresses).
-- `sKeyMap` is a file-local image symbol (66 bytes at 0x01192b80); `EnableCr__9VIWndEditi` imports it by that
-  name, which a link will not resolve until its owner defines it with a global name.
-- `VINetworkStatus` is 108 bytes by its constructor; its fields are not used here.
-- The unused stack arrays in `OnDrawSelf__11VIWndSplash`, the 4 KiB frame of `OnKeyDown__9VIWndEulai` and the
-  dead dot-building in `OnDrawSelf__12VIWndPatcher` (built, then overwritten by the snprintf) were reproduced
-  only as far as they have effects (the patcher's dot calls are kept; the others are not).
-- The type behind the `VIUICOLOR` arguments and the by-pointer passing of `VIVect2I` values (observed as
-  pointers at the call sites) are taken at face value.
+Five function-local data words were added so the drawing functions can import them: `renderCount.3634`, `lastPadState.2196`, `ellipseCount.2103`, `dot.2110` and `dot_delay.2111`.
 
 ## Imports opened (referenced by these sources, defined elsewhere or by nobody yet)
 
@@ -119,3 +79,35 @@ Profile `authored_cpp`, kind `independently_authored_source`, appended after the
 {"emitted_functions": [{"compiled_body_bytes": 32, "name": "OnDrawSelf__5VIWnd"}], "header_closure": [], "kind": "independently_authored_source", "object_name": "w12wnda_wnd_ondrawself.o", "profile": "authored_cpp", "sha256": "0b983d196e02574ffbbb3f6f4f24dfa80d9732030c1a755466b37aa4edcc3769", "source": "sources/w12-wnd-a-wnd-ondrawself/ondrawself.cpp"}
 {"emitted_functions": [{"compiled_body_bytes": 64, "name": "OnKeyDown__5VIWndi"}], "header_closure": [], "kind": "independently_authored_source", "object_name": "w12wnda_wnd_onkeydown.o", "profile": "authored_cpp", "sha256": "c3391ff37bead5ab15176d0e08f011a1835082018510f9dbae568707336e6851", "source": "sources/w12-wnd-a-wnd-onkeydown/onkeydown.cpp"}
 ```
+
+## Authored but never executed
+
+All of them. They ran only in the private interpreter against logging stand-ins (and four of them in host
+checks). None has run on the EE or in gameplay; no window object built by a real caller has passed through
+them; virtual calls through the class tables, and the dialog, sound, message and realm callees, ran only
+against fabricated tables and stand-ins. In particular the inlined reference-counted string handling in
+`OnKeyDown__20VIWndGenericRendereri` was checked against the image's own free-list memory but with stand-ins
+for the string library's `clone`, `replace`, `resize` and `alloc` routines.
+
+## Unknown
+
+- The size and field layout of every window class beyond the offsets used; the names and meaning of the
+  words used as flags and counters (for example `VIWnd` +28 as a shown flag is inferred from its use in the
+  draw walk and the "show message" sequences, not from the class itself).
+- The container layout of `VISet<VIWnd*>` (20-byte elements: +0 colour, +4 parent, +8 left, +12 right, +16
+  key, index 0 nil; set +8 array base, +12 root) is inferred from the index arithmetic of Begin, Next, Find,
+  Insert and Erase, not from the container's own constructor; the colour polarity (1 red, 0 black) comes
+  from the fix-up logic. `AddNode`, `FreeNode`, `EraseFixup` and the rotations are not authored here.
+- Key code names (132, 134 to 139, 144) and the meaning of sound ids 9, 11, 13 and 15, message ids 4354 and
+  4358, string ids and the "|q", "|w", "|x", "|-", "|t" text escapes beyond their use as numbers and strings here.
+- Local statics (`renderCount.3634`, `lastPadState.2196`, `ellipseCount.2103`, `dot.2110`, `dot_delay.2111`)
+  are defined by small data units under the image's own local names; their link-time placement and whether the
+  original keeps them in `.sbss`/`.bss` is not established (the paired runs bound them to the image addresses).
+- `sKeyMap` is a file-local image symbol (66 bytes at 0x01192b80); `EnableCr__9VIWndEditi` imports it by that
+  name, which a link will not resolve until its owner defines it with a global name.
+- `VINetworkStatus` is 108 bytes by its constructor; its fields are not used here.
+- The unused stack arrays in `OnDrawSelf__11VIWndSplash`, the 4 KiB frame of `OnKeyDown__9VIWndEulai` and the
+  dead dot-building in `OnDrawSelf__12VIWndPatcher` (built, then overwritten by the snprintf) were reproduced
+  only as far as they have effects (the patcher's dot calls are kept; the others are not).
+- The type behind the `VIUICOLOR` arguments and the by-pointer passing of `VIVect2I` values (observed as
+  pointers at the call sites) are taken at face value.
