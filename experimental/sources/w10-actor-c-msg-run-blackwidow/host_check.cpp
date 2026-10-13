@@ -109,6 +109,7 @@ static void reset(int state) {
     putf(O + 16, 10.0f); putf(O + 20, 20.0f); putf(O + 24, 30.0f); putf(O + 28, 5.0f);
     put16(O + 56, 100);
     put(O + 808, 7);
+    put16(O + 296, 0xffff);  // the neighbouring halfword must not leak into the flag tests
 }
 static std::vector<std::string> prologue(const char* z = "40") {
     return {"damageHandler:" + std::to_string(MODEL), "everyFrame:" + std::to_string(MODEL), "activation:600", "advance:1",
@@ -238,6 +239,12 @@ int main() {
         ok = ok && half(44) == -1 && half(52) == -1 && half(60) == -1;
         expect(ok, "descriptor layout");
     }
+    reset(15); link_target(0, 0); put(O + 256, 1); msg_run__10BlackWidow(object);
+    check("state 15 with a target and an expired counter", {setstate(3)});
+    reset(15); link_target(0, 0); put(O + 256, 1); put16(O + 294, 8); msg_run__10BlackWidow(object);
+    check("state 15 with a target, bit 3 set: turns, keeps the counter", {"turn"});
+    reset(6); link_target(0, 0); put(O + 256, 1); msg_run__10BlackWidow(object);
+    check("state 6 with a target and an expired counter", {setstate(3)});
     // State 13.
     reset(13); script["active"] = {0}; msg_run__10BlackWidow(object);
     check("state 13 inactive", {"webActive", setstate(3)});
@@ -266,6 +273,10 @@ int main() {
     // State 10.
     reset(10); script["advance"] = {4}; script["rand"] = {0x2345, 17}; msg_run__10BlackWidow(object);
     check("state 10 floor", {"rand:9029", "rand:17", "floor:10,20,30:9029:57:6:1"});
+    reset(10); script["advance"] = {1}; msg_run__10BlackWidow(object);
+    check("state 10 floor needs bit 2 of the animation result", {});
+    reset(10); script["advance"] = {3}; msg_run__10BlackWidow(object);
+    check("state 10 floor needs bit 2 of the animation result (bits 0 and 1)", {});
     reset(10); script["advance"] = {4}; put(O + 12, 2); msg_run__10BlackWidow(object);
     check("state 10 floor blocked by +12 bit 1", {});
     reset(10); put16(O + 294, 0x80); msg_run__10BlackWidow(object);
@@ -321,17 +332,19 @@ int main() {
     }
     // Particle values: rolls of 49152 give 0.5 on every coordinate (3 per vector) -> length^2 .75, accepted.
     reset(10); put64(O + 160, 0x01000000ull); put(O + 964, 1); put(O + 808, 500); put(O + 968, 419);
-    script["rand"] = std::deque<int>(40, 49152);
+    // Rolls 49152, 40960, 36864 give 0.5, 0.25, 0.125; the second vector uses the same three values.
+    script["rand"] = std::deque<int>();
+    for (int i = 0; i < 60; ++i) { script["rand"].push_back(49152); script["rand"].push_back(40960); script["rand"].push_back(36864); }
     msg_run__10BlackWidow(object);
     {
         std::vector<std::string> got(events.begin() + prologue().size(), events.end());
-        std::string a = "particle:def:" + fl(0.5f * 20.75f + 10.0f) + "," + fl(0.5f * 20.75f + 20.0f) + "," +
-                        fl((0.5f * 20.75f) * 0.75f + 0.07f + 30.0f);
+        std::string a = "particle:def:" + fl(0.5f * 20.75f + 10.0f) + "," + fl(0.25f * 20.75f + 20.0f) + "," +
+                        fl((0.125f * 20.75f) * 0.75f + 0.07f + 30.0f);
         bool found = false;
         for (auto& e : got) if (e.rfind(a, 0) == 0) found = true;
         expect(found, "first particle position");
         bool velocity = false;
-        for (auto& e : got) if (e.find(":" + fl(0.5f * 4.75f) + "," + fl(0.5f * 4.75f) + ",0:0") != std::string::npos) velocity = true;
+        for (auto& e : got) if (e.find(":" + fl(0.5f * 4.75f) + "," + fl(0.25f * 4.75f) + ",0:0") != std::string::npos) velocity = true;
         expect(velocity, "first particle velocity");
         expect(std::fabs(getf(O + 60) - (30.0f - 0.15f)) < 1e-4f, "+60 holds z minus the new +972");
     }

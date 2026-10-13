@@ -104,6 +104,7 @@ static void reset(int state) {
     putf(O + 28, 5.0f);
     put16(O + 56, 100);
     put16(O + 294, 0);
+    put16(O + 296, 0xffff);  // the neighbouring halfword must not leak into the flag tests
 }
 static std::vector<std::string> prologue() {
     return {"damageHandler:" + std::to_string(MODEL), "everyFrame:" + std::to_string(MODEL), "activation:600", "advance:1",
@@ -240,6 +241,14 @@ int main() {
     reset(10); put16(O + 294, 0x80); put(O + 12, 0); script["advance"] = {4}; msg_run__6Badger(object);
     check("state 10 slow run list", {"slowRun"});
     expect(get(O + 12) == 1, "state 10 sets +12 bit 0");
+    reset(10); put(O + 12, 0); script["advance"] = {1}; msg_run__6Badger(object);
+    check("state 10 with only bit 0 does not touch +12", {"rand:0", "rand:0", "floor:0,0,0:0:35:0:1"});
+    expect(get(O + 12) == 0, "bit 0 alone leaves +12");
+    reset(10); put(O + 12, 0); script["advance"] = {2}; msg_run__6Badger(object);
+    check("state 10 with only bit 1 does nothing", {});
+    expect(get(O + 12) == 0, "bit 1 leaves +12");
+    reset(10); put(O + 12, 0); script["advance"] = {5}; msg_run__6Badger(object);
+    expect(get(O + 12) == 1, "bit 2 sets +12 bit 0 together with bit 0");
     reset(10); script["advance"] = {1}; script["rand"] = {0x12345, 14};
     putf(O + 16, 1.5f); putf(O + 20, 2.5f); putf(O + 24, 3.5f); msg_run__6Badger(object);
     check("state 10 floor", {"rand:74565", "rand:14", "floor:1.5,2.5,3.5:9029:39:0:1"});

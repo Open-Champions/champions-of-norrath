@@ -67,7 +67,9 @@ static void reset() {
     putf(O + 16, 10.0f); putf(O + 20, 20.0f); putf(O + 24, 30.0f);
     put(O + 36, 0x400); put(0x400 + 12, 0x500);
     putf(O + 240, 4.0f);
-    int16_t yaw = 100; std::memcpy(memory + O + 56, &yaw, 2);
+    int16_t yaw = 0x1234; std::memcpy(memory + O + 56, &yaw, 2);
+    // Non-flag neighbours of the tested bytes must not leak into the tests.
+    for (unsigned neighbour : {75u, 77u, 79u, 86u, 95u, 97u}) memory[O + neighbour] = 0x7f;
 }
 int main() {
     norrath_w10ac_host_base = memory;
@@ -87,9 +89,9 @@ int main() {
     // Launch: distance below 2.1, no script.
     reset(); putf(O + 124, 1.0f);
     msg_run__8Catapult(object);
-    std::vector<std::string> want = {"active:" + std::to_string(O) + ":0:1600", "icos:100", "isin:100", "alloc:184",
-        "fire:12288:10,20,30:-32668:null:10,20,130:12,20,2:1", "hold:12288:1",
-        "attach:1280:10:100:108:0:12304:244:1"};
+    std::vector<std::string> want = {"active:" + std::to_string(O) + ":0:1600", "icos:4660", "isin:4660", "alloc:184",
+        "fire:12288:10,20,30:-28108:null:10,20,130:12,20,2:1", "hold:12288:1",
+        "attach:1280:10:4660:108:0:12304:244:1"};
     expect(events == want, "launch sequence");
     if (events != want) for (auto& e : events) std::fprintf(stderr, "  got %s\n", e.c_str());
     expect(memory[O + 84] == 1 && memory[O + 78] == 1 && memory[O + 85] == 1 && get(O + 88) == 0x3000, "launch state");
@@ -127,7 +129,7 @@ int main() {
     reset(); memory[O + 96] = 0xff; put(O + 88, 0x1000); putf(O + 124, 100.0f); memory[O + 84] = 1;
     msg_run__8Catapult(object);
     expect(events.size() == 3 && events[1] == "anim:" + std::to_string(O + 92) + ":" + std::to_string(O + 16) + ":nn" &&
-               events[2] == "attach:1280:10:100:" + std::to_string(O + 92) + ":0:" + std::to_string(0x1000 + 16) + ":" +
+               events[2] == "attach:1280:10:4660:" + std::to_string(O + 92) + ":0:" + std::to_string(0x1000 + 16) + ":" +
                                 std::to_string(O + 228) + ":1",
            "animation advance then attachment position");
     return failures ? 1 : 0;

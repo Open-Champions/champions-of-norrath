@@ -70,32 +70,33 @@ static std::vector<std::string> run(float z, unsigned word84, unsigned char b85,
 
 int main() {
     norrath_w10ac_host_base = memory;
-    worldCameraPos[0] = worldCameraPos[1] = worldCameraPos[2] = 0.0f;
-    // View third column (2, 6, 10) = (0, 0, 4): normalised to (0, 0, 1) by the reciprocal root.
-    worldViewMatrix[2] = 0.0f; worldViewMatrix[6] = 0.0f; worldViewMatrix[10] = 4.0f;
+    // Camera and view matrix with distinct components: V = (1, 2, 2) / 3, camera (1, 2, 3).
+    worldCameraPos[0] = 1.0f; worldCameraPos[1] = 2.0f; worldCameraPos[2] = 3.0f;
+    for (float& f : worldViewMatrix) f = 100.0f;
+    worldViewMatrix[2] = 1.0f; worldViewMatrix[6] = 2.0f; worldViewMatrix[10] = 2.0f;
     const std::string scale = "scale:2.917964";
-    // Far behind the threshold: shadow record, animation when +85 is nonzero.
-    auto e = run(-500.0f, 0, 1, 0xc000);
+    // The object is at (5, 6, z): dot = (4 * 1 + 4 * 2 + (z - 3) * 2) / 3, below -244 when z < -369.
+    auto e = run(-400.0f, 0, 1, 0xc000);
     expect(e.size() == 5, "five calls with a shadow");
     if (e.size() == 5) {
         expect(e[0] == scale, "shadow scale constant");
-        expect(e[1] == "matrix:5.000000:-500.000000:" + std::to_string(static_cast<short>(0xc000 + 16384)), "matrix point and wrapped yaw");
+        expect(e[1] == "matrix:5.000000:-400.000000:" + std::to_string(static_cast<short>(0xc000 + 16384)), "matrix point and wrapped yaw");
         expect(e[2] == "shadow:1280:1:m:anim:0", "shadow with the model, mode 1 and the animation");
         expect(e[3] == "draw:1280:1344:0:5.000000:m:anim:ffffffffffffffff:record:0", "draw with mode 0, all-ones flags and the record");
         expect(e[4] == "reset", "reset last");
     }
-    // Exactly -244 is not below the threshold: no shadow, null record.
-    e = run(-244.0f, 0, 0, 0);
-    expect(e.size() == 4 && e[2] == "draw:1280:1344:0:5.000000:m:noanim:ffffffffffffffff:norecord:0", "threshold is strict; byte 85 zero means no animation");
-    e = run(-244.5f, 0xffff, 0x80, 1);
+    e = run(-368.9f, 0, 0, 0);
+    expect(e.size() == 4 && e[2] == "draw:1280:1344:0:5.000000:m:noanim:ffffffffffffffff:norecord:0", "just above the threshold: no shadow; byte 85 zero means no animation");
+    e = run(-369.1f, 0xffff, 0x80, 1);
     expect(e.size() == 5 && e[3].find("anim:ffff") != std::string::npos, "just below the threshold; signed byte 0x80 is nonzero; low halfword of +84 does not stop it");
-    // The upper half of the +84 word stops everything.
     e = run(-500.0f, 0x10000, 1, 0);
     expect(e.empty(), "upper bits of +84 suppress the draw");
     e = run(-500.0f, 0x80000000u, 1, 0);
     expect(e.empty(), "top bit suppresses the draw");
-    // Facing the other way: dot product positive, no shadow.
     e = run(500.0f, 0, 1, 0);
     expect(e.size() == 4, "positive dot product: no shadow");
+    // The yaw uses both bytes: 0x1234 + 16384.
+    e = run(-400.0f, 0, 1, 0x1234);
+    expect(e.size() == 5 && e[1].find(":" + std::to_string(static_cast<short>(0x1234 + 16384))) != std::string::npos, "yaw high byte");
     return failures ? 1 : 0;
 }

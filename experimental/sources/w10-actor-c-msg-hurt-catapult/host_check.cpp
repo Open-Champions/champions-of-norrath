@@ -59,7 +59,7 @@ extern "C" void __6PhPropG6Point3PcN22liPQ24item11descriptionf(void* self, const
                                                                  int kind, void* description, float scale) {
     float p[3];
     std::memcpy(p, position, 12);
-    events.push_back("prop:" + off(self) + ":" + std::to_string(static_cast<int>(p[0])) + ":" + lump + ":" + model + ":" +
+    events.push_back("prop:" + off(self) + ":" + fl(p[0]) + ":" + lump + ":" + model + ":" +
                      texture + ":" + std::to_string(mask) + ":" + std::to_string(kind) + ":" +
                      (description == nullptr ? "null" : "?") + ":" + std::to_string(scale));
 }
@@ -80,7 +80,7 @@ static void reset() {
     tag_reduce = tag_death = false; tag_int = 0; record_count = 0;
     rolls.clear(); roll_index = 0; allocs.clear(); alloc_index = 0; cutMode = 0;
     object = memory + O;
-    putf(O + 16, 10.0f); putf(O + 20, 20.0f); putf(O + 24, 30.0f);
+    putf(O + 16, 10.1f); putf(O + 20, 20.0f); putf(O + 24, 30.0f);
     putf(OTHER + 16, 10.0f); putf(OTHER + 20, 20.0f); putf(OTHER + 24, 30.0f);
 }
 static void run() { msg_hurt__8CatapultfP10GameObjecti(object, 0.0f, memory + OTHER, 7); }
@@ -104,7 +104,7 @@ int main() {
     want = {"tagstr:reduceCarnage:0", "lump:catapult.lmp:catapult_broken.vif"};
     for (int i = 0; i < 3; ++i) {
         want.push_back("alloc:584:ok");
-        want.push_back("prop:" + std::to_string(0x3000) + ":10:catapult.lmp:catapult_broken.vif:catapult_broken.tex:" +
+        want.push_back("prop:" + std::to_string(0x3000) + ":10.1:catapult.lmp:catapult_broken.vif:catapult_broken.tex:" +
                        std::to_string(1 << i) + ":534:null:1.000000");
         want.push_back("rand:" + std::to_string(rolls[i]));
         if ((rolls[i] & 7) == 0) want.push_back("fire:" + std::to_string(0x3000) + ":1");
@@ -114,10 +114,22 @@ int main() {
     expect(events == want, "three pieces");
     if (events != want) for (auto& e : events) std::fprintf(stderr, "  got %s\n", e.c_str());
     // Carnage reduction with a nonzero tag value: an even roll skips the piece (and uses no alloc).
-    reset(); record_count = 3; memory[O + 76] = 1; tag_reduce = true; tag_int = 9; rolls = {2, 3, 0, 4, 5, 6, 7, 9}; run();
+    for (int tag_value : {9, 1, -1}) {
+        reset(); record_count = 3; memory[O + 76] = 1; tag_reduce = true; tag_int = tag_value; rolls = {2, 3, 0, 4, 5, 6, 7, 9}; run();
+        int allocs_seen = 0;
+        for (auto& e : events) if (e.rfind("alloc:", 0) == 0) ++allocs_seen;
+        expect(allocs_seen == 1, "carnage reduction skips pieces whose first roll is even");
+        // Piece 0 rolls 2 (skip), piece 1 rolls 3 (spawn, fire roll 0 -> fire), piece 2 rolls 4 (skip).
+        expect(events.size() > 6 && events[3] == "rand:2" && events[4] == "rand:3" && events[5] == "alloc:584:ok", "roll order");
+    }
+    // A roll with only a higher bit set (2) is even; a roll of 6 and 8 are even; 7 and 1 are odd.
+    reset(); record_count = 4; memory[O + 76] = 1; tag_reduce = true; tag_int = 3; rolls = {6, 7, 8, 1, 0, 0}; run();
+    {
+        int allocs_seen = 0;
+        for (auto& e : events) if (e.rfind("alloc:", 0) == 0) ++allocs_seen;
+        expect(allocs_seen == 2, "only odd first rolls spawn");
+    }
     int allocs_seen = 0;
-    for (auto& e : events) if (e.rfind("alloc:", 0) == 0) ++allocs_seen;
-    expect(allocs_seen == 1, "carnage reduction skips pieces whose first roll is even");
     expect(events.size() > 3 && events[1] == "tagint:reduceCarnage:0", "tag value read");
     // Zero tag value means no reduction even though the tag exists.
     reset(); record_count = 2; memory[O + 76] = 1; tag_reduce = true; tag_int = 0; rolls = {1, 1, 1, 1}; run();
@@ -129,14 +141,15 @@ int main() {
     expect(events.size() == 5 && events[2] == "alloc:584:null", "failed allocation skips constructor and roll");
     // Held bomblet released: velocity is the unit vector from the other object, times 4.
     reset(); memory[O + 76] = 1; memory[O + 78] = 1; put(O + 88, HELD);
-    putf(O + 16, 13.0f); putf(O + 20, 24.0f); putf(O + 24, 30.0f);
+    putf(O + 16, 13.0f); putf(O + 20, 24.0f); putf(O + 24, 42.0f);
     putf(OTHER + 16, 10.0f); putf(OTHER + 20, 20.0f); putf(OTHER + 24, 30.0f);
     run();
     expect(events.size() >= 4 && events[2] == "hold:" + std::to_string(HELD) + ":0" && events[3] == "detach:" + std::to_string(HELD),
            "hold released and detached");
     expect(get(O + 88) == 0 && memory[O + 78] == 0, "held word and flag cleared");
-    expect(std::fabs(getf(HELD + 76) - 2.4f) < 1e-5f && std::fabs(getf(HELD + 80) - 3.2f) < 1e-5f && getf(HELD + 84) == 0.0f,
-           "velocity direction times four (3-4-5 triangle)");
+    expect(std::fabs(getf(HELD + 76) - 12.0f / 13.0f) < 1e-5f && std::fabs(getf(HELD + 80) - 16.0f / 13.0f) < 1e-5f &&
+               std::fabs(getf(HELD + 84) - 48.0f / 13.0f) < 1e-5f,
+           "velocity direction times four (3-4-12 triangle, length 13)");
     // cutMode nonzero blocks the release.
     reset(); memory[O + 76] = 1; memory[O + 78] = 1; put(O + 88, HELD); cutMode = 1; run();
     expect(events.size() == 4 && get(O + 88) == HELD && memory[O + 78] == 1, "cutMode blocks the release");
