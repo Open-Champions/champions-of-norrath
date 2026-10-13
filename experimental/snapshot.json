@@ -34886,6 +34886,293 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w9-frontend-a-vi-station-free/free.cpp"
+    },
+    {
+      "input_order": 2687,
+      "component": "w9-camera-map-camera-pop",
+      "object_name": "pop.o",
+      "private_object_sha256": "5c3be9c28be8441b5d458ee885c09f0204043ece9201f5a66af22b9ad479dba7",
+      "emitted_functions": [
+        {
+          "name": "Pop__6Camera",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-camera-pop/pop.cpp"
+    },
+    {
+      "input_order": 2688,
+      "component": "w9-camera-map-camera-save",
+      "object_name": "save.o",
+      "private_object_sha256": "05ff712683ce58ed5499b8fc73302a1bfae1901cf22edca5af0d69cc852758ef",
+      "emitted_functions": [
+        {
+          "name": "Save__6CameraPc",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-camera-save/save.cpp"
+    },
+    {
+      "input_order": 2689,
+      "component": "w9-camera-map-cut-draw-frame",
+      "object_name": "cut_draw_frame.o",
+      "private_object_sha256": "6860ea681b8b2d5a6de5234b764f1577cfd8eccb074f9a42407fad682eb0aedb",
+      "emitted_functions": [
+        {
+          "name": "cutDrawFrame__Fv",
+          "compiled_body_bytes": 1724
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-cut-draw-frame/cut_draw_frame.cpp"
+    },
+    {
+      "input_order": 2690,
+      "component": "w9-camera-map-cut-init-scene",
+      "object_name": "cut_init_scene.o",
+      "private_object_sha256": "0c9e125b7cd8ece694aa8d46222137233403a68256947df0a6d0076cecb3953b",
+      "emitted_functions": [
+        {
+          "name": "_ZL17transformPositionPhS_",
+          "compiled_body_bytes": 228
+        },
+        {
+          "name": "_ZL18writeCameraRecordsPhf",
+          "compiled_body_bytes": 164
+        },
+        {
+          "name": "cutInitScene__FP9_cutscene",
+          "compiled_body_bytes": 3472
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-cut-init-scene/cut_init_scene.cpp"
+    },
+    {
+      "input_order": 2691,
+      "component": "w9-camera-map-cut-run-frame-task",
+      "object_name": "cut_run_frame_task.o",
+      "private_object_sha256": "4f4badc218fb42a1c04e22e56ca49cdd05d68877dff3bdcb00f0bc7ede579f21",
+      "emitted_functions": [
+        {
+          "name": "cutRunFrameTask__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-cut-run-frame-task/cut_run_frame_task.cpp"
+    },
+    {
+      "input_order": 2692,
+      "component": "w9-camera-map-cut-stop",
+      "object_name": "cut_stop.o",
+      "private_object_sha256": "dd1b92e080b67197b5ed19334e3109eadd5a08fda4269b24e4a8a26ee8ee2899",
+      "emitted_functions": [
+        {
+          "name": "cutStop__Fv",
+          "compiled_body_bytes": 1320
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-cut-stop/cut_stop.cpp"
+    },
+    {
+      "input_order": 2693,
+      "component": "w9-camera-map-do-debug-cam",
+      "object_name": "do_debug_cam.o",
+      "private_object_sha256": "c4cd949edd9a4a24f87b389e8e2cea5c1e6e1947bc5926728a0967f2b958ded3",
+      "emitted_functions": [
+        {
+          "name": "doDebugCam__6Camera",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-do-debug-cam/do_debug_cam.cpp"
+    },
+    {
+      "input_order": 2694,
+      "component": "w9-camera-map-do-innoruk-cam",
+      "object_name": "do_innoruk_cam.o",
+      "private_object_sha256": "497777c135da27995d4e85a1beec2c947e6007ffdaf97d4e7bd53f5d796e2ec2",
+      "emitted_functions": [
+        {
+          "name": "doInnorukCam__6Camera",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-do-innoruk-cam/do_innoruk_cam.cpp"
+    },
+    {
+      "input_order": 2695,
+      "component": "w9-camera-map-do-normal-cam",
+      "object_name": "do_normal_cam.o",
+      "private_object_sha256": "a565202b1037cf47f7da64b777937a833c9dba765ba7479245ee35b55f6e5894",
+      "emitted_functions": [
+        {
+          "name": "doNormalCam__6Camera",
+          "compiled_body_bytes": 1520
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-do-normal-cam/do_normal_cam.cpp"
+    },
+    {
+      "input_order": 2696,
+      "component": "w9-camera-map-get-target-num",
+      "object_name": "get_target_num.o",
+      "private_object_sha256": "12adc546ad8d1325e733cf89c84df47fd852a344577b7b5f73da2172b426b262",
+      "emitted_functions": [
+        {
+          "name": "GetTargetNum__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-get-target-num/get_target_num.cpp"
+    },
+    {
+      "input_order": 2697,
+      "component": "w9-camera-map-get-zoom-distance",
+      "object_name": "get_zoom_distance.o",
+      "private_object_sha256": "01511f893270078bdbf464fa5e2dcc50c06d86612dd384ad4d35d322cf3dbfd9",
+      "emitted_functions": [
+        {
+          "name": "GetZoomDistance__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-get-zoom-distance/get_zoom_distance.cpp"
+    },
+    {
+      "input_order": 2698,
+      "component": "w9-camera-map-map-add-icon",
+      "object_name": "add_icon.o",
+      "private_object_sha256": "4b09495741cc04adf68420badffbcbc6bd3cc95f641eb11cb38b5d3774f6ef34",
+      "emitted_functions": [
+        {
+          "name": "norrath_map_add_icon",
+          "compiled_body_bytes": 748
+        },
+        {
+          "name": "addIcon__3mapP6Point3iPciT3N33",
+          "compiled_body_bytes": 748
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-add-icon/add_icon.cpp"
+    },
+    {
+      "input_order": 2699,
+      "component": "w9-camera-map-map-is-revealed",
+      "object_name": "is_revealed.o",
+      "private_object_sha256": "890a5bbf8f0441c9031a77841895ac6ac0c6227c4b15cc06754848cb0b568ffe",
+      "emitted_functions": [
+        {
+          "name": "isRevealed__3mapv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-is-revealed/is_revealed.cpp"
+    },
+    {
+      "input_order": 2700,
+      "component": "w9-camera-map-map-reveal-entire",
+      "object_name": "reveal_entire.o",
+      "private_object_sha256": "cfbe51e44d2ef9cd302845a98939c6b2433b12fab2d325f7461c528678a00c6e",
+      "emitted_functions": [
+        {
+          "name": "revealEntireMap__3mapv",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-reveal-entire/reveal_entire.cpp"
+    },
+    {
+      "input_order": 2701,
+      "component": "w9-camera-map-map-reveal-map",
+      "object_name": "reveal_map.o",
+      "private_object_sha256": "dc00328ceb02a6f39d81b6eaf26c4ad5a532d42ea507cd4e90ec679781d60122",
+      "emitted_functions": [
+        {
+          "name": "revealMap__3mapG6Point3",
+          "compiled_body_bytes": 740
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-reveal-map/reveal_map.cpp"
+    },
+    {
+      "input_order": 2702,
+      "component": "w9-camera-map-map-storage",
+      "object_name": "storage.o",
+      "private_object_sha256": "da2db00a455b7c8442c98eaebe344eef41f166d2490cc67277af8a65cbd25105",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-storage/storage.cpp"
+    },
+    {
+      "input_order": 2703,
+      "component": "w9-camera-map-map-will-draw",
+      "object_name": "will_draw.o",
+      "private_object_sha256": "ba1c70bd8b30630afb284ba675269007b2596361c7f9001ee8b27a7ee90abd66",
+      "emitted_functions": [
+        {
+          "name": "willDraw__3mapP12_worldHeaderf",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-will-draw/will_draw.cpp"
+    },
+    {
+      "input_order": 2704,
+      "component": "w9-camera-map-map-world-to-map",
+      "object_name": "world_to_map.o",
+      "private_object_sha256": "3ad66643492565c5619e00e7adf0e3ad2aef9de2cd7abd04112219d7d0f08163",
+      "emitted_functions": [
+        {
+          "name": "worldToMap__3mapP6Point2PfT2",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-map-world-to-map/world_to_map.cpp"
+    },
+    {
+      "input_order": 2705,
+      "component": "w9-camera-map-set-cut-was-active",
+      "object_name": "set_cut_was_active.o",
+      "private_object_sha256": "700ad1c694f0eee24b0de91d9a9b3580f066a8539cf5c568b11bf75b1de3ba41",
+      "emitted_functions": [
+        {
+          "name": "SetCutWasActive__6Camera",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-set-cut-was-active/set_cut_was_active.cpp"
+    },
+    {
+      "input_order": 2706,
+      "component": "w9-camera-map-set-zoom-distance",
+      "object_name": "set_zoom_distance.o",
+      "private_object_sha256": "5a4bbe7ab2bca2f87ef3537bc3474afcb9be3eb380055086b103584e4850ab13",
+      "emitted_functions": [
+        {
+          "name": "SetZoomDistance__6Cameraf",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w9-camera-map-set-zoom-distance/set_zoom_distance.cpp"
     }
   ],
   "drafts": [
@@ -40124,6 +40411,48 @@
     "sources/w9-audio-start-global-dialog-stream-random/start_global_dialog_stream_random.cpp": "cd43d1b63d79082e9330119f7af6a0ed6590a0f70c36181e06d1ca6f7e7f08f2",
     "sources/w9-audio-start-global-dialog-stream/host_contract.cpp": "ead288c06a3995d5e9e5c2e9f9282d8606cd0117a5e5c4b7a09c4383b60de0c0",
     "sources/w9-audio-start-global-dialog-stream/start_global_dialog_stream.cpp": "6fdc0c7b10f419cb31bf1e23da865b8cbf2ab63b464edfffaf83c286f8c5e54a",
+    "sources/w9-camera-map-camera-pop/host_check.cpp": "010cc10c52a554645061d9e0c222e8a0f2376290633fc6ea4254bbaaa30ca5f5",
+    "sources/w9-camera-map-camera-pop/pop.cpp": "461cc3416d6b91436a33d5103f253f50cb308e1163b906e490704922189b1a1e",
+    "sources/w9-camera-map-camera-save/host_check.cpp": "79dddd51ced87ea7179e254ba8e29d2fa691b7281b1b2c1b07cd4a17caa0e549",
+    "sources/w9-camera-map-camera-save/save.cpp": "5610375e8933016e90dadf87d320d44ace9597cb3a114eaf5f920371f3ab2e4a",
+    "sources/w9-camera-map-cut-draw-frame/cut_draw_frame.cpp": "1d6453bfedd41a6b883fefa98a6e180c76bbe15ae2d74b8e523ec1aa2ca3e376",
+    "sources/w9-camera-map-cut-draw-frame/host_check.cpp": "6b99071d583d7b84dd7e07c0da6868bc0b572dac8304b754b7b4530c4ae3c708",
+    "sources/w9-camera-map-cut-init-scene/cut_init_scene.cpp": "722e0088687355b7254e8042a8406d4557b54b0a49c1830cf41ee0f374a65720",
+    "sources/w9-camera-map-cut-init-scene/host_check.cpp": "5fff445e465fc90995dd83725569560409c3690e8329ea9e015bc3658dab77b9",
+    "sources/w9-camera-map-cut-run-frame-task/cut_run_frame_task.cpp": "1ebd3c5664e2de08b9b84a1f5e2f2a1b169ec1044823b6c7676272ec049b1cb4",
+    "sources/w9-camera-map-cut-run-frame-task/host_check.cpp": "5201f35713fed96a6497b0ae211aedea90d3c2f586ef83e02b6f959bffc6c8e1",
+    "sources/w9-camera-map-cut-stop/cut_stop.cpp": "0509b499db526114396627a6c84dac32808511db621a093a1ec89f59385e05e2",
+    "sources/w9-camera-map-cut-stop/host_check.cpp": "595665eac4f6e308bc0daf7cadf47be7fde655392f2e743c47601f8437929370",
+    "sources/w9-camera-map-do-debug-cam/do_debug_cam.cpp": "4e3adad8462c0ee86befc0e6bc8aa8bc4b09d7a2ed4ad6355f7af68db98922d9",
+    "sources/w9-camera-map-do-debug-cam/host_check.cpp": "6700cecfa507478b4ffed703ea92407e546489649bb633c0e07de6a6130d01eb",
+    "sources/w9-camera-map-do-innoruk-cam/do_innoruk_cam.cpp": "72dfc83b69dd6fe5683e87838379eab4af167132912aac08ff0517ad50670711",
+    "sources/w9-camera-map-do-innoruk-cam/host_check.cpp": "071c449d3f82849affdb90b50c50bfae11bcb7811b930d8c14fcb4fbcbae511b",
+    "sources/w9-camera-map-do-normal-cam/do_normal_cam.cpp": "7f5454479efb4dc9116721bf2d05e7b9efa31ea2df457396a03c6df7436ecf02",
+    "sources/w9-camera-map-do-normal-cam/host_check.cpp": "7caea19a5d8efd8ed632fc8a083267015c6e1cbe6c9c10bf9ecbffbd98a5db40",
+    "sources/w9-camera-map-get-target-num/get_target_num.cpp": "d72e50a721a01cb8cd0c034bae818e4ba75f8eac195690a7e4870b7b045e7644",
+    "sources/w9-camera-map-get-target-num/host_check.cpp": "410627649c5022d2b1358b772c92577b4aaea31b951749b1b106efb45d5d62f7",
+    "sources/w9-camera-map-get-zoom-distance/get_zoom_distance.cpp": "41655a8650c137e17612ae9eb129dee09ff358a0e954fb77c8938c4937dc5fd5",
+    "sources/w9-camera-map-get-zoom-distance/host_check.cpp": "80d6b20cc95e540383abed0d240288cda2613e60b6c71fd67e09237408711d57",
+    "sources/w9-camera-map-map-add-icon/add_icon.cpp": "742bc448c200b541b615d5bf08cc8708faea880175ec3cdbc2392aec9e439243",
+    "sources/w9-camera-map-map-add-icon/host_check.cpp": "7a0010dc5b9623bcec9b20f142ae25ca77331193ba76f0275202f94576605445",
+    "sources/w9-camera-map-map-is-revealed/host_check.cpp": "2a518a832e7e6cc0fa7ee401201a2ca3debc6d88a959c9a507e05221d72eac43",
+    "sources/w9-camera-map-map-is-revealed/is_revealed.cpp": "ec11ce4458a2f2c675968c7c9230c7e4608940443f653c63ecf2dcb73ecd90a5",
+    "sources/w9-camera-map-map-reveal-entire/host_check.cpp": "17dfb318961196b07c330dbc6858085b3798b2edf3138707a33d40c8bf705504",
+    "sources/w9-camera-map-map-reveal-entire/reveal_entire.cpp": "ec3d2e9c6a3449670652d85de90609dd075131a790a2cf1a0d2e64c8762d0b80",
+    "sources/w9-camera-map-map-reveal-map/host_check.cpp": "163b54b98468651f8c867ffff9b86f98c2acf095221ab74cd2cf3458438065e7",
+    "sources/w9-camera-map-map-reveal-map/reveal_map.cpp": "0524638d816c1280b19a7e8b36a403ee1a2591a6d6b929e3bdbc052a800a139d",
+    "sources/w9-camera-map-map-storage/host_check.cpp": "2ad3988abc0316f8394767030024a4f6cb0dca7c150d7fc7361e7f34720b2374",
+    "sources/w9-camera-map-map-storage/storage.cpp": "cc965afbe65ce41394c9a8077aff4e73887203c17bc16959c0d386f6118f414c",
+    "sources/w9-camera-map-map-will-draw/host_check.cpp": "88066ccc220ec13b9b6701a2e9cbc766de19f719b6863fc0c7f04883fb802073",
+    "sources/w9-camera-map-map-will-draw/will_draw.cpp": "7f2eb344ce8db01ee9040984269a7027a856b851ee57508eee9636703e72395e",
+    "sources/w9-camera-map-map-world-to-map/host_check.cpp": "5616ba28803cfc2df50ee25f03d6a73c3af0ac7ea624ed2d1c0219e9c3fef5b0",
+    "sources/w9-camera-map-map-world-to-map/world_to_map.cpp": "4a0cfa4750b911001da60380c1333a8054baf2e7474c5d5fc9c248b3ca388263",
+    "sources/w9-camera-map-set-cut-was-active/host_check.cpp": "3afcef81db4641a3ea664a04fb8889dd680709470ccef404eb341bbebece36f3",
+    "sources/w9-camera-map-set-cut-was-active/set_cut_was_active.cpp": "c03ff2f0fa3c7154222a459625e9af494d3753db57fcdc86a17f8dcb4b0e187b",
+    "sources/w9-camera-map-set-zoom-distance/host_check.cpp": "eedfefc4eccdaf338d8819e425e337d5576ff2eb1a975b7408a6b2adac461987",
+    "sources/w9-camera-map-set-zoom-distance/set_zoom_distance.cpp": "20fbda10c54e6a05102d99f4196d3b000cc88e4d7e73188ca7e2985107bb8637",
+    "sources/w9-camera-map-web-construct/host_check.cpp": "a2dc7484fc4e660469e1fce9b3963e7370719ace84523d066749cc98916d7054",
+    "sources/w9-camera-map-web-construct/web_construct.cpp": "db986d1435b54f479b30a8b850ca7570fe9faac2c54324de6d63f5e9068299cf",
     "sources/w9-frontend-a-ascii2sjis/ascii2sjis.cpp": "d07341de42bfab0c6833a4cdb3414070be2a604bdd83bbeab9da1a03e759f7e5",
     "sources/w9-frontend-a-ascii2sjis/host_contract.cpp": "caabc87be3597d5915b4ac22a94758a68158bc8f0788b7774acc5552efb8be53",
     "sources/w9-frontend-a-cd-check-file/cd_check_file.cpp": "0917294c1950238bc4e60d01dae76f7a134540cf4ef57920a1fbe501d568e217",
@@ -41256,11 +41585,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2687,
-    "authored_default_inputs": 2685,
+    "selected_inputs": 2707,
+    "authored_default_inputs": 2705,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2177,
-    "compiled_body_bytes_from_accepted_inputs": 913804,
+    "emitted_function_definitions_including_helpers": 2199,
+    "compiled_body_bytes_from_accepted_inputs": 926772,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -41273,7 +41602,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2374
+    "package_selected_inputs": 2394
   },
   "startup_implementations": [
     {
@@ -78785,6 +79114,353 @@
       ],
       "host_files": [
         "sources/w9-frontend-a-vi-station-free/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-camera-pop/pop.cpp",
+      "source_sha256": "461cc3416d6b91436a33d5103f253f50cb308e1163b906e490704922189b1a1e",
+      "object_sha256": "5c3be9c28be8441b5d458ee885c09f0204043ece9201f5a66af22b9ad479dba7",
+      "emitted_functions": [
+        {
+          "name": "Pop__6Camera",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-camera-pop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-camera-save/save.cpp",
+      "source_sha256": "5610375e8933016e90dadf87d320d44ace9597cb3a114eaf5f920371f3ab2e4a",
+      "object_sha256": "05ff712683ce58ed5499b8fc73302a1bfae1901cf22edca5af0d69cc852758ef",
+      "emitted_functions": [
+        {
+          "name": "Save__6CameraPc",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-camera-save/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-cut-draw-frame/cut_draw_frame.cpp",
+      "source_sha256": "1d6453bfedd41a6b883fefa98a6e180c76bbe15ae2d74b8e523ec1aa2ca3e376",
+      "object_sha256": "6860ea681b8b2d5a6de5234b764f1577cfd8eccb074f9a42407fad682eb0aedb",
+      "emitted_functions": [
+        {
+          "name": "cutDrawFrame__Fv",
+          "compiled_body_bytes": 1724
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-cut-draw-frame/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-cut-init-scene/cut_init_scene.cpp",
+      "source_sha256": "722e0088687355b7254e8042a8406d4557b54b0a49c1830cf41ee0f374a65720",
+      "object_sha256": "0c9e125b7cd8ece694aa8d46222137233403a68256947df0a6d0076cecb3953b",
+      "emitted_functions": [
+        {
+          "name": "_ZL17transformPositionPhS_",
+          "compiled_body_bytes": 228
+        },
+        {
+          "name": "_ZL18writeCameraRecordsPhf",
+          "compiled_body_bytes": 164
+        },
+        {
+          "name": "cutInitScene__FP9_cutscene",
+          "compiled_body_bytes": 3472
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-cut-init-scene/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-cut-run-frame-task/cut_run_frame_task.cpp",
+      "source_sha256": "1ebd3c5664e2de08b9b84a1f5e2f2a1b169ec1044823b6c7676272ec049b1cb4",
+      "object_sha256": "4f4badc218fb42a1c04e22e56ca49cdd05d68877dff3bdcb00f0bc7ede579f21",
+      "emitted_functions": [
+        {
+          "name": "cutRunFrameTask__Fv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-cut-run-frame-task/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-cut-stop/cut_stop.cpp",
+      "source_sha256": "0509b499db526114396627a6c84dac32808511db621a093a1ec89f59385e05e2",
+      "object_sha256": "dd1b92e080b67197b5ed19334e3109eadd5a08fda4269b24e4a8a26ee8ee2899",
+      "emitted_functions": [
+        {
+          "name": "cutStop__Fv",
+          "compiled_body_bytes": 1320
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-cut-stop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-do-debug-cam/do_debug_cam.cpp",
+      "source_sha256": "4e3adad8462c0ee86befc0e6bc8aa8bc4b09d7a2ed4ad6355f7af68db98922d9",
+      "object_sha256": "c4cd949edd9a4a24f87b389e8e2cea5c1e6e1947bc5926728a0967f2b958ded3",
+      "emitted_functions": [
+        {
+          "name": "doDebugCam__6Camera",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-do-debug-cam/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-do-innoruk-cam/do_innoruk_cam.cpp",
+      "source_sha256": "72dfc83b69dd6fe5683e87838379eab4af167132912aac08ff0517ad50670711",
+      "object_sha256": "497777c135da27995d4e85a1beec2c947e6007ffdaf97d4e7bd53f5d796e2ec2",
+      "emitted_functions": [
+        {
+          "name": "doInnorukCam__6Camera",
+          "compiled_body_bytes": 468
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-do-innoruk-cam/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-do-normal-cam/do_normal_cam.cpp",
+      "source_sha256": "7f5454479efb4dc9116721bf2d05e7b9efa31ea2df457396a03c6df7436ecf02",
+      "object_sha256": "a565202b1037cf47f7da64b777937a833c9dba765ba7479245ee35b55f6e5894",
+      "emitted_functions": [
+        {
+          "name": "doNormalCam__6Camera",
+          "compiled_body_bytes": 1520
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-do-normal-cam/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-get-target-num/get_target_num.cpp",
+      "source_sha256": "d72e50a721a01cb8cd0c034bae818e4ba75f8eac195690a7e4870b7b045e7644",
+      "object_sha256": "12adc546ad8d1325e733cf89c84df47fd852a344577b7b5f73da2172b426b262",
+      "emitted_functions": [
+        {
+          "name": "GetTargetNum__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-get-target-num/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-get-zoom-distance/get_zoom_distance.cpp",
+      "source_sha256": "41655a8650c137e17612ae9eb129dee09ff358a0e954fb77c8938c4937dc5fd5",
+      "object_sha256": "01511f893270078bdbf464fa5e2dcc50c06d86612dd384ad4d35d322cf3dbfd9",
+      "emitted_functions": [
+        {
+          "name": "GetZoomDistance__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-get-zoom-distance/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-add-icon/add_icon.cpp",
+      "source_sha256": "742bc448c200b541b615d5bf08cc8708faea880175ec3cdbc2392aec9e439243",
+      "object_sha256": "4b09495741cc04adf68420badffbcbc6bd3cc95f641eb11cb38b5d3774f6ef34",
+      "emitted_functions": [
+        {
+          "name": "norrath_map_add_icon",
+          "compiled_body_bytes": 748
+        },
+        {
+          "name": "addIcon__3mapP6Point3iPciT3N33",
+          "compiled_body_bytes": 748
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-add-icon/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-is-revealed/is_revealed.cpp",
+      "source_sha256": "ec11ce4458a2f2c675968c7c9230c7e4608940443f653c63ecf2dcb73ecd90a5",
+      "object_sha256": "890a5bbf8f0441c9031a77841895ac6ac0c6227c4b15cc06754848cb0b568ffe",
+      "emitted_functions": [
+        {
+          "name": "isRevealed__3mapv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-is-revealed/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-reveal-entire/reveal_entire.cpp",
+      "source_sha256": "ec3d2e9c6a3449670652d85de90609dd075131a790a2cf1a0d2e64c8762d0b80",
+      "object_sha256": "cfbe51e44d2ef9cd302845a98939c6b2433b12fab2d325f7461c528678a00c6e",
+      "emitted_functions": [
+        {
+          "name": "revealEntireMap__3mapv",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-reveal-entire/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-reveal-map/reveal_map.cpp",
+      "source_sha256": "0524638d816c1280b19a7e8b36a403ee1a2591a6d6b929e3bdbc052a800a139d",
+      "object_sha256": "dc00328ceb02a6f39d81b6eaf26c4ad5a532d42ea507cd4e90ec679781d60122",
+      "emitted_functions": [
+        {
+          "name": "revealMap__3mapG6Point3",
+          "compiled_body_bytes": 740
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-reveal-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-storage/storage.cpp",
+      "source_sha256": "cc965afbe65ce41394c9a8077aff4e73887203c17bc16959c0d386f6118f414c",
+      "object_sha256": "da2db00a455b7c8442c98eaebe344eef41f166d2490cc67277af8a65cbd25105",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w9-camera-map-map-storage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-will-draw/will_draw.cpp",
+      "source_sha256": "7f2eb344ce8db01ee9040984269a7027a856b851ee57508eee9636703e72395e",
+      "object_sha256": "ba1c70bd8b30630afb284ba675269007b2596361c7f9001ee8b27a7ee90abd66",
+      "emitted_functions": [
+        {
+          "name": "willDraw__3mapP12_worldHeaderf",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-will-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-map-world-to-map/world_to_map.cpp",
+      "source_sha256": "4a0cfa4750b911001da60380c1333a8054baf2e7474c5d5fc9c248b3ca388263",
+      "object_sha256": "3ad66643492565c5619e00e7adf0e3ad2aef9de2cd7abd04112219d7d0f08163",
+      "emitted_functions": [
+        {
+          "name": "worldToMap__3mapP6Point2PfT2",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-map-world-to-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-set-cut-was-active/set_cut_was_active.cpp",
+      "source_sha256": "c03ff2f0fa3c7154222a459625e9af494d3753db57fcdc86a17f8dcb4b0e187b",
+      "object_sha256": "700ad1c694f0eee24b0de91d9a9b3580f066a8539cf5c568b11bf75b1de3ba41",
+      "emitted_functions": [
+        {
+          "name": "SetCutWasActive__6Camera",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-set-cut-was-active/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w9-camera-map",
+      "source": "sources/w9-camera-map-set-zoom-distance/set_zoom_distance.cpp",
+      "source_sha256": "20fbda10c54e6a05102d99f4196d3b000cc88e4d7e73188ca7e2985107bb8637",
+      "object_sha256": "5a4bbe7ab2bca2f87ef3537bc3474afcb9be3eb380055086b103584e4850ab13",
+      "emitted_functions": [
+        {
+          "name": "SetZoomDistance__6Cameraf",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w9-camera-map-set-zoom-distance/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

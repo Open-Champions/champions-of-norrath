@@ -5300,6 +5300,51 @@ Opened: `BeginScene__8VIRaster`, `Begin__7VIFaderff`, `CleanUp__11VIGUIObject`,
 `__cl__8VICameraR7VIVect3T1`, `ascii_special`, `ascii_table`,
 `getSaveTableEntry__FPc`, `sPad`, `saveLevelDataASync__FPci`
 
+## agents/w9-camera-map
+
+Merged (the branch notes carry the five summary sections; the tip was 52
+minutes old). Twenty of its 21 units were selected with fresh `input_order`
+values 2687 through 2706: camera push/pop/save, cut-scene routines, debug and
+Innoruk cameras and one storage unit that emits no function. `web-construct`
+was **not** selected: it defines `__3Webii`, which `w9-startup-crt-a` already
+supplies (input 2414), so the link failed with a multiple definition; its
+files stay in the snapshot, unselected. Host checks: 20 of 21 build and exit 0
+as is; `cut-init-scene` stores 32-bit object pointers and, as its header says,
+needs an x86_64 build with `-Wl,-pagezero_size,0x10000`; built that way it
+passes. The notes say the checks were written from the worker's reading of the
+original; they are the worker's, not independent evidence. No game binary or
+disassembly listing was committed. 2197 function bodies, 2705 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1525 |
+| After | 1527 |
+| Closed | 24 |
+| Opened | 26 |
+
+Closed: `GetTargetNum__6Camera`, `GetZoomDistance__6Camera`, `Pop__6Camera`,
+`Save__6CameraPc`, `SetCutWasActive__6Camera`, `SetZoomDistance__6Cameraf`,
+`addIcon__3mapP6Point3iPciT3N33`, `cutDrawFrame__Fv`,
+`cutInitScene__FP9_cutscene`, `cutRunFrameTask__Fv`, `cutStop__Fv`,
+`doDebugCam__6Camera`, `doInnorukCam__6Camera`, `doNormalCam__6Camera`,
+`isRevealed__3mapv`, `mapButtonWasDown`, `mapObjList`, `mapScale`, `mapX`,
+`mapY`, `norrath_map_add_icon`, `revealEntireMap__3mapv`,
+`revealMap__3mapG6Point3`, `willDraw__3mapP12_worldHeaderf`
+
+Opened: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`,
+`animRemoveNonpermanentAnimations__FP14AnimationState`,
+`checkYawReset__6Camera`, `cutLoadedDialogStream`, `cutStartMusic`,
+`determineBestController__6Camera`, `displayMusicPos`, `displayTextDisable`,
+`doAutoPitch__6Camera`, `doUserYaw__6Camera`, `doUserZoom__6Camera`,
+`enforceMaxSpeed__6CameraP6Point3`, `findCutDialog__Fv`,
+`hideHiddenObjects__FP10GameObject`, `hudLetterBox__Fv`,
+`objectCreateByName__FPcG6Point3sPPc`, `obtainTarget__6CameraP6Point3`,
+`playerCountChanged__6Camera`, `rayHit__FP6Point3N30`,
+`removeMonster__FP10GameObject`, `resetScissor__Fv`,
+`showHiddenObjects__FP10GameObject`, `soundStartMusic__Fii`,
+`unremoveMonster__FP10GameObject`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5660,3 +5705,4 @@ and no startup stage has executed.
 - 2026-10-12 21:13 CDT — `agents/w9-frontend-b` — 1495 unresolved imports
 - 2026-10-12 21:16 CDT — `agents/w9-frontend-d` — 1478 unresolved imports
 - 2026-10-12 21:19 CDT — `agents/w9-frontend-a` — 1525 unresolved imports
+- 2026-10-12 21:27 CDT — `agents/w9-camera-map` — 1527 unresolved imports
