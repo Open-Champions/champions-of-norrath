@@ -12,12 +12,14 @@ static unsigned char block[1064 + 64];
 static int alloc_size = 0; static void* alloc_result = block;
 static std::vector<int> events;  // list-head copies are 0..., animation copy is -1
 extern "C" void* blockAlloc__Fi(int size) { alloc_size = size; return alloc_result; }
-extern "C" void __8ListHeadRC8ListHead(void* destination, const void* source) {
+extern "C" void host_list_head_copy(void* destination, const void* source) __asm__("__8ListHeadRC8ListHead");
+extern "C" void host_list_head_copy(void* destination, const void* source) {
     events.push_back(static_cast<int>(static_cast<unsigned char*>(destination) - block));
     (void)source;
     std::memset(destination, 0, 4);
 }
-extern "C" void __15AnimationState8RC15AnimationState8(void* destination, const void* source) {
+extern "C" void host_animation_copy(void* destination, const void* source) __asm__("__15AnimationState8RC15AnimationState8");
+extern "C" void host_animation_copy(void* destination, const void* source) {
     events.push_back(-static_cast<int>(static_cast<unsigned char*>(destination) - block) - 1);
     std::memcpy(destination, source, 264);
 }
