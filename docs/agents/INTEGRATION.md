@@ -9343,3 +9343,18 @@ Closed: `clone__15GlowingCylinder`, `clone__17VehicleBodySphere`, `clone__5PhIce
 
 Opened: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_SetParticleSystemMatrix__FiP8Matrix34`, `P_SetTrailColor__Fiiiii`, `findCommander__14WoodElfSoldier`, `fxflyingfire_particle_7d6830`, `fxflyingfire_particle_7d6880`, `fxflyingfire_particle_7d68d0`, `fxflyingfire_particle_7d6920`, `getAmount__12SkillLifeTapi`, `holyshield_particle_8d7720`, `hornomen_run_particle_8d8650`, `modelDrawEffect__FP12_modelHeaderP8_textureiP8Matrix34fP14AnimationStateUl`, `oniball_msg_run_particle_7d7810`, `oniball_msg_run_particle_7d78b0`, `phice_msg_run_particle_7d6740`, `phice_msg_run_particle_7d6790`, `planarsteel_run_particle_8d8510`, `planarsteel_run_particle_8d8560`, `planarsteel_run_particle_8d85b0`, `planarsteel_run_particle_8d8600`, `spellcharge_hit_something_particle_8d6780`
 - 2026-10-13 12:06 CDT — agents/w12-actor-spell-c — 1168 unresolved imports
+
+## Not merged: w12-vicont-b, w12-vimath-b, w12-wnd-a, w12-particle-data-b (and standing rejections)
+
+Reviewed at the tips below, all over three hours old. Each was rejected for the same repo-rule reason as `w11-creature-a`: functions committed with no test that a reviewer can run and that could fail, only a private R5900 interpreter comparison outside git. Counts are source units (directories) with a committed `host_check.cpp`, `host_contract.cpp` or `object_check.cpp`, taken from the branch diff against the shared branch. Nothing from these was merged or selected. Owners can add per-function host checks and push again.
+
+- `agents/w12-vicont-b` (`e34cbf25`): 0 of 26 units have a committed check.
+- `agents/w12-vimath-b` (`8a0cbea4`): 10 of 20 have one. The ten without are `extract-rotation`, `make-quaternion`, `mat-mul33`, `mat-mul34`, `mat-scale`, `mat-transpose33`, `quat-transform`, `vilnode-remove`, `vimatrix44-rotate-hpr` and `vq-decompress`. The notes say x86_64 host builds hang on this machine; the other packages of this wave used native arm64 with a pointer-translate hook instead.
+- `agents/w12-wnd-a` (`927f90e8`): 4 of 34 have one. The notes (five summary sections present) say the private paired run is the only check for the rest.
+- `agents/w12-particle-data-b` (`7e2a43d4`): the notes lack the five summary sections (two top-level sections), and one of its two units (`w12-particle-data-b-views`) has no check.
+- `agents/w12-vicont-a` (`5e5bf51e`): rejected above (7 of 26).
+
+Merged with part of the branch left unselected, because most units are tested: `w12-startup-rt-a` (two units), `w12-startup-rt-c` (three units), `w12-actor-spell-c` (four units), `w12-hud-loop-a` (the earlier-wave units and `drawGold`), `w12-light-model` (`inventory-textures`). Their entries above say which and why.
+
+Standing rejections, tips unchanged: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w11-creature-a` (`a91fc08f`), `w11-vi-misc-a` (`9549e91d`), `w11-vi-render-b` (`dc3d80c6`), `w8-spell-static-init-b` (`ed20fab5`) and `w9-render-math-a` (`adff0bdc`). `codex/norrath-runtime-binding` and `integration/wave` are not worker packages and stay with their owners.
+- 2026-10-13 12:07 CDT — rejection notes (vicont-b, vimath-b, wnd-a, particle-data-b), nothing merged — 1168 unresolved imports
