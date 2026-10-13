@@ -4,7 +4,7 @@ Branch: `agents/w12-skill-c`. Work is limited to the Skill class method/ramp fam
 
 ## Observed
 
-- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
+- `getSkillPointCost__5Skilli`, `getLevelRequirement__5Skilli`, `getEnergyCost__5Skilli`, `tweekRank__5Skillii`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill`, `cast__5SkilliP8CreatureG6Point3s` at `0x00313248` has an 8-byte extent. Its two instructions return the second integer argument unchanged. The receiver is not read.
 - The authored source defines that symbol and is self-contained. The reviewed EE toolchain compiled it as an 8-byte function. Its generated second instruction uses `or` where the original uses `addu`; this is a semantic reconstruction, not a byte match.
 - The host contract calls it for `INT_MIN`, negative, zero, positive, and `INT_MAX` inputs and checks the returned integer equals the argument. The host check passed. The test and source are `experimental/sources/w12-skill-c-base-point-cost/`.
 - `getLevelRequirement__5Skilli` at `0x00313250` has an 8-byte extent. It returns zero for every integer argument and does not read the receiver. Its reviewed EE compilation succeeded; the host contract passed on seven boundary and representative integer inputs. The test and source are `experimental/sources/w12-skill-c-base-level-requirement/`.
@@ -104,3 +104,7 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sourc
 - `initRamps__5Skill` at `0x00313a08` has a 76-byte extent. For five iterations it writes zero halfwords at offsets +14 through +22, float 2.0 values at +36 through +52, and halfword ones at +24 through +32. The host test checks all 80 fixture bytes. Reviewed EE compilation emitted a 60-byte function; this is not a byte match. Source/test: `experimental/sources/w12-skill-c-init-ramps-base/`.
 
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-init-ramps-base/init_ramps.cpp`, object `init_ramps.o`, empty `header_closure`, emitted function `initRamps__5Skill` (60 compiled bytes), SHA-256 `c95746d6a7ad1306988fb3f750356f643a44e5c27d23aead2d046eb779d889b1`; add source hash to `files`, then assign order in integration.
+
+- `cast__5SkilliP8CreatureG6Point3s` at `0x003131c0` has a 40-byte extent. With valid arguments it returns zero and has no receiver or creature state writes; the call signature carries `Point3` by value. The host contract uses inaccessible receiver/creature sentinels, valid point values and four ranks; it passed. Reviewed EE compilation emitted an 8-byte body. This is behavioral evidence for valid inputs, not a fault-equivalence or byte match. Source/test: `experimental/sources/w12-skill-c-base-cast/`.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `sources/w12-skill-c-base-cast/cast.cpp`, object `cast.o`, empty `header_closure`, emitted function `cast__5SkilliP8CreatureG6Point3s` (8 compiled bytes), SHA-256 `86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7`; add source hash to `files`, then assign order in integration.
