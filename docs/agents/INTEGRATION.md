@@ -7719,3 +7719,4 @@ passed. No EE or game execution.
 Closed: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `actor`, `addpmlist__FPc`, `addpmlistptrscap__Fv`, `alwaysLoadedPage`, `asyncRandState`, `blockFree__FPv`, `blocksFree`, `bossMeterName`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`, `cacheLoadDelayTime`, `cacheLoadName`, `cacheLoadValid`, `clearing`, `collisionFrame`, `convertIndiciesToPointers__Fi`, `curDest`, `currentDir`, `currentTime`, `cursorTime`, `decodeQ`, `delta`, `derivedFrameNm`, `doJumpEffect__Fi`, `dumpMem__FPvi`, `engineGetField__Fv`, `executeAction__FP6Action`, `file`, `findCutDialog__Fv`, `findTagInt__10GameObjectPci`
 
 Opened: `GetToggle__6Camera`, `SetNoTargetUpdates__6Camerai`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `jumpGatePos`, `jumpHidden`, `jumpParticleJump`, `pmlistchars`, `pmlistcharsused`, `soundGetDialogSize__Fi`
+- 2026-10-13 01:38 CDT — `agents/w10-world-a` — 1266 unresolved imports
