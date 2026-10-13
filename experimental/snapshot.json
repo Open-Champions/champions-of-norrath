@@ -46276,6 +46276,140 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp"
+    },
+    {
+      "input_order": 3686,
+      "component": "w10-audio-a-ambient-state",
+      "object_name": "w10_audio_a_ambient_state.o",
+      "private_object_sha256": "b48b7863d4afa8d34c0c12e6308f5fb68efadecdee35641e385989150450af5e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-ambient-state/ambient_state.cpp"
+    },
+    {
+      "input_order": 3687,
+      "component": "w10-audio-a-cd-end-stream",
+      "object_name": "w10_audio_a_cd_end_stream.o",
+      "private_object_sha256": "f3e9976da9d9353a99c99aae3b10ba431466f118a7a060c517e6bffd1188ea69",
+      "emitted_functions": [
+        {
+          "name": "cdEndStream__Fv",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp"
+    },
+    {
+      "input_order": 3688,
+      "component": "w10-audio-a-cd-is-busy-streaming",
+      "object_name": "w10_audio_a_cd_is_busy_streaming.o",
+      "private_object_sha256": "64d021b69827c44654ac05f2aa0a61a9183524d734c55f40f75d9ad023398b19",
+      "emitted_functions": [
+        {
+          "name": "cdIsBusyStreamingNonwithstanding__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp"
+    },
+    {
+      "input_order": 3689,
+      "component": "w10-audio-a-cd-start-stream",
+      "object_name": "w10_audio_a_cd_start_stream.o",
+      "private_object_sha256": "cf6b224a344edeab56c8cbad27445da3b430d78e6f726ebfa54ac303cdd5a03e",
+      "emitted_functions": [
+        {
+          "name": "cdStartStream__FPci",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-cd-start-stream/cd_start_stream.cpp"
+    },
+    {
+      "input_order": 3690,
+      "component": "w10-audio-a-cd-stream-load-async",
+      "object_name": "w10_audio_a_cd_stream_load_async.o",
+      "private_object_sha256": "8ff9f74a15b4c738fa1f2a163c1e10c27b8598f5872329af7b622e45f042f99b",
+      "emitted_functions": [
+        {
+          "name": "cdStreamLoadAsync__FPcT0i",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-cd-stream-load-async/cd_stream_load_async.cpp"
+    },
+    {
+      "input_order": 3691,
+      "component": "w10-audio-a-music-state",
+      "object_name": "w10_audio_a_music_state.o",
+      "private_object_sha256": "47c0dd86e011420e32fcb34d5d277efc732439fa08e2bda3f96b58e054fd175c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-music-state/music_state.cpp"
+    },
+    {
+      "input_order": 3692,
+      "component": "w10-audio-a-sequence-state",
+      "object_name": "w10_audio_a_sequence_state.o",
+      "private_object_sha256": "90416577770feab2c2c96e368579a798cc9cccda4e6813d70bcc0188c706b69b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-sequence-state/sequence_state.cpp"
+    },
+    {
+      "input_order": 3693,
+      "component": "w10-audio-a-set-ambient-data",
+      "object_name": "w10_audio_a_set_ambient_data.o",
+      "private_object_sha256": "cc904d80078f6f2e31b16463ca592f36f8596d4c20bdb147123ea9b083d0b542",
+      "emitted_functions": [
+        {
+          "name": "soundSetAmbientData__FPc",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-set-ambient-data/set_ambient_data.cpp"
+    },
+    {
+      "input_order": 3694,
+      "component": "w10-audio-a-set-music-timer",
+      "object_name": "w10_audio_a_set_music_timer.o",
+      "private_object_sha256": "2dee5343eddc797fb15fa208508e35921f5e733f32b926ede486943ad8eb5f3b",
+      "emitted_functions": [
+        {
+          "name": "gameSetMusicTimer__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-set-music-timer/set_music_timer.cpp"
+    },
+    {
+      "input_order": 3695,
+      "component": "w10-audio-a-sound-start-music-id",
+      "object_name": "w10_audio_a_sound_start_music_id.o",
+      "private_object_sha256": "aca84822955ae2b5f069db04e7ca6cb3742e4a39a312d66ea62dec92fc83f246",
+      "emitted_functions": [
+        {
+          "name": "soundStartMusic__Fii",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-sound-start-music-id/sound_start_music_id.cpp"
+    },
+    {
+      "input_order": 3696,
+      "component": "w10-audio-a-stream-state",
+      "object_name": "w10_audio_a_stream_state.o",
+      "private_object_sha256": "4cd892fe14e4e410f3e8ceb935501426407b18076920b7d4af2733ace0eb3116",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w10-audio-a-stream-state/stream_state.cpp"
     }
   ],
   "drafts": [
@@ -49900,6 +50034,28 @@
     "sources/vslots-b-trigger-timer/trigger_timer.cpp": "37ea6fd29dfc763602f041428537e2f21c6d771578c796472adf29c7230178cc",
     "sources/vslots-b-turn-to-face/host_check.cpp": "509db91ea87ca4a01848b5af80c3ef4d31ca40f4b39f74bef0cdd30c0cee114d",
     "sources/vslots-b-turn-to-face/turn_to_face.cpp": "0d8ac14855922ff22dfad939b4b0413537fc20148477590ee6b2ad4af16bb351",
+    "sources/w10-audio-a-ambient-state/ambient_state.cpp": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
+    "sources/w10-audio-a-ambient-state/host_contract.cpp": "67764a13f029afc0c9ebaf4615868ea972d9d6a8b4b8e2b30d976d9edee423f9",
+    "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
+    "sources/w10-audio-a-cd-end-stream/host_check.cpp": "fe232f6cecb046aeaa3d9a72a73e0f2dd52f8eee2fdc5197207832101ba2bceb",
+    "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp": "d69dc4c620c9cc907e11efb7f1411f8a7350ceaa800c5684cbf83dd6dc30c43a",
+    "sources/w10-audio-a-cd-is-busy-streaming/host_check.cpp": "426252e4603c21a3584593c64b743a421dc699053387456fc8ccc3ed538f42ca",
+    "sources/w10-audio-a-cd-start-stream/cd_start_stream.cpp": "a756091d4fbb823866d0f7fbe4606670189e678f3691cf97d602ac7bcfb62762",
+    "sources/w10-audio-a-cd-start-stream/host_check.cpp": "f8b82620ac5a09040d819439f3e7d78b96d612fb065d96c57fb515bc23858cee",
+    "sources/w10-audio-a-cd-stream-load-async/cd_stream_load_async.cpp": "59a2726cac78184bea60d78e7599e936cb63ccb61c6d8c55664839824b35374f",
+    "sources/w10-audio-a-cd-stream-load-async/host_check.cpp": "a88e8c0db9bdbfb9dd775d018f9a34f22d3738dd9fcab826e3576adebdf3551a",
+    "sources/w10-audio-a-music-state/host_contract.cpp": "6aa6de3868d0b8088ec685456514d21f4fc8073e04cb1ae46fe0448a1dbb2da8",
+    "sources/w10-audio-a-music-state/music_state.cpp": "36f3fa5a8e80ba45387014da687188bf60c5ce87051b3c6929aafeef699fc98d",
+    "sources/w10-audio-a-sequence-state/host_contract.cpp": "674d433442766b875a7576118f55aa054e86c1de0f562b3dd905eb821962f68d",
+    "sources/w10-audio-a-sequence-state/sequence_state.cpp": "58c0f5a2ed0fe9aef85c70abfde476299b0c35dc638b31429ede28eafbd4efe0",
+    "sources/w10-audio-a-set-ambient-data/host_check.cpp": "cbd89867525facb05a5b1babcdf4e18d7bc28efd4fd161e165cd1b31fe0098c7",
+    "sources/w10-audio-a-set-ambient-data/set_ambient_data.cpp": "9cd24b1e55cb55a5e138df3a057f33d9bb847a7e15cd2675cbb90ca4ecb42451",
+    "sources/w10-audio-a-set-music-timer/host_check.cpp": "ccd5bcaf5a446189cd444ba0e95897a74e202dd20d33c9b5c7b75e0331b0bf10",
+    "sources/w10-audio-a-set-music-timer/set_music_timer.cpp": "e13a5e3a3f25f077e6a578a481adb4c63c1bac80a33d28c5e099ccdfede0e6ac",
+    "sources/w10-audio-a-sound-start-music-id/host_check.cpp": "a7f1cce7c151ad36971b64dc57539fcad815c317da12461ff630b46dc2f2ccbd",
+    "sources/w10-audio-a-sound-start-music-id/sound_start_music_id.cpp": "a9e38b8b6e2eaa053e1f91f8071043657dca4da5292cddafc22c6b8d8272f447",
+    "sources/w10-audio-a-stream-state/host_contract.cpp": "b54051750dfd0114fec9e58c3e81fe0182c924781704c931e1173dd79efba2cb",
+    "sources/w10-audio-a-stream-state/stream_state.cpp": "84e53f96c731446c5b2b68d6f6b4102321db138a974c07ca539e1cd50065be09",
     "sources/w10-front-a-ascii-tables/ascii_tables.cpp": "0af701afb51a60b34ec553a156743e42211e5f571c7fa70609bce6c9283d702f",
     "sources/w10-front-a-ascii-tables/host_contract.cpp": "14545171f0558c3bfeded069fe69a12c6bba85c6bfadcbc4aa1f0a080f8c0663",
     "sources/w10-front-a-browser-flags/browser_flags.cpp": "d70cc837a2dabb540b2f8452c95a9638ef7ee4e60510b4c2ddf4d30023553cc4",
@@ -54690,11 +54846,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 3686,
-    "authored_default_inputs": 3684,
+    "selected_inputs": 3697,
+    "authored_default_inputs": 3695,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 2662,
-    "compiled_body_bytes_from_accepted_inputs": 1149716,
+    "emitted_function_definitions_including_helpers": 2669,
+    "compiled_body_bytes_from_accepted_inputs": 1151620,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -54707,7 +54863,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 3373
+    "package_selected_inputs": 3384
   },
   "startup_implementations": [
     {
@@ -106606,6 +106762,173 @@
       ],
       "host_files": [
         "sources/w10-net-b-show-net-player-status/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-ambient-state/ambient_state.cpp",
+      "source_sha256": "244e49b2ae4687a81e109b23828eaafc434bd994568d7faf2c3ded7c3bce538d",
+      "object_sha256": "b48b7863d4afa8d34c0c12e6308f5fb68efadecdee35641e385989150450af5e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-audio-a-ambient-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-cd-end-stream/cd_end_stream.cpp",
+      "source_sha256": "4aec806e0b9cf89e0b19cb905312089cf6eed66bc845047de880dee9e6113d4a",
+      "object_sha256": "f3e9976da9d9353a99c99aae3b10ba431466f118a7a060c517e6bffd1188ea69",
+      "emitted_functions": [
+        {
+          "name": "cdEndStream__Fv",
+          "compiled_body_bytes": 140
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-cd-end-stream/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-cd-is-busy-streaming/cd_is_busy_streaming.cpp",
+      "source_sha256": "d69dc4c620c9cc907e11efb7f1411f8a7350ceaa800c5684cbf83dd6dc30c43a",
+      "object_sha256": "64d021b69827c44654ac05f2aa0a61a9183524d734c55f40f75d9ad023398b19",
+      "emitted_functions": [
+        {
+          "name": "cdIsBusyStreamingNonwithstanding__Fv",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-cd-is-busy-streaming/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-cd-start-stream/cd_start_stream.cpp",
+      "source_sha256": "a756091d4fbb823866d0f7fbe4606670189e678f3691cf97d602ac7bcfb62762",
+      "object_sha256": "cf6b224a344edeab56c8cbad27445da3b430d78e6f726ebfa54ac303cdd5a03e",
+      "emitted_functions": [
+        {
+          "name": "cdStartStream__FPci",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-cd-start-stream/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-cd-stream-load-async/cd_stream_load_async.cpp",
+      "source_sha256": "59a2726cac78184bea60d78e7599e936cb63ccb61c6d8c55664839824b35374f",
+      "object_sha256": "8ff9f74a15b4c738fa1f2a163c1e10c27b8598f5872329af7b622e45f042f99b",
+      "emitted_functions": [
+        {
+          "name": "cdStreamLoadAsync__FPcT0i",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-cd-stream-load-async/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-music-state/music_state.cpp",
+      "source_sha256": "36f3fa5a8e80ba45387014da687188bf60c5ce87051b3c6929aafeef699fc98d",
+      "object_sha256": "47c0dd86e011420e32fcb34d5d277efc732439fa08e2bda3f96b58e054fd175c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-audio-a-music-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-sequence-state/sequence_state.cpp",
+      "source_sha256": "58c0f5a2ed0fe9aef85c70abfde476299b0c35dc638b31429ede28eafbd4efe0",
+      "object_sha256": "90416577770feab2c2c96e368579a798cc9cccda4e6813d70bcc0188c706b69b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-audio-a-sequence-state/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-set-ambient-data/set_ambient_data.cpp",
+      "source_sha256": "9cd24b1e55cb55a5e138df3a057f33d9bb847a7e15cd2675cbb90ca4ecb42451",
+      "object_sha256": "cc904d80078f6f2e31b16463ca592f36f8596d4c20bdb147123ea9b083d0b542",
+      "emitted_functions": [
+        {
+          "name": "soundSetAmbientData__FPc",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-set-ambient-data/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-set-music-timer/set_music_timer.cpp",
+      "source_sha256": "e13a5e3a3f25f077e6a578a481adb4c63c1bac80a33d28c5e099ccdfede0e6ac",
+      "object_sha256": "2dee5343eddc797fb15fa208508e35921f5e733f32b926ede486943ad8eb5f3b",
+      "emitted_functions": [
+        {
+          "name": "gameSetMusicTimer__Fi",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-set-music-timer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-sound-start-music-id/sound_start_music_id.cpp",
+      "source_sha256": "a9e38b8b6e2eaa053e1f91f8071043657dca4da5292cddafc22c6b8d8272f447",
+      "object_sha256": "aca84822955ae2b5f069db04e7ca6cb3742e4a39a312d66ea62dec92fc83f246",
+      "emitted_functions": [
+        {
+          "name": "soundStartMusic__Fii",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w10-audio-a-sound-start-music-id/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w10-audio-a",
+      "source": "sources/w10-audio-a-stream-state/stream_state.cpp",
+      "source_sha256": "84e53f96c731446c5b2b68d6f6b4102321db138a974c07ca539e1cd50065be09",
+      "object_sha256": "4cd892fe14e4e410f3e8ceb935501426407b18076920b7d4af2733ace0eb3116",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w10-audio-a-stream-state/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -7597,3 +7597,27 @@ Closed: `netKickedOut`, `netLaunchExpirationCount`, `netLaunchTimer`, `netLocalP
 
 Opened: `netPredictionFastForward`, `receiveControlPacket__FPiib`
 - 2026-10-13 01:20 CDT — `agents/w10-net-b` — 1360 unresolved imports
+
+## agents/w10-audio-a
+
+Merged (merge commit, branch tip `d56b5ec4`, 37 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Audio, music and streaming: 11 units (7 functions and four
+data/state units) with fresh `input_order` values 3686 through 3696. Functions carry a
+`host_check.cpp` and data units a `host_contract.cpp`; 11 of 11 build and exit 0 here
+(x86_64, `-ffp-contract=off`, `-Werror`). The worker's paired runs (including 113 texts
+for `soundSetAmbientData__FPc`) are private and were not re-verified. Compiled sizes are
+not image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3695 authored inputs, 2667 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1360 |
+| After | 1327 |
+| Closed | 35 |
+| Opened | 2 |
+
+Closed: `ambientGroup`, `cdEndStream__Fv`, `cdIsBusyStreamingNonwithstanding__Fv`, `cdStartStream__FPci`, `cdStreamLoadAsync__FPcT0i`, `cutLoadedDialogStream`, `cutStartMusic`, `delaySoundList`, `desiredMusicDuckAmount`, `disableSoundPlaying`, `displayMusicPos`, `gameSetMusicTimer__Fi`, `groupVolumeScale`, `lastMusicState`, `musicDuckAmount`, `musicPlaying`, `musicStart`, `musicTimer`, `nextChannel`, `nmAmbientGroups`, `nmBatchCommands`, `norrath_music_activity_ring_view`, `playedStinger`, `sequence`, `sequenceInProgress`, `sequenceVolume`, `soundFrameNm`, `soundSetAmbientData__FPc`, `soundStartMusic__Fii`, `stream`, `streamOutput`, `streamPaused`, `streamSizeLeft`, `streamVolume`, `streaming`
+
+Opened: `sceCdStResume`, `sceCdStStart`
