@@ -173,7 +173,12 @@ are untested. Particularly assumption-heavy: `msg_run__6PhProp` (physics with 25
 
 ## Unknown / not done
 
-- `msg_run__6Player` is not authored (27 KB, thousands of instructions, dozens of callees).
+- `msg_run__6Player` (0x00197878, 27,496 bytes, 6,874 instructions) is not authored. Observed: it calls 94 distinct
+  functions (the most frequent are `playerPlaySound__Fii`, `playerAdvanceAnimation__6Playerf`, `playerMove__6PlayeriP3padP6Point3`,
+  `sprintf`, `blockAlloc__Fi`, `lumpFindResource__FPcT0`), makes 17 indirect calls, and dispatches on the word at +1400 through a
+  17-entry jump table at 0x00465170 whose arms are most of the body. The state values have no names, and writing it would mean
+  inventing a prototype for dozens of callees. It is a large area for a bounded task: it should be claimed in an issue and split
+  per state arm, each arm with its own paired run, rather than attempted as one unit. Nothing of it is authored here.
 - Boundary-only mutants (one ulp on a threshold constant, `<` vs `<=` at exact equality) survive in `msg_run__6PhProp`
   and the commit message lists them.
 - Field meanings and state names, as listed above.
