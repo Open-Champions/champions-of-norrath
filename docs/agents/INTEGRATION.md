@@ -8981,3 +8981,8 @@ stand: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w8-spell-stati
 (`9549e91d`) and `w11-vi-render-b` (`dc3d80c6`). `codex/norrath-runtime-binding` and
 `integration/wave` are not worker packages and stay with their owners.
 - 2026-10-13 07:28 CDT — rejection notes (creature-a), nothing merged — 827 unresolved imports
+
+## Re-verification of the shared branch (integrator restart)
+
+Re-ran on `integration/mini` at `2aa01e26` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded count of 827 reproduces. No non-text files appear in the last 40 commits' changes. Unmerged `origin/agents/*` branches are all at the tips of their recorded rejections, so no new package was merged.
+- 2026-10-13 07:40 CDT — re-verification, nothing merged — 827 unresolved imports
