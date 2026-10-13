@@ -7507,3 +7507,35 @@ Closed: `MC_GetLoadName__Fv`, `MC_GetRamSlot__FPi`, `MC_LoadRamSlot__Fv`, `MC_Re
 
 Opened: `eqGroup`, `globalIcons`, `nmEqGroups`, `nmWGroups`, `wGroup`
 - 2026-10-13 01:10 CDT — `agents/w10-front-a` — 1439 unresolved imports
+
+## agents/w10-front-b
+
+Merged as a partial package (merge commit, branch tip `b3f94ec1`, 2 hours old when read).
+The notes do **not** have the five summary sections (they have Functions, Data, Not done
+and Summary, with no separate imports-closed, imports-opened, authored-but-never-executed
+or unknown lists), so this was merged under the partial rule: every committed unit has a
+host check and the tool tests pass. 15 units (five functions and ten data units) with
+fresh `input_order` values 3647 through 3661. 15 of 15 host checks build and exit 0 here
+(x86_64, `-ffp-contract=off`, `-Werror`). The notes ask for the overlapping earlier units
+(`w9-hud-inventory-items-a-appearance-settings`, `w8-net-play-c-player-select-state`,
+`w8-net-play-b-launch-state`, `w8-frontend-menu-b-menu-words`) to stay unselected; they
+are; no multiple-definition error occurred at link time. The three `norrath_*_bytes` and
+`norrath_restore_broadcast_mask_word` objects are placeholder names for objects that have
+original-named definitions elsewhere, as the notes say; a working executable needs one
+object under both names, which this build does not provide. `playerSelectionTask__Fv`
+was not authored (the notes explain why). The sizes in the notes are image sizes; compiled
+sizes differ (the notes give 164 against 160 for `saveLevelDataASync__FPci`). The worker's
+paired runs are private and were not re-verified. The worker did not run a full build;
+this integration did: 3660 authored inputs, 2645 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1439 |
+| After | 1409 |
+| Closed | 33 |
+| Opened | 3 |
+
+Closed: `multiRelease`, `multiSide`, `multiTitle`, `nameGridCount`, `nameGridW`, `norrath_got_player_start_this_level_bytes`, `norrath_keep_player_positions_bytes`, `norrath_menu_local_t_004844e8`, `norrath_menu_word_00484514`, `norrath_restore_broadcast_mask_word`, `playerCountChanged__6Camera`, `playerGoldx`, `playerGoldy`, `playerMenu`, `playerPrintPaperDoll__Fi`, `playerRecalled`, `playerSelectCount`, `playerSelectEnforce`, `playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`, `playerSelectStartPlayer`, `playerSpecStorage`, `playerStartYaw`, `racePrefix`, `resetMenu__FP12screenStruct`, `saveLevelDataASync__FPci`, `skinSetting`, `skirmishInit__Fv`, `slotsCorrupted`, `sortedPlayerRace`, `statsScreen`, `undoQuickLoadStamp`
+
+Opened: `floorGetSaveInfo__FPci`, `objectGetSaveData__FPci`, `writeMap__3mapPUc`

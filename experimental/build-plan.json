@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3645,
+  "default_authored_inputs": 3660,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2297,6 +2297,21 @@
     "sources/w10-front-a-mc-load-ram-slot/mc_load_ram_slot.cpp": "6a3bb05b32527a53fd60442d00504802656d742c6b093e1255451e4f345b2017",
     "sources/w10-front-a-mc-replicate-first-players-important-things/mc_replicate_first_players_important_things.cpp": "9d3af6391c6f5086b89a51d0f137e84dc84096712866209124aef01ceb240614",
     "sources/w10-front-a-mc-reset-auto-check-point-save/mc_reset_auto_check_point_save.cpp": "8356b35202efd7996664208fbae721fc60b47795270de0c6a4454c2b799095e7",
+    "sources/w10-front-b-browser-words/browser_words.cpp": "f32735b8a175d269a681852b9a22ba93a236abd694da5fc0273665b81a0682cc",
+    "sources/w10-front-b-camera-player-count-changed/player_count_changed.cpp": "4c764382dfe7effe4845f2d8e21663469cee797b4f5dbf2f40053b884d7ed42e",
+    "sources/w10-front-b-gold-targets/gold_targets.cpp": "95da0b0785d63a561b1e44666b52c6ccef067271138ea31a276323c45cc2252c",
+    "sources/w10-front-b-multi-help-words/multi_help_words.cpp": "e7888ea73a0c6a56bbf12edf367f46eb5500f424937d8c344d40549ee14f6cde",
+    "sources/w10-front-b-name-grid-words/name_grid_words.cpp": "c7c1d835c45d7c62b68e2fb1bfe2e3df3e3998f8628aee6208f424b611f78abb",
+    "sources/w10-front-b-norrath-views/norrath_views.cpp": "44fcb58a911457905943da6d53b402bc2994b94239b2bee1f42f6112dfc2d3fe",
+    "sources/w10-front-b-player-print-paper-doll/player_print_paper_doll.cpp": "de58835120816a521aed7052322cc9e32c0978976bfd96d59b1aa34f20920bf5",
+    "sources/w10-front-b-player-select-words/player_select_words.cpp": "a7f8ad764940fd10dd5d6d5a8b220b86fac026ba89e567015cf0832b3df99f6e",
+    "sources/w10-front-b-player-start-words/player_start_words.cpp": "acd4c62e48b4f91ece902b38b3725687cd48d2c0f343df769dae5ec2d658ea5a",
+    "sources/w10-front-b-race-prefix/race_prefix.cpp": "45a3c2b28af81900148b24db4648f812380077d0091fb9de0162cf5624f604e4",
+    "sources/w10-front-b-reset-menu/reset_menu.cpp": "924b765a6a68aece3095d4d2bdcc0ba16b03cede7c4627cf33cf79a6bd7a3703",
+    "sources/w10-front-b-save-level-data-async/save_level_data_async.cpp": "761b87ada870cb142b2c207d932a0246cfa6ba16da5167cd2184d3d5e425a018",
+    "sources/w10-front-b-skin-setting/skin_setting.cpp": "324bcc83989c3120efa2c9fcf838f9a8db84cde518df484016aacee836467bcc",
+    "sources/w10-front-b-skirmish-init/skirmish_init.cpp": "b84b064222edf1e8b398f8fa01a1b632271b40cd47e2731db71e6ae1e3bedd73",
+    "sources/w10-front-b-stats-screen/stats_screen.cpp": "33e1789bef8708babd7d80bd7787666e251f3abe28d2d3733a44a29bc88c731e",
     "sources/w10-startup-a-alarm-handler/alarm_handler.cpp": "30fa003e003166c36de2f274d8b2a58d98b548438362c1df62a243e49c8c8dd2",
     "sources/w10-startup-a-cp-push-exception/cp_push_exception.cpp": "cfa33a1b25efaa31b42d75c7cf0cd6ad5dea1fa9629dbd2b9213d5383f7e4d27",
     "sources/w10-startup-a-create-reader-thread/create_reader_thread.cpp": "f13780c7296ac7212abe35072cb85b53714fc6b1979120a6e91581e38e7995d7",
@@ -51563,6 +51578,181 @@
           "compiled_body_bytes": 140
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3647,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_browser_words.o",
+      "profile": "authored_cpp",
+      "sha256": "f32735b8a175d269a681852b9a22ba93a236abd694da5fc0273665b81a0682cc",
+      "source": "sources/w10-front-b-browser-words/browser_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3648,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_camera_player_count_changed.o",
+      "profile": "authored_cpp",
+      "sha256": "4c764382dfe7effe4845f2d8e21663469cee797b4f5dbf2f40053b884d7ed42e",
+      "source": "sources/w10-front-b-camera-player-count-changed/player_count_changed.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerCountChanged__6Camera",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3649,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_gold_targets.o",
+      "profile": "authored_cpp",
+      "sha256": "95da0b0785d63a561b1e44666b52c6ccef067271138ea31a276323c45cc2252c",
+      "source": "sources/w10-front-b-gold-targets/gold_targets.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3650,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_multi_help_words.o",
+      "profile": "authored_cpp",
+      "sha256": "e7888ea73a0c6a56bbf12edf367f46eb5500f424937d8c344d40549ee14f6cde",
+      "source": "sources/w10-front-b-multi-help-words/multi_help_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3651,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_name_grid_words.o",
+      "profile": "authored_cpp",
+      "sha256": "c7c1d835c45d7c62b68e2fb1bfe2e3df3e3998f8628aee6208f424b611f78abb",
+      "source": "sources/w10-front-b-name-grid-words/name_grid_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3652,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_norrath_views.o",
+      "profile": "authored_cpp",
+      "sha256": "44fcb58a911457905943da6d53b402bc2994b94239b2bee1f42f6112dfc2d3fe",
+      "source": "sources/w10-front-b-norrath-views/norrath_views.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3653,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_player_print_paper_doll.o",
+      "profile": "authored_cpp",
+      "sha256": "de58835120816a521aed7052322cc9e32c0978976bfd96d59b1aa34f20920bf5",
+      "source": "sources/w10-front-b-player-print-paper-doll/player_print_paper_doll.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerPrintPaperDoll__Fi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3654,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_player_select_words.o",
+      "profile": "authored_cpp",
+      "sha256": "a7f8ad764940fd10dd5d6d5a8b220b86fac026ba89e567015cf0832b3df99f6e",
+      "source": "sources/w10-front-b-player-select-words/player_select_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3655,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_player_start_words.o",
+      "profile": "authored_cpp",
+      "sha256": "acd4c62e48b4f91ece902b38b3725687cd48d2c0f343df769dae5ec2d658ea5a",
+      "source": "sources/w10-front-b-player-start-words/player_start_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3656,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_race_prefix.o",
+      "profile": "authored_cpp",
+      "sha256": "45a3c2b28af81900148b24db4648f812380077d0091fb9de0162cf5624f604e4",
+      "source": "sources/w10-front-b-race-prefix/race_prefix.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3657,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_reset_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "924b765a6a68aece3095d4d2bdcc0ba16b03cede7c4627cf33cf79a6bd7a3703",
+      "source": "sources/w10-front-b-reset-menu/reset_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "resetMenu__FP12screenStruct",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3658,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_save_level_data_async.o",
+      "profile": "authored_cpp",
+      "sha256": "761b87ada870cb142b2c207d932a0246cfa6ba16da5167cd2184d3d5e425a018",
+      "source": "sources/w10-front-b-save-level-data-async/save_level_data_async.cpp",
+      "emitted_functions": [
+        {
+          "name": "saveLevelDataASync__FPci",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3659,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_skin_setting.o",
+      "profile": "authored_cpp",
+      "sha256": "324bcc83989c3120efa2c9fcf838f9a8db84cde518df484016aacee836467bcc",
+      "source": "sources/w10-front-b-skin-setting/skin_setting.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3660,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_skirmish_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b84b064222edf1e8b398f8fa01a1b632271b40cd47e2731db71e6ae1e3bedd73",
+      "source": "sources/w10-front-b-skirmish-init/skirmish_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "skirmishInit__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3661,
+      "kind": "independently_authored_source",
+      "object_name": "w10_front_b_stats_screen.o",
+      "profile": "authored_cpp",
+      "sha256": "33e1789bef8708babd7d80bd7787666e251f3abe28d2d3733a44a29bc88c731e",
+      "source": "sources/w10-front-b-stats-screen/stats_screen.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -51662,7 +51852,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b8657484701b515584cf92eef7c99e184aa6255c4ef96ceb274e611da5d1a977",
+  "snapshot_sha256": "eb60fb02e51f4a767f6a4d4c8e055c98a138a2d18506c2ab932e0866cc7ca07b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
