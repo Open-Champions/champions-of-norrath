@@ -93,6 +93,18 @@ inline unsigned call_entry_from(unsigned char* o, unsigned tableWordOffset, unsi
 #endif
 }
 
+// Same, with three arguments after the adjusted object.
+inline unsigned call_entry_from(unsigned char* o, unsigned tableWordOffset, unsigned tableOffset, unsigned long a1, unsigned long a2, unsigned long a3) {
+    unsigned char* e = from_word(word(o, tableWordOffset)) + tableOffset;
+    unsigned char* adjusted = o + *reinterpret_cast<short*>(e);
+    const unsigned fn = *reinterpret_cast<unsigned*>(e + 4);
+#if defined(W13_SPELL_MSG_B_HOST)
+    return w13_spell_msg_b_host_call(fn, adjusted, 3, a1, a2 + a3 * 0);
+#else
+    return reinterpret_cast<unsigned (*)(void*, unsigned long, unsigned long, unsigned long)>(static_cast<__UINTPTR_TYPE__>(fn))(adjusted, a1, a2, a3);
+#endif
+}
+
 // A random component in [-1, 1): twice (eRand * 2^-16) minus one. eRand must be supplied.
 template <class Rand>
 inline float unit_component(unsigned char* o, Rand rand) {
