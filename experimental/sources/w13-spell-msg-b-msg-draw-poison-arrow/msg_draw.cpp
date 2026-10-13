@@ -1,15 +1,16 @@
 // Observed msg_draw__21PoisonArrowProjectile at 0x002a0500, 308 bytes. O is the object, H the signed halfword at O+100
 // (a heading) and P the three floats at O+16. Steps in order:
-//  1. Three floats of a local 64-byte matrix M, the elements at byte 48, 52 and 56, are set to icos__Fi(H) * 8.0,
-//     isin__Fi(H) * 8.0 and 0.0; then matMakeTransYaw__FP8Matrix34G6Point3s(M, Q, (short)(unsigned H - 16384)) runs with
-//     Q = (P.x + M[48], P.y + M[52], P.z). The three stores come before the call, so they reach the callee.
+//  1. A local vector D = (icos__Fi(H) * 8.0, isin__Fi(H) * 8.0, 0.0) is stored directly after the local matrix M (byte 48 of what
+//     matMakeTransYaw__FP8Matrix34G6Point3s receives; the image's Matrix34 is twelve floats, so D is a separate local that follows
+//     it; this source keeps both in one sixteen-float struct so that the callee sees the same memory). Then
+//     matMakeTransYaw__FP8Matrix34G6Point3s(M, Q, (short)(unsigned H - 16384)) runs with Q = (P.x + D.x, P.y + D.y, P.z).
 //  2. An eight-byte local array of halfwords is zeroed with memset, its halfword at byte 4 set to 128, and
 //     lightSetAmbientOffset__FPs is called on it.
 //  3. modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi is called with the
 //     model (word at +8) and texture (word at +12) of the item record _4item$globalItem, mode 1, P (not Q), M, no animation
 //     state, the 64-bit flags value all ones, no draw record and a final 0.
 //  4. lightResetOptionalParams__Fv is called.
-// Unknown: what the heading and the 128 ambient value mean, and whether the matrix stores are deliberate. Nothing here ran on the EE.
+// Unknown: what the heading and the 128 ambient value mean. Nothing here ran on the EE.
 #include "../w13-spell-msg-b-common/access.hpp"
 
 struct Matrix34 { float m[16]; };
