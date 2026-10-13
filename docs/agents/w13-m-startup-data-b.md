@@ -88,6 +88,8 @@ Unit: `experimental/sources/w13-m-startup-data-b-sif-overlay-buffers/`.
 
 - Vtable `_vt$16VIParticleSprite` (96 bytes, 12 slots, 11 named functions): unit `w13-m-startup-data-b-vt-viparticle`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
 
+- Vtable `_vt$19VIStreamAudioSprite` (96 bytes, 12 slots, 11 named functions): unit `w13-m-startup-data-b-vt-vistreamaudio`. Host check passes; the EE object's relocations in the table match the observed slot order. Its function slots are imports opened by this unit.
+
 ## Imports opened by this package
 
 None so far.
