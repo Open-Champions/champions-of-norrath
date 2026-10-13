@@ -16,6 +16,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-ctor-cleric-root` | `__15SpellClericRootiP8CreatureP5Skill` | `0x002c6320`, 164 bytes | 172 |
 | `w14-m-spell-ctors-a-ctor-entangle` | `__13SpellEntangleiP8CreatureP5Skill` | `0x002c6f98`, 164 bytes | 172 |
 | `w14-m-spell-ctors-a-dtor-5spell` | `_$_5Spell` | `0x00314990`, 100 bytes | 92 |
+| `w14-m-spell-ctors-a-ctor-hate-effect` | `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill` | `0x001ff6f8`, 264 bytes | 260 |
 
 ## Observed shape shared by the spell constructors
 
@@ -52,9 +53,18 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   comparison: 24 scenarios (8 flag values x 3 fills), 0 mismatches. Mutation (test bit 1 instead of bit 0) gives 12
   mismatches.
 
+- **Hate effect.** `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill` (`0x001ff6f8`). Same Spell base, with two
+  embedded list heads at +24 and +28. It links the GameObject into the head at +24 when the GameObject is not null,
+  and the creature into the head at +28 when the creature is not null. It stores `frameNm + 60 * first` at +32. The
+  host contract (four cases, exact link arguments) passes. The paired comparison has 384 scenarios (4 first values,
+  4 kinds, creature and GameObject each present or absent, 3 frame values, 2 seeds) with 0 mismatches. Only the
+  integer return register is excluded from the comparison: the function is `void`, and the authored build leaves a
+  different value in `v0`.
+
 ## Imports closed
 
-`__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`.
+`__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
+`__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`.
 
 ## Imports opened
 
