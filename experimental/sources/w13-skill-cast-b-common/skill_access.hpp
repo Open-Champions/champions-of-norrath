@@ -11,6 +11,7 @@ struct Point3 { float x, y, z; };
 extern unsigned char* w13_skill_cast_b_host_base;
 int w13_skill_cast_b_host_call(unsigned function_word, void* adjusted_skill, int rank, int constant);
 int w13_skill_cast_b_host_call_object(unsigned function_word, void* adjusted_object, void* argument);
+int w13_skill_cast_b_host_call_ramp(unsigned function_word, void* adjusted_skill, int index, int rank, float scale, int zero, int* low, int* high);
 #endif
 
 namespace w13scb {
@@ -33,6 +34,19 @@ inline int call_skill_entry(unsigned char* skill, unsigned tableOffset, int a1, 
     return w13_skill_cast_b_host_call(function, adjusted, a1, a2);
 #else
     return reinterpret_cast<int (*)(void*, int, int)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, a1, a2);
+#endif
+}
+
+// Calls the skill table entry at tableOffset as (adjusted skill, index, rank, scale, zero, low, high) and returns its
+// integer result. This is the shape of getRampDamage__5SkilliifiPiT5 (slot at byte 72).
+inline int call_ramp_damage(unsigned char* skill, unsigned tableOffset, int index, int rank, float scale, int zero, int* low, int* high) {
+    const unsigned char* entry = from_word(*reinterpret_cast<unsigned*>(skill + 96)) + tableOffset;
+    unsigned char* adjusted = skill + *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W13_SKILL_CAST_B_HOST)
+    return w13_skill_cast_b_host_call_ramp(function, adjusted, index, rank, scale, zero, low, high);
+#else
+    return reinterpret_cast<int (*)(void*, int, int, float, int, int*, int*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, index, rank, scale, zero, low, high);
 #endif
 }
 
