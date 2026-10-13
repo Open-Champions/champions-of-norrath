@@ -10,6 +10,8 @@ typedef void* (*W11ActorCHostSlotInt)(void*, int);
 extern W11ActorCHostSlotInt w11_actor_c_host_slots_int[];
 typedef void* (*W11ActorCHostSlotIntPtr)(void*, int, const void*);
 extern W11ActorCHostSlotIntPtr w11_actor_c_host_slots_int_ptr[];
+typedef int (*W11ActorCHostSlotIntInt)(void*, int, int);
+extern W11ActorCHostSlotIntInt w11_actor_c_host_slots_int_int[];
 #endif
 namespace w11c {
 typedef unsigned __attribute__((may_alias)) Word;
@@ -77,6 +79,18 @@ inline void* call_slot_int_ptr(void* object, unsigned slot_byte_offset, int argu
     return w11_actor_c_host_slots_int_ptr[function](bytes(object) + adjustment, argument, pointer);
 #else
     return reinterpret_cast<void* (*)(void*, int, const void*)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment, argument, pointer);
+#endif
+}
+// The same slot called with two ints after the adjusted object; the result is an int. The table pointer is read
+// from table_offset (72 for ordinary virtual calls).
+inline int call_slot_int_int(void* object, unsigned slot_byte_offset, int first, int second, unsigned table_offset = 72) {
+    const unsigned char* entry = link(object, table_offset) + slot_byte_offset;
+    const short adjustment = *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W11_ACTOR_C_HOST)
+    return w11_actor_c_host_slots_int_int[function](bytes(object) + adjustment, first, second);
+#else
+    return reinterpret_cast<int (*)(void*, int, int)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment, first, second);
 #endif
 }
 }  // namespace w11c
