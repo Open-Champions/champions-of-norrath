@@ -2,7 +2,7 @@
 // ambient-sound description. It zeroes nmAmbientGroups and returns on a null text. Otherwise it clears
 // ambientGroup (10880 bytes, sixteen 680-byte groups) and lower-cases the text in place (a byte whose
 // _ctype_ entry has bit 0 set gets 32 added). It then parses lines: a line is the text after any
-// leading CR/LF bytes up to the next CR, LF or end (at most no bound is checked, the original
+// leading CR/LF bytes up to the next CR, LF or end (no bound is checked; the original
 // buffer is 160 bytes). A line starting with ';' is skipped everywhere.
 // A group starts with a header line: "min-max" (a '-' present, scanned with " %d-%d ", both values
 // required) or "min" (scanned with " %d ", the max is then the min); a header that does not scan
