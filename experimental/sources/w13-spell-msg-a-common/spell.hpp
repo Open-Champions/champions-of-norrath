@@ -50,6 +50,15 @@ inline int call_entry_112_mode(unsigned char* object, int mode, int halfword, vo
         object + *reinterpret_cast<short*>(entry), mode, halfword, address);
 }
 
+// The call the cone of fire makes on its caster: the entry at offset 104 of the table that is the word at +96 of the object is called on the
+// object (adjusted by the entry's signed halfword) with (mode, signed byte, address-word object).
+inline int call_entry_104_mode(unsigned char* object, int mode, int byte, void* argument) {
+    unsigned char* const entry = w12c::from_word(w12c::word(object, 96)) + 104;
+    const unsigned function = *reinterpret_cast<unsigned*>(entry + 4);
+    return reinterpret_cast<int (*)(void*, int, int, void*)>(static_cast<__UINTPTR_TYPE__>(function))(
+        object + *reinterpret_cast<short*>(entry), mode, byte, argument);
+}
+
 }  // namespace w13a
 
 #endif
