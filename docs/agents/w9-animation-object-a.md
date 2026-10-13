@@ -22,3 +22,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `get-smart-random-destination` | `getSmartRandomDestination__8Creaturei` | 0x10d250 | 464 |
 | `anim-map-animation-sounds` | `animMapAnimationSounds__FP15AnimationHeader` | 0x15fd98 | 624 |
 | `anim-state-data` | data: `animState` (264 bytes), `animStatePtr`, `animUseBuffer`, `animationLoading`, `animationLoadPos` | 0x7ccad8, 0x486aa4, 0x48501f, 0x484358, 0x486a08 | 264, 4, 1, 1, 4 |
+| `lump-data` | data: `domeLump`, `dialogLumpName`, `eqLumpHeader` | 0x486b00, 0x48500c, 0x4845a0 | 4 each |
