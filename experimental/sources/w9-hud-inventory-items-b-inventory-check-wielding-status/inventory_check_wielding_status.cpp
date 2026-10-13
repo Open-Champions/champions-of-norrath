@@ -1,5 +1,5 @@
 // Observed inventoryCheckWieldingStatus__FiPQ24item11description at 0x001b0c18,
-// 1260 bytes. Arguments: a player index and an item record (the mangled second
+// 1228 bytes. Arguments: a player index and an item record (the mangled second
 // parameter type is the item description pointer, but the argument is the item
 // record, as in getWeight). Returns a small status code; the codes are described
 // below by the check that produces them. The names of the codes are not

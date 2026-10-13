@@ -1,4 +1,4 @@
-// Observed getProxyMeshId__4itemPQ24item11description at 0x00108498, 72 bytes.
+// Observed getProxyMeshId__4itemPQ24item11description at 0x00108498, 68 bytes.
 // Despite the mangled parameter type (never read), the argument is the item
 // record, as in getWeight. Layout read:
 //   +0  pointer to a description whose signed halfword at +52 is a base mesh id

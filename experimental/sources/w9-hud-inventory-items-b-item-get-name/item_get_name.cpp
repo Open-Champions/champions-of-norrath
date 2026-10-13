@@ -1,4 +1,4 @@
-// Observed getName__4itemPQ24item11descriptioni at 0x00101c30, 1396 bytes.
+// Observed getName__4itemPQ24item11descriptioni at 0x00101c30, 1348 bytes.
 // Arguments: the item record (despite the mangled first type; see getWeight) and an
 // integer `decorate`. Returns a pointer to a static buffer `name` (240 halfwords,
 // file-local `name.1085` at 0x00486ea0) holding the item's display text as

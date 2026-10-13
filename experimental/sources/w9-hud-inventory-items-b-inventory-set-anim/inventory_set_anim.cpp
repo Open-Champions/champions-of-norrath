@@ -1,4 +1,4 @@
-// Observed inventorySetAnim__FiP14AnimationStatei at 0x001b01b0, 648 bytes.
+// Observed inventorySetAnim__FiP14AnimationStatei at 0x001b01b0, 652 bytes.
 // Arguments: a player index, an AnimationState pointer, and an integer flag.
 // Player records are 23984 bytes apart at `player` (0x00408600). Fields used:
 //   record+21872 (word)  nothing happens when it is zero (meaning not established)

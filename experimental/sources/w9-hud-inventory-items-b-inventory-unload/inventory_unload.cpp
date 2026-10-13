@@ -1,4 +1,4 @@
-// Observed inventoryUnload__Fv at 0x001b1698, 136 bytes.
+// Observed inventoryUnload__Fv at 0x001b1698, 132 bytes.
 // inventoryLoadState (0x00484824) is a word. If it is neither 0 nor 2 the
 // function first finishes the load: it repeats cdWait__Fv then
 // inventoryLoad__Fv until the state equals 2. (The test is "not equal to 2", so
