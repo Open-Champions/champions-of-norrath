@@ -21,6 +21,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-ctor-critical-hit` | `__16SpellCriticalHitiP8CreatureP5Skill` | `0x002ad3f8`, 304 bytes | 288 |
 | `w14-m-spell-ctors-a-ctor-minor-healing` | `__17SpellMinorHealingiP8CreatureP5Skill` | `0x002a7068`, 340 bytes | 352 |
 | `w14-m-spell-ctors-a-ctor-healing` | `__12SpellHealingiP8CreatureP5Skill` | `0x002ae9d8`, 352 bytes | 372 |
+| `w14-m-spell-ctors-a-ctor-holy-shield` | `__15SpellHolyShieldiP8CreatureP5Skill` | `0x002adf40`, 288 bytes | 316 |
 
 ## Observed shape shared by the spell constructors
 
@@ -99,11 +100,17 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   `0x3c886600` (K_a, `0x00482c60`) and `0x3c23d70a` (K_b, `0x00482c64`). Host contract passes. Paired comparison: 288
   scenarios, 0 mismatches. Mutation (particle handle at +40 instead of +36) gives 288 of 288 mismatches.
 
+- **Holy shield.** `__15SpellHolyShieldiP8CreatureP5Skill` (`0x002adf40`). The minor-healing shape without the table
+  scaling: the skill call at level 1 stores its int result, converted to float, at +32; +24 and +28 are zero; the
+  shaft gets 90, 86, 126, 250; the particle system is stored at +36. Host contract passes. Paired comparison: 192
+  scenarios, 0 mismatches. Mutation (shaft arguments 126 and 250 swapped) gives 96 of 192 mismatches.
+
 ## Imports closed
 
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
 `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`,
-`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`.
+`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`,
+`__15SpellHolyShieldiP8CreatureP5Skill`.
 
 ## Imports opened
 
