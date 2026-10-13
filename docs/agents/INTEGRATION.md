@@ -8074,3 +8074,25 @@ Closed: `_$_5Ghoul`, `_$_5Gnome`, `_$_6Goblin`, `__15GlowingCylinderG6Point3iiii
 
 Opened: `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15ShockProjectileG6Point3sP10GameObjectP5Skilli`, `_vt$15GlowingCylinder`, `_vt$5Ghoul`, `_vt$5Gnome`, `_vt$6Goblin`, `dropItem__6Goblini`, `findClearPath__8CreatureG6Point3scf`, `numInRegion__8creatureG6Point3f`
 - 2026-10-13 02:55 CDT — `agents/w10-actor-g` — 1075 unresolved imports
+
+## agents/w10-actor-h
+
+Merged (merge commit, branch tip `762a6f37`, 49 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (36 function bodies) with fresh `input_order` values 4161
+through 4192. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 26 under `-Werror`, 6 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4191 authored inputs, 3126 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The unresolved count rises by 7 (39 names open against 32 closed): the new gut-chunk, ice, lamp, Innoruuk and jump-gate code references vtables, particles and models that no package defines yet.
+
+| | |
+|---|---|
+| Before | 1075 |
+| After | 1082 |
+| Closed | 32 |
+| Opened | 39 |
+
+Closed: `_$_3Ice`, `_$_4Lamp`, `_$_8Innoruuk`, `_$_8JumpGate`, `__8ItemPropG6Point3PQ24item11descriptioni`, `__tf3Ice`, `__tf4Lamp`, `__tf8Innoruuk`, `__tf8JumpGate`, `_vt$4Gold`, `_vt$8GutChunk`, `clone__3Ice`, `clone__4Lamp`, `clone__8JumpGate`, `msg_draw__3Ice`, `msg_draw__4Lamp`, `msg_draw__8Innoruuk`, `msg_draw__8JumpGate`, `msg_getPokeName__8JumpGatePUsi`, `msg_hurt__8InnoruukfP10GameObjecti`, `msg_load__8JumpGatePc`, `msg_poke__8JumpGatei`, `msg_run__3Ice`, `msg_run__4Lamp`, `msg_run__8GothTrap`, `msg_run__8HateHole`, `msg_run__8Innoruuk`, `msg_run__8JumpGate`, `msg_save__8JumpGatePc`, `msg_trigger__8Innoruuki`, `setState__8Innoruuki`, `updateEnemy__8Innoruuk`
+
+Opened: `DLG_CheckMutex__Fv`, `P_DeleteTrail__Fi`, `P_RevolveTrail__FiG6Point3N31i`, `_$_8GutChunk`, `__14HateProjectileG6Point3sP10GameObjectP5SkilliP15AnimationHeader`, `__6PhPropG6Point3P8Matrix34PcN23liPQ24item11descriptionf`, `__8HateBeamiG6Point3T2P8CreatureP5Skill`, `__8HateSoulG6Point3T1iii`, `__tf8GutChunk`, `_vt$3Ice`, `_vt$4Lamp`, `_vt$5PhIce`, `_vt$8Innoruuk`, `_vt$8ItemProp`, `_vt$8JumpGate`, `clone__8GutChunk`, `deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff`, `innoruukParticle2`, `innoruukParticle3`, `innoruukResourceMap`, `jumpGateAddDestination__Fv`, `jumpGateInit__FiPcc`, `jumpParticle2`, `jumpParticleOn`, `lampParticle`, `lightUpdatePosition__FP5Light`, `litodp`, `modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3`, `modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f`, `modelSetRelightAttachment__FG6Point3`, `msg_draw__8GutChunk`, `msg_getPokeName__6PhPropPUsi`, `msg_poke__6PhPropi`, `msg_run__8GutChunk`, `netDisconnect__Fv`, `shockwaveInnoruukParticle`, `shockwaveInnoruukParticle2`, `summonhammerParticle`, `vaporParticle`
