@@ -17,6 +17,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-ctor-entangle` | `__13SpellEntangleiP8CreatureP5Skill` | `0x002c6f98`, 164 bytes | 172 |
 | `w14-m-spell-ctors-a-dtor-5spell` | `_$_5Spell` | `0x00314990`, 100 bytes | 92 |
 | `w14-m-spell-ctors-a-ctor-hate-effect` | `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill` | `0x001ff6f8`, 264 bytes | 260 |
+| `w14-m-spell-ctors-a-ctor-cone-of-frost` | `__16SpellConeOfFrostiP8CreatureP5Skill` | `0x002af390`, 376 bytes | 328 |
 
 ## Observed shape shared by the spell constructors
 
@@ -61,10 +62,19 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   integer return register is excluded from the comparison: the function is `void`, and the authored build leaves a
   different value in `v0`.
 
+- **Cone of frost.** `__16SpellConeOfFrostiP8CreatureP5Skill` (`0x002af390`). The Spell base, a light at +24 (the
+  same shape as the cone-of-fire unit, with other values), a flash point at +72 built from the creature position
+  (x + 0.0, y unchanged, z + 60.0), then `lumpFindResource("fx.lmp", "spel_ew_cfrost.anm")` and
+  `soundPlaySequence` with a copy of the creature position and volume 1.0. The handle is stored at +84. The light's
+  float constant at `0x00482c8c` is an unnamed global; it is written here as its bit pattern (`0x382c598a`). Host
+  contract passes. Paired comparison: 72 scenarios (6 kinds, 3 positions including signed zeros, 4 seeds), 0
+  mismatches. Two mutations (drop the `+ 0.0f` on x, and 155.0 for the first light float) give 24 and 72
+  mismatches.
+
 ## Imports closed
 
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
-`__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`.
+`__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`.
 
 ## Imports opened
 
