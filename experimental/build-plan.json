@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4454,
+  "default_authored_inputs": 4708,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3263,6 +3263,261 @@
     "sources/w10-world-d-unremove-monster/unremove_monster.cpp": "40b8dab34c80f4d7df02600f5e29dfa13c4e3235dc45a96cf1a7a5cbea41a72e",
     "sources/w10-world-d-wall-and-object-steering/wall_and_object_steering.cpp": "cf83109e8bbb725cb1f5b4da69a9074621b00b53e43afee56cb8dee67774b69f",
     "sources/w10-world-d-world-state-words/world_state_words.cpp": "2bf8f9e0e185ae5e39b18cb065be4114e70378a89069f0dfd2502089a9c26a94",
+    "sources/w11-crt-a-args/args.cpp": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
+    "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
+    "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
+    "sources/w11-crt-a-cplus-type-matcher/cplus_type_matcher.cpp": "d08778d419f59f3a52f78c28c5e0169433c3e1433575c0a87a3f16cd78db7bac",
+    "sources/w11-crt-a-default-tlb/default_tlb.cpp": "7b214f289694808488e061d0fe91e3db46019223c486d2cab3379c66406dbbf8",
+    "sources/w11-crt-a-dlg-check-mutex/check_mutex.cpp": "721914f99b814ca4fa2877b0a6843cd6988891a6ae039310052a3b525de86944",
+    "sources/w11-crt-a-dtor-19-pointer-type-info/dtor.cpp": "888120104d7aa6f5774cd1eb1de932d9da8da884a54a134a13238b614ed26289",
+    "sources/w11-crt-a-extend-tlb/extend_tlb.cpp": "7c34a6d7fb9e3b95e27e4f08efb9c3e0451edc049ace936a5b2b84beec721b67",
+    "sources/w11-crt-a-extendsfdf2/extendsfdf2.cpp": "587c8f58219503aade9cb76eb764afe94b0a229a1d6ce9d8f749d796c7c1807f",
+    "sources/w11-crt-a-floatdidf/floatdidf.cpp": "8a11ea4f22e2ee32d1a436b1e7f606d50bdc8d2de1f0baaf748ff8b11b7069db",
+    "sources/w11-crt-a-floatdisf/floatdisf.cpp": "e7c12fb475039e02703a18c5a9c264177f68bbb42de439de11de5aefbe94bccd",
+    "sources/w11-crt-a-flush-iop-command/flush_iop_command.cpp": "6aa472f82c9699759ad27b4a39d73578206e5a541f6734c038d9a413d67c8b73",
+    "sources/w11-crt-a-get-eh-context/get_eh_context.cpp": "4d551bd32a269de16dde04fa2c56f0c8b499aea679e4902bda6a059d1258a2a4",
+    "sources/w11-crt-a-get-eh-info/get_eh_info.cpp": "d65ffdd7b7e1f90aefa989b624e06c9f06126b5228375b96435507ae29bc808e",
+    "sources/w11-crt-a-ieee754-acos/ieee754_acos.cpp": "a8d7540924c8bfa34fe35c085fc9eabf1673a8006d46edbcac5aeb55eb14aea8",
+    "sources/w11-crt-a-ieee754-acosf/ieee754_acosf.cpp": "e16b3dceb488057cec576ccf8ea296cb9076013d3fd852750f4075854c378bfd",
+    "sources/w11-crt-a-ieee754-atan2f/ieee754_atan2f.cpp": "9a1b37257f6be3eaa42c3ba1adc59117083cc4d977c4678a8dcbef188bd06cc5",
+    "sources/w11-crt-a-ieee754-fmodf/ieee754_fmodf.cpp": "93ffdd8b55a825ba7f36b14fe165fe23d10a324b256cec708ec86e1d3e824e0e",
+    "sources/w11-crt-a-kbm-reader-thread/kbm_reader_thread.cpp": "fe16976a29e1173129f48adcf0dcdc4833ccb08a5f49ac2fe63cf8e40220e1c6",
+    "sources/w11-crt-a-kernel-tlb/kernel_tlb.cpp": "9699c83b2e381fbcffcbd6670f28f47783568a06110b5e59c3aa0ec608c36bf7",
+    "sources/w11-crt-a-load-srs-server/load_srs_server.cpp": "6b641d9613e10356206198922fb38a07b26993abb39baad5b0b88d60cea4fa59",
+    "sources/w11-crt-a-malloc-current-mallinfo/malloc_current_mallinfo.cpp": "42b88969c074370c0937ef1979d25a46b6c4feec37729cb2ee6a6055e5b4b529",
+    "sources/w11-crt-a-memcpy-d/memcpy_d.cpp": "d4d5668cd26474f5278dd15e5eefe4164dee73d17c0267f415f0cc5afb14a5ba",
+    "sources/w11-crt-a-pack-f/pack_f.cpp": "8fd0c9fcabdcce63514666b082c108cbb6ab1002a93b709e3b988576e982032e",
+    "sources/w11-crt-a-pad-data/pad_data.cpp": "9bc8c1194f2e4f2111957717993237def6cf61e1741c717860bd2255cf945d2d",
+    "sources/w11-crt-a-queue-init/queue_init.cpp": "bf8f0a2605dae397ef039fdaaaee037609a52e50677b9a1bef810c991d297504",
+    "sources/w11-crt-a-queue-peek-read-done/queue_peek_read_done.cpp": "d154c5b14d3ee0f2509a357b21b707d0866b8ee68749a9f8c4fcc80a5b4478e4",
+    "sources/w11-crt-a-surf-cache/surf_cache.cpp": "88d824d46aa355b93d9a3ee8e30e940387e0df9628af4025e9405fcd48788088",
+    "sources/w11-crt-a-tf-19-pointer-type-info/typeinfo.cpp": "75c8a9fb09d3a4d324d9ac71ccc751773cf3738f317f3ebc8ce21b71bdbb4e32",
+    "sources/w11-crt-a-ti-spell/ti_spell.cpp": "ae8f783c3d724265660d5f0e57d4e2747df65000a8daffe69cbd3791593664e8",
+    "sources/w11-crt-a-tlb-info/tlb_info.cpp": "a1fc9838ac06c7181b098f2578ae5520eac60cdd2acbb0d4924ee8011c1e64ec",
+    "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.cpp": "3364a32884aa5916afa294dd0ccb1263c9680091c8a03f7a106ca9067de4393d",
+    "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.hpp": "c673943ce484dc547d0836033132b5ab44fbb96a8040ea3aa833c2051d06e602",
+    "sources/w11-crt-a-vieedmasync/vieedmasync.cpp": "be6cbf3d40c85e2298911cea00c3dcd2366863e2d15abadf0c7635e827906414",
+    "sources/w11-crt-b-dptoli/dptoli.cpp": "fb57acfb83df937d99aed50c892d7af265ff9c7756c7cb0bee96261494f6b4ec",
+    "sources/w11-crt-b-dptoul/dptoul.cpp": "eebd308a17186aa69c595d34b1b08d04b16081ba0aead7e61d4fcafda90a0c89",
+    "sources/w11-crt-b-dst-word/dst.cpp": "c40111a3139cc43b9950e295bc08560f47e28ba5fd034c9938eba1d72fde1eff",
+    "sources/w11-crt-b-iopnotify/iopnotify.cpp": "d4ecb24cc095521388962498a6dbd54623b9c7e69934548de4534eada5b76e0a",
+    "sources/w11-crt-b-lg-codec-gsm-decode/lg_codec_gsm_decode.cpp": "f0369b0b7fbf440ed132287f2e30d14e4fd46c88c38b0df77e95bd7497161270",
+    "sources/w11-crt-b-lg-codec-gsm-encode/lg_codec_gsm_encode.cpp": "80148666fbb8b0ae237a3c839b97ede6cb3186fcfcebcb6811c1c097b4fd246a",
+    "sources/w11-crt-b-lg-kbd-enum-hint/lg_kbd_enum_hint.cpp": "c7e48c50a2c85be84726b0e64fdef613ee9915b40ab60ced567b43a09eec6827",
+    "sources/w11-crt-b-lg-kbd-enumerate/lg_kbd_enumerate.cpp": "4d6b6ec4586468b829996c81f0a10c76edf1ba1b8203a694142f0b39be09e633",
+    "sources/w11-crt-b-lg-kbd-open/lg_kbd_open.cpp": "163d47b71461d3b4e8d2314fd68ec66d7cb9bf347ff0dad693a0e213d45ec902",
+    "sources/w11-crt-b-lg-kbd-read/lg_kbd_read.cpp": "f5f2eed87e996dea5b0d24b1e1cd320f03f5aa1536ac27a5c4ba9a0c7a77bddc",
+    "sources/w11-crt-b-lg-kbd-set-repeat-rate/lg_kbd_set_repeat_rate.cpp": "e30b1f17c245b7c7020ea38eaa0378368c44927194f5dad9ad1f57ae5f38a941",
+    "sources/w11-crt-b-lgaud-data/lgaud_data.cpp": "3759ea0b8a821e7c8cb45609491878a6a4e2b0ed6f4ca9da873ad97ad718e6eb",
+    "sources/w11-crt-b-lgkbm-reader-thread-data/reader_thread_data.cpp": "6c64351bee856d2417c0707c2a73a6cd0bbac26fa4a52e7b0029615bc1caea69",
+    "sources/w11-crt-b-litodp/litodp.cpp": "09615d9bb9013fce34fb6a1e2a39889e7d504868ae26300142454613c20ae569",
+    "sources/w11-crt-b-mce-intr-read-fix-align/mce_intr_read_fix_align.cpp": "d33c5aa493376e6dc99dfa87dbb4080ea690f6754601de6ad2e2c064fe3d6fdc",
+    "sources/w11-crt-b-send-to-iop/send_to_iop.cpp": "f70a8443f0b88291ef82997773e1caf4d88076316dbb4cc5b14aa0a2a9c2fe02",
+    "sources/w11-crt-c-cd-st-resume/cd_st_resume.cpp": "46c0e9ebd76f6cc111d70d3337699387201050313ae608fcdfa1f3f130968b22",
+    "sources/w11-crt-c-cd-st-start/cd_st_start.cpp": "2ac431fc4b20a7fad04208f067c210f497513f7f2959f47463aa9ac57172b21a",
+    "sources/w11-crt-c-deci2-open/deci2_open.cpp": "74ee97d86ece56e8aa9481b3635992dcdd815ff6ecb18f5a8b860ba3b884a373",
+    "sources/w11-crt-c-deci2-poll/deci2_poll.cpp": "98396596d69d7aa009b0f025df4b69d4d3a90427719c7242dc6b074481c5d0e1",
+    "sources/w11-crt-c-deci2-req-send/deci2_req_send.cpp": "c168629739c52223ad1b6bb3d9c3a4abff9adae99ee65496c570ca48eb6d8c0d",
+    "sources/w11-crt-c-deci2-user-area/deci2_user_area.cpp": "2d8bd98967f25e96e176265eae2b79ab453f1f0394be1bee5fdba19f69d8fa11",
+    "sources/w11-crt-c-gs-set-def-dbuff-dc/gs_set_def_dbuff_dc.cpp": "e0cc2877fc2249f64e1ff84890d01312d0c81087d2748884395db346d255776f",
+    "sources/w11-crt-c-gs-swap-dbuff-dc/gs_swap_dbuff_dc.cpp": "0fbe9b98131007a7d1b8a1363563ed06d275771f8e7e4334987af49b9399c508",
+    "sources/w11-crt-c-pad-get-dma-str/pad_get_dma_str.cpp": "4a7a2299709dea759a9029b382fac5c4847943a042b74fec0cfc3d9875b76b0f",
+    "sources/w11-crt-c-pad-get-req-state/pad_get_req_state.cpp": "bbd0c6d9bace35b1300b67d3d9264bb6105f5229739d067b19b933f0ccecce96",
+    "sources/w11-crt-c-pad-get-state/pad_get_state.cpp": "1c458df3223d1dfdd66dd15fa0c130d09e4828a5ecd8a64fe9fc4bbf742d99cb",
+    "sources/w11-crt-c-pad-info-act/pad_info_act.cpp": "ecf5eb3487b78caa60bf95eb4193c2e0386c01a2e0c3b7f43254d03b9ae81bca",
+    "sources/w11-crt-c-pad-info-mode/pad_info_mode.cpp": "e851b256e291705a085dfbb080bae7b026a77767ed058e954a59eaefb8031f7b",
+    "sources/w11-crt-c-pad-port-close/pad_port_close.cpp": "360a51a5594a39a85e36d7d7d4e488b648d945cb7d6bc4b0d044052c027eae68",
+    "sources/w11-crt-c-scf-local-time/scf_local_time.cpp": "9aa309187526efbd48559285e4cda2d9a24dca5bea2134dc468c54e3d07744d7",
+    "sources/w11-crt-c-sif-add-reboot-notify-handler/sif_add_reboot_notify_handler.cpp": "ab34e96c5769d2e6da85ae0d9efb680d425fcf5bf73281f947e7b2cf5cab2bf2",
+    "sources/w11-crt-c-sif-m-packet-buffer/packet_buffer.cpp": "45c432adbab2f770052e9ed74c2020f446531391f841a2cea4b966bcfd92f60b",
+    "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
+    "sources/w11-crt-c-src-word/src_word.cpp": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
+    "sources/w11-crt-c-tty-handler/tty_handler.cpp": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
+    "sources/w11-ctor-b-skill-cleric-root/skill_cleric_root.cpp": "2a8b0f2b55212c97cec0f6d71d46678dd54ab5fb53a71ea9768f4e13d813c21c",
+    "sources/w11-ctor-b-skill-cold-arrow/skill_cold_arrow.cpp": "5a36ddf4978fc411f5bfbd63085d472c1de50f95b6b477f13f9fa947828d37e4",
+    "sources/w11-ctor-b-skill-cold-weapons/skill_cold_weapons.cpp": "4957855f0ef8525eee4a51400d220f1cbc916b04f76152f3dbfd061a28f024ef",
+    "sources/w11-ctor-b-skill-cone-of-fire/skill_cone_of_fire.cpp": "eea83ff8cf770f5517df3cabbf7c1f4ee1b947bab97f5e82d70090319f52f6d6",
+    "sources/w11-ctor-b-skill-cone-of-frost/skill_cone_of_frost.cpp": "d8f94e71c0a002008356f9ad8ebf9040a6fec6b26ae01889cedbe5727d28415f",
+    "sources/w11-ctor-b-skill-convert-enemy/skill_convert_enemy.cpp": "5933c4a2114c04dd5fb3799a000ed8548dc434bdfd19b285610c523ce80155c4",
+    "sources/w11-ctor-b-skill-convert-undead/skill_convert_undead.cpp": "2ead48393a5b1b2eb5cb099889f9f6fece6a548a2067d932455b8f23bc1b63ba",
+    "sources/w11-ctor-b-skill-critical-hit/skill_critical_hit.cpp": "bedf6fc00a5d72ca055d15da32723afed3fbd379ce2de7b8ad289a54ad2b0c20",
+    "sources/w11-ctor-b-skill-cyclone/skill_cyclone.cpp": "c5b12ccf8967cf38eb083fedea90bcbba47c6adeaa45158b1a690f6c95b168ff",
+    "sources/w11-ctor-b-skill-darkness/skill_darkness.cpp": "1a084ac0407deff697f643f50a2ea0d677aa1a7a1306567a1cf4f53b74782e34",
+    "sources/w11-ctor-b-skill-disease-bolt/skill_disease_bolt.cpp": "d279e8ffcdecaa67e4b1243227786aaa67b797722d4586383d0241b08df03a4d",
+    "sources/w11-ctor-b-skill-disease-shield/skill_disease_shield.cpp": "6ffdd437e0568d21c25fc993438dc7f27041589f5d16b6f854ae4396cae1474f",
+    "sources/w11-ctor-b-skill-disease-trail/skill_disease_trail.cpp": "57c6aa013d64c958d16bb03729b9c5fec70e04126ddee7f939dbca787e8b89d1",
+    "sources/w11-ctor-b-skill-dismiss-undead/skill_dismiss_undead.cpp": "81362b9b7f48a5b14901ba418290469cd65203c6af97d4bee2e86bfc02c5d797",
+    "sources/w11-ctor-b-skill-dodge/skill_dodge.cpp": "2cede65d3f8e115e06dfcc5746ab7d6b02748707f4e186c2b8648298f5768b4a",
+    "sources/w11-ctor-b-skill-entangle/skill_entangle.cpp": "9b397edc71f921a2e701c7499d174ead8e206d20065c57662b668773c154e907",
+    "sources/w11-ctor-b-skill-explode-arrow/skill_explode_arrow.cpp": "d6ac90ffe2345457468447637431e77d78a80a7ec5a38c3bbf88ed5cffb04ffe",
+    "sources/w11-ctor-b-skill-fire-arrow/skill_fire_arrow.cpp": "3e8a27a12d285eee4a22db5ab5bbd86634b131b11807566c9755cb1f2901da8d",
+    "sources/w11-ctor-b-skill-fire-flares/skill_fire_flares.cpp": "bebef43b67511be955c81cf39364d89fa93da34b4acb089d4d3d8ca24790d7e2",
+    "sources/w11-ctor-b-skill-fire-storm/skill_fire_storm.cpp": "c084a0ff7db145694f5aee8a9e41ecb1057ee0d0159bd08f9151a8ac022fd9aa",
+    "sources/w11-ctor-b-skill-fire-weapons/skill_fire_weapons.cpp": "94d2e5c218891f19b616db1f0aa747209121d85188df5ac0902aa1fcd3b2e1c1",
+    "sources/w11-ctor-b-skill-frost-storm/skill_frost_storm.cpp": "954ba0168cc49f22aa23da24f0ad8f2b677bf75ce4c36807aed13be7d9f2b9ee",
+    "sources/w11-ctor-b-skill-ground-pound/skill_ground_pound.cpp": "7230bac365cc92e7d8345beb62e9394d343aa5b6a899056cb2705d2867c7a446",
+    "sources/w11-ctor-b-skill-hammer-of-wrath/skill_hammer_of_wrath.cpp": "7bb6ab1319f24a355af966c393dad0d8925af469d13c1eda3e4fe27afb5e1962",
+    "sources/w11-ctor-b-skill-harm-touch/skill_harm_touch.cpp": "8e16200fb43bf556d24057070202c48c36e7a1b665536640440a0a03dc39983f",
+    "sources/w11-ctor-b-skill-healing/skill_healing.cpp": "1d406ae267bf728d17b8ac9e2ca82df852c75ca4d7de15d2fc51caa1d54285e4",
+    "sources/w11-ctor-b-skill-holy-shield/skill_holy_shield.cpp": "6109c7804ae9f6b6f5842aab44bfab377e428fcc9592c280b5618290ec96f67b",
+    "sources/w11-ctor-b-skill-holy-strike/skill_holy_strike.cpp": "7f53def9be04037b3da6f5a8e4d2f154d1703f5449f095b4ec1dc1003aaac5be",
+    "sources/w11-front-a-display-gold/display_gold.cpp": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
+    "sources/w11-front-a-display-items/display_items.cpp": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
+    "sources/w11-front-a-display-weight/display_weight.cpp": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
+    "sources/w11-front-a-do-helpful-message/do_helpful_message.cpp": "24e4af7d477d1573d2df63227b08f5d764cc2bd55a402d26090b2569abe466bf",
+    "sources/w11-front-a-floor-get-save-info/floor_get_save_info.cpp": "692b59da9b638bfcae490954f6f83bf590f1f830f5ba25700253d529317699bc",
+    "sources/w11-front-a-hud-draw-frame/hud_draw_frame.cpp": "49456b26688c6022f57a393e8e013281ae0ecf6c2b8a8cbec7291e6678650f3b",
+    "sources/w11-front-a-hud-run-frame/hud_run_frame.cpp": "1f8c412ac25b5722a2800d2dec84e494352d864538a04a48f642c20386685699",
+    "sources/w11-front-a-views/norrath_front_a_view_483f34.cpp": "2e0118d90f69f2cd6bf8db2ad99b67447665257b96ecdad2640cbcb919468018",
+    "sources/w11-front-a-views/norrath_front_a_view_4848fc.cpp": "3da83bf5d3dea41c8356e1c172900accb14568cd0274bf7c302976f454dbb8b8",
+    "sources/w11-front-a-views/norrath_front_a_view_484900.cpp": "f89013a0bc36287a4f5c04220b3f352551f2b0698cb5f1591cd290f1e87e46ee",
+    "sources/w11-front-a-views/norrath_front_a_view_484b08.cpp": "8178f00d567fa209840b7ace1113653333f520b6a2c4d6379f7dbfc1be9bcaf6",
+    "sources/w11-front-a-views/norrath_front_a_view_4858e0.cpp": "2cdff2ed8b042ddbbc91ed19675710ec165c240574986ff507a75f5f59480125",
+    "sources/w11-front-a-views/norrath_front_a_view_6ca800.cpp": "b78d01a5818fea757d4f0d2f9b2e5b766e7cd8bd55d31d1eb2c942727c6e868c",
+    "sources/w11-front-a-views/norrath_front_a_view_8d5b58.cpp": "1de3c3b709c095d041453f699c29939feb41805d8b158dfe157cbcdec39f1e62",
+    "sources/w11-front-a-views/norrath_front_a_view_8d5fd0.cpp": "6ed45214062816efd5d24b04eaf9ae0c7d955759c4cb3d92b85c0f142d6664dc",
+    "sources/w11-front-b-get-damage-multiplier/get_damage_multiplier.cpp": "de7509124c526d2cc941eaf02f268b4f1c1857af6c926299503ad4aa732872f5",
+    "sources/w11-front-b-get-pic-size/get_pic_size.cpp": "62c0bdaf6752ad4fe8d6856a8d49e9bf2c1828b1f8ad1f1917e504a1a1b2673b",
+    "sources/w11-front-b-global-icons/global_icons.cpp": "fbf1717302cc55047b3d3c6ce6f4b55de47e5d53470005cfc0afa192c1fc64c8",
+    "sources/w11-front-b-hermite-points/hermite_points.cpp": "ddbfc147c46157e36a8ceedffbc335f38445fdbe1706c245c29f79c0408807ea",
+    "sources/w11-front-b-hud-bust-covered/hud_bust_covered.cpp": "2cea23a69f1e9681917303f2c3f6ec3d7ca06381a53f5490312aa27ab3d6d559",
+    "sources/w11-front-b-icon-name/icon_name.cpp": "c070b2ba4da98825fffe14ec1ceb795b5bb8dd5574bef6f55ee6e5f735ab6f74",
+    "sources/w11-front-b-inventory-pad-find-button/inventory_pad_find_button.cpp": "c8a5c11a2ad19361777c1bb940559f08a7b1d3019a657f958ea0e2fb82f32c5c",
+    "sources/w11-front-b-inventory-texture-words/inventory_texture_words.cpp": "6da00de7a5b2a68fbe2cbd4cff5e35653af8cead343d2ff335078780bdd8f2e3",
+    "sources/w11-front-b-level-list/level_list.cpp": "3fabd025beab93e19bdcdd741fcf9c9ebb42b07fe3476e8451efa9351e830565",
+    "sources/w11-front-b-main-menu/main_menu.cpp": "32cf696400ec18dd38a5ddf209e3d4b1cbba727b36f88b92d3db53d1f810f46b",
+    "sources/w11-front-b-msg-hud-save-point/msg_hud_save_point.cpp": "6a5f347ad1c286a531c563aa254a7967a94a7224bbb83a22f97d4e8689df0d1f",
+    "sources/w11-front-b-msg-inventory-exit/msg_inventory_exit.cpp": "308765d5eb395c0843855fc7596cf63fee147ed0f25fc6ce4ca38875bda12d71",
+    "sources/w11-front-b-object-get-save-data/object_get_save_data.cpp": "372e7fd2756dce6181fca7b4d59a05a72756ebdf41c0508b64e9afb5554653c2",
+    "sources/w11-front-b-skelight-partlist/skelight_partlist.cpp": "f02be8f598b198668970e75a16afd88c3edc23c7408f76de153d663d02030d7b",
+    "sources/w11-front-b-write-map/write_map.cpp": "7f389daa1b01c10e8732797cf1db7fa26f2d1270c5e3f75f2bcb0f57e618cda2",
+    "sources/w11-front-c-camera-words/camera_words.cpp": "bbfe30d13112d3c249aee8161a0967713ff68527c2ca2d942b78dbf56f8edf92",
+    "sources/w11-front-c-inventory-texture-words/inventory_texture_words.cpp": "62a2b298c61b32852db402bf66f8bc8556bb89b76bdd317f5687fcaf6d66d28f",
+    "sources/w11-front-c-jump-start-pos/jump_start_pos.cpp": "f68b93a7ab3f1bd1dde36d9085ac9a1d91a7709e69a0227be53cc83c1ad1bf3a",
+    "sources/w11-front-c-light-shadow-words/light_shadow_words.cpp": "937d7e6878b27b0155b84401fd5b739c469317fd400986abe2203c1e6ae4b923",
+    "sources/w11-front-c-play-sound-group/play_sound_group.cpp": "2086279d0cfe41d362d5a5bff3a9398255ee652a4bbe9f9db3f319a18fa90bd4",
+    "sources/w11-front-c-pm-list-words/pm_list_words.cpp": "ac39084a9d378d19139947a650e1caba76a00e3302d741da2ecd408a1b512a42",
+    "sources/w11-front-c-sound-get-dialog-size/sound_get_dialog_size.cpp": "6b43328850d5e6b01d4dcfdb0b127ac7a4e3184d424ffaf250900bb104a76de0",
+    "sources/w11-front-c-sound-limit-words/sound_limit_words.cpp": "5a1becee8dcf39ad80461b2ef4c5b371f77c1f0c89f971d19e9a8e073358a8b7",
+    "sources/w11-front-c-tex-clear-always-loaded/tex_clear_always_loaded.cpp": "eaefda566476637ec004299a1128c00bd4e29e9fb773133ef15411c93744c24b",
+    "sources/w11-front-c-tex-load-always-loaded/tex_load_always_loaded.cpp": "bf71936a62cd8dc336e89fd600db6099327c0680c681cafa500b937b623a57e5",
+    "sources/w11-front-c-vehicle-shite/vehicle_shite.cpp": "a591931d7c9b9bf9ffe212e14d244db1db996e2a53013a945458182e586be9bf",
+    "sources/w11-front-c-vi-words/vi_words.cpp": "079442f4853ffdbbb96d0d3206e47c1fe97bc0539c6f2dcbd67debe32d4b7375",
+    "sources/w11-front-c-wavemaker-range/wavemaker_range.cpp": "d8919ffe426d2d1d48f397c69d5b5851fbad2fa7ad0d82b6031b6b29444831e5",
+    "sources/w11-tmpl-a-array-int-clear/clear.cpp": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
+    "sources/w11-tmpl-a-list-actor-clear/clear.cpp": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
+    "sources/w11-tmpl-a-list-actor-init/init.cpp": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
+    "sources/w11-tmpl-a-list-guipage-begin/begin.cpp": "25d7df622a0c661a3aed51c3422c1eb845da9d561372b024a51fa9f2e7d98adf",
+    "sources/w11-tmpl-a-list-guipage-end/end.cpp": "beee680dacb85beb3f14d85250b176089ce89c62098845c057afbb658f7f26df",
+    "sources/w11-tmpl-a-list-guipage-erase/erase.cpp": "c30a689ebf7038c30f6910e216eaffea8b39397ec3b09b0e69c4a4918f5a9e34",
+    "sources/w11-tmpl-a-list-sceneoccup-clear/clear.cpp": "3e81dfde40d18eae3e65a0d398cb7d4bf16e4f478d94d709506e652ca57090c7",
+    "sources/w11-tmpl-a-list-sceneoccup-init/init.cpp": "857f441c822ebcd0af31191b69a54a8b18dbf4a626d15f4ae27ebff7c89254fe",
+    "sources/w11-tmpl-a-map-dictentry-clear/clear.cpp": "4c6fd5983213f1015a5ca868eb1a963a6cefd832a1c7d43834c247dbc36ac63e",
+    "sources/w11-tmpl-a-map-dictentry-init/init.cpp": "8a040ce54df8364ae10ac2705a3c070e4b71ece8b612f2e853069aa2d28aaea4",
+    "sources/w11-tmpl-a-pool-hspriteanim-begin/begin.cpp": "40218170b5f34db6433794e0726c23c4f6d97412ed54f0c58b7d4225669fe102",
+    "sources/w11-tmpl-a-pool-hspriteanim-clear/clear.cpp": "7f21749fa3cb35f5e7e8dcb166da4b69e9adcdcb19119b1fce63dbd2c0e2b2d9",
+    "sources/w11-tmpl-a-pool-hspriteanim-end/end.cpp": "022c45fe1401212ff124aac56b853a40b202cb97c23c8c754b6762314d3490f2",
+    "sources/w11-tmpl-a-pool-hspriteanim-init/init.cpp": "f2a9d7a120cbe7b978cd0a66bb3253ef82b37887cea3e5be06bf6bfefcd8e6a7",
+    "sources/w11-tmpl-a-pool-refmap-begin/begin.cpp": "ed3ad3329b1ea07d021556b25669eec15a25735a010f9f349c9cc1077f96cd85",
+    "sources/w11-tmpl-a-pool-refmap-clear/clear.cpp": "7d077a22e4ac3fccce22a03f7671c9f09cf8fc0d72637ffd4c9494a0a93872f6",
+    "sources/w11-tmpl-a-pool-refmap-end/end.cpp": "d70668e45c25ece55e63832bc355641e7270a92d8ff99d3053a43f2046c70b2f",
+    "sources/w11-tmpl-a-pool-refmap-init/init.cpp": "787bb4e77605bcb7186ee345da9c9021c03bf1fa0c3f55aef40e10b8f7d67365",
+    "sources/w11-tmpl-a-pool-sprite-begin/begin.cpp": "018a34d87738d154eb14efe531927b0eae53c5ff285a47e6eba63c93ed1ddbb2",
+    "sources/w11-tmpl-a-pool-sprite-clear/clear.cpp": "6eec57f7226f7636c7f9b31c2cff86767dcc3815fa2964235eb05d1b6528da30",
+    "sources/w11-tmpl-a-pool-sprite-end/end.cpp": "9fc0b558a653d8a5f700fadd547ba485cace92a965cd8205ef8157f52376c2e9",
+    "sources/w11-tmpl-a-pool-sprite-init/init.cpp": "cb058616082b388faf53aeec604b5079924d3dd8603934390a3af7d6d4fb797b",
+    "sources/w11-tmpl-a-pool-staticlighting-begin/begin.cpp": "642d3b7128d9ab0a3077e0b5f002f1762edeab588659ca726314e80aea8416b2",
+    "sources/w11-tmpl-a-pool-staticlighting-clear/clear.cpp": "2338237f78760a14ed74dc606d98125779fcb2930006a9dbfe75267e340dd192",
+    "sources/w11-tmpl-a-pool-staticlighting-end/end.cpp": "a3983c2b2489e1952a01ca57ec5c58aee5325f3b0633465faa0b283fd7b4e436",
+    "sources/w11-tmpl-a-pool-staticlighting-init/init.cpp": "4d8302079a67012b1300348f4f1a19623b254c9aad56f063991133c27ca959fd",
+    "sources/w11-tmpl-a-vector-scenedisplayelem-clear/clear.cpp": "5a8d90b216ef2050b957bbccd3f005468cbfb6ff3d7bba4b31bab8e323b459dc",
+    "sources/w11-tmpl-b-array-dtor-11viclipentry/dtor.cpp": "287c5730cb0bd7f77ca1546c6be0ef0d6e40a23d51b2f8b56c4df30b2e663349",
+    "sources/w11-tmpl-b-array-init-int/init.cpp": "029b76e9dd216d124e02ecbe89b797280ae3382c8bb4b49aef1ecc997acb59a6",
+    "sources/w11-tmpl-b-list-dtor-10vimaterial/dtor.cpp": "ab070a220b9d91f4067d8957eeb0e945d56f2b9d727795b3b5b93d2422521f87",
+    "sources/w11-tmpl-b-list-dtor-7viactor/dtor.cpp": "b9414913342598a893bb5bd83587458f0457dfc5fbb1c0c080f880793407c46f",
+    "sources/w11-tmpl-b-list-dtor-p12viprimbuffer/dtor.cpp": "cd98ec2302a447341228da18e0c7b610c1b486f2147f1e51fe94eba849a20c1d",
+    "sources/w11-tmpl-b-list-dtor-p9viguipage/dtor.cpp": "7783e7bff463896be3fbc5e20d3065fa128eb55218a97f59163115fda40860f6",
+    "sources/w11-tmpl-b-list-dtor-p9visurface/dtor.cpp": "df357de26d517e9bd5cba15ebf8849d6fdd67319d2e8e7cbe9e5f8f6753af1c7",
+    "sources/w11-tmpl-b-list-dtor-q27viscene12visceneoccup/dtor.cpp": "b4a5a0be9ec57f783ea12a80c815e4ac3c48fb01341141bcb6620bbc3b85c1e3",
+    "sources/w11-tmpl-b-map-dtor-izi/dtor.cpp": "b38a06a32853850b5da13d56e147e9a073b8b10de815ebd83071d0041a588352",
+    "sources/w11-tmpl-b-map-dtor-uizq212vidictionary11vidictentry/dtor.cpp": "28b6840dc0e23d59121ef3d5590c1f7487964d4e76324799e19bd66020694760",
+    "sources/w11-tmpl-b-next-p13vihspriteanim/next.cpp": "206f0cbc2ff6bf74e6809d627ed4951bfd0dfad0e521dcbd570ef9ec1664fc09",
+    "sources/w11-tmpl-b-next-p16vistaticlighting/next.cpp": "15a6415a5486d91acf97baa4fe906856046ddd96f769704c5ece5854b6e31800",
+    "sources/w11-tmpl-b-next-p8virefmap/next.cpp": "2a9b0a79bf496954dfc3a6e3b4652b0c36561c4214980a9a6c8bf19132e77e88",
+    "sources/w11-tmpl-b-next-p8visprite/next.cpp": "3f64210710cee6c8a8d2c03d01d521317df336943940fea1e0e0246ee1979222",
+    "sources/w11-tmpl-b-next-p9viguipage/next.cpp": "d6856da17d868c590955eb07d10233908b79b2bc64031ed083029ab45eafd4e3",
+    "sources/w11-tmpl-b-pool-dtor-19virastermateriallru/dtor.cpp": "32af896feb27064da8d27c665a91815a06b2433901d4f0f16303571e28695be2",
+    "sources/w11-tmpl-b-pool-dtor-p12vicollbuffer/dtor.cpp": "aa709d16401f89267d84bc54fa6f16751f16fa3d968a1282d2b71573a99f29c6",
+    "sources/w11-tmpl-b-pool-dtor-p12viprimbuffer/dtor.cpp": "a3d0e39a22eebff747853b7afc4eace86e6f7739395c511fb79c6d55931e6193",
+    "sources/w11-tmpl-b-pool-dtor-p13vicolorbuffer/dtor.cpp": "306b213ff60927fdd4d2f1655ad05c6c896d5c3f58e6512e05d45b0241022322",
+    "sources/w11-tmpl-b-pool-dtor-p13vihspriteanim/dtor.cpp": "a3ec4eca2b4f39e4e3d28663708969bbc00494a377bc18641cce154ba7769b6c",
+    "sources/w11-tmpl-b-pool-dtor-p13vimaterialpal/dtor.cpp": "aba056ec176fce203b59c602d2a06d7d62840e3a54c4c186790b62c59d03d3b3",
+    "sources/w11-tmpl-b-pool-dtor-p16vistaticlighting/dtor.cpp": "6207636038754d25cc578adf4d5669863cb64fd0067f3dd1a02238598a1c2f33",
+    "sources/w11-tmpl-b-pool-dtor-p7virfont/dtor.cpp": "ae2349d3e4609f3759ef05f2dd007c16c8272efdfbdf37aafd0002926d3e7659",
+    "sources/w11-tmpl-b-pool-dtor-p8virefmap/dtor.cpp": "4215883e0ea840b16ce20c191df88ca113ea5d4fbe7fc9212f9d28eed585b18e",
+    "sources/w11-tmpl-b-pool-dtor-p8visprite/dtor.cpp": "58e11a107175f841ea0bbadc58a5e9d42eb5510ab102609ba8584d5a9cc1b7cc",
+    "sources/w11-tmpl-b-pool-dtor-p9visurface/dtor.cpp": "6d11adc76b01d3b3ab4d26a9db0da0d8e5f1bbee4a911e831d68f57fb57d306d",
+    "sources/w11-tmpl-b-vector-init-scenedisplayelem/init.cpp": "97a8d5534749e324c076993967744202ee4eab15e5fd15f61a50ad08dc4f0064",
+    "sources/w11-tmpl-c-array-clip-entry-ctor/ctor.cpp": "b2a75bbf57eb7c879d0a25663100894dc5cb651aa1030d01adc903e096edfddf",
+    "sources/w11-tmpl-c-array-int-ctor/ctor.cpp": "68e09d10b34422909f370abd146abb82dc457f5606a0bf866d1047cb3f1ec9e7",
+    "sources/w11-tmpl-c-array-int-dtor/dtor.cpp": "183c280c91971bde90cf5728671cf2d24d0b6f45f4773624c1fe35dfd560566f",
+    "sources/w11-tmpl-c-array-plane-ctor/ctor.cpp": "a6790380eba7d1856a93759e50fa82c8ca2b0d8d0154a8d1c5206db7ee57e133",
+    "sources/w11-tmpl-c-array-plane-dtor/dtor.cpp": "02a956abaff91a632769bd850c703bee26dc44f3a94ce15ce6c5fdaf47e2b225",
+    "sources/w11-tmpl-c-array-vect3-ctor/ctor.cpp": "60aa796236cde3b93b5cbe48f58fe8432cd9bf56df9d1368aff9e36a521eb872",
+    "sources/w11-tmpl-c-array-vect3-dtor/dtor.cpp": "05213d3a6e16d505ef115676daa1aed89f189dea748494db0e2e2486bb06d8ca",
+    "sources/w11-tmpl-c-list-actor-ctor/ctor.cpp": "e027822bfd24468f127a6307d1fd37b730dafcce33f9367b2423a28181091c3e",
+    "sources/w11-tmpl-c-list-material-ctor/ctor.cpp": "e17754cd3b0a6a36b17bb896a13068f72e05a295d3e23754436a6a3f1dc5c8e1",
+    "sources/w11-tmpl-c-list-p-gui-page-ctor/ctor.cpp": "d08fbef4410012e3641704439524f90dff0f586eb69b89c6a08ac96e2e8c659d",
+    "sources/w11-tmpl-c-list-p-prim-buffer-ctor/ctor.cpp": "9ccebda4e1e7bd3b8aa36c5dd7f512d6047e9a956653a58b4b2c90f5c9e8b5b1",
+    "sources/w11-tmpl-c-list-p-surface-ctor/ctor.cpp": "a77bc89befb866fd1b71c4b999555eddb823a988e58f76c26bcad58d903f2ebc",
+    "sources/w11-tmpl-c-list-scene-occup-ctor/ctor.cpp": "62102e29d938192e77a836a7db142d145d0ef87ea7b123b216d8820c5514082f",
+    "sources/w11-tmpl-c-map-dict-entry-ctor/ctor.cpp": "6d80b319b50ec4d4a7c9c68fa1b5ffa434e99203a4f2656cff0fe6ef9de7b592",
+    "sources/w11-tmpl-c-pool-p-coll-buffer-ctor/ctor.cpp": "9e2aec6dd3a6b3089912912096a8af9d2ff6c4db9d5762fa75023b98d77fc207",
+    "sources/w11-tmpl-c-pool-p-color-buffer-ctor/ctor.cpp": "f8e0e8625f5578590cda18d269f6a2ae5658085a6c130eaf87ba06709795f215",
+    "sources/w11-tmpl-c-pool-p-hsprite-anim-ctor/ctor.cpp": "43b60affc57b3df28d5a041ff49102b0a4a2ee23a899a9eb21ecd152e8a1ded5",
+    "sources/w11-tmpl-c-pool-p-material-pal-ctor/ctor.cpp": "3476390fb60b7be9b6cd75e6dee31cb72a44747694593478fdd401e4a71d0235",
+    "sources/w11-tmpl-c-pool-p-prim-buffer-ctor/ctor.cpp": "b4b40fcd5e1cfbfd6c3ff3ed5be6b576de80ff67a1cc0391859a1a9b53fac30d",
+    "sources/w11-tmpl-c-pool-p-ref-map-ctor/ctor.cpp": "40d9705d7739b7ff5ecb95d9e1760c87a8e67a35c33da2302e944227094265b9",
+    "sources/w11-tmpl-c-pool-p-rfont-ctor/ctor.cpp": "f5974d891504cdb28c1b3822d26335469471332d696dcb12f90bd23776a634c7",
+    "sources/w11-tmpl-c-pool-p-sprite-ctor/ctor.cpp": "e1dccf59ebc4ff9a4326a9090fee4e65ce08bb977a2795014a60c02c026fd1f1",
+    "sources/w11-tmpl-c-pool-p-static-lighting-ctor/ctor.cpp": "57b679e64458664e154c094f46b3a4380a231bfe94761253c443c87cd88538fa",
+    "sources/w11-tmpl-c-pool-p-surface-ctor/ctor.cpp": "a34d8c93402b7fbab27004a98a2160511901c1704b9d8327e07e0b571f341fb6",
+    "sources/w11-tmpl-c-pool-raster-material-lru-ctor/ctor.cpp": "d2470b8274182b9c35617bea3cebac22027f5fa6acaed836d6533ef5bc139d18",
+    "sources/w11-tmpl-c-vector-scene-display-elem-ctor/ctor.cpp": "cd2175280e47c2c176e5763792b7de1a810e916b8b65ccaa8647b753f0b3f8c1",
+    "sources/w11-tmpl-c-vector-scene-display-elem-dtor/dtor.cpp": "730421f90adb04b68c30bd9a9f1090badf2d6b2b992e400313ac73b680766716",
+    "sources/w11-vi-misc-b-connect-ctor/ctor.cpp": "64aa1abf3b965752ab0b22b4b7a12126e87e5120ba58aac8717dbe263fbccdab",
+    "sources/w11-vi-misc-b-connect-dtor/dtor.cpp": "e91d06ea7b788f2a8a3c6bbb78dcc728b4f26b44cec4b82b760d3500f910179d",
+    "sources/w11-vi-misc-b-connect-end/end_connect.cpp": "5f336ca5b3b8e7a7b1e05c5188005260646c3c8d38eaaeb4ac1699926aa4b5b8",
+    "sources/w11-vi-misc-b-connect-free/free.cpp": "9923a1028cde1a3df2fe316655e0bf5d563ea19d8835472bc2c31fc984145dbb",
+    "sources/w11-vi-misc-b-connect-init/init.cpp": "be4b0d75c034a3b135bb4663e0bdfb8f18b9d58b1daaa4be630c77fe52beed48",
+    "sources/w11-vi-misc-b-edit-ctor/ctor.cpp": "5707be885871c9dd4e84980e7794d177ddaac0a9581e93111d42969c9f399e06",
+    "sources/w11-vi-misc-b-edit-dtor/dtor.cpp": "a1caeddd7590cf4101b139872634bc7cb86e6e93a1f860aa5618bdf8afec0d8d",
+    "sources/w11-vi-misc-b-guiobject-alpha-fill-material/alpha_fill_material.cpp": "2a03538e7ed6fb19e9c1754f3146b35159abee7cb67fb394d2c4fd6aa6bc86de",
+    "sources/w11-vi-misc-b-mcerr-on-message/on_message.cpp": "1eb13eb6e92e1085ec48e72617e5ffb3a83937af03d68db1fe617909eb8a54ca",
+    "sources/w11-vi-misc-b-message-ctor/ctor.cpp": "d0c12802ecbaa267193ce07ce866af56a5bdbf710e37784316ccb0bad8d72932",
+    "sources/w11-vi-misc-b-message-dtor/dtor.cpp": "9ce1875ba0d2d700384597c76ba77db2afb57e1225ccfbcdc5037409f2765a5c",
+    "sources/w11-vi-misc-b-message-free/free.cpp": "8c94601951788fcfd35dd3cf020db7cdd1f76294d27f74f7c900abf4845fc0cd",
+    "sources/w11-vi-misc-b-message-init/init.cpp": "b60e920ab3c148cfb82a45cab2dbcc476bc2e48925ed27a490b060d2541f09b4",
+    "sources/w11-vi-misc-b-options-ctor/ctor.cpp": "31e805a58b98288c310ffdbede1579f0f39763f973fabbef4ac6457ad2418da0",
+    "sources/w11-vi-misc-b-options-dtor/dtor.cpp": "7614237b2681e0e9d7a8c191697f2feeb69b95ed6b04d626e5d35fb774b66b18",
+    "sources/w11-vi-misc-b-options-free/free.cpp": "2199a136f18558688e20ebc98c747460649622b3e02dc9d6907f8b198a3ed6c6",
+    "sources/w11-vi-misc-b-readmessage-ctor/ctor.cpp": "7b707682d857aa1f389db003e83f731d71abb0cbdd2e8632aed94773186318c1",
+    "sources/w11-vi-misc-b-readmessage-dtor/dtor.cpp": "ada9696400284b4e4b93dc1be4de0c3716d18884cca7a81aeac13c1cfdcc6a07",
+    "sources/w11-vi-misc-b-readmessage-init/init.cpp": "c4cbdc4b0586c6cc47e77a3b4fd4d4bda22cbb960ee7585cefbbc84705abf00f",
+    "sources/w11-vi-misc-b-uiwindow-ctor/ctor.cpp": "e20284f7b85edb942f97aa736979242ffcabb9643ce718d15e6d9f3b0c6ef2d9",
+    "sources/w11-vi-misc-b-uiwindow-dtor/dtor.cpp": "542c8114f8dfbe1d994b5ad8ef2ab405f54ded770cd718baf8894aad93b8d7c7",
+    "sources/w11-vi-misc-b-uiwindow-reload-words/reload_words.cpp": "340855d0f2c9755cc7e33e7c5556a82f07f994ff1d444ed54c7a9094ec27543f",
+    "sources/w11-vi-misc-b-vt-dnas/vtable.cpp": "2c472ed0f13c15598c5f589916bc693910fd582d9cab0b9fb01cc3a163b497fd",
+    "sources/w11-vi-misc-b-vt-eula/vtable.cpp": "c59049cc5af735d1e660fed3e94c26b5be519651b887da1203ccf98c8c9d013d",
+    "sources/w11-vi-misc-b-vt-genericrenderer/vtable.cpp": "6aca1b7ea43a4533b5a64c3a37a5eff02b011db2d7cbeba8e4771db4319a96f1",
+    "sources/w11-vi-misc-b-vt-legal/vtable.cpp": "a234abaf7b8d396ad8d4439ff31f5f0674c780a2dd01d0b3bc36a36838084184",
+    "sources/w11-vi-misc-b-vt-patcher/vtable.cpp": "0d4f9f182165abdb6d13f0903696943d39df42db817534461c5d711ecbd33259",
+    "sources/w11-vi-misc-b-vt-splash/vtable.cpp": "df0b5e4b83e74c8941669b89fe2ecbe25a36616df6bf91b98203a01b06382bc3",
+    "sources/w11-vi-misc-b-vt-windowmanager/vtable.cpp": "ceb9ab478f3522fcb2089846fa1cb072f965fa793ad19eddebd8fbb9c68662b3",
+    "sources/w11-vi-misc-b-wnd-add-child/add_child.cpp": "a0a3bec9986dc1b8fbf6646cb497aa9314dee459a995e2daf06d03bc2ac5fe59",
+    "sources/w11-vi-misc-b-wnd-ctor/ctor.cpp": "3c3777bacd9ad3db9c3b560168180e8be2631dd9f806ddab14e76e4f68650191",
+    "sources/w11-vi-misc-b-wnd-dtor/dtor.cpp": "1c9448b9d7741842c603b8852d229597218f75d7852b5b60e699a9cbe55aad07",
+    "sources/w11-vi-misc-b-wnd-remove-child/remove_child.cpp": "4dd29023061f0d7d60a63c48da378512f896cd7a4f505e266df20fb38dba1e81",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -64732,6 +64987,3606 @@
           "name": "msg_trigger__12UndeadKnighti"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4456,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_array_int_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "c9d6bc5a746a7230319c9f1a12e33270688011f693699e07f2c718fe8a7e7083",
+      "source": "sources/w11-tmpl-a-array-int-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "Clear__t7VIArray1Zi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4457,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_actor_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "5d7291d0c62863bcf735b76fc30d795c3d133edcde10f603256f1389b917c500",
+      "source": "sources/w11-tmpl-a-list-actor-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 108,
+          "name": "Clear__t6VIList1Z7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4458,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_actor_init.o",
+      "profile": "authored_cpp",
+      "sha256": "159bfc5e5d1bdc163dd270f84b8fcd714e7c16ecd578b6b5acfefef34550397d",
+      "source": "sources/w11-tmpl-a-list-actor-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Init__t6VIList1Z7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4459,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_guipage_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "25d7df622a0c661a3aed51c3422c1eb845da9d561372b024a51fa9f2e7d98adf",
+      "source": "sources/w11-tmpl-a-list-guipage-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Begin__Ct6VIList1ZP9VIGUIPage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4460,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_guipage_end.o",
+      "profile": "authored_cpp",
+      "sha256": "beee680dacb85beb3f14d85250b176089ce89c62098845c057afbb658f7f26df",
+      "source": "sources/w11-tmpl-a-list-guipage-end/end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "End__Ct6VIList1ZP9VIGUIPage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4461,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_guipage_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "c30a689ebf7038c30f6910e216eaffea8b39397ec3b09b0e69c4a4918f5a9e34",
+      "source": "sources/w11-tmpl-a-list-guipage-erase/erase.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "Erase__t6VIList1ZP9VIGUIPagei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4462,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_sceneoccup_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "3e81dfde40d18eae3e65a0d398cb7d4bf16e4f478d94d709506e652ca57090c7",
+      "source": "sources/w11-tmpl-a-list-sceneoccup-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "Clear__t6VIList1ZQ27VIScene12VISceneOccup"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4463,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_list_sceneoccup_init.o",
+      "profile": "authored_cpp",
+      "sha256": "857f441c822ebcd0af31191b69a54a8b18dbf4a626d15f4ae27ebff7c89254fe",
+      "source": "sources/w11-tmpl-a-list-sceneoccup-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Init__t6VIList1ZQ27VIScene12VISceneOccup"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4464,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_map_dictentry_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "4c6fd5983213f1015a5ca868eb1a963a6cefd832a1c7d43834c247dbc36ac63e",
+      "source": "sources/w11-tmpl-a-map-dictentry-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4465,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_map_dictentry_init.o",
+      "profile": "authored_cpp",
+      "sha256": "8a040ce54df8364ae10ac2705a3c070e4b71ece8b612f2e853069aa2d28aaea4",
+      "source": "sources/w11-tmpl-a-map-dictentry-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4466,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_hspriteanim_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "40218170b5f34db6433794e0726c23c4f6d97412ed54f0c58b7d4225669fe102",
+      "source": "sources/w11-tmpl-a-pool-hspriteanim-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Begin__Ct6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4467,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_hspriteanim_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "7f21749fa3cb35f5e7e8dcb166da4b69e9adcdcb19119b1fce63dbd2c0e2b2d9",
+      "source": "sources/w11-tmpl-a-pool-hspriteanim-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "Clear__t6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4468,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_hspriteanim_end.o",
+      "profile": "authored_cpp",
+      "sha256": "022c45fe1401212ff124aac56b853a40b202cb97c23c8c754b6762314d3490f2",
+      "source": "sources/w11-tmpl-a-pool-hspriteanim-end/end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "End__Ct6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4469,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_hspriteanim_init.o",
+      "profile": "authored_cpp",
+      "sha256": "f2a9d7a120cbe7b978cd0a66bb3253ef82b37887cea3e5be06bf6bfefcd8e6a7",
+      "source": "sources/w11-tmpl-a-pool-hspriteanim-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t6VIPool1ZP13VIHSpriteAnimi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4470,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_refmap_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "ed3ad3329b1ea07d021556b25669eec15a25735a010f9f349c9cc1077f96cd85",
+      "source": "sources/w11-tmpl-a-pool-refmap-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Begin__Ct6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4471,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_refmap_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "7d077a22e4ac3fccce22a03f7671c9f09cf8fc0d72637ffd4c9494a0a93872f6",
+      "source": "sources/w11-tmpl-a-pool-refmap-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "Clear__t6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4472,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_refmap_end.o",
+      "profile": "authored_cpp",
+      "sha256": "d70668e45c25ece55e63832bc355641e7270a92d8ff99d3053a43f2046c70b2f",
+      "source": "sources/w11-tmpl-a-pool-refmap-end/end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "End__Ct6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4473,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_refmap_init.o",
+      "profile": "authored_cpp",
+      "sha256": "787bb4e77605bcb7186ee345da9c9021c03bf1fa0c3f55aef40e10b8f7d67365",
+      "source": "sources/w11-tmpl-a-pool-refmap-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t6VIPool1ZP8VIRefMapi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4474,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_sprite_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "018a34d87738d154eb14efe531927b0eae53c5ff285a47e6eba63c93ed1ddbb2",
+      "source": "sources/w11-tmpl-a-pool-sprite-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Begin__Ct6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4475,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_sprite_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "6eec57f7226f7636c7f9b31c2cff86767dcc3815fa2964235eb05d1b6528da30",
+      "source": "sources/w11-tmpl-a-pool-sprite-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "Clear__t6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4476,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_sprite_end.o",
+      "profile": "authored_cpp",
+      "sha256": "9fc0b558a653d8a5f700fadd547ba485cace92a965cd8205ef8157f52376c2e9",
+      "source": "sources/w11-tmpl-a-pool-sprite-end/end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "End__Ct6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4477,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_sprite_init.o",
+      "profile": "authored_cpp",
+      "sha256": "cb058616082b388faf53aeec604b5079924d3dd8603934390a3af7d6d4fb797b",
+      "source": "sources/w11-tmpl-a-pool-sprite-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t6VIPool1ZP8VISpritei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4478,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_staticlighting_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "642d3b7128d9ab0a3077e0b5f002f1762edeab588659ca726314e80aea8416b2",
+      "source": "sources/w11-tmpl-a-pool-staticlighting-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Begin__Ct6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4479,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_staticlighting_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "2338237f78760a14ed74dc606d98125779fcb2930006a9dbfe75267e340dd192",
+      "source": "sources/w11-tmpl-a-pool-staticlighting-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 184,
+          "name": "Clear__t6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4480,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_staticlighting_end.o",
+      "profile": "authored_cpp",
+      "sha256": "a3983c2b2489e1952a01ca57ec5c58aee5325f3b0633465faa0b283fd7b4e436",
+      "source": "sources/w11-tmpl-a-pool-staticlighting-end/end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "End__Ct6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4481,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_pool_staticlighting_init.o",
+      "profile": "authored_cpp",
+      "sha256": "4d8302079a67012b1300348f4f1a19623b254c9aad56f063991133c27ca959fd",
+      "source": "sources/w11-tmpl-a-pool-staticlighting-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t6VIPool1ZP16VIStaticLightingi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4482,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_a_vector_scenedisplayelem_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "5a8d90b216ef2050b957bbccd3f005468cbfb6ff3d7bba4b31bab8e323b459dc",
+      "source": "sources/w11-tmpl-a-vector-scenedisplayelem-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "Clear__t8VIVector1Z18VISceneDisplayElem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4483,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_10vimaterial.o",
+      "profile": "authored_cpp",
+      "sha256": "ab070a220b9d91f4067d8957eeb0e945d56f2b9d727795b3b5b93d2422521f87",
+      "source": "sources/w11-tmpl-b-list-dtor-10vimaterial/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1Z10VIMaterial"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4484,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_7viactor.o",
+      "profile": "authored_cpp",
+      "sha256": "b9414913342598a893bb5bd83587458f0457dfc5fbb1c0c080f880793407c46f",
+      "source": "sources/w11-tmpl-b-list-dtor-7viactor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1Z7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4485,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_p12viprimbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "cd98ec2302a447341228da18e0c7b610c1b486f2147f1e51fe94eba849a20c1d",
+      "source": "sources/w11-tmpl-b-list-dtor-p12viprimbuffer/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4486,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_p9viguipage.o",
+      "profile": "authored_cpp",
+      "sha256": "7783e7bff463896be3fbc5e20d3065fa128eb55218a97f59163115fda40860f6",
+      "source": "sources/w11-tmpl-b-list-dtor-p9viguipage/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1ZP9VIGUIPage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4487,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_p9visurface.o",
+      "profile": "authored_cpp",
+      "sha256": "df357de26d517e9bd5cba15ebf8849d6fdd67319d2e8e7cbe9e5f8f6753af1c7",
+      "source": "sources/w11-tmpl-b-list-dtor-p9visurface/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4488,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_list_dtor_q27viscene12visceneoccup.o",
+      "profile": "authored_cpp",
+      "sha256": "b4a5a0be9ec57f783ea12a80c815e4ac3c48fb01341141bcb6620bbc3b85c1e3",
+      "source": "sources/w11-tmpl-b-list-dtor-q27viscene12visceneoccup/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_t6VIList1ZQ27VIScene12VISceneOccup"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4489,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_19virastermateriallru.o",
+      "profile": "authored_cpp",
+      "sha256": "32af896feb27064da8d27c665a91815a06b2433901d4f0f16303571e28695be2",
+      "source": "sources/w11-tmpl-b-pool-dtor-19virastermateriallru/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1Z19VIRasterMaterialLRU"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4490,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p12vicollbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "aa709d16401f89267d84bc54fa6f16751f16fa3d968a1282d2b71573a99f29c6",
+      "source": "sources/w11-tmpl-b-pool-dtor-p12vicollbuffer/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP12VICollBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4491,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p12viprimbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "a3d0e39a22eebff747853b7afc4eace86e6f7739395c511fb79c6d55931e6193",
+      "source": "sources/w11-tmpl-b-pool-dtor-p12viprimbuffer/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4492,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p13vicolorbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "306b213ff60927fdd4d2f1655ad05c6c896d5c3f58e6512e05d45b0241022322",
+      "source": "sources/w11-tmpl-b-pool-dtor-p13vicolorbuffer/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP13VIColorBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4493,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p13vihspriteanim.o",
+      "profile": "authored_cpp",
+      "sha256": "a3ec4eca2b4f39e4e3d28663708969bbc00494a377bc18641cce154ba7769b6c",
+      "source": "sources/w11-tmpl-b-pool-dtor-p13vihspriteanim/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4494,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p13vimaterialpal.o",
+      "profile": "authored_cpp",
+      "sha256": "aba056ec176fce203b59c602d2a06d7d62840e3a54c4c186790b62c59d03d3b3",
+      "source": "sources/w11-tmpl-b-pool-dtor-p13vimaterialpal/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP13VIMaterialPal"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4495,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p16vistaticlighting.o",
+      "profile": "authored_cpp",
+      "sha256": "6207636038754d25cc578adf4d5669863cb64fd0067f3dd1a02238598a1c2f33",
+      "source": "sources/w11-tmpl-b-pool-dtor-p16vistaticlighting/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4496,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p7virfont.o",
+      "profile": "authored_cpp",
+      "sha256": "ae2349d3e4609f3759ef05f2dd007c16c8272efdfbdf37aafd0002926d3e7659",
+      "source": "sources/w11-tmpl-b-pool-dtor-p7virfont/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP7VIRFont"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4497,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p8virefmap.o",
+      "profile": "authored_cpp",
+      "sha256": "4215883e0ea840b16ce20c191df88ca113ea5d4fbe7fc9212f9d28eed585b18e",
+      "source": "sources/w11-tmpl-b-pool-dtor-p8virefmap/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4498,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p8visprite.o",
+      "profile": "authored_cpp",
+      "sha256": "58e11a107175f841ea0bbadc58a5e9d42eb5510ab102609ba8584d5a9cc1b7cc",
+      "source": "sources/w11-tmpl-b-pool-dtor-p8visprite/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4499,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_pool_dtor_p9visurface.o",
+      "profile": "authored_cpp",
+      "sha256": "6d11adc76b01d3b3ab4d26a9db0da0d8e5f1bbee4a911e831d68f57fb57d306d",
+      "source": "sources/w11-tmpl-b-pool-dtor-p9visurface/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t6VIPool1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4500,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_map_dtor_uizq212vidictionary11vidictentry.o",
+      "profile": "authored_cpp",
+      "sha256": "28b6840dc0e23d59121ef3d5590c1f7487964d4e76324799e19bd66020694760",
+      "source": "sources/w11-tmpl-b-map-dtor-uizq212vidictionary11vidictentry/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t5VIMap2ZUiZQ212VIDictionary11VIDictEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4501,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_map_dtor_izi.o",
+      "profile": "authored_cpp",
+      "sha256": "b38a06a32853850b5da13d56e147e9a073b8b10de815ebd83071d0041a588352",
+      "source": "sources/w11-tmpl-b-map-dtor-izi/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t5VIMap2ZiZi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4502,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_array_dtor_11viclipentry.o",
+      "profile": "authored_cpp",
+      "sha256": "287c5730cb0bd7f77ca1546c6be0ef0d6e40a23d51b2f8b56c4df30b2e663349",
+      "source": "sources/w11-tmpl-b-array-dtor-11viclipentry/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Z11VIClipEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4503,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_next_p9viguipage.o",
+      "profile": "authored_cpp",
+      "sha256": "d6856da17d868c590955eb07d10233908b79b2bc64031ed083029ab45eafd4e3",
+      "source": "sources/w11-tmpl-b-next-p9viguipage/next.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "Next__Ct6VIList1ZP9VIGUIPagei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4504,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_next_p13vihspriteanim.o",
+      "profile": "authored_cpp",
+      "sha256": "206f0cbc2ff6bf74e6809d627ed4951bfd0dfad0e521dcbd570ef9ec1664fc09",
+      "source": "sources/w11-tmpl-b-next-p13vihspriteanim/next.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "Next__Ct6VIPool1ZP13VIHSpriteAnimi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4505,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_next_p16vistaticlighting.o",
+      "profile": "authored_cpp",
+      "sha256": "15a6415a5486d91acf97baa4fe906856046ddd96f769704c5ece5854b6e31800",
+      "source": "sources/w11-tmpl-b-next-p16vistaticlighting/next.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "Next__Ct6VIPool1ZP16VIStaticLightingi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4506,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_next_p8virefmap.o",
+      "profile": "authored_cpp",
+      "sha256": "2a9b0a79bf496954dfc3a6e3b4652b0c36561c4214980a9a6c8bf19132e77e88",
+      "source": "sources/w11-tmpl-b-next-p8virefmap/next.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "Next__Ct6VIPool1ZP8VIRefMapi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4507,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_next_p8visprite.o",
+      "profile": "authored_cpp",
+      "sha256": "3f64210710cee6c8a8d2c03d01d521317df336943940fea1e0e0246ee1979222",
+      "source": "sources/w11-tmpl-b-next-p8visprite/next.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "Next__Ct6VIPool1ZP8VISpritei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4508,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_array_init_int.o",
+      "profile": "authored_cpp",
+      "sha256": "029b76e9dd216d124e02ecbe89b797280ae3382c8bb4b49aef1ecc997acb59a6",
+      "source": "sources/w11-tmpl-b-array-init-int/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "Init__t7VIArray1Zii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4509,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_b_vector_init_scenedisplayelem.o",
+      "profile": "authored_cpp",
+      "sha256": "97a8d5534749e324c076993967744202ee4eab15e5fd15f61a50ad08dc4f0064",
+      "source": "sources/w11-tmpl-b-vector-init-scenedisplayelem/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "Init__t8VIVector1Z18VISceneDisplayElemi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4510,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_clip_entry_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "b2a75bbf57eb7c879d0a25663100894dc5cb651aa1030d01adc903e096edfddf",
+      "source": "sources/w11-tmpl-c-array-clip-entry-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z11VIClipEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4511,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_int_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "68e09d10b34422909f370abd146abb82dc457f5606a0bf866d1047cb3f1ec9e7",
+      "source": "sources/w11-tmpl-c-array-int-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Zi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4512,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_int_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "183c280c91971bde90cf5728671cf2d24d0b6f45f4773624c1fe35dfd560566f",
+      "source": "sources/w11-tmpl-c-array-int-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Zi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4513,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_plane_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a6790380eba7d1856a93759e50fa82c8ca2b0d8d0154a8d1c5206db7ee57e133",
+      "source": "sources/w11-tmpl-c-array-plane-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z7VIPlane"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4514,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_plane_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "02a956abaff91a632769bd850c703bee26dc44f3a94ce15ce6c5fdaf47e2b225",
+      "source": "sources/w11-tmpl-c-array-plane-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Z7VIPlane"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4515,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_vect3_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "60aa796236cde3b93b5cbe48f58fe8432cd9bf56df9d1368aff9e36a521eb872",
+      "source": "sources/w11-tmpl-c-array-vect3-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "__t7VIArray1Z7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4516,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_array_vect3_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "05213d3a6e16d505ef115676daa1aed89f189dea748494db0e2e2486bb06d8ca",
+      "source": "sources/w11-tmpl-c-array-vect3-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t7VIArray1Z7VIVect3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4517,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_actor_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e027822bfd24468f127a6307d1fd37b730dafcce33f9367b2423a28181091c3e",
+      "source": "sources/w11-tmpl-c-list-actor-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1Z7VIActor"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4518,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_material_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e17754cd3b0a6a36b17bb896a13068f72e05a295d3e23754436a6a3f1dc5c8e1",
+      "source": "sources/w11-tmpl-c-list-material-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1Z10VIMaterial"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4519,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_gui_page_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d08fbef4410012e3641704439524f90dff0f586eb69b89c6a08ac96e2e8c659d",
+      "source": "sources/w11-tmpl-c-list-p-gui-page-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP9VIGUIPage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4520,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_prim_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9ccebda4e1e7bd3b8aa36c5dd7f512d6047e9a956653a58b4b2c90f5c9e8b5b1",
+      "source": "sources/w11-tmpl-c-list-p-prim-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4521,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_p_surface_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a77bc89befb866fd1b71c4b999555eddb823a988e58f76c26bcad58d903f2ebc",
+      "source": "sources/w11-tmpl-c-list-p-surface-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4522,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_list_scene_occup_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "62102e29d938192e77a836a7db142d145d0ef87ea7b123b216d8820c5514082f",
+      "source": "sources/w11-tmpl-c-list-scene-occup-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t6VIList1ZQ27VIScene12VISceneOccup"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4523,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_map_dict_entry_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "6d80b319b50ec4d4a7c9c68fa1b5ffa434e99203a4f2656cff0fe6ef9de7b592",
+      "source": "sources/w11-tmpl-c-map-dict-entry-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4524,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_coll_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "9e2aec6dd3a6b3089912912096a8af9d2ff6c4db9d5762fa75023b98d77fc207",
+      "source": "sources/w11-tmpl-c-pool-p-coll-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP12VICollBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4525,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_color_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f8e0e8625f5578590cda18d269f6a2ae5658085a6c130eaf87ba06709795f215",
+      "source": "sources/w11-tmpl-c-pool-p-color-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIColorBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4526,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_hsprite_anim_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "43b60affc57b3df28d5a041ff49102b0a4a2ee23a899a9eb21ecd152e8a1ded5",
+      "source": "sources/w11-tmpl-c-pool-p-hsprite-anim-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIHSpriteAnim"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4527,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_material_pal_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "3476390fb60b7be9b6cd75e6dee31cb72a44747694593478fdd401e4a71d0235",
+      "source": "sources/w11-tmpl-c-pool-p-material-pal-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP13VIMaterialPal"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4528,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_prim_buffer_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "b4b40fcd5e1cfbfd6c3ff3ed5be6b576de80ff67a1cc0391859a1a9b53fac30d",
+      "source": "sources/w11-tmpl-c-pool-p-prim-buffer-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP12VIPrimBuffer"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4529,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_ref_map_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "40d9705d7739b7ff5ecb95d9e1760c87a8e67a35c33da2302e944227094265b9",
+      "source": "sources/w11-tmpl-c-pool-p-ref-map-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP8VIRefMap"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4530,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_rfont_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "f5974d891504cdb28c1b3822d26335469471332d696dcb12f90bd23776a634c7",
+      "source": "sources/w11-tmpl-c-pool-p-rfont-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP7VIRFont"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4531,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e1dccf59ebc4ff9a4326a9090fee4e65ce08bb977a2795014a60c02c026fd1f1",
+      "source": "sources/w11-tmpl-c-pool-p-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP8VISprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4532,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_static_lighting_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "57b679e64458664e154c094f46b3a4380a231bfe94761253c443c87cd88538fa",
+      "source": "sources/w11-tmpl-c-pool-p-static-lighting-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP16VIStaticLighting"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4533,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_p_surface_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a34d8c93402b7fbab27004a98a2160511901c1704b9d8327e07e0b571f341fb6",
+      "source": "sources/w11-tmpl-c-pool-p-surface-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1ZP9VISurface"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4534,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_pool_raster_material_lru_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d2470b8274182b9c35617bea3cebac22027f5fa6acaed836d6533ef5bc139d18",
+      "source": "sources/w11-tmpl-c-pool-raster-material-lru-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "__t6VIPool1Z19VIRasterMaterialLRU"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4535,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_vector_scene_display_elem_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "cd2175280e47c2c176e5763792b7de1a810e916b8b65ccaa8647b753f0b3f8c1",
+      "source": "sources/w11-tmpl-c-vector-scene-display-elem-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__t8VIVector1Z18VISceneDisplayElem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4536,
+      "kind": "independently_authored_source",
+      "object_name": "w11_tmpl_c_vector_scene_display_elem_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "730421f90adb04b68c30bd9a9f1090badf2d6b2b992e400313ac73b680766716",
+      "source": "sources/w11-tmpl-c-vector-scene-display-elem-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 144,
+          "name": "_$_t8VIVector1Z18VISceneDisplayElem"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4537,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dptoli.o",
+      "profile": "authored_cpp",
+      "sha256": "fb57acfb83df937d99aed50c892d7af265ff9c7756c7cb0bee96261494f6b4ec",
+      "source": "sources/w11-crt-b-dptoli/dptoli.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "dptoli"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4538,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dptoul.o",
+      "profile": "authored_cpp",
+      "sha256": "eebd308a17186aa69c595d34b1b08d04b16081ba0aead7e61d4fcafda90a0c89",
+      "source": "sources/w11-crt-b-dptoul/dptoul.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "dptoul"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4539,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_dst_word.o",
+      "profile": "authored_cpp",
+      "sha256": "c40111a3139cc43b9950e295bc08560f47e28ba5fd034c9938eba1d72fde1eff",
+      "source": "sources/w11-crt-b-dst-word/dst.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4540,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_iopnotify.o",
+      "profile": "authored_cpp",
+      "sha256": "d4ecb24cc095521388962498a6dbd54623b9c7e69934548de4534eada5b76e0a",
+      "source": "sources/w11-crt-b-iopnotify/iopnotify.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "_iopnotify"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4541,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_codec_gsm_decode.o",
+      "profile": "authored_cpp",
+      "sha256": "f0369b0b7fbf440ed132287f2e30d14e4fd46c88c38b0df77e95bd7497161270",
+      "source": "sources/w11-crt-b-lg-codec-gsm-decode/lg_codec_gsm_decode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "lgCodecGSMDecode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4542,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_codec_gsm_encode.o",
+      "profile": "authored_cpp",
+      "sha256": "80148666fbb8b0ae237a3c839b97ede6cb3186fcfcebcb6811c1c097b4fd246a",
+      "source": "sources/w11-crt-b-lg-codec-gsm-encode/lg_codec_gsm_encode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "lgCodecGSMEncode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4543,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_enum_hint.o",
+      "profile": "authored_cpp",
+      "sha256": "c7e48c50a2c85be84726b0e64fdef613ee9915b40ab60ced567b43a09eec6827",
+      "source": "sources/w11-crt-b-lg-kbd-enum-hint/lg_kbd_enum_hint.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 56,
+          "name": "lgKbdEnumHint"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4544,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_enumerate.o",
+      "profile": "authored_cpp",
+      "sha256": "4d6b6ec4586468b829996c81f0a10c76edf1ba1b8203a694142f0b39be09e633",
+      "source": "sources/w11-crt-b-lg-kbd-enumerate/lg_kbd_enumerate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 356,
+          "name": "lgKbdEnumerate"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4545,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_open.o",
+      "profile": "authored_cpp",
+      "sha256": "163d47b71461d3b4e8d2314fd68ec66d7cb9bf347ff0dad693a0e213d45ec902",
+      "source": "sources/w11-crt-b-lg-kbd-open/lg_kbd_open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 328,
+          "name": "lgKbdOpen"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4546,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_read.o",
+      "profile": "authored_cpp",
+      "sha256": "f5f2eed87e996dea5b0d24b1e1cd320f03f5aa1536ac27a5c4ba9a0c7a77bddc",
+      "source": "sources/w11-crt-b-lg-kbd-read/lg_kbd_read.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 608,
+          "name": "lgKbdRead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4547,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lg_kbd_set_repeat_rate.o",
+      "profile": "authored_cpp",
+      "sha256": "e30b1f17c245b7c7020ea38eaa0378368c44927194f5dad9ad1f57ae5f38a941",
+      "source": "sources/w11-crt-b-lg-kbd-set-repeat-rate/lg_kbd_set_repeat_rate.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "lgKbdSetRepeatRate"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4548,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lgaud_data.o",
+      "profile": "authored_cpp",
+      "sha256": "3759ea0b8a821e7c8cb45609491878a6a4e2b0ed6f4ca9da873ad97ad718e6eb",
+      "source": "sources/w11-crt-b-lgaud-data/lgaud_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4549,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_lgkbm_reader_thread_data.o",
+      "profile": "authored_cpp",
+      "sha256": "6c64351bee856d2417c0707c2a73a6cd0bbac26fa4a52e7b0029615bc1caea69",
+      "source": "sources/w11-crt-b-lgkbm-reader-thread-data/reader_thread_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4550,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_litodp.o",
+      "profile": "authored_cpp",
+      "sha256": "09615d9bb9013fce34fb6a1e2a39889e7d504868ae26300142454613c20ae569",
+      "source": "sources/w11-crt-b-litodp/litodp.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 164,
+          "name": "litodp"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4551,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_mce_intr_read_fix_align.o",
+      "profile": "authored_cpp",
+      "sha256": "d33c5aa493376e6dc99dfa87dbb4080ea690f6754601de6ad2e2c064fe3d6fdc",
+      "source": "sources/w11-crt-b-mce-intr-read-fix-align/mce_intr_read_fix_align.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "mceIntrReadFixAlign"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4552,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_b_send_to_iop.o",
+      "profile": "authored_cpp",
+      "sha256": "f70a8443f0b88291ef82997773e1caf4d88076316dbb4cc5b14aa0a2a9c2fe02",
+      "source": "sources/w11-crt-b-send-to-iop/send_to_iop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 340,
+          "name": "_send_to_iop"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4553,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_cd_st_resume.o",
+      "profile": "authored_cpp",
+      "sha256": "46c0e9ebd76f6cc111d70d3337699387201050313ae608fcdfa1f3f130968b22",
+      "source": "sources/w11-crt-c-cd-st-resume/cd_st_resume.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "sceCdStResume"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4554,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_cd_st_start.o",
+      "profile": "authored_cpp",
+      "sha256": "2ac431fc4b20a7fad04208f067c210f497513f7f2959f47463aa9ac57172b21a",
+      "source": "sources/w11-crt-c-cd-st-start/cd_st_start.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "sceCdStStart"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4555,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_open.o",
+      "profile": "authored_cpp",
+      "sha256": "74ee97d86ece56e8aa9481b3635992dcdd815ff6ecb18f5a8b860ba3b884a373",
+      "source": "sources/w11-crt-c-deci2-open/deci2_open.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "sceDeci2Open"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4556,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_poll.o",
+      "profile": "authored_cpp",
+      "sha256": "98396596d69d7aa009b0f025df4b69d4d3a90427719c7242dc6b074481c5d0e1",
+      "source": "sources/w11-crt-c-deci2-poll/deci2_poll.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "sceDeci2Poll"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4557,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_req_send.o",
+      "profile": "authored_cpp",
+      "sha256": "c168629739c52223ad1b6bb3d9c3a4abff9adae99ee65496c570ca48eb6d8c0d",
+      "source": "sources/w11-crt-c-deci2-req-send/deci2_req_send.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "sceDeci2ReqSend"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4558,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_deci2_user_area.o",
+      "profile": "authored_cpp",
+      "sha256": "2d8bd98967f25e96e176265eae2b79ab453f1f0394be1bee5fdba19f69d8fa11",
+      "source": "sources/w11-crt-c-deci2-user-area/deci2_user_area.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4559,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_gs_set_def_dbuff_dc.o",
+      "profile": "authored_cpp",
+      "sha256": "e0cc2877fc2249f64e1ff84890d01312d0c81087d2748884395db346d255776f",
+      "source": "sources/w11-crt-c-gs-set-def-dbuff-dc/gs_set_def_dbuff_dc.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 604,
+          "name": "sceGsSetDefDBuffDc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4560,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_gs_swap_dbuff_dc.o",
+      "profile": "authored_cpp",
+      "sha256": "0fbe9b98131007a7d1b8a1363563ed06d275771f8e7e4334987af49b9399c508",
+      "source": "sources/w11-crt-c-gs-swap-dbuff-dc/gs_swap_dbuff_dc.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "sceGsSwapDBuffDc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4561,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_dma_str.o",
+      "profile": "authored_cpp",
+      "sha256": "4a7a2299709dea759a9029b382fac5c4847943a042b74fec0cfc3d9875b76b0f",
+      "source": "sources/w11-crt-c-pad-get-dma-str/pad_get_dma_str.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 100,
+          "name": "scePadGetDmaStr"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4562,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_req_state.o",
+      "profile": "authored_cpp",
+      "sha256": "bbd0c6d9bace35b1300b67d3d9264bb6105f5229739d067b19b933f0ccecce96",
+      "source": "sources/w11-crt-c-pad-get-req-state/pad_get_req_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "scePadGetReqState"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4563,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_get_state.o",
+      "profile": "authored_cpp",
+      "sha256": "1c458df3223d1dfdd66dd15fa0c130d09e4828a5ecd8a64fe9fc4bbf742d99cb",
+      "source": "sources/w11-crt-c-pad-get-state/pad_get_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 136,
+          "name": "scePadGetState"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4564,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_info_act.o",
+      "profile": "authored_cpp",
+      "sha256": "ecf5eb3487b78caa60bf95eb4193c2e0386c01a2e0c3b7f43254d03b9ae81bca",
+      "source": "sources/w11-crt-c-pad-info-act/pad_info_act.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 304,
+          "name": "scePadInfoAct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4565,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_info_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "e851b256e291705a085dfbb080bae7b026a77767ed058e954a59eaefb8031f7b",
+      "source": "sources/w11-crt-c-pad-info-mode/pad_info_mode.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 340,
+          "name": "scePadInfoMode"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4566,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_pad_port_close.o",
+      "profile": "authored_cpp",
+      "sha256": "360a51a5594a39a85e36d7d7d4e488b648d945cb7d6bc4b0d044052c027eae68",
+      "source": "sources/w11-crt-c-pad-port-close/pad_port_close.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "scePadPortClose"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4567,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_scf_local_time.o",
+      "profile": "authored_cpp",
+      "sha256": "9aa309187526efbd48559285e4cda2d9a24dca5bea2134dc468c54e3d07744d7",
+      "source": "sources/w11-crt-c-scf-local-time/scf_local_time.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "sceScfGetLocalTimefromRTC"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4568,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_add_reboot_notify_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "ab34e96c5769d2e6da85ae0d9efb680d425fcf5bf73281f947e7b2cf5cab2bf2",
+      "source": "sources/w11-crt-c-sif-add-reboot-notify-handler/sif_add_reboot_notify_handler.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 180,
+          "name": "sceSifAddRebootNotifyHandler"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4569,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_m_packet_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "45c432adbab2f770052e9ed74c2020f446531391f841a2cea4b966bcfd92f60b",
+      "source": "sources/w11-crt-c-sif-m-packet-buffer/packet_buffer.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4570,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_sif_m_request_end.o",
+      "profile": "authored_cpp",
+      "sha256": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
+      "source": "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 216,
+          "name": "norrath_sif_m_request_end"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4571,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_src_word.o",
+      "profile": "authored_cpp",
+      "sha256": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
+      "source": "sources/w11-crt-c-src-word/src_word.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 4572,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_c_tty_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
+      "source": "sources/w11-crt-c-tty-handler/tty_handler.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 480,
+          "name": "sceTtyHandler"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4573,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_get_damage_multiplier.o",
+      "profile": "authored_cpp",
+      "sha256": "de7509124c526d2cc941eaf02f268b4f1c1857af6c926299503ad4aa732872f5",
+      "source": "sources/w11-front-b-get-damage-multiplier/get_damage_multiplier.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "getDamageMultiplier__4itemPQ24item11description"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4574,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_msg_inventory_exit.o",
+      "profile": "authored_cpp",
+      "sha256": "308765d5eb395c0843855fc7596cf63fee147ed0f25fc6ce4ca38875bda12d71",
+      "source": "sources/w11-front-b-msg-inventory-exit/msg_inventory_exit.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 72,
+          "name": "msgInventoryExit__Fiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4575,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_msg_hud_save_point.o",
+      "profile": "authored_cpp",
+      "sha256": "6a5f347ad1c286a531c563aa254a7967a94a7224bbb83a22f97d4e8689df0d1f",
+      "source": "sources/w11-front-b-msg-hud-save-point/msg_hud_save_point.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "msgHudSavePoint__FP9Savepoint"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4576,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_write_map.o",
+      "profile": "authored_cpp",
+      "sha256": "7f389daa1b01c10e8732797cf1db7fa26f2d1270c5e3f75f2bcb0f57e618cda2",
+      "source": "sources/w11-front-b-write-map/write_map.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "writeMap__3mapPUc"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4577,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_get_pic_size.o",
+      "profile": "authored_cpp",
+      "sha256": "62c0bdaf6752ad4fe8d6856a8d49e9bf2c1828b1f8ad1f1917e504a1a1b2673b",
+      "source": "sources/w11-front-b-get-pic-size/get_pic_size.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "getPicSize__4itemiPQ24item11descriptionPiT3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4578,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_inventory_pad_find_button.o",
+      "profile": "authored_cpp",
+      "sha256": "c8a5c11a2ad19361777c1bb940559f08a7b1d3019a657f958ea0e2fb82f32c5c",
+      "source": "sources/w11-front-b-inventory-pad-find-button/inventory_pad_find_button.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 244,
+          "name": "inventoryPadFindButton__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4579,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_object_get_save_data.o",
+      "profile": "authored_cpp",
+      "sha256": "372e7fd2756dce6181fca7b4d59a05a72756ebdf41c0508b64e9afb5554653c2",
+      "source": "sources/w11-front-b-object-get-save-data/object_get_save_data.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "objectGetSaveData__FPci"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4580,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_main_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "32cf696400ec18dd38a5ddf209e3d4b1cbba727b36f88b92d3db53d1f810f46b",
+      "source": "sources/w11-front-b-main-menu/main_menu.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1428,
+          "name": "mainMenu__Fii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4581,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_icon_name.o",
+      "profile": "authored_cpp",
+      "sha256": "c070b2ba4da98825fffe14ec1ceb795b5bb8dd5574bef6f55ee6e5f735ab6f74",
+      "source": "sources/w11-front-b-icon-name/icon_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4582,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_inventory_texture_words.o",
+      "profile": "authored_cpp",
+      "sha256": "6da00de7a5b2a68fbe2cbd4cff5e35653af8cead343d2ff335078780bdd8f2e3",
+      "source": "sources/w11-front-b-inventory-texture-words/inventory_texture_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4583,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_global_icons.o",
+      "profile": "authored_cpp",
+      "sha256": "fbf1717302cc55047b3d3c6ce6f4b55de47e5d53470005cfc0afa192c1fc64c8",
+      "source": "sources/w11-front-b-global-icons/global_icons.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4584,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_hud_bust_covered.o",
+      "profile": "authored_cpp",
+      "sha256": "2cea23a69f1e9681917303f2c3f6ec3d7ca06381a53f5490312aa27ab3d6d559",
+      "source": "sources/w11-front-b-hud-bust-covered/hud_bust_covered.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4585,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_hermite_points.o",
+      "profile": "authored_cpp",
+      "sha256": "ddbfc147c46157e36a8ceedffbc335f38445fdbe1706c245c29f79c0408807ea",
+      "source": "sources/w11-front-b-hermite-points/hermite_points.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4586,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_skelight_partlist.o",
+      "profile": "authored_cpp",
+      "sha256": "f02be8f598b198668970e75a16afd88c3edc23c7408f76de153d663d02030d7b",
+      "source": "sources/w11-front-b-skelight-partlist/skelight_partlist.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4587,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_b_level_list.o",
+      "profile": "authored_cpp",
+      "sha256": "3fabd025beab93e19bdcdd741fcf9c9ebb42b07fe3476e8451efa9351e830565",
+      "source": "sources/w11-front-b-level-list/level_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4588,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_args.o",
+      "profile": "authored_cpp",
+      "sha256": "95de965278ac92875abd08bfe5814434bb2c30e95817be7a705bddb6fea89187",
+      "source": "sources/w11-crt-a-args/args.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4589,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_builtin_vec_delete.o",
+      "profile": "authored_cpp",
+      "sha256": "adca5e9a2c6412434fe8e6a239e3091b7adc8428a741d1d80b72f53cf994eb56",
+      "source": "sources/w11-crt-a-builtin-vec-delete/builtin_vec_delete.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_delete"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4590,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_builtin_vec_new.o",
+      "profile": "authored_cpp",
+      "sha256": "f6a37dcc57e0f769e94b67497ad4abca2f913f7512020e3dcd9fee94e904dfa1",
+      "source": "sources/w11-crt-a-builtin-vec-new/builtin_vec_new.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__builtin_vec_new"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4591,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_cplus_type_matcher.o",
+      "profile": "authored_cpp",
+      "sha256": "d08778d419f59f3a52f78c28c5e0169433c3e1433575c0a87a3f16cd78db7bac",
+      "source": "sources/w11-crt-a-cplus-type-matcher/cplus_type_matcher.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "__cplus_type_matcher"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4592,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_default_tlb.o",
+      "profile": "authored_cpp",
+      "sha256": "7b214f289694808488e061d0fe91e3db46019223c486d2cab3379c66406dbbf8",
+      "source": "sources/w11-crt-a-default-tlb/default_tlb.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4593,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_dlg_check_mutex.o",
+      "profile": "authored_cpp",
+      "sha256": "721914f99b814ca4fa2877b0a6843cd6988891a6ae039310052a3b525de86944",
+      "source": "sources/w11-crt-a-dlg-check-mutex/check_mutex.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "DLG_CheckMutex__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4594,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_dtor_19_pointer_type_info.o",
+      "profile": "authored_cpp",
+      "sha256": "888120104d7aa6f5774cd1eb1de932d9da8da884a54a134a13238b614ed26289",
+      "source": "sources/w11-crt-a-dtor-19-pointer-type-info/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_19__pointer_type_info"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4595,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_extend_tlb.o",
+      "profile": "authored_cpp",
+      "sha256": "7c34a6d7fb9e3b95e27e4f08efb9c3e0451edc049ace936a5b2b84beec721b67",
+      "source": "sources/w11-crt-a-extend-tlb/extend_tlb.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4596,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_extendsfdf2.o",
+      "profile": "authored_cpp",
+      "sha256": "587c8f58219503aade9cb76eb764afe94b0a229a1d6ce9d8f749d796c7c1807f",
+      "source": "sources/w11-crt-a-extendsfdf2/extendsfdf2.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__extendsfdf2"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4597,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_floatdidf.o",
+      "profile": "authored_cpp",
+      "sha256": "8a11ea4f22e2ee32d1a436b1e7f606d50bdc8d2de1f0baaf748ff8b11b7069db",
+      "source": "sources/w11-crt-a-floatdidf/floatdidf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "__floatdidf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4598,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_floatdisf.o",
+      "profile": "authored_cpp",
+      "sha256": "e7c12fb475039e02703a18c5a9c264177f68bbb42de439de11de5aefbe94bccd",
+      "source": "sources/w11-crt-a-floatdisf/floatdisf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 220,
+          "name": "__floatdisf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4599,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_flush_iop_command.o",
+      "profile": "authored_cpp",
+      "sha256": "6aa472f82c9699759ad27b4a39d73578206e5a541f6734c038d9a413d67c8b73",
+      "source": "sources/w11-crt-a-flush-iop-command/flush_iop_command.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 160,
+          "name": "FlushIopCommand__Fb"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4600,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_get_eh_context.o",
+      "profile": "authored_cpp",
+      "sha256": "4d551bd32a269de16dde04fa2c56f0c8b499aea679e4902bda6a059d1258a2a4",
+      "source": "sources/w11-crt-a-get-eh-context/get_eh_context.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "__get_eh_context"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4601,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_get_eh_info.o",
+      "profile": "authored_cpp",
+      "sha256": "d65ffdd7b7e1f90aefa989b624e06c9f06126b5228375b96435507ae29bc808e",
+      "source": "sources/w11-crt-a-get-eh-info/get_eh_info.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 40,
+          "name": "__get_eh_info"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4602,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_ieee754_acos.o",
+      "profile": "authored_cpp",
+      "sha256": "a8d7540924c8bfa34fe35c085fc9eabf1673a8006d46edbcac5aeb55eb14aea8",
+      "source": "sources/w11-crt-a-ieee754-acos/ieee754_acos.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 488,
+          "name": "rational_parts"
+        },
+        {
+          "compiled_body_bytes": 832,
+          "name": "__ieee754_acos"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4603,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_ieee754_acosf.o",
+      "profile": "authored_cpp",
+      "sha256": "e16b3dceb488057cec576ccf8ea296cb9076013d3fd852750f4075854c378bfd",
+      "source": "sources/w11-crt-a-ieee754-acosf/ieee754_acosf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 980,
+          "name": "__ieee754_acosf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4604,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_ieee754_atan2f.o",
+      "profile": "authored_cpp",
+      "sha256": "9a1b37257f6be3eaa42c3ba1adc59117083cc4d977c4678a8dcbef188bd06cc5",
+      "source": "sources/w11-crt-a-ieee754-atan2f/ieee754_atan2f.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 456,
+          "name": "__ieee754_atan2f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4605,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_ieee754_fmodf.o",
+      "profile": "authored_cpp",
+      "sha256": "93ffdd8b55a825ba7f36b14fe165fe23d10a324b256cec708ec86e1d3e824e0e",
+      "source": "sources/w11-crt-a-ieee754-fmodf/ieee754_fmodf.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 384,
+          "name": "__ieee754_fmodf"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4606,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_kbm_reader_thread.o",
+      "profile": "authored_cpp",
+      "sha256": "fe16976a29e1173129f48adcf0dcdc4833ccb08a5f49ac2fe63cf8e40220e1c6",
+      "source": "sources/w11-crt-a-kbm-reader-thread/kbm_reader_thread.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 328,
+          "name": "_ZL12poll_devicesPhS_.constprop.0"
+        },
+        {
+          "compiled_body_bytes": 648,
+          "name": "KbmReaderThread"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4607,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_kernel_tlb.o",
+      "profile": "authored_cpp",
+      "sha256": "9699c83b2e381fbcffcbd6670f28f47783568a06110b5e59c3aa0ec608c36bf7",
+      "source": "sources/w11-crt-a-kernel-tlb/kernel_tlb.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4608,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_load_srs_server.o",
+      "profile": "authored_cpp",
+      "sha256": "6b641d9613e10356206198922fb38a07b26993abb39baad5b0b88d60cea4fa59",
+      "source": "sources/w11-crt-a-load-srs-server/load_srs_server.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 296,
+          "name": "LoadSRSServer__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4609,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_malloc_current_mallinfo.o",
+      "profile": "authored_cpp",
+      "sha256": "42b88969c074370c0937ef1979d25a46b6c4feec37729cb2ee6a6055e5b4b529",
+      "source": "sources/w11-crt-a-malloc-current-mallinfo/malloc_current_mallinfo.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4610,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_memcpy_d.o",
+      "profile": "authored_cpp",
+      "sha256": "d4d5668cd26474f5278dd15e5eefe4164dee73d17c0267f415f0cc5afb14a5ba",
+      "source": "sources/w11-crt-a-memcpy-d/memcpy_d.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 104,
+          "name": "MemcpyD"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4611,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_pack_f.o",
+      "profile": "authored_cpp",
+      "sha256": "8fd0c9fcabdcce63514666b082c108cbb6ab1002a93b709e3b988576e982032e",
+      "source": "sources/w11-crt-a-pack-f/pack_f.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "__pack_f"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4612,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_pad_data.o",
+      "profile": "authored_cpp",
+      "sha256": "9bc8c1194f2e4f2111957717993237def6cf61e1741c717860bd2255cf945d2d",
+      "source": "sources/w11-crt-a-pad-data/pad_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.hpp",
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 4613,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_queue_init.o",
+      "profile": "authored_cpp",
+      "sha256": "bf8f0a2605dae397ef039fdaaaee037609a52e50677b9a1bef810c991d297504",
+      "source": "sources/w11-crt-a-queue-init/queue_init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "QueueInit"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 4614,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_queue_peek_read_done.o",
+      "profile": "authored_cpp",
+      "sha256": "d154c5b14d3ee0f2509a357b21b707d0866b8ee68749a9f8c4fcc80a5b4478e4",
+      "source": "sources/w11-crt-a-queue-peek-read-done/queue_peek_read_done.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "QueuePeekReadDone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4615,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_surf_cache.o",
+      "profile": "authored_cpp",
+      "sha256": "88d824d46aa355b93d9a3ee8e30e940387e0df9628af4025e9405fcd48788088",
+      "source": "sources/w11-crt-a-surf-cache/surf_cache.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4616,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_tf_19_pointer_type_info.o",
+      "profile": "authored_cpp",
+      "sha256": "75c8a9fb09d3a4d324d9ac71ccc751773cf3738f317f3ebc8ce21b71bdbb4e32",
+      "source": "sources/w11-crt-a-tf-19-pointer-type-info/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf19__pointer_type_info"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4617,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_ti_spell.o",
+      "profile": "authored_cpp",
+      "sha256": "ae8f783c3d724265660d5f0e57d4e2747df65000a8daffe69cbd3791593664e8",
+      "source": "sources/w11-crt-a-ti-spell/ti_spell.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4618,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_tlb_info.o",
+      "profile": "authored_cpp",
+      "sha256": "a1fc9838ac06c7181b098f2578ae5520eac60cdd2acbb0d4924ee8011c1e64ec",
+      "source": "sources/w11-crt-a-tlb-info/tlb_info.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.hpp",
+        "sources/w9-startup-crt-f-tty-state/tty_state.hpp"
+      ],
+      "input_order": 4619,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_tty_queue_storage.o",
+      "profile": "authored_cpp",
+      "sha256": "3364a32884aa5916afa294dd0ccb1263c9680091c8a03f7a106ca9067de4393d",
+      "source": "sources/w11-crt-a-tty-queue-storage/tty_queue_storage.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4620,
+      "kind": "independently_authored_source",
+      "object_name": "w11_crt_a_vieedmasync.o",
+      "profile": "authored_cpp",
+      "sha256": "be6cbf3d40c85e2298911cea00c3dcd2366863e2d15abadf0c7635e827906414",
+      "source": "sources/w11-crt-a-vieedmasync/vieedmasync.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "VIEEDMASync__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4621,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_camera_words.o",
+      "profile": "authored_cpp",
+      "sha256": "bbfe30d13112d3c249aee8161a0967713ff68527c2ca2d942b78dbf56f8edf92",
+      "source": "sources/w11-front-c-camera-words/camera_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4622,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_inventory_texture_words.o",
+      "profile": "authored_cpp",
+      "sha256": "62a2b298c61b32852db402bf66f8bc8556bb89b76bdd317f5687fcaf6d66d28f",
+      "source": "sources/w11-front-c-inventory-texture-words/inventory_texture_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4623,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_jump_start_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "f68b93a7ab3f1bd1dde36d9085ac9a1d91a7709e69a0227be53cc83c1ad1bf3a",
+      "source": "sources/w11-front-c-jump-start-pos/jump_start_pos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4624,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_light_shadow_words.o",
+      "profile": "authored_cpp",
+      "sha256": "937d7e6878b27b0155b84401fd5b739c469317fd400986abe2203c1e6ae4b923",
+      "source": "sources/w11-front-c-light-shadow-words/light_shadow_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4625,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_play_sound_group.o",
+      "profile": "authored_cpp",
+      "sha256": "2086279d0cfe41d362d5a5bff3a9398255ee652a4bbe9f9db3f319a18fa90bd4",
+      "source": "sources/w11-front-c-play-sound-group/play_sound_group.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 548,
+          "name": "playSoundGroup__FP15AnimationHeaderiiP6Point3"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4626,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_pm_list_words.o",
+      "profile": "authored_cpp",
+      "sha256": "ac39084a9d378d19139947a650e1caba76a00e3302d741da2ecd408a1b512a42",
+      "source": "sources/w11-front-c-pm-list-words/pm_list_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4627,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_sound_get_dialog_size.o",
+      "profile": "authored_cpp",
+      "sha256": "6b43328850d5e6b01d4dcfdb0b127ac7a4e3184d424ffaf250900bb104a76de0",
+      "source": "sources/w11-front-c-sound-get-dialog-size/sound_get_dialog_size.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 128,
+          "name": "soundGetDialogSize__Fi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4628,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_sound_limit_words.o",
+      "profile": "authored_cpp",
+      "sha256": "5a1becee8dcf39ad80461b2ef4c5b371f77c1f0c89f971d19e9a8e073358a8b7",
+      "source": "sources/w11-front-c-sound-limit-words/sound_limit_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4629,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_tex_clear_always_loaded.o",
+      "profile": "authored_cpp",
+      "sha256": "eaefda566476637ec004299a1128c00bd4e29e9fb773133ef15411c93744c24b",
+      "source": "sources/w11-front-c-tex-clear-always-loaded/tex_clear_always_loaded.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "texClearAlwaysLoadedPages__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4630,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_tex_load_always_loaded.o",
+      "profile": "authored_cpp",
+      "sha256": "bf71936a62cd8dc336e89fd600db6099327c0680c681cafa500b937b623a57e5",
+      "source": "sources/w11-front-c-tex-load-always-loaded/tex_load_always_loaded.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 460,
+          "name": "texLoadAlwaysLoadedPages__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4631,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_vehicle_shite.o",
+      "profile": "authored_cpp",
+      "sha256": "a591931d7c9b9bf9ffe212e14d244db1db996e2a53013a945458182e586be9bf",
+      "source": "sources/w11-front-c-vehicle-shite/vehicle_shite.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4632,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_vi_words.o",
+      "profile": "authored_cpp",
+      "sha256": "079442f4853ffdbbb96d0d3206e47c1fe97bc0539c6f2dcbd67debe32d4b7375",
+      "source": "sources/w11-front-c-vi-words/vi_words.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4633,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_c_wavemaker_range.o",
+      "profile": "authored_cpp",
+      "sha256": "d8919ffe426d2d1d48f397c69d5b5851fbad2fa7ad0d82b6031b6b29444831e5",
+      "source": "sources/w11-front-c-wavemaker-range/wavemaker_range.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4634,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_connect_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "64aa1abf3b965752ab0b22b4b7a12126e87e5120ba58aac8717dbe263fbccdab",
+      "source": "sources/w11-vi-misc-b-connect-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "__12VIWndConnect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4635,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_connect_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "e91d06ea7b788f2a8a3c6bbb78dcc728b4f26b44cec4b82b760d3500f910179d",
+      "source": "sources/w11-vi-misc-b-connect-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "_$_12VIWndConnect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4636,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_connect_end.o",
+      "profile": "authored_cpp",
+      "sha256": "5f336ca5b3b8e7a7b1e05c5188005260646c3c8d38eaaeb4ac1699926aa4b5b8",
+      "source": "sources/w11-vi-misc-b-connect-end/end_connect.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "EndConnect__12VIWndConnect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4637,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_connect_free.o",
+      "profile": "authored_cpp",
+      "sha256": "9923a1028cde1a3df2fe316655e0bf5d563ea19d8835472bc2c31fc984145dbb",
+      "source": "sources/w11-vi-misc-b-connect-free/free.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 36,
+          "name": "Free__12VIWndConnect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4638,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_connect_init.o",
+      "profile": "authored_cpp",
+      "sha256": "be4b0d75c034a3b135bb4663e0bdfb8f18b9d58b1daaa4be630c77fe52beed48",
+      "source": "sources/w11-vi-misc-b-connect-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 96,
+          "name": "Init__12VIWndConnect"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4639,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_edit_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "5707be885871c9dd4e84980e7794d177ddaac0a9581e93111d42969c9f399e06",
+      "source": "sources/w11-vi-misc-b-edit-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 264,
+          "name": "__9VIWndEdit"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4640,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_edit_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "a1caeddd7590cf4101b139872634bc7cb86e6e93a1f860aa5618bdf8afec0d8d",
+      "source": "sources/w11-vi-misc-b-edit-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 180,
+          "name": "_$_9VIWndEdit"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4641,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_guiobject_alpha_fill_material.o",
+      "profile": "authored_cpp",
+      "sha256": "2a03538e7ed6fb19e9c1754f3146b35159abee7cb67fb394d2c4fd6aa6bc86de",
+      "source": "sources/w11-vi-misc-b-guiobject-alpha-fill-material/alpha_fill_material.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4642,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_mcerr_on_message.o",
+      "profile": "authored_cpp",
+      "sha256": "1eb13eb6e92e1085ec48e72617e5ffb3a83937af03d68db1fe617909eb8a54ca",
+      "source": "sources/w11-vi-misc-b-mcerr-on-message/on_message.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "OnMessage__10VIWndMcErrP5VIWndiii"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4643,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_message_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d0c12802ecbaa267193ce07ce866af56a5bdbf710e37784316ccb0bad8d72932",
+      "source": "sources/w11-vi-misc-b-message-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "__12VIWndMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4644,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_message_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "9ce1875ba0d2d700384597c76ba77db2afb57e1225ccfbcdc5037409f2765a5c",
+      "source": "sources/w11-vi-misc-b-message-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_12VIWndMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4645,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_message_free.o",
+      "profile": "authored_cpp",
+      "sha256": "8c94601951788fcfd35dd3cf020db7cdd1f76294d27f74f7c900abf4845fc0cd",
+      "source": "sources/w11-vi-misc-b-message-free/free.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "Free__12VIWndMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4646,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_message_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b60e920ab3c148cfb82a45cab2dbcc476bc2e48925ed27a490b060d2541f09b4",
+      "source": "sources/w11-vi-misc-b-message-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "Init__12VIWndMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4647,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_options_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "31e805a58b98288c310ffdbede1579f0f39763f973fabbef4ac6457ad2418da0",
+      "source": "sources/w11-vi-misc-b-options-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__12VIWndOptions"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4648,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_options_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "7614237b2681e0e9d7a8c191697f2feeb69b95ed6b04d626e5d35fb774b66b18",
+      "source": "sources/w11-vi-misc-b-options-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "_$_12VIWndOptions"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4649,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_options_free.o",
+      "profile": "authored_cpp",
+      "sha256": "2199a136f18558688e20ebc98c747460649622b3e02dc9d6907f8b198a3ed6c6",
+      "source": "sources/w11-vi-misc-b-options-free/free.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "Free__12VIWndOptions"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4650,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_readmessage_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "7b707682d857aa1f389db003e83f731d71abb0cbdd2e8632aed94773186318c1",
+      "source": "sources/w11-vi-misc-b-readmessage-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 68,
+          "name": "__16VIWndReadMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4651,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_readmessage_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "ada9696400284b4e4b93dc1be4de0c3716d18884cca7a81aeac13c1cfdcc6a07",
+      "source": "sources/w11-vi-misc-b-readmessage-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_16VIWndReadMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4652,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_readmessage_init.o",
+      "profile": "authored_cpp",
+      "sha256": "c4cbdc4b0586c6cc47e77a3b4fd4d4bda22cbb960ee7585cefbbc84705abf00f",
+      "source": "sources/w11-vi-misc-b-readmessage-init/init.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "Init__16VIWndReadMessage"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4653,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_uiwindow_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "e20284f7b85edb942f97aa736979242ffcabb9643ce718d15e6d9f3b0c6ef2d9",
+      "source": "sources/w11-vi-misc-b-uiwindow-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 84,
+          "name": "__10VIUIWindow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4654,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_uiwindow_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "542c8114f8dfbe1d994b5ad8ef2ab405f54ded770cd718baf8894aad93b8d7c7",
+      "source": "sources/w11-vi-misc-b-uiwindow-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 32,
+          "name": "_$_10VIUIWindow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4655,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_uiwindow_reload_words.o",
+      "profile": "authored_cpp",
+      "sha256": "340855d0f2c9755cc7e33e7c5556a82f07f994ff1d444ed54c7a9094ec27543f",
+      "source": "sources/w11-vi-misc-b-uiwindow-reload-words/reload_words.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 80,
+          "name": "ReloadWords__4VIUI"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4656,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_dnas.o",
+      "profile": "authored_cpp",
+      "sha256": "2c472ed0f13c15598c5f589916bc693910fd582d9cab0b9fb01cc3a163b497fd",
+      "source": "sources/w11-vi-misc-b-vt-dnas/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4657,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_eula.o",
+      "profile": "authored_cpp",
+      "sha256": "c59049cc5af735d1e660fed3e94c26b5be519651b887da1203ccf98c8c9d013d",
+      "source": "sources/w11-vi-misc-b-vt-eula/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4658,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_genericrenderer.o",
+      "profile": "authored_cpp",
+      "sha256": "6aca1b7ea43a4533b5a64c3a37a5eff02b011db2d7cbeba8e4771db4319a96f1",
+      "source": "sources/w11-vi-misc-b-vt-genericrenderer/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4659,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_legal.o",
+      "profile": "authored_cpp",
+      "sha256": "a234abaf7b8d396ad8d4439ff31f5f0674c780a2dd01d0b3bc36a36838084184",
+      "source": "sources/w11-vi-misc-b-vt-legal/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4660,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_patcher.o",
+      "profile": "authored_cpp",
+      "sha256": "0d4f9f182165abdb6d13f0903696943d39df42db817534461c5d711ecbd33259",
+      "source": "sources/w11-vi-misc-b-vt-patcher/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4661,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_splash.o",
+      "profile": "authored_cpp",
+      "sha256": "df0b5e4b83e74c8941669b89fe2ecbe25a36616df6bf91b98203a01b06382bc3",
+      "source": "sources/w11-vi-misc-b-vt-splash/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4662,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_vt_windowmanager.o",
+      "profile": "authored_cpp",
+      "sha256": "ceb9ab478f3522fcb2089846fa1cb072f965fa793ad19eddebd8fbb9c68662b3",
+      "source": "sources/w11-vi-misc-b-vt-windowmanager/vtable.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4663,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_wnd_add_child.o",
+      "profile": "authored_cpp",
+      "sha256": "a0a3bec9986dc1b8fbf6646cb497aa9314dee459a995e2daf06d03bc2ac5fe59",
+      "source": "sources/w11-vi-misc-b-wnd-add-child/add_child.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "AddChild__5VIWndP5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4664,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_wnd_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "3c3777bacd9ad3db9c3b560168180e8be2631dd9f806ddab14e76e4f68650191",
+      "source": "sources/w11-vi-misc-b-wnd-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "__5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4665,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_wnd_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "1c9448b9d7741842c603b8852d229597218f75d7852b5b60e699a9cbe55aad07",
+      "source": "sources/w11-vi-misc-b-wnd-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 256,
+          "name": "_$_5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4666,
+      "kind": "independently_authored_source",
+      "object_name": "w11_vi_misc_b_wnd_remove_child.o",
+      "profile": "authored_cpp",
+      "sha256": "4dd29023061f0d7d60a63c48da378512f896cd7a4f505e266df20fb38dba1e81",
+      "source": "sources/w11-vi-misc-b-wnd-remove-child/remove_child.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "RemoveChild__5VIWndP5VIWnd"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4667,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_gold.o",
+      "profile": "authored_cpp",
+      "sha256": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
+      "source": "sources/w11-front-a-display-gold/display_gold.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 632,
+          "name": "displayGold__FP12playerStructP12screenStruct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4668,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_items.o",
+      "profile": "authored_cpp",
+      "sha256": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
+      "source": "sources/w11-front-a-display-items/display_items.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "displayItems__FiiP12screenStructi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4669,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_weight.o",
+      "profile": "authored_cpp",
+      "sha256": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
+      "source": "sources/w11-front-a-display-weight/display_weight.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 360,
+          "name": "displayWeight__FP12playerStructP12screenStruct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4670,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_floor_get_save_info.o",
+      "profile": "authored_cpp",
+      "sha256": "692b59da9b638bfcae490954f6f83bf590f1f830f5ba25700253d529317699bc",
+      "source": "sources/w11-front-a-floor-get-save-info/floor_get_save_info.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 560,
+          "name": "floorGetSaveInfo__FPci"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4671,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_hud_run_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "1f8c412ac25b5722a2800d2dec84e494352d864538a04a48f642c20386685699",
+      "source": "sources/w11-front-a-hud-run-frame/hud_run_frame.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1180,
+          "name": "HUDRunFrame__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4672,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_hud_draw_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "49456b26688c6022f57a393e8e013281ae0ecf6c2b8a8cbec7291e6678650f3b",
+      "source": "sources/w11-front-a-hud-draw-frame/hud_draw_frame.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 616,
+          "name": "HUDDrawFrame__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4673,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_do_helpful_message.o",
+      "profile": "authored_cpp",
+      "sha256": "24e4af7d477d1573d2df63227b08f5d764cc2bd55a402d26090b2569abe466bf",
+      "source": "sources/w11-front-a-do-helpful-message/do_helpful_message.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "_ZN12_GLOBAL__N_1L6formatEPtPKcffffff"
+        },
+        {
+          "compiled_body_bytes": 172,
+          "name": "_ZN12_GLOBAL__N_1L9printTextEPtiii"
+        },
+        {
+          "compiled_body_bytes": 116,
+          "name": "_ZN12_GLOBAL__N_1L6borderEPti"
+        },
+        {
+          "compiled_body_bytes": 2148,
+          "name": "doHelpfulMessage__FiiP12screenStructiiPQ24item11description"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4674,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "2e0118d90f69f2cd6bf8db2ad99b67447665257b96ecdad2640cbcb919468018",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_483f34.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4675,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "3da83bf5d3dea41c8356e1c172900accb14568cd0274bf7c302976f454dbb8b8",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_4848fc.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4676,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "f89013a0bc36287a4f5c04220b3f352551f2b0698cb5f1591cd290f1e87e46ee",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_484900.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4677,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "8178f00d567fa209840b7ace1113653333f520b6a2c4d6379f7dbfc1be9bcaf6",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_484b08.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4678,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "2cdff2ed8b042ddbbc91ed19675710ec165c240574986ff507a75f5f59480125",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_4858e0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4679,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "b78d01a5818fea757d4f0d2f9b2e5b766e7cd8bd55d31d1eb2c942727c6e868c",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_6ca800.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4680,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "1de3c3b709c095d041453f699c29939feb41805d8b158dfe157cbcdec39f1e62",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_8d5b58.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4681,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "6ed45214062816efd5d24b04eaf9ae0c7d955759c4cb3d92b85c0f142d6664dc",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_8d5fd0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4682,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cleric_root.o",
+      "profile": "authored_cpp",
+      "sha256": "2a8b0f2b55212c97cec0f6d71d46678dd54ab5fb53a71ea9768f4e13d813c21c",
+      "source": "sources/w11-ctor-b-skill-cleric-root/skill_cleric_root.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillClericRoot"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4683,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cold_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "5a36ddf4978fc411f5bfbd63085d472c1de50f95b6b477f13f9fa947828d37e4",
+      "source": "sources/w11-ctor-b-skill-cold-arrow/skill_cold_arrow.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__14SkillColdArrow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4684,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "4957855f0ef8525eee4a51400d220f1cbc916b04f76152f3dbfd061a28f024ef",
+      "source": "sources/w11-ctor-b-skill-cold-weapons/skill_cold_weapons.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillColdWeapons"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4685,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cone_of_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "eea83ff8cf770f5517df3cabbf7c1f4ee1b947bab97f5e82d70090319f52f6d6",
+      "source": "sources/w11-ctor-b-skill-cone-of-fire/skill_cone_of_fire.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__15SkillConeOfFire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4686,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cone_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "d8f94e71c0a002008356f9ad8ebf9040a6fec6b26ae01889cedbe5727d28415f",
+      "source": "sources/w11-ctor-b-skill-cone-of-frost/skill_cone_of_frost.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__16SkillConeOfFrost"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4687,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_convert_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "5933c4a2114c04dd5fb3799a000ed8548dc434bdfd19b285610c523ce80155c4",
+      "source": "sources/w11-ctor-b-skill-convert-enemy/skill_convert_enemy.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__17SkillConvertEnemy"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4688,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_convert_undead.o",
+      "profile": "authored_cpp",
+      "sha256": "2ead48393a5b1b2eb5cb099889f9f6fece6a548a2067d932455b8f23bc1b63ba",
+      "source": "sources/w11-ctor-b-skill-convert-undead/skill_convert_undead.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__18SkillConvertUndead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4689,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "bedf6fc00a5d72ca055d15da32723afed3fbd379ce2de7b8ad289a54ad2b0c20",
+      "source": "sources/w11-ctor-b-skill-critical-hit/skill_critical_hit.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillCriticalHit"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4690,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_cyclone.o",
+      "profile": "authored_cpp",
+      "sha256": "c5b12ccf8967cf38eb083fedea90bcbba47c6adeaa45158b1a690f6c95b168ff",
+      "source": "sources/w11-ctor-b-skill-cyclone/skill_cyclone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__12SkillCyclone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4691,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_darkness.o",
+      "profile": "authored_cpp",
+      "sha256": "1a084ac0407deff697f643f50a2ea0d677aa1a7a1306567a1cf4f53b74782e34",
+      "source": "sources/w11-ctor-b-skill-darkness/skill_darkness.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__13SkillDarkness"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4692,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_disease_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "d279e8ffcdecaa67e4b1243227786aaa67b797722d4586383d0241b08df03a4d",
+      "source": "sources/w11-ctor-b-skill-disease-bolt/skill_disease_bolt.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillDiseaseBolt"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4693,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_disease_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "6ffdd437e0568d21c25fc993438dc7f27041589f5d16b6f854ae4396cae1474f",
+      "source": "sources/w11-ctor-b-skill-disease-shield/skill_disease_shield.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__18SkillDiseaseShield"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4694,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "57c6aa013d64c958d16bb03729b9c5fec70e04126ddee7f939dbca787e8b89d1",
+      "source": "sources/w11-ctor-b-skill-disease-trail/skill_disease_trail.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__17SkillDiseaseTrail"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4695,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_dismiss_undead.o",
+      "profile": "authored_cpp",
+      "sha256": "81362b9b7f48a5b14901ba418290469cd65203c6af97d4bee2e86bfc02c5d797",
+      "source": "sources/w11-ctor-b-skill-dismiss-undead/skill_dismiss_undead.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__18SkillDismissUndead"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4696,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_dodge.o",
+      "profile": "authored_cpp",
+      "sha256": "2cede65d3f8e115e06dfcc5746ab7d6b02748707f4e186c2b8648298f5768b4a",
+      "source": "sources/w11-ctor-b-skill-dodge/skill_dodge.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__10SkillDodge"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4697,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_entangle.o",
+      "profile": "authored_cpp",
+      "sha256": "9b397edc71f921a2e701c7499d174ead8e206d20065c57662b668773c154e907",
+      "source": "sources/w11-ctor-b-skill-entangle/skill_entangle.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__13SkillEntangle"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4698,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_explode_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "d6ac90ffe2345457468447637431e77d78a80a7ec5a38c3bbf88ed5cffb04ffe",
+      "source": "sources/w11-ctor-b-skill-explode-arrow/skill_explode_arrow.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__17SkillExplodeArrow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4699,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_fire_arrow.o",
+      "profile": "authored_cpp",
+      "sha256": "3e8a27a12d285eee4a22db5ab5bbd86634b131b11807566c9755cb1f2901da8d",
+      "source": "sources/w11-ctor-b-skill-fire-arrow/skill_fire_arrow.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__14SkillFireArrow"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4700,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "bebef43b67511be955c81cf39364d89fa93da34b4acb089d4d3d8ca24790d7e2",
+      "source": "sources/w11-ctor-b-skill-fire-flares/skill_fire_flares.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillFireFlares"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4701,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_fire_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "c084a0ff7db145694f5aee8a9e41ecb1057ee0d0159bd08f9151a8ac022fd9aa",
+      "source": "sources/w11-ctor-b-skill-fire-storm/skill_fire_storm.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__14SkillFireStorm"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4702,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "94d2e5c218891f19b616db1f0aa747209121d85188df5ac0902aa1fcd3b2e1c1",
+      "source": "sources/w11-ctor-b-skill-fire-weapons/skill_fire_weapons.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillFireWeapons"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4703,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_frost_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "954ba0168cc49f22aa23da24f0ad8f2b677bf75ce4c36807aed13be7d9f2b9ee",
+      "source": "sources/w11-ctor-b-skill-frost-storm/skill_frost_storm.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillFrostStorm"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4704,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_ground_pound.o",
+      "profile": "authored_cpp",
+      "sha256": "7230bac365cc92e7d8345beb62e9394d343aa5b6a899056cb2705d2867c7a446",
+      "source": "sources/w11-ctor-b-skill-ground-pound/skill_ground_pound.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__16SkillGroundPound"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4705,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_hammer_of_wrath.o",
+      "profile": "authored_cpp",
+      "sha256": "7bb6ab1319f24a355af966c393dad0d8925af469d13c1eda3e4fe27afb5e1962",
+      "source": "sources/w11-ctor-b-skill-hammer-of-wrath/skill_hammer_of_wrath.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__18SkillHammerOfWrath"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4706,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_harm_touch.o",
+      "profile": "authored_cpp",
+      "sha256": "8e16200fb43bf556d24057070202c48c36e7a1b665536640440a0a03dc39983f",
+      "source": "sources/w11-ctor-b-skill-harm-touch/skill_harm_touch.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 48,
+          "name": "__14SkillHarmTouch"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4707,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "1d406ae267bf728d17b8ac9e2ca82df852c75ca4d7de15d2fc51caa1d54285e4",
+      "source": "sources/w11-ctor-b-skill-healing/skill_healing.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__12SkillHealing"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4708,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_holy_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "6109c7804ae9f6b6f5842aab44bfab377e428fcc9592c280b5618290ec96f67b",
+      "source": "sources/w11-ctor-b-skill-holy-shield/skill_holy_shield.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillHolyShield"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4709,
+      "kind": "independently_authored_source",
+      "object_name": "w11_ctor_b_skill_holy_strike.o",
+      "profile": "authored_cpp",
+      "sha256": "7f53def9be04037b3da6f5a8e4d2f154d1703f5449f095b4ec1dc1003aaac5be",
+      "source": "sources/w11-ctor-b-skill-holy-strike/skill_holy_strike.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 44,
+          "name": "__15SkillHolyStrike"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -64831,7 +68686,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "bd5f3a8e6dd581bd9f0588f7e5e2f87858ae3368ca4fe6e06a3f76ac88455bd5",
+  "snapshot_sha256": "a30e538de51585e24e21d89e2093ebb7a968ca8886f7f3f968e29fef69da21be",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

@@ -8357,3 +8357,268 @@ Closed: `_$_12UndeadKnight`, `_$_17UndeadKnightClone`, `_$_7Ulthork`, `_$_7Vampi
 
 Opened: `__17UndeadKnightCloneG6Point3sPPc`, `_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`
 - 2026-10-13 04:15 CDT — agents/w10-actor-o — 957 unresolved imports
+
+## Integrator re-check (2026-10-13 04:26 CDT)
+
+Re-ran on the shared branch at `1f3895b9` before any merge: 214 tool tests passed, the
+snapshot check passed (4454 authored inputs), and the default authored partial build
+(EE toolchain, no Newlib) linked 3401 function bodies, zero COMMON, **957** unresolved
+imports. The recorded count reproduces and no recent merge broke a repo rule. The four
+unmerged worker branches are at the tips recorded above (`w10-actor-i` `e1ad5dba`,
+`w10-startup-d` `cb1c9c26`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a`
+`adff0bdc`), so their rejections stand: none has a committed check that could fail.
+Nothing was merged.
+- 2026-10-13 04:26 CDT — integrator re-check, nothing merged — 957 unresolved imports
+
+## agents/w11-tmpl-a
+
+Merged (merge commit, branch tip `90f391ec`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each, with fresh `input_order` values 4456 through 4482. All 27 host checks build
+and exit 0 here (x86_64, `-w`, `-no_pie`, pagezero 0x1000, as the notes direct). The worker's
+private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is
+claimed. The worker ran no full build; this integration did: 4481 authored inputs, 3428 function
+bodies, zero COMMON, 214 tool tests passed. Per-unit object hashes in the snapshot are the ones
+the full build produced. The plan object names are made unique from the component directory
+(the notes' `clear.o`/`init.o` repeat). No EE or game execution. Every unit has a host check.
+
+The worker's closed list (27) and opened list (13) both reproduce exactly.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 943 |
+| Closed | 27 |
+| Opened | 13 |
+
+Closed: `Begin__Ct6VIList1ZP9VIGUIPage`, `Begin__Ct6VIPool1ZP13VIHSpriteAnim`, `Begin__Ct6VIPool1ZP16VIStaticLighting`, `Begin__Ct6VIPool1ZP8VIRefMap`, `Begin__Ct6VIPool1ZP8VISprite`, `Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Clear__t6VIList1Z7VIActor`, `Clear__t6VIList1ZQ27VIScene12VISceneOccup`, `Clear__t6VIPool1ZP13VIHSpriteAnim`, `Clear__t6VIPool1ZP16VIStaticLighting`, `Clear__t6VIPool1ZP8VIRefMap`, `Clear__t6VIPool1ZP8VISprite`, `Clear__t7VIArray1Zi`, `Clear__t8VIVector1Z18VISceneDisplayElem`, `End__Ct6VIList1ZP9VIGUIPage`, `End__Ct6VIPool1ZP13VIHSpriteAnim`, `End__Ct6VIPool1ZP16VIStaticLighting`, `End__Ct6VIPool1ZP8VIRefMap`, `End__Ct6VIPool1ZP8VISprite`, `Erase__t6VIList1ZP9VIGUIPagei`, `Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Init__t6VIList1Z7VIActor`, `Init__t6VIList1ZQ27VIScene12VISceneOccup`, `Init__t6VIPool1ZP13VIHSpriteAnimi`, `Init__t6VIPool1ZP16VIStaticLightingi`, `Init__t6VIPool1ZP8VIRefMapi`, `Init__t6VIPool1ZP8VISpritei`
+
+Opened: `Allocate__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Allocate__t6VIPool1ZP13VIHSpriteAnim`, `Allocate__t6VIPool1ZP16VIStaticLighting`, `Allocate__t6VIPool1ZP8VIRefMap`, `Allocate__t6VIPool1ZP8VISprite`, `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__t6VIPool1ZP13VIHSpriteAnim`, `DestroyPool__t6VIPool1ZP16VIStaticLighting`, `DestroyPool__t6VIPool1ZP8VIRefMap`, `DestroyPool__t6VIPool1ZP8VISprite`, `DestroyPool__t7VIArray1Zi`, `DestroyPool__t8VIVector1Z18VISceneDisplayElem`, `_$_7VIActor`
+- 2026-10-13 04:56 CDT — agents/w11-tmpl-a — 943 unresolved imports
+
+## agents/w11-tmpl-b
+
+Merged (merge commit, branch tip `68610a73`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each, with fresh `input_order` values 4483 through 4509. All 27 host checks build
+and exit 0 here (x86_64, `-w`, `-no_pie`, pagezero 0x1000). The worker's private paired runs were
+not re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran
+no full build; this integration did: 4508 authored inputs, 3455 function bodies, zero COMMON, 214
+tool tests passed. Per-unit object hashes in the snapshot are the ones the full build produced.
+No EE or game execution. Every unit has a host check.
+
+The worker's closed list (27) reproduces. Its opened list names `Clear__*` for six list instances
+that `w11-tmpl-a` already defines, so the real opened count is lower than the notes imply.
+
+| | |
+|---|---|
+| Before | 943 |
+| After | 931 |
+| Closed | 27 |
+| Opened | 15 |
+
+Closed: `Init__t7VIArray1Zii`, `Init__t8VIVector1Z18VISceneDisplayElemi`, `Next__Ct6VIList1ZP9VIGUIPagei`, `Next__Ct6VIPool1ZP13VIHSpriteAnimi`, `Next__Ct6VIPool1ZP16VIStaticLightingi`, `Next__Ct6VIPool1ZP8VIRefMapi`, `Next__Ct6VIPool1ZP8VISpritei`, `_$_t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `_$_t5VIMap2ZiZi`, `_$_t6VIList1Z10VIMaterial`, `_$_t6VIList1Z7VIActor`, `_$_t6VIList1ZP12VIPrimBuffer`, `_$_t6VIList1ZP9VIGUIPage`, `_$_t6VIList1ZP9VISurface`, `_$_t6VIList1ZQ27VIScene12VISceneOccup`, `_$_t6VIPool1Z19VIRasterMaterialLRU`, `_$_t6VIPool1ZP12VICollBuffer`, `_$_t6VIPool1ZP12VIPrimBuffer`, `_$_t6VIPool1ZP13VIColorBuffer`, `_$_t6VIPool1ZP13VIHSpriteAnim`, `_$_t6VIPool1ZP13VIMaterialPal`, `_$_t6VIPool1ZP16VIStaticLighting`, `_$_t6VIPool1ZP7VIRFont`, `_$_t6VIPool1ZP8VIRefMap`, `_$_t6VIPool1ZP8VISprite`, `_$_t6VIPool1ZP9VISurface`, `_$_t7VIArray1Z11VIClipEntry`
+
+Opened: `Allocate__t7VIArray1Zi`, `Allocate__t8VIVector1Z18VISceneDisplayElem`, `Clear__t6VIList1Z10VIMaterial`, `Clear__t6VIList1ZP12VIPrimBuffer`, `Clear__t6VIList1ZP9VIGUIPage`, `Clear__t6VIList1ZP9VISurface`, `DestroyPool__t5VIMap2ZiZi`, `DestroyPool__t6VIPool1Z19VIRasterMaterialLRU`, `DestroyPool__t6VIPool1ZP12VICollBuffer`, `DestroyPool__t6VIPool1ZP12VIPrimBuffer`, `DestroyPool__t6VIPool1ZP13VIColorBuffer`, `DestroyPool__t6VIPool1ZP13VIMaterialPal`, `DestroyPool__t6VIPool1ZP7VIRFont`, `DestroyPool__t6VIPool1ZP9VISurface`, `DestroyPool__t7VIArray1Z11VIClipEntry`
+- 2026-10-13 05:01 CDT — agents/w11-tmpl-b — 931 unresolved imports
+
+## agents/w11-tmpl-c
+
+Merged (merge commit, branch tip `980680a4`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each (constructors and destructors), with fresh `input_order` values 4510 through
+4536. The checks here are named `host_contract.cpp` rather than `host_check.cpp`; all 27 build with
+`-std=c++17 -Wall -Wextra -Werror` and exit 0. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed (the notes say the
+destructors compile to 144 bytes against 116 in the image). The worker ran no full build; this
+integration did: 4535 authored inputs, 3482 function bodies, zero COMMON, 214 tool tests passed.
+Per-unit object hashes in the snapshot are the ones the full build produced. No EE or game
+execution. Every unit has a host contract.
+
+| | |
+|---|---|
+| Before | 931 |
+| After | 906 |
+| Closed | 27 |
+| Opened | 2 |
+
+Closed: `_$_t7VIArray1Z7VIPlane`, `_$_t7VIArray1Z7VIVect3`, `_$_t7VIArray1Zi`, `_$_t8VIVector1Z18VISceneDisplayElem`, `__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `__t6VIList1Z10VIMaterial`, `__t6VIList1Z7VIActor`, `__t6VIList1ZP12VIPrimBuffer`, `__t6VIList1ZP9VIGUIPage`, `__t6VIList1ZP9VISurface`, `__t6VIList1ZQ27VIScene12VISceneOccup`, `__t6VIPool1Z19VIRasterMaterialLRU`, `__t6VIPool1ZP12VICollBuffer`, `__t6VIPool1ZP12VIPrimBuffer`, `__t6VIPool1ZP13VIColorBuffer`, `__t6VIPool1ZP13VIHSpriteAnim`, `__t6VIPool1ZP13VIMaterialPal`, `__t6VIPool1ZP16VIStaticLighting`, `__t6VIPool1ZP7VIRFont`, `__t6VIPool1ZP8VIRefMap`, `__t6VIPool1ZP8VISprite`, `__t6VIPool1ZP9VISurface`, `__t7VIArray1Z11VIClipEntry`, `__t7VIArray1Z7VIPlane`, `__t7VIArray1Z7VIVect3`, `__t7VIArray1Zi`, `__t8VIVector1Z18VISceneDisplayElem`
+
+Opened: `DestroyPool__t7VIArray1Z7VIPlane`, `DestroyPool__t7VIArray1Z7VIVect3`
+- 2026-10-13 05:04 CDT — agents/w11-tmpl-c — 906 unresolved imports
+
+## agents/w11-crt-b
+
+Merged (merge commit, branch tip `7813bf6a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 16 units (13 function bodies, 3 data-object units) with fresh
+`input_order` values 4537 through 4552. All 16 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000); the three data units have checks too. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4551 authored inputs, 3495 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (18) reproduces. Opened: eight names the new bodies call that nobody defines yet.
+
+| | |
+|---|---|
+| Before | 906 |
+| After | 896 |
+| Closed | 18 |
+| Opened | 8 |
+
+Closed: `_iopnotify`, `_send_to_iop`, `dptoli`, `dptoul`, `dst`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `lgKbdEnumHint`, `lgKbdEnumerate`, `lgKbdOpen`, `lgKbdRead`, `lgKbdSetRepeatRate`, `litodp`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
+
+Opened: `IsEventModifier`, `SyncDCache`, `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `lgFrameDecode`, `lgFrameEncode`, `sceSifSetSreg`
+- 2026-10-13 05:08 CDT — agents/w11-crt-b — 896 unresolved imports
+
+## agents/w11-crt-c
+
+Merged (merge commit, branch tip `1173f7cd`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 20 units (17 function bodies, 3 data units) with fresh
+`input_order` values 4553 through 4572. All 20 host contracts and checks build with the command in each file's header (x86_64, -w, -no_pie, pagezero 0x1000; the tty handler also needs the w9 tty state source) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4571 authored inputs, 3512 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes' private measurement (957 to 933) included four earlier units that are not in the shared plan, so it does not apply here; the closed list for this package's own 19 names reproduces. Names the notes expected to close once other owners' units are planned (libpad/libmtap views, the loader failure word, sceCbPoff_Gp, timer_handle) are still unresolved.
+
+| | |
+|---|---|
+| Before | 896 |
+| After | 887 |
+| Closed | 19 |
+| Opened | 10 |
+
+Closed: `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceCdStResume`, `sceCdStStart`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `sceGsSetDefDBuffDc`, `sceGsSwapDBuffDc`, `scePadGetDmaStr`, `scePadGetReqState`, `scePadGetState`, `scePadInfoAct`, `scePadInfoMode`, `scePadPortClose`, `sceScfGetLocalTimefromRTC`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`, `src`
+
+Opened: `AdjustTime`, `QueuePeekWriteDone`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `sceGsPutDrawEnv`, `sceGsSetDefClear`, `sceGsSetDefDrawEnv`, `sceGsSetDefDrawEnv2`, `sceScfGetSummerTime`, `sceScfGetTimeZone`
+- 2026-10-13 05:12 CDT — agents/w11-crt-c — 887 unresolved imports
+
+## agents/w11-front-b
+
+Merged (merge commit, branch tip `db0444d2`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 units (8 function bodies, 7 data-object units) with fresh
+`input_order` values 4573 through 4587. All 15 host checks build with -std=c++17 -Wall -Wextra -Werror (x86_64, -no_pie, pagezero 0x1000) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4586 authored inputs, 3520 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed (19) and opened (4) lists and its private count of 957 to 942 reproduce in kind; here the base was already 887, so the count went 887 to 872. The notes record that the data objects compile to .bss where the image keeps four of them in file-backed .data, so no data-layout match is claimed. Seven more of the package's names close only when sources already in the tree from earlier waves (listed in the notes) are planned; they were not selected here.
+
+| | |
+|---|---|
+| Before | 887 |
+| After | 872 |
+| Closed | 19 |
+| Opened | 4 |
+
+Closed: `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `globalIcons`, `hudBustCovered`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `list.1073`, `mainMenu__Fii`, `moneyTex`, `msgHudSavePoint__FP9Savepoint`, `msgInventoryExit__Fiii`, `objectGetSaveData__FPci`, `p1`, `p2`, `partlist.1103`, `writeMap__3mapPUc`
+
+Opened: `getDataForAllObjects__FPciPiiT2T2`, `shopDrawTaskBar__FP12screenStruct`, `sin`, `updateCursor__FiiiiiP12screenStructi`
+- 2026-10-13 05:16 CDT — agents/w11-front-b — 872 unresolved imports
+
+## agents/w11-crt-a
+
+Merged (merge commit, branch tip `5a30e850`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 of the branch's 36 units selected (25 function bodies; the rest are data and layout units) with fresh
+`input_order` values 4588 through 4621. The host checks (no build line in the notes) build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the three tty queue checks also need -DNORRATH_HOST_CONTRACT). The branch is partial in one respect: its notes say no paired run was done this session, only host checks. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4619 authored inputs, 3545 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected, three units. (1) `w11-crt-a-eh-frame-begin` (`__EH_FRAME_BEGIN__`, a zero-length marker in .eh_frame): with it in the plan the relocatable link dies with a BFD assertion (`elflink.c:9839`, link command 4624); bisecting the link showed it is the only unit that triggers it, and the link passes without it. It is left in the tree and unplanned; the owner needs a different way to express the marker. (2) `w11-crt-a-exit-stub` (`_Exit`) and (3) `w11-crt-a-set-tlb-entry` (`_SetTLBEntry`): authored assembly stubs with no host check at all, so no test that could fail; left in the tree and unplanned. The notes' closed list therefore does not reproduce for `_Exit`, `_SetTLBEntry` and `__EH_FRAME_BEGIN__`; `__throw` and `_ctype_` were attributed to older drafts that are not in the plan and are still unresolved. Also not planned on purpose: the host-only `ctype-check`, `throw-check` and `data-check` directories. The 29 names closed here are the real ones.
+
+| | |
+|---|---|
+| Before | 872 |
+| After | 864 |
+| Closed | 29 |
+| Opened | 21 |
+
+Closed: `DLG_CheckMutex__Fv`, `FlushIopCommand__Fb`, `KbmReaderThread`, `LoadSRSServer__Fv`, `MemcpyD`, `PadData`, `QueueInit`, `QueuePeekReadDone`, `SurfCache`, `TLBInfo`, `VIEEDMASync__Fi`, `_$_19__pointer_type_info`, `__builtin_vec_delete`, `__builtin_vec_new`, `__cplus_type_matcher`, `__extendsfdf2`, `__floatdidf`, `__floatdisf`, `__get_eh_context`, `__get_eh_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__malloc_current_mallinfo`, `__pack_f`, `__tf19__pointer_type_info`, `__ti5Spell`, `_args`
+
+Opened: `Close__6VIFile`, `InitialiseIopDriver`, `LocalData`, `Read__6VIFilePvi`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `__ieee754_sqrt`, `__throw_type_match_rtti_2`, `atanf`, `dpdiv`, `get_eh_context`, `kdm_rpccall_end`, `mark_device_unplugged`, `process_kbd_data`, `process_mouse_data`, `sFunctionIndex`, `sRecv`, `sSend`, `sSifClient`, `setup_kbd_device`, `setup_mouse_device`
+- 2026-10-13 05:27 CDT — agents/w11-crt-a — 864 unresolved imports
+
+## agents/w11-front-c
+
+Merged (merge commit, branch tip `fb3c4166`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 13 units (4 function bodies, 9 data-word units) with fresh
+`input_order` values 4621 through 4633. All 13 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the data checks need the unit source linked in). The notes give no compiled sizes, so the plan's emitted-function records were measured here with the plan's own compiler flags and the repo's ELF reader. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4632 authored inputs, 3549 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes say 24 names closed; 23 reproduce (the 24th, `rollover_counter`, was already defined by w10-startup-b and is not a change of this merge). `playerSelectionTask__Fv` was deliberately not attempted by the worker, which is honest and leaves it unresolved. The data-word layouts come from symbol extents and gaps, as each file's header says.
+
+| | |
+|---|---|
+| Before | 864 |
+| After | 842 |
+| Closed | 23 |
+| Opened | 1 |
+
+Closed: `pitch1`, `pitch2`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `pmlistchars`, `pmlistcharsused`, `range`, `rcursor`, `sMessagePool`, `sWndMcErr`, `saveBestList`, `saveValid`, `selectionBox`, `shite`, `soundGetDialogSize__Fi`, `soundGroupLimit`, `soundLimit`, `startPos`, `taskBar`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `tinyIcon`, `v1`, `v2`
+
+Opened: `animPlaySound__FPvP6Point3P9animSoundi`
+- 2026-10-13 05:34 CDT — agents/w11-front-c — 842 unresolved imports
+
+## agents/w11-vi-misc-b
+
+Merged (merge commit, branch tip `d330e54a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 units (25 function bodies; the rest are class-table and data units) with fresh
+`input_order` values 4634 through 4666. All 33 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4665 authored inputs, 3574 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 28 here, not down: the class-table units (`_vt$...`) name their slot functions, so each table opens its not-yet-authored slot bodies (`OnDrawSelf`, `OnKeyDown`, `OnKeyUp`, `OnMessage`, `__tf...`, VISet helpers) as new unresolved imports while closing only the table symbol. The worker's closed list (33) reproduces; its private count of 985 was measured on a different base and is not comparable. Counts of unresolved names measure link closure, not progress in authored code, and this merge adds 25 verified function bodies plus the tables.
+
+| | |
+|---|---|
+| Before | 842 |
+| After | 870 |
+| Closed | 33 |
+| Opened | 61 |
+
+Closed: `AddChild__5VIWndP5VIWnd`, `EndConnect__12VIWndConnect`, `Free__12VIWndConnect`, `Free__12VIWndMessage`, `Free__12VIWndOptions`, `Init__12VIWndConnect`, `Init__12VIWndMessage`, `Init__16VIWndReadMessage`, `OnMessage__10VIWndMcErrP5VIWndiii`, `ReloadWords__4VIUI`, `RemoveChild__5VIWndP5VIWnd`, `_$_10VIUIWindow`, `_$_12VIWndConnect`, `_$_12VIWndMessage`, `_$_12VIWndOptions`, `_$_16VIWndReadMessage`, `_$_5VIWnd`, `_$_9VIWndEdit`, `_11VIGUIObject$m_alphaFillMaterial`, `__10VIUIWindow`, `__12VIWndConnect`, `__12VIWndMessage`, `__12VIWndOptions`, `__16VIWndReadMessage`, `__5VIWnd`, `__9VIWndEdit`, `_vt$10VIWndLegal`, `_vt$11VIWndSplash`, `_vt$12VIWndPatcher`, `_vt$15VIWindowManager`, `_vt$20VIWndGenericRenderer`, `_vt$9VIWndDnas`, `_vt$9VIWndEula`
+
+Opened: `Begin__Ct5VISet1ZP5VIWnd`, `ClearText__9VIWndEdit`, `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `Free__13VIBattleMusic`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `_$_13VIBattleMusic`, `_$_t5VISet1ZP5VIWnd`, `__13VIBattleMusic`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
+- 2026-10-13 05:38 CDT — agents/w11-vi-misc-b — 870 unresolved imports
+
+## agents/w11-front-a
+
+Merged (merge commit, branch tip `106ef14b`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 of the branch's 16 planned units (10 function bodies; 8 data-view units share 7 sources) with fresh
+`input_order` values 4667 through 4681. Plan entries come from the worker's own generator script, run here with the repo toolchain. The host checks build and run with the flags in each file's Build line (x86_64, -no_pie, pagezero 0x1000); all pass here except the one noted below. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4680 authored inputs, 3584 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-front-a-update-players-ready` (`updatePlayersReady__9Savepoint`). Its host check, as committed at the branch tip (`c7432fd5`, 'Extend the updatePlayersReady host check with a z-only distance case'), fails here with exit 22: the new z-only case expects byte 200 to stay 1 after a call with no near player, but the authored function clears byte 200 first, as its own header comment says. The source and the test disagree, so the test cannot be trusted as written; the source is left in the tree unplanned for its owner to fix. Not re-verified on any other host. The notes' closed list (8 names) therefore reproduces as 7; the data views do not appear as closed names because they are matched by address. `creditsText` was deliberately not committed by the worker and needs a maintainer decision.
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 879 |
+| Closed | 7 |
+| Opened | 16 |
+
+Closed: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `floorGetSaveInfo__FPci`
+
+Opened: `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drawGold__Fv`, `drewHelpfulMessageHelpBar`, `fontStringSize__FP4FontPci`, `helpfulMessagesDraw__Fv`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `runGold__Fv`, `runHUD__Fi`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`
+- 2026-10-13 05:43 CDT — agents/w11-front-a — 879 unresolved imports
+
+## agents/w11-ctor-b
+
+Merged (merge commit, branch tip `1ed345d7`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 28 units, one constructor each with fresh
+`input_order` values 4682 through 4709. All 28 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4708 authored inputs, 3612 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The count is unchanged at 879 because each constructor stores its class-table address, so the 28 constructors close 28 names and open the 28 matching `_vt$...` tables. The notes' plan entries give 48 compiled bytes for every constructor; the compiler here gives 44 for 20 of the 28 (48 for 8), and the build rejected the notes' numbers, so the measured sizes are recorded.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 28 |
+| Opened | 28 |
+
+Closed: `__10SkillDodge`, `__12SkillCyclone`, `__12SkillHealing`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`
+
+Opened: `_vt$10SkillDodge`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$13SkillDarkness`, `_vt$13SkillEntangle`, `_vt$14SkillColdArrow`, `_vt$14SkillFireArrow`, `_vt$14SkillFireStorm`, `_vt$14SkillHarmTouch`, `_vt$15SkillClericRoot`, `_vt$15SkillConeOfFire`, `_vt$15SkillFireFlares`, `_vt$15SkillFrostStorm`, `_vt$15SkillHolyShield`, `_vt$15SkillHolyStrike`, `_vt$16SkillColdWeapons`, `_vt$16SkillConeOfFrost`, `_vt$16SkillCriticalHit`, `_vt$16SkillDiseaseBolt`, `_vt$16SkillFireWeapons`, `_vt$16SkillGroundPound`, `_vt$17SkillConvertEnemy`, `_vt$17SkillDiseaseTrail`, `_vt$17SkillExplodeArrow`, `_vt$18SkillConvertUndead`, `_vt$18SkillDiseaseShield`, `_vt$18SkillDismissUndead`, `_vt$18SkillHammerOfWrath`
+- 2026-10-13 05:51 CDT — agents/w11-ctor-b — 879 unresolved imports
