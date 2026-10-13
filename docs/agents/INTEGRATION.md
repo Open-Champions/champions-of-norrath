@@ -6935,6 +6935,20 @@ Closed: `norrath_sif_m_rpc_packet_pool_view`, `norrath_w9_startup_crt_b_view_11c
 
 Opened: none
 
+## Not merged: agents/w10-startup-d
+
+Rejected at tip `cb1c9c26` (16 minutes old when read; its notes have all five
+summary sections). Its 18 units (nine functions and data views from the C++
+runtime and math support, plus `qsort_translate_table`, `scalbnf`, `sqrt`) have
+no committed host check: the diff holds no `host_check.cpp` or other test file,
+and the notes say behavior was compared in "a private R5900 interpreter kept
+outside git". A reviewer cannot repeat that, so no committed function in the
+package has a test that could fail (same ground as `w9-render-math-a`). The
+branch was not merged and no game code was changed. The owner can add committed
+host checks per function and push again; the notes also mention a plan-entry
+generator script and fifteen `w9-rtti-vtables-entities-a` view units "missing
+from the shared plan", which this integrator did not verify.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
