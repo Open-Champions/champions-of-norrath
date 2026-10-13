@@ -162,3 +162,12 @@ involved. The float step constant is the image word `0x3dcccccc`, written as a b
 - The data objects here are `.bss` in the compiled object (zero-initialised); the image keeps
   `moneyTex`, `lcursor`, `globalIcons` and `hudBustCovered` in file-backed `.data`. Section
   placement follows the build profile, as in earlier packages.
+
+## Private build result
+
+With the 15 entries above appended to a private plan and snapshot kept outside git, the default
+authored partial build compiled 4469 units and linked once: 3409 function bodies, 942 unresolved
+imports (957 before), no COMMON symbols. Closed 19, opened 4 (`getDataForAllObjects__FPciPiiT2T2`,
+`shopDrawTaskBar__FP12screenStruct`, `sin`, `updateCursor__FiiiiiP12screenStructi`). This is a
+partial relocatable link, not an executable. `python3 -m unittest discover -s tools -p 'test_*.py'`
+passes (214 tests).
