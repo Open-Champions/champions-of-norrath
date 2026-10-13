@@ -20,6 +20,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w14-m-spell-ctors-a-ctor-cone-of-frost` | `__16SpellConeOfFrostiP8CreatureP5Skill` | `0x002af390`, 376 bytes | 328 |
 | `w14-m-spell-ctors-a-ctor-critical-hit` | `__16SpellCriticalHitiP8CreatureP5Skill` | `0x002ad3f8`, 304 bytes | 288 |
 | `w14-m-spell-ctors-a-ctor-minor-healing` | `__17SpellMinorHealingiP8CreatureP5Skill` | `0x002a7068`, 340 bytes | 352 |
+| `w14-m-spell-ctors-a-ctor-healing` | `__12SpellHealingiP8CreatureP5Skill` | `0x002ae9d8`, 352 bytes | 372 |
 
 ## Observed shape shared by the spell constructors
 
@@ -88,16 +89,21 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   unnamed and written as bit patterns (`0x3c888888`, `0x3c23d70a`). The table is read at `0x004086b0 + w`, which
   lies in `player` at offset 0xb0; this offset is observed, the table's own name is unknown.
   **Finding:** the three-operand R5900 `mult rd,rs,rt` also writes its low word into `rd`. My first reading treated
-  the result as discarded, which failed the paired comparison (200 mismatches on a mutation check, 120 on the
-  first pass); the source now multiplies by 23984 as the image does. Host contract passes (blocks absent and present).
+  the result as discarded, which failed the paired comparison (120 of 192 scenarios mismatched); the source now
+  multiplies by 23984 as the image does. Host contract passes (blocks absent and present).
   Paired comparison: 288 scenarios (4 kinds, block present or absent, 6 indexes including two that wrap the 32-bit
   product, 2 seeds, 3 call results) with 0 mismatches. Mutation (23985 for 23984) gives 200 of 288.
+
+- **Healing.** `__12SpellHealingiP8CreatureP5Skill` (`0x002ae9d8`). The same shape as minor healing, with a particle
+  system created after the optional shaft and stored at +36, the skill call at level 0, and the constants
+  `0x3c886600` (K_a, `0x00482c60`) and `0x3c23d70a` (K_b, `0x00482c64`). Host contract passes. Paired comparison: 288
+  scenarios, 0 mismatches. Mutation (particle handle at +40 instead of +36) gives 288 of 288 mismatches.
 
 ## Imports closed
 
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
 `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`,
-`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`.
+`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`.
 
 ## Imports opened
 
