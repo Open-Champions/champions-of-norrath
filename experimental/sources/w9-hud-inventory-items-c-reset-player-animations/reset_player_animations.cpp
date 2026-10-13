@@ -2,7 +2,7 @@
 // Argument: a player number. object is the pointer word at record+21872 of the
 // 23984-byte player record and b is the signed byte at record+23582. Nothing
 // happens when object is zero or the float at record+172 is not above 0.0
-// (a NaN passes the test). Otherwise, in order:
+// (the test is "value <= 0.0 returns"). Otherwise, in order:
 //  - floats at object+304 and +312 become 1.0 and the halfword at object+324
 //    becomes 4613;
 //  - the word at object+296 is set. When the signed byte at object+1106 is zero
