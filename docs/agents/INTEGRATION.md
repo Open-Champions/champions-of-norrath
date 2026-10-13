@@ -9024,3 +9024,4 @@ The notes' measured count (804) does not reproduce: it assumed selecting three f
 Closed: `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `kdm_rpccall_end`, `lgFrameDecode`, `lgFrameEncode`, `mark_device_unplugged`, `mcErrOn`, `norrath_overlay_sFunctionIndex_11edf00`.
 
 Opened: `gsm_decode`, `gsm_encode` (the codec routines the new adapters tail-call; nobody has authored them).
+- 2026-10-13 08:32 CDT — agents/w12-startup-rt-b — 820 unresolved imports
