@@ -18,7 +18,7 @@ int main() {
     // copies the text and the terminator, nothing more
     if (mceStorePwd(out) != 921 || std::strcmp(out, "mc0:/BASLUS-20565") != 0 || out[18] != 0x7e) return 3;
     // empty text still terminates the destination
-    currentDir[0] = 0; out[0] = 0x7e;
+    currentDir[0] = 0; std::memset(out, 0x7e, sizeof out);
     mceStorePwd(out);
     if (out[0] != 0 || out[1] != 0x7e) return 4;
     // a long text is cut at 1023 characters plus the terminator
