@@ -8357,3 +8357,15 @@ Closed: `_$_12UndeadKnight`, `_$_17UndeadKnightClone`, `_$_7Ulthork`, `_$_7Vampi
 
 Opened: `__17UndeadKnightCloneG6Point3sPPc`, `_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`
 - 2026-10-13 04:15 CDT — agents/w10-actor-o — 957 unresolved imports
+
+## Integrator re-check (2026-10-13 04:26 CDT)
+
+Re-ran on the shared branch at `1f3895b9` before any merge: 214 tool tests passed, the
+snapshot check passed (4454 authored inputs), and the default authored partial build
+(EE toolchain, no Newlib) linked 3401 function bodies, zero COMMON, **957** unresolved
+imports. The recorded count reproduces and no recent merge broke a repo rule. The four
+unmerged worker branches are at the tips recorded above (`w10-actor-i` `e1ad5dba`,
+`w10-startup-d` `cb1c9c26`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a`
+`adff0bdc`), so their rejections stand: none has a committed check that could fail.
+Nothing was merged.
+- 2026-10-13 04:26 CDT — integrator re-check, nothing merged — 957 unresolved imports
