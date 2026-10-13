@@ -11,7 +11,8 @@ The current shared plan builds 5,113 authored inputs and leaves 827 unresolved i
 - `__12ParticlePropG6Point3i` is a 172-byte function at `0x00154960`. It copies a 12-byte point argument and calls `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc` with two zero arguments. It stores `0x0045d018` at object offset 72 before calling `init__4Propi(this, argument)`, then stores `0x0044cf88` at offset 72, the float `12.0` at offset 28, and ORs `0x4002` into the word at offset 12. The host contract checks call order, argument words, the vtable visible to `init`, final fields, and all other object bytes.
 - `batParams` is an 8-byte local data symbol at `0x004858e0`. Its first word points to the NUL-terminated text `oneshot=1`; its second word is null. The authored target object emits an 8-byte pointer table. Its host check checks the string and null terminator entry.
 - `healColor` and `healPulse` are each 8-byte local data symbols at `0x00484528` and `0x00484530`. The image bytes are zero. The caller reads four halfwords from each array. Their host check checks the extent and every initial element.
-- The fresh baseline unresolved list contains all four named symbols above, plus the 26 symbols listed under “Imports still open.”
+- The fresh baseline unresolved list contains all four named symbols above, plus the 25 symbols listed under “Imports still open.”
+- The clean 5,113-input baseline build produced 3,909 function bodies, 827 unresolved imports, and zero COMMON symbols. Linking the isolated three-source package object to that baseline removed exactly the four names above; `nm -u` reported 823 names afterward and no newly opened import.
 
 ### Inferred
 
