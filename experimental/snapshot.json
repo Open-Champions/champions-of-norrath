@@ -65703,6 +65703,29 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-skill-c-tweek-rank/tweek_rank.cpp"
+    },
+    {
+      "input_order": 5144,
+      "component": "w12-skill-b-can-cast",
+      "object_name": "w12_skill_b_can_cast.o",
+      "private_object_sha256": "72f19f9d7cc2e8eb780721a24626025df44a1ddfce02461068318f870dd3c984",
+      "emitted_functions": [
+        {
+          "name": "canCast__5SkillP8Creature",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-skill-b-can-cast/can_cast.cpp"
+    },
+    {
+      "input_order": 5145,
+      "component": "w12-skill-b-vtables",
+      "object_name": "w12_skill_b_vtables.o",
+      "private_object_sha256": "a2e4922184bcdaed511ea49153d4cee9a38fd2332abe12cb0b4ba419d976f70e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-skill-b-vtables/skill_vtables.cpp"
     }
   ],
   "drafts": [
@@ -72657,6 +72680,10 @@
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/host_check.cpp": "1831238c4bd3639dc64e8696118712745b3d342bebf331f612aba8e499fd5ba3",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-skill-b-can-cast/can_cast.cpp": "635764b40aaa03f530118fcb3100b64bd29541781790a5169eea1d3fa28ef1fd",
+    "sources/w12-skill-b-can-cast/host_check.cpp": "759704759b69b6c790d1aaf5b97dba0d1d205de5441501a70f4f17dcc5477239",
+    "sources/w12-skill-b-vtables/host_check.cpp": "186fcc4e98b7c47f466695ef9709ceed6b3e35570e5735ea602269045c7f48a6",
+    "sources/w12-skill-b-vtables/skill_vtables.cpp": "9cbd4df7f5db972b2fd31a0a78780381d726b39ae291c990a6006b1dd7041614",
     "sources/w12-skill-c-base-cast/cast.cpp": "86a83d14bc1cce2ff41093d2a7f85c0c9aa3bc9d57d0724bb6fd4a170e560ef7",
     "sources/w12-skill-c-base-cast/host_check.cpp": "f508e1dd5da4e49d55545099c2f78bedbcb6f5a6a8e178edbac3c20409072c37",
     "sources/w12-skill-c-base-energy-cost/get_energy_cost.cpp": "738d8bb6aa433f85b4e99f27482e1d1692783095a941a47dbbb9931d6d4f8e3e",
@@ -77083,11 +77110,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5144,
-    "authored_default_inputs": 5142,
+    "selected_inputs": 5146,
+    "authored_default_inputs": 5144,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3938,
-    "compiled_body_bytes_from_accepted_inputs": 1723804,
+    "emitted_function_definitions_including_helpers": 3939,
+    "compiled_body_bytes_from_accepted_inputs": 1723812,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -77100,7 +77127,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4831
+    "package_selected_inputs": 4833
   },
   "startup_implementations": [
     {
@@ -152800,6 +152827,35 @@
       ],
       "host_files": [
         "sources/w12-skill-c-tweek-rank/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-skill-b",
+      "source": "sources/w12-skill-b-can-cast/can_cast.cpp",
+      "source_sha256": "635764b40aaa03f530118fcb3100b64bd29541781790a5169eea1d3fa28ef1fd",
+      "object_sha256": "72f19f9d7cc2e8eb780721a24626025df44a1ddfce02461068318f870dd3c984",
+      "emitted_functions": [
+        {
+          "name": "canCast__5SkillP8Creature",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w12-skill-b-can-cast/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-skill-b",
+      "source": "sources/w12-skill-b-vtables/skill_vtables.cpp",
+      "source_sha256": "9cbd4df7f5db972b2fd31a0a78780381d726b39ae291c990a6006b1dd7041614",
+      "object_sha256": "a2e4922184bcdaed511ea49153d4cee9a38fd2332abe12cb0b4ba419d976f70e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-skill-b-vtables/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
