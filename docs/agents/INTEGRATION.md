@@ -5604,6 +5604,52 @@ Opened: `_$_10BlackWidow`, `_$_10FireBeetle`, `_$_3Ant`, `_$_4Lamp`, `_$_5Chest`
 `setState__7Cyclopsi`, `setState__7FireFlyi`, `setState__8AntQueeni`,
 `setState__8Froglocki`, `setState__9Generatori`
 
+## agents/w9-animation-object-b
+
+Merged (the branch notes carry the five summary sections; the tip was 12
+minutes old, so this reflects the tip at that time). Twenty-two of its 24
+units were selected with fresh `input_order` values 2824 through 2845.
+`e-rand` and `find-tag-float` were **not** selected: each defines a function
+that is already supplied (`findTagFloat__10GameObjectPci` by
+`w9-animation-object-a-find-tag-float`, `eRand__10GameObject` by an earlier
+unit), and with both selected the link failed with multiple definitions; their
+files stay in the snapshot, unselected. Host checks: 22 of 24 build and exit 0 as is;
+`cancel-all-always-draw` and `lump-add` pass when built the way their header
+comments say (the first with three `w8-object-list-math-safe-iterator-*`
+sources, the second with `w9-animation-object-b-lumps/lumps.cpp`). Six of the
+selected units are data (lumps, lump state, load name and similar) and emit
+no function. No game binary or disassembly listing was committed. 2281
+function bodies, 2844 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1584 |
+| After | 1567 |
+| Closed | 25 |
+| Opened | 8 |
+
+Closed: `gameLineGet__FPc`, `initFile__FPcPvi`, `initializedLump`, `loadInProgress`,
+`loadName`, `lumpAdd__FPvPCc`, `lumps`, `move2__8CreatureG6Point3`,
+`myLumpBuffer`, `neverSave`, `newDamageHandler__8CreatureP12_modelHeader`,
+`norrath_creature_finish_construction`,
+`norrath_creature_set_anim_event_flags`,
+`norrath_creature_set_anim_event_flags_res_map`,
+`norrath_creature_set_parameters`, `norrath_game_line_get`,
+`norrath_game_line_get_ptr`, `norrath_object_find_animation`, `npcLumpName`,
+`objectActiveProcessing__FP10GameObjectii`,
+`objectAddToRunList__FP10GameObject`,
+`objectAddToSlowRunList__FP10GameObject`,
+`objectAlwaysDraw__FP10GameObject`, `objectCancelAllAlwaysDraw__Fv`,
+`setAnimEventFlags__8Creatureififififi`
+
+Opened: `__7OniBallG6Point3iP10GameObjectP10_vagHeader`,
+`animSetToEndFullyBlended__FP14AnimationState`, `asyncRandState`,
+`findTagInt__10GameObjectPci`,
+`fxCreatureToIce__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefff`,
+`getChance__12SkillLifeTapi`, `sendAlertMessage__FifG6Point3P10GameObject`,
+`trailParticleSpark`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5969,3 +6015,4 @@ and no startup stage has executed.
 - 2026-10-12 21:34 CDT — `agents/w9-render-math-b` — 1502 unresolved imports
 - 2026-10-12 21:37 CDT — `agents/w9-animation-object-a` — 1478 unresolved imports
 - 2026-10-12 21:40 CDT — `agents/w9-ctors-lantern-a` — 1584 unresolved imports
+- 2026-10-12 21:44 CDT — `agents/w9-animation-object-b` — 1567 unresolved imports
