@@ -25,10 +25,9 @@ int sceTtyInit() {
     tinfo.busy = 0;
     tinfo.length = 0;
     tinfo.received = 0;
-    TtyPacketHeader* const header =
-        reinterpret_cast<TtyPacketHeader*>(reinterpret_cast<unsigned>(wbuf) | 0x20000000u);
+    TtyPacketHeader* const header = reinterpret_cast<TtyPacketHeader*>(ttyUncached(wbuf));
     tinfo.sendCursor = reinterpret_cast<unsigned char*>(header);
-    tinfo.receiveBuffer = reinterpret_cast<unsigned char*>(reinterpret_cast<unsigned>(rbuf) | 0x20000000u);
+    tinfo.receiveBuffer = ttyUncached(rbuf);
     header->protocol = 528;
     header->byte6 = 'E';
     header->byte7 = 'H';
