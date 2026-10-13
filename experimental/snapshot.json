@@ -66430,6 +66430,278 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp"
+    },
+    {
+      "input_order": 5202,
+      "component": "w12-hud-loop-a-font-string-size",
+      "object_name": "w12_hla_font_string_size.o",
+      "private_object_sha256": "faf5bb5c74067d4498dfb33737af3cffe8f7cbbc4784d51d452aae84eaa2dc3d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "fontStringSize__FP4FontPci"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-font-string-size/font_string_size.cpp"
+    },
+    {
+      "input_order": 5203,
+      "component": "w12-hud-loop-a-do-net-cam-toggle",
+      "object_name": "w12_hla_do_net_cam_toggle.o",
+      "private_object_sha256": "73eadf7e2a65f45ee091c135d674eb71e610095bf5a89fed350bf23a9302a320",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 636,
+          "name": "doNetCamToggle__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-do-net-cam-toggle/do_net_cam_toggle.cpp"
+    },
+    {
+      "input_order": 5204,
+      "component": "w12-hud-loop-a-drop-gold",
+      "object_name": "w12_hla_drop_gold.o",
+      "private_object_sha256": "ddaeb674cc955307fe78f935f3d1f1dae8a2c9b9f1d33781d584ab7895a0f00f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 552,
+          "name": "dropGold__4itemG6Point3i"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-drop-gold/drop_gold.cpp"
+    },
+    {
+      "input_order": 5205,
+      "component": "w12-hud-loop-a-helpful-messages-draw",
+      "object_name": "w12_hla_helpful_messages_draw.o",
+      "private_object_sha256": "db8968a849edab7d2db248dfe80bf6d5a35b20b56bdb6edf9d359225927f0a9b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1160,
+          "name": "helpfulMessagesDraw__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-helpful-messages-draw/helpful_messages_draw.cpp"
+    },
+    {
+      "input_order": 5206,
+      "component": "w12-hud-loop-a-draw-compass",
+      "object_name": "w12_hla_draw_compass.o",
+      "private_object_sha256": "5f36cec9891b417efdfd3ac4f549d592ddd7897440725e398b41713a36a98a96",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 788,
+          "name": "drawCompass__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-draw-compass/draw_compass.cpp"
+    },
+    {
+      "input_order": 5207,
+      "component": "w12-hud-loop-a-get-data-for-all-objects",
+      "object_name": "w12_hla_get_data_for_all_objects.o",
+      "private_object_sha256": "d05a4d33d39b0186b8361fa3f45164e85d993862147ee3e52e49f9eae331acdf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 396,
+          "name": "_ZN12_GLOBAL__N_1L9walk_listERNS_4WalkEPh"
+        },
+        {
+          "compiled_body_bytes": 364,
+          "name": "getDataForAllObjects__FPciPiiT2T2"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-get-data-for-all-objects/get_data_for_all_objects.cpp"
+    },
+    {
+      "input_order": 5208,
+      "component": "w12-hud-loop-a-create-random-combineable-item",
+      "object_name": "w12_hla_create_random_combineable_item.o",
+      "private_object_sha256": "ff80d9c82a9d7d75101a31975621423595cc862c811e28f81cf6b12f5c284ade",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "_ZN12_GLOBAL__N_1L8load_u64EPKh"
+        },
+        {
+          "compiled_body_bytes": 256,
+          "name": "_ZN12_GLOBAL__N_1L8eligibleEPKhPKcii"
+        },
+        {
+          "compiled_body_bytes": 696,
+          "name": "createRandomCombineableItem__4itemPQ24item11descriptionsPc"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-create-random-combineable-item/create_random_combineable_item.cpp"
+    },
+    {
+      "input_order": 5209,
+      "component": "w12-hud-loop-a-create-named-random",
+      "object_name": "w12_hla_create_named_random.o",
+      "private_object_sha256": "365750d194026e4dba47ad7c92d6a9932e3cdff2deafaa4ca6e068f173375cd5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "_ZN12_GLOBAL__N_1L8load_u64EPKh"
+        },
+        {
+          "compiled_body_bytes": 160,
+          "name": "_ZN12_GLOBAL__N_1L8eligibleEPKhiib"
+        },
+        {
+          "compiled_body_bytes": 1272,
+          "name": "createNamedRandom__4itemPQ24item11descriptioniii"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-create-named-random/create_named_random.cpp"
+    },
+    {
+      "input_order": 5210,
+      "component": "w12-hud-loop-a-draw-bust",
+      "object_name": "w12_hla_draw_bust.o",
+      "private_object_sha256": "30ecd2113661a53cb88898e412f4450d2bb02ee14b7d6d6950b7b880a050b93d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1820,
+          "name": "drawBust__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-draw-bust/draw_bust.cpp"
+    },
+    {
+      "input_order": 5211,
+      "component": "w12-hud-loop-a-data-arrow-left",
+      "object_name": "w12_hla_data_arrow_left.o",
+      "private_object_sha256": "81760074693a2b70ee143294bc5cd166001c142c83cd41d76a06e57f4963a885",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-arrow-left/data_arrow_left.cpp"
+    },
+    {
+      "input_order": 5212,
+      "component": "w12-hud-loop-a-data-arrow-right",
+      "object_name": "w12_hla_data_arrow_right.o",
+      "private_object_sha256": "3a1ce8f1612458a3f8bb8c125c32d1fce48ba60e88bf8909e5f7b92844828d59",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-arrow-right/data_arrow_right.cpp"
+    },
+    {
+      "input_order": 5213,
+      "component": "w12-hud-loop-a-data-beard-setting",
+      "object_name": "w12_hla_data_beard_setting.o",
+      "private_object_sha256": "154afce1a3d6fe0226874abc3a4c57b8a35aee30697af0dbc42537f721667991",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-beard-setting/data_beard_setting.cpp"
+    },
+    {
+      "input_order": 5214,
+      "component": "w12-hud-loop-a-data-bust-alpha",
+      "object_name": "w12_hla_data_bust_alpha.o",
+      "private_object_sha256": "f345ec570d3a082f457adec9c988366396952800f990de7eb577ba766e77cb3e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-bust-alpha/data_bust_alpha.cpp"
+    },
+    {
+      "input_order": 5215,
+      "component": "w12-hud-loop-a-data-char-anim-test",
+      "object_name": "w12_hla_data_char_anim_test.o",
+      "private_object_sha256": "25f3f54fb195b0f003b359c367342391e2dd56fb24e851c9e0cd646293968e71",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-char-anim-test/data_char_anim_test.cpp"
+    },
+    {
+      "input_order": 5216,
+      "component": "w12-hud-loop-a-data-drew-helpful-message-help-bar",
+      "object_name": "w12_hla_data_drew_helpful_message_help_bar.o",
+      "private_object_sha256": "aef758ef37a264dbd5dab5f9a5855114d5b9f0ec4d7f188b55b1075f709f028f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-drew-helpful-message-help-bar/data_drew_helpful_message_help_bar.cpp"
+    },
+    {
+      "input_order": 5217,
+      "component": "w12-hud-loop-a-data-emergency-result",
+      "object_name": "w12_hla_data_emergency_result.o",
+      "private_object_sha256": "2b60dca1328a852c8930d9b10b58c99df2156e832490d4da2d3b1fab99ab0df0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-emergency-result/data_emergency_result.cpp"
+    },
+    {
+      "input_order": 5218,
+      "component": "w12-hud-loop-a-data-end-pos",
+      "object_name": "w12_hla_data_end_pos.o",
+      "private_object_sha256": "1d30b6a874de35989f6e95d88fd2e12f1eaa3fc7bdc6031ffb4f74068b13244e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-end-pos/data_end_pos.cpp"
+    },
+    {
+      "input_order": 5219,
+      "component": "w12-hud-loop-a-data-expand-list",
+      "object_name": "w12_hla_data_expand_list.o",
+      "private_object_sha256": "0828a476ae2195191997c1c260bb83a18357a03b39b59ae3ef256f9a3defb24b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-expand-list/data_expand_list.cpp"
+    },
+    {
+      "input_order": 5220,
+      "component": "w12-hud-loop-a-data-free-list",
+      "object_name": "w12_hla_data_free_list.o",
+      "private_object_sha256": "ecf1a23da66e81b9dc6bb1b17858f8d0b6bfe85b71c8750215d48b4224ae9efb",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-free-list/data_free_list.cpp"
+    },
+    {
+      "input_order": 5221,
+      "component": "w12-hud-loop-a-data-game-flags",
+      "object_name": "w12_hla_data_game_flags.o",
+      "private_object_sha256": "f8d0a0661a70d42e76863d604a29ec6230cbab3ba249ee5ec6931f92c899826c",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-game-flags/data_game_flags.cpp"
+    },
+    {
+      "input_order": 5222,
+      "component": "w12-hud-loop-a-data-hair-color-setting",
+      "object_name": "w12_hla_data_hair_color_setting.o",
+      "private_object_sha256": "8f633e26168b42e560978043ffd5502c5afb72c4f601956b2ee619650a2e4ede",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-hair-color-setting/data_hair_color_setting.cpp"
+    },
+    {
+      "input_order": 5223,
+      "component": "w12-hud-loop-a-data-hair-style-setting",
+      "object_name": "w12_hla_data_hair_style_setting.o",
+      "private_object_sha256": "57ba98230034133f9b6f491c6e0fd269e9fa46434677f46ca61a335cd2571e51",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-hair-style-setting/data_hair_style_setting.cpp"
+    },
+    {
+      "input_order": 5224,
+      "component": "w12-hud-loop-a-data-inv-header",
+      "object_name": "w12_hla_data_inv_header.o",
+      "private_object_sha256": "809e046b6ec70835f05e66b4a72c6100c98efc78d7ed9dd3ead0a9018d5721e0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-a-data-inv-header/data_inv_header.cpp"
     }
   ],
   "drafts": [
@@ -73384,6 +73656,54 @@
     "sources/w11-vt-b-vt-woodelfsoldier/vt_woodelfsoldier.cpp": "d73315f7353b5d41f9b0e9d088ea9bef018b1fdb702d6aaf5020591a1a7b7d9d",
     "sources/w11-vt-b-vt-wraith/host_check.cpp": "1831238c4bd3639dc64e8696118712745b3d342bebf331f612aba8e499fd5ba3",
     "sources/w11-vt-b-vt-wraith/vt_wraith.cpp": "b75acd0f7bc6b134c2d86583427f81891b5222bad683dd0066c9083343bbcc5c",
+    "sources/w12-hud-loop-a-create-named-random/create_named_random.cpp": "ba86cf1302678dc621cb675179c3fe2070269820c669756b27839fbb35cdd14b",
+    "sources/w12-hud-loop-a-create-named-random/host_check.cpp": "6b4b9d732c9ad376d9b85c2426085f45bfd4fd1c8e825f6733c037526cd7876d",
+    "sources/w12-hud-loop-a-create-random-combineable-item/create_random_combineable_item.cpp": "64ac82c55e18e80154494323af5109ccbdb850e31b3e7456adb398582ad6b0ba",
+    "sources/w12-hud-loop-a-create-random-combineable-item/host_check.cpp": "8ab863a1c83677ec8e850e5fe26f5abd0f199071de1eb32bba6c52df8fd5c715",
+    "sources/w12-hud-loop-a-data-arrow-left/data_arrow_left.cpp": "c8a559de8eb8e9775bef41f79242903dd7a2b69ad61313f2e6409cc5793b2757",
+    "sources/w12-hud-loop-a-data-arrow-left/host_check.cpp": "9484903ec7c8d529e0aeb2b7aa19d13a5ba9808d799110899c15577136d109fc",
+    "sources/w12-hud-loop-a-data-arrow-right/data_arrow_right.cpp": "2fcf32ef5918c59ea6fc5056a4f198031d8353145d55fbab55544eaf4cc27df6",
+    "sources/w12-hud-loop-a-data-arrow-right/host_check.cpp": "f8176d1cbdc60fd93063b1620c4dbd55d772ada209606fca46ee144025db11c3",
+    "sources/w12-hud-loop-a-data-beard-setting/data_beard_setting.cpp": "04206430d31c5eb2491d650d1a170253fbc4b6f251926dea7eb905f56e9fbde7",
+    "sources/w12-hud-loop-a-data-beard-setting/host_check.cpp": "bcd6540c8703a626a5d324a71107e1b1802e5e90c5d24bf771fa9265c4c8ca64",
+    "sources/w12-hud-loop-a-data-bust-alpha/data_bust_alpha.cpp": "e39971b0580b4630d63f786e3f3156cf4d0056516c2b755b2fa55c1bfbef0fc9",
+    "sources/w12-hud-loop-a-data-bust-alpha/host_check.cpp": "b549a4d8169ae5f2bd51257be295fc3c7b4b6034e543b4e8e19a39c51b486748",
+    "sources/w12-hud-loop-a-data-char-anim-test/data_char_anim_test.cpp": "3defb62bc92a09d06640c01ee4451865b77c53d22bb907757db9605974c59c8b",
+    "sources/w12-hud-loop-a-data-char-anim-test/host_check.cpp": "8220a00752ab4ba0d6ba4394f6b5ed256e2fc20058139657d2b53ba9150ec9d7",
+    "sources/w12-hud-loop-a-data-drew-helpful-message-help-bar/data_drew_helpful_message_help_bar.cpp": "1c163923ed05da766b95c14110a0aee6c53125da0d3cdcbecd22a23f9b87d711",
+    "sources/w12-hud-loop-a-data-drew-helpful-message-help-bar/host_check.cpp": "a319e8eee598e897f726592d992e302feff8da830d699b68882e6a300fbfc570",
+    "sources/w12-hud-loop-a-data-emergency-result/data_emergency_result.cpp": "5554bb584f92f862fe96b4a9a96b4e2ab05fbfd13954ac299c3f6312d57fcc66",
+    "sources/w12-hud-loop-a-data-emergency-result/host_check.cpp": "7ba3bdd0026d6d09384b0966b0b13468954d15ef7fe2104c65ce66a66ac4d308",
+    "sources/w12-hud-loop-a-data-end-pos/data_end_pos.cpp": "5605cb515dbe9a9752824775a3d7837d1faf651a1100cd23cc13e5df32de1d2c",
+    "sources/w12-hud-loop-a-data-end-pos/host_check.cpp": "39b2e6b088501c3726f4b949af9186d6112b49b23602c954dbe6f8a2c16308c2",
+    "sources/w12-hud-loop-a-data-expand-list/data_expand_list.cpp": "261b9eb7b7c5b3e7b017764aa39f956f2b0fdebc16359b3bccad258296783771",
+    "sources/w12-hud-loop-a-data-expand-list/host_check.cpp": "867bbf601ec097b4ec808e60eed9ed39aaa49304ba24878b5a8b105777c41457",
+    "sources/w12-hud-loop-a-data-free-list/data_free_list.cpp": "bc57aece019d6e7719aec2676600ae76763449cbb662ae02b6df420e1fcea8b5",
+    "sources/w12-hud-loop-a-data-free-list/host_check.cpp": "08c50778ec0fb7583509172a4d032b7701e90bbbee01eed1ec4ea95c5a72063b",
+    "sources/w12-hud-loop-a-data-game-flags/data_game_flags.cpp": "60cc02a83d69981516ece8b7c09ee748135dda9234592ae57d8adbd38a770783",
+    "sources/w12-hud-loop-a-data-game-flags/host_check.cpp": "18692345bd717eb81f206987a88547a1a352879c856b17d4157ed66bded9cbfb",
+    "sources/w12-hud-loop-a-data-hair-color-setting/data_hair_color_setting.cpp": "bdc8bf7aa0df9251451f59c1d94d1fe18c852e31f8f3b50a08c1385b942547ef",
+    "sources/w12-hud-loop-a-data-hair-color-setting/host_check.cpp": "f188d26273013db9eee73c91f4208fb6f4c68cb0a22ff298891dfb41f2c02944",
+    "sources/w12-hud-loop-a-data-hair-style-setting/data_hair_style_setting.cpp": "0deda377b57870b78501322b725b32b2fc8d9f8c06a92641ee7b750d70e474fe",
+    "sources/w12-hud-loop-a-data-hair-style-setting/host_check.cpp": "55fb277fcd0036bb2763d6740fedfe571ac268a734261f5a6e57719b2b935b9a",
+    "sources/w12-hud-loop-a-data-inv-header/data_inv_header.cpp": "7db13ed314e044e6817c345a68b6ddd23d35568895d6c417cb5077338304a701",
+    "sources/w12-hud-loop-a-data-inv-header/host_check.cpp": "ce841445cbe573382ffcfbc9b5fca6c618f3c57742918ff120e3b0618449ea3e",
+    "sources/w12-hud-loop-a-do-net-cam-toggle/do_net_cam_toggle.cpp": "ec6dfe0ea1c600d2ae6a17150858abc8c9402c41a232e0ebb49a58442ebe1230",
+    "sources/w12-hud-loop-a-do-net-cam-toggle/host_check.cpp": "5d329bd7ba2da3f558fb23774ef9fd422d974ae1e7a741e7f398de05a1456873",
+    "sources/w12-hud-loop-a-draw-bust/draw_bust.cpp": "52d72237459a793e8d4834920cf41751d6f7823b482435246154f8f77bf792cd",
+    "sources/w12-hud-loop-a-draw-bust/host_check.cpp": "2fcba725eb5fd65e212f67af63bac463ff1e3111ef97bcf12cf4c9f71090598b",
+    "sources/w12-hud-loop-a-draw-compass/draw_compass.cpp": "bb03b34e34fbe272653702a2a24a0343a33e4eaa4e23ee1813503993382f6a64",
+    "sources/w12-hud-loop-a-draw-compass/host_check.cpp": "fb758d77aee1c41c4fd09d888040640ee4935af588bedcd86198847921a68364",
+    "sources/w12-hud-loop-a-draw-gold/draw_gold.cpp": "507a3e3eca845c2dc765e85f35123d6bef6d93adf48d8493253eecca8d30fd90",
+    "sources/w12-hud-loop-a-draw-gold/host_check.cpp": "b324d3c53ffc8fe8dd4764ed57f7f1c494ff26b8d2079c1769668205288f6735",
+    "sources/w12-hud-loop-a-drop-gold/drop_gold.cpp": "7c01f4084286d72af0dcef2595bb22667559b21145f41750779364c597b94f5b",
+    "sources/w12-hud-loop-a-drop-gold/host_check.cpp": "b8520fb4f0628a2804309a3f61380a8cb5ca867e6cbbb2e94f6d8659d66ec039",
+    "sources/w12-hud-loop-a-font-string-size/font_string_size.cpp": "4fb2c154c9ed926ae5eee1536fb13e7fbde5f3b961ec5deb29628103b0ce5f10",
+    "sources/w12-hud-loop-a-font-string-size/host_check.cpp": "5c65bf4ee34a51c898bc15efb9eb8e877828577206d14dca7462cbcf2529a4ac",
+    "sources/w12-hud-loop-a-get-data-for-all-objects/get_data_for_all_objects.cpp": "e23f3495fa6e488cb592b5e4d13a1754b46577b6f1a5adb507ffc828097c97de",
+    "sources/w12-hud-loop-a-get-data-for-all-objects/host_check.cpp": "cfbc05cdbd765e8be90cc97969afd51b4c74ff452620d42df572e29cf0beb3c0",
+    "sources/w12-hud-loop-a-helpful-messages-draw/helpful_messages_draw.cpp": "1a84e5f07fefd1f609fba5400a83c9e71ce42f91191516c403e21c4f09f843a2",
+    "sources/w12-hud-loop-a-helpful-messages-draw/host_check.cpp": "f3cb04f847668c3e414ba226f1bb230b832af0de84fa806707836ad7a83ee2a8",
     "sources/w12-particle-data-a-bat-params/bat_params.cpp": "dad9c657776c3c91848e00a7b7e7fff1d29e360dd69ba9a9500538ff96bc5763",
     "sources/w12-particle-data-a-bat-params/host_check.cpp": "944c3b7dff2b1c6a7c1e74bfe3f6257481f7c9a9b8a92e086ad2889478bd6fab",
     "sources/w12-particle-data-a-ctor-particle-prop/host_check.cpp": "1009847e1b03ecf30300723634a6aee2943b3e1d891a717f75488b2e8bfb7c46",
@@ -77933,11 +78253,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5202,
-    "authored_default_inputs": 5200,
+    "selected_inputs": 5225,
+    "authored_default_inputs": 5223,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3979,
-    "compiled_body_bytes_from_accepted_inputs": 1731532,
+    "emitted_function_definitions_including_helpers": 3993,
+    "compiled_body_bytes_from_accepted_inputs": 1739664,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -77950,7 +78270,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4889
+    "package_selected_inputs": 4912
   },
   "startup_implementations": [
     {
@@ -154551,6 +154871,347 @@
       ],
       "host_files": [
         "sources/w12-wnd-b-wnd-onmessage/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-font-string-size/font_string_size.cpp",
+      "source_sha256": "4fb2c154c9ed926ae5eee1536fb13e7fbde5f3b961ec5deb29628103b0ce5f10",
+      "object_sha256": "faf5bb5c74067d4498dfb33737af3cffe8f7cbbc4784d51d452aae84eaa2dc3d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "fontStringSize__FP4FontPci"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-font-string-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-do-net-cam-toggle/do_net_cam_toggle.cpp",
+      "source_sha256": "ec6dfe0ea1c600d2ae6a17150858abc8c9402c41a232e0ebb49a58442ebe1230",
+      "object_sha256": "73eadf7e2a65f45ee091c135d674eb71e610095bf5a89fed350bf23a9302a320",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 636,
+          "name": "doNetCamToggle__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-do-net-cam-toggle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-drop-gold/drop_gold.cpp",
+      "source_sha256": "7c01f4084286d72af0dcef2595bb22667559b21145f41750779364c597b94f5b",
+      "object_sha256": "ddaeb674cc955307fe78f935f3d1f1dae8a2c9b9f1d33781d584ab7895a0f00f",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 552,
+          "name": "dropGold__4itemG6Point3i"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-drop-gold/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-helpful-messages-draw/helpful_messages_draw.cpp",
+      "source_sha256": "1a84e5f07fefd1f609fba5400a83c9e71ce42f91191516c403e21c4f09f843a2",
+      "object_sha256": "db8968a849edab7d2db248dfe80bf6d5a35b20b56bdb6edf9d359225927f0a9b",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1160,
+          "name": "helpfulMessagesDraw__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-helpful-messages-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-draw-compass/draw_compass.cpp",
+      "source_sha256": "bb03b34e34fbe272653702a2a24a0343a33e4eaa4e23ee1813503993382f6a64",
+      "object_sha256": "5f36cec9891b417efdfd3ac4f549d592ddd7897440725e398b41713a36a98a96",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 788,
+          "name": "drawCompass__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-draw-compass/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-get-data-for-all-objects/get_data_for_all_objects.cpp",
+      "source_sha256": "e23f3495fa6e488cb592b5e4d13a1754b46577b6f1a5adb507ffc828097c97de",
+      "object_sha256": "d05a4d33d39b0186b8361fa3f45164e85d993862147ee3e52e49f9eae331acdf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 396,
+          "name": "_ZN12_GLOBAL__N_1L9walk_listERNS_4WalkEPh"
+        },
+        {
+          "compiled_body_bytes": 364,
+          "name": "getDataForAllObjects__FPciPiiT2T2"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-get-data-for-all-objects/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-create-random-combineable-item/create_random_combineable_item.cpp",
+      "source_sha256": "64ac82c55e18e80154494323af5109ccbdb850e31b3e7456adb398582ad6b0ba",
+      "object_sha256": "ff80d9c82a9d7d75101a31975621423595cc862c811e28f81cf6b12f5c284ade",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "_ZN12_GLOBAL__N_1L8load_u64EPKh"
+        },
+        {
+          "compiled_body_bytes": 256,
+          "name": "_ZN12_GLOBAL__N_1L8eligibleEPKhPKcii"
+        },
+        {
+          "compiled_body_bytes": 696,
+          "name": "createRandomCombineableItem__4itemPQ24item11descriptionsPc"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-create-random-combineable-item/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-create-named-random/create_named_random.cpp",
+      "source_sha256": "ba86cf1302678dc621cb675179c3fe2070269820c669756b27839fbb35cdd14b",
+      "object_sha256": "365750d194026e4dba47ad7c92d6a9932e3cdff2deafaa4ca6e068f173375cd5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 12,
+          "name": "_ZN12_GLOBAL__N_1L8load_u64EPKh"
+        },
+        {
+          "compiled_body_bytes": 160,
+          "name": "_ZN12_GLOBAL__N_1L8eligibleEPKhiib"
+        },
+        {
+          "compiled_body_bytes": 1272,
+          "name": "createNamedRandom__4itemPQ24item11descriptioniii"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-create-named-random/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-draw-bust/draw_bust.cpp",
+      "source_sha256": "52d72237459a793e8d4834920cf41751d6f7823b482435246154f8f77bf792cd",
+      "object_sha256": "30ecd2113661a53cb88898e412f4450d2bb02ee14b7d6d6950b7b880a050b93d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1820,
+          "name": "drawBust__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-a-draw-bust/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-arrow-left/data_arrow_left.cpp",
+      "source_sha256": "c8a559de8eb8e9775bef41f79242903dd7a2b69ad61313f2e6409cc5793b2757",
+      "object_sha256": "81760074693a2b70ee143294bc5cd166001c142c83cd41d76a06e57f4963a885",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-arrow-left/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-arrow-right/data_arrow_right.cpp",
+      "source_sha256": "2fcf32ef5918c59ea6fc5056a4f198031d8353145d55fbab55544eaf4cc27df6",
+      "object_sha256": "3a1ce8f1612458a3f8bb8c125c32d1fce48ba60e88bf8909e5f7b92844828d59",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-arrow-right/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-beard-setting/data_beard_setting.cpp",
+      "source_sha256": "04206430d31c5eb2491d650d1a170253fbc4b6f251926dea7eb905f56e9fbde7",
+      "object_sha256": "154afce1a3d6fe0226874abc3a4c57b8a35aee30697af0dbc42537f721667991",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-beard-setting/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-bust-alpha/data_bust_alpha.cpp",
+      "source_sha256": "e39971b0580b4630d63f786e3f3156cf4d0056516c2b755b2fa55c1bfbef0fc9",
+      "object_sha256": "f345ec570d3a082f457adec9c988366396952800f990de7eb577ba766e77cb3e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-bust-alpha/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-char-anim-test/data_char_anim_test.cpp",
+      "source_sha256": "3defb62bc92a09d06640c01ee4451865b77c53d22bb907757db9605974c59c8b",
+      "object_sha256": "25f3f54fb195b0f003b359c367342391e2dd56fb24e851c9e0cd646293968e71",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-char-anim-test/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-drew-helpful-message-help-bar/data_drew_helpful_message_help_bar.cpp",
+      "source_sha256": "1c163923ed05da766b95c14110a0aee6c53125da0d3cdcbecd22a23f9b87d711",
+      "object_sha256": "aef758ef37a264dbd5dab5f9a5855114d5b9f0ec4d7f188b55b1075f709f028f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-drew-helpful-message-help-bar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-emergency-result/data_emergency_result.cpp",
+      "source_sha256": "5554bb584f92f862fe96b4a9a96b4e2ab05fbfd13954ac299c3f6312d57fcc66",
+      "object_sha256": "2b60dca1328a852c8930d9b10b58c99df2156e832490d4da2d3b1fab99ab0df0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-emergency-result/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-end-pos/data_end_pos.cpp",
+      "source_sha256": "5605cb515dbe9a9752824775a3d7837d1faf651a1100cd23cc13e5df32de1d2c",
+      "object_sha256": "1d30b6a874de35989f6e95d88fd2e12f1eaa3fc7bdc6031ffb4f74068b13244e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-end-pos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-expand-list/data_expand_list.cpp",
+      "source_sha256": "261b9eb7b7c5b3e7b017764aa39f956f2b0fdebc16359b3bccad258296783771",
+      "object_sha256": "0828a476ae2195191997c1c260bb83a18357a03b39b59ae3ef256f9a3defb24b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-expand-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-free-list/data_free_list.cpp",
+      "source_sha256": "bc57aece019d6e7719aec2676600ae76763449cbb662ae02b6df420e1fcea8b5",
+      "object_sha256": "ecf1a23da66e81b9dc6bb1b17858f8d0b6bfe85b71c8750215d48b4224ae9efb",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-free-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-game-flags/data_game_flags.cpp",
+      "source_sha256": "60cc02a83d69981516ece8b7c09ee748135dda9234592ae57d8adbd38a770783",
+      "object_sha256": "f8d0a0661a70d42e76863d604a29ec6230cbab3ba249ee5ec6931f92c899826c",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-game-flags/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-hair-color-setting/data_hair_color_setting.cpp",
+      "source_sha256": "bdc8bf7aa0df9251451f59c1d94d1fe18c852e31f8f3b50a08c1385b942547ef",
+      "object_sha256": "8f633e26168b42e560978043ffd5502c5afb72c4f601956b2ee619650a2e4ede",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-hair-color-setting/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-hair-style-setting/data_hair_style_setting.cpp",
+      "source_sha256": "0deda377b57870b78501322b725b32b2fc8d9f8c06a92641ee7b750d70e474fe",
+      "object_sha256": "57ba98230034133f9b6f491c6e0fd269e9fa46434677f46ca61a335cd2571e51",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-hair-style-setting/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-a",
+      "source": "sources/w12-hud-loop-a-data-inv-header/data_inv_header.cpp",
+      "source_sha256": "7db13ed314e044e6817c345a68b6ddd23d35568895d6c417cb5077338304a701",
+      "object_sha256": "809e046b6ec70835f05e66b4a72c6100c98efc78d7ed9dd3ead0a9018d5721e0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-a-data-inv-header/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

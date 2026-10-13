@@ -9113,3 +9113,21 @@ Closed: `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnM
 
 Opened: `DestroyPool__t5VISet1ZP5VIWnd`, `GetString__13VIStringTableii`, `IsOpen__11VIGUIDialog`, `McErrWnd__Fv`, `OnDrawSelf__12VIWndConnect`, `OnDrawSelf__12VIWndMessage`, `OnDrawSelf__12VIWndOptions`, `OnDrawSelf__16VIWndReadMessage`, `OnDrawSelf__9VIWndEdit`, `OnKeyDown__12VIWndConnecti`, `OnKeyDown__12VIWndMessagei`, `OnKeyDown__12VIWndOptionsi`, `OnKeyDown__16VIWndReadMessagei`, `OnKeyDown__9VIWndEditi`, `OnKeyUp__10VIWndMcErri`, `OnKeyUp__12VIWndConnecti`, `OnKeyUp__12VIWndMessagei`, `OnKeyUp__12VIWndOptionsi`, `OnKeyUp__9VIWndEditi`, `OnMessage__12VIWndConnectP5VIWndiii`, `OnMessage__12VIWndMessageP5VIWndiii`, `OnMessage__12VIWndOptionsP5VIWndiii`, `OnMessage__16VIWndReadMessageP5VIWndiii`, `OnMessage__9VIWndEditP5VIWndiii`, `SetCaretOffset__9VIWndEditi`, `SetTitle__10VIUIWindowPCUs`, `__tf12VIWndConnect`, `__tf12VIWndMessage`, `__tf12VIWndOptions`, `__tf16VIWndReadMessage`, `__tf9VIWndEdit`, `mcerring`, `mcerror`
 - 2026-10-13 09:53 CDT — agents/w12-wnd-b — 1000 unresolved imports
+
+## agents/w12-hud-loop-a
+
+Merged (merge commit, branch tip `435a7893`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 32 listed plan entries with fresh `input_order` values 5202 through 5224 (9 functions: `fontStringSize`, `doNetCamToggle`, `dropGold`, `helpfulMessagesDraw`, `drawCompass`, `getDataForAllObjects`, `createRandomCombineableItem`, `createNamedRandom`, `drawBust`; and 14 data objects). All 23 selected host checks build and exit 0 here (native arm64, `-ffp-contract=off -fno-builtin`). The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5223 authored inputs, 3991 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (sources stay in the snapshot, with no plan entry): the eight earlier-wave units the notes list again. Seven have no committed check (`w10-front-a-mc-build-packed-player`, `w9-frontend-a-mc-check-player-import-or-change`, `w10-front-a-mc-convert-temp-player-to-real`, `w10-front-a-mc-net-pack`, `w10-front-a-mc-net-un-pack`, `w10-front-a-mc-set-ram-nm-players`, `w10-front-a-core-start-loading-screen`; the notes' only evidence is a private paired run outside git), and `w11-front-a-mc-load-level-entities` has a host contract that fails on this 64-bit host, the same reason an earlier entry gave. Also not selected: the new `w12-hud-loop-a-draw-gold` (`drawGold__Fv`). Its host check builds but exits 10 here (the flying-amount alpha case, which depends on the host's float-to-byte conversion); the check is host-dependent and integration may not fix it, so the unit waits for its owner. `drawGold__Fv` stays unresolved, as do the eight `MC_*`/`coreStartLoadingScreen` names above and `creditsText` (game text, deliberately unauthored). The notes' counts (32 closed names, 827 to 817) do not apply.
+
+| | |
+|---|---|
+| Before | 1000 |
+| After | 981 |
+| Closed | 23 |
+| Opened | 4 |
+
+Closed: `arrowLeft`, `arrowRight`, `beardSetting`, `bustAlpha`, `charAnimTest`, `createNamedRandom__4itemPQ24item11descriptioniii`, `createRandomCombineableItem__4itemPQ24item11descriptionsPc`, `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drewHelpfulMessageHelpBar`, `dropGold__4itemG6Point3i`, `emergencyResult`, `endPos`, `expandList`, `fontStringSize__FP4FontPci`, `freeList`, `gameFlags`, `getDataForAllObjects__FPciPiiT2T2`, `hairColorSetting`, `hairStyleSetting`, `helpfulMessagesDraw__Fv`, `invHeader`
+
+Opened: `ChangeNetCam__6Camerai`, `matUntransform__FP6Point3P8Matrix44T0`, `modelSetNoZRead__Fv`, `objGet__FP10GameObjectPc`
+- 2026-10-13 10:04 CDT — agents/w12-hud-loop-a — 981 unresolved imports
