@@ -4933,6 +4933,37 @@ Closed: `nextNmDeferedCalls`, `nmDeferedCalls`, `nmDirectQWords`, `nullBuff`,
 
 Opened: `file`
 
+## agents/runtime-tables
+
+Merged, but only one of its 23 units is selected (the notes carry the five
+summary sections; the tip was an hour old). The branch was started from an old
+shared tip, and 22 of its 23 units define symbols the shared branch already
+supplies from earlier packages (`w8-startup-sce-a`, `w8-runtime-libc-b`,
+`w8-spell-static-init-a` and others: for example `arList`, `eenull`,
+`norrath_assert_format_view`, `norrath_factory_prop_vtable`, the number and
+bigint table views, `icos`/`isin` and `heap_pointer`). With all 23 selected,
+the link fails with multiple definitions, so I selected only
+`runtime-tables-srcfile` (input 2543, a data unit with no emitted function, host
+test passes). The other 22 sources stay in the snapshot, unselected, with their
+host tests; the three link-style host tests (`rtti-user`, `prop-vtable`,
+`legacy-vtables`) pass when built with their implementation, and the other 20
+pass as is. The worker's 947-to-923 claim is against its own old tip and does
+not apply to this branch. Whether the independent duplicates agree byte for
+byte with the already-selected ones is not checked here. No game binary or
+disassembly listing was committed. 2041 function bodies, 2542 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1437 |
+| After | 1436 |
+| Closed | 1 |
+| Opened | 0 |
+
+Closed: `srcfile`
+
+Opened: none
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5286,3 +5317,4 @@ and no startup stage has executed.
 - 2026-10-12 20:23 CDT — `agents/w9-frontend-c` — 1453 unresolved imports
 - 2026-10-12 20:32 CDT — `agents/w9-other-a` — 1461 unresolved imports
 - 2026-10-12 20:37 CDT — `agents/w9-other-b` — 1437 unresolved imports
+- 2026-10-12 20:45 CDT — `agents/runtime-tables` — 1436 unresolved imports

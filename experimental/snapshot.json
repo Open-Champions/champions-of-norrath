@@ -32923,6 +32923,15 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w9-other-b-unscramble-table/unscramble_table.cpp"
+    },
+    {
+      "input_order": 2543,
+      "component": "runtime-tables-srcfile",
+      "object_name": "srcfile.o",
+      "private_object_sha256": "f248c7454769f1c235f45764dbaa82a48e19caa215258dcca9e641aee5478833",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/runtime-tables-srcfile/srcfile.cpp"
     }
   ],
   "drafts": [
@@ -35917,6 +35926,52 @@
     "sources/runtime-startup/constructors.cpp": "341d928d7b880c9adc29e9d7a6a4b577a99de1934e6734cac28471fab7bd3b03",
     "sources/runtime-startup/destructors.cpp": "dfa7288bfbf101e14c50a13e2c1b42d23043492cafa5ee52c2552ecb9505bc9b",
     "sources/runtime-startup/main_guard.cpp": "7281d7c60f46b22e31d6732ab63c1412625949a7d96c78b1d737e1326076a706",
+    "sources/runtime-tables-anim-identity/anim_identity.cpp": "ed2ff080b95df543911ca2b95bc40e55d2bc9eb7e78c4322544aba44f09dda7f",
+    "sources/runtime-tables-anim-identity/host_test.cpp": "5cb608950ed73d3ecc1b7b083452ad40f6242f2dc864d182c89721976e03249f",
+    "sources/runtime-tables-anim-lists/anim_lists.cpp": "7f8edb141ca13f724423c7dc37f14145985859f3e972ac8b158988ee1b0dae80",
+    "sources/runtime-tables-anim-lists/host_test.cpp": "82abdd1b8c83bebffedf0a981475853fdddb045d06129eb255e69d5ef1069e0c",
+    "sources/runtime-tables-assert-views/assert_views.cpp": "7adc1a93ee871abdefa5c79d44d5c680ad9a466dc58c5d21f32fd7018673b528",
+    "sources/runtime-tables-assert-views/host_test.cpp": "a9d69aa8499063c145b60104ddd67d7531e94c9ba749a273b36d857521fad6a5",
+    "sources/runtime-tables-bigint-powers5/bigint_powers5.cpp": "048b21eb5a1e424d1f81e261cf4fe11ad83234eb382be69eb5e2074d3345463e",
+    "sources/runtime-tables-bigint-powers5/host_test.cpp": "2970a3c696e7720c4e41d0ae3aa8443384bd3af0d4e3444dcdd8f887bbba29d3",
+    "sources/runtime-tables-eenull/eenull.cpp": "5fd0665a6e733d3f378219e0c5b5c912abfde8385617e695d2a83f97b87250e8",
+    "sources/runtime-tables-eenull/host_test.cpp": "af692a4437155fc39996a3ef08ece520bb647ff697753adb03fb204b18d04e40",
+    "sources/runtime-tables-factory-sscanf/factory_sscanf.cpp": "482ecfce7b7c8723e52df5480b9906da985bb34e30751d0f7d6c93fed962fb74",
+    "sources/runtime-tables-factory-sscanf/host_test.cpp": "212b8dc7917a2a1928f58726579c1df1a325ce14fbebd31cf2f4a0dadd67c531",
+    "sources/runtime-tables-heap-word/heap_word.cpp": "478a3807bebe5c6d915f3c9d76736a2ed7b74eef1e4f70e3a3b7136d415a8cd0",
+    "sources/runtime-tables-heap-word/host_test.cpp": "7c2f90c8b4cf54ad9c846a16ef842ee1d143a68de28af69b1495c0da5fc0d2f9",
+    "sources/runtime-tables-icos/host_test.cpp": "19c48a41d9f846e6796820078c1110b900d03e62645c51a1acb0ad1a3141350e",
+    "sources/runtime-tables-icos/icos.cpp": "6988f7d1e3515f5302ddb04ff2cc28279f5d2de14f847e0e08d92198b578277f",
+    "sources/runtime-tables-isin/host_test.cpp": "1883ab2d3da5fa8f0d492dab670725c4c3dad6c9c5e6f39d1f3f78f0cf764174",
+    "sources/runtime-tables-isin/isin.cpp": "79d4e0841a7bea2326c4f0fbbe686a8ac783ff91b74a94faabcaf9c55b287954",
+    "sources/runtime-tables-legacy-vtables/host_test.cpp": "41281e09e168eaa00e832670f511ec6b518e04bfa75feedc0419734c19ea96d9",
+    "sources/runtime-tables-legacy-vtables/legacy_vtables.cpp": "81f16137572840fd2358cf38d9deffb6a0e7bcbb67aa61ff011e81ad0a29b159",
+    "sources/runtime-tables-number-refine/host_test.cpp": "672b6339e9f5e34581a116c0364d5304b729b61979c1b5fe4d573e7ad8f1fbab",
+    "sources/runtime-tables-number-refine/number_refine.cpp": "e333d0469648ff9f7f9d5b1a15080409ef9315e15471f9649788eb169bfef663",
+    "sources/runtime-tables-number-tens/host_test.cpp": "d2a8a939fb41dbaa0fd7b39b210237dc4256b4fb4ebeca6385358e67b3f4d256",
+    "sources/runtime-tables-number-tens/number_tens.cpp": "8754080cdc08bf0ee7b913593f608c62f0a8c577e0a9107c9e95f42ce20bac5e",
+    "sources/runtime-tables-particle-storage/host_test.cpp": "05b17ca98bc402be4548cbe125cb689b6d4db463ba527ada5fcd135dc54caa7a",
+    "sources/runtime-tables-particle-storage/particle_storage.cpp": "d742a26d9f067f9989d120f273660b4c5df29031fbac33494825e9ec72d17c63",
+    "sources/runtime-tables-powf/host_test.cpp": "b083fd67d8d43612d737fca11cdf2ab2d6b7eac0726a3d4573336ca42f26fbec",
+    "sources/runtime-tables-powf/powf.cpp": "d0363cf6bd3fbdbe4e65a52fcb356cda72f7b1ce855de15c760044d28fafea65",
+    "sources/runtime-tables-prop-vtable/host_test.cpp": "5661bc42947f8d0175194e240c3b7a7ac4496cc55f4700c83697ca4f565f402d",
+    "sources/runtime-tables-prop-vtable/prop_vtable.cpp": "37a2467e812eb4ae23e8ee998950cff15ee518299d3c5f33cf00679ee60c48ad",
+    "sources/runtime-tables-proxy-mesh/host_test.cpp": "ba54f9a3bda55f3f5f3e65a108a598d356c50ac1e46a366d5ae636a0f76520a2",
+    "sources/runtime-tables-proxy-mesh/proxy_mesh.cpp": "440874dd67d35736b0a7cc43d072621fffc743439ea596efe3731ce2f879ec48",
+    "sources/runtime-tables-rtti-user/host_test.cpp": "5fae4d5340b3e2d5c0ec3051e0d00896691e318335b6aa35b6385bba8fd11709",
+    "sources/runtime-tables-rtti-user/rtti_user.cpp": "af9f50a498e1d0f46bcc6d552258e54054309a2e9f53932530aa9fe656343704",
+    "sources/runtime-tables-scan-views/host_test.cpp": "d623a12418bcbf0f0a5258fb01eb99899c29b839723938c4094ccd5e6e96fb48",
+    "sources/runtime-tables-scan-views/scan_views.cpp": "230bf228e19d86333bd6897d2dbc0c8d5d6c60ff6578e635ef0ab5c9cac9b8ad",
+    "sources/runtime-tables-sce-retval/host_test.cpp": "3666ea7b7e562d031e44d34d2f65acd28122d694810843a5a905a75e6f093f75",
+    "sources/runtime-tables-sce-retval/sce_retval.cpp": "75481acd4cc9b64b2c94e7d31bf9ddb70e05fb54b21b66138a277ec2b9185e2d",
+    "sources/runtime-tables-services-word/host_test.cpp": "14721588a8b00bfeee18067f4663e1fd98eda2f76ccb51d0b40278c9b961e628",
+    "sources/runtime-tables-services-word/services_word.cpp": "fb942e6cbc56cc51e4926e1031a2ee50ed2dfd7b54ec85542399b4c8678cf525",
+    "sources/runtime-tables-srcfile/host_test.cpp": "ccc39975d7189aaab80125e4ded71aa9fbbb2ccc1c8e2c144a3490a1c6e7237c",
+    "sources/runtime-tables-srcfile/srcfile.cpp": "3f636ff78ac08b7f0066c1108fc2141706f1627bc93d978206c3c88c277905ce",
+    "sources/runtime-tables-thread-stack/host_test.cpp": "6ac65f51695c3cfeeec8b679bb23e2340c5405e272c3033b9dcad6e3d0f74c43",
+    "sources/runtime-tables-thread-stack/thread_stack.cpp": "3f751d259a7c2df41881c19d89ca3e7a628dab1a16c94753d3b036785f1a7325",
+    "sources/runtime-tables-typeinfo-eq/host_test.cpp": "6b1845f94d0dff3afb51669b35e48b7b62bf959acd6d4189e453fc122621cc14",
+    "sources/runtime-tables-typeinfo-eq/typeinfo_eq.cpp": "c99b8c0ed15113e290aa79865645cdc68e3ba1b415f1fb975155fb7f830f2c0c",
     "sources/save-and-quests-add-defered-call/add_defered_call.cpp": "abd827398e803a5c4fe661a762c093795578444c591c806d69a36fa73a864f06",
     "sources/save-and-quests-add-defered-call/host_check.cpp": "0a9e2b5e29929e3815f97236ce23e4a6b888a2dd5f089ac533fb0f83908a5085",
     "sources/save-and-quests-add-quest/add_quest.cpp": "039733aabbad82350024006d779fa0421724fa6d54ff39e1533af2ff7314cc7f",
@@ -38950,8 +39005,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 2543,
-    "authored_default_inputs": 2541,
+    "selected_inputs": 2544,
+    "authored_default_inputs": 2542,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 2043,
     "compiled_body_bytes_from_accepted_inputs": 860996,
@@ -38967,7 +39022,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 2230
+    "package_selected_inputs": 2231
   },
   "startup_implementations": [
     {
@@ -74084,6 +74139,18 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w9-other-b-unscramble-table/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "runtime-tables",
+      "source": "sources/runtime-tables-srcfile/srcfile.cpp",
+      "source_sha256": "3f636ff78ac08b7f0066c1108fc2141706f1627bc93d978206c3c88c277905ce",
+      "object_sha256": "f248c7454769f1c235f45764dbaa82a48e19caa215258dcca9e641aee5478833",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/runtime-tables-srcfile/host_test.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
