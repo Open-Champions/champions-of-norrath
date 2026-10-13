@@ -9443,7 +9443,7 @@ Closed: `ChangeNetCam__6Camerai`, `McErrWnd__Fv`, `coreStartLoadingScreen__Fv`, 
 Opened: `a.1122`, `blackoutTexCopy`, `curBoxOld`, `displayItemStats__FiiiPQ24item11descriptioniii`, `drewBitmap`, `foregrndTexCopy`, `hudGetRemappedButtonIcon__Fii`, `hudQuickSpellOn`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell__Fiiil`, `picAdd__4itemPc`, `scrollmapTexCopy`, `shopClipGridCoordinates__FPiN30`, `shopDrawItemBitmapGlow__FP8_textureii`, `shopMouseOnHotSpot__FP12screenStruct`, `titleloadTexCopy`
 - 2026-10-13 15:28 CDT — agents/w13-frontend-game-a — 1265 unresolved imports
 
-## agents/w13-frontend-game-a-followup
+## agents/w13-frontend-game-a (follow-up)
 
 Follow-up to the entry above (correction, not a new merge). The entry above said the nine host-only directories closed nothing because earlier waves had already selected their sources. That was wrong: those eight earlier-wave sources (`MC_*`, `drawGold`, `msg_run__7Weather`) were left unselected by earlier integrators for lacking a check, and are still in the unresolved list at that point. This package's host-only directories are exactly the missing checks, and all nine pass here, so the nine sources are now selected (input_order values 5597 through 5605, each paired with its w13 host check). With them the notes' 28 closed names reproduce exactly (19 + 9). Full build: 5604 authored inputs, 4293 function bodies, zero COMMON. Paired runs and mutation tests described in the notes were not re-run.
 
@@ -9457,4 +9457,4 @@ Follow-up to the entry above (correction, not a new merge). The entry above said
 Closed: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_CheckPlayerImportOrChange__Fv`, `MC_ConvertTempPlayerToReal__Fi`, `MC_LoadLevelEntities__FPcT0`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`, `MC_SetRamNmPlayers__Fi`, `drawGold__Fv`, `msg_run__7Weather`
 
 Opened: `commaString__FPc`, `floorPutSaveInfo__FPc`, `getPackChecksum__Fv`, `loadBuffer`, `mcDisableStartupScript`, `megatileEntitize__FPci`, `objectPutSaveData__FPci`, `padChangeIndex__Fii`, `playerGoldIconx`, `readMap__3mapPUc`
-- 2026-10-13 15:33 CDT — agents/w13-frontend-game-a-followup — 1266 unresolved imports
+- 2026-10-13 15:33 CDT — agents/w13-frontend-game-a (follow-up) — 1266 unresolved imports
