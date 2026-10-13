@@ -1,4 +1,4 @@
-// Observed msg_save__6GoblinPc at 0x0022f0d8, 112 bytes.
+// Observed msg_save__6GoblinPc at 0x0022f0d8, 108 bytes.
 // Calls the Creature save routine on the buffer, which returns a byte count n. Four words are then
 // stored after it, in this order: the words at object+972, +988, +992 and +208. Returns n + 16.
 // Unknown: what the saved words mean. Nothing here ran on the EE.

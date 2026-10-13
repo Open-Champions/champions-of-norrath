@@ -1,4 +1,4 @@
-// Observed setState__5Gnomei at 0x002019a0, 760 bytes. The new state is held in a stack word whose
+// Observed setState__5Gnomei at 0x002019a0, 764 bytes. The new state is held in a stack word whose
 // address goes to the Creature state processing call (setStateProcessing__8CreaturePi), which may
 // change it; a nonzero result returns at once without storing. Otherwise a state of 14 or more only
 // reaches the final store, and states 0..13 select a case through the table at 0x46f3d0 (t is the
