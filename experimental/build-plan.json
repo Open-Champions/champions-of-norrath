@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4063,
+  "default_authored_inputs": 4095,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2374,6 +2374,39 @@
     "sources/w10-actor-c-tf-6badger/typeinfo.cpp": "f40c4643f11a87dd7e28e816b9b5de786c6de85dc86951763843a6a409af9828",
     "sources/w10-actor-c-tf-8catapult/typeinfo.cpp": "77e9cfbca29d9910068d12aa73096691be4f431c7bd00ee8dcc9e6990df26a94",
     "sources/w10-actor-c-ti-8autoprop/ti.cpp": "f515d4db1562d145cb7cb3682fc7fa6dc0365edd7ec6439b1d2ce9b704a136d7",
+    "sources/w10-actor-d-chest-msg-load/msg_load.cpp": "6d34f5d74bbd4341a082a8d6773f43d719feffe01401aacbbb95165456da2dea",
+    "sources/w10-actor-d-chest-msg-poke/msg_poke.cpp": "ca76a6df0c34551226f26ad29fd90e7cd4b448522689c3c3d734ffeac5275f09",
+    "sources/w10-actor-d-chest-msg-run/msg_run.cpp": "63fd991e840d0c5543ed257661dad841d2d206080e2c3c0588e38e0684b80ab7",
+    "sources/w10-actor-d-chest-msg-save/msg_save.cpp": "10ed81bb5e8be861f8f560ddbec860e032fc086b1149508acd50cd34c0def2bf",
+    "sources/w10-actor-d-clone-7critter/clone.cpp": "c0f0055088e47dd37bf74f5406fbf3d67f37389b1d2ba47d33fc2f6bc40cecfb",
+    "sources/w10-actor-d-cloudgiant-msg-draw/msg_draw.cpp": "e6fafc7eba77148e9e35351503758cb330772377c5177f674807641b164d0110",
+    "sources/w10-actor-d-cloudgiant-msg-hurt/msg_hurt.cpp": "ab2d201e283dee88eadae07493db1a307ce34a33c8f1dec37f9e7bdd75dee3fe",
+    "sources/w10-actor-d-cloudgiant-msg-load/msg_load.cpp": "eccc4e1c15b11532910c938728a2112ac061c5fbe7311c68ea7fcdcf20cfc9ee",
+    "sources/w10-actor-d-cloudgiant-msg-run/msg_run.cpp": "129ce5fadb9773ee4fec3851e946b3f11547fd429f50dc12b662b2c319002c07",
+    "sources/w10-actor-d-cloudgiant-msg-save/msg_save.cpp": "8dd99446edf801ba57bb8e9e8ee4f3b068414a4da026fe7ecef21a821587e545",
+    "sources/w10-actor-d-cloudgiant-msg-trigger/msg_trigger.cpp": "a85a5dfeb29cae3774c01d236dbaf0ccbb380864b6cbfaf02764785e5af1398d",
+    "sources/w10-actor-d-cloudgiant-set-state/set_state.cpp": "682a4260ced0824553dc692cc59a8facd21d659d9d357917d93f51a8ba8b9581",
+    "sources/w10-actor-d-common/words.hpp": "1f47bcdabf4e17316cec8974de219749bc00367eae060ec720c621f6c25fc04f",
+    "sources/w10-actor-d-creature-ctor/creature_ctor.cpp": "19b8dde196f082a763416db3069515f1205a21f131e479f5e48336eb72a55cfd",
+    "sources/w10-actor-d-creature-drop-treasure/drop_treasure.cpp": "32c11e258b858bde5f82045530841466d3d24135da02663ce9554217fa7e2d4f",
+    "sources/w10-actor-d-critter-get-model/get_model.cpp": "3999f03dffccb212299415557323fe7772ef135399968ee88333ec27f144fbb1",
+    "sources/w10-actor-d-critter-msg-collision/msg_collision.cpp": "17a4331da6f74b4167d50c86edce2acac74c994386ec937ac7ae681c06b5e40b",
+    "sources/w10-actor-d-critter-msg-draw/msg_draw.cpp": "f05680467504abc5fdafafea0dde514d7a007cf3913bf11e9733ff4f346c744d",
+    "sources/w10-actor-d-critter-msg-hurt/msg_hurt.cpp": "e7c3996b958b649389f6c5cd0119cb0270824f7655a437fef3050d775e7dfc6b",
+    "sources/w10-actor-d-critter-msg-load/msg_load.cpp": "d0579409e65b0e233ad18762c29ce4217fcbee6c1e55dbbf2a8228e72051b35c",
+    "sources/w10-actor-d-critter-msg-run/msg_run.cpp": "3c7451c7069cbe60e23c7ea97beefa4cf48a152721f652b5031d77e02a240959",
+    "sources/w10-actor-d-critter-msg-save/msg_save.cpp": "b1487dfbf4f1533905bb4cc389d95148b0c5df59d5b0483324cf20a00257b8c8",
+    "sources/w10-actor-d-cthulu-msg-draw/msg_draw.cpp": "13d1433e73fd044f88806e12b1e61936c29bdac092bce6a8da21e0df3afb083a",
+    "sources/w10-actor-d-cthulu-msg-move-collision/move_collision.cpp": "fc18b94d8cfa1a0e97a5662ca48ca82aae9a73469ffd8bc6ede4f0d75ef57bb9",
+    "sources/w10-actor-d-cthulu-msg-run/msg_run.cpp": "d4cfe967a3bcbb4f9eb5a437f2f67024cfe356b471733f935422a678fa08c714",
+    "sources/w10-actor-d-dtor-cloudgiant/dtor.cpp": "a1695893a18f73c662caeef8828eba09693cf90597f867d4aeeff7cf394e29f6",
+    "sources/w10-actor-d-dtor-critter/dtor.cpp": "ca58c09024c916dbd4af083753a4515649d7f20db36d28540d954eb09a385545",
+    "sources/w10-actor-d-dtor-cthulu/dtor.cpp": "77d8702adb2392318bcd47954146c674eeaa1b168c2bc9a756aa909d2db41910",
+    "sources/w10-actor-d-get-current-route-point/route_point.cpp": "6a34d59d435497c9bcbc4e56a6731624bc53394b3a3a039ab923ea174ab91b27",
+    "sources/w10-actor-d-get-next-route-point/route_point.cpp": "9b0184499031e5edc565fe99a55cdb434f06b33189188ef2e6f5de320f947384",
+    "sources/w10-actor-d-tf-cloudgiant/typeinfo.cpp": "16aebc5e77bf10ef30244191747a63ddd01d828d96665c762da43f93f3e96bbe",
+    "sources/w10-actor-d-tf-critter/typeinfo.cpp": "385bdb9c99a5244ed1db314701df08d162283668abbedd1c9fd670f67b5441a3",
+    "sources/w10-actor-d-tf-cthulu/typeinfo.cpp": "ff1cc8663845fd8ade2b1b232b188f7b3fd9da6a15fdce4d085fccc315a186a6",
     "sources/w10-actor-e-clone-10firebeetle/clone.cpp": "29037247a18e65600e2c73f2acb2b6f36620c8c23ff6be306638f765c2884c11",
     "sources/w10-actor-e-clone-13femaledarkelf/clone.cpp": "7e22695c98d11023bf84ad27153b7a5b23d625de118cd14bc348e8778a4e10d1",
     "sources/w10-actor-e-clone-7cyclops/clone.cpp": "ae75d4562af91963833c54a3a80e2cebf65ff9429b6e7fd7c0f7aca45244c014",
@@ -58064,6 +58097,506 @@
           "compiled_body_bytes": 92
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4065,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_chest_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "6d34f5d74bbd4341a082a8d6773f43d719feffe01401aacbbb95165456da2dea",
+      "source": "sources/w10-actor-d-chest-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__5ChestPc",
+          "compiled_body_bytes": 220
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4066,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_chest_msg_poke.o",
+      "profile": "authored_cpp",
+      "sha256": "ca76a6df0c34551226f26ad29fd90e7cd4b448522689c3c3d734ffeac5275f09",
+      "source": "sources/w10-actor-d-chest-msg-poke/msg_poke.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_poke__5Chesti",
+          "compiled_body_bytes": 1696
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4067,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_chest_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "63fd991e840d0c5543ed257661dad841d2d206080e2c3c0588e38e0684b80ab7",
+      "source": "sources/w10-actor-d-chest-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__5Chest",
+          "compiled_body_bytes": 1272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4068,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_chest_msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "10ed81bb5e8be861f8f560ddbec860e032fc086b1149508acd50cd34c0def2bf",
+      "source": "sources/w10-actor-d-chest-msg-save/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__5ChestPc",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4069,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_clone_7critter.o",
+      "profile": "authored_cpp",
+      "sha256": "c0f0055088e47dd37bf74f5406fbf3d67f37389b1d2ba47d33fc2f6bc40cecfb",
+      "source": "sources/w10-actor-d-clone-7critter/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__7Critter",
+          "compiled_body_bytes": 780
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4070,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "e6fafc7eba77148e9e35351503758cb330772377c5177f674807641b164d0110",
+      "source": "sources/w10-actor-d-cloudgiant-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__10CloudGiant",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4071,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "ab2d201e283dee88eadae07493db1a307ce34a33c8f1dec37f9e7bdd75dee3fe",
+      "source": "sources/w10-actor-d-cloudgiant-msg-hurt/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__10CloudGiantfP10GameObjecti",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4072,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "eccc4e1c15b11532910c938728a2112ac061c5fbe7311c68ea7fcdcf20cfc9ee",
+      "source": "sources/w10-actor-d-cloudgiant-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__10CloudGiantPc",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4073,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "129ce5fadb9773ee4fec3851e946b3f11547fd429f50dc12b662b2c319002c07",
+      "source": "sources/w10-actor-d-cloudgiant-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__10CloudGiant",
+          "compiled_body_bytes": 6620
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4074,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "8dd99446edf801ba57bb8e9e8ee4f3b068414a4da026fe7ecef21a821587e545",
+      "source": "sources/w10-actor-d-cloudgiant-msg-save/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__10CloudGiantPc",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4075,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_msg_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "a85a5dfeb29cae3774c01d236dbaf0ccbb380864b6cbfaf02764785e5af1398d",
+      "source": "sources/w10-actor-d-cloudgiant-msg-trigger/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_trigger__10CloudGianti",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4076,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cloudgiant_set_state.o",
+      "profile": "authored_cpp",
+      "sha256": "682a4260ced0824553dc692cc59a8facd21d659d9d357917d93f51a8ba8b9581",
+      "source": "sources/w10-actor-d-cloudgiant-set-state/set_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "setState__10CloudGianti",
+          "compiled_body_bytes": 1608
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4077,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_creature_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "19b8dde196f082a763416db3069515f1205a21f131e479f5e48336eb72a55cfd",
+      "source": "sources/w10-actor-d-creature-ctor/creature_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__8CreatureG6Point3sPQ210GameObject11resourceMapfPPc",
+          "compiled_body_bytes": 944
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4078,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_creature_drop_treasure.o",
+      "profile": "authored_cpp",
+      "sha256": "32c11e258b858bde5f82045530841466d3d24135da02663ce9554217fa7e2d4f",
+      "source": "sources/w10-actor-d-creature-drop-treasure/drop_treasure.cpp",
+      "emitted_functions": [
+        {
+          "name": "dropTreasure__8CreatureG6Point3iffffffPc",
+          "compiled_body_bytes": 1060
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4079,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_get_model.o",
+      "profile": "authored_cpp",
+      "sha256": "3999f03dffccb212299415557323fe7772ef135399968ee88333ec27f144fbb1",
+      "source": "sources/w10-actor-d-critter-get-model/get_model.cpp",
+      "emitted_functions": [
+        {
+          "name": "getModel__7Critter",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4080,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "17a4331da6f74b4167d50c86edce2acac74c994386ec937ac7ae681c06b5e40b",
+      "source": "sources/w10-actor-d-critter-msg-collision/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__7CritterP10GameObject",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4081,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "f05680467504abc5fdafafea0dde514d7a007cf3913bf11e9733ff4f346c744d",
+      "source": "sources/w10-actor-d-critter-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__7Critter",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4082,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_hurt.o",
+      "profile": "authored_cpp",
+      "sha256": "e7c3996b958b649389f6c5cd0119cb0270824f7655a437fef3050d775e7dfc6b",
+      "source": "sources/w10-actor-d-critter-msg-hurt/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_hurt__7CritterfP10GameObjecti",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4083,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_load.o",
+      "profile": "authored_cpp",
+      "sha256": "d0579409e65b0e233ad18762c29ce4217fcbee6c1e55dbbf2a8228e72051b35c",
+      "source": "sources/w10-actor-d-critter-msg-load/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_load__7CritterPc",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4084,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "3c7451c7069cbe60e23c7ea97beefa4cf48a152721f652b5031d77e02a240959",
+      "source": "sources/w10-actor-d-critter-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__7Critter",
+          "compiled_body_bytes": 2264
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4085,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_critter_msg_save.o",
+      "profile": "authored_cpp",
+      "sha256": "b1487dfbf4f1533905bb4cc389d95148b0c5df59d5b0483324cf20a00257b8c8",
+      "source": "sources/w10-actor-d-critter-msg-save/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_save__7CritterPc",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4086,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cthulu_msg_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "13d1433e73fd044f88806e12b1e61936c29bdac092bce6a8da21e0df3afb083a",
+      "source": "sources/w10-actor-d-cthulu-msg-draw/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__6Cthulu",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4087,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cthulu_msg_move_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "fc18b94d8cfa1a0e97a5662ca48ca82aae9a73469ffd8bc6ede4f0d75ef57bb9",
+      "source": "sources/w10-actor-d-cthulu-msg-move-collision/move_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_moveCollision__6CthuluPP10GameObject",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-d-common/words.hpp"
+      ],
+      "input_order": 4088,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_cthulu_msg_run.o",
+      "profile": "authored_cpp",
+      "sha256": "d4cfe967a3bcbb4f9eb5a437f2f67024cfe356b471733f935422a678fa08c714",
+      "source": "sources/w10-actor-d-cthulu-msg-run/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_run__6Cthulu",
+          "compiled_body_bytes": 2732
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4089,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_dtor_cloudgiant.o",
+      "profile": "authored_cpp",
+      "sha256": "a1695893a18f73c662caeef8828eba09693cf90597f867d4aeeff7cf394e29f6",
+      "source": "sources/w10-actor-d-dtor-cloudgiant/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10CloudGiant",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4090,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_dtor_critter.o",
+      "profile": "authored_cpp",
+      "sha256": "ca58c09024c916dbd4af083753a4515649d7f20db36d28540d954eb09a385545",
+      "source": "sources/w10-actor-d-dtor-critter/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_7Critter",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4091,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_dtor_cthulu.o",
+      "profile": "authored_cpp",
+      "sha256": "77d8702adb2392318bcd47954146c674eeaa1b168c2bc9a756aa909d2db41910",
+      "source": "sources/w10-actor-d-dtor-cthulu/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_6Cthulu",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4092,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_get_current_route_point.o",
+      "profile": "authored_cpp",
+      "sha256": "6a34d59d435497c9bcbc4e56a6731624bc53394b3a3a039ab923ea174ab91b27",
+      "source": "sources/w10-actor-d-get-current-route-point/route_point.cpp",
+      "emitted_functions": [
+        {
+          "name": "getCurrentRoutePoint__8Creature",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4093,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_get_next_route_point.o",
+      "profile": "authored_cpp",
+      "sha256": "9b0184499031e5edc565fe99a55cdb434f06b33189188ef2e6f5de320f947384",
+      "source": "sources/w10-actor-d-get-next-route-point/route_point.cpp",
+      "emitted_functions": [
+        {
+          "name": "getNextRoutePoint__8CreatureP6Point3G6Point3ffi",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4094,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_tf_cloudgiant.o",
+      "profile": "authored_cpp",
+      "sha256": "16aebc5e77bf10ef30244191747a63ddd01d828d96665c762da43f93f3e96bbe",
+      "source": "sources/w10-actor-d-tf-cloudgiant/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10CloudGiant",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4095,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_tf_critter.o",
+      "profile": "authored_cpp",
+      "sha256": "385bdb9c99a5244ed1db314701df08d162283668abbedd1c9fd670f67b5441a3",
+      "source": "sources/w10-actor-d-tf-critter/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf7Critter",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4096,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_d_tf_cthulu.o",
+      "profile": "authored_cpp",
+      "sha256": "ff1cc8663845fd8ade2b1b232b188f7b3fd9da6a15fdce4d085fccc315a186a6",
+      "source": "sources/w10-actor-d-tf-cthulu/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf6Cthulu",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -58163,7 +58696,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "8f96f881babb8b03b855a5c361b7bbecdfd8b81c6b2337400e099d8ac8a646b9",
+  "snapshot_sha256": "1d3203c436c6ce668cb050b47eadaa42c403b6c635555f29f68d1b063f95583a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

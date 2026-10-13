@@ -8005,3 +8005,25 @@ Closed: `_$_10FireBeetle`, `_$_13FemaleDarkElf`, `_$_5Demon`, `_$_7Cyclops`, `_G
 
 Opened: `ISeeDeadPeople__8Creaturef`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__14SpellHarmTouchiP8CreatureP5Skill`, `__14poisonGasSpellG6Point3iiiP10GameObjecti`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__9dustCloudG6Point3iiii`, `__tf14SpellHarmTouch`, `attack__14SpellHarmTouchP10GameObjectPiT2`, `creatureFindLeadYaw__8CreatureP10GameObjectf`, `creatureSlamEffect__8CreatureP8Creaturei`, `dropWeapon__5Demon`, `findEnemyLeadPosition__8CreaturefP6Point3`, `flee2__8CreatureP10GameObject`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `generateDust__7CyclopsG6Point3`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `objectIsCrowded__8CreatureP10GameObjectffi`
 - 2026-10-13 02:45 CDT — `agents/w10-actor-e` — 1134 unresolved imports
+
+## agents/w10-actor-d
+
+Merged (merge commit, branch tip `0815fc90`, 54 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4065
+through 4096. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 29 under `-Werror`, three only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4095 authored inputs, 3015 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1134 |
+| After | 1116 |
+| Closed | 32 |
+| Opened | 14 |
+
+Closed: `_$_10CloudGiant`, `_$_6Cthulu`, `_$_7Critter`, `__8CreatureG6Point3sPQ210GameObject11resourceMapfPPc`, `__tf10CloudGiant`, `__tf6Cthulu`, `__tf7Critter`, `clone__7Critter`, `dropTreasure__8CreatureG6Point3iffffffPc`, `getCurrentRoutePoint__8Creature`, `getModel__7Critter`, `getNextRoutePoint__8CreatureP6Point3G6Point3ffi`, `msg_collision__7CritterP10GameObject`, `msg_draw__10CloudGiant`, `msg_draw__6Cthulu`, `msg_draw__7Critter`, `msg_hurt__10CloudGiantfP10GameObjecti`, `msg_hurt__7CritterfP10GameObjecti`, `msg_load__10CloudGiantPc`, `msg_load__5ChestPc`, `msg_load__7CritterPc`, `msg_moveCollision__6CthuluPP10GameObject`, `msg_poke__5Chesti`, `msg_run__10CloudGiant`, `msg_run__5Chest`, `msg_run__6Cthulu`, `msg_run__7Critter`, `msg_save__10CloudGiantPc`, `msg_save__5ChestPc`, `msg_save__7CritterPc`, `msg_trigger__10CloudGianti`, `setState__10CloudGianti`
+
+Opened: `__11BoltGoRoundG6Point3siP15AnimationHeader`, `_vt$10CloudGiant`, `_vt$6Cthulu`, `_vt$7Critter`, `chestResourceList`, `modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf`, `modelSetFade__Fc`, `norrath_w10_actor_d_view_7d6c40`, `norrath_w10_actor_d_view_7d7720`, `norrath_w10_actor_d_view_7d7770`, `plotRoute__8CreatureG6Point3ffi`, `pointInZone__8CreatureG6Point3ffss`, `setResource__10GameObjectPQ210GameObject11resourceMap`, `steerToPosition__8CreatureG6Point3`
