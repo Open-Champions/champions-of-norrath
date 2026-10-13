@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5575,
+  "default_authored_inputs": 5595,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4345,6 +4345,26 @@
     "sources/w12-wnd-b-vt-wnd/vtable.cpp": "e7f1c42d8d09545f7438820944cbd814039775a9ed1888d8039f45bb084bac0a",
     "sources/w12-wnd-b-wnd-onkeyup/onkeyup.cpp": "5c25e17a9b270a16383a58a6db2e3e791e516fe40ebc45b66ae3749274a91c2c",
     "sources/w12-wnd-b-wnd-onmessage/onmessage.cpp": "d10f92085f941ee49a2c97f3bf85e55bf2290d6048591393c0df6df69ed3ff93",
+    "sources/w13-frontend-game-a-armor-cache-locals/armor_cache_locals.cpp": "14587c98e44cab4fb7d4d7e2415a107daea0f0a9d7658c28185b66cd3eb61286",
+    "sources/w13-frontend-game-a-change-net-cam-6camera/change_net_cam.cpp": "daaa890b0f04aec4e384f1e819ff2730362b4902625f81a2500d6f622e0cbaf9",
+    "sources/w13-frontend-game-a-core-start-loading-screen/core_start_loading_screen.cpp": "7d25bb812d6abc1710a824538c735847dc604293e630f820ceec37eb58ce8d64",
+    "sources/w13-frontend-game-a-count-items/count_items.cpp": "e76b6cc38bf9a0539ca443eb418bd4da876898394033e4d1667a7076afd80959",
+    "sources/w13-frontend-game-a-draw-newest-quick-spell-menu/draw_newest_quick_spell_menu.cpp": "eab0b19db3ca2a3567a21fff8e3d5922222852466ebc796f562381966fb6ce65",
+    "sources/w13-frontend-game-a-get-move-dir/get_move_dir.cpp": "a69d6e57ec7bd447b5f4c8b1eab85f1be5acdf232bfe2da35c97ccc0b607d018",
+    "sources/w13-frontend-game-a-get-pic-4item/get_pic.cpp": "2bb2e382888fdd8c233d7371fe5d6e0e25b100ae5e0770781187d1de56e18980",
+    "sources/w13-frontend-game-a-list-insert/list_insert.cpp": "7eef904556a482bcf3d082383376356f9aa3a41789bf22af7982562d037294a2",
+    "sources/w13-frontend-game-a-lump-partial-load/lump_partial_load.cpp": "8b32c367740bbc9098db1321ee3da238a55e94af177c8c4006adbb3564e80273",
+    "sources/w13-frontend-game-a-lump-rename/lump_rename.cpp": "9e718548a43178d156ecd7ac0680437205c9ee4aac1f9c3f6283ab30e11bf000",
+    "sources/w13-frontend-game-a-mc-err-wnd/mc_err_wnd.cpp": "8c42a7f9ed47df74208bc5ceab29d22c35cba7ca939821990f2d3d58bbeded0f",
+    "sources/w13-frontend-game-a-msg-equip-item/msg_equip_item.cpp": "5c25284e419bfe5c8480390b2b602d0008bea0a2308df3b91df148e535e7f804",
+    "sources/w13-frontend-game-a-msg-inv-item-set-attributes/msg_inv_item_set_attributes.cpp": "7a25d80f271aba006623a812bc253801a99f79a6f4e24b3e733e95017372968d",
+    "sources/w13-frontend-game-a-msg-unequip-item/msg_unequip_item.cpp": "a5a53469e4f13843cc35db92c36dfae44a88ace146a54a426d3da698ed2145ab",
+    "sources/w13-frontend-game-a-obj-get/obj_get.cpp": "c751474e1be433f60ecb0462e096b8973b8819e825b1bf5233a369e75882f350",
+    "sources/w13-frontend-game-a-player-allocate-armor-cache/player_allocate_armor_cache.cpp": "49cb807da285272867ec1c36a3f1f6340311cf2c0eb96ce162d254d81c460c81",
+    "sources/w13-frontend-game-a-shop-draw-info-box/shop_draw_info_box.cpp": "216d62baf7a4eb3b0c7b368e09602fff9951703f48b151f0daa60c363411a67f",
+    "sources/w13-frontend-game-a-shop-draw-item-bitmap/shop_draw_item_bitmap.cpp": "bc320649e137a1e916f56b530b69eca7786054b9dd37d3a71d3a7c3cf1d05df1",
+    "sources/w13-frontend-game-a-shop-run-mouse-logic/shop_run_mouse_logic.cpp": "c1df9949d33554d8d1f4aeb3b8ce63d722a7725e65c61ec6ecfeb1d054abf42c",
+    "sources/w13-frontend-game-a-update-task-bar/update_task_bar.cpp": "da5a72b87eaf904876cf95413a2bcf269f78af44c8b4e0e818c2bc70cc8f79a5",
     "sources/w13-m-startup-data-a-config-rand-words/config_rand_words.cpp": "94692d2ccde24c7a1852d0f99b86a4faaf627833dca8c4b1b6b6383d3c74c81b",
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
     "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
@@ -81635,6 +81655,305 @@
       "sha256": "431d2dd4fa1b437d9df8e41e16b14d4662347e347c4169a5c99f67ed5d0c366e",
       "source": "sources/w13-m-startup-data-b-vt-weatherfilter/vt_weatherfilter.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5577,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_armor_cache_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "14587c98e44cab4fb7d4d7e2415a107daea0f0a9d7658c28185b66cd3eb61286",
+      "source": "sources/w13-frontend-game-a-armor-cache-locals/armor_cache_locals.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5578,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_change_net_cam_6camera.o",
+      "profile": "authored_cpp",
+      "sha256": "daaa890b0f04aec4e384f1e819ff2730362b4902625f81a2500d6f622e0cbaf9",
+      "source": "sources/w13-frontend-game-a-change-net-cam-6camera/change_net_cam.cpp",
+      "emitted_functions": [
+        {
+          "name": "ChangeNetCam__6Camerai",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5579,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_core_start_loading_screen.o",
+      "profile": "authored_cpp",
+      "sha256": "7d25bb812d6abc1710a824538c735847dc604293e630f820ceec37eb58ce8d64",
+      "source": "sources/w13-frontend-game-a-core-start-loading-screen/core_start_loading_screen.cpp",
+      "emitted_functions": [
+        {
+          "name": "coreStartLoadingScreen__Fv",
+          "compiled_body_bytes": 1504
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5580,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_count_items.o",
+      "profile": "authored_cpp",
+      "sha256": "e76b6cc38bf9a0539ca443eb418bd4da876898394033e4d1667a7076afd80959",
+      "source": "sources/w13-frontend-game-a-count-items/count_items.cpp",
+      "emitted_functions": [
+        {
+          "name": "countItems__FP10GameObject",
+          "compiled_body_bytes": 612
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5581,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_draw_newest_quick_spell_menu.o",
+      "profile": "authored_cpp",
+      "sha256": "eab0b19db3ca2a3567a21fff8e3d5922222852466ebc796f562381966fb6ce65",
+      "source": "sources/w13-frontend-game-a-draw-newest-quick-spell-menu/draw_newest_quick_spell_menu.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawNewestQuickSpellMenu__Fiiicl",
+          "compiled_body_bytes": 4352
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5582,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_get_move_dir.o",
+      "profile": "authored_cpp",
+      "sha256": "a69d6e57ec7bd447b5f4c8b1eab85f1be5acdf232bfe2da35c97ccc0b607d018",
+      "source": "sources/w13-frontend-game-a-get-move-dir/get_move_dir.cpp",
+      "emitted_functions": [
+        {
+          "name": "getMoveDir__FiiiP12screenStruct",
+          "compiled_body_bytes": 284
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5583,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_get_pic_4item.o",
+      "profile": "authored_cpp",
+      "sha256": "2bb2e382888fdd8c233d7371fe5d6e0e25b100ae5e0770781187d1de56e18980",
+      "source": "sources/w13-frontend-game-a-get-pic-4item/get_pic.cpp",
+      "emitted_functions": [
+        {
+          "name": "getPic__4itemiPQ24item11description",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5584,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_list_insert.o",
+      "profile": "authored_cpp",
+      "sha256": "7eef904556a482bcf3d082383376356f9aa3a41789bf22af7982562d037294a2",
+      "source": "sources/w13-frontend-game-a-list-insert/list_insert.cpp",
+      "emitted_functions": [
+        {
+          "name": "listInsert__FP8ListHeadP10__listNodePv",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5585,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_lump_partial_load.o",
+      "profile": "authored_cpp",
+      "sha256": "8b32c367740bbc9098db1321ee3da238a55e94af177c8c4006adbb3564e80273",
+      "source": "sources/w13-frontend-game-a-lump-partial-load/lump_partial_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpPartialLoad__FPcT0",
+          "compiled_body_bytes": 1024
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5586,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_lump_rename.o",
+      "profile": "authored_cpp",
+      "sha256": "9e718548a43178d156ecd7ac0680437205c9ee4aac1f9c3f6283ab30e11bf000",
+      "source": "sources/w13-frontend-game-a-lump-rename/lump_rename.cpp",
+      "emitted_functions": [
+        {
+          "name": "lumpRename__FPcT0",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5587,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_mc_err_wnd.o",
+      "profile": "authored_cpp",
+      "sha256": "8c42a7f9ed47df74208bc5ceab29d22c35cba7ca939821990f2d3d58bbeded0f",
+      "source": "sources/w13-frontend-game-a-mc-err-wnd/mc_err_wnd.cpp",
+      "emitted_functions": [
+        {
+          "name": "McErrWnd__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5588,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_msg_equip_item.o",
+      "profile": "authored_cpp",
+      "sha256": "5c25284e419bfe5c8480390b2b602d0008bea0a2308df3b91df148e535e7f804",
+      "source": "sources/w13-frontend-game-a-msg-equip-item/msg_equip_item.cpp",
+      "emitted_functions": [
+        {
+          "name": "msgEquipItem__FiPQ24item11descriptioni",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5589,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_msg_inv_item_set_attributes.o",
+      "profile": "authored_cpp",
+      "sha256": "7a25d80f271aba006623a812bc253801a99f79a6f4e24b3e733e95017372968d",
+      "source": "sources/w13-frontend-game-a-msg-inv-item-set-attributes/msg_inv_item_set_attributes.cpp",
+      "emitted_functions": [
+        {
+          "name": "msgInvItemSetAttributes__FiiPcPQ24item11description",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5590,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_msg_unequip_item.o",
+      "profile": "authored_cpp",
+      "sha256": "a5a53469e4f13843cc35db92c36dfae44a88ace146a54a426d3da698ed2145ab",
+      "source": "sources/w13-frontend-game-a-msg-unequip-item/msg_unequip_item.cpp",
+      "emitted_functions": [
+        {
+          "name": "msgUnequipItem__FiPQ24item11description",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5591,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_obj_get.o",
+      "profile": "authored_cpp",
+      "sha256": "c751474e1be433f60ecb0462e096b8973b8819e825b1bf5233a369e75882f350",
+      "source": "sources/w13-frontend-game-a-obj-get/obj_get.cpp",
+      "emitted_functions": [
+        {
+          "name": "objGet__FP10GameObjectPc",
+          "compiled_body_bytes": 1672
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5592,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_player_allocate_armor_cache.o",
+      "profile": "authored_cpp",
+      "sha256": "49cb807da285272867ec1c36a3f1f6340311cf2c0eb96ce162d254d81c460c81",
+      "source": "sources/w13-frontend-game-a-player-allocate-armor-cache/player_allocate_armor_cache.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerAllocateArmorCache__Fii",
+          "compiled_body_bytes": 956
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5593,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_shop_draw_info_box.o",
+      "profile": "authored_cpp",
+      "sha256": "216d62baf7a4eb3b0c7b368e09602fff9951703f48b151f0daa60c363411a67f",
+      "source": "sources/w13-frontend-game-a-shop-draw-info-box/shop_draw_info_box.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii",
+          "compiled_body_bytes": 2088
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5594,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_shop_draw_item_bitmap.o",
+      "profile": "authored_cpp",
+      "sha256": "bc320649e137a1e916f56b530b69eca7786054b9dd37d3a71d3a7c3cf1d05df1",
+      "source": "sources/w13-frontend-game-a-shop-draw-item-bitmap/shop_draw_item_bitmap.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii",
+          "compiled_body_bytes": 2512
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5595,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_shop_run_mouse_logic.o",
+      "profile": "authored_cpp",
+      "sha256": "c1df9949d33554d8d1f4aeb3b8ce63d722a7725e65c61ec6ecfeb1d054abf42c",
+      "source": "sources/w13-frontend-game-a-shop-run-mouse-logic/shop_run_mouse_logic.cpp",
+      "emitted_functions": [
+        {
+          "name": "shopRunMouseLogic__FiiP12screenStructi",
+          "compiled_body_bytes": 512
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5596,
+      "kind": "independently_authored_source",
+      "object_name": "w13_frontend_game_a_update_task_bar.o",
+      "profile": "authored_cpp",
+      "sha256": "da5a72b87eaf904876cf95413a2bcf269f78af44c8b4e0e818c2bc70cc8f79a5",
+      "source": "sources/w13-frontend-game-a-update-task-bar/update_task_bar.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L12clearAndPlayEiPiPc",
+          "compiled_body_bytes": 200
+        },
+        {
+          "name": "updateTaskBar__FiP12screenStruct",
+          "compiled_body_bytes": 380
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -81734,7 +82053,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "6c7fb892733d81fbabf0b5a37ba836d45d9e3f0636c1ac04c2ad1af59f4777e1",
+  "snapshot_sha256": "e0e4ff56b9371c9bc8f17374efb5e0d89d22db73cdc2b9bdfe484676d22a2399",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
