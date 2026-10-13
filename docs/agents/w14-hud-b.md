@@ -102,7 +102,12 @@ Per-function notes worth keeping:
   base 957 (the base was built from `a7bb4e51`). It closed 15 of the package's names (listed below) and opened the eight imports
   `displayResistances__Fi`, `expf`, `msgInventoryAdjustAbility__Fii`, `playerRecomputeDamage__6PlayerPQ24item11descriptioni`,
   `printStat__FiPUsiiii`, `statsFrame__Fv`, `statsRunSkillTree__Fi` and `textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii`.
-  The final build, with all 37 entries, is recorded in the last section.
+  A second build with all 37 entries was started and stopped at about a quarter of the way (the machine was
+  loaded by other builds); the 21 selection-task data objects and `playerSelectionTask__Fv` were instead checked at object level:
+  every unit was compiled with the plan's `authored_cpp` command, the entries script compiled each with the driver's own
+  `elf_inventory` (so the recorded function names and sizes are the driver's), and the undefined symbols of all objects were compared
+  with the symbols defined by the first build's linked object and by these units; that comparison gives the 20 opened imports
+  listed below and no unresolved reference to a name that a unit of this package should have defined.
 
 ## Imports closed (names)
 
