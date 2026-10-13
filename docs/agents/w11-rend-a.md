@@ -17,7 +17,7 @@ input) and one commit.
 - Each function was disassembled privately (nothing derived is committed), rewritten as readable C++
   and compiled alone with the reviewed `authored_cpp` flags (EE GCC 15.2.0). Every unit compiled. A
   private partial build with all units of this package appended to a copy of the shared plan linked
-  once; its unresolved list is summarised at the end of this file.
+  once; its result is summarised under "Private partial build".
 - Every unit has a host check built with the host C++ compiler (`-ffp-contract=off`) and exits 0.
 - Private paired runs (a small R5900 interpreter outside git): the original function and the freshly
   compiled unit run from the same memory snapshot with identical stub callees; the call logs
@@ -77,6 +77,13 @@ Findings worth keeping (all observed in the image unless marked inferred):
 - `fxRunWeapon` contains a clamp `if (t < 0) t = 0` after `t = 2 |v|` that cannot fire.
 - The mod table of an `item::description` is four 8-byte entries from +36 (halfword type, halfword
   value); types 24, 22 and 21 select the lightning, ice and flame sweeps. (inferred names)
+
+## Private partial build
+
+`docs/agents/w11-rend-a-plan-entries.py --private-root` wrote a plan copy outside git with the units of
+this package appended to the shared selection; `tools/build_partial.py` compiled 4,482 sources and linked
+once (no retries): 3,431 function definitions and 956 unresolved symbols, of which only the five data
+objects above are in this package's scope. This is a relocatable partial object, not an executable.
 
 ## Imports closed
 
@@ -482,10 +489,3 @@ outside git. Do not trust the hashes below after any source edit; rerun the scri
 - The meaning of most float constants (named only by address in the notes of each source).
 - Where the data objects `lightGrid`, `offTheGrid` (second one at 0x00486890), `waterList` and the
   particle definitions are initialised.
-
-## Private partial build
-
-`docs/agents/w11-rend-a-plan-entries.py --private-root` wrote a plan copy outside git with the units of
-this package appended to the shared selection; `tools/build_partial.py` compiled 4,482 sources and linked
-once (no retries): 3,431 function definitions and 956 unresolved symbols, of which only the five data
-objects above are in this package's scope. This is a relocatable partial object, not an executable.
