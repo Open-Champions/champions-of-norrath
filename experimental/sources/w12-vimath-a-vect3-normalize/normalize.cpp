@@ -7,7 +7,7 @@
 // that was possible. A NaN squared length is not equal to zero and therefore takes the
 // scaling path. Unknown: the class layout beyond the first 12 bytes.
 #if !defined(__mips__)
-#include <math.h>
+extern "C" float sqrtf(float);
 #endif
 
 extern "C" {
