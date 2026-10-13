@@ -8746,3 +8746,25 @@ Closed: `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10PoisonR
 
 Opened: `_vt$10MummySnake`, `_vt$10PoisonRain`, `_vt$11BoltGoRound`, `_vt$11DiseaseBolt`, `_vt$11SkillCharge`, `_vt$12ShockOfFrost`, `_vt$12SkillArchery`, `_vt$12SkillBlessed`, `_vt$14HateProjectile`, `_vt$15FrostStormSpell`, `_vt$15ShockProjectile`, `_vt$16PoisonProjectile`, `_vt$18SkillAncestralCall`, `_vt$18SkillBlindingLight`, `_vt$19ColdArrowProjectile`, `_vt$19FireArrowProjectile`, `_vt$19MultiFireProjectile`, `_vt$21PoisonArrowProjectile`, `_vt$22ExplodeArrowProjectile`, `_vt$8HateBeam`, `_vt$8HateSoul`, `_vt$9FireStorm`, `_vt$9SkillBash`, `modelGetPrimaryBone__FP12_modelHeaderi`, `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`
 - 2026-10-13 06:45 CDT — agents/w11-ctor-a — 943 unresolved imports
+
+## agents/w11-vt-a
+
+Merged (merge commit, branch tip `cbbc20c9`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 vtable data units (no function bodies) with fresh
+`input_order` values 4848 through 4875. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Each checks every slot through the table (name, zero adjustment, null last slot, slot count). The worker's second check, `docs/agents/w11-vt-a-object-check.py`, compares compiled objects with the private image; it was not run here (no image used) and is recorded only as the worker's claim. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4873 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 15: the tables name their slot functions, so closing 27 `_vt$` tables opens 42 not-yet-authored slot bodies (`__tf...`, `clone__...`, `msg_run__...`, Skill ramp helpers, and others). The compiler emitted no function bodies for the tables. The worker's closed list reproduces.
+
+| | |
+|---|---|
+| Before | 943 |
+| After | 958 |
+| Closed | 27 |
+| Opened | 42 |
+
+Closed: `_vt$10CloudGiant`, `_vt$10GameObject`, `_vt$10SkillBlunt`, `_vt$11PushTrigger`, `_vt$13LooseIceChunk`, `_vt$15GlowingCylinder`, `_vt$15SkillBallOfHate`, `_vt$18SkillDiseaseEffect`, `_vt$3Ant`, `_vt$3Ice`, `_vt$3Orc`, `_vt$4Lamp`, `_vt$4Prop`, `_vt$5Ghoul`, `_vt$5Gnome`, `_vt$5Mummy`, `_vt$5PhIce`, `_vt$6Cthulu`, `_vt$6Goblin`, `_vt$7Critter`, `_vt$7OniBall`, `_vt$8Creature`, `_vt$8Innoruuk`, `_vt$8ItemProp`, `_vt$8JumpGate`, `_vt$8RollDoor`, `_vt$9MummyKing`
+
+Opened: `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_5PhIce`, `_$_7OniBall`, `__tf10SkillBlunt`, `__tf13LooseIceChunk`, `__tf15GlowingCylinder`, `__tf15SkillBallOfHate`, `__tf18SkillDiseaseEffect`, `__tf5PhIce`, `__tf7OniBall`, `canCast__5SkillP8Creature`, `cast__5SkilliP8CreatureG6Point3s`, `clone__13LooseIceChunk`, `clone__15GlowingCylinder`, `clone__5PhIce`, `clone__7OniBall`, `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `evaluateRampAtRank__5Skillii`, `evaluateRampAtRank__5SkilliiP10GameObject`, `evaluateRampAtRank__5SkilliiP8ListHead`, `getEnergyCost__5Skilli`, `getIcon__5Skill`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__5Skilli`, `getRampDamage__5SkilliifiPiT5`, `getRankDescription__10SkillBluntPUsi`, `getRankDescription__5SkillPUsi`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__5Skilli`, `initRamps__15SkillBallOfHate`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill`, `msg_collision__7OniBallP10GameObject`, `msg_draw__15GlowingCylinder`, `msg_draw__7OniBall`, `msg_run__15GlowingCylinder`, `msg_run__5PhIce`, `msg_run__7OniBall`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`
+- 2026-10-13 06:49 CDT — agents/w11-vt-a — 958 unresolved imports
