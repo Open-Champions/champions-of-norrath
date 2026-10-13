@@ -27,3 +27,40 @@ Startup and runtime support (d). Sources are under `experimental/sources/w9-star
 - `dpcmp` (`0x002fba48`, 76 bytes; compiled 64). Observed: both 64-bit arguments are unpacked into two separate 32-byte records, then `__fpcmp_parts_d` (`0x002ff6d0`) on the pair; its int result returns unchanged. Opens `__fpcmp_parts_d`. Unknown: result value meanings.
 - `dpadd` (`0x002fb5c0`, 88 bytes; compiled 76). Observed: both 64-bit arguments are unpacked with `__unpack_d` into two 32-byte records; `_fpadd_parts` (`0x002fb360`, a local routine) takes them plus a third 32-byte scratch record; the returned record pointer goes to `__pack_d` (`0x002ff538`) and its 64-bit result returns unchanged. Host check scripts the three callees and checks operand order, distinct records and the sign words. Opens `_fpadd_parts`, `__pack_d`.
 - `dpsub` (`0x002fb618`, 100 bytes; compiled 88). Observed: same as `dpadd`, except the sign word of the second unpacked record is exclusive-ORed with 1 before `_fpadd_parts`. Same host check with the flipped sign expected on the second record.
+
+## Summary
+
+Imports closed (22 functions, one unit each): amx_FindPublic, dpadd, dpcmp, dpsub, dptofp, fptodp, free, get_iob, gsm_create, gsm_option, iSetTimerAlarm, iWakeupThread, initEzNetCnf, isceSifSendCmd, kputchar, kputs, lgAudClose, lgKbMInit, mceGetInfoApdx, memalign, memmove, new_iob. `blockFree__FPv` is closed by publishing the original name on the existing `norrath_block_free` extent (edit in block-allocator-lifecycle-build; its plan file hash needs regenerating).
+
+Already defined by authored units elsewhere in the tree, so nothing was authored here: memAlloc__FiPc, memFree__FPv, memRealloc__FPvi, memCheckHeapReal__FPCci (w8-object-list-math-* units, already in the plan); isin__Fi (w8-object-list-math-isin, in the plan; runtime-tables also has one). The views norrath_archive_vblank_{count,field,semaphore}_view (sony-cd-vblank-views) and norrath_libmtap_*_view, norrath_libmtap_rpc_buffer_view, norrath_libpad_dma_info_view (simloop-services-pad-mtap-state) exist as sources but are not in the plan at this base; those plan entries belong to their owners. I did not re-author them. I did not re-run a full partial build, so the current unresolved list was not re-read.
+
+Imports opened: _memalign_r, strcpy/strcmp (provided elsewhere), Deci2Call, _sceFsIobSemaMK, iSignalSema, _iWakeupThread, _sceSifCallRpc-side `_sceSifSendCmd`, iAllocTimerCounter, iSetTimerHandler, iStartTimerCounter, AlarmHandler, printf, sceSifCallRpc, WaitSema, SignalSema, GLibData, KbdMapTable, qsort_translate_table, connect_to_iop_server, init_ee_timer, get_time, CreateReaderThread, CreateSema, __unpack_f, __make_dp, __unpack_d, __make_fp, __fpcmp_parts_d, _fpadd_parts, __pack_d.
+
+Build-plan entries needed (source files, each `authored_cpp` profile, host tests excluded):
+- `w9-startup-crt-d-amx-find-public/amx_find_public.cpp`
+- `w9-startup-crt-d-dpadd/dpadd.cpp`
+- `w9-startup-crt-d-dpcmp/dpcmp.cpp`
+- `w9-startup-crt-d-dpsub/dpsub.cpp`
+- `w9-startup-crt-d-dptofp/dptofp.cpp`
+- `w9-startup-crt-d-fptodp/fptodp.cpp`
+- `w9-startup-crt-d-free/free.cpp`
+- `w9-startup-crt-d-get-iob/get_iob.cpp`
+- `w9-startup-crt-d-gsm-create/gsm_create.cpp`
+- `w9-startup-crt-d-gsm-option/gsm_option.cpp`
+- `w9-startup-crt-d-i-set-timer-alarm/i_set_timer_alarm.cpp`
+- `w9-startup-crt-d-i-wakeup-thread/i_wakeup_thread.cpp`
+- `w9-startup-crt-d-init-ez-net-cnf/init_ez_net_cnf.cpp`
+- `w9-startup-crt-d-isce-sif-send-cmd/isce_sif_send_cmd.cpp`
+- `w9-startup-crt-d-kputchar/kputchar.cpp`
+- `w9-startup-crt-d-kputs/kputs.cpp`
+- `w9-startup-crt-d-lg-aud-close/lg_aud_close.cpp`
+- `w9-startup-crt-d-lg-kb-m-init/lg_kb_m_init.cpp`
+- `w9-startup-crt-d-mce-get-info-apdx/mce_get_info_apdx.cpp`
+- `w9-startup-crt-d-memalign/memalign.cpp`
+- `w9-startup-crt-d-memmove/memmove.cpp`
+- `w9-startup-crt-d-new-iob/new_iob.cpp`
+Plus the regenerated hash for `block-allocator-lifecycle-build/block_free.cpp`.
+
+Authored but never executed: every unit above. Each compiled with the plan flags and passed a host test against a model or scripted callees; none ran on EE hardware, an emulator or in game. Compiled sizes differ from the original extents in several units (see notes), so no byte match is claimed.
+
+Unknown: meaning of `0x10000000` in new_iob, service 16 of Deci2Call, system call -47, units of the alarm time, the two lgKbMInit limits and +112/+120 constants, the argument meanings of the sif command forwarder, why mceGetInfoApdx signals `semaid_timerfunc`, and the shared storage for the eznetcnf flag (still file-local copies).
