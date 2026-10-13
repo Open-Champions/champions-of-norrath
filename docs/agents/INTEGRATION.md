@@ -5231,6 +5231,75 @@ Opened: `blocksFree`, `browserDelete`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`
 `slotsCorrupted`, `sortedPlayerRace`, `swap__H1Zi_RX01T0_v`,
 `usprintf__FPUsPcffffffff`, `wasFormatting`
 
+## agents/w9-frontend-a
+
+Merged (the branch notes carry the five summary sections; the tip was 22
+minutes old). Twenty-five of its 29 units were selected with fresh
+`input_order` values 2662 through 2686: 21 function units and four data units
+(act-align, button values, cache cd-done, memory-card state). Four function
+units were **not** selected because the notes themselves say they have no
+committed host contract and were checked only in a private comparison:
+`Process__9VIStation`, `Init__9VIStationiPCcPcT3T2T2i`, `RunPatcher__7VISetup`
+and `MC_CheckPlayerImportOrChange__Fv`. Their sources stay in the snapshot,
+unselected. The 25 selected units' host checks build and exit 0 here (25 of
+25). The opened count rises because the memory-card, cd and VI functions call
+into areas not yet reconstructed; the notes name `sAlarmCallback__FiUsPv`,
+`MainLoopBegin__7VISetup` and `MainLoopEnd__7VISetup` as belonging to other
+packages. No game binary or disassembly listing was committed. 2175 function
+bodies, 2685 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1525 |
+| Closed | 33 |
+| Opened | 80 |
+
+Closed: `Ascii2Sjis__FUc`, `Free__7VISetup`, `Free__9VIStation`, `Init__7VISetupi`,
+`MCA_Busy__Fv`, `MCA_DirContents`, `MCA_Result`, `MC_ByteCopy__FPvT0i`,
+`MC_GetNetGameInfo__FPiT0Pc`, `MC_GetRamPlayerPtr__Fi`,
+`MC_GetTempPlayerStorage__Fi`, `MC_NameToAct__FPc`,
+`MC_SaveLevelEntities__FPc`, `MC_SetActByLevelName__FPc`,
+`Process__7VISetup`, `RestartConnect__7VISetup`, `_$_7VISetup`,
+`_$_9VIStation`, `actAlignData`, `actSendData`, `askedForConfigLoad`,
+`browserSlot`, `buttonValues`, `cacheCdDone`, `cardType`,
+`cdCheckForFileInCurrentLayer__FPc`, `cdIsBusy__Fv`,
+`cdLoadAsyncIOP__FPciT0ii`, `cdLoadAsync__FPcPvT0ii`,
+`checkSave__FP10GameObject`, `configFileName`, `configFormatted`,
+`configLumpLoaded`
+
+Opened: `BeginScene__8VIRaster`, `Begin__7VIFaderff`, `CleanUp__11VIGUIObject`,
+`Clear__12VIDictionary`, `Clear__7VIScene`, `Close__13VISoundDevice`,
+`Close__4VIUI`, `Close__5VIPad`, `Close__8VIRaster`, `Close__9VICollide`,
+`EndScene__8VIRaster`, `Flush__13VISoundDevice`, `Free__10VIWndLegal`,
+`Free__11VIWndSplash`, `Free__12VIWndPatcher`, `Free__15VIWindowManager`,
+`Free__7VIFader`, `Free__9VIWndDnas`, `Free__9VIWndEula`,
+`GetTime__7VITimer`, `Init__10VIWndLegal`, `Init__11VIWndSplashP7VIScene`,
+`Init__12VIDictionaryi`, `Init__12VIWndPatcher`, `Init__13VISoundDevice`,
+`Init__15VIWindowManagerP5VIPadP10VIKeyboard`,
+`Init__4VIUIP8VIRasterP13VISoundDeviceP12VIDictionary`, `Init__5VIPadii`,
+`Init__7VIFaderP8VIRasterP12VIDictionaryf`,
+`Init__7VIScenelR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`,
+`Init__8VICameraR8VIRasterRC7VIVect3T2ffff`, `Init__8VIRasterPviii`,
+`Init__9VICollide`, `Init__9VIWndDnasP7VIScene`, `Init__9VIWndEula`,
+`Load__13VIGameOptions`, `Parse__9VICSFFilePCcR10VIESFParseR7VIScene`,
+`Process__13VISoundDevice`, `Read__5VIPadR12VIConsolePad`,
+`Render__7VISceneR8VICamera`, `RestartConnect__11VIWndSplash`,
+`SetAppPtr__5VIWndPv`, `SetClearColor__8VIRasterRC10VIColor32F`,
+`SetFocus__5VIWndP5VIWndb`, `SetRoot__15VIWindowManagerP5VIWnd`,
+`SetTimeOfDay__7VIScenef`, `SetTime__7VIScenel`, `SetWireframe__8VIRasteri`,
+`StartAmbientSoundtrack__7VISetup`, `StopAmbientSoundtrack__7VISetup`,
+`Update__15VIWindowManager`, `Update__7VIFader`, `VISetWindowUI__FP4VIUI`,
+`VISplashFxFree__Fv`, `VISplashFxInit__FP8VIRasterP12VIDictionary`,
+`_$_10VIESFParse`, `_$_10VIMatrix44`, `_$_10VIWndLegal`, `_$_11VIWndSplash`,
+`_$_12VIDictionary`, `_$_12VIWndPatcher`, `_$_13VISoundDevice`,
+`_$_15VIWindowManager`, `_$_20VIWndGenericRenderer`, `_$_4VIUI`,
+`_$_5VIPad`, `_$_7VIFader`, `_$_7VIScene`, `_$_8VIRaster`, `_$_9VICollide`,
+`_$_9VIWndDnas`, `_$_9VIWndEula`, `__10VIESFParse`, `__9VICSFFile`,
+`__cl__8VICameraR7VIVect3T1`, `ascii_special`, `ascii_table`,
+`getSaveTableEntry__FPc`, `sPad`, `saveLevelDataASync__FPci`
+
 ## Second-pass audit of merged host checks
 
 Added by the integrator that worked beside the one that merged most of the
@@ -5590,3 +5659,4 @@ and no startup stage has executed.
 - 2026-10-12 21:10 CDT — `agents/w9-startup-crt-f` — 1455 unresolved imports
 - 2026-10-12 21:13 CDT — `agents/w9-frontend-b` — 1495 unresolved imports
 - 2026-10-12 21:16 CDT — `agents/w9-frontend-d` — 1478 unresolved imports
+- 2026-10-12 21:19 CDT — `agents/w9-frontend-a` — 1525 unresolved imports
