@@ -8986,3 +8986,8 @@ stand: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w8-spell-stati
 
 Re-ran on `integration/mini` at `2aa01e26` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded count of 827 reproduces. No non-text files appear in the last 40 commits' changes. Unmerged `origin/agents/*` branches are all at the tips of their recorded rejections, so no new package was merged.
 - 2026-10-13 07:40 CDT — re-verification, nothing merged — 827 unresolved imports
+
+## Re-verification of the shared branch (second integrator restart)
+
+Re-ran at `c7243a6d` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); `--check-plan` valid; the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded 827 reproduces. All seven unmerged `origin/agents/*` branches are still at the tips of their recorded rejections (`w10-actor-i` `e1ad5dba`, `w10-startup-d` `cb1c9c26`, `w11-creature-a` `a91fc08f`, `w11-vi-misc-a` `9549e91d`, `w11-vi-render-b` `dc3d80c6`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a` `adff0bdc`), so nothing new was merged.
+- 2026-10-13 07:50 CDT — re-verification, nothing merged — 827 unresolved imports
