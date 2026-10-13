@@ -6881,6 +6881,17 @@ since their recorded rejections, `codex/norrath-runtime-binding` (owner's,
 build-driver change, left for the owner) and `integration/wave` (an old
 integrator branch, not a worker package). Nothing was merged in this pass.
 
+## Third baseline re-check and empty queue
+
+At shared tip `cc78a45e` this integrator re-ran 214 tool tests (OK),
+`check_source_snapshot.py` (PASS, 3474 authored inputs) and the full default
+partial build (3474 compilations, 2484 function bodies, zero COMMON). The
+recorded count of **1332** unresolved imports reproduced exactly. The two
+unmerged `agents/*` branches are unchanged since their recorded rejections
+(`w8-spell-static-init-b` at `ed20fab5`, `w9-render-math-a` at `adff0bdc`; both
+still lack committed per-function checks). `codex/norrath-runtime-binding` and
+`integration/wave` are not worker packages. Nothing was merged in this pass.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -7227,3 +7238,4 @@ and no startup stage has executed.
 - 2026-10-12 22:41 CDT — `agents/w9-ctors-lantern-b` — 1332 unresolved imports
 - 2026-10-12 22:43 CDT — baseline re-check and rejection notes (no package) — 1332 unresolved imports
 - 2026-10-12 22:55 CDT — second baseline re-check, no branches left to merge — 1332 unresolved imports
+- 2026-10-12 23:05 CDT — third baseline re-check, no branches left to merge — 1332 unresolved imports
