@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5532,
+  "default_authored_inputs": 5554,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4349,6 +4349,28 @@
     "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
     "sources/w13-m-startup-data-a-eh-context-static/eh_context_static.cpp": "c0e1cc1d47d1eb47663ac41793b257d78d8d585f85e55330c5a3ee9d7fdafcb7",
     "sources/w13-m-startup-data-a-sce-dcache-sweep/sce_dcache.cpp": "5d2c45bbb7884a074c9933c59632700911ba63954b21188aca7026e258da5082",
+    "sources/w13-startup-fn-a-addhour/addhour.cpp": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
+    "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
+    "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
+    "sources/w13-startup-fn-a-deci2-ex-recv/deci2_ex_recv.cpp": "f9cdb8e050fc047b9b504ac3bdaf401c0f752d4fed0dc7f31113274f75e92187",
+    "sources/w13-startup-fn-a-deci2-ex-send/deci2_ex_send.cpp": "b006b72ac437ac84fccce6c7eef0792e6925c403cdb9c8d1be379497656ea042",
+    "sources/w13-startup-fn-a-get-osd-config-param2/get_osd_config_param2.S": "55f2e1f4c9513a23d09616caca6220c26ab9a760a5b8e5eef97ba3cd1f3f1bc1",
+    "sources/w13-startup-fn-a-ieee754-rem-pio2/ieee754_rem_pio2.cpp": "f9a9755f21deb686af9e197b6bbe067246ac64702bea78edcbd1b92469ffef71",
+    "sources/w13-startup-fn-a-init-reg-size-table/init_reg_size_table.cpp": "a90f8fd9a6ddebaa1f5ed505a88321e434ef4952f2154563fde5b6de91e25c02",
+    "sources/w13-startup-fn-a-is-t10k/is_t10k.cpp": "5025936935d818744641d56a8527acacb6a1ad561fff08f7598bf05d9d475590",
+    "sources/w13-startup-fn-a-kernel-cos/kernel_cos.cpp": "60a91ac789214d0f737bf5489fea0497ed6719615e4f580683ff645c844acdbe",
+    "sources/w13-startup-fn-a-kernel-cosf/kernel_cosf.cpp": "99d48949dd8584aaedc2790bab62a5171ca2e39b286b9bc848ccf3119b08c391",
+    "sources/w13-startup-fn-a-kernel-sin/kernel_sin.cpp": "c00b773e315655cf7b467c479cbc708af66a6a16d5bf762181dcb89f54e7146f",
+    "sources/w13-startup-fn-a-kernel-sinf/kernel_sinf.cpp": "16e56f888d452dcc3d7631f0a7b2fe8444d66bd4b8f9310f7d9d209ad5206cee",
+    "sources/w13-startup-fn-a-subhour/subhour.cpp": "18e3e670c7e40a068d1a2fe5f08aed6edb9609e3185abb6d7bf0ed47c99b1dc7",
+    "sources/w13-startup-fn-a-tf-16-attr-type-info/typeinfo.cpp": "5e720cc6d40f5211062722003969e28d42796a80019dd0ba3aad2d7b5a78a882",
+    "sources/w13-startup-fn-a-tf-16-func-type-info/typeinfo.cpp": "758417e6ada62904d25798b93d157267f79b510487e5884a7b79eaadadcdf3f1",
+    "sources/w13-startup-fn-a-tf-5skill/typeinfo.cpp": "91bfebb3a17d576135cc7bb8391a356750bee0d40bf6dd0e8037ee3abc0c3144",
+    "sources/w13-startup-fn-a-tfv/typeinfo.cpp": "213336dc407460942496470be466fe795f0aad84789117832089730e489f3712",
+    "sources/w13-startup-fn-a-throw/throw.cpp": "4782b54ab65c6f4dd5459aca415e5378280f359cfb2b1256b9773faff73a0ee2",
+    "sources/w13-startup-fn-a-uncompress/uncompress.cpp": "eb752e078ca2a95d588d4ebcef3518221ead17d53e927af73d3b38b9bd0377df",
+    "sources/w13-startup-fn-a-vi-buffer-swap/vi_buffer_swap.cpp": "659eeb2aa0034e877e97c30f19e765862410a760efa0fb84b570a8438f773f27",
+    "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -81057,6 +81079,331 @@
       "sha256": "59b1e832084ea49d11a5767fd4dee10216ce7e15551b8ddb340a7bd30e290647",
       "source": "sources/w13-m-startup-data-a-ee-exception-frame/ee_exception_frame.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5534,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_addhour.o",
+      "profile": "authored_cpp",
+      "sha256": "7b71311aa75dc5e460d6342ba68d483f26a2251d1300dfcc137c0eaa721a010f",
+      "source": "sources/w13-startup-fn-a-addhour/addhour.cpp",
+      "emitted_functions": [
+        {
+          "name": "addhour",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5535,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_convert_from_bcd.o",
+      "profile": "authored_cpp",
+      "sha256": "e9408cf8b2c6ed12c599ab48328f50543ba692c919aae8e28323f1a69ffbfee2",
+      "source": "sources/w13-startup-fn-a-convert-from-bcd/convert_from_bcd.cpp",
+      "emitted_functions": [
+        {
+          "name": "convertfrombcd",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5536,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_convert_to_bcd.o",
+      "profile": "authored_cpp",
+      "sha256": "d7d88b6543a1e40df68fc42e1c974569c3489f8acb3b819fdecd1247513bffe3",
+      "source": "sources/w13-startup-fn-a-convert-to-bcd/convert_to_bcd.cpp",
+      "emitted_functions": [
+        {
+          "name": "converttobcd",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5537,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_deci2_ex_recv.o",
+      "profile": "authored_cpp",
+      "sha256": "f9cdb8e050fc047b9b504ac3bdaf401c0f752d4fed0dc7f31113274f75e92187",
+      "source": "sources/w13-startup-fn-a-deci2-ex-recv/deci2_ex_recv.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceDeci2ExRecv",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5538,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_deci2_ex_send.o",
+      "profile": "authored_cpp",
+      "sha256": "b006b72ac437ac84fccce6c7eef0792e6925c403cdb9c8d1be379497656ea042",
+      "source": "sources/w13-startup-fn-a-deci2-ex-send/deci2_ex_send.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceDeci2ExSend",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5539,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_get_osd_config_param2.o",
+      "profile": "authored_entry_asm",
+      "sha256": "55f2e1f4c9513a23d09616caca6220c26ab9a760a5b8e5eef97ba3cd1f3f1bc1",
+      "source": "sources/w13-startup-fn-a-get-osd-config-param2/get_osd_config_param2.S",
+      "emitted_functions": [
+        {
+          "name": "GetOsdConfigParam2",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5540,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_ieee754_rem_pio2.o",
+      "profile": "authored_cpp",
+      "sha256": "f9a9755f21deb686af9e197b6bbe067246ac64702bea78edcbd1b92469ffef71",
+      "source": "sources/w13-startup-fn-a-ieee754-rem-pio2/ieee754_rem_pio2.cpp",
+      "emitted_functions": [
+        {
+          "name": "__ieee754_rem_pio2",
+          "compiled_body_bytes": 1664
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5541,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_init_reg_size_table.o",
+      "profile": "authored_cpp",
+      "sha256": "a90f8fd9a6ddebaa1f5ed505a88321e434ef4952f2154563fde5b6de91e25c02",
+      "source": "sources/w13-startup-fn-a-init-reg-size-table/init_reg_size_table.cpp",
+      "emitted_functions": [
+        {
+          "name": "init_reg_size_table",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5542,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_is_t10k.o",
+      "profile": "authored_cpp",
+      "sha256": "5025936935d818744641d56a8527acacb6a1ad561fff08f7598bf05d9d475590",
+      "source": "sources/w13-startup-fn-a-is-t10k/is_t10k.cpp",
+      "emitted_functions": [
+        {
+          "name": "IsT10K",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5543,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_kernel_cos.o",
+      "profile": "authored_cpp",
+      "sha256": "60a91ac789214d0f737bf5489fea0497ed6719615e4f580683ff645c844acdbe",
+      "source": "sources/w13-startup-fn-a-kernel-cos/kernel_cos.cpp",
+      "emitted_functions": [
+        {
+          "name": "__kernel_cos",
+          "compiled_body_bytes": 1004
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5544,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_kernel_cosf.o",
+      "profile": "authored_cpp",
+      "sha256": "99d48949dd8584aaedc2790bab62a5171ca2e39b286b9bc848ccf3119b08c391",
+      "source": "sources/w13-startup-fn-a-kernel-cosf/kernel_cosf.cpp",
+      "emitted_functions": [
+        {
+          "name": "__kernel_cosf",
+          "compiled_body_bytes": 484
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5545,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_kernel_sin.o",
+      "profile": "authored_cpp",
+      "sha256": "c00b773e315655cf7b467c479cbc708af66a6a16d5bf762181dcb89f54e7146f",
+      "source": "sources/w13-startup-fn-a-kernel-sin/kernel_sin.cpp",
+      "emitted_functions": [
+        {
+          "name": "__kernel_sin",
+          "compiled_body_bytes": 624
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5546,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_kernel_sinf.o",
+      "profile": "authored_cpp",
+      "sha256": "16e56f888d452dcc3d7631f0a7b2fe8444d66bd4b8f9310f7d9d209ad5206cee",
+      "source": "sources/w13-startup-fn-a-kernel-sinf/kernel_sinf.cpp",
+      "emitted_functions": [
+        {
+          "name": "__kernel_sinf",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5547,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_subhour.o",
+      "profile": "authored_cpp",
+      "sha256": "18e3e670c7e40a068d1a2fe5f08aed6edb9609e3185abb6d7bf0ed47c99b1dc7",
+      "source": "sources/w13-startup-fn-a-subhour/subhour.cpp",
+      "emitted_functions": [
+        {
+          "name": "subhour",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5548,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_tf_16_attr_type_info.o",
+      "profile": "authored_cpp",
+      "sha256": "5e720cc6d40f5211062722003969e28d42796a80019dd0ba3aad2d7b5a78a882",
+      "source": "sources/w13-startup-fn-a-tf-16-attr-type-info/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf16__attr_type_info",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5549,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_tf_16_func_type_info.o",
+      "profile": "authored_cpp",
+      "sha256": "758417e6ada62904d25798b93d157267f79b510487e5884a7b79eaadadcdf3f1",
+      "source": "sources/w13-startup-fn-a-tf-16-func-type-info/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf16__func_type_info",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5550,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_tf_5skill.o",
+      "profile": "authored_cpp",
+      "sha256": "91bfebb3a17d576135cc7bb8391a356750bee0d40bf6dd0e8037ee3abc0c3144",
+      "source": "sources/w13-startup-fn-a-tf-5skill/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf5Skill",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5551,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_tfv.o",
+      "profile": "authored_cpp",
+      "sha256": "213336dc407460942496470be466fe795f0aad84789117832089730e489f3712",
+      "source": "sources/w13-startup-fn-a-tfv/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tfv",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5552,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_throw.o",
+      "profile": "authored_cpp",
+      "sha256": "4782b54ab65c6f4dd5459aca415e5378280f359cfb2b1256b9773faff73a0ee2",
+      "source": "sources/w13-startup-fn-a-throw/throw.cpp",
+      "emitted_functions": [
+        {
+          "name": "__throw",
+          "compiled_body_bytes": 416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5553,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_uncompress.o",
+      "profile": "authored_cpp",
+      "sha256": "eb752e078ca2a95d588d4ebcef3518221ead17d53e927af73d3b38b9bd0377df",
+      "source": "sources/w13-startup-fn-a-uncompress/uncompress.cpp",
+      "emitted_functions": [
+        {
+          "name": "uncompress",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5554,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_vi_buffer_swap.o",
+      "profile": "authored_cpp",
+      "sha256": "659eeb2aa0034e877e97c30f19e765862410a760efa0fb84b570a8438f773f27",
+      "source": "sources/w13-startup-fn-a-vi-buffer-swap/vi_buffer_swap.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIBufferSwap__FiPUc",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5555,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_vi_endian.o",
+      "profile": "authored_cpp",
+      "sha256": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
+      "source": "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -81156,7 +81503,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "efc8d47c7ad9d24e7f06bdeb9817fa0375c0ba5cfc29871ea0c3c628886dd267",
+  "snapshot_sha256": "f5331150478f9c4619f4ca0f25631f4558e2e669a3415e07a7d10db8ae75dc5d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

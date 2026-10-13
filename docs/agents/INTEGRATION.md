@@ -9388,3 +9388,21 @@ Closed: `_sceSDC`, `eh_context_static`, `gConfig`, `iRandState`, `localRandState
 
 Opened: none
 - 2026-10-13 14:54 CDT — agents/w13-m-startup-data-a — 1162 unresolved imports
+
+## agents/w13-startup-fn-a
+
+Merged (merge commit, branch tip `d51e63db`; the notes have the five summary sections). Package is mixed: 22 of its 29 units have a committed check that builds and passes here (13 host contracts or vector checks run on the host; `GetOsdConfigParam2`, `__throw` and `VIEndian` have object-shape checks that run against an object compiled with the plan's flags, which guard shape and imports, not behaviour). Plan entries use fresh `input_order` values 5534 through 5555. Object hashes in the snapshot come from this integrator's own builds. Nothing was executed on the EE; the worker's private paired runs were not reproduced; no byte match is claimed. `__throw` uses inline assembly for the handler entry stub; the notes say it differs from the unselected w10/w12 versions of the same symbol and only this one is selected. Full build with the final snapshot: 5554 authored inputs, 4263 function bodies, zero COMMON.
+
+NOT selected (sources stay in the tree, recorded in the snapshot file list only): `check-for-modifier-key-events`, `dynamic-cast-2`, `generate-key-press-events`, `generate-key-release-events`, `gsm-decode`, `gsm-encode` and `upcast` have no committed check; the notes say only the private paired run covers them. The notes' 30 closed names therefore do not reproduce: 23 close here (the rest belong to the unselected units), and 15 are opened (the notes list the same kind of helpers as opened).
+
+| | |
+|---|---|
+| Before | 1162 |
+| After | 1154 |
+| Closed | 23 |
+| Opened | 15 |
+
+Closed: `GetOsdConfigParam2`, `IsT10K`, `VIBufferSwap__FiPUc`, `VIEndian`, `__ieee754_rem_pio2`, `__kernel_cos`, `__kernel_cosf`, `__kernel_sin`, `__kernel_sinf`, `__tf16__attr_type_info`, `__tf16__func_type_info`, `__tf5Skill`, `__tfv`, `__throw`, `__ti5Skill`, `addhour`, `convertfrombcd`, `converttobcd`, `init_reg_size_table`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `subhour`, `uncompress`
+
+Opened: `GetRomName`, `__frame_state_for`, `__kernel_rem_pio2`, `_vt$19__builtin_type_info`, `adddate`, `dwarf_reg_size_table`, `fabs`, `frombcd`, `gRomName`, `inflate`, `inflateEnd`, `inflateInit_`, `subdate`, `throw_helper`, `tobcd`
+- 2026-10-13 15:14 CDT — agents/w13-startup-fn-a — 1154 unresolved imports
