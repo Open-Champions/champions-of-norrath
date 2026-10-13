@@ -6868,6 +6868,19 @@ reset before anything was selected or pushed. The code is not changed; the
 owner can add committed host checks per function (as the other w9 packages do)
 and push again.
 
+## Second baseline re-check and empty queue
+
+At shared tip `f2f22f82` the next integrator re-ran 214 tool tests (OK),
+`check_source_snapshot.py` (PASS, 3474 authored inputs) and the full default
+partial build (3474 compilations, 2484 function bodies, zero COMMON). The
+recorded count of **1332** unresolved imports reproduced exactly. No repo-rule
+break was found in the recent entries (no binaries, images or listings added;
+the `.S` files are authored assembly units). The only unmerged branches are
+`agents/w8-spell-static-init-b` and `agents/w9-render-math-a`, both unchanged
+since their recorded rejections, `codex/norrath-runtime-binding` (owner's,
+build-driver change, left for the owner) and `integration/wave` (an old
+integrator branch, not a worker package). Nothing was merged in this pass.
+
 ## Needs a decision
 
 These two disagreements are still unresolved. Neither package was changed to
@@ -7213,3 +7226,4 @@ and no startup stage has executed.
 - 2026-10-12 22:38 CDT — `agents/w9-rtti-vtables-entities-c` — 1308 unresolved imports
 - 2026-10-12 22:41 CDT — `agents/w9-ctors-lantern-b` — 1332 unresolved imports
 - 2026-10-12 22:43 CDT — baseline re-check and rejection notes (no package) — 1332 unresolved imports
+- 2026-10-12 22:55 CDT — second baseline re-check, no branches left to merge — 1332 unresolved imports
