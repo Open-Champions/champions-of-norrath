@@ -122,6 +122,10 @@ int soundPlaySequence__FP15AnimationHeaderP10GameObjectf(void* header, void* obj
 int P_StartTrail__Fiifiiiii(int a, int b, float c, int d, int e, int f, int g, int h);
 void P_ExtendTrail__FiG6Point3(int trail, Point3 position);
 void lightAdd__FP5Light(void* light);
+int P_StartLightning__FG6Point3T0iiffUi(Point3 from, Point3 to, int a, int b, float c, float d, unsigned color);
+extern int nmPlayersAlive;
+extern int playersAlive[];
+extern unsigned char player[];
 void objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature(Point3 position, short heading, float a, float b, void* list, void* creature);
 void listDestroy__FP8ListHead(void* head);
 unsigned eRand__10GameObject(void* object);
