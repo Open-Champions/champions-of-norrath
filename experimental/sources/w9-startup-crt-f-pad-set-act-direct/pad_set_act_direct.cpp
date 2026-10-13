@@ -10,12 +10,19 @@ extern "C" {
 extern unsigned char norrath_libpad_port_info_view[];
 
 unsigned char* scePadGetDmaStr(int port, int slot);
+#if defined(NORRATH_HOST_CONTRACT)
+unsigned* norrath_host_request_object(unsigned word);  // host check: maps the 32-bit word to a host object
+#endif
 int _send_to_iop(int port, int slot);
 
 int scePadSetActDirect(int port, int slot, const unsigned char* data) {
     if (scePadGetDmaStr(port, slot)[114] != 1) return 0;
     const unsigned* info = reinterpret_cast<const unsigned*>(norrath_libpad_port_info_view + slot * 28 + port * 112);
+#if defined(NORRATH_HOST_CONTRACT)
+    unsigned* request = norrath_host_request_object(info[1]);
+#else
     unsigned* request = reinterpret_cast<unsigned*>(static_cast<__UINTPTR_TYPE__>(info[1]));
+#endif
     unsigned char* destination = reinterpret_cast<unsigned char*>(request) + 12;
     for (int index = 0; index < 6; ++index) destination[index] = data[index];
     request[1] = 1;
