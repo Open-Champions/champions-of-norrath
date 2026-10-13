@@ -8991,3 +8991,8 @@ Re-ran on `integration/mini` at `2aa01e26` (equal to `origin/codex/norrath-first
 
 Re-ran at `c7243a6d` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); `--check-plan` valid; the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded 827 reproduces. All seven unmerged `origin/agents/*` branches are still at the tips of their recorded rejections (`w10-actor-i` `e1ad5dba`, `w10-startup-d` `cb1c9c26`, `w11-creature-a` `a91fc08f`, `w11-vi-misc-a` `9549e91d`, `w11-vi-render-b` `dc3d80c6`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a` `adff0bdc`), so nothing new was merged.
 - 2026-10-13 07:50 CDT — re-verification, nothing merged — 827 unresolved imports
+
+## Deferred, still in progress (not merged)
+
+At 07:55 CDT seven new branches were waiting: `agents/w12-hud-loop-a` (`1654eba2`), `w12-hud-loop-b` (`efa42429`), `w12-startup-rt-a` (`a622417f`), `w12-startup-rt-b` (`e063d409`), `w12-startup-rt-c` (`d0780019`), `w12-wnd-a` (`a66ae9b0`) and `w12-wnd-b` (`98f10627`). Every tip is under 10 minutes old and none has a notes file yet (so no five summary sections), so by the merge rule none qualifies. Nothing was merged or reviewed for rules; they need a later pass once they have notes or their tips are over 45 minutes old. Shared-branch code is unchanged since the re-verification above (only log commits followed), so the 827 count was not re-measured in this pass.
+- 2026-10-13 07:56 CDT — w12-* deferred as in progress, nothing merged — 827 unresolved imports
