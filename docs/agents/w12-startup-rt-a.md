@@ -11,8 +11,8 @@ build-plan input. Compiled sizes below are not image sizes; no byte match is cla
 ## Method
 
 * Baseline: `tools/build_partial.py` on the branch start (`c7243a6d`): 827 unresolved imports, all 28 package names present.
-* Private build with the 24 new inputs appended to a copy of plan and snapshot kept outside git (`/tmp`): 5,137 inputs,
-  3,925 function bodies, 0 COMMON, **823 unresolved imports** (21 package names closed, 17 names opened).
+* Private build with the 25 new inputs appended to a copy of plan and snapshot kept outside git (`/tmp`): 5,138 inputs,
+  3,926 function bodies, 0 COMMON, **822 unresolved imports** (22 package names closed, 17 names opened).
 * Host checks (examples; every file names its own command in its header):
 
 ```sh
@@ -51,6 +51,7 @@ $EE-g++ <authored_cpp flags> -c <unit>.cpp -o unit.o && c++ -std=c++17 -o chk ex
 | `__EH_FRAME_BEGIN__` | `0x00453970` | 0 | marker, **section differs** | object check; link checked with the reviewed `ld -r` against the full partial object |
 | `_free_r` | `0x00300608` | 756 | name provider | paired run (6,000 heaps built by the original allocator) |
 | `_malloc_r` | `0x00301840` | 1832 | name provider | paired run (40,000 heaps, sizes 8 to 0xffffffff) |
+| `amx_Exec` | `0x00135de8` | 9176 | name provider for the authored `norrath_amx_exec` | paired run (2,580 one-opcode programs + 240 entry cases); one known defect in the pair |
 
 ### Observed, inferred, unknown (per unit)
 
@@ -89,6 +90,24 @@ The header comment of every source carries its own observed / inferred / unknown
   logic. The value of the commits is the paired run, which is the first comparison of those bodies against the original
   allocator on real heaps (the `malloc_extend_top` body and `_malloc_trim_r` were the original's during the run, and `_sbrk_r`
   was scripted). 24 of 458 malloc instructions were not reached.
+* **`amx_Exec`** is a name provider that forwards to the existing authored `norrath_amx_exec` (script-amx-exec, not this
+  package). The paired run is the first comparison of that executor with the original on real inputs. Method: the original
+  is direct-threaded, so each run gets the same program with its own opcode cells (the original's handler addresses from its
+  131-entry table at `0x00333710`, ids `0..130` for the authored executor); operands, data, machine record and parameters
+  are identical. 2,580 programs of the form `PROC; set PRI/ALT; one opcode with random operands; store observables; restore the
+  stack; RETN` over opcodes 1..129 (jumps, calls, switch and the symbol/line records included), the SYSREQ callback and the memory
+  copy/compare calls scripted identically, plus 240 entry-condition cases. Status, result word, machine record words and every
+  data byte match for 2,554 of 2,580 programs. Of the 26 others, **20 are a real defect and 6 are undefined test inputs**:
+  * **PUSH.R (opcode 38) differs.** The original pushes PRI `count` times (count 5 pushes five values); the authored executor
+    loops `while (count != -1)` and pushes `count + 1` values (count 0 pushes once). Fix for the script-amx owner: loop `while (count != 0)`.
+    All 20 PUSH.R programs of the run differ in the stack pointer and the pushed words. This wrapper is committed anyway so the import
+    resolves; do not treat script execution as verified until the executor is corrected.
+  * The six undefined cases store into the saved return-address slot of the frame (`STOR.S`, `STRB.I`, `INC.S` at frame+4 and the
+    like) and then `RETN`; the original jumps into garbage while the authored executor reports status 6. They say nothing about either.
+  * Not comparable by design: a null machine record returns the handler table of the respective executor (different addresses),
+    and public index -2 in this build indexes the publics table at -48 bytes (garbage) in both.
+  * Division of the minimum negative value by -1 was exercised only through the interpreter's own divide; the authored executor
+    documents that case as unknown.
 * **`dpdiv`**, **`atanf`**, **`cosf`**, **`__throw_type_match_rtti_2`** compile to different sizes than the originals
   (364/320, 648/652, 200/212, 1636/1292).
 
@@ -96,7 +115,8 @@ The header comment of every source carries its own observed / inferred / unknown
 
 `AdjustTime`, `InitialiseIopDriver`, `IsEventModifier`, `LocalData`, `QueuePeekWriteDone`, `SyncDCache`, `_Exit`,
 `_SetTLBEntry`, `__EH_FRAME_BEGIN__`, `__throw`, `__throw_type_match_rtti_2`, `_ctype_`, `_free_r`, `_kExitTLBHandler`,
-`_malloc_r`, `_sceSifMInitCheck`, `atanf`, `cosf`, `dpdiv`, `ee_retbuf_sel`, `get_eh_context` (21 of the 28).
+`_malloc_r`, `_sceSifMInitCheck`, `amx_Exec`, `atanf`, `cosf`, `dpdiv`, `ee_retbuf_sel`, `get_eh_context` (22 of the 28; `amx_Exec`
+by name only, with the PUSH.R defect above).
 Other definitions added without being on the list: `ModifierCodes`, `eh_context_initialize`, `dwarf_reg_size_table_initialized`.
 
 ## Imports opened
@@ -110,11 +130,11 @@ Other definitions added without being on the list: `ModifierCodes`, `eh_context_
 `0x002d1380`/`0x002d13e8`, `addhour`/`subhour` `0x002d15b0`/`0x002d15e0`. `__tf16__attr_type_info` and `__tf16__func_type_info`
 have the same shape as the authored `__tf16__user_type_info` (initialise-once, `__tf9type_info` then `__rtti_si`) and need
 their data objects `__ti16__attr_type_info` / `__ti16__func_type_info` (12 bytes bss each) and two name strings; nothing authored
-defines them yet. Net change of the unresolved count in the private build: 827 to 823.
+defines them yet. Net change of the unresolved count in the private build: 827 to 822.
 
 ## Build-plan entries needed
 
-Twenty-four inputs, kind `independently_authored_source`, `input_order` left to the integrator. Ready-made entries with
+Twenty-five inputs, kind `independently_authored_source`, `input_order` left to the integrator. Ready-made entries with
 SHA-256, header closure and emitted function extents are in `docs/agents/w12-startup-rt-a-plan-entries.json` (force-added;
 `docs/agents/` ignores `.json`). Profiles: `authored_entry_asm` for `exit_stub.S`, `set_tlb_entry.S`,
 `k_exit_tlb_handler.S`; `authored_cpp` for the rest. `queue_peek_write_done.cpp` needs
@@ -129,7 +149,6 @@ definition of each. This package's versions are the ones that carry a failing-ca
 
 ## Not closed
 
-* **`amx_Exec`** (`0x00135de8`, 9,176 bytes). Not attempted yet in this revision of the notes.
 * **Linker-defined symbols** `_gp`, `_fbss`, `_end`, `_bssend`, `_srsctorsstart`, `_srsctorsend`. These are layout values, not
   source; no translation unit can define them without fixing a layout, and the recipe forbids absolute address imports.
   Observed in the pinned image (section extents from the ELF headers): `_fbss = 0x00486800` (start of `.sbss`);
