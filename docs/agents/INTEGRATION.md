@@ -8768,3 +8768,25 @@ Closed: `_vt$10CloudGiant`, `_vt$10GameObject`, `_vt$10SkillBlunt`, `_vt$11PushT
 
 Opened: `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_5PhIce`, `_$_7OniBall`, `__tf10SkillBlunt`, `__tf13LooseIceChunk`, `__tf15GlowingCylinder`, `__tf15SkillBallOfHate`, `__tf18SkillDiseaseEffect`, `__tf5PhIce`, `__tf7OniBall`, `canCast__5SkillP8Creature`, `cast__5SkilliP8CreatureG6Point3s`, `clone__13LooseIceChunk`, `clone__15GlowingCylinder`, `clone__5PhIce`, `clone__7OniBall`, `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `evaluateRampAtRank__5Skillii`, `evaluateRampAtRank__5SkilliiP10GameObject`, `evaluateRampAtRank__5SkilliiP8ListHead`, `getEnergyCost__5Skilli`, `getIcon__5Skill`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__5Skilli`, `getRampDamage__5SkilliifiPiT5`, `getRankDescription__10SkillBluntPUsi`, `getRankDescription__5SkillPUsi`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__5Skilli`, `initRamps__15SkillBallOfHate`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill`, `msg_collision__7OniBallP10GameObject`, `msg_draw__15GlowingCylinder`, `msg_draw__7OniBall`, `msg_run__15GlowingCylinder`, `msg_run__5PhIce`, `msg_run__7OniBall`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`
 - 2026-10-13 06:49 CDT — agents/w11-vt-a — 958 unresolved imports
+
+## agents/w11-vt-b
+
+Merged (merge commit, branch tip `dae218f9`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 26 vtable data units (no function bodies) with fresh
+`input_order` values 4875 through 4901. All 26 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs); each calls the table through every slot and fails on a wrong slot name, order, adjustment or null slot. The notes' image comparison of the compiled tables is a private script outside git and was not re-verified. The plan entries come from the notes' table (source and hash) with compiled sizes measured here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4899 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Net count rises by 6: closing 26 `_vt$` tables opens 32 not-yet-authored slot bodies (`__tf...`, `clone__...`, `initRamps__...`, `run__...`). Four of the tables (`_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`) close names opened by the w10-actor-o merge.
+
+| | |
+|---|---|
+| Before | 958 |
+| After | 964 |
+| Closed | 26 |
+| Opened | 32 |
+
+Closed: `_vt$10StaticFire`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11SpiderQueen`, `_vt$11VampireLord`, `_vt$12UndeadKnight`, `_vt$13SkillHateBeam`, `_vt$13SkillSlashing`, `_vt$14WoodElfSoldier`, `_vt$15SkillHateEffect`, `_vt$17SkillResistPoison`, `_vt$17UndeadKnightClone`, `_vt$17VehicleBodySphere`, `_vt$18SkillPoisonWeapons`, `_vt$19SkillDiseaseWeapons`, `_vt$19SpellHornOmenEffect`, `_vt$22SpellPlanarSteelEffect`, `_vt$5Torch`, `_vt$6Switch`, `_vt$6Wraith`, `_vt$7Ulthork`, `_vt$7Vampire`, `_vt$7Weather`, `_vt$7WebTrap`, `_vt$8SuperOrc`, `_vt$9WaveMaker`
+
+Opened: `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarSteelEffect`, `_$_7Weather`, `__tf13SkillHateBeam`, `__tf13SkillSlashing`, `__tf15SkillHateEffect`, `__tf17SkillResistPoison`, `__tf17VehicleBodySphere`, `__tf18SkillPoisonWeapons`, `__tf19SkillDiseaseWeapons`, `__tf19SpellHornOmenEffect`, `__tf22SpellPlanarSteelEffect`, `__tf7Weather`, `canQueue__5Spell`, `clone__17VehicleBodySphere`, `clone__7Weather`, `draw__5Spell`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getRankDescription__13SkillSlashingPUsi`, `getRankDescription__17SkillResistPoisonPUsi`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `initRamps__13SkillHateBeam`, `initRamps__15SkillHateEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `msg_collision__17VehicleBodySphereP10GameObject`, `msg_run__7Weather`, `run__19SpellHornOmenEffectG6Point3s`, `run__22SpellPlanarSteelEffectG6Point3s`
+- 2026-10-13 06:53 CDT — agents/w11-vt-b — 964 unresolved imports
