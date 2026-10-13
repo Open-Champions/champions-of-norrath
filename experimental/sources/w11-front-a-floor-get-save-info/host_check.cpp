@@ -99,6 +99,10 @@ int main() {
     rc |= run("limit negative", 5, 31, -4);
     rc |= run("tiny stop", 5, 31, 268);   // 268 - 256 = 12: stops after the first record
     rc |= run("stop later", 5, 31, 269);  // after the second record
+    rc |= run("budget edge 275", 6, 31, 275);  // stops once bytes exceed limit - 256: 20 > 19
+    rc |= run("budget edge 276", 6, 31, 276);  // 20 > 20 is false, so one more record
+    rc |= run("budget edge 287", 8, 31, 287);
+    rc |= run("budget edge 288", 8, 31, 288);
     rc |= run("few", 3, 3, 5000);
     rc |= run("many", 40, 31, 60000);
     rc |= run("capped", 40, 31, 700);
