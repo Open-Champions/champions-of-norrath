@@ -1,4 +1,4 @@
-// Observed energyCostRamp4__5Skillii at 0x00313788, 100 bytes (extent to the next symbol 108).
+// Observed energyCostRamp4__5Skillii at 0x00313788, 96 bytes (symbol size).
 // The receiver holds the address of a table of 8-byte slots at +96. Each slot is a signed halfword
 // (added to the receiver before the call) at +0 and a function word at +4. The routine makes two
 // calls through that table:
