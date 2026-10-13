@@ -128,7 +128,7 @@ All other symbols my sources reference are already defined in the unmodified pla
 `unresolved-imports.json`). Notes on them: `cutMode`, `gameCam`, `frameNm`, `worldDifficulty`,
 `skills` and `worldViewMatrix` are read as data; the Goblin weapon map is linked through the authored
 name `norrath_ctors_ant_lantern_view_42cfc8` (an asm label in `msg_draw.cpp`), and `_4item$globalItem`
-through its asm label. The shared header `w10-actor-g-common/words.hpp` is required by 19 units.
+through its asm label. The shared header `w10-actor-g-common/words.hpp` is required by 15 units.
 
 ## Build-plan entries needed
 
