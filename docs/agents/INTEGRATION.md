@@ -9508,3 +9508,19 @@ Closed: `maxDistance`, `zeroPad`
 
 Opened: none
 - 2026-10-13 15:51 CDT — agents/w13-m-data-b — 1249 unresolved imports
+
+## agents/w13-m-skill-tf-a
+
+Merged (merge commit, branch tip `9d274342`; the notes have the reference, contents, verification, closed, opened, plan-entry, never-executed and unknown sections). 30 type_info accessor units (`__tf...Skill...` with their nodes) with fresh `input_order` values 5624 through 5653, each with a committed host check that records the call sequence against stand-ins for `__rtti_si` and the base accessor and fails on a wrong order, node or skip condition; all 30 build and pass here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5652 authored inputs, 4335 function bodies, zero COMMON. The notes' 30 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1249 |
+| After | 1219 |
+| Closed | 30 |
+| Opened | 0 |
+
+Closed: `__tf15SkillPoisonRain`, `__tf15SkillShieldBash`, `__tf15SkillWizardBeam`, `__tf16SkillColdWeapons`, `__tf16SkillConeOfFrost`, `__tf16SkillCriticalHit`, `__tf16SkillDiseaseBolt`, `__tf16SkillFireWeapons`, `__tf16SkillGroundPound`, `__tf16SkillPoisonArrow`, `__tf16SkillShockOfFire`, `__tf17SkillConvertEnemy`, `__tf17SkillDiseaseTrail`, `__tf17SkillExplodeArrow`, `__tf17SkillMinorHealing`, `__tf17SkillRegeneration`, `__tf17SkillShockOfFrost`, `__tf17SkillUndeadShield`, `__tf18SkillAncestralCall`, `__tf18SkillBlindingLight`, `__tf18SkillConvertUndead`, `__tf18SkillDiseaseShield`, `__tf18SkillDismissUndead`, `__tf18SkillHammerOfWrath`, `__tf18SkillRepulseUndead`, `__tf19SkillSummonSkeleton`, `__tf21SkillLightningWeapons`, `__tf22SkillRangerCriticalHit`, `__tf9SkillBash`, `__tf9SkillRoot`
+
+Opened: none
+- 2026-10-13 15:56 CDT — agents/w13-m-skill-tf-a — 1219 unresolved imports
