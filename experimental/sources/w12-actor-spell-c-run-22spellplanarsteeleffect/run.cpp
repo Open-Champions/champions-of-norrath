@@ -51,7 +51,7 @@ float worldFindPointHeight__FP12_worldHeaderG6Point3(void* world, Point3 positio
 namespace {
 using namespace w12c;
 
-void draw_direction(unsigned char* s, Point3& d) {
+static void draw_direction(unsigned char* s, Point3& d) {
     do {
         float t = static_cast<float>(eRand__5Spell(s)) * bits(0x37800000u);
         d.x = t + t - 1.0f;
