@@ -6836,6 +6836,26 @@ changes the build driver itself, so it is left for the startup lead or
 owner to merge. The default authored partial link used for the official
 counts above does not take the opt-in flag and is unaffected.
 
+## Baseline re-check before the w9 merges
+
+Before the first w9 merge, the integrator who followed the earlier (free-tier)
+one re-ran the tool tests (214 OK), `check_source_snapshot.py` and the full
+partial build on the shared tip `9d30dbb5`. The recorded `w8-render-world-a`
+count of 1514 reproduced exactly (2391 inputs, 1950 function bodies, zero
+COMMON). No repo-rule break was found in the recent entries, and no shared file
+needed a fix. Entries below were produced one package at a time; for each, the
+before count is the previous package's real after count. The `w9-*` entries
+also record which units were left unselected (duplicate definitions at link
+time, or no committed host check) instead of changing any game source. Two
+local helper scripts (outside the repository) generated the plan and snapshot
+rows from compiling each unit; they are not part of the repository.
+
+Host checks on this machine need three adjustments that are not source defects:
+`-ffp-contract=off` (the host compiler fuses multiply-add and changes float
+bits), the leading underscore of `asm("name")` labels on macOS, and an x86_64
+build for the one check that stores 32-bit pointers. Each entry says when it
+mattered.
+
 ## Not merged: agents/w9-render-math-a
 
 Rejected at tip `adff0bdc` (47 minutes old when read). Its 32 units hold
