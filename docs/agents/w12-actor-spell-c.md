@@ -627,8 +627,11 @@ that loop uses a run-time add on purpose. Callee behaviour (the particle, sound,
 ## Not done
 
 `gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` at `0x001ce218`, 9,184 bytes (2,297 instruction words): surveyed only.
-It is the damage resolver: it calls itself, tests object types through RTTI (`__eq__C9type_infoRC9type_info` with `__tf8Innoruuk`, `__tf17SpellUndeadShield`,
-`__tf26SpellSecondaryUndeadShield`, `__tf18SpellDiseaseEffect`), uses soft-double helpers (`litodp`, `dpadd`, `fmod`), two generators (`eRandState`,
-`syncRandState`), and makes about 100 calls (sounds, hit text, shields, riposte, critical hit, poison gas, disease, floating text, `playHitSound`). A
-faithful reconstruction with a paired run and a mutation check is a package of its own; it was not attempted beyond reading the first ~500
-words, so no source for it is committed.
+Observed in the first ~800 words and the call list of the whole function: it is the damage resolver; it calls itself; it tests object types through
+RTTI (`__eq__C9type_infoRC9type_info` with `__tf8Innoruuk`, `__tf17SpellUndeadShield`, `__tf26SpellSecondaryUndeadShield`, `__tf18SpellDiseaseEffect`) and
+a type-info slot of the object's table; it uses soft-double helpers (`litodp`, `dpadd`, `fmod`, `fptodp`, `dptofp`); it advances two generators
+(`eRandState`, `syncRandState`); it repeats an inlined search over four 8-byte effect records (halfword ids at +32 + 8k of a local pointer) for ids 27, 29, 31, 32 and
+41 in many places; and it makes about 100 calls (sounds through `lumpFindResource__FPcT0` + `soundPlaySequence`, hit text `FlyingText`, shield handlers,
+`SkillRiposte::handleCounter`, `SkillCriticalHit::getCriticalChance`, `SkillRangerCriticalHit::getCriticalChance`, `poisonGasSpell`, `SpellDiseaseEffect`,
+`playHitSound`, `playerPlaySound`, `sprintf`, `blockAlloc__Fi`). A faithful reconstruction with a paired run and a mutation check is a package
+of its own (several hundred distinct branches, each needing a scenario), so no source for it is committed and the import stays open. Of the assigned functions only `hitSomething__11SpellChargeP10GameObject` calls it; it stays an import there.
