@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3884,
+  "default_authored_inputs": 3903,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2371,6 +2371,25 @@
     "sources/w10-net-b-send-alert-message/send_alert_message.cpp": "8faeb5b7035b8d0f353e0bd82479e26a128ce4e938343ab1ed2232f70ec3bd4e",
     "sources/w10-net-b-send-control-packet/send_control_packet.cpp": "4c130668ca269a63cdde4f9b9d05692a03343260c0d1d09fa4541283ba4f0c83",
     "sources/w10-net-b-show-net-player-status/show_net_player_status.cpp": "e4c717a6be98a1dbf471d21c6b2903eb8777c17f9424b55226b20197639746e3",
+    "sources/w10-render-a-anim-advance-time/anim_advance_time.cpp": "d2ca8d42fdd73155995486933bbaf9ffc7cd1be56c20981807a84e85c9a6a7e9",
+    "sources/w10-render-a-anim-get-anim-component/anim_get_anim_component.cpp": "b23f519e88a309ff855021c71f0a87d68a14a7a8929f8f59a8fbbbef5106df7a",
+    "sources/w10-render-a-anim-get-bone-matrix/anim_get_bone_matrix.cpp": "ed333a9533cc84edf854aefce39266818e4a3064255796f7e84e7f13124092b8",
+    "sources/w10-render-a-anim-load-bone-matricies/anim_load_bone_matricies.cpp": "aaba35cc949c680159df6003922f72d7b8aa78efdd8b4df90618baed8043718b",
+    "sources/w10-render-a-anim-remove-nonpermanent/anim_remove_nonpermanent.cpp": "c0442cc0ae3274fe3d654ff9b37b096c99b95d8746ffe5e44d14b5f8d5504a9e",
+    "sources/w10-render-a-anim-set-to-end-fully-blended/anim_set_to_end_fully_blended.cpp": "0874c0a96885e7cd86a089597a3dea9c3f26884930d3139fb26a496709837a44",
+    "sources/w10-render-a-box-add/box_add.cpp": "9fa27dcee3e66a80cfa1386ce5de78e6574e1ab5ed6d885760bdd2ca3352a8b7",
+    "sources/w10-render-a-box-set-empty/box_set_empty.cpp": "664295219842bb4619bf3ed16d614790f896c49d3af70a17c2e3cf5046fb4fc8",
+    "sources/w10-render-a-data-tables/data_tables.cpp": "7f37932b0993fcc7dd6edd5684176f3e4b8506307d19062226c7ecaf97395e3a",
+    "sources/w10-render-a-data-zero/data_zero.cpp": "fe2169613b88af24389c5c9c78dbb73ab23a2647949997232b21940b1f7ca1f5",
+    "sources/w10-render-a-draw-texture/draw_texture.cpp": "c9380f73c6ff73e6a4a9b3f673a24dfb5bc597a6ea26430477c768343532f8d6",
+    "sources/w10-render-a-draw-world-polyset/draw_world_polyset.cpp": "2ec55adb39a794a5638fa32450f396111a78730ec5e760eaeaf561622e51e664",
+    "sources/w10-render-a-ef1-noise/ef1_noise.cpp": "be538fc8e2d4318c2400f860fa8c81b5f4b9980180abbb69179ed61c23e3d404",
+    "sources/w10-render-a-fx-creature-to-dust/fx_creature_to_dust.cpp": "b14ac1ae2a3d71285332eaa85997a110b206c768d5d94efc80d733776d9460f4",
+    "sources/w10-render-a-fx-creature-to-ice/fx_creature_to_ice.cpp": "cbae6a34adea39a4f7ab2b4c6a3330ada577b081c29bec46fe3a968c0528a0ab",
+    "sources/w10-render-a-fx-run-creature-fire/fx_run_creature_fire.cpp": "db1771c7fecac323d5f40bff42a151254807cb38da26dc9dffcf75f922e38ddc",
+    "sources/w10-render-a-hud-init/hud_init.cpp": "972e576019444434f1a9b7e182a92402af62ddb063728f939e9a18fee10de679",
+    "sources/w10-render-a-p-extend-trail/p_extend_trail.cpp": "b4aaaab68cc5e899299575f39dfffce0bc681518d858262192455a2a58fa0496",
+    "sources/w10-render-a-p-start-trail/p_start_trail.cpp": "260c85e11c2b7b6e841d69295e1d040e2df98b2ae3b9b650afc910ba00a72c43",
     "sources/w10-render-b-fx-run-creature-glow/fx_run_creature_glow.cpp": "c0d670ef406be948ba2b4257729abaf0c7de58ea5166dee419872f904ad1fb60",
     "sources/w10-render-b-fx-run-creature-shock/fx_run_creature_shock.cpp": "1f40cf877738872487e81e2ea3714c46c06b450c4dd259bdec9689dd0e9dd2a3",
     "sources/w10-render-b-get-vif-and-tex/get_vif_and_tex.cpp": "5b2531f4429801e194473e51bf23fc49185e127d7d2f64d98dfb14a523b1ca69",
@@ -55076,6 +55095,305 @@
           "compiled_body_bytes": 400
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3886,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_advance_time.o",
+      "profile": "authored_cpp",
+      "sha256": "d2ca8d42fdd73155995486933bbaf9ffc7cd1be56c20981807a84e85c9a6a7e9",
+      "source": "sources/w10-render-a-anim-advance-time/anim_advance_time.cpp",
+      "emitted_functions": [
+        {
+          "name": "animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps",
+          "compiled_body_bytes": 5328
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3887,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_get_anim_component.o",
+      "profile": "authored_cpp",
+      "sha256": "b23f519e88a309ff855021c71f0a87d68a14a7a8929f8f59a8fbbbef5106df7a",
+      "source": "sources/w10-render-a-anim-get-anim-component/anim_get_anim_component.cpp",
+      "emitted_functions": [
+        {
+          "name": "animGetAnimComponent__FP14AnimationStateP15AnimationHeader",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3888,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_get_bone_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "ed333a9533cc84edf854aefce39266818e4a3064255796f7e84e7f13124092b8",
+      "source": "sources/w10-render-a-anim-get-bone-matrix/anim_get_bone_matrix.cpp",
+      "emitted_functions": [
+        {
+          "name": "animGetBoneMatrix__FP14AnimationStateiP8Matrix34",
+          "compiled_body_bytes": 436
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3889,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_load_bone_matricies.o",
+      "profile": "authored_cpp",
+      "sha256": "aaba35cc949c680159df6003922f72d7b8aa78efdd8b4df90618baed8043718b",
+      "source": "sources/w10-render-a-anim-load-bone-matricies/anim_load_bone_matricies.cpp",
+      "emitted_functions": [
+        {
+          "name": "animLoadBoneMatricies__FP6PacketP14AnimationState",
+          "compiled_body_bytes": 740
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3890,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_remove_nonpermanent.o",
+      "profile": "authored_cpp",
+      "sha256": "c0442cc0ae3274fe3d654ff9b37b096c99b95d8746ffe5e44d14b5f8d5504a9e",
+      "source": "sources/w10-render-a-anim-remove-nonpermanent/anim_remove_nonpermanent.cpp",
+      "emitted_functions": [
+        {
+          "name": "animRemoveNonpermanentAnimations__FP14AnimationState",
+          "compiled_body_bytes": 276
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3891,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_anim_set_to_end_fully_blended.o",
+      "profile": "authored_cpp",
+      "sha256": "0874c0a96885e7cd86a089597a3dea9c3f26884930d3139fb26a496709837a44",
+      "source": "sources/w10-render-a-anim-set-to-end-fully-blended/anim_set_to_end_fully_blended.cpp",
+      "emitted_functions": [
+        {
+          "name": "animSetToEndFullyBlended__FP14AnimationState",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3892,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_box_add.o",
+      "profile": "authored_cpp",
+      "sha256": "9fa27dcee3e66a80cfa1386ce5de78e6574e1ab5ed6d885760bdd2ca3352a8b7",
+      "source": "sources/w10-render-a-box-add/box_add.cpp",
+      "emitted_functions": [
+        {
+          "name": "boxAdd__FP3BoxT0",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3893,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_box_set_empty.o",
+      "profile": "authored_cpp",
+      "sha256": "664295219842bb4619bf3ed16d614790f896c49d3af70a17c2e3cf5046fb4fc8",
+      "source": "sources/w10-render-a-box-set-empty/box_set_empty.cpp",
+      "emitted_functions": [
+        {
+          "name": "boxSetEmpty__FP3Box",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3894,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_data_tables.o",
+      "profile": "authored_cpp",
+      "sha256": "7f37932b0993fcc7dd6edd5684176f3e4b8506307d19062226c7ecaf97395e3a",
+      "source": "sources/w10-render-a-data-tables/data_tables.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3895,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_data_zero.o",
+      "profile": "authored_cpp",
+      "sha256": "fe2169613b88af24389c5c9c78dbb73ab23a2647949997232b21940b1f7ca1f5",
+      "source": "sources/w10-render-a-data-zero/data_zero.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3896,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_draw_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "c9380f73c6ff73e6a4a9b3f673a24dfb5bc597a6ea26430477c768343532f8d6",
+      "source": "sources/w10-render-a-draw-texture/draw_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawTexture__FR6PacketP8_textureiiiiii",
+          "compiled_body_bytes": 3312
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3897,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_draw_world_polyset.o",
+      "profile": "authored_cpp",
+      "sha256": "2ec55adb39a794a5638fa32450f396111a78730ec5e760eaeaf561622e51e664",
+      "source": "sources/w10-render-a-draw-world-polyset/draw_world_polyset.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi",
+          "compiled_body_bytes": 5080
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3898,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_ef1_noise.o",
+      "profile": "authored_cpp",
+      "sha256": "be538fc8e2d4318c2400f860fa8c81b5f4b9980180abbb69179ed61c23e3d404",
+      "source": "sources/w10-render-a-ef1-noise/ef1_noise.cpp",
+      "emitted_functions": [
+        {
+          "name": "ef1Noise__Fi",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3899,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_fx_creature_to_dust.o",
+      "profile": "authored_cpp",
+      "sha256": "b14ac1ae2a3d71285332eaa85997a110b206c768d5d94efc80d733776d9460f4",
+      "source": "sources/w10-render-a-fx-creature-to-dust/fx_creature_to_dust.cpp",
+      "emitted_functions": [
+        {
+          "name": "fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3900,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_fx_creature_to_ice.o",
+      "profile": "authored_cpp",
+      "sha256": "cbae6a34adea39a4f7ab2b4c6a3330ada577b081c29bec46fe3a968c0528a0ab",
+      "source": "sources/w10-render-a-fx-creature-to-ice/fx_creature_to_ice.cpp",
+      "emitted_functions": [
+        {
+          "name": "fxCreatureToIce__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefff",
+          "compiled_body_bytes": 796
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3901,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_fx_run_creature_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "db1771c7fecac323d5f40bff42a151254807cb38da26dc9dffcf75f922e38ddc",
+      "source": "sources/w10-render-a-fx-run-creature-fire/fx_run_creature_fire.cpp",
+      "emitted_functions": [
+        {
+          "name": "fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStateffff",
+          "compiled_body_bytes": 1096
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3902,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_hud_init.o",
+      "profile": "authored_cpp",
+      "sha256": "972e576019444434f1a9b7e182a92402af62ddb063728f939e9a18fee10de679",
+      "source": "sources/w10-render-a-hud-init/hud_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "HUDInit__Fv",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3903,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_p_extend_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "b4aaaab68cc5e899299575f39dfffce0bc681518d858262192455a2a58fa0496",
+      "source": "sources/w10-render-a-p-extend-trail/p_extend_trail.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_ExtendTrail__FiG6Point3",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/level-anim-load-common/mem.hpp"
+      ],
+      "input_order": 3904,
+      "kind": "independently_authored_source",
+      "object_name": "w10_render_a_p_start_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "260c85e11c2b7b6e841d69295e1d040e2df98b2ae3b9b650afc910ba00a72c43",
+      "source": "sources/w10-render-a-p-start-trail/p_start_trail.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_StartTrail__Fiifiiiii",
+          "compiled_body_bytes": 240
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -55175,7 +55493,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c3ccfbf79fde67d5674344a61d1de65520acc306f5c3cf94d7762a1d16828e09",
+  "snapshot_sha256": "2157c681b5b67fdc4d27582333c53cb103532a7a993b9d6b0862092dab3a4249",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

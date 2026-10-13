@@ -7831,3 +7831,29 @@ Closed: `_GLOBAL_$I$skills`, `_shopCheck__Fi`, `armorDebug`, `buySellVertSpacing
 
 Opened: `_4item$namedItemTable`, `_4item$undEnable`, `__10SkillDodge`, `__10SkillShock`, `__11SkillCharge`, `__12SkillArchery`, `__12SkillBlessed`, `__12SkillCyclone`, `__12SkillHealing`, `__12SkillLifeTap`, `__12SkillRiposte`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__14SkillMultiFire`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__15SkillPoisonRain`, `__15SkillShieldBash`, `__15SkillWizardBeam`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__16SkillPoisonArrow`, `__16SkillShockOfFire`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__17SkillMinorHealing`, `__17SkillRegeneration`, `__17SkillShockOfFrost`, `__17SkillUndeadShield`, `__18SkillAncestralCall`, `__18SkillBlindingLight`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`, `__18SkillRepulseUndead`, `__19SkillSummonSkeleton`, `__21SkillLightningWeapons`, `__22SkillRangerCriticalHit`, `__9SkillBash`, `__9SkillRoot`, `_vt$10SkillBlunt`, `_vt$13SkillHateBeam`, `_vt$13SkillSlashing`, `_vt$15SkillBallOfHate`, `_vt$15SkillHateEffect`, `_vt$17SkillResistPoison`, `_vt$18SkillDiseaseEffect`, `_vt$18SkillPoisonWeapons`, `_vt$19SkillDiseaseWeapons`, `arrowLeft`, `arrowRight`, `charAnimTest`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `drawAttachments__6PlayerP11_drawRecordf`, `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `mainMenu__Fii`, `matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf`, `moneyTex`, `msgInventoryExit__Fiii`, `playerDrawWeaponEffects__6Playerf`, `rcursor`, `scaleTex`, `selectionBox`, `taskBar`, `tinyIcon`
 - 2026-10-13 01:59 CDT — `agents/w10-item-a` — 1257 unresolved imports
+
+## agents/w10-render-a
+
+Merged (merge commit, branch tip `db79a230`, 32 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown, and the package may still be growing: later commits will be
+picked up by a later pass). Animation, particles, effects and drawing part 1: 19 units
+(17 function bodies and two data units) with fresh `input_order` values 3886 through
+3904. 19 of 19 host contracts pass here (x86_64, `-ffp-contract=off`). They need
+`-DNORRATH_HOST_ARENA` (the shared `level-anim-load-common/mem.hpp` asserts 4-byte
+pointers without it) and some need the unit source on the command line; without the
+define they fail at that static assertion. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3903 authored inputs, 2826 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1257 |
+| After | 1249 |
+| Closed | 27 |
+| Opened | 19 |
+
+Closed: `HUDInit__Fv`, `P_ExtendTrail__FiG6Point3`, `P_StartTrail__Fiifiiiii`, `ParticleEmitterTestParticle`, `animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`, `animGetAnimComponent__FP14AnimationStateP15AnimationHeader`, `animGetBoneMatrix__FP14AnimationStateiP8Matrix34`, `animLoadBoneMatricies__FP6PacketP14AnimationState`, `animLoadBuffer`, `animRemoveNonpermanentAnimations__FP14AnimationState`, `animSetToEndFullyBlended__FP14AnimationState`, `bevel`, `boxAdd__FP3BoxT0`, `boxSetEmpty__FP3Box`, `castLightColor`, `defaultHalos`, `displayTextDisable`, `drawTexture__FR6PacketP8_textureiiiiii`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`, `droplet`, `ef1Noise__Fi`, `effectModeSize`, `fontGrid`, `fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff`, `fxCreatureToIce__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefff`, `fxResourceMap`, `fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStateffff`
+
+Opened: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `_vt$13LooseIceChunk`, `bustAlpha`, `cFireParticle`, `cSmokeParticle`, `crystalTex`, `drawWaterPatch__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldDynamicLight__FP13PolysetHeader`, `drawWorldObject__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldParticleEmitter__FP13PolysetHeader`, `emergencyResult`, `evaluateAnimation__FP14AnimationStateb`, `hudBustCovered`, `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForWorld__FP6PacketP13PolysetHeader`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `soundGroupLimit`, `soundLimit`
