@@ -18,3 +18,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `set-anim-event-flags` | `setAnimEventFlags__8Creatureififififi` | 0x1128a8 | 88 |
 | `set-state-processing` | `setStateProcessing__8CreaturePi` | 0x1129f0 | 108 |
 | `object-is-off-grid` | `objectIsOffGrid__FP10GameObject` | 0x1435a8 | 132 |
+| `iterate-run-lists` | `objectIterateRunLists__FPFP10GameObject_v` | 0x13ede8 | 324 |
