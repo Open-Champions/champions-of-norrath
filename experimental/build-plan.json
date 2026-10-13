@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 5246,
+  "default_authored_inputs": 5263,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4032,6 +4032,23 @@
     "sources/w12-startup-rt-b-mc-err-on/mc_err_on.cpp": "7ee26a38019ffada791ccb795cc579389f8cface82e09a525a6e4cea5c66a796",
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-visky-b-battle-music-ctor/ctor.cpp": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
+    "sources/w12-visky-b-battle-music-dtor/dtor.cpp": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
+    "sources/w12-visky-b-effect-volume-scene/scene_global.cpp": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
+    "sources/w12-visky-b-effect-volume-sprite-ctor/ctor.cpp": "2415468ee05c51208d622011647b6dd2a7c3ac047eeb2dfb02f13e04126cfb19",
+    "sources/w12-visky-b-name-defer-sort/sort.cpp": "545289b1ce4bff9ccf5a0a5eb6f53a8f11016355aa2ce3034d15453c3736cc66",
+    "sources/w12-visky-b-name-sprite-ctor/ctor.cpp": "ab542b780935273f674c5d300f88ba4e4938d799ba7cb02919223c111bc6bdd9",
+    "sources/w12-visky-b-name-sprite-defers/name_defers.cpp": "cfb52ad41b065b67a74bd2f87d669a3dc9ea4cca1f7985102d98447f46309fb2",
+    "sources/w12-visky-b-scene-setup-time-of-day-lights/setup_lights.cpp": "ef4d090ec9ef36c46dc8987a73f6687bf037fe633ec2642484449fc3858a7dce",
+    "sources/w12-visky-b-scene-setup-time-of-day-sky/setup_sky.cpp": "842dba7a97a382c3ea37377e489f42db4258904e42a5a4c7af47a0a29f4f31ac",
+    "sources/w12-visky-b-scene-sprite/sprite.cpp": "e2a4767fb4957b6c6312af8873dbf15e7f858a721d95fbe6ddda7b636564bcfe",
+    "sources/w12-visky-b-scene-update-sound-emitters/update_sound_emitters.cpp": "36250e913040dd1aa9beb052237db5262790fc5780700b1dc440f64ed5a1f7bd",
+    "sources/w12-visky-b-sound-device-stop/stop.cpp": "0d24343259243412ac9d2f08e8b6d37ed672cfc04f9022bb4901566c971ae830",
+    "sources/w12-visky-b-sound-track-set-tracks/set_tracks.cpp": "61f460572344b254719aaec172e2c33570f45124345d40a8bf86ecb96cee5364",
+    "sources/w12-visky-b-splash-fx-state/splash_state.cpp": "67aee3b45e056b75127d94b8716e02f152711708e8bc47a43a16c4f00aabab85",
+    "sources/w12-visky-b-world-set-profiles/set_profiles.cpp": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
+    "sources/w12-visky-b-world-tree-ctor/ctor.cpp": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
+    "sources/w12-visky-b-world-tree-dtor/dtor.cpp": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
     "sources/w12-wnd-b-dnas-onkeyup/onkeyup.cpp": "9540bd627b710954caedfde7ab6d519de387acb829e8ce92c054f3274a0683fc",
     "sources/w12-wnd-b-dnas-onmessage/onmessage.cpp": "c3ae8bc98a210a180adccf8611df9ccd4bbf1f0eebb6f12c2035c17ad5de9baf",
     "sources/w12-wnd-b-edit-setdisplayrows/set_display_rows.cpp": "1f8ed5110a305f42a1924a04c23da7c7cc430883a35067cce23a9396d72ecc16",
@@ -76709,6 +76726,254 @@
           "compiled_body_bytes": 576
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5248,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_battle_music_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
+      "source": "sources/w12-visky-b-battle-music-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__13VIBattleMusic"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5249,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_battle_music_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
+      "source": "sources/w12-visky-b-battle-music-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_13VIBattleMusic"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5250,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_effect_volume_scene.o",
+      "profile": "authored_cpp",
+      "sha256": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
+      "source": "sources/w12-visky-b-effect-volume-scene/scene_global.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5251,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_effect_volume_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "2415468ee05c51208d622011647b6dd2a7c3ac047eeb2dfb02f13e04126cfb19",
+      "source": "sources/w12-visky-b-effect-volume-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "__20VIEffectVolumeSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5252,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_name_defer_sort.o",
+      "profile": "authored_cpp",
+      "sha256": "545289b1ce4bff9ccf5a0a5eb6f53a8f11016355aa2ce3034d15453c3736cc66",
+      "source": "sources/w12-visky-b-name-defer-sort/sort.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "VINameDeferSort__FPCvT0"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5253,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_name_sprite_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "ab542b780935273f674c5d300f88ba4e4938d799ba7cb02919223c111bc6bdd9",
+      "source": "sources/w12-visky-b-name-sprite-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "__12VINameSprite"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5254,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_name_sprite_defers.o",
+      "profile": "authored_cpp",
+      "sha256": "cfb52ad41b065b67a74bd2f87d669a3dc9ea4cca1f7985102d98447f46309fb2",
+      "source": "sources/w12-visky-b-name-sprite-defers/name_defers.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5255,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_scene_setup_time_of_day_lights.o",
+      "profile": "authored_cpp",
+      "sha256": "ef4d090ec9ef36c46dc8987a73f6687bf037fe633ec2642484449fc3858a7dce",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-lights/setup_lights.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "lerp4"
+        },
+        {
+          "compiled_body_bytes": 140,
+          "name": "blend4"
+        },
+        {
+          "compiled_body_bytes": 1604,
+          "name": "SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5256,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_scene_setup_time_of_day_sky.o",
+      "profile": "authored_cpp",
+      "sha256": "842dba7a97a382c3ea37377e489f42db4258904e42a5a4c7af47a0a29f4f31ac",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-sky/setup_sky.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 884,
+          "name": "SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5257,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_scene_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "e2a4767fb4957b6c6312af8873dbf15e7f858a721d95fbe6ddda7b636564bcfe",
+      "source": "sources/w12-visky-b-scene-sprite/sprite.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "Sprite__7VIScenei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5258,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_scene_update_sound_emitters.o",
+      "profile": "authored_cpp",
+      "sha256": "36250e913040dd1aa9beb052237db5262790fc5780700b1dc440f64ed5a1f7bd",
+      "source": "sources/w12-visky-b-scene-update-sound-emitters/update_sound_emitters.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1324,
+          "name": "UpdateSoundEmitters__7VISceneR8VICamera"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5259,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_sound_device_stop.o",
+      "profile": "authored_cpp",
+      "sha256": "0d24343259243412ac9d2f08e8b6d37ed672cfc04f9022bb4901566c971ae830",
+      "source": "sources/w12-visky-b-sound-device-stop/stop.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 356,
+          "name": "Stop__13VISoundDevicei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5260,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_sound_track_set_tracks.o",
+      "profile": "authored_cpp",
+      "sha256": "61f460572344b254719aaec172e2c33570f45124345d40a8bf86ecb96cee5364",
+      "source": "sources/w12-visky-b-sound-track-set-tracks/set_tracks.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "SetTracks__17VISceneSoundTrack"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5261,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_splash_fx_state.o",
+      "profile": "authored_cpp",
+      "sha256": "67aee3b45e056b75127d94b8716e02f152711708e8bc47a43a16c4f00aabab85",
+      "source": "sources/w12-visky-b-splash-fx-state/splash_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 5262,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_world_set_profiles.o",
+      "profile": "authored_cpp",
+      "sha256": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
+      "source": "sources/w12-visky-b-world-set-profiles/set_profiles.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "SetProfiles__7VIWorld"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5263,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_world_tree_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
+      "source": "sources/w12-visky-b-world-tree-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "__11VIWorldTree"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 5264,
+      "kind": "independently_authored_source",
+      "object_name": "w12vskb_world_tree_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
+      "source": "sources/w12-visky-b-world-tree-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_11VIWorldTree"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -76808,7 +77073,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2b4ccd1e460e57c970a41e40fe40e1caf09ea1ee938c9f38a87764f847f00ca1",
+  "snapshot_sha256": "daa3f0c580ba1326ee4617dfd80347e33c721daa622d8772ba79992930fbf0c4",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

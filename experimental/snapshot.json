@@ -67013,6 +67013,237 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-hud-loop-b-update-players-ready/update_players_ready.cpp"
+    },
+    {
+      "input_order": 5248,
+      "component": "w12-visky-b-battle-music-ctor",
+      "object_name": "w12vskb_battle_music_ctor.o",
+      "private_object_sha256": "841411d8207682214306b4e3c0c60b2cac9770580e911ffd01343ad404237bd5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__13VIBattleMusic"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-battle-music-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 5249,
+      "component": "w12-visky-b-battle-music-dtor",
+      "object_name": "w12vskb_battle_music_dtor.o",
+      "private_object_sha256": "06fe42bf99ef3a7a07a2bdab2c1e2fd09631634bc6e60874c7cc0a014f029deb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_13VIBattleMusic"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-battle-music-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 5250,
+      "component": "w12-visky-b-effect-volume-scene",
+      "object_name": "w12vskb_effect_volume_scene.o",
+      "private_object_sha256": "d5b2e66c359a983b1029df9e72eb9d97661593b395c386fa9abb8b389dd3afe8",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-effect-volume-scene/scene_global.cpp"
+    },
+    {
+      "input_order": 5251,
+      "component": "w12-visky-b-effect-volume-sprite-ctor",
+      "object_name": "w12vskb_effect_volume_sprite_ctor.o",
+      "private_object_sha256": "ee31d7ac6821539a94b126c696fae3c205c0c9239ac5ba8ff6863bd168003ab9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "__20VIEffectVolumeSprite"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-effect-volume-sprite-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 5252,
+      "component": "w12-visky-b-name-defer-sort",
+      "object_name": "w12vskb_name_defer_sort.o",
+      "private_object_sha256": "f30e21047ae2751199366b8cdc7f24909e06f90a9319fdae6806489175616d43",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "VINameDeferSort__FPCvT0"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-name-defer-sort/sort.cpp"
+    },
+    {
+      "input_order": 5253,
+      "component": "w12-visky-b-name-sprite-ctor",
+      "object_name": "w12vskb_name_sprite_ctor.o",
+      "private_object_sha256": "401bc46320e0c5196c6dce6f472c2a138ba24cde0342aae92737c67f6b8f7972",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "__12VINameSprite"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-name-sprite-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 5254,
+      "component": "w12-visky-b-name-sprite-defers",
+      "object_name": "w12vskb_name_sprite_defers.o",
+      "private_object_sha256": "36918926c9200ed2dbe519727fcbe2bf8581a47865197b072bc086e9a4ec9cbc",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-name-sprite-defers/name_defers.cpp"
+    },
+    {
+      "input_order": 5255,
+      "component": "w12-visky-b-scene-setup-time-of-day-lights",
+      "object_name": "w12vskb_scene_setup_time_of_day_lights.o",
+      "private_object_sha256": "c44d55ba6224822caa9ba3504fd5c8638679a9012c138df0cf3ab4eb57db261a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "lerp4"
+        },
+        {
+          "compiled_body_bytes": 140,
+          "name": "blend4"
+        },
+        {
+          "compiled_body_bytes": 1604,
+          "name": "SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-lights/setup_lights.cpp"
+    },
+    {
+      "input_order": 5256,
+      "component": "w12-visky-b-scene-setup-time-of-day-sky",
+      "object_name": "w12vskb_scene_setup_time_of_day_sky.o",
+      "private_object_sha256": "acb7b1fc8337c90a3869fceeb23b2dae7cd9ea48937cf7c8b134463e9e13b88d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 884,
+          "name": "SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-sky/setup_sky.cpp"
+    },
+    {
+      "input_order": 5257,
+      "component": "w12-visky-b-scene-sprite",
+      "object_name": "w12vskb_scene_sprite.o",
+      "private_object_sha256": "4a368e4e94fab9710b3bc06ca8ace4f13f2f35bf6f3e98d6f1626bbdc32152d2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "Sprite__7VIScenei"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-scene-sprite/sprite.cpp"
+    },
+    {
+      "input_order": 5258,
+      "component": "w12-visky-b-scene-update-sound-emitters",
+      "object_name": "w12vskb_scene_update_sound_emitters.o",
+      "private_object_sha256": "12bc1d8518c2d2a78bdcb5a029d8681b7d12bab15cc0911db6ef5235f2541eaf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1324,
+          "name": "UpdateSoundEmitters__7VISceneR8VICamera"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-scene-update-sound-emitters/update_sound_emitters.cpp"
+    },
+    {
+      "input_order": 5259,
+      "component": "w12-visky-b-sound-device-stop",
+      "object_name": "w12vskb_sound_device_stop.o",
+      "private_object_sha256": "7a6545dafe1a709d7a65d793d2f51522398380b18a35784d0ab2ee7bf81553dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 356,
+          "name": "Stop__13VISoundDevicei"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-sound-device-stop/stop.cpp"
+    },
+    {
+      "input_order": 5260,
+      "component": "w12-visky-b-sound-track-set-tracks",
+      "object_name": "w12vskb_sound_track_set_tracks.o",
+      "private_object_sha256": "351fa71f20e84e985fa45fbdd3febd1b291e8052a2609c9ead2f7c173bb64b68",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "SetTracks__17VISceneSoundTrack"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-sound-track-set-tracks/set_tracks.cpp"
+    },
+    {
+      "input_order": 5261,
+      "component": "w12-visky-b-splash-fx-state",
+      "object_name": "w12vskb_splash_fx_state.o",
+      "private_object_sha256": "b0c0093f98233155106e35516973c6deafb052013a97b1d63d5e913059630c67",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-splash-fx-state/splash_state.cpp"
+    },
+    {
+      "input_order": 5262,
+      "component": "w12-visky-b-world-set-profiles",
+      "object_name": "w12vskb_world_set_profiles.o",
+      "private_object_sha256": "0b426f8dc1680f479e95c4bcf1488982d58cf03225b25c1d0f36a87a55b7bdcd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "SetProfiles__7VIWorld"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-world-set-profiles/set_profiles.cpp"
+    },
+    {
+      "input_order": 5263,
+      "component": "w12-visky-b-world-tree-ctor",
+      "object_name": "w12vskb_world_tree_ctor.o",
+      "private_object_sha256": "07ac0155238ad5d623b744be4333a0ccd7149c85905cb91bced7aa2a988eb143",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "__11VIWorldTree"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-world-tree-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 5264,
+      "component": "w12-visky-b-world-tree-dtor",
+      "object_name": "w12vskb_world_tree_dtor.o",
+      "private_object_sha256": "351bbfde2cfaaeac378c4aaa1893eaaa5e8c292c4ad39b63e4fd8e9892b12caf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_11VIWorldTree"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-visky-b-world-tree-dtor/dtor.cpp"
     }
   ],
   "drafts": [
@@ -74182,6 +74413,40 @@
     "sources/w12-startup-rt-b-min/min.cpp": "55a74383d84033cbee1275efaf13d983525dd4a2913b36e9ad15bdc17e3820aa",
     "sources/w12-startup-rt-b-overlay-function-index/host_check.cpp": "a84fc34ded48ea630bcc91f3ce5fe9562478740105f99f7fb189a2cc576768e6",
     "sources/w12-startup-rt-b-overlay-function-index/overlay_function_index.cpp": "8b1e54c8cc97c24645dbd3459e213684012753208606cec158a227cba53fad62",
+    "sources/w12-visky-b-battle-music-ctor/ctor.cpp": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
+    "sources/w12-visky-b-battle-music-ctor/host_check.cpp": "be69ed74b2fad4f752a639b71a018b19df1e89086c800d2c92b100af47a45e41",
+    "sources/w12-visky-b-battle-music-dtor/dtor.cpp": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
+    "sources/w12-visky-b-battle-music-dtor/host_check.cpp": "c95def0892e2f016716a733acc080faaeb2d682dcd67aec5d77038d85a15fe22",
+    "sources/w12-visky-b-effect-volume-scene/host_check.cpp": "6b652ad1b9b1d0fc1075a0125c11bb22248db774785cbca541fffe8a68f25010",
+    "sources/w12-visky-b-effect-volume-scene/scene_global.cpp": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
+    "sources/w12-visky-b-effect-volume-sprite-ctor/ctor.cpp": "2415468ee05c51208d622011647b6dd2a7c3ac047eeb2dfb02f13e04126cfb19",
+    "sources/w12-visky-b-effect-volume-sprite-ctor/host_check.cpp": "56e47af3af1e6e715e49b0fa8c503022a9991480d03b57439b547c6644528d4d",
+    "sources/w12-visky-b-name-defer-sort/host_check.cpp": "f958c5cc75f412e00a107de6221af20df427c4912955eada54aaf5cfffb63d59",
+    "sources/w12-visky-b-name-defer-sort/sort.cpp": "545289b1ce4bff9ccf5a0a5eb6f53a8f11016355aa2ce3034d15453c3736cc66",
+    "sources/w12-visky-b-name-sprite-ctor/ctor.cpp": "ab542b780935273f674c5d300f88ba4e4938d799ba7cb02919223c111bc6bdd9",
+    "sources/w12-visky-b-name-sprite-ctor/host_check.cpp": "0bd789300a38af10cd41502ad2da44fc6b34a7fd65938242dc0af30c962c7372",
+    "sources/w12-visky-b-name-sprite-defers/host_check.cpp": "2cdb5c11e3ee4f6f5b5eaee51b7ddfec61aded3ca823b73653b145583ecbd71d",
+    "sources/w12-visky-b-name-sprite-defers/name_defers.cpp": "cfb52ad41b065b67a74bd2f87d669a3dc9ea4cca1f7985102d98447f46309fb2",
+    "sources/w12-visky-b-scene-setup-time-of-day-lights/host_check.cpp": "a045c6316835db58a3d13c95d1faecbd36adfea61233fe5a5a999f56a10f08b1",
+    "sources/w12-visky-b-scene-setup-time-of-day-lights/setup_lights.cpp": "ef4d090ec9ef36c46dc8987a73f6687bf037fe633ec2642484449fc3858a7dce",
+    "sources/w12-visky-b-scene-setup-time-of-day-sky/host_check.cpp": "5bbc7475690efa29a26b9bdbd765a18be96f89282f90d4d8867f9f1193cade60",
+    "sources/w12-visky-b-scene-setup-time-of-day-sky/setup_sky.cpp": "842dba7a97a382c3ea37377e489f42db4258904e42a5a4c7af47a0a29f4f31ac",
+    "sources/w12-visky-b-scene-sprite/host_check.cpp": "c56066eaf6888235281549b08af2e456087ec8a236ab6994f8253e74f77bf129",
+    "sources/w12-visky-b-scene-sprite/sprite.cpp": "e2a4767fb4957b6c6312af8873dbf15e7f858a721d95fbe6ddda7b636564bcfe",
+    "sources/w12-visky-b-scene-update-sound-emitters/host_check.cpp": "48d0c28e9a3dcc24ef0a9abdb4a08014c34dec9b740f65e4e6adbab3130fc063",
+    "sources/w12-visky-b-scene-update-sound-emitters/update_sound_emitters.cpp": "36250e913040dd1aa9beb052237db5262790fc5780700b1dc440f64ed5a1f7bd",
+    "sources/w12-visky-b-sound-device-stop/host_check.cpp": "cc927bfa32f04c0a524ac55d96f606f33e04298d9dd439b2c12bf3be2f203320",
+    "sources/w12-visky-b-sound-device-stop/stop.cpp": "0d24343259243412ac9d2f08e8b6d37ed672cfc04f9022bb4901566c971ae830",
+    "sources/w12-visky-b-sound-track-set-tracks/host_check.cpp": "cd470993e300ffc71953d2695d49410e60220b6a273dda1ec91ad1f45ce7d03c",
+    "sources/w12-visky-b-sound-track-set-tracks/set_tracks.cpp": "61f460572344b254719aaec172e2c33570f45124345d40a8bf86ecb96cee5364",
+    "sources/w12-visky-b-splash-fx-state/host_check.cpp": "ea8db04627a04a4b05ae2446da5896513efe09f8ba69c58e859dfcd3116175c9",
+    "sources/w12-visky-b-splash-fx-state/splash_state.cpp": "67aee3b45e056b75127d94b8716e02f152711708e8bc47a43a16c4f00aabab85",
+    "sources/w12-visky-b-world-set-profiles/host_check.cpp": "f51926d449abd1e9ab5e14243b7e6dc1f13e638e03cae0ea3371b122af0a7fba",
+    "sources/w12-visky-b-world-set-profiles/set_profiles.cpp": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
+    "sources/w12-visky-b-world-tree-ctor/ctor.cpp": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
+    "sources/w12-visky-b-world-tree-ctor/host_check.cpp": "cf9e0fbaa487940170228648a50882f01554ae8cf0a51234e920eab0be289f4f",
+    "sources/w12-visky-b-world-tree-dtor/dtor.cpp": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
+    "sources/w12-visky-b-world-tree-dtor/host_check.cpp": "aba782e8bb8b73e7df9b37652c88363caa054d66f800b636c98564f65da1979f",
     "sources/w12-wnd-b-dnas-onkeyup/host_check.cpp": "844a23dd6b50c780d8f9ac90d8e3dd2f770c3c7c8dfac5b2c956cdea2304b490",
     "sources/w12-wnd-b-dnas-onkeyup/onkeyup.cpp": "9540bd627b710954caedfde7ab6d519de387acb829e8ce92c054f3274a0683fc",
     "sources/w12-wnd-b-dnas-onmessage/host_check.cpp": "0d4d76650bb523be4ce2c6f2066d3983175bcbd95c8500431c5bd508b49e645d",
@@ -78610,11 +78875,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5248,
-    "authored_default_inputs": 5246,
+    "selected_inputs": 5265,
+    "authored_default_inputs": 5263,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 4014,
-    "compiled_body_bytes_from_accepted_inputs": 1769032,
+    "emitted_function_definitions_including_helpers": 4030,
+    "compiled_body_bytes_from_accepted_inputs": 1774392,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -78627,7 +78892,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4935
+    "package_selected_inputs": 4952
   },
   "startup_implementations": [
     {
@@ -155949,6 +156214,288 @@
       ],
       "host_files": [
         "sources/w12-hud-loop-b-update-players-ready/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-battle-music-ctor/ctor.cpp",
+      "source_sha256": "60a6d0e22de41340675853b511231bd6bcf1fb4515145e5d945d6b6ab5c436e6",
+      "object_sha256": "841411d8207682214306b4e3c0c60b2cac9770580e911ffd01343ad404237bd5",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 8,
+          "name": "__13VIBattleMusic"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-battle-music-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-battle-music-dtor/dtor.cpp",
+      "source_sha256": "2d9e07bc3a8de7a3340ed5420afb98253ce4231f808ff767fad104c749d3fde3",
+      "object_sha256": "06fe42bf99ef3a7a07a2bdab2c1e2fd09631634bc6e60874c7cc0a014f029deb",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 76,
+          "name": "_$_13VIBattleMusic"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-battle-music-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-effect-volume-scene/scene_global.cpp",
+      "source_sha256": "242f96711462b75f7337bed94e9217511ccf67b7620725be38355ca5b5a24d31",
+      "object_sha256": "d5b2e66c359a983b1029df9e72eb9d97661593b395c386fa9abb8b389dd3afe8",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-visky-b-effect-volume-scene/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-effect-volume-sprite-ctor/ctor.cpp",
+      "source_sha256": "2415468ee05c51208d622011647b6dd2a7c3ac047eeb2dfb02f13e04126cfb19",
+      "object_sha256": "ee31d7ac6821539a94b126c696fae3c205c0c9239ac5ba8ff6863bd168003ab9",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "__20VIEffectVolumeSprite"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-effect-volume-sprite-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-name-defer-sort/sort.cpp",
+      "source_sha256": "545289b1ce4bff9ccf5a0a5eb6f53a8f11016355aa2ce3034d15453c3736cc66",
+      "object_sha256": "f30e21047ae2751199366b8cdc7f24909e06f90a9319fdae6806489175616d43",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "VINameDeferSort__FPCvT0"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-name-defer-sort/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-name-sprite-ctor/ctor.cpp",
+      "source_sha256": "ab542b780935273f674c5d300f88ba4e4938d799ba7cb02919223c111bc6bdd9",
+      "object_sha256": "401bc46320e0c5196c6dce6f472c2a138ba24cde0342aae92737c67f6b8f7972",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 60,
+          "name": "__12VINameSprite"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-name-sprite-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-name-sprite-defers/name_defers.cpp",
+      "source_sha256": "cfb52ad41b065b67a74bd2f87d669a3dc9ea4cca1f7985102d98447f46309fb2",
+      "object_sha256": "36918926c9200ed2dbe519727fcbe2bf8581a47865197b072bc086e9a4ec9cbc",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-visky-b-name-sprite-defers/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-lights/setup_lights.cpp",
+      "source_sha256": "ef4d090ec9ef36c46dc8987a73f6687bf037fe633ec2642484449fc3858a7dce",
+      "object_sha256": "c44d55ba6224822caa9ba3504fd5c8638679a9012c138df0cf3ab4eb57db261a",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 140,
+          "name": "lerp4"
+        },
+        {
+          "compiled_body_bytes": 140,
+          "name": "blend4"
+        },
+        {
+          "compiled_body_bytes": 1604,
+          "name": "SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-scene-setup-time-of-day-lights/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-scene-setup-time-of-day-sky/setup_sky.cpp",
+      "source_sha256": "842dba7a97a382c3ea37377e489f42db4258904e42a5a4c7af47a0a29f4f31ac",
+      "object_sha256": "acb7b1fc8337c90a3869fceeb23b2dae7cd9ea48937cf7c8b134463e9e13b88d",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 884,
+          "name": "SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-scene-setup-time-of-day-sky/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-scene-sprite/sprite.cpp",
+      "source_sha256": "e2a4767fb4957b6c6312af8873dbf15e7f858a721d95fbe6ddda7b636564bcfe",
+      "object_sha256": "4a368e4e94fab9710b3bc06ca8ace4f13f2f35bf6f3e98d6f1626bbdc32152d2",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "Sprite__7VIScenei"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-scene-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-scene-update-sound-emitters/update_sound_emitters.cpp",
+      "source_sha256": "36250e913040dd1aa9beb052237db5262790fc5780700b1dc440f64ed5a1f7bd",
+      "object_sha256": "12bc1d8518c2d2a78bdcb5a029d8681b7d12bab15cc0911db6ef5235f2541eaf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1324,
+          "name": "UpdateSoundEmitters__7VISceneR8VICamera"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-scene-update-sound-emitters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-sound-device-stop/stop.cpp",
+      "source_sha256": "0d24343259243412ac9d2f08e8b6d37ed672cfc04f9022bb4901566c971ae830",
+      "object_sha256": "7a6545dafe1a709d7a65d793d2f51522398380b18a35784d0ab2ee7bf81553dc",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 356,
+          "name": "Stop__13VISoundDevicei"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-sound-device-stop/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-sound-track-set-tracks/set_tracks.cpp",
+      "source_sha256": "61f460572344b254719aaec172e2c33570f45124345d40a8bf86ecb96cee5364",
+      "object_sha256": "351fa71f20e84e985fa45fbdd3febd1b291e8052a2609c9ead2f7c173bb64b68",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "SetTracks__17VISceneSoundTrack"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-sound-track-set-tracks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-splash-fx-state/splash_state.cpp",
+      "source_sha256": "67aee3b45e056b75127d94b8716e02f152711708e8bc47a43a16c4f00aabab85",
+      "object_sha256": "b0c0093f98233155106e35516973c6deafb052013a97b1d63d5e913059630c67",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-visky-b-splash-fx-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-world-set-profiles/set_profiles.cpp",
+      "source_sha256": "d933ffa05fcc71d80f577d5eb0d71d54b92644fb32fad430f53b85672d6b6bf6",
+      "object_sha256": "0b426f8dc1680f479e95c4bcf1488982d58cf03225b25c1d0f36a87a55b7bdcd",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 272,
+          "name": "SetProfiles__7VIWorld"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-world-set-profiles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-world-tree-ctor/ctor.cpp",
+      "source_sha256": "191a8fd469fff541b02e63ced0c5f7d156b45b79cb66d14b37fafb4ac51665a6",
+      "object_sha256": "07ac0155238ad5d623b744be4333a0ccd7149c85905cb91bced7aa2a988eb143",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 52,
+          "name": "__11VIWorldTree"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-world-tree-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-visky-b",
+      "source": "sources/w12-visky-b-world-tree-dtor/dtor.cpp",
+      "source_sha256": "e6ddaf3129761bc4b066dae00b5434b0aae3d561bdd9ff64c7f9e6fd47819f62",
+      "object_sha256": "351bbfde2cfaaeac378c4aaa1893eaaa5e8c292c4ad39b63e4fd8e9892b12caf",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 112,
+          "name": "_$_11VIWorldTree"
+        }
+      ],
+      "host_files": [
+        "sources/w12-visky-b-world-tree-dtor/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
