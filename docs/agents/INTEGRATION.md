@@ -8226,3 +8226,25 @@ Closed: `_$_10StaticFire`, `_$_11SpiderQueen`, `_$_5Torch`, `_$_6Switch`, `_$_8S
 
 Opened: `_$_6Sparks`, `__tf6Sparks`, `_vt$10StaticFire`, `_vt$11SpiderQueen`, `_vt$5Torch`, `_vt$6Switch`, `_vt$8SuperOrc`, `addSmokelet__10StaticFire`, `canGrab__11SpiderQueen`, `clone__6Sparks`, `msg_collision__6SparksP10GameObject`, `msg_draw__6Sparks`, `msg_run__6Sparks`, `norrath_w10_actor_n_view_7d6d80`, `norrath_w10_actor_n_view_8d63c0`, `norrath_w10_actor_n_view_8d6460`, `superorcSlamEffect__8SuperOrcP8Creaturei`, `updateSmokelets__10StaticFire`
 - 2026-10-13 03:25 CDT — `agents/w10-actor-n` — 1013 unresolved imports
+
+## agents/w10-actor-p
+
+Merged (merge commit, branch tip `61ece610`, 39 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (40 function bodies) with fresh `input_order` values 4351
+through 4382. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 24 under `-Werror`, 8 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4381 authored inputs, 3331 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1013 |
+| After | 1008 |
+| Closed | 32 |
+| Opened | 27 |
+
+Closed: `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_11VampireLord`, `_$_14WoodElfSoldier`, `_$_7WebTrap`, `_$_9WaveMaker`, `__7Weatheri`, `__tf10WaterSpout`, `__tf10WeaponRack`, `__tf11VampireLord`, `__tf14WoodElfSoldier`, `__tf7WebTrap`, `__tf9WaveMaker`, `clone__10WaterSpout`, `clone__10WeaponRack`, `clone__11VampireLord`, `clone__7WebTrap`, `clone__9WaveMaker`, `getModel__11VampireLord`, `msg_draw__10WaterSpout`, `msg_draw__10WeaponRack`, `msg_draw__11VampireLord`, `msg_draw__7WebTrap`, `msg_getPokeName__10WeaponRackPUsi`, `msg_hurt__11VampireLordfP10GameObjecti`, `msg_poke__10WeaponRacki`, `msg_run__10WaterSpout`, `msg_run__11VampireLord`, `msg_run__7WebTrap`, `msg_run__9WaveMaker`, `msg_trigger__11VampireLordi`, `setState__11VampireLordi`
+
+Opened: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`, `__7CritterPcG6Point3sPPc`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11VampireLord`, `_vt$14WoodElfSoldier`, `_vt$7Weather`, `_vt$7WebTrap`, `_vt$9WaveMaker`, `batParams`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`, `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`, `doWavelet__9WaveMakerP6Point3P8Matrix33i`, `dptoli`, `getWaveletMat__9WaveMakerifP8Matrix33`, `range`, `smokeParticle`, `splashInfoBits`, `waveFroth`, `waveMainAlternate`, `waveMainParticle`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`
