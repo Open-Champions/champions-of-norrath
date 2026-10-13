@@ -9,26 +9,26 @@
 extern "C" const unsigned char norrath_game_object_vtable_view[8] = {};
 extern "C" const unsigned char norrath_actor_view_4488f0[8] = {};
 extern "C" const unsigned char norrath_ctors_lava_wraith_view_44fee8[8] = {};
-static unsigned char* nb; static int fail_alloc, allocsz; static std::string order;
+static unsigned char* nb; static const unsigned char* src_base; static int fail_alloc, allocsz; static std::string order;
 static std::vector<unsigned> table_seen;
-static void note(const char* tag, unsigned off) { order += tag; order += std::to_string(off); order += ";"; unsigned t; std::memcpy(&t, nb + 72, 4); table_seen.push_back(t); }
+static void note(const char* tag, unsigned off, unsigned from) { order += tag; order += std::to_string(off); order += "/"; order += std::to_string(from); order += ";"; unsigned t; std::memcpy(&t, nb + 72, 4); table_seen.push_back(t); }
 extern "C" void* blockAlloc__Fi(int size) { allocsz = size; return fail_alloc ? nullptr : nb; }
 extern "C" void lh_stub(void* d, const void* s) __asm__("__8ListHeadRC8ListHead");
-extern "C" void lh_stub(void* d, const void* s) { note("L", static_cast<unsigned>(static_cast<unsigned char*>(d) - nb)); std::memset(d, 0, 4); (void)s; }
+extern "C" void lh_stub(void* d, const void* s) { note("L", static_cast<unsigned>(static_cast<unsigned char*>(d) - nb), static_cast<unsigned>(static_cast<const unsigned char*>(s) - src_base)); std::memset(d, 0, 4); (void)s; }
 extern "C" void anim_stub(void* d, const void* s) __asm__("__15AnimationState8RC15AnimationState8");
-extern "C" void anim_stub(void* d, const void* s) { note("A", static_cast<unsigned>(static_cast<unsigned char*>(d) - nb)); std::memset(d, 0x77, 8); (void)s; }
+extern "C" void anim_stub(void* d, const void* s) { note("A", static_cast<unsigned>(static_cast<unsigned char*>(d) - nb), static_cast<unsigned>(static_cast<const unsigned char*>(s) - src_base)); std::memset(d, 0x77, 8); (void)s; }
 #include "clone.cpp"
 int main() {
     alignas(16) static unsigned char src[1128], dst[1128 + 64], want[1128 + 64];
     int bad = 0;
     for (int mode = 0; mode < 2; ++mode) {
         for (int i = 0; i < 1128; ++i) src[i] = static_cast<unsigned char>((i * 7 + 13) | 1);
-        std::memset(dst, 0xEE, sizeof dst); nb = dst; order.clear(); table_seen.clear(); fail_alloc = (mode == 1); allocsz = 0;
+        std::memset(dst, 0xEE, sizeof dst); nb = dst; src_base = src; order.clear(); table_seen.clear(); fail_alloc = (mode == 1); allocsz = 0;
         void* r = clone__8Skeleton(src);
         if (allocsz != 1128) bad = 1;
         if (mode == 1) { if (r != nullptr || !order.empty() || std::memcmp(dst, want, 0) != 0) bad = 1; for (unsigned i = 0; i < sizeof dst; ++i) if (dst[i] != 0xEE) bad = 1; continue; }
         if (r != dst) bad = 1;
-        if (order != "L0;L4;L8;A288;L576;L752;L888;L960;L964;") bad = 1;
+        if (order != "L0/0;L4/4;L8/8;A288/288;L576/576;L752/752;L888/888;L960/960;L964/964;") bad = 1;
         std::memset(want, 0xEE, sizeof want);
         const struct { unsigned a, n; } spans[] = {{12,30},{44,14},{60,12},{76,1},{80,6},{88,69},{160,14},{176,14},{192,14},{208,26},{236,50},{552,19},{572,2},{580,170},{756,45},{804,84},{892,68},{968,5},{976,68},{1048,80}};
         for (auto& sp : spans) std::memcpy(want + sp.a, src + sp.a, sp.n);
