@@ -14,10 +14,12 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | source directory | symbol | image address and size | compiled bytes |
 |---|---|---|---|
 | `w14-m-spell-ctors-a-ctor-cleric-root` | `__15SpellClericRootiP8CreatureP5Skill` | `0x002c6320`, 164 bytes | 172 |
+| `w14-m-spell-ctors-a-ctor-entangle` | `__13SpellEntangleiP8CreatureP5Skill` | `0x002c6f98`, 164 bytes | 172 |
 
 ## Observed shape shared by the spell constructors
 
-Observed in `__15SpellClericRoot` and `__13SpellEntangle` (same instruction sequence, different vtable address):
+Observed in `__15SpellClericRoot` and `__13SpellEntangle`. The two instruction streams differ only in the vtable address
+and in a trailing nop (checked by diffing the disassembly):
 
 - byte K at +0; word 0 at +4; skill S at +8; creature C at +12;
 - the sync random state (`syncRandState`) is stepped once, `state * 0x19660d + 0x3c6ef35f`; its high half is at +16;
@@ -41,9 +43,12 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
   0 mismatches and no HALT. Three mutations (unsigned adjustment, unsigned kind, shift by 15 in the random high
   half) produce 84, 90 and 210 mismatches.
 
+- **Entangle.** The same host contract and paired comparison (210 scenarios, 0 mismatches, no HALT) for
+  `__13SpellEntangleiP8CreatureP5Skill`. The host contract also passes.
+
 ## Imports closed
 
-`__15SpellClericRootiP8CreatureP5Skill` (1 name, this unit).
+`__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`.
 
 ## Imports opened
 
