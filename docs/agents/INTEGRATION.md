@@ -7539,3 +7539,4 @@ tests passed. No EE or game execution.
 Closed: `multiRelease`, `multiSide`, `multiTitle`, `nameGridCount`, `nameGridW`, `norrath_got_player_start_this_level_bytes`, `norrath_keep_player_positions_bytes`, `norrath_menu_local_t_004844e8`, `norrath_menu_word_00484514`, `norrath_restore_broadcast_mask_word`, `playerCountChanged__6Camera`, `playerGoldx`, `playerGoldy`, `playerMenu`, `playerPrintPaperDoll__Fi`, `playerRecalled`, `playerSelectCount`, `playerSelectEnforce`, `playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`, `playerSelectStartPlayer`, `playerSpecStorage`, `playerStartYaw`, `racePrefix`, `resetMenu__FP12screenStruct`, `saveLevelDataASync__FPci`, `skinSetting`, `skirmishInit__Fv`, `slotsCorrupted`, `sortedPlayerRace`, `statsScreen`, `undoQuickLoadStamp`
 
 Opened: `floorGetSaveInfo__FPci`, `objectGetSaveData__FPci`, `writeMap__3mapPUc`
+- 2026-10-13 01:13 CDT — `agents/w10-front-b` — 1409 unresolved imports
