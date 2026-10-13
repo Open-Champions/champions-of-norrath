@@ -15,6 +15,9 @@ extern "C" unsigned char* norrath_host_pointer(unsigned address);
 extern "C" unsigned norrath_host_address(const unsigned char* pointer);
 // Stand-in for calling a target function word whose arguments are (pointer, int).
 extern "C" void norrath_host_call_pointer_int(unsigned function, unsigned char* first, int second);
+// Stand-in for a target function word taking (pointer, pointer, int, float).
+extern "C" void norrath_host_call_pointer_pointer_int_float(unsigned function, unsigned char* first,
+                                                           unsigned char* second, int third, float fourth);
 #endif
 namespace norrath_aoc {
 typedef unsigned __attribute__((may_alias)) word_t;
@@ -54,6 +57,19 @@ inline void call_virtual_pointer_int(unsigned char* self, unsigned slot, int arg
     norrath_host_call_pointer_int(function, self + adjust, argument);
 #else
     reinterpret_cast<void (*)(unsigned char*, int)>(static_cast<__UINTPTR_TYPE__>(function))(self + adjust, argument);
+#endif
+}
+// Same lookup for a slot called as (this + adjust, second, third, fourth float).
+inline void call_virtual_pointer_pointer_int_float(unsigned char* self, unsigned slot, unsigned char* second,
+                                                   int third, float fourth) {
+    const unsigned char* entry = load_pointer(self + 72) + slot;
+    const int adjust = load_signed_half(entry);
+    const unsigned function = load_word(entry + 4);
+#ifdef NORRATH_HOST_ARENA
+    norrath_host_call_pointer_pointer_int_float(function, self + adjust, second, third, fourth);
+#else
+    reinterpret_cast<void (*)(unsigned char*, unsigned char*, int, float)>(static_cast<__UINTPTR_TYPE__>(function))(
+        self + adjust, second, third, fourth);
 #endif
 }
 }

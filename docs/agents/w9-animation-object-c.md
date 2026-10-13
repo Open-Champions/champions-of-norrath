@@ -23,3 +23,4 @@ Checked against the tree at the start: `objectFindAnimation__FP10GameObjectPc`, 
 | `object-vis-data` | data: `objectVisPoints` (48 bytes), `objectVisCount` (1), `objectVisUseCamCenter` (1, initial 1) | 0x333d28, 0x483afe, 0x483ac9 | 48, 1, 1 |
 | `out-msg-data` | data: `outMsg` | 0x8d88b8 | 128 |
 | `w-lump-header-data` | data: `wLumpHeader` | 0x4845a4 | 4 |
+| `radial-damage` | `objectRadialDamage__FP10GameObjectG6Point3iffiii` | 0x13f708 | 548 |
