@@ -8688,3 +8688,17 @@ Closed: `CalcProfileBlend__7VIWorldRC7VIVect3R21VITerrainProfileBlend`, `Clear__
 
 Opened: `Add__t6VIPool1ZP8VISpriteRCP8VISprite`, `CalcTimeOfDayClipPlanes__7VISceneR21VITerrainProfileBlendRfT2`, `Clear__11VIWorldTree`, `Clear__t7VIArray1Z13VIWorldRegion`, `Clear__t7VIArray1Z6VIZone`, `DeletePlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `FindLeaf__C7VIWorldRC7VIVect3RiT2`, `FirstPlayback__19VISpellEffectSystem`, `GetOvercastInterp__12VIAtmosphere`, `GetTime__7VIScene`, `GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane`, `Init__11VIWorldTreeii`, `Init__13VIBattleMusicP7VIScene`, `Init__6VIZone`, `Init__t7VIArray1Z13VIWorldRegioni`, `Init__t7VIArray1Z6VIZonei`, `NextPlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `Playback__19VISpellEffectSystemi`, `Pop__11VIClipStack`, `Process__19VISpellEffectDriver`, `PushFrustum__11VIClipStackR8VICamera`, `ReleaseAllSpellEffects__19VISpellEffectSystemR12VIDictionary`, `RenderByVolume__7VIWorldR15VISceneRendVars`, `RenderRoom__6VIZoneiR15VISceneRendVars`, `RenderShadow__7VIScenei`, `Render__9VITrailFxR8VIRasterR8VICamera`, `SetFog__8VIRasteriffRC10VIColor32F`, `SetPretranslations__6VIZoneR8VIRasterR8VICamera`, `SetProfiles__7VIWorld`, `SetTracks__17VISceneSoundTrack`, `SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend`, `SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend`, `Stop__19VISpellEffectSystemi`, `Update__9VITrailFxl`, `VISplashFx$sGlowDir`, `VISplashFx$sGlowStep`, `VISplashFx$sLastAnimTime`, `VISplashFx$sNextBoltDelay`, `VISplashFx$sNextFlockDelay`, `VITrailFx$sActiveTrailFx`, `VITrailFx$sFreeTrailFx`, `VITrailFx$sInactiveTrailFx`, `VITrailFx$sMaterialHandle`, `VITrailFx$sTrailFxPool`, `VIWndOptions$sBattleMusicText`, `_$_11VIWorldTree`, `_$_19VISpellEffectDriver`, `_$_9VITrailFx`, `_$_t6VIPool1ZP13VISpellEffect`, `_$_t7VIArray1Z13VIWorldRegion`, `_$_t7VIArray1Z6VIZone`, `__11VILODSprite`, `__11VIWorldTree`, `__12VINameSprite`, `__12VIPointLight`, `__12VISkinSprite`, `__13VIFloraSprite`, `__13VIGroupSprite`, `__13VIPointSprite`, `__13VISoundSprite`, `__14VISimpleSprite`, `__16VIParticleSprite`, `__19VIStreamAudioSprite`, `__20VIEffectVolumeSprite`, `__9VICSprite`, `__9VIHSprite`, `__9VITrailFx`, `__t6VIPool1ZP13VISpellEffect`, `__t7VIArray1Z13VIWorldRegion`, `__t7VIArray1Z6VIZone`
 - 2026-10-13 06:16 CDT — agents/w11-vi-render-c — 963 unresolved imports
+
+## Not merged: agents/w11-vi-misc-a and agents/w11-vi-render-b
+
+Both read at their branch tips (`9549e91d` and `dc3d80c6`, over an hour old, notes with all five
+summary sections). Each holds one function per directory (34 and 31) and **no committed check
+of any kind**: no `host_check.cpp`, `host_contract.cpp` or other test file anywhere in the diff
+for either branch. The only evidence offered is a private R5900 interpreter comparison outside
+git, which a reviewer cannot repeat, so no committed function has a test that could fail
+(same ground as `w10-actor-i`, `w10-startup-d`, `w8-spell-static-init-b` and `w9-render-math-a`).
+`check_source_snapshot.py` also refuses a package record without host files. `w11-vi-misc-a` was
+merged locally to look at it and the merge was reset before anything was selected or pushed.
+The owners can add committed host checks per function (as `w11-vi-misc-b`, `w11-vi-render-a` and
+`w11-vi-render-c` do) and push again; the units could then be selected unchanged.
+- 2026-10-13 06:16 CDT — rejection notes (vi-misc-a, vi-render-b), no package — 963 unresolved imports
