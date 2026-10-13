@@ -36,6 +36,12 @@ int main() {
     expect_bits("huge ratio", __ieee754_atan2f(1e30f, 1e-30f), 0x3fc90fdau);
     expect_bits("huge ratio y<0", __ieee754_atan2f(-1e30f, 1e-30f), 0xbfc90fdau);
     if (atan_calls != 0) { std::puts("huge ratio called atanf"); ++failures; }
+    // threshold: k = 61 short-cuts, k = 60 (the exponent difference minus the fraction borrow) does not
+    atan_calls = 0;
+    expect_bits("k=61", __ieee754_atan2f(1.5f * 2305843009213693952.0f, 1.25f), 0x3fc90fdau);
+    if (atan_calls != 0) { std::puts("k=61 called atanf"); ++failures; }
+    (void)__ieee754_atan2f(1.25f * 2305843009213693952.0f, 1.5f);
+    if (atan_calls != 1) { std::puts("k=60 did not call atanf"); ++failures; }
     // tiny ratio, x < 0: z = 0, so +pi - (0 - pi_lo) and -((0 - pi_lo) - pi) -> about +-pi
     atan_calls = 0;
     const float tinyp = __ieee754_atan2f(1e-30f, -1e30f), tinym = __ieee754_atan2f(-1e-30f, -1e30f);
