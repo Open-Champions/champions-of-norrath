@@ -6,6 +6,8 @@
 extern unsigned char* w11_actor_c_host_base;
 typedef void* (*W11ActorCHostSlot)(void*);
 extern W11ActorCHostSlot w11_actor_c_host_slots[];
+typedef void* (*W11ActorCHostSlotInt)(void*, int);
+extern W11ActorCHostSlotInt w11_actor_c_host_slots_int[];
 #endif
 namespace w11c {
 typedef unsigned __attribute__((may_alias)) Word;
@@ -51,6 +53,17 @@ inline void* call_slot(void* object, unsigned slot_byte_offset) {
     return w11_actor_c_host_slots[function](bytes(object) + adjustment);
 #else
     return reinterpret_cast<void* (*)(void*)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment);
+#endif
+}
+// The same slot called with one int argument after the adjusted object (the delete-style slots take flags).
+inline void* call_slot_int(void* object, unsigned slot_byte_offset, int argument) {
+    const unsigned char* entry = link(object, 72) + slot_byte_offset;
+    const short adjustment = *reinterpret_cast<const short*>(entry);
+    const unsigned function = *reinterpret_cast<const unsigned*>(entry + 4);
+#if defined(W11_ACTOR_C_HOST)
+    return w11_actor_c_host_slots_int[function](bytes(object) + adjustment, argument);
+#else
+    return reinterpret_cast<void* (*)(void*, int)>(static_cast<__UINTPTR_TYPE__>(function))(bytes(object) + adjustment, argument);
 #endif
 }
 }  // namespace w11c
