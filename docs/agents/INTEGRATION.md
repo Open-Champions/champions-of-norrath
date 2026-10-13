@@ -8326,3 +8326,33 @@ checks for actor-i, startup-d, w8 and w9; no notes file for actor-o). Nothing wa
 merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker
 packages and stay with their owners.
 - 2026-10-13 04:05 CDT — integrator re-check, nothing merged — 977 unresolved imports
+
+## agents/w10-actor-o
+
+Merged (merge commit, branch tip `0558ab89`; the notes now exist and have the five summary
+sections: imports closed, imports opened, plan entries, authored but never executed, unknown.
+This supersedes the earlier hold, which was for tip `c7de8712` with no notes file). 32 units
+(32 function bodies plus 3 compiler-emitted local helpers) with fresh `input_order` values
+4424 through 4455. All 32 host checks build and exit 0 here (x86_64, `-ffp-contract=off`,
+`-fno-builtin`, `W10_ACTOR_O_HOST`). The worker's private paired runs were not re-verified.
+Compiled sizes are not image sizes and no byte match is claimed. The worker did not run a full
+build; this integration did: 4454 authored inputs, 3401 function bodies, zero COMMON, 214 tool
+tests passed. Per-unit object hashes in the snapshot are the ones the full build produced (the
+same extraction reproduces the actor-q hashes). No EE or game execution. Every committed unit
+has a host check, so none was left out.
+
+The worker's notes list 12 data and vtable names as "opened" together with many that were
+already unresolved; the real change is below. Six file-local particle data objects
+(`torch_msg_run_particle_7d7*`, `undead_knight*_msg_run_particle_7d7*`) and `udkResourceMap`
+need exporting by their static-initializer owners; this integration does not edit game code.
+
+| | |
+|---|---|
+| Before | 977 |
+| After | 957 |
+| Closed | 32 |
+| Opened | 12 |
+
+Closed: `_$_12UndeadKnight`, `_$_17UndeadKnightClone`, `_$_7Ulthork`, `_$_7Vampire`, `__tf12UndeadKnight`, `__tf17UndeadKnightClone`, `__tf7Ulthork`, `__tf7Vampire`, `clone__12UndeadKnight`, `clone__5Torch`, `clone__7Vampire`, `msg_collision__5TorchP10GameObject`, `msg_draw__12UndeadKnight`, `msg_draw__17UndeadKnightClone`, `msg_draw__5Torch`, `msg_draw__7Ulthork`, `msg_draw__7Vampire`, `msg_hurt__12UndeadKnightfP10GameObjecti`, `msg_load__5TorchPc`, `msg_load__7UlthorkPc`, `msg_run__12UndeadKnight`, `msg_run__17UndeadKnightClone`, `msg_run__5Torch`, `msg_run__7Ulthork`, `msg_run__7Vampire`, `msg_save__5TorchPc`, `msg_save__7UlthorkPc`, `msg_trigger__12UndeadKnighti`, `setState__12UndeadKnighti`, `setState__17UndeadKnightClonei`, `setState__7Ulthorki`, `setState__7Vampirei`
+
+Opened: `__17UndeadKnightCloneG6Point3sPPc`, `_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`

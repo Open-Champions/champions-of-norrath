@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4422,
+  "default_authored_inputs": 4454,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2700,6 +2700,39 @@
     "sources/w10-actor-n-tf-6switch/typeinfo.cpp": "01d2fa6a81b0d80e095429c93a02707c75c4acc923536500e85fee95ec84e011",
     "sources/w10-actor-n-tf-8superorc/typeinfo.cpp": "f1c028af8c78c70210b34a465a58b8a1085fb6aa21f610a3bab7673eee150976",
     "sources/w10-actor-n-vt-6sparks/vtable.cpp": "ba24fe050150dc824e6026303ffd8e7f8179bc0d8417a366bb8d6ac5a2884d9e",
+    "sources/w10-actor-o-clone-12undeadknight/clone.cpp": "bfbdb2d0dd3643e9a24ac346637635234afdf209fde300c97825beb5c6b4950b",
+    "sources/w10-actor-o-clone-5torch/clone.cpp": "a27f37fac0c8763977c86810a732b7d2ffcdb4e2e1397748c7d5dc58211d58d9",
+    "sources/w10-actor-o-clone-7vampire/clone.cpp": "8a6ead87b6c507eabd13c3f3f9c9e5ef096c5160b0cf38ced3a3ef05021b97ff",
+    "sources/w10-actor-o-collision-5torch/msg_collision.cpp": "87bee1006d70c4dd8c7db87fb82635b12021260715f700470b4dcc8d80b3732f",
+    "sources/w10-actor-o-common/access.hpp": "4267668388376afdf17b17330b59d0188427a17aff5f7ee30e2ab31e0ba44b43",
+    "sources/w10-actor-o-draw-12undeadknight/msg_draw.cpp": "07c2c72e3c178036de6bf83826ddbfa470396b1abf44f8398df58f87af4aa8f2",
+    "sources/w10-actor-o-draw-17undeadknightclone/msg_draw.cpp": "84b1c508c4987c5a8f5ddc8108c3c4b63e11cdb36a4c06a963ed57908cb8f933",
+    "sources/w10-actor-o-draw-5torch/msg_draw.cpp": "203901ce9e8e718d330a61c908e7d169ef025bc933f0d6e569497ff6dbf90057",
+    "sources/w10-actor-o-draw-7ulthork/msg_draw.cpp": "ec7a8226c2b93a54e7e13b523aee2a2ecd4f7cfb46ea41a001f4c186ca2fdc2e",
+    "sources/w10-actor-o-draw-7vampire/msg_draw.cpp": "050f1ab2ae337a580dccb7caa010928193ae4f560650c90fb6519fdf09e115ee",
+    "sources/w10-actor-o-dtor-12undeadknight/dtor.cpp": "6b4002b79ce30d85011a43b62bca89daf0d1b35e517f4da67fdd4cbfa3d41d8b",
+    "sources/w10-actor-o-dtor-17undeadknightclone/dtor.cpp": "5fac11e5aa1d065c21bf67e55a5d2ed6c04d44e7f1152b74e5182464285e16c1",
+    "sources/w10-actor-o-dtor-7ulthork/dtor.cpp": "b50d919f8cd70423c61a930dfde837edb25381feab930328e2824ea2f2893120",
+    "sources/w10-actor-o-dtor-7vampire/dtor.cpp": "945c1f27eaa26184cba6b84e990dc127f224556377866e3af468060fdf5f7a51",
+    "sources/w10-actor-o-hurt-12undeadknight/msg_hurt.cpp": "46e93f27a15943ee3d33e41cb4f9e9dbc781daa95663b3ec35e358510b416d1e",
+    "sources/w10-actor-o-load-5torch/msg_load.cpp": "a5c9668b7640e8d0126fa0422d690f6aba7e9c815714d0b33645ae7321ebd12d",
+    "sources/w10-actor-o-load-7ulthork/msg_load.cpp": "25a67980da96db73fb1fc8f88098a1ee861abef90e5148d6a471cdd5fe652b5a",
+    "sources/w10-actor-o-run-12undeadknight/msg_run.cpp": "57101223bab352888f9a41e4e45c5d7d7c61eb07c9c3c59aef298686dc6ba442",
+    "sources/w10-actor-o-run-17undeadknightclone/msg_run.cpp": "23296e755eaf045fe185de74228381c9d23bb4b63049ab66af1de492ed33e7ef",
+    "sources/w10-actor-o-run-5torch/msg_run.cpp": "bc990c4c5d3ab72f75e2834fab26fdd5dfbbe41dcd5e7e26fc1188f5278e3b89",
+    "sources/w10-actor-o-run-7ulthork/msg_run.cpp": "10da832c75ed4ea8cfc6800c11bab2cfcc4dcd555e0b5a3d81dc2ed86a670558",
+    "sources/w10-actor-o-run-7vampire/msg_run.cpp": "10be9ef2cc153ec6afb837bf553880d02b86ef67662142bcdf4203e2ec154614",
+    "sources/w10-actor-o-save-5torch/msg_save.cpp": "a487501405b6d5523625f7a894c0334267165ec88acdc28100e23e442fb99fe7",
+    "sources/w10-actor-o-save-7ulthork/msg_save.cpp": "265874a27168cc1ad33e118295f335109528d34086fa65bfa8b1cd05b17ee36e",
+    "sources/w10-actor-o-set-state-12undeadknight/set_state.cpp": "2f85ef2b77722b8596aedddb1321edbc2f16f2bd1489ce8a7fa11fe25c72243e",
+    "sources/w10-actor-o-set-state-17undeadknightclone/set_state.cpp": "0db387e02ea1d5d657aff505b01698a01fca5125e84a704666b9540b9f4111c1",
+    "sources/w10-actor-o-set-state-7ulthork/set_state.cpp": "56e2fb404fa9f7c99a7d9aee631ff206356bed2f728ed634ec08af53627ac39f",
+    "sources/w10-actor-o-set-state-7vampire/set_state.cpp": "2966b7f2b1a98996ee285f33be5a3a427a03811a5ef1be839e577a7b7df9bd87",
+    "sources/w10-actor-o-tf-12undeadknight/typeinfo.cpp": "09d7348715c67b5cb86c5fa872053467291a53c428b09fb383ef31c319a3ebd3",
+    "sources/w10-actor-o-tf-17undeadknightclone/typeinfo.cpp": "06432a0ed31eae8ae2c3eb0d61cfa8fd59b8df2a2ed22733f4f37cdd3199db49",
+    "sources/w10-actor-o-tf-7ulthork/typeinfo.cpp": "18ed1526221e9685ebef7a511bc18a5a4a614953c78c1b70b319e0020c0b6e52",
+    "sources/w10-actor-o-tf-7vampire/typeinfo.cpp": "f651130f25a7985f9a7a6f21ec15c78548bb6f79a48a0efcda2646033cee3512",
+    "sources/w10-actor-o-trigger-12undeadknight/msg_trigger.cpp": "ce23b3c7e34d5d36125c780de31c52802715dfeeb3da130aabc703700e014a98",
     "sources/w10-actor-p-clone-10waterspout/clone.cpp": "941a5dbd4c00bfa50a37355728ba633343d3c1c131767869e0d0b80212370a7a",
     "sources/w10-actor-p-clone-10weaponrack/clone.cpp": "f392705da0d596956e198c80ca98eb600016f08582014e77dafd66df55bb1a6a",
     "sources/w10-actor-p-clone-11vampirelord/clone.cpp": "390c120c5faf539995c3591caafe5565b6bcae14c53443589dd822ca90a622e7",
@@ -64175,6 +64208,530 @@
           "compiled_body_bytes": 92
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4424,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_clone_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "bfbdb2d0dd3643e9a24ac346637635234afdf209fde300c97825beb5c6b4950b",
+      "source": "sources/w10-actor-o-clone-12undeadknight/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 880,
+          "name": "clone__12UndeadKnight"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4425,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_clone_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "a27f37fac0c8763977c86810a732b7d2ffcdb4e2e1397748c7d5dc58211d58d9",
+      "source": "sources/w10-actor-o-clone-5torch/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 340,
+          "name": "clone__5Torch"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4426,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_clone_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "8a6ead87b6c507eabd13c3f3f9c9e5ef096c5160b0cf38ced3a3ef05021b97ff",
+      "source": "sources/w10-actor-o-clone-7vampire/clone.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 776,
+          "name": "clone__7Vampire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4427,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_collision_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "87bee1006d70c4dd8c7db87fb82635b12021260715f700470b4dcc8d80b3732f",
+      "source": "sources/w10-actor-o-collision-5torch/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 244,
+          "name": "msg_collision__5TorchP10GameObject"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4428,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_draw_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "07c2c72e3c178036de6bf83826ddbfa470396b1abf44f8398df58f87af4aa8f2",
+      "source": "sources/w10-actor-o-draw-12undeadknight/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 352,
+          "name": "msg_draw__12UndeadKnight"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4429,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_draw_17undeadknightclone.o",
+      "profile": "authored_cpp",
+      "sha256": "84b1c508c4987c5a8f5ddc8108c3c4b63e11cdb36a4c06a963ed57908cb8f933",
+      "source": "sources/w10-actor-o-draw-17undeadknightclone/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 928,
+          "name": "msg_draw__17UndeadKnightClone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4430,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_draw_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "203901ce9e8e718d330a61c908e7d169ef025bc933f0d6e569497ff6dbf90057",
+      "source": "sources/w10-actor-o-draw-5torch/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 384,
+          "name": "msg_draw__5Torch"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4431,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_draw_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "ec7a8226c2b93a54e7e13b523aee2a2ecd4f7cfb46ea41a001f4c186ca2fdc2e",
+      "source": "sources/w10-actor-o-draw-7ulthork/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 280,
+          "name": "msg_draw__7Ulthork"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4432,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_draw_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "050f1ab2ae337a580dccb7caa010928193ae4f560650c90fb6519fdf09e115ee",
+      "source": "sources/w10-actor-o-draw-7vampire/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 20,
+          "name": "msg_draw__7Vampire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4433,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_dtor_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "6b4002b79ce30d85011a43b62bca89daf0d1b35e517f4da67fdd4cbfa3d41d8b",
+      "source": "sources/w10-actor-o-dtor-12undeadknight/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_12UndeadKnight"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4434,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_dtor_17undeadknightclone.o",
+      "profile": "authored_cpp",
+      "sha256": "5fac11e5aa1d065c21bf67e55a5d2ed6c04d44e7f1152b74e5182464285e16c1",
+      "source": "sources/w10-actor-o-dtor-17undeadknightclone/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 120,
+          "name": "_$_17UndeadKnightClone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4435,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_dtor_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "b50d919f8cd70423c61a930dfde837edb25381feab930328e2824ea2f2893120",
+      "source": "sources/w10-actor-o-dtor-7ulthork/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_7Ulthork"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4436,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_dtor_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "945c1f27eaa26184cba6b84e990dc127f224556377866e3af468060fdf5f7a51",
+      "source": "sources/w10-actor-o-dtor-7vampire/dtor.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 88,
+          "name": "_$_7Vampire"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4437,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_hurt_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "46e93f27a15943ee3d33e41cb4f9e9dbc781daa95663b3ec35e358510b416d1e",
+      "source": "sources/w10-actor-o-hurt-12undeadknight/msg_hurt.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 116,
+          "name": "msg_hurt__12UndeadKnightfP10GameObjecti"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4438,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_load_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "a5c9668b7640e8d0126fa0422d690f6aba7e9c815714d0b33645ae7321ebd12d",
+      "source": "sources/w10-actor-o-load-5torch/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "msg_load__5TorchPc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4439,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_load_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "25a67980da96db73fb1fc8f88098a1ee861abef90e5148d6a471cdd5fe652b5a",
+      "source": "sources/w10-actor-o-load-7ulthork/msg_load.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "msg_load__7UlthorkPc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4440,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_run_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "57101223bab352888f9a41e4e45c5d7d7c61eb07c9c3c59aef298686dc6ba442",
+      "source": "sources/w10-actor-o-run-12undeadknight/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 2292,
+          "name": "msg_run__12UndeadKnight"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4441,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_run_17undeadknightclone.o",
+      "profile": "authored_cpp",
+      "sha256": "23296e755eaf045fe185de74228381c9d23bb4b63049ab66af1de492ed33e7ef",
+      "source": "sources/w10-actor-o-run-17undeadknightclone/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 860,
+          "name": "_ZN12_GLOBAL__N_1L5burstEPhPvfjjj.constprop.0"
+        },
+        {
+          "compiled_body_bytes": 656,
+          "name": "_ZN12_GLOBAL__N_1L7scatterEPhiPvfb"
+        },
+        {
+          "compiled_body_bytes": 2184,
+          "name": "msg_run__17UndeadKnightClone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4442,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_run_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "bc990c4c5d3ab72f75e2834fab26fdd5dfbbe41dcd5e7e26fc1188f5278e3b89",
+      "source": "sources/w10-actor-o-run-5torch/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1828,
+          "name": "msg_run__5Torch"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4443,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_run_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "10da832c75ed4ea8cfc6800c11bab2cfcc4dcd555e0b5a3d81dc2ed86a670558",
+      "source": "sources/w10-actor-o-run-7ulthork/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 28,
+          "name": "_ZN4w10o10call_entryEPhjm.isra.0"
+        },
+        {
+          "compiled_body_bytes": 2148,
+          "name": "msg_run__7Ulthork"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4444,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_run_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "10be9ef2cc153ec6afb837bf553880d02b86ef67662142bcdf4203e2ec154614",
+      "source": "sources/w10-actor-o-run-7vampire/msg_run.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1392,
+          "name": "msg_run__7Vampire"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4445,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_save_5torch.o",
+      "profile": "authored_cpp",
+      "sha256": "a487501405b6d5523625f7a894c0334267165ec88acdc28100e23e442fb99fe7",
+      "source": "sources/w10-actor-o-save-5torch/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 16,
+          "name": "msg_save__5TorchPc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4446,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_save_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "265874a27168cc1ad33e118295f335109528d34086fa65bfa8b1cd05b17ee36e",
+      "source": "sources/w10-actor-o-save-7ulthork/msg_save.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 64,
+          "name": "msg_save__7UlthorkPc"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4447,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_set_state_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "2f85ef2b77722b8596aedddb1321edbc2f16f2bd1489ce8a7fa11fe25c72243e",
+      "source": "sources/w10-actor-o-set-state-12undeadknight/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1756,
+          "name": "setState__12UndeadKnighti"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4448,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_set_state_17undeadknightclone.o",
+      "profile": "authored_cpp",
+      "sha256": "0db387e02ea1d5d657aff505b01698a01fca5125e84a704666b9540b9f4111c1",
+      "source": "sources/w10-actor-o-set-state-17undeadknightclone/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 972,
+          "name": "setState__17UndeadKnightClonei"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4449,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_set_state_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "56e2fb404fa9f7c99a7d9aee631ff206356bed2f728ed634ec08af53627ac39f",
+      "source": "sources/w10-actor-o-set-state-7ulthork/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1632,
+          "name": "setState__7Ulthorki"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4450,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_set_state_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "2966b7f2b1a98996ee285f33be5a3a427a03811a5ef1be839e577a7b7df9bd87",
+      "source": "sources/w10-actor-o-set-state-7vampire/set_state.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1400,
+          "name": "setState__7Vampirei"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4451,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_tf_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "09d7348715c67b5cb86c5fa872053467291a53c428b09fb383ef31c319a3ebd3",
+      "source": "sources/w10-actor-o-tf-12undeadknight/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf12UndeadKnight"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4452,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_tf_17undeadknightclone.o",
+      "profile": "authored_cpp",
+      "sha256": "06432a0ed31eae8ae2c3eb0d61cfa8fd59b8df2a2ed22733f4f37cdd3199db49",
+      "source": "sources/w10-actor-o-tf-17undeadknightclone/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf17UndeadKnightClone"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4453,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_tf_7ulthork.o",
+      "profile": "authored_cpp",
+      "sha256": "18ed1526221e9685ebef7a511bc18a5a4a614953c78c1b70b319e0020c0b6e52",
+      "source": "sources/w10-actor-o-tf-7ulthork/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf7Ulthork"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4454,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_tf_7vampire.o",
+      "profile": "authored_cpp",
+      "sha256": "f651130f25a7985f9a7a6f21ec15c78548bb6f79a48a0efcda2646033cee3512",
+      "source": "sources/w10-actor-o-tf-7vampire/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 92,
+          "name": "__tf7Vampire"
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-actor-o-common/access.hpp"
+      ],
+      "input_order": 4455,
+      "kind": "independently_authored_source",
+      "object_name": "w10_actor_o_trigger_12undeadknight.o",
+      "profile": "authored_cpp",
+      "sha256": "ce23b3c7e34d5d36125c780de31c52802715dfeeb3da130aabc703700e014a98",
+      "source": "sources/w10-actor-o-trigger-12undeadknight/msg_trigger.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 168,
+          "name": "msg_trigger__12UndeadKnighti"
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -64274,7 +64831,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "bb51399f6d71ffe34f02db21104f1d93cbfe4f30ab432ece28cdf39f1d11c8c7",
+  "snapshot_sha256": "bd5f3a8e6dd581bd9f0588f7e5e2f87858ae3368ca4fe6e06a3f76ac88455bd5",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
