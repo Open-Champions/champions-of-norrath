@@ -7720,3 +7720,30 @@ Closed: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `ac
 
 Opened: `GetToggle__6Camera`, `SetNoTargetUpdates__6Camerai`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `jumpGatePos`, `jumpHidden`, `jumpParticleJump`, `pmlistchars`, `pmlistcharsused`, `soundGetDialogSize__Fi`
 - 2026-10-13 01:38 CDT — `agents/w10-world-a` — 1266 unresolved imports
+
+## agents/w10-world-b
+
+Merged (merge commit, branch tip `22e06b09`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 2 of 4: 26 units (20 functions
+and six storage units) with fresh `input_order` values 3796 through 3821;
+`w10-world-b-common` holds shared headers only and is recorded in the snapshot, not
+selected. 26 of 26 host checks pass here (x86_64, `-ffp-contract=off`): 25 under
+`-Werror`, one only without it (a warning). The opened list includes short names such as
+`src`, `dst`, `p1`, `v1`, `pitch1`: the notes list them as names the units use that no
+package defines (the original static names); they are unresolved imports, not stubs.
+The worker's private paired runs were not re-verified. Compiled sizes are not image sizes
+and no byte match is claimed. The worker did not run a full build; this integration did:
+3820 authored inputs, 2757 function bodies, zero COMMON, 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1266 |
+| After | 1245 |
+| Closed | 35 |
+| Opened | 14 |
+
+Closed: `framedone`, `framestart`, `freeLump__FPv`, `fsListBack`, `gameDeathHeight`, `gameLineFuse__Fv`, `gameLineGetNextPoint__FP17gameLinePathStateiP6Point3`, `gameLineGetVert__Fii`, `gameLineRayCollision__FP6Point3T0P23gameLineCollisionPacketi`, `gameStateData`, `generateSortedListAndInfoHeaders__Fv`, `getClearradius__FPCc`, `getClosestLivingPlayer__FG6Point3f`, `getFreeFrameState__Fv`, `groundType`, `hideHiddenObjects__FP10GameObject`, `inesc`, `initJumpEffect__Fv`, `initPosition__FP17gameLinePathState`, `initPosition__Fii`, `init__3mapi`, `isBoss__FP10GameObject`, `isEnemy__5DemonP10GameObject`, `isEnemy__6WraithP10GameObject`, `isEnemy__8SkeletonP10GameObject`, `jumpGateDestCount`, `jumpGateEntries`, `jumpGateHurtDest`, `jumpGateLoad__FPc`, `jumpGateSaveFootPrint__Fv`, `jumpGateState`, `jumpGateTime`, `jumpGateWho`, `lastCE`, `lastDest`
+
+Opened: `GetLastTarget__6Camera`, `_6Wraith$s_wraithCount`, `__4LineP4LineT1i`, `dst`, `endPos`, `moreRecent__Fii`, `p1`, `p2`, `pitch1`, `pitch2`, `src`, `startPos`, `v1`, `v2`

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 3794,
+  "default_authored_inputs": 3820,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -2590,6 +2590,33 @@
     "sources/w10-world-a-execute-action/execute_action.cpp": "7c374302c76ed8b0e2667b1c2ee5a71ed861a9b0b628b0ee30d4cb4b2f03a323",
     "sources/w10-world-a-find-cut-dialog/find_cut_dialog.cpp": "a449a42ae45dbe63679d5abaac4a948bded2a55d32f1c8ce3066fab87534f011",
     "sources/w10-world-a-find-tag-int/find_tag_int.cpp": "a4afcf0ac9f76d6d7ebbc79bda2976e83138e1df385b7291d4c47e8210a9421f",
+    "sources/w10-world-b-common/mem.hpp": "2cd5adaebb70ce89c34c8099ca853dac5b0840bd641e0d84f47fede061a15aa3",
+    "sources/w10-world-b-demon-is-enemy/demon_is_enemy.cpp": "9970fb5b38f56ecca1a385096ebc316f35536491ad3bf4b2e6eed26d231ad6c2",
+    "sources/w10-world-b-frame-state-words-data/frame_state_words_data.cpp": "ba21ebec4455b6c69cc04da83908f9f5ae56d9aab5a730eb4a9a8d685bf49952",
+    "sources/w10-world-b-free-lump/free_lump.cpp": "8e5d96e166e4f5ce50dc1c88930d4176aab48280ff5267286440b404a8b2c85d",
+    "sources/w10-world-b-fs-list-back-data/fs_list_back_data.cpp": "a81b499464149a3cea23797f0786615fa743a66467a95aa354904c03bb32657d",
+    "sources/w10-world-b-game-death-height-data/game_death_height_data.cpp": "b070d322b13da63cb31aa09436f8e52ee8b4ab687fdf24bc934303507c220b68",
+    "sources/w10-world-b-game-line-fuse/game_line_fuse.cpp": "51e1fe38c68f8ee276519814ff43986c774813abf4ca940988307a15f321b2d5",
+    "sources/w10-world-b-game-line-get-next-point/game_line_get_next_point.cpp": "a0de31438e02754b616d431aaf04f756ecb897893623a38343ba52e451312fed",
+    "sources/w10-world-b-game-line-get-vert/game_line_get_vert.cpp": "459d119fcbf26fb3edb1303f6241159f8f3c89da0c058a37441461d1f6bfefd1",
+    "sources/w10-world-b-game-line-init-position/game_line_init_position.cpp": "e39d257785c4e3bb5038392c61d40091a6ef6d200a5b4bb5b4c7581b1fe1ea06",
+    "sources/w10-world-b-game-line-ray-collision/game_line_ray_collision.cpp": "f571611f2319f16cd2004a902a8924af476b566fb3f8cba308513544799d5460",
+    "sources/w10-world-b-game-state-data/game_state_data.cpp": "59265d5e809845c1844e423ebded770ab09e36d6bb5f22f15866aecb6faf5782",
+    "sources/w10-world-b-generate-sorted-list/generate_sorted_list.cpp": "4ac92e1f0cf927d4f3e6139b8e7f6d8fe6e0da5059f2acdcfe2bca64815078cd",
+    "sources/w10-world-b-get-clearradius/get_clearradius.cpp": "4bbafe1ff5e8f5eec75e61117864ba5c7736df2d9d362824ce3609da5f03210c",
+    "sources/w10-world-b-get-closest-living-player/get_closest_living_player.cpp": "bee96c3e1a21a4f6e5f16e0802f5f3db4a4a474a8f5874a0388a13d5df1515d6",
+    "sources/w10-world-b-get-free-frame-state/get_free_frame_state.cpp": "6729db0063749bd7310dcd1e38ca06f56f4b3b211075bd8f135db4a0b0c34305",
+    "sources/w10-world-b-ground-type-data/ground_type_data.cpp": "ce298bfc010925233f4adcc2a608ab6c55fc17e73faaacbe2c8a3c68a42c7bb6",
+    "sources/w10-world-b-hide-hidden-objects/hide_hidden_objects.cpp": "c646caca5c431d2de2b26e2ac8b349925918e1246ae2b3e756ff29de5e9dd7a7",
+    "sources/w10-world-b-init-jump-effect/init_jump_effect.cpp": "ab2fa5e579b8c10f6c59e85a18e177b9913ea6f2b99f62df3456f83e1590174f",
+    "sources/w10-world-b-init-position-hermite/init_position_hermite.cpp": "3837bf2c90f4bfcc7dd63f7f5e02a708ce4441916222797234deb913ef23c9e8",
+    "sources/w10-world-b-is-boss/is_boss.cpp": "bdcb4b071e005d25c73e278753dd5d52f78c80617e1a975b79affe7e2260616d",
+    "sources/w10-world-b-jump-gate-data/jump_gate_data.cpp": "3df37ef3d766c8f8ecede11a30fb52e4bb10eb36e8e4edc1cc2020117f6d7952",
+    "sources/w10-world-b-jump-gate-load/jump_gate_load.cpp": "8b0f176da4c6ce774b7ff7f7d0c60b0480736ae4f955e123fc0dac74311f3a90",
+    "sources/w10-world-b-jump-gate-save-foot-print/jump_gate_save_foot_print.cpp": "dadbc5822f8acab13c75cef15b9faed1619b58a06f2a7d8f22a6b4d9d2c78d7a",
+    "sources/w10-world-b-map-init/map_init.cpp": "0d0f1c28cbcadb5f376c320923ebdbbc7cd9c85900f54ab8ffa9d565d3343a9e",
+    "sources/w10-world-b-skeleton-is-enemy/skeleton_is_enemy.cpp": "29aaf3a24c6810ab9e2da90b0ee1dd26d89075bdb8a286d36c62af1e9f7c76da",
+    "sources/w10-world-b-wraith-is-enemy/wraith_is_enemy.cpp": "7fdf3896b68fbac8b202b5ded773e69d1b22a5af09e5ca4a485dada22f291c2a",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -53707,6 +53734,376 @@
           "compiled_body_bytes": 368
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3796,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_demon_is_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "9970fb5b38f56ecca1a385096ebc316f35536491ad3bf4b2e6eed26d231ad6c2",
+      "source": "sources/w10-world-b-demon-is-enemy/demon_is_enemy.cpp",
+      "emitted_functions": [
+        {
+          "name": "isEnemy__5DemonP10GameObject",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3797,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_frame_state_words_data.o",
+      "profile": "authored_cpp",
+      "sha256": "ba21ebec4455b6c69cc04da83908f9f5ae56d9aab5a730eb4a9a8d685bf49952",
+      "source": "sources/w10-world-b-frame-state-words-data/frame_state_words_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w10-world-b-common/mem.hpp"
+      ],
+      "input_order": 3798,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_free_lump.o",
+      "profile": "authored_cpp",
+      "sha256": "8e5d96e166e4f5ce50dc1c88930d4176aab48280ff5267286440b404a8b2c85d",
+      "source": "sources/w10-world-b-free-lump/free_lump.cpp",
+      "emitted_functions": [
+        {
+          "name": "freeLump__FPv",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3799,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_fs_list_back_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a81b499464149a3cea23797f0786615fa743a66467a95aa354904c03bb32657d",
+      "source": "sources/w10-world-b-fs-list-back-data/fs_list_back_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3800,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_death_height_data.o",
+      "profile": "authored_cpp",
+      "sha256": "b070d322b13da63cb31aa09436f8e52ee8b4ab687fdf24bc934303507c220b68",
+      "source": "sources/w10-world-b-game-death-height-data/game_death_height_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w10-world-b-common/mem.hpp"
+      ],
+      "input_order": 3801,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_line_fuse.o",
+      "profile": "authored_cpp",
+      "sha256": "51e1fe38c68f8ee276519814ff43986c774813abf4ca940988307a15f321b2d5",
+      "source": "sources/w10-world-b-game-line-fuse/game_line_fuse.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineFuse__Fv",
+          "compiled_body_bytes": 1112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3802,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_line_get_next_point.o",
+      "profile": "authored_cpp",
+      "sha256": "a0de31438e02754b616d431aaf04f756ecb897893623a38343ba52e451312fed",
+      "source": "sources/w10-world-b-game-line-get-next-point/game_line_get_next_point.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineGetNextPoint__FP17gameLinePathStateiP6Point3",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3803,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_line_get_vert.o",
+      "profile": "authored_cpp",
+      "sha256": "459d119fcbf26fb3edb1303f6241159f8f3c89da0c058a37441461d1f6bfefd1",
+      "source": "sources/w10-world-b-game-line-get-vert/game_line_get_vert.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineGetVert__Fii",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3804,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_line_init_position.o",
+      "profile": "authored_cpp",
+      "sha256": "e39d257785c4e3bb5038392c61d40091a6ef6d200a5b4bb5b4c7581b1fe1ea06",
+      "source": "sources/w10-world-b-game-line-init-position/game_line_init_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "initPosition__FP17gameLinePathState",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-world-b-common/mem.hpp"
+      ],
+      "input_order": 3805,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_line_ray_collision.o",
+      "profile": "authored_cpp",
+      "sha256": "f571611f2319f16cd2004a902a8924af476b566fb3f8cba308513544799d5460",
+      "source": "sources/w10-world-b-game-line-ray-collision/game_line_ray_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameLineRayCollision__FP6Point3T0P23gameLineCollisionPacketi",
+          "compiled_body_bytes": 1152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3806,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_game_state_data.o",
+      "profile": "authored_cpp",
+      "sha256": "59265d5e809845c1844e423ebded770ab09e36d6bb5f22f15866aecb6faf5782",
+      "source": "sources/w10-world-b-game-state-data/game_state_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3807,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_generate_sorted_list.o",
+      "profile": "authored_cpp",
+      "sha256": "4ac92e1f0cf927d4f3e6139b8e7f6d8fe6e0da5059f2acdcfe2bca64815078cd",
+      "source": "sources/w10-world-b-generate-sorted-list/generate_sorted_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "generateSortedListAndInfoHeaders__Fv",
+          "compiled_body_bytes": 628
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3808,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_get_clearradius.o",
+      "profile": "authored_cpp",
+      "sha256": "4bbafe1ff5e8f5eec75e61117864ba5c7736df2d9d362824ce3609da5f03210c",
+      "source": "sources/w10-world-b-get-clearradius/get_clearradius.cpp",
+      "emitted_functions": [
+        {
+          "name": "getClearradius__FPCc",
+          "compiled_body_bytes": 2096
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3809,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_get_closest_living_player.o",
+      "profile": "authored_cpp",
+      "sha256": "bee96c3e1a21a4f6e5f16e0802f5f3db4a4a474a8f5874a0388a13d5df1515d6",
+      "source": "sources/w10-world-b-get-closest-living-player/get_closest_living_player.cpp",
+      "emitted_functions": [
+        {
+          "name": "getClosestLivingPlayer__FG6Point3f",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-world-b-common/mem.hpp"
+      ],
+      "input_order": 3810,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_get_free_frame_state.o",
+      "profile": "authored_cpp",
+      "sha256": "6729db0063749bd7310dcd1e38ca06f56f4b3b211075bd8f135db4a0b0c34305",
+      "source": "sources/w10-world-b-get-free-frame-state/get_free_frame_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "getFreeFrameState__Fv",
+          "compiled_body_bytes": 604
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3811,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_ground_type_data.o",
+      "profile": "authored_cpp",
+      "sha256": "ce298bfc010925233f4adcc2a608ab6c55fc17e73faaacbe2c8a3c68a42c7bb6",
+      "source": "sources/w10-world-b-ground-type-data/ground_type_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3812,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_hide_hidden_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "c646caca5c431d2de2b26e2ac8b349925918e1246ae2b3e756ff29de5e9dd7a7",
+      "source": "sources/w10-world-b-hide-hidden-objects/hide_hidden_objects.cpp",
+      "emitted_functions": [
+        {
+          "name": "hideHiddenObjects__FP10GameObject",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3813,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_init_jump_effect.o",
+      "profile": "authored_cpp",
+      "sha256": "ab2fa5e579b8c10f6c59e85a18e177b9913ea6f2b99f62df3456f83e1590174f",
+      "source": "sources/w10-world-b-init-jump-effect/init_jump_effect.cpp",
+      "emitted_functions": [
+        {
+          "name": "initJumpEffect__Fv",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3814,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_init_position_hermite.o",
+      "profile": "authored_cpp",
+      "sha256": "3837bf2c90f4bfcc7dd63f7f5e02a708ce4441916222797234deb913ef23c9e8",
+      "source": "sources/w10-world-b-init-position-hermite/init_position_hermite.cpp",
+      "emitted_functions": [
+        {
+          "name": "initPosition__Fii",
+          "compiled_body_bytes": 336
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3815,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_is_boss.o",
+      "profile": "authored_cpp",
+      "sha256": "bdcb4b071e005d25c73e278753dd5d52f78c80617e1a975b79affe7e2260616d",
+      "source": "sources/w10-world-b-is-boss/is_boss.cpp",
+      "emitted_functions": [
+        {
+          "name": "isBoss__FP10GameObject",
+          "compiled_body_bytes": 516
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3816,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_jump_gate_data.o",
+      "profile": "authored_cpp",
+      "sha256": "3df37ef3d766c8f8ecede11a30fb52e4bb10eb36e8e4edc1cc2020117f6d7952",
+      "source": "sources/w10-world-b-jump-gate-data/jump_gate_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 3817,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_jump_gate_load.o",
+      "profile": "authored_cpp",
+      "sha256": "8b0f176da4c6ce774b7ff7f7d0c60b0480736ae4f955e123fc0dac74311f3a90",
+      "source": "sources/w10-world-b-jump-gate-load/jump_gate_load.cpp",
+      "emitted_functions": [
+        {
+          "name": "jumpGateLoad__FPc",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3818,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_jump_gate_save_foot_print.o",
+      "profile": "authored_cpp",
+      "sha256": "dadbc5822f8acab13c75cef15b9faed1619b58a06f2a7d8f22a6b4d9d2c78d7a",
+      "source": "sources/w10-world-b-jump-gate-save-foot-print/jump_gate_save_foot_print.cpp",
+      "emitted_functions": [
+        {
+          "name": "jumpGateSaveFootPrint__Fv",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3819,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_map_init.o",
+      "profile": "authored_cpp",
+      "sha256": "0d0f1c28cbcadb5f376c320923ebdbbc7cd9c85900f54ab8ffa9d565d3343a9e",
+      "source": "sources/w10-world-b-map-init/map_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "init__3mapi",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 3820,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_skeleton_is_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "29aaf3a24c6810ab9e2da90b0ee1dd26d89075bdb8a286d36c62af1e9f7c76da",
+      "source": "sources/w10-world-b-skeleton-is-enemy/skeleton_is_enemy.cpp",
+      "emitted_functions": [
+        {
+          "name": "isEnemy__8SkeletonP10GameObject",
+          "compiled_body_bytes": 236
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w10-world-b-common/mem.hpp"
+      ],
+      "input_order": 3821,
+      "kind": "independently_authored_source",
+      "object_name": "w10_world_b_wraith_is_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "7fdf3896b68fbac8b202b5ded773e69d1b22a5af09e5ca4a485dada22f291c2a",
+      "source": "sources/w10-world-b-wraith-is-enemy/wraith_is_enemy.cpp",
+      "emitted_functions": [
+        {
+          "name": "isEnemy__6WraithP10GameObject",
+          "compiled_body_bytes": 508
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -53806,7 +54203,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f472c2f361875d6704e49ae0297e30de0ccd60e3d84592dbd2257ca7675affdb",
+  "snapshot_sha256": "dc02d28cbc03e995ca9c6d1e89e4b590c9187f9a2d2432fd5a4fda4fd4865d5f",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
