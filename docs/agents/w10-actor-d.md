@@ -96,7 +96,7 @@ Notes on these:
 - `norrath_w10_actor_d_view_7d7720` and `norrath_w10_actor_d_view_7d7770` are my names for two 80-byte `ParticleDef` statics of the Chest translation unit (the image's `fuseParticle` at 0x7d7720 and `smokeParticle` at 0x7d7770; the image has several identically named file-local statics, so the address-suffixed name avoids picking the wrong one). `norrath_w10_actor_d_view_7d6c40` is the 80-byte `breathParticle1` static at 0x7d6c40. Their storage owner is the respective class's static initializer, which is not part of this package.
 - `_vt$8Creature`, `_vt$10GameObject`, `_vt$7Critter`, `_vt$10CloudGiant` and `_vt$6Cthulu` are the vtable data; the vtable views other packages author carry other names, so the integrator has to alias or rename them.
 - `chestResourceList` is the 32-byte file-local table at 0x42c8a0 that `msg_load__5ChestPc` indexes.
-- `_4item$globalItem`, `catagry` (the table {{0, 1, 2}} is defined locally in `msg_poke__5Chesti`'s unit, not imported), `skills`, `bossMeterName`, `bossMeterMax`, `bossMeterCurrent`, `cutMode`, `world`, `worldDifficulty`, `levelFlags`, `nmPlayers`, `player`, `frameNm`, `gameCreatureThinkSpinner` are existing data names.
+- `_4item$globalItem`, `skills`, `bossMeterName`, `bossMeterMax`, `bossMeterCurrent`, `cutMode`, `world`, `worldDifficulty`, `levelFlags`, `nmPlayers`, `player`, `frameNm`, `gameCreatureThinkSpinner` are existing data names.
 - The soft-double entry points are used under their original names: `fptodp`, `dpadd`, `dpsub`, `dpmul`, `dpcmp`, `dptofp`.
 
 ## Build-plan entries needed
