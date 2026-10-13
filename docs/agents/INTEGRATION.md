@@ -5073,3 +5073,4 @@ and no startup stage has executed.
 - 2026-10-12 15:53 CDT — `agents/w8-render-world-b` — 1511 unresolved imports
 - 2026-10-12 15:56 CDT — `agents/w8-spell-static-init-a` — 1478 unresolved imports
 - 2026-10-12 16:15 CDT — `agents/w8-render-world-a` — 1514 unresolved imports
+- 2026-10-12 20:02 CDT — `agents/w9-startup-crt-a` — 1499 unresolved imports
