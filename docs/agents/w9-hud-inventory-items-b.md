@@ -76,20 +76,6 @@ One further data unit, `w9-hud-inventory-items-b-view-exit-sound-resource`, defi
 - Field roles (screen record words, item effect entries `{tag, v1, v2, v3}`, the goldNumber entry layout), that `getValue` is a price, that `typeScaleTab` (7 floats at 0x0031f510) is a per-subtype damage scale, that the two accumulators in `getValue` are damage low/high, that `eRandState` is a cosmetic generator and `syncRandState` the synchronised one. Sizes of the gap-sized data objects.
 - Mapping the string tables to meanings only from the strings (lump names of the playable models, `*_idleb.anm`, `inv_drop_*.anm`, the race prefixes, `circlet`, `spear`).
 
-## Unknown
-
-- What the screen-record mode words, flag bits, kinds, variants, effect tags (14..19, 20..38, 0..13, 37) and item shapes mean; message type 9 and the other bytes sent by `inventoryExit__Fiii`; the meaning of the value 29 in the feat table; what `_shopCheck__Fi` does.
-- Whether `gameDifficulty` can be 0 (`makeRandomPotion__4itemPQ24item11description` then indexes past its 9-entry tables in the original and in this reconstruction; the paired run therefore uses difficulties 1..3), and whether `typeScaleTab[sub]` is ever read out of range.
-- The real extent and contents of the gap-sized data objects.
-
-## Authored but never executed
-
-All of it. No function ran on the EE, in the game or on a runtime stack of authored units. They were only run against stubs: the host checks and the private interpreter pairing described above. In particular:
-
-- `inventoryLoad__Fv` contains the original's store of a zero word through a null pointer when `textureLockCacheBuffer__Fv` returns null in the loading state. It is reproduced as a volatile write to address 0 and is not exercised by any check (it would fault on the host).
-- The data definitions are zero-filled (or hold the observed initial word) and were only checked for size and initial contents. No authored code in this package reads `hermiteTime`, `hermDeltaScale`, `lastFontColor`, `msgTimeout`, `nameTags`, `goldAlpha`, `hudHeaderUni` or `lastFontCharAlpha`.
-- Behaviour that depends on callees (`getAttributeName`, `findAndStripGender`, `usprintf`, `getDamageRangeAll`, `getArmorBonus`, `create`, ...) was only checked against stub callees.
-
 ## Imports closed
 
 `getName__4itemPQ24item11descriptioni`, `getPicName__4itemPciPQ24item11description`, `getProxyMeshId__4itemPQ24item11description`, `getValue__4itemPQ24item11description`, `givePlayerFeat__Fxii`, `goldAlpha`, `goldNumber`, `hermDeltaScale`, `hermiteTime`, `hudGivePlayerGold__FiG6Point3i`, `hudHeaderUni`, `hudInfoMessageShowing__Fv`, `invGrid`, `inventory`, `inventoryAdjustAbility__Fii`, `inventoryAdjustSkill__Ficx`, `inventoryCheckWieldingStatus__FiPQ24item11description`, `inventoryExit__Fiii`, `inventoryFrameDraw__Fv`, `inventoryFrameRun__Fv`, `inventoryGridDropItem__Fiiciiii`, `inventoryLoadState`, `inventoryLoad__Fv`, `inventoryLump`, `inventorySetAnim__FiP14AnimationStatei`, `inventoryUnload__Fv`, `lastFontCharAlpha`, `lastFontColor`, `lerpColor__FUiUif`, `lerpShortRot__Fssfff`, `makeRandomPotion__4itemPQ24item11description`, `msgTimeout`, `nameTags`
@@ -155,3 +141,16 @@ Append these as authored inputs with fresh `input_order` values after the curren
 {"source": "sources/w9-hud-inventory-items-b-lerp-short-rot/lerp_short_rot.cpp", "object_name": "lerp_short_rot.o", "sha256": "b133e967a234cafc8ef6ad71afc88c3df596b15cb4b3d1b927122bd0a3271017", "emitted_functions": [{"compiled_body_bytes": 176, "name": "lerpShortRot__Fssfff"}]}
 {"source": "sources/w9-hud-inventory-items-b-view-exit-sound-resource/norrath_inventory_exit_sound_resource_view.cpp", "object_name": "norrath_inventory_exit_sound_resource_view.o", "sha256": "a690c5595078ef6f4b3bd0078aff01b135f41e6d2776bb01a988bb30dbc0c800"}
 ```
+## Authored but never executed
+
+All of it. No function ran on the EE, in the game or on a runtime stack of authored units. They were only run against stubs: the host checks and the private interpreter pairing described above. In particular:
+
+- `inventoryLoad__Fv` contains the original's store of a zero word through a null pointer when `textureLockCacheBuffer__Fv` returns null in the loading state. It is reproduced as a volatile write to address 0 and is not exercised by any check (it would fault on the host).
+- The data definitions are zero-filled (or hold the observed initial word) and were only checked for size and initial contents. No authored code in this package reads `hermiteTime`, `hermDeltaScale`, `lastFontColor`, `msgTimeout`, `nameTags`, `goldAlpha`, `hudHeaderUni` or `lastFontCharAlpha`.
+- Behaviour that depends on callees (`getAttributeName`, `findAndStripGender`, `usprintf`, `getDamageRangeAll`, `getArmorBonus`, `create`, ...) was only checked against stub callees.
+
+## Unknown
+
+- What the screen-record mode words, flag bits, kinds, variants, effect tags (14..19, 20..38, 0..13, 37) and item shapes mean; message type 9 and the other bytes sent by `inventoryExit__Fiii`; the meaning of the value 29 in the feat table; what `_shopCheck__Fi` does.
+- Whether `gameDifficulty` can be 0 (`makeRandomPotion__4itemPQ24item11description` then indexes past its 9-entry tables in the original and in this reconstruction; the paired run therefore uses difficulties 1..3), and whether `typeScaleTab[sub]` is ever read out of range.
+- The real extent and contents of the gap-sized data objects.
