@@ -1,4 +1,4 @@
-// Observed do_upcast__C14__si_type_info... at 0x002fd658, 176 bytes. If this type
+// Observed do_upcast__C14__si_type_info... at 0x002fd658, 172 bytes. If this type
 // equals the target (__eq__C9type_infoRC9type_info) it fills the result record
 // exactly as the plain user-type_info version does (word 0 object pointer, word 1
 // access path, word 2 the constant 8) and returns 1 when (path & 6) == 4. If the

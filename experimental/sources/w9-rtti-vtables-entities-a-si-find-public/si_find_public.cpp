@@ -1,4 +1,4 @@
-// Observed do_find_public_subobj__C14__si_type_info... at 0x002fd828, 148 bytes.
+// Observed do_find_public_subobj__C14__si_type_info... at 0x002fd828, 152 bytes.
 // If the object and subobject pointers are equal and the target type_info equals
 // this one (__eq__C9type_infoRC9type_info, target first) the answer is 6.
 // Otherwise the call is forwarded to the base type_info held in word 2 of this

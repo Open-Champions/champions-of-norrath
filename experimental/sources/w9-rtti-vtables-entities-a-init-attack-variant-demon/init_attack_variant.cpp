@@ -1,4 +1,4 @@
-// Observed initAttackVariant__5Demon at 0x001e9ea8, 380 bytes.
+// Observed initAttackVariant__5Demon at 0x001e9ea8, 384 bytes.
 // 1. Four halfwords at +1068, +1076, +1084 and +1092 (an 8-byte stride) become
 //    0xffff. Byte +156 becomes 0.
 // 2. The signed word at +208 chooses what happens next:

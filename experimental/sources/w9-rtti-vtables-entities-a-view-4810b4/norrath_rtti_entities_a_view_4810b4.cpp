@@ -1,4 +1,4 @@
-// Observed four bytes at 0x004810b4 (.sdata, reached through gp-26940 or gp-26936):
+// Observed four bytes at 0x004810b4 (.sdata, reached through gp-26940):
 // the little-endian word 0x3e4ccccc, the single just below 0.2f. A second word
 // with the same value sits at the neighbouring address (0x004810b8); the two are
 // separate literals in the image and are kept as separate views.

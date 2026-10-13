@@ -1,4 +1,4 @@
-// Observed addTurnAnimation__3Cat at 0x001eee68, 176 bytes. A damped follower:
+// Observed addTurnAnimation__3Cat at 0x001eee68, 180 bytes. A damped follower:
 //   target = (float)(signed halfword at +284) * 2^-9, clamped to [-1, 1];
 //   pos = float at +980, vel = float at +984;
 //   vel += (target - pos) * 0.09; pos += vel;
