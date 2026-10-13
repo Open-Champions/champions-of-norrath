@@ -13,13 +13,13 @@ static_assert(__CHAR_BIT__ == 8 && sizeof(unsigned) == 4 && sizeof(float) == 4 &
 #endif
 namespace rtti_c {
 using Address = __UINTPTR_TYPE__;
-inline Address address(const void* p) { return reinterpret_cast<Address>(p); }
-inline unsigned address_bits(const void* p) { return static_cast<unsigned>(address(p)); }
-inline unsigned char* bytes(Address a) { return reinterpret_cast<unsigned char*>(a); }
+__attribute__((always_inline)) inline Address address(const void* p) { return reinterpret_cast<Address>(p); }
+__attribute__((always_inline)) inline unsigned address_bits(const void* p) { return static_cast<unsigned>(address(p)); }
+__attribute__((always_inline)) inline unsigned char* bytes(Address a) { return reinterpret_cast<unsigned char*>(a); }
 #if defined(NORRATH_RTTI_C_HOST)
 struct HostPointer { unsigned bits; void* full; };
 inline HostPointer host_rows[64] = {};
-inline void host_note(void* full) {
+__attribute__((always_inline)) inline void host_note(void* full) {
     const unsigned bits = static_cast<unsigned>(reinterpret_cast<Address>(full));
     for (unsigned index = 0u; index < 64u; ++index) {
         if (host_rows[index].full == nullptr || host_rows[index].bits == bits) {
@@ -29,7 +29,7 @@ inline void host_note(void* full) {
         }
     }
 }
-inline void* pointer(Address a) {
+__attribute__((always_inline)) inline void* pointer(Address a) {
     const unsigned bits = static_cast<unsigned>(a);
     for (unsigned index = 0u; index < 64u; ++index) {
         if (host_rows[index].full != nullptr && host_rows[index].bits == bits) return host_rows[index].full;
@@ -37,44 +37,44 @@ inline void* pointer(Address a) {
     return reinterpret_cast<void*>(a);
 }
 #else
-inline void* pointer(Address a) { return reinterpret_cast<void*>(a); }
+__attribute__((always_inline)) inline void* pointer(Address a) { return reinterpret_cast<void*>(a); }
 #endif
-inline unsigned read_word(Address a) {
+__attribute__((always_inline)) inline unsigned read_word(Address a) {
     const unsigned char* p = bytes(a);
     return unsigned(p[0]) | (unsigned(p[1]) << 8) | (unsigned(p[2]) << 16) | (unsigned(p[3]) << 24);
 }
-inline void write_word(Address a, unsigned value) {
+__attribute__((always_inline)) inline void write_word(Address a, unsigned value) {
     unsigned char* p = bytes(a);
     p[0] = static_cast<unsigned char>(value);
     p[1] = static_cast<unsigned char>(value >> 8);
     p[2] = static_cast<unsigned char>(value >> 16);
     p[3] = static_cast<unsigned char>(value >> 24);
 }
-inline unsigned read_u16(Address a) {
+__attribute__((always_inline)) inline unsigned read_u16(Address a) {
     const unsigned char* p = bytes(a);
     return unsigned(p[0]) | (unsigned(p[1]) << 8);
 }
-inline short read_i16(Address a) {
+__attribute__((always_inline)) inline short read_i16(Address a) {
     const unsigned value = read_u16(a);
     return value < 0x8000u ? static_cast<short>(value) : static_cast<short>(static_cast<int>(value) - 65536);
 }
-inline void write_u16(Address a, unsigned value) {
+__attribute__((always_inline)) inline void write_u16(Address a, unsigned value) {
     unsigned char* p = bytes(a);
     p[0] = static_cast<unsigned char>(value);
     p[1] = static_cast<unsigned char>(value >> 8);
 }
-inline unsigned read_u8(Address a) { return bytes(a)[0]; }
-inline void write_u8(Address a, unsigned value) { bytes(a)[0] = static_cast<unsigned char>(value); }
-inline int read_s8(Address a) {
+__attribute__((always_inline)) inline unsigned read_u8(Address a) { return bytes(a)[0]; }
+__attribute__((always_inline)) inline void write_u8(Address a, unsigned value) { bytes(a)[0] = static_cast<unsigned char>(value); }
+__attribute__((always_inline)) inline int read_s8(Address a) {
     const unsigned value = read_u8(a);
     return value < 0x80u ? static_cast<int>(value) : static_cast<int>(value) - 256;
 }
-inline unsigned long long read_u64(Address a) {
+__attribute__((always_inline)) inline unsigned long long read_u64(Address a) {
     unsigned long long value = 0;
     for (unsigned i = 0; i < 8u; ++i) value |= static_cast<unsigned long long>(bytes(a)[i]) << (8u * i);
     return value;
 }
-inline void write_u64(Address a, unsigned long long value) {
+__attribute__((always_inline)) inline void write_u64(Address a, unsigned long long value) {
     for (unsigned i = 0; i < 8u; ++i) bytes(a)[i] = static_cast<unsigned char>(value >> (8u * i));
 }
 __attribute__((always_inline)) inline float read_single(Address a) {
@@ -91,13 +91,13 @@ __attribute__((always_inline)) inline void write_single(Address a, float value) 
     const unsigned char* in = reinterpret_cast<const unsigned char*>(&value);
     write_word(a, unsigned(in[0]) | (unsigned(in[1]) << 8) | (unsigned(in[2]) << 16) | (unsigned(in[3]) << 24));
 }
-inline int signed_word(unsigned value) {
+__attribute__((always_inline)) inline int signed_word(unsigned value) {
     return value <= 0x7fffffffu ? static_cast<int>(value) : -1 - static_cast<int>(0xffffffffu - value);
 }
 // Observed virtual calls load a signed halfword adjustment and the function
 // pointer four bytes later. Slot offsets are byte offsets from the vtable.
 template <typename Function>
-Function slot_function(void* self, unsigned slot_byte_offset, void** adjusted_self) {
+__attribute__((always_inline)) inline Function slot_function(void* self, unsigned slot_byte_offset, void** adjusted_self) {
     const unsigned table_bits = read_word(address(self) + 72u);
     const Address slot = address(pointer(table_bits)) + slot_byte_offset;
     const short adjustment = read_i16(slot);
