@@ -1,6 +1,6 @@
 # Ant-lantern constructor view data (c)
 
-Package `w9-ctors-lantern-c`, branch `agents/w9-ctors-lantern-c`. Closes 41 data imports that
+Package `w9-ctors-lantern-c`, branch `agents/w9-ctors-lantern-c`. Closes 40 data imports that
 the authored constructors in `ctors-ant-lantern-constructors` read. Sources are under
 `experimental/sources/w9-ctors-lantern-c-views/`, one file per symbol, each with a host
 comparison under `host/` (not an EE input). One commit per symbol.
@@ -31,7 +31,7 @@ No game bytes beyond the short tag/format strings and one 8-byte constant are re
 
 ## Imports closed
 
-All 41 names in the package scope: 46fa38 46fa48 46fa58 46fd38 46ffe0 470df8 470e08 470e18 470e28 470e38
+All 40 names in the package scope: 46fa38 46fa48 46fa58 46fd38 46ffe0 470df8 470e08 470e18 470e28 470e38
 470e48 470e58 470e68 470e78 470e88 470e98 470ea8 470eb8 470ff0 471000 471010 471020 471030 471150 4711f0
 471208 471218 471230 471248 471260 471278 471ed0 471ee0 471ef0 471f00 471f10 471f20 476ac8 476b70 476b80
 (each prefixed `norrath_ctors_ant_lantern_view_`).
