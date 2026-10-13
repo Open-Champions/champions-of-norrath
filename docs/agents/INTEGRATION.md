@@ -8578,3 +8578,25 @@ Closed: `AddChild__5VIWndP5VIWnd`, `EndConnect__12VIWndConnect`, `Free__12VIWndC
 
 Opened: `Begin__Ct5VISet1ZP5VIWnd`, `ClearText__9VIWndEdit`, `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `Free__13VIBattleMusic`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `_$_13VIBattleMusic`, `_$_t5VISet1ZP5VIWnd`, `__13VIBattleMusic`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
 - 2026-10-13 05:38 CDT — agents/w11-vi-misc-b — 870 unresolved imports
+
+## agents/w11-front-a
+
+Merged (merge commit, branch tip `106ef14b`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 of the branch's 16 planned units (10 function bodies; 8 data-view units share 7 sources) with fresh
+`input_order` values 4667 through 4681. Plan entries come from the worker's own generator script, run here with the repo toolchain. The host checks build and run with the flags in each file's Build line (x86_64, -no_pie, pagezero 0x1000); all pass here except the one noted below. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4680 authored inputs, 3584 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-front-a-update-players-ready` (`updatePlayersReady__9Savepoint`). Its host check, as committed at the branch tip (`c7432fd5`, 'Extend the updatePlayersReady host check with a z-only distance case'), fails here with exit 22: the new z-only case expects byte 200 to stay 1 after a call with no near player, but the authored function clears byte 200 first, as its own header comment says. The source and the test disagree, so the test cannot be trusted as written; the source is left in the tree unplanned for its owner to fix. Not re-verified on any other host. The notes' closed list (8 names) therefore reproduces as 7; the data views do not appear as closed names because they are matched by address. `creditsText` was deliberately not committed by the worker and needs a maintainer decision.
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 879 |
+| Closed | 7 |
+| Opened | 16 |
+
+Closed: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `floorGetSaveInfo__FPci`
+
+Opened: `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drawGold__Fv`, `drewHelpfulMessageHelpBar`, `fontStringSize__FP4FontPci`, `helpfulMessagesDraw__Fv`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `runGold__Fv`, `runHUD__Fi`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`
+- 2026-10-13 05:43 CDT — agents/w11-front-a — 879 unresolved imports

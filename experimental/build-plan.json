@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 4665,
+  "default_authored_inputs": 4680,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -3333,6 +3333,21 @@
     "sources/w11-crt-c-sif-m-request-end/sif_m_request_end.cpp": "10878ecbcd9fac9484fd5e17f906ae856cb7d7efad2a63f43fd06228dfa91299",
     "sources/w11-crt-c-src-word/src_word.cpp": "0b92999d3a00ec34980f94a2ff485c96f361332661506f3298d0c568dc0e0924",
     "sources/w11-crt-c-tty-handler/tty_handler.cpp": "7fd0ece38620d4d6efcfdb20d2775d088667c54ade635364009fb9a358b790ad",
+    "sources/w11-front-a-display-gold/display_gold.cpp": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
+    "sources/w11-front-a-display-items/display_items.cpp": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
+    "sources/w11-front-a-display-weight/display_weight.cpp": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
+    "sources/w11-front-a-do-helpful-message/do_helpful_message.cpp": "24e4af7d477d1573d2df63227b08f5d764cc2bd55a402d26090b2569abe466bf",
+    "sources/w11-front-a-floor-get-save-info/floor_get_save_info.cpp": "692b59da9b638bfcae490954f6f83bf590f1f830f5ba25700253d529317699bc",
+    "sources/w11-front-a-hud-draw-frame/hud_draw_frame.cpp": "49456b26688c6022f57a393e8e013281ae0ecf6c2b8a8cbec7291e6678650f3b",
+    "sources/w11-front-a-hud-run-frame/hud_run_frame.cpp": "1f8c412ac25b5722a2800d2dec84e494352d864538a04a48f642c20386685699",
+    "sources/w11-front-a-views/norrath_front_a_view_483f34.cpp": "2e0118d90f69f2cd6bf8db2ad99b67447665257b96ecdad2640cbcb919468018",
+    "sources/w11-front-a-views/norrath_front_a_view_4848fc.cpp": "3da83bf5d3dea41c8356e1c172900accb14568cd0274bf7c302976f454dbb8b8",
+    "sources/w11-front-a-views/norrath_front_a_view_484900.cpp": "f89013a0bc36287a4f5c04220b3f352551f2b0698cb5f1591cd290f1e87e46ee",
+    "sources/w11-front-a-views/norrath_front_a_view_484b08.cpp": "8178f00d567fa209840b7ace1113653333f520b6a2c4d6379f7dbfc1be9bcaf6",
+    "sources/w11-front-a-views/norrath_front_a_view_4858e0.cpp": "2cdff2ed8b042ddbbc91ed19675710ec165c240574986ff507a75f5f59480125",
+    "sources/w11-front-a-views/norrath_front_a_view_6ca800.cpp": "b78d01a5818fea757d4f0d2f9b2e5b766e7cd8bd55d31d1eb2c942727c6e868c",
+    "sources/w11-front-a-views/norrath_front_a_view_8d5b58.cpp": "1de3c3b709c095d041453f699c29939feb41805d8b158dfe157cbcdec39f1e62",
+    "sources/w11-front-a-views/norrath_front_a_view_8d5fd0.cpp": "6ed45214062816efd5d24b04eaf9ae0c7d955759c4cb3d92b85c0f142d6664dc",
     "sources/w11-front-b-get-damage-multiplier/get_damage_multiplier.cpp": "de7509124c526d2cc941eaf02f268b4f1c1857af6c926299503ad4aa732872f5",
     "sources/w11-front-b-get-pic-size/get_pic_size.cpp": "62c0bdaf6752ad4fe8d6856a8d49e9bf2c1828b1f8ad1f1917e504a1a1b2673b",
     "sources/w11-front-b-global-icons/global_icons.cpp": "fbf1717302cc55047b3d3c6ce6f4b55de47e5d53470005cfc0afa192c1fc64c8",
@@ -67927,6 +67942,203 @@
           "name": "RemoveChild__5VIWndP5VIWnd"
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4667,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_gold.o",
+      "profile": "authored_cpp",
+      "sha256": "dda3922969b5558b77f3334b7521d7fdeea75a54c5dc6fd16f39b68109acb8e1",
+      "source": "sources/w11-front-a-display-gold/display_gold.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 632,
+          "name": "displayGold__FP12playerStructP12screenStruct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4668,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_items.o",
+      "profile": "authored_cpp",
+      "sha256": "e90b0a32777458c4ce6db91e2712d166b09c251afe27d71f1c25b6b7275f4568",
+      "source": "sources/w11-front-a-display-items/display_items.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 148,
+          "name": "displayItems__FiiP12screenStructi"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4669,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_display_weight.o",
+      "profile": "authored_cpp",
+      "sha256": "ebe0301d9fb0e0a228ff84f6718af9bbd1d7149952249df25c2f622c206ce4c5",
+      "source": "sources/w11-front-a-display-weight/display_weight.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 360,
+          "name": "displayWeight__FP12playerStructP12screenStruct"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4670,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_floor_get_save_info.o",
+      "profile": "authored_cpp",
+      "sha256": "692b59da9b638bfcae490954f6f83bf590f1f830f5ba25700253d529317699bc",
+      "source": "sources/w11-front-a-floor-get-save-info/floor_get_save_info.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 560,
+          "name": "floorGetSaveInfo__FPci"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4671,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_hud_run_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "1f8c412ac25b5722a2800d2dec84e494352d864538a04a48f642c20386685699",
+      "source": "sources/w11-front-a-hud-run-frame/hud_run_frame.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 1180,
+          "name": "HUDRunFrame__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4672,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_hud_draw_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "49456b26688c6022f57a393e8e013281ae0ecf6c2b8a8cbec7291e6678650f3b",
+      "source": "sources/w11-front-a-hud-draw-frame/hud_draw_frame.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 616,
+          "name": "HUDDrawFrame__Fv"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4673,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_do_helpful_message.o",
+      "profile": "authored_cpp",
+      "sha256": "24e4af7d477d1573d2df63227b08f5d764cc2bd55a402d26090b2569abe466bf",
+      "source": "sources/w11-front-a-do-helpful-message/do_helpful_message.cpp",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 152,
+          "name": "_ZN12_GLOBAL__N_1L6formatEPtPKcffffff"
+        },
+        {
+          "compiled_body_bytes": 172,
+          "name": "_ZN12_GLOBAL__N_1L9printTextEPtiii"
+        },
+        {
+          "compiled_body_bytes": 116,
+          "name": "_ZN12_GLOBAL__N_1L6borderEPti"
+        },
+        {
+          "compiled_body_bytes": 2148,
+          "name": "doHelpfulMessage__FiiP12screenStructiiPQ24item11description"
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 4674,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "2e0118d90f69f2cd6bf8db2ad99b67447665257b96ecdad2640cbcb919468018",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_483f34.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4675,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "3da83bf5d3dea41c8356e1c172900accb14568cd0274bf7c302976f454dbb8b8",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_4848fc.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4676,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "f89013a0bc36287a4f5c04220b3f352551f2b0698cb5f1591cd290f1e87e46ee",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_484900.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4677,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "8178f00d567fa209840b7ace1113653333f520b6a2c4d6379f7dbfc1be9bcaf6",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_484b08.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4678,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "2cdff2ed8b042ddbbc91ed19675710ec165c240574986ff507a75f5f59480125",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_4858e0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4679,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "b78d01a5818fea757d4f0d2f9b2e5b766e7cd8bd55d31d1eb2c942727c6e868c",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_6ca800.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4680,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "1de3c3b709c095d041453f699c29939feb41805d8b158dfe157cbcdec39f1e62",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_8d5b58.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 4681,
+      "kind": "independently_authored_source",
+      "object_name": "w11_front_a_views.o",
+      "profile": "authored_cpp",
+      "sha256": "6ed45214062816efd5d24b04eaf9ae0c7d955759c4cb3d92b85c0f142d6664dc",
+      "source": "sources/w11-front-a-views/norrath_front_a_view_8d5fd0.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -68026,7 +68238,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "aee162fb7122d154952bf428880c355d17cfa3eeb203a67d919db1516ccea286",
+  "snapshot_sha256": "98dff4028f1a728a2f5f430ade0a76149933830da99c3b6e49e65ccc3c202e44",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
