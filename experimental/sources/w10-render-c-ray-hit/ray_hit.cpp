@@ -5,7 +5,7 @@
 //   t = (n.x*(p0.x-p2.x) + n.y*(p0.y-p2.y)) + n.z*(p0.z-p2.z)
 // If 0 <= d or t < 0 the result is -1.0f (a NaN in d or t does not take that exit).
 // Otherwise the vector n*t is dotted with a and negated, giving e; when
-// 0.001f < |e| the result is t * (t / e), else t * (t * 0x1.f40002p+9f).
+// |e| exceeds the first literal below the result is t * (t / e), else t * (t * 0x1.f40002p+9f).
 // The two literals are 4-byte pool floats the original reads relative to its global
 // pointer. Their bit patterns, read from the image, are 0x3a83126e and 0x447a0001,
 // one unit in the last place away from the nearest floats to 0.001 and 1000.0
