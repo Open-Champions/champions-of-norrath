@@ -66702,6 +66702,317 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w12-hud-loop-a-data-inv-header/data_inv_header.cpp"
+    },
+    {
+      "input_order": 5225,
+      "component": "w12-hud-loop-b-hud-words",
+      "object_name": "hud_words.o",
+      "private_object_sha256": "c9ea39216dfc76f54b74c3f5247fd3d0efd3203b63dd0b0b0f23c8c7564dedd0",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-hud-words/hud_words.cpp"
+    },
+    {
+      "input_order": 5226,
+      "component": "w12-hud-loop-b-inventory-item-check-slot",
+      "object_name": "inventory_item_check_slot.o",
+      "private_object_sha256": "41d154ec585b438b2baa840e22deb79d764e199f48b040e34cb3502c885fe8b8",
+      "emitted_functions": [
+        {
+          "name": "inventoryItemCheckSlot__FiPQ24item11description",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-inventory-item-check-slot/inventory_item_check_slot.cpp"
+    },
+    {
+      "input_order": 5227,
+      "component": "w12-hud-loop-b-inventory-start",
+      "object_name": "inventory_start.o",
+      "private_object_sha256": "5795ff3a6726c0ca652bf997a8ffdd70c3bdffb6901926666088d06c056bef8b",
+      "emitted_functions": [
+        {
+          "name": "inventoryStart__Fii",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-inventory-start/inventory_start.cpp"
+    },
+    {
+      "input_order": 5228,
+      "component": "w12-hud-loop-b-item-equipped",
+      "object_name": "item_equipped.o",
+      "private_object_sha256": "53ed95332b94616d591d03f171bb4957a0f3a0aa75e633ea84fdf61f43969a38",
+      "emitted_functions": [
+        {
+          "name": "itemEquipped__FiPQ24item11description",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-item-equipped/item_equipped.cpp"
+    },
+    {
+      "input_order": 5229,
+      "component": "w12-hud-loop-b-load-player-lumps",
+      "object_name": "load_player_lumps.o",
+      "private_object_sha256": "75f00f5ec06d6713d120d4cdd227b253b071be030a5d147f82688ef4a0a30424",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "_ZN12_GLOBAL__N_1L10loadChoiceEPKcPcS1_S1_S1_Pai"
+        },
+        {
+          "compiled_body_bytes": 864,
+          "name": "loadPlayerLumps__Fv"
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-load-player-lumps/load_player_lumps.cpp"
+    },
+    {
+      "input_order": 5230,
+      "component": "w12-hud-loop-b-multi-player-markers",
+      "object_name": "multi_player_markers.o",
+      "private_object_sha256": "453b582754bcee0d5a13e5fb77dcd62cfddcb1f6b7c0f3e8a419756a603f084c",
+      "emitted_functions": [
+        {
+          "name": "maybeDrawMultiPlayerMarkers__6Player",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-multi-player-markers/multi_player_markers.cpp"
+    },
+    {
+      "input_order": 5231,
+      "component": "w12-hud-loop-b-player-block-sparks",
+      "object_name": "player_block_sparks.o",
+      "private_object_sha256": "3f010ea206a96c51aa3fb63e5bd1c7b378465297f616f906a03cf9f67efe5d64",
+      "emitted_functions": [
+        {
+          "name": "playerBlockSparks__6Playeri",
+          "compiled_body_bytes": 1416
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-player-block-sparks/player_block_sparks.cpp"
+    },
+    {
+      "input_order": 5232,
+      "component": "w12-hud-loop-b-player-item-scan",
+      "object_name": "player_item_scan.o",
+      "private_object_sha256": "ff098732c384b9ccd6d01b0310fc109034c6879208cf69dbfba103a32a5c14a0",
+      "emitted_functions": [
+        {
+          "name": "playerItemScan__6PlayerP3padi",
+          "compiled_body_bytes": 3004
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-player-item-scan/player_item_scan.cpp"
+    },
+    {
+      "input_order": 5233,
+      "component": "w12-hud-loop-b-player-selection-npc-active-chunks",
+      "object_name": "npc_active_chunks.o",
+      "private_object_sha256": "94d37242c661fc0da2a50d18f986eb31089c9b4b6ae9cea78d453bc483b8fad9",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionGetNPCActiveChunks__FP3NPC",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-active-chunks/npc_active_chunks.cpp"
+    },
+    {
+      "input_order": 5234,
+      "component": "w12-hud-loop-b-player-selection-npc-draw",
+      "object_name": "npc_draw.o",
+      "private_object_sha256": "db86a7d809d893798c4ee701dd000b9ebef858f517a9f4e74996bbb6a6298b9c",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord",
+          "compiled_body_bytes": 1164
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-draw/npc_draw.cpp"
+    },
+    {
+      "input_order": 5235,
+      "component": "w12-hud-loop-b-player-selection-npc-visible",
+      "object_name": "npc_visible.o",
+      "private_object_sha256": "8765f94fb41c142a10c7af34422669808e62c3e4785701aac7c71d18b154ed0f",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionNPCVisible__FP3NPC",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-visible/npc_visible.cpp"
+    },
+    {
+      "input_order": 5236,
+      "component": "w12-hud-loop-b-poke-state",
+      "object_name": "poke_state.o",
+      "private_object_sha256": "26c97fcd886263243a610f05c2cc5e8923d22f8784ec1e89832e365a25b8e91b",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-poke-state/poke_state.cpp"
+    },
+    {
+      "input_order": 5237,
+      "component": "w12-hud-loop-b-resurect-effect",
+      "object_name": "resurect_effect.o",
+      "private_object_sha256": "3725717c20d703a8b196159e352fc5d801cf55f98a323e1805f2be609de55c69",
+      "emitted_functions": [
+        {
+          "name": "resurectEffect__6Player",
+          "compiled_body_bytes": 1316
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-resurect-effect/resurect_effect.cpp"
+    },
+    {
+      "input_order": 5238,
+      "component": "w12-hud-loop-b-run-gold",
+      "object_name": "run_gold.o",
+      "private_object_sha256": "f04d1b886005c04d50c631012e4d88d62d39c88793b7e89c0e4a6ad31957f089",
+      "emitted_functions": [
+        {
+          "name": "runGold__Fv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-run-gold/run_gold.cpp"
+    },
+    {
+      "input_order": 5239,
+      "component": "w12-hud-loop-b-run-hud",
+      "object_name": "run_hud.o",
+      "private_object_sha256": "9940d47239e205e16f24d154034c6c77e7b72d21e480e97e982c0a1f18be0ea4",
+      "emitted_functions": [
+        {
+          "name": "runHUD__Fi",
+          "compiled_body_bytes": 4764
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-run-hud/run_hud.cpp"
+    },
+    {
+      "input_order": 5240,
+      "component": "w12-hud-loop-b-save-activate",
+      "object_name": "save_activate.o",
+      "private_object_sha256": "9e58a55be1e366a85f6efda185dc8903aaa620fb57bdc8f6051a7112366a5196",
+      "emitted_functions": [
+        {
+          "name": "saveActivate__9Savepoint",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-save-activate/save_activate.cpp"
+    },
+    {
+      "input_order": 5241,
+      "component": "w12-hud-loop-b-shop-draw-task-bar",
+      "object_name": "shop_draw_task_bar.o",
+      "private_object_sha256": "e5c4ebed81456287906aad4c7f68d3751d982c24152ac05af0b96f2c8c763b0a",
+      "emitted_functions": [
+        {
+          "name": "shopDrawTaskBar__FP12screenStruct",
+          "compiled_body_bytes": 492
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-shop-draw-task-bar/shop_draw_task_bar.cpp"
+    },
+    {
+      "input_order": 5242,
+      "component": "w12-hud-loop-b-shop-inventory-grid-draw",
+      "object_name": "shop_inventory_grid_draw.o",
+      "private_object_sha256": "0efe38fc1631cb95a25548b4244463317c882013d4d2777a06043c48840755da",
+      "emitted_functions": [
+        {
+          "name": "shopInventoryGridDraw__FiiiP12screenStruct",
+          "compiled_body_bytes": 1880
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-shop-inventory-grid-draw/shop_inventory_grid_draw.cpp"
+    },
+    {
+      "input_order": 5243,
+      "component": "w12-hud-loop-b-shop-inventory-grid-run",
+      "object_name": "shop_inventory_grid_run.o",
+      "private_object_sha256": "2cfe9421d3c3aa925d85f41bfa8536274a6e6093e93bf2ce5cae696832d81879",
+      "emitted_functions": [
+        {
+          "name": "shopInventoryGridRun__FiiiP12screenStruct",
+          "compiled_body_bytes": 8240
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-shop-inventory-grid-run/shop_inventory_grid_run.cpp"
+    },
+    {
+      "input_order": 5244,
+      "component": "w12-hud-loop-b-sorted-creature-list",
+      "object_name": "sorted_creature_list.o",
+      "private_object_sha256": "a42e121e23a4f7a5b752f90a92c31930f9e4f6d34deb62e55d7dc3a93a4416f7",
+      "emitted_functions": [
+        {
+          "name": "objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-sorted-creature-list/sorted_creature_list.cpp"
+    },
+    {
+      "input_order": 5245,
+      "component": "w12-hud-loop-b-sprite-grid",
+      "object_name": "sprite_grid.o",
+      "private_object_sha256": "cd8510148645553dcd1480197ab2e38e6231f9a09c5a3bd88a65e1c0f3406485",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-sprite-grid/sprite_grid.cpp"
+    },
+    {
+      "input_order": 5246,
+      "component": "w12-hud-loop-b-update-cursor",
+      "object_name": "update_cursor.o",
+      "private_object_sha256": "80f36047ade233ac2accedef77ca57e148ecddf325e440f5f8c6b412f6c39922",
+      "emitted_functions": [
+        {
+          "name": "updateCursor__FiiiiiP12screenStructi",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-update-cursor/update_cursor.cpp"
+    },
+    {
+      "input_order": 5247,
+      "component": "w12-hud-loop-b-update-players-ready",
+      "object_name": "update_players_ready.o",
+      "private_object_sha256": "426afef6f6e651fdb65dceda9c2d1e04d8366ae0d43d3006afd16fc2e741a58d",
+      "emitted_functions": [
+        {
+          "name": "updatePlayersReady__9Savepoint",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-hud-loop-b-update-players-ready/update_players_ready.cpp"
     }
   ],
   "drafts": [
@@ -73704,6 +74015,52 @@
     "sources/w12-hud-loop-a-get-data-for-all-objects/host_check.cpp": "cfbc05cdbd765e8be90cc97969afd51b4c74ff452620d42df572e29cf0beb3c0",
     "sources/w12-hud-loop-a-helpful-messages-draw/helpful_messages_draw.cpp": "1a84e5f07fefd1f609fba5400a83c9e71ce42f91191516c403e21c4f09f843a2",
     "sources/w12-hud-loop-a-helpful-messages-draw/host_check.cpp": "f3cb04f847668c3e414ba226f1bb230b832af0de84fa806707836ad7a83ee2a8",
+    "sources/w12-hud-loop-b-hud-words/host_check.cpp": "ec821873f1711a4200497cb1bfe489a929074efc2a96343f8558c19e323d2bcd",
+    "sources/w12-hud-loop-b-hud-words/hud_words.cpp": "036c25b26fdaea399c06df7f140067a7f4efd7aac4c59bfd4d539245862293fc",
+    "sources/w12-hud-loop-b-inventory-item-check-slot/host_check.cpp": "50367c3cadd88ab121c0d33183556c4fe9c4b944394a7194fed71d94d4c22881",
+    "sources/w12-hud-loop-b-inventory-item-check-slot/inventory_item_check_slot.cpp": "661ba00c3263a704bdebc4ceff84b1fdd3c3412a62faa707aa627acfd700b769",
+    "sources/w12-hud-loop-b-inventory-start/host_check.cpp": "a36741b0fb7d2fda2856ad81f8f90f8186a2371811e93ca5379a2ff9b69758ef",
+    "sources/w12-hud-loop-b-inventory-start/inventory_start.cpp": "fcb264d293d60e94aaff516a0acca794a6e90b2801fee35f5e10b51dad382b98",
+    "sources/w12-hud-loop-b-item-equipped/host_check.cpp": "be7452567c0e66c4b9f41e26c0ea974189a668250915cfc2c70328d6753f0941",
+    "sources/w12-hud-loop-b-item-equipped/item_equipped.cpp": "39b4a419f26ca628e4fb9697626ee1c9ae0913e271ca0e5e56e32af4a78c441c",
+    "sources/w12-hud-loop-b-load-player-lumps/host_check.cpp": "d8fe2316c34d5129188887bbe1575328465d4779f856b5fa05602cc7df9c22aa",
+    "sources/w12-hud-loop-b-load-player-lumps/load_player_lumps.cpp": "3ccfc5903ebbd8779cf0af368526b550b3e654bc302a677108f824cd2baceddc",
+    "sources/w12-hud-loop-b-multi-player-markers/host_check.cpp": "d355718452b0d20b50c2a38af463458f2e42d789b9cfec4c9a17e04769307995",
+    "sources/w12-hud-loop-b-multi-player-markers/multi_player_markers.cpp": "9b806caeb7bf9e0ff6c0117cc4552b2dae84362c11c071856d429856b1e2520c",
+    "sources/w12-hud-loop-b-player-block-sparks/host_check.cpp": "c22c34d4762a0ba92553a11d5d04b48aafeafa769bb5858d031cdc0450ab941e",
+    "sources/w12-hud-loop-b-player-block-sparks/player_block_sparks.cpp": "079542622688711e01891db6c39e24f248b6ba1d8e06d009c37db0bd6bd78782",
+    "sources/w12-hud-loop-b-player-item-scan/host_check.cpp": "1df8eac5190ba5e62449b30ad44f9fa4ec7b6adc90e8676da2676cfe80fee9fc",
+    "sources/w12-hud-loop-b-player-item-scan/player_item_scan.cpp": "5e20b634e4f1c8a8142a300e15312aebe192b352e92e44e6292679e61fcd3263",
+    "sources/w12-hud-loop-b-player-selection-npc-active-chunks/host_check.cpp": "cc8865724e30ce8639842eaf0b1ad34ea14ebd4b9e9ac7c0a6fc0e9029008c5a",
+    "sources/w12-hud-loop-b-player-selection-npc-active-chunks/npc_active_chunks.cpp": "2e78659ae38562c6d491e773a739e0a09171c8506f55c9479a5775d89dba3677",
+    "sources/w12-hud-loop-b-player-selection-npc-draw/host_check.cpp": "6b02f5e2ba7fc26ed05812d8c73597343f721e541e5f1e3405937178f8e69ac8",
+    "sources/w12-hud-loop-b-player-selection-npc-draw/npc_draw.cpp": "655a26b0ad0f841122ccd7d72ede9e2990d0142f2a8b17ebd9be60898d0495be",
+    "sources/w12-hud-loop-b-player-selection-npc-visible/host_check.cpp": "598a14173f4f912a0e407abc784f3ef444a9511d9c8bc86d16c1e24c6075f6ca",
+    "sources/w12-hud-loop-b-player-selection-npc-visible/npc_visible.cpp": "d71de0134d9a0cf0379edfa47a94bd09fc01e1dd94fa43b6b6f97039c01d0ec2",
+    "sources/w12-hud-loop-b-poke-state/host_check.cpp": "e987813279380757bafd527d8a0769a5747a1c9f63a81ab5b396b36e3da479e1",
+    "sources/w12-hud-loop-b-poke-state/poke_state.cpp": "d1a3ac0f6764f92925431e3bf0d25ab2f0164f3ba0ba11ce3762eb4f462b05cc",
+    "sources/w12-hud-loop-b-resurect-effect/host_check.cpp": "42fb3f82cff8f5c96018aa3df6b77f369c2c0e869a846881da0d1ab678c9641d",
+    "sources/w12-hud-loop-b-resurect-effect/resurect_effect.cpp": "eaac5b134d71cf667040d3311a3491b19fc73937cd34b940d1ab36e6edf64002",
+    "sources/w12-hud-loop-b-run-gold/host_check.cpp": "9cc56f389b2dd78f4bbb42b23ffa2e83feb9fd684ffd2362e636d03ced6e6072",
+    "sources/w12-hud-loop-b-run-gold/run_gold.cpp": "1299c073b1f9d0aaffd1dda733e7da50146ef70dd394e34608fa170e81e2a08f",
+    "sources/w12-hud-loop-b-run-hud/host_check.cpp": "eb120ac33b0d082efa134f8b18a85122891b620d751039bb3ec2b1811ae55abe",
+    "sources/w12-hud-loop-b-run-hud/run_hud.cpp": "d84b8cf9da8f261619b11ad1e58aa757160626e21a679f15974118f3c652f8f1",
+    "sources/w12-hud-loop-b-save-activate/host_check.cpp": "e32a25940dbfc68dbfe8f739d50cde6fcafd32cf9c0dc1eb9e63a3c6bc1dcf73",
+    "sources/w12-hud-loop-b-save-activate/save_activate.cpp": "5aeac765f040805fdc67eafed4aaf099910bb673e83bc946deab290fb929986b",
+    "sources/w12-hud-loop-b-shop-draw-task-bar/host_check.cpp": "b6912042221cd0c0dbbedbc423cb9b8dcc9d2eed88b23cee6af8a315d72f562f",
+    "sources/w12-hud-loop-b-shop-draw-task-bar/shop_draw_task_bar.cpp": "eff7c436984a63fd047377fc512e1ed6f03453347dea4376f0bb1cc5e62d2bdf",
+    "sources/w12-hud-loop-b-shop-inventory-grid-draw/host_check.cpp": "5e06a9e7769b08c94b10edfe37aaf4e81a6b65e2d2f5f883903ac4e20e787231",
+    "sources/w12-hud-loop-b-shop-inventory-grid-draw/shop_inventory_grid_draw.cpp": "0e095f4e79468f45e3aec72328955ae1e4f00d457ae8ed78aa891eff408ee904",
+    "sources/w12-hud-loop-b-shop-inventory-grid-run/host_check.cpp": "1f59b36d32dbdb0a415f4da81acb3d9db424e997b329462f80057f80b90516be",
+    "sources/w12-hud-loop-b-shop-inventory-grid-run/shop_inventory_grid_run.cpp": "fbf77398db776b43a24d9da4758eefeb126c8d953f639d96b41629af4d5eba51",
+    "sources/w12-hud-loop-b-sorted-creature-list/host_check.cpp": "c4d60113a22f106f6f5fed63477d491efdd9d7f025a2a836fa06216e89bb119c",
+    "sources/w12-hud-loop-b-sorted-creature-list/sorted_creature_list.cpp": "f2f407fefd232420af743dff656ddd656792a174581d4f5bd7bdd9fd1761fbd3",
+    "sources/w12-hud-loop-b-sprite-grid/host_check.cpp": "8a9a224f011acd15d69cfb557a5dfbe95e45feab6fb8a70678e9378a1437b0f4",
+    "sources/w12-hud-loop-b-sprite-grid/sprite_grid.cpp": "54a4129f9b03597994a01ecaf62ae71cb9b980ff17e6c9e044f3ad9e882acf5e",
+    "sources/w12-hud-loop-b-update-cursor/host_check.cpp": "79a1a0bfadb8c21a98674e0c1bbbd79483d44b9845bbf1741a4d193946a1daee",
+    "sources/w12-hud-loop-b-update-cursor/update_cursor.cpp": "528f8989a49833c54ecd6eada67f34116643be98870fc6159023cfe369dc0667",
+    "sources/w12-hud-loop-b-update-players-ready/host_check.cpp": "391db819207f24487880a80a7d7d58dd81ca85d698d5b7a5dccb879ddd6eab84",
+    "sources/w12-hud-loop-b-update-players-ready/update_players_ready.cpp": "3b4ce073a29288fcd3142c0d72107a8a4dede4daca659ce9148bbc3fb10a179d",
     "sources/w12-particle-data-a-bat-params/bat_params.cpp": "dad9c657776c3c91848e00a7b7e7fff1d29e360dd69ba9a9500538ff96bc5763",
     "sources/w12-particle-data-a-bat-params/host_check.cpp": "944c3b7dff2b1c6a7c1e74bfe3f6257481f7c9a9b8a92e086ad2889478bd6fab",
     "sources/w12-particle-data-a-ctor-particle-prop/host_check.cpp": "1009847e1b03ecf30300723634a6aee2943b3e1d891a717f75488b2e8bfb7c46",
@@ -78253,11 +78610,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 5225,
-    "authored_default_inputs": 5223,
+    "selected_inputs": 5248,
+    "authored_default_inputs": 5246,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 3993,
-    "compiled_body_bytes_from_accepted_inputs": 1739664,
+    "emitted_function_definitions_including_helpers": 4014,
+    "compiled_body_bytes_from_accepted_inputs": 1769032,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -78270,7 +78627,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 4912
+    "package_selected_inputs": 4935
   },
   "startup_implementations": [
     {
@@ -155212,6 +155569,386 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w12-hud-loop-a-data-inv-header/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-hud-words/hud_words.cpp",
+      "source_sha256": "036c25b26fdaea399c06df7f140067a7f4efd7aac4c59bfd4d539245862293fc",
+      "object_sha256": "c9ea39216dfc76f54b74c3f5247fd3d0efd3203b63dd0b0b0f23c8c7564dedd0",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-b-hud-words/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-inventory-item-check-slot/inventory_item_check_slot.cpp",
+      "source_sha256": "661ba00c3263a704bdebc4ceff84b1fdd3c3412a62faa707aa627acfd700b769",
+      "object_sha256": "41d154ec585b438b2baa840e22deb79d764e199f48b040e34cb3502c885fe8b8",
+      "emitted_functions": [
+        {
+          "name": "inventoryItemCheckSlot__FiPQ24item11description",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-inventory-item-check-slot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-inventory-start/inventory_start.cpp",
+      "source_sha256": "fcb264d293d60e94aaff516a0acca794a6e90b2801fee35f5e10b51dad382b98",
+      "object_sha256": "5795ff3a6726c0ca652bf997a8ffdd70c3bdffb6901926666088d06c056bef8b",
+      "emitted_functions": [
+        {
+          "name": "inventoryStart__Fii",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-inventory-start/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-item-equipped/item_equipped.cpp",
+      "source_sha256": "39b4a419f26ca628e4fb9697626ee1c9ae0913e271ca0e5e56e32af4a78c441c",
+      "object_sha256": "53ed95332b94616d591d03f171bb4957a0f3a0aa75e633ea84fdf61f43969a38",
+      "emitted_functions": [
+        {
+          "name": "itemEquipped__FiPQ24item11description",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-item-equipped/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-load-player-lumps/load_player_lumps.cpp",
+      "source_sha256": "3ccfc5903ebbd8779cf0af368526b550b3e654bc302a677108f824cd2baceddc",
+      "object_sha256": "75f00f5ec06d6713d120d4cdd227b253b071be030a5d147f82688ef4a0a30424",
+      "emitted_functions": [
+        {
+          "compiled_body_bytes": 192,
+          "name": "_ZN12_GLOBAL__N_1L10loadChoiceEPKcPcS1_S1_S1_Pai"
+        },
+        {
+          "compiled_body_bytes": 864,
+          "name": "loadPlayerLumps__Fv"
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-load-player-lumps/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-multi-player-markers/multi_player_markers.cpp",
+      "source_sha256": "9b806caeb7bf9e0ff6c0117cc4552b2dae84362c11c071856d429856b1e2520c",
+      "object_sha256": "453b582754bcee0d5a13e5fb77dcd62cfddcb1f6b7c0f3e8a419756a603f084c",
+      "emitted_functions": [
+        {
+          "name": "maybeDrawMultiPlayerMarkers__6Player",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-multi-player-markers/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-player-block-sparks/player_block_sparks.cpp",
+      "source_sha256": "079542622688711e01891db6c39e24f248b6ba1d8e06d009c37db0bd6bd78782",
+      "object_sha256": "3f010ea206a96c51aa3fb63e5bd1c7b378465297f616f906a03cf9f67efe5d64",
+      "emitted_functions": [
+        {
+          "name": "playerBlockSparks__6Playeri",
+          "compiled_body_bytes": 1416
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-player-block-sparks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-player-item-scan/player_item_scan.cpp",
+      "source_sha256": "5e20b634e4f1c8a8142a300e15312aebe192b352e92e44e6292679e61fcd3263",
+      "object_sha256": "ff098732c384b9ccd6d01b0310fc109034c6879208cf69dbfba103a32a5c14a0",
+      "emitted_functions": [
+        {
+          "name": "playerItemScan__6PlayerP3padi",
+          "compiled_body_bytes": 3004
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-player-item-scan/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-active-chunks/npc_active_chunks.cpp",
+      "source_sha256": "2e78659ae38562c6d491e773a739e0a09171c8506f55c9479a5775d89dba3677",
+      "object_sha256": "94d37242c661fc0da2a50d18f986eb31089c9b4b6ae9cea78d453bc483b8fad9",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionGetNPCActiveChunks__FP3NPC",
+          "compiled_body_bytes": 772
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-player-selection-npc-active-chunks/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-draw/npc_draw.cpp",
+      "source_sha256": "655a26b0ad0f841122ccd7d72ede9e2990d0142f2a8b17ebd9be60898d0495be",
+      "object_sha256": "db86a7d809d893798c4ee701dd000b9ebef858f517a9f4e74996bbb6a6298b9c",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord",
+          "compiled_body_bytes": 1164
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-player-selection-npc-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-player-selection-npc-visible/npc_visible.cpp",
+      "source_sha256": "d71de0134d9a0cf0379edfa47a94bd09fc01e1dd94fa43b6b6f97039c01d0ec2",
+      "object_sha256": "8765f94fb41c142a10c7af34422669808e62c3e4785701aac7c71d18b154ed0f",
+      "emitted_functions": [
+        {
+          "name": "playerSelectionNPCVisible__FP3NPC",
+          "compiled_body_bytes": 616
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-player-selection-npc-visible/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-poke-state/poke_state.cpp",
+      "source_sha256": "d1a3ac0f6764f92925431e3bf0d25ab2f0164f3ba0ba11ce3762eb4f462b05cc",
+      "object_sha256": "26c97fcd886263243a610f05c2cc5e8923d22f8784ec1e89832e365a25b8e91b",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-b-poke-state/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-resurect-effect/resurect_effect.cpp",
+      "source_sha256": "eaac5b134d71cf667040d3311a3491b19fc73937cd34b940d1ab36e6edf64002",
+      "object_sha256": "3725717c20d703a8b196159e352fc5d801cf55f98a323e1805f2be609de55c69",
+      "emitted_functions": [
+        {
+          "name": "resurectEffect__6Player",
+          "compiled_body_bytes": 1316
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-resurect-effect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-run-gold/run_gold.cpp",
+      "source_sha256": "1299c073b1f9d0aaffd1dda733e7da50146ef70dd394e34608fa170e81e2a08f",
+      "object_sha256": "f04d1b886005c04d50c631012e4d88d62d39c88793b7e89c0e4a6ad31957f089",
+      "emitted_functions": [
+        {
+          "name": "runGold__Fv",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-run-gold/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-run-hud/run_hud.cpp",
+      "source_sha256": "d84b8cf9da8f261619b11ad1e58aa757160626e21a679f15974118f3c652f8f1",
+      "object_sha256": "9940d47239e205e16f24d154034c6c77e7b72d21e480e97e982c0a1f18be0ea4",
+      "emitted_functions": [
+        {
+          "name": "runHUD__Fi",
+          "compiled_body_bytes": 4764
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-run-hud/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-save-activate/save_activate.cpp",
+      "source_sha256": "5aeac765f040805fdc67eafed4aaf099910bb673e83bc946deab290fb929986b",
+      "object_sha256": "9e58a55be1e366a85f6efda185dc8903aaa620fb57bdc8f6051a7112366a5196",
+      "emitted_functions": [
+        {
+          "name": "saveActivate__9Savepoint",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-save-activate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-shop-draw-task-bar/shop_draw_task_bar.cpp",
+      "source_sha256": "eff7c436984a63fd047377fc512e1ed6f03453347dea4376f0bb1cc5e62d2bdf",
+      "object_sha256": "e5c4ebed81456287906aad4c7f68d3751d982c24152ac05af0b96f2c8c763b0a",
+      "emitted_functions": [
+        {
+          "name": "shopDrawTaskBar__FP12screenStruct",
+          "compiled_body_bytes": 492
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-shop-draw-task-bar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-shop-inventory-grid-draw/shop_inventory_grid_draw.cpp",
+      "source_sha256": "0e095f4e79468f45e3aec72328955ae1e4f00d457ae8ed78aa891eff408ee904",
+      "object_sha256": "0efe38fc1631cb95a25548b4244463317c882013d4d2777a06043c48840755da",
+      "emitted_functions": [
+        {
+          "name": "shopInventoryGridDraw__FiiiP12screenStruct",
+          "compiled_body_bytes": 1880
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-shop-inventory-grid-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-shop-inventory-grid-run/shop_inventory_grid_run.cpp",
+      "source_sha256": "fbf77398db776b43a24d9da4758eefeb126c8d953f639d96b41629af4d5eba51",
+      "object_sha256": "2cfe9421d3c3aa925d85f41bfa8536274a6e6093e93bf2ce5cae696832d81879",
+      "emitted_functions": [
+        {
+          "name": "shopInventoryGridRun__FiiiP12screenStruct",
+          "compiled_body_bytes": 8240
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-shop-inventory-grid-run/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-sorted-creature-list/sorted_creature_list.cpp",
+      "source_sha256": "f2f407fefd232420af743dff656ddd656792a174581d4f5bd7bdd9fd1761fbd3",
+      "object_sha256": "a42e121e23a4f7a5b752f90a92c31930f9e4f6d34deb62e55d7dc3a93a4416f7",
+      "emitted_functions": [
+        {
+          "name": "objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature",
+          "compiled_body_bytes": 944
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-sorted-creature-list/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-sprite-grid/sprite_grid.cpp",
+      "source_sha256": "54a4129f9b03597994a01ecaf62ae71cb9b980ff17e6c9e044f3ad9e882acf5e",
+      "object_sha256": "cd8510148645553dcd1480197ab2e38e6231f9a09c5a3bd88a65e1c0f3406485",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w12-hud-loop-b-sprite-grid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-update-cursor/update_cursor.cpp",
+      "source_sha256": "528f8989a49833c54ecd6eada67f34116643be98870fc6159023cfe369dc0667",
+      "object_sha256": "80f36047ade233ac2accedef77ca57e148ecddf325e440f5f8c6b412f6c39922",
+      "emitted_functions": [
+        {
+          "name": "updateCursor__FiiiiiP12screenStructi",
+          "compiled_body_bytes": 1028
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-update-cursor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-hud-loop-b",
+      "source": "sources/w12-hud-loop-b-update-players-ready/update_players_ready.cpp",
+      "source_sha256": "3b4ce073a29288fcd3142c0d72107a8a4dede4daca659ce9148bbc3fb10a179d",
+      "object_sha256": "426afef6f6e651fdb65dceda9c2d1e04d8366ae0d43d3006afd16fc2e741a58d",
+      "emitted_functions": [
+        {
+          "name": "updatePlayersReady__9Savepoint",
+          "compiled_body_bytes": 576
+        }
+      ],
+      "host_files": [
+        "sources/w12-hud-loop-b-update-players-ready/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

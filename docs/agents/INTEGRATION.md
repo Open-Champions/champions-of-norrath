@@ -9131,3 +9131,21 @@ Closed: `arrowLeft`, `arrowRight`, `beardSetting`, `bustAlpha`, `charAnimTest`, 
 
 Opened: `ChangeNetCam__6Camerai`, `matUntransform__FP6Point3P8Matrix44T0`, `modelSetNoZRead__Fv`, `objGet__FP10GameObjectPc`
 - 2026-10-13 10:04 CDT — agents/w12-hud-loop-a — 981 unresolved imports
+
+## agents/w12-hud-loop-b
+
+Merged (merge commit, branch tip `3de61744`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown, plus a separate "not closed" section). 23 units with fresh `input_order` values 5225 through 5247 (20 function units and three data units; the notes' entries omit `kind`, `profile` and `header_closure`, filled with the stated defaults). All 23 committed host checks pass here, native arm64, built with `-DW12_HUD_HOST -DNORRATH_HOST_CONTRACT -fno-builtin -ffp-contract=off`. The worker's private paired runs were not re-verified. The notes list `loadPlayerLumps__Fv` with one function body; the compiler also emits a file-local helper `_ZN12_GLOBAL__N_1L10loadChoiceEPKcPcS1_S1_S1_Pai` (192 bytes) from the same unit, so the first build stopped on "Generated function inventory differs"; the helper was added to the unit's recorded functions (plan, snapshot, package record), after which the build passed. All other units' recorded functions matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5246 authored inputs, 4012 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 27 closed names reproduce. `sprGrid` and `spriteCount` have the same addresses as two `norrath_floor_*_view` objects of `floor-storage`; the names differ, so the link has no duplicate, but one pair should be dropped when an owner is chosen. `norrath_item_create`, `norrath_item_create_random`, `msg_run__6Player`, `routePlot__FR10RouteQueue` and `playerSelectionTask__Fv` were not closed (reasons in the notes).
+
+The count **rises** by 6 net: the new bodies call functions and read data nobody has authored yet (33 opened, many of them file-local particle and table objects).
+
+| | |
+|---|---|
+| Before | 981 |
+| After | 987 |
+| Closed | 27 |
+| Opened | 33 |
+
+Closed: `inventoryItemCheckSlot__FiPQ24item11description`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `loadPlayerLumps__Fv`, `maybeDrawMultiPlayerMarkers__6Player`, `multiBody`, `multiHelpMessageOn`, `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`, `playerBlockSparks__6Playeri`, `playerItemScan__6PlayerP3padi`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `resurectEffect__6Player`, `runGold__Fv`, `runHUD__Fi`, `saveActivate__9Savepoint`, `shipOn`, `shopDrawTaskBar__FP12screenStruct`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`, `spriteCount`, `updateCursor__FiiiiiP12screenStructi`, `updatePlayersReady__9Savepoint`
+
+Opened: `P_Push__Fv`, `blueSpark`, `combineTable`, `countItems__FP10GameObject`, `distanceToPlane2__FP6Point3P6Point2T0`, `drawNewestQuickSpellMenu__Fiiicl`, `fullCount`, `getMoveDir__FiiiP12screenStruct`, `getPic__4itemiPQ24item11description`, `hideAbilityAdjustMouse`, `iRandState`, `iconAlpha`, `itemInfoHeight`, `itemToDestroy`, `listInsert__FP8ListHeadP10__listNodePv`, `localRandState`, `lumpPartialLoad__FPcT0`, `lumpRename__FPcT0`, `maxDistance`, `msgEquipItem__FiPQ24item11descriptioni`, `msgInvItemSetAttributes__FiiPcPQ24item11description`, `msgUnequipItem__FiPQ24item11description`, `playerAllocateArmorCache__Fii`, `playerCheckArmorCacheRaces__Fv`, `playerInitArmorCache__Fv`, `redSpark`, `runStats__Fii`, `shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii`, `shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii`, `shopRunMouseLogic__FiiP12screenStructi`, `textureDrawFloat__FP8_textureffiUiff`, `updateTaskBar__FiP12screenStruct`, `zeroPad`
+- 2026-10-13 10:21 CDT — agents/w12-hud-loop-b — 987 unresolved imports
