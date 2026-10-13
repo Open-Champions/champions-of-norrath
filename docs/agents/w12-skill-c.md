@@ -60,3 +60,9 @@ Build-plan entry: `independently_authored_source`, `authored_cpp`, source `exper
 Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-slashing-level-requirement/get_level_requirement.cpp`, object `get_level_requirement.o`, empty `header_closure`, emitted function `getLevelRequirement__13SkillSlashingi` (8 bytes), SHA-256 `8e317681e20fd95bef665999c80ed1935cb4bb6ee433e53df010489867b545bf`; add the source hash to `files` and let the integrator assign order.
 
 - Inferred: `getLevelRequirement__13SkillSlashingi` shifts the 32-bit input left by two with wraparound; gameplay range/use remains unknown.
+
+- `getSkillPointCost__17SkillResistPoisoni` at `0x00313d10` has an 8-byte extent and returns its integer argument unchanged. The reviewed EE build emitted an 8-byte function; its host contract passed on boundary and representative inputs. Source/test: `experimental/sources/w12-skill-c-resist-poison-point-cost/`. No byte match or game execution is claimed.
+
+Build-plan entry: `independently_authored_source`, `authored_cpp`, source `experimental/sources/w12-skill-c-resist-poison-point-cost/get_skill_point_cost.cpp`, object `get_skill_point_cost.o`, empty `header_closure`, emitted function `getSkillPointCost__17SkillResistPoisoni` (8 bytes), SHA-256 `438d35e6b62f598f445ad2d4ad3d0689e0f8a60eb22a2925abf5f4feae4b598e`; add the source hash to `files` and let the integrator assign order.
+
+- Inferred: `getSkillPointCost__17SkillResistPoisoni` provides identity mapping for all 32-bit inputs; gameplay range/use remains unknown.
