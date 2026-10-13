@@ -24,3 +24,4 @@ Every function compiles with the reviewed `authored_cpp` profile and has a `host
 | `anim-state-data` | data: `animState` (264 bytes), `animStatePtr`, `animUseBuffer`, `animationLoading`, `animationLoadPos` | 0x7ccad8, 0x486aa4, 0x48501f, 0x484358, 0x486a08 | 264, 4, 1, 1, 4 |
 | `lump-data` | data: `domeLump`, `dialogLumpName`, `eqLumpHeader` | 0x486b00, 0x48500c, 0x4845a0 | 4 each |
 | `game-line-data` | data: `gameLineCount`, `gameLines` (100 pointers) | 0x485ea8, 0x8d57a8 | 4, 400 |
+| `in-msg-data` | data: `inMsg` | 0x8d8938 | 1008 |
