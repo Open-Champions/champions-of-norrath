@@ -10800,3 +10800,21 @@ Opened: `AddOption__13VIGUIComboBoxPc`, `AddPage__20VIWndGenericRendererPCc`, `C
 
 Full partial build: 7476 source compilations, one link, 5954 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 05:37 CDT — agents/w16-realm-b — 779 unresolved imports
+
+## agents/w16-io-a
+
+Merged (merge commit). All 21 units in the notes are selected, each with a committed host check that I built with the line in its own header and ran (21 of 21 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 779 |
+| After | 771 |
+| Closed | 21 |
+| Opened | 13 |
+
+Closed: `BufferedRead__6VIFilePvi`, `BufferedSeek__6VIFilelQ26VIFile10SeekOrigin`, `BufferedWrite__6VIFilePCvi`, `Eof__6VIFile`, `FixupTextBuffer__13VIStringTable`, `MemoryRead__6VIFilePvi`, `MemorySeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmRead__6VIFilePvi`, `MemorySegmSeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmWrite__6VIFilePCvi`, `MemoryWrite__6VIFilePCvi`, `MergeFreeSpuMem__13VISoundDevice`, `ParsePrimBufferObjV0__10VIESFParse`, `ParseSound__10VIESFParsePCcR7VIScene`, `ParseSprite__10VIESFParse`, `ParseSubSprite__10VIESFParse`, `ParseWorldBaseHeader__10VIESFParseR7VIWorld`, `ParseWorldRegions__10VIESFParseR7VIWorld`, `ParseWorldTree__10VIESFParseR11VIWorldTree`, `ParseWorldZoneProxies__10VIESFParseR7VIWorld`, `ParseZoneBaseObj__10VIESFParse`
+
+Opened: `BufferedReadCopy__6VIFilePvi`, `CDRead__6VIFileUiUiPvP10sceCdRMode`, `Open__9VIObjFilePCcQ29VIObjFile8FileMode`, `ParseSkinLODSpriteObj__10VIESFParse`, `ParseSkinSubSpriteObj__10VIESFParse`, `ParseZoneFlora__10VIESFParse`, `ParseZonePreTranslations__10VIESFParseR6VIZone`, `ParseZoneRooms__10VIESFParseR6VIZone`, `ParseZoneStaticTable__10VIESFParseRt7VIArray1Z21VIZoneStaticTableElem`, `ParseZoneTree__10VIESFParseR10VIZoneTree`, `Precalc__17VIZoneRadialFloraR7VIScene`, `RemoveActorsFromZone__7VISceneR6VIZoneRt7VIArray1Zi`, `UpdateActors__7VISceneRt7VIArray1Zi`
+
+Full partial build: 7497 source compilations, one link, 5977 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:51 CDT — agents/w16-io-a — 771 unresolved imports

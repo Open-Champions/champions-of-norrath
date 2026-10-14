@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7476,
+  "default_authored_inputs": 7497,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8270,7 +8270,28 @@
     "sources/w16-realm-b-on-touch-session/on_touch_session.cpp": "7a9b543a16b48f59f4ca205083e603727f2d385a7437f2c5be32450c4b31fd9a",
     "sources/w16-realm-b-on-update-game-data/on_update_game_data.cpp": "9400c840c9df2d61bd4edf53405f653eca3765def340a7867bb7024c3a009567",
     "sources/w16-realm-b-process/process.cpp": "e175771e2ba43114228162cea5f00c0b6458e3ae9b01c78b227643ef668c842e",
-    "sources/w16-realm-a-vi-realm-interface-notify-client-requests-connect/notify.cpp": "c7c27c8a345c8d7426b1a40c74b692e26beca71e47e8127fb11ce0bad1bcf2f4"
+    "sources/w16-realm-a-vi-realm-interface-notify-client-requests-connect/notify.cpp": "c7c27c8a345c8d7426b1a40c74b692e26beca71e47e8127fb11ce0bad1bcf2f4",
+    "sources/w16-io-a-esfparse-parse-sound-file/parse_sound_file.cpp": "4860c6979a333577c3157373c6597dfbdbed514be14d10fb8191c9db15567e9a",
+    "sources/w16-io-a-esfparse-prim-buffer-obj-v0/parse_prim_buffer_obj_v0.cpp": "6ba6168361060cd373835a91465faf234e98879fe00633787e43711a72dc0d30",
+    "sources/w16-io-a-esfparse-sprite/parse_sprite.cpp": "b31025522d6315e07b6beab3084198a6d4d66fc3f72da214118755597576e0df",
+    "sources/w16-io-a-esfparse-sub-sprite/parse_sub_sprite.cpp": "44c6777d01754ba305c8a8bc5076821407e3b750ed2878107f47266b4de7a04c",
+    "sources/w16-io-a-esfparse-world-base-header/parse_world_base_header.cpp": "53a6d5138d76e93062c29b19efd43cfb236c3ce53ba30b5a5339eb0e5cdc07dc",
+    "sources/w16-io-a-esfparse-world-regions/parse_world_regions.cpp": "e70acfa8d59a86371fc2d1abf21c3218b77377a129c5b9a9930def46f387f4b9",
+    "sources/w16-io-a-esfparse-world-tree/parse_world_tree.cpp": "3ba45f8a995685f8378b17087de90518ae54759e0e2dc775bc6b28f1e3b65bc2",
+    "sources/w16-io-a-esfparse-world-zone-proxies/parse_world_zone_proxies.cpp": "3e388f1f6e3e9afbcec03a9520fc4704f10b3e5f9a9b9ee19da08adc28e521f9",
+    "sources/w16-io-a-esfparse-zone-base-obj/parse_zone_base_obj.cpp": "bb8368df0d8b7c1a041f68a86e4bdec0306553a7312b25ff8282157a337171ef",
+    "sources/w16-io-a-sound-device-merge-free-spu-mem/merge_free_spu_mem.cpp": "f5a4b11f883f25454684c55ed16c1a03624255b6a2d6b8db78359dcbfc2bb151",
+    "sources/w16-io-a-vifile-buffered-read/buffered_read.cpp": "68daa58f0257d6e91ac1c983f32cc4bddbadc261349afb7fa756ee5f7d3611a5",
+    "sources/w16-io-a-vifile-buffered-seek/buffered_seek.cpp": "baedd5759735a9a9f1085262ee4d0041b43aa062350feff1126b9553c6b8b37a",
+    "sources/w16-io-a-vifile-buffered-write/buffered_write.cpp": "101466ad98a3bacd2eabf357f367a13cefa274d0157eba8fbe8b041837c8adad",
+    "sources/w16-io-a-vifile-eof/eof.cpp": "db3858304dcf844f3ebfe90b11ee3ccfdf7d6aa59308876c109b9ac942e4d9d3",
+    "sources/w16-io-a-vifile-memory-read/memory_read.cpp": "6ee1f081ca94817e5bfa612c740f31c9dea387fad58259de8c46c78ea75d8983",
+    "sources/w16-io-a-vifile-memory-seek/memory_seek.cpp": "10c47a153149c8a03d690bc1126cf937fe3f3b4ef29b94c5d381daebe4bf8142",
+    "sources/w16-io-a-vifile-memory-segm-read/memory_segm_read.cpp": "432f45eb11efc25428a98389ee8e0eaa72cc04edf137f58a844dc613d6331b60",
+    "sources/w16-io-a-vifile-memory-segm-seek/memory_segm_seek.cpp": "11f53e9182509a4ef4ea4cd9b3f573cb6c5bc01f874929308e68b2bea6074b2d",
+    "sources/w16-io-a-vifile-memory-segm-write/memory_segm_write.cpp": "5dcc34eab7c2f3bcdcdade373ce517c3ac4afaf140492aa237d83f59c252f2c5",
+    "sources/w16-io-a-vifile-memory-write/memory_write.cpp": "a6e6f2d23cf5de0254e31520a20a20bea4fc2c247479296f8ff32152d37050d0",
+    "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp": "e79f83e2385946592d59d112983fb008350ee86069dad08dbc65b21e2532dd29"
   },
   "inputs": [
     {
@@ -111296,6 +111317,329 @@
           "compiled_body_bytes": 296
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7478,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_parse_sound_file.o",
+      "profile": "authored_cpp",
+      "sha256": "4860c6979a333577c3157373c6597dfbdbed514be14d10fb8191c9db15567e9a",
+      "source": "sources/w16-io-a-esfparse-parse-sound-file/parse_sound_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSound__10VIESFParsePCcR7VIScene",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7479,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_prim_buffer_obj_v0.o",
+      "profile": "authored_cpp",
+      "sha256": "6ba6168361060cd373835a91465faf234e98879fe00633787e43711a72dc0d30",
+      "source": "sources/w16-io-a-esfparse-prim-buffer-obj-v0/parse_prim_buffer_obj_v0.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParsePrimBufferObjV0__10VIESFParse",
+          "compiled_body_bytes": 660
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7480,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "b31025522d6315e07b6beab3084198a6d4d66fc3f72da214118755597576e0df",
+      "source": "sources/w16-io-a-esfparse-sprite/parse_sprite.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSprite__10VIESFParse",
+          "compiled_body_bytes": 472
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7481,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_sub_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "44c6777d01754ba305c8a8bc5076821407e3b750ed2878107f47266b4de7a04c",
+      "source": "sources/w16-io-a-esfparse-sub-sprite/parse_sub_sprite.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSubSprite__10VIESFParse",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7482,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_world_base_header.o",
+      "profile": "authored_cpp",
+      "sha256": "53a6d5138d76e93062c29b19efd43cfb236c3ce53ba30b5a5339eb0e5cdc07dc",
+      "source": "sources/w16-io-a-esfparse-world-base-header/parse_world_base_header.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldBaseHeader__10VIESFParseR7VIWorld",
+          "compiled_body_bytes": 400
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7483,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_world_regions.o",
+      "profile": "authored_cpp",
+      "sha256": "e70acfa8d59a86371fc2d1abf21c3218b77377a129c5b9a9930def46f387f4b9",
+      "source": "sources/w16-io-a-esfparse-world-regions/parse_world_regions.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldRegions__10VIESFParseR7VIWorld",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7484,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_world_tree.o",
+      "profile": "authored_cpp",
+      "sha256": "3ba45f8a995685f8378b17087de90518ae54759e0e2dc775bc6b28f1e3b65bc2",
+      "source": "sources/w16-io-a-esfparse-world-tree/parse_world_tree.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldTree__10VIESFParseR11VIWorldTree",
+          "compiled_body_bytes": 392
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7485,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_world_zone_proxies.o",
+      "profile": "authored_cpp",
+      "sha256": "3e388f1f6e3e9afbcec03a9520fc4704f10b3e5f9a9b9ee19da08adc28e521f9",
+      "source": "sources/w16-io-a-esfparse-world-zone-proxies/parse_world_zone_proxies.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldZoneProxies__10VIESFParseR7VIWorld",
+          "compiled_body_bytes": 404
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7486,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_esfparse_zone_base_obj.o",
+      "profile": "authored_cpp",
+      "sha256": "bb8368df0d8b7c1a041f68a86e4bdec0306553a7312b25ff8282157a337171ef",
+      "source": "sources/w16-io-a-esfparse-zone-base-obj/parse_zone_base_obj.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseZoneBaseObj__10VIESFParse",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7487,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_sound_device_merge_free_spu_mem.o",
+      "profile": "authored_cpp",
+      "sha256": "f5a4b11f883f25454684c55ed16c1a03624255b6a2d6b8db78359dcbfc2bb151",
+      "source": "sources/w16-io-a-sound-device-merge-free-spu-mem/merge_free_spu_mem.cpp",
+      "emitted_functions": [
+        {
+          "name": "MergeFreeSpuMem__13VISoundDevice",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7488,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_buffered_read.o",
+      "profile": "authored_cpp",
+      "sha256": "68daa58f0257d6e91ac1c983f32cc4bddbadc261349afb7fa756ee5f7d3611a5",
+      "source": "sources/w16-io-a-vifile-buffered-read/buffered_read.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL9writeBackPh",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "BufferedRead__6VIFilePvi",
+          "compiled_body_bytes": 1080
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7489,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_buffered_seek.o",
+      "profile": "authored_cpp",
+      "sha256": "baedd5759735a9a9f1085262ee4d0041b43aa062350feff1126b9553c6b8b37a",
+      "source": "sources/w16-io-a-vifile-buffered-seek/buffered_seek.cpp",
+      "emitted_functions": [
+        {
+          "name": "BufferedSeek__6VIFilelQ26VIFile10SeekOrigin",
+          "compiled_body_bytes": 340
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7490,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_buffered_write.o",
+      "profile": "authored_cpp",
+      "sha256": "101466ad98a3bacd2eabf357f367a13cefa274d0157eba8fbe8b041837c8adad",
+      "source": "sources/w16-io-a-vifile-buffered-write/buffered_write.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZL9writeBackPh",
+          "compiled_body_bytes": 204
+        },
+        {
+          "name": "BufferedWrite__6VIFilePCvi",
+          "compiled_body_bytes": 676
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7491,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_eof.o",
+      "profile": "authored_cpp",
+      "sha256": "db3858304dcf844f3ebfe90b11ee3ccfdf7d6aa59308876c109b9ac942e4d9d3",
+      "source": "sources/w16-io-a-vifile-eof/eof.cpp",
+      "emitted_functions": [
+        {
+          "name": "Eof__6VIFile",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7492,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_read.o",
+      "profile": "authored_cpp",
+      "sha256": "6ee1f081ca94817e5bfa612c740f31c9dea387fad58259de8c46c78ea75d8983",
+      "source": "sources/w16-io-a-vifile-memory-read/memory_read.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemoryRead__6VIFilePvi",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7493,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_seek.o",
+      "profile": "authored_cpp",
+      "sha256": "10c47a153149c8a03d690bc1126cf937fe3f3b4ef29b94c5d381daebe4bf8142",
+      "source": "sources/w16-io-a-vifile-memory-seek/memory_seek.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemorySeek__6VIFilelQ26VIFile10SeekOrigin",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7494,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_segm_read.o",
+      "profile": "authored_cpp",
+      "sha256": "432f45eb11efc25428a98389ee8e0eaa72cc04edf137f58a844dc613d6331b60",
+      "source": "sources/w16-io-a-vifile-memory-segm-read/memory_segm_read.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemorySegmRead__6VIFilePvi",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7495,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_segm_seek.o",
+      "profile": "authored_cpp",
+      "sha256": "11f53e9182509a4ef4ea4cd9b3f573cb6c5bc01f874929308e68b2bea6074b2d",
+      "source": "sources/w16-io-a-vifile-memory-segm-seek/memory_segm_seek.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemorySegmSeek__6VIFilelQ26VIFile10SeekOrigin",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7496,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_segm_write.o",
+      "profile": "authored_cpp",
+      "sha256": "5dcc34eab7c2f3bcdcdade373ce517c3ac4afaf140492aa237d83f59c252f2c5",
+      "source": "sources/w16-io-a-vifile-memory-segm-write/memory_segm_write.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemorySegmWrite__6VIFilePCvi",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7497,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vifile_memory_write.o",
+      "profile": "authored_cpp",
+      "sha256": "a6e6f2d23cf5de0254e31520a20a20bea4fc2c247479296f8ff32152d37050d0",
+      "source": "sources/w16-io-a-vifile-memory-write/memory_write.cpp",
+      "emitted_functions": [
+        {
+          "name": "MemoryWrite__6VIFilePCvi",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7498,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_a_vistringtable_fixup_text_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "e79f83e2385946592d59d112983fb008350ee86069dad08dbc65b21e2532dd29",
+      "source": "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp",
+      "emitted_functions": [
+        {
+          "name": "FixupTextBuffer__13VIStringTable",
+          "compiled_body_bytes": 556
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -111395,7 +111739,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "44fd2c6f96bd6bc5796ea63c8503f0f7b7bc9fba9639062151abd0f058639f51",
+  "snapshot_sha256": "86d59e76bdd76a3d5a895b4230ece512efcd4b3399e6cb55b2114965266e8ef7",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
