@@ -1,4 +1,4 @@
-// Observed: NewCreateSound__18VISpellEventDriverP12VISpellEvent at 0x0117e5e8 is 336 bytes in the
+// Observed: NewCreateSound__18VISpellEventDriverP12VISpellEvent at 0x0117e5e8 is 340 bytes in the
 // pinned SLUS-20565 image. Arguments: (this, record). Always returns 0.
 //   1. If the int at this+24 is -1 it returns 0 and does nothing else.
 //   2. a = __builtin_new(184); when non-null it calls __18VISpellActiveEventP12VISpellEventP7VIScene
