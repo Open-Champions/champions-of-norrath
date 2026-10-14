@@ -11016,3 +11016,21 @@ Opened: `DestroyPool__t7VIArray1Z13VIWorldRegion`, `DestroyPool__t7VIArray1Z6VIZ
 
 Full partial build: 7749 source compilations, one link, 6228 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 07:12 CDT — agents/w16-tmpl-list-b — 658 unresolved imports
+
+## agents/w16-tmpl-list-c
+
+Merged (merge commit). The notes carry no plan-entry list, so I derived the 28 units from the package's source directories (one source file each, object name from the directory name); all 28 have a committed host check that I ran using the build recipe in its own header (28 of 28 exit 0), and each unit's function names and body sizes come from my own compile. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 658 |
+| After | 636 |
+| Closed | 28 |
+| Opened | 6 |
+
+Closed: `End__Ct6VIPool1Z17VIHSpritePlayNode`, `End__Ct6VIPool1Z19VIRasterMaterialLRU`, `End__Ct6VIPool1ZP12VIPrimBuffer`, `End__Ct6VIPool1ZP13VIColorBuffer`, `Erase__t6VIList1ZP10VIFlatFilei`, `Erase__t6VIList1ZQ27VIScene12VISceneOccupi`, `Erase__t6VIPool1ZP12VIPrimBufferi`, `Erase__t6VIPool1ZP13VIHSpriteAnimi`, `Erase__t6VIPool1ZP13VIMaterialPali`, `Erase__t6VIPool1ZP16VIStaticLightingi`, `Erase__t6VIPool1ZP7VIRFonti`, `Erase__t6VIPool1ZP8VIRefMapi`, `Erase__t6VIPool1ZP8VISpritei`, `Init__t7VIArray1Z14VIResourceElemi`, `Init__t7VIArray1Z16VIHSpriteTriggeri`, `Init__t8VIVector1Z10VIMatrix44i`, `Init__t8VIVector1Z13VIHSpriteNodei`, `InsertAfter__7VILNodeP7VILNode`, `Insert__t6VIPool1Z10VIEEBucketRC10VIEEBucketi`, `Next__Ct6VIPool1Z10VIEEBucketi`, `Next__Ct6VIPool1Z17VIHSpritePlayNodei`, `Next__Ct6VIPool1Z19VIRasterMaterialLRUi`, `Next__Ct6VIPool1ZP12VICollBufferi`, `Next__Ct6VIPool1ZP12VIPrimBufferi`, `Next__Ct6VIPool1ZP13VIColorBufferi`, `Next__Ct6VIPool1ZP13VISpellEffecti`, `Next__Ct6VIPool1ZP20VIParticleDefinitioni`, `_$_10VIZoneRoom`
+
+Opened: `Add__t6VIPool1Z10VIEEBucketRC10VIEEBucket`, `Allocate__t6VIPool1Z10VIEEBucket`, `Allocate__t7VIArray1Z14VIResourceElem`, `Clear__t7VIArray1Z14VIResourceElem`, `End__Ct6VIList1ZQ27VIScene12VISceneOccup`, `End__Ct6VIPool1ZP7VIRFont`
+
+Full partial build: 7777 source compilations, one link, 6256 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:18 CDT — agents/w16-tmpl-list-c — 636 unresolved imports

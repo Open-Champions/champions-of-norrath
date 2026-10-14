@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7749,
+  "default_authored_inputs": 7777,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8543,7 +8543,35 @@
     "sources/w16-tmpl-list-b-destroypool-vector-hspritenode/destroypool.cpp": "5f3d2295bbc1c59479fa99d46a17b120dc488394974000f6164141c30a4f616e",
     "sources/w16-tmpl-list-b-destroypool-vector-matrix44/destroypool.cpp": "499baca03939952fc03508d24a2065492ceb86edb960619cdf16250f2edb2a48",
     "sources/w16-tmpl-list-b-end-list-actor/end.cpp": "3e6c688b852fe8d8877a08ec751dba0b846d43386ab6d1b0ef50ecda089bf9a8",
-    "sources/w16-tmpl-list-b-end-list-flatfile/end.cpp": "02cd179cb3e031478cb5c2a96a2663bf9e0c7db207c8ab35ff38be8974261634"
+    "sources/w16-tmpl-list-b-end-list-flatfile/end.cpp": "02cd179cb3e031478cb5c2a96a2663bf9e0c7db207c8ab35ff38be8974261634",
+    "sources/w16-tmpl-list-c-array-init-hspritetrigger/init.cpp": "a5b796efec8e03a39fee97ce8ff60594001c81f99ebdd7f6b0e0c6691bdbf986",
+    "sources/w16-tmpl-list-c-array-init-resourceelem/init.cpp": "eec2ab29526629aa4dc89e6de51f66ad3af0e6ebdccb13fc963edaf531fa2a60",
+    "sources/w16-tmpl-list-c-list-erase-flatfile/erase.cpp": "f5e192c1782a4466b8676b2713d64fc2828381db0004e425d8f6c1bcf535d319",
+    "sources/w16-tmpl-list-c-list-erase-sceneoccup/erase.cpp": "fd4970aa4b4f134409d4c561c05fe81cce0bf80f4bb0f3895a3032654b9aa0bb",
+    "sources/w16-tmpl-list-c-pool-end-colorbuffer/end.cpp": "af05732e1b9da391a7c3068e15d3ab3cdd4e3ad35f4891864e52860f5427a6ef",
+    "sources/w16-tmpl-list-c-pool-end-playnode/end.cpp": "d2bec48f8e8fadc51e9f1a30490cdf6ed1a21059117ab507a5435e3daf4e349d",
+    "sources/w16-tmpl-list-c-pool-end-primbuffer/end.cpp": "c895d4629f84dd9d004322f16884432ff2b64d38d1cd88c8473ec10eee09fa71",
+    "sources/w16-tmpl-list-c-pool-end-rastermaterial-lru/end.cpp": "40725e8ec656cec6f3a1c11c496d6b40b2a145b01d36f6936a325e9bcb3dce8f",
+    "sources/w16-tmpl-list-c-pool-erase-hspriteanim/erase.cpp": "add4cf290f7e6cc60b6971b82abe75b0f85080c1dd0d2e0e1bb22325697c8436",
+    "sources/w16-tmpl-list-c-pool-erase-materialpal/erase.cpp": "d7898a7e8447367e483eb852d2650e9e95c9345d338c209f2c8bba9a6c4459ef",
+    "sources/w16-tmpl-list-c-pool-erase-primbuffer/erase.cpp": "43557a9110b5ec9b656793d09b0d233216f407a0be291727db88bbb31de59e52",
+    "sources/w16-tmpl-list-c-pool-erase-refmap/erase.cpp": "9d323f5d7dcdaedc5f21ffde19fbb1ec253982050d18396f751e6d9aadb44ffb",
+    "sources/w16-tmpl-list-c-pool-erase-rfont/erase.cpp": "a3333b3a0def252f97f3af1bc9091ba4b8be8f7d74324ce61da8676b428a4693",
+    "sources/w16-tmpl-list-c-pool-erase-sprite/erase.cpp": "feeb4d2f404ccbdc5fa4611d4a88aa8b45b5fb2b5a33a1512cd1f30c6c9c43b9",
+    "sources/w16-tmpl-list-c-pool-erase-staticlighting/erase.cpp": "20ae2ef9186106d1d5e309d89bf4495d6fe842f04cb831fd831681a352d6bffc",
+    "sources/w16-tmpl-list-c-pool-insert-eebucket/insert.cpp": "b1ed1e69d5a97766297f7d004abd64d6ea60a6db45d7990393922eaf727eccd1",
+    "sources/w16-tmpl-list-c-pool-next-collbuffer/next.cpp": "439c2b2423045139adc232dcc13cec3a3d463cb29d842904d97ad951da686c9e",
+    "sources/w16-tmpl-list-c-pool-next-colorbuffer/next.cpp": "8755908d7cef6efc8cf56841d592a209969fba8ed96e84a90bcec0f5b1b241d1",
+    "sources/w16-tmpl-list-c-pool-next-eebucket/next.cpp": "7305e6a6608e99fb38b3a13e33b24714817a2ebd190ab76d10fc44e6f82a81f6",
+    "sources/w16-tmpl-list-c-pool-next-hspriteplaynode/next.cpp": "7760bedfba8b0f4c1288acf9cd692c7496ec0b143eca2486bc680dc86c3c7a24",
+    "sources/w16-tmpl-list-c-pool-next-particledefinition/next.cpp": "25f886dd5339e22f8f0e3afa599d18b84fb47e148e5297f339fdaafb48a3d893",
+    "sources/w16-tmpl-list-c-pool-next-primbuffer/next.cpp": "da32ce7688d1560bed5437de9bbf9c7c9f87a771e9ff1071fb9fc75ff5ed0665",
+    "sources/w16-tmpl-list-c-pool-next-rastermaterial-lru/next.cpp": "9272d72eeb747df3196ef54b64d4dca4cc98028d46ca6643c5292e751541e050",
+    "sources/w16-tmpl-list-c-pool-next-spelleffect/next.cpp": "6c8e404df0e8ed56ec6f0f36115163295bb794cc3bddc4e39e2d102470256309",
+    "sources/w16-tmpl-list-c-vector-init-hspritenode/init.cpp": "bc9b591270cbe6861b631b173502e5c46a98151ca14ab89b8b6f50b49c0b5c5c",
+    "sources/w16-tmpl-list-c-vector-init-matrix44/init.cpp": "489c5d62db4d643db1e2bc9cd398ff11b39fc6616abe2a158a9007fc14de5383",
+    "sources/w16-tmpl-list-c-vilnode-insertafter/insert_after.cpp": "feb8b31d282fce107ec1a310114e6299b6ac8a134455963b201f4ba9111216d3",
+    "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c"
   },
   "inputs": [
     {
@@ -115666,6 +115694,426 @@
           "compiled_body_bytes": 12
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7751,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_array_init_hspritetrigger_init.o",
+      "profile": "authored_cpp",
+      "sha256": "a5b796efec8e03a39fee97ce8ff60594001c81f99ebdd7f6b0e0c6691bdbf986",
+      "source": "sources/w16-tmpl-list-c-array-init-hspritetrigger/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t7VIArray1Z16VIHSpriteTriggeri",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7752,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_array_init_resourceelem_init.o",
+      "profile": "authored_cpp",
+      "sha256": "eec2ab29526629aa4dc89e6de51f66ad3af0e6ebdccb13fc963edaf531fa2a60",
+      "source": "sources/w16-tmpl-list-c-array-init-resourceelem/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t7VIArray1Z14VIResourceElemi",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7753,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_list_erase_flatfile_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "f5e192c1782a4466b8676b2713d64fc2828381db0004e425d8f6c1bcf535d319",
+      "source": "sources/w16-tmpl-list-c-list-erase-flatfile/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIList1ZP10VIFlatFilei",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7754,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_list_erase_sceneoccup_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "fd4970aa4b4f134409d4c561c05fe81cce0bf80f4bb0f3895a3032654b9aa0bb",
+      "source": "sources/w16-tmpl-list-c-list-erase-sceneoccup/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIList1ZQ27VIScene12VISceneOccupi",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7755,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_end_colorbuffer_end.o",
+      "profile": "authored_cpp",
+      "sha256": "af05732e1b9da391a7c3068e15d3ab3cdd4e3ad35f4891864e52860f5427a6ef",
+      "source": "sources/w16-tmpl-list-c-pool-end-colorbuffer/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP13VIColorBuffer",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7756,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_end_playnode_end.o",
+      "profile": "authored_cpp",
+      "sha256": "d2bec48f8e8fadc51e9f1a30490cdf6ed1a21059117ab507a5435e3daf4e349d",
+      "source": "sources/w16-tmpl-list-c-pool-end-playnode/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1Z17VIHSpritePlayNode",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7757,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_end_primbuffer_end.o",
+      "profile": "authored_cpp",
+      "sha256": "c895d4629f84dd9d004322f16884432ff2b64d38d1cd88c8473ec10eee09fa71",
+      "source": "sources/w16-tmpl-list-c-pool-end-primbuffer/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1ZP12VIPrimBuffer",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7758,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_end_rastermaterial_lru_end.o",
+      "profile": "authored_cpp",
+      "sha256": "40725e8ec656cec6f3a1c11c496d6b40b2a145b01d36f6936a325e9bcb3dce8f",
+      "source": "sources/w16-tmpl-list-c-pool-end-rastermaterial-lru/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct6VIPool1Z19VIRasterMaterialLRU",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7759,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_hspriteanim_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "add4cf290f7e6cc60b6971b82abe75b0f85080c1dd0d2e0e1bb22325697c8436",
+      "source": "sources/w16-tmpl-list-c-pool-erase-hspriteanim/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP13VIHSpriteAnimi",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7760,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_materialpal_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "d7898a7e8447367e483eb852d2650e9e95c9345d338c209f2c8bba9a6c4459ef",
+      "source": "sources/w16-tmpl-list-c-pool-erase-materialpal/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP13VIMaterialPali",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7761,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_primbuffer_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "43557a9110b5ec9b656793d09b0d233216f407a0be291727db88bbb31de59e52",
+      "source": "sources/w16-tmpl-list-c-pool-erase-primbuffer/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP12VIPrimBufferi",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7762,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_refmap_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "9d323f5d7dcdaedc5f21ffde19fbb1ec253982050d18396f751e6d9aadb44ffb",
+      "source": "sources/w16-tmpl-list-c-pool-erase-refmap/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP8VIRefMapi",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7763,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_rfont_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "a3333b3a0def252f97f3af1bc9091ba4b8be8f7d74324ce61da8676b428a4693",
+      "source": "sources/w16-tmpl-list-c-pool-erase-rfont/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP7VIRFonti",
+          "compiled_body_bytes": 232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7764,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_sprite_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "feeb4d2f404ccbdc5fa4611d4a88aa8b45b5fb2b5a33a1512cd1f30c6c9c43b9",
+      "source": "sources/w16-tmpl-list-c-pool-erase-sprite/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP8VISpritei",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7765,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_erase_staticlighting_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "20ae2ef9186106d1d5e309d89bf4495d6fe842f04cb831fd831681a352d6bffc",
+      "source": "sources/w16-tmpl-list-c-pool-erase-staticlighting/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP16VIStaticLightingi",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7766,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_insert_eebucket_insert.o",
+      "profile": "authored_cpp",
+      "sha256": "b1ed1e69d5a97766297f7d004abd64d6ea60a6db45d7990393922eaf727eccd1",
+      "source": "sources/w16-tmpl-list-c-pool-insert-eebucket/insert.cpp",
+      "emitted_functions": [
+        {
+          "name": "Insert__t6VIPool1Z10VIEEBucketRC10VIEEBucketi",
+          "compiled_body_bytes": 608
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7767,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_collbuffer_next.o",
+      "profile": "authored_cpp",
+      "sha256": "439c2b2423045139adc232dcc13cec3a3d463cb29d842904d97ad951da686c9e",
+      "source": "sources/w16-tmpl-list-c-pool-next-collbuffer/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1ZP12VICollBufferi",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7768,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_colorbuffer_next.o",
+      "profile": "authored_cpp",
+      "sha256": "8755908d7cef6efc8cf56841d592a209969fba8ed96e84a90bcec0f5b1b241d1",
+      "source": "sources/w16-tmpl-list-c-pool-next-colorbuffer/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1ZP13VIColorBufferi",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7769,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_eebucket_next.o",
+      "profile": "authored_cpp",
+      "sha256": "7305e6a6608e99fb38b3a13e33b24714817a2ebd190ab76d10fc44e6f82a81f6",
+      "source": "sources/w16-tmpl-list-c-pool-next-eebucket/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1Z10VIEEBucketi",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7770,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_hspriteplaynode_next.o",
+      "profile": "authored_cpp",
+      "sha256": "7760bedfba8b0f4c1288acf9cd692c7496ec0b143eca2486bc680dc86c3c7a24",
+      "source": "sources/w16-tmpl-list-c-pool-next-hspriteplaynode/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1Z17VIHSpritePlayNodei",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7771,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_particledefinition_next.o",
+      "profile": "authored_cpp",
+      "sha256": "25f886dd5339e22f8f0e3afa599d18b84fb47e148e5297f339fdaafb48a3d893",
+      "source": "sources/w16-tmpl-list-c-pool-next-particledefinition/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1ZP20VIParticleDefinitioni",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7772,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_primbuffer_next.o",
+      "profile": "authored_cpp",
+      "sha256": "da32ce7688d1560bed5437de9bbf9c7c9f87a771e9ff1071fb9fc75ff5ed0665",
+      "source": "sources/w16-tmpl-list-c-pool-next-primbuffer/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1ZP12VIPrimBufferi",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7773,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_rastermaterial_lru_next.o",
+      "profile": "authored_cpp",
+      "sha256": "9272d72eeb747df3196ef54b64d4dca4cc98028d46ca6643c5292e751541e050",
+      "source": "sources/w16-tmpl-list-c-pool-next-rastermaterial-lru/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1Z19VIRasterMaterialLRUi",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7774,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_pool_next_spelleffect_next.o",
+      "profile": "authored_cpp",
+      "sha256": "6c8e404df0e8ed56ec6f0f36115163295bb794cc3bddc4e39e2d102470256309",
+      "source": "sources/w16-tmpl-list-c-pool-next-spelleffect/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct6VIPool1ZP13VISpellEffecti",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7775,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_vector_init_hspritenode_init.o",
+      "profile": "authored_cpp",
+      "sha256": "bc9b591270cbe6861b631b173502e5c46a98151ca14ab89b8b6f50b49c0b5c5c",
+      "source": "sources/w16-tmpl-list-c-vector-init-hspritenode/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t8VIVector1Z13VIHSpriteNodei",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7776,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_vector_init_matrix44_init.o",
+      "profile": "authored_cpp",
+      "sha256": "489c5d62db4d643db1e2bc9cd398ff11b39fc6616abe2a158a9007fc14de5383",
+      "source": "sources/w16-tmpl-list-c-vector-init-matrix44/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t8VIVector1Z10VIMatrix44i",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7777,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_vilnode_insertafter_insert_after.o",
+      "profile": "authored_cpp",
+      "sha256": "feb8b31d282fce107ec1a310114e6299b6ac8a134455963b201f4ba9111216d3",
+      "source": "sources/w16-tmpl-list-c-vilnode-insertafter/insert_after.cpp",
+      "emitted_functions": [
+        {
+          "name": "InsertAfter__7VILNodeP7VILNode",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7778,
+      "kind": "independently_authored_source",
+      "object_name": "w16_tmpl_list_c_zoneroom_dtor_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c",
+      "source": "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10VIZoneRoom",
+          "compiled_body_bytes": 112
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -115765,7 +116213,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "bdf58a6bfad0dc4b376dae20d84c31f66c1bc71d4a9a5a5da976e1a36c8e18f1",
+  "snapshot_sha256": "7318e9ad16200b190864f73f0fb3ddd9d4ac40d24cf14f52657f36659114a52c",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
