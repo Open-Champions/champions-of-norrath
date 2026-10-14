@@ -9908,3 +9908,19 @@ Closed: `_textureDrawFloat__FP8_textureffiUiff`, `commaString__FPc`, `displayIte
 
 Opened: `doEntityDispatch__FP8MTObjDefiP13delayedEntityPib`, `dynlevelcount`, `instmap_bounds`, `kittencount`, `levsuffix`, `mt_ebx`, `mt_eby`, `objectProcessDeleteList__Fv`, `specialparse__FPPciiG6Point3Pc`
 - 2026-10-13 19:34 CDT — agents/w14-hud-a — 924 unresolved imports
+
+## agents/w14-raster
+
+Merged (merge commit, branch tip `3ad91543`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 36 units (32 functions and 4 data words) with fresh `input_order` values 6337 through 6372 (rasterizer, surface, clip and vector/matrix routines; 36 host checks). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. The notes' two unauthored names (`VIDMABillboardMicrocode`, `VIDMARasterMicrocode`, VU1 microcode) stay unresolved by design. Full build with the final snapshot: 6371 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 924 |
+| After | 916 |
+| Closed | 36 |
+| Opened | 28 |
+
+Closed: `Allocate__10VIZoneRoom`, `Bound__6VIBBoxiRC7VIVect3`, `Cache__13VIEESurfCacheR9VISurfaceR10VIMaterialR14VIMaterialPassR8VIRasterPP10_sceDmaTagi`, `CalcDataSize__10VIZoneRoom`, `CalcNodeTransform__9VIHSpriteiR10VIMatrix44R7VISceneT2`, `ClipByTop__11VIClipStackiP7VIVect3RiPP7VIVect3`, `ConstructDMAPacket__10VIMaterialR8VIRasterP7VIQWord`, `CullByTop__11VIClipStackRC8VISphere`, `FilterActor__13WeatherFilterR7VIScenei`, `Init__13VIActorFilter`, `Init__13VISceneFilter`, `Init__8VISphereRC6VIBBox`, `InvertAffine__10VIMatrix44RC10VIMatrix44`, `LockMipLevel__9VISurfaceiRiR12VIPixelStorePPUc`, `NormalizeMagn__7VIVect3`, `Precalc__9VICollRay`, `PushPortal__11VIClipStackR8VICameraiP7VIVect3`, `QueryEmittersAtLocationActor__7VISceneiRC8VICameraR14VIEmitterQuery`, `RecomputeLightningPatches__12VIAtmosphere`, `ReleaseActor__7VIScenei`, `RenderByVolume__6VIZoneR15VISceneRendVarsi`, `Reset__14VICameraEffect`, `SetGSDitherMatrix__8VIRasteriPP10_sceDmaTag`, `ShareSurface__8VIRasteri`, `Store__C6VIBBoxP7VIVect3`, `SubMatrixMul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Surface__8VIRasteri`, `Transform__10VIMatrix44RC7VIVect3fT1`, `UnlockMipLevel__9VISurfacei`, `UploadPerMaterial__8VIRasterPP10_sceDmaTag`, `_8VIRaster$PrimBuffer1`, `_8VIRaster$PrimBuffer2`, `_8VIRaster$RFanOffset`, `_8VIRaster$RInitOffset`, `__as__10VIMatrix33RC10VIMatrix33`, `__cl__7VIPlaneRC7VIVect3N21`
+
+Opened: `Allocate__13VIEESurfCacheR13VIEESurfAlloc`, `CalcCacheInfo__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfo`, `CalcLODLevelIndex__9VIHSpriteRC10VIMatrix44`, `ConstructSolidFillPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructTextPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructWirePass__10VIMaterialiR8VIRasterP7VIQWord`, `Decache__13VIEESurfCacheR9VISurface`, `Download__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoPP10_sceDmaTag`, `Erase__t6VIList1Z7VIActori`, `FindLRU__13VIEESurfCacheR13VIEESurfAllocR8VIRaster`, `GetTime__8VIRaster`, `Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo`, `Magnitude__C7VIVect3`, `MoveToLRUEnd__13VIEESurfCachei`, `PointInSolid__C8VISphereRC7VIVect3`, `ProcessPlayList__9VIHSpriteiR7VIScene`, `ProcessUpHierarchy__9VIHSpritei`, `Process__10VIMateriall`, `ReleaseSprite__7VIScenei`, `ReleaseStaticLighting__7VIScenei`, `RemoveActor__7VIScenei`, `RemoveFromLRU__13VIEESurfCachei`, `RenderByVolume__6VIZoneiR15VISceneRendVars`, `SetBindPose__9VIHSprite`, `Set__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoR14VIMaterialPass`, `Size__Ct6VIPool1Z13VIHSpritePlay`, `_8VIRaster$ColorMatrix`, `_8VIRaster$RMaterialOffset`
+- 2026-10-13 19:39 CDT — agents/w14-raster — 916 unresolved imports
