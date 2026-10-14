@@ -17,6 +17,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w15-m-spell-ctors-a-dtor-13firebomblet` | `_$_13FireBombletJr` | `0x003121b8`, 100 bytes | authored, paired-checked |
 | `w15-m-spell-ctors-a-dtor-14firestormflare` | `_$_14FireStormFlare` | `0x003179c0`, 100 bytes | authored, paired-checked |
 | `w15-m-spell-ctors-a-dtor-18hammerofwrath` | `_$_18SpellHammerOfWrath` | `0x00319768`, 116 bytes | authored, paired-checked |
+| `w15-m-spell-ctors-a-dtor-19summonskeleton` | `_$_19SpellSummonSkeleton` | `0x003188d8`, 116 bytes | authored, paired-checked |
 
 ## Checks performed
 
@@ -39,6 +40,10 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 - **`_$_18SpellHammerOfWrath`.** Stores `_vt$18SpellHammerOfWrath` at +20, calls `listDestroy__FP8ListHead` on +24,
   stores `_vt$5Spell` at +20, calls it on +4, then frees when bit 0 is set. Host contract `ok` (7 flag values).
   Paired comparison 0 mismatches (8 flag values x 3 fills), no HALT. Mutation (bit 1 tested) gives 12 mismatches.
+
+- **`_$_19SpellSummonSkeleton`.** The same shape as the hammer-of-wrath destructor, with `_vt$19SpellSummonSkeleton`.
+  Host contract `ok` (7 flag values). Paired comparison 0 mismatches (8 flag values x 3 fills), no HALT. Mutation
+  (bit 1 tested) gives 12 mismatches.
 
 ## Authored but never executed
 
