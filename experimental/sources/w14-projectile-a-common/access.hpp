@@ -11,6 +11,7 @@ struct Point3 { float x, y, z; };
 extern unsigned char* w14_projectile_a_host_base;
 void w14_projectile_a_host_hurt(unsigned function_word, void* adjusted_object, float amount, void* source, int flags);
 unsigned w14_projectile_a_host_call(unsigned function_word, void* adjusted_object, int argument_count, unsigned long a1, unsigned long a2);
+int w14_projectile_a_host_call3(unsigned function_word, void* adjusted_object, int a1, int a2, void* a3);
 #endif
 
 namespace w14pa {
@@ -19,7 +20,7 @@ inline float bits(unsigned value) { return __builtin_bit_cast(float, value); }
 
 inline unsigned char* from_word(unsigned value) {
 #if defined(W14_PROJECTILE_A_HOST)
-    return w14_projectile_a_host_base + value;
+    return value ? w14_projectile_a_host_base + value : nullptr;
 #else
     return reinterpret_cast<unsigned char*>(static_cast<__UINTPTR_TYPE__>(value));
 #endif
@@ -141,6 +142,45 @@ inline float inverse_length(float squared) {
     return result;
 #else
     return 1.0f / __builtin_sqrtf(squared);
+#endif
+}
+
+// The 80-byte item description a caller builds on its stack before gameAttackResolver (the layout the w11-actor-c sparks collision records
+// use): bytes 32 and 33 are -1, the eight halfwords at 16..31 are 0 and the first halfword of each of the four 8-byte entries at 36, 44,
+// 52 and 60 is -1. Bytes outside those ranges are not written.
+inline void init_description(unsigned char* d) {
+    for (int entry = 3; entry >= 0; --entry) *reinterpret_cast<short*>(d + 36 + 8 * entry) = -1;
+    d[33] = 0xff;
+    d[32] = 0xff;
+    for (int i = 0; i < 8; ++i) *reinterpret_cast<short*>(d + 16 + 2 * i) = 0;
+}
+
+// Finds the first of the four entries whose first halfword is -1 or `kind` and fills it in: first halfword `kind`, then `a` at +2, `b` at +4
+// and `c` at +6. Nothing is written when no entry matches.
+inline void fill_description(unsigned char* d, short kind, short a, short b, short c) {
+    for (int entry = 0; entry < 4; ++entry) {
+        unsigned char* e = d + 36 + 8 * entry;
+        const short first = *reinterpret_cast<short*>(e);
+        if (first == -1 || first == kind) {
+            *reinterpret_cast<short*>(e) = kind;
+            *reinterpret_cast<short*>(e + 2) = a;
+            *reinterpret_cast<short*>(e + 4) = b;
+            *reinterpret_cast<short*>(e + 6) = c;
+            return;
+        }
+    }
+}
+
+// The call the hit handlers make on the object whose address is the word at o+96 of `object`: its table is the word at +96 (not +72), the
+// entry at offset 112 is called on `object` (adjusted by the entry's signed halfword) with (0, halfword, address).
+inline int call_entry_112(unsigned char* object, int halfword, void* address) {
+    unsigned char* const entry = from_word(word(object, 96)) + 112;
+    const unsigned function = *reinterpret_cast<unsigned*>(entry + 4);
+    unsigned char* const adjusted = object + *reinterpret_cast<short*>(entry);
+#if defined(W14_PROJECTILE_A_HOST)
+    return w14_projectile_a_host_call3(function, adjusted, 0, halfword, address);
+#else
+    return reinterpret_cast<int (*)(void*, int, int, void*)>(static_cast<__UINTPTR_TYPE__>(function))(adjusted, 0, halfword, address);
 #endif
 }
 
