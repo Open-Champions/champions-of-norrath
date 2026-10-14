@@ -10655,3 +10655,4 @@ Closed: `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `n
 Opened: 
 
 Full partial build: 7321 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 02:09 CDT — agents/w12-particle-data-b — 847 unresolved imports
