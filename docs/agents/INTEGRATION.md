@@ -10527,3 +10527,4 @@ Closed: `CollideObj__9VICollideR12VICollSphereR9VICapsule`, `CollideObj__9VIColl
 Opened: `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VIVect3T2`, `Collide__9VICollideR12VICollSphereR12VICollBuffer`, `Collide__9VICollideR12VICollSphereR9VICapsule`, `Collide__9VICollideR9VICollRayR12VICollBuffer`, `Erase__t6VIList1ZQ27VIScene12VISceneOccupi`, `Init__12VICollSphereRC12VICollSphereRC10VIMatrix44`, `Init__9VICollRayRC9VICollRayRC10VIMatrix44`, `Normalize__7VIVect4`, `QueryIntersection__6VIZoneR20VISceneIntersectVars`, `Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `__12VICollSphere`
 
 Full partial build: 7198 source compilations, one link, 5722 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:24 CDT — agents/w15-vi-scene-b — 854 unresolved imports
