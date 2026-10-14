@@ -10998,3 +10998,21 @@ Opened: `_vt$11SpellCharge`, `_vt$12DiseaseTrail`, `_vt$12SpellBlessed`, `_vt$12
 
 Full partial build: 7720 source compilations, one link, 6199 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 07:04 CDT — agents/w16-spellmech-a — 685 unresolved imports
+
+## agents/w16-tmpl-list-b
+
+Merged (merge commit). All 29 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (29 of 29 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 685 |
+| After | 658 |
+| Closed | 29 |
+| Opened | 2 |
+
+Closed: `Clear__t6VIList1ZP12VIPrimBuffer`, `Clear__t6VIList1ZP9VIGUIPage`, `Clear__t6VIList1ZP9VISurface`, `Clear__t6VIPool1Z13VIHSpritePlay`, `Clear__t6VIPool1Z17VIHSpritePlayNode`, `Clear__t6VIPool1Z19VIHSpriteAttachment`, `Clear__t6VIPool1ZP12VICollBuffer`, `Clear__t7VIArray1Z11VIClipEntry`, `Clear__t7VIArray1Z13VIWorldRegion`, `Clear__t7VIArray1Z16VIHSpriteTrigger`, `Clear__t7VIArray1Z20VICSpritePartEmitter`, `Clear__t7VIArray1Z6VIZone`, `Clear__t7VIArray1Z7VIPlane`, `Clear__t7VIArray1Z7VIVect3`, `Clear__t8VIVector1Z10VIMatrix44`, `Clear__t8VIVector1Z13VIHSpriteNode`, `DestroyPool__t6VIPool1Z13VIHSpritePlay`, `DestroyPool__t6VIPool1Z17VIHSpritePlayNode`, `DestroyPool__t6VIPool1Z19VIHSpriteAttachment`, `DestroyPool__t6VIPool1ZP15VIParticleMotif`, `DestroyPool__t7VIArray1Z10VIZoneLeaf`, `DestroyPool__t7VIArray1Z10VIZoneNode`, `DestroyPool__t7VIArray1Z16VIHSpriteTrigger`, `DestroyPool__t7VIArray1Z20VICSpritePartEmitter`, `DestroyPool__t7VIArray1Zc`, `DestroyPool__t8VIVector1Z10VIMatrix44`, `DestroyPool__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIList1Z7VIActor`, `End__Ct6VIList1ZP10VIFlatFile`
+
+Opened: `DestroyPool__t7VIArray1Z13VIWorldRegion`, `DestroyPool__t7VIArray1Z6VIZone`
+
+Full partial build: 7749 source compilations, one link, 6228 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:12 CDT — agents/w16-tmpl-list-b — 658 unresolved imports
