@@ -10509,3 +10509,4 @@ Closed: `Animation__7VIScenei`, `CreateActor__7VISceneRC7VIVect3T1fi`, `CreateAn
 Opened: `Add__t6VIList1Z7VIActor`, `Add__t6VIPool1ZP13VIHSpriteAnimRCP13VIHSpriteAnim`, `Clear__10VIZoneRoom`, `Erase__t6VIPool1ZP13VIHSpriteAnimi`, `Erase__t6VIPool1ZP16VIStaticLightingi`, `Erase__t6VIPool1ZP8VIRefMapi`, `Erase__t6VIPool1ZP8VISpritei`, `QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars`, `ReleaseResources__16VIStaticLightingR8VIRasterR12VIDictionary`, `RenderLeaf__6VIZoneiR15VISceneRendVars`, `UpdateActor__7VIScenei`, `__13VIHSpriteAnim`
 
 Full partial build: 7176 source compilations, one link, 5700 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:17 CDT — agents/w15-vi-scene-a — 864 unresolved imports
