@@ -10744,3 +10744,21 @@ Opened: `vprintf`
 
 Full partial build: 7383 source compilations, one link, 5853 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 05:03 CDT — agents/w16-m-data-c — 805 unresolved imports
+
+## agents/w16-io-b
+
+Merged (merge commit). All 21 function units in the notes are selected. Each has a committed `host_contract.cpp` that I rebuilt and ran (21 of 21 exit 0), and I recompiled each unit and checked names and body sizes against the notes (all agree). Tip was about 2 hours old. The notes' paired runs used a private interpreter and are not counted as evidence here.
+
+| | |
+|---|---|
+| Before | 805 |
+| After | 792 |
+| Closed | 21 |
+| Opened | 8 |
+
+Closed: `ParseZoneResource__10VIESFParse`, `ParseZoneRoomActorsObj__10VIESFParse`, `ParseZoneRoomStaticLightingsObj__10VIESFParse`, `ProcessRawFile__13VIStringTableRCt7VIArray1Zc`, `ReadBegin__9VIObjFileUlRUsT2`, `ReadStringBody__9VIObjFilePcUsUs`, `ReadStringLength__9VIObjFileRUs`, `Read__9VIObjFileRSc`, `Read__9VIObjFileRUl`, `ResetState__9VIObjFile`, `SetRepeat__4VIXmi`, `VICdSearchFile__FPCcPUiT1`, `VIIsMcSameSession__Fv`, `VIMemCardAsyncIdle__Fv`, `VIMemCardFormat__Fv`, `VIMemCardIsPrepared__Fv`, `VIMemCardPadAsync__Fi`, `VIMemCardPrepare__Fi`, `VIMemCardProductId__Fv`, `VIMemCardWriteFile__FPCcPCvi`, `VISetMcSessionId__FUl`
+
+Opened: `ParseSimpleSubSpriteObj__10VIESFParse`, `ParseStaticLighting__10VIESFParseRt7VIArray1Zi`, `ParseZoneActor__10VIESFParse`, `UTF8_convertToUTF16__FPCcPUsi`, `UTF8_strlen__FPCci`, `VIMemCardPad__Fi`, `VIMemCardWriteFileAsync__FPCcPCvi`, `sceMcFlush`
+
+Full partial build: 7404 source compilations, one link, 5874 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:11 CDT — agents/w16-io-b — 792 unresolved imports

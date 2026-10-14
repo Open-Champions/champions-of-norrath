@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7383,
+  "default_authored_inputs": 7404,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8177,7 +8177,28 @@
     "sources/w16-m-data-c-w13-spell-msg-a-view-7d6a60/norrath_w13_spell_msg_a_view_7d6a60.cpp": "18035a10971aed47fb609de2100e2f4468e009ae5e620fe06fae0007507debbb",
     "sources/w16-m-data-c-w13-spell-msg-a-view-7d6b00/norrath_w13_spell_msg_a_view_7d6b00.cpp": "54b2a7258e54c70344291735f8cd2ae61a8f53769c0090e802959ef383a38ddd",
     "sources/w16-m-data-c-w13-spell-msg-a-view-7d6fc0/norrath_w13_spell_msg_a_view_7d6fc0.cpp": "5fab334b2ceb575b79e61ff423c9c374872314afce6985dd98501761d19e51b3",
-    "sources/w16-m-data-c-w13-spell-msg-a-view-7d7010/norrath_w13_spell_msg_a_view_7d7010.cpp": "07fbe565a2864e169ba9eaf6fbbf363a7792707d4ea93aa294d6dc5966a488fd"
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d7010/norrath_w13_spell_msg_a_view_7d7010.cpp": "07fbe565a2864e169ba9eaf6fbbf363a7792707d4ea93aa294d6dc5966a488fd",
+    "sources/w16-io-b-cd-search-file/search_file.cpp": "c398137fe42a1557cf807d0e95b2131e864c1d91f392f04b09ac1faa6c94f567",
+    "sources/w16-io-b-esfparse-room-actors/parse_zone_room_actors.cpp": "908a2455884e5c363c730d7f393039af0078781e3a620d5e042427901e791ba2",
+    "sources/w16-io-b-esfparse-room-static-lightings/parse_zone_room_static_lightings.cpp": "4390e9e2f3c5f3ab247624cde26b35a2d6e782f84b2a7169db97a1ac20ba5625",
+    "sources/w16-io-b-esfparse-zone-resource/parse_zone_resource.cpp": "61b3d8ed8263785180e5d56aa865cfe71e3ffda37b1cd428b6cd907cf85a8087",
+    "sources/w16-io-b-mc-same-session/same_session.cpp": "39c69675e32a14a6fe584d99ce4facb2c9646ca2bdc44c05579a87c784b68b08",
+    "sources/w16-io-b-mc-session-id/session_id.cpp": "80523c15bf995c418cce9c1d70a90e2ca9d1428a61481b640ea3ca065ea00446",
+    "sources/w16-io-b-memcard-async-idle/async_idle.cpp": "8e9196e6bc8e4c2a4a3b20166818df8df0796d5ce993f8aa86a4fda1f7fc6190",
+    "sources/w16-io-b-memcard-format/format.cpp": "99bb603ecc2624ef111c128988b31ee0264839d50003d3ea06c279e7b387258f",
+    "sources/w16-io-b-memcard-is-prepared/is_prepared.cpp": "917d9a801e88a9c7a451533e6adae4f8fb3eb2a5b4727864f704baf498b49478",
+    "sources/w16-io-b-memcard-pad-async/pad_async.cpp": "172d79d4a6df846b9d8e6605dcba69eabbb0e27f79a519099dbc7628122ea69b",
+    "sources/w16-io-b-memcard-prepare/prepare.cpp": "af10e0ad4562e1c9df40ff28ac1095851542eae478bea7ae3b69bf9a0163afa4",
+    "sources/w16-io-b-memcard-product-id/product_id.cpp": "43ea5f0915c52fbf7c812c3805ca3562b09b7eaeabfa80b17c68fbb1688c1d8e",
+    "sources/w16-io-b-memcard-write-file/write_file.cpp": "7b8d885d708c0e0e6631d94a632192cfa9b40fcc7822a5e6eba0d6b9f7e50df6",
+    "sources/w16-io-b-objfile-read-begin-at/read_begin_at.cpp": "c68edcaf6a317f1855c0dd600cd7773c6ef2c900d675433c4c40a369215450a1",
+    "sources/w16-io-b-objfile-read-signed-char/read_signed_char.cpp": "0fb24617f499323861a401884ee9a19a8e22ecab6af67e8148974bd29ef9f806",
+    "sources/w16-io-b-objfile-read-string-body/read_string_body.cpp": "604bbedaa18e7caadc7b8dd1294d1513cefae607ceefc67c1db38def8ad6c4ad",
+    "sources/w16-io-b-objfile-read-string-length/read_string_length.cpp": "a21719be7f573e3e41903a6e83a419e0f51e6dead5128901a67f343d4ac10dad",
+    "sources/w16-io-b-objfile-read-unsigned-long/read_unsigned_long.cpp": "96c933e5b97abce730adeecbd03868e3240d49160de956bb0bf832b46c035b2e",
+    "sources/w16-io-b-objfile-reset-state/reset_state.cpp": "6bebb70c096df74cb4b06960ef5d1df851ac393dd07dca6781fb1f77dc2b192d",
+    "sources/w16-io-b-string-table-process-raw-file/process_raw_file.cpp": "f63b0f4162591008ca6d9f33f3b2c5c96c01c93741054f6c7d72184bb12af342",
+    "sources/w16-io-b-xmi-set-repeat/set_repeat.cpp": "a700101a8f409f7364e997b4442257f7d6b7b6a96421e709a58614edb49beec2"
   },
   "inputs": [
     {
@@ -109752,6 +109773,321 @@
       "sha256": "07fbe565a2864e169ba9eaf6fbbf363a7792707d4ea93aa294d6dc5966a488fd",
       "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d7010/norrath_w13_spell_msg_a_view_7d7010.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7385,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_cd_search_file.o",
+      "profile": "authored_cpp",
+      "sha256": "c398137fe42a1557cf807d0e95b2131e864c1d91f392f04b09ac1faa6c94f567",
+      "source": "sources/w16-io-b-cd-search-file/search_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "VICdSearchFile__FPCcPUiT1",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7386,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_esfparse_room_actors.o",
+      "profile": "authored_cpp",
+      "sha256": "908a2455884e5c363c730d7f393039af0078781e3a620d5e042427901e791ba2",
+      "source": "sources/w16-io-b-esfparse-room-actors/parse_zone_room_actors.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseZoneRoomActorsObj__10VIESFParse",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7387,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_esfparse_room_static_lightings.o",
+      "profile": "authored_cpp",
+      "sha256": "4390e9e2f3c5f3ab247624cde26b35a2d6e782f84b2a7169db97a1ac20ba5625",
+      "source": "sources/w16-io-b-esfparse-room-static-lightings/parse_zone_room_static_lightings.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseZoneRoomStaticLightingsObj__10VIESFParse",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7388,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_esfparse_zone_resource.o",
+      "profile": "authored_cpp",
+      "sha256": "61b3d8ed8263785180e5d56aa865cfe71e3ffda37b1cd428b6cd907cf85a8087",
+      "source": "sources/w16-io-b-esfparse-zone-resource/parse_zone_resource.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseZoneResource__10VIESFParse",
+          "compiled_body_bytes": 944
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7389,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_mc_same_session.o",
+      "profile": "authored_cpp",
+      "sha256": "39c69675e32a14a6fe584d99ce4facb2c9646ca2bdc44c05579a87c784b68b08",
+      "source": "sources/w16-io-b-mc-same-session/same_session.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIIsMcSameSession__Fv",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7390,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_mc_session_id.o",
+      "profile": "authored_cpp",
+      "sha256": "80523c15bf995c418cce9c1d70a90e2ca9d1428a61481b640ea3ca065ea00446",
+      "source": "sources/w16-io-b-mc-session-id/session_id.cpp",
+      "emitted_functions": [
+        {
+          "name": "VISetMcSessionId__FUl",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7391,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_async_idle.o",
+      "profile": "authored_cpp",
+      "sha256": "8e9196e6bc8e4c2a4a3b20166818df8df0796d5ce993f8aa86a4fda1f7fc6190",
+      "source": "sources/w16-io-b-memcard-async-idle/async_idle.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardAsyncIdle__Fv",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7392,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_format.o",
+      "profile": "authored_cpp",
+      "sha256": "99bb603ecc2624ef111c128988b31ee0264839d50003d3ea06c279e7b387258f",
+      "source": "sources/w16-io-b-memcard-format/format.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardFormat__Fv",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7393,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_is_prepared.o",
+      "profile": "authored_cpp",
+      "sha256": "917d9a801e88a9c7a451533e6adae4f8fb3eb2a5b4727864f704baf498b49478",
+      "source": "sources/w16-io-b-memcard-is-prepared/is_prepared.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardIsPrepared__Fv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7394,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_pad_async.o",
+      "profile": "authored_cpp",
+      "sha256": "172d79d4a6df846b9d8e6605dcba69eabbb0e27f79a519099dbc7628122ea69b",
+      "source": "sources/w16-io-b-memcard-pad-async/pad_async.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardPadAsync__Fi",
+          "compiled_body_bytes": 588
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7395,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_prepare.o",
+      "profile": "authored_cpp",
+      "sha256": "af10e0ad4562e1c9df40ff28ac1095851542eae478bea7ae3b69bf9a0163afa4",
+      "source": "sources/w16-io-b-memcard-prepare/prepare.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardPrepare__Fi",
+          "compiled_body_bytes": 968
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7396,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_product_id.o",
+      "profile": "authored_cpp",
+      "sha256": "43ea5f0915c52fbf7c812c3805ca3562b09b7eaeabfa80b17c68fbb1688c1d8e",
+      "source": "sources/w16-io-b-memcard-product-id/product_id.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardProductId__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7397,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_memcard_write_file.o",
+      "profile": "authored_cpp",
+      "sha256": "7b8d885d708c0e0e6631d94a632192cfa9b40fcc7822a5e6eba0d6b9f7e50df6",
+      "source": "sources/w16-io-b-memcard-write-file/write_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIMemCardWriteFile__FPCcPCvi",
+          "compiled_body_bytes": 284
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7398,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_read_begin_at.o",
+      "profile": "authored_cpp",
+      "sha256": "c68edcaf6a317f1855c0dd600cd7773c6ef2c900d675433c4c40a369215450a1",
+      "source": "sources/w16-io-b-objfile-read-begin-at/read_begin_at.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadBegin__9VIObjFileUlRUsT2",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7399,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_read_signed_char.o",
+      "profile": "authored_cpp",
+      "sha256": "0fb24617f499323861a401884ee9a19a8e22ecab6af67e8148974bd29ef9f806",
+      "source": "sources/w16-io-b-objfile-read-signed-char/read_signed_char.cpp",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRSc",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7400,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_read_string_body.o",
+      "profile": "authored_cpp",
+      "sha256": "604bbedaa18e7caadc7b8dd1294d1513cefae607ceefc67c1db38def8ad6c4ad",
+      "source": "sources/w16-io-b-objfile-read-string-body/read_string_body.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadStringBody__9VIObjFilePcUsUs",
+          "compiled_body_bytes": 232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7401,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_read_string_length.o",
+      "profile": "authored_cpp",
+      "sha256": "a21719be7f573e3e41903a6e83a419e0f51e6dead5128901a67f343d4ac10dad",
+      "source": "sources/w16-io-b-objfile-read-string-length/read_string_length.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadStringLength__9VIObjFileRUs",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7402,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_read_unsigned_long.o",
+      "profile": "authored_cpp",
+      "sha256": "96c933e5b97abce730adeecbd03868e3240d49160de956bb0bf832b46c035b2e",
+      "source": "sources/w16-io-b-objfile-read-unsigned-long/read_unsigned_long.cpp",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUl",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7403,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_objfile_reset_state.o",
+      "profile": "authored_cpp",
+      "sha256": "6bebb70c096df74cb4b06960ef5d1df851ac393dd07dca6781fb1f77dc2b192d",
+      "source": "sources/w16-io-b-objfile-reset-state/reset_state.cpp",
+      "emitted_functions": [
+        {
+          "name": "ResetState__9VIObjFile",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7404,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_string_table_process_raw_file.o",
+      "profile": "authored_cpp",
+      "sha256": "f63b0f4162591008ca6d9f33f3b2c5c96c01c93741054f6c7d72184bb12af342",
+      "source": "sources/w16-io-b-string-table-process-raw-file/process_raw_file.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessRawFile__13VIStringTableRCt7VIArray1Zc",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7405,
+      "kind": "independently_authored_source",
+      "object_name": "w16_io_b_xmi_set_repeat.o",
+      "profile": "authored_cpp",
+      "sha256": "a700101a8f409f7364e997b4442257f7d6b7b6a96421e709a58614edb49beec2",
+      "source": "sources/w16-io-b-xmi-set-repeat/set_repeat.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetRepeat__4VIXmi",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109851,7 +110187,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b127037eeb2a2e2fc004ac00a1bc4bbfa936b604ecf27b4d3525a32288870a05",
+  "snapshot_sha256": "4b41cccc7c1ad2dc045d3f49fb85e1c3c01bb45a8ac6dcd0247e96b716375527",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
