@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7404,
+  "default_authored_inputs": 7439,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8198,7 +8198,42 @@
     "sources/w16-io-b-objfile-read-unsigned-long/read_unsigned_long.cpp": "96c933e5b97abce730adeecbd03868e3240d49160de956bb0bf832b46c035b2e",
     "sources/w16-io-b-objfile-reset-state/reset_state.cpp": "6bebb70c096df74cb4b06960ef5d1df851ac393dd07dca6781fb1f77dc2b192d",
     "sources/w16-io-b-string-table-process-raw-file/process_raw_file.cpp": "f63b0f4162591008ca6d9f33f3b2c5c96c01c93741054f6c7d72184bb12af342",
-    "sources/w16-io-b-xmi-set-repeat/set_repeat.cpp": "a700101a8f409f7364e997b4442257f7d6b7b6a96421e709a58614edb49beec2"
+    "sources/w16-io-b-xmi-set-repeat/set_repeat.cpp": "a700101a8f409f7364e997b4442257f7d6b7b6a96421e709a58614edb49beec2",
+    "sources/w16-realm-a-gateway-notify-add-ban-avatar/stub.cpp": "534a9c873e4c7e3dd12d0a53ccc14d55877ea6bba1374a6ddb9a3b7b216695e1",
+    "sources/w16-realm-a-gateway-notify-add-ban-room/stub.cpp": "ae475a92ef772c352fa58df8946c3711edb9cbd4d664ea8574626a5d409faabc",
+    "sources/w16-realm-a-gateway-notify-add-invite-avatar/stub.cpp": "9ffab6a3930423f8f4e1dce0104b445d9b7073a6f65ce0992ea79bdd3c82bf5c",
+    "sources/w16-realm-a-gateway-notify-add-invite-room/stub.cpp": "3c39a6d53d5dab81734bf26da5bb9f2384f4614dbef4bc4155f3811f7376565b",
+    "sources/w16-realm-a-gateway-notify-enter-room/stub.cpp": "131b31d8361e7a013286daf064902e802cac04ea2be8a769e21d2754e610e4c6",
+    "sources/w16-realm-a-gateway-notify-forced-logout/stub.cpp": "b7c6801abf9e934649270182e366168109b236ddd1a4e5264ae9cd39f6a3ba7c",
+    "sources/w16-realm-a-gateway-notify-friend-status/stub.cpp": "105b32563c89c4527a9b081ab5db8412da7b178a0788faa7933801a3febfabdb",
+    "sources/w16-realm-a-gateway-notify-instant-message/stub.cpp": "7a0fef57571b5fb987c897a68c755768653642cee04ce89aaf094cdb6fc2f170",
+    "sources/w16-realm-a-gateway-notify-kick-avatar/stub.cpp": "5e97e7c8c314e8b1b525c5af7d587457477d382b9219aace87c9fcd26b1f13c4",
+    "sources/w16-realm-a-gateway-notify-kick-room/stub.cpp": "437a924e5ef9c6250b9c6e15601874f44547113ae40fea96b56c093cc4cc3697",
+    "sources/w16-realm-a-gateway-notify-leave-room/stub.cpp": "4f8d59839a3bfe2246c1313e2c8b033e8709f36f779b0b201fd6b0c0406c051d",
+    "sources/w16-realm-a-gateway-notify-moderator-added-avatar/stub.cpp": "c61fc6b8ac77d9d48c689c3cae1e01e6a88429264bbfdd0bd6d5604c0bc24da8",
+    "sources/w16-realm-a-gateway-notify-moderator-added-room/stub.cpp": "3cc12da71cc1069dd38a1714a52950a92141452bf812f1aed4dceee98aa0f0f4",
+    "sources/w16-realm-a-gateway-notify-moderator-removed-avatar/stub.cpp": "762e69e8fff263922ac22869a1f1a4318e05259ae000e09c56114d7da8084065",
+    "sources/w16-realm-a-gateway-notify-moderator-removed-room/stub.cpp": "e4723813028ade81278d2fcfd718b08bd274171847f1960c667d16faea838479",
+    "sources/w16-realm-a-gateway-notify-remove-ban-avatar/stub.cpp": "ec426cd295053d5d4cbe1150f84a9f1daa99985e7bd850d728498ef7f9794a04",
+    "sources/w16-realm-a-gateway-notify-remove-ban-room/stub.cpp": "f38f039af13e2658f548eb5c90e9f7f6a6e3b2ff0f7623d75e06f04ffae769d3",
+    "sources/w16-realm-a-gateway-notify-remove-invite-avatar/stub.cpp": "85f469959c6f01574101fe63d3e842835a9de6b86de9b2952ab3042545268799",
+    "sources/w16-realm-a-gateway-notify-remove-invite-room/stub.cpp": "ef59433ecabe1bd72529d33a43487cab367bf95f5de956614ff2d0cee7802816",
+    "sources/w16-realm-a-gateway-notify-room-banner/stub.cpp": "d989ba7295a0e7af9123dc67f57dfdb323a9795a27906385fdada97c9bfbedcd",
+    "sources/w16-realm-a-gateway-notify-room-message/stub.cpp": "431e8ec679dfedd896ac0eb36496950e2379839cf07dd6b5b1d34b3a07bb1388",
+    "sources/w16-realm-a-gateway-on-add-ban/stub.cpp": "1339867ca16c33104bfceaef16e9090004b1249bb77575413dbf0cf0150fd33a",
+    "sources/w16-realm-a-gateway-on-add-friend/stub.cpp": "33b529cea80e0e57bce2649b09c32f34eb8bb9b34e6581b0a265b1a78ef44769",
+    "sources/w16-realm-a-gateway-on-add-ignore/stub.cpp": "d25344a00766487b381cb755e0fb5516875e4f924e183db5c65eee2bc66ba070",
+    "sources/w16-realm-a-gateway-on-add-invite/stub.cpp": "ad6d592f3ebfaca02c0c9ddc1bd78227795a35d6fd063fbd68952440f2f159a8",
+    "sources/w16-realm-a-gateway-on-add-room-moderator/stub.cpp": "e74c0af0e946a56ab23ec15142b26bcd3a85867870f48a2364f29f9a369d8ec5",
+    "sources/w16-realm-a-gateway-on-change-email/stub.cpp": "feef8332eabb76ab915fb3e2dffcd9e07b5e78910272ef65d63aa4a305ba260c",
+    "sources/w16-realm-a-gateway-on-change-password/stub.cpp": "528e8ba4fb1ecffd4405c806441d1831f1cf592fabc649dc321139fb2da0079f",
+    "sources/w16-realm-a-gateway-on-consume-key/stub.cpp": "8a0ca2ee5a92f436f1d4e93740deda8495dfe5d6a965877ded10e8c0cb799438",
+    "sources/w16-realm-a-vi-realm-interface-create-private-game/create_private_game.cpp": "1a824366f981d7d2700f99a207067dcf6e3c89afa7fbc1ec44e64f370fa6153a",
+    "sources/w16-realm-a-vi-realm-interface-create-public-game/create_public_game.cpp": "8c4fe7c3c26d74ca3644420a314b19795b169fb6d41f4d30bbe5590ff81aa62b",
+    "sources/w16-realm-a-vi-realm-interface-notify-client-discovered/notify.cpp": "ecf6409653f94b3e071b530268d3abe0a817a424841bf1a155f13b61275f012b",
+    "sources/w16-realm-a-vi-realm-interface-notify-game-discovered/notify.cpp": "f0fc7ef5acceedfc0b1b1ea21aa8460dca1d033afe2948d39d5c5b21caa86998",
+    "sources/w16-realm-a-vi-realm-interface-on-cancel-game/on_cancel_game.cpp": "252c6cd4939bd8d2eb6411427ada7d00a86f15bc4fa38c95929dbd26e1950885",
+    "sources/w16-realm-a-vi-realm-interface-on-connect/on_connect.cpp": "51621c950d7240bc38030f6a8cdab15790d30d6354786be084f18233080aa0c9"
   },
   "inputs": [
     {
@@ -110088,6 +110123,551 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7406,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_add_ban_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "534a9c873e4c7e3dd12d0a53ccc14d55877ea6bba1374a6ddb9a3b7b216695e1",
+      "source": "sources/w16-realm-a-gateway-notify-add-ban-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyAddBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7407,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_add_ban_room.o",
+      "profile": "authored_cpp",
+      "sha256": "ae475a92ef772c352fa58df8946c3711edb9cbd4d664ea8574626a5d409faabc",
+      "source": "sources/w16-realm-a-gateway-notify-add-ban-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyAddBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7408,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_add_invite_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "9ffab6a3930423f8f4e1dce0104b445d9b7073a6f65ce0992ea79bdd3c82bf5c",
+      "source": "sources/w16-realm-a-gateway-notify-add-invite-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyAddInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7409,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_add_invite_room.o",
+      "profile": "authored_cpp",
+      "sha256": "3c39a6d53d5dab81734bf26da5bb9f2384f4614dbef4bc4155f3811f7376565b",
+      "source": "sources/w16-realm-a-gateway-notify-add-invite-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyAddInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7410,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_enter_room.o",
+      "profile": "authored_cpp",
+      "sha256": "131b31d8361e7a013286daf064902e802cac04ea2be8a769e21d2754e610e4c6",
+      "source": "sources/w16-realm-a-gateway-notify-enter-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyEnterRoom__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7411,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_forced_logout.o",
+      "profile": "authored_cpp",
+      "sha256": "b7c6801abf9e934649270182e366168109b236ddd1a4e5264ae9cd39f6a3ba7c",
+      "source": "sources/w16-realm-a-gateway-notify-forced-logout/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyForcedLogout__Q212RealmService15RealmGatewayAPIs",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7412,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_friend_status.o",
+      "profile": "authored_cpp",
+      "sha256": "105b32563c89c4527a9b081ab5db8412da7b178a0788faa7933801a3febfabdb",
+      "source": "sources/w16-realm-a-gateway-notify-friend-status/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyFriendStatus__Q212RealmService15RealmGatewayAPIPCUsb",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7413,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_instant_message.o",
+      "profile": "authored_cpp",
+      "sha256": "7a0fef57571b5fb987c897a68c755768653642cee04ce89aaf094cdb6fc2f170",
+      "source": "sources/w16-realm-a-gateway-notify-instant-message/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyInstantMessage__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7414,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_kick_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "5e97e7c8c314e8b1b525c5af7d587457477d382b9219aace87c9fcd26b1f13c4",
+      "source": "sources/w16-realm-a-gateway-notify-kick-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyKickAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7415,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_kick_room.o",
+      "profile": "authored_cpp",
+      "sha256": "437a924e5ef9c6250b9c6e15601874f44547113ae40fea96b56c093cc4cc3697",
+      "source": "sources/w16-realm-a-gateway-notify-kick-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyKickRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7416,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_leave_room.o",
+      "profile": "authored_cpp",
+      "sha256": "4f8d59839a3bfe2246c1313e2c8b033e8709f36f779b0b201fd6b0c0406c051d",
+      "source": "sources/w16-realm-a-gateway-notify-leave-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyLeaveRoom__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7417,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_moderator_added_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "c61fc6b8ac77d9d48c689c3cae1e01e6a88429264bbfdd0bd6d5604c0bc24da8",
+      "source": "sources/w16-realm-a-gateway-notify-moderator-added-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyModeratorAddedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7418,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_moderator_added_room.o",
+      "profile": "authored_cpp",
+      "sha256": "3cc12da71cc1069dd38a1714a52950a92141452bf812f1aed4dceee98aa0f0f4",
+      "source": "sources/w16-realm-a-gateway-notify-moderator-added-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyModeratorAddedRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7419,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_moderator_removed_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "762e69e8fff263922ac22869a1f1a4318e05259ae000e09c56114d7da8084065",
+      "source": "sources/w16-realm-a-gateway-notify-moderator-removed-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyModeratorRemovedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7420,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_moderator_removed_room.o",
+      "profile": "authored_cpp",
+      "sha256": "e4723813028ade81278d2fcfd718b08bd274171847f1960c667d16faea838479",
+      "source": "sources/w16-realm-a-gateway-notify-moderator-removed-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyModeratorRemovedRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7421,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_remove_ban_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "ec426cd295053d5d4cbe1150f84a9f1daa99985e7bd850d728498ef7f9794a04",
+      "source": "sources/w16-realm-a-gateway-notify-remove-ban-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRemoveBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7422,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_remove_ban_room.o",
+      "profile": "authored_cpp",
+      "sha256": "f38f039af13e2658f548eb5c90e9f7f6a6e3b2ff0f7623d75e06f04ffae769d3",
+      "source": "sources/w16-realm-a-gateway-notify-remove-ban-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRemoveBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7423,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_remove_invite_avatar.o",
+      "profile": "authored_cpp",
+      "sha256": "85f469959c6f01574101fe63d3e842835a9de6b86de9b2952ab3042545268799",
+      "source": "sources/w16-realm-a-gateway-notify-remove-invite-avatar/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRemoveInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7424,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_remove_invite_room.o",
+      "profile": "authored_cpp",
+      "sha256": "ef59433ecabe1bd72529d33a43487cab367bf95f5de956614ff2d0cee7802816",
+      "source": "sources/w16-realm-a-gateway-notify-remove-invite-room/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRemoveInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7425,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_room_banner.o",
+      "profile": "authored_cpp",
+      "sha256": "d989ba7295a0e7af9123dc67f57dfdb323a9795a27906385fdada97c9bfbedcd",
+      "source": "sources/w16-realm-a-gateway-notify-room-banner/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRoomBanner__Q212RealmService15RealmGatewayAPIPCUsT1",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7426,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_notify_room_message.o",
+      "profile": "authored_cpp",
+      "sha256": "431e8ec679dfedd896ac0eb36496950e2379839cf07dd6b5b1d34b3a07bb1388",
+      "source": "sources/w16-realm-a-gateway-notify-room-message/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyRoomMessage__Q212RealmService15RealmGatewayAPIPCUsN21",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7427,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_add_ban.o",
+      "profile": "authored_cpp",
+      "sha256": "1339867ca16c33104bfceaef16e9090004b1249bb77575413dbf0cf0150fd33a",
+      "source": "sources/w16-realm-a-gateway-on-add-ban/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onAddBan__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7428,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_add_friend.o",
+      "profile": "authored_cpp",
+      "sha256": "33b529cea80e0e57bce2649b09c32f34eb8bb9b34e6581b0a265b1a78ef44769",
+      "source": "sources/w16-realm-a-gateway-on-add-friend/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onAddFriend__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7429,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_add_ignore.o",
+      "profile": "authored_cpp",
+      "sha256": "d25344a00766487b381cb755e0fb5516875e4f924e183db5c65eee2bc66ba070",
+      "source": "sources/w16-realm-a-gateway-on-add-ignore/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onAddIgnore__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7430,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_add_invite.o",
+      "profile": "authored_cpp",
+      "sha256": "ad6d592f3ebfaca02c0c9ddc1bd78227795a35d6fd063fbd68952440f2f159a8",
+      "source": "sources/w16-realm-a-gateway-on-add-invite/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onAddInvite__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7431,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_add_room_moderator.o",
+      "profile": "authored_cpp",
+      "sha256": "e74c0af0e946a56ab23ec15142b26bcd3a85867870f48a2364f29f9a369d8ec5",
+      "source": "sources/w16-realm-a-gateway-on-add-room-moderator/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onAddRoomModerator__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7432,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_change_email.o",
+      "profile": "authored_cpp",
+      "sha256": "feef8332eabb76ab915fb3e2dffcd9e07b5e78910272ef65d63aa4a305ba260c",
+      "source": "sources/w16-realm-a-gateway-on-change-email/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onChangeEmail__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7433,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_change_password.o",
+      "profile": "authored_cpp",
+      "sha256": "528e8ba4fb1ecffd4405c806441d1831f1cf592fabc649dc321139fb2da0079f",
+      "source": "sources/w16-realm-a-gateway-on-change-password/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onChangePassword__Q212RealmService15RealmGatewayAPIUiiPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7434,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_gateway_on_consume_key.o",
+      "profile": "authored_cpp",
+      "sha256": "8a0ca2ee5a92f436f1d4e93740deda8495dfe5d6a965877ded10e8c0cb799438",
+      "source": "sources/w16-realm-a-gateway-on-consume-key/stub.cpp",
+      "emitted_functions": [
+        {
+          "name": "onConsumeKey__Q212RealmService15RealmGatewayAPIUiiPCUsPv",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7435,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_create_private_game.o",
+      "profile": "authored_cpp",
+      "sha256": "1a824366f981d7d2700f99a207067dcf6e3c89afa7fbc1ec44e64f370fa6153a",
+      "source": "sources/w16-realm-a-vi-realm-interface-create-private-game/create_private_game.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7releaseEjj",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "createPrivateGame__16VIRealmInterfaceiPCUsN22Pv",
+          "compiled_body_bytes": 616
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7436,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_create_public_game.o",
+      "profile": "authored_cpp",
+      "sha256": "8c4fe7c3c26d74ca3644420a314b19795b169fb6d41f4d30bbe5590ff81aa62b",
+      "source": "sources/w16-realm-a-vi-realm-interface-create-public-game/create_public_game.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7releaseEjj",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "createPublicGame__16VIRealmInterfaceiPCUssUiUiUiT2RCQ212RealmService14MatchGameAttrsT2Pv",
+          "compiled_body_bytes": 664
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 7437,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_notify_client_discovered.o",
+      "profile": "authored_cpp",
+      "sha256": "ecf6409653f94b3e071b530268d3abe0a817a424841bf1a155f13b61275f012b",
+      "source": "sources/w16-realm-a-vi-realm-interface-notify-client-discovered/notify.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyClientDiscovered__16VIRealmInterfacePCci",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7438,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_notify_game_discovered.o",
+      "profile": "authored_cpp",
+      "sha256": "f0fc7ef5acceedfc0b1b1ea21aa8460dca1d033afe2948d39d5c5b21caa86998",
+      "source": "sources/w16-realm-a-vi-realm-interface-notify-game-discovered/notify.cpp",
+      "emitted_functions": [
+        {
+          "name": "notifyGameDiscovered__16VIRealmInterfacePCci",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 7439,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_on_cancel_game.o",
+      "profile": "authored_cpp",
+      "sha256": "252c6cd4939bd8d2eb6411427ada7d00a86f15bc4fa38c95929dbd26e1950885",
+      "source": "sources/w16-realm-a-vi-realm-interface-on-cancel-game/on_cancel_game.cpp",
+      "emitted_functions": [
+        {
+          "name": "onCancelGame__16VIRealmInterfaceUiiPv",
+          "compiled_body_bytes": 308
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7440,
+      "kind": "independently_authored_source",
+      "object_name": "w16ra_vi_realm_interface_on_connect.o",
+      "profile": "authored_cpp",
+      "sha256": "51621c950d7240bc38030f6a8cdab15790d30d6354786be084f18233080aa0c9",
+      "source": "sources/w16-realm-a-vi-realm-interface-on-connect/on_connect.cpp",
+      "emitted_functions": [
+        {
+          "name": "_ZN12_GLOBAL__N_1L7releaseEjj",
+          "compiled_body_bytes": 104
+        },
+        {
+          "name": "_ZN12_GLOBAL__N_1L24wide_string_from_literalEPKc",
+          "compiled_body_bytes": 608
+        },
+        {
+          "name": "onConnect__16VIRealmInterface",
+          "compiled_body_bytes": 136
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -110187,7 +110767,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "4b41cccc7c1ad2dc045d3f49fb85e1c3c01bb45a8ac6dcd0247e96b716375527",
+  "snapshot_sha256": "20475a234bcf13b85ac83a3e1c3351d3e212973bb9a29e6d2d7e0e225795d943",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
