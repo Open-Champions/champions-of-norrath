@@ -15,7 +15,7 @@ The seventeen names in the wave list are destructors of spell and projectile cla
 these seventeen addresses. The call-count ordering was therefore not usable, and the work is ordered by shared shape
 (GameObject base, Spell base, projectile, multi-step, global counter).
 
-Status: 12 of 17 units have sources and checks in this branch.
+Status: 13 of 17 units have sources and checks in this branch.
 
 ## What was done
 
@@ -26,7 +26,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 - GameObject: 12GlowingShaft, 18FrostStormIceShard, 19BlindingLightEffect
 - Spell base: 12SpellHealing, 15SpellHolyShield, 17SpellMinorHealing
 - Projectile: 8HolyBolt, 8LostSoul, 10FrostShard, 10HolyStrike, 18DarknessProjectile
-- Spell with particle, sound, light or list: 13SpellEntangle
+- Spell with particle, sound, light or list: 13SpellEntangle, 15SpellClericRoot
 
 ## Units
 
@@ -44,6 +44,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 | `w16-m-dtor-a-dtor-10holystrike` | `_$_10HolyStrike` | `0x00319598`, 140 bytes (weak) | 144 | `7b31aea3181015dfc6c1619dd1466af13ad4f34e67d3f6bb8bc7e2dbf30dee05` |
 | `w16-m-dtor-a-dtor-18darknessprojectile` | `_$_18DarknessProjectile` | `0x003172c0`, 132 bytes (weak) | 136 | `8ef4f7f49779e4586f554bd0af295b3dd157fc26ad3a6b61c4566f77a4cd1b27` |
 | `w16-m-dtor-a-dtor-13spellentangle` | `_$_13SpellEntangle` | `0x002c7040`, 116 bytes (global) | 116 | `82de07b8e62fc2ff4ae0524660f11f9f12673e8737243bca5e497cd050545848` |
+| `w16-m-dtor-a-dtor-15spellclericroot` | `_$_15SpellClericRoot` | `0x002c63c8`, 116 bytes (global) | 116 | `2ef8d68593a8586353a6adab63e8f61a3eafff1230dba36aba27164ead5ae6b2` |
 
 ## Observed behaviour worth knowing
 
@@ -59,7 +60,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 
 ## Checks performed
 
-- **EE compile.** 12 of 12 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
+- **EE compile.** 13 of 13 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
   and the `authored_cpp` flags from `experimental/build-plan.json`, with `-c` into a private directory. Each object exports
   one function, under its image symbol, and leaves the callees and tables undefined.
 - **Host contract.** Each unit has `host_check.cpp`, built with `clang++ -std=c++17`. It runs the destructor over every
@@ -251,13 +252,27 @@ entries until the snapshot records the same inputs.
     "compiled_body_bytes": 116
    }
   ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w16mdb_dtor_15spellclericroot.o",
+  "profile": "authored_cpp",
+  "sha256": "2ef8d68593a8586353a6adab63e8f61a3eafff1230dba36aba27164ead5ae6b2",
+  "source": "sources/w16-m-dtor-a-dtor-15spellclericroot/dtor.cpp",
+  "emitted_functions": [
+   {
+    "name": "_$_15SpellClericRoot",
+    "compiled_body_bytes": 116
+   }
+  ]
  }
 ]
 ```
 
 ## Imports closed
 
-Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`.
+Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`.
 
 The partial build's unresolved list is checked in the section below.
 
