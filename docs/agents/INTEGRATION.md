@@ -10275,3 +10275,4 @@ Closed: `GetMode__6Camera`, `_8VIString$ConversionTable1252`, `__11VIUDPSocketi`
 Opened: `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v`, `strupr`, `vsnprintf16__8VIStringPUsiPCcPv`
 
 Full partial build: 6853 source compilations, one link, 5461 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-13 23:45 CDT — agents/w15-vi-strings-dict-a — 870 unresolved imports
