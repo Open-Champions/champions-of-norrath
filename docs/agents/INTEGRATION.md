@@ -10438,3 +10438,20 @@ Opened: `Add__t6VIPool1ZP20VIParticleDefinitionRCP20VIParticleDefinition`, `Allo
 
 Full partial build: 7066 source compilations, one link, 5595 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:53 CDT — agents/w15-vi-particle-a — 893 unresolved imports
+
+## agents/w15-vi-particle-b
+
+Merged (merge commit; tip about two hours old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 878 |
+| Closed | 22 |
+| Opened | 7 |
+
+Closed: `Allocate__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Begin__Ct6VIPool1ZP15VIParticleMotif`, `Clear__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Density__C14VIEffectVolume`, `DestroyPool__t6VIPool1ZP20VIParticleDefinition`, `Direction__C17VIParticleEmitter`, `End__Ct6VIPool1ZP15VIParticleMotif`, `Erase__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Erase__t6VIPool1ZP15VIParticleMotifi`, `Flags__C14VIEffectVolume`, `GetParticleUISprite__7VIScene`, `Insert__t10VIMultiMap2ZfZ14VIEmitterEntryRCfRC14VIEmitterEntry`, `Location__C17VIParticleEmitter`, `Next__Ct6VIPool1ZP15VIParticleMotifi`, `Size__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `Size__Ct6VIPool1ZP15VIParticleMotif`, `Space__C17VIParticleEmitter`, `StaticBounds__C17VIParticleEmitter`, `Surface__C14VIEffectVolumei`, `TextureConfiguration__C22VIParticleDefinitionEx`, `Type__C14VIEffectVolume`, `VITrailFxEnd__FP9VITrailFx`
+
+Opened: `AddNode__t10VIMultiMap2ZfZ14VIEmitterEntryii`, `EraseFixup__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `FreeNode__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LeftRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LinkFreeChain__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Next__Ct6VIPool1ZP20VIParticleDefinitioni`, `RightRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`
+
+Full partial build: 7088 source compilations, one link, 5617 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
