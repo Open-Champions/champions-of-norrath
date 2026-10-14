@@ -32,6 +32,13 @@ struct FrameState {
 };
 static_assert(sizeof(FrameState) == 1144, "frame-state record size");
 
+// The record as execute_cfa_insn extends it: one more word, at byte 1144, chains the copies made by the remember-state
+// instruction (observed: 1152 bytes are allocated and copied).
+struct FrameStateInternal : FrameState {
+    unsigned saved_state;
+};
+static_assert(sizeof(FrameStateInternal) == 1152, "extended frame-state record size");
+
 enum { kNotSaved = 0, kSavedAtOffset = 1, kSavedInRegister = 2 };
 
 }  // namespace w15eh
