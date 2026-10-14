@@ -1,4 +1,4 @@
-// Observed: TickPulse__C10VIUIWindow at 0x0103f6d8, 168 bytes. With the float p at offset 40 of the window
+// Observed: TickPulse__C10VIUIWindow at 0x0103f6d8, 160 bytes. With the float p at offset 40 of the window
 // and the 64-bit time stored at offset 352: a = 1 - (1 - p) * (1 - p); t = (float)(GetTime__7VITimer() - time)
 // * 0.01f (bits 0x3c23d70a); when 6.2831855f (bits 0x40c90fda) is less than t, that amount is subtracted once;
 // the result is a * (sinf(t + 1.5707964f (bits 0x3fc90fda)) * 0.5 + 0.5). The subtraction of the two 64-bit
