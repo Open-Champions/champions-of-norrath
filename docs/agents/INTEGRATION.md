@@ -10619,3 +10619,4 @@ Closed: `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__
 Opened: `Begin__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Begin__Ct5VIMap2ZiZi`, `Begin__Ct6VIPool1ZP12VIPrimBuffer`, `Begin__Ct6VIPool1ZP13VIColorBuffer`, `End__Ct5VIMap2ZiZi`, `End__Ct6VIPool1ZP12VIPrimBuffer`, `End__Ct6VIPool1ZP13VIColorBuffer`, `Next__Ct5VIMap2ZiZii`, `Next__Ct6VIPool1Z19VIRasterMaterialLRUi`, `Next__Ct6VIPool1ZP12VICollBufferi`, `Next__Ct6VIPool1ZP12VIPrimBufferi`, `Next__Ct6VIPool1ZP13VIColorBufferi`
 
 Full partial build: 7316 source compilations, one link, 5830 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:56 CDT — agents/w12-vicont-a — 871 unresolved imports
