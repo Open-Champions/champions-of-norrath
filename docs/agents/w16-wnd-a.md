@@ -101,9 +101,11 @@ bits, so this is the original's behaviour, not a guess.
   calls (`playerGetSkillRank`/`playerGetFeatRank` twenty-seven times, `textGetString` sixteen, `fontColor`, `fontPrintu`,
   `sprintf`, `soundPlaySequence`, `textureDrawSuperColor`, `describeLevel`, `statsDrawSkillTreeBranch`, `powf`,
   `msgInventoryAdjustSkill`, quick-spell and help-message calls), hit-tests the pad cursor against each entry and edits
-  pad and inventory state. It needs several hundred table words transcribed from the image, many unauthored callees and
-  a paired run with correspondingly detailed player state. I did not attempt it in this sitting; it stays an unresolved
-  import and is the one name from the original list that is still open.
+  pad and inventory state. It needs about three thousand bytes of constant tables transcribed from the image (whether numbers
+  of that size count as publishable constants or as extracted game data is a rule question for the repository owner, not
+  something this package decided), many unauthored callees and a paired run with correspondingly detailed player state.
+  I did not author it in this sitting; it stays an unresolved import and is the one name from the original list that is
+  still open.
 
 ## Build-plan entries needed
 
