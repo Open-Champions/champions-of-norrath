@@ -10036,3 +10036,19 @@ Closed: `Back__12VIWndOptions`, `Backspace__9VIWndEdit`, `BeginConnect__12VIWndC
 
 Opened: `BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi`, `BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BringUpNetwork__12VIWndConnect`, `DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi`, `DrawHScroll__10VIUIWindowiiifUi`, `FindTyped__12VIDictionaryUi14VIResourceTypeRi`, `GetStringWidth__8VIRasteriPCUs`, `GetStringWidth__8VIRasteriPCc`, `GetUITexture__F9VIUITexId`, `SetOutputMode__13VISoundDevicei`, `SetSolidFillUIMaterial__8VIRaster`, `StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `TickPulse__C10VIUIWindow`, `TickR__10VIUIWindowiib`, `VIEELoadIrx__FPCciT0`, `VIEEUnloadIrx__Fi`, `_6VIFont$sm_FontName`
 - 2026-10-13 20:17 CDT — agents/w14-wnd-a — 980 unresolved imports
+
+## agents/w14-m-data-b
+
+Merged (merge commit, branch tip `1e6abed5`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 22 units (0 emitting functions, the rest data or type-info units) with fresh `input_order` values 6557 through 6578, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 980 |
+| After | 958 |
+| Closed | 22 |
+| Opened | 0 |
+
+Closed: `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2`, `norrath_auto_chest_msg_run_fuseParticle_bytes`, `norrath_auto_chest_msg_run_smokeParticle_bytes`, `norrath_container_msg_run_fuseParticle_bytes`, `norrath_container_msg_run_smokeParticle_bytes`, `oniball_msg_run_particle_7d7810`, `oniball_msg_run_particle_7d78b0`, `phice_msg_run_particle_7d6740`, `phice_msg_run_particle_7d6790`, `planarsteel_run_particle_8d8510`, `planarsteel_run_particle_8d8560`, `planarsteel_run_particle_8d85b0`, `planarsteel_run_particle_8d8600`, `poisonFleck`, `poisonSmoke`, `redSpark`, `spellcharge_hit_something_particle_8d6780`, `summonskeletonParticle1`, `summonskeletonParticle2`
+
+Opened: 
+- 2026-10-13 20:23 CDT — agents/w14-m-data-b — 958 unresolved imports
