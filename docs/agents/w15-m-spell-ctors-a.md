@@ -14,6 +14,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | source directory | symbol | image address and size | status |
 |---|---|---|---|
 | `w15-m-spell-ctors-a-ctor-9spellroot` | `__9SpellRootiP8CreatureP5Skill` | `0x002ad058`, 164 bytes | authored, paired-checked |
+| `w15-m-spell-ctors-a-dtor-13firebomblet` | `_$_13FireBombletJr` | `0x003121b8`, 100 bytes | authored, paired-checked |
 
 ## Checks performed
 
@@ -23,6 +24,11 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
   contract (`host_check.cpp`, `clang++ -std=c++17`) prints `ok`. The paired R5900 comparison gives 0 mismatches
   over 210 scenarios (7 kinds x 5 adjustments x 6 seeds) with no HALT. A mutation that reads the kind byte
   unsigned gives 90 mismatches, so the comparison detects the defect it targets.
+
+- **`_$_13FireBombletJr`.** Stores `_vt$13FireBombletJr` at +72, calls the GameObject base destructor
+  `_$_10GameObject` with flags 0, then `blockFree__FPv` when bit 0 is set. The host contract (7 flag values) prints
+  `ok`. The paired comparison (8 flag values x 3 fills) has 0 mismatches, with no HALT. Mutation (bit 1 tested
+  instead of bit 0) gives 12 mismatches.
 
 ## Authored but never executed
 
