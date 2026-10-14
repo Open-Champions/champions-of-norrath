@@ -9,11 +9,17 @@
 // right, 0 the nil/end index; matches Begin's use of +8.
 // Unknown: whether the original loops re-read the parent after a failed test (the order of
 // loads here follows the instruction sequence, not a stated source).
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int Next__Ct5VISet1ZP5VIWndi(const void* set, int index) {
     const unsigned char* bytes = static_cast<const unsigned char*>(set);
     const unsigned char* elements = reinterpret_cast<const unsigned char*>(
-        static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<const unsigned*>(bytes + 8)));
+        NORRATH_WORD_ADDRESS(*reinterpret_cast<const unsigned*>(bytes + 8)));
     int node = *reinterpret_cast<const int*>(elements + index * 20 + 12);
     if (node != 0) {
         for (;;) {
