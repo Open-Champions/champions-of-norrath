@@ -10854,3 +10854,21 @@ Opened: `Add__t6VIPool1ZP12VICollBufferRCP12VICollBuffer`, `Add__t6VIPool1ZP12VI
 
 Full partial build: 7550 source compilations, one link, 6028 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:11 CDT — agents/w16-prim-a — 769 unresolved imports
+
+## agents/w16-rt-a
+
+Merged (merge commit) as a **partial package**: 13 of 14 units selected, each with a committed host check that I ran using the build recipe in its own header (13 of 13 exit 0); I recompiled each unit and checked names and body sizes against my own build. **Not selected:** `w16-rt-a-set-alarm` (assembly): its only check compares the assembled body with the private game executable, which cannot run from this repository, so there is no test that can fail here; it stays authored but unplanned. Tip was about 83 minutes old.
+
+| | |
+|---|---|
+| Before | 769 |
+| After | 768 |
+| Closed | 12 |
+| Opened | 11 |
+
+Closed: `_$_t6VIList1ZP10VIFlatFile`, `__dynamic_cast_2`, `__ieee754_expf`, `__muldi3`, `clone__Q2t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0_3Rep`, `copysign`, `execute_cfa_insn`, `extract_cie_info`, `find_fde`, `strdup`, `strupr`, `what__C9exception`
+
+Opened: `Clear__t6VIList1ZP10VIFlatFile`, `_S_chunk_alloc__t24__default_alloc_template2b0i0UiRi`, `__ls__7ostreamPCc`, `_t23__malloc_alloc_template1i0$__malloc_alloc_oom_handler`, `cerr`, `decode_sleb128`, `decode_stack_op`, `dyncast__C16__user_type_infoiRC9type_infoPvT2T3`, `endl__FR7ostream`, `frame_init`, `search_fdes`
+
+Full partial build: 7563 source compilations, one link, 6041 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:19 CDT — agents/w16-rt-a — 768 unresolved imports

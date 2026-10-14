@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7550,
+  "default_authored_inputs": 7563,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8344,7 +8344,20 @@
     "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/draw_packvuncg.cpp": "746324103d7d2e3b95851becbc4be440c267d9cc9aebed2ad6e6b935e460e843",
     "sources/w16-prim-a-raster-draw-primbuffer-vunc/draw_vunc.cpp": "bea6a6c4db108dc012e1b692c8973dc11684409362d1706b5bc77c32b9bd7fc4",
     "sources/w16-prim-a-zone-collide-env-ray/collide_env_ray.cpp": "725bf4e39dfe0915a5b4ce14f2792467114a3e45c807ba76fd3eec27be34caca",
-    "sources/w16-prim-a-zone-collide-scene-vars/collide_scene_vars.cpp": "10fa093e100822b1d006dc95459c6c35267d9653caa937e3032daf13264a04e0"
+    "sources/w16-prim-a-zone-collide-scene-vars/collide_scene_vars.cpp": "10fa093e100822b1d006dc95459c6c35267d9653caa937e3032daf13264a04e0",
+    "sources/w16-rt-a-strupr/strupr.cpp": "239e8b2db8fa9eb315a1ef99b2ca857f1e8d5c2bbe6be919428604ed71e80345",
+    "sources/w16-rt-a-strdup/strdup.cpp": "2df759e1a5433b3ae4bff5682c7c22f8b8edcf893a1de1efb597e57b073a7541",
+    "sources/w16-rt-a-strdup-r/strdup_r.cpp": "ec1bd67fc2575e3ff9c7822fe0deeed60303d161741a3a8597c316bb477330a0",
+    "sources/w16-rt-a-copysign/copysign.cpp": "bafa3ca275c825818a16f7bee49525806ea97fcf055b7d1f4cb9d07b434d7791",
+    "sources/w16-rt-a-muldi3/muldi3.cpp": "3fc84f84423ca367e94f6897a9c862868f22051db04cb926e7d16d14e46146f1",
+    "sources/w16-rt-a-exception-what/exception_what.cpp": "c542eb1dfacd93755c3b9070575f0d312ba8f2bd0754476a3717d71999cad3af",
+    "sources/w16-rt-a-dynamic-cast-2/dynamic_cast_2.cpp": "f0da4d0e37530bb1c88c8b66986ce8f35498e507d140cf0149fe2dd405bcadec",
+    "sources/w16-rt-a-ieee754-expf/ieee754_expf.cpp": "77d8ab344bc49026339bd7b2c15c98e1eac8b41d2b026954b2da9c0d4f53a44b",
+    "sources/w16-rt-a-find-fde/find_fde.cpp": "7276a45bdf7a125fc09d7169459a6dc1d0336c1694367236ec9bd4d4d73f5e81",
+    "sources/w16-rt-a-extract-cie-info/extract_cie_info.cpp": "93c6082910db1c401fc2f513e5b53798fe6e52fc21758098d7399da0f63aca4e",
+    "sources/w16-rt-a-execute-cfa-insn/execute_cfa_insn.cpp": "8f9dac3675337df27249626c5afcb5e979c56d13f8852e24b1b0784eb488f860",
+    "sources/w16-rt-a-vilist-dtor-p10viflatfile/dtor.cpp": "3ffc3be6031926762663894e55cdd468d325ef29d1a57b9ef584d67ccf8ae18f",
+    "sources/w16-rt-a-string-rep-clone/rep_clone.cpp": "479552fbb543d1803013b65e1476b6de232904d7147d5b16c3c0d78331356dbf"
   },
   "inputs": [
     {
@@ -112478,6 +112491,201 @@
           "compiled_body_bytes": 152
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7552,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_strupr.o",
+      "profile": "authored_cpp",
+      "sha256": "239e8b2db8fa9eb315a1ef99b2ca857f1e8d5c2bbe6be919428604ed71e80345",
+      "source": "sources/w16-rt-a-strupr/strupr.cpp",
+      "emitted_functions": [
+        {
+          "name": "strupr",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7553,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_strdup.o",
+      "profile": "authored_cpp",
+      "sha256": "2df759e1a5433b3ae4bff5682c7c22f8b8edcf893a1de1efb597e57b073a7541",
+      "source": "sources/w16-rt-a-strdup/strdup.cpp",
+      "emitted_functions": [
+        {
+          "name": "strdup",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7554,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_strdup_r.o",
+      "profile": "authored_cpp",
+      "sha256": "ec1bd67fc2575e3ff9c7822fe0deeed60303d161741a3a8597c316bb477330a0",
+      "source": "sources/w16-rt-a-strdup-r/strdup_r.cpp",
+      "emitted_functions": [
+        {
+          "name": "_strdup_r",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7555,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_copysign.o",
+      "profile": "authored_cpp",
+      "sha256": "bafa3ca275c825818a16f7bee49525806ea97fcf055b7d1f4cb9d07b434d7791",
+      "source": "sources/w16-rt-a-copysign/copysign.cpp",
+      "emitted_functions": [
+        {
+          "name": "copysign",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7556,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_muldi3.o",
+      "profile": "authored_cpp",
+      "sha256": "3fc84f84423ca367e94f6897a9c862868f22051db04cb926e7d16d14e46146f1",
+      "source": "sources/w16-rt-a-muldi3/muldi3.cpp",
+      "emitted_functions": [
+        {
+          "name": "__muldi3",
+          "compiled_body_bytes": 84
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7557,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_exception_what.o",
+      "profile": "authored_cpp",
+      "sha256": "c542eb1dfacd93755c3b9070575f0d312ba8f2bd0754476a3717d71999cad3af",
+      "source": "sources/w16-rt-a-exception-what/exception_what.cpp",
+      "emitted_functions": [
+        {
+          "name": "what__C9exception",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7558,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_dynamic_cast_2.o",
+      "profile": "authored_cpp",
+      "sha256": "f0da4d0e37530bb1c88c8b66986ce8f35498e507d140cf0149fe2dd405bcadec",
+      "source": "sources/w16-rt-a-dynamic-cast-2/dynamic_cast_2.cpp",
+      "emitted_functions": [
+        {
+          "name": "__dynamic_cast_2",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7559,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_ieee754_expf.o",
+      "profile": "authored_cpp",
+      "sha256": "77d8ab344bc49026339bd7b2c15c98e1eac8b41d2b026954b2da9c0d4f53a44b",
+      "source": "sources/w16-rt-a-ieee754-expf/ieee754_expf.cpp",
+      "emitted_functions": [
+        {
+          "name": "__ieee754_expf",
+          "compiled_body_bytes": 880
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7560,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_find_fde.o",
+      "profile": "authored_cpp",
+      "sha256": "7276a45bdf7a125fc09d7169459a6dc1d0336c1694367236ec9bd4d4d73f5e81",
+      "source": "sources/w16-rt-a-find-fde/find_fde.cpp",
+      "emitted_functions": [
+        {
+          "name": "find_fde",
+          "compiled_body_bytes": 484
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7561,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_extract_cie_info.o",
+      "profile": "authored_cpp",
+      "sha256": "93c6082910db1c401fc2f513e5b53798fe6e52fc21758098d7399da0f63aca4e",
+      "source": "sources/w16-rt-a-extract-cie-info/extract_cie_info.cpp",
+      "emitted_functions": [
+        {
+          "name": "extract_cie_info",
+          "compiled_body_bytes": 300
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7562,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_execute_cfa_insn.o",
+      "profile": "authored_cpp",
+      "sha256": "8f9dac3675337df27249626c5afcb5e979c56d13f8852e24b1b0784eb488f860",
+      "source": "sources/w16-rt-a-execute-cfa-insn/execute_cfa_insn.cpp",
+      "emitted_functions": [
+        {
+          "name": "execute_cfa_insn",
+          "compiled_body_bytes": 1096
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7563,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_vilist_dtor_p10viflatfile.o",
+      "profile": "authored_cpp",
+      "sha256": "3ffc3be6031926762663894e55cdd468d325ef29d1a57b9ef584d67ccf8ae18f",
+      "source": "sources/w16-rt-a-vilist-dtor-p10viflatfile/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t6VIList1ZP10VIFlatFile",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7564,
+      "kind": "independently_authored_source",
+      "object_name": "w16_rt_a_string_rep_clone.o",
+      "profile": "authored_cpp",
+      "sha256": "479552fbb543d1803013b65e1476b6de232904d7147d5b16c3c0d78331356dbf",
+      "source": "sources/w16-rt-a-string-rep-clone/rep_clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__Q2t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0_3Rep",
+          "compiled_body_bytes": 592
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -112577,7 +112785,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "f84094bb59348f34c45ccc14d9f97e4ec5ffe0ec4a5fd51ed52c4c243e31d2bf",
+  "snapshot_sha256": "8dd616b561488da791ae87a20596f9c43676d11065be866fe47d2ff8e34ccb65",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
