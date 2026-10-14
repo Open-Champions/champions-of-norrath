@@ -29,7 +29,11 @@ struct MapObject {
     unsigned short short_value;
     unsigned char unknown_58[14];
     const unsigned char* vtable;
+#ifdef NORRATH_HOST_ARENA
+    unsigned char unknown_76[880];  // the vtable pointer is eight bytes on the host
+#else
     unsigned char unknown_76[884];
+#endif
     int player_state;
 };
 static_assert(__builtin_offsetof(MapObject, flags) == 12, "flags offset");

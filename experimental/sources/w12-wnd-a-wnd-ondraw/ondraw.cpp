@@ -10,6 +10,12 @@
 // table, slots 2 and 3), so this draws the window, then each visible child recursively; the word
 // at child+28 is a visibility flag.
 // Unknown: the flag's exact name and semantics.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned char sWndMcErr[0x210];
 void OnDrawSelf__10VIWndMcErr(void* self);
@@ -17,17 +23,28 @@ int Begin__Ct5VISet1ZP5VIWnd(void* set);
 int End__Ct5VISet1ZP5VIWnd(void* set);
 int Next__Ct5VISet1ZP5VIWndi(void* set, int it);
 
+#ifdef NORRATH_HOST_ARENA
+extern "C" void* norrath_host_function(unsigned address);
+struct VtEntry {
+    short delta;
+    short index;
+    unsigned function;
+};
+#define NORRATH_ENTRY_FUNCTION(entry) reinterpret_cast<void (*)(void*)>(norrath_host_function((entry)->function))
+#else
 struct VtEntry {
     short delta;
     short index;
     void (*function)(void*);
 };
+#define NORRATH_ENTRY_FUNCTION(entry) ((entry)->function)
+#endif
 
 static inline void call_entry(void* object, int byte_offset) {
     unsigned char* bytes = static_cast<unsigned char*>(object);
     const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-        static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(bytes + 32)) + byte_offset);
-    entry->function(bytes + entry->delta);
+        NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(bytes + 32)) + byte_offset);
+    NORRATH_ENTRY_FUNCTION(entry)(bytes + entry->delta);
 }
 
 void OnDraw__5VIWnd(void* self) {
@@ -37,9 +54,9 @@ void OnDraw__5VIWnd(void* self) {
     for (int it = Begin__Ct5VISet1ZP5VIWnd(self); it != End__Ct5VISet1ZP5VIWnd(self);
          it = Next__Ct5VISet1ZP5VIWndi(self, it)) {
         unsigned char* elements = reinterpret_cast<unsigned char*>(
-            static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(bytes + 8)));
+            NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(bytes + 8)));
         unsigned char* child = reinterpret_cast<unsigned char*>(
-            static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(elements + it * 20 + 16)));
+            NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(elements + it * 20 + 16)));
         if (*reinterpret_cast<unsigned*>(child + 28) != 0) call_entry(child, 16);
     }
 }

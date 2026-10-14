@@ -5,6 +5,12 @@
 // element+12, and if equal returns that index. A zero link ends the walk with the End result.
 // Inferred: an unsigned-key search of a binary search tree held in an array (see Begin/Next).
 // Unknown: the template parameters beyond the mangled name.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int End__Ct5VISet1ZP5VIWnd(const void* set);
 
@@ -14,7 +20,7 @@ int Find__Ct5VISet1ZP5VIWndRCP5VIWnd(const void* set, const unsigned* key) {
     if (index != 0) {
         const unsigned wanted = *key;
         const unsigned char* elements = reinterpret_cast<const unsigned char*>(
-            static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<const unsigned*>(bytes + 8)));
+            NORRATH_WORD_ADDRESS(*reinterpret_cast<const unsigned*>(bytes + 8)));
         for (;;) {
             const unsigned char* element = elements + index * 20;
             const unsigned found = *reinterpret_cast<const unsigned*>(element + 16);

@@ -11,6 +11,12 @@
 // y (stores to element 0 included). Finally it calls FreeNode__t5VISet1ZP5VIWndi(set, index).
 // Inferred: standard red-black tree deletion with 0 meaning black; keys stay with their elements.
 // Unknown: what EraseFixup and FreeNode do beyond their calls; template parameters beyond the name.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int Next__Ct5VISet1ZP5VIWndi(const void* set, int index);
 void EraseFixup__t5VISet1ZP5VIWndi(void* set, int index);
@@ -19,7 +25,7 @@ void FreeNode__t5VISet1ZP5VIWndi(void* set, int index);
 static inline unsigned* field(const void* set, int index, int offset) {
     const unsigned char* bytes = static_cast<const unsigned char*>(set);
     unsigned char* elements = reinterpret_cast<unsigned char*>(
-        static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<const unsigned*>(bytes + 8)));
+        NORRATH_WORD_ADDRESS(*reinterpret_cast<const unsigned*>(bytes + 8)));
     return reinterpret_cast<unsigned*>(elements + index * 20 + offset);
 }
 static inline unsigned* root_word(void* set) {

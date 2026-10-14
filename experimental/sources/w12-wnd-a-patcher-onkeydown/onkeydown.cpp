@@ -21,6 +21,12 @@
 // UI pointer itself as in the image; this is passed through unchanged.
 // Unknown: key names, the meaning of the words at +1156, +1160 and +1164, and the type of the UI pointer
 // that GetString receives.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 const unsigned short* Message__C16VIWndReadMessage(const void* window);
@@ -92,7 +98,7 @@ void OnKeyDown__12VIWndPatcheri(void* self, int key) {
         SoundPlay__4VIUI11VIUISoundId(_5VIWnd$mUI, 15);
         {
             void* message = bytes + 1176;
-            void* ui = reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(_5VIWnd$mUI));
+            void* ui = reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(_5VIWnd$mUI));
             const int arg = *reinterpret_cast<int*>(static_cast<unsigned char*>(ui) + 48);
             const unsigned short* first = GetString__13VIStringTableii(ui, 785, arg);
             const unsigned short* second = GetString__13VIStringTableii(ui, 810, arg);

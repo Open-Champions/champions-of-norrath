@@ -22,6 +22,12 @@
 // link is lost, stops the EULA flow and shows a disconnect dialog; the word at +28 is a shown flag.
 // Unknown: the names of the words at this+1088, +1404, +1412 and app+0xb4c8, the type of the object at
 // this+36, and the meaning of the string "DisconnectConfirmed" as an action name.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 extern int mcerror;
@@ -49,7 +55,7 @@ static inline unsigned& word(void* base, int offset) {
     return *reinterpret_cast<unsigned*>(static_cast<unsigned char*>(base) + offset);
 }
 static inline void* pointer_of(unsigned value) {
-    return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(value));
+    return reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(value));
 }
 static inline void render_dialog(void* self) {
     void* dialog = pointer_of(word(self, 56));

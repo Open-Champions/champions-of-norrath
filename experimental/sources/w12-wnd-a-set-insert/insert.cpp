@@ -16,6 +16,12 @@
 // element red (this routine never colours it).
 // Unknown: AddNode's behaviour (not read here beyond its call), and the template parameters
 // beyond the mangled name.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int AddNode__t5VISet1ZP5VIWndii(void* set, int parent, int side);
 void LeftRotate__t5VISet1ZP5VIWndi(void* set, int index);
@@ -24,7 +30,7 @@ void RightRotate__t5VISet1ZP5VIWndi(void* set, int index);
 static inline unsigned* field(const void* set, int index, int offset) {
     const unsigned char* bytes = static_cast<const unsigned char*>(set);
     unsigned char* elements = reinterpret_cast<unsigned char*>(
-        static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<const unsigned*>(bytes + 8)));
+        NORRATH_WORD_ADDRESS(*reinterpret_cast<const unsigned*>(bytes + 8)));
     return reinterpret_cast<unsigned*>(elements + index * 20 + offset);
 }
 static inline int root_of(const void* set) {

@@ -9,15 +9,32 @@
 // matching OnKeyDown routine uses offset 24); this+1400 blocks input; this+1420 is an edit-active flag
 // and this+1424 an embedded edit window.
 // Unknown: the exact names of the flag words.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int IsOpen__11VIGUIDialog(void* dialog);
 void OnKeyUp__9VIWndEditi(void* edit, int key);
 
+#ifdef NORRATH_HOST_ARENA
+extern "C" void* norrath_host_function(unsigned address);
+struct VtEntry {
+    short delta;
+    short index;
+    unsigned function;
+};
+#define NORRATH_ENTRY_FUNCTION(entry) reinterpret_cast<void (*)(void*, int)>(norrath_host_function((entry)->function))
+#else
 struct VtEntry {
     short delta;
     short index;
     void (*function)(void*, int);
 };
+#define NORRATH_ENTRY_FUNCTION(entry) ((entry)->function)
+#endif
 
 static inline unsigned word_at(const void* base, int offset) {
     return *reinterpret_cast<const unsigned*>(static_cast<const unsigned char*>(base) + offset);
@@ -25,16 +42,16 @@ static inline unsigned word_at(const void* base, int offset) {
 static inline void call_up(void* object, int key) {
     unsigned char* bytes = static_cast<unsigned char*>(object);
     const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-        static_cast<__UINTPTR_TYPE__>(word_at(bytes, 120)) + 16);
-    entry->function(bytes + entry->delta, key);
+        NORRATH_WORD_ADDRESS(word_at(bytes, 120)) + 16);
+    NORRATH_ENTRY_FUNCTION(entry)(bytes + entry->delta, key);
 }
 
 void OnKeyUp__20VIWndGenericRendereri(void* self, int key) {
     unsigned char* bytes = static_cast<unsigned char*>(self);
     if (word_at(bytes, 1400) != 0) return;
-    void* page = reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(word_at(bytes, 52)));
+    void* page = reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(word_at(bytes, 52)));
     if (page == 0) return;
-    void* dialog = reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(word_at(bytes, 56)));
+    void* dialog = reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(word_at(bytes, 56)));
     if (dialog != 0 && IsOpen__11VIGUIDialog(dialog)) {
         call_up(dialog, key);
         return;
