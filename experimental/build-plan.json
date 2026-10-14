@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7228,
+  "default_authored_inputs": 7263,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8022,7 +8022,42 @@
     "sources/w15-libs-eh-a-strdup-wrap/wrap_strdup.cpp": "ccf21d2c706e0c6710a53e259f095fed7950b65f8aa4f23e3807a2e288464d21",
     "sources/w15-libs-eh-a-string-free-list/free_list.cpp": "74977b4798dfd93249a4c789dd597a04ea1574a5f5e121649b635b25f5eebdf0",
     "sources/w15-libs-eh-a-string-nilrep/nil_rep.cpp": "4518f9d1326b94b168b679c62f688c28760d136c69162c1d944410ae3908526f",
-    "sources/w15-libs-eh-a-unwinding-cleanup/unwinding_cleanup.cpp": "bbb7723e78d7ae3b7299fe59443c8fc4ab18ae06c61057035e58b2a09cb540a8"
+    "sources/w15-libs-eh-a-unwinding-cleanup/unwinding_cleanup.cpp": "bbb7723e78d7ae3b7299fe59443c8fc4ab18ae06c61057035e58b2a09cb540a8",
+    "sources/w15-vi-esfparse-a-collbuffer/parse_coll_buffer.cpp": "1320b0b9bc6dbdf2b6875e618c8b840497405e41c0477b6d945f40a64182c180",
+    "sources/w15-vi-esfparse-a-convert16/convert_16.cpp": "8a7da2d2b975f1ad4de3c0444a288ced83d7d8e4aedcc8d3289d49f0ad6382fe",
+    "sources/w15-vi-esfparse-a-convert24/convert_24.cpp": "e8d70990582207e77cba2840b6081f51a9e5bf11e7aeaaa437756dc034db6804",
+    "sources/w15-vi-esfparse-a-convert32/convert_32.cpp": "569265b822b381139c36c429054e51139b76d98a377b0ff4f5fee1087cbe49d2",
+    "sources/w15-vi-esfparse-a-convert4/convert_4.cpp": "4c25eae9f249065a424d4e6d032412d61036a2d58521872a810f596049888ed7",
+    "sources/w15-vi-esfparse-a-convert8/convert_8.cpp": "3cd52f8b956d06e3926ff5e400589655f2f1b899e3a3bda3f96927c62b1561a5",
+    "sources/w15-vi-esfparse-a-cspriteaslotlist/parse_csprite_aslot_list.cpp": "88bfa1b527897312de4bd65804b9a73440f5bdb76f6eaac4995c4baf0dff4b8a",
+    "sources/w15-vi-esfparse-a-cspritecontsound/parse_csprite_cont_sound.cpp": "1f3316497fe71375c1ef65104e4b1226694ae9c3ccda048919229645c98aa92d",
+    "sources/w15-vi-esfparse-a-cspritenodeidlist/parse_csprite_node_id_list.cpp": "7e12f0041e83933d8927fbd4c2d668a86ef47b2c660937185d9fc7f0a914f09a",
+    "sources/w15-vi-esfparse-a-cspritepartdefinitions/parse_csprite_part_definitions.cpp": "67c4573b2aa522c7bc23cb199383df0f81d753319fc7bf84420198c06224d1bf",
+    "sources/w15-vi-esfparse-a-cspritepartemitters/parse_csprite_part_emitters.cpp": "cb5b3a4c138b95d4fe1d928f6c12660e3734ef8b6202b145c4f775b7850dcae9",
+    "sources/w15-vi-esfparse-a-cspriteplaylist/parse_csprite_play_list.cpp": "50a1dc81ec0275027c1a4ead53b363a6fbcf728714360dfcfe1cf1ccee7bd95b",
+    "sources/w15-vi-esfparse-a-cspriteskinlist/parse_csprite_skin_list.cpp": "d385355f4063bce46df5fe8c596be552d820118ff50e9185228ff638786e8eca",
+    "sources/w15-vi-esfparse-a-cspritespritearray/parse_csprite_sprite_array.cpp": "602a26f67ed4f63e93d04980be43cdd2491d9f82d111c4dd4c6dbb90e5b4401c",
+    "sources/w15-vi-esfparse-a-cspritetslotlist/parse_csprite_tslot_list.cpp": "8a2ac720557de8c425ad5a8ac730f3475b21c56e801a362525345765bc08f030",
+    "sources/w15-vi-esfparse-a-floraprimbuffer/parse_flora_prim_buffer.cpp": "11dca9f5f7ce72096d0a7325d9db7f5b87b97b3e6d9ac52bc334539465af704c",
+    "sources/w15-vi-esfparse-a-groupspritemembers/parse_group_sprite_members.cpp": "be85ca9dc3faa637740a403549744d954704b40c2c73149f24237860eb7f164b",
+    "sources/w15-vi-esfparse-a-groupspritespritearray/parse_group_sprite_sprite_array.cpp": "59e90edd9d5ed2ba40b8363ac40ade11b10b94db8df57d3729c833f469373bc3",
+    "sources/w15-vi-esfparse-a-hspriteanim/parse_hsprite_anim.cpp": "f68f6dc2c0a31c28ad1a026953614b730cd62f278a4e8dcc82e555f5d2cec5c7",
+    "sources/w15-vi-esfparse-a-hspriteanimarray/parse_hsprite_anim_array.cpp": "f2a0e717a5329f9c6acc066ca69af9e7f51d923baf95b49a0a62088b0eb8f3f3",
+    "sources/w15-vi-esfparse-a-hspriteattachments/parse_hsprite_attachments.cpp": "e7b1196dee7210c281cd3095d7cab38af5c3dbc09f98c9bdccd4653d503f0d06",
+    "sources/w15-vi-esfparse-a-hspritehierarchy/parse_hsprite_hierarchy.cpp": "93f34edfa11d3df96be65300d28fb84d337ec236c0ab08aeabd7ba2503f2fb8a",
+    "sources/w15-vi-esfparse-a-hspritespritearray/parse_hsprite_sprite_array.cpp": "c21458df70c2b2e38a3b4e5e9604a43ce7ed9c2ff021fe3bed0c35d4df7496f0",
+    "sources/w15-vi-esfparse-a-hspritetriggers/parse_hsprite_triggers.cpp": "8e43fa7f607948d4d838f116abebe2f763308f6bab9346d86941bb7d33dcdff8",
+    "sources/w15-vi-esfparse-a-lodspritelevels/parse_lod_sprite_levels.cpp": "d99803c5c8830d77d11333ba6a684915355f331f4c030e0b73c1e88b257320fa",
+    "sources/w15-vi-esfparse-a-lodspritespritearray/parse_lod_sprite_sprite_array.cpp": "f8c1f9d0a18dfb66d3e9ce1f0eb9f539a9d240acba4fa390019ac812e56fd6c3",
+    "sources/w15-vi-esfparse-a-material/parse_material.cpp": "30f9bdb903cc13234a837d27711c7b1c4e27d49a3c68d2347625c3ef1ff8528d",
+    "sources/w15-vi-esfparse-a-primbuffer/parse_prim_buffer.cpp": "ef53636d5f9da9658f163111c278405fe75a80c91f5752c05cd9875e3f8bf25c",
+    "sources/w15-vi-esfparse-a-refmap/parse_ref_map.cpp": "73ae40174fb3d897dc3e3fdbbaa6f1998dda4fe95195d070dfad4edc176bc3f0",
+    "sources/w15-vi-esfparse-a-resourcetable/parse_resource_table.cpp": "404c1e0a8227c39ca543111019ad2023771442427fa0884d20b2040be1fb2563",
+    "sources/w15-vi-esfparse-a-sound/parse_sound.cpp": "950f198399dcb27c022be60dc705895089975142397ca980dcfc5838dace6b55",
+    "sources/w15-vi-esfparse-a-soundarray/parse_sound_array.cpp": "794558ebc1789d61783a4985c4919d8160b7ced01d52b87d7475749f65d2f2de",
+    "sources/w15-vi-esfparse-a-surface/parse_surface.cpp": "e5f4bd9a64622e017c751cbe1ae86d9fe0d76677dcf7314ce6b3e2fd78857d40",
+    "sources/w15-vi-esfparse-a-worldbase/parse_world_base.cpp": "b2258b2db561180e78ea3750b13f858a045b84b6b8dda36f3d60c344988482b0",
+    "sources/w15-vi-esfparse-a-worldzones/parse_world_zones.cpp": "424186e51a3cb698eda14925a71fb131992fdc9b4391b2d1c2a56e09c169e963"
   },
   "inputs": [
     {
@@ -107492,6 +107527,531 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7230,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_collbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "1320b0b9bc6dbdf2b6875e618c8b840497405e41c0477b6d945f40a64182c180",
+      "source": "sources/w15-vi-esfparse-a-collbuffer/parse_coll_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCollBuffer__10VIESFParse",
+          "compiled_body_bytes": 1852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7231,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_convert16.o",
+      "profile": "authored_cpp",
+      "sha256": "8a7da2d2b975f1ad4de3c0444a288ced83d7d8e4aedcc8d3289d49f0ad6382fe",
+      "source": "sources/w15-vi-esfparse-a-convert16/convert_16.cpp",
+      "emitted_functions": [
+        {
+          "name": "Convert16__10VIESFParseR12VIPixelStorePUcT2i",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7232,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_convert24.o",
+      "profile": "authored_cpp",
+      "sha256": "e8d70990582207e77cba2840b6081f51a9e5bf11e7aeaaa437756dc034db6804",
+      "source": "sources/w15-vi-esfparse-a-convert24/convert_24.cpp",
+      "emitted_functions": [
+        {
+          "name": "Convert24__10VIESFParseR12VIPixelStorePUcT2i",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7233,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_convert32.o",
+      "profile": "authored_cpp",
+      "sha256": "569265b822b381139c36c429054e51139b76d98a377b0ff4f5fee1087cbe49d2",
+      "source": "sources/w15-vi-esfparse-a-convert32/convert_32.cpp",
+      "emitted_functions": [
+        {
+          "name": "Convert32__10VIESFParseR12VIPixelStorePUcT2i",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7234,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_convert4.o",
+      "profile": "authored_cpp",
+      "sha256": "4c25eae9f249065a424d4e6d032412d61036a2d58521872a810f596049888ed7",
+      "source": "sources/w15-vi-esfparse-a-convert4/convert_4.cpp",
+      "emitted_functions": [
+        {
+          "name": "Convert4__10VIESFParseR12VIPixelStorePUcT2i",
+          "compiled_body_bytes": 348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7235,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_convert8.o",
+      "profile": "authored_cpp",
+      "sha256": "3cd52f8b956d06e3926ff5e400589655f2f1b899e3a3bda3f96927c62b1561a5",
+      "source": "sources/w15-vi-esfparse-a-convert8/convert_8.cpp",
+      "emitted_functions": [
+        {
+          "name": "Convert8__10VIESFParseR12VIPixelStorePUcT2i",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7236,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspriteaslotlist.o",
+      "profile": "authored_cpp",
+      "sha256": "88bfa1b527897312de4bd65804b9a73440f5bdb76f6eaac4995c4baf0dff4b8a",
+      "source": "sources/w15-vi-esfparse-a-cspriteaslotlist/parse_csprite_aslot_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteASlotList__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7237,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritecontsound.o",
+      "profile": "authored_cpp",
+      "sha256": "1f3316497fe71375c1ef65104e4b1226694ae9c3ccda048919229645c98aa92d",
+      "source": "sources/w15-vi-esfparse-a-cspritecontsound/parse_csprite_cont_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteContSound__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7238,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritenodeidlist.o",
+      "profile": "authored_cpp",
+      "sha256": "7e12f0041e83933d8927fbd4c2d668a86ef47b2c660937185d9fc7f0a914f09a",
+      "source": "sources/w15-vi-esfparse-a-cspritenodeidlist/parse_csprite_node_id_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteNodeIDList__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7239,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritepartdefinitions.o",
+      "profile": "authored_cpp",
+      "sha256": "67c4573b2aa522c7bc23cb199383df0f81d753319fc7bf84420198c06224d1bf",
+      "source": "sources/w15-vi-esfparse-a-cspritepartdefinitions/parse_csprite_part_definitions.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpritePartDefinitions__10VIESFParse",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7240,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritepartemitters.o",
+      "profile": "authored_cpp",
+      "sha256": "cb5b3a4c138b95d4fe1d928f6c12660e3734ef8b6202b145c4f775b7850dcae9",
+      "source": "sources/w15-vi-esfparse-a-cspritepartemitters/parse_csprite_part_emitters.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpritePartEmitters__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 540
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7241,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspriteplaylist.o",
+      "profile": "authored_cpp",
+      "sha256": "50a1dc81ec0275027c1a4ead53b363a6fbcf728714360dfcfe1cf1ccee7bd95b",
+      "source": "sources/w15-vi-esfparse-a-cspriteplaylist/parse_csprite_play_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpritePlayList__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 768
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7242,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspriteskinlist.o",
+      "profile": "authored_cpp",
+      "sha256": "d385355f4063bce46df5fe8c596be552d820118ff50e9185228ff638786e8eca",
+      "source": "sources/w15-vi-esfparse-a-cspriteskinlist/parse_csprite_skin_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteSkinList__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7243,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritespritearray.o",
+      "profile": "authored_cpp",
+      "sha256": "602a26f67ed4f63e93d04980be43cdd2491d9f82d111c4dd4c6dbb90e5b4401c",
+      "source": "sources/w15-vi-esfparse-a-cspritespritearray/parse_csprite_sprite_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteSpriteArray__10VIESFParse",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7244,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_cspritetslotlist.o",
+      "profile": "authored_cpp",
+      "sha256": "8a2ac720557de8c425ad5a8ac730f3475b21c56e801a362525345765bc08f030",
+      "source": "sources/w15-vi-esfparse-a-cspritetslotlist/parse_csprite_tslot_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseCSpriteTSlotList__10VIESFParseR9VICSprite",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7245,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_floraprimbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "11dca9f5f7ce72096d0a7325d9db7f5b87b97b3e6d9ac52bc334539465af704c",
+      "source": "sources/w15-vi-esfparse-a-floraprimbuffer/parse_flora_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseFloraPrimBuffer__10VIESFParse",
+          "compiled_body_bytes": 1460
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7246,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_groupspritemembers.o",
+      "profile": "authored_cpp",
+      "sha256": "be85ca9dc3faa637740a403549744d954704b40c2c73149f24237860eb7f164b",
+      "source": "sources/w15-vi-esfparse-a-groupspritemembers/parse_group_sprite_members.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseGroupSpriteMembers__10VIESFParseR13VIGroupSprite",
+          "compiled_body_bytes": 296
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7247,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_groupspritespritearray.o",
+      "profile": "authored_cpp",
+      "sha256": "59e90edd9d5ed2ba40b8363ac40ade11b10b94db8df57d3729c833f469373bc3",
+      "source": "sources/w15-vi-esfparse-a-groupspritespritearray/parse_group_sprite_sprite_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseGroupSpriteSpriteArray__10VIESFParse",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7248,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspriteanim.o",
+      "profile": "authored_cpp",
+      "sha256": "f68f6dc2c0a31c28ad1a026953614b730cd62f278a4e8dcc82e555f5d2cec5c7",
+      "source": "sources/w15-vi-esfparse-a-hspriteanim/parse_hsprite_anim.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteAnim__10VIESFParse",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7249,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspriteanimarray.o",
+      "profile": "authored_cpp",
+      "sha256": "f2a0e717a5329f9c6acc066ca69af9e7f51d923baf95b49a0a62088b0eb8f3f3",
+      "source": "sources/w15-vi-esfparse-a-hspriteanimarray/parse_hsprite_anim_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteAnimArray__10VIESFParse",
+          "compiled_body_bytes": 220
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7250,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspriteattachments.o",
+      "profile": "authored_cpp",
+      "sha256": "e7b1196dee7210c281cd3095d7cab38af5c3dbc09f98c9bdccd4653d503f0d06",
+      "source": "sources/w15-vi-esfparse-a-hspriteattachments/parse_hsprite_attachments.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteAttachments__10VIESFParseR9VIHSprite",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7251,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspritehierarchy.o",
+      "profile": "authored_cpp",
+      "sha256": "93f34edfa11d3df96be65300d28fb84d337ec236c0ab08aeabd7ba2503f2fb8a",
+      "source": "sources/w15-vi-esfparse-a-hspritehierarchy/parse_hsprite_hierarchy.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteHierarchy__10VIESFParseR9VIHSprite",
+          "compiled_body_bytes": 704
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7252,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspritespritearray.o",
+      "profile": "authored_cpp",
+      "sha256": "c21458df70c2b2e38a3b4e5e9604a43ce7ed9c2ff021fe3bed0c35d4df7496f0",
+      "source": "sources/w15-vi-esfparse-a-hspritespritearray/parse_hsprite_sprite_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteSpriteArray__10VIESFParse",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7253,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_hspritetriggers.o",
+      "profile": "authored_cpp",
+      "sha256": "8e43fa7f607948d4d838f116abebe2f763308f6bab9346d86941bb7d33dcdff8",
+      "source": "sources/w15-vi-esfparse-a-hspritetriggers/parse_hsprite_triggers.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseHSpriteTriggers__10VIESFParseR9VIHSprite",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7254,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_lodspritelevels.o",
+      "profile": "authored_cpp",
+      "sha256": "d99803c5c8830d77d11333ba6a684915355f331f4c030e0b73c1e88b257320fa",
+      "source": "sources/w15-vi-esfparse-a-lodspritelevels/parse_lod_sprite_levels.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseLODSpriteLevels__10VIESFParseR11VILODSprite",
+          "compiled_body_bytes": 300
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7255,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_lodspritespritearray.o",
+      "profile": "authored_cpp",
+      "sha256": "f8c1f9d0a18dfb66d3e9ce1f0eb9f539a9d240acba4fa390019ac812e56fd6c3",
+      "source": "sources/w15-vi-esfparse-a-lodspritespritearray/parse_lod_sprite_sprite_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseLODSpriteSpriteArray__10VIESFParse",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7256,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_material.o",
+      "profile": "authored_cpp",
+      "sha256": "30f9bdb903cc13234a837d27711c7b1c4e27d49a3c68d2347625c3ef1ff8528d",
+      "source": "sources/w15-vi-esfparse-a-material/parse_material.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseMaterial__10VIESFParseP10VIMaterial",
+          "compiled_body_bytes": 872
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7257,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_primbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "ef53636d5f9da9658f163111c278405fe75a80c91f5752c05cd9875e3f8bf25c",
+      "source": "sources/w15-vi-esfparse-a-primbuffer/parse_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParsePrimBuffer__10VIESFParse",
+          "compiled_body_bytes": 3452
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7258,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_refmap.o",
+      "profile": "authored_cpp",
+      "sha256": "73ae40174fb3d897dc3e3fdbbaa6f1998dda4fe95195d070dfad4edc176bc3f0",
+      "source": "sources/w15-vi-esfparse-a-refmap/parse_ref_map.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseRefMap__10VIESFParse",
+          "compiled_body_bytes": 472
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7259,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_resourcetable.o",
+      "profile": "authored_cpp",
+      "sha256": "404c1e0a8227c39ca543111019ad2023771442427fa0884d20b2040be1fb2563",
+      "source": "sources/w15-vi-esfparse-a-resourcetable/parse_resource_table.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseResourceTable__10VIESFParseRt7VIArray1Z14VIResourceElem",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7260,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "950f198399dcb27c022be60dc705895089975142397ca980dcfc5838dace6b55",
+      "source": "sources/w15-vi-esfparse-a-sound/parse_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSound__10VIESFParse",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7261,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_soundarray.o",
+      "profile": "authored_cpp",
+      "sha256": "794558ebc1789d61783a4985c4919d8160b7ced01d52b87d7475749f65d2f2de",
+      "source": "sources/w15-vi-esfparse-a-soundarray/parse_sound_array.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSoundArray__10VIESFParse",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7262,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_surface.o",
+      "profile": "authored_cpp",
+      "sha256": "e5f4bd9a64622e017c751cbe1ae86d9fe0d76677dcf7314ce6b3e2fd78857d40",
+      "source": "sources/w15-vi-esfparse-a-surface/parse_surface.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseSurface__10VIESFParse",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7263,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_worldbase.o",
+      "profile": "authored_cpp",
+      "sha256": "b2258b2db561180e78ea3750b13f858a045b84b6b8dda36f3d60c344988482b0",
+      "source": "sources/w15-vi-esfparse-a-worldbase/parse_world_base.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldBase__10VIESFParseR7VIWorld",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7264,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_esfparse_a_worldzones.o",
+      "profile": "authored_cpp",
+      "sha256": "424186e51a3cb698eda14925a71fb131992fdc9b4391b2d1c2a56e09c169e963",
+      "source": "sources/w15-vi-esfparse-a-worldzones/parse_world_zones.cpp",
+      "emitted_functions": [
+        {
+          "name": "ParseWorldZones__10VIESFParseR7VIWorld",
+          "compiled_body_bytes": 744
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -107591,7 +108151,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "02e21197ea5492e82ef9b7b1507d39fd5a12b5a4ee335d1c1cd774c30bd06ac0",
+  "snapshot_sha256": "ac51e3d9ec176eb8848a7bd4b2f052869caa3198c79b3d721154af4df86856ac",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
