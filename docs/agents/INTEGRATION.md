@@ -10276,3 +10276,20 @@ Opened: `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v
 
 Full partial build: 6853 source compilations, one link, 5461 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-13 23:45 CDT — agents/w15-vi-strings-dict-a — 870 unresolved imports
+
+## agents/w15-gameloop-a
+
+Merged (merge commit; tip over 45 minutes old, notes complete). 22 of 26 units selected, all with a `host_check.cpp`. **Not selected:** `cold-arrow-particle-defs`, `harm-touch-particle-defs`, `nm-players-particle-defs` and `poison-arrow-particle-defs`: each defines a `_GLOBAL_$I$...` static-initializer symbol that earlier-wave plan units (`cold_arrow_projectile_static_init`, `spell_harm_touch_static_init`, `global_init`, and the poison-arrow one) already define, so with them in the plan the link fails with four multiple-definition errors. Replacing another package's units is an owner decision; the four stay authored but unplanned, and the notes' claim that they close those four `_GLOBAL_$I$` names is not reproduced (those names were already defined, not in the unresolved list).
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 868 |
+| Closed | 22 |
+| Opened | 20 |
+
+Closed: `Add__12VIDictionaryR10VIResourceUi14VIResourceTypei`, `FindTyped__12VIDictionaryUi14VIResourceTypeRi`, `__Q212RealmService15RealmGatewayAPIUiPCcs`, `allDone__Fi`, `boxDraw__FiiiiiUii`, `displayResistances__Fi`, `doEntityDispatch__FP8MTObjDefiP13delayedEntityPib`, `doNamePad__Fv`, `drawNamePad__Fv`, `getHairStyle__Fi`, `hudRunSlider__FiiiiiUifPii`, `initPostSelect__Fv`, `lightGetAmbient__FPs`, `moveCamera__Fv`, `msgInventoryAdjustAbility__Fii`, `npcLookAtCamera__Fv`, `objectProcessDeleteList__Fv`, `playerRecomputeDamage__6PlayerPQ24item11descriptioni`, `printStat__FiPUsiiii`, `resetName__Fv`, `statsFrame__Fv`, `switchToNamePad__Fv`
+
+Opened: `Insert__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUiRCQ212VIDictionary11VIDictEntry`, `__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI`, `_vt$Q212RealmService15RealmGatewayAPI`, `evalHermite3D__FfP6Point3N41`, `getDamageScale__12SkillArcheryi`, `getTweeks__FiPsT1P6Point3`, `monsterSpawn__FPPcG6Point3sb`, `nameGridDstW`, `nameGridDstX`, `nameGridDstY`, `nameGridPos`, `nameGridSrcW`, `nameGridSrcX`, `nameGridSrcY`, `namePos`, `norrath_stats_screen_view_7d0440`, `posInAura__18SpellAncestralCallP6Point3PfT2`, `setNewGridPosition__Fii`, `showNoNamePrompt`, `statsDrawDelay`
+
+Full partial build: 6875 source compilations, one link, 5483 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

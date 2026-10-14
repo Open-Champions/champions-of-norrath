@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6853,
+  "default_authored_inputs": 6875,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7643,7 +7643,30 @@
     "sources/w15-vi-strings-dict-a-vistring-strcpy16/strcpy16.cpp": "eb044be6dac89de82fd37566e6291e41aedcdf1182416e9387b52738c284380f",
     "sources/w15-vi-strings-dict-a-vistring-strcpy8/strcpy8.cpp": "e3fc0e8da6cd2104f94952750274e791e0b676e3bd72d362a6058bf19dc95b00",
     "sources/w15-vi-strings-dict-a-vistring-strupr/strupr.cpp": "23009d64b35bd4bff4cbce64c4b132b2da23e074a3fddc18b55fe69869e3d20b",
-    "sources/w15-vi-strings-dict-a-viudpsocket-ctor/ctor.cpp": "28c45eb3b4d92a4609ba842044be62dcd711970f824af943519171f2ee62cb57"
+    "sources/w15-vi-strings-dict-a-viudpsocket-ctor/ctor.cpp": "28c45eb3b4d92a4609ba842044be62dcd711970f824af943519171f2ee62cb57",
+    "sources/w15-gameloop-a-all-done/all_done.cpp": "1fcafeaac256d9e077d079c31bdd6b4fdc42dd4dd0fb8e95cbb1ecba06132654",
+    "sources/w15-gameloop-a-box-draw/box_draw.cpp": "938ed967f6a093d00c0447e40e38b2a602f68d6837635af5aaffcb85a8d204d1",
+    "sources/w15-gameloop-a-display-resistances/display_resistances.cpp": "adf3491d2fddcac69c379ab966ff5078cb7f36fcf30fcf8cd39b48989c9dac9a",
+    "sources/w15-gameloop-a-do-entity-dispatch/dispatch.cpp": "a374aceec7fea92f8307172df6607f1dc6b9523160851ab1c5a896a75a17178e",
+    "sources/w15-gameloop-a-do-entity-dispatch/dispatch.hpp": "5c4766c84ffc2e0a9da2ae44f29ba915db6d5fe82a650c47e421715cd481facb",
+    "sources/w15-gameloop-a-do-name-pad/do_name_pad.cpp": "cf297794ea5dc6dbfa555f6b83974f292a2aa08accd24b85edd53d8cb400fc3d",
+    "sources/w15-gameloop-a-draw-name-pad/draw_name_pad.cpp": "cafc599d951d8975479b10d231575af01af71b4dc753d7f02534cb21b9a08946",
+    "sources/w15-gameloop-a-get-hair-style/get_hair_style.cpp": "ab8872407e6c8e0940e736a1fdde40c60c3487da15d3f17209790520a1d615bc",
+    "sources/w15-gameloop-a-hud-run-slider/hud_run_slider.cpp": "8c03bf58e59c6966845975d43d73a77a7d52b28de6f9b53ee019070e758a64e2",
+    "sources/w15-gameloop-a-init-post-select/init_post_select.cpp": "93f6a37f3239187660c055bc80777236f828e77202122f257d6fe03d80c6e3d5",
+    "sources/w15-gameloop-a-light-get-ambient/light_get_ambient.cpp": "cce6d0e6eae75bf63386236fc1f2cd055bd3ae7d3052398d527c53ea6d07a6c5",
+    "sources/w15-gameloop-a-move-camera/move_camera.cpp": "ae4aedb67842ac6b66e3bc0bc53e4b33f0d5802c2ac88e6b14a5ce2754965cb9",
+    "sources/w15-gameloop-a-msg-inventory-adjust-ability/msg_inventory_adjust_ability.cpp": "1973bac5dd7ec2db8d78d87174d636298efcfe9b4d498ce465103b18f4a2255d",
+    "sources/w15-gameloop-a-npc-look-at-camera/npc_look_at_camera.cpp": "0341a7a470f3bccb50e0e434d6da501304d1407ad432e1bb9113bf020c006ddb",
+    "sources/w15-gameloop-a-object-process-delete-list/object_process_delete_list.cpp": "041a928f3d26c047f600f96fcd7a0a2fb22837ffc3bc9a998eb9d4f24ee90d04",
+    "sources/w15-gameloop-a-player-recompute-damage/player_recompute_damage.cpp": "cb4c60ac54a3249ba82cfcb6d65e8336b43626b0467e4534639b9a68a7cb88a8",
+    "sources/w15-gameloop-a-print-stat/print_stat.cpp": "2d9ecee0494d2f428f796f571bd038a48ab4b2a9a9e56f7e1547af8ba4339109",
+    "sources/w15-gameloop-a-realm-gateway-api-ctor/ctor.cpp": "74d6ff4f7564948b83247fd9c9d6909f1e3a579bc1253a87520b9c000f399705",
+    "sources/w15-gameloop-a-reset-name/reset_name.cpp": "16f17320956f30296e88d126cddb097598217b66adb8f372959929c3b07fcf14",
+    "sources/w15-gameloop-a-stats-frame/stats_frame.cpp": "1c50e4c78c01c50bb7e91b758035364b214f837827c028edf18f299821904516",
+    "sources/w15-gameloop-a-switch-to-name-pad/switch_to_name_pad.cpp": "9bfe5baf6984ef8d26c88bce0b015e68568b14e71092d7a055d58aa4e71b32bd",
+    "sources/w15-gameloop-a-vidictionary-add/add.cpp": "fb590d5e1a0314b37c3410e56e2304a12121e0bf28a0e961b26836d530c8c7e0",
+    "sources/w15-gameloop-a-vidictionary-find-typed/find_typed.cpp": "ee47a93092334aee700fc24170b6e4b01d67941c3ff014aacf2b2b13f5e0fe2c"
   },
   "inputs": [
     {
@@ -101902,6 +101925,354 @@
           "compiled_body_bytes": 76
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6855,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_all_done.o",
+      "profile": "authored_cpp",
+      "sha256": "1fcafeaac256d9e077d079c31bdd6b4fdc42dd4dd0fb8e95cbb1ecba06132654",
+      "source": "sources/w15-gameloop-a-all-done/all_done.cpp",
+      "emitted_functions": [
+        {
+          "name": "allDone__Fi",
+          "compiled_body_bytes": 284
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6856,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_box_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "938ed967f6a093d00c0447e40e38b2a602f68d6837635af5aaffcb85a8d204d1",
+      "source": "sources/w15-gameloop-a-box-draw/box_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "boxDraw__FiiiiiUii",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6857,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_display_resistances.o",
+      "profile": "authored_cpp",
+      "sha256": "adf3491d2fddcac69c379ab966ff5078cb7f36fcf30fcf8cd39b48989c9dac9a",
+      "source": "sources/w15-gameloop-a-display-resistances/display_resistances.cpp",
+      "emitted_functions": [
+        {
+          "name": "displayResistances__Fi",
+          "compiled_body_bytes": 500
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-gameloop-a-do-entity-dispatch/dispatch.hpp"
+      ],
+      "input_order": 6858,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_do_entity_dispatch.o",
+      "profile": "authored_cpp",
+      "sha256": "a374aceec7fea92f8307172df6607f1dc6b9523160851ab1c5a896a75a17178e",
+      "source": "sources/w15-gameloop-a-do-entity-dispatch/dispatch.cpp",
+      "emitted_functions": [
+        {
+          "name": "doEntityDispatch__FP8MTObjDefiP13delayedEntityPib",
+          "compiled_body_bytes": 2020
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6859,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_do_name_pad.o",
+      "profile": "authored_cpp",
+      "sha256": "cf297794ea5dc6dbfa555f6b83974f292a2aa08accd24b85edd53d8cb400fc3d",
+      "source": "sources/w15-gameloop-a-do-name-pad/do_name_pad.cpp",
+      "emitted_functions": [
+        {
+          "name": "doNamePad__Fv",
+          "compiled_body_bytes": 2204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6860,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_draw_name_pad.o",
+      "profile": "authored_cpp",
+      "sha256": "cafc599d951d8975479b10d231575af01af71b4dc753d7f02534cb21b9a08946",
+      "source": "sources/w15-gameloop-a-draw-name-pad/draw_name_pad.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawNamePad__Fv",
+          "compiled_body_bytes": 2764
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6861,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_get_hair_style.o",
+      "profile": "authored_cpp",
+      "sha256": "ab8872407e6c8e0940e736a1fdde40c60c3487da15d3f17209790520a1d615bc",
+      "source": "sources/w15-gameloop-a-get-hair-style/get_hair_style.cpp",
+      "emitted_functions": [
+        {
+          "name": "getHairStyle__Fi",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6862,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_hud_run_slider.o",
+      "profile": "authored_cpp",
+      "sha256": "8c03bf58e59c6966845975d43d73a77a7d52b28de6f9b53ee019070e758a64e2",
+      "source": "sources/w15-gameloop-a-hud-run-slider/hud_run_slider.cpp",
+      "emitted_functions": [
+        {
+          "name": "hudRunSlider__FiiiiiUifPii",
+          "compiled_body_bytes": 432
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6863,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_init_post_select.o",
+      "profile": "authored_cpp",
+      "sha256": "93f6a37f3239187660c055bc80777236f828e77202122f257d6fe03d80c6e3d5",
+      "source": "sources/w15-gameloop-a-init-post-select/init_post_select.cpp",
+      "emitted_functions": [
+        {
+          "name": "initPostSelect__Fv",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6864,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_light_get_ambient.o",
+      "profile": "authored_cpp",
+      "sha256": "cce6d0e6eae75bf63386236fc1f2cd055bd3ae7d3052398d527c53ea6d07a6c5",
+      "source": "sources/w15-gameloop-a-light-get-ambient/light_get_ambient.cpp",
+      "emitted_functions": [
+        {
+          "name": "lightGetAmbient__FPs",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6865,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_move_camera.o",
+      "profile": "authored_cpp",
+      "sha256": "ae4aedb67842ac6b66e3bc0bc53e4b33f0d5802c2ac88e6b14a5ce2754965cb9",
+      "source": "sources/w15-gameloop-a-move-camera/move_camera.cpp",
+      "emitted_functions": [
+        {
+          "name": "moveCamera__Fv",
+          "compiled_body_bytes": 1868
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6866,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_msg_inventory_adjust_ability.o",
+      "profile": "authored_cpp",
+      "sha256": "1973bac5dd7ec2db8d78d87174d636298efcfe9b4d498ce465103b18f4a2255d",
+      "source": "sources/w15-gameloop-a-msg-inventory-adjust-ability/msg_inventory_adjust_ability.cpp",
+      "emitted_functions": [
+        {
+          "name": "msgInventoryAdjustAbility__Fii",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6867,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_npc_look_at_camera.o",
+      "profile": "authored_cpp",
+      "sha256": "0341a7a470f3bccb50e0e434d6da501304d1407ad432e1bb9113bf020c006ddb",
+      "source": "sources/w15-gameloop-a-npc-look-at-camera/npc_look_at_camera.cpp",
+      "emitted_functions": [
+        {
+          "name": "npcLookAtCamera__Fv",
+          "compiled_body_bytes": 140
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6868,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_object_process_delete_list.o",
+      "profile": "authored_cpp",
+      "sha256": "041a928f3d26c047f600f96fcd7a0a2fb22837ffc3bc9a998eb9d4f24ee90d04",
+      "source": "sources/w15-gameloop-a-object-process-delete-list/object_process_delete_list.cpp",
+      "emitted_functions": [
+        {
+          "name": "objectProcessDeleteList__Fv",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6869,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_player_recompute_damage.o",
+      "profile": "authored_cpp",
+      "sha256": "cb4c60ac54a3249ba82cfcb6d65e8336b43626b0467e4534639b9a68a7cb88a8",
+      "source": "sources/w15-gameloop-a-player-recompute-damage/player_recompute_damage.cpp",
+      "emitted_functions": [
+        {
+          "name": "playerRecomputeDamage__6PlayerPQ24item11descriptioni",
+          "compiled_body_bytes": 1852
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6870,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_print_stat.o",
+      "profile": "authored_cpp",
+      "sha256": "2d9ecee0494d2f428f796f571bd038a48ab4b2a9a9e56f7e1547af8ba4339109",
+      "source": "sources/w15-gameloop-a-print-stat/print_stat.cpp",
+      "emitted_functions": [
+        {
+          "name": "printStat__FiPUsiiii",
+          "compiled_body_bytes": 624
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6871,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_realm_gateway_api_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "74d6ff4f7564948b83247fd9c9d6909f1e3a579bc1253a87520b9c000f399705",
+      "source": "sources/w15-gameloop-a-realm-gateway-api-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__Q212RealmService15RealmGatewayAPIUiPCcs",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6872,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_reset_name.o",
+      "profile": "authored_cpp",
+      "sha256": "16f17320956f30296e88d126cddb097598217b66adb8f372959929c3b07fcf14",
+      "source": "sources/w15-gameloop-a-reset-name/reset_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "resetName__Fv",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6873,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_stats_frame.o",
+      "profile": "authored_cpp",
+      "sha256": "1c50e4c78c01c50bb7e91b758035364b214f837827c028edf18f299821904516",
+      "source": "sources/w15-gameloop-a-stats-frame/stats_frame.cpp",
+      "emitted_functions": [
+        {
+          "name": "statsFrame__Fv",
+          "compiled_body_bytes": 516
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6874,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_switch_to_name_pad.o",
+      "profile": "authored_cpp",
+      "sha256": "9bfe5baf6984ef8d26c88bce0b015e68568b14e71092d7a055d58aa4e71b32bd",
+      "source": "sources/w15-gameloop-a-switch-to-name-pad/switch_to_name_pad.cpp",
+      "emitted_functions": [
+        {
+          "name": "switchToNamePad__Fv",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6875,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_vidictionary_add.o",
+      "profile": "authored_cpp",
+      "sha256": "fb590d5e1a0314b37c3410e56e2304a12121e0bf28a0e961b26836d530c8c7e0",
+      "source": "sources/w15-gameloop-a-vidictionary-add/add.cpp",
+      "emitted_functions": [
+        {
+          "name": "Add__12VIDictionaryR10VIResourceUi14VIResourceTypei",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-animation-object-c-common/mem.hpp"
+      ],
+      "input_order": 6876,
+      "kind": "independently_authored_source",
+      "object_name": "w15_gameloop_a_vidictionary_find_typed.o",
+      "profile": "authored_cpp",
+      "sha256": "ee47a93092334aee700fc24170b6e4b01d67941c3ff014aacf2b2b13f5e0fe2c",
+      "source": "sources/w15-gameloop-a-vidictionary-find-typed/find_typed.cpp",
+      "emitted_functions": [
+        {
+          "name": "FindTyped__12VIDictionaryUi14VIResourceTypeRi",
+          "compiled_body_bytes": 172
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -102001,7 +102372,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "695f7af126637ce751483595b01fb25f2a87e1115a28dddef5b74d97a2cd4e3b",
+  "snapshot_sha256": "be89fe1f5949b9bfe356284e6d13dcf29bd1e55380d411817359c30bd3e01546",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
