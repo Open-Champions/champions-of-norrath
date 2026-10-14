@@ -1,4 +1,4 @@
-// Observed: ProcessCreateSprite__18VISpellEventDriverP18VISpellActiveEventb at 0x0117f5e8 is 616
+// Observed: ProcessCreateSprite__18VISpellEventDriverP18VISpellActiveEventb at 0x0117f5e8 is 620
 // bytes in the pinned SLUS-20565 image. Arguments: (this, node, flag). Always returns 0. ev = the word
 // at node+116 (the script record). Nothing at all happens unless flag is exactly 1.
 //   A. When the int at this+24 is not -1: src = that int; when bit 0x10000 of the int at ev+12 is set,
