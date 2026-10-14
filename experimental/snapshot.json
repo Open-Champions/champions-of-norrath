@@ -99410,6 +99410,482 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp"
+    },
+    {
+      "input_order": 7667,
+      "component": "w16-prim-b-bbox-store-outward",
+      "object_name": "w16primb_bbox_store_outward.o",
+      "private_object_sha256": "bf333511b64c48b94bcc854b68c522b478b3dfe03d16a6c2d694d454ac41378b",
+      "emitted_functions": [
+        {
+          "name": "StoreOutward__C6VIBBoxP7VIPlane",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-bbox-store-outward/store_outward.cpp"
+    },
+    {
+      "input_order": 7668,
+      "component": "w16-prim-b-collbuffer-set-packing",
+      "object_name": "w16primb_collbuffer_set_packing.o",
+      "private_object_sha256": "bc3d58fea8a6bc4470d5559ab9780acacbfdc476712602946611b33bd5faa614",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VICollBufferi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collbuffer-set-packing/set_packing.cpp"
+    },
+    {
+      "input_order": 7669,
+      "component": "w16-prim-b-collbuffer-unlock",
+      "object_name": "w16primb_collbuffer_unlock.o",
+      "private_object_sha256": "e77f192f6fc4f65d4de5221e2bc08e1f8138a56ae43d9880442ae56f2760d732",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VICollBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collbuffer-unlock/unlock.cpp"
+    },
+    {
+      "input_order": 7670,
+      "component": "w16-prim-b-collbuffer-vertex-float",
+      "object_name": "w16primb_collbuffer_vertex_float.o",
+      "private_object_sha256": "5071da2dc6a2ac5a5d0d0e853740c0aa83612d93cb62217d0b2af2280835c21d",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collbuffer-vertex-float/vertex.cpp"
+    },
+    {
+      "input_order": 7671,
+      "component": "w16-prim-b-collbuffer-vertex-group",
+      "object_name": "w16primb_collbuffer_vertex_group.o",
+      "private_object_sha256": "6329b2b5ce7244168b7a8cfe724f00e465a893ac4c16d8018d3cdc1b9a230d4a",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VICollBufferSc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collbuffer-vertex-group/vertex_group.cpp"
+    },
+    {
+      "input_order": 7672,
+      "component": "w16-prim-b-collbuffer-vertex-s16",
+      "object_name": "w16primb_collbuffer_vertex_s16.o",
+      "private_object_sha256": "515ca94327f9764218cdc5cfbcbe832d64273972cacbd78797764db2be73afcc",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR10VIVect3S16",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collbuffer-vertex-s16/vertex.cpp"
+    },
+    {
+      "input_order": 7673,
+      "component": "w16-prim-b-collide-query",
+      "object_name": "w16primb_collide_query.o",
+      "private_object_sha256": "a04397211d8727274ab9894267375cf37ff26d9373803105b0aa2492a6018f3c",
+      "emitted_functions": [
+        {
+          "name": "Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collide-query/query.cpp"
+    },
+    {
+      "input_order": 7674,
+      "component": "w16-prim-b-collsphere-ctor",
+      "object_name": "w16primb_collsphere_ctor.o",
+      "private_object_sha256": "dd5b86dbae0e5f92e27688bbd2d6f032762f2d494adda871c8d9712cf72143ce",
+      "emitted_functions": [
+        {
+          "name": "__12VICollSphere",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-collsphere-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 7675,
+      "component": "w16-prim-b-effectvolume-render-dust-storm",
+      "object_name": "w16primb_effectvolume_render_dust_storm.o",
+      "private_object_sha256": "a2b1c890c93dd0fafec7f0a1cb94a947c747ac8b9cb4d14edb24bfc74b4ac3ae",
+      "emitted_functions": [
+        {
+          "name": "RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-effectvolume-render-dust-storm/render_dust_storm.cpp"
+    },
+    {
+      "input_order": 7676,
+      "component": "w16-prim-b-effectvolume-render-falling-leaves",
+      "object_name": "w16primb_effectvolume_render_falling_leaves.o",
+      "private_object_sha256": "eff63ed108afb422578611449565692e7d2df0b3c93f6a6666cd060bc843c8a0",
+      "emitted_functions": [
+        {
+          "name": "RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 680
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-effectvolume-render-falling-leaves/render_falling_leaves.cpp"
+    },
+    {
+      "input_order": 7677,
+      "component": "w16-prim-b-effectvolume-render-ground-fog",
+      "object_name": "w16primb_effectvolume_render_ground_fog.o",
+      "private_object_sha256": "79dfe554fba1fbec62584029ce71b458ac715e1832c918cbce097c3e927d5452",
+      "emitted_functions": [
+        {
+          "name": "RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1000
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-effectvolume-render-ground-fog/render_ground_fog.cpp"
+    },
+    {
+      "input_order": 7678,
+      "component": "w16-prim-b-effectvolume-render-light-shafts",
+      "object_name": "w16primb_effectvolume_render_light_shafts.o",
+      "private_object_sha256": "0a7340f1cab97e96883a07d013657449ac7536f95da98cef3da116fc84d3cecf",
+      "emitted_functions": [
+        {
+          "name": "RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1528
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-effectvolume-render-light-shafts/render_light_shafts.cpp"
+    },
+    {
+      "input_order": 7679,
+      "component": "w16-prim-b-hsprite-set-node-bind-pose",
+      "object_name": "w16primb_hsprite_set_node_bind_pose.o",
+      "private_object_sha256": "aa7712cb9825d75fdc6b2b9c4387c66ed60195967e277e6200479539da1267c3",
+      "emitted_functions": [
+        {
+          "name": "SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-hsprite-set-node-bind-pose/set_node_bind_pose.cpp"
+    },
+    {
+      "input_order": 7680,
+      "component": "w16-prim-b-matrix44-copy-ctor",
+      "object_name": "w16primb_matrix44_copy_ctor.o",
+      "private_object_sha256": "413f3b8737da63d312e8319d759745fe4cb8676bd8c934432f109728e92e4318",
+      "emitted_functions": [
+        {
+          "name": "__10VIMatrix44RC10VIMatrix44",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-matrix44-copy-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 7681,
+      "component": "w16-prim-b-matrix44-transform-scale3",
+      "object_name": "w16primb_matrix44_transform_scale3.o",
+      "private_object_sha256": "3cd146e666a239e9bcefe7f384efe62689f6415d236f305904701d7143a80b85",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2",
+          "compiled_body_bytes": 276
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-matrix44-transform-scale3/transform.cpp"
+    },
+    {
+      "input_order": 7682,
+      "component": "w16-prim-b-matrix44-transform-uniform",
+      "object_name": "w16primb_matrix44_transform_uniform.o",
+      "private_object_sha256": "6c485bdbb9bf4bb48eaf85b5a046bd6bad55f5dd921f0ddeea045b71179bbeab",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-matrix44-transform-uniform/transform.cpp"
+    },
+    {
+      "input_order": 7683,
+      "component": "w16-prim-b-pickseg-ctor",
+      "object_name": "w16primb_pickseg_ctor.o",
+      "private_object_sha256": "7b6ca46a0b26f4ce60f480c36f3df7f75845839144f3c288849cd5ce175ce904",
+      "emitted_functions": [
+        {
+          "name": "__13VIPickSegment",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-pickseg-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 7684,
+      "component": "w16-prim-b-primbuffer-normal-s8",
+      "object_name": "w16primb_primbuffer_normal_s8.o",
+      "private_object_sha256": "66e8c174ff9665ea86e073551dc394a1faedde078d16db996650c2357809026b",
+      "emitted_functions": [
+        {
+          "name": "Normal__12VIPrimBufferR9VIVect3S8",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-normal-s8/normal.cpp"
+    },
+    {
+      "input_order": 7685,
+      "component": "w16-prim-b-primbuffer-set-packing",
+      "object_name": "w16primb_primbuffer_set_packing.o",
+      "private_object_sha256": "b0f9d493afa22d295c028a4a3f10bdfdf0a289cd0ba521d9b274886f2ed998a1",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VIPrimBufferiii",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-set-packing/set_packing.cpp"
+    },
+    {
+      "input_order": 7686,
+      "component": "w16-prim-b-primbuffer-unlock",
+      "object_name": "w16primb_primbuffer_unlock.o",
+      "private_object_sha256": "e4da27c597ab3f31cdd289b25a77aeb19250500b67edf6afed818e5c423bdf63",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VIPrimBuffer",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-unlock/unlock.cpp"
+    },
+    {
+      "input_order": 7687,
+      "component": "w16-prim-b-primbuffer-uv0",
+      "object_name": "w16primb_primbuffer_uv0.o",
+      "private_object_sha256": "ede43e93175a50835c6abef087315934bb01cd5304f01d98204900f1ce97094c",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR7VIVect2",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-uv0/uv0.cpp"
+    },
+    {
+      "input_order": 7688,
+      "component": "w16-prim-b-primbuffer-uv0-s16",
+      "object_name": "w16primb_primbuffer_uv0_s16.o",
+      "private_object_sha256": "15e33d8c66057c64c0cd85f240e1db1b604b92f465223809d54a75b0400ecae0",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR10VIVect2S16",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-uv0-s16/uv0.cpp"
+    },
+    {
+      "input_order": 7689,
+      "component": "w16-prim-b-primbuffer-vertex-float",
+      "object_name": "w16primb_primbuffer_vertex_float.o",
+      "private_object_sha256": "124d401ac5a9caae1532fc2b3dd74a77623d813540a8496e2aaffd259bf7a581",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR7VIVect3",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-vertex-float/vertex.cpp"
+    },
+    {
+      "input_order": 7690,
+      "component": "w16-prim-b-primbuffer-vertex-group",
+      "object_name": "w16primb_primbuffer_vertex_group.o",
+      "private_object_sha256": "4d1a711fa457500cc990cd01d7e4b743942ad7f34d76727be7074e17b192c56c",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VIPrimBuffers",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-vertex-group/vertex_group.cpp"
+    },
+    {
+      "input_order": 7691,
+      "component": "w16-prim-b-primbuffer-vertex-s16",
+      "object_name": "w16primb_primbuffer_vertex_s16.o",
+      "private_object_sha256": "ec982e7d976885dc5022f548e09d5ebba3950e1f91526fcd64050296a68dde4b",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR10VIVect3S16",
+          "compiled_body_bytes": 720
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-primbuffer-vertex-s16/vertex.cpp"
+    },
+    {
+      "input_order": 7692,
+      "component": "w16-prim-b-quat-slerp",
+      "object_name": "w16primb_quat_slerp.o",
+      "private_object_sha256": "88c97123c6300362998ea9b57b7c1c28c548d0d8742b20ede6fe9ddb256812f4",
+      "emitted_functions": [
+        {
+          "name": "Slerp__6VIQuatRC6VIQuatT1f",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-quat-slerp/slerp.cpp"
+    },
+    {
+      "input_order": 7693,
+      "component": "w16-prim-b-raster-pick-prim-buffer-pack-vunbw",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunbw.o",
+      "private_object_sha256": "7d604e0caac9f26ea0dc3c6588ce5f594c8e39cc2c628dcd03b15c15d4cd3ed0",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/pick_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7694,
+      "component": "w16-prim-b-raster-pick-prim-buffer-pack-vunc",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunc.o",
+      "private_object_sha256": "29273b362828776860c89af784b1e4cde076b1ddf29f74fd93e973faed860bee",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/pick_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7695,
+      "component": "w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunc_colors.o",
+      "private_object_sha256": "4ada45ace49137a138add7cb9ba85e7e1406d6e311587ddeeb41ba3be310c424",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/pick_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7696,
+      "component": "w16-prim-b-raster-pick-prim-buffer-pack-vuncg",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vuncg.o",
+      "private_object_sha256": "6c64d23adb3c14623ea65509165c04d6dcbb9faff5d70e28ea5f4a648ed53e8f",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1304
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/pick_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7697,
+      "component": "w16-prim-b-raster-pick-prim-buffer-vunc",
+      "object_name": "w16primb_raster_pick_prim_buffer_vunc.o",
+      "private_object_sha256": "19e5b7ebe3556bee1d150109e89377031112492b6ffa7caa5129e86fed77305d",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 2088
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7698,
+      "component": "w16-prim-b-raster-prim-buffer",
+      "object_name": "w16primb_raster_prim_buffer.o",
+      "private_object_sha256": "86a866943bc9fba54b3effef233d9c757dec2b456dcbeac7794093586f6ef812",
+      "emitted_functions": [
+        {
+          "name": "PrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp"
+    },
+    {
+      "input_order": 7699,
+      "component": "w16-prim-b-raster-set-object-blends",
+      "object_name": "w16primb_raster_set_object_blends.o",
+      "private_object_sha256": "414fc2893f14e9e13df14027fd78015a17b3d25af6e6e15bd5512ed059924453",
+      "emitted_functions": [
+        {
+          "name": "SetObjectBlends__8VIRasteriP10VIMatrix44",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp"
+    },
+    {
+      "input_order": 7700,
+      "component": "w16-prim-b-vect4-normalize",
+      "object_name": "w16primb_vect4_normalize.o",
+      "private_object_sha256": "3d82b2e0c3356c535cc9100d310595e7865b46ee045738fae5bceb14444505f4",
+      "emitted_functions": [
+        {
+          "name": "Normalize__7VIVect4",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-b-vect4-normalize/normalize.cpp"
     }
   ],
   "drafts": [
@@ -115564,7 +116040,75 @@
     "sources/w16-m-dtor-a-dtor-8holybolt/dtor.cpp": "a9dc2878825ec2419464bed92d159599fd25a789f068163e53e1aa11f59b8463",
     "sources/w16-m-dtor-a-dtor-8holybolt/host_check.cpp": "708d6e75c9bb296b55e8f710375a863a6d12920a4ac180ab165a861fcd2d213b",
     "sources/w16-m-dtor-a-dtor-8lostsoul/dtor.cpp": "23c49cf70fc4c9a1d13c8f5906638e7ce060b6cab773aebfa2932a3030fbf4c5",
-    "sources/w16-m-dtor-a-dtor-8lostsoul/host_check.cpp": "8446d9d3d50f2ad1b4006c5509a3a9db91777c9e4b0ad280380620c09eebd5c7"
+    "sources/w16-m-dtor-a-dtor-8lostsoul/host_check.cpp": "8446d9d3d50f2ad1b4006c5509a3a9db91777c9e4b0ad280380620c09eebd5c7",
+    "sources/w16-prim-b-bbox-store-outward/host_check.cpp": "e8add6641b59f1a5178c0add8453622e95d26cc70155c0e1620b71dd8fed632f",
+    "sources/w16-prim-b-bbox-store-outward/store_outward.cpp": "603544a970bbe66aa75f64213435174a945f558d4a47955041dc19b0056bdba3",
+    "sources/w16-prim-b-collbuffer-set-packing/host_check.cpp": "33301aa485ca1bdd4189b23db30792aab8ca29eeb29dfecfcbfbec4372331517",
+    "sources/w16-prim-b-collbuffer-set-packing/set_packing.cpp": "c21f01f3477ac88ebc9a78a9afc1f2125598744f0e03e3564f6283f1789a78b0",
+    "sources/w16-prim-b-collbuffer-unlock/host_check.cpp": "52580bcd77cc0ee1eec43d8a4c9622122d710c7fb8937ecdb0ccc1325bfce1a9",
+    "sources/w16-prim-b-collbuffer-unlock/unlock.cpp": "1535209e46efdc4bda672ea7f69e43b51fcae428c054c4ba7bfc18ddff5c02ed",
+    "sources/w16-prim-b-collbuffer-vertex-float/host_check.cpp": "762c5408e19cd3870b863ec9d97b43c5c832f66ab9d24d5c1131e31eee5b39f5",
+    "sources/w16-prim-b-collbuffer-vertex-float/vertex.cpp": "e564ef7724883f8f66b62f0b8783a202730336f9bb1ea7c08f016685855292c9",
+    "sources/w16-prim-b-collbuffer-vertex-group/host_check.cpp": "179eb45c86c1d30dd9b9fe5758fc8e20fe893dcbf0e6c935027dc021b0fe8d6e",
+    "sources/w16-prim-b-collbuffer-vertex-group/vertex_group.cpp": "964d866f8b7e848ad0fb0d91a453a4cd4ae6a615917fdf4af85685170fea771a",
+    "sources/w16-prim-b-collbuffer-vertex-s16/host_check.cpp": "e72dd3ee8bcf940f10a2c76a5e3cb890707d0c92584c320b98d571a57d41f10a",
+    "sources/w16-prim-b-collbuffer-vertex-s16/vertex.cpp": "9d17b4659f619a56882b230be6250fcb8545bf03b7ada0b25f5fab2cfff83847",
+    "sources/w16-prim-b-collide-query/host_check.cpp": "4648170de5e8a76040b19566d4d997a4ab26dc498a04b5aeb62cc8290b942a26",
+    "sources/w16-prim-b-collide-query/query.cpp": "6fbcf8e75fa9bcab5e24909ec0e9b463146150fde155bfe7db633f6d60efc5c3",
+    "sources/w16-prim-b-collsphere-ctor/ctor.cpp": "6a670b6a44cd4562d55551baa7e36804a1f57853eef4c09d4dd1c2c7aedb8639",
+    "sources/w16-prim-b-collsphere-ctor/host_check.cpp": "5b58ff515d4aa97397ead062d05088d03258fa7e6a3d90d450110943f1156fa2",
+    "sources/w16-prim-b-effectvolume-render-dust-storm/host_check.cpp": "78e3d6760f42ce99457ffca21ac7faa7890912305de48872c9fea6d3ad421407",
+    "sources/w16-prim-b-effectvolume-render-dust-storm/render_dust_storm.cpp": "4bea0d35a0c090ebc6f1f16c0e7eaf1e33e667c469985c00b4d16f8dae5c1c94",
+    "sources/w16-prim-b-effectvolume-render-falling-leaves/host_check.cpp": "b7c2d6a4d4b6538fd5015499348314bbec796e0080d7e7eb0257da4b4e756951",
+    "sources/w16-prim-b-effectvolume-render-falling-leaves/render_falling_leaves.cpp": "738c7b73ff9adff9f46067d49782e3d5bf6e5744da38af5b69814c104eeb3ca5",
+    "sources/w16-prim-b-effectvolume-render-ground-fog/host_check.cpp": "74bb3dcbc5412f03be94b39ffef4d3ff4d3eb8509cdc4ea0f6992a36ddf1c6f5",
+    "sources/w16-prim-b-effectvolume-render-ground-fog/render_ground_fog.cpp": "19665867e195e496fa9f343929485d703498c2e72344135dd2b70ee287e82cd9",
+    "sources/w16-prim-b-effectvolume-render-light-shafts/host_check.cpp": "1e3f731de75b18e1c1653e54d81c590707d94285034c2bfc1172d26c6691c96f",
+    "sources/w16-prim-b-effectvolume-render-light-shafts/render_light_shafts.cpp": "3a277ef9063ee948ccbe9f1795fb7990063cce8c2c818554f3b1ebb88ca1b4eb",
+    "sources/w16-prim-b-hsprite-set-node-bind-pose/host_check.cpp": "64cbcb112b0c7c34b007dcd459989f40fbc1041e29562ddf1fdcd512171b219c",
+    "sources/w16-prim-b-hsprite-set-node-bind-pose/set_node_bind_pose.cpp": "5893652fcad154b32751c58184dc20588514db4197c4a646fd55790d13405b5f",
+    "sources/w16-prim-b-matrix44-copy-ctor/ctor.cpp": "a860c1dd78b907c2b48a4eadf67b3c0d7199fd092fc4b78f926505f71459222b",
+    "sources/w16-prim-b-matrix44-copy-ctor/host_check.cpp": "e467cf05c8c233e21096d49803b9b449bd6ff16db328993f7cd45a3245876694",
+    "sources/w16-prim-b-matrix44-transform-scale3/host_check.cpp": "928312af700485b8f4793a32c5c8a96d34625d1eda736986006f82c4e26f2cca",
+    "sources/w16-prim-b-matrix44-transform-scale3/transform.cpp": "721c7ed5e825919efea242b541bf6609de2cbea84004c9459ca4bfc247b6c1a6",
+    "sources/w16-prim-b-matrix44-transform-uniform/host_check.cpp": "5680ea16f69ab70ada4de233b9fddba3ddea340f8df5a2e44b8a054da21c5c81",
+    "sources/w16-prim-b-matrix44-transform-uniform/transform.cpp": "0f80da72922736813e944181a6b232d511dbf8b9fe2f24f4398e525a1aeb8fc6",
+    "sources/w16-prim-b-pickseg-ctor/ctor.cpp": "24138e658077eb2ab6ffaf6f559e19315d606f40d77e5574b30d26385eb9a2a8",
+    "sources/w16-prim-b-pickseg-ctor/host_check.cpp": "28824d0bbd7387cb6a69c6108b7578cd8c9022eb29dcbe2daade244c4e540147",
+    "sources/w16-prim-b-primbuffer-normal-s8/host_check.cpp": "02e67cef15410ebb412492ec05e054b5e713f9910508664ba9fa972356dedce4",
+    "sources/w16-prim-b-primbuffer-normal-s8/normal.cpp": "0401610d7b53b58b65132c620e24401fe04ec7238e8943a26e56b7a864bf75e6",
+    "sources/w16-prim-b-primbuffer-set-packing/host_check.cpp": "6c7100f40f3c6b96c8684bc9034a42558e2ddd12fd3c355e99fcb3a0a52b7137",
+    "sources/w16-prim-b-primbuffer-set-packing/set_packing.cpp": "4cb75872ccf9afdb185dc20608c6718a1c66cf062256ee125cac7ecc8e7cd7b3",
+    "sources/w16-prim-b-primbuffer-unlock/host_check.cpp": "4d21c0732a8cb41d7156aadd1a3ed0160e91dfa0d6000762471f20fd91e277ab",
+    "sources/w16-prim-b-primbuffer-unlock/unlock.cpp": "1b0a5e577ada50adcfdf0bcb0bd3969c11f1e8383c4892550e9ee0c4c2f1b3fc",
+    "sources/w16-prim-b-primbuffer-uv0/host_check.cpp": "ee526ab95c3206c798855bbc9588c8f1dd2ec44da99d0616759a382c2178aa7e",
+    "sources/w16-prim-b-primbuffer-uv0/uv0.cpp": "db6e41fe4e9338119e182226f5068372bd23e830c45aef3b28a40605016bd027",
+    "sources/w16-prim-b-primbuffer-uv0-s16/host_check.cpp": "6b0b01e6ba00fced5208efb69ae4fbe3233b10d1c067dfd6b9d621352690ba23",
+    "sources/w16-prim-b-primbuffer-uv0-s16/uv0.cpp": "79bc4fa2106d90f13f46f43135d902eaf0427ed3e9e76239dde51c4e43453140",
+    "sources/w16-prim-b-primbuffer-vertex-float/host_check.cpp": "cf831e3601be470ca9c2b07948258785ffff999935fb951a2521519de146463d",
+    "sources/w16-prim-b-primbuffer-vertex-float/vertex.cpp": "3d6ffe89481382e6e381fbe594a46e90ca836336ec3d5e16d555c31b168e088e",
+    "sources/w16-prim-b-primbuffer-vertex-group/host_check.cpp": "74174efd3c5ee31bc809a17b7f3a093989c79d53b3f8849d7ecf2b16ff649981",
+    "sources/w16-prim-b-primbuffer-vertex-group/vertex_group.cpp": "f41a94c3132e8e72e3a249528f62d7b74404ec03bb091d2f979c2970f29fa202",
+    "sources/w16-prim-b-primbuffer-vertex-s16/host_check.cpp": "40e67f7c83c54936113b5999f47026064659f159c134961ffbd11872cba56509",
+    "sources/w16-prim-b-primbuffer-vertex-s16/vertex.cpp": "4ee6350b81e5dc3cf705c845cff0b212d66ca456f9044a92a0db8ef9bcb94010",
+    "sources/w16-prim-b-quat-slerp/host_check.cpp": "f0f8a24db1c84350d4981fb9108360c12d957deb01d25cc449fa49be72cfa87c",
+    "sources/w16-prim-b-quat-slerp/slerp.cpp": "9c1a3ae968f74f3dbaafd51caeb2e102ce6d7b90382349b11d8c5097843395e5",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/host_check.cpp": "1bf30ec8f5364e2e7be96beaa73bfe08d2b2bf8977799645645571aa5fd5eb04",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/pick_prim_buffer.cpp": "81be4b5ccd1f90ce3b6ebdf063963b63865371505ed11461b012d313240576a6",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/host_check.cpp": "4232de6bfa7e450699de97a4925746b75611264517386b1e2e927759f007909f",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/pick_prim_buffer.cpp": "35afd8fbe47b09dddc502ad3e793d7104b75d99191dec1ecf5b259d3114f7fe6",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/host_check.cpp": "eb59992aafcc90101322a5548a9d293db39a06f5515e503502d03b06a4231bdb",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/pick_prim_buffer.cpp": "ec8d7375a4c5d05fcab621ca0771af8c8d1a7e028787dfb1759fa8e33608dd57",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/host_check.cpp": "15f60c81679e5b1a8b3712b5f65e2bb484a5bd208e9794a7c36b618275a31a69",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/pick_prim_buffer.cpp": "f0aa85f270151b684bb723f6ce4db79b6eaf033c9bb9c81ba5937c2358691997",
+    "sources/w16-prim-b-raster-pick-prim-buffer-vunc/host_check.cpp": "4522ee9faa953e5d957a087518d58d3c3c4b28a86a023ede063cb5dfb1c30a65",
+    "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp": "f016e96977fa7619c9083e1cc6a081a69a7369a18d4a161739c9904699cccc45",
+    "sources/w16-prim-b-raster-prim-buffer/host_check.cpp": "6c25f4187c7f50e141ad049cdd141032e45d75a624b202f1baecd5df05dfc00a",
+    "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp": "de661f6088d81455bf68c006bfd7f7283c54c080249a0c4a1481aa7f4d636773",
+    "sources/w16-prim-b-raster-set-object-blends/host_check.cpp": "b6392eac69792c9a147da80c41fba204ef108b527e334aaf6d3e00adde2f8924",
+    "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp": "d5335e2f9d4e8ecbfc49ee1c4f414258c53e31e316928a53eb2ba05903cf06c3",
+    "sources/w16-prim-b-vect4-normalize/host_check.cpp": "eff043d22e7e068f409d66499a8446df2d6bfa1aa55b2bc331ddce0643d9bcc3",
+    "sources/w16-prim-b-vect4-normalize/normalize.cpp": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f"
   },
   "additional_implementations": [
     {
@@ -116006,11 +116550,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7667,
-    "authored_default_inputs": 7665,
+    "selected_inputs": 7701,
+    "authored_default_inputs": 7699,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 6146,
-    "compiled_body_bytes_from_accepted_inputs": 2360292,
+    "emitted_function_definitions_including_helpers": 6180,
+    "compiled_body_bytes_from_accepted_inputs": 2374908,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -116023,7 +116567,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7354
+    "package_selected_inputs": 7388
   },
   "startup_implementations": [
     {
@@ -232999,6 +233543,584 @@
       ],
       "host_files": [
         "sources/w16-m-dtor-a-dtor-13hammerofwrath/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-bbox-store-outward/store_outward.cpp",
+      "source_sha256": "603544a970bbe66aa75f64213435174a945f558d4a47955041dc19b0056bdba3",
+      "object_sha256": "bf333511b64c48b94bcc854b68c522b478b3dfe03d16a6c2d694d454ac41378b",
+      "emitted_functions": [
+        {
+          "name": "StoreOutward__C6VIBBoxP7VIPlane",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-bbox-store-outward/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collbuffer-set-packing/set_packing.cpp",
+      "source_sha256": "c21f01f3477ac88ebc9a78a9afc1f2125598744f0e03e3564f6283f1789a78b0",
+      "object_sha256": "bc3d58fea8a6bc4470d5559ab9780acacbfdc476712602946611b33bd5faa614",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VICollBufferi",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collbuffer-set-packing/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collbuffer-unlock/unlock.cpp",
+      "source_sha256": "1535209e46efdc4bda672ea7f69e43b51fcae428c054c4ba7bfc18ddff5c02ed",
+      "object_sha256": "e77f192f6fc4f65d4de5221e2bc08e1f8138a56ae43d9880442ae56f2760d732",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VICollBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collbuffer-unlock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collbuffer-vertex-float/vertex.cpp",
+      "source_sha256": "e564ef7724883f8f66b62f0b8783a202730336f9bb1ea7c08f016685855292c9",
+      "object_sha256": "5071da2dc6a2ac5a5d0d0e853740c0aa83612d93cb62217d0b2af2280835c21d",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collbuffer-vertex-float/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collbuffer-vertex-group/vertex_group.cpp",
+      "source_sha256": "964d866f8b7e848ad0fb0d91a453a4cd4ae6a615917fdf4af85685170fea771a",
+      "object_sha256": "6329b2b5ce7244168b7a8cfe724f00e465a893ac4c16d8018d3cdc1b9a230d4a",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VICollBufferSc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collbuffer-vertex-group/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collbuffer-vertex-s16/vertex.cpp",
+      "source_sha256": "9d17b4659f619a56882b230be6250fcb8545bf03b7ada0b25f5fab2cfff83847",
+      "object_sha256": "515ca94327f9764218cdc5cfbcbe832d64273972cacbd78797764db2be73afcc",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR10VIVect3S16",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collbuffer-vertex-s16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collide-query/query.cpp",
+      "source_sha256": "6fbcf8e75fa9bcab5e24909ec0e9b463146150fde155bfe7db633f6d60efc5c3",
+      "object_sha256": "a04397211d8727274ab9894267375cf37ff26d9373803105b0aa2492a6018f3c",
+      "emitted_functions": [
+        {
+          "name": "Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collide-query/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-collsphere-ctor/ctor.cpp",
+      "source_sha256": "6a670b6a44cd4562d55551baa7e36804a1f57853eef4c09d4dd1c2c7aedb8639",
+      "object_sha256": "dd5b86dbae0e5f92e27688bbd2d6f032762f2d494adda871c8d9712cf72143ce",
+      "emitted_functions": [
+        {
+          "name": "__12VICollSphere",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-collsphere-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-effectvolume-render-dust-storm/render_dust_storm.cpp",
+      "source_sha256": "4bea0d35a0c090ebc6f1f16c0e7eaf1e33e667c469985c00b4d16f8dae5c1c94",
+      "object_sha256": "a2b1c890c93dd0fafec7f0a1cb94a947c747ac8b9cb4d14edb24bfc74b4ac3ae",
+      "emitted_functions": [
+        {
+          "name": "RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1040
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-effectvolume-render-dust-storm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-effectvolume-render-falling-leaves/render_falling_leaves.cpp",
+      "source_sha256": "738c7b73ff9adff9f46067d49782e3d5bf6e5744da38af5b69814c104eeb3ca5",
+      "object_sha256": "eff63ed108afb422578611449565692e7d2df0b3c93f6a6666cd060bc843c8a0",
+      "emitted_functions": [
+        {
+          "name": "RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 680
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-effectvolume-render-falling-leaves/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-effectvolume-render-ground-fog/render_ground_fog.cpp",
+      "source_sha256": "19665867e195e496fa9f343929485d703498c2e72344135dd2b70ee287e82cd9",
+      "object_sha256": "79dfe554fba1fbec62584029ce71b458ac715e1832c918cbce097c3e927d5452",
+      "emitted_functions": [
+        {
+          "name": "RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1000
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-effectvolume-render-ground-fog/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-effectvolume-render-light-shafts/render_light_shafts.cpp",
+      "source_sha256": "3a277ef9063ee948ccbe9f1795fb7990063cce8c2c818554f3b1ebb88ca1b4eb",
+      "object_sha256": "0a7340f1cab97e96883a07d013657449ac7536f95da98cef3da116fc84d3cecf",
+      "emitted_functions": [
+        {
+          "name": "RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1528
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-effectvolume-render-light-shafts/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-hsprite-set-node-bind-pose/set_node_bind_pose.cpp",
+      "source_sha256": "5893652fcad154b32751c58184dc20588514db4197c4a646fd55790d13405b5f",
+      "object_sha256": "aa7712cb9825d75fdc6b2b9c4387c66ed60195967e277e6200479539da1267c3",
+      "emitted_functions": [
+        {
+          "name": "SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-hsprite-set-node-bind-pose/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-matrix44-copy-ctor/ctor.cpp",
+      "source_sha256": "a860c1dd78b907c2b48a4eadf67b3c0d7199fd092fc4b78f926505f71459222b",
+      "object_sha256": "413f3b8737da63d312e8319d759745fe4cb8676bd8c934432f109728e92e4318",
+      "emitted_functions": [
+        {
+          "name": "__10VIMatrix44RC10VIMatrix44",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-matrix44-copy-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-matrix44-transform-scale3/transform.cpp",
+      "source_sha256": "721c7ed5e825919efea242b541bf6609de2cbea84004c9459ca4bfc247b6c1a6",
+      "object_sha256": "3cd146e666a239e9bcefe7f384efe62689f6415d236f305904701d7143a80b85",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2",
+          "compiled_body_bytes": 276
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-matrix44-transform-scale3/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-matrix44-transform-uniform/transform.cpp",
+      "source_sha256": "0f80da72922736813e944181a6b232d511dbf8b9fe2f24f4398e525a1aeb8fc6",
+      "object_sha256": "6c485bdbb9bf4bb48eaf85b5a046bd6bad55f5dd921f0ddeea045b71179bbeab",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 240
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-matrix44-transform-uniform/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-pickseg-ctor/ctor.cpp",
+      "source_sha256": "24138e658077eb2ab6ffaf6f559e19315d606f40d77e5574b30d26385eb9a2a8",
+      "object_sha256": "7b6ca46a0b26f4ce60f480c36f3df7f75845839144f3c288849cd5ce175ce904",
+      "emitted_functions": [
+        {
+          "name": "__13VIPickSegment",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-pickseg-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-normal-s8/normal.cpp",
+      "source_sha256": "0401610d7b53b58b65132c620e24401fe04ec7238e8943a26e56b7a864bf75e6",
+      "object_sha256": "66e8c174ff9665ea86e073551dc394a1faedde078d16db996650c2357809026b",
+      "emitted_functions": [
+        {
+          "name": "Normal__12VIPrimBufferR9VIVect3S8",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-normal-s8/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-set-packing/set_packing.cpp",
+      "source_sha256": "4cb75872ccf9afdb185dc20608c6718a1c66cf062256ee125cac7ecc8e7cd7b3",
+      "object_sha256": "b0f9d493afa22d295c028a4a3f10bdfdf0a289cd0ba521d9b274886f2ed998a1",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VIPrimBufferiii",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-set-packing/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-unlock/unlock.cpp",
+      "source_sha256": "1b0a5e577ada50adcfdf0bcb0bd3969c11f1e8383c4892550e9ee0c4c2f1b3fc",
+      "object_sha256": "e4da27c597ab3f31cdd289b25a77aeb19250500b67edf6afed818e5c423bdf63",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VIPrimBuffer",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-unlock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-uv0/uv0.cpp",
+      "source_sha256": "db6e41fe4e9338119e182226f5068372bd23e830c45aef3b28a40605016bd027",
+      "object_sha256": "ede43e93175a50835c6abef087315934bb01cd5304f01d98204900f1ce97094c",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR7VIVect2",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-uv0/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-uv0-s16/uv0.cpp",
+      "source_sha256": "79bc4fa2106d90f13f46f43135d902eaf0427ed3e9e76239dde51c4e43453140",
+      "object_sha256": "15e33d8c66057c64c0cd85f240e1db1b604b92f465223809d54a75b0400ecae0",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR10VIVect2S16",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-uv0-s16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-vertex-float/vertex.cpp",
+      "source_sha256": "3d6ffe89481382e6e381fbe594a46e90ca836336ec3d5e16d555c31b168e088e",
+      "object_sha256": "124d401ac5a9caae1532fc2b3dd74a77623d813540a8496e2aaffd259bf7a581",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR7VIVect3",
+          "compiled_body_bytes": 304
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-vertex-float/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-vertex-group/vertex_group.cpp",
+      "source_sha256": "f41a94c3132e8e72e3a249528f62d7b74404ec03bb091d2f979c2970f29fa202",
+      "object_sha256": "4d1a711fa457500cc990cd01d7e4b743942ad7f34d76727be7074e17b192c56c",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VIPrimBuffers",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-vertex-group/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-primbuffer-vertex-s16/vertex.cpp",
+      "source_sha256": "4ee6350b81e5dc3cf705c845cff0b212d66ca456f9044a92a0db8ef9bcb94010",
+      "object_sha256": "ec982e7d976885dc5022f548e09d5ebba3950e1f91526fcd64050296a68dde4b",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR10VIVect3S16",
+          "compiled_body_bytes": 720
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-primbuffer-vertex-s16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-quat-slerp/slerp.cpp",
+      "source_sha256": "9c1a3ae968f74f3dbaafd51caeb2e102ce6d7b90382349b11d8c5097843395e5",
+      "object_sha256": "88c97123c6300362998ea9b57b7c1c28c548d0d8742b20ede6fe9ddb256812f4",
+      "emitted_functions": [
+        {
+          "name": "Slerp__6VIQuatRC6VIQuatT1f",
+          "compiled_body_bytes": 508
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-quat-slerp/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/pick_prim_buffer.cpp",
+      "source_sha256": "81be4b5ccd1f90ce3b6ebdf063963b63865371505ed11461b012d313240576a6",
+      "object_sha256": "7d604e0caac9f26ea0dc3c6588ce5f594c8e39cc2c628dcd03b15c15d4cd3ed0",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/pick_prim_buffer.cpp",
+      "source_sha256": "35afd8fbe47b09dddc502ad3e793d7104b75d99191dec1ecf5b259d3114f7fe6",
+      "object_sha256": "29273b362828776860c89af784b1e4cde076b1ddf29f74fd93e973faed860bee",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1176
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/pick_prim_buffer.cpp",
+      "source_sha256": "ec8d7375a4c5d05fcab621ca0771af8c8d1a7e028787dfb1759fa8e33608dd57",
+      "object_sha256": "4ada45ace49137a138add7cb9ba85e7e1406d6e311587ddeeb41ba3be310c424",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1272
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/pick_prim_buffer.cpp",
+      "source_sha256": "f0aa85f270151b684bb723f6ce4db79b6eaf033c9bb9c81ba5937c2358691997",
+      "object_sha256": "6c64d23adb3c14623ea65509165c04d6dcbb9faff5d70e28ea5f4a648ed53e8f",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1304
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp",
+      "source_sha256": "f016e96977fa7619c9083e1cc6a081a69a7369a18d4a161739c9904699cccc45",
+      "object_sha256": "19e5b7ebe3556bee1d150109e89377031112492b6ffa7caa5129e86fed77305d",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 2088
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-pick-prim-buffer-vunc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp",
+      "source_sha256": "de661f6088d81455bf68c006bfd7f7283c54c080249a0c4a1481aa7f4d636773",
+      "object_sha256": "86a866943bc9fba54b3effef233d9c757dec2b456dcbeac7794093586f6ef812",
+      "emitted_functions": [
+        {
+          "name": "PrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-prim-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp",
+      "source_sha256": "d5335e2f9d4e8ecbfc49ee1c4f414258c53e31e316928a53eb2ba05903cf06c3",
+      "object_sha256": "414fc2893f14e9e13df14027fd78015a17b3d25af6e6e15bd5512ed059924453",
+      "emitted_functions": [
+        {
+          "name": "SetObjectBlends__8VIRasteriP10VIMatrix44",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-raster-set-object-blends/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-b",
+      "source": "sources/w16-prim-b-vect4-normalize/normalize.cpp",
+      "source_sha256": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f",
+      "object_sha256": "3d82b2e0c3356c535cc9100d310595e7865b46ee045738fae5bceb14444505f4",
+      "emitted_functions": [
+        {
+          "name": "Normalize__7VIVect4",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-b-vect4-normalize/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

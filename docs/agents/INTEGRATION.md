@@ -10962,3 +10962,21 @@ Opened:
 
 Full partial build: 7665 source compilations, one link, 6144 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:51 CDT — agents/w16-m-dtor-a — 702 unresolved imports
+
+## agents/w16-prim-b
+
+Merged (merge commit). All 34 units in the notes are selected, each with a committed host check that I ran (34 of 34 exit 0; these checks need `-ffp-contract=off`, as the notes say, since without it one float check fails on this host); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 702 |
+| After | 683 |
+| Closed | 34 |
+| Opened | 15 |
+
+Closed: `Normal__12VIPrimBufferR9VIVect3S8`, `Normalize__7VIVect4`, `PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PrimBuffer__8VIRasteri`, `Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3`, `SetObjectBlends__8VIRasteriP10VIMatrix44`, `SetPacking__12VICollBufferi`, `SetPacking__12VIPrimBufferiii`, `Slerp__6VIQuatRC6VIQuatT1f`, `StoreOutward__C6VIBBoxP7VIPlane`, `Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2`, `Transform__10VIMatrix44RC6VIQuatfRC7VIVect3`, `UV0__12VIPrimBufferR10VIVect2S16`, `UV0__12VIPrimBufferR7VIVect2`, `Unlock__12VICollBuffer`, `Unlock__12VIPrimBuffer`, `VertexGroup__12VICollBufferSc`, `VertexGroup__12VIPrimBuffers`, `Vertex__12VICollBufferR10VIVect3S16`, `Vertex__12VICollBufferR7VIVect3`, `Vertex__12VIPrimBufferR10VIVect3S16`, `Vertex__12VIPrimBufferR7VIVect3`, `__10VIMatrix44RC10VIMatrix44`, `__12VICollSphere`, `__13VIPickSegment`
+
+Opened: `CalcHitColor__8VIRasterR13VIPickSegmentR7VIVect3N22R9VIColor32N25`, `ConvertTo__C10VIMatrix44R6VIQuatRfR7VIVect3`, `Pick__8VIRasterR13VIPickSegmentiR7VIVect3N23`, `PrepareBillboardTransform__14VIEffectVolumeRC10VIMatrix44T1P10VIMatrix44`, `QueryBufferPackVGF__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `QueryBufferPackV__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `QueryBufferV__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `SetSolidFillUIAVGMaterial__8VIRaster`, `_12VIPrimBuffer$PrimBones`, `_12VIPrimBuffer$PrimNormalS8`, `_12VIPrimBuffer$PrimUV0`, `_12VIPrimBuffer$PrimUV0S16`, `_12VIPrimBuffer$PrimVertexGroup`, `_12VIPrimBuffer$PrimWeightsS8`, `_8VIRaster$ObjectBlendsBuffer`
+
+Full partial build: 7699 source compilations, one link, 6178 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:58 CDT — agents/w16-prim-b — 683 unresolved imports

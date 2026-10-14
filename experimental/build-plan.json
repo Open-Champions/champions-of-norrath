@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7665,
+  "default_authored_inputs": 7699,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8459,7 +8459,41 @@
     "sources/w16-m-dtor-a-dtor-15spellhateeffect/dtor.cpp": "3c9fb09fa78910cfe99043e7639c39d5b7207f485a4011c30c3b4981f375c31e",
     "sources/w16-m-dtor-a-dtor-16spellcriticalhit/dtor.cpp": "92b1f5f32f7b76dd30736dcac2f48d827360ef16436d468021c6d0be49a8c749",
     "sources/w16-m-dtor-a-dtor-16spellconeoffrost/dtor.cpp": "2baa02481eda7e62b51c29917c7cfa9ddab1a81ea7318194cc78dd6ecee5437e",
-    "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp": "876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54"
+    "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp": "876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54",
+    "sources/w16-prim-b-bbox-store-outward/store_outward.cpp": "603544a970bbe66aa75f64213435174a945f558d4a47955041dc19b0056bdba3",
+    "sources/w16-prim-b-collbuffer-set-packing/set_packing.cpp": "c21f01f3477ac88ebc9a78a9afc1f2125598744f0e03e3564f6283f1789a78b0",
+    "sources/w16-prim-b-collbuffer-unlock/unlock.cpp": "1535209e46efdc4bda672ea7f69e43b51fcae428c054c4ba7bfc18ddff5c02ed",
+    "sources/w16-prim-b-collbuffer-vertex-float/vertex.cpp": "e564ef7724883f8f66b62f0b8783a202730336f9bb1ea7c08f016685855292c9",
+    "sources/w16-prim-b-collbuffer-vertex-group/vertex_group.cpp": "964d866f8b7e848ad0fb0d91a453a4cd4ae6a615917fdf4af85685170fea771a",
+    "sources/w16-prim-b-collbuffer-vertex-s16/vertex.cpp": "9d17b4659f619a56882b230be6250fcb8545bf03b7ada0b25f5fab2cfff83847",
+    "sources/w16-prim-b-collide-query/query.cpp": "6fbcf8e75fa9bcab5e24909ec0e9b463146150fde155bfe7db633f6d60efc5c3",
+    "sources/w16-prim-b-collsphere-ctor/ctor.cpp": "6a670b6a44cd4562d55551baa7e36804a1f57853eef4c09d4dd1c2c7aedb8639",
+    "sources/w16-prim-b-effectvolume-render-dust-storm/render_dust_storm.cpp": "4bea0d35a0c090ebc6f1f16c0e7eaf1e33e667c469985c00b4d16f8dae5c1c94",
+    "sources/w16-prim-b-effectvolume-render-falling-leaves/render_falling_leaves.cpp": "738c7b73ff9adff9f46067d49782e3d5bf6e5744da38af5b69814c104eeb3ca5",
+    "sources/w16-prim-b-effectvolume-render-ground-fog/render_ground_fog.cpp": "19665867e195e496fa9f343929485d703498c2e72344135dd2b70ee287e82cd9",
+    "sources/w16-prim-b-effectvolume-render-light-shafts/render_light_shafts.cpp": "3a277ef9063ee948ccbe9f1795fb7990063cce8c2c818554f3b1ebb88ca1b4eb",
+    "sources/w16-prim-b-hsprite-set-node-bind-pose/set_node_bind_pose.cpp": "5893652fcad154b32751c58184dc20588514db4197c4a646fd55790d13405b5f",
+    "sources/w16-prim-b-matrix44-copy-ctor/ctor.cpp": "a860c1dd78b907c2b48a4eadf67b3c0d7199fd092fc4b78f926505f71459222b",
+    "sources/w16-prim-b-matrix44-transform-scale3/transform.cpp": "721c7ed5e825919efea242b541bf6609de2cbea84004c9459ca4bfc247b6c1a6",
+    "sources/w16-prim-b-matrix44-transform-uniform/transform.cpp": "0f80da72922736813e944181a6b232d511dbf8b9fe2f24f4398e525a1aeb8fc6",
+    "sources/w16-prim-b-pickseg-ctor/ctor.cpp": "24138e658077eb2ab6ffaf6f559e19315d606f40d77e5574b30d26385eb9a2a8",
+    "sources/w16-prim-b-primbuffer-normal-s8/normal.cpp": "0401610d7b53b58b65132c620e24401fe04ec7238e8943a26e56b7a864bf75e6",
+    "sources/w16-prim-b-primbuffer-set-packing/set_packing.cpp": "4cb75872ccf9afdb185dc20608c6718a1c66cf062256ee125cac7ecc8e7cd7b3",
+    "sources/w16-prim-b-primbuffer-unlock/unlock.cpp": "1b0a5e577ada50adcfdf0bcb0bd3969c11f1e8383c4892550e9ee0c4c2f1b3fc",
+    "sources/w16-prim-b-primbuffer-uv0/uv0.cpp": "db6e41fe4e9338119e182226f5068372bd23e830c45aef3b28a40605016bd027",
+    "sources/w16-prim-b-primbuffer-uv0-s16/uv0.cpp": "79bc4fa2106d90f13f46f43135d902eaf0427ed3e9e76239dde51c4e43453140",
+    "sources/w16-prim-b-primbuffer-vertex-float/vertex.cpp": "3d6ffe89481382e6e381fbe594a46e90ca836336ec3d5e16d555c31b168e088e",
+    "sources/w16-prim-b-primbuffer-vertex-group/vertex_group.cpp": "f41a94c3132e8e72e3a249528f62d7b74404ec03bb091d2f979c2970f29fa202",
+    "sources/w16-prim-b-primbuffer-vertex-s16/vertex.cpp": "4ee6350b81e5dc3cf705c845cff0b212d66ca456f9044a92a0db8ef9bcb94010",
+    "sources/w16-prim-b-quat-slerp/slerp.cpp": "9c1a3ae968f74f3dbaafd51caeb2e102ce6d7b90382349b11d8c5097843395e5",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/pick_prim_buffer.cpp": "81be4b5ccd1f90ce3b6ebdf063963b63865371505ed11461b012d313240576a6",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/pick_prim_buffer.cpp": "35afd8fbe47b09dddc502ad3e793d7104b75d99191dec1ecf5b259d3114f7fe6",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/pick_prim_buffer.cpp": "ec8d7375a4c5d05fcab621ca0771af8c8d1a7e028787dfb1759fa8e33608dd57",
+    "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/pick_prim_buffer.cpp": "f0aa85f270151b684bb723f6ce4db79b6eaf033c9bb9c81ba5937c2358691997",
+    "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp": "f016e96977fa7619c9083e1cc6a081a69a7369a18d4a161739c9904699cccc45",
+    "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp": "de661f6088d81455bf68c006bfd7f7283c54c080249a0c4a1481aa7f4d636773",
+    "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp": "d5335e2f9d4e8ecbfc49ee1c4f414258c53e31e316928a53eb2ba05903cf06c3",
+    "sources/w16-prim-b-vect4-normalize/normalize.cpp": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f"
   },
   "inputs": [
     {
@@ -114322,6 +114356,516 @@
           "compiled_body_bytes": 144
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7667,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_bbox_store_outward.o",
+      "profile": "authored_cpp",
+      "sha256": "603544a970bbe66aa75f64213435174a945f558d4a47955041dc19b0056bdba3",
+      "source": "sources/w16-prim-b-bbox-store-outward/store_outward.cpp",
+      "emitted_functions": [
+        {
+          "name": "StoreOutward__C6VIBBoxP7VIPlane",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7668,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collbuffer_set_packing.o",
+      "profile": "authored_cpp",
+      "sha256": "c21f01f3477ac88ebc9a78a9afc1f2125598744f0e03e3564f6283f1789a78b0",
+      "source": "sources/w16-prim-b-collbuffer-set-packing/set_packing.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VICollBufferi",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7669,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collbuffer_unlock.o",
+      "profile": "authored_cpp",
+      "sha256": "1535209e46efdc4bda672ea7f69e43b51fcae428c054c4ba7bfc18ddff5c02ed",
+      "source": "sources/w16-prim-b-collbuffer-unlock/unlock.cpp",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VICollBuffer",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7670,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collbuffer_vertex_float.o",
+      "profile": "authored_cpp",
+      "sha256": "e564ef7724883f8f66b62f0b8783a202730336f9bb1ea7c08f016685855292c9",
+      "source": "sources/w16-prim-b-collbuffer-vertex-float/vertex.cpp",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR7VIVect3",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7671,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collbuffer_vertex_group.o",
+      "profile": "authored_cpp",
+      "sha256": "964d866f8b7e848ad0fb0d91a453a4cd4ae6a615917fdf4af85685170fea771a",
+      "source": "sources/w16-prim-b-collbuffer-vertex-group/vertex_group.cpp",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VICollBufferSc",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7672,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collbuffer_vertex_s16.o",
+      "profile": "authored_cpp",
+      "sha256": "9d17b4659f619a56882b230be6250fcb8545bf03b7ada0b25f5fab2cfff83847",
+      "source": "sources/w16-prim-b-collbuffer-vertex-s16/vertex.cpp",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VICollBufferR10VIVect3S16",
+          "compiled_body_bytes": 264
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7673,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collide_query.o",
+      "profile": "authored_cpp",
+      "sha256": "6fbcf8e75fa9bcab5e24909ec0e9b463146150fde155bfe7db633f6d60efc5c3",
+      "source": "sources/w16-prim-b-collide-query/query.cpp",
+      "emitted_functions": [
+        {
+          "name": "Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7674,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_collsphere_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "6a670b6a44cd4562d55551baa7e36804a1f57853eef4c09d4dd1c2c7aedb8639",
+      "source": "sources/w16-prim-b-collsphere-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12VICollSphere",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7675,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_effectvolume_render_dust_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "4bea0d35a0c090ebc6f1f16c0e7eaf1e33e667c469985c00b4d16f8dae5c1c94",
+      "source": "sources/w16-prim-b-effectvolume-render-dust-storm/render_dust_storm.cpp",
+      "emitted_functions": [
+        {
+          "name": "RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1040
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7676,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_effectvolume_render_falling_leaves.o",
+      "profile": "authored_cpp",
+      "sha256": "738c7b73ff9adff9f46067d49782e3d5bf6e5744da38af5b69814c104eeb3ca5",
+      "source": "sources/w16-prim-b-effectvolume-render-falling-leaves/render_falling_leaves.cpp",
+      "emitted_functions": [
+        {
+          "name": "RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 680
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7677,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_effectvolume_render_ground_fog.o",
+      "profile": "authored_cpp",
+      "sha256": "19665867e195e496fa9f343929485d703498c2e72344135dd2b70ee287e82cd9",
+      "source": "sources/w16-prim-b-effectvolume-render-ground-fog/render_ground_fog.cpp",
+      "emitted_functions": [
+        {
+          "name": "RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1000
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7678,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_effectvolume_render_light_shafts.o",
+      "profile": "authored_cpp",
+      "sha256": "3a277ef9063ee948ccbe9f1795fb7990063cce8c2c818554f3b1ebb88ca1b4eb",
+      "source": "sources/w16-prim-b-effectvolume-render-light-shafts/render_light_shafts.cpp",
+      "emitted_functions": [
+        {
+          "name": "RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1528
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7679,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_hsprite_set_node_bind_pose.o",
+      "profile": "authored_cpp",
+      "sha256": "5893652fcad154b32751c58184dc20588514db4197c4a646fd55790d13405b5f",
+      "source": "sources/w16-prim-b-hsprite-set-node-bind-pose/set_node_bind_pose.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 480
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7680,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_matrix44_copy_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a860c1dd78b907c2b48a4eadf67b3c0d7199fd092fc4b78f926505f71459222b",
+      "source": "sources/w16-prim-b-matrix44-copy-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__10VIMatrix44RC10VIMatrix44",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7681,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_matrix44_transform_scale3.o",
+      "profile": "authored_cpp",
+      "sha256": "721c7ed5e825919efea242b541bf6609de2cbea84004c9459ca4bfc247b6c1a6",
+      "source": "sources/w16-prim-b-matrix44-transform-scale3/transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2",
+          "compiled_body_bytes": 276
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7682,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_matrix44_transform_uniform.o",
+      "profile": "authored_cpp",
+      "sha256": "0f80da72922736813e944181a6b232d511dbf8b9fe2f24f4398e525a1aeb8fc6",
+      "source": "sources/w16-prim-b-matrix44-transform-uniform/transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "Transform__10VIMatrix44RC6VIQuatfRC7VIVect3",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7683,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_pickseg_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "24138e658077eb2ab6ffaf6f559e19315d606f40d77e5574b30d26385eb9a2a8",
+      "source": "sources/w16-prim-b-pickseg-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13VIPickSegment",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7684,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_normal_s8.o",
+      "profile": "authored_cpp",
+      "sha256": "0401610d7b53b58b65132c620e24401fe04ec7238e8943a26e56b7a864bf75e6",
+      "source": "sources/w16-prim-b-primbuffer-normal-s8/normal.cpp",
+      "emitted_functions": [
+        {
+          "name": "Normal__12VIPrimBufferR9VIVect3S8",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7685,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_set_packing.o",
+      "profile": "authored_cpp",
+      "sha256": "4cb75872ccf9afdb185dc20608c6718a1c66cf062256ee125cac7ecc8e7cd7b3",
+      "source": "sources/w16-prim-b-primbuffer-set-packing/set_packing.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetPacking__12VIPrimBufferiii",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7686,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_unlock.o",
+      "profile": "authored_cpp",
+      "sha256": "1b0a5e577ada50adcfdf0bcb0bd3969c11f1e8383c4892550e9ee0c4c2f1b3fc",
+      "source": "sources/w16-prim-b-primbuffer-unlock/unlock.cpp",
+      "emitted_functions": [
+        {
+          "name": "Unlock__12VIPrimBuffer",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7687,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_uv0.o",
+      "profile": "authored_cpp",
+      "sha256": "db6e41fe4e9338119e182226f5068372bd23e830c45aef3b28a40605016bd027",
+      "source": "sources/w16-prim-b-primbuffer-uv0/uv0.cpp",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR7VIVect2",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7688,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_uv0_s16.o",
+      "profile": "authored_cpp",
+      "sha256": "79bc4fa2106d90f13f46f43135d902eaf0427ed3e9e76239dde51c4e43453140",
+      "source": "sources/w16-prim-b-primbuffer-uv0-s16/uv0.cpp",
+      "emitted_functions": [
+        {
+          "name": "UV0__12VIPrimBufferR10VIVect2S16",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7689,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_vertex_float.o",
+      "profile": "authored_cpp",
+      "sha256": "3d6ffe89481382e6e381fbe594a46e90ca836336ec3d5e16d555c31b168e088e",
+      "source": "sources/w16-prim-b-primbuffer-vertex-float/vertex.cpp",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR7VIVect3",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7690,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_vertex_group.o",
+      "profile": "authored_cpp",
+      "sha256": "f41a94c3132e8e72e3a249528f62d7b74404ec03bb091d2f979c2970f29fa202",
+      "source": "sources/w16-prim-b-primbuffer-vertex-group/vertex_group.cpp",
+      "emitted_functions": [
+        {
+          "name": "VertexGroup__12VIPrimBuffers",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7691,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_primbuffer_vertex_s16.o",
+      "profile": "authored_cpp",
+      "sha256": "4ee6350b81e5dc3cf705c845cff0b212d66ca456f9044a92a0db8ef9bcb94010",
+      "source": "sources/w16-prim-b-primbuffer-vertex-s16/vertex.cpp",
+      "emitted_functions": [
+        {
+          "name": "Vertex__12VIPrimBufferR10VIVect3S16",
+          "compiled_body_bytes": 720
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7692,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_quat_slerp.o",
+      "profile": "authored_cpp",
+      "sha256": "9c1a3ae968f74f3dbaafd51caeb2e102ce6d7b90382349b11d8c5097843395e5",
+      "source": "sources/w16-prim-b-quat-slerp/slerp.cpp",
+      "emitted_functions": [
+        {
+          "name": "Slerp__6VIQuatRC6VIQuatT1f",
+          "compiled_body_bytes": 508
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7693,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunbw.o",
+      "profile": "authored_cpp",
+      "sha256": "81be4b5ccd1f90ce3b6ebdf063963b63865371505ed11461b012d313240576a6",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunbw/pick_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7694,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunc.o",
+      "profile": "authored_cpp",
+      "sha256": "35afd8fbe47b09dddc502ad3e793d7104b75d99191dec1ecf5b259d3114f7fe6",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc/pick_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7695,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vunc_colors.o",
+      "profile": "authored_cpp",
+      "sha256": "ec8d7375a4c5d05fcab621ca0771af8c8d1a7e028787dfb1759fa8e33608dd57",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vunc-colors/pick_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7696,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_pick_prim_buffer_pack_vuncg.o",
+      "profile": "authored_cpp",
+      "sha256": "f0aa85f270151b684bb723f6ce4db79b6eaf033c9bb9c81ba5937c2358691997",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-pack-vuncg/pick_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 1304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7697,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_pick_prim_buffer_vunc.o",
+      "profile": "authored_cpp",
+      "sha256": "f016e96977fa7619c9083e1cc6a081a69a7369a18d4a161739c9904699cccc45",
+      "source": "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal",
+          "compiled_body_bytes": 2088
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7698,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_prim_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "de661f6088d81455bf68c006bfd7f7283c54c080249a0c4a1481aa7f4d636773",
+      "source": "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "PrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7699,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_raster_set_object_blends.o",
+      "profile": "authored_cpp",
+      "sha256": "d5335e2f9d4e8ecbfc49ee1c4f414258c53e31e316928a53eb2ba05903cf06c3",
+      "source": "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetObjectBlends__8VIRasteriP10VIMatrix44",
+          "compiled_body_bytes": 488
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7700,
+      "kind": "independently_authored_source",
+      "object_name": "w16primb_vect4_normalize.o",
+      "profile": "authored_cpp",
+      "sha256": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f",
+      "source": "sources/w16-prim-b-vect4-normalize/normalize.cpp",
+      "emitted_functions": [
+        {
+          "name": "Normalize__7VIVect4",
+          "compiled_body_bytes": 120
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -114421,7 +114965,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "57261f1855c6b7a6c7c856337187d03e09f3aaca96073bdf3dc30ff8ddcf4f71",
+  "snapshot_sha256": "158847cc2b65386163837f9fb4fc6b7be2aac7cf7c1069ea06c76f2514de4ae5",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
