@@ -1,5 +1,5 @@
 #include "../w9-animation-object-c-common/mem.hpp"
-// Observed onLogin__16VIRealmInterfaceUiiPCUsPv at 0x011068d0, 2132 bytes (a 256-byte frame; six string handles live in it). With
+// Observed onLogin__16VIRealmInterfaceUiiPCUsPv at 0x011068d0, 2124 bytes (a 256-byte frame; six string handles live in it). With
 // (this, a, status, name, extra), where extra is never read; offsets are in this:
 //  1. GetAppPtr__5VIWnd(the word at this+12) (result unused); UnLock__11VIGUIDialog(the word at (the word at this+12) + 56).
 //  2. status == 0: strncpyWide__FPUsPCUsUi(this+16, name, 256); the word at +272 = strlenWide__FPCUs(this+16).
