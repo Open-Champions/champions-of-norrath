@@ -10683,3 +10683,8 @@ Nine `origin/agents/*` branches stay unmerged. Re-counted against the branch dif
 ## Verification pass (second integrator, 2026-10-14)
 
 Re-ran on the shared branch at `caaa2c8c` before any merge: 214 tool tests and the snapshot check pass; the full partial build gives 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduces. No game binaries, disc images or raw disassembly are tracked; the `.S` files under `experimental/sources` are authored sources. Re-checked the nine unmerged worker branches against the shared branch: none adds a host check or test file for its functions (`w11-creature-a`'s only name match is a game function, `check_if_spell_is_running.cpp`, not a test). The earlier rejections stand; `w14-spellevent` (tip about 7 hours old) is also untested, so its age does not change the outcome. Nothing merged in this pass.
+
+## Verification pass (third integrator, 2026-10-14)
+
+Re-ran on the shared branch at `5ff11ae1` before any merge: 214 tool tests and the snapshot check pass; the full partial build gives 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduces. Re-checked the nine unmerged worker branches (`w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-vicont-b`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`) against the shared branch: none adds a host check or test file, so the earlier rejections stand and nothing was merged. No repo-rule violation found in recent merges; no shared files needed fixing.
+- 2026-10-14 CDT — third integrator verification, no merges — 841 unresolved imports
