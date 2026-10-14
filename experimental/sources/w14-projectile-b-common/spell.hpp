@@ -3,7 +3,7 @@
 // nothing here is an EE input by itself.
 #ifndef W14_PROJECTILE_B_SPELL_HPP
 #define W14_PROJECTILE_B_SPELL_HPP
-#include "../w12-actor-spell-c-common/access.hpp"
+#include "access.hpp"
 
 #if defined(W12_SPELL_C_HOST)
 // Logging hook for the host contract: function word, adjusted object, then the three arguments.

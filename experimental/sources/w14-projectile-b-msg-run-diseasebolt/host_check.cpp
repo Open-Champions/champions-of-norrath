@@ -63,7 +63,7 @@ static void reset(int frame, int end) {
     putf(O + 16, 1); putf(O + 20, 2); putf(O + 24, 3);
     put32(O + 112, static_cast<unsigned>(end)); put32(O + 116, 0); put32(O + 120, 0);
     put32(O + 72, VT); put32(VT + 8 + 4, 0x55);
-    put32(O + 88, 0); put32(O + 92, CASTER); put16(O + 96, 9);
+    put32(O + 88, 0); put32(O + 92, CASTER); put16(O + 96, 9); put32(CASTER + 96, CASTER + 0x40);
 }
 int main() {
     // flying, no target: 16 particles in the order 5 x def1, 5 x def2, 6 x def3 with the stated scales

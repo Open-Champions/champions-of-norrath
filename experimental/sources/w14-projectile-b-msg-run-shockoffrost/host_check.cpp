@@ -94,7 +94,7 @@ static void reset(int frame, int end) {
     put32(O + 192, static_cast<unsigned>(end)); put32(O + 196, 0); put32(O + 152, 5000);
     putf(O + 156, 4); putf(O + 160, 5);
     put32(O + 72, VT); put32(VT + 8 + 4, 0x55);
-    put32(O + 200, CASTER); put32(O + 204, 0x1234); put16(O + 148, 6); put32(O + 84, OWNN); put32(OWNN + 12, OWN);
+    put32(O + 200, CASTER); put32(CASTER + 96, CASTER + 0x40); put32(O + 204, 0x1234); put16(O + 148, 6); put32(O + 84, OWNN); put32(OWNN + 12, OWN);
 }
 int main() {
     // flight only: the light follows, the matrix is built from the heading less 32767, the two orbit points rotate, 64 bursts, the
