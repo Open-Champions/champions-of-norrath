@@ -10638,3 +10638,20 @@ Opened:
 
 Full partial build: 7320 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 02:03 CDT — agents/w12-wnd-a — 867 unresolved imports
+
+## agents/w12-particle-data-b
+
+Merged (merge commit) as a **partial package**: 1 of 2 units selected (the particle data unit with a committed host check). **Not selected:** `w12-particle-data-b-views` has no committed host check; it stays authored but unplanned. Tip was about 17 hours old.
+
+| | |
+|---|---|
+| Before | 867 |
+| After | 847 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `norrath_w11_actor_c_view_7d7110`, `norrath_w11_actor_c_view_7d7540`, `norrath_w11_actor_c_view_7d7590`, `norrath_w11_actor_c_view_7d7630`, `norrath_w11_actor_c_view_7d7680`, `particleBloodDrop`, `particleEctoDrop`, `particleSlimeDrop`, `particleWeaponBlood`, `particleWeaponEcto`, `particleWeaponSlime`, `sDustCard`, `sFallEffect`, `sFogCard`, `snowParticle1`, `sparkParticle`, `trailParticleFire`, `trailParticleSmoke`
+
+Opened: 
+
+Full partial build: 7321 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

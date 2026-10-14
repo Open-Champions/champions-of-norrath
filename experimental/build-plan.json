@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7320,
+  "default_authored_inputs": 7321,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8114,7 +8114,8 @@
     "sources/w12-wnd-a-edit-enablecr/enablecr.cpp": "dcaf8752ea038febd445fa6fd5130cc25d5d60b1d260d57e967b285ec437c5ae",
     "sources/w12-wnd-a-readmessage-clear/clear.cpp": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
     "sources/w12-wnd-a-set-end/end.cpp": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
-    "sources/w12-wnd-a-uiwindow-close/close.cpp": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf"
+    "sources/w12-wnd-a-uiwindow-close/close.cpp": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf",
+    "sources/w12-particle-data-b-objects/objects.cpp": "89ab93a5ffd64704769f8d9d46d2e26a99464c8f9890b57fc9799d270fb4fbae"
   },
   "inputs": [
     {
@@ -108964,6 +108965,16 @@
           "compiled_body_bytes": 28
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7322,
+      "kind": "independently_authored_source",
+      "object_name": "w12_particle_data_b_objects.o",
+      "profile": "authored_cpp",
+      "sha256": "89ab93a5ffd64704769f8d9d46d2e26a99464c8f9890b57fc9799d270fb4fbae",
+      "source": "sources/w12-particle-data-b-objects/objects.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109063,7 +109074,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "30dbd716515b661bd701ceed76bc305d6fee31b69decf22c643fe93540ce7b77",
+  "snapshot_sha256": "3f9fc9d78e1a56e4ba33ec6abc80aeec6532698585e891824342fd56ef2b7e3a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
