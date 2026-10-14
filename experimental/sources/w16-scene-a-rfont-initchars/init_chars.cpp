@@ -1,4 +1,4 @@
-// Observed: InitChars__7VIRFontPUc at 0x011359f8 is 284 bytes in the pinned SLUS-20565 image. It keeps a running 32-bit offset, started at
+// Observed: InitChars__7VIRFontPUc at 0x011359f8 is 288 bytes in the pinned SLUS-20565 image. It keeps a running 32-bit offset, started at
 // (word at +76) - (word at +84), and for each entry i of the n = word at +40 (none if n <= 0) takes the same byte-to-step value as
 // CalcDataSize__7VIRFontPUc from data[i] (selector at +28: 0 -> (b+1)>>1, 1 -> b, 2/3/6 -> b<<2, 4 -> 3*b, 5 -> b<<1, otherwise return -1 at
 // once). Entry i is a 12-byte record at (word at +64) + 12 * i: halfword +4 = step, byte +10 = data[i], word +0 = the running offset,
