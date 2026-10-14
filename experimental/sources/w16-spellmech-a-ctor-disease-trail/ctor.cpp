@@ -1,4 +1,4 @@
-// Observed __17SpellDiseaseTrailG6Point3iP8CreatureP5Skill at 0x00294308, 704 bytes in .text. Arguments: the object, a point,
+// Observed __17SpellDiseaseTrailG6Point3iP8CreatureP5Skill at 0x00294308, 708 bytes in .text. Arguments: the object, a point,
 // the rank, the creature and the skill (the fifth argument arrives in the eighth-register slot). Returns nothing. The sync
 // random state is advanced as state = state * 0x19660d + 0x3c6ef35f (32-bit).
 // Steps, in order:
