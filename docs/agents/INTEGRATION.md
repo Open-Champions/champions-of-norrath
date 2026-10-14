@@ -10674,3 +10674,8 @@ Opened:
 
 Full partial build: 7327 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 02:24 CDT — agents/w9-render-math-a — 841 unresolved imports
+
+## Remaining rejections (integrator pass of 2026-10-14)
+
+Nine `origin/agents/*` branches stay unmerged. Re-counted against the branch diffs with every host-test naming pattern (`host_check`, `host_test`, `host_contract`, including function-prefixed names): none of their source directories has a committed host check, so every unit would be a function with no test that could fail. Their notes cite only private paired runs. `w10-actor-i` (32 units, 0 tested), `w10-startup-d` (17, 0), `w11-creature-a` (20, 0), `w11-vi-misc-a` (34, 0), `w11-vi-render-b` (31, 0), `w12-vicont-b` (26, 0), `w13-m-spell-dtor-a` (26, 0), `w14-spellevent` (24, 0), `w8-spell-static-init-b` (30, 0). Not merged, no game code changed. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches.
+- 2026-10-14 CDT — integrator pass complete, nine untested branches rejected — 841 unresolved imports
