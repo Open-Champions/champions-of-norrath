@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7122,
+  "default_authored_inputs": 7154,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7914,7 +7914,39 @@
     "sources/w15-vi-raster-a-rfont-palette/palette.cpp": "ba41b364cc59d147db7602e061a1f14a51fa2d679a96058a6d2e5b10001c3307",
     "sources/w15-vi-raster-a-rfont-pixelstore/pixel_store.cpp": "b77d188aa6604d2854866067a68eda4107913a51da07df524833598ba8736d2b",
     "sources/w15-vi-raster-a-rfont-unlock/unlock.cpp": "bbcaa95f1eeccec19628fbbc1beb5633e8de770c18f208d7f6d55b7ed855cb27",
-    "sources/w15-vi-raster-a-skinsprite-setmaterialpal/set_material_pal.cpp": "19036df9cb56d0f9edcb7b607a0f70c6a6789f0974064eb2c5fe8d279e624420"
+    "sources/w15-vi-raster-a-skinsprite-setmaterialpal/set_material_pal.cpp": "19036df9cb56d0f9edcb7b607a0f70c6a6789f0974064eb2c5fe8d279e624420",
+    "sources/w15-vi-raster-b-csprite-inittextslots/init_text_slots.cpp": "ba3e020cb5fc724ce2c54dfc6a915c5ab60ce2e1d3dfd140d015664881f6cebc",
+    "sources/w15-vi-raster-b-csprite-share/share.cpp": "cecfeb3fc6bbb29b8ae6144e76be8d1051aec5e79488993a41a3d5358d2c43cb",
+    "sources/w15-vi-raster-b-csprite-updateparticleemitters/update_particle_emitters.cpp": "f71672f09fe9c0325509a9a8b016132d63bb666a926d42587ddfb37d3ce2d062",
+    "sources/w15-vi-raster-b-hsprite-calclodlevelindex/calc_lod_level_index.cpp": "aa4a756bc325831da5c18a6c86a82318973ddeea1708787ade9e2326a64549ca",
+    "sources/w15-vi-raster-b-hsprite-setblendmatrices/set_blend_matrices.cpp": "6235e821fa5dd5e9b331453a87bcd02fe2531d036a1a7413279e5fdbdc7f39a5",
+    "sources/w15-vi-raster-b-raster-blackouttexcopy/blackout_tex_copy.cpp": "f3db246b93a38fd0cc29e16be929fb11fbe2261ba06bd2e1d17eed8e8aef9161",
+    "sources/w15-vi-raster-b-raster-calccenteredstringscreenrect/calc_centered_string_screen_rect.cpp": "56cfc21d46f18f1957fa540c33a5be4ae9ae375bbd2c8d9862cb1b1dbf030d93",
+    "sources/w15-vi-raster-b-raster-colormatrix/color_matrix.cpp": "48a308c2f98a05159095fa734b6e16a8853c7a429f2064e50de1a6d7144277c2",
+    "sources/w15-vi-raster-b-raster-copymaterialpal/copy_material_pal.cpp": "3fcf9058a9d789c8140d2e755b81781d4e4301c2b15760871113aaccdda3a4d6",
+    "sources/w15-vi-raster-b-raster-creatematerialpal/create_material_pal.cpp": "d560917c39d41731b90879e857b5627e858bab6e2e718cecab9df76334b124e3",
+    "sources/w15-vi-raster-b-raster-drawcenteredstring/draw_centered_string.cpp": "a84fd5463fe8846dc21120e0a8c3ae923b83267223b215c9a5de1264487606a8",
+    "sources/w15-vi-raster-b-raster-drawprimbuffer-3/draw_prim_buffer.cpp": "6b4f22def03a3dbc1419a8c846655f92258cceda6e5965676233ad8815dfb978",
+    "sources/w15-vi-raster-b-raster-drawprimbuffer-4/draw_prim_buffer.cpp": "fa9cb6848819454b001e079e4ddafe613a259b2ab5c5d373ff5f63680a574c7b",
+    "sources/w15-vi-raster-b-raster-foregrndtexcopy/foregrnd_tex_copy.cpp": "940f1141d83c47afbf3ef8ee8083abf098ff788c634ea9ef2757cbb12cad8d73",
+    "sources/w15-vi-raster-b-raster-getmodelview/get_model_view.cpp": "8acd6e60adda019f8c99808c73b6fd3eebfc74f97d026d21b81f45438937ecb2",
+    "sources/w15-vi-raster-b-raster-getstringwidth-char/get_string_width.cpp": "65b56eb09af3039210dbcfc3ac859d2ee0cfcd8ebee1485a1667a5331af5678d",
+    "sources/w15-vi-raster-b-raster-getstringwidth-ushort/get_string_width.cpp": "25db0615ba8de792dac9ca6eed0ea2193a7e25046031114ef958dff95374f6a8",
+    "sources/w15-vi-raster-b-raster-releasefont/release_font.cpp": "d5242869c1f3d0e67157c399095c5a5e161d4f9545e84b13fd6a95a420ac7544",
+    "sources/w15-vi-raster-b-raster-releasematerialpal/release_material_pal.cpp": "06ac5fc7a0b59c5d58faabb2d5e549e2428a29e36e9bd1abee28205793473e24",
+    "sources/w15-vi-raster-b-raster-releaseprimbuffer/release_prim_buffer.cpp": "f3f1ee46ea6cce37d4a00b35d0ac6422d362e0430f413b6cd4371c936db512d4",
+    "sources/w15-vi-raster-b-raster-rmaterialoffset/r_material_offset.cpp": "a183b8a517457f4a906b1aec916197a337c3ff607f61d4734bbf4ded0223206e",
+    "sources/w15-vi-raster-b-raster-shareprimbuffer/share_prim_buffer.cpp": "6e012d444ca1a6bd6d9ae7a3779ddb9549c7e6741abbefe3d8d60787d1b582d2",
+    "sources/w15-vi-raster-b-sprite-pick/pick.cpp": "b6e3a9d0d1c0a77d332a6edff74909722d2385f1e5146072b1fead55510b42a7",
+    "sources/w15-vi-raster-b-sprite-raster/raster.cpp": "85d29790d4a984c90e10d9e966373c437cdd16c96eaaea1d3cf0d979a70edb78",
+    "sources/w15-vi-raster-b-surface-init/init.cpp": "1934cb0e8e6b9f3fdaeab88c25e606649c442f43ea9ea50eb865cdd78386092f",
+    "sources/w15-vi-raster-b-surface-lockpalette/lock_palette.cpp": "a9b2fb935e64df6aa05e4f1b5c9004878479899a22f7c403135a1c8a57b78c7a",
+    "sources/w15-vi-raster-b-surface-unlockpalette/unlock_palette.cpp": "3918e82254e70cf6dd194b3adbaac572215b36803f0130d47a8eaccf1d0a8626",
+    "sources/w15-vi-raster-b-tex-drawcolorspecialhalo/texture_draw_color_special_halo.cpp": "0dcbda6fdd782b0b05f8d99ce177bcf740ee030f5f05d2014010b7e1a8a8a6dc",
+    "sources/w15-vi-raster-b-tex-normalizedheight/tex_normalized_height.cpp": "5b8e270dd7fa399d6314e1a7a73b9b25cec7ced6cfd556a47681e84b74306a71",
+    "sources/w15-vi-raster-b-tex-normalizedwidth/tex_normalized_width.cpp": "722b2ed2812a554ce0e52b3110bcfd7f56943813a54a05b086e39b9f49aec3dc",
+    "sources/w15-vi-raster-b-vifont-fontname/font_name.cpp": "7723cc11433fb3648a7e61563e9687c66bd58aa826e8aff694a6bc3afb3a5cad",
+    "sources/w15-vi-raster-b-vimap-insert/insert.cpp": "8d0a7821fb1a3706bdb77e99637c1b962561beb9ea4ae06db8d399f55b8892ae"
   },
   "inputs": [
     {
@@ -105847,6 +105879,461 @@
           "compiled_body_bytes": 104
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7124,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_csprite_inittextslots.o",
+      "profile": "authored_cpp",
+      "sha256": "ba3e020cb5fc724ce2c54dfc6a915c5ab60ce2e1d3dfd140d015664881f6cebc",
+      "source": "sources/w15-vi-raster-b-csprite-inittextslots/init_text_slots.cpp",
+      "emitted_functions": [
+        {
+          "name": "InitTextSlots__9VICSpriteR8VIRaster",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7125,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_csprite_share.o",
+      "profile": "authored_cpp",
+      "sha256": "cecfeb3fc6bbb29b8ae6144e76be8d1051aec5e79488993a41a3d5358d2c43cb",
+      "source": "sources/w15-vi-raster-b-csprite-share/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "Share__9VICSpriteR7VISceneP8VIRaster",
+          "compiled_body_bytes": 640
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7126,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_csprite_updateparticleemitters.o",
+      "profile": "authored_cpp",
+      "sha256": "f71672f09fe9c0325509a9a8b016132d63bb666a926d42587ddfb37d3ce2d062",
+      "source": "sources/w15-vi-raster-b-csprite-updateparticleemitters/update_particle_emitters.cpp",
+      "emitted_functions": [
+        {
+          "name": "UpdateParticleEmitters__9VICSpriteR8VICameraR7VISceneR8VIRasterR10VIMatrix44",
+          "compiled_body_bytes": 840
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7127,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_hsprite_calclodlevelindex.o",
+      "profile": "authored_cpp",
+      "sha256": "aa4a756bc325831da5c18a6c86a82318973ddeea1708787ade9e2326a64549ca",
+      "source": "sources/w15-vi-raster-b-hsprite-calclodlevelindex/calc_lod_level_index.cpp",
+      "emitted_functions": [
+        {
+          "name": "CalcLODLevelIndex__9VIHSpriteR13VIPickSegmentR8VIRaster",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7128,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_hsprite_setblendmatrices.o",
+      "profile": "authored_cpp",
+      "sha256": "6235e821fa5dd5e9b331453a87bcd02fe2531d036a1a7413279e5fdbdc7f39a5",
+      "source": "sources/w15-vi-raster-b-hsprite-setblendmatrices/set_blend_matrices.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetBlendMatrices__9VIHSpriteR8VIRaster",
+          "compiled_body_bytes": 352
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7129,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_blackouttexcopy.o",
+      "profile": "authored_cpp",
+      "sha256": "f3db246b93a38fd0cc29e16be929fb11fbe2261ba06bd2e1d17eed8e8aef9161",
+      "source": "sources/w15-vi-raster-b-raster-blackouttexcopy/blackout_tex_copy.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7130,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_calccenteredstringscreenrect.o",
+      "profile": "authored_cpp",
+      "sha256": "56cfc21d46f18f1957fa540c33a5be4ae9ae375bbd2c8d9862cb1b1dbf030d93",
+      "source": "sources/w15-vi-raster-b-raster-calccenteredstringscreenrect/calc_centered_string_screen_rect.cpp",
+      "emitted_functions": [
+        {
+          "name": "CalcCenteredStringScreenRect__8VIRasteriRC7VIVect3PCcR6VIRect",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7131,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_colormatrix.o",
+      "profile": "authored_cpp",
+      "sha256": "48a308c2f98a05159095fa734b6e16a8853c7a429f2064e50de1a6d7144277c2",
+      "source": "sources/w15-vi-raster-b-raster-colormatrix/color_matrix.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7132,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_copymaterialpal.o",
+      "profile": "authored_cpp",
+      "sha256": "3fcf9058a9d789c8140d2e755b81781d4e4301c2b15760871113aaccdda3a4d6",
+      "source": "sources/w15-vi-raster-b-raster-copymaterialpal/copy_material_pal.cpp",
+      "emitted_functions": [
+        {
+          "name": "CopyMaterialPal__8VIRasterii",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7133,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_creatematerialpal.o",
+      "profile": "authored_cpp",
+      "sha256": "d560917c39d41731b90879e857b5627e858bab6e2e718cecab9df76334b124e3",
+      "source": "sources/w15-vi-raster-b-raster-creatematerialpal/create_material_pal.cpp",
+      "emitted_functions": [
+        {
+          "name": "CreateMaterialPal__8VIRasterii",
+          "compiled_body_bytes": 392
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7134,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_drawcenteredstring.o",
+      "profile": "authored_cpp",
+      "sha256": "a84fd5463fe8846dc21120e0a8c3ae923b83267223b215c9a5de1264487606a8",
+      "source": "sources/w15-vi-raster-b-raster-drawcenteredstring/draw_centered_string.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi",
+          "compiled_body_bytes": 884
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7135,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_drawprimbuffer_3.o",
+      "profile": "authored_cpp",
+      "sha256": "6b4f22def03a3dbc1419a8c846655f92258cceda6e5965676233ad8815dfb978",
+      "source": "sources/w15-vi-raster-b-raster-drawprimbuffer-3/draw_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBuffer__8VIRasteriiUi",
+          "compiled_body_bytes": 284
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7136,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_drawprimbuffer_4.o",
+      "profile": "authored_cpp",
+      "sha256": "fa9cb6848819454b001e079e4ddafe613a259b2ab5c5d373ff5f63680a574c7b",
+      "source": "sources/w15-vi-raster-b-raster-drawprimbuffer-4/draw_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBuffer__8VIRasteriiiUi",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7137,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_foregrndtexcopy.o",
+      "profile": "authored_cpp",
+      "sha256": "940f1141d83c47afbf3ef8ee8083abf098ff788c634ea9ef2757cbb12cad8d73",
+      "source": "sources/w15-vi-raster-b-raster-foregrndtexcopy/foregrnd_tex_copy.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7138,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_getmodelview.o",
+      "profile": "authored_cpp",
+      "sha256": "8acd6e60adda019f8c99808c73b6fd3eebfc74f97d026d21b81f45438937ecb2",
+      "source": "sources/w15-vi-raster-b-raster-getmodelview/get_model_view.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetModelView__C8VIRaster",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7139,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_getstringwidth_char.o",
+      "profile": "authored_cpp",
+      "sha256": "65b56eb09af3039210dbcfc3ac859d2ee0cfcd8ebee1485a1667a5331af5678d",
+      "source": "sources/w15-vi-raster-b-raster-getstringwidth-char/get_string_width.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__8VIRasteriPCc",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7140,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_getstringwidth_ushort.o",
+      "profile": "authored_cpp",
+      "sha256": "25db0615ba8de792dac9ca6eed0ea2193a7e25046031114ef958dff95374f6a8",
+      "source": "sources/w15-vi-raster-b-raster-getstringwidth-ushort/get_string_width.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__8VIRasteriPCUs",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7141,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_releasefont.o",
+      "profile": "authored_cpp",
+      "sha256": "d5242869c1f3d0e67157c399095c5a5e161d4f9545e84b13fd6a95a420ac7544",
+      "source": "sources/w15-vi-raster-b-raster-releasefont/release_font.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReleaseFont__8VIRasteriR12VIDictionary",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7142,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_releasematerialpal.o",
+      "profile": "authored_cpp",
+      "sha256": "06ac5fc7a0b59c5d58faabb2d5e549e2428a29e36e9bd1abee28205793473e24",
+      "source": "sources/w15-vi-raster-b-raster-releasematerialpal/release_material_pal.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReleaseMaterialPal__8VIRasteriR12VIDictionary",
+          "compiled_body_bytes": 324
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7143,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_releaseprimbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "f3f1ee46ea6cce37d4a00b35d0ac6422d362e0430f413b6cd4371c936db512d4",
+      "source": "sources/w15-vi-raster-b-raster-releaseprimbuffer/release_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReleasePrimBuffer__8VIRasteriR12VIDictionary",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7144,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_rmaterialoffset.o",
+      "profile": "authored_cpp",
+      "sha256": "a183b8a517457f4a906b1aec916197a337c3ff607f61d4734bbf4ded0223206e",
+      "source": "sources/w15-vi-raster-b-raster-rmaterialoffset/r_material_offset.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7145,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_raster_shareprimbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "6e012d444ca1a6bd6d9ae7a3779ddb9549c7e6741abbefe3d8d60787d1b582d2",
+      "source": "sources/w15-vi-raster-b-raster-shareprimbuffer/share_prim_buffer.cpp",
+      "emitted_functions": [
+        {
+          "name": "SharePrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7146,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_sprite_pick.o",
+      "profile": "authored_cpp",
+      "sha256": "b6e3a9d0d1c0a77d332a6edff74909722d2385f1e5146072b1fead55510b42a7",
+      "source": "sources/w15-vi-raster-b-sprite-pick/pick.cpp",
+      "emitted_functions": [
+        {
+          "name": "Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7147,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_sprite_raster.o",
+      "profile": "authored_cpp",
+      "sha256": "85d29790d4a984c90e10d9e966373c437cdd16c96eaaea1d3cf0d979a70edb78",
+      "source": "sources/w15-vi-raster-b-sprite-raster/raster.cpp",
+      "emitted_functions": [
+        {
+          "name": "Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7148,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_surface_init.o",
+      "profile": "authored_cpp",
+      "sha256": "1934cb0e8e6b9f3fdaeab88c25e606649c442f43ea9ea50eb865cdd78386092f",
+      "source": "sources/w15-vi-raster-b-surface-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__9VISurfaceR8VIRasterii10VIBitDepthi",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7149,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_surface_lockpalette.o",
+      "profile": "authored_cpp",
+      "sha256": "a9b2fb935e64df6aa05e4f1b5c9004878479899a22f7c403135a1c8a57b78c7a",
+      "source": "sources/w15-vi-raster-b-surface-lockpalette/lock_palette.cpp",
+      "emitted_functions": [
+        {
+          "name": "LockPalette__9VISurfaceRiR12VIPixelStorePPUc",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7150,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_surface_unlockpalette.o",
+      "profile": "authored_cpp",
+      "sha256": "3918e82254e70cf6dd194b3adbaac572215b36803f0130d47a8eaccf1d0a8626",
+      "source": "sources/w15-vi-raster-b-surface-unlockpalette/unlock_palette.cpp",
+      "emitted_functions": [
+        {
+          "name": "UnlockPalette__9VISurface",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7151,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_tex_drawcolorspecialhalo.o",
+      "profile": "authored_cpp",
+      "sha256": "0dcbda6fdd782b0b05f8d99ce177bcf740ee030f5f05d2014010b7e1a8a8a6dc",
+      "source": "sources/w15-vi-raster-b-tex-drawcolorspecialhalo/texture_draw_color_special_halo.cpp",
+      "emitted_functions": [
+        {
+          "name": "textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii",
+          "compiled_body_bytes": 928
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7152,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_tex_normalizedheight.o",
+      "profile": "authored_cpp",
+      "sha256": "5b8e270dd7fa399d6314e1a7a73b9b25cec7ced6cfd556a47681e84b74306a71",
+      "source": "sources/w15-vi-raster-b-tex-normalizedheight/tex_normalized_height.cpp",
+      "emitted_functions": [
+        {
+          "name": "texNormalizedHeight__FP8_texture",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7153,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_tex_normalizedwidth.o",
+      "profile": "authored_cpp",
+      "sha256": "722b2ed2812a554ce0e52b3110bcfd7f56943813a54a05b086e39b9f49aec3dc",
+      "source": "sources/w15-vi-raster-b-tex-normalizedwidth/tex_normalized_width.cpp",
+      "emitted_functions": [
+        {
+          "name": "texNormalizedWidth__FP8_texture",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7154,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_vifont_fontname.o",
+      "profile": "authored_cpp",
+      "sha256": "7723cc11433fb3648a7e61563e9687c66bd58aa826e8aff694a6bc3afb3a5cad",
+      "source": "sources/w15-vi-raster-b-vifont-fontname/font_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7155,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_raster_b_vimap_insert.o",
+      "profile": "authored_cpp",
+      "sha256": "8d0a7821fb1a3706bdb77e99637c1b962561beb9ea4ae06db8d399f55b8892ae",
+      "source": "sources/w15-vi-raster-b-vimap-insert/insert.cpp",
+      "emitted_functions": [
+        {
+          "name": "Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo",
+          "compiled_body_bytes": 856
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -105946,7 +106433,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b56a050dce2705e05c138488750b3bf16e0e3c720def0a8f1d70ec0ae41da474",
+  "snapshot_sha256": "1490bf5ec1557042a0bbabecc58194d60f21f8287c66ec87fa6bc7d8e81e1aa6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

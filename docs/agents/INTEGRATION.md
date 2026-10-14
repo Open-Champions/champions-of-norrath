@@ -10474,3 +10474,20 @@ Opened: `AddToFreeMap__13VIEESurfCachei`, `Add__t6VIPool1ZP7VIRFontRCP7VIRFont`,
 
 Full partial build: 7122 source compilations, one link, 5651 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:05 CDT — agents/w15-vi-raster-a — 880 unresolved imports
+
+## agents/w15-vi-raster-b
+
+Merged (merge commit; tip over 45 minutes old, notes complete). All 32 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 880 |
+| After | 874 |
+| Closed | 32 |
+| Opened | 26 |
+
+Closed: `CalcCenteredStringScreenRect__8VIRasteriRC7VIVect3PCcR6VIRect`, `CalcLODLevelIndex__9VIHSpriteR13VIPickSegmentR8VIRaster`, `CopyMaterialPal__8VIRasterii`, `CreateMaterialPal__8VIRasterii`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi`, `DrawPrimBuffer__8VIRasteriiUi`, `DrawPrimBuffer__8VIRasteriiiUi`, `GetModelView__C8VIRaster`, `GetStringWidth__8VIRasteriPCUs`, `GetStringWidth__8VIRasteriPCc`, `InitTextSlots__9VICSpriteR8VIRaster`, `Init__9VISurfaceR8VIRasterii10VIBitDepthi`, `Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo`, `LockPalette__9VISurfaceRiR12VIPixelStorePPUc`, `Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi`, `ReleaseFont__8VIRasteriR12VIDictionary`, `ReleaseMaterialPal__8VIRasteriR12VIDictionary`, `ReleasePrimBuffer__8VIRasteriR12VIDictionary`, `SetBlendMatrices__9VIHSpriteR8VIRaster`, `SharePrimBuffer__8VIRasteri`, `Share__9VICSpriteR7VISceneP8VIRaster`, `UnlockPalette__9VISurface`, `UpdateParticleEmitters__9VICSpriteR8VICameraR7VISceneR8VIRasterR10VIMatrix44`, `_6VIFont$sm_FontName`, `_8VIRaster$ColorMatrix`, `_8VIRaster$RMaterialOffset`, `blackoutTexCopy`, `foregrndTexCopy`, `texNormalizedHeight__FP8_texture`, `texNormalizedWidth__FP8_texture`, `textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii`
+
+Opened: `AddNode__t5VIMap2ZiZ17VIEESurfCacheInfoii`, `Add__t6VIList1Z10VIMaterial`, `Add__t6VIList1ZP12VIPrimBufferRCP12VIPrimBuffer`, `Add__t6VIPool1ZP13VIMaterialPalRCP13VIMaterialPal`, `Allocate__9VISurface`, `CalcSurfaceOffsets__9VISurface`, `CopyMaterial__8VIRasterii`, `Deallocate__9VISurface`, `DrawPrimBufferPackVUNBW__8VIRasteriiUi`, `DrawPrimBufferPackVUNCG__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiiUi`, `DrawPrimBufferPackVU__8VIRasteriifUi`, `DrawPrimBufferVUNC__8VIRasteriiUi`, `Erase__t6VIPool1ZP12VIPrimBufferi`, `Erase__t6VIPool1ZP13VIMaterialPali`, `Erase__t6VIPool1ZP7VIRFonti`, `GetLayerTexture__10VIMateriali`, `GetStringWidth__7VIRFontPCUsi`, `GetStringWidth__7VIRFontPCci`, `LeftRotate__t5VIMap2ZiZ17VIEESurfCacheInfoi`, `ReorderPalette__9VISurface`, `RightRotate__t5VIMap2ZiZ17VIEESurfCacheInfoi`, `SetDMAHeaders__9VISurface`, `SetObjectBlends__8VIRasteriP10VIMatrix44`, `_$_7VIRFont`
+
+Full partial build: 7154 source compilations, one link, 5678 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
