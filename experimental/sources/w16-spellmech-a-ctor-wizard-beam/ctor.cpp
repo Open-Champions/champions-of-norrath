@@ -1,4 +1,4 @@
-// Observed __15SpellWizardBeamiP8CreatureP5Skill at 0x002b6ca0, 1076 bytes in .text. Arguments: the object, the rank, the
+// Observed __15SpellWizardBeamiP8CreatureP5Skill at 0x002b6ca0, 1080 bytes in .text. Arguments: the object, the rank, the
 // creature and the skill. Returns nothing. The sync random state is advanced as state = state * 0x19660d + 0x3c6ef35f
 // (32-bit). eRand(object) is the image's Spell random step. hsv(h, s, v) returns a packed colour whose low, middle and high
 // bytes are used as three channel values below.
