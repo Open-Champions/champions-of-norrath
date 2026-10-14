@@ -84,7 +84,7 @@ inline short load_short(const unsigned char* base, unsigned offset) {
     return *reinterpret_cast<const short*>(base + offset);
 }
 // Applies the type-21 record update described in the header to one weapon block.
-void tag_weapon(unsigned char* weapon, int r0, short v, float scale) {
+inline __attribute__((always_inline)) void tag_weapon(unsigned char* weapon, int r0, short v, float scale) {
     unsigned existing = 0;
     for (unsigned j = 0; j < 4; ++j) {
         if (load_short(weapon, 36 + 8 * j) == 21) {
