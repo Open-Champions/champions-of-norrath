@@ -83189,6 +83189,454 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w14-sprite-raster-raster-streamaudio/raster.cpp"
+    },
+    {
+      "input_order": 6439,
+      "component": "w14-particle-attr-set-birthrate-var",
+      "object_name": "w14_particle_attr_set_birthrate_var.o",
+      "private_object_sha256": "2448d45b00b679c2361dcb3f741df9c7ec17c4c50b54166e564336f56e3c4d9f",
+      "emitted_functions": [
+        {
+          "name": "SetBirthrateVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-birthrate-var/set_birthrate_var.cpp"
+    },
+    {
+      "input_order": 6440,
+      "component": "w14-particle-attr-set-birthrate",
+      "object_name": "w14_particle_attr_set_birthrate.o",
+      "private_object_sha256": "5ff3afd5f095c7b5cd7e476337ab480986241e51c752b76339eb062519dee835",
+      "emitted_functions": [
+        {
+          "name": "SetBirthrate__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-birthrate/set_birthrate.cpp"
+    },
+    {
+      "input_order": 6441,
+      "component": "w14-particle-attr-set-delta-spawn",
+      "object_name": "w14_particle_attr_set_delta_spawn.o",
+      "private_object_sha256": "f621c77f775de940ac868e4ecfd1c76f1e55959df959bd859e77b6ec49c593af",
+      "emitted_functions": [
+        {
+          "name": "SetDeltaSpawn__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-delta-spawn/set_delta_spawn.cpp"
+    },
+    {
+      "input_order": 6442,
+      "component": "w14-particle-attr-set-end-color-var",
+      "object_name": "w14_particle_attr_set_end_color_var.o",
+      "private_object_sha256": "dad4bd8e8f40000fb951766fe0c74a61343425329e722c9496207b571635e4eb",
+      "emitted_functions": [
+        {
+          "name": "SetEndColorVar__20VIParticleAttributesRC10VIColor32F",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-end-color-var/set_end_color_var.cpp"
+    },
+    {
+      "input_order": 6443,
+      "component": "w14-particle-attr-set-end-size-var",
+      "object_name": "w14_particle_attr_set_end_size_var.o",
+      "private_object_sha256": "db51c9171ba87a45418dd95f36e248a252a35b0c43ac5aa0d2c3e7c779b507a3",
+      "emitted_functions": [
+        {
+          "name": "SetEndSizeVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-end-size-var/set_end_size_var.cpp"
+    },
+    {
+      "input_order": 6444,
+      "component": "w14-particle-attr-set-end-size",
+      "object_name": "w14_particle_attr_set_end_size.o",
+      "private_object_sha256": "7f0d1037b0d227faae223009c6a5c76805127a0e0350444c2c42cf15c7fb3e79",
+      "emitted_functions": [
+        {
+          "name": "SetEndSize__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-end-size/set_end_size.cpp"
+    },
+    {
+      "input_order": 6445,
+      "component": "w14-particle-attr-set-friction",
+      "object_name": "w14_particle_attr_set_friction.o",
+      "private_object_sha256": "12bd0e8ff27134b3924360d9bd8389ede56cc4191d168f13e958a2489cd062e1",
+      "emitted_functions": [
+        {
+          "name": "SetFriction__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-friction/set_friction.cpp"
+    },
+    {
+      "input_order": 6446,
+      "component": "w14-particle-attr-set-gradient-color",
+      "object_name": "w14_particle_attr_set_gradient_color.o",
+      "private_object_sha256": "48a0f687668c8db8a412d084b223fc5303b3c3d61f473f7ba206ab0bf9ea6201",
+      "emitted_functions": [
+        {
+          "name": "SetGradientColor__20VIParticleAttributesiRC10VIColor32F",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-gradient-color/set_gradient_color.cpp"
+    },
+    {
+      "input_order": 6447,
+      "component": "w14-particle-attr-set-gradient-repeat",
+      "object_name": "w14_particle_attr_set_gradient_repeat.o",
+      "private_object_sha256": "7d57791b9fc2d9c9c2726b8bd4a0c9269676104a4a06a7876a02a26b1d3c362d",
+      "emitted_functions": [
+        {
+          "name": "SetGradientRepeat__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-gradient-repeat/set_gradient_repeat.cpp"
+    },
+    {
+      "input_order": 6448,
+      "component": "w14-particle-attr-set-gravity-on",
+      "object_name": "w14_particle_attr_set_gravity_on.o",
+      "private_object_sha256": "6f3fd4dee9b6644172df770977700e1fcf78bfa438dd366d6bc0b87688db5eef",
+      "emitted_functions": [
+        {
+          "name": "SetGravityOn__20VIParticleAttributesi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-gravity-on/set_gravity_on.cpp"
+    },
+    {
+      "input_order": 6449,
+      "component": "w14-particle-attr-set-inherit-velocity",
+      "object_name": "w14_particle_attr_set_inherit_velocity.o",
+      "private_object_sha256": "0c3bd5bec5726b15e42bd7c7f3cb71a2b55bb0fb2150f6e7fa247072c6930d14",
+      "emitted_functions": [
+        {
+          "name": "SetInheritVelocity__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-inherit-velocity/set_inherit_velocity.cpp"
+    },
+    {
+      "input_order": 6450,
+      "component": "w14-particle-attr-set-lifespan-var",
+      "object_name": "w14_particle_attr_set_lifespan_var.o",
+      "private_object_sha256": "3e4b243c0f0b9d68a26b4a3c92910b5e39450e2b36aeb5cc67d1174e7e729690",
+      "emitted_functions": [
+        {
+          "name": "SetLifespanVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-lifespan-var/set_lifespan_var.cpp"
+    },
+    {
+      "input_order": 6451,
+      "component": "w14-particle-attr-set-lifespan",
+      "object_name": "w14_particle_attr_set_lifespan.o",
+      "private_object_sha256": "35d2c1e412c31fcff3e406f9e9f6ebcbe808c2c6407510a0e261274434706137",
+      "emitted_functions": [
+        {
+          "name": "SetLifespan__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-lifespan/set_lifespan.cpp"
+    },
+    {
+      "input_order": 6452,
+      "component": "w14-particle-attr-set-nozzle-axis",
+      "object_name": "w14_particle_attr_set_nozzle_axis.o",
+      "private_object_sha256": "16de963d4740627f105db826cc2e227f4f05e1a0beb8561912f5da793384df89",
+      "emitted_functions": [
+        {
+          "name": "SetNozzleAxis__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-nozzle-axis/set_nozzle_axis.cpp"
+    },
+    {
+      "input_order": 6453,
+      "component": "w14-particle-attr-set-nozzle-hpr-var",
+      "object_name": "w14_particle_attr_set_nozzle_hpr_var.o",
+      "private_object_sha256": "0dff4a5f2b63471c458fe84007781998f48bd750ca76e5f976d1dda37bf61cc4",
+      "emitted_functions": [
+        {
+          "name": "SetNozzleHprVar__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-nozzle-hpr-var/set_nozzle_hpr_var.cpp"
+    },
+    {
+      "input_order": 6454,
+      "component": "w14-particle-attr-set-start-color-var",
+      "object_name": "w14_particle_attr_set_start_color_var.o",
+      "private_object_sha256": "104f35d690e6221a9eed17f8f8455c700a74c986c546cdb42309709a62c1943b",
+      "emitted_functions": [
+        {
+          "name": "SetStartColorVar__20VIParticleAttributesRC10VIColor32F",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-start-color-var/set_start_color_var.cpp"
+    },
+    {
+      "input_order": 6455,
+      "component": "w14-particle-attr-set-start-size-var",
+      "object_name": "w14_particle_attr_set_start_size_var.o",
+      "private_object_sha256": "9cb1c8a9143753212ce490072728627e2db7ee23e8d91ba69e489792c5270fa6",
+      "emitted_functions": [
+        {
+          "name": "SetStartSizeVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-start-size-var/set_start_size_var.cpp"
+    },
+    {
+      "input_order": 6456,
+      "component": "w14-particle-attr-set-start-size",
+      "object_name": "w14_particle_attr_set_start_size.o",
+      "private_object_sha256": "8c7dabee7a431f5509117c3fdb796f32c2da8fda47dab1fa047de3038fc16080",
+      "emitted_functions": [
+        {
+          "name": "SetStartSize__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-start-size/set_start_size.cpp"
+    },
+    {
+      "input_order": 6457,
+      "component": "w14-particle-attr-set-velocity-var",
+      "object_name": "w14_particle_attr_set_velocity_var.o",
+      "private_object_sha256": "5a2f022af01c5f5331754c449e61c743fd0139272b09ec749c4bae0802562214",
+      "emitted_functions": [
+        {
+          "name": "SetVelocityVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-velocity-var/set_velocity_var.cpp"
+    },
+    {
+      "input_order": 6458,
+      "component": "w14-particle-attr-set-velocity",
+      "object_name": "w14_particle_attr_set_velocity.o",
+      "private_object_sha256": "15ce06753f68502ec3c34488e0af88995fedcf4326e70b0fd9c1c14c17dd8fd8",
+      "emitted_functions": [
+        {
+          "name": "SetVelocity__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-attr-set-velocity/set_velocity.cpp"
+    },
+    {
+      "input_order": 6459,
+      "component": "w14-particle-definition-destroy-motif",
+      "object_name": "w14_particle_definition_destroy_motif.o",
+      "private_object_sha256": "ccaacaf2ee31c583c6843e14ffa58412c3dcfd64cda03ce2cb1b899418cd726d",
+      "emitted_functions": [
+        {
+          "name": "DestroyMotif__22VIParticleDefinitionExP15VIParticleMotif",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-definition-destroy-motif/destroy_motif.cpp"
+    },
+    {
+      "input_order": 6460,
+      "component": "w14-particle-definition-ex-dtor",
+      "object_name": "w14_particle_definition_ex_dtor.o",
+      "private_object_sha256": "804fbea2c801f5a6fc01d07ee852ef8de89033c1c0e916fea13ec19042e7cdd4",
+      "emitted_functions": [
+        {
+          "name": "_$_22VIParticleDefinitionEx",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-definition-ex-dtor/definition_ex_dtor.cpp"
+    },
+    {
+      "input_order": 6461,
+      "component": "w14-particle-definition-first-motif",
+      "object_name": "w14_particle_definition_first_motif.o",
+      "private_object_sha256": "b6a540a4a8d30bfa28438a0b17faa2dfbdca6e51872e6675a3d16407c07ab8a5",
+      "emitted_functions": [
+        {
+          "name": "FirstMotif__C22VIParticleDefinitionEx",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-definition-first-motif/first_motif.cpp"
+    },
+    {
+      "input_order": 6462,
+      "component": "w14-particle-emitter-create",
+      "object_name": "w14_particle_emitter_create.o",
+      "private_object_sha256": "074c615e00df5da78d83ae25bf7f1e6b8e6ce717411029e2f676f75462c29aae",
+      "emitted_functions": [
+        {
+          "name": "Create__17VIParticleEmitterP16VIParticleSystemP20VIParticleDefinition",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-emitter-create/emitter_create.cpp"
+    },
+    {
+      "input_order": 6463,
+      "component": "w14-particle-emitter-particle-count",
+      "object_name": "w14_particle_emitter_particle_count.o",
+      "private_object_sha256": "6b7ad6931e82925aecffad8bbf31153d0b00b98f06d51151e998be3936d65e22",
+      "emitted_functions": [
+        {
+          "name": "ParticleCount__C17VIParticleEmitter",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-emitter-particle-count/particle_count.cpp"
+    },
+    {
+      "input_order": 6464,
+      "component": "w14-particle-emitter-set-location",
+      "object_name": "w14_particle_emitter_set_location.o",
+      "private_object_sha256": "390c350aae1f367d85572481f7cb191c2d0adfe1f8b1b6a70f89cdb491b478ae",
+      "emitted_functions": [
+        {
+          "name": "SetLocation__17VIParticleEmitterRC7VIVect3",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-emitter-set-location/set_location.cpp"
+    },
+    {
+      "input_order": 6465,
+      "component": "w14-particle-emitter-unlink-all-motif-blenders",
+      "object_name": "w14_particle_emitter_unlink_all_motif_blenders.o",
+      "private_object_sha256": "90231f4d9bd420671d33319fdce94bfe54759e97f0f217a923d8f8ba4bcb1bcc",
+      "emitted_functions": [
+        {
+          "name": "UnlinkAllMotifBlenders__17VIParticleEmitter",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-emitter-unlink-all-motif-blenders/unlink_all.cpp"
+    },
+    {
+      "input_order": 6466,
+      "component": "w14-particle-emitter-update",
+      "object_name": "w14_particle_emitter_update.o",
+      "private_object_sha256": "6a72daee0f0b17a9a8237b2b76312729186721a4da09cf32e87d35f24c81f0d2",
+      "emitted_functions": [
+        {
+          "name": "Update__17VIParticleEmitter",
+          "compiled_body_bytes": 2428
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-emitter-update/emitter_update.cpp"
+    },
+    {
+      "input_order": 6467,
+      "component": "w14-particle-motif-blender-dtor",
+      "object_name": "w14_particle_motif_blender_dtor.o",
+      "private_object_sha256": "3951d73b22a8472d33083ce11d2d2262461fe66114cd0206129787c5fdc6f127",
+      "emitted_functions": [
+        {
+          "name": "_$_14VIMotifBlender",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-motif-blender-dtor/motif_blender_dtor.cpp"
+    },
+    {
+      "input_order": 6468,
+      "component": "w14-particle-p-set-trail-width",
+      "object_name": "w14_particle_p_set_trail_width.o",
+      "private_object_sha256": "05f07290aecbf3056037d3e18203010d9761f1593ddf9d6dd78eb8df2d5e29ef",
+      "emitted_functions": [
+        {
+          "name": "P_SetTrailWidth__Fii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-p-set-trail-width/set_trail_width.cpp"
+    },
+    {
+      "input_order": 6469,
+      "component": "w14-particle-system-delta-time",
+      "object_name": "w14_particle_system_delta_time.o",
+      "private_object_sha256": "607f43ccfb66c6dfaf564670061d8cf26d23e9236b5a8878f4202f4c1a8a5492",
+      "emitted_functions": [
+        {
+          "name": "DeltaTime__C16VIParticleSystem",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-system-delta-time/delta_time.cpp"
+    },
+    {
+      "input_order": 6470,
+      "component": "w14-particle-system-particle-definition",
+      "object_name": "w14_particle_system_particle_definition.o",
+      "private_object_sha256": "42546f13b1b7c8a9bf0e55c7c4cd0cc0e3c7132756cc83408473955a64bb176f",
+      "emitted_functions": [
+        {
+          "name": "ParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-particle-system-particle-definition/particle_definition.cpp"
     }
   ],
   "drafts": [
@@ -92521,6 +92969,70 @@
     "sources/w14-objfile-vistring-str16to8/str16to8.cpp": "4add170e869e3f27c38f3be7101e6b29f716a440267eed13ff83a3c3a38fae4e",
     "sources/w14-objfile-vistring-strlen16/host_check.cpp": "c8175889a39c7becd0816c1c8bcea9f6d02d6c9bfde00bf6e7e856190052095b",
     "sources/w14-objfile-vistring-strlen16/strlen16.cpp": "90f65289d5fac8caaad0b5d3160cfa2c1b50385f93c8e39fbee5d10fb47d35e4",
+    "sources/w14-particle-attr-set-birthrate-var/host_contract.cpp": "f3ca9bca655b2382ac739fc7fba54b03e1d1a652bc8ee597d66d019d0a7d93c2",
+    "sources/w14-particle-attr-set-birthrate-var/set_birthrate_var.cpp": "8b6e75d58d702ea2dabb7158a704666adc04d91b91de73fc0702d067a0967cac",
+    "sources/w14-particle-attr-set-birthrate/host_contract.cpp": "f55a4398554d1c2fe9145d9fcd1eacefe8f3b187f2a89592298c82e03997d979",
+    "sources/w14-particle-attr-set-birthrate/set_birthrate.cpp": "7aaaf26ed014a22e7521eff9e50f458b3e1c59832efdad7a4217953e485b8d3e",
+    "sources/w14-particle-attr-set-delta-spawn/host_contract.cpp": "b00e785ed50fa490e7bdeacfa22beaaffd8fbb3c9c6d2dfba19b654c18050d8d",
+    "sources/w14-particle-attr-set-delta-spawn/set_delta_spawn.cpp": "0513349ed286c3ed9d5373455db08de8716357283b339776f3098fcbf107ab32",
+    "sources/w14-particle-attr-set-end-color-var/host_contract.cpp": "309ebbe400113b6019145697c6eb79d395c64a2061604647f69fad2a576e1ee4",
+    "sources/w14-particle-attr-set-end-color-var/set_end_color_var.cpp": "1627797485bf761f6a04df48d0be30f5dcc7b981f1c4bcf1477b7e43a57eed66",
+    "sources/w14-particle-attr-set-end-size-var/host_contract.cpp": "c5b56f3eed62b07de3ca283d5cd752dcbe4b3a0d8dca4b108c955a9d10d90c09",
+    "sources/w14-particle-attr-set-end-size-var/set_end_size_var.cpp": "ade84d1bd4db05453c115370f4c5dbb18e92779ed4486aa8565154000b5c7c8f",
+    "sources/w14-particle-attr-set-end-size/host_contract.cpp": "c36f32a5ce5e88999360fd2aa06b63a1a84583418de7f52069de60d7f1fa09a2",
+    "sources/w14-particle-attr-set-end-size/set_end_size.cpp": "f91e23aa43c698f783b968e815970ca24d5880a2a4a99a95da126d0f06ffc60a",
+    "sources/w14-particle-attr-set-friction/host_contract.cpp": "1652ffc6729898da127175fea6c91b476db7cb716f79255838dac3b9f080c68c",
+    "sources/w14-particle-attr-set-friction/set_friction.cpp": "d42ce7711178dd0b784b27885fc27c6cd157c01d7c86d8a9db87858c28a29649",
+    "sources/w14-particle-attr-set-gradient-color/host_contract.cpp": "f08885a5a918b8d5119dd0bf68f26963af22a3b2ecf1ef601f07ff618d8351e3",
+    "sources/w14-particle-attr-set-gradient-color/set_gradient_color.cpp": "439a30a83d4a46e0b6deda83a02a040f8553663b30c8f3412fdcab4f8eebf97d",
+    "sources/w14-particle-attr-set-gradient-repeat/host_contract.cpp": "0c105a0e3726b7cca19798214868d5f6015cacd4e8f00de131ebef9b0349efcb",
+    "sources/w14-particle-attr-set-gradient-repeat/set_gradient_repeat.cpp": "d4d8b9cd4cf0d3eb98dc633407ed66747aada70b44b6fa5d550b4f53385cfbe3",
+    "sources/w14-particle-attr-set-gravity-on/host_contract.cpp": "fe55a7a40a1f96842101a9305ba9c4a72a5a6da14e3a9c96a2d3b4a680417644",
+    "sources/w14-particle-attr-set-gravity-on/set_gravity_on.cpp": "6c5ba41b095411233951d1693fe2e7b2d5e5e42583e37d1585fc3bc277587d71",
+    "sources/w14-particle-attr-set-inherit-velocity/host_contract.cpp": "8230565abe5e1e2407d54b977879e375c03f4f8a9c366f9c3d01767c24c9cf30",
+    "sources/w14-particle-attr-set-inherit-velocity/set_inherit_velocity.cpp": "60840befdcf873e0c4951f9735f4a946cf258fe40c5ef47c5e79228966d834f3",
+    "sources/w14-particle-attr-set-lifespan-var/host_contract.cpp": "102b9477bb5b464bc86c40821886ed5af28511f8e641bc7a9474f69006312bcf",
+    "sources/w14-particle-attr-set-lifespan-var/set_lifespan_var.cpp": "bbe083e7c182e858ad166fcf0d9bbec2026a3d0708482d7b61dc4ebcd9f997f4",
+    "sources/w14-particle-attr-set-lifespan/host_contract.cpp": "866757518a05075b47c419b36bec162e579393c55a03e250c7f2b32f4d45b812",
+    "sources/w14-particle-attr-set-lifespan/set_lifespan.cpp": "fc0724d0560ba0aa09e100db5a769b8e0aa95bc6204126732b9d8f68286e2a3b",
+    "sources/w14-particle-attr-set-nozzle-axis/host_contract.cpp": "dd81023d179dd308831f478c04ec826d4ffede5a028885493c06390703855bc8",
+    "sources/w14-particle-attr-set-nozzle-axis/set_nozzle_axis.cpp": "22322d70822f455ffcc62802aa5446b73713a1faf02089ba589d7e5a9f35bbdf",
+    "sources/w14-particle-attr-set-nozzle-hpr-var/host_contract.cpp": "dec464a26ca212d7885453b07c0a9735ae7f9173ba0e2ed19152b3ef7e044323",
+    "sources/w14-particle-attr-set-nozzle-hpr-var/set_nozzle_hpr_var.cpp": "2b7bee2c10481f6a936393860120db814e4923a1512bd8bd61495e7e62356c71",
+    "sources/w14-particle-attr-set-start-color-var/host_contract.cpp": "814cd58dd67bacea1534441e679fe203668a22df7ad7bc5393ec40852913a00d",
+    "sources/w14-particle-attr-set-start-color-var/set_start_color_var.cpp": "8711aa45457375686e70355da8b4d9f9f2569713a8e1e89692f762e4393506d8",
+    "sources/w14-particle-attr-set-start-size-var/host_contract.cpp": "aa80a045193e624475e19aa487985eec61a7d15c8f41c752a862c089f47ebac9",
+    "sources/w14-particle-attr-set-start-size-var/set_start_size_var.cpp": "55b829f11e5fef851e649ef68b3399614dc1cb14c4996c421a6c2a47a7a2869d",
+    "sources/w14-particle-attr-set-start-size/host_contract.cpp": "47c8df1086becb87f476ee72fec04b6f3ba5b844bdc4cbfc0378dccc302ce6f5",
+    "sources/w14-particle-attr-set-start-size/set_start_size.cpp": "8b82ac17a8f2bc90e18748786a860e206cd723450f076a1a73c9136c381bfa23",
+    "sources/w14-particle-attr-set-velocity-var/host_contract.cpp": "1b3011dda0a859e27bae8ab947f22520f81c7af40e8788e28dce3bae6ab0b975",
+    "sources/w14-particle-attr-set-velocity-var/set_velocity_var.cpp": "c0d5f6d7e4166952c6ea42d062ccf811a6add9b7b0bd2a1dce3b7f5d5af9b088",
+    "sources/w14-particle-attr-set-velocity/host_contract.cpp": "53498b821dacfc06deb704632f0ce1f10e081872c470e2aa09cb21b17aa7b898",
+    "sources/w14-particle-attr-set-velocity/set_velocity.cpp": "a72fa9db70fb591682ddbf91f7fb9e0da14df4dd901850e02135e765665e4856",
+    "sources/w14-particle-definition-destroy-motif/destroy_motif.cpp": "cbd842c7a7b323729406dd274e4a45b0a5d97e1a970ef7cda9b68cabc219aa80",
+    "sources/w14-particle-definition-destroy-motif/host_contract.cpp": "013c899b704f992e343404d2c86ee317cffb21216187cabc83f789027ecc9c8d",
+    "sources/w14-particle-definition-ex-dtor/definition_ex_dtor.cpp": "36648b05183b2146b730fb45886faba08dd58353d721f3112ded21214b44fd12",
+    "sources/w14-particle-definition-ex-dtor/host_contract.cpp": "370eb4b7e9f8ead38c2f963f4e1421ec0fcb6c7b629932cc795ab73b84129ad3",
+    "sources/w14-particle-definition-first-motif/first_motif.cpp": "417e70ee53b159c5a203cca9cef05ab744b7db212a591c9b96514fdb14ccf19b",
+    "sources/w14-particle-definition-first-motif/host_contract.cpp": "a979508c7cb910eefa12b60d3fb938f774ecc8d36515daaa99ef72a222dcee15",
+    "sources/w14-particle-emitter-create/emitter_create.cpp": "60cd84b2361b476887489f30fec9e3397e928a4ceef4f482d8cfdef39627a918",
+    "sources/w14-particle-emitter-create/host_contract.cpp": "25969729ebfe12f4ad029afeef035eaf54448b6f8e1245fdc2ed1573c0f0d6a7",
+    "sources/w14-particle-emitter-particle-count/host_contract.cpp": "6c5a8523b9237a3654e62b98355b274b0c2e8d4e30612a033886e143ac750904",
+    "sources/w14-particle-emitter-particle-count/particle_count.cpp": "56c4c51d55aa25e7bf70c1d3e0373d7ad7e4c28ba1d545cfbb0685bde8d75e13",
+    "sources/w14-particle-emitter-set-location/host_contract.cpp": "cdad79871e3bdfd8dc37309a1c3ee6f092e0f2eb05bb4bc43a8eac38d1c8448a",
+    "sources/w14-particle-emitter-set-location/set_location.cpp": "2f71757ff3f271f9cc417300750577be05acad8358a6d9a867cad24f53e9051a",
+    "sources/w14-particle-emitter-unlink-all-motif-blenders/host_contract.cpp": "b4a23dc9b733beedee305fa6289154ad5efe48546bba64cb6514ffe65aec4304",
+    "sources/w14-particle-emitter-unlink-all-motif-blenders/unlink_all.cpp": "36b9658d79c798e1b3b2f36626520da7a42921549395c50145c6ae2a2a8a7247",
+    "sources/w14-particle-emitter-update/emitter_update.cpp": "2c2b38bedb0066ceba39d15ca9be7d8966ab3ac0f9bb0077cb241931294cfbf0",
+    "sources/w14-particle-emitter-update/host_contract.cpp": "224933cba0becbc8d0c7f8d5ba4240afd28b0f4fb0b1a5bf0324cf9ec95d89d1",
+    "sources/w14-particle-motif-blender-dtor/host_contract.cpp": "bc8850b492b866ab689683d5ccb2467a47d7321d4516374ef43037d60aabb35f",
+    "sources/w14-particle-motif-blender-dtor/motif_blender_dtor.cpp": "56d405b3ff0b2b05cdccb049133f3dbb05abfdff68200ba4c621a1f9b9291329",
+    "sources/w14-particle-p-set-trail-width/host_contract.cpp": "e77f0a477782ec0644fe15bb703abf2307c7b6d427574a28a81592fb7813fc12",
+    "sources/w14-particle-p-set-trail-width/set_trail_width.cpp": "ac879e7b4a18c854ea6485d61e42bca4c9063330280b33ae25419607bca9d50c",
+    "sources/w14-particle-system-delta-time/delta_time.cpp": "91095c407c40fa8c43c62fdda5d9144bb21b246bf852a103e6d5ffd66d1f569a",
+    "sources/w14-particle-system-delta-time/host_contract.cpp": "5ac72b108b40572bb760776ed846e9515f50c89c9324fc56e29607e39fc64118",
+    "sources/w14-particle-system-particle-definition/host_contract.cpp": "779c4dd2af28b499ea4d48a6ef3d905481209a3a787ba178a4292b349ca51ca4",
+    "sources/w14-particle-system-particle-definition/particle_definition.cpp": "4d72adf3d00b20cd237d99b2deea403cca577248671fcf937a4122ac5cac4617",
     "sources/w14-raster-actorfilter-init/host_check.cpp": "819556c0cff8438c593bcc0ebb729e691a0ae4a798dd02393fb63f1715339fbb",
     "sources/w14-raster-actorfilter-init/init.cpp": "12cddccb2486cb65dfd55feb3ff206dcaa5af4feb187c2ece3d48f9764e7aa92",
     "sources/w14-raster-atmosphere-recomputelightningpatches/host_check.cpp": "fac387b05a4375c2d55dfe37520cef6feb4f2c7951c2b6a6b6db5302526be7de",
@@ -97204,11 +97716,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6439,
-    "authored_default_inputs": 6437,
+    "selected_inputs": 6471,
+    "authored_default_inputs": 6469,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5109,
-    "compiled_body_bytes_from_accepted_inputs": 2043532,
+    "emitted_function_definitions_including_helpers": 5141,
+    "compiled_body_bytes_from_accepted_inputs": 2047732,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -97221,7 +97733,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6126
+    "package_selected_inputs": 6158
   },
   "startup_implementations": [
     {
@@ -194292,6 +194804,550 @@
       ],
       "host_files": [
         "sources/w14-sprite-raster-raster-streamaudio/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-birthrate-var/set_birthrate_var.cpp",
+      "source_sha256": "8b6e75d58d702ea2dabb7158a704666adc04d91b91de73fc0702d067a0967cac",
+      "object_sha256": "2448d45b00b679c2361dcb3f741df9c7ec17c4c50b54166e564336f56e3c4d9f",
+      "emitted_functions": [
+        {
+          "name": "SetBirthrateVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-birthrate-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-birthrate/set_birthrate.cpp",
+      "source_sha256": "7aaaf26ed014a22e7521eff9e50f458b3e1c59832efdad7a4217953e485b8d3e",
+      "object_sha256": "5ff3afd5f095c7b5cd7e476337ab480986241e51c752b76339eb062519dee835",
+      "emitted_functions": [
+        {
+          "name": "SetBirthrate__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-birthrate/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-delta-spawn/set_delta_spawn.cpp",
+      "source_sha256": "0513349ed286c3ed9d5373455db08de8716357283b339776f3098fcbf107ab32",
+      "object_sha256": "f621c77f775de940ac868e4ecfd1c76f1e55959df959bd859e77b6ec49c593af",
+      "emitted_functions": [
+        {
+          "name": "SetDeltaSpawn__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-delta-spawn/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-end-color-var/set_end_color_var.cpp",
+      "source_sha256": "1627797485bf761f6a04df48d0be30f5dcc7b981f1c4bcf1477b7e43a57eed66",
+      "object_sha256": "dad4bd8e8f40000fb951766fe0c74a61343425329e722c9496207b571635e4eb",
+      "emitted_functions": [
+        {
+          "name": "SetEndColorVar__20VIParticleAttributesRC10VIColor32F",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-end-color-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-end-size-var/set_end_size_var.cpp",
+      "source_sha256": "ade84d1bd4db05453c115370f4c5dbb18e92779ed4486aa8565154000b5c7c8f",
+      "object_sha256": "db51c9171ba87a45418dd95f36e248a252a35b0c43ac5aa0d2c3e7c779b507a3",
+      "emitted_functions": [
+        {
+          "name": "SetEndSizeVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-end-size-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-end-size/set_end_size.cpp",
+      "source_sha256": "f91e23aa43c698f783b968e815970ca24d5880a2a4a99a95da126d0f06ffc60a",
+      "object_sha256": "7f0d1037b0d227faae223009c6a5c76805127a0e0350444c2c42cf15c7fb3e79",
+      "emitted_functions": [
+        {
+          "name": "SetEndSize__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-end-size/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-friction/set_friction.cpp",
+      "source_sha256": "d42ce7711178dd0b784b27885fc27c6cd157c01d7c86d8a9db87858c28a29649",
+      "object_sha256": "12bd0e8ff27134b3924360d9bd8389ede56cc4191d168f13e958a2489cd062e1",
+      "emitted_functions": [
+        {
+          "name": "SetFriction__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-friction/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-gradient-color/set_gradient_color.cpp",
+      "source_sha256": "439a30a83d4a46e0b6deda83a02a040f8553663b30c8f3412fdcab4f8eebf97d",
+      "object_sha256": "48a0f687668c8db8a412d084b223fc5303b3c3d61f473f7ba206ab0bf9ea6201",
+      "emitted_functions": [
+        {
+          "name": "SetGradientColor__20VIParticleAttributesiRC10VIColor32F",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-gradient-color/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-gradient-repeat/set_gradient_repeat.cpp",
+      "source_sha256": "d4d8b9cd4cf0d3eb98dc633407ed66747aada70b44b6fa5d550b4f53385cfbe3",
+      "object_sha256": "7d57791b9fc2d9c9c2726b8bd4a0c9269676104a4a06a7876a02a26b1d3c362d",
+      "emitted_functions": [
+        {
+          "name": "SetGradientRepeat__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-gradient-repeat/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-gravity-on/set_gravity_on.cpp",
+      "source_sha256": "6c5ba41b095411233951d1693fe2e7b2d5e5e42583e37d1585fc3bc277587d71",
+      "object_sha256": "6f3fd4dee9b6644172df770977700e1fcf78bfa438dd366d6bc0b87688db5eef",
+      "emitted_functions": [
+        {
+          "name": "SetGravityOn__20VIParticleAttributesi",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-gravity-on/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-inherit-velocity/set_inherit_velocity.cpp",
+      "source_sha256": "60840befdcf873e0c4951f9735f4a946cf258fe40c5ef47c5e79228966d834f3",
+      "object_sha256": "0c3bd5bec5726b15e42bd7c7f3cb71a2b55bb0fb2150f6e7fa247072c6930d14",
+      "emitted_functions": [
+        {
+          "name": "SetInheritVelocity__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-inherit-velocity/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-lifespan-var/set_lifespan_var.cpp",
+      "source_sha256": "bbe083e7c182e858ad166fcf0d9bbec2026a3d0708482d7b61dc4ebcd9f997f4",
+      "object_sha256": "3e4b243c0f0b9d68a26b4a3c92910b5e39450e2b36aeb5cc67d1174e7e729690",
+      "emitted_functions": [
+        {
+          "name": "SetLifespanVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-lifespan-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-lifespan/set_lifespan.cpp",
+      "source_sha256": "fc0724d0560ba0aa09e100db5a769b8e0aa95bc6204126732b9d8f68286e2a3b",
+      "object_sha256": "35d2c1e412c31fcff3e406f9e9f6ebcbe808c2c6407510a0e261274434706137",
+      "emitted_functions": [
+        {
+          "name": "SetLifespan__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-lifespan/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-nozzle-axis/set_nozzle_axis.cpp",
+      "source_sha256": "22322d70822f455ffcc62802aa5446b73713a1faf02089ba589d7e5a9f35bbdf",
+      "object_sha256": "16de963d4740627f105db826cc2e227f4f05e1a0beb8561912f5da793384df89",
+      "emitted_functions": [
+        {
+          "name": "SetNozzleAxis__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-nozzle-axis/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-nozzle-hpr-var/set_nozzle_hpr_var.cpp",
+      "source_sha256": "2b7bee2c10481f6a936393860120db814e4923a1512bd8bd61495e7e62356c71",
+      "object_sha256": "0dff4a5f2b63471c458fe84007781998f48bd750ca76e5f976d1dda37bf61cc4",
+      "emitted_functions": [
+        {
+          "name": "SetNozzleHprVar__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-nozzle-hpr-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-start-color-var/set_start_color_var.cpp",
+      "source_sha256": "8711aa45457375686e70355da8b4d9f9f2569713a8e1e89692f762e4393506d8",
+      "object_sha256": "104f35d690e6221a9eed17f8f8455c700a74c986c546cdb42309709a62c1943b",
+      "emitted_functions": [
+        {
+          "name": "SetStartColorVar__20VIParticleAttributesRC10VIColor32F",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-start-color-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-start-size-var/set_start_size_var.cpp",
+      "source_sha256": "55b829f11e5fef851e649ef68b3399614dc1cb14c4996c421a6c2a47a7a2869d",
+      "object_sha256": "9cb1c8a9143753212ce490072728627e2db7ee23e8d91ba69e489792c5270fa6",
+      "emitted_functions": [
+        {
+          "name": "SetStartSizeVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-start-size-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-start-size/set_start_size.cpp",
+      "source_sha256": "8b82ac17a8f2bc90e18748786a860e206cd723450f076a1a73c9136c381bfa23",
+      "object_sha256": "8c7dabee7a431f5509117c3fdb796f32c2da8fda47dab1fa047de3038fc16080",
+      "emitted_functions": [
+        {
+          "name": "SetStartSize__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-start-size/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-velocity-var/set_velocity_var.cpp",
+      "source_sha256": "c0d5f6d7e4166952c6ea42d062ccf811a6add9b7b0bd2a1dce3b7f5d5af9b088",
+      "object_sha256": "5a2f022af01c5f5331754c449e61c743fd0139272b09ec749c4bae0802562214",
+      "emitted_functions": [
+        {
+          "name": "SetVelocityVar__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-velocity-var/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-attr-set-velocity/set_velocity.cpp",
+      "source_sha256": "a72fa9db70fb591682ddbf91f7fb9e0da14df4dd901850e02135e765665e4856",
+      "object_sha256": "15ce06753f68502ec3c34488e0af88995fedcf4326e70b0fd9c1c14c17dd8fd8",
+      "emitted_functions": [
+        {
+          "name": "SetVelocity__20VIParticleAttributesf",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-attr-set-velocity/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-definition-destroy-motif/destroy_motif.cpp",
+      "source_sha256": "cbd842c7a7b323729406dd274e4a45b0a5d97e1a970ef7cda9b68cabc219aa80",
+      "object_sha256": "ccaacaf2ee31c583c6843e14ffa58412c3dcfd64cda03ce2cb1b899418cd726d",
+      "emitted_functions": [
+        {
+          "name": "DestroyMotif__22VIParticleDefinitionExP15VIParticleMotif",
+          "compiled_body_bytes": 196
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-definition-destroy-motif/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-definition-ex-dtor/definition_ex_dtor.cpp",
+      "source_sha256": "36648b05183b2146b730fb45886faba08dd58353d721f3112ded21214b44fd12",
+      "object_sha256": "804fbea2c801f5a6fc01d07ee852ef8de89033c1c0e916fea13ec19042e7cdd4",
+      "emitted_functions": [
+        {
+          "name": "_$_22VIParticleDefinitionEx",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-definition-ex-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-definition-first-motif/first_motif.cpp",
+      "source_sha256": "417e70ee53b159c5a203cca9cef05ab744b7db212a591c9b96514fdb14ccf19b",
+      "object_sha256": "b6a540a4a8d30bfa28438a0b17faa2dfbdca6e51872e6675a3d16407c07ab8a5",
+      "emitted_functions": [
+        {
+          "name": "FirstMotif__C22VIParticleDefinitionEx",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-definition-first-motif/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-emitter-create/emitter_create.cpp",
+      "source_sha256": "60cd84b2361b476887489f30fec9e3397e928a4ceef4f482d8cfdef39627a918",
+      "object_sha256": "074c615e00df5da78d83ae25bf7f1e6b8e6ce717411029e2f676f75462c29aae",
+      "emitted_functions": [
+        {
+          "name": "Create__17VIParticleEmitterP16VIParticleSystemP20VIParticleDefinition",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-emitter-create/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-emitter-particle-count/particle_count.cpp",
+      "source_sha256": "56c4c51d55aa25e7bf70c1d3e0373d7ad7e4c28ba1d545cfbb0685bde8d75e13",
+      "object_sha256": "6b7ad6931e82925aecffad8bbf31153d0b00b98f06d51151e998be3936d65e22",
+      "emitted_functions": [
+        {
+          "name": "ParticleCount__C17VIParticleEmitter",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-emitter-particle-count/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-emitter-set-location/set_location.cpp",
+      "source_sha256": "2f71757ff3f271f9cc417300750577be05acad8358a6d9a867cad24f53e9051a",
+      "object_sha256": "390c350aae1f367d85572481f7cb191c2d0adfe1f8b1b6a70f89cdb491b478ae",
+      "emitted_functions": [
+        {
+          "name": "SetLocation__17VIParticleEmitterRC7VIVect3",
+          "compiled_body_bytes": 84
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-emitter-set-location/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-emitter-unlink-all-motif-blenders/unlink_all.cpp",
+      "source_sha256": "36b9658d79c798e1b3b2f36626520da7a42921549395c50145c6ae2a2a8a7247",
+      "object_sha256": "90231f4d9bd420671d33319fdce94bfe54759e97f0f217a923d8f8ba4bcb1bcc",
+      "emitted_functions": [
+        {
+          "name": "UnlinkAllMotifBlenders__17VIParticleEmitter",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-emitter-unlink-all-motif-blenders/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-emitter-update/emitter_update.cpp",
+      "source_sha256": "2c2b38bedb0066ceba39d15ca9be7d8966ab3ac0f9bb0077cb241931294cfbf0",
+      "object_sha256": "6a72daee0f0b17a9a8237b2b76312729186721a4da09cf32e87d35f24c81f0d2",
+      "emitted_functions": [
+        {
+          "name": "Update__17VIParticleEmitter",
+          "compiled_body_bytes": 2428
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-emitter-update/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-motif-blender-dtor/motif_blender_dtor.cpp",
+      "source_sha256": "56d405b3ff0b2b05cdccb049133f3dbb05abfdff68200ba4c621a1f9b9291329",
+      "object_sha256": "3951d73b22a8472d33083ce11d2d2262461fe66114cd0206129787c5fdc6f127",
+      "emitted_functions": [
+        {
+          "name": "_$_14VIMotifBlender",
+          "compiled_body_bytes": 104
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-motif-blender-dtor/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-p-set-trail-width/set_trail_width.cpp",
+      "source_sha256": "ac879e7b4a18c854ea6485d61e42bca4c9063330280b33ae25419607bca9d50c",
+      "object_sha256": "05f07290aecbf3056037d3e18203010d9761f1593ddf9d6dd78eb8df2d5e29ef",
+      "emitted_functions": [
+        {
+          "name": "P_SetTrailWidth__Fii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-p-set-trail-width/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-system-delta-time/delta_time.cpp",
+      "source_sha256": "91095c407c40fa8c43c62fdda5d9144bb21b246bf852a103e6d5ffd66d1f569a",
+      "object_sha256": "607f43ccfb66c6dfaf564670061d8cf26d23e9236b5a8878f4202f4c1a8a5492",
+      "emitted_functions": [
+        {
+          "name": "DeltaTime__C16VIParticleSystem",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-system-delta-time/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-particle",
+      "source": "sources/w14-particle-system-particle-definition/particle_definition.cpp",
+      "source_sha256": "4d72adf3d00b20cd237d99b2deea403cca577248671fcf937a4122ac5cac4617",
+      "object_sha256": "42546f13b1b7c8a9bf0e55c7c4cd0cc0e3c7132756cc83408473955a64bb176f",
+      "emitted_functions": [
+        {
+          "name": "ParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w14-particle-system-particle-definition/host_contract.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

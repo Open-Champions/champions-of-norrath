@@ -9972,3 +9972,19 @@ Closed: `GetInstType__C13VIGroupSpriteR7VIScene`, `GetInstType__C13VISoundSprite
 
 Opened: `CalcCenteredStringScreenRect__8VIRasteriRC7VIVect3PCcR6VIRect`, `ClampScale__12VIPointLightR10VIMatrix44`, `ClampScale__13VIPointSpriteR10VIMatrix44`, `ClampScale__19VIStreamAudioSpriteR10VIMatrix44`, `DrawPrimBuffer__8VIRasteriiUi`, `DrawPrimBuffer__8VIRasteriiiUi`, `GetLightUISprite__7VIScene`, `GetModelView__C8VIRaster`, `GetNextColorBuffer__7VIScene`, `GetParticleUISprite__7VIScene`, `GetPointUISprite__7VIScene`, `GetSoundUISprite__7VIScene`, `GetSpriteType__7VIScenei`, `GetStreamAudioUISprite__7VIScene`, `OnResize__14VIEffectVolumeRC6VIBBox`, `ProcessWeaponTrails__9VICSpriteR8VICameraR7VISceneR10VIMatrix44`, `Process__14VIEffectVolumef`, `Purge__17VIParticleEmitter`, `RasterUISprite__7VISceneR8VICameraiUi`, `Render__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetBlendMatrices__9VIHSpriteR8VIRaster`, `SetDirection__17VIParticleEmitterRC10VIMatrix33`, `SetDirection__17VIParticleEmitterRC7VIVect3`, `SetSpace__17VIParticleEmitterRC10VIMatrix44`, `Size__C6VIBBox`, `Transpose__10VIMatrix44RC10VIMatrix44`, `UpdateParticleEmitters__9VICSpriteR8VICameraR7VISceneR8VIRasterR10VIMatrix44`
 - 2026-10-13 19:56 CDT — agents/w14-sprite-raster — 926 unresolved imports
+
+## agents/w14-particle
+
+Merged (merge commit, branch tip `d299fec1`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 32 units with fresh `input_order` values 6439 through 6470 (particle attribute setters and definition routines; 32 host checks, all pass here). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6469 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 926 |
+| After | 904 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `Create__17VIParticleEmitterP16VIParticleSystemP20VIParticleDefinition`, `DeltaTime__C16VIParticleSystem`, `DestroyMotif__22VIParticleDefinitionExP15VIParticleMotif`, `FirstMotif__C22VIParticleDefinitionEx`, `P_SetTrailWidth__Fii`, `ParticleCount__C17VIParticleEmitter`, `ParticleDefinition__16VIParticleSystemi`, `SetBirthrateVar__20VIParticleAttributesf`, `SetBirthrate__20VIParticleAttributesf`, `SetDeltaSpawn__20VIParticleAttributesf`, `SetEndColorVar__20VIParticleAttributesRC10VIColor32F`, `SetEndSizeVar__20VIParticleAttributesf`, `SetEndSize__20VIParticleAttributesf`, `SetFriction__20VIParticleAttributesf`, `SetGradientColor__20VIParticleAttributesiRC10VIColor32F`, `SetGradientRepeat__20VIParticleAttributesf`, `SetGravityOn__20VIParticleAttributesi`, `SetInheritVelocity__20VIParticleAttributesf`, `SetLifespanVar__20VIParticleAttributesf`, `SetLifespan__20VIParticleAttributesf`, `SetLocation__17VIParticleEmitterRC7VIVect3`, `SetNozzleAxis__20VIParticleAttributesRC7VIVect3`, `SetNozzleHprVar__20VIParticleAttributesRC7VIVect3`, `SetStartColorVar__20VIParticleAttributesRC10VIColor32F`, `SetStartSizeVar__20VIParticleAttributesf`, `SetStartSize__20VIParticleAttributesf`, `SetVelocityVar__20VIParticleAttributesf`, `SetVelocity__20VIParticleAttributesf`, `UnlinkAllMotifBlenders__17VIParticleEmitter`, `Update__17VIParticleEmitter`, `_$_14VIMotifBlender`, `_$_22VIParticleDefinitionEx`
+
+Opened: `Begin__Ct6VIPool1ZP15VIParticleMotif`, `BlendMotifs__17VIParticleEmitter`, `End__Ct6VIPool1ZP15VIParticleMotif`, `Erase__t6VIPool1ZP15VIParticleMotifi`, `Next__Ct6VIPool1ZP15VIParticleMotifi`, `RecomputeStaticBBox__17VIParticleEmitter`, `Size__Ct6VIPool1ZP15VIParticleMotif`, `TextureConfiguration__C22VIParticleDefinitionEx`, `_$_t6VIPool1ZP15VIParticleMotif`, `__ml__FRC7VIVect3RC10VIMatrix33`
+- 2026-10-13 20:02 CDT — agents/w14-particle — 904 unresolved imports
