@@ -1,4 +1,4 @@
-// Observed: Init__12VICollBuffer16VICollBufferTypeiii at 0x0108b950 is 148 bytes. It stores the
+// Observed: Init__12VICollBuffer16VICollBufferTypeiii at 0x0108b950 is 144 bytes. It stores the
 // three integer arguments at offsets 48, 56 and 64 and the type at offset 8 (a type of 2 is stored as
 // 3). It then calls CalcDataSize__12VICollBuffer(this); a negative result returns -1. It calls
 // Allocate__12VICollBuffer(this); a negative result also returns -1. On success it adds the word
