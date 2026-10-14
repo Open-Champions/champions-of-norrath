@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7497,
+  "default_authored_inputs": 7514,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8291,7 +8291,24 @@
     "sources/w16-io-a-vifile-memory-segm-seek/memory_segm_seek.cpp": "11f53e9182509a4ef4ea4cd9b3f573cb6c5bc01f874929308e68b2bea6074b2d",
     "sources/w16-io-a-vifile-memory-segm-write/memory_segm_write.cpp": "5dcc34eab7c2f3bcdcdade373ce517c3ac4afaf140492aa237d83f59c252f2c5",
     "sources/w16-io-a-vifile-memory-write/memory_write.cpp": "a6e6f2d23cf5de0254e31520a20a20bea4fc2c247479296f8ff32152d37050d0",
-    "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp": "e79f83e2385946592d59d112983fb008350ee86069dad08dbc65b21e2532dd29"
+    "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp": "e79f83e2385946592d59d112983fb008350ee86069dad08dbc65b21e2532dd29",
+    "sources/w16-lib-a-eznet-cnf-get-properties/get_properties.cpp": "30156ca03e8182761364c85130c054718fa0de301ed0a458bc300f28b8fcae26",
+    "sources/w16-lib-a-eznet-ctl-buf/m_buf.cpp": "0d8e552b8e62f79ae2e4d93483376e9b867b6cac497a2616bf9ecb8bc6e4f471",
+    "sources/w16-lib-a-eznet-ctl-set-combination/set_combination.cpp": "ce42b44d983a2e4370235bab62071e91c8531c8defa177d156641a70e095028d",
+    "sources/w16-lib-a-eznet-ctl-up-interface/up_interface.cpp": "c0af2e95d0102edf424d1b8e5cd504c1479b40db9449f2f750a19775599e6d52",
+    "sources/w16-lib-a-hostname/hostname.cpp": "7dce793c7657d1e3192cf725284d71abf8d1cc5ede04f244ca0954e1f797a035",
+    "sources/w16-lib-a-realm-gateway-api-core-ctor/ctor.cpp": "a4818865f6619bf091b0f0a4e9a9917b1c0a90cd84afbe70c61faceaa857dc99",
+    "sources/w16-lib-a-sce-inet-address2name/address2name.cpp": "e42b0457129780c0403f000e1759bd389b2a57f5652b1f71467c751ddbac27ff",
+    "sources/w16-lib-a-sce-inet-address2string/address2string.cpp": "93b6dd5dd07ab5b591a9282e796e3a11fbd3c1aad72f3589213dd30364eca259",
+    "sources/w16-lib-a-sce-libnet-register-handler/register_handler.cpp": "044948cc8674ff46f4001b301d59fbbedf93a8d2c430a50a99a8c92619f08f27",
+    "sources/w16-lib-a-sce-libnet-wait-get-address/wait_get_address.cpp": "e352a1f249d9f50a835d7124a5772f7cfbfb62e4d39968996acfab8285d3dcbe",
+    "sources/w16-lib-a-sce-strcpy-s/strcpy_s.cpp": "975fc7d78c5233c35843019b65040c5e312ec862b7e1d159c26736dadee4eb08",
+    "sources/w16-lib-a-udp-socket-close/close.cpp": "e1b91a068d1fc5376ee1e9845a4ea6b595e62606d2fd6604d43a155d1ec89e08",
+    "sources/w16-lib-a-usocket-ex-api-init/init.cpp": "ab18f02608347ee4bc869ada22654f7c26885cae94f0cbe0d0b8de3cb27e8494",
+    "sources/w16-lib-a-vi-vsnprintf-narrow/vsnprintf.cpp": "a05291e0d39095983a06cf8a0dbc63a4de78cd6f5c9934918e6c6ccff544ee8f",
+    "sources/w16-lib-a-vi-vsnprintf-wide/vsnprintf.cpp": "0373e9ac2e049a276bbe53b0dffec78619c42def522a7708aad035660fa4ea86",
+    "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp": "e7b823e40a9c5ff959b8c7bae1848016f1bb4059f68aed93e1b554b6ee564e0c",
+    "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514"
   },
   "inputs": [
     {
@@ -111640,6 +111657,251 @@
           "compiled_body_bytes": 556
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7499,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_eznet_cnf_get_properties.o",
+      "profile": "authored_cpp",
+      "sha256": "30156ca03e8182761364c85130c054718fa0de301ed0a458bc300f28b8fcae26",
+      "source": "sources/w16-lib-a-eznet-cnf-get-properties/get_properties.cpp",
+      "emitted_functions": [
+        {
+          "name": "ezNetCnfGetProperties",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7500,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_eznet_ctl_buf.o",
+      "profile": "authored_cpp",
+      "sha256": "0d8e552b8e62f79ae2e4d93483376e9b867b6cac497a2616bf9ecb8bc6e4f471",
+      "source": "sources/w16-lib-a-eznet-ctl-buf/m_buf.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7501,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_eznet_ctl_set_combination.o",
+      "profile": "authored_cpp",
+      "sha256": "ce42b44d983a2e4370235bab62071e91c8531c8defa177d156641a70e095028d",
+      "source": "sources/w16-lib-a-eznet-ctl-set-combination/set_combination.cpp",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlSetCombination",
+          "compiled_body_bytes": 204
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7502,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_eznet_ctl_up_interface.o",
+      "profile": "authored_cpp",
+      "sha256": "c0af2e95d0102edf424d1b8e5cd504c1479b40db9449f2f750a19775599e6d52",
+      "source": "sources/w16-lib-a-eznet-ctl-up-interface/up_interface.cpp",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlUpInterface",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7503,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_hostname.o",
+      "profile": "authored_cpp",
+      "sha256": "7dce793c7657d1e3192cf725284d71abf8d1cc5ede04f244ca0954e1f797a035",
+      "source": "sources/w16-lib-a-hostname/hostname.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7504,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_realm_gateway_api_core_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "a4818865f6619bf091b0f0a4e9a9917b1c0a90cd84afbe70c61faceaa857dc99",
+      "source": "sources/w16-lib-a-realm-gateway-api-core-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7505,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_sce_inet_address2name.o",
+      "profile": "authored_cpp",
+      "sha256": "e42b0457129780c0403f000e1759bd389b2a57f5652b1f71467c751ddbac27ff",
+      "source": "sources/w16-lib-a-sce-inet-address2name/address2name.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2Name",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7506,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_sce_inet_address2string.o",
+      "profile": "authored_cpp",
+      "sha256": "93b6dd5dd07ab5b591a9282e796e3a11fbd3c1aad72f3589213dd30364eca259",
+      "source": "sources/w16-lib-a-sce-inet-address2string/address2string.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2String",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7507,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_sce_libnet_register_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "044948cc8674ff46f4001b301d59fbbedf93a8d2c430a50a99a8c92619f08f27",
+      "source": "sources/w16-lib-a-sce-libnet-register-handler/register_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetRegisterHandler",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7508,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_sce_libnet_wait_get_address.o",
+      "profile": "authored_cpp",
+      "sha256": "e352a1f249d9f50a835d7124a5772f7cfbfb62e4d39968996acfab8285d3dcbe",
+      "source": "sources/w16-lib-a-sce-libnet-wait-get-address/wait_get_address.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetWaitGetAddress",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7509,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_sce_strcpy_s.o",
+      "profile": "authored_cpp",
+      "sha256": "975fc7d78c5233c35843019b65040c5e312ec862b7e1d159c26736dadee4eb08",
+      "source": "sources/w16-lib-a-sce-strcpy-s/strcpy_s.cpp",
+      "emitted_functions": [
+        {
+          "name": "StrcpyS",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7510,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_udp_socket_close.o",
+      "profile": "authored_cpp",
+      "sha256": "e1b91a068d1fc5376ee1e9845a4ea6b595e62606d2fd6604d43a155d1ec89e08",
+      "source": "sources/w16-lib-a-udp-socket-close/close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__11VIUDPSocket",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7511,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_usocket_ex_api_init.o",
+      "profile": "authored_cpp",
+      "sha256": "ab18f02608347ee4bc869ada22654f7c26885cae94f0cbe0d0b8de3cb27e8494",
+      "source": "sources/w16-lib-a-usocket-ex-api-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIInitUSocketExApi__Fv",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7512,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_vi_vsnprintf_narrow.o",
+      "profile": "authored_cpp",
+      "sha256": "a05291e0d39095983a06cf8a0dbc63a4de78cd6f5c9934918e6c6ccff544ee8f",
+      "source": "sources/w16-lib-a-vi-vsnprintf-narrow/vsnprintf.cpp",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1Zc_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 1844
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7513,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_vi_vsnprintf_wide.o",
+      "profile": "authored_cpp",
+      "sha256": "0373e9ac2e049a276bbe53b0dffec78619c42def522a7708aad035660fa4ea86",
+      "source": "sources/w16-lib-a-vi-vsnprintf-wide/vsnprintf.cpp",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 2220
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7514,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_vistring_vsnprintf16_narrow.o",
+      "profile": "authored_cpp",
+      "sha256": "e7b823e40a9c5ff959b8c7bae1848016f1bb4059f68aed93e1b554b6ee564e0c",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCcPv",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7515,
+      "kind": "independently_authored_source",
+      "object_name": "w16la_vistring_vsnprintf16_wide.o",
+      "profile": "authored_cpp",
+      "sha256": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCUsPv",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -111739,7 +112001,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "86d59e76bdd76a3d5a895b4230ece512efcd4b3399e6cb55b2114965266e8ef7",
+  "snapshot_sha256": "07b1a44ad5e29f654a2ba05ef705ae2ffa247b38a6c53f32c6072938fb6dde9d",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

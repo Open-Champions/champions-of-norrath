@@ -10818,3 +10818,21 @@ Opened: `BufferedReadCopy__6VIFilePvi`, `CDRead__6VIFileUiUiPvP10sceCdRMode`, `O
 
 Full partial build: 7497 source compilations, one link, 5977 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 05:51 CDT — agents/w16-io-a — 771 unresolved imports
+
+## agents/w16-lib-a
+
+Merged (merge commit) as a **partial package**: 17 of the entries in the notes are selected, each with a committed host check that I built with the line in its own header and ran (17 of 17 exit 0). **Not selected:** seven entries that the notes list for existing `w15-libs-eh-a` units (`gsm-long-term-predictor`, `gsm-lpc-analysis`, `gsm-rpe-encoding`, `inflate-blocks`, `inflate-blocks-free`, `inflate-blocks-reset`, `inflate-init2`): none has a committed host test, so they stay authored but unplanned. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 771 |
+| After | 770 |
+| Closed | 14 |
+| Opened | 13 |
+
+Closed: `Close__11VIUDPSocket`, `VIInitUSocketExApi__Fv`, `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v`, `__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI`, `ezNetCnfGetProperties`, `ezNetCtlSetCombination`, `ezNetCtlUpInterface`, `hostname`, `sceInetAddress2Name`, `sceInetAddress2String`, `sceLibnetRegisterHandler`, `sceLibnetWaitGetAddress`, `vsnprintf16__8VIStringPUsiPCcPv`
+
+Opened: `WaitGetAddressAutoUpIf`, `WaitGetAddressNoAutoUpIf`, `_VIAssert`, `_VIAssertf`, `__9Encryptor`, `__Q210GenericAPI14GenericAPICorePCcsUiUiUiUiUiUiUiUi`, `__VIAssertf_file`, `__VIAssertf_line`, `_vt$Q212RealmService19RealmGatewayAPICore`, `ll_add_tail__FP5llistP5lnode`, `ll_init__FP5llist`, `sFreeMessages`, `sUsedMessages`
+
+Full partial build: 7514 source compilations, one link, 5992 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:59 CDT — agents/w16-lib-a — 770 unresolved imports

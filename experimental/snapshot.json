@@ -97064,6 +97064,234 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp"
+    },
+    {
+      "input_order": 7499,
+      "component": "w16-lib-a-eznet-cnf-get-properties",
+      "object_name": "w16la_eznet_cnf_get_properties.o",
+      "private_object_sha256": "3ad4e569a91e654e8b91d07c6ffb3c1ebfe0f3e64d700872ee78858fd0fe6460",
+      "emitted_functions": [
+        {
+          "name": "ezNetCnfGetProperties",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-eznet-cnf-get-properties/get_properties.cpp"
+    },
+    {
+      "input_order": 7500,
+      "component": "w16-lib-a-eznet-ctl-buf",
+      "object_name": "w16la_eznet_ctl_buf.o",
+      "private_object_sha256": "f6759d0836b1cc2534c45caa33789fa52de50f181137a070f05e6462b7881123",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-eznet-ctl-buf/m_buf.cpp"
+    },
+    {
+      "input_order": 7501,
+      "component": "w16-lib-a-eznet-ctl-set-combination",
+      "object_name": "w16la_eznet_ctl_set_combination.o",
+      "private_object_sha256": "28d2bac4087b690ab6bcf75323d0f181932e1fa5012565dc4e56a2a63392ac39",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlSetCombination",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-eznet-ctl-set-combination/set_combination.cpp"
+    },
+    {
+      "input_order": 7502,
+      "component": "w16-lib-a-eznet-ctl-up-interface",
+      "object_name": "w16la_eznet_ctl_up_interface.o",
+      "private_object_sha256": "de9c2522fa272e6961ac8695ff653437e5a101518a482c71712638b0f7faf475",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlUpInterface",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-eznet-ctl-up-interface/up_interface.cpp"
+    },
+    {
+      "input_order": 7503,
+      "component": "w16-lib-a-hostname",
+      "object_name": "w16la_hostname.o",
+      "private_object_sha256": "a5e862f3614c207f96dd1a2dc85d8bf25bb0e44c4d3c5836d6227de5c697fe4f",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-hostname/hostname.cpp"
+    },
+    {
+      "input_order": 7504,
+      "component": "w16-lib-a-realm-gateway-api-core-ctor",
+      "object_name": "w16la_realm_gateway_api_core_ctor.o",
+      "private_object_sha256": "162a136b76d3cc97651d6857127201672b5126268cf1c7d29e73fd1b8bcd7ed1",
+      "emitted_functions": [
+        {
+          "name": "__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-realm-gateway-api-core-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 7505,
+      "component": "w16-lib-a-sce-inet-address2name",
+      "object_name": "w16la_sce_inet_address2name.o",
+      "private_object_sha256": "da8c6c3e9dbeef89c5c47d1e374f464f82071c2866beece546bdfdd3b9009730",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2Name",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-sce-inet-address2name/address2name.cpp"
+    },
+    {
+      "input_order": 7506,
+      "component": "w16-lib-a-sce-inet-address2string",
+      "object_name": "w16la_sce_inet_address2string.o",
+      "private_object_sha256": "41ecc3abb61bd9903165062b7cc7ce30078c5f5424b25be5c6edacc1cd630378",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2String",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-sce-inet-address2string/address2string.cpp"
+    },
+    {
+      "input_order": 7507,
+      "component": "w16-lib-a-sce-libnet-register-handler",
+      "object_name": "w16la_sce_libnet_register_handler.o",
+      "private_object_sha256": "71162f5b3d89a43aada484e3db187380f0d58cf43b5c04bc7b5aca75cc457c20",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetRegisterHandler",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-sce-libnet-register-handler/register_handler.cpp"
+    },
+    {
+      "input_order": 7508,
+      "component": "w16-lib-a-sce-libnet-wait-get-address",
+      "object_name": "w16la_sce_libnet_wait_get_address.o",
+      "private_object_sha256": "213bea6ec61a5604c5044d8c97cac2161d890c847fdf7c6a874dd2dfeb023b12",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetWaitGetAddress",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-sce-libnet-wait-get-address/wait_get_address.cpp"
+    },
+    {
+      "input_order": 7509,
+      "component": "w16-lib-a-sce-strcpy-s",
+      "object_name": "w16la_sce_strcpy_s.o",
+      "private_object_sha256": "70a89c7c9bdce0801c011da3feaed3c344b64a36c06fbea9ac51c714fff42d84",
+      "emitted_functions": [
+        {
+          "name": "StrcpyS",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-sce-strcpy-s/strcpy_s.cpp"
+    },
+    {
+      "input_order": 7510,
+      "component": "w16-lib-a-udp-socket-close",
+      "object_name": "w16la_udp_socket_close.o",
+      "private_object_sha256": "ffe1d3a792de91c9fb358d265979088bcbeca87fcb9356d451a9fef3d425ce0f",
+      "emitted_functions": [
+        {
+          "name": "Close__11VIUDPSocket",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-udp-socket-close/close.cpp"
+    },
+    {
+      "input_order": 7511,
+      "component": "w16-lib-a-usocket-ex-api-init",
+      "object_name": "w16la_usocket_ex_api_init.o",
+      "private_object_sha256": "4d04384fb40c9b9221409c4657fdc93440bf6596a25af251e236bffb0af8d962",
+      "emitted_functions": [
+        {
+          "name": "VIInitUSocketExApi__Fv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-usocket-ex-api-init/init.cpp"
+    },
+    {
+      "input_order": 7512,
+      "component": "w16-lib-a-vi-vsnprintf-narrow",
+      "object_name": "w16la_vi_vsnprintf_narrow.o",
+      "private_object_sha256": "0ae8bad524b1dc0cf2b58316cb182bea928f70c670d7fd84fc16b03eaeb0c671",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1Zc_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 1844
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-vi-vsnprintf-narrow/vsnprintf.cpp"
+    },
+    {
+      "input_order": 7513,
+      "component": "w16-lib-a-vi-vsnprintf-wide",
+      "object_name": "w16la_vi_vsnprintf_wide.o",
+      "private_object_sha256": "0ad5844ef90a83895e8d58daf1cacbf373a19e65e74f58eb1139f37b8f2ccf3a",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 2220
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-vi-vsnprintf-wide/vsnprintf.cpp"
+    },
+    {
+      "input_order": 7514,
+      "component": "w16-lib-a-vistring-vsnprintf16-narrow",
+      "object_name": "w16la_vistring_vsnprintf16_narrow.o",
+      "private_object_sha256": "16d86566f712ac1ec6c504e6dcb43a9a7f4d9db7e15b02e3c7291da7c80d4fbe",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCcPv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp"
+    },
+    {
+      "input_order": 7515,
+      "component": "w16-lib-a-vistring-vsnprintf16-wide",
+      "object_name": "w16la_vistring_vsnprintf16_wide.o",
+      "private_object_sha256": "0be768ce5b9b9923f66c763f1b844934fa55837ea33c33aba8497a09a155a482",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCUsPv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp"
     }
   ],
   "drafts": [
@@ -112880,7 +113108,41 @@
     "sources/w16-io-a-vifile-memory-write/memory_write.cpp": "a6e6f2d23cf5de0254e31520a20a20bea4fc2c247479296f8ff32152d37050d0",
     "sources/w16-io-a-vistringtable-fixup-text-buffer/fixup.cpp": "e79f83e2385946592d59d112983fb008350ee86069dad08dbc65b21e2532dd29",
     "sources/w16-io-a-vistringtable-fixup-text-buffer/host_check.cpp": "928b2cdacbb3262532dcb86c9e81db32538e2ecf70e00f871814e7d7db8a1070",
-    "sources/w16-io-a-vistringtable-load-raw-file-check/host_check.cpp": "47ca8c4b9fa92e5d2b054be36c87d38322d71f52a9e6d5124494e8daced68d38"
+    "sources/w16-io-a-vistringtable-load-raw-file-check/host_check.cpp": "47ca8c4b9fa92e5d2b054be36c87d38322d71f52a9e6d5124494e8daced68d38",
+    "sources/w16-lib-a-eznet-cnf-get-properties/get_properties.cpp": "30156ca03e8182761364c85130c054718fa0de301ed0a458bc300f28b8fcae26",
+    "sources/w16-lib-a-eznet-cnf-get-properties/host_check.cpp": "1ba7efa4c5ffd1541fd9a3d51842710a35e033fbb56c7206e27cc7059ff4b10f",
+    "sources/w16-lib-a-eznet-ctl-buf/host_check.cpp": "3f147414df2b4eb8177eee918a928d47705a4425821951b7dd2c41768e2f42ba",
+    "sources/w16-lib-a-eznet-ctl-buf/m_buf.cpp": "0d8e552b8e62f79ae2e4d93483376e9b867b6cac497a2616bf9ecb8bc6e4f471",
+    "sources/w16-lib-a-eznet-ctl-set-combination/host_check.cpp": "c2b3f88b9ae72daabbc93cc6984fe114f09914b78caf27d1c0b7844f9b85524b",
+    "sources/w16-lib-a-eznet-ctl-set-combination/set_combination.cpp": "ce42b44d983a2e4370235bab62071e91c8531c8defa177d156641a70e095028d",
+    "sources/w16-lib-a-eznet-ctl-up-interface/host_check.cpp": "e05ef09f55d3bac056482209b537fb4696f227a4377506dd6ce8e9533b3e46e9",
+    "sources/w16-lib-a-eznet-ctl-up-interface/up_interface.cpp": "c0af2e95d0102edf424d1b8e5cd504c1479b40db9449f2f750a19775599e6d52",
+    "sources/w16-lib-a-hostname/host_check.cpp": "39921c07d1c2871c976e1fb9634b4062d19088e9897f433019c0de08a100073d",
+    "sources/w16-lib-a-hostname/hostname.cpp": "7dce793c7657d1e3192cf725284d71abf8d1cc5ede04f244ca0954e1f797a035",
+    "sources/w16-lib-a-realm-gateway-api-core-ctor/ctor.cpp": "a4818865f6619bf091b0f0a4e9a9917b1c0a90cd84afbe70c61faceaa857dc99",
+    "sources/w16-lib-a-realm-gateway-api-core-ctor/host_check.cpp": "a16043835e7c4378d18224191c482cb609aca83c0e32a686690233f17617bdf7",
+    "sources/w16-lib-a-sce-inet-address2name/address2name.cpp": "e42b0457129780c0403f000e1759bd389b2a57f5652b1f71467c751ddbac27ff",
+    "sources/w16-lib-a-sce-inet-address2name/host_check.cpp": "b775adebfaa0b03116f71101ec2ca2b95d75aaa62f70c8648a7e8b7fd2e8b60d",
+    "sources/w16-lib-a-sce-inet-address2string/address2string.cpp": "93b6dd5dd07ab5b591a9282e796e3a11fbd3c1aad72f3589213dd30364eca259",
+    "sources/w16-lib-a-sce-inet-address2string/host_check.cpp": "672723f4ad6373ba68575bacb36f8a71b557e7d5ca62483629e40e995e29e1bc",
+    "sources/w16-lib-a-sce-libnet-register-handler/host_check.cpp": "6002552cdefa2f433e8fb30ad9ed53b2029f652a7f1c2579df3a5ec25ff8d482",
+    "sources/w16-lib-a-sce-libnet-register-handler/register_handler.cpp": "044948cc8674ff46f4001b301d59fbbedf93a8d2c430a50a99a8c92619f08f27",
+    "sources/w16-lib-a-sce-libnet-wait-get-address/host_check.cpp": "cb98e5b76ed2239238d5fb058679a5bb8089041bb08e4b913e89a98321b8d4ba",
+    "sources/w16-lib-a-sce-libnet-wait-get-address/wait_get_address.cpp": "e352a1f249d9f50a835d7124a5772f7cfbfb62e4d39968996acfab8285d3dcbe",
+    "sources/w16-lib-a-sce-strcpy-s/host_check.cpp": "6e8e5dedd960d851737f27bf46731cc08246b5283738402d00687916f983b679",
+    "sources/w16-lib-a-sce-strcpy-s/strcpy_s.cpp": "975fc7d78c5233c35843019b65040c5e312ec862b7e1d159c26736dadee4eb08",
+    "sources/w16-lib-a-udp-socket-close/close.cpp": "e1b91a068d1fc5376ee1e9845a4ea6b595e62606d2fd6604d43a155d1ec89e08",
+    "sources/w16-lib-a-udp-socket-close/host_check.cpp": "f7bab4561d9148e1ca05b083ead6403ebd3237ca54929eba233f2aa7d7e79332",
+    "sources/w16-lib-a-usocket-ex-api-init/host_check.cpp": "eef7c37e520a905c3f224a4401171fac46f32e208d6f6aac42317c6d41f4c1f3",
+    "sources/w16-lib-a-usocket-ex-api-init/init.cpp": "ab18f02608347ee4bc869ada22654f7c26885cae94f0cbe0d0b8de3cb27e8494",
+    "sources/w16-lib-a-vi-vsnprintf-narrow/host_check.cpp": "6cc93a63837f2fb80fdd835a81c84c9d3c69ca767f8602f719922010b749e7aa",
+    "sources/w16-lib-a-vi-vsnprintf-narrow/vsnprintf.cpp": "a05291e0d39095983a06cf8a0dbc63a4de78cd6f5c9934918e6c6ccff544ee8f",
+    "sources/w16-lib-a-vi-vsnprintf-wide/host_check.cpp": "da6858261aecffcc078e86544ef82d7fc18b3ac32d151e49727724aa37092417",
+    "sources/w16-lib-a-vi-vsnprintf-wide/vsnprintf.cpp": "0373e9ac2e049a276bbe53b0dffec78619c42def522a7708aad035660fa4ea86",
+    "sources/w16-lib-a-vistring-vsnprintf16-narrow/host_check.cpp": "47807149f4a76561518fa163691b9983f40319e38f441c1cc620e57f2c666891",
+    "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp": "e7b823e40a9c5ff959b8c7bae1848016f1bb4059f68aed93e1b554b6ee564e0c",
+    "sources/w16-lib-a-vistring-vsnprintf16-wide/host_check.cpp": "134d4dec00332ee2a767cb9f1d7426e0fd21b4cdeb5d003fb9b6e871d1e83fc1",
+    "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514"
   },
   "additional_implementations": [
     {
@@ -113322,11 +113584,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7499,
-    "authored_default_inputs": 7497,
+    "selected_inputs": 7516,
+    "authored_default_inputs": 7514,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5979,
-    "compiled_body_bytes_from_accepted_inputs": 2317848,
+    "emitted_function_definitions_including_helpers": 5994,
+    "compiled_body_bytes_from_accepted_inputs": 2323592,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -113339,7 +113601,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7186
+    "package_selected_inputs": 7203
   },
   "startup_implementations": [
     {
@@ -227465,6 +227727,285 @@
       ],
       "host_files": [
         "sources/w16-io-a-vistringtable-fixup-text-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-eznet-cnf-get-properties/get_properties.cpp",
+      "source_sha256": "30156ca03e8182761364c85130c054718fa0de301ed0a458bc300f28b8fcae26",
+      "object_sha256": "3ad4e569a91e654e8b91d07c6ffb3c1ebfe0f3e64d700872ee78858fd0fe6460",
+      "emitted_functions": [
+        {
+          "name": "ezNetCnfGetProperties",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-eznet-cnf-get-properties/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-eznet-ctl-buf/m_buf.cpp",
+      "source_sha256": "0d8e552b8e62f79ae2e4d93483376e9b867b6cac497a2616bf9ecb8bc6e4f471",
+      "object_sha256": "f6759d0836b1cc2534c45caa33789fa52de50f181137a070f05e6462b7881123",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w16-lib-a-eznet-ctl-buf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-eznet-ctl-set-combination/set_combination.cpp",
+      "source_sha256": "ce42b44d983a2e4370235bab62071e91c8531c8defa177d156641a70e095028d",
+      "object_sha256": "28d2bac4087b690ab6bcf75323d0f181932e1fa5012565dc4e56a2a63392ac39",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlSetCombination",
+          "compiled_body_bytes": 204
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-eznet-ctl-set-combination/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-eznet-ctl-up-interface/up_interface.cpp",
+      "source_sha256": "c0af2e95d0102edf424d1b8e5cd504c1479b40db9449f2f750a19775599e6d52",
+      "object_sha256": "de9c2522fa272e6961ac8695ff653437e5a101518a482c71712638b0f7faf475",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlUpInterface",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-eznet-ctl-up-interface/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-hostname/hostname.cpp",
+      "source_sha256": "7dce793c7657d1e3192cf725284d71abf8d1cc5ede04f244ca0954e1f797a035",
+      "object_sha256": "a5e862f3614c207f96dd1a2dc85d8bf25bb0e44c4d3c5836d6227de5c697fe4f",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w16-lib-a-hostname/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-realm-gateway-api-core-ctor/ctor.cpp",
+      "source_sha256": "a4818865f6619bf091b0f0a4e9a9917b1c0a90cd84afbe70c61faceaa857dc99",
+      "object_sha256": "162a136b76d3cc97651d6857127201672b5126268cf1c7d29e73fd1b8bcd7ed1",
+      "emitted_functions": [
+        {
+          "name": "__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI",
+          "compiled_body_bytes": 248
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-realm-gateway-api-core-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-sce-inet-address2name/address2name.cpp",
+      "source_sha256": "e42b0457129780c0403f000e1759bd389b2a57f5652b1f71467c751ddbac27ff",
+      "object_sha256": "da8c6c3e9dbeef89c5c47d1e374f464f82071c2866beece546bdfdd3b9009730",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2Name",
+          "compiled_body_bytes": 208
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-sce-inet-address2name/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-sce-inet-address2string/address2string.cpp",
+      "source_sha256": "93b6dd5dd07ab5b591a9282e796e3a11fbd3c1aad72f3589213dd30364eca259",
+      "object_sha256": "41ecc3abb61bd9903165062b7cc7ce30078c5f5424b25be5c6edacc1cd630378",
+      "emitted_functions": [
+        {
+          "name": "sceInetAddress2String",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-sce-inet-address2string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-sce-libnet-register-handler/register_handler.cpp",
+      "source_sha256": "044948cc8674ff46f4001b301d59fbbedf93a8d2c430a50a99a8c92619f08f27",
+      "object_sha256": "71162f5b3d89a43aada484e3db187380f0d58cf43b5c04bc7b5aca75cc457c20",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetRegisterHandler",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-sce-libnet-register-handler/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-sce-libnet-wait-get-address/wait_get_address.cpp",
+      "source_sha256": "e352a1f249d9f50a835d7124a5772f7cfbfb62e4d39968996acfab8285d3dcbe",
+      "object_sha256": "213bea6ec61a5604c5044d8c97cac2161d890c847fdf7c6a874dd2dfeb023b12",
+      "emitted_functions": [
+        {
+          "name": "sceLibnetWaitGetAddress",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-sce-libnet-wait-get-address/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-sce-strcpy-s/strcpy_s.cpp",
+      "source_sha256": "975fc7d78c5233c35843019b65040c5e312ec862b7e1d159c26736dadee4eb08",
+      "object_sha256": "70a89c7c9bdce0801c011da3feaed3c344b64a36c06fbea9ac51c714fff42d84",
+      "emitted_functions": [
+        {
+          "name": "StrcpyS",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-sce-strcpy-s/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-udp-socket-close/close.cpp",
+      "source_sha256": "e1b91a068d1fc5376ee1e9845a4ea6b595e62606d2fd6604d43a155d1ec89e08",
+      "object_sha256": "ffe1d3a792de91c9fb358d265979088bcbeca87fcb9356d451a9fef3d425ce0f",
+      "emitted_functions": [
+        {
+          "name": "Close__11VIUDPSocket",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-udp-socket-close/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-usocket-ex-api-init/init.cpp",
+      "source_sha256": "ab18f02608347ee4bc869ada22654f7c26885cae94f0cbe0d0b8de3cb27e8494",
+      "object_sha256": "4d04384fb40c9b9221409c4657fdc93440bf6596a25af251e236bffb0af8d962",
+      "emitted_functions": [
+        {
+          "name": "VIInitUSocketExApi__Fv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-usocket-ex-api-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-vi-vsnprintf-narrow/vsnprintf.cpp",
+      "source_sha256": "a05291e0d39095983a06cf8a0dbc63a4de78cd6f5c9934918e6c6ccff544ee8f",
+      "object_sha256": "0ae8bad524b1dc0cf2b58316cb182bea928f70c670d7fd84fc16b03eaeb0c671",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1Zc_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 1844
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-vi-vsnprintf-narrow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-vi-vsnprintf-wide/vsnprintf.cpp",
+      "source_sha256": "0373e9ac2e049a276bbe53b0dffec78619c42def522a7708aad035660fa4ea86",
+      "object_sha256": "0ad5844ef90a83895e8d58daf1cacbf373a19e65e74f58eb1139f37b8f2ccf3a",
+      "emitted_functions": [
+        {
+          "name": "VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v",
+          "compiled_body_bytes": 2220
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-vi-vsnprintf-wide/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp",
+      "source_sha256": "e7b823e40a9c5ff959b8c7bae1848016f1bb4059f68aed93e1b554b6ee564e0c",
+      "object_sha256": "16d86566f712ac1ec6c504e6dcb43a9a7f4d9db7e15b02e3c7291da7c80d4fbe",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCcPv",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-vistring-vsnprintf16-narrow/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-lib-a",
+      "source": "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp",
+      "source_sha256": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514",
+      "object_sha256": "0be768ce5b9b9923f66c763f1b844934fa55837ea33c33aba8497a09a155a482",
+      "emitted_functions": [
+        {
+          "name": "vsnprintf16__8VIStringPUsiPCUsPv",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w16-lib-a-vistring-vsnprintf16-wide/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
