@@ -10492,3 +10492,20 @@ Opened: `AddNode__t5VIMap2ZiZ17VIEESurfCacheInfoii`, `Add__t6VIList1Z10VIMateria
 
 Full partial build: 7154 source compilations, one link, 5678 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:11 CDT — agents/w15-vi-raster-b — 874 unresolved imports
+
+## agents/w15-vi-scene-a
+
+Merged (merge commit; tip over two hours old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 874 |
+| After | 864 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `Animation__7VIScenei`, `CreateActor__7VISceneRC7VIVect3T1fi`, `CreateAnimation__7VIScenei`, `FilterActor__13VIActorFilterR7VIScenei`, `FilterActor__13VISceneFilterR7VIScenei`, `GetLightUISprite__7VIScene`, `GetNextColorBuffer__7VIScene`, `GetPointUISprite__7VIScene`, `GetSoundUISprite__7VIScene`, `GetSpriteType__7VIScenei`, `GetStreamAudioUISprite__7VIScene`, `PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri`, `QueryEmitters__6VIZoneR23VISceneEmitterQueryVars`, `RasterUISprite__7VISceneR8VICameraiUi`, `ReleaseAnimation__7VIScenei`, `ReleaseRefMap__7VIScenei`, `ReleaseSprite__7VIScenei`, `ReleaseStaticLighting__7VIScenei`, `RenderByVolume__6VIZoneiR15VISceneRendVars`, `SetLevelSprite__11VILODSpriteiiR7VIScene`, `Transpose__10VIMatrix44RC10VIMatrix44`, `__10VIZoneRoom`
+
+Opened: `Add__t6VIList1Z7VIActor`, `Add__t6VIPool1ZP13VIHSpriteAnimRCP13VIHSpriteAnim`, `Clear__10VIZoneRoom`, `Erase__t6VIPool1ZP13VIHSpriteAnimi`, `Erase__t6VIPool1ZP16VIStaticLightingi`, `Erase__t6VIPool1ZP8VIRefMapi`, `Erase__t6VIPool1ZP8VISpritei`, `QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars`, `ReleaseResources__16VIStaticLightingR8VIRasterR12VIDictionary`, `RenderLeaf__6VIZoneiR15VISceneRendVars`, `UpdateActor__7VIScenei`, `__13VIHSpriteAnim`
+
+Full partial build: 7176 source compilations, one link, 5700 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

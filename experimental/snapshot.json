@@ -92492,6 +92492,314 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-vi-raster-b-vimap-insert/insert.cpp"
+    },
+    {
+      "input_order": 7156,
+      "component": "w15-vi-scene-a-filter-actor-actor-filter",
+      "object_name": "w15_vi_scene_a_filter_actor_actor_filter.o",
+      "private_object_sha256": "c62a7ded8046c2e8d518b86434ae1cc156ec2bf0841994ad5b10fb147e249450",
+      "emitted_functions": [
+        {
+          "name": "FilterActor__13VIActorFilterR7VIScenei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-filter-actor-actor-filter/filter.cpp"
+    },
+    {
+      "input_order": 7157,
+      "component": "w15-vi-scene-a-filter-actor-scene-filter",
+      "object_name": "w15_vi_scene_a_filter_actor_scene_filter.o",
+      "private_object_sha256": "a560cc5ff2be7359427c2396fc0a950014677f8458b684c8f9829a35d20acfb7",
+      "emitted_functions": [
+        {
+          "name": "FilterActor__13VISceneFilterR7VIScenei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-filter-actor-scene-filter/filter.cpp"
+    },
+    {
+      "input_order": 7158,
+      "component": "w15-vi-scene-a-lodsprite-set-level-sprite",
+      "object_name": "w15_vi_scene_a_lodsprite_set_level_sprite.o",
+      "private_object_sha256": "b24bf44d0f4ecbd3e2ac8c8bb6d461ef6997882f867ba50e60c2399c3518fd81",
+      "emitted_functions": [
+        {
+          "name": "SetLevelSprite__11VILODSpriteiiR7VIScene",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-lodsprite-set-level-sprite/set.cpp"
+    },
+    {
+      "input_order": 7159,
+      "component": "w15-vi-scene-a-matrix-transpose",
+      "object_name": "w15_vi_scene_a_matrix_transpose.o",
+      "private_object_sha256": "93c73602f5cf3b1ae3b945e01ad9563e56e030ab476698956fc0c17a6902e732",
+      "emitted_functions": [
+        {
+          "name": "Transpose__10VIMatrix44RC10VIMatrix44",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-matrix-transpose/transpose.cpp"
+    },
+    {
+      "input_order": 7160,
+      "component": "w15-vi-scene-a-scene-animation",
+      "object_name": "w15_vi_scene_a_scene_animation.o",
+      "private_object_sha256": "c785f3067effdd480334338f41b948d98032676241afb709bf408c4cf933d0ec",
+      "emitted_functions": [
+        {
+          "name": "Animation__7VIScenei",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-animation/animation.cpp"
+    },
+    {
+      "input_order": 7161,
+      "component": "w15-vi-scene-a-scene-create-actor",
+      "object_name": "w15_vi_scene_a_scene_create_actor.o",
+      "private_object_sha256": "47b4506698a09b1feb3c04d338d098f8bd136648761f455dc1ba123f1508afee",
+      "emitted_functions": [
+        {
+          "name": "CreateActor__7VISceneRC7VIVect3T1fi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-create-actor/create.cpp"
+    },
+    {
+      "input_order": 7162,
+      "component": "w15-vi-scene-a-scene-create-animation",
+      "object_name": "w15_vi_scene_a_scene_create_animation.o",
+      "private_object_sha256": "5f4172d4649139ae4862fb3e571933a556d74e324e1c72edaaaa1980a3386db9",
+      "emitted_functions": [
+        {
+          "name": "CreateAnimation__7VIScenei",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-create-animation/create.cpp"
+    },
+    {
+      "input_order": 7163,
+      "component": "w15-vi-scene-a-scene-get-light-ui-sprite",
+      "object_name": "w15_vi_scene_a_scene_get_light_ui_sprite.o",
+      "private_object_sha256": "9de4db6d14efcd0b77b1ad0e6e73ce6f21da373e46076bcf0b2a8068658f06a3",
+      "emitted_functions": [
+        {
+          "name": "GetLightUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-light-ui-sprite/get.cpp"
+    },
+    {
+      "input_order": 7164,
+      "component": "w15-vi-scene-a-scene-get-next-color-buffer",
+      "object_name": "w15_vi_scene_a_scene_get_next_color_buffer.o",
+      "private_object_sha256": "c0a780b0a62b80de8d9d24e93488ac64ddafc7907678dd131da616816c45c69a",
+      "emitted_functions": [
+        {
+          "name": "GetNextColorBuffer__7VIScene",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-next-color-buffer/next.cpp"
+    },
+    {
+      "input_order": 7165,
+      "component": "w15-vi-scene-a-scene-get-point-ui-sprite",
+      "object_name": "w15_vi_scene_a_scene_get_point_ui_sprite.o",
+      "private_object_sha256": "5e7ad9b3016b9d55903f934b55cbbe5f648c03984c7b3a1903221b2ffd2cd102",
+      "emitted_functions": [
+        {
+          "name": "GetPointUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-point-ui-sprite/get.cpp"
+    },
+    {
+      "input_order": 7166,
+      "component": "w15-vi-scene-a-scene-get-sound-ui-sprite",
+      "object_name": "w15_vi_scene_a_scene_get_sound_ui_sprite.o",
+      "private_object_sha256": "7e212251790bf7fe8c669d0a965d9c1bdeed922b24d30acbaf4727b5edeebf8c",
+      "emitted_functions": [
+        {
+          "name": "GetSoundUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-sound-ui-sprite/get.cpp"
+    },
+    {
+      "input_order": 7167,
+      "component": "w15-vi-scene-a-scene-get-sprite-type",
+      "object_name": "w15_vi_scene_a_scene_get_sprite_type.o",
+      "private_object_sha256": "e7ce3de67013154bdf628b7d071811a614000cbf51770531849e0e04acf7d8b5",
+      "emitted_functions": [
+        {
+          "name": "GetSpriteType__7VIScenei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-sprite-type/get.cpp"
+    },
+    {
+      "input_order": 7168,
+      "component": "w15-vi-scene-a-scene-get-stream-audio-ui-sprite",
+      "object_name": "w15_vi_scene_a_scene_get_stream_audio_ui_sprite.o",
+      "private_object_sha256": "92e67ebffb4ae6a1c6627987e61a61650b82ce4bb1ce3e2fa1165101cd96c889",
+      "emitted_functions": [
+        {
+          "name": "GetStreamAudioUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-get-stream-audio-ui-sprite/get.cpp"
+    },
+    {
+      "input_order": 7169,
+      "component": "w15-vi-scene-a-scene-pick-sprite",
+      "object_name": "w15_vi_scene_a_scene_pick_sprite.o",
+      "private_object_sha256": "5939b68f733c7536fa45307c6e2c34b161abb9c984a1f70565e8ec9ecff41d97",
+      "emitted_functions": [
+        {
+          "name": "PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-pick-sprite/pick.cpp"
+    },
+    {
+      "input_order": 7170,
+      "component": "w15-vi-scene-a-scene-raster-ui-sprite",
+      "object_name": "w15_vi_scene_a_scene_raster_ui_sprite.o",
+      "private_object_sha256": "067a770c0d4f90f7045f0460a562f63724f46b3ab7c61adf9fbb1c8d6df76176",
+      "emitted_functions": [
+        {
+          "name": "RasterUISprite__7VISceneR8VICameraiUi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-raster-ui-sprite/raster.cpp"
+    },
+    {
+      "input_order": 7171,
+      "component": "w15-vi-scene-a-scene-release-animation",
+      "object_name": "w15_vi_scene_a_scene_release_animation.o",
+      "private_object_sha256": "cb7f3d1be8832ed0faa27b1cf191e60a72ba7cdfd94b2abfcc84279a492c16c3",
+      "emitted_functions": [
+        {
+          "name": "ReleaseAnimation__7VIScenei",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-release-animation/release.cpp"
+    },
+    {
+      "input_order": 7172,
+      "component": "w15-vi-scene-a-scene-release-ref-map",
+      "object_name": "w15_vi_scene_a_scene_release_ref_map.o",
+      "private_object_sha256": "ae4fbebb8c8f1e8ce0a1d2a1c5341a09e6ec69c78c4015d950507491e20d0617",
+      "emitted_functions": [
+        {
+          "name": "ReleaseRefMap__7VIScenei",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-release-ref-map/release.cpp"
+    },
+    {
+      "input_order": 7173,
+      "component": "w15-vi-scene-a-scene-release-sprite",
+      "object_name": "w15_vi_scene_a_scene_release_sprite.o",
+      "private_object_sha256": "5efc2a1baa2ac488b4579228bd0ed17f267e7fbc66cd4591517d7ceb0332d90b",
+      "emitted_functions": [
+        {
+          "name": "ReleaseSprite__7VIScenei",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-release-sprite/release.cpp"
+    },
+    {
+      "input_order": 7174,
+      "component": "w15-vi-scene-a-scene-release-static-lighting",
+      "object_name": "w15_vi_scene_a_scene_release_static_lighting.o",
+      "private_object_sha256": "720647d8bc4c74fa87d94b6aa5d8e624f61a4c525555f90e66db1284047c7240",
+      "emitted_functions": [
+        {
+          "name": "ReleaseStaticLighting__7VIScenei",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-scene-release-static-lighting/release.cpp"
+    },
+    {
+      "input_order": 7175,
+      "component": "w15-vi-scene-a-zone-query-emitters",
+      "object_name": "w15_vi_scene_a_zone_query_emitters.o",
+      "private_object_sha256": "1fcd48ff1d3ca7fc274c1a8d839fa24c5f4c23d0a7f7416bc8ac68b4dafa50bc",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__6VIZoneR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-zone-query-emitters/query.cpp"
+    },
+    {
+      "input_order": 7176,
+      "component": "w15-vi-scene-a-zone-render-by-volume-node",
+      "object_name": "w15_vi_scene_a_zone_render_by_volume_node.o",
+      "private_object_sha256": "0043f592557de001f496936b43fe5f65daf8701161ae39205105ebf6fbb8f144",
+      "emitted_functions": [
+        {
+          "name": "RenderByVolume__6VIZoneiR15VISceneRendVars",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-zone-render-by-volume-node/render.cpp"
+    },
+    {
+      "input_order": 7177,
+      "component": "w15-vi-scene-a-zoneroom-ctor",
+      "object_name": "w15_vi_scene_a_zoneroom_ctor.o",
+      "private_object_sha256": "70f5d61d4495756c575973ae8d6c82b3f35c3d39c3c5f40b7efa0cf6af7259b1",
+      "emitted_functions": [
+        {
+          "name": "__10VIZoneRoom",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp"
     }
   ],
   "drafts": [
@@ -107522,7 +107830,51 @@
     "sources/w15-vi-raster-b-vifont-fontname/font_name.cpp": "7723cc11433fb3648a7e61563e9687c66bd58aa826e8aff694a6bc3afb3a5cad",
     "sources/w15-vi-raster-b-vifont-fontname/host_check.cpp": "f2c588b084a955259529e8791141649569a8016d2eb452d0b322ca89ea64cc29",
     "sources/w15-vi-raster-b-vimap-insert/host_check.cpp": "52645950ee745bb926f9c8345dfe276f2ff662d21c23dda5d0097dab5095a2a8",
-    "sources/w15-vi-raster-b-vimap-insert/insert.cpp": "8d0a7821fb1a3706bdb77e99637c1b962561beb9ea4ae06db8d399f55b8892ae"
+    "sources/w15-vi-raster-b-vimap-insert/insert.cpp": "8d0a7821fb1a3706bdb77e99637c1b962561beb9ea4ae06db8d399f55b8892ae",
+    "sources/w15-vi-scene-a-filter-actor-actor-filter/filter.cpp": "dc371ab6112dd1ed78e98179ad49f40c73c83c72c645d3635ae70901c4f39d18",
+    "sources/w15-vi-scene-a-filter-actor-actor-filter/host_check.cpp": "98c8241074eb1b0d4fffd397a885502e0007d64f1a52a609e0cc546f69730607",
+    "sources/w15-vi-scene-a-filter-actor-scene-filter/filter.cpp": "4b33853e5dfe20deddab63503a26a77146ed05f0cfd77d2d43d11c6e4f408d80",
+    "sources/w15-vi-scene-a-filter-actor-scene-filter/host_check.cpp": "dc87153ada195b4d28ff74f235004795181dcdc2f1199c52bc5fd487ac6ddaf7",
+    "sources/w15-vi-scene-a-lodsprite-set-level-sprite/host_check.cpp": "bf879fdea6e742fa8ef58448f14fede6202c8b64950c51623ee21f727794713a",
+    "sources/w15-vi-scene-a-lodsprite-set-level-sprite/set.cpp": "25dff0713af273c475f4ead57bbf17e1a7820da8c8b3240c57c5ba66270b3267",
+    "sources/w15-vi-scene-a-matrix-transpose/host_check.cpp": "5d89de61eb20207bf75821b05ae0dc63d50bf7ec349e669942f1894b201058c5",
+    "sources/w15-vi-scene-a-matrix-transpose/transpose.cpp": "4c3bb0b6c186c6b20ee7203f0fd7067f63440ddc43069adbec17096c8ab9fb48",
+    "sources/w15-vi-scene-a-scene-animation/animation.cpp": "275cba645e573eb91d9e30f599738d81e51fff4cbdc76fa42555f391416a15e8",
+    "sources/w15-vi-scene-a-scene-animation/host_check.cpp": "0847f52e9a8421cf0de1147a54ad93c5ff165f32995e3e2b24caea035cccb7c0",
+    "sources/w15-vi-scene-a-scene-create-actor/create.cpp": "ac31b819d78d70aa2cd50635ce19f14a15627684f03d136f6c01d26fb2d6714f",
+    "sources/w15-vi-scene-a-scene-create-actor/host_check.cpp": "673d6e790d604194ccc93611173430ebfd16d78d7754e435cf5e0f344f3b3ef8",
+    "sources/w15-vi-scene-a-scene-create-animation/create.cpp": "f1b0168ac9aa1dc20e24c3129917caf77afb016b9ad07aff8f26a8c7c435e838",
+    "sources/w15-vi-scene-a-scene-create-animation/host_check.cpp": "42ecc4fa0f79ef5fd9488faa12ad2f2836f338fe450fd958c6a8e15730cde094",
+    "sources/w15-vi-scene-a-scene-get-light-ui-sprite/get.cpp": "1fd65f249ed0188bb69b39a24786f1a49fb2a04a2ff75b7ce964643811094645",
+    "sources/w15-vi-scene-a-scene-get-light-ui-sprite/host_check.cpp": "43f9749cc36f35d2fd602d2925463eec5205741fbac8332dbd700f971472a8ea",
+    "sources/w15-vi-scene-a-scene-get-next-color-buffer/host_check.cpp": "da39d502f79e68893f459bb3ca14c568e44bc7f859b00bcd07676be0576aeb39",
+    "sources/w15-vi-scene-a-scene-get-next-color-buffer/next.cpp": "67a640ba5cf5b22f3eae9198a8f87977fb23c4a0ef2e0bb2846db816a52e5935",
+    "sources/w15-vi-scene-a-scene-get-point-ui-sprite/get.cpp": "e1002b3bc418028293adf3d371ec91914c5d3d5b7ccbccdcc566b1ff58339b18",
+    "sources/w15-vi-scene-a-scene-get-point-ui-sprite/host_check.cpp": "1c0bc0bb81db7d1fad7eea102319eb418090f2a099c08a47032807956224136f",
+    "sources/w15-vi-scene-a-scene-get-sound-ui-sprite/get.cpp": "48623dc6376220a6c2280156b2bc00fecdc6680975e8dbd909c3adb604bab4ac",
+    "sources/w15-vi-scene-a-scene-get-sound-ui-sprite/host_check.cpp": "6d3904bfb183d1ef7f98e4da0fd80537b2181fd1ad643aca62ebedf7731b509c",
+    "sources/w15-vi-scene-a-scene-get-sprite-type/get.cpp": "dd43e67508373a396dca4968753ad90ac2d6e3b38b1ffd36e42f8e53c02938e4",
+    "sources/w15-vi-scene-a-scene-get-sprite-type/host_check.cpp": "5b3a2c5c8f00c4f14ce3106deffecd054f3a2e056fce8b9d6f42a75372286223",
+    "sources/w15-vi-scene-a-scene-get-stream-audio-ui-sprite/get.cpp": "7aee90fcf1bbc00f6bc1715159e1c83d94df511750bbe1855ff15984fca19fb9",
+    "sources/w15-vi-scene-a-scene-get-stream-audio-ui-sprite/host_check.cpp": "e14fa085d30eab81003e2000ca6faf9c9223fc3871420f20d8241e904313a088",
+    "sources/w15-vi-scene-a-scene-pick-sprite/host_check.cpp": "9a95949b78b6f03ffa07ac298f6b63fa38adc7d87ecb2e07cecc8f1b70290603",
+    "sources/w15-vi-scene-a-scene-pick-sprite/pick.cpp": "05ddd80b2b5fbaae97744dc9c249bfc47d5cfb72fc4b0935772e7b670873356a",
+    "sources/w15-vi-scene-a-scene-raster-ui-sprite/host_check.cpp": "427b8f7e1de283d8908c9dfe566f6073b01c9c9a336f048b2a2e6c71dd2a458b",
+    "sources/w15-vi-scene-a-scene-raster-ui-sprite/raster.cpp": "080f50be6d4d5d8a8f0e7aac43162023e335f2de1848ea0bddb8b191d39dda5e",
+    "sources/w15-vi-scene-a-scene-release-animation/host_check.cpp": "e5e3baab45b2bfbb16e50d036ad61b46bbef6d88d52b8451b8a9aebceb571dd7",
+    "sources/w15-vi-scene-a-scene-release-animation/release.cpp": "62d943177057aaa31f8110ffae616a03e410af084c933ac9f66fe144efbe2b06",
+    "sources/w15-vi-scene-a-scene-release-ref-map/host_check.cpp": "9c06464330fc097519bea44ef216065ee917ca62151a2739d40cb139c92d0282",
+    "sources/w15-vi-scene-a-scene-release-ref-map/release.cpp": "a3e122ec4acec70b1b8038a3ead3696cfe3b9e525d6b0bbd029e597a42e76a96",
+    "sources/w15-vi-scene-a-scene-release-sprite/host_check.cpp": "dcfe5965f51b42b2483748c5a968b319bb5bec8308e41abad04b31d85c8cca63",
+    "sources/w15-vi-scene-a-scene-release-sprite/release.cpp": "be0efd6e17950a62a7d9cb90ba3a9ce52871db82814fc7bd39c80ca46bf836a8",
+    "sources/w15-vi-scene-a-scene-release-static-lighting/host_check.cpp": "474ab67b1e1a03cd20e9d0d4b82b8eead02b7582d90a9819e20e65c8f2d55e4d",
+    "sources/w15-vi-scene-a-scene-release-static-lighting/release.cpp": "3d0819918b3f520f47d70ec936789f464583c4d33f901c8df17417f24c8e0455",
+    "sources/w15-vi-scene-a-zone-query-emitters/host_check.cpp": "60b03d45eed20bab67e7a9c15ef508ffbae4b0ef7369c5b3b3e1510be6f322cc",
+    "sources/w15-vi-scene-a-zone-query-emitters/query.cpp": "a0b1fe63f66cc70f2647a3f08050910fd24a64b50fe6e1ad3b9c1a5cf28f2865",
+    "sources/w15-vi-scene-a-zone-render-by-volume-node/host_check.cpp": "d1037578d053a7b7a814d3d940dd01bb4434077414d82553e06fa2036b367384",
+    "sources/w15-vi-scene-a-zone-render-by-volume-node/render.cpp": "cb9a8844b1fc4588a8512d1b8e79e00aa71ffdfbc24fffdfb7431d65a2eb9008",
+    "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp": "ca85c1c328b87cd18af927ded6af156fad98e8de7cdfa30e22f13c7190865f45",
+    "sources/w15-vi-scene-a-zoneroom-ctor/host_check.cpp": "4e3c56ce03ce4429083e67f662e510aaa9ce12da04d8a7871fe23372a399ec6a"
   },
   "additional_implementations": [
     {
@@ -107964,11 +108316,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7156,
-    "authored_default_inputs": 7154,
+    "selected_inputs": 7178,
+    "authored_default_inputs": 7176,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5680,
-    "compiled_body_bytes_from_accepted_inputs": 2240572,
+    "emitted_function_definitions_including_helpers": 5702,
+    "compiled_body_bytes_from_accepted_inputs": 2243360,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -107981,7 +108333,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6843
+    "package_selected_inputs": 6865
   },
   "startup_implementations": [
     {
@@ -216506,6 +216858,380 @@
       ],
       "host_files": [
         "sources/w15-vi-raster-b-vimap-insert/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-filter-actor-actor-filter/filter.cpp",
+      "source_sha256": "dc371ab6112dd1ed78e98179ad49f40c73c83c72c645d3635ae70901c4f39d18",
+      "object_sha256": "c62a7ded8046c2e8d518b86434ae1cc156ec2bf0841994ad5b10fb147e249450",
+      "emitted_functions": [
+        {
+          "name": "FilterActor__13VIActorFilterR7VIScenei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-filter-actor-actor-filter/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-filter-actor-scene-filter/filter.cpp",
+      "source_sha256": "4b33853e5dfe20deddab63503a26a77146ed05f0cfd77d2d43d11c6e4f408d80",
+      "object_sha256": "a560cc5ff2be7359427c2396fc0a950014677f8458b684c8f9829a35d20acfb7",
+      "emitted_functions": [
+        {
+          "name": "FilterActor__13VISceneFilterR7VIScenei",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-filter-actor-scene-filter/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-lodsprite-set-level-sprite/set.cpp",
+      "source_sha256": "25dff0713af273c475f4ead57bbf17e1a7820da8c8b3240c57c5ba66270b3267",
+      "object_sha256": "b24bf44d0f4ecbd3e2ac8c8bb6d461ef6997882f867ba50e60c2399c3518fd81",
+      "emitted_functions": [
+        {
+          "name": "SetLevelSprite__11VILODSpriteiiR7VIScene",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-lodsprite-set-level-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-matrix-transpose/transpose.cpp",
+      "source_sha256": "4c3bb0b6c186c6b20ee7203f0fd7067f63440ddc43069adbec17096c8ab9fb48",
+      "object_sha256": "93c73602f5cf3b1ae3b945e01ad9563e56e030ab476698956fc0c17a6902e732",
+      "emitted_functions": [
+        {
+          "name": "Transpose__10VIMatrix44RC10VIMatrix44",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-matrix-transpose/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-animation/animation.cpp",
+      "source_sha256": "275cba645e573eb91d9e30f599738d81e51fff4cbdc76fa42555f391416a15e8",
+      "object_sha256": "c785f3067effdd480334338f41b948d98032676241afb709bf408c4cf933d0ec",
+      "emitted_functions": [
+        {
+          "name": "Animation__7VIScenei",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-animation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-create-actor/create.cpp",
+      "source_sha256": "ac31b819d78d70aa2cd50635ce19f14a15627684f03d136f6c01d26fb2d6714f",
+      "object_sha256": "47b4506698a09b1feb3c04d338d098f8bd136648761f455dc1ba123f1508afee",
+      "emitted_functions": [
+        {
+          "name": "CreateActor__7VISceneRC7VIVect3T1fi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-create-actor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-create-animation/create.cpp",
+      "source_sha256": "f1b0168ac9aa1dc20e24c3129917caf77afb016b9ad07aff8f26a8c7c435e838",
+      "object_sha256": "5f4172d4649139ae4862fb3e571933a556d74e324e1c72edaaaa1980a3386db9",
+      "emitted_functions": [
+        {
+          "name": "CreateAnimation__7VIScenei",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-create-animation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-light-ui-sprite/get.cpp",
+      "source_sha256": "1fd65f249ed0188bb69b39a24786f1a49fb2a04a2ff75b7ce964643811094645",
+      "object_sha256": "9de4db6d14efcd0b77b1ad0e6e73ce6f21da373e46076bcf0b2a8068658f06a3",
+      "emitted_functions": [
+        {
+          "name": "GetLightUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-light-ui-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-next-color-buffer/next.cpp",
+      "source_sha256": "67a640ba5cf5b22f3eae9198a8f87977fb23c4a0ef2e0bb2846db816a52e5935",
+      "object_sha256": "c0a780b0a62b80de8d9d24e93488ac64ddafc7907678dd131da616816c45c69a",
+      "emitted_functions": [
+        {
+          "name": "GetNextColorBuffer__7VIScene",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-next-color-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-point-ui-sprite/get.cpp",
+      "source_sha256": "e1002b3bc418028293adf3d371ec91914c5d3d5b7ccbccdcc566b1ff58339b18",
+      "object_sha256": "5e7ad9b3016b9d55903f934b55cbbe5f648c03984c7b3a1903221b2ffd2cd102",
+      "emitted_functions": [
+        {
+          "name": "GetPointUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-point-ui-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-sound-ui-sprite/get.cpp",
+      "source_sha256": "48623dc6376220a6c2280156b2bc00fecdc6680975e8dbd909c3adb604bab4ac",
+      "object_sha256": "7e212251790bf7fe8c669d0a965d9c1bdeed922b24d30acbaf4727b5edeebf8c",
+      "emitted_functions": [
+        {
+          "name": "GetSoundUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-sound-ui-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-sprite-type/get.cpp",
+      "source_sha256": "dd43e67508373a396dca4968753ad90ac2d6e3b38b1ffd36e42f8e53c02938e4",
+      "object_sha256": "e7ce3de67013154bdf628b7d071811a614000cbf51770531849e0e04acf7d8b5",
+      "emitted_functions": [
+        {
+          "name": "GetSpriteType__7VIScenei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-sprite-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-get-stream-audio-ui-sprite/get.cpp",
+      "source_sha256": "7aee90fcf1bbc00f6bc1715159e1c83d94df511750bbe1855ff15984fca19fb9",
+      "object_sha256": "92e67ebffb4ae6a1c6627987e61a61650b82ce4bb1ce3e2fa1165101cd96c889",
+      "emitted_functions": [
+        {
+          "name": "GetStreamAudioUISprite__7VIScene",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-get-stream-audio-ui-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-pick-sprite/pick.cpp",
+      "source_sha256": "05ddd80b2b5fbaae97744dc9c249bfc47d5cfb72fc4b0935772e7b670873356a",
+      "object_sha256": "5939b68f733c7536fa45307c6e2c34b161abb9c984a1f70565e8ec9ecff41d97",
+      "emitted_functions": [
+        {
+          "name": "PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-pick-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-raster-ui-sprite/raster.cpp",
+      "source_sha256": "080f50be6d4d5d8a8f0e7aac43162023e335f2de1848ea0bddb8b191d39dda5e",
+      "object_sha256": "067a770c0d4f90f7045f0460a562f63724f46b3ab7c61adf9fbb1c8d6df76176",
+      "emitted_functions": [
+        {
+          "name": "RasterUISprite__7VISceneR8VICameraiUi",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-raster-ui-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-release-animation/release.cpp",
+      "source_sha256": "62d943177057aaa31f8110ffae616a03e410af084c933ac9f66fe144efbe2b06",
+      "object_sha256": "cb7f3d1be8832ed0faa27b1cf191e60a72ba7cdfd94b2abfcc84279a492c16c3",
+      "emitted_functions": [
+        {
+          "name": "ReleaseAnimation__7VIScenei",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-release-animation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-release-ref-map/release.cpp",
+      "source_sha256": "a3e122ec4acec70b1b8038a3ead3696cfe3b9e525d6b0bbd029e597a42e76a96",
+      "object_sha256": "ae4fbebb8c8f1e8ce0a1d2a1c5341a09e6ec69c78c4015d950507491e20d0617",
+      "emitted_functions": [
+        {
+          "name": "ReleaseRefMap__7VIScenei",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-release-ref-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-release-sprite/release.cpp",
+      "source_sha256": "be0efd6e17950a62a7d9cb90ba3a9ce52871db82814fc7bd39c80ca46bf836a8",
+      "object_sha256": "5efc2a1baa2ac488b4579228bd0ed17f267e7fbc66cd4591517d7ceb0332d90b",
+      "emitted_functions": [
+        {
+          "name": "ReleaseSprite__7VIScenei",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-release-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-scene-release-static-lighting/release.cpp",
+      "source_sha256": "3d0819918b3f520f47d70ec936789f464583c4d33f901c8df17417f24c8e0455",
+      "object_sha256": "720647d8bc4c74fa87d94b6aa5d8e624f61a4c525555f90e66db1284047c7240",
+      "emitted_functions": [
+        {
+          "name": "ReleaseStaticLighting__7VIScenei",
+          "compiled_body_bytes": 220
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-scene-release-static-lighting/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-zone-query-emitters/query.cpp",
+      "source_sha256": "a0b1fe63f66cc70f2647a3f08050910fd24a64b50fe6e1ad3b9c1a5cf28f2865",
+      "object_sha256": "1fcd48ff1d3ca7fc274c1a8d839fa24c5f4c23d0a7f7416bc8ac68b4dafa50bc",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__6VIZoneR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-zone-query-emitters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-zone-render-by-volume-node/render.cpp",
+      "source_sha256": "cb9a8844b1fc4588a8512d1b8e79e00aa71ffdfbc24fffdfb7431d65a2eb9008",
+      "object_sha256": "0043f592557de001f496936b43fe5f65daf8701161ae39205105ebf6fbb8f144",
+      "emitted_functions": [
+        {
+          "name": "RenderByVolume__6VIZoneiR15VISceneRendVars",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-zone-render-by-volume-node/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-a",
+      "source": "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp",
+      "source_sha256": "ca85c1c328b87cd18af927ded6af156fad98e8de7cdfa30e22f13c7190865f45",
+      "object_sha256": "70f5d61d4495756c575973ae8d6c82b3f35c3d39c3c5f40b7efa0cf6af7259b1",
+      "emitted_functions": [
+        {
+          "name": "__10VIZoneRoom",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-a-zoneroom-ctor/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
