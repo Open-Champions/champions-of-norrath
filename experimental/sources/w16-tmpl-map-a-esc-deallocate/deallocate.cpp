@@ -45,7 +45,7 @@ static inline unsigned* bucket_word(void* cache, int index, unsigned offset) {
 }
 
 // Removes the bucket's entry from the free multimap and clears its slot word.
-static inline int unlink_free(void* cache, int index) {
+__attribute__((always_inline)) static inline int unlink_free(void* cache, int index) {
     const int slot = static_cast<int>(*bucket_word(cache, index, 12));
     if (slot < 0) return -1;
     if (Erase__t10VIMultiMap2ZUiZii(static_cast<unsigned char*>(cache) + 76, slot) < 0) return -1;
@@ -54,7 +54,7 @@ static inline int unlink_free(void* cache, int index) {
 }
 
 // Merges the index bucket with a free previous and a free next bucket of the same class.
-static inline int merge_neighbours(void* cache, void* pool, int& index) {
+__attribute__((always_inline)) static inline int merge_neighbours(void* cache, void* pool, int& index) {
     if (index != Begin__Ct6VIPool1Z10VIEEBucket(pool)) {
         const int prev = Prev__Ct6VIPool1Z10VIEEBucketi(pool, index);
         if (static_cast<int>(*bucket_word(cache, prev, 12)) != -1 &&
