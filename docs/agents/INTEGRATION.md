@@ -10944,3 +10944,21 @@ Opened: `GetHairTexture__13VICSpriteCusti`, `Init__9VITrailFxlif`, `InterpTransA
 
 Full partial build: 7648 source compilations, one link, 6127 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:44 CDT — agents/w16-fx-b — 719 unresolved imports
+
+## agents/w16-m-dtor-a
+
+Merged (merge commit). All 17 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (17 of 17 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 719 |
+| After | 702 |
+| Closed | 17 |
+| Opened | 0 |
+
+Closed: `_$_10FrostShard`, `_$_10HolyStrike`, `_$_12GlowingShaft`, `_$_12SpellHealing`, `_$_13HammerOfWrath`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_15SpellHolyShield`, `_$_16SpellConeOfFrost`, `_$_16SpellCriticalHit`, `_$_17SpellMinorHealing`, `_$_18DarknessProjectile`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_8HolyBolt`, `_$_8LostSoul`
+
+Opened: 
+
+Full partial build: 7665 source compilations, one link, 6144 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:51 CDT — agents/w16-m-dtor-a — 702 unresolved imports

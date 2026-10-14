@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7648,
+  "default_authored_inputs": 7665,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8442,7 +8442,24 @@
     "sources/w16-fx-b-set-ztest/set_ztest.cpp": "4a01bb34e5ea7d69e1049c12e865e2ed1b5ad34a761dab4e3a484ca093753cff",
     "sources/w16-fx-b-set-zwrite/set_zwrite.cpp": "184a6efcd39750e4bb09a8d62f03d131727b3c8c9d9ff5cbaa641b1a0d96f702",
     "sources/w16-fx-b-spell-effect-ctor/ctor.cpp": "34c0f3bf2482ad4168f729df379965aa68e3f977d239abf6f09ed779845ae0d6",
-    "sources/w16-fx-b-trail-fx-begin/trail_fx_begin.cpp": "693eed77b0d934f49d22b082f3a8db0a45751fc151132de3271891b574152552"
+    "sources/w16-fx-b-trail-fx-begin/trail_fx_begin.cpp": "693eed77b0d934f49d22b082f3a8db0a45751fc151132de3271891b574152552",
+    "sources/w16-m-dtor-a-dtor-12glowingshaft/dtor.cpp": "60e9f2a1ff1aa79d6f9e7384185f23778a2494f36aa6fb0fb2864e26c8ed7170",
+    "sources/w16-m-dtor-a-dtor-18froststormiceshard/dtor.cpp": "cf92d4b1cf36a15381214dadb7e3759062fb6ea4d8da6879af06950f8f5dbdab",
+    "sources/w16-m-dtor-a-dtor-19blindinglighteffect/dtor.cpp": "a5e318ac792d5ca0c3912985dbd1df183cc81618f10c4a4480d19542da43b63d",
+    "sources/w16-m-dtor-a-dtor-12spellhealing/dtor.cpp": "db6cf1c8f5b9432d28fb641778c913c8a56018ad732a9aba210b72dd35836ea1",
+    "sources/w16-m-dtor-a-dtor-15spellholyshield/dtor.cpp": "1aa97b1e82e523232bca03c1c4b3d615556288a8fc53fbab44824d60b3b3968c",
+    "sources/w16-m-dtor-a-dtor-17spellminorhealing/dtor.cpp": "830c02726b6503281b35bb05b8e86de0523243e9cfbfbf6e9642544b46ab6a80",
+    "sources/w16-m-dtor-a-dtor-8holybolt/dtor.cpp": "a9dc2878825ec2419464bed92d159599fd25a789f068163e53e1aa11f59b8463",
+    "sources/w16-m-dtor-a-dtor-8lostsoul/dtor.cpp": "23c49cf70fc4c9a1d13c8f5906638e7ce060b6cab773aebfa2932a3030fbf4c5",
+    "sources/w16-m-dtor-a-dtor-10frostshard/dtor.cpp": "2376a18cd63280c9b25c328bc2b77b8578c2f0b941d9095cfcc747f7acd95710",
+    "sources/w16-m-dtor-a-dtor-10holystrike/dtor.cpp": "7b31aea3181015dfc6c1619dd1466af13ad4f34e67d3f6bb8bc7e2dbf30dee05",
+    "sources/w16-m-dtor-a-dtor-18darknessprojectile/dtor.cpp": "8ef4f7f49779e4586f554bd0af295b3dd157fc26ad3a6b61c4566f77a4cd1b27",
+    "sources/w16-m-dtor-a-dtor-13spellentangle/dtor.cpp": "82de07b8e62fc2ff4ae0524660f11f9f12673e8737243bca5e497cd050545848",
+    "sources/w16-m-dtor-a-dtor-15spellclericroot/dtor.cpp": "2ef8d68593a8586353a6adab63e8f61a3eafff1230dba36aba27164ead5ae6b2",
+    "sources/w16-m-dtor-a-dtor-15spellhateeffect/dtor.cpp": "3c9fb09fa78910cfe99043e7639c39d5b7207f485a4011c30c3b4981f375c31e",
+    "sources/w16-m-dtor-a-dtor-16spellcriticalhit/dtor.cpp": "92b1f5f32f7b76dd30736dcac2f48d827360ef16436d468021c6d0be49a8c749",
+    "sources/w16-m-dtor-a-dtor-16spellconeoffrost/dtor.cpp": "2baa02481eda7e62b51c29917c7cfa9ddab1a81ea7318194cc78dd6ecee5437e",
+    "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp": "876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54"
   },
   "inputs": [
     {
@@ -114050,6 +114067,261 @@
           "compiled_body_bytes": 120
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7650,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_12glowingshaft.o",
+      "profile": "authored_cpp",
+      "sha256": "60e9f2a1ff1aa79d6f9e7384185f23778a2494f36aa6fb0fb2864e26c8ed7170",
+      "source": "sources/w16-m-dtor-a-dtor-12glowingshaft/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_12GlowingShaft",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7651,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_18froststormiceshard.o",
+      "profile": "authored_cpp",
+      "sha256": "cf92d4b1cf36a15381214dadb7e3759062fb6ea4d8da6879af06950f8f5dbdab",
+      "source": "sources/w16-m-dtor-a-dtor-18froststormiceshard/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_18FrostStormIceShard",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7652,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_19blindinglighteffect.o",
+      "profile": "authored_cpp",
+      "sha256": "a5e318ac792d5ca0c3912985dbd1df183cc81618f10c4a4480d19542da43b63d",
+      "source": "sources/w16-m-dtor-a-dtor-19blindinglighteffect/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_19BlindingLightEffect",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7653,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_12spellhealing.o",
+      "profile": "authored_cpp",
+      "sha256": "db6cf1c8f5b9432d28fb641778c913c8a56018ad732a9aba210b72dd35836ea1",
+      "source": "sources/w16-m-dtor-a-dtor-12spellhealing/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_12SpellHealing",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7654,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_15spellholyshield.o",
+      "profile": "authored_cpp",
+      "sha256": "1aa97b1e82e523232bca03c1c4b3d615556288a8fc53fbab44824d60b3b3968c",
+      "source": "sources/w16-m-dtor-a-dtor-15spellholyshield/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_15SpellHolyShield",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7655,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_17spellminorhealing.o",
+      "profile": "authored_cpp",
+      "sha256": "830c02726b6503281b35bb05b8e86de0523243e9cfbfbf6e9642544b46ab6a80",
+      "source": "sources/w16-m-dtor-a-dtor-17spellminorhealing/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_17SpellMinorHealing",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7656,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_8holybolt.o",
+      "profile": "authored_cpp",
+      "sha256": "a9dc2878825ec2419464bed92d159599fd25a789f068163e53e1aa11f59b8463",
+      "source": "sources/w16-m-dtor-a-dtor-8holybolt/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8HolyBolt",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7657,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_8lostsoul.o",
+      "profile": "authored_cpp",
+      "sha256": "23c49cf70fc4c9a1d13c8f5906638e7ce060b6cab773aebfa2932a3030fbf4c5",
+      "source": "sources/w16-m-dtor-a-dtor-8lostsoul/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8LostSoul",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7658,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_10frostshard.o",
+      "profile": "authored_cpp",
+      "sha256": "2376a18cd63280c9b25c328bc2b77b8578c2f0b941d9095cfcc747f7acd95710",
+      "source": "sources/w16-m-dtor-a-dtor-10frostshard/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10FrostShard",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7659,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_10holystrike.o",
+      "profile": "authored_cpp",
+      "sha256": "7b31aea3181015dfc6c1619dd1466af13ad4f34e67d3f6bb8bc7e2dbf30dee05",
+      "source": "sources/w16-m-dtor-a-dtor-10holystrike/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_10HolyStrike",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7660,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_18darknessprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "8ef4f7f49779e4586f554bd0af295b3dd157fc26ad3a6b61c4566f77a4cd1b27",
+      "source": "sources/w16-m-dtor-a-dtor-18darknessprojectile/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_18DarknessProjectile",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7661,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_13spellentangle.o",
+      "profile": "authored_cpp",
+      "sha256": "82de07b8e62fc2ff4ae0524660f11f9f12673e8737243bca5e497cd050545848",
+      "source": "sources/w16-m-dtor-a-dtor-13spellentangle/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_13SpellEntangle",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7662,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_15spellclericroot.o",
+      "profile": "authored_cpp",
+      "sha256": "2ef8d68593a8586353a6adab63e8f61a3eafff1230dba36aba27164ead5ae6b2",
+      "source": "sources/w16-m-dtor-a-dtor-15spellclericroot/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_15SpellClericRoot",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7663,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_15spellhateeffect.o",
+      "profile": "authored_cpp",
+      "sha256": "3c9fb09fa78910cfe99043e7639c39d5b7207f485a4011c30c3b4981f375c31e",
+      "source": "sources/w16-m-dtor-a-dtor-15spellhateeffect/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_15SpellHateEffect",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7664,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_16spellcriticalhit.o",
+      "profile": "authored_cpp",
+      "sha256": "92b1f5f32f7b76dd30736dcac2f48d827360ef16436d468021c6d0be49a8c749",
+      "source": "sources/w16-m-dtor-a-dtor-16spellcriticalhit/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_16SpellCriticalHit",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7665,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_16spellconeoffrost.o",
+      "profile": "authored_cpp",
+      "sha256": "2baa02481eda7e62b51c29917c7cfa9ddab1a81ea7318194cc78dd6ecee5437e",
+      "source": "sources/w16-m-dtor-a-dtor-16spellconeoffrost/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_16SpellConeOfFrost",
+          "compiled_body_bytes": 136
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7666,
+      "kind": "independently_authored_source",
+      "object_name": "w16mdb_dtor_13hammerofwrath.o",
+      "profile": "authored_cpp",
+      "sha256": "876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54",
+      "source": "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_13HammerOfWrath",
+          "compiled_body_bytes": 144
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -114149,7 +114421,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "5e3f9fbc5d89db0897bf08ec1c7d79987e320386b6a624a161d3b3a75b3291c4",
+  "snapshot_sha256": "57261f1855c6b7a6c7c856337187d03e09f3aaca96073bdf3dc30ff8ddcf4f71",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
