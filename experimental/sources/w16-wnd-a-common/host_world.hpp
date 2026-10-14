@@ -21,6 +21,23 @@ inline unsigned& w(const void* host, unsigned offset) {
 }
 inline void clear() { std::memset(arena, 0, sizeof arena); }
 
+// Function words: a guest word that stands for a host function (class-table entries).
+constexpr unsigned FUNCTION_BASE = 0x7000000;
+inline void* functions[64];
+inline unsigned function_count = 0;
+inline unsigned function_word(void* host_function) {
+    for (unsigned i = 0; i < function_count; ++i)
+        if (functions[i] == host_function) return FUNCTION_BASE + i * 4;
+    functions[function_count] = host_function;
+    return FUNCTION_BASE + function_count++ * 4;
+}
+// Writes a class-table entry (halfword delta, halfword index, function word) at a guest address.
+inline void put_entry(unsigned guest_address, short delta, short index, void* host_function) {
+    std::memcpy(at(guest_address), &delta, 2);
+    std::memcpy(at(guest_address) + 2, &index, 2);
+    w(guest_address + 4) = function_word(host_function);
+}
+
 // Deterministic generator so every run sees the same scenarios.
 struct Rng {
     unsigned long long state;
@@ -45,3 +62,6 @@ inline int finish() {
 }  // namespace hw
 
 extern "C" inline unsigned char* norrath_host_pointer(unsigned address) { return hw::at(address); }
+extern "C" inline void* norrath_host_function(unsigned address) {
+    return hw::functions[(address - hw::FUNCTION_BASE) / 4];
+}
