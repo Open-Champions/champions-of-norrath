@@ -11070,3 +11070,21 @@ Opened: `ActionOccured__20VIWndGenericRendererPCc`, `AddNode__t5VISet1ZP5VIWndii
 
 Full partial build: 7820 source compilations, one link, 6295 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 07:32 CDT — agents/w16-wnd-a — 635 unresolved imports
+
+## Rejections and verification (fourth integrator, 2026-10-14)
+
+Before the first merge I re-ran the shared branch at `f9e319d6`: 214 tool tests and the snapshot check passed, and the full partial build gave 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduced. No recent merge broke a repo rule that I could find; no game binary, disc image or raw disassembly is tracked.
+
+Merged this pass, in order: `w16-m-data-a` (841 to 838), `w16-m-data-b` (816), `w16-m-data-c` (805), `w16-io-b` (792), `w16-realm-a` (778), `w16-realm-b` (779), `w16-io-a` (771), `w16-lib-a` (770), `w16-prim-a` (769), `w16-rt-a` (768), `w16-scene-a` (755), `w16-scene-b` (742), `w16-fx-a` (730), `w16-fx-b` (719), `w16-m-dtor-a` (702), `w16-prim-b` (683), `w16-spellmech-a` (685), `w16-tmpl-list-b` (658), `w16-tmpl-list-c` (636), `w16-tmpl-map-a` (634), `w16-wnd-a` (635). Three of those moved the count up or sideways because the new routines call functions that nothing defines yet (`w16-realm-b`, `w16-spellmech-a`, `w16-wnd-a`); their entries list the real names. Each entry's closed and opened lists come from diffing the build's `unresolved-imports.json` before and after, not from the notes.
+
+How selection was done: only units with a committed host check were planned. I ran each check using the build recipe in its own header and recompiled each unit with the plan's `authored_cpp` flags to get its function names, body sizes and object hash. A unit whose only check needs the private executable (`w16-rt-a-set-alarm`) is not selected. `w15-startup-a-link-eh-frame-begin` (offered by `w16-m-data-a`) is not selected: with it the relocatable link aborts with a BFD assertion (`elflink.c:9839`).
+
+Rejected (no committed host test in any source directory, so each function would have no test that could fail; none merged, no game code touched):
+
+- `w10-actor-i` (32 dirs), `w10-startup-d` (17), `w11-creature-a` (21; its one name match is a source file called `check_if_spell_is_running`, not a test), `w11-vi-misc-a` (34), `w11-vi-render-b` (31), `w12-vicont-b` (26), `w13-m-spell-dtor-a` (27), `w14-spellevent` (24), `w8-spell-static-init-b` (30): unchanged from the earlier rejection.
+- `w16-game-a` (2 units): its notes cite only private paired runs.
+- `w16-spellmsg-a` (32 units): its notes say there is no committed host test.
+- `w16-tmpl-list-a` (21 units): no host checks. The same applies to 24 of the 26 units in `w16-tmpl-map-a`, which stay authored but unplanned.
+
+Process note: while merging `w16-realm-a` I wrongly recorded one unit as failing because I built its host check without the flags in its header; it was corrected and selected in the `w16-realm-b` entry. I then re-ran every earlier check of the day with the flags in its own header.
+- 2026-10-14 07:33 CDT — fourth integrator pass complete, 21 branches merged, 12 untested branches rejected — 635 unresolved imports
