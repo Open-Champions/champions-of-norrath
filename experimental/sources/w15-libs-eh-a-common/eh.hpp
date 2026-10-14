@@ -59,4 +59,41 @@ inline unsigned to_word(const void* pointer) {
 }
 }  // namespace w15eh
 
+
+// Exception tables read by the handler-search routines (observed at 0x002fa920 and 0x002fa9f0).
+#if defined(W15_EH_HOST)
+unsigned w15_eh_host_call_matcher(unsigned function_word, unsigned char* info, unsigned match_info, unsigned char* table);
+#endif
+namespace w15eh {
+
+// Old-style table: 12-byte entries {start, end, handler} ended by a start word of 0xffffffff.
+struct OldHandlerEntry {
+    unsigned start;
+    unsigned end;
+    unsigned handler;
+};
+
+// New-style table: an 8-byte header, then 16-byte entries {start, end, handler, match info} ended by a start word
+// of 0xffffffff. The first word of the info record is a matcher function word.
+struct HandlerEntry {
+    unsigned start;
+    unsigned end;
+    unsigned handler;
+    unsigned match_info;
+};
+struct HandlerTable {
+    unsigned header[2];
+    HandlerEntry entries[1];
+};
+
+inline unsigned call_matcher(unsigned function_word, unsigned char* info, unsigned match_info, HandlerTable* table) {
+#if defined(W15_EH_HOST)
+    return w15_eh_host_call_matcher(function_word, info, match_info, reinterpret_cast<unsigned char*>(table));
+#else
+    return reinterpret_cast<unsigned (*)(unsigned char*, unsigned, HandlerTable*)>(static_cast<__UINTPTR_TYPE__>(function_word))(info, match_info, table);
+#endif
+}
+
+}  // namespace w15eh
+
 #endif
