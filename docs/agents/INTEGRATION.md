@@ -10510,3 +10510,20 @@ Opened: `Add__t6VIList1Z7VIActor`, `Add__t6VIPool1ZP13VIHSpriteAnimRCP13VIHSprit
 
 Full partial build: 7176 source compilations, one link, 5700 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:17 CDT — agents/w15-vi-scene-a — 864 unresolved imports
+
+## agents/w15-vi-scene-b
+
+Merged (merge commit; tip about 90 minutes old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 864 |
+| After | 854 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `CollideObj__9VICollideR12VICollSphereR9VICapsule`, `CollideObj__9VICollideR12VICollSpherei`, `CollideObj__9VICollideR9VICollRayi`, `Collide__7VIWorldiR18VISceneCollRayVars`, `Collide__7VIWorldiR8VIEnvRayR7VIVect3T3`, `Collide__8VIEnvRayUifR7VIVect3`, `Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Contains__C6VIBBoxRC7VIVect3`, `CopySprite__7VISceneii`, `GetWorld__C9VICollide`, `Magnitude__C7VIVect3`, `PointInSolid__C8VISphereRC7VIVect3`, `QueryIntersection__7VIWorldiR20VISceneIntersectVars`, `QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi`, `RemoveActor__7VIScenei`, `SetWorld__9VICollideRC10VIMatrix44`, `ShareAnimation__7VIScenei`, `ShareCollBuffer__9VICollidei`, `ShareRefMap__7VIScenei`, `ShareSprite__7VIScenei`, `Size__C6VIBBox`, `__ml__FRC7VIVect3RC10VIMatrix33`
+
+Opened: `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VIVect3T2`, `Collide__9VICollideR12VICollSphereR12VICollBuffer`, `Collide__9VICollideR12VICollSphereR9VICapsule`, `Collide__9VICollideR9VICollRayR12VICollBuffer`, `Erase__t6VIList1ZQ27VIScene12VISceneOccupi`, `Init__12VICollSphereRC12VICollSphereRC10VIMatrix44`, `Init__9VICollRayRC9VICollRayRC10VIMatrix44`, `Normalize__7VIVect4`, `QueryIntersection__6VIZoneR20VISceneIntersectVars`, `Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `__12VICollSphere`
+
+Full partial build: 7198 source compilations, one link, 5722 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7176,
+  "default_authored_inputs": 7198,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7968,7 +7968,29 @@
     "sources/w15-vi-scene-a-scene-release-static-lighting/release.cpp": "3d0819918b3f520f47d70ec936789f464583c4d33f901c8df17417f24c8e0455",
     "sources/w15-vi-scene-a-zone-query-emitters/query.cpp": "a0b1fe63f66cc70f2647a3f08050910fd24a64b50fe6e1ad3b9c1a5cf28f2865",
     "sources/w15-vi-scene-a-zone-render-by-volume-node/render.cpp": "cb9a8844b1fc4588a8512d1b8e79e00aa71ffdfbc24fffdfb7431d65a2eb9008",
-    "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp": "ca85c1c328b87cd18af927ded6af156fad98e8de7cdfa30e22f13c7190865f45"
+    "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp": "ca85c1c328b87cd18af927ded6af156fad98e8de7cdfa30e22f13c7190865f45",
+    "sources/w15-vi-scene-b-bbox-contains/contains.cpp": "8c3e649963b4fdebd37d963bbbe8bc299b9b2238e2dc2fdbc9553a30cd5e2ac6",
+    "sources/w15-vi-scene-b-bbox-size/size.cpp": "e34886216b44e5140445b1d5625d88790f470182fd7f3866e21d76997ca39d81",
+    "sources/w15-vi-scene-b-collide-get-world/get_world.cpp": "ff5725312395e59400cf7b24200d9b565be6a932b57017af7fe38927fdf46858",
+    "sources/w15-vi-scene-b-collide-obj-capsule/collide_obj.cpp": "f3ea9a8d418421052601eff099ed813f0f5bd2cde9c0cc7a323b55293514cba0",
+    "sources/w15-vi-scene-b-collide-obj-ray/collide_obj.cpp": "12ea3a9e5e462c0f49ff7d2073ed7f6e9314a9c8911033f6f82207fde27c7785",
+    "sources/w15-vi-scene-b-collide-obj-sphere/collide_obj.cpp": "de84cd95e241cd5160fa122986466467af311091d377d5556402ebf5139d90ec",
+    "sources/w15-vi-scene-b-collide-query-obj/query_obj.cpp": "0014b8df7c72bc0fd9c0257398bdd04914650c34d0a8757ff3fba3a755d3f382",
+    "sources/w15-vi-scene-b-collide-set-world/set_world.cpp": "6dec819e6542928d2cfc9af14a0aa8054180c7332645a64db20ae27016f390ad",
+    "sources/w15-vi-scene-b-collide-share-buffer/share.cpp": "2f96a0f6fa622b78f8238d4aa5576d8744178bb1371226dc555033f0ed3d69a1",
+    "sources/w15-vi-scene-b-envray-collide/collide.cpp": "b680e06e96cf590f2d624f71d66a24b8e4b668027ad6adde99a46c06bcb67cce",
+    "sources/w15-vi-scene-b-scene-copy-sprite/copy_sprite.cpp": "11ae226b6e0b13baf3bf288ce9a8dad352c2c402fab61eaf69a03c4957579563",
+    "sources/w15-vi-scene-b-scene-remove-actor/remove_actor.cpp": "d841a93236554824733370c8e5d59146d33cc0f38355b9bf0e5919611720b792",
+    "sources/w15-vi-scene-b-scene-share-animation/share.cpp": "3e8083bca59d104bc0883c51166f730862686650a0f5e174bb7b0e5437afb7ef",
+    "sources/w15-vi-scene-b-scene-share-ref-map/share.cpp": "0940a03e4613ff2782e238e2da56d3fe6f4e6d1d8a1661b1db5e483ee3b74379",
+    "sources/w15-vi-scene-b-scene-share-sprite/share.cpp": "1031c63c92d17dae475db8beba3a04002d0795dc304dacd18cbf3a4922e601a4",
+    "sources/w15-vi-scene-b-sphere-point-in-solid/point_in_solid.cpp": "ce4baf0dd4a3b6bf5b5ddf0fff38919b9b12078b5288ba1143935c12c0310a9f",
+    "sources/w15-vi-scene-b-sprite-collide-sphere/collide.cpp": "0866f52d1f4b54fe636ead63fe65becd8e64bba1610c0ec438b00716d92cd6c6",
+    "sources/w15-vi-scene-b-vect3-magnitude/magnitude.cpp": "32aac71bc7eefbfc11ebc43278a26467580afb9a9a512810f5ce260a3746ffb5",
+    "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp": "7abec8576f57d7924a7c061c0239cf101e5548f390b47d839be45966c0d1af45",
+    "sources/w15-vi-scene-b-world-collide-envray/collide.cpp": "9efe9f73e7d7d48e171032203973443487915a9d58dc3eac37624b9664dd8467",
+    "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp": "c7fa1b7ce50376e4bae14b6b465bb022f9eecc9e85b805e96f4a597e9d7b610f",
+    "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116"
   },
   "inputs": [
     {
@@ -106686,6 +106708,336 @@
           "compiled_body_bytes": 80
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7178,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_bbox_contains.o",
+      "profile": "authored_cpp",
+      "sha256": "8c3e649963b4fdebd37d963bbbe8bc299b9b2238e2dc2fdbc9553a30cd5e2ac6",
+      "source": "sources/w15-vi-scene-b-bbox-contains/contains.cpp",
+      "emitted_functions": [
+        {
+          "name": "Contains__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7179,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_bbox_size.o",
+      "profile": "authored_cpp",
+      "sha256": "e34886216b44e5140445b1d5625d88790f470182fd7f3866e21d76997ca39d81",
+      "source": "sources/w15-vi-scene-b-bbox-size/size.cpp",
+      "emitted_functions": [
+        {
+          "name": "Size__C6VIBBox",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7180,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_get_world.o",
+      "profile": "authored_cpp",
+      "sha256": "ff5725312395e59400cf7b24200d9b565be6a932b57017af7fe38927fdf46858",
+      "source": "sources/w15-vi-scene-b-collide-get-world/get_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetWorld__C9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7181,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_obj_capsule.o",
+      "profile": "authored_cpp",
+      "sha256": "f3ea9a8d418421052601eff099ed813f0f5bd2cde9c0cc7a323b55293514cba0",
+      "source": "sources/w15-vi-scene-b-collide-obj-capsule/collide_obj.cpp",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSphereR9VICapsule",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7182,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_obj_ray.o",
+      "profile": "authored_cpp",
+      "sha256": "12ea3a9e5e462c0f49ff7d2073ed7f6e9314a9c8911033f6f82207fde27c7785",
+      "source": "sources/w15-vi-scene-b-collide-obj-ray/collide_obj.cpp",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR9VICollRayi",
+          "compiled_body_bytes": 344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7183,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_obj_sphere.o",
+      "profile": "authored_cpp",
+      "sha256": "de84cd95e241cd5160fa122986466467af311091d377d5556402ebf5139d90ec",
+      "source": "sources/w15-vi-scene-b-collide-obj-sphere/collide_obj.cpp",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSpherei",
+          "compiled_body_bytes": 344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7184,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_query_obj.o",
+      "profile": "authored_cpp",
+      "sha256": "0014b8df7c72bc0fd9c0257398bdd04914650c34d0a8757ff3fba3a755d3f382",
+      "source": "sources/w15-vi-scene-b-collide-query-obj/query_obj.cpp",
+      "emitted_functions": [
+        {
+          "name": "QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7185,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_set_world.o",
+      "profile": "authored_cpp",
+      "sha256": "6dec819e6542928d2cfc9af14a0aa8054180c7332645a64db20ae27016f390ad",
+      "source": "sources/w15-vi-scene-b-collide-set-world/set_world.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetWorld__9VICollideRC10VIMatrix44",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7186,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_collide_share_buffer.o",
+      "profile": "authored_cpp",
+      "sha256": "2f96a0f6fa622b78f8238d4aa5576d8744178bb1371226dc555033f0ed3d69a1",
+      "source": "sources/w15-vi-scene-b-collide-share-buffer/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "ShareCollBuffer__9VICollidei",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7187,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_envray_collide.o",
+      "profile": "authored_cpp",
+      "sha256": "b680e06e96cf590f2d624f71d66a24b8e4b668027ad6adde99a46c06bcb67cce",
+      "source": "sources/w15-vi-scene-b-envray-collide/collide.cpp",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VIEnvRayUifR7VIVect3",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7188,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_scene_copy_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "11ae226b6e0b13baf3bf288ce9a8dad352c2c402fab61eaf69a03c4957579563",
+      "source": "sources/w15-vi-scene-b-scene-copy-sprite/copy_sprite.cpp",
+      "emitted_functions": [
+        {
+          "name": "CopySprite__7VISceneii",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7189,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_scene_remove_actor.o",
+      "profile": "authored_cpp",
+      "sha256": "d841a93236554824733370c8e5d59146d33cc0f38355b9bf0e5919611720b792",
+      "source": "sources/w15-vi-scene-b-scene-remove-actor/remove_actor.cpp",
+      "emitted_functions": [
+        {
+          "name": "RemoveActor__7VIScenei",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7190,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_scene_share_animation.o",
+      "profile": "authored_cpp",
+      "sha256": "3e8083bca59d104bc0883c51166f730862686650a0f5e174bb7b0e5437afb7ef",
+      "source": "sources/w15-vi-scene-b-scene-share-animation/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "ShareAnimation__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7191,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_scene_share_ref_map.o",
+      "profile": "authored_cpp",
+      "sha256": "0940a03e4613ff2782e238e2da56d3fe6f4e6d1d8a1661b1db5e483ee3b74379",
+      "source": "sources/w15-vi-scene-b-scene-share-ref-map/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "ShareRefMap__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7192,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_scene_share_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "1031c63c92d17dae475db8beba3a04002d0795dc304dacd18cbf3a4922e601a4",
+      "source": "sources/w15-vi-scene-b-scene-share-sprite/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "ShareSprite__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7193,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_sphere_point_in_solid.o",
+      "profile": "authored_cpp",
+      "sha256": "ce4baf0dd4a3b6bf5b5ddf0fff38919b9b12078b5288ba1143935c12c0310a9f",
+      "source": "sources/w15-vi-scene-b-sphere-point-in-solid/point_in_solid.cpp",
+      "emitted_functions": [
+        {
+          "name": "PointInSolid__C8VISphereRC7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7194,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_sprite_collide_sphere.o",
+      "profile": "authored_cpp",
+      "sha256": "0866f52d1f4b54fe636ead63fe65becd8e64bba1610c0ec438b00716d92cd6c6",
+      "source": "sources/w15-vi-scene-b-sprite-collide-sphere/collide.cpp",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7195,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_vect3_magnitude.o",
+      "profile": "authored_cpp",
+      "sha256": "32aac71bc7eefbfc11ebc43278a26467580afb9a9a512810f5ce260a3746ffb5",
+      "source": "sources/w15-vi-scene-b-vect3-magnitude/magnitude.cpp",
+      "emitted_functions": [
+        {
+          "name": "Magnitude__C7VIVect3",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7196,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_vect3_mul_matrix33.o",
+      "profile": "authored_cpp",
+      "sha256": "7abec8576f57d7924a7c061c0239cf101e5548f390b47d839be45966c0d1af45",
+      "source": "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp",
+      "emitted_functions": [
+        {
+          "name": "__ml__FRC7VIVect3RC10VIMatrix33",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7197,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_world_collide_envray.o",
+      "profile": "authored_cpp",
+      "sha256": "9efe9f73e7d7d48e171032203973443487915a9d58dc3eac37624b9664dd8467",
+      "source": "sources/w15-vi-scene-b-world-collide-envray/collide.cpp",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR8VIEnvRayR7VIVect3T3",
+          "compiled_body_bytes": 692
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7198,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_world_collide_ray_vars.o",
+      "profile": "authored_cpp",
+      "sha256": "c7fa1b7ce50376e4bae14b6b465bb022f9eecc9e85b805e96f4a597e9d7b610f",
+      "source": "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR18VISceneCollRayVars",
+          "compiled_body_bytes": 800
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7199,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_scene_b_world_query_intersection.o",
+      "profile": "authored_cpp",
+      "sha256": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116",
+      "source": "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp",
+      "emitted_functions": [
+        {
+          "name": "QueryIntersection__7VIWorldiR20VISceneIntersectVars",
+          "compiled_body_bytes": 472
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -106785,7 +107137,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "40a3e48b299ad79d782a180778a3292610449da41fc27dc1d4e3eacea1621e70",
+  "snapshot_sha256": "7a1be34c9dea403f131b74509b50d8d2bd5b9587344fb0f894330973e02d5dd6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

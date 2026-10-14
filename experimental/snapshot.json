@@ -92800,6 +92800,314 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp"
+    },
+    {
+      "input_order": 7178,
+      "component": "w15-vi-scene-b-bbox-contains",
+      "object_name": "w15_vi_scene_b_bbox_contains.o",
+      "private_object_sha256": "1714772e2fd3cf0243b03bb8e6113df3059ed5cc9b9ad673e71f66b19f17b02b",
+      "emitted_functions": [
+        {
+          "name": "Contains__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-bbox-contains/contains.cpp"
+    },
+    {
+      "input_order": 7179,
+      "component": "w15-vi-scene-b-bbox-size",
+      "object_name": "w15_vi_scene_b_bbox_size.o",
+      "private_object_sha256": "dc339bdc807933cfc3fc318f3b19323d68da4ad112ba12a311e26e4fb2e4a78f",
+      "emitted_functions": [
+        {
+          "name": "Size__C6VIBBox",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-bbox-size/size.cpp"
+    },
+    {
+      "input_order": 7180,
+      "component": "w15-vi-scene-b-collide-get-world",
+      "object_name": "w15_vi_scene_b_collide_get_world.o",
+      "private_object_sha256": "c13cf20f86b29ac963f36196321621a3250ae5084c374987d17a99ed328f5158",
+      "emitted_functions": [
+        {
+          "name": "GetWorld__C9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-get-world/get_world.cpp"
+    },
+    {
+      "input_order": 7181,
+      "component": "w15-vi-scene-b-collide-obj-capsule",
+      "object_name": "w15_vi_scene_b_collide_obj_capsule.o",
+      "private_object_sha256": "23896f0ca15da87155285f5993fc742708d7cdb429aed5cf36eb486c69fbe035",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSphereR9VICapsule",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-obj-capsule/collide_obj.cpp"
+    },
+    {
+      "input_order": 7182,
+      "component": "w15-vi-scene-b-collide-obj-ray",
+      "object_name": "w15_vi_scene_b_collide_obj_ray.o",
+      "private_object_sha256": "0463a11b34fa9f709d12831275ab27e23f0a664d25ae4686a6914a2dd5786152",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR9VICollRayi",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-obj-ray/collide_obj.cpp"
+    },
+    {
+      "input_order": 7183,
+      "component": "w15-vi-scene-b-collide-obj-sphere",
+      "object_name": "w15_vi_scene_b_collide_obj_sphere.o",
+      "private_object_sha256": "8690a702fdb10cb7e4ef3ce0f9fe81305d20e5794c76ab67acd41882bcb4d83c",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSpherei",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-obj-sphere/collide_obj.cpp"
+    },
+    {
+      "input_order": 7184,
+      "component": "w15-vi-scene-b-collide-query-obj",
+      "object_name": "w15_vi_scene_b_collide_query_obj.o",
+      "private_object_sha256": "6fac00eeb3ef657f85b1ada31614fa0fa4c3c107043252b229962ed238a1dd0c",
+      "emitted_functions": [
+        {
+          "name": "QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-query-obj/query_obj.cpp"
+    },
+    {
+      "input_order": 7185,
+      "component": "w15-vi-scene-b-collide-set-world",
+      "object_name": "w15_vi_scene_b_collide_set_world.o",
+      "private_object_sha256": "933fc81c7064402cbb65f179c12841c6ff4c6da738762adc86d405187f21ee32",
+      "emitted_functions": [
+        {
+          "name": "SetWorld__9VICollideRC10VIMatrix44",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-set-world/set_world.cpp"
+    },
+    {
+      "input_order": 7186,
+      "component": "w15-vi-scene-b-collide-share-buffer",
+      "object_name": "w15_vi_scene_b_collide_share_buffer.o",
+      "private_object_sha256": "4f08e7ccf9c7e71c5648cc77ebdf9eb802ea318a1d9d46071f23339a9829fa66",
+      "emitted_functions": [
+        {
+          "name": "ShareCollBuffer__9VICollidei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-collide-share-buffer/share.cpp"
+    },
+    {
+      "input_order": 7187,
+      "component": "w15-vi-scene-b-envray-collide",
+      "object_name": "w15_vi_scene_b_envray_collide.o",
+      "private_object_sha256": "25dd651ba7e82a91c50433803c902c74918eeb81c4d498b09410174b6c13f348",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VIEnvRayUifR7VIVect3",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-envray-collide/collide.cpp"
+    },
+    {
+      "input_order": 7188,
+      "component": "w15-vi-scene-b-scene-copy-sprite",
+      "object_name": "w15_vi_scene_b_scene_copy_sprite.o",
+      "private_object_sha256": "0f079dbc0f954fd2ee12ede8ef98d2bdb36de0bb4b404428cf1449b6ec544385",
+      "emitted_functions": [
+        {
+          "name": "CopySprite__7VISceneii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-scene-copy-sprite/copy_sprite.cpp"
+    },
+    {
+      "input_order": 7189,
+      "component": "w15-vi-scene-b-scene-remove-actor",
+      "object_name": "w15_vi_scene_b_scene_remove_actor.o",
+      "private_object_sha256": "5e702322282b7dbe674fa6b41b3085beefb4d7e91632eb455ce8b32a10cf3669",
+      "emitted_functions": [
+        {
+          "name": "RemoveActor__7VIScenei",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-scene-remove-actor/remove_actor.cpp"
+    },
+    {
+      "input_order": 7190,
+      "component": "w15-vi-scene-b-scene-share-animation",
+      "object_name": "w15_vi_scene_b_scene_share_animation.o",
+      "private_object_sha256": "880d1836afb07bb3c86e63e42f95fb61d8dca9c0b3274183c3a7abb856e5e3b0",
+      "emitted_functions": [
+        {
+          "name": "ShareAnimation__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-scene-share-animation/share.cpp"
+    },
+    {
+      "input_order": 7191,
+      "component": "w15-vi-scene-b-scene-share-ref-map",
+      "object_name": "w15_vi_scene_b_scene_share_ref_map.o",
+      "private_object_sha256": "12dc9f29fb5ea47f88256e22960e0cd809256d6476326abe18e0496ead6816fa",
+      "emitted_functions": [
+        {
+          "name": "ShareRefMap__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-scene-share-ref-map/share.cpp"
+    },
+    {
+      "input_order": 7192,
+      "component": "w15-vi-scene-b-scene-share-sprite",
+      "object_name": "w15_vi_scene_b_scene_share_sprite.o",
+      "private_object_sha256": "79580ac27530fefaf9bdb7a66b5dc4da3989cac551d9b25b359f23fe9a78d81f",
+      "emitted_functions": [
+        {
+          "name": "ShareSprite__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-scene-share-sprite/share.cpp"
+    },
+    {
+      "input_order": 7193,
+      "component": "w15-vi-scene-b-sphere-point-in-solid",
+      "object_name": "w15_vi_scene_b_sphere_point_in_solid.o",
+      "private_object_sha256": "194def2fa7adad8fa3ed4e492d2246fe140f6b23bccb1ecc40f1e3fc0509e647",
+      "emitted_functions": [
+        {
+          "name": "PointInSolid__C8VISphereRC7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-sphere-point-in-solid/point_in_solid.cpp"
+    },
+    {
+      "input_order": 7194,
+      "component": "w15-vi-scene-b-sprite-collide-sphere",
+      "object_name": "w15_vi_scene_b_sprite_collide_sphere.o",
+      "private_object_sha256": "316d4f6fdeeeb43945e34be3205516e96deba9daa5fa397d7d4ce8c41a8250ac",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-sprite-collide-sphere/collide.cpp"
+    },
+    {
+      "input_order": 7195,
+      "component": "w15-vi-scene-b-vect3-magnitude",
+      "object_name": "w15_vi_scene_b_vect3_magnitude.o",
+      "private_object_sha256": "e6c1212626c2f7822e33dd0e2e96d1d5b2fe7cb0b02cee22f64952b7208714af",
+      "emitted_functions": [
+        {
+          "name": "Magnitude__C7VIVect3",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-vect3-magnitude/magnitude.cpp"
+    },
+    {
+      "input_order": 7196,
+      "component": "w15-vi-scene-b-vect3-mul-matrix33",
+      "object_name": "w15_vi_scene_b_vect3_mul_matrix33.o",
+      "private_object_sha256": "2b0dabe9ba8bc6af605051258b411904488b8f0a07bed5f21a00aeb5a2bc19f3",
+      "emitted_functions": [
+        {
+          "name": "__ml__FRC7VIVect3RC10VIMatrix33",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp"
+    },
+    {
+      "input_order": 7197,
+      "component": "w15-vi-scene-b-world-collide-envray",
+      "object_name": "w15_vi_scene_b_world_collide_envray.o",
+      "private_object_sha256": "07d1ae910d115a126054f1d8b94bf2052363d94eefa595cc2d8734fcb2890a85",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR8VIEnvRayR7VIVect3T3",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-world-collide-envray/collide.cpp"
+    },
+    {
+      "input_order": 7198,
+      "component": "w15-vi-scene-b-world-collide-ray-vars",
+      "object_name": "w15_vi_scene_b_world_collide_ray_vars.o",
+      "private_object_sha256": "a31c0e15dfab3ffad54b89f5637873d8385d758103b0e5b4b3819cb29a4456d4",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR18VISceneCollRayVars",
+          "compiled_body_bytes": 800
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp"
+    },
+    {
+      "input_order": 7199,
+      "component": "w15-vi-scene-b-world-query-intersection",
+      "object_name": "w15_vi_scene_b_world_query_intersection.o",
+      "private_object_sha256": "340ff29746f30929dc352bf754f41371ac8631244281742837a7ca83427eca98",
+      "emitted_functions": [
+        {
+          "name": "QueryIntersection__7VIWorldiR20VISceneIntersectVars",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp"
     }
   ],
   "drafts": [
@@ -107874,7 +108182,51 @@
     "sources/w15-vi-scene-a-zone-render-by-volume-node/host_check.cpp": "d1037578d053a7b7a814d3d940dd01bb4434077414d82553e06fa2036b367384",
     "sources/w15-vi-scene-a-zone-render-by-volume-node/render.cpp": "cb9a8844b1fc4588a8512d1b8e79e00aa71ffdfbc24fffdfb7431d65a2eb9008",
     "sources/w15-vi-scene-a-zoneroom-ctor/ctor.cpp": "ca85c1c328b87cd18af927ded6af156fad98e8de7cdfa30e22f13c7190865f45",
-    "sources/w15-vi-scene-a-zoneroom-ctor/host_check.cpp": "4e3c56ce03ce4429083e67f662e510aaa9ce12da04d8a7871fe23372a399ec6a"
+    "sources/w15-vi-scene-a-zoneroom-ctor/host_check.cpp": "4e3c56ce03ce4429083e67f662e510aaa9ce12da04d8a7871fe23372a399ec6a",
+    "sources/w15-vi-scene-b-bbox-contains/contains.cpp": "8c3e649963b4fdebd37d963bbbe8bc299b9b2238e2dc2fdbc9553a30cd5e2ac6",
+    "sources/w15-vi-scene-b-bbox-contains/host_check.cpp": "403de58ba66dd901de32ed8cd63328a75ad4a36560fc255ca09ca87dab28c593",
+    "sources/w15-vi-scene-b-bbox-size/host_check.cpp": "ffd82390715dc6dbe5b0b497e4739a319b8246dfa8bffeb94716233aebe88ad2",
+    "sources/w15-vi-scene-b-bbox-size/size.cpp": "e34886216b44e5140445b1d5625d88790f470182fd7f3866e21d76997ca39d81",
+    "sources/w15-vi-scene-b-collide-get-world/get_world.cpp": "ff5725312395e59400cf7b24200d9b565be6a932b57017af7fe38927fdf46858",
+    "sources/w15-vi-scene-b-collide-get-world/host_check.cpp": "2dc71d03090a7650b9e1b8816ccfbdd4899a60dc484dc5f2051852809535af5a",
+    "sources/w15-vi-scene-b-collide-obj-capsule/collide_obj.cpp": "f3ea9a8d418421052601eff099ed813f0f5bd2cde9c0cc7a323b55293514cba0",
+    "sources/w15-vi-scene-b-collide-obj-capsule/host_check.cpp": "ee0aa68555de30ed04fcf8d83cd5d2021d8ac2b465372bfcdeb4998f84970aa1",
+    "sources/w15-vi-scene-b-collide-obj-ray/collide_obj.cpp": "12ea3a9e5e462c0f49ff7d2073ed7f6e9314a9c8911033f6f82207fde27c7785",
+    "sources/w15-vi-scene-b-collide-obj-ray/host_check.cpp": "2f81fc0938c196a2a094dd4f6e5f919598f4a357eb95cc80b2c8041fb0c897fb",
+    "sources/w15-vi-scene-b-collide-obj-sphere/collide_obj.cpp": "de84cd95e241cd5160fa122986466467af311091d377d5556402ebf5139d90ec",
+    "sources/w15-vi-scene-b-collide-obj-sphere/host_check.cpp": "1ef26902fe5f99f6572122f708c7db20a4253b1f6f04fa65d91caf927f835e8d",
+    "sources/w15-vi-scene-b-collide-query-obj/host_check.cpp": "d7b39b1d3093f2bd4c7b99e0ac2954ac5722949d5fb9599d2616a12a969515b6",
+    "sources/w15-vi-scene-b-collide-query-obj/query_obj.cpp": "0014b8df7c72bc0fd9c0257398bdd04914650c34d0a8757ff3fba3a755d3f382",
+    "sources/w15-vi-scene-b-collide-set-world/host_check.cpp": "afc6b234ff064fac507352d61463156a0599c2d6408116f29954412004443b74",
+    "sources/w15-vi-scene-b-collide-set-world/set_world.cpp": "6dec819e6542928d2cfc9af14a0aa8054180c7332645a64db20ae27016f390ad",
+    "sources/w15-vi-scene-b-collide-share-buffer/host_check.cpp": "bf86d820cc7e751fb5fded8eea5e91376ff5e2305a294377ba46ec402220fa59",
+    "sources/w15-vi-scene-b-collide-share-buffer/share.cpp": "2f96a0f6fa622b78f8238d4aa5576d8744178bb1371226dc555033f0ed3d69a1",
+    "sources/w15-vi-scene-b-envray-collide/collide.cpp": "b680e06e96cf590f2d624f71d66a24b8e4b668027ad6adde99a46c06bcb67cce",
+    "sources/w15-vi-scene-b-envray-collide/host_check.cpp": "329f11ac6bd6dfb22230a651b8ebed36d3819d3fb220be5d41d03ddd261700f3",
+    "sources/w15-vi-scene-b-scene-copy-sprite/copy_sprite.cpp": "11ae226b6e0b13baf3bf288ce9a8dad352c2c402fab61eaf69a03c4957579563",
+    "sources/w15-vi-scene-b-scene-copy-sprite/host_check.cpp": "3054865811bd36fab3d810236948a9e05c46dc51bdc699a34dfe3379bb551e27",
+    "sources/w15-vi-scene-b-scene-remove-actor/host_check.cpp": "68d9bcd4d9c1a1454031a18e78c8a2ab2ab4cf451f4909ec1c6a1798a3c8b308",
+    "sources/w15-vi-scene-b-scene-remove-actor/remove_actor.cpp": "d841a93236554824733370c8e5d59146d33cc0f38355b9bf0e5919611720b792",
+    "sources/w15-vi-scene-b-scene-share-animation/host_check.cpp": "7bc216c93dfcb3a2aefaba7e35a5428b8dc4f0142a9e3aacc6d4c8bf57b7e76f",
+    "sources/w15-vi-scene-b-scene-share-animation/share.cpp": "3e8083bca59d104bc0883c51166f730862686650a0f5e174bb7b0e5437afb7ef",
+    "sources/w15-vi-scene-b-scene-share-ref-map/host_check.cpp": "d2903814afeede8cd8af3007efc7b318f2234612eb582ecc302e695a9d7f54ea",
+    "sources/w15-vi-scene-b-scene-share-ref-map/share.cpp": "0940a03e4613ff2782e238e2da56d3fe6f4e6d1d8a1661b1db5e483ee3b74379",
+    "sources/w15-vi-scene-b-scene-share-sprite/host_check.cpp": "9540ae4be06c679221f71fa230d1cde5848b352b3d202f01eaa40096c36c218e",
+    "sources/w15-vi-scene-b-scene-share-sprite/share.cpp": "1031c63c92d17dae475db8beba3a04002d0795dc304dacd18cbf3a4922e601a4",
+    "sources/w15-vi-scene-b-sphere-point-in-solid/host_check.cpp": "f9129c3291f1dd7ec5dc8bb9912678a9686e70d1a8bb47aeb50d1923f98c19ff",
+    "sources/w15-vi-scene-b-sphere-point-in-solid/point_in_solid.cpp": "ce4baf0dd4a3b6bf5b5ddf0fff38919b9b12078b5288ba1143935c12c0310a9f",
+    "sources/w15-vi-scene-b-sprite-collide-sphere/collide.cpp": "0866f52d1f4b54fe636ead63fe65becd8e64bba1610c0ec438b00716d92cd6c6",
+    "sources/w15-vi-scene-b-sprite-collide-sphere/host_check.cpp": "39e91d6581451f67f55ade7fd146d2587d83a5f9abc2019138fbbc78443a3108",
+    "sources/w15-vi-scene-b-vect3-magnitude/host_check.cpp": "627ad2ea8c529abf237ce6f161ab38098989902e2c48fd39161ab1bec5fd72ed",
+    "sources/w15-vi-scene-b-vect3-magnitude/magnitude.cpp": "32aac71bc7eefbfc11ebc43278a26467580afb9a9a512810f5ce260a3746ffb5",
+    "sources/w15-vi-scene-b-vect3-mul-matrix33/host_check.cpp": "a705e317c6fa93fa0ea5df9b43c5fdd60318db55716e29d41f187d87607db44b",
+    "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp": "7abec8576f57d7924a7c061c0239cf101e5548f390b47d839be45966c0d1af45",
+    "sources/w15-vi-scene-b-world-collide-envray/collide.cpp": "9efe9f73e7d7d48e171032203973443487915a9d58dc3eac37624b9664dd8467",
+    "sources/w15-vi-scene-b-world-collide-envray/host_check.cpp": "a18df54366b753a710bf9500a8b08d1fc15c34d86afcfbaa262e6105af529059",
+    "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp": "c7fa1b7ce50376e4bae14b6b465bb022f9eecc9e85b805e96f4a597e9d7b610f",
+    "sources/w15-vi-scene-b-world-collide-ray-vars/host_check.cpp": "6210fbb3b970a87cee059e17e2e088f2c48db259a1cc132b7a11de1fd2515064",
+    "sources/w15-vi-scene-b-world-query-intersection/host_check.cpp": "c18f0912d3a2244f351644b11d998e71fe010ab649fbeff391b812a4744986c9",
+    "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116"
   },
   "additional_implementations": [
     {
@@ -108316,11 +108668,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7178,
-    "authored_default_inputs": 7176,
+    "selected_inputs": 7200,
+    "authored_default_inputs": 7198,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5702,
-    "compiled_body_bytes_from_accepted_inputs": 2243360,
+    "emitted_function_definitions_including_helpers": 5724,
+    "compiled_body_bytes_from_accepted_inputs": 2247580,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -108333,7 +108685,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6865
+    "package_selected_inputs": 6887
   },
   "startup_implementations": [
     {
@@ -217232,6 +217584,380 @@
       ],
       "host_files": [
         "sources/w15-vi-scene-a-zoneroom-ctor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-bbox-contains/contains.cpp",
+      "source_sha256": "8c3e649963b4fdebd37d963bbbe8bc299b9b2238e2dc2fdbc9553a30cd5e2ac6",
+      "object_sha256": "1714772e2fd3cf0243b03bb8e6113df3059ed5cc9b9ad673e71f66b19f17b02b",
+      "emitted_functions": [
+        {
+          "name": "Contains__C6VIBBoxRC7VIVect3",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-bbox-contains/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-bbox-size/size.cpp",
+      "source_sha256": "e34886216b44e5140445b1d5625d88790f470182fd7f3866e21d76997ca39d81",
+      "object_sha256": "dc339bdc807933cfc3fc318f3b19323d68da4ad112ba12a311e26e4fb2e4a78f",
+      "emitted_functions": [
+        {
+          "name": "Size__C6VIBBox",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-bbox-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-get-world/get_world.cpp",
+      "source_sha256": "ff5725312395e59400cf7b24200d9b565be6a932b57017af7fe38927fdf46858",
+      "object_sha256": "c13cf20f86b29ac963f36196321621a3250ae5084c374987d17a99ed328f5158",
+      "emitted_functions": [
+        {
+          "name": "GetWorld__C9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-get-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-obj-capsule/collide_obj.cpp",
+      "source_sha256": "f3ea9a8d418421052601eff099ed813f0f5bd2cde9c0cc7a323b55293514cba0",
+      "object_sha256": "23896f0ca15da87155285f5993fc742708d7cdb429aed5cf36eb486c69fbe035",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSphereR9VICapsule",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-obj-capsule/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-obj-ray/collide_obj.cpp",
+      "source_sha256": "12ea3a9e5e462c0f49ff7d2073ed7f6e9314a9c8911033f6f82207fde27c7785",
+      "object_sha256": "0463a11b34fa9f709d12831275ab27e23f0a664d25ae4686a6914a2dd5786152",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR9VICollRayi",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-obj-ray/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-obj-sphere/collide_obj.cpp",
+      "source_sha256": "de84cd95e241cd5160fa122986466467af311091d377d5556402ebf5139d90ec",
+      "object_sha256": "8690a702fdb10cb7e4ef3ce0f9fe81305d20e5794c76ab67acd41882bcb4d83c",
+      "emitted_functions": [
+        {
+          "name": "CollideObj__9VICollideR12VICollSpherei",
+          "compiled_body_bytes": 344
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-obj-sphere/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-query-obj/query_obj.cpp",
+      "source_sha256": "0014b8df7c72bc0fd9c0257398bdd04914650c34d0a8757ff3fba3a755d3f382",
+      "object_sha256": "6fac00eeb3ef657f85b1ada31614fa0fa4c3c107043252b229962ed238a1dd0c",
+      "emitted_functions": [
+        {
+          "name": "QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-query-obj/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-set-world/set_world.cpp",
+      "source_sha256": "6dec819e6542928d2cfc9af14a0aa8054180c7332645a64db20ae27016f390ad",
+      "object_sha256": "933fc81c7064402cbb65f179c12841c6ff4c6da738762adc86d405187f21ee32",
+      "emitted_functions": [
+        {
+          "name": "SetWorld__9VICollideRC10VIMatrix44",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-set-world/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-collide-share-buffer/share.cpp",
+      "source_sha256": "2f96a0f6fa622b78f8238d4aa5576d8744178bb1371226dc555033f0ed3d69a1",
+      "object_sha256": "4f08e7ccf9c7e71c5648cc77ebdf9eb802ea318a1d9d46071f23339a9829fa66",
+      "emitted_functions": [
+        {
+          "name": "ShareCollBuffer__9VICollidei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-collide-share-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-envray-collide/collide.cpp",
+      "source_sha256": "b680e06e96cf590f2d624f71d66a24b8e4b668027ad6adde99a46c06bcb67cce",
+      "object_sha256": "25dd651ba7e82a91c50433803c902c74918eeb81c4d498b09410174b6c13f348",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VIEnvRayUifR7VIVect3",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-envray-collide/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-scene-copy-sprite/copy_sprite.cpp",
+      "source_sha256": "11ae226b6e0b13baf3bf288ce9a8dad352c2c402fab61eaf69a03c4957579563",
+      "object_sha256": "0f079dbc0f954fd2ee12ede8ef98d2bdb36de0bb4b404428cf1449b6ec544385",
+      "emitted_functions": [
+        {
+          "name": "CopySprite__7VISceneii",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-scene-copy-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-scene-remove-actor/remove_actor.cpp",
+      "source_sha256": "d841a93236554824733370c8e5d59146d33cc0f38355b9bf0e5919611720b792",
+      "object_sha256": "5e702322282b7dbe674fa6b41b3085beefb4d7e91632eb455ce8b32a10cf3669",
+      "emitted_functions": [
+        {
+          "name": "RemoveActor__7VIScenei",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-scene-remove-actor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-scene-share-animation/share.cpp",
+      "source_sha256": "3e8083bca59d104bc0883c51166f730862686650a0f5e174bb7b0e5437afb7ef",
+      "object_sha256": "880d1836afb07bb3c86e63e42f95fb61d8dca9c0b3274183c3a7abb856e5e3b0",
+      "emitted_functions": [
+        {
+          "name": "ShareAnimation__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-scene-share-animation/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-scene-share-ref-map/share.cpp",
+      "source_sha256": "0940a03e4613ff2782e238e2da56d3fe6f4e6d1d8a1661b1db5e483ee3b74379",
+      "object_sha256": "12dc9f29fb5ea47f88256e22960e0cd809256d6476326abe18e0496ead6816fa",
+      "emitted_functions": [
+        {
+          "name": "ShareRefMap__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-scene-share-ref-map/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-scene-share-sprite/share.cpp",
+      "source_sha256": "1031c63c92d17dae475db8beba3a04002d0795dc304dacd18cbf3a4922e601a4",
+      "object_sha256": "79580ac27530fefaf9bdb7a66b5dc4da3989cac551d9b25b359f23fe9a78d81f",
+      "emitted_functions": [
+        {
+          "name": "ShareSprite__7VIScenei",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-scene-share-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-sphere-point-in-solid/point_in_solid.cpp",
+      "source_sha256": "ce4baf0dd4a3b6bf5b5ddf0fff38919b9b12078b5288ba1143935c12c0310a9f",
+      "object_sha256": "194def2fa7adad8fa3ed4e492d2246fe140f6b23bccb1ecc40f1e3fc0509e647",
+      "emitted_functions": [
+        {
+          "name": "PointInSolid__C8VISphereRC7VIVect3",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-sphere-point-in-solid/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-sprite-collide-sphere/collide.cpp",
+      "source_sha256": "0866f52d1f4b54fe636ead63fe65becd8e64bba1610c0ec438b00716d92cd6c6",
+      "object_sha256": "316d4f6fdeeeb43945e34be3205516e96deba9daa5fa397d7d4ce8c41a8250ac",
+      "emitted_functions": [
+        {
+          "name": "Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-sprite-collide-sphere/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-vect3-magnitude/magnitude.cpp",
+      "source_sha256": "32aac71bc7eefbfc11ebc43278a26467580afb9a9a512810f5ce260a3746ffb5",
+      "object_sha256": "e6c1212626c2f7822e33dd0e2e96d1d5b2fe7cb0b02cee22f64952b7208714af",
+      "emitted_functions": [
+        {
+          "name": "Magnitude__C7VIVect3",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-vect3-magnitude/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp",
+      "source_sha256": "7abec8576f57d7924a7c061c0239cf101e5548f390b47d839be45966c0d1af45",
+      "object_sha256": "2b0dabe9ba8bc6af605051258b411904488b8f0a07bed5f21a00aeb5a2bc19f3",
+      "emitted_functions": [
+        {
+          "name": "__ml__FRC7VIVect3RC10VIMatrix33",
+          "compiled_body_bytes": 128
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-vect3-mul-matrix33/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-world-collide-envray/collide.cpp",
+      "source_sha256": "9efe9f73e7d7d48e171032203973443487915a9d58dc3eac37624b9664dd8467",
+      "object_sha256": "07d1ae910d115a126054f1d8b94bf2052363d94eefa595cc2d8734fcb2890a85",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR8VIEnvRayR7VIVect3T3",
+          "compiled_body_bytes": 692
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-world-collide-envray/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp",
+      "source_sha256": "c7fa1b7ce50376e4bae14b6b465bb022f9eecc9e85b805e96f4a597e9d7b610f",
+      "object_sha256": "a31c0e15dfab3ffad54b89f5637873d8385d758103b0e5b4b3819cb29a4456d4",
+      "emitted_functions": [
+        {
+          "name": "Collide__7VIWorldiR18VISceneCollRayVars",
+          "compiled_body_bytes": 800
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-world-collide-ray-vars/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-scene-b",
+      "source": "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp",
+      "source_sha256": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116",
+      "object_sha256": "340ff29746f30929dc352bf754f41371ac8631244281742837a7ca83427eca98",
+      "emitted_functions": [
+        {
+          "name": "QueryIntersection__7VIWorldiR20VISceneIntersectVars",
+          "compiled_body_bytes": 472
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-scene-b-world-query-intersection/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
