@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6711,
+  "default_authored_inputs": 6738,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -5277,6 +5277,34 @@
     "sources/w14-particle-p-set-trail-width/set_trail_width.cpp": "ac879e7b4a18c854ea6485d61e42bca4c9063330280b33ae25419607bca9d50c",
     "sources/w14-particle-system-delta-time/delta_time.cpp": "91095c407c40fa8c43c62fdda5d9144bb21b246bf852a103e6d5ffd66d1f569a",
     "sources/w14-particle-system-particle-definition/particle_definition.cpp": "4d72adf3d00b20cd237d99b2deea403cca577248671fcf937a4122ac5cac4617",
+    "sources/w14-projectile-a-clone-firebombletjr/clone.cpp": "34ba99825c7a17e170640494172d40e59052629225f2457e00f3b5c69f854a60",
+    "sources/w14-projectile-a-clone-shockprojectile/clone.cpp": "27c24e8dc5fc8321e16c2e8876b8404c9af01e97839232a5a26380925705fc20",
+    "sources/w14-projectile-a-common/access.hpp": "4e594b196b9ea595615544a7b74166c750cb2dc93f339d6dc0db6cbe3d3911f3",
+    "sources/w14-projectile-a-ctor-blindinglighteffect/ctor.cpp": "62d69386a1b3a605c84afce23bbca7faeaa1f2d5ed31667b0c7a8eb5855d24cc",
+    "sources/w14-projectile-a-ctor-darknessprojectile/ctor.cpp": "e1cdc055568ccbd7e5abf7c42979a84ee3524c42c686757021aaf17178bebb28",
+    "sources/w14-projectile-a-ctor-glowingshaft/ctor.cpp": "a58b896e10acee0d408eb38782e4019231383fb88bf33a639901ec8aeb031193",
+    "sources/w14-projectile-a-ctor-hammerofwrath/ctor.cpp": "61523e38437727461bcaada745509db5aedb780113d82fddd2b97441396c24d1",
+    "sources/w14-projectile-a-ctor-holybolt/ctor.cpp": "64198eaad7ce580c150450287cd724e13386f033b5b749461a3e92a19e3dd0ff",
+    "sources/w14-projectile-a-ctor-holystrike/ctor.cpp": "dc2822da3ce8571301b82265b2f570ba9a430e0ffa029bd5b29b40e5b976d880",
+    "sources/w14-projectile-a-ctor-lostsoul/ctor.cpp": "6fd6bd19a683a99ed3008a56948cc91719c0e2e95b0da2ff12bb037b42065d78",
+    "sources/w14-projectile-a-ctor-prop-model/ctor.cpp": "4f53b3363c2a2cf7de6fee874a3f7115e2dafb3906dec7759b6a88874c318479",
+    "sources/w14-projectile-a-ctor-skelight/ctor.cpp": "e277e6448f2f0bb3d6a6525dfbb8f3f39434992a820db1d3ab8a370490dc15a1",
+    "sources/w14-projectile-a-fx-run-ball-lightning/fx_run.cpp": "7204e67a36d325f27958d108fa8795e3bc881eb1628c123b31bd50bad0bb639d",
+    "sources/w14-projectile-a-game-radial-damage/damage.cpp": "1ce4904ba212d47d912e4af83677c7a01c5afdf3a5c351333c87331b5ea02882",
+    "sources/w14-projectile-a-init-static-fire/init.cpp": "7939f9847b0ee231b0465b9552f1bab954b85d0843aa662e475a1bc2ad63175e",
+    "sources/w14-projectile-a-init-type-skeleton/init_type.cpp": "63662c5b4fafaea0a8920e04a2767daa8bf9dbd73285f1a1bd4f4cf2124de6ae",
+    "sources/w14-projectile-a-init-vi-station/init.cpp": "a5e005adcc712805668145c30d3abc2a0ecf2b2c4d91745fc8dc8c02fb55cdb4",
+    "sources/w14-projectile-a-msg-collision-diseasebolt/msg_collision.cpp": "e44ae7efe59a0bbebe5df9b138e7372a7129083ab6c3fd7de59ab9bcf77d7b0a",
+    "sources/w14-projectile-a-msg-collision-poisonprojectile/msg_collision.cpp": "61c98f7f77d51ec0f97bcf055c6a7127aa0209d8af52b6bc65e0cf36cb25434f",
+    "sources/w14-projectile-a-msg-collision-shockoffrost/msg_collision.cpp": "d80a74a881f35a2fd602ff11eb16a50edb8b991eccdc8387e2d4eb4a6f027d1c",
+    "sources/w14-projectile-a-msg-draw-diseasebolt/msg_draw.cpp": "9a3ac75eaa5313564b9f11d9d193393c9f2dba16ff217a0e81e76f474c372735",
+    "sources/w14-projectile-a-msg-draw-firebombletjr/msg_draw.cpp": "85abc384c46bf106f8221fee40f90a3d7832498c75e16b43bf9212a2f2eed5f0",
+    "sources/w14-projectile-a-msg-draw-froststormspell/msg_draw.cpp": "4764dc839d73eaa58f80a96823a788b1f8121abb15038f900606797ea15cd004",
+    "sources/w14-projectile-a-msg-draw-hateprojectile/msg_draw.cpp": "59f891eceda6193ffed8e2412ce2bdf5dfaeddee7c06d604437a688a1197d9fb",
+    "sources/w14-projectile-a-msg-draw-poisongasspell/msg_draw.cpp": "ac2fa8b3ac213d9a6e22e69be0a53e0c51902236280272f614e2f4cda03c4bff",
+    "sources/w14-projectile-a-msg-draw-shockoffrost/msg_draw.cpp": "e7010e05d4e4abd2dfc84b86d067de9bc48682c206a81c55c969d61315a01aa9",
+    "sources/w14-projectile-a-msg-draw-shockprojectile/msg_draw.cpp": "87cddba26086cb5917415cbafb66dc89453d00cb6ad1fdd8854a31530d67fba2",
+    "sources/w14-projectile-a-vi-coll-buffer-clear/clear.cpp": "fe4bcb217a0e75ff4878445556822bf4ec03276831c9b3cf50d52b0914ddfe21",
     "sources/w14-raster-actorfilter-init/init.cpp": "12cddccb2486cb65dfd55feb3ff206dcaa5af4feb187c2ece3d48f9764e7aa92",
     "sources/w14-raster-atmosphere-recomputelightningpatches/recompute.cpp": "29472ad1f5143880bd94314b5f5f39f18bb5913d91aff8be39923ad5d8d59ed0",
     "sources/w14-raster-bbox-bound/bound.cpp": "8db48776aed726e46cb18d3593245214f2e0fa49b9589ca1222b3afbea32d3bc",
@@ -99585,6 +99613,452 @@
           "compiled_body_bytes": 88
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6713,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_clone_firebombletjr.o",
+      "profile": "authored_cpp",
+      "sha256": "34ba99825c7a17e170640494172d40e59052629225f2457e00f3b5c69f854a60",
+      "source": "sources/w14-projectile-a-clone-firebombletjr/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__13FireBombletJr",
+          "compiled_body_bytes": 344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6714,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_clone_shockprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "27c24e8dc5fc8321e16c2e8876b8404c9af01e97839232a5a26380925705fc20",
+      "source": "sources/w14-projectile-a-clone-shockprojectile/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__15ShockProjectile",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6715,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_blindinglighteffect.o",
+      "profile": "authored_cpp",
+      "sha256": "62d69386a1b3a605c84afce23bbca7faeaa1f2d5ed31667b0c7a8eb5855d24cc",
+      "source": "sources/w14-projectile-a-ctor-blindinglighteffect/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__19BlindingLightEffectG6Point3iP8CreatureP5Skill",
+          "compiled_body_bytes": 832
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6716,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_darknessprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "e1cdc055568ccbd7e5abf7c42979a84ee3524c42c686757021aaf17178bebb28",
+      "source": "sources/w14-projectile-a-ctor-darknessprojectile/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__18DarknessProjectileG6Point3T1P5SkilliP10GameObject",
+          "compiled_body_bytes": 472
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6717,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_glowingshaft.o",
+      "profile": "authored_cpp",
+      "sha256": "a58b896e10acee0d408eb38782e4019231383fb88bf33a639901ec8aeb031193",
+      "source": "sources/w14-projectile-a-ctor-glowingshaft/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12GlowingShaftG6Point3iiii",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6718,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_hammerofwrath.o",
+      "profile": "authored_cpp",
+      "sha256": "61523e38437727461bcaada745509db5aedb780113d82fddd2b97441396c24d1",
+      "source": "sources/w14-projectile-a-ctor-hammerofwrath/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13HammerOfWrathG6Point3sP10GameObjectiP5Skill",
+          "compiled_body_bytes": 460
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6719,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_holybolt.o",
+      "profile": "authored_cpp",
+      "sha256": "64198eaad7ce580c150450287cd724e13386f033b5b749461a3e92a19e3dd0ff",
+      "source": "sources/w14-projectile-a-ctor-holybolt/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__8HolyBoltG6Point3iiP8CreatureP5Skill",
+          "compiled_body_bytes": 1192
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6720,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_holystrike.o",
+      "profile": "authored_cpp",
+      "sha256": "dc2822da3ce8571301b82265b2f570ba9a430e0ffa029bd5b29b40e5b976d880",
+      "source": "sources/w14-projectile-a-ctor-holystrike/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__10HolyStrikesiG6Point3P10GameObjectP5Skill",
+          "compiled_body_bytes": 412
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6721,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_lostsoul.o",
+      "profile": "authored_cpp",
+      "sha256": "6fd6bd19a683a99ed3008a56948cc91719c0e2e95b0da2ff12bb037b42065d78",
+      "source": "sources/w14-projectile-a-ctor-lostsoul/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__8LostSoulG6Point3T1iP10_vagHeaderii",
+          "compiled_body_bytes": 476
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6722,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_prop_model.o",
+      "profile": "authored_cpp",
+      "sha256": "4f53b3363c2a2cf7de6fee874a3f7115e2dafb3906dec7759b6a88874c318479",
+      "source": "sources/w14-projectile-a-ctor-prop-model/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__4PropG6Point3P12_modelHeaderP8_textureli",
+          "compiled_body_bytes": 448
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6723,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_ctor_skelight.o",
+      "profile": "authored_cpp",
+      "sha256": "e277e6448f2f0bb3d6a6525dfbb8f3f39434992a820db1d3ab8a370490dc15a1",
+      "source": "sources/w14-projectile-a-ctor-skelight/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__8SkelightG6Point3sPPcci",
+          "compiled_body_bytes": 652
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6724,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_fx_run_ball_lightning.o",
+      "profile": "authored_cpp",
+      "sha256": "7204e67a36d325f27958d108fa8795e3bc881eb1628c123b31bd50bad0bb639d",
+      "source": "sources/w14-projectile-a-fx-run-ball-lightning/fx_run.cpp",
+      "emitted_functions": [
+        {
+          "name": "fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6725,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_game_radial_damage.o",
+      "profile": "authored_cpp",
+      "sha256": "1ce4904ba212d47d912e4af83677c7a01c5afdf3a5c351333c87331b5ea02882",
+      "source": "sources/w14-projectile-a-game-radial-damage/damage.cpp",
+      "emitted_functions": [
+        {
+          "name": "gameRadialDamage__FP10GameObjectG6Point3iffiii",
+          "compiled_body_bytes": 572
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp"
+      ],
+      "input_order": 6726,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_init_static_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "7939f9847b0ee231b0465b9552f1bab954b85d0843aa662e475a1bc2ad63175e",
+      "source": "sources/w14-projectile-a-init-static-fire/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "init__10StaticFire",
+          "compiled_body_bytes": 640
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w9-rtti-vtables-entities-c-bytes/bytes.hpp",
+        "sources/w9-rtti-vtables-entities-c-bytes/weapon_slot.hpp"
+      ],
+      "input_order": 6727,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_init_type_skeleton.o",
+      "profile": "authored_cpp",
+      "sha256": "63662c5b4fafaea0a8920e04a2767daa8bf9dbd73285f1a1bd4f4cf2124de6ae",
+      "source": "sources/w14-projectile-a-init-type-skeleton/init_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "initType__8Skeletonb",
+          "compiled_body_bytes": 1488
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6728,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_init_vi_station.o",
+      "profile": "authored_cpp",
+      "sha256": "a5e005adcc712805668145c30d3abc2a0ecf2b2c4d91745fc8dc8c02fb55cdb4",
+      "source": "sources/w14-projectile-a-init-vi-station/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__9VIStationiPCcPcT3T2T2i",
+          "compiled_body_bytes": 1192
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6729,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_collision_diseasebolt.o",
+      "profile": "authored_cpp",
+      "sha256": "e44ae7efe59a0bbebe5df9b138e7372a7129083ab6c3fd7de59ab9bcf77d7b0a",
+      "source": "sources/w14-projectile-a-msg-collision-diseasebolt/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__11DiseaseBoltP10GameObject",
+          "compiled_body_bytes": 480
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6730,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_collision_poisonprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "61c98f7f77d51ec0f97bcf055c6a7127aa0209d8af52b6bc65e0cf36cb25434f",
+      "source": "sources/w14-projectile-a-msg-collision-poisonprojectile/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__16PoisonProjectileP10GameObject",
+          "compiled_body_bytes": 300
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6731,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_collision_shockoffrost.o",
+      "profile": "authored_cpp",
+      "sha256": "d80a74a881f35a2fd602ff11eb16a50edb8b991eccdc8387e2d4eb4a6f027d1c",
+      "source": "sources/w14-projectile-a-msg-collision-shockoffrost/msg_collision.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_collision__12ShockOfFrostP10GameObject",
+          "compiled_body_bytes": 524
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w12-actor-spell-c-common/access.hpp"
+      ],
+      "input_order": 6732,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_diseasebolt.o",
+      "profile": "authored_cpp",
+      "sha256": "9a3ac75eaa5313564b9f11d9d193393c9f2dba16ff217a0e81e76f474c372735",
+      "source": "sources/w14-projectile-a-msg-draw-diseasebolt/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__11DiseaseBolt",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w14-projectile-a-common/access.hpp"
+      ],
+      "input_order": 6733,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_firebombletjr.o",
+      "profile": "authored_cpp",
+      "sha256": "85abc384c46bf106f8221fee40f90a3d7832498c75e16b43bf9212a2f2eed5f0",
+      "source": "sources/w14-projectile-a-msg-draw-firebombletjr/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__13FireBombletJr",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6734,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_froststormspell.o",
+      "profile": "authored_cpp",
+      "sha256": "4764dc839d73eaa58f80a96823a788b1f8121abb15038f900606797ea15cd004",
+      "source": "sources/w14-projectile-a-msg-draw-froststormspell/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__15FrostStormSpell",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w12-actor-spell-c-common/access.hpp"
+      ],
+      "input_order": 6735,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_hateprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "59f891eceda6193ffed8e2412ce2bdf5dfaeddee7c06d604437a688a1197d9fb",
+      "source": "sources/w14-projectile-a-msg-draw-hateprojectile/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14HateProjectile",
+          "compiled_body_bytes": 308
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6736,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_poisongasspell.o",
+      "profile": "authored_cpp",
+      "sha256": "ac2fa8b3ac213d9a6e22e69be0a53e0c51902236280272f614e2f4cda03c4bff",
+      "source": "sources/w14-projectile-a-msg-draw-poisongasspell/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__14poisonGasSpell",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w12-actor-spell-c-common/access.hpp"
+      ],
+      "input_order": 6737,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_shockoffrost.o",
+      "profile": "authored_cpp",
+      "sha256": "e7010e05d4e4abd2dfc84b86d067de9bc48682c206a81c55c969d61315a01aa9",
+      "source": "sources/w14-projectile-a-msg-draw-shockoffrost/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__12ShockOfFrost",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w12-actor-spell-c-common/access.hpp"
+      ],
+      "input_order": 6738,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_msg_draw_shockprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "87cddba26086cb5917415cbafb66dc89453d00cb6ad1fdd8854a31530d67fba2",
+      "source": "sources/w14-projectile-a-msg-draw-shockprojectile/msg_draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "msg_draw__15ShockProjectile",
+          "compiled_body_bytes": 308
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6739,
+      "kind": "independently_authored_source",
+      "object_name": "w14_projectile_a_vi_coll_buffer_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "fe4bcb217a0e75ff4878445556822bf4ec03276831c9b3cf50d52b0914ddfe21",
+      "source": "sources/w14-projectile-a-vi-coll-buffer-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__12VICollBuffer",
+          "compiled_body_bytes": 172
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -99684,7 +100158,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "bc048c1c3f49030ee2f919da012bcc91251958f7ad882ad865e4b2460116b11c",
+  "snapshot_sha256": "0d91ca4957309142157b24d30aa5e939e04dc8ed06e1001b1e537c4e62a42d07",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

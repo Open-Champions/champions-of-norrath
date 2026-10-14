@@ -10153,3 +10153,19 @@ Closed: `Pick__11VILODSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`
 
 Opened: `CalcLODLevelIndex__9VIHSpriteR13VIPickSegmentR8VIRaster`, `Contains__C6VIBBoxRC7VIVect3`, `Erase__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Insert__t10VIMultiMap2ZfZ14VIEmitterEntryRCfRC14VIEmitterEntry`, `PickPrimBuffer__8VIRasterR13VIPickSegmentii`, `PickPrimBuffer__8VIRasterR13VIPickSegmentiii`, `PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri`, `QueryEmitters__6VIZoneR23VISceneEmitterQueryVars`, `QueryIntersection__7VIWorldiR20VISceneIntersectVars`, `QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi`, `Size__Ct10VIMultiMap2ZfZ14VIEmitterEntry`
 - 2026-10-13 20:56 CDT — agents/w14-sprite-pick — 920 unresolved imports
+
+## agents/w14-projectile-a
+
+Merged (merge commit, branch tip `61eb0a17`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 27 units (27 emitting functions, the rest data or type-info units) with fresh `input_order` values 6713 through 6739, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 920 |
+| After | 909 |
+| Closed | 27 |
+| Opened | 16 |
+
+Closed: `Clear__12VICollBuffer`, `Init__9VIStationiPCcPcT3T2T2i`, `__10HolyStrikesiG6Point3P10GameObjectP5Skill`, `__12GlowingShaftG6Point3iiii`, `__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`, `__18DarknessProjectileG6Point3T1P5SkilliP10GameObject`, `__19BlindingLightEffectG6Point3iP8CreatureP5Skill`, `__4PropG6Point3P12_modelHeaderP8_textureli`, `__8HolyBoltG6Point3iiP8CreatureP5Skill`, `__8LostSoulG6Point3T1iP10_vagHeaderii`, `__8SkelightG6Point3sPPcci`, `clone__13FireBombletJr`, `clone__15ShockProjectile`, `fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii`, `gameRadialDamage__FP10GameObjectG6Point3iffiii`, `initType__8Skeletonb`, `init__10StaticFire`, `msg_collision__11DiseaseBoltP10GameObject`, `msg_collision__12ShockOfFrostP10GameObject`, `msg_collision__16PoisonProjectileP10GameObject`, `msg_draw__11DiseaseBolt`, `msg_draw__12ShockOfFrost`, `msg_draw__13FireBombletJr`, `msg_draw__14HateProjectile`, `msg_draw__14poisonGasSpell`, `msg_draw__15FrostStormSpell`, `msg_draw__15ShockProjectile`
+
+Opened: `Init__20VIWndGenericRenderer`, `SetPassword__20VIWndGenericRendererPCc`, `SetStationName__20VIWndGenericRendererPCc`, `SetText__9VIWndEulaPCUsi`, `__18SpellBlindingLightiP8CreatureT2P5Skill`, `_vt$10HolyStrike`, `_vt$12GlowingShaft`, `_vt$13HammerOfWrath`, `_vt$18DarknessProjectile`, `_vt$19BlindingLightEffect`, `_vt$8HolyBolt`, `_vt$8LostSoul`, `_vt$8Skelight`, `initWeapon__8Skelight`, `lightGetAmbient__FPs`, `skelightResourceMap`
+- 2026-10-13 21:02 CDT — agents/w14-projectile-a — 909 unresolved imports
