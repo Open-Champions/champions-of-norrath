@@ -10100,3 +10100,19 @@ Closed: `_$_11VILODSprite`, `_$_11VILightning`, `_$_12VINameSprite`, `_$_12VIPoi
 
 Opened: `Clear__9VICSprite`, `Clear__9VIHSprite`, `Collide__8VIEnvRayUifR7VIVect3`, `Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FilterActor__13VIActorFilterR7VIScenei`, `FilterActor__13VISceneFilterR7VIScenei`, `Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi`, `Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `_$_14VIEffectVolume`, `_$_19__builtin_type_info`, `_$_8VISprite`, `_$_t6VIPool1Z13VIHSpritePlay`, `_$_t6VIPool1Z17VIHSpritePlayNode`, `_$_t6VIPool1Z19VIHSpriteAttachment`, `_$_t7VIArray1Z16VIHSpriteTrigger`, `_$_t7VIArray1Z20VICSpritePartEmitter`, `_$_t8VIVector1Z10VIMatrix44`, `_$_t8VIVector1Z13VIHSpriteNode`, `__tf13VIActorFilter`, `__tf19__builtin_type_info`, `__tf8VIEnvRay`, `__tf8VISprite`, `__ti8VISprite`
 - 2026-10-13 20:39 CDT — agents/w14-m-sprite-dtors — 941 unresolved imports
+
+## agents/w14-sound
+
+Merged (merge commit, branch tip `1960b23f`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 20 units (20 emitting functions, the rest data or type-info units) with fresh `input_order` values 6640 through 6659, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 941 |
+| After | 930 |
+| Closed | 20 |
+| Opened | 9 |
+
+Closed: `AllocateChannels__13VISoundDeviceii`, `AsWave__7VISound`, `AsXm__7VISound`, `BeginAdpcmTransfer__13VISoundDevicePPvUiiPi`, `BeginXmTransfer__13VISoundDevicePPvUiUiiPi`, `ChannelCount__C4VIXm`, `ChannelCount__C6VIWave`, `FirstChannel__13VISoundDeviceUl`, `IdleTransfer__13VISoundDevice`, `NewPlayback__13VISoundDevice`, `NextChannel__13VISoundDeviceUli`, `Play__13VIBattleMusici`, `Process__13VIBattleMusic`, `ReleaseSound__13VISoundDeviceiR12VIDictionary`, `Reset__13VISoundDevice`, `SampleRate__C6VIWave`, `SetSoundClassVolume__13VISoundDevice12VISOUNDCLASSf`, `StopNow__13VIBattleMusic`, `Stop__13VIBattleMusicb`, `Type__C7VISound`
+
+Opened: `BgmBufferSize__13VISoundDevice`, `ChannelCount__13VISoundDeviceUl`, `FirstPlayback__13VISoundDevice`, `FreeSpuMem__13VISoundDeviceUii`, `NextPlayback__13VISoundDeviceP10VIPlayback`, `Preload__13VIBattleMusici`, `Sound__13VISoundDevicei`, `StopAllBgm__13VISoundDevice`, `norrath_overlay_sRecv_11edd00`
+- 2026-10-13 20:44 CDT — agents/w14-sound — 930 unresolved imports
