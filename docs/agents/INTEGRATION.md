@@ -10312,3 +10312,20 @@ Opened: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `DrawProgress__10VIUIWindow
 
 Full partial build: 6909 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:08 CDT — agents/w15-fe-mcerr-a — 849 unresolved imports
+
+## agents/w15-m-data-a
+
+Merged (merge commit; tip over an hour old, notes complete). Three data units, each with a `host_check.cpp`; all selected. They define data symbols only (no functions).
+
+| | |
+|---|---|
+| Before | 849 |
+| After | 846 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `dynlevelcount`, `kittencount`, `levsuffix`
+
+Opened: 
+
+Full partial build: 6912 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

@@ -89457,6 +89457,33 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-fe-mcerr-a-renderer-setstationname/setstationname.cpp"
+    },
+    {
+      "input_order": 6911,
+      "component": "w15-m-data-a-dynlevelcount",
+      "object_name": "w15_m_data_a_dynlevelcount.o",
+      "private_object_sha256": "ebe50798d5efe3abc4a6c4f9468aee8191201f6324aafc773a6fd21866551d83",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-data-a-dynlevelcount/dynlevelcount.cpp"
+    },
+    {
+      "input_order": 6912,
+      "component": "w15-m-data-a-kittencount",
+      "object_name": "w15_m_data_a_kittencount.o",
+      "private_object_sha256": "b68ab3d852cd05ee3e46e3f5077b0f0dd151106d2f48c884d76885636d6431e4",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-data-a-kittencount/kittencount.cpp"
+    },
+    {
+      "input_order": 6913,
+      "component": "w15-m-data-a-levsuffix",
+      "object_name": "w15_m_data_a_levsuffix.o",
+      "private_object_sha256": "ed3235e7105329f81254e2e1f26bfef165edfaa19dabd41a7d4e901e428e77b5",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-data-a-levsuffix/levsuffix.cpp"
     }
   ],
   "drafts": [
@@ -103996,7 +104023,13 @@
     "sources/w15-fe-mcerr-a-renderer-setpassword/host_check.cpp": "3046173f93d315add2c98eb7efc54bcc0630ae5b2145beacc327c20be0612997",
     "sources/w15-fe-mcerr-a-renderer-setpassword/setpassword.cpp": "52cecb21221d2aa87650c6caa8fafe9d3add677e10ffd95b7e6069d5a450410c",
     "sources/w15-fe-mcerr-a-renderer-setstationname/host_check.cpp": "593fb0afeb527edd884ae31dd0b313d783d2eeb0e78987e7277e939fb303c383",
-    "sources/w15-fe-mcerr-a-renderer-setstationname/setstationname.cpp": "ab43d6226f2a2a94f8721ef98a4b3b10b4fd9afe9723ff259f3502a164ba8a47"
+    "sources/w15-fe-mcerr-a-renderer-setstationname/setstationname.cpp": "ab43d6226f2a2a94f8721ef98a4b3b10b4fd9afe9723ff259f3502a164ba8a47",
+    "sources/w15-m-data-a-dynlevelcount/dynlevelcount.cpp": "3109cc87cbaf5b91fe94c98fa45fdc7a5fac0efe691272d76c4da9024dabcb90",
+    "sources/w15-m-data-a-dynlevelcount/host_check.cpp": "400568a6a8fb9793a0ded4a41719ee2664891b5baedf04264e5a5800268bff94",
+    "sources/w15-m-data-a-kittencount/host_check.cpp": "023a7d8e7daed1cb0239f73ec49db35e0c42e3fac99dd7577edb81e0bb847f00",
+    "sources/w15-m-data-a-kittencount/kittencount.cpp": "eeb8f12c2c72f6ffca79f687f4695f42d83a6788cba16fe34bc238430eea0bb3",
+    "sources/w15-m-data-a-levsuffix/host_check.cpp": "967c43209558fca8e84a2371b08de7efb690e0b260bb69421960d69a01cb237f",
+    "sources/w15-m-data-a-levsuffix/levsuffix.cpp": "d23a851b0d36be731fe0598661124283976daa33f887fdb9c63b5e538d79c174"
   },
   "additional_implementations": [
     {
@@ -104438,8 +104471,8 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6911,
-    "authored_default_inputs": 6909,
+    "selected_inputs": 6914,
+    "authored_default_inputs": 6912,
     "optional_external_inputs": 2,
     "emitted_function_definitions_including_helpers": 5514,
     "compiled_body_bytes_from_accepted_inputs": 2204488,
@@ -104455,7 +104488,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6598
+    "package_selected_inputs": 6601
   },
   "startup_implementations": [
     {
@@ -209210,6 +209243,42 @@
       ],
       "host_files": [
         "sources/w15-fe-mcerr-a-renderer-setstationname/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-data-a",
+      "source": "sources/w15-m-data-a-dynlevelcount/dynlevelcount.cpp",
+      "source_sha256": "3109cc87cbaf5b91fe94c98fa45fdc7a5fac0efe691272d76c4da9024dabcb90",
+      "object_sha256": "ebe50798d5efe3abc4a6c4f9468aee8191201f6324aafc773a6fd21866551d83",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-m-data-a-dynlevelcount/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-data-a",
+      "source": "sources/w15-m-data-a-kittencount/kittencount.cpp",
+      "source_sha256": "eeb8f12c2c72f6ffca79f687f4695f42d83a6788cba16fe34bc238430eea0bb3",
+      "object_sha256": "b68ab3d852cd05ee3e46e3f5077b0f0dd151106d2f48c884d76885636d6431e4",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-m-data-a-kittencount/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-data-a",
+      "source": "sources/w15-m-data-a-levsuffix/levsuffix.cpp",
+      "source_sha256": "d23a851b0d36be731fe0598661124283976daa33f887fdb9c63b5e538d79c174",
+      "object_sha256": "ed3235e7105329f81254e2e1f26bfef165edfaa19dabd41a7d4e901e428e77b5",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-m-data-a-levsuffix/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

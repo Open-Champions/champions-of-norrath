@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6909,
+  "default_authored_inputs": 6912,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7700,7 +7700,10 @@
     "sources/w15-fe-mcerr-a-message-setup/setup.cpp": "d39bf03163555b007590b3b509196f7d8078a6cd13856250d02c56f4e304df91",
     "sources/w15-fe-mcerr-a-renderer-init/init.cpp": "ca6afdc30f15c6cee9d64ac58e916101037d85ccfc3d413f90f6204f03f4d84c",
     "sources/w15-fe-mcerr-a-renderer-setpassword/setpassword.cpp": "52cecb21221d2aa87650c6caa8fafe9d3add677e10ffd95b7e6069d5a450410c",
-    "sources/w15-fe-mcerr-a-renderer-setstationname/setstationname.cpp": "ab43d6226f2a2a94f8721ef98a4b3b10b4fd9afe9723ff259f3502a164ba8a47"
+    "sources/w15-fe-mcerr-a-renderer-setstationname/setstationname.cpp": "ab43d6226f2a2a94f8721ef98a4b3b10b4fd9afe9723ff259f3502a164ba8a47",
+    "sources/w15-m-data-a-dynlevelcount/dynlevelcount.cpp": "3109cc87cbaf5b91fe94c98fa45fdc7a5fac0efe691272d76c4da9024dabcb90",
+    "sources/w15-m-data-a-kittencount/kittencount.cpp": "eeb8f12c2c72f6ffca79f687f4695f42d83a6788cba16fe34bc238430eea0bb3",
+    "sources/w15-m-data-a-levsuffix/levsuffix.cpp": "d23a851b0d36be731fe0598661124283976daa33f887fdb9c63b5e538d79c174"
   },
   "inputs": [
     {
@@ -102792,6 +102795,36 @@
           "compiled_body_bytes": 28
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6911,
+      "kind": "independently_authored_source",
+      "object_name": "w15_m_data_a_dynlevelcount.o",
+      "profile": "authored_cpp",
+      "sha256": "3109cc87cbaf5b91fe94c98fa45fdc7a5fac0efe691272d76c4da9024dabcb90",
+      "source": "sources/w15-m-data-a-dynlevelcount/dynlevelcount.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6912,
+      "kind": "independently_authored_source",
+      "object_name": "w15_m_data_a_kittencount.o",
+      "profile": "authored_cpp",
+      "sha256": "eeb8f12c2c72f6ffca79f687f4695f42d83a6788cba16fe34bc238430eea0bb3",
+      "source": "sources/w15-m-data-a-kittencount/kittencount.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6913,
+      "kind": "independently_authored_source",
+      "object_name": "w15_m_data_a_levsuffix.o",
+      "profile": "authored_cpp",
+      "sha256": "d23a851b0d36be731fe0598661124283976daa33f887fdb9c63b5e538d79c174",
+      "source": "sources/w15-m-data-a-levsuffix/levsuffix.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -102891,7 +102924,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "1129aeee8879cd2f486f6b5b98c899db85bcb2b7983a9e3a3200c280febdac4e",
+  "snapshot_sha256": "7cb4d75ae09988283c28fcdf07a1f6dd1134730c2ba53b0a9571d530d6bb00ac",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
