@@ -10197,3 +10197,10 @@ Shared branch at `ea696455`: 214 tool tests pass, the snapshot check passes (676
 
 Remaining unmerged `origin/agents/*` branches, all at the tips already recorded above and unchanged since their rejection: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`, `w9-render-math-a`. Each lacks committed checks for some or all units; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches and were left alone.
 - 2026-10-13 21:30 CDT — re-verification, no branches merged — 915 unresolved imports
+
+## Integrator pass (2026-10-13, second replacement)
+
+Shared branch at `761e44cb`: 214 tool tests pass, the snapshot check passes (6763 authored inputs), `--check-plan` is valid, and a fresh full partial build with the repo EE toolchain reproduces the recorded **915** unresolved imports (6763 source compilations, 5384 function bodies, zero COMMON). No repo-rule break found in the last ten entries; no shared-file fixes needed.
+
+Fourteen `origin/agents/*` branches remain unmerged, all at the tips already recorded in their standing rejections: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent` (`5cce4e6e`), `w8-spell-static-init-b`, `w9-render-math-a`. Each still has committed functions with no host check, so none qualifies for a merge; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches.
+- 2026-10-13 CDT — integrator pass, no branches merged — 915 unresolved imports
