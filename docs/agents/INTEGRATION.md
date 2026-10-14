@@ -10384,3 +10384,20 @@ Opened: `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`
 
 Full partial build: 6982 source compilations, one link, 5529 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:35 CDT — agents/w15-m-spell-ctors-a — 928 unresolved imports
+
+## agents/w15-spell-fx-a
+
+Merged (merge commit; tip about 45 minutes old, notes complete). 30 units selected, each with a `host_check.cpp`. `w15-spell-fx-a-common` is a shared header directory (`access.hpp`), not a unit; it is recorded in the snapshot file list only.
+
+| | |
+|---|---|
+| Before | 928 |
+| After | 905 |
+| Closed | 30 |
+| Opened | 7 |
+
+Closed: `CreateSpellEffect__19VISpellEffectSystemi`, `Create__13VISpellEffectP7VIScene`, `Create__16VISpellEventListiP7VIScene`, `SpellEffect__19VISpellEffectSystemi`, `bounce__13FireBombletJr`, `buildShockChainList__14HateProjectileP6Point3`, `buildShockChainList__15ShockProjectileP6Point3`, `diseaseshield_run_particle_8d69b0`, `diseaseshield_run_particle_8d6a00`, `disintoInnoruukParticle`, `dustcloud_msg_run_particle_7d69c0`, `explode_arrow_msg_run_particle_8d7090`, `fxflyingfire_particle_7d6830`, `fxflyingfire_particle_7d6880`, `fxflyingfire_particle_7d68d0`, `fxflyingfire_particle_7d6920`, `hitParticleDust2`, `holyshield_particle_8d7720`, `hornomen_run_particle_8d8650`, `iceSwordParticle`, `initWeapon__8Skelight`, `lampParticle`, `lavaGoopParticle`, `lavaSteamParticle`, `msg_draw__14FireStormFlare`, `msg_run__14FireStormFlare`, `multifire_msg_run_particle_8d7040`, `newFlameSwordParticle1`, `run__18SpellHammerOfWrathG6Point3s`, `run__19SpellSummonSkeletonG6Point3s`
+
+Opened: `Add__t6VIPool1ZP13VISpellEffectRCP13VISpellEffect`, `__13VISpellEffect`, `alreadyChained__14HateProjectileP10GameObject`, `alreadyChained__15ShockProjectileP10GameObject`, `firestormParticle1`, `firestormParticle2`, `firestormParticle3`
+
+Full partial build: 7012 source compilations, one link, 5541 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
