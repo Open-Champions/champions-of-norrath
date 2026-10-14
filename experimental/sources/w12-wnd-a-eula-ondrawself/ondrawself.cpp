@@ -19,6 +19,12 @@
 // key-repeat countdown whose direction is the word at this+9760 (see OnKeyDown__9VIWndEula).
 // Unknown: the buffers' true capacity (the original frame reserves 512 bytes then 1024), the meaning of "|c",
 // the type behind the colour argument, and whether 1556 counts rows or records.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 void ResetTickPulse__10VIUIWindow(void* window);
@@ -41,7 +47,7 @@ static inline int& word(void* base, int offset) {
 
 void OnDrawSelf__9VIWndEula(void* self) {
     unsigned char* bytes = static_cast<unsigned char*>(self);
-    void* ui = reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(_5VIWnd$mUI));
+    void* ui = reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(_5VIWnd$mUI));
     void* window = bytes + 40;
     if (word(self, 9764) != 0) ResetTickPulse__10VIUIWindow(window);
     if (word(self, 1548) != 0) {
@@ -67,7 +73,7 @@ void OnDrawSelf__9VIWndEula(void* self) {
     for (;;) {
         unsigned char* record = bytes + 1560 + 8 * (word(self, 1556) + row);
         const unsigned short* text = reinterpret_cast<const unsigned short*>(
-            static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(record)));
+            NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(record)));
         if (text == 0) break;
         const int length = *reinterpret_cast<short*>(record + 4);
         strcpy16__8VIStringPUsUiPCUs(line, static_cast<unsigned>(length) * 2, text);
