@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7327,
+  "default_authored_inputs": 7349,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8121,7 +8121,29 @@
     "sources/w9-render-math-a-data/dummy_list.cpp": "3c91fe1eacd5b6a551cfa03f186f4be25543532d47a725f881b52cac2501346a",
     "sources/w9-render-math-a-data/fade_down_val.cpp": "2baa53a0910298e62d8d5fa1f016026880e281ce563dffdcf69bbadaf9424fce",
     "sources/w9-render-math-a-data/hvecs.cpp": "db6a74818213e08d8131f813b77d9a96f0f53b52df0bc9a9c828919ee0b53ea4",
-    "sources/w9-render-math-a-data/light_mats.cpp": "0bb6fcc64a2e2fc5318163c60d9c4d1dd8b62dc945bf350a876f532185fc298d"
+    "sources/w9-render-math-a-data/light_mats.cpp": "0bb6fcc64a2e2fc5318163c60d9c4d1dd8b62dc945bf350a876f532185fc298d",
+    "sources/w16-m-data-a-sound-bgm-version/bgm_version.cpp": "b80e8235153f71b5cc5d2da3bee0003756664d432b35cc3ce043b5026a50c554",
+    "sources/w16-m-data-a-tf-10frostshard/typeinfo.cpp": "3ad59b4fb14a1cf020fc5d6d7bb5c98257b388c5660110f253d2f63a05169887",
+    "sources/w16-m-data-a-tf-10holystrike/typeinfo.cpp": "11c4ced846b4101c841d0369bd2271f19911c0d00ea2a5a9460e8b6e01da5266",
+    "sources/w16-m-data-a-tf-10viresource/typeinfo.cpp": "998ea7a9c0074442f2cb2e0d516bd7b98ef31c636fe8d430e9ff97f5452d3970",
+    "sources/w16-m-data-a-tf-12glowingshaft/typeinfo.cpp": "1cd6adc7c1b1a8704711923af9eecf6f222347f546dcee9d0bcc47a693cceb00",
+    "sources/w16-m-data-a-tf-12spellhealing/typeinfo.cpp": "662fd902f4c5903d860bb896211b508bbeaef20bbfeb94cd83a333e6297b9305",
+    "sources/w16-m-data-a-tf-13hammerofwrath/typeinfo.cpp": "7fe854c21dc69a0eb664cf53f02007b3f43e9fca72b8becfba209b3624950867",
+    "sources/w16-m-data-a-tf-13spellentangle/typeinfo.cpp": "da3daa30ee8c5b45e63a936ae48b25dc4834f61c9e5b29fde71384076f0db62b",
+    "sources/w16-m-data-a-tf-15spellclericroot/typeinfo.cpp": "9e3d0937231d7186847f0df24cf85cc3eff68251edc90ac8254ba9e6e00e21cf",
+    "sources/w16-m-data-a-tf-16spellconeoffrost/typeinfo.cpp": "39bfa75a7ee20dbd65a459cdddea5c49d617e37bc8db9940fa7914f48358fd3c",
+    "sources/w16-m-data-a-tf-16virealminterface/typeinfo.cpp": "e5042f96980ee79d347309f0b15fc8eac11cabf39d61efe4f733a6c90db176f1",
+    "sources/w16-m-data-a-tf-17spellminorhealing/typeinfo.cpp": "d32f8029f2106d058c361cc822972e6572629d9daf0d23d36ac837477c73eefa",
+    "sources/w16-m-data-a-tf-18darknessprojectile/typeinfo.cpp": "c0d8b34c1fc03ec94818bd7452b6a8b42387a64a2995c9dc0aa093a8598cf1fe",
+    "sources/w16-m-data-a-tf-18froststormiceshard/typeinfo.cpp": "9b04e3e31bc28a5aa463dc0d636095d2c7728d3df3a9fdea3a044dcadb9e8649",
+    "sources/w16-m-data-a-tf-19blindinglighteffect/typeinfo.cpp": "7100b561abb6b654abe78539b09e01e1ea5294d1296c589d0a59e678dbc6c287",
+    "sources/w16-m-data-a-tf-19viflatfiledirectory/typeinfo.cpp": "3c0e9dd56a129c74c0aaf2489eea3db729693636ecbd17f3c7ea303c36dbe6ae",
+    "sources/w16-m-data-a-tf-8holybolt/typeinfo.cpp": "e5e91f0565222b435a59f4ffa2447581f6e94499346950d97e91402b9e6c4c99",
+    "sources/w16-m-data-a-tf-8lostsoul/typeinfo.cpp": "a6e1a04d29ec7fe29130891ef8ca19919c2092315d74ee11c1c0b3da54a4914f",
+    "sources/w16-m-data-a-tf-9exception/typeinfo.cpp": "7a3e24b516ee8245cce7cd6b20d0c8032f0755ad9e5cdcf74f958212781a3839",
+    "sources/w16-m-data-a-ti-10viresource/typeinfo_node.cpp": "6dd38d48851e906e1e79aef23daabe8e810dc83cf819cb40bbbdeee25dbec93d",
+    "sources/w16-m-data-a-ti-9exception/typeinfo_node.cpp": "279f2a65a8f348f957b415e6017f5e8b108c77067daaa2f0fc006caa0fda404a",
+    "sources/w16-m-data-a-vi-eesurfcache-key/surface_cache_key.cpp": "61673bfeff4dbb851c30dc79097b84c17ed5af9eff4702b93979f4928ce9bbe8"
   },
   "inputs": [
     {
@@ -109041,6 +109063,316 @@
       "sha256": "0bb6fcc64a2e2fc5318163c60d9c4d1dd8b62dc945bf350a876f532185fc298d",
       "source": "sources/w9-render-math-a-data/light_mats.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7329,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_sound_bgm_version.o",
+      "profile": "authored_cpp",
+      "sha256": "b80e8235153f71b5cc5d2da3bee0003756664d432b35cc3ce043b5026a50c554",
+      "source": "sources/w16-m-data-a-sound-bgm-version/bgm_version.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7330,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_10frostshard.o",
+      "profile": "authored_cpp",
+      "sha256": "3ad59b4fb14a1cf020fc5d6d7bb5c98257b388c5660110f253d2f63a05169887",
+      "source": "sources/w16-m-data-a-tf-10frostshard/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10FrostShard",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7331,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_10holystrike.o",
+      "profile": "authored_cpp",
+      "sha256": "11c4ced846b4101c841d0369bd2271f19911c0d00ea2a5a9460e8b6e01da5266",
+      "source": "sources/w16-m-data-a-tf-10holystrike/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10HolyStrike",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7332,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_10viresource.o",
+      "profile": "authored_cpp",
+      "sha256": "998ea7a9c0074442f2cb2e0d516bd7b98ef31c636fe8d430e9ff97f5452d3970",
+      "source": "sources/w16-m-data-a-tf-10viresource/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf10VIResource",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7333,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_12glowingshaft.o",
+      "profile": "authored_cpp",
+      "sha256": "1cd6adc7c1b1a8704711923af9eecf6f222347f546dcee9d0bcc47a693cceb00",
+      "source": "sources/w16-m-data-a-tf-12glowingshaft/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf12GlowingShaft",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7334,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_12spellhealing.o",
+      "profile": "authored_cpp",
+      "sha256": "662fd902f4c5903d860bb896211b508bbeaef20bbfeb94cd83a333e6297b9305",
+      "source": "sources/w16-m-data-a-tf-12spellhealing/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf12SpellHealing",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7335,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_13hammerofwrath.o",
+      "profile": "authored_cpp",
+      "sha256": "7fe854c21dc69a0eb664cf53f02007b3f43e9fca72b8becfba209b3624950867",
+      "source": "sources/w16-m-data-a-tf-13hammerofwrath/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf13HammerOfWrath",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7336,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_13spellentangle.o",
+      "profile": "authored_cpp",
+      "sha256": "da3daa30ee8c5b45e63a936ae48b25dc4834f61c9e5b29fde71384076f0db62b",
+      "source": "sources/w16-m-data-a-tf-13spellentangle/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf13SpellEntangle",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7337,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_15spellclericroot.o",
+      "profile": "authored_cpp",
+      "sha256": "9e3d0937231d7186847f0df24cf85cc3eff68251edc90ac8254ba9e6e00e21cf",
+      "source": "sources/w16-m-data-a-tf-15spellclericroot/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf15SpellClericRoot",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7338,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_16spellconeoffrost.o",
+      "profile": "authored_cpp",
+      "sha256": "39bfa75a7ee20dbd65a459cdddea5c49d617e37bc8db9940fa7914f48358fd3c",
+      "source": "sources/w16-m-data-a-tf-16spellconeoffrost/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf16SpellConeOfFrost",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7339,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_16virealminterface.o",
+      "profile": "authored_cpp",
+      "sha256": "e5042f96980ee79d347309f0b15fc8eac11cabf39d61efe4f733a6c90db176f1",
+      "source": "sources/w16-m-data-a-tf-16virealminterface/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf16VIRealmInterface",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7340,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_17spellminorhealing.o",
+      "profile": "authored_cpp",
+      "sha256": "d32f8029f2106d058c361cc822972e6572629d9daf0d23d36ac837477c73eefa",
+      "source": "sources/w16-m-data-a-tf-17spellminorhealing/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf17SpellMinorHealing",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7341,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_18darknessprojectile.o",
+      "profile": "authored_cpp",
+      "sha256": "c0d8b34c1fc03ec94818bd7452b6a8b42387a64a2995c9dc0aa093a8598cf1fe",
+      "source": "sources/w16-m-data-a-tf-18darknessprojectile/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf18DarknessProjectile",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7342,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_18froststormiceshard.o",
+      "profile": "authored_cpp",
+      "sha256": "9b04e3e31bc28a5aa463dc0d636095d2c7728d3df3a9fdea3a044dcadb9e8649",
+      "source": "sources/w16-m-data-a-tf-18froststormiceshard/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf18FrostStormIceShard",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7343,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_19blindinglighteffect.o",
+      "profile": "authored_cpp",
+      "sha256": "7100b561abb6b654abe78539b09e01e1ea5294d1296c589d0a59e678dbc6c287",
+      "source": "sources/w16-m-data-a-tf-19blindinglighteffect/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf19BlindingLightEffect",
+          "compiled_body_bytes": 92
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7344,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_19viflatfiledirectory.o",
+      "profile": "authored_cpp",
+      "sha256": "3c0e9dd56a129c74c0aaf2489eea3db729693636ecbd17f3c7ea303c36dbe6ae",
+      "source": "sources/w16-m-data-a-tf-19viflatfiledirectory/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf19VIFlatFileDirectory",
+          "compiled_body_bytes": 164
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7345,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_8holybolt.o",
+      "profile": "authored_cpp",
+      "sha256": "e5e91f0565222b435a59f4ffa2447581f6e94499346950d97e91402b9e6c4c99",
+      "source": "sources/w16-m-data-a-tf-8holybolt/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf8HolyBolt",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7346,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_8lostsoul.o",
+      "profile": "authored_cpp",
+      "sha256": "a6e1a04d29ec7fe29130891ef8ca19919c2092315d74ee11c1c0b3da54a4914f",
+      "source": "sources/w16-m-data-a-tf-8lostsoul/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf8LostSoul",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7347,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_tf_9exception.o",
+      "profile": "authored_cpp",
+      "sha256": "7a3e24b516ee8245cce7cd6b20d0c8032f0755ad9e5cdcf74f958212781a3839",
+      "source": "sources/w16-m-data-a-tf-9exception/typeinfo.cpp",
+      "emitted_functions": [
+        {
+          "name": "__tf9exception",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7348,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_ti_10viresource.o",
+      "profile": "authored_cpp",
+      "sha256": "6dd38d48851e906e1e79aef23daabe8e810dc83cf819cb40bbbdeee25dbec93d",
+      "source": "sources/w16-m-data-a-ti-10viresource/typeinfo_node.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7349,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_ti_9exception.o",
+      "profile": "authored_cpp",
+      "sha256": "279f2a65a8f348f957b415e6017f5e8b108c77067daaa2f0fc006caa0fda404a",
+      "source": "sources/w16-m-data-a-ti-9exception/typeinfo_node.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7350,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_a_vi_eesurfcache_key.o",
+      "profile": "authored_cpp",
+      "sha256": "61673bfeff4dbb851c30dc79097b84c17ed5af9eff4702b93979f4928ce9bbe8",
+      "source": "sources/w16-m-data-a-vi-eesurfcache-key/surface_cache_key.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109140,7 +109472,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "fbedb26fdfc9006915a49302bd857fb8c815ae8a617acec4a204f8ab98b56639",
+  "snapshot_sha256": "ae6199a8bfa8b8330af20896aff802fa342137ee4e84da85348d18c73e798947",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

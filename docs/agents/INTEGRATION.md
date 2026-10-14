@@ -10688,3 +10688,23 @@ Re-ran on the shared branch at `caaa2c8c` before any merge: 214 tool tests and t
 
 Re-ran on the shared branch at `5ff11ae1` before any merge: 214 tool tests and the snapshot check pass; the full partial build gives 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduces. Re-checked the nine unmerged worker branches (`w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-vicont-b`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`) against the shared branch: none adds a host check or test file, so the earlier rejections stand and nothing was merged. No repo-rule violation found in recent merges; no shared files needed fixing.
 - 2026-10-14 CDT — third integrator verification, no merges — 841 unresolved imports
+
+## agents/w16-m-data-a
+
+Merged (merge commit). 22 of the 23 plan entries in the notes are selected; each has a committed host check that I rebuilt and ran (22 of 22 exit 0), and I recompiled each unit and checked its function names and sizes against the notes. **Not selected:** `w15-startup-a-link-eh-frame-begin` (the notes' one entry for an existing unit, which closes `__EH_FRAME_BEGIN__`). With it in the plan the relocatable link aborts with a BFD assertion (`elflink.c:9839`); I bisected it alone against the existing objects. `__EH_FRAME_BEGIN__` stays unresolved. No game code was changed. Tip was about 15 minutes old but the notes have the summary sections.
+
+The notes list no opened imports. They are not zero: each type-info getter references its class's `__ti` node, and those nodes are data owned elsewhere. The real count is below.
+
+| | |
+|---|---|
+| Before | 841 |
+| After | 838 |
+| Closed | 22 |
+| Opened | 19 |
+
+Closed: `_13VIEESurfCache$Key`, `_13VISoundDevice$sBgmVersion`, `__tf10FrostShard`, `__tf10HolyStrike`, `__tf10VIResource`, `__tf12GlowingShaft`, `__tf12SpellHealing`, `__tf13HammerOfWrath`, `__tf13SpellEntangle`, `__tf15SpellClericRoot`, `__tf16SpellConeOfFrost`, `__tf16VIRealmInterface`, `__tf17SpellMinorHealing`, `__tf18DarknessProjectile`, `__tf18FrostStormIceShard`, `__tf19BlindingLightEffect`, `__tf19VIFlatFileDirectory`, `__tf8HolyBolt`, `__tf8LostSoul`, `__tf9exception`, `__ti10VIResource`, `__ti9exception`
+
+Opened: `__tfQ212RealmService15RealmGatewayAPI`, `__ti10FrostShard`, `__ti10HolyStrike`, `__ti10VIFlatFile`, `__ti12GlowingShaft`, `__ti12SpellHealing`, `__ti13HammerOfWrath`, `__ti13SpellEntangle`, `__ti15SpellClericRoot`, `__ti16SpellConeOfFrost`, `__ti16VIRealmInterface`, `__ti17SpellMinorHealing`, `__ti18DarknessProjectile`, `__ti18FrostStormIceShard`, `__ti19BlindingLightEffect`, `__ti19VIFlatFileDirectory`, `__ti8HolyBolt`, `__ti8LostSoul`, `__tiQ212RealmService15RealmGatewayAPI`
+
+Full partial build: 7349 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 CDT — agents/w16-m-data-a — 838 unresolved imports
