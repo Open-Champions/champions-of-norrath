@@ -1,4 +1,4 @@
-// Observed: NewCreateSprite__18VISpellEventDriverP12VISpellEvent at 0x0117e830 is 464 bytes in the
+// Observed: NewCreateSprite__18VISpellEventDriverP12VISpellEvent at 0x0117e830 is 468 bytes in the
 // pinned SLUS-20565 image. Arguments: (this, record). Result: -1 in one case, otherwise 0.
 //   1. If the int at this+24 is -1 it returns 0 and does nothing else.
 //   2. a = __builtin_new(184); when non-null it calls __18VISpellActiveEventP12VISpellEventP7VIScene
