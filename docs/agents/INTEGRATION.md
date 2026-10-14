@@ -10169,3 +10169,19 @@ Closed: `Clear__12VICollBuffer`, `Init__9VIStationiPCcPcT3T2T2i`, `__10HolyStrik
 
 Opened: `Init__20VIWndGenericRenderer`, `SetPassword__20VIWndGenericRendererPCc`, `SetStationName__20VIWndGenericRendererPCc`, `SetText__9VIWndEulaPCUsi`, `__18SpellBlindingLightiP8CreatureT2P5Skill`, `_vt$10HolyStrike`, `_vt$12GlowingShaft`, `_vt$13HammerOfWrath`, `_vt$18DarknessProjectile`, `_vt$19BlindingLightEffect`, `_vt$8HolyBolt`, `_vt$8LostSoul`, `_vt$8Skelight`, `initWeapon__8Skelight`, `lightGetAmbient__FPs`, `skelightResourceMap`
 - 2026-10-13 21:02 CDT — agents/w14-projectile-a — 909 unresolved imports
+
+## agents/w14-projectile-b
+
+Merged (merge commit, branch tip `a81b8cb1`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 25 units (28 emitting functions, the rest data or type-info units) with fresh `input_order` values 6740 through 6764, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 909 |
+| After | 915 |
+| Closed | 25 |
+| Opened | 31 |
+
+Closed: `msg_draw__16PoisonProjectile`, `msg_draw__16beetleProjectile`, `msg_run__10MummySnake`, `msg_run__10PoisonRain`, `msg_run__10SpawnMummy`, `msg_run__11BoltGoRound`, `msg_run__11DiseaseBolt`, `msg_run__12ShockOfFrost`, `msg_run__13FireBombletJr`, `msg_run__14HateProjectile`, `msg_run__14poisonGasSpell`, `msg_run__15FrostStormSpell`, `msg_run__15ShockProjectile`, `msg_run__16PoisonProjectile`, `msg_run__16beetleProjectile`, `run__14SpellHarmTouchG6Point3s`, `run__15SpellConeOfFireG6Point3s`, `run__5SpellG6Point3s`, `startFractalLine__FP4Boltfi`, `terminate__19ColdArrowProjectilei`, `terminate__19FireArrowProjectilei`, `terminate__19MultiFireProjectilei`, `terminate__21PoisonArrowProjectilei`, `terminate__22ExplodeArrowProjectilei`, `waterStep`
+
+Opened: `__5MummyG6Point3sPPcPc`, `__9LooseFireG6Point3P10GameObject`, `_vt$10FrostShard`, `_vt$18FrostStormIceShard`, `bounce__13FireBombletJr`, `buildShockChainList__14HateProjectileP6Point3`, `buildShockChainList__15ShockProjectileP6Point3`, `norrath_w13_spell_msg_a_view_7d6970`, `norrath_w13_spell_msg_a_view_7d6a10`, `norrath_w13_spell_msg_a_view_7d6a60`, `norrath_w13_spell_msg_a_view_7d6b00`, `norrath_w13_spell_msg_a_view_7d6fc0`, `norrath_w13_spell_msg_a_view_7d7010`, `norrath_w13_spell_msg_a_view_7d7260`, `norrath_w13_spell_msg_a_view_7d72b0`, `norrath_w13_spell_msg_a_view_7d7300`, `norrath_w13_spell_msg_a_view_8d6320`, `norrath_w13_spell_msg_a_view_8d6370`, `norrath_w13_spell_msg_a_view_8d67d0`, `norrath_w13_spell_msg_a_view_8d6820`, `norrath_w13_spell_msg_a_view_8d6870`, `norrath_w13_spell_msg_a_view_8d7b30`, `norrath_w13_spell_msg_a_view_8d7b80`, `norrath_w13_spell_msg_a_view_8d7bd0`, `norrath_w13_spell_msg_a_view_8d80a0`, `norrath_w13_spell_msg_a_view_8d80f0`, `norrath_w13_spell_msg_a_view_8d8140`, `norrath_w13_spell_msg_a_view_8d8190`, `norrath_w13_spell_msg_a_view_8d81e0`, `pack`, `poisonPoof`
+- 2026-10-13 21:07 CDT — agents/w14-projectile-b — 915 unresolved imports
