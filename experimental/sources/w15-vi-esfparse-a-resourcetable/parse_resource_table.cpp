@@ -10,9 +10,12 @@
 //      Read__9VIObjFileRUi into +8 and into +12 (results ignored);
 //   4. returns -1 when ReadEnd__9VIObjFile is negative, else 0.
 // Inferred: 0x9000 is the resource table tag and each element holds three file-supplied values,
-// presumably an identifier and two more fields; the +4 word is the array's element pointer.
-// Unknown: the element field names, the meaning of the 4 bytes at element +4 (never touched), and
-// the second ReadBegin output (not used).
+// presumably an identifier and two more fields; the +4 word is the array's element pointer. The first
+// value is read through the Ul overload; other code in the image passes an Ul argument loaded as a
+// doubleword (ParseWorldZones), so the EE long is probably 8 bytes and that value fills element
+// bytes +0..+7, which explains the 16-byte element (the build flags here use a 4-byte long, only
+// the pointer is passed, so the compiled call is the same).
+// Unknown: the element field names, and the second ReadBegin output (not used).
 
 // Words that hold 32-bit target addresses: a host check redefines this macro.
 #ifndef NORRATH_WORD_ADDRESS
