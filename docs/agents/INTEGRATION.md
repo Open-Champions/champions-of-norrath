@@ -10383,3 +10383,4 @@ Closed: `_$_13FireBombletJr`, `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, 
 Opened: `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`
 
 Full partial build: 6982 source compilations, one link, 5529 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:35 CDT — agents/w15-m-spell-ctors-a — 928 unresolved imports
