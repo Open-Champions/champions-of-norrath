@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7012,
+  "default_authored_inputs": 7044,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7804,7 +7804,39 @@
     "sources/w15-spell-fx-a-run-spell-hammer-of-wrath/run.cpp": "fb5ca3aa5ebbd5ddfd9bdbc2c7d36248b373806756913d05a8a737cf1874b14c",
     "sources/w15-spell-fx-a-run-spell-summon-skeleton/run.cpp": "8271f20a7adca096d2e5ff3661b4d8e42834a9876de1cb4b68fc61c9bb1289d2",
     "sources/w15-spell-fx-a-vispelleffectsystem-create-spell-effect/create_spell_effect.cpp": "0624498c194e9642d05bb48d0a3c1a0d1e2fe8e16baee12fc89cab13f4362567",
-    "sources/w15-spell-fx-a-vispelleffectsystem-spell-effect/spell_effect.cpp": "2b914e4fc76019119848178690f3d0f3a7fb9db2b5afce0c654fefa1ccbbdfdf"
+    "sources/w15-spell-fx-a-vispelleffectsystem-spell-effect/spell_effect.cpp": "2b914e4fc76019119848178690f3d0f3a7fb9db2b5afce0c654fefa1ccbbdfdf",
+    "sources/w15-vi-containers-a-array-allocate-zone-leaf/allocate.cpp": "7b3b7e6caa51545a35e2371b64bff2c6cb9d8fc26eb8fe445b492122d6c90bb3",
+    "sources/w15-vi-containers-a-array-allocate-zone-node/allocate.cpp": "8c91f81248c81f146de1f73c1ac80443d9c7897a7df006a9f9623bb87bd1e312",
+    "sources/w15-vi-containers-a-array-clear-zone-leaf/clear.cpp": "73302d0a152a2c7dacc7d17cd0950466b21cdbbb7a9397ef2b159f7e7a0e209d",
+    "sources/w15-vi-containers-a-array-clear-zone-node/clear.cpp": "244d4d43b096c5e1e6b34f7b93a07050c455cb9e52d26f9620ea27d16eb8dfc0",
+    "sources/w15-vi-containers-a-array-ctor-char/ctor.cpp": "b7747797d75d72aa302939edfeca87d4dbee0b71dee750aab57e76a35b3c15da",
+    "sources/w15-vi-containers-a-array-destroypool-resource-elem/destroypool.cpp": "2d8d32c4fcab0e19fe6afdf93a1fba972a065e916e97889a0f4d11da7e97d129",
+    "sources/w15-vi-containers-a-array-destroypool-zone-room/destroypool.cpp": "8dae3c4c6303d8a886fb538525f3a5a2c1c28b52b0336ded023a7cc9ee0e9e6a",
+    "sources/w15-vi-containers-a-array-dtor-char/dtor.cpp": "6678ce3a584bbbd2e6e30f466695f3cb1ed35c6b4b0cba6f3dca455838fab117",
+    "sources/w15-vi-containers-a-array-dtor-csprite-part-emitter/dtor.cpp": "605991a97e4166d369a2d7cca4b13486ff20b7ee0163f1e78f6f4b101b38c202",
+    "sources/w15-vi-containers-a-array-dtor-hsprite-trigger/dtor.cpp": "3b8d1c448395ada14248c46ca32703b4e31089c7ed3fea2e018eb595869ec249",
+    "sources/w15-vi-containers-a-effect-volume-dtor/dtor.cpp": "3500c9d518a20db51b0cab94ed6cc262fa0a53df66580386088ea80c9b28624f",
+    "sources/w15-vi-containers-a-flat-file-directory-dtor/dtor.cpp": "a97c506e27c04ba28eebce93c0658872cbb5ffb32b15a5d06655f2d58486cca8",
+    "sources/w15-vi-containers-a-list-ctor-p-flat-file/ctor.cpp": "98333cddd6e200c30973277ffe9c4dcfb8c44b34381bd50f4e6711b79ddcd277",
+    "sources/w15-vi-containers-a-list-erase-actor/erase.cpp": "8db3797a8bd213746db64278c2b059de031b6c45cd499e7484f9428b1151b4ab",
+    "sources/w15-vi-containers-a-map-end-dict-entry/end.cpp": "34bed3c095d4ed3d0a19ccd0ae46bd26f4c07cff2155dea3bc4b8a00465691a1",
+    "sources/w15-vi-containers-a-map-erasefixup-dict-entry/erasefixup.cpp": "7941efff7d80065c9060b17f4ab5af165f0a3a848c052ecc498fd7aa4b91145b",
+    "sources/w15-vi-containers-a-map-freenode-dict-entry/freenode.cpp": "98a4468981271281bc342dc6dc85942a7e5f093a979eb2fc844eeef1c1a5c8cc",
+    "sources/w15-vi-containers-a-map-leftrotate-dict-entry/leftrotate.cpp": "9be8d5e48b963353df3f69c072a629b54e545b141e6e2f533ad608f9eb95fbb1",
+    "sources/w15-vi-containers-a-map-next-dict-entry/next.cpp": "57f2e14ac18e0b8d44e7ff99bfdd79f67ff70724f4c7c3fcbf7cd2ee19697733",
+    "sources/w15-vi-containers-a-map-rightrotate-dict-entry/rightrotate.cpp": "09a7c42dc1b47d29b8ddfd54136cb0a2cb95266fde8b7a84a30b02a6f2309c14",
+    "sources/w15-vi-containers-a-pool-begin-raster-material-lru/begin.cpp": "39aafb449d2697b264681acfc3313e3aaa9b2c7bb405e8426ade2eb8e922555a",
+    "sources/w15-vi-containers-a-pool-destroypool-p-spell-effect/destroypool.cpp": "fc2db4d28c05b4f0a8441343aa94980156e9df030ed8ee7d517df50da571867f",
+    "sources/w15-vi-containers-a-pool-dtor-hsprite-attachment/dtor.cpp": "bd1597372e79f6df1ff2958e695cbc85925aa151e98425614d9be82c88f2626b",
+    "sources/w15-vi-containers-a-pool-dtor-hsprite-play/dtor.cpp": "f5bb35a934982f7a309d4e30f9a2053c75986824171f35fac4c8bcca700256e8",
+    "sources/w15-vi-containers-a-pool-dtor-hsprite-play-node/dtor.cpp": "ed51380a50a3ebb4026373c847ec9371b3c16057f0b999bc51cb311b96c61251",
+    "sources/w15-vi-containers-a-pool-dtor-p-particle-motif/dtor.cpp": "4612d3a818ea5ce88284cb5efeb4f51872261c582158791f5fa5a44190d83163",
+    "sources/w15-vi-containers-a-realm-gateway-api-dtor/dtor.cpp": "fb3827d2acba1f46c636acb043b12916a11a14bad85ddc8ebf59870a809b1f44",
+    "sources/w15-vi-containers-a-sprite-dtor/dtor.cpp": "31a9ca6a77f740c7d6fac0d9733a518a5488f133e357f87d5053065b32ebc2a1",
+    "sources/w15-vi-containers-a-udp-socket-dtor/dtor.cpp": "51d771689a67a2ca80821b90ce9ec48288800846b9458eaf342be60d59b32a00",
+    "sources/w15-vi-containers-a-vector-copy-init-matrix44/init.cpp": "6a6c7c2b6b6a24524f29cec34e471bf140951c9af723a51f30cfab9daf30b387",
+    "sources/w15-vi-containers-a-vector-dtor-hsprite-node/dtor.cpp": "b50992039ac3982aa7a7b21bcdb29165496689079aa3b1c9d8d8f9fbed0bc559",
+    "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp": "77bb77310c261adb803b82dc5e054beeb19d94b0aba0c69456a2bf1a9d8a0475"
   },
   "inputs": [
     {
@@ -104087,6 +104119,486 @@
           "compiled_body_bytes": 28
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7014,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_allocate_zone_leaf.o",
+      "profile": "authored_cpp",
+      "sha256": "7b3b7e6caa51545a35e2371b64bff2c6cb9d8fc26eb8fe445b492122d6c90bb3",
+      "source": "sources/w15-vi-containers-a-array-allocate-zone-leaf/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__t7VIArray1Z10VIZoneLeaf",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7015,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_allocate_zone_node.o",
+      "profile": "authored_cpp",
+      "sha256": "8c91f81248c81f146de1f73c1ac80443d9c7897a7df006a9f9623bb87bd1e312",
+      "source": "sources/w15-vi-containers-a-array-allocate-zone-node/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__t7VIArray1Z10VIZoneNode",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7016,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_clear_zone_leaf.o",
+      "profile": "authored_cpp",
+      "sha256": "73302d0a152a2c7dacc7d17cd0950466b21cdbbb7a9397ef2b159f7e7a0e209d",
+      "source": "sources/w15-vi-containers-a-array-clear-zone-leaf/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__t7VIArray1Z10VIZoneLeaf",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7017,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_clear_zone_node.o",
+      "profile": "authored_cpp",
+      "sha256": "244d4d43b096c5e1e6b34f7b93a07050c455cb9e52d26f9620ea27d16eb8dfc0",
+      "source": "sources/w15-vi-containers-a-array-clear-zone-node/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__t7VIArray1Z10VIZoneNode",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7018,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_ctor_char.o",
+      "profile": "authored_cpp",
+      "sha256": "b7747797d75d72aa302939edfeca87d4dbee0b71dee750aab57e76a35b3c15da",
+      "source": "sources/w15-vi-containers-a-array-ctor-char/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__t7VIArray1Zc",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7019,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_destroypool_resource_elem.o",
+      "profile": "authored_cpp",
+      "sha256": "2d8d32c4fcab0e19fe6afdf93a1fba972a065e916e97889a0f4d11da7e97d129",
+      "source": "sources/w15-vi-containers-a-array-destroypool-resource-elem/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t7VIArray1Z14VIResourceElem",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7020,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_destroypool_zone_room.o",
+      "profile": "authored_cpp",
+      "sha256": "8dae3c4c6303d8a886fb538525f3a5a2c1c28b52b0336ded023a7cc9ee0e9e6a",
+      "source": "sources/w15-vi-containers-a-array-destroypool-zone-room/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t7VIArray1Z10VIZoneRoom",
+          "compiled_body_bytes": 116
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7021,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_dtor_char.o",
+      "profile": "authored_cpp",
+      "sha256": "6678ce3a584bbbd2e6e30f466695f3cb1ed35c6b4b0cba6f3dca455838fab117",
+      "source": "sources/w15-vi-containers-a-array-dtor-char/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t7VIArray1Zc",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7022,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_dtor_csprite_part_emitter.o",
+      "profile": "authored_cpp",
+      "sha256": "605991a97e4166d369a2d7cca4b13486ff20b7ee0163f1e78f6f4b101b38c202",
+      "source": "sources/w15-vi-containers-a-array-dtor-csprite-part-emitter/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t7VIArray1Z20VICSpritePartEmitter",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7023,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_array_dtor_hsprite_trigger.o",
+      "profile": "authored_cpp",
+      "sha256": "3b8d1c448395ada14248c46ca32703b4e31089c7ed3fea2e018eb595869ec249",
+      "source": "sources/w15-vi-containers-a-array-dtor-hsprite-trigger/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t7VIArray1Z16VIHSpriteTrigger",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7024,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_effect_volume_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "3500c9d518a20db51b0cab94ed6cc262fa0a53df66580386088ea80c9b28624f",
+      "source": "sources/w15-vi-containers-a-effect-volume-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_14VIEffectVolume",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7025,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_flat_file_directory_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "a97c506e27c04ba28eebce93c0658872cbb5ffb32b15a5d06655f2d58486cca8",
+      "source": "sources/w15-vi-containers-a-flat-file-directory-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_19VIFlatFileDirectory",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7026,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_list_ctor_p_flat_file.o",
+      "profile": "authored_cpp",
+      "sha256": "98333cddd6e200c30973277ffe9c4dcfb8c44b34381bd50f4e6711b79ddcd277",
+      "source": "sources/w15-vi-containers-a-list-ctor-p-flat-file/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__t6VIList1ZP10VIFlatFile",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7027,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_list_erase_actor.o",
+      "profile": "authored_cpp",
+      "sha256": "8db3797a8bd213746db64278c2b059de031b6c45cd499e7484f9428b1151b4ab",
+      "source": "sources/w15-vi-containers-a-list-erase-actor/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIList1Z7VIActori",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7028,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_end_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "34bed3c095d4ed3d0a19ccd0ae46bd26f4c07cff2155dea3bc4b8a00465691a1",
+      "source": "sources/w15-vi-containers-a-map-end-dict-entry/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7029,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_erasefixup_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "7941efff7d80065c9060b17f4ab5af165f0a3a848c052ecc498fd7aa4b91145b",
+      "source": "sources/w15-vi-containers-a-map-erasefixup-dict-entry/erasefixup.cpp",
+      "emitted_functions": [
+        {
+          "name": "EraseFixup__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 1016
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7030,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_freenode_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "98a4468981271281bc342dc6dc85942a7e5f093a979eb2fc844eeef1c1a5c8cc",
+      "source": "sources/w15-vi-containers-a-map-freenode-dict-entry/freenode.cpp",
+      "emitted_functions": [
+        {
+          "name": "FreeNode__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7031,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_leftrotate_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "9be8d5e48b963353df3f69c072a629b54e545b141e6e2f533ad608f9eb95fbb1",
+      "source": "sources/w15-vi-containers-a-map-leftrotate-dict-entry/leftrotate.cpp",
+      "emitted_functions": [
+        {
+          "name": "LeftRotate__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7032,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_next_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "57f2e14ac18e0b8d44e7ff99bfdd79f67ff70724f4c7c3fcbf7cd2ee19697733",
+      "source": "sources/w15-vi-containers-a-map-next-dict-entry/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7033,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_map_rightrotate_dict_entry.o",
+      "profile": "authored_cpp",
+      "sha256": "09a7c42dc1b47d29b8ddfd54136cb0a2cb95266fde8b7a84a30b02a6f2309c14",
+      "source": "sources/w15-vi-containers-a-map-rightrotate-dict-entry/rightrotate.cpp",
+      "emitted_functions": [
+        {
+          "name": "RightRotate__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 240
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7034,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_begin_raster_material_lru.o",
+      "profile": "authored_cpp",
+      "sha256": "39aafb449d2697b264681acfc3313e3aaa9b2c7bb405e8426ade2eb8e922555a",
+      "source": "sources/w15-vi-containers-a-pool-begin-raster-material-lru/begin.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct6VIPool1Z19VIRasterMaterialLRU",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7035,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_destroypool_p_spell_effect.o",
+      "profile": "authored_cpp",
+      "sha256": "fc2db4d28c05b4f0a8441343aa94980156e9df030ed8ee7d517df50da571867f",
+      "source": "sources/w15-vi-containers-a-pool-destroypool-p-spell-effect/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VISpellEffect",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7036,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_dtor_hsprite_attachment.o",
+      "profile": "authored_cpp",
+      "sha256": "bd1597372e79f6df1ff2958e695cbc85925aa151e98425614d9be82c88f2626b",
+      "source": "sources/w15-vi-containers-a-pool-dtor-hsprite-attachment/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t6VIPool1Z19VIHSpriteAttachment",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7037,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_dtor_hsprite_play.o",
+      "profile": "authored_cpp",
+      "sha256": "f5bb35a934982f7a309d4e30f9a2053c75986824171f35fac4c8bcca700256e8",
+      "source": "sources/w15-vi-containers-a-pool-dtor-hsprite-play/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t6VIPool1Z13VIHSpritePlay",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7038,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_dtor_hsprite_play_node.o",
+      "profile": "authored_cpp",
+      "sha256": "ed51380a50a3ebb4026373c847ec9371b3c16057f0b999bc51cb311b96c61251",
+      "source": "sources/w15-vi-containers-a-pool-dtor-hsprite-play-node/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t6VIPool1Z17VIHSpritePlayNode",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7039,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_pool_dtor_p_particle_motif.o",
+      "profile": "authored_cpp",
+      "sha256": "4612d3a818ea5ce88284cb5efeb4f51872261c582158791f5fa5a44190d83163",
+      "source": "sources/w15-vi-containers-a-pool-dtor-p-particle-motif/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t6VIPool1ZP15VIParticleMotif",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7040,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_realm_gateway_api_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "fb3827d2acba1f46c636acb043b12916a11a14bad85ddc8ebf59870a809b1f44",
+      "source": "sources/w15-vi-containers-a-realm-gateway-api-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_Q212RealmService15RealmGatewayAPI",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7041,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_sprite_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "31a9ca6a77f740c7d6fac0d9733a518a5488f133e357f87d5053065b32ebc2a1",
+      "source": "sources/w15-vi-containers-a-sprite-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_8VISprite",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7042,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_udp_socket_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "51d771689a67a2ca80821b90ce9ec48288800846b9458eaf342be60d59b32a00",
+      "source": "sources/w15-vi-containers-a-udp-socket-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_11VIUDPSocket",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7043,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_vector_copy_init_matrix44.o",
+      "profile": "authored_cpp",
+      "sha256": "6a6c7c2b6b6a24524f29cec34e471bf140951c9af723a51f30cfab9daf30b387",
+      "source": "sources/w15-vi-containers-a-vector-copy-init-matrix44/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t8VIVector1Z10VIMatrix44RCt8VIVector1Z10VIMatrix44",
+          "compiled_body_bytes": 248
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7044,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_vector_dtor_hsprite_node.o",
+      "profile": "authored_cpp",
+      "sha256": "b50992039ac3982aa7a7b21bcdb29165496689079aa3b1c9d8d8f9fbed0bc559",
+      "source": "sources/w15-vi-containers-a-vector-dtor-hsprite-node/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t8VIVector1Z13VIHSpriteNode",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7045,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_containers_a_vector_dtor_matrix44.o",
+      "profile": "authored_cpp",
+      "sha256": "77bb77310c261adb803b82dc5e054beeb19d94b0aba0c69456a2bf1a9d8a0475",
+      "source": "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t8VIVector1Z10VIMatrix44",
+          "compiled_body_bytes": 148
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -104186,7 +104698,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "2fdbeeba1551db3c39ace685bddd13f5a8c08513333d768e44edd64f3c6a6400",
+  "snapshot_sha256": "77685c200c31884c4b595cb5f8a07c4b095a4337632d4368e8112436825d8ec7",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

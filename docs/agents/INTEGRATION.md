@@ -10402,3 +10402,20 @@ Opened: `Add__t6VIPool1ZP13VISpellEffectRCP13VISpellEffect`, `__13VISpellEffect`
 
 Full partial build: 7012 source compilations, one link, 5541 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:41 CDT — agents/w15-spell-fx-a — 905 unresolved imports
+
+## agents/w15-vi-containers-a
+
+Merged (merge commit; tip over 45 minutes old, notes complete). All 32 container-template units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 905 |
+| After | 898 |
+| Closed | 30 |
+| Opened | 23 |
+
+Closed: `Allocate__t7VIArray1Z10VIZoneLeaf`, `Allocate__t7VIArray1Z10VIZoneNode`, `Begin__Ct6VIPool1Z19VIRasterMaterialLRU`, `Clear__t7VIArray1Z10VIZoneLeaf`, `Clear__t7VIArray1Z10VIZoneNode`, `DestroyPool__t6VIPool1ZP13VISpellEffect`, `DestroyPool__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t7VIArray1Z14VIResourceElem`, `End__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `EraseFixup__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Erase__t6VIList1Z7VIActori`, `FreeNode__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Init__t8VIVector1Z10VIMatrix44RCt8VIVector1Z10VIMatrix44`, `Next__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `_$_11VIUDPSocket`, `_$_14VIEffectVolume`, `_$_19VIFlatFileDirectory`, `_$_8VISprite`, `_$_Q212RealmService15RealmGatewayAPI`, `_$_t6VIPool1Z13VIHSpritePlay`, `_$_t6VIPool1Z17VIHSpritePlayNode`, `_$_t6VIPool1Z19VIHSpriteAttachment`, `_$_t6VIPool1ZP15VIParticleMotif`, `_$_t7VIArray1Z16VIHSpriteTrigger`, `_$_t7VIArray1Z20VICSpritePartEmitter`, `_$_t7VIArray1Zc`, `_$_t8VIVector1Z10VIMatrix44`, `_$_t8VIVector1Z13VIHSpriteNode`, `__t6VIList1ZP10VIFlatFile`, `__t7VIArray1Zc`
+
+Opened: `Allocate__t8VIVector1Z10VIMatrix44`, `Begin__Ct6VIList1ZP10VIFlatFile`, `Close__11VIUDPSocket`, `DestroyPool__t6VIPool1Z13VIHSpritePlay`, `DestroyPool__t6VIPool1Z17VIHSpritePlayNode`, `DestroyPool__t6VIPool1Z19VIHSpriteAttachment`, `DestroyPool__t6VIPool1ZP15VIParticleMotif`, `DestroyPool__t7VIArray1Z10VIZoneLeaf`, `DestroyPool__t7VIArray1Z10VIZoneNode`, `DestroyPool__t7VIArray1Z16VIHSpriteTrigger`, `DestroyPool__t7VIArray1Z20VICSpritePartEmitter`, `DestroyPool__t7VIArray1Zc`, `DestroyPool__t8VIVector1Z10VIMatrix44`, `DestroyPool__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIList1Z7VIActor`, `End__Ct6VIList1ZP10VIFlatFile`, `End__Ct6VIPool1Z19VIRasterMaterialLRU`, `Erase__t6VIList1ZP10VIFlatFilei`, `Next__Ct6VIPool1ZP13VISpellEffecti`, `_$_10VIZoneRoom`, `_$_t6VIList1ZP10VIFlatFile`, `__10VIMatrix44RC10VIMatrix44`, `_vt$10VIFlatFile`
+
+Full partial build: 7044 source compilations, one link, 5573 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
