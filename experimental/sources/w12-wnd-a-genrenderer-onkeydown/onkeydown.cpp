@@ -34,6 +34,12 @@
 // 136 to 139 directions); the shared-flag stores mark the narrowed string unsharable while it is written.
 // Unknown: key names, the type behind the dynamic cast (its result is unused), what lastRefreshTime counts, the layout of
 // MatchGameAttrs (not used here), and whether the original source wrote a helper for the string narrowing.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 extern long long lastRefreshTime;
@@ -75,23 +81,34 @@ const unsigned short* GetString__13VIStringTableii(void* table, int id, int arg)
 void Show__11VIGUIDialogPCUsPCc(void* dialog, const unsigned short* text, const char* action);
 void SetText__11VIGUIDialogPCUsb(void* dialog, const unsigned short* text, bool flag);
 
+#ifdef NORRATH_HOST_ARENA
+extern "C" void* norrath_host_function(unsigned address);
+struct VtEntry {
+    short delta;
+    short index;
+    unsigned function;
+};
+#define NORRATH_ENTRY_FUNCTION(entry) reinterpret_cast<void (*)(void*, int)>(norrath_host_function((entry)->function))
+#else
 struct VtEntry {
     short delta;
     short index;
     void (*function)(void*, int);
 };
+#define NORRATH_ENTRY_FUNCTION(entry) ((entry)->function)
+#endif
 
 static inline unsigned word_at(const void* base, int offset) {
     return *reinterpret_cast<const unsigned*>(static_cast<const unsigned char*>(base) + offset);
 }
 static inline void* pointer_of(unsigned value) {
-    return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(value));
+    return reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(value));
 }
 static inline void table_call(void* object, int key) {
     unsigned char* bytes = static_cast<unsigned char*>(object);
     const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-        static_cast<__UINTPTR_TYPE__>(word_at(bytes, 120)) + 24);
-    entry->function(bytes + entry->delta, key);
+        NORRATH_WORD_ADDRESS(word_at(bytes, 120)) + 24);
+    NORRATH_ENTRY_FUNCTION(entry)(bytes + entry->delta, key);
 }
 static inline const unsigned short* text(int id) {
     void* ui = pointer_of(_5VIWnd$mUI);
