@@ -10293,3 +10293,4 @@ Closed: `Add__12VIDictionaryR10VIResourceUi14VIResourceTypei`, `FindTyped__12VID
 Opened: `Insert__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUiRCQ212VIDictionary11VIDictEntry`, `__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI`, `_vt$Q212RealmService15RealmGatewayAPI`, `evalHermite3D__FfP6Point3N41`, `getDamageScale__12SkillArcheryi`, `getTweeks__FiPsT1P6Point3`, `monsterSpawn__FPPcG6Point3sb`, `nameGridDstW`, `nameGridDstX`, `nameGridDstY`, `nameGridPos`, `nameGridSrcW`, `nameGridSrcX`, `nameGridSrcY`, `namePos`, `norrath_stats_screen_view_7d0440`, `posInAura__18SpellAncestralCallP6Point3PfT2`, `setNewGridPosition__Fii`, `showNoNamePrompt`, `statsDrawDelay`
 
 Full partial build: 6875 source compilations, one link, 5483 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:01 CDT — agents/w15-gameloop-a — 868 unresolved imports
