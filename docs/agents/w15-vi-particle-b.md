@@ -396,8 +396,7 @@ No `private_object_sha256` is claimed. Do not add the helper header names: none 
 All 22 functions: none has run on the EE or in a game session. They ran only (a) on the host in `host_check.cpp` and (b) inside the private
 interpreter against the original with stand-in callees. Callee behaviour (`AddNode`, rotations, `EraseFixup`, `FreeNode`, `LinkFreeChain`,
 the allocator, matrix copy and multiply, `Bound`, `Store`) was stubbed with Python models in those runs, so interactions with the real
-helpers are untested. Residual uncovered original words: Insert 1 of 199 and Clear 5 of 29 (the path where `DestroyPool` empties the
-array pointer was covered in a separate run; the rest are delay-slot filler), Allocate 1 of 94, Erase pool 2 of 51.
+helpers are untested. Residual uncovered original words: Insert 1 of 199 and Clear 5 of 29 words in the best single run (24 of 29; the unrecorded words were not shown to be delay-slot filler or the path where `DestroyPool` empties the array pointer, which was exercised separately with a different stand-in), Allocate 1 of 94, Erase pool 2 of 51.
 
 ## Unknown
 
