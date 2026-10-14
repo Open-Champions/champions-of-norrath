@@ -10204,3 +10204,20 @@ Shared branch at `761e44cb`: 214 tool tests pass, the snapshot check passes (676
 
 Fourteen `origin/agents/*` branches remain unmerged, all at the tips already recorded in their standing rejections: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent` (`5cce4e6e`), `w8-spell-static-init-b`, `w9-render-math-a`. Each still has committed functions with no host check, so none qualifies for a merge; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches.
 - 2026-10-13 CDT — integrator pass, no branches merged — 915 unresolved imports
+
+## agents/w15-startup-a
+
+Merged (merge commit). Notes have the full set of sections; every function unit has a host contract and the notes record a private paired run for each. Eighteen of the 19 package units are selected. `w15-startup-a-link-eh-frame-begin` (defines `__EH_FRAME_BEGIN__`) is **not selected**: with it in the plan the relocatable link aborts with a BFD assertion (`elflink.c:9839`); every other single-object removal still failed, and removing it alone linked. The worker's notes say no full partial build was run. `__EH_FRAME_BEGIN__` stays unresolved; owner to rework that unit. The three earlier-wave units the notes suggest adding (vblank views, loader failure word, the receive-control-packet swap) were not added, since two need an owner decision.
+
+| | |
+|---|---|
+| Before | 915 |
+| After | 905 |
+| Closed | 18 |
+| Opened | 8 |
+
+Closed: `VICdStreamDiskReady__Fv`, `VICdStreamRead__FUiUiPvi`, `VICdStreamStatus__Fv`, `VICdStreamSync__Fi`, `VIEEDMASend__FiPv`, `VIEEFileDelay__Fi`, `VIEELoadIrx__FPCciT0`, `VIEEUnloadIrx__Fi`, `VIMemCardReadFileAsync__FPCcPvi`, `mcerror`, `mt_ebx`, `mt_eby`, `net_ready`, `norrath_overlay_sRecv_11edd00`, `sAsyncFd`, `unet_startup_thread__FPv`, `unet_startup_thread_id`, `unet_startup_thread_stack`
+
+Opened: `SetAlarm`, `VIInitUSocketExApi__Fv`, `hostname`, `pf`, `sceInetAddress2Name`, `sceInetAddress2String`, `sceLibnetRegisterHandler`, `sceLibnetWaitGetAddress`
+
+Full partial build: 6781 source compilations, one link, 5396 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
