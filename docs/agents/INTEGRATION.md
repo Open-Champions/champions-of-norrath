@@ -10311,3 +10311,4 @@ Closed: `BringUpNetwork__12VIWndConnect`, `Init__20VIWndGenericRenderer`, `McErr
 Opened: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `DrawProgress__10VIUIWindowiiif`, `VIIsMcSameSession__Fv`, `VIMemCardAsyncIdle__Fv`, `VIMemCardFormat__Fv`, `VIMemCardIsPrepared__Fv`, `VIMemCardPadAsync__Fi`, `VIMemCardPrepare__Fi`, `VIMemCardProductId__Fv`, `VIMemCardWriteFile__FPCcPCvi`, `VISetMcSessionId__FUl`, `ezNetCnfGetProperties`, `ezNetCtlSetCombination`, `ezNetCtlUpInterface`
 
 Full partial build: 6909 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:08 CDT — agents/w15-fe-mcerr-a — 849 unresolved imports
