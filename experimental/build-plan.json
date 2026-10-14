@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7299,
+  "default_authored_inputs": 7309,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8093,7 +8093,17 @@
     "sources/w15-vi-sprites-a-sprite-process-play-list/process_play_list.cpp": "6081e26b1884c74ffb983e1d08a4f5f2ae0cae1494300f399a9d8d1aadbea2d3",
     "sources/w15-vi-sprites-a-sprite-process-up-hierarchy/process_up_hierarchy.cpp": "1fa564c8fa4f44e81a4f085d041edb0a2d741c5021f538fd900c32fe77d2ca0a",
     "sources/w15-vi-sprites-a-sprite-set-bind-pose/set_bind_pose.cpp": "a20809bcf1885c76b636563fac952e4672b25e9e1f7c16f7130d1c84365b1aed",
-    "sources/w15-vi-sprites-a-vector-node-copy-init/init.cpp": "7a2f5f9e62d2bde6a71acb95582c8c9537b2ab0fc27f51548b362521986178dc"
+    "sources/w15-vi-sprites-a-vector-node-copy-init/init.cpp": "7a2f5f9e62d2bde6a71acb95582c8c9537b2ab0fc27f51548b362521986178dc",
+    "sources/w12-vimath-b-querytrilist-volume/volume.cpp": "baf35ad8eb730f8b9ba7eb4600836b58923f48795357eb606fa7321849e93f3a",
+    "sources/w12-vimath-b-vifile-read/read.cpp": "4ced501e162ac793a01e04472006caedd82762ce9b6f4e622dc1ce65b1374a38",
+    "sources/w12-vimath-b-vifile-seek/seek.cpp": "6303d2460cbf81f62d553e97d51d739188e8540b92f8f3a9e882dd133b3594ce",
+    "sources/w12-vimath-b-vifile-tell/tell.cpp": "19233c999ac09c9066f7b95f990644cab31e43f4828cbabdd58dda844c8752bf",
+    "sources/w12-vimath-b-vimatrix44-rotate-x/rotate_x.cpp": "c0d74a9bb6ac449271cf13fc17929bc7f5b864f5d33cf333b546d49f8a85e1a2",
+    "sources/w12-vimath-b-vimatrix44-rotate-y/rotate_y.cpp": "5730139963c977296a986e80e6f621883a9daaa65fd232fc92faa9225f6a4140",
+    "sources/w12-vimath-b-vimatrix44-rotate-z/rotate_z.cpp": "8fdd1a8b9415b34b600372cd6f1d834d569fabc13276b3cbb95784c22180eadc",
+    "sources/w12-vimath-b-vimatrix44-scale/scale.cpp": "657ed6e797a0a814e598af398a566e8dc3e231c9ba41ee579202ffb9f7e49b54",
+    "sources/w12-vimath-b-viobjfile-ctor/ctor.cpp": "92bc44834ce7882ff2cd4a4176c1ba2f5af311a698d287dcf897de19f285e71b",
+    "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp": "41af91b80c2006a37de65dba55b8180f562d6deb0c720244e920c5173eb5ed71"
   },
   "inputs": [
     {
@@ -108628,6 +108638,156 @@
           "compiled_body_bytes": 524
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7301,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_querytrilist_volume.o",
+      "profile": "authored_cpp",
+      "sha256": "baf35ad8eb730f8b9ba7eb4600836b58923f48795357eb606fa7321849e93f3a",
+      "source": "sources/w12-vimath-b-querytrilist-volume/volume.cpp",
+      "emitted_functions": [
+        {
+          "name": "Volume__14VIQueryTriListRC6VIBBox",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7302,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vifile_read.o",
+      "profile": "authored_cpp",
+      "sha256": "4ced501e162ac793a01e04472006caedd82762ce9b6f4e622dc1ce65b1374a38",
+      "source": "sources/w12-vimath-b-vifile-read/read.cpp",
+      "emitted_functions": [
+        {
+          "name": "Read__6VIFilePvi",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7303,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vifile_seek.o",
+      "profile": "authored_cpp",
+      "sha256": "6303d2460cbf81f62d553e97d51d739188e8540b92f8f3a9e882dd133b3594ce",
+      "source": "sources/w12-vimath-b-vifile-seek/seek.cpp",
+      "emitted_functions": [
+        {
+          "name": "Seek__6VIFilelQ26VIFile10SeekOrigin",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7304,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vifile_tell.o",
+      "profile": "authored_cpp",
+      "sha256": "19233c999ac09c9066f7b95f990644cab31e43f4828cbabdd58dda844c8752bf",
+      "source": "sources/w12-vimath-b-vifile-tell/tell.cpp",
+      "emitted_functions": [
+        {
+          "name": "Tell__6VIFile",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7305,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vimatrix44_rotate_x.o",
+      "profile": "authored_cpp",
+      "sha256": "c0d74a9bb6ac449271cf13fc17929bc7f5b864f5d33cf333b546d49f8a85e1a2",
+      "source": "sources/w12-vimath-b-vimatrix44-rotate-x/rotate_x.cpp",
+      "emitted_functions": [
+        {
+          "name": "RotateX__10VIMatrix44f",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7306,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vimatrix44_rotate_y.o",
+      "profile": "authored_cpp",
+      "sha256": "5730139963c977296a986e80e6f621883a9daaa65fd232fc92faa9225f6a4140",
+      "source": "sources/w12-vimath-b-vimatrix44-rotate-y/rotate_y.cpp",
+      "emitted_functions": [
+        {
+          "name": "RotateY__10VIMatrix44f",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7307,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vimatrix44_rotate_z.o",
+      "profile": "authored_cpp",
+      "sha256": "8fdd1a8b9415b34b600372cd6f1d834d569fabc13276b3cbb95784c22180eadc",
+      "source": "sources/w12-vimath-b-vimatrix44-rotate-z/rotate_z.cpp",
+      "emitted_functions": [
+        {
+          "name": "RotateZ__10VIMatrix44f",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7308,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_vimatrix44_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "657ed6e797a0a814e598af398a566e8dc3e231c9ba41ee579202ffb9f7e49b54",
+      "source": "sources/w12-vimath-b-vimatrix44-scale/scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "Scale__10VIMatrix44f",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7309,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_viobjfile_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "92bc44834ce7882ff2cd4a4176c1ba2f5af311a698d287dcf897de19f285e71b",
+      "source": "sources/w12-vimath-b-viobjfile-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__9VIObjFile",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7310,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vimath_b_viobjfile_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "41af91b80c2006a37de65dba55b8180f562d6deb0c720244e920c5173eb5ed71",
+      "source": "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_9VIObjFile",
+          "compiled_body_bytes": 136
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -108727,7 +108887,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "c14153a015a9e5559341910b8924d32e967f12428d5720d7002fdd4048526fe9",
+  "snapshot_sha256": "60ae65b145cc434ecdc4ec05b6c0d617a1fb9a358ed2381348cebe85b3198d10",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

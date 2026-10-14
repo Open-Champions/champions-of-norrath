@@ -10584,3 +10584,20 @@ Opened: `AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene`, `AddSegment__9VITrailF
 
 Full partial build: 7299 source compilations, one link, 5813 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:44 CDT — agents/w15-vi-sprites-a — 868 unresolved imports
+
+## agents/w12-vimath-b
+
+Merged (merge commit) as a **partial package**: its notes lack the current summary sections, so only units with a committed host test are selected. 10 of 20 units are selected. **Not selected (no committed host test; the notes rely on private paired runs):** `extract-rotation`, `make-quaternion`, `mat-mul33`, `mat-mul34`, `mat-scale`, `mat-transpose33`, `quat-transform`, `vilnode-remove`, `vimatrix44-rotate-hpr`, `vq-decompress`; they stay authored but unplanned until the owner adds host checks. Tip was 17 hours old. This reverses the earlier whole-branch rejection for the tested subset only.
+
+| | |
+|---|---|
+| Before | 868 |
+| After | 866 |
+| Closed | 10 |
+| Opened | 8 |
+
+Closed: `Read__6VIFilePvi`, `RotateX__10VIMatrix44f`, `RotateY__10VIMatrix44f`, `RotateZ__10VIMatrix44f`, `Scale__10VIMatrix44f`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `Volume__14VIQueryTriListRC6VIBBox`, `_$_9VIObjFile`, `__9VIObjFile`
+
+Opened: `BufferedRead__6VIFilePvi`, `BufferedSeek__6VIFilelQ26VIFile10SeekOrigin`, `MemoryRead__6VIFilePvi`, `MemorySeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmRead__6VIFilePvi`, `MemorySegmSeek__6VIFilelQ26VIFile10SeekOrigin`, `ResetState__9VIObjFile`, `StoreOutward__C6VIBBoxP7VIPlane`
+
+Full partial build: 7309 source compilations, one link, 5823 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
