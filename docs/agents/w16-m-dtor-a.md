@@ -79,7 +79,28 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 - **Mutation checks.** Deliberate mutants were run through the same comparison and caught: `_$_8LostSoul` with the
   light call flag changed (36 mismatches) and with the free check removed (16); `_$_8HolyBolt` with the list offset
   changed (36); `_$_13HammerOfWrath` with the saturating branch changed (8 mismatches across the counter sweep).
-- **Unit tests.** `python3 -m unittest discover -s tools -p 'test_*.py'`, run at the end of this package.
+- **Object symbols.** Each unit's object exports only its own symbol, and its external names are the ones listed under imports.
+- **Successor link.** See Imports closed: 841 to 824 unresolved, with no new names and no duplicates.
+- **Unit tests.** `python3 -m unittest discover -s tools -p 'test_*.py'`: 214 tests, OK.
+
+## Imports closed
+
+Each of these seventeen names is defined by one of this package's units: `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_16SpellCriticalHit`, `_$_16SpellConeOfFrost`, `_$_13HammerOfWrath`.
+
+Checked against the baseline partial build (`--source-root experimental --plan experimental/build-plan.json`, 7,327 selected
+inputs, 841 unresolved symbols, plan SHA-256 `7e9ac625...`). All seventeen names are in its unresolved list and are defined
+by no baseline object. A private successor link used the build's own `ld -m elf32lr5900 -r --warn-common` command with the
+same inputs plus the 17 new objects. It exits 0, leaves 824 unresolved symbols (the 841 minus exactly these seventeen),
+introduces no new unresolved name, and has no duplicate definitions. This is a relocatable link check only. It is not
+an executable and not a gameplay test.
+
+## Imports opened
+
+None. Every external name these units reference is defined by a baseline object, checked from the baseline's object symbol
+tables: the callees `_$_10GameObject`, `_$_5Light`, `listDestroy__FP8ListHead`, `blockFree__FPv`,
+`P_DeleteParticleSystem__Fi`, `soundStopSound__Fi`; the global `wrathHammerCount` (defined by
+`w8-net-play-a-global-init-wrath-hammer-count`); and the vtables used by these units (`_vt$5Spell`, `_vt$10Projectile`, and
+the per-class tables, which the `w15-m-rtti-a-vt-*` units define).
 
 ## Build-plan entries needed
 
@@ -331,28 +352,12 @@ entries until the snapshot records the same inputs.
 ]
 ```
 
-## Imports closed
-
-Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_16SpellCriticalHit`, `_$_16SpellConeOfFrost`, `_$_13HammerOfWrath`.
-
-The partial build's unresolved list is checked in the section below.
-
-## Imports opened
-
-Referenced, not defined here. Each is owned elsewhere, and the list of external names is the same for every unit:
-
-- Callee destructors and helpers: `_$_10GameObject`, `_$_5Light`, `listDestroy__FP8ListHead`, `blockFree__FPv`,
-  `P_DeleteParticleSystem__Fi`, `soundStopSound__Fi`.
-- Global: `wrathHammerCount` (defined by `w8-net-play-a-global-init-wrath-hammer-count`).
-- Vtables: `_vt$5Spell`, `_vt$10Projectile`, and the class tables for each unit, which the `w15-m-rtti-a-vt-*`
-  units define.
-
-
 ## Authored but never executed
 
 - Nothing ran on the EE. The paired comparison runs the authored object in the private interpreter, against the image.
 - The callees are hooks in that interpreter. No callee was executed as game code in these checks.
 - No destructor was reached from a running game. Which vtable slot calls each one, and when, is not shown.
+- The partial link above was not run on hardware or in an emulator.
 
 ## Unknown
 
@@ -360,4 +365,5 @@ Referenced, not defined here. Each is owned elsewhere, and the list of external 
 - The meaning of `wrathHammerCount`, beyond the observed clamp.
 - Flag bits other than bit 0. All seventeen free only on bit 0.
 - Whether the compiled bodies are the same instructions as the image. Compiled sizes are not a match claim.
-- The baseline partial build's final unresolved list, and whether these entries will close the 17 names in the lead's plan.
+- Whether the lead integrator's successor plan keeps these inputs in the order used here; the link above used the
+  baseline order plus these objects at the end.
