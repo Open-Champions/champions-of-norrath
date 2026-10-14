@@ -10116,3 +10116,8 @@ Closed: `AllocateChannels__13VISoundDeviceii`, `AsWave__7VISound`, `AsXm__7VISou
 
 Opened: `BgmBufferSize__13VISoundDevice`, `ChannelCount__13VISoundDeviceUl`, `FirstPlayback__13VISoundDevice`, `FreeSpuMem__13VISoundDeviceUii`, `NextPlayback__13VISoundDeviceP10VIPlayback`, `Preload__13VIBattleMusici`, `Sound__13VISoundDevicei`, `StopAllBgm__13VISoundDevice`, `norrath_overlay_sRecv_11edd00`
 - 2026-10-13 20:44 CDT — agents/w14-sound — 930 unresolved imports
+
+## agents/w14-spellevent (rejected)
+
+Rejected at tip `5cce4e6e` (over an hour old; notes file present). All 24 units (spell event creation, processing and destruction routines) have no committed check of any kind: the notes say "No host tests are committed" and that the only evidence is a private interpreter comparison outside git. That breaks the repo rule that every function needs a test a reviewer can run and that could fail. Nothing was merged or selected; the owner can add per-function host checks and push again. The count is unchanged.
+- 2026-10-13 20:45 CDT — agents/w14-spellevent rejected, nothing merged — 951 unresolved imports
