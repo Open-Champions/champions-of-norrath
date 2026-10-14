@@ -9940,3 +9940,19 @@ Closed: `FindIopFunction__FUi`, `GetRomName`, `VIGetFeatureFlags__Fv`, `__frame_
 
 Opened: `Gsm_LPC_Analysis`, `Gsm_Long_Term_Predictor`, `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_RPE_Encoding`, `Gsm_Short_Term_Analysis_Filter`, `Gsm_Short_Term_Synthesis_Filter`, `__unwinding_cleanup`, `copy_reg`, `decode_uleb128`, `execute_cfa_insn`, `extract_cie_info`, `find_exception_handler`, `find_fde`, `floor`, `get_reg_addr`, `inflateInit2_`, `inflate_blocks`, `inflate_blocks_free`, `inflate_blocks_reset`, `next_stack_level`, `old_find_exception_handler`, `scalbn`
 - 2026-10-13 19:45 CDT — agents/w14-startup-sys — 916 unresolved imports
+
+## agents/w14-wnd-b
+
+Merged (merge commit, branch tip `7803082a`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 20 units with fresh `input_order` values 6398 through 6417 (VIWnd front-end window and options routines; 20 host checks). Four of the checks (`edit-movecaretdown`, `edit-movecaretup`, `realm-interface-ctor`, `realm-interface-dtor`) need the build line in their header comments (a sed-redirected copy of the source and `-DUNIT`); built that way, all 20 pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6416 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 916 |
+| After | 920 |
+| Closed | 25 |
+| Opened | 29 |
+
+Closed: `MoveCaretDown__9VIWndEdit`, `MoveCaretUp__9VIWndEdit`, `MoveCursor__9VIWndEditii`, `Next__12VIWndOptions`, `Next__16VIWndReadMessage`, `Prev__12VIWndOptions`, `Prev__16VIWndReadMessage`, `ProcessScreen__10VIWndMcErriii`, `PromptText__12VIWndMessagePCUsi`, `SaveAndExit__12VIWndOptions`, `Select__12VIWndOptions`, `SetDefaults__13VIGameOptions`, `SetTextColor__6VIFontRC10VIColor32F`, `SetTitle__10VIUIWindowPCc`, `T__10VIUIWindowPCUs`, `T__10VIUIWindowPCc`, `VIWndOptions$sCameraAxisText`, `VIWndOptions$sCameraTypeText`, `VIWndOptions$sCompactKeyboardText`, `VIWndOptions$sOnOffText`, `VIWndOptions$sSoundOutputText`, `_$_16VIRealmInterface`, `__16VIRealmInterfaceP20VIWndGenericRendererPCc`, `sCompactKeyboard`, `sTranslucency`
+
+Opened: `McErrSetMode__Fi`, `McErr__FP5VIWndRC8VIVect2Ii`, `ProcessScreen04__10VIWndMcErriii`, `ProcessScreen10__10VIWndMcErriii`, `ProcessScreen11__10VIWndMcErriii`, `ProcessScreen12__10VIWndMcErriii`, `ProcessScreen15__10VIWndMcErriii`, `ProcessScreen16__10VIWndMcErriii`, `ProcessScreen17__10VIWndMcErriii`, `ProcessScreen20__10VIWndMcErriii`, `ProcessScreen30__10VIWndMcErriii`, `ProcessScreen50__10VIWndMcErriii`, `ProcessScreen52__10VIWndMcErriii`, `ProcessScreen54__10VIWndMcErriii`, `ProcessScreen60__10VIWndMcErriii`, `ProcessScreen61__10VIWndMcErriii`, `ProcessScreen62__10VIWndMcErriii`, `ProcessScreen63__10VIWndMcErriii`, `ProcessScreen64__10VIWndMcErriii`, `Save__13VIGameOptions`, `_$_11VIUDPSocket`, `_$_Q212RealmService15RealmGatewayAPI`, `__11VIUDPSocketi`, `__Q212RealmService15RealmGatewayAPIUiPCcs`, `_t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0$nilRep`, `_t24__default_alloc_template2b0i0$_S_free_list`, `_vt$16VIRealmInterface`, `clone__Q2t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0_3Rep`, `sConvert16`
+- 2026-10-13 19:51 CDT — agents/w14-wnd-b — 920 unresolved imports
