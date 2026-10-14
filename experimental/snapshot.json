@@ -84365,6 +84365,370 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w14-hud-b-shop-mouse-on-hot-spot/shop_mouse_on_hot_spot.cpp"
+    },
+    {
+      "input_order": 6531,
+      "component": "w14-wnd-a-connect-beginconnect",
+      "object_name": "w14_wnd_a_connect_beginconnect.o",
+      "private_object_sha256": "c762ca3e59989f257fea268d5c4f20a7c1bae20f7523ab6979ab513e4cbfec89",
+      "emitted_functions": [
+        {
+          "name": "BeginConnect__12VIWndConnect",
+          "compiled_body_bytes": 828
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-connect-beginconnect/beginconnect.cpp"
+    },
+    {
+      "input_order": 6532,
+      "component": "w14-wnd-a-edit-backspace",
+      "object_name": "w14_wnd_a_edit_backspace.o",
+      "private_object_sha256": "0d381e1dbc074fd369c480191b7ec87a26a1589b7641d0c1e0ae717b7e8c8796",
+      "emitted_functions": [
+        {
+          "name": "Backspace__9VIWndEdit",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-edit-backspace/backspace.cpp"
+    },
+    {
+      "input_order": 6533,
+      "component": "w14-wnd-a-edit-caretoffset",
+      "object_name": "w14_wnd_a_edit_caretoffset.o",
+      "private_object_sha256": "6a6d9b6eae2a6c02c4180e8ae4667acad3d1862279d3b4b0ea2cc94d037b220f",
+      "emitted_functions": [
+        {
+          "name": "CaretOffset__9VIWndEdit",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-edit-caretoffset/caretoffset.cpp"
+    },
+    {
+      "input_order": 6534,
+      "component": "w14-wnd-a-edit-computetextrows",
+      "object_name": "w14_wnd_a_edit_computetextrows.o",
+      "private_object_sha256": "b9e37f3e63e32d88f4460b9a424ff131ab451fc356e856bc50189c958d41db87",
+      "emitted_functions": [
+        {
+          "name": "ComputeTextRows__9VIWndEdit",
+          "compiled_body_bytes": 588
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-edit-computetextrows/computetextrows.cpp"
+    },
+    {
+      "input_order": 6535,
+      "component": "w14-wnd-a-edit-getcaretpos",
+      "object_name": "w14_wnd_a_edit_getcaretpos.o",
+      "private_object_sha256": "facdc7910fd0ba386aa5cf28931fada6a6b0e66fafc9f8ff4e53840862ace256",
+      "emitted_functions": [
+        {
+          "name": "GetCaretPos__9VIWndEditP8VIVect2I",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-edit-getcaretpos/getcaretpos.cpp"
+    },
+    {
+      "input_order": 6536,
+      "component": "w14-wnd-a-edit-insert",
+      "object_name": "w14_wnd_a_edit_insert.o",
+      "private_object_sha256": "69f46cae58902faa182fb37adda9969db1b505e5b236787d3ad51ce840e009bc",
+      "emitted_functions": [
+        {
+          "name": "Insert__9VIWndEditUs",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-edit-insert/insert.cpp"
+    },
+    {
+      "input_order": 6537,
+      "component": "w14-wnd-a-font-drawcenteredstring",
+      "object_name": "w14_wnd_a_font_drawcenteredstring.o",
+      "private_object_sha256": "8266fe9021c34b9cfcc0149bad79ced837570121cf5aae17e30787e71337e8df",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCciiUi",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-font-drawcenteredstring/drawcenteredstring.cpp"
+    },
+    {
+      "input_order": 6538,
+      "component": "w14-wnd-a-font-getstringwidth-char",
+      "object_name": "w14_wnd_a_font_getstringwidth_char.o",
+      "private_object_sha256": "913dd3a10bf69a23bd6575f469ac530d3a412a92e474e7561f444989fa9aacc7",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCc",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-font-getstringwidth-char/getstringwidth.cpp"
+    },
+    {
+      "input_order": 6539,
+      "component": "w14-wnd-a-font-getstringwidth-u16",
+      "object_name": "w14_wnd_a_font_getstringwidth_u16.o",
+      "private_object_sha256": "22bb0259dd3988b14b4f8e1451c7179964f6dadf5b4ad687a4a2092c09003c50",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCUs",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-font-getstringwidth-u16/getstringwidth.cpp"
+    },
+    {
+      "input_order": 6540,
+      "component": "w14-wnd-a-options-back",
+      "object_name": "w14_wnd_a_options_back.o",
+      "private_object_sha256": "1abda2adb92169b041ca2ff0e9cdb3919d9658a83e7fce2028ff4dad9587ad1f",
+      "emitted_functions": [
+        {
+          "name": "Back__12VIWndOptions",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-back/back.cpp"
+    },
+    {
+      "input_order": 6541,
+      "component": "w14-wnd-a-options-decrement",
+      "object_name": "w14_wnd_a_options_decrement.o",
+      "private_object_sha256": "0b348c75a53deef1900538c03a338731d2b7082afafe290f2a4b3f4a02008d84",
+      "emitted_functions": [
+        {
+          "name": "Decrement__12VIWndOptions",
+          "compiled_body_bytes": 660
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-decrement/decrement.cpp"
+    },
+    {
+      "input_order": 6542,
+      "component": "w14-wnd-a-options-drawgameoptions",
+      "object_name": "w14_wnd_a_options_drawgameoptions.o",
+      "private_object_sha256": "6e9717c994e0f0305c3228f3155e1e5a70ff3759cf6d925e1eeb62859b8e49a9",
+      "emitted_functions": [
+        {
+          "name": "DrawGameOptions__12VIWndOptions",
+          "compiled_body_bytes": 620
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-drawgameoptions/drawgameoptions.cpp"
+    },
+    {
+      "input_order": 6543,
+      "component": "w14-wnd-a-options-drawinterfaceoptions",
+      "object_name": "w14_wnd_a_options_drawinterfaceoptions.o",
+      "private_object_sha256": "add91dd1f5ca25085b5cce14298fc674a2c909f54234b7f9aeda1d2d1af3d454",
+      "emitted_functions": [
+        {
+          "name": "DrawInterfaceOptions__12VIWndOptions",
+          "compiled_body_bytes": 1096
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-drawinterfaceoptions/drawinterfaceoptions.cpp"
+    },
+    {
+      "input_order": 6544,
+      "component": "w14-wnd-a-options-drawmainmenu",
+      "object_name": "w14_wnd_a_options_drawmainmenu.o",
+      "private_object_sha256": "4264de13bf7903a29e3002499825a26b6e8399fcbaf2ae72b05c5d0d9a445bd4",
+      "emitted_functions": [
+        {
+          "name": "DrawMainMenu__12VIWndOptions",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-drawmainmenu/drawmainmenu.cpp"
+    },
+    {
+      "input_order": 6545,
+      "component": "w14-wnd-a-options-drawsoundoptions",
+      "object_name": "w14_wnd_a_options_drawsoundoptions.o",
+      "private_object_sha256": "d24555e4d59b98bdcdadf659cbb288705d772e5d8107f137cbb29183e6d91e4a",
+      "emitted_functions": [
+        {
+          "name": "DrawSoundOptions__12VIWndOptions",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-drawsoundoptions/drawsoundoptions.cpp"
+    },
+    {
+      "input_order": 6546,
+      "component": "w14-wnd-a-options-increment",
+      "object_name": "w14_wnd_a_options_increment.o",
+      "private_object_sha256": "ac39d801c0bb2ca7c9c8a16cd4847a4f30b26f7f7ee919c57c49bb863e1172d0",
+      "emitted_functions": [
+        {
+          "name": "Increment__12VIWndOptions",
+          "compiled_body_bytes": 672
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-options-increment/increment.cpp"
+    },
+    {
+      "input_order": 6547,
+      "component": "w14-wnd-a-rfont-findchar",
+      "object_name": "w14_wnd_a_rfont_findchar.o",
+      "private_object_sha256": "3372f8668924ffdee9d929bf74f5a029dedee319d3f23b4da6a2be6749482736",
+      "emitted_functions": [
+        {
+          "name": "FindChar__7VIRFontUs",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-rfont-findchar/findchar.cpp"
+    },
+    {
+      "input_order": 6548,
+      "component": "w14-wnd-a-ui-blitbar",
+      "object_name": "w14_wnd_a_ui_blitbar.o",
+      "private_object_sha256": "3554936bbdbadea9cfebb393fc1a4720cdf00f30cd649a632131d7ec2c18b1e0",
+      "emitted_functions": [
+        {
+          "name": "BlitBar__4VIUIPCUsG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii",
+          "compiled_body_bytes": 584
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-blitbar/blitbar.cpp"
+    },
+    {
+      "input_order": 6549,
+      "component": "w14-wnd-a-ui-blitfillframe",
+      "object_name": "w14_wnd_a_ui_blitfillframe.o",
+      "private_object_sha256": "67187da0815735661ccb8a1a269127231cc7b849e0e807b3627fca3a46e7bcd1",
+      "emitted_functions": [
+        {
+          "name": "BlitFillFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam9VIUITexId16VIAlphaBlendModefUc",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-blitfillframe/blitfillframe.cpp"
+    },
+    {
+      "input_order": 6550,
+      "component": "w14-wnd-a-ui-blitframe",
+      "object_name": "w14_wnd_a_ui_blitframe.o",
+      "private_object_sha256": "9b217f3528c016488cb5190e060d5dca6e5d47619f7997d2cbd8b1f388fe04c5",
+      "emitted_functions": [
+        {
+          "name": "BlitFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam16VIAlphaBlendModefUc",
+          "compiled_body_bytes": 1232
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-blitframe/blitframe.cpp"
+    },
+    {
+      "input_order": 6551,
+      "component": "w14-wnd-a-ui-blitrect",
+      "object_name": "w14_wnd_a_ui_blitrect.o",
+      "private_object_sha256": "0cd9fc21e2b31ac222a0cf0078a557cbfc3e51723b74cd1a23cdb5a03c111912",
+      "emitted_functions": [
+        {
+          "name": "BlitRect__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef",
+          "compiled_body_bytes": 940
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-blitrect/blitrect.cpp"
+    },
+    {
+      "input_order": 6552,
+      "component": "w14-wnd-a-ui-drawstringex",
+      "object_name": "w14_wnd_a_ui_drawstringex.o",
+      "private_object_sha256": "4d2d096b8889cfe4831e50f3e76a53bb54f29d3ddf91b8372a53c01057694073",
+      "emitted_functions": [
+        {
+          "name": "DrawStringEx__4VIUIPCUsiiG10VIColor32Fi",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-drawstringex/drawstringex.cpp"
+    },
+    {
+      "input_order": 6553,
+      "component": "w14-wnd-a-ui-fillrectangle",
+      "object_name": "w14_wnd_a_ui_fillrectangle.o",
+      "private_object_sha256": "c44a73b2c3f35e58e33d3798806edde0ff56d6ba77dfff7ae2e0f7b44241e8b2",
+      "emitted_functions": [
+        {
+          "name": "FillRectangle__4VIUIPC8VIVect2IPC10VIColor32F",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-ui-fillrectangle/fillrectangle.cpp"
+    },
+    {
+      "input_order": 6554,
+      "component": "w14-wnd-a-uiwindow-drawframe",
+      "object_name": "w14_wnd_a_uiwindow_drawframe.o",
+      "private_object_sha256": "3bbf62053f7997492ef9f7b509d6058be620a45605b22c5c17f9dc75e8132876",
+      "emitted_functions": [
+        {
+          "name": "DrawFrame__10VIUIWindowiiiiUi",
+          "compiled_body_bytes": 720
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-uiwindow-drawframe/drawframe.cpp"
+    },
+    {
+      "input_order": 6555,
+      "component": "w14-wnd-a-uiwindow-isopen",
+      "object_name": "w14_wnd_a_uiwindow_isopen.o",
+      "private_object_sha256": "ee29a6408feb00682196fbc440146f2aebb2a0d16c29165a1c3cc6f806d26635",
+      "emitted_functions": [
+        {
+          "name": "IsOpen__C10VIUIWindow",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-uiwindow-isopen/isopen.cpp"
+    },
+    {
+      "input_order": 6556,
+      "component": "w14-wnd-a-uiwindow-isopening",
+      "object_name": "w14_wnd_a_uiwindow_isopening.o",
+      "private_object_sha256": "14c9c9a1dc37d487e05af4ef1e50df1679beb96f8dbe5712ca1082490d2c2187",
+      "emitted_functions": [
+        {
+          "name": "IsOpening__C10VIUIWindow",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w14-wnd-a-uiwindow-isopening/isopening.cpp"
     }
   ],
   "drafts": [
@@ -94156,6 +94520,58 @@
     "sources/w14-startup-sys-vi-get-feature-flags/host_contract.cpp": "97d7223c01433bbd91580d338cb9ef7cf189b2575282eee63133edcf739c6980",
     "sources/w14-startup-sys-vu0-apply-matrix/host_contract.cpp": "99674cfbae2a286f7f8078171ca6d2f94771d364a9c2d72a3d01cd821115ee51",
     "sources/w14-startup-sys-vu0-apply-matrix/vu0_apply_matrix.cpp": "9bf53d5be8ce8e15b061eab694b66b11608ee56f6423a24754fc8689674de20a",
+    "sources/w14-wnd-a-connect-beginconnect/beginconnect.cpp": "44737f431520569f67b9c48466a100522b7a67d341c84ede703299b6eee03db6",
+    "sources/w14-wnd-a-connect-beginconnect/host_check.cpp": "83accdf04a8e16af719e5cb61761ede9f3759a35b3c8bb8aa25511237b901e20",
+    "sources/w14-wnd-a-edit-backspace/backspace.cpp": "1eb04c043e54cbbbe8b6ab4d1aa95fb715913a326b7d3686989e8f05f8d4ccf7",
+    "sources/w14-wnd-a-edit-backspace/host_check.cpp": "12e421593f87e93649b438b4b053ace8f3fa3ae9c58613a0d556fb856d51857e",
+    "sources/w14-wnd-a-edit-caretoffset/caretoffset.cpp": "542b699a4c44a100ad5da60e09fc233a34d344312833085e5764e08bc911aa5f",
+    "sources/w14-wnd-a-edit-caretoffset/host_check.cpp": "6cc511f29903d5aff2b64cded89a0843d6b264249a7150c2b4f9512f5461df8c",
+    "sources/w14-wnd-a-edit-computetextrows/computetextrows.cpp": "71cfc3ef4624614fcafa259ccb0f94439d97ea0dfae3102a75aea998553fb395",
+    "sources/w14-wnd-a-edit-computetextrows/host_check.cpp": "ffecf9ca3cd1a499716ba630cb06a9be8ed812a3fba83294ac396baf8cfa28e2",
+    "sources/w14-wnd-a-edit-getcaretpos/getcaretpos.cpp": "b75fa78b6be77b294cde17598e4302ef56d31866149d6834c2e146e2242471db",
+    "sources/w14-wnd-a-edit-getcaretpos/host_check.cpp": "909bf162b7796eecec535cc189bc137a94e064c8393751554462fc07ee8ad1ce",
+    "sources/w14-wnd-a-edit-insert/host_check.cpp": "ec156293037e8d8fb7b567fb1336b6bcd0eddaf7699c60da8a22048a2c09b313",
+    "sources/w14-wnd-a-edit-insert/insert.cpp": "e234928854a8a724eaca6b7c8cbbe758c1d7c129a7cdbdafeda07b20c42b5b63",
+    "sources/w14-wnd-a-font-drawcenteredstring/drawcenteredstring.cpp": "249625a97e08c138763f90fc3788fcb1d138686b6c351c9bf7d466638434b792",
+    "sources/w14-wnd-a-font-drawcenteredstring/host_check.cpp": "d14b9baccfd66aa907848ce320b8db789d874630318c706f0b91141f1c0f29d3",
+    "sources/w14-wnd-a-font-getstringwidth-char/getstringwidth.cpp": "261811c86cccfe9ba33a732317954acd1d7511205c1e083c31fe33d3c0c0ee98",
+    "sources/w14-wnd-a-font-getstringwidth-char/host_check.cpp": "b53a559d7f8d11b4aa96fbe73f16dd47a183e56aa4b7b21d942088bc546a3cdd",
+    "sources/w14-wnd-a-font-getstringwidth-u16/getstringwidth.cpp": "43609405db5a48fb1d9c8a040fc2df643d4829aa5185bee06d18b587d51cab11",
+    "sources/w14-wnd-a-font-getstringwidth-u16/host_check.cpp": "b44cb71d477d8987719abd2a4eaadb96d2b62db4f7a07fbf6fa196b294ac7758",
+    "sources/w14-wnd-a-options-back/back.cpp": "f51e9aa6195938cbd27349e268d00ec16ddeb3f5f3c293dbcfbd7b3ac9929e47",
+    "sources/w14-wnd-a-options-back/host_check.cpp": "4a816211c575a77561682d324f3f5f70ccac3ef193060451a48bd63c570548a3",
+    "sources/w14-wnd-a-options-decrement/decrement.cpp": "93838372b01820a5411e21bba05c49b603024c5a4328f32964c04b1b8d44e8f7",
+    "sources/w14-wnd-a-options-decrement/host_check.cpp": "8f16833b1e9c332e85d8fbb0a431706033bfbb2c576589054ed86d3a2aa45639",
+    "sources/w14-wnd-a-options-drawgameoptions/drawgameoptions.cpp": "724163783e00e2bccfb81d39bfbee846910210eeb534c117e619a28043dbbe43",
+    "sources/w14-wnd-a-options-drawgameoptions/host_check.cpp": "f8d8a32815f60e7ff16366a4db804e7dc12a2492a76dccf353b09d1a8c5372d8",
+    "sources/w14-wnd-a-options-drawinterfaceoptions/drawinterfaceoptions.cpp": "1be2c6875a3e1f458830cb451b8942dedc3dda159c12afe18a3cfebd51e6eb71",
+    "sources/w14-wnd-a-options-drawinterfaceoptions/host_check.cpp": "734761cfcf8c80e2791d8e84775ff11bccd8224980ad57ec075b8962e052e592",
+    "sources/w14-wnd-a-options-drawmainmenu/drawmainmenu.cpp": "95519b1465ebef394cd885a8f9581af3ee3265332bfa47c83e484872346390fa",
+    "sources/w14-wnd-a-options-drawmainmenu/host_check.cpp": "6e0ffa8305ac4df8cf092cde6881fd213d73d3fa0c4ec0de75881b2f74dc178c",
+    "sources/w14-wnd-a-options-drawsoundoptions/drawsoundoptions.cpp": "023193d4c19566b2a31109edeb8cc18dd690db23b101c3ccc9f7f6089f56b21e",
+    "sources/w14-wnd-a-options-drawsoundoptions/host_check.cpp": "a74dbbfe1a9dd7e94ef6c9a7da318c63640d8d9dc77b7935bf5505c42b90a242",
+    "sources/w14-wnd-a-options-increment/host_check.cpp": "c2f2dc7a88a9db90e517e083a8da219a683fe7c6cf4741001aa04e42bd9d01af",
+    "sources/w14-wnd-a-options-increment/increment.cpp": "766bc46597916a353ef03ee825646964d3013f96bd06089c4abc3408da93243d",
+    "sources/w14-wnd-a-rfont-findchar/findchar.cpp": "35f96a9578a4d86ec9fe2b1e9cfc290440c095c493a90480d80449cf70e61e02",
+    "sources/w14-wnd-a-rfont-findchar/host_check.cpp": "dcab091754b6c0e6387865b763d47bfa75805cccde49fef4f3dd908b744a86ae",
+    "sources/w14-wnd-a-ui-blitbar/blitbar.cpp": "c8e07477efa5b85f71d4181e243bf383a28fe1a37b401cbbf12b998719c6454a",
+    "sources/w14-wnd-a-ui-blitbar/host_check.cpp": "73d685b226329ab3a38a40cc1488af061e467a4d371d955322ccce505497ff81",
+    "sources/w14-wnd-a-ui-blitfillframe/blitfillframe.cpp": "dab6421df0408d656abb48fc36142f0fb8a6f460092ce9d4cfbf33e19f1bc3d2",
+    "sources/w14-wnd-a-ui-blitfillframe/host_check.cpp": "2d5e591dfc691fe7a6c392d10772ac7e42f2a307f4fe68971fc65efa727fb0f2",
+    "sources/w14-wnd-a-ui-blitframe/blitframe.cpp": "8cbfc0f8d4211ac9e0620844ea8ab945999b2300b5f9c3ccc69b6faa47338558",
+    "sources/w14-wnd-a-ui-blitframe/host_check.cpp": "462c20fb95f3229023e6167a8f974b9c081076a1bbd0b35cf5cb02f6fd822cf2",
+    "sources/w14-wnd-a-ui-blitrect/blitrect.cpp": "5baa2b8aa3dd120902ba2d19712afb3e73aa36433d787813ca9cf6664763e97a",
+    "sources/w14-wnd-a-ui-blitrect/host_check.cpp": "5656fb4834b3ce769b1261f5eac2b573404022a661068fb84570c66f23c05e1a",
+    "sources/w14-wnd-a-ui-drawstringex/drawstringex.cpp": "5225c04fb9e9c9f75e6b333ac44b0a5beeee643c11f11c8a1d639cb09c6a6568",
+    "sources/w14-wnd-a-ui-drawstringex/host_check.cpp": "384bdbc0f79bd1d2ad9ddb5064ab1cdb07e3d5cc7f01fb85b1b535ffb71a3cd5",
+    "sources/w14-wnd-a-ui-fillrectangle/fillrectangle.cpp": "84b082b1bb7485ad8aa90af765378a5fb8d4679c4999818dea489dcda0052b78",
+    "sources/w14-wnd-a-ui-fillrectangle/host_check.cpp": "32a32180e17752d8bf2323fad2b72e8281ef51502587604f430ef209c7dc5b87",
+    "sources/w14-wnd-a-uiwindow-drawframe/drawframe.cpp": "35f0bccbfd697e26b7314634a92054d7934a2efac75a4503aff7a1290124a2e6",
+    "sources/w14-wnd-a-uiwindow-drawframe/host_check.cpp": "e4e0b2e57a54b0b8fe62447aa74cac387058fa4ec3a49acf2bd06d346b2dd24d",
+    "sources/w14-wnd-a-uiwindow-isopen/host_check.cpp": "9c0ab44943df826ed658ae6f678f39b8f1e76528deb3318f3378e60c0ada13f8",
+    "sources/w14-wnd-a-uiwindow-isopen/isopen.cpp": "3947a936e9355d74d7db31e19c445cfc3ecc1d25d82df6ac47b95ac7f9334d77",
+    "sources/w14-wnd-a-uiwindow-isopening/host_check.cpp": "b35fe0ec0248eb92adab1b6e53881306848cd55a20d90df7c5997d4e9f63c22c",
+    "sources/w14-wnd-a-uiwindow-isopening/isopening.cpp": "dcee4a7b2bcc9540275677e04215a5fae07ecd44185f6c4904921dfda3f48062",
     "sources/w14-wnd-b-edit-keyboard-words/host_check.cpp": "52deb0cc253b32f80ce55c87d04c07c8947dc72e41a3ef5c4ee9cb62e7c8aca7",
     "sources/w14-wnd-b-edit-keyboard-words/keyboard_words.cpp": "32492635f2c5c3c8fb9ce7f8e914084b275b2e67d4d1b7c1e00f168433f8d7dd",
     "sources/w14-wnd-b-edit-movecaretdown/host_check.cpp": "035f276a2e3df10f5a555389027db1bb246f17d367586809d1603f5d6b32ddce",
@@ -98564,11 +98980,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6531,
-    "authored_default_inputs": 6529,
+    "selected_inputs": 6557,
+    "authored_default_inputs": 6555,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5179,
-    "compiled_body_bytes_from_accepted_inputs": 2085520,
+    "emitted_function_definitions_including_helpers": 5205,
+    "compiled_body_bytes_from_accepted_inputs": 2097072,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -98581,7 +98997,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6218
+    "package_selected_inputs": 6244
   },
   "startup_implementations": [
     {
@@ -197104,6 +197520,448 @@
       ],
       "host_files": [
         "sources/w14-hud-b-shop-mouse-on-hot-spot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-connect-beginconnect/beginconnect.cpp",
+      "source_sha256": "44737f431520569f67b9c48466a100522b7a67d341c84ede703299b6eee03db6",
+      "object_sha256": "c762ca3e59989f257fea268d5c4f20a7c1bae20f7523ab6979ab513e4cbfec89",
+      "emitted_functions": [
+        {
+          "name": "BeginConnect__12VIWndConnect",
+          "compiled_body_bytes": 828
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-connect-beginconnect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-edit-backspace/backspace.cpp",
+      "source_sha256": "1eb04c043e54cbbbe8b6ab4d1aa95fb715913a326b7d3686989e8f05f8d4ccf7",
+      "object_sha256": "0d381e1dbc074fd369c480191b7ec87a26a1589b7641d0c1e0ae717b7e8c8796",
+      "emitted_functions": [
+        {
+          "name": "Backspace__9VIWndEdit",
+          "compiled_body_bytes": 200
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-edit-backspace/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-edit-caretoffset/caretoffset.cpp",
+      "source_sha256": "542b699a4c44a100ad5da60e09fc233a34d344312833085e5764e08bc911aa5f",
+      "object_sha256": "6a6d9b6eae2a6c02c4180e8ae4667acad3d1862279d3b4b0ea2cc94d037b220f",
+      "emitted_functions": [
+        {
+          "name": "CaretOffset__9VIWndEdit",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-edit-caretoffset/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-edit-computetextrows/computetextrows.cpp",
+      "source_sha256": "71cfc3ef4624614fcafa259ccb0f94439d97ea0dfae3102a75aea998553fb395",
+      "object_sha256": "b9e37f3e63e32d88f4460b9a424ff131ab451fc356e856bc50189c958d41db87",
+      "emitted_functions": [
+        {
+          "name": "ComputeTextRows__9VIWndEdit",
+          "compiled_body_bytes": 588
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-edit-computetextrows/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-edit-getcaretpos/getcaretpos.cpp",
+      "source_sha256": "b75fa78b6be77b294cde17598e4302ef56d31866149d6834c2e146e2242471db",
+      "object_sha256": "facdc7910fd0ba386aa5cf28931fada6a6b0e66fafc9f8ff4e53840862ace256",
+      "emitted_functions": [
+        {
+          "name": "GetCaretPos__9VIWndEditP8VIVect2I",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-edit-getcaretpos/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-edit-insert/insert.cpp",
+      "source_sha256": "e234928854a8a724eaca6b7c8cbbe758c1d7c129a7cdbdafeda07b20c42b5b63",
+      "object_sha256": "69f46cae58902faa182fb37adda9969db1b505e5b236787d3ad51ce840e009bc",
+      "emitted_functions": [
+        {
+          "name": "Insert__9VIWndEditUs",
+          "compiled_body_bytes": 320
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-edit-insert/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-font-drawcenteredstring/drawcenteredstring.cpp",
+      "source_sha256": "249625a97e08c138763f90fc3788fcb1d138686b6c351c9bf7d466638434b792",
+      "object_sha256": "8266fe9021c34b9cfcc0149bad79ced837570121cf5aae17e30787e71337e8df",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCciiUi",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-font-drawcenteredstring/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-font-getstringwidth-char/getstringwidth.cpp",
+      "source_sha256": "261811c86cccfe9ba33a732317954acd1d7511205c1e083c31fe33d3c0c0ee98",
+      "object_sha256": "913dd3a10bf69a23bd6575f469ac530d3a412a92e474e7561f444989fa9aacc7",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCc",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-font-getstringwidth-char/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-font-getstringwidth-u16/getstringwidth.cpp",
+      "source_sha256": "43609405db5a48fb1d9c8a040fc2df643d4829aa5185bee06d18b587d51cab11",
+      "object_sha256": "22bb0259dd3988b14b4f8e1451c7179964f6dadf5b4ad687a4a2092c09003c50",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCUs",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-font-getstringwidth-u16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-back/back.cpp",
+      "source_sha256": "f51e9aa6195938cbd27349e268d00ec16ddeb3f5f3c293dbcfbd7b3ac9929e47",
+      "object_sha256": "1abda2adb92169b041ca2ff0e9cdb3919d9658a83e7fce2028ff4dad9587ad1f",
+      "emitted_functions": [
+        {
+          "name": "Back__12VIWndOptions",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-back/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-decrement/decrement.cpp",
+      "source_sha256": "93838372b01820a5411e21bba05c49b603024c5a4328f32964c04b1b8d44e8f7",
+      "object_sha256": "0b348c75a53deef1900538c03a338731d2b7082afafe290f2a4b3f4a02008d84",
+      "emitted_functions": [
+        {
+          "name": "Decrement__12VIWndOptions",
+          "compiled_body_bytes": 660
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-decrement/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-drawgameoptions/drawgameoptions.cpp",
+      "source_sha256": "724163783e00e2bccfb81d39bfbee846910210eeb534c117e619a28043dbbe43",
+      "object_sha256": "6e9717c994e0f0305c3228f3155e1e5a70ff3759cf6d925e1eeb62859b8e49a9",
+      "emitted_functions": [
+        {
+          "name": "DrawGameOptions__12VIWndOptions",
+          "compiled_body_bytes": 620
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-drawgameoptions/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-drawinterfaceoptions/drawinterfaceoptions.cpp",
+      "source_sha256": "1be2c6875a3e1f458830cb451b8942dedc3dda159c12afe18a3cfebd51e6eb71",
+      "object_sha256": "add91dd1f5ca25085b5cce14298fc674a2c909f54234b7f9aeda1d2d1af3d454",
+      "emitted_functions": [
+        {
+          "name": "DrawInterfaceOptions__12VIWndOptions",
+          "compiled_body_bytes": 1096
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-drawinterfaceoptions/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-drawmainmenu/drawmainmenu.cpp",
+      "source_sha256": "95519b1465ebef394cd885a8f9581af3ee3265332bfa47c83e484872346390fa",
+      "object_sha256": "4264de13bf7903a29e3002499825a26b6e8399fcbaf2ae72b05c5d0d9a445bd4",
+      "emitted_functions": [
+        {
+          "name": "DrawMainMenu__12VIWndOptions",
+          "compiled_body_bytes": 476
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-drawmainmenu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-drawsoundoptions/drawsoundoptions.cpp",
+      "source_sha256": "023193d4c19566b2a31109edeb8cc18dd690db23b101c3ccc9f7f6089f56b21e",
+      "object_sha256": "d24555e4d59b98bdcdadf659cbb288705d772e5d8107f137cbb29183e6d91e4a",
+      "emitted_functions": [
+        {
+          "name": "DrawSoundOptions__12VIWndOptions",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-drawsoundoptions/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-options-increment/increment.cpp",
+      "source_sha256": "766bc46597916a353ef03ee825646964d3013f96bd06089c4abc3408da93243d",
+      "object_sha256": "ac39d801c0bb2ca7c9c8a16cd4847a4f30b26f7f7ee919c57c49bb863e1172d0",
+      "emitted_functions": [
+        {
+          "name": "Increment__12VIWndOptions",
+          "compiled_body_bytes": 672
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-options-increment/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-rfont-findchar/findchar.cpp",
+      "source_sha256": "35f96a9578a4d86ec9fe2b1e9cfc290440c095c493a90480d80449cf70e61e02",
+      "object_sha256": "3372f8668924ffdee9d929bf74f5a029dedee319d3f23b4da6a2be6749482736",
+      "emitted_functions": [
+        {
+          "name": "FindChar__7VIRFontUs",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-rfont-findchar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-blitbar/blitbar.cpp",
+      "source_sha256": "c8e07477efa5b85f71d4181e243bf383a28fe1a37b401cbbf12b998719c6454a",
+      "object_sha256": "3554936bbdbadea9cfebb393fc1a4720cdf00f30cd649a632131d7ec2c18b1e0",
+      "emitted_functions": [
+        {
+          "name": "BlitBar__4VIUIPCUsG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii",
+          "compiled_body_bytes": 584
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-blitbar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-blitfillframe/blitfillframe.cpp",
+      "source_sha256": "dab6421df0408d656abb48fc36142f0fb8a6f460092ce9d4cfbf33e19f1bc3d2",
+      "object_sha256": "67187da0815735661ccb8a1a269127231cc7b849e0e807b3627fca3a46e7bcd1",
+      "emitted_functions": [
+        {
+          "name": "BlitFillFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam9VIUITexId16VIAlphaBlendModefUc",
+          "compiled_body_bytes": 400
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-blitfillframe/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-blitframe/blitframe.cpp",
+      "source_sha256": "8cbfc0f8d4211ac9e0620844ea8ab945999b2300b5f9c3ccc69b6faa47338558",
+      "object_sha256": "9b217f3528c016488cb5190e060d5dca6e5d47619f7997d2cbd8b1f388fe04c5",
+      "emitted_functions": [
+        {
+          "name": "BlitFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam16VIAlphaBlendModefUc",
+          "compiled_body_bytes": 1232
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-blitframe/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-blitrect/blitrect.cpp",
+      "source_sha256": "5baa2b8aa3dd120902ba2d19712afb3e73aa36433d787813ca9cf6664763e97a",
+      "object_sha256": "0cd9fc21e2b31ac222a0cf0078a557cbfc3e51723b74cd1a23cdb5a03c111912",
+      "emitted_functions": [
+        {
+          "name": "BlitRect__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef",
+          "compiled_body_bytes": 940
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-blitrect/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-drawstringex/drawstringex.cpp",
+      "source_sha256": "5225c04fb9e9c9f75e6b333ac44b0a5beeee643c11f11c8a1d639cb09c6a6568",
+      "object_sha256": "4d2d096b8889cfe4831e50f3e76a53bb54f29d3ddf91b8372a53c01057694073",
+      "emitted_functions": [
+        {
+          "name": "DrawStringEx__4VIUIPCUsiiG10VIColor32Fi",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-drawstringex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-ui-fillrectangle/fillrectangle.cpp",
+      "source_sha256": "84b082b1bb7485ad8aa90af765378a5fb8d4679c4999818dea489dcda0052b78",
+      "object_sha256": "c44a73b2c3f35e58e33d3798806edde0ff56d6ba77dfff7ae2e0f7b44241e8b2",
+      "emitted_functions": [
+        {
+          "name": "FillRectangle__4VIUIPC8VIVect2IPC10VIColor32F",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-ui-fillrectangle/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-uiwindow-drawframe/drawframe.cpp",
+      "source_sha256": "35f0bccbfd697e26b7314634a92054d7934a2efac75a4503aff7a1290124a2e6",
+      "object_sha256": "3bbf62053f7997492ef9f7b509d6058be620a45605b22c5c17f9dc75e8132876",
+      "emitted_functions": [
+        {
+          "name": "DrawFrame__10VIUIWindowiiiiUi",
+          "compiled_body_bytes": 720
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-uiwindow-drawframe/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-uiwindow-isopen/isopen.cpp",
+      "source_sha256": "3947a936e9355d74d7db31e19c445cfc3ecc1d25d82df6ac47b95ac7f9334d77",
+      "object_sha256": "ee29a6408feb00682196fbc440146f2aebb2a0d16c29165a1c3cc6f806d26635",
+      "emitted_functions": [
+        {
+          "name": "IsOpen__C10VIUIWindow",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-uiwindow-isopen/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w14-wnd-a",
+      "source": "sources/w14-wnd-a-uiwindow-isopening/isopening.cpp",
+      "source_sha256": "dcee4a7b2bcc9540275677e04215a5fae07ecd44185f6c4904921dfda3f48062",
+      "object_sha256": "14c9c9a1dc37d487e05af4ef1e50df1679beb96f8dbe5712ca1082490d2c2187",
+      "emitted_functions": [
+        {
+          "name": "IsOpening__C10VIUIWindow",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w14-wnd-a-uiwindow-isopening/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

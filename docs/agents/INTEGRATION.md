@@ -10020,3 +10020,19 @@ Closed: `bodyAlpha`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell
 
 Opened: `GetMode__6Camera`, `allDone__Fi`, `boxDraw__FiiiiiUii`, `displayResistances__Fi`, `doNamePad__Fv`, `drawNamePad__Fv`, `expf`, `getHairStyle__Fi`, `hudRunSlider__FiiiiiUifPii`, `initPostSelect__Fv`, `moveCamera__Fv`, `msgInventoryAdjustAbility__Fii`, `npcLookAtCamera__Fv`, `playerRecomputeDamage__6PlayerPQ24item11descriptioni`, `printStat__FiPUsiiii`, `resetName__Fv`, `statsFrame__Fv`, `statsRunSkillTree__Fi`, `switchToNamePad__Fv`, `textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii`
 - 2026-10-13 20:12 CDT — agents/w14-hud-b — 987 unresolved imports
+
+## agents/w14-wnd-a
+
+Merged (merge commit, branch tip `679ed032`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 26 units with fresh `input_order` values 6531 through 6556 (VIWnd option, edit, font and UI window helper routines; 26 host checks, all pass here, some only as x86_64 builds with statics below 4 GiB). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6555 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 987 |
+| After | 980 |
+| Closed | 26 |
+| Opened | 19 |
+
+Closed: `Back__12VIWndOptions`, `Backspace__9VIWndEdit`, `BeginConnect__12VIWndConnect`, `BlitBar__4VIUIPCUsG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `BlitFillFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam9VIUITexId16VIAlphaBlendModefUc`, `BlitFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam16VIAlphaBlendModefUc`, `BlitRect__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `CaretOffset__9VIWndEdit`, `ComputeTextRows__9VIWndEdit`, `Decrement__12VIWndOptions`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCciiUi`, `DrawFrame__10VIUIWindowiiiiUi`, `DrawGameOptions__12VIWndOptions`, `DrawInterfaceOptions__12VIWndOptions`, `DrawMainMenu__12VIWndOptions`, `DrawSoundOptions__12VIWndOptions`, `DrawStringEx__4VIUIPCUsiiG10VIColor32Fi`, `FillRectangle__4VIUIPC8VIVect2IPC10VIColor32F`, `FindChar__7VIRFontUs`, `GetCaretPos__9VIWndEditP8VIVect2I`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCUs`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCc`, `Increment__12VIWndOptions`, `Insert__9VIWndEditUs`, `IsOpen__C10VIUIWindow`, `IsOpening__C10VIUIWindow`
+
+Opened: `BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi`, `BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BringUpNetwork__12VIWndConnect`, `DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi`, `DrawHScroll__10VIUIWindowiiifUi`, `FindTyped__12VIDictionaryUi14VIResourceTypeRi`, `GetStringWidth__8VIRasteriPCUs`, `GetStringWidth__8VIRasteriPCc`, `GetUITexture__F9VIUITexId`, `SetOutputMode__13VISoundDevicei`, `SetSolidFillUIMaterial__8VIRaster`, `StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `TickPulse__C10VIUIWindow`, `TickR__10VIUIWindowiib`, `VIEELoadIrx__FPCciT0`, `VIEEUnloadIrx__Fi`, `_6VIFont$sm_FontName`
+- 2026-10-13 20:17 CDT — agents/w14-wnd-a — 980 unresolved imports
