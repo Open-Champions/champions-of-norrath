@@ -9924,3 +9924,19 @@ Closed: `Allocate__10VIZoneRoom`, `Bound__6VIBBoxiRC7VIVect3`, `Cache__13VIEESur
 
 Opened: `Allocate__13VIEESurfCacheR13VIEESurfAlloc`, `CalcCacheInfo__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfo`, `CalcLODLevelIndex__9VIHSpriteRC10VIMatrix44`, `ConstructSolidFillPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructTextPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructWirePass__10VIMaterialiR8VIRasterP7VIQWord`, `Decache__13VIEESurfCacheR9VISurface`, `Download__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoPP10_sceDmaTag`, `Erase__t6VIList1Z7VIActori`, `FindLRU__13VIEESurfCacheR13VIEESurfAllocR8VIRaster`, `GetTime__8VIRaster`, `Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo`, `Magnitude__C7VIVect3`, `MoveToLRUEnd__13VIEESurfCachei`, `PointInSolid__C8VISphereRC7VIVect3`, `ProcessPlayList__9VIHSpriteiR7VIScene`, `ProcessUpHierarchy__9VIHSpritei`, `Process__10VIMateriall`, `ReleaseSprite__7VIScenei`, `ReleaseStaticLighting__7VIScenei`, `RemoveActor__7VIScenei`, `RemoveFromLRU__13VIEESurfCachei`, `RenderByVolume__6VIZoneiR15VISceneRendVars`, `SetBindPose__9VIHSprite`, `Set__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoR14VIMaterialPass`, `Size__Ct6VIPool1Z13VIHSpritePlay`, `_8VIRaster$ColorMatrix`, `_8VIRaster$RMaterialOffset`
 - 2026-10-13 19:39 CDT — agents/w14-raster — 916 unresolved imports
+
+## agents/w14-startup-sys
+
+Merged (merge commit, branch tip `8b3c07e9`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 25 units with fresh `input_order` values 6373 through 6397 (21 functions and 4 data symbols; startup, date, math, zlib, file and unwinder library routines), each with a committed host check (25 of 25 here; `frame-state-for` fails as arm64 and passes built as x86_64 with statics below 4 GiB, as its pointer words require). Three units (`gsm_decode`, `gsm_encode`, `upcast`) plan the existing `w13-startup-fn-a` sources, whose checks live in the `w14-startup-sys-gsm-*`/`-upcast` directories (recorded as their host files); no other planned unit defines those names. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Not closed, by design or by the notes: the six linker-defined symbols, `__EH_FRAME_BEGIN__`, `osdsrc` and `tlbsrc`. Carried from the notes for other owners: `w13-startup-fn-a-throw` declares a 4-byte adjustment slot where the original stores 8 bytes (not planned), and two file-local `m_cd` copies elsewhere bind a different object from the now-global one. Full build with the final snapshot: 6396 authored inputs, zero COMMON. The notes' 23 closed names reproduce; 23 callee names open, so the count stays at 916.
+
+| | |
+|---|---|
+| Before | 916 |
+| After | 916 |
+| Closed | 23 |
+| Opened | 23 |
+
+Closed: `FindIopFunction__FUi`, `GetRomName`, `VIGetFeatureFlags__Fv`, `__frame_state_for`, `__kernel_rem_pio2`, `a.1122`, `adddate`, `ezNetCtlGetStatus`, `fabs`, `frombcd`, `gRomName`, `gsm_decode`, `gsm_encode`, `inflate`, `inflateEnd`, `inflateInit_`, `sceLseek`, `sceVu0ApplyMatrix`, `sceWrite`, `subdate`, `throw_helper`, `tobcd`, `upcast__C16__user_type_infoRC9type_infoPvPPv`
+
+Opened: `Gsm_LPC_Analysis`, `Gsm_Long_Term_Predictor`, `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_RPE_Encoding`, `Gsm_Short_Term_Analysis_Filter`, `Gsm_Short_Term_Synthesis_Filter`, `__unwinding_cleanup`, `copy_reg`, `decode_uleb128`, `execute_cfa_insn`, `extract_cie_info`, `find_exception_handler`, `find_fde`, `floor`, `get_reg_addr`, `inflateInit2_`, `inflate_blocks`, `inflate_blocks_free`, `inflate_blocks_reset`, `next_stack_level`, `old_find_exception_handler`, `scalbn`
+- 2026-10-13 19:45 CDT — agents/w14-startup-sys — 916 unresolved imports

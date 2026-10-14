@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6371,
+  "default_authored_inputs": 6396,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -4859,6 +4859,8 @@
     "sources/w13-startup-fn-a-deci2-ex-recv/deci2_ex_recv.cpp": "f9cdb8e050fc047b9b504ac3bdaf401c0f752d4fed0dc7f31113274f75e92187",
     "sources/w13-startup-fn-a-deci2-ex-send/deci2_ex_send.cpp": "b006b72ac437ac84fccce6c7eef0792e6925c403cdb9c8d1be379497656ea042",
     "sources/w13-startup-fn-a-get-osd-config-param2/get_osd_config_param2.S": "55f2e1f4c9513a23d09616caca6220c26ab9a760a5b8e5eef97ba3cd1f3f1bc1",
+    "sources/w13-startup-fn-a-gsm-decode/gsm_decode.cpp": "ddbfb3f1eed37859968cf9e63f8abe1a7abfdd1920018e9feff905acf1f25ece",
+    "sources/w13-startup-fn-a-gsm-encode/gsm_encode.cpp": "e8adf841dd641948558079f8204a2575d3a4269ff2b983519500007092d0b645",
     "sources/w13-startup-fn-a-ieee754-rem-pio2/ieee754_rem_pio2.cpp": "f9a9755f21deb686af9e197b6bbe067246ac64702bea78edcbd1b92469ffef71",
     "sources/w13-startup-fn-a-init-reg-size-table/init_reg_size_table.cpp": "a90f8fd9a6ddebaa1f5ed505a88321e434ef4952f2154563fde5b6de91e25c02",
     "sources/w13-startup-fn-a-is-t10k/is_t10k.cpp": "5025936935d818744641d56a8527acacb6a1ad561fff08f7598bf05d9d475590",
@@ -4873,6 +4875,7 @@
     "sources/w13-startup-fn-a-tfv/typeinfo.cpp": "213336dc407460942496470be466fe795f0aad84789117832089730e489f3712",
     "sources/w13-startup-fn-a-throw/throw.cpp": "4782b54ab65c6f4dd5459aca415e5378280f359cfb2b1256b9773faff73a0ee2",
     "sources/w13-startup-fn-a-uncompress/uncompress.cpp": "eb752e078ca2a95d588d4ebcef3518221ead17d53e927af73d3b38b9bd0377df",
+    "sources/w13-startup-fn-a-upcast/upcast.cpp": "66a45a4dc93a42aacee1305cd89b416bc40d128a1eb443bc14c499d7afb3f59a",
     "sources/w13-startup-fn-a-vi-buffer-swap/vi_buffer_swap.cpp": "659eeb2aa0034e877e97c30f19e765862410a760efa0fb84b570a8438f773f27",
     "sources/w13-startup-fn-a-vi-endian/vi_endian.cpp": "df952e080de30d5b1139a61e883c5524e834832b24ea0d18001e4e5cfaa8f26b",
     "sources/w13-vi-a-atmosphere-addsplash/add_splash.cpp": "9ba9767400deef816912257543a44d185c9c5aa101f8700997d45ccaeb3ba30e",
@@ -5190,6 +5193,28 @@
     "sources/w14-startup-io-b-pad-mtap-state/pad_mtap_state.cpp": "f9bda289f30badc491935e6349a9d5f4223eaeba00e816285923d5ad1a45246f",
     "sources/w14-startup-io-b-unet-startup-async-status/unet_startup_async_status.cpp": "4f93ef03b99f9ed87f539898f4af1c20ce070dfe08c52f7292ac7fa13a32156f",
     "sources/w14-startup-io-b-unet-startup-async/unet_startup_async.cpp": "e00640a17030b40e72f60380af223b4e3f76b82a38aafe58b4512678dd480b01",
+    "sources/w14-startup-sys-adddate/adddate.cpp": "b93bca2c7bb70d8c137bcfae7d049159bb7b63ba58e06616f2d50b04a38916d6",
+    "sources/w14-startup-sys-eznet-ctl-client/eznet_ctl_client.cpp": "f31220a4f3a17c5f31fde0f8076f586beda24b8363120850e29635b4716a56e9",
+    "sources/w14-startup-sys-eznet-ctl-get-status/get_status.cpp": "da98f4d5bb7c3dd88a77b7f108a5000e5da341c821b7b83600c937a2527bbc50",
+    "sources/w14-startup-sys-fabs/fabs.cpp": "1e82816396c9b7c8fe6d129701c33d8f6ef3c70c855db57885772fe315211bf6",
+    "sources/w14-startup-sys-feature-flags-data/feature_flags_data.cpp": "a9ecd1218e72632a0e0df2c563efeaea4baedcbc5794e01e21041a312ef4c30d",
+    "sources/w14-startup-sys-find-iop-function/find_iop_function.cpp": "5f974906d8837f94f7378ed150da524b532aff35310ed999d8ae34571c73e634",
+    "sources/w14-startup-sys-frame-state-for/frame_state_for.cpp": "14bfa5a05d8a7256d0053fcbaf514a3c3eb93a9ec3a80999de9907a6b3e40d42",
+    "sources/w14-startup-sys-frombcd/frombcd.cpp": "b5da89613f1b574a54661a561a783b94efff60abf269e127c3e4069c5cf9d7ac",
+    "sources/w14-startup-sys-fs-lseek/fs_lseek.cpp": "4eb7838846734c442e174c38a734bc8fe8d0273a38c82c02094ec31db0de1b1c",
+    "sources/w14-startup-sys-fs-write/fs_write.cpp": "108af6741c44fc315aa7b39be92d0a68b52857cc17a70f62d2201e32f38ac93b",
+    "sources/w14-startup-sys-get-rom-name/get_rom_name.cpp": "ef90831dc842ccae02f211c1b1038835fe6f828b5ee2557484aceeddd5c420d1",
+    "sources/w14-startup-sys-grom-name/grom_name.cpp": "a0bc68fb08221c272a734e2b7c8c68271a6582f4d96e27ffb0b26bcc265487b5",
+    "sources/w14-startup-sys-inflate-end/inflate_end.cpp": "982dfd95480cabdff9570b7952fef5c3e71afe28e5e09d6246611793f48fc5fb",
+    "sources/w14-startup-sys-inflate-init/inflate_init.cpp": "92ecbc8f35155d44ec843ee7c6571261956e7f63499bdc6cbfa12956e90b97cb",
+    "sources/w14-startup-sys-inflate/inflate.cpp": "4f2d8d2e90e855b3ce8750da9db98da634a9b6d2e615b4696904c5f8eb53f61e",
+    "sources/w14-startup-sys-kernel-rem-pio2/kernel_rem_pio2.cpp": "2d6c33fb875738ea8b73fc9ef5757af20d49b32ee07d2fd1b53cebd7c70364a4",
+    "sources/w14-startup-sys-quick-spell-alpha/quick_spell_alpha.cpp": "8134658c8fb1a437097392cc7f4389c182ecf9dfae5c9ef36f47b2cb06820171",
+    "sources/w14-startup-sys-subdate/subdate.cpp": "9c9ee3f1dddf0899c5d0815a3a81c06d366437701358390458f15cdac1a265ba",
+    "sources/w14-startup-sys-throw-helper/throw_helper.cpp": "902766fb33e73778aaf8c33da4bdccb0ecc9e1cfb242b773f1b34b237722cb97",
+    "sources/w14-startup-sys-tobcd/tobcd.cpp": "8a145c7d825fd4414ef4601091d472d0b2ade64f3033eb140ad83e2a84679ddf",
+    "sources/w14-startup-sys-vi-get-feature-flags/get_feature_flags.cpp": "ff2c423360fc78a33136128cc115d063340e81e7b304244db62e6b87c50f7da7",
+    "sources/w14-startup-sys-vu0-apply-matrix/vu0_apply_matrix.cpp": "9bf53d5be8ce8e15b061eab694b66b11608ee56f6423a24754fc8689674de20a",
     "sources/w8-actor-virtuals-a-dtor-10hatebridge/dtor.cpp": "859492e86e333759e8df790b5a0437be294d54757064e57c2b067ecd3bad7e93",
     "sources/w8-actor-virtuals-a-dtor-10teleporter/dtor.cpp": "88234f3398a7f5a51264da0ccd7070b7ef93ef22f1f513e1fce9eccaa32fea8f",
     "sources/w8-actor-virtuals-a-dtor-11missiletrap/dtor.cpp": "800f478cf9f4b385da35f4871b80bc9d33611ac07a0018608b15ab14441cb423",
@@ -94409,6 +94434,361 @@
           "compiled_body_bytes": 48
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6373,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_adddate.o",
+      "profile": "authored_cpp",
+      "sha256": "b93bca2c7bb70d8c137bcfae7d049159bb7b63ba58e06616f2d50b04a38916d6",
+      "source": "sources/w14-startup-sys-adddate/adddate.cpp",
+      "emitted_functions": [
+        {
+          "name": "adddate",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6374,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_eznet_ctl_client.o",
+      "profile": "authored_cpp",
+      "sha256": "f31220a4f3a17c5f31fde0f8076f586beda24b8363120850e29635b4716a56e9",
+      "source": "sources/w14-startup-sys-eznet-ctl-client/eznet_ctl_client.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6375,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_eznet_ctl_get_status.o",
+      "profile": "authored_cpp",
+      "sha256": "da98f4d5bb7c3dd88a77b7f108a5000e5da341c821b7b83600c937a2527bbc50",
+      "source": "sources/w14-startup-sys-eznet-ctl-get-status/get_status.cpp",
+      "emitted_functions": [
+        {
+          "name": "ezNetCtlGetStatus",
+          "compiled_body_bytes": 180
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6376,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_fabs.o",
+      "profile": "authored_cpp",
+      "sha256": "1e82816396c9b7c8fe6d129701c33d8f6ef3c70c855db57885772fe315211bf6",
+      "source": "sources/w14-startup-sys-fabs/fabs.cpp",
+      "emitted_functions": [
+        {
+          "name": "fabs",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6377,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_feature_flags_data.o",
+      "profile": "authored_cpp",
+      "sha256": "a9ecd1218e72632a0e0df2c563efeaea4baedcbc5794e01e21041a312ef4c30d",
+      "source": "sources/w14-startup-sys-feature-flags-data/feature_flags_data.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6378,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_find_iop_function.o",
+      "profile": "authored_cpp",
+      "sha256": "5f974906d8837f94f7378ed150da524b532aff35310ed999d8ae34571c73e634",
+      "source": "sources/w14-startup-sys-find-iop-function/find_iop_function.cpp",
+      "emitted_functions": [
+        {
+          "name": "FindIopFunction__FUi",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6379,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_frame_state_for.o",
+      "profile": "authored_cpp",
+      "sha256": "14bfa5a05d8a7256d0053fcbaf514a3c3eb93a9ec3a80999de9907a6b3e40d42",
+      "source": "sources/w14-startup-sys-frame-state-for/frame_state_for.cpp",
+      "emitted_functions": [
+        {
+          "name": "__frame_state_for",
+          "compiled_body_bytes": 456
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6380,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_frombcd.o",
+      "profile": "authored_cpp",
+      "sha256": "b5da89613f1b574a54661a561a783b94efff60abf269e127c3e4069c5cf9d7ac",
+      "source": "sources/w14-startup-sys-frombcd/frombcd.cpp",
+      "emitted_functions": [
+        {
+          "name": "frombcd",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6381,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_fs_lseek.o",
+      "profile": "authored_cpp",
+      "sha256": "4eb7838846734c442e174c38a734bc8fe8d0273a38c82c02094ec31db0de1b1c",
+      "source": "sources/w14-startup-sys-fs-lseek/fs_lseek.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceLseek",
+          "compiled_body_bytes": 748
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6382,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_fs_write.o",
+      "profile": "authored_cpp",
+      "sha256": "108af6741c44fc315aa7b39be92d0a68b52857cc17a70f62d2201e32f38ac93b",
+      "source": "sources/w14-startup-sys-fs-write/fs_write.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceWrite",
+          "compiled_body_bytes": 956
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6383,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_get_rom_name.o",
+      "profile": "authored_cpp",
+      "sha256": "ef90831dc842ccae02f211c1b1038835fe6f828b5ee2557484aceeddd5c420d1",
+      "source": "sources/w14-startup-sys-get-rom-name/get_rom_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetRomName",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6384,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_grom_name.o",
+      "profile": "authored_cpp",
+      "sha256": "a0bc68fb08221c272a734e2b7c8c68271a6582f4d96e27ffb0b26bcc265487b5",
+      "source": "sources/w14-startup-sys-grom-name/grom_name.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6385,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_inflate.o",
+      "profile": "authored_cpp",
+      "sha256": "4f2d8d2e90e855b3ce8750da9db98da634a9b6d2e615b4696904c5f8eb53f61e",
+      "source": "sources/w14-startup-sys-inflate/inflate.cpp",
+      "emitted_functions": [
+        {
+          "name": "inflate",
+          "compiled_body_bytes": 1640
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6386,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_inflate_end.o",
+      "profile": "authored_cpp",
+      "sha256": "982dfd95480cabdff9570b7952fef5c3e71afe28e5e09d6246611793f48fc5fb",
+      "source": "sources/w14-startup-sys-inflate-end/inflate_end.cpp",
+      "emitted_functions": [
+        {
+          "name": "inflateEnd",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6387,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_inflate_init.o",
+      "profile": "authored_cpp",
+      "sha256": "92ecbc8f35155d44ec843ee7c6571261956e7f63499bdc6cbfa12956e90b97cb",
+      "source": "sources/w14-startup-sys-inflate-init/inflate_init.cpp",
+      "emitted_functions": [
+        {
+          "name": "inflateInit_",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6388,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_kernel_rem_pio2.o",
+      "profile": "authored_cpp",
+      "sha256": "2d6c33fb875738ea8b73fc9ef5757af20d49b32ee07d2fd1b53cebd7c70364a4",
+      "source": "sources/w14-startup-sys-kernel-rem-pio2/kernel_rem_pio2.cpp",
+      "emitted_functions": [
+        {
+          "name": "__kernel_rem_pio2",
+          "compiled_body_bytes": 3276
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6389,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_quick_spell_alpha.o",
+      "profile": "authored_cpp",
+      "sha256": "8134658c8fb1a437097392cc7f4389c182ecf9dfae5c9ef36f47b2cb06820171",
+      "source": "sources/w14-startup-sys-quick-spell-alpha/quick_spell_alpha.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6390,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_subdate.o",
+      "profile": "authored_cpp",
+      "sha256": "9c9ee3f1dddf0899c5d0815a3a81c06d366437701358390458f15cdac1a265ba",
+      "source": "sources/w14-startup-sys-subdate/subdate.cpp",
+      "emitted_functions": [
+        {
+          "name": "subdate",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6391,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_throw_helper.o",
+      "profile": "authored_cpp",
+      "sha256": "902766fb33e73778aaf8c33da4bdccb0ecc9e1cfb242b773f1b34b237722cb97",
+      "source": "sources/w14-startup-sys-throw-helper/throw_helper.cpp",
+      "emitted_functions": [
+        {
+          "name": "throw_helper",
+          "compiled_body_bytes": 940
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6392,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_tobcd.o",
+      "profile": "authored_cpp",
+      "sha256": "8a145c7d825fd4414ef4601091d472d0b2ade64f3033eb140ad83e2a84679ddf",
+      "source": "sources/w14-startup-sys-tobcd/tobcd.cpp",
+      "emitted_functions": [
+        {
+          "name": "tobcd",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6393,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_vi_get_feature_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "ff2c423360fc78a33136128cc115d063340e81e7b304244db62e6b87c50f7da7",
+      "source": "sources/w14-startup-sys-vi-get-feature-flags/get_feature_flags.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIGetFeatureFlags__Fv",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6394,
+      "kind": "independently_authored_source",
+      "object_name": "w14_startup_sys_vu0_apply_matrix.o",
+      "profile": "authored_cpp",
+      "sha256": "9bf53d5be8ce8e15b061eab694b66b11608ee56f6423a24754fc8689674de20a",
+      "source": "sources/w14-startup-sys-vu0-apply-matrix/vu0_apply_matrix.cpp",
+      "emitted_functions": [
+        {
+          "name": "sceVu0ApplyMatrix",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6395,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_gsm_decode.o",
+      "profile": "authored_cpp",
+      "sha256": "ddbfb3f1eed37859968cf9e63f8abe1a7abfdd1920018e9feff905acf1f25ece",
+      "source": "sources/w13-startup-fn-a-gsm-decode/gsm_decode.cpp",
+      "emitted_functions": [
+        {
+          "name": "gsm_decode",
+          "compiled_body_bytes": 944
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6396,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_gsm_encode.o",
+      "profile": "authored_cpp",
+      "sha256": "e8adf841dd641948558079f8204a2575d3a4269ff2b983519500007092d0b645",
+      "source": "sources/w13-startup-fn-a-gsm-encode/gsm_encode.cpp",
+      "emitted_functions": [
+        {
+          "name": "gsm_encode",
+          "compiled_body_bytes": 1088
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6397,
+      "kind": "independently_authored_source",
+      "object_name": "w13_startup_fn_a_upcast.o",
+      "profile": "authored_cpp",
+      "sha256": "66a45a4dc93a42aacee1305cd89b416bc40d128a1eb443bc14c499d7afb3f59a",
+      "source": "sources/w13-startup-fn-a-upcast/upcast.cpp",
+      "emitted_functions": [
+        {
+          "name": "upcast__C16__user_type_infoRC9type_infoPvPPv",
+          "compiled_body_bytes": 124
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -94508,7 +94888,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ad2fb23db4563563c853a37167240cb9c85a5eb05a9e08e8427a9484b81cab67",
+  "snapshot_sha256": "c42a95f27284f3248bd275d5f8f2b0ea39d18ede12f93005f5ad159c7b89de7e",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
