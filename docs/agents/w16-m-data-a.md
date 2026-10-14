@@ -73,7 +73,7 @@ Unknown:
 - Full partial build, started from a private copy of the shared plan at `work/w16-m-data-a-build`. See the build
   line below for its state.
 
-Build state: in progress when this note was written (6,269 source compiles done, no link yet). The shared plan does not include this package, so the build does not contain these units; its unresolved list is therefore the baseline for the scope names, not a measure of this package.
+Build state: complete. The partial build from a private copy of the shared plan (plan SHA-256 7e9ac625...) compiled 7,327 sources, made one link, and reported 5,834 functions and 841 unresolved imports, with no game executable. All 32 scope names are still unresolved in it, because this package's entries are not in that plan. The 841-name list matches the newest earlier build, plan16-build.
 
 ## Imports opened
 
