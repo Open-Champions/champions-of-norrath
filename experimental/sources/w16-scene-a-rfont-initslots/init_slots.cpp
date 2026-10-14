@@ -1,19 +1,19 @@
-// Observed: InitSlots__7VIRFontR8VIRaster at 0x011357d0 is 548 bytes in the pinned SLUS-20565 image. f = this.
-//   surface = Surface__8VIRasteri(raster, f[12]); width = surface[8]; height = surface[12];
+// Observed: InitSlots__7VIRFontR8VIRaster at 0x011357d0 is 548 bytes in the pinned SLUS-20565 image. Offsets written +N are byte offsets from this; surface+N from the surface.
+//   surface = Surface__8VIRasteri(raster, +12); width = word surface+8; height = word surface+12;
 //   LockMipLevel__9VISurfaceiRiR12VIPixelStorePPUc(surface, 0, &pitch, &store, &buffer); if it is negative, return -1.
-//   cell = max(f[20], f[24]); if store == 0, cell += cell & 1. store selects a byte step per cell: 0 -> cell >> 1 (signed), 1 -> cell,
+//   cell = max(+20, +24); if store == 0, cell += cell & 1. store selects a byte step per cell: 0 -> cell >> 1 (signed), 1 -> cell,
 //   2, 3 and 6 -> cell << 2, 4 -> 3 * cell, 5 -> cell << 1; store >= 7 returns -1 with the surface still locked.
-//   f[44] = (width / cell) * (height / cell) (signed divisions; a zero cell traps with break 7, as the compiler emits for division).
+//   +44 = (width / cell) * (height / cell) (signed divisions; a zero cell traps with break 7, as the compiler emits for division).
 //   Then, unless height < cell, walk rows y = 0, cell, 2*cell, ... while y + cell <= height, and in each row (unless width < cell) cells
 //   x = 0, cell, ... while x + cell <= width, numbering slots 0, 1, 2, ... over the whole walk. Slot k is a 56-byte record at
-//   (word f[68]) + 56 * k: word +0 = running byte offset (row * pitch, plus the byte step for each earlier cell in the row);
-//   halfword +12 = 0xffff; word +16 = x; word +20 = y; word +8 = k - 1 (slot 0: f[56] = 0 and slot 0's +8 = -1); word +4 = k + 1, except
-//   the slot with k == f[44] - 1, which gets f[60] = k and +4 = -1. Finally UnlockMipLevel__9VISurfacei(surface, 0); return -1 if its
+//   (word +68) + 56 * k: word +0 = running byte offset (row * pitch, plus the byte step for each earlier cell in the row);
+//   halfword +12 = 0xffff; word +16 = x; word +20 = y; word +8 = k - 1 (slot 0: +56 = 0 and slot 0's +8 = -1); word +4 = k + 1, except
+//   the slot with k == +44 - 1, which gets +60 = k and +4 = -1. Finally UnlockMipLevel__9VISurfacei(surface, 0); return -1 if its
 //   result is negative, else 0.
-// Inferred: f[12] is a surface id from CreateResources (it stores CreateSurface's result there), f[20] and f[24] are the glyph cell
-// extent and widest glyph, and the slots are a doubly linked list of glyph cells in a texture (f[56] first, f[60] last, +8 previous,
+// Inferred: +12 is a surface id from CreateResources (it stores CreateSurface's result there), +20 and +24 are the glyph cell
+// extent and widest glyph, and the slots are a doubly linked list of glyph cells in a texture (+56 first, +60 last, +8 previous,
 // +4 next, -1 for none). The pitch and store come from the lock; the third lock result is unused here.
-// Unknown: slot fields +24..+55 (not written here), +12's meaning, and whether the walk can overrun the array when f[44] is
+// Unknown: slot fields +24..+55 (not written here), +12's meaning, and whether the walk can overrun the array when +44 is
 // smaller than the number of cells walked (nothing here checks it). The three callees are imports. Nothing here ran on the EE.
 #ifdef NORRATH_HOST_ARENA
 extern "C" unsigned char* norrath_host_pointer(unsigned address);
