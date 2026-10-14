@@ -15,7 +15,7 @@ The seventeen names in the wave list are destructors of spell and projectile cla
 these seventeen addresses. The call-count ordering was therefore not usable, and the work is ordered by shared shape
 (GameObject base, Spell base, projectile, multi-step, global counter).
 
-Status: 7 of 17 units have sources and checks in this branch.
+Status: 8 of 17 units have sources and checks in this branch.
 
 ## What was done
 
@@ -25,7 +25,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 
 - GameObject: 12GlowingShaft, 18FrostStormIceShard, 19BlindingLightEffect
 - Spell base: 12SpellHealing, 15SpellHolyShield, 17SpellMinorHealing
-- Projectile: 8HolyBolt
+- Projectile: 8HolyBolt, 8LostSoul
 
 ## Units
 
@@ -38,6 +38,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 | `w16-m-dtor-a-dtor-15spellholyshield` | `_$_15SpellHolyShield` | `0x00319068`, 100 bytes (weak) | 92 | `1aa97b1e82e523232bca03c1c4b3d615556288a8fc53fbab44824d60b3b3968c` |
 | `w16-m-dtor-a-dtor-17spellminorhealing` | `_$_17SpellMinorHealing` | `0x003186b0`, 100 bytes (weak) | 92 | `830c02726b6503281b35bb05b8e86de0523243e9cfbfbf6e9642544b46ab6a80` |
 | `w16-m-dtor-a-dtor-8holybolt` | `_$_8HolyBolt` | `0x00310c08`, 132 bytes (weak) | 136 | `a9dc2878825ec2419464bed92d159599fd25a789f068163e53e1aa11f59b8463` |
+| `w16-m-dtor-a-dtor-8lostsoul` | `_$_8LostSoul` | `0x00310e28`, 132 bytes (weak) | 136 | `23c49cf70fc4c9a1d13c8f5906638e7ce060b6cab773aebfa2932a3030fbf4c5` |
 
 ## Observed behaviour worth knowing
 
@@ -53,7 +54,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 
 ## Checks performed
 
-- **EE compile.** 7 of 7 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
+- **EE compile.** 8 of 8 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
   and the `authored_cpp` flags from `experimental/build-plan.json`, with `-c` into a private directory. Each object exports
   one function, under its image symbol, and leaves the callees and tables undefined.
 - **Host contract.** Each unit has `host_check.cpp`, built with `clang++ -std=c++17`. It runs the destructor over every
@@ -175,13 +176,27 @@ entries until the snapshot records the same inputs.
     "compiled_body_bytes": 136
    }
   ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w16mdb_dtor_8lostsoul.o",
+  "profile": "authored_cpp",
+  "sha256": "23c49cf70fc4c9a1d13c8f5906638e7ce060b6cab773aebfa2932a3030fbf4c5",
+  "source": "sources/w16-m-dtor-a-dtor-8lostsoul/dtor.cpp",
+  "emitted_functions": [
+   {
+    "name": "_$_8LostSoul",
+    "compiled_body_bytes": 136
+   }
+  ]
  }
 ]
 ```
 
 ## Imports closed
 
-Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`.
+Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`.
 
 The partial build's unresolved list is checked in the section below.
 
