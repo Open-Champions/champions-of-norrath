@@ -128,7 +128,6 @@ contents and any formula are unknown. This import stays open.
   observed in the image. It is a resource name, not a game asset, but the publication review
   should confirm that is acceptable.
 
-`python3 -m unittest discover -s tools -p 'test_*.py'` on this branch: 214 tests, OK.
 
 ## Imports closed (names)
 
