@@ -75,7 +75,7 @@ The private build with every entry below went from 841 to 855 unresolved names (
 ## Build
 
 `python3 docs/agents/w16-lib-a-plan-entries.py --toolchain /path/to/ee [--private-root DIR]` prints the plan entries (below) and can write a private copy of
-plan and snapshot; I built with it (`--private-root` outside git, 7,350 sources, exit 0, no retry): 5,855 functions, 855 unresolved names.
+plan and snapshot; I built with it before `StrcpyS` was added (`--private-root` outside git, 7,350 sources, exit 0, no retry): 5,855 functions, 855 unresolved names; `StrcpyS` is the only unit not in that build, and its own compile and host check passed.
 
 ## Build-plan entries needed
 
