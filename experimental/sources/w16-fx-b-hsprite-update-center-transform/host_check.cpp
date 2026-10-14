@@ -14,7 +14,10 @@ int InterpTransAboutCenter__9VIHSpriteR7VISceneR7VIVect3R14VIHSpriteFrame(void*,
     return interp_ret;
 }
 void Scale__10VIMatrix44f(void* m, float s) { Mptr = m; seen_scale = s; order[ncall++] = 'S'; }
-void Translate__10VIMatrix44RC7VIVect3(void*, const float* v) { std::memcpy(seen_neg, v, 12); order[ncall++] = 'T'; }
+void Translate__10VIMatrix44RC7VIVect3(void*, const float* v) {
+    if (order[ncall - 1] == 'S') std::memcpy(seen_neg, v, 12); else std::memcpy(seen_centre, v, 12);
+    order[ncall++] = 'T';
+}
 void Mul__10VIMatrix44RC10VIMatrix44T1(void*, const void*, const void*) { order[ncall++] = 'M'; }
 void Transform__10VIMatrix44RC6VIQuatfRC7VIVect3(void* m, const float* q, float s, const float* t) {
     if (m != Mptr) ncall = 99;
@@ -36,6 +39,7 @@ int main() {
     if (std::memcmp(order, "ISTMXMTMGDD", 11) != 0 || ncall != 11 || dtors != 2) return 5;
     if (Mptr != sprite + 320 || seen_scale != 1.25f) return 6;
     if (seen_neg[0] != -1 || seen_neg[1] != -2 || seen_neg[2] != -3) return 7;
+    if (seen_centre[0] != 1 || seen_centre[1] != 2 || seen_centre[2] != 3) return 10;
     if (seen_q[3] != 0.5f || seen_ts != 2.0f || seen_t[0] != 7 || seen_t[2] != 9) return 8;
     if (*(long long*)(sprite + 192) != now) return 9;
     return 0;
