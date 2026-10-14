@@ -1,7 +1,7 @@
 // Observed clone__13FireBombletJr at 0x00128830, 328 bytes.
 // Allocates 112 bytes with blockAlloc__Fi. A null allocation returns null and writes nothing.
 // Otherwise the steps below run in the order of the image (n is the new object, s the source;
-// the ListHead copy constructor zeroes the destination word and does not read the source,):
+// the ListHead copy constructor zeroes the destination word and does not read the source):
 //  - the 10GameObject table pointer (_vt$10GameObject) goes to n+72
 //  - the ListHead copy constructor runs for the heads at +0, +4 and +8
 //  - source bytes 12..41 are copied
