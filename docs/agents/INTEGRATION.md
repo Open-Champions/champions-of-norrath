@@ -10297,7 +10297,7 @@ Full partial build: 6875 source compilations, one link, 5483 function bodies, ze
 
 ## agents/w15-fe-mcerr-a
 
-Merged (merge commit; tip over two hours old, notes complete). 34 of 35 units selected, each with a `host_check.cpp`. **Not selected:** `mcerr-host` has no committed host check, so it stays authored but unplanned. The worker's list of imports closed is checked against the full build below; 33 closed, 14 opened.
+Merged (merge commit; tip over two hours old, notes complete). All 34 units are selected, each with a `host_check.cpp`. (`w15-fe-mcerr-a-mcerr-host` is not a unit: it holds only the host-side helper header `hostlib.hpp`; an earlier version of this entry wrongly listed it as an unselected unit.) The worker's list of imports closed is checked against the full build below; 33 closed, 14 opened.
 
 | | |
 |---|---|
@@ -10528,3 +10528,20 @@ Opened: `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VI
 
 Full partial build: 7198 source compilations, one link, 5722 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:24 CDT — agents/w15-vi-scene-b — 854 unresolved imports
+
+## agents/w15-libs-eh-a
+
+Merged (merge commit; tip about an hour old, notes complete). 30 of 47 directories selected, each with a `*_host_test.cpp` (not a plan input). **Not selected (no committed host test; the notes cite only private paired runs):** `execute-cfa-insn`, `extract-cie-info`, `find-fde`, `gsm-autocorrelation`, `gsm-long-term-predictor`, `gsm-lpc-analysis`, `gsm-quantization-and-coding`, `gsm-reflection-coefficients`, `gsm-rpe-encoding`, `inflate-blocks`, `inflate-blocks-free`, `inflate-blocks-reset`, `inflate-init2`, `string-rep-clone`; `common`, `gsm-common` and `zlib-common` are header-only directories. They stay authored but unplanned. The worker's list of closed imports is checked against the full build below.
+
+| | |
+|---|---|
+| Before | 854 |
+| After | 838 |
+| Closed | 20 |
+| Opened | 4 |
+
+Closed: `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_Short_Term_Analysis_Filter`, `Gsm_Short_Term_Synthesis_Filter`, `__ieee754_sqrt`, `__unwinding_cleanup`, `__wrap_strdup`, `_t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0$nilRep`, `_t24__default_alloc_template2b0i0$_S_free_list`, `copy_reg`, `decode_uleb128`, `dwarf_reg_size_table`, `expf`, `find_exception_handler`, `floor`, `get_reg_addr`, `instmap_bounds`, `next_stack_level`, `old_find_exception_handler`, `scalbn`
+
+Opened: `__ieee754_expf`, `__muldi3`, `copysign`, `strdup`
+
+Full partial build: 7228 source compilations, one link, 5742 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

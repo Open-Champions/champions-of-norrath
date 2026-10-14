@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7198,
+  "default_authored_inputs": 7228,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7990,7 +7990,39 @@
     "sources/w15-vi-scene-b-vect3-mul-matrix33/mul.cpp": "7abec8576f57d7924a7c061c0239cf101e5548f390b47d839be45966c0d1af45",
     "sources/w15-vi-scene-b-world-collide-envray/collide.cpp": "9efe9f73e7d7d48e171032203973443487915a9d58dc3eac37624b9664dd8467",
     "sources/w15-vi-scene-b-world-collide-ray-vars/collide.cpp": "c7fa1b7ce50376e4bae14b6b465bb022f9eecc9e85b805e96f4a597e9d7b610f",
-    "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116"
+    "sources/w15-vi-scene-b-world-query-intersection/query_intersection.cpp": "dddea86c884e42b9112ba9b6ec5d69e864c460489d1bf1a2e9fd3cc9b2be5116",
+    "sources/w15-libs-eh-a-copy-reg/copy_reg.cpp": "62f17ceff94cf9af8d36150387a8e3bdce287fe97b0cc42957ff096b70c211ff",
+    "sources/w15-libs-eh-a-common/eh.hpp": "2483fdb8a1fbe956043ece98a43556ea0661b8ae3b997c29cd2966d605cece89",
+    "sources/w15-libs-eh-a-decode-uleb128/decode_uleb128.cpp": "cbef6cc65b39562c3b5e9b5c06ab661610e762affc5a7f329fde375f9fdfb2ad",
+    "sources/w15-libs-eh-a-dwarf-reg-size-table/dwarf_reg_size_table.cpp": "265206240132340a205ffdccb08812709d369f6161c27ec03bbab3f281b00b6e",
+    "sources/w15-libs-eh-a-expf/expf.cpp": "448188f4f2fc5aa5016ebdefc565b0076021569329a344c9cca3829d1a342990",
+    "sources/w15-libs-eh-a-find-exception-handler/find_exception_handler.cpp": "347c9f580084a67b5af14cc9b26d162f3e5da2a81b55cdebfc96328106935164",
+    "sources/w15-libs-eh-a-floor/floor.cpp": "278b3ca346370e27900c51f5ae39aae59e59a31f8ce0d893ccda141e0f39daf0",
+    "sources/w15-libs-eh-a-get-reg-addr/get_reg_addr.cpp": "d2cd1e04afdc8df2fe86185ad3922004f49f50d56d6115c1ef8ca945bd875bba",
+    "sources/w15-libs-eh-a-gsm-bitoff/bitoff.cpp": "2df5c7d9f16563bffba3a89b3ccaa52d0daa552fa6a2f31e405e1d43b761faff",
+    "sources/w15-libs-eh-a-gsm-decode-log-area-ratios/decode_log_area_ratios.cpp": "c45726193974b98a1ab89aed2bd11814c631702f84b2fa487967190c905fed6e",
+    "sources/w15-libs-eh-a-gsm-common/gsm.hpp": "863bad83877f17ed67cc4abe334b61f1d47e969c41500d318576d3b1007d5c98",
+    "sources/w15-libs-eh-a-gsm-dlb/gsm_DLB.cpp": "2753108ae92c45572a620e8bf4732b44821a4d32ba6b531ea53b218047b7638c",
+    "sources/w15-libs-eh-a-gsm-fac/gsm_FAC.cpp": "ff7a1c29a17cf5aef25d7ee1f7d475161a8373daf1a8765f80169dfab7621987",
+    "sources/w15-libs-eh-a-gsm-h/gsm_H.cpp": "c43898e0d878d0af0dcd7e9ba29123750aad6e444ce569e31dabb509f6b0f997",
+    "sources/w15-libs-eh-a-gsm-long-term-synthesis-filtering/long_term_synthesis_filtering.cpp": "5db73688ba8da82a7c668a9be3f5359ab6d6144aeaab158b5579a917261a665d",
+    "sources/w15-libs-eh-a-gsm-norm/gsm_norm.cpp": "acdeaa35b95b116eb0459b8b6fe96497231eb7acfe64afea36969854e6d6da61",
+    "sources/w15-libs-eh-a-gsm-nrfac/gsm_NRFAC.cpp": "cc0a4e2ee84d8c7e01c458ad5cd546944e854da70e5cbe88f80693a6c4ebecd4",
+    "sources/w15-libs-eh-a-gsm-qlb/gsm_QLB.cpp": "f1f454ddac1357a1bb60595c09796eac8faad953bb34e3e588fd2a1295062054",
+    "sources/w15-libs-eh-a-gsm-rpe-decoding/rpe_decoding.cpp": "18671749fbc8e7b8b29ba528294e73aa7a2b03d49591b497f3f1ec3a3ce53359",
+    "sources/w15-libs-eh-a-gsm-short-term-analysis-filter/short_term_analysis_filter.cpp": "31930c5950327c4c70af33345f886f6db4200dc86e063614c90d6dd832ba3aaf",
+    "sources/w15-libs-eh-a-gsm-short-term-analysis-filtering/short_term_analysis_filtering.cpp": "3e0bcf961bb308eea48e23e243712412a63ce7fa09d338b0c01cf37fee3b1d98",
+    "sources/w15-libs-eh-a-gsm-short-term-synthesis-filter/short_term_synthesis_filter.cpp": "e6345ecd33dfbdabe2da9f67038b49f99003ee22e1a264420871364febf9746d",
+    "sources/w15-libs-eh-a-gsm-short-term-synthesis-filtering/short_term_synthesis_filtering.cpp": "2414c6e613870638f5cca5c029493c0a5c0bc13b3fb5a4a2dac73a44833bbbf6",
+    "sources/w15-libs-eh-a-ieee754-sqrt/ieee754_sqrt.cpp": "84daceae2625e3d559f998bf8296c70f99ea711fd8caa4df06a750094b2c1aaf",
+    "sources/w15-libs-eh-a-instmap-bounds/instmap_bounds.cpp": "ef89b5c4a106ec60a1efc7011682143802fb206e35c8744e8b49fc9013a5663f",
+    "sources/w15-libs-eh-a-next-stack-level/next_stack_level.cpp": "aec287c555123d05159f6825e833fcdb90fa38ebc002e8d8855633da8b2094cf",
+    "sources/w15-libs-eh-a-old-find-exception-handler/old_find_exception_handler.cpp": "6a9e0d7725c2d0ad4bbd2f87e0295f8f7519594d95f0c20ba5639db3f01757fa",
+    "sources/w15-libs-eh-a-scalbn/scalbn.cpp": "0d2936592615591d8d1ae2e4010d0675a7dbfe4035f1c1041940b95facaeb18c",
+    "sources/w15-libs-eh-a-strdup-wrap/wrap_strdup.cpp": "ccf21d2c706e0c6710a53e259f095fed7950b65f8aa4f23e3807a2e288464d21",
+    "sources/w15-libs-eh-a-string-free-list/free_list.cpp": "74977b4798dfd93249a4c789dd597a04ea1574a5f5e121649b635b25f5eebdf0",
+    "sources/w15-libs-eh-a-string-nilrep/nil_rep.cpp": "4518f9d1326b94b168b679c62f688c28760d136c69162c1d944410ae3908526f",
+    "sources/w15-libs-eh-a-unwinding-cleanup/unwinding_cleanup.cpp": "bbb7723e78d7ae3b7299fe59443c8fc4ab18ae06c61057035e58b2a09cb540a8"
   },
   "inputs": [
     {
@@ -107038,6 +107070,428 @@
           "compiled_body_bytes": 472
         }
       ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-common/eh.hpp"
+      ],
+      "input_order": 7200,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_copy_reg.o",
+      "profile": "authored_cpp",
+      "sha256": "62f17ceff94cf9af8d36150387a8e3bdce287fe97b0cc42957ff096b70c211ff",
+      "source": "sources/w15-libs-eh-a-copy-reg/copy_reg.cpp",
+      "emitted_functions": [
+        {
+          "name": "copy_reg",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7201,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_decode_uleb128.o",
+      "profile": "authored_cpp",
+      "sha256": "cbef6cc65b39562c3b5e9b5c06ab661610e762affc5a7f329fde375f9fdfb2ad",
+      "source": "sources/w15-libs-eh-a-decode-uleb128/decode_uleb128.cpp",
+      "emitted_functions": [
+        {
+          "name": "decode_uleb128",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7202,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_dwarf_reg_size_table.o",
+      "profile": "authored_cpp",
+      "sha256": "265206240132340a205ffdccb08812709d369f6161c27ec03bbab3f281b00b6e",
+      "source": "sources/w15-libs-eh-a-dwarf-reg-size-table/dwarf_reg_size_table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7203,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_expf.o",
+      "profile": "authored_cpp",
+      "sha256": "448188f4f2fc5aa5016ebdefc565b0076021569329a344c9cca3829d1a342990",
+      "source": "sources/w15-libs-eh-a-expf/expf.cpp",
+      "emitted_functions": [
+        {
+          "name": "expf",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-common/eh.hpp"
+      ],
+      "input_order": 7204,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_find_exception_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "347c9f580084a67b5af14cc9b26d162f3e5da2a81b55cdebfc96328106935164",
+      "source": "sources/w15-libs-eh-a-find-exception-handler/find_exception_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "find_exception_handler",
+          "compiled_body_bytes": 348
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7205,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_floor.o",
+      "profile": "authored_cpp",
+      "sha256": "278b3ca346370e27900c51f5ae39aae59e59a31f8ce0d893ccda141e0f39daf0",
+      "source": "sources/w15-libs-eh-a-floor/floor.cpp",
+      "emitted_functions": [
+        {
+          "name": "floor",
+          "compiled_body_bytes": 596
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-common/eh.hpp"
+      ],
+      "input_order": 7206,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_get_reg_addr.o",
+      "profile": "authored_cpp",
+      "sha256": "d2cd1e04afdc8df2fe86185ad3922004f49f50d56d6115c1ef8ca945bd875bba",
+      "source": "sources/w15-libs-eh-a-get-reg-addr/get_reg_addr.cpp",
+      "emitted_functions": [
+        {
+          "name": "get_reg_addr",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7207,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_bitoff.o",
+      "profile": "authored_cpp",
+      "sha256": "2df5c7d9f16563bffba3a89b3ccaa52d0daa552fa6a2f31e405e1d43b761faff",
+      "source": "sources/w15-libs-eh-a-gsm-bitoff/bitoff.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7208,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_decode_log_area_ratios.o",
+      "profile": "authored_cpp",
+      "sha256": "c45726193974b98a1ab89aed2bd11814c631702f84b2fa487967190c905fed6e",
+      "source": "sources/w15-libs-eh-a-gsm-decode-log-area-ratios/decode_log_area_ratios.cpp",
+      "emitted_functions": [
+        {
+          "name": "Decoding_of_the_coded_Log_Area_Ratios",
+          "compiled_body_bytes": 232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7209,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_dlb.o",
+      "profile": "authored_cpp",
+      "sha256": "2753108ae92c45572a620e8bf4732b44821a4d32ba6b531ea53b218047b7638c",
+      "source": "sources/w15-libs-eh-a-gsm-dlb/gsm_DLB.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7210,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_fac.o",
+      "profile": "authored_cpp",
+      "sha256": "ff7a1c29a17cf5aef25d7ee1f7d475161a8373daf1a8765f80169dfab7621987",
+      "source": "sources/w15-libs-eh-a-gsm-fac/gsm_FAC.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7211,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_h.o",
+      "profile": "authored_cpp",
+      "sha256": "c43898e0d878d0af0dcd7e9ba29123750aad6e444ce569e31dabb509f6b0f997",
+      "source": "sources/w15-libs-eh-a-gsm-h/gsm_H.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7212,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_long_term_synthesis_filtering.o",
+      "profile": "authored_cpp",
+      "sha256": "5db73688ba8da82a7c668a9be3f5359ab6d6144aeaab158b5579a917261a665d",
+      "source": "sources/w15-libs-eh-a-gsm-long-term-synthesis-filtering/long_term_synthesis_filtering.cpp",
+      "emitted_functions": [
+        {
+          "name": "Gsm_Long_Term_Synthesis_Filtering",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7213,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_norm.o",
+      "profile": "authored_cpp",
+      "sha256": "acdeaa35b95b116eb0459b8b6fe96497231eb7acfe64afea36969854e6d6da61",
+      "source": "sources/w15-libs-eh-a-gsm-norm/gsm_norm.cpp",
+      "emitted_functions": [
+        {
+          "name": "gsm_norm",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7214,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_nrfac.o",
+      "profile": "authored_cpp",
+      "sha256": "cc0a4e2ee84d8c7e01c458ad5cd546944e854da70e5cbe88f80693a6c4ebecd4",
+      "source": "sources/w15-libs-eh-a-gsm-nrfac/gsm_NRFAC.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7215,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_qlb.o",
+      "profile": "authored_cpp",
+      "sha256": "f1f454ddac1357a1bb60595c09796eac8faad953bb34e3e588fd2a1295062054",
+      "source": "sources/w15-libs-eh-a-gsm-qlb/gsm_QLB.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7216,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_rpe_decoding.o",
+      "profile": "authored_cpp",
+      "sha256": "18671749fbc8e7b8b29ba528294e73aa7a2b03d49591b497f3f1ec3a3ce53359",
+      "source": "sources/w15-libs-eh-a-gsm-rpe-decoding/rpe_decoding.cpp",
+      "emitted_functions": [
+        {
+          "name": "Gsm_RPE_Decoding",
+          "compiled_body_bytes": 780
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7217,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_short_term_analysis_filter.o",
+      "profile": "authored_cpp",
+      "sha256": "31930c5950327c4c70af33345f886f6db4200dc86e063614c90d6dd832ba3aaf",
+      "source": "sources/w15-libs-eh-a-gsm-short-term-analysis-filter/short_term_analysis_filter.cpp",
+      "emitted_functions": [
+        {
+          "name": "Gsm_Short_Term_Analysis_Filter",
+          "compiled_body_bytes": 856
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7218,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_short_term_analysis_filtering.o",
+      "profile": "authored_cpp",
+      "sha256": "3e0bcf961bb308eea48e23e243712412a63ce7fa09d338b0c01cf37fee3b1d98",
+      "source": "sources/w15-libs-eh-a-gsm-short-term-analysis-filtering/short_term_analysis_filtering.cpp",
+      "emitted_functions": [
+        {
+          "name": "Short_term_analysis_filtering",
+          "compiled_body_bytes": 380
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7219,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_short_term_synthesis_filter.o",
+      "profile": "authored_cpp",
+      "sha256": "e6345ecd33dfbdabe2da9f67038b49f99003ee22e1a264420871364febf9746d",
+      "source": "sources/w15-libs-eh-a-gsm-short-term-synthesis-filter/short_term_synthesis_filter.cpp",
+      "emitted_functions": [
+        {
+          "name": "Gsm_Short_Term_Synthesis_Filter",
+          "compiled_body_bytes": 896
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-gsm-common/gsm.hpp"
+      ],
+      "input_order": 7220,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_gsm_short_term_synthesis_filtering.o",
+      "profile": "authored_cpp",
+      "sha256": "2414c6e613870638f5cca5c029493c0a5c0bc13b3fb5a4a2dac73a44833bbbf6",
+      "source": "sources/w15-libs-eh-a-gsm-short-term-synthesis-filtering/short_term_synthesis_filtering.cpp",
+      "emitted_functions": [
+        {
+          "name": "Short_term_synthesis_filtering",
+          "compiled_body_bytes": 468
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7221,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_ieee754_sqrt.o",
+      "profile": "authored_cpp",
+      "sha256": "84daceae2625e3d559f998bf8296c70f99ea711fd8caa4df06a750094b2c1aaf",
+      "source": "sources/w15-libs-eh-a-ieee754-sqrt/ieee754_sqrt.cpp",
+      "emitted_functions": [
+        {
+          "name": "__ieee754_sqrt",
+          "compiled_body_bytes": 912
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7222,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_instmap_bounds.o",
+      "profile": "authored_cpp",
+      "sha256": "ef89b5c4a106ec60a1efc7011682143802fb206e35c8744e8b49fc9013a5663f",
+      "source": "sources/w15-libs-eh-a-instmap-bounds/instmap_bounds.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-common/eh.hpp"
+      ],
+      "input_order": 7223,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_next_stack_level.o",
+      "profile": "authored_cpp",
+      "sha256": "aec287c555123d05159f6825e833fcdb90fa38ebc002e8d8855633da8b2094cf",
+      "source": "sources/w15-libs-eh-a-next-stack-level/next_stack_level.cpp",
+      "emitted_functions": [
+        {
+          "name": "next_stack_level",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [
+        "sources/w15-libs-eh-a-common/eh.hpp"
+      ],
+      "input_order": 7224,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_old_find_exception_handler.o",
+      "profile": "authored_cpp",
+      "sha256": "6a9e0d7725c2d0ad4bbd2f87e0295f8f7519594d95f0c20ba5639db3f01757fa",
+      "source": "sources/w15-libs-eh-a-old-find-exception-handler/old_find_exception_handler.cpp",
+      "emitted_functions": [
+        {
+          "name": "old_find_exception_handler",
+          "compiled_body_bytes": 304
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7225,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_scalbn.o",
+      "profile": "authored_cpp",
+      "sha256": "0d2936592615591d8d1ae2e4010d0675a7dbfe4035f1c1041940b95facaeb18c",
+      "source": "sources/w15-libs-eh-a-scalbn/scalbn.cpp",
+      "emitted_functions": [
+        {
+          "name": "scalbn",
+          "compiled_body_bytes": 528
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7226,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_strdup_wrap.o",
+      "profile": "authored_cpp",
+      "sha256": "ccf21d2c706e0c6710a53e259f095fed7950b65f8aa4f23e3807a2e288464d21",
+      "source": "sources/w15-libs-eh-a-strdup-wrap/wrap_strdup.cpp",
+      "emitted_functions": [
+        {
+          "name": "__wrap_strdup",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7227,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_string_free_list.o",
+      "profile": "authored_cpp",
+      "sha256": "74977b4798dfd93249a4c789dd597a04ea1574a5f5e121649b635b25f5eebdf0",
+      "source": "sources/w15-libs-eh-a-string-free-list/free_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7228,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_string_nilrep.o",
+      "profile": "authored_cpp",
+      "sha256": "4518f9d1326b94b168b679c62f688c28760d136c69162c1d944410ae3908526f",
+      "source": "sources/w15-libs-eh-a-string-nilrep/nil_rep.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7229,
+      "kind": "independently_authored_source",
+      "object_name": "w15_libs_eh_a_unwinding_cleanup.o",
+      "profile": "authored_cpp",
+      "sha256": "bbb7723e78d7ae3b7299fe59443c8fc4ab18ae06c61057035e58b2a09cb540a8",
+      "source": "sources/w15-libs-eh-a-unwinding-cleanup/unwinding_cleanup.cpp",
+      "emitted_functions": [
+        {
+          "name": "__unwinding_cleanup",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -107137,7 +107591,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "7a1be34c9dea403f131b74509b50d8d2bd5b9587344fb0f894330973e02d5dd6",
+  "snapshot_sha256": "02e21197ea5492e82ef9b7b1507d39fd5a12b5a4ee335d1c1cd774c30bd06ac0",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
