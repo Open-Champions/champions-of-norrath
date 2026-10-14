@@ -10545,3 +10545,4 @@ Closed: `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_Short_Term
 Opened: `__ieee754_expf`, `__muldi3`, `copysign`, `strdup`
 
 Full partial build: 7228 source compilations, one link, 5742 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:31 CDT — agents/w15-libs-eh-a — 838 unresolved imports
