@@ -10068,3 +10068,19 @@ Closed: `_$_5Spell`, `__12SpellHealingiP8CreatureP5Skill`, `__13SpellEntangleiP8
 
 Opened: `_vt$12SpellHealing`, `_vt$13SpellEntangle`, `_vt$15SpellClericRoot`, `_vt$15SpellHateEffect`, `_vt$15SpellHolyShield`, `_vt$16SpellConeOfFrost`, `_vt$16SpellCriticalHit`, `_vt$17SpellMinorHealing`
 - 2026-10-13 20:28 CDT — agents/w14-m-spell-ctors-a — 957 unresolved imports
+
+## agents/w14-m-spell-ctors-b
+
+Merged (merge commit, branch tip `fb7e3c78`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). Partly selected: 17 units (14 emitting functions plus type-info or table units) with fresh `input_order` values 6588 through 6604, each with a committed host check that passes here (17 of 17). NOT selected: the four constructors `ctor-bash`, `ctor-convert-undead`, `ctor-ranger-crit` and `ctor-root` (`SpellBash`, `SpellConvertUndead`, `SpellRangerCriticalHit`, `SpellRoot`), which have only the private paired runs the notes describe and no committed check; their files stay in the snapshot and their names stay unresolved. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 951 |
+| Closed | 17 |
+| Opened | 11 |
+
+Closed: `__tf12SpellBlessed`, `__tf13FireBombletJr`, `__tf13WeatherFilter`, `__tf15SpellFireFlares`, `__tf15SpellHateEffect`, `__tf16SpellColdWeapons`, `__tf16SpellCriticalHit`, `__tf16SpellFireWeapons`, `__tf17SpellDiseaseTrail`, `__tf17SpellUndeadShield`, `__tf18SpellAncestralCall`, `__tf18SpellHammerOfWrath`, `__tf21SpellLightningWeapons`, `__tf22SpellRangerCriticalHit`, `_vt$14FireStormFlare`, `_vt$18SpellHammerOfWrath`, `_vt$19SpellSummonSkeleton`
+
+Opened: `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, `_$_19SpellSummonSkeleton`, `__tf13VISceneFilter`, `__tf14FireStormFlare`, `__tf19SpellSummonSkeleton`, `__ti13VISceneFilter`, `msg_draw__14FireStormFlare`, `msg_run__14FireStormFlare`, `run__18SpellHammerOfWrathG6Point3s`, `run__19SpellSummonSkeletonG6Point3s`
+- 2026-10-13 20:34 CDT — agents/w14-m-spell-ctors-b — 951 unresolved imports
