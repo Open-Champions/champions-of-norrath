@@ -10294,3 +10294,20 @@ Opened: `Insert__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUiRCQ212VIDictionary
 
 Full partial build: 6875 source compilations, one link, 5483 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:01 CDT — agents/w15-gameloop-a — 868 unresolved imports
+
+## agents/w15-fe-mcerr-a
+
+Merged (merge commit; tip over two hours old, notes complete). 34 of 35 units selected, each with a `host_check.cpp`. **Not selected:** `mcerr-host` has no committed host check, so it stays authored but unplanned. The worker's list of imports closed is checked against the full build below; 33 closed, 14 opened.
+
+| | |
+|---|---|
+| Before | 868 |
+| After | 849 |
+| Closed | 33 |
+| Opened | 14 |
+
+Closed: `BringUpNetwork__12VIWndConnect`, `Init__20VIWndGenericRenderer`, `McErrSetMode__Fi`, `McErr__FP5VIWndRC8VIVect2Ii`, `ProcessScreen04__10VIWndMcErriii`, `ProcessScreen10__10VIWndMcErriii`, `ProcessScreen11__10VIWndMcErriii`, `ProcessScreen12__10VIWndMcErriii`, `ProcessScreen15__10VIWndMcErriii`, `ProcessScreen16__10VIWndMcErriii`, `ProcessScreen17__10VIWndMcErriii`, `ProcessScreen20__10VIWndMcErriii`, `ProcessScreen30__10VIWndMcErriii`, `ProcessScreen50__10VIWndMcErriii`, `ProcessScreen52__10VIWndMcErriii`, `ProcessScreen54__10VIWndMcErriii`, `ProcessScreen60__10VIWndMcErriii`, `ProcessScreen61__10VIWndMcErriii`, `ProcessScreen62__10VIWndMcErriii`, `ProcessScreen63__10VIWndMcErriii`, `ProcessScreen64__10VIWndMcErriii`, `Save__13VIGameOptions`, `SetIcon__16VIIconDefinitionPvi`, `SetPassword__20VIWndGenericRendererPCc`, `SetStationName__20VIWndGenericRendererPCc`, `SetText__9VIWndEulaPCUsi`, `SetTitle__16VIIconDefinitionPCc`, `Setup__12VIWndMessagePCUsT115VIMESSAGEPROMPTRC8VIVect2Ii`, `sIconDefinition`, `sKeyMap`, `sListIcon`, `sMemCardInitialized`, `sProductTitle`
+
+Opened: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `DrawProgress__10VIUIWindowiiif`, `VIIsMcSameSession__Fv`, `VIMemCardAsyncIdle__Fv`, `VIMemCardFormat__Fv`, `VIMemCardIsPrepared__Fv`, `VIMemCardPadAsync__Fi`, `VIMemCardPrepare__Fi`, `VIMemCardProductId__Fv`, `VIMemCardWriteFile__FPCcPCvi`, `VISetMcSessionId__FUl`, `ezNetCnfGetProperties`, `ezNetCtlSetCombination`, `ezNetCtlUpInterface`
+
+Full partial build: 6909 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
