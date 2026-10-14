@@ -1,0 +1,11 @@
+// Host check only; not a build input.
+#include "ctor.cpp"
+#include <cstring>
+int main() {
+    unsigned o[6];
+    std::memset(o, 0x5a, sizeof o);
+    __t6VIList1ZP10VIFlatFile(o);
+    if (o[0] != 0 || o[1] != 0 || o[2] != 0) return 1;
+    for (int i = 3; i < 6; ++i) if (o[i] != 0x5a5a5a5au) return 2;
+    return 0;
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "source_revision": "5eaeb7d46735b5f3df43973c5231913087ca72ea",
+  "source_snapshot_sha256": "43245681eb6cc9ba95145fc623646f72902f868f081810632a66e76e25714e3f",
+  "driver_sha256": "e3fe1759d722825524e5a8447df807f40484e38bfcc3860803da9fc4541942fa",
+  "build_plan_sha256": "345c3a866c036c8c30042fc11ebf53dfe1915ae15c0493c275bab693f07e210c",
+  "scope": "First clean-source default authored-only relocatable partial build; not an executable or runtime test.",
+  "source_inputs": 262,
+  "source_compiler_invocations": 262,
+  "relocatable_link_invocations": 1,
+  "retries": 0,
+  "fresh_rebuilds": 0,
+  "external_upstream_enabled": false,
+  "symbol_aliases_applied": false,
+  "original_game_inputs_used": false,
+  "function_bodies": 386,
+  "function_body_bytes": 231132,
+  "relocation_fields": 5336,
+  "unresolved_symbols": 836,
+  "explicit_unresolved_examples": [
+    "ceilf",
+    "floorf",
+    "memset"
+  ],
+  "partial_object_sha256": "6863e76d41106754f5252ac116dc4482463ab0a6b6d27ef39acdf843e9d28856",
+  "data_bytes": 32,
+  "bss_bytes": 9344,
+  "toolchain_profile": "Reviewed macOS arm64 EE GCC15.2.0/binutils2.45.1; exact tool hashes in build-plan.json.",
+  "gameplay_verified": false,
+  "additional_original_byte_matches": 0
+}

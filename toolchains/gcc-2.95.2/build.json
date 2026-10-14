@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scope": "historical generic integer-leaf comparator, not original toolchain or EE ABI identification",
+  "source": {
+    "repository": "https://github.com/gcc-mirror/gcc",
+    "commit": "17b916df3d859b72736d537f6c2a98b2d76decf8",
+    "tag": "releases/gcc-2.95.2"
+  },
+  "host": "macOS arm64; Apple Clang21.0.0; host compiler default O0",
+  "host_patch_sha256": "040577830b7f9a6ff349ded83c7ce083603a9b391eaad1f65d9774ed990e593e",
+  "added_host_header_sha256": "2f875f74da8342c8c3910e3c3c5c70aa72fab9dcf205dea6b5ce3ead1c3845d9",
+  "source_directory": "work/toolchains/gcc-2.95.2",
+  "configure_environment": {
+    "CC": "clang -std=gnu89 -Wno-error=implicit-function-declaration",
+    "CFLAGS": "-O0 -g"
+  },
+  "configure_args": [
+    "--build=aarch64-apple-darwin",
+    "--host=aarch64-apple-darwin",
+    "--target=mips64el-unknown-elf",
+    "--prefix=<absolute repository root>/work/toolchains/gcc-2.95.2-leaf-install",
+    "--enable-languages=c,c++",
+    "--disable-nls",
+    "--without-headers",
+    "--with-gnu-as",
+    "--with-gnu-ld"
+  ],
+  "build_steps": [
+    {
+      "cwd": "work/toolchains/build-gcc-2.95.2",
+      "args": [
+        "make",
+        "-j4",
+        "all-libiberty"
+      ]
+    },
+    {
+      "cwd": "work/toolchains/build-gcc-2.95.2/gcc",
+      "args": [
+        "make",
+        "-j4",
+        "CC=clang -std=gnu89 -Wno-error=implicit-function-declaration -Wno-error=int-conversion",
+        "cc1",
+        "cc1plus",
+        "xgcc",
+        "cpp"
+      ]
+    }
+  ],
+  "target_patterns_changed": false,
+  "runtime_built": false,
+  "global_install": false,
+  "limitations": [
+    "Compiler-only host port validated on a bounded corpus, not a comprehensive compiler regression suite.",
+    "Configured paths are part of driver identity; moving a checkout requires rebuilding at its new configured prefix.",
+    "Existing reviewed EE binutils is required separately; no target libraries or linked game are produced.",
+    "Restricted integer-leaf verification only; no general EE ABI or game runtime claim."
+  ],
+  "clean_recipe_validation": {
+    "host": "macOS arm64 with Apple Clang 21",
+    "pristine_source_and_published_patch": true,
+    "configure_and_compiler_only_build": "passed unchanged in an isolated prefix",
+    "mips_target_file_hashes_unchanged": true,
+    "positive_type_assertions": "passed",
+    "incorrect_eight_byte_pointer_assertion": "rejected",
+    "complete_light_removal_comparison_bytes": 52,
+    "host_binaries_reproducible": false,
+    "scope": "Bounded compiler and recipe validation; not original-toolchain identity or game runtime proof"
+  }
+}

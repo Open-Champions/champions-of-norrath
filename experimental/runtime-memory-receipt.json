@@ -1,0 +1,43 @@
+{
+  "emitted_functions": [
+    {
+      "compiled_body_bytes": 40,
+      "name": "memset"
+    }
+  ],
+  "host_guarded_cases": 196992,
+  "host_sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "object_sha256": "ab8d24111a385a1db49d7fc9d1ddda4fded8cfe7357bf1f58783a99281c8a56f",
+  "original_address": "0x003021b0",
+  "original_byte_match": false,
+  "original_extent": 192,
+  "original_symbol": "memset",
+  "runtime_verified": false,
+  "source_sha256": "7ab2eced0ead1c4368d4666def0080bf22feb39855f777fb1786c52802ebeef6",
+  "undefined_symbols": [],
+  "partial_build": {
+    "common_symbol_count": 0,
+    "function_count": 402,
+    "game_executable": false,
+    "implicit_assembler_count": 278,
+    "link_count": 1,
+    "metadata_query_count": 4,
+    "original_files_used": false,
+    "plan_sha256": "c6455f4717d8f1a630aefb5996ece9c8077466998fe0092273420246cc92f7a6",
+    "runtime_verified": false,
+    "selected_inputs": 278,
+    "snapshot_sha256": "6a908497ac7ffb94f09a67de49319497c8015d512226347d4b26c410ec1df6da",
+    "source_cc_count": 278,
+    "status": "partial_build_complete",
+    "symbol_aliases_applied": false,
+    "unresolved_symbol_count": 847
+  },
+  "imports_removed": [
+    "memset"
+  ],
+  "imports_added": [],
+  "partial_object_sha256": "3721521a77d89b73d7e28c2a3aedfe18c753a4426ffbd414a93532da505fccb3"
+}

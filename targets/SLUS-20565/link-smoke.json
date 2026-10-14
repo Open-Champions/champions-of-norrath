@@ -1,0 +1,482 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "scope": "four-admitted-ee-state-consumers-link-smoke",
+  "recorded_at": "2026-10-10T16:05:26.366483+00:00",
+  "target": {
+    "id": "SLUS-20565-sha256-9a60f13c5c31",
+    "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+    "elf_machine": 8,
+    "text": {
+      "address": "0x00100000",
+      "size": 2209032
+    }
+  },
+  "tool_sha256": "94e3bf1d783450bd64be546dd7f5dc1ae3bb476141e2c1316fd00ac703771829",
+  "verifier_sha256": "903a20aa26f11caa0f73bf93682c90221faf5d84e87a2a938fbf37704f6fed40",
+  "ledger_sha256": "130308eb3e9fc60c020bdb79247d6308e96f0c54a7d378afaf0bea68563af765",
+  "compiler": {
+    "flavor": "ee-gcc",
+    "name": "mips64r5900el-ps2-elf-g++",
+    "sha256": "5ef0ad8b4b5422fa6aa566a9c285fe604f35a4c9ff09d54670708267e3b8416a",
+    "version": "mips64r5900el-ps2-elf-g++ (GCC) 15.2.0",
+    "target": "mips64r5900el-ps2-elf",
+    "components": {
+      "cc1plus": {
+        "name": "cc1plus",
+        "sha256": "9e285734f760c244120a2a64b20700a56009a76f102f0f87d21768aa701de803"
+      },
+      "as": {
+        "name": "as",
+        "sha256": "4a29dce6e115b9d1591741898640d4e41818169bebe5546af0100e8cdeafa0ae"
+      }
+    },
+    "specs_sha256": "360e9327fc2dd72431d826ab1854dbaf5be4bbf9661555f47f1e6811c4038942"
+  },
+  "linker": {
+    "version": "GNU ld (GNU Binutils) 2.45.1",
+    "sha256": "6e487a3216711f554915432b9bf005114b94ec9f886ded102d1b3ae1bd441f15"
+  },
+  "gp_context": {
+    "context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+    "startup_context_sha256": "a43b3bc3342538217f2306ff342353e372683db55f2c7a9ae383f9353015db29",
+    "gp": "0x004879f0",
+    "runtime": {
+      "gp_preservation": "unverified",
+      "initialization": "unverified"
+    }
+  },
+  "owner_reviews": {
+    "disable_volumetric_lighting_state": "ee0f7294caa6823089b62dc2ec2b4bd8c2dc65156d509c133e316a178638878c",
+    "interface_mode_state": "dd344b5745d89d09b55a0f01d5faae89414449a022ba628ccb275b260a43e114",
+    "global_char_light_scale_state": "d8fb7c6d60c77a54a6298d86f1054b7bf34de313653702a55a17d8c30d3567a0",
+    "half_frustum_mode_state": "7f7373dbca0654174bc7ebff4b2a8ff644df3b862fa280e46629fb60f66a9fe5"
+  },
+  "original_owners": {
+    "disable_volumetric_lighting_state": {
+      "symbol": "disableVolumetricLighting",
+      "address": "0x00483aa8",
+      "size": 4,
+      "binding": 0,
+      "section": ".sdata",
+      "section_index": 12,
+      "file_offset": 3689128,
+      "load_index": 1,
+      "initializer_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    "interface_mode_state": {
+      "symbol": "interfaceMode",
+      "address": "0x00483aac",
+      "size": 4,
+      "binding": 0,
+      "section": ".sdata",
+      "section_index": 12,
+      "file_offset": 3689132,
+      "load_index": 1,
+      "initializer_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    "global_char_light_scale_state": {
+      "symbol": "globalCharLightScale",
+      "address": "0x00483ab4",
+      "size": 4,
+      "binding": 0,
+      "section": ".sdata",
+      "section_index": 12,
+      "file_offset": 3689140,
+      "load_index": 1,
+      "initializer_sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+    },
+    "half_frustum_mode_state": {
+      "symbol": "halfFrustumMode",
+      "address": "0x00484134",
+      "size": 1,
+      "binding": 0,
+      "section": ".sdata",
+      "section_index": 12,
+      "file_offset": 3690804,
+      "load_index": 1,
+      "initializer_sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d"
+    }
+  },
+  "objects": {
+    "light_disable_volumetric_lighting": {
+      "source_sha256": "ec72ff6bd82615a9e17aeec3365edcf10ee29440ded9954555947afb97fac198",
+      "object_sha256": "933d72ec4b5e4b4b3e9c6e7ce9dd9adaa3a82b6befd13f4b1199f5cdab8a0b71",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "light_disable_local_lights": {
+      "source_sha256": "c20627d31a36d5f1cc3204b341d4863b6d7f54a46fce885ac9fa99a813cec27f",
+      "object_sha256": "89e986f659bfb841282e458c9c8cc209427e8e2fa4fe5d72aa89573c26fb8c14",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "light_global_char_light_scale": {
+      "source_sha256": "4020881a51fe414488f0b7f9c90147afcad23713e05d98bb7083f992d05c1795",
+      "object_sha256": "1b044776cefc113571a535ae6c60edc5da62024f8d56a686f06419840d341540",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "world_set_half_frustum_mode": {
+      "source_sha256": "ecde3967a702dbd3f97137314a58fc89fa37a2291c91ce4e88a8a7be16e4d993",
+      "object_sha256": "b72d46246aa6e54150c5f14e5dc4e77990bd918df8dcafc81ebbca9842a918a4",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G8",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "disable_volumetric_lighting_state": {
+      "source_sha256": "b96382be415d3af14b7979f59b44e532b489bfce8396cb487236c1504aa35851",
+      "object_sha256": "096a4611f58941dccb18c7a69ee28015061f9e3b120dd8bf50373f74f1235569",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "interface_mode_state": {
+      "source_sha256": "77a63741deff8e03375f06651405104caf3cf719e7f66818cae05e6391098eef",
+      "object_sha256": "13fd6559b3a67f87c90407359f97a8ecbac15db0c7dad0ab3ae835dcc93eebf4",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "global_char_light_scale_state": {
+      "source_sha256": "ba2780091563462f9b4bc27a8d0a3716377e384417ea2d58df47cde2e7ce4b8c",
+      "object_sha256": "e9ab42630d2afe568b3a9097ff9fb01e87cf8850142ecfff95761ad0425c7e3b",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G4",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    },
+    "half_frustum_mode_state": {
+      "source_sha256": "dbb36db777b796a1b4b890ac130400638ce75cde51f9c2fb46cc82d96688d1f1",
+      "object_sha256": "50acc3f2fa88d99b590712280e2a713c1777d4d06492a32e229e5e85c0048e12",
+      "compiler_args": [
+        "-O2",
+        "-ffreestanding",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-exceptions",
+        "-fno-pic",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-fno-unwind-tables",
+        "-fomit-frame-pointer",
+        "-fwrapv",
+        "-mabi=eabi",
+        "-march=r5900",
+        "-mfp32",
+        "-mgp64",
+        "-mlong32",
+        "-mno-abicalls",
+        "-msingle-float",
+        "-std=c++17",
+        "-G8",
+        "-fno-zero-initialized-in-bss",
+        "-nostdinc",
+        "-nostdinc++",
+        "-x",
+        "c++",
+        "-c",
+        "<source-snapshot.cpp>",
+        "-o",
+        "<fresh-object.o>"
+      ]
+    }
+  },
+  "links": [
+    {
+      "name": "original",
+      "data_shift": 0,
+      "elf_sha256": "e480ae9397e1b08aadb6b08d4be92ab7a70bf68473cca089b11e7c331787abc9",
+      "script_sha256": "a568fb2ae2efb658b6acd0c37ad0c596d9774328c12e0bb38d8bcfed628f977f",
+      "linker_args": [
+        "-m",
+        "elf32lr5900",
+        "--fatal-warnings",
+        "--no-undefined",
+        "-T",
+        "original.ld",
+        "-o",
+        "original.elf"
+      ],
+      "functions": [
+        {
+          "id": "light_disable_volumetric_lighting",
+          "size": 12,
+          "sha256": "553bfd8b152642a156abcb14e84d340129a83d4484e4d89ed17f65f0fbeb7459",
+          "owner_id": "disable_volumetric_lighting_state",
+          "fixups": 1
+        },
+        {
+          "id": "light_disable_local_lights",
+          "size": 16,
+          "sha256": "cdd5d5ca9f433b4b93dc8b7d3367c49ee5cc971c093004363fe0dfca9fa83579",
+          "owner_id": "interface_mode_state",
+          "fixups": 2
+        },
+        {
+          "id": "light_global_char_light_scale",
+          "size": 8,
+          "sha256": "a80d9d903b77f6ca541264c1a979f25cfcdb71b3fda226b8d3e42eb87077b30a",
+          "owner_id": "global_char_light_scale_state",
+          "fixups": 1
+        },
+        {
+          "id": "world_set_half_frustum_mode",
+          "size": 8,
+          "sha256": "5ae415b7874479311a7a8c68f0463a8662c5c31a7a9b4d5f703320a5762f04d9",
+          "owner_id": "half_frustum_mode_state",
+          "fixups": 1
+        }
+      ],
+      "undefined_symbols": 0,
+      "remaining_relocations": 0
+    },
+    {
+      "name": "shifted",
+      "data_shift": 256,
+      "elf_sha256": "e1a2a0b1877a4bb2f27dfe7ba9f83578066e547fc0e8607402fc75f64ea8c3ce",
+      "script_sha256": "adc2229756f28da90c8645cab3aa1d13a18c76c2cb1948cd7f988ede98310355",
+      "linker_args": [
+        "-m",
+        "elf32lr5900",
+        "--fatal-warnings",
+        "--no-undefined",
+        "-T",
+        "shifted.ld",
+        "-o",
+        "shifted.elf"
+      ],
+      "functions": [
+        {
+          "id": "light_disable_volumetric_lighting",
+          "size": 12,
+          "sha256": "8e08f90cfd958f10d2b99a3f260b1fca97340f663d30e42623d10394d7a3feaa",
+          "owner_id": "disable_volumetric_lighting_state",
+          "fixups": 1
+        },
+        {
+          "id": "light_disable_local_lights",
+          "size": 16,
+          "sha256": "394bcd2e7f6a9c6029a4ac83978f9882e7a00d437dac1c5ee4eb619ddb31e0db",
+          "owner_id": "interface_mode_state",
+          "fixups": 2
+        },
+        {
+          "id": "light_global_char_light_scale",
+          "size": 8,
+          "sha256": "e4714456b850f0031c03f755496114682c7b85d0d6a6b8196eed1f56ad40e48f",
+          "owner_id": "global_char_light_scale_state",
+          "fixups": 1
+        },
+        {
+          "id": "world_set_half_frustum_mode",
+          "size": 8,
+          "sha256": "488b69c84064596c166b3a0aa72146598dd6c91a7e172ebc870db9e4df4c7546",
+          "owner_id": "half_frustum_mode_state",
+          "fixups": 1
+        }
+      ],
+      "undefined_symbols": 0,
+      "remaining_relocations": 0
+    }
+  ],
+  "existing_code_bytes": 44,
+  "existing_data_bytes": 13,
+  "new_reconstruction_credit": 0,
+  "limits": [
+    "No target execution or startup.",
+    "No whole-game ABI or linkage proof.",
+    "Original local data use explicit external comparison adapters.",
+    "Shifted placement is a relocation control, not a retail byte match."
+  ]
+}

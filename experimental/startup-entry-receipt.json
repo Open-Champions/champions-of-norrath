@@ -1,0 +1,176 @@
+{
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "candidate_sha256": "e8d6970c80b4bf76d4cdff3bf03f43d051530545e91d30083b7cebac121bbd04",
+  "original_extent": 576,
+  "authored_extent": 480,
+  "checks": [
+    {
+      "stack": 33292272,
+      "argc": 0,
+      "main_result": 0,
+      "trace": {
+        "events": [
+          [
+            "syscall60",
+            4749808,
+            33292288,
+            262144,
+            5345984,
+            1049168
+          ],
+          [
+            "syscall61",
+            9357596,
+            18446744073709551615
+          ],
+          [
+            "init"
+          ],
+          [
+            "flush",
+            0
+          ],
+          [
+            "main",
+            0,
+            5345988
+          ],
+          [
+            "exit",
+            0
+          ]
+        ],
+        "byte_stores": 12,
+        "quadword_stores": 287793,
+        "bytes_cleared": 4604700,
+        "full_reset_checked": true
+      }
+    },
+    {
+      "stack": 33284096,
+      "argc": 3,
+      "main_result": -1,
+      "trace": {
+        "events": [
+          [
+            "syscall60",
+            4749808,
+            33292288,
+            262144,
+            5345984,
+            1049168
+          ],
+          [
+            "syscall61",
+            9357596,
+            18446744073709551615
+          ],
+          [
+            "init"
+          ],
+          [
+            "flush",
+            0
+          ],
+          [
+            "main",
+            3,
+            5345988
+          ],
+          [
+            "exit",
+            18446744073709551615
+          ]
+        ],
+        "byte_stores": 12,
+        "quadword_stores": 287793,
+        "bytes_cleared": 4604700,
+        "full_reset_checked": true
+      }
+    },
+    {
+      "stack": 33292288,
+      "argc": 2147483647,
+      "main_result": 2147483648,
+      "trace": {
+        "events": [
+          [
+            "syscall60",
+            4749808,
+            33292288,
+            262144,
+            5345984,
+            1049168
+          ],
+          [
+            "syscall61",
+            9357596,
+            18446744073709551615
+          ],
+          [
+            "init"
+          ],
+          [
+            "flush",
+            0
+          ],
+          [
+            "main",
+            2147483647,
+            5345988
+          ],
+          [
+            "exit",
+            18446744071562067968
+          ]
+        ],
+        "byte_stores": 12,
+        "quadword_stores": 287793,
+        "bytes_cleared": 4604700,
+        "full_reset_checked": true
+      }
+    }
+  ],
+  "rejected_mutations": [
+    "incomplete architectural reset",
+    "BSS store range/order/value differs",
+    "main before interrupt/argument setup"
+  ],
+  "exact_byte_match": false,
+  "kernel_executed": false,
+  "game_executed": false,
+  "source_sha256": "0b5aba05b82712d2e23a890d383d1cae70aa61b05548e2357874383680df1eab",
+  "model_sha256": "807c9824eaf2fb79becc26edc387001ff7179c8f34928b9899db3210107b8699",
+  "fixture_script_sha256": "6d3fa38272fceb1ed1a6d19cc80690acd5df7679442b5a5b7be0bd96c4aef7ba",
+  "partial_build": {
+    "common_symbol_count": 0,
+    "function_count": 406,
+    "game_executable": false,
+    "implicit_assembler_count": 282,
+    "link_count": 1,
+    "metadata_query_count": 4,
+    "original_files_used": false,
+    "plan_sha256": "ecdbd67e25c90aa090f05fa2e034dcb9038e87f8e9e2556e552ac1eaaf75e121",
+    "runtime_verified": false,
+    "selected_inputs": 282,
+    "snapshot_sha256": "fdd5679710ef33afb0cea774f093b1594c28680e5d7c41f2bd3d1e2dde922e11",
+    "source_cc_count": 282,
+    "status": "partial_build_complete",
+    "symbol_aliases_applied": false,
+    "unresolved_symbol_count": 863
+  },
+  "partial_object_sha256": "2d180b354c169f019f3f9ea348ffe662ad246cc47379701e7995e69d49b411c5",
+  "imports_removed": [],
+  "imports_added": [
+    "FlushCache",
+    "_InitSys",
+    "_args",
+    "_bssend",
+    "_end",
+    "_fbss",
+    "_gp",
+    "_root",
+    "exit",
+    "main"
+  ]
+}

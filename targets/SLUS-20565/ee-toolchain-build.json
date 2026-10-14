@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "scope": "minimal EE C/C++ compiler and binutils; no game runtime libraries",
+  "source_repositories": {
+    "gcc": {
+      "url": "https://github.com/ps2dev/gcc.git",
+      "revision": "df77d03bc1bd5765b40de554918a5ff541202548"
+    },
+    "binutils": {
+      "url": "https://github.com/ps2dev/binutils-gdb.git",
+      "revision": "616e51fa6ed9d1e8f4bda7d0087fac30c5398aa9"
+    },
+    "reference_scripts": {
+      "url": "https://github.com/ps2dev/ps2toolchain-ee.git",
+      "revision": "4795b8357049e86137589af2db3d588cae79a77c"
+    }
+  },
+  "tested_host": "macOS arm64",
+  "host_build_environment": {
+    "CC": "LLVM 20.1.8 clang",
+    "CXX": "LLVM 20.1.8 clang++",
+    "CFLAGS": "-O2",
+    "CXXFLAGS": "-O2 -fno-char8_t",
+    "CXXFLAGS_FOR_BUILD": "-O2 -fno-char8_t",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "MAKEINFO": "true"
+  },
+  "required_host_dependencies": [
+    "make",
+    "git",
+    "GMP",
+    "MPFR",
+    "MPC",
+    "zlib",
+    "macOS SDK and compiler development tools"
+  ],
+  "variables": {
+    "TOOLCHAIN_WORK": "absolute private toolchain workspace, containing gcc/binutils-gdb/build-gcc/build-binutils and install prefix ee",
+    "GMP_PREFIX": "existing host GMP install prefix",
+    "MPFR_PREFIX": "existing host MPFR install prefix",
+    "MPC_PREFIX": "existing host MPC install prefix"
+  },
+  "steps": [
+    {
+      "name": "binutils-configure",
+      "cwd": "${TOOLCHAIN_WORK}/build-binutils",
+      "argv": [
+        "${TOOLCHAIN_WORK}/binutils-gdb/configure",
+        "--prefix=${TOOLCHAIN_WORK}/ee",
+        "--target=mips64r5900el-ps2-elf",
+        "--with-sysroot=${TOOLCHAIN_WORK}/ee/mips64r5900el-ps2-elf",
+        "--disable-separate-code",
+        "--disable-sim",
+        "--disable-gdb",
+        "--disable-gdbserver",
+        "--disable-gprofng",
+        "--disable-gprof",
+        "--disable-nls",
+        "--disable-werror",
+        "--disable-debuginfod",
+        "--with-python=no",
+        "--with-system-zlib",
+        "--with-gmp=${GMP_PREFIX}",
+        "--with-mpfr=${MPFR_PREFIX}"
+      ]
+    },
+    {
+      "name": "binutils-build",
+      "cwd": "${TOOLCHAIN_WORK}/build-binutils",
+      "argv": [
+        "/usr/bin/make",
+        "-j8",
+        "MAKEINFO=true",
+        "all-binutils",
+        "all-gas",
+        "all-ld"
+      ]
+    },
+    {
+      "name": "binutils-install",
+      "cwd": "${TOOLCHAIN_WORK}/build-binutils/binutils",
+      "argv": [
+        "/usr/bin/make",
+        "MAKEINFO=true",
+        "install-exec"
+      ]
+    },
+    {
+      "name": "gas-install",
+      "cwd": "${TOOLCHAIN_WORK}/build-binutils/gas",
+      "argv": [
+        "/usr/bin/make",
+        "MAKEINFO=true",
+        "install-exec"
+      ]
+    },
+    {
+      "name": "ld-install",
+      "cwd": "${TOOLCHAIN_WORK}/build-binutils/ld",
+      "argv": [
+        "/usr/bin/make",
+        "MAKEINFO=true",
+        "install-exec"
+      ]
+    },
+    {
+      "name": "gcc-configure",
+      "cwd": "${TOOLCHAIN_WORK}/build-gcc",
+      "argv": [
+        "${TOOLCHAIN_WORK}/gcc/configure",
+        "--prefix=${TOOLCHAIN_WORK}/ee",
+        "--target=mips64r5900el-ps2-elf",
+        "--enable-languages=c,c++",
+        "--with-float=hard",
+        "--without-headers",
+        "--without-newlib",
+        "--disable-bootstrap",
+        "--disable-libgcc",
+        "--disable-libstdcxx",
+        "--disable-shared",
+        "--disable-threads",
+        "--disable-multilib",
+        "--disable-libatomic",
+        "--disable-nls",
+        "--disable-tls",
+        "--disable-libssp",
+        "--disable-libgomp",
+        "--disable-libmudflap",
+        "--disable-libquadmath",
+        "--with-system-zlib",
+        "--with-gmp=${GMP_PREFIX}",
+        "--with-mpfr=${MPFR_PREFIX}",
+        "--with-mpc=${MPC_PREFIX}"
+      ]
+    },
+    {
+      "name": "gcc-build",
+      "cwd": "${TOOLCHAIN_WORK}/build-gcc",
+      "argv": [
+        "/usr/bin/make",
+        "-j8",
+        "MAKEINFO=true",
+        "all-gcc"
+      ]
+    },
+    {
+      "name": "gcc-install",
+      "cwd": "${TOOLCHAIN_WORK}/build-gcc",
+      "argv": [
+        "/usr/bin/make",
+        "MAKEINFO=true",
+        "install-gcc"
+      ]
+    }
+  ],
+  "limitations": [
+    "This record documents the successful local build configuration, not a cross-host binary reproducibility claim.",
+    "No Sony SDK, original compiler, newlib, libgcc or game runtime libraries are bundled.",
+    "These source pins do not establish original-game toolchain identity.",
+    "Run the reconstruction verifier with your resulting compiler and private original; saved receipts alone do not freshly verify output."
+  ]
+}

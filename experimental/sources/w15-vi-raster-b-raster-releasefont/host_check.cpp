@@ -1,0 +1,42 @@
+// Host check only; not a build input. Pointer words are 32-bit on the target, so the host maps them through a small arena.
+#define NORRATH_HOST_ARENA
+static unsigned char arena[1 << 16];
+static const unsigned arena_base = 0x100000u;
+extern "C" unsigned char* norrath_host_pointer(unsigned address) { return arena + (address - arena_base); }
+static int log_[16], n;
+static unsigned char* seen_a[16]; static unsigned char* seen_b[16]; static int seen_i[16];
+static int remove_ret, erase_ret;
+extern "C" int Remove__12VIDictionaryR10VIResource(unsigned char* d, unsigned char* r) { log_[n] = 1; seen_a[n] = d; seen_b[n++] = r; return remove_ret; }
+extern "C" void _$_7VIRFont(unsigned char* f, int fl) { log_[n] = 2; seen_a[n] = f; seen_i[n++] = fl; }
+extern "C" int Erase__t6VIPool1ZP7VIRFonti(unsigned char* p, int i) { log_[n] = 3; seen_a[n] = p; seen_i[n++] = i; return erase_ret; }
+#include "release_font.cpp"
+#include <cstdio>
+static unsigned& W(unsigned off) { return *reinterpret_cast<unsigned*>(arena + off); }
+int main() {
+    unsigned char* dict = arena + 0x9000;
+    W(19508 + 8) = arena_base + 0x6000;
+    for (unsigned i = 0; i < 3; ++i) W(0x6000 + 12 * i) = arena_base + 0x7000 + 0x40 * i;
+    bool ok = true;
+    // count 3 -> 2: nothing else happens
+    W(0x7044) = 3; W(0x7040) = 9; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 1, dict) == 0 && W(0x7044) == 2 && n == 0;
+    // count 1 -> 0 with registered font
+    W(0x7044) = 1; remove_ret = 0; erase_ret = 0; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 1, dict) == 0 && W(0x7044) == 0 && n == 3
+        && log_[0] == 1 && seen_a[0] == dict && seen_b[0] == arena + 0x7040 && log_[1] == 2 && seen_a[1] == arena + 0x7040 && seen_i[1] == 3
+        && log_[2] == 3 && seen_a[2] == arena + 19508 && seen_i[2] == 1;
+    // unregistered font: no Remove
+    W(0x7084) = 1; W(0x7080) = 0; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 2, dict) == 0 && n == 2 && log_[0] == 2 && log_[1] == 3 && seen_i[1] == 2;
+    // Remove fails
+    W(0x7004) = 1; W(0x7000) = 4; remove_ret = -1; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 0, dict) == -1 && n == 1;
+    // Erase fails
+    W(0x7004) = 1; remove_ret = 0; erase_ret = -1; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 0, dict) == -1 && n == 3;
+    // count already zero goes negative and releases
+    W(0x7004) = 0; erase_ret = 5; n = 0;
+    ok = ok && ReleaseFont__8VIRasteriR12VIDictionary(arena, 0, dict) == 0 && (int)W(0x7004) == -1 && n == 3;
+    std::puts(ok ? "ok" : "FAIL");
+    return !ok;
+}

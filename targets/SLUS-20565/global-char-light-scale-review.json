@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "owner_id": "global_char_light_scale_state",
+  "function_ids": [
+    "light_global_char_light_scale"
+  ],
+  "source_sha256": {
+    "reconstructed/global_char_light_scale_state.cpp": "ba2780091563462f9b4bc27a8d0a3716377e384417ea2d58df47cde2e7ce4b8c",
+    "reconstructed/light_global_char_light_scale.cpp": "4020881a51fe414488f0b7f9c90147afcad23713e05d98bb7083f992d05c1795"
+  },
+  "gp_context_sha256": "ef8d1b2f52f0f9bab6f349274aeebdaefe1409b39a1fc1f72b430f6591cd00b1",
+  "runtime": {
+    "gp_preservation": "unverified",
+    "initialization": "unverified"
+  },
+  "comparison_mode": "ee-gprel-float-store-v1",
+  "operations": {
+    "light_global_char_light_scale": "store-float-argument"
+  },
+  "value_contract": {
+    "source": "finite-common-representable-float-values",
+    "target": "store-low32-f12-object-bits",
+    "memory": "exclusive-live-ordinary-float-object",
+    "exceptional_values": "target-bits-only-no-portable-cpp-claim"
+  },
+  "manual_contract": {
+    "status": "independently reviewed complete private source and owner; fresh public comparison recorded separately",
+    "original_function": {
+      "symbol": "lightGlobalCharLightScale__Ff",
+      "address": "0x0013eac0",
+      "size": 8
+    },
+    "original_owner": {
+      "symbol": "globalCharLightScale",
+      "address": "0x00483ab4",
+      "size": 4,
+      "binding": "local",
+      "storage": "writable file-backed .sdata",
+      "initializer_hex": "0000803f"
+    },
+    "operation": "Assign the supplied float to one live mutable ordinary float owner under exclusive access. Target instructions return through RA and store the low 32 F12 bits in the return delay slot; no floating-point arithmetic or conversion.",
+    "types": "Finite common-representable source values only. The target compiler model has maximum exponent 129 and no declared quiet NaN or infinity support. Host exponent-255 patterns are host observations, not a target exceptional-value classification. The void comparison adapter does not establish original return type.",
+    "linkage": "Explicit original-local to unique external source adapter; original translation-unit declarations and lifetime integration remain unknown.",
+    "observed_call": "Within 34 complete lighting bodies, one direct call is in lightClear; its complete body supplies F12=1.0f and zeroes interfaceMode before callee entry. This is a bounded observed call lane, not whole-game caller closure.",
+    "validation": {
+      "isolated_full_body_and_initializer_match": true,
+      "independent_gnu_linker_match": true,
+      "root_fresh_isolated_comparison": true,
+      "host_interaction_cases": 65662,
+      "finite_host_cases": 65364,
+      "host_exceptional_pattern_observations": 298,
+      "raw_target_store_model_cases": 65545,
+      "sanitizers": "ASan+UBSan clean",
+      "independent_verifier_review": "162 synthetic tests; 220 malformed object/receipt/ledger cases plus two real late-mutation checks; fresh mixed and float-only source comparisons."
+    },
+    "limits": [
+      "No PS2 execution, runtime GP preservation or initialization proof.",
+      "No general floating-point ABI, IEEE arithmetic, original compiler or original class claim.",
+      "The complete lighting-clear and optional-reset candidates remain unmatched; this owner is not an immutable compiler constant pool.",
+      "No inferred global finite, nonnegative or unit-range scale invariant."
+    ]
+  }
+}

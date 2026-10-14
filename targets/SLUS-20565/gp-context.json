@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "policy": "norrath-fixed-gp-v1",
+  "baseline_sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+  "gp_symbol": {
+    "name": "_gp",
+    "address": "0x004879f0",
+    "size": 4,
+    "type": 1,
+    "binding": 1,
+    "other": 0,
+    "section": 65521
+  },
+  "reginfo": {
+    "name": ".reginfo",
+    "type": 1879048198,
+    "flags": 2,
+    "size": 24,
+    "alignment": 4,
+    "entry_size": 1,
+    "gp": "0x004879f0"
+  },
+  "startup": {
+    "symbol": "_start",
+    "address": "0x00100008",
+    "size": 576,
+    "context_address": "0x00100198",
+    "context_size": 44,
+    "context_sha256": "a43b3bc3342538217f2306ff342353e372683db55f2c7a9ae383f9353015db29"
+  },
+  "runtime": {
+    "gp_preservation": "unverified",
+    "initialization": "unverified"
+  }
+}

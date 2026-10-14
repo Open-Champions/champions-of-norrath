@@ -1,0 +1,184 @@
+# Startup reconstruction checkpoints
+
+## 2026-10-11: dependency measurement audit
+
+The fresh authored-only partial build still has **848 unresolved imports**.
+It has **zero COMMON/small-COMMON symbols**, and 5,495 relocation entries.
+No startup stage has executed; the output remains ET_REL, not a game executable.
+
+The inventory now counts both REL and RELA, validates their entry strides,
+recognizes MIPS undefined symbols, reports tentative COMMON storage separately,
+and rejects function symbols without concrete executable extents. Post-link
+validation compares the complete multiset of function names and sizes, including
+zero-size markers and duplicate local names, instead of only the sum of sizes.
+214 synthetic tool tests passed, followed by a fresh 277-input source build.
+
+The external startup report correctly identifies missing authored entry/main,
+ordinary constructor dispatch and SRS launch bodies. Its claim that SHN_COMMON
+must be added to unresolved imports is incorrect: COMMON declares tentative
+storage that a final linker normally allocates. Storage ownership/initialization
+still needs review, separately from undefined imports. No COMMON was present in
+this actual partial object, so the earlier 848 measurement was not undercounted.
+
+The report's other observations require narrower interpretation:
+
+- `link_inventory.py` deliberately distinguishes declared VMA coverage from
+  compatible file/zero-fill coverage. A conflicting mapping remains worth
+  reporting even when a different segment supplies the bytes. The `.reginfo`
+  zero-fill overlap is explicitly diagnosed; these fields are not a linker script.
+- The smoke link's entry is an arbitrary admitted leaf, not game startup. Its
+  entry/header checks can be strengthened before reusing that tool for executable
+  validation; it is not being reused as a boot verifier here. Its metadata and
+  MIPS-reserved-index limitations do not affect the actual partial import count.
+- The partial driver's authored dependency scan is lexical, unlike its upstream
+  preprocessor scan. This is a source-closure limitation, not evidence of missing
+  imports in the compiled object. Compiler-driver counts are not observations
+  of separately launched assembler processes.
+- `launchSRS` at 0x002d01e0 is a complete 1,588-byte routine. Its heap reservation,
+  subsystem shutdown/restoration, argument/state handling and post-return frontend
+  setup cannot be replaced by only load/callback/run calls. No partial skeleton
+  is admitted as its reconstruction.
+
+Original executable identity was freshly checked against the pinned baseline.
+Complete private startup extents were reviewed; raw instructions remain private.
+The import triage's name clusters do not establish runtime ordering or ownership.
+Floor drawing/init and engine add-task scheduler remain outside this work.
+
+## C-runtime memory package
+
+The default source build now resolves `memset`: **848 → 847** imports, with no
+new imports and no aliases. Its complete source provider passed 196,992 guarded
+host cases with ASan/UBSan and fresh target compilation without recursive calls.
+The [review](../experimental/sources/runtime-memory/REVIEW.md) explains why the
+standard source definition supersedes the optional alias in local commit 33bc826.
+The [receipt](../experimental/runtime-memory-receipt.json) records the executed
+build identities; later JSON ordering changes do not change the selected sources.
+No entry, constructor, first-frame or gameplay stage has executed.
+
+## Ordinary constructor package
+
+The complete ordinary guard, reverse constructor walker and persistent destructor
+walker are now selected authored source. Their dependency chain links internally,
+but **no game startup stage has executed**. See [contracts and host checks](STARTUP_CTORS.md).
+The fresh package build has **853 imports**: zero old imports closed and six newly
+exposed startup dependencies (`__CTOR_LIST__`, `__DTOR_LIST__`, `__EH_FRAME_BEGIN__`,
+`__register_frame_info`, `__deregister_frame_info`, `atexit`). COMMON remains zero.
+The increase from 847 reflects new startup coverage, not a regression in closure.
+The [receipt](../experimental/startup-ctors-receipt.json) pins this measurement.
+
+## Entry package
+
+A complete authored `_start` is now selected. Three complete original/authored
+instruction-model traces and three deliberate-fault rejection checks passed.
+The [entry review](STARTUP_ENTRY.md) states the exact CPU/memory/call contracts
+and the model's limits. The [receipt](../experimental/startup-entry-receipt.json)
+records the fresh partial build: **863 imports**, zero COMMON. This exposes ten
+entry dependencies and closes none of the prior 853: kernel services, argument
+storage, root callback, linker boundaries, `main`, and `exit`. No original code
+or fixed address alias supplies them in the partial object. No entry/kernel
+execution or first frame has been demonstrated.
+
+## Kernel entry interface package
+
+The root callback, startup cache wrapper and `_InitSys` dispatcher now resolve
+three of the entry imports. The dispatcher exposes nine lower-level services,
+so the fresh count is **869 imports** (863 − 3 + 9), with zero COMMON. The
+[review](STARTUP_KERNEL.md) and [receipt](../experimental/startup-kernel-receipt.json)
+record the checks and the C++ frame/ABI limitation. Source bootstrap and ordinary
+constructor dispatch are now present; no kernel/startup stage has actually run.
+
+## Clean export and optional Newlib math
+
+A `git archive` of `9a5b33d` built with the reviewed EE toolchain and no
+`--newlib-root` reproduced the kernel receipt: **869 unresolved imports**,
+409 function bodies, zero COMMON, and the same partial-object SHA-256
+`08414e0077626c1a45e8a39162d4c98275a2be0c1d7efe74573eb6ce96fa595d`. The archive
+supplied every selected authored input; no local-only source was required.
+
+The same archive with a Newlib 1.10.0 tree whose ten pinned files matched
+`external_files` compiled `floorf` (232 bytes) and `ceilf` (240 bytes). Those
+are the only import changes: **869 → 867**, nothing added, zero COMMON, 411
+function bodies. The optional inputs stay out of the default build. No startup
+stage or kernel service has run. The [receipt](../experimental/startup-newlib-receipt.json)
+records both outputs.
+
+## InitSys service package
+
+The nine services named by `_InitSys`, plus `CreateSema` and `DeleteSema`, are
+now selected authored source. The two semaphore wrappers match the original
+16-byte bodies. The other nine are complete call orchestration with host
+contracts; they are not original-byte matches, and no EE service has run.
+Defining the nine removes those imports and exposes their callees. The measured
+default partial link is **911 unresolved imports** (869 − 9 + 51), zero COMMON,
+420 function bodies. `_gp` was already defined, so `InitThread` did not add it.
+`main` and `launchSRS` are still unresolved. The
+[review](STARTUP_INITSYS.md) separates observed calls from unknown helper and
+hardware effects. The [receipt](../experimental/startup-initsys-receipt.json)
+lists the import delta.
+
+## main
+
+`main` is now selected authored source. It calls `engineAddTask__FPFv_viPci`
+and leaves that symbol undefined. The fresh default partial link is **993
+unresolved imports** (911 − 1 + 83), zero COMMON, 421 function bodies, 297
+authored inputs. Partial object
+`aaed1908f2f6b7be2c2132e835578ec77954853f1e33bfd5f60c19820d0b6555`.
+`__main` was already defined. The 24 unnamed text addresses are separate
+imports because they have no ELF symbol; their bytes are not in the source.
+The [review](STARTUP_MAIN.md) records the control flow. No EE startup stage
+has run.
+
+## launchSRS
+
+`launchSRS` is now selected authored source. It reserves a heap block, shuts
+down sound, keyboard, and texture cache, walks `_srsctorsstart`, calls
+`srs_main`, then restores those subsystems and reloads six halo resources.
+`cdLoad__FPcPvii` stays a separate import. The fresh default partial link is
+**1040 unresolved imports** (993 − 1 + 48), zero COMMON, 422 function bodies,
+298 authored inputs. Partial object
+`db0ae5e19bd1d9a86dd695b9d6a34a666d222b5b60c18bbd20be5d22b02103d3`.
+The [review](STARTUP_LAUNCHSRS.md) records the control flow.
+`engineAddTask__FPFv_viPci` is still unresolved. No EE startup stage has run.
+
+## InitSys callee package
+
+`main` and `launchSRS` do not call the 51 symbols opened by the nine services.
+Twelve functions from that neighborhood are now authored: six syscall requests
+(`AddIntcHandler2`, `CreateThread`, `StartThread`, `ChangeThreadPriority`,
+`GetThreadId`, `FindAddress`), `DIntr`, `EIntr`, `SetT2`, and the three timer
+register tail calls. The fresh default partial link is **1029 unresolved
+imports** (1040 − 11), zero COMMON, 434 function bodies, 310 authored inputs.
+Partial object
+`94dc88b91858122ad4514424de332a7a658705b526f8e49b0960543b30544de4`.
+The [review](STARTUP_INITSYS_CALLEES.md) records the instruction behavior.
+`engineAddTask__FPFv_viPci` is still unresolved. No kernel service has run.
+
+## Imports opened by main and launchSRS
+
+Defining `main` added 83 imports. Defining `launchSRS` added 48. One of the 83, `launchSRS__Fv`, is already authored. The thirty-eight unnamed text addresses are now named from the bytes in the pinned image; see [STARTUP_TEXT.md](STARTUP_TEXT.md). The other symbols stay imports.
+
+| Owner | Symbols |
+| --- | --- |
+| cd-archive | `cdLoad__FPcPvii`, `lumpClear__Fi`, `lumpFindResource__FPcT0`, `lumpLoad__FPc`, `lumpLock__Fi` |
+| audio | `soundRestore__Fb`, `soundSleep__Fv` |
+| memory | `enableMallocWrapper`, `mallinfo`, `memAlloc__FiPc`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memFree__FPv`, `memScrambleFree__Fv`, `memSetMark__Fi` |
+| libc-format | `scePrintf`, `sscanf`, `strcmp` |
+| items-player | `initChars__FiPPc`, `inventoryInitNet__Fv`, `levelName`, `picInit__4itemv`, `shopInitNet__Fv` |
+| save-net-anim | `commInitNet__Fv`, `coreBeenInSRS`, `coreLaunchSRS`, `cutInitNet__Fv`, `DLG_InitNet__Fv`, `fromSRS`, `fromSRSButEnteringGame`, `hudInitNet__Fv`, `MC_Configure__Fv`, `MC_Init__Fi`, `MC_ProtectRamSlot`, `MC_Reset__Fv`, `mcProcess__Fv`, `netFree__Fb`, `netGameLaunchInfo`, `netInitState`, `netInterfaceIsUp`, `netNetworkMode`, `sceMcInit`, `textInitNet__Fv` |
+| world-state | `worldWaterBumpSpeed` |
+| render-lights | `defaultFont`, `displaySBLogoScreen__Fv`, `displaySOELogo__Fv`, `engineSetScreenColor__Fiiii`, `haloTexture1` through `haloTexture8`, `mediumFont`, `smallFont`, `textureAllocateCacheBuffer__Fv`, `textureFreeCacheBuffer__Fv` |
+| gameobject-base | `gameobjInit__Fv` |
+| scheduler / floor session | `engineAddTask__FPFv_viPci`, `enginePrintTasks__Fv` |
+| startup text, now defined | the 24 addresses `main` referenced and the 14 additional addresses `launchSRS` referenced |
+
+`math`, `script-amx`, `megatile`, `object-infra`, `actors-a`, `actors-b`, and `data-views` do not own any of these 131 symbols. `floorInit__Fv` is not one of them; `engineInit` would be the caller, and that function is not authored.
+
+These remain unowned: `_engineCheckStack__FPCci`, `_srsctorsend`, `_srsctorsstart`, `__assert__FPCcUiT0i`, `DLG_Init__Fv`, `debugCheckForPauseMenuStart__Fv`, `engineClear__Fv`, `engineDisplayDisable`, `engineInit__Ff`, `engineRestore__Fv`, `frontEndInit__Fi`, `frontEndStartInNetMenu__Fv`, `gameBoot__Fv`, `gameInit__Fv`, `gameLoop__Fv`, `keyboardFree__Fv`, `keyboardRestart__Fv`, `pad`, `rejectForeignModules__Fv`, `sceSifQueryMaxFreeMemSize`, `sceSifQueryTotalFreeMemSize`, `sceSifSearchModuleByName`, `sceSifStopModule`, `sceSifUnloadModule`, `simpleDrawLoop__FPFv_i`, `skipIntro`, `srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`, `textGetString__FPc`, `ustrcpy__FPcPUs`.
+
+## Startup text
+
+The unnamed text is selected authored data. It defines no function. Math, audio, and memory were already merged and had left the partial link at 950 imports. With this text included, the fresh default partial link is **912 unresolved imports** (950 − 38), zero COMMON, 442 function bodies, 340 authored inputs. Partial object `8b45c1940a0e6988f2b187b6d9bbb0c38f2c6b1638a0614d67329e2916c37c29`. No EE startup stage has run.
+
+## Call chain
+
+`_start` calls `_InitSys`, `FlushCache`, and `main`. `_InitSys` calls its nine services. `__main` runs the ordinary constructor walk. `main` is authored and does not return. Its first call after `__main` is `engineInit__Ff` at 0x001902b0, 1944 bytes. That function is the first missing link. It calls `floorInit__Fv`, which stays with the floor session, and `engineAddTask` is still unresolved. `launchSRS` is authored, and `main` calls it only after `gameLoop`, which is after the logo draw. No stage of this chain has executed.

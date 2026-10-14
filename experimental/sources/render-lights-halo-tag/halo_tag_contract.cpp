@@ -1,0 +1,75 @@
+// Host check of the EE object for norrath_factory_halo_tag_bytes.
+// Not an EE plan input. Pass the reviewed-toolchain object as argv[1].
+#include <cstdio>
+#include <cstring>
+#include <fstream>
+#include <vector>
+
+static int failures = 0;
+static void expect(bool ok, const char* message) {
+    if (!ok) {
+        std::fprintf(stderr, "fail: %s\n", message);
+        ++failures;
+    }
+}
+static unsigned read_u32(const unsigned char* p) {
+    return unsigned(p[0]) | (unsigned(p[1]) << 8) |
+           (unsigned(p[2]) << 16) | (unsigned(p[3]) << 24);
+}
+static unsigned read_u16(const unsigned char* p) {
+    return unsigned(p[0]) | (unsigned(p[1]) << 8);
+}
+static const unsigned char expected_bytes[] = {0x48, 0x61, 0x6c, 0x6f, 0x00};
+
+int main(int argc, char** argv) {
+    if (argc != 2) {
+        std::fprintf(stderr, "usage: halo_tag_contract <ee-object>\n");
+        return 2;
+    }
+    std::ifstream in(argv[1], std::ios::binary);
+    std::vector<unsigned char> elf((std::istreambuf_iterator<char>(in)),
+                                   std::istreambuf_iterator<char>());
+    expect(elf.size() > 52 && elf[0] == 0x7f && elf[1] == 'E', "elf");
+    if (failures) return 1;
+    const unsigned shoff = read_u32(elf.data() + 32);
+    const unsigned shentsize = read_u16(elf.data() + 46);
+    const unsigned shnum = read_u16(elf.data() + 48);
+    const unsigned shstrndx = read_u16(elf.data() + 50);
+    auto section = [&](unsigned index) { return elf.data() + shoff + index * shentsize; };
+    const unsigned str_off = read_u32(section(shstrndx) + 16);
+    auto name_of = [&](const unsigned char* sh) {
+        return reinterpret_cast<const char*>(elf.data() + str_off + read_u32(sh));
+    };
+    const unsigned char* data_sh = nullptr;
+    const unsigned char* sym_sh = nullptr;
+    for (unsigned i = 0; i < shnum; ++i) {
+        const char* name = name_of(section(i));
+        if (std::strcmp(name, ".data") == 0) data_sh = section(i);
+        if (std::strcmp(name, ".symtab") == 0) sym_sh = section(i);
+    }
+    expect(data_sh && sym_sh, "data and symbols");
+    if (failures) return 1;
+    const unsigned data_off = read_u32(data_sh + 16);
+    expect(read_u32(data_sh + 20) == sizeof expected_bytes, "tag length through NUL");
+    expect(std::memcmp(elf.data() + data_off, expected_bytes, sizeof expected_bytes) == 0,
+           "Halo bytes");
+    const unsigned sym_off = read_u32(sym_sh + 16);
+    const unsigned sym_size = read_u32(sym_sh + 20);
+    const unsigned sym_entsize = read_u32(sym_sh + 36);
+    const unsigned strtab_off = read_u32(section(read_u32(sym_sh + 24)) + 16);
+    bool found = false;
+    for (unsigned i = 0; i < sym_size / sym_entsize; ++i) {
+        const unsigned char* sym = elf.data() + sym_off + i * sym_entsize;
+        const char* name = reinterpret_cast<const char*>(elf.data() + strtab_off + read_u32(sym));
+        if (std::strcmp(name, "norrath_factory_halo_tag_bytes") == 0) {
+            found = true;
+            expect(read_u32(sym + 8) == sizeof expected_bytes, "symbol size");
+            expect((sym[12] & 0xf) == 1, "object");
+            expect((sym[12] >> 4) == 1, "global");
+        }
+    }
+    expect(found, "halo tag symbol");
+    if (failures) return 1;
+    std::printf("halo tag contract passed\n");
+    return 0;
+}

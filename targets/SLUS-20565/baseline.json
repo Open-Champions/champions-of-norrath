@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "SLUS-20565-sha256-9a60f13c5c31",
+  "status": "experimental_hash_pinned_baseline",
+  "title": "Champions of Norrath",
+  "serial": "SLUS-20565",
+  "region": "NTSC-U",
+  "boot_metadata": {
+    "boot_executable": "SLUS_205.65",
+    "ver": "1.02",
+    "vmode": "NTSC"
+  },
+  "retail_revision": null,
+  "identity_scope": "The exact executable SHA-256 identifies this reconstruction target. Retail pressing and download authenticity remain unconfirmed. Boot VER is not a retail revision claim.",
+  "executable": {
+    "sha256": "9a60f13c5c316d619a288821cc9496cc61864106b7872b52ee141caed3756ff0",
+    "size": 9249659,
+    "machine": "MIPS",
+    "class": 32,
+    "endianness": "little",
+    "entry_point": 1048584,
+    "flags": 546455553
+  },
+  "disc": {
+    "size": 8319303680,
+    "sha256": "76c661a42d912cecfdf513ff809cd77621a4aaa5f8c63f336ef50ddfc5e6dd0b",
+    "filesystem_validation": "Primary ISO executable extraction only; trailing region and full layer layout not validated."
+  },
+  "sections": [
+    {
+      "index": 1,
+      "name": ".text",
+      "type": 1,
+      "flags": 6,
+      "address": 1048576,
+      "offset": 4096,
+      "size": 2209032
+    },
+    {
+      "index": 2,
+      "name": ".vutext",
+      "type": 1,
+      "flags": 6,
+      "address": 3257616,
+      "offset": 2213136,
+      "size": 15680
+    },
+    {
+      "index": 19,
+      "name": ".srs",
+      "type": 1,
+      "flags": 7,
+      "address": 16777216,
+      "offset": 3706880,
+      "size": 3510444
+    },
+    {
+      "index": 43,
+      "name": ".symtab",
+      "type": 2,
+      "flags": 0,
+      "address": 0,
+      "offset": 8405716,
+      "size": 342640
+    },
+    {
+      "index": 44,
+      "name": ".strtab",
+      "type": 3,
+      "flags": 0,
+      "address": 0,
+      "offset": 8748356,
+      "size": 501303
+    }
+  ],
+  "independent_checks": [
+    "Executable SHA-256 compared with system shasum.",
+    "All ELF section and program header fields compared with LLVM 20.1.8."
+  ],
+  "original_compiler": null,
+  "abi_evidence": {
+    "elf_flags": "0x20924001",
+    "llvm_decoding": [
+      "EF_MIPS_ABI_EABI64",
+      "EF_MIPS_ARCH_3",
+      "EF_MIPS_MACH_5900",
+      "EF_MIPS_NOREORDER"
+    ],
+    "scope": "Observed header flags only; no general replacement compiler or ABI equivalence proven."
+  }
+}

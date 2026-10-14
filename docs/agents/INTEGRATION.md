@@ -1,0 +1,11101 @@
+# Integration log
+
+Official unresolved-import counts come from the default authored partial link
+(`python3 tools/build_partial.py` with the reviewed EE toolchain, no Newlib
+root). COMMON stayed zero. Nothing here was executed on the EE or as gameplay.
+
+## Baseline
+
+Before these packages, revision `6ec25da` linked **1029** unresolved imports,
+434 function bodies, and 310 authored inputs.
+
+## agents/math
+
+Merged. The notes separate observed bytes from inferred reconstruction names,
+the sources are authored C++ rather than a disassembly dump, and each function
+has a host test that returns failure. No game binary was committed.
+
+The worker's private trial was not the official count. This link reproduces
+the claimed delta exactly.
+
+| | |
+|---|---|
+| Before | 1029 |
+| After | 1009 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_factory_double_isinf`, `norrath_factory_double_isnan`,
+`norrath_entity_floorf`, `norrath_entity_fptodp`, `norrath_icos_scale`,
+`norrath_icos_cubic`, `norrath_icos_quintic`, `norrath_icos_septic`,
+`norrath_isin_scale`, `norrath_isin_cubic`, `norrath_isin_quintic`,
+`norrath_isin_septic`, `norrath_animation_math_atan_high_view`,
+`norrath_animation_math_atan_low_view`,
+`norrath_animation_math_atan_coefficients_view`,
+`norrath_animation_math_view_47d3b0`, `norrath_animation_math_view_47d3b8`,
+`norrath_animation_math_view_47d3c0`, `norrath_animation_math_view_47d434`,
+`norrath_player_softdouble_nan_parts_view`.
+
+Opened: none.
+
+Compiled bodies matched the notes: infinity 60, NaN 44, entity floor 232,
+float-to-double 104. The four table units emit no functions. `floorf` and
+`ceilf` stay optional external inputs. Host checks are recorded in the
+snapshot and are not plan inputs. 214 tool tests passed, and the host checks
+for all eight units passed on this machine. No EE or game execution.
+
+## agents/audio
+
+Merged. Original names are tied to addresses and separated from the published
+import names. The two service requests are authored syscall sequences with host
+checks that fail when the compiled body differs from the pinned executable.
+DMA enable is explicitly not an original-byte match and has a host contract.
+Storage units have host contracts. No game binary or disassembly listing was
+committed.
+
+| | |
+|---|---|
+| Before | 1009 |
+| After | 978 |
+| Closed | 31 |
+| Opened | 0 |
+
+That is the worker's claimed closure. The worker did not publish an official
+unresolved total; 978 is the measured one.
+
+Closed: `norrath_sound_add_dma_handler`, `norrath_sound_enable_dma`,
+`norrath_sound_set_dma_chain`,
+`norrath_sound_command_packet_buffer_view`,
+`norrath_sound_command_send_buffer_view`,
+`norrath_sound_command_initialization_packet_view`,
+`norrath_sound_command_dma_handle_view`,
+`norrath_sound_command_state_view`,
+`norrath_sound_command_system_handlers_view`,
+`norrath_sound_system_register_words_view`,
+`norrath_sound_command_initialized_word_view`,
+`norrath_sound_channel_records_view`,
+`norrath_sound_channel_voice_map_view`,
+`norrath_sound_key_on_words_view`,
+`norrath_sound_key_off_words_view`,
+`norrath_sound_group_limits_view`,
+`norrath_sound_sequence_records_view`,
+`norrath_sound_stream_buffer_sizes_view`,
+`norrath_sound_stream_volumes_view`,
+`norrath_sound_stream_records_view`,
+`norrath_sound_master_volume_view`,
+`norrath_sound_master_scale_view`,
+`norrath_sound_delay_thread_name_view`,
+`norrath_sound_global_dialog_map_view`,
+`norrath_sound_global_dialog_name_view`,
+`norrath_sound_global_dialog_extension_view`,
+`norrath_sound_batch_iop_buffer_word_view`,
+`norrath_sound_iop_buffer_word_view`,
+`norrath_sound_startup_formats_view`,
+`norrath_sound_startup_assert_file_view`,
+`norrath_sound_startup_assert_conditions_view`.
+
+Opened: none. `norrath_sound_enable_dma` calls the already defined
+`norrath_sound_disable_interrupts` and `norrath_sound_enable_interrupts`.
+
+Compiled bodies: DMA handler registration 16, DMA chain request 16, DMA
+enable 112. The twelve storage units emit no functions. The host body
+comparison matched both 16-byte requests against the pinned executable.
+Thirteen host contracts passed. 214 tool tests passed. No EE, DMA, SPU, or
+game path ran.
+
+## agents/memory
+
+Merged. Observed symbols, sizes, and initial bytes are separated from inferred
+names. `memRealloc` has a host check that fails on the clamp, slack, split, and
+growth paths. Data units have host checks. No game binary or disassembly
+listing was committed.
+
+The notes describe a private plan whose unresolved list still had 911 names.
+That absolute count does not reproduce on the shared tip. The closed and
+opened names do.
+
+| | |
+|---|---|
+| Before | 978 |
+| After | 950 |
+| Closed | 29 |
+| Opened | 1 (`memcpy`) |
+
+Closed: `norrath_mem_realloc`, `norrath_player_malloc_bins_view`,
+`norrath_player_malloc_trim_threshold_view`,
+`norrath_player_malloc_top_pad_view`,
+`norrath_player_malloc_break_base_view`,
+`norrath_player_malloc_max_break_view`,
+`norrath_player_malloc_max_total_view`,
+`norrath_player_malloc_current_info_view`,
+`norrath_player_malloc_lock_owner_view`,
+`norrath_player_malloc_lock_count_view`,
+`norrath_player_malloc_semaphore_view`, `norrath_heap_ring_word_view`,
+`norrath_heap_next_fit_view`, `norrath_heap_fragment_threshold_view`,
+`norrath_heap_free_bytes_view`, `norrath_heap_allocation_tag_view`,
+`norrath_heap_total_bytes_view`, `norrath_heap_dump_count_view`,
+`norrath_heap_check_file_view`, `norrath_heap_failure_format_view`,
+`norrath_heap_dump_border_view`, `norrath_heap_dump_count_format_view`,
+`norrath_heap_dump_free_format_view`, `norrath_heap_dump_used_format_view`,
+`norrath_heap_dump_totals_format_view`,
+`norrath_heap_dump_serial_format_view`, `norrath_block_data_pool_view`,
+`norrath_block_region_view`, `norrath_enable_malloc_wrapper_byte_view`.
+
+`norrath_mem_alloc` and `norrath_mem_free` were already defined, so the new
+call does not open them. `__sce_sema_id` stays unresolved. The semaphore view
+is a separate object; the notes say those two names are not yet one symbol.
+`norrath_player_heap_pointer_word` stays unresolved. The realloc body is 556
+bytes, matching the note. The other five units emit no functions. The
+sanitized realloc check and the bin-object check passed. The heap text check
+passes its byte comparisons; under AddressSanitizer it then reads one byte
+past `mem.cc`. 214 tool tests passed. No EE or game path ran.
+
+## agents/object-infra
+
+Merged. Addresses are tied to observed symbols. The slow-run function, state,
+vtable, and factory-text units each have a host contract that fails on a
+mismatch. No game binary or disassembly listing was committed.
+
+The notes' private link reported 646 unresolved imports from that branch's
+own plan. That absolute count does not reproduce. The closed and opened names
+do: every name under Imports closed left the unresolved list, and the
+seventeen vtable slots arrived.
+
+| | |
+|---|---|
+| Before | 950 |
+| After | 685 |
+| Closed | 282 |
+| Opened | 17 |
+
+Closed: the 282 names in `docs/agents/object-infra.md`, including
+`norrath_object_add_to_slow_run_list`, the constructor and hash views, the
+factory marker, and all 263 `norrath_factory_text_*` views. The hash-slot
+names are assembler aliases of the constructor string tables, so each pair is
+one object. `norrath_object_slow_run_list_view` is also defined. It was not a
+previous import, so it does not change the count.
+
+Opened: `norrath_vt_tf_10GameObject`, `norrath_vt_dtor_10GameObject`,
+`norrath_vt_msg_hurt_10GameObject`, `norrath_vt_msg_trigger_10GameObject`,
+`norrath_vt_msg_run_10GameObject`, `norrath_vt_msg_draw_10GameObject`,
+`norrath_vt_msg_collision_10GameObject`, `norrath_vt_msg_route_10GameObject`,
+`norrath_vt_msg_load_10GameObject`, `norrath_vt_msg_save_10GameObject`,
+`norrath_vt_msg_collision_world_10GameObject`,
+`norrath_vt_msg_move_collision_10GameObject`,
+`norrath_vt_msg_alert_10GameObject`,
+`norrath_vt_msg_get_poke_name_10GameObject`,
+`norrath_vt_msg_poke_10GameObject`, `norrath_vt_clone_10GameObject`,
+`norrath_vt_get_model_10GameObject`.
+
+`norrath_list_remove` and `norrath_list_oneway_link` were already defined.
+`norrath_actor_view_483ad0` was already unresolved. The slow-run body is 304
+bytes. The other three units emit no functions. All four host contracts
+passed. 214 tool tests passed. No PS2 or game execution. The vtable slots are
+not called.
+
+## Startup text from the shared branch
+
+The startup lead's text unit landed on `origin/codex/norrath-first-reconstruction`
+after object-infra was committed here and before that commit was pushed. It
+is selected data, not one of the four packages. `main` and `launchSRS` now
+reference the named strings. The unit defines no function.
+
+The lead measured 912 on the memory tip (950 − 38). Measured from the
+object-infra tip, the same 38 names close and nothing opens.
+
+| | |
+|---|---|
+| Before | 685 |
+| After | 647 |
+| Closed | 38 |
+| Opened | 0 |
+
+Closed: the 24 `norrath_main_rodata_*` / `norrath_main_sdata_*` addresses and
+the 14 `norrath_launchsrs_rodata_*` / `norrath_launchsrs_sdata_*` addresses
+listed in `docs/STARTUP_TEXT.md`. Opened: none. 443 function bodies, 344
+authored inputs, zero COMMON. 214 tool tests passed. No startup stage ran.
+
+## agents/megatile
+
+Merged. Observed original names stay tied to addresses. Each unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+Host checks for specialparse, entity dispatch, and the table bytes passed.
+
+The notes list 47 defined names as closed. All 47 are defined. Only 23 of
+them were unresolved imports on the shared link, so the official delta is
+smaller than that list.
+
+| | |
+|---|---|
+| Before | 647 |
+| After | 626 |
+| Closed | 23 |
+| Opened | 2 |
+
+Closed: `norrath_megatile_specialparse`, `norrath_megatile_do_entity_dispatch`,
+`norrath_megatile_regions_view`, `norrath_megatile_x_view`,
+`norrath_megatile_y_view`, `norrath_megatile_grid_origin_view`,
+`norrath_megatile_pm_pointers_view`, `norrath_megatile_pm_characters_view`,
+`norrath_megatile_counters_view`, `norrath_megatile_world_word`,
+`norrath_megatile_scale_view`, `norrath_megatile_name_a_view`,
+`norrath_megatile_name_b_view`, `norrath_megatile_name_c_view`,
+`norrath_megatile_name_d_view`, `norrath_megatile_name_e_view`,
+`norrath_megatile_name_f_view`, `norrath_megatile_pm_name_view`,
+`norrath_megatile_pm_a_view`, `norrath_megatile_pm_b_view`,
+`norrath_megatile_pm_c_view`, `norrath_megatile_count_format_view`,
+`norrath_megatile_point_format_view`.
+
+The other 24 names in the notes are defined and were not previous imports:
+`norrath_megatile_dynlevels_view`, `norrath_megatile_level_name_view`,
+`norrath_megatile_closest_limit_view`, and the trigger, format, kitten, and
+spawn text objects.
+
+Opened: `norrath_factory_sscanf`, `norrath_swap_int`. The other names the
+notes leave open were already unresolved or already defined, including
+`norrath_megatile_add_pm_list` and `norrath_megatile_cap_pm_pointers`.
+Bodies: specialparse 2404, entity dispatch 1996. The table unit emits no
+functions. 445 function bodies, 347 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+## agents/script-amx
+
+Merged. The selected executor is `sources/script-amx-exec/exec.cpp`. The older
+held draft `sources/game-amx-exec-native-transport-source-v4` is unchanged,
+still stops on `#error`, and is not a plan input. Each new unit has a host
+test that returns failure. No game binary or disassembly listing was committed.
+All nine host checks passed.
+
+| | |
+|---|---|
+| Before | 626 |
+| After | 752 |
+| Closed | 10 |
+| Opened | 136 |
+
+Closed: `norrath_custom_variables_process`,
+`norrath_script_current_amx_word_view`,
+`norrath_script_complain_frame_word_view`,
+`norrath_amx_little_endian_word_view`,
+`norrath_script_game_state_data_view`, `norrath_script_post_action_view`,
+`norrath_mc_pre_start_key_bytes`, `norrath_mc_start_key_bytes`,
+`norrath_amx_game_native_registry_view`, `norrath_amx_exec`.
+
+Opened: the 120 `amx*__FP5__amxPi` natives named in `docs/agents/script-amx.md`
+(`amxNewWorld__FP5__amxPi` once), plus `DisableZooming__6Camera`,
+`SetDistanceAtLevel__6Cameraif`, `SetMaxHeight__6Cameraf`,
+`SetPitchAtLevel__6Cameraii`, `fxUpdateDust__Fiiiiiiii`, `gameCam`,
+`levelFlags`, and the ten `worldWater*` words. `norrath_copy_bytes`,
+`norrath_memory_compare`, `norrath_factory_strstr`, and
+`norrath_player_sscanf` were already defined, so they did not open.
+Bodies: custom variables 1360, executor 7996. The other seven units emit no
+functions. 447 function bodies, 356 authored inputs, zero COMMON. 214 tool
+tests passed. No retail script and no EE execution. The host executor test
+does not cover every opcode slot; the notes list the unrun slots.
+
+## agents/cd-archive
+
+Merged the pushed tip. Observed originals stay next to the `norrath_archive_*`
+names. Each unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. All 13 host contracts passed. This tip does
+not define `cdLoad__FPcPvii`; that name stays unresolved for a later pass.
+
+| | |
+|---|---|
+| Before | 752 |
+| After | 763 |
+| Closed | 34 |
+| Opened | 45 |
+
+Closed: the 12 archive functions and 22 views that were already imports.
+`norrath_archive_no_new_vags_view` and
+`norrath_archive_cd_command_count_view` are defined and were not previous
+imports. Opened: the 45 names in the notes that were not already present,
+including `sceCdStream`, the Sony CD/SIF helpers, the six extension inits, and
+the three vblank views. `norrath_sce_printf` was already unresolved.
+`norrath_player_wait_semaphore`, `norrath_player_signal_semaphore`, and
+`norrath_string_compare` were already defined. `norrath_archive_map_animation_sounds`
+and `norrath_archive_sound_free_ram` stay unresolved. 459 function bodies,
+369 authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/libc-format
+
+Merged. Observed `scePrintf`, `sscanf`, and `strcmp` are the published names.
+`scePrintf` is an alias of `norrath_sce_printf` on the EE object. Each unit
+has a host contract that returns failure. No game binary or disassembly
+listing was committed. All 19 host contracts passed. `memAlloc__FiPc` stays
+unresolved.
+
+| | |
+|---|---|
+| Before | 763 |
+| After | 740 |
+| Closed | 30 |
+| Opened | 7 |
+
+Closed: the 30 names in `docs/agents/libc-format.md`, including `scePrintf`,
+`sscanf`, `strcmp`, and `norrath_sce_printf`. `_putchar` is defined and was
+not a previous import. Opened: `_printf`, `close`, `deci2Putchar`, `lseek`,
+`read`, `serialPutchar`, `write`. The notes' already-defined callees stayed
+defined. Bodies match the notes, including both printf names at 104 bytes,
+`sscanf` 344, and `strcmp` 40. 472 function bodies, 388 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/items-player
+
+Merged. Original startup names `initChars__FiPPc`, `inventoryInitNet__Fv`,
+`levelName`, `picInit__4itemv`, and `shopInitNet__Fv` are defined. Each plan
+unit has a host test. Item, named-item, and proxy-mesh rows assert a 32-bit
+layout, so those three host programs do not run on this 64-bit machine; the
+EE compile includes the same assert and succeeded. No game binary or
+disassembly listing was committed. `memAlloc__FiPc` stays unresolved.
+
+| | |
+|---|---|
+| Before | 740 |
+| After | 692 |
+| Closed | 100 |
+| Opened | 52 |
+
+Closed: the names in `docs/agents/items-player.md` except `nmPlayers`, which
+is defined and was not a previous import. Opened: 52 vtable and message
+symbols from that notes list. `cdLoad__FPcPvii`, `exit`, `launchSRS`, `main`,
+`memAlloc__FiPc`, `netNetworkMode`, `strcmp`, and `_fbss` were already
+unresolved or already defined. 477 function bodies, 421 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/save-net-anim
+
+Merged. Three view units are on the branch and were not selected, because
+those symbols are already in the link. The selected units have host tests
+under `host-tests/save-net-anim/`; 48 host tests passed. No game binary or
+disassembly listing was committed. `norrath_archive_sound_free_ram` stays
+unresolved.
+
+| | |
+|---|---|
+| Before | 692 |
+| After | 738 |
+| Closed | 44 |
+| Opened | 90 |
+
+Closed: the 44 names that left the unresolved list, including
+`norrath_archive_map_animation_sounds`, `sceMcInit`, and the startup names
+`commInitNet__Fv` through `textInitNet__Fv`. Opened: 90 names, including the
+memory-card helpers, network words, and `sprintf` / `strcpy`. Not selected:
+`norrath_archive_animation_extension_view` (cd-archive already defines the
+larger extension table), `norrath_mc_pre_start_key_bytes`, and
+`norrath_mc_start_key_bytes` (script-amx already defines both keys). 489
+function bodies, 464 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+## agents/engine-init
+
+Merged ahead of the remaining packages. This is the first missing link after
+`main`. Both functions have host contracts that returned failure when the
+order or the GS and DMA values were wrong. Both contracts passed. No game
+binary or disassembly listing was committed. The compiled `engineInit__Ff`
+body is 2080 bytes; the notes say that is not an original-byte match of the
+1944-byte image. The stack check body is 144 bytes.
+
+| | |
+|---|---|
+| Before | 738 |
+| After | 789 |
+| Closed | 2 |
+| Opened | 53 |
+
+Closed: `engineInit__Ff`, `_engineCheckStack__FPCci`. Opened: 53 names,
+including `floorInit__Fv`, `vblankHandler__Fi`, `memInit__FPvi`, the GS and
+DMA calls, and `vblankCount`, `vblankField`, `vblankSemaphore`, and
+`vblankSemaphore2`. The cd-archive package already defines separate
+`norrath_archive_vblank_*` views and does not alias these original names.
+491 function bodies, 466 authored inputs, zero COMMON. 214 tool tests passed.
+No EE startup stage ran.
+
+## agents/world-state
+
+All 38 units have a host contract that returns non-zero when the initial
+bytes or the route allocation and reclaim path are wrong. All 38 passed.
+No game binary or disassembly listing was committed. The route body compiles
+to 1048 bytes; the notes say the original body is 572 bytes, so this is not
+an original-byte match. Notes that mark an ELF size of zero as inferred stay
+labeled that way.
+
+| | |
+|---|---|
+| Before | 789 |
+| After | 756 |
+| Closed | 34 |
+| Opened | 1 |
+
+The notes list 38 defined names. All 38 are defined. Four were not previous
+imports, so they do not change the count: `norrath_route_nodes_bytes`,
+`norrath_route_cache_bytes`, `norrath_route_node_used_bytes`, and
+`norrath_route_free_root_bytes`. Opened: `norrath_route_unroll_vnode`.
+`norrath_world_find_height` was already defined. 492 function bodies, 504
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/render-lights
+
+24 units were selected. Each host contract failed when the reviewed EE
+object did not carry the expected symbol, bytes, or behavior. All 24 passed.
+No game binary or disassembly listing was committed. The line body is 172
+bytes; the notes say the original is 164. The screen-color, cache, and logo
+bodies are not original-byte matches.
+
+The two border units were not selected. cd-archive already defines
+`norrath_archive_engine_pop_border` and
+`norrath_archive_engine_push_border`. Selecting them again would multiply
+those symbols.
+
+| | |
+|---|---|
+| Before | 756 |
+| After | 750 |
+| Closed | 24 |
+| Opened | 18 |
+
+Closed: the 24 selected names that were already imports, including
+`norrath_game_line_add`, `engineSetScreenColor__Fiiii`, both texture-cache
+functions, both logo functions, the four vtables, the font and halo pointers,
+and the clear-color and tag objects. Also defined, and not previous imports:
+`compositeR`, `compositeG`, `compositeB`, `uncompCache`, `uncompCacheAlloc`,
+`uncompCacheBuffer`, `norrath_game_line_count`, and `norrath_game_lines`.
+Opened: 18 names, including `norrath_construct_Line`, `frameNm`,
+`textureDrawColor__FP8_textureiiiUi`, and the light and cosmetic vtable
+slots. 498 function bodies, 528 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/data-views
+
+63 of 98 view objects were selected. Each selected host check returns non-zero
+when the initial scalar, string, or virtual-slot function disagrees. All 63
+passed. No game binary or disassembly listing was committed. These units add
+data, not function bodies.
+
+35 player-view units were not selected. items-player already defines those
+names, including `norrath_player_view_484ca8`. Selecting them again would
+multiply the symbols. The files stay in the source snapshot.
+
+| | |
+|---|---|
+| Before | 750 |
+| After | 782 |
+| Closed | 63 |
+| Opened | 95 |
+
+Closed: `norrath_actor_view_42b118`, `norrath_actor_view_42b768`, `norrath_actor_view_42baa8`, `norrath_actor_view_42c130`, `norrath_actor_view_42c710`, `norrath_actor_view_42d0c0`, `norrath_actor_view_4488f0`, `norrath_actor_view_44b170`, `norrath_actor_view_44b540`, `norrath_actor_view_44c170`, `norrath_actor_view_44e1c0`, `norrath_actor_view_44e6a0`, `norrath_actor_view_44f4c8`, `norrath_actor_view_460710`, `norrath_actor_view_460720`, `norrath_actor_view_460730`, `norrath_actor_view_460740`, `norrath_actor_view_47fb54`, `norrath_actor_view_480eec`, `norrath_actor_view_480ef0`, `norrath_actor_view_48113c`, `norrath_actor_view_481140`, `norrath_actor_view_4813a4`, `norrath_actor_view_4813a8`, `norrath_actor_view_4813ac`, `norrath_actor_view_4816d8`, `norrath_actor_view_481a08`, `norrath_actor_view_481a0c`, `norrath_actor_view_481a10`, `norrath_actor_view_4837a8`, `norrath_actor_view_4837b0`, `norrath_actor_view_4837b8`, `norrath_actor_view_4837c0`, `norrath_actor_view_4837c8`, `norrath_actor_view_4837d0`, `norrath_actor_view_4837d8`, `norrath_actor_view_483ad0`, `norrath_actor_view_484318`, `norrath_actor_view_4844a4`, `norrath_actor_view_484f98`, `norrath_actor_view_485150`, `norrath_actor_view_485410`, `norrath_actor_view_485418`, `norrath_creature_view_47fb58`, `norrath_creature_view_47fb5c`, `norrath_creature_view_47fb60`, `norrath_creature_view_47fb64`, `norrath_creature_view_47fb68`, `norrath_creature_view_4837e0`, `norrath_creature_view_483829`, `norrath_creature_view_483e58`, `norrath_creature_view_484538`, `norrath_creature_view_484cac`, `norrath_creature_view_484cd8`, `norrath_creature_view_48690c`, `norrath_creature_view_486910`, `norrath_next_view_42c650`, `norrath_next_view_4490d0`, `norrath_next_view_449160`, `norrath_next_view_4491f0`, `norrath_next_view_449280`, `norrath_next_view_44c958`, `norrath_next_view_44e820`. The 35 player views were already defined, so they were not imports. Opened: `_$_11SmallSpider`, `_$_13PokeReflector`, `_$_13TriggerParams`, `_$_14GnomeNavigator`, `_$_3Cat`, `_$_4Trap`, `_$_5Lever`, `_$_5Timer`, `_$_7Counter`, `_$_7Mermaid`, `_$_7Natasla`, `_$_8Creature`, `_$_9CdEyeball`, `__tf11SmallSpider`, `__tf13PokeReflector`, `__tf13TriggerParams`, `__tf14GnomeNavigator`, `__tf3Cat`, `__tf4Trap`, `__tf5Lever`, `__tf5Timer`, `__tf7Counter`, `__tf7Mermaid`, `__tf7Natasla`, `__tf8Creature`, `__tf9CdEyeball`, `clone__10GameObject`, `clone__11SmallSpider`, `clone__13PokeReflector`, `clone__13TriggerParams`, `clone__3Cat`, `clone__5Lever`, `clone__5Timer`, `clone__7Counter`, `clone__8Creature`, `clone__9CdEyeball`, `confuse__8Creaturei`, `death__8Creature`, `getMinibossName__8Creature`, `getModel__8Creature`, `getSkillRank__8Creaturei`, `initMiniboss__8Creature`, `isEnemy__8CreatureP10GameObject`, `msg_alert__8CreatureifG6Point3P10GameObject`, `msg_collisionWorld__8CreatureG6Point3`, `msg_collision__11SmallSpiderP10GameObject`, `msg_collision__3CatP10GameObject`, `msg_collision__8CreatureP10GameObject`, `msg_draw__11SmallSpider`, `msg_draw__14GnomeNavigator`, `msg_draw__3Cat`, `msg_draw__4Trap`, `msg_draw__5Lever`, `msg_draw__7Mermaid`, `msg_draw__7Natasla`, `msg_draw__9CdEyeball`, `msg_getPokeName__13PokeReflectorPUsi`, `msg_getPokeName__5LeverPUsi`, `msg_getPokeName__8CreaturePUsi`, `msg_hurt__8CreaturefP10GameObjecti`, `msg_load__5LeverPc`, `msg_load__7CounterPc`, `msg_load__8CreaturePc`, `msg_moveCollision__8CreaturePP10GameObject`, `msg_poke__13PokeReflectori`, `msg_poke__5Leveri`, `msg_poke__8Creaturei`, `msg_route__8Creaturei`, `msg_run__11SmallSpider`, `msg_run__14GnomeNavigator`, `msg_run__3Cat`, `msg_run__4Trap`, `msg_run__5Lever`, `msg_run__5Timer`, `msg_run__7Mermaid`, `msg_run__7Natasla`, `msg_run__9CdEyeball`, `msg_save__5LeverPc`, `msg_save__7CounterPc`, `msg_save__8CreaturePc`, `msg_trigger__13TriggerParamsi`, `msg_trigger__5Timeri`, `msg_trigger__7Counteri`, `msg_trigger__8Creaturei`, `runSpells__8CreatureG6Point3`, `setActiveChunks__8Creature`, `setState__11SmallSpideri`, `setState__14GnomeNavigatori`, `setState__3Cati`, `setState__7Mermaidi`, `setState__7Nataslai`, `setState__8Creaturei`, `stun__8Creaturei`, `turnToFace__8CreatureiG6Point3`, `updateEnemy__8Creature`. Notes that list a larger slot set include names that were already unresolved or already defined. 498 function
+bodies, 591 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/actors-b
+
+All 13 constructors were selected. Each host contract returns non-zero when
+the call order, stored vtable, or forwarded result is wrong. All 13 passed.
+The host compile defines `NORRATH_ACTORS_B_HOST`, which the shared header
+requires where pointers are wider than 32 bits. No game binary or disassembly
+listing was committed. The compiled bodies are larger than the image extents
+in the notes. GothTrap is 188 bytes here and 116 bytes in the notes.
+
+| | |
+|---|---|
+| Before | 782 |
+| After | 796 |
+| Closed | 13 |
+| Opened | 27 |
+
+Closed: the 13 `norrath_construct_*` names. Opened: `norrath_construct_Vehicle`,
+`norrath_vehicle_reset`, `norrath_goth_trap_set_passable_state`,
+`norrath_hate_bridge_set_passable_state`, `norrath_actor_add_medium_run_list`,
+`norrath_world_get_door_height`, `norrath_world_check_for_water`, and the 20
+`norrath_actors_b_view_*` addresses. `sscanf` is already defined, so it did
+not open. 511 function bodies, 604 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+## agents/gameobject-base
+
+All 18 units were selected. Each host check returns non-zero when the copy,
+destructor order, clone bytes, or leaf behavior is wrong. All 18 passed.
+The destructor host compile defines `NORRATH_GAMEOBJECT_HOST_CHECK`. The
+memcpy host check calls the same body under `norrath_memcpy_under_test` so
+it does not replace the host library. No game binary or disassembly listing
+was committed. `memcpy` compiles to 540 bytes; the notes say the image is
+176. The destructor is 736 against 680, type info 72 against 60, and clone
+512 against 244. The empty leaves compile to 8 bytes, matching the notes.
+
+The notes' private total of 632 unresolved imports does not reproduce on
+this tip.
+
+| | |
+|---|---|
+| Before | 796 |
+| After | 781 |
+| Closed | 18 |
+| Opened | 3 |
+
+Closed: `memcpy` and the 17 `norrath_vt_*_10GameObject` names. Also defined,
+and not a previous import: `norrath_ti_10GameObject`. Opened:
+`norrath_object_remove_string`, `norrath_list_head_copy_construct`, and
+`norrath_rtti_user`. 529 function bodies, 622 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
+## agents/libc-format second pass
+
+The branch gained `strtod` and an `sprintf` alias on the existing format
+string. Both host checks passed. `sprintf` is an alias of
+`norrath_format_string` on the EE object; each symbol is 172 bytes.
+`strtod` is 32 bytes and forwards to the already defined
+`norrath_player_strtod_reentrant`. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 781 |
+| After | 779 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `sprintf`, `strtod`. 531 function bodies, 623 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/scheduler
+
+All nine units were selected. Host checks passed. Body sizes match the notes:
+`engineAddTask__FPFv_viPci` 1140, `engineRemoveTask__FPFv_v` 1088,
+`engineRunTasks__Fii` 512, `engineTaskActive__FPc` 360,
+`enginePrintTasks__Fv` 120. The four word objects have empty function lists.
+No game binary was committed. `strcmp` was already defined, so it did not
+open. `currentTask` and `nmTasks` are defined and were not previous imports.
+
+| | |
+|---|---|
+| Before | 779 |
+| After | 775 |
+| Closed | 5 |
+| Opened | 1 |
+
+Closed: `engineAddTask__FPFv_viPci`, `enginePrintTasks__Fv`,
+`norrath_game_bail_from_loop_view`, `norrath_game_frame_number_word_view`,
+`norrath_game_pause_word_view`. Opened: `taskList`. 536 function bodies, 632
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/game-boot
+
+All five units were selected. Host checks include the implementation and passed
+when compiled alone. Body sizes match the notes: `DLG_Init__Fv` 112,
+`gameBoot__Fv` 136, `gameInit__Fv` 888, `debugCheckForPauseMenuStart__Fv` 1184,
+`simpleDrawLoop__FPFv_i` 464. `gameBoot__Fv` also defines `_$tmp_0.1090`,
+which was not a previous import. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 775 |
+| After | 870 |
+| Closed | 5 |
+| Opened | 100 |
+
+Closed: `DLG_Init__Fv`, `gameBoot__Fv`, `gameInit__Fv`,
+`debugCheckForPauseMenuStart__Fv`, `simpleDrawLoop__FPFv_i`. The notes listed
+105 new imports. Five of those were already present or already defined:
+`MC_Debug`, `frameNm`, and `gameCam` were already unresolved; `nmPlayers` and
+`engineRemoveTask__FPFv_v` are already defined. 541 function bodies, 637
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/subsystem-inits
+
+All ten units were selected. Host checks passed. `engineCurrentLevelName` is
+80 zero bytes and `eRandState` is a data object. No game binary was committed.
+`memset` and `engineAddTask__FPFv_viPci` were already defined. `pad` was
+already unresolved.
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 907 |
+| Closed | 10 |
+| Opened | 47 |
+
+Closed: `padInit__Fv`, `emathInit__Fv`, `listInit__Fv`, `animInit__Fv`,
+`objectInit__Fv`, `worldInit__Fv`, `P_Init__Fv`, `lightInit__Fv`,
+`eRandState`, `engineCurrentLevelName`. The notes listed 50 new imports.
+`memset` and `engineAddTask__FPFv_viPci` are already defined, and `pad` was
+already unresolved, so 47 names opened. 549 function bodies, 647 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/gs-dma-kernel
+
+All 25 units were selected. Nine assembled bodies matched the private image
+byte for byte, including `sceGsResetPath` at 104 bytes. The other functions
+passed their host contracts. `vblank_state` defines `vblankCount`,
+`vblankField`, `vblankHID`, `vblankSemaphore`, and `vblankSemaphore2` and does
+not define the cd-archive view names. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 907 |
+| After | 893 |
+| Closed | 19 |
+| Opened | 5 |
+
+Closed 19 names that were already unresolved, including `vblankHandler__Fi`
+and the five vblank words. Also defined, and not previous imports:
+`iSignalSema`, `RemoveIntcHandler`, `SetGsCrt`, `GsPutIMR`,
+`_GetGsDxDyOffset`, `DisableIntc`, `sceGsGetGParam`, `CheckAddress`,
+`memclr`, `WaitDma`, plus the vblank data that was already counted above.
+Opened: `checkModelVersion`, `draw`, `sceDmaPause`, `sceDmaPutEnv`,
+`specialMpegMode`. 574 function bodies, 672 authored inputs, zero COMMON.
+214 tool tests passed. The byte comparisons are host checks. They are not an
+exact-match ledger admission. No EE or game execution.
+
+## agents/draw-texture-init
+
+All 18 units were selected. Host checks passed. `initVIF__Fv` and
+`drawInit__Fv` compile their MMIO stores as real stores on the EE and as
+host callbacks under `NORRATH_HOST_CONTRACT`. Compiled bodies:
+`initSupersample__Fv` 1284, `textureInitTexture__FP8_texture` 616,
+`drawInit__Fv` 496, `initVIF__Fv` 216, `textureInit__Fii` 108. No game
+binary was committed.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 884 |
+| Closed | 17 |
+| Opened | 8 |
+
+Closed the 17 names above that were already unresolved, including `dmaGif`,
+`dmaVif0`, `dmaVif1`, and `textureBufferStartAddress`. Also defined, and not
+previous imports: `textureBufferSize`, `textureMaxBlockSize`, `drawRecords`,
+`drawHead`, `endTagVU1`, `writeBuffer`, `nmDrawUsed`, `endDrawSemaphore`,
+`vif0HID`, `vif1HID`, `gifHID`, `fullFrameMode`, `packetBuffer`,
+`zwritesOn`, `zwritesOff`. Opened: `AddDmacHandler`, `EnableDmac`,
+`gsIntHandler__Fi`, `makeSamplePacket__Fb`, `reloadDMA__Fi`, `sceDmaSend`,
+`sceGsSyncV`, `textureInternalInit__Fv`. 579 function bodies, 690 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/frame-loop
+
+All nine units were selected. Host checks passed.
+`engineBrightnessCorrection` is the initial word `0x3f000000`. Compiled
+bodies: `engineFrameEnd__Fb` 1020, `engineFrameStart__FUib` 312,
+`engineSetDisplayDisable__Fi` 12. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 884 |
+| After | 888 |
+| Closed | 9 |
+| Opened | 13 |
+
+Closed: `engineFrameEnd__Fb`, `engineFrameStart__FUib`,
+`engineSetDisplayDisable__Fi`, `engineBrightnessCorrection`, `frameNm`,
+`glistp`, `gstart`, `GLISTSIZE`, `coreClearColor`. Opened:
+`coreLoadingScreenRunning`, `doSuperSample__Fiib`, `drawFrameNm`,
+`drawStart__Fv`, `drawWaitFinished__Fv`, `engineSetVideoMode__Fb`,
+`frameStartPacket__FUibi`, `lastFrameVBlankCount`,
+`lightVU0StoppedProcessing__Fv`, `powerOffMode`, `switchTo30Counter.798`,
+`switchToHalfCounter.797`, `texturePackDown__Fv`. 582 function bodies, 699
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/dialog-hud-controls
+
+All 17 units were selected. Host checks passed. The notes heading is
+"Imports you opened"; the five summary sections are present. No game binary
+was committed. `nmPlayers` and `player` stay unresolved. `engineAddTask__FPFv_viPci`,
+`netNetworkMode`, and `scePrintf` were already defined.
+
+| | |
+|---|---|
+| Before | 888 |
+| After | 836 |
+| Closed | 59 |
+| Opened | 7 |
+
+Closed 59 names, including `DLG_Active__Fv`, `helpMessageInit__Fv`,
+`menuSetPos__FP4Menui`, `msgHudSetPlayerBusy__Fcc`, `netGetLocalPlayerNm__Fi`,
+`netPlayerIsLocal__Fi`, `soundFadeStream__Fi`, `soundUpdateMusicVolume__Fv`,
+`specialSoundHandler__FiG6Point3`, `worldSetLightHaloTexture__FP8_texture`,
+and the button, dialog, menu, and volume words those units define. Opened:
+`gameFootstepSound__FG6Point3iii`, `helpMessageFrame__Fv`, `lightHaloTexture`,
+`musicDuckAmount`, `netSendMessage__FiPUci`, `soundSetStreamVolume__Fif`,
+`stream`. 592 function bodies, 716 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+## agents/natives-a
+
+All 40 units were selected. Host contracts passed. Body sizes match the
+notes. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 836 |
+| After | 829 |
+| Closed | 40 |
+| Opened | 33 |
+
+Closed the 40 `amx*` natives this package defines. Opened:
+`DLG_FireUpShopOnExit`, `DLG_ForceMutexRelease__Fv`, `DLG_SwoopMode`,
+`MC_SaveConfigSilent__Fii`, `P_AddParticle__FP11ParticleDefP6Point3T1f`,
+`__eq__C9type_infoRC9type_info`, `__tf8AutoProp`, `activePlayer`,
+`addQuestToLog__FPcT0`, `amx_GetAddr`, `amx_GetString`, `charm__8Creaturei`,
+`checkForMonsters__FP10GameObject`, `cutStartScene__FP9_cutscenePc`,
+`floorAdd__FG6Point3sfii`, `gameCheckPlayerAlive__Fv`,
+`gamePlayerLightAttenuate`, `hudAddHelpMessage__FiPUsT1`, `nmPlayersAlive`,
+`noMonsters`, `objectFindObject__FPc`, `objectFindObject__FPcPP10GameObjecti`,
+`objectIterateGrid__FPFP10GameObject_v`, `objectUpdateInGrid__FP10GameObject`,
+`playersAlive`, `queryInventoryItem__FPci`, `scriptAddDeferedCall__FPc`,
+`scriptGetGameState__FPc`, `scriptParticles`, `scriptSetGameState__FPci`,
+`scriptStart__FPc`, `shopStart__Fiii`, `syncRandState`. 632 function bodies,
+756 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/natives-c
+
+All 47 units were selected. Host checks passed. `gameCam` and `levelFlags`
+are data. Two units also emit file-local helpers. No game binary was
+committed.
+
+| | |
+|---|---|
+| Before | 829 |
+| After | 826 |
+| Closed | 47 |
+| Opened | 44 |
+
+Closed the 45 functions this package defines, plus `gameCam` and
+`levelFlags`. Opened: `DLG_StartDialog__FPcP9DlgPacketii`,
+`DLG_StartWithSwoopDone`, `MC_GetAsyncMode__Fv`, `MC_SaveCheckPoint__Fiii`,
+`MC_SaveConfig__Fv`, `MC_SaveGameBrowser__Fi`,
+`P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `__tfP4Prop`,
+`__tfP6PhProp`, `__tfP8ItemProp`,
+`animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi`,
+`animAdd__FP14AnimationStateP15AnimationHeaderi`,
+`animInitState__FP14AnimationState`, `animResetFramestates__FP14AnimationState`,
+`animSetToEnd__FP14AnimationState`, `findTagString__10GameObjectPci`,
+`floorDrawEnable`, `fxDust`, `gameNetKick__Fi`, `gameNoDraw`, `gameOver`,
+`gameRecallInhibit`, `gameSetCameraShake__Ffb`, `hudSetInfoMessage__FPUsiic`,
+`hudShowBust__FPcPUsii`, `hudShowCompass__FG6Point3PUs`,
+`inventoryGetItemIndex__FiPcPiT2`, `lumpFind__FPvPc`, `objectDrawEnable`,
+`objectFindInBox__FG6Point3T0PP10GameObjecti`, `playerSelectionSetup__Fv`,
+`playerSelectionStart__Fv`, `removeItemFromInventory__Fiiii`,
+`removeQuestFromLog__FPc`, `scriptInPostAction`, `scriptSetPostAction__FPc`,
+`shopRunning`, `soundMakeSequenceUnpausable__Fi`,
+`soundPlaySequence__FP15AnimationHeaderP10GameObjectf`,
+`soundPlaySound__FP10_vagHeaderP6Point3fff`, `soundStartDialogStream__FiPci`,
+`soundStartMusic__FPci`, `startEntranceName`, `worldSetFarClip__Ff`.
+679 function bodies, 803 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/floor
+
+All three units were selected. Host checks passed. `floorDraw__Fv` is 6400
+bytes and a file-local helper is 1396. `floorInit__Fv` is 52. No game
+binary was committed. `glistp`, `zwritesOn`, and `zwritesOff` were already
+defined, so they did not open.
+
+| | |
+|---|---|
+| Before | 826 |
+| After | 819 |
+| Closed | 12 |
+| Opened | 5 |
+
+Closed: `floorInit__Fv`, `floorDrawEnable`, and the ten
+`norrath_floor_*` views this package defines. `floorDraw__Fv` is defined
+and was not a previous import. Opened: `__11ResourceMapPcT1`,
+`drawAddToList__FPviP8_textureP11_drawRecordi`, `worldCameraPos`,
+`worldClipCubeToFrustum__FPA1_fi`, `worldWorldViewMatrix`. 682 function
+bodies, 806 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/engine-restore
+
+All seven units were selected. The pad host contract also checks
+`engineDisplayDisable` (value 3) and `skipIntro` (value 0). Compiled bodies:
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i` 1200, `frontEndInit__Fi` 540,
+`engineRestore__Fv` 192, `engineClear__Fv` 44. No game binary was committed.
+The worker's private count of 710 does not reproduce.
+
+| | |
+|---|---|
+| Before | 819 |
+| After | 856 |
+| Closed | 7 |
+| Opened | 44 |
+
+Closed: `engineClear__Fv`, `engineDisplayDisable`, `engineRestore__Fv`,
+`frontEndInit__Fi`, `pad`, `skipIntro`,
+`srs_main__FPCcPiT1PPcT1T1T3T1bT0T0i`. Opened:
+`CheckNetwork__15VINetworkStatus`, `ClearVRAM__FUcUcUcUc`, `Close__7VITimer`,
+`Free__10VILauncher`, `GetDefault__10VILanguage`, `Init__10VILauncherb`,
+`Init__7VITimer`, `Initialize__15VINetworkStatus`, `LoadExecPS2`,
+`MC_GetReadyForMainMenu__Fv`, `MC_LoadGameBrowser__Fii`,
+`SetDefault__10VILanguage12VILanguageID`, `Setup__10VILauncher`,
+`Station__10VILauncheriPCcN22i`, `VIDisplayLoadingScreen__Fb`,
+`VIMemCardSetProductId__FPCc`, `VIMemCardSetProductTitle__FPCc`,
+`_$_10VILauncher`, `_$_15VINetworkStatus`, `__10VILauncher`,
+`__15VINetworkStatus`, `attemptLoadGame`, `autodemoTimer`, `creditMenu`,
+`creditsPosY`, `drawRemoveInterrupts__Fv`, `drawRestoreInterrupts__Fv`,
+`emergencyMusicWaitAbort`, `engineHoldMpeg`, `exitEzNetCnf`, `exitEzNetCtl`,
+`expWarnAlpha`, `ezNetCtlDownInterface`, `frontEndRunning`,
+`frontEndStartInCredits`, `frontEndSuspend`, `frontMenu`,
+`frontendControllerConfigRunning`, `hudNoDraw`, `lineShift`, `musicPlaying`,
+`printf`, `runFrontEnd__Fv`, `sceSifInitIopHeap`. 686 function bodies, 813
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/sif-keyboard
+
+All four units were selected. Host contracts passed. `initSif__Fv` is 480
+bytes. The query pair is 120 bytes each. No game binary was committed.
+`_bind` is defined and was not a previous import.
+
+| | |
+|---|---|
+| Before | 856 |
+| After | 865 |
+| Closed | 8 |
+| Opened | 17 |
+
+Closed: `initSif__Fv`, `keyboardFree__Fv`, `keyboardRestart__Fv`,
+`sceSifQueryMaxFreeMemSize`, `sceSifQueryTotalFreeMemSize`,
+`sceSifSearchModuleByName`, `sceSifStopModule`, `sceSifUnloadModule`.
+Opened: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
+`_ctype_`, `_lf_bind`, `_lf_version`, `commSystemInit__Fv`, `sceCdInit`,
+`sceCdMmode`, `sceFsReset`, `sceSifLoadFileReset`, `sceSifLoadModule`,
+`sceSifRebootIop`, `sceSifSyncIop`, `strlen`, `strncpy`, `textSystemInit__Fv`.
+694 function bodies, 817 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/actors-a
+
+All 11 constructors were selected. `docs/agents/actors-a-compare.py` ran each
+one against the private image and matched. That comparison is a host check,
+not an exact-match ledger admission. The snapshot checker now accepts a
+`docs/agents/*.py` host file. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 865 |
+| After | 882 |
+| Closed | 11 |
+| Opened | 28 |
+
+Closed the 11 `norrath_construct_*` names this package defines. Opened 24
+`norrath_actors_a_view_*` words plus `norrath_light_add`,
+`norrath_object_add_to_delete_list`, `norrath_object_add_to_medium_run_list`,
+`norrath_world_find_closest_door`, and `norrath_world_set_door_collision`.
+705 function bodies, 828 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/cd-archive second pass
+
+Seven new units were selected and four existing units were updated in place.
+`cdLoad__FPcPvii` is 400 bytes and `cdInit__Fv` is 204. The border and vblank
+functions and seven view names are GAS aliases of the existing
+`norrath_archive_*` symbols. The plan `symbol_aliases` list stays empty.
+Host checks passed. No game binary was committed.
+
+| | |
+|---|---|
+| Before | 882 |
+| After | 886 |
+| Closed | 6 |
+| Opened | 10 |
+
+Closed: `cdInit__Fv`, `cdLoad__FPcPvii`, `lumpClear__Fi`,
+`lumpFindResource__FPcT0`, `lumpLoad__FPc`, `lumpLock__Fi`. Opened:
+`cdWait__Fv`, `issueCommand__Fv`, `loadDirectory__FP9directoryii`,
+`lumpUnload__FPv`, `sceCdReadDvdDualInfo`, `sceCdSearchFile`, `sceCdStInit`,
+`sceSifAllocIopHeap`, `soundClear__Fi`, `soundLock__Fi`. 715 function
+bodies, 835 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/memory second pass
+
+Nine new units were selected. `enableMallocWrapper` is now a second name on
+the already selected `norrath_enable_malloc_wrapper_byte_view`. The
+same-extent check passed on that object, and the existing byte host check
+passed. The plan `symbol_aliases` list stays empty.
+
+`memAlloc__FiPc`, `memFree__FPv`, and `blockAllocInit__Fv` were authored as
+aliases on three sources inside the frozen 264-input prefix. Those input
+records stay the V43 receipt, so the alias lines were not kept and those
+three names stay unresolved. `memory-realloc`, `memory-malloc-state`,
+`memory-heap-state`, and `memory-block-storage` were already selected and
+were not appended again.
+
+| | |
+|---|---|
+| Before | 886 |
+| After | 879 |
+| Closed | 10 |
+| Opened | 3 |
+
+Closed: `__wrap_malloc`, `enableMallocWrapper`, `mallinfo`, `memAllocPtr`,
+`memAllocSize`, `memClearMark__Fi`, `memDeleteMarked__Fi`, `memInit__FPvi`,
+`memScrambleFree__Fv`, `memSetMark__Fi`. Opened: `_impure_ptr`,
+`_mallinfo_r`, `malloc`. The notes also listed the first-pass view names and
+the three prefix aliases as closed. Those views were already defined, and
+the three aliases were not published. 722 function bodies, 844 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/audio second pass
+
+`soundSleep__Fv` was selected. It is 260 bytes. The host contract passed.
+`soundInit__Ff` and `soundRestore__Fb` were authored as aliases on two
+sources inside the frozen 264-input prefix. Those input records stay the
+V43 receipt, so the alias lines were not kept and those two names stay
+unresolved. The fifteen earlier audio sources were already selected.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `soundSleep__Fv`. Opened: `sceSifFreeIopHeap`. The notes also listed
+`soundInit__Ff`, `soundRestore__Fb`, and the first-pass audio names as
+closed. Those names were already defined or were not published. 723 function
+bodies, 845 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/script-amx second pass
+
+`scriptInit__Fv` was selected. It is 72 bytes. The host check passed. The
+held AMX draft was not selected. `engineAddTask__FPFv_viPci` was already
+defined, so it did not open.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `scriptInit__Fv`. Opened: `scriptTask__Fv`. The notes also listed the
+first-pass script names as closed. Those were already defined. 724 function
+bodies, 846 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/vslots-b
+
+All 19 units were selected. Host checks passed. The notes' plan list named
+four Creature methods. The tree also contained fifteen actor methods, and
+those host checks passed, so they were selected too. `setState__8Creaturei`
+is a normal global. The notes say the original binding was weak.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 871 |
+| Closed | 19 |
+| Opened | 11 |
+
+Closed: `msg_draw__11SmallSpider`, `msg_draw__3Cat`, `msg_draw__4Trap`,
+`msg_draw__7Mermaid`, `msg_hurt__8CreaturefP10GameObjecti`,
+`msg_load__7CounterPc`, `msg_moveCollision__8CreaturePP10GameObject`,
+`msg_route__8Creaturei`, `msg_run__5Timer`, `msg_run__7Natasla`,
+`msg_save__5LeverPc`, `msg_save__7CounterPc`, `msg_trigger__13TriggerParamsi`,
+`msg_trigger__5Timeri`, `msg_trigger__8Creaturei`,
+`runSpells__8CreatureG6Point3`, `setActiveChunks__8Creature`,
+`setState__8Creaturei`, `stun__8Creaturei`. Opened: `DLG_SetMutex__Fv`,
+`creatureAdvanceAnimation__8Creaturef`,
+`draw__8CreatureP12_modelHeaderP8_textureT1`,
+`everyFrame__8CreatureP12_modelHeader`, `iatan2__Fff`,
+`modelGetActiveChunks__FP12_modelHeaderi`, `modelResetOptionalParams__Fv`,
+`modelSetShadowBrightness__Ff`, `objectActivationCheck__8Creaturei`,
+`objectDoMyActions__FP10GameObjecti`, `objectRemoveFromRunList__FP10GameObject`.
+The notes predicted only `modelGetActiveChunks__FP12_modelHeaderi` and
+`iatan2__Fff`. 743 function bodies, 865 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+## agents/light-methods
+
+All 17 units were selected. Host checks passed. The four typeinfo units
+also define the 12-byte `norrath_ti_*` objects. Those were not previous
+imports, so they did not change the count.
+
+| | |
+|---|---|
+| Before | 871 |
+| After | 866 |
+| Closed | 17 |
+| Opened | 12 |
+
+Closed: `norrath_construct_Line`, the four `norrath_vt_clone_*` names, the
+four `norrath_vt_dtor_*` names, `norrath_vt_msg_draw_12CosmeticProp`,
+`norrath_vt_msg_load_12CosmeticProp`, `norrath_vt_msg_save_12CosmeticProp`,
+the four `norrath_vt_tf_*` names, and `textureDrawColor__FP8_textureiiiUi`.
+Opened: `_textureDrawColor__FP8_textureiiiUi`, `getMegatileCenter__FG6Point2`,
+`getMegatileOriginalCenter__FG6Point2`, `initializeMe__4Line`,
+`matIdent__FP8Matrix33`, `matMakeTransYaw__FP8Matrix34G6Point3s`,
+`matRot__FP8Matrix33is`, `matTransform__FP6Point3P8Matrix33T0`,
+`modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix34P14AnimationStateUlP11_drawRecordi`,
+`norrath_rtti_si`, `objectSaveAddToStringPool__FPCc`,
+`objectSaveGetFromStringPool__Fi`. `norrath_list_head_copy_construct`,
+`lumpFindResource__FPcT0`, and `memAlloc__FiPc` were already unresolved.
+760 function bodies, 882 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/vslots-b msg_poke
+
+`msg_poke__8Creaturei` was selected. It is 572 bytes. The host check passed.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 866 |
+| Closed | 1 |
+| Opened | 1 |
+
+Closed: `msg_poke__8Creaturei`. Opened: `gameSomeoneInShop__Fv`. 761 function
+bodies, 883 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+## agents/vehicle-actors
+
+Twenty-five units were selected. `norrath_construct_Vehicle` was not
+selected: its host check fails on the memset value. The 21 views are data.
+`norrath_vehicle_view_44ffd8` was defined and was not a previous import.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 950 |
+| Closed | 24 |
+| Opened | 108 |
+
+Closed: `norrath_actor_add_medium_run_list`,
+`norrath_goth_trap_set_passable_state`,
+`norrath_hate_bridge_set_passable_state`, `norrath_vehicle_reset`, and the
+twenty `norrath_actors_b_view_*` names from `448a70` through `4850f8`.
+Opened 108 names, mostly the virtual-table callees plus
+`worldSetDoorCollision__FP12_worldHeaderii`,
+`worldMoveDoor__FP12_worldHeaderiG6Point3s`,
+`worldSetDoorHeight__FP12_worldHeaderif`, `Reset__5Wheel`,
+`matToQuaternion__FP4QuatP8Matrix34`, `quatToMat__FP8Matrix33P4Quat`, and
+`refreshSettings__7Vehicle`. `modelGetActiveChunks__FP12_modelHeaderi` and
+`matMakeTransYaw__FP8Matrix34G6Point3s` were already unresolved.
+`norrath_construct_Vehicle` stays unresolved. 765 function bodies, 908
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/vslots-b lever, Natasla, and turn
+
+Three units were selected. Host checks passed. None of them opened a new
+import.
+
+| | |
+|---|---|
+| Before | 950 |
+| After | 947 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `msg_load__5LeverPc`, `setState__7Nataslai`,
+`turnToFace__8CreatureiG6Point3`. A later notes commit records those names
+and does not change the link. 768 function bodies, 911 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/particles
+
+All 45 units were selected. Host checks passed. Ten of them are functions.
+The other 35 are data. Eleven data names were not previous imports, so they
+did not change the count: `alwaysDrawList`, `bolt`, `descList`,
+`modelClippingOn`, `noiseTable`, `objectIgnoreFlags`, `PS`, `psSequenceNm`,
+`trail`, `trailSequenceNm`, and `worldCameraMatrix`.
+
+| | |
+|---|---|
+| Before | 947 |
+| After | 929 |
+| Closed | 34 |
+| Opened | 16 |
+
+Closed includes `objectGrid`, `ghostObjectGrid`, `stringHash`, `objectHash`,
+`offTheGrid`, `objectStrings`, `freeNodes`, `worldCameraPos`,
+`drawObjectsTask__Fv`, `drawParticlesTask__Fv`, `initNoiseTable__Fv`,
+`initParticleSystems__Fv`, `initTrails__Fv`, `lightResetOptionalParams__Fv`,
+`listDestroy__FP8ListHead`, and `allocDescriptor__FP11ParticleDef`. Opened:
+`P_DrawParticles__FP8Matrix34`, `_$_16ListSafeIterator`,
+`__16ListSafeIteratorP8ListHeadi`, `ambientOnly`, `charAmbient`,
+`charDirect`, `charDirect2`, `charDirectDir`, `charDirectDir2`,
+`charScaleB`, `charScaleG`, `charScaleR`, `disableVolumetricLighting`,
+`interfaceMode`, `next__16ListSafeIterator`, and
+`worldClipCubeToClipFrustum__FPA1_fi`. 778 function bodies, 956 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/vslots-a
+
+All 48 units were selected. Host checks passed. They are the typeinfo,
+destructor, clone, and creature slot bodies in this package.
+
+| | |
+|---|---|
+| Before | 929 |
+| After | 889 |
+| Closed | 48 |
+| Opened | 8 |
+
+Closed: the twelve `_$_*` destructors, the thirteen `__tf*` typeinfo
+functions, the ten `clone__*` functions, and
+`confuse__8Creaturei`, `death__8Creature`, `getMinibossName__8Creature`,
+`getModel__8Creature`, `getSkillRank__8Creaturei`, `initMiniboss__8Creature`,
+`isEnemy__8CreatureP10GameObject`,
+`msg_alert__8CreatureifG6Point3P10GameObject`,
+`msg_collisionWorld__8CreatureG6Point3`,
+`msg_collision__11SmallSpiderP10GameObject`,
+`msg_collision__3CatP10GameObject`, `msg_collision__8CreatureP10GameObject`.
+Opened: `_$_14AnimationState`, `_$_15FxCreatureState`,
+`__15AnimationState8RC15AnimationState8`, `__rtti_si`,
+`dropItem__4itemG6Point3Pc`, `objectAddToDeleteList__FP10GameObject`,
+`readyToSwitch__3Cat`, `switchToRun__3Cat`. 826 function bodies, 1004
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/link-image-bounds
+
+`__register_frame_info` was selected. It is 92 bytes. The host check
+passed. The unit also defines `objects`, which was not a previous import.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 888 |
+| Closed | 1 |
+| Opened | 0 |
+
+Closed: `__register_frame_info`. `SignalSema` and `__sce_eh_sema_id` were
+already unresolved. `WaitSema` was already defined. 827 function bodies,
+1005 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/ctors-ant-lantern
+
+`norrath_construct_AutoChestLP` was selected. It is 260 bytes. The EE
+compile passed the 32-bit pointer assert. The host contract does not compile
+on this arm64 machine because that header requires `sizeof(void*) == 4`, so
+the behavioral checks did not run here.
+
+| | |
+|---|---|
+| Before | 888 |
+| After | 889 |
+| Closed | 1 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoChestLP`. Opened:
+`__11AddParticleG6Point3PPc` and `norrath_ctors_ant_lantern_view_44ea78`.
+828 function bodies, 1006 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/sound-rpc-views
+
+All 31 units were selected. They are data objects only; no function was
+added. The notes tie each view to a pinned symbol address and size and
+separate the caller-proven prefix from the unnamed tail bytes. Each unit has
+a host check that returns failure on a wrong size or nonzero byte. All 31
+host checks passed on this machine. The previous integrator merged the
+branch and left the plan and snapshot edits uncommitted; this link is the
+first complete one for that selection.
+
+| | |
+|---|---|
+| Before | 889 |
+| After | 858 |
+| Closed | 31 |
+| Opened | 0 |
+
+Closed: the 31 `norrath_sound_*_view` names listed in the package notes.
+Opened: none. 828 function bodies, 1037 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+## agents/game-state
+
+The previous integrator merged the branch and was cut off before the plan
+and snapshot edits. The merge commit is kept; this selection appends its 22
+units with fresh `input_order` values 1039 through 1060. All 22 sources
+compile under the reviewed `authored_cpp` flags with the function names and
+body bytes the notes claim, including `gameMaybeSaveConfig__Fii` at 2216
+bytes and `gameSetDefaultGameConfig__Fi` at 1332. All 22 host contracts
+passed on this machine. No game binary or disassembly listing was committed.
+The notes separate observed addresses from inferred names; the
+`0x00484eb8` byte is published as `norrath_game_state_byte_00484eb8` inside
+the reset unit and is not an ELF name. `gameLoop__Fv` stays unauthored.
+`gameCam` stays the natives-c definition.
+
+| | |
+|---|---|
+| Before | 858 |
+| After | 893 |
+| Closed | 22 |
+| Opened | 57 |
+
+Closed: `__6Camera`, `coreInterfaceFlare__Fi`, `coreLoading`, `cutMode`,
+`exitToMenuMode`, `gameBailFromGameLoop`, `gameCameraTask__Fv`,
+`gameClear__Fi`, `gameCombatCamera`, `gameControlPaused`,
+`gameDrawWorld__Fv`, `gameInitSkillRamps__Fv`, `gameIsPaused__Fv`,
+`gameMaybeSaveConfig__Fii`, `gameMultiPlayerMarkersOn`,
+`gameNetReplicateQuestItems`, `gamePause`, `gameResetGameState__Fv`,
+`gameReverseCameraYaw`, `gameSetDefaultGameConfig__Fi`,
+`jumpGateJumping__Fv`, `mainMenu`.
+
+Opened: `DLG_Clear__Fv`, `Reset__6Cameraii`, `SetMode__6Camerai`,
+`Update__6Camera`, `_listCheckAllIntegrity__FPCci`, `bossMeterAlpha`,
+`bossMeterCurrent`, `bossMeterMax`, `cdClear__Fv`, `cheatOn`,
+`commInit__Fv`, `coreInterfaceBrightness`, `cutClear__Fv`,
+`drawAutoMap__Fv`, `drawDome__Fv`, `drawListClear__Fv`, `floorClear__Fv`,
+`fxClear__Fv`, `gameAutoMapMode`, `gameCameraShake`, `gameDeathTimer`,
+`gameDeathTimerSingle`, `gameHidePlayers`, `gameLineClear__Fv`,
+`gameLineDebugDraw__Fv`, `gameShowEnemiesInMap`, `helpMessageOn`,
+`hudClearInfoMessage__Fv`, `hudFinishGold__Fv`, `hudNoController`,
+`inventoryReset__Fv`, `jumpGateClear__Fv`, `jumping`,
+`lastNmLocalPlayersAlive`, `levelSeeds`, `lightClear__Fv`,
+`localNmPlayersAlive`, `memCheckHeapReal__FPCci`, `multiHelpMessageOn`,
+`objectClear__Fv`, `padClear__Fv`, `playerClearSpellEffect__Fv`,
+`playerGlobalInit__Fv`, `removeAllQuestsFromLog__Fv`,
+`scriptClearAllGameState__Fv`, `scriptClear__Fv`, `scriptSuperClear__Fv`,
+`shopActiveFrame`, `skills`, `textInit__Fv`, `textureClear__Fv`, `world`,
+`worldAllocateWaterPatches__Fi`, `worldClear__Fv`,
+`worldDrawWorld__FP12_worldHeader`, `worldReset__FP12_worldHeader`,
+`worldSetViewCenter__Fv`.
+
+The notes list about a hundred opened names. The rest were already
+unresolved or already defined on this tip, including `DLG_Active__Fv`,
+`MC_GameConfig`, `MC_SaveConfig__Fv`, `coreLoadingScreenRunning`,
+`engineBrightnessCorrection`, `floorDrawEnable`, `gameNoDraw`,
+`gameOver`, `netNetworkMode`, `objectDrawEnable`, and `soundMusicVolume`.
+839 function bodies, 1059 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/sony-cd
+
+Merged. The notes separate observed addresses from inferred names, and each
+selected unit has a host contract that returns failure. No game binary or
+disassembly listing was committed. 21 of the 26 units were selected. Five
+units were not selected because those symbols are already in the link:
+sony-cd-texture-init redefines `textureInitTexture__FP8_texture` from
+draw-texture-init, sony-cd-isignal-sema redefines `iSignalSema` and
+sony-cd-poll-sema redefines `PollSema` from gs-dma-kernel,
+sony-cd-vblank-views redefines the three `norrath_archive_vblank_*` views
+from cd-archive, and sony-cd-text-add redefines `table` from
+particles-anim-table. Their files stay in the source snapshot. The notes
+list those names as closed; they were already defined, so the official
+delta is smaller than that list.
+
+20 host contracts passed on this machine. The `ReferThreadStatus` check
+compares the assembled body against the pinned executable, which this
+machine does not read; the stub assembles to the claimed 16 bytes and the
+worker records the match. All 26 sources compile under their reviewed
+profiles with the hashes the notes claim. The file-local helpers
+`relocate`, `delay_handler`, and `relocate_if_set` are recorded alongside
+their functions.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 884 |
+| Closed | 39 |
+| Opened | 30 |
+
+Closed: `DelayThread`, `ReferThreadStatus`, `SCE_CD_debug`,
+`_sceCd_Read_cur_pos`, `_sceCd_c_cb_sem`, `_sceCd_cd_callback`,
+`_sceCd_cd_ncmd`, `_sceCd_cd_read_intr`, `_sceCd_cd_scmd`,
+`_sceCd_ee_read_mode`, `_sceCd_ncmd_prechk`, `_sceCd_ncmd_semid`,
+`_sceCd_ncmdsdata`, `_sceCd_rd_intr_data`, `_sceCd_scmd_prechk`,
+`_sceCd_scmd_semid`, `_sceCd_scmdrdata`, `_sf_bind`, `_sf_data`,
+`animInitAnimation__FP15AnimationHeader`, `cdrdsf`, `cmd_sem_init`,
+`dum_mode`, `fontInitFont__FP4Font`, `modelInitModel__FPv`, `my_th_info`,
+`my_thid`, `ncmd_sema_keep_cmd`, `sceCdNcmdDiskReady`, `sceCdStream`,
+`sceSifBindRpc`, `sceSifCallRpc`, `sceSifCheckStatRpc`, `sceSifInitRpc`,
+`sceSifWriteBackDCache`, `sfrdata`,
+`soundAddSound__FPcP10_vagHeaderb`, `stm_status`,
+`worldInitWorld__FP12_worldHeader`.
+
+Also defined, and not previous imports: `_sceCd_ncmdrdata`,
+`_sceCd_rcmd_semid`, `_ncmd_bind`, `_scmd_bind`, `scmd_sema_keep_cmd`,
+`cb_thid`, `cb_semid`, `sceCdCbfunc`, `sceCdCbfunc_num`,
+`sceCdCbfunc_number`, `_sceSifInitCheck`, `_data_table`, `_packet_buffer`,
+`_free_buffer`, `_free_buffer2`, `nmSounds`, `effectsBufferSize`,
+`soundList`, and `sceCdSyncS`. Not selected, so authored and not in the
+link: `textureInitTexture__FP8_texture`, `iSignalSema`, `PollSema`, the
+three `norrath_archive_vblank_*` views, `textAddText__FPv`, and `table`;
+each name keeps its existing owner.
+
+Opened: `DynamicLightArray`, `ParticleEmitterArray`, `SetTimerAlarm`,
+`TimerUSec2BusClock`, `__eq__19ParticleEmitterDataRC19ParticleEmitterData`,
+`_request_bind`, `_request_call`, `_request_end`, `_request_rdata`,
+`_sceRpcFreePacket`, `_sceRpcGetPacket`, `convertEnd__Fi`,
+`earlyInit__3mapP12_worldHeader`, `getStockPitch__FP10_vagHeader`,
+`lightDeactivate__FP5Light`, `megatileGenerate__FP12_worldHeader`,
+`megatileInit__FP12MegatileRootPv`, `megatile_ramkmax`,
+`nmParticleEmitterRecs`, `sceSifAddCmdHandler`, `sceSifGetReg`,
+`sceSifGetSreg`, `sceSifInitCmd`, `sceSifSendCmd`, `sceSifSetReg`,
+`strcasecmp`, `texmap`, `texmapend`, `texmapstart`,
+`transferVAG__FP10_vagHeaderi`. The other names the notes leave open were
+already unresolved or already defined, including `cdLoad__FPcPvii`,
+`strlen`, `sprintf`, and `_engineCheckStack__FPCci`. 862 function bodies,
+1080 authored inputs, zero COMMON. 214 tool tests passed. No EE, CD, SIF, or
+game path ran.
+
+## agents/link-image-bounds second pass
+
+Merged. The branch had absorbed merges of other packages; the merge kept
+the shared log, plan, and snapshot and took only the new
+link-image-bounds files and notes. Five of the six proposed inputs were
+selected with fresh `input_order` values 1082 through 1086.
+`register_frame_info` was already selected in the first pass and was not
+appended again. All five sources compile under `authored_cpp` with the
+hashes and body bytes the notes claim (`atexit` 372,
+`__deregister_frame_info` 160, the rest data). All five host contracts
+passed on this machine. The reference checker needs the private image, so
+it did not run here; it lives at `docs/agents/link-image-bounds-check.py`
+now, because only `.cpp`, `.hpp`, and `.S` files may sit under
+`experimental/sources`. No game binary or disassembly listing was
+committed. The rejected `.eh_frame` byte array was never committed. The
+notes keep observed addresses separate from the authored names, and the
+sema unit adds no alias between `__sce_sema_id` and the malloc view.
+
+| | |
+|---|---|
+| Before | 884 |
+| After | 992 |
+| Closed | 6 |
+| Opened | 114 |
+
+Closed: `__CTOR_LIST__`, `__DTOR_LIST__`, `__deregister_frame_info`,
+`__sce_eh_sema_id`, `__sce_sema_id`, `atexit`. `__register_frame_info`
+was already defined. `__wrap_free` and `abort` were already resolved, so
+they did not open.
+
+Opened: the exact 114 names listed in the package notes: `__wrap_free`,
+`abort`, the 101 `_GLOBAL_$I$*` constructor callbacks, and the 11
+`_GLOBAL_$D$*` destructor callbacks. `__register_frame_info` was already
+defined and does not change the count. The registrar's `objects` head was
+already defined. 864 function bodies, 1085 authored inputs, zero COMMON.
+214 tool tests passed. No EE startup stage ran.
+
+## agents/gs-dma-present
+
+This is a partial package: the branch carries 26 units with per-symbol
+observed addresses and behavior, but its notes lack the five summary
+sections (no closed/opened lists, no plan entries). It is merged because
+every committed function has a host test and the tool tests pass. 25 of
+the 26 units were selected with fresh `input_order` values 1087 through
+1111. gs-dma-present-texture-draw-color was not selected: it redefines
+`textureDrawColor__FP8_textureiiiUi` from light-methods, and its file
+stays in the source snapshot. All 26 sources compile under their reviewed
+profiles. 24 host contracts passed on this machine. The
+`AddDmacHandler` check compares the assembled stub against the pinned
+executable, which this machine does not read; the stub assembles to the
+claimed 16 bytes. No game binary or disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 992 |
+| After | 1007 |
+| Closed | 25 |
+| Opened | 40 |
+
+Closed: `AddDmacHandler`, `EnableDmac`, `checkModelVersion`,
+`coreLoadingScreenRunning`, `draw`, `drawFrameNm`,
+`drawRemoveInterrupts__Fv`, `drawRestoreInterrupts__Fv`,
+`drawStart__Fv`, `drawWaitFinished__Fv`, `engineSetVideoMode__Fb`,
+`frameStartPacket__FUibi`, `gsIntHandler__Fi`, `lastFrameVBlankCount`,
+`makeSamplePacket__Fb`, `powerOffMode`, `sceDmaPause`, `sceDmaPutEnv`,
+`sceDmaSend`, `sceGsSyncV`, `specialMpegMode`,
+`switchTo30Counter.798`, `switchToHalfCounter.797`,
+`textureInternalInit__Fv`, `texturePackDown__Fv`. Also defined, and not
+previous imports: `gsHID`.
+
+Opened: `DisableDmac`, `RemoveDmacHandler`, `VSync`, `VSync2`, `atoi`,
+`cache`, `cacheClear__Fv`, `cacheHead`, `cacheTail`, `compositeAlpha`,
+`copyScreen`, `copyScreenAlpha`, `copyScreenColor`, `copyScreenFrame`,
+`decompressStack`, `decompressThreadid`, `dummyTex`, `engineDisable30fps`,
+`engineFullFrameMode`, `engineScissory1`, `engineScissory2`,
+`engineScreenSlide`, `engineYOffset`, `frameStatePacket`,
+`makeUnscrambleTable__Fv`, `sceClose`, `sceDmaCurrentEnv`, `sceOpen`,
+`sceRead`, `segmentUsed`, `texDecompressThread__FPv`, `texdecompress`,
+`texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`,
+`texturePageTable`, `textureUncompBufferLocked`, `trippleBufferMode`,
+`uncompMap`, `uncompSpin`. 881 function bodies, 1110 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/actor-view-tables
+
+This is a partial package: the branch carries six data-view commits with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/actor-view-tables.md` from the source
+comments. All six units were selected with fresh `input_order` values
+1112 through 1117. They are data objects only; no function was added.
+Each unit has a host file that returns failure on a wrong size or nonzero
+byte; all six passed on this machine (each compiled together with its
+implementation). No game binary or disassembly listing was committed. The
+existing mentions of these names are `extern` references in the actors-a
+constructors, not definitions.
+
+| | |
+|---|---|
+| Before | 1007 |
+| After | 1019 |
+| Closed | 6 |
+| Opened | 18 |
+
+Closed: `norrath_actor_view_486878`, `norrath_actors_a_view_438e98`,
+`norrath_actors_a_view_449430`, `norrath_actors_a_view_44ccb8`,
+`norrath_actors_a_view_44d0a8`, `norrath_actors_a_view_485358`.
+
+Opened: the 18 vtable slot targets the three 144-byte tables point at:
+`_$_8FireBomb`, `_$_9Container`, `_$_9WorldPart`, `__tf8FireBomb`,
+`__tf9Container`, `__tf9WorldPart`, `clone__8FireBomb`,
+`clone__9Container`, `clone__9WorldPart`,
+`msg_collision__9ContainerP10GameObject`, `msg_draw__9Container`,
+`msg_getPokeName__9ContainerPUsi`,
+`msg_hurt__9ContainerfP10GameObjecti`, `msg_load__9ContainerPc`,
+`msg_poke__9Containeri`, `msg_run__8FireBomb`, `msg_run__9Container`,
+`msg_save__9ContainerPc`. 881 function bodies, 1116 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/card-progress
+
+Merged. The notes separate observed bytes from inferred names, and the
+host tests fail on wrong behavior. No game binary or disassembly listing
+was committed. All 29 units were selected with fresh `input_order`
+values 1118 through 1146. The three functions compile to exactly the
+claimed bodies (`newMode__Fii` 36, `stopCardQuery__Fv` 164, `sceMcSync`
+228). All 40 host tests in `host-tests/card-progress/` passed on this
+machine. `flareAlpha`/`flareDelta` are the card words the notes claim;
+the same-named locals elsewhere are different objects and stay undefined.
+`frontEndWasRunning` and every `MC_`/`MCA_` function stay imports.
+
+| | |
+|---|---|
+| Before | 1019 |
+| After | 999 |
+| Closed | 29 |
+| Opened | 9 |
+
+Closed: `_3map$autoMapBitsSize`, `actCount`, `actLevelCount`, `allActs`,
+`asyncMode`, `bareSlotFootPrint`, `browserState`, `configState`,
+`curAct`, `disableMC`, `errorCondition`, `flareAlpha`, `flareDelta`,
+`iconHeader`, `keepPlayerPositions`, `killPlayer`, `lastCardPort`,
+`lastCardSlot`, `newMode__Fii`, `oldAsyncMode`, `pauseStackPos`,
+`saveCheckPointCount`, `sceMcSync`, `slotClusters`, `slotFootPrint`,
+`sortedTimes`, `stopCardQuery__Fv`, `totalClusters`, `totalFootPrint`.
+
+Opened: `MCA_FileOpen`, `MCA_Reset__Fv`, `act1`, `act2`, `act3`, `act4`,
+`act5`, `mcRunCmdNo`, `syncState`. The other names the notes leave open
+were already unresolved, including `MCA_Cmd__Fiiii`, `MCA_Sync__FPi`,
+`semaidRegFunc`, `semaid_timerfunc`, `retval`, `PollSema`, `WaitSema`,
+and `SignalSema`. 884 function bodies, 1145 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/ctors-ant-lantern second pass
+
+Merged. Two constructor units were added with fresh `input_order` values
+1147 and 1148. Both compile under `authored_cpp` with the bodies the
+notes claim (`norrath_construct_AutoContainerLP` 260,
+`norrath_construct_Boat` 396). The shared `detail.hpp` gained
+declarations; the already-selected `auto_chest_lp` still compiles to its
+recorded 260-byte body, and its plan and snapshot header hashes were
+refreshed. The host contracts require 32-bit pointers and do not compile
+on this arm64 machine, as recorded for the first pass; the EE compilation
+passed the header's 32-bit assert. No game binary or disassembly listing
+was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 999 |
+| Closed | 2 |
+| Opened | 2 |
+
+Closed: `norrath_construct_AutoContainerLP`, `norrath_construct_Boat`.
+Opened: `norrath_ctors_ant_lantern_view_44e940`,
+`norrath_ctors_ant_lantern_view_453328`. The parent constructors
+`norrath_construct_AutoChest` and `norrath_construct_AutoContainer`
+stay unresolved for later units. 886 function bodies, 1147 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/game-loop
+
+This is a partial package: the branch carries thirteen units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/game-loop.md` from the source comments.
+Eleven of the thirteen units were selected with fresh `input_order`
+values 1149 through 1159. game-loop-draw-particles redefines
+`drawParticlesTask__Fv` and game-loop-object-draw-enable redefines
+`objectDrawEnable`, both from the particles package; their files stay in
+the source snapshot. All thirteen sources compile under `authored_cpp`,
+and all thirteen host checks passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 999 |
+| After | 1005 |
+| Closed | 11 |
+| Opened | 17 |
+
+Closed: `frontEndStartInNetMenu__Fv`, `gameCheckPlayerAlive__Fv`,
+`gameNetKick__Fi`, `gameNoDraw`, `gameOver`, `gamePlayerLightAttenuate`,
+`gameRecallInhibit`, `gameSetCameraShake__Ffb`, `hudNoDraw`,
+`runObjectsTask__Fv`, `transformSceneLightTask__Fv`. Also defined, and
+not previous imports: the two `runObjectsTask` file-local helpers.
+
+Opened: `Kick__7Vehicle`, `MC_Kick__Fv`, `blockGetNmFree__Fv`,
+`debugClearStartMenu__Fv`, `deleteList`, `hudKick__Fv`,
+`invShutDown__Fi`, `isNetGame`, `lastNmBlocksFree`,
+`matTransform34Vec__FP6Point3P8Matrix34T0`, `mediumRunList`,
+`menuNetClientServer`, `padBigRumble__Fiff`, `runList`, `shopKick__Fv`,
+`slowRunList`, `worldViewCenter`. 894 function bodies, 1158 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+## agents/memcard-calls
+
+This is a partial package: the branch carries twenty-five units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/memcard-calls.md` from the source
+comments. All twenty-five units were selected with fresh `input_order`
+values 1160 through 1184. Twenty-four host contracts passed on this
+machine with default flags; the `MCA_Init` contract passes at `-O0` (at
+`-O1` this host compiler expands the constant-size `memset` inline and
+bypasses the call-counting wrapper, a host-toolchain artifact rather
+than a reconstruction defect). No game binary or disassembly listing
+was committed. The five `MCA_Init` queue words were local in the image
+and are global here so `MCA_Cmd` can share them; `MCA_LastDirCount`
+stays a separate object from that local word.
+
+| | |
+|---|---|
+| Before | 1005 |
+| After | 1011 |
+| Closed | 25 |
+| Opened | 31 |
+
+Closed: `MCA_ClearInfo__Fv`, `MCA_Cmd__Fiiii`, `MCA_Init__Fv`,
+`MCA_LastDirCount`, `MCA_Port`, `MCA_Slot`, `MCA_Sync__FPi`,
+`MC_Busy__Fv`, `MC_CheckPointAge`, `MC_Debug`, `MC_GameConfig`,
+`MC_GetAsyncMode__Fv`, `MC_GetReadyForMainMenu__Fv`, `MC_KickProtect`,
+`MC_LastModeSuccessful`, `MC_LoadGameBrowser__Fii`, `MC_NewGame__Fi`,
+`MC_SaveCheckPoint__Fiii`, `MC_SaveConfigSilent__Fii`,
+`MC_SaveConfig__Fv`, `MC_SaveGameBrowser__Fi`, `MC_SavingOrLoading`,
+`mcClientID`, `mcHeartBeatRun__Fv`, `mcHeartBeat__Fv`. Also defined,
+and not previous imports: the `MCA_Init` queue words (`clearBytes`,
+`queueEnd`, `queueStart`, `checkResults`, `lastDirCount`), the
+`mcHeartBeatRun` file-local words, and the `MCA_Init` 16384-byte
+`nullBuff`.
+
+Opened: `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
+`MC_HasThisLevelBeenSaved__Fv`, `MC_ResetRamSlot__Fv`,
+`MC_SetNewAct__Fi`, `MC_SpawnPoint`, `actionCoolOff`,
+`asyncChangePlayers__Fv`, `asyncConfigure__Fv`, `asyncLoadGame__Fv`,
+`asyncSaveConfigSilent__Fv`, `asyncSaveConfig__Fv`,
+`asyncSaveGame__Fv`, `commandQueue`, `curPlaySeconds`, `delayCount`,
+`fullLaunchOK`, `gameGetFullLevelName__FPc`, `getLongLevelName__FPc`,
+`interfaceOn`, `netBlankController__Fii`, `pushPause__Fv`,
+`ranBrowser`, `ranConfig`, `resetQuickLoad__Fv`, `saveConfigEndGame`,
+`strncmp`, `strstr`, `updateRamSlot__Fii`, `whichPad`. 909 function
+bodies, 1183 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+## agents/natives-b
+
+Merged. The middle third of the retail `amx*` natives: all 40 units
+were selected with fresh `input_order` values 1185 through 1224. Each
+unit compiles under `authored_cpp` with the hash the notes claim, and
+each has a host test that returns failure; all 40 passed on this
+machine. No game binary or disassembly listing was committed. The notes
+separate observed retail names and extents from inferred call shapes.
+The two file-local helpers in the random-item unit are recorded
+alongside it.
+
+| | |
+|---|---|
+| Before | 1011 |
+| After | 1002 |
+| Closed | 40 |
+| Opened | 31 |
+
+Closed: the 40 `amx*__FP5__amxPi` natives named in
+`docs/agents/natives-b.md` (`amxGetSaveInhibit` through
+`amxPutNPCInVehicle`).
+
+Opened: `AddNPCDriver__7VehicleP3NPC`, `DLG_NewWorld`,
+`SetHold__7Vehiclei`,
+`__11LightEffectG6Point3ffffffffffffP10GameObjecti`,
+`__19ParticleMorphEffectP8CreatureT1`,
+`__19SpellHornOmenEffectiP8CreatureP5Skill`,
+`__22SpellPlanarSteelEffectiP8CreatureP5Skill`,
+`__8ItemPropG6Point3PQ24item11descriptioni`,
+`addItemToInventory__FiPQ24item11descriptioni`,
+`addSpell__8CreatureP5Spell`, `blockAlloc__Fi`,
+`createRandom__4itemPQ24item11descriptioniiii`,
+`create__4itemPcPQ24item11descriptionii`, `currentRunningObject`,
+`doNewWorld__FPc`, `equipItem__FiPQ24item11descriptioni`,
+`gameControlDontResetPause`, `gameDeathStart__Fi`,
+`gameItemTreasureRamp__Fv`, `gameLevelLoading`,
+`getWeight__4itemPQ24item11description`, `givePlayerExperience__Fii`,
+`hudFadeScreen__Fi`, `hudResetFadeScreen__Fi`,
+`objectFindObjectByClass__FPcPP10GameObjecti`,
+`objectRemoveFromGrid__FP10GameObject`, `playerGetFeatRank__Fix`,
+`playerPlaySound__Fii`, `playerRecomputeWeight__Fi`,
+`playerSelectionRunning__Fv`, `worldDifficulty`. The other names the
+notes leave open were already unresolved or already defined, including
+`gameBailFromGameLoop`, `gameControlPaused`, `gameHidePlayers`,
+`gameRecallInhibit`, `gameNetKick__Fi`, `gameDifficulty`, `levelName`,
+`netNetworkMode`, `nmPlayers`, the player/route views, `strcpy`,
+`strncmp`, `strstr`, `amx_GetAddr`, `amx_GetString`,
+`lumpFindResource__FPcT0`, and `lumpLoad__FPc`. 951 function bodies,
+1223 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/pre-logo-dialog
+
+This is a partial package: the branch carries fifteen units with
+per-symbol observed addresses and behavior, but its notes leave the
+closed/opened lists pending, so the measured link delta below stands in
+for them. All fifteen units were selected with fresh `input_order`
+values 1225 through 1239. Each unit compiles under `authored_cpp`, and
+each host contract passed on this machine. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1002 |
+| After | 1035 |
+| Closed | 18 |
+| Opened | 51 |
+
+Closed: `DLG_FireUpShopOnExit`, `DLG_ForceMutexRelease__Fv`,
+`DLG_StartDialog__FPcP9DlgPacketii`, `DLG_StartWithSwoopDone`,
+`DLG_SwoopMode`, `animSetSpecialSoundHandler__FPFiG6Point3_v`,
+`dialogMsgHandle`, `gameFootstepSound__FG6Point3iii`,
+`gameobjInit__Fv`, `helpMessageFrame__Fv`,
+`hudAddHelpMessage__FiPUsT1`, `hudMsgCallback__FPUci`, `hudMsgHandle`,
+`hudSetInfoMessage__FPUsiic`, `hudShowBust__FPcPUsii`,
+`hudShowCompass__FG6Point3PUs`, `lightHaloTexture`,
+`netSendMessage__FiPUci`. Also defined, and not a previous import: the
+`hudMsgCallback` file-local helper.
+
+Opened: `GetPitch__6Camera`, `GetYaw__6Camera`, `body`,
+`colorScale__FUif`, `controlPaused`, `createByName__FPcG6Point3sPPc`,
+`debugRecall__Fi`, `dialogMutex`, `drawBustCur`, `drawBustMax`,
+`drawBustOn`, `drawBustTexName`, `drawBustTitle`, `drawCompassOn`,
+`drawCompassPoint`, `drawCompassTitle`, `fontColor__FUiii`,
+`fontEnd__Fv`, `fontPrintCenteredu__FiiPUsi`,
+`fontPrintWrapu__FiiPUsiiii`, `fontPrint__FiiPci`,
+`fontPrintu__FiiPUsi`, `fontStart__FP4FontiUii`,
+`fontStringSizeu__FP4FontPUsi`, `hudAssignQuickSpell__Fiii`,
+`hudAssignSpellBookSpell__Fiiil`, `infoMessage`, `infoMessageAlways`,
+`infoMessageTimer`, `msgHandler`, `multiBody`, `multiRelease`,
+`multiSide`, `multiTitle`, `netBlankControllerButtons__Fiii`,
+`netDisconnectPlayer__Fi`, `netLocalPad`,
+`neverSaveAlwaysLoadFromLump__FPc`,
+`objectSetCreateByNameFunction__FPFPcG6Point3sPPc_P10GameObject`,
+`objectSetFilterFunction__FPFPc_i`, `playerDamageHandler__6Player`,
+`rectangleDraw__FiiiiiUi`, `saveActivate__9Savepoint`,
+`scriptActivatePostAction__Fv`, `soundPlaySequence__FP15AnimationHeaderG6Point3f`,
+`specialHandler`, `textureDrawBorder__FiiiiiUiPcii`, `title`,
+`ustrcat__FPUsT0`, `ustrcpy__FPUsPc`, `ustrcpy__FPUsT0`. 964 function
+bodies, 1238 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+## agents/simloop-services
+
+This is a partial package: the branch carries eleven units with
+per-symbol observed addresses and behavior, but no summary note, so the
+integrator recorded `docs/agents/simloop-services.md` from the source
+comments. All eleven units were selected with fresh `input_order`
+values 1240 through 1250. Eight host contracts passed on this machine.
+The `cdProcess`, `soundMapSound`, and `soundResetStream` contracts
+assume 32-bit pointers in their harnesses (pointer round-trip through a
+32-bit word, 4-byte pointer slots, and a `memset` size that only holds
+with 32-bit struct layout) and fail on this 64-bit machine for that
+reason, the same documented limitation as the ctors-ant-lantern
+contracts; their reviewed EE compilations passed. No game binary or
+disassembly listing was committed.
+
+| | |
+|---|---|
+| Before | 1035 |
+| After | 1054 |
+| Closed | 11 |
+| Opened | 30 |
+
+Closed: `cdDirectoryLookup__FPcPiT1i`, `cdProcess__Fv`,
+`padInitPadIndexMap__Fv`, `padProcess__Fv`,
+`soundGetStreamPlayStatus__Fi`, `soundMakeSequenceUnpausable__Fi`,
+`soundMapSound__FPci`, `soundResetStream__Fi`,
+`soundSetStreamVolume__Fif`, `soundStartDialogStream__FiPci`,
+`soundStartMusic__FPci`. Also defined, and not a previous import: the
+`cdDirectoryLookup` file-local helper `find_row`.
+
+Opened: `currentLayerDir`, `gCd`, `initLump__FPv`, `layer0Dir`,
+`layer1Dir`, `lumps`, `memRealloc__FPvi`, `nmLumps`, `padFrame.756`,
+`padGetUnprocessedData__FiP18padUnprocessedData`, `padIndexMap`,
+`padProcessData__FP3padP18padUnprocessedDataP12padStateData`, `sbuff`,
+`sbuffin`, `sceCdGetError`, `sceCdLayerSearchFile`, `sceCdStRead`,
+`sceCdSync`, `scePadGetSlotMax`, `sequence`,
+`soundFindDialog__FPc`, `soundGetDialogFilename__Fv`,
+`soundGetFreeRam__Fv`, `soundStartStream__FiPciiiiii`,
+`soundUpdateAdjustments__Fv`, `streamOutput`, `streamSizeLeft`,
+`streamVolume`, `streaming`, `tapCount`. 976 function bodies, 1249
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+## agents/gs-dma-present closing pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a verification log. Each of the three new units has a host contract that
+fails (assert aborts) on a wrong word, order, or call; all three passed on
+this machine with ASan/UBSan. No game binary or disassembly listing was
+committed. The three sources compile under `authored_cpp` with the hashes
+and body bytes the notes claim.
+
+Three of the 29 proposed inputs were selected with fresh `input_order`
+values 1251 through 1253. The 25 inherited units were already selected and
+were not appended again. gs-dma-present-texture-draw-color is still not
+selected: it redefines `textureDrawColor__FP8_textureiiiUi` from
+light-methods, and its file stays in the source snapshot. Object names
+follow the in-plan convention (`do_super_sample.o`, `light_vu0_stopped.o`,
+`reload_dma.o`) rather than the notes' `present_` proposals; there was no
+collision either way.
+
+One correction against the notes: their plan entry for do-super-sample
+listed only `doSuperSample__Fiib`, but the fresh EE object also emits the
+file-local helper `_ZL17float_to_int_wordf` (260 bytes), so both are
+recorded, matching 38 existing mangled-helper precedents. The driver
+compares the full function multiset, so the helper had to be listed.
+`madePacket.769` and the 21 `reloadDMA__Fi` state words are defined and
+were not previous imports. The notes flag that `gsIntHandler__Fi`
+declares `reloadDMA__Fi` as `void` while the observed body returns 1 and
+the new unit declares it `int`; return type is not part of linkage, and
+the partial link succeeded.
+
+| | |
+|---|---|
+| Before | 1054 |
+| After | 1056 |
+| Closed | 3 |
+| Opened | 5 |
+
+Closed: `doSuperSample__Fiib`, `lightVU0StoppedProcessing__Fv`,
+`reloadDMA__Fi`.
+
+Opened: `globalCharLightScale`, `textureCacheIn__FP8_texture`,
+`textureLock__FP8_texture`, `textureUnlock__FP8_texture`,
+`worldCharViewMatrix`. All five are in the notes' opened list; the rest of
+that list was already unresolved or already defined on this tip. 980
+function bodies, 1252 authored inputs, zero COMMON. 214 tool tests passed.
+No EE, GS, DMA, VU, or game execution.
+
+## agents/pre-logo-dialog second pass
+
+Merged. The branch notes now carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+a private-trial verification log. Four new units were selected with fresh
+`input_order` values 1254 through 1257. The 15 first-pass units were already
+selected and were not appended again. All four sources compile under
+`authored_cpp` with the hashes and body bytes the notes claim
+(`dialogMsgCallback__FPUci` 3192, `pauseMenuFrameRun__Fv` 4888,
+`runDialog__Fv` 2100, `drawDialog__Fv` 1632; verified with `nm
+--print-size` on the reviewed EE objects). All four host contracts passed
+on this machine with ASan/UBSan. No game binary or disassembly listing was
+committed.
+
+The existing `extern` references in game-boot (`runDialog__Fv`,
+`drawDialog__Fv`, `pauseMenuFrameRun__Fv`) and save-net-anim
+(`dialogMsgCallback__FPUci`) are declarations, not definitions, so the
+new definitions do not multiply any symbol. `dialog_msg.o` also defines
+the file-local BSS `_ZL9dialogTag`; it is data, not a function, so it is
+not in the emitted-function list. `player` and `c.1089` stay unresolved
+by design (see Unknown in the package notes).
+
+The worker's private trial reported 22 closed and 157 opened, measured on
+that branch's older 845-input tree where the 15 first-pass units were not
+yet selected. That absolute count does not reproduce on the shared tip.
+The closed and opened names do: every measured name is in the notes'
+lists.
+
+| | |
+|---|---|
+| Before | 1056 |
+| After | 1149 |
+| Closed | 4 |
+| Opened | 97 |
+
+Closed: `dialogMsgCallback__FPUci`, `drawDialog__Fv`,
+`pauseMenuFrameRun__Fv`, `runDialog__Fv`.
+
+Opened: the 97 names measured from the link diff, all in the notes'
+opened list, including `AdvanceDialogSwoop__6CameraiPf`,
+`BuildMatrix__6CamerafffP6Point3`, `MC_ChangePlayers__FiPUsiii`,
+`Push__6Camera`, `SetPitch__6Camerai`, `SetYaw__6Camerai`,
+`StartDialogSwoop__6CameraP10GameObjecti`, `__tf3NPC`,
+`__throw_bad_typeid`, `anim`, `animLoadingComplete`, `animStarted`,
+`cancelStreamWait`, `checkBlock`, `cleanUp__Fv`,
+`colorLevelNames__FP4Menu`, `coreInterfaceFadeUpVal`,
+`coreInterfaceFadeUp__Fi`, `coreStartSwitchScene__Fi`, `correction`,
+`cursorTween`, `dialogCreature`, `dialogIdleAnimation`, `dlgArrayPtr`,
+`dlgName`, `dlgPos`, `endTimer.1059`, `evalHermite__Ffffff`,
+`flaredIn`, `flaredOut`, `fontLastPrintedPosition`,
+`fontPrintCentered__FiiPci`, `fontRestrict__Fi`, `fontScissor__Fiiii`,
+`frontendInitControllerConfig__Fi`,
+`frontendRunControllerConfig__Fv`, `gameCheckNoSaveZone__Fv`,
+`gamePopConfig__Fv`, `gamePushConfig__Fv`, `hudFooterUni`,
+`hudNetLevelWarp__FPc`, `hudRunYesNo__FPUsiiii`,
+`hudShowMsg__FPUsN20iii`, `initAnimation__Fv`, `kickMenu`,
+`kickMenuList`, `lastNmQ.1088`, `lastWarpPos`, `letterAtATime`,
+`lineToY__Fi`, `loadSampleRate.784`,
+`menuDraw__FiiP4MenuUiUiP4FontP8_texturei`,
+`menuRun__FP4MenuP3padPi`, `msgHudPlayerExit__Fv`,
+`msgHudRecall__Fc`, `nameChars`, `netKickPlayer__Fi`,
+`netPlayerIsConnected__Fi`, `netRestoreButtonConfigs__Fv`,
+`nextIndex`, `objectFindAnimation__FP10GameObjectPc`, `optTbl`,
+`optionCount`, `optionIndex`, `optionLinePos`, `optionsShowing`,
+`preConfigure`, `realDlgPos`, `resetTextBody__Fv`, `runAnimation__Fv`,
+`sceneTransitionOK.1041`, `scrollEnd`, `scrollSpan`, `scrollTarget`,
+`scrollY`, `sentEndMsg`, `setExtraParams__FP8CreaturePc`,
+`showCoords__Fv`, `showMore`, `showOptions`,
+`sleepMonsters__8creaturev`, `soundContinueStream__Fi`,
+`soundGetDialogSize__FPc`, `soundGetNmQueued__Fi`,
+`soundGetStreamAmountPlayed__Fi`, `soundGetStreamPreloadDone__Fi`,
+`soundSetMusicDuckAmount__Ff`, `soundStartGlobalMusic__FPci`,
+`startPacket__Fi`, `swooping`, `textBody`, `textBodyChars`,
+`textPageDone`, `usprintf__FPUsT0ffffffff`, `ustrlen__FPUs`,
+`waitForSound`, `wakeMonsters__8creaturev`. The rest of the notes'
+opened list was already unresolved or already defined on this tip,
+including `GetPitch__6Camera`, `GetYaw__6Camera`, `DLG_NewWorld`,
+`SetMode__6Camerai`, `Update__6Camera`, `fontStart__FP4FontiUii`,
+and `soundGetStreamPlayStatus__Fi`. 984 function bodies, 1256 authored inputs, zero COMMON. 214 tool tests passed. The build-output
+objects are byte-identical to the recorded `object_sha256` values. No
+EE or game execution.
+
+## agents/iop-module-boot
+
+Merged. The branch notes carry the five summary sections: per-symbol
+observed addresses with separate inferred/unknown notes, closed and opened
+import lists, build-plan entries, an authored-never-executed statement, and
+host checks. The branch was still receiving commits when the integrator
+started; it was merged once its notes commit landed. Fifteen units, one
+function per commit, each with a host contract beside the source. All
+fifteen contracts passed on this machine with ASan/UBSan, and a mutated
+`sceSifSyncIop` (second notify value changed) made its contract exit
+non-zero, so the contracts can fail. The fifteen sources compile under
+`authored_cpp` with the body bytes the notes claim. No game binary or
+disassembly listing was committed; the `host_contract.cpp` files are in the
+snapshot `files` map and not in the plan.
+
+Fifteen units were selected with fresh `input_order` values 1258 through
+1272. The worker's private count reproduces exactly on the shared tip.
+
+| | |
+|---|---|
+| Before | 1149 |
+| After | 1152 |
+| Closed | 15 |
+| Opened | 18 |
+
+Closed: `Free__10VIKeyboard`, `Init__10VIKeyboard`, `PreparePowerOff__Fv`,
+`_lf_bind`, `_lf_version`, `commSystemInit__Fv`, `sceCdInit`, `sceCdMmode`,
+`sceFsReset`, `sceSifInitIopHeap`, `sceSifLoadFileReset`,
+`sceSifLoadModule`, `sceSifRebootIop`, `sceSifSyncIop`,
+`textSystemInit__Fv`.
+
+Opened: `PowerOffCB`, `PowerOffHandler__FPv`, `PowerOffThread__FPv`,
+`VIStartKeyboardDriver__Fv`, `_sceCd_scmdsdata`, `_sceSifLoadModule`,
+`cdvd_exit`, `lgAudInit`, `lgCodecEnumerate`, `lgCodecInit`, `lgCodecOpen`,
+`lgKbdClose`, `memcmp`, `sceCdPOffCallback`, `sceResetttyinit`,
+`sceSifExecNotifyHandler`, `sceSifExitRpc`, `sceSifResetIop`. 999 function
+bodies, 1271 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build and were identical on a
+second build. No EE or game execution.
+
+The notes ask for three edits to merged `sif-keyboard` sources (use the
+exported `norrath_iop_heap_client`, `norrath_loadfile_client`, `_senddata` and
+`vik` instead of private statics). They change game code in another package,
+so the integrator did not make them; see Needs a decision.
+
+## agents/floor-world-view
+
+Merged, with three of the fourteen units left out of the plan. The notes
+carry the five summary sections, though the package never ran
+`build_partial.py` or the tool tests, so its closed and opened lists were
+not measured; the measured link delta below replaces them. All fourteen
+sources compile under `authored_cpp`. Thirteen host checks passed on this
+machine with ASan/UBSan. `floor-world-view-program-views` passes without
+the sanitizers and exits 2 under them, because its non-MIPS branch declares
+two separate arrays and only asserts that the host linker places them 816
+bytes apart. The real property holds in the EE object: `nm -S` of the fresh
+object puts `norrath_floor_program_end_view` at 0x330 and the start at 0.
+Mutating `worldGetDoorHeight`'s record offset made its check exit non-zero.
+No game binary or disassembly listing was committed.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `floor-world-view-floor-add` defines `floorAdd__FG6Point3sfii` as an
+  eight-byte forward to `norrath_floor_add`. The original is 956 bytes and the
+  notes list "whether `floorAdd` in the original differs from
+  `norrath_floor_add`" as unknown. Selecting it would close the import with a
+  placeholder, which is a symbol alias in all but name; the build driver
+  applies no aliases. Left unresolved until someone shows the two are one
+  function.
+- `floor-world-view-camera-pos` and `floor-world-view-far-clip` define
+  `worldCameraPos` and `farClip`, which `world_camera_pos.o` (input 957) and
+  `far_clip.o` (input 924) already define. Selecting them made the
+  relocatable link fail with multiple definitions. The notes' closed list
+  was taken from an older base and is stale on those two names.
+
+Eleven units were selected with fresh `input_order` values 1273 through
+1283.
+
+| | |
+|---|---|
+| Before | 1152 |
+| After | 1142 |
+| Closed | 12 |
+| Opened | 2 |
+
+Closed: `__11ResourceMapPcT1`,
+`drawAddToList__FPviP8_textureP11_drawRecordi`,
+`norrath_floor_program_end_view`, `norrath_floor_program_start_view`,
+`norrath_world_check_for_water`, `norrath_world_find_closest_door`,
+`norrath_world_get_door_height`, `norrath_world_set_door_collision`,
+`worldClipCubeToFrustum__FPA1_fi`, `worldSetFarClip__Ff`,
+`worldSetFrustum__Fffff`, `worldWorldViewMatrix`.
+
+Opened: `tanf`, `worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`.
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. Object hashes in the snapshot come from the fresh build and were
+identical on a second build. No EE or game execution.
+
+## agents/card-progress and agents/memcard-calls follow-up commits
+
+Merged. Both packages were already selected; these merges add no inputs.
+`agents/card-progress` gained one commit that makes the host-test support
+module read its EE toolchain from `EE_TOOLCHAIN` (its fallback is another
+contributor's absolute path; set `EE_TOOLCHAIN` on this machine). That file is
+a host test, not a plan input. `agents/memcard-calls` gained its own package
+notes (checks, closed and opened lists, build-plan entries) plus a trim of an
+unsupported unknown. The integrator's earlier `docs/agents/memcard-calls.md`
+collided with it on merge; both are kept, the worker's text first and the
+integrator's selection notes under their own heading at the end.
+
+| | |
+|---|---|
+| Before | 1142 |
+| After | 1142 |
+| Closed | 0 |
+| Opened | 0 |
+
+1008 function bodies, 1282 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## Baseline re-check before the 2026-10-12 afternoon pass
+
+The shared branch (`ca8050c`) was re-run before merging anything: 214 tool
+tests, the snapshot check (2951 files, 1282 authored inputs) and the default
+partial build (1282 compilations, one link, 1008 function bodies, zero COMMON)
+all passed, and the build reproduced the recorded **1142** unresolved imports.
+The generated `private_object_sha256` of the last plan entry also reproduced.
+No repo-rule break was found in the added files: no binaries, no disassembly
+files, no committed object files. The `.S` files are authored syscall
+sequences. One shared-file defect: the 22:19 push-log line was missing its
+trailing newline, so the next entry was fused onto it. Fixed below.
+
+## agents/game-loop closing pass
+
+Merged (the branch notes carry the five summary sections). Two functions were
+new since the first merge: `drawObjectsTask__Fv` and `gameLoop__Fv`, each with
+a host check that exits zero here. Only `gameLoop__Fv` was selected, with
+fresh `input_order` 1282. game-loop-draw-objects was **not** selected: the link
+fails with a multiple definition of `drawObjectsTask__Fv`, already defined by
+particles-draw-objects-task (input 922). Its files stay in the source snapshot
+beside game-loop-draw-particles and game-loop-object-draw-enable, which are
+still unselected for the same reason. Which body should own the name is a
+decision for the authors; the branch notes still say 15 imports closed, which
+no longer holds on this tip.
+
+The worker's private trial (879 to 963) is not the official count; this tip
+shows a different one.
+
+| | |
+|---|---|
+| Before | 1142 |
+| After | 1199 |
+| Closed | 1 |
+| Opened | 58 |
+
+Closed: `gameLoop__Fv`.
+
+Opened: `MC_FrontEndImport`, `animFrame__Fv`, `commProcess__Fv`,
+`coreGameStep__Fii`, `coreHeadsetResetTimer`, `coreLevelCommentTimer`,
+`coreLoadingStart`, `coreSwitchScene`, `coreSwitchSceneStart`,
+`cutRunFrame__Fb`, `engineGetAIStepCount__Fv`, `engineLastAITime`,
+`engineLoadEnvTex__FP8_texture`, `engineSetBlur__Fi`,
+`enumerateAlivePlayers__Fv`, `gameCreatureThinkSpinner`,
+`gameMiscTaskSync__Fv`, `gamePlayersPresent`, `gameSetObjectVis__Fv`,
+`inventoryInit__Fv`, `loadThreadID`, `loadingScreenRequestExit`,
+`lumpCheck__Fv`, `lumpFindByType__FPvPci`, `lumpQuery__FPc`,
+`mcProcessKick__Fv`, `musicTimer`, `netBroadCastStart`,
+`netClearContact__Fv`, `netGameStep__FbT0`, `netInContact__Fv`, `netInit__Fv`,
+`netStartLevel__Fv`, `netStartNetworkGameFrame__Fv`,
+`netStartNetworkGameInit__Fv`, `netStart__Fv`, `netTrouble`,
+`netWaitForPeersToCatchUp__Fv`, `picProcess__4itemv`,
+`playerDeallocateArmorCaches__Fv`, `playerRecalled`, `plotRouteTask__Fv`,
+`preCacheArmor__6Player`, `recallEnter`, `runMusic__Fv`, `scriptRun__Fv`,
+`scriptSetScript__FPv`, `startNewWorld__Fv`, `subDrawLoop__FPFv_i`,
+`superGamestateInit`, `texIsDecompressing__Fv`, `texIsLoading__Fv`,
+`texProcessDecompress__Fv`, `texProcessLoad__Fi`, `textMessageDraw__Fv`,
+`textMessageProcess__Fv`, `worldDrawEnable`, `worldRunWaterTask__Fv`.
+1009 function bodies, 1283 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+## agents/vi-launcher
+
+Merged (the branch notes carry the five summary sections: per-symbol observed
+addresses, inferred and unknown notes, closed and opened imports, build-plan
+entries, and an authored-never-executed statement). Twenty-two units, one
+function per commit, each with a `host_contract.cpp`; all 22 compile and run
+here with exit 0. Fresh `input_order` values 1283 through 1304. All 22
+sources compile under `authored_cpp` with empty header closure; 22 function
+bodies, 2884 body bytes. No game binary or disassembly listing was committed.
+Host contracts are in the snapshot `files` map and not in the plan.
+1031 function bodies, 1305 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1199 |
+| After | 1208 |
+| Closed | 22 |
+| Opened | 31 |
+
+Closed: `CheckNetwork__15VINetworkStatus`, `ClearVRAM__FUcUcUcUc`,
+`Close__7VITimer`, `Free__10VILauncher`, `GetDefault__10VILanguage`,
+`Init__10VILauncherb`, `Init__7VITimer`, `Initialize__15VINetworkStatus`,
+`LoadExecPS2`, `SetDefault__10VILanguage12VILanguageID`,
+`Setup__10VILauncher`, `Station__10VILauncheriPCcN22i`,
+`VIDisplayLoadingScreen__Fb`, `VIMemCardSetProductId__FPCc`,
+`VIMemCardSetProductTitle__FPCc`, `_$_10VILauncher`, `_$_15VINetworkStatus`,
+`__10VILauncher`, `__15VINetworkStatus`, `exitEzNetCnf`, `exitEzNetCtl`,
+`ezNetCtlDownInterface`.
+
+Opened: `DeleteThread`, `Handler__7VITimeri`, `Password__C13VIGameOptions`,
+`RotateThreadReadyQueue`, `SetArg`, `TerminateLibrary`,
+`Username__C13VIGameOptions`, `VIDisplayScreen16__FPCcib`,
+`VIGetGameOptions__Fv`, `_LoadExecPS2`, `__builtin_delete`,
+`__wrap_memalign`, `dmaGIF`, `initEzNetCtl`, `rand`, `sceCdReadClock`,
+`sceGifPkAddGsData`, `sceGifPkInit`, `sceGifPkReset`, `sceGifPkSize`,
+`sceGifPkTerminate`, `sceGszbufaddr`, `sceInetCtlGetState`,
+`sceInetGetInterfaceList`, `sceLibnetInitialize`, `sceMcEnd`,
+`sceMcGetInfo`, `scePadEnd`, `setup_main__Fv`, `srand`,
+`station_main__FiPCcPcT2T1T1i`.
+
+## agents/session-roster
+
+Merged (the branch notes carry the five summary sections; its unit count was
+corrected in the last commit). Nine functions plus four data units, each with
+a `host_check.cpp` that passes here (13 of 13 exit 0). Twelve of the thirteen
+units were selected with fresh `input_order` values 1305 through 1316.
+session-roster-player-state was **not** selected: the link fails with multiple
+definitions of `invisible`, `nmLines` and `nmSingle`, already defined by
+other packages (inputs 933, 937 and 938). Its other six words
+(`playersAlive`, `startEntranceName`, `syncRandState`, `activePlayer`,
+`nmPlayersAlive`, `noMonsters`) therefore stay undefined, and its files stay in
+the source snapshot. This is why the notes' closed list (26) is larger than the
+18 names actually closed here; `activePlayer` and `invisible` appear in the
+notes' list but `activePlayer` is still not closed. The 12 selected sources
+compile under `authored_cpp`, 1904 body bytes. No game binary or disassembly
+listing was committed. 1040 function bodies, 1317 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1208 |
+| After | 1201 |
+| Closed | 18 |
+| Opened | 11 |
+
+Closed: `broadcastConnection`, `checkForMonsters__FP10GameObject`, `commHandle`,
+`commHandler__FPUci`, `commStatusHandle`, `commStatusHandler__FPUci`,
+`g_net_buf`, `msgHandler`, `netNmPartners`,
+`netRegisterMessageHandler__FPFPUci_v`,
+`netRegisterPacketHandler__FPFPUci_v`, `netWaitCallBack__FPUci`,
+`netWaitMsgHandler`, `nmPartners`, `partners`,
+`playerInit__FiiPcScScScScT2`, `playerSelectionSetup__Fv`,
+`playerSelectionStart__Fv`.
+
+Opened: `abilityTable`, `fadeIconY`, `fadeTimer`, `firstTime`, `init__Fv`,
+`language`, `lightPushSceneLights__FG6Point3iiiiiiiii`,
+`playerRecomputeAbilityModifiers__Fv`, `playerSelectionTask__Fv`,
+`recievePacket__FiPUc`, `setupDefaultEquipment__Fi`.
+
+## agents/simloop-services closing pass
+
+Merged (the branch notes carry the five summary sections; the first merge in
+this log had only a partial package). Twelve units were new since the first
+merge; eight were selected with fresh `input_order` values 1317 through 1324
+(11 functions including the three file-local helpers `bind_client`,
+`point_at`, `append_command`; 5764 body bytes). Four were **not** selected:
+`pad-dma-buffer`, `pad-mtap-state`, `sound-music-state` and
+`sound-stream-records` are data-only units with no host check at all, and the
+snapshot checker requires host files for every selected package record, so
+they stay in the source snapshot, unselected, until each has a check that can
+fail. Skipping them is why `scePadInit` and the multitap init now leave the
+`norrath_libpad_*` and `norrath_libmtap_*` view words open (the 11 view names
+below). Host checks: 15 of 19 exit 0 here. `cdProcess`, `soundMapSound`
+(accepted at the first merge for the same reason), and the new
+`soundPlaySequence` and `soundComputeSequenceLength` checks segfault on this
+64-bit machine because the harnesses assume 32-bit addressable pointers; a
+32-bit-pointer run (arm64 pagezero shrink, x86_64 under Rosetta) did not work
+here either, so those two new functions are only compiled, not host-tested,
+on this machine. The worker's private trial counts are not the official ones.
+1051 function bodies, 1325 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1201 |
+| After | 1227 |
+| Closed | 8 |
+| Opened | 34 |
+
+Closed: `sceMtapInit`, `sceMtapPortOpen`, `scePadInit`, `scePadPortOpen`,
+`soundComputeSequenceLength__FP15AnimationHeader`, `soundFrame__Fv`,
+`soundPlaySequence__FP15AnimationHeaderP10GameObjectf`,
+`soundPlaySound__FP10_vagHeaderP6Point3fff`.
+
+Opened: `DPRINT`, `batchBuffer`, `delaySoundList`, `disableSoundPlaying`,
+`findChannel__Fv`, `listOnewayLink__FP8ListHeadT0Pv`, `nmBatchCommands`,
+`norrath_libmtap_change_priority_client_view`,
+`norrath_libmtap_get_connection_client_view`,
+`norrath_libmtap_module_version_client_view`,
+`norrath_libmtap_port_close_client_view`,
+`norrath_libmtap_port_open_client_view`, `norrath_libmtap_rpc_buffer_view`,
+`norrath_libpad_dma_info_view`, `norrath_libpad_is_init_word`,
+`norrath_libpad_is_warning_word`, `norrath_libpad_port_info_view`,
+`norrath_libpad_rpc_buffer_view`, `norrath_libpad_rpc_clients_view`,
+`pan__FG6Point3ffPfT3`, `pauseProcess__Fv`, `runAmbient__Fv`,
+`runMusicDucking__Fv`, `runScreaming__Fv`, `runSequences__Fv`,
+`sceMtapGetModVersion`, `scePadGetModVersion`, `scePadInit2`, `sceSdRemote`,
+`sequenceInProgress`, `sequenceVolume`, `soundChangeVolume__Fiff`,
+`soundFlushCommandBuffer__Fv`, `soundFrameNm`.
+## Fixed: agents/frontend-shell contract could not fail
+
+This section was first written as a rejection of `agents/frontend-shell` at
+tip `940b753`. Another integrator merged and selected the package a few
+minutes later (the "agents/frontend-shell" entry above), so it is on the
+shared branch with the defect below unfixed. The finding stands.
+
+`experimental/sources/frontend-shell-run/host_contract.cpp` clears the shared
+`error` word at the top of `reset()`, and `main` calls `reset()` before each of
+its 45 scenarios. A failing `expect` in any scenario but the last is erased by
+the next `reset()`. Mutating `run_front_end.cpp` confirmed it: changing the
+title y coordinate from 36 to 37, the skipped-title menu number from 50 to 51,
+and the title x base from 320 to 321 all left the contract exiting 0, though
+checks 7 and 10 assert those values. With the `error = 0` line deleted from
+`reset()` the unmodified source passes all 45 outcomes, so the checks
+themselves look sound; the harness hides their failures. Until it is fixed,
+`runFrontEnd__Fv` is a function with no test that could fail in the sense of
+CONTRIBUTING and the repo rules. The words unit's `host_check.cpp` is sound.
+
+The contract was not edited here (it belongs to the worker's package). The
+one-line fix is to stop clearing `error` in `reset()`; the contract already
+prints and returns the first failing code. That the package was merged anyway
+is also a reason to read the worker's host contracts before trusting the
+"every committed function has a test" test: the vi-launcher contracts were
+checked by mutation and do catch changes; this one does not. The notes also
+record that `runFrontEnd` binds the original's `menu` and `menuNm` locals to
+the same-named globals of `dialog-hud-controls`; that aliasing still needs a
+decision.
+
+Fixed by the integrator after the parallel merge: the `error = 0;` line was
+removed from `reset()` in `frontend-shell-run/host_contract.cpp` (test harness
+only; no game source touched) and its snapshot hash updated. Re-checked: the
+unmodified source still exits 0, and a copy of `run_front_end.cpp` with the
+title x base changed from 320 to 321 now exits 7 (check 7). The `menu` and
+`menuNm` aliasing against dialog-hud-controls still needs an owner decision.
+The shared branch stands at 1208 unresolved imports with that fix, 214 tool
+tests and the snapshot check passing.
+
+## agents/kernel-patches
+
+Merged (the branch notes carry the five summary sections). Forty-three units
+with fresh `input_order` values 1325 through 1367: sixteen are authored
+assembly (eleven syscall wrappers, `kFindAddress`, and four `kCopy`
+pattern bodies), eight are C++ functions with a `host_contract.cpp`
+(`iGetTimerSystemTime`, `_InitAlarm`, `PatchIsNeeded`, `topThread`,
+`SetNextComp`, `cbTimerHandler`, `UnlinkAlarm`, `InsertAlarm`), and nineteen
+are data words with a Python test under `host-tests/kernel-patches`. The eight
+host contracts passed here and the 19 data tests pass (19 of 19). The sixteen
+assembly units are checked by the byte comparer in
+`gs-dma-kernel-body-check`, which needs the private executable; that
+comparison was **not** re-run by the integrator (integration does not read
+the executable), so the byte-match statements in the notes are the worker's
+and are recorded in the snapshot only as a host file reference, as for
+gs-dma-kernel. One shared-test fix: `host-tests/kernel-patches/support.py`
+hard-coded another contributor's absolute toolchain path, so all 19 data
+tests errored here; it now reads `EE_TOOLCHAIN` with the same default the
+card-progress tests use (the same fix as the earlier card-progress commit).
+No game code was edited. The worker's claim (1149 to 1120 on an older tip) is
+not the official delta. 1075 function bodies, 1368 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1227 |
+| After | 1197 |
+| Closed | 36 |
+| Opened | 6 |
+
+Closed: `PatchIsNeeded`, `SetNextComp`, `SignalSema`, `SysExecPS2Entry`,
+`_InitAlarm`, `_SyscallEntry`, `_kExecArg`, `cbTimerHandler`,
+`g_CounterBuf`, `g_SysRebootBuf`, `g_Timer`, `g_iUserRebootSize`,
+`g_pUserRebootBuf`, `iGetTimerSystemTime`, `kFindAddress`,
+`kernel_alarm_copy`, `kernel_alarm_get_entry`, `kernel_alarm_setup`,
+`kernel_alarm_sysentry`, `kernel_execps2_copy`, `kernel_execps2_get_entry`,
+`kernel_execps2_setup`, `kernel_syscall_pattern_kcopy`,
+`kernel_syscall_sysentry`, `kernel_syscall_table_setup`, `kernel_tlb_copy`,
+`kernel_tlb_get_entry`, `kernel_tlb_setup`, `kernel_tlb_sysentry`,
+`semaidRegFunc`, `semaid_timerfunc`, `sifParamOrd`, `topArg`, `topId`,
+`topSema`, `topThread`.
+
+Opened: `GetOsdConfigParam`, `SetOsdConfigParam`, `SuspendThread`, `WakeupThread`,
+`_kExitTLBHandler`, `kprintf`.
+
+## agents/frontend-shell
+
+Merged as a **partial package**: the notes carry the observed, inferred and
+unknown separation, the build-plan table and the import lists, but not the
+five separate summary sections (no standalone "Authored but never executed"
+or "Unknown" headings; unknowns are inline). Every committed function has a
+test: `runFrontEnd__Fv` has `host_contract.cpp` and the data words have
+`host_check.cpp`; both pass here (2 of 2) and 214 tool tests pass. Three units
+with fresh `input_order` values 1368 through 1370; one function (7060 body
+bytes, not an original-byte match; the original is 5656 bytes). No game binary
+or disassembly listing was committed. The notes say `menu` and `menuNm` are
+also defined by dialog-hud-controls; the link has no duplicate definition
+(they are externs here), so nothing was dropped. The worker's private
+trial (879 to 928) is not the official delta. 1076 function bodies, 1371
+authored inputs, zero COMMON. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1197 |
+| After | 1217 |
+| Closed | 14 |
+| Opened | 34 |
+
+Closed: `attemptLoadGame`, `autodemoTimer`, `creditMenu`, `creditsPosY`,
+`engineHoldMpeg`, `expWarnAlpha`, `frontEndRunning`,
+`frontEndStartInCredits`, `frontEndSuspend`, `frontEndWasRunning`,
+`frontMenu`, `frontendControllerConfigRunning`, `lineShift`,
+`runFrontEnd__Fv`.
+
+Opened: `commMenu`, `coreClearNetLogFuck`, `creditsText`, `curFocus`,
+`difficultyMenu`, `endInit`, `endTimer`, `engineReboot__Fv`,
+`frontEndCleanUp__Fi`, `gameTypeMenu`, `hudRunNoControllers__Fi`,
+`launchPlayerSelect__Fv`, `menuModeRebootQuestion`,
+`menuNetImportOrNewGame`, `menuNetImportOrNewPlayer`, `musicStart`,
+`netAttemptLaunch`, `netDoNewLaunch__Fv`, `optionMenu`, `paramRunning__Fv`,
+`playerMenu`, `playerSelectCount`, `playerSelectEnforce`,
+`playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`,
+`playerSelectStartPlayer`, `playerSelectSuccessful`, `setSRSInfo__Fv`,
+`soundClearStreamQue__Fi`, `startNetLaunch__Fv`, `statusPtr`,
+`stopCredits__Fv`, `textureSmoothBorder__FiiiiiUiiii`.
+
+## agents/loop-grid-fx
+
+Merged. The notes carry the five summary sections: per-symbol addresses with
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about half an hour. Twenty-one units, each with a
+`host_check.cpp` beside the source; the checks that read pointer words build
+with `-DNORRATH_HOST_CONTRACT`, which the EE build never defines. All 21
+passed on this machine with ASan/UBSan. A scripted mutation pass (one
+numeric literal changed at a time, up to ten per source) was killed by the
+contract in every unit that has literals (for example 10/10 `P_AddParticle`,
+10/10 `P_Clear`, 9/10 `norrath_light_add`, 8/10 `objectFindObject`, 3/10
+`norrath_object_remove_string`), so the checks can fail. No game binary or
+disassembly listing was committed.
+
+Twenty-one units were selected with fresh `input_order` values 1373 through
+1393; the five data units emit no functions. Their link has no duplicate
+definition. The notes' "duplicates" section is about name pairs, not link
+collisions, and stays open: `objectUpdateInGrid__FP10GameObject` and
+`norrath_object_update_in_grid`, `objectFindInBox__FG6Point3T0PP10GameObjecti`
+and `norrath_object_find_in_box`, and `norrath_object_add_to_medium_run_list`
+and `norrath_actor_add_medium_run_list` are each the same routine under two
+names in two packages. All are selected; callers still bind to one name.
+
+The worker's private trial (950 to 940 on an older tip) is not the official count. The
+closed list reproduces exactly.
+
+| | |
+|---|---|
+| Before | 1217 |
+| After | 1204 |
+| Closed | 20 |
+| Opened | 7 |
+
+Closed: `P_AddParticle__FP11ParticleDefP6Point3T1f`, `P_Clear__Fv`,
+`P_UpdateParticleType__FP11ParticleDefiiiiiiiifffiiiPFPv_v`, `P_Update__Fv`,
+`findTagString__10GameObjectPci`, `fxDust`,
+`norrath_factory_particle_emitter_tag_bytes`,
+`norrath_has_light_or_particle_number`, `norrath_light_add`,
+`norrath_list_head_copy_construct`, `norrath_object_add_to_delete_list`,
+`norrath_object_add_to_medium_run_list`, `norrath_object_remove_string`,
+`objectFindInBox__FG6Point3T0PP10GameObjecti`, `objectFindObject__FPc`,
+`objectFindObject__FPcPP10GameObjecti`, `objectIterateGrid__FPFP10GameObject_v`,
+`objectUpdateInGrid__FP10GameObject`, `scriptParticles`, `taskList`.
+
+Opened: `P_DeleteParticleSystem__Fi`, `P_Pop__Fv`,
+`checkCanAllocDescriptor__Fv`, `frameNumWrapped__Fv`,
+`setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`updatePS__FP14ParticleSystem`, `updateTrails__Fv`. 1096 function bodies,
+1392 authored inputs, zero COMMON. 214 tool tests passed. Object hashes in
+the snapshot come from the fresh build. No EE or game execution.
+
+## agents/combat-reactions
+
+Merged. The notes carry the five summary sections: evidence with observed
+addresses and separate inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Fifteen units, each with a
+`host_check.cpp`. All 15 passed on this machine with ASan/UBSan. A scripted
+mutation pass (one numeric literal changed at a time) was killed by the
+checks in every unit that has literals: 9/10 for the Cat, Gnome and Mermaid
+`setState` bodies, 7/10 for the Spider, 5/10 `updateEnemy__8Creature`, 3/6
+`msg_collision__4Gold`, 1/1 `charm__8Creaturei`. The notes also describe a
+comparison against the pinned executable
+(`docs/agents/combat-reactions-compare.py`, 1500 seeds per function, zero
+mismatches); that script reads the private executable, which integration
+does not, so it was not re-run and the result is the worker's. No game binary
+or disassembly listing was committed.
+
+Fifteen units were selected with fresh `input_order` values 1394 through
+1408; the four data units emit no functions. The seven code units include
+`sources/combat-reactions-bytes/bytes.hpp`, recorded in their header closure;
+`host_vcall.hpp` in the same directory is a host-only header and is in the
+snapshot `files` map only. All 15 source hashes and compiled body bytes
+match the notes. The six names the notes say other packages closed first
+(`death`, the Creature `msg_alert`, the Cat and SmallSpider collisions,
+`setState__7Nataslai`, `turnToFace`) are not defined here and not duplicated.
+
+The worker's count (1142 to 1133) was measured on an older tip; the closed
+and opened names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1204 |
+| After | 1195 |
+| Closed | 15 |
+| Opened | 6 |
+
+Closed: `charm__8Creaturei`, `msg_alert__10GameObjectifG6Point3P10GameObject`,
+`msg_collisionWorld__10GameObjectG6Point3`,
+`msg_collision__10GameObjectP10GameObject`,
+`msg_collision__4GoldP10GameObject`, `msg_hurt__10GameObjectfP10GameObjecti`,
+`norrath_collision_frame_bytes`, `norrath_collision_grid_scale_bytes`,
+`norrath_spell_blessed_type_name_view`, `norrath_spell_type_name_view`,
+`setState__11SmallSpideri`, `setState__14GnomeNavigatori`, `setState__3Cati`,
+`setState__7Mermaidi`, `updateEnemy__8Creature`.
+
+Opened: `animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
+`animGlobalSync__FP14AnimationState`,
+`getSmartRandomDestination__8Creaturei`, `hudGivePlayerGold__FiG6Point3i`,
+`resetRouting__8Creature`, `setStateProcessing__8CreaturePi`. 1107 function
+bodies, 1407 authored inputs, zero COMMON. 214 tool tests passed. Object
+hashes in the snapshot come from the fresh build. No EE or game execution.
+
+## agents/actor-view-tables second pass
+
+Merged. The branch notes carry the evidence, closed and opened lists,
+build-plan hashes, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. The integrator's earlier
+`docs/agents/actor-view-tables.md` collided with the worker's on merge; both
+are kept, the worker's text first and the integrator's selection notes under
+their own heading at the end. Nineteen new data views (virtual tables, tag
+strings, resource maps and the slow-run-list heads), each with a host file
+under `actor-view-tables-views/host/` that returns failure on a wrong size or
+nonzero byte; all 25 host files (six from the first pass) pass on this
+machine. They are data objects; no function was added, and the checks are
+size and zero-fill checks only. No game binary or disassembly listing was
+committed.
+
+Nineteen units were selected with fresh `input_order` values 1409 through
+1427, component `actor-view-tables-views`. The six first-pass units were
+already selected and were not appended again. The virtual tables
+each name sized functions by assembler label, so closing the names
+opens new function imports; the worker did not measure the link and the
+real net count goes up.
+
+The notes settle half of a "Needs a decision" item: `norrath_actor_view_50bfd0`
+is the 240-byte `slowRunList` object at `0x4fbfd0` (the import name carries a
+sign-extension misread of `lui 0x50 / addiu 0xbfd0`), which contradicts the
+`object-infra` note that it is not that list. `object-infra` still defines
+`norrath_object_slow_run_list_view` for the same original object, so the link
+now has two definitions of one object under two names. They are different
+symbols and no duplicate definition arises; which name should survive is still
+open.
+
+| | |
+|---|---|
+| Before | 1195 |
+| After | 1221 |
+| Closed | 19 |
+| Opened | 45 |
+
+Closed: `norrath_actor_view_50bfd0`, `norrath_actors_a_view_449790`,
+`norrath_actors_a_view_4498b0`, `norrath_actors_a_view_4499d8`,
+`norrath_actors_a_view_44a930`, `norrath_actors_a_view_44a9c0`,
+`norrath_actors_a_view_44c830`, `norrath_actors_a_view_44f1f8`,
+`norrath_actors_a_view_44f2a0`, `norrath_actors_a_view_470830`,
+`norrath_actors_a_view_471310`, `norrath_actors_a_view_477758`,
+`norrath_actors_a_view_481980`, `norrath_actors_a_view_483e5c`,
+`norrath_actors_a_view_485360`, `norrath_actors_a_view_485400`,
+`norrath_actors_a_view_485408`, `norrath_actors_a_view_4860b8`,
+`norrath_actors_a_view_4860c0`.
+
+Opened (all function labels from the virtual tables): `_$_10DoorSecret`,
+`_$_11FloorSwitch`, `_$_6Candle`, `_$_7AntTrap`, `_$_7Blocker`,
+`_$_7Candle2`, `_$_7EggSack`, `_$_9DoorSwing`, `__tf10DoorSecret`,
+`__tf11FloorSwitch`, `__tf6Candle`, `__tf7AntTrap`, `__tf7Blocker`,
+`__tf7Candle2`, `__tf7EggSack`, `__tf9DoorSwing`, `clone__10DoorSecret`,
+`clone__11FloorSwitch`, `clone__6Candle`, `clone__7Blocker`,
+`clone__7Candle2`, `clone__9DoorSwing`, `msg_draw__10AutoPropLP`,
+`msg_draw__6Candle`, `msg_draw__7Candle2`, `msg_getPokeName__10DoorSecretPUsi`,
+`msg_getPokeName__9DoorSwingPUsi`, `msg_load__10DoorSecretPc`,
+`msg_load__11FloorSwitchPc`, `msg_load__9DoorSwingPc`,
+`msg_poke__10DoorSecreti`, `msg_poke__9DoorSwingi`, `msg_presave__9DoorSwing`,
+`msg_run__10AutoPropLP`, `msg_run__10DoorSecret`, `msg_run__11FloorSwitch`,
+`msg_run__6Candle`, `msg_run__7AntTrap`, `msg_run__7Candle2`,
+`msg_run__9DoorSwing`, `msg_save__10DoorSecretPc`, `msg_save__11FloorSwitchPc`,
+`msg_save__9DoorSwingPc`, `msg_trigger__10DoorSecreti`,
+`msg_trigger__9DoorSwingi`. 1107 function bodies, 1426 authored inputs, zero
+COMMON. 214 tool tests passed. Object hashes in the snapshot come from the
+fresh build. No EE or game execution.
+
+## agents/level-anim-load
+
+Merged, with four of the 35 units left out of the plan. The notes carry the
+five summary sections: functions and data with original addresses and sizes,
+separate observed, inferred and unknown parts, closed and opened lists,
+build-plan entries, an authored-never-executed statement and unknowns. The
+branch had been quiet for about forty minutes. Twelve function units have a
+`host_contract.cpp` and the storage units have a `storage_contract.cpp`. All
+31 selected contracts passed on this machine with ASan/UBSan
+(`-DNORRATH_HOST_ARENA` maps target words into an arena on the host only). A
+scripted mutation pass was killed by the contracts in every function unit
+that has numeric literals (10/10 `animAddTransitionTo`, `animSetToEnd`,
+`animResetFramestates` and `routeUnrollVnode`; 9/10 `animAdd` and
+`cutStartScene`; 8/10 `monsterSpawn` and `lumpFind`). No game binary or
+disassembly listing was committed. The 12 compiled body sizes match the notes.
+
+Left out (files stay in the source snapshot, with no plan entry):
+
+- `level-anim-load-loader-failure-word` defines `norrath_loader_failure_word_view`
+  as a global absolute symbol with value 0 through a basic `asm` block, so
+  the loader's store to address 0 resolves. PORTABLE_BUILD says the link
+  imports no absolute game addresses and applies no aliases; an absolute
+  symbol in the partial object breaks that statement, the unit has no host
+  contract, and the notes themselves ask for a decision. The import stays
+  open until the owner decides.
+- `level-anim-load-anim-results`, `level-anim-load-frame-states` and
+  `level-anim-load-scene-state` define `animResults`, `frameStates` and
+  `scene`, which `anim_results.o` (input 915), `frame_states.o` (input 925)
+  and `scene.o` (input 951) already define. Selecting them made the
+  relocatable link fail with multiple definitions; the notes' closed list is
+  stale on those three names.
+
+Thirty-one units were selected with fresh `input_order` values 1428
+through 1458 (the 12 function units and 19 storage units). The host-only headers in `level-anim-load-common`
+and the files of the four left-out units are in the snapshot `files` map.
+
+Two same-address pairs from the notes stay open as two separate words:
+`norrath_factory_world_pointer_word` (the word `world`, already defined as
+`norrath_route_world_word_bytes` by world-state) and
+`norrath_factory_world_flags_word` (`levelFlags`, already defined by
+natives-c). They are different link symbols, so the link has no duplicate
+definition but the two copies of each word do not agree. `cutMode` stays an
+import under its original name.
+
+The worker's private count (950 to 937 on an older tip) is not the official
+one. Eighteen of the 22 closed names in the notes reproduce; the others are
+the four left out above.
+
+| | |
+|---|---|
+| Before | 1221 |
+| After | 1208 |
+| Closed | 18 |
+| Opened | 5 |
+
+Closed: `animAddTransitionTo__FP14AnimationStateP15AnimationHeaderfi`,
+`animAdd__FP14AnimationStateP15AnimationHeaderi`,
+`animInitState__FP14AnimationState`, `animResetFramestates__FP14AnimationState`,
+`animSetToEnd__FP14AnimationState`, `cd`, `cutMsgHandler`,
+`cutMsgHandlerFunction__FPUci`, `cutStartScene__FP9_cutscenePc`,
+`lumpFind__FPvPc`, `norrath_archive_sound_free_ram`,
+`norrath_factory_world_flags_word`, `norrath_factory_world_pointer_word`,
+`norrath_find_height_orientation_scale_bytes`,
+`norrath_forbidden_orientation_scale_bytes`, `norrath_monster_spawn`,
+`norrath_route_unroll_vnode`, `norrath_swap_int`.
+
+Opened: `coreStartLoading__Fv`, `cutDrawFrame__Fv`, `cutRunFrameTask__Fv`,
+`spawn__FG6Point3iisPcbPPci`, `updateAnimation__FP13animComponent`. 1119
+function bodies, 1457 authored inputs, zero COMMON. 214 tool tests passed.
+Object hashes in the snapshot come from the fresh build. No EE or game
+execution.
+
+## agents/ctors-ant-lantern closing pass
+
+Merged (the branch notes carry the five summary sections). Twenty-nine new
+constructors since the first merge (the first merge had three: `AutoChestLP`,
+`AutoContainerLP`, `Boat`), selected with fresh `input_order` values 1371
+through 1399; all 32 package constructors are now in the plan. Each has a
+`host/<name>_contract.cpp`. Built with `-DNORRATH_CTORS_ANT_LANTERN_HOST`
+together with its source, all 32 contracts exit 0 on this 64-bit machine
+(32 of 32; the earlier note that three contracts need 32-bit pointers does
+not apply to these). Compiled bodies total 43,344 bytes for the 29 and are
+not original-byte matches. The branch extended `detail.hpp` (declarations
+only, no code), so its snapshot and plan hashes were refreshed; the three
+earlier constructors still compile to the same function sizes. No game binary
+or disassembly listing was committed.
+
+The count rises because each constructor calls many game-object helpers and
+reads many original data words that no package defines yet; the opened list
+below is dominated by the `norrath_ctors_ant_lantern_view_*` data views. The
+notes' "imports opened" list is the worker's and is not the official one.
+1148 function bodies, 1486 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1208 |
+| After | 1516 |
+| Closed | 29 |
+| Opened | 337 |
+
+Closed: `norrath_construct_Ant`, `norrath_construct_AntQueen`,
+`norrath_construct_Arenabeast`, `norrath_construct_AutoChest`,
+`norrath_construct_AutoContainer`, `norrath_construct_AutoProp`,
+`norrath_construct_AutoPropLP`, `norrath_construct_Badger`,
+`norrath_construct_BlackWidow`, `norrath_construct_Catapult`,
+`norrath_construct_Chest`, `norrath_construct_CloudGiant`,
+`norrath_construct_Critter`, `norrath_construct_Cthulu`,
+`norrath_construct_Cyclops`, `norrath_construct_Demon`,
+`norrath_construct_FemaleDarkElf`, `norrath_construct_FireBeetle`,
+`norrath_construct_FireFly`, `norrath_construct_Froglock`,
+`norrath_construct_Generator`, `norrath_construct_Ghoul`,
+`norrath_construct_Gnome`, `norrath_construct_Goblin`,
+`norrath_construct_Ice`, `norrath_construct_Innoruuk`,
+`norrath_construct_JumpGate`, `norrath_construct_Lamp`,
+`norrath_construct_Lantern`.
+
+Opened: `__11AddParticleG6Point3PPci`, `__3Webii`, `addIcon__3mapP6Point3iPciT3N33`,
+`dpadd`, `dptofp`, `gameLineInitPathState__FP17gameLinePathStatePcP6Point3`,
+`hasLightOrParticleNumber__FPPci`, `initAttackVariant__5Demon`,
+`initAttackVariant__8Froglock`, `initType__13FemaleDarkElfb`,
+`initType__5Gnome`, `initType__6Goblinb`, `lightActivate__FP5Light`,
+`norrath_construct_AutoObject`, `norrath_ctors_ant_lantern_view_34b474`,
+`norrath_ctors_ant_lantern_view_34b6b1`,
+`norrath_ctors_ant_lantern_view_42ae60`,
+`norrath_ctors_ant_lantern_view_42af70`,
+`norrath_ctors_ant_lantern_view_42b1d0`,
+`norrath_ctors_ant_lantern_view_42b548`,
+`norrath_ctors_ant_lantern_view_42b630`,
+`norrath_ctors_ant_lantern_view_42b870`,
+`norrath_ctors_ant_lantern_view_42b958`,
+`norrath_ctors_ant_lantern_view_42ba00`,
+`norrath_ctors_ant_lantern_view_42bb08`,
+`norrath_ctors_ant_lantern_view_42be08`,
+`norrath_ctors_ant_lantern_view_42beb0`,
+`norrath_ctors_ant_lantern_view_42bf58`,
+`norrath_ctors_ant_lantern_view_42c188`,
+`norrath_ctors_ant_lantern_view_42c308`,
+`norrath_ctors_ant_lantern_view_42c8a0`,
+`norrath_ctors_ant_lantern_view_42cef0`,
+`norrath_ctors_ant_lantern_view_42cfc8`,
+`norrath_ctors_ant_lantern_view_42d200`,
+`norrath_ctors_ant_lantern_view_438a38`,
+`norrath_ctors_ant_lantern_view_438b28`,
+`norrath_ctors_ant_lantern_view_438eb8`,
+`norrath_ctors_ant_lantern_view_4494c0`,
+`norrath_ctors_ant_lantern_view_44a810`,
+`norrath_ctors_ant_lantern_view_44a8a0`,
+`norrath_ctors_ant_lantern_view_44b900`,
+`norrath_ctors_ant_lantern_view_44b9f0`,
+`norrath_ctors_ant_lantern_view_44bae0`,
+`norrath_ctors_ant_lantern_view_44bbd0`,
+`norrath_ctors_ant_lantern_view_44bcc0`,
+`norrath_ctors_ant_lantern_view_44bdb0`,
+`norrath_ctors_ant_lantern_view_44bea0`,
+`norrath_ctors_ant_lantern_view_44bf90`,
+`norrath_ctors_ant_lantern_view_44c080`,
+`norrath_ctors_ant_lantern_view_44c260`,
+`norrath_ctors_ant_lantern_view_44c350`,
+`norrath_ctors_ant_lantern_view_44c440`,
+`norrath_ctors_ant_lantern_view_44c530`,
+`norrath_ctors_ant_lantern_view_44cb98`,
+`norrath_ctors_ant_lantern_view_44cc28`,
+`norrath_ctors_ant_lantern_view_44dbe8`,
+`norrath_ctors_ant_lantern_view_44dd68`,
+`norrath_ctors_ant_lantern_view_44e550`,
+`norrath_ctors_ant_lantern_view_44e9d0`,
+`norrath_ctors_ant_lantern_view_44ebb0`,
+`norrath_ctors_ant_lantern_view_44ec40`,
+`norrath_ctors_ant_lantern_view_44ece8`,
+`norrath_ctors_ant_lantern_view_44f6a8`,
+`norrath_ctors_ant_lantern_view_450160`,
+`norrath_ctors_ant_lantern_view_450530`,
+`norrath_ctors_ant_lantern_view_4506b0`,
+`norrath_ctors_ant_lantern_view_46d070`,
+`norrath_ctors_ant_lantern_view_46d300`,
+`norrath_ctors_ant_lantern_view_46dbe0`,
+`norrath_ctors_ant_lantern_view_46dc90`,
+`norrath_ctors_ant_lantern_view_46dca0`,
+`norrath_ctors_ant_lantern_view_46dcb0`,
+`norrath_ctors_ant_lantern_view_46dcc0`,
+`norrath_ctors_ant_lantern_view_46dcd0`,
+`norrath_ctors_ant_lantern_view_46dce0`,
+`norrath_ctors_ant_lantern_view_46dcf0`,
+`norrath_ctors_ant_lantern_view_46dd00`,
+`norrath_ctors_ant_lantern_view_46dd10`,
+`norrath_ctors_ant_lantern_view_46dd20`,
+`norrath_ctors_ant_lantern_view_46dd30`,
+`norrath_ctors_ant_lantern_view_46dd40`,
+`norrath_ctors_ant_lantern_view_46dd50`,
+`norrath_ctors_ant_lantern_view_46dd60`,
+`norrath_ctors_ant_lantern_view_46dd70`,
+`norrath_ctors_ant_lantern_view_46ded0`,
+`norrath_ctors_ant_lantern_view_46dee0`,
+`norrath_ctors_ant_lantern_view_46def0`,
+`norrath_ctors_ant_lantern_view_46edb0`,
+`norrath_ctors_ant_lantern_view_46f120`,
+`norrath_ctors_ant_lantern_view_46f130`,
+`norrath_ctors_ant_lantern_view_46f310`,
+`norrath_ctors_ant_lantern_view_46f320`,
+`norrath_ctors_ant_lantern_view_46f330`,
+`norrath_ctors_ant_lantern_view_46fa28`,
+`norrath_ctors_ant_lantern_view_46fa38`,
+`norrath_ctors_ant_lantern_view_46fa48`,
+`norrath_ctors_ant_lantern_view_46fa58`,
+`norrath_ctors_ant_lantern_view_46fd38`,
+`norrath_ctors_ant_lantern_view_46ffe0`,
+`norrath_ctors_ant_lantern_view_470df8`,
+`norrath_ctors_ant_lantern_view_470e08`,
+`norrath_ctors_ant_lantern_view_470e18`,
+`norrath_ctors_ant_lantern_view_470e28`,
+`norrath_ctors_ant_lantern_view_470e38`,
+`norrath_ctors_ant_lantern_view_470e48`,
+`norrath_ctors_ant_lantern_view_470e58`,
+`norrath_ctors_ant_lantern_view_470e68`,
+`norrath_ctors_ant_lantern_view_470e78`,
+`norrath_ctors_ant_lantern_view_470e88`,
+`norrath_ctors_ant_lantern_view_470e98`,
+`norrath_ctors_ant_lantern_view_470ea8`,
+`norrath_ctors_ant_lantern_view_470eb8`,
+`norrath_ctors_ant_lantern_view_470ff0`,
+`norrath_ctors_ant_lantern_view_471000`,
+`norrath_ctors_ant_lantern_view_471010`,
+`norrath_ctors_ant_lantern_view_471020`,
+`norrath_ctors_ant_lantern_view_471030`,
+`norrath_ctors_ant_lantern_view_471150`,
+`norrath_ctors_ant_lantern_view_4711f0`,
+`norrath_ctors_ant_lantern_view_471208`,
+`norrath_ctors_ant_lantern_view_471218`,
+`norrath_ctors_ant_lantern_view_471230`,
+`norrath_ctors_ant_lantern_view_471248`,
+`norrath_ctors_ant_lantern_view_471260`,
+`norrath_ctors_ant_lantern_view_471278`,
+`norrath_ctors_ant_lantern_view_471ed0`,
+`norrath_ctors_ant_lantern_view_471ee0`,
+`norrath_ctors_ant_lantern_view_471ef0`,
+`norrath_ctors_ant_lantern_view_471f00`,
+`norrath_ctors_ant_lantern_view_471f10`,
+`norrath_ctors_ant_lantern_view_471f20`,
+`norrath_ctors_ant_lantern_view_476ac8`,
+`norrath_ctors_ant_lantern_view_476b70`,
+`norrath_ctors_ant_lantern_view_476b80`,
+`norrath_ctors_ant_lantern_view_476b90`,
+`norrath_ctors_ant_lantern_view_4770d0`,
+`norrath_ctors_ant_lantern_view_4770e8`,
+`norrath_ctors_ant_lantern_view_477798`,
+`norrath_ctors_ant_lantern_view_4777c8`,
+`norrath_ctors_ant_lantern_view_4777d8`,
+`norrath_ctors_ant_lantern_view_480b10`,
+`norrath_ctors_ant_lantern_view_480b14`,
+`norrath_ctors_ant_lantern_view_480b20`,
+`norrath_ctors_ant_lantern_view_480b24`,
+`norrath_ctors_ant_lantern_view_480b28`,
+`norrath_ctors_ant_lantern_view_480b2c`,
+`norrath_ctors_ant_lantern_view_480b30`,
+`norrath_ctors_ant_lantern_view_480b34`,
+`norrath_ctors_ant_lantern_view_480b38`,
+`norrath_ctors_ant_lantern_view_480b3c`,
+`norrath_ctors_ant_lantern_view_480b40`,
+`norrath_ctors_ant_lantern_view_480b44`,
+`norrath_ctors_ant_lantern_view_480b48`,
+`norrath_ctors_ant_lantern_view_480b4c`,
+`norrath_ctors_ant_lantern_view_480ba8`,
+`norrath_ctors_ant_lantern_view_480bac`,
+`norrath_ctors_ant_lantern_view_480bb0`,
+`norrath_ctors_ant_lantern_view_480bb4`,
+`norrath_ctors_ant_lantern_view_480cc8`,
+`norrath_ctors_ant_lantern_view_480ccc`,
+`norrath_ctors_ant_lantern_view_480cd0`,
+`norrath_ctors_ant_lantern_view_480cd4`,
+`norrath_ctors_ant_lantern_view_480cd8`,
+`norrath_ctors_ant_lantern_view_480cdc`,
+`norrath_ctors_ant_lantern_view_480ce0`,
+`norrath_ctors_ant_lantern_view_480ce4`,
+`norrath_ctors_ant_lantern_view_480ce8`,
+`norrath_ctors_ant_lantern_view_480cec`,
+`norrath_ctors_ant_lantern_view_480d28`,
+`norrath_ctors_ant_lantern_view_480e58`,
+`norrath_ctors_ant_lantern_view_480e5c`,
+`norrath_ctors_ant_lantern_view_480e60`,
+`norrath_ctors_ant_lantern_view_480e64`,
+`norrath_ctors_ant_lantern_view_480e68`,
+`norrath_ctors_ant_lantern_view_480e6c`,
+`norrath_ctors_ant_lantern_view_480e70`,
+`norrath_ctors_ant_lantern_view_480f4c`,
+`norrath_ctors_ant_lantern_view_480f50`,
+`norrath_ctors_ant_lantern_view_480f54`,
+`norrath_ctors_ant_lantern_view_480f58`,
+`norrath_ctors_ant_lantern_view_480f5c`,
+`norrath_ctors_ant_lantern_view_480f60`,
+`norrath_ctors_ant_lantern_view_480f64`,
+`norrath_ctors_ant_lantern_view_480f68`,
+`norrath_ctors_ant_lantern_view_480f6c`,
+`norrath_ctors_ant_lantern_view_480f70`,
+`norrath_ctors_ant_lantern_view_480f74`,
+`norrath_ctors_ant_lantern_view_480f78`,
+`norrath_ctors_ant_lantern_view_480f7c`,
+`norrath_ctors_ant_lantern_view_480f80`,
+`norrath_ctors_ant_lantern_view_480f84`,
+`norrath_ctors_ant_lantern_view_48109c`,
+`norrath_ctors_ant_lantern_view_4810a0`,
+`norrath_ctors_ant_lantern_view_4810a4`,
+`norrath_ctors_ant_lantern_view_4810a8`,
+`norrath_ctors_ant_lantern_view_4810ac`,
+`norrath_ctors_ant_lantern_view_4810b0`,
+`norrath_ctors_ant_lantern_view_481160`,
+`norrath_ctors_ant_lantern_view_481164`,
+`norrath_ctors_ant_lantern_view_481168`,
+`norrath_ctors_ant_lantern_view_48116c`,
+`norrath_ctors_ant_lantern_view_481170`,
+`norrath_ctors_ant_lantern_view_481174`,
+`norrath_ctors_ant_lantern_view_481178`,
+`norrath_ctors_ant_lantern_view_48117c`,
+`norrath_ctors_ant_lantern_view_48124c`,
+`norrath_ctors_ant_lantern_view_481250`,
+`norrath_ctors_ant_lantern_view_481254`,
+`norrath_ctors_ant_lantern_view_481258`,
+`norrath_ctors_ant_lantern_view_48125c`,
+`norrath_ctors_ant_lantern_view_481260`,
+`norrath_ctors_ant_lantern_view_481264`,
+`norrath_ctors_ant_lantern_view_481268`,
+`norrath_ctors_ant_lantern_view_48126c`,
+`norrath_ctors_ant_lantern_view_481270`,
+`norrath_ctors_ant_lantern_view_481274`,
+`norrath_ctors_ant_lantern_view_481278`,
+`norrath_ctors_ant_lantern_view_48127c`,
+`norrath_ctors_ant_lantern_view_481280`,
+`norrath_ctors_ant_lantern_view_481284`,
+`norrath_ctors_ant_lantern_view_481288`,
+`norrath_ctors_ant_lantern_view_48128c`,
+`norrath_ctors_ant_lantern_view_481290`,
+`norrath_ctors_ant_lantern_view_481294`,
+`norrath_ctors_ant_lantern_view_481298`,
+`norrath_ctors_ant_lantern_view_4812d8`,
+`norrath_ctors_ant_lantern_view_4812dc`,
+`norrath_ctors_ant_lantern_view_4812e0`,
+`norrath_ctors_ant_lantern_view_4812e4`,
+`norrath_ctors_ant_lantern_view_4812e8`,
+`norrath_ctors_ant_lantern_view_4812ec`,
+`norrath_ctors_ant_lantern_view_4813bc`,
+`norrath_ctors_ant_lantern_view_4813c0`,
+`norrath_ctors_ant_lantern_view_4813c4`,
+`norrath_ctors_ant_lantern_view_4813c8`,
+`norrath_ctors_ant_lantern_view_4813cc`,
+`norrath_ctors_ant_lantern_view_4813d0`,
+`norrath_ctors_ant_lantern_view_4813d4`,
+`norrath_ctors_ant_lantern_view_4814e4`,
+`norrath_ctors_ant_lantern_view_4814e8`,
+`norrath_ctors_ant_lantern_view_4814ec`,
+`norrath_ctors_ant_lantern_view_4814f0`,
+`norrath_ctors_ant_lantern_view_4814f4`,
+`norrath_ctors_ant_lantern_view_4814f8`,
+`norrath_ctors_ant_lantern_view_481540`,
+`norrath_ctors_ant_lantern_view_481544`,
+`norrath_ctors_ant_lantern_view_481704`,
+`norrath_ctors_ant_lantern_view_481708`,
+`norrath_ctors_ant_lantern_view_481890`,
+`norrath_ctors_ant_lantern_view_481894`,
+`norrath_ctors_ant_lantern_view_481898`,
+`norrath_ctors_ant_lantern_view_48189c`,
+`norrath_ctors_ant_lantern_view_4818a0`,
+`norrath_ctors_ant_lantern_view_4818a4`,
+`norrath_ctors_ant_lantern_view_4818a8`,
+`norrath_ctors_ant_lantern_view_48198c`,
+`norrath_ctors_ant_lantern_view_481990`,
+`norrath_ctors_ant_lantern_view_481ab4`,
+`norrath_ctors_ant_lantern_view_481ab8`,
+`norrath_ctors_ant_lantern_view_481abc`,
+`norrath_ctors_ant_lantern_view_481ac0`,
+`norrath_ctors_ant_lantern_view_481ac4`,
+`norrath_ctors_ant_lantern_view_481ac8`,
+`norrath_ctors_ant_lantern_view_482328`,
+`norrath_ctors_ant_lantern_view_48232c`,
+`norrath_ctors_ant_lantern_view_482330`,
+`norrath_ctors_ant_lantern_view_482334`,
+`norrath_ctors_ant_lantern_view_482338`,
+`norrath_ctors_ant_lantern_view_48233c`,
+`norrath_ctors_ant_lantern_view_482340`,
+`norrath_ctors_ant_lantern_view_48239c`,
+`norrath_ctors_ant_lantern_view_482414`,
+`norrath_ctors_ant_lantern_view_482418`,
+`norrath_ctors_ant_lantern_view_48241c`,
+`norrath_ctors_ant_lantern_view_482420`,
+`norrath_ctors_ant_lantern_view_4825bc`,
+`norrath_ctors_ant_lantern_view_4825c0`,
+`norrath_ctors_ant_lantern_view_483e5c`,
+`norrath_ctors_ant_lantern_view_483f88`,
+`norrath_ctors_ant_lantern_view_4844c0`,
+`norrath_ctors_ant_lantern_view_485158`,
+`norrath_ctors_ant_lantern_view_485160`,
+`norrath_ctors_ant_lantern_view_485168`,
+`norrath_ctors_ant_lantern_view_485170`,
+`norrath_ctors_ant_lantern_view_485178`,
+`norrath_ctors_ant_lantern_view_485180`,
+`norrath_ctors_ant_lantern_view_485188`,
+`norrath_ctors_ant_lantern_view_485190`,
+`norrath_ctors_ant_lantern_view_485198`,
+`norrath_ctors_ant_lantern_view_485230`,
+`norrath_ctors_ant_lantern_view_485270`,
+`norrath_ctors_ant_lantern_view_4852d8`,
+`norrath_ctors_ant_lantern_view_4852e0`,
+`norrath_ctors_ant_lantern_view_485398`,
+`norrath_ctors_ant_lantern_view_485420`,
+`norrath_ctors_ant_lantern_view_485438`,
+`norrath_ctors_ant_lantern_view_485440`,
+`norrath_ctors_ant_lantern_view_485480`,
+`norrath_ctors_ant_lantern_view_485488`,
+`norrath_ctors_ant_lantern_view_4854c8`,
+`norrath_ctors_ant_lantern_view_4854d0`,
+`norrath_ctors_ant_lantern_view_4854d8`,
+`norrath_ctors_ant_lantern_view_4854e0`,
+`norrath_ctors_ant_lantern_view_4854e8`,
+`norrath_ctors_ant_lantern_view_4854f0`,
+`norrath_ctors_ant_lantern_view_4854f8`,
+`norrath_ctors_ant_lantern_view_485500`,
+`norrath_ctors_ant_lantern_view_485530`,
+`norrath_ctors_ant_lantern_view_485538`,
+`norrath_ctors_ant_lantern_view_485540`,
+`norrath_ctors_ant_lantern_view_485548`,
+`norrath_ctors_ant_lantern_view_485560`,
+`norrath_ctors_ant_lantern_view_485568`,
+`norrath_ctors_ant_lantern_view_485570`,
+`norrath_ctors_ant_lantern_view_485578`,
+`norrath_ctors_ant_lantern_view_485580`,
+`norrath_ctors_ant_lantern_view_485760`,
+`norrath_ctors_ant_lantern_view_485768`,
+`norrath_ctors_ant_lantern_view_486030`,
+`norrath_ctors_ant_lantern_view_486038`,
+`norrath_ctors_ant_lantern_view_486040`,
+`norrath_ctors_ant_lantern_view_486048`,
+`norrath_ctors_ant_lantern_view_486050`,
+`norrath_ctors_ant_lantern_view_486058`,
+`norrath_ctors_ant_lantern_view_486060`,
+`norrath_ctors_ant_lantern_view_4860e0`,
+`norrath_ctors_ant_lantern_view_4860e8`,
+`norrath_ctors_ant_lantern_view_4860f0`,
+`norrath_ctors_ant_lantern_view_4860f8`,
+`norrath_ctors_ant_lantern_view_486da4`,
+`objectFindEmptySpot__FG6Point3iiPc`,
+`setAnimEventFlags__8Creatureififififi`, `setState__7Critteri`,
+`setWeapons__6Goblin`, `specificInit__7CritterPcT1`, `strcat`,
+`strticmp__FPCcT0`.
+
+## agents/ctors-lava-wraith
+
+Merged (the branch notes carry the five summary sections). Thirty-three
+constructors from `LavaMonster` through `Wraith` with fresh `input_order`
+values 1400 through 1432, 43,004 compiled body bytes (not original-byte
+matches). Each has `host/contract.cpp`; the 33 contracts exit 0 on this
+machine (32 build as written; the Switch contract lacks the
+`NORRATH_CTORS_LAVA_WRAITH_HOST` define its siblings set, so it only builds
+with `-DNORRATH_CTORS_LAVA_WRAITH_HOST=1`, and passes that way). The worker's
+differential emulator runs are private and were not reproduced here. No game
+binary or disassembly listing was committed. As with ctors-ant-lantern, the
+count rises because the constructors reference many game-object helpers and
+original data words (`norrath_ctors_lava_wraith_view_*`) that no package
+defines yet. 1181 function bodies, 1519 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1516 |
+| After | 1671 |
+| Closed | 33 |
+| Opened | 188 |
+
+Closed: `norrath_construct_LavaMonster`, `norrath_construct_MaleDarkElf`,
+`norrath_construct_Minion`, `norrath_construct_Mummy`,
+`norrath_construct_MummyKing`, `norrath_construct_NPC`,
+`norrath_construct_Orc`, `norrath_construct_PushPhysicsProp`,
+`norrath_construct_PushTrigger`, `norrath_construct_RollDoor`,
+`norrath_construct_Rondo`, `norrath_construct_Savepoint`,
+`norrath_construct_Scorpion`, `norrath_construct_SeaMonster`,
+`norrath_construct_Skeleton`, `norrath_construct_Skelight`,
+`norrath_construct_Soul`, `norrath_construct_SpiderQueen`,
+`norrath_construct_StaticFire`, `norrath_construct_SuperOrc`,
+`norrath_construct_Switch`, `norrath_construct_Torch`,
+`norrath_construct_Ulthork`, `norrath_construct_UndeadKnight`,
+`norrath_construct_UndeadKnightClone`, `norrath_construct_Vampire`,
+`norrath_construct_VampireLord`, `norrath_construct_WaterSpout`,
+`norrath_construct_WaveMaker`, `norrath_construct_WeaponRack`,
+`norrath_construct_WebTrap`, `norrath_construct_WoodElfSoldier`,
+`norrath_construct_Wraith`.
+
+Opened: `norrath_body_init`, `norrath_creature_finish_construction`,
+`norrath_creature_set_anim_event_flags`,
+`norrath_creature_set_anim_event_flags_res_map`,
+`norrath_creature_set_parameters`, `norrath_ctors_lava_wraith_view_34b474`,
+`norrath_ctors_lava_wraith_view_42b010`,
+`norrath_ctors_lava_wraith_view_42b330`,
+`norrath_ctors_lava_wraith_view_42b3d8`,
+`norrath_ctors_lava_wraith_view_42b478`,
+`norrath_ctors_lava_wraith_view_42b7e8`,
+`norrath_ctors_lava_wraith_view_42bcb8`,
+`norrath_ctors_lava_wraith_view_42bd18`,
+`norrath_ctors_lava_wraith_view_42c228`,
+`norrath_ctors_lava_wraith_view_42c570`,
+`norrath_ctors_lava_wraith_view_42c630`,
+`norrath_ctors_lava_wraith_view_42c8e0`,
+`norrath_ctors_lava_wraith_view_42ca58`,
+`norrath_ctors_lava_wraith_view_42cbd0`,
+`norrath_ctors_lava_wraith_view_42ccf0`,
+`norrath_ctors_lava_wraith_view_42ce60`,
+`norrath_ctors_lava_wraith_view_42d048`,
+`norrath_ctors_lava_wraith_view_42d138`,
+`norrath_ctors_lava_wraith_view_42d2b0`,
+`norrath_ctors_lava_wraith_view_42d480`,
+`norrath_ctors_lava_wraith_view_42d578`,
+`norrath_ctors_lava_wraith_view_42d650`,
+`norrath_ctors_lava_wraith_view_42d700`,
+`norrath_ctors_lava_wraith_view_42d7d0`,
+`norrath_ctors_lava_wraith_view_42d8d0`,
+`norrath_ctors_lava_wraith_view_42dbf0`,
+`norrath_ctors_lava_wraith_view_42dc40`,
+`norrath_ctors_lava_wraith_view_438c70`,
+`norrath_ctors_lava_wraith_view_448fb0`,
+`norrath_ctors_lava_wraith_view_449310`,
+`norrath_ctors_lava_wraith_view_449550`,
+`norrath_ctors_lava_wraith_view_449820`,
+`norrath_ctors_lava_wraith_view_449940`,
+`norrath_ctors_lava_wraith_view_449c20`,
+`norrath_ctors_lava_wraith_view_44a390`,
+`norrath_ctors_lava_wraith_view_44ab70`,
+`norrath_ctors_lava_wraith_view_44adb0`,
+`norrath_ctors_lava_wraith_view_44aea0`,
+`norrath_ctors_lava_wraith_view_44af90`,
+`norrath_ctors_lava_wraith_view_44b080`,
+`norrath_ctors_lava_wraith_view_44b260`,
+`norrath_ctors_lava_wraith_view_44b350`,
+`norrath_ctors_lava_wraith_view_44b630`,
+`norrath_ctors_lava_wraith_view_44b720`,
+`norrath_ctors_lava_wraith_view_44b810`,
+`norrath_ctors_lava_wraith_view_44c710`,
+`norrath_ctors_lava_wraith_view_44c7a0`,
+`norrath_ctors_lava_wraith_view_44def0`,
+`norrath_ctors_lava_wraith_view_44dfe0`,
+`norrath_ctors_lava_wraith_view_44e2b0`,
+`norrath_ctors_lava_wraith_view_44f3d8`,
+`norrath_ctors_lava_wraith_view_44f5b8`,
+`norrath_ctors_lava_wraith_view_44f798`,
+`norrath_ctors_lava_wraith_view_44fa38`,
+`norrath_ctors_lava_wraith_view_44fb28`,
+`norrath_ctors_lava_wraith_view_44fc18`,
+`norrath_ctors_lava_wraith_view_44fd08`,
+`norrath_ctors_lava_wraith_view_44fdf8`,
+`norrath_ctors_lava_wraith_view_44fee8`,
+`norrath_ctors_lava_wraith_view_450440`,
+`norrath_ctors_lava_wraith_view_46cd20`,
+`norrath_ctors_lava_wraith_view_46cd30`,
+`norrath_ctors_lava_wraith_view_46cd40`,
+`norrath_ctors_lava_wraith_view_46cd50`,
+`norrath_ctors_lava_wraith_view_46cd60`,
+`norrath_ctors_lava_wraith_view_46cd70`,
+`norrath_ctors_lava_wraith_view_46d7b8`,
+`norrath_ctors_lava_wraith_view_470358`,
+`norrath_ctors_lava_wraith_view_4718e8`,
+`norrath_ctors_lava_wraith_view_4718f8`,
+`norrath_ctors_lava_wraith_view_471908`,
+`norrath_ctors_lava_wraith_view_471918`,
+`norrath_ctors_lava_wraith_view_471928`,
+`norrath_ctors_lava_wraith_view_471938`,
+`norrath_ctors_lava_wraith_view_471948`,
+`norrath_ctors_lava_wraith_view_471958`,
+`norrath_ctors_lava_wraith_view_471968`,
+`norrath_ctors_lava_wraith_view_471978`,
+`norrath_ctors_lava_wraith_view_471988`,
+`norrath_ctors_lava_wraith_view_471998`,
+`norrath_ctors_lava_wraith_view_472040`,
+`norrath_ctors_lava_wraith_view_472050`,
+`norrath_ctors_lava_wraith_view_472060`,
+`norrath_ctors_lava_wraith_view_472c10`,
+`norrath_ctors_lava_wraith_view_472c28`,
+`norrath_ctors_lava_wraith_view_472c38`,
+`norrath_ctors_lava_wraith_view_472c50`,
+`norrath_ctors_lava_wraith_view_472c60`,
+`norrath_ctors_lava_wraith_view_472c78`,
+`norrath_ctors_lava_wraith_view_472c88`,
+`norrath_ctors_lava_wraith_view_472ca0`,
+`norrath_ctors_lava_wraith_view_472cb0`,
+`norrath_ctors_lava_wraith_view_472cc8`,
+`norrath_ctors_lava_wraith_view_473f20`,
+`norrath_ctors_lava_wraith_view_473f30`,
+`norrath_ctors_lava_wraith_view_473f40`,
+`norrath_ctors_lava_wraith_view_473f58`,
+`norrath_ctors_lava_wraith_view_473f70`,
+`norrath_ctors_lava_wraith_view_473f88`,
+`norrath_ctors_lava_wraith_view_473fa0`,
+`norrath_ctors_lava_wraith_view_473fb0`,
+`norrath_ctors_lava_wraith_view_473fc0`,
+`norrath_ctors_lava_wraith_view_473fd8`,
+`norrath_ctors_lava_wraith_view_473ff0`,
+`norrath_ctors_lava_wraith_view_474000`,
+`norrath_ctors_lava_wraith_view_474010`,
+`norrath_ctors_lava_wraith_view_474028`,
+`norrath_ctors_lava_wraith_view_474040`,
+`norrath_ctors_lava_wraith_view_474050`,
+`norrath_ctors_lava_wraith_view_474060`,
+`norrath_ctors_lava_wraith_view_474540`,
+`norrath_ctors_lava_wraith_view_474550`,
+`norrath_ctors_lava_wraith_view_474560`,
+`norrath_ctors_lava_wraith_view_474570`,
+`norrath_ctors_lava_wraith_view_477568`,
+`norrath_ctors_lava_wraith_view_477580`,
+`norrath_ctors_lava_wraith_view_477598`,
+`norrath_ctors_lava_wraith_view_4775b0`,
+`norrath_ctors_lava_wraith_view_4775c8`,
+`norrath_ctors_lava_wraith_view_4775d8`,
+`norrath_ctors_lava_wraith_view_4778c8`,
+`norrath_ctors_lava_wraith_view_4778d8`,
+`norrath_ctors_lava_wraith_view_483e28`,
+`norrath_ctors_lava_wraith_view_483f88`,
+`norrath_ctors_lava_wraith_view_484fa0`,
+`norrath_ctors_lava_wraith_view_484fa8`,
+`norrath_ctors_lava_wraith_view_485240`,
+`norrath_ctors_lava_wraith_view_4852a8`,
+`norrath_ctors_lava_wraith_view_485330`,
+`norrath_ctors_lava_wraith_view_4853b8`,
+`norrath_ctors_lava_wraith_view_4853d0`,
+`norrath_ctors_lava_wraith_view_4853d8`,
+`norrath_ctors_lava_wraith_view_4857e8`,
+`norrath_ctors_lava_wraith_view_4857f0`,
+`norrath_ctors_lava_wraith_view_4857f8`,
+`norrath_ctors_lava_wraith_view_485800`,
+`norrath_ctors_lava_wraith_view_485808`,
+`norrath_ctors_lava_wraith_view_485810`,
+`norrath_ctors_lava_wraith_view_485818`,
+`norrath_ctors_lava_wraith_view_485820`,
+`norrath_ctors_lava_wraith_view_485828`,
+`norrath_ctors_lava_wraith_view_4858b8`,
+`norrath_ctors_lava_wraith_view_4858c0`,
+`norrath_ctors_lava_wraith_view_4858c8`,
+`norrath_ctors_lava_wraith_view_486118`,
+`norrath_ctors_lava_wraith_view_486120`,
+`norrath_ctors_lava_wraith_view_486128`,
+`norrath_ctors_lava_wraith_view_486130`,
+`norrath_ctors_lava_wraith_view_601030`,
+`norrath_ctors_lava_wraith_view_601fd0`, `norrath_game_line_get`,
+`norrath_game_line_get_ptr`, `norrath_game_object_e_rand`,
+`norrath_game_object_find_tag_float`, `norrath_item_create`,
+`norrath_item_create_random`, `norrath_lava_monster_get_model`,
+`norrath_light_deactivate`, `norrath_male_dark_elf_init_type`,
+`norrath_male_dark_elf_set_state`, `norrath_map_add_icon`,
+`norrath_mat_transform`, `norrath_mummy_init_type`,
+`norrath_mummy_set_state`, `norrath_mummy_set_weapon`,
+`norrath_object_find_animation`, `norrath_orc_init_type`,
+`norrath_orc_set_weapon`, `norrath_skeleton_init_type`,
+`norrath_skeleton_set_state`, `norrath_skelight_init_weapon`,
+`norrath_skelight_set_state`, `norrath_softdouble_add_2fb5c0`,
+`norrath_softdouble_multiply_2fb680`, `norrath_softdouble_to_float_2fbc20`,
+`norrath_soul_set_state`, `norrath_static_fire_init`, `norrath_strticmp`,
+`norrath_wave_maker_get_wavelet_mat`, `norrath_web_construct`,
+`norrath_wood_elf_soldier_init_type`, `norrath_wood_elf_soldier_set_state`,
+`norrath_world_hitscan`.
+
+## agents/inventory-items
+
+Merged (the branch notes carry the five summary sections). The notes list the
+plan table twice (the second copy adds three units); rows were de-duplicated
+by source and their hashes agree. Twenty-seven units with fresh `input_order`
+values 1433 through 1459: 23 functions (including the file-local `fill`
+helper of `shopStart`, 10,640 compiled body bytes, not original-byte matches)
+plus data and view units. Each unit has a `host_check.cpp`, `host_test.cpp`
+or `host/check.cpp`; all 25 host programs build and exit 0 on this machine
+(25 of 25). The notes' "imports closed" list is the worker's; the official
+closed list is below. No game binary or disassembly listing was committed.
+1204 function bodies, 1546 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1671 |
+| After | 1686 |
+| Closed | 26 |
+| Opened | 41 |
+
+Closed: `_$_4Gold`, `_$_8ItemProp`, `__tf4Gold`, `__tf8ItemProp`, `__tfP8ItemProp`,
+`clone__4Gold`, `clone__8ItemProp`, `invMsgCallback__FPUci`,
+`inventoryGetItemIndex__FiPcPiT2`, `msg_draw__4Gold`, `msg_draw__8ItemProp`,
+`msg_getPokeName__8ItemPropPUsi`, `msg_load__4GoldPc`,
+`msg_load__8ItemPropPc`, `msg_poke__8ItemPropi`, `msg_run__4Gold`,
+`msg_save__4GoldPc`, `msg_save__8ItemPropPc`,
+`norrath_inventory_ability_sound_lump_view`,
+`norrath_inventory_ability_sound_resource_view`,
+`norrath_inventory_reset_resource_names_view`, `queryInventoryItem__FPci`,
+`removeItemFromInventory__Fiiii`, `shopMsgCallback__FPUci`, `shopRunning`,
+`shopStart__Fiii`.
+
+Opened: `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `Pop__6Camera`,
+`__14AnimationStateRC14AnimationState`,
+`animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps`, `animState`,
+`animStatePtr`, `coins`,
+`compareToItem__Q24item11descriptionPQ24item11description`,
+`drinkPotion__6Playeriiii`, `getName__4itemPQ24item11descriptioni`,
+`getValue__4itemPQ24item11description`, `get__11ResourceMap`, `invGrid`,
+`inventory`, `inventoryAdjustAbility__Fii`, `inventoryAdjustSkill__Ficx`,
+`inventoryExit__Fiii`, `inventoryGridDropItem__Fiiciiii`,
+`modelSetHalo__FP7HaloDefi`, `norrath_rtti_ptr`, `norrath_ti_4Prop`,
+`pack__4itemPQ24item11description`, `playerLogInventory__Fi`,
+`playerMaybeGetItem__FiPQ24item11description`, `playerNetDead__Fv`,
+`resetPlayerAnimations__Fi`, `setupHalo__4itemPQ24item11descriptionf`,
+`shop`, `shopBuy__FcPQ24item11description`, `shopDisableMouse`,
+`shopFrame__Fv`, `shopIntro`,
+`shopItemSetAttributes__FiiPcPQ24item11description`, `shopList`,
+`shopMouseDecay`, `shopTick`, `startFrame`,
+`unequipItem__FiPQ24item11description`,
+`unpack__4itemPQ24item11description`, `ustrcat__FPUsPc`,
+`waitingForStreamSpool`.
+
+
+Second check by another pass over the same merge: the closed (26), opened (41)
+and official counts (1671 to 1686) reproduce independently on this tip. One
+host check is unsound under the sanitizers although it exits 0 without them:
+`inventory-items-msg-load-itemprop/host_check.cpp` stores to `order[steps++]`
+past the end of its own 4-entry array (the Prop loader stub is called more
+than four times), which ASan/UBSan flag at line 25. It is a defect in the check's
+stub, not in the source, and does not change the verdict. A scripted mutation
+pass (one numeric literal changed at a time) was killed by the checks in
+every unit that has literals: 10/10 `msg_load__8ItemPropPc` and `_$_4Gold`,
+9/10 `msg_draw__4Gold`, `removeItemFromInventory__Fiiii` and `shopStart__Fiii`,
+5/10 `invMsgCallback__FPUci`, 4/10 `msg_run__4Gold`.
+
+## agents/save-and-quests
+
+Merged (the branch notes carry the five summary sections). Twenty-two of the
+23 units were selected with fresh `input_order` values 1546 through 1567: 20
+functions (including the file-local `call_slot` helper of `msg_load__8Creature`;
+6012 compiled body bytes, not original-byte matches) and three data words.
+Each has a `host_check.cpp`; all 23 host programs build and exit 0 here.
+save-and-quests-lever-load was **not** selected: the link fails with a
+multiple definition of `msg_load__5LeverPc`, already defined by input 910
+(an earlier package). Its files stay in the source snapshot. Which body should
+own the name is for the authors to decide. No game binary or disassembly
+listing was committed. 1224 function bodies, 1568 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1686 |
+| After | 1679 |
+| Closed | 22 |
+| Opened | 15 |
+
+Closed: `AsciiString2Sjis__FPUcPUs`, `addQuestToLog__FPcT0`, `amx_GetAddr`,
+`amx_GetString`, `dataHandle`, `msg_load__10GameObjectPc`,
+`msg_load__16CosmeticPropAnimPc`, `msg_load__4PropPc`,
+`msg_load__8CreaturePc`, `msg_save__10GameObjectPc`,
+`msg_save__16CosmeticPropAnimPc`, `msg_save__4PropPc`,
+`msg_save__8CreaturePc`, `removeQuestFromLog__FPc`,
+`scriptAddDeferedCall__FPc`, `scriptGetGameState__FPc`,
+`scriptInPostAction`, `scriptSetGameState__FPci`,
+`scriptSetPostAction__FPc`, `scriptStart__FPc`, `stateData`,
+`textHandler__FPUci`.
+
+Opened: `Ascii2Sjis__FUc`, `__tf3Orc`, `amx_Exec`, `amx_FindPublic`, `deferedCall`,
+`inMsg`, `lilog2__Fl`, `msgTimeout`, `nextNmDeferedCalls`,
+`objectAddToSlowRunList__FP10GameObject`, `outMsg`,
+`quatNormalize__FP4Quat`, `quatToMat__FP8Matrix34P4Quat`, `scriptFrame`,
+`waiting`.
+
+## agents/prop-poke-clone
+
+Merged (the branch notes carry the five summary sections). Twenty-seven of
+the 37 units were selected with fresh `input_order` values 1568 through 1594
+(27 functions, 7456 compiled body bytes, not original-byte matches). Ten
+`clone__*` units were **not** selected: `clone__3Cat`, `clone__9CdEyeball`,
+`clone__7Counter`, `clone__8Creature`, `clone__10GameObject`, `clone__5Lever`,
+`clone__13PokeReflector`, `clone__11SmallSpider`, `clone__5Timer` and
+`clone__13TriggerParams` are already defined by inputs 958 through 967 from an
+earlier package, so selecting both would be a multiple definition. Their files
+stay in the source snapshot. Which body should own those names is for the
+authors to decide. All 37 `host_check.cpp` programs build and exit 0 here.
+No game binary or disassembly listing was committed. 1251 function bodies,
+1595 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1679 |
+| After | 1656 |
+| Closed | 28 |
+| Opened | 5 |
+
+Closed: `_$_13UserParamProp`, `_$_16CosmeticPropAnim`, `_$_4Prop`, `_$_7Player1`,
+`__tf13UserParamProp`, `__tf16CosmeticPropAnim`, `__tf4Prop`,
+`__tf7Player1`, `__tf8AutoProp`, `__tfP4Prop`, `__tfP6PhProp`,
+`clone__13UserParamProp`, `clone__16CosmeticPropAnim`, `clone__4Prop`,
+`clone__7Player1`, `getModel__10GameObject`,
+`msg_getPokeName__10GameObjectPUsi`, `msg_getPokeName__13PokeReflectorPUsi`,
+`msg_getPokeName__13UserParamPropPUsi`, `msg_getPokeName__5LeverPUsi`,
+`msg_getPokeName__8CreaturePUsi`,
+`msg_moveCollision__10GameObjectPP10GameObject`, `msg_poke__10GameObjecti`,
+`msg_poke__13PokeReflectori`, `msg_poke__13UserParamPropi`,
+`msg_poke__5Leveri`, `msg_route__10GameObjecti`, `norrath_ti_4Prop`.
+
+Opened: `__tf6PhProp`, `__tf9MummyKing`, `eRand__10GameObject`,
+`findTagFloat__10GameObjectPci`, `norrath_ti_6PhProp`.
+
+## agents/prop-run-draw
+
+Merged (the branch notes carry the five summary sections, plus a host-check
+gaps section). Twenty-one units with fresh `input_order` values 1595 through
+1615: 23 emitted functions (including two file-local `set_state` helpers;
+10,600 compiled body bytes, not original-byte matches). No duplicate
+definition was found. Each unit has a `host_check.cpp`; all 21 build and exit
+0 here. The notes' own "host-check gaps" section is the author's account of
+what the checks do not cover and still applies. No game binary or
+disassembly listing was committed. 1274 function bodies, 1616 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1656 |
+| After | 1658 |
+| Closed | 21 |
+| Opened | 23 |
+
+Closed: `msg_draw__10GameObject`, `msg_draw__13UserParamProp`,
+`msg_draw__14GnomeNavigator`, `msg_draw__16CosmeticPropAnim`,
+`msg_draw__4Prop`, `msg_draw__5Lever`, `msg_draw__7Natasla`,
+`msg_draw__9CdEyeball`, `msg_run__10GameObject`, `msg_run__11SmallSpider`,
+`msg_run__13UserParamProp`, `msg_run__14GnomeNavigator`,
+`msg_run__16CosmeticPropAnim`, `msg_run__3Cat`, `msg_run__4Prop`,
+`msg_run__4Trap`, `msg_run__5Lever`, `msg_run__7Mermaid`,
+`msg_run__9CdEyeball`, `msg_trigger__10GameObjecti`,
+`msg_trigger__7Counteri`.
+
+Opened: `addTurnAnimation__3Cat`, `bExitStatePersueIdle__8Creature`,
+`bFarFromHome__8Creature`,
+`gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb`,
+`lightSetAmbientOffset__FPs`, `matIdent__FP8Matrix34`,
+`matMakeTransYawScale__FP8Matrix34G6Point3sf`, `matRot__FP8Matrix34is`,
+`matTrans__FP8Matrix34fff`, `matTransform__FP6Point3P8Matrix44T0`,
+`modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec`, `modelGetC
+harAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f`,
+`move2__8CreatureG6Point3`, `newDamageHandler__8CreatureP12_modelHeader`,
+`objectActiveProcessing__FP10GameObjectii`, `slideBack__8Creaturef`,
+`smartWander__8Creature`, `steerAndRouteToPosition__8CreatureG6Point3`,
+`subTurnAnimation__3Cat`, `switchToWalk__3Cat`,
+`worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`,
+`worldFindStandHeight__FP12_worldHeaderG6Point3f`, `worldViewMatrix`.
+
+## agents/w8-actor-virtuals-a
+
+Merged (the branch notes carry the five summary sections). Thirty units with
+fresh `input_order` values 1616 through 1645, all with a `host_check.cpp`:
+13 destructors, 14 type-info functions, `_$_14AnimationState`,
+`_$_15FxCreatureState`, and one more destructor (30 functions in total, 3320
+compiled body bytes, not original-byte matches). All 30 host programs pass
+here (30 of 30); `_$_14AnimationState`'s check only builds as intended with
+`-DNORRATH_W8AV_HOST` (without it the unit reads raw 32-bit words and
+segfaults on a 64-bit host, which is a harness build detail, not a failure of
+the check). The worker's claim (30 closed, 3 opened) reproduces exactly. No
+game binary or disassembly listing was committed. 1304 function bodies, 1646
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1658 |
+| After | 1631 |
+| Closed | 30 |
+| Opened | 3 |
+
+Closed: `_$_10HateBridge`, `_$_10Teleporter`, `_$_11MissileTrap`,
+`_$_14AnimationState`, `_$_15FxCreatureState`, `_$_15PushPhysicsProp`,
+`_$_7Shooter`, `_$_7Trigger`, `_$_8FireBomb`, `_$_8GothTrap`,
+`_$_8HackDoor`, `_$_8HateGate`, `_$_8HateHole`, `_$_8HateInto`,
+`_$_9Container`, `_$_9WorldPart`, `__tf10HateBridge`, `__tf10Teleporter`,
+`__tf11MissileTrap`, `__tf15PushPhysicsProp`, `__tf3NPC`, `__tf7Shooter`,
+`__tf7Trigger`, `__tf8FireBomb`, `__tf8GothTrap`, `__tf8HackDoor`,
+`__tf8HateGate`, `__tf8HateHole`, `__tf8HateInto`, `__tf9Container`.
+
+Opened: `_$_8AutoProp`, `__ti8AutoProp`, `worldReleaseDoor__FP12_worldHeaderi`.
+
+## agents/w8-actor-virtuals-b
+
+Merged (the branch notes carry the five summary sections). Thirty units with
+fresh `input_order` values 1646 through 1675 (31 emitted functions, 8204
+compiled body bytes, not original-byte matches): clone, collision, draw,
+hurt, load, poke, run and type-info methods of the actor classes. Each has a
+`host_check.cpp`; all 30 build and exit 0 here (30 of 30). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1335 function bodies, 1676 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1631 |
+| After | 1613 |
+| Closed | 30 |
+| Opened | 12 |
+
+Closed: `__tf9WorldPart`, `advanceState__8AutoProp`, `clone__10Teleporter`,
+`clone__11MissileTrap`, `clone__15PushPhysicsProp`, `clone__7Shooter`,
+`clone__7Trigger`, `clone__8FireBomb`, `clone__9Container`,
+`clone__9WorldPart`, `getModel__10AutoObject`,
+`msg_collision__15PushPhysicsPropP10GameObject`,
+`msg_collision__9ContainerP10GameObject`, `msg_draw__10AutoObject`,
+`msg_draw__10Teleporter`, `msg_draw__15PushPhysicsProp`,
+`msg_draw__9Container`, `msg_getPokeName__8AutoPropPUsi`,
+`msg_getPokeName__9ContainerPUsi`, `msg_hurt__8AutoPropfP10GameObjecti`,
+`msg_hurt__9ContainerfP10GameObjecti`, `msg_load__15PushPhysicsPropPc`,
+`msg_load__7ShooterPc`, `msg_load__7TriggerPc`, `msg_load__8AutoPropPc`,
+`msg_load__9ContainerPc`, `msg_poke__8AutoPropi`, `msg_poke__9Containeri`,
+`msg_run__10HateBridge`, `msg_run__10Teleporter`.
+
+Opened: `__6PhPropG6Point3PcN22liPQ24item11descriptionf`, `addEffect__FiG6Point3`,
+`bodyInit__FP5_bodyfffff`, `bodyUpdateMatrix__FP5_body`,
+`lightSetAmbientColor__FPs`, `lightSetAmbientOnly__Fv`,
+`modelSetShadowScale__Ff`, `objectAddToRunList__FP10GameObject`,
+`objectAlwaysDraw__FP10GameObject`, `objectCancelAllAlwaysDraw__Fv`,
+`teleportParticle1`, `teleportParticle2`.
+
+## agents/w8-core-loop-a
+
+Merged (the branch notes carry the five summary sections). Thirty-four units
+with fresh `input_order` values 1676 through 1709: 19 emitted functions (3484
+compiled body bytes, not original-byte matches, including static-initializer
+functions) and data words. Each unit has a host check; all 34 build and exit
+0 here (34 of 34). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1354 function bodies, 1710
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1613 |
+| After | 1592 |
+| Closed | 31 |
+| Opened | 10 |
+
+Closed: `_GLOBAL_$I$_3map$mapOffset`,
+`_GLOBAL_$I$animRemoveNonpermanentAnimations__FP14AnimationState`,
+`_GLOBAL_$I$cutMode`, `_GLOBAL_$I$engineLastAITime`,
+`_GLOBAL_$I$mcDisableStartupScript`, `_GLOBAL_$I$netInterfaceIsUp`,
+`_GLOBAL_$I$noAmbientOffset`, `_GLOBAL_$I$route_generation`, `act1`, `act2`,
+`act3`, `act4`, `act5`, `actionCoolOff`, `ambientOnly`, `anim`,
+`animFrame__Fv`, `animLoadingComplete`, `animStarted`, `c.1089`,
+`cleanUp__Fv`, `compositeAlpha`, `convertEnd__Fi`, `copyScreen`,
+`copyScreenAlpha`, `copyScreenColor`, `copyScreenFrame`,
+`coreClearNetLogFuck`, `coreGameStep__Fii`, `coreHeadsetResetTimer`,
+`coreInterfaceBrightness`.
+
+Opened: `__tf11PushTrigger`, `__tf9Savepoint`, `compImmediateCompressor`,
+`compImmediateDecompressor`, `compLocalCompressor`, `compLocalDecompressor`,
+`gameCheckForDeathScreen__Fv`, `groupVolumeScale`, `padRunFrame__Fv`,
+`tempPlayerStruct`.
+
+## agents/w8-core-loop-b
+
+Merged (the branch notes carry the five summary sections). Ten units with
+fresh `input_order` values 1710 through 1719 (the notes' plan entries are
+pretty-printed JSON blocks without `input_order`; those entries were taken in
+listed order): 9 emitted functions, 5848 compiled body bytes, not
+original-byte matches, plus a data unit. Each unit has a host check; all 10
+build and exit 0 here (10 of 10). No duplicate definition was found at link
+time. No game binary or disassembly listing was committed. 1363 function
+bodies, 1720 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1592 |
+| After | 1609 |
+| Closed | 31 |
+| Opened | 48 |
+
+Closed: `coreInterfaceFadeUpVal`, `coreInterfaceFadeUp__Fi`,
+`coreLevelCommentTimer`, `coreLoadingStart`, `coreStartSwitchScene__Fi`,
+`coreSwitchScene`, `coreSwitchSceneStart`, `correction`, `curFocus`,
+`curPlaySeconds`, `currentLayerDir`, `currentRunningObject`, `cutClear__Fv`,
+`cutRunFrame__Fb`, `delayCount`, `disableVolumetricLighting`,
+`doNewWorld__FPc`, `drawAutoMap__Fv`, `drawBustCur`, `drawBustMax`,
+`drawBustOn`, `drawBustTexName`, `drawBustTitle`, `drawCompassOn`,
+`drawCompassPoint`, `drawCompassTitle`, `drawDome__Fv`, `drawListClear__Fv`,
+`dummyTex`, `earlyInit__3mapP12_worldHeader`, `endInit`.
+
+Opened: `GetTargetNum__6Camera`, `SetCutWasActive__6Camera`, `_3map$mapOffset`,
+`_3map$mapheight`, `_3map$maptiles`, `_3map$mapwidth`, `advanceFrame__Ff`,
+`animationLoadPos`, `animationLoading`, `cdIsBusy__Fv`,
+`cdLoadAsync__FPcPvT0ii`, `cutCameraPos`, `cutInitScene__FP9_cutscene`,
+`cutStop__Fv`, `dialogPacket`, `displayDialogPos`, `dlgDir`, `domeLump`,
+`drawCharacterCallBack__FiP6Point3PsPiN23`,
+`draw__3mapP12_worldHeaderfffffffG6Point2PFiP6Point3PsPiPiPi_is`, `flags`,
+`isRevealed__3mapv`, `lightDisableLocalLights__Fv`,
+`lightGlobalCharLightScale__Ff`, `mapButtonWasDown`, `mapObjList`,
+`mapScale`, `mapScissorX`, `mapScissorY`, `mapX`, `mapY`,
+`matMakeTrans__FP8Matrix34G6Point3`, `modelSetNoZWrite__Fv`, `myFOV`,
+`myPitch`, `myRoll`, `myYaw`, `netGetLocalObject__FP8Creature`, `nmActions`,
+`nmDialogNodes`, `norrath_softdouble_compare_2fba48`,
+`revealMap__3mapG6Point3`, `scaleScale`, `setCamera__Ff`,
+`thereIsACutPlayer`, `validLocalPlayer`, `willDraw__3mapP12_worldHeaderf`,
+`worldSetViewMatricies__FP6Point3P8Matrix34`.
+
+## agents/w8-core-loop-c
+
+Merged (the branch notes carry the five summary sections). Thirty-one units
+with fresh `input_order` values 1720 through 1750: 11 emitted functions (1004
+compiled body bytes, not original-byte matches) and 20 data-only units. Each
+unit has a host check; all 31 build and exit 0 here (31 of 31). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1374 function bodies, 1751 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1609 |
+| After | 1593 |
+| Closed | 31 |
+| Opened | 15 |
+
+Closed: `endTimer`, `endTimer.1059`, `engineDisable30fps`, `engineFullFrameMode`,
+`engineGetAIStepCount__Fv`, `engineLastAITime`,
+`engineLoadEnvTex__FP8_texture`, `engineReboot__Fv`, `engineScissory1`,
+`engineScissory2`, `engineScreenSlide`, `engineSetBlur__Fi`,
+`engineYOffset`, `fadeIconY`, `fadeTimer`, `firstTime`, `flaredIn`,
+`flaredOut`, `frameNumWrapped__Fv`, `gameAutoMapMode`, `gameCameraShake`,
+`gameCheckNoSaveZone__Fv`, `gameCreatureThinkSpinner`, `gameDeathStart__Fi`,
+`gameDeathTimer`, `gameDeathTimerSingle`, `gameGetFullLevelName__FPc`,
+`gameItemTreasureRamp__Fv`, `gameLevelLoading`, `gameLineClear__Fv`,
+`gameLineDebugDraw__Fv`.
+
+Opened: `UnpreparePowerOff__Fv`, `_$_4Line`, `checkSave__FP10GameObject`,
+`deathNetHack`, `deathState`, `frameNumWrappedPS__FP14ParticleSystem`,
+`gameDeath__Fv`, `gameLineCount`, `gameLines`, `nextFrameDrop`,
+`objectIterateRunLists__FPFP10GameObject_v`, `saveOk`, `sceSifExitCmd`,
+`soundQuiet__Fv`, `texTerminateThread__Fv`.
+
+## agents/w8-core-loop-d
+
+Merged (the branch notes carry the five summary sections). Thirty-two units
+with fresh `input_order` values 1751 through 1782: 16 emitted functions (4972
+compiled body bytes, not original-byte matches) and data words. All 18 host
+programs under the package build and exit 0 here; the snapshot checker
+accepts a host reference for every unit. No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1390 function
+bodies, 1783 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1593 |
+| After | 1629 |
+| Closed | 31 |
+| Opened | 67 |
+
+Closed: `gameMiscTaskSync__Fv`, `gamePopConfig__Fv`, `gamePushConfig__Fv`,
+`gameSetObjectVis__Fv`, `gameShowEnemiesInMap`, `gameSomeoneInShop__Fv`,
+`getLongLevelName__FPc`, `initAnimation__Fv`, `initLump__FPv`, `init__Fv`,
+`interfaceMode`, `interfaceOn`, `jumpGateClear__Fv`, `jumping`,
+`lastWarpPos`, `layer0Dir`, `layer1Dir`, `levelSeeds`,
+`loadingScreenRequestExit`, `makeUnscrambleTable__Fv`, `noMonsters`,
+`norrath_ctors_ant_lantern_view_44e940`,
+`norrath_ctors_ant_lantern_view_44ea78`,
+`norrath_ctors_ant_lantern_view_453328`, `norrath_factory_prop_vtable`,
+`optTbl`, `pan__FG6Point3ffPfT3`, `paramRunning__Fv`, `plotRouteTask__Fv`,
+`rejectForeignModules__Fv`, `resetTextBody__Fv`.
+
+Opened: `DLG_GetDialogCreature__Fv`, `_$_11AutoChestLP`, `_$_15AutoContainerLP`,
+`_$_4Boat`, `__3NPCG6Point3sPcN33ifPPc`, `__tf11AutoChestLP`,
+`__tf15AutoContainerLP`, `__tf4Boat`,
+`animAddToEnd__FP14AnimationStateP15AnimationHeaderi`,
+`animMapAnimationSounds__FP15AnimationHeader`, `animUseBuffer`, `bodyAlpha`,
+`changeBeard__Fii`, `changeHairColor__Fii`, `changeHairStyle__Fii`,
+`changeSkin__Fii`, `curPlayer`, `doMyUniqueForces__4Boat`, `dummyList`,
+`getHairAndSkin__Fi`, `headerAlpha`, `hermDeltaScale`, `hermiteTime`,
+`hpos`, `hvecs`, `initFile__FPcPvi`, `initLightInfo__Fv`, `initNamePad__Fv`,
+`initPreSelect__Fv`, `jumpGateTaskDraw__Fv`, `jumpGateTaskRun__Fv`,
+`lightMats`, `memmove`, `msg_collision__13AutoContainerP10GameObject`,
+`msg_draw__11AutoChestLP`, `msg_draw__15AutoContainerLP`,
+`msg_getPokeName__13AutoContainerPUsi`, `msg_getPokeName__9AutoChestPUsi`,
+`msg_hurt__13AutoContainerfP10GameObjecti`, `msg_load__13AutoContainerPc`,
+`msg_load__9AutoChestPc`, `msg_poke__11AutoChestLPi`,
+`msg_poke__13AutoContaineri`, `msg_run__11AutoChestLP`,
+`msg_run__15AutoContainerLP`, `msg_save__13AutoContainerPc`,
+`msg_save__9AutoChestPc`, `nameTags`, `needEnforce`, `npcLumpName`,
+`objectVisCount`, `objectVisPoints`, `objectVisUseCamCenter`,
+`playerCheckRecallHotKey__Fv`, `playerRecallSpell__Fv`, `playerSelectInfo`,
+`pnums`, `requestToExit`, `set__4Boat`, `startExitFade`, `strrchr`,
+`targetObjs`, `targets`, `textBodyLen`, `unscrambleTable`,
+`worldPlotRouteProcess__Fi`, `yaws`.
+
+## agents/w8-frontend-menu-a
+
+Merged (the branch notes carry the five summary sections). Thirteen units
+with fresh `input_order` values 1783 through 1795: 11 emitted functions (3516
+compiled body bytes, not original-byte matches) and data words. The notes'
+plan table lists paths without the `sources/` prefix; the prefix was added.
+All 13 host checks build and exit 0 here (13 of 13). The notes claim 24 of 25
+named imports closed; the official link shows 24 names leaving the list.
+No game binary or disassembly listing was committed. 1401 function bodies,
+1796 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1629 |
+| After | 1608 |
+| Closed | 24 |
+| Opened | 3 |
+
+Closed: `Password__C13VIGameOptions`, `Username__C13VIGameOptions`,
+`_GLOBAL_$D$optionMenu`, `_GLOBAL_$I$optionMenu`, `body`, `cheatOn`,
+`colorLevelNames__FP4Menu`, `controlPaused`, `cursorTween`,
+`debugClearStartMenu__Fv`, `debugRecall__Fi`, `difficultyMenu`,
+`frontEndCleanUp__Fi`, `fullLaunchOK`, `gameControlDontResetPause`,
+`gameTypeMenu`, `helpMessageOn`, `hudNoController`,
+`hudRunNoControllers__Fi`, `hudRunYesNo__FPUsiiii`, `kickMenu`,
+`kickMenuList`, `language`, `letterAtATime`.
+
+Opened: `MC_NameToAct__FPc`, `__12RecallEffectG6Point3`,
+`fontPrintWrapCenteredu__FiiPUsiiii`.
+
+## agents/w8-frontend-menu-b
+
+Merged as a **partial package**: the notes carry the observed/inferred
+separation, the plan table and a summary with closed and opened imports, but
+not separate "authored but never executed" and "unknown" sections. Every
+selected function has a `host_check.cpp`; all 9 build and exit 0 here. Nine
+of the 10 units were selected with fresh `input_order` values 1796 through
+1804 (7 emitted functions, 5004 compiled body bytes, not original-byte
+matches; the notes' plan table has no object names, so `<stem>.o` was used).
+w8-frontend-menu-b-menu-words is a data-only unit with no host check at all,
+and the snapshot checker requires a host file for every selected record, so
+it stays in the snapshot, unselected, until a check exists; that is why
+`norrath_menu_local_t_004844e8` and `norrath_menu_word_00484514` appear as
+opened. No game binary or disassembly listing was committed. 1408 function
+bodies, 1805 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1608 |
+| After | 1589 |
+| Closed | 24 |
+| Opened | 5 |
+
+Closed: `menuDraw__FiiP4MenuUiUiP4FontP8_texturei`, `menuModeRebootQuestion`,
+`menuNetClientServer`, `menuNetImportOrNewGame`, `menuNetImportOrNewPlayer`,
+`menuRun__FP4MenuP3padPi`, `nameChars`, `optionCount`, `optionIndex`,
+`optionLinePos`, `optionMenu`, `optionsShowing`, `pauseProcess__Fv`,
+`pushPause__Fv`, `ranBrowser`, `ranConfig`, `scrollEnd`, `scrollSpan`,
+`scrollTarget`, `scrollY`, `showMore`, `showOptions`, `stopCredits__Fv`,
+`title`.
+
+Opened: `lerpColor__FUiUif`, `norrath_menu_local_t_004844e8`,
+`norrath_menu_word_00484514`, `pauseStack`, `paused`.
+
+## agents/w8-net-play-a
+
+Merged (the branch notes carry the five summary sections). Eighteen units
+with fresh `input_order` values 1805 through 1822: 12 emitted functions (2692
+compiled body bytes, not original-byte matches) and data words. All 18 host
+checks build and exit 0 here (18 of 18). No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1420 function
+bodies, 1823 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1589 |
+| After | 1560 |
+| Closed | 35 |
+| Opened | 6 |
+
+Closed: `_GLOBAL_$I$nmPlayers`, `_GLOBAL_$I$playerSelectSuccessful`,
+`_GLOBAL_$I$playerStartPos`, `_GLOBAL_$I$wrathHammerCount`, `abilityTable`,
+`activePlayer`, `addSpell__8CreatureP5Spell`, `charAmbient`, `charDirect`,
+`charDirect2`, `charDirectDir`, `charDirectDir2`, `charScaleB`,
+`charScaleG`, `charScaleR`, `commInit__Fv`, `commMenu`, `commProcess__Fv`,
+`commandQueue`, `enumerateAlivePlayers__Fv`, `frameStatePacket`,
+`gameHidePlayers`, `gamePlayersPresent`, `givePlayerExperience__Fii`,
+`globalCharLightScale`, `hudNetLevelWarp__FPc`, `isNetGame`,
+`issueCommand__Fv`, `lastNmLocalPlayersAlive`, `launchPlayerSelect__Fv`,
+`localNmPlayersAlive`, `nmPlayersAlive`, `playerSelectSuccessful`,
+`playersAlive`, `validLocalPlayer`.
+
+Opened: `__11ParticleDefiiiiiiiifffiiiPFPv_v`, `commProcessReal__Fv`, `lgAudClose`,
+`netGetLocalPlayerNmSafe__Fi`, `sceCdRead`, `sceCdReadIOPm`.
+
+## agents/w8-pad-memcard-a
+
+Merged (the branch notes carry the five summary sections). Twenty-seven units
+with fresh `input_order` values 1823 through 1849: 20 emitted functions
+(18,264 compiled body bytes, not original-byte matches) and data words. Each
+unit has a `host_contract.cpp`; all 27 build and exit 0 here (27 of 27). Two
+of them (`mc-reset-ram-slot`, `async-load-game`) need `-fno-builtin`, as the
+notes say; without it one of them fails to run. No duplicate definition was
+found at link time. The notes' plan entries carried their own `input_order`
+values; fresh ones were assigned. No game binary or disassembly listing was
+committed. The count rises because the memory-card calls pull in many
+original data words and `sceMc*` imports that no package defines yet. 1440
+function bodies, 1850 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1560 |
+| After | 1607 |
+| Closed | 26 |
+| Opened | 73 |
+
+Closed: `MCA_FileOpen`, `MCA_Formatted`, `MCA_Present`, `MCA_Process__FPi`,
+`MCA_Reset__Fv`, `MC_ChangePlayers__FiPUsiii`, `MC_FrontEndImport`,
+`MC_HasThisLevelBeenSaved__Fv`, `MC_Kick__Fv`, `MC_ResetRamSlot__Fv`,
+`MC_SetNewAct__Fi`, `MC_SpawnPoint`, `asyncChangePlayers__Fv`,
+`asyncConfigure__Fv`, `asyncLoadGame__Fv`, `asyncSaveConfigSilent__Fv`,
+`asyncSaveConfig__Fv`, `asyncSaveGame__Fv`,
+`frontendInitControllerConfig__Fi`, `frontendRunControllerConfig__Fv`,
+`mcProcessKick__Fv`, `mcRunCmdNo`, `netBlankControllerButtons__Fiii`,
+`netBlankController__Fii`, `netLocalPad`, `neverSaveAlwaysLoadFromLump__FPc`.
+
+Opened: `MCA_Busy__Fv`, `MCA_DirContents`, `MCA_Result`, `__extendsfdf2`,
+`askedForConfigLoad`, `browserSlot`, `buttonValues`, `cardType`,
+`commandQueueEmpty__Fv`, `configFileName`, `configFormatted`,
+`configLumpLoaded`, `configMode`, `configStrings`, `curSel`,
+`drawProgress__Fv`, `finishFrameCount`, `fontPrintWrapCentered__FiiPciiii`,
+`getBestSlotName__FPc`, `hudHeaderUni`, `inGameConfigShuttingDown`,
+`initializedLump`, `jumpGateHubReset__Fi`, `loadName`,
+`loadPlayerInfo__FiPiP12playerStruct`, `loadRamSlot__Fv`, `lumpAdd__FPvPCc`,
+`memcardTitle__FPUs`, `modifyRamSlotForNetSave__Fv`, `myLumpBuffer`,
+`neverSave`, `newSel`, `nullBuff`, `pcLaunch`, `pcNmPlayers`, `pcTitle`,
+`playerChangeOldPos`, `playerChangeOldYaw`, `playerGetMarkerColor__Fii`,
+`playerRace`, `playerStatus`, `popPause__Fi`, `prepareBrowserUndo__Fv`,
+`quickLoadStamp`, `raceStrings`, `ramSlot`, `resetWithClose__Fv`,
+`runBrowser__FPUs`, `runConfigure__FiPUsi`, `sceMcChdir`, `sceMcClose`,
+`sceMcDelete`, `sceMcFormat`, `sceMcGetDir`, `sceMcMkdir`, `sceMcOpen`,
+`sceMcRead`, `sceMcSeek`, `sceMcWrite`, `serviceResult__FP8queueCmdPi`,
+`slotInfoHeaders`, `sortedDir`, `sortedDirCount`, `startProgress__Fv`,
+`strchr`, `t`, `tempBuffer`, `texStrings`, `textureLockCacheBuffer__Fv`,
+`texturePrepareToLockCacheBuffer__Fv`, `textureReleaseCacheBuffer__Fv`,
+`unModifyRamSlotForNetSave__Fv`, `undoBrowser__Fv`.
+
+## agents/w8-pad-memcard-b
+
+Merged (the branch notes carry the five summary sections; their plan table is
+plain text without backticks). Eleven units with fresh `input_order` values
+1850 through 1860: 6 emitted functions (4488 compiled body bytes, not
+original-byte matches) and data words. All 11 host checks build and exit 0
+here (11 of 11). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1446 function bodies, 1861
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1607 |
+| After | 1615 |
+| Closed | 11 |
+| Opened | 19 |
+
+Closed: `padBigRumble__Fiff`, `padClear__Fv`, `padFrame.756`,
+`padGetUnprocessedData__FiP18padUnprocessedData`, `padIndexMap`,
+`padProcessData__FP3padP18padUnprocessedDataP12padStateData`,
+`resetQuickLoad__Fv`, `saveConfigEndGame`, `tapCount`, `updateRamSlot__Fii`,
+`whichPad`.
+
+Opened: `MC_SaveLevelEntities__FPc`, `Save__6CameraPc`, `actAlignData`,
+`actSendData`, `convertPointersToIndicies__Fi`, `jumpGateSave__FPc`,
+`needActAlign`, `padFilter`, `processAnalogInput__FiiPfT2`, `rdata`,
+`rumphole`, `scePadEnterPressMode`, `scePadInfoPressMode`, `scePadRead`,
+`scePadSetActAlign`, `scePadSetActDirect`, `scePadSetMainMode`,
+`scriptGameStateEntry__FiPi`, `startInhibit`.
+
+## agents/w8-runtime-libc-a
+
+Merged (the branch notes carry the five summary sections). Twenty-three units
+with fresh `input_order` values 1861 through 1883: 17 emitted functions (3568
+compiled body bytes, not original-byte matches) and data views. All 23 host
+checks build and exit 0 here (23 of 23). No duplicate definition was found at
+link time in the default build. One caveat: the package defines `floorf` and
+`ceilf` itself, as its notes say, so the optional Newlib inputs (plan entries
+85 and 89, only built with `--newlib-root`) would now define the same two
+names; that optional build was not run and would fail to link until one of
+the two sets is dropped. No game binary or disassembly listing was
+committed. 1463 function bodies, 1884 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1615 |
+| After | 1610 |
+| Closed | 23 |
+| Opened | 18 |
+
+Closed: `__assert__FPCcUiT0i`, `__builtin_delete`, `__eq__C9type_infoRC9type_info`,
+`__pure_virtual`, `__rtti_si`, `_listCheckAllIntegrity__FPCci`, `_printf`,
+`abort`, `atoi`, `ceilf`, `close`, `exit`, `floorf`, `lseek`, `malloc`,
+`memcmp`, `norrath_assert_context_word_view`, `norrath_assert_format_view`,
+`norrath_factory_sscanf`,
+`norrath_legacy_single_inheritance_type_info_vtable_view`,
+`norrath_legacy_user_type_info_vtable_view`,
+`norrath_player_bigint_small_powers5_view`,
+`norrath_player_number_big_tens_view`.
+
+Opened: `_$_14__si_type_info`, `_$_16__user_type_info`, `__divdi3`, `__moddi3`,
+`__terminate`, `__tf14__si_type_info`, `__tf16__user_type_info`,
+`__udivdi3`, `__umoddi3`, `_exit`, `do_dyncast__C14__si_type_infoiQ216__user
+_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_dyncast__C16__user_type_infoiQ216__user_type_info8sub_kindRC9type_infoPv
+T3T4RQ216__user_type_info14dyncast_result`,
+`do_find_public_subobj__C14__si_type_infoiRC9type_infoPvT3`,
+`do_find_public_subobj__C16__user_type_infoiRC9type_infoPvT3`, `do_upcast__C
+14__si_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_
+info13upcast_result`, `do_upcast__C16__user_type_infoQ216__user_type_info8su
+b_kindRC9type_infoPvRQ216__user_type_info13upcast_result`, `printfloat`,
+`raise`.
+
+## agents/w8-runtime-libc-b
+
+Merged (the branch notes carry the five summary sections). Twenty-four units
+with fresh `input_order` values 1884 through 1907: 16 emitted functions (1368
+compiled body bytes, not original-byte matches) and data views. Each unit has
+a `*_host_test.cpp`. All 24 build and exit 0 here (24 of 24) once the source
+is built with `-D<name>=w8_<name>` for the names that collide with the host C
+library, as the notes instruct (`strlen`, `strncmp` and `strncpy` need the
+source and the test compiled separately). No duplicate definition was found
+at link time. No game binary or disassembly listing was committed. 1479
+function bodies, 1908 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1610 |
+| After | 1593 |
+| Closed | 24 |
+| Opened | 7 |
+
+Closed: `norrath_player_number_half_lower_view`,
+`norrath_player_number_half_upper_view`,
+`norrath_player_number_overflow_view`,
+`norrath_player_number_quarter_lower_view`,
+`norrath_player_number_tens_view`, `norrath_player_number_tiny_tens_view`,
+`norrath_player_scan_base_normalization_view`,
+`norrath_player_scan_exponent_format_view`, `norrath_rtti_si`,
+`norrath_rtti_user`, `powf`, `printf`, `rand`, `read`,
+`readyToSwitch__3Cat`, `srand`, `strcasecmp`, `strcpy`, `strlen`, `strncmp`,
+`strncpy`, `strstr`, `tanf`, `write`.
+
+Opened: `__ieee754_powf`, `__ieee754_rem_pio2f`, `__kernel_tanf`, `sceTtyInit`,
+`sceTtyRead`, `sceTtyWrite`, `ttyinit`.
+
+## Not merged: agents/w8-spell-static-init-b
+
+Rejected at tip `ed20fab` (30 units, 54 emitted functions: 25 static
+initializer entries, the `skills` table and its initializer, three
+constructors and an `AnimationState` copy). The notes carry the five summary
+sections and the sources compile and link (selecting them took the count
+from 1593 to 1633 here, with 30 names closed and 70 opened), but none of the
+30 units has a host check, host contract or any other test, and the notes
+mention only the private build as verification. The snapshot checker
+therefore refuses the package (every selected record needs a host file), and
+by the repo rule a function with no test that could fail cannot be accepted.
+
+Not merged, and no files were edited. A re-merge needs a check beside each
+unit that fails on a wrong call order, constant or store; then 30 plan
+entries starting at the integrator's current end of plan. The worker's own
+count (1195 to 1236) was measured on an older base and is not the official
+delta.
+
+## agents/w8-startup-sce-a
+
+Merged (the branch notes carry the five summary sections). Thirty-four of the
+35 units with fresh `input_order` values 1908 through 1941: 34 emitted
+functions (2984 compiled body bytes, not original-byte matches). The package
+has two kinds of check. Twenty `host_contract.cpp` programs run the C++ bodies
+against mocks; all 20 build and exit 0 here. Fourteen `host_check.cpp`
+programs (syscall stubs and one assembly body) are byte comparers that take
+the private executable as an argument; the integrator does not read the
+executable, so those 14 were **not** run, and the byte-match statements in
+the notes are the worker's only. They are recorded in the snapshot as host
+file references, like the earlier gs-dma-kernel stubs. w8-startup-sce-a-ctype-table
+(`_ctype_`) was **not** selected: its only check, `host_check_data.py`, is not
+in the branch (the file does not exist in the tree), so the unit has no
+committed test and the snapshot checker rejects it; its source stays in the
+snapshot, unselected. The worker did not run a full partial build; the
+official counts are below. No game binary or disassembly listing was
+committed. 1513 function bodies, 1942 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1593 |
+| After | 1586 |
+| Closed | 25 |
+| Opened | 18 |
+
+Closed: `DPRINT`, `DeleteThread`, `DisableDmac`, `GetOsdConfigParam`,
+`Handler__7VITimeri`, `PowerOffCB`, `PowerOffHandler__FPv`,
+`PowerOffThread__FPv`, `RemoveDmacHandler`, `RotateThreadReadyQueue`,
+`SetArg`, `SetOsdConfigParam`, `SetTimerAlarm`, `SuspendThread`,
+`TerminateLibrary`, `TimerUSec2BusClock`, `VIDisplayScreen16__FPCcib`,
+`VIGetGameOptions__Fv`, `VIStartKeyboardDriver__Fv`, `VSync`, `VSync2`,
+`WakeupThread`, `_LoadExecPS2`, `__wrap_free`, `__wrap_memalign`.
+
+Opened: `AllocTimerCounter`, `InitTLB`, `SetTimerHandler`, `StartTimerCounter`,
+`free`, `gCdFile`, `lgKbMInit`, `memalign`, `sCdRmode`, `sGameOptions`,
+`sceCdCbPoff_Gp`, `sceCdDiskReady`, `sceCdPoffCbdata`, `sceCdPoffCbfunc`,
+`sceCdPowerOff`, `sceDevctl`, `sceGifPkEnd`, `sceGifPkRefLoadImage`.
+
+## agents/w8-startup-sce-b
+
+Merged (the branch notes carry the five summary sections). Eighteen of the 19
+units were selected with fresh `input_order` values 1942 through 1959 (18
+emitted functions, 3456 compiled body bytes; not
+original-byte matches). All 18 host checks build and exit 0 here (18 of 18).
+w8-startup-sce-b-k-exit-tlb-handler (`_kExitTLBHandler`, assembly) was **not**
+selected: the notes' only evidence is a private link compared with the
+executable, with no check committed in its directory, so the snapshot
+checker rejects it (no host file); its source stays in the snapshot,
+unselected, which leaves `_kExitTLBHandler` open (kernel-patches' TLB table
+still points at it). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1531 function bodies, 1960
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1586 |
+| After | 1580 |
+| Closed | 24 |
+| Opened | 18 |
+
+Closed: `_mallinfo_r`, `_request_bind`, `_request_call`, `_request_end`,
+`_request_rdata`, `_sceCd_scmdsdata`, `_sceRpcFreePacket`,
+`_sceRpcGetPacket`, `_sceSifLoadModule`, `batchBuffer`, `cancelStreamWait`,
+`cdClear__Fv`, `cdWait__Fv`, `cdvd_exit`, `deci2Putchar`,
+`decompressThreadid`, `dmaGIF`, `eenull`, `gCd`, `initEzNetCtl`, `kprintf`,
+`lgAudInit`, `lgCodecEnumerate`, `lgCodecInit`.
+
+Opened: `InvalidDCache`, `__malloc_current_mallinfo`, `__malloc_lock`,
+`__malloc_unlock`, `__malloc_update_mallinfo`, `_alarm_bind`,
+`_alarm_rdata`, `_sceRpcGetFPacket`, `_sceRpcGetFPacket2`, `_search_svdata`,
+`iSetTimerAlarm`, `iWakeupThread`, `isceSifSendCmd`, `kputs`,
+`sceCdStPause`, `sceCdStStop`, `sceSifRemoveCmdHandler`, `streamPaused`.
+
+## agents/w8-startup-sce-c
+
+Merged (the branch notes carry the five summary sections). Twenty-seven
+units with fresh `input_order` values 1960 through 1986: 23 emitted functions
+(4748 compiled body bytes, not original-byte matches) and data words. All 27
+host checks build and exit 0 here (27 of 27). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1554 function bodies, 1987 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1580 |
+| After | 1563 |
+| Closed | 30 |
+| Opened | 13 |
+
+Closed: `lgCodecOpen`, `lgKbdClose`, `loadThreadID`, `preConfigure`, `sbuff`,
+`sbuffin`, `sceCdCbPoff_Gp`, `sceCdGetError`, `sceCdLayerSearchFile`,
+`sceCdPOffCallback`, `sceCdPoffCbdata`, `sceCdPoffCbfunc`, `sceCdReadClock`,
+`sceCdReadDvdDualInfo`, `sceCdSearchFile`, `sceCdStInit`, `sceCdStRead`,
+`sceCdSync`, `sceClose`, `sceGifPkAddGsData`, `sceGifPkInit`,
+`sceGifPkReset`, `sceGifPkSize`, `sceGifPkTerminate`, `sceGszbufaddr`,
+`sceInetClose`, `sceInetCtlDownInterface`, `sceInetCtlGetState`,
+`sceInetGetInterfaceList`, `sceLibnetInitialize`.
+
+Opened: `CallRpc`, `GLibData`, `MemcpyS`, `_cd`, `_iob`, `_rcv_data_rpc`,
+`_sceFsSigSema`, `_sceFsWaitS`, `_send_data`, `get_iob`, `gsm_create`,
+`gsm_option`, `sceSifMBindRpcParam`.
+
+## agents/w8-startup-sce-d
+
+Merged (the branch notes carry the five summary sections). Twenty-seven of
+the 29 units were selected with fresh `input_order` values 1987 through 2013
+(23 emitted functions, 6580 compiled body bytes,
+not original-byte matches). Twenty-five host programs run here; the
+`sif-get-reg` and `sif-set-reg` checks are byte comparers that take the
+private executable as an argument, so those two (like the 14 in
+startup-sce-a) were **not** run by the integrator and only exist as
+references. Two units were **not** selected because they have no committed
+check at all and the snapshot checker rejects a record without a host file:
+w8-startup-sce-d-reset-tty-init (`sceResetttyinit`, `ttyinit`) and
+w8-startup-sce-d-sif-get-sreg (`sceSifGetSreg`); their sources stay in the
+snapshot, unselected. No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1577 function bodies, 2014
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1563 |
+| After | 1551 |
+| Closed | 29 |
+| Opened | 17 |
+
+Closed: `_cd`, `_iob`, `_rcv_data_rpc`, `_send_data`, `sceLibnetTerminate`,
+`sceMcEnd`, `sceMcGetInfo`, `sceMtapGetModVersion`, `sceOpen`, `scePadEnd`,
+`scePadGetModVersion`, `scePadGetSlotMax`, `scePadInit2`, `sceRead`,
+`sceSdRemote`, `sceSifAddCmdHandler`, `sceSifAllocIopHeap`,
+`sceSifExecNotifyHandler`, `sceSifExitRpc`, `sceSifFreeIopHeap`,
+`sceSifGetReg`, `sceSifInitCmd`, `sceSifResetIop`, `sceSifSendCmd`,
+`sceSifSetReg`, `sceneTransitionOK.1041`, `serialPutchar`, `setSRSInfo__Fv`,
+`specialHandler`.
+
+Opened: `MC_ByteCopy__FPvT0i`, `MC_GetNetGameInfo__FPiT0Pc`,
+`MC_GetRamPlayerPtr__Fi`, `MC_GetTempPlayerStorage__Fi`, `_fs_version`,
+`_sceSifSendCmd`, `kputchar`, `mceGetInfoApdx`, `new_iob`,
+`norrath_sce_d_race_strings_view_4293e8`,
+`norrath_sce_d_unknown_sdata_word_view_4852d8`, `sceFsInit`,
+`sceSifFreeSysMemory`, `sceSifMUnBindRpc`, `sceSifSetDChain`,
+`sceSifSetDma`, `sceSifStopDma`.
+
+## agents/w8-actor-virtuals-c
+
+Merged (the branch notes carry the five summary sections). Seventeen of the
+29 units were selected with fresh `input_order` values 2014 through 2030 (19
+emitted functions, 22,416 compiled body bytes, not original-byte matches).
+The 17 host checks build and exit 0 here (17 of 17). Twelve units were **not**
+selected because they have no check in the repository: the notes' evidence
+for them is a comparison script that ran the bodies in a private R5900
+interpreter against the executable, which is not committed, so there is no
+test the integrator can run, and the snapshot checker rejects a record with no
+host file. They are `auto-prop-save`, `goth-trap-passable`, `goth-trap-run`,
+`hack-door-passable`, `hate-bridge-passable`, `hate-hole-run`,
+`missile-trap-trigger`, `save-activate`, `shooter-save`,
+`teleporter-set-active-chunks`, `teleporter-set-state` and `trigger-save`;
+their sources stay in the snapshot, unselected. The notes' count of 29
+closed imports therefore does not apply. No duplicate definition was found at
+link time. No game binary or disassembly listing was committed. 1596
+function bodies, 2031 authored inputs, zero COMMON. 214 tool tests passed.
+No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1551 |
+| After | 1562 |
+| Closed | 17 |
+| Opened | 28 |
+
+Closed: `msg_run__11MissileTrap`, `msg_run__15PushPhysicsProp`, `msg_run__7Shooter`,
+`msg_run__7Trigger`, `msg_run__8AutoProp`, `msg_run__8FireBomb`,
+`msg_run__8HateGate`, `msg_run__8HateInto`, `msg_run__9Container`,
+`msg_save__15PushPhysicsPropPc`, `msg_save__9ContainerPc`,
+`msg_trigger__8AutoPropi`, `setPassableState__8AutoPropb`,
+`setPassableState__8HateHoleb`, `setState__8AutoPropi`,
+`sleepMonsters__8creaturev`, `wakeMonsters__8creaturev`.
+
+Opened: `__11FireBombletG6Point3sPcT1P6Point3i`, `__13MissileWeaponiP12_modelHeaderP
+8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description`,
+`__4GoldG6Point3i`, `__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii`,
+`bodyAddForce__FP5_bodyP6Point3N31`, `bodyApplyForce__FP5_bodyG6Point3T1f`,
+`bodyApplyImpulse__FP5_bodyG6Point3T1f`,
+`bodyGetVelocity__FP5_bodyP6Point3T1`, `gameDifficultyScale__Fv`,
+`gamePositionVisible__FP6Point3f`, `gameTreasureRamp__Fv`,
+`genericMove__10GameObjectG6Point3P10GameObject`,
+`getProxyMeshId__4itemPQ24item11description`, `initStuff__6PhPropi`,
+`makeExplosion__FG6Point3f`, `makeRandomPotion__4itemPQ24item11description`,
+`matUntransform__FP6Point3P8Matrix33T0`,
+`modelGetNmShadowPoints__FP12_modelHeader`, `modelGetShadowPos__FP12_modelHe
+aderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f`,
+`norrath_anttrap_msg_run_FireParticle_bytes`,
+`norrath_anttrap_msg_run_HateGateParticle_bytes`,
+`norrath_container_msg_run_fuseParticle_bytes`,
+`norrath_container_msg_run_smokeParticle_bytes`,
+`objectRadialDamage__FP10GameObjectG6Point3iffiii`, `soundStopSound__Fi`,
+`worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
+`worldHitscan__FP12_worldHeaderG6Point3T1fi`,
+`worldPerturbWater__FP12_worldHeaderG6Point3ff`.
+
+## agents/w8-audio-calls
+
+Merged (the branch notes carry the five summary sections). Thirty of the 32
+units were selected with fresh `input_order` values 2031 through 2060 (30
+emitted functions, 5696 compiled body bytes, not original-byte matches). All
+30 host checks build and exit 0 here (30 of 30). The two data units
+`sound_state.cpp` and `sound_state_extra.cpp` (19 data words) have no host
+check, and the snapshot checker rejects a record without a host file, so
+they stay in the snapshot, unselected; that is why `desiredMusicDuckAmount`
+and `nextChannel` appear as opened and 17 of the notes' closed names remain
+open. No duplicate definition was found at link time. No game binary or
+disassembly listing was committed. 1626 function bodies, 2061 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1562 |
+| After | 1540 |
+| Closed | 26 |
+| Opened | 4 |
+
+Closed: `_GLOBAL_$D$soundSfxVolume`, `_GLOBAL_$I$soundSfxVolume`, `findChannel__Fv`,
+`getStockPitch__FP10_vagHeader`, `soundChangeVolume__Fiff`,
+`soundClearStreamQue__Fi`, `soundClear__Fi`, `soundContinueStream__Fi`,
+`soundFindDialog__FPc`, `soundFlushCommandBuffer__Fv`,
+`soundGetDialogFilename__Fv`, `soundGetDialogSize__FPc`,
+`soundGetFreeRam__Fv`, `soundGetNmQueued__Fi`,
+`soundGetStreamAmountPlayed__Fi`, `soundGetStreamPreloadDone__Fi`,
+`soundInit__Ff`, `soundLock__Fi`,
+`soundPlaySequence__FP15AnimationHeaderG6Point3f`, `soundRestore__Fb`,
+`soundSetMusicDuckAmount__Ff`, `soundStartGlobalMusic__FPci`,
+`soundStartStream__FiPciiiiii`, `soundStopSound__Fi`,
+`soundUpdateAdjustments__Fv`, `transferVAG__FP10_vagHeaderi`.
+
+Opened: `desiredMusicDuckAmount`, `nextChannel`, `sceSdTransToIOP`,
+`soundSetAudioEffect__Fiiiii`.
+
+## agents/w8-camera-vehicle-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five units
+with fresh `input_order` values 2061 through 2085: 25 emitted functions (3900
+compiled body bytes, not original-byte matches). All 25 host checks build and
+exit 0 here (25 of 25). No duplicate definition was found at link time. No
+game binary or disassembly listing was committed. 1651 function bodies, 2086
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1540 |
+| After | 1537 |
+| Closed | 25 |
+| Opened | 22 |
+
+Closed: `AddNPCDriver__7VehicleP3NPC`, `BuildMatrix__6CamerafffP6Point3`,
+`GetNPCPosition__7VehicleP6Point3Ps`, `GetPitch__6Camera`,
+`GetPlayerPosition__7VehicleiP6Point3Ps`,
+`GetPositionAndYaw__7VehicleP6Point3T1Ps`, `GetYaw__6Camera`,
+`Kick__7Vehicle`, `Push__6Camera`, `Reset__5Wheel`, `Reset__6Cameraii`,
+`SetHold__7Vehiclei`, `SetMode__6Camerai`, `SetPitch__6Camerai`,
+`SetYaw__6Camerai`, `Update__6Camera`, `_$_11LavaTractor`, `_$_7Vehicle`,
+`_$_8SkulBoat`, `_GLOBAL_$I$__7VehicleG6Point3sPPci`, `__tf11LavaTractor`,
+`__tf7Vehicle`, `__tf8SkulBoat`, `doMyUniqueForces__7Vehicle`,
+`doMyUniqueForces__8SkulBoat`.
+
+Opened: `GetZoomDistance__6Camera`, `SetZoomDistance__6Cameraf`, `_$_10GameObject`,
+`__tf10GameObject`, `__tf11LavaVehicle`, `__ti10GameObject`,
+`__ti11LavaVehicle`, `_vt$11LavaVehicle`, `_vt$7Vehicle`, `_vt$8SkulBoat`,
+`accumForceAndTorque__7VehicleP6Point3T1i`, `blockFree__FPv`,
+`doDebugCam__6Camera`, `doInnorukCam__6Camera`, `doNormalCam__6Camera`,
+`getSeatPosition__7VehicleiP6Point3`, `hudDisplayNetCamToggle`,
+`playerLocalPlayerBusy__Fv`, `removePassenger__7Vehiclei`,
+`revealEntireMap__3mapv`, `vehicleCount`, `vehicleList`.
+
+## agents/w8-camera-vehicle-b
+
+Merged with two units removed (the branch notes carry the five summary
+sections). Twenty-two units were selected with fresh `input_order` values
+2086 through 2107 (22 emitted functions, not original-byte matches). All 22
+host checks build and exit 0 here (22 of 22). The units `lava-set` and
+`skul-set` (`set__11LavaTractor`, `set__8SkulBoat`) were **not** accepted:
+each unit's `host/contract.cpp` does `#include "table.inc"`, and no
+`table.inc` exists in the branch, so neither contract can be built (and the
+snapshot checker, which follows includes, fails on them). They have no
+runnable test, so the integrator deleted both unit directories in the merge
+commit's follow-up commit rather than recording files that cannot build; the
+branch history still has them, and a re-merge needs the missing table file
+committed. This is why the notes' count (24) does not apply. No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1673 function bodies, 2108 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1537 |
+| After | 1541 |
+| Closed | 22 |
+| Opened | 26 |
+
+Closed: `eventActivate__11LavaTractor`, `eventActivate__7Vehicle`,
+`eventCollisionGround__11LavaTractor`, `eventCollisionGround__7Vehicle`,
+`eventCollisionWall__11LavaTractorP6Point3T1`,
+`eventCollisionWall__7VehicleP6Point3T1`, `eventCurRPM__11LavaTractor`,
+`eventCurRPM__7Vehicle`, `eventDeActivate__11LavaTractor`,
+`eventDeActivate__7Vehicle`, `eventGasOff__11LavaTractor`,
+`eventGasOff__7Vehicle`, `eventGasOn__11LavaTractor`,
+`eventGasOn__7Vehicle`, `eventSteeringChange__11LavaTractor`,
+`eventSteeringChange__7Vehicle`, `msg_collision__7VehicleP10GameObject`,
+`msg_draw__7Vehicle`, `msg_getPokeName__7VehiclePUsi`,
+`msg_poke__7Vehiclei`, `msg_run__7Vehicle`, `refreshSettings__7Vehicle`.
+
+Opened: `addPassenger__7Vehiclei`, `backup__7Vehicle`,
+`buildCollisionInfo__7Vehicle`, `checkVehicleCollision__7Vehicle`,
+`checkWallCollision__7Vehicle`, `doAI__7Vehicle`, `doBrakes__7Vehicle`,
+`doDriveline__7Vehicle`, `doMisc__7Vehicle`, `doSteering__7Vehicle`,
+`doSuspension__7Vehicle`, `doThrottle__7Vehicle`, `dpcmp`, `dpsub`,
+`finalizePosition__7Vehicle`, `fptodp`, `gameButtonToIcon__Fi`,
+`gameLineUpdatePosition__FP17gameLinePathState`,
+`getNewRotAndPos__7VehicleP6Point3T1fii`, `haveRoom__7Vehicle`,
+`hudInfoMessageShowing__Fv`, `isPassenger__7Vehiclei`,
+`objectIsOffGrid__FP10GameObject`, `soundChangeSequenceVolume__Fif`,
+`soundMakePersistant__Fi`, `startForces__7Vehicle`.
+
+## agents/w8-core-loop-e
+
+Merged (the branch notes carry the five summary sections). Thirty units
+with fresh `input_order` values 2108 through 2137: 20 emitted functions
+(14,164 compiled body bytes, not original-byte matches) and data words. All
+30 host checks build and exit 0 here (30 of 30). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1693 function bodies, 2138 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1541 |
+| After | 1560 |
+| Closed | 30 |
+| Opened | 49 |
+
+Closed: `retval`, `runAmbient__Fv`, `runAnimation__Fv`, `runMusicDucking__Fv`,
+`runMusic__Fv`, `runScreaming__Fv`, `runSequences__Fv`,
+`scriptActivatePostAction__Fv`, `scriptClearAllGameState__Fv`,
+`scriptClear__Fv`, `scriptRun__Fv`, `scriptSetScript__FPv`,
+`scriptSuperClear__Fv`, `scriptTask__Fv`, `sentEndMsg`,
+`setExtraParams__FP8CreaturePc`, `setup_main__Fv`, `showCoords__Fv`,
+`stack.15`, `startEntranceName`, `startNewWorld__Fv`,
+`station_main__FiPCcPcT2T1T1i`, `statusPtr`, `subDrawLoop__FPFv_i`,
+`superGamestateInit`, `switchToRun__3Cat`, `swooping`, `trippleBufferMode`,
+`waitForSound`, `worldDifficulty`.
+
+Opened: `Free__7VISetup`, `Free__9VIStation`, `Init__7VISetupi`,
+`Init__9VIStationiPCcPcT3T2T2i`, `MC_CheckPlayerImportOrChange__Fv`,
+`MC_SetActByLevelName__FPc`, `Process__7VISetup`, `Process__9VIStation`,
+`RestartConnect__7VISetup`, `RunPatcher__7VISetup`, `_$_7VISetup`,
+`_$_9VIStation`, `__6PlayerG6Point3sii`, `__7VISetup`, `__9VIStation`,
+`__builtin_new`, `ambientGroup`,
+`animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi`,
+`animFindComponentWithFlags__FP14AnimationStatei`,
+`animGetVolumeScale__Fii`, `cdCheckForFileInCurrentLayer__FPc`,
+`cdLoadAsyncIOP__FPciT0ii`, `currActivityScore`, `currScorePos`,
+`dialogLumpName`, `gameLoadWorld__FPc`,
+`getMegatileOriginalPosition__FG6Point3`, `gotPlayerStartThisLevel`,
+`initEzNetCnf`, `lastMusicState`, `megatileRot`, `megatileSeed`,
+`nmAmbientGroups`, `nmDeferedCalls`, `norrath_music_activity_ring_view`,
+`numEnvironments`, `playerSelectionEnforce__Fv`, `playerStartYaw`,
+`recallPos`, `runStreamQueing__Fv`, `sceSifMExitRpc`, `soundAllFlags__Fi`,
+`soundDisable__Ff`, `soundGetGlobalDialogDir__Fv`,
+`soundStartDialogStream__Fiii`, `startScorePos`, `timeLastTransition`,
+`unet_shutdown__Fv`, `worldFindHeight__FP12_worldHeaderG6Point3f`.
+
+## agents/w8-fx-particles
+
+Merged (the branch notes carry the five summary sections). Thirty-eight units
+with fresh `input_order` values 2138 through 2175: 38 emitted functions
+(18,088 compiled body bytes, not original-byte matches). All 38 host checks
+build and exit 0 here (38 of 38). No duplicate definition was found at link
+time. No game binary or disassembly listing was committed. 1731 function
+bodies, 2176 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1560 |
+| After | 1538 |
+| Closed | 40 |
+| Opened | 18 |
+
+Closed: `DynamicLightArray`, `P_DeleteParticleSystem__Fi`,
+`P_DrawParticles__FP8Matrix34`, `P_Pop__Fv`, `ParticleEmitterArray`,
+`_GLOBAL_$D$orc1ResourceMap`, `_GLOBAL_$D$wesResourceMap`,
+`_GLOBAL_$D$wraithResourceMap`, `_GLOBAL_$I$antResourceMap`,
+`_GLOBAL_$I$cloudgiantResourceMap`, `_GLOBAL_$I$cyclopsResourceMap`,
+`_GLOBAL_$I$fireBeetleResourceMap`, `_GLOBAL_$I$fxResourceMap`,
+`_GLOBAL_$I$goblinResourceMap`,
+`_GLOBAL_$I$hasLightOrParticleNumber__FPPci`,
+`_GLOBAL_$I$innoruukResourceMap`, `_GLOBAL_$I$lavaMonsterResourceMap`,
+`_GLOBAL_$I$mummyResourceMap`, `_GLOBAL_$I$orc1ResourceMap`,
+`_GLOBAL_$I$particlesPaused`, `_GLOBAL_$I$scriptParticles`,
+`_GLOBAL_$I$soulResourceMap`, `_GLOBAL_$I$spiderResourceMap`,
+`_GLOBAL_$I$udkResourceMap`, `_GLOBAL_$I$vampireResourceMap`,
+`_GLOBAL_$I$wesResourceMap`, `_GLOBAL_$I$wraithResourceMap`,
+`__11AddParticleG6Point3PPc`,
+`__11LightEffectG6Point3ffffffffffffP10GameObjecti`,
+`__11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`__19ParticleMorphEffectP8CreatureT1`,
+`__eq__19ParticleEmitterDataRC19ParticleEmitterData`, `fxClear__Fv`,
+`lightClear__Fv`, `lightDeactivate__FP5Light`,
+`lightPushSceneLights__FG6Point3iiiiiiiii`, `nmParticleEmitterRecs`,
+`setParticleDef__FP11ParticleDefiiiiiiiifffiiiPFPv_v`,
+`updatePS__FP14ParticleSystem`, `updateTrails__Fv`.
+
+Opened: `_14WoodElfSoldier$m_commanderList`, `_3Orc$m_commanderList`,
+`_6Wraith$s_rWraithList`, `__11ParticleDef`, `_vt$11AddParticle`,
+`_vt$11LightEffect`, `_vt$19ParticleMorphEffect`,
+`drawDistortionParticles__Fv`, `drawLines__Fv`,
+`drawPS__FR6PacketP14ParticleSystem`, `drawSingleParticles__Fi`,
+`drawTrails__Fv`, `lightInit__11AddParticlePPc`,
+`matMakeViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix34N20`,
+`matMul__FP8Matrix44P8Matrix34T0`, `particleInit__11AddParticlePPc`,
+`savedScene`.
+
+## agents/w8-hud-text-items-a
+
+Merged (the branch notes carry the five summary sections). Fifteen of the 16
+units were selected with fresh `input_order` values 2176 through 2190 (22
+emitted functions, 6516 compiled body bytes, not original-byte matches). All
+16 host checks build and exit 0 here (16 of 16). `boss-meter-words` was **not**
+selected: it defines `hudNoDraw`, already defined by the game-loop package's
+`hud_no_draw.cpp`, so the link fails with a multiple definition; its files
+stay in the snapshot, unselected, and `bossMeterCurrent`, `bossMeterMax` and
+`bossMeterAlpha` stay open. No game binary or disassembly listing was
+committed. 1753 function bodies, 2191 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1538 |
+| After | 1526 |
+| Closed | 25 |
+| Opened | 13 |
+
+Closed: `AdvanceDialogSwoop__6CameraiPf`, `DLG_Clear__Fv`, `DLG_NewWorld`,
+`DLG_SetMutex__Fv`, `StartDialogSwoop__6CameraP10GameObjecti`,
+`_GLOBAL_$D$displayQuestInfo__FP11questStructi`,
+`_GLOBAL_$D$inventoryLoad__Fv`, `_GLOBAL_$D$shopActiveFrame`,
+`_GLOBAL_$I$_fontStringSize__FP4FontPci`,
+`_GLOBAL_$I$displayQuestInfo__FP11questStructi`,
+`_GLOBAL_$I$inventoryLoad__Fv`, `_GLOBAL_$I$shopActiveFrame`,
+`addItemToInventory__FiPQ24item11descriptioni`, `cacheClear__Fv`,
+`colorScale__FUif`, `dialogCreature`, `dialogIdleAnimation`, `dialogMutex`,
+`dlgArrayPtr`, `dlgName`, `dlgPos`, `dropItem__4itemG6Point3Pc`,
+`equipItem__FiPQ24item11descriptioni`, `fontColor__FUiii`, `shopList`.
+
+Opened: `distanceToPlane__FP6Point3N20`, `fontCharAlpha`,
+`inventoryCheckWieldingStatus__FiPQ24item11description`,
+`inventorySetAnim__FiP14AnimationStatei`, `lastFontCharAlpha`,
+`lastFontColor`, `lerpShortRot__Fssfff`, `multiHudAddHelpMessage__FiPUsT1i`,
+`nmChars`, `nmDirectQWords`, `p`, `playerGetPotionsLeft__Fii`,
+`reglistLoopCount`.
+
+## agents/w8-hud-text-items-b
+
+Merged (the branch notes carry the five summary sections). Twenty-eight units
+with fresh `input_order` values 2191 through 2218: 25 emitted functions (6888
+compiled body bytes, not original-byte matches). All 28 host checks build and
+exit 0 here (28 of 28). No duplicate definition was found at link time. The
+official count is unchanged at 1526 because 30 names closed and 30 opened
+(the font and inventory-load routines these functions call). No game binary
+or disassembly listing was committed. 1778 function bodies, 2219 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1526 |
+| After | 1526 |
+| Closed | 30 |
+| Opened | 30 |
+
+Closed: `fontEnd__Fv`, `fontLastPrintedPosition`, `fontPrintCentered__FiiPci`,
+`fontPrintCenteredu__FiiPUsi`, `fontPrintWrapu__FiiPUsiiii`,
+`fontPrint__FiiPci`, `fontPrintu__FiiPUsi`, `fontRestrict__Fi`,
+`fontScissor__Fiiii`, `fontStart__FP4FontiUii`,
+`fontStringSizeu__FP4FontPUsi`, `getWeight__4itemPQ24item11description`,
+`hudAssignQuickSpell__Fiii`, `hudAssignSpellBookSpell__Fiiil`,
+`hudClearInfoMessage__Fv`, `hudFadeScreen__Fi`, `hudFinishGold__Fv`,
+`hudFooterUni`, `hudKick__Fv`, `hudResetFadeScreen__Fi`,
+`hudShowMsg__FPUsN20iii`, `infoMessage`, `infoMessageAlways`,
+`infoMessageTimer`, `invShutDown__Fi`, `inventoryInit__Fv`,
+`inventoryReset__Fv`, `msgHudPlayerExit__Fv`, `msgHudRecall__Fc`,
+`picProcess__4itemv`.
+
+Opened: `_4item$picBuffer`, `_4item$picInProgress`, `_4item$picList`,
+`_4item$picLoadBuffer`, `_4item$picLoadFinished`, `_4item$picsToLoad`,
+`_fontPrintu__FiiPUsi`, `_fontStringSize__FP4FontPci`,
+`_fontStringSizeu__FP4FontPUsi`, `countUp`, `curFont`, `drawBucket`,
+`fadeDownVal`, `givePlayerFeat__Fxii`, `goldAlpha`, `goldNumber`,
+`inventoryFrameDraw__Fv`, `inventoryFrameRun__Fv`, `inventoryLoadState`,
+`inventoryLoad__Fv`, `inventoryLump`, `lightPopSceneLights__Fv`,
+`picFind__4itemPc`, `picKickOneOut__4itemv`, `playerGetSkillRank__Fii`,
+`playerGettinIt`, `restrictChars`, `scissored`, `shopGrid`,
+`vifDirectQWordCount`.
+
+## agents/w8-hud-text-items-c
+
+Merged (the branch notes carry the five summary sections; their plan table
+gives hash prefixes, so each full hash was taken from the file and checked
+against the prefix). Twenty-one units with fresh `input_order` values 2219
+through 2239: 20 emitted functions (7096 compiled body bytes, not
+original-byte matches) and a data unit. All 21 host checks build and exit 0
+here (21 of 21). No duplicate definition was found at link time. No game
+binary or disassembly listing was committed. 1798 function bodies, 2240
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1526 |
+| After | 1516 |
+| Closed | 30 |
+| Opened | 20 |
+
+Closed: `realDlgPos`, `rectangleDraw__FiiiiiUi`, `removeAllQuestsFromLog__Fv`,
+`shopActiveFrame`, `shopKick__Fv`, `textAddText__FPv`, `textBody`,
+`textBodyChars`, `textGetString__FPc`, `textInit__Fv`,
+`textMessageDraw__Fv`, `textMessageProcess__Fv`, `textPageDone`,
+`textureCacheIn__FP8_texture`, `textureClear__Fv`,
+`textureDrawBorder__FiiiiiUiPcii`, `textureLock__FP8_texture`,
+`texturePageBlock`, `texturePageLoc`, `texturePageSegLoc`,
+`texturePageTable`, `textureSmoothBorder__FiiiiiUiiii`,
+`textureUncompBufferLocked`, `textureUnlock__FP8_texture`,
+`usprintf__FPUsT0ffffffff`, `ustrcat__FPUsT0`, `ustrcpy__FPUsPc`,
+`ustrcpy__FPUsT0`, `ustrcpy__FPcPUs`, `ustrlen__FPUs`.
+
+Opened: `TerminateThread`, `alwaysLoadedPage`, `decodeQHead`, `decodeQTail`,
+`drawUpFrom__FiiPCUcT2iUi`, `hudNetWaitMsgReady__Fv`, `inventoryUnload__Fv`,
+`keyboardGetNextKey__Fv`, `keyboardGetNextTranslatedKey__Fv`,
+`loadInProgress`, `nmAlwaysPages`, `norrath_text_hash_slots`,
+`norrath_text_missing_cursor`, `norrath_text_missing_entries`, `sellMode`,
+`texDecodeStarted`, `textSend__Fv`,
+`textureDrawSuperColor__FP8_textureiiiUiiiiicc`, `texturesAreDecompressing`,
+`texturesAreLoading`.
+
+## agents/w8-net-play-c
+
+Merged (the branch notes carry the five summary sections). Twelve of the 14
+units were selected with fresh `input_order` values 2240 through 2251 (13
+emitted functions, 8540 compiled body bytes, not original-byte matches).
+Seven host checks build and run directly; five (`player-damage-handler`,
+`player-recompute-ability-modifiers`, `player-recompute-weight`,
+`pre-cache-armor`, `start-packet`) map dialog data at the fixed address
+0x20000000 and only work in the build their header comment prescribes
+(`-arch x86_64 -Wl,-pagezero_size,0x10000`); built that way, all five exit 0
+here, so all 12 pass. Two units were **not** selected because the link
+reported multiple definitions: `alive-sync-state` (`playersAlive`,
+`syncRandState`) and `player-select-state` (`playerMenu`) are already defined
+by earlier packages; their files stay in the snapshot, unselected. No game
+binary or disassembly listing was committed. 1811 function bodies, 2252
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1516 |
+| After | 1533 |
+| Closed | 12 |
+| Opened | 29 |
+
+Closed: `playerDamageHandler__6Player`, `playerDeallocateArmorCaches__Fv`,
+`playerGetFeatRank__Fix`, `playerGlobalInit__Fv`, `playerPlaySound__Fii`,
+`playerRecomputeAbilityModifiers__Fv`, `playerRecomputeWeight__Fi`,
+`playerSelectionRunning__Fv`, `preCacheArmor__6Player`,
+`recievePacket__FiPUc`, `startNetLaunch__Fv`, `startPacket__Fi`.
+
+Opened: `ClericSkillTree`, `RangerSkillTree`, `ShadowKnightSkillTree`,
+`WarriorSkillTree`, `WizardSkillTree`, `_4item$globalItem`,
+`__8GutChunkG6Point3iif`, `cacheCdDone`,
+`cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture`,
+`cacheLoadCache`, `cheatInvulnerability`, `cheatMode`, `curDlgStart`, `disin
+tegrationEffect__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sffi`
+, `eqLumpHeader`, `gSkillTree`, `getPicName__4itemPciPQ24item11description`,
+`lastYAnchor`, `netForceLocalUpdate`,
+`norrath_player_armor_cache_view_7cb770`, `packetbuffer`, `packetshift`,
+`playSoundForDlg__FP9DlgPacket`, `playerIsAnimPlaying__6PlayerPc`,
+`recomputePaperDollModifiers__Fi`, `soundReallyAllFlags__Fi`,
+`soundStartGlobalDialogStreamRandom__FiPci`,
+`soundStartGlobalDialogStream__FiPci`, `wLumpHeader`.
+
+## agents/w8-object-list-math
+
+Merged (the branch notes carry the five summary sections). Forty-two units
+with fresh `input_order` values 2252 through 2293: 45 emitted functions
+(7808 compiled body bytes, not original-byte matches, including file-local
+helpers). All 42 `host_check.cpp` programs build and exit 0 here (42 of 42),
+with two build notes: six checks need the unit linked with sibling units of
+the package that define their callees (`object-clear`, `find-object-by-class`,
+`mat-make-trans-yaw`, `mat-to-quaternion`, `safe-iterator-next` and
+`safe-iterator-destroy`), and `mat-rot33` compares floats bit for bit, so it
+only passes with `-ffp-contract=off` (on this arm64 host the default fused
+multiply-add changes the last bit; the EE has no fused form). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1856 function bodies, 2294 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1533 |
+| After | 1491 |
+| Closed | 44 |
+| Opened | 2 |
+
+Closed: `_$_16ListSafeIterator`, `_GLOBAL_$D$lastkey`,
+`_GLOBAL_$D$objectIgnoreFlags`, `_GLOBAL_$I$addpmlist__FPc`,
+`_GLOBAL_$I$lastkey`, `_GLOBAL_$I$objectIgnoreFlags`,
+`__16ListSafeIteratorP8ListHeadi`, `createByName__FPcG6Point3sPPc`,
+`deleteList`, `iatan2__Fff`, `icos__Fi`, `initializeMe__4Line`, `isin__Fi`,
+`lineToY__Fi`, `listOnewayLink__FP8ListHeadT0Pv`, `matIdent__FP8Matrix33`,
+`matMakeTransYaw__FP8Matrix34G6Point3s`, `matRot__FP8Matrix33is`,
+`matToQuaternion__FP4QuatP8Matrix34`,
+`matTransform34Vec__FP6Point3P8Matrix34T0`,
+`matTransform__FP6Point3P8Matrix33T0`, `mediumRunList`, `memAlloc__FiPc`,
+`memCheckHeapReal__FPCci`, `memFree__FPv`, `memRealloc__FPvi`, `nextIndex`,
+`next__16ListSafeIterator`, `objectActivationCheck__8Creaturei`,
+`objectAddToDeleteList__FP10GameObject`, `objectClear__Fv`,
+`objectDoMyActions__FP10GameObjecti`,
+`objectFindAnimation__FP10GameObjectPc`,
+`objectFindObjectByClass__FPcPP10GameObjecti`,
+`objectInside__7TriggerP10GameObject`,
+`objectRemoveFromGrid__FP10GameObject`,
+`objectRemoveFromRunList__FP10GameObject`,
+`objectSaveAddToStringPool__FPCc`, `objectSaveGetFromStringPool__Fi`,
+`objectSetCreateByNameFunction__FPFPcG6Point3sPPc_P10GameObject`,
+`objectSetFilterFunction__FPFPc_i`, `quatToMat__FP8Matrix33P4Quat`,
+`runList`, `slowRunList`.
+
+Opened: `_$_10VIKeyboard`, `__10VIKeyboard`.
+
+## agents/w8-render-world-b
+
+Merged (the branch notes carry the five summary sections). Twenty-two units
+with fresh `input_order` values 2294 through 2315: 20 emitted functions
+(11,584 compiled body bytes, not original-byte matches) and data units. All
+22 host checks build and exit 0 here (22 of 22). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed.
+1876 function bodies, 2316 authored inputs, zero COMMON. 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1491 |
+| After | 1511 |
+| Closed | 32 |
+| Opened | 52 |
+
+Closed: `megatile_ramkmax`, `modelDraw__FP12_modelHeaderP8_textureiG6Point3P8Matrix3
+4P14AnimationStateUlP11_drawRecordi`,
+`modelGetActiveChunks__FP12_modelHeaderi`, `modelResetOptionalParams__Fv`,
+`modelSetShadowBrightness__Ff`, `nmLumps`, `segmentUsed`,
+`texDecompressThread__FPv`, `texIsDecompressing__Fv`, `texIsLoading__Fv`,
+`texProcessDecompress__Fv`, `texProcessLoad__Fi`, `texdecompress`, `texmap`,
+`texmapend`, `texmapstart`, `uncompMap`, `uncompSpin`, `world`,
+`worldAllocateWaterPatches__Fi`, `worldClear__Fv`,
+`worldClipCubeToClipFrustum__FPA1_fi`, `worldDrawEnable`,
+`worldDrawWorld__FP12_worldHeader`,
+`worldFindWaterPatches__FP12_worldHeaderG6Point3T1PP13PolysetHeaderi`,
+`worldMoveDoor__FP12_worldHeaderiG6Point3s`, `worldReset__FP12_worldHeader`,
+`worldRunWaterTask__Fv`, `worldSetDoorCollision__FP12_worldHeaderii`,
+`worldSetDoorHeight__FP12_worldHeaderif`, `worldSetViewCenter__Fv`,
+`worldViewCenter`.
+
+Opened: `SleepThread`,
+`animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`,
+`animLoadBoneMatricies__FP6PacketP14AnimationState`, `cdEndStream__Fv`,
+`cdIsBusyStreamingNonwithstanding__Fv`, `cdStartStream__FPci`,
+`cdStreamLoadAsync__FPcT0i`, `clearing`, `clipFrustumNormalSign`, `decodeQ`,
+`defaultHalos`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`,
+`dumpMem__FPvi`, `globalShadowBrightness`, `halos`, `loadCompleteFlag`,
+`loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`,
+`loadSlot`, `modelDrawFade`,
+`modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`, `modelOption`,
+`modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`,
+`modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`,
+`modelShadowScale`, `nmHalos`, `nmWaterPatches`,
+`putBlock__FP8_textureP6PacketPPP9uncompMapPPii`, `reallyLoad.873`,
+`routeClearStart`, `routeEnable`, `rqHead`, `rqTail`, `scx1`, `scx2`,
+`scy1`, `scy2`, `shadowBrightness`, `texCacheData__FP8_texturei`,
+`texLastDecompressionTime`, `textureFreeTexture__FP8_texture`,
+`textureInitTexture__FP12_worldHeaderP8_texturePUcPc`,
+`vqDecompress__FP8_texturei`, `waterInit__Fv`, `waterPatch`,
+`worldAnimation`, `worldClipFrustum`, `worldLastDrawSucceded`,
+`worldRunWater__FP12_worldHeader`, `worldWaterRainTimer`.
+
+## agents/w8-spell-static-init-a
+
+Merged (the branch notes carry the five summary sections). Thirty-one units
+with fresh `input_order` values 2316 through 2346: 31 emitted functions
+(10,056 compiled body bytes, not original-byte matches). All 31 host checks
+build and exit 0 here (31 of 31). No duplicate definition was found at link
+time, and the package opened no new import. No game binary or disassembly
+listing was committed. 1907 function bodies, 2347 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution. (Its sibling
+`agents/w8-spell-static-init-b` has no host checks and is not merged; see its
+entry above.)
+
+| | |
+|---|---|
+| Before | 1511 |
+| After | 1478 |
+| Closed | 33 |
+| Opened | 0 |
+
+Closed: `_GLOBAL_$I$__10HolyStrikesiG6Point3P10GameObjectP5Skill`,
+`_GLOBAL_$I$__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`,
+`_GLOBAL_$I$__10StaticFireG6Point3fif`,
+`_GLOBAL_$I$__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`,
+`_GLOBAL_$I$__12SpellBlessediP8CreatureP5Skill`,
+`_GLOBAL_$I$__12SpellCycloneiP8CreatureP5Skill`,
+`_GLOBAL_$I$__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`,
+`_GLOBAL_$I$__15SpellConeOfFireiP8CreatureP5Skill`,
+`_GLOBAL_$I$__15SpellWizardBeamiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellColdWeaponsiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellConeOfFrostiP8CreatureP5Skill`,
+`_GLOBAL_$I$__16SpellFireWeaponsiP8CreatureP5Skill`,
+`_GLOBAL_$I$__17SpellConvertEnemyiP8CreatureP5Skill`,
+`_GLOBAL_$I$__17SpellUndeadShieldiP8CreatureP5Skill`,
+`_GLOBAL_$I$__18SpellDiseaseShieldiP8CreatureP5Skill`,
+`_GLOBAL_$I$__19BlindingLightEffectG6Point3iP8CreatureP5Skill`,
+`_GLOBAL_$I$__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`,
+`_GLOBAL_$I$__22SpellPlanarSteelEffectiP8CreatureP5Skill`,
+`_GLOBAL_$I$__3NPCG6Point3sPcN33ifPPc`, `_GLOBAL_$I$__5TorchG6Point3PPci`,
+`_GLOBAL_$I$__6SwitchG6Point3PPc`, `_GLOBAL_$I$__8FireBombG6Point3sPPc`,
+`_GLOBAL_$I$__8HolyBoltG6Point3iiP8CreatureP5Skill`,
+`_GLOBAL_$I$__8JumpGateG6Point3sPPc`,
+`_GLOBAL_$I$attack__14SpellHarmTouchP10GameObjectPiT2`,
+`_GLOBAL_$I$canCast__18SkillConvertUndeadP8Creature`,
+`_GLOBAL_$I$cast__13SkillDarknessiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__13SkillEntangleiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__14SkillMultiFireiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__15SkillClericRootiP8CreatureG6Point3s`,
+`_GLOBAL_$I$cast__18SkillRepulseUndeadiP8CreatureG6Point3s`,
+`teleportParticle1`, `teleportParticle2`.
+
+Opened: none
+
+## agents/w8-net-play-b
+
+Merged (the branch notes carry the five summary sections). Nineteen of the 20
+units were selected with fresh `input_order` values 2347 through 2365 (16
+emitted functions, 20,208 compiled body bytes, not original-byte matches).
+All 19 host checks pass here (19 of 19); `init` and `kick-player` only build
+as their header comment says, with `-fno-builtin` and the host check alone.
+`launch-state` was **not** selected: it defines `nmPlayersAlive`, already
+defined by w8-net-play-a, so the link fails with a multiple definition; its
+files stay in the snapshot, unselected, and `netBroadCastStart`,
+`netAttemptLaunch`, `netTrouble` and `multiHelpMessageOn` stay open. No game
+binary or disassembly listing was committed. 1923 function bodies, 2366
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1518 |
+| Closed | 19 |
+| Opened | 59 |
+
+Closed: `netClearContact__Fv`, `netDisconnectPlayer__Fi`, `netDoNewLaunch__Fv`,
+`netGameStep__FbT0`, `netInContact__Fv`, `netInit__Fv`, `netKickPlayer__Fi`,
+`netPlayerIsConnected__Fi`, `netRestoreButtonConfigs__Fv`,
+`netStartLevel__Fv`, `netStartNetworkGameFrame__Fv`,
+`netStartNetworkGameInit__Fv`, `netStart__Fv`,
+`netWaitForPeersToCatchUp__Fv`, `norrath_player_heap_pointer_word`,
+`norrath_player_proxy_mesh_id`, `norrath_player_services_view_48068c`,
+`player`, `playerClearSpellEffect__Fv`.
+
+Opened: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_ConvertTempPlayerToReal__Fi`,
+`MC_GetRamSlot__FPi`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`,
+`MC_ReplicateFirstPlayersImportantThings__Fv`, `MC_SetRamNmPlayers__Fi`,
+`advanceRealState__Fi`,
+`analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci`,
+`broadcastConnectionFlags`, `compressSize`, `currentTime`, `derivedFrameNm`,
+`hostForcedLaunch`, `hostLaunchMask`, `hostStartedWithoutMe`, `isModem`,
+`kickState`, `lastPingTime`, `launchPeers`, `lightInc`, `lightIntensity`,
+`lnet_buf`, `localNetFrameNm`, `localNetSentFrameNm`, `localPlayerPadState`,
+`localPredictedPlayer`, `logChecksum`, `msgBufferSent`, `myaddr`,
+`netCameraYaw`, `netKickedOut`, `netLaunchExpirationCount`,
+`netLaunchTimer`, `netLocalPadState`, `netNewLaunchMaybeLaunch`,
+`netNewLaunchMaybeQuit`, `noAdvanceTime`, `packetSendCycleLength`,
+`packetSendCycleTime`, `peerSendDataMsg__FPciiP14sceInetAddressi`,
+`playerSpecStorage`, `receivePackets__Fv`, `runPrediction__Fi`,
+`sceInetCreate`, `sceInetInterfaceControl`, `sceInetOpen`,
+`sceInetRecvFrom`, `sceInetSendTo`, `sceSifMInitRpc`,
+`sendControlPacket__FiiiiiR9CCompressb`, `sentStatePacketFrameNm`,
+`showNetPlayerStatus__Fv`, `spellAlpha`, `spellAlphaInc`,
+`totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`,
+`worldPlotRouteSetEnable__Fi`.
+
+## agents/w8-render-world-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five units
+with fresh `input_order` values 2366 through 2390: 27 emitted functions
+(11,796 compiled body bytes, not original-byte matches, including file-local
+helpers). All 25 host checks build and exit 0 here (25 of 25). No duplicate
+definition was found at link time. No game binary or disassembly listing was
+committed. 1950 function bodies, 2391 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1518 |
+| After | 1514 |
+| Closed | 30 |
+| Opened | 26 |
+
+Closed: `_GLOBAL_$D$worldTileEntityLightScale`, `_GLOBAL_$I$edgearray`,
+`_GLOBAL_$I$modelClippingOn`, `_GLOBAL_$I$worldTileEntityLightScale`,
+`_textureDrawColor__FP8_textureiiiUi`, `blockAllocInit__Fv`,
+`blockAlloc__Fi`, `blockGetNmFree__Fv`, `cache`, `cacheHead`, `cacheTail`,
+`checkBlock`, `checkCanAllocDescriptor__Fv`,
+`creatureAdvanceAnimation__8Creaturef`, `decompressStack`,
+`draw__8CreatureP12_modelHeaderP8_textureT1`, `evalHermite__Ffffff`,
+`everyFrame__8CreatureP12_modelHeader`, `floorClear__Fv`,
+`getMegatileCenter__FG6Point2`, `getMegatileOriginalCenter__FG6Point2`,
+`lastNmBlocksFree`, `lastNmQ.1088`, `loadDirectory__FP9directoryii`,
+`loadSampleRate.784`, `lumpCheck__Fv`, `lumpFindByType__FPvPci`,
+`lumpQuery__FPc`, `lumpUnload__FPv`, `megatileInit__FP12MegatileRootPv`.
+
+Opened: `ParticleEmitterTestParticle`, `_$_5Light`, `bossMeterName`,
+`drawTexture__FR6PacketP8_textureiiiiii`, `droplet`, `ef1Noise__Fi`,
+`freeLump__FPv`, `fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Poin
+t3sP15FxCreatureStateffff`, `fxRunCreatureGlow__FP10GameObjectP12_modelHeade
+rP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi`, `fxRunCreatureShoc
+k__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`,
+`gameLineGetVert__Fii`, `gameLineGet__FPc`,
+`getClosestLivingPlayer__FG6Point3f`, `initPosition__FP17gameLinePathState`,
+`isBoss__FP10GameObject`, `lightSetColorScale__Ffff`,
+`lightSetPrimaryDirectional__FG6Point3Ps`,
+`lightSetSecondaryDirectional__FG6Point3Ps`,
+`megatileBankInit__FP16MegatileInstBankPv`,
+`megatileItemInit__FP8MegatilePv`, `mtcInitialize__Fv`,
+`netCheckActivation__FG6Point3f`, `rainSplashParticle`, `routeQueue`,
+`textRemoveText__FPv`, `worldFreeWorld__FP12_worldHeader`.
+
+## agents/w9-startup-crt-a
+
+Merged (the branch notes carry the five summary sections). Twenty-two units with
+fresh `input_order` values 2393 through 2414: 18 function units and four data
+units (commander lists, item global table, item picture state, map data) that
+emit no function. Sources are authored C++/assembly; no game binary or
+disassembly listing was committed. Host contracts: 20 of 22 run here. The
+`add-particle-ctor-numbered` check fails to link on this machine only because
+macOS prefixes the `__asm__` label of `_vt$11AddParticle` with an underscore (a
+platform artifact, not a source defect). The `terminate-thread` check compares
+against the pinned executable and was not run. The data units' only comparison
+is `docs/agents/w9-startup-crt-a-check.py`, which needs the private executable
+and was not run; the item-name table is an identifier table, not dialogue.
+The worker's claimed closed list reproduces (32 closed); 17 opened. 1968
+function bodies, 2413 authored inputs, zero COMMON. 214 tool tests passed. No EE
+or game execution.
+
+| | |
+|---|---|
+| Before | 1514 |
+| After | 1499 |
+| Closed | 32 |
+| Opened | 17 |
+
+Closed: `AllocTimerCounter`, `CallRpc`, `InitTLB`, `InvalidDCache`, `MemcpyS`,
+`SetTimerHandler`, `StartTimerCounter`, `TerminateThread`,
+`UnpreparePowerOff__Fv`, `_14WoodElfSoldier$m_commanderList`,
+`_3Orc$m_commanderList`, `_3map$mapOffset`, `_3map$mapheight`,
+`_3map$maptiles`, `_3map$mapwidth`, `_4item$globalItem`, `_4item$picBuffer`,
+`_4item$picInProgress`, `_4item$picList`, `_4item$picLoadBuffer`,
+`_4item$picLoadFinished`, `_4item$picsToLoad`, `_6Wraith$s_rWraithList`,
+`_GLOBAL_$I$hudNoDraw`, `__11AddParticleG6Point3PPci`,
+`__11FireBombletG6Point3sPcT1P6Point3i`, `__11ParticleDef`,
+`__12RecallEffectG6Point3`,
+`__13MissileWeaponiP12_modelHeaderP8_textureG6Point3T4iP8CreatureP10_vagHeaderT8iiiiiiPQ24item11description`,
+`__14AnimationStateRC14AnimationState`, `__3NPCG6Point3sPcN33ifPPc`,
+`__3Webii`
+
+Opened: `GetMemorySize`, `InitTLB32MB`, `P_ExtendTrail__FiG6Point3`,
+`P_StartTrail__Fiifiiiii`, `_InitTLB`, `__15GlowingCylinderG6Point3iiii`,
+`_sceIDC`, `_vt$10Projectile`, `_vt$11FireBomblet`, `_vt$12RecallEffect`,
+`_vt$13MissileWeapon`, `_vt$3NPC`, `iAllocTimerCounter`, `iSetTimerHandler`,
+`iStartTimerCounter`, `playedStinger`, `sceSifMCallRpc`
+
+## agents/w9-startup-crt-c
+
+Merged (the branch notes carry the five summary sections). Twenty-seven units
+with fresh `input_order` values 2415 through 2441, using the unique object
+names the notes asked for (three `typeinfo.cpp` units and `font_string_sizeu`
+would otherwise collide). Six virtual-table units and `impure_data` emit no
+function. No game binary or disassembly listing was committed. 29 host checks:
+28 run as is here; `k-exit-tlb-check` needs its two path arguments and passes
+with them (61 instructions). Both of its checks, and `ctype-check`, guard units
+that were already in the snapshot but unselected (`_ctype_`,
+`_kExitTLBHandler`); I did not select those units in this pass. The worker made
+no full-build claim; the real delta is above. 1988 function bodies, 2440
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1499 |
+| After | 1496 |
+| Closed | 27 |
+| Opened | 24 |
+
+Closed: `__tf11LavaVehicle`, `__tf9MummyKing`, `__tf9Savepoint`,
+`__throw_bad_typeid`, `__ti11LavaVehicle`, `__udivdi3`, `__umoddi3`,
+`_alarm_bind`, `_alarm_rdata`, `_exit`, `_fontPrintu__FiiPUsi`,
+`_fontStringSize__FP4FontPci`, `_fontStringSizeu__FP4FontPUsi`,
+`_fs_version`, `_impure_ptr`, `_sceFsSigSema`, `_sceFsWaitS`,
+`_sceRpcGetFPacket`, `_sceRpcGetFPacket2`, `_sceSifSendCmd`,
+`_search_svdata`, `_vt$11AddParticle`, `_vt$11LavaVehicle`,
+`_vt$11LightEffect`, `_vt$19ParticleMorphEffect`, `_vt$7Vehicle`,
+`_vt$8SkulBoat`
+
+Opened: `Exit`, `_$_10bad_typeid`, `_$_11AddParticle`, `_$_11LavaVehicle`,
+`_$_11LightEffect`, `_$_19ParticleMorphEffect`, `__cp_push_exception`,
+`__eh_alloc`, `__ps2_klibinfo__`, `__tf10bad_typeid`, `__tf11AddParticle`,
+`__tf11LightEffect`, `__tf19ParticleMorphEffect`, `__throw`,
+`_vt$10bad_typeid`, `clone__11LightEffect`, `debugReport__11AddParticle`,
+`draw__11AddParticleG6Point3P6Point3i`, `isceSifSetDma`,
+`msg_run__11LightEffect`, `msg_run__19ParticleMorphEffect`,
+`run__11AddParticleG6Point3`, `scanMask`, `subfontPrintu__FiiPUsi`
+
+## agents/w9-startup-crt-e
+
+Merged (the branch notes carry the five summary sections). Twenty-three units
+with fresh `input_order` values 2442 through 2464: 17 function units, one
+four-entry soft-double pass-through unit, and four storage/data-view units
+that emit no function (the notes list a table, not JSON, so the units were read
+from the files and cross-checked against the notes' table: same 23). All 23
+host contracts build and exit 0 here (23 of 23). The notes' compiled sizes are
+from a private trial; the plan build is authoritative. The worker's
+`w8-startup-sce-d-set-srs-info` remark (its host stub text for the race table
+does not match the image) is the worker's observation and I did not touch that
+package. No game binary or disassembly listing was committed. 2011 function
+bodies, 2463 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1496 |
+| After | 1484 |
+| Closed | 29 |
+| Opened | 17 |
+
+Closed: `norrath_sce_d_race_strings_view_4293e8`,
+`norrath_sce_d_unknown_sdata_word_view_4852d8`,
+`norrath_softdouble_add_2fb5c0`, `norrath_softdouble_compare_2fba48`,
+`norrath_softdouble_multiply_2fb680`, `norrath_softdouble_to_float_2fbc20`,
+`norrath_strticmp`, `padFilter`, `printfloat`, `raise`, `rdata`,
+`reglistLoopCount`, `sceCdDiskReady`, `sceCdPowerOff`, `sceCdRead`,
+`sceCdReadIOPm`, `sceCdStPause`, `sceCdStStop`, `sceDevctl`,
+`sceDmaCurrentEnv`, `sceFsInit`, `sceGifPkEnd`, `sceGifPkRefLoadImage`,
+`sceMcChdir`, `sceMcClose`, `sceMcDelete`, `sceMcFormat`, `sceMcGetDir`,
+`sceMcMkdir`
+
+Opened: `__fixunsdfdi`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`,
+`_sceFs_Rcv_Intr`, `currentDir`, `ftoi`, `mceSifRpcEndFunc`, `mceStorePwd`,
+`sceCdDiskReady_old`, `sceGifPkAddGsAD`, `sceGifPkCloseGifTag`,
+`sceGifPkCnt`, `sceGifPkOpenGifTag`, `sceGifPkRef`, `sceGifPkReserve`,
+`sifParamFname`
+
+## agents/w9-audio
+
+Merged (the branch notes carry the five summary sections). Fifteen function
+units with fresh `input_order` values 2465 through 2479. The worker's
+paired-run interpreter results are private and were not reproduced here; what
+I ran is the host contracts, all 15 of which build and exit 0 (15 of 15). The
+data symbols the notes list as unauthored stay open. No game binary or
+disassembly listing was committed. 2026 function bodies, 2478 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1484 |
+| After | 1473 |
+| Closed | 14 |
+| Opened | 3 |
+
+Closed: `animGetVolumeScale__Fii`, `playSoundForDlg__FP9DlgPacket`,
+`runStreamQueing__Fv`, `soundAllFlags__Fi`,
+`soundChangeSequenceVolume__Fif`, `soundDisable__Ff`,
+`soundGetGlobalDialogDir__Fv`, `soundMakePersistant__Fi`, `soundQuiet__Fv`,
+`soundReallyAllFlags__Fi`, `soundSetAudioEffect__Fiiiii`,
+`soundStartDialogStream__Fiii`, `soundStartGlobalDialogStreamRandom__FiPci`,
+`soundStartGlobalDialogStream__FiPci`
+
+Opened: `animLoadBuffer`, `effectModeSize`, `pitchTab`
+
+## agents/w9-frontend-c
+
+Merged (the branch notes carry the five summary sections). Twelve units with
+fresh `input_order` values 2480 through 2491: eight function units and four
+data units (card buffers, pause words, player-change words, select words) that
+emit no function. The notes list the plan entries as JSON, so the units were
+read from the files and checked against the notes' count of 12. All 12 host
+checks build and exit 0 here (12 of 12). The paired-run interpreter results
+the notes cite are private and were not reproduced. Array lengths inferred only
+from the distance to the next symbol are the worker's own caveat. No game binary
+or disassembly listing was committed. 2034 function bodies, 2490 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1473 |
+| After | 1453 |
+| Closed | 23 |
+| Opened | 3 |
+
+Closed: `newSel`, `nmActions`, `nmDialogNodes`, `padRunFrame__Fv`, `pauseStack`,
+`paused`, `pcLaunch`, `pcNmPlayers`, `pcTitle`, `playerChangeOldPos`,
+`playerChangeOldYaw`, `playerLocalPlayerBusy__Fv`, `playerNetDead__Fv`,
+`playerRace`, `playerRecallSpell__Fv`, `playerSelectInfo`,
+`playerSelectionEnforce__Fv`, `playerStatus`, `popPause__Fi`,
+`prepareBrowserUndo__Fv`, `processAnalogInput__FiiPfT2`, `quickLoadStamp`,
+`ramSlot`
+
+Opened: `castLightColor`, `haloColor`, `undoQuickLoadStamp`
+
+## agents/w9-other-a
+
+Merged (the branch notes carry the five summary sections). Twenty-five of the
+26 units were selected with fresh `input_order` values 2492 through 2516; 19
+of them emit no function (cheat flags, compressor/decompressor storage and
+similar data views), seven function units were selected. `line-to-y` was
+**not** selected: it defines `lineToY__Fi`, which `w8-object-list-math`
+already supplies (input 2268), so the link fails with a multiple definition.
+Its files stay in the snapshot, unselected. The two sources are independent
+authorings of the same observed function (both read 18 * line + 295); which
+one to keep is for the owners. All 26 host checks build and exit 0 here (26 of
+26). No game binary or disassembly listing was committed. 2040 function
+bodies, 2515 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1453 |
+| After | 1461 |
+| Closed | 25 |
+| Opened | 33 |
+
+Closed: `DLG_GetDialogCreature__Fv`, `GLibData`, `advanceFrame__Ff`,
+`cheatInvulnerability`, `cheatMode`, `commProcessReal__Fv`,
+`commandQueueEmpty__Fv`, `compImmediateCompressor`,
+`compImmediateDecompressor`, `compLocalCompressor`, `compLocalDecompressor`,
+`curDlgStart`, `curPlayer`, `decodeQHead`, `decodeQTail`, `deferedCall`,
+`displayDialogPos`, `dlgDir`, `flags`, `get__11ResourceMap`, `headerAlpha`,
+`hpos`, `initLightInfo__Fv`, `lastYAnchor`, `nextFrameDrop`
+
+Opened: `action`, `actor`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`,
+`commCVol`, `commNameMask`, `commRVInternalLast`,
+`executeAction__FP6Action`, `framestart`, `lastCE`, `lastlastCE`,
+`lgAudARead`, `lgAudASync`, `lgAudAWrite`, `lgAudEnumHint`,
+`lgAudEnumerate`, `lgAudOpen`, `lgAudSetRecordingVolume`,
+`lgAudStartPlayback`, `lgAudStartRecording`, `lgCodecDecode`,
+`lgCodecEncode`, `lightInfo`, `netGetNmConnectedPartners__Fv`,
+`netIsModem__Fv`, `netSendPacket__FiiPUci`, `nmActors`, `readcount`,
+`resourceFrame`, `timeout`, `writecount`
+
+## agents/w9-other-b
+
+Merged (the branch notes carry the five summary sections; the tip was four
+hours old). Twenty-six units with fresh `input_order` values 2517 through
+2542, 25 of them data definitions (memory-card error text pointer, packet
+buffers and counters, environment tables and similar) and one function unit,
+so the function-body count moves by one. The notes list plan entries as
+JSON/prose, so the units were read from the files. All 26 host checks build and
+exit 0 here (26 of 26); for the data units those checks assert sizes and
+initial values only. No game binary or disassembly listing was committed. No
+duplicate definition against `w9-other-a` or earlier packages. 2041 function
+bodies, 2541 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1461 |
+| After | 1437 |
+| Closed | 25 |
+| Opened | 1 |
+
+Closed: `nextNmDeferedCalls`, `nmDeferedCalls`, `nmDirectQWords`, `nullBuff`,
+`numEnvironments`, `p`, `packetbuffer`, `packetshift`, `pnums`,
+`raceStrings`, `recallEnter`, `recallPos`, `scaleScale`,
+`serviceResult__FP8queueCmdPi`, `sortedDir`, `sortedDirCount`,
+`syncRandState`, `syncState`, `t`, `targetObjs`, `targets`, `tempBuffer`,
+`thereIsACutPlayer`, `timeLastTransition`, `unscrambleTable`
+
+Opened: `file`
+
+## agents/runtime-tables
+
+Merged, but only one of its 23 units is selected (the notes carry the five
+summary sections; the tip was an hour old). The branch was started from an old
+shared tip, and 22 of its 23 units define symbols the shared branch already
+supplies from earlier packages (`w8-startup-sce-a`, `w8-runtime-libc-b`,
+`w8-spell-static-init-a` and others: for example `arList`, `eenull`,
+`norrath_assert_format_view`, `norrath_factory_prop_vtable`, the number and
+bigint table views, `icos`/`isin` and `heap_pointer`). With all 23 selected,
+the link fails with multiple definitions, so I selected only
+`runtime-tables-srcfile` (input 2543, a data unit with no emitted function, host
+test passes). The other 22 sources stay in the snapshot, unselected, with their
+host tests; the three link-style host tests (`rtti-user`, `prop-vtable`,
+`legacy-vtables`) pass when built with their implementation, and the other 20
+pass as is. The worker's 947-to-923 claim is against its own old tip and does
+not apply to this branch. Whether the independent duplicates agree byte for
+byte with the already-selected ones is not checked here. No game binary or
+disassembly listing was committed. 2041 function bodies, 2542 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1437 |
+| After | 1436 |
+| Closed | 1 |
+| Opened | 0 |
+
+Closed: `srcfile`
+
+Opened: none
+
+## agents/w9-startup-crt-b
+
+Merged (the branch notes carry the five summary sections; the tip was 33
+minutes old, so this reflects the tip at that time). Thirty-three of its 34
+units were selected with fresh `input_order` values 2544 through 2576: the
+newlib-style float kernels and the allocator, constructor and type-info
+pieces, one data-only unit. `tf-11lavavehicle` was **not** selected: it
+defines `__tf11LavaVehicle` and `__ti11LavaVehicle`, which
+`w9-startup-crt-c` already supplies, so the link failed with a multiple
+definition; its files stay in the snapshot, unselected. Host checks: 34 of 34
+pass here once built as each file's header says. Three float checks
+(`ieee754-powf`, `kernel-tanf`, `rem-pio2f`) compare recorded result bits and
+fail by one or two ulps on this machine unless built with
+`-ffp-contract=off` (the host compiler fuses multiply-add); with it they pass
+(992 vectors, 1.00 ulp worst, and the recorded reduction cases). Their recorded
+vectors come from the worker's private interpreter run and were not reproduced.
+Five link-style checks (`builtin-new`, `malloc-lock`, `malloc-unlock`,
+`terminate`, `update-mallinfo`) need their implementation file on the
+command line (two also need a `-D`); they pass that way. The net import count
+rises because the new constructor, vtable and `norrath_w9_startup_crt_b_view_*`
+units reference more names (base constructors of the `VI*` classes, `__tf`/`__ti`
+objects, float helpers such as `fabsf` and `__ieee754_sqrtf`, and the view
+addresses) than they close. No game binary or disassembly listing was
+committed. 2073 function bodies, 2575 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1436 |
+| After | 1472 |
+| Closed | 32 |
+| Opened | 68 |
+
+Closed: `__4GoldG6Point3i`, `__6PhPropG6Point3PcN22liPQ24item11descriptionf`,
+`__6PlayerG6Point3sii`, `__6SparksG6Point3T1P8CreatureP10_vagHeaderT4iiii`,
+`__7VISetup`, `__8GutChunkG6Point3iif`, `__9VIStation`, `__builtin_new`,
+`__ieee754_powf`, `__ieee754_rem_pio2f`, `__kernel_tanf`, `__malloc_lock`,
+`__malloc_unlock`, `__malloc_update_mallinfo`, `__terminate`,
+`__tf10DoorSecret`, `__tf10GameObject`, `__tf11AutoChestLP`,
+`__tf11FloorSwitch`, `__tf11PushTrigger`, `__tf14__si_type_info`,
+`__tf15AutoContainerLP`, `__tf16__user_type_info`, `__tf3Orc`, `__tf4Boat`,
+`__tf6Candle`, `__tf6PhProp`, `__tf7AntTrap`, `__tf7Blocker`,
+`__tf7Candle2`, `__tf7EggSack`, `__tf9DoorSwing`
+
+Opened: `_$_9bad_alloc`, `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`,
+`__10ProjectileG6Point3P10GameObjectPQ210GameObject11resourceMap`,
+`__10VIWndLegal`, `__11VIWndSplash`, `__12VIDictionary`, `__12VIWndPatcher`,
+`__13VISoundDevice`, `__15VIWindowManager`, `__20VIWndGenericRenderer`,
+`__4PropG6Point3PcN22li`, `__4VIUI`, `__5VIPad`, `__6VIFont`, `__7VIFader`,
+`__7VIScene`, `__8CreatureG6Point3sPQ210GameObject11resourceMapfPPc`,
+`__8VIRaster`, `__9VICollide`, `__9VIWndDnas`, `__9VIWndEula`,
+`__ieee754_sqrtf`, `__kernel_rem_pio2f`, `__new_handler`, `__rtti_user`,
+`__terminate_func`, `__tf10AutoPropLP`, `__tf9bad_alloc`, `__tf9type_info`,
+`__ti10AutoPropLP`, `__ti9type_info`, `_vt$4Gold`, `_vt$6PhProp`,
+`_vt$6Player`, `_vt$6Sparks`, `_vt$8GutChunk`, `_vt$9bad_alloc`,
+`coreForceSmallCharacters`, `fabsf`, `fxResourceMap`, `goldAnm`,
+`lightAdd__FP5Light`, `norrath_w9_startup_crt_b_view_11c3ae8`,
+`norrath_w9_startup_crt_b_view_462260`,
+`norrath_w9_startup_crt_b_view_4644c0`,
+`norrath_w9_startup_crt_b_view_464ab8`,
+`norrath_w9_startup_crt_b_view_464ac8`,
+`norrath_w9_startup_crt_b_view_464ad8`,
+`norrath_w9_startup_crt_b_view_464ae8`,
+`norrath_w9_startup_crt_b_view_464af8`,
+`norrath_w9_startup_crt_b_view_464b10`,
+`norrath_w9_startup_crt_b_view_464b20`,
+`norrath_w9_startup_crt_b_view_464b30`,
+`norrath_w9_startup_crt_b_view_464b48`,
+`norrath_w9_startup_crt_b_view_464b58`,
+`norrath_w9_startup_crt_b_view_464b68`,
+`norrath_w9_startup_crt_b_view_464b78`,
+`norrath_w9_startup_crt_b_view_464b88`,
+`norrath_w9_startup_crt_b_view_464b98`,
+`norrath_w9_startup_crt_b_view_4708d0`,
+`norrath_w9_startup_crt_b_view_4801f8`,
+`norrath_w9_startup_crt_b_view_4816dc`,
+`norrath_w9_startup_crt_b_view_483b70`,
+`norrath_w9_startup_crt_b_view_485380`, `racePrefix`, `scalbnf`,
+`selectLumpName`, `typeToResource`
+
+## agents/w9-startup-crt-d
+
+Merged as a **partial package**: its notes have only the per-function notes and
+a summary, not the five summary sections, but the tip was 68 minutes old, every
+committed function has a host test, the tool tests pass, and the partial build
+passes. The summary's build-plan list was used to read the 22 units (cross
+checked against the files: same 22), selected with fresh `input_order` values
+2577 through 2598. All 22 host tests build and exit 0 here (22 of 22), including
+the soft-double `dpadd`/`dpsub`/`dpcmp`/`dptofp`/`fptodp` set. The branch also
+added a `blockFree__FPv` alias to the existing
+`block-allocator-lifecycle-build/block_free.cpp`. That file is input 6 of the
+264-input historical prefix, whose record digest `check_source_snapshot.py`
+pins, and the alias would also change the pinned function inventory, so I
+restored the file to its shared-branch contents in a separate commit and did not
+select that alias; `blockFree__FPv` stays open until its owner supplies a
+standalone unit. The worker's per-function compiled sizes (for example `free`
+64, `memmove` 132) come from its own trial and were not used. No game binary or
+disassembly listing was committed. 2095 function bodies, 2597 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1472 |
+| After | 1467 |
+| Closed | 22 |
+| Opened | 17 |
+
+Closed: `amx_FindPublic`, `dpadd`, `dpcmp`, `dpsub`, `dptofp`, `fptodp`, `free`,
+`get_iob`, `gsm_create`, `gsm_option`, `iSetTimerAlarm`, `iWakeupThread`,
+`initEzNetCnf`, `isceSifSendCmd`, `kputchar`, `kputs`, `lgAudClose`,
+`lgKbMInit`, `mceGetInfoApdx`, `memalign`, `memmove`, `new_iob`
+
+Opened: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `KbdMapTable`,
+`__fpcmp_parts_d`, `__make_dp`, `__make_fp`, `__pack_d`, `__unpack_d`,
+`__unpack_f`, `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`,
+`connect_to_iop_server`, `get_time`, `init_ee_timer`,
+`qsort_translate_table`
+
+## agents/w9-startup-crt-f
+
+Merged (the branch notes carry the five summary sections; the tip was 66
+minutes old). Twenty-two of its 30 units were selected with fresh
+`input_order` values 2599 through 2620, including three assembler stubs
+(`authored_entry_asm`). Eight units were **not** selected because the branch
+commits no host test for them; the notes say they were checked only in a
+private paired run outside git, which this repository cannot re-run:
+`mc-read`, `mc-write`, `pad-read`, `pad-set-act-direct`, `tty-init`,
+`tty-read`, `tty-write` and the `tty-state` data unit that the three tty
+functions depend on. Their sources stay in the snapshot, unselected, and
+`sceMcRead`, `sceMcWrite`, `scePadRead`, `scePadSetActDirect` and the tty
+functions stay open until a committed test exists. Of the 22 selected, 19 host
+tests build and exit 0 here (the link-style ones need their implementation file
+on the command line, two need a `-D` from the file's first lines). The three
+assembler comparisons `sif-set-d-chain`, `sif-set-dma` and `sif-stop-dma` take
+the private executable as an argument and were not run. No game binary or
+disassembly listing was committed (the notes explain that `srcfile` and
+`tlbsrc` are machine code and were deliberately not authored). 2117 function
+bodies, 2619 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1467 |
+| After | 1455 |
+| Closed | 22 |
+| Opened | 10 |
+
+Closed: `sceMcOpen`, `sceMcSeek`, `scePadEnterPressMode`, `scePadInfoPressMode`,
+`scePadSetActAlign`, `scePadSetMainMode`, `sceSdTransToIOP`,
+`sceSifExitCmd`, `sceSifFreeSysMemory`, `sceSifMBindRpcParam`,
+`sceSifMExitRpc`, `sceSifMUnBindRpc`, `sceSifRemoveCmdHandler`,
+`sceSifSetDChain`, `sceSifSetDma`, `sceSifStopDma`, `strcat`, `strchr`,
+`strrchr`, `strticmp__FPCcT0`, `unet_shutdown__Fv`, `ustrcat__FPUsPc`
+
+Opened: `VIFreeUSocketExApi__Fv`, `_sceSifMInitCheck`, `net_buf`,
+`norrath_sif_m_rpc_packet_pool_view`, `sLibNetInitialized`,
+`scePadGetButtonMask`, `scePadSetButtonInfo`, `scePadSetReqState`,
+`sceSifDmaStat`, `sceSifRemoveRebootNotifyHandler`
+
+## agents/w9-frontend-b
+
+Merged (the branch notes carry the five summary sections; the tip was 61
+minutes old). Twenty-five units with fresh `input_order` values 2621 through
+2645: 22 function units (front-end loading, death screen, jump gates, progress
+drawing, HUD and similar) and three data units (`cd-file`, `config-strings`
+and `state-words`). The `config-strings` table holds nine controller-row key
+identifiers (`c_attack` and so on), not dialogue. The notes list plan entries
+in prose, so the units were read from the files. All 25 host checks build and
+exit 0 here (25 of 25). The notes name the opened symbols and ask the
+integrator to confirm them; the real opened set is the 76 listed below: they
+are other packages' functions and data (`HUDInit__Fv`, `Load__6Camera`,
+`MC_LoadRamSlot__Fv`, `lumpLoadGlob__FPc`, the `jumpGate*` and light/model
+helpers and so on). The count rises because these loading and HUD functions
+call into areas not yet reconstructed. No game binary or disassembly listing
+was committed. 2139 function bodies, 2644 authored inputs, zero COMMON. 214
+tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1455 |
+| After | 1495 |
+| Closed | 36 |
+| Opened | 76 |
+
+Closed: `configMode`, `configStrings`, `coreStartLoading__Fv`, `curSel`,
+`deathNetHack`, `deathState`, `dialogPacket`, `drawProgress__Fv`,
+`emergencyMusicWaitAbort`, `gCdFile`, `gameCheckForDeathScreen__Fv`,
+`gameDeath__Fv`, `gameLoadWorld__FPc`, `gotPlayerStartThisLevel`,
+`hudDisplayNetCamToggle`, `hudNetWaitMsgReady__Fv`,
+`inGameConfigShuttingDown`, `initNamePad__Fv`, `initPreSelect__Fv`,
+`initStuff__6PhPropi`, `jumpGateHubReset__Fi`, `jumpGateSave__FPc`,
+`jumpGateTaskDraw__Fv`, `jumpGateTaskRun__Fv`, `keyboardGetNextKey__Fv`,
+`keyboardGetNextTranslatedKey__Fv`, `loadPlayerInfo__FiPiP12playerStruct`,
+`loadRamSlot__Fv`, `memcardTitle__FPUs`, `modifyRamSlotForNetSave__Fv`,
+`multiHudAddHelpMessage__FiPUsT1i`, `needActAlign`, `needEnforce`,
+`netForceLocalUpdate`, `netGetLocalObject__FP8Creature`,
+`netGetLocalPlayerNmSafe__Fi`
+
+Opened: `GetSaveFootPrint__6Camera`, `HUDInit__Fv`, `Load__6CameraPc`,
+`MC_GetLoadName__Fv`, `MC_LoadLevelEntities__FPcT0`, `MC_LoadRamSlot__Fv`,
+`MC_ResetAutoCheckPointSave__FPc`, `Read__10VIKeyboardR12VIConsoleKey`,
+`__7Weatheri`, `boxAdd__FP3BoxT0`, `boxSetEmpty__FP3Box`,
+`browserOverwrite`, `convertIndiciesToPointers__Fi`,
+`coreStartLoadingScreen__Fv`, `curDest`, `cursorTime`,
+`debugStartMenuIsOn__Fv`, `delta`, `doJumpEffect__Fi`, `fontGrid`,
+`framedone`, `gameDeathHeight`, `gameInitPostFrontend__Fv`,
+`gameLineFuse__Fv`, `gameMaxCamHeight`, `gameMinCamHeight`,
+`gameSetMusicTimer__Fi`, `getSlotName__FiiPc`, `groundType`, `hubNames`,
+`importInfoHeader`, `inesc`, `initJumpEffect__Fv`, `initPosition__Fii`,
+`init__3mapi`, `init__4itemv`, `inventorySyncQuestItems__Fi`,
+`jumpGateDestCount`, `jumpGateEntries`, `jumpGateHurtDest`,
+`jumpGateLoad__FPc`, `jumpGateSaveFootPrint__Fv`, `jumpGateState`,
+`jumpGateTime`, `jumpGateWho`, `lastDest`, `lastkey`, `lasttime`,
+`lightSetSceneLights__FG6Point3iiiiiiiii`, `lightStart`, `list.1073`,
+`loadPlayerLumps__Fv`, `loc`, `lockAlpha`, `lumpLoadGlob__FPc`,
+`modelGetBoundingBox__FP12_modelHeaderlPiN52`,
+`modelSetGlobalShadowBrightness__Ff`, `nameGridCount`, `nameGridW`,
+`originalPos`, `originalYaw`, `progress`, `routeClear__Fv`,
+`routeMakeLattice__Fv`, `scale`, `scissor`, `selectMode`,
+`skirmishInit__Fv`, `soundSetAmbientData__FPc`, `thisLevel`,
+`worldActivityLevel`, `worldAllocateSegments__FP12_worldHeader`,
+`worldBoundingBox`, `worldDeactivateUntakenDoors__FP12_worldHeader`,
+`worldSetWaterProperties__FP8_texture`, `worldTileEntityLightScale`
+
+## agents/w9-frontend-d
+
+Merged (the branch notes carry the five summary sections; the tip was 45
+minutes old). Sixteen units with fresh `input_order` values 2646 through 2661:
+twelve function units and four data units (`buffers`, `launcher-statics`,
+`state-words`, `tex-strings`). The twelve function units' host checks build and
+exit 0 here (12 of 12). The four data units have no source-side check; their
+test is `host-tests/w9-frontend-d/test_data.py`, which compiles each with the
+EE toolchain and checks symbol sizes, contents and relocations. It runs
+(4 tests, OK) and is recorded as their host file. The branch also touched
+`.gitignore` to track that test directory's `.py` files only; that is the only
+non-source file besides the notes. The worker's remark about differences from
+the original (see its "Deliberate differences" section) stands as written and
+was not independently checked. No game binary or disassembly listing was
+committed. 2154 function bodies, 2660 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1495 |
+| After | 1478 |
+| Closed | 32 |
+| Opened | 15 |
+
+Closed: `requestToExit`, `resetWithClose__Fv`, `restrictChars`, `rumphole`,
+`runBrowser__FPUs`, `runConfigure__FiPUsi`, `sCdRmode`, `sGameOptions`,
+`saveOk`, `savedScene`, `scriptFrame`, `scriptGameStateEntry__FiPi`,
+`slotInfoHeaders`, `startExitFade`, `startFrame`, `startInhibit`,
+`startProgress__Fv`, `startScorePos`, `tempPlayerStruct`, `texStrings`,
+`textBodyLen`, `textSend__Fv`,
+`textureDrawSuperColor__FP8_textureiiiUiiiiicc`,
+`textureLockCacheBuffer__Fv`, `texturePrepareToLockCacheBuffer__Fv`,
+`textureReleaseCacheBuffer__Fv`, `texturesAreDecompressing`,
+`texturesAreLoading`, `unModifyRamSlotForNetSave__Fv`, `undoBrowser__Fv`,
+`waiting`, `waitingForStreamSpool`
+
+Opened: `blocksFree`, `browserDelete`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`,
+`engineGetField__Fv`, `gameStateData`,
+`generateSortedListAndInfoHeaders__Fv`, `markFileName`,
+`needToClearCacheBuffer`, `patchSortedListWithLocalTime__Fv`, `sessionMark`,
+`slotsCorrupted`, `sortedPlayerRace`, `swap__H1Zi_RX01T0_v`,
+`usprintf__FPUsPcffffffff`, `wasFormatting`
+
+## agents/w9-frontend-a
+
+Merged (the branch notes carry the five summary sections; the tip was 22
+minutes old). Twenty-five of its 29 units were selected with fresh
+`input_order` values 2662 through 2686: 21 function units and four data units
+(act-align, button values, cache cd-done, memory-card state). Four function
+units were **not** selected because the notes themselves say they have no
+committed host contract and were checked only in a private comparison:
+`Process__9VIStation`, `Init__9VIStationiPCcPcT3T2T2i`, `RunPatcher__7VISetup`
+and `MC_CheckPlayerImportOrChange__Fv`. Their sources stay in the snapshot,
+unselected. The 25 selected units' host checks build and exit 0 here (25 of
+25). The opened count rises because the memory-card, cd and VI functions call
+into areas not yet reconstructed; the notes name `sAlarmCallback__FiUsPv`,
+`MainLoopBegin__7VISetup` and `MainLoopEnd__7VISetup` as belonging to other
+packages. No game binary or disassembly listing was committed. 2175 function
+bodies, 2685 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1525 |
+| Closed | 33 |
+| Opened | 80 |
+
+Closed: `Ascii2Sjis__FUc`, `Free__7VISetup`, `Free__9VIStation`, `Init__7VISetupi`,
+`MCA_Busy__Fv`, `MCA_DirContents`, `MCA_Result`, `MC_ByteCopy__FPvT0i`,
+`MC_GetNetGameInfo__FPiT0Pc`, `MC_GetRamPlayerPtr__Fi`,
+`MC_GetTempPlayerStorage__Fi`, `MC_NameToAct__FPc`,
+`MC_SaveLevelEntities__FPc`, `MC_SetActByLevelName__FPc`,
+`Process__7VISetup`, `RestartConnect__7VISetup`, `_$_7VISetup`,
+`_$_9VIStation`, `actAlignData`, `actSendData`, `askedForConfigLoad`,
+`browserSlot`, `buttonValues`, `cacheCdDone`, `cardType`,
+`cdCheckForFileInCurrentLayer__FPc`, `cdIsBusy__Fv`,
+`cdLoadAsyncIOP__FPciT0ii`, `cdLoadAsync__FPcPvT0ii`,
+`checkSave__FP10GameObject`, `configFileName`, `configFormatted`,
+`configLumpLoaded`
+
+Opened: `BeginScene__8VIRaster`, `Begin__7VIFaderff`, `CleanUp__11VIGUIObject`,
+`Clear__12VIDictionary`, `Clear__7VIScene`, `Close__13VISoundDevice`,
+`Close__4VIUI`, `Close__5VIPad`, `Close__8VIRaster`, `Close__9VICollide`,
+`EndScene__8VIRaster`, `Flush__13VISoundDevice`, `Free__10VIWndLegal`,
+`Free__11VIWndSplash`, `Free__12VIWndPatcher`, `Free__15VIWindowManager`,
+`Free__7VIFader`, `Free__9VIWndDnas`, `Free__9VIWndEula`,
+`GetTime__7VITimer`, `Init__10VIWndLegal`, `Init__11VIWndSplashP7VIScene`,
+`Init__12VIDictionaryi`, `Init__12VIWndPatcher`, `Init__13VISoundDevice`,
+`Init__15VIWindowManagerP5VIPadP10VIKeyboard`,
+`Init__4VIUIP8VIRasterP13VISoundDeviceP12VIDictionary`, `Init__5VIPadii`,
+`Init__7VIFaderP8VIRasterP12VIDictionaryf`,
+`Init__7VIScenelR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`,
+`Init__8VICameraR8VIRasterRC7VIVect3T2ffff`, `Init__8VIRasterPviii`,
+`Init__9VICollide`, `Init__9VIWndDnasP7VIScene`, `Init__9VIWndEula`,
+`Load__13VIGameOptions`, `Parse__9VICSFFilePCcR10VIESFParseR7VIScene`,
+`Process__13VISoundDevice`, `Read__5VIPadR12VIConsolePad`,
+`Render__7VISceneR8VICamera`, `RestartConnect__11VIWndSplash`,
+`SetAppPtr__5VIWndPv`, `SetClearColor__8VIRasterRC10VIColor32F`,
+`SetFocus__5VIWndP5VIWndb`, `SetRoot__15VIWindowManagerP5VIWnd`,
+`SetTimeOfDay__7VIScenef`, `SetTime__7VIScenel`, `SetWireframe__8VIRasteri`,
+`StartAmbientSoundtrack__7VISetup`, `StopAmbientSoundtrack__7VISetup`,
+`Update__15VIWindowManager`, `Update__7VIFader`, `VISetWindowUI__FP4VIUI`,
+`VISplashFxFree__Fv`, `VISplashFxInit__FP8VIRasterP12VIDictionary`,
+`_$_10VIESFParse`, `_$_10VIMatrix44`, `_$_10VIWndLegal`, `_$_11VIWndSplash`,
+`_$_12VIDictionary`, `_$_12VIWndPatcher`, `_$_13VISoundDevice`,
+`_$_15VIWindowManager`, `_$_20VIWndGenericRenderer`, `_$_4VIUI`,
+`_$_5VIPad`, `_$_7VIFader`, `_$_7VIScene`, `_$_8VIRaster`, `_$_9VICollide`,
+`_$_9VIWndDnas`, `_$_9VIWndEula`, `__10VIESFParse`, `__9VICSFFile`,
+`__cl__8VICameraR7VIVect3T1`, `ascii_special`, `ascii_table`,
+`getSaveTableEntry__FPc`, `sPad`, `saveLevelDataASync__FPci`
+
+## agents/w9-camera-map
+
+Merged (the branch notes carry the five summary sections; the tip was 52
+minutes old). Twenty of its 21 units were selected with fresh `input_order`
+values 2687 through 2706: camera push/pop/save, cut-scene routines, debug and
+Innoruk cameras and one storage unit that emits no function. `web-construct`
+was **not** selected: it defines `__3Webii`, which `w9-startup-crt-a` already
+supplies (input 2414), so the link failed with a multiple definition; its
+files stay in the snapshot, unselected. Host checks: 20 of 21 build and exit 0
+as is; `cut-init-scene` stores 32-bit object pointers and, as its header says,
+needs an x86_64 build with `-Wl,-pagezero_size,0x10000`; built that way it
+passes. The notes say the checks were written from the worker's reading of the
+original; they are the worker's, not independent evidence. No game binary or
+disassembly listing was committed. 2197 function bodies, 2705 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1525 |
+| After | 1527 |
+| Closed | 24 |
+| Opened | 26 |
+
+Closed: `GetTargetNum__6Camera`, `GetZoomDistance__6Camera`, `Pop__6Camera`,
+`Save__6CameraPc`, `SetCutWasActive__6Camera`, `SetZoomDistance__6Cameraf`,
+`addIcon__3mapP6Point3iPciT3N33`, `cutDrawFrame__Fv`,
+`cutInitScene__FP9_cutscene`, `cutRunFrameTask__Fv`, `cutStop__Fv`,
+`doDebugCam__6Camera`, `doInnorukCam__6Camera`, `doNormalCam__6Camera`,
+`isRevealed__3mapv`, `mapButtonWasDown`, `mapObjList`, `mapScale`, `mapX`,
+`mapY`, `norrath_map_add_icon`, `revealEntireMap__3mapv`,
+`revealMap__3mapG6Point3`, `willDraw__3mapP12_worldHeaderf`
+
+Opened: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`,
+`animRemoveNonpermanentAnimations__FP14AnimationState`,
+`checkYawReset__6Camera`, `cutLoadedDialogStream`, `cutStartMusic`,
+`determineBestController__6Camera`, `displayMusicPos`, `displayTextDisable`,
+`doAutoPitch__6Camera`, `doUserYaw__6Camera`, `doUserZoom__6Camera`,
+`enforceMaxSpeed__6CameraP6Point3`, `findCutDialog__Fv`,
+`hideHiddenObjects__FP10GameObject`, `hudLetterBox__Fv`,
+`objectCreateByName__FPcG6Point3sPPc`, `obtainTarget__6CameraP6Point3`,
+`playerCountChanged__6Camera`, `rayHit__FP6Point3N30`,
+`removeMonster__FP10GameObject`, `resetScissor__Fv`,
+`showHiddenObjects__FP10GameObject`, `soundStartMusic__Fii`,
+`unremoveMonster__FP10GameObject`
+
+## agents/w9-hud-inventory-items-b
+
+Merged (the branch notes carry the five summary sections; the tip was 48
+minutes old). Thirty-three of its 34 units were selected with fresh
+`input_order` values 2707 through 2739: HUD and inventory functions and 12
+or so data definitions that emit no function (gold alpha, Hermite time, HUD
+header, inventory grid, name tags and similar). The 34th unit,
+`view-exit-sound-resource` (a 21-byte resource-name string view), was **not**
+selected: it has no host check, only a `static_assert` on its size, so a wrong
+byte in it would not be noticed; it stays in the snapshot, unselected. The
+selected units' host checks build and exit 0 here (33 of 33; the grid-drop check
+takes `-DNORRATH_INVENTORY_HOST=1`). The worker reports 1507 unresolved imports
+for its private plan copy; on the shared branch the real count after this
+merge is 1523 (the worker's plan did not contain the later packages). No game
+binary or disassembly listing was committed. 2217 function bodies, 2738
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1527 |
+| After | 1523 |
+| Closed | 33 |
+| Opened | 29 |
+
+Closed: `getName__4itemPQ24item11descriptioni`,
+`getPicName__4itemPciPQ24item11description`,
+`getProxyMeshId__4itemPQ24item11description`,
+`getValue__4itemPQ24item11description`, `givePlayerFeat__Fxii`, `goldAlpha`,
+`goldNumber`, `hermDeltaScale`, `hermiteTime`,
+`hudGivePlayerGold__FiG6Point3i`, `hudHeaderUni`,
+`hudInfoMessageShowing__Fv`, `invGrid`, `inventory`,
+`inventoryAdjustAbility__Fii`, `inventoryAdjustSkill__Ficx`,
+`inventoryCheckWieldingStatus__FiPQ24item11description`,
+`inventoryExit__Fiii`, `inventoryFrameDraw__Fv`, `inventoryFrameRun__Fv`,
+`inventoryGridDropItem__Fiiciiii`, `inventoryLoadState`,
+`inventoryLoad__Fv`, `inventoryLump`,
+`inventorySetAnim__FiP14AnimationStatei`, `inventoryUnload__Fv`,
+`lastFontCharAlpha`, `lastFontColor`, `lerpColor__FUiUif`,
+`lerpShortRot__Fssfff`, `makeRandomPotion__4itemPQ24item11description`,
+`msgTimeout`, `nameTags`
+
+Opened: `_4item$prefixTable`, `_4item$suffixTable`, `_shopCheck__Fi`,
+`animGetAnimComponent__FP14AnimationStateP15AnimationHeader`, `bevel`,
+`buySellVertSpacing`, `findAndStripGender__4itemPUs`,
+`getArmorBonus__4itemPQ24item11description`, `getAttributeName__4itemiPc`,
+`getDamageRangeAll__4itemPQ24item11descriptionPiT2i`,
+`givePlayerSkill__Fii`, `invHeader`, `invInitSharedInterfaceTextures__Fv`,
+`inventoryDrawDelay`, `inventoryDrawPlayerColor__Fiii`,
+`inventoryDrawPlayer__FiiP14AnimationStatei`, `inventoryDraw__Fi`,
+`inventoryRun__Fi`, `inventoryUnpack__Fiib`, `marble`,
+`norrath_inventory_exit_sound_resource_view`, `playerGoldx`, `playerGoldy`,
+`playerSetFeatRank__Fixi`, `playerSetSkillRank__Fiii`,
+`resetMenu__FP12screenStruct`, `shopUnpackToGrid__Fiii`, `stage`,
+`statsScreen`
+
+## agents/w9-render-math-b
+
+Merged (the branch notes carry the five summary sections; the tip was 54
+minutes old). Twenty-five units with fresh `input_order` values 2740 through
+2764: 22 function units (render and model math, scissor and megatile helpers)
+and three data units (camera angles, map scissor, megatile seed rotation) that
+emit no function. All 25 host checks build and exit 0 here (25 of 25). The
+notes' "Strings kept" section says the only literals are one engine level
+identifier and two resource file names in `modelDrawShadow` (engine
+identifiers, not dialogue); I read that section but did not grep every unit. No game binary
+or disassembly listing was committed. 2241 function bodies, 2763 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1523 |
+| After | 1502 |
+| Closed | 29 |
+| Opened | 8 |
+
+Closed: `lightSetAmbientColor__FPs`, `lightSetAmbientOffset__FPs`,
+`lightSetAmbientOnly__Fv`, `lilog2__Fl`, `makeExplosion__FG6Point3f`,
+`mapScissorX`, `mapScissorY`, `matIdent__FP8Matrix34`,
+`matMakeTransYawScale__FP8Matrix34G6Point3sf`,
+`matMakeTrans__FP8Matrix34G6Point3`,
+`matMakeViewMatrix__FP8Matrix44fffffff`, `matMul__FP8Matrix34N20`,
+`matMul__FP8Matrix44P8Matrix34T0`, `matRot__FP8Matrix34is`,
+`matTrans__FP8Matrix34fff`, `matTransform__FP6Point3P8Matrix44T0`,
+`matUntransform__FP6Point3P8Matrix33T0`, `megatileRot`, `megatileSeed`,
+`modelDrawShadow__FP12_modelHeaderiP8Matrix34P14AnimationStatec`,
+`modelGetCharAttachmentPos__FP12_modelHeaderG6Point3sP14AnimationStateiP6Point3T5f`,
+`modelGetNmShadowPoints__FP12_modelHeader`,
+`modelGetShadowPos__FP12_modelHeaderP14AnimationStateG6Point3siP6Point3PfP8Matrix33f`,
+`modelSetHalo__FP7HaloDefi`, `modelSetNoZWrite__Fv`,
+`modelSetShadowScale__Ff`, `myFOV`, `myPitch`, `myRoll`
+
+Opened: `animGetBoneMatrix__FP14AnimationStateiP8Matrix34`, `ballParticle`,
+`lightCharacterShadow__FG6Point3P11LightResult`,
+`matPostRot__FP8Matrix33is`, `matScale__FP8Matrix44f`,
+`matTrans__FP8Matrix44fff`, `matTransform__FP6Point3P8Matrix34T0`,
+`trailParticle`
+
+## agents/w9-animation-object-a
+
+Merged (the branch notes carry the five summary sections; the tip was 43
+minutes old). Twenty-one units with fresh `input_order` values 2765 through
+2785: 17 function units and four data units (animation state, game line,
+in-message and lump data) that emit no function. The branch also carries
+`docs/agents/w9-animation-object-a-plan-entries.py`, a helper that prints plan
+entries and writes a private plan copy; I did not use or run it (the entries
+here come from compiling each unit). All 21 host checks build and exit 0 here
+(21 of 21). No game binary or disassembly listing was committed. 2258 function
+bodies, 2784 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1502 |
+| After | 1478 |
+| Closed | 28 |
+| Opened | 4 |
+
+Closed: `animAddHairy__FP14AnimationStateP15AnimationHeaderfffffi`,
+`animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`,
+`animAddToEnd__FP14AnimationStateP15AnimationHeaderi`,
+`animAdvanceAnimation__FP14AnimationStateP6Point3P6Point2Ps`,
+`animFindComponentWithFlags__FP14AnimationStatei`,
+`animGlobalSync__FP14AnimationState`,
+`animMapAnimationSounds__FP15AnimationHeader`, `animState`, `animStatePtr`,
+`animUseBuffer`, `animationLoadPos`, `animationLoading`,
+`bExitStatePersueIdle__8Creature`, `bFarFromHome__8Creature`,
+`convertPointersToIndicies__Fi`, `dialogLumpName`, `domeLump`,
+`eRand__10GameObject`, `eqLumpHeader`, `findTagFloat__10GameObjectPci`,
+`gameLineCount`, `gameLineInitPathState__FP17gameLinePathStatePcP6Point3`,
+`gameLineUpdatePosition__FP17gameLinePathState`, `gameLines`,
+`genericMove__10GameObjectG6Point3P10GameObject`,
+`getSmartRandomDestination__8Creaturei`, `hasLightOrParticleNumber__FPPci`,
+`inMsg`
+
+Opened: `fmodf`, `gameLineGetNextPoint__FP17gameLinePathStateiP6Point3`,
+`objectMoveWithWorldCollision__FP6Point3G6Point3fiT0`,
+`playerPrintPaperDoll__Fi`
+
+## agents/w9-ctors-lantern-a
+
+Merged (the branch notes carry the five summary sections; the tip was 31
+minutes old). Thirty-eight units with fresh `input_order` values 2786 through
+2823: 22 resource maps, 14 virtual tables and two pointer/list tables, all data
+(no function bodies, so the body count stays at 2258). Each unit has a host
+comparison under `views/host/`; the notes' build-plan section is a table of
+sources and hashes, and the same 38 units were found in the files. All 38 host comparisons build
+(linked against the unit, no source change) and exit 0 here (38 of 38). The
+count of opened imports is large because each virtual table points at its
+class's slot functions, which are not defined in this package, so every slot
+function becomes an unresolved import; the notes do not claim otherwise. The
+worker's per-object size equality with the original symbol was checked at EE
+compile time by the worker and was not re-measured here. The worker did not
+define the three offsets it lists as blocked (they are interior offsets of
+the `skills` object, not separate objects). No game binary or disassembly
+listing was committed. 2258 function bodies, 2822 authored inputs, zero COMMON.
+214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1478 |
+| After | 1584 |
+| Closed | 38 |
+| Opened | 144 |
+
+Closed: `norrath_ctors_ant_lantern_view_42ae60`,
+`norrath_ctors_ant_lantern_view_42af70`,
+`norrath_ctors_ant_lantern_view_42b1d0`,
+`norrath_ctors_ant_lantern_view_42b548`,
+`norrath_ctors_ant_lantern_view_42b630`,
+`norrath_ctors_ant_lantern_view_42b870`,
+`norrath_ctors_ant_lantern_view_42b958`,
+`norrath_ctors_ant_lantern_view_42ba00`,
+`norrath_ctors_ant_lantern_view_42bb08`,
+`norrath_ctors_ant_lantern_view_42be08`,
+`norrath_ctors_ant_lantern_view_42beb0`,
+`norrath_ctors_ant_lantern_view_42bf58`,
+`norrath_ctors_ant_lantern_view_42c188`,
+`norrath_ctors_ant_lantern_view_42c308`,
+`norrath_ctors_ant_lantern_view_42c8a0`,
+`norrath_ctors_ant_lantern_view_42cef0`,
+`norrath_ctors_ant_lantern_view_42cfc8`,
+`norrath_ctors_ant_lantern_view_42d200`,
+`norrath_ctors_ant_lantern_view_438a38`,
+`norrath_ctors_ant_lantern_view_438b28`,
+`norrath_ctors_ant_lantern_view_438eb8`,
+`norrath_ctors_ant_lantern_view_4494c0`,
+`norrath_ctors_ant_lantern_view_44a810`,
+`norrath_ctors_ant_lantern_view_44a8a0`,
+`norrath_ctors_ant_lantern_view_44b900`,
+`norrath_ctors_ant_lantern_view_44b9f0`,
+`norrath_ctors_ant_lantern_view_44bae0`,
+`norrath_ctors_ant_lantern_view_44bbd0`,
+`norrath_ctors_ant_lantern_view_44bcc0`,
+`norrath_ctors_ant_lantern_view_44bdb0`,
+`norrath_ctors_ant_lantern_view_44bea0`,
+`norrath_ctors_ant_lantern_view_44bf90`,
+`norrath_ctors_ant_lantern_view_44c080`,
+`norrath_ctors_ant_lantern_view_44c260`,
+`norrath_ctors_ant_lantern_view_44c350`,
+`norrath_ctors_ant_lantern_view_44c440`,
+`norrath_ctors_ant_lantern_view_44c530`,
+`norrath_ctors_ant_lantern_view_44cb98`
+
+Opened: `_$_10BlackWidow`, `_$_10FireBeetle`, `_$_3Ant`, `_$_4Lamp`, `_$_5Chest`,
+`_$_5Ghoul`, `_$_5Gnome`, `_$_6Badger`, `_$_6Goblin`, `_$_7Critter`,
+`_$_7Cyclops`, `_$_7FireFly`, `_$_7Lantern`, `_$_8AntQueen`, `_$_8Froglock`,
+`_$_8JumpGate`, `_$_9Generator`, `__tf10BlackWidow`, `__tf10FireBeetle`,
+`__tf3Ant`, `__tf4Lamp`, `__tf5Chest`, `__tf5Ghoul`, `__tf5Gnome`,
+`__tf6Badger`, `__tf6Goblin`, `__tf7Critter`, `__tf7Cyclops`,
+`__tf7FireFly`, `__tf7Lantern`, `__tf8AntQueen`, `__tf8Froglock`,
+`__tf8JumpGate`, `__tf9Generator`, `clone__10BlackWidow`,
+`clone__10FireBeetle`, `clone__3Ant`, `clone__4Lamp`, `clone__5Chest`,
+`clone__5Ghoul`, `clone__5Gnome`, `clone__6Badger`, `clone__6Goblin`,
+`clone__7Critter`, `clone__7Cyclops`, `clone__7FireFly`, `clone__7Lantern`,
+`clone__8AntQueen`, `clone__8Froglock`, `clone__8JumpGate`,
+`clone__9Generator`, `getMinibossName__6Goblin`,
+`getMinibossName__7Cyclops`, `getModel__7Critter`, `getModel__9Generator`,
+`initMiniboss__6Goblin`, `initMiniboss__7Cyclops`,
+`msg_alert__5GhoulifG6Point3P10GameObject`,
+`msg_alert__6GoblinifG6Point3P10GameObject`,
+`msg_collisionWorld__6GoblinG6Point3`, `msg_collision__5GnomeP10GameObject`,
+`msg_collision__7CritterP10GameObject`, `msg_draw__10BlackWidow`,
+`msg_draw__10FireBeetle`, `msg_draw__3Ant`, `msg_draw__4Lamp`,
+`msg_draw__5Chest`, `msg_draw__5Ghoul`, `msg_draw__5Gnome`,
+`msg_draw__6Badger`, `msg_draw__6Goblin`, `msg_draw__7Critter`,
+`msg_draw__7Cyclops`, `msg_draw__7FireFly`, `msg_draw__7Lantern`,
+`msg_draw__8AntQueen`, `msg_draw__8Froglock`, `msg_draw__8JumpGate`,
+`msg_draw__9Generator`, `msg_getPokeName__5ChestPUsi`,
+`msg_getPokeName__8JumpGatePUsi`, `msg_hurt__7CritterfP10GameObjecti`,
+`msg_hurt__8AntQueenfP10GameObjecti`, `msg_load__3AntPc`,
+`msg_load__5ChestPc`, `msg_load__6GoblinPc`, `msg_load__7CritterPc`,
+`msg_load__7CyclopsPc`, `msg_load__8FroglockPc`, `msg_load__8JumpGatePc`,
+`msg_load__9GeneratorPc`, `msg_moveCollision__10FireBeetlePP10GameObject`,
+`msg_moveCollision__5GnomePP10GameObject`,
+`msg_moveCollision__6BadgerPP10GameObject`,
+`msg_moveCollision__6GoblinPP10GameObject`,
+`msg_moveCollision__7FireFlyPP10GameObject`, `msg_poke__5Chesti`,
+`msg_poke__8JumpGatei`, `msg_run__10BlackWidow`, `msg_run__10FireBeetle`,
+`msg_run__3Ant`, `msg_run__4Lamp`, `msg_run__5Chest`, `msg_run__5Ghoul`,
+`msg_run__5Gnome`, `msg_run__6Badger`, `msg_run__6Goblin`,
+`msg_run__7Critter`, `msg_run__7Cyclops`, `msg_run__7FireFly`,
+`msg_run__7Lantern`, `msg_run__8AntQueen`, `msg_run__8Froglock`,
+`msg_run__8JumpGate`, `msg_run__9Generator`, `msg_save__3AntPc`,
+`msg_save__5ChestPc`, `msg_save__6GoblinPc`, `msg_save__7CritterPc`,
+`msg_save__8FroglockPc`, `msg_save__8JumpGatePc`, `msg_save__9GeneratorPc`,
+`msg_trigger__8AntQueeni`, `msg_trigger__9Generatori`,
+`norrath_ctors_ant_lantern_view_42c760`,
+`norrath_ctors_ant_lantern_view_42c788`,
+`norrath_ctors_ant_lantern_view_42c7b0`,
+`norrath_ctors_ant_lantern_view_42c7d8`,
+`norrath_ctors_ant_lantern_view_42c800`,
+`norrath_ctors_ant_lantern_view_42c828`,
+`norrath_ctors_ant_lantern_view_42c850`,
+`norrath_ctors_ant_lantern_view_42c878`, `setState__10BlackWidowi`,
+`setState__10FireBeetlei`, `setState__3Anti`, `setState__5Ghouli`,
+`setState__5Gnomei`, `setState__6Badgeri`, `setState__6Goblini`,
+`setState__7Cyclopsi`, `setState__7FireFlyi`, `setState__8AntQueeni`,
+`setState__8Froglocki`, `setState__9Generatori`
+
+## agents/w9-animation-object-b
+
+Merged (the branch notes carry the five summary sections; the tip was 12
+minutes old, so this reflects the tip at that time). Twenty-two of its 24
+units were selected with fresh `input_order` values 2824 through 2845.
+`e-rand` and `find-tag-float` were **not** selected: each defines a function
+that is already supplied (`findTagFloat__10GameObjectPci` by
+`w9-animation-object-a-find-tag-float`; the link also reported `e-rand` (which
+defines `eRand__10GameObject`) as a duplicate; I did not pin down its other
+definer), and with both selected the link failed with multiple definitions; their
+files stay in the snapshot, unselected. Host checks: 22 of 24 build and exit 0 as is;
+`cancel-all-always-draw` and `lump-add` pass when built the way their header
+comments say (the first with three `w8-object-list-math-safe-iterator-*`
+sources, the second with `w9-animation-object-b-lumps/lumps.cpp`). Six of the
+selected units are data (lumps, lump state, load name and similar) and emit
+no function. No game binary or disassembly listing was committed. 2281
+function bodies, 2844 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1584 |
+| After | 1567 |
+| Closed | 25 |
+| Opened | 8 |
+
+Closed: `gameLineGet__FPc`, `initFile__FPcPvi`, `initializedLump`, `loadInProgress`,
+`loadName`, `lumpAdd__FPvPCc`, `lumps`, `move2__8CreatureG6Point3`,
+`myLumpBuffer`, `neverSave`, `newDamageHandler__8CreatureP12_modelHeader`,
+`norrath_creature_finish_construction`,
+`norrath_creature_set_anim_event_flags`,
+`norrath_creature_set_anim_event_flags_res_map`,
+`norrath_creature_set_parameters`, `norrath_game_line_get`,
+`norrath_game_line_get_ptr`, `norrath_object_find_animation`, `npcLumpName`,
+`objectActiveProcessing__FP10GameObjectii`,
+`objectAddToRunList__FP10GameObject`,
+`objectAddToSlowRunList__FP10GameObject`,
+`objectAlwaysDraw__FP10GameObject`, `objectCancelAllAlwaysDraw__Fv`,
+`setAnimEventFlags__8Creatureififififi`
+
+Opened: `__7OniBallG6Point3iP10GameObjectP10_vagHeader`,
+`animSetToEndFullyBlended__FP14AnimationState`, `asyncRandState`,
+`findTagInt__10GameObjectPci`,
+`fxCreatureToIce__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefff`,
+`getChance__12SkillLifeTapi`, `sendAlertMessage__FifG6Point3P10GameObject`,
+`trailParticleSpark`
+
+## agents/w9-animation-object-c
+
+Merged (the branch notes carry the five summary sections; the tip was 33
+minutes old). Fourteen of its 15 units were selected with fresh `input_order`
+values 2846 through 2859, three of them data (object visibility, outgoing
+message and world-lump header data). `set-anim-event-flags` was **not**
+selected: it defines `setAnimEventFlags__8Creatureififififi`, which
+`w9-animation-object-b-set-anim-event-flags` (merged just before) already
+defines, so the link failed
+with a multiple definition; its files stay in the snapshot, unselected. All 15
+host checks build and exit 0 here (15 of 15). No game binary or disassembly
+listing was committed. 2292 function bodies, 2858 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1567 |
+| After | 1564 |
+| Closed | 16 |
+| Opened | 13 |
+
+Closed: `objectFindEmptySpot__FG6Point3iiPc`, `objectIsOffGrid__FP10GameObject`,
+`objectIterateRunLists__FPFP10GameObject_v`,
+`objectRadialDamage__FP10GameObjectG6Point3iffiii`, `objectVisCount`,
+`objectVisPoints`, `objectVisUseCamCenter`, `outMsg`,
+`resetRouting__8Creature`, `setStateProcessing__8CreaturePi`,
+`slideBack__8Creaturef`, `smartWander__8Creature`,
+`spawn__FG6Point3iisPcbPPci`, `steerAndRouteToPosition__8CreatureG6Point3`,
+`updateAnimation__FP13animComponent`, `wLumpHeader`
+
+Opened: `addpmlist__FPc`, `addpmlistptrscap__Fv`, `fsListBack`,
+`getClearradius__FPCc`, `getCurrentRoutePoint__8Creature`,
+`getFreeFrameState__Fv`, `getNextRoutePoint__8CreatureP6Point3G6Point3ffi`,
+`objectFindEmptySpotMonsterspawn__FG6Point3iiiiPc`, `pmlistptrs`,
+`pmlistptrsused`, `userFilterFunction`,
+`wallAndObjectSteering__FP8CreatureffP10GameObject`,
+`worldTestForbidden__FP12_worldHeaderG6Point3f`
+
+## agents/w9-render-math-c
+
+Merged (the branch notes carry the five summary sections; the tip was 44
+minutes old). Twenty of its 22 units were selected with fresh `input_order`
+values 2860 through 2879: matrix and quaternion math, light deactivation,
+body init, view-matrix setup and one data unit. Two were **not** selected
+because the same function is already defined by a merged unit, which made the
+link fail with a multiple definition: `quat-to-mat33` (`quatToMat__FP8Matrix33P4Quat`,
+also in `w8-object-list-math-quat-to-mat33`) and `switch-static-init`
+(`_GLOBAL_$I$__6SwitchG6Point3PPc`, also in `w8-spell-static-init-a-switch`).
+Their files stay in the snapshot, unselected. All 22 host checks build and
+exit 0 here (22 of 22). The notes mention the worker disassembled each
+function privately and committed nothing derived; I saw no listing in the
+sources. 2316 function bodies, 2878 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1564 |
+| After | 1544 |
+| Closed | 29 |
+| Opened | 9 |
+
+Closed: `_GLOBAL_$I$msg_run__7AntTrap`, `myYaw`,
+`norrath_anttrap_msg_run_FireParticle_bytes`,
+`norrath_anttrap_msg_run_HateGateParticle_bytes`, `norrath_body_init`,
+`norrath_light_deactivate`, `norrath_mat_transform`,
+`norrath_wave_maker_get_wavelet_mat`, `norrath_world_hitscan`,
+`particleInit__11AddParticlePPc`, `quatNormalize__FP4Quat`,
+`quatToMat__FP8Matrix34P4Quat`, `scissored`, `setCamera__Ff`,
+`texDecodeStarted`, `texTerminateThread__Fv`, `vifDirectQWordCount`,
+`worldCharViewMatrix`, `worldCheckForWater__FP12_worldHeaderG6Point3fPf`,
+`worldClipMotion__FP12_worldHeaderG6Point3T1fiP6Point3`,
+`worldFindHeight__FP12_worldHeaderG6Point3f`,
+`worldFindStandHeight__FP12_worldHeaderG6Point3f`,
+`worldHitscan__FP12_worldHeaderG6Point3T1fi`,
+`worldPerturbWater__FP12_worldHeaderG6Point3ff`,
+`worldPlotRouteProcess__Fi`, `worldReleaseDoor__FP12_worldHeaderi`,
+`worldSetViewMatricies__FP6Point3P8Matrix34`, `worldViewMatrix`, `yaws`
+
+Opened: `collisionFrame`,
+`makeCollisionList__FP12_worldHeaderffffPP13collisionParti`,
+`matMakeCharViewMatrix__FP8Matrix44fffffff`,
+`matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matScale__FP8Matrix34f`,
+`routePlot__FR10RouteQueue`,
+`worldFindPointHeight__FP12_worldHeaderG6Point3`,
+`worldPrecacheWorld__FP12_worldHeaderP8Matrix34`,
+`worldTransformFrustum__FP8Matrix34`
+
+## agents/w9-hud-inventory-items-a
+
+Merged as a **partial package**: its notes have function, data, "not authored"
+and "End summary" sections but not the five summary sections, and the tip was
+47 minutes old when read. Every selected function has a committed host check,
+the tool tests pass, and the partial build passes. Eighteen of its 19 units were
+selected with fresh `input_order` values 2880 through 2897 (14 function units,
+and data units for boss meter words, HUD words and skill trees that emit no
+function). `appearance-settings` (four local BSS settings: hair style, hair
+colour, beard, skin) was **not** selected because it has no committed check;
+it stays in the snapshot, unselected. The 18 selected units' host checks build
+and exit 0 here (18 of 18). No game binary or disassembly listing was
+committed. 2336 function bodies, 2896 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1544 |
+| After | 1525 |
+| Closed | 31 |
+| Opened | 12 |
+
+Closed: `ClericSkillTree`, `RangerSkillTree`, `ShadowKnightSkillTree`,
+`WarriorSkillTree`, `WizardSkillTree`, `bossMeterAlpha`, `bossMeterCurrent`,
+`bossMeterMax`,
+`cacheEquipment__FPcP10ArmorCachePP12_modelHeaderPP8_texture`,
+`cacheLoadCache`, `changeBeard__Fii`, `changeHairColor__Fii`,
+`changeHairStyle__Fii`, `changeSkin__Fii`, `coins`,
+`compareToItem__Q24item11descriptionPQ24item11description`, `countUp`,
+`createRandom__4itemPQ24item11descriptioniiii`, `curFont`,
+`currActivityScore`, `currScorePos`, `drinkPotion__6Playeriiii`,
+`finishFrameCount`, `fontCharAlpha`, `fontPrintWrapCentered__FiiPciiii`,
+`fontPrintWrapCenteredu__FiiPUsiiii`, `gameButtonToIcon__Fi`,
+`gameDifficultyScale__Fv`, `gameTreasureRamp__Fv`, `getBestSlotName__FPc`,
+`getHairAndSkin__Fi`
+
+Opened: `_4item$itemTable`, `beardSetting`, `cacheLoadDelayTime`, `cacheLoadName`,
+`cacheLoadValid`, `eqFind__FPci`,
+`getVifAndTex__FPcT0PP12_modelHeaderPP8_texture`, `hairColorSetting`,
+`hairStyleSetting`, `hudGetFadeIconPos__Fii`,
+`msgInventoryGridDropItem__Fiiciiii`, `skinSetting`
+
+## agents/w9-ctors-lantern-c
+
+Merged (the branch notes carry the five summary sections; the tip was 45
+minutes old). Forty data units (view objects) with fresh `input_order` values
+2898 through 2937, so the function-body count is unchanged at 2336. Each has a
+comparison under `views/host/`; all 40 build (linked with the unit, no source
+change) and exit 0 here (40 of 40). Forty imports closed and none opened. The
+notes say the string `norrath_ctors_ant_lantern_view_476b90` and other view
+names outside the worker's list were not defined. No game binary or
+disassembly listing was committed. 2936 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1525 |
+| After | 1485 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_46fa38`,
+`norrath_ctors_ant_lantern_view_46fa48`,
+`norrath_ctors_ant_lantern_view_46fa58`,
+`norrath_ctors_ant_lantern_view_46fd38`,
+`norrath_ctors_ant_lantern_view_46ffe0`,
+`norrath_ctors_ant_lantern_view_470df8`,
+`norrath_ctors_ant_lantern_view_470e08`,
+`norrath_ctors_ant_lantern_view_470e18`,
+`norrath_ctors_ant_lantern_view_470e28`,
+`norrath_ctors_ant_lantern_view_470e38`,
+`norrath_ctors_ant_lantern_view_470e48`,
+`norrath_ctors_ant_lantern_view_470e58`,
+`norrath_ctors_ant_lantern_view_470e68`,
+`norrath_ctors_ant_lantern_view_470e78`,
+`norrath_ctors_ant_lantern_view_470e88`,
+`norrath_ctors_ant_lantern_view_470e98`,
+`norrath_ctors_ant_lantern_view_470ea8`,
+`norrath_ctors_ant_lantern_view_470eb8`,
+`norrath_ctors_ant_lantern_view_470ff0`,
+`norrath_ctors_ant_lantern_view_471000`,
+`norrath_ctors_ant_lantern_view_471010`,
+`norrath_ctors_ant_lantern_view_471020`,
+`norrath_ctors_ant_lantern_view_471030`,
+`norrath_ctors_ant_lantern_view_471150`,
+`norrath_ctors_ant_lantern_view_4711f0`,
+`norrath_ctors_ant_lantern_view_471208`,
+`norrath_ctors_ant_lantern_view_471218`,
+`norrath_ctors_ant_lantern_view_471230`,
+`norrath_ctors_ant_lantern_view_471248`,
+`norrath_ctors_ant_lantern_view_471260`,
+`norrath_ctors_ant_lantern_view_471278`,
+`norrath_ctors_ant_lantern_view_471ed0`,
+`norrath_ctors_ant_lantern_view_471ee0`,
+`norrath_ctors_ant_lantern_view_471ef0`,
+`norrath_ctors_ant_lantern_view_471f00`,
+`norrath_ctors_ant_lantern_view_471f10`,
+`norrath_ctors_ant_lantern_view_471f20`,
+`norrath_ctors_ant_lantern_view_476ac8`,
+`norrath_ctors_ant_lantern_view_476b70`,
+`norrath_ctors_ant_lantern_view_476b80`
+
+Opened: none
+
+## agents/w9-ctors-lantern-d
+
+Merged (the branch notes carry the five summary sections; the tip was 45
+minutes old). Forty data units (view objects) with fresh `input_order` values
+2938 through 2977; the function-body count stays at 2336. All 40 comparisons
+under `views/host/` build (linked with the unit) and exit 0 here (40 of 40).
+No imports opened. No game binary or disassembly listing was committed. 2976
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1485 |
+| After | 1445 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_476b90`,
+`norrath_ctors_ant_lantern_view_4770d0`,
+`norrath_ctors_ant_lantern_view_4770e8`,
+`norrath_ctors_ant_lantern_view_477798`,
+`norrath_ctors_ant_lantern_view_4777c8`,
+`norrath_ctors_ant_lantern_view_4777d8`,
+`norrath_ctors_ant_lantern_view_480b10`,
+`norrath_ctors_ant_lantern_view_480b14`,
+`norrath_ctors_ant_lantern_view_480b20`,
+`norrath_ctors_ant_lantern_view_480b24`,
+`norrath_ctors_ant_lantern_view_480b28`,
+`norrath_ctors_ant_lantern_view_480b2c`,
+`norrath_ctors_ant_lantern_view_480b30`,
+`norrath_ctors_ant_lantern_view_480b34`,
+`norrath_ctors_ant_lantern_view_480b38`,
+`norrath_ctors_ant_lantern_view_480b3c`,
+`norrath_ctors_ant_lantern_view_480b40`,
+`norrath_ctors_ant_lantern_view_480b44`,
+`norrath_ctors_ant_lantern_view_480b48`,
+`norrath_ctors_ant_lantern_view_480b4c`,
+`norrath_ctors_ant_lantern_view_480ba8`,
+`norrath_ctors_ant_lantern_view_480bac`,
+`norrath_ctors_ant_lantern_view_480bb0`,
+`norrath_ctors_ant_lantern_view_480bb4`,
+`norrath_ctors_ant_lantern_view_480cc8`,
+`norrath_ctors_ant_lantern_view_480ccc`,
+`norrath_ctors_ant_lantern_view_480cd0`,
+`norrath_ctors_ant_lantern_view_480cd4`,
+`norrath_ctors_ant_lantern_view_480cd8`,
+`norrath_ctors_ant_lantern_view_480cdc`,
+`norrath_ctors_ant_lantern_view_480ce0`,
+`norrath_ctors_ant_lantern_view_480ce4`,
+`norrath_ctors_ant_lantern_view_480ce8`,
+`norrath_ctors_ant_lantern_view_480cec`,
+`norrath_ctors_ant_lantern_view_480d28`,
+`norrath_ctors_ant_lantern_view_480e58`,
+`norrath_ctors_ant_lantern_view_480e5c`,
+`norrath_ctors_ant_lantern_view_480e60`,
+`norrath_ctors_ant_lantern_view_480e64`,
+`norrath_ctors_ant_lantern_view_480e68`
+
+Opened: none
+
+## agents/w9-ctors-lantern-e
+
+Merged (the branch notes carry the five summary sections; the tip was 42
+minutes old). Forty single-float constant units (one four-byte symbol each)
+with fresh `input_order` values 2978 through 3017; the
+function-body count stays at 2336. Each has a host check in
+`w9-ctors-lantern-e-host-checks/` that fails unless the compiled definition's
+bit pattern equals the stated constant; all 40 build with their unit and exit 0
+here (40 of 40). That checks the source against the notes, not against the
+executable: the worker's `docs/agents/w9-ctors-lantern-e-check.py`, which
+compares each constant with the private executable's bytes, was not run. No
+game binary or disassembly listing was committed. 3016 authored inputs, zero
+COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1445 |
+| After | 1405 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_480e6c`,
+`norrath_ctors_ant_lantern_view_480e70`,
+`norrath_ctors_ant_lantern_view_480f4c`,
+`norrath_ctors_ant_lantern_view_480f50`,
+`norrath_ctors_ant_lantern_view_480f54`,
+`norrath_ctors_ant_lantern_view_480f58`,
+`norrath_ctors_ant_lantern_view_480f5c`,
+`norrath_ctors_ant_lantern_view_480f60`,
+`norrath_ctors_ant_lantern_view_480f64`,
+`norrath_ctors_ant_lantern_view_480f68`,
+`norrath_ctors_ant_lantern_view_480f6c`,
+`norrath_ctors_ant_lantern_view_480f70`,
+`norrath_ctors_ant_lantern_view_480f74`,
+`norrath_ctors_ant_lantern_view_480f78`,
+`norrath_ctors_ant_lantern_view_480f7c`,
+`norrath_ctors_ant_lantern_view_480f80`,
+`norrath_ctors_ant_lantern_view_480f84`,
+`norrath_ctors_ant_lantern_view_48109c`,
+`norrath_ctors_ant_lantern_view_4810a0`,
+`norrath_ctors_ant_lantern_view_4810a4`,
+`norrath_ctors_ant_lantern_view_4810a8`,
+`norrath_ctors_ant_lantern_view_4810ac`,
+`norrath_ctors_ant_lantern_view_4810b0`,
+`norrath_ctors_ant_lantern_view_481160`,
+`norrath_ctors_ant_lantern_view_481164`,
+`norrath_ctors_ant_lantern_view_481168`,
+`norrath_ctors_ant_lantern_view_48116c`,
+`norrath_ctors_ant_lantern_view_481170`,
+`norrath_ctors_ant_lantern_view_481174`,
+`norrath_ctors_ant_lantern_view_481178`,
+`norrath_ctors_ant_lantern_view_48117c`,
+`norrath_ctors_ant_lantern_view_48124c`,
+`norrath_ctors_ant_lantern_view_481250`,
+`norrath_ctors_ant_lantern_view_481254`,
+`norrath_ctors_ant_lantern_view_481258`,
+`norrath_ctors_ant_lantern_view_48125c`,
+`norrath_ctors_ant_lantern_view_481260`,
+`norrath_ctors_ant_lantern_view_481264`,
+`norrath_ctors_ant_lantern_view_481268`,
+`norrath_ctors_ant_lantern_view_48126c`
+
+Opened: none
+
+## agents/w9-ctors-lantern-f
+
+Merged (the branch notes carry the five summary sections; the tip was 42
+minutes old). Forty data units (view objects) with fresh `input_order` values
+3018 through 3057; the function-body count stays at 2336. Their host
+comparisons under `w9-ctors-lantern-f-views/host/` build (linked with the
+unit) and exit 0 here (40 of 40). No imports opened. No game binary or
+disassembly listing was committed. 3056 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1405 |
+| After | 1365 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_481270`,
+`norrath_ctors_ant_lantern_view_481274`,
+`norrath_ctors_ant_lantern_view_481278`,
+`norrath_ctors_ant_lantern_view_48127c`,
+`norrath_ctors_ant_lantern_view_481280`,
+`norrath_ctors_ant_lantern_view_481284`,
+`norrath_ctors_ant_lantern_view_481288`,
+`norrath_ctors_ant_lantern_view_48128c`,
+`norrath_ctors_ant_lantern_view_481290`,
+`norrath_ctors_ant_lantern_view_481294`,
+`norrath_ctors_ant_lantern_view_481298`,
+`norrath_ctors_ant_lantern_view_4812d8`,
+`norrath_ctors_ant_lantern_view_4812dc`,
+`norrath_ctors_ant_lantern_view_4812e0`,
+`norrath_ctors_ant_lantern_view_4812e4`,
+`norrath_ctors_ant_lantern_view_4812e8`,
+`norrath_ctors_ant_lantern_view_4812ec`,
+`norrath_ctors_ant_lantern_view_4813bc`,
+`norrath_ctors_ant_lantern_view_4813c0`,
+`norrath_ctors_ant_lantern_view_4813c4`,
+`norrath_ctors_ant_lantern_view_4813c8`,
+`norrath_ctors_ant_lantern_view_4813cc`,
+`norrath_ctors_ant_lantern_view_4813d0`,
+`norrath_ctors_ant_lantern_view_4813d4`,
+`norrath_ctors_ant_lantern_view_4814e4`,
+`norrath_ctors_ant_lantern_view_4814e8`,
+`norrath_ctors_ant_lantern_view_4814ec`,
+`norrath_ctors_ant_lantern_view_4814f0`,
+`norrath_ctors_ant_lantern_view_4814f4`,
+`norrath_ctors_ant_lantern_view_4814f8`,
+`norrath_ctors_ant_lantern_view_481540`,
+`norrath_ctors_ant_lantern_view_481544`,
+`norrath_ctors_ant_lantern_view_481704`,
+`norrath_ctors_ant_lantern_view_481708`,
+`norrath_ctors_ant_lantern_view_481890`,
+`norrath_ctors_ant_lantern_view_481894`,
+`norrath_ctors_ant_lantern_view_481898`,
+`norrath_ctors_ant_lantern_view_48189c`,
+`norrath_ctors_ant_lantern_view_4818a0`,
+`norrath_ctors_ant_lantern_view_4818a4`
+
+Opened: none
+
+## agents/w9-ctors-lantern-g
+
+Merged (the branch notes carry the five summary sections; the tip was 40
+minutes old). Forty data units (view objects) with fresh `input_order` values
+3058 through 3097; the function-body count stays at 2336. Their
+`*_contract.cpp` checks under `w9-ctors-lantern-g-views/host/` build (linked
+with the unit) and exit 0 here (40 of 40). No imports opened. No game binary or
+disassembly listing was committed. 3096 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1365 |
+| After | 1325 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_4818a8`,
+`norrath_ctors_ant_lantern_view_48198c`,
+`norrath_ctors_ant_lantern_view_481990`,
+`norrath_ctors_ant_lantern_view_481ab4`,
+`norrath_ctors_ant_lantern_view_481ab8`,
+`norrath_ctors_ant_lantern_view_481abc`,
+`norrath_ctors_ant_lantern_view_481ac0`,
+`norrath_ctors_ant_lantern_view_481ac4`,
+`norrath_ctors_ant_lantern_view_481ac8`,
+`norrath_ctors_ant_lantern_view_482328`,
+`norrath_ctors_ant_lantern_view_48232c`,
+`norrath_ctors_ant_lantern_view_482330`,
+`norrath_ctors_ant_lantern_view_482334`,
+`norrath_ctors_ant_lantern_view_482338`,
+`norrath_ctors_ant_lantern_view_48233c`,
+`norrath_ctors_ant_lantern_view_482340`,
+`norrath_ctors_ant_lantern_view_48239c`,
+`norrath_ctors_ant_lantern_view_482414`,
+`norrath_ctors_ant_lantern_view_482418`,
+`norrath_ctors_ant_lantern_view_48241c`,
+`norrath_ctors_ant_lantern_view_482420`,
+`norrath_ctors_ant_lantern_view_4825bc`,
+`norrath_ctors_ant_lantern_view_4825c0`,
+`norrath_ctors_ant_lantern_view_483e5c`,
+`norrath_ctors_ant_lantern_view_483f88`,
+`norrath_ctors_ant_lantern_view_4844c0`,
+`norrath_ctors_ant_lantern_view_485158`,
+`norrath_ctors_ant_lantern_view_485160`,
+`norrath_ctors_ant_lantern_view_485168`,
+`norrath_ctors_ant_lantern_view_485170`,
+`norrath_ctors_ant_lantern_view_485178`,
+`norrath_ctors_ant_lantern_view_485180`,
+`norrath_ctors_ant_lantern_view_485188`,
+`norrath_ctors_ant_lantern_view_485190`,
+`norrath_ctors_ant_lantern_view_485198`,
+`norrath_ctors_ant_lantern_view_485230`,
+`norrath_ctors_ant_lantern_view_485270`,
+`norrath_ctors_ant_lantern_view_4852d8`,
+`norrath_ctors_ant_lantern_view_4852e0`,
+`norrath_ctors_ant_lantern_view_485398`
+
+Opened: none
+
+## agents/w9-ctors-lantern-h
+
+Merged (the branch notes carry the five summary sections; the tip was 39
+minutes old). Thirty-six data units (`view_*.cpp` objects) with fresh
+`input_order` values 3098 through 3133; the function-body count stays at 2336.
+All 36 host checks build (linked with the unit) and exit 0 here (36 of 36). No
+imports opened. No game binary or disassembly listing was committed. 3132
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1325 |
+| After | 1289 |
+| Closed | 36 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_ant_lantern_view_485420`,
+`norrath_ctors_ant_lantern_view_485438`,
+`norrath_ctors_ant_lantern_view_485440`,
+`norrath_ctors_ant_lantern_view_485480`,
+`norrath_ctors_ant_lantern_view_485488`,
+`norrath_ctors_ant_lantern_view_4854c8`,
+`norrath_ctors_ant_lantern_view_4854d0`,
+`norrath_ctors_ant_lantern_view_4854d8`,
+`norrath_ctors_ant_lantern_view_4854e0`,
+`norrath_ctors_ant_lantern_view_4854e8`,
+`norrath_ctors_ant_lantern_view_4854f0`,
+`norrath_ctors_ant_lantern_view_4854f8`,
+`norrath_ctors_ant_lantern_view_485500`,
+`norrath_ctors_ant_lantern_view_485530`,
+`norrath_ctors_ant_lantern_view_485538`,
+`norrath_ctors_ant_lantern_view_485540`,
+`norrath_ctors_ant_lantern_view_485548`,
+`norrath_ctors_ant_lantern_view_485560`,
+`norrath_ctors_ant_lantern_view_485568`,
+`norrath_ctors_ant_lantern_view_485570`,
+`norrath_ctors_ant_lantern_view_485578`,
+`norrath_ctors_ant_lantern_view_485580`,
+`norrath_ctors_ant_lantern_view_485760`,
+`norrath_ctors_ant_lantern_view_485768`,
+`norrath_ctors_ant_lantern_view_486030`,
+`norrath_ctors_ant_lantern_view_486038`,
+`norrath_ctors_ant_lantern_view_486040`,
+`norrath_ctors_ant_lantern_view_486048`,
+`norrath_ctors_ant_lantern_view_486050`,
+`norrath_ctors_ant_lantern_view_486058`,
+`norrath_ctors_ant_lantern_view_486060`,
+`norrath_ctors_ant_lantern_view_4860e0`,
+`norrath_ctors_ant_lantern_view_4860e8`,
+`norrath_ctors_ant_lantern_view_4860f0`,
+`norrath_ctors_ant_lantern_view_4860f8`,
+`norrath_ctors_ant_lantern_view_486da4`
+
+Opened: none
+
+## agents/w9-ctors-wraith-a
+
+Merged (the branch notes carry a build-plan section, imports and a summary,
+but not all five named sections; the tip was 34 minutes old, and the notes
+tell the checks apart clearly, so I took it as a package whose every unit has
+a committed check). Thirty-eight data units (virtual tables and shared
+pointers) with fresh `input_order` values 3134 through 3171; the function-body
+count stays at 2336. Each has a host program under `views/host/`. On this
+machine they only link after the `asm("name")` labels are given the macOS
+leading underscore (I rebuilt them from a copy with `asm("_name")`; no source
+change); built that way all 38 exit 0. They guard the source's shape against
+the notes' extraction, as the notes say; the comparison against the original
+(`docs/agents/w9-ctors-wraith-a-compare.py`, which reads the private
+executable) was not run, and I did not run the plan-entries helper script. The
+opened set rises by 72 because each virtual table names its class's slot
+functions, which are not defined in this package. No game binary or
+disassembly listing was committed. 3170 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1289 |
+| After | 1323 |
+| Closed | 38 |
+| Opened | 72 |
+
+Closed: `norrath_ctors_lava_wraith_view_34b474`,
+`norrath_ctors_lava_wraith_view_42b010`,
+`norrath_ctors_lava_wraith_view_42b330`,
+`norrath_ctors_lava_wraith_view_42b3d8`,
+`norrath_ctors_lava_wraith_view_42b478`,
+`norrath_ctors_lava_wraith_view_42b7e8`,
+`norrath_ctors_lava_wraith_view_42bcb8`,
+`norrath_ctors_lava_wraith_view_42bd18`,
+`norrath_ctors_lava_wraith_view_42c228`,
+`norrath_ctors_lava_wraith_view_42c570`,
+`norrath_ctors_lava_wraith_view_42c630`,
+`norrath_ctors_lava_wraith_view_42c8e0`,
+`norrath_ctors_lava_wraith_view_42ca58`,
+`norrath_ctors_lava_wraith_view_42cbd0`,
+`norrath_ctors_lava_wraith_view_42ccf0`,
+`norrath_ctors_lava_wraith_view_42ce60`,
+`norrath_ctors_lava_wraith_view_42d048`,
+`norrath_ctors_lava_wraith_view_42d138`,
+`norrath_ctors_lava_wraith_view_42d2b0`,
+`norrath_ctors_lava_wraith_view_42d480`,
+`norrath_ctors_lava_wraith_view_42d578`,
+`norrath_ctors_lava_wraith_view_42d650`,
+`norrath_ctors_lava_wraith_view_42d700`,
+`norrath_ctors_lava_wraith_view_42d7d0`,
+`norrath_ctors_lava_wraith_view_42d8d0`,
+`norrath_ctors_lava_wraith_view_42dbf0`,
+`norrath_ctors_lava_wraith_view_42dc40`,
+`norrath_ctors_lava_wraith_view_438c70`,
+`norrath_ctors_lava_wraith_view_448fb0`,
+`norrath_ctors_lava_wraith_view_449310`,
+`norrath_ctors_lava_wraith_view_449550`,
+`norrath_ctors_lava_wraith_view_449820`,
+`norrath_ctors_lava_wraith_view_449940`,
+`norrath_ctors_lava_wraith_view_449c20`,
+`norrath_ctors_lava_wraith_view_44a390`,
+`norrath_ctors_lava_wraith_view_44ab70`,
+`norrath_ctors_lava_wraith_view_44adb0`,
+`norrath_ctors_lava_wraith_view_44aea0`
+
+Opened: `_$_10StaticFire`, `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_3NPC`,
+`_$_5Torch`, `_$_6Switch`, `_$_6Wraith`, `_$_7WebTrap`, `_$_8RollDoor`,
+`_$_9Savepoint`, `__tf10StaticFire`, `__tf10WaterSpout`, `__tf10WeaponRack`,
+`__tf5Torch`, `__tf6Switch`, `__tf6Wraith`, `__tf7WebTrap`, `__tf8RollDoor`,
+`clone__10StaticFire`, `clone__10WaterSpout`, `clone__10WeaponRack`,
+`clone__3NPC`, `clone__5Torch`, `clone__6Switch`, `clone__6Wraith`,
+`clone__7WebTrap`, `clone__8RollDoor`, `clone__9Savepoint`,
+`getMinibossName__6Wraith`, `getModel__3NPC`, `initMiniboss__6Wraith`,
+`isEnemy__6WraithP10GameObject`, `msg_collision__5TorchP10GameObject`,
+`msg_draw__10StaticFire`, `msg_draw__10WaterSpout`,
+`msg_draw__10WeaponRack`, `msg_draw__3NPC`, `msg_draw__5Torch`,
+`msg_draw__6Wraith`, `msg_draw__7WebTrap`, `msg_draw__8RollDoor`,
+`msg_draw__9Savepoint`, `msg_getPokeName__10WeaponRackPUsi`,
+`msg_getPokeName__6SwitchPUsi`, `msg_getPokeName__8RollDoorPUsi`,
+`msg_getPokeName__9SavepointPUsi`, `msg_hurt__3NPCfP10GameObjecti`,
+`msg_load__3NPCPc`, `msg_load__5TorchPc`, `msg_load__8RollDoorPc`,
+`msg_load__9SavepointPc`, `msg_poke__10WeaponRacki`, `msg_poke__6Switchi`,
+`msg_poke__8RollDoori`, `msg_poke__9Savepointi`, `msg_presave__8RollDoor`,
+`msg_run__10StaticFire`, `msg_run__10WaterSpout`, `msg_run__3NPC`,
+`msg_run__5Torch`, `msg_run__6Wraith`, `msg_run__7WebTrap`,
+`msg_run__8RollDoor`, `msg_run__9Savepoint`, `msg_save__3NPCPc`,
+`msg_save__5TorchPc`, `msg_save__8RollDoorPc`, `msg_save__9SavepointPc`,
+`msg_trigger__3NPCi`, `msg_trigger__8RollDoori`, `setState__3NPCi`,
+`setState__6Wraithi`
+
+## agents/w9-ctors-wraith-b
+
+Merged (the branch notes carry the five summary sections; the tip was 38
+minutes old). Thirty-eight data units (virtual tables and shared objects) with
+fresh `input_order` values 3172 through 3209; the function-body count stays at
+2336. As with `w9-ctors-wraith-a`, the `views/host/` programs link here only
+after the `asm("name")` labels get the macOS leading underscore (rebuilt from
+a copy, no source change); built that way all 38 exit 0. The opened set rises
+by 170 because each virtual table names its class's slot functions
+(destructors, `__tf*` type-info, `msg_*` handlers), which are not defined in
+this package, so the official count goes up by 132 net. No game binary or
+disassembly listing was committed. 3208 authored inputs, zero COMMON. 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1323 |
+| After | 1455 |
+| Closed | 38 |
+| Opened | 170 |
+
+Closed: `norrath_ctors_lava_wraith_view_44af90`,
+`norrath_ctors_lava_wraith_view_44b080`,
+`norrath_ctors_lava_wraith_view_44b260`,
+`norrath_ctors_lava_wraith_view_44b350`,
+`norrath_ctors_lava_wraith_view_44b630`,
+`norrath_ctors_lava_wraith_view_44b720`,
+`norrath_ctors_lava_wraith_view_44b810`,
+`norrath_ctors_lava_wraith_view_44c710`,
+`norrath_ctors_lava_wraith_view_44c7a0`,
+`norrath_ctors_lava_wraith_view_44def0`,
+`norrath_ctors_lava_wraith_view_44dfe0`,
+`norrath_ctors_lava_wraith_view_44e2b0`,
+`norrath_ctors_lava_wraith_view_44f3d8`,
+`norrath_ctors_lava_wraith_view_44f5b8`,
+`norrath_ctors_lava_wraith_view_44f798`,
+`norrath_ctors_lava_wraith_view_44fa38`,
+`norrath_ctors_lava_wraith_view_44fb28`,
+`norrath_ctors_lava_wraith_view_44fc18`,
+`norrath_ctors_lava_wraith_view_44fd08`,
+`norrath_ctors_lava_wraith_view_44fdf8`,
+`norrath_ctors_lava_wraith_view_44fee8`,
+`norrath_ctors_lava_wraith_view_450440`,
+`norrath_ctors_lava_wraith_view_46cd20`,
+`norrath_ctors_lava_wraith_view_46cd30`,
+`norrath_ctors_lava_wraith_view_46cd40`,
+`norrath_ctors_lava_wraith_view_46cd50`,
+`norrath_ctors_lava_wraith_view_46cd60`,
+`norrath_ctors_lava_wraith_view_46cd70`,
+`norrath_ctors_lava_wraith_view_46d7b8`,
+`norrath_ctors_lava_wraith_view_470358`,
+`norrath_ctors_lava_wraith_view_4718e8`,
+`norrath_ctors_lava_wraith_view_4718f8`,
+`norrath_ctors_lava_wraith_view_471908`,
+`norrath_ctors_lava_wraith_view_471918`,
+`norrath_ctors_lava_wraith_view_471928`,
+`norrath_ctors_lava_wraith_view_471938`,
+`norrath_ctors_lava_wraith_view_471948`,
+`norrath_ctors_lava_wraith_view_471958`
+
+Opened: `_$_10SeaMonster`, `_$_11LavaMonster`, `_$_11MaleDarkElf`,
+`_$_11PushTrigger`, `_$_11SpiderQueen`, `_$_11VampireLord`,
+`_$_12UndeadKnight`, `_$_14WoodElfSoldier`, `_$_17UndeadKnightClone`,
+`_$_3Orc`, `_$_4Soul`, `_$_5Mummy`, `_$_5Rondo`, `_$_6Minion`,
+`_$_7Ulthork`, `_$_7Vampire`, `_$_8Scorpion`, `_$_8Skeleton`,
+`_$_8Skelight`, `_$_8SuperOrc`, `_$_9MummyKing`, `_$_9WaveMaker`,
+`__tf10SeaMonster`, `__tf11LavaMonster`, `__tf11MaleDarkElf`,
+`__tf11SpiderQueen`, `__tf11VampireLord`, `__tf12UndeadKnight`,
+`__tf14WoodElfSoldier`, `__tf17UndeadKnightClone`, `__tf4Soul`,
+`__tf5Mummy`, `__tf5Rondo`, `__tf6Minion`, `__tf7Ulthork`, `__tf7Vampire`,
+`__tf8Scorpion`, `__tf8Skeleton`, `__tf8Skelight`, `__tf8SuperOrc`,
+`__tf9WaveMaker`, `clone__11LavaMonster`, `clone__11MaleDarkElf`,
+`clone__11PushTrigger`, `clone__11SpiderQueen`, `clone__11VampireLord`,
+`clone__12UndeadKnight`, `clone__14WoodElfSoldier`, `clone__3Orc`,
+`clone__7Vampire`, `clone__8Scorpion`, `clone__8Skeleton`,
+`clone__8Skelight`, `clone__8SuperOrc`, `clone__9WaveMaker`,
+`getMinibossName__10SeaMonster`, `getMinibossName__11MaleDarkElf`,
+`getMinibossName__3Orc`, `getMinibossName__5Mummy`,
+`getModel__11LavaMonster`, `getModel__11VampireLord`, `getModel__4Soul`,
+`initMiniboss__10SeaMonster`, `initMiniboss__11MaleDarkElf`,
+`initMiniboss__3Orc`, `initMiniboss__5Mummy`,
+`isEnemy__8SkeletonP10GameObject`,
+`msg_alert__11MaleDarkElfifG6Point3P10GameObject`,
+`msg_alert__3OrcifG6Point3P10GameObject`,
+`msg_alert__8SkeletonifG6Point3P10GameObject`, `msg_draw__10SeaMonster`,
+`msg_draw__11LavaMonster`, `msg_draw__11MaleDarkElf`,
+`msg_draw__11SpiderQueen`, `msg_draw__11VampireLord`,
+`msg_draw__12UndeadKnight`, `msg_draw__14WoodElfSoldier`,
+`msg_draw__17UndeadKnightClone`, `msg_draw__3Orc`, `msg_draw__4Soul`,
+`msg_draw__5Mummy`, `msg_draw__5Rondo`, `msg_draw__6Minion`,
+`msg_draw__7Ulthork`, `msg_draw__7Vampire`, `msg_draw__8Scorpion`,
+`msg_draw__8Skeleton`, `msg_draw__8Skelight`, `msg_draw__8SuperOrc`,
+`msg_draw__9MummyKing`, `msg_getPokeName__11PushTriggerPUsi`,
+`msg_hurt__11SpiderQueenfP10GameObjecti`,
+`msg_hurt__11VampireLordfP10GameObjecti`,
+`msg_hurt__12UndeadKnightfP10GameObjecti`,
+`msg_hurt__14WoodElfSoldierfP10GameObjecti`,
+`msg_hurt__3OrcfP10GameObjecti`, `msg_hurt__4SoulfP10GameObjecti`,
+`msg_hurt__6MinionfP10GameObjecti`, `msg_hurt__8SkeletonfP10GameObjecti`,
+`msg_hurt__8SuperOrcfP10GameObjecti`, `msg_hurt__9MummyKingfP10GameObjecti`,
+`msg_load__11LavaMonsterPc`, `msg_load__11MaleDarkElfPc`,
+`msg_load__3OrcPc`, `msg_load__4SoulPc`, `msg_load__5MummyPc`,
+`msg_load__7UlthorkPc`, `msg_load__8SkeletonPc`, `msg_load__8SkelightPc`,
+`msg_moveCollision__10SeaMonsterPP10GameObject`, `msg_poke__11PushTriggeri`,
+`msg_run__10SeaMonster`, `msg_run__11LavaMonster`, `msg_run__11MaleDarkElf`,
+`msg_run__11SpiderQueen`, `msg_run__11VampireLord`,
+`msg_run__12UndeadKnight`, `msg_run__14WoodElfSoldier`,
+`msg_run__17UndeadKnightClone`, `msg_run__3Orc`, `msg_run__4Soul`,
+`msg_run__5Mummy`, `msg_run__5Rondo`, `msg_run__6Minion`,
+`msg_run__7Ulthork`, `msg_run__7Vampire`, `msg_run__8Scorpion`,
+`msg_run__8Skeleton`, `msg_run__8Skelight`, `msg_run__8SuperOrc`,
+`msg_run__9MummyKing`, `msg_run__9WaveMaker`, `msg_save__11LavaMonsterPc`,
+`msg_save__11MaleDarkElfPc`, `msg_save__3OrcPc`, `msg_save__4SoulPc`,
+`msg_save__5MummyPc`, `msg_save__7UlthorkPc`, `msg_save__8SkeletonPc`,
+`msg_save__8SkelightPc`, `msg_trigger__11SpiderQueeni`,
+`msg_trigger__11VampireLordi`, `msg_trigger__12UndeadKnighti`,
+`msg_trigger__14WoodElfSoldieri`, `msg_trigger__4Souli`,
+`msg_trigger__5Rondoi`, `msg_trigger__6Minioni`, `msg_trigger__8SuperOrci`,
+`msg_trigger__9MummyKingi`, `runSpells__5MummyG6Point3`,
+`setState__10SeaMonsteri`, `setState__11LavaMonsteri`,
+`setState__11MaleDarkElfi`, `setState__11SpiderQueeni`,
+`setState__11VampireLordi`, `setState__12UndeadKnighti`,
+`setState__14WoodElfSoldieri`, `setState__17UndeadKnightClonei`,
+`setState__3Orci`, `setState__4Souli`, `setState__5Mummyi`,
+`setState__5Rondoi`, `setState__6Minioni`, `setState__7Ulthorki`,
+`setState__7Vampirei`, `setState__8Scorpioni`, `setState__8Skeletoni`,
+`setState__8Skelighti`, `setState__8SuperOrci`, `setState__9MummyKingi`
+
+## agents/w9-ctors-wraith-c
+
+Merged (the branch notes carry the five summary sections; the tip was 39
+minutes old). Thirty-eight data units (view objects) with fresh `input_order`
+values 3210 through 3247; the function-body count stays at 2336. All 38 host
+checks under `views/host/` build (linked with the unit) and exit 0 here (38 of
+38). No imports opened. No game binary or disassembly listing was committed.
+3246 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1455 |
+| After | 1417 |
+| Closed | 38 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_lava_wraith_view_471968`,
+`norrath_ctors_lava_wraith_view_471978`,
+`norrath_ctors_lava_wraith_view_471988`,
+`norrath_ctors_lava_wraith_view_471998`,
+`norrath_ctors_lava_wraith_view_472040`,
+`norrath_ctors_lava_wraith_view_472050`,
+`norrath_ctors_lava_wraith_view_472060`,
+`norrath_ctors_lava_wraith_view_472c10`,
+`norrath_ctors_lava_wraith_view_472c28`,
+`norrath_ctors_lava_wraith_view_472c38`,
+`norrath_ctors_lava_wraith_view_472c50`,
+`norrath_ctors_lava_wraith_view_472c60`,
+`norrath_ctors_lava_wraith_view_472c78`,
+`norrath_ctors_lava_wraith_view_472c88`,
+`norrath_ctors_lava_wraith_view_472ca0`,
+`norrath_ctors_lava_wraith_view_472cb0`,
+`norrath_ctors_lava_wraith_view_472cc8`,
+`norrath_ctors_lava_wraith_view_473f20`,
+`norrath_ctors_lava_wraith_view_473f30`,
+`norrath_ctors_lava_wraith_view_473f40`,
+`norrath_ctors_lava_wraith_view_473f58`,
+`norrath_ctors_lava_wraith_view_473f70`,
+`norrath_ctors_lava_wraith_view_473f88`,
+`norrath_ctors_lava_wraith_view_473fa0`,
+`norrath_ctors_lava_wraith_view_473fb0`,
+`norrath_ctors_lava_wraith_view_473fc0`,
+`norrath_ctors_lava_wraith_view_473fd8`,
+`norrath_ctors_lava_wraith_view_473ff0`,
+`norrath_ctors_lava_wraith_view_474000`,
+`norrath_ctors_lava_wraith_view_474010`,
+`norrath_ctors_lava_wraith_view_474028`,
+`norrath_ctors_lava_wraith_view_474040`,
+`norrath_ctors_lava_wraith_view_474050`,
+`norrath_ctors_lava_wraith_view_474060`,
+`norrath_ctors_lava_wraith_view_474540`,
+`norrath_ctors_lava_wraith_view_474550`,
+`norrath_ctors_lava_wraith_view_474560`,
+`norrath_ctors_lava_wraith_view_474570`
+
+Opened: none
+
+## agents/w9-ctors-wraith-d
+
+Merged (the branch notes carry the five summary sections; the tip was 36
+minutes old). Thirty-six data units (view objects) with fresh `input_order`
+values 3248 through 3283; the function-body count stays at 2336. All 36 host
+checks under `views/host/` build (linked with the unit) and exit 0 here (36 of
+36). No imports opened. No game binary or disassembly listing was committed.
+3282 authored inputs, zero COMMON. 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1417 |
+| After | 1381 |
+| Closed | 36 |
+| Opened | 0 |
+
+Closed: `norrath_ctors_lava_wraith_view_477568`,
+`norrath_ctors_lava_wraith_view_477580`,
+`norrath_ctors_lava_wraith_view_477598`,
+`norrath_ctors_lava_wraith_view_4775b0`,
+`norrath_ctors_lava_wraith_view_4775c8`,
+`norrath_ctors_lava_wraith_view_4775d8`,
+`norrath_ctors_lava_wraith_view_4778c8`,
+`norrath_ctors_lava_wraith_view_4778d8`,
+`norrath_ctors_lava_wraith_view_483e28`,
+`norrath_ctors_lava_wraith_view_483f88`,
+`norrath_ctors_lava_wraith_view_484fa0`,
+`norrath_ctors_lava_wraith_view_484fa8`,
+`norrath_ctors_lava_wraith_view_485240`,
+`norrath_ctors_lava_wraith_view_4852a8`,
+`norrath_ctors_lava_wraith_view_485330`,
+`norrath_ctors_lava_wraith_view_4853b8`,
+`norrath_ctors_lava_wraith_view_4853d0`,
+`norrath_ctors_lava_wraith_view_4853d8`,
+`norrath_ctors_lava_wraith_view_4857e8`,
+`norrath_ctors_lava_wraith_view_4857f0`,
+`norrath_ctors_lava_wraith_view_4857f8`,
+`norrath_ctors_lava_wraith_view_485800`,
+`norrath_ctors_lava_wraith_view_485808`,
+`norrath_ctors_lava_wraith_view_485810`,
+`norrath_ctors_lava_wraith_view_485818`,
+`norrath_ctors_lava_wraith_view_485820`,
+`norrath_ctors_lava_wraith_view_485828`,
+`norrath_ctors_lava_wraith_view_4858b8`,
+`norrath_ctors_lava_wraith_view_4858c0`,
+`norrath_ctors_lava_wraith_view_4858c8`,
+`norrath_ctors_lava_wraith_view_486118`,
+`norrath_ctors_lava_wraith_view_486120`,
+`norrath_ctors_lava_wraith_view_486128`,
+`norrath_ctors_lava_wraith_view_486130`,
+`norrath_ctors_lava_wraith_view_601030`,
+`norrath_ctors_lava_wraith_view_601fd0`
+
+Opened: none
+
+## agents/w9-hud-inventory-items-c
+
+Merged (the branch notes carry the five summary sections; the tip was 52
+minutes old). Twenty-two of its 23 units were selected with fresh
+`input_order` values 3284 through 3305. `create-random` was **not** selected:
+it defines `createRandom__4itemPQ24item11descriptioniiii`, which
+`w9-hud-inventory-items-a-create-random` already supplies, so the link failed
+with a multiple definition; its files stay in the snapshot, unselected (the
+two are independent authorings of the same observed function). Host checks: 23
+of 23 build and exit 0 here once the link-style ones get their implementation
+file (`unpack` also needs `pack.cpp` from the sibling unit). No game binary or
+disassembly listing was committed. 2357 function bodies, 3304 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1381 |
+| After | 1356 |
+| Closed | 31 |
+| Opened | 6 |
+
+Closed: `norrath_player_armor_cache_view_7cb770`, `norrath_text_hash_slots`,
+`norrath_text_missing_cursor`, `norrath_text_missing_entries`,
+`pack__4itemPQ24item11description`, `picFind__4itemPc`,
+`picKickOneOut__4itemv`, `playerCheckRecallHotKey__Fv`,
+`playerGetMarkerColor__Fii`, `playerGetPotionsLeft__Fii`,
+`playerGetSkillRank__Fii`, `playerGettinIt`,
+`playerIsAnimPlaying__6PlayerPc`, `playerLogInventory__Fi`,
+`playerMaybeGetItem__FiPQ24item11description`,
+`recomputePaperDollModifiers__Fi`, `resetPlayerAnimations__Fi`, `sellMode`,
+`setupDefaultEquipment__Fi`, `setupHalo__4itemPQ24item11descriptionf`,
+`shop`, `shopBuy__FcPQ24item11description`, `shopDisableMouse`,
+`shopFrame__Fv`, `shopGrid`, `shopIntro`,
+`shopItemSetAttributes__FiiPcPQ24item11description`, `shopMouseDecay`,
+`shopTick`, `unequipItem__FiPQ24item11description`,
+`unpack__4itemPQ24item11description`
+
+Opened: `armorDebug`, `healthPotionsLeft`,
+`inventorySwitchDualWield__FiPQ24item11description`, `manaPotionsLeft`,
+`netGetCameraCustomControl__Fi`, `shopRun__Fi`
+
+## agents/w9-rtti-vtables-entities-a
+
+Merged (the branch notes carry the five summary sections; the tip was 71
+minutes old). Thirty-seven of its 44 units were selected with fresh
+`input_order` values 3306 through 3342: entity `initType` functions, type-info
+destructors, `_$_9type_info`, and two vtable data views. Seven data units were
+**not** selected because they have no committed check: single-float literal
+views `480bb8`, `480cb4`, `4810b4`, `4810b8`, `481710`, `4818ac` and `482424`
+(values such as 0x3e4ccccc); they stay in the snapshot, unselected. The worker's
+paired-run counts (scenarios per function, 1487 imports) are for its private
+tree and were not reproduced; the real count after this merge is above. The 37
+selected units' host checks build and exit 0 here (37 of 37). No game binary
+or disassembly listing was committed. 2392 function bodies, 3341 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1356 |
+| After | 1344 |
+| Closed | 34 |
+| Opened | 22 |
+
+Closed: `_$_10DoorSecret`, `_$_10GameObject`, `_$_11AutoChestLP`,
+`_$_11FloorSwitch`, `_$_14__si_type_info`, `_$_15AutoContainerLP`,
+`_$_16__user_type_info`, `_$_4Line`, `_$_6Candle`, `_$_7AntTrap`,
+`_$_7Blocker`, `_$_7Candle2`, `_$_7EggSack`, `_$_8AutoProp`,
+`_$_9DoorSwing`, `addTurnAnimation__3Cat`, `clone__10DoorSecret`,
+`clone__11FloorSwitch`, `clone__6Candle`, `clone__7Blocker`,
+`clone__7Candle2`, `clone__9DoorSwing`,
+`do_dyncast__C14__si_type_infoiQ216__user_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_dyncast__C16__user_type_infoiQ216__user_type_info8sub_kindRC9type_infoPvT3T4RQ216__user_type_info14dyncast_result`,
+`do_find_public_subobj__C14__si_type_infoiRC9type_infoPvT3`,
+`do_find_public_subobj__C16__user_type_infoiRC9type_infoPvT3`,
+`do_upcast__C14__si_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_info13upcast_result`,
+`do_upcast__C16__user_type_infoQ216__user_type_info8sub_kindRC9type_infoPvRQ216__user_type_info13upcast_result`,
+`initAttackVariant__5Demon`, `initAttackVariant__8Froglock`,
+`initType__13FemaleDarkElfb`, `initType__5Gnome`, `initType__6Goblinb`,
+`msg_collision__13AutoContainerP10GameObject`
+
+Opened: `_$_10AutoObject`, `_$_10AutoPropLP`, `_$_13AutoContainer`,
+`__tf10AutoObject`, `msg_load__10AutoObjectPc`, `msg_run__10AutoObject`,
+`msg_save__10AutoObjectPc`, `norrath_rtti_entities_a_view_480bb8`,
+`norrath_rtti_entities_a_view_480cb4`,
+`norrath_rtti_entities_a_view_480cb8`,
+`norrath_rtti_entities_a_view_480cbc`,
+`norrath_rtti_entities_a_view_480cc0`,
+`norrath_rtti_entities_a_view_4810b4`,
+`norrath_rtti_entities_a_view_4810b8`,
+`norrath_rtti_entities_a_view_481710`,
+`norrath_rtti_entities_a_view_4818ac`,
+`norrath_rtti_entities_a_view_482424`,
+`norrath_rtti_entities_a_view_482428`,
+`norrath_rtti_entities_a_view_48242c`,
+`norrath_rtti_entities_a_view_482430`,
+`norrath_rtti_entities_a_view_482434`, `norrath_rtti_entities_a_view_482438`
+
+## agents/w9-rtti-vtables-entities-b
+
+Merged (the branch notes carry the five summary sections; the tip was 57
+minutes old). Thirty-two units with fresh `input_order` values 3343 through
+3374: entity `msg_save`/`msg_run` virtuals and similar, all function units.
+All 32 host checks build and exit 0 here (32 of 32). The notes also list three
+older `w8-actor-virtuals-c` units (`msg_run__8GothTrap`, `msg_run__8HateHole`,
+`msg_save__7ShooterPc`) as "re-verified, not yet in the build plan". The
+verification they cite is the worker's private paired run, and the branch adds
+no committed check for them (the three sources are unchanged), so, as with the
+earlier log for `w8-actor-virtuals-c`, I left them unselected. The worker's
+notes name `candle2Particle` and similar as opened; the real opened set is
+above. No game binary or disassembly listing was committed. 2425 function
+bodies, 3373 authored inputs, zero COMMON. 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1344 |
+| After | 1318 |
+| Closed | 32 |
+| Opened | 6 |
+
+Closed: `msg_draw__10AutoPropLP`, `msg_draw__11AutoChestLP`,
+`msg_draw__15AutoContainerLP`, `msg_draw__6Candle`, `msg_draw__7Candle2`,
+`msg_getPokeName__10DoorSecretPUsi`, `msg_getPokeName__13AutoContainerPUsi`,
+`msg_getPokeName__9AutoChestPUsi`, `msg_getPokeName__9DoorSwingPUsi`,
+`msg_hurt__13AutoContainerfP10GameObjecti`, `msg_load__10DoorSecretPc`,
+`msg_load__11FloorSwitchPc`, `msg_load__13AutoContainerPc`,
+`msg_load__9AutoChestPc`, `msg_load__9DoorSwingPc`,
+`msg_poke__10DoorSecreti`, `msg_poke__11AutoChestLPi`,
+`msg_poke__13AutoContaineri`, `msg_poke__9DoorSwingi`,
+`msg_presave__9DoorSwing`, `msg_run__10AutoPropLP`, `msg_run__10DoorSecret`,
+`msg_run__11AutoChestLP`, `msg_run__11FloorSwitch`,
+`msg_run__15AutoContainerLP`, `msg_run__6Candle`, `msg_run__7AntTrap`,
+`msg_run__7Candle2`, `msg_run__9DoorSwing`, `msg_save__10DoorSecretPc`,
+`msg_save__11FloorSwitchPc`, `msg_save__13AutoContainerPc`
+
+Opened: `candle2Particle`, `msg_poke__9AutoChesti`, `msg_run__13AutoContainer`,
+`msg_run__9AutoChest`, `objectAddToMediumRunList__FP10GameObject`,
+`worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2`
+
+## agents/w9-vehicle
+
+Merged (the branch notes carry the five summary sections; the tip was 59
+minutes old). Twenty-six units with fresh `input_order` values 3375 through
+3400: vehicle and boat functions (force accumulation, passengers, backup,
+destructor, setters) and one globals data unit that emits no function. All 26
+host checks build and exit 0 here (26 of 26). The notes' "Toolchain facts found
+on the way" section is the worker's own and was not checked. No duplicate
+definition was found at link time. The opened set grows because the vehicle
+code calls into physics and camera areas not yet reconstructed. No game binary
+or disassembly listing was committed. 2450 function bodies, 3399 authored
+inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1318 |
+| After | 1324 |
+| Closed | 27 |
+| Opened | 33 |
+
+Closed: `_$_4Boat`, `accumForceAndTorque__7VehicleP6Point3T1i`,
+`addPassenger__7Vehiclei`, `backup__7Vehicle`,
+`buildCollisionInfo__7Vehicle`, `checkVehicleCollision__7Vehicle`,
+`checkWallCollision__7Vehicle`, `doAI__7Vehicle`, `doBrakes__7Vehicle`,
+`doDriveline__7Vehicle`, `doMisc__7Vehicle`, `doMyUniqueForces__4Boat`,
+`doSteering__7Vehicle`, `doSuspension__7Vehicle`, `doThrottle__7Vehicle`,
+`finalizePosition__7Vehicle`, `getNewRotAndPos__7VehicleP6Point3T1fii`,
+`getSeatPosition__7VehicleiP6Point3`, `haveRoom__7Vehicle`,
+`isPassenger__7Vehiclei`, `removePassenger__7Vehiclei`,
+`set__11LavaTractor`, `set__4Boat`, `set__8SkulBoat`,
+`startForces__7Vehicle`, `vehicleCount`, `vehicleList`
+
+Opened: `FinalizePosition__5Wheel`, `__17VehicleBodySphereP7Vehicleff`, `_vt$4Boat`,
+`acos`, `acosf`, `addWheel__7VehiclePciffff`, `atan2f`,
+`backupJustForces__7Vehicle`, `buildCollisionBox__7Vehicle`,
+`changeOrientation__7VehicleG6Point3`, `dismount__6Player`,
+`doDifferential__7Vehicle`, `dpmul`,
+`dualImpulse__7VehicleP7VehicleT1P6Point3T3`,
+`gameLineRayCollision__FP6Point3T0P23gameLineCollisionPacketi`,
+`getBlockingVehicle__7VehiclePf`, `getEngineTorque__7Vehicle`,
+`getParticleVelocity__7VehicleP6Point3`, `impulse__7VehicleP6Point3N21fii`,
+`lavaGoopParticle`, `lavaSteamParticle`, `nullp`, `quatMul__FP4QuatN20`,
+`rayHit__7VehicleP6Point3T1fT1`, `resolveCreatureCollisions__7Vehicle`,
+`scalePatchLimit__7VehicleiP6Point3`, `segmentLineHit__FP6Point3N50`,
+`setMassAndIBody__7Vehicle`, `slideDustParticle`, `slideDustParticleBig`,
+`slideDustParticleBigDark`, `slideDustParticleDark`, `sqrt`
+
+## agents/w9-rtti-vtables-entities-c
+
+Merged (the branch notes carry the five summary sections; the tip was 35
+minutes old, so this is the tip at that time). Thirty-five units with fresh
+`input_order` values 3401 through 3435: entity `setState`/`initType` style
+functions and one storage unit (`ti-ph-prop`) that emits no function. All 35
+host checks build and exit 0 here (35 of 35). No duplicate definition was
+found at link time. No game binary or disassembly listing was committed. 2484
+function bodies, 3434 authored inputs, zero COMMON. 214 tool tests passed. No
+EE or game execution.
+
+| | |
+|---|---|
+| Before | 1324 |
+| After | 1308 |
+| Closed | 35 |
+| Opened | 19 |
+
+Closed: `msg_save__7TriggerPc`, `msg_save__8AutoPropPc`, `msg_save__9AutoChestPc`,
+`msg_save__9DoorSwingPc`, `msg_trigger__10DoorSecreti`,
+`msg_trigger__11MissileTrapi`, `msg_trigger__9DoorSwingi`,
+`norrath_construct_AutoObject`, `norrath_lava_monster_get_model`,
+`norrath_male_dark_elf_init_type`, `norrath_male_dark_elf_set_state`,
+`norrath_mummy_init_type`, `norrath_mummy_set_state`,
+`norrath_mummy_set_weapon`, `norrath_orc_init_type`,
+`norrath_orc_set_weapon`, `norrath_rtti_ptr`, `norrath_skeleton_init_type`,
+`norrath_skeleton_set_state`, `norrath_skelight_init_weapon`,
+`norrath_skelight_set_state`, `norrath_soul_set_state`,
+`norrath_static_fire_init`, `norrath_ti_6PhProp`,
+`norrath_wood_elf_soldier_init_type`, `norrath_wood_elf_soldier_set_state`,
+`setPassableState__10HateBridgeb`, `setPassableState__8GothTrapb`,
+`setPassableState__8HackDoorb`, `setState__10Teleporteri`,
+`setState__7Critteri`, `setWeapons__6Goblin`, `specificInit__7CritterPcT1`,
+`subTurnAnimation__3Cat`, `switchToWalk__3Cat`
+
+Opened: `__tf15SpellConeOfFire`, `addCommander__14WoodElfSoldier`,
+`bNextToEdge__14WoodElfSoldier`, `commanderValid__14WoodElfSoldier`,
+`dropItem__14WoodElfSoldieri`, `dropItem__8Skeletoni`,
+`dropItem__8Skelighti`, `dropTreasure__8CreatureG6Point3iffffffPc`,
+`dropWeapon__5Mummy`,
+`fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff`,
+`getSoulAttachMatrix__6MinionP8Matrix34`,
+`leaveCommander__14WoodElfSoldier`, `matInvert__FP8Matrix34T0`,
+`modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f`,
+`newWind__10StaticFirei`, `norrath_legacy_pointer_type_info_vtable_view`,
+`skeletonResMap`, `soulParticle`, `terminateSpell__8CreatureRC9type_info`
+
+## agents/w9-ctors-lantern-b
+
+Merged as a **partial package**: its notes have the virtual-table and string
+sections and a closing summary, but not the five summary sections; the tip was
+80 minutes old, every unit has a committed check, the tool tests pass, and the
+partial build passes. Forty data units (12 virtual tables and 28 string
+literals; the notes say the strings are short tag, lump and animation-name
+templates, not dialogue) with fresh `input_order` values 3436 through 3475;
+the function-body count stays at 2484. All 40 checks under `vtables/host/` and
+`strings/host/` build (linked with the unit) and exit 0 here (40 of 40). The 64
+opened names are the vtable slot functions of the twelve classes, not defined in
+this package. No game binary or disassembly listing was committed. 3474
+authored inputs, zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1308 |
+| After | 1332 |
+| Closed | 40 |
+| Opened | 64 |
+
+Closed: `norrath_ctors_ant_lantern_view_44cc28`,
+`norrath_ctors_ant_lantern_view_44dbe8`,
+`norrath_ctors_ant_lantern_view_44dd68`,
+`norrath_ctors_ant_lantern_view_44e550`,
+`norrath_ctors_ant_lantern_view_44e9d0`,
+`norrath_ctors_ant_lantern_view_44ebb0`,
+`norrath_ctors_ant_lantern_view_44ec40`,
+`norrath_ctors_ant_lantern_view_44ece8`,
+`norrath_ctors_ant_lantern_view_44f6a8`,
+`norrath_ctors_ant_lantern_view_450160`,
+`norrath_ctors_ant_lantern_view_450530`,
+`norrath_ctors_ant_lantern_view_4506b0`,
+`norrath_ctors_ant_lantern_view_46d070`,
+`norrath_ctors_ant_lantern_view_46d300`,
+`norrath_ctors_ant_lantern_view_46dbe0`,
+`norrath_ctors_ant_lantern_view_46dc90`,
+`norrath_ctors_ant_lantern_view_46dca0`,
+`norrath_ctors_ant_lantern_view_46dcb0`,
+`norrath_ctors_ant_lantern_view_46dcc0`,
+`norrath_ctors_ant_lantern_view_46dcd0`,
+`norrath_ctors_ant_lantern_view_46dce0`,
+`norrath_ctors_ant_lantern_view_46dcf0`,
+`norrath_ctors_ant_lantern_view_46dd00`,
+`norrath_ctors_ant_lantern_view_46dd10`,
+`norrath_ctors_ant_lantern_view_46dd20`,
+`norrath_ctors_ant_lantern_view_46dd30`,
+`norrath_ctors_ant_lantern_view_46dd40`,
+`norrath_ctors_ant_lantern_view_46dd50`,
+`norrath_ctors_ant_lantern_view_46dd60`,
+`norrath_ctors_ant_lantern_view_46dd70`,
+`norrath_ctors_ant_lantern_view_46ded0`,
+`norrath_ctors_ant_lantern_view_46dee0`,
+`norrath_ctors_ant_lantern_view_46def0`,
+`norrath_ctors_ant_lantern_view_46edb0`,
+`norrath_ctors_ant_lantern_view_46f120`,
+`norrath_ctors_ant_lantern_view_46f130`,
+`norrath_ctors_ant_lantern_view_46f310`,
+`norrath_ctors_ant_lantern_view_46f320`,
+`norrath_ctors_ant_lantern_view_46f330`,
+`norrath_ctors_ant_lantern_view_46fa28`
+
+Opened: `_$_10Arenabeast`, `_$_10CloudGiant`, `_$_13FemaleDarkElf`, `_$_3Ice`,
+`_$_5Demon`, `_$_6Cthulu`, `_$_8Catapult`, `_$_8Innoruuk`, `_$_9AutoChest`,
+`__tf10Arenabeast`, `__tf10CloudGiant`, `__tf13AutoContainer`,
+`__tf13FemaleDarkElf`, `__tf3Ice`, `__tf5Demon`, `__tf6Cthulu`,
+`__tf8Catapult`, `__tf8Innoruuk`, `__tf9AutoChest`,
+`clone__13FemaleDarkElf`, `clone__3Ice`, `isEnemy__5DemonP10GameObject`,
+`msg_alert__13FemaleDarkElfifG6Point3P10GameObject`,
+`msg_draw__10Arenabeast`, `msg_draw__10CloudGiant`,
+`msg_draw__13FemaleDarkElf`, `msg_draw__3Ice`, `msg_draw__5Demon`,
+`msg_draw__6Cthulu`, `msg_draw__8Catapult`, `msg_draw__8Innoruuk`,
+`msg_hurt__10ArenabeastfP10GameObjecti`,
+`msg_hurt__10CloudGiantfP10GameObjecti`,
+`msg_hurt__8CatapultfP10GameObjecti`, `msg_hurt__8InnoruukfP10GameObjecti`,
+`msg_load__10CloudGiantPc`, `msg_load__13FemaleDarkElfPc`,
+`msg_load__5DemonPc`, `msg_load__8CatapultPc`,
+`msg_moveCollision__10ArenabeastPP10GameObject`,
+`msg_moveCollision__6CthuluPP10GameObject`, `msg_run__10Arenabeast`,
+`msg_run__10CloudGiant`, `msg_run__13FemaleDarkElf`, `msg_run__3Ice`,
+`msg_run__5Demon`, `msg_run__6Cthulu`, `msg_run__8Catapult`,
+`msg_run__8Innoruuk`, `msg_save__10CloudGiantPc`,
+`msg_save__13FemaleDarkElfPc`, `msg_save__5DemonPc`,
+`msg_save__8CatapultPc`, `msg_trigger__10Arenabeasti`,
+`msg_trigger__10CloudGianti`, `msg_trigger__8Catapulti`,
+`msg_trigger__8Innoruuki`, `setState__10Arenabeasti`,
+`setState__10CloudGianti`, `setState__13FemaleDarkElfi`,
+`setState__5Demoni`, `setState__6Cthului`, `setState__8Innoruuki`,
+`updateEnemy__8Innoruuk`
+
+## Second-pass audit of merged host checks
+
+Added by the integrator that worked beside the one that merged most of the
+`w8-*` packages. At tip `ef62a71a` it ran every host check in the 577 source
+directories added since `5744679` (the tip when this pass started) on this
+machine, and changed one numeric literal at a time in each source (up to six
+mutants) to see whether the check notices. It did not read the executable, so
+the byte-comparison checks that need `SLUS_205.65` were not run.
+
+- Base failures, all already disclosed in the entries above: the 64-bit
+  pointer harness failures of `cdProcess`, `soundMapSound`,
+  `soundPlaySequence` and `soundComputeSequenceLength`; the
+  `_$_14AnimationState`, `MC_ResetRamSlot` and `sceCdGetError` checks, which
+  need `-fno-builtin` or a 32-bit pointer layout to run as intended.
+- Checks that could not run without the executable: the fourteen
+  `w8-startup-sce-a` syscall-stub comparisons and `SetArg`, and the
+  kernel-patches and gs-dma-kernel assembly units (their statements are the
+  workers').
+- Weak checks, which pass but would not notice a changed literal in the
+  source: `w8-runtime-libc-a-exit` and `w8-startup-sce-b-request-call` (0 of 6
+  mutants noticed; their structural literals are guarded by `static_assert`
+  at EE compile time instead, which a host mutation does not exercise).
+  Nineteen `tf`/type-info units and a few word tables noticed only 1 or 2 of 6
+  mutants.
+- Everything else: every unit with literals noticed at least half of its
+  mutants; `w8-spell-static-init-a` noticed 6 of 6 in all 31 units.
+
+The packages already rejected (`frontend-shell` before its fix and
+`w8-spell-static-init-b`) were the only ones found with checks that cannot
+fail or do not exist.
+
+## Not merged: codex/norrath-runtime-binding
+
+`origin/codex/norrath-runtime-binding` (owner, one commit) adds an
+opt-in `--defsym=memset=norrath_block_memory_set` binding to
+`tools/build_partial.py` with hash-checked provider/consumers plus docs.
+It is not an `agents/*` worker package, carries no agent notes, and
+changes the build driver itself, so it is left for the startup lead or
+owner to merge. The default authored partial link used for the official
+counts above does not take the opt-in flag and is unaffected.
+
+## Baseline re-check before the w9 merges
+
+Before the first w9 merge, the integrator who followed the earlier (free-tier)
+one re-ran the tool tests (214 OK), `check_source_snapshot.py` and the full
+partial build on the shared tip `9d30dbb5`. The recorded `w8-render-world-a`
+count of 1514 reproduced exactly (2391 inputs, 1950 function bodies, zero
+COMMON). No repo-rule break was found in the recent entries, and no shared file
+needed a fix. Entries below were produced one package at a time; for each, the
+before count is the previous package's real after count. The `w9-*` entries
+also record which units were left unselected (duplicate definitions at link
+time, or no committed host check) instead of changing any game source. Two
+local helper scripts (outside the repository) generated the plan and snapshot
+rows from compiling each unit; they are not part of the repository.
+
+Host checks on this machine need three adjustments that are not source defects:
+`-ffp-contract=off` (the host compiler fuses multiply-add and changes float
+bits), the leading underscore of `asm("name")` labels on macOS, and an x86_64
+build for the one check that stores 32-bit pointers. Each entry says when it
+mattered.
+
+## Not merged: agents/w9-render-math-a
+
+Rejected at tip `adff0bdc` (47 minutes old when read). Its 32 units hold
+about 25 function sources and seven data files, but the notes say the only
+check is a paired run on a private interpreter outside git, and that "no
+`host_check.cpp` was added" because the comparison "cannot be published". A
+reviewer cannot repeat that, so no committed function in the package has a test
+that could fail. The branch was merged locally to look at it and the merge was
+reset before anything was selected or pushed. The code is not changed; the
+owner can add committed host checks per function (as the other w9 packages do)
+and push again.
+
+## Second baseline re-check and empty queue
+
+At shared tip `f2f22f82` the next integrator re-ran 214 tool tests (OK),
+`check_source_snapshot.py` (PASS, 3474 authored inputs) and the full default
+partial build (3474 compilations, 2484 function bodies, zero COMMON). The
+recorded count of **1332** unresolved imports reproduced exactly. No repo-rule
+break was found in the recent entries (no binaries, images or listings added;
+the `.S` files are authored assembly units). The only unmerged branches are
+`agents/w8-spell-static-init-b` and `agents/w9-render-math-a`, both unchanged
+since their recorded rejections, `codex/norrath-runtime-binding` (owner's,
+build-driver change, left for the owner) and `integration/wave` (an old
+integrator branch, not a worker package). Nothing was merged in this pass.
+
+## Third baseline re-check and empty queue
+
+At shared tip `cc78a45e` this integrator re-ran 214 tool tests (OK),
+`check_source_snapshot.py` (PASS, 3474 authored inputs) and the full default
+partial build (3474 compilations, 2484 function bodies, zero COMMON). The
+recorded count of **1332** unresolved imports reproduced exactly. The two
+unmerged `agents/*` branches are unchanged since their recorded rejections
+(`w8-spell-static-init-b` at `ed20fab5`, `w9-render-math-a` at `adff0bdc`; both
+still lack committed per-function checks). `codex/norrath-runtime-binding` and
+`integration/wave` are not worker packages. Nothing was merged in this pass.
+
+## Fourth baseline re-check
+
+At shared tip `29284f93` this integrator (a different model from the earlier
+ones) re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 3474
+authored inputs) and the full default partial build (3474 compilations, 2484
+function bodies, zero COMMON). The recorded **1332** reproduced exactly. No
+repo-rule break in the last ten entries; no shared file needed a fix. All
+twelve `agents/w10-*` branches had tips under 45 minutes old when read; only
+`w10-startup-c` had a notes file with the five summary sections (Observed,
+Inferred, Unknown, Imports closed, Imports opened), so it was taken first.
+`w10-front-b` and `w10-startup-d` have notes without all five sections and
+their tips are fresh; the other nine have no notes file yet. They stay
+unmerged for now.
+
+## agents/w10-startup-c
+
+Merged (merge commit, tip `f0164f69`, 11 minutes old, five summary sections
+present). Three data units, no functions: the multi-client SIF RPC packet pool
+(64 bytes, zero-initialised .bss), the Player constructor's 15 literals and
+six-float table, and three single-use name literals. Each has a committed
+`host_check.cpp` (the notes say not to add one, but the branch contains them);
+all three build and exit 0 here (3 of 3). The checks compare literal text and
+float bit patterns with the source; they would fail on a changed string, but
+the worker's claim that the bytes match the private image was not
+re-verified (integration does not read the executable). Roles of the literals
+are the worker's inference from constructor use. New `input_order` values 3476
+through 3478; function-body count stays 2484. Worker's claim of 20 closed
+and none opened reproduced exactly. The 12 libpad/libmtap names listed as
+"closed once in the plan" were already closed by an earlier package. The
+worker did not run a full build; this integration did. 3477 authored inputs,
+zero COMMON. 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1332 |
+| After | 1312 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_sif_m_rpc_packet_pool_view`, `norrath_w9_startup_crt_b_view_11c3ae8`, `norrath_w9_startup_crt_b_view_462260`, `norrath_w9_startup_crt_b_view_4644c0`, `norrath_w9_startup_crt_b_view_464ab8`, `norrath_w9_startup_crt_b_view_464ac8`, `norrath_w9_startup_crt_b_view_464ad8`, `norrath_w9_startup_crt_b_view_464ae8`, `norrath_w9_startup_crt_b_view_464af8`, `norrath_w9_startup_crt_b_view_464b10`, `norrath_w9_startup_crt_b_view_464b20`, `norrath_w9_startup_crt_b_view_464b30`, `norrath_w9_startup_crt_b_view_464b48`, `norrath_w9_startup_crt_b_view_464b58`, `norrath_w9_startup_crt_b_view_464b68`, `norrath_w9_startup_crt_b_view_464b78`, `norrath_w9_startup_crt_b_view_464b88`, `norrath_w9_startup_crt_b_view_464b98`, `norrath_w9_startup_crt_b_view_4708d0`, `norrath_w9_startup_crt_b_view_4801f8`
+
+Opened: none
+
+## Not merged: agents/w10-startup-d
+
+Rejected at tip `cb1c9c26` (16 minutes old when read; its notes have all five
+summary sections). Its 18 units (nine functions and data views from the C++
+runtime and math support, plus `qsort_translate_table`, `scalbnf`, `sqrt`) have
+no committed host check: the diff holds no `host_check.cpp` or other test file,
+and the notes say behavior was compared in "a private R5900 interpreter kept
+outside git". A reviewer cannot repeat that, so no committed function in the
+package has a test that could fail (same ground as `w9-render-math-a`). The
+branch was not merged and no game code was changed. The owner can add committed
+host checks per function and push again; the notes also mention a plan-entry
+generator script and fifteen `w9-rtti-vtables-entities-a` view units "missing
+from the shared plan", which this integrator did not verify.
+
+## agents/w10-vi-a
+
+Merged (merge commit, tip `c1b408ff`, 10 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries,
+authored but never executed, unknown). 32 functions and one initialised data
+table (`KbdMapTable`, 750 bytes) from the VI front-end framework classes, with
+fresh `input_order` values 3479 through 3511. Each unit has a
+`host_contract.cpp` (33 of 33). All 33 compile with `-Wall -Wextra -Werror`
+and exit 0 here (x86_64, `-pagezero_size`, `-ffp-contract=off`); one mutation
+of `Close__9VICollide` (swapped the two return values) made its contract
+fail. The `KbdMapTable` check carries a hash and three spot records of the
+table; the worker's claim that the bytes equal the image was not re-verified
+(integration does not read the executable). Compiled sizes are not the
+image sizes, and the notes say so; no byte match is claimed. The worker did
+not run a full build; this integration did: 3510 authored inputs, 2516
+function bodies, zero COMMON. 214 tool tests passed. Worker's closed count of
+33 reproduced exactly; its opened list (47 here) also matches the new
+undefined names. The notes count `gKeyboardAttached` as already defined,
+which it is. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1312 |
+| After | 1326 |
+| Closed | 33 |
+| Opened | 47 |
+
+Closed: `Begin__7VIFaderff`, `CleanUp__11VIGUIObject`, `Clear__12VIDictionary`, `Close__5VIPad`, `Close__9VICollide`, `Free__7VIFader`, `Init__12VIDictionaryi`, `Init__5VIPadii`, `Init__7VIFaderP8VIRasterP12VIDictionaryf`, `Init__8VICameraR8VIRasterRC7VIVect3T2ffff`, `Init__9VICollide`, `KbdMapTable`, `Load__13VIGameOptions`, `Parse__9VICSFFilePCcR10VIESFParseR7VIScene`, `Read__10VIKeyboardR12VIConsoleKey`, `Read__5VIPadR12VIConsolePad`, `Update__7VIFader`, `VIFreeUSocketExApi__Fv`, `_$_10VIESFParse`, `_$_10VIKeyboard`, `_$_10VIMatrix44`, `_$_12VIDictionary`, `_$_5VIPad`, `_$_7VIFader`, `_$_9VICollide`, `__10VIESFParse`, `__10VIKeyboard`, `__12VIDictionary`, `__6VIFont`, `__7VIFader`, `__9VICSFFile`, `__9VICollide`, `__cl__8VICameraR7VIVect3T1`
+
+Opened: `Begin2D__8VIRaster`, `BeginTriStrip__8VIRaster`, `CalcAxes__8VICameraRC7VIVect3R7VIVect3N22`, `Clear__9VICollide`, `Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Color__8VIRasterRC10VIColor32F`, `CreateMaterial__8VIRasteri`, `DequeueKeyEvent__10VIKeyboardP12VIConsoleKey`, `End2D__8VIRaster`, `EndTriStrip__8VIRaster`, `Frustum__8VIRasterR10VIMatrix44ffffff`, `Identity__10VIMatrix44`, `InitSolidFill__10VIMaterial`, `Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Material__8VIRasteri`, `Open__6VIFilePCci`, `PadData`, `Parse__9VICSFFileR6VIFileR10VIESFParseR7VIScene`, `PrepareQueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ReleaseMaterial__8VIRasteriR12VIDictionary`, `ScaleStick__5VIPadUc`, `SetDefaults__13VIGameOptions`, `SetLayerBlendMode__10VIMateriali16VIAlphaBlendMode`, `SetMaterial__8VIRasteri`, `TranslateEvent__10VIKeyboardP11_lgKbdEvent`, `Update__8VICameraRC7VIVect3R7VIVect3N22R10VIMatrix44`, `VIMemCardReadFile__FPCcPvi`, `Vertex__8VIRasterRC8VIVect2I`, `_$_6VIFile`, `_$_t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `_$_t6VIPool1ZP12VICollBuffer`, `_11VIGUIObject$m_alphaFillMaterial`, `__6VIFile`, `__floatdisf`, `__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `__t6VIPool1ZP12VICollBuffer`, `lgKbdEnumHint`, `lgKbdEnumerate`, `lgKbdOpen`, `lgKbdRead`, `lgKbdSetRepeatRate`, `sMessagePool`, `scePadGetReqState`, `scePadGetState`, `scePadInfoAct`, `scePadInfoMode`, `scePadPortClose`
+
+## agents/w10-vi-b
+
+Merged (merge commit, tip `e1fdb923`, 11 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries,
+authored but never executed, unknown). 30 functions (VI front-end framework
+classes, VIPad to VIUI, including sound-device, ambient and splash-effect
+routines) with fresh `input_order` values 3512 through 3541, each with a
+`host_contract.cpp` (30 of 30 compile and exit 0 here). No game binary or
+listing was committed. Compiled sizes are not image sizes and no byte match is
+claimed. The worker did not run a full build; this integration did: 3540
+authored inputs, 2546 function bodies, zero COMMON, 214 tool tests passed.
+The worker's closed count of 30 reproduced. Its notes list 172 opened names;
+165 are new to the unresolved list (the rest were already unresolved). The
+notes say `RunPatcher__7VISetup`, `Init__9VIStationiPCcPcT3T2T2i` and
+`Process__9VIStation` have authored sources from `w9-frontend-a` that are in the
+snapshot but not in the build plan; this was not changed here. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1326 |
+| After | 1461 |
+| Closed | 30 |
+| Opened | 165 |
+
+Closed: `BeginScene__8VIRaster`, `Clear__7VIScene`, `Close__13VISoundDevice`, `Close__4VIUI`, `Close__8VIRaster`, `EndScene__8VIRaster`, `Flush__13VISoundDevice`, `GetTime__7VITimer`, `Init__13VISoundDevice`, `Init__4VIUIP8VIRasterP13VISoundDeviceP12VIDictionary`, `Init__7VIScenelR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Init__8VIRasterPviii`, `Process__13VISoundDevice`, `Render__7VISceneR8VICamera`, `SetClearColor__8VIRasterRC10VIColor32F`, `SetTimeOfDay__7VIScenef`, `SetTime__7VIScenel`, `SetWireframe__8VIRasteri`, `StartAmbientSoundtrack__7VISetup`, `StopAmbientSoundtrack__7VISetup`, `VISetWindowUI__FP4VIUI`, `VISplashFxFree__Fv`, `VISplashFxInit__FP8VIRasterP12VIDictionary`, `_$_13VISoundDevice`, `_$_7VIScene`, `_$_8VIRaster`, `__13VISoundDevice`, `__5VIPad`, `__7VIScene`, `__8VIRaster`
+
+Opened: `AddTail__7VILListP7VILNode`, `AsWave__7VISound`, `AsXm__7VISound`, `BeginAdpcmTransfer__13VISoundDevicePPvUiiPi`, `BeginXmTransfer__13VISoundDevicePPvUiUiiPi`, `Begin__Ct6VIPool1ZP13VIHSpriteAnim`, `Begin__Ct6VIPool1ZP16VIStaticLighting`, `Begin__Ct6VIPool1ZP8VIRefMap`, `Begin__Ct6VIPool1ZP8VISprite`, `CalcOutdoorsIntensity__7VISceneR8VICamera`, `CalcProfileBlend__7VIWorldRC7VIVect3R21VITerrainProfileBlend`, `ClearShadowQueue__7VIScene`, `Clear__11VIClipStack`, `Clear__12VIAtmosphereR7VIScene`, `Clear__14VIQueryTriList`, `Clear__16VIParticleSystemR12VIDictionary`, `Clear__17VISceneSoundTrack`, `Clear__19VIRadialFloraSystem`, `Clear__19VISpellEffectSystem`, `Clear__7VIWorld`, `Clear__8VIRaster`, `Clear__t6VIList1Z7VIActor`, `Clear__t6VIList1ZQ27VIScene12VISceneOccup`, `Clear__t6VIPool1ZP13VIHSpriteAnim`, `Clear__t6VIPool1ZP16VIStaticLighting`, `Clear__t6VIPool1ZP8VIRefMap`, `Clear__t6VIPool1ZP8VISprite`, `Clear__t7VIArray1Zi`, `Clear__t8VIVector1Z18VISceneDisplayElem`, `CreateSprite__7VIScene12VISpriteTypei`, `EnableAllLights__8VIRasteri`, `End__Ct6VIPool1ZP13VIHSpriteAnim`, `End__Ct6VIPool1ZP16VIStaticLighting`, `End__Ct6VIPool1ZP8VIRefMap`, `End__Ct6VIPool1ZP8VISprite`, `Find__12VIDictionaryUiR14VIResourceTypeRi`, `Flip__8VIRaster`, `FlushIopCommand__Fb`, `Flush__8VIRaster`, `GetEnvFlags__7VISceneRC7VIVect3`, `GlobalFree__14VIEffectVolume`, `GlobalInit__14VIEffectVolumeP7VIScene`, `IdleTransfer__13VISoundDevice`, `InitSPRDoubleBuffer__8VIRaster`, `InitTimeOfDay__7VIScene`, `Init__11VIClipStack`, `Init__12VIAtmospherelR8VIRasteri`, `Init__14VIQueryTriListiRC6VIBBoxRC7VIVect3f`, `Init__16VIParticleSystemlP8VIRasteri`, `Init__17VISceneSoundTrack`, `Init__19VIRadialFloraSystemR7VIScene`, `Init__19VISpellEffectSystemP7VIScene`, `Init__7VILList`, `Init__7VIWorldiiiifRC7VIVect3RC6VIBBox`, `Init__8VIRaster`, `Init__t6VIList1Z7VIActor`, `Init__t6VIList1ZQ27VIScene12VISceneOccup`, `Init__t6VIPool1ZP13VIHSpriteAnimi`, `Init__t6VIPool1ZP16VIStaticLightingi`, `Init__t6VIPool1ZP8VIRefMapi`, `Init__t6VIPool1ZP8VISpritei`, `Init__t7VIArray1Zii`, `Init__t8VIVector1Z18VISceneDisplayElemi`, `Load__13VIStringTablePCc`, `Next__Ct6VIPool1ZP13VIHSpriteAnimi`, `Next__Ct6VIPool1ZP16VIStaticLightingi`, `Next__Ct6VIPool1ZP8VIRefMapi`, `Next__Ct6VIPool1ZP8VISpritei`, `Process__19VISpellEffectSystem`, `RasterDeferred__12VINameSpriteR8VIRaster`, `ReleaseDeferred__8VIRaster`, `ReleaseSurface__8VIRasteriR12VIDictionary`, `ReloadWords__4VIUI`, `RenderByFrustum__7VIWorldR15VISceneRendVars`, `RenderByPortals__7VIWorldR15VISceneRendVars`, `RenderDeferredList__7VISceneR8VICameraii`, `RenderShadows__7VIScene`, `RenderSky__12VIAtmosphereR7VISceneR8VICamera`, `RenderWeather__12VIAtmosphereR7VISceneR8VICamera`, `Render__16VIParticleSystemlR8VIRaster`, `Render__19VIRadialFloraSystemR8VICamera`, `Reset__11VIClipStack`, `Reset__13VISoundDevice`, `SetGSScissoring__8VIRaster`, `SetIopFunction__FUii`, `SetModelView__8VIRasterRC10VIMatrix44`, `SetOverrideMaterial__8VIRaster`, `SetPersonalLightMode__7VIScene19VIPersonalLightMode`, `SetPersonalLight__7VISceneRC7VIVect3fRC10VIColor32F`, `SetProjection__8VIRasterRC10VIMatrix44`, `SetStaticLighting__8VIRasterRC10VIColor32F`, `SetTime__8VIRasterl`, `SetupTimeOfDayFog__7VISceneR21VITerrainProfileBlendUi`, `SetupTimeOfDay__7VISceneR8VICameraR21VITerrainProfileBlendUi`, `SurfCache`, `Type__C7VISound`, `Unload__13VIStringTable`, `UpdateSoundEmitters__7VISceneR8VICamera`, `Update__12VIAtmosphereR7VISceneR8VICameralff`, `Update__19VIRadialFloraSystemRC7VIVect3`, `VIEEDMASync__Fi`, `VIHashResourceID`, `VISplashFxReset__Fv`, `VITrailFxClear__FR8VIRasterR12VIDictionary`, `VITrailFxInit__FR8VIRasterR12VIDictionary`, `VITrailFxRender__FlR8VIRasterR8VICamera`, `_$_12VIAtmosphere`, `_$_13VIHSpriteAnim`, `_$_14VIQueryTriList`, `_$_16VIParticleSystem`, `_$_19VISpellEffectSystem`, `_$_7VILList`, `_$_7VIWorld`, `_$_t5VIMap2ZiZi`, `_$_t6VIList1Z10VIMaterial`, `_$_t6VIList1Z7VIActor`, `_$_t6VIList1ZP12VIPrimBuffer`, `_$_t6VIList1ZP9VISurface`, `_$_t6VIList1ZQ27VIScene12VISceneOccup`, `_$_t6VIPool1Z19VIRasterMaterialLRU`, `_$_t6VIPool1ZP12VIPrimBuffer`, `_$_t6VIPool1ZP13VIColorBuffer`, `_$_t6VIPool1ZP13VIHSpriteAnim`, `_$_t6VIPool1ZP13VIMaterialPal`, `_$_t6VIPool1ZP16VIStaticLighting`, `_$_t6VIPool1ZP7VIRFont`, `_$_t6VIPool1ZP8VIRefMap`, `_$_t6VIPool1ZP8VISprite`, `_$_t6VIPool1ZP9VISurface`, `_$_t7VIArray1Z11VIClipEntry`, `_$_t7VIArray1Z7VIPlane`, `_$_t7VIArray1Z7VIVect3`, `_$_t7VIArray1Zi`, `_$_t8VIVector1Z18VISceneDisplayElem`, `_8VIRaster$DBuffer`, `__12VIAtmosphere`, `__14VIQueryTriList`, `__16VIParticleSystem`, `__19VIRadialFloraSystem`, `__19VISpellEffectSystem`, `__7VILList`, `__7VILNode`, `__7VIWorld`, `__t6VIList1Z10VIMaterial`, `__t6VIList1Z7VIActor`, `__t6VIList1ZP12VIPrimBuffer`, `__t6VIList1ZP9VISurface`, `__t6VIList1ZQ27VIScene12VISceneOccup`, `__t6VIPool1Z19VIRasterMaterialLRU`, `__t6VIPool1ZP12VIPrimBuffer`, `__t6VIPool1ZP13VIColorBuffer`, `__t6VIPool1ZP13VIHSpriteAnim`, `__t6VIPool1ZP13VIMaterialPal`, `__t6VIPool1ZP16VIStaticLighting`, `__t6VIPool1ZP7VIRFont`, `__t6VIPool1ZP8VIRefMap`, `__t6VIPool1ZP8VISprite`, `__t6VIPool1ZP9VISurface`, `__t7VIArray1Z11VIClipEntry`, `__t7VIArray1Z7VIPlane`, `__t7VIArray1Z7VIVect3`, `__t7VIArray1Zi`, `__t8VIVector1Z18VISceneDisplayElem`, `sceGsSetDefDBuffDc`, `sceGsSwapDBuffDc`
+
+## agents/w10-vi-c
+
+Merged (merge commit, tip `23f68c1c`, 24 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries,
+authored but never executed, unknown). 33 functions (VI front-end window
+classes, VIUI to VIWndSplash) with fresh `input_order` values 3542 through
+3574, each with a host contract (33 of 33 compile and exit 0 here). No game
+binary or listing was committed. The worker did not run a full build; this
+integration did: 3573 authored inputs, 2579 function bodies, zero COMMON, 214
+tool tests passed. The worker's closed count of 33 reproduced exactly. No EE
+or game execution.
+
+| | |
+|---|---|
+| Before | 1461 |
+| After | 1477 |
+| Closed | 33 |
+| Opened | 49 |
+
+Closed: `Free__10VIWndLegal`, `Free__11VIWndSplash`, `Free__12VIWndPatcher`, `Free__15VIWindowManager`, `Free__9VIWndDnas`, `Free__9VIWndEula`, `Init__10VIWndLegal`, `Init__11VIWndSplashP7VIScene`, `Init__12VIWndPatcher`, `Init__15VIWindowManagerP5VIPadP10VIKeyboard`, `Init__9VIWndDnasP7VIScene`, `Init__9VIWndEula`, `RestartConnect__11VIWndSplash`, `SetAppPtr__5VIWndPv`, `SetFocus__5VIWndP5VIWndb`, `SetRoot__15VIWindowManagerP5VIWnd`, `Update__15VIWindowManager`, `_$_10VIWndLegal`, `_$_11VIWndSplash`, `_$_12VIWndPatcher`, `_$_15VIWindowManager`, `_$_20VIWndGenericRenderer`, `_$_4VIUI`, `_$_9VIWndDnas`, `_$_9VIWndEula`, `__10VIWndLegal`, `__11VIWndSplash`, `__12VIWndPatcher`, `__15VIWindowManager`, `__20VIWndGenericRenderer`, `__4VIUI`, `__9VIWndDnas`, `__9VIWndEula`
+
+Opened: `AddChild__5VIWndP5VIWnd`, `Begin__Ct6VIList1ZP9VIGUIPage`, `EndConnect__12VIWndConnect`, `End__Ct6VIList1ZP9VIGUIPage`, `Erase__t6VIList1ZP9VIGUIPagei`, `Free__12VIWndConnect`, `Free__12VIWndMessage`, `Free__12VIWndOptions`, `Init__12VIWndConnect`, `Init__12VIWndMessage`, `Init__12VIWndOptionsP7VIScene`, `Init__16VIWndReadMessage`, `LoadSRSServer__Fv`, `Next__Ct6VIList1ZP9VIGUIPagei`, `OnMessage__10VIWndMcErrP5VIWndiii`, `RemoveChild__5VIWndP5VIWnd`, `_$_10VIUIWindow`, `_$_12VIWndConnect`, `_$_12VIWndMessage`, `_$_12VIWndOptions`, `_$_13VIStringTable`, `_$_16VIRealmInterface`, `_$_16VIWndReadMessage`, `_$_19VIFlatFileStructure`, `_$_5VIWnd`, `_$_9VIWndEdit`, `_$_t6VIList1ZP9VIGUIPage`, `__10VIUIWindow`, `__12VIWndConnect`, `__12VIWndMessage`, `__12VIWndOptions`, `__13VIStringTable`, `__16VIRealmInterfaceP20VIWndGenericRendererPCc`, `__16VIWndReadMessage`, `__19VIFlatFileStructure`, `__5VIWnd`, `__9VIWndEdit`, `__builtin_vec_delete`, `__builtin_vec_new`, `__t6VIList1ZP9VIGUIPage`, `_vt$10VIWndLegal`, `_vt$11VIWndSplash`, `_vt$12VIWndPatcher`, `_vt$15VIWindowManager`, `_vt$20VIWndGenericRenderer`, `_vt$9VIWndDnas`, `_vt$9VIWndEula`, `mcErrOn`, `sWndMcErr`
+
+## Needs a decision
+
+These two disagreements are still unresolved. Neither package was changed to
+force them together.
+
+`norrath_actor_add_slow_run_list` was already selected. It walks 60 heads at
+`norrath_actor_view_50bfd0` and the same cycle word. `object-infra` adds
+`norrath_object_add_to_slow_run_list` for observed `objectAddToSlowRunList` and
+defines `norrath_object_slow_run_list_view` for observed `slowRunList` at
+`0x4fbfd0`. Its notes say `norrath_actor_view_50bfd0` is not that list. The
+two functions are different symbols, so the link has no duplicate definition.
+They do not share a head array. Decide whether those are two lists or one
+list under two names.
+
+`norrath_player_malloc_semaphore_view` and `__sce_sema_id` remain two objects.
+The memory notes say the original word is one symbol and this package defines
+only the view. `__sce_sema_id` is still unresolved. Decide whether the view
+should become that symbol.
+
+`norrath_player_view_484ca8` is defined for the original
+`gotPlayerStartThisLevel` byte. `norrath_got_player_start_this_level_bytes`
+stays unresolved. The items notes say those two names are the same byte and
+this package does not alias them. Decide whether they should be one symbol.
+
+`levelName` and `norrath_player_view_34b752` are separate objects. The host
+test fails if those pointers are equal. The notes say the view sits inside
+the 322-byte `levelName` image. Decide whether the tail should be a second
+symbol.
+
+`norrath_archive_animation_extension_view` is the cd-archive extension table.
+save-net-anim also defines that name as four bytes, `anm`. That unit was not
+selected. Decide which object owns the name.
+
+`norrath_mc_pre_start_key_bytes` and `norrath_mc_start_key_bytes` are the
+script-amx keys. save-net-anim defines the same two names again. Those units
+were not selected. Decide whether a second definition is wanted.
+
+`vblankCount`, `vblankField`, `vblankHID`, `vblankSemaphore`, and
+`vblankSemaphore2` are now defined by gs-dma-kernel. cd-archive still defines
+`norrath_archive_vblank_count_view`, `norrath_archive_vblank_field_view`, and
+`norrath_archive_vblank_semaphore_view` as separate objects. Decide whether
+each pair is one symbol.
+
+`engineCurrentLevelName` is now the 80 zero bytes from subsystem-inits.
+world-state still defines `norrath_loader_current_name_view` for that
+original name and does not alias it. Decide whether they are one symbol.
+
+particles now defines `objectGrid`, `ghostObjectGrid`, `stringHash`,
+`objectHash`, `offTheGrid`, `objectStrings`, and `freeNodes`. object-infra
+still defines view names for those objects and does not alias the original
+names. Decide whether each pair is one symbol.
+
+`norrath_restore_broadcast_mask_word` is still unresolved. world-state defines
+that address once, as `norrath_grid_ignore_flags_view`, and does not emit a
+second object. The plan rejects symbol aliases. Decide whether the mask name
+should be the view.
+
+`norrath_loader_special_flag_view` is defined for original `noNewVags`.
+cd-archive now also publishes `noNewVags` as an alias of
+`norrath_archive_no_new_vags_view`. The loader view is still a second object.
+Decide whether that view should be the same symbol.
+
+`norrath_archive_engine_pop_border` and `norrath_archive_engine_push_border`
+are the selected cd-archive border returns. The original names
+`enginePopBorderColor__Fv` and `enginePushBorderColor__FUi` are aliases of
+those two. render-lights defines the norrath names again. Those units were
+not selected.
+
+items-player already defines 35 `norrath_player_view_*` names. data-views
+defines the same 35 names again, including `norrath_player_view_484ca8`.
+Those units were not selected. Decide which package owns each name.
+
+draw-texture-init defines the global `dmaGif`, `dmaVif0`, and `dmaVif1`.
+`drawInit__Fv` keeps a separate private triple and does not publish it.
+engine-init left which object a final link binds unsettled. This link binds
+the draw-texture globals. Decide whether the private triple should stay
+private.
+
+`norrath_route_world_word_bytes` is the world-state object for original
+`world` at `0x004844a0`. vehicle-actors now defines
+`norrath_actors_b_view_4844a0` as a separate object and does not alias the
+world-state word. Decide whether they are one symbol.
+
+`enableMallocWrapper` is now an alias of the selected
+`norrath_enable_malloc_wrapper_byte_view`. `memAlloc__FiPc`, `memFree__FPv`,
+and `blockAllocInit__Fv` were authored as aliases of `norrath_mem_alloc`,
+`norrath_mem_free`, and `norrath_block_alloc_init` on sources inside the
+frozen prefix. Those lines were not kept. The three original names stay
+unresolved. Decide whether a later unit outside that prefix should publish
+them.
+
+`soundInit__Ff` and `soundRestore__Fb` were authored as aliases of
+`norrath_sound_initialize` and `norrath_sound_restore` on sources inside the
+frozen prefix. Those lines were not kept. Both original names stay
+unresolved. Decide whether a later unit outside that prefix should publish
+them.
+
+`norrath_sound_command_dma_destination_word_view` is a separate 4-byte
+object for byte 8 of the command table already published as
+`norrath_sound_command_state_view`. A store through one does not update the
+other. Decide whether the DMA word should become a view inside the command
+state object.
+
+`cutMode` is now the 1-byte ELF name from game-state. world-state still
+defines `norrath_game_cut_mode_byte_view` and data-views still defines
+`norrath_actor_view_484318` for the same address as separate objects.
+Decide whether the three should be one symbol.
+
+`coreLoading` is now the 4-byte ELF name from game-state. world-state still
+defines `norrath_game_core_loading_word_view` for the same address as a
+separate object. Decide whether they are one symbol.
+
+`gameBailFromGameLoop` is now the 4-byte ELF name from game-state.
+scheduler still defines `norrath_game_bail_from_loop_view` for the same
+address as a separate object. Decide whether they are one symbol.
+
+`table` at `0x006d8fa0` is defined once, by particles-anim-table as
+32768 bytes. sony-cd also defines that name as `0x2000` words for the same
+span. That unit was not selected. Decide which package owns the name.
+
+`anim` is claimed twice: pre-logo-dialog imports the ELF name used by the
+dialog callback at `0x007d0dc8`, while a same-named local symbol owns
+`0x00790f60`. This package defines neither object. Decide whether they
+are one symbol.
+
+`preConfigure` exists twice (80 bytes at `0x0037f150`, used by the pause
+menu, and at `0x004289d0`). This package defines neither object. Decide
+whether they are one symbol.
+
+`player` is imported by pre-logo-dialog. items-player already defines the
+95,936 zero bytes at `0x00408600` as
+`norrath_player_progression_records_view` and does not alias the ELF
+name. Decide whether the view should gain that alias.
+
+`c.1089` at `0x007d0988` has ELF size 0 and stays unresolved. The
+Camera-owning package should settle its extent before anything defines
+it.
+
+`iop-module-boot` exports `norrath_iop_heap_client`, `norrath_loadfile_client`,
+`_senddata` and `vik`, and its notes ask `sif-keyboard` to use them. Today
+`sif-keyboard-iop-heap-query`, `sif-keyboard-module-calls` and
+`sif-keyboard-keyboard` keep private `static` copies, so the link has no
+duplicate definition, but the module calls use a client that `sceSifInitIopHeap`
+and `_lf_bind` never bind, and `Init__10VIKeyboard` and `textSystemInit__Fv` initialise a
+different `vik` than `keyboardFree__Fv` frees. The package owner should make
+the three edits listed in `docs/agents/iop-module-boot.md`; they were not
+made here because they change game code.
+
+The `engine-restore-srs-main` host contract has the same harness flaw that
+kept `agents/frontend-shell` out: `reset()` clears `error`, and `main` returns
+`error` only after the first two scenarios and at the end. A failure in the
+scenarios at lines 249 to 273 of `host_contract.cpp` is erased by the next
+`reset()`. This was found by the integrator after that package had merged; it
+is a harness defect, not a source defect, and was not edited here. The owner
+should keep the first failing code across resets.
+
+## Disagreements
+
+The symbol disagreements are the items under Needs a decision. No selected
+symbol was defined twice.
+
+## Still authored, never executed
+
+Every function and data object added by math, audio, memory, object-infra,
+megatile, script-amx, cd-archive, libc-format, items-player, save-net-anim,
+engine-init, world-state, render-lights, data-views, actors-b, gameobject-base,
+scheduler, game-boot, subsystem-inits, gs-dma-kernel, draw-texture-init, and
+frame-loop, dialog-hud-controls, natives-a, natives-c, floor, engine-restore, sif-keyboard, actors-a, the cd-archive second pass, the memory second pass, the audio second pass, the script-amx second pass, vslots-b, light-methods, vehicle-actors, particles, vslots-a, link-image-bounds, ctors-ant-lantern, sound-rpc-views, game-state,
+sony-cd, and link-image-bounds second pass, and gs-dma-present, and the
+pre-logo-dialog second pass. The
+vehicle constructor is authored and not in the link. The unselected
+texture-draw-color unit is authored and not in the link. The six
+actor-view-tables views are data, not functions. The 26 card-progress
+data words are data, not functions. The shared constructor header now
+covers Boat and AutoContainerLP. The eleven selected game-loop units
+(eight functions, five words) are in the link; the two unselected
+game-loop units are authored and not in the link. The twenty-five
+memcard-calls units are in the link. The forty natives-b units are in
+the link. The fifteen pre-logo-dialog units are in the link. The eleven
+simloop-services units are in the link. The three closing gs-dma-present
+units (three functions plus one file-local helper) are in the link; the
+texture-draw-color unit stays authored and not in the link. The four
+pre-logo-dialog second-pass units (four functions plus the file-local
+`_ZL9dialogTag` BSS) are in the link.
+`engineInit__Ff`,
+`_engineCheckStack__FPCci`, and `norrath_route_add_node` are selected and have
+not run. The held AMX draft remains uncompiled. The three unselected
+save-net-anim view units, the two unselected render-lights border units,
+and the 35 unselected data-views player views are authored and not in the link.
+Host checks ran on this machine. The reviewed EE compiler produced relocatable
+objects and the partial link succeeded. No routine from these packages has
+run on the EE, under the original process, or as gameplay. The same is true
+of the startup bodies already on the shared branch: they are selected source,
+and no startup stage has executed.
+
+## Push log
+
+- 2026-10-11 16:23 CDT — `agents/megatile` — 626 unresolved imports
+- 2026-10-11 16:26 CDT — `agents/script-amx` — 752 unresolved imports
+- 2026-10-11 16:29 CDT — `agents/cd-archive` — 763 unresolved imports
+- 2026-10-11 16:31 CDT — `agents/libc-format` — 740 unresolved imports
+- 2026-10-11 16:34 CDT — `agents/items-player` — 692 unresolved imports
+- 2026-10-11 16:37 CDT — `agents/save-net-anim` — 738 unresolved imports
+- 2026-10-11 16:39 CDT — `agents/engine-init` — 789 unresolved imports
+- 2026-10-11 16:44 CDT — `agents/world-state` — 756 unresolved imports
+- 2026-10-11 16:47 CDT — `agents/render-lights` — 750 unresolved imports
+- 2026-10-11 16:50 CDT — `agents/data-views` — 782 unresolved imports
+- 2026-10-11 16:52 CDT — `agents/actors-b` — 796 unresolved imports
+- 2026-10-11 16:56 CDT — `agents/gameobject-base` — 781 unresolved imports
+- 2026-10-11 16:59 CDT — `agents/libc-format` — 779 unresolved imports
+- 2026-10-11 17:08 CDT — `agents/scheduler` — 775 unresolved imports
+- 2026-10-11 17:10 CDT — `agents/game-boot` — 870 unresolved imports
+- 2026-10-11 17:11 CDT — `agents/subsystem-inits` — 907 unresolved imports
+- 2026-10-11 17:13 CDT — `agents/gs-dma-kernel` — 893 unresolved imports
+- 2026-10-11 17:15 CDT — `agents/draw-texture-init` — 884 unresolved imports
+- 2026-10-11 17:16 CDT — `agents/frame-loop` — 888 unresolved imports
+- 2026-10-11 17:17 CDT — `agents/dialog-hud-controls` — 836 unresolved imports
+- 2026-10-11 17:19 CDT — `agents/natives-a` — 829 unresolved imports
+- 2026-10-11 17:20 CDT — `agents/natives-c` — 826 unresolved imports
+- 2026-10-11 17:23 CDT — `agents/floor` — 819 unresolved imports
+- 2026-10-11 17:25 CDT — `agents/engine-restore` — 856 unresolved imports
+- 2026-10-11 17:26 CDT — `agents/sif-keyboard` — 865 unresolved imports
+- 2026-10-11 17:28 CDT — `agents/actors-a` — 882 unresolved imports
+- 2026-10-11 17:31 CDT — `agents/cd-archive` — 886 unresolved imports
+- 2026-10-11 17:38 CDT — `agents/memory` — 879 unresolved imports
+- 2026-10-11 17:41 CDT — `agents/audio` — 879 unresolved imports
+- 2026-10-11 17:42 CDT — `agents/script-amx` — 879 unresolved imports
+- 2026-10-11 17:44 CDT — `agents/vslots-b` — 871 unresolved imports
+- 2026-10-11 17:46 CDT — `agents/light-methods` — 866 unresolved imports
+- 2026-10-11 17:47 CDT — `agents/vslots-b` — 866 unresolved imports
+- 2026-10-11 17:49 CDT — `agents/vehicle-actors` — 950 unresolved imports
+- 2026-10-11 17:51 CDT — `agents/vslots-b` — 947 unresolved imports
+- 2026-10-11 17:52 CDT — `agents/vslots-b` — 947 unresolved imports
+- 2026-10-11 17:54 CDT — `agents/particles` — 929 unresolved imports
+- 2026-10-11 17:56 CDT — `agents/vslots-a` — 889 unresolved imports
+- 2026-10-11 17:57 CDT — `agents/link-image-bounds` — 888 unresolved imports
+- 2026-10-11 17:59 CDT — `agents/ctors-ant-lantern` — 889 unresolved imports
+- 2026-10-11 18:08 CDT — `agents/sound-rpc-views` — 858 unresolved imports
+- 2026-10-11 19:12 CDT — `agents/game-state` — 893 unresolved imports
+- 2026-10-11 19:20 CDT — `agents/sony-cd` — 884 unresolved imports
+- 2026-10-11 19:27 CDT — `agents/link-image-bounds` — 992 unresolved imports
+- 2026-10-11 19:34 CDT — `agents/gs-dma-present` — 1007 unresolved imports
+- 2026-10-11 19:40 CDT — `agents/actor-view-tables` — 1019 unresolved imports
+- 2026-10-11 19:46 CDT — `agents/card-progress` — 999 unresolved imports
+- 2026-10-11 19:52 CDT — `agents/ctors-ant-lantern` — 999 unresolved imports
+- 2026-10-11 19:58 CDT — `agents/game-loop` — 1005 unresolved imports
+- 2026-10-11 20:05 CDT — `agents/memcard-calls` — 1011 unresolved imports
+- 2026-10-11 20:12 CDT — `agents/natives-b` — 1002 unresolved imports
+- 2026-10-11 20:20 CDT — `agents/pre-logo-dialog` — 1035 unresolved imports
+- 2026-10-11 20:28 CDT — `agents/simloop-services` — 1054 unresolved imports
+- 2026-10-11 21:21 CDT — `agents/gs-dma-present` — 1056 unresolved imports
+- 2026-10-11 22:19 CDT — `agents/pre-logo-dialog` — 1149 unresolved imports
+- 2026-10-12 12:31 CDT — `agents/iop-module-boot` — 1152 unresolved imports
+- 2026-10-12 12:39 CDT — `agents/floor-world-view` — 1142 unresolved imports
+- 2026-10-12 12:41 CDT — `agents/card-progress`, `agents/memcard-calls` (follow-up commits) — 1142 unresolved imports
+- 2026-10-12 12:59 CDT — `agents/game-loop` (gameLoop only) — 1199 unresolved imports
+- 2026-10-12 13:01 CDT — `agents/vi-launcher` — 1208 unresolved imports
+- 2026-10-12 13:05 CDT — `agents/session-roster` — 1201 unresolved imports
+- 2026-10-12 13:10 CDT — `agents/simloop-services` — 1227 unresolved imports
+- 2026-10-12 13:13 CDT — `agents/kernel-patches` — 1197 unresolved imports
+- 2026-10-12 13:15 CDT — `agents/frontend-shell` — 1217 unresolved imports
+- 2026-10-12 13:12 CDT — `agents/frontend-shell` (rejected, not merged; log notes only) — 1201 unresolved imports
+- 2026-10-12 13:33 CDT — `agents/loop-grid-fx` — 1204 unresolved imports
+- 2026-10-12 13:43 CDT — `agents/combat-reactions` — 1195 unresolved imports
+- 2026-10-12 13:55 CDT — `agents/actor-view-tables` — 1221 unresolved imports
+- 2026-10-12 14:09 CDT — `agents/level-anim-load` — 1208 unresolved imports
+- 2026-10-12 14:19 CDT — `frontend-shell contract fix` — 1208 unresolved imports
+- 2026-10-12 14:24 CDT — `agents/ctors-ant-lantern` — 1516 unresolved imports
+- 2026-10-12 14:26 CDT — `agents/ctors-lava-wraith` — 1671 unresolved imports
+- 2026-10-12 14:28 CDT — `agents/inventory-items` — 1686 unresolved imports
+- 2026-10-12 14:31 CDT — `agents/save-and-quests` — 1679 unresolved imports
+- 2026-10-12 14:36 CDT — `agents/prop-poke-clone` — 1656 unresolved imports
+- 2026-10-12 14:38 CDT — `agents/prop-run-draw` — 1658 unresolved imports
+- 2026-10-12 14:40 CDT — `agents/w8-actor-virtuals-a` — 1631 unresolved imports
+- 2026-10-12 14:42 CDT — `agents/w8-actor-virtuals-b` — 1613 unresolved imports
+- 2026-10-12 14:44 CDT — `agents/w8-core-loop-a` — 1592 unresolved imports
+- 2026-10-12 14:47 CDT — `agents/w8-core-loop-b` — 1609 unresolved imports
+- 2026-10-12 14:48 CDT — `agents/w8-core-loop-c` — 1593 unresolved imports
+- 2026-10-12 14:50 CDT — `agents/w8-core-loop-d` — 1629 unresolved imports
+- 2026-10-12 14:52 CDT — `agents/w8-frontend-menu-a` — 1608 unresolved imports
+- 2026-10-12 14:56 CDT — `agents/w8-frontend-menu-b` — 1589 unresolved imports
+- 2026-10-12 14:58 CDT — `agents/w8-net-play-a` — 1560 unresolved imports
+- 2026-10-12 15:00 CDT — `agents/w8-pad-memcard-a` — 1607 unresolved imports
+- 2026-10-12 15:03 CDT — `agents/w8-pad-memcard-b` — 1615 unresolved imports
+- 2026-10-12 15:05 CDT — `agents/w8-runtime-libc-a` — 1610 unresolved imports
+- 2026-10-12 15:07 CDT — `agents/w8-runtime-libc-b` — 1593 unresolved imports
+- 2026-10-12 15:09 CDT — `agents/w8-spell-static-init-b (rejected, not merged; log notes only)` — 1593 unresolved imports
+- 2026-10-12 15:12 CDT — `agents/w8-startup-sce-a` — 1586 unresolved imports
+- 2026-10-12 15:15 CDT — `agents/w8-startup-sce-b` — 1580 unresolved imports
+- 2026-10-12 15:17 CDT — `agents/w8-startup-sce-c` — 1563 unresolved imports
+- 2026-10-12 15:19 CDT — `agents/w8-startup-sce-d` — 1551 unresolved imports
+- 2026-10-12 15:24 CDT — `agents/w8-actor-virtuals-c` — 1562 unresolved imports
+- 2026-10-12 15:27 CDT — `agents/w8-audio-calls` — 1540 unresolved imports
+- 2026-10-12 15:28 CDT — `agents/w8-camera-vehicle-a` — 1537 unresolved imports
+- 2026-10-12 15:34 CDT — `agents/w8-camera-vehicle-b` — 1541 unresolved imports
+- 2026-10-12 15:37 CDT — `agents/w8-core-loop-e` — 1560 unresolved imports
+- 2026-10-12 15:38 CDT — `agents/w8-fx-particles` — 1538 unresolved imports
+- 2026-10-12 15:41 CDT — `agents/w8-hud-text-items-a` — 1526 unresolved imports
+- 2026-10-12 15:42 CDT — `agents/w8-hud-text-items-b` — 1526 unresolved imports
+- 2026-10-12 15:45 CDT — `agents/w8-hud-text-items-c` — 1516 unresolved imports
+- 2026-10-12 15:48 CDT — `agents/w8-net-play-c` — 1533 unresolved imports
+- 2026-10-12 15:51 CDT — `agents/w8-object-list-math` — 1491 unresolved imports
+- 2026-10-12 15:53 CDT — `agents/w8-render-world-b` — 1511 unresolved imports
+- 2026-10-12 15:56 CDT — `agents/w8-spell-static-init-a` — 1478 unresolved imports
+- 2026-10-12 16:15 CDT — `agents/w8-render-world-a` — 1514 unresolved imports
+- 2026-10-12 20:02 CDT — `agents/w9-startup-crt-a` — 1499 unresolved imports
+- 2026-10-12 20:05 CDT — `agents/w9-startup-crt-c` — 1496 unresolved imports
+- 2026-10-12 20:10 CDT — `agents/w9-startup-crt-e` — 1484 unresolved imports
+- 2026-10-12 20:16 CDT — `agents/w9-audio` — 1473 unresolved imports
+- 2026-10-12 20:23 CDT — `agents/w9-frontend-c` — 1453 unresolved imports
+- 2026-10-12 20:32 CDT — `agents/w9-other-a` — 1461 unresolved imports
+- 2026-10-12 20:37 CDT — `agents/w9-other-b` — 1437 unresolved imports
+- 2026-10-12 20:45 CDT — `agents/runtime-tables` — 1436 unresolved imports
+- 2026-10-12 20:59 CDT — `agents/w9-startup-crt-b` — 1472 unresolved imports
+- 2026-10-12 21:06 CDT — `agents/w9-startup-crt-d` — 1467 unresolved imports
+- 2026-10-12 21:10 CDT — `agents/w9-startup-crt-f` — 1455 unresolved imports
+- 2026-10-12 21:13 CDT — `agents/w9-frontend-b` — 1495 unresolved imports
+- 2026-10-12 21:16 CDT — `agents/w9-frontend-d` — 1478 unresolved imports
+- 2026-10-12 21:19 CDT — `agents/w9-frontend-a` — 1525 unresolved imports
+- 2026-10-12 21:27 CDT — `agents/w9-camera-map` — 1527 unresolved imports
+- 2026-10-12 21:31 CDT — `agents/w9-hud-inventory-items-b` — 1523 unresolved imports
+- 2026-10-12 21:34 CDT — `agents/w9-render-math-b` — 1502 unresolved imports
+- 2026-10-12 21:37 CDT — `agents/w9-animation-object-a` — 1478 unresolved imports
+- 2026-10-12 21:40 CDT — `agents/w9-ctors-lantern-a` — 1584 unresolved imports
+- 2026-10-12 21:44 CDT — `agents/w9-animation-object-b` — 1567 unresolved imports
+- 2026-10-12 21:48 CDT — `agents/w9-animation-object-c` — 1564 unresolved imports
+- 2026-10-12 21:53 CDT — `agents/w9-render-math-c` — 1544 unresolved imports
+- 2026-10-12 21:55 CDT — `agents/w9-hud-inventory-items-a` — 1525 unresolved imports
+- 2026-10-12 21:58 CDT — `agents/w9-ctors-lantern-c` — 1485 unresolved imports
+- 2026-10-12 22:00 CDT — `agents/w9-ctors-lantern-d` — 1445 unresolved imports
+- 2026-10-12 22:03 CDT — `agents/w9-ctors-lantern-e` — 1405 unresolved imports
+- 2026-10-12 22:05 CDT — `agents/w9-ctors-lantern-f` — 1365 unresolved imports
+- 2026-10-12 22:08 CDT — `agents/w9-ctors-lantern-g` — 1325 unresolved imports
+- 2026-10-12 22:10 CDT — `agents/w9-ctors-lantern-h` — 1289 unresolved imports
+- 2026-10-12 22:13 CDT — `agents/w9-ctors-wraith-a` — 1323 unresolved imports
+- 2026-10-12 22:16 CDT — `agents/w9-ctors-wraith-b` — 1455 unresolved imports
+- 2026-10-12 22:19 CDT — `agents/w9-ctors-wraith-c` — 1417 unresolved imports
+- 2026-10-12 22:22 CDT — `agents/w9-ctors-wraith-d` — 1381 unresolved imports
+- 2026-10-12 22:27 CDT — `agents/w9-hud-inventory-items-c` — 1356 unresolved imports
+- 2026-10-12 22:30 CDT — `agents/w9-rtti-vtables-entities-a` — 1344 unresolved imports
+- 2026-10-12 22:33 CDT — `agents/w9-rtti-vtables-entities-b` — 1318 unresolved imports
+- 2026-10-12 22:35 CDT — `agents/w9-vehicle` — 1324 unresolved imports
+- 2026-10-12 22:38 CDT — `agents/w9-rtti-vtables-entities-c` — 1308 unresolved imports
+- 2026-10-12 22:41 CDT — `agents/w9-ctors-lantern-b` — 1332 unresolved imports
+- 2026-10-12 22:43 CDT — baseline re-check and rejection notes (no package) — 1332 unresolved imports
+- 2026-10-12 22:55 CDT — second baseline re-check, no branches left to merge — 1332 unresolved imports
+- 2026-10-12 23:05 CDT — third baseline re-check, no branches left to merge — 1332 unresolved imports
+- 2026-10-12 23:21 CDT — `agents/w10-startup-c` — 1312 unresolved imports
+- 2026-10-12 23:29 CDT — `agents/w10-vi-a` — 1326 unresolved imports
+- 2026-10-12 23:35 CDT — `agents/w10-vi-b` — 1461 unresolved imports
+- 2026-10-12 23:40 CDT — `agents/w10-vi-c` — 1477 unresolved imports
+
+## Baseline re-check before the w10-startup-b selection
+
+At shared tip `bd379279` this integrator (a different model from the earlier
+ones) re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 3573
+authored inputs) and the full default partial build in a clean worktree (3573
+compilations, 2579 function bodies, zero COMMON). The recorded **1477**
+reproduced exactly. No repo-rule break was found in the last ten entries. The
+worktree this integrator inherited held an unfinished, unrecorded
+`w10-startup-b` merge: the merge commit `3a1d0bda` was in place with 28 of its
+plan entries added, and the snapshot check failed. That state was finished as
+described below.
+
+## agents/w10-startup-b
+
+Merged (merge commit `3a1d0bda`, branch tip `0b7ce578`, about 60 minutes old when
+read; the notes have the five summary sections: imports closed, imports opened,
+plan entries, authored but never executed, unknown). The package is C runtime,
+libgcc, libm, RTTI and startup code: 28 units (functions, forwarders and
+two data views) are selected with fresh `input_order` values 3575 through 3602. Each C++ unit has
+a `host_contract.cpp` and each of the three assembly units has a check script
+(`check_words.py` / `check_structure.py`, moved to `docs/agents/` because the
+snapshot checker only accepts `.cpp`, `.hpp` and `.S` under `experimental/sources`;
+they take the toolchain root as an argument). All 25 host contracts and the 3
+assembly checks pass here (x86_64, `-ffp-contract=off`); three contracts
+(`kill-r`, `sce-fs-poff-intr`, `sce-fs-rcv-intr`) only fail under `-Werror` for an
+unused variable or parameter and pass without it. The worker's claim that the
+four assembled words of `_iWakeupThread` and `isceSifSetDma` equal the original
+was not re-verified (integration does not read the executable); compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full
+build; this integration did: 3601 authored inputs, 2606 function bodies, zero
+COMMON, 214 tool tests passed. No EE or game execution.
+
+Six units named in the notes were **not** selected, and their sources stay in
+the snapshot: `w10-startup-b-cb-poff-gp`, `-ee-timer-state`, `-fs-reply-selector`
+and `-sif-m-init-check` are zero-initialised data words with no host file, which
+the snapshot checker rejects (every package record needs one); the same
+decision as for `w8-startup-sce-b-k-exit-tlb-handler` earlier (no check
+committed). `sony-cd-vblank-views` redefines the three `norrath_archive_vblank_*`
+views already defined by cd-archive, so it was not added. The notes' counts
+(27 closed, 9 opened, 1332 to 1314) therefore do not apply: the real delta is
+below. Because `ee_retbuf_sel`, `rollover_counter`, `timer_handle` and
+`sceCbPoff_Gp` are referenced by selected code but not defined, they appear as
+four opened names. The owner can add a committed host check per data unit and
+push again.
+
+| | |
+|---|---|
+| Before | 1477 |
+| After | 1467 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `_fpadd_parts`, `_iWakeupThread`, `_memalign_r`, `_raise_r`, `_sceFsIobSemaMK`, `_sceFs_Poff_Intr`, `_sceFs_Rcv_Intr`, `_sceIDC`, `acos`, `acosf`, `atan2f`, `dpmul`, `fabsf`, `fmodf`, `ftoi`, `get_time`, `iAllocTimerCounter`, `iSetTimerHandler`, `iStartTimerCounter`, `init_ee_timer`, `isceSifSetDma`, `norrath_legacy_pointer_type_info_vtable_view`
+
+Opened: `_$_19__pointer_type_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__tf19__pointer_type_info`, `_free_r`, `_malloc_r`, `ee_retbuf_sel`, `rollover_counter`, `sceCbPoff_Gp`, `timer_handle`
+- 2026-10-13 00:56 CDT — `agents/w10-startup-b` — 1467 unresolved imports
+
+## agents/w10-startup-a
+
+Merged (merge commit, branch tip `aeced4f3`, 21 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). 26 units (23 functions, three data or view units) from the C
+runtime, libgcc, libm, C++ RTTI and kernel-call stubs, with fresh `input_order` values
+3603 through 3628 (the two external Newlib inputs keep their place, so authored inputs
+are 3627). Each has a `host_check.cpp`. 22 of the 26 build and exit 0 here (x86_64,
+`-ffp-contract=off`, `-Werror`). The other four (`deci2-call`, `get-memory-size`,
+`init-tlb-call`, `sleep-thread`) take `<executable> <address> <object> <symbol>` and compare
+the assembled stub with the original executable's bytes; this integration does not read
+the executable, so those four were compiled but **not run**, and the worker's statement
+that they match is unverified here. `w10-startup-a-throw` (`__throw`) was **not** selected:
+it has no host check at all (the notes say the exception-return builtins have no host
+equivalent), and the notes record that the authored version does not set v0 to the
+context at handler entry, so it is not a faithful function; its source stays in the
+snapshot, unselected. The worker's claim that `__throw` closes is therefore not reflected
+in the count. Compiled sizes are not image sizes and no byte match is claimed. The
+worker did not run a full build; this integration did: 3627 authored inputs, 2629
+function bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1467 |
+| After | 1454 |
+| Closed | 25 |
+| Opened | 12 |
+
+Closed: `AlarmHandler`, `CreateReaderThread`, `Deci2Call`, `Exit`, `GetMemorySize`, `InitTLB32MB`, `SleepThread`, `_InitTLB`, `__cp_push_exception`, `__divdi3`, `__eh_alloc`, `__fixunsdfdi`, `__fpcmp_parts_d`, `__ieee754_sqrtf`, `__kernel_rem_pio2f`, `__make_dp`, `__make_fp`, `__moddi3`, `__new_handler`, `__pack_d`, `__ps2_klibinfo__`, `__rtti_user`, `__terminate_func`, `__unpack_d`, `__unpack_f`
+
+Opened: `KbmReaderThread`, `TLBInfo`, `_Exit`, `_SetTLBEntry`, `__cplus_type_matcher`, `__floatdidf`, `__get_eh_context`, `__get_eh_info`, `__pack_f`, `dptoul`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
+- 2026-10-13 01:02 CDT — `agents/w10-startup-a` — 1454 unresolved imports
+
+## agents/w10-front-a
+
+Merged (merge commit, branch tip `e1be7c72`, 79 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Front-end, save and player-select code: 18 units (11 functions,
+the rest data tables and strings) with fresh `input_order` values 3629 through 3646. 18 of
+18 selected host contracts build and exit 0 here (x86_64, `-ffp-contract=off`,
+`-Werror`). Eight units were **not** selected, and their sources stay in the snapshot:
+seven have no committed check (`core-start-loading-screen`, `load-player-lumps`,
+`mc-build-packed-player`, `mc-convert-temp-player-to-real`, `mc-net-pack`,
+`mc-net-un-pack`, `mc-set-ram-nm-players`; the notes say their only test is a private
+paired run outside git, which a reviewer cannot repeat), and `mc-load-level-entities`
+has a host contract that fails on this machine: it stores 4-byte pointers into a table
+that the source reads as `void*`, so on a 64-bit host the pointer is overwritten and the
+trace ends at the script step (`script ?`). It needs a 32-bit host; it is not a defect
+that integration may fix, so it was left out. The owner can make the contract
+pointer-width independent and add committed checks for the seven others, then push again.
+The notes' count (28 closed, 25 opened, 1332 to 1329) does not apply to what was
+selected. Compiled sizes are not image sizes and no byte match is claimed. The worker did
+not run a full build; this integration did: 3645 authored inputs, 2640 function bodies,
+zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1454 |
+| After | 1439 |
+| Closed | 20 |
+| Opened | 5 |
+
+Closed: `MC_GetLoadName__Fv`, `MC_GetRamSlot__FPi`, `MC_LoadRamSlot__Fv`, `MC_ReplicateFirstPlayersImportantThings__Fv`, `MC_ResetAutoCheckPointSave__FPc`, `ascii_special`, `ascii_table`, `browserDelete`, `browserOverwrite`, `coreForceSmallCharacters`, `debugStartMenuIsOn__Fv`, `dirEntryIsQuickLoad__FP14sceMcTblGetDir`, `eqFind__FPci`, `gameInitPostFrontend__Fv`, `getSaveTableEntry__FPc`, `getSlotName__FiiPc`, `hubNames`, `importInfoHeader`, `loadSlot`, `markFileName`
+
+Opened: `eqGroup`, `globalIcons`, `nmEqGroups`, `nmWGroups`, `wGroup`
+- 2026-10-13 01:10 CDT — `agents/w10-front-a` — 1439 unresolved imports
+
+## agents/w10-front-b
+
+Merged as a partial package (merge commit, branch tip `b3f94ec1`, 2 hours old when read).
+The notes do **not** have the five summary sections (they have Functions, Data, Not done
+and Summary, with no separate imports-closed, imports-opened, authored-but-never-executed
+or unknown lists), so this was merged under the partial rule: every committed unit has a
+host check and the tool tests pass. 15 units (five functions and ten data units) with
+fresh `input_order` values 3647 through 3661. 15 of 15 host checks build and exit 0 here
+(x86_64, `-ffp-contract=off`, `-Werror`). The notes ask for the overlapping earlier units
+(`w9-hud-inventory-items-a-appearance-settings`, `w8-net-play-c-player-select-state`,
+`w8-net-play-b-launch-state`, `w8-frontend-menu-b-menu-words`) to stay unselected; they
+are; no multiple-definition error occurred at link time. The three `norrath_*_bytes` and
+`norrath_restore_broadcast_mask_word` objects are placeholder names for objects that have
+original-named definitions elsewhere, as the notes say; a working executable needs one
+object under both names, which this build does not provide. `playerSelectionTask__Fv`
+was not authored (the notes explain why). The sizes in the notes are image sizes; compiled
+sizes differ (the notes give 164 against 160 for `saveLevelDataASync__FPci`). The worker's
+paired runs are private and were not re-verified. The worker did not run a full build;
+this integration did: 3660 authored inputs, 2645 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1439 |
+| After | 1409 |
+| Closed | 33 |
+| Opened | 3 |
+
+Closed: `multiRelease`, `multiSide`, `multiTitle`, `nameGridCount`, `nameGridW`, `norrath_got_player_start_this_level_bytes`, `norrath_keep_player_positions_bytes`, `norrath_menu_local_t_004844e8`, `norrath_menu_word_00484514`, `norrath_restore_broadcast_mask_word`, `playerCountChanged__6Camera`, `playerGoldx`, `playerGoldy`, `playerMenu`, `playerPrintPaperDoll__Fi`, `playerRecalled`, `playerSelectCount`, `playerSelectEnforce`, `playerSelectExitMessage`, `playerSelectNextName`, `playerSelectPrevName`, `playerSelectStartPlayer`, `playerSpecStorage`, `playerStartYaw`, `racePrefix`, `resetMenu__FP12screenStruct`, `saveLevelDataASync__FPci`, `skinSetting`, `skirmishInit__Fv`, `slotsCorrupted`, `sortedPlayerRace`, `statsScreen`, `undoQuickLoadStamp`
+
+Opened: `floorGetSaveInfo__FPci`, `objectGetSaveData__FPci`, `writeMap__3mapPUc`
+- 2026-10-13 01:13 CDT — `agents/w10-front-b` — 1409 unresolved imports
+
+## agents/w10-net-a
+
+Merged (merge commit, branch tip `6d9134f0`, over an hour old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Network play part 1: 10 units (7 functions, including the
+5,488-byte `advanceRealState__Fi`, and three data units) with fresh `input_order` values
+3662 through 3671. 10 of 10 host checks pass here (x86_64, `-ffp-contract=off`):
+eight under `-Werror`, `anal-compress` only without `-Werror` (a variable-length array
+that clang warns about), and `advance-real-state` only with the build line in its own
+header (`-Wno-vla-cxx-extension -DNORRATH_W10NA_HOST=1 host_check.cpp
+../w10-net-a-anal-compress/anal_compress.cpp`), which links the authored compressor.
+That check's decompressor is a stand-in that inverts the compressor for one frame, as
+its header says; the check does not exercise a real decompressor. Compiled sizes are not
+image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3670 authored inputs, 2652 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1409 |
+| After | 1385 |
+| Closed | 30 |
+| Opened | 6 |
+
+Closed: `advanceRealState__Fi`, `analCompress__9CCompressP15BitBufferWriterPQ29CCompress9analStatePUci`, `broadcastConnectionFlags`, `commCVol`, `commNameMask`, `commRVInternalLast`, `commanderValid__14WoodElfSoldier`, `compressSize`, `hostForcedLaunch`, `hostLaunchMask`, `hostStartedWithoutMe`, `isModem`, `kickState`, `lastPingTime`, `launchPeers`, `lnet_buf`, `localNetFrameNm`, `localNetSentFrameNm`, `localPlayerPadState`, `localPredictedPlayer`, `logChecksum`, `msgBufferSent`, `myaddr`, `netAttemptLaunch`, `netBroadCastStart`, `netCameraYaw`, `netCheckActivation__FG6Point3f`, `netGetCameraCustomControl__Fi`, `netGetNmConnectedPartners__Fv`, `netIsModem__Fv`
+
+Opened: `analDecompress__11CDecompressP15BitBufferReaderPQ211CDecompress9analStatePUcii`, `compareStatePackets__FP11statePacketT0i`, `netLogDisable`, `netPrediction`, `netTrueStep`, `objectAddToGrid__FP10GameObject`
+- 2026-10-13 01:17 CDT — `agents/w10-net-a` — 1385 unresolved imports
+
+## agents/w10-net-b
+
+Merged (merge commit, branch tip `bf301e1e`, 33 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Network play part 2: 14 units (8 functions, including
+`sendControlPacket__FiiiiiR9CCompressb` at 5,532 bytes in the image and `runPrediction__Fi`
+at 3,920, and six storage units) with fresh `input_order` values 3672 through 3685. 14 of
+14 host checks build and exit 0 here (x86_64, `-ffp-contract=off`); 12 under `-Werror`
+and two (`send-control-packet`, `show-net-player-status`) only without it (warnings). The
+worker says a mutated constant makes `sendControlPacket` and `runPrediction` checks fail;
+that was not repeated here. The paired runs against the image are private and were not
+re-verified. The worker's closed count of 27 reproduced exactly, and its two opened
+names match. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3684 authored inputs, 2660 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1385 |
+| After | 1360 |
+| Closed | 27 |
+| Opened | 2 |
+
+Closed: `netKickedOut`, `netLaunchExpirationCount`, `netLaunchTimer`, `netLocalPadState`, `netNewLaunchMaybeLaunch`, `netNewLaunchMaybeQuit`, `netSendPacket__FiiPUci`, `netTrouble`, `net_buf`, `packetSendCycleLength`, `packetSendCycleTime`, `peerSendDataMsg__FPciiP14sceInetAddressi`, `readcount`, `receivePackets__Fv`, `runPrediction__Fi`, `sLibNetInitialized`, `scanMask`, `sendAlertMessage__FifG6Point3P10GameObject`, `sendControlPacket__FiiiiiR9CCompressb`, `sentStatePacketFrameNm`, `sessionMark`, `showNetPlayerStatus__Fv`, `timeout`, `totallyDisconnected`, `trueNetFrameNm`, `udpLaunchConnection`, `writecount`
+
+Opened: `netPredictionFastForward`, `receiveControlPacket__FPiib`
+- 2026-10-13 01:20 CDT — `agents/w10-net-b` — 1360 unresolved imports
+
+## agents/w10-audio-a
+
+Merged (merge commit, branch tip `d56b5ec4`, 37 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Audio, music and streaming: 11 units (7 functions and four
+data/state units) with fresh `input_order` values 3686 through 3696. Functions carry a
+`host_check.cpp` and data units a `host_contract.cpp`; 11 of 11 build and exit 0 here
+(x86_64, `-ffp-contract=off`, `-Werror`). The worker's paired runs (including 113 texts
+for `soundSetAmbientData__FPc`) are private and were not re-verified. Compiled sizes are
+not image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3695 authored inputs, 2667 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1360 |
+| After | 1327 |
+| Closed | 35 |
+| Opened | 2 |
+
+Closed: `ambientGroup`, `cdEndStream__Fv`, `cdIsBusyStreamingNonwithstanding__Fv`, `cdStartStream__FPci`, `cdStreamLoadAsync__FPcT0i`, `cutLoadedDialogStream`, `cutStartMusic`, `delaySoundList`, `desiredMusicDuckAmount`, `disableSoundPlaying`, `displayMusicPos`, `gameSetMusicTimer__Fi`, `groupVolumeScale`, `lastMusicState`, `musicDuckAmount`, `musicPlaying`, `musicStart`, `musicTimer`, `nextChannel`, `nmAmbientGroups`, `nmBatchCommands`, `norrath_music_activity_ring_view`, `playedStinger`, `sequence`, `sequenceInProgress`, `sequenceVolume`, `soundFrameNm`, `soundSetAmbientData__FPc`, `soundStartMusic__Fii`, `stream`, `streamOutput`, `streamPaused`, `streamSizeLeft`, `streamVolume`, `streaming`
+
+Opened: `sceCdStResume`, `sceCdStStart`
+- 2026-10-13 01:23 CDT — `agents/w10-audio-a` — 1327 unresolved imports
+
+## agents/w10-render-b
+
+Merged (merge commit, branch tip `69d35ed5`, 41 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Animation, model, light and render part 2: 17 functions
+(matrix, light, HUD and creature-effect routines) with fresh `input_order` values 3697
+through 3713. 17 of 17 host checks pass here (x86_64, `-ffp-contract=off`); they declare
+the function `extern "C"` and need the unit source compiled and linked with them, which
+the check headers do not state, so each was built as `host_check.cpp <unit>.cpp`; 16
+under `-Werror` and one (`fx-run-creature-glow`) only without it. Seven data units
+(`data-halo-color`, `data-inventory-textures`, `data-lava-particles`, `data-light-info`,
+`data-light-slots`, `data-lock-alpha`, `data-model-globals`) have no committed check
+(the notes call them data-only), which the snapshot checker rejects, so they were not
+selected and their sources stay in the snapshot; the names they would define stay
+unresolved. The notes' closed list therefore overstates. The worker's paired runs are
+private and were not re-verified. Compiled sizes are not image sizes and no byte match is
+claimed. The worker did not run a full build; this integration did: 3712 authored inputs,
+2684 function bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1327 |
+| After | 1319 |
+| Closed | 17 |
+| Opened | 9 |
+
+Closed: `fxRunCreatureGlow__FP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffPsT9ifi`, `fxRunCreatureShock__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefffUi`, `getVifAndTex__FPcT0PP12_modelHeaderPP8_texture`, `hudGetFadeIconPos__Fii`, `hudLetterBox__Fv`, `lightCharacterShadow__FG6Point3P11LightResult`, `lightSetColorScale__Ffff`, `lightSetPrimaryDirectional__FG6Point3Ps`, `lightSetSceneLights__FG6Point3iiiiiiiii`, `lightSetSecondaryDirectional__FG6Point3Ps`, `matInvert__FP8Matrix34T0`, `matMakeCharViewMatrix__FP8Matrix44fffffff`, `matMakeWorldViewMatrix__FP8Matrix44fffffff`, `matPostRot__FP8Matrix33is`, `matScale__FP8Matrix34f`, `matScale__FP8Matrix44f`, `matTrans__FP8Matrix44fff`
+
+Opened: `P_MoveLightning__FiG6Point3T1ii`, `P_StartLightning__FG6Point3T0iiffUi`, `ballSmokeParticle`, `ballSparkParticle`, `findLightsAtPoint__FG6Point3PP5Lighti`, `gameCloseToCamera__FP6Point3`, `matInvert__FP8Matrix44T0`, `saveBestList`, `saveValid`
+- 2026-10-13 01:27 CDT — `agents/w10-render-b` — 1319 unresolved imports
+
+## agents/w10-sce-a
+
+Merged (merge commit, branch tip `84c1da82`, 2 hours old when read; the notes carry
+Observed, Inferred, Imports closed, Imports opened, Build-plan entries and an
+authored-but-never-executed section, but not under the five standard headings, so the
+package is merged as partial under the tip-age rule; every selected unit has a committed
+check). SCE library and audio-codec calls: 46 units (43 functions plus three data
+objects) with fresh `input_order` values 3714 through 3759. Thirty-six are new
+`w10-sce-a-*` units; ten are sources written by earlier packages
+(`w8-startup-sce-d-sif-get-sreg`, `w9-startup-crt-f-{mc-read, mc-write, pad-read,
+pad-set-act-direct, tty-init, tty-read, tty-write, tty-state}`,
+`simloop-services-pad-dma-buffer`) that earlier integrations had left out of the plan for
+lack of a committed check; this branch adds host contracts to them. The branch also
+edited four of those earlier sources (`pad_set_act_direct.cpp`, `tty_init.cpp`,
+`tty_write.cpp`, `tty_state.hpp`) so they can run on a 64-bit host
+(a hook under `NORRATH_HOST_CONTRACT`; the OR with 0x20000000 moved into
+`ttyUncached()`); the snapshot hashes for those four files were updated, and none was
+in the plan before, so no earlier object changed. Host checks: the first comment of each
+file holds its build line (`-DNORRATH_HOST_CONTRACT`, sometimes `-fno-builtin`, and the
+unit source on the command line); built that way, 44 of 46 selected units pass here
+(x86_64, `-pagezero_size`, `-ffp-contract=off`), together with the contracts the branch
+added to the earlier units. The other two, `sceSifDmaStat` and `sceGifPkOpenGifTag`
+(both assembly), are compared with the original executable's bytes by
+`host_check.cpp <executable> <address> <object> <symbol>`; this integration does not
+read the executable, so those two were compiled and selected but **not run**, and the
+worker's byte-match statement for them is unverified here. Mutation runs and the
+private paired runs are the worker's and were not repeated. Compiled sizes are not image
+sizes (except the two routines above) and no byte match is claimed. The worker did not
+run a full build; this integration did: 3758 authored inputs, 2727 function bodies, zero
+COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1319 |
+| After | 1293 |
+| Closed | 44 |
+| Opened | 18 |
+
+Closed: `connect_to_iop_server`, `lgAudARead`, `lgAudASync`, `lgAudAWrite`, `lgAudEnumHint`, `lgAudEnumerate`, `lgAudOpen`, `lgAudSetRecordingVolume`, `lgAudStartPlayback`, `lgAudStartRecording`, `lgCodecDecode`, `lgCodecEncode`, `mceSifRpcEndFunc`, `mceStorePwd`, `pad_dma_buf`, `sPad`, `sceCdDiskReady_old`, `sceGifPkAddGsAD`, `sceGifPkCloseGifTag`, `sceGifPkCnt`, `sceGifPkOpenGifTag`, `sceGifPkRef`, `sceGifPkReserve`, `sceInetCreate`, `sceInetInterfaceControl`, `sceInetOpen`, `sceInetRecvFrom`, `sceInetSendTo`, `sceMcRead`, `sceMcWrite`, `scePadGetButtonMask`, `scePadRead`, `scePadSetActDirect`, `scePadSetButtonInfo`, `scePadSetReqState`, `sceSifDmaStat`, `sceSifGetSreg`, `sceSifMCallRpc`, `sceSifMInitRpc`, `sceSifRemoveRebootNotifyHandler`, `sceTtyInit`, `sceTtyRead`, `sceTtyWrite`, `sifParamFname`
+
+Opened: `MemcpyD`, `QueueInit`, `QueuePeekReadDone`, `_iopnotify`, `_send_to_iop`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `scePadGetDmaStr`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`
+- 2026-10-13 01:33 CDT — `agents/w10-sce-a` — 1293 unresolved imports
+
+## agents/w10-world-a
+
+Merged (merge commit, branch tip `102ef7d8`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game-loop part 1 of 4: 36 units (10 functions
+and 26 data/storage units) with fresh `input_order` values 3760 through 3795. 36 of 36
+host checks pass here (x86_64, `-ffp-contract=off`): 34 under `-Werror`, two only without
+it (warnings). The worker's private paired runs were not re-verified. Compiled sizes are
+not image sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3794 authored inputs, 2737 function bodies, zero COMMON, 214 tool tests
+passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1293 |
+| After | 1266 |
+| Closed | 36 |
+| Opened | 9 |
+
+Closed: `_3map$iconList`, `_3map$iconListCount`, `_3map$revealed`, `action`, `actor`, `addpmlist__FPc`, `addpmlistptrscap__Fv`, `alwaysLoadedPage`, `asyncRandState`, `blockFree__FPv`, `blocksFree`, `bossMeterName`, `buffr`, `buffrfull`, `buffrmode`, `buffrout`, `cacheLoadDelayTime`, `cacheLoadName`, `cacheLoadValid`, `clearing`, `collisionFrame`, `convertIndiciesToPointers__Fi`, `curDest`, `currentDir`, `currentTime`, `cursorTime`, `decodeQ`, `delta`, `derivedFrameNm`, `doJumpEffect__Fi`, `dumpMem__FPvi`, `engineGetField__Fv`, `executeAction__FP6Action`, `file`, `findCutDialog__Fv`, `findTagInt__10GameObjectPci`
+
+Opened: `GetToggle__6Camera`, `SetNoTargetUpdates__6Camerai`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `jumpGatePos`, `jumpHidden`, `jumpParticleJump`, `pmlistchars`, `pmlistcharsused`, `soundGetDialogSize__Fi`
+- 2026-10-13 01:38 CDT — `agents/w10-world-a` — 1266 unresolved imports
+
+## agents/w10-world-b
+
+Merged (merge commit, branch tip `22e06b09`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 2 of 4: 26 units (20 functions
+and six storage units) with fresh `input_order` values 3796 through 3821;
+`w10-world-b-common` holds shared headers only and is recorded in the snapshot, not
+selected. 26 of 26 host checks pass here (x86_64, `-ffp-contract=off`): 25 under
+`-Werror`, one only without it (a warning). The opened list includes short names such as
+`src`, `dst`, `p1`, `v1`, `pitch1`: the notes list them as names the units use that no
+package defines (the original static names); they are unresolved imports, not stubs.
+The worker's private paired runs were not re-verified. Compiled sizes are not image sizes
+and no byte match is claimed. The worker did not run a full build; this integration did:
+3820 authored inputs, 2757 function bodies, zero COMMON, 214 tool tests passed. No EE or
+game execution.
+
+| | |
+|---|---|
+| Before | 1266 |
+| After | 1245 |
+| Closed | 35 |
+| Opened | 14 |
+
+Closed: `framedone`, `framestart`, `freeLump__FPv`, `fsListBack`, `gameDeathHeight`, `gameLineFuse__Fv`, `gameLineGetNextPoint__FP17gameLinePathStateiP6Point3`, `gameLineGetVert__Fii`, `gameLineRayCollision__FP6Point3T0P23gameLineCollisionPacketi`, `gameStateData`, `generateSortedListAndInfoHeaders__Fv`, `getClearradius__FPCc`, `getClosestLivingPlayer__FG6Point3f`, `getFreeFrameState__Fv`, `groundType`, `hideHiddenObjects__FP10GameObject`, `inesc`, `initJumpEffect__Fv`, `initPosition__FP17gameLinePathState`, `initPosition__Fii`, `init__3mapi`, `isBoss__FP10GameObject`, `isEnemy__5DemonP10GameObject`, `isEnemy__6WraithP10GameObject`, `isEnemy__8SkeletonP10GameObject`, `jumpGateDestCount`, `jumpGateEntries`, `jumpGateHurtDest`, `jumpGateLoad__FPc`, `jumpGateSaveFootPrint__Fv`, `jumpGateState`, `jumpGateTime`, `jumpGateWho`, `lastCE`, `lastDest`
+
+Opened: `GetLastTarget__6Camera`, `_6Wraith$s_wraithCount`, `__4LineP4LineT1i`, `dst`, `endPos`, `moreRecent__Fii`, `p1`, `p2`, `pitch1`, `pitch2`, `src`, `startPos`, `v1`, `v2`
+- 2026-10-13 01:43 CDT — `agents/w10-world-b` — 1245 unresolved imports
+
+## agents/w10-world-c
+
+Merged (merge commit, branch tip `b87a3424`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 3 of 4: 22 units (12 functions
+and ten storage/word units) with fresh `input_order` values 3822 through 3843. 22 of 22
+host checks pass here (x86_64, `-ffp-contract=off`), using the build line in each file's
+first comment where one is given (the function checks need the unit source on the command
+line, and `find-empty-spot-monsterspawn` needs `-DNORRATH_HOST_ARENA`); 20 under
+`-Werror`, the rest only without it (warnings). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3842 authored inputs, 2769 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1245 |
+| After | 1213 |
+| Closed | 34 |
+| Opened | 2 |
+
+Closed: `lastkey`, `lastlastCE`, `lasttime`, `loadCompleteFlag`, `loadKillList`, `loadKillListSize`, `loadPage`, `loadSegmentsLoaded`, `loc`, `lumpLoadGlob__FPc`, `makeCollisionList__FP12_worldHeaderffffPP13collisionParti`, `mtcInitialize__Fv`, `needToClearCacheBuffer`, `nmActors`, `nmAlwaysPages`, `nmChars`, `nmHalos`, `nmWaterPatches`, `noAdvanceTime`, `norrath_game_object_e_rand`, `norrath_game_object_find_tag_float`, `nullp`, `objectAddToMediumRunList__FP10GameObject`, `objectCreateByName__FPcG6Point3sPPc`, `objectFindEmptySpotMonsterspawn__FG6Point3iiiiPc`, `objectMoveWithWorldCollision__FP6Point3G6Point3fiT0`, `patchSortedListWithLocalTime__Fv`, `pmlistptrs`, `pmlistptrsused`, `progress`, `reallyLoad.873`, `removeMonster__FP10GameObject`, `resourceFrame`, `routeClearStart`
+
+Opened: `norrath_world_c_view_4861e8`, `sceScfGetLocalTimefromRTC`
+- 2026-10-13 01:47 CDT — `agents/w10-world-c` — 1213 unresolved imports
+
+## agents/w10-world-d
+
+Merged (merge commit, branch tip `5974066d`, 2 hours old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). World, level and game loop part 4: 19 units (15 functions and
+four storage/word units) with fresh `input_order` values 3844 through 3862. 19 of 19
+host checks pass here (x86_64, `-ffp-contract=off`); four
+(`allocate-segments`, `find-point-height`, `precache-world`, `test-forbidden`) crash
+unless built as their first comment says, with `-DNORRATH_HOST_ARENA` (or
+`-DNORRATH_HOST_WORLD` for `precache-world`) and the unit source on the command line,
+and pass that way. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3861 authored inputs, 2784 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1213 |
+| After | 1199 |
+| Closed | 31 |
+| Opened | 17 |
+
+Closed: `routeClear__Fv`, `routeEnable`, `routeMakeLattice__Fv`, `routeQueue`, `rqHead`, `rqTail`, `scale`, `selectLumpName`, `selectMode`, `showHiddenObjects__FP10GameObject`, `skeletonResMap`, `stage`, `thisLevel`, `typeToResource`, `unremoveMonster__FP10GameObject`, `userFilterFunction`, `wallAndObjectSteering__FP8CreatureffP10GameObject`, `wasFormatting`, `worldActivityLevel`, `worldAllocateSegments__FP12_worldHeader`, `worldAnimation`, `worldBoundingBox`, `worldDeactivateUntakenDoors__FP12_worldHeader`, `worldFindDoorBoundingBox__FP12_worldHeaderiP6Point3T2`, `worldFindPointHeight__FP12_worldHeaderG6Point3`, `worldFreeWorld__FP12_worldHeader`, `worldLastDrawSucceded`, `worldPlotRouteSetEnable__Fi`, `worldPrecacheWorld__FP12_worldHeaderP8Matrix34`, `worldTestForbidden__FP12_worldHeaderG6Point3f`, `worldWaterRainTimer`
+
+Opened: `femBarbResourceMap`, `femaleDarkElfResourceMap`, `femaleEruditeResourceMap`, `femaleHighElfResourceMap`, `femaleWoodElfResourceMap`, `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap`, `maleHighElfResourceMap`, `maleWoodElfResourceMap`, `mt_dyndat`, `mt_throwaway`, `route_dirs`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `worldCanPass__FP12_worldHeaderG6Point3T1fi`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`
+- 2026-10-13 01:51 CDT — `agents/w10-world-d` — 1199 unresolved imports
+
+## agents/w10-item-a
+
+Merged (merge commit, branch tip `142c6566`, 47 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Items, inventory and skills: 23 units (25 function bodies,
+including the skills static-initialiser `_GLOBAL_$I$skills`) with fresh `input_order`
+values 3863 through 3885. 23 of 23 host checks pass here (x86_64, `-ffp-contract=off`):
+18 under `-Werror`, five only without it (warnings). One unit,
+`w10-item-a-skill-life-tap-get-chance` (`getChance__12SkillLifeTapi`), has no committed
+check (the notes cite only the private paired run), so it was not selected and its source
+stays in the snapshot. **The unresolved count rises by 58**: the skills static initialiser
+calls 52 skill constructors and reads further item and particle objects that no package
+defines yet, so 88 names open against 30 closed. The notes warn that some opened names
+may be defined elsewhere; none of the 88 were defined in the shared plan. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3884 authored inputs, 2809 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1199 |
+| After | 1257 |
+| Closed | 30 |
+| Opened | 88 |
+
+Closed: `_GLOBAL_$I$skills`, `_shopCheck__Fi`, `armorDebug`, `buySellVertSpacing`, `create__4itemPcPQ24item11descriptionii`, `findAndStripGender__4itemPUs`, `gSkillTree`, `getArmorBonus__4itemPQ24item11description`, `getAttributeName__4itemiPc`, `getDamageRangeAll__4itemPQ24item11descriptionPiT2i`, `givePlayerSkill__Fii`, `goldAnm`, `healthPotionsLeft`, `init__4itemv`, `invInitSharedInterfaceTextures__Fv`, `inventoryDrawDelay`, `inventoryDrawPlayerColor__Fiii`, `inventoryDrawPlayer__FiiP14AnimationStatei`, `inventoryDraw__Fi`, `inventoryRun__Fi`, `inventorySwitchDualWield__FiPQ24item11description`, `inventorySyncQuestItems__Fi`, `inventoryUnpack__Fiib`, `manaPotionsLeft`, `msgInventoryGridDropItem__Fiiciiii`, `playerSetFeatRank__Fixi`, `playerSetSkillRank__Fiii`, `shopRun__Fi`, `shopUnpackToGrid__Fiii`, `skills`
+
+Opened: `_4item$namedItemTable`, `_4item$undEnable`, `__10SkillDodge`, `__10SkillShock`, `__11SkillCharge`, `__12SkillArchery`, `__12SkillBlessed`, `__12SkillCyclone`, `__12SkillHealing`, `__12SkillLifeTap`, `__12SkillRiposte`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__14SkillMultiFire`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__15SkillPoisonRain`, `__15SkillShieldBash`, `__15SkillWizardBeam`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__16SkillPoisonArrow`, `__16SkillShockOfFire`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__17SkillMinorHealing`, `__17SkillRegeneration`, `__17SkillShockOfFrost`, `__17SkillUndeadShield`, `__18SkillAncestralCall`, `__18SkillBlindingLight`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`, `__18SkillRepulseUndead`, `__19SkillSummonSkeleton`, `__21SkillLightningWeapons`, `__22SkillRangerCriticalHit`, `__9SkillBash`, `__9SkillRoot`, `_vt$10SkillBlunt`, `_vt$13SkillHateBeam`, `_vt$13SkillSlashing`, `_vt$15SkillBallOfHate`, `_vt$15SkillHateEffect`, `_vt$17SkillResistPoison`, `_vt$18SkillDiseaseEffect`, `_vt$18SkillPoisonWeapons`, `_vt$19SkillDiseaseWeapons`, `arrowLeft`, `arrowRight`, `charAnimTest`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `drawAttachments__6PlayerP11_drawRecordf`, `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `mainMenu__Fii`, `matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf`, `moneyTex`, `msgInventoryExit__Fiii`, `playerDrawWeaponEffects__6Playerf`, `rcursor`, `scaleTex`, `selectionBox`, `taskBar`, `tinyIcon`
+- 2026-10-13 01:59 CDT — `agents/w10-item-a` — 1257 unresolved imports
+
+## agents/w10-render-a
+
+Merged (merge commit, branch tip `db79a230`, 32 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown, and the package may still be growing: later commits will be
+picked up by a later pass). Animation, particles, effects and drawing part 1: 19 units
+(17 function bodies and two data units) with fresh `input_order` values 3886 through
+3904. 19 of 19 host contracts pass here (x86_64, `-ffp-contract=off`). They need
+`-DNORRATH_HOST_ARENA` (the shared `level-anim-load-common/mem.hpp` asserts 4-byte
+pointers without it) and some need the unit source on the command line; without the
+define they fail at that static assertion. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker
+did not run a full build; this integration did: 3903 authored inputs, 2826 function
+bodies, zero COMMON, 214 tool tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1257 |
+| After | 1249 |
+| Closed | 27 |
+| Opened | 19 |
+
+Closed: `HUDInit__Fv`, `P_ExtendTrail__FiG6Point3`, `P_StartTrail__Fiifiiiii`, `ParticleEmitterTestParticle`, `animAdvanceAnimationTime__FP14AnimationStatefP6Point3P6Point2Ps`, `animGetAnimComponent__FP14AnimationStateP15AnimationHeader`, `animGetBoneMatrix__FP14AnimationStateiP8Matrix34`, `animLoadBoneMatricies__FP6PacketP14AnimationState`, `animLoadBuffer`, `animRemoveNonpermanentAnimations__FP14AnimationState`, `animSetToEndFullyBlended__FP14AnimationState`, `bevel`, `boxAdd__FP3BoxT0`, `boxSetEmpty__FP3Box`, `castLightColor`, `defaultHalos`, `displayTextDisable`, `drawTexture__FR6PacketP8_textureiiiiii`, `drawWorldPolyset__FP12_worldHeaderP13PolysetHeaderi`, `droplet`, `ef1Noise__Fi`, `effectModeSize`, `fontGrid`, `fxCreatureToDust__FP12_modelHeaderP14AnimationStateG6Point3sff`, `fxCreatureToIce__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStatefff`, `fxResourceMap`, `fxRunCreatureFire__FP12_modelHeaderP14AnimationStateG6Point3sP15FxCreatureStateffff`
+
+Opened: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `_vt$13LooseIceChunk`, `bustAlpha`, `cFireParticle`, `cSmokeParticle`, `crystalTex`, `drawWaterPatch__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldDynamicLight__FP13PolysetHeader`, `drawWorldObject__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldParticleEmitter__FP13PolysetHeader`, `emergencyResult`, `evaluateAnimation__FP14AnimationStateb`, `hudBustCovered`, `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForWorld__FP6PacketP13PolysetHeader`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `soundGroupLimit`, `soundLimit`
+- 2026-10-13 02:08 CDT — `agents/w10-render-a` — 1249 unresolved imports
+
+## agents/w10-render-c
+
+Merged (merge commit, branch tip `59dbdaa3`, 53 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown). Animation, model, light and render part 3: 15 units (14
+function bodies and one data unit) with fresh `input_order` values 3905 through 3919. 15
+of 15 host checks pass here (x86_64, `-ffp-contract=off`), 13 as is or with the unit
+source added, and `megatile-bank-init` and `put-block` only with the define in their own
+build line (put-block carries a MIPS `sync` that the host build must replace). The
+worker's private paired runs were not re-verified. Compiled sizes are not image sizes and
+no byte match is claimed. The worker did not run a full build; this integration did: 3918
+authored inputs, 2840 function bodies, zero COMMON, 214 tool tests passed. No EE or game
+execution.
+
+| | |
+|---|---|
+| Before | 1249 |
+| After | 1222 |
+| Closed | 28 |
+| Opened | 1 |
+
+Closed: `matTransform__FP6Point3P8Matrix34T0`, `megatileBankInit__FP16MegatileInstBankPv`, `megatileItemInit__FP8MegatilePv`, `modelDrawFade`, `modelDrawHalo__FP6PacketP12_modelHeadercP7HaloDefi`, `modelGetAttachmentMatrix__FP12_modelHeaderP14AnimationStateiP8Matrix34f`, `modelGetBoundingBox__FP12_modelHeaderlPiN52`, `modelOption`, `modelProcessGlows__FP12_modelHeaderP14AnimationStateP8Matrix34`, `modelSetGlobalShadowBrightness__Ff`, `modelSetupCharacter__FP6PacketP8Matrix44P6Point3P12_modelHeaderc`, `modelShadowScale`, `putBlock__FP8_textureP6PacketPPP9uncompMapPPii`, `quatMul__FP4QuatN20`, `rainSplashParticle`, `rayHit__FP6Point3N30`, `resetScissor__Fv`, `scissor`, `scx1`, `scx2`, `scy1`, `scy2`, `segmentLineHit__FP6Point3N50`, `shadowBrightness`, `slideDustParticle`, `slideDustParticleBig`, `slideDustParticleBigDark`, `slideDustParticleDark`
+
+Opened: `lightSetupForCharacter__FP6PacketG6Point3`
+- 2026-10-13 02:12 CDT — `agents/w10-render-c` — 1222 unresolved imports
+
+## agents/w10-render-d
+
+Merged (merge commit, branch tip `0cffe8de`, 41 minutes old when read; the notes have
+the five summary sections: imports closed, imports opened, plan entries, authored but
+never executed, unknown; the package may still be growing). Animation, model, light and
+render part 4: 20 units (19 function bodies and one data unit) with fresh `input_order`
+values 3920 through 3939. 20 of 20 host checks pass here (x86_64, `-ffp-contract=off`):
+15 as is or with the unit source added, and five (`light-effect-msg-run`,
+`subfont-printu`, `texture-init-texture`, `water-init`, `world-run-water`) only with the
+define their own header names (`-DNORRATH_HOST_LIGHTEFFECT`, `_SUBFONT`, `_TEXTURE`,
+`_WATER`, `_WATERRUN`) and the unit source on the command line; without it they crash
+or report mismatches because the stored link words are 64-bit pointers on this host.
+The worker's private paired runs were not re-verified. Compiled sizes are not image
+sizes and no byte match is claimed. The worker did not run a full build; this
+integration did: 3938 authored inputs, 2859 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1222 |
+| After | 1206 |
+| Closed | 24 |
+| Opened | 8 |
+
+Closed: `_$_11AddParticle`, `_$_11LightEffect`, `_$_5Light`, `__tf11AddParticle`, `__tf11LightEffect`, `clone__11LightEffect`, `debugReport__11AddParticle`, `draw__11AddParticleG6Point3P6Point3i`, `msg_run__11LightEffect`, `run__11AddParticleG6Point3`, `spellAlpha`, `spellAlphaInc`, `subfontPrintu__FiiPUsi`, `texCacheData__FP8_texturei`, `texLastDecompressionTime`, `textRemoveText__FPv`, `textureFreeTexture__FP8_texture`, `textureInitTexture__FP12_worldHeaderP8_texturePUcPc`, `usprintf__FPUsPcffffffff`, `waterInit__Fv`, `waterPatch`, `worldRunWater__FP12_worldHeader`, `worldSetWaterProperties__FP8_texture`, `worldTileEntityLightScale`
+
+Opened: `__8ListHeadRC8ListHead`, `_vt$10GameObject`, `drawParticleEmitter__FG6Point3P11ParticleDefP19ParticleEmitterDataisbN25`, `drawTexture__FR6Packetiiiiiiiii`, `waterList`, `waterListBack`, `waterStep`, `waterTexture`
+- 2026-10-13 02:16 CDT — `agents/w10-render-d` — 1206 unresolved imports
+
+## agents/w10-actor-a
+
+Merged (merge commit, branch tip `ded7a93d`, 55 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 30 units (30 function bodies) with fresh `input_order` values 3940
+through 3969. 30 of 30 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, two only without it (warnings). The actor package covers the Ant creature, skill and spell constructors, static-initialiser stubs and two layout-view objects. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 3968 authored inputs, 2889 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1206 |
+| After | 1190 |
+| Closed | 30 |
+| Opened | 14 |
+
+Closed: `_$_3Ant`, `_GLOBAL_$I$cast__19SkillSummonSkeletoniP8CreatureG6Point3s`, `_GLOBAL_$I$cast__9SkillRootiP8CreatureG6Point3s`, `_GLOBAL_$I$getCriticalChance__16SkillCriticalHitP6Playeri`, `_GLOBAL_$I$getRankDescription__10SkillShockPUsi`, `_GLOBAL_$I$getRankDescription__11SkillChargePUsi`, `_GLOBAL_$I$getRankDescription__12SkillHealingPUsi`, `_GLOBAL_$I$getRankDescription__12SkillRipostePUsi`, `_GLOBAL_$I$getRankDescription__15SkillHolyShieldPUsi`, `_GLOBAL_$I$getRankDescription__15SkillShieldBashPUsi`, `_GLOBAL_$I$getRankDescription__16SkillGroundPoundPUsi`, `_GLOBAL_$I$getRankDescription__16SkillPoisonArrowPUsi`, `_GLOBAL_$I$getRankDescription__18SkillAncestralCallPUsi`, `_GLOBAL_$I$getRankDescription__22SkillRangerCriticalHitPUsi`, `_GLOBAL_$I$getRankDescription__9SkillBashPUsi`, `_GLOBAL_$I$run__19SpellHornOmenEffectG6Point3s`, `__15AnimationState8RC15AnimationState8`, `__19SpellHornOmenEffectiP8CreatureP5Skill`, `__22SpellPlanarSteelEffectiP8CreatureP5Skill`, `__tf15SpellConeOfFire`, `__tf3Ant`, `clone__3Ant`, `msg_draw__3Ant`, `msg_load__3AntPc`, `msg_run__3Ant`, `msg_save__3AntPc`, `norrath_ctors_ant_lantern_view_42c760`, `norrath_ctors_ant_lantern_view_42c788`, `setState__3Anti`, `terminateSpell__8CreatureRC9type_info`
+
+Opened: `P_CreateParticleSystem__Fv`, `__16PoisonProjectilePQ210GameObject11resourceMapiiiiG6Point3T6ifP8Creature`, `__ti5Spell`, `_vt$19SpellHornOmenEffect`, `_vt$22SpellPlanarSteelEffect`, `_vt$3Ant`, `_vt$8Creature`, `ant_msg_run_particle_7d7170`, `checkIfSpellIsRunning__8CreatureRC9type_info`, `enemyInZone__8Creaturefs`, `loseBodyPart__3Anti`, `produceMeleeDamage__8CreaturefiiiiPQ24item11description`, `steerAndRouteToEnemy__8Creature`, `turnToFaceEnemy__8Creature`
+- 2026-10-13 02:22 CDT — `agents/w10-actor-a` — 1190 unresolved imports
+
+## agents/w10-actor-b
+
+Merged (merge commit, branch tip `4322dd8f`, 19 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (26 function bodies) with fresh `input_order` values 3970
+through 4001. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): the 26 function units (21 under `-Werror`, five only without it) and the six layout-view units, whose comparisons sit in a `host/` subfolder and each link against the unit source (string table contents and slot count). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4000 authored inputs, 2915 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1190 |
+| After | 1170 |
+| Closed | 32 |
+| Opened | 12 |
+
+Closed: `_$_10Arenabeast`, `_$_10AutoObject`, `_$_13AutoContainer`, `_$_8AntQueen`, `_$_9AutoChest`, `__tf10Arenabeast`, `__tf10AutoObject`, `__tf13AutoContainer`, `__tf8AntQueen`, `__tf9AutoChest`, `clone__8AntQueen`, `msg_draw__10Arenabeast`, `msg_draw__8AntQueen`, `msg_hurt__10ArenabeastfP10GameObjecti`, `msg_hurt__8AntQueenfP10GameObjecti`, `msg_load__10AutoObjectPc`, `msg_moveCollision__10ArenabeastPP10GameObject`, `msg_poke__9AutoChesti`, `msg_run__10Arenabeast`, `msg_run__13AutoContainer`, `msg_run__8AntQueen`, `msg_run__9AutoChest`, `msg_trigger__10Arenabeasti`, `msg_trigger__8AntQueeni`, `norrath_ctors_ant_lantern_view_42c7b0`, `norrath_ctors_ant_lantern_view_42c7d8`, `norrath_ctors_ant_lantern_view_42c800`, `norrath_ctors_ant_lantern_view_42c828`, `norrath_ctors_ant_lantern_view_42c850`, `norrath_ctors_ant_lantern_view_42c878`, `setState__10Arenabeasti`, `setState__8AntQueeni`
+
+Opened: `__7AntWaveP10GameObjectG6Point3si`, `addTurnAnimation__8AntQueen`, `alternateEnemyInZone__8Creatureffss`, `dropTreasure__4itemG6Point3iffffffPci`, `enemyInZone2__8Creatureffssfi`, `findEvadeDestination__8AntQueen`, `norrath_auto_chest_msg_run_fuseParticle_bytes`, `norrath_auto_chest_msg_run_smokeParticle_bytes`, `produceGeneralDamage__8CreatureffssiiiiPQ24item11description`, `setOnFire__6PhPropi`, `spawnItems__9AutoChest`, `subTurnAnimation__8AntQueen`
+- 2026-10-13 02:32 CDT — `agents/w10-actor-b` — 1170 unresolved imports
+
+## agents/w10-actor-c
+
+Merged (merge commit, branch tip `8a3e5d01`, 12 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (36 function bodies) with fresh `input_order` values 4002
+through 4032. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, three only without it. Most need `-DNORRATH_W10AC_HOST` (named in each check's first comment) so the source maps 32-bit pointer words to host addresses, and the unit source on the command line; without that they crash. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4031 authored inputs, 2951 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1170 |
+| After | 1148 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `_$_10AutoPropLP`, `_$_10BlackWidow`, `_$_5Chest`, `_$_6Badger`, `_$_8Catapult`, `__tf10AutoPropLP`, `__tf10BlackWidow`, `__tf5Chest`, `__tf6Badger`, `__tf8Catapult`, `__ti10AutoPropLP`, `__ti8AutoProp`, `clone__10BlackWidow`, `clone__5Chest`, `clone__6Badger`, `msg_draw__10BlackWidow`, `msg_draw__5Chest`, `msg_draw__6Badger`, `msg_draw__8Catapult`, `msg_getPokeName__5ChestPUsi`, `msg_hurt__8CatapultfP10GameObjecti`, `msg_load__8CatapultPc`, `msg_moveCollision__6BadgerPP10GameObject`, `msg_run__10AutoObject`, `msg_run__10BlackWidow`, `msg_run__6Badger`, `msg_run__8Catapult`, `msg_save__10AutoObjectPc`, `msg_save__8CatapultPc`, `msg_trigger__8Catapulti`, `setState__10BlackWidowi`, `setState__6Badgeri`
+
+Opened: `bActive__3Web`, `breakWeb__3Web`, `detach__11FireBomblet`, `draw__3WebG6Point3`, `ectopileParticle1`, `loseBodyPart__10BlackWidowi`, `reset__3Web`, `run__3WebG6Point3i`, `setHold__11FireBombleti`, `start__3WebG6Point3P8Creaturefi`
+- 2026-10-13 02:39 CDT — `agents/w10-actor-c` — 1148 unresolved imports
+
+## agents/w10-actor-e
+
+Merged (merge commit, branch tip `6d879a12`, 26 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4033
+through 4064. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 20 under `-Werror`, eight only without it (warnings), and four destructor checks (`dtor-10firebeetle`, `dtor-13femaledarkelf`, `dtor-5demon`, `dtor-7cyclops`) only with `-DNORRATH_VSLOTS_A_HOST`, a define named in the unit source rather than in the check; without it they report that the vtable word was stored wrongly. The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4063 authored inputs, 2983 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1148 |
+| After | 1134 |
+| Closed | 32 |
+| Opened | 18 |
+
+Closed: `_$_10FireBeetle`, `_$_13FemaleDarkElf`, `_$_5Demon`, `_$_7Cyclops`, `_GLOBAL_$I$msg_run__12DiseaseTrail`, `_GLOBAL_$I$msg_run__13DiseaseCorpse`, `_GLOBAL_$I$msg_run__22ExplodeArrowProjectile`, `__tf10FireBeetle`, `__tf13FemaleDarkElf`, `__tf5Demon`, `__tf7Cyclops`, `clone__10FireBeetle`, `clone__13FemaleDarkElf`, `clone__7Cyclops`, `getMinibossName__7Cyclops`, `initMiniboss__7Cyclops`, `msg_alert__13FemaleDarkElfifG6Point3P10GameObject`, `msg_draw__13FemaleDarkElf`, `msg_draw__5Demon`, `msg_draw__7Cyclops`, `msg_load__13FemaleDarkElfPc`, `msg_load__5DemonPc`, `msg_load__7CyclopsPc`, `msg_run__13FemaleDarkElf`, `msg_run__5Demon`, `msg_run__7Cyclops`, `msg_save__13FemaleDarkElfPc`, `msg_save__5DemonPc`, `setState__13FemaleDarkElfi`, `setState__5Demoni`, `setState__6Cthului`, `setState__7Cyclopsi`
+
+Opened: `ISeeDeadPeople__8Creaturef`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__14SpellHarmTouchiP8CreatureP5Skill`, `__14poisonGasSpellG6Point3iiiP10GameObjecti`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__9dustCloudG6Point3iiii`, `__tf14SpellHarmTouch`, `attack__14SpellHarmTouchP10GameObjectPiT2`, `creatureFindLeadYaw__8CreatureP10GameObjectf`, `creatureSlamEffect__8CreatureP8Creaturei`, `dropWeapon__5Demon`, `findEnemyLeadPosition__8CreaturefP6Point3`, `flee2__8CreatureP10GameObject`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `generateDust__7CyclopsG6Point3`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `objectIsCrowded__8CreatureP10GameObjectffi`
+- 2026-10-13 02:45 CDT — `agents/w10-actor-e` — 1134 unresolved imports
+
+## agents/w10-actor-d
+
+Merged (merge commit, branch tip `0815fc90`, 54 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4065
+through 4096. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 29 under `-Werror`, three only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4095 authored inputs, 3015 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1134 |
+| After | 1116 |
+| Closed | 32 |
+| Opened | 14 |
+
+Closed: `_$_10CloudGiant`, `_$_6Cthulu`, `_$_7Critter`, `__8CreatureG6Point3sPQ210GameObject11resourceMapfPPc`, `__tf10CloudGiant`, `__tf6Cthulu`, `__tf7Critter`, `clone__7Critter`, `dropTreasure__8CreatureG6Point3iffffffPc`, `getCurrentRoutePoint__8Creature`, `getModel__7Critter`, `getNextRoutePoint__8CreatureP6Point3G6Point3ffi`, `msg_collision__7CritterP10GameObject`, `msg_draw__10CloudGiant`, `msg_draw__6Cthulu`, `msg_draw__7Critter`, `msg_hurt__10CloudGiantfP10GameObjecti`, `msg_hurt__7CritterfP10GameObjecti`, `msg_load__10CloudGiantPc`, `msg_load__5ChestPc`, `msg_load__7CritterPc`, `msg_moveCollision__6CthuluPP10GameObject`, `msg_poke__5Chesti`, `msg_run__10CloudGiant`, `msg_run__5Chest`, `msg_run__6Cthulu`, `msg_run__7Critter`, `msg_save__10CloudGiantPc`, `msg_save__5ChestPc`, `msg_save__7CritterPc`, `msg_trigger__10CloudGianti`, `setState__10CloudGianti`
+
+Opened: `__11BoltGoRoundG6Point3siP15AnimationHeader`, `_vt$10CloudGiant`, `_vt$6Cthulu`, `_vt$7Critter`, `chestResourceList`, `modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf`, `modelSetFade__Fc`, `norrath_w10_actor_d_view_7d6c40`, `norrath_w10_actor_d_view_7d7720`, `norrath_w10_actor_d_view_7d7770`, `plotRoute__8CreatureG6Point3ffi`, `pointInZone__8CreatureG6Point3ffss`, `setResource__10GameObjectPQ210GameObject11resourceMap`, `steerToPosition__8CreatureG6Point3`
+- 2026-10-13 02:49 CDT — `agents/w10-actor-d` — 1116 unresolved imports
+
+## agents/w10-actor-f
+
+Merged (merge commit, branch tip `c0f4f100`, 59 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (42 function bodies) with fresh `input_order` values 4097
+through 4128. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 28 under `-Werror`, 4 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4127 authored inputs, 3057 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1116 |
+| After | 1097 |
+| Closed | 32 |
+| Opened | 13 |
+
+Closed: `_$_7FireFly`, `_$_8Froglock`, `_$_9Generator`, `_GLOBAL_$I$msg_draw__10FrostShard`, `_GLOBAL_$I$msg_run__14FireStormFlare`, `_GLOBAL_$I$msg_run__9FireFlare`, `__10GameObjectG6Point3PQ210GameObject11resourceMapPPc`, `__tf7FireFly`, `__tf8Froglock`, `__tf9Generator`, `__ti10GameObject`, `_vt$11FireBomblet`, `clone__7FireFly`, `clone__8Froglock`, `clone__9Generator`, `getModel__9Generator`, `msg_draw__10FireBeetle`, `msg_draw__7FireFly`, `msg_draw__8Froglock`, `msg_draw__9Generator`, `msg_load__8FroglockPc`, `msg_load__9GeneratorPc`, `msg_moveCollision__10FireBeetlePP10GameObject`, `msg_moveCollision__7FireFlyPP10GameObject`, `msg_run__10FireBeetle`, `msg_run__7FireFly`, `msg_run__8Froglock`, `msg_run__9Generator`, `msg_save__8FroglockPc`, `setState__10FireBeetlei`, `setState__7FireFlyi`, `setState__8Froglocki`
+
+Opened: `_$_11FireBomblet`, `__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader`, `__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19FireArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__21PoisonArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__22ExplodeArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__tf11FireBomblet`, `bCrossingWater__8Froglock`, `clone__11FireBomblet`, `loseBodyPart__10FireBeetlei`, `msg_draw__11FireBomblet`, `msg_run__11FireBomblet`, `objectAddString__FPcP10GameObject`
+- 2026-10-13 02:52 CDT — `agents/w10-actor-f` — 1097 unresolved imports
+
+## agents/w10-actor-g
+
+Merged (merge commit, branch tip `41cdf55a`, 60 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (33 function bodies) with fresh `input_order` values 4129
+through 4160. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 26 under `-Werror`, 6 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4159 authored inputs, 3090 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1097 |
+| After | 1075 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `_$_5Ghoul`, `_$_5Gnome`, `_$_6Goblin`, `__15GlowingCylinderG6Point3iiii`, `__tf5Ghoul`, `__tf5Gnome`, `__tf6Goblin`, `clone__5Ghoul`, `clone__5Gnome`, `clone__6Goblin`, `getMinibossName__6Goblin`, `initMiniboss__6Goblin`, `msg_alert__5GhoulifG6Point3P10GameObject`, `msg_alert__6GoblinifG6Point3P10GameObject`, `msg_collisionWorld__6GoblinG6Point3`, `msg_collision__5GnomeP10GameObject`, `msg_draw__5Ghoul`, `msg_draw__5Gnome`, `msg_draw__6Goblin`, `msg_load__6GoblinPc`, `msg_moveCollision__5GnomePP10GameObject`, `msg_moveCollision__6GoblinPP10GameObject`, `msg_run__5Ghoul`, `msg_run__5Gnome`, `msg_run__6Goblin`, `msg_save__6GoblinPc`, `msg_save__9GeneratorPc`, `msg_trigger__9Generatori`, `setState__5Ghouli`, `setState__5Gnomei`, `setState__6Goblini`, `setState__9Generatori`
+
+Opened: `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15ShockProjectileG6Point3sP10GameObjectP5Skilli`, `_vt$15GlowingCylinder`, `_vt$5Ghoul`, `_vt$5Gnome`, `_vt$6Goblin`, `dropItem__6Goblini`, `findClearPath__8CreatureG6Point3scf`, `numInRegion__8creatureG6Point3f`
+- 2026-10-13 02:55 CDT — `agents/w10-actor-g` — 1075 unresolved imports
+
+## agents/w10-actor-h
+
+Merged (merge commit, branch tip `762a6f37`, 49 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (36 function bodies) with fresh `input_order` values 4161
+through 4192. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 26 under `-Werror`, 6 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4191 authored inputs, 3126 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The unresolved count rises by 7 (39 names open against 32 closed): the new gut-chunk, ice, lamp, Innoruuk and jump-gate code references vtables, particles and models that no package defines yet.
+
+| | |
+|---|---|
+| Before | 1075 |
+| After | 1082 |
+| Closed | 32 |
+| Opened | 39 |
+
+Closed: `_$_3Ice`, `_$_4Lamp`, `_$_8Innoruuk`, `_$_8JumpGate`, `__8ItemPropG6Point3PQ24item11descriptioni`, `__tf3Ice`, `__tf4Lamp`, `__tf8Innoruuk`, `__tf8JumpGate`, `_vt$4Gold`, `_vt$8GutChunk`, `clone__3Ice`, `clone__4Lamp`, `clone__8JumpGate`, `msg_draw__3Ice`, `msg_draw__4Lamp`, `msg_draw__8Innoruuk`, `msg_draw__8JumpGate`, `msg_getPokeName__8JumpGatePUsi`, `msg_hurt__8InnoruukfP10GameObjecti`, `msg_load__8JumpGatePc`, `msg_poke__8JumpGatei`, `msg_run__3Ice`, `msg_run__4Lamp`, `msg_run__8GothTrap`, `msg_run__8HateHole`, `msg_run__8Innoruuk`, `msg_run__8JumpGate`, `msg_save__8JumpGatePc`, `msg_trigger__8Innoruuki`, `setState__8Innoruuki`, `updateEnemy__8Innoruuk`
+
+Opened: `DLG_CheckMutex__Fv`, `P_DeleteTrail__Fi`, `P_RevolveTrail__FiG6Point3N31i`, `_$_8GutChunk`, `__14HateProjectileG6Point3sP10GameObjectP5SkilliP15AnimationHeader`, `__6PhPropG6Point3P8Matrix34PcN23liPQ24item11descriptionf`, `__8HateBeamiG6Point3T2P8CreatureP5Skill`, `__8HateSoulG6Point3T1iii`, `__tf8GutChunk`, `_vt$3Ice`, `_vt$4Lamp`, `_vt$5PhIce`, `_vt$8Innoruuk`, `_vt$8ItemProp`, `_vt$8JumpGate`, `clone__8GutChunk`, `deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff`, `innoruukParticle2`, `innoruukParticle3`, `innoruukResourceMap`, `jumpGateAddDestination__Fv`, `jumpGateInit__FiPcc`, `jumpParticle2`, `jumpParticleOn`, `lampParticle`, `lightUpdatePosition__FP5Light`, `litodp`, `modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3`, `modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f`, `modelSetRelightAttachment__FG6Point3`, `msg_draw__8GutChunk`, `msg_getPokeName__6PhPropPUsi`, `msg_poke__6PhPropi`, `msg_run__8GutChunk`, `netDisconnect__Fv`, `shockwaveInnoruukParticle`, `shockwaveInnoruukParticle2`, `summonhammerParticle`, `vaporParticle`
+- 2026-10-13 02:58 CDT — `agents/w10-actor-h` — 1082 unresolved imports
+
+## Not merged: agents/w10-actor-i
+
+Rejected at tip `e1ad5dba` (34 minutes old when read; its notes
+have all five summary sections). Its 32 units (`clone`, `dtor`, `msg_*` and `setState`
+bodies for the lantern, lava monster, lava vehicle, male dark elf and minion) have no
+committed check of any kind: the diff holds no `host_check.cpp`, `host_contract.cpp` or
+other test file, and the notes say "No host test files are included because the
+comparison needs the private image". The only evidence is a private R5900 interpreter
+run outside git, which a reviewer cannot repeat, so no committed function has a test
+that could fail (same ground as `w9-render-math-a` and `w10-startup-d`). The branch was
+merged locally to look at it and the merge was reset before anything was selected or
+pushed. The owner can add committed host checks per function (as `w10-actor-a` to
+`w10-actor-h` do) and push again.
+
+## agents/w10-actor-j
+
+Merged (merge commit, branch tip `bbcddf19`, 52 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (35 function bodies) with fresh `input_order` values 4193
+through 4223. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 23 under `-Werror`, 8 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4222 authored inputs, 3161 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Of the units on the branch, `msg-draw-3npc` (`msg_draw__3NPC`) was **not** selected because its committed host check fails on the committed source here: it expects the call log to go from the script call to the material call, and the function also calls the 'exclamationShort' tag (output ends `fail icon`, exit 1); its source stays in the snapshot. The notes carry only three of the five summary headings, so this is merged as a partial package under the tip-age rule (tip 52 minutes old); every selected unit has a committed check. Not selected (sources stay in the snapshot): w10-actor-j-msg-draw-3npc (excluded).
+
+| | |
+|---|---|
+| Before | 1082 |
+| After | 1075 |
+| Closed | 31 |
+| Opened | 24 |
+
+Closed: `_$_3NPC`, `_$_5Mummy`, `_$_9MummyKing`, `__7OniBallG6Point3iP10GameObjectP10_vagHeader`, `__tf5Mummy`, `_vt$13MissileWeapon`, `_vt$3NPC`, `clone__3NPC`, `dropWeapon__5Mummy`, `getMinibossName__5Mummy`, `getModel__3NPC`, `initMiniboss__5Mummy`, `msg_draw__5Mummy`, `msg_draw__9MummyKing`, `msg_hurt__3NPCfP10GameObjecti`, `msg_hurt__9MummyKingfP10GameObjecti`, `msg_load__3NPCPc`, `msg_load__5MummyPc`, `msg_run__3NPC`, `msg_run__5Mummy`, `msg_run__9MummyKing`, `msg_save__3NPCPc`, `msg_save__5MummyPc`, `msg_trigger__3NPCi`, `msg_trigger__6Minioni`, `msg_trigger__9MummyKingi`, `runSpells__5MummyG6Point3`, `setState__3NPCi`, `setState__5Mummyi`, `setState__6Minioni`, `setState__9MummyKingi`
+
+Opened: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `_$_13MissileWeapon`, `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10SpawnMummyG6Point3PcP10GameObject`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__9DustDevilG6Point3`, `__tf13MissileWeapon`, `_vt$5Mummy`, `_vt$7OniBall`, `_vt$9MummyKing`, `animRandomizeTime__FP14AnimationState`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__13MissileWeapon`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `initType__5Mummyb`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__13MissileWeapon`, `msg_run__13MissileWeapon`, `mummy_miniboss_name_buffer_7d7e20`, `npc_msg_run_particle_7d7dd0`
+- 2026-10-13 03:06 CDT — `agents/w10-actor-j` — 1075 unresolved imports
+
+## agents/w10-actor-k
+
+Merged (merge commit, branch tip `0186c28e`, 62 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (31 function bodies) with fresh `input_order` values 4224
+through 4255. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 25 under `-Werror`, 7 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4254 authored inputs, 3192 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The unresolved count rises by 7 (39 names open against 32 closed): the new virtual-table units reference method slots (player, projectile, prop and recall-effect clones, destructors and draw/run routines) that no package defines yet.
+
+| | |
+|---|---|
+| Before | 1075 |
+| After | 1082 |
+| Closed | 32 |
+| Opened | 39 |
+
+Closed: `_$_11PushTrigger`, `_$_19ParticleMorphEffect`, `_$_3Orc`, `_$_8RollDoor`, `_GLOBAL_$I$move__10ProjectileG6Point3`, `__10ProjectileG6Point3P10GameObjectPQ210GameObject11resourceMap`, `__4PropG6Point3PcN22li`, `__tf19ParticleMorphEffect`, `__tf8RollDoor`, `_vt$10Projectile`, `_vt$12RecallEffect`, `_vt$6PhProp`, `_vt$6Player`, `clone__11PushTrigger`, `clone__3Orc`, `clone__8RollDoor`, `dismount__6Player`, `getMinibossName__3Orc`, `initMiniboss__3Orc`, `msg_alert__3OrcifG6Point3P10GameObject`, `msg_draw__3Orc`, `msg_draw__8RollDoor`, `msg_getPokeName__11PushTriggerPUsi`, `msg_getPokeName__8RollDoorPUsi`, `msg_hurt__3OrcfP10GameObjecti`, `msg_load__3OrcPc`, `msg_load__8RollDoorPc`, `msg_poke__11PushTriggeri`, `msg_run__19ParticleMorphEffect`, `msg_run__3Orc`, `msg_save__3OrcPc`, `setState__3Orci`
+
+Opened: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `__tf10Projectile`, `__tf12RecallEffect`, `__tf6Player`, `_vt$11PushTrigger`, `_vt$3Orc`, `_vt$4Prop`, `_vt$8RollDoor`, `clone__10Projectile`, `clone__12RecallEffect`, `clone__6PhProp`, `clone__6Player`, `commanderValid__3Orc`, `deleteCommander__3Orc`, `dropItem__3Orci`, `findCommander__3Orc`, `getModel__6Player`, `getSkillRank__6Playeri`, `initType__3Orcb`, `init__4Propi`, `isEnemy__6PlayerP10GameObject`, `joinCommander__3Orc`, `leaveCommander__3Orc`, `msg_collision__6PlayerP10GameObject`, `msg_draw__12RecallEffect`, `msg_draw__6PhProp`, `msg_draw__6Player`, `msg_hurt__6PlayerfP10GameObjecti`, `msg_run__12RecallEffect`, `msg_run__6PhProp`, `msg_run__6Player`, `setActiveChunks__6Player`, `setState__6Playeri`, `setWeapon__3Orc`, `stun__6Playeri`, `worldGetDoorHeight__FP12_worldHeaderi`
+- 2026-10-13 03:10 CDT — `agents/w10-actor-k` — 1082 unresolved imports
+
+## agents/w10-actor-l
+
+Merged (merge commit, branch tip `f1d2d59a`, 65 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (31 function bodies) with fresh `input_order` values 4256
+through 4286. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 20 under `-Werror`, 11 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4285 authored inputs, 3223 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1082 |
+| After | 1055 |
+| Closed | 31 |
+| Opened | 4 |
+
+Closed: `_$_10SeaMonster`, `_$_5Rondo`, `_$_8Scorpion`, `_$_9Savepoint`, `__tf10SeaMonster`, `__tf5Rondo`, `__tf8Scorpion`, `clone__8Scorpion`, `clone__9Savepoint`, `getMinibossName__10SeaMonster`, `initMiniboss__10SeaMonster`, `msg_draw__10SeaMonster`, `msg_draw__5Rondo`, `msg_draw__8Scorpion`, `msg_draw__9Savepoint`, `msg_getPokeName__9SavepointPUsi`, `msg_load__9SavepointPc`, `msg_moveCollision__10SeaMonsterPP10GameObject`, `msg_poke__8RollDoori`, `msg_poke__9Savepointi`, `msg_presave__8RollDoor`, `msg_run__5Rondo`, `msg_run__8RollDoor`, `msg_run__8Scorpion`, `msg_run__9Savepoint`, `msg_save__8RollDoorPc`, `msg_save__9SavepointPc`, `msg_trigger__5Rondoi`, `msg_trigger__8RollDoori`, `setState__5Rondoi`, `setState__8Scorpioni`
+
+Opened: `loseBodyPart__8Scorpioni`, `msgHudSavePoint__FP9Savepoint`, `playerRaisePlayer__FiG6Point3`, `updatePlayersReady__9Savepoint`
+- 2026-10-13 03:14 CDT — `agents/w10-actor-l` — 1055 unresolved imports
+
+## agents/w10-actor-m
+
+Merged (merge commit, branch tip `5f135204`, 33 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (32 function bodies) with fresh `input_order` values 4287
+through 4318. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 25 under `-Werror`, 7 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4317 authored inputs, 3255 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Two checks (`msg-load-4soul`, `msg-save-4soul`) do not link on their own because they reference `levelName` and `norrath_ctors_lava_wraith_view_485240` without defining them; they pass here when linked with `items-player-level-name/level_name.cpp` and `w9-ctors-wraith-d-views/norrath_ctors_lava_wraith_view_485240.cpp`, which the checks do not say.
+
+| | |
+|---|---|
+| Before | 1055 |
+| After | 1027 |
+| Closed | 31 |
+| Opened | 3 |
+
+Closed: `_$_4Soul`, `_$_8Skeleton`, `_$_8Skelight`, `__tf4Soul`, `__tf8Skeleton`, `__tf8Skelight`, `clone__8Skeleton`, `clone__8Skelight`, `dropItem__8Skeletoni`, `dropItem__8Skelighti`, `getModel__4Soul`, `msg_alert__8SkeletonifG6Point3P10GameObject`, `msg_draw__4Soul`, `msg_draw__8Skeleton`, `msg_draw__8Skelight`, `msg_hurt__4SoulfP10GameObjecti`, `msg_hurt__8SkeletonfP10GameObjecti`, `msg_load__4SoulPc`, `msg_load__8SkeletonPc`, `msg_load__8SkelightPc`, `msg_run__10SeaMonster`, `msg_run__4Soul`, `msg_run__8Skeleton`, `msg_run__8Skelight`, `msg_save__4SoulPc`, `msg_save__8SkeletonPc`, `msg_save__8SkelightPc`, `msg_trigger__4Souli`, `setState__10SeaMonsteri`, `setState__8Skeletoni`, `setState__8Skelighti`
+
+Opened: `__19MultiFireProjectileG6Point3sP10GameObjectiP5Skill`, `__6PhPropG6Point3sP12_modelHeaderP14AnimationStatePcN25liPQ24item11descriptionf`, `partlist.1103`
+- 2026-10-13 03:20 CDT — `agents/w10-actor-m` — 1027 unresolved imports
+
+## agents/w10-actor-n
+
+Merged (merge commit, branch tip `4aa495e3`, 48 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (36 function bodies) with fresh `input_order` values 4319
+through 4350. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 19 under `-Werror`, 13 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4349 authored inputs, 3291 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1027 |
+| After | 1013 |
+| Closed | 32 |
+| Opened | 18 |
+
+Closed: `_$_10StaticFire`, `_$_11SpiderQueen`, `_$_5Torch`, `_$_6Switch`, `_$_8SuperOrc`, `__tf10StaticFire`, `__tf11SpiderQueen`, `__tf5Torch`, `__tf6Switch`, `__tf8SuperOrc`, `_vt$6Sparks`, `clone__10StaticFire`, `clone__11SpiderQueen`, `clone__6Switch`, `clone__8SuperOrc`, `msg_draw__10StaticFire`, `msg_draw__11SpiderQueen`, `msg_draw__8SuperOrc`, `msg_getPokeName__6SwitchPUsi`, `msg_hurt__11SpiderQueenfP10GameObjecti`, `msg_hurt__8SuperOrcfP10GameObjecti`, `msg_poke__6Switchi`, `msg_run__10StaticFire`, `msg_run__11SpiderQueen`, `msg_run__8SuperOrc`, `msg_trigger__11SpiderQueeni`, `msg_trigger__8SuperOrci`, `newWind__10StaticFirei`, `setActiveChunks__10Teleporter`, `setState__11SpiderQueeni`, `setState__4Souli`, `setState__8SuperOrci`
+
+Opened: `_$_6Sparks`, `__tf6Sparks`, `_vt$10StaticFire`, `_vt$11SpiderQueen`, `_vt$5Torch`, `_vt$6Switch`, `_vt$8SuperOrc`, `addSmokelet__10StaticFire`, `canGrab__11SpiderQueen`, `clone__6Sparks`, `msg_collision__6SparksP10GameObject`, `msg_draw__6Sparks`, `msg_run__6Sparks`, `norrath_w10_actor_n_view_7d6d80`, `norrath_w10_actor_n_view_8d63c0`, `norrath_w10_actor_n_view_8d6460`, `superorcSlamEffect__8SuperOrcP8Creaturei`, `updateSmokelets__10StaticFire`
+- 2026-10-13 03:25 CDT — `agents/w10-actor-n` — 1013 unresolved imports
+
+## agents/w10-actor-p
+
+Merged (merge commit, branch tip `61ece610`, 39 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 32 units (40 function bodies) with fresh `input_order` values 4351
+through 4382. 32 of 32 host checks pass here (x86_64, `-ffp-contract=off`): 24 under `-Werror`, 8 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4381 authored inputs, 3331 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution.
+
+| | |
+|---|---|
+| Before | 1013 |
+| After | 1008 |
+| Closed | 32 |
+| Opened | 27 |
+
+Closed: `_$_10WaterSpout`, `_$_10WeaponRack`, `_$_11VampireLord`, `_$_14WoodElfSoldier`, `_$_7WebTrap`, `_$_9WaveMaker`, `__7Weatheri`, `__tf10WaterSpout`, `__tf10WeaponRack`, `__tf11VampireLord`, `__tf14WoodElfSoldier`, `__tf7WebTrap`, `__tf9WaveMaker`, `clone__10WaterSpout`, `clone__10WeaponRack`, `clone__11VampireLord`, `clone__7WebTrap`, `clone__9WaveMaker`, `getModel__11VampireLord`, `msg_draw__10WaterSpout`, `msg_draw__10WeaponRack`, `msg_draw__11VampireLord`, `msg_draw__7WebTrap`, `msg_getPokeName__10WeaponRackPUsi`, `msg_hurt__11VampireLordfP10GameObjecti`, `msg_poke__10WeaponRacki`, `msg_run__10WaterSpout`, `msg_run__11VampireLord`, `msg_run__7WebTrap`, `msg_run__9WaveMaker`, `msg_trigger__11VampireLordi`, `setState__11VampireLordi`
+
+Opened: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`, `__7CritterPcG6Point3sPPc`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11VampireLord`, `_vt$14WoodElfSoldier`, `_vt$7Weather`, `_vt$7WebTrap`, `_vt$9WaveMaker`, `batParams`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`, `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`, `doWavelet__9WaveMakerP6Point3P8Matrix33i`, `dptoli`, `getWaveletMat__9WaveMakerifP8Matrix33`, `range`, `smokeParticle`, `splashInfoBits`, `waveFroth`, `waveMainAlternate`, `waveMainParticle`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`
+- 2026-10-13 03:29 CDT — `agents/w10-actor-p` — 1008 unresolved imports
+
+## agents/w10-camveh-a
+
+Merged (merge commit, branch tip `fc73e09e`, 2 hours old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 31 units (25 function bodies) with fresh `input_order` values 4383
+through 4413. 31 of 31 host checks pass here (x86_64, `-ffp-contract=off`): 30 under `-Werror`, 2 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4412 authored inputs, 3356 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. The notes use different headings (Observed/inferred/unknown, Imports, Build-plan entries, Authored but never executed, Blockers) instead of the five standard ones, so the package is merged as partial under the tip-age rule (tip over two hours old); every selected unit has a committed check, and the 33 closed names include a few that this branch's data units define.
+
+| | |
+|---|---|
+| Before | 1008 |
+| After | 985 |
+| Closed | 33 |
+| Opened | 10 |
+
+Closed: `FinalizePosition__5Wheel`, `GetSaveFootPrint__6Camera`, `Load__6CameraPc`, `__17VehicleBodySphereP7Vehicleff`, `_vt$4Boat`, `addWheel__7VehiclePciffff`, `backupJustForces__7Vehicle`, `buildCollisionBox__7Vehicle`, `changeOrientation__7VehicleG6Point3`, `clipFrustumNormalSign`, `determineBestController__6Camera`, `doAutoPitch__6Camera`, `doDifferential__7Vehicle`, `doUserYaw__6Camera`, `doUserZoom__6Camera`, `dualImpulse__7VehicleP7VehicleT1P6Point3T3`, `enforceMaxSpeed__6CameraP6Point3`, `gameMaxCamHeight`, `gameMinCamHeight`, `getBlockingVehicle__7VehiclePf`, `getEngineTorque__7Vehicle`, `getParticleVelocity__7VehicleP6Point3`, `impulse__7VehicleP6Point3N21fii`, `obtainTarget__6CameraP6Point3`, `originalPos`, `originalYaw`, `pitchTab`, `rayHit__7VehicleP6Point3T1fT1`, `resolveCreatureCollisions__7Vehicle`, `scalePatchLimit__7VehicleiP6Point3`, `setMassAndIBody__7Vehicle`, `worldClipFrustum`, `worldTransformFrustum__FP8Matrix34`
+
+Opened: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`, `_vt$17VehicleBodySphere`, `addImpulse__7VehicleP6Point3T1i`, `clampZoomMag__6Camera`, `fastestRotDirection__FssPi`, `halfFrustumMode`, `matUntransform34Vec__FP6Point3P8Matrix34T0`, `shite`
+- 2026-10-13 03:35 CDT — `agents/w10-camveh-a` — 985 unresolved imports
+
+## agents/w10-actor-q
+
+Merged (merge commit, branch tip `4e4b4f4d`, 57 minutes old when read; the notes have the five
+summary sections: imports closed, imports opened, plan entries, authored but never
+executed, unknown; the package may still be growing and later commits will be picked up
+by a later pass). 10 units (10 function bodies) with fresh `input_order` values 4414
+through 4423. 10 of 10 host checks pass here (x86_64, `-ffp-contract=off`): 9 under `-Werror`, 1 only without it (warnings). The worker's private paired runs were not re-verified. Compiled sizes
+are not image sizes and no byte match is claimed. The worker did not run a full build;
+this integration did: 4422 authored inputs, 3366 function bodies, zero COMMON, 214 tool
+tests passed. No EE or game execution. Eight units on the branch were not selected because they carry no committed check (`wes-clone`, `wes-drop-item`, `wes-msg-run`, `wes-msg-trigger`, `wes-set-state`, `wraith-clone`, `wraith-msg-run`, `wraith-set-state`), and `wraith-get-miniboss-name` was not selected because its host check does not compile (it uses an undeclared `seen_dest`); their sources stay in the snapshot. The owner can add the missing checks and push again. The branch tip was 57 minutes old when read and had stopped moving. Not selected (sources stay in the snapshot): w10-actor-q-wes-clone (no host check), w10-actor-q-wes-drop-item (no host check), w10-actor-q-wes-msg-run (no host check), w10-actor-q-wes-msg-trigger (no host check), w10-actor-q-wes-set-state (no host check), w10-actor-q-wraith-clone (no host check), w10-actor-q-wraith-get-miniboss-name (excluded), w10-actor-q-wraith-msg-run (no host check), w10-actor-q-wraith-set-state (no host check).
+
+| | |
+|---|---|
+| Before | 985 |
+| After | 977 |
+| Closed | 10 |
+| Opened | 2 |
+
+Closed: `_$_6Wraith`, `_GLOBAL_$I$numInRegion__8creatureG6Point3f`, `__tf6Wraith`, `addCommander__14WoodElfSoldier`, `bNextToEdge__14WoodElfSoldier`, `initMiniboss__6Wraith`, `leaveCommander__14WoodElfSoldier`, `msg_draw__14WoodElfSoldier`, `msg_draw__6Wraith`, `msg_hurt__14WoodElfSoldierfP10GameObjecti`
+
+Opened: `_vt$6Wraith`, `drawArrow__14WoodElfSoldier`
+- 2026-10-13 03:39 CDT — `agents/w10-actor-q` — 977 unresolved imports
+
+## Not merged: agents/w10-actor-o
+
+Held at tip `c7de8712` (45 minutes old when read). The branch holds 31 units with
+host checks (all 31 built and exited 0 here) but **no notes
+file**: `docs/agents/w10-actor-o.md` does not exist, so there are no observed,
+inferred and unknown lists, no imports closed or opened, and the snapshot checker
+fails because every package record needs its review file (`docs/agents/<package>.md`).
+Writing those notes is the worker's job and this integrator did not invent them. The
+branch was merged locally, failed `check_source_snapshot.py`, and the merge was reset
+before anything was pushed. The owner can add the notes and push again; the units
+could then be selected unchanged.
+- 2026-10-13 03:50 CDT — rejection and hold notes (actor-i, actor-o), no package — 977 unresolved imports
+
+## Integrator re-check (2026-10-13 04:05 CDT)
+
+Re-ran the checks on the shared branch tip `ce6c4327` before any merge: 214 tool tests
+passed, `check_source_snapshot.py` passed (9429 files, 4422 authored inputs), and the
+full partial build gave 4422 compilations, 3366 function bodies, zero COMMON and
+**977 unresolved imports**, matching the recorded count. The recent merges added no
+binaries or raw disassembly; the nine `.S` files are short authored syscall stubs
+that say what is observed and what is unknown. No shared-file fix was needed.
+
+Unmerged branches re-read: `agents/w10-actor-i` (`e1ad5dba`), `agents/w10-actor-o`
+(`c7de8712`), `agents/w10-startup-d` (`cb1c9c26`), `agents/w8-spell-static-init-b`
+(`ed20fab5`) and `agents/w9-render-math-a` (`adff0bdc`) are all at the tips recorded
+in their rejection or hold notes above, so those decisions stand (no committed
+checks for actor-i, startup-d, w8 and w9; no notes file for actor-o). Nothing was
+merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker
+packages and stay with their owners.
+- 2026-10-13 04:05 CDT — integrator re-check, nothing merged — 977 unresolved imports
+
+## agents/w10-actor-o
+
+Merged (merge commit, branch tip `0558ab89`; the notes now exist and have the five summary
+sections: imports closed, imports opened, plan entries, authored but never executed, unknown.
+This supersedes the earlier hold, which was for tip `c7de8712` with no notes file). 32 units
+(32 function bodies plus 3 compiler-emitted local helpers) with fresh `input_order` values
+4424 through 4455. All 32 host checks build and exit 0 here (x86_64, `-ffp-contract=off`,
+`-fno-builtin`, `W10_ACTOR_O_HOST`). The worker's private paired runs were not re-verified.
+Compiled sizes are not image sizes and no byte match is claimed. The worker did not run a full
+build; this integration did: 4454 authored inputs, 3401 function bodies, zero COMMON, 214 tool
+tests passed. Per-unit object hashes in the snapshot are the ones the full build produced (the
+same extraction reproduces the actor-q hashes). No EE or game execution. Every committed unit
+has a host check, so none was left out.
+
+The worker's notes list 12 data and vtable names as "opened" together with many that were
+already unresolved; the real change is below. Six file-local particle data objects
+(`torch_msg_run_particle_7d7*`, `undead_knight*_msg_run_particle_7d7*`) and `udkResourceMap`
+need exporting by their static-initializer owners; this integration does not edit game code.
+
+| | |
+|---|---|
+| Before | 977 |
+| After | 957 |
+| Closed | 32 |
+| Opened | 12 |
+
+Closed: `_$_12UndeadKnight`, `_$_17UndeadKnightClone`, `_$_7Ulthork`, `_$_7Vampire`, `__tf12UndeadKnight`, `__tf17UndeadKnightClone`, `__tf7Ulthork`, `__tf7Vampire`, `clone__12UndeadKnight`, `clone__5Torch`, `clone__7Vampire`, `msg_collision__5TorchP10GameObject`, `msg_draw__12UndeadKnight`, `msg_draw__17UndeadKnightClone`, `msg_draw__5Torch`, `msg_draw__7Ulthork`, `msg_draw__7Vampire`, `msg_hurt__12UndeadKnightfP10GameObjecti`, `msg_load__5TorchPc`, `msg_load__7UlthorkPc`, `msg_run__12UndeadKnight`, `msg_run__17UndeadKnightClone`, `msg_run__5Torch`, `msg_run__7Ulthork`, `msg_run__7Vampire`, `msg_save__5TorchPc`, `msg_save__7UlthorkPc`, `msg_trigger__12UndeadKnighti`, `setState__12UndeadKnighti`, `setState__17UndeadKnightClonei`, `setState__7Ulthorki`, `setState__7Vampirei`
+
+Opened: `__17UndeadKnightCloneG6Point3sPPc`, `_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`
+- 2026-10-13 04:15 CDT — agents/w10-actor-o — 957 unresolved imports
+
+## Integrator re-check (2026-10-13 04:26 CDT)
+
+Re-ran on the shared branch at `1f3895b9` before any merge: 214 tool tests passed, the
+snapshot check passed (4454 authored inputs), and the default authored partial build
+(EE toolchain, no Newlib) linked 3401 function bodies, zero COMMON, **957** unresolved
+imports. The recorded count reproduces and no recent merge broke a repo rule. The four
+unmerged worker branches are at the tips recorded above (`w10-actor-i` `e1ad5dba`,
+`w10-startup-d` `cb1c9c26`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a`
+`adff0bdc`), so their rejections stand: none has a committed check that could fail.
+Nothing was merged.
+- 2026-10-13 04:26 CDT — integrator re-check, nothing merged — 957 unresolved imports
+
+## agents/w11-tmpl-a
+
+Merged (merge commit, branch tip `90f391ec`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each, with fresh `input_order` values 4456 through 4482. All 27 host checks build
+and exit 0 here (x86_64, `-w`, `-no_pie`, pagezero 0x1000, as the notes direct). The worker's
+private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is
+claimed. The worker ran no full build; this integration did: 4481 authored inputs, 3428 function
+bodies, zero COMMON, 214 tool tests passed. Per-unit object hashes in the snapshot are the ones
+the full build produced. The plan object names are made unique from the component directory
+(the notes' `clear.o`/`init.o` repeat). No EE or game execution. Every unit has a host check.
+
+The worker's closed list (27) and opened list (13) both reproduce exactly.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 943 |
+| Closed | 27 |
+| Opened | 13 |
+
+Closed: `Begin__Ct6VIList1ZP9VIGUIPage`, `Begin__Ct6VIPool1ZP13VIHSpriteAnim`, `Begin__Ct6VIPool1ZP16VIStaticLighting`, `Begin__Ct6VIPool1ZP8VIRefMap`, `Begin__Ct6VIPool1ZP8VISprite`, `Clear__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Clear__t6VIList1Z7VIActor`, `Clear__t6VIList1ZQ27VIScene12VISceneOccup`, `Clear__t6VIPool1ZP13VIHSpriteAnim`, `Clear__t6VIPool1ZP16VIStaticLighting`, `Clear__t6VIPool1ZP8VIRefMap`, `Clear__t6VIPool1ZP8VISprite`, `Clear__t7VIArray1Zi`, `Clear__t8VIVector1Z18VISceneDisplayElem`, `End__Ct6VIList1ZP9VIGUIPage`, `End__Ct6VIPool1ZP13VIHSpriteAnim`, `End__Ct6VIPool1ZP16VIStaticLighting`, `End__Ct6VIPool1ZP8VIRefMap`, `End__Ct6VIPool1ZP8VISprite`, `Erase__t6VIList1ZP9VIGUIPagei`, `Init__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Init__t6VIList1Z7VIActor`, `Init__t6VIList1ZQ27VIScene12VISceneOccup`, `Init__t6VIPool1ZP13VIHSpriteAnimi`, `Init__t6VIPool1ZP16VIStaticLightingi`, `Init__t6VIPool1ZP8VIRefMapi`, `Init__t6VIPool1ZP8VISpritei`
+
+Opened: `Allocate__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Allocate__t6VIPool1ZP13VIHSpriteAnim`, `Allocate__t6VIPool1ZP16VIStaticLighting`, `Allocate__t6VIPool1ZP8VIRefMap`, `Allocate__t6VIPool1ZP8VISprite`, `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__t6VIPool1ZP13VIHSpriteAnim`, `DestroyPool__t6VIPool1ZP16VIStaticLighting`, `DestroyPool__t6VIPool1ZP8VIRefMap`, `DestroyPool__t6VIPool1ZP8VISprite`, `DestroyPool__t7VIArray1Zi`, `DestroyPool__t8VIVector1Z18VISceneDisplayElem`, `_$_7VIActor`
+- 2026-10-13 04:56 CDT — agents/w11-tmpl-a — 943 unresolved imports
+
+## agents/w11-tmpl-b
+
+Merged (merge commit, branch tip `68610a73`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each, with fresh `input_order` values 4483 through 4509. All 27 host checks build
+and exit 0 here (x86_64, `-w`, `-no_pie`, pagezero 0x1000). The worker's private paired runs were
+not re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran
+no full build; this integration did: 4508 authored inputs, 3455 function bodies, zero COMMON, 214
+tool tests passed. Per-unit object hashes in the snapshot are the ones the full build produced.
+No EE or game execution. Every unit has a host check.
+
+The worker's closed list (27) reproduces. Its opened list names `Clear__*` for six list instances
+that `w11-tmpl-a` already defines, so the real opened count is lower than the notes imply.
+
+| | |
+|---|---|
+| Before | 943 |
+| After | 931 |
+| Closed | 27 |
+| Opened | 15 |
+
+Closed: `Init__t7VIArray1Zii`, `Init__t8VIVector1Z18VISceneDisplayElemi`, `Next__Ct6VIList1ZP9VIGUIPagei`, `Next__Ct6VIPool1ZP13VIHSpriteAnimi`, `Next__Ct6VIPool1ZP16VIStaticLightingi`, `Next__Ct6VIPool1ZP8VIRefMapi`, `Next__Ct6VIPool1ZP8VISpritei`, `_$_t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `_$_t5VIMap2ZiZi`, `_$_t6VIList1Z10VIMaterial`, `_$_t6VIList1Z7VIActor`, `_$_t6VIList1ZP12VIPrimBuffer`, `_$_t6VIList1ZP9VIGUIPage`, `_$_t6VIList1ZP9VISurface`, `_$_t6VIList1ZQ27VIScene12VISceneOccup`, `_$_t6VIPool1Z19VIRasterMaterialLRU`, `_$_t6VIPool1ZP12VICollBuffer`, `_$_t6VIPool1ZP12VIPrimBuffer`, `_$_t6VIPool1ZP13VIColorBuffer`, `_$_t6VIPool1ZP13VIHSpriteAnim`, `_$_t6VIPool1ZP13VIMaterialPal`, `_$_t6VIPool1ZP16VIStaticLighting`, `_$_t6VIPool1ZP7VIRFont`, `_$_t6VIPool1ZP8VIRefMap`, `_$_t6VIPool1ZP8VISprite`, `_$_t6VIPool1ZP9VISurface`, `_$_t7VIArray1Z11VIClipEntry`
+
+Opened: `Allocate__t7VIArray1Zi`, `Allocate__t8VIVector1Z18VISceneDisplayElem`, `Clear__t6VIList1Z10VIMaterial`, `Clear__t6VIList1ZP12VIPrimBuffer`, `Clear__t6VIList1ZP9VIGUIPage`, `Clear__t6VIList1ZP9VISurface`, `DestroyPool__t5VIMap2ZiZi`, `DestroyPool__t6VIPool1Z19VIRasterMaterialLRU`, `DestroyPool__t6VIPool1ZP12VICollBuffer`, `DestroyPool__t6VIPool1ZP12VIPrimBuffer`, `DestroyPool__t6VIPool1ZP13VIColorBuffer`, `DestroyPool__t6VIPool1ZP13VIMaterialPal`, `DestroyPool__t6VIPool1ZP7VIRFont`, `DestroyPool__t6VIPool1ZP9VISurface`, `DestroyPool__t7VIArray1Z11VIClipEntry`
+- 2026-10-13 05:01 CDT — agents/w11-tmpl-b — 931 unresolved imports
+
+## agents/w11-tmpl-c
+
+Merged (merge commit, branch tip `980680a4`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one
+function body each (constructors and destructors), with fresh `input_order` values 4510 through 4536. The checks here are named `host_contract.cpp` rather than `host_check.cpp`; all 27 build with
+`-std=c++17 -Wall -Wextra -Werror` and exit 0. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed (the notes say the
+destructors compile to 144 bytes against 116 in the image). The worker ran no full build; this
+integration did: 4535 authored inputs, 3482 function bodies, zero COMMON, 214 tool tests passed.
+Per-unit object hashes in the snapshot are the ones the full build produced. No EE or game
+execution. Every unit has a host contract.
+
+| | |
+|---|---|
+| Before | 931 |
+| After | 906 |
+| Closed | 27 |
+| Opened | 2 |
+
+Closed: `_$_t7VIArray1Z7VIPlane`, `_$_t7VIArray1Z7VIVect3`, `_$_t7VIArray1Zi`, `_$_t8VIVector1Z18VISceneDisplayElem`, `__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `__t6VIList1Z10VIMaterial`, `__t6VIList1Z7VIActor`, `__t6VIList1ZP12VIPrimBuffer`, `__t6VIList1ZP9VIGUIPage`, `__t6VIList1ZP9VISurface`, `__t6VIList1ZQ27VIScene12VISceneOccup`, `__t6VIPool1Z19VIRasterMaterialLRU`, `__t6VIPool1ZP12VICollBuffer`, `__t6VIPool1ZP12VIPrimBuffer`, `__t6VIPool1ZP13VIColorBuffer`, `__t6VIPool1ZP13VIHSpriteAnim`, `__t6VIPool1ZP13VIMaterialPal`, `__t6VIPool1ZP16VIStaticLighting`, `__t6VIPool1ZP7VIRFont`, `__t6VIPool1ZP8VIRefMap`, `__t6VIPool1ZP8VISprite`, `__t6VIPool1ZP9VISurface`, `__t7VIArray1Z11VIClipEntry`, `__t7VIArray1Z7VIPlane`, `__t7VIArray1Z7VIVect3`, `__t7VIArray1Zi`, `__t8VIVector1Z18VISceneDisplayElem`
+
+Opened: `DestroyPool__t7VIArray1Z7VIPlane`, `DestroyPool__t7VIArray1Z7VIVect3`
+- 2026-10-13 05:04 CDT — agents/w11-tmpl-c — 906 unresolved imports
+
+## agents/w11-crt-b
+
+Merged (merge commit, branch tip `7813bf6a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 16 units (13 function bodies, 3 data-object units) with fresh
+`input_order` values 4537 through 4552. All 16 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000); the three data units have checks too. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4551 authored inputs, 3495 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (18) reproduces. Opened: eight names the new bodies call that nobody defines yet.
+
+| | |
+|---|---|
+| Before | 906 |
+| After | 896 |
+| Closed | 18 |
+| Opened | 8 |
+
+Closed: `_iopnotify`, `_send_to_iop`, `dptoli`, `dptoul`, `dst`, `lgCodecGSMDecode`, `lgCodecGSMEncode`, `lgKbdEnumHint`, `lgKbdEnumerate`, `lgKbdOpen`, `lgKbdRead`, `lgKbdSetRepeatRate`, `litodp`, `mceIntrReadFixAlign`, `norrath_lgaud_async_record_view`, `norrath_lgaud_rpc_client_view`, `norrath_lgkbm_reader_thread_record_view`, `norrath_lgkbm_reader_thread_stack_view`
+
+Opened: `IsEventModifier`, `SyncDCache`, `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `lgFrameDecode`, `lgFrameEncode`, `sceSifSetSreg`
+- 2026-10-13 05:08 CDT — agents/w11-crt-b — 896 unresolved imports
+
+## agents/w11-crt-c
+
+Merged (merge commit, branch tip `1173f7cd`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 20 units (17 function bodies, 3 data units) with fresh
+`input_order` values 4553 through 4572. All 20 host contracts and checks build with the command in each file's header (x86_64, -w, -no_pie, pagezero 0x1000; the tty handler also needs the w9 tty state source) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4571 authored inputs, 3512 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes' private measurement (957 to 933) included four earlier units that are not in the shared plan, so it does not apply here; the closed list for this package's own 19 names reproduces. Names the notes expected to close once other owners' units are planned (libpad/libmtap views, the loader failure word, sceCbPoff_Gp, timer_handle) are still unresolved.
+
+| | |
+|---|---|
+| Before | 896 |
+| After | 887 |
+| Closed | 19 |
+| Opened | 10 |
+
+Closed: `norrath_sif_m_request_end`, `norrath_sif_m_rpc_packet_buffer_view`, `sceCdStResume`, `sceCdStStart`, `sceDeci2Open`, `sceDeci2Poll`, `sceDeci2ReqSend`, `sceGsSetDefDBuffDc`, `sceGsSwapDBuffDc`, `scePadGetDmaStr`, `scePadGetReqState`, `scePadGetState`, `scePadInfoAct`, `scePadInfoMode`, `scePadPortClose`, `sceScfGetLocalTimefromRTC`, `sceSifAddRebootNotifyHandler`, `sceTtyHandler`, `src`
+
+Opened: `AdjustTime`, `QueuePeekWriteDone`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `sceGsPutDrawEnv`, `sceGsSetDefClear`, `sceGsSetDefDrawEnv`, `sceGsSetDefDrawEnv2`, `sceScfGetSummerTime`, `sceScfGetTimeZone`
+- 2026-10-13 05:12 CDT — agents/w11-crt-c — 887 unresolved imports
+
+## agents/w11-front-b
+
+Merged (merge commit, branch tip `db0444d2`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 units (8 function bodies, 7 data-object units) with fresh
+`input_order` values 4573 through 4587. All 15 host checks build with -std=c++17 -Wall -Wextra -Werror (x86_64, -no_pie, pagezero 0x1000) and exit 0 here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4586 authored inputs, 3520 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed (19) and opened (4) lists and its private count of 957 to 942 reproduce in kind; here the base was already 887, so the count went 887 to 872. The notes record that the data objects compile to .bss where the image keeps four of them in file-backed .data, so no data-layout match is claimed. Seven more of the package's names close only when sources already in the tree from earlier waves (listed in the notes) are planned; they were not selected here.
+
+| | |
+|---|---|
+| Before | 887 |
+| After | 872 |
+| Closed | 19 |
+| Opened | 4 |
+
+Closed: `getDamageMultiplier__4itemPQ24item11description`, `getPicSize__4itemiPQ24item11descriptionPiT3`, `globalIcons`, `hudBustCovered`, `hudLump`, `iconLump`, `iconName`, `inventoryPadFindButton__Fi`, `lcursor`, `list.1073`, `mainMenu__Fii`, `moneyTex`, `msgHudSavePoint__FP9Savepoint`, `msgInventoryExit__Fiii`, `objectGetSaveData__FPci`, `p1`, `p2`, `partlist.1103`, `writeMap__3mapPUc`
+
+Opened: `getDataForAllObjects__FPciPiiT2T2`, `shopDrawTaskBar__FP12screenStruct`, `sin`, `updateCursor__FiiiiiP12screenStructi`
+- 2026-10-13 05:16 CDT — agents/w11-front-b — 872 unresolved imports
+
+## agents/w11-crt-a
+
+Merged (merge commit, branch tip `5a30e850`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 of the branch's 36 units selected (25 function bodies; the rest are data and layout units) with fresh
+`input_order` values 4588 through 4620. The host checks (no build line in the notes) build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the three tty queue checks also need -DNORRATH_HOST_CONTRACT). The branch is partial in one respect: its notes say no paired run was done this session, only host checks. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4619 authored inputs, 3545 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected, three units. (1) `w11-crt-a-eh-frame-begin` (`__EH_FRAME_BEGIN__`, a zero-length marker in .eh_frame): with it in the plan the relocatable link dies with a BFD assertion (`elflink.c:9839`, link command 4624); bisecting the link showed it is the only unit that triggers it, and the link passes without it. It is left in the tree and unplanned; the owner needs a different way to express the marker. (2) `w11-crt-a-exit-stub` (`_Exit`) and (3) `w11-crt-a-set-tlb-entry` (`_SetTLBEntry`): authored assembly stubs with no host check at all, so no test that could fail; left in the tree and unplanned. The notes' closed list therefore does not reproduce for `_Exit`, `_SetTLBEntry` and `__EH_FRAME_BEGIN__`; `__throw` and `_ctype_` were attributed to older drafts that are not in the plan and are still unresolved. Also not planned on purpose: the host-only `ctype-check`, `throw-check` and `data-check` directories. The 29 names closed here are the real ones.
+
+| | |
+|---|---|
+| Before | 872 |
+| After | 864 |
+| Closed | 29 |
+| Opened | 21 |
+
+Closed: `DLG_CheckMutex__Fv`, `FlushIopCommand__Fb`, `KbmReaderThread`, `LoadSRSServer__Fv`, `MemcpyD`, `PadData`, `QueueInit`, `QueuePeekReadDone`, `SurfCache`, `TLBInfo`, `VIEEDMASync__Fi`, `_$_19__pointer_type_info`, `__builtin_vec_delete`, `__builtin_vec_new`, `__cplus_type_matcher`, `__extendsfdf2`, `__floatdidf`, `__floatdisf`, `__get_eh_context`, `__get_eh_info`, `__ieee754_acos`, `__ieee754_acosf`, `__ieee754_atan2f`, `__ieee754_fmodf`, `__malloc_current_mallinfo`, `__pack_f`, `__tf19__pointer_type_info`, `__ti5Spell`, `_args`
+
+Opened: `Close__6VIFile`, `InitialiseIopDriver`, `LocalData`, `Read__6VIFilePvi`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `__ieee754_sqrt`, `__throw_type_match_rtti_2`, `atanf`, `dpdiv`, `get_eh_context`, `kdm_rpccall_end`, `mark_device_unplugged`, `process_kbd_data`, `process_mouse_data`, `sFunctionIndex`, `sRecv`, `sSend`, `sSifClient`, `setup_kbd_device`, `setup_mouse_device`
+- 2026-10-13 05:27 CDT — agents/w11-crt-a — 864 unresolved imports
+
+## agents/w11-front-c
+
+Merged (merge commit, branch tip `fb3c4166`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 13 units (4 function bodies, 9 data-word units) with fresh
+`input_order` values 4621 through 4633. All 13 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000; the data checks need the unit source linked in). The notes give no compiled sizes, so the plan's emitted-function records were measured here with the plan's own compiler flags and the repo's ELF reader. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4632 authored inputs, 3549 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The notes say 24 names closed; 23 reproduce (the 24th, `rollover_counter`, was already defined by w10-startup-b and is not a change of this merge). `playerSelectionTask__Fv` was deliberately not attempted by the worker, which is honest and leaves it unresolved. The data-word layouts come from symbol extents and gaps, as each file's header says.
+
+| | |
+|---|---|
+| Before | 864 |
+| After | 842 |
+| Closed | 23 |
+| Opened | 1 |
+
+Closed: `pitch1`, `pitch2`, `playSoundGroup__FP15AnimationHeaderiiP6Point3`, `pmlistchars`, `pmlistcharsused`, `range`, `rcursor`, `sMessagePool`, `sWndMcErr`, `saveBestList`, `saveValid`, `selectionBox`, `shite`, `soundGetDialogSize__Fi`, `soundGroupLimit`, `soundLimit`, `startPos`, `taskBar`, `texClearAlwaysLoadedPages__Fv`, `texLoadAlwaysLoadedPages__Fv`, `tinyIcon`, `v1`, `v2`
+
+Opened: `animPlaySound__FPvP6Point3P9animSoundi`
+- 2026-10-13 05:34 CDT — agents/w11-front-c — 842 unresolved imports
+
+## agents/w11-vi-misc-b
+
+Merged (merge commit, branch tip `d330e54a`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 33 units (25 function bodies; the rest are class-table and data units) with fresh
+`input_order` values 4634 through 4666. All 33 host checks build and exit 0 here (x86_64, -w, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4665 authored inputs, 3574 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 28 here, not down: the class-table units (`_vt$...`) name their slot functions, so each table opens its not-yet-authored slot bodies (`OnDrawSelf`, `OnKeyDown`, `OnKeyUp`, `OnMessage`, `__tf...`, VISet helpers) as new unresolved imports while closing only the table symbol. The worker's closed list (33) reproduces; its private count of 985 was measured on a different base and is not comparable. Counts of unresolved names measure link closure, not progress in authored code, and this merge adds 25 verified function bodies plus the tables.
+
+| | |
+|---|---|
+| Before | 842 |
+| After | 870 |
+| Closed | 33 |
+| Opened | 61 |
+
+Closed: `AddChild__5VIWndP5VIWnd`, `EndConnect__12VIWndConnect`, `Free__12VIWndConnect`, `Free__12VIWndMessage`, `Free__12VIWndOptions`, `Init__12VIWndConnect`, `Init__12VIWndMessage`, `Init__16VIWndReadMessage`, `OnMessage__10VIWndMcErrP5VIWndiii`, `ReloadWords__4VIUI`, `RemoveChild__5VIWndP5VIWnd`, `_$_10VIUIWindow`, `_$_12VIWndConnect`, `_$_12VIWndMessage`, `_$_12VIWndOptions`, `_$_16VIWndReadMessage`, `_$_5VIWnd`, `_$_9VIWndEdit`, `_11VIGUIObject$m_alphaFillMaterial`, `__10VIUIWindow`, `__12VIWndConnect`, `__12VIWndMessage`, `__12VIWndOptions`, `__16VIWndReadMessage`, `__5VIWnd`, `__9VIWndEdit`, `_vt$10VIWndLegal`, `_vt$11VIWndSplash`, `_vt$12VIWndPatcher`, `_vt$15VIWindowManager`, `_vt$20VIWndGenericRenderer`, `_vt$9VIWndDnas`, `_vt$9VIWndEula`
+
+Opened: `Begin__Ct5VISet1ZP5VIWnd`, `ClearText__9VIWndEdit`, `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `Free__13VIBattleMusic`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `_$_13VIBattleMusic`, `_$_t5VISet1ZP5VIWnd`, `__13VIBattleMusic`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
+- 2026-10-13 05:38 CDT — agents/w11-vi-misc-b — 870 unresolved imports
+
+## agents/w11-front-a
+
+Merged (merge commit, branch tip `106ef14b`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 15 of the branch's 16 planned units (10 function bodies; 8 data-view units share 7 sources) with fresh
+`input_order` values 4667 through 4681. Plan entries come from the worker's own generator script, run here with the repo toolchain. The host checks build and run with the flags in each file's Build line (x86_64, -no_pie, pagezero 0x1000); all pass here except the one noted below. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4680 authored inputs, 3584 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-front-a-update-players-ready` (`updatePlayersReady__9Savepoint`). Its host check, as committed at the branch tip (`c7432fd5`, 'Extend the updatePlayersReady host check with a z-only distance case'), fails here with exit 22: the new z-only case expects byte 200 to stay 1 after a call with no near player, but the authored function clears byte 200 first, as its own header comment says. The source and the test disagree, so the test cannot be trusted as written; the source is left in the tree unplanned for its owner to fix. Not re-verified on any other host. The notes' closed list (8 names) therefore reproduces as 7; the data views do not appear as closed names because they are matched by address. `creditsText` was deliberately not committed by the worker and needs a maintainer decision.
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 879 |
+| Closed | 7 |
+| Opened | 16 |
+
+Closed: `HUDDrawFrame__Fv`, `HUDRunFrame__Fv`, `displayGold__FP12playerStructP12screenStruct`, `displayItems__FiiP12screenStructi`, `displayWeight__FP12playerStructP12screenStruct`, `doHelpfulMessage__FiiP12screenStructiiPQ24item11description`, `floorGetSaveInfo__FPci`
+
+Opened: `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drawGold__Fv`, `drewHelpfulMessageHelpBar`, `fontStringSize__FP4FontPci`, `helpfulMessagesDraw__Fv`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `runGold__Fv`, `runHUD__Fi`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`
+- 2026-10-13 05:43 CDT — agents/w11-front-a — 879 unresolved imports
+
+## agents/w11-ctor-b
+
+Merged (merge commit, branch tip `1ed345d7`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 28 units, one constructor each with fresh
+`input_order` values 4682 through 4709. All 28 host checks build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4708 authored inputs, 3612 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The count is unchanged at 879 because each constructor stores its class-table address, so the 28 constructors close 28 names and open the 28 matching `_vt$...` tables. The notes' plan entries give 48 compiled bytes for every constructor; the compiler here gives 44 for 20 of the 28 (48 for 8), and the build rejected the notes' numbers, so the measured sizes are recorded.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 28 |
+| Opened | 28 |
+
+Closed: `__10SkillDodge`, `__12SkillCyclone`, `__12SkillHealing`, `__13SkillDarkness`, `__13SkillEntangle`, `__14SkillColdArrow`, `__14SkillFireArrow`, `__14SkillFireStorm`, `__14SkillHarmTouch`, `__15SkillClericRoot`, `__15SkillConeOfFire`, `__15SkillFireFlares`, `__15SkillFrostStorm`, `__15SkillHolyShield`, `__15SkillHolyStrike`, `__16SkillColdWeapons`, `__16SkillConeOfFrost`, `__16SkillCriticalHit`, `__16SkillDiseaseBolt`, `__16SkillFireWeapons`, `__16SkillGroundPound`, `__17SkillConvertEnemy`, `__17SkillDiseaseTrail`, `__17SkillExplodeArrow`, `__18SkillConvertUndead`, `__18SkillDiseaseShield`, `__18SkillDismissUndead`, `__18SkillHammerOfWrath`
+
+Opened: `_vt$10SkillDodge`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$13SkillDarkness`, `_vt$13SkillEntangle`, `_vt$14SkillColdArrow`, `_vt$14SkillFireArrow`, `_vt$14SkillFireStorm`, `_vt$14SkillHarmTouch`, `_vt$15SkillClericRoot`, `_vt$15SkillConeOfFire`, `_vt$15SkillFireFlares`, `_vt$15SkillFrostStorm`, `_vt$15SkillHolyShield`, `_vt$15SkillHolyStrike`, `_vt$16SkillColdWeapons`, `_vt$16SkillConeOfFrost`, `_vt$16SkillCriticalHit`, `_vt$16SkillDiseaseBolt`, `_vt$16SkillFireWeapons`, `_vt$16SkillGroundPound`, `_vt$17SkillConvertEnemy`, `_vt$17SkillDiseaseTrail`, `_vt$17SkillExplodeArrow`, `_vt$18SkillConvertUndead`, `_vt$18SkillDiseaseShield`, `_vt$18SkillDismissUndead`, `_vt$18SkillHammerOfWrath`
+- 2026-10-13 05:51 CDT — agents/w11-ctor-b — 879 unresolved imports
+
+## agents/w11-ctor-c
+
+Merged (merge commit, branch tip `2f78ae9c`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 26 units from the branch (one constructor each) plus one unit from an earlier package (`w10-item-a-skill-life-tap-get-chance`, `getChance__12SkillLifeTapi`) with fresh
+`input_order` values 4710 through 4735, and 4736 for the extra w10-item-a unit. All 27 host checks in the branch build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The extra unit is the one the earlier integrator held out for having no committed check (see the w10-item-a entries): this branch adds that check (`w11-ctor-c-skill-life-tap-get-chance-check`, which plants two table entries so a swapped order, adjustment or argument fails) and the notes ask for the plan entry, so it is selected now, recorded under package `w10-item-a` with the new check as its host file. The notes' plan sizes were replaced by sizes measured here with the plan's compiler flags. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4735 authored inputs, 3639 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Net count unchanged at 879: the 26 constructors close their 26 names (plus `getChance__12SkillLifeTapi`) and open the matching class tables (`_vt$...`) and `eRand__5Spell`. The worker's other opened names (`lumpFindResource`, `strcmp`, etc.) were already unresolved.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 879 |
+| Closed | 27 |
+| Opened | 27 |
+
+Closed: `__10SkillShock`, `__10SpawnMummyG6Point3PcP10GameObject`, `__12SkillLifeTap`, `__12SkillRiposte`, `__14SkillMultiFire`, `__14SpellHarmTouchiP8CreatureP5Skill`, `__14poisonGasSpellG6Point3iiiP10GameObjecti`, `__15SkillPoisonRain`, `__15SkillShieldBash`, `__15SkillWizardBeam`, `__15SpellConeOfFireiP8CreatureP5Skill`, `__16SkillPoisonArrow`, `__16SkillShockOfFire`, `__16beetleProjectileG6Point3T1iP8CreatureiiiiiP15AnimationHeader`, `__17SkillMinorHealing`, `__17SkillRegeneration`, `__17SkillShockOfFrost`, `__17SkillUndeadShield`, `__17UndeadKnightCloneG6Point3sPPc`, `__18SkillRepulseUndead`, `__18SpellDiseaseShieldiP8CreatureP5Skill`, `__19SkillSummonSkeleton`, `__21SkillLightningWeapons`, `__22SkillRangerCriticalHit`, `__9SkillRoot`, `__9dustCloudG6Point3iiii`, `getChance__12SkillLifeTapi`
+
+Opened: `_vt$10SkillShock`, `_vt$10SpawnMummy`, `_vt$12SkillLifeTap`, `_vt$12SkillRiposte`, `_vt$14SkillMultiFire`, `_vt$14SpellHarmTouch`, `_vt$14poisonGasSpell`, `_vt$15SkillPoisonRain`, `_vt$15SkillShieldBash`, `_vt$15SkillWizardBeam`, `_vt$15SpellConeOfFire`, `_vt$16SkillPoisonArrow`, `_vt$16SkillShockOfFire`, `_vt$16beetleProjectile`, `_vt$17SkillMinorHealing`, `_vt$17SkillRegeneration`, `_vt$17SkillShockOfFrost`, `_vt$17SkillUndeadShield`, `_vt$18SkillRepulseUndead`, `_vt$18SpellDiseaseShield`, `_vt$19SkillSummonSkeleton`, `_vt$21SkillLightningWeapons`, `_vt$22SkillRangerCriticalHit`, `_vt$9DustDevil`, `_vt$9SkillRoot`, `_vt$9dustCloud`, `eRand__5Spell`
+- 2026-10-13 05:56 CDT — agents/w11-ctor-c — 879 unresolved imports
+
+## agents/w11-vi-render-a
+
+Merged (merge commit, branch tip `87716d50`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 31 units (33 function bodies including 2 compiler-emitted helpers) with fresh
+`input_order` values 4737 through 4767. All 31 host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The notes say the three large functions (`Render__16VIParticleSystemlR8VIRaster`, `GlobalInit__14VIEffectVolumeP7VIScene`, `Init__12VIAtmospherelR8VIRasteri`) were also paired against the original privately; that was not re-verified, and the notes record the authored `Init` as 2,292 bytes against 2,844 in the image, so it is a behaviour reconstruction, not a byte match. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4766 authored inputs, 3672 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 44: these large functions call many helpers (matrix, billboard, material, flora and file routines) and read three image-named data tables (`sFogCard`, `sDustCard`, `sFallEffect`) that nobody defines yet, which opens 75 names while closing 31. The worker's closed list (31) reproduces.
+
+| | |
+|---|---|
+| Before | 879 |
+| After | 923 |
+| Closed | 31 |
+| Opened | 75 |
+
+Closed: `CalcAxes__8VICameraRC7VIVect3R7VIVect3N22`, `Clear__11VIClipStack`, `Clear__12VIAtmosphereR7VIScene`, `Clear__14VIQueryTriList`, `Clear__16VIParticleSystemR12VIDictionary`, `Clear__19VIRadialFloraSystem`, `Clear__9VICollide`, `GlobalFree__14VIEffectVolume`, `GlobalInit__14VIEffectVolumeP7VIScene`, `Identity__10VIMatrix44`, `InitSolidFill__10VIMaterial`, `Init__11VIClipStack`, `Init__12VIAtmospherelR8VIRasteri`, `Init__14VIQueryTriListiRC6VIBBoxRC7VIVect3f`, `Init__16VIParticleSystemlP8VIRasteri`, `Parse__9VICSFFileR6VIFileR10VIESFParseR7VIScene`, `RasterDeferred__12VINameSpriteR8VIRaster`, `RenderSky__12VIAtmosphereR7VISceneR8VICamera`, `RenderWeather__12VIAtmosphereR7VISceneR8VICamera`, `Render__16VIParticleSystemlR8VIRaster`, `Reset__11VIClipStack`, `SetLayerBlendMode__10VIMateriali16VIAlphaBlendMode`, `Update__12VIAtmosphereR7VISceneR8VICameralff`, `Update__8VICameraRC7VIVect3R7VIVect3N22R10VIMatrix44`, `_$_12VIAtmosphere`, `_$_13VIHSpriteAnim`, `_$_14VIQueryTriList`, `_$_16VIParticleSystem`, `__12VIAtmosphere`, `__14VIQueryTriList`, `__16VIParticleSystem`
+
+Opened: `Allocate__14VIQueryTriList`, `BeginBillboards__8VIRasterPP11VIBillboardi`, `Begin__Ct6VIPool1ZP12VICollBuffer`, `CalcFrustum__8VICameraRC10VIMatrix44T1`, `ClearAllFireballs__12VIAtmosphere`, `ClearAllSplashes__12VIAtmosphere`, `Clear__13VIHSpriteAnim`, `Clear__t6VIPool1ZP12VICollBuffer`, `Clear__t7VIArray1Z11VIClipEntry`, `Clear__t7VIArray1Z7VIPlane`, `Clear__t7VIArray1Z7VIVect3`, `Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm`, `DrawCenteredString__8VIRasteriRC7VIVect3RC10VIColor32FPCc`, `EndBillboards__8VIRaster`, `End__Ct6VIPool1ZP12VICollBuffer`, `Identity__10VIMatrix33`, `Init__10VIMateriali`, `Init__9VIClipperi`, `Init__9VIFrustum`, `Init__t7VIArray1Z11VIClipEntryi`, `Init__t7VIArray1Z7VIPlanei`, `Init__t7VIArray1Z7VIVect3i`, `Intersects__C6VIRectRC6VIRect`, `Invert__10VIMatrix44RC10VIMatrix44`, `Mul__10VIMatrix44RC10VIMatrix44T1`, `Mul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect4`, `Normalize__7VIVect3`, `Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode`, `Parse__10VIESFParseR9VIObjFileR7VIScene`, `Plane__C9VIFrustumi`, `ProcessTransitions__12VIAtmosphereR7VISceneff`, `ProcessWeather__12VIAtmosphereR7VISceneR8VICamera`, `ReleaseAllParticleDefinitions__16VIParticleSystemR12VIDictionary`, `ReleaseCollBuffer__9VICollidei`, `Remove__7VILNode`, `RenderSplashes__12VIAtmosphereR7VISceneR8VICamera`, `RenderStars__12VIAtmosphereR7VISceneR8VICamera`, `RotateHPR__10VIMatrix44RC7VIVect3`, `RotateX__10VIMatrix44f`, `RotateY__10VIMatrix44f`, `RotateZ__10VIMatrix44f`, `Scale__10VIMatrix44f`, `SetDither__10VIMateriali`, `SetEffectMix__12VIAtmospheref`, `SetIntensity__12VIAtmospheref`, `SetLavastormIntensity__12VIAtmospheref`, `SetLayerFillType__10VIMateriali18VIMaterialFillType`, `SetLayerModulate__10VIMaterialii`, `SetLayerTextureLODBias__10VIMaterialif`, `SetZTest__10VIMateriali`, `SetZWrite__10VIMateriali`, `Sprite__7VIScenei`, `Stop__13VISoundDevicei`, `VINameDeferSort__FPCvT0`, `Volume__14VIQueryTriListRC6VIBBox`, `_$_17VIParticleEmitter`, `_$_9VIObjFile`, `_$_t6VIPool1ZP20VIParticleDefinition`, `_$_t7VIArray1Z17VIRadialFloraInst`, `_12VINameSprite$NameDefers`, `_12VINameSprite$NumNameDefers`, `_14VIEffectVolume$mScene`, `__17VIParticleEmitter`, `__9VIObjFile`, `__t6VIPool1ZP20VIParticleDefinition`, `cosf`, `mStarParticleDist`, `qsort`, `sDustCard`, `sFallEffect`, `sFogCard`, `sRainParticleDist`, `sceVu0CopyMatrix`, `sinf`
+- 2026-10-13 06:06 CDT — agents/w11-vi-render-a — 923 unresolved imports
+
+## agents/w11-vi-render-c
+
+Merged (merge commit, branch tip `996f6e80`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 30 of the branch's 31 units (28 function bodies) with fresh
+`input_order` values 4768 through 4797. All 30 selected host contracts build and exit 0 here (x86_64, -no_pie, pagezero 0x1000). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4796 authored inputs, 3700 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-vi-render-c-scene-update-sound-emitters` (`UpdateSoundEmitters`). Its host contract builds but crashes with exit 139 when run normally here, hangs or crashes under several flag variations, and only exited 0 once under a debugger, so no repeatable pass was obtained; the source stays in the tree unplanned for its owner to make the contract deterministic. The official count goes UP by 40: the world, spell-effect, trail and sprite code these functions call opens 70 helper and data names while 30 close.
+
+| | |
+|---|---|
+| Before | 923 |
+| After | 963 |
+| Closed | 30 |
+| Opened | 70 |
+
+Closed: `CalcProfileBlend__7VIWorldRC7VIVect3R21VITerrainProfileBlend`, `Clear__17VISceneSoundTrack`, `Clear__19VISpellEffectSystem`, `Clear__7VIWorld`, `CreateSprite__7VIScene12VISpriteTypei`, `GetEnvFlags__7VISceneRC7VIVect3`, `InitTimeOfDay__7VIScene`, `Init__12VIWndOptionsP7VIScene`, `Init__17VISceneSoundTrack`, `Init__19VISpellEffectSystemP7VIScene`, `Init__7VIWorldiiiifRC7VIVect3RC6VIBBox`, `Process__19VISpellEffectSystem`, `RenderByFrustum__7VIWorldR15VISceneRendVars`, `RenderByPortals__7VIWorldR15VISceneRendVars`, `RenderDeferredList__7VISceneR8VICameraii`, `RenderShadows__7VIScene`, `SetPersonalLightMode__7VIScene19VIPersonalLightMode`, `SetPersonalLight__7VISceneRC7VIVect3fRC10VIColor32F`, `SetupTimeOfDayFog__7VISceneR21VITerrainProfileBlendUi`, `SetupTimeOfDay__7VISceneR8VICameraR21VITerrainProfileBlendUi`, `VISplashFxReset__Fv`, `VITrailFxClear__FR8VIRasterR12VIDictionary`, `VITrailFxInit__FR8VIRasterR12VIDictionary`, `VITrailFxRender__FlR8VIRasterR8VICamera`, `_$_19VISpellEffectSystem`, `_$_7VIWorld`, `_8VIRaster$DBuffer`, `__19VISpellEffectSystem`, `__7VIWorld`, `norrath_world_c_view_4861e8`
+
+Opened: `Add__t6VIPool1ZP8VISpriteRCP8VISprite`, `CalcTimeOfDayClipPlanes__7VISceneR21VITerrainProfileBlendRfT2`, `Clear__11VIWorldTree`, `Clear__t7VIArray1Z13VIWorldRegion`, `Clear__t7VIArray1Z6VIZone`, `DeletePlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `FindLeaf__C7VIWorldRC7VIVect3RiT2`, `FirstPlayback__19VISpellEffectSystem`, `GetOvercastInterp__12VIAtmosphere`, `GetTime__7VIScene`, `GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane`, `Init__11VIWorldTreeii`, `Init__13VIBattleMusicP7VIScene`, `Init__6VIZone`, `Init__t7VIArray1Z13VIWorldRegioni`, `Init__t7VIArray1Z6VIZonei`, `NextPlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `Playback__19VISpellEffectSystemi`, `Pop__11VIClipStack`, `Process__19VISpellEffectDriver`, `PushFrustum__11VIClipStackR8VICamera`, `ReleaseAllSpellEffects__19VISpellEffectSystemR12VIDictionary`, `RenderByVolume__7VIWorldR15VISceneRendVars`, `RenderRoom__6VIZoneiR15VISceneRendVars`, `RenderShadow__7VIScenei`, `Render__9VITrailFxR8VIRasterR8VICamera`, `SetFog__8VIRasteriffRC10VIColor32F`, `SetPretranslations__6VIZoneR8VIRasterR8VICamera`, `SetProfiles__7VIWorld`, `SetTracks__17VISceneSoundTrack`, `SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend`, `SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend`, `Stop__19VISpellEffectSystemi`, `Update__9VITrailFxl`, `VISplashFx$sGlowDir`, `VISplashFx$sGlowStep`, `VISplashFx$sLastAnimTime`, `VISplashFx$sNextBoltDelay`, `VISplashFx$sNextFlockDelay`, `VITrailFx$sActiveTrailFx`, `VITrailFx$sFreeTrailFx`, `VITrailFx$sInactiveTrailFx`, `VITrailFx$sMaterialHandle`, `VITrailFx$sTrailFxPool`, `VIWndOptions$sBattleMusicText`, `_$_11VIWorldTree`, `_$_19VISpellEffectDriver`, `_$_9VITrailFx`, `_$_t6VIPool1ZP13VISpellEffect`, `_$_t7VIArray1Z13VIWorldRegion`, `_$_t7VIArray1Z6VIZone`, `__11VILODSprite`, `__11VIWorldTree`, `__12VINameSprite`, `__12VIPointLight`, `__12VISkinSprite`, `__13VIFloraSprite`, `__13VIGroupSprite`, `__13VIPointSprite`, `__13VISoundSprite`, `__14VISimpleSprite`, `__16VIParticleSprite`, `__19VIStreamAudioSprite`, `__20VIEffectVolumeSprite`, `__9VICSprite`, `__9VIHSprite`, `__9VITrailFx`, `__t6VIPool1ZP13VISpellEffect`, `__t7VIArray1Z13VIWorldRegion`, `__t7VIArray1Z6VIZone`
+- 2026-10-13 06:16 CDT — agents/w11-vi-render-c — 963 unresolved imports
+
+## Not merged: agents/w11-vi-misc-a and agents/w11-vi-render-b
+
+Both read at their branch tips (`9549e91d` and `dc3d80c6`, over an hour old, notes with all five
+summary sections). Each holds one function per directory (34 and 31) and **no committed check
+of any kind**: no `host_check.cpp`, `host_contract.cpp` or other test file anywhere in the diff
+for either branch. The only evidence offered is a private R5900 interpreter comparison outside
+git, which a reviewer cannot repeat, so no committed function has a test that could fail
+(same ground as `w10-actor-i`, `w10-startup-d`, `w8-spell-static-init-b` and `w9-render-math-a`).
+`check_source_snapshot.py` also refuses a package record without host files. `w11-vi-misc-a` was
+merged locally to look at it and the merge was reset before anything was selected or pushed.
+The owners can add committed host checks per function (as `w11-vi-misc-b`, `w11-vi-render-a` and
+`w11-vi-render-c` do) and push again; the units could then be selected unchanged.
+- 2026-10-13 06:16 CDT — rejection notes (vi-misc-a, vi-render-b), no package — 963 unresolved imports
+
+## agents/w11-game-a
+
+Merged (merge commit, branch tip `bd741fbe`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 23 units (19 function bodies; the rest are data units) with fresh
+`input_order` values 4798 through 4820. All 23 host contracts build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs, so the x86_64 recipe used for earlier entries was not available; these checks are address-width independent and pass on arm64). The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4819 authored inputs, 3719 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list reproduces (30 names here). Four names the worker introduced are not image symbol names (`norrath_net_flag_bytes_48681c`, three `norrath_overlay_sSend/sFunctionIndex/sIopFunctionData` buffers); they are authored placeholders for unnamed image addresses, listed among the opened names. Two large functions (`gameAttackResolver__FP10GameObjectT0ffiiiiPQ24item11descriptionb` and `routePlot__FR10RouteQueue`) were deliberately not attempted and stay unresolved.
+
+| | |
+|---|---|
+| Before | 963 |
+| After | 945 |
+| Closed | 30 |
+| Opened | 12 |
+
+Closed: `RandomTeleportSpell__FP10GameObjectP6Point3f`, `SetIopFunction__FUii`, `__7AntWaveP10GameObjectG6Point3si`, `__8ListHeadRC8ListHead`, `attack__14SpellHarmTouchP10GameObjectPiT2`, `compareStatePackets__FP11statePacketT0i`, `eqGroup`, `floorAdd__FG6Point3sfii`, `jumpGateAddDestination__Fv`, `jumpGateInit__FiPcc`, `jumpGatePos`, `jumpHidden`, `moreRecent__Fii`, `netDisconnect__Fv`, `netLogDisable`, `netPrediction`, `netPredictionFastForward`, `netTrueStep`, `nmEqGroups`, `nmWGroups`, `objectAddString__FPcP10GameObject`, `objectAddToGrid__FP10GameObject`, `playerRaisePlayer__FiG6Point3`, `receiveControlPacket__FPiib`, `route_dirs`, `setResource__10GameObjectPQ210GameObject11resourceMap`, `wGroup`, `worldCanPass__FP12_worldHeaderG6Point3T1fi`, `worldGetDoorHeight__FP12_worldHeaderi`, `worldHitscanWithObjects__FP12_worldHeaderG6Point3T1fP10GameObjectPP10GameObjectii`
+
+Opened: `_vt$7AntWave`, `expandList`, `freeList`, `harm1`, `harm2`, `lightFloorSprite__FG6Point3`, `norrath_net_flag_bytes_48681c`, `norrath_overlay_sFunctionIndex_11edf00`, `norrath_overlay_sIopFunctionData_11edf08`, `norrath_overlay_sSend_11edb00`, `resurectEffect__6Player`, `spriteCount`
+- 2026-10-13 06:41 CDT — agents/w11-game-a — 945 unresolved imports
+
+## agents/w11-ctor-a
+
+Merged (merge commit, branch tip `10003f24`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units, one constructor each with fresh
+`input_order` values 4821 through 4847. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's own generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4846 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (27) reproduces. The two PhProp units add `sources/w11-ctor-a-common/phprop.hpp` to their header closure, as the notes say.
+
+| | |
+|---|---|
+| Before | 945 |
+| After | 943 |
+| Closed | 27 |
+| Opened | 25 |
+
+Closed: `__10MummySnakeG6Point3sP10GameObjectT3P15AnimationHeader`, `__10PoisonRainiP10GameObjectG6Point3P5SkillP15AnimationHeader`, `__11BoltGoRoundG6Point3siP15AnimationHeader`, `__11DiseaseBoltsiG6Point3P10GameObjectP5Skill`, `__11SkillCharge`, `__12ShockOfFrostG6Point3siP10GameObjectP5Skill`, `__12SkillArchery`, `__12SkillBlessed`, `__14HateProjectileG6Point3sP10GameObjectP5SkilliP15AnimationHeader`, `__15FrostStormSpellG6Point3ifiP10GameObjectT1`, `__15ShockProjectileG6Point3sP10GameObjectP5Skilli`, `__16PoisonProjectilePQ210GameObject11resourceMapiiiiG6Point3T6ifP8Creature`, `__18SkillAncestralCall`, `__18SkillBlindingLight`, `__19ColdArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19FireArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__19MultiFireProjectileG6Point3sP10GameObjectiP5Skill`, `__21PoisonArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__22ExplodeArrowProjectileG6Point3sP10GameObjectiP5Skill`, `__6PhPropG6Point3P8Matrix34PcN23liPQ24item11descriptionf`, `__6PhPropG6Point3sP12_modelHeaderP14AnimationStatePcN25liPQ24item11descriptionf`, `__8HateBeamiG6Point3T2P8CreatureP5Skill`, `__8HateSoulG6Point3T1iii`, `__9DustDevilG6Point3`, `__9FireStormiP10GameObjectG6Point3P5Skill`, `__9SkillBash`, `getSkillRank__6Playeri`
+
+Opened: `_vt$10MummySnake`, `_vt$10PoisonRain`, `_vt$11BoltGoRound`, `_vt$11DiseaseBolt`, `_vt$11SkillCharge`, `_vt$12ShockOfFrost`, `_vt$12SkillArchery`, `_vt$12SkillBlessed`, `_vt$14HateProjectile`, `_vt$15FrostStormSpell`, `_vt$15ShockProjectile`, `_vt$16PoisonProjectile`, `_vt$18SkillAncestralCall`, `_vt$18SkillBlindingLight`, `_vt$19ColdArrowProjectile`, `_vt$19FireArrowProjectile`, `_vt$19MultiFireProjectile`, `_vt$21PoisonArrowProjectile`, `_vt$22ExplodeArrowProjectile`, `_vt$8HateBeam`, `_vt$8HateSoul`, `_vt$9FireStorm`, `_vt$9SkillBash`, `modelGetPrimaryBone__FP12_modelHeaderi`, `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`
+- 2026-10-13 06:45 CDT — agents/w11-ctor-a — 943 unresolved imports
+
+## agents/w11-vt-a
+
+Merged (merge commit, branch tip `cbbc20c9`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 vtable data units (no function bodies) with fresh
+`input_order` values 4848 through 4874. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Each checks every slot through the table (name, zero adjustment, null last slot, slot count). The worker's second check, `docs/agents/w11-vt-a-object-check.py`, compares compiled objects with the private image; it was not run here (no image used) and is recorded only as the worker's claim. Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4873 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The official count goes UP by 15: the tables name their slot functions, so closing 27 `_vt$` tables opens 42 not-yet-authored slot bodies (`__tf...`, `clone__...`, `msg_run__...`, Skill ramp helpers, and others). The compiler emitted no function bodies for the tables. The worker's closed list reproduces.
+
+| | |
+|---|---|
+| Before | 943 |
+| After | 958 |
+| Closed | 27 |
+| Opened | 42 |
+
+Closed: `_vt$10CloudGiant`, `_vt$10GameObject`, `_vt$10SkillBlunt`, `_vt$11PushTrigger`, `_vt$13LooseIceChunk`, `_vt$15GlowingCylinder`, `_vt$15SkillBallOfHate`, `_vt$18SkillDiseaseEffect`, `_vt$3Ant`, `_vt$3Ice`, `_vt$3Orc`, `_vt$4Lamp`, `_vt$4Prop`, `_vt$5Ghoul`, `_vt$5Gnome`, `_vt$5Mummy`, `_vt$5PhIce`, `_vt$6Cthulu`, `_vt$6Goblin`, `_vt$7Critter`, `_vt$7OniBall`, `_vt$8Creature`, `_vt$8Innoruuk`, `_vt$8ItemProp`, `_vt$8JumpGate`, `_vt$8RollDoor`, `_vt$9MummyKing`
+
+Opened: `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_5PhIce`, `_$_7OniBall`, `__tf10SkillBlunt`, `__tf13LooseIceChunk`, `__tf15GlowingCylinder`, `__tf15SkillBallOfHate`, `__tf18SkillDiseaseEffect`, `__tf5PhIce`, `__tf7OniBall`, `canCast__5SkillP8Creature`, `cast__5SkilliP8CreatureG6Point3s`, `clone__13LooseIceChunk`, `clone__15GlowingCylinder`, `clone__5PhIce`, `clone__7OniBall`, `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `evaluateRampAtRank__5Skillii`, `evaluateRampAtRank__5SkilliiP10GameObject`, `evaluateRampAtRank__5SkilliiP8ListHead`, `getEnergyCost__5Skilli`, `getIcon__5Skill`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__5Skilli`, `getRampDamage__5SkilliifiPiT5`, `getRankDescription__10SkillBluntPUsi`, `getRankDescription__5SkillPUsi`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__5Skilli`, `initRamps__15SkillBallOfHate`, `initRamps__18SkillDiseaseEffect`, `initRamps__5Skill`, `msg_collision__7OniBallP10GameObject`, `msg_draw__15GlowingCylinder`, `msg_draw__7OniBall`, `msg_run__15GlowingCylinder`, `msg_run__5PhIce`, `msg_run__7OniBall`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`
+- 2026-10-13 06:49 CDT — agents/w11-vt-a — 958 unresolved imports
+
+## agents/w11-vt-b
+
+Merged (merge commit, branch tip `dae218f9`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 26 vtable data units (no function bodies) with fresh
+`input_order` values 4875 through 4900. All 26 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs); each calls the table through every slot and fails on a wrong slot name, order, adjustment or null slot. The notes' image comparison of the compiled tables is a private script outside git and was not re-verified. The plan entries come from the notes' table (source and hash) with compiled sizes measured here. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4899 authored inputs, 3746 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Net count rises by 6: closing 26 `_vt$` tables opens 32 not-yet-authored slot bodies (`__tf...`, `clone__...`, `initRamps__...`, `run__...`). Four of the tables (`_vt$12UndeadKnight`, `_vt$17UndeadKnightClone`, `_vt$7Ulthork`, `_vt$7Vampire`) close names opened by the w10-actor-o merge.
+
+| | |
+|---|---|
+| Before | 958 |
+| After | 964 |
+| Closed | 26 |
+| Opened | 32 |
+
+Closed: `_vt$10StaticFire`, `_vt$10WaterSpout`, `_vt$10WeaponRack`, `_vt$11SpiderQueen`, `_vt$11VampireLord`, `_vt$12UndeadKnight`, `_vt$13SkillHateBeam`, `_vt$13SkillSlashing`, `_vt$14WoodElfSoldier`, `_vt$15SkillHateEffect`, `_vt$17SkillResistPoison`, `_vt$17UndeadKnightClone`, `_vt$17VehicleBodySphere`, `_vt$18SkillPoisonWeapons`, `_vt$19SkillDiseaseWeapons`, `_vt$19SpellHornOmenEffect`, `_vt$22SpellPlanarSteelEffect`, `_vt$5Torch`, `_vt$6Switch`, `_vt$6Wraith`, `_vt$7Ulthork`, `_vt$7Vampire`, `_vt$7Weather`, `_vt$7WebTrap`, `_vt$8SuperOrc`, `_vt$9WaveMaker`
+
+Opened: `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarSteelEffect`, `_$_7Weather`, `__tf13SkillHateBeam`, `__tf13SkillSlashing`, `__tf15SkillHateEffect`, `__tf17SkillResistPoison`, `__tf17VehicleBodySphere`, `__tf18SkillPoisonWeapons`, `__tf19SkillDiseaseWeapons`, `__tf19SpellHornOmenEffect`, `__tf22SpellPlanarSteelEffect`, `__tf7Weather`, `canQueue__5Spell`, `clone__17VehicleBodySphere`, `clone__7Weather`, `draw__5Spell`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getRankDescription__13SkillSlashingPUsi`, `getRankDescription__17SkillResistPoisonPUsi`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `initRamps__13SkillHateBeam`, `initRamps__15SkillHateEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `msg_collision__17VehicleBodySphereP10GameObject`, `msg_run__7Weather`, `run__19SpellHornOmenEffectG6Point3s`, `run__22SpellPlanarSteelEffectG6Point3s`
+- 2026-10-13 06:53 CDT — agents/w11-vt-b — 964 unresolved imports
+
+## agents/w11-data-a
+
+Merged (merge commit, branch tip `4acd5c09`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 29 units (3 function bodies; the rest are data tables and zero-storage objects) with fresh
+`input_order` values 4901 through 4929. All 29 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). The notes point to `docs/agents/w11-data-a-plan-entries.json`, which is not in the branch, so the plan entries were derived here from the 29 unit directories (one source each, hash from the committed file, emitted functions measured with the plan's compiler flags). The item and named-item table units include the existing items-player `rows.hpp` headers instead of a second copy, so they add two names for bytes the `items-player` view units already carry; the old view units stay in the plan. The prefix and suffix tables hold attribute key strings in the same kind as the already-published item tables; their non-string words are unexplained (the notes say so). The worker's private paired runs for the three functions were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4928 authored inputs, 3749 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (29) reproduces and nothing new opened (the callees it names were already unresolved).
+
+| | |
+|---|---|
+| Before | 964 |
+| After | 935 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `P_CreateParticleSystem__Fv`, `_4item$itemTable`, `_4item$namedItemTable`, `_4item$prefixTable`, `_4item$suffixTable`, `_4item$undEnable`, `_6Wraith$s_wraithCount`, `ant_msg_run_particle_7d7170`, `ballParticle`, `ballSmokeParticle`, `ballSparkParticle`, `cFireParticle`, `cSmokeParticle`, `candle2Particle`, `chestResourceList`, `drawParticleEmitter__FG6Point3P11ParticleDefP19ParticleEmitterDataisbN25`, `drawWorldParticleEmitter__FP13PolysetHeader`, `ectopileParticle1`, `femBarbResourceMap`, `femaleDarkElfResourceMap`, `femaleEruditeResourceMap`, `femaleHighElfResourceMap`, `femaleWoodElfResourceMap`, `innoruukParticle2`, `innoruukParticle3`, `innoruukResourceMap`, `jumpParticle2`, `jumpParticleJump`, `jumpParticleOn`
+
+Opened: none
+- 2026-10-13 06:58 CDT — agents/w11-data-a — 935 unresolved imports
+
+## agents/w11-data-b
+
+Merged (merge commit, branch tip `32244e82`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 7 units (1 function body, `norrath_construct_Vehicle`; the rest are five resource-map tables and one buffer) with fresh
+`input_order` values 4930 through 4936. All 7 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs; the notes say the Vehicle contract needs -O0 -fno-builtin -ffp-contract=off, which is in its Build line and was applied). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4935 authored inputs, 3750 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed (7) and opened (1) lists reproduce; its private count (879 to 873) was measured on an older base, here the effect is 935 to 929. `norrath_construct_Vehicle` carries two storage objects it needs whose original names are not established (`norrath_vehicle_count_word`, `norrath_vehicle_list_bytes`), recorded as an inferred authored name in the notes. The five resource maps are file-name tables of the kind already published for `skeletonResMap`.
+
+| | |
+|---|---|
+| Before | 935 |
+| After | 929 |
+| Closed | 7 |
+| Opened | 1 |
+
+Closed: `maleBarbResourceMap`, `maleDarkElfResourceMap`, `maleEruditeResourceMap`, `maleHighElfResourceMap`, `maleWoodElfResourceMap`, `mummy_miniboss_name_buffer_7d7e20`, `norrath_construct_Vehicle`
+
+Opened: `processParams__7VehiclePPc`
+- 2026-10-13 07:02 CDT — agents/w11-data-b — 929 unresolved imports
+
+## agents/w11-data-c
+
+Merged (merge commit, branch tip `5a7c9b69`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 units (1 function body, `norrath_web_construct`; the rest are particle objects, view objects, a resource map and literals) with fresh
+`input_order` values 4937 through 4963. All 27 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Plan sizes were measured here with the plan's compiler flags. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4962 authored inputs, 3751 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Closed 29, opened none, and seven of the names closed here were opened by the w10-actor-o merge (six `*_msg_run_particle_7d7*` objects and `udkResourceMap`). `norrath_web_construct` is a second copy of the body of `__3Webii` (the notes explain an alias-only unit does not work in this object format). `w11-data-c-rtti-literals-482430` overlaps the unselected `w9-rtti-vtables-entities-a-view-482424`; only the w11 one is selected. The particle objects are global 80-byte zero objects that are not placed at the original addresses and whose same-named file-local twins elsewhere are different objects, as the notes say.
+
+| | |
+|---|---|
+| Before | 929 |
+| After | 900 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `norrath_rtti_entities_a_view_482430`, `norrath_rtti_entities_a_view_482434`, `norrath_rtti_entities_a_view_482438`, `norrath_w10_actor_d_view_7d6c40`, `norrath_w10_actor_d_view_7d7720`, `norrath_w10_actor_d_view_7d7770`, `norrath_w10_actor_n_view_7d6d80`, `norrath_w10_actor_n_view_8d63c0`, `norrath_w10_actor_n_view_8d6460`, `norrath_w9_startup_crt_b_view_483b70`, `norrath_w9_startup_crt_b_view_485380`, `norrath_web_construct`, `npc_msg_run_particle_7d7dd0`, `shockwaveInnoruukParticle`, `shockwaveInnoruukParticle2`, `smokeParticle`, `soulParticle`, `summonhammerParticle`, `torch_msg_run_particle_7d7ba0`, `torch_msg_run_particle_7d7c40`, `torch_msg_run_particle_7d7c90`, `trailParticle`, `trailParticleSpark`, `udkResourceMap`, `undead_knight_clone_msg_run_particle_7d7e80`, `undead_knight_clone_msg_run_particle_7d7ed0`, `undead_knight_msg_run_particle_7d7e30`, `vaporParticle`, `waveMainParticle`
+
+Opened: none
+- 2026-10-13 07:06 CDT — agents/w11-data-c — 900 unresolved imports
+
+## agents/w11-rend-b
+
+Merged (merge commit, branch tip `cb01786e`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 14 units (13 function bodies; one data unit) with fresh
+`input_order` values 4964 through 4977. All 14 host checks build and exit 0 here, run as native arm64 (Rosetta on this machine had stopped running x86_64 programs). Seven units include `math_types.hpp`, which the header closure carries. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 4976 authored inputs, 3764 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (26) reproduces; its opened list names four functions that are now unresolved (`attachmentLightPos` is a data name the new bodies read). `lightIntensity`, `lightStart` and `marble` stay unresolved because their sources (`w10-render-b-data-*`) are not in the plan. Three large routines were deliberately not attempted (`waterStep`, `vqDecompress__FP8_texturei`, `megatileGenerate__FP12_worldHeader`).
+
+| | |
+|---|---|
+| Before | 900 |
+| After | 878 |
+| Closed | 26 |
+| Opened | 4 |
+
+Closed: `lightSetupAmbientWorld__FP6Packeti`, `lightSetupForCharacter__FP6PacketG6Point3`, `lightSetupForWorld__FP6PacketP13PolysetHeader`, `lightUpdatePosition__FP5Light`, `matInvert__FP8Matrix44T0`, `matMakeYPRScale34_ReallySlow__FP8Matrix34G6Point3sssf`, `matUntransform34Vec__FP6Point3P8Matrix34T0`, `modelDrawAttachment__FP12_modelHeaderP8_textureiT0P11_drawRecordUlii`, `modelGetAttachmentPos__FP12_modelHeaderP14AnimationStateiP6Point3T3`, `modelGetCharAttachmentMatrix__FP12_modelHeaderG6Point3sP14AnimationStateiP8Matrix34f`, `modelGetShadowPos__FP12_modelHeaderP8Matrix34iP6Point3Pf`, `modelSetFade__Fc`, `modelSetRelightAttachment__FG6Point3`, `mt_dyndat`, `mt_throwaway`, `scaleTex`, `splashInfoBits`, `waterList`, `waterListBack`, `waterTexture`, `waveFroth`, `waveMainAlternate`, `waveRandomFoam`, `waveSplashBig`, `waveSplashSmall`, `waveTrail`
+
+Opened: `attachmentLightPos`, `findLightsInBox_forWorld__FG3BoxPP5Lighti`, `modelSetupAttachment__FP6PacketP12_modelHeaderT1i`, `worldQueryLightMap__FP12_worldHeaderG6Point3`
+- 2026-10-13 07:10 CDT — agents/w11-rend-b — 878 unresolved imports
+
+## agents/w11-actor-a
+
+Merged (merge commit, branch tip `e5d5b016`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 37 units (41 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 4978 through 5014. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` as the notes require (Rosetta on this machine had stopped running x86_64 programs; without that flag the generateDust check fails on this host's fused multiply-adds, which is the flag requirement the notes state). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs and mutation runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5013 authored inputs, 3805 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. The worker's closed list (37 of 38) reproduces. Opened 28: bounce/move/projectile, a few particle and resource-map objects that are file-local in the image, and the helper matrix and effect routines the new bodies call.
+
+| | |
+|---|---|
+| Before | 878 |
+| After | 869 |
+| Closed | 37 |
+| Opened | 28 |
+
+Closed: `_$_11FireBomblet`, `_$_13MissileWeapon`, `_$_8GutChunk`, `__tf11FireBomblet`, `__tf13MissileWeapon`, `__tf8GutChunk`, `addTurnAnimation__8AntQueen`, `bCrossingWater__8Froglock`, `bSpawnMummy__9MummyKing`, `bSpawnSnake__9MummyKing`, `clone__11FireBomblet`, `clone__13MissileWeapon`, `clone__8GutChunk`, `commanderValid__3Orc`, `deathEffect__8InnoruukP10GameObjectP12_modelHeaderP14AnimationStateG6Point3sff`, `deleteCommander__3Orc`, `detach__11FireBomblet`, `dropItem__3Orci`, `dropItem__6Goblini`, `dropWeapon__5Demon`, `findClosestShadowBall__13MissileWeaponP10GameObject`, `findEvadeDestination__8AntQueen`, `generateDust__7CyclopsG6Point3`, `loseBodyPart__10BlackWidowi`, `loseBodyPart__10FireBeetlei`, `loseBodyPart__3Anti`, `msg_collision__13MissileWeaponP10GameObject`, `msg_draw__11FireBomblet`, `msg_draw__13MissileWeapon`, `msg_draw__3NPC`, `msg_draw__8GutChunk`, `msg_run__11FireBomblet`, `msg_run__13MissileWeapon`, `msg_run__8GutChunk`, `setHold__11FireBombleti`, `spawnItems__9AutoChest`, `subTurnAnimation__8AntQueen`
+
+Opened: `__12ParticlePropG6Point3i`, `__13FireBombletJrP11FireBomblet`, `__6PhPropG6Point3P12_modelHeaderP8_textureliPQ24item11descriptionf`, `__8GutChunkG6Point3sP12_modelHeaderP14AnimationStatePcN25liif`, `__ti10Projectile`, `bounce__11FireBomblet`, `disintoInnoruukParticle`, `fxFlyingFire__FP6Point3T0ffb`, `fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii`, `getDeflectionChance__10SkillDodgei`, `goblinWeaponResourceMap`, `hitParticleDust2`, `matMul__FP8Matrix33N20`, `matMul__FP8Matrix34P8Matrix33T0`, `matScale__FP8Matrix34fff`, `matTranspose__FP8Matrix33T0`, `move__10ProjectileG6Point3`, `particleBloodDrop`, `particleEctoDrop`, `particleSlimeDrop`, `playerBlockSparks__6Playeri`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `snowParticle1`, `sparkParticle`, `trailParticleFire`, `trailParticleSmoke`
+- 2026-10-13 07:15 CDT — agents/w11-actor-a — 869 unresolved imports
+
+## agents/w11-actor-b
+
+Merged (merge commit, branch tip `9e1f3012`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 37 units, one function body each with fresh
+`input_order` values 5015 through 5051. All 37 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5050 authored inputs, 3842 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Closed 38 here against the worker's 37 (one extra name, already a callee of an earlier package, now defined). `msg_run__6Player` (27,496 bytes) was deliberately not attempted by the worker and stays unresolved.
+
+| | |
+|---|---|
+| Before | 869 |
+| After | 846 |
+| Closed | 38 |
+| Opened | 15 |
+
+Closed: `_$_10Projectile`, `_$_12RecallEffect`, `_$_6PhProp`, `_$_6Player`, `_$_6Sparks`, `__tf10Projectile`, `__tf12RecallEffect`, `__tf6Player`, `__ti10Projectile`, `clone__10Projectile`, `clone__12RecallEffect`, `clone__6PhProp`, `clone__6Player`, `drawAttachments__6PlayerP11_drawRecordf`, `findCommander__3Orc`, `getModel__6Player`, `initType__3Orcb`, `init__4Propi`, `isEnemy__6PlayerP10GameObject`, `joinCommander__3Orc`, `leaveCommander__3Orc`, `loseBodyPart__8Scorpioni`, `msg_collision__6PlayerP10GameObject`, `msg_draw__12RecallEffect`, `msg_draw__6PhProp`, `msg_draw__6Player`, `msg_getPokeName__6PhPropPUsi`, `msg_hurt__6PlayerfP10GameObjecti`, `msg_poke__6PhPropi`, `msg_run__12RecallEffect`, `msg_run__6PhProp`, `msg_save__7ShooterPc`, `playerDrawWeaponEffects__6Playerf`, `setActiveChunks__6Player`, `setOnFire__6PhPropi`, `setState__6Playeri`, `setWeapon__3Orc`, `stun__6Playeri`
+
+Opened: `__10StaticFireG6Point3fif`, `__8ItemPropG6Point3PQ24item11descriptionP8Matrix34`, `__tf11SpellCharge`, `__tf15SpellHolyShield`, `gameFlags`, `healColor`, `healPulse`, `hitSomething__11SpellChargeP10GameObject`, `inventoryItemCheckSlot__FiPQ24item11description`, `manaAbsorbOnHit__15SpellHolyShield`, `maybeDrawMultiPlayerMarkers__6Player`, `modelGetCollision__FP12_modelHeaderi`, `modelSetAttachmentFlip__Fv`, `playerItemScan__6PlayerP3padi`, `shipOn`
+- 2026-10-13 07:19 CDT — agents/w11-actor-b — 846 unresolved imports
+
+## agents/w11-actor-c
+
+Merged (merge commit, branch tip `4e4eb4ad`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 36 units (38 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 5052 through 5087. All 36 host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). The notes' compiled sizes were accepted unchanged by the build. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5086 authored inputs, 3880 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. Seven new `norrath_w11_actor_c_view_*` names are address-named data views the new bodies read; their definitions are not yet authored.
+
+| | |
+|---|---|
+| Before | 846 |
+| After | 830 |
+| Closed | 36 |
+| Opened | 20 |
+
+Closed: `ModifyRPM__5Wheelf`, `SetNaturalRPM__5Wheel`, `__5WheelPcifP7Vehiclei`, `__tf14SpellHarmTouch`, `__tf6Sparks`, `addImpulse__7VehicleP6Point3T1i`, `addSmokelet__10StaticFire`, `bActive__3Web`, `breakWeb__3Web`, `canGrab__11SpiderQueen`, `clone__14WoodElfSoldier`, `clone__6Sparks`, `clone__6Wraith`, `convertToBat__11VampireLord`, `convertToLord__11VampireLord`, `doWaveletCollision__9WaveMakerP6Point3i`, `doWaveletReflection__9WaveMakerP6Point3`, `doWavelet__9WaveMakerP6Point3P8Matrix33i`, `drawArrow__14WoodElfSoldier`, `draw__3WebG6Point3`, `dropItem__14WoodElfSoldieri`, `dropTreasure__4itemG6Point3iffffffPci`, `getMinibossName__6Wraith`, `getWaveletMat__9WaveMakerifP8Matrix33`, `msg_collision__6SparksP10GameObject`, `msg_draw__6Sparks`, `msg_run__14WoodElfSoldier`, `msg_run__6Sparks`, `msg_run__6Wraith`, `msg_trigger__14WoodElfSoldieri`, `reset__3Web`, `run__3WebG6Point3i`, `setState__14WoodElfSoldieri`, `setState__6Wraithi`, `start__3WebG6Point3P8Creaturefi`, `updateSmokelets__10StaticFire`
+
+Opened: `P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf`, `TurnToFaceEdge__14WoodElfSoldier`, `__7WebTrapG6Point3T1`, `__8SkeletonG6Point3sPPcPci`, `__tf5Spell`, `_vt$5Wheel`, `createNamedRandom__4itemPQ24item11descriptioniii`, `createRandomCombineableItem__4itemPQ24item11descriptionsPc`, `dropGold__4itemG6Point3i`, `joinCommander__14WoodElfSoldier`, `moveArrow__14WoodElfSoldier`, `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `norrath_w11_actor_c_view_7d7110`, `norrath_w11_actor_c_view_7d7540`, `norrath_w11_actor_c_view_7d7590`, `norrath_w11_actor_c_view_7d7630`, `norrath_w11_actor_c_view_7d7680`, `soundPan2D__FiP6Point3f`, `start__3WebG6Point3T1i`
+- 2026-10-13 07:23 CDT — agents/w11-actor-c — 830 unresolved imports
+
+## agents/w11-rend-a
+
+Merged (merge commit, branch tip `c61650d0`; the notes have the five summary sections: imports
+closed, imports opened, plan entries, authored but never executed, unknown). 27 of the branch's 28 units (29 function bodies including compiler-emitted helpers) with fresh
+`input_order` values 5088 through 5114. All 27 selected host checks build and exit 0 here, run as native arm64 with `-ffp-contract=off` (Rosetta on this machine had stopped running x86_64 programs). Plan entries come from the worker's generator script, run here with the repo toolchain. The worker's private paired runs were not re-verified. The worker's private paired runs were not
+re-verified. Compiled sizes are not image sizes and no byte match is claimed. The worker ran no
+full build; this integration did: 5113 authored inputs, 3909 function bodies, zero COMMON,
+214 tool tests passed. Per-unit object hashes in the snapshot are the ones the full build
+produced. No EE or game execution. NOT selected: `w11-rend-a-p-start-lightning` (`P_StartLightning__FG6Point3T0iiffUi`). Its host check (through `w11-rend-a-common/rend.hpp`) has a `static_assert(sizeof(void*) == 4)`, so it only builds as 32-bit-pointer x86_64, and x86_64 programs would not run on this machine at the time (Rosetta stalled; native arm64 fails the static_assert). The test exists but was not run here, so the unit is held back until someone can run it; its source stays in the tree unplanned. The notes' closed list otherwise reproduces. The five light/halo data objects (`globalShadowBrightness`, `halos`, `haloColor`, `lightInc`, `lightInfo`) stay unresolved: their sources are the `w10-render-b-data-*` units that were not selected earlier for lacking a committed check.
+
+| | |
+|---|---|
+| Before | 830 |
+| After | 827 |
+| Closed | 27 |
+| Opened | 24 |
+
+Closed: `DrawWebSplay__FG6Point3iT0iiifP10GameObjectP12_modelHeaderP14AnimationState`, `GetLastTarget__6Camera`, `GetToggle__6Camera`, `P_DeleteTrail__Fi`, `P_MoveLightning__FiG6Point3T1ii`, `P_RevolveTrail__FiG6Point3N31i`, `SetNoTargetUpdates__6Camerai`, `__4LineP4LineT1i`, `analDecompress__11CDecompressP15BitBufferReaderPQ211CDecompress9analStatePUcii`, `animRandomizeTime__FP14AnimationState`, `animRemove__FP14AnimationStateP15AnimationHeaderf`, `checkYawReset__6Camera`, `clampZoomMag__6Camera`, `crystalTex`, `drawTexture__FR6Packetiiiiiiiii`, `drawWaterPatch__FP12_worldHeaderP13PolysetHeaderi`, `drawWorldDynamicLight__FP13PolysetHeader`, `drawWorldObject__FP12_worldHeaderP13PolysetHeaderi`, `evaluateAnimation__FP14AnimationStateb`, `fastestRotDirection__FssPi`, `findLightsAtPoint__FG6Point3PP5Lighti`, `fxRunWeapon__FPQ24item11descriptionP12_modelHeaderP13fxWeaponStateG6Point3sT1P14AnimationStatefiifP8Matrix34`, `fxWeaponToDust__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `fxWeaponToSparkles__FP12_modelHeaderT0P14AnimationStateG6Point3sffi`, `gameCloseToCamera__FP6Point3`, `halfFrustumMode`, `lightAdd__FP5Light`
+
+Opened: `P_ExtendSwoosh__FiG6Point3T1f`, `P_LightningIsLive__Fi`, `extractRotation__FP4Quat`, `getDynamicLightNumber__FP13PolysetHeader`, `iceSwordParticle`, `lightDisableVolumetricLighting__Fv`, `lightGrid`, `lightSetupAmbientAndDirOnly__FP6PacketG6Point3f`, `lightSetupAmbientOnly__FP6Packet`, `lightSetupNonDirectionalDirectional__FP6Packet`, `lightningSwordParticle`, `makeQuaternion__FP4Quatsfff`, `modelDrawCharacter__FP6PacketP12_modelHeaderli`, `modelGetWeaponTrailPos__FP12_modelHeaderP6Point3T1`, `newFlameSwordParticle1`, `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2`, `particleWeaponBlood`, `particleWeaponEcto`, `particleWeaponSlime`, `quatTransform__FP6Point3P4QuatT0`, `smoothPatch__FP12_worldHeaderP16WaterPolysetData`
+- 2026-10-13 07:28 CDT — agents/w11-rend-a — 827 unresolved imports
+
+## Not merged: agents/w11-creature-a (and standing rejections)
+
+Rejected at tip `a91fc08f` (over an hour old; notes with all five summary sections). Its 20 units
+have no committed check of any kind: the diff holds only sources, one shared header
+(`w11-creature-a-common/words.hpp`) and the notes file. The only evidence is a private R5900
+interpreter comparison outside git, which a reviewer cannot repeat, so no committed function has a
+test that could fail. Not merged, nothing selected. The owner can add per-function host checks and
+push again.
+
+The other unmerged branches are at the tips recorded in their earlier entries, so those rejections
+stand: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w8-spell-static-init-b`
+(`ed20fab5`), `w9-render-math-a` (`adff0bdc`, one of 26 units has a check), `w11-vi-misc-a`
+(`9549e91d`) and `w11-vi-render-b` (`dc3d80c6`). `codex/norrath-runtime-binding` and
+`integration/wave` are not worker packages and stay with their owners.
+- 2026-10-13 07:28 CDT — rejection notes (creature-a), nothing merged — 827 unresolved imports
+
+## Re-verification of the shared branch (integrator restart)
+
+Re-ran on `integration/mini` at `2aa01e26` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded count of 827 reproduces. No non-text files appear in the last 40 commits' changes. Unmerged `origin/agents/*` branches are all at the tips of their recorded rejections, so no new package was merged.
+- 2026-10-13 07:40 CDT — re-verification, nothing merged — 827 unresolved imports
+
+## Re-verification of the shared branch (second integrator restart)
+
+Re-ran at `c7243a6d` (equal to `origin/codex/norrath-first-reconstruction`): 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); `--check-plan` valid; the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded 827 reproduces. All seven unmerged `origin/agents/*` branches are still at the tips of their recorded rejections (`w10-actor-i` `e1ad5dba`, `w10-startup-d` `cb1c9c26`, `w11-creature-a` `a91fc08f`, `w11-vi-misc-a` `9549e91d`, `w11-vi-render-b` `dc3d80c6`, `w8-spell-static-init-b` `ed20fab5`, `w9-render-math-a` `adff0bdc`), so nothing new was merged.
+- 2026-10-13 07:50 CDT — re-verification, nothing merged — 827 unresolved imports
+
+## Deferred, still in progress (not merged)
+
+At 07:55 CDT seven new branches were waiting: `agents/w12-hud-loop-a` (`1654eba2`), `w12-hud-loop-b` (`efa42429`), `w12-startup-rt-a` (`a622417f`), `w12-startup-rt-b` (`e063d409`), `w12-startup-rt-c` (`d0780019`), `w12-wnd-a` (`a66ae9b0`) and `w12-wnd-b` (`98f10627`). Every tip is under 10 minutes old and none has a notes file yet (so no five summary sections), so by the merge rule none qualifies. Nothing was merged or reviewed for rules; they need a later pass once they have notes or their tips are over 45 minutes old. Shared-branch code is unchanged since the re-verification above (only log commits followed), so the 827 count was not re-measured in this pass.
+- 2026-10-13 07:56 CDT — w12-* deferred as in progress, nothing merged — 827 unresolved imports
+
+## Pass at 08:00 CDT (third integrator restart)
+
+Shared branch `a9d34022` differs from the fully re-verified `c7243a6d` only by this log file, so the 827 count was not re-measured by a new build. Re-ran 214 tool tests (OK), `check_source_snapshot.py` (PASS, 5113 authored inputs) and `--check-plan` (valid). The eight `w12-*` branches (`hud-loop-a/b`, `startup-rt-a/b/c`, `vicont-a`, `wnd-a/b`) still have tips seconds to minutes old and no notes file, so none qualifies under the merge rule; they are still being pushed to. The seven earlier rejections stand at their recorded tips. Nothing merged.
+- 2026-10-13 08:02 CDT — w12-* still in progress, nothing merged — 827 unresolved imports
+
+## Re-verification by the replacement integrator (08:06 CDT) and rejection of agents/w12-vicont-a
+
+Re-ran on `7d4ad0c6` (equal to `origin/codex/norrath-first-reconstruction`) before any merge: 214 tool tests passed; `check_source_snapshot.py` passed (5113 authored inputs); the full partial build with the repo EE toolchain completed with 5113 source compilations, 3909 function bodies, 827 unresolved symbols and zero COMMON. The recorded 827 reproduces. The earlier entries record no broken repo rule; no non-text files in recent merges.
+
+Not merged: `agents/w12-vicont-a` (tip `5e5bf51e`, notes have all five summary sections). 26 functions, but only the seven `DestroyPool` instances have a committed host check. The other 19 (all `Allocate`, `Clear`, `Add`, `Begin` instances) rely only on a private R5900 interpreter comparison outside git, which a reviewer cannot repeat, so no committed function among them has a test that could fail. Same reasoning as `w11-creature-a`. The owner can add host checks per function and push again.
+
+## agents/w12-startup-rt-b
+
+Merged (merge commit, branch tip `be23f36c`; notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 10 units (8 functions, 2 data objects: `mcErrOn`, `norrath_overlay_sFunctionIndex_11edf00`) with fresh `input_order` values 5115 through 5124. Every unit has a committed `host_check.cpp`; all 10 build and exit 0 here (native arm64, `-ffp-contract=off`). The worker's private interpreter comparisons of `lgFrameEncode`, `lgFrameDecode` and `mark_device_unplugged` were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5123 authored inputs, 3917 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+The notes' measured count (804) does not reproduce: it assumed selecting three further existing units. These stay unselected, for the reasons earlier entries recorded: `simloop-services-pad-mtap-state` (data-only, no host check), `view-exit-sound-resource` (no host check), `sony-cd-vblank-views` (redefines names cd-archive already defines), and `level-anim-load-loader-failure-word` (absolute-symbol alias, forbidden by PORTABLE_BUILD). The real result is 827 to 820.
+
+| | |
+|---|---|
+| Before | 827 |
+| After | 820 |
+| Closed | 9 |
+| Opened | 2 |
+
+Closed: `gsm_frame_decode`, `gsm_frame_encode`, `initialise_event_list`, `kdm_rpccall_end`, `lgFrameDecode`, `lgFrameEncode`, `mark_device_unplugged`, `mcErrOn`, `norrath_overlay_sFunctionIndex_11edf00`.
+
+Opened: `gsm_decode`, `gsm_encode` (the codec routines the new adapters tail-call; nobody has authored them).
+- 2026-10-13 08:32 CDT — agents/w12-startup-rt-b — 820 unresolved imports
+
+## agents/w12-skill-c
+
+Merged (merge commit, branch tip `5ac9b853`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 19 units, one function body each, with fresh `input_order` values 5125 through 5143. All 19 committed host checks build (linked with the unit's source) and exit 0 here, native arm64 with `-ffp-contract=off`. Compiled sizes are not image sizes and no byte match is claimed. The branch also carried commit `b36220f6` (`w12-particle-data-a-ctor-particle-prop`), a unit owned by `agents/w12-particle-data-a`; its two files were left out of the merge commit and arrive with that package. Full build with the final snapshot: 5142 authored inputs, 3936 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (19) reproduces; the 12 other requested skill names stay open.
+
+| | |
+|---|---|
+| Before | 820 |
+| After | 801 |
+| Closed | 19 |
+| Opened | 0 |
+
+Closed: `cast__5SkilliP8CreatureG6Point3s`, `getEnergyCost__5Skilli`, `getLevelRequirement__10SkillBlunti`, `getLevelRequirement__13SkillSlashingi`, `getLevelRequirement__17SkillResistPoisoni`, `getLevelRequirement__5Skilli`, `getSkillPointCost__10SkillBlunti`, `getSkillPointCost__13SkillSlashingi`, `getSkillPointCost__17SkillResistPoisoni`, `getSkillPointCost__5Skilli`, `initRamps__13SkillHateBeam`, `initRamps__15SkillBallOfHate`, `initRamps__15SkillHateEffect`, `initRamps__18SkillDiseaseEffect`, `initRamps__18SkillPoisonWeapons`, `initRamps__19SkillDiseaseWeapons`, `initRamps__5Skill`, `piggyBackCast__5SkilliP8CreatureG6Point3s`, `tweekRank__5Skillii`.
+
+Opened: none.
+- 2026-10-13 09:03 CDT — agents/w12-skill-c — 801 unresolved imports
+
+## agents/w12-skill-b
+
+Merged (merge commit, branch tip `30de77a0`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 2 units with fresh `input_order` values 5144 and 5145: `canCast__5SkillP8Creature` (one function body) and a data unit holding 30 skill vtables (144 bytes each, 18 slots; no function bodies). Both committed host checks build and exit 0 here (native arm64, `-ffp-contract=off`): the canCast check over nine pointer pairs, and the table check over all 30 tables and 510 non-null slots. The worker's EE-side relocation and byte-compare checks were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5144 authored inputs, 3937 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+The official count **rises**: the notes' own private build also showed 827 to 1031, and the worker reported 235 opened slot imports. Here it is 801 to 1005 (31 closed, 235 opened). The opened names are the real slot functions the tables point at (`__tf*` type-info routines and the per-class `canCast`, `cast`, `getIcon`, `getRankDescription`, `evaluateRampAtRank` and similar methods); none was guessed. They are honest unresolved dependencies, not a regression of authored code, and they become closable work for the remaining skill packages.
+
+| | |
+|---|---|
+| Before | 801 |
+| After | 1005 |
+| Closed | 31 |
+| Opened | 235 |
+
+Closed: `_vt$15SkillPoisonRain`, `_vt$15SkillShieldBash`, `_vt$15SkillWizardBeam`, `_vt$16SkillColdWeapons`, `_vt$16SkillConeOfFrost`, `_vt$16SkillCriticalHit`, `_vt$16SkillDiseaseBolt`, `_vt$16SkillFireWeapons`, `_vt$16SkillGroundPound`, `_vt$16SkillPoisonArrow`, `_vt$16SkillShockOfFire`, `_vt$17SkillConvertEnemy`, `_vt$17SkillDiseaseTrail`, `_vt$17SkillExplodeArrow`, `_vt$17SkillMinorHealing`, `_vt$17SkillRegeneration`, `_vt$17SkillShockOfFrost`, `_vt$17SkillUndeadShield`, `_vt$18SkillAncestralCall`, `_vt$18SkillBlindingLight`, `_vt$18SkillConvertUndead`, `_vt$18SkillDiseaseShield`, `_vt$18SkillDismissUndead`, `_vt$18SkillHammerOfWrath`, `_vt$18SkillRepulseUndead`, `_vt$19SkillSummonSkeleton`, `_vt$21SkillLightningWeapons`, `_vt$22SkillRangerCriticalHit`, `_vt$9SkillBash`, `_vt$9SkillRoot`, `canCast__5SkillP8Creature`
+
+Opened: `__tf15SkillPoisonRain`, `__tf15SkillShieldBash`, `__tf15SkillWizardBeam`, `__tf16SkillColdWeapons`, `__tf16SkillConeOfFrost`, `__tf16SkillCriticalHit`, `__tf16SkillDiseaseBolt`, `__tf16SkillFireWeapons`, `__tf16SkillGroundPound`, `__tf16SkillPoisonArrow`, `__tf16SkillShockOfFire`, `__tf17SkillConvertEnemy`, `__tf17SkillDiseaseTrail`, `__tf17SkillExplodeArrow`, `__tf17SkillMinorHealing`, `__tf17SkillRegeneration`, `__tf17SkillShockOfFrost`, `__tf17SkillUndeadShield`, `__tf18SkillAncestralCall`, `__tf18SkillBlindingLight`, `__tf18SkillConvertUndead`, `__tf18SkillDiseaseShield`, `__tf18SkillDismissUndead`, `__tf18SkillHammerOfWrath`, `__tf18SkillRepulseUndead`, `__tf19SkillSummonSkeleton`, `__tf21SkillLightningWeapons`, `__tf22SkillRangerCriticalHit`, `__tf9SkillBash`, `__tf9SkillRoot`, `canCast__15SkillPoisonRainP8Creature`, `canCast__15SkillShieldBashP8Creature`, `canCast__16SkillColdWeaponsP8Creature`, `canCast__16SkillCriticalHitP8Creature`, `canCast__16SkillDiseaseBoltP8Creature`, `canCast__16SkillFireWeaponsP8Creature`, `canCast__16SkillGroundPoundP8Creature`, `canCast__17SkillDiseaseTrailP8Creature`, `canCast__17SkillShockOfFrostP8Creature`, `canCast__17SkillUndeadShieldP8Creature`, `canCast__18SkillAncestralCallP8Creature`, `canCast__18SkillBlindingLightP8Creature`, `canCast__18SkillConvertUndeadP8Creature`, `canCast__18SkillDiseaseShieldP8Creature`, `canCast__18SkillHammerOfWrathP8Creature`, `canCast__19SkillSummonSkeletonP8Creature`, `canCast__21SkillLightningWeaponsP8Creature`, `canCast__22SkillRangerCriticalHitP8Creature`, `canCast__9SkillBashP8Creature`, `cast__15SkillPoisonRainiP8CreatureG6Point3s`, `cast__15SkillShieldBashiP8CreatureG6Point3s`, `cast__15SkillWizardBeamiP8CreatureG6Point3s`, `cast__16SkillColdWeaponsiP8CreatureG6Point3s`, `cast__16SkillConeOfFrostiP8CreatureG6Point3s`, `cast__16SkillCriticalHitiP8CreatureG6Point3s`, `cast__16SkillDiseaseBoltiP8CreatureG6Point3s`, `cast__16SkillFireWeaponsiP8CreatureG6Point3s`, `cast__16SkillGroundPoundiP8CreatureG6Point3s`, `cast__16SkillPoisonArrowiP8CreatureG6Point3s`, `cast__16SkillShockOfFireiP8CreatureG6Point3s`, `cast__17SkillConvertEnemyiP8CreatureG6Point3s`, `cast__17SkillDiseaseTrailiP8CreatureG6Point3s`, `cast__17SkillExplodeArrowiP8CreatureG6Point3s`, `cast__17SkillMinorHealingiP8CreatureG6Point3s`, `cast__17SkillRegenerationiP8CreatureG6Point3s`, `cast__17SkillShockOfFrostiP8CreatureG6Point3s`, `cast__17SkillUndeadShieldiP8CreatureG6Point3s`, `cast__18SkillAncestralCalliP8CreatureG6Point3s`, `cast__18SkillBlindingLightiP8CreatureG6Point3s`, `cast__18SkillConvertUndeadiP8CreatureG6Point3s`, `cast__18SkillDiseaseShieldiP8CreatureG6Point3s`, `cast__18SkillDismissUndeadiP8CreatureG6Point3s`, `cast__18SkillHammerOfWrathiP8CreatureG6Point3s`, `cast__18SkillRepulseUndeadiP8CreatureG6Point3s`, `cast__19SkillSummonSkeletoniP8CreatureG6Point3s`, `cast__21SkillLightningWeaponsiP8CreatureG6Point3s`, `cast__22SkillRangerCriticalHitiP8CreatureG6Point3s`, `cast__9SkillBashiP8CreatureG6Point3s`, `cast__9SkillRootiP8CreatureG6Point3s`, `getEnergyCost__15SkillPoisonRaini`, `getEnergyCost__15SkillShieldBashi`, `getEnergyCost__15SkillWizardBeami`, `getEnergyCost__16SkillColdWeaponsi`, `getEnergyCost__16SkillConeOfFrosti`, `getEnergyCost__16SkillCriticalHiti`, `getEnergyCost__16SkillDiseaseBolti`, `getEnergyCost__16SkillFireWeaponsi`, `getEnergyCost__16SkillGroundPoundi`, `getEnergyCost__16SkillPoisonArrowi`, `getEnergyCost__16SkillShockOfFirei`, `getEnergyCost__17SkillConvertEnemyi`, `getEnergyCost__17SkillDiseaseTraili`, `getEnergyCost__17SkillExplodeArrowi`, `getEnergyCost__17SkillMinorHealingi`, `getEnergyCost__17SkillShockOfFrosti`, `getEnergyCost__17SkillUndeadShieldi`, `getEnergyCost__18SkillAncestralCalli`, `getEnergyCost__18SkillBlindingLighti`, `getEnergyCost__18SkillConvertUndeadi`, `getEnergyCost__18SkillDiseaseShieldi`, `getEnergyCost__18SkillDismissUndeadi`, `getEnergyCost__18SkillHammerOfWrathi`, `getEnergyCost__18SkillRepulseUndeadi`, `getEnergyCost__19SkillSummonSkeletoni`, `getEnergyCost__21SkillLightningWeaponsi`, `getEnergyCost__22SkillRangerCriticalHiti`, `getEnergyCost__9SkillBashi`, `getEnergyCost__9SkillRooti`, `getIcon__15SkillShieldBash`, `getIcon__15SkillWizardBeam`, `getIcon__16SkillColdWeapons`, `getIcon__16SkillConeOfFrost`, `getIcon__16SkillCriticalHit`, `getIcon__16SkillDiseaseBolt`, `getIcon__16SkillFireWeapons`, `getIcon__16SkillGroundPound`, `getIcon__16SkillPoisonArrow`, `getIcon__16SkillShockOfFire`, `getIcon__17SkillConvertEnemy`, `getIcon__17SkillDiseaseTrail`, `getIcon__17SkillExplodeArrow`, `getIcon__17SkillMinorHealing`, `getIcon__17SkillShockOfFrost`, `getIcon__17SkillUndeadShield`, `getIcon__18SkillAncestralCall`, `getIcon__18SkillBlindingLight`, `getIcon__18SkillConvertUndead`, `getIcon__18SkillDiseaseShield`, `getIcon__18SkillDismissUndead`, `getIcon__18SkillHammerOfWrath`, `getIcon__18SkillRepulseUndead`, `getIcon__19SkillSummonSkeleton`, `getIcon__21SkillLightningWeapons`, `getIcon__22SkillRangerCriticalHit`, `getIcon__9SkillBash`, `getIcon__9SkillRoot`, `getLevelRequirement__15SkillPoisonRaini`, `getLevelRequirement__15SkillShieldBashi`, `getLevelRequirement__15SkillWizardBeami`, `getLevelRequirement__16SkillColdWeaponsi`, `getLevelRequirement__16SkillCriticalHiti`, `getLevelRequirement__16SkillDiseaseBolti`, `getLevelRequirement__16SkillFireWeaponsi`, `getLevelRequirement__16SkillShockOfFirei`, `getLevelRequirement__17SkillDiseaseTraili`, `getLevelRequirement__17SkillMinorHealingi`, `getLevelRequirement__17SkillRegenerationi`, `getLevelRequirement__17SkillShockOfFrosti`, `getLevelRequirement__17SkillUndeadShieldi`, `getLevelRequirement__18SkillBlindingLighti`, `getLevelRequirement__18SkillDiseaseShieldi`, `getLevelRequirement__18SkillDismissUndeadi`, `getLevelRequirement__18SkillHammerOfWrathi`, `getLevelRequirement__18SkillRepulseUndeadi`, `getLevelRequirement__19SkillSummonSkeletoni`, `getLevelRequirement__21SkillLightningWeaponsi`, `getLevelRequirement__22SkillRangerCriticalHiti`, `getLevelRequirement__9SkillBashi`, `getLevelRequirement__9SkillRooti`, `getRankDescription__15SkillPoisonRainPUsi`, `getRankDescription__15SkillShieldBashPUsi`, `getRankDescription__15SkillWizardBeamPUsi`, `getRankDescription__16SkillColdWeaponsPUsi`, `getRankDescription__16SkillConeOfFrostPUsi`, `getRankDescription__16SkillCriticalHitPUsi`, `getRankDescription__16SkillDiseaseBoltPUsi`, `getRankDescription__16SkillFireWeaponsPUsi`, `getRankDescription__16SkillGroundPoundPUsi`, `getRankDescription__16SkillPoisonArrowPUsi`, `getRankDescription__16SkillShockOfFirePUsi`, `getRankDescription__17SkillConvertEnemyPUsi`, `getRankDescription__17SkillDiseaseTrailPUsi`, `getRankDescription__17SkillExplodeArrowPUsi`, `getRankDescription__17SkillMinorHealingPUsi`, `getRankDescription__17SkillRegenerationPUsi`, `getRankDescription__17SkillShockOfFrostPUsi`, `getRankDescription__17SkillUndeadShieldPUsi`, `getRankDescription__18SkillAncestralCallPUsi`, `getRankDescription__18SkillBlindingLightPUsi`, `getRankDescription__18SkillConvertUndeadPUsi`, `getRankDescription__18SkillDiseaseShieldPUsi`, `getRankDescription__18SkillDismissUndeadPUsi`, `getRankDescription__18SkillHammerOfWrathPUsi`, `getRankDescription__18SkillRepulseUndeadPUsi`, `getRankDescription__19SkillSummonSkeletonPUsi`, `getRankDescription__21SkillLightningWeaponsPUsi`, `getRankDescription__22SkillRangerCriticalHitPUsi`, `getRankDescription__9SkillBashPUsi`, `getRankDescription__9SkillRootPUsi`, `getSkillPointCost__15SkillPoisonRaini`, `getSkillPointCost__15SkillWizardBeami`, `getSkillPointCost__16SkillColdWeaponsi`, `getSkillPointCost__16SkillDiseaseBolti`, `getSkillPointCost__16SkillFireWeaponsi`, `getSkillPointCost__17SkillDiseaseTraili`, `getSkillPointCost__17SkillRegenerationi`, `getSkillPointCost__17SkillShockOfFrosti`, `getSkillPointCost__17SkillUndeadShieldi`, `getSkillPointCost__18SkillBlindingLighti`, `getSkillPointCost__18SkillDiseaseShieldi`, `getSkillPointCost__18SkillDismissUndeadi`, `getSkillPointCost__18SkillHammerOfWrathi`, `getSkillPointCost__18SkillRepulseUndeadi`, `getSkillPointCost__19SkillSummonSkeletoni`, `getSkillPointCost__21SkillLightningWeaponsi`, `initRamps__15SkillPoisonRain`, `initRamps__15SkillShieldBash`, `initRamps__15SkillWizardBeam`, `initRamps__16SkillColdWeapons`, `initRamps__16SkillConeOfFrost`, `initRamps__16SkillCriticalHit`, `initRamps__16SkillDiseaseBolt`, `initRamps__16SkillFireWeapons`, `initRamps__16SkillGroundPound`, `initRamps__16SkillPoisonArrow`, `initRamps__16SkillShockOfFire`, `initRamps__17SkillConvertEnemy`, `initRamps__17SkillDiseaseTrail`, `initRamps__17SkillExplodeArrow`, `initRamps__17SkillMinorHealing`, `initRamps__17SkillRegeneration`, `initRamps__17SkillShockOfFrost`, `initRamps__17SkillUndeadShield`, `initRamps__18SkillAncestralCall`, `initRamps__18SkillBlindingLight`, `initRamps__18SkillConvertUndead`, `initRamps__18SkillDiseaseShield`, `initRamps__18SkillDismissUndead`, `initRamps__18SkillHammerOfWrath`, `initRamps__18SkillRepulseUndead`, `initRamps__19SkillSummonSkeleton`, `initRamps__21SkillLightningWeapons`, `initRamps__22SkillRangerCriticalHit`, `initRamps__9SkillBash`, `initRamps__9SkillRoot`
+- 2026-10-13 09:18 CDT — agents/w12-skill-b — 1005 unresolved imports
+
+## agents/w12-particle-data-a
+
+Merged (merge commit, branch tip `eb936143`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 3 units with fresh `input_order` values 5146 through 5148: `__12ParticlePropG6Point3i` (one function body, 144 compiled bytes) and two data units (`batParams`; `healColor` and `healPulse`). All three committed host checks build and exit 0 here (native arm64, `-ffp-contract=off`). Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5147 authored inputs, 3938 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (4) reproduces and no import opened. `healColor` and `healPulse` had been opened by `w11-actor-b`. The 25 other names in the package's scope stay open; the notes give their owners (existing initializers must export them, no duplicate zero-filled objects were added).
+
+| | |
+|---|---|
+| Before | 1005 |
+| After | 1001 |
+| Closed | 4 |
+| Opened | 0 |
+
+Closed: `__12ParticlePropG6Point3i`, `batParams`, `healColor`, `healPulse`
+
+Opened: none
+- 2026-10-13 09:27 CDT — agents/w12-particle-data-a — 1001 unresolved imports
+
+## agents/w12-startup-rt-a
+
+Merged (merge commit, branch tip `fa82cbf7`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 25 units with fresh `input_order` values 5149 through 5171 (three assembly units use the `authored_entry_asm` profile, the rest `authored_cpp`; entries come from the branch's `w12-startup-rt-a-plan-entries.json`, hashes re-checked here). All committed checks run here and pass: 20 host contracts or checks run natively; the object checks run against objects compiled here with the repo EE toolchain and the plan flags; `dpdiv` links the authored `__unpack_d`/`__pack_d`. `SyncDCache`, `QueuePeekWriteDone` and `InitialiseIopDriver` need `-DNORRATH_HOST_CONTRACT`, as their headers say. The worker's private interpreter comparisons were not re-verified. The two shared check headers and the unselected units' files were added to the snapshot file list (the checker requires every source file recorded). Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5170 authored inputs, 3954 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (files stay in the snapshot, with no plan entry): `w12-startup-rt-a-throw` (`__throw`), whose notes state it does not match the original at the handler entry (`$v0`, `$ra` and argument registers differ; the equivalent `w10-startup-a-throw` was rejected for the same gap), and `w12-startup-rt-a-eh-frame-begin` (`__EH_FRAME_BEGIN__`), whose notes say its zero-length object in the `.eh_frame` input section crashes `ld -r` with a BFD assertion once another object relocates against it, and the replacement lives in a non-standard section that needs a linker-script ordering nobody has reviewed. Both names stay unresolved. The linker-defined symbols (`_gp`, `_fbss`, `_end`, `_bssend`, `_srsctorsstart`, `_srsctorsend`) stay unresolved by design. `_malloc_r`, `_free_r` and `amx_Exec` are name providers that forward to existing authored functions; the notes record a defect in the `amx_Exec` forward (the authored executor keeps opcode numbers in cells and stores its own dispatch table, and one count loop differs), which belongs to the script-amx owner.
+
+The notes' count (21 closed, 17 opened, 827 to 823) does not apply: with `__throw` and `__EH_FRAME_BEGIN__` left out, 20 close here and 15 open.
+
+| | |
+|---|---|
+| Before | 1001 |
+| After | 996 |
+| Closed | 20 |
+| Opened | 15 |
+
+Closed: `AdjustTime`, `InitialiseIopDriver`, `IsEventModifier`, `LocalData`, `QueuePeekWriteDone`, `SyncDCache`, `_Exit`, `_SetTLBEntry`, `__throw_type_match_rtti_2`, `_ctype_`, `_free_r`, `_kExitTLBHandler`, `_malloc_r`, `_sceSifMInitCheck`, `amx_Exec`, `atanf`, `cosf`, `dpdiv`, `ee_retbuf_sel`, `get_eh_context`
+
+Opened: `__dynamic_cast_2`, `__kernel_cosf`, `__kernel_sinf`, `__tf16__attr_type_info`, `__tf16__func_type_info`, `__tfv`, `_sceSDC`, `addhour`, `convertfrombcd`, `converttobcd`, `eh_context_static`, `init_reg_size_table`, `norrath_ee_exception_frame`, `subhour`, `upcast__C16__user_type_infoRC9type_infoPvPPv`
+- 2026-10-13 09:40 CDT — agents/w12-startup-rt-a — 996 unresolved imports
+
+## agents/w12-wnd-b
+
+Merged (merge commit, branch tip `2e92b9e2`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 30 units, one function body or data object each (23 window-handler, type-function and set-template functions, `VIWndOptions$sBattleMusicText`, and the five class tables `_vt$5VIWnd`, `_vt$9VIWndEdit`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`; the notes' `__tf5VIWnd` is in the branch but its symbol was already defined elsewhere), with fresh `input_order` values 5172 through 5201. All 30 committed host checks run natively here and pass. `w12-wnd-b-dnas-onmessage` needs `-fno-builtin-memset` with this host's clang: its check replaces `memset` to record the call, and clang inlines the constant 16-byte `memset` at -O0 before the stub sees it, so the trace misses it; with the flag the check passes (a host compiler artifact, not an authored-code defect). The worker's private paired runs and mutation runs were not re-verified. The notes say three commits (`_vt$5VIWnd`, `_vt$9VIWndEdit`, `VIWndOptions$sBattleMusicText`) plus `__tf5VIWnd` were pushed to the branch by someone else and not re-verified by the worker; each carries a host check that passes here. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5200 authored inputs, 3977 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+The count **rises** here, as the notes' own build also showed (29 closed, 33 opened): the new class tables reference the per-class slot methods (`OnDrawSelf`, `OnKeyDown`, `OnMessage`, `__tf` for Connect, Message, Options, ReadMessage and Edit) that nobody has authored yet.
+
+| | |
+|---|---|
+| Before | 996 |
+| After | 1000 |
+| Closed | 29 |
+| Opened | 33 |
+
+Closed: `OnKeyUp__5VIWndi`, `OnKeyUp__9VIWndDnasi`, `OnKeyUp__9VIWndEulai`, `OnMessage__10VIWndLegalP5VIWndiii`, `OnMessage__11VIWndSplashP5VIWndiii`, `OnMessage__12VIWndPatcherP5VIWndiii`, `OnMessage__20VIWndGenericRendererP5VIWndiii`, `OnMessage__5VIWndP5VIWndiii`, `OnMessage__9VIWndDnasP5VIWndiii`, `OnMessage__9VIWndEulaP5VIWndiii`, `Open__10VIUIWindowb`, `SetDisplayRows__9VIWndEditi`, `SetMaxTextLen__9VIWndEditi`, `VIWndOptions$sBattleMusicText`, `_$_t5VISet1ZP5VIWnd`, `__t5VISet1ZP5VIWnd`, `__tf10VIWndLegal`, `__tf11VIWndSplash`, `__tf12VIWndPatcher`, `__tf15VIWindowManager`, `__tf20VIWndGenericRenderer`, `__tf9VIWndDnas`, `__tf9VIWndEula`, `_vt$12VIWndConnect`, `_vt$12VIWndMessage`, `_vt$12VIWndOptions`, `_vt$16VIWndReadMessage`, `_vt$5VIWnd`, `_vt$9VIWndEdit`
+
+Opened: `DestroyPool__t5VISet1ZP5VIWnd`, `GetString__13VIStringTableii`, `IsOpen__11VIGUIDialog`, `McErrWnd__Fv`, `OnDrawSelf__12VIWndConnect`, `OnDrawSelf__12VIWndMessage`, `OnDrawSelf__12VIWndOptions`, `OnDrawSelf__16VIWndReadMessage`, `OnDrawSelf__9VIWndEdit`, `OnKeyDown__12VIWndConnecti`, `OnKeyDown__12VIWndMessagei`, `OnKeyDown__12VIWndOptionsi`, `OnKeyDown__16VIWndReadMessagei`, `OnKeyDown__9VIWndEditi`, `OnKeyUp__10VIWndMcErri`, `OnKeyUp__12VIWndConnecti`, `OnKeyUp__12VIWndMessagei`, `OnKeyUp__12VIWndOptionsi`, `OnKeyUp__9VIWndEditi`, `OnMessage__12VIWndConnectP5VIWndiii`, `OnMessage__12VIWndMessageP5VIWndiii`, `OnMessage__12VIWndOptionsP5VIWndiii`, `OnMessage__16VIWndReadMessageP5VIWndiii`, `OnMessage__9VIWndEditP5VIWndiii`, `SetCaretOffset__9VIWndEditi`, `SetTitle__10VIUIWindowPCUs`, `__tf12VIWndConnect`, `__tf12VIWndMessage`, `__tf12VIWndOptions`, `__tf16VIWndReadMessage`, `__tf9VIWndEdit`, `mcerring`, `mcerror`
+- 2026-10-13 09:53 CDT — agents/w12-wnd-b — 1000 unresolved imports
+
+## agents/w12-hud-loop-a
+
+Merged (merge commit, branch tip `435a7893`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 32 listed plan entries with fresh `input_order` values 5202 through 5224 (9 functions: `fontStringSize`, `doNetCamToggle`, `dropGold`, `helpfulMessagesDraw`, `drawCompass`, `getDataForAllObjects`, `createRandomCombineableItem`, `createNamedRandom`, `drawBust`; and 14 data objects). All 23 selected host checks build and exit 0 here (native arm64, `-ffp-contract=off -fno-builtin`). The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5223 authored inputs, 3991 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (sources stay in the snapshot, with no plan entry): the eight earlier-wave units the notes list again. Seven have no committed check (`w10-front-a-mc-build-packed-player`, `w9-frontend-a-mc-check-player-import-or-change`, `w10-front-a-mc-convert-temp-player-to-real`, `w10-front-a-mc-net-pack`, `w10-front-a-mc-net-un-pack`, `w10-front-a-mc-set-ram-nm-players`, `w10-front-a-core-start-loading-screen`; the notes' only evidence is a private paired run outside git), and `w11-front-a-mc-load-level-entities` has a host contract that fails on this 64-bit host, the same reason an earlier entry gave. Also not selected: the new `w12-hud-loop-a-draw-gold` (`drawGold__Fv`). Its host check builds but exits 10 here (the flying-amount alpha case, which depends on the host's float-to-byte conversion); the check is host-dependent and integration may not fix it, so the unit waits for its owner. `drawGold__Fv` stays unresolved, as do the eight `MC_*`/`coreStartLoadingScreen` names above and `creditsText` (game text, deliberately unauthored). The notes' counts (32 closed names, 827 to 817) do not apply.
+
+| | |
+|---|---|
+| Before | 1000 |
+| After | 981 |
+| Closed | 23 |
+| Opened | 4 |
+
+Closed: `arrowLeft`, `arrowRight`, `beardSetting`, `bustAlpha`, `charAnimTest`, `createNamedRandom__4itemPQ24item11descriptioniii`, `createRandomCombineableItem__4itemPQ24item11descriptionsPc`, `doNetCamToggle__Fv`, `drawBust__Fv`, `drawCompass__Fv`, `drewHelpfulMessageHelpBar`, `dropGold__4itemG6Point3i`, `emergencyResult`, `endPos`, `expandList`, `fontStringSize__FP4FontPci`, `freeList`, `gameFlags`, `getDataForAllObjects__FPciPiiT2T2`, `hairColorSetting`, `hairStyleSetting`, `helpfulMessagesDraw__Fv`, `invHeader`
+
+Opened: `ChangeNetCam__6Camerai`, `matUntransform__FP6Point3P8Matrix44T0`, `modelSetNoZRead__Fv`, `objGet__FP10GameObjectPc`
+- 2026-10-13 10:04 CDT — agents/w12-hud-loop-a — 981 unresolved imports
+
+## agents/w12-hud-loop-b
+
+Merged (merge commit, branch tip `3de61744`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown, plus a separate "not closed" section). 23 units with fresh `input_order` values 5225 through 5247 (20 function units and three data units; the notes' entries omit `kind`, `profile` and `header_closure`, filled with the stated defaults). All 23 committed host checks pass here, native arm64, built with `-DW12_HUD_HOST -DNORRATH_HOST_CONTRACT -fno-builtin -ffp-contract=off`. The worker's private paired runs were not re-verified. The notes list `loadPlayerLumps__Fv` with one function body; the compiler also emits a file-local helper `_ZN12_GLOBAL__N_1L10loadChoiceEPKcPcS1_S1_S1_Pai` (192 bytes) from the same unit, so the first build stopped on "Generated function inventory differs"; the helper was added to the unit's recorded functions (plan, snapshot, package record), after which the build passed. All other units' recorded functions matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5246 authored inputs, 4012 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 27 closed names reproduce. `sprGrid` and `spriteCount` have the same addresses as two `norrath_floor_*_view` objects of `floor-storage`; the names differ, so the link has no duplicate, but one pair should be dropped when an owner is chosen. `norrath_item_create`, `norrath_item_create_random`, `msg_run__6Player`, `routePlot__FR10RouteQueue` and `playerSelectionTask__Fv` were not closed (reasons in the notes).
+
+The count **rises** by 6 net: the new bodies call functions and read data nobody has authored yet (33 opened, many of them file-local particle and table objects).
+
+| | |
+|---|---|
+| Before | 981 |
+| After | 987 |
+| Closed | 27 |
+| Opened | 33 |
+
+Closed: `inventoryItemCheckSlot__FiPQ24item11description`, `inventoryStart__Fii`, `itemEquipped__FiPQ24item11description`, `levelUpFade`, `loadPlayerLumps__Fv`, `maybeDrawMultiPlayerMarkers__6Player`, `multiBody`, `multiHelpMessageOn`, `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`, `playerBlockSparks__6Playeri`, `playerItemScan__6PlayerP3padi`, `playerSelectionGetNPCActiveChunks__FP3NPC`, `playerSelectionNPCDraw__FP3NPCP12_modelHeaderP11_drawRecord`, `playerSelectionNPCVisible__FP3NPC`, `resurectEffect__6Player`, `runGold__Fv`, `runHUD__Fi`, `saveActivate__9Savepoint`, `shipOn`, `shopDrawTaskBar__FP12screenStruct`, `shopInventoryGridDraw__FiiiP12screenStruct`, `shopInventoryGridRun__FiiiP12screenStruct`, `shopPromptOK`, `sprGrid`, `spriteCount`, `updateCursor__FiiiiiP12screenStructi`, `updatePlayersReady__9Savepoint`
+
+Opened: `P_Push__Fv`, `blueSpark`, `combineTable`, `countItems__FP10GameObject`, `distanceToPlane2__FP6Point3P6Point2T0`, `drawNewestQuickSpellMenu__Fiiicl`, `fullCount`, `getMoveDir__FiiiP12screenStruct`, `getPic__4itemiPQ24item11description`, `hideAbilityAdjustMouse`, `iRandState`, `iconAlpha`, `itemInfoHeight`, `itemToDestroy`, `listInsert__FP8ListHeadP10__listNodePv`, `localRandState`, `lumpPartialLoad__FPcT0`, `lumpRename__FPcT0`, `maxDistance`, `msgEquipItem__FiPQ24item11descriptioni`, `msgInvItemSetAttributes__FiiPcPQ24item11description`, `msgUnequipItem__FiPQ24item11description`, `playerAllocateArmorCache__Fii`, `playerCheckArmorCacheRaces__Fv`, `playerInitArmorCache__Fv`, `redSpark`, `runStats__Fii`, `shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii`, `shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii`, `shopRunMouseLogic__FiiP12screenStructi`, `textureDrawFloat__FP8_textureffiUiff`, `updateTaskBar__FiP12screenStruct`, `zeroPad`
+- 2026-10-13 10:21 CDT — agents/w12-hud-loop-b — 987 unresolved imports
+
+## agents/w12-visky-b
+
+Merged (merge commit, branch tip `0d467dfd`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 17 units with fresh `input_order` values 5248 through 5264 (function units for the world tree, battle-music, name-sprite, effect-volume sprite, scene sky/lights/sound-emitter, sound-device stop and sound-track methods, plus data units). All 17 committed host checks build and exit 0 here (native arm64, `-DNORRATH_HOST_CONTRACT -DW12_HUD_HOST -fno-builtin -ffp-contract=off`). The worker's private paired runs and mutation runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5263 authored inputs, 4028 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (22) reproduces.
+
+The count **rises** by 22 net: the new bodies call VI raster, sound-device, emitter-query and container routines nobody has authored yet (44 opened).
+
+| | |
+|---|---|
+| Before | 987 |
+| After | 1009 |
+| Closed | 22 |
+| Opened | 44 |
+
+Closed: `SetProfiles__7VIWorld`, `SetTracks__17VISceneSoundTrack`, `SetupTimeOfDayLights__7VISceneR8VICameraR21VITerrainProfileBlend`, `SetupTimeOfDaySky__7VISceneR21VITerrainProfileBlend`, `Sprite__7VIScenei`, `Stop__13VISoundDevicei`, `UpdateSoundEmitters__7VISceneR8VICamera`, `VINameDeferSort__FPCvT0`, `VISplashFx$sGlowDir`, `VISplashFx$sGlowStep`, `VISplashFx$sLastAnimTime`, `VISplashFx$sNextBoltDelay`, `VISplashFx$sNextFlockDelay`, `_$_11VIWorldTree`, `_$_13VIBattleMusic`, `_12VINameSprite$NameDefers`, `_12VINameSprite$NumNameDefers`, `_14VIEffectVolume$mScene`, `__11VIWorldTree`, `__12VINameSprite`, `__13VIBattleMusic`, `__20VIEffectVolumeSprite`
+
+Opened: `AttenuationMode__C13VISoundSprite`, `Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `Clear__12VINameSprite`, `DeallocateChannels__13VISoundDeviceUl`, `DeletePlayback__13VISoundDeviceP10VIPlayback`, `Distance__C7VIVect3RC7VIVect3`, `EnableAllDirLights__8VIRasteri`, `EnableAmbient__8VIRasteri`, `EnablePointLight__8VIRasterii`, `EnableSunLight__8VIRasteri`, `EnableTessellation__8VIRasteri`, `End__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `GetLightning__12VIAtmospherePf`, `GetPriority__C19VIStreamAudioSprite`, `GetRelativePathname__C19VIStreamAudioSprite`, `Init__14VIEmitterQueryi12VISpriteType`, `IsIopStreamingEnabled__6VIFile`, `IsLooping__C19VIStreamAudioSprite`, `IsPanEnabled__C13VISoundSprite`, `MaxPointLights__8VIRaster`, `Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi`, `PlayBgm__13VISoundDeviceiPCc`, `Play__13VISoundDeviceii12VISOUNDCLASS`, `Playback__13VISoundDevicei`, `QueryEmittersAtLocation__7VISceneRC8VICameraR14VIEmitterQuery`, `QueryEmitters__7VIWorldR23VISceneEmitterQueryVars`, `SetAmbient__8VIRasterRC10VIColor32F`, `SetPan__13VISoundDeviceif`, `SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight`, `SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32`, `SetSunLight__8VIRasterRC10VIMatrix44RC16VIRasterDirLight`, `SetVolume__13VISoundDeviceif`, `StopBgm__13VISoundDevicei`, `StopChannels__13VISoundDeviceUl`, `_$_t10VIMultiMap2ZfZ14VIEmitterEntry`, `_$_t7VIArray1Z11VIWorldLeaf`, `_$_t7VIArray1Z11VIWorldNode`, `__14VIEffectVolume`, `__8VISprite`, `__t10VIMultiMap2ZfZ14VIEmitterEntry`, `__t7VIArray1Z11VIWorldLeaf`, `__t7VIArray1Z11VIWorldNode`, `_vt$12VINameSprite`, `_vt$20VIEffectVolumeSprite`
+- 2026-10-13 10:29 CDT — agents/w12-visky-b — 1009 unresolved imports
+
+## agents/w12-visprite-b
+
+Merged (merge commit, branch tip `14f5c54e`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 22 units (VI sprite constructors, trail-effect pool data, emitter and actor destructors, `lightFloorSprite`) with fresh `input_order` values 5265 through 5286. All 22 committed host checks build and exit 0 here (native arm64, `-DNORRATH_HOST_CONTRACT -DW12_HUD_HOST -fno-builtin -ffp-contract=off`). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5285 authored inputs, 4046 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (22) reproduces.
+
+The count **rises** by 3 net: the new constructors install vtables and call matrix, attribute and container routines nobody has authored yet (25 opened, among them nine `_vt$*Sprite` tables).
+
+| | |
+|---|---|
+| Before | 1009 |
+| After | 1012 |
+| Closed | 22 |
+| Opened | 25 |
+
+Closed: `VITrailFx$sFreeTrailFx`, `VITrailFx$sInactiveTrailFx`, `VITrailFx$sMaterialHandle`, `VITrailFx$sTrailFxPool`, `_$_17VIParticleEmitter`, `_$_19VISpellEffectDriver`, `_$_7VIActor`, `_$_9VITrailFx`, `__11VILODSprite`, `__12VISkinSprite`, `__13VIFloraSprite`, `__13VIGroupSprite`, `__13VIPointSprite`, `__13VISoundSprite`, `__14VISimpleSprite`, `__16VIParticleSprite`, `__17VIParticleEmitter`, `__19VIStreamAudioSprite`, `__9VICSprite`, `__9VIHSprite`, `__9VITrailFx`, `lightFloorSprite__FG6Point3`
+
+Opened: `Clear__9VITrailFx`, `Destroy__17VIParticleEmitter`, `Destroy__19VISpellEffectDriver`, `_$_10VIMatrix33`, `_$_20VIParticleAttributes`, `__10VIMatrix33`, `__20VIParticleAttributes`, `__t6VIPool1Z13VIHSpritePlay`, `__t6VIPool1Z17VIHSpritePlayNode`, `__t6VIPool1Z19VIHSpriteAttachment`, `__t7VIArray1Z16VIHSpriteTrigger`, `__t7VIArray1Z20VICSpritePartEmitter`, `__t8VIVector1Z10VIMatrix44`, `__t8VIVector1Z13VIHSpriteNode`, `_vt$11VILODSprite`, `_vt$12VISkinSprite`, `_vt$13VIFloraSprite`, `_vt$13VIGroupSprite`, `_vt$13VIPointSprite`, `_vt$13VISoundSprite`, `_vt$14VISimpleSprite`, `_vt$16VIParticleSprite`, `_vt$19VIStreamAudioSprite`, `_vt$9VICSprite`, `_vt$9VIHSprite`
+- 2026-10-13 10:38 CDT — agents/w12-visprite-b — 1012 unresolved imports
+
+## agents/w12-light-model
+
+Merged (merge commit, branch tip `d62ca163`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown, plus a section re-verifying earlier-wave units). 29 units with fresh `input_order` values 5287 through 5315: the branch's 23 own units (5287-5309), then `w11-rend-a-p-start-lightning` (5310) and five `w10-render-b-data-*` data units (5311-5315). All 23 own host checks pass here (native arm64; each is built with the `-D` macros its header comment names, plus `-DNORRATH_HOST_CONTRACT -DW12_HUD_HOST -fno-builtin -ffp-contract=off`). The earlier-wave units were left out when they were first merged, for reasons recorded above; the notes now supply what was missing: `P_StartLightning__FG6Point3T0iiffUi` passes its own committed check as native arm64 when built with `-DNORRATH_HOST_ARENA` (the reason it was held back was a 32-bit-pointer `static_assert`, which that macro avoids), and the five data units (`haloColor`, `lightInfo`, `lightInc`/`lightIntensity`/`lightStart`, `lockAlpha`, `halos`/`globalShadowBrightness`) are now covered by the branch's committed `w12-light-model-data-check/host_check.cpp`, which includes them unchanged and checks extents and initial values (passes here); that file is recorded as their snapshot host file. NOT selected: `w10-render-b-data-inventory-textures`, because it defines `invHeader`, which `w12-hud-loop-a` already defines (the link would see two definitions); its `marble` stays unresolved. The notes themselves record that the data units' placement differs from the image (some are zero in the image but sit in `.data` there, `.bss` here). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5314 authored inputs, 4067 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 33-of-35 closed claim (798 unresolved against 827) does not apply to the current branch; the real delta is below.
+
+| | |
+|---|---|
+| Before | 1012 |
+| After | 984 |
+| Closed | 32 |
+| Opened | 4 |
+
+Closed: `P_ExtendSwoosh__FiG6Point3T1f`, `P_LightningIsLive__Fi`, `P_Line__FG6Point3T0UcUcUcUcUcUcUcUcf`, `P_StartLightning__FG6Point3T0iiffUi`, `__12VIPointLight`, `animPlaySound__FPvP6Point3P9animSoundi`, `attachmentLightPos`, `findLightsInBox_forWorld__FG3BoxPP5Lighti`, `getDynamicLightNumber__FP13PolysetHeader`, `globalShadowBrightness`, `haloColor`, `halos`, `lightDisableVolumetricLighting__Fv`, `lightGrid`, `lightInc`, `lightInfo`, `lightIntensity`, `lightSetupAmbientAndDirOnly__FP6PacketG6Point3f`, `lightSetupAmbientOnly__FP6Packet`, `lightSetupNonDirectionalDirectional__FP6Packet`, `lightStart`, `lightningSwordParticle`, `lockAlpha`, `modelDrawCharacter__FP6PacketP12_modelHeaderli`, `modelGetCollision__FP12_modelHeaderi`, `modelGetPrimaryBone__FP12_modelHeaderi`, `modelGetWeaponTrailPos__FP12_modelHeaderP6Point3T1`, `modelSetAttachmentFlip__Fv`, `modelSetupAttachment__FP6PacketP12_modelHeaderT1i`, `smoothPatch__FP12_worldHeaderP16WaterPolysetData`, `soundPan2D__FiP6Point3f`, `worldQueryLightMap__FP12_worldHeaderG6Point3`
+
+Opened: `_vt$12VIPointLight`, `lineBuffer`, `linePos`, `startFractalLine__FP4Boltfi`
+- 2026-10-13 10:54 CDT — agents/w12-light-model — 984 unresolved imports
+
+## agents/w12-vimath-a
+
+Merged (merge commit, branch tip `da5355a3`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 20 units (VI matrix, vector, frustum, clip-stack, rect, zone and file-parse methods) with fresh `input_order` values 5316 through 5335. All 20 committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names, `-ffp-contract=off -fno-builtin`). The worker's private paired runs, which needed a model of VU0 macro mode, were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5334 authored inputs, 4087 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 20 closed names reproduce. The count does not move: 20 close and 20 open, because the new bodies call further VI file, zone and matrix routines nobody has authored yet.
+
+| | |
+|---|---|
+| Before | 984 |
+| After | 984 |
+| Closed | 20 |
+| Opened | 20 |
+
+Closed: `CalcFrustum__8VICameraRC10VIMatrix44T1`, `Close__6VIFile`, `Decompress__9VICSFFileR6VIFileRiPPQ26VIFile7MemSegm`, `FindLeaf__C7VIWorldRC7VIVect3RiT2`, `GetTop__11VIClipStackRiPP7VIVect3T1PP7VIPlane`, `Identity__10VIMatrix33`, `Init__6VIZone`, `Init__9VIClipperi`, `Init__9VIFrustum`, `Intersects__C6VIRectRC6VIRect`, `Invert__10VIMatrix44RC10VIMatrix44`, `Mul__10VIMatrix44RC10VIMatrix44T1`, `Mul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect4`, `Normalize__7VIVect3`, `Open__9VIObjFileiPQ26VIFile7MemSegmlQ29VIObjFile8FileMode`, `Parse__10VIESFParseR9VIObjFileR7VIScene`, `Plane__C9VIFrustumi`, `Pop__11VIClipStack`, `PushFrustum__11VIClipStackR8VICamera`
+
+Opened: `BufferFlush__6VIFile`, `CalcPlanes__9VIFrustum`, `Close__9VIObjFile`, `FileType__9VIObjFile`, `FindLeaf__C6VIZoneRC7VIVect3`, `Init__10VIZoneRoomiiUiUiR6VIBBox`, `Init__10VIZoneTreeii`, `Init__t7VIArray1Z10VIZoneRoomi`, `IsAsynchComplete__6VIFile`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect3`, `NumObjects__9VIObjFile`, `Open__6VIFileiPQ26VIFile7MemSegmil`, `ParseObject__10VIESFParse`, `PostOpen__9VIObjFile`, `SwapRows__10VIMatrix44ii`, `VIBufferSwap__FiPUc`, `VIEndian`, `Zero__10VIMatrix33`, `__ml__FRC7VIVect4RC10VIMatrix44`, `uncompress`
+- 2026-10-13 11:03 CDT — agents/w12-vimath-a — 984 unresolved imports
+
+## agents/w12-skill-a
+
+Merged (merge commit, branch tip `49f67a03`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 53 units (31 `__tf` type-descriptor functions with their 12-byte `__ti` BSS nodes, and 22 skill-class `_vt$` vtable tables) with fresh `input_order` values 5336 through 5388. The entries come from the branch's `docs/agents/w12-skill-a-plan-entries.py`, run here with the repo toolchain (it compiles each unit and prints the exact entries; I read it first: it writes nothing into the repository). All 53 committed host checks build and exit 0 here (native arm64). The worker's EE-side object checks (`w12-skill-a-object-check.py`) and private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5387 authored inputs, 4118 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' private-build figure (827 to 926, +99) reproduces as 984 to 1083 (+99).
+
+The count **rises** by 99: the 22 new vtables reference about 130 per-class skill methods (`canCast`, `cast`, `getEnergyCost`, `getIcon`, `getRankDescription`, `getLevelRequirement`, `getSkillPointCost`, `initRamps` and similar) that nobody has authored yet. These are the real dispatch targets of the tables, not guessed names, and they are the work list for the remaining skill packages.
+
+| | |
+|---|---|
+| Before | 984 |
+| After | 1083 |
+| Closed | 31 |
+| Opened | 130 |
+
+Closed: `__tf10SkillBlunt`, `__tf13SkillHateBeam`, `__tf13SkillSlashing`, `__tf15SkillBallOfHate`, `__tf15SkillHateEffect`, `__tf17SkillResistPoison`, `__tf18SkillDiseaseEffect`, `__tf18SkillPoisonWeapons`, `__tf19SkillDiseaseWeapons`, `_vt$10SkillDodge`, `_vt$10SkillShock`, `_vt$11SkillCharge`, `_vt$12SkillArchery`, `_vt$12SkillBlessed`, `_vt$12SkillCyclone`, `_vt$12SkillHealing`, `_vt$12SkillLifeTap`, `_vt$12SkillRiposte`, `_vt$13SkillDarkness`, `_vt$13SkillEntangle`, `_vt$14SkillColdArrow`, `_vt$14SkillFireArrow`, `_vt$14SkillFireStorm`, `_vt$14SkillHarmTouch`, `_vt$14SkillMultiFire`, `_vt$15SkillClericRoot`, `_vt$15SkillConeOfFire`, `_vt$15SkillFireFlares`, `_vt$15SkillFrostStorm`, `_vt$15SkillHolyShield`, `_vt$15SkillHolyStrike`
+
+Opened: `__tf5Skill`, `__ti5Skill`, `canCast__12SkillBlessedP8Creature`, `canCast__12SkillCycloneP8Creature`, `canCast__14SkillFireStormP8Creature`, `canCast__15SkillConeOfFireP8Creature`, `canCast__15SkillFireFlaresP8Creature`, `canCast__15SkillHolyStrikeP8Creature`, `cast__10SkillShockiP8CreatureG6Point3s`, `cast__11SkillChargeiP8CreatureG6Point3s`, `cast__12SkillBlessediP8CreatureG6Point3s`, `cast__12SkillCycloneiP8CreatureG6Point3s`, `cast__12SkillHealingiP8CreatureG6Point3s`, `cast__12SkillLifeTapiP8CreatureG6Point3s`, `cast__12SkillRiposteiP8CreatureG6Point3s`, `cast__13SkillDarknessiP8CreatureG6Point3s`, `cast__13SkillEntangleiP8CreatureG6Point3s`, `cast__14SkillColdArrowiP8CreatureG6Point3s`, `cast__14SkillFireArrowiP8CreatureG6Point3s`, `cast__14SkillFireStormiP8CreatureG6Point3s`, `cast__14SkillHarmTouchiP8CreatureG6Point3s`, `cast__14SkillMultiFireiP8CreatureG6Point3s`, `cast__15SkillClericRootiP8CreatureG6Point3s`, `cast__15SkillConeOfFireiP8CreatureG6Point3s`, `cast__15SkillFireFlaresiP8CreatureG6Point3s`, `cast__15SkillFrostStormiP8CreatureG6Point3s`, `cast__15SkillHolyShieldiP8CreatureG6Point3s`, `cast__15SkillHolyStrikeiP8CreatureG6Point3s`, `getEnergyCost__10SkillDodgei`, `getEnergyCost__10SkillShocki`, `getEnergyCost__11SkillChargei`, `getEnergyCost__12SkillArcheryi`, `getEnergyCost__12SkillBlessedi`, `getEnergyCost__12SkillCyclonei`, `getEnergyCost__12SkillHealingi`, `getEnergyCost__12SkillLifeTapi`, `getEnergyCost__13SkillDarknessi`, `getEnergyCost__13SkillEntanglei`, `getEnergyCost__14SkillColdArrowi`, `getEnergyCost__14SkillFireArrowi`, `getEnergyCost__14SkillFireStormi`, `getEnergyCost__14SkillHarmTouchi`, `getEnergyCost__14SkillMultiFirei`, `getEnergyCost__15SkillClericRooti`, `getEnergyCost__15SkillConeOfFirei`, `getEnergyCost__15SkillFireFlaresi`, `getEnergyCost__15SkillFrostStormi`, `getEnergyCost__15SkillHolyShieldi`, `getEnergyCost__15SkillHolyStrikei`, `getIcon__10SkillShock`, `getIcon__11SkillCharge`, `getIcon__12SkillBlessed`, `getIcon__12SkillCyclone`, `getIcon__12SkillHealing`, `getIcon__12SkillLifeTap`, `getIcon__13SkillDarkness`, `getIcon__13SkillEntangle`, `getIcon__14SkillColdArrow`, `getIcon__14SkillFireArrow`, `getIcon__14SkillFireStorm`, `getIcon__14SkillHarmTouch`, `getIcon__14SkillMultiFire`, `getIcon__15SkillClericRoot`, `getIcon__15SkillConeOfFire`, `getIcon__15SkillFireFlares`, `getIcon__15SkillFrostStorm`, `getIcon__15SkillHolyShield`, `getIcon__15SkillHolyStrike`, `getLevelRequirement__12SkillBlessedi`, `getLevelRequirement__12SkillCyclonei`, `getLevelRequirement__12SkillHealingi`, `getLevelRequirement__12SkillRipostei`, `getLevelRequirement__13SkillDarknessi`, `getLevelRequirement__13SkillEntanglei`, `getLevelRequirement__14SkillFireStormi`, `getLevelRequirement__15SkillClericRooti`, `getLevelRequirement__15SkillConeOfFirei`, `getLevelRequirement__15SkillFireFlaresi`, `getLevelRequirement__15SkillHolyStrikei`, `getRankDescription__10SkillDodgePUsi`, `getRankDescription__10SkillShockPUsi`, `getRankDescription__11SkillChargePUsi`, `getRankDescription__12SkillArcheryPUsi`, `getRankDescription__12SkillBlessedPUsi`, `getRankDescription__12SkillCyclonePUsi`, `getRankDescription__12SkillHealingPUsi`, `getRankDescription__12SkillLifeTapPUsi`, `getRankDescription__12SkillRipostePUsi`, `getRankDescription__13SkillDarknessPUsi`, `getRankDescription__13SkillEntanglePUsi`, `getRankDescription__14SkillColdArrowPUsi`, `getRankDescription__14SkillFireArrowPUsi`, `getRankDescription__14SkillFireStormPUsi`, `getRankDescription__14SkillHarmTouchPUsi`, `getRankDescription__14SkillMultiFirePUsi`, `getRankDescription__15SkillClericRootPUsi`, `getRankDescription__15SkillConeOfFirePUsi`, `getRankDescription__15SkillFireFlaresPUsi`, `getRankDescription__15SkillFrostStormPUsi`, `getRankDescription__15SkillHolyShieldPUsi`, `getRankDescription__15SkillHolyStrikePUsi`, `getSkillPointCost__12SkillBlessedi`, `getSkillPointCost__12SkillRipostei`, `getSkillPointCost__13SkillDarknessi`, `getSkillPointCost__14SkillFireStormi`, `getSkillPointCost__15SkillConeOfFirei`, `getSkillPointCost__15SkillFireFlaresi`, `getSkillPointCost__15SkillHolyStrikei`, `initRamps__10SkillDodge`, `initRamps__10SkillShock`, `initRamps__11SkillCharge`, `initRamps__12SkillArchery`, `initRamps__12SkillBlessed`, `initRamps__12SkillCyclone`, `initRamps__12SkillHealing`, `initRamps__12SkillLifeTap`, `initRamps__12SkillRiposte`, `initRamps__13SkillDarkness`, `initRamps__13SkillEntangle`, `initRamps__14SkillColdArrow`, `initRamps__14SkillFireArrow`, `initRamps__14SkillFireStorm`, `initRamps__14SkillHarmTouch`, `initRamps__14SkillMultiFire`, `initRamps__15SkillClericRoot`, `initRamps__15SkillConeOfFire`, `initRamps__15SkillFireFlares`, `initRamps__15SkillFrostStorm`, `initRamps__15SkillHolyShield`, `initRamps__15SkillHolyStrike`
+- 2026-10-13 11:12 CDT — agents/w12-skill-a — 1083 unresolved imports
+
+## agents/w12-visky-a
+
+Merged (merge commit, branch tip `e4bffc43`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 22 units with fresh `input_order` values 5389 through 5410 (VI scene render, atmosphere weather and splash, world-tree, battle-music, zone-render and query-tri-list methods), using the branch's `docs/agents/w12-visky-a-plan-entries.json` with hashes re-checked here. All 22 committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5409 authored inputs, 4143 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' 22 closed names reproduce.
+
+The count **rises** by 30 net: the new scene and atmosphere bodies call VI raster, collision-ray, material, container and sound routines nobody has authored yet (52 opened here, against the notes' 56 measured on an older base).
+
+| | |
+|---|---|
+| Before | 1083 |
+| After | 1113 |
+| Closed | 22 |
+| Opened | 52 |
+
+Closed: `Allocate__14VIQueryTriList`, `CalcTimeOfDayClipPlanes__7VISceneR21VITerrainProfileBlendRfT2`, `ClearAllFireballs__12VIAtmosphere`, `ClearAllSplashes__12VIAtmosphere`, `Clear__11VIWorldTree`, `Free__13VIBattleMusic`, `GetOvercastInterp__12VIAtmosphere`, `GetTime__7VIScene`, `Init__11VIWorldTreeii`, `Init__13VIBattleMusicP7VIScene`, `ProcessTransitions__12VIAtmosphereR7VISceneff`, `ProcessWeather__12VIAtmosphereR7VISceneR8VICamera`, `ReleaseCollBuffer__9VICollidei`, `RenderByVolume__7VIWorldR15VISceneRendVars`, `RenderRoom__6VIZoneiR15VISceneRendVars`, `RenderShadow__7VIScenei`, `RenderSplashes__12VIAtmosphereR7VISceneR8VICamera`, `RenderStars__12VIAtmosphereR7VISceneR8VICamera`, `SetEffectMix__12VIAtmospheref`, `SetIntensity__12VIAtmospheref`, `SetLavastormIntensity__12VIAtmospheref`, `SetPretranslations__6VIZoneR8VIRasterR8VICamera`
+
+Opened: `AddSplash__12VIAtmosphereR7VIVect3`, `Add__t8VIVector1Z18VISceneDisplayElemRC18VISceneDisplayElem`, `BeginTriFan__8VIRaster`, `CalcSlotWorldTransform__9VICSprite15VICSpriteNodeIDiR7VISceneR10VIMatrix44`, `Clear__t7VIArray1Z11VIWorldLeaf`, `Clear__t7VIArray1Z11VIWorldNode`, `Collide__7VISceneR8VIEnvRay`, `Collide__7VISceneR9VICollRayR13VISceneFilter`, `CopyLayer__10VIMaterialiiR8VIRasterR12VIDictionary`, `CullByTop__11VIClipStackRC6VIBBox`, `DistanceSquared__C6VIBBoxRC7VIVect3`, `EndTriFan__8VIRaster`, `Erase__t6VIPool1ZP12VICollBufferi`, `GetActorLocation__C7VIScenei`, `GetActorSpritePtr__C7VIScenei`, `GetActorTransform__7VISceneiR10VIMatrix44`, `GetHitPoint__9VICollRay`, `GetHitPoint__C8VIEnvRay`, `GetLayerColor__C10VIMateriali`, `GetMaterialPalEntry__8VIRasterii`, `GetMaterialPalSize__8VIRasteri`, `GetMaterialPal__C14VISimpleSprite`, `Init__6VIBBoxiP7VIVect3`, `Init__8VIEnvRayRC7VIVect3T1Ui`, `Init__9VICollRayRC7VIVect3T1`, `Init__t7VIArray1Z11VIWorldLeafi`, `Init__t7VIArray1Z11VIWorldNodei`, `ProcessLavastorm__12VIAtmosphereR7VISceneR8VICamera`, `QueryIntersection__7VISceneR6VIBBoxR13VIActorFilterR14VIQueryTriList`, `RasterActor__7VISceneR8VICameraiR11VIClipStack`, `RasterSprite__7VISceneR8VICameraiUi`, `RemHead__7VILList`, `RenderByVolume__7VIWorldiR15VISceneRendVars`, `RenderThroughPortals__6VIZoneiR15VISceneRendVars`, `ResetLightning__12VIAtmosphere`, `Reset__14VIQueryTriListRC6VIBBoxRC7VIVect3f`, `SetLayerColor__10VIMaterialiRC9VIColor32`, `SetLayerTexture__10VIMaterialiiR8VIRasterR12VIDictionary`, `SetNumLayers__10VIMaterialiR8VIRasterR12VIDictionary`, `SetPitch__13VISoundDeviceii`, `SetPreTranslations__8VIRasteriP7VIVect3RC7VIVect3`, `SetZBias__8VIRasteri`, `Transform__C6VIBBoxRC10VIMatrix44R6VIBBox`, `UV__8VIRasterRC7VIVect2`, `Unload__13VIBattleMusic`, `Vertex__8VIRasterRC7VIVect3`, `_$_12VICollBuffer`, `__13VIActorFilter`, `__13VISceneFilter`, `__8VIEnvRay`, `__9VICollRay`, `_vt$13WeatherFilter`
+- 2026-10-13 11:21 CDT — agents/w12-visky-a — 1113 unresolved imports
+
+## agents/w12-visprite-a
+
+Merged (merge commit, branch tip `5ab45ba2`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 units with fresh `input_order` values 5411 through 5433 (VI material setters, h-sprite-anim clear, spell-effect system and driver methods, trail-effect update and render, billboard begin and end). The notes' entry list gives no `emitted_functions` (their generator script adds them); the recorded functions here come from the EE objects compiled with the repo toolchain, which also showed the file-local helpers `emitPair` and `pass.constprop.0` emitted next to `Render__9VITrailFxR8VIRasterR8VICamera`. All committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names). The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5432 authored inputs, 4167 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (23) reproduces.
+
+The count **rises** by 3 net: the new bodies call VI raster, pool and spell-event routines nobody has authored yet (26 opened).
+
+| | |
+|---|---|
+| Before | 1113 |
+| After | 1116 |
+| Closed | 23 |
+| Opened | 26 |
+
+Closed: `BeginBillboards__8VIRasterPP11VIBillboardi`, `Clear__13VIHSpriteAnim`, `DeletePlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `DrawCenteredString__8VIRasteriRC7VIVect3RC10VIColor32FPCc`, `EndBillboards__8VIRaster`, `FirstPlayback__19VISpellEffectSystem`, `Init__10VIMateriali`, `NextPlayback__19VISpellEffectSystemPQ219VISpellEffectSystem16VISpellEffectPbi`, `Playback__19VISpellEffectSystemi`, `Process__19VISpellEffectDriver`, `ReleaseAllParticleDefinitions__16VIParticleSystemR12VIDictionary`, `ReleaseAllSpellEffects__19VISpellEffectSystemR12VIDictionary`, `Render__9VITrailFxR8VIRasterR8VICamera`, `SetDither__10VIMateriali`, `SetFog__8VIRasteriffRC10VIColor32F`, `SetLayerFillType__10VIMateriali18VIMaterialFillType`, `SetLayerModulate__10VIMaterialii`, `SetLayerTextureLODBias__10VIMaterialif`, `SetZTest__10VIMateriali`, `SetZWrite__10VIMateriali`, `Stop__19VISpellEffectSystemi`, `Update__9VITrailFxl`, `VITrailFx$sActiveTrailFx`
+
+Opened: `AddMaterial__8VIRasteriPP10_sceDmaTag`, `Begin__Ct6VIPool1ZP13VISpellEffect`, `Begin__Ct6VIPool1ZP20VIParticleDefinition`, `Cache__7VIRFontR8VIRasterPCciPi`, `CalcMatrices__8VIRaster`, `ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT`, `Clear__t6VIPool1ZP13VISpellEffect`, `Clear__t6VIPool1ZP20VIParticleDefinition`, `Destroy__13VISpellEffect`, `End__Ct6VIPool1ZP13VISpellEffect`, `End__Ct6VIPool1ZP20VIParticleDefinition`, `Erase__t6VIPool1ZP13VISpellEffecti`, `FlushDMABufferIfFull__8VIRaster`, `Length__C7VILList`, `Process__18VISpellEventDriver`, `ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary`, `Remove__12VIDictionaryR10VIResource`, `Restore2D__8VIRaster`, `SetFogRegisters__8VIRaster`, `Store2D__8VIRaster`, `UploadBillboardMicro__8VIRasterPP10_sceDmaTag`, `UploadMatrices__8VIRasterPP10_sceDmaTag`, `UploadRasterMicro__8VIRasterPP10_sceDmaTag`, `_$_13VISpellEffect`, `_$_18VISpellEventDriver`, `__ml__FRC7VIVect3RC10VIMatrix44`
+- 2026-10-13 11:29 CDT — agents/w12-visprite-a — 1116 unresolved imports
+
+## agents/w12-actor-spell-a
+
+Merged (merge commit, branch tip `1bf7e6f5`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 29 units with fresh `input_order` values 5434 through 5462 (actor and spell destructors, constructors and `__tf` type functions, the wood-elf-soldier edge turn). Their header closures reach shared headers (`w11-ctor-a-common`, `w10-actor-m-common`) that the plan already lists. All 29 committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names, `-ffp-contract=off -fno-builtin`). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5461 authored inputs, 4195 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (29) reproduces.
+
+| | |
+|---|---|
+| Before | 1116 |
+| After | 1098 |
+| Closed | 29 |
+| Opened | 11 |
+
+Closed: `TurnToFaceEdge__14WoodElfSoldier`, `_$_13LooseIceChunk`, `_$_15GlowingCylinder`, `_$_17VehicleBodySphere`, `_$_19SpellHornOmenEffect`, `_$_22SpellPlanarSteelEffect`, `_$_5PhIce`, `_$_7OniBall`, `_$_7Weather`, `__10StaticFireG6Point3fif`, `__13FireBombletJrP11FireBomblet`, `__6PhPropG6Point3P12_modelHeaderP8_textureliPQ24item11descriptionf`, `__7CritterPcG6Point3sPPc`, `__7WebTrapG6Point3T1`, `__8GutChunkG6Point3sP12_modelHeaderP14AnimationStatePcN25liif`, `__8ItemPropG6Point3PQ24item11descriptionP8Matrix34`, `__8SkeletonG6Point3sPPcPci`, `__tf11SpellCharge`, `__tf13LooseIceChunk`, `__tf15GlowingCylinder`, `__tf15SpellHolyShield`, `__tf17VehicleBodySphere`, `__tf19SpellHornOmenEffect`, `__tf22SpellPlanarSteelEffect`, `__tf5PhIce`, `__tf5Spell`, `__tf7OniBall`, `__tf7Weather`, `_vt$10MummySnake`
+
+Opened: `_$_10MummySnake`, `__4PropG6Point3P12_modelHeaderP8_textureli`, `__tf10MummySnake`, `_vt$13FireBombletJr`, `_vt$5Spell`, `_vt$8Skeleton`, `bombResMap`, `initType__8Skeletonb`, `init__10StaticFire`, `msg_run__10MummySnake`, `skeletonResourceMap`
+- 2026-10-13 11:38 CDT — agents/w12-actor-spell-a — 1098 unresolved imports
+
+## agents/w12-actor-spell-b
+
+Merged (merge commit, branch tip `f8877699`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 29 units with fresh `input_order` values 5463 through 5491: 26 class vtables for projectiles, spells and effects, plus `bounce__11FireBomblet`, `canQueue__5Spell` and `clone__13LooseIceChunk`. The entries come from the branch's `docs/agents/w12-actor-spell-b-plan-entries.py`, run here with the repo toolchain (it compiles each unit and prints the entries, writing nothing into the repository). All 29 committed host checks build and exit 0 here (native arm64). The worker's private paired runs were not re-verified. The recorded function inventory of every unit matched the compiled objects. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5490 authored inputs, 4198 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution. The notes' closed list (29) reproduces.
+
+The count **rises** by 77 net: the 25 vtables reference the destructors, `__tf` type functions, `clone`, `msg_run`, `msg_draw` and `msg_collision` methods of their classes, which nobody has authored yet (106 opened). These are the real slot targets, and they form the work list for the next actor packages.
+
+| | |
+|---|---|
+| Before | 1098 |
+| After | 1175 |
+| Closed | 29 |
+| Opened | 106 |
+
+Closed: `_vt$10PoisonRain`, `_vt$10SpawnMummy`, `_vt$11BoltGoRound`, `_vt$11DiseaseBolt`, `_vt$12ShockOfFrost`, `_vt$14HateProjectile`, `_vt$14SpellHarmTouch`, `_vt$14poisonGasSpell`, `_vt$15FrostStormSpell`, `_vt$15ShockProjectile`, `_vt$15SpellConeOfFire`, `_vt$16PoisonProjectile`, `_vt$16beetleProjectile`, `_vt$18SpellDiseaseShield`, `_vt$19ColdArrowProjectile`, `_vt$19FireArrowProjectile`, `_vt$19MultiFireProjectile`, `_vt$21PoisonArrowProjectile`, `_vt$22ExplodeArrowProjectile`, `_vt$5Wheel`, `_vt$7AntWave`, `_vt$8HateBeam`, `_vt$8HateSoul`, `_vt$9DustDevil`, `_vt$9FireStorm`, `_vt$9dustCloud`, `bounce__11FireBomblet`, `canQueue__5Spell`, `clone__13LooseIceChunk`
+
+Opened: `_$_10PoisonRain`, `_$_10SpawnMummy`, `_$_11BoltGoRound`, `_$_11DiseaseBolt`, `_$_12ShockOfFrost`, `_$_14HateProjectile`, `_$_14SpellHarmTouch`, `_$_14poisonGasSpell`, `_$_15FrostStormSpell`, `_$_15ShockProjectile`, `_$_15SpellConeOfFire`, `_$_16PoisonProjectile`, `_$_16beetleProjectile`, `_$_18SpellDiseaseShield`, `_$_19ColdArrowProjectile`, `_$_19FireArrowProjectile`, `_$_19MultiFireProjectile`, `_$_21PoisonArrowProjectile`, `_$_22ExplodeArrowProjectile`, `_$_5Wheel`, `_$_7AntWave`, `_$_8HateBeam`, `_$_8HateSoul`, `_$_9DustDevil`, `_$_9FireStorm`, `_$_9dustCloud`, `__tf10PoisonRain`, `__tf10SpawnMummy`, `__tf11BoltGoRound`, `__tf11DiseaseBolt`, `__tf12ShockOfFrost`, `__tf14HateProjectile`, `__tf14poisonGasSpell`, `__tf15FrostStormSpell`, `__tf15ShockProjectile`, `__tf16PoisonProjectile`, `__tf16beetleProjectile`, `__tf18SpellDiseaseShield`, `__tf19ColdArrowProjectile`, `__tf19FireArrowProjectile`, `__tf19MultiFireProjectile`, `__tf21PoisonArrowProjectile`, `__tf22ExplodeArrowProjectile`, `__tf5Wheel`, `__tf7AntWave`, `__tf8HateBeam`, `__tf8HateSoul`, `__tf9DustDevil`, `__tf9FireStorm`, `__tf9dustCloud`, `clone__14poisonGasSpell`, `clone__15FrostStormSpell`, `clone__15ShockProjectile`, `clone__16beetleProjectile`, `clone__7AntWave`, `clone__9dustCloud`, `msg_collision__11DiseaseBoltP10GameObject`, `msg_collision__12ShockOfFrostP10GameObject`, `msg_collision__16PoisonProjectileP10GameObject`, `msg_collision__16beetleProjectileP10GameObject`, `msg_collision__19ColdArrowProjectileP10GameObject`, `msg_collision__19FireArrowProjectileP10GameObject`, `msg_collision__19MultiFireProjectileP10GameObject`, `msg_collision__21PoisonArrowProjectileP10GameObject`, `msg_collision__22ExplodeArrowProjectileP10GameObject`, `msg_draw__11DiseaseBolt`, `msg_draw__12ShockOfFrost`, `msg_draw__14HateProjectile`, `msg_draw__14poisonGasSpell`, `msg_draw__15FrostStormSpell`, `msg_draw__15ShockProjectile`, `msg_draw__16PoisonProjectile`, `msg_draw__16beetleProjectile`, `msg_draw__19ColdArrowProjectile`, `msg_draw__19FireArrowProjectile`, `msg_draw__19MultiFireProjectile`, `msg_draw__21PoisonArrowProjectile`, `msg_draw__22ExplodeArrowProjectile`, `msg_draw__5Wheel`, `msg_draw__7AntWave`, `msg_run__10PoisonRain`, `msg_run__10SpawnMummy`, `msg_run__11BoltGoRound`, `msg_run__11DiseaseBolt`, `msg_run__12ShockOfFrost`, `msg_run__14HateProjectile`, `msg_run__14poisonGasSpell`, `msg_run__15FrostStormSpell`, `msg_run__15ShockProjectile`, `msg_run__16PoisonProjectile`, `msg_run__16beetleProjectile`, `msg_run__19ColdArrowProjectile`, `msg_run__19FireArrowProjectile`, `msg_run__19MultiFireProjectile`, `msg_run__21PoisonArrowProjectile`, `msg_run__22ExplodeArrowProjectile`, `msg_run__5Wheel`, `msg_run__7AntWave`, `msg_run__8HateBeam`, `msg_run__8HateSoul`, `msg_run__9DustDevil`, `msg_run__9FireStorm`, `msg_run__9dustCloud`, `run__14SpellHarmTouchG6Point3s`, `run__15SpellConeOfFireG6Point3s`, `run__18SpellDiseaseShieldG6Point3s`
+- 2026-10-13 11:47 CDT — agents/w12-actor-spell-b — 1175 unresolved imports
+
+## agents/w12-startup-rt-c
+
+Merged (merge commit, branch tip `d39bcc5c`, over four hours old; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 15 of the branch's 18 units with fresh `input_order` values 5492 through 5506 (libm `sin` and `sinf`, `qsort`, GS draw-environment setup, SCF time-zone and summer-time, SIF set-sreg, VU0 matrix copy, and the keyboard and mouse device setup and data processing functions). The entries come from the branch's `docs/agents/w12-startup-rt-c-plan-entries.py` (run here without `--with-others`). All 15 selected committed host contracts pass here (native arm64); several need their documented build line: symbol renames such as `-Dsinf=w12_sinf`, `qsort` compiled as its own unit with `-Dqsort=w12_qsort` and linked with the check, and `sceGsPutDrawEnv` with `-include host_regs.hpp -DW12_GS_DMA_BASE=... -DsceGsPutDrawEnv=w12_pde`. The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed (the notes say `sinf` is 224 against 232 and `qsort` 2656 against 2540). Full build with the final snapshot: 5505 authored inputs, 4213 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (files stay in the snapshot, with no plan entry): `w12-startup-rt-c-deci2-ex-recv` (`sceDeci2ExRecv`) and `w12-startup-rt-c-deci2-ex-send` (`sceDeci2ExSend`), 52 bytes each, whose only evidence in the notes is a private paired run outside git (no committed check that could fail); and `w12-startup-rt-c-overlay-iop-buffers` (the `sSend`, `sRecv`, `sFunctionIndex`, `sIopFunctionData`, `sSifClient` storage), whose only check is a Python script, not a per-unit host contract, and which also defines overlay storage (`sFunctionIndex` among it) that may overlap the object `w12-startup-rt-b` selected as `norrath_overlay_sFunctionIndex_11edf00` (not compared here; it needs an owner decision). The two earlier-wave units the notes mention with `--with-others` were not added. The owner can add host contracts for the two Deci2 functions and push again. The notes' closed list reproduces except for the three names left out.
+
+| | |
+|---|---|
+| Before | 1175 |
+| After | 1169 |
+| Closed | 15 |
+| Opened | 9 |
+
+Closed: `process_kbd_data`, `process_mouse_data`, `qsort`, `sceGsPutDrawEnv`, `sceGsSetDefClear`, `sceGsSetDefDrawEnv`, `sceGsSetDefDrawEnv2`, `sceScfGetSummerTime`, `sceScfGetTimeZone`, `sceSifSetSreg`, `sceVu0CopyMatrix`, `setup_kbd_device`, `setup_mouse_device`, `sin`, `sinf`
+
+Opened: `CheckforModifierKeyEvents`, `GetOsdConfigParam2`, `IsT10K`, `__ieee754_rem_pio2`, `__kernel_cos`, `__kernel_sin`, `gConfig`, `generate_key_press_events`, `generate_key_release_events`
+- 2026-10-13 11:57 CDT — agents/w12-startup-rt-c — 1169 unresolved imports
+
+## agents/w12-actor-spell-c
+
+Merged (merge commit, branch tip `f83f48be`, over an hour old; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 23 of the branch's 27 units with fresh `input_order` values 5507 through 5529 (actor and spell methods: clones, `msg_run`/`msg_draw`/`msg_collision`, `run`, `start`, `move`, `eRand`, `initType`, `processParams` and similar), using the entries the notes print, which already list the compiler-emitted file-local helpers (`register_effect`, `draw_direction`, `emit_one.constprop.0`). All 23 selected committed host checks build and exit 0 here (native arm64, with the `-D` macros each header names). The worker's private paired runs were not re-verified. Compiled sizes are not image sizes and no byte match is claimed. Full build with the final snapshot: 5528 authored inputs, 4240 function bodies, zero COMMON, 214 tool tests passed; every snapshot object hash matches the final build output. No EE or game execution.
+
+NOT selected (files stay in the snapshot, with no plan entry): four 8-to-36-byte units with no committed check of any kind: `w12-actor-spell-c-draw-5spell` (`draw__5Spell`), `w12-actor-spell-c-fx-run-ball-lightning` (`fxRunBallLightning`), `w12-actor-spell-c-msg-draw-7oniball` (`msg_draw__7OniBall`) and `w12-actor-spell-c-msg-run-7weather` (`msg_run__7Weather`). Those four names stay unresolved. The owner can add host checks and push again. The notes' closed list reproduces except for those four names (23 close here).
+
+The opened names include address-named data views the new bodies read (`*_particle_7d6830` style); their definitions are not yet authored.
+
+| | |
+|---|---|
+| Before | 1169 |
+| After | 1168 |
+| Closed | 23 |
+| Opened | 22 |
+
+Closed: `clone__15GlowingCylinder`, `clone__17VehicleBodySphere`, `clone__5PhIce`, `clone__7OniBall`, `clone__7Weather`, `eRand__5Spell`, `fxFlyingFire__FP6Point3T0ffb`, `hitSomething__11SpellChargeP10GameObject`, `initType__5Mummyb`, `joinCommander__14WoodElfSoldier`, `manaAbsorbOnHit__15SpellHolyShield`, `moveArrow__14WoodElfSoldier`, `move__10ProjectileG6Point3`, `msg_collision__17VehicleBodySphereP10GameObject`, `msg_collision__7OniBallP10GameObject`, `msg_draw__15GlowingCylinder`, `msg_run__15GlowingCylinder`, `msg_run__5PhIce`, `msg_run__7OniBall`, `processParams__7VehiclePPc`, `run__19SpellHornOmenEffectG6Point3s`, `run__22SpellPlanarSteelEffectG6Point3s`, `start__3WebG6Point3T1i`
+
+Opened: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_SetParticleSystemMatrix__FiP8Matrix34`, `P_SetTrailColor__Fiiiii`, `findCommander__14WoodElfSoldier`, `fxflyingfire_particle_7d6830`, `fxflyingfire_particle_7d6880`, `fxflyingfire_particle_7d68d0`, `fxflyingfire_particle_7d6920`, `getAmount__12SkillLifeTapi`, `holyshield_particle_8d7720`, `hornomen_run_particle_8d8650`, `modelDrawEffect__FP12_modelHeaderP8_textureiP8Matrix34fP14AnimationStateUl`, `oniball_msg_run_particle_7d7810`, `oniball_msg_run_particle_7d78b0`, `phice_msg_run_particle_7d6740`, `phice_msg_run_particle_7d6790`, `planarsteel_run_particle_8d8510`, `planarsteel_run_particle_8d8560`, `planarsteel_run_particle_8d85b0`, `planarsteel_run_particle_8d8600`, `spellcharge_hit_something_particle_8d6780`
+- 2026-10-13 12:06 CDT — agents/w12-actor-spell-c — 1168 unresolved imports
+
+## Not merged: w12-vicont-b, w12-vimath-b, w12-wnd-a, w12-particle-data-b (and standing rejections)
+
+Reviewed at the tips below, all over three hours old. Each was rejected for the same repo-rule reason as `w11-creature-a`: functions committed with no test that a reviewer can run and that could fail, only a private R5900 interpreter comparison outside git. Counts are source units (directories) with a committed `host_check.cpp`, `host_contract.cpp` or `object_check.cpp`, taken from the branch diff against the shared branch. Nothing from these was merged or selected. Owners can add per-function host checks and push again.
+
+- `agents/w12-vicont-b` (`e34cbf25`): 0 of 26 units have a committed check.
+- `agents/w12-vimath-b` (`8a0cbea4`): 10 of 20 have one. The ten without are `extract-rotation`, `make-quaternion`, `mat-mul33`, `mat-mul34`, `mat-scale`, `mat-transpose33`, `quat-transform`, `vilnode-remove`, `vimatrix44-rotate-hpr` and `vq-decompress`. The notes say x86_64 host builds hang on this machine; the other packages of this wave used native arm64 with a pointer-translate hook instead.
+- `agents/w12-wnd-a` (`927f90e8`): 4 of 34 have one. The notes (five summary sections present) say the private paired run is the only check for the rest.
+- `agents/w12-particle-data-b` (`7e2a43d4`): the notes lack the five summary sections (two top-level sections), and one of its two units (`w12-particle-data-b-views`) has no check.
+- `agents/w12-vicont-a` (`5e5bf51e`): rejected above (7 of 26).
+
+Merged with part of the branch left unselected, because most units are tested: `w12-startup-rt-a` (two units), `w12-startup-rt-c` (three units), `w12-actor-spell-c` (four units), `w12-hud-loop-a` (the earlier-wave units and `drawGold`), `w12-light-model` (`inventory-textures`). Their entries above say which and why.
+
+Standing rejections, tips unchanged: `w10-actor-i` (`e1ad5dba`), `w10-startup-d` (`cb1c9c26`), `w11-creature-a` (`a91fc08f`), `w11-vi-misc-a` (`9549e91d`), `w11-vi-render-b` (`dc3d80c6`), `w8-spell-static-init-b` (`ed20fab5`) and `w9-render-math-a` (`adff0bdc`). `codex/norrath-runtime-binding` and `integration/wave` are not worker packages and stay with their owners.
+- 2026-10-13 12:07 CDT — rejection notes (vicont-b, vimath-b, wnd-a, particle-data-b), nothing merged — 1168 unresolved imports
+
+## Re-verification of the shared branch and closing pass (second integrator)
+
+At `e189b249` (the shared branch tip) the checks were re-run before touching anything: 214 tool tests passed, `check_source_snapshot.py` passed (11672 files, 5528 authored inputs), and the full default partial build (toolchain `work/toolchains/ee`, no Newlib) completed with 5528 source compilations, one link, 4240 function bodies, zero COMMON and **1168** unresolved imports. The recorded count reproduces exactly. No repo-rule breach was found in the merges of this wave: the only non-C++ additions are three short authored assembly stubs (`w12-startup-rt-a`), each with a host check and observed/unknown labelling; the only plan units from input_order 5000 up without a committed check are five `w10-render-b-data-*` storage objects (data, not functions). No shared file needed fixing.
+
+`git branch -r --no-merged` lists twelve `agents/*` branches plus `codex/norrath-runtime-binding` and `integration/wave`. Every `agents/*` tip is unchanged from the standing rejections above (all over 4 hours old). The per-branch counts of source units with a committed check were recomputed from the branch diffs and reproduce: `w12-vicont-a` 7/26, `w12-vicont-b` 0/26, `w12-vimath-b` 10/20, `w12-wnd-a` 4/34, `w12-particle-data-b` 1/2, `w11-creature-a` 0/21, `w11-vi-misc-a` 0/34, `w11-vi-render-b` 0/31, `w10-actor-i` 0/32, `w10-startup-d` 0/17, `w8-spell-static-init-b` 0/30, `w9-render-math-a` 1/26. All stay rejected. Note for the owner: earlier waves merged some partly tested branches and left the untested units unselected; the partly tested branches above (vicont-a, vimath-b, wnd-a, w9-render-math-a) could be handled the same way, but only by an owner decision since their notes say the untested functions rely on private paired runs. Nothing was merged in this pass.
+- 2026-10-13 12:25 CDT — re-verification, no branches eligible, nothing merged — 1168 unresolved imports
+
+## Third pass (third integrator)
+
+At `0f1a1ca6` (shared branch tip, no new commits on origin) the checks were re-run: 214 tool tests passed, `check_source_snapshot.py` passed (11672 files, 5528 authored inputs), and the full default partial build (toolchain `work/toolchains/ee`, no Newlib) gave 5528 source compilations, one link, 4240 function bodies, zero COMMON and **1168** unresolved imports, matching the recorded count. The twelve remaining `agents/*` tips are unchanged from the standing rejections above (all more than three hours old), so nothing was eligible and nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker packages.
+- 2026-10-13 12:40 CDT — third pass, no branches eligible, nothing merged — 1168 unresolved imports
+
+## agents/w13-m-startup-data-a
+
+Merged (merge commit, branch tip `a21a2a73`; the notes have the five summary sections: imports closed, imports opened, plan entries, authored but never executed, unknown). 4 of the branch's units with fresh `input_order` values 5530 through 5533: `w13-m-startup-data-a-sce-dcache-sweep` (`_sceSDC`, 160 bytes), `w13-m-startup-data-a-eh-context-static` (`eh_context_static`, 76 bytes), `w13-m-startup-data-a-config-rand-words` (`gConfig`, `iRandState`, `localRandState`, data) and `w13-m-startup-data-a-ee-exception-frame` (`norrath_ee_exception_frame`, data). All four committed host checks build and exit 0 here. The worker's mutation check of `_sceSDC` was not re-run, and nothing was executed on the EE; compiled sizes are not image sizes and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5532 authored inputs, 4242 function bodies, zero COMMON.
+
+NOT selected (sources stay as they were): the notes also count eight names as closed by existing, earlier-wave sources (`__EH_FRAME_BEGIN__`, three `norrath_archive_vblank_*` views, twelve libpad/libmtap views, `norrath_loader_failure_word_view`). Those units stay unplanned for the reasons earlier entries recorded: `w12-startup-rt-a-eh-frame-begin` breaks `ld -r` and needs unreviewed linker ordering, `sony-cd-vblank-views` redefines names cd-archive already defines, `simloop-services-pad-mtap-state` is data-only with no host check, and `level-anim-load-loader-failure-word` is an absolute-symbol alias forbidden by PORTABLE_BUILD. The notes' 23 closed therefore does not reproduce; 6 close here (1168 to 1162).
+
+| | |
+|---|---|
+| Before | 1168 |
+| After | 1162 |
+| Closed | 6 |
+| Opened | 0 |
+
+Closed: `_sceSDC`, `eh_context_static`, `gConfig`, `iRandState`, `localRandState`, `norrath_ee_exception_frame`
+
+Opened: none
+- 2026-10-13 14:54 CDT — agents/w13-m-startup-data-a — 1162 unresolved imports
+
+## agents/w13-startup-fn-a
+
+Merged (merge commit, branch tip `d51e63db`; the notes have the five summary sections). Package is mixed: 22 of its 29 units have a committed check that builds and passes here (13 host contracts or vector checks run on the host; `GetOsdConfigParam2`, `__throw` and `VIEndian` have object-shape checks that run against an object compiled with the plan's flags, which guard shape and imports, not behaviour). Plan entries use fresh `input_order` values 5534 through 5555. Object hashes in the snapshot come from this integrator's own builds. Nothing was executed on the EE; the worker's private paired runs were not reproduced; no byte match is claimed. `__throw` uses inline assembly for the handler entry stub; the notes say it differs from the unselected w10/w12 versions of the same symbol and only this one is selected. Full build with the final snapshot: 5554 authored inputs, 4263 function bodies, zero COMMON.
+
+NOT selected (sources stay in the tree, recorded in the snapshot file list only): `check-for-modifier-key-events`, `dynamic-cast-2`, `generate-key-press-events`, `generate-key-release-events`, `gsm-decode`, `gsm-encode` and `upcast` have no committed check; the notes say only the private paired run covers them. The notes' 30 closed names therefore do not reproduce: 23 close here (the rest belong to the unselected units), and 15 are opened (the notes list the same kind of helpers as opened).
+
+| | |
+|---|---|
+| Before | 1162 |
+| After | 1154 |
+| Closed | 23 |
+| Opened | 15 |
+
+Closed: `GetOsdConfigParam2`, `IsT10K`, `VIBufferSwap__FiPUc`, `VIEndian`, `__ieee754_rem_pio2`, `__kernel_cos`, `__kernel_cosf`, `__kernel_sin`, `__kernel_sinf`, `__tf16__attr_type_info`, `__tf16__func_type_info`, `__tf5Skill`, `__tfv`, `__throw`, `__ti5Skill`, `addhour`, `convertfrombcd`, `converttobcd`, `init_reg_size_table`, `sceDeci2ExRecv`, `sceDeci2ExSend`, `subhour`, `uncompress`
+
+Opened: `GetRomName`, `__frame_state_for`, `__kernel_rem_pio2`, `_vt$19__builtin_type_info`, `adddate`, `dwarf_reg_size_table`, `fabs`, `frombcd`, `gRomName`, `inflate`, `inflateEnd`, `inflateInit_`, `subdate`, `throw_helper`, `tobcd`
+- 2026-10-13 15:14 CDT — agents/w13-startup-fn-a — 1154 unresolved imports
+
+## agents/w13-m-startup-data-b
+
+Merged (merge commit, branch tip `71759f7f`; the notes carry the closed, opened, plan-entry, never-executed and unknown sections plus baseline and evidence). All 21 units are data (SIF/IOP overlay buffers, timer words, `sceCbPoff_Gp` and 18 virtual tables) with a committed host check that builds and passes here; fresh `input_order` values 5556 through 5576. The checks verify sizes, zero start state and slot order against stub functions; the image symbol names behind the slots are the notes' observation and are not checked on the host. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5575 authored inputs, 4263 function bodies, zero COMMON.
+
+The count goes up on purpose: the 18 tables name their virtual slots, so previously unreferenced functions become imports. The notes' 30 closed names reproduce as 27 here; the opened set is the slot targets (`Collide__...` and the other virtuals of the VI sprite classes, `Skeleton`, `FireBombletJr`, `Spell` and `WeatherFilter`). Opening them is the expected cost of defining a table, not a regression.
+
+| | |
+|---|---|
+| Before | 1154 |
+| After | 1264 |
+| Closed | 27 |
+| Opened | 137 |
+
+Closed: `_vt$11VILODSprite`, `_vt$12VINameSprite`, `_vt$12VIPointLight`, `_vt$12VISkinSprite`, `_vt$13FireBombletJr`, `_vt$13VIFloraSprite`, `_vt$13VIGroupSprite`, `_vt$13VIPointSprite`, `_vt$13VISoundSprite`, `_vt$13WeatherFilter`, `_vt$14VISimpleSprite`, `_vt$16VIParticleSprite`, `_vt$19VIStreamAudioSprite`, `_vt$20VIEffectVolumeSprite`, `_vt$5Spell`, `_vt$8Skeleton`, `_vt$9VICSprite`, `_vt$9VIHSprite`, `norrath_overlay_sIopFunctionData_11edf08`, `norrath_overlay_sSend_11edb00`, `rollover_counter`, `sFunctionIndex`, `sRecv`, `sSend`, `sSifClient`, `sceCbPoff_Gp`, `timer_handle`
+
+Opened: `Collide__11VILODSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__11VILODSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VINameSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VINameSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VIPointLightR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VISkinSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VISkinSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIFloraSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIFloraSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIGroupSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIGroupSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIPointSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIPointSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VISoundSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VISoundSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__14VISimpleSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__14VISimpleSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__16VIParticleSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__16VIParticleSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__19VIStreamAudioSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__19VIStreamAudioSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__20VIEffectVolumeSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__20VIEffectVolumeSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__8VISpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VICSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VICSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VIHSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VIHSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Copy__11VILODSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VINameSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VIPointLightR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VISkinSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIFloraSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIGroupSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIPointSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VISoundSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__14VISimpleSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__16VIParticleSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__19VIStreamAudioSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__20VIEffectVolumeSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__9VICSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__9VIHSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FilterActor__13WeatherFilterR7VIScenei`, `GetInstType__C13VIGroupSpriteR7VIScene`, `GetInstType__C13VISoundSpriteR7VIScene`, `GetInstType__C16VIParticleSpriteR7VIScene`, `GetInstType__C19VIStreamAudioSpriteR7VIScene`, `GetInstType__C20VIEffectVolumeSpriteR7VIScene`, `GetInstType__C8VISpriteR7VIScene`, `GetInstType__C9VICSpriteR7VIScene`, `Pick__11VILODSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VINameSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VIPointLightR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VISkinSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIFloraSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIGroupSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIPointSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VISoundSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__14VISimpleSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__16VIParticleSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__19VIStreamAudioSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__20VIEffectVolumeSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__9VIHSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `QueryEmitters__13VIGroupSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__19VIStreamAudioSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__8VISpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__9VIHSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryIntersection__11VILODSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__13VIGroupSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__14VISimpleSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__8VISpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__9VICSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__9VIHSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `Raster__11VILODSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VINameSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VIPointLightR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VISkinSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIFloraSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIGroupSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIPointSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VISoundSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__14VISimpleSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__16VIParticleSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__19VIStreamAudioSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__20VIEffectVolumeSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__9VICSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__9VIHSpriteR8VICameraR7VISceneR8VIRasterUi`, `Release__11VILODSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VINameSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VIPointLightR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VISkinSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIFloraSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIGroupSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIPointSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VISoundSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__14VISimpleSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__16VIParticleSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__19VIStreamAudioSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__20VIEffectVolumeSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__9VICSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__9VIHSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `_$_11VILODSprite`, `_$_12VINameSprite`, `_$_12VIPointLight`, `_$_12VISkinSprite`, `_$_13FireBombletJr`, `_$_13VIFloraSprite`, `_$_13VIGroupSprite`, `_$_13VIPointSprite`, `_$_13VISoundSprite`, `_$_14VISimpleSprite`, `_$_16VIParticleSprite`, `_$_19VIStreamAudioSprite`, `_$_20VIEffectVolumeSprite`, `_$_5Spell`, `_$_9VICSprite`, `_$_9VIHSprite`, `__tf11VILODSprite`, `__tf12VINameSprite`, `__tf12VIPointLight`, `__tf12VISkinSprite`, `__tf13FireBombletJr`, `__tf13VIFloraSprite`, `__tf13VIGroupSprite`, `__tf13VIPointSprite`, `__tf13VISoundSprite`, `__tf13WeatherFilter`, `__tf14VISimpleSprite`, `__tf16VIParticleSprite`, `__tf19VIStreamAudioSprite`, `__tf20VIEffectVolumeSprite`, `__tf9VICSprite`, `__tf9VIHSprite`, `clone__13FireBombletJr`, `msg_draw__13FireBombletJr`, `msg_run__13FireBombletJr`, `run__5SpellG6Point3s`
+- 2026-10-13 15:19 CDT — agents/w13-m-startup-data-b — 1264 unresolved imports
+
+## agents/w13-frontend-game-a
+
+Merged (merge commit, branch tip `80d0bc42`; the notes have the closed, opened, plan-entry, never-executed and unknown sections). 20 units with fresh `input_order` values 5577 through 5596, each with a committed host check that builds and passes here. Two checks (`count-items`, `obj-get`) only pass with the flags the notes table lists (`-DW13_FRONT_HOST -fno-builtin`); with default flags they crash, so they were run with those flags. Nine further directories hold only a host check for a source from an earlier wave (`draw-gold`, six `mc-*`, `msg-run-7weather`); all nine pass here and are recorded as files only, not as plan inputs. Mutation testing and the private paired runs described in the notes were not re-run, and nothing was executed on the EE; no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5595 authored inputs, 4283 function bodies, zero COMMON.
+
+The notes' 28 closed names reproduce as 19: the nine `MC_*`/earlier-wave names were already closed by sources merged before this package, so the new checks add evidence but close nothing. 20 names are opened (callees and storage of the new bodies).
+
+| | |
+|---|---|
+| Before | 1264 |
+| After | 1265 |
+| Closed | 19 |
+| Opened | 20 |
+
+Closed: `ChangeNetCam__6Camerai`, `McErrWnd__Fv`, `coreStartLoadingScreen__Fv`, `countItems__FP10GameObject`, `drawNewestQuickSpellMenu__Fiiicl`, `getMoveDir__FiiiP12screenStruct`, `getPic__4itemiPQ24item11description`, `listInsert__FP8ListHeadP10__listNodePv`, `lumpPartialLoad__FPcT0`, `lumpRename__FPcT0`, `msgEquipItem__FiPQ24item11descriptioni`, `msgInvItemSetAttributes__FiiPcPQ24item11description`, `msgUnequipItem__FiPQ24item11description`, `objGet__FP10GameObjectPc`, `playerAllocateArmorCache__Fii`, `shopDrawInfoBox__FiP12screenStructPQ24item11descriptioniiiii`, `shopDrawItemBitmap__FiP12screenStructfPQ24item11descriptioniii`, `shopRunMouseLogic__FiiP12screenStructi`, `updateTaskBar__FiP12screenStruct`
+
+Opened: `a.1122`, `blackoutTexCopy`, `curBoxOld`, `displayItemStats__FiiiPQ24item11descriptioniii`, `drewBitmap`, `foregrndTexCopy`, `hudGetRemappedButtonIcon__Fii`, `hudQuickSpellOn`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell__Fiiil`, `picAdd__4itemPc`, `scrollmapTexCopy`, `shopClipGridCoordinates__FPiN30`, `shopDrawItemBitmapGlow__FP8_textureii`, `shopMouseOnHotSpot__FP12screenStruct`, `titleloadTexCopy`
+- 2026-10-13 15:28 CDT — agents/w13-frontend-game-a — 1265 unresolved imports
+
+## agents/w13-frontend-game-a (follow-up)
+
+Follow-up to the entry above (correction, not a new merge). The entry above said the nine host-only directories closed nothing because earlier waves had already selected their sources. That was wrong: those eight earlier-wave sources (`MC_*`, `drawGold`, `msg_run__7Weather`) were left unselected by earlier integrators for lacking a check, and are still in the unresolved list at that point. This package's host-only directories are exactly the missing checks, and all nine pass here, so the nine sources are now selected (input_order values 5597 through 5605, each paired with its w13 host check). With them the notes' 28 closed names reproduce exactly (19 + 9). Full build: 5604 authored inputs, 4293 function bodies, zero COMMON. Paired runs and mutation tests described in the notes were not re-run.
+
+| | |
+|---|---|
+| Before | 1265 |
+| After | 1266 |
+| Closed | 9 |
+| Opened | 10 |
+
+Closed: `MC_BuildPackedPlayer__FP11playerEntryi`, `MC_CheckPlayerImportOrChange__Fv`, `MC_ConvertTempPlayerToReal__Fi`, `MC_LoadLevelEntities__FPcT0`, `MC_NetPack__Fv`, `MC_NetUnPack__Fv`, `MC_SetRamNmPlayers__Fi`, `drawGold__Fv`, `msg_run__7Weather`
+
+Opened: `commaString__FPc`, `floorPutSaveInfo__FPc`, `getPackChecksum__Fv`, `loadBuffer`, `mcDisableStartupScript`, `megatileEntitize__FPci`, `objectPutSaveData__FPci`, `padChangeIndex__Fii`, `playerGoldIconx`, `readMap__3mapPUc`
+- 2026-10-13 15:33 CDT — agents/w13-frontend-game-a (follow-up) — 1266 unresolved imports
+
+## agents/w13-frontend-game-b
+
+Merged (merge commit, branch tip `4cbc84cc`; the notes have the authored, closed, opened, plan-entry, never-executed and unknown sections). 12 units with fresh `input_order` values 5606 through 5617, each with a committed host contract that passes here (built together with its unit, since the contracts call the unit as a linked function). The contracts are small (eight-byte no-op bodies check that nothing is touched; the arithmetic units check results); the private paired runs in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5616 authored inputs, 4305 function bodies, zero COMMON. The notes' 12 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1266 |
+| After | 1255 |
+| Closed | 12 |
+| Opened | 1 |
+
+Closed: `P_CloseParticleSystem__Fi`, `P_OpenParticleSystem__Fi`, `P_Push__Fv`, `P_SetParticleSystemMatrix__FiP8Matrix34`, `P_SetTrailColor__Fiiiii`, `distanceToPlane2__FP6Point3P6Point2T0`, `draw__5Spell`, `findCommander__14WoodElfSoldier`, `matUntransform__FP6Point3P8Matrix44T0`, `modelSetNoZRead__Fv`, `playerCheckArmorCacheRaces__Fv`, `textureDrawFloat__FP8_textureffiUiff`
+
+Opened: `_textureDrawFloat__FP8_textureffiUiff`
+- 2026-10-13 15:42 CDT — agents/w13-frontend-game-b — 1255 unresolved imports
+
+## agents/w13-m-data-a
+
+Merged (merge commit, branch tip `f21deeaf`; the notes have the checked, closed, opened, plan-entry, never-executed and unknown sections). 4 data units with fresh `input_order` values 5618 through 5621, each with a committed host check that builds and passes here: `w13-m-data-a-line-pos`, `-line-buffer`, `-full-count` and `-marble` (observed sizes and storage class; no behaviour). Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5620 authored inputs, 4305 function bodies, zero COMMON.
+
+NOT selected, as the notes themselves say: `w10-render-b-data-lava-particles` (closes `lavaGoopParticle` and `lavaSteamParticle`) is an earlier-wave data unit with no check of its own; this package adds none, so it stays unplanned. `w10-render-b-data-inventory-textures` stays out because it defines `invHeader` with a different type than the planned `w12-hud-loop-a-data-inv-header`. The notes' four closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1255 |
+| After | 1251 |
+| Closed | 4 |
+| Opened | 0 |
+
+Closed: `fullCount`, `lineBuffer`, `linePos`, `marble`
+
+Opened: none
+- 2026-10-13 15:47 CDT — agents/w13-m-data-a — 1251 unresolved imports
+
+## agents/w13-m-data-b
+
+Merged (merge commit, branch tip `b29bed7b`; the notes have the result, checks, observed/inferred/unknown, closed, opened, plan-entry, never-executed and unknown sections). 2 data units, `w13-m-data-b-zero-pad` (`zeroPad`) and the `maxDistance` unit, with fresh `input_order` values 5622 and 5623; both committed host checks build and pass here. They check size and initial state only. The notes list 22 of the 24 assigned names as still open with reasons; none of those has a unit here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5622 authored inputs, 4305 function bodies, zero COMMON. The notes' two closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1251 |
+| After | 1249 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `maxDistance`, `zeroPad`
+
+Opened: none
+- 2026-10-13 15:51 CDT — agents/w13-m-data-b — 1249 unresolved imports
+
+## agents/w13-m-skill-tf-a
+
+Merged (merge commit, branch tip `9d274342`; the notes have the reference, contents, verification, closed, opened, plan-entry, never-executed and unknown sections). 30 type_info accessor units (`__tf...Skill...` with their nodes) with fresh `input_order` values 5624 through 5653, each with a committed host check that records the call sequence against stand-ins for `__rtti_si` and the base accessor and fails on a wrong order, node or skip condition; all 30 build and pass here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5652 authored inputs, 4335 function bodies, zero COMMON. The notes' 30 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1249 |
+| After | 1219 |
+| Closed | 30 |
+| Opened | 0 |
+
+Closed: `__tf15SkillPoisonRain`, `__tf15SkillShieldBash`, `__tf15SkillWizardBeam`, `__tf16SkillColdWeapons`, `__tf16SkillConeOfFrost`, `__tf16SkillCriticalHit`, `__tf16SkillDiseaseBolt`, `__tf16SkillFireWeapons`, `__tf16SkillGroundPound`, `__tf16SkillPoisonArrow`, `__tf16SkillShockOfFire`, `__tf17SkillConvertEnemy`, `__tf17SkillDiseaseTrail`, `__tf17SkillExplodeArrow`, `__tf17SkillMinorHealing`, `__tf17SkillRegeneration`, `__tf17SkillShockOfFrost`, `__tf17SkillUndeadShield`, `__tf18SkillAncestralCall`, `__tf18SkillBlindingLight`, `__tf18SkillConvertUndead`, `__tf18SkillDiseaseShield`, `__tf18SkillDismissUndead`, `__tf18SkillHammerOfWrath`, `__tf18SkillRepulseUndead`, `__tf19SkillSummonSkeleton`, `__tf21SkillLightningWeapons`, `__tf22SkillRangerCriticalHit`, `__tf9SkillBash`, `__tf9SkillRoot`
+
+Opened: none
+- 2026-10-13 15:56 CDT — agents/w13-m-skill-tf-a — 1219 unresolved imports
+
+## agents/w13-m-spell-dtor-a (rejected)
+
+Not merged (branch tip `3701a6db`; the notes have the status, closed, not-closed, referenced-imports, plan-entry, checks, never-executed and unknown sections). It adds 26 spell destructor units and a shared header, and none of the 26 has a committed check: the notes' evidence is the private R5900 paired run (36 scenarios per unit), the worker's hand mutations and a private link check, none of which can be repeated from the repository. A destructor unit that cannot fail in the repository's own checks is a function with no test that could fail, so nothing was merged, planned or selected. No game code was changed. If the owner wants the units, each needs a committed host contract (a call log against stubs for the base destructor and any list release); the rest of the package is untouched. The notes' 26 closed names were not rebuilt. Count unchanged at 1219.
+- 2026-10-13 16:01 CDT — agents/w13-m-spell-dtor-a rejected, nothing merged — 1219 unresolved imports
+
+## agents/w13-m-spell-dtor-b
+
+Merged (merge commit, branch tip `f0031a98`; the notes have the done, units, observed behaviour, checks, closed, opened, plan-entry, never-executed and unknown sections). 26 units (25 type_info accessors and the `dustCloud` destructor) with fresh `input_order` values 5654 through 5679. Each has a committed host contract that enumerates the node states or flag values and checks the callee-call sequence and result; all 26 build and pass here. Nothing was executed on the EE and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5678 authored inputs, 4361 function bodies, zero COMMON. The notes' 26 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1219 |
+| After | 1193 |
+| Closed | 26 |
+| Opened | 0 |
+
+Closed: `_$_9dustCloud`, `__tf10MummySnake`, `__tf10PoisonRain`, `__tf10SpawnMummy`, `__tf11BoltGoRound`, `__tf11DiseaseBolt`, `__tf12ShockOfFrost`, `__tf14HateProjectile`, `__tf14poisonGasSpell`, `__tf15FrostStormSpell`, `__tf15ShockProjectile`, `__tf16PoisonProjectile`, `__tf16beetleProjectile`, `__tf18SpellDiseaseShield`, `__tf19ColdArrowProjectile`, `__tf19FireArrowProjectile`, `__tf19MultiFireProjectile`, `__tf21PoisonArrowProjectile`, `__tf22ExplodeArrowProjectile`, `__tf5Wheel`, `__tf7AntWave`, `__tf8HateBeam`, `__tf8HateSoul`, `__tf9DustDevil`, `__tf9FireStorm`, `__tf9dustCloud`
+
+Opened: none
+- 2026-10-13 16:06 CDT — agents/w13-m-spell-dtor-b — 1193 unresolved imports
+
+## agents/w13-skill-cast-a
+
+Merged (merge commit, branch tip `7c3093cb`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 38 units with fresh `input_order` values 5680 through 5717, each with a committed check that builds and passes here (38 host contracts that log every callee call with arguments against an independent expectation). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5716 authored inputs, 4399 function bodies, zero COMMON. The notes' 38 closed names reproduce exactly. The 20 opened names are the spell constructors and accessors the new casts call.
+
+| | |
+|---|---|
+| Before | 1193 |
+| After | 1175 |
+| Closed | 38 |
+| Opened | 20 |
+
+Closed: `canCast__12SkillBlessedP8Creature`, `canCast__12SkillCycloneP8Creature`, `canCast__14SkillFireStormP8Creature`, `canCast__15SkillConeOfFireP8Creature`, `canCast__15SkillFireFlaresP8Creature`, `canCast__15SkillHolyStrikeP8Creature`, `canCast__15SkillPoisonRainP8Creature`, `canCast__15SkillShieldBashP8Creature`, `canCast__16SkillColdWeaponsP8Creature`, `canCast__16SkillCriticalHitP8Creature`, `canCast__16SkillDiseaseBoltP8Creature`, `cast__10SkillShockiP8CreatureG6Point3s`, `cast__11SkillChargeiP8CreatureG6Point3s`, `cast__12SkillBlessediP8CreatureG6Point3s`, `cast__12SkillCycloneiP8CreatureG6Point3s`, `cast__12SkillHealingiP8CreatureG6Point3s`, `cast__12SkillLifeTapiP8CreatureG6Point3s`, `cast__12SkillRiposteiP8CreatureG6Point3s`, `cast__13SkillDarknessiP8CreatureG6Point3s`, `cast__13SkillEntangleiP8CreatureG6Point3s`, `cast__14SkillColdArrowiP8CreatureG6Point3s`, `cast__14SkillFireArrowiP8CreatureG6Point3s`, `cast__14SkillFireStormiP8CreatureG6Point3s`, `cast__14SkillHarmTouchiP8CreatureG6Point3s`, `cast__14SkillMultiFireiP8CreatureG6Point3s`, `cast__15SkillClericRootiP8CreatureG6Point3s`, `cast__15SkillConeOfFireiP8CreatureG6Point3s`, `cast__15SkillFireFlaresiP8CreatureG6Point3s`, `cast__15SkillFrostStormiP8CreatureG6Point3s`, `cast__15SkillHolyShieldiP8CreatureG6Point3s`, `cast__15SkillHolyStrikeiP8CreatureG6Point3s`, `cast__15SkillPoisonRainiP8CreatureG6Point3s`, `cast__15SkillShieldBashiP8CreatureG6Point3s`, `cast__15SkillWizardBeamiP8CreatureG6Point3s`, `cast__16SkillColdWeaponsiP8CreatureG6Point3s`, `cast__16SkillConeOfFrostiP8CreatureG6Point3s`, `cast__16SkillCriticalHitiP8CreatureG6Point3s`, `cast__16SkillDiseaseBoltiP8CreatureG6Point3s`
+
+Opened: `__10HolyStrikesiG6Point3P10GameObjectP5Skill`, `__11SpellChargeiP8CreatureP5Skill`, `__12SpellBlessediP8CreatureP5Skill`, `__12SpellCycloneiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `__15SpellClericRootiP8CreatureP5Skill`, `__15SpellFireFlaresiP8CreatureG6Point3P5Skill`, `__15SpellHolyShieldiP8CreatureP5Skill`, `__15SpellShieldBashiP8CreatureP5Skill`, `__15SpellWizardBeamiP8CreatureP5Skill`, `__16SpellColdWeaponsiP8CreatureP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`, `__16SpellCriticalHitiP8CreatureP5Skill`, `__18DarknessProjectileG6Point3T1P5SkilliP10GameObject`, `__tf12SpellBlessed`, `__tf15SpellFireFlares`, `__tf16SpellColdWeapons`, `__tf16SpellCriticalHit`, `getAttackBonus__4itemPQ24item11description`
+- 2026-10-13 16:11 CDT — agents/w13-skill-cast-a — 1175 unresolved imports
+
+## agents/w13-skill-cast-b
+
+Merged (merge commit, branch tip `a1ec4f2b`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 37 units with fresh `input_order` values 5718 through 5754, each with a committed check that builds and passes here (37 host contracts that log every callee call and its arguments). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5753 authored inputs, 4436 function bodies, zero COMMON. The notes' 37 closed names reproduce exactly. The notes do not state a closed count; 37 close here. The 31 opened names are the spell constructors, type_info accessors, effect constructors and storage the new casts call.
+
+| | |
+|---|---|
+| Before | 1175 |
+| After | 1169 |
+| Closed | 37 |
+| Opened | 31 |
+
+Closed: `canCast__16SkillFireWeaponsP8Creature`, `canCast__16SkillGroundPoundP8Creature`, `canCast__17SkillDiseaseTrailP8Creature`, `canCast__17SkillShockOfFrostP8Creature`, `canCast__17SkillUndeadShieldP8Creature`, `canCast__18SkillAncestralCallP8Creature`, `canCast__18SkillBlindingLightP8Creature`, `canCast__18SkillConvertUndeadP8Creature`, `canCast__18SkillDiseaseShieldP8Creature`, `canCast__18SkillHammerOfWrathP8Creature`, `canCast__19SkillSummonSkeletonP8Creature`, `canCast__21SkillLightningWeaponsP8Creature`, `canCast__22SkillRangerCriticalHitP8Creature`, `canCast__9SkillBashP8Creature`, `cast__16SkillFireWeaponsiP8CreatureG6Point3s`, `cast__16SkillGroundPoundiP8CreatureG6Point3s`, `cast__16SkillPoisonArrowiP8CreatureG6Point3s`, `cast__16SkillShockOfFireiP8CreatureG6Point3s`, `cast__17SkillConvertEnemyiP8CreatureG6Point3s`, `cast__17SkillDiseaseTrailiP8CreatureG6Point3s`, `cast__17SkillExplodeArrowiP8CreatureG6Point3s`, `cast__17SkillMinorHealingiP8CreatureG6Point3s`, `cast__17SkillRegenerationiP8CreatureG6Point3s`, `cast__17SkillShockOfFrostiP8CreatureG6Point3s`, `cast__17SkillUndeadShieldiP8CreatureG6Point3s`, `cast__18SkillAncestralCalliP8CreatureG6Point3s`, `cast__18SkillBlindingLightiP8CreatureG6Point3s`, `cast__18SkillConvertUndeadiP8CreatureG6Point3s`, `cast__18SkillDiseaseShieldiP8CreatureG6Point3s`, `cast__18SkillDismissUndeadiP8CreatureG6Point3s`, `cast__18SkillHammerOfWrathiP8CreatureG6Point3s`, `cast__18SkillRepulseUndeadiP8CreatureG6Point3s`, `cast__19SkillSummonSkeletoniP8CreatureG6Point3s`, `cast__21SkillLightningWeaponsiP8CreatureG6Point3s`, `cast__22SkillRangerCriticalHitiP8CreatureG6Point3s`, `cast__9SkillBashiP8CreatureG6Point3s`, `cast__9SkillRootiP8CreatureG6Point3s`
+
+Opened: `__12GlowingShaftG6Point3iiii`, `__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`, `__16SpellFireWeaponsiP8CreatureP5Skill`, `__17SpellConvertEnemyiP8CreatureP5Skill`, `__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__17SpellUndeadShieldiP8CreatureP5Skill`, `__18SpellAncestralCalliP8CreatureP5Skill`, `__18SpellConvertUndeadiP8CreatureP5Skill`, `__19BlindingLightEffectG6Point3iP8CreatureP5Skill`, `__21SpellLightningWeaponsiP8CreatureP5Skill`, `__22SpellRangerCriticalHitiP8CreatureP5Skill`, `__8HolyBoltG6Point3iiP8CreatureP5Skill`, `__8LostSoulG6Point3T1iP10_vagHeaderii`, `__8SkelightG6Point3sPPcci`, `__9SpellBashiP8CreatureP5Skill`, `__9SpellRootiP8CreatureP5Skill`, `__tf16SpellFireWeapons`, `__tf17SpellDiseaseTrail`, `__tf17SpellUndeadShield`, `__tf18SpellAncestralCall`, `__tf18SpellHammerOfWrath`, `__tf21SpellLightningWeapons`, `__tf22SpellRangerCriticalHit`, `_vt$18SpellHammerOfWrath`, `_vt$19SpellSummonSkeleton`, `gameRadialDamage__FP10GameObjectG6Point3iffiii`, `skelightName`, `skelightParams`, `summonskeletonParticle1`, `summonskeletonParticle2`
+- 2026-10-13 16:16 CDT — agents/w13-skill-cast-b — 1169 unresolved imports
+
+## agents/w13-skill-ramp-a
+
+Merged (merge commit, branch tip `aeca344e`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 5755 through 5783, each with a committed check that builds and passes here (29 host contracts that fill a guarded buffer with a sentinel and compare every byte against an independent bit-pattern table). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5782 authored inputs, 4465 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1169 |
+| After | 1140 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `initRamps__10SkillDodge`, `initRamps__10SkillShock`, `initRamps__11SkillCharge`, `initRamps__12SkillArchery`, `initRamps__12SkillBlessed`, `initRamps__12SkillCyclone`, `initRamps__12SkillHealing`, `initRamps__12SkillLifeTap`, `initRamps__12SkillRiposte`, `initRamps__13SkillDarkness`, `initRamps__13SkillEntangle`, `initRamps__14SkillColdArrow`, `initRamps__14SkillFireArrow`, `initRamps__14SkillFireStorm`, `initRamps__14SkillHarmTouch`, `initRamps__14SkillMultiFire`, `initRamps__15SkillClericRoot`, `initRamps__15SkillConeOfFire`, `initRamps__15SkillFireFlares`, `initRamps__15SkillFrostStorm`, `initRamps__15SkillHolyShield`, `initRamps__15SkillHolyStrike`, `initRamps__15SkillPoisonRain`, `initRamps__15SkillShieldBash`, `initRamps__15SkillWizardBeam`, `initRamps__16SkillColdWeapons`, `initRamps__16SkillConeOfFrost`, `initRamps__16SkillCriticalHit`, `initRamps__16SkillDiseaseBolt`
+
+Opened: none
+- 2026-10-13 16:20 CDT — agents/w13-skill-ramp-a — 1140 unresolved imports
+
+## agents/w13-skill-ramp-b
+
+Merged (merge commit, branch tip `4a21b04f`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 5784 through 5812, each with a committed check that builds and passes here (29 host contracts (ramp initialisers against an independent bit-pattern table; the evaluators against computed expectations)). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5811 authored inputs, 4494 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1140 |
+| After | 1111 |
+| Closed | 29 |
+| Opened | 0 |
+
+Closed: `energyCostRamp4__5Skillii`, `evaluateCreatureRampAtRank__5Skillii`, `evaluateRampAtRank__5Skillii`, `evaluateRampAtRank__5SkilliiP10GameObject`, `evaluateRampAtRank__5SkilliiP8ListHead`, `getRampDamage__5SkilliifiPiT5`, `initRamps__16SkillFireWeapons`, `initRamps__16SkillGroundPound`, `initRamps__16SkillPoisonArrow`, `initRamps__16SkillShockOfFire`, `initRamps__17SkillConvertEnemy`, `initRamps__17SkillDiseaseTrail`, `initRamps__17SkillExplodeArrow`, `initRamps__17SkillMinorHealing`, `initRamps__17SkillRegeneration`, `initRamps__17SkillShockOfFrost`, `initRamps__17SkillUndeadShield`, `initRamps__18SkillAncestralCall`, `initRamps__18SkillBlindingLight`, `initRamps__18SkillConvertUndead`, `initRamps__18SkillDiseaseShield`, `initRamps__18SkillDismissUndead`, `initRamps__18SkillHammerOfWrath`, `initRamps__18SkillRepulseUndead`, `initRamps__19SkillSummonSkeleton`, `initRamps__21SkillLightningWeapons`, `initRamps__22SkillRangerCriticalHit`, `initRamps__9SkillBash`, `initRamps__9SkillRoot`
+
+Opened: none
+- 2026-10-13 16:25 CDT — agents/w13-skill-ramp-b — 1111 unresolved imports
+
+## agents/w13-skill-rank-a
+
+Merged (merge commit, branch tip `d72e9ecc`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 28 units with fresh `input_order` values 5813 through 5840, each with a committed check that builds and passes here (28 host contracts for the rank-description functions). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5839 authored inputs, 4522 function bodies, zero COMMON. The notes' 28 closed names reproduce exactly. The one opened name is `getEnemyWord__Fi`.
+
+| | |
+|---|---|
+| Before | 1111 |
+| After | 1084 |
+| Closed | 28 |
+| Opened | 1 |
+
+Closed: `getRankDescription__10SkillBluntPUsi`, `getRankDescription__10SkillDodgePUsi`, `getRankDescription__10SkillShockPUsi`, `getRankDescription__11SkillChargePUsi`, `getRankDescription__12SkillArcheryPUsi`, `getRankDescription__12SkillBlessedPUsi`, `getRankDescription__12SkillCyclonePUsi`, `getRankDescription__12SkillHealingPUsi`, `getRankDescription__12SkillLifeTapPUsi`, `getRankDescription__12SkillRipostePUsi`, `getRankDescription__13SkillDarknessPUsi`, `getRankDescription__13SkillEntanglePUsi`, `getRankDescription__13SkillSlashingPUsi`, `getRankDescription__14SkillColdArrowPUsi`, `getRankDescription__14SkillFireArrowPUsi`, `getRankDescription__14SkillFireStormPUsi`, `getRankDescription__14SkillHarmTouchPUsi`, `getRankDescription__14SkillMultiFirePUsi`, `getRankDescription__15SkillClericRootPUsi`, `getRankDescription__15SkillConeOfFirePUsi`, `getRankDescription__15SkillFireFlaresPUsi`, `getRankDescription__15SkillFrostStormPUsi`, `getRankDescription__15SkillHolyShieldPUsi`, `getRankDescription__15SkillHolyStrikePUsi`, `getRankDescription__15SkillPoisonRainPUsi`, `getRankDescription__15SkillShieldBashPUsi`, `getRankDescription__15SkillWizardBeamPUsi`, `getRankDescription__16SkillColdWeaponsPUsi`
+
+Opened: `getEnemyWord__Fi`
+- 2026-10-13 16:30 CDT — agents/w13-skill-rank-a — 1084 unresolved imports
+
+## agents/w13-skill-rank-b
+
+Merged (merge commit, branch tip `5f0265cc`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 28 units with fresh `input_order` values 5841 through 5868, each with a committed check that builds and passes here (28 host contracts for the rank-description functions). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5867 authored inputs, 4550 function bodies, zero COMMON. The notes' 28 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1084 |
+| After | 1056 |
+| Closed | 28 |
+| Opened | 0 |
+
+Closed: `getRankDescription__16SkillConeOfFrostPUsi`, `getRankDescription__16SkillCriticalHitPUsi`, `getRankDescription__16SkillDiseaseBoltPUsi`, `getRankDescription__16SkillFireWeaponsPUsi`, `getRankDescription__16SkillGroundPoundPUsi`, `getRankDescription__16SkillPoisonArrowPUsi`, `getRankDescription__16SkillShockOfFirePUsi`, `getRankDescription__17SkillConvertEnemyPUsi`, `getRankDescription__17SkillDiseaseTrailPUsi`, `getRankDescription__17SkillExplodeArrowPUsi`, `getRankDescription__17SkillMinorHealingPUsi`, `getRankDescription__17SkillRegenerationPUsi`, `getRankDescription__17SkillResistPoisonPUsi`, `getRankDescription__17SkillShockOfFrostPUsi`, `getRankDescription__17SkillUndeadShieldPUsi`, `getRankDescription__18SkillAncestralCallPUsi`, `getRankDescription__18SkillBlindingLightPUsi`, `getRankDescription__18SkillConvertUndeadPUsi`, `getRankDescription__18SkillDiseaseShieldPUsi`, `getRankDescription__18SkillDismissUndeadPUsi`, `getRankDescription__18SkillHammerOfWrathPUsi`, `getRankDescription__18SkillRepulseUndeadPUsi`, `getRankDescription__19SkillSummonSkeletonPUsi`, `getRankDescription__21SkillLightningWeaponsPUsi`, `getRankDescription__22SkillRangerCriticalHitPUsi`, `getRankDescription__5SkillPUsi`, `getRankDescription__9SkillBashPUsi`, `getRankDescription__9SkillRootPUsi`
+
+Opened: none
+- 2026-10-13 16:35 CDT — agents/w13-skill-rank-b — 1056 unresolved imports
+
+## agents/w13-skill-stat-a
+
+Merged (merge commit, branch tip `e936ff11`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5869 through 5908, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5907 authored inputs, 4590 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1056 |
+| After | 1016 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getAmount__12SkillLifeTapi`, `getDeflectionChance__10SkillDodgei`, `getEnergyCost__10SkillDodgei`, `getEnergyCost__10SkillShocki`, `getEnergyCost__11SkillChargei`, `getEnergyCost__12SkillArcheryi`, `getEnergyCost__12SkillBlessedi`, `getEnergyCost__12SkillCyclonei`, `getEnergyCost__12SkillHealingi`, `getEnergyCost__12SkillLifeTapi`, `getEnergyCost__13SkillDarknessi`, `getEnergyCost__13SkillEntanglei`, `getEnergyCost__14SkillColdArrowi`, `getEnergyCost__14SkillFireArrowi`, `getEnergyCost__14SkillFireStormi`, `getEnergyCost__14SkillHarmTouchi`, `getIcon__10SkillShock`, `getIcon__11SkillCharge`, `getIcon__12SkillBlessed`, `getIcon__12SkillCyclone`, `getIcon__12SkillHealing`, `getIcon__12SkillLifeTap`, `getIcon__13SkillDarkness`, `getIcon__13SkillEntangle`, `getIcon__14SkillColdArrow`, `getIcon__14SkillFireArrow`, `getIcon__14SkillFireStorm`, `getIcon__14SkillHarmTouch`, `getIcon__14SkillMultiFire`, `getLevelRequirement__12SkillBlessedi`, `getLevelRequirement__12SkillCyclonei`, `getLevelRequirement__12SkillHealingi`, `getLevelRequirement__12SkillRipostei`, `getLevelRequirement__13SkillDarknessi`, `getLevelRequirement__13SkillEntanglei`, `getLevelRequirement__14SkillFireStormi`, `getSkillPointCost__12SkillBlessedi`, `getSkillPointCost__12SkillRipostei`, `getSkillPointCost__13SkillDarknessi`, `getSkillPointCost__14SkillFireStormi`
+
+Opened: none
+- 2026-10-13 16:40 CDT — agents/w13-skill-stat-a — 1016 unresolved imports
+
+## agents/w13-skill-stat-b
+
+Merged (merge commit, branch tip `1216be76`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5909 through 5948, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5947 authored inputs, 4630 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 1016 |
+| After | 976 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__14SkillMultiFirei`, `getEnergyCost__15SkillClericRooti`, `getEnergyCost__15SkillConeOfFirei`, `getEnergyCost__15SkillFireFlaresi`, `getEnergyCost__15SkillFrostStormi`, `getEnergyCost__15SkillHolyShieldi`, `getEnergyCost__15SkillHolyStrikei`, `getEnergyCost__15SkillPoisonRaini`, `getEnergyCost__15SkillShieldBashi`, `getEnergyCost__15SkillWizardBeami`, `getEnergyCost__16SkillColdWeaponsi`, `getEnergyCost__16SkillConeOfFrosti`, `getEnergyCost__16SkillCriticalHiti`, `getIcon__15SkillClericRoot`, `getIcon__15SkillConeOfFire`, `getIcon__15SkillFireFlares`, `getIcon__15SkillFrostStorm`, `getIcon__15SkillHolyShield`, `getIcon__15SkillHolyStrike`, `getIcon__15SkillShieldBash`, `getIcon__15SkillWizardBeam`, `getIcon__16SkillColdWeapons`, `getIcon__16SkillConeOfFrost`, `getIcon__16SkillCriticalHit`, `getIcon__16SkillDiseaseBolt`, `getLevelRequirement__15SkillClericRooti`, `getLevelRequirement__15SkillConeOfFirei`, `getLevelRequirement__15SkillFireFlaresi`, `getLevelRequirement__15SkillHolyStrikei`, `getLevelRequirement__15SkillPoisonRaini`, `getLevelRequirement__15SkillShieldBashi`, `getLevelRequirement__15SkillWizardBeami`, `getLevelRequirement__16SkillColdWeaponsi`, `getLevelRequirement__16SkillCriticalHiti`, `getSkillPointCost__15SkillConeOfFirei`, `getSkillPointCost__15SkillFireFlaresi`, `getSkillPointCost__15SkillHolyStrikei`, `getSkillPointCost__15SkillPoisonRaini`, `getSkillPointCost__15SkillWizardBeami`, `getSkillPointCost__16SkillColdWeaponsi`
+
+Opened: none
+- 2026-10-13 16:45 CDT — agents/w13-skill-stat-b — 976 unresolved imports
+
+## agents/w13-skill-stat-c
+
+Merged (merge commit, branch tip `2608e413`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 40 units with fresh `input_order` values 5949 through 5988, each with a committed check that builds and passes here (40 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 5987 authored inputs, 4670 function bodies, zero COMMON. The notes' 40 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 976 |
+| After | 936 |
+| Closed | 40 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__16SkillDiseaseBolti`, `getEnergyCost__16SkillFireWeaponsi`, `getEnergyCost__16SkillGroundPoundi`, `getEnergyCost__16SkillPoisonArrowi`, `getEnergyCost__16SkillShockOfFirei`, `getEnergyCost__17SkillConvertEnemyi`, `getEnergyCost__17SkillDiseaseTraili`, `getEnergyCost__17SkillExplodeArrowi`, `getEnergyCost__17SkillMinorHealingi`, `getEnergyCost__17SkillShockOfFrosti`, `getEnergyCost__17SkillUndeadShieldi`, `getEnergyCost__18SkillAncestralCalli`, `getEnergyCost__18SkillBlindingLighti`, `getIcon__16SkillFireWeapons`, `getIcon__16SkillGroundPound`, `getIcon__16SkillPoisonArrow`, `getIcon__16SkillShockOfFire`, `getIcon__17SkillConvertEnemy`, `getIcon__17SkillDiseaseTrail`, `getIcon__17SkillExplodeArrow`, `getIcon__17SkillMinorHealing`, `getIcon__17SkillShockOfFrost`, `getIcon__17SkillUndeadShield`, `getIcon__18SkillAncestralCall`, `getIcon__18SkillBlindingLight`, `getLevelRequirement__16SkillDiseaseBolti`, `getLevelRequirement__16SkillFireWeaponsi`, `getLevelRequirement__16SkillShockOfFirei`, `getLevelRequirement__17SkillDiseaseTraili`, `getLevelRequirement__17SkillMinorHealingi`, `getLevelRequirement__17SkillRegenerationi`, `getLevelRequirement__17SkillShockOfFrosti`, `getLevelRequirement__17SkillUndeadShieldi`, `getLevelRequirement__18SkillBlindingLighti`, `getSkillPointCost__16SkillDiseaseBolti`, `getSkillPointCost__16SkillFireWeaponsi`, `getSkillPointCost__17SkillDiseaseTraili`, `getSkillPointCost__17SkillRegenerationi`, `getSkillPointCost__17SkillShockOfFrosti`, `getSkillPointCost__17SkillUndeadShieldi`
+
+Opened: none
+- 2026-10-13 16:50 CDT — agents/w13-skill-stat-c — 936 unresolved imports
+
+## agents/w13-skill-stat-d
+
+Merged (merge commit, branch tip `9dcb63c3`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 37 units with fresh `input_order` values 5989 through 6025, each with a committed check that builds and passes here (37 host contracts for the small skill accessors). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6024 authored inputs, 4707 function bodies, zero COMMON. The notes' 37 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 936 |
+| After | 899 |
+| Closed | 37 |
+| Opened | 0 |
+
+Closed: `getEnergyCost__18SkillConvertUndeadi`, `getEnergyCost__18SkillDiseaseShieldi`, `getEnergyCost__18SkillDismissUndeadi`, `getEnergyCost__18SkillHammerOfWrathi`, `getEnergyCost__18SkillRepulseUndeadi`, `getEnergyCost__19SkillSummonSkeletoni`, `getEnergyCost__21SkillLightningWeaponsi`, `getEnergyCost__22SkillRangerCriticalHiti`, `getEnergyCost__9SkillBashi`, `getEnergyCost__9SkillRooti`, `getIcon__18SkillConvertUndead`, `getIcon__18SkillDiseaseShield`, `getIcon__18SkillDismissUndead`, `getIcon__18SkillHammerOfWrath`, `getIcon__18SkillRepulseUndead`, `getIcon__19SkillSummonSkeleton`, `getIcon__21SkillLightningWeapons`, `getIcon__22SkillRangerCriticalHit`, `getIcon__5Skill`, `getIcon__9SkillBash`, `getIcon__9SkillRoot`, `getLevelRequirement__18SkillDiseaseShieldi`, `getLevelRequirement__18SkillDismissUndeadi`, `getLevelRequirement__18SkillHammerOfWrathi`, `getLevelRequirement__18SkillRepulseUndeadi`, `getLevelRequirement__19SkillSummonSkeletoni`, `getLevelRequirement__21SkillLightningWeaponsi`, `getLevelRequirement__22SkillRangerCriticalHiti`, `getLevelRequirement__9SkillBashi`, `getLevelRequirement__9SkillRooti`, `getSkillPointCost__18SkillBlindingLighti`, `getSkillPointCost__18SkillDiseaseShieldi`, `getSkillPointCost__18SkillDismissUndeadi`, `getSkillPointCost__18SkillHammerOfWrathi`, `getSkillPointCost__18SkillRepulseUndeadi`, `getSkillPointCost__19SkillSummonSkeletoni`, `getSkillPointCost__21SkillLightningWeaponsi`
+
+Opened: none
+- 2026-10-13 16:55 CDT — agents/w13-skill-stat-d — 899 unresolved imports
+
+## agents/w13-spell-msg-a
+
+Merged (merge commit, branch tip `b53d1a8b`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 3 units with fresh `input_order` values 6026 through 6028, each with a committed check that builds and passes here (partial package: only the three `clone__` units (poisonGasSpell, FrostStormSpell, beetleProjectile) have a committed host check). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6027 authored inputs, 4710 function bodies, zero COMMON. The notes' 29 closed names do not reproduce as such: 3 close here. NOT selected (sources stay in the snapshot file list only, no plan entry): the other 26 units (`msg_run`, `msg_draw`, `msg_collision`, `run` and `clone__15ShockProjectile`) have no committed check; the notes' evidence for them is the private paired run, and the notes list known weak spots of that comparison. The notes' 29 closed names therefore do not reproduce: 3 close here.
+
+| | |
+|---|---|
+| Before | 899 |
+| After | 896 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `clone__14poisonGasSpell`, `clone__15FrostStormSpell`, `clone__16beetleProjectile`
+
+Opened: none
+- 2026-10-13 16:59 CDT — agents/w13-spell-msg-a — 896 unresolved imports
+
+## agents/w13-spell-msg-b
+
+Merged (merge commit, branch tip `81485f7d`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 29 units with fresh `input_order` values 6029 through 6057, each with a committed check that builds and passes here (29 host contracts (the 29th and 30th directories include one shared header; the package adds 32 function bodies including helpers)). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6056 authored inputs, 4742 function bodies, zero COMMON. The notes' 29 closed names reproduce exactly. The 19 opened names are the projectile `terminate__` virtuals, trail and particle storage, and `persue2` that the new bodies call.
+
+| | |
+|---|---|
+| Before | 896 |
+| After | 886 |
+| Closed | 29 |
+| Opened | 19 |
+
+Closed: `clone__7AntWave`, `clone__9dustCloud`, `msg_collision__16beetleProjectileP10GameObject`, `msg_collision__19ColdArrowProjectileP10GameObject`, `msg_collision__19FireArrowProjectileP10GameObject`, `msg_collision__19MultiFireProjectileP10GameObject`, `msg_collision__21PoisonArrowProjectileP10GameObject`, `msg_collision__22ExplodeArrowProjectileP10GameObject`, `msg_draw__19ColdArrowProjectile`, `msg_draw__19FireArrowProjectile`, `msg_draw__19MultiFireProjectile`, `msg_draw__21PoisonArrowProjectile`, `msg_draw__22ExplodeArrowProjectile`, `msg_draw__5Wheel`, `msg_draw__7AntWave`, `msg_draw__7OniBall`, `msg_run__19ColdArrowProjectile`, `msg_run__19FireArrowProjectile`, `msg_run__19MultiFireProjectile`, `msg_run__21PoisonArrowProjectile`, `msg_run__22ExplodeArrowProjectile`, `msg_run__5Wheel`, `msg_run__7AntWave`, `msg_run__8HateBeam`, `msg_run__8HateSoul`, `msg_run__9DustDevil`, `msg_run__9FireStorm`, `msg_run__9dustCloud`, `run__18SpellDiseaseShieldG6Point3s`
+
+Opened: `P_SetTrailWidth__Fii`, `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__tf15SpellHateEffect`, `_vt$14FireStormFlare`, `coldSmoke`, `coldSpeck`, `diseaseshield_run_particle_8d69b0`, `diseaseshield_run_particle_8d6a00`, `dustcloud_msg_run_particle_7d69c0`, `explode_arrow_msg_run_particle_8d7090`, `multifire_msg_run_particle_8d7040`, `persue2__8CreatureP10GameObjectfff`, `poisonFleck`, `poisonSmoke`, `terminate__19ColdArrowProjectilei`, `terminate__19FireArrowProjectilei`, `terminate__19MultiFireProjectilei`, `terminate__21PoisonArrowProjectilei`, `terminate__22ExplodeArrowProjectilei`
+- 2026-10-13 17:05 CDT — agents/w13-spell-msg-b — 886 unresolved imports
+
+## agents/w13-vi-a
+
+Merged (merge commit, branch tip `9360e9f1`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 38 units with fresh `input_order` values 6058 through 6095, each with a committed check that builds and passes here (38 host checks for the VI engine routines). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6094 authored inputs, 4780 function bodies, zero COMMON. The notes' 38 closed names reproduce exactly. The count rises (886 to 937) because the 89 opened names are the callees of the new VI bodies (VI sound device, spell event driver, map/pool template methods, zone room and others), which were not referenced before.
+
+| | |
+|---|---|
+| Before | 886 |
+| After | 937 |
+| Closed | 38 |
+| Opened | 89 |
+
+Closed: `AddSplash__12VIAtmosphereR7VIVect3`, `BufferFlush__6VIFile`, `Clear__12VINameSprite`, `CopyLayer__10VIMaterialiiR8VIRasterR12VIDictionary`, `CullByTop__11VIClipStackRC6VIBBox`, `DeallocateChannels__13VISoundDeviceUl`, `DeletePlayback__13VISoundDeviceP10VIPlayback`, `Destroy__13VISpellEffect`, `Destroy__17VIParticleEmitter`, `Destroy__19VISpellEffectDriver`, `GetLightning__12VIAtmospherePf`, `Init__10VIZoneRoomiiUiUiR6VIBBox`, `Init__10VIZoneTreeii`, `Init__14VIEmitterQueryi12VISpriteType`, `Init__6VIBBoxiP7VIVect3`, `IsAsynchComplete__6VIFile`, `ParseObject__10VIESFParse`, `PlayBgm__13VISoundDeviceiPCc`, `Play__13VISoundDeviceii12VISOUNDCLASS`, `Playback__13VISoundDevicei`, `ProcessLavastorm__12VIAtmosphereR7VISceneR8VICamera`, `Process__18VISpellEventDriver`, `ReleaseParticleDefinition__16VIParticleSystemiR12VIDictionary`, `Remove__12VIDictionaryR10VIResource`, `ResetLightning__12VIAtmosphere`, `Reset__14VIQueryTriListRC6VIBBoxRC7VIVect3f`, `SetLayerColor__10VIMaterialiRC9VIColor32`, `SetLayerTexture__10VIMaterialiiR8VIRasterR12VIDictionary`, `SetNumLayers__10VIMaterialiR8VIRasterR12VIDictionary`, `SetPan__13VISoundDeviceif`, `SetPitch__13VISoundDeviceii`, `SetSkyColor__12VIAtmosphereR7VISceneRC9VIColor32`, `SetVolume__13VISoundDeviceif`, `StopBgm__13VISoundDevicei`, `StopChannels__13VISoundDeviceUl`, `SwapRows__10VIMatrix44ii`, `Unload__13VIBattleMusic`, `Zero__10VIMatrix33`
+
+Opened: `AddSpellEventDriver__19VISpellEffectDriverP16VISpellEventListi`, `AllocateChannels__13VISoundDeviceii`, `Allocate__10VIZoneRoom`, `Bound__6VIBBoxiRC7VIVect3`, `CDSync__6VIFilei`, `CalcDataSize__10VIZoneRoom`, `ChannelCount__C4VIXm`, `ChannelCount__C6VIWave`, `Create__17VIParticleEmitterP16VIParticleSystemP20VIParticleDefinition`, `DeltaTime__C16VIParticleSystem`, `DestroyMotif__22VIParticleDefinitionExP15VIParticleMotif`, `Destroy__16VISpellEventList`, `End__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Erase__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Erase__t6VIPool1ZP20VIParticleDefinitioni`, `FindIopFunction__FUi`, `Find__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUi`, `FirstChannel__13VISoundDeviceUl`, `FirstMotif__C22VIParticleDefinitionEx`, `Init__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Init__t7VIArray1Z10VIZoneLeafi`, `Init__t7VIArray1Z10VIZoneNodei`, `NewCreateEmitter__18VISpellEventDriverP12VISpellEvent`, `NewCreateSound__18VISpellEventDriverP12VISpellEvent`, `NewCreateSprite__18VISpellEventDriverP12VISpellEvent`, `NewDestroySound__18VISpellEventDriverP12VISpellEvent`, `NewDestroySprite__18VISpellEventDriverP12VISpellEvent`, `NewFadeSprite__18VISpellEventDriverP12VISpellEvent`, `NewPlayAttack__18VISpellEventDriverP12VISpellEvent`, `NewPlayTargetLightning__18VISpellEventDriverP12VISpellEvent`, `NewPlayTargetProjectile__18VISpellEventDriverP12VISpellEvent`, `NewPlayback__13VISoundDevice`, `NewSetAction__18VISpellEventDriverP12VISpellEvent`, `NewSetEmitterMotif__18VISpellEventDriverP12VISpellEvent`, `NewShakeCamera__18VISpellEventDriverP12VISpellEvent`, `NextChannel__13VISoundDeviceUli`, `ParseActorObj__10VIESFParse`, `ParseAdpcmObj__10VIESFParse`, `ParseCSpriteObj__10VIESFParse`, `ParseEffectVolumeSpriteObj__10VIESFParse`, `ParseFloraSpriteObj__10VIESFParse`, `ParseFontObj__10VIESFParse`, `ParseGroupSpriteObj__10VIESFParse`, `ParseHSpriteAnimObj__10VIESFParse`, `ParseHSpriteObj__10VIESFParse`, `ParseLODSpriteObj__10VIESFParse`, `ParseMaterialPalObj__10VIESFParse`, `ParseParticleDefinitionObj__10VIESFParse`, `ParseParticleSpriteObj__10VIESFParse`, `ParsePointLightObj__10VIESFParse`, `ParsePointSpriteObj__10VIESFParse`, `ParseResourceDirObj__10VIESFParseiR13VIResourceDir`, `ParseSimpleSpriteObj__10VIESFParse`, `ParseSoundSpriteObj__10VIESFParse`, `ParseSpellEffectObj__10VIESFParse`, `ParseStreamAudioSpriteObj__10VIESFParse`, `ParseSurfaceArrayObj__10VIESFParse`, `ParseSurfaceObj__10VIESFParse`, `ParseWorldObj__10VIESFParsei`, `ParseXmObj__10VIESFParse`, `ParticleCount__C17VIParticleEmitter`, `ParticleDefinition__16VIParticleSystemi`, `ProcessCreateEmitter__18VISpellEventDriverP18VISpellActiveEventb`, `ProcessCreateSound__18VISpellEventDriverP18VISpellActiveEventb`, `ProcessCreateSprite__18VISpellEventDriverP18VISpellActiveEventb`, `ProcessFadeSprite__18VISpellEventDriverP18VISpellActiveEvent`, `ProcessInactiveEvents__18VISpellEventDriver`, `ProcessLightningEvent__18VISpellEventDriver`, `ProcessProjectileEvent__18VISpellEventDriver`, `ProcessSetEmitterMotif__18VISpellEventDriverP18VISpellActiveEvent`, `ProcessWaitEvent__18VISpellEventDriver`, `ReadBegin__9VIObjFileRUsT1`, `ReadEnd__9VIObjFile`, `RecomputeLightningPatches__12VIAtmosphere`, `ReleaseSound__13VISoundDeviceiR12VIDictionary`, `Reset__14VICameraEffect`, `SampleRate__C6VIWave`, `SetLocation__17VIParticleEmitterRC7VIVect3`, `ShareSurface__8VIRasteri`, `UnlinkAllMotifBlenders__17VIParticleEmitter`, `Update__17VIParticleEmitter`, `VIGetFeatureFlags__Fv`, `_$_22VIParticleDefinitionEx`, `_$_t7VIArray1Z14VIResourceElem`, `__18VISpellActiveEventP12VISpellEventP7VIScene`, `__as__10VIMatrix33RC10VIMatrix33`, `__t7VIArray1Z14VIResourceElem`, `sceLseek`, `sceWrite`
+- 2026-10-13 17:10 CDT — agents/w13-vi-a — 937 unresolved imports
+
+## agents/w13-vi-b
+
+Merged (merge commit, branch tip `eb585962`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 38 units with fresh `input_order` values 6096 through 6133, each with a committed check that builds and passes here (38 host checks for the VI raster, scene and zone routines). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6132 authored inputs, 4818 function bodies, zero COMMON. The notes' 38 closed names reproduce exactly. The 35 opened names are callees of the new bodies (raster, material, clip stack, world and scene methods).
+
+| | |
+|---|---|
+| Before | 937 |
+| After | 934 |
+| Closed | 38 |
+| Opened | 35 |
+
+Closed: `AddMaterial__8VIRasteriPP10_sceDmaTag`, `BeginTriFan__8VIRaster`, `Cache__7VIRFontR8VIRasterPCciPi`, `CalcMatrices__8VIRaster`, `Collide__7VISceneR8VIEnvRay`, `Collide__7VISceneR9VICollRayR13VISceneFilter`, `EnableAllDirLights__8VIRasteri`, `EnableAmbient__8VIRasteri`, `EnableSunLight__8VIRasteri`, `EnableTessellation__8VIRasteri`, `EndTriFan__8VIRaster`, `FlushDMABufferIfFull__8VIRaster`, `GetActorTransform__7VISceneiR10VIMatrix44`, `GetMaterialPalSize__8VIRasteri`, `Init__8VIEnvRayRC7VIVect3T1Ui`, `IsIopStreamingEnabled__6VIFile`, `MaxPointLights__8VIRaster`, `Open__6VIFileiPQ26VIFile7MemSegmil`, `QueryEmittersAtLocation__7VISceneRC8VICameraR14VIEmitterQuery`, `QueryEmitters__7VIWorldR23VISceneEmitterQueryVars`, `QueryIntersection__7VISceneR6VIBBoxR13VIActorFilterR14VIQueryTriList`, `RasterActor__7VISceneR8VICameraiR11VIClipStack`, `RasterSprite__7VISceneR8VICameraiUi`, `RemHead__7VILList`, `RenderByVolume__7VIWorldiR15VISceneRendVars`, `RenderThroughPortals__6VIZoneiR15VISceneRendVars`, `Restore2D__8VIRaster`, `SetAmbient__8VIRasterRC10VIColor32F`, `SetFogRegisters__8VIRaster`, `SetPreTranslations__8VIRasteriP7VIVect3RC7VIVect3`, `SetSunLight__8VIRasterRC10VIMatrix44RC16VIRasterDirLight`, `SetZBias__8VIRasteri`, `Store2D__8VIRaster`, `UV__8VIRasterRC7VIVect2`, `UploadBillboardMicro__8VIRasterPP10_sceDmaTag`, `UploadMatrices__8VIRasterPP10_sceDmaTag`, `UploadRasterMicro__8VIRasterPP10_sceDmaTag`, `Vertex__8VIRasterRC7VIVect3`
+
+Opened: `Begin__Ct6VIPool1Z19VIRasterMaterialLRU`, `Cache__13VIEESurfCacheR9VISurfaceR10VIMaterialR14VIMaterialPassR8VIRasterPP10_sceDmaTagi`, `CalcClipToScreen__8VIRaster`, `ClipByTop__11VIClipStackiP7VIVect3RiPP7VIVect3`, `Collide__7VIWorldR18VISceneCollRayVars`, `Collide__7VIWorldR8VIEnvRay`, `ConstructDMAPacket__10VIMaterialR8VIRasterP7VIQWord`, `CullByTop__11VIClipStackRC8VISphere`, `FindChar__7VIRFontUs`, `Init__8VISphereRC6VIBBox`, `InvertAffine__10VIMatrix44RC10VIMatrix44`, `LockMipLevel__9VISurfaceiRiR12VIPixelStorePPUc`, `MemorySegmOpen__6VIFileiPQ26VIFile7MemSegmil`, `MoveToLast__t6VIPool1Z19VIRasterMaterialLRUi`, `NormalizeMagn__7VIVect3`, `PushPortal__11VIClipStackR8VICameraiP7VIVect3`, `QueryEmittersAtLocationActor__7VISceneiRC8VICameraR14VIEmitterQuery`, `QueryEmitters__7VIWorldiR23VISceneEmitterQueryVars`, `QueryIntersection__7VIWorldR20VISceneIntersectVars`, `RenderByVolume__6VIZoneR15VISceneRendVarsi`, `SetGSDitherMatrix__8VIRasteriPP10_sceDmaTag`, `Store__C6VIBBoxP7VIVect3`, `SubMatrixMul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Surface__8VIRasteri`, `Transform__10VIMatrix44RC7VIVect3fT1`, `UnlockMipLevel__9VISurfacei`, `UploadPerMaterial__8VIRasterPP10_sceDmaTag`, `VIDMABillboardMicrocode`, `VIDMARasterMicrocode`, `VIEEDMASend__FiPv`, `_6VIFile$sIopStream`, `_8VIRaster$PrimBuffer1`, `_8VIRaster$PrimBuffer2`, `_8VIRaster$RFanOffset`, `_8VIRaster$RInitOffset`
+- 2026-10-13 17:15 CDT — agents/w13-vi-b — 934 unresolved imports
+
+## agents/w13-vi-c
+
+Merged (merge commit, branch tip `8501c4fd`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 38 units with fresh `input_order` values 6134 through 6171, each with a committed check that builds and passes here (38 host checks for the VI accessors and small routines). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6170 authored inputs, 4856 function bodies, zero COMMON. The notes' 38 closed names reproduce exactly.
+
+| | |
+|---|---|
+| Before | 934 |
+| After | 905 |
+| Closed | 38 |
+| Opened | 9 |
+
+Closed: `AttenuationMode__C13VISoundSprite`, `Begin__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `Begin__Ct6VIPool1ZP13VISpellEffect`, `Begin__Ct6VIPool1ZP20VIParticleDefinition`, `CalcPlanes__9VIFrustum`, `CalcSlotWorldTransform__9VICSprite15VICSpriteNodeIDiR7VISceneR10VIMatrix44`, `ClearSegmentsForward__9VITrailFxPQ29VITrailFx7SEGMENT`, `Clear__9VITrailFx`, `Close__9VIObjFile`, `DistanceSquared__C6VIBBoxRC7VIVect3`, `Distance__C7VIVect3RC7VIVect3`, `EnablePointLight__8VIRasterii`, `End__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `End__Ct6VIPool1ZP13VISpellEffect`, `End__Ct6VIPool1ZP20VIParticleDefinition`, `FileType__9VIObjFile`, `FindLeaf__C6VIZoneRC7VIVect3`, `GetActorLocation__C7VIScenei`, `GetActorSpritePtr__C7VIScenei`, `GetHitPoint__9VICollRay`, `GetHitPoint__C8VIEnvRay`, `GetLayerColor__C10VIMateriali`, `GetMaterialPalEntry__8VIRasterii`, `GetMaterialPal__C14VISimpleSprite`, `GetPriority__C19VIStreamAudioSprite`, `GetRelativePathname__C19VIStreamAudioSprite`, `Init__9VICollRayRC7VIVect3T1`, `IsLooping__C19VIStreamAudioSprite`, `IsPanEnabled__C13VISoundSprite`, `Length__C7VILList`, `Mul__C10VIMatrix44RC7VIVect4R7VIVect3`, `Next__Ct10VIMultiMap2ZfZ14VIEmitterEntryi`, `NumObjects__9VIObjFile`, `PostOpen__9VIObjFile`, `SetPointLight__8VIRasteriRC10VIMatrix44RC18VIRasterPointLight`, `Transform__C6VIBBoxRC10VIMatrix44R6VIBBox`, `_$_10VIMatrix33`, `_$_12VICollBuffer`
+
+Opened: `AbortOpen__9VIObjFile`, `CalcNodeTransform__9VIHSpriteiR10VIMatrix44R7VISceneT2`, `Clear__12VICollBuffer`, `Flush__9VIObjFile`, `Precalc__9VICollRay`, `ReadFileHeader__9VIObjFilei`, `WriteEnd__9VIObjFile`, `WriteFileHeader__9VIObjFilei`, `__cl__7VIPlaneRC7VIVect3N21`
+- 2026-10-13 17:20 CDT — agents/w13-vi-c — 905 unresolved imports
+
+## agents/w13-vi-d
+
+Merged (merge commit, branch tip `b0852101`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 35 units with fresh `input_order` values 6172 through 6206, each with a committed check that builds and passes here (35 host checks for the VI constructors, destructors and template methods). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6205 authored inputs, 4891 function bodies, zero COMMON. The notes' 35 closed names reproduce exactly. The count rises (905 to 909): the notes predicted 40 opened names, 39 open here (the 35 closed names are replaced by `DestroyPool__`, `Allocate__`, `SetXxx__20VIParticleAttributes` and other callees).
+
+| | |
+|---|---|
+| Before | 905 |
+| After | 909 |
+| Closed | 35 |
+| Opened | 39 |
+
+Closed: `Add__t8VIVector1Z18VISceneDisplayElemRC18VISceneDisplayElem`, `Clear__t6VIPool1ZP13VISpellEffect`, `Clear__t6VIPool1ZP20VIParticleDefinition`, `Clear__t7VIArray1Z11VIWorldLeaf`, `Clear__t7VIArray1Z11VIWorldNode`, `Erase__t6VIPool1ZP12VICollBufferi`, `Erase__t6VIPool1ZP13VISpellEffecti`, `Init__t7VIArray1Z10VIZoneRoomi`, `Init__t7VIArray1Z11VIWorldLeafi`, `Init__t7VIArray1Z11VIWorldNodei`, `_$_13VISpellEffect`, `_$_18VISpellEventDriver`, `_$_t10VIMultiMap2ZfZ14VIEmitterEntry`, `_$_t7VIArray1Z11VIWorldLeaf`, `_$_t7VIArray1Z11VIWorldNode`, `__10VIMatrix33`, `__13VIActorFilter`, `__13VISceneFilter`, `__14VIEffectVolume`, `__20VIParticleAttributes`, `__8VIEnvRay`, `__8VISprite`, `__9VICollRay`, `__ml__FRC7VIVect3RC10VIMatrix44`, `__ml__FRC7VIVect4RC10VIMatrix44`, `__t10VIMultiMap2ZfZ14VIEmitterEntry`, `__t6VIPool1Z13VIHSpritePlay`, `__t6VIPool1Z17VIHSpritePlayNode`, `__t6VIPool1Z19VIHSpriteAttachment`, `__t7VIArray1Z11VIWorldLeaf`, `__t7VIArray1Z11VIWorldNode`, `__t7VIArray1Z16VIHSpriteTrigger`, `__t7VIArray1Z20VICSpritePartEmitter`, `__t8VIVector1Z10VIMatrix44`, `__t8VIVector1Z13VIHSpriteNode`
+
+Opened: `Allocate__t7VIArray1Z10VIZoneRoom`, `Allocate__t7VIArray1Z11VIWorldLeaf`, `Allocate__t7VIArray1Z11VIWorldNode`, `Clear__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t10VIMultiMap2ZfZ14VIEmitterEntry`, `DestroyPool__t6VIPool1ZP13VISpellEffect`, `DestroyPool__t6VIPool1ZP20VIParticleDefinition`, `DestroyPool__t7VIArray1Z11VIWorldLeaf`, `DestroyPool__t7VIArray1Z11VIWorldNode`, `Init__13VIActorFilter`, `Init__13VISceneFilter`, `ReleaseActor__7VIScenei`, `SetBirthrateVar__20VIParticleAttributesf`, `SetBirthrate__20VIParticleAttributesf`, `SetDeltaSpawn__20VIParticleAttributesf`, `SetEndColorVar__20VIParticleAttributesRC10VIColor32F`, `SetEndSizeVar__20VIParticleAttributesf`, `SetEndSize__20VIParticleAttributesf`, `SetFriction__20VIParticleAttributesf`, `SetGradientColor__20VIParticleAttributesiRC10VIColor32F`, `SetGradientRepeat__20VIParticleAttributesf`, `SetGravityOn__20VIParticleAttributesi`, `SetInheritVelocity__20VIParticleAttributesf`, `SetLifespanVar__20VIParticleAttributesf`, `SetLifespan__20VIParticleAttributesf`, `SetNozzleAxis__20VIParticleAttributesRC7VIVect3`, `SetNozzleHprVar__20VIParticleAttributesRC7VIVect3`, `SetStartColorVar__20VIParticleAttributesRC10VIColor32F`, `SetStartSizeVar__20VIParticleAttributesf`, `SetStartSize__20VIParticleAttributesf`, `SetVelocityVar__20VIParticleAttributesf`, `SetVelocity__20VIParticleAttributesf`, `_$_11VILightning`, `_$_14VIMotifBlender`, `_vt$13VIActorFilter`, `_vt$13VISceneFilter`, `_vt$8VIEnvRay`, `_vt$8VISprite`, `sceVu0ApplyMatrix`
+- 2026-10-13 17:25 CDT — agents/w13-vi-d — 909 unresolved imports
+
+## agents/w13-wnd-a
+
+Merged (merge commit, branch tip `76793b42`; the notes have the done/functions, checks, closed, opened, plan-entry, never-executed and unknown sections). 30 units with fresh `input_order` values 6207 through 6236, each with a committed check that builds and passes here (30 host checks for the VIWnd window methods). The private paired runs and hand mutation tests in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Object hashes in the snapshot come from this integrator's own builds. Full build with the final snapshot: 6235 authored inputs, 4921 function bodies, zero COMMON. The notes' 30 closed names reproduce exactly. The count rises (909 to 957) because the 78 opened names are the callees of the new window bodies (VIUI blit and string drawing, VIFont, VIWndOptions and VIWndEdit helpers).
+
+| | |
+|---|---|
+| Before | 909 |
+| After | 957 |
+| Closed | 30 |
+| Opened | 78 |
+
+Closed: `DestroyPool__t5VISet1ZP5VIWnd`, `GetString__13VIStringTableii`, `IsOpen__11VIGUIDialog`, `OnDrawSelf__12VIWndConnect`, `OnDrawSelf__12VIWndMessage`, `OnDrawSelf__12VIWndOptions`, `OnDrawSelf__16VIWndReadMessage`, `OnDrawSelf__9VIWndEdit`, `OnKeyDown__12VIWndConnecti`, `OnKeyDown__12VIWndMessagei`, `OnKeyDown__12VIWndOptionsi`, `OnKeyDown__16VIWndReadMessagei`, `OnKeyDown__9VIWndEditi`, `OnKeyUp__10VIWndMcErri`, `OnKeyUp__12VIWndConnecti`, `OnKeyUp__12VIWndMessagei`, `OnKeyUp__12VIWndOptionsi`, `OnKeyUp__9VIWndEditi`, `OnMessage__12VIWndConnectP5VIWndiii`, `OnMessage__12VIWndMessageP5VIWndiii`, `OnMessage__12VIWndOptionsP5VIWndiii`, `OnMessage__16VIWndReadMessageP5VIWndiii`, `OnMessage__9VIWndEditP5VIWndiii`, `SetCaretOffset__9VIWndEditi`, `SetTitle__10VIUIWindowPCUs`, `__tf12VIWndConnect`, `__tf12VIWndMessage`, `__tf12VIWndOptions`, `__tf16VIWndReadMessage`, `__tf9VIWndEdit`
+
+Opened: `Back__12VIWndOptions`, `Backspace__9VIWndEdit`, `Begin2D__4VIUI`, `BeginConnect__12VIWndConnect`, `BlitBar__4VIUIPCUsG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi`, `BlitFillFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam9VIUITexId16VIAlphaBlendModefUc`, `BlitFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam16VIAlphaBlendModefUc`, `BlitRect__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `CaretOffset__9VIWndEdit`, `ComputeTextRows__9VIWndEdit`, `CountLines__10VIUIWindowPCUsi`, `Decrement__12VIWndOptions`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCciiUi`, `DrawFrameVScroll__10VIUIWindowiiiif`, `DrawFrame__10VIUIWindowiiiiUi`, `DrawGameOptions__12VIWndOptions`, `DrawInterfaceOptions__12VIWndOptions`, `DrawMainMenu__12VIWndOptions`, `DrawSoundOptions__12VIWndOptions`, `DrawStringEx__4VIUIPCUsiiG10VIColor32Fi`, `DrawString__6VIFontP8VIRasterP12VIDictionaryPCUsii`, `Draw__10VIUIWindow`, `End2D__4VIUI`, `FillRectangle__4VIUIPC8VIVect2IPC10VIColor32F`, `GetCaretPos__9VIWndEditP8VIVect2I`, `GetHeight__6VIFontP8VIRasterP12VIDictionary`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCUs`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCc`, `Increment__12VIWndOptions`, `Insert__9VIWndEditUs`, `IsOpen__C10VIUIWindow`, `IsOpening__C10VIUIWindow`, `MoveCaretDown__9VIWndEdit`, `MoveCaretUp__9VIWndEdit`, `MoveCursor__9VIWndEditii`, `Next__12VIWndOptions`, `Next__16VIWndReadMessage`, `Play__13VIBattleMusici`, `Prev__12VIWndOptions`, `Prev__16VIWndReadMessage`, `ProcessScreen__10VIWndMcErriii`, `Process__13VIBattleMusic`, `PromptText__12VIWndMessagePCUsi`, `ResetTickPulse__10VIUIWindow`, `SaveAndExit__12VIWndOptions`, `Select__12VIWndOptions`, `SetSoundClassVolume__13VISoundDevice12VISOUNDCLASSf`, `SetTextColor__6VIFontRC10VIColor32F`, `SetTitle__10VIUIWindowPCc`, `Setup__12VIWndMessagePCUsT115VIMESSAGEPROMPTRC8VIVect2Ii`, `SoundPlay__4VIUI11VIUISoundId`, `StopNow__13VIBattleMusic`, `Stop__13VIBattleMusicb`, `T__10VIUIWindowPCUs`, `T__10VIUIWindowPCc`, `TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi`, `Text__10VIUIWindowPCUsii9VIUICOLORUi`, `VIMemCardStatus__FPi`, `VIWndOptions$sCameraAxisText`, `VIWndOptions$sCameraTypeText`, `VIWndOptions$sCompactKeyboardText`, `VIWndOptions$sOnOffText`, `VIWndOptions$sSoundOutputText`, `ezNetCtlGetStatus`, `sCompactKeyboard`, `sKeyMap`, `sTranslucency`, `snprintf16__8VIStringPUsiPCUse`, `snprintf16__8VIStringPUsiPCce`, `str16to8__8VIStringPcUiPCUs`, `str8to16__8VIStringPUsUiPCc`, `strcat16__8VIStringPUsUiPCUs`, `strcat16__8VIStringPUsUiPCc`, `strcpy16__8VIStringPUsUiPCUs`, `strlen16__8VIStringPCUs`, `unet_startup_async__Fv`, `unet_startup_async_status__Fv`
+- 2026-10-13 17:30 CDT — agents/w13-wnd-a — 957 unresolved imports
+
+## Re-verification by the fourth integrator (17:58 CDT)
+
+Read the last ten entries (`w13-skill-stat-d` through `w13-wnd-a`) and re-ran the checks at `a7bb4e51` (the shared branch tip): 214 tool tests passed; `check_source_snapshot.py` passed (13114 files, 6235 authored inputs); the full default partial build (toolchain `work/toolchains/ee`, no Newlib) gave 6235 source compilations, one link, 4921 function bodies, zero COMMON and **957** unresolved imports. The recorded count reproduces and no repo-rule break was found in the recent merges. Nothing was executed on the EE.
+
+Eligibility at this time: the twelve older `agents/*` tips (`w8`, `w9`, `w10`, `w11`, `w12`, `w13-m-spell-dtor-a`) are unchanged from the standing rejections above. The eleven `agents/w14-*` branches are still being pushed to (tips between 11 seconds and 15 minutes old) and none has a notes file with the five summary sections (`w14-startup-io-b` has a notes file only), so none was eligible and nothing was merged.
+- 2026-10-13 17:59 CDT — re-verification, no branches eligible, nothing merged — 957 unresolved imports
+
+## agents/w14-startup-io-a
+
+Merged (merge commit, branch tip `3bbf70d4`; the notes have the how-checked/functions, closed, opened, plan-entry, never-executed and unknown sections). 21 units with fresh `input_order` values 6237 through 6257: 14 functions (startup file open/sync, load thread, memory card, pad stick scaling, keyboard queue and library routines) and 7 data symbols, each unit with a committed host contract that builds and passes here (21 of 21). The private paired runs in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed (the notes themselves record several compiled sizes that differ from the image). Plan entries and object hashes come from this integrator's own compiles; the compiled sizes reproduce the notes' 4908 bytes. The `w13-startup-fn-a` copies of the three keyboard-library functions are not in the plan, so there is no duplicate definition; the `save-net-anim-views` pair of `mc_load_buffer` names is not planned either. Full build with the final snapshot: 6256 authored inputs, zero COMMON. The count rises (957 to 962) because the 26 opened names are callees and data of the new bodies.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 962 |
+| Closed | 21 |
+| Opened | 26 |
+
+Closed: `CDSync__6VIFilei`, `CheckforModifierKeyEvents`, `DequeueKeyEvent__10VIKeyboardP12VIConsoleKey`, `MemorySegmOpen__6VIFileiPQ26VIFile7MemSegmil`, `Open__6VIFilePCci`, `PrepareQueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ScaleStick__5VIPadUc`, `TranslateEvent__10VIKeyboardP11_lgKbdEvent`, `VIMemCardReadFile__FPCcPvi`, `VIMemCardStatus__FPi`, `_6VIFile$sIopStream`, `generate_key_press_events`, `generate_key_release_events`, `getPackChecksum__Fv`, `loadBuffer`, `loadFrames`, `loadStack`, `loadThreadMain__FPv`, `loadThreadParam`, `mcDisableStartupScript`, `mcerring`
+
+Opened: `BufferClear__6VIFile`, `CDDiskReady__6VIFilei`, `CDSearchFile__6VIFileP10sceCdlFILEPCc`, `CombineDeadkey__10VIKeyboardUc`, `MemorySegmCalcSegm__6VIFile`, `QueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `SetIcon__16VIIconDefinitionPvi`, `SetTitle__16VIIconDefinitionPCc`, `USEnglishKbdMapTable`, `VICdStreamDiskReady__Fv`, `VICdStreamRead__FUiUiPvi`, `VICdStreamStatus__Fv`, `VICdStreamSync__Fi`, `VIEEFileDelay__Fi`, `VIMemCardReadFileAsync__FPCcPvi`, `sAsyncFd`, `sFrDeadkey`, `sIconDefinition`, `sListIcon`, `sMemCardInitialized`, `sProductTitle`, `sUsDeadkeyCount`, `snprintf__8VIStringPciPCce`, `strupr__8VIStringPc`, `texNormalizedHeight__FP8_texture`, `texNormalizedWidth__FP8_texture`
+- 2026-10-13 18:45 CDT — agents/w14-startup-io-a — 962 unresolved imports
+
+## agents/w14-startup-io-b (partly selected)
+
+Merged (merge commit, branch tip `8def8c23`; the notes have the starting-point/functions with checks, observed/inferred/unknown, closed, opened, plan-entry, never-executed and not-done sections; the tip was over an hour old). The whole tree is in the snapshot, but only 4 units are in the build plan, with fresh `input_order` values 6258 through 6261, each with a committed host contract that builds and passes here (6 of 6 contracts in the package): `padChangeIndex__Fii`, `unet_startup_async__Fv`, `unet_startup_async_status__Fv` (324 compiled bytes, matching a fresh compile) and the `pad-mtap-state` data unit (twelve pad and multitap objects, republished with a host contract). The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed.
+
+NOT selected (files stay in the snapshot, with no plan entry): `w14-startup-io-b-loader-failure-word`, because the notes say it deliberately replaces an absolute symbol with real storage and needs the owner's decision; `w14-startup-io-b-receive-control-packet`, a revision of `receiveControlPacket__FPiib` that conflicts with the already planned `w11-game-a-receive-control-packet` (both define the name; the swap is the owner's call, so `norrath_net_flag_bytes_48681c` stays unresolved); and the `sony-cd-vblank-views` entry the notes mention, which belongs to another package. Full build with the final snapshot: 6260 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 962 |
+| After | 951 |
+| Closed | 15 |
+| Opened | 4 |
+
+Closed: `norrath_libmtap_change_priority_client_view`, `norrath_libmtap_get_connection_client_view`, `norrath_libmtap_module_version_client_view`, `norrath_libmtap_port_close_client_view`, `norrath_libmtap_port_open_client_view`, `norrath_libmtap_rpc_buffer_view`, `norrath_libpad_dma_info_view`, `norrath_libpad_is_init_word`, `norrath_libpad_is_warning_word`, `norrath_libpad_port_info_view`, `norrath_libpad_rpc_buffer_view`, `norrath_libpad_rpc_clients_view`, `padChangeIndex__Fii`, `unet_startup_async__Fv`, `unet_startup_async_status__Fv`
+
+Opened: `net_ready`, `unet_startup_thread__FPv`, `unet_startup_thread_id`, `unet_startup_thread_stack`
+- 2026-10-13 19:02 CDT — agents/w14-startup-io-b (partly selected) — 951 unresolved imports
+
+## agents/w14-objfile
+
+Merged (merge commit, branch tip `6c66070a`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 36 units with fresh `input_order` values 6262 through 6297 (object file reader/writer, string table, list and map primitives; 36 host checks). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6296 authored inputs, zero COMMON. The notes' 36 closed names reproduce exactly; the count falls 951 to 942 because 27 callee names open.
+
+| | |
+|---|---|
+| Before | 951 |
+| After | 942 |
+| Closed | 36 |
+| Opened | 27 |
+
+Closed: `AbortOpen__9VIObjFile`, `AddTail__7VILListP7VILNode`, `Allocate__t7VIArray1Z10VIZoneRoom`, `Allocate__t7VIArray1Z11VIWorldLeaf`, `Allocate__t7VIArray1Z11VIWorldNode`, `Clear__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t10VIMultiMap2ZfZ14VIEmitterEntry`, `DestroyPool__t7VIArray1Z11VIWorldLeaf`, `DestroyPool__t7VIArray1Z11VIWorldNode`, `Erase__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Erase__t6VIPool1ZP20VIParticleDefinitioni`, `Find__12VIDictionaryUiR14VIResourceTypeRi`, `Find__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUi`, `Flush__9VIObjFile`, `Init__7VILList`, `Init__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Init__t7VIArray1Z10VIZoneLeafi`, `Init__t7VIArray1Z10VIZoneNodei`, `Load__13VIStringTablePCc`, `MoveToLast__t6VIPool1Z19VIRasterMaterialLRUi`, `ReadBegin__9VIObjFileRUsT1`, `ReadEnd__9VIObjFile`, `ReadFileHeader__9VIObjFilei`, `Unload__13VIStringTable`, `WriteEnd__9VIObjFile`, `WriteFileHeader__9VIObjFilei`, `_$_13VIStringTable`, `_$_19VIFlatFileStructure`, `_$_t7VIArray1Z14VIResourceElem`, `__13VIStringTable`, `__19VIFlatFileStructure`, `__7VILList`, `__7VILNode`, `__t7VIArray1Z14VIResourceElem`, `str16to8__8VIStringPcUiPCUs`, `strlen16__8VIStringPCUs`
+
+Opened: `Allocate__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Allocate__t7VIArray1Z10VIZoneLeaf`, `Allocate__t7VIArray1Z10VIZoneNode`, `Clear__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Clear__t7VIArray1Z10VIZoneLeaf`, `Clear__t7VIArray1Z10VIZoneNode`, `ConversionTableSize.180`, `DestroyPool__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t7VIArray1Z14VIResourceElem`, `EraseFixup__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `FixupTextBuffer__13VIStringTable`, `Flush__6VIFile`, `FreeNode__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `LoadRawFile__13VIStringTablePCcRt7VIArray1Zc`, `Next__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `ProcessRawFile__13VIStringTableRCt7VIArray1Zc`, `ReadBegin__9VIObjFileRUsT1RUlRUi`, `WriteEnd__9VIObjFileRUi`, `Write__6VIFilePCvi`, `_$_19VIFlatFileDirectory`, `_$_t7VIArray1Zc`, `_8VIString$ConversionTable1252`, `__10VIZoneRoom`, `__t6VIList1ZP10VIFlatFile`, `__t7VIArray1Zc`, `__wrap_strdup`, `_vt$19VIFlatFileDirectory`
+- 2026-10-13 19:15 CDT — agents/w14-objfile — 942 unresolved imports
+
+## agents/w14-sprite-collide
+
+Merged (merge commit, branch tip `d804bc21`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 30 units with fresh `input_order` values 6298 through 6327 (sprite and world `Collide` virtuals, 30 host checks). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. 
+
+| | |
+|---|---|
+| Before | 942 |
+| After | 924 |
+| Closed | 30 |
+| Opened | 12 |
+
+Closed: `Collide__11VILODSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__11VILODSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VINameSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VINameSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VIPointLightR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VISkinSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__12VISkinSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIFloraSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIFloraSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIGroupSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIGroupSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIPointSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VIPointSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VISoundSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__13VISoundSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__14VISimpleSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__14VISimpleSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__16VIParticleSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__16VIParticleSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__19VIStreamAudioSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__19VIStreamAudioSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__20VIEffectVolumeSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__20VIEffectVolumeSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__7VIWorldR18VISceneCollRayVars`, `Collide__7VIWorldR8VIEnvRay`, `Collide__8VISpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VICSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VICSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VIHSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Collide__9VIHSpriteR9VICollRayR13VISceneFilterR7VISceneR9VICollide`
+
+Opened: `Begin__Ct6VIPool1Z19VIHSpriteAttachment`, `CalcTransAboutCenter__9VIHSpriteRC10VIMatrix44R7VISceneR10VIMatrix44`, `CollideObj__9VICollideR12VICollSphereR9VICapsule`, `CollideObj__9VICollideR12VICollSpherei`, `CollideObj__9VICollideR9VICollRayi`, `Collide__7VIWorldiR18VISceneCollRayVars`, `Collide__7VIWorldiR8VIEnvRayR7VIVect3T3`, `End__Ct6VIPool1Z19VIHSpriteAttachment`, `GetWorld__C9VICollide`, `Next__Ct6VIPool1Z19VIHSpriteAttachmenti`, `Process__9VIHSpriteiR7VIScene`, `SetWorld__9VICollideRC10VIMatrix44`
+- 2026-10-13 19:28 CDT — agents/w14-sprite-collide — 924 unresolved imports
+
+Process note (19:30 CDT): `cefa42cd` was pushed to the shared branch with the `w14-sprite-collide` merge commit but before its plan and snapshot entries were committed (an integrator scripting slip), so `check_source_snapshot.py` would have failed at that one commit for about a minute. `99a5172f` adds the entries; the checks above were run on that tree.
+
+## agents/w14-hud-a
+
+Merged (merge commit, branch tip `84c0fc0d`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). Partly selected: 9 function units with fresh `input_order` values 6328 through 6336 (HUD, item display, megatile entitize and model effect routines; 9 host checks, of which `display-item-stats` and `megatile-entitize` crash as arm64 and pass as x86_64 with statics below 4 GiB, the build line in their headers; all 9 pass here). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. NOT selected (files stay in the snapshot, no plan entry): the 9 data units (`cur-box-old`, `drew-bitmap`, `dwarf-reg-size-table`, `hide-ability-adjust-mouse`, `hud-quick-spell-on`, `icon-alpha`, `item-info-height`, `item-to-destroy`, `tex-copies`), which have no committed check of any kind; their names stay unresolved, and the owner can add checks. The notes' closed list is therefore 9 of 18. Full build with the final snapshot: 6335 authored inputs, zero COMMON. The count is unchanged because the 9 opened names are callees of the new bodies.
+
+| | |
+|---|---|
+| Before | 924 |
+| After | 924 |
+| Closed | 9 |
+| Opened | 9 |
+
+Closed: `_textureDrawFloat__FP8_textureffiUiff`, `commaString__FPc`, `displayItemStats__FiiiPQ24item11descriptioniii`, `floorPutSaveInfo__FPc`, `getAttackBonus__4itemPQ24item11description`, `getEnemyWord__Fi`, `hudGetRemappedButtonIcon__Fii`, `megatileEntitize__FPci`, `modelDrawEffect__FP12_modelHeaderP8_textureiP8Matrix34fP14AnimationStateUl`
+
+Opened: `doEntityDispatch__FP8MTObjDefiP13delayedEntityPib`, `dynlevelcount`, `instmap_bounds`, `kittencount`, `levsuffix`, `mt_ebx`, `mt_eby`, `objectProcessDeleteList__Fv`, `specialparse__FPPciiG6Point3Pc`
+- 2026-10-13 19:34 CDT — agents/w14-hud-a — 924 unresolved imports
+
+## agents/w14-raster
+
+Merged (merge commit, branch tip `3ad91543`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 36 units (32 functions and 4 data words) with fresh `input_order` values 6337 through 6372 (rasterizer, surface, clip and vector/matrix routines; 36 host checks). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. The notes' two unauthored names (`VIDMABillboardMicrocode`, `VIDMARasterMicrocode`, VU1 microcode) stay unresolved by design. Full build with the final snapshot: 6371 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 924 |
+| After | 916 |
+| Closed | 36 |
+| Opened | 28 |
+
+Closed: `Allocate__10VIZoneRoom`, `Bound__6VIBBoxiRC7VIVect3`, `Cache__13VIEESurfCacheR9VISurfaceR10VIMaterialR14VIMaterialPassR8VIRasterPP10_sceDmaTagi`, `CalcDataSize__10VIZoneRoom`, `CalcNodeTransform__9VIHSpriteiR10VIMatrix44R7VISceneT2`, `ClipByTop__11VIClipStackiP7VIVect3RiPP7VIVect3`, `ConstructDMAPacket__10VIMaterialR8VIRasterP7VIQWord`, `CullByTop__11VIClipStackRC8VISphere`, `FilterActor__13WeatherFilterR7VIScenei`, `Init__13VIActorFilter`, `Init__13VISceneFilter`, `Init__8VISphereRC6VIBBox`, `InvertAffine__10VIMatrix44RC10VIMatrix44`, `LockMipLevel__9VISurfaceiRiR12VIPixelStorePPUc`, `NormalizeMagn__7VIVect3`, `Precalc__9VICollRay`, `PushPortal__11VIClipStackR8VICameraiP7VIVect3`, `QueryEmittersAtLocationActor__7VISceneiRC8VICameraR14VIEmitterQuery`, `RecomputeLightningPatches__12VIAtmosphere`, `ReleaseActor__7VIScenei`, `RenderByVolume__6VIZoneR15VISceneRendVarsi`, `Reset__14VICameraEffect`, `SetGSDitherMatrix__8VIRasteriPP10_sceDmaTag`, `ShareSurface__8VIRasteri`, `Store__C6VIBBoxP7VIVect3`, `SubMatrixMul__C10VIMatrix44RC7VIVect3R7VIVect3`, `Surface__8VIRasteri`, `Transform__10VIMatrix44RC7VIVect3fT1`, `UnlockMipLevel__9VISurfacei`, `UploadPerMaterial__8VIRasterPP10_sceDmaTag`, `_8VIRaster$PrimBuffer1`, `_8VIRaster$PrimBuffer2`, `_8VIRaster$RFanOffset`, `_8VIRaster$RInitOffset`, `__as__10VIMatrix33RC10VIMatrix33`, `__cl__7VIPlaneRC7VIVect3N21`
+
+Opened: `Allocate__13VIEESurfCacheR13VIEESurfAlloc`, `CalcCacheInfo__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfo`, `CalcLODLevelIndex__9VIHSpriteRC10VIMatrix44`, `ConstructSolidFillPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructTextPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructWirePass__10VIMaterialiR8VIRasterP7VIQWord`, `Decache__13VIEESurfCacheR9VISurface`, `Download__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoPP10_sceDmaTag`, `Erase__t6VIList1Z7VIActori`, `FindLRU__13VIEESurfCacheR13VIEESurfAllocR8VIRaster`, `GetTime__8VIRaster`, `Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo`, `Magnitude__C7VIVect3`, `MoveToLRUEnd__13VIEESurfCachei`, `PointInSolid__C8VISphereRC7VIVect3`, `ProcessPlayList__9VIHSpriteiR7VIScene`, `ProcessUpHierarchy__9VIHSpritei`, `Process__10VIMateriall`, `ReleaseSprite__7VIScenei`, `ReleaseStaticLighting__7VIScenei`, `RemoveActor__7VIScenei`, `RemoveFromLRU__13VIEESurfCachei`, `RenderByVolume__6VIZoneiR15VISceneRendVars`, `SetBindPose__9VIHSprite`, `Set__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoR14VIMaterialPass`, `Size__Ct6VIPool1Z13VIHSpritePlay`, `_8VIRaster$ColorMatrix`, `_8VIRaster$RMaterialOffset`
+- 2026-10-13 19:39 CDT — agents/w14-raster — 916 unresolved imports
+
+## agents/w14-startup-sys
+
+Merged (merge commit, branch tip `8b3c07e9`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 25 units with fresh `input_order` values 6373 through 6397 (21 functions and 4 data symbols; startup, date, math, zlib, file and unwinder library routines), each with a committed host check (25 of 25 here; `frame-state-for` fails as arm64 and passes built as x86_64 with statics below 4 GiB, as its pointer words require). Three units (`gsm_decode`, `gsm_encode`, `upcast`) plan the existing `w13-startup-fn-a` sources, whose checks live in the `w14-startup-sys-gsm-*`/`-upcast` directories (recorded as their host files); no other planned unit defines those names. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Not closed, by design or by the notes: the six linker-defined symbols, `__EH_FRAME_BEGIN__`, `osdsrc` and `tlbsrc`. Carried from the notes for other owners: `w13-startup-fn-a-throw` declares a 4-byte adjustment slot where the original stores 8 bytes (not planned), and two file-local `m_cd` copies elsewhere bind a different object from the now-global one. Full build with the final snapshot: 6396 authored inputs, zero COMMON. The notes' 23 closed names reproduce; 23 callee names open, so the count stays at 916.
+
+| | |
+|---|---|
+| Before | 916 |
+| After | 916 |
+| Closed | 23 |
+| Opened | 23 |
+
+Closed: `FindIopFunction__FUi`, `GetRomName`, `VIGetFeatureFlags__Fv`, `__frame_state_for`, `__kernel_rem_pio2`, `a.1122`, `adddate`, `ezNetCtlGetStatus`, `fabs`, `frombcd`, `gRomName`, `gsm_decode`, `gsm_encode`, `inflate`, `inflateEnd`, `inflateInit_`, `sceLseek`, `sceVu0ApplyMatrix`, `sceWrite`, `subdate`, `throw_helper`, `tobcd`, `upcast__C16__user_type_infoRC9type_infoPvPPv`
+
+Opened: `Gsm_LPC_Analysis`, `Gsm_Long_Term_Predictor`, `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_RPE_Encoding`, `Gsm_Short_Term_Analysis_Filter`, `Gsm_Short_Term_Synthesis_Filter`, `__unwinding_cleanup`, `copy_reg`, `decode_uleb128`, `execute_cfa_insn`, `extract_cie_info`, `find_exception_handler`, `find_fde`, `floor`, `get_reg_addr`, `inflateInit2_`, `inflate_blocks`, `inflate_blocks_free`, `inflate_blocks_reset`, `next_stack_level`, `old_find_exception_handler`, `scalbn`
+- 2026-10-13 19:45 CDT — agents/w14-startup-sys — 916 unresolved imports
+
+## agents/w14-wnd-b
+
+Merged (merge commit, branch tip `7803082a`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 20 units with fresh `input_order` values 6398 through 6417 (VIWnd front-end window and options routines; 20 host checks). Four of the checks (`edit-movecaretdown`, `edit-movecaretup`, `realm-interface-ctor`, `realm-interface-dtor`) need the build line in their header comments (a sed-redirected copy of the source and `-DUNIT`); built that way, all 20 pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6416 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 916 |
+| After | 920 |
+| Closed | 25 |
+| Opened | 29 |
+
+Closed: `MoveCaretDown__9VIWndEdit`, `MoveCaretUp__9VIWndEdit`, `MoveCursor__9VIWndEditii`, `Next__12VIWndOptions`, `Next__16VIWndReadMessage`, `Prev__12VIWndOptions`, `Prev__16VIWndReadMessage`, `ProcessScreen__10VIWndMcErriii`, `PromptText__12VIWndMessagePCUsi`, `SaveAndExit__12VIWndOptions`, `Select__12VIWndOptions`, `SetDefaults__13VIGameOptions`, `SetTextColor__6VIFontRC10VIColor32F`, `SetTitle__10VIUIWindowPCc`, `T__10VIUIWindowPCUs`, `T__10VIUIWindowPCc`, `VIWndOptions$sCameraAxisText`, `VIWndOptions$sCameraTypeText`, `VIWndOptions$sCompactKeyboardText`, `VIWndOptions$sOnOffText`, `VIWndOptions$sSoundOutputText`, `_$_16VIRealmInterface`, `__16VIRealmInterfaceP20VIWndGenericRendererPCc`, `sCompactKeyboard`, `sTranslucency`
+
+Opened: `McErrSetMode__Fi`, `McErr__FP5VIWndRC8VIVect2Ii`, `ProcessScreen04__10VIWndMcErriii`, `ProcessScreen10__10VIWndMcErriii`, `ProcessScreen11__10VIWndMcErriii`, `ProcessScreen12__10VIWndMcErriii`, `ProcessScreen15__10VIWndMcErriii`, `ProcessScreen16__10VIWndMcErriii`, `ProcessScreen17__10VIWndMcErriii`, `ProcessScreen20__10VIWndMcErriii`, `ProcessScreen30__10VIWndMcErriii`, `ProcessScreen50__10VIWndMcErriii`, `ProcessScreen52__10VIWndMcErriii`, `ProcessScreen54__10VIWndMcErriii`, `ProcessScreen60__10VIWndMcErriii`, `ProcessScreen61__10VIWndMcErriii`, `ProcessScreen62__10VIWndMcErriii`, `ProcessScreen63__10VIWndMcErriii`, `ProcessScreen64__10VIWndMcErriii`, `Save__13VIGameOptions`, `_$_11VIUDPSocket`, `_$_Q212RealmService15RealmGatewayAPI`, `__11VIUDPSocketi`, `__Q212RealmService15RealmGatewayAPIUiPCcs`, `_t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0$nilRep`, `_t24__default_alloc_template2b0i0$_S_free_list`, `_vt$16VIRealmInterface`, `clone__Q2t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0_3Rep`, `sConvert16`
+- 2026-10-13 19:51 CDT — agents/w14-wnd-b — 920 unresolved imports
+
+## agents/w14-sprite-raster
+
+Merged (merge commit, branch tip `64cbfe14`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 21 units with fresh `input_order` values 6418 through 6438 (sprite and raster virtual methods; 21 host checks, all pass here). Every unit includes the existing `vslots-b-bytes/bytes.hpp`, which is recorded as its header closure (the first build attempt failed on the include-closure check until it was; the entries here are the corrected ones). The notes file has no summary headings of the usual kind; the tip was over an hour old and every function has a check, so it was merged on the age rule. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6437 authored inputs, zero COMMON. The count rises because 27 callee names open.
+
+| | |
+|---|---|
+| Before | 920 |
+| After | 926 |
+| Closed | 21 |
+| Opened | 27 |
+
+Closed: `GetInstType__C13VIGroupSpriteR7VIScene`, `GetInstType__C13VISoundSpriteR7VIScene`, `GetInstType__C16VIParticleSpriteR7VIScene`, `GetInstType__C19VIStreamAudioSpriteR7VIScene`, `GetInstType__C20VIEffectVolumeSpriteR7VIScene`, `GetInstType__C8VISpriteR7VIScene`, `GetInstType__C9VICSpriteR7VIScene`, `Raster__11VILODSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VINameSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VIPointLightR8VICameraR7VISceneR8VIRasterUi`, `Raster__12VISkinSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIFloraSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIGroupSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VIPointSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__13VISoundSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__14VISimpleSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__16VIParticleSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__19VIStreamAudioSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__20VIEffectVolumeSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__9VICSpriteR8VICameraR7VISceneR8VIRasterUi`, `Raster__9VIHSpriteR8VICameraR7VISceneR8VIRasterUi`
+
+Opened: `CalcCenteredStringScreenRect__8VIRasteriRC7VIVect3PCcR6VIRect`, `ClampScale__12VIPointLightR10VIMatrix44`, `ClampScale__13VIPointSpriteR10VIMatrix44`, `ClampScale__19VIStreamAudioSpriteR10VIMatrix44`, `DrawPrimBuffer__8VIRasteriiUi`, `DrawPrimBuffer__8VIRasteriiiUi`, `GetLightUISprite__7VIScene`, `GetModelView__C8VIRaster`, `GetNextColorBuffer__7VIScene`, `GetParticleUISprite__7VIScene`, `GetPointUISprite__7VIScene`, `GetSoundUISprite__7VIScene`, `GetSpriteType__7VIScenei`, `GetStreamAudioUISprite__7VIScene`, `OnResize__14VIEffectVolumeRC6VIBBox`, `ProcessWeaponTrails__9VICSpriteR8VICameraR7VISceneR10VIMatrix44`, `Process__14VIEffectVolumef`, `Purge__17VIParticleEmitter`, `RasterUISprite__7VISceneR8VICameraiUi`, `Render__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetBlendMatrices__9VIHSpriteR8VIRaster`, `SetDirection__17VIParticleEmitterRC10VIMatrix33`, `SetDirection__17VIParticleEmitterRC7VIVect3`, `SetSpace__17VIParticleEmitterRC10VIMatrix44`, `Size__C6VIBBox`, `Transpose__10VIMatrix44RC10VIMatrix44`, `UpdateParticleEmitters__9VICSpriteR8VICameraR7VISceneR8VIRasterR10VIMatrix44`
+- 2026-10-13 19:56 CDT — agents/w14-sprite-raster — 926 unresolved imports
+
+## agents/w14-particle
+
+Merged (merge commit, branch tip `d299fec1`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 32 units with fresh `input_order` values 6439 through 6470 (particle attribute setters and definition routines; 32 host checks, all pass here). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6469 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 926 |
+| After | 904 |
+| Closed | 32 |
+| Opened | 10 |
+
+Closed: `Create__17VIParticleEmitterP16VIParticleSystemP20VIParticleDefinition`, `DeltaTime__C16VIParticleSystem`, `DestroyMotif__22VIParticleDefinitionExP15VIParticleMotif`, `FirstMotif__C22VIParticleDefinitionEx`, `P_SetTrailWidth__Fii`, `ParticleCount__C17VIParticleEmitter`, `ParticleDefinition__16VIParticleSystemi`, `SetBirthrateVar__20VIParticleAttributesf`, `SetBirthrate__20VIParticleAttributesf`, `SetDeltaSpawn__20VIParticleAttributesf`, `SetEndColorVar__20VIParticleAttributesRC10VIColor32F`, `SetEndSizeVar__20VIParticleAttributesf`, `SetEndSize__20VIParticleAttributesf`, `SetFriction__20VIParticleAttributesf`, `SetGradientColor__20VIParticleAttributesiRC10VIColor32F`, `SetGradientRepeat__20VIParticleAttributesf`, `SetGravityOn__20VIParticleAttributesi`, `SetInheritVelocity__20VIParticleAttributesf`, `SetLifespanVar__20VIParticleAttributesf`, `SetLifespan__20VIParticleAttributesf`, `SetLocation__17VIParticleEmitterRC7VIVect3`, `SetNozzleAxis__20VIParticleAttributesRC7VIVect3`, `SetNozzleHprVar__20VIParticleAttributesRC7VIVect3`, `SetStartColorVar__20VIParticleAttributesRC10VIColor32F`, `SetStartSizeVar__20VIParticleAttributesf`, `SetStartSize__20VIParticleAttributesf`, `SetVelocityVar__20VIParticleAttributesf`, `SetVelocity__20VIParticleAttributesf`, `UnlinkAllMotifBlenders__17VIParticleEmitter`, `Update__17VIParticleEmitter`, `_$_14VIMotifBlender`, `_$_22VIParticleDefinitionEx`
+
+Opened: `Begin__Ct6VIPool1ZP15VIParticleMotif`, `BlendMotifs__17VIParticleEmitter`, `End__Ct6VIPool1ZP15VIParticleMotif`, `Erase__t6VIPool1ZP15VIParticleMotifi`, `Next__Ct6VIPool1ZP15VIParticleMotifi`, `RecomputeStaticBBox__17VIParticleEmitter`, `Size__Ct6VIPool1ZP15VIParticleMotif`, `TextureConfiguration__C22VIParticleDefinitionEx`, `_$_t6VIPool1ZP15VIParticleMotif`, `__ml__FRC7VIVect3RC10VIMatrix33`
+- 2026-10-13 20:02 CDT — agents/w14-particle — 904 unresolved imports
+
+## agents/w14-esfparse
+
+Merged (merge commit, branch tip `4b74746d`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 24 units with fresh `input_order` values 6471 through 6494 (ESF object parsers; 24 host checks, all pass here). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6493 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 904 |
+| After | 983 |
+| Closed | 24 |
+| Opened | 103 |
+
+Closed: `ParseActorObj__10VIESFParse`, `ParseAdpcmObj__10VIESFParse`, `ParseCSpriteObj__10VIESFParse`, `ParseEffectVolumeSpriteObj__10VIESFParse`, `ParseFloraSpriteObj__10VIESFParse`, `ParseFontObj__10VIESFParse`, `ParseGroupSpriteObj__10VIESFParse`, `ParseHSpriteAnimObj__10VIESFParse`, `ParseHSpriteObj__10VIESFParse`, `ParseLODSpriteObj__10VIESFParse`, `ParseMaterialPalObj__10VIESFParse`, `ParseParticleDefinitionObj__10VIESFParse`, `ParseParticleSpriteObj__10VIESFParse`, `ParsePointLightObj__10VIESFParse`, `ParsePointSpriteObj__10VIESFParse`, `ParseResourceDirObj__10VIESFParseiR13VIResourceDir`, `ParseSimpleSpriteObj__10VIESFParse`, `ParseSoundSpriteObj__10VIESFParse`, `ParseSpellEffectObj__10VIESFParse`, `ParseStreamAudioSpriteObj__10VIESFParse`, `ParseSurfaceArrayObj__10VIESFParse`, `ParseSurfaceObj__10VIESFParse`, `ParseWorldObj__10VIESFParsei`, `ParseXmObj__10VIESFParse`
+
+Opened: `AddPlay__9VIHSpriteiR7VIScene`, `Add__12VIDictionaryR10VIResourceUi14VIResourceTypei`, `Animation__7VIScenei`, `AttachSurface__14VIEffectVolumeii`, `BeginChar__7VIRFontUsRiPPUc`, `CalcLODOffDist__9VICSpriteR7VIScene`, `Convert16__10VIESFParseR12VIPixelStorePUcT2i`, `Convert24__10VIESFParseR12VIPixelStorePUcT2i`, `Convert32__10VIESFParseR12VIPixelStorePUcT2i`, `Convert4__10VIESFParseR12VIPixelStorePUcT2i`, `Convert8__10VIESFParseR12VIPixelStorePUcT2i`, `CreateActor__7VISceneRC7VIVect3T1fi`, `CreateAnimation__7VIScenei`, `CreateFont__8VIRasteri`, `CreateMaterialPal__8VIRasterii`, `CreateParticleDefinition__16VIParticleSystemi`, `CreateParticleEmitters__9VICSpriteR7VIScene`, `CreateSpellEffect__19VISpellEffectSystemi`, `CreateSurface__8VIRasteri`, `Create__13VISpellEffectP7VIScene`, `Create__16VISpellEventListiP7VIScene`, `EndChar__7VIRFont`, `Font__8VIRasteri`, `InitTextSlots__9VICSpriteR8VIRaster`, `Init__13VIHSpriteAnim19VIHSpriteAnimFormatiiiff14VIPlaybackType`, `Init__13VIPointSprite11VIPointType`, `Init__19VIStreamAudioSpriteRC6VIBBox`, `Init__20VIEffectVolumeSpriteRC6VIBBox`, `Init__7VIRFontR8VIRasterR12VIDictionaryiPUci10VIBitDepthi`, `Init__9VICSprite17VICSpriteSkelType13VICSpriteRace12VICSpriteSexfi`, `Init__9VIHSprite`, `Init__9VISurfaceR8VIRasterii10VIBitDepthi`, `IsPalettized__7VIRFont`, `LockPalette__9VISurfaceRiR12VIPixelStorePPUc`, `Lock__7VIRFontR8VIRaster`, `MaterialPal__8VIRasteri`, `NumSubObjects__9VIObjFile`, `ObjectSize__9VIObjFile`, `ObjectVersion__9VIObjFile`, `Palette__7VIRFontRiR12VIPixelStorePPUc`, `ParseCSpriteASlotList__10VIESFParseR9VICSprite`, `ParseCSpriteContSound__10VIESFParseR9VICSprite`, `ParseCSpriteNodeIDList__10VIESFParseR9VICSprite`, `ParseCSpritePartDefinitions__10VIESFParse`, `ParseCSpritePartEmitters__10VIESFParseR9VICSprite`, `ParseCSpritePlayList__10VIESFParseR9VICSprite`, `ParseCSpriteSkinList__10VIESFParseR9VICSprite`, `ParseCSpriteSpriteArray__10VIESFParse`, `ParseCSpriteTSlotList__10VIESFParseR9VICSprite`, `ParseCollBuffer__10VIESFParse`, `ParseFloraPrimBuffer__10VIESFParse`, `ParseGroupSpriteMembers__10VIESFParseR13VIGroupSprite`, `ParseGroupSpriteSpriteArray__10VIESFParse`, `ParseHSpriteAnimArray__10VIESFParse`, `ParseHSpriteAnim__10VIESFParse`, `ParseHSpriteAttachments__10VIESFParseR9VIHSprite`, `ParseHSpriteHierarchy__10VIESFParseR9VIHSprite`, `ParseHSpriteSpriteArray__10VIESFParse`, `ParseHSpriteTriggers__10VIESFParseR9VIHSprite`, `ParseLODSpriteLevels__10VIESFParseR11VILODSprite`, `ParseLODSpriteSpriteArray__10VIESFParse`, `ParseMaterial__10VIESFParseP10VIMaterial`, `ParseParticleDefinition__10VIESFParseR9VIObjFileR20VIParticleDefinition`, `ParsePrimBuffer__10VIESFParse`, `ParseRefMap__10VIESFParse`, `ParseResourceTable__10VIESFParseRt7VIArray1Z14VIResourceElem`, `ParseSoundArray__10VIESFParse`, `ParseSound__10VIESFParse`, `ParseSurface__10VIESFParse`, `ParseWorldBase__10VIESFParseR7VIWorld`, `ParseWorldZones__10VIESFParseR7VIWorld`, `PixelStore__7VIRFont`, `ReadString__9VIObjFilePcUs`, `Read__9VIObjFilePUci`, `Read__9VIObjFileRUc`, `Read__9VIObjFileRUi`, `Read__9VIObjFileRUs`, `Read__9VIObjFileRf`, `Read__9VIObjFileRi`, `Read__9VIObjFileRs`, `SetAnimPriorities__9VICSprite`, `SetAnimSoundChannels__9VICSprite`, `SetDefaultEntries__9VICSprite`, `SetDefaults__9VICSpriteR7VIScene`, `SetFlags__14VIEffectVolumeUi`, `SetKeyframe__13VIHSpriteAnimiif`, `SetNodeFrame__13VIHSpriteAnimiiR14VIHSpriteFrame`, `SetNodeFrame__13VIHSpriteAnimiiR18VIHSpritePackFrame`, `SetNodeRefID__13VIHSpriteAnimii`, `SetType__14VIEffectVolume18VIEffectVolumeTypef`, `ShareAnimation__7VIScenei`, `ShareCollBuffer__9VICollidei`, `ShareMaterialPal__8VIRasteri`, `ShareParticleDefinition__16VIParticleSystemi`, `SharePrimBuffer__8VIRasteri`, `ShareRefMap__7VIScenei`, `ShareSound__13VISoundDevicei`, `ShareSprite__7VIScenei`, `Share__9VICSpriteR7VISceneP8VIRaster`, `SpellEffect__19VISpellEffectSystemi`, `StaticBounds__C17VIParticleEmitter`, `UnlockPalette__9VISurface`, `Unlock__7VIRFontR8VIRaster`
+- 2026-10-13 20:07 CDT — agents/w14-esfparse — 983 unresolved imports
+
+## agents/w14-hud-b
+
+Merged (merge commit, branch tip `c86f2341`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 36 units (14 functions and 22 data symbols) with fresh `input_order` values 6495 through 6530 (HUD and player-selection routines and state); 36 host checks, all pass here (two, `player-selection-task` and `run-stats`, only as x86_64 builds with statics below 4 GiB). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6529 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 983 |
+| After | 987 |
+| Closed | 16 |
+| Opened | 20 |
+
+Closed: `bodyAlpha`, `msgHudAssignQuickSpell__Fiii`, `msgHudAssignSpellBookSpell__Fiiil`, `objectPutSaveData__FPci`, `persue2__8CreatureP10GameObjectfff`, `picAdd__4itemPc`, `playerGoldIconx`, `playerInitArmorCache__Fv`, `playerSelectionTask__Fv`, `readMap__3mapPUc`, `runStats__Fii`, `scrollmapTexCopy`, `shopClipGridCoordinates__FPiN30`, `shopDrawItemBitmapGlow__FP8_textureii`, `shopMouseOnHotSpot__FP12screenStruct`, `titleloadTexCopy`
+
+Opened: `GetMode__6Camera`, `allDone__Fi`, `boxDraw__FiiiiiUii`, `displayResistances__Fi`, `doNamePad__Fv`, `drawNamePad__Fv`, `expf`, `getHairStyle__Fi`, `hudRunSlider__FiiiiiUifPii`, `initPostSelect__Fv`, `moveCamera__Fv`, `msgInventoryAdjustAbility__Fii`, `npcLookAtCamera__Fv`, `playerRecomputeDamage__6PlayerPQ24item11descriptioni`, `printStat__FiPUsiiii`, `resetName__Fv`, `statsFrame__Fv`, `statsRunSkillTree__Fi`, `switchToNamePad__Fv`, `textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii`
+- 2026-10-13 20:12 CDT — agents/w14-hud-b — 987 unresolved imports
+
+## agents/w14-wnd-a
+
+Merged (merge commit, branch tip `679ed032`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 26 units with fresh `input_order` values 6531 through 6556 (VIWnd option, edit, font and UI window helper routines; 26 host checks, all pass here, some only as x86_64 builds with statics below 4 GiB). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6555 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 987 |
+| After | 980 |
+| Closed | 26 |
+| Opened | 19 |
+
+Closed: `Back__12VIWndOptions`, `Backspace__9VIWndEdit`, `BeginConnect__12VIWndConnect`, `BlitBar__4VIUIPCUsG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `BlitFillFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam9VIUITexId16VIAlphaBlendModefUc`, `BlitFrame__4VIUIG8VIVect2IT1G14VIUIFrameParam16VIAlphaBlendModefUc`, `BlitRect__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `CaretOffset__9VIWndEdit`, `ComputeTextRows__9VIWndEdit`, `Decrement__12VIWndOptions`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCciiUi`, `DrawFrame__10VIUIWindowiiiiUi`, `DrawGameOptions__12VIWndOptions`, `DrawInterfaceOptions__12VIWndOptions`, `DrawMainMenu__12VIWndOptions`, `DrawSoundOptions__12VIWndOptions`, `DrawStringEx__4VIUIPCUsiiG10VIColor32Fi`, `FillRectangle__4VIUIPC8VIVect2IPC10VIColor32F`, `FindChar__7VIRFontUs`, `GetCaretPos__9VIWndEditP8VIVect2I`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCUs`, `GetStringWidth__6VIFontP8VIRasterP12VIDictionaryPCc`, `Increment__12VIWndOptions`, `Insert__9VIWndEditUs`, `IsOpen__C10VIUIWindow`, `IsOpening__C10VIUIWindow`
+
+Opened: `BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi`, `BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BringUpNetwork__12VIWndConnect`, `DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi`, `DrawHScroll__10VIUIWindowiiifUi`, `FindTyped__12VIDictionaryUi14VIResourceTypeRi`, `GetStringWidth__8VIRasteriPCUs`, `GetStringWidth__8VIRasteriPCc`, `GetUITexture__F9VIUITexId`, `SetOutputMode__13VISoundDevicei`, `SetSolidFillUIMaterial__8VIRaster`, `StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `TickPulse__C10VIUIWindow`, `TickR__10VIUIWindowiib`, `VIEELoadIrx__FPCciT0`, `VIEEUnloadIrx__Fi`, `_6VIFont$sm_FontName`
+- 2026-10-13 20:17 CDT — agents/w14-wnd-a — 980 unresolved imports
+
+## agents/w14-m-data-b
+
+Merged (merge commit, branch tip `1e6abed5`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 22 units (0 emitting functions, the rest data or type-info units) with fresh `input_order` values 6557 through 6578, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 980 |
+| After | 958 |
+| Closed | 22 |
+| Opened | 0 |
+
+Closed: `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle1`, `newIceSwordParticle2`, `norrath_auto_chest_msg_run_fuseParticle_bytes`, `norrath_auto_chest_msg_run_smokeParticle_bytes`, `norrath_container_msg_run_fuseParticle_bytes`, `norrath_container_msg_run_smokeParticle_bytes`, `oniball_msg_run_particle_7d7810`, `oniball_msg_run_particle_7d78b0`, `phice_msg_run_particle_7d6740`, `phice_msg_run_particle_7d6790`, `planarsteel_run_particle_8d8510`, `planarsteel_run_particle_8d8560`, `planarsteel_run_particle_8d85b0`, `planarsteel_run_particle_8d8600`, `poisonFleck`, `poisonSmoke`, `redSpark`, `spellcharge_hit_something_particle_8d6780`, `summonskeletonParticle1`, `summonskeletonParticle2`
+
+Opened: 
+- 2026-10-13 20:23 CDT — agents/w14-m-data-b — 958 unresolved imports
+
+## agents/w14-m-spell-ctors-a
+
+Merged (merge commit, branch tip `cf541ad3`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 9 units (9 emitting functions, the rest data or type-info units) with fresh `input_order` values 6579 through 6587, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 958 |
+| After | 957 |
+| Closed | 9 |
+| Opened | 8 |
+
+Closed: `_$_5Spell`, `__12SpellHealingiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `__15SpellClericRootiP8CreatureP5Skill`, `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__15SpellHolyShieldiP8CreatureP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`, `__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`
+
+Opened: `_vt$12SpellHealing`, `_vt$13SpellEntangle`, `_vt$15SpellClericRoot`, `_vt$15SpellHateEffect`, `_vt$15SpellHolyShield`, `_vt$16SpellConeOfFrost`, `_vt$16SpellCriticalHit`, `_vt$17SpellMinorHealing`
+- 2026-10-13 20:28 CDT — agents/w14-m-spell-ctors-a — 957 unresolved imports
+
+## agents/w14-m-spell-ctors-b
+
+Merged (merge commit, branch tip `fb7e3c78`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). Partly selected: 17 units (14 emitting functions plus type-info or table units) with fresh `input_order` values 6588 through 6604, each with a committed host check that passes here (17 of 17). NOT selected: the four constructors `ctor-bash`, `ctor-convert-undead`, `ctor-ranger-crit` and `ctor-root` (`SpellBash`, `SpellConvertUndead`, `SpellRangerCriticalHit`, `SpellRoot`), which have only the private paired runs the notes describe and no committed check; their files stay in the snapshot and their names stay unresolved. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 957 |
+| After | 951 |
+| Closed | 17 |
+| Opened | 11 |
+
+Closed: `__tf12SpellBlessed`, `__tf13FireBombletJr`, `__tf13WeatherFilter`, `__tf15SpellFireFlares`, `__tf15SpellHateEffect`, `__tf16SpellColdWeapons`, `__tf16SpellCriticalHit`, `__tf16SpellFireWeapons`, `__tf17SpellDiseaseTrail`, `__tf17SpellUndeadShield`, `__tf18SpellAncestralCall`, `__tf18SpellHammerOfWrath`, `__tf21SpellLightningWeapons`, `__tf22SpellRangerCriticalHit`, `_vt$14FireStormFlare`, `_vt$18SpellHammerOfWrath`, `_vt$19SpellSummonSkeleton`
+
+Opened: `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, `_$_19SpellSummonSkeleton`, `__tf13VISceneFilter`, `__tf14FireStormFlare`, `__tf19SpellSummonSkeleton`, `__ti13VISceneFilter`, `msg_draw__14FireStormFlare`, `msg_run__14FireStormFlare`, `run__18SpellHammerOfWrathG6Point3s`, `run__19SpellSummonSkeletonG6Point3s`
+- 2026-10-13 20:34 CDT — agents/w14-m-spell-ctors-b — 951 unresolved imports
+
+## agents/w14-m-sprite-dtors
+
+Merged (merge commit, branch tip `e96a1596`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 35 units (30 emitting functions, the rest data or type-info units) with fresh `input_order` values 6605 through 6639, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 951 |
+| After | 941 |
+| Closed | 35 |
+| Opened | 25 |
+
+Closed: `_$_11VILODSprite`, `_$_11VILightning`, `_$_12VINameSprite`, `_$_12VIPointLight`, `_$_12VISkinSprite`, `_$_13VIFloraSprite`, `_$_13VIGroupSprite`, `_$_13VIPointSprite`, `_$_13VISoundSprite`, `_$_14VISimpleSprite`, `_$_16VIParticleSprite`, `_$_19VIStreamAudioSprite`, `_$_20VIEffectVolumeSprite`, `_$_7VILList`, `_$_9VICSprite`, `_$_9VIHSprite`, `__tf11VILODSprite`, `__tf12VINameSprite`, `__tf12VIPointLight`, `__tf12VISkinSprite`, `__tf13VIFloraSprite`, `__tf13VIGroupSprite`, `__tf13VIPointSprite`, `__tf13VISoundSprite`, `__tf14VISimpleSprite`, `__tf16VIParticleSprite`, `__tf19VIStreamAudioSprite`, `__tf20VIEffectVolumeSprite`, `__tf9VICSprite`, `__tf9VIHSprite`, `_vt$13VIActorFilter`, `_vt$13VISceneFilter`, `_vt$19__builtin_type_info`, `_vt$8VIEnvRay`, `_vt$8VISprite`
+
+Opened: `Clear__9VICSprite`, `Clear__9VIHSprite`, `Collide__8VIEnvRayUifR7VIVect3`, `Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FilterActor__13VIActorFilterR7VIScenei`, `FilterActor__13VISceneFilterR7VIScenei`, `Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi`, `Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `_$_14VIEffectVolume`, `_$_19__builtin_type_info`, `_$_8VISprite`, `_$_t6VIPool1Z13VIHSpritePlay`, `_$_t6VIPool1Z17VIHSpritePlayNode`, `_$_t6VIPool1Z19VIHSpriteAttachment`, `_$_t7VIArray1Z16VIHSpriteTrigger`, `_$_t7VIArray1Z20VICSpritePartEmitter`, `_$_t8VIVector1Z10VIMatrix44`, `_$_t8VIVector1Z13VIHSpriteNode`, `__tf13VIActorFilter`, `__tf19__builtin_type_info`, `__tf8VIEnvRay`, `__tf8VISprite`, `__ti8VISprite`
+- 2026-10-13 20:39 CDT — agents/w14-m-sprite-dtors — 941 unresolved imports
+
+## agents/w14-sound
+
+Merged (merge commit, branch tip `1960b23f`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 20 units (20 emitting functions, the rest data or type-info units) with fresh `input_order` values 6640 through 6659, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 941 |
+| After | 930 |
+| Closed | 20 |
+| Opened | 9 |
+
+Closed: `AllocateChannels__13VISoundDeviceii`, `AsWave__7VISound`, `AsXm__7VISound`, `BeginAdpcmTransfer__13VISoundDevicePPvUiiPi`, `BeginXmTransfer__13VISoundDevicePPvUiUiiPi`, `ChannelCount__C4VIXm`, `ChannelCount__C6VIWave`, `FirstChannel__13VISoundDeviceUl`, `IdleTransfer__13VISoundDevice`, `NewPlayback__13VISoundDevice`, `NextChannel__13VISoundDeviceUli`, `Play__13VIBattleMusici`, `Process__13VIBattleMusic`, `ReleaseSound__13VISoundDeviceiR12VIDictionary`, `Reset__13VISoundDevice`, `SampleRate__C6VIWave`, `SetSoundClassVolume__13VISoundDevice12VISOUNDCLASSf`, `StopNow__13VIBattleMusic`, `Stop__13VIBattleMusicb`, `Type__C7VISound`
+
+Opened: `BgmBufferSize__13VISoundDevice`, `ChannelCount__13VISoundDeviceUl`, `FirstPlayback__13VISoundDevice`, `FreeSpuMem__13VISoundDeviceUii`, `NextPlayback__13VISoundDeviceP10VIPlayback`, `Preload__13VIBattleMusici`, `Sound__13VISoundDevicei`, `StopAllBgm__13VISoundDevice`, `norrath_overlay_sRecv_11edd00`
+- 2026-10-13 20:44 CDT — agents/w14-sound — 930 unresolved imports
+
+## agents/w14-spellevent (rejected)
+
+Rejected at tip `5cce4e6e` (over an hour old; notes file present). All 24 units (spell event creation, processing and destruction routines) have no committed check of any kind: the notes say "No host tests are committed" and that the only evidence is a private interpreter comparison outside git. That breaks the repo rule that every function needs a test a reviewer can run and that could fail. Nothing was merged or selected; the owner can add per-function host checks and push again. The count is unchanged (930 after the preceding merge).
+- 2026-10-13 20:45 CDT — agents/w14-spellevent rejected, nothing merged — 930 unresolved imports
+
+## agents/w14-sprite-copy
+
+Merged (merge commit, branch tip `53d7be10`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 28 units (28 emitting functions, the rest data or type-info units) with fresh `input_order` values 6660 through 6687, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 930 |
+| After | 934 |
+| Closed | 28 |
+| Opened | 32 |
+
+Closed: `Copy__11VILODSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VINameSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VIPointLightR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__12VISkinSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIFloraSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIGroupSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VIPointSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__13VISoundSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__14VISimpleSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__16VIParticleSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__19VIStreamAudioSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__20VIEffectVolumeSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__9VICSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Copy__9VIHSpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `Release__11VILODSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VINameSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VIPointLightR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__12VISkinSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIFloraSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIGroupSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VIPointSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__13VISoundSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__14VISimpleSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__16VIParticleSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__19VIStreamAudioSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__20VIEffectVolumeSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__9VICSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `Release__9VIHSpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`
+
+Opened: `Begin__Ct6VIPool1Z13VIHSpritePlay`, `CopyMaterialPal__8VIRasterii`, `CopySprite__7VISceneii`, `Density__C14VIEffectVolume`, `Direction__C17VIParticleEmitter`, `End__Ct6VIPool1Z13VIHSpritePlay`, `Flags__C14VIEffectVolume`, `Free__14VIEffectVolume`, `Init__14VIEffectVolumeRC6VIBBox`, `Init__t6VIPool1Z13VIHSpritePlayRCt6VIPool1Z13VIHSpritePlay`, `Init__t6VIPool1Z17VIHSpritePlayNodeRCt6VIPool1Z17VIHSpritePlayNode`, `Init__t6VIPool1Z19VIHSpriteAttachmentRCt6VIPool1Z19VIHSpriteAttachment`, `Init__t7VIArray1Z16VIHSpriteTriggerRCt7VIArray1Z16VIHSpriteTrigger`, `Init__t7VIArray1Z20VICSpritePartEmitteri`, `Init__t8VIVector1Z10VIMatrix44RCt8VIVector1Z10VIMatrix44`, `Init__t8VIVector1Z13VIHSpriteNodeRCt8VIVector1Z13VIHSpriteNode`, `IsPlaying__13VISoundDevicei`, `Location__C17VIParticleEmitter`, `Next__Ct6VIPool1Z13VIHSpritePlayi`, `ReleaseAnimation__7VIScenei`, `ReleaseFont__8VIRasteriR12VIDictionary`, `ReleaseMaterialPal__8VIRasteriR12VIDictionary`, `ReleasePrimBuffer__8VIRasteriR12VIDictionary`, `ReleaseRefMap__7VIScenei`, `SetLevelSprite__11VILODSpriteiiR7VIScene`, `SetMaterialPal__12VISkinSpriteiR8VIRasterR12VIDictionary`, `ShareFont__8VIRasteri`, `Space__C17VIParticleEmitter`, `Surface__C14VIEffectVolumei`, `Type__C14VIEffectVolume`, `VITrailFxEnd__FP9VITrailFx`, `strcpy8__8VIStringPcUiPCc`
+- 2026-10-13 20:50 CDT — agents/w14-sprite-copy — 934 unresolved imports
+
+## agents/w14-sprite-pick
+
+Merged (merge commit, branch tip `a010b073`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 25 units (25 emitting functions, the rest data or type-info units) with fresh `input_order` values 6688 through 6712, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 934 |
+| After | 920 |
+| Closed | 25 |
+| Opened | 11 |
+
+Closed: `Pick__11VILODSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VINameSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VIPointLightR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__12VISkinSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIFloraSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIGroupSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VIPointSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__13VISoundSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__14VISimpleSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__16VIParticleSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__19VIStreamAudioSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__20VIEffectVolumeSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Pick__9VIHSpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `QueryEmitters__13VIGroupSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__19VIStreamAudioSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__7VIWorldiR23VISceneEmitterQueryVars`, `QueryEmitters__8VISpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryEmitters__9VIHSpriteR7VISceneRC10VIMatrix44R14VIEmitterQuery`, `QueryIntersection__11VILODSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__13VIGroupSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__14VISimpleSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__7VIWorldR20VISceneIntersectVars`, `QueryIntersection__8VISpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__9VICSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`, `QueryIntersection__9VIHSpriteRC6VIBBoxR14VIQueryTriListRC10VIMatrix44R7VIScene`
+
+Opened: `CalcLODLevelIndex__9VIHSpriteR13VIPickSegmentR8VIRaster`, `Contains__C6VIBBoxRC7VIVect3`, `Erase__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Insert__t10VIMultiMap2ZfZ14VIEmitterEntryRCfRC14VIEmitterEntry`, `PickPrimBuffer__8VIRasterR13VIPickSegmentii`, `PickPrimBuffer__8VIRasterR13VIPickSegmentiii`, `PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri`, `QueryEmitters__6VIZoneR23VISceneEmitterQueryVars`, `QueryIntersection__7VIWorldiR20VISceneIntersectVars`, `QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi`, `Size__Ct10VIMultiMap2ZfZ14VIEmitterEntry`
+- 2026-10-13 20:56 CDT — agents/w14-sprite-pick — 920 unresolved imports
+
+## agents/w14-projectile-a
+
+Merged (merge commit, branch tip `61eb0a17`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 27 units (27 emitting functions, the rest data or type-info units) with fresh `input_order` values 6713 through 6739, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 920 |
+| After | 909 |
+| Closed | 27 |
+| Opened | 16 |
+
+Closed: `Clear__12VICollBuffer`, `Init__9VIStationiPCcPcT3T2T2i`, `__10HolyStrikesiG6Point3P10GameObjectP5Skill`, `__12GlowingShaftG6Point3iiii`, `__13HammerOfWrathG6Point3sP10GameObjectiP5Skill`, `__18DarknessProjectileG6Point3T1P5SkilliP10GameObject`, `__19BlindingLightEffectG6Point3iP8CreatureP5Skill`, `__4PropG6Point3P12_modelHeaderP8_textureli`, `__8HolyBoltG6Point3iiP8CreatureP5Skill`, `__8LostSoulG6Point3T1iP10_vagHeaderii`, `__8SkelightG6Point3sPPcci`, `clone__13FireBombletJr`, `clone__15ShockProjectile`, `fxRunBallLightning__FP20fxBallLightningStateP10GameObjectT1G6Point3fii`, `gameRadialDamage__FP10GameObjectG6Point3iffiii`, `initType__8Skeletonb`, `init__10StaticFire`, `msg_collision__11DiseaseBoltP10GameObject`, `msg_collision__12ShockOfFrostP10GameObject`, `msg_collision__16PoisonProjectileP10GameObject`, `msg_draw__11DiseaseBolt`, `msg_draw__12ShockOfFrost`, `msg_draw__13FireBombletJr`, `msg_draw__14HateProjectile`, `msg_draw__14poisonGasSpell`, `msg_draw__15FrostStormSpell`, `msg_draw__15ShockProjectile`
+
+Opened: `Init__20VIWndGenericRenderer`, `SetPassword__20VIWndGenericRendererPCc`, `SetStationName__20VIWndGenericRendererPCc`, `SetText__9VIWndEulaPCUsi`, `__18SpellBlindingLightiP8CreatureT2P5Skill`, `_vt$10HolyStrike`, `_vt$12GlowingShaft`, `_vt$13HammerOfWrath`, `_vt$18DarknessProjectile`, `_vt$19BlindingLightEffect`, `_vt$8HolyBolt`, `_vt$8LostSoul`, `_vt$8Skelight`, `initWeapon__8Skelight`, `lightGetAmbient__FPs`, `skelightResourceMap`
+- 2026-10-13 21:02 CDT — agents/w14-projectile-a — 909 unresolved imports
+
+## agents/w14-projectile-b
+
+Merged (merge commit, branch tip `a81b8cb1`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 25 units (28 emitting functions, the rest data or type-info units) with fresh `input_order` values 6740 through 6764, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 909 |
+| After | 915 |
+| Closed | 25 |
+| Opened | 31 |
+
+Closed: `msg_draw__16PoisonProjectile`, `msg_draw__16beetleProjectile`, `msg_run__10MummySnake`, `msg_run__10PoisonRain`, `msg_run__10SpawnMummy`, `msg_run__11BoltGoRound`, `msg_run__11DiseaseBolt`, `msg_run__12ShockOfFrost`, `msg_run__13FireBombletJr`, `msg_run__14HateProjectile`, `msg_run__14poisonGasSpell`, `msg_run__15FrostStormSpell`, `msg_run__15ShockProjectile`, `msg_run__16PoisonProjectile`, `msg_run__16beetleProjectile`, `run__14SpellHarmTouchG6Point3s`, `run__15SpellConeOfFireG6Point3s`, `run__5SpellG6Point3s`, `startFractalLine__FP4Boltfi`, `terminate__19ColdArrowProjectilei`, `terminate__19FireArrowProjectilei`, `terminate__19MultiFireProjectilei`, `terminate__21PoisonArrowProjectilei`, `terminate__22ExplodeArrowProjectilei`, `waterStep`
+
+Opened: `__5MummyG6Point3sPPcPc`, `__9LooseFireG6Point3P10GameObject`, `_vt$10FrostShard`, `_vt$18FrostStormIceShard`, `bounce__13FireBombletJr`, `buildShockChainList__14HateProjectileP6Point3`, `buildShockChainList__15ShockProjectileP6Point3`, `norrath_w13_spell_msg_a_view_7d6970`, `norrath_w13_spell_msg_a_view_7d6a10`, `norrath_w13_spell_msg_a_view_7d6a60`, `norrath_w13_spell_msg_a_view_7d6b00`, `norrath_w13_spell_msg_a_view_7d6fc0`, `norrath_w13_spell_msg_a_view_7d7010`, `norrath_w13_spell_msg_a_view_7d7260`, `norrath_w13_spell_msg_a_view_7d72b0`, `norrath_w13_spell_msg_a_view_7d7300`, `norrath_w13_spell_msg_a_view_8d6320`, `norrath_w13_spell_msg_a_view_8d6370`, `norrath_w13_spell_msg_a_view_8d67d0`, `norrath_w13_spell_msg_a_view_8d6820`, `norrath_w13_spell_msg_a_view_8d6870`, `norrath_w13_spell_msg_a_view_8d7b30`, `norrath_w13_spell_msg_a_view_8d7b80`, `norrath_w13_spell_msg_a_view_8d7bd0`, `norrath_w13_spell_msg_a_view_8d80a0`, `norrath_w13_spell_msg_a_view_8d80f0`, `norrath_w13_spell_msg_a_view_8d8140`, `norrath_w13_spell_msg_a_view_8d8190`, `norrath_w13_spell_msg_a_view_8d81e0`, `pack`, `poisonPoof`
+- 2026-10-13 21:07 CDT — agents/w14-projectile-b — 915 unresolved imports
+
+## agents/w14-m-data-a
+
+Merged (merge commit, branch tip `722be2c0`; over two hours old). The branch adds only its notes file, `docs/agents/w14-m-data-a.md`: no source, no plan entries. The notes say the package closes none of its 26 scope names in the shared build, because 22 are file-local particle records inside other packages' static-initializer units (a global copy would link but the caller would read zeros), two need a plan entry that already exists in `w10-render-b`'s notes, and two need a caller-side label. Nothing to plan; no build change, so the count is unchanged (915). The owner changes it lists belong to the owners of those packages.
+- 2026-10-13 21:08 CDT — agents/w14-m-data-a (notes only, no units) — 915 unresolved imports
+
+## Re-verification by the replacement integrator (2026-10-13)
+
+Shared branch at `ea696455`: 214 tool tests pass, the snapshot check passes (6763 authored inputs), and a fresh default partial build reproduces the recorded **915** unresolved imports (5384 function bodies, zero COMMON). The last ten entries (w14-sound through w14-m-data-a) match: counts reproduce and no game binary, disc image or raw disassembly appears in the recent diffs. No shared-file fixes were needed.
+
+Remaining unmerged `origin/agents/*` branches, all at the tips already recorded above and unchanged since their rejection: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`, `w9-render-math-a`. Each lacks committed checks for some or all units; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches and were left alone.
+- 2026-10-13 21:30 CDT — re-verification, no branches merged — 915 unresolved imports
+
+## Integrator pass (2026-10-13, second replacement)
+
+Shared branch at `761e44cb`: 214 tool tests pass, the snapshot check passes (6763 authored inputs), `--check-plan` is valid, and a fresh full partial build with the repo EE toolchain reproduces the recorded **915** unresolved imports (6763 source compilations, 5384 function bodies, zero COMMON). No repo-rule break found in the last ten entries; no shared-file fixes needed.
+
+Fourteen `origin/agents/*` branches remain unmerged, all at the tips already recorded in their standing rejections: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent` (`5cce4e6e`), `w8-spell-static-init-b`, `w9-render-math-a`. Each still has committed functions with no host check, so none qualifies for a merge; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches.
+- 2026-10-13 CDT — integrator pass, no branches merged — 915 unresolved imports
+
+## agents/w15-startup-a
+
+Merged (merge commit). Notes have the full set of sections; every function unit has a host contract and the notes record a private paired run for each. Eighteen of the 19 package units are selected. `w15-startup-a-link-eh-frame-begin` (defines `__EH_FRAME_BEGIN__`) is **not selected**: with it in the plan the relocatable link aborts with a BFD assertion (`elflink.c:9839`); every other single-object removal still failed, and removing it alone linked. The worker's notes say no full partial build was run. `__EH_FRAME_BEGIN__` stays unresolved; owner to rework that unit. The three earlier-wave units the notes suggest adding (vblank views, loader failure word, the receive-control-packet swap) were not added, since two need an owner decision.
+
+| | |
+|---|---|
+| Before | 915 |
+| After | 905 |
+| Closed | 18 |
+| Opened | 8 |
+
+Closed: `VICdStreamDiskReady__Fv`, `VICdStreamRead__FUiUiPvi`, `VICdStreamStatus__Fv`, `VICdStreamSync__Fi`, `VIEEDMASend__FiPv`, `VIEEFileDelay__Fi`, `VIEELoadIrx__FPCciT0`, `VIEEUnloadIrx__Fi`, `VIMemCardReadFileAsync__FPCcPvi`, `mcerror`, `mt_ebx`, `mt_eby`, `net_ready`, `norrath_overlay_sRecv_11edd00`, `sAsyncFd`, `unet_startup_thread__FPv`, `unet_startup_thread_id`, `unet_startup_thread_stack`
+
+Opened: `SetAlarm`, `VIInitUSocketExApi__Fv`, `hostname`, `pf`, `sceInetAddress2Name`, `sceInetAddress2String`, `sceLibnetRegisterHandler`, `sceLibnetWaitGetAddress`
+
+Full partial build: 6781 source compilations, one link, 5396 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-13 23:17 CDT — agents/w15-startup-a — 905 unresolved imports
+
+## agents/w15-vi-io-sound-a
+
+Merged (merge commit; tip more than 45 minutes old). All 33 units have a host check (`host_check.cpp`, not a plan input) and the notes record a private paired run per function; the notes say no full partial build was run, so the count below is from this integration. All 33 units are selected.
+
+| | |
+|---|---|
+| Before | 905 |
+| After | 895 |
+| Closed | 33 |
+| Opened | 23 |
+
+Closed: `BgmBufferSize__13VISoundDevice`, `BufferClear__6VIFile`, `CDDiskReady__6VIFilei`, `CDSearchFile__6VIFileP10sceCdlFILEPCc`, `ChannelCount__13VISoundDeviceUl`, `Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FirstPlayback__13VISoundDevice`, `Flush__6VIFile`, `FreeSpuMem__13VISoundDeviceUii`, `IsPlaying__13VISoundDevicei`, `MemorySegmCalcSegm__6VIFile`, `NextPlayback__13VISoundDeviceP10VIPlayback`, `NumSubObjects__9VIObjFile`, `ObjectSize__9VIObjFile`, `ObjectVersion__9VIObjFile`, `ParseParticleDefinition__10VIESFParseR9VIObjFileR20VIParticleDefinition`, `Preload__13VIBattleMusici`, `ReadBegin__9VIObjFileRUsT1RUlRUi`, `ReadString__9VIObjFilePcUs`, `Read__9VIObjFilePUci`, `Read__9VIObjFileRUc`, `Read__9VIObjFileRUi`, `Read__9VIObjFileRUs`, `Read__9VIObjFileRf`, `Read__9VIObjFileRi`, `Read__9VIObjFileRs`, `Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `SetOutputMode__13VISoundDevicei`, `ShareSound__13VISoundDevicei`, `Sound__13VISoundDevicei`, `StopAllBgm__13VISoundDevice`, `WriteEnd__9VIObjFileRUi`, `Write__6VIFilePCvi`
+
+Opened: `BufferedWrite__6VIFilePCvi`, `CreateMotif__22VIParticleDefinitionEx`, `Eof__6VIFile`, `InsertAfter__7VILNodeP7VILNode`, `MemorySegmWrite__6VIFilePCvi`, `MemoryWrite__6VIFilePCvi`, `MergeFreeSpuMem__13VISoundDevice`, `ParseSound__10VIESFParsePCcR7VIScene`, `ReadStringBody__9VIObjFilePcUsUs`, `ReadStringLength__9VIObjFileRUs`, `SetBlendMode__20VIParticleDefinitionQ222VIParticleDefinitionEx9BLENDMODE`, `SetInnerHprVar__20VIParticleAttributesRC7VIVect3`, `SetInnerOffset__20VIParticleAttributesRC7VIVect3`, `SetName__15VIParticleMotifPCc`, `SetOuterHprVar__20VIParticleAttributesRC7VIVect3`, `SetOuterOffset__20VIParticleAttributesRC7VIVect3`, `SetRepeat__4VIXmi`, `SetTextureConfiguration__20VIParticleDefinitioni`, `SetTexture__20VIParticleDefinitioniR8VIRasterR12VIDictionary`, `SetZTest__20VIParticleDefinitionb`, `SetZWrite__20VIParticleDefinitionb`, `VICdSearchFile__FPCcPUiT1`, `_13VISoundDevice$sBgmVersion`
+
+Full partial build: 6814 source compilations, one link, 5429 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-13 23:27 CDT — agents/w15-vi-io-sound-a — 895 unresolved imports
+
+## agents/w15-fe-ui-b
+
+Merged (merge commit; tip more than 45 minutes old). All 27 units have a `host_check.cpp` (not a plan input) and the notes record a private paired run per function; the notes left their opened-imports section blank, so the lists below come from this integration's full build. All 27 units are selected. `UITextures` is still unresolved: it is outside this package.
+
+| | |
+|---|---|
+| Before | 895 |
+| After | 878 |
+| Closed | 27 |
+| Opened | 10 |
+
+Closed: `Begin2D__4VIUI`, `BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi`, `BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi`, `BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `CombineDeadkey__10VIKeyboardUc`, `ConversionTableSize.180`, `CountLines__10VIUIWindowPCUsi`, `DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii`, `DrawFrameVScroll__10VIUIWindowiiiif`, `DrawHScroll__10VIUIWindowiiifUi`, `Draw__10VIUIWindow`, `End2D__4VIUI`, `GetUITexture__F9VIUITexId`, `QueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ResetTickPulse__10VIUIWindow`, `SoundPlay__4VIUI11VIUISoundId`, `StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi`, `Text__10VIUIWindowPCUsii9VIUICOLORUi`, `TickPulse__C10VIUIWindow`, `TickR__10VIUIWindowiib`, `USEnglishKbdMapTable`, `combineTable`, `sConvert16`, `sFrDeadkey`, `sUsDeadkeyCount`
+
+Opened: `BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi`, `DrawVScroll__10VIUIWindowG8VIVect2IifUi`, `GetUISound__F11VIUISoundId`, `SoundPlay__4VIUIPCcf`, `StretchBlit__8VIRasteriUiRC8VIVect2IN3316VIAlphaBlendModef`, `TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi`, `UITextures`, `VIHashResourceID_Icon__FPCc`
+
+Full partial build: 6841 source compilations, one link, 5450 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-13 23:36 CDT — agents/w15-fe-ui-b — 878 unresolved imports
+
+## agents/w15-vi-strings-dict-a
+
+Merged (merge commit; tip about two hours old). Twelve of the 15 units are selected; each has a `host_check.cpp` (not a plan input). **Not selected:** `vistringtable-fixuptextbuffer`, `vistringtable-loadrawfile` and `vistringtable-processrawfile` have no committed host check (the notes cite only a private paired run), so they stay authored but unplanned until the owner adds checks. Their sources are recorded in the snapshot file list only.
+
+| | |
+|---|---|
+| Before | 878 |
+| After | 870 |
+| Closed | 12 |
+| Opened | 4 |
+
+Closed: `GetMode__6Camera`, `_8VIString$ConversionTable1252`, `__11VIUDPSocketi`, `snprintf16__8VIStringPUsiPCUse`, `snprintf16__8VIStringPUsiPCce`, `snprintf__8VIStringPciPCce`, `str8to16__8VIStringPUsUiPCc`, `strcat16__8VIStringPUsUiPCUs`, `strcat16__8VIStringPUsUiPCc`, `strcpy16__8VIStringPUsUiPCUs`, `strcpy8__8VIStringPcUiPCc`, `strupr__8VIStringPc`
+
+Opened: `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v`, `strupr`, `vsnprintf16__8VIStringPUsiPCcPv`
+
+Full partial build: 6853 source compilations, one link, 5461 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-13 23:45 CDT — agents/w15-vi-strings-dict-a — 870 unresolved imports
+
+## agents/w15-gameloop-a
+
+Merged (merge commit; tip over 45 minutes old, notes complete). 22 of 26 units selected, all with a `host_check.cpp`. **Not selected:** `cold-arrow-particle-defs`, `harm-touch-particle-defs`, `nm-players-particle-defs` and `poison-arrow-particle-defs`: each defines a `_GLOBAL_$I$...` static-initializer symbol that earlier-wave plan units (`cold_arrow_projectile_static_init`, `spell_harm_touch_static_init`, `global_init`, and the poison-arrow one) already define, so with them in the plan the link fails with four multiple-definition errors. Replacing another package's units is an owner decision; the four stay authored but unplanned, and the notes' claim that they close those four `_GLOBAL_$I$` names is not reproduced (those names were already defined, not in the unresolved list).
+
+| | |
+|---|---|
+| Before | 870 |
+| After | 868 |
+| Closed | 22 |
+| Opened | 20 |
+
+Closed: `Add__12VIDictionaryR10VIResourceUi14VIResourceTypei`, `FindTyped__12VIDictionaryUi14VIResourceTypeRi`, `__Q212RealmService15RealmGatewayAPIUiPCcs`, `allDone__Fi`, `boxDraw__FiiiiiUii`, `displayResistances__Fi`, `doEntityDispatch__FP8MTObjDefiP13delayedEntityPib`, `doNamePad__Fv`, `drawNamePad__Fv`, `getHairStyle__Fi`, `hudRunSlider__FiiiiiUifPii`, `initPostSelect__Fv`, `lightGetAmbient__FPs`, `moveCamera__Fv`, `msgInventoryAdjustAbility__Fii`, `npcLookAtCamera__Fv`, `objectProcessDeleteList__Fv`, `playerRecomputeDamage__6PlayerPQ24item11descriptioni`, `printStat__FiPUsiiii`, `resetName__Fv`, `statsFrame__Fv`, `switchToNamePad__Fv`
+
+Opened: `Insert__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUiRCQ212VIDictionary11VIDictEntry`, `__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI`, `_vt$Q212RealmService15RealmGatewayAPI`, `evalHermite3D__FfP6Point3N41`, `getDamageScale__12SkillArcheryi`, `getTweeks__FiPsT1P6Point3`, `monsterSpawn__FPPcG6Point3sb`, `nameGridDstW`, `nameGridDstX`, `nameGridDstY`, `nameGridPos`, `nameGridSrcW`, `nameGridSrcX`, `nameGridSrcY`, `namePos`, `norrath_stats_screen_view_7d0440`, `posInAura__18SpellAncestralCallP6Point3PfT2`, `setNewGridPosition__Fii`, `showNoNamePrompt`, `statsDrawDelay`
+
+Full partial build: 6875 source compilations, one link, 5483 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:01 CDT — agents/w15-gameloop-a — 868 unresolved imports
+
+## agents/w15-fe-mcerr-a
+
+Merged (merge commit; tip over two hours old, notes complete). All 34 units are selected, each with a `host_check.cpp`. (`w15-fe-mcerr-a-mcerr-host` is not a unit: it holds only the host-side helper header `hostlib.hpp`; an earlier version of this entry wrongly listed it as an unselected unit.) The worker's list of imports closed is checked against the full build below; 33 closed, 14 opened.
+
+| | |
+|---|---|
+| Before | 868 |
+| After | 849 |
+| Closed | 33 |
+| Opened | 14 |
+
+Closed: `BringUpNetwork__12VIWndConnect`, `Init__20VIWndGenericRenderer`, `McErrSetMode__Fi`, `McErr__FP5VIWndRC8VIVect2Ii`, `ProcessScreen04__10VIWndMcErriii`, `ProcessScreen10__10VIWndMcErriii`, `ProcessScreen11__10VIWndMcErriii`, `ProcessScreen12__10VIWndMcErriii`, `ProcessScreen15__10VIWndMcErriii`, `ProcessScreen16__10VIWndMcErriii`, `ProcessScreen17__10VIWndMcErriii`, `ProcessScreen20__10VIWndMcErriii`, `ProcessScreen30__10VIWndMcErriii`, `ProcessScreen50__10VIWndMcErriii`, `ProcessScreen52__10VIWndMcErriii`, `ProcessScreen54__10VIWndMcErriii`, `ProcessScreen60__10VIWndMcErriii`, `ProcessScreen61__10VIWndMcErriii`, `ProcessScreen62__10VIWndMcErriii`, `ProcessScreen63__10VIWndMcErriii`, `ProcessScreen64__10VIWndMcErriii`, `Save__13VIGameOptions`, `SetIcon__16VIIconDefinitionPvi`, `SetPassword__20VIWndGenericRendererPCc`, `SetStationName__20VIWndGenericRendererPCc`, `SetText__9VIWndEulaPCUsi`, `SetTitle__16VIIconDefinitionPCc`, `Setup__12VIWndMessagePCUsT115VIMESSAGEPROMPTRC8VIVect2Ii`, `sIconDefinition`, `sKeyMap`, `sListIcon`, `sMemCardInitialized`, `sProductTitle`
+
+Opened: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `DrawProgress__10VIUIWindowiiif`, `VIIsMcSameSession__Fv`, `VIMemCardAsyncIdle__Fv`, `VIMemCardFormat__Fv`, `VIMemCardIsPrepared__Fv`, `VIMemCardPadAsync__Fi`, `VIMemCardPrepare__Fi`, `VIMemCardProductId__Fv`, `VIMemCardWriteFile__FPCcPCvi`, `VISetMcSessionId__FUl`, `ezNetCnfGetProperties`, `ezNetCtlSetCombination`, `ezNetCtlUpInterface`
+
+Full partial build: 6909 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:08 CDT — agents/w15-fe-mcerr-a — 849 unresolved imports
+
+## agents/w15-m-data-a
+
+Merged (merge commit; tip over an hour old, notes complete). Three data units, each with a `host_check.cpp`; all selected. They define data symbols only (no functions).
+
+| | |
+|---|---|
+| Before | 849 |
+| After | 846 |
+| Closed | 3 |
+| Opened | 0 |
+
+Closed: `dynlevelcount`, `kittencount`, `levsuffix`
+
+Opened: 
+
+Full partial build: 6912 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:14 CDT — agents/w15-m-data-a — 846 unresolved imports
+
+## agents/w15-m-data-b
+
+Merged (merge commit; tip over an hour old, notes complete). 21 data units (alias views and resource tables), each with a `host_check.cpp`; all selected. No functions.
+
+| | |
+|---|---|
+| Before | 846 |
+| After | 826 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_w13_spell_msg_a_view_7d7260`, `norrath_w13_spell_msg_a_view_7d72b0`, `norrath_w13_spell_msg_a_view_7d7300`, `norrath_w13_spell_msg_a_view_8d6320`, `norrath_w13_spell_msg_a_view_8d6370`, `norrath_w13_spell_msg_a_view_8d67d0`, `norrath_w13_spell_msg_a_view_8d6820`, `norrath_w13_spell_msg_a_view_8d6870`, `norrath_w13_spell_msg_a_view_8d7b30`, `norrath_w13_spell_msg_a_view_8d7b80`, `norrath_w13_spell_msg_a_view_8d7bd0`, `norrath_w13_spell_msg_a_view_8d80a0`, `norrath_w13_spell_msg_a_view_8d80f0`, `norrath_w13_spell_msg_a_view_8d8140`, `norrath_w13_spell_msg_a_view_8d8190`, `norrath_w13_spell_msg_a_view_8d81e0`, `skeletonResourceMap`, `skelightName`, `skelightParams`, `skelightResourceMap`
+
+Opened: 
+
+Full partial build: 6933 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:22 CDT — agents/w15-m-data-b — 826 unresolved imports
+
+## agents/w15-m-rtti-a
+
+Merged (merge commit; tip over 30 minutes old, notes complete). All 43 data units (vtables, type-info nodes) have a `host_check.cpp` and are selected. **The official count rises** (826 to 932) although the package closes 36 names: the vtables now reference 142 virtual-method, destructor and realm-service symbols that are not yet defined by any unit, so they appear as new unresolved imports. The worker's 36 closed / 142 opened claim reproduces exactly. The opened names are real dependencies of the defined tables, not a build error; they belong to the owners of those classes.
+
+| | |
+|---|---|
+| Before | 826 |
+| After | 932 |
+| Closed | 36 |
+| Opened | 142 |
+
+Closed: `_$_10bad_typeid`, `_$_19__builtin_type_info`, `__tf10bad_typeid`, `__tf13VIActorFilter`, `__tf13VISceneFilter`, `__tf14FireStormFlare`, `__tf19SpellSummonSkeleton`, `__tf19__builtin_type_info`, `__tf8VIEnvRay`, `__tf8VISprite`, `__tf9bad_alloc`, `__ti13VISceneFilter`, `__ti8VISprite`, `__ti9type_info`, `_vt$10FrostShard`, `_vt$10HolyStrike`, `_vt$10bad_typeid`, `_vt$12GlowingShaft`, `_vt$12SpellHealing`, `_vt$13HammerOfWrath`, `_vt$13SpellEntangle`, `_vt$15SpellClericRoot`, `_vt$15SpellHateEffect`, `_vt$15SpellHolyShield`, `_vt$16SpellConeOfFrost`, `_vt$16SpellCriticalHit`, `_vt$16VIRealmInterface`, `_vt$17SpellMinorHealing`, `_vt$18DarknessProjectile`, `_vt$18FrostStormIceShard`, `_vt$19BlindingLightEffect`, `_vt$19VIFlatFileDirectory`, `_vt$8HolyBolt`, `_vt$8LostSoul`, `_vt$8Skelight`, `_vt$9bad_alloc`
+
+Opened: `_$_10FrostShard`, `_$_10HolyStrike`, `_$_12GlowingShaft`, `_$_12SpellHealing`, `_$_13HammerOfWrath`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_15SpellHolyShield`, `_$_16SpellConeOfFrost`, `_$_16SpellCriticalHit`, `_$_17SpellMinorHealing`, `_$_18DarknessProjectile`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_8HolyBolt`, `_$_8LostSoul`, `__tf10FrostShard`, `__tf10HolyStrike`, `__tf10VIResource`, `__tf12GlowingShaft`, `__tf12SpellHealing`, `__tf13HammerOfWrath`, `__tf13SpellEntangle`, `__tf15SpellClericRoot`, `__tf16SpellConeOfFrost`, `__tf16VIRealmInterface`, `__tf17SpellMinorHealing`, `__tf18DarknessProjectile`, `__tf18FrostStormIceShard`, `__tf19BlindingLightEffect`, `__tf19VIFlatFileDirectory`, `__tf8HolyBolt`, `__tf8LostSoul`, `__tf9exception`, `__ti10VIResource`, `__ti9exception`, `_vt$9exception`, `clone__12GlowingShaft`, `clone__8HolyBolt`, `clone__8LostSoul`, `createPrivateGame__16VIRealmInterfaceiPCUsN22Pv`, `createPublicGame__16VIRealmInterfaceiPCUssUiUiUiT2RCQ212RealmService14MatchGameAttrsT2Pv`, `msg_collision__10FrostShardP10GameObject`, `msg_collision__10HolyStrikeP10GameObject`, `msg_collision__8HolyBoltP10GameObject`, `msg_draw__10FrostShard`, `msg_draw__10HolyStrike`, `msg_draw__12GlowingShaft`, `msg_draw__13HammerOfWrath`, `msg_draw__18FrostStormIceShard`, `msg_draw__8HolyBolt`, `msg_draw__8LostSoul`, `msg_run__10FrostShard`, `msg_run__10HolyStrike`, `msg_run__12GlowingShaft`, `msg_run__13HammerOfWrath`, `msg_run__18DarknessProjectile`, `msg_run__18FrostStormIceShard`, `msg_run__19BlindingLightEffect`, `msg_run__8HolyBolt`, `msg_run__8LostSoul`, `notifyAddBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyAddBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyAddInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyAddInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyClientDiscovered__16VIRealmInterfacePCci`, `notifyClientRequestsConnect__16VIRealmInterfacePCci`, `notifyEnterRoom__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyForcedLogout__Q212RealmService15RealmGatewayAPIs`, `notifyFriendStatus__Q212RealmService15RealmGatewayAPIPCUsb`, `notifyGameDiscovered__16VIRealmInterfacePCci`, `notifyInstantMessage__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyKickAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyKickRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyLeaveRoom__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorAddedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorAddedRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyModeratorRemovedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorRemovedRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRemoveBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRemoveBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRemoveInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRemoveInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRoomBanner__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRoomMessage__Q212RealmService15RealmGatewayAPIPCUsN21`, `onAddBan__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddFriend__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddIgnore__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddInvite__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddRoomModerator__Q212RealmService15RealmGatewayAPIUiiPv`, `onCancelGame__16VIRealmInterfaceUiiPv`, `onChangeEmail__Q212RealmService15RealmGatewayAPIUiiPv`, `onChangePassword__Q212RealmService15RealmGatewayAPIUiiPv`, `onConnect__16VIRealmInterface`, `onConsumeKey__Q212RealmService15RealmGatewayAPIUiiPCUsPv`, `onCreateAccount__16VIRealmInterfaceUiiPCUsPv`, `onCreateAvatar__Q212RealmService15RealmGatewayAPIUiiPCPCUsUiT3UiPv`, `onCreatePrivateGame__16VIRealmInterfaceUiiPCciPv`, `onCreatePrivateRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onCreatePublicGame__16VIRealmInterfaceUiiPCciPv`, `onDestroyAvatar__Q212RealmService15RealmGatewayAPIUiiPv`, `onDisconnect__16VIRealmInterface`, `onDoClientDiscovery__16VIRealmInterfaceUiiPCciPv`, `onEnterRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onGetGame__16VIRealmInterfaceiiPCUsT3iPv`, `onGetPublicRooms__Q212RealmService15RealmGatewayAPIUiiPCPCUsT3PCUiT5UiPv`, `onGetRealmStats__16VIRealmInterfaceUiiUiUiUiUiUiUiUiUiPv`, `onGetRealmTime__Q212RealmService15RealmGatewayAPIUiiUiPv`, `onGetRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onGetRules__16VIRealmInterfaceUiiPCUsUiPv`, `onGetUserInfo__Q212RealmService15RealmGatewayAPIUiibT3PCUsPv`, `onGetUserStats__Q212RealmService15RealmGatewayAPIUiiRCQ212RealmService9UserStatsPCPCQ212RealmService9UserStatsUiPv`, `onKickAvatar__Q212RealmService15RealmGatewayAPIUiiPv`, `onLeaveRoom__Q212RealmService15RealmGatewayAPIUiiPv`, `onLogin__16VIRealmInterfaceUiiPCUsPv`, `onLogout__Q212RealmService15RealmGatewayAPIUiiPv`, `onMatchGame__16VIRealmInterfaceiiUiPCPCUsN24PCiPCQ212RealmService4BlobPv`, `onModifyRoomBanner__Q212RealmService15RealmGatewayAPIUiiPv`, `onRecordGameOutcome__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveBan__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveFriend__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveIgnore__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveInvite__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveRoomModerator__Q212RealmService15RealmGatewayAPIUiiPv`, `onRoundTrip__Q212RealmService15RealmGatewayAPIUiiPv`, `onSendInstantMessage__Q212RealmService15RealmGatewayAPIUiiPv`, `onSendRoomMessage__Q212RealmService15RealmGatewayAPIUiiPv`, `onStartGame__Q212RealmService15RealmGatewayAPIUiiUiPv`, `onTouchSession__16VIRealmInterfaceUiiPv`, `onUpdateGameData__16VIRealmInterfaceUiiPv`, `process__16VIRealmInterface`, `run__12SpellHealingG6Point3s`, `run__13SpellEntangleG6Point3s`, `run__15SpellClericRootG6Point3s`, `run__15SpellHateEffectG6Point3s`, `run__15SpellHolyShieldG6Point3s`, `run__16SpellConeOfFrostG6Point3s`, `run__16SpellCriticalHitG6Point3s`, `run__17SpellMinorHealingG6Point3s`, `what__C9bad_alloc`, `what__C9exception`
+
+Full partial build: 6976 source compilations, one link, 5523 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:29 CDT — agents/w15-m-rtti-a — 932 unresolved imports
+
+## agents/w15-m-spell-ctors-a
+
+Merged (merge commit; tip over an hour old, notes complete). All 6 units (constructors and destructors) have a `host_check.cpp` and are selected. The two opened names are the vtables the new constructors reference.
+
+| | |
+|---|---|
+| Before | 932 |
+| After | 928 |
+| Closed | 6 |
+| Opened | 2 |
+
+Closed: `_$_13FireBombletJr`, `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, `_$_19SpellSummonSkeleton`, `__18SpellBlindingLightiP8CreatureT2P5Skill`, `__9SpellRootiP8CreatureP5Skill`
+
+Opened: `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`
+
+Full partial build: 6982 source compilations, one link, 5529 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:35 CDT — agents/w15-m-spell-ctors-a — 928 unresolved imports
+
+## agents/w15-spell-fx-a
+
+Merged (merge commit; tip about 45 minutes old, notes complete). 30 units selected, each with a `host_check.cpp`. `w15-spell-fx-a-common` is a shared header directory (`access.hpp`), not a unit; it is recorded in the snapshot file list only.
+
+| | |
+|---|---|
+| Before | 928 |
+| After | 905 |
+| Closed | 30 |
+| Opened | 7 |
+
+Closed: `CreateSpellEffect__19VISpellEffectSystemi`, `Create__13VISpellEffectP7VIScene`, `Create__16VISpellEventListiP7VIScene`, `SpellEffect__19VISpellEffectSystemi`, `bounce__13FireBombletJr`, `buildShockChainList__14HateProjectileP6Point3`, `buildShockChainList__15ShockProjectileP6Point3`, `diseaseshield_run_particle_8d69b0`, `diseaseshield_run_particle_8d6a00`, `disintoInnoruukParticle`, `dustcloud_msg_run_particle_7d69c0`, `explode_arrow_msg_run_particle_8d7090`, `fxflyingfire_particle_7d6830`, `fxflyingfire_particle_7d6880`, `fxflyingfire_particle_7d68d0`, `fxflyingfire_particle_7d6920`, `hitParticleDust2`, `holyshield_particle_8d7720`, `hornomen_run_particle_8d8650`, `iceSwordParticle`, `initWeapon__8Skelight`, `lampParticle`, `lavaGoopParticle`, `lavaSteamParticle`, `msg_draw__14FireStormFlare`, `msg_run__14FireStormFlare`, `multifire_msg_run_particle_8d7040`, `newFlameSwordParticle1`, `run__18SpellHammerOfWrathG6Point3s`, `run__19SpellSummonSkeletonG6Point3s`
+
+Opened: `Add__t6VIPool1ZP13VISpellEffectRCP13VISpellEffect`, `__13VISpellEffect`, `alreadyChained__14HateProjectileP10GameObject`, `alreadyChained__15ShockProjectileP10GameObject`, `firestormParticle1`, `firestormParticle2`, `firestormParticle3`
+
+Full partial build: 7012 source compilations, one link, 5541 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:41 CDT — agents/w15-spell-fx-a — 905 unresolved imports
+
+## agents/w15-vi-containers-a
+
+Merged (merge commit; tip over 45 minutes old, notes complete). All 32 container-template units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 905 |
+| After | 898 |
+| Closed | 30 |
+| Opened | 23 |
+
+Closed: `Allocate__t7VIArray1Z10VIZoneLeaf`, `Allocate__t7VIArray1Z10VIZoneNode`, `Begin__Ct6VIPool1Z19VIRasterMaterialLRU`, `Clear__t7VIArray1Z10VIZoneLeaf`, `Clear__t7VIArray1Z10VIZoneNode`, `DestroyPool__t6VIPool1ZP13VISpellEffect`, `DestroyPool__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t7VIArray1Z14VIResourceElem`, `End__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `EraseFixup__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Erase__t6VIList1Z7VIActori`, `FreeNode__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Init__t8VIVector1Z10VIMatrix44RCt8VIVector1Z10VIMatrix44`, `Next__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `_$_11VIUDPSocket`, `_$_14VIEffectVolume`, `_$_19VIFlatFileDirectory`, `_$_8VISprite`, `_$_Q212RealmService15RealmGatewayAPI`, `_$_t6VIPool1Z13VIHSpritePlay`, `_$_t6VIPool1Z17VIHSpritePlayNode`, `_$_t6VIPool1Z19VIHSpriteAttachment`, `_$_t6VIPool1ZP15VIParticleMotif`, `_$_t7VIArray1Z16VIHSpriteTrigger`, `_$_t7VIArray1Z20VICSpritePartEmitter`, `_$_t7VIArray1Zc`, `_$_t8VIVector1Z10VIMatrix44`, `_$_t8VIVector1Z13VIHSpriteNode`, `__t6VIList1ZP10VIFlatFile`, `__t7VIArray1Zc`
+
+Opened: `Allocate__t8VIVector1Z10VIMatrix44`, `Begin__Ct6VIList1ZP10VIFlatFile`, `Close__11VIUDPSocket`, `DestroyPool__t6VIPool1Z13VIHSpritePlay`, `DestroyPool__t6VIPool1Z17VIHSpritePlayNode`, `DestroyPool__t6VIPool1Z19VIHSpriteAttachment`, `DestroyPool__t6VIPool1ZP15VIParticleMotif`, `DestroyPool__t7VIArray1Z10VIZoneLeaf`, `DestroyPool__t7VIArray1Z10VIZoneNode`, `DestroyPool__t7VIArray1Z16VIHSpriteTrigger`, `DestroyPool__t7VIArray1Z20VICSpritePartEmitter`, `DestroyPool__t7VIArray1Zc`, `DestroyPool__t8VIVector1Z10VIMatrix44`, `DestroyPool__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIList1Z7VIActor`, `End__Ct6VIList1ZP10VIFlatFile`, `End__Ct6VIPool1Z19VIRasterMaterialLRU`, `Erase__t6VIList1ZP10VIFlatFilei`, `Next__Ct6VIPool1ZP13VISpellEffecti`, `_$_10VIZoneRoom`, `_$_t6VIList1ZP10VIFlatFile`, `__10VIMatrix44RC10VIMatrix44`, `_vt$10VIFlatFile`
+
+Full partial build: 7044 source compilations, one link, 5573 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:46 CDT — agents/w15-vi-containers-a — 898 unresolved imports
+
+## agents/w15-vi-particle-a
+
+Merged (merge commit; tip over an hour old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 898 |
+| After | 893 |
+| Closed | 22 |
+| Opened | 17 |
+
+Closed: `AttachSurface__14VIEffectVolumeii`, `BlendMotifs__17VIParticleEmitter`, `ClampScale__12VIPointLightR10VIMatrix44`, `ClampScale__13VIPointSpriteR10VIMatrix44`, `ClampScale__19VIStreamAudioSpriteR10VIMatrix44`, `CreateParticleDefinition__16VIParticleSystemi`, `Free__14VIEffectVolume`, `Init__13VIPointSprite11VIPointType`, `Init__14VIEffectVolumeRC6VIBBox`, `Init__19VIStreamAudioSpriteRC6VIBBox`, `Init__20VIEffectVolumeSpriteRC6VIBBox`, `OnResize__14VIEffectVolumeRC6VIBBox`, `Process__14VIEffectVolumef`, `Purge__17VIParticleEmitter`, `RecomputeStaticBBox__17VIParticleEmitter`, `Render__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetDirection__17VIParticleEmitterRC10VIMatrix33`, `SetDirection__17VIParticleEmitterRC7VIVect3`, `SetFlags__14VIEffectVolumeUi`, `SetSpace__17VIParticleEmitterRC10VIMatrix44`, `SetType__14VIEffectVolume18VIEffectVolumeTypef`, `ShareParticleDefinition__16VIParticleSystemi`
+
+Opened: `Add__t6VIPool1ZP20VIParticleDefinitionRCP20VIParticleDefinition`, `AllocParticles__14VIEffectVolume`, `BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes`, `Create__20VIParticleDefinitionR8VIRaster`, `DetachAllResources__14VIEffectVolume`, `DetachSurface__14VIEffectVolumei`, `FreeParticles__14VIEffectVolume`, `NextMotif__C22VIParticleDefinitionExP15VIParticleMotif`, `ProcessDustStorm__14VIEffectVolumef`, `ProcessFallingLeaves__14VIEffectVolumef`, `ProcessGroundFog__14VIEffectVolumef`, `ProcessLightShafts__14VIEffectVolumef`, `RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44`, `__22VIParticleDefinitionEx`
+
+Full partial build: 7066 source compilations, one link, 5595 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:53 CDT — agents/w15-vi-particle-a — 893 unresolved imports
+
+## agents/w15-vi-particle-b
+
+Merged (merge commit; tip about two hours old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 893 |
+| After | 878 |
+| Closed | 22 |
+| Opened | 7 |
+
+Closed: `Allocate__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Begin__Ct6VIPool1ZP15VIParticleMotif`, `Clear__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Density__C14VIEffectVolume`, `DestroyPool__t6VIPool1ZP20VIParticleDefinition`, `Direction__C17VIParticleEmitter`, `End__Ct6VIPool1ZP15VIParticleMotif`, `Erase__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Erase__t6VIPool1ZP15VIParticleMotifi`, `Flags__C14VIEffectVolume`, `GetParticleUISprite__7VIScene`, `Insert__t10VIMultiMap2ZfZ14VIEmitterEntryRCfRC14VIEmitterEntry`, `Location__C17VIParticleEmitter`, `Next__Ct6VIPool1ZP15VIParticleMotifi`, `Size__Ct10VIMultiMap2ZfZ14VIEmitterEntry`, `Size__Ct6VIPool1ZP15VIParticleMotif`, `Space__C17VIParticleEmitter`, `StaticBounds__C17VIParticleEmitter`, `Surface__C14VIEffectVolumei`, `TextureConfiguration__C22VIParticleDefinitionEx`, `Type__C14VIEffectVolume`, `VITrailFxEnd__FP9VITrailFx`
+
+Opened: `AddNode__t10VIMultiMap2ZfZ14VIEmitterEntryii`, `EraseFixup__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `FreeNode__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LeftRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LinkFreeChain__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Next__Ct6VIPool1ZP20VIParticleDefinitioni`, `RightRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`
+
+Full partial build: 7088 source compilations, one link, 5617 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:59 CDT — agents/w15-vi-particle-b — 878 unresolved imports
+
+## agents/w15-vi-raster-a
+
+Merged (merge commit; tip about two hours old, notes complete). All 34 units have a `host_check.cpp` and are selected. **Net count rises by 2** (34 closed, 36 opened): the new raster, font and surface-cache functions call helpers that no unit defines yet. The opened names are real dependencies of the added functions, not a build error.
+
+| | |
+|---|---|
+| Before | 878 |
+| After | 880 |
+| Closed | 34 |
+| Opened | 36 |
+
+Closed: `Allocate__13VIEESurfCacheR13VIEESurfAlloc`, `BeginChar__7VIRFontUsRiPPUc`, `CalcCacheInfo__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfo`, `CalcClipToScreen__8VIRaster`, `ConstructSolidFillPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructTextPass__10VIMaterialiR8VIRasterP7VIQWord`, `ConstructWirePass__10VIMaterialiR8VIRasterP7VIQWord`, `CreateFont__8VIRasteri`, `CreateSurface__8VIRasteri`, `Decache__13VIEESurfCacheR9VISurface`, `Download__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoPP10_sceDmaTag`, `DrawString__6VIFontP8VIRasterP12VIDictionaryPCUsii`, `EndChar__7VIRFont`, `FindLRU__13VIEESurfCacheR13VIEESurfAllocR8VIRaster`, `Font__8VIRasteri`, `GetHeight__6VIFontP8VIRasterP12VIDictionary`, `GetTime__8VIRaster`, `Init__7VIRFontR8VIRasterR12VIDictionaryiPUci10VIBitDepthi`, `IsPalettized__7VIRFont`, `Lock__7VIRFontR8VIRaster`, `MaterialPal__8VIRasteri`, `MoveToLRUEnd__13VIEESurfCachei`, `Palette__7VIRFontRiR12VIPixelStorePPUc`, `PickPrimBuffer__8VIRasterR13VIPickSegmentii`, `PickPrimBuffer__8VIRasterR13VIPickSegmentiii`, `PixelStore__7VIRFont`, `Process__10VIMateriall`, `RemoveFromLRU__13VIEESurfCachei`, `SetMaterialPal__12VISkinSpriteiR8VIRasterR12VIDictionary`, `SetSolidFillUIMaterial__8VIRaster`, `Set__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoR14VIMaterialPass`, `ShareFont__8VIRasteri`, `ShareMaterialPal__8VIRasteri`, `Unlock__7VIRFontR8VIRaster`
+
+Opened: `AddToFreeMap__13VIEESurfCachei`, `Add__t6VIPool1ZP7VIRFontRCP7VIRFont`, `Add__t6VIPool1ZP9VISurfaceRCP9VISurface`, `Allocate__7VIRFont`, `CalcDataSize__7VIRFontPUc`, `CalcMaxWidth__7VIRFontiPUc`, `ColorBuffer__8VIRasteri`, `ConstructDMAPacket__13VIEESurfCacheR9VISurfaceR17VIEESurfCacheInfoPP10_sceDmaTag`, `CreateResources__7VIRFontR8VIRasterR12VIDictionaryii10VIBitDepthi`, `Cull__8VIRasterR13VIPickSegmentR6VIBBox`, `Deallocate__13VIEESurfCacheR13VIEESurfAlloc`, `DrawString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUs`, `Erase__t10VIMultiMap2ZUiZii`, `Erase__t5VIMap2ZiZ17VIEESurfCacheInfoi`, `FindFree__13VIEESurfCacheR13VIEESurfAlloc`, `GetPointSize__8VIRasteri`, `GetZBufferReg__C8VIRaster`, `InitChars__7VIRFontPUc`, `InitSlots__7VIRFontR8VIRaster`, `Init__13VIPickSegmentRC13VIPickSegmentRC10VIMatrix44`, `Insert__t6VIPool1Z10VIEEBucketRC10VIEEBucketi`, `Key__Ct10VIMultiMap2ZUiZii`, `Key__Ct5VIMap2ZiZ17VIEESurfCacheInfoi`, `Log2__13VIEESurfCachei`, `Next__Ct6VIPool1Z10VIEEBucketi`, `PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PrimBuffer__8VIRasteri`, `ResetCache__7VIRFontR8VIRaster`, `_13VIEESurfCache$Key`, `__13VIPickSegment`, `__7VIRFont`, `__9VISurface`
+
+Full partial build: 7122 source compilations, one link, 5651 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:05 CDT — agents/w15-vi-raster-a — 880 unresolved imports
+
+## agents/w15-vi-raster-b
+
+Merged (merge commit; tip over 45 minutes old, notes complete). All 32 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 880 |
+| After | 874 |
+| Closed | 32 |
+| Opened | 26 |
+
+Closed: `CalcCenteredStringScreenRect__8VIRasteriRC7VIVect3PCcR6VIRect`, `CalcLODLevelIndex__9VIHSpriteR13VIPickSegmentR8VIRaster`, `CopyMaterialPal__8VIRasterii`, `CreateMaterialPal__8VIRasterii`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCcUi`, `DrawPrimBuffer__8VIRasteriiUi`, `DrawPrimBuffer__8VIRasteriiiUi`, `GetModelView__C8VIRaster`, `GetStringWidth__8VIRasteriPCUs`, `GetStringWidth__8VIRasteriPCc`, `InitTextSlots__9VICSpriteR8VIRaster`, `Init__9VISurfaceR8VIRasterii10VIBitDepthi`, `Insert__t5VIMap2ZiZ17VIEESurfCacheInfoRCiRC17VIEESurfCacheInfo`, `LockPalette__9VISurfaceRiR12VIPixelStorePPUc`, `Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi`, `ReleaseFont__8VIRasteriR12VIDictionary`, `ReleaseMaterialPal__8VIRasteriR12VIDictionary`, `ReleasePrimBuffer__8VIRasteriR12VIDictionary`, `SetBlendMatrices__9VIHSpriteR8VIRaster`, `SharePrimBuffer__8VIRasteri`, `Share__9VICSpriteR7VISceneP8VIRaster`, `UnlockPalette__9VISurface`, `UpdateParticleEmitters__9VICSpriteR8VICameraR7VISceneR8VIRasterR10VIMatrix44`, `_6VIFont$sm_FontName`, `_8VIRaster$ColorMatrix`, `_8VIRaster$RMaterialOffset`, `blackoutTexCopy`, `foregrndTexCopy`, `texNormalizedHeight__FP8_texture`, `texNormalizedWidth__FP8_texture`, `textureDrawColorSpecialHalo__FP8_textureiiiUiiiiii`
+
+Opened: `AddNode__t5VIMap2ZiZ17VIEESurfCacheInfoii`, `Add__t6VIList1Z10VIMaterial`, `Add__t6VIList1ZP12VIPrimBufferRCP12VIPrimBuffer`, `Add__t6VIPool1ZP13VIMaterialPalRCP13VIMaterialPal`, `Allocate__9VISurface`, `CalcSurfaceOffsets__9VISurface`, `CopyMaterial__8VIRasterii`, `Deallocate__9VISurface`, `DrawPrimBufferPackVUNBW__8VIRasteriiUi`, `DrawPrimBufferPackVUNCG__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiiUi`, `DrawPrimBufferPackVU__8VIRasteriifUi`, `DrawPrimBufferVUNC__8VIRasteriiUi`, `Erase__t6VIPool1ZP12VIPrimBufferi`, `Erase__t6VIPool1ZP13VIMaterialPali`, `Erase__t6VIPool1ZP7VIRFonti`, `GetLayerTexture__10VIMateriali`, `GetStringWidth__7VIRFontPCUsi`, `GetStringWidth__7VIRFontPCci`, `LeftRotate__t5VIMap2ZiZ17VIEESurfCacheInfoi`, `ReorderPalette__9VISurface`, `RightRotate__t5VIMap2ZiZ17VIEESurfCacheInfoi`, `SetDMAHeaders__9VISurface`, `SetObjectBlends__8VIRasteriP10VIMatrix44`, `_$_7VIRFont`
+
+Full partial build: 7154 source compilations, one link, 5678 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:11 CDT — agents/w15-vi-raster-b — 874 unresolved imports
+
+## agents/w15-vi-scene-a
+
+Merged (merge commit; tip over two hours old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 874 |
+| After | 864 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `Animation__7VIScenei`, `CreateActor__7VISceneRC7VIVect3T1fi`, `CreateAnimation__7VIScenei`, `FilterActor__13VIActorFilterR7VIScenei`, `FilterActor__13VISceneFilterR7VIScenei`, `GetLightUISprite__7VIScene`, `GetNextColorBuffer__7VIScene`, `GetPointUISprite__7VIScene`, `GetSoundUISprite__7VIScene`, `GetSpriteType__7VIScenei`, `GetStreamAudioUISprite__7VIScene`, `PickSprite__7VISceneR13VIPickSegmentR13VISceneFilteri`, `QueryEmitters__6VIZoneR23VISceneEmitterQueryVars`, `RasterUISprite__7VISceneR8VICameraiUi`, `ReleaseAnimation__7VIScenei`, `ReleaseRefMap__7VIScenei`, `ReleaseSprite__7VIScenei`, `ReleaseStaticLighting__7VIScenei`, `RenderByVolume__6VIZoneiR15VISceneRendVars`, `SetLevelSprite__11VILODSpriteiiR7VIScene`, `Transpose__10VIMatrix44RC10VIMatrix44`, `__10VIZoneRoom`
+
+Opened: `Add__t6VIList1Z7VIActor`, `Add__t6VIPool1ZP13VIHSpriteAnimRCP13VIHSpriteAnim`, `Clear__10VIZoneRoom`, `Erase__t6VIPool1ZP13VIHSpriteAnimi`, `Erase__t6VIPool1ZP16VIStaticLightingi`, `Erase__t6VIPool1ZP8VIRefMapi`, `Erase__t6VIPool1ZP8VISpritei`, `QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars`, `ReleaseResources__16VIStaticLightingR8VIRasterR12VIDictionary`, `RenderLeaf__6VIZoneiR15VISceneRendVars`, `UpdateActor__7VIScenei`, `__13VIHSpriteAnim`
+
+Full partial build: 7176 source compilations, one link, 5700 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:17 CDT — agents/w15-vi-scene-a — 864 unresolved imports
+
+## agents/w15-vi-scene-b
+
+Merged (merge commit; tip about 90 minutes old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 864 |
+| After | 854 |
+| Closed | 22 |
+| Opened | 12 |
+
+Closed: `CollideObj__9VICollideR12VICollSphereR9VICapsule`, `CollideObj__9VICollideR12VICollSpherei`, `CollideObj__9VICollideR9VICollRayi`, `Collide__7VIWorldiR18VISceneCollRayVars`, `Collide__7VIWorldiR8VIEnvRayR7VIVect3T3`, `Collide__8VIEnvRayUifR7VIVect3`, `Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Contains__C6VIBBoxRC7VIVect3`, `CopySprite__7VISceneii`, `GetWorld__C9VICollide`, `Magnitude__C7VIVect3`, `PointInSolid__C8VISphereRC7VIVect3`, `QueryIntersection__7VIWorldiR20VISceneIntersectVars`, `QueryObj__9VICollideRC6VIBBoxR14VIQueryTriListi`, `RemoveActor__7VIScenei`, `SetWorld__9VICollideRC10VIMatrix44`, `ShareAnimation__7VIScenei`, `ShareCollBuffer__9VICollidei`, `ShareRefMap__7VIScenei`, `ShareSprite__7VIScenei`, `Size__C6VIBBox`, `__ml__FRC7VIVect3RC10VIMatrix33`
+
+Opened: `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VIVect3T2`, `Collide__9VICollideR12VICollSphereR12VICollBuffer`, `Collide__9VICollideR12VICollSphereR9VICapsule`, `Collide__9VICollideR9VICollRayR12VICollBuffer`, `Erase__t6VIList1ZQ27VIScene12VISceneOccupi`, `Init__12VICollSphereRC12VICollSphereRC10VIMatrix44`, `Init__9VICollRayRC9VICollRayRC10VIMatrix44`, `Normalize__7VIVect4`, `QueryIntersection__6VIZoneR20VISceneIntersectVars`, `Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `__12VICollSphere`
+
+Full partial build: 7198 source compilations, one link, 5722 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:24 CDT — agents/w15-vi-scene-b — 854 unresolved imports
+
+## agents/w15-libs-eh-a
+
+Merged (merge commit; tip about an hour old, notes complete). 30 of 47 directories selected, each with a `*_host_test.cpp` (not a plan input). **Not selected (no committed host test; the notes cite only private paired runs):** `execute-cfa-insn`, `extract-cie-info`, `find-fde`, `gsm-autocorrelation`, `gsm-long-term-predictor`, `gsm-lpc-analysis`, `gsm-quantization-and-coding`, `gsm-reflection-coefficients`, `gsm-rpe-encoding`, `inflate-blocks`, `inflate-blocks-free`, `inflate-blocks-reset`, `inflate-init2`, `string-rep-clone`; `common`, `gsm-common` and `zlib-common` are header-only directories. They stay authored but unplanned. The worker's list of closed imports is checked against the full build below.
+
+| | |
+|---|---|
+| Before | 854 |
+| After | 838 |
+| Closed | 20 |
+| Opened | 4 |
+
+Closed: `Gsm_Long_Term_Synthesis_Filtering`, `Gsm_RPE_Decoding`, `Gsm_Short_Term_Analysis_Filter`, `Gsm_Short_Term_Synthesis_Filter`, `__ieee754_sqrt`, `__unwinding_cleanup`, `__wrap_strdup`, `_t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0$nilRep`, `_t24__default_alloc_template2b0i0$_S_free_list`, `copy_reg`, `decode_uleb128`, `dwarf_reg_size_table`, `expf`, `find_exception_handler`, `floor`, `get_reg_addr`, `instmap_bounds`, `next_stack_level`, `old_find_exception_handler`, `scalbn`
+
+Opened: `__ieee754_expf`, `__muldi3`, `copysign`, `strdup`
+
+Full partial build: 7228 source compilations, one link, 5742 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:31 CDT — agents/w15-libs-eh-a — 838 unresolved imports
+
+## agents/w15-vi-esfparse-a
+
+Merged (merge commit; tip about 90 minutes old, notes complete). All 35 units have a `host_check.cpp` and are selected. **The official count rises by 36** (35 closed, 71 opened): the parsers call many builder and accessor methods (`VIPrimBuffer`, `VICollBuffer`, `VIHSprite`, `VIMaterial` setters and others) that no unit defines yet. The opened names are real dependencies of the defined parsers, not a build error.
+
+| | |
+|---|---|
+| Before | 838 |
+| After | 874 |
+| Closed | 35 |
+| Opened | 71 |
+
+Closed: `Convert16__10VIESFParseR12VIPixelStorePUcT2i`, `Convert24__10VIESFParseR12VIPixelStorePUcT2i`, `Convert32__10VIESFParseR12VIPixelStorePUcT2i`, `Convert4__10VIESFParseR12VIPixelStorePUcT2i`, `Convert8__10VIESFParseR12VIPixelStorePUcT2i`, `ParseCSpriteASlotList__10VIESFParseR9VICSprite`, `ParseCSpriteContSound__10VIESFParseR9VICSprite`, `ParseCSpriteNodeIDList__10VIESFParseR9VICSprite`, `ParseCSpritePartDefinitions__10VIESFParse`, `ParseCSpritePartEmitters__10VIESFParseR9VICSprite`, `ParseCSpritePlayList__10VIESFParseR9VICSprite`, `ParseCSpriteSkinList__10VIESFParseR9VICSprite`, `ParseCSpriteSpriteArray__10VIESFParse`, `ParseCSpriteTSlotList__10VIESFParseR9VICSprite`, `ParseCollBuffer__10VIESFParse`, `ParseFloraPrimBuffer__10VIESFParse`, `ParseGroupSpriteMembers__10VIESFParseR13VIGroupSprite`, `ParseGroupSpriteSpriteArray__10VIESFParse`, `ParseHSpriteAnimArray__10VIESFParse`, `ParseHSpriteAnim__10VIESFParse`, `ParseHSpriteAttachments__10VIESFParseR9VIHSprite`, `ParseHSpriteHierarchy__10VIESFParseR9VIHSprite`, `ParseHSpriteSpriteArray__10VIESFParse`, `ParseHSpriteTriggers__10VIESFParseR9VIHSprite`, `ParseLODSpriteLevels__10VIESFParseR11VILODSprite`, `ParseLODSpriteSpriteArray__10VIESFParse`, `ParseMaterial__10VIESFParseP10VIMaterial`, `ParsePrimBuffer__10VIESFParse`, `ParseRefMap__10VIESFParse`, `ParseResourceTable__10VIESFParseRt7VIArray1Z14VIResourceElem`, `ParseSoundArray__10VIESFParse`, `ParseSound__10VIESFParse`, `ParseSurface__10VIESFParse`, `ParseWorldBase__10VIESFParseR7VIWorld`, `ParseWorldZones__10VIESFParseR7VIWorld`
+
+Opened: `AddRoot__9VIHSprite`, `Add__9VIHSpritei`, `AttachSkin__9VIHSpriteiR7VIScene`, `Attach__9VIHSpriteiiR7VIScene`, `BeginMaterial__12VIPrimBufferi`, `BeginPrimGroup__12VICollBuffer`, `Begin__12VICollBufferi`, `Begin__12VIPrimBufferi`, `CalcBVolumes__12VICollBufferiP7VIVect3`, `CalcBVolumes__12VIPrimBufferiP7VIVect3`, `CollBuffer__9VICollidei`, `Color__12VIPrimBufferR9VIColor32`, `CreateCollBuffer__9VICollidei`, `CreatePrimBuffer__8VIRasteri`, `CreateRefMap__7VIScenei`, `EndMaterial__12VIPrimBuffer`, `EndPrimGroup__12VICollBuffer`, `End__12VICollBuffer`, `End__12VIPrimBuffer`, `FloraType__12VICollBufferSc`, `Init__12VICollBuffer16VICollBufferTypeiii`, `Init__12VIPrimBufferR8VIRaster16VIPrimBufferTypeiii`, `Init__t5VIMap2ZiZii`, `Init__t7VIArray1Z14VIResourceElemi`, `Init__t7VIArray1Z16VIHSpriteTriggeri`, `Init__t8VIVector1Z10VIMatrix44i`, `Init__t8VIVector1Z13VIHSpriteNodei`, `Insert__t5VIMap2ZiZiRCiT1`, `Lock__12VICollBuffer`, `Lock__12VIPrimBuffer`, `Normal__12VIPrimBufferR7VIVect3`, `Normal__12VIPrimBufferR9VIVect3S8`, `ParsePrimBufferObjV0__10VIESFParse`, `ParseSprite__10VIESFParse`, `ParseSubSprite__10VIESFParse`, `ParseWorldBaseHeader__10VIESFParseR7VIWorld`, `ParseWorldRegions__10VIESFParseR7VIWorld`, `ParseWorldTree__10VIESFParseR11VIWorldTree`, `ParseWorldZoneProxies__10VIESFParseR7VIWorld`, `ParseZoneBaseObj__10VIESFParse`, `ParseZoneResource__10VIESFParse`, `ParseZoneRoomActorsObj__10VIESFParse`, `ParseZoneRoomStaticLightingsObj__10VIESFParse`, `ReadBegin__9VIObjFileUlRUsT2`, `Read__9VIObjFileRSc`, `Read__9VIObjFileRUl`, `RefMap__7VIScenei`, `RemoveAllActors__7VIScene`, `ReplaceProxyRooms__7VISceneR6VIZone`, `ReplaceStaticProxyActors__7VISceneR6VIZone`, `SetEmissiveColor__10VIMaterialRC9VIColor32`, `SetLayerUVRate__10VIMaterialiRC7VIVect2`, `SetLayerUVSet__10VIMaterialii`, `SetLayerUVTransform__10VIMaterialiRC10VIMatrix33`, `SetLayerWrapMode__10VIMateriali18VIMaterialWrapMode`, `SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3`, `SetNodeFixScale__9VIHSpriteiRC7VIVect3`, `SetPacking__12VICollBufferi`, `SetPacking__12VIPrimBufferiii`, `SetTessellate__10VIMateriali`, `UV0__12VIPrimBufferR10VIVect2S16`, `UV0__12VIPrimBufferR7VIVect2`, `Unlock__12VICollBuffer`, `Unlock__12VIPrimBuffer`, `UpdateAllActors__7VIScene`, `VertexGroup__12VICollBufferSc`, `VertexGroup__12VIPrimBuffers`, `Vertex__12VICollBufferR10VIVect3S16`, `Vertex__12VICollBufferR7VIVect3`, `Vertex__12VIPrimBufferR10VIVect3S16`, `Vertex__12VIPrimBufferR7VIVect3`
+
+Full partial build: 7263 source compilations, one link, 5777 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:38 CDT — agents/w15-vi-esfparse-a — 874 unresolved imports
+
+The notes claim 72 newly opened names; this build shows 71 (one of the claimed names resolves in the shared link).
+
+## agents/w15-vi-sprites-a
+
+Merged (merge commit; tip over 80 minutes old, notes complete). All 36 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 874 |
+| After | 868 |
+| Closed | 36 |
+| Opened | 30 |
+
+Closed: `AddPlay__9VIHSpriteiR7VIScene`, `Begin__Ct6VIPool1Z13VIHSpritePlay`, `Begin__Ct6VIPool1Z19VIHSpriteAttachment`, `CalcLODLevelIndex__9VIHSpriteRC10VIMatrix44`, `CalcLODOffDist__9VICSpriteR7VIScene`, `CalcTransAboutCenter__9VIHSpriteRC10VIMatrix44R7VISceneR10VIMatrix44`, `Clear__9VICSprite`, `Clear__9VIHSprite`, `CreateParticleEmitters__9VICSpriteR7VIScene`, `End__Ct6VIPool1Z13VIHSpritePlay`, `End__Ct6VIPool1Z19VIHSpriteAttachment`, `Init__13VIHSpriteAnim19VIHSpriteAnimFormatiiiff14VIPlaybackType`, `Init__9VICSprite17VICSpriteSkelType13VICSpriteRace12VICSpriteSexfi`, `Init__9VIHSprite`, `Init__t6VIPool1Z13VIHSpritePlayRCt6VIPool1Z13VIHSpritePlay`, `Init__t6VIPool1Z17VIHSpritePlayNodeRCt6VIPool1Z17VIHSpritePlayNode`, `Init__t6VIPool1Z19VIHSpriteAttachmentRCt6VIPool1Z19VIHSpriteAttachment`, `Init__t7VIArray1Z16VIHSpriteTriggerRCt7VIArray1Z16VIHSpriteTrigger`, `Init__t7VIArray1Z20VICSpritePartEmitteri`, `Init__t8VIVector1Z13VIHSpriteNodeRCt8VIVector1Z13VIHSpriteNode`, `Next__Ct6VIPool1Z13VIHSpritePlayi`, `Next__Ct6VIPool1Z19VIHSpriteAttachmenti`, `ProcessPlayList__9VIHSpriteiR7VIScene`, `ProcessUpHierarchy__9VIHSpritei`, `ProcessWeaponTrails__9VICSpriteR8VICameraR7VISceneR10VIMatrix44`, `Process__9VIHSpriteiR7VIScene`, `SetAnimPriorities__9VICSprite`, `SetAnimSoundChannels__9VICSprite`, `SetBindPose__9VIHSprite`, `SetDefaultEntries__9VICSprite`, `SetDefaults__9VICSpriteR7VIScene`, `SetKeyframe__13VIHSpriteAnimiif`, `SetNodeFrame__13VIHSpriteAnimiiR14VIHSpriteFrame`, `SetNodeFrame__13VIHSpriteAnimiiR18VIHSpritePackFrame`, `SetNodeRefID__13VIHSpriteAnimii`, `Size__Ct6VIPool1Z13VIHSpritePlay`
+
+Opened: `AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene`, `AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3`, `Allocate__13VIHSpriteAnim`, `Allocate__t6VIPool1Z13VIHSpritePlay`, `Allocate__t6VIPool1Z17VIHSpritePlayNode`, `Allocate__t6VIPool1Z19VIHSpriteAttachment`, `Allocate__t7VIArray1Z16VIHSpriteTrigger`, `Allocate__t7VIArray1Z20VICSpritePartEmitter`, `Allocate__t8VIVector1Z13VIHSpriteNode`, `Begin__Ct6VIPool1Z17VIHSpritePlayNode`, `CalcDataSize__13VIHSpriteAnim`, `CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44`, `Clear__t6VIPool1Z13VIHSpritePlay`, `Clear__t6VIPool1Z17VIHSpritePlayNode`, `Clear__t6VIPool1Z19VIHSpriteAttachment`, `Clear__t7VIArray1Z16VIHSpriteTrigger`, `Clear__t7VIArray1Z20VICSpritePartEmitter`, `Clear__t8VIVector1Z10VIMatrix44`, `Clear__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIPool1Z17VIHSpritePlayNode`, `GetAttachSprite__C9VIHSpritei`, `Next__Ct6VIPool1Z17VIHSpritePlayNodei`, `ProcessHierarchy__9VIHSprite`, `ProcessPlayTiming__9VIHSpriteiR7VIScene`, `SetHair__9VICSpriteiiiR7VIScene`, `Slerp__6VIQuatRC6VIQuatT1f`, `Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2`, `Transform__10VIMatrix44RC6VIQuatfRC7VIVect3`, `UpdateCenterTransform__9VIHSpriteR7VIScene`, `VITrailFxBegin__Flif`
+
+Full partial build: 7299 source compilations, one link, 5813 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:44 CDT — agents/w15-vi-sprites-a — 868 unresolved imports
+
+## agents/w12-vimath-b
+
+Merged (merge commit) as a **partial package**: its notes lack the current summary sections, so only units with a committed host test are selected. 10 of 20 units are selected. **Not selected (no committed host test; the notes rely on private paired runs):** `extract-rotation`, `make-quaternion`, `mat-mul33`, `mat-mul34`, `mat-scale`, `mat-transpose33`, `quat-transform`, `vilnode-remove`, `vimatrix44-rotate-hpr`, `vq-decompress`; they stay authored but unplanned until the owner adds host checks. Tip was 17 hours old. This reverses the earlier whole-branch rejection for the tested subset only.
+
+| | |
+|---|---|
+| Before | 868 |
+| After | 866 |
+| Closed | 10 |
+| Opened | 8 |
+
+Closed: `Read__6VIFilePvi`, `RotateX__10VIMatrix44f`, `RotateY__10VIMatrix44f`, `RotateZ__10VIMatrix44f`, `Scale__10VIMatrix44f`, `Seek__6VIFilelQ26VIFile10SeekOrigin`, `Tell__6VIFile`, `Volume__14VIQueryTriListRC6VIBBox`, `_$_9VIObjFile`, `__9VIObjFile`
+
+Opened: `BufferedRead__6VIFilePvi`, `BufferedSeek__6VIFilelQ26VIFile10SeekOrigin`, `MemoryRead__6VIFilePvi`, `MemorySeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmRead__6VIFilePvi`, `MemorySegmSeek__6VIFilelQ26VIFile10SeekOrigin`, `ResetState__9VIObjFile`, `StoreOutward__C6VIBBoxP7VIPlane`
+
+Full partial build: 7309 source compilations, one link, 5823 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:50 CDT — agents/w12-vimath-b — 866 unresolved imports
+
+## agents/w12-vicont-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host test are selected, 7 of 26. **Not selected (no committed host test):** the other 19 container units (`add-pool-sprite`, the `allocate-*` and `begin-*` units and the rest); they stay authored but unplanned. Tip was about 17 hours old. **Net count rises by 5** (7 closed, 12 opened): the pool destructors now reference the pool `Begin`/`Next`/`End` iterators, which no selected unit defines yet.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 871 |
+| Closed | 7 |
+| Opened | 12 |
+
+Closed: `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__t5VIMap2ZiZi`, `DestroyPool__t6VIPool1Z19VIRasterMaterialLRU`, `DestroyPool__t6VIPool1ZP12VICollBuffer`, `DestroyPool__t6VIPool1ZP12VIPrimBuffer`, `DestroyPool__t6VIPool1ZP13VIColorBuffer`, `DestroyPool__t6VIPool1ZP13VIHSpriteAnim`
+
+Opened: `Begin__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Begin__Ct5VIMap2ZiZi`, `Begin__Ct6VIPool1ZP12VIPrimBuffer`, `Begin__Ct6VIPool1ZP13VIColorBuffer`, `End__Ct5VIMap2ZiZi`, `End__Ct6VIPool1ZP12VIPrimBuffer`, `End__Ct6VIPool1ZP13VIColorBuffer`, `Next__Ct5VIMap2ZiZii`, `Next__Ct6VIPool1Z19VIRasterMaterialLRUi`, `Next__Ct6VIPool1ZP12VICollBufferi`, `Next__Ct6VIPool1ZP12VIPrimBufferi`, `Next__Ct6VIPool1ZP13VIColorBufferi`
+
+Full partial build: 7316 source compilations, one link, 5830 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 01:56 CDT — agents/w12-vicont-a — 871 unresolved imports
+
+## agents/w12-wnd-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host test are selected, 4 of 34. **Not selected (no committed host test):** the other 30 window units (`dnas-*`, `eula-*`, `genrenderer-*`, `edit-cleartext` and the rest); they stay authored but unplanned. Tip was about 17 hours old.
+
+| | |
+|---|---|
+| Before | 871 |
+| After | 867 |
+| Closed | 4 |
+| Opened | 0 |
+
+Closed: `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`
+
+Opened: 
+
+Full partial build: 7320 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 02:03 CDT — agents/w12-wnd-a — 867 unresolved imports
+
+## agents/w12-particle-data-b
+
+Merged (merge commit) as a **partial package**: 1 of 2 units selected (the particle data unit with a committed host check). **Not selected:** `w12-particle-data-b-views` has no committed host check; it stays authored but unplanned. Tip was about 17 hours old.
+
+| | |
+|---|---|
+| Before | 867 |
+| After | 847 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_w11_actor_c_view_4852ac`, `norrath_w11_actor_c_view_4852b0`, `norrath_w11_actor_c_view_7d7110`, `norrath_w11_actor_c_view_7d7540`, `norrath_w11_actor_c_view_7d7590`, `norrath_w11_actor_c_view_7d7630`, `norrath_w11_actor_c_view_7d7680`, `particleBloodDrop`, `particleEctoDrop`, `particleSlimeDrop`, `particleWeaponBlood`, `particleWeaponEcto`, `particleWeaponSlime`, `sDustCard`, `sFallEffect`, `sFogCard`, `snowParticle1`, `sparkParticle`, `trailParticleFire`, `trailParticleSmoke`
+
+Opened: 
+
+Full partial build: 7321 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 02:09 CDT — agents/w12-particle-data-b — 847 unresolved imports
+
+## agents/w9-render-math-a
+
+Merged (merge commit) as a **partial package**: only the data directory has a committed host check (`host_check.cpp`, exact sizes and zero contents), so only its data objects are selected: 6 of 7. **Not selected:** `body_alpha.cpp` defines `bodyAlpha`, already defined by `w14-hud-b-data-body-alpha`; with both planned the link fails with a multiple-definition error. The package's 19 function units have no committed host test and stay authored but unplanned. Tip was about a day old.
+
+| | |
+|---|---|
+| Before | 847 |
+| After | 841 |
+| Closed | 6 |
+| Opened | 0 |
+
+Closed: `cutCameraPos`, `drawBucket`, `dummyList`, `fadeDownVal`, `hvecs`, `lightMats`
+
+Opened: 
+
+Full partial build: 7327 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 02:24 CDT — agents/w9-render-math-a — 841 unresolved imports
+
+## Remaining rejections (integrator pass of 2026-10-14)
+
+Nine `origin/agents/*` branches stay unmerged. Re-counted against the branch diffs with every host-test naming pattern (`host_check`, `host_test`, `host_contract`, including function-prefixed names): none of their source directories has a committed host check, so every unit would be a function with no test that could fail. Their notes cite only private paired runs. `w10-actor-i` (32 units, 0 tested), `w10-startup-d` (17, 0), `w11-creature-a` (20, 0), `w11-vi-misc-a` (34, 0), `w11-vi-render-b` (31, 0), `w12-vicont-b` (26, 0), `w13-m-spell-dtor-a` (26, 0), `w14-spellevent` (24, 0), `w8-spell-static-init-b` (30, 0). Not merged, no game code changed. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches.
+- 2026-10-14 CDT — integrator pass complete, nine untested branches rejected — 841 unresolved imports
+
+## Verification pass (second integrator, 2026-10-14)
+
+Re-ran on the shared branch at `caaa2c8c` before any merge: 214 tool tests and the snapshot check pass; the full partial build gives 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduces. No game binaries, disc images or raw disassembly are tracked; the `.S` files under `experimental/sources` are authored sources. Re-checked the nine unmerged worker branches against the shared branch: none adds a host check or test file for its functions (`w11-creature-a`'s only name match is a game function, `check_if_spell_is_running.cpp`, not a test). The earlier rejections stand; `w14-spellevent` (tip about 7 hours old) is also untested, so its age does not change the outcome. Nothing merged in this pass.
+
+## Verification pass (third integrator, 2026-10-14)
+
+Re-ran on the shared branch at `5ff11ae1` before any merge: 214 tool tests and the snapshot check pass; the full partial build gives 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduces. Re-checked the nine unmerged worker branches (`w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-vicont-b`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`) against the shared branch: none adds a host check or test file, so the earlier rejections stand and nothing was merged. No repo-rule violation found in recent merges; no shared files needed fixing.
+- 2026-10-14 CDT — third integrator verification, no merges — 841 unresolved imports
+
+## agents/w16-m-data-a
+
+Merged (merge commit). 22 of the 23 plan entries in the notes are selected; each has a committed host check that I rebuilt and ran (22 of 22 exit 0), and I recompiled each unit and checked its function names and sizes against the notes. **Not selected:** `w15-startup-a-link-eh-frame-begin` (the notes' one entry for an existing unit, which closes `__EH_FRAME_BEGIN__`). With it in the plan the relocatable link aborts with a BFD assertion (`elflink.c:9839`); I bisected it alone against the existing objects. `__EH_FRAME_BEGIN__` stays unresolved. No game code was changed. Tip was about 15 minutes old but the notes have the summary sections.
+
+The notes list no opened imports. They are not zero: each type-info getter references its class's `__ti` node, and those nodes are data owned elsewhere. The real count is below.
+
+| | |
+|---|---|
+| Before | 841 |
+| After | 838 |
+| Closed | 22 |
+| Opened | 19 |
+
+Closed: `_13VIEESurfCache$Key`, `_13VISoundDevice$sBgmVersion`, `__tf10FrostShard`, `__tf10HolyStrike`, `__tf10VIResource`, `__tf12GlowingShaft`, `__tf12SpellHealing`, `__tf13HammerOfWrath`, `__tf13SpellEntangle`, `__tf15SpellClericRoot`, `__tf16SpellConeOfFrost`, `__tf16VIRealmInterface`, `__tf17SpellMinorHealing`, `__tf18DarknessProjectile`, `__tf18FrostStormIceShard`, `__tf19BlindingLightEffect`, `__tf19VIFlatFileDirectory`, `__tf8HolyBolt`, `__tf8LostSoul`, `__tf9exception`, `__ti10VIResource`, `__ti9exception`
+
+Opened: `__tfQ212RealmService15RealmGatewayAPI`, `__ti10FrostShard`, `__ti10HolyStrike`, `__ti10VIFlatFile`, `__ti12GlowingShaft`, `__ti12SpellHealing`, `__ti13HammerOfWrath`, `__ti13SpellEntangle`, `__ti15SpellClericRoot`, `__ti16SpellConeOfFrost`, `__ti16VIRealmInterface`, `__ti17SpellMinorHealing`, `__ti18DarknessProjectile`, `__ti18FrostStormIceShard`, `__ti19BlindingLightEffect`, `__ti19VIFlatFileDirectory`, `__ti8HolyBolt`, `__ti8LostSoul`, `__tiQ212RealmService15RealmGatewayAPI`
+
+Full partial build: 7349 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 04:45 CDT — agents/w16-m-data-a — 838 unresolved imports
+
+## agents/w16-m-data-b
+
+Merged (merge commit). All 22 data units in the notes are selected; each has a committed host check that I rebuilt and ran (22 of 22 exit 0), and each compiles to zero function bodies as the notes say. Tip was about 88 minutes old. The notes' own list of 8 further imports closed by owner sources outside this package is not claimed here.
+
+| | |
+|---|---|
+| Before | 838 |
+| After | 816 |
+| Closed | 22 |
+| Opened | 0 |
+
+Closed: `_vt$10VIFlatFile`, `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`, `_vt$Q212RealmService15RealmGatewayAPI`, `blueSpark`, `coldSmoke`, `coldSpeck`, `creditsText`, `firestormParticle1`, `firestormParticle2`, `firestormParticle3`, `harm1`, `harm2`, `mStarParticleDist`, `nameGridDstW`, `nameGridDstX`, `nameGridDstY`, `nameGridPos`, `nameGridSrcW`, `nameGridSrcX`, `nameGridSrcY`, `namePos`
+
+Opened: 
+
+Full partial build: 7371 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 04:53 CDT — agents/w16-m-data-b — 816 unresolved imports
+
+## agents/w16-m-data-c
+
+Merged (merge commit). All 12 units in the notes are selected: eleven data objects and the variadic `pf` wrapper (64-byte compiled body, as the notes say). Each has a committed host check that I rebuilt and ran (12 of 12 exit 0); the notes record a mutation that makes the `pf` check fail. Tip was about 2 hours old. The 20 names the notes leave open (linker section symbols, VU1 microcode and similar) are not claimed.
+
+| | |
+|---|---|
+| Before | 816 |
+| After | 805 |
+| Closed | 12 |
+| Opened | 1 |
+
+Closed: `norrath_w13_spell_msg_a_view_7d6970`, `norrath_w13_spell_msg_a_view_7d6a10`, `norrath_w13_spell_msg_a_view_7d6a60`, `norrath_w13_spell_msg_a_view_7d6b00`, `norrath_w13_spell_msg_a_view_7d6fc0`, `norrath_w13_spell_msg_a_view_7d7010`, `osdsrc`, `pf`, `sRainParticleDist`, `showNoNamePrompt`, `statsDrawDelay`, `tlbsrc`
+
+Opened: `vprintf`
+
+Full partial build: 7383 source compilations, one link, 5853 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:03 CDT — agents/w16-m-data-c — 805 unresolved imports
+
+## agents/w16-io-b
+
+Merged (merge commit). All 21 function units in the notes are selected. Each has a committed `host_contract.cpp` that I rebuilt and ran (21 of 21 exit 0), and I recompiled each unit and checked names and body sizes against the notes (all agree). Tip was about 2 hours old. The notes' paired runs used a private interpreter and are not counted as evidence here.
+
+| | |
+|---|---|
+| Before | 805 |
+| After | 792 |
+| Closed | 21 |
+| Opened | 8 |
+
+Closed: `ParseZoneResource__10VIESFParse`, `ParseZoneRoomActorsObj__10VIESFParse`, `ParseZoneRoomStaticLightingsObj__10VIESFParse`, `ProcessRawFile__13VIStringTableRCt7VIArray1Zc`, `ReadBegin__9VIObjFileUlRUsT2`, `ReadStringBody__9VIObjFilePcUsUs`, `ReadStringLength__9VIObjFileRUs`, `Read__9VIObjFileRSc`, `Read__9VIObjFileRUl`, `ResetState__9VIObjFile`, `SetRepeat__4VIXmi`, `VICdSearchFile__FPCcPUiT1`, `VIIsMcSameSession__Fv`, `VIMemCardAsyncIdle__Fv`, `VIMemCardFormat__Fv`, `VIMemCardIsPrepared__Fv`, `VIMemCardPadAsync__Fi`, `VIMemCardPrepare__Fi`, `VIMemCardProductId__Fv`, `VIMemCardWriteFile__FPCcPCvi`, `VISetMcSessionId__FUl`
+
+Opened: `ParseSimpleSubSpriteObj__10VIESFParse`, `ParseStaticLighting__10VIESFParseRt7VIArray1Zi`, `ParseZoneActor__10VIESFParse`, `UTF8_convertToUTF16__FPCcPUsi`, `UTF8_strlen__FPCci`, `VIMemCardPad__Fi`, `VIMemCardWriteFileAsync__FPCcPCvi`, `sceMcFlush`
+
+Full partial build: 7404 source compilations, one link, 5874 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:11 CDT — agents/w16-io-b — 792 unresolved imports
+
+## agents/w16-realm-a
+
+Merged (merge commit). 35 of 36 units selected, each with a committed host check that I rebuilt and ran. **Not selected:** `w16-realm-a-vi-realm-interface-notify-client-requests-connect` (`notifyClientDiscovered`'s sibling): its own host check builds with a format warning and then exits 1 (`FAIL`) on the branch tip, so it is a function whose test fails; it stays authored but unplanned and I did not touch it. Units that include the shared `w9-animation-object-c-common/mem.hpp` carry it as their header closure. Three anonymous-namespace helpers named `release` and one `wide_string_from_literal` are internal symbols and raise the function-body count without defining imports. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 792 |
+| After | 778 |
+| Closed | 35 |
+| Opened | 21 |
+
+Closed: `createPrivateGame__16VIRealmInterfaceiPCUsN22Pv`, `createPublicGame__16VIRealmInterfaceiPCUssUiUiUiT2RCQ212RealmService14MatchGameAttrsT2Pv`, `notifyAddBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyAddBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyAddInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyAddInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyClientDiscovered__16VIRealmInterfacePCci`, `notifyEnterRoom__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyForcedLogout__Q212RealmService15RealmGatewayAPIs`, `notifyFriendStatus__Q212RealmService15RealmGatewayAPIPCUsb`, `notifyGameDiscovered__16VIRealmInterfacePCci`, `notifyInstantMessage__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyKickAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyKickRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyLeaveRoom__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorAddedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorAddedRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyModeratorRemovedAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyModeratorRemovedRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRemoveBanAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRemoveBanRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRemoveInviteAvatar__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRemoveInviteRoom__Q212RealmService15RealmGatewayAPIPCUsN21`, `notifyRoomBanner__Q212RealmService15RealmGatewayAPIPCUsT1`, `notifyRoomMessage__Q212RealmService15RealmGatewayAPIPCUsN21`, `onAddBan__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddFriend__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddIgnore__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddInvite__Q212RealmService15RealmGatewayAPIUiiPv`, `onAddRoomModerator__Q212RealmService15RealmGatewayAPIUiiPv`, `onCancelGame__16VIRealmInterfaceUiiPv`, `onChangeEmail__Q212RealmService15RealmGatewayAPIUiiPv`, `onChangePassword__Q212RealmService15RealmGatewayAPIUiiPv`, `onConnect__16VIRealmInterface`, `onConsumeKey__Q212RealmService15RealmGatewayAPIUiiPCUsPv`
+
+Opened: `GetInetAddress__11VIUDPSocketP13VIInetAddressPCci`, `Reset__16VIRealmInterface`, `SetStringValue__9VIGUIPagePCcPCUsb`, `SetText__11VIGUIDialogPCUsb`, `Show__11VIGUIDialogPCUsPCc`, `UnLock__11VIGUIDialog`, `_t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0$nilRep`, `alloc__t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0Uib`, `alloc__t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0Uib`, `clone__Q2t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0_3Rep`, `connected`, `createPrivateGame__Q212RealmService15RealmGatewayAPIPCUsN21Pv`, `createPublicGame__Q212RealmService15RealmGatewayAPIPCUssUiUiUiT1RCQ212RealmService14MatchGameAttrsT1Pv`, `g_localPort`, `login__Q212RealmService15RealmGatewayAPIPCUsT1Pv`, `replace__t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0UiUiPCUsUi`, `replace__t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0UiUiUiUs`, `replace__t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0UiUiPCcUi`, `resize__t12basic_string3ZUsZt18string_char_traits1ZUsZt24__default_alloc_template2b0i0UiUs`, `resize__t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0Uic`, `snprintf`
+
+Full partial build: 7439 source compilations, one link, 5913 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:18 CDT — agents/w16-realm-a — 778 unresolved imports
+
+## agents/w16-realm-b
+
+Merged (merge commit). All 36 units in the notes are selected, each with a committed `host_check.cpp` that I built with the build line in its own header (`-fno-builtin -DNORRATH_HOST_ARENA`) and ran (36 of 36 exit 0). Several 'on*' callbacks are the authored stubs listed in the notes. **The count rises by one:** the callbacks call many GUI, socket and gateway functions that no source defines yet, so more names are opened than closed; the real delta is recorded below, not the notes' closed list alone. The static-helper symbol `frame.3503` appears as an unresolved name because a unit refers to a local-linkage object; it is recorded as the linker reports it.
+
+**Correction to the w16-realm-a entry above.** I wrote that `w16-realm-a-vi-realm-interface-notify-client-requests-connect` fails its host check. That was my own error: I had built it without the flags in its header (`-O0 -fno-builtin -w`). Built as documented it prints `ok` and exits 0, so it is selected in this commit (input added with the realm-b entries; `notifyClientRequestsConnect__16VIRealmInterfacePCci`, 296 bytes). I re-ran every host check selected earlier today (w16-m-data-a/b/c, w16-io-b, w16-realm-a) with the flags in their own headers: 112 of 112 pass. The after count below includes that unit. Tip was about 83 minutes old.
+
+| | |
+|---|---|
+| Before | 778 |
+| After | 779 |
+| Closed | 37 |
+| Opened | 38 |
+
+Closed: `notifyClientRequestsConnect__16VIRealmInterfacePCci`, `onCreateAccount__16VIRealmInterfaceUiiPCUsPv`, `onCreateAvatar__Q212RealmService15RealmGatewayAPIUiiPCPCUsUiT3UiPv`, `onCreatePrivateGame__16VIRealmInterfaceUiiPCciPv`, `onCreatePrivateRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onCreatePublicGame__16VIRealmInterfaceUiiPCciPv`, `onDestroyAvatar__Q212RealmService15RealmGatewayAPIUiiPv`, `onDisconnect__16VIRealmInterface`, `onDoClientDiscovery__16VIRealmInterfaceUiiPCciPv`, `onEnterRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onGetGame__16VIRealmInterfaceiiPCUsT3iPv`, `onGetPublicRooms__Q212RealmService15RealmGatewayAPIUiiPCPCUsT3PCUiT5UiPv`, `onGetRealmStats__16VIRealmInterfaceUiiUiUiUiUiUiUiUiUiPv`, `onGetRealmTime__Q212RealmService15RealmGatewayAPIUiiUiPv`, `onGetRoom__Q212RealmService15RealmGatewayAPIUiiPCUsT3PCPCUsUiT5UiPv`, `onGetRules__16VIRealmInterfaceUiiPCUsUiPv`, `onGetUserInfo__Q212RealmService15RealmGatewayAPIUiibT3PCUsPv`, `onGetUserStats__Q212RealmService15RealmGatewayAPIUiiRCQ212RealmService9UserStatsPCPCQ212RealmService9UserStatsUiPv`, `onKickAvatar__Q212RealmService15RealmGatewayAPIUiiPv`, `onLeaveRoom__Q212RealmService15RealmGatewayAPIUiiPv`, `onLogin__16VIRealmInterfaceUiiPCUsPv`, `onLogout__Q212RealmService15RealmGatewayAPIUiiPv`, `onMatchGame__16VIRealmInterfaceiiUiPCPCUsN24PCiPCQ212RealmService4BlobPv`, `onModifyRoomBanner__Q212RealmService15RealmGatewayAPIUiiPv`, `onRecordGameOutcome__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveBan__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveFriend__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveIgnore__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveInvite__Q212RealmService15RealmGatewayAPIUiiPv`, `onRemoveRoomModerator__Q212RealmService15RealmGatewayAPIUiiPv`, `onRoundTrip__Q212RealmService15RealmGatewayAPIUiiPv`, `onSendInstantMessage__Q212RealmService15RealmGatewayAPIUiiPv`, `onSendRoomMessage__Q212RealmService15RealmGatewayAPIUiiPv`, `onStartGame__Q212RealmService15RealmGatewayAPIUiiUiPv`, `onTouchSession__16VIRealmInterfaceUiiPv`, `onUpdateGameData__16VIRealmInterfaceUiiPv`, `process__16VIRealmInterface`
+
+Opened: `AddOption__13VIGUIComboBoxPc`, `AddPage__20VIWndGenericRendererPCc`, `Clear__13VIGUIComboBox`, `Finish__20VIWndGenericRenderer`, `ForceDisconnect__20VIWndGenericRenderer`, `GetAppPtr__5VIWnd`, `GetLocalAddress__11VIUDPSocketP13VIInetAddress`, `GetName__9VIGUIPage`, `GetObjectByName__9VIGUIPagePCc`, `GetStringAddress__11VIUDPSocketP13VIInetAddressPc`, `GoBack__20VIWndGenericRenderer`, `Hide__11VIGUIDialog`, `IsConnected__11VIUDPSocket`, `Open__11VIUDPSocket`, `ReceiveEula__9VIStationiPCUsi`, `RecvFrom__11VIUDPSocketP13VIInetAddressPiPciT2i`, `SendTo__11VIUDPSocketG13VIInetAddressiPCciPii`, `SendTo__11VIUDPSocketG13VIInetAddressiT1PCciT4iPii`, `SendTo__11VIUDPSocketG13VIInetAddressiT1T1iPCciPii`, `SetStringValue__9VIGUIPagePCcT1b`, `SetText__11VIGUIDialogib`, `SetValue__13VIGUIComboBoxi`, `UpdateNumPlayers__16VIRealmInterfacei`, `_$_Q212RealmService14MatchGameAttrs`, `__Q212RealmService14MatchGameAttrs`, `__tf11VIGUIObject`, `__tf13VIGUIComboBox`, `cancelGame__Q212RealmService15RealmGatewayAPIPCUsPv`, `doClientDiscovery__Q212RealmService15RealmGatewayAPIPCUsiT1Pv`, `frame.3503`, `g_lastSessionTouch`, `getRealmStats__Q212RealmService15RealmGatewayAPIPv`, `matchGame__Q212RealmService15RealmGatewayAPIPCUssUiUiiRCQ212RealmService14MatchGameAttrsbUiUiPv`, `packDiscoveryPacket__Q212RealmService15RealmGatewayAPIPUcPCUs`, `process__Q212RealmService15RealmGatewayAPI`, `strlenWide__FPCUs`, `strncpyWide__FPUsPCUsUi`, `touchSession__Q212RealmService15RealmGatewayAPIPCUsPv`
+
+Full partial build: 7476 source compilations, one link, 5954 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:37 CDT — agents/w16-realm-b — 779 unresolved imports
+
+## agents/w16-io-a
+
+Merged (merge commit). All 21 units in the notes are selected, each with a committed host check that I built with the line in its own header and ran (21 of 21 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 779 |
+| After | 771 |
+| Closed | 21 |
+| Opened | 13 |
+
+Closed: `BufferedRead__6VIFilePvi`, `BufferedSeek__6VIFilelQ26VIFile10SeekOrigin`, `BufferedWrite__6VIFilePCvi`, `Eof__6VIFile`, `FixupTextBuffer__13VIStringTable`, `MemoryRead__6VIFilePvi`, `MemorySeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmRead__6VIFilePvi`, `MemorySegmSeek__6VIFilelQ26VIFile10SeekOrigin`, `MemorySegmWrite__6VIFilePCvi`, `MemoryWrite__6VIFilePCvi`, `MergeFreeSpuMem__13VISoundDevice`, `ParsePrimBufferObjV0__10VIESFParse`, `ParseSound__10VIESFParsePCcR7VIScene`, `ParseSprite__10VIESFParse`, `ParseSubSprite__10VIESFParse`, `ParseWorldBaseHeader__10VIESFParseR7VIWorld`, `ParseWorldRegions__10VIESFParseR7VIWorld`, `ParseWorldTree__10VIESFParseR11VIWorldTree`, `ParseWorldZoneProxies__10VIESFParseR7VIWorld`, `ParseZoneBaseObj__10VIESFParse`
+
+Opened: `BufferedReadCopy__6VIFilePvi`, `CDRead__6VIFileUiUiPvP10sceCdRMode`, `Open__9VIObjFilePCcQ29VIObjFile8FileMode`, `ParseSkinLODSpriteObj__10VIESFParse`, `ParseSkinSubSpriteObj__10VIESFParse`, `ParseZoneFlora__10VIESFParse`, `ParseZonePreTranslations__10VIESFParseR6VIZone`, `ParseZoneRooms__10VIESFParseR6VIZone`, `ParseZoneStaticTable__10VIESFParseRt7VIArray1Z21VIZoneStaticTableElem`, `ParseZoneTree__10VIESFParseR10VIZoneTree`, `Precalc__17VIZoneRadialFloraR7VIScene`, `RemoveActorsFromZone__7VISceneR6VIZoneRt7VIArray1Zi`, `UpdateActors__7VISceneRt7VIArray1Zi`
+
+Full partial build: 7497 source compilations, one link, 5977 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:51 CDT — agents/w16-io-a — 771 unresolved imports
+
+## agents/w16-lib-a
+
+Merged (merge commit) as a **partial package**: 17 of the entries in the notes are selected, each with a committed host check that I built with the line in its own header and ran (17 of 17 exit 0). **Not selected:** seven entries that the notes list for existing `w15-libs-eh-a` units (`gsm-long-term-predictor`, `gsm-lpc-analysis`, `gsm-rpe-encoding`, `inflate-blocks`, `inflate-blocks-free`, `inflate-blocks-reset`, `inflate-init2`): none has a committed host test, so they stay authored but unplanned. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 771 |
+| After | 770 |
+| Closed | 14 |
+| Opened | 13 |
+
+Closed: `Close__11VIUDPSocket`, `VIInitUSocketExApi__Fv`, `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v`, `__Q212RealmService19RealmGatewayAPICorePCcsPQ212RealmService15RealmGatewayAPI`, `ezNetCnfGetProperties`, `ezNetCtlSetCombination`, `ezNetCtlUpInterface`, `hostname`, `sceInetAddress2Name`, `sceInetAddress2String`, `sceLibnetRegisterHandler`, `sceLibnetWaitGetAddress`, `vsnprintf16__8VIStringPUsiPCcPv`
+
+Opened: `WaitGetAddressAutoUpIf`, `WaitGetAddressNoAutoUpIf`, `_VIAssert`, `_VIAssertf`, `__9Encryptor`, `__Q210GenericAPI14GenericAPICorePCcsUiUiUiUiUiUiUiUi`, `__VIAssertf_file`, `__VIAssertf_line`, `_vt$Q212RealmService19RealmGatewayAPICore`, `ll_add_tail__FP5llistP5lnode`, `ll_init__FP5llist`, `sFreeMessages`, `sUsedMessages`
+
+Full partial build: 7514 source compilations, one link, 5992 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:59 CDT — agents/w16-lib-a — 770 unresolved imports
+
+## agents/w16-prim-a
+
+Merged (merge commit). All 36 units in the notes are selected, each with a committed host check that I built with the line in its own header and ran (36 of 36 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 770 |
+| After | 769 |
+| Closed | 36 |
+| Opened | 35 |
+
+Closed: `BeginMaterial__12VIPrimBufferi`, `BeginPrimGroup__12VICollBuffer`, `Begin__12VICollBufferi`, `Begin__12VIPrimBufferi`, `CalcBVolumes__12VICollBufferiP7VIVect3`, `CalcBVolumes__12VIPrimBufferiP7VIVect3`, `CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44`, `CollBuffer__9VICollidei`, `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VIVect3T2`, `Collide__9VICollideR12VICollSphereR12VICollBuffer`, `Collide__9VICollideR12VICollSphereR9VICapsule`, `Collide__9VICollideR9VICollRayR12VICollBuffer`, `Color__12VIPrimBufferR9VIColor32`, `CreateCollBuffer__9VICollidei`, `CreatePrimBuffer__8VIRasteri`, `Cull__8VIRasterR13VIPickSegmentR6VIBBox`, `DrawPrimBufferPackVUNBW__8VIRasteriiUi`, `DrawPrimBufferPackVUNCG__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiiUi`, `DrawPrimBufferPackVU__8VIRasteriifUi`, `DrawPrimBufferVUNC__8VIRasteriiUi`, `EndMaterial__12VIPrimBuffer`, `EndPrimGroup__12VICollBuffer`, `End__12VICollBuffer`, `End__12VIPrimBuffer`, `FloraType__12VICollBufferSc`, `Init__12VICollBuffer16VICollBufferTypeiii`, `Init__12VICollSphereRC12VICollSphereRC10VIMatrix44`, `Init__12VIPrimBufferR8VIRaster16VIPrimBufferTypeiii`, `Init__13VIPickSegmentRC13VIPickSegmentRC10VIMatrix44`, `Init__9VICollRayRC9VICollRayRC10VIMatrix44`, `Lock__12VICollBuffer`, `Lock__12VIPrimBuffer`, `Normal__12VIPrimBufferR7VIVect3`
+
+Opened: `Add__t6VIPool1ZP12VICollBufferRCP12VICollBuffer`, `Add__t6VIPool1ZP12VIPrimBufferRCP12VIPrimBuffer`, `Allocate__12VICollBuffer`, `Allocate__12VIPrimBuffer`, `CalcDataSize__12VICollBuffer`, `CalcDataSize__12VIPrimBufferiii`, `CollideBufferPackVGF__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferPackVGF__9VICollideR9VICollRayR12VICollBuffer`, `CollideBufferPackV__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferPackV__9VICollideR9VICollRayR12VICollBuffer`, `CollideBufferV__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferV__9VICollideR9VICollRayR12VICollBuffer`, `CollideNoCaps__9VICollideR9VICollRayRC10VICylinder`, `Collide__6VIZoneiR18VISceneCollRayVars`, `Collide__6VIZoneiR8VIEnvRayR7VIVect3T3`, `Collide__9VICollideR9VICollRayRC8VISphere`, `DrawPrimBufferTessPackVUNCG__8VIRasteriiUi`, `Intersects__C6VIBBoxRC8VISphere`, `PointInSolid__10VICylinderRC7VIVect3`, `PointInSolid__9VICapsuleRC7VIVect3`, `Precalc__12VICollSphere`, `Precalc__13VIPickSegment`, `SetPreTranslations__9VICollideiP7VIVect3`, `Union__6VIBBoxRC6VIBBoxT1`, `UploadPreTrans__8VIRasterPP10_sceDmaTag`, `_12VIPrimBuffer$PrimColor`, `_12VIPrimBuffer$PrimNormal`, `_12VIPrimBuffer$PrimVQStart`, `_8VIRaster$RStrip2Offset`, `_8VIRaster$RStrip3Offset`, `_8VIRaster$RStrip4Offset`, `_8VIRaster$RStrip6Offset`, `_8VIRaster$RStripOffset`, `__12VICollBuffer`, `__12VIPrimBuffer`
+
+Full partial build: 7550 source compilations, one link, 6028 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:11 CDT — agents/w16-prim-a — 769 unresolved imports
+
+## agents/w16-rt-a
+
+Merged (merge commit) as a **partial package**: 13 of 14 units selected, each with a committed host check that I ran using the build recipe in its own header (13 of 13 exit 0); I recompiled each unit and checked names and body sizes against my own build. **Not selected:** `w16-rt-a-set-alarm` (assembly): its only check compares the assembled body with the private game executable, which cannot run from this repository, so there is no test that can fail here; it stays authored but unplanned. Tip was about 83 minutes old.
+
+| | |
+|---|---|
+| Before | 769 |
+| After | 768 |
+| Closed | 12 |
+| Opened | 11 |
+
+Closed: `_$_t6VIList1ZP10VIFlatFile`, `__dynamic_cast_2`, `__ieee754_expf`, `__muldi3`, `clone__Q2t12basic_string3ZcZt18string_char_traits1ZcZt24__default_alloc_template2b0i0_3Rep`, `copysign`, `execute_cfa_insn`, `extract_cie_info`, `find_fde`, `strdup`, `strupr`, `what__C9exception`
+
+Opened: `Clear__t6VIList1ZP10VIFlatFile`, `_S_chunk_alloc__t24__default_alloc_template2b0i0UiRi`, `__ls__7ostreamPCc`, `_t23__malloc_alloc_template1i0$__malloc_alloc_oom_handler`, `cerr`, `decode_sleb128`, `decode_stack_op`, `dyncast__C16__user_type_infoiRC9type_infoPvT2T3`, `endl__FR7ostream`, `frame_init`, `search_fdes`
+
+Full partial build: 7563 source compilations, one link, 6041 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:19 CDT — agents/w16-rt-a — 768 unresolved imports
+
+## agents/w16-scene-a
+
+Merged (merge commit). All 22 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (22 of 22 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 66 minutes old.
+
+| | |
+|---|---|
+| Before | 768 |
+| After | 755 |
+| Closed | 22 |
+| Opened | 9 |
+
+Closed: `Allocate__7VIRFont`, `Allocate__9VISurface`, `Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef`, `CalcDataSize__7VIRFontPUc`, `CalcMaxWidth__7VIRFontiPUc`, `CalcSurfaceOffsets__9VISurface`, `Clear__10VIZoneRoom`, `ColorBuffer__8VIRasteri`, `CopyMaterial__8VIRasterii`, `CreateRefMap__7VIScenei`, `CreateResources__7VIRFontR8VIRasterR12VIDictionaryii10VIBitDepthi`, `Deallocate__9VISurface`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi`, `DrawString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUs`, `GetLayerTexture__10VIMateriali`, `GetPointSize__8VIRasteri`, `GetStringWidth__7VIRFontPCUsi`, `GetStringWidth__7VIRFontPCci`, `GetZBufferReg__C8VIRaster`, `InitChars__7VIRFontPUc`, `InitSlots__7VIRFontR8VIRaster`, `QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars`
+
+Opened: `Add__t6VIPool1ZP8VIRefMapRCP8VIRefMap`, `BlitBegin__8VIRasterPP10_sceDmaTag`, `BlitEnd__8VIRasterPP10_sceDmaTag`, `Cache__7VIRFontR8VIRasterPCUsiPi`, `CalcMipLevelStride__9VISurfacei`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUsUi`, `QueryEmittersLeaf__6VIZoneiR23VISceneEmitterQueryVars`, `ShareMaterial__8VIRasteri`, `__t5VIMap2ZiZi`
+
+Full partial build: 7585 source compilations, one link, 6063 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:25 CDT — agents/w16-scene-a — 755 unresolved imports
+
+## agents/w16-scene-b
+
+Merged (merge commit). All 22 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (22 of 22 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 755 |
+| After | 742 |
+| Closed | 22 |
+| Opened | 9 |
+
+Closed: `QueryIntersection__6VIZoneR20VISceneIntersectVars`, `RefMap__7VIScenei`, `ReleaseResources__16VIStaticLightingR8VIRasterR12VIDictionary`, `RemoveAllActors__7VIScene`, `RenderLeaf__6VIZoneiR15VISceneRendVars`, `ReorderPalette__9VISurface`, `ReplaceProxyRooms__7VISceneR6VIZone`, `ReplaceStaticProxyActors__7VISceneR6VIZone`, `ResetCache__7VIRFontR8VIRaster`, `SetDMAHeaders__9VISurface`, `SetEmissiveColor__10VIMaterialRC9VIColor32`, `SetLayerUVRate__10VIMaterialiRC7VIVect2`, `SetLayerUVSet__10VIMaterialii`, `SetLayerUVTransform__10VIMaterialiRC10VIMatrix33`, `SetLayerWrapMode__10VIMateriali18VIMaterialWrapMode`, `SetTessellate__10VIMateriali`, `StretchBlit__8VIRasteriUiRC8VIVect2IN3316VIAlphaBlendModef`, `UpdateActor__7VIScenei`, `UpdateAllActors__7VIScene`, `_$_7VIRFont`, `__7VIRFont`, `__9VISurface`
+
+Opened: `Begin__Ct6VIList1Z7VIActor`, `CalcObjectToWorld__7VIActor`, `Clear__7VIRFont`, `InsertActor__7VIWorldR17VISceneInsertVars`, `Next__Ct6VIList1Z7VIActori`, `QueryIntersection__6VIZoneiR20VISceneIntersectVars`, `ReleaseColorBuffer__8VIRasteriR12VIDictionary`, `ReplaceProxyActor__7VISceneii`, `Transform__C6VIBBoxRC10VIMatrix44P7VIVect3`
+
+Full partial build: 7607 source compilations, one link, 6086 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:31 CDT — agents/w16-scene-b — 742 unresolved imports
+
+## agents/w16-fx-a
+
+Merged (merge commit). All 24 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (24 of 24 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 74 minutes old.
+
+| | |
+|---|---|
+| Before | 742 |
+| After | 730 |
+| Closed | 24 |
+| Opened | 12 |
+
+Closed: `AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene`, `AddRoot__9VIHSprite`, `AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3`, `Add__9VIHSpritei`, `AllocParticles__14VIEffectVolume`, `Allocate__13VIHSpriteAnim`, `AttachSkin__9VIHSpriteiR7VIScene`, `Attach__9VIHSpriteiiR7VIScene`, `BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes`, `CalcDataSize__13VIHSpriteAnim`, `CreateMotif__22VIParticleDefinitionEx`, `Create__20VIParticleDefinitionR8VIRaster`, `DetachAllResources__14VIEffectVolume`, `DetachSurface__14VIEffectVolumei`, `FreeParticles__14VIEffectVolume`, `GetAttachSprite__C9VIHSpritei`, `NextMotif__C22VIParticleDefinitionExP15VIParticleMotif`, `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `ProcessDustStorm__14VIEffectVolumef`, `ProcessFallingLeaves__14VIEffectVolumef`, `ProcessGroundFog__14VIEffectVolumef`, `ProcessHierarchy__9VIHSprite`, `ProcessLightShafts__14VIEffectVolumef`, `ProcessPlayTiming__9VIHSpriteiR7VIScene`
+
+Opened: `AddHead__7VILListP7VILNode`, `Add__t6VIPool1Z13VIHSpritePlay`, `Add__t6VIPool1Z17VIHSpritePlayNode`, `Add__t6VIPool1Z19VIHSpriteAttachmentRC19VIHSpriteAttachment`, `Add__t6VIPool1ZP15VIParticleMotifRCP15VIParticleMotif`, `Add__t8VIVector1Z10VIMatrix44`, `Add__t8VIVector1Z13VIHSpriteNode`, `Find__Ct5VIMap2ZiZiRCi`, `PrecalcPlayback__9VIHSpritei`, `ProcessHierarchy__9VIHSpriteiR10VIMatrix44`, `__fixsfdi`, `singleBuffer`
+
+Full partial build: 7631 source compilations, one link, 6110 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:38 CDT — agents/w16-fx-a — 730 unresolved imports
+
+## agents/w16-fx-b
+
+Merged (merge commit) as a **partial package** by the notes' standard (its notes have a build-plan list and a final summary but not the usual checks/imports-closed/imports-opened headings); every one of its 17 units has a committed host check, which I ran using the build recipe in its own header (17 of 17 exit 0), so all 17 are selected. I recompiled each unit and checked function names against the notes' plan entries (the entries list names only; the body sizes are from my own build). Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 730 |
+| After | 719 |
+| Closed | 17 |
+| Opened | 6 |
+
+Closed: `SetBlendMode__20VIParticleDefinitionQ222VIParticleDefinitionEx9BLENDMODE`, `SetHair__9VICSpriteiiiR7VIScene`, `SetInnerHprVar__20VIParticleAttributesRC7VIVect3`, `SetInnerOffset__20VIParticleAttributesRC7VIVect3`, `SetName__15VIParticleMotifPCc`, `SetNodeFixScale__9VIHSpriteiRC7VIVect3`, `SetOuterHprVar__20VIParticleAttributesRC7VIVect3`, `SetOuterOffset__20VIParticleAttributesRC7VIVect3`, `SetTextureConfiguration__20VIParticleDefinitioni`, `SetTexture__20VIParticleDefinitioniR8VIRasterR12VIDictionary`, `SetZTest__20VIParticleDefinitionb`, `SetZWrite__20VIParticleDefinitionb`, `UpdateCenterTransform__9VIHSpriteR7VIScene`, `VITrailFxBegin__Flif`, `__13VIHSpriteAnim`, `__13VISpellEffect`, `__22VIParticleDefinitionEx`
+
+Opened: `GetHairTexture__13VICSpriteCusti`, `Init__9VITrailFxlif`, `InterpTransAboutCenter__9VIHSpriteR7VISceneR7VIVect3R14VIHSpriteFrame`, `Translate__10VIMatrix44RC7VIVect3`, `_13VICSpriteCust$HairNull`, `__t6VIPool1ZP15VIParticleMotif`
+
+Full partial build: 7648 source compilations, one link, 6127 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:44 CDT — agents/w16-fx-b — 719 unresolved imports
+
+## agents/w16-m-dtor-a
+
+Merged (merge commit). All 17 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (17 of 17 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 719 |
+| After | 702 |
+| Closed | 17 |
+| Opened | 0 |
+
+Closed: `_$_10FrostShard`, `_$_10HolyStrike`, `_$_12GlowingShaft`, `_$_12SpellHealing`, `_$_13HammerOfWrath`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_15SpellHolyShield`, `_$_16SpellConeOfFrost`, `_$_16SpellCriticalHit`, `_$_17SpellMinorHealing`, `_$_18DarknessProjectile`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_8HolyBolt`, `_$_8LostSoul`
+
+Opened: 
+
+Full partial build: 7665 source compilations, one link, 6144 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:51 CDT — agents/w16-m-dtor-a — 702 unresolved imports
+
+## agents/w16-prim-b
+
+Merged (merge commit). All 34 units in the notes are selected, each with a committed host check that I ran (34 of 34 exit 0; these checks need `-ffp-contract=off`, as the notes say, since without it one float check fails on this host); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 702 |
+| After | 683 |
+| Closed | 34 |
+| Opened | 15 |
+
+Closed: `Normal__12VIPrimBufferR9VIVect3S8`, `Normalize__7VIVect4`, `PickPrimBufferPackVUNBW__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNCG__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIColorBufferR13VIMaterialPal`, `PickPrimBufferPackVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PickPrimBufferVUNC__8VIRasterR13VIPickSegmentR12VIPrimBufferR13VIMaterialPal`, `PrimBuffer__8VIRasteri`, `Query__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetNodeBindPose__9VIHSpriteiRC6VIQuatfRC7VIVect3`, `SetObjectBlends__8VIRasteriP10VIMatrix44`, `SetPacking__12VICollBufferi`, `SetPacking__12VIPrimBufferiii`, `Slerp__6VIQuatRC6VIQuatT1f`, `StoreOutward__C6VIBBoxP7VIPlane`, `Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2`, `Transform__10VIMatrix44RC6VIQuatfRC7VIVect3`, `UV0__12VIPrimBufferR10VIVect2S16`, `UV0__12VIPrimBufferR7VIVect2`, `Unlock__12VICollBuffer`, `Unlock__12VIPrimBuffer`, `VertexGroup__12VICollBufferSc`, `VertexGroup__12VIPrimBuffers`, `Vertex__12VICollBufferR10VIVect3S16`, `Vertex__12VICollBufferR7VIVect3`, `Vertex__12VIPrimBufferR10VIVect3S16`, `Vertex__12VIPrimBufferR7VIVect3`, `__10VIMatrix44RC10VIMatrix44`, `__12VICollSphere`, `__13VIPickSegment`
+
+Opened: `CalcHitColor__8VIRasterR13VIPickSegmentR7VIVect3N22R9VIColor32N25`, `ConvertTo__C10VIMatrix44R6VIQuatRfR7VIVect3`, `Pick__8VIRasterR13VIPickSegmentiR7VIVect3N23`, `PrepareBillboardTransform__14VIEffectVolumeRC10VIMatrix44T1P10VIMatrix44`, `QueryBufferPackVGF__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `QueryBufferPackV__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `QueryBufferV__9VICollideRC6VIBBoxT1R14VIQueryTriListR12VICollBuffer`, `SetSolidFillUIAVGMaterial__8VIRaster`, `_12VIPrimBuffer$PrimBones`, `_12VIPrimBuffer$PrimNormalS8`, `_12VIPrimBuffer$PrimUV0`, `_12VIPrimBuffer$PrimUV0S16`, `_12VIPrimBuffer$PrimVertexGroup`, `_12VIPrimBuffer$PrimWeightsS8`, `_8VIRaster$ObjectBlendsBuffer`
+
+Full partial build: 7699 source compilations, one link, 6178 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:58 CDT — agents/w16-prim-b — 683 unresolved imports
+
+## agents/w16-spellmech-a
+
+Merged (merge commit). All 21 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (21 of 21 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 683 |
+| After | 685 |
+| Closed | 21 |
+| Opened | 23 |
+
+Closed: `__11SpellChargeiP8CreatureP5Skill`, `__12SpellBlessediP8CreatureP5Skill`, `__12SpellCycloneiP8CreatureP5Skill`, `__15SpellFireFlaresiP8CreatureG6Point3P5Skill`, `__15SpellShieldBashiP8CreatureP5Skill`, `__15SpellWizardBeamiP8CreatureP5Skill`, `__16SpellColdWeaponsiP8CreatureP5Skill`, `__16SpellFireWeaponsiP8CreatureP5Skill`, `__17SpellConvertEnemyiP8CreatureP5Skill`, `__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill`, `__17SpellUndeadShieldiP8CreatureP5Skill`, `__18SpellAncestralCalliP8CreatureP5Skill`, `__18SpellConvertUndeadiP8CreatureP5Skill`, `__21SpellLightningWeaponsiP8CreatureP5Skill`, `__22SpellRangerCriticalHitiP8CreatureP5Skill`, `__5MummyG6Point3sPPcPc`, `__9LooseFireG6Point3P10GameObject`, `__9SpellBashiP8CreatureP5Skill`, `clone__12GlowingShaft`, `clone__8HolyBolt`, `clone__8LostSoul`
+
+Opened: `_vt$11SpellCharge`, `_vt$12DiseaseTrail`, `_vt$12SpellBlessed`, `_vt$12SpellCyclone`, `_vt$15SpellFireFlares`, `_vt$15SpellShieldBash`, `_vt$15SpellWizardBeam`, `_vt$16SpellColdWeapons`, `_vt$16SpellFireWeapons`, `_vt$17SpellConvertEnemy`, `_vt$17SpellDiseaseTrail`, `_vt$17SpellUndeadShield`, `_vt$18SpellAncestralCall`, `_vt$18SpellConvertUndead`, `_vt$21SpellLightningWeapons`, `_vt$22SpellRangerCriticalHit`, `_vt$9FireFlare`, `_vt$9LooseFire`, `_vt$9SpellBash`, `hsv__Ffff`, `mummyResourceMap`, `objectGetListInRadius__FG6Point3sfP8ListHead`, `setWeapon__5Mummy`
+
+Full partial build: 7720 source compilations, one link, 6199 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:04 CDT — agents/w16-spellmech-a — 685 unresolved imports
+
+## agents/w16-tmpl-list-b
+
+Merged (merge commit). All 29 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (29 of 29 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 685 |
+| After | 658 |
+| Closed | 29 |
+| Opened | 2 |
+
+Closed: `Clear__t6VIList1ZP12VIPrimBuffer`, `Clear__t6VIList1ZP9VIGUIPage`, `Clear__t6VIList1ZP9VISurface`, `Clear__t6VIPool1Z13VIHSpritePlay`, `Clear__t6VIPool1Z17VIHSpritePlayNode`, `Clear__t6VIPool1Z19VIHSpriteAttachment`, `Clear__t6VIPool1ZP12VICollBuffer`, `Clear__t7VIArray1Z11VIClipEntry`, `Clear__t7VIArray1Z13VIWorldRegion`, `Clear__t7VIArray1Z16VIHSpriteTrigger`, `Clear__t7VIArray1Z20VICSpritePartEmitter`, `Clear__t7VIArray1Z6VIZone`, `Clear__t7VIArray1Z7VIPlane`, `Clear__t7VIArray1Z7VIVect3`, `Clear__t8VIVector1Z10VIMatrix44`, `Clear__t8VIVector1Z13VIHSpriteNode`, `DestroyPool__t6VIPool1Z13VIHSpritePlay`, `DestroyPool__t6VIPool1Z17VIHSpritePlayNode`, `DestroyPool__t6VIPool1Z19VIHSpriteAttachment`, `DestroyPool__t6VIPool1ZP15VIParticleMotif`, `DestroyPool__t7VIArray1Z10VIZoneLeaf`, `DestroyPool__t7VIArray1Z10VIZoneNode`, `DestroyPool__t7VIArray1Z16VIHSpriteTrigger`, `DestroyPool__t7VIArray1Z20VICSpritePartEmitter`, `DestroyPool__t7VIArray1Zc`, `DestroyPool__t8VIVector1Z10VIMatrix44`, `DestroyPool__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIList1Z7VIActor`, `End__Ct6VIList1ZP10VIFlatFile`
+
+Opened: `DestroyPool__t7VIArray1Z13VIWorldRegion`, `DestroyPool__t7VIArray1Z6VIZone`
+
+Full partial build: 7749 source compilations, one link, 6228 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:12 CDT — agents/w16-tmpl-list-b — 658 unresolved imports
+
+## agents/w16-tmpl-list-c
+
+Merged (merge commit). The notes carry no plan-entry list, so I derived the 28 units from the package's source directories (one source file each, object name from the directory name); all 28 have a committed host check that I ran using the build recipe in its own header (28 of 28 exit 0), and each unit's function names and body sizes come from my own compile. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 658 |
+| After | 636 |
+| Closed | 28 |
+| Opened | 6 |
+
+Closed: `End__Ct6VIPool1Z17VIHSpritePlayNode`, `End__Ct6VIPool1Z19VIRasterMaterialLRU`, `End__Ct6VIPool1ZP12VIPrimBuffer`, `End__Ct6VIPool1ZP13VIColorBuffer`, `Erase__t6VIList1ZP10VIFlatFilei`, `Erase__t6VIList1ZQ27VIScene12VISceneOccupi`, `Erase__t6VIPool1ZP12VIPrimBufferi`, `Erase__t6VIPool1ZP13VIHSpriteAnimi`, `Erase__t6VIPool1ZP13VIMaterialPali`, `Erase__t6VIPool1ZP16VIStaticLightingi`, `Erase__t6VIPool1ZP7VIRFonti`, `Erase__t6VIPool1ZP8VIRefMapi`, `Erase__t6VIPool1ZP8VISpritei`, `Init__t7VIArray1Z14VIResourceElemi`, `Init__t7VIArray1Z16VIHSpriteTriggeri`, `Init__t8VIVector1Z10VIMatrix44i`, `Init__t8VIVector1Z13VIHSpriteNodei`, `InsertAfter__7VILNodeP7VILNode`, `Insert__t6VIPool1Z10VIEEBucketRC10VIEEBucketi`, `Next__Ct6VIPool1Z10VIEEBucketi`, `Next__Ct6VIPool1Z17VIHSpritePlayNodei`, `Next__Ct6VIPool1Z19VIRasterMaterialLRUi`, `Next__Ct6VIPool1ZP12VICollBufferi`, `Next__Ct6VIPool1ZP12VIPrimBufferi`, `Next__Ct6VIPool1ZP13VIColorBufferi`, `Next__Ct6VIPool1ZP13VISpellEffecti`, `Next__Ct6VIPool1ZP20VIParticleDefinitioni`, `_$_10VIZoneRoom`
+
+Opened: `Add__t6VIPool1Z10VIEEBucketRC10VIEEBucket`, `Allocate__t6VIPool1Z10VIEEBucket`, `Allocate__t7VIArray1Z14VIResourceElem`, `Clear__t7VIArray1Z14VIResourceElem`, `End__Ct6VIList1ZQ27VIScene12VISceneOccup`, `End__Ct6VIPool1ZP7VIRFont`
+
+Full partial build: 7777 source compilations, one link, 6256 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:18 CDT — agents/w16-tmpl-list-c — 636 unresolved imports
+
+## agents/w16-tmpl-map-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host check are selected, 2 of 26 (`w16-tmpl-map-a-multimap-ui-key` and one sibling key unit; both host checks run, 2 of 2 exit 0, compiled names and sizes recomputed here). **Not selected:** the other 24 units (`esc-*`, `map-dict-*`, `map-ii-*`, `map-surfinfo-*` and the rest) have no committed host test; they stay authored but unplanned. Tip was about 3 hours old.
+
+| | |
+|---|---|
+| Before | 636 |
+| After | 634 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `End__Ct5VIMap2ZiZi`, `Log2__13VIEESurfCachei`
+
+Opened: 
+
+Full partial build: 7779 source compilations, one link, 6258 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:25 CDT — agents/w16-tmpl-map-a — 634 unresolved imports
+
+## agents/w16-wnd-a
+
+Merged (merge commit). Its notes have the standard sections and the tip was about 73 minutes old. 41 units are selected, each with a committed host check that I ran using the build recipe in its own header (41 of 41 exit 0); names and body sizes come from my own compile. They include the previously unselected `w12-wnd-a` units (the earlier entry said 30 of 34 had no host test) and two `w9-render-math-a` units, because this branch added host checks for them. The branch also edited 19 existing sources that were **not** in the plan (for example `w12-wnd-a-patcher-locals`, `w12-wnd-a-set-begin`, `w9-render-math-a-draw-character-call-back`); I refreshed their recorded hashes in `snapshot.json` and did not review or change the game code. None of the edited files was a planned input, so no pinned plan hash changed. The count rises by one: the window routines call functions nobody defines yet.
+
+| | |
+|---|---|
+| Before | 634 |
+| After | 635 |
+| Closed | 37 |
+| Opened | 38 |
+
+Closed: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `Begin__Ct5VISet1ZP5VIWnd`, `BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `ClearText__9VIWndEdit`, `DrawProgress__10VIUIWindowiiif`, `DrawVScroll__10VIUIWindowG8VIVect2IifUi`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `GetUISound__F11VIUISoundId`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `SoundPlay__4VIUIPCcf`, `TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi`, `VIHashResourceID_Icon__FPCc`, `drawCharacterCallBack__FiP6Point3PsPiN23`, `drawUpFrom__FiiPCUcT2iUi`, `setNewGridPosition__Fii`
+
+Opened: `ActionOccured__20VIWndGenericRendererPCc`, `AddNode__t5VISet1ZP5VIWndii`, `AppendEllipsis__10VIUIWindowPUsi`, `Ascii2Sjis__16VIIconDefinitionc`, `BlitVertBar__4VIUIG8VIVect2I9VIUITexIdN22i16VIAlphaBlendModef`, `Blit__4VIUIiG8VIVect2I16VIAlphaBlendModefUi`, `Blit__8VIRasteriUiRC8VIVect2I16VIAlphaBlendModef`, `ComputeTextRows__9VIWndEula`, `CopyAsteriks__10VIUIWindowPUsii`, `DnasErrorString__9VIWndDnasP14sceDNAS2Status`, `Down__9VIWndEula`, `DrawFakeSplashInterface__12VIWndPatcher`, `DrawFakeSplashInterface__9VIWndDnas`, `DrawTextInternal__10VIUIWindowPCUsiiRC10VIColor32FUi`, `EraseFixup__t5VISet1ZP5VIWndi`, `EulaComplete__9VIStationUc`, `FreeNode__t5VISet1ZP5VIWndi`, `GetSessionId__16VIRealmInterface`, `LeftRotate__t5VISet1ZP5VIWndi`, `Message__C16VIWndReadMessage`, `OnDrawSelf__10VIWndMcErr`, `OnKeyDown__10VIWndMcErri`, `PostInit__20VIWndGenericRenderer`, `Render__11VIGUIDialog`, `Render__9VIGUIPage`, `RightRotate__t5VISet1ZP5VIWndi`, `SelectPlay__11VIWndSplash`, `SetTextColor__6VIFontRC9VIColor32`, `SetUiColors__10VIUIWindow`, `Size__Ct6VIList1ZP9VIGUIPage`, `StopEula__9VIStation`, `TextWidth__10VIUIWindowPCUs`, `UISounds`, `Up__9VIWndEula`, `clientLeaveGame__16VIRealmInterface`, `lastRefreshTime`, `logout__Q212RealmService15RealmGatewayAPIPCUsPv`, `strncpy16__8VIStringPUsUiPCUsi`
+
+Full partial build: 7820 source compilations, one link, 6295 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:32 CDT — agents/w16-wnd-a — 635 unresolved imports
+
+## Rejections and verification (fourth integrator, 2026-10-14)
+
+Before the first merge I re-ran the shared branch at `f9e319d6`: 214 tool tests and the snapshot check passed, and the full partial build gave 7327 source compilations, one link, 5834 function bodies, zero COMMON and **841** unresolved imports, so the recorded count reproduced. No recent merge broke a repo rule that I could find; no game binary, disc image or raw disassembly is tracked.
+
+Merged this pass, in order: `w16-m-data-a` (841 to 838), `w16-m-data-b` (816), `w16-m-data-c` (805), `w16-io-b` (792), `w16-realm-a` (778), `w16-realm-b` (779), `w16-io-a` (771), `w16-lib-a` (770), `w16-prim-a` (769), `w16-rt-a` (768), `w16-scene-a` (755), `w16-scene-b` (742), `w16-fx-a` (730), `w16-fx-b` (719), `w16-m-dtor-a` (702), `w16-prim-b` (683), `w16-spellmech-a` (685), `w16-tmpl-list-b` (658), `w16-tmpl-list-c` (636), `w16-tmpl-map-a` (634), `w16-wnd-a` (635). Three of those moved the count up or sideways because the new routines call functions that nothing defines yet (`w16-realm-b`, `w16-spellmech-a`, `w16-wnd-a`); their entries list the real names. Each entry's closed and opened lists come from diffing the build's `unresolved-imports.json` before and after, not from the notes.
+
+How selection was done: only units with a committed host check were planned. I ran each check using the build recipe in its own header and recompiled each unit with the plan's `authored_cpp` flags to get its function names, body sizes and object hash. A unit whose only check needs the private executable (`w16-rt-a-set-alarm`) is not selected. `w15-startup-a-link-eh-frame-begin` (offered by `w16-m-data-a`) is not selected: with it the relocatable link aborts with a BFD assertion (`elflink.c:9839`).
+
+Rejected (no committed host test in any source directory, so each function would have no test that could fail; none merged, no game code touched):
+
+- `w10-actor-i` (32 dirs), `w10-startup-d` (17), `w11-creature-a` (21; its one name match is a source file called `check_if_spell_is_running`, not a test), `w11-vi-misc-a` (34), `w11-vi-render-b` (31), `w12-vicont-b` (26), `w13-m-spell-dtor-a` (27), `w14-spellevent` (24), `w8-spell-static-init-b` (30): unchanged from the earlier rejection.
+- `w16-game-a` (2 units): its notes cite only private paired runs.
+- `w16-spellmsg-a` (32 units): its notes say there is no committed host test.
+- `w16-tmpl-list-a` (21 units): no host checks. The same applies to 24 of the 26 units in `w16-tmpl-map-a`, which stay authored but unplanned.
+
+Process note: while merging `w16-realm-a` I wrongly recorded one unit as failing because I built its host check without the flags in its header; it was corrected and selected in the `w16-realm-b` entry. I then re-ran every earlier check of the day with the flags in its own header.
+- 2026-10-14 07:33 CDT — fourth integrator pass complete, 21 branches merged, 12 untested branches rejected — 635 unresolved imports
+
+## Fifth integrator pass (2026-10-14)
+
+Before any merge I re-ran the shared branch at `9a92c326`: 214 tool tests and the snapshot check passed, and the full partial build gave 7820 source compilations, one link, 6295 function bodies, zero COMMON and **635** unresolved imports, so the recorded count reproduced. No repo-rule break found in the last ten entries.
+
+`git branch -r --no-merged` listed 12 `origin/agents/*` branches, all unchanged since the fourth pass (every tip is older than that pass). I re-checked the rejection reason against each branch's diff against the shared branch: none adds a test, check or verify file outside `docs/`. The only name match, `w11-creature-a`'s `check_if_spell_is_running.cpp`, is a game source file. Each stays rejected for the reason in the fourth-pass entry: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-vicont-b`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w16-game-a`, `w16-spellmsg-a`, `w16-tmpl-list-a`, `w8-spell-static-init-b`. No game code touched.
+
+Not merged because they are not worker branches: `origin/integration/wave` (an earlier integrator line, one commit) and `origin/codex/norrath-runtime-binding` (a separate line, one commit); neither carries a worker notes file.
+
+No merges this pass, so the count is unchanged.
+- 2026-10-14 07:50 CDT — fifth integrator pass, 0 branches merged, 12 untested branches re-rejected — 635 unresolved imports

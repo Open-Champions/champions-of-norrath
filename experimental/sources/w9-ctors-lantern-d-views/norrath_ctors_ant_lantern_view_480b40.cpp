@@ -1,0 +1,4 @@
+// Observed .lit4 word at 0x480b40. The bits are 0x3f333333. Ant-through-lantern constructors load it as a single float
+// (some copy the raw word into an object field). Neighboring literals are separate words.
+extern "C" const float norrath_ctors_ant_lantern_view_480b40;
+const float norrath_ctors_ant_lantern_view_480b40 = 0x1.6666660000000p-1f;

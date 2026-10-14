@@ -1,0 +1,118 @@
+diff --git a/config.sub b/config.sub
+index 567459e..f7e9990 100755
+--- a/config.sub
++++ b/config.sub
+@@ -1,4 +1,6 @@
+ #! /bin/sh
++# Local host-only compatibility: native Apple Silicon cross-compiler host.
++case "$1" in aarch64-apple-darwin*) echo "$1"; exit 0 ;; esac
+ # Configuration validation subroutine script, version 1.1.
+ #   Copyright (C) 1991, 92-97, 1998, 1999 Free Software Foundation, Inc.
+ # This file is (in principle) common to ALL GNU software.
+diff --git a/gcc/configure b/gcc/configure
+index cc73760..1d40c92 100755
+--- a/gcc/configure
++++ b/gcc/configure
+@@ -2972,6 +2972,16 @@ for machine in $build $host $target; do
+ 	esac
+ 
+ 	case $machine in
++	aarch64-apple-darwin*)
++                # Host only: the target remains the upstream MIPS configuration.
++                if test "$machine" = "$target"; then
++                    echo "Native Darwin target is not implemented" >&2
++                    exit 1
++                fi
++                xm_file=xm-aarch64-darwin.h
++                xm_defines="HAVE_ATEXIT POSIX"
++                xmake_file=
++                ;;
+ 	# Support site-specific machine types.
+ 	*local*)
+ 		cpu_type=`echo $machine | sed -e 's/-.*//'`
+diff --git a/gcc/expr.c b/gcc/expr.c
+index 812e1fb..9e91e9a 100644
+--- a/gcc/expr.c
++++ b/gcc/expr.c
+@@ -162,10 +162,10 @@ static rtx get_push_address	PROTO ((int));
+ static rtx enqueue_insn		PROTO((rtx, rtx));
+ static void init_queue		PROTO((void));
+ static int move_by_pieces_ninsns PROTO((unsigned int, int));
+-static void move_by_pieces_1	PROTO((rtx (*) (rtx, ...), enum machine_mode,
++static void move_by_pieces_1	PROTO((rtx (*) INSN_GEN_PROTO, enum machine_mode,
+ 				       struct move_by_pieces *));
+ static void clear_by_pieces	PROTO((rtx, int, int));
+-static void clear_by_pieces_1	PROTO((rtx (*) (rtx, ...), enum machine_mode,
++static void clear_by_pieces_1	PROTO((rtx (*) INSN_GEN_PROTO, enum machine_mode,
+ 				       struct clear_by_pieces *));
+ static int is_zeros_p		PROTO((tree));
+ static int mostly_zeros_p	PROTO((tree));
+@@ -1572,7 +1572,7 @@ move_by_pieces_ninsns (l, align)
+ 
+ static void
+ move_by_pieces_1 (genfun, mode, data)
+-     rtx (*genfun) PROTO ((rtx, ...));
++     rtx (*genfun) INSN_GEN_PROTO;
+      enum machine_mode mode;
+      struct move_by_pieces *data;
+ {
+@@ -2363,7 +2363,7 @@ clear_by_pieces (to, len, align)
+ 
+ static void
+ clear_by_pieces_1 (genfun, mode, data)
+-     rtx (*genfun) PROTO ((rtx, ...));
++     rtx (*genfun) INSN_GEN_PROTO;
+      enum machine_mode mode;
+      struct clear_by_pieces *data;
+ {
+diff --git a/gcc/expr.h b/gcc/expr.h
+index 55e82e6..f14c1bd 100644
+--- a/gcc/expr.h
++++ b/gcc/expr.h
+@@ -374,7 +374,15 @@ typedef struct optab
+ #define GEN_FCN(CODE) (*insn_gen_function[(int) (CODE)])
+ #endif
+ 
+-extern rtx (*const insn_gen_function[]) PROTO ((rtx, ...));
++/* Host-only compatibility: generated callees have fixed arguments.
++   Apple ARM64 distinguishes variadic from fixed-argument call placement.
++   Match the unprototyped table definition emitted by genoutput.c. */
++#if defined(__APPLE__) && defined(__aarch64__)
++#define INSN_GEN_PROTO ()
++#else
++#define INSN_GEN_PROTO PROTO ((rtx, ...))
++#endif
++extern rtx (*const insn_gen_function[]) INSN_GEN_PROTO;
+ 
+ extern optab add_optab;
+ extern optab sub_optab;
+diff --git a/include/obstack.h b/include/obstack.h
+index 38e9677..a9afcf9 100644
+--- a/include/obstack.h
++++ b/include/obstack.h
+@@ -417,7 +417,8 @@ __extension__								\
+ ({ struct obstack *__o = (OBSTACK);					\
+    if (__o->next_free + sizeof (void *) > __o->chunk_limit)		\
+      _obstack_newchunk (__o, sizeof (void *));				\
+-   *((void **)__o->next_free)++ = ((void *)datum);			\
++   *((void **)__o->next_free) = ((void *)datum); \
++   __o->next_free += sizeof (void *);			\
+    (void) 0; })
+ 
+ # define obstack_int_grow(OBSTACK,datum)				\
+diff --git a/libiberty/strerror.c b/libiberty/strerror.c
+index 644cc75..b672ba7 100644
+--- a/libiberty/strerror.c
++++ b/libiberty/strerror.c
+@@ -462,7 +462,11 @@ static const char **sys_errlist;
+ 
+ #else
+ 
++#ifdef __APPLE__
++extern const int sys_nerr; /* Match the native macOS host declaration. */
++#else
+ extern int sys_nerr;
++#endif
+ extern char *sys_errlist[];
+ 
+ #endif
