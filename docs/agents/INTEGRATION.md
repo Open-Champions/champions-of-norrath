@@ -10401,3 +10401,4 @@ Closed: `CreateSpellEffect__19VISpellEffectSystemi`, `Create__13VISpellEffectP7V
 Opened: `Add__t6VIPool1ZP13VISpellEffectRCP13VISpellEffect`, `__13VISpellEffect`, `alreadyChained__14HateProjectileP10GameObject`, `alreadyChained__15ShockProjectileP10GameObject`, `firestormParticle1`, `firestormParticle2`, `firestormParticle3`
 
 Full partial build: 7012 source compilations, one link, 5541 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:41 CDT — agents/w15-spell-fx-a — 905 unresolved imports
