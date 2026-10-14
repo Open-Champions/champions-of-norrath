@@ -107,20 +107,226 @@ Inferred: the same spell family. Unknown: the meanings of the table at S+96 and 
 
 ## Imports closed
 
+Nine of the 22 assigned names are closed by the units above (each one is defined by its own object):
+
 `__15SpellClericRootiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `_$_5Spell`,
 `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`,
-`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`, `__12SpellHealingiP8CreatureP5Skill`,
-`__15SpellHolyShieldiP8CreatureP5Skill`.
+`__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`,
+`__12SpellHealingiP8CreatureP5Skill`, `__15SpellHolyShieldiP8CreatureP5Skill`.
+
+## Imports still open in this package
+
+Thirteen assigned names have no unit yet:
+
+`_$_13FireBombletJr`, `__11SpellChargeiP8CreatureP5Skill`, `__12SpellBlessediP8CreatureP5Skill`,
+`__12SpellCycloneiP8CreatureP5Skill`, `__15SpellFireFlaresiP8CreatureG6Point3P5Skill`,
+`__15SpellShieldBashiP8CreatureP5Skill`, `__15SpellWizardBeamiP8CreatureP5Skill`,
+`__16SpellColdWeaponsiP8CreatureP5Skill`, `__16SpellFireWeaponsiP8CreatureP5Skill`,
+`__17SpellConvertEnemyiP8CreatureP5Skill`, `__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill`,
+`__17SpellUndeadShieldiP8CreatureP5Skill`, `__18SpellAncestralCalliP8CreatureP5Skill`.
+
+Status of the ones I looked at, none of them closed:
+
+- `__15SpellShieldBashiP8CreatureP5Skill` (`0x002c7f38`, 384 bytes) reads the creature list through
+  `objectGetSortedCreatureList__FG6Point3sffP8ListHeadP8Creature`, walks linked records with flag tests (`0x00100000`),
+  creates an animation one-shot (`animAddOneShot__FP14AnimationStateP15AnimationHeaderffi`), and ends with
+  `listDestroy__FP8ListHead`. The walk and the list-head layout are not yet established.
+- `__17SpellUndeadShieldiP8CreatureP5Skill` (`0x002affa8`, 440 bytes) uses `div.s`, a light, the skill call at level 1,
+  an arithmetic read of the global `frameNm` (times 60 plus its value), a particle system, a lump and sound, and
+  `soundMakePersistant__Fi`. It also copies the creature point to +80. Not attempted.
+- `__12SpellBlessed`, `__12SpellCyclone`, `__11SpellCharge`, `__15SpellWizardBeam`, `__16SpellFireWeapons` and
+  `__16SpellColdWeapons` are 160 to 290 instructions with several calls and float paths each. Not attempted.
+- `_$_13FireBombletJr` (the destructor) and `__17SpellConvertEnemy`, `__17SpellDiseaseTrail`, `__15SpellFireFlares`,
+  `__18SpellAncestralCall` were not decoded.
 
 ## Imports opened
 
-To record once the build is complete.
+Referenced by the units above, and not defined by any source in the shared plan as of this branch (checked by
+searching the plan's sources for each name). These belong to other packages or to a later vtable/data pass:
+
+- Vtables of the classes whose constructors this package authors: `_vt$12SpellHealing`, `_vt$13SpellEntangle`,
+  `_vt$15SpellClericRoot`, `_vt$15SpellHateEffect`, `_vt$15SpellHolyShield`, `_vt$16SpellConeOfFrost`,
+  `_vt$16SpellCriticalHit`, `_vt$17SpellMinorHealing`. Each constructor stores the address of its own vtable and
+  references it by this symbol, so the vtable objects are a dependency of these units.
+- `__12GlowingShaftG6Point3iiii` (a constructor of the glowing shaft; referenced by minor healing, healing and holy
+  shield). Only a comment in another package mentions it.
+
+Defined elsewhere and used as-is: `P_CreateParticleSystem__Fv` (`w11-data-a-create-particle-system`),
+`blockAlloc__Fi`, `blockFree__FPv`, `lightAdd__FP5Light`, `listDestroy__FP8ListHead`, `listOnewayLink__FP8ListHeadT0Pv`,
+`lumpFindResource__FPcT0`, `soundPlaySequence__FP15AnimationHeaderG6Point3f`,
+`soundPlaySequence__FP15AnimationHeaderP10GameObjectf`, `frameNm`, `player`, `syncRandState`, and `_vt$5Spell`
+(`w13-m-startup-data-b-vt-spell`). The check is a source search of the plan; the official unresolved list was not
+read (see Checks).
 
 ## Build-plan entries needed
 
-Not yet; these go in the list below once the entry is final.
+These entries are for the lead integrator's successor plan. They are **not** in `experimental/build-plan.json`, and
+each needs an `input_order` from the integrator. Every source has an empty header closure (no `#include`), the
+`authored_cpp` profile, and a SHA-256 of the committed file. `emitted_functions` lists each symbol with the compiled
+size from the reviewed EE g++ run. `host_check.cpp` files are not plan inputs.
+
+```json
+[
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_cleric_root.o",
+  "profile": "authored_cpp",
+  "sha256": "4f54f41dc9b3c9772934ce5e3725f7e4d2e7713804ea0d87381d2e37532eab16",
+  "source": "sources/w14-m-spell-ctors-a-ctor-cleric-root/spell_cleric_root_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__15SpellClericRootiP8CreatureP5Skill",
+    "compiled_body_bytes": 172
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_entangle.o",
+  "profile": "authored_cpp",
+  "sha256": "e17e1a26904e83b8a40b025a6b1f1bdaee004d0d4969d867da47e2b84d2a1ce4",
+  "source": "sources/w14-m-spell-ctors-a-ctor-entangle/spell_entangle_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__13SpellEntangleiP8CreatureP5Skill",
+    "compiled_body_bytes": 172
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_dtor_5spell.o",
+  "profile": "authored_cpp",
+  "sha256": "ab41acb46e677aacbc373f5e52d7dca8169b9ef5128d25a3d937f5721c4a658f",
+  "source": "sources/w14-m-spell-ctors-a-dtor-5spell/dtor.cpp",
+  "emitted_functions": [
+   {
+    "name": "_$_5Spell",
+    "compiled_body_bytes": 92
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_hate_effect.o",
+  "profile": "authored_cpp",
+  "sha256": "291057126d1aab65fe72b5323f77553c56bfda29317c62de0a5c9f4dec986f05",
+  "source": "sources/w14-m-spell-ctors-a-ctor-hate-effect/spell_hate_effect_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill",
+    "compiled_body_bytes": 260
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_cone_of_frost.o",
+  "profile": "authored_cpp",
+  "sha256": "615bd3af70df9899f2add1b92e57a67d75deab22905756ccb6a3b02589b5b6f9",
+  "source": "sources/w14-m-spell-ctors-a-ctor-cone-of-frost/spell_cone_of_frost_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__16SpellConeOfFrostiP8CreatureP5Skill",
+    "compiled_body_bytes": 328
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_critical_hit.o",
+  "profile": "authored_cpp",
+  "sha256": "400e8fe449ec15abd5bab70200a49fcb5015ac41f551b8a19fd7d08b6944edc9",
+  "source": "sources/w14-m-spell-ctors-a-ctor-critical-hit/spell_critical_hit_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__16SpellCriticalHitiP8CreatureP5Skill",
+    "compiled_body_bytes": 288
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_minor_healing.o",
+  "profile": "authored_cpp",
+  "sha256": "0e28ed334e14ec0cbff80760a2dbf4c854f6c34239b861ba7cbc316a7051169d",
+  "source": "sources/w14-m-spell-ctors-a-ctor-minor-healing/spell_minor_healing_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__17SpellMinorHealingiP8CreatureP5Skill",
+    "compiled_body_bytes": 360
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_healing.o",
+  "profile": "authored_cpp",
+  "sha256": "f722dc62d2e07abd0638d2f0713e473e63ed6655701661419f7134d8c1d1ecb9",
+  "source": "sources/w14-m-spell-ctors-a-ctor-healing/spell_healing_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__12SpellHealingiP8CreatureP5Skill",
+    "compiled_body_bytes": 372
+   }
+  ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w14mspell_ctor_holy_shield.o",
+  "profile": "authored_cpp",
+  "sha256": "7ba49cc291693cfe1e68c03b4acfffdcb2340a9bc71f2d1566e10a23feeae926",
+  "source": "sources/w14-m-spell-ctors-a-ctor-holy-shield/spell_holy_shield_ctor.cpp",
+  "emitted_functions": [
+   {
+    "name": "__15SpellHolyShieldiP8CreatureP5Skill",
+    "compiled_body_bytes": 316
+   }
+  ]
+ }
+]
+```
+
+## Checks performed
+
+- **Unit tests.** `python3 -m unittest discover -s tools -p 'test_*.py'`: 214 tests, OK (run on this branch).
+- **Partial build.** `tools/build_partial.py` with the reviewed EE toolchain was started on the unmodified shared plan
+  into `work/w14-m-spell-ctors-a-base` (ignored by git). The first run was killed at its background time limit; the
+  second run was still compiling when this note was written (2,241 of about 6,237 inputs), so no
+  `unresolved-imports.json` exists yet. The closure statements above come from a source search of the plan, not from
+  that list. Once the build finishes, check that the nine closed names are absent and the opened names appear.
+- **Compile.** All nine units compile with the reviewed toolchain and `authored_cpp` flags. Unit sizes differ from the
+  image sizes (table above); that is expected and not a byte match.
+- **Host contracts.** Each unit's `host_check.cpp` builds with `clang++ -std=c++17 -Wall -Wextra` and prints `ok`.
+  One mutation (unsigned kind byte in cleric root) was checked against its host contract and caught.
+- **Paired R5900 comparison.** A private interpreter (kept outside git) ran the original and each authored function
+  from identical memory snapshots, with stub callees. Scenario counts and mutation results are in the unit notes
+  above. Every final comparison was re-run for this note: all nine report 0 mismatches and no HALT line.
+
+## Authored but never executed
+
+All nine units were executed only by the private R5900 interpreter, against stub callees, not on the EE and not in
+the game. The sync random state, the image vtable addresses, the `player` table lookup (`0x004086b0` plus the
+scaled creature word), and the skill's secondary table are read the way the image reads them, but they were never run
+with real game objects.
 
 ## Unknown
 
-- The class name behind the skill's table at +96 and the call target at +92.
-- The name of `P_CreateParticleSystem__Fv`'s owner package (not defined in this package).
+- The class behind the skill's secondary table at +96 and the call target at +92. Every constructor here calls through
+  it, so it is shared with the rest of the family.
+- The name of the table at `0x004086b0` (it sits inside the `player` symbol at offset 0xb0; the owner is unknown) and
+  the creature field at +960 that indexes it.
+- The meaning of the float constants at `0x00482aec`, `0x00482af0`, `0x00482c20`, `0x00482c60`, `0x00482c64` and
+  `0x00482c8c`. They are unnamed globals and are written as bit patterns.
+- The meaning of the stored fields (light records, shaft points, the list heads at +24 and +28 in hate effect, the
+  value at +32 in cone and hate effect), beyond the observed stores.
+- The owners of `P_CreateParticleSystem__Fv` and `__12GlowingShaftG6Point3iiii` beyond the source search.
