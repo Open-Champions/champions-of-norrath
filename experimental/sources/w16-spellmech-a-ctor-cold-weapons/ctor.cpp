@@ -1,4 +1,4 @@
-// Observed __16SpellColdWeaponsiP8CreatureP5Skill at 0x002ab548, 1164 bytes in .text. Arguments: the object, the rank, the
+// Observed __16SpellColdWeaponsiP8CreatureP5Skill at 0x002ab548, 1168 bytes in .text. Arguments: the object, the rank, the
 // creature and the skill. Returns nothing. The sync random state is advanced as state = state * 0x19660d + 0x3c6ef35f
 // (32-bit). "Skill call n" below is the skill table (the word at skill+96) entry at byte 88 called as
 // (skill + adjustment, n, the signed byte at object+0), returning an int.
