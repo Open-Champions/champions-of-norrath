@@ -9890,3 +9890,5 @@ Closed: `Collide__11VILODSpriteR12VICollSphereR13VISceneFilterR7VISceneR9VIColli
 
 Opened: `Begin__Ct6VIPool1Z19VIHSpriteAttachment`, `CalcTransAboutCenter__9VIHSpriteRC10VIMatrix44R7VISceneR10VIMatrix44`, `CollideObj__9VICollideR12VICollSphereR9VICapsule`, `CollideObj__9VICollideR12VICollSpherei`, `CollideObj__9VICollideR9VICollRayi`, `Collide__7VIWorldiR18VISceneCollRayVars`, `Collide__7VIWorldiR8VIEnvRayR7VIVect3T3`, `End__Ct6VIPool1Z19VIHSpriteAttachment`, `GetWorld__C9VICollide`, `Next__Ct6VIPool1Z19VIHSpriteAttachmenti`, `Process__9VIHSpriteiR7VIScene`, `SetWorld__9VICollideRC10VIMatrix44`
 - 2026-10-13 19:28 CDT — agents/w14-sprite-collide — 924 unresolved imports
+
+Process note (19:50 CDT): `cefa42cd` was pushed to the shared branch with the `w14-sprite-collide` merge commit but before its plan and snapshot entries were committed (an integrator scripting slip), so `check_source_snapshot.py` would have failed at that one commit for about a minute. `99a5172f` adds the entries; the checks above were run on that tree.
