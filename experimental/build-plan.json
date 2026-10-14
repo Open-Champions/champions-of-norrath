@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6260,
+  "default_authored_inputs": 6296,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -5054,6 +5054,42 @@
     "sources/w13-wnd-a-tf-options/typeinfo.cpp": "fef08b533ed7f70a148c18b32cfb107ef774b2b38f2b5a4f8e45358013e5d8d2",
     "sources/w13-wnd-a-tf-readmessage/typeinfo.cpp": "9cde54244cb5ee4a8ddfefa8e529b8a00fdf179cb8ee501de523bc443cede38d",
     "sources/w13-wnd-a-uiwindow-settitle/settitle.cpp": "ae3952b2a613d2429aeff4b1e07ab1772bf92a65976c75a987e6876cc1a46c02",
+    "sources/w14-objfile-array-allocate-viworldleaf/allocate.cpp": "75bf1c35262f8ae75103b513f8b207b6b9202dd317de2ceffed36b6dd7a3e4ba",
+    "sources/w14-objfile-array-allocate-viworldnode/allocate.cpp": "0aa87a0a8094288d9e524c0dfbbc544ee54bd95131d10283263dd7b16d279a3f",
+    "sources/w14-objfile-array-allocate-vizoneroom/allocate.cpp": "44479144cc9e1884acfaf1d0f977e723dfffd8ad7869c1cf184f661b71d687d4",
+    "sources/w14-objfile-array-clear-vizoneroom/clear.cpp": "887fd0ea20dee8ed891648415801691faafa7dc38a07e71384507d0f0c514c4b",
+    "sources/w14-objfile-array-ctor-viresourceelem/ctor.cpp": "4e6ed6421f94b7c10f61aa89b38352f0bf5acca7d4070bcaafee34147e4565c8",
+    "sources/w14-objfile-array-destroypool-viworldleaf/destroypool.cpp": "0cfc5af89994f380d36f6d7981cef415a2798eaede1d5c27e2c2f5899dfec893",
+    "sources/w14-objfile-array-destroypool-viworldnode/destroypool.cpp": "a480e0e66bdbc282e7c8f49bb435d3b6fdba0e38372b0eaa0dedb8057c6dd77f",
+    "sources/w14-objfile-array-dtor-viresourceelem/dtor.cpp": "3e59a1abc1f63a9f9d3921f7b7f776f89329bcd150c246e8c86590eb08a137f3",
+    "sources/w14-objfile-array-init-zoneleaf/init.cpp": "ea8fe25f95b9703f280a8a2dd5990e4779a1d7fcf607addf83a117a9c11044b6",
+    "sources/w14-objfile-array-init-zonenode/init.cpp": "b0d87e1bc3a722026851430860d11f8fdec5e76006013bcbc748498b98dc8aa6",
+    "sources/w14-objfile-dictionary-find/find.cpp": "d0d6e15395c9aae46c9ed119e2b562750df190fb27783cf8fa1a54c9178a7df8",
+    "sources/w14-objfile-dictmap-erase/erase.cpp": "b38ab02a0c00927287e57554882af01ef4e9cc1a3cc8fbbfd02cd55aac91aafe",
+    "sources/w14-objfile-dictmap-find/find.cpp": "d968587a5776938037fd60e4e8f96516f46c593deff11a3fd45f1b9b30f33cc9",
+    "sources/w14-objfile-flatfilestructure-ctor/ctor.cpp": "cb8f98428b56fe0ee57098ec49bd4fa93c2f363fbe13d9d6b9ce7112312fb778",
+    "sources/w14-objfile-flatfilestructure-dtor/dtor.cpp": "e4edd5af72d68cf0a747539fb98e9fdabec1bacfc362f11c672c7b1337a400c9",
+    "sources/w14-objfile-multimap-destroypool-emitterentry/destroypool.cpp": "72c287586888459ada917883373fe560f016089778c12be547b70f0124a95b1f",
+    "sources/w14-objfile-multimap-init-emitterentry/init.cpp": "ab0ea6214576464ce0b88955c9979633cd5fe3e8756271513cfd608235e525ad",
+    "sources/w14-objfile-objfile-abortopen/abortopen.cpp": "4b7cae1c4bb61ba5831ce826ce523628604d661ffe7ab2de57b2b30313c4bd97",
+    "sources/w14-objfile-objfile-flush/flush.cpp": "eceaee35729d4c70736cf40875769537b14bd203b3667daae030ad5bcfb2e3fc",
+    "sources/w14-objfile-objfile-readbegin-short/readbegin.cpp": "d21d7a36023e7081f970d17dbea9d1a413ace30d3d55e8a339f881a19a51976e",
+    "sources/w14-objfile-objfile-readend/readend.cpp": "c5f84a6d27fe8d871920bf9b9b6a9d9fe28677f8e14bf5c67c653357d923b841",
+    "sources/w14-objfile-objfile-readfileheader/readfileheader.cpp": "2325e42b15aba7b4c79fc60d12d7405272fd4ab91835b5ce2421eec6e3ff660b",
+    "sources/w14-objfile-objfile-writeend/writeend.cpp": "9db457ecd2e0094620f1b5a4efe5f1c4b1ddce8e58d6af7f8fa4e8a3047e3272",
+    "sources/w14-objfile-objfile-writefileheader/writefileheader.cpp": "01d7ee8890406a9a43c07566a3a99e05a6010a1f5618b1e7bf41f80686e65fbb",
+    "sources/w14-objfile-pool-erase-viparticledefinition/erase.cpp": "846cf966609686db6e320bf17fa88fdbb084edbf089b503fa8e308b9bf14ef77",
+    "sources/w14-objfile-pool-movetolast-rasterlru/movetolast.cpp": "c79e2c86edd6e337e4b68971588eba2a5a43554d2aa4399885c1d82bfee34387",
+    "sources/w14-objfile-stringtable-ctor/ctor.cpp": "d2840371e18ca7062af3dd9029c1badbb051ef75f04550bb5f9cf338ac01cac8",
+    "sources/w14-objfile-stringtable-dtor/dtor.cpp": "d7ee791ae4398c39f87502d29813bee67a8516368684b054f3d46ec9a0b0b1c2",
+    "sources/w14-objfile-stringtable-load/load.cpp": "6601d96fca433807740c170f5ab275732b9c55e2aa2638a9bd3d0d60f1abd67b",
+    "sources/w14-objfile-stringtable-unload/unload.cpp": "8d8cf8e80c86e7c6c0c860393e70e4bd6a97ee5e59d7aa631a54b6810182717b",
+    "sources/w14-objfile-vilist-addtail/addtail.cpp": "266cbdb90ed6a6632e82eb8135bcec54c650f3ec5b603b323ae7a779e3029fd5",
+    "sources/w14-objfile-vilist-ctor/ctor.cpp": "6cf2b60571d3764d3632c4b3512edcade28a08d6d02eb6ae00f542eb98d9cfc0",
+    "sources/w14-objfile-vilist-init/init.cpp": "b06c86fbed4a0fd2e5202ca390d7c6b6c335e1ea4d6cfa322e3dd9b867533a28",
+    "sources/w14-objfile-vilnode-ctor/ctor.cpp": "735291b0e0907fc09a83048a9d6e1fb887898a3e839287aa026f3f1c2b324852",
+    "sources/w14-objfile-vistring-str16to8/str16to8.cpp": "4add170e869e3f27c38f3be7101e6b29f716a440267eed13ff83a3c3a38fae4e",
+    "sources/w14-objfile-vistring-strlen16/strlen16.cpp": "90f65289d5fac8caaad0b5d3160cfa2c1b50385f93c8e39fbee5d10fb47d35e4",
     "sources/w14-startup-io-a-data-file-iop-stream/iop_stream.cpp": "594de9940da8919c181296474877ff0860306c1bc9a58668ba2b4da9ae42fc8d",
     "sources/w14-startup-io-a-data-load-buffer/load_buffer.cpp": "6eae881cf70eabbbb6e2114920c891db6ab32c8e10e3753c9dc510cb79aa928e",
     "sources/w14-startup-io-a-data-load-frames/load_frames.cpp": "67d2e65c6d3b802474809a7199b260f2f8e1626cbfb4f888dcbb9444a52be9d4",
@@ -92653,6 +92689,546 @@
       "sha256": "f9bda289f30badc491935e6349a9d5f4223eaeba00e816285923d5ad1a45246f",
       "source": "sources/w14-startup-io-b-pad-mtap-state/pad_mtap_state.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6262,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_allocate_viworldleaf.o",
+      "profile": "authored_cpp",
+      "sha256": "75bf1c35262f8ae75103b513f8b207b6b9202dd317de2ceffed36b6dd7a3e4ba",
+      "source": "sources/w14-objfile-array-allocate-viworldleaf/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__t7VIArray1Z11VIWorldLeaf",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6263,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_allocate_viworldnode.o",
+      "profile": "authored_cpp",
+      "sha256": "0aa87a0a8094288d9e524c0dfbbc544ee54bd95131d10283263dd7b16d279a3f",
+      "source": "sources/w14-objfile-array-allocate-viworldnode/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__t7VIArray1Z11VIWorldNode",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6264,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_allocate_vizoneroom.o",
+      "profile": "authored_cpp",
+      "sha256": "44479144cc9e1884acfaf1d0f977e723dfffd8ad7869c1cf184f661b71d687d4",
+      "source": "sources/w14-objfile-array-allocate-vizoneroom/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__t7VIArray1Z10VIZoneRoom",
+          "compiled_body_bytes": 184
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6265,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_clear_vizoneroom.o",
+      "profile": "authored_cpp",
+      "sha256": "887fd0ea20dee8ed891648415801691faafa7dc38a07e71384507d0f0c514c4b",
+      "source": "sources/w14-objfile-array-clear-vizoneroom/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__t7VIArray1Z10VIZoneRoom",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6266,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_ctor_viresourceelem.o",
+      "profile": "authored_cpp",
+      "sha256": "4e6ed6421f94b7c10f61aa89b38352f0bf5acca7d4070bcaafee34147e4565c8",
+      "source": "sources/w14-objfile-array-ctor-viresourceelem/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__t7VIArray1Z14VIResourceElem",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6267,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_destroypool_viworldleaf.o",
+      "profile": "authored_cpp",
+      "sha256": "0cfc5af89994f380d36f6d7981cef415a2798eaede1d5c27e2c2f5899dfec893",
+      "source": "sources/w14-objfile-array-destroypool-viworldleaf/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t7VIArray1Z11VIWorldLeaf",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6268,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_destroypool_viworldnode.o",
+      "profile": "authored_cpp",
+      "sha256": "a480e0e66bdbc282e7c8f49bb435d3b6fdba0e38372b0eaa0dedb8057c6dd77f",
+      "source": "sources/w14-objfile-array-destroypool-viworldnode/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t7VIArray1Z11VIWorldNode",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6269,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_dtor_viresourceelem.o",
+      "profile": "authored_cpp",
+      "sha256": "3e59a1abc1f63a9f9d3921f7b7f776f89329bcd150c246e8c86590eb08a137f3",
+      "source": "sources/w14-objfile-array-dtor-viresourceelem/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_t7VIArray1Z14VIResourceElem",
+          "compiled_body_bytes": 148
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6270,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_init_zoneleaf.o",
+      "profile": "authored_cpp",
+      "sha256": "ea8fe25f95b9703f280a8a2dd5990e4779a1d7fcf607addf83a117a9c11044b6",
+      "source": "sources/w14-objfile-array-init-zoneleaf/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t7VIArray1Z10VIZoneLeafi",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6271,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_array_init_zonenode.o",
+      "profile": "authored_cpp",
+      "sha256": "b0d87e1bc3a722026851430860d11f8fdec5e76006013bcbc748498b98dc8aa6",
+      "source": "sources/w14-objfile-array-init-zonenode/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t7VIArray1Z10VIZoneNodei",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6272,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_dictionary_find.o",
+      "profile": "authored_cpp",
+      "sha256": "d0d6e15395c9aae46c9ed119e2b562750df190fb27783cf8fa1a54c9178a7df8",
+      "source": "sources/w14-objfile-dictionary-find/find.cpp",
+      "emitted_functions": [
+        {
+          "name": "Find__12VIDictionaryUiR14VIResourceTypeRi",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6273,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_dictmap_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "b38ab02a0c00927287e57554882af01ef4e9cc1a3cc8fbbfd02cd55aac91aafe",
+      "source": "sources/w14-objfile-dictmap-erase/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi",
+          "compiled_body_bytes": 584
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6274,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_dictmap_find.o",
+      "profile": "authored_cpp",
+      "sha256": "d968587a5776938037fd60e4e8f96516f46c593deff11a3fd45f1b9b30f33cc9",
+      "source": "sources/w14-objfile-dictmap-find/find.cpp",
+      "emitted_functions": [
+        {
+          "name": "Find__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUi",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6275,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_flatfilestructure_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "cb8f98428b56fe0ee57098ec49bd4fa93c2f363fbe13d9d6b9ce7112312fb778",
+      "source": "sources/w14-objfile-flatfilestructure-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__19VIFlatFileStructure",
+          "compiled_body_bytes": 144
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6276,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_flatfilestructure_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "e4edd5af72d68cf0a747539fb98e9fdabec1bacfc362f11c672c7b1337a400c9",
+      "source": "sources/w14-objfile-flatfilestructure-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_19VIFlatFileStructure",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6277,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_multimap_destroypool_emitterentry.o",
+      "profile": "authored_cpp",
+      "sha256": "72c287586888459ada917883373fe560f016089778c12be547b70f0124a95b1f",
+      "source": "sources/w14-objfile-multimap-destroypool-emitterentry/destroypool.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t10VIMultiMap2ZfZ14VIEmitterEntry",
+          "compiled_body_bytes": 364
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6278,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_multimap_init_emitterentry.o",
+      "profile": "authored_cpp",
+      "sha256": "ab0ea6214576464ce0b88955c9979633cd5fe3e8756271513cfd608235e525ad",
+      "source": "sources/w14-objfile-multimap-init-emitterentry/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__t10VIMultiMap2ZfZ14VIEmitterEntryi",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6279,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_abortopen.o",
+      "profile": "authored_cpp",
+      "sha256": "4b7cae1c4bb61ba5831ce826ce523628604d661ffe7ab2de57b2b30313c4bd97",
+      "source": "sources/w14-objfile-objfile-abortopen/abortopen.cpp",
+      "emitted_functions": [
+        {
+          "name": "AbortOpen__9VIObjFile",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6280,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_flush.o",
+      "profile": "authored_cpp",
+      "sha256": "eceaee35729d4c70736cf40875769537b14bd203b3667daae030ad5bcfb2e3fc",
+      "source": "sources/w14-objfile-objfile-flush/flush.cpp",
+      "emitted_functions": [
+        {
+          "name": "Flush__9VIObjFile",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6281,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_readbegin_short.o",
+      "profile": "authored_cpp",
+      "sha256": "d21d7a36023e7081f970d17dbea9d1a413ace30d3d55e8a339f881a19a51976e",
+      "source": "sources/w14-objfile-objfile-readbegin-short/readbegin.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadBegin__9VIObjFileRUsT1",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6282,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_readend.o",
+      "profile": "authored_cpp",
+      "sha256": "c5f84a6d27fe8d871920bf9b9b6a9d9fe28677f8e14bf5c67c653357d923b841",
+      "source": "sources/w14-objfile-objfile-readend/readend.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadEnd__9VIObjFile",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6283,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_readfileheader.o",
+      "profile": "authored_cpp",
+      "sha256": "2325e42b15aba7b4c79fc60d12d7405272fd4ab91835b5ce2421eec6e3ff660b",
+      "source": "sources/w14-objfile-objfile-readfileheader/readfileheader.cpp",
+      "emitted_functions": [
+        {
+          "name": "ReadFileHeader__9VIObjFilei",
+          "compiled_body_bytes": 256
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6284,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_writeend.o",
+      "profile": "authored_cpp",
+      "sha256": "9db457ecd2e0094620f1b5a4efe5f1c4b1ddce8e58d6af7f8fa4e8a3047e3272",
+      "source": "sources/w14-objfile-objfile-writeend/writeend.cpp",
+      "emitted_functions": [
+        {
+          "name": "WriteEnd__9VIObjFile",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6285,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_objfile_writefileheader.o",
+      "profile": "authored_cpp",
+      "sha256": "01d7ee8890406a9a43c07566a3a99e05a6010a1f5618b1e7bf41f80686e65fbb",
+      "source": "sources/w14-objfile-objfile-writefileheader/writefileheader.cpp",
+      "emitted_functions": [
+        {
+          "name": "WriteFileHeader__9VIObjFilei",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6286,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_pool_erase_viparticledefinition.o",
+      "profile": "authored_cpp",
+      "sha256": "846cf966609686db6e320bf17fa88fdbb084edbf089b503fa8e308b9bf14ef77",
+      "source": "sources/w14-objfile-pool-erase-viparticledefinition/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t6VIPool1ZP20VIParticleDefinitioni",
+          "compiled_body_bytes": 232
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6287,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_pool_movetolast_rasterlru.o",
+      "profile": "authored_cpp",
+      "sha256": "c79e2c86edd6e337e4b68971588eba2a5a43554d2aa4399885c1d82bfee34387",
+      "source": "sources/w14-objfile-pool-movetolast-rasterlru/movetolast.cpp",
+      "emitted_functions": [
+        {
+          "name": "MoveToLast__t6VIPool1Z19VIRasterMaterialLRUi",
+          "compiled_body_bytes": 244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6288,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_stringtable_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "d2840371e18ca7062af3dd9029c1badbb051ef75f04550bb5f9cf338ac01cac8",
+      "source": "sources/w14-objfile-stringtable-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13VIStringTable",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6289,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_stringtable_dtor.o",
+      "profile": "authored_cpp",
+      "sha256": "d7ee791ae4398c39f87502d29813bee67a8516368684b054f3d46ec9a0b0b1c2",
+      "source": "sources/w14-objfile-stringtable-dtor/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_13VIStringTable",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6290,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_stringtable_load.o",
+      "profile": "authored_cpp",
+      "sha256": "6601d96fca433807740c170f5ab275732b9c55e2aa2638a9bd3d0d60f1abd67b",
+      "source": "sources/w14-objfile-stringtable-load/load.cpp",
+      "emitted_functions": [
+        {
+          "name": "Load__13VIStringTablePCc",
+          "compiled_body_bytes": 208
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6291,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_stringtable_unload.o",
+      "profile": "authored_cpp",
+      "sha256": "8d8cf8e80c86e7c6c0c860393e70e4bd6a97ee5e59d7aa631a54b6810182717b",
+      "source": "sources/w14-objfile-stringtable-unload/unload.cpp",
+      "emitted_functions": [
+        {
+          "name": "Unload__13VIStringTable",
+          "compiled_body_bytes": 128
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6292,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vilist_addtail.o",
+      "profile": "authored_cpp",
+      "sha256": "266cbdb90ed6a6632e82eb8135bcec54c650f3ec5b603b323ae7a779e3029fd5",
+      "source": "sources/w14-objfile-vilist-addtail/addtail.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddTail__7VILListP7VILNode",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6293,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vilist_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "6cf2b60571d3764d3632c4b3512edcade28a08d6d02eb6ae00f542eb98d9cfc0",
+      "source": "sources/w14-objfile-vilist-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__7VILList",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6294,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vilist_init.o",
+      "profile": "authored_cpp",
+      "sha256": "b06c86fbed4a0fd2e5202ca390d7c6b6c335e1ea4d6cfa322e3dd9b867533a28",
+      "source": "sources/w14-objfile-vilist-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__7VILList",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6295,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vilnode_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "735291b0e0907fc09a83048a9d6e1fb887898a3e839287aa026f3f1c2b324852",
+      "source": "sources/w14-objfile-vilnode-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__7VILNode",
+          "compiled_body_bytes": 12
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6296,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vistring_str16to8.o",
+      "profile": "authored_cpp",
+      "sha256": "4add170e869e3f27c38f3be7101e6b29f716a440267eed13ff83a3c3a38fae4e",
+      "source": "sources/w14-objfile-vistring-str16to8/str16to8.cpp",
+      "emitted_functions": [
+        {
+          "name": "str16to8__8VIStringPcUiPCUs",
+          "compiled_body_bytes": 200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6297,
+      "kind": "independently_authored_source",
+      "object_name": "w14_objfile_vistring_strlen16.o",
+      "profile": "authored_cpp",
+      "sha256": "90f65289d5fac8caaad0b5d3160cfa2c1b50385f93c8e39fbee5d10fb47d35e4",
+      "source": "sources/w14-objfile-vistring-strlen16/strlen16.cpp",
+      "emitted_functions": [
+        {
+          "name": "strlen16__8VIStringPCUs",
+          "compiled_body_bytes": 52
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -92752,7 +93328,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b9692d32de1f7da8a24a45ed75a012b09b901bb546624cb77cf6d4305f65956c",
+  "snapshot_sha256": "d2c2786b31367e41cc4427c1a5a7a590be132c6dbea58752a9b34894c2a8f397",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

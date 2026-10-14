@@ -9858,3 +9858,19 @@ Closed: `norrath_libmtap_change_priority_client_view`, `norrath_libmtap_get_conn
 
 Opened: `net_ready`, `unet_startup_thread__FPv`, `unet_startup_thread_id`, `unet_startup_thread_stack`
 - 2026-10-13 19:02 CDT — agents/w14-startup-io-b (partly selected) — 951 unresolved imports
+
+## agents/w14-objfile
+
+Merged (merge commit, branch tip `6c66070a`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 36 units with fresh `input_order` values 6262 through 6297 (object file reader/writer, string table, list and map primitives; 36 host checks). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: 6296 authored inputs, zero COMMON. The notes' 36 closed names reproduce exactly; the count falls 951 to 942 because 27 callee names open.
+
+| | |
+|---|---|
+| Before | 951 |
+| After | 942 |
+| Closed | 36 |
+| Opened | 27 |
+
+Closed: `AbortOpen__9VIObjFile`, `AddTail__7VILListP7VILNode`, `Allocate__t7VIArray1Z10VIZoneRoom`, `Allocate__t7VIArray1Z11VIWorldLeaf`, `Allocate__t7VIArray1Z11VIWorldNode`, `Clear__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t10VIMultiMap2ZfZ14VIEmitterEntry`, `DestroyPool__t7VIArray1Z11VIWorldLeaf`, `DestroyPool__t7VIArray1Z11VIWorldNode`, `Erase__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `Erase__t6VIPool1ZP20VIParticleDefinitioni`, `Find__12VIDictionaryUiR14VIResourceTypeRi`, `Find__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryRCUi`, `Flush__9VIObjFile`, `Init__7VILList`, `Init__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Init__t7VIArray1Z10VIZoneLeafi`, `Init__t7VIArray1Z10VIZoneNodei`, `Load__13VIStringTablePCc`, `MoveToLast__t6VIPool1Z19VIRasterMaterialLRUi`, `ReadBegin__9VIObjFileRUsT1`, `ReadEnd__9VIObjFile`, `ReadFileHeader__9VIObjFilei`, `Unload__13VIStringTable`, `WriteEnd__9VIObjFile`, `WriteFileHeader__9VIObjFilei`, `_$_13VIStringTable`, `_$_19VIFlatFileStructure`, `_$_t7VIArray1Z14VIResourceElem`, `__13VIStringTable`, `__19VIFlatFileStructure`, `__7VILList`, `__7VILNode`, `__t7VIArray1Z14VIResourceElem`, `str16to8__8VIStringPcUiPCUs`, `strlen16__8VIStringPCUs`
+
+Opened: `Allocate__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Allocate__t7VIArray1Z10VIZoneLeaf`, `Allocate__t7VIArray1Z10VIZoneNode`, `Clear__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Clear__t7VIArray1Z10VIZoneLeaf`, `Clear__t7VIArray1Z10VIZoneNode`, `ConversionTableSize.180`, `DestroyPool__t7VIArray1Z10VIZoneRoom`, `DestroyPool__t7VIArray1Z14VIResourceElem`, `EraseFixup__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `FixupTextBuffer__13VIStringTable`, `Flush__6VIFile`, `FreeNode__t5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `LoadRawFile__13VIStringTablePCcRt7VIArray1Zc`, `Next__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntryi`, `ProcessRawFile__13VIStringTableRCt7VIArray1Zc`, `ReadBegin__9VIObjFileRUsT1RUlRUi`, `WriteEnd__9VIObjFileRUi`, `Write__6VIFilePCvi`, `_$_19VIFlatFileDirectory`, `_$_t7VIArray1Zc`, `_8VIString$ConversionTable1252`, `__10VIZoneRoom`, `__t6VIList1ZP10VIFlatFile`, `__t7VIArray1Zc`, `__wrap_strdup`, `_vt$19VIFlatFileDirectory`
+- 2026-10-13 19:15 CDT — agents/w14-objfile — 942 unresolved imports
