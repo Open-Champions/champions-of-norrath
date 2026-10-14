@@ -10455,3 +10455,4 @@ Closed: `Allocate__t10VIMultiMap2ZfZ14VIEmitterEntry`, `Begin__Ct6VIPool1ZP15VIP
 Opened: `AddNode__t10VIMultiMap2ZfZ14VIEmitterEntryii`, `EraseFixup__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `FreeNode__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LeftRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `LinkFreeChain__t10VIMultiMap2ZfZ14VIEmitterEntryi`, `Next__Ct6VIPool1ZP20VIParticleDefinitioni`, `RightRotate__t10VIMultiMap2ZfZ14VIEmitterEntryi`
 
 Full partial build: 7088 source compilations, one link, 5617 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 00:59 CDT — agents/w15-vi-particle-b — 878 unresolved imports
