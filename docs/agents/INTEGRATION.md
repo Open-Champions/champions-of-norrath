@@ -10620,3 +10620,20 @@ Opened: `Begin__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Begin__Ct5VIMap2Zi
 
 Full partial build: 7316 source compilations, one link, 5830 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:56 CDT — agents/w12-vicont-a — 871 unresolved imports
+
+## agents/w12-wnd-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host test are selected, 4 of 34. **Not selected (no committed host test):** the other 30 window units (`dnas-*`, `eula-*`, `genrenderer-*`, `edit-cleartext` and the rest); they stay authored but unplanned. Tip was about 17 hours old.
+
+| | |
+|---|---|
+| Before | 871 |
+| After | 867 |
+| Closed | 4 |
+| Opened | 0 |
+
+Closed: `Clear__16VIWndReadMessage`, `Close__10VIUIWindowb`, `EnableCr__9VIWndEditi`, `End__Ct5VISet1ZP5VIWnd`
+
+Opened: 
+
+Full partial build: 7320 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

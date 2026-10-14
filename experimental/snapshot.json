@@ -94710,6 +94710,62 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp"
+    },
+    {
+      "input_order": 7318,
+      "component": "w12-wnd-a-edit-enablecr",
+      "object_name": "w12_wnd_a_edit_enablecr.o",
+      "private_object_sha256": "59dae2cc7542beded4027a2dcdc2a4435dbda2dfcc5942387ff049e684faba3e",
+      "emitted_functions": [
+        {
+          "name": "EnableCr__9VIWndEditi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-wnd-a-edit-enablecr/enablecr.cpp"
+    },
+    {
+      "input_order": 7319,
+      "component": "w12-wnd-a-readmessage-clear",
+      "object_name": "w12_wnd_a_readmessage_clear.o",
+      "private_object_sha256": "b94de0562807c246cceae6e7d89e6f21a3698f330a66c0d3f2a9608d6f201afd",
+      "emitted_functions": [
+        {
+          "name": "Clear__16VIWndReadMessage",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-wnd-a-readmessage-clear/clear.cpp"
+    },
+    {
+      "input_order": 7320,
+      "component": "w12-wnd-a-set-end",
+      "object_name": "w12_wnd_a_set_end.o",
+      "private_object_sha256": "3fe8fb1547f10d8cc242c84bfeb8ae155395977307f235366e2f6b1e955b1abc",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VISet1ZP5VIWnd",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-wnd-a-set-end/end.cpp"
+    },
+    {
+      "input_order": 7321,
+      "component": "w12-wnd-a-uiwindow-close",
+      "object_name": "w12_wnd_a_uiwindow_close.o",
+      "private_object_sha256": "ffb74cd668d746a764d5564e3fda6c5063e614528dbcf2d5061f8af3659511ae",
+      "emitted_functions": [
+        {
+          "name": "Close__10VIUIWindowb",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-wnd-a-uiwindow-close/close.cpp"
     }
   ],
   "drafts": [
@@ -110110,7 +110166,45 @@
     "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
     "sources/w12-vicont-a-destroy-pool-primbuffer/host_check.cpp": "0dea955d2abe9810ff72f85b9b57a47aa010d1da4e068641ceea75495b35c88b",
     "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a",
-    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/host_check.cpp": "044a558bcbf26cf361879ab22a8e3c448382f172deb3a2f0ceda0ef48fb73c25"
+    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/host_check.cpp": "044a558bcbf26cf361879ab22a8e3c448382f172deb3a2f0ceda0ef48fb73c25",
+    "sources/w12-wnd-a-dnas-locals/ellipse_count.cpp": "78120aadce78d0623046789c2aa54d838cfebadbf28d6eeb4ebdb019d22e8db5",
+    "sources/w12-wnd-a-dnas-ondrawself/ondrawself.cpp": "f867839d8cd664049009af00a87e385900ae8abf5908c1502f5d4fc86bdb0044",
+    "sources/w12-wnd-a-dnas-onkeydown/onkeydown.cpp": "a89f1949aa0a2e61e073aae405163740a4d1cfac13d6cbd401a2d7c51fce9d4b",
+    "sources/w12-wnd-a-edit-cleartext/cleartext.cpp": "15420c99716657e77a1f4915a0dd1b6cbf51ef5dbf5f2c0cf53d13cdb9faa320",
+    "sources/w12-wnd-a-edit-enablecr/enablecr.cpp": "dcaf8752ea038febd445fa6fd5130cc25d5d60b1d260d57e967b285ec437c5ae",
+    "sources/w12-wnd-a-edit-enablecr/host_check.cpp": "829464a38600d1e18b096e7191d1551ee6ab99127b5479d67ffef98077e1ab97",
+    "sources/w12-wnd-a-eula-ondrawself/ondrawself.cpp": "20d52bfe014de6ca61594f61f6829c5b650c7a20e07f107896afe5ba6b8b2e3b",
+    "sources/w12-wnd-a-eula-onkeydown/onkeydown.cpp": "0290c790c14e9311959c74b99e538ea3ca6917928b05d3b04cccc2b597e12a4e",
+    "sources/w12-wnd-a-genrenderer-locals/render_count.cpp": "6729a419549d0600eebdfaf80c75e1bba64f58ed30fa17a84c0e46a6e49ba0e5",
+    "sources/w12-wnd-a-genrenderer-ondrawself/ondrawself.cpp": "e2392bd9452dc9d190f74e88048990077c12c623cec42d020631a851d8a34b23",
+    "sources/w12-wnd-a-genrenderer-onkeydown/onkeydown.cpp": "3dad8da81353055eb8a597126540cedd824da4cd9c6ff2500fd45298a5622130",
+    "sources/w12-wnd-a-genrenderer-onkeyup/onkeyup.cpp": "69743d2358bbd9b607359d65c2bc0bd544084e6925e47cc4ffe2ec87d2ced575",
+    "sources/w12-wnd-a-legal-ondrawself/ondrawself.cpp": "08c7082c5b8df04e0c6bf194b59c01c556b5734943b0dd21b4843f1d1f628f4a",
+    "sources/w12-wnd-a-legal-onkeydown/onkeydown.cpp": "72e38ad8e80161cc22d3e80bdcc3e9fb5a42eb15a6ff4fcad07428b2c18dd586",
+    "sources/w12-wnd-a-legal-onkeyup/onkeyup.cpp": "83bba604dc555a9d03747ebb9dd3c6e9cc7110135ec37c77844178a9887dcb87",
+    "sources/w12-wnd-a-patcher-locals/dot_state.cpp": "905853c6e007fb20adddc4d8e1255afadbd9bebd4b2f3d7b8d4dc308dc8374e8",
+    "sources/w12-wnd-a-patcher-ondrawself/ondrawself.cpp": "86a0618d597c49553572cdd35537eb763fc956aaaede62fc18c9a82697afe27a",
+    "sources/w12-wnd-a-patcher-onkeydown/onkeydown.cpp": "e46134d68e94c4d8934012c8b70948b4288b80c5c5cf3a763d97a3f731f9d971",
+    "sources/w12-wnd-a-patcher-onkeyup/onkeyup.cpp": "6f0c2182aae0b67e3031eb9de769f7f5353e873d2c2fed616acb0d577e1a888b",
+    "sources/w12-wnd-a-readmessage-clear/clear.cpp": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
+    "sources/w12-wnd-a-readmessage-clear/host_check.cpp": "8e506ffe868984d620a21469c37687966ad2fe256e9932cfd9a2979500bf087c",
+    "sources/w12-wnd-a-set-begin/begin.cpp": "0d6cbec4ac4f47ac8d821bd2ffedd1177e4bd23a086b80e84a80b8317370da44",
+    "sources/w12-wnd-a-set-end/end.cpp": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
+    "sources/w12-wnd-a-set-end/host_check.cpp": "8855b4c31b842756c212edcba54793a5d5f6301eb2aff95c7d0e40cea2cf855a",
+    "sources/w12-wnd-a-set-erase/erase.cpp": "3e8eb10734efa42d6fc8ac5d94a86c54a5fd4c9a862e156bd1756c0715325403",
+    "sources/w12-wnd-a-set-find/find.cpp": "94a48b98b7e91a11da07f861330b74097119f98e19eb79630003f77a92b55a28",
+    "sources/w12-wnd-a-set-insert/insert.cpp": "3289e66003b5490abb65002a4edbb82395c44e7b26e76fa31250e4610c6dfd4a",
+    "sources/w12-wnd-a-set-next/next.cpp": "6b0b1b5e3afa2d4509a7c8980a328f5c254fe56a94d4f8082221d52bbb3ecc58",
+    "sources/w12-wnd-a-splash-locals/last_pad_state.cpp": "d34196ebdcbe18a6db11801d347e1c3595988ae1955a2f513f005c385cdde3f5",
+    "sources/w12-wnd-a-splash-ondrawself/ondrawself.cpp": "d6de9e5b1f9b8cb76a9ece0b755717745ad037a802fe789117c12c49633b063e",
+    "sources/w12-wnd-a-splash-onkeydown/onkeydown.cpp": "bb28180852e24056a4dca5198be7ef4e2459fdb887a709229590d1f1a1946307",
+    "sources/w12-wnd-a-splash-onkeyup/onkeyup.cpp": "1de122d673242bcbd89b3ee49fa0ecd4e2375be6d181a934407080d712faeb28",
+    "sources/w12-wnd-a-uiwindow-close/close.cpp": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf",
+    "sources/w12-wnd-a-uiwindow-close/host_check.cpp": "3d5f340f1ab28be39dd1a303ad52f5565fc2f1cfb6d6f90ef125806b9a75300f",
+    "sources/w12-wnd-a-uiwindow-init/init.cpp": "27f0dab37d3ddfd2573799f2a4f940e558bffe09cbdca8254d60b8589b705422",
+    "sources/w12-wnd-a-wnd-ondraw/ondraw.cpp": "a37be575f67967be9bc89641f528f0513f189d8abf08c07a29a066790f018a9a",
+    "sources/w12-wnd-a-wnd-ondrawself/ondrawself.cpp": "0b983d196e02574ffbbb3f6f4f24dfa80d9732030c1a755466b37aa4edcc3769",
+    "sources/w12-wnd-a-wnd-onkeydown/onkeydown.cpp": "c3391ff37bead5ab15176d0e08f011a1835082018510f9dbae568707336e6851"
   },
   "additional_implementations": [
     {
@@ -110552,11 +110646,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7318,
-    "authored_default_inputs": 7316,
+    "selected_inputs": 7322,
+    "authored_default_inputs": 7320,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5832,
-    "compiled_body_bytes_from_accepted_inputs": 2282160,
+    "emitted_function_definitions_including_helpers": 5836,
+    "compiled_body_bytes_from_accepted_inputs": 2282228,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -110569,7 +110663,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7005
+    "package_selected_inputs": 7009
   },
   "startup_implementations": [
     {
@@ -221798,6 +221892,74 @@
       ],
       "host_files": [
         "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-wnd-a",
+      "source": "sources/w12-wnd-a-edit-enablecr/enablecr.cpp",
+      "source_sha256": "dcaf8752ea038febd445fa6fd5130cc25d5d60b1d260d57e967b285ec437c5ae",
+      "object_sha256": "59dae2cc7542beded4027a2dcdc2a4435dbda2dfcc5942387ff049e684faba3e",
+      "emitted_functions": [
+        {
+          "name": "EnableCr__9VIWndEditi",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w12-wnd-a-edit-enablecr/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-wnd-a",
+      "source": "sources/w12-wnd-a-readmessage-clear/clear.cpp",
+      "source_sha256": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
+      "object_sha256": "b94de0562807c246cceae6e7d89e6f21a3698f330a66c0d3f2a9608d6f201afd",
+      "emitted_functions": [
+        {
+          "name": "Clear__16VIWndReadMessage",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w12-wnd-a-readmessage-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-wnd-a",
+      "source": "sources/w12-wnd-a-set-end/end.cpp",
+      "source_sha256": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
+      "object_sha256": "3fe8fb1547f10d8cc242c84bfeb8ae155395977307f235366e2f6b1e955b1abc",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VISet1ZP5VIWnd",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w12-wnd-a-set-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-wnd-a",
+      "source": "sources/w12-wnd-a-uiwindow-close/close.cpp",
+      "source_sha256": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf",
+      "object_sha256": "ffb74cd668d746a764d5564e3fda6c5063e614528dbcf2d5061f8af3659511ae",
+      "emitted_functions": [
+        {
+          "name": "Close__10VIUIWindowb",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w12-wnd-a-uiwindow-close/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

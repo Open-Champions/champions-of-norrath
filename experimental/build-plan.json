@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7316,
+  "default_authored_inputs": 7320,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8110,7 +8110,11 @@
     "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp": "5733e1ec62e95feaa097ee2ef094f771251872171feab903f44b76498b2bfa28",
     "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp": "fbfee6346e47bdea7b10aa027e023f9f2c80f8bf94deba1e982ad814dae354b3",
     "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
-    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a"
+    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a",
+    "sources/w12-wnd-a-edit-enablecr/enablecr.cpp": "dcaf8752ea038febd445fa6fd5130cc25d5d60b1d260d57e967b285ec437c5ae",
+    "sources/w12-wnd-a-readmessage-clear/clear.cpp": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
+    "sources/w12-wnd-a-set-end/end.cpp": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
+    "sources/w12-wnd-a-uiwindow-close/close.cpp": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf"
   },
   "inputs": [
     {
@@ -108900,6 +108904,66 @@
           "compiled_body_bytes": 88
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7318,
+      "kind": "independently_authored_source",
+      "object_name": "w12_wnd_a_edit_enablecr.o",
+      "profile": "authored_cpp",
+      "sha256": "dcaf8752ea038febd445fa6fd5130cc25d5d60b1d260d57e967b285ec437c5ae",
+      "source": "sources/w12-wnd-a-edit-enablecr/enablecr.cpp",
+      "emitted_functions": [
+        {
+          "name": "EnableCr__9VIWndEditi",
+          "compiled_body_bytes": 24
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7319,
+      "kind": "independently_authored_source",
+      "object_name": "w12_wnd_a_readmessage_clear.o",
+      "profile": "authored_cpp",
+      "sha256": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
+      "source": "sources/w12-wnd-a-readmessage-clear/clear.cpp",
+      "emitted_functions": [
+        {
+          "name": "Clear__16VIWndReadMessage",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7320,
+      "kind": "independently_authored_source",
+      "object_name": "w12_wnd_a_set_end.o",
+      "profile": "authored_cpp",
+      "sha256": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
+      "source": "sources/w12-wnd-a-set-end/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VISet1ZP5VIWnd",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7321,
+      "kind": "independently_authored_source",
+      "object_name": "w12_wnd_a_uiwindow_close.o",
+      "profile": "authored_cpp",
+      "sha256": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf",
+      "source": "sources/w12-wnd-a-uiwindow-close/close.cpp",
+      "emitted_functions": [
+        {
+          "name": "Close__10VIUIWindowb",
+          "compiled_body_bytes": 28
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -108999,7 +109063,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b1e35b3af2c8e9a06c4bdc106d31f4bc57459f194061ec5ff09323bc020818c8",
+  "snapshot_sha256": "30dbd716515b661bd701ceed76bc305d6fee31b69decf22c643fe93540ce7b77",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
