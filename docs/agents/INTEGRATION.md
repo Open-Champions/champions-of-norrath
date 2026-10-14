@@ -10052,3 +10052,19 @@ Closed: `newFlameSwordParticle2`, `newFlameSwordParticle3`, `newIceSwordParticle
 
 Opened: 
 - 2026-10-13 20:23 CDT — agents/w14-m-data-b — 958 unresolved imports
+
+## agents/w14-m-spell-ctors-a
+
+Merged (merge commit, branch tip `cf541ad3`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 9 units (9 emitting functions, the rest data or type-info units) with fresh `input_order` values 6579 through 6587, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 958 |
+| After | 957 |
+| Closed | 9 |
+| Opened | 8 |
+
+Closed: `_$_5Spell`, `__12SpellHealingiP8CreatureP5Skill`, `__13SpellEntangleiP8CreatureP5Skill`, `__15SpellClericRootiP8CreatureP5Skill`, `__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill`, `__15SpellHolyShieldiP8CreatureP5Skill`, `__16SpellConeOfFrostiP8CreatureP5Skill`, `__16SpellCriticalHitiP8CreatureP5Skill`, `__17SpellMinorHealingiP8CreatureP5Skill`
+
+Opened: `_vt$12SpellHealing`, `_vt$13SpellEntangle`, `_vt$15SpellClericRoot`, `_vt$15SpellHateEffect`, `_vt$15SpellHolyShield`, `_vt$16SpellConeOfFrost`, `_vt$16SpellCriticalHit`, `_vt$17SpellMinorHealing`
+- 2026-10-13 20:28 CDT — agents/w14-m-spell-ctors-a — 957 unresolved imports

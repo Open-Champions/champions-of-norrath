@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6577,
+  "default_authored_inputs": 6586,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -5148,6 +5148,15 @@
     "sources/w14-m-data-b-spellcharge-hit-something-particle-8d6780/spellcharge_hit_something_particle_8d6780.cpp": "ae03551b38a1f5d1fc7a0caea80a110703e5451892e424c805375bdc9c49c762",
     "sources/w14-m-data-b-summon-skeleton-particle1/summonskeletonParticle1.cpp": "5f2e5a7ebef91bbd610a876263e72dc6c94986fbac9a1bde632cc1040a4d97d2",
     "sources/w14-m-data-b-summon-skeleton-particle2/summonskeletonParticle2.cpp": "44b70793c54e8413a93ac52aacafcc8385189c1a5f4ce0fc198a61acb90594cf",
+    "sources/w14-m-spell-ctors-a-ctor-cleric-root/spell_cleric_root_ctor.cpp": "4f54f41dc9b3c9772934ce5e3725f7e4d2e7713804ea0d87381d2e37532eab16",
+    "sources/w14-m-spell-ctors-a-ctor-cone-of-frost/spell_cone_of_frost_ctor.cpp": "615bd3af70df9899f2add1b92e57a67d75deab22905756ccb6a3b02589b5b6f9",
+    "sources/w14-m-spell-ctors-a-ctor-critical-hit/spell_critical_hit_ctor.cpp": "400e8fe449ec15abd5bab70200a49fcb5015ac41f551b8a19fd7d08b6944edc9",
+    "sources/w14-m-spell-ctors-a-ctor-entangle/spell_entangle_ctor.cpp": "e17e1a26904e83b8a40b025a6b1f1bdaee004d0d4969d867da47e2b84d2a1ce4",
+    "sources/w14-m-spell-ctors-a-ctor-hate-effect/spell_hate_effect_ctor.cpp": "291057126d1aab65fe72b5323f77553c56bfda29317c62de0a5c9f4dec986f05",
+    "sources/w14-m-spell-ctors-a-ctor-healing/spell_healing_ctor.cpp": "f722dc62d2e07abd0638d2f0713e473e63ed6655701661419f7134d8c1d1ecb9",
+    "sources/w14-m-spell-ctors-a-ctor-holy-shield/spell_holy_shield_ctor.cpp": "7ba49cc291693cfe1e68c03b4acfffdcb2340a9bc71f2d1566e10a23feeae926",
+    "sources/w14-m-spell-ctors-a-ctor-minor-healing/spell_minor_healing_ctor.cpp": "0e28ed334e14ec0cbff80760a2dbf4c854f6c34239b861ba7cbc316a7051169d",
+    "sources/w14-m-spell-ctors-a-dtor-5spell/dtor.cpp": "ab41acb46e677aacbc373f5e52d7dca8169b9ef5128d25a3d937f5721c4a658f",
     "sources/w14-objfile-array-allocate-viworldleaf/allocate.cpp": "75bf1c35262f8ae75103b513f8b207b6b9202dd317de2ceffed36b6dd7a3e4ba",
     "sources/w14-objfile-array-allocate-viworldnode/allocate.cpp": "0aa87a0a8094288d9e524c0dfbbc544ee54bd95131d10283263dd7b16d279a3f",
     "sources/w14-objfile-array-allocate-vizoneroom/allocate.cpp": "44479144cc9e1884acfaf1d0f977e723dfffd8ad7869c1cf184f661b71d687d4",
@@ -97481,6 +97490,141 @@
       "sha256": "44b70793c54e8413a93ac52aacafcc8385189c1a5f4ce0fc198a61acb90594cf",
       "source": "sources/w14-m-data-b-summon-skeleton-particle2/summonskeletonParticle2.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6579,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_cleric_root.o",
+      "profile": "authored_cpp",
+      "sha256": "4f54f41dc9b3c9772934ce5e3725f7e4d2e7713804ea0d87381d2e37532eab16",
+      "source": "sources/w14-m-spell-ctors-a-ctor-cleric-root/spell_cleric_root_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellClericRootiP8CreatureP5Skill",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6580,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_cone_of_frost.o",
+      "profile": "authored_cpp",
+      "sha256": "615bd3af70df9899f2add1b92e57a67d75deab22905756ccb6a3b02589b5b6f9",
+      "source": "sources/w14-m-spell-ctors-a-ctor-cone-of-frost/spell_cone_of_frost_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__16SpellConeOfFrostiP8CreatureP5Skill",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6581,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_critical_hit.o",
+      "profile": "authored_cpp",
+      "sha256": "400e8fe449ec15abd5bab70200a49fcb5015ac41f551b8a19fd7d08b6944edc9",
+      "source": "sources/w14-m-spell-ctors-a-ctor-critical-hit/spell_critical_hit_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__16SpellCriticalHitiP8CreatureP5Skill",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6582,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_entangle.o",
+      "profile": "authored_cpp",
+      "sha256": "e17e1a26904e83b8a40b025a6b1f1bdaee004d0d4969d867da47e2b84d2a1ce4",
+      "source": "sources/w14-m-spell-ctors-a-ctor-entangle/spell_entangle_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13SpellEntangleiP8CreatureP5Skill",
+          "compiled_body_bytes": 172
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6583,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_hate_effect.o",
+      "profile": "authored_cpp",
+      "sha256": "291057126d1aab65fe72b5323f77553c56bfda29317c62de0a5c9f4dec986f05",
+      "source": "sources/w14-m-spell-ctors-a-ctor-hate-effect/spell_hate_effect_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellHateEffectiiP8CreatureP10GameObjectP5Skill",
+          "compiled_body_bytes": 260
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6584,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "f722dc62d2e07abd0638d2f0713e473e63ed6655701661419f7134d8c1d1ecb9",
+      "source": "sources/w14-m-spell-ctors-a-ctor-healing/spell_healing_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12SpellHealingiP8CreatureP5Skill",
+          "compiled_body_bytes": 372
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6585,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_holy_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "7ba49cc291693cfe1e68c03b4acfffdcb2340a9bc71f2d1566e10a23feeae926",
+      "source": "sources/w14-m-spell-ctors-a-ctor-holy-shield/spell_holy_shield_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellHolyShieldiP8CreatureP5Skill",
+          "compiled_body_bytes": 316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6586,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_ctor_minor_healing.o",
+      "profile": "authored_cpp",
+      "sha256": "0e28ed334e14ec0cbff80760a2dbf4c854f6c34239b861ba7cbc316a7051169d",
+      "source": "sources/w14-m-spell-ctors-a-ctor-minor-healing/spell_minor_healing_ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__17SpellMinorHealingiP8CreatureP5Skill",
+          "compiled_body_bytes": 360
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6587,
+      "kind": "independently_authored_source",
+      "object_name": "w14_m_spell_ctors_a_dtor_5spell.o",
+      "profile": "authored_cpp",
+      "sha256": "ab41acb46e677aacbc373f5e52d7dca8169b9ef5128d25a3d937f5721c4a658f",
+      "source": "sources/w14-m-spell-ctors-a-dtor-5spell/dtor.cpp",
+      "emitted_functions": [
+        {
+          "name": "_$_5Spell",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -97580,7 +97724,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "5df01f50f93cbe406aa88d61d78a24c02bbce48026a7a3640a325d0a18436b53",
+  "snapshot_sha256": "d5e554102465c253627d1436d3fb6a0691c6e51df5a6426e3cc1b0d8ee046095",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
