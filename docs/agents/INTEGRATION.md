@@ -10240,3 +10240,20 @@ Opened: `BufferedWrite__6VIFilePCvi`, `CreateMotif__22VIParticleDefinitionEx`, `
 
 Full partial build: 6814 source compilations, one link, 5429 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-13 23:27 CDT — agents/w15-vi-io-sound-a — 895 unresolved imports
+
+## agents/w15-fe-ui-b
+
+Merged (merge commit; tip more than 45 minutes old). All 27 units have a `host_check.cpp` (not a plan input) and the notes record a private paired run per function; the notes left their opened-imports section blank, so the lists below come from this integration's full build. All 27 units are selected. `UITextures` is still unresolved: it is outside this package.
+
+| | |
+|---|---|
+| Before | 895 |
+| After | 878 |
+| Closed | 27 |
+| Opened | 10 |
+
+Closed: `Begin2D__4VIUI`, `BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi`, `BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi`, `BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi`, `CombineDeadkey__10VIKeyboardUc`, `ConversionTableSize.180`, `CountLines__10VIUIWindowPCUsi`, `DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii`, `DrawFrameVScroll__10VIUIWindowiiiif`, `DrawHScroll__10VIUIWindowiiifUi`, `Draw__10VIUIWindow`, `End2D__4VIUI`, `GetUITexture__F9VIUITexId`, `QueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `ResetTickPulse__10VIUIWindow`, `SoundPlay__4VIUI11VIUISoundId`, `StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef`, `TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi`, `Text__10VIUIWindowPCUsii9VIUICOLORUi`, `TickPulse__C10VIUIWindow`, `TickR__10VIUIWindowiib`, `USEnglishKbdMapTable`, `combineTable`, `sConvert16`, `sFrDeadkey`, `sUsDeadkeyCount`
+
+Opened: `BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi`, `DrawVScroll__10VIUIWindowG8VIVect2IifUi`, `GetUISound__F11VIUISoundId`, `SoundPlay__4VIUIPCcf`, `StretchBlit__8VIRasteriUiRC8VIVect2IN3316VIAlphaBlendModef`, `TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi`, `UITextures`, `VIHashResourceID_Icon__FPCc`
+
+Full partial build: 6841 source compilations, one link, 5450 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

@@ -88187,6 +88187,354 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-vi-io-sound-a-sprite-release/release.cpp"
+    },
+    {
+      "input_order": 6816,
+      "component": "w15-fe-ui-b-combine-table",
+      "object_name": "w15_fe_ui_b_combine_table.o",
+      "private_object_sha256": "1b73cc69da354fad63bf604f28cd771a20563b50d7606d377fb2eb4a1dc1ecda",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-combine-table/combine_table.cpp"
+    },
+    {
+      "input_order": 6817,
+      "component": "w15-fe-ui-b-vikeyboard-combine-deadkey",
+      "object_name": "w15_fe_ui_b_vikeyboard_combine_deadkey.o",
+      "private_object_sha256": "e8084b2512f35df059fc3fb60d23601152c140e0f3ba396b282c2ded02abed4c",
+      "emitted_functions": [
+        {
+          "name": "CombineDeadkey__10VIKeyboardUc",
+          "compiled_body_bytes": 728
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/combine_deadkey.cpp"
+    },
+    {
+      "input_order": 6818,
+      "component": "w15-fe-ui-b-vikeyboard-fr-deadkey",
+      "object_name": "w15_fe_ui_b_vikeyboard_fr_deadkey.o",
+      "private_object_sha256": "0f3acd6351daa31c611202d24c10d1b7b1e4f7b1fc4f039d27a98a6f31307a14",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/fr_deadkey.cpp"
+    },
+    {
+      "input_order": 6819,
+      "component": "w15-fe-ui-b-vikeyboard-queue-key-event",
+      "object_name": "w15_fe_ui_b_vikeyboard_queue_key_event.o",
+      "private_object_sha256": "07467c5f76f5760811867d75350de547b119c161645f11a5d033a40efa0c6c57",
+      "emitted_functions": [
+        {
+          "name": "QueueKeyEvent__10VIKeyboardP12VIConsoleKey",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vikeyboard-queue-key-event/queue_key_event.cpp"
+    },
+    {
+      "input_order": 6820,
+      "component": "w15-fe-ui-b-vikeyboard-us-deadkey-count",
+      "object_name": "w15_fe_ui_b_vikeyboard_us_deadkey_count.o",
+      "private_object_sha256": "3bebf3dd41ca05d69c01082154c67e4f35819c2ebf375df4c035aae4c1e1da25",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/us_deadkey_count.cpp"
+    },
+    {
+      "input_order": 6821,
+      "component": "w15-fe-ui-b-vikeyboard-us-english-map-table",
+      "object_name": "w15_fe_ui_b_vikeyboard_us_english_map_table.o",
+      "private_object_sha256": "1b516e6ad9ad8d3a2265e6680bf97add2ca58d1015c5a5ce377a132d8d018e8e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/us_english_kbd_map_table.cpp"
+    },
+    {
+      "input_order": 6822,
+      "component": "w15-fe-ui-b-vistring-conversion-table-size",
+      "object_name": "w15_fe_ui_b_vistring_conversion_table_size.o",
+      "private_object_sha256": "25e6869a23ac259b9574256e0b11e64a616442f93b26f69daeaa59865378f544",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vistring-conversion-table-size/conversion_table_size.cpp"
+    },
+    {
+      "input_order": 6823,
+      "component": "w15-fe-ui-b-vistring-convert16",
+      "object_name": "w15_fe_ui_b_vistring_convert16.o",
+      "private_object_sha256": "9c3b6472db28495f6d25691c78cb5cca9f1eb0f61916da33b6affe868bd2159e",
+      "emitted_functions": [],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-vistring-convert16/convert16.cpp"
+    },
+    {
+      "input_order": 6824,
+      "component": "w15-fe-ui-b-viui-begin2d",
+      "object_name": "w15_fe_ui_b_viui_begin2d.o",
+      "private_object_sha256": "4540f49f6b47e3150354bac2b38f31e700d9c4acaa930fcc97cc7422c51c5385",
+      "emitted_functions": [
+        {
+          "name": "Begin2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-begin2d/begin2d.cpp"
+    },
+    {
+      "input_order": 6825,
+      "component": "w15-fe-ui-b-viui-blit-horz",
+      "object_name": "w15_fe_ui_b_viui_blit_horz.o",
+      "private_object_sha256": "cc852c445b7c3d69f39e9197c20b8ff13518f0b70ffef74790851395c924db0c",
+      "emitted_functions": [
+        {
+          "name": "BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-blit-horz/blit_horz.cpp"
+    },
+    {
+      "input_order": 6826,
+      "component": "w15-fe-ui-b-viui-blit-vert",
+      "object_name": "w15_fe_ui_b_viui_blit_vert.o",
+      "private_object_sha256": "7a0039167faea3d06828bc3730fcea34af3d06d11deb912a267ac74e8a3088f9",
+      "emitted_functions": [
+        {
+          "name": "BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-blit-vert/blit_vert.cpp"
+    },
+    {
+      "input_order": 6827,
+      "component": "w15-fe-ui-b-viui-blitex-at",
+      "object_name": "w15_fe_ui_b_viui_blitex_at.o",
+      "private_object_sha256": "cb6f97433f3658e7b305641e6245240cf987b2f11ffaafdf98b79f93d5b1b3b6",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-blitex-at/blitex_at.cpp"
+    },
+    {
+      "input_order": 6828,
+      "component": "w15-fe-ui-b-viui-blitex-size",
+      "object_name": "w15_fe_ui_b_viui_blitex_size.o",
+      "private_object_sha256": "be595c75b4d1c1c07d02790c83b348ce2ad3b67bc76a96e37f7cb52035a200ce",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-blitex-size/blitex_size.cpp"
+    },
+    {
+      "input_order": 6829,
+      "component": "w15-fe-ui-b-viui-draw-centered-string-ex",
+      "object_name": "w15_fe_ui_b_viui_draw_centered_string_ex.o",
+      "private_object_sha256": "e8281e438200984ab74ed0d0fa4fd021a3a0bb4653468313d615048d2b4012b1",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-draw-centered-string-ex/draw_centered_string_ex.cpp"
+    },
+    {
+      "input_order": 6830,
+      "component": "w15-fe-ui-b-viui-end2d",
+      "object_name": "w15_fe_ui_b_viui_end2d.o",
+      "private_object_sha256": "4291d96fdcde5ecf09e6f19bd20db3da0c18afea6b9c70b9ccb463422a1828b3",
+      "emitted_functions": [
+        {
+          "name": "End2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-end2d/end2d.cpp"
+    },
+    {
+      "input_order": 6831,
+      "component": "w15-fe-ui-b-viui-get-ui-texture",
+      "object_name": "w15_fe_ui_b_viui_get_ui_texture.o",
+      "private_object_sha256": "7a969bb1c9f9021c89867f2457a0b185714d4622a05e4def04c065ed8b7acb99",
+      "emitted_functions": [
+        {
+          "name": "GetUITexture__F9VIUITexId",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-get-ui-texture/get_ui_texture.cpp"
+    },
+    {
+      "input_order": 6832,
+      "component": "w15-fe-ui-b-viui-sound-play",
+      "object_name": "w15_fe_ui_b_viui_sound_play.o",
+      "private_object_sha256": "c9b3f3359d309af9b316884f727163381aedfeef4d519e0edbd8bf10e2bea30d",
+      "emitted_functions": [
+        {
+          "name": "SoundPlay__4VIUI11VIUISoundId",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-sound-play/sound_play.cpp"
+    },
+    {
+      "input_order": 6833,
+      "component": "w15-fe-ui-b-viui-stretch-blitex",
+      "object_name": "w15_fe_ui_b_viui_stretch_blitex.o",
+      "private_object_sha256": "834d2a61451e5c55e3cddb0b3423083f8d5873f364b3b103f2a063631f08f99b",
+      "emitted_functions": [
+        {
+          "name": "StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viui-stretch-blitex/stretch_blitex.cpp"
+    },
+    {
+      "input_order": 6834,
+      "component": "w15-fe-ui-b-viuiwindow-count-lines",
+      "object_name": "w15_fe_ui_b_viuiwindow_count_lines.o",
+      "private_object_sha256": "143a722aab6c0e75fec7504eed55a13d766dbed6a9c7eb152e862411e2b26345",
+      "emitted_functions": [
+        {
+          "name": "CountLines__10VIUIWindowPCUsi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-count-lines/count_lines.cpp"
+    },
+    {
+      "input_order": 6835,
+      "component": "w15-fe-ui-b-viuiwindow-draw",
+      "object_name": "w15_fe_ui_b_viuiwindow_draw.o",
+      "private_object_sha256": "2349dd0ed2a9931c52daab1d49a67b3416112f86688a50ff5129416f313224e7",
+      "emitted_functions": [
+        {
+          "name": "Draw__10VIUIWindow",
+          "compiled_body_bytes": 1036
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-draw/draw.cpp"
+    },
+    {
+      "input_order": 6836,
+      "component": "w15-fe-ui-b-viuiwindow-drawframevscroll",
+      "object_name": "w15_fe_ui_b_viuiwindow_drawframevscroll.o",
+      "private_object_sha256": "0e20c7548a7d8880d5a72eb3fc41142fc609f2e754e4f83dcc1ef5e5a68a0a5d",
+      "emitted_functions": [
+        {
+          "name": "DrawFrameVScroll__10VIUIWindowiiiif",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/drawframevscroll.cpp"
+    },
+    {
+      "input_order": 6837,
+      "component": "w15-fe-ui-b-viuiwindow-drawhscroll",
+      "object_name": "w15_fe_ui_b_viuiwindow_drawhscroll.o",
+      "private_object_sha256": "d832725ea2d1b713730c008590aa99d39883ec4ffa9cdddb9717cad8a9ba549e",
+      "emitted_functions": [
+        {
+          "name": "DrawHScroll__10VIUIWindowiiifUi",
+          "compiled_body_bytes": 556
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawhscroll/drawhscroll.cpp"
+    },
+    {
+      "input_order": 6838,
+      "component": "w15-fe-ui-b-viuiwindow-reset-tick-pulse",
+      "object_name": "w15_fe_ui_b_viuiwindow_reset_tick_pulse.o",
+      "private_object_sha256": "aba3088efd95a9cd629e7f5f4a0f5c53b304f8ac092f7f51fc2a82f450ed813b",
+      "emitted_functions": [
+        {
+          "name": "ResetTickPulse__10VIUIWindow",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/reset_tick_pulse.cpp"
+    },
+    {
+      "input_order": 6839,
+      "component": "w15-fe-ui-b-viuiwindow-text",
+      "object_name": "w15_fe_ui_b_viuiwindow_text.o",
+      "private_object_sha256": "42408e2a524d572132c4a2096159c6f812061a058184d29aa555328b87eb30e7",
+      "emitted_functions": [
+        {
+          "name": "Text__10VIUIWindowPCUsii9VIUICOLORUi",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-text/text.cpp"
+    },
+    {
+      "input_order": 6840,
+      "component": "w15-fe-ui-b-viuiwindow-textbox-color",
+      "object_name": "w15_fe_ui_b_viuiwindow_textbox_color.o",
+      "private_object_sha256": "e3576472deddb0f060549f524c00c771d510d425c2cc16596907c808dff98f65",
+      "emitted_functions": [
+        {
+          "name": "TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp"
+    },
+    {
+      "input_order": 6841,
+      "component": "w15-fe-ui-b-viuiwindow-tick-pulse",
+      "object_name": "w15_fe_ui_b_viuiwindow_tick_pulse.o",
+      "private_object_sha256": "eb85bb9de8a0269fd90cf5de03e0d623151a0d182b23a16c1c9e7ebabbfec9b9",
+      "emitted_functions": [
+        {
+          "name": "TickPulse__C10VIUIWindow",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp"
+    },
+    {
+      "input_order": 6842,
+      "component": "w15-fe-ui-b-viuiwindow-tickr",
+      "object_name": "w15_fe_ui_b_viuiwindow_tickr.o",
+      "private_object_sha256": "0d262a101bcba0b6ff4c7b8ca2524274a0243b29ddd2ef81621a43f8e26113fb",
+      "emitted_functions": [
+        {
+          "name": "TickR__10VIUIWindowiib",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp"
     }
   ],
   "drafts": [
@@ -102523,7 +102871,61 @@
     "sources/w15-vi-io-sound-a-sprite-copy/copy.cpp": "37b6b0672d7fb1cb9597bd4c4e0fdc6a5697c78c877d74b0d6e80596c930e13c",
     "sources/w15-vi-io-sound-a-sprite-copy/host_check.cpp": "8c25dfa41b9cee0da2827ec490c088089eadd9f1a4255cad2407f43e9a3d8366",
     "sources/w15-vi-io-sound-a-sprite-release/host_check.cpp": "aa131e238fa0c6d7f9886e2d2a404e4288727e7676dc3d6b375140784892399b",
-    "sources/w15-vi-io-sound-a-sprite-release/release.cpp": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4"
+    "sources/w15-vi-io-sound-a-sprite-release/release.cpp": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4",
+    "sources/w15-fe-ui-b-combine-table/combine_table.cpp": "73e4c0a0b0a6958ac6b522ed4b787014f6789310e0cf7fcab6ed2ead4ec660d1",
+    "sources/w15-fe-ui-b-combine-table/host_check.cpp": "8aa641b97a7c20e30c72a558c215bff724d2904e50f3eb0f2b01c932d36c3633",
+    "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/combine_deadkey.cpp": "99575f8073ed6272976a99f0711b68b368c175bb3b3c62883f0580526c335f5c",
+    "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/host_check.cpp": "35afbbca3aca48b48d23a5392d5a0a2aac1d1e0b7223a3c4c74ab0f67e708812",
+    "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/fr_deadkey.cpp": "b293bc02c3bfa41c76a33397ec44cd5c2b8b82586f5e668b030eaadfbe28053c",
+    "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/host_check.cpp": "f9e12b126e7010f5b819eee45bc45d67355415a5b346d9b452a96c5396b30925",
+    "sources/w15-fe-ui-b-vikeyboard-queue-key-event/host_check.cpp": "28635a78f425bc9a24b9c7d60f6574606a44363de4f0776dd125edd1370de8e8",
+    "sources/w15-fe-ui-b-vikeyboard-queue-key-event/queue_key_event.cpp": "291abcc4d121822eb8556f8921eb68b401bb46a1bb101c03f1f720798358eecb",
+    "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/host_check.cpp": "15067ebc8d42f0ce949ab2c63d3f6be17635de0ba6979367ab5fa7b9109f00d8",
+    "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/us_deadkey_count.cpp": "5e5d693863b8613cad4cd15a843290c2c0ea1357939d7b0d4e8616fd7d04cf29",
+    "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/host_check.cpp": "ab84d44e9421a68905bc9343d4bf7886620789dd1fcdee91decb7885ecbf7c31",
+    "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/us_english_kbd_map_table.cpp": "37a5a75effafb6b1884f5c3ac509215175d6b01ca2230ca988b3f49a7bc1a930",
+    "sources/w15-fe-ui-b-vistring-conversion-table-size/conversion_table_size.cpp": "5f28ca91a9877ba7377b90cf1931071c1b94fc6429f8f6f47bfc3390b0ecaf45",
+    "sources/w15-fe-ui-b-vistring-conversion-table-size/host_check.cpp": "43712eaa47db45e12995005bbeee59119845bf80588c8d47ad1d2c587ddbb2fb",
+    "sources/w15-fe-ui-b-vistring-convert16/convert16.cpp": "f89dff079d7e5558c95a979395381461efe763d04a8801b85a756a4aa6d17d7f",
+    "sources/w15-fe-ui-b-vistring-convert16/host_check.cpp": "85ccc10e4d73bee65756831883e594e365226392709e88bdbfa6be0133f0ec36",
+    "sources/w15-fe-ui-b-viui-begin2d/begin2d.cpp": "97fe676e89b160d2b3aa1f4808f81cf1354c323c3d1e13ca25ddd24ee294911e",
+    "sources/w15-fe-ui-b-viui-begin2d/host_check.cpp": "ffaf41cd8a29dcd14e1a205b40b985926f3e62752b0b9d2614a7ed29e72f92ad",
+    "sources/w15-fe-ui-b-viui-blit-horz/blit_horz.cpp": "bfd134b7f03a969f6da1b342878fb0b92d46fbf51802962ee4f4b67040f156c0",
+    "sources/w15-fe-ui-b-viui-blit-horz/host_check.cpp": "73ac100a3c6dd9b1a7bae2fddfc7a6f42ad97ffdf7d8f40a23c8766e769cfbfd",
+    "sources/w15-fe-ui-b-viui-blit-vert/blit_vert.cpp": "96c84a4c504e69f063231bf8c8f3322b1f54b8a7a501f72d67b4895ca95795ce",
+    "sources/w15-fe-ui-b-viui-blit-vert/host_check.cpp": "454a60ed173002658bca9032cd86442fd9cb872700702fa593661490784b0f3b",
+    "sources/w15-fe-ui-b-viui-blitex-at/blitex_at.cpp": "10e980d50db706ba0f714930f86efa9d3324abe946a6b90150e293198929de35",
+    "sources/w15-fe-ui-b-viui-blitex-at/host_check.cpp": "bffa5464d6570e0726e44403cd88dd22f8f214311b45c2b3478eeb8d51ce3b24",
+    "sources/w15-fe-ui-b-viui-blitex-size/blitex_size.cpp": "080a0a13352fae318e80f36eb23e59c25c38dacf0653d88bc244edf80d267786",
+    "sources/w15-fe-ui-b-viui-blitex-size/host_check.cpp": "7c4570b40f2360e127bb3d47b0c0c3b9f9939d8d378da4d5f90f2eeaf497580c",
+    "sources/w15-fe-ui-b-viui-draw-centered-string-ex/draw_centered_string_ex.cpp": "3ff0706d62de8ddc190501c993179f3c4563c5fcbebf7c10e9cd7bb44da17909",
+    "sources/w15-fe-ui-b-viui-draw-centered-string-ex/host_check.cpp": "6eb8aa3207690e66daf7dbb92074d6ce76f72ae9c5377c39a0cdee987817009f",
+    "sources/w15-fe-ui-b-viui-end2d/end2d.cpp": "c6978d0889c1abcbc30a2c1462750fe9c2a2155bf95327e947b0733c81535b09",
+    "sources/w15-fe-ui-b-viui-end2d/host_check.cpp": "033089f6527b08cd5dea55b11920d5acff213f3316495dc4b6cb091298ad79e9",
+    "sources/w15-fe-ui-b-viui-get-ui-texture/get_ui_texture.cpp": "8640662edd6c0fb214a57c5a114b8762d8c34633d3db4cdd5b6f81b56f6d7925",
+    "sources/w15-fe-ui-b-viui-get-ui-texture/host_check.cpp": "47b22a365e43d63949e9b0d21be7c825f856a60809073965f3ed5aeb832c6e9d",
+    "sources/w15-fe-ui-b-viui-sound-play/host_check.cpp": "41b81fef3a4182beaff3d74627bf1160925ae9f5a37ff3f0afd689f913895815",
+    "sources/w15-fe-ui-b-viui-sound-play/sound_play.cpp": "570e1e9737ace9cc7783fc714cab0b123194301600a0059894be8fed4eeffac5",
+    "sources/w15-fe-ui-b-viui-stretch-blitex/host_check.cpp": "b1841f6dd55f95ada66263b2bd40355aae757a5c2e6b6da8fb9fd38b561c22c4",
+    "sources/w15-fe-ui-b-viui-stretch-blitex/stretch_blitex.cpp": "c5ee7b31df0a614b6a6d14afe2959b49ee54b0fd13c2facbc90423898af5e598",
+    "sources/w15-fe-ui-b-viuiwindow-count-lines/count_lines.cpp": "18efa15c1b461d9e08d74bf30a23c7c62abc53f34eee193dd31b6e374bfcb22c",
+    "sources/w15-fe-ui-b-viuiwindow-count-lines/host_check.cpp": "3ce11be1a5a2f2cc01734312aa2b46bd8dd08da9e36f8e8b96a74de3b3afc3c7",
+    "sources/w15-fe-ui-b-viuiwindow-draw/draw.cpp": "b15a4e8bc25bb48b6d2ea46a0ddfed6ff2fa57ef971de0b9995ed0420ca7e814",
+    "sources/w15-fe-ui-b-viuiwindow-draw/host_check.cpp": "0ec59939c64b166049f98cc2cfe32d12240a7f31b37598d8c3f686a8c69845a0",
+    "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/drawframevscroll.cpp": "36772a09ae06319d15411d36f9ab9fb3a2c410e77ebfde9a2797f1fc9b9006f3",
+    "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/host_check.cpp": "43ca118c1e7047d01b3ef6ce0566e614c0e57cc32d8f0584af2f05e67352aca5",
+    "sources/w15-fe-ui-b-viuiwindow-drawhscroll/drawhscroll.cpp": "89b486d4d242e65aeeda44725e37be7df43e505db62e02721ba0cd9d57fd3875",
+    "sources/w15-fe-ui-b-viuiwindow-drawhscroll/host_check.cpp": "87f907698b6967567975681f918794636418c8b2da3f05efb10302a12d44a9d6",
+    "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/host_check.cpp": "1c6c669f79414a0270c3b7c4105a11d691ef2a665018c8ff249a1c0c6d52d649",
+    "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/reset_tick_pulse.cpp": "7fce803438ed04435dc32c0cb238631e75c95b668e28d87e1dec3d56f7d70d74",
+    "sources/w15-fe-ui-b-viuiwindow-text/host_check.cpp": "05f9e5592e126a288f03475c123b43ed94c9fe595b3efb942d515aaac16365ce",
+    "sources/w15-fe-ui-b-viuiwindow-text/text.cpp": "08673828b684f8873a0ba7bda2222d21ca6394919d388fb0d03adbc5c0b7a967",
+    "sources/w15-fe-ui-b-viuiwindow-textbox-color/host_check.cpp": "9bcb5dec4910b19d266fc706a547836cc339caaee1acd2d17d924d49b95d17f0",
+    "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp": "902355d2653742cd393d29cc46b2bb9ad4021732f9e7fd88b83bd32dd9c65094",
+    "sources/w15-fe-ui-b-viuiwindow-tick-pulse/host_check.cpp": "2f7109f20f8306d53d166bc4cae3523a82dcb8c85acec9a505c95358c788fe00",
+    "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp": "4ea8b3877bcbbfa1f0010f2a0870cd705e4b18310420b5c27f2b725c72243539",
+    "sources/w15-fe-ui-b-viuiwindow-tickr/host_check.cpp": "754dcd6ceb49134d6d11a6fecb0bcfcd52acac84cab50a2da624d049719a8fc8",
+    "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e"
   },
   "additional_implementations": [
     {
@@ -102965,11 +103367,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6816,
-    "authored_default_inputs": 6814,
+    "selected_inputs": 6843,
+    "authored_default_inputs": 6841,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5431,
-    "compiled_body_bytes_from_accepted_inputs": 2170932,
+    "emitted_function_definitions_including_helpers": 5452,
+    "compiled_body_bytes_from_accepted_inputs": 2176728,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -102982,7 +103384,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6503
+    "package_selected_inputs": 6530
   },
   "startup_implementations": [
     {
@@ -206182,6 +206584,435 @@
       ],
       "host_files": [
         "sources/w15-vi-io-sound-a-sprite-release/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-combine-table/combine_table.cpp",
+      "source_sha256": "73e4c0a0b0a6958ac6b522ed4b787014f6789310e0cf7fcab6ed2ead4ec660d1",
+      "object_sha256": "1b73cc69da354fad63bf604f28cd771a20563b50d7606d377fb2eb4a1dc1ecda",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-combine-table/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/combine_deadkey.cpp",
+      "source_sha256": "99575f8073ed6272976a99f0711b68b368c175bb3b3c62883f0580526c335f5c",
+      "object_sha256": "e8084b2512f35df059fc3fb60d23601152c140e0f3ba396b282c2ded02abed4c",
+      "emitted_functions": [
+        {
+          "name": "CombineDeadkey__10VIKeyboardUc",
+          "compiled_body_bytes": 728
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/fr_deadkey.cpp",
+      "source_sha256": "b293bc02c3bfa41c76a33397ec44cd5c2b8b82586f5e668b030eaadfbe28053c",
+      "object_sha256": "0f3acd6351daa31c611202d24c10d1b7b1e4f7b1fc4f039d27a98a6f31307a14",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vikeyboard-queue-key-event/queue_key_event.cpp",
+      "source_sha256": "291abcc4d121822eb8556f8921eb68b401bb46a1bb101c03f1f720798358eecb",
+      "object_sha256": "07467c5f76f5760811867d75350de547b119c161645f11a5d033a40efa0c6c57",
+      "emitted_functions": [
+        {
+          "name": "QueueKeyEvent__10VIKeyboardP12VIConsoleKey",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-vikeyboard-queue-key-event/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/us_deadkey_count.cpp",
+      "source_sha256": "5e5d693863b8613cad4cd15a843290c2c0ea1357939d7b0d4e8616fd7d04cf29",
+      "object_sha256": "3bebf3dd41ca05d69c01082154c67e4f35819c2ebf375df4c035aae4c1e1da25",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/us_english_kbd_map_table.cpp",
+      "source_sha256": "37a5a75effafb6b1884f5c3ac509215175d6b01ca2230ca988b3f49a7bc1a930",
+      "object_sha256": "1b516e6ad9ad8d3a2265e6680bf97add2ca58d1015c5a5ce377a132d8d018e8e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vistring-conversion-table-size/conversion_table_size.cpp",
+      "source_sha256": "5f28ca91a9877ba7377b90cf1931071c1b94fc6429f8f6f47bfc3390b0ecaf45",
+      "object_sha256": "25e6869a23ac259b9574256e0b11e64a616442f93b26f69daeaa59865378f544",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-vistring-conversion-table-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-vistring-convert16/convert16.cpp",
+      "source_sha256": "f89dff079d7e5558c95a979395381461efe763d04a8801b85a756a4aa6d17d7f",
+      "object_sha256": "9c3b6472db28495f6d25691c78cb5cca9f1eb0f61916da33b6affe868bd2159e",
+      "emitted_functions": [],
+      "host_files": [
+        "sources/w15-fe-ui-b-vistring-convert16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-begin2d/begin2d.cpp",
+      "source_sha256": "97fe676e89b160d2b3aa1f4808f81cf1354c323c3d1e13ca25ddd24ee294911e",
+      "object_sha256": "4540f49f6b47e3150354bac2b38f31e700d9c4acaa930fcc97cc7422c51c5385",
+      "emitted_functions": [
+        {
+          "name": "Begin2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-begin2d/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-blit-horz/blit_horz.cpp",
+      "source_sha256": "bfd134b7f03a969f6da1b342878fb0b92d46fbf51802962ee4f4b67040f156c0",
+      "object_sha256": "cc852c445b7c3d69f39e9197c20b8ff13518f0b70ffef74790851395c924db0c",
+      "emitted_functions": [
+        {
+          "name": "BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-blit-horz/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-blit-vert/blit_vert.cpp",
+      "source_sha256": "96c84a4c504e69f063231bf8c8f3322b1f54b8a7a501f72d67b4895ca95795ce",
+      "object_sha256": "7a0039167faea3d06828bc3730fcea34af3d06d11deb912a267ac74e8a3088f9",
+      "emitted_functions": [
+        {
+          "name": "BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-blit-vert/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-blitex-at/blitex_at.cpp",
+      "source_sha256": "10e980d50db706ba0f714930f86efa9d3324abe946a6b90150e293198929de35",
+      "object_sha256": "cb6f97433f3658e7b305641e6245240cf987b2f11ffaafdf98b79f93d5b1b3b6",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-blitex-at/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-blitex-size/blitex_size.cpp",
+      "source_sha256": "080a0a13352fae318e80f36eb23e59c25c38dacf0653d88bc244edf80d267786",
+      "object_sha256": "be595c75b4d1c1c07d02790c83b348ce2ad3b67bc76a96e37f7cb52035a200ce",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-blitex-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-draw-centered-string-ex/draw_centered_string_ex.cpp",
+      "source_sha256": "3ff0706d62de8ddc190501c993179f3c4563c5fcbebf7c10e9cd7bb44da17909",
+      "object_sha256": "e8281e438200984ab74ed0d0fa4fd021a3a0bb4653468313d615048d2b4012b1",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-draw-centered-string-ex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-end2d/end2d.cpp",
+      "source_sha256": "c6978d0889c1abcbc30a2c1462750fe9c2a2155bf95327e947b0733c81535b09",
+      "object_sha256": "4291d96fdcde5ecf09e6f19bd20db3da0c18afea6b9c70b9ccb463422a1828b3",
+      "emitted_functions": [
+        {
+          "name": "End2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-end2d/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-get-ui-texture/get_ui_texture.cpp",
+      "source_sha256": "8640662edd6c0fb214a57c5a114b8762d8c34633d3db4cdd5b6f81b56f6d7925",
+      "object_sha256": "7a969bb1c9f9021c89867f2457a0b185714d4622a05e4def04c065ed8b7acb99",
+      "emitted_functions": [
+        {
+          "name": "GetUITexture__F9VIUITexId",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-get-ui-texture/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-sound-play/sound_play.cpp",
+      "source_sha256": "570e1e9737ace9cc7783fc714cab0b123194301600a0059894be8fed4eeffac5",
+      "object_sha256": "c9b3f3359d309af9b316884f727163381aedfeef4d519e0edbd8bf10e2bea30d",
+      "emitted_functions": [
+        {
+          "name": "SoundPlay__4VIUI11VIUISoundId",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-sound-play/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viui-stretch-blitex/stretch_blitex.cpp",
+      "source_sha256": "c5ee7b31df0a614b6a6d14afe2959b49ee54b0fd13c2facbc90423898af5e598",
+      "object_sha256": "834d2a61451e5c55e3cddb0b3423083f8d5873f364b3b103f2a063631f08f99b",
+      "emitted_functions": [
+        {
+          "name": "StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef",
+          "compiled_body_bytes": 272
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viui-stretch-blitex/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-count-lines/count_lines.cpp",
+      "source_sha256": "18efa15c1b461d9e08d74bf30a23c7c62abc53f34eee193dd31b6e374bfcb22c",
+      "object_sha256": "143a722aab6c0e75fec7504eed55a13d766dbed6a9c7eb152e862411e2b26345",
+      "emitted_functions": [
+        {
+          "name": "CountLines__10VIUIWindowPCUsi",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-count-lines/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-draw/draw.cpp",
+      "source_sha256": "b15a4e8bc25bb48b6d2ea46a0ddfed6ff2fa57ef971de0b9995ed0420ca7e814",
+      "object_sha256": "2349dd0ed2a9931c52daab1d49a67b3416112f86688a50ff5129416f313224e7",
+      "emitted_functions": [
+        {
+          "name": "Draw__10VIUIWindow",
+          "compiled_body_bytes": 1036
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-draw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/drawframevscroll.cpp",
+      "source_sha256": "36772a09ae06319d15411d36f9ab9fb3a2c410e77ebfde9a2797f1fc9b9006f3",
+      "object_sha256": "0e20c7548a7d8880d5a72eb3fc41142fc609f2e754e4f83dcc1ef5e5a68a0a5d",
+      "emitted_functions": [
+        {
+          "name": "DrawFrameVScroll__10VIUIWindowiiiif",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawhscroll/drawhscroll.cpp",
+      "source_sha256": "89b486d4d242e65aeeda44725e37be7df43e505db62e02721ba0cd9d57fd3875",
+      "object_sha256": "d832725ea2d1b713730c008590aa99d39883ec4ffa9cdddb9717cad8a9ba549e",
+      "emitted_functions": [
+        {
+          "name": "DrawHScroll__10VIUIWindowiiifUi",
+          "compiled_body_bytes": 556
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-drawhscroll/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/reset_tick_pulse.cpp",
+      "source_sha256": "7fce803438ed04435dc32c0cb238631e75c95b668e28d87e1dec3d56f7d70d74",
+      "object_sha256": "aba3088efd95a9cd629e7f5f4a0f5c53b304f8ac092f7f51fc2a82f450ed813b",
+      "emitted_functions": [
+        {
+          "name": "ResetTickPulse__10VIUIWindow",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-text/text.cpp",
+      "source_sha256": "08673828b684f8873a0ba7bda2222d21ca6394919d388fb0d03adbc5c0b7a967",
+      "object_sha256": "42408e2a524d572132c4a2096159c6f812061a058184d29aa555328b87eb30e7",
+      "emitted_functions": [
+        {
+          "name": "Text__10VIUIWindowPCUsii9VIUICOLORUi",
+          "compiled_body_bytes": 132
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-text/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp",
+      "source_sha256": "902355d2653742cd393d29cc46b2bb9ad4021732f9e7fd88b83bd32dd9c65094",
+      "object_sha256": "e3576472deddb0f060549f524c00c771d510d425c2cc16596907c808dff98f65",
+      "emitted_functions": [
+        {
+          "name": "TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-textbox-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp",
+      "source_sha256": "4ea8b3877bcbbfa1f0010f2a0870cd705e4b18310420b5c27f2b725c72243539",
+      "object_sha256": "eb85bb9de8a0269fd90cf5de03e0d623151a0d182b23a16c1c9e7ebabbfec9b9",
+      "emitted_functions": [
+        {
+          "name": "TickPulse__C10VIUIWindow",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-tick-pulse/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-fe-ui-b",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp",
+      "source_sha256": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e",
+      "object_sha256": "0d262a101bcba0b6ff4c7b8ca2524274a0243b29ddd2ef81621a43f8e26113fb",
+      "emitted_functions": [
+        {
+          "name": "TickR__10VIUIWindowiib",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/w15-fe-ui-b-viuiwindow-tickr/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6814,
+  "default_authored_inputs": 6841,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7604,7 +7604,34 @@
     "sources/w15-vi-io-sound-a-sound-device-sound/sound.cpp": "0c4f7f2fb3e4a40a1b2c4e4bcea868ef03a7dea1cb34ea72cbf87ab28783b067",
     "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/stop_all_bgm.cpp": "9d49f533aec8b2ad5644545a78d45393f00bc5e52c899214ded6316aa7f4aa74",
     "sources/w15-vi-io-sound-a-sprite-copy/copy.cpp": "37b6b0672d7fb1cb9597bd4c4e0fdc6a5697c78c877d74b0d6e80596c930e13c",
-    "sources/w15-vi-io-sound-a-sprite-release/release.cpp": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4"
+    "sources/w15-vi-io-sound-a-sprite-release/release.cpp": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4",
+    "sources/w15-fe-ui-b-combine-table/combine_table.cpp": "73e4c0a0b0a6958ac6b522ed4b787014f6789310e0cf7fcab6ed2ead4ec660d1",
+    "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/combine_deadkey.cpp": "99575f8073ed6272976a99f0711b68b368c175bb3b3c62883f0580526c335f5c",
+    "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/fr_deadkey.cpp": "b293bc02c3bfa41c76a33397ec44cd5c2b8b82586f5e668b030eaadfbe28053c",
+    "sources/w15-fe-ui-b-vikeyboard-queue-key-event/queue_key_event.cpp": "291abcc4d121822eb8556f8921eb68b401bb46a1bb101c03f1f720798358eecb",
+    "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/us_deadkey_count.cpp": "5e5d693863b8613cad4cd15a843290c2c0ea1357939d7b0d4e8616fd7d04cf29",
+    "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/us_english_kbd_map_table.cpp": "37a5a75effafb6b1884f5c3ac509215175d6b01ca2230ca988b3f49a7bc1a930",
+    "sources/w15-fe-ui-b-vistring-conversion-table-size/conversion_table_size.cpp": "5f28ca91a9877ba7377b90cf1931071c1b94fc6429f8f6f47bfc3390b0ecaf45",
+    "sources/w15-fe-ui-b-vistring-convert16/convert16.cpp": "f89dff079d7e5558c95a979395381461efe763d04a8801b85a756a4aa6d17d7f",
+    "sources/w15-fe-ui-b-viui-begin2d/begin2d.cpp": "97fe676e89b160d2b3aa1f4808f81cf1354c323c3d1e13ca25ddd24ee294911e",
+    "sources/w15-fe-ui-b-viui-blit-horz/blit_horz.cpp": "bfd134b7f03a969f6da1b342878fb0b92d46fbf51802962ee4f4b67040f156c0",
+    "sources/w15-fe-ui-b-viui-blit-vert/blit_vert.cpp": "96c84a4c504e69f063231bf8c8f3322b1f54b8a7a501f72d67b4895ca95795ce",
+    "sources/w15-fe-ui-b-viui-blitex-at/blitex_at.cpp": "10e980d50db706ba0f714930f86efa9d3324abe946a6b90150e293198929de35",
+    "sources/w15-fe-ui-b-viui-blitex-size/blitex_size.cpp": "080a0a13352fae318e80f36eb23e59c25c38dacf0653d88bc244edf80d267786",
+    "sources/w15-fe-ui-b-viui-draw-centered-string-ex/draw_centered_string_ex.cpp": "3ff0706d62de8ddc190501c993179f3c4563c5fcbebf7c10e9cd7bb44da17909",
+    "sources/w15-fe-ui-b-viui-end2d/end2d.cpp": "c6978d0889c1abcbc30a2c1462750fe9c2a2155bf95327e947b0733c81535b09",
+    "sources/w15-fe-ui-b-viui-get-ui-texture/get_ui_texture.cpp": "8640662edd6c0fb214a57c5a114b8762d8c34633d3db4cdd5b6f81b56f6d7925",
+    "sources/w15-fe-ui-b-viui-sound-play/sound_play.cpp": "570e1e9737ace9cc7783fc714cab0b123194301600a0059894be8fed4eeffac5",
+    "sources/w15-fe-ui-b-viui-stretch-blitex/stretch_blitex.cpp": "c5ee7b31df0a614b6a6d14afe2959b49ee54b0fd13c2facbc90423898af5e598",
+    "sources/w15-fe-ui-b-viuiwindow-count-lines/count_lines.cpp": "18efa15c1b461d9e08d74bf30a23c7c62abc53f34eee193dd31b6e374bfcb22c",
+    "sources/w15-fe-ui-b-viuiwindow-draw/draw.cpp": "b15a4e8bc25bb48b6d2ea46a0ddfed6ff2fa57ef971de0b9995ed0420ca7e814",
+    "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/drawframevscroll.cpp": "36772a09ae06319d15411d36f9ab9fb3a2c410e77ebfde9a2797f1fc9b9006f3",
+    "sources/w15-fe-ui-b-viuiwindow-drawhscroll/drawhscroll.cpp": "89b486d4d242e65aeeda44725e37be7df43e505db62e02721ba0cd9d57fd3875",
+    "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/reset_tick_pulse.cpp": "7fce803438ed04435dc32c0cb238631e75c95b668e28d87e1dec3d56f7d70d74",
+    "sources/w15-fe-ui-b-viuiwindow-text/text.cpp": "08673828b684f8873a0ba7bda2222d21ca6394919d388fb0d03adbc5c0b7a967",
+    "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp": "902355d2653742cd393d29cc46b2bb9ad4021732f9e7fd88b83bd32dd9c65094",
+    "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp": "4ea8b3877bcbbfa1f0010f2a0870cd705e4b18310420b5c27f2b725c72243539",
+    "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e"
   },
   "inputs": [
     {
@@ -101313,6 +101340,381 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6816,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_combine_table.o",
+      "profile": "authored_cpp",
+      "sha256": "73e4c0a0b0a6958ac6b522ed4b787014f6789310e0cf7fcab6ed2ead4ec660d1",
+      "source": "sources/w15-fe-ui-b-combine-table/combine_table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6817,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vikeyboard_combine_deadkey.o",
+      "profile": "authored_cpp",
+      "sha256": "99575f8073ed6272976a99f0711b68b368c175bb3b3c62883f0580526c335f5c",
+      "source": "sources/w15-fe-ui-b-vikeyboard-combine-deadkey/combine_deadkey.cpp",
+      "emitted_functions": [
+        {
+          "name": "CombineDeadkey__10VIKeyboardUc",
+          "compiled_body_bytes": 728
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6818,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vikeyboard_fr_deadkey.o",
+      "profile": "authored_cpp",
+      "sha256": "b293bc02c3bfa41c76a33397ec44cd5c2b8b82586f5e668b030eaadfbe28053c",
+      "source": "sources/w15-fe-ui-b-vikeyboard-fr-deadkey/fr_deadkey.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6819,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vikeyboard_queue_key_event.o",
+      "profile": "authored_cpp",
+      "sha256": "291abcc4d121822eb8556f8921eb68b401bb46a1bb101c03f1f720798358eecb",
+      "source": "sources/w15-fe-ui-b-vikeyboard-queue-key-event/queue_key_event.cpp",
+      "emitted_functions": [
+        {
+          "name": "QueueKeyEvent__10VIKeyboardP12VIConsoleKey",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6820,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vikeyboard_us_deadkey_count.o",
+      "profile": "authored_cpp",
+      "sha256": "5e5d693863b8613cad4cd15a843290c2c0ea1357939d7b0d4e8616fd7d04cf29",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-deadkey-count/us_deadkey_count.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6821,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vikeyboard_us_english_map_table.o",
+      "profile": "authored_cpp",
+      "sha256": "37a5a75effafb6b1884f5c3ac509215175d6b01ca2230ca988b3f49a7bc1a930",
+      "source": "sources/w15-fe-ui-b-vikeyboard-us-english-map-table/us_english_kbd_map_table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6822,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vistring_conversion_table_size.o",
+      "profile": "authored_cpp",
+      "sha256": "5f28ca91a9877ba7377b90cf1931071c1b94fc6429f8f6f47bfc3390b0ecaf45",
+      "source": "sources/w15-fe-ui-b-vistring-conversion-table-size/conversion_table_size.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6823,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_vistring_convert16.o",
+      "profile": "authored_cpp",
+      "sha256": "f89dff079d7e5558c95a979395381461efe763d04a8801b85a756a4aa6d17d7f",
+      "source": "sources/w15-fe-ui-b-vistring-convert16/convert16.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6824,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_begin2d.o",
+      "profile": "authored_cpp",
+      "sha256": "97fe676e89b160d2b3aa1f4808f81cf1354c323c3d1e13ca25ddd24ee294911e",
+      "source": "sources/w15-fe-ui-b-viui-begin2d/begin2d.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6825,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_blit_horz.o",
+      "profile": "authored_cpp",
+      "sha256": "bfd134b7f03a969f6da1b342878fb0b92d46fbf51802962ee4f4b67040f156c0",
+      "source": "sources/w15-fe-ui-b-viui-blit-horz/blit_horz.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlitHorz__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 480
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6826,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_blit_vert.o",
+      "profile": "authored_cpp",
+      "sha256": "96c84a4c504e69f063231bf8c8f3322b1f54b8a7a501f72d67b4895ca95795ce",
+      "source": "sources/w15-fe-ui-b-viui-blit-vert/blit_vert.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlitVert__4VIUIG8VIVect2I9VIUITexIdi16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 464
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6827,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_blitex_at.o",
+      "profile": "authored_cpp",
+      "sha256": "10e980d50db706ba0f714930f86efa9d3324abe946a6b90150e293198929de35",
+      "source": "sources/w15-fe-ui-b-viui-blitex-at/blitex_at.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2I16VIAlphaBlendModefUi",
+          "compiled_body_bytes": 280
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6828,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_blitex_size.o",
+      "profile": "authored_cpp",
+      "sha256": "080a0a13352fae318e80f36eb23e59c25c38dacf0653d88bc244edf80d267786",
+      "source": "sources/w15-fe-ui-b-viui-blitex-size/blitex_size.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModefUi",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6829,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_draw_centered_string_ex.o",
+      "profile": "authored_cpp",
+      "sha256": "3ff0706d62de8ddc190501c993179f3c4563c5fcbebf7c10e9cd7bb44da17909",
+      "source": "sources/w15-fe-ui-b-viui-draw-centered-string-ex/draw_centered_string_ex.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6830,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_end2d.o",
+      "profile": "authored_cpp",
+      "sha256": "c6978d0889c1abcbc30a2c1462750fe9c2a2155bf95327e947b0733c81535b09",
+      "source": "sources/w15-fe-ui-b-viui-end2d/end2d.cpp",
+      "emitted_functions": [
+        {
+          "name": "End2D__4VIUI",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6831,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_get_ui_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "8640662edd6c0fb214a57c5a114b8762d8c34633d3db4cdd5b6f81b56f6d7925",
+      "source": "sources/w15-fe-ui-b-viui-get-ui-texture/get_ui_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetUITexture__F9VIUITexId",
+          "compiled_body_bytes": 52
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6832,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_sound_play.o",
+      "profile": "authored_cpp",
+      "sha256": "570e1e9737ace9cc7783fc714cab0b123194301600a0059894be8fed4eeffac5",
+      "source": "sources/w15-fe-ui-b-viui-sound-play/sound_play.cpp",
+      "emitted_functions": [
+        {
+          "name": "SoundPlay__4VIUI11VIUISoundId",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6833,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viui_stretch_blitex.o",
+      "profile": "authored_cpp",
+      "sha256": "c5ee7b31df0a614b6a6d14afe2959b49ee54b0fd13c2facbc90423898af5e598",
+      "source": "sources/w15-fe-ui-b-viui-stretch-blitex/stretch_blitex.cpp",
+      "emitted_functions": [
+        {
+          "name": "StretchBlitEx__4VIUI9VIUITexIdG8VIVect2IT216VIAlphaBlendModef",
+          "compiled_body_bytes": 272
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6834,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_count_lines.o",
+      "profile": "authored_cpp",
+      "sha256": "18efa15c1b461d9e08d74bf30a23c7c62abc53f34eee193dd31b6e374bfcb22c",
+      "source": "sources/w15-fe-ui-b-viuiwindow-count-lines/count_lines.cpp",
+      "emitted_functions": [
+        {
+          "name": "CountLines__10VIUIWindowPCUsi",
+          "compiled_body_bytes": 28
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6835,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_draw.o",
+      "profile": "authored_cpp",
+      "sha256": "b15a4e8bc25bb48b6d2ea46a0ddfed6ff2fa57ef971de0b9995ed0420ca7e814",
+      "source": "sources/w15-fe-ui-b-viuiwindow-draw/draw.cpp",
+      "emitted_functions": [
+        {
+          "name": "Draw__10VIUIWindow",
+          "compiled_body_bytes": 1036
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6836,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_drawframevscroll.o",
+      "profile": "authored_cpp",
+      "sha256": "36772a09ae06319d15411d36f9ab9fb3a2c410e77ebfde9a2797f1fc9b9006f3",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawframevscroll/drawframevscroll.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawFrameVScroll__10VIUIWindowiiiif",
+          "compiled_body_bytes": 488
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6837,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_drawhscroll.o",
+      "profile": "authored_cpp",
+      "sha256": "89b486d4d242e65aeeda44725e37be7df43e505db62e02721ba0cd9d57fd3875",
+      "source": "sources/w15-fe-ui-b-viuiwindow-drawhscroll/drawhscroll.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawHScroll__10VIUIWindowiiifUi",
+          "compiled_body_bytes": 556
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6838,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_reset_tick_pulse.o",
+      "profile": "authored_cpp",
+      "sha256": "7fce803438ed04435dc32c0cb238631e75c95b668e28d87e1dec3d56f7d70d74",
+      "source": "sources/w15-fe-ui-b-viuiwindow-reset-tick-pulse/reset_tick_pulse.cpp",
+      "emitted_functions": [
+        {
+          "name": "ResetTickPulse__10VIUIWindow",
+          "compiled_body_bytes": 36
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6839,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_text.o",
+      "profile": "authored_cpp",
+      "sha256": "08673828b684f8873a0ba7bda2222d21ca6394919d388fb0d03adbc5c0b7a967",
+      "source": "sources/w15-fe-ui-b-viuiwindow-text/text.cpp",
+      "emitted_functions": [
+        {
+          "name": "Text__10VIUIWindowPCUsii9VIUICOLORUi",
+          "compiled_body_bytes": 132
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6840,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_textbox_color.o",
+      "profile": "authored_cpp",
+      "sha256": "902355d2653742cd393d29cc46b2bb9ad4021732f9e7fd88b83bd32dd9c65094",
+      "source": "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp",
+      "emitted_functions": [
+        {
+          "name": "TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6841,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_tick_pulse.o",
+      "profile": "authored_cpp",
+      "sha256": "4ea8b3877bcbbfa1f0010f2a0870cd705e4b18310420b5c27f2b725c72243539",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp",
+      "emitted_functions": [
+        {
+          "name": "TickPulse__C10VIUIWindow",
+          "compiled_body_bytes": 152
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6842,
+      "kind": "independently_authored_source",
+      "object_name": "w15_fe_ui_b_viuiwindow_tickr.o",
+      "profile": "authored_cpp",
+      "sha256": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e",
+      "source": "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp",
+      "emitted_functions": [
+        {
+          "name": "TickR__10VIUIWindowiib",
+          "compiled_body_bytes": 284
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -101412,7 +101814,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "66b60fcd4f04779bf130c6806324ec18a30fdd74be37615942cd82e4f789939d",
+  "snapshot_sha256": "b24cba1a8795edea8567af6a32f18a055b1ba7e0dbace43ec201bf2d12d5aecf",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
