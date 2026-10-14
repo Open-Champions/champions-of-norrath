@@ -1,4 +1,4 @@
-// Observed: DrawFrameVScroll__10VIUIWindowiiiif at 0x0103d558, 504 bytes. Arguments: the window, ints a, b, c, d and a
+// Observed: DrawFrameVScroll__10VIUIWindowiiiif at 0x0103d558, 508 bytes. Arguments: the window, ints a, b, c, d and a
 // float f. With ui = the word at offset 0 of the window and GetHeight__6VIFontP8VIRasterP12VIDictionary(ui + 56,
 // word at ui + 72, word at ui + 80) called twice (h1, then h2), and window fields +12 x, +16 y, +20 width,
 // +24 height, +28 inner offset (arithmetic shifts for the halves):
