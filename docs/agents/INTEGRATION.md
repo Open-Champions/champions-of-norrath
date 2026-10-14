@@ -10926,3 +10926,21 @@ Opened: `AddHead__7VILListP7VILNode`, `Add__t6VIPool1Z13VIHSpritePlay`, `Add__t6
 
 Full partial build: 7631 source compilations, one link, 6110 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:38 CDT — agents/w16-fx-a — 730 unresolved imports
+
+## agents/w16-fx-b
+
+Merged (merge commit) as a **partial package** by the notes' standard (its notes have a build-plan list and a final summary but not the usual checks/imports-closed/imports-opened headings); every one of its 17 units has a committed host check, which I ran using the build recipe in its own header (17 of 17 exit 0), so all 17 are selected. I recompiled each unit and checked function names against the notes' plan entries (the entries list names only; the body sizes are from my own build). Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 730 |
+| After | 719 |
+| Closed | 17 |
+| Opened | 6 |
+
+Closed: `SetBlendMode__20VIParticleDefinitionQ222VIParticleDefinitionEx9BLENDMODE`, `SetHair__9VICSpriteiiiR7VIScene`, `SetInnerHprVar__20VIParticleAttributesRC7VIVect3`, `SetInnerOffset__20VIParticleAttributesRC7VIVect3`, `SetName__15VIParticleMotifPCc`, `SetNodeFixScale__9VIHSpriteiRC7VIVect3`, `SetOuterHprVar__20VIParticleAttributesRC7VIVect3`, `SetOuterOffset__20VIParticleAttributesRC7VIVect3`, `SetTextureConfiguration__20VIParticleDefinitioni`, `SetTexture__20VIParticleDefinitioniR8VIRasterR12VIDictionary`, `SetZTest__20VIParticleDefinitionb`, `SetZWrite__20VIParticleDefinitionb`, `UpdateCenterTransform__9VIHSpriteR7VIScene`, `VITrailFxBegin__Flif`, `__13VIHSpriteAnim`, `__13VISpellEffect`, `__22VIParticleDefinitionEx`
+
+Opened: `GetHairTexture__13VICSpriteCusti`, `Init__9VITrailFxlif`, `InterpTransAboutCenter__9VIHSpriteR7VISceneR7VIVect3R14VIHSpriteFrame`, `Translate__10VIMatrix44RC7VIVect3`, `_13VICSpriteCust$HairNull`, `__t6VIPool1ZP15VIParticleMotif`
+
+Full partial build: 7648 source compilations, one link, 6127 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:44 CDT — agents/w16-fx-b — 719 unresolved imports

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7631,
+  "default_authored_inputs": 7648,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8425,7 +8425,24 @@
     "sources/w16-fx-a-particledefinition-create/create.cpp": "4f2e62910ac5893a0a7c4f38571d74a006ff2d7c96b9fb6c2bf957c6cc07cff7",
     "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp": "1d5eb70aeacdd7b3d8eff2a4ca3c9e207bc548d6c916604f3fc86603a4504d8b",
     "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp": "b6e57914936eb7c9585f8eebb3590934d9b06a442359f6adc2b43e9729a9870f",
-    "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4"
+    "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4",
+    "sources/w16-fx-b-csprite-set-hair/set_hair.cpp": "5da83bd8be708946560f362de4acee0760322961a3c0fbf1df194dd65a96097c",
+    "sources/w16-fx-b-hsprite-anim-ctor/ctor.cpp": "0891b88b6663cfd7c454912cdc9ce760888e20717b4e001fec77dc5057b30045",
+    "sources/w16-fx-b-hsprite-set-node-fix-scale/set_node_fix_scale.cpp": "931561a6b0447a55879ed91970c66c8e1dbf6a3855d1dedb1048efb3b62c0627",
+    "sources/w16-fx-b-hsprite-update-center-transform/update_center_transform.cpp": "f1fa91159cae15f42ba0419271b81c8682dca9915e99e2dbe0cbb6259fec6a3e",
+    "sources/w16-fx-b-motif-set-name/set_name.cpp": "8c84528a873721b30e9fe0a3946defbaba78651059b1b4e97e6b363ae785f353",
+    "sources/w16-fx-b-particle-definition-ex-ctor/ctor.cpp": "3a94e7d9816ed7cc5e6e712f933d88930162a5eb496904e0c127f4b3f94be7a9",
+    "sources/w16-fx-b-set-blend-mode/set_blend_mode.cpp": "1c220e85d7e58702f2a496da8664458889929b21b1afa1c5ad4e411a9594bb4d",
+    "sources/w16-fx-b-set-inner-hpr-var/set_inner_hpr_var.cpp": "7d20c03680629c1149430ad5042b817365a4ad39a4270b0de9b23385934f9f2e",
+    "sources/w16-fx-b-set-inner-offset/set_inner_offset.cpp": "e9c1f0a291d00a763d3a6fd8c587ac5ff9885dccc9cabeccb75b0d946f0a78b3",
+    "sources/w16-fx-b-set-outer-hpr-var/set_outer_hpr_var.cpp": "b7e2fc62ed3721973ace9a1772cd630dae898f5f53864f737193d0576950bf9f",
+    "sources/w16-fx-b-set-outer-offset/set_outer_offset.cpp": "be3e0cffdfa8d56d97fbf46cdaeb149f8212af937ee27b25cddfb366d098b28d",
+    "sources/w16-fx-b-set-texture/set_texture.cpp": "400fca8edd5d7d09d6b7c7fc9ff5828fcd91f41470a459a129d848dfe62a1db9",
+    "sources/w16-fx-b-set-texture-configuration/set_texture_configuration.cpp": "997f1d492b96e71969e6cd144540225ff66cbeb071a05c6845c62185b3399e92",
+    "sources/w16-fx-b-set-ztest/set_ztest.cpp": "4a01bb34e5ea7d69e1049c12e865e2ed1b5ad34a761dab4e3a484ca093753cff",
+    "sources/w16-fx-b-set-zwrite/set_zwrite.cpp": "184a6efcd39750e4bb09a8d62f03d131727b3c8c9d9ff5cbaa641b1a0d96f702",
+    "sources/w16-fx-b-spell-effect-ctor/ctor.cpp": "34c0f3bf2482ad4168f729df379965aa68e3f977d239abf6f09ed779845ae0d6",
+    "sources/w16-fx-b-trail-fx-begin/trail_fx_begin.cpp": "693eed77b0d934f49d22b082f3a8db0a45751fc151132de3271891b574152552"
   },
   "inputs": [
     {
@@ -113778,6 +113795,261 @@
           "compiled_body_bytes": 256
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7633,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_csprite_set_hair_set_hair.o",
+      "profile": "authored_cpp",
+      "sha256": "5da83bd8be708946560f362de4acee0760322961a3c0fbf1df194dd65a96097c",
+      "source": "sources/w16-fx-b-csprite-set-hair/set_hair.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetHair__9VICSpriteiiiR7VIScene",
+          "compiled_body_bytes": 668
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7634,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_hsprite_anim_ctor_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "0891b88b6663cfd7c454912cdc9ce760888e20717b4e001fec77dc5057b30045",
+      "source": "sources/w16-fx-b-hsprite-anim-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13VIHSpriteAnim",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7635,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_hsprite_set_node_fix_scale_set_node_fix_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "931561a6b0447a55879ed91970c66c8e1dbf6a3855d1dedb1048efb3b62c0627",
+      "source": "sources/w16-fx-b-hsprite-set-node-fix-scale/set_node_fix_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetNodeFixScale__9VIHSpriteiRC7VIVect3",
+          "compiled_body_bytes": 48
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7636,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_hsprite_update_center_transform_update_center_transform.o",
+      "profile": "authored_cpp",
+      "sha256": "f1fa91159cae15f42ba0419271b81c8682dca9915e99e2dbe0cbb6259fec6a3e",
+      "source": "sources/w16-fx-b-hsprite-update-center-transform/update_center_transform.cpp",
+      "emitted_functions": [
+        {
+          "name": "UpdateCenterTransform__9VIHSpriteR7VIScene",
+          "compiled_body_bytes": 404
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7637,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_motif_set_name_set_name.o",
+      "profile": "authored_cpp",
+      "sha256": "8c84528a873721b30e9fe0a3946defbaba78651059b1b4e97e6b363ae785f353",
+      "source": "sources/w16-fx-b-motif-set-name/set_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetName__15VIParticleMotifPCc",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7638,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_particle_definition_ex_ctor_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "3a94e7d9816ed7cc5e6e712f933d88930162a5eb496904e0c127f4b3f94be7a9",
+      "source": "sources/w16-fx-b-particle-definition-ex-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__22VIParticleDefinitionEx",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7639,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_blend_mode_set_blend_mode.o",
+      "profile": "authored_cpp",
+      "sha256": "1c220e85d7e58702f2a496da8664458889929b21b1afa1c5ad4e411a9594bb4d",
+      "source": "sources/w16-fx-b-set-blend-mode/set_blend_mode.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetBlendMode__20VIParticleDefinitionQ222VIParticleDefinitionEx9BLENDMODE",
+          "compiled_body_bytes": 252
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7640,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_inner_hpr_var_set_inner_hpr_var.o",
+      "profile": "authored_cpp",
+      "sha256": "7d20c03680629c1149430ad5042b817365a4ad39a4270b0de9b23385934f9f2e",
+      "source": "sources/w16-fx-b-set-inner-hpr-var/set_inner_hpr_var.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetInnerHprVar__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7641,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_inner_offset_set_inner_offset.o",
+      "profile": "authored_cpp",
+      "sha256": "e9c1f0a291d00a763d3a6fd8c587ac5ff9885dccc9cabeccb75b0d946f0a78b3",
+      "source": "sources/w16-fx-b-set-inner-offset/set_inner_offset.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetInnerOffset__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7642,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_outer_hpr_var_set_outer_hpr_var.o",
+      "profile": "authored_cpp",
+      "sha256": "b7e2fc62ed3721973ace9a1772cd630dae898f5f53864f737193d0576950bf9f",
+      "source": "sources/w16-fx-b-set-outer-hpr-var/set_outer_hpr_var.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetOuterHprVar__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7643,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_outer_offset_set_outer_offset.o",
+      "profile": "authored_cpp",
+      "sha256": "be3e0cffdfa8d56d97fbf46cdaeb149f8212af937ee27b25cddfb366d098b28d",
+      "source": "sources/w16-fx-b-set-outer-offset/set_outer_offset.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetOuterOffset__20VIParticleAttributesRC7VIVect3",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7644,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_texture_set_texture.o",
+      "profile": "authored_cpp",
+      "sha256": "400fca8edd5d7d09d6b7c7fc9ff5828fcd91f41470a459a129d848dfe62a1db9",
+      "source": "sources/w16-fx-b-set-texture/set_texture.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetTexture__20VIParticleDefinitioniR8VIRasterR12VIDictionary",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7645,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_texture_configuration_set_texture_configuration.o",
+      "profile": "authored_cpp",
+      "sha256": "997f1d492b96e71969e6cd144540225ff66cbeb071a05c6845c62185b3399e92",
+      "source": "sources/w16-fx-b-set-texture-configuration/set_texture_configuration.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetTextureConfiguration__20VIParticleDefinitioni",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7646,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_ztest_set_ztest.o",
+      "profile": "authored_cpp",
+      "sha256": "4a01bb34e5ea7d69e1049c12e865e2ed1b5ad34a761dab4e3a484ca093753cff",
+      "source": "sources/w16-fx-b-set-ztest/set_ztest.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetZTest__20VIParticleDefinitionb",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7647,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_set_zwrite_set_zwrite.o",
+      "profile": "authored_cpp",
+      "sha256": "184a6efcd39750e4bb09a8d62f03d131727b3c8c9d9ff5cbaa641b1a0d96f702",
+      "source": "sources/w16-fx-b-set-zwrite/set_zwrite.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetZWrite__20VIParticleDefinitionb",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7648,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_spell_effect_ctor_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "34c0f3bf2482ad4168f729df379965aa68e3f977d239abf6f09ed779845ae0d6",
+      "source": "sources/w16-fx-b-spell-effect-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__13VISpellEffect",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7649,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_b_trail_fx_begin_trail_fx_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "693eed77b0d934f49d22b082f3a8db0a45751fc151132de3271891b574152552",
+      "source": "sources/w16-fx-b-trail-fx-begin/trail_fx_begin.cpp",
+      "emitted_functions": [
+        {
+          "name": "VITrailFxBegin__Flif",
+          "compiled_body_bytes": 120
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -113877,7 +114149,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "cb5eba526baba5ef4a7e55c1b79ad6d8a11010f9e5d9db92198056fc37637bc6",
+  "snapshot_sha256": "5e3f9fbc5d89db0897bf08ec1c7d79987e320386b6a624a161d3b3a75b3291c4",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
