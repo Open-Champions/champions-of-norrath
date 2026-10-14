@@ -38,6 +38,12 @@
 // the state reaches 6 or 7; show marks the states that use the fixed 150-unit left margin and the icon.
 // Unknown: the meanings of the status words and of the sub-states, the string ids (apart from their use here),
 // the type behind the colour argument, and the true struct of the status block (a 16-byte guess is not used).
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 extern int norrath_dnas_ellipse_count __asm__("ellipseCount.2103");
@@ -73,7 +79,7 @@ static inline int& word(void* base, int offset) {
     return *reinterpret_cast<int*>(static_cast<unsigned char*>(base) + offset);
 }
 static inline void* pointer_of(unsigned value) {
-    return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(value));
+    return reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(value));
 }
 static inline const unsigned short* text(int id) {
     void* ui = pointer_of(_5VIWnd$mUI);
