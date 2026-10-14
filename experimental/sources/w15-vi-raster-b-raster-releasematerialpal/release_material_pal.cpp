@@ -10,8 +10,8 @@
 // negative and -1 otherwise.
 // Inferred: +4 is a reference count, the array entries are material slot indexes of the raster, and the first word says whether the
 // palette is registered in the dictionary.
-// Unknown: the palette layout beyond those words, the array class, and the callees' behaviour (unresolved imports except
-// ReleaseMaterial, which is defined elsewhere in the selected sources). Nothing here ran on the EE.
+// Unknown: the palette layout beyond those words, the array class, and the callees' behaviour (all are imports of this
+// unit; ReleaseMaterial__8VIRasteriR12VIDictionary is unresolved in the shared build and not part of this package). Nothing here ran on the EE.
 #ifdef NORRATH_HOST_ARENA
 extern "C" unsigned char* norrath_host_pointer(unsigned address);
 #define NORRATH_WORD_TO_POINTER(word) norrath_host_pointer(word)
