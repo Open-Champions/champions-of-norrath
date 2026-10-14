@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7321,
+  "default_authored_inputs": 7327,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8115,7 +8115,13 @@
     "sources/w12-wnd-a-readmessage-clear/clear.cpp": "0f059497063ac18a6479631c9089820842ca9e320082c29ac0246cad47d88a42",
     "sources/w12-wnd-a-set-end/end.cpp": "efaeb55989b7101d14ee7a42cf8d6f8fa8c23fbe4b443523bf84a5fab9afeed5",
     "sources/w12-wnd-a-uiwindow-close/close.cpp": "d5c93cc072ed226837ef17fdba218a1385c25b139dee938fe8594a526e021fdf",
-    "sources/w12-particle-data-b-objects/objects.cpp": "89ab93a5ffd64704769f8d9d46d2e26a99464c8f9890b57fc9799d270fb4fbae"
+    "sources/w12-particle-data-b-objects/objects.cpp": "89ab93a5ffd64704769f8d9d46d2e26a99464c8f9890b57fc9799d270fb4fbae",
+    "sources/w9-render-math-a-data/cut_camera_pos.cpp": "eff65c497f2e248482d305de71992e83cfa7bfb36ef839cdbab8e2b68f5c49e4",
+    "sources/w9-render-math-a-data/draw_bucket.cpp": "889bdf392cb1666bb89561bc95c2de0b2699ef9065cf089d40b5217b96c1e93f",
+    "sources/w9-render-math-a-data/dummy_list.cpp": "3c91fe1eacd5b6a551cfa03f186f4be25543532d47a725f881b52cac2501346a",
+    "sources/w9-render-math-a-data/fade_down_val.cpp": "2baa53a0910298e62d8d5fa1f016026880e281ce563dffdcf69bbadaf9424fce",
+    "sources/w9-render-math-a-data/hvecs.cpp": "db6a74818213e08d8131f813b77d9a96f0f53b52df0bc9a9c828919ee0b53ea4",
+    "sources/w9-render-math-a-data/light_mats.cpp": "0bb6fcc64a2e2fc5318163c60d9c4d1dd8b62dc945bf350a876f532185fc298d"
   },
   "inputs": [
     {
@@ -108975,6 +108981,66 @@
       "sha256": "89ab93a5ffd64704769f8d9d46d2e26a99464c8f9890b57fc9799d270fb4fbae",
       "source": "sources/w12-particle-data-b-objects/objects.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7323,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_cut_camera_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "eff65c497f2e248482d305de71992e83cfa7bfb36ef839cdbab8e2b68f5c49e4",
+      "source": "sources/w9-render-math-a-data/cut_camera_pos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7324,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_draw_bucket.o",
+      "profile": "authored_cpp",
+      "sha256": "889bdf392cb1666bb89561bc95c2de0b2699ef9065cf089d40b5217b96c1e93f",
+      "source": "sources/w9-render-math-a-data/draw_bucket.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7325,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_dummy_list.o",
+      "profile": "authored_cpp",
+      "sha256": "3c91fe1eacd5b6a551cfa03f186f4be25543532d47a725f881b52cac2501346a",
+      "source": "sources/w9-render-math-a-data/dummy_list.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7326,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_fade_down_val.o",
+      "profile": "authored_cpp",
+      "sha256": "2baa53a0910298e62d8d5fa1f016026880e281ce563dffdcf69bbadaf9424fce",
+      "source": "sources/w9-render-math-a-data/fade_down_val.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7327,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_hvecs.o",
+      "profile": "authored_cpp",
+      "sha256": "db6a74818213e08d8131f813b77d9a96f0f53b52df0bc9a9c828919ee0b53ea4",
+      "source": "sources/w9-render-math-a-data/hvecs.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7328,
+      "kind": "independently_authored_source",
+      "object_name": "w9_render_math_a_data_light_mats.o",
+      "profile": "authored_cpp",
+      "sha256": "0bb6fcc64a2e2fc5318163c60d9c4d1dd8b62dc945bf350a876f532185fc298d",
+      "source": "sources/w9-render-math-a-data/light_mats.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109074,7 +109140,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "3f9fc9d78e1a56e4ba33ec6abc80aeec6532698585e891824342fd56ef2b7e3a",
+  "snapshot_sha256": "fbedb26fdfc9006915a49302bd857fb8c815ae8a617acec4a204f8ab98b56639",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

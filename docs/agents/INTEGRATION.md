@@ -10656,3 +10656,20 @@ Opened:
 
 Full partial build: 7321 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 02:09 CDT — agents/w12-particle-data-b — 847 unresolved imports
+
+## agents/w9-render-math-a
+
+Merged (merge commit) as a **partial package**: only the data directory has a committed host check (`host_check.cpp`, exact sizes and zero contents), so only its data objects are selected: 6 of 7. **Not selected:** `body_alpha.cpp` defines `bodyAlpha`, already defined by `w14-hud-b-data-body-alpha`; with both planned the link fails with a multiple-definition error. The package's 19 function units have no committed host test and stay authored but unplanned. Tip was about a day old.
+
+| | |
+|---|---|
+| Before | 847 |
+| After | 841 |
+| Closed | 6 |
+| Opened | 0 |
+
+Closed: `cutCameraPos`, `drawBucket`, `dummyList`, `fadeDownVal`, `hvecs`, `lightMats`
+
+Opened: 
+
+Full partial build: 7327 source compilations, one link, 5834 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
