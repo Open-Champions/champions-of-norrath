@@ -10366,3 +10366,20 @@ Opened: `_$_10FrostShard`, `_$_10HolyStrike`, `_$_12GlowingShaft`, `_$_12SpellHe
 
 Full partial build: 6976 source compilations, one link, 5523 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:29 CDT — agents/w15-m-rtti-a — 932 unresolved imports
+
+## agents/w15-m-spell-ctors-a
+
+Merged (merge commit; tip over an hour old, notes complete). All 6 units (constructors and destructors) have a `host_check.cpp` and are selected. The two opened names are the vtables the new constructors reference.
+
+| | |
+|---|---|
+| Before | 932 |
+| After | 928 |
+| Closed | 6 |
+| Opened | 2 |
+
+Closed: `_$_13FireBombletJr`, `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, `_$_19SpellSummonSkeleton`, `__18SpellBlindingLightiP8CreatureT2P5Skill`, `__9SpellRootiP8CreatureP5Skill`
+
+Opened: `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`
+
+Full partial build: 6982 source compilations, one link, 5529 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

@@ -90115,6 +90115,90 @@
       "emitted_functions": [],
       "kind": "independently_authored_source",
       "source": "sources/w15-m-rtti-a-vt-9bad-alloc/vt.cpp"
+    },
+    {
+      "input_order": 6978,
+      "component": "w15-m-spell-ctors-a-ctor-9spellroot",
+      "object_name": "w15_m_spell_ctors_a_ctor_9spellroot.o",
+      "private_object_sha256": "9bdd906cc5c2c74f03587209a418f15e039344312adba626dffdd725ddc9f765",
+      "emitted_functions": [
+        {
+          "name": "__9SpellRootiP8CreatureP5Skill",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-ctor-9spellroot/spell_root_ctor.cpp"
+    },
+    {
+      "input_order": 6979,
+      "component": "w15-m-spell-ctors-a-ctor-blinding-light",
+      "object_name": "w15_m_spell_ctors_a_ctor_blinding_light.o",
+      "private_object_sha256": "c55fca4457bb407bb9f7a28f0db1736a6a83a0c4ea7b6094f8c7ab59130efb1c",
+      "emitted_functions": [
+        {
+          "name": "__18SpellBlindingLightiP8CreatureT2P5Skill",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-ctor-blinding-light/spell_blinding_light_ctor.cpp"
+    },
+    {
+      "input_order": 6980,
+      "component": "w15-m-spell-ctors-a-dtor-13firebomblet",
+      "object_name": "w15_m_spell_ctors_a_dtor_13firebomblet.o",
+      "private_object_sha256": "d84f6096b8dad3e868db57405cede8fd866cb008c42bc9f3bf011cf0676a30db",
+      "emitted_functions": [
+        {
+          "name": "_$_13FireBombletJr",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-dtor-13firebomblet/dtor.cpp"
+    },
+    {
+      "input_order": 6981,
+      "component": "w15-m-spell-ctors-a-dtor-14firestormflare",
+      "object_name": "w15_m_spell_ctors_a_dtor_14firestormflare.o",
+      "private_object_sha256": "3ec9a405671f4fbc9f9c0fe6d4bd169ab94eafc692631c52e4ecc09a7833fd20",
+      "emitted_functions": [
+        {
+          "name": "_$_14FireStormFlare",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-dtor-14firestormflare/dtor.cpp"
+    },
+    {
+      "input_order": 6982,
+      "component": "w15-m-spell-ctors-a-dtor-18hammerofwrath",
+      "object_name": "w15_m_spell_ctors_a_dtor_18hammerofwrath.o",
+      "private_object_sha256": "dae6c73df2aecf350d9c9287a03d027e590107ac939b09e0c586c0338cf8aeca",
+      "emitted_functions": [
+        {
+          "name": "_$_18SpellHammerOfWrath",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-dtor-18hammerofwrath/dtor.cpp"
+    },
+    {
+      "input_order": 6983,
+      "component": "w15-m-spell-ctors-a-dtor-19summonskeleton",
+      "object_name": "w15_m_spell_ctors_a_dtor_19summonskeleton.o",
+      "private_object_sha256": "93bf1f2316a990f0d4d97c0a8ff1b8988c834a6a6dd80501e67687e533b0987a",
+      "emitted_functions": [
+        {
+          "name": "_$_19SpellSummonSkeleton",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-m-spell-ctors-a-dtor-19summonskeleton/dtor.cpp"
     }
   ],
   "drafts": [
@@ -104788,7 +104872,19 @@
     "sources/w15-m-rtti-a-vt-8skelight/host_check.cpp": "8b0608329a58a872a6cd1780279354aad2acc5616d0445289a7dbd5881a790d8",
     "sources/w15-m-rtti-a-vt-8skelight/vt.cpp": "a5cb77818f514320226e5e298326c20f6dbbf49e6a7bafd9ef69537f27b05d9f",
     "sources/w15-m-rtti-a-vt-9bad-alloc/host_check.cpp": "c3e69b6041bcb186f1590247ae6dc8b76d3ef88b9cb89996db43bb7617e7ab10",
-    "sources/w15-m-rtti-a-vt-9bad-alloc/vt.cpp": "5c4434162fa4eec8bc8237c3f20b8d4d20f2881849562457cbbce04e4ab68749"
+    "sources/w15-m-rtti-a-vt-9bad-alloc/vt.cpp": "5c4434162fa4eec8bc8237c3f20b8d4d20f2881849562457cbbce04e4ab68749",
+    "sources/w15-m-spell-ctors-a-ctor-9spellroot/host_check.cpp": "87eccf5fbefe367af5b8c1c53bdbaf990dca0b4039bb17abe2d326043fb8e53a",
+    "sources/w15-m-spell-ctors-a-ctor-9spellroot/spell_root_ctor.cpp": "be7018f401d1003d8bb9ede7a24ccfe5ca6c1874a7d04cc2c15f88003c8a2509",
+    "sources/w15-m-spell-ctors-a-ctor-blinding-light/host_check.cpp": "b8a2562d71ada36acecc298801464f01cf1ffcb25daf2565778682457c83c5da",
+    "sources/w15-m-spell-ctors-a-ctor-blinding-light/spell_blinding_light_ctor.cpp": "aabe847b5d4a04459e37d02a5a63b6379e3c5672589aa3d1531995fe282d71f6",
+    "sources/w15-m-spell-ctors-a-dtor-13firebomblet/dtor.cpp": "66e0a5af9b227531b3b7d46f4c5707dd9fa38ff67b23fabd2b76269544b79922",
+    "sources/w15-m-spell-ctors-a-dtor-13firebomblet/host_check.cpp": "bca07a734a45cfab53062ff6e530af0742684b8e20967daee9392ea83fa2d57f",
+    "sources/w15-m-spell-ctors-a-dtor-14firestormflare/dtor.cpp": "ff910b862fd06b23b38e469f19ed8be0fd011acde21e6b376054eb6d88d5b2d0",
+    "sources/w15-m-spell-ctors-a-dtor-14firestormflare/host_check.cpp": "60c9aae829fa835f9bdb48ce0a36ecffb256e52d3c99c0364f848d202d1e2be6",
+    "sources/w15-m-spell-ctors-a-dtor-18hammerofwrath/dtor.cpp": "7a053f106cb9368854a23076d6d327345f8cd59c8c08a753d5872168dd19db73",
+    "sources/w15-m-spell-ctors-a-dtor-18hammerofwrath/host_check.cpp": "0e58e1e413655dc82dc722a37b7a8434d2cf6eb2bfc559b4740ec2298f625be4",
+    "sources/w15-m-spell-ctors-a-dtor-19summonskeleton/dtor.cpp": "e287829eae1aa12c34a96ca6594ada7f88851df0a064f8810c365c86803b155b",
+    "sources/w15-m-spell-ctors-a-dtor-19summonskeleton/host_check.cpp": "017f30d755d91bc2076c5af6f1eb244c1a7badc3a68f29269261e6ded08d37ea"
   },
   "additional_implementations": [
     {
@@ -105230,11 +105326,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6978,
-    "authored_default_inputs": 6976,
+    "selected_inputs": 6984,
+    "authored_default_inputs": 6982,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5525,
-    "compiled_body_bytes_from_accepted_inputs": 2205456,
+    "emitted_function_definitions_including_helpers": 5531,
+    "compiled_body_bytes_from_accepted_inputs": 2206228,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -105247,7 +105343,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6665
+    "package_selected_inputs": 6671
   },
   "startup_implementations": [
     {
@@ -210861,6 +210957,108 @@
       "emitted_functions": [],
       "host_files": [
         "sources/w15-m-rtti-a-vt-9bad-alloc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-ctor-9spellroot/spell_root_ctor.cpp",
+      "source_sha256": "be7018f401d1003d8bb9ede7a24ccfe5ca6c1874a7d04cc2c15f88003c8a2509",
+      "object_sha256": "9bdd906cc5c2c74f03587209a418f15e039344312adba626dffdd725ddc9f765",
+      "emitted_functions": [
+        {
+          "name": "__9SpellRootiP8CreatureP5Skill",
+          "compiled_body_bytes": 172
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-ctor-9spellroot/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-ctor-blinding-light/spell_blinding_light_ctor.cpp",
+      "source_sha256": "aabe847b5d4a04459e37d02a5a63b6379e3c5672589aa3d1531995fe282d71f6",
+      "object_sha256": "c55fca4457bb407bb9f7a28f0db1736a6a83a0c4ea7b6094f8c7ab59130efb1c",
+      "emitted_functions": [
+        {
+          "name": "__18SpellBlindingLightiP8CreatureT2P5Skill",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-ctor-blinding-light/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-dtor-13firebomblet/dtor.cpp",
+      "source_sha256": "66e0a5af9b227531b3b7d46f4c5707dd9fa38ff67b23fabd2b76269544b79922",
+      "object_sha256": "d84f6096b8dad3e868db57405cede8fd866cb008c42bc9f3bf011cf0676a30db",
+      "emitted_functions": [
+        {
+          "name": "_$_13FireBombletJr",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-dtor-13firebomblet/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-dtor-14firestormflare/dtor.cpp",
+      "source_sha256": "ff910b862fd06b23b38e469f19ed8be0fd011acde21e6b376054eb6d88d5b2d0",
+      "object_sha256": "3ec9a405671f4fbc9f9c0fe6d4bd169ab94eafc692631c52e4ecc09a7833fd20",
+      "emitted_functions": [
+        {
+          "name": "_$_14FireStormFlare",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-dtor-14firestormflare/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-dtor-18hammerofwrath/dtor.cpp",
+      "source_sha256": "7a053f106cb9368854a23076d6d327345f8cd59c8c08a753d5872168dd19db73",
+      "object_sha256": "dae6c73df2aecf350d9c9287a03d027e590107ac939b09e0c586c0338cf8aeca",
+      "emitted_functions": [
+        {
+          "name": "_$_18SpellHammerOfWrath",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-dtor-18hammerofwrath/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-m-spell-ctors-a",
+      "source": "sources/w15-m-spell-ctors-a-dtor-19summonskeleton/dtor.cpp",
+      "source_sha256": "e287829eae1aa12c34a96ca6594ada7f88851df0a064f8810c365c86803b155b",
+      "object_sha256": "93bf1f2316a990f0d4d97c0a8ff1b8988c834a6a6dd80501e67687e533b0987a",
+      "emitted_functions": [
+        {
+          "name": "_$_19SpellSummonSkeleton",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w15-m-spell-ctors-a-dtor-19summonskeleton/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
