@@ -10908,3 +10908,21 @@ Opened: `Begin__Ct6VIList1Z7VIActor`, `CalcObjectToWorld__7VIActor`, `Clear__7VI
 
 Full partial build: 7607 source compilations, one link, 6086 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:31 CDT — agents/w16-scene-b — 742 unresolved imports
+
+## agents/w16-fx-a
+
+Merged (merge commit). All 24 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (24 of 24 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 74 minutes old.
+
+| | |
+|---|---|
+| Before | 742 |
+| After | 730 |
+| Closed | 24 |
+| Opened | 12 |
+
+Closed: `AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene`, `AddRoot__9VIHSprite`, `AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3`, `Add__9VIHSpritei`, `AllocParticles__14VIEffectVolume`, `Allocate__13VIHSpriteAnim`, `AttachSkin__9VIHSpriteiR7VIScene`, `Attach__9VIHSpriteiiR7VIScene`, `BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes`, `CalcDataSize__13VIHSpriteAnim`, `CreateMotif__22VIParticleDefinitionEx`, `Create__20VIParticleDefinitionR8VIRaster`, `DetachAllResources__14VIEffectVolume`, `DetachSurface__14VIEffectVolumei`, `FreeParticles__14VIEffectVolume`, `GetAttachSprite__C9VIHSpritei`, `NextMotif__C22VIParticleDefinitionExP15VIParticleMotif`, `P_FaceSprite__FG6Point3ffiiiiP8_texturesi`, `ProcessDustStorm__14VIEffectVolumef`, `ProcessFallingLeaves__14VIEffectVolumef`, `ProcessGroundFog__14VIEffectVolumef`, `ProcessHierarchy__9VIHSprite`, `ProcessLightShafts__14VIEffectVolumef`, `ProcessPlayTiming__9VIHSpriteiR7VIScene`
+
+Opened: `AddHead__7VILListP7VILNode`, `Add__t6VIPool1Z13VIHSpritePlay`, `Add__t6VIPool1Z17VIHSpritePlayNode`, `Add__t6VIPool1Z19VIHSpriteAttachmentRC19VIHSpriteAttachment`, `Add__t6VIPool1ZP15VIParticleMotifRCP15VIParticleMotif`, `Add__t8VIVector1Z10VIMatrix44`, `Add__t8VIVector1Z13VIHSpriteNode`, `Find__Ct5VIMap2ZiZiRCi`, `PrecalcPlayback__9VIHSpritei`, `ProcessHierarchy__9VIHSpriteiR10VIMatrix44`, `__fixsfdi`, `singleBuffer`
+
+Full partial build: 7631 source compilations, one link, 6110 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:38 CDT — agents/w16-fx-a — 730 unresolved imports

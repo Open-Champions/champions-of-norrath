@@ -98598,6 +98598,342 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-scene-b-zone-render-leaf/render_leaf.cpp"
+    },
+    {
+      "input_order": 7609,
+      "component": "w16-fx-a-effectvolume-alloc-particles",
+      "object_name": "w16_fx_a_effectvolume_alloc_particles.o",
+      "private_object_sha256": "b7cc1d3710df131480987ad7dea5e936e4ae0b6721c21ff6b777fd2e71b2d3e2",
+      "emitted_functions": [
+        {
+          "name": "AllocParticles__14VIEffectVolume",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-alloc-particles/alloc_particles.cpp"
+    },
+    {
+      "input_order": 7610,
+      "component": "w16-fx-a-effectvolume-detach-all-resources",
+      "object_name": "w16_fx_a_effectvolume_detach_all_resources.o",
+      "private_object_sha256": "58503bee752e712a58bcda2a801cd3f8ad3e1d9ea837e4e1ce985100f5d5956f",
+      "emitted_functions": [
+        {
+          "name": "DetachAllResources__14VIEffectVolume",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-detach-all-resources/detach_all_resources.cpp"
+    },
+    {
+      "input_order": 7611,
+      "component": "w16-fx-a-effectvolume-detach-surface",
+      "object_name": "w16_fx_a_effectvolume_detach_surface.o",
+      "private_object_sha256": "a26e1caa7656dff3ef3dcbec6b92ce64ee43333288bf1c6f133b05686087c7b1",
+      "emitted_functions": [
+        {
+          "name": "DetachSurface__14VIEffectVolumei",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-detach-surface/detach_surface.cpp"
+    },
+    {
+      "input_order": 7612,
+      "component": "w16-fx-a-effectvolume-free-particles",
+      "object_name": "w16_fx_a_effectvolume_free_particles.o",
+      "private_object_sha256": "af84791a90e4ae373a77c5178c58b37bb941a1a9aa10994f83b056e9dd1f5a76",
+      "emitted_functions": [
+        {
+          "name": "FreeParticles__14VIEffectVolume",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-free-particles/free_particles.cpp"
+    },
+    {
+      "input_order": 7613,
+      "component": "w16-fx-a-effectvolume-process-dust-storm",
+      "object_name": "w16_fx_a_effectvolume_process_dust_storm.o",
+      "private_object_sha256": "aa65063fae7020ae77b99f9a51434fadb436c8de2f3ae147a3946e74f94fcdad",
+      "emitted_functions": [
+        {
+          "name": "ProcessDustStorm__14VIEffectVolumef",
+          "compiled_body_bytes": 1024
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-process-dust-storm/process_dust_storm.cpp"
+    },
+    {
+      "input_order": 7614,
+      "component": "w16-fx-a-effectvolume-process-falling-leaves",
+      "object_name": "w16_fx_a_effectvolume_process_falling_leaves.o",
+      "private_object_sha256": "41cc9f68f558032049094f2def47794746354f4d05ca520bacb175420b900726",
+      "emitted_functions": [
+        {
+          "name": "ProcessFallingLeaves__14VIEffectVolumef",
+          "compiled_body_bytes": 936
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-process-falling-leaves/process_falling_leaves.cpp"
+    },
+    {
+      "input_order": 7615,
+      "component": "w16-fx-a-effectvolume-process-ground-fog",
+      "object_name": "w16_fx_a_effectvolume_process_ground_fog.o",
+      "private_object_sha256": "99f014e9791fe60458fbba447572a342cb5959e32123fb58e4bc0071ecd708bc",
+      "emitted_functions": [
+        {
+          "name": "ProcessGroundFog__14VIEffectVolumef",
+          "compiled_body_bytes": 688
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-process-ground-fog/process_ground_fog.cpp"
+    },
+    {
+      "input_order": 7616,
+      "component": "w16-fx-a-effectvolume-process-light-shafts",
+      "object_name": "w16_fx_a_effectvolume_process_light_shafts.o",
+      "private_object_sha256": "9388395816ccb9cf1da8376e0ec6e0cdb55bb8e9b1b4a74731ab406de41d726f",
+      "emitted_functions": [
+        {
+          "name": "ProcessLightShafts__14VIEffectVolumef",
+          "compiled_body_bytes": 676
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-effectvolume-process-light-shafts/process_light_shafts.cpp"
+    },
+    {
+      "input_order": 7617,
+      "component": "w16-fx-a-hsprite-add",
+      "object_name": "w16_fx_a_hsprite_add.o",
+      "private_object_sha256": "79d397e337bcd5f1dccb834e2d6e4059c1abf9f1093433a9c48760b1072cdf75",
+      "emitted_functions": [
+        {
+          "name": "Add__9VIHSpritei",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-add/add.cpp"
+    },
+    {
+      "input_order": 7618,
+      "component": "w16-fx-a-hsprite-add-play",
+      "object_name": "w16_fx_a_hsprite_add_play.o",
+      "private_object_sha256": "9e718350dee0b76d5dab1728036d0263af7327a6c8319841592a25ef5d0d8a9c",
+      "emitted_functions": [
+        {
+          "name": "AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene",
+          "compiled_body_bytes": 580
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-add-play/add_play.cpp"
+    },
+    {
+      "input_order": 7619,
+      "component": "w16-fx-a-hsprite-add-root",
+      "object_name": "w16_fx_a_hsprite_add_root.o",
+      "private_object_sha256": "ce0bdbdab34ed00f5ab74c526c535b6a3577612dedc563261bfec9119bfea065",
+      "emitted_functions": [
+        {
+          "name": "AddRoot__9VIHSprite",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-add-root/add_root.cpp"
+    },
+    {
+      "input_order": 7620,
+      "component": "w16-fx-a-hsprite-attach",
+      "object_name": "w16_fx_a_hsprite_attach.o",
+      "private_object_sha256": "c1231046cb9d0054b473bdbcddbef73034eee6dfa342438f1b75ffd4136d0662",
+      "emitted_functions": [
+        {
+          "name": "Attach__9VIHSpriteiiR7VIScene",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-attach/attach.cpp"
+    },
+    {
+      "input_order": 7621,
+      "component": "w16-fx-a-hsprite-attach-skin",
+      "object_name": "w16_fx_a_hsprite_attach_skin.o",
+      "private_object_sha256": "2eb23bd8e48fdb2b079b2842c840ca494637b0e9188d73482ba5d6727cb8e015",
+      "emitted_functions": [
+        {
+          "name": "AttachSkin__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-attach-skin/attach_skin.cpp"
+    },
+    {
+      "input_order": 7622,
+      "component": "w16-fx-a-hsprite-get-attach-sprite",
+      "object_name": "w16_fx_a_hsprite_get_attach_sprite.o",
+      "private_object_sha256": "abe360dfc8d0b2d369f1a081e9b2d977b16096f1123e34fd357dbc5b83039c4e",
+      "emitted_functions": [
+        {
+          "name": "GetAttachSprite__C9VIHSpritei",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-get-attach-sprite/get_attach_sprite.cpp"
+    },
+    {
+      "input_order": 7623,
+      "component": "w16-fx-a-hsprite-process-hierarchy",
+      "object_name": "w16_fx_a_hsprite_process_hierarchy.o",
+      "private_object_sha256": "dd17f57ec3bf9a0185e1037018973542232bddbbaa3a64434cc9b4cb11f3848c",
+      "emitted_functions": [
+        {
+          "name": "ProcessHierarchy__9VIHSprite",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-process-hierarchy/process_hierarchy.cpp"
+    },
+    {
+      "input_order": 7624,
+      "component": "w16-fx-a-hsprite-process-play-timing",
+      "object_name": "w16_fx_a_hsprite_process_play_timing.o",
+      "private_object_sha256": "cabe486d2e16efcf83384fb0c1e5541c32e20274ee85b753c6516f1b8dc6b399",
+      "emitted_functions": [
+        {
+          "name": "ProcessPlayTiming__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 1540
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hsprite-process-play-timing/process_play_timing.cpp"
+    },
+    {
+      "input_order": 7625,
+      "component": "w16-fx-a-hspriteanim-allocate",
+      "object_name": "w16_fx_a_hspriteanim_allocate.o",
+      "private_object_sha256": "d1dd5ddd345deb74c3d806cce1e11aff5b9f0b360f76d195cb3b9d0ddd6e60e3",
+      "emitted_functions": [
+        {
+          "name": "Allocate__13VIHSpriteAnim",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hspriteanim-allocate/allocate.cpp"
+    },
+    {
+      "input_order": 7626,
+      "component": "w16-fx-a-hspriteanim-calc-data-size",
+      "object_name": "w16_fx_a_hspriteanim_calc_data_size.o",
+      "private_object_sha256": "d5f723b9d104081c73a79fa8a9f654522b063bd0892fabab87e2b0bcf8aad0c6",
+      "emitted_functions": [
+        {
+          "name": "CalcDataSize__13VIHSpriteAnim",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-hspriteanim-calc-data-size/calc_data_size.cpp"
+    },
+    {
+      "input_order": 7627,
+      "component": "w16-fx-a-p-face-sprite",
+      "object_name": "w16_fx_a_p_face_sprite.o",
+      "private_object_sha256": "66d547fac51e01c1c1bdc1c6e2c603970f251f918c728429987091406efa2ede",
+      "emitted_functions": [
+        {
+          "name": "P_FaceSprite__FG6Point3ffiiiiP8_texturesi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-p-face-sprite/p_face_sprite.cpp"
+    },
+    {
+      "input_order": 7628,
+      "component": "w16-fx-a-particledefinition-blend-motifs",
+      "object_name": "w16_fx_a_particledefinition_blend_motifs.o",
+      "private_object_sha256": "8150b43a643eef55ae48be546d4b55551f62b5b7691fd90efd3872a792a8f727",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-particledefinition-blend-motifs/blend_motifs.cpp"
+    },
+    {
+      "input_order": 7629,
+      "component": "w16-fx-a-particledefinition-create",
+      "object_name": "w16_fx_a_particledefinition_create.o",
+      "private_object_sha256": "38c5569745e63ab48c8e49eaa7cc417a47d6732de6f81a2ed21040949cb30f8c",
+      "emitted_functions": [
+        {
+          "name": "Create__20VIParticleDefinitionR8VIRaster",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-particledefinition-create/create.cpp"
+    },
+    {
+      "input_order": 7630,
+      "component": "w16-fx-a-particledefinition-create-motif",
+      "object_name": "w16_fx_a_particledefinition_create_motif.o",
+      "private_object_sha256": "3253d098deea3393044968960707b8e484777d44e2ec8407f9bcd6612d6fba65",
+      "emitted_functions": [
+        {
+          "name": "CreateMotif__22VIParticleDefinitionEx",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp"
+    },
+    {
+      "input_order": 7631,
+      "component": "w16-fx-a-particledefinition-next-motif",
+      "object_name": "w16_fx_a_particledefinition_next_motif.o",
+      "private_object_sha256": "5c6e7aec43bcfdd407c9e5cb09ea3d2a85d3db217162ba21aa03f01a93299a7b",
+      "emitted_functions": [
+        {
+          "name": "NextMotif__C22VIParticleDefinitionExP15VIParticleMotif",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp"
+    },
+    {
+      "input_order": 7632,
+      "component": "w16-fx-a-trailfx-add-segment",
+      "object_name": "w16_fx_a_trailfx_add_segment.o",
+      "private_object_sha256": "7316969da6f64e5d2a8ea43266c0f8ccf42026f96ca6ebe7f4a2a93defbd4271",
+      "emitted_functions": [
+        {
+          "name": "AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp"
     }
   ],
   "drafts": [
@@ -114636,7 +114972,55 @@
     "sources/w16-scene-b-zone-query-intersection/host_check.cpp": "d3a11d21a70bad205d363276da0d8a3d949b6ed9fa60c5d661cd2c969da5f4f7",
     "sources/w16-scene-b-zone-query-intersection/query_intersection.cpp": "59320fe335f6e309c3dd5d63e6863da194bd9125bb2eca2743e3a55ace7ba20c",
     "sources/w16-scene-b-zone-render-leaf/host_check.cpp": "4f41a3f1dfb58a3d5ba232aacde195e79147aa049f21f40bdedb4fa228a7d1cb",
-    "sources/w16-scene-b-zone-render-leaf/render_leaf.cpp": "57ddd0ad29dda22d31b47feadcbdbbf374ae70ba56c37d9fbfe5fe98dd732628"
+    "sources/w16-scene-b-zone-render-leaf/render_leaf.cpp": "57ddd0ad29dda22d31b47feadcbdbbf374ae70ba56c37d9fbfe5fe98dd732628",
+    "sources/w16-fx-a-effectvolume-alloc-particles/alloc_particles.cpp": "5348a16f6d165a7e38d1771f46bd60103f7b8985ecdede59b64340f830116638",
+    "sources/w16-fx-a-effectvolume-alloc-particles/host_check.cpp": "edcb579c203b97dfcd330ad7cdd7bd4cf406084b74bbf7964e213c8ae33443a7",
+    "sources/w16-fx-a-effectvolume-detach-all-resources/detach_all_resources.cpp": "d218f6b98a7b48b490bfd1e37720a703403df7c4597ca397d6288d3bcf62b812",
+    "sources/w16-fx-a-effectvolume-detach-all-resources/host_check.cpp": "bf5baccae0532db12f91330a141f1d16d4205e4ed69164e6304a9b97a41557db",
+    "sources/w16-fx-a-effectvolume-detach-surface/detach_surface.cpp": "67a999b3c1b4acb16e6c5b1c1ddb380d288f7d8d283e5fef0353aa85b0a47ad9",
+    "sources/w16-fx-a-effectvolume-detach-surface/host_check.cpp": "5d2e09de120e6aea09eecf3dc4e61c113d4ad43ab167f7a7cc6b732b859a5c4c",
+    "sources/w16-fx-a-effectvolume-free-particles/free_particles.cpp": "ca4f6d136b6495f546f8cd63d3c34f6c5d1145f461f85d6ac963808671bdeec1",
+    "sources/w16-fx-a-effectvolume-free-particles/host_check.cpp": "2459aa83f2aaeeb7ee6dc779ebb8755f7c745bd88bbf82d63d677da512d768dc",
+    "sources/w16-fx-a-effectvolume-process-dust-storm/host_check.cpp": "1b0231995592612ea88c819e5ea3824098e6c2e67b6975feb6729def8ca6177d",
+    "sources/w16-fx-a-effectvolume-process-dust-storm/process_dust_storm.cpp": "48869f1a047e3752d3b2f87803dbfb851a00f6147abcaba53b3d175fd0b20d84",
+    "sources/w16-fx-a-effectvolume-process-falling-leaves/host_check.cpp": "8106273acbde3d064b5fff5259bb3ac41799987163eeef23b69369adce3a4bb2",
+    "sources/w16-fx-a-effectvolume-process-falling-leaves/process_falling_leaves.cpp": "a60b5de80ec1fac156814c44c26aad47e3907aa755d6e61380f6008a382f47d8",
+    "sources/w16-fx-a-effectvolume-process-ground-fog/host_check.cpp": "6e30023f3b284cbc435b6978a22de3092d7ec180a31351e96ca5ff55d9add328",
+    "sources/w16-fx-a-effectvolume-process-ground-fog/process_ground_fog.cpp": "18100301ccc50334c032b6e9ddac676e69e692876cf707a064ae93a6c2fe8fd9",
+    "sources/w16-fx-a-effectvolume-process-light-shafts/host_check.cpp": "f0ddf363710c6a43493d5d042230fa2151d5f9b0e155439dd30590eb08c2b2d0",
+    "sources/w16-fx-a-effectvolume-process-light-shafts/process_light_shafts.cpp": "d1427984b4b0af09904883b7cbf148756ef8a9d4cbf947188a49c369a5abd474",
+    "sources/w16-fx-a-hsprite-add/add.cpp": "22dfb652a93d5e492ec4ca3aeb3f109d4f371f6fec4cbccf361244009eeb4ef2",
+    "sources/w16-fx-a-hsprite-add/host_check.cpp": "300953fce33bdadd20014283f4f8476808c543230c90b9a7db950418d57de63e",
+    "sources/w16-fx-a-hsprite-add-play/add_play.cpp": "11730ecf6cdb183a8ffa77c56f9650e2fa72ba457281098e49112425713fc868",
+    "sources/w16-fx-a-hsprite-add-play/host_check.cpp": "e0d71bb3ead723986a878b5ce3c592b446f2b7a46e5265e9c9221abbc467dc4b",
+    "sources/w16-fx-a-hsprite-add-root/add_root.cpp": "6036e1fe1c01778ce02e9eb1130f3a27e9cbd10c3230beb4c54f095e88013338",
+    "sources/w16-fx-a-hsprite-add-root/host_check.cpp": "80950aa58c83cc0740610a6aab0981f956fd05bd72a839520284e8e26e46acf1",
+    "sources/w16-fx-a-hsprite-attach/attach.cpp": "596fae2eb3b229fb2f2579e281233815630eb041fab13e3ae3bc408317535c05",
+    "sources/w16-fx-a-hsprite-attach/host_check.cpp": "62418f6715853a183bbbcf2d99340e5d08170352583aeeb7dd73ef69b1f94f18",
+    "sources/w16-fx-a-hsprite-attach-skin/attach_skin.cpp": "53f1ceafdd209c20f4ee8923dfe8e730eef024b688879c6543c3e999e2ff752f",
+    "sources/w16-fx-a-hsprite-attach-skin/host_check.cpp": "7957d8f7c0f52485d19c704f97add1d7dec1e7ffc6a4545ded4f450e807f3f6a",
+    "sources/w16-fx-a-hsprite-get-attach-sprite/get_attach_sprite.cpp": "ced401f3dd6046fa99c5bdbd68d76c9434fe2fcb95d8e2cfb154fef768b15fe9",
+    "sources/w16-fx-a-hsprite-get-attach-sprite/host_check.cpp": "c5e693d039507ad38fd32caafa430cfd8d8f7bc23c6af5c103f5baa623fbf083",
+    "sources/w16-fx-a-hsprite-process-hierarchy/host_check.cpp": "a28e1cf1cf6e2acca02120985cd0083e97324e1edd098f90a6a89651c7f42302",
+    "sources/w16-fx-a-hsprite-process-hierarchy/process_hierarchy.cpp": "c6c938a751cfdf0213f2fdfa325c395cfff7799f5ef86238fb032e5633484c53",
+    "sources/w16-fx-a-hsprite-process-play-timing/host_check.cpp": "2110a5e7308c709efea9546585cbf6c45ed205c1efb82b0da4bfde0d1303167e",
+    "sources/w16-fx-a-hsprite-process-play-timing/process_play_timing.cpp": "6f2b9c9f6c355653c54cd457b3bdf3b41fcd59799a75d7c6ad23a10131131389",
+    "sources/w16-fx-a-hspriteanim-allocate/allocate.cpp": "9e0ecdd672c6b6ff62f14edc8709299c7dfa8ecd2346d15aa82d37b3223be34c",
+    "sources/w16-fx-a-hspriteanim-allocate/host_check.cpp": "b04cd0040c2197bdcfa47b837cd43c200182ebed90c69639195df3fe4e499e96",
+    "sources/w16-fx-a-hspriteanim-calc-data-size/calc_data_size.cpp": "bf0ce931b4670de8e3332138a20260422777ec207a43f76fed6bac9b6dbf38ea",
+    "sources/w16-fx-a-hspriteanim-calc-data-size/host_check.cpp": "ac8cbe901aa346128245fd35209bcfbb12a242463625e08d0fe07d30fab4252f",
+    "sources/w16-fx-a-p-face-sprite/host_check.cpp": "4f0e3f3f6e6b325a458e914cf415f046ad7e7d641b8109d48aa257427eff05d7",
+    "sources/w16-fx-a-p-face-sprite/p_face_sprite.cpp": "f6a6a860af4e10b8894c8421d4a68b555281db3f87896fe4155c2815a0cb0541",
+    "sources/w16-fx-a-particledefinition-blend-motifs/blend_motifs.cpp": "406c7a7d7bb149e49d65ec861bd4f7067eef04a400e82c26a80fa0af288ad681",
+    "sources/w16-fx-a-particledefinition-blend-motifs/host_check.cpp": "b131ba3574d2825dbcd6ffccdffe04fd75a7ba38cd14ddf30350dc8103485fce",
+    "sources/w16-fx-a-particledefinition-create/create.cpp": "4f2e62910ac5893a0a7c4f38571d74a006ff2d7c96b9fb6c2bf957c6cc07cff7",
+    "sources/w16-fx-a-particledefinition-create/host_check.cpp": "447fef9187ef9159e77c6964c5da30d21142975216b67df628d821e7e6d9b76f",
+    "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp": "1d5eb70aeacdd7b3d8eff2a4ca3c9e207bc548d6c916604f3fc86603a4504d8b",
+    "sources/w16-fx-a-particledefinition-create-motif/host_check.cpp": "757b39f8a75b1a4ad05e47e3a1579b3282189d99b85584e073f114a10b989814",
+    "sources/w16-fx-a-particledefinition-next-motif/host_check.cpp": "f15465d6cff97b3a15cfe0b9120c72390549e5bfe4f1e1d7946fa58cc23a2190",
+    "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp": "b6e57914936eb7c9585f8eebb3590934d9b06a442359f6adc2b43e9729a9870f",
+    "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4",
+    "sources/w16-fx-a-trailfx-add-segment/host_check.cpp": "7ac62d01bd7257525a8f57650bb5ea8853c6363b3f31b6fcc26d0cbc5e554b01"
   },
   "additional_implementations": [
     {
@@ -115078,11 +115462,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7609,
-    "authored_default_inputs": 7607,
+    "selected_inputs": 7633,
+    "authored_default_inputs": 7631,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 6088,
-    "compiled_body_bytes_from_accepted_inputs": 2347260,
+    "emitted_function_definitions_including_helpers": 6112,
+    "compiled_body_bytes_from_accepted_inputs": 2355804,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -115095,7 +115479,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7296
+    "package_selected_inputs": 7320
   },
   "startup_implementations": [
     {
@@ -231085,6 +231469,414 @@
       ],
       "host_files": [
         "sources/w16-scene-b-zone-render-leaf/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-alloc-particles/alloc_particles.cpp",
+      "source_sha256": "5348a16f6d165a7e38d1771f46bd60103f7b8985ecdede59b64340f830116638",
+      "object_sha256": "b7cc1d3710df131480987ad7dea5e936e4ae0b6721c21ff6b777fd2e71b2d3e2",
+      "emitted_functions": [
+        {
+          "name": "AllocParticles__14VIEffectVolume",
+          "compiled_body_bytes": 332
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-alloc-particles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-detach-all-resources/detach_all_resources.cpp",
+      "source_sha256": "d218f6b98a7b48b490bfd1e37720a703403df7c4597ca397d6288d3bcf62b812",
+      "object_sha256": "58503bee752e712a58bcda2a801cd3f8ad3e1d9ea837e4e1ce985100f5d5956f",
+      "emitted_functions": [
+        {
+          "name": "DetachAllResources__14VIEffectVolume",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-detach-all-resources/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-detach-surface/detach_surface.cpp",
+      "source_sha256": "67a999b3c1b4acb16e6c5b1c1ddb380d288f7d8d283e5fef0353aa85b0a47ad9",
+      "object_sha256": "a26e1caa7656dff3ef3dcbec6b92ce64ee43333288bf1c6f133b05686087c7b1",
+      "emitted_functions": [
+        {
+          "name": "DetachSurface__14VIEffectVolumei",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-detach-surface/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-free-particles/free_particles.cpp",
+      "source_sha256": "ca4f6d136b6495f546f8cd63d3c34f6c5d1145f461f85d6ac963808671bdeec1",
+      "object_sha256": "af84791a90e4ae373a77c5178c58b37bb941a1a9aa10994f83b056e9dd1f5a76",
+      "emitted_functions": [
+        {
+          "name": "FreeParticles__14VIEffectVolume",
+          "compiled_body_bytes": 60
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-free-particles/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-process-dust-storm/process_dust_storm.cpp",
+      "source_sha256": "48869f1a047e3752d3b2f87803dbfb851a00f6147abcaba53b3d175fd0b20d84",
+      "object_sha256": "aa65063fae7020ae77b99f9a51434fadb436c8de2f3ae147a3946e74f94fcdad",
+      "emitted_functions": [
+        {
+          "name": "ProcessDustStorm__14VIEffectVolumef",
+          "compiled_body_bytes": 1024
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-process-dust-storm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-process-falling-leaves/process_falling_leaves.cpp",
+      "source_sha256": "a60b5de80ec1fac156814c44c26aad47e3907aa755d6e61380f6008a382f47d8",
+      "object_sha256": "41cc9f68f558032049094f2def47794746354f4d05ca520bacb175420b900726",
+      "emitted_functions": [
+        {
+          "name": "ProcessFallingLeaves__14VIEffectVolumef",
+          "compiled_body_bytes": 936
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-process-falling-leaves/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-process-ground-fog/process_ground_fog.cpp",
+      "source_sha256": "18100301ccc50334c032b6e9ddac676e69e692876cf707a064ae93a6c2fe8fd9",
+      "object_sha256": "99f014e9791fe60458fbba447572a342cb5959e32123fb58e4bc0071ecd708bc",
+      "emitted_functions": [
+        {
+          "name": "ProcessGroundFog__14VIEffectVolumef",
+          "compiled_body_bytes": 688
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-process-ground-fog/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-effectvolume-process-light-shafts/process_light_shafts.cpp",
+      "source_sha256": "d1427984b4b0af09904883b7cbf148756ef8a9d4cbf947188a49c369a5abd474",
+      "object_sha256": "9388395816ccb9cf1da8376e0ec6e0cdb55bb8e9b1b4a74731ab406de41d726f",
+      "emitted_functions": [
+        {
+          "name": "ProcessLightShafts__14VIEffectVolumef",
+          "compiled_body_bytes": 676
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-effectvolume-process-light-shafts/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-add/add.cpp",
+      "source_sha256": "22dfb652a93d5e492ec4ca3aeb3f109d4f371f6fec4cbccf361244009eeb4ef2",
+      "object_sha256": "79d397e337bcd5f1dccb834e2d6e4059c1abf9f1093433a9c48760b1072cdf75",
+      "emitted_functions": [
+        {
+          "name": "Add__9VIHSpritei",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-add/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-add-play/add_play.cpp",
+      "source_sha256": "11730ecf6cdb183a8ffa77c56f9650e2fa72ba457281098e49112425713fc868",
+      "object_sha256": "9e718350dee0b76d5dab1728036d0263af7327a6c8319841592a25ef5d0d8a9c",
+      "emitted_functions": [
+        {
+          "name": "AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene",
+          "compiled_body_bytes": 580
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-add-play/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-add-root/add_root.cpp",
+      "source_sha256": "6036e1fe1c01778ce02e9eb1130f3a27e9cbd10c3230beb4c54f095e88013338",
+      "object_sha256": "ce0bdbdab34ed00f5ab74c526c535b6a3577612dedc563261bfec9119bfea065",
+      "emitted_functions": [
+        {
+          "name": "AddRoot__9VIHSprite",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-add-root/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-attach/attach.cpp",
+      "source_sha256": "596fae2eb3b229fb2f2579e281233815630eb041fab13e3ae3bc408317535c05",
+      "object_sha256": "c1231046cb9d0054b473bdbcddbef73034eee6dfa342438f1b75ffd4136d0662",
+      "emitted_functions": [
+        {
+          "name": "Attach__9VIHSpriteiiR7VIScene",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-attach/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-attach-skin/attach_skin.cpp",
+      "source_sha256": "53f1ceafdd209c20f4ee8923dfe8e730eef024b688879c6543c3e999e2ff752f",
+      "object_sha256": "2eb23bd8e48fdb2b079b2842c840ca494637b0e9188d73482ba5d6727cb8e015",
+      "emitted_functions": [
+        {
+          "name": "AttachSkin__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-attach-skin/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-get-attach-sprite/get_attach_sprite.cpp",
+      "source_sha256": "ced401f3dd6046fa99c5bdbd68d76c9434fe2fcb95d8e2cfb154fef768b15fe9",
+      "object_sha256": "abe360dfc8d0b2d369f1a081e9b2d977b16096f1123e34fd357dbc5b83039c4e",
+      "emitted_functions": [
+        {
+          "name": "GetAttachSprite__C9VIHSpritei",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-get-attach-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-process-hierarchy/process_hierarchy.cpp",
+      "source_sha256": "c6c938a751cfdf0213f2fdfa325c395cfff7799f5ef86238fb032e5633484c53",
+      "object_sha256": "dd17f57ec3bf9a0185e1037018973542232bddbbaa3a64434cc9b4cb11f3848c",
+      "emitted_functions": [
+        {
+          "name": "ProcessHierarchy__9VIHSprite",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-process-hierarchy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hsprite-process-play-timing/process_play_timing.cpp",
+      "source_sha256": "6f2b9c9f6c355653c54cd457b3bdf3b41fcd59799a75d7c6ad23a10131131389",
+      "object_sha256": "cabe486d2e16efcf83384fb0c1e5541c32e20274ee85b753c6516f1b8dc6b399",
+      "emitted_functions": [
+        {
+          "name": "ProcessPlayTiming__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 1540
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hsprite-process-play-timing/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hspriteanim-allocate/allocate.cpp",
+      "source_sha256": "9e0ecdd672c6b6ff62f14edc8709299c7dfa8ecd2346d15aa82d37b3223be34c",
+      "object_sha256": "d1dd5ddd345deb74c3d806cce1e11aff5b9f0b360f76d195cb3b9d0ddd6e60e3",
+      "emitted_functions": [
+        {
+          "name": "Allocate__13VIHSpriteAnim",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hspriteanim-allocate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-hspriteanim-calc-data-size/calc_data_size.cpp",
+      "source_sha256": "bf0ce931b4670de8e3332138a20260422777ec207a43f76fed6bac9b6dbf38ea",
+      "object_sha256": "d5f723b9d104081c73a79fa8a9f654522b063bd0892fabab87e2b0bcf8aad0c6",
+      "emitted_functions": [
+        {
+          "name": "CalcDataSize__13VIHSpriteAnim",
+          "compiled_body_bytes": 160
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-hspriteanim-calc-data-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-p-face-sprite/p_face_sprite.cpp",
+      "source_sha256": "f6a6a860af4e10b8894c8421d4a68b555281db3f87896fe4155c2815a0cb0541",
+      "object_sha256": "66d547fac51e01c1c1bdc1c6e2c603970f251f918c728429987091406efa2ede",
+      "emitted_functions": [
+        {
+          "name": "P_FaceSprite__FG6Point3ffiiiiP8_texturesi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-p-face-sprite/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-particledefinition-blend-motifs/blend_motifs.cpp",
+      "source_sha256": "406c7a7d7bb149e49d65ec861bd4f7067eef04a400e82c26a80fa0af288ad681",
+      "object_sha256": "8150b43a643eef55ae48be546d4b55551f62b5b7691fd90efd3872a792a8f727",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes",
+          "compiled_body_bytes": 736
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-particledefinition-blend-motifs/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-particledefinition-create/create.cpp",
+      "source_sha256": "4f2e62910ac5893a0a7c4f38571d74a006ff2d7c96b9fb6c2bf957c6cc07cff7",
+      "object_sha256": "38c5569745e63ab48c8e49eaa7cc417a47d6732de6f81a2ed21040949cb30f8c",
+      "emitted_functions": [
+        {
+          "name": "Create__20VIParticleDefinitionR8VIRaster",
+          "compiled_body_bytes": 192
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-particledefinition-create/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp",
+      "source_sha256": "1d5eb70aeacdd7b3d8eff2a4ca3c9e207bc548d6c916604f3fc86603a4504d8b",
+      "object_sha256": "3253d098deea3393044968960707b8e484777d44e2ec8407f9bcd6612d6fba65",
+      "emitted_functions": [
+        {
+          "name": "CreateMotif__22VIParticleDefinitionEx",
+          "compiled_body_bytes": 108
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-particledefinition-create-motif/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp",
+      "source_sha256": "b6e57914936eb7c9585f8eebb3590934d9b06a442359f6adc2b43e9729a9870f",
+      "object_sha256": "5c6e7aec43bcfdd407c9e5cb09ea3d2a85d3db217162ba21aa03f01a93299a7b",
+      "emitted_functions": [
+        {
+          "name": "NextMotif__C22VIParticleDefinitionExP15VIParticleMotif",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-particledefinition-next-motif/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-fx-a",
+      "source": "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp",
+      "source_sha256": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4",
+      "object_sha256": "7316969da6f64e5d2a8ea43266c0f8ccf42026f96ca6ebe7f4a2a93defbd4271",
+      "emitted_functions": [
+        {
+          "name": "AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3",
+          "compiled_body_bytes": 256
+        }
+      ],
+      "host_files": [
+        "sources/w16-fx-a-trailfx-add-segment/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

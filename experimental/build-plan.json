@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7607,
+  "default_authored_inputs": 7631,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8401,7 +8401,31 @@
     "sources/w16-scene-b-surface-reorder-palette/reorder_palette.cpp": "843e89dff3799b41de4ee9760f9cb2ea709212bb8f34d6076aa4e476d949c9d8",
     "sources/w16-scene-b-surface-set-dma-headers/set_dma_headers.cpp": "8fb0d2276a8b425dfa69469fa918d30c264ba9ab78ba752f42785886ce0e1016",
     "sources/w16-scene-b-zone-query-intersection/query_intersection.cpp": "59320fe335f6e309c3dd5d63e6863da194bd9125bb2eca2743e3a55ace7ba20c",
-    "sources/w16-scene-b-zone-render-leaf/render_leaf.cpp": "57ddd0ad29dda22d31b47feadcbdbbf374ae70ba56c37d9fbfe5fe98dd732628"
+    "sources/w16-scene-b-zone-render-leaf/render_leaf.cpp": "57ddd0ad29dda22d31b47feadcbdbbf374ae70ba56c37d9fbfe5fe98dd732628",
+    "sources/w16-fx-a-effectvolume-alloc-particles/alloc_particles.cpp": "5348a16f6d165a7e38d1771f46bd60103f7b8985ecdede59b64340f830116638",
+    "sources/w16-fx-a-effectvolume-detach-all-resources/detach_all_resources.cpp": "d218f6b98a7b48b490bfd1e37720a703403df7c4597ca397d6288d3bcf62b812",
+    "sources/w16-fx-a-effectvolume-detach-surface/detach_surface.cpp": "67a999b3c1b4acb16e6c5b1c1ddb380d288f7d8d283e5fef0353aa85b0a47ad9",
+    "sources/w16-fx-a-effectvolume-free-particles/free_particles.cpp": "ca4f6d136b6495f546f8cd63d3c34f6c5d1145f461f85d6ac963808671bdeec1",
+    "sources/w16-fx-a-effectvolume-process-dust-storm/process_dust_storm.cpp": "48869f1a047e3752d3b2f87803dbfb851a00f6147abcaba53b3d175fd0b20d84",
+    "sources/w16-fx-a-effectvolume-process-falling-leaves/process_falling_leaves.cpp": "a60b5de80ec1fac156814c44c26aad47e3907aa755d6e61380f6008a382f47d8",
+    "sources/w16-fx-a-effectvolume-process-ground-fog/process_ground_fog.cpp": "18100301ccc50334c032b6e9ddac676e69e692876cf707a064ae93a6c2fe8fd9",
+    "sources/w16-fx-a-effectvolume-process-light-shafts/process_light_shafts.cpp": "d1427984b4b0af09904883b7cbf148756ef8a9d4cbf947188a49c369a5abd474",
+    "sources/w16-fx-a-hsprite-add/add.cpp": "22dfb652a93d5e492ec4ca3aeb3f109d4f371f6fec4cbccf361244009eeb4ef2",
+    "sources/w16-fx-a-hsprite-add-play/add_play.cpp": "11730ecf6cdb183a8ffa77c56f9650e2fa72ba457281098e49112425713fc868",
+    "sources/w16-fx-a-hsprite-add-root/add_root.cpp": "6036e1fe1c01778ce02e9eb1130f3a27e9cbd10c3230beb4c54f095e88013338",
+    "sources/w16-fx-a-hsprite-attach/attach.cpp": "596fae2eb3b229fb2f2579e281233815630eb041fab13e3ae3bc408317535c05",
+    "sources/w16-fx-a-hsprite-attach-skin/attach_skin.cpp": "53f1ceafdd209c20f4ee8923dfe8e730eef024b688879c6543c3e999e2ff752f",
+    "sources/w16-fx-a-hsprite-get-attach-sprite/get_attach_sprite.cpp": "ced401f3dd6046fa99c5bdbd68d76c9434fe2fcb95d8e2cfb154fef768b15fe9",
+    "sources/w16-fx-a-hsprite-process-hierarchy/process_hierarchy.cpp": "c6c938a751cfdf0213f2fdfa325c395cfff7799f5ef86238fb032e5633484c53",
+    "sources/w16-fx-a-hsprite-process-play-timing/process_play_timing.cpp": "6f2b9c9f6c355653c54cd457b3bdf3b41fcd59799a75d7c6ad23a10131131389",
+    "sources/w16-fx-a-hspriteanim-allocate/allocate.cpp": "9e0ecdd672c6b6ff62f14edc8709299c7dfa8ecd2346d15aa82d37b3223be34c",
+    "sources/w16-fx-a-hspriteanim-calc-data-size/calc_data_size.cpp": "bf0ce931b4670de8e3332138a20260422777ec207a43f76fed6bac9b6dbf38ea",
+    "sources/w16-fx-a-p-face-sprite/p_face_sprite.cpp": "f6a6a860af4e10b8894c8421d4a68b555281db3f87896fe4155c2815a0cb0541",
+    "sources/w16-fx-a-particledefinition-blend-motifs/blend_motifs.cpp": "406c7a7d7bb149e49d65ec861bd4f7067eef04a400e82c26a80fa0af288ad681",
+    "sources/w16-fx-a-particledefinition-create/create.cpp": "4f2e62910ac5893a0a7c4f38571d74a006ff2d7c96b9fb6c2bf957c6cc07cff7",
+    "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp": "1d5eb70aeacdd7b3d8eff2a4ca3c9e207bc548d6c916604f3fc86603a4504d8b",
+    "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp": "b6e57914936eb7c9585f8eebb3590934d9b06a442359f6adc2b43e9729a9870f",
+    "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4"
   },
   "inputs": [
     {
@@ -113394,6 +113418,366 @@
           "compiled_body_bytes": 120
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7609,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_alloc_particles.o",
+      "profile": "authored_cpp",
+      "sha256": "5348a16f6d165a7e38d1771f46bd60103f7b8985ecdede59b64340f830116638",
+      "source": "sources/w16-fx-a-effectvolume-alloc-particles/alloc_particles.cpp",
+      "emitted_functions": [
+        {
+          "name": "AllocParticles__14VIEffectVolume",
+          "compiled_body_bytes": 332
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7610,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_detach_all_resources.o",
+      "profile": "authored_cpp",
+      "sha256": "d218f6b98a7b48b490bfd1e37720a703403df7c4597ca397d6288d3bcf62b812",
+      "source": "sources/w16-fx-a-effectvolume-detach-all-resources/detach_all_resources.cpp",
+      "emitted_functions": [
+        {
+          "name": "DetachAllResources__14VIEffectVolume",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7611,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_detach_surface.o",
+      "profile": "authored_cpp",
+      "sha256": "67a999b3c1b4acb16e6c5b1c1ddb380d288f7d8d283e5fef0353aa85b0a47ad9",
+      "source": "sources/w16-fx-a-effectvolume-detach-surface/detach_surface.cpp",
+      "emitted_functions": [
+        {
+          "name": "DetachSurface__14VIEffectVolumei",
+          "compiled_body_bytes": 156
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7612,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_free_particles.o",
+      "profile": "authored_cpp",
+      "sha256": "ca4f6d136b6495f546f8cd63d3c34f6c5d1145f461f85d6ac963808671bdeec1",
+      "source": "sources/w16-fx-a-effectvolume-free-particles/free_particles.cpp",
+      "emitted_functions": [
+        {
+          "name": "FreeParticles__14VIEffectVolume",
+          "compiled_body_bytes": 60
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7613,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_process_dust_storm.o",
+      "profile": "authored_cpp",
+      "sha256": "48869f1a047e3752d3b2f87803dbfb851a00f6147abcaba53b3d175fd0b20d84",
+      "source": "sources/w16-fx-a-effectvolume-process-dust-storm/process_dust_storm.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessDustStorm__14VIEffectVolumef",
+          "compiled_body_bytes": 1024
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7614,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_process_falling_leaves.o",
+      "profile": "authored_cpp",
+      "sha256": "a60b5de80ec1fac156814c44c26aad47e3907aa755d6e61380f6008a382f47d8",
+      "source": "sources/w16-fx-a-effectvolume-process-falling-leaves/process_falling_leaves.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessFallingLeaves__14VIEffectVolumef",
+          "compiled_body_bytes": 936
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7615,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_process_ground_fog.o",
+      "profile": "authored_cpp",
+      "sha256": "18100301ccc50334c032b6e9ddac676e69e692876cf707a064ae93a6c2fe8fd9",
+      "source": "sources/w16-fx-a-effectvolume-process-ground-fog/process_ground_fog.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessGroundFog__14VIEffectVolumef",
+          "compiled_body_bytes": 688
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7616,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_effectvolume_process_light_shafts.o",
+      "profile": "authored_cpp",
+      "sha256": "d1427984b4b0af09904883b7cbf148756ef8a9d4cbf947188a49c369a5abd474",
+      "source": "sources/w16-fx-a-effectvolume-process-light-shafts/process_light_shafts.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessLightShafts__14VIEffectVolumef",
+          "compiled_body_bytes": 676
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7617,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_add.o",
+      "profile": "authored_cpp",
+      "sha256": "22dfb652a93d5e492ec4ca3aeb3f109d4f371f6fec4cbccf361244009eeb4ef2",
+      "source": "sources/w16-fx-a-hsprite-add/add.cpp",
+      "emitted_functions": [
+        {
+          "name": "Add__9VIHSpritei",
+          "compiled_body_bytes": 216
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7618,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_add_play.o",
+      "profile": "authored_cpp",
+      "sha256": "11730ecf6cdb183a8ffa77c56f9650e2fa72ba457281098e49112425713fc868",
+      "source": "sources/w16-fx-a-hsprite-add-play/add_play.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene",
+          "compiled_body_bytes": 580
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7619,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_add_root.o",
+      "profile": "authored_cpp",
+      "sha256": "6036e1fe1c01778ce02e9eb1130f3a27e9cbd10c3230beb4c54f095e88013338",
+      "source": "sources/w16-fx-a-hsprite-add-root/add_root.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddRoot__9VIHSprite",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7620,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_attach.o",
+      "profile": "authored_cpp",
+      "sha256": "596fae2eb3b229fb2f2579e281233815630eb041fab13e3ae3bc408317535c05",
+      "source": "sources/w16-fx-a-hsprite-attach/attach.cpp",
+      "emitted_functions": [
+        {
+          "name": "Attach__9VIHSpriteiiR7VIScene",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7621,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_attach_skin.o",
+      "profile": "authored_cpp",
+      "sha256": "53f1ceafdd209c20f4ee8923dfe8e730eef024b688879c6543c3e999e2ff752f",
+      "source": "sources/w16-fx-a-hsprite-attach-skin/attach_skin.cpp",
+      "emitted_functions": [
+        {
+          "name": "AttachSkin__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7622,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_get_attach_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "ced401f3dd6046fa99c5bdbd68d76c9434fe2fcb95d8e2cfb154fef768b15fe9",
+      "source": "sources/w16-fx-a-hsprite-get-attach-sprite/get_attach_sprite.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetAttachSprite__C9VIHSpritei",
+          "compiled_body_bytes": 20
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7623,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_process_hierarchy.o",
+      "profile": "authored_cpp",
+      "sha256": "c6c938a751cfdf0213f2fdfa325c395cfff7799f5ef86238fb032e5633484c53",
+      "source": "sources/w16-fx-a-hsprite-process-hierarchy/process_hierarchy.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessHierarchy__9VIHSprite",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7624,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hsprite_process_play_timing.o",
+      "profile": "authored_cpp",
+      "sha256": "6f2b9c9f6c355653c54cd457b3bdf3b41fcd59799a75d7c6ad23a10131131389",
+      "source": "sources/w16-fx-a-hsprite-process-play-timing/process_play_timing.cpp",
+      "emitted_functions": [
+        {
+          "name": "ProcessPlayTiming__9VIHSpriteiR7VIScene",
+          "compiled_body_bytes": 1540
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7625,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hspriteanim_allocate.o",
+      "profile": "authored_cpp",
+      "sha256": "9e0ecdd672c6b6ff62f14edc8709299c7dfa8ecd2346d15aa82d37b3223be34c",
+      "source": "sources/w16-fx-a-hspriteanim-allocate/allocate.cpp",
+      "emitted_functions": [
+        {
+          "name": "Allocate__13VIHSpriteAnim",
+          "compiled_body_bytes": 72
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7626,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_hspriteanim_calc_data_size.o",
+      "profile": "authored_cpp",
+      "sha256": "bf0ce931b4670de8e3332138a20260422777ec207a43f76fed6bac9b6dbf38ea",
+      "source": "sources/w16-fx-a-hspriteanim-calc-data-size/calc_data_size.cpp",
+      "emitted_functions": [
+        {
+          "name": "CalcDataSize__13VIHSpriteAnim",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7627,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_p_face_sprite.o",
+      "profile": "authored_cpp",
+      "sha256": "f6a6a860af4e10b8894c8421d4a68b555281db3f87896fe4155c2815a0cb0541",
+      "source": "sources/w16-fx-a-p-face-sprite/p_face_sprite.cpp",
+      "emitted_functions": [
+        {
+          "name": "P_FaceSprite__FG6Point3ffiiiiP8_texturesi",
+          "compiled_body_bytes": 112
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7628,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_particledefinition_blend_motifs.o",
+      "profile": "authored_cpp",
+      "sha256": "406c7a7d7bb149e49d65ec861bd4f7067eef04a400e82c26a80fa0af288ad681",
+      "source": "sources/w16-fx-a-particledefinition-blend-motifs/blend_motifs.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes",
+          "compiled_body_bytes": 736
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7629,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_particledefinition_create.o",
+      "profile": "authored_cpp",
+      "sha256": "4f2e62910ac5893a0a7c4f38571d74a006ff2d7c96b9fb6c2bf957c6cc07cff7",
+      "source": "sources/w16-fx-a-particledefinition-create/create.cpp",
+      "emitted_functions": [
+        {
+          "name": "Create__20VIParticleDefinitionR8VIRaster",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7630,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_particledefinition_create_motif.o",
+      "profile": "authored_cpp",
+      "sha256": "1d5eb70aeacdd7b3d8eff2a4ca3c9e207bc548d6c916604f3fc86603a4504d8b",
+      "source": "sources/w16-fx-a-particledefinition-create-motif/create_motif.cpp",
+      "emitted_functions": [
+        {
+          "name": "CreateMotif__22VIParticleDefinitionEx",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7631,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_particledefinition_next_motif.o",
+      "profile": "authored_cpp",
+      "sha256": "b6e57914936eb7c9585f8eebb3590934d9b06a442359f6adc2b43e9729a9870f",
+      "source": "sources/w16-fx-a-particledefinition-next-motif/next_motif.cpp",
+      "emitted_functions": [
+        {
+          "name": "NextMotif__C22VIParticleDefinitionExP15VIParticleMotif",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7632,
+      "kind": "independently_authored_source",
+      "object_name": "w16_fx_a_trailfx_add_segment.o",
+      "profile": "authored_cpp",
+      "sha256": "f9b1847f6694d859c374147a3961a35096fe40ad1c29ed04e940583adfabc2a4",
+      "source": "sources/w16-fx-a-trailfx-add-segment/add_segment.cpp",
+      "emitted_functions": [
+        {
+          "name": "AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3",
+          "compiled_body_bytes": 256
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -113493,7 +113877,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "113b91621446017d7e10773b86cb21e93aa0c6665ebc09a4fd8d75f815e239e6",
+  "snapshot_sha256": "cb5eba526baba5ef4a7e55c1b79ad6d8a11010f9e5d9db92198056fc37637bc6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
