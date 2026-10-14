@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 6841,
+  "default_authored_inputs": 6853,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7631,7 +7631,19 @@
     "sources/w15-fe-ui-b-viuiwindow-text/text.cpp": "08673828b684f8873a0ba7bda2222d21ca6394919d388fb0d03adbc5c0b7a967",
     "sources/w15-fe-ui-b-viuiwindow-textbox-color/textbox_color.cpp": "902355d2653742cd393d29cc46b2bb9ad4021732f9e7fd88b83bd32dd9c65094",
     "sources/w15-fe-ui-b-viuiwindow-tick-pulse/tick_pulse.cpp": "4ea8b3877bcbbfa1f0010f2a0870cd705e4b18310420b5c27f2b725c72243539",
-    "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e"
+    "sources/w15-fe-ui-b-viuiwindow-tickr/tickr.cpp": "b21ad127b966e83d2782c28602f38e991d70241d93cb812badba82ab7f73420e",
+    "sources/w15-vi-strings-dict-a-camera-getmode/getmode.cpp": "d00a2098ad0084ea10f80e1af7df5abbe23fe8adad93ef2797991f1340dfba43",
+    "sources/w15-vi-strings-dict-a-vistring-conversion-table-1252/table.cpp": "316c18ebfd093dd1081691016411cadb4587e4e16b666010d835ba1b555e42a9",
+    "sources/w15-vi-strings-dict-a-vistring-snprintf/snprintf.cpp": "1fd19f5db6f9ea1b83375f6aa225c1c23185594dca8711a0e1e4997453661268",
+    "sources/w15-vi-strings-dict-a-vistring-snprintf16-narrow/snprintf16.cpp": "7cfbdd7abcf18d5a4d512ccb28760704e9cb4248f0878a5a64cbae60a96b89da",
+    "sources/w15-vi-strings-dict-a-vistring-snprintf16-wide/snprintf16.cpp": "c97929a32aecfe72d7216f3bf6d47ad808eda28cac81d1d270d56806c40295b1",
+    "sources/w15-vi-strings-dict-a-vistring-str8to16/str8to16.cpp": "1acd465384fff09803343f2520582c5569d7b4ce645aae7cb61f215b7be2cd6b",
+    "sources/w15-vi-strings-dict-a-vistring-strcat16-narrow/strcat16.cpp": "627da898f5b39efb59c0f1f52a3d4adfdf5e93c1c25ecd052ce35af3f0be626c",
+    "sources/w15-vi-strings-dict-a-vistring-strcat16-wide/strcat16.cpp": "7c1898348df9ffb889fd1402c05df01b39a6d20a37c4b377946496b3af2fb11e",
+    "sources/w15-vi-strings-dict-a-vistring-strcpy16/strcpy16.cpp": "eb044be6dac89de82fd37566e6291e41aedcdf1182416e9387b52738c284380f",
+    "sources/w15-vi-strings-dict-a-vistring-strcpy8/strcpy8.cpp": "e3fc0e8da6cd2104f94952750274e791e0b676e3bd72d362a6058bf19dc95b00",
+    "sources/w15-vi-strings-dict-a-vistring-strupr/strupr.cpp": "23009d64b35bd4bff4cbce64c4b132b2da23e074a3fddc18b55fe69869e3d20b",
+    "sources/w15-vi-strings-dict-a-viudpsocket-ctor/ctor.cpp": "28c45eb3b4d92a4609ba842044be62dcd711970f824af943519171f2ee62cb57"
   },
   "inputs": [
     {
@@ -101715,6 +101727,181 @@
           "compiled_body_bytes": 284
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6843,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_camera_getmode.o",
+      "profile": "authored_cpp",
+      "sha256": "d00a2098ad0084ea10f80e1af7df5abbe23fe8adad93ef2797991f1340dfba43",
+      "source": "sources/w15-vi-strings-dict-a-camera-getmode/getmode.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetMode__6Camera",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6844,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_conversion_table_1252.o",
+      "profile": "authored_cpp",
+      "sha256": "316c18ebfd093dd1081691016411cadb4587e4e16b666010d835ba1b555e42a9",
+      "source": "sources/w15-vi-strings-dict-a-vistring-conversion-table-1252/table.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 6845,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_snprintf.o",
+      "profile": "authored_cpp",
+      "sha256": "1fd19f5db6f9ea1b83375f6aa225c1c23185594dca8711a0e1e4997453661268",
+      "source": "sources/w15-vi-strings-dict-a-vistring-snprintf/snprintf.cpp",
+      "emitted_functions": [
+        {
+          "name": "snprintf__8VIStringPciPCce",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6846,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_snprintf16_narrow.o",
+      "profile": "authored_cpp",
+      "sha256": "7cfbdd7abcf18d5a4d512ccb28760704e9cb4248f0878a5a64cbae60a96b89da",
+      "source": "sources/w15-vi-strings-dict-a-vistring-snprintf16-narrow/snprintf16.cpp",
+      "emitted_functions": [
+        {
+          "name": "snprintf16__8VIStringPUsiPCce",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6847,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_snprintf16_wide.o",
+      "profile": "authored_cpp",
+      "sha256": "c97929a32aecfe72d7216f3bf6d47ad808eda28cac81d1d270d56806c40295b1",
+      "source": "sources/w15-vi-strings-dict-a-vistring-snprintf16-wide/snprintf16.cpp",
+      "emitted_functions": [
+        {
+          "name": "snprintf16__8VIStringPUsiPCUse",
+          "compiled_body_bytes": 56
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6848,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_str8to16.o",
+      "profile": "authored_cpp",
+      "sha256": "1acd465384fff09803343f2520582c5569d7b4ce645aae7cb61f215b7be2cd6b",
+      "source": "sources/w15-vi-strings-dict-a-vistring-str8to16/str8to16.cpp",
+      "emitted_functions": [
+        {
+          "name": "str8to16__8VIStringPUsUiPCc",
+          "compiled_body_bytes": 108
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6849,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_strcat16_narrow.o",
+      "profile": "authored_cpp",
+      "sha256": "627da898f5b39efb59c0f1f52a3d4adfdf5e93c1c25ecd052ce35af3f0be626c",
+      "source": "sources/w15-vi-strings-dict-a-vistring-strcat16-narrow/strcat16.cpp",
+      "emitted_functions": [
+        {
+          "name": "strcat16__8VIStringPUsUiPCc",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6850,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_strcat16_wide.o",
+      "profile": "authored_cpp",
+      "sha256": "7c1898348df9ffb889fd1402c05df01b39a6d20a37c4b377946496b3af2fb11e",
+      "source": "sources/w15-vi-strings-dict-a-vistring-strcat16-wide/strcat16.cpp",
+      "emitted_functions": [
+        {
+          "name": "strcat16__8VIStringPUsUiPCUs",
+          "compiled_body_bytes": 100
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6851,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_strcpy16.o",
+      "profile": "authored_cpp",
+      "sha256": "eb044be6dac89de82fd37566e6291e41aedcdf1182416e9387b52738c284380f",
+      "source": "sources/w15-vi-strings-dict-a-vistring-strcpy16/strcpy16.cpp",
+      "emitted_functions": [
+        {
+          "name": "strcpy16__8VIStringPUsUiPCUs",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6852,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_strcpy8.o",
+      "profile": "authored_cpp",
+      "sha256": "e3fc0e8da6cd2104f94952750274e791e0b676e3bd72d362a6058bf19dc95b00",
+      "source": "sources/w15-vi-strings-dict-a-vistring-strcpy8/strcpy8.cpp",
+      "emitted_functions": [
+        {
+          "name": "strcpy8__8VIStringPcUiPCc",
+          "compiled_body_bytes": 80
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6853,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_vistring_strupr.o",
+      "profile": "authored_cpp",
+      "sha256": "23009d64b35bd4bff4cbce64c4b132b2da23e074a3fddc18b55fe69869e3d20b",
+      "source": "sources/w15-vi-strings-dict-a-vistring-strupr/strupr.cpp",
+      "emitted_functions": [
+        {
+          "name": "strupr__8VIStringPc",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 6854,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_strings_dict_a_viudpsocket_ctor.o",
+      "profile": "authored_cpp",
+      "sha256": "28c45eb3b4d92a4609ba842044be62dcd711970f824af943519171f2ee62cb57",
+      "source": "sources/w15-vi-strings-dict-a-viudpsocket-ctor/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__11VIUDPSocketi",
+          "compiled_body_bytes": 76
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -101814,7 +102001,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "b24cba1a8795edea8567af6a32f18a055b1ba7e0dbace43ec201bf2d12d5aecf",
+  "snapshot_sha256": "695f7af126637ce751483595b01fb25f2a87e1115a28dddef5b74d97a2cd4e3b",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

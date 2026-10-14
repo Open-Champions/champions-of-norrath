@@ -10258,3 +10258,20 @@ Opened: `BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendMode
 
 Full partial build: 6841 source compilations, one link, 5450 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-13 23:36 CDT — agents/w15-fe-ui-b — 878 unresolved imports
+
+## agents/w15-vi-strings-dict-a
+
+Merged (merge commit; tip about two hours old). Twelve of the 15 units are selected; each has a `host_check.cpp` (not a plan input). **Not selected:** `vistringtable-fixuptextbuffer`, `vistringtable-loadrawfile` and `vistringtable-processrawfile` have no committed host check (the notes cite only a private paired run), so they stay authored but unplanned until the owner adds checks. Their sources are recorded in the snapshot file list only.
+
+| | |
+|---|---|
+| Before | 878 |
+| After | 870 |
+| Closed | 12 |
+| Opened | 4 |
+
+Closed: `GetMode__6Camera`, `_8VIString$ConversionTable1252`, `__11VIUDPSocketi`, `snprintf16__8VIStringPUsiPCUse`, `snprintf16__8VIStringPUsiPCce`, `snprintf__8VIStringPciPCce`, `str8to16__8VIStringPUsUiPCc`, `strcat16__8VIStringPUsUiPCUs`, `strcat16__8VIStringPUsUiPCc`, `strcpy16__8VIStringPUsUiPCUs`, `strcpy8__8VIStringPcUiPCc`, `strupr__8VIStringPc`
+
+Opened: `VI_vsnprintf__H1ZUs_PX01iPCX01Pv_v`, `VI_vsnprintf__H1Zc_PX01iPCX01Pv_v`, `strupr`, `vsnprintf16__8VIStringPUsiPCcPv`
+
+Full partial build: 6853 source compilations, one link, 5461 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
