@@ -10980,3 +10980,21 @@ Opened: `CalcHitColor__8VIRasterR13VIPickSegmentR7VIVect3N22R9VIColor32N25`, `Co
 
 Full partial build: 7699 source compilations, one link, 6178 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:58 CDT — agents/w16-prim-b — 683 unresolved imports
+
+## agents/w16-spellmech-a
+
+Merged (merge commit). All 21 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (21 of 21 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 683 |
+| After | 685 |
+| Closed | 21 |
+| Opened | 23 |
+
+Closed: `__11SpellChargeiP8CreatureP5Skill`, `__12SpellBlessediP8CreatureP5Skill`, `__12SpellCycloneiP8CreatureP5Skill`, `__15SpellFireFlaresiP8CreatureG6Point3P5Skill`, `__15SpellShieldBashiP8CreatureP5Skill`, `__15SpellWizardBeamiP8CreatureP5Skill`, `__16SpellColdWeaponsiP8CreatureP5Skill`, `__16SpellFireWeaponsiP8CreatureP5Skill`, `__17SpellConvertEnemyiP8CreatureP5Skill`, `__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill`, `__17SpellUndeadShieldiP8CreatureP5Skill`, `__18SpellAncestralCalliP8CreatureP5Skill`, `__18SpellConvertUndeadiP8CreatureP5Skill`, `__21SpellLightningWeaponsiP8CreatureP5Skill`, `__22SpellRangerCriticalHitiP8CreatureP5Skill`, `__5MummyG6Point3sPPcPc`, `__9LooseFireG6Point3P10GameObject`, `__9SpellBashiP8CreatureP5Skill`, `clone__12GlowingShaft`, `clone__8HolyBolt`, `clone__8LostSoul`
+
+Opened: `_vt$11SpellCharge`, `_vt$12DiseaseTrail`, `_vt$12SpellBlessed`, `_vt$12SpellCyclone`, `_vt$15SpellFireFlares`, `_vt$15SpellShieldBash`, `_vt$15SpellWizardBeam`, `_vt$16SpellColdWeapons`, `_vt$16SpellFireWeapons`, `_vt$17SpellConvertEnemy`, `_vt$17SpellDiseaseTrail`, `_vt$17SpellUndeadShield`, `_vt$18SpellAncestralCall`, `_vt$18SpellConvertUndead`, `_vt$21SpellLightningWeapons`, `_vt$22SpellRangerCriticalHit`, `_vt$9FireFlare`, `_vt$9LooseFire`, `_vt$9SpellBash`, `hsv__Ffff`, `mummyResourceMap`, `objectGetListInRadius__FG6Point3sfP8ListHead`, `setWeapon__5Mummy`
+
+Full partial build: 7720 source compilations, one link, 6199 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:04 CDT — agents/w16-spellmech-a — 685 unresolved imports

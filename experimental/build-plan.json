@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7699,
+  "default_authored_inputs": 7720,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8493,7 +8493,28 @@
     "sources/w16-prim-b-raster-pick-prim-buffer-vunc/pick_prim_buffer.cpp": "f016e96977fa7619c9083e1cc6a081a69a7369a18d4a161739c9904699cccc45",
     "sources/w16-prim-b-raster-prim-buffer/prim_buffer.cpp": "de661f6088d81455bf68c006bfd7f7283c54c080249a0c4a1481aa7f4d636773",
     "sources/w16-prim-b-raster-set-object-blends/set_object_blends.cpp": "d5335e2f9d4e8ecbfc49ee1c4f414258c53e31e316928a53eb2ba05903cf06c3",
-    "sources/w16-prim-b-vect4-normalize/normalize.cpp": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f"
+    "sources/w16-prim-b-vect4-normalize/normalize.cpp": "a41897c84e76c2a29afbf25040fde241ba0e418a42024658022c6035a2cc835f",
+    "sources/w16-spellmech-a-clone-glowing-shaft/clone.cpp": "ac1ecedd6b68e6fc25b0c223f1290f4c2ecea8cb653fc8194c693737be555a02",
+    "sources/w16-spellmech-a-clone-holy-bolt/clone.cpp": "53762252b3dbeddf25d37abc7963eae9a1b3b3da0e83393d8ee2ec084c07df62",
+    "sources/w16-spellmech-a-clone-lost-soul/clone.cpp": "f4dd0b9c8e0e98d04bdc4b5091593d905c2c35d8977981ffc5a996d4409f4e73",
+    "sources/w16-spellmech-a-ctor-ancestral-call/ctor.cpp": "4a8afafdd80fe45174074efb9c724bacb1094ee3e9152c99ee11b6bd33066805",
+    "sources/w16-spellmech-a-ctor-bash/ctor.cpp": "5006cdcf203e531352d6ac69149d44da1cc12e58861e8fc7aa1ddd3815b51bc3",
+    "sources/w16-spellmech-a-ctor-blessed/ctor.cpp": "20ae703fd2adb1321ad22d95db9948fbef2a80cdb33cddf7607561cffa9e2e0a",
+    "sources/w16-spellmech-a-ctor-charge/ctor.cpp": "5f89f2de825a2fb0873b62214a240fef9cd006d4f2dd55b913761182e557d3d4",
+    "sources/w16-spellmech-a-ctor-cold-weapons/ctor.cpp": "4af360c91171c75631115e16e66cebe5bbf7124e2600e39f7368a755e636bd3e",
+    "sources/w16-spellmech-a-ctor-convert-enemy/ctor.cpp": "58eb5beace4455882314e962b15511c8d48ca037d2ea300bacc519eb8f96748c",
+    "sources/w16-spellmech-a-ctor-convert-undead/ctor.cpp": "a98c30dddf60f9a42889755d4651c4d14797859fb1fa7b9b127cae8cdcd171af",
+    "sources/w16-spellmech-a-ctor-cyclone/ctor.cpp": "7a3c7d46ff47bebf399a55067a5c5cf5dca3cdcf59f645186067c08e636e777f",
+    "sources/w16-spellmech-a-ctor-disease-trail/ctor.cpp": "2feb9ba632b99289c7b0b8b39b239c56bc8bcea02c791f15f5f1c1a2df9f809e",
+    "sources/w16-spellmech-a-ctor-fire-flares/ctor.cpp": "407ee2a4a386e5fc4885244c491236496bdb69afad945c7b2abec5bdd3f36f16",
+    "sources/w16-spellmech-a-ctor-fire-weapons/ctor.cpp": "db77162df752f9aeba5f5a175a24ae9ae151a1384a110f9d67c0daf6169778f0",
+    "sources/w16-spellmech-a-ctor-lightning-weapons/ctor.cpp": "07daa719fe93067dd7dd6e2d200401dfc29487c9856b87a38b2e3f0071b2613e",
+    "sources/w16-spellmech-a-ctor-loose-fire/ctor.cpp": "74e2126c1f132d7d3bca3497cfcdba9230a00a1e5240614136823bf705130746",
+    "sources/w16-spellmech-a-ctor-mummy/ctor.cpp": "e3f6b9ffbf9f88b1e6d8bcd4eea5795c46c0d6480133729bd130f5090b5930c1",
+    "sources/w16-spellmech-a-ctor-ranger-crit/ctor.cpp": "d5a0f8c64c0c253cd3a99c7f55a3464a58515b76875da19238b7f42925ed2fd5",
+    "sources/w16-spellmech-a-ctor-shield-bash/ctor.cpp": "456068f9a9ccf7f092e35bef557c75e64e831fe50d3de40ec77e766138f202c6",
+    "sources/w16-spellmech-a-ctor-undead-shield/ctor.cpp": "442cd1d9252751212f781b6adc7d180854a1019e8b0207ccbccce5ba182f76b7",
+    "sources/w16-spellmech-a-ctor-wizard-beam/ctor.cpp": "9c6b48d30d9605b2ef33d4ccf30b458b3b1787479496ab1cb358284b44365f19"
   },
   "inputs": [
     {
@@ -114866,6 +114887,321 @@
           "compiled_body_bytes": 120
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7701,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_clone_glowing_shaft.o",
+      "profile": "authored_cpp",
+      "sha256": "ac1ecedd6b68e6fc25b0c223f1290f4c2ecea8cb653fc8194c693737be555a02",
+      "source": "sources/w16-spellmech-a-clone-glowing-shaft/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__12GlowingShaft",
+          "compiled_body_bytes": 288
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7702,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_clone_holy_bolt.o",
+      "profile": "authored_cpp",
+      "sha256": "53762252b3dbeddf25d37abc7963eae9a1b3b3da0e83393d8ee2ec084c07df62",
+      "source": "sources/w16-spellmech-a-clone-holy-bolt/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__8HolyBolt",
+          "compiled_body_bytes": 560
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7703,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_clone_lost_soul.o",
+      "profile": "authored_cpp",
+      "sha256": "f4dd0b9c8e0e98d04bdc4b5091593d905c2c35d8977981ffc5a996d4409f4e73",
+      "source": "sources/w16-spellmech-a-clone-lost-soul/clone.cpp",
+      "emitted_functions": [
+        {
+          "name": "clone__8LostSoul",
+          "compiled_body_bytes": 528
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7704,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_ancestral_call.o",
+      "profile": "authored_cpp",
+      "sha256": "4a8afafdd80fe45174074efb9c724bacb1094ee3e9152c99ee11b6bd33066805",
+      "source": "sources/w16-spellmech-a-ctor-ancestral-call/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__18SpellAncestralCalliP8CreatureP5Skill",
+          "compiled_body_bytes": 800
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7705,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "5006cdcf203e531352d6ac69149d44da1cc12e58861e8fc7aa1ddd3815b51bc3",
+      "source": "sources/w16-spellmech-a-ctor-bash/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__9SpellBashiP8CreatureP5Skill",
+          "compiled_body_bytes": 428
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7706,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_blessed.o",
+      "profile": "authored_cpp",
+      "sha256": "20ae703fd2adb1321ad22d95db9948fbef2a80cdb33cddf7607561cffa9e2e0a",
+      "source": "sources/w16-spellmech-a-ctor-blessed/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12SpellBlessediP8CreatureP5Skill",
+          "compiled_body_bytes": 792
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7707,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_charge.o",
+      "profile": "authored_cpp",
+      "sha256": "5f89f2de825a2fb0873b62214a240fef9cd006d4f2dd55b913761182e557d3d4",
+      "source": "sources/w16-spellmech-a-ctor-charge/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__11SpellChargeiP8CreatureP5Skill",
+          "compiled_body_bytes": 560
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7708,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_cold_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "4af360c91171c75631115e16e66cebe5bbf7124e2600e39f7368a755e636bd3e",
+      "source": "sources/w16-spellmech-a-ctor-cold-weapons/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__16SpellColdWeaponsiP8CreatureP5Skill",
+          "compiled_body_bytes": 1200
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7709,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_convert_enemy.o",
+      "profile": "authored_cpp",
+      "sha256": "58eb5beace4455882314e962b15511c8d48ca037d2ea300bacc519eb8f96748c",
+      "source": "sources/w16-spellmech-a-ctor-convert-enemy/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__17SpellConvertEnemyiP8CreatureP5Skill",
+          "compiled_body_bytes": 524
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7710,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_convert_undead.o",
+      "profile": "authored_cpp",
+      "sha256": "a98c30dddf60f9a42889755d4651c4d14797859fb1fa7b9b127cae8cdcd171af",
+      "source": "sources/w16-spellmech-a-ctor-convert-undead/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__18SpellConvertUndeadiP8CreatureP5Skill",
+          "compiled_body_bytes": 548
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7711,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_cyclone.o",
+      "profile": "authored_cpp",
+      "sha256": "7a3c7d46ff47bebf399a55067a5c5cf5dca3cdcf59f645186067c08e636e777f",
+      "source": "sources/w16-spellmech-a-ctor-cyclone/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__12SpellCycloneiP8CreatureP5Skill",
+          "compiled_body_bytes": 692
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7712,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_disease_trail.o",
+      "profile": "authored_cpp",
+      "sha256": "2feb9ba632b99289c7b0b8b39b239c56bc8bcea02c791f15f5f1c1a2df9f809e",
+      "source": "sources/w16-spellmech-a-ctor-disease-trail/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__17SpellDiseaseTrailG6Point3iP8CreatureP5Skill",
+          "compiled_body_bytes": 680
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7713,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_fire_flares.o",
+      "profile": "authored_cpp",
+      "sha256": "407ee2a4a386e5fc4885244c491236496bdb69afad945c7b2abec5bdd3f36f16",
+      "source": "sources/w16-spellmech-a-ctor-fire-flares/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellFireFlaresiP8CreatureG6Point3P5Skill",
+          "compiled_body_bytes": 1032
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7714,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_fire_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "db77162df752f9aeba5f5a175a24ae9ae151a1384a110f9d67c0daf6169778f0",
+      "source": "sources/w16-spellmech-a-ctor-fire-weapons/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__16SpellFireWeaponsiP8CreatureP5Skill",
+          "compiled_body_bytes": 1160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7715,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_lightning_weapons.o",
+      "profile": "authored_cpp",
+      "sha256": "07daa719fe93067dd7dd6e2d200401dfc29487c9856b87a38b2e3f0071b2613e",
+      "source": "sources/w16-spellmech-a-ctor-lightning-weapons/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__21SpellLightningWeaponsiP8CreatureP5Skill",
+          "compiled_body_bytes": 1192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7716,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_loose_fire.o",
+      "profile": "authored_cpp",
+      "sha256": "74e2126c1f132d7d3bca3497cfcdba9230a00a1e5240614136823bf705130746",
+      "source": "sources/w16-spellmech-a-ctor-loose-fire/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__9LooseFireG6Point3P10GameObject",
+          "compiled_body_bytes": 176
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7717,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_mummy.o",
+      "profile": "authored_cpp",
+      "sha256": "e3f6b9ffbf9f88b1e6d8bcd4eea5795c46c0d6480133729bd130f5090b5930c1",
+      "source": "sources/w16-spellmech-a-ctor-mummy/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__5MummyG6Point3sPPcPc",
+          "compiled_body_bytes": 1580
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7718,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_ranger_crit.o",
+      "profile": "authored_cpp",
+      "sha256": "d5a0f8c64c0c253cd3a99c7f55a3464a58515b76875da19238b7f42925ed2fd5",
+      "source": "sources/w16-spellmech-a-ctor-ranger-crit/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__22SpellRangerCriticalHitiP8CreatureP5Skill",
+          "compiled_body_bytes": 300
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7719,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_shield_bash.o",
+      "profile": "authored_cpp",
+      "sha256": "456068f9a9ccf7f092e35bef557c75e64e831fe50d3de40ec77e766138f202c6",
+      "source": "sources/w16-spellmech-a-ctor-shield-bash/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellShieldBashiP8CreatureP5Skill",
+          "compiled_body_bytes": 428
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7720,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_undead_shield.o",
+      "profile": "authored_cpp",
+      "sha256": "442cd1d9252751212f781b6adc7d180854a1019e8b0207ccbccce5ba182f76b7",
+      "source": "sources/w16-spellmech-a-ctor-undead-shield/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__17SpellUndeadShieldiP8CreatureP5Skill",
+          "compiled_body_bytes": 416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7721,
+      "kind": "independently_authored_source",
+      "object_name": "w16spellmech_ctor_wizard_beam.o",
+      "profile": "authored_cpp",
+      "sha256": "9c6b48d30d9605b2ef33d4ccf30b458b3b1787479496ab1cb358284b44365f19",
+      "source": "sources/w16-spellmech-a-ctor-wizard-beam/ctor.cpp",
+      "emitted_functions": [
+        {
+          "name": "__15SpellWizardBeamiP8CreatureP5Skill",
+          "compiled_body_bytes": 1032
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -114965,7 +115301,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "158847cc2b65386163837f9fb4fc6b7be2aac7cf7c1069ea06c76f2514de4ae5",
+  "snapshot_sha256": "cb5dc0c72101e5241f0319a4066f9952c255b47508d8df3f44a30571c64529cb",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
