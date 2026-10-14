@@ -97978,6 +97978,314 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-rt-a-string-rep-clone/rep_clone.cpp"
+    },
+    {
+      "input_order": 7565,
+      "component": "w16-scene-a-font-drawcenteredstring-u16",
+      "object_name": "w16_scene_a_font_drawcenteredstring_u16.o",
+      "private_object_sha256": "7215bb4c84e829b2913fa972614a281b843defc67976e04d5822fe906ad7d5b0",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-font-drawcenteredstring-u16/drawcenteredstring.cpp"
+    },
+    {
+      "input_order": 7566,
+      "component": "w16-scene-a-material-getlayertexture",
+      "object_name": "w16_scene_a_material_getlayertexture.o",
+      "private_object_sha256": "4cf412462f1926afc237893d6ef1ae6d2dedbc538f42e35af9d1def762a7fc33",
+      "emitted_functions": [
+        {
+          "name": "GetLayerTexture__10VIMateriali",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-material-getlayertexture/get_layer_texture.cpp"
+    },
+    {
+      "input_order": 7567,
+      "component": "w16-scene-a-raster-blit",
+      "object_name": "w16_scene_a_raster_blit.o",
+      "private_object_sha256": "a4896a3b3a86a95891b25c34ae48032fdf4fcc84a1fac7bc5f817c442e53a3e8",
+      "emitted_functions": [
+        {
+          "name": "Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef",
+          "compiled_body_bytes": 936
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-blit/blit.cpp"
+    },
+    {
+      "input_order": 7568,
+      "component": "w16-scene-a-raster-colorbuffer",
+      "object_name": "w16_scene_a_raster_colorbuffer.o",
+      "private_object_sha256": "827cccb46ba16e7cba78189287fbecbd909b6ee1a42d775a14e4c899d078d43c",
+      "emitted_functions": [
+        {
+          "name": "ColorBuffer__8VIRasteri",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-colorbuffer/color_buffer.cpp"
+    },
+    {
+      "input_order": 7569,
+      "component": "w16-scene-a-raster-copymaterial",
+      "object_name": "w16_scene_a_raster_copymaterial.o",
+      "private_object_sha256": "2c6f21c1c38e0c149f9bdf3079ef2908d5cd50df3e954e6f98178b628b5f2d23",
+      "emitted_functions": [
+        {
+          "name": "CopyMaterial__8VIRasterii",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-copymaterial/copy_material.cpp"
+    },
+    {
+      "input_order": 7570,
+      "component": "w16-scene-a-raster-drawstring",
+      "object_name": "w16_scene_a_raster_drawstring.o",
+      "private_object_sha256": "00f882a96173f719fdbc26b5f6cafb92ed07a95244a5f40605f72e9342b34e85",
+      "emitted_functions": [
+        {
+          "name": "DrawString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUs",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-drawstring/draw_string.cpp"
+    },
+    {
+      "input_order": 7571,
+      "component": "w16-scene-a-raster-getpointsize",
+      "object_name": "w16_scene_a_raster_getpointsize.o",
+      "private_object_sha256": "adbad904833f8ea1bc918c9dc37582c276b214499df832f2b5c7967d91dd2ca4",
+      "emitted_functions": [
+        {
+          "name": "GetPointSize__8VIRasteri",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-getpointsize/get_point_size.cpp"
+    },
+    {
+      "input_order": 7572,
+      "component": "w16-scene-a-raster-getzbufferreg",
+      "object_name": "w16_scene_a_raster_getzbufferreg.o",
+      "private_object_sha256": "7bbe818f592f55a68c135cab19ce59fb313a6ad7035450c5a128158a78637394",
+      "emitted_functions": [
+        {
+          "name": "GetZBufferReg__C8VIRaster",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-raster-getzbufferreg/get_zbuffer_reg.cpp"
+    },
+    {
+      "input_order": 7573,
+      "component": "w16-scene-a-rfont-allocate",
+      "object_name": "w16_scene_a_rfont_allocate.o",
+      "private_object_sha256": "89fd0984285f2173aff1ebfbd3314387076487e5d45804f00ecf09638edf2bd4",
+      "emitted_functions": [
+        {
+          "name": "Allocate__7VIRFont",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-allocate/allocate.cpp"
+    },
+    {
+      "input_order": 7574,
+      "component": "w16-scene-a-rfont-calcdatasize",
+      "object_name": "w16_scene_a_rfont_calcdatasize.o",
+      "private_object_sha256": "998c58a92cd71f9c814b8b075e57ebc1c2a2689870f3bf5aae58e126c100ab88",
+      "emitted_functions": [
+        {
+          "name": "CalcDataSize__7VIRFontPUc",
+          "compiled_body_bytes": 500
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-calcdatasize/calc_data_size.cpp"
+    },
+    {
+      "input_order": 7575,
+      "component": "w16-scene-a-rfont-calcmaxwidth",
+      "object_name": "w16_scene_a_rfont_calcmaxwidth.o",
+      "private_object_sha256": "1e939b62d979fdb88e38cfcbb8d8a083536ecc40201300c306b750d2527cfd93",
+      "emitted_functions": [
+        {
+          "name": "CalcMaxWidth__7VIRFontiPUc",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-calcmaxwidth/calc_max_width.cpp"
+    },
+    {
+      "input_order": 7576,
+      "component": "w16-scene-a-rfont-createresources",
+      "object_name": "w16_scene_a_rfont_createresources.o",
+      "private_object_sha256": "c4696c640564ee4b1a109c2fc90bf5776d3b4bd01ea2bbde41f4d02cd45aa5e3",
+      "emitted_functions": [
+        {
+          "name": "CreateResources__7VIRFontR8VIRasterR12VIDictionaryii10VIBitDepthi",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-createresources/create_resources.cpp"
+    },
+    {
+      "input_order": 7577,
+      "component": "w16-scene-a-rfont-getstringwidth-char",
+      "object_name": "w16_scene_a_rfont_getstringwidth_char.o",
+      "private_object_sha256": "3cf288ee42ae35eca4ec84ee9e65f9eabf0c25ce8d76e8ce9bd32184c407e51a",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__7VIRFontPCci",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-getstringwidth-char/get_string_width.cpp"
+    },
+    {
+      "input_order": 7578,
+      "component": "w16-scene-a-rfont-getstringwidth-short",
+      "object_name": "w16_scene_a_rfont_getstringwidth_short.o",
+      "private_object_sha256": "6a94d710dc2299fc394ad5662dcc67f524587eda7539fec3f8b67d25c35e603b",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__7VIRFontPCUsi",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-getstringwidth-short/get_string_width.cpp"
+    },
+    {
+      "input_order": 7579,
+      "component": "w16-scene-a-rfont-initchars",
+      "object_name": "w16_scene_a_rfont_initchars.o",
+      "private_object_sha256": "dd68bdee65cfce9cfcb2a9324dbfd3ba51855212e0391e43ceb0a5d862b554c2",
+      "emitted_functions": [
+        {
+          "name": "InitChars__7VIRFontPUc",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-initchars/init_chars.cpp"
+    },
+    {
+      "input_order": 7580,
+      "component": "w16-scene-a-rfont-initslots",
+      "object_name": "w16_scene_a_rfont_initslots.o",
+      "private_object_sha256": "576490f98b9e700217c529d905d1a92f256ef6283f10344c4893aa19abf4397a",
+      "emitted_functions": [
+        {
+          "name": "InitSlots__7VIRFontR8VIRaster",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-rfont-initslots/init_slots.cpp"
+    },
+    {
+      "input_order": 7581,
+      "component": "w16-scene-a-scene-createrefmap",
+      "object_name": "w16_scene_a_scene_createrefmap.o",
+      "private_object_sha256": "aafa6879bb752baaf98b8f666154af78657adf5c56eca771636b9c67e049c8c6",
+      "emitted_functions": [
+        {
+          "name": "CreateRefMap__7VIScenei",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-scene-createrefmap/create_ref_map.cpp"
+    },
+    {
+      "input_order": 7582,
+      "component": "w16-scene-a-surface-allocate",
+      "object_name": "w16_scene_a_surface_allocate.o",
+      "private_object_sha256": "3ae5305ced84cd254c9d464fd59a8d42eee641267fbf37e5bef8d471d281ad42",
+      "emitted_functions": [
+        {
+          "name": "Allocate__9VISurface",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-surface-allocate/allocate.cpp"
+    },
+    {
+      "input_order": 7583,
+      "component": "w16-scene-a-surface-calcsurfaceoffsets",
+      "object_name": "w16_scene_a_surface_calcsurfaceoffsets.o",
+      "private_object_sha256": "60320ea882ecd74a0511f45bb2fca3a10984b74432fc24ba697e463d66976369",
+      "emitted_functions": [
+        {
+          "name": "CalcSurfaceOffsets__9VISurface",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-surface-calcsurfaceoffsets/calc_surface_offsets.cpp"
+    },
+    {
+      "input_order": 7584,
+      "component": "w16-scene-a-surface-deallocate",
+      "object_name": "w16_scene_a_surface_deallocate.o",
+      "private_object_sha256": "d8fcf898dc869848cfc9c4bf1707aeafaee8361525b864607ada2eac4cf98bf7",
+      "emitted_functions": [
+        {
+          "name": "Deallocate__9VISurface",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-surface-deallocate/deallocate.cpp"
+    },
+    {
+      "input_order": 7585,
+      "component": "w16-scene-a-zone-queryemitters",
+      "object_name": "w16_scene_a_zone_queryemitters.o",
+      "private_object_sha256": "a274f5ab1f6f2fa93d4342e11ff40b717391be711b48a627fb95a2fda66f3fcb",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 368
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-zone-queryemitters/query_emitters.cpp"
+    },
+    {
+      "input_order": 7586,
+      "component": "w16-scene-a-zoneroom-clear",
+      "object_name": "w16_scene_a_zoneroom_clear.o",
+      "private_object_sha256": "f69a7f87e6e056e219a304d3bc44a48b6af8b8da1b64263f8287beeaf0b75ac4",
+      "emitted_functions": [
+        {
+          "name": "Clear__10VIZoneRoom",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-scene-a-zoneroom-clear/clear.cpp"
     }
   ],
   "drafts": [
@@ -113928,7 +114236,51 @@
     "sources/w16-rt-a-strupr/host_check.cpp": "3d1a0dbb659c24d3c43487d73d2fabb13c35d4f832d1fb708cedd307078272e0",
     "sources/w16-rt-a-strupr/strupr.cpp": "239e8b2db8fa9eb315a1ef99b2ca857f1e8d5c2bbe6be919428604ed71e80345",
     "sources/w16-rt-a-vilist-dtor-p10viflatfile/dtor.cpp": "3ffc3be6031926762663894e55cdd468d325ef29d1a57b9ef584d67ccf8ae18f",
-    "sources/w16-rt-a-vilist-dtor-p10viflatfile/host_check.cpp": "e20f6ed912155e0241855c0501429d804facbc605292326b357e9160b41900c7"
+    "sources/w16-rt-a-vilist-dtor-p10viflatfile/host_check.cpp": "e20f6ed912155e0241855c0501429d804facbc605292326b357e9160b41900c7",
+    "sources/w16-scene-a-font-drawcenteredstring-u16/drawcenteredstring.cpp": "e1db9531e9f99ecaeb5bf9963bb50ddf1695b809162f74339ea2f694460c2f5e",
+    "sources/w16-scene-a-font-drawcenteredstring-u16/host_check.cpp": "aea60f2685cb0f533c6397373c03a17cbac7c170924583268723750470a9478c",
+    "sources/w16-scene-a-material-getlayertexture/get_layer_texture.cpp": "deba26f50d7e0471e1b0ffb91e108ae2f7229f8d2c4efe744d70cac823f96afe",
+    "sources/w16-scene-a-material-getlayertexture/host_check.cpp": "438a7c6a1f25bb2c5251f11a99898094430a663a1852fe7ab905b68224effa50",
+    "sources/w16-scene-a-raster-blit/blit.cpp": "98fe6338af4ee30fe915a022046d1b7b73a68ae75fb7dc6a5f257adf05be50cf",
+    "sources/w16-scene-a-raster-blit/host_check.cpp": "1a4d0759c024b45b61258ee6a44ddd7ddbcc2a61fb5c9ad3ea8dc08024c362fb",
+    "sources/w16-scene-a-raster-colorbuffer/color_buffer.cpp": "5f37ddc5ffa80400a622ba2c23dd3d95aac3ccdecda96ff7d094a526e00e3a4a",
+    "sources/w16-scene-a-raster-colorbuffer/host_check.cpp": "2b60b0016e9279be6ca3807877f6f1013328812d92f1b3771e66605c307146cc",
+    "sources/w16-scene-a-raster-copymaterial/copy_material.cpp": "1c2d8b767e7d37b340f69ad1643a741c89052ebb1ba319e802a51b5bc618f9ab",
+    "sources/w16-scene-a-raster-copymaterial/host_check.cpp": "8f793856d35d232bc9e7db443af4c4c3be7b28682eb83acdf24b2d5d9bced046",
+    "sources/w16-scene-a-raster-drawstring/draw_string.cpp": "2744094783fbef9e60ad01a5e9bced1cf88fda629dddd4a9962f794c6a6d6b0e",
+    "sources/w16-scene-a-raster-drawstring/host_check.cpp": "5785f6e506f707347fcf2c553a5713c35daf5c4dc7c7b752a6209bd408346330",
+    "sources/w16-scene-a-raster-getpointsize/get_point_size.cpp": "f3b4ea50e0d97e7771ea1f453b2def2f84fb8d9a1c56a1622ddfb0334449a499",
+    "sources/w16-scene-a-raster-getpointsize/host_check.cpp": "daa9e614f4f87be48d169e7f0d0d3ed4a72128a2d287ce86308a3d1145b308c9",
+    "sources/w16-scene-a-raster-getzbufferreg/get_zbuffer_reg.cpp": "79df8bdb1fae319223f4e188a5419dd989a60edf149d692e603a5ed62602993f",
+    "sources/w16-scene-a-raster-getzbufferreg/host_check.cpp": "15390a9fca9e0a69d471f5a1675ed87be04246ceb9a3e24f8c8ba9983aad88fb",
+    "sources/w16-scene-a-rfont-allocate/allocate.cpp": "ce01fece4201381efe969ef54ba502b05c243619f7094e6480866c9b2ec7949d",
+    "sources/w16-scene-a-rfont-allocate/host_check.cpp": "4ed818d3de8366dd31c410517ba50d061cb0c7fde7937d88e1d21526453d4925",
+    "sources/w16-scene-a-rfont-calcdatasize/calc_data_size.cpp": "2a9c71fbf60e9d73c8911727ac41ca18222c597ba87b1eb1005403bde38bd0db",
+    "sources/w16-scene-a-rfont-calcdatasize/host_check.cpp": "863a7bbbf6ec2fd9d1a16ad465c309207f58e1b7ee192aa625c319c9ade18570",
+    "sources/w16-scene-a-rfont-calcmaxwidth/calc_max_width.cpp": "6c28debb69d55351cdbcc664c50a15c241b97a467d545c466d5ad52c3a7fc869",
+    "sources/w16-scene-a-rfont-calcmaxwidth/host_check.cpp": "b9d0c9e05324041ed7c0125d3f6e030bc76ba214537808f8a80b6ebb70357989",
+    "sources/w16-scene-a-rfont-createresources/create_resources.cpp": "93a0767c14b524a46c5068126ffb62e0d45c840c32999c970d5e2e5c7c127951",
+    "sources/w16-scene-a-rfont-createresources/host_check.cpp": "7762d7238da5a507d43c8d496c6495d29d71c79a2f4531c127d1ad30660de9e4",
+    "sources/w16-scene-a-rfont-getstringwidth-char/get_string_width.cpp": "00894826cb991156aede3dc72f652b558703d5260efd0488a16674bdd39cda62",
+    "sources/w16-scene-a-rfont-getstringwidth-char/host_check.cpp": "f81197650ef9febc63ec8532d94303d7ddaa8c23f3bfa1c913b1a559187dae1b",
+    "sources/w16-scene-a-rfont-getstringwidth-short/get_string_width.cpp": "8e9aa50c675c477f8bfe8ced51d2b40814d96d0ae01d2efd3fcd75cc0f8d49f1",
+    "sources/w16-scene-a-rfont-getstringwidth-short/host_check.cpp": "963800eba90a31b4cb3d9e7f92a1f8fc7bf9d8e8089646c801f3c8bb88929ed8",
+    "sources/w16-scene-a-rfont-initchars/host_check.cpp": "1100b55e46f7a97be8b7842b40c8e409f043e3db9032f2e684c037e8147ae1d4",
+    "sources/w16-scene-a-rfont-initchars/init_chars.cpp": "91980fe64596a41206c21df1d54d31bcd41a268136519a518d11638d3c93df60",
+    "sources/w16-scene-a-rfont-initslots/host_check.cpp": "449d53c1977df2d28c85a765fd0faada35344989f1ecaa1a22063fb41ab10692",
+    "sources/w16-scene-a-rfont-initslots/init_slots.cpp": "66d23ec10364685949e2ae0639caae6a6ad81055c2380270da9d1e19b3e3acde",
+    "sources/w16-scene-a-scene-createrefmap/create_ref_map.cpp": "d8fb14e9a56a03f7f2ad9344f1d04397d7935311e101c5258bcb80bff656a14a",
+    "sources/w16-scene-a-scene-createrefmap/host_check.cpp": "642912386defb2d4e00803636c8a75b91c42032cbc5b4a4905296bc924f390b6",
+    "sources/w16-scene-a-surface-allocate/allocate.cpp": "2f02096265b9e4fd424554585df44361a2869f48496c9c26b81d9c7d7cb71552",
+    "sources/w16-scene-a-surface-allocate/host_check.cpp": "4eefe0c4c34be3ce984db02b6c6e7cf68dd9e13e12c8266cf6597417a899d1a7",
+    "sources/w16-scene-a-surface-calcsurfaceoffsets/calc_surface_offsets.cpp": "0f95f57d6cfbedfbbf275d50d3f92c3cf72b64c535e74cfe676d78587f696907",
+    "sources/w16-scene-a-surface-calcsurfaceoffsets/host_check.cpp": "652f1df92667621d27c6ffc8df76ddc66037bd59f6ed01337762b07af99e03dd",
+    "sources/w16-scene-a-surface-deallocate/deallocate.cpp": "ee07a8a45dabc9a6a9ace5416b72ea76fdd3fc80196d67b2a913d28d746fd9d0",
+    "sources/w16-scene-a-surface-deallocate/host_check.cpp": "49a0da59b926e0596f7bcac44b4fa9e1a00533c5bbc4c0896c285384b75b92f5",
+    "sources/w16-scene-a-zone-queryemitters/host_check.cpp": "0c98452a1e093907aeb5a7c06fcad0feb9a4dd9dd83003324e31284086115e87",
+    "sources/w16-scene-a-zone-queryemitters/query_emitters.cpp": "c3922edc160c12d38ddf4e3ca9a55f2d948be9ba83e958f48401d1b7e3f5a0c7",
+    "sources/w16-scene-a-zoneroom-clear/clear.cpp": "c2f80eddc91cb84a84cc21c28c0305faa33318a51b0482b015e58acb459f99fd",
+    "sources/w16-scene-a-zoneroom-clear/host_check.cpp": "5d9aad55b49c936a8e62cb852b0853348e61a29d59fa6ed32812cc232a250956"
   },
   "additional_implementations": [
     {
@@ -114370,11 +114722,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7565,
-    "authored_default_inputs": 7563,
+    "selected_inputs": 7587,
+    "authored_default_inputs": 7585,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 6043,
-    "compiled_body_bytes_from_accepted_inputs": 2336928,
+    "emitted_function_definitions_including_helpers": 6065,
+    "compiled_body_bytes_from_accepted_inputs": 2343184,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -114387,7 +114739,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7252
+    "package_selected_inputs": 7274
   },
   "startup_implementations": [
     {
@@ -229625,6 +229977,380 @@
       ],
       "host_files": [
         "sources/w16-rt-a-string-rep-clone/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-font-drawcenteredstring-u16/drawcenteredstring.cpp",
+      "source_sha256": "e1db9531e9f99ecaeb5bf9963bb50ddf1695b809162f74339ea2f694460c2f5e",
+      "object_sha256": "7215bb4c84e829b2913fa972614a281b843defc67976e04d5822fe906ad7d5b0",
+      "emitted_functions": [
+        {
+          "name": "DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi",
+          "compiled_body_bytes": 268
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-font-drawcenteredstring-u16/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-material-getlayertexture/get_layer_texture.cpp",
+      "source_sha256": "deba26f50d7e0471e1b0ffb91e108ae2f7229f8d2c4efe744d70cac823f96afe",
+      "object_sha256": "4cf412462f1926afc237893d6ef1ae6d2dedbc538f42e35af9d1def762a7fc33",
+      "emitted_functions": [
+        {
+          "name": "GetLayerTexture__10VIMateriali",
+          "compiled_body_bytes": 24
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-material-getlayertexture/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-blit/blit.cpp",
+      "source_sha256": "98fe6338af4ee30fe915a022046d1b7b73a68ae75fb7dc6a5f257adf05be50cf",
+      "object_sha256": "a4896a3b3a86a95891b25c34ae48032fdf4fcc84a1fac7bc5f817c442e53a3e8",
+      "emitted_functions": [
+        {
+          "name": "Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef",
+          "compiled_body_bytes": 936
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-blit/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-colorbuffer/color_buffer.cpp",
+      "source_sha256": "5f37ddc5ffa80400a622ba2c23dd3d95aac3ccdecda96ff7d094a526e00e3a4a",
+      "object_sha256": "827cccb46ba16e7cba78189287fbecbd909b6ee1a42d775a14e4c899d078d43c",
+      "emitted_functions": [
+        {
+          "name": "ColorBuffer__8VIRasteri",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-colorbuffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-copymaterial/copy_material.cpp",
+      "source_sha256": "1c2d8b767e7d37b340f69ad1643a741c89052ebb1ba319e802a51b5bc618f9ab",
+      "object_sha256": "2c6f21c1c38e0c149f9bdf3079ef2908d5cd50df3e954e6f98178b628b5f2d23",
+      "emitted_functions": [
+        {
+          "name": "CopyMaterial__8VIRasterii",
+          "compiled_body_bytes": 440
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-copymaterial/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-drawstring/draw_string.cpp",
+      "source_sha256": "2744094783fbef9e60ad01a5e9bced1cf88fda629dddd4a9962f794c6a6d6b0e",
+      "object_sha256": "00f882a96173f719fdbc26b5f6cafb92ed07a95244a5f40605f72e9342b34e85",
+      "emitted_functions": [
+        {
+          "name": "DrawString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUs",
+          "compiled_body_bytes": 708
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-drawstring/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-getpointsize/get_point_size.cpp",
+      "source_sha256": "f3b4ea50e0d97e7771ea1f453b2def2f84fb8d9a1c56a1622ddfb0334449a499",
+      "object_sha256": "adbad904833f8ea1bc918c9dc37582c276b214499df832f2b5c7967d91dd2ca4",
+      "emitted_functions": [
+        {
+          "name": "GetPointSize__8VIRasteri",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-getpointsize/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-raster-getzbufferreg/get_zbuffer_reg.cpp",
+      "source_sha256": "79df8bdb1fae319223f4e188a5419dd989a60edf149d692e603a5ed62602993f",
+      "object_sha256": "7bbe818f592f55a68c135cab19ce59fb313a6ad7035450c5a128158a78637394",
+      "emitted_functions": [
+        {
+          "name": "GetZBufferReg__C8VIRaster",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-raster-getzbufferreg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-allocate/allocate.cpp",
+      "source_sha256": "ce01fece4201381efe969ef54ba502b05c243619f7094e6480866c9b2ec7949d",
+      "object_sha256": "89fd0984285f2173aff1ebfbd3314387076487e5d45804f00ecf09638edf2bd4",
+      "emitted_functions": [
+        {
+          "name": "Allocate__7VIRFont",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-allocate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-calcdatasize/calc_data_size.cpp",
+      "source_sha256": "2a9c71fbf60e9d73c8911727ac41ca18222c597ba87b1eb1005403bde38bd0db",
+      "object_sha256": "998c58a92cd71f9c814b8b075e57ebc1c2a2689870f3bf5aae58e126c100ab88",
+      "emitted_functions": [
+        {
+          "name": "CalcDataSize__7VIRFontPUc",
+          "compiled_body_bytes": 500
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-calcdatasize/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-calcmaxwidth/calc_max_width.cpp",
+      "source_sha256": "6c28debb69d55351cdbcc664c50a15c241b97a467d545c466d5ad52c3a7fc869",
+      "object_sha256": "1e939b62d979fdb88e38cfcbb8d8a083536ecc40201300c306b750d2527cfd93",
+      "emitted_functions": [
+        {
+          "name": "CalcMaxWidth__7VIRFontiPUc",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-calcmaxwidth/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-createresources/create_resources.cpp",
+      "source_sha256": "93a0767c14b524a46c5068126ffb62e0d45c840c32999c970d5e2e5c7c127951",
+      "object_sha256": "c4696c640564ee4b1a109c2fc90bf5776d3b4bd01ea2bbde41f4d02cd45aa5e3",
+      "emitted_functions": [
+        {
+          "name": "CreateResources__7VIRFontR8VIRasterR12VIDictionaryii10VIBitDepthi",
+          "compiled_body_bytes": 496
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-createresources/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-getstringwidth-char/get_string_width.cpp",
+      "source_sha256": "00894826cb991156aede3dc72f652b558703d5260efd0488a16674bdd39cda62",
+      "object_sha256": "3cf288ee42ae35eca4ec84ee9e65f9eabf0c25ce8d76e8ce9bd32184c407e51a",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__7VIRFontPCci",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-getstringwidth-char/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-getstringwidth-short/get_string_width.cpp",
+      "source_sha256": "8e9aa50c675c477f8bfe8ced51d2b40814d96d0ae01d2efd3fcd75cc0f8d49f1",
+      "object_sha256": "6a94d710dc2299fc394ad5662dcc67f524587eda7539fec3f8b67d25c35e603b",
+      "emitted_functions": [
+        {
+          "name": "GetStringWidth__7VIRFontPCUsi",
+          "compiled_body_bytes": 296
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-getstringwidth-short/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-initchars/init_chars.cpp",
+      "source_sha256": "91980fe64596a41206c21df1d54d31bcd41a268136519a518d11638d3c93df60",
+      "object_sha256": "dd68bdee65cfce9cfcb2a9324dbfd3ba51855212e0391e43ceb0a5d862b554c2",
+      "emitted_functions": [
+        {
+          "name": "InitChars__7VIRFontPUc",
+          "compiled_body_bytes": 212
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-initchars/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-rfont-initslots/init_slots.cpp",
+      "source_sha256": "66d23ec10364685949e2ae0639caae6a6ad81055c2380270da9d1e19b3e3acde",
+      "object_sha256": "576490f98b9e700217c529d905d1a92f256ef6283f10344c4893aa19abf4397a",
+      "emitted_functions": [
+        {
+          "name": "InitSlots__7VIRFontR8VIRaster",
+          "compiled_body_bytes": 524
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-rfont-initslots/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-scene-createrefmap/create_ref_map.cpp",
+      "source_sha256": "d8fb14e9a56a03f7f2ad9344f1d04397d7935311e101c5258bcb80bff656a14a",
+      "object_sha256": "aafa6879bb752baaf98b8f666154af78657adf5c56eca771636b9c67e049c8c6",
+      "emitted_functions": [
+        {
+          "name": "CreateRefMap__7VIScenei",
+          "compiled_body_bytes": 156
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-scene-createrefmap/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-surface-allocate/allocate.cpp",
+      "source_sha256": "2f02096265b9e4fd424554585df44361a2869f48496c9c26b81d9c7d7cb71552",
+      "object_sha256": "3ae5305ced84cd254c9d464fd59a8d42eee641267fbf37e5bef8d471d281ad42",
+      "emitted_functions": [
+        {
+          "name": "Allocate__9VISurface",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-surface-allocate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-surface-calcsurfaceoffsets/calc_surface_offsets.cpp",
+      "source_sha256": "0f95f57d6cfbedfbbf275d50d3f92c3cf72b64c535e74cfe676d78587f696907",
+      "object_sha256": "60320ea882ecd74a0511f45bb2fca3a10984b74432fc24ba697e463d66976369",
+      "emitted_functions": [
+        {
+          "name": "CalcSurfaceOffsets__9VISurface",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-surface-calcsurfaceoffsets/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-surface-deallocate/deallocate.cpp",
+      "source_sha256": "ee07a8a45dabc9a6a9ace5416b72ea76fdd3fc80196d67b2a913d28d746fd9d0",
+      "object_sha256": "d8fcf898dc869848cfc9c4bf1707aeafaee8361525b864607ada2eac4cf98bf7",
+      "emitted_functions": [
+        {
+          "name": "Deallocate__9VISurface",
+          "compiled_body_bytes": 116
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-surface-deallocate/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-zone-queryemitters/query_emitters.cpp",
+      "source_sha256": "c3922edc160c12d38ddf4e3ca9a55f2d948be9ba83e958f48401d1b7e3f5a0c7",
+      "object_sha256": "a274f5ab1f6f2fa93d4342e11ff40b717391be711b48a627fb95a2fda66f3fcb",
+      "emitted_functions": [
+        {
+          "name": "QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars",
+          "compiled_body_bytes": 368
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-zone-queryemitters/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-scene-a",
+      "source": "sources/w16-scene-a-zoneroom-clear/clear.cpp",
+      "source_sha256": "c2f80eddc91cb84a84cc21c28c0305faa33318a51b0482b015e58acb459f99fd",
+      "object_sha256": "f69a7f87e6e056e219a304d3bc44a48b6af8b8da1b64263f8287beeaf0b75ac4",
+      "emitted_functions": [
+        {
+          "name": "Clear__10VIZoneRoom",
+          "compiled_body_bytes": 216
+        }
+      ],
+      "host_files": [
+        "sources/w16-scene-a-zoneroom-clear/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

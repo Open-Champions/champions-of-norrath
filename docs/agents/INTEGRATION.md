@@ -10872,3 +10872,21 @@ Opened: `Clear__t6VIList1ZP10VIFlatFile`, `_S_chunk_alloc__t24__default_alloc_te
 
 Full partial build: 7563 source compilations, one link, 6041 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:19 CDT — agents/w16-rt-a — 768 unresolved imports
+
+## agents/w16-scene-a
+
+Merged (merge commit). All 22 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (22 of 22 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 66 minutes old.
+
+| | |
+|---|---|
+| Before | 768 |
+| After | 755 |
+| Closed | 22 |
+| Opened | 9 |
+
+Closed: `Allocate__7VIRFont`, `Allocate__9VISurface`, `Blit__8VIRasteriUiRC8VIVect2IN2316VIAlphaBlendModef`, `CalcDataSize__7VIRFontPUc`, `CalcMaxWidth__7VIRFontiPUc`, `CalcSurfaceOffsets__9VISurface`, `Clear__10VIZoneRoom`, `ColorBuffer__8VIRasteri`, `CopyMaterial__8VIRasterii`, `CreateRefMap__7VIScenei`, `CreateResources__7VIRFontR8VIRasterR12VIDictionaryii10VIBitDepthi`, `Deallocate__9VISurface`, `DrawCenteredString__6VIFontP8VIRasterP12VIDictionaryPCUsiiUi`, `DrawString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUs`, `GetLayerTexture__10VIMateriali`, `GetPointSize__8VIRasteri`, `GetStringWidth__7VIRFontPCUsi`, `GetStringWidth__7VIRFontPCci`, `GetZBufferReg__C8VIRaster`, `InitChars__7VIRFontPUc`, `InitSlots__7VIRFontR8VIRaster`, `QueryEmitters__6VIZoneiR23VISceneEmitterQueryVars`
+
+Opened: `Add__t6VIPool1ZP8VIRefMapRCP8VIRefMap`, `BlitBegin__8VIRasterPP10_sceDmaTag`, `BlitEnd__8VIRasterPP10_sceDmaTag`, `Cache__7VIRFontR8VIRasterPCUsiPi`, `CalcMipLevelStride__9VISurfacei`, `DrawCenteredString__8VIRasteriRC8VIVect2IRC10VIColor32FPCUsUi`, `QueryEmittersLeaf__6VIZoneiR23VISceneEmitterQueryVars`, `ShareMaterial__8VIRasteri`, `__t5VIMap2ZiZi`
+
+Full partial build: 7585 source compilations, one link, 6063 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:25 CDT — agents/w16-scene-a — 755 unresolved imports
