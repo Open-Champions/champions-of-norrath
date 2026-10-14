@@ -10190,3 +10190,10 @@ Opened: `__5MummyG6Point3sPPcPc`, `__9LooseFireG6Point3P10GameObject`, `_vt$10Fr
 
 Merged (merge commit, branch tip `722be2c0`; over two hours old). The branch adds only its notes file, `docs/agents/w14-m-data-a.md`: no source, no plan entries. The notes say the package closes none of its 26 scope names in the shared build, because 22 are file-local particle records inside other packages' static-initializer units (a global copy would link but the caller would read zeros), two need a plan entry that already exists in `w10-render-b`'s notes, and two need a caller-side label. Nothing to plan; no build change, so the count is unchanged (915). The owner changes it lists belong to the owners of those packages.
 - 2026-10-13 21:08 CDT — agents/w14-m-data-a (notes only, no units) — 915 unresolved imports
+
+## Re-verification by the replacement integrator (2026-10-13)
+
+Shared branch at `ea696455`: 214 tool tests pass, the snapshot check passes (6763 authored inputs), and a fresh default partial build reproduces the recorded **915** unresolved imports (5384 function bodies, zero COMMON). The last ten entries (w14-sound through w14-m-data-a) match: counts reproduce and no game binary, disc image or raw disassembly appears in the recent diffs. No shared-file fixes were needed.
+
+Remaining unmerged `origin/agents/*` branches, all at the tips already recorded above and unchanged since their rejection: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-particle-data-b`, `w12-vicont-a`, `w12-vicont-b`, `w12-vimath-b`, `w12-wnd-a`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w8-spell-static-init-b`, `w9-render-math-a`. Each lacks committed checks for some or all units; nothing was merged. `codex/norrath-runtime-binding` and `integration/wave` are not worker branches and were left alone.
+- 2026-10-13 21:30 CDT — re-verification, no branches merged — 915 unresolved imports
