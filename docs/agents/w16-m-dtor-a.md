@@ -15,7 +15,7 @@ The seventeen names in the wave list are destructors of spell and projectile cla
 these seventeen addresses. The call-count ordering was therefore not usable, and the work is ordered by shared shape
 (GameObject base, Spell base, projectile, multi-step, global counter).
 
-Status: 2 of 17 units have sources and checks in this branch.
+Status: 3 of 17 units have sources and checks in this branch.
 
 ## What was done
 
@@ -23,7 +23,7 @@ Each destructor stores the class table word(s) at the offsets seen in the image,
 order, and then, when bit 0 of the incoming flags is set, calls `blockFree__FPv` on the object (a tail call in the image).
 Other flag bits do not free. The flags are read once, before the first call, as the image does.
 
-- GameObject: 12GlowingShaft, 18FrostStormIceShard
+- GameObject: 12GlowingShaft, 18FrostStormIceShard, 19BlindingLightEffect
 
 ## Units
 
@@ -31,6 +31,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 |---|---|---|---|---|
 | `w16-m-dtor-a-dtor-12glowingshaft` | `_$_12GlowingShaft` | `0x00310720`, 100 bytes (weak) | 88 | `60e9f2a1ff1aa79d6f9e7384185f23778a2494f36aa6fb0fb2864e26c8ed7170` |
 | `w16-m-dtor-a-dtor-18froststormiceshard` | `_$_18FrostStormIceShard` | `0x00313d20`, 100 bytes (weak) | 88 | `cf92d4b1cf36a15381214dadb7e3759062fb6ea4d8da6879af06950f8f5dbdab` |
+| `w16-m-dtor-a-dtor-19blindinglighteffect` | `_$_19BlindingLightEffect` | `0x00319c68`, 100 bytes (weak) | 88 | `a5e318ac792d5ca0c3912985dbd1df183cc81618f10c4a4480d19542da43b63d` |
 
 ## Observed behaviour worth knowing
 
@@ -46,7 +47,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 
 ## Checks performed
 
-- **EE compile.** 2 of 2 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
+- **EE compile.** 3 of 3 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
   and the `authored_cpp` flags from `experimental/build-plan.json`, with `-c` into a private directory. Each object exports
   one function, under its image symbol, and leaves the callees and tables undefined.
 - **Host contract.** Each unit has `host_check.cpp`, built with `clang++ -std=c++17`. It runs the destructor over every
@@ -98,13 +99,27 @@ entries until the snapshot records the same inputs.
     "compiled_body_bytes": 88
    }
   ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w16mdb_dtor_19blindinglighteffect.o",
+  "profile": "authored_cpp",
+  "sha256": "a5e318ac792d5ca0c3912985dbd1df183cc81618f10c4a4480d19542da43b63d",
+  "source": "sources/w16-m-dtor-a-dtor-19blindinglighteffect/dtor.cpp",
+  "emitted_functions": [
+   {
+    "name": "_$_19BlindingLightEffect",
+    "compiled_body_bytes": 88
+   }
+  ]
  }
 ]
 ```
 
 ## Imports closed
 
-Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`.
+Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`.
 
 The partial build's unresolved list is checked in the section below.
 
