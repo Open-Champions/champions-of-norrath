@@ -1,4 +1,4 @@
-// Observed __18SpellAncestralCalliP8CreatureP5Skill at 0x002a7620, 840 bytes in .text. Arguments: the object, the rank, the
+// Observed __18SpellAncestralCalliP8CreatureP5Skill at 0x002a7620, 844 bytes in .text. Arguments: the object, the rank, the
 // creature and the skill. Returns nothing. The sync random state is advanced as state = state * 0x19660d + 0x3c6ef35f
 // (32-bit).
 // Steps, in order:
