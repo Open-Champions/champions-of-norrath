@@ -11052,3 +11052,21 @@ Opened:
 
 Full partial build: 7779 source compilations, one link, 6258 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 07:25 CDT — agents/w16-tmpl-map-a — 634 unresolved imports
+
+## agents/w16-wnd-a
+
+Merged (merge commit). Its notes have the standard sections and the tip was about 73 minutes old. 41 units are selected, each with a committed host check that I ran using the build recipe in its own header (41 of 41 exit 0); names and body sizes come from my own compile. They include the previously unselected `w12-wnd-a` units (the earlier entry said 30 of 34 had no host test) and two `w9-render-math-a` units, because this branch added host checks for them. The branch also edited 19 existing sources that were **not** in the plan (for example `w12-wnd-a-patcher-locals`, `w12-wnd-a-set-begin`, `w9-render-math-a-draw-character-call-back`); I refreshed their recorded hashes in `snapshot.json` and did not review or change the game code. None of the edited files was a planned input, so no pinned plan hash changed. The count rises by one: the window routines call functions nobody defines yet.
+
+| | |
+|---|---|
+| Before | 634 |
+| After | 635 |
+| Closed | 37 |
+| Opened | 38 |
+
+Closed: `AsciiString2Sjis__16VIIconDefinitionPcPUs`, `Begin__Ct5VISet1ZP5VIWnd`, `BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii`, `ClearText__9VIWndEdit`, `DrawProgress__10VIUIWindowiiif`, `DrawVScroll__10VIUIWindowG8VIVect2IifUi`, `Erase__t5VISet1ZP5VIWndi`, `Find__Ct5VISet1ZP5VIWndRCP5VIWnd`, `GetUISound__F11VIUISoundId`, `Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii`, `Insert__t5VISet1ZP5VIWndRCP5VIWnd`, `Next__Ct5VISet1ZP5VIWndi`, `OnDrawSelf__10VIWndLegal`, `OnDrawSelf__11VIWndSplash`, `OnDrawSelf__12VIWndPatcher`, `OnDrawSelf__20VIWndGenericRenderer`, `OnDrawSelf__5VIWnd`, `OnDrawSelf__9VIWndDnas`, `OnDrawSelf__9VIWndEula`, `OnDraw__5VIWnd`, `OnKeyDown__10VIWndLegali`, `OnKeyDown__11VIWndSplashi`, `OnKeyDown__12VIWndPatcheri`, `OnKeyDown__20VIWndGenericRendereri`, `OnKeyDown__5VIWndi`, `OnKeyDown__9VIWndDnasi`, `OnKeyDown__9VIWndEulai`, `OnKeyUp__10VIWndLegali`, `OnKeyUp__11VIWndSplashi`, `OnKeyUp__12VIWndPatcheri`, `OnKeyUp__20VIWndGenericRendereri`, `SoundPlay__4VIUIPCcf`, `TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi`, `VIHashResourceID_Icon__FPCc`, `drawCharacterCallBack__FiP6Point3PsPiN23`, `drawUpFrom__FiiPCUcT2iUi`, `setNewGridPosition__Fii`
+
+Opened: `ActionOccured__20VIWndGenericRendererPCc`, `AddNode__t5VISet1ZP5VIWndii`, `AppendEllipsis__10VIUIWindowPUsi`, `Ascii2Sjis__16VIIconDefinitionc`, `BlitVertBar__4VIUIG8VIVect2I9VIUITexIdN22i16VIAlphaBlendModef`, `Blit__4VIUIiG8VIVect2I16VIAlphaBlendModefUi`, `Blit__8VIRasteriUiRC8VIVect2I16VIAlphaBlendModef`, `ComputeTextRows__9VIWndEula`, `CopyAsteriks__10VIUIWindowPUsii`, `DnasErrorString__9VIWndDnasP14sceDNAS2Status`, `Down__9VIWndEula`, `DrawFakeSplashInterface__12VIWndPatcher`, `DrawFakeSplashInterface__9VIWndDnas`, `DrawTextInternal__10VIUIWindowPCUsiiRC10VIColor32FUi`, `EraseFixup__t5VISet1ZP5VIWndi`, `EulaComplete__9VIStationUc`, `FreeNode__t5VISet1ZP5VIWndi`, `GetSessionId__16VIRealmInterface`, `LeftRotate__t5VISet1ZP5VIWndi`, `Message__C16VIWndReadMessage`, `OnDrawSelf__10VIWndMcErr`, `OnKeyDown__10VIWndMcErri`, `PostInit__20VIWndGenericRenderer`, `Render__11VIGUIDialog`, `Render__9VIGUIPage`, `RightRotate__t5VISet1ZP5VIWndi`, `SelectPlay__11VIWndSplash`, `SetTextColor__6VIFontRC9VIColor32`, `SetUiColors__10VIUIWindow`, `Size__Ct6VIList1ZP9VIGUIPage`, `StopEula__9VIStation`, `TextWidth__10VIUIWindowPCUs`, `UISounds`, `Up__9VIWndEula`, `clientLeaveGame__16VIRealmInterface`, `lastRefreshTime`, `logout__Q212RealmService15RealmGatewayAPIPCUsPv`, `strncpy16__8VIStringPUsUiPCUsi`
+
+Full partial build: 7820 source compilations, one link, 6295 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:32 CDT — agents/w16-wnd-a — 635 unresolved imports

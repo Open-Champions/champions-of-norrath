@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7779,
+  "default_authored_inputs": 7820,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8573,7 +8573,48 @@
     "sources/w16-tmpl-list-c-vilnode-insertafter/insert_after.cpp": "feb8b31d282fce107ec1a310114e6299b6ac8a134455963b201f4ba9111216d3",
     "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c",
     "sources/w16-tmpl-map-a-esc-log2/log2.cpp": "c1c6a1ae57a44342d18e0af03a601881556ecd5096abc98f8d3117c59f113cf9",
-    "sources/w16-tmpl-map-a-map-ii-end/end.cpp": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6"
+    "sources/w16-tmpl-map-a-map-ii-end/end.cpp": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6",
+    "sources/w12-wnd-a-dnas-locals/ellipse_count.cpp": "78120aadce78d0623046789c2aa54d838cfebadbf28d6eeb4ebdb019d22e8db5",
+    "sources/w12-wnd-a-dnas-ondrawself/ondrawself.cpp": "56d47c8eaa200d77c3f1d31c7141dfbdbcac31413a239048aa4fd1d8324252da",
+    "sources/w12-wnd-a-dnas-onkeydown/onkeydown.cpp": "a89f1949aa0a2e61e073aae405163740a4d1cfac13d6cbd401a2d7c51fce9d4b",
+    "sources/w12-wnd-a-edit-cleartext/cleartext.cpp": "367ba933e0404102be9f88384d49a8ce6cfea878dc4caa9e408426197dd78863",
+    "sources/w12-wnd-a-eula-ondrawself/ondrawself.cpp": "8f1eb7027eb2595f144b01336c5f2259be66cd0b24db214c08410c8eda3bd100",
+    "sources/w12-wnd-a-eula-onkeydown/onkeydown.cpp": "0290c790c14e9311959c74b99e538ea3ca6917928b05d3b04cccc2b597e12a4e",
+    "sources/w12-wnd-a-genrenderer-locals/render_count.cpp": "6729a419549d0600eebdfaf80c75e1bba64f58ed30fa17a84c0e46a6e49ba0e5",
+    "sources/w12-wnd-a-genrenderer-ondrawself/ondrawself.cpp": "8281a8aead64ff9a9590d31b69c846c9aab761f358ada66f8cdfd27987715f2f",
+    "sources/w12-wnd-a-genrenderer-onkeydown/onkeydown.cpp": "8fbe208b9ff9d8529fa6b5ec899414c79570d49d475b132bb363743eb2f7e4ce",
+    "sources/w12-wnd-a-genrenderer-onkeyup/onkeyup.cpp": "2ad02651b24ca33725364d0be5a93e5930d9b1c8dcd221066b80284edf922b5c",
+    "sources/w12-wnd-a-legal-ondrawself/ondrawself.cpp": "08c7082c5b8df04e0c6bf194b59c01c556b5734943b0dd21b4843f1d1f628f4a",
+    "sources/w12-wnd-a-legal-onkeydown/onkeydown.cpp": "72e38ad8e80161cc22d3e80bdcc3e9fb5a42eb15a6ff4fcad07428b2c18dd586",
+    "sources/w12-wnd-a-legal-onkeyup/onkeyup.cpp": "83bba604dc555a9d03747ebb9dd3c6e9cc7110135ec37c77844178a9887dcb87",
+    "sources/w12-wnd-a-patcher-locals/dot_state.cpp": "e1b117820a515e62ea132601c13261005328009a782093b62c61c754af45f9ee",
+    "sources/w12-wnd-a-patcher-ondrawself/ondrawself.cpp": "5bd541a63b447c1775085fa83724eb1824a0c35c5a82cb7842b4db327533735a",
+    "sources/w12-wnd-a-patcher-onkeydown/onkeydown.cpp": "d8622dd8ca6f19e13c175d170d72f913ace934f378055a1636cdb396cbe21a51",
+    "sources/w12-wnd-a-patcher-onkeyup/onkeyup.cpp": "6f0c2182aae0b67e3031eb9de769f7f5353e873d2c2fed616acb0d577e1a888b",
+    "sources/w12-wnd-a-set-begin/begin.cpp": "f2354d2047caf3cc891c680c9784f19b7e9496ca905f253a82c83ca774e29830",
+    "sources/w12-wnd-a-set-erase/erase.cpp": "22d70d4048a0a752b3a046f54fe2de2a185829e66a2958ea590db54e7536c78a",
+    "sources/w12-wnd-a-set-find/find.cpp": "8d3939f4433be08f9ec27ea6d039075f101b12133a9ae6305eb63cb9ea4a5c2f",
+    "sources/w12-wnd-a-set-insert/insert.cpp": "32921ad3c04490e1f64c2dcd42ff01fbb4393c5ab67ef258da7b05017fc9b5e2",
+    "sources/w12-wnd-a-set-next/next.cpp": "339d3076edacb8d7b61ce48ae98ba039919888d659186c7c6ddb12d0bc34dfef",
+    "sources/w12-wnd-a-splash-locals/last_pad_state.cpp": "d34196ebdcbe18a6db11801d347e1c3595988ae1955a2f513f005c385cdde3f5",
+    "sources/w12-wnd-a-splash-ondrawself/ondrawself.cpp": "77244e1712b18c9e759347d690604ab30a10ee79057d9a461579c9e24f9970d6",
+    "sources/w12-wnd-a-splash-onkeydown/onkeydown.cpp": "bb28180852e24056a4dca5198be7ef4e2459fdb887a709229590d1f1a1946307",
+    "sources/w12-wnd-a-splash-onkeyup/onkeyup.cpp": "1de122d673242bcbd89b3ee49fa0ecd4e2375be6d181a934407080d712faeb28",
+    "sources/w12-wnd-a-uiwindow-init/init.cpp": "05de8b42d705724f0e9d655a97495fd8e94e72eeeb7194423a27d5a0e672f834",
+    "sources/w12-wnd-a-wnd-ondraw/ondraw.cpp": "7b19eaa9abe52bbcbe4144bb5568dd72f0a9b26a8a0e05c2ecb747df2bba6427",
+    "sources/w12-wnd-a-wnd-ondrawself/ondrawself.cpp": "0b983d196e02574ffbbb3f6f4f24dfa80d9732030c1a755466b37aa4edcc3769",
+    "sources/w12-wnd-a-wnd-onkeydown/onkeydown.cpp": "6588b0985194cb4aaccebba642cabe97a6d9967830351c2e779635b77cf11852",
+    "sources/w9-render-math-a-draw-character-call-back/draw_character_call_back.cpp": "d86b77cbbad76b0574fc51fb1dd600758a0839504690cfe7c83f2336569aed2e",
+    "sources/w9-render-math-a-draw-up-from/draw_up_from.cpp": "27f5f91988f9deea3191d4692fc9923945717f4b587f8cad0cff46a82761c01a",
+    "sources/w16-wnd-a-get-ui-sound/get_ui_sound.cpp": "d1898c40e7f75072ef2ab8371979f82dcb045ee626ac78fdae1fc8dbe6e2d7ff",
+    "sources/w16-wnd-a-hash-resource-id-icon/hash_resource_id_icon.cpp": "3fd870ed4aee7db583db39531c43d94e80ad124c7a225627bedd3f2c95c36ecb",
+    "sources/w16-wnd-a-icon-ascii-string-to-sjis/ascii_string_to_sjis.cpp": "feff7d654e25248b5e7da4326581eed18f9cf4fa3cd8ccc2b951b79ec433caba",
+    "sources/w16-wnd-a-set-new-grid-position/set_new_grid_position.cpp": "baf1fcf24018a14c7620f0b6cc3e45aa17c77f78fce6c0d15a0bc340d834fe5c",
+    "sources/w16-wnd-a-ui-blitbar-narrow/blitbar_narrow.cpp": "80402d3682569e646e70877862fc682163e6871be5edd23abccb60bac2d9ba8e",
+    "sources/w16-wnd-a-viui-sound-play-name/sound_play_name.cpp": "058f722af2f2cc70ccf5df91a015636ae4a6a6e09b8bfa6cd5fc61781236ef1d",
+    "sources/w16-wnd-a-viuiwindow-drawprogress/drawprogress.cpp": "22353d6f9cb2327bc370637586166097be02ee88303a7552f8895b857eca4dcc",
+    "sources/w16-wnd-a-viuiwindow-drawvscroll/drawvscroll.cpp": "bc263720e4d0662bcec0fc4fd04f5a475af09238fe06a8bc2f6c1a8e1b789746",
+    "sources/w16-wnd-a-viuiwindow-textbox/textbox.cpp": "776ac8f75f11d6cc8fb12ed683198561020d1df5f9e5b149d10d330bad3bd645"
   },
   "inputs": [
     {
@@ -116146,6 +116187,601 @@
           "compiled_body_bytes": 8
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7781,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_dnas_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "78120aadce78d0623046789c2aa54d838cfebadbf28d6eeb4ebdb019d22e8db5",
+      "source": "sources/w12-wnd-a-dnas-locals/ellipse_count.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7782,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_dnas_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "56d47c8eaa200d77c3f1d31c7141dfbdbcac31413a239048aa4fd1d8324252da",
+      "source": "sources/w12-wnd-a-dnas-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__9VIWndDnas",
+          "compiled_body_bytes": 1416
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7783,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_dnas_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "a89f1949aa0a2e61e073aae405163740a4d1cfac13d6cbd401a2d7c51fce9d4b",
+      "source": "sources/w12-wnd-a-dnas-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__9VIWndDnasi",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7784,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_edit_cleartext.o",
+      "profile": "authored_cpp",
+      "sha256": "367ba933e0404102be9f88384d49a8ce6cfea878dc4caa9e408426197dd78863",
+      "source": "sources/w12-wnd-a-edit-cleartext/cleartext.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClearText__9VIWndEdit",
+          "compiled_body_bytes": 16
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7785,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_eula_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "8f1eb7027eb2595f144b01336c5f2259be66cd0b24db214c08410c8eda3bd100",
+      "source": "sources/w12-wnd-a-eula-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__9VIWndEula",
+          "compiled_body_bytes": 504
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7786,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_eula_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "0290c790c14e9311959c74b99e538ea3ca6917928b05d3b04cccc2b597e12a4e",
+      "source": "sources/w12-wnd-a-eula-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__9VIWndEulai",
+          "compiled_body_bytes": 368
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7787,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_genrenderer_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "6729a419549d0600eebdfaf80c75e1bba64f58ed30fa17a84c0e46a6e49ba0e5",
+      "source": "sources/w12-wnd-a-genrenderer-locals/render_count.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7788,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_genrenderer_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "8281a8aead64ff9a9590d31b69c846c9aab761f358ada66f8cdfd27987715f2f",
+      "source": "sources/w12-wnd-a-genrenderer-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__20VIWndGenericRenderer",
+          "compiled_body_bytes": 780
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7789,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_genrenderer_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "8fbe208b9ff9d8529fa6b5ec899414c79570d49d475b132bb363743eb2f7e4ce",
+      "source": "sources/w12-wnd-a-genrenderer-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__20VIWndGenericRendereri",
+          "compiled_body_bytes": 1976
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7790,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_genrenderer_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "2ad02651b24ca33725364d0be5a93e5930d9b1c8dcd221066b80284edf922b5c",
+      "source": "sources/w12-wnd-a-genrenderer-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyUp__20VIWndGenericRendereri",
+          "compiled_body_bytes": 228
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7791,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_legal_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "08c7082c5b8df04e0c6bf194b59c01c556b5734943b0dd21b4843f1d1f628f4a",
+      "source": "sources/w12-wnd-a-legal-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__10VIWndLegal",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7792,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_legal_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "72e38ad8e80161cc22d3e80bdcc3e9fb5a42eb15a6ff4fcad07428b2c18dd586",
+      "source": "sources/w12-wnd-a-legal-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__10VIWndLegali",
+          "compiled_body_bytes": 120
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7793,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_legal_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "83bba604dc555a9d03747ebb9dd3c6e9cc7110135ec37c77844178a9887dcb87",
+      "source": "sources/w12-wnd-a-legal-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyUp__10VIWndLegali",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7794,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_patcher_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "e1b117820a515e62ea132601c13261005328009a782093b62c61c754af45f9ee",
+      "source": "sources/w12-wnd-a-patcher-locals/dot_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7795,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_patcher_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "5bd541a63b447c1775085fa83724eb1824a0c35c5a82cb7842b4db327533735a",
+      "source": "sources/w12-wnd-a-patcher-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__12VIWndPatcher",
+          "compiled_body_bytes": 1832
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7796,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_patcher_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "d8622dd8ca6f19e13c175d170d72f913ace934f378055a1636cdb396cbe21a51",
+      "source": "sources/w12-wnd-a-patcher-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__12VIWndPatcheri",
+          "compiled_body_bytes": 704
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7797,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_patcher_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "6f0c2182aae0b67e3031eb9de769f7f5353e873d2c2fed616acb0d577e1a888b",
+      "source": "sources/w12-wnd-a-patcher-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyUp__12VIWndPatcheri",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7798,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_set_begin.o",
+      "profile": "authored_cpp",
+      "sha256": "f2354d2047caf3cc891c680c9784f19b7e9496ca905f253a82c83ca774e29830",
+      "source": "sources/w12-wnd-a-set-begin/begin.cpp",
+      "emitted_functions": [
+        {
+          "name": "Begin__Ct5VISet1ZP5VIWnd",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7799,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_set_erase.o",
+      "profile": "authored_cpp",
+      "sha256": "22d70d4048a0a752b3a046f54fe2de2a185829e66a2958ea590db54e7536c78a",
+      "source": "sources/w12-wnd-a-set-erase/erase.cpp",
+      "emitted_functions": [
+        {
+          "name": "Erase__t5VISet1ZP5VIWndi",
+          "compiled_body_bytes": 660
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7800,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_set_find.o",
+      "profile": "authored_cpp",
+      "sha256": "8d3939f4433be08f9ec27ea6d039075f101b12133a9ae6305eb63cb9ea4a5c2f",
+      "source": "sources/w12-wnd-a-set-find/find.cpp",
+      "emitted_functions": [
+        {
+          "name": "Find__Ct5VISet1ZP5VIWndRCP5VIWnd",
+          "compiled_body_bytes": 104
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7801,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_set_insert.o",
+      "profile": "authored_cpp",
+      "sha256": "32921ad3c04490e1f64c2dcd42ff01fbb4393c5ab67ef258da7b05017fc9b5e2",
+      "source": "sources/w12-wnd-a-set-insert/insert.cpp",
+      "emitted_functions": [
+        {
+          "name": "Insert__t5VISet1ZP5VIWndRCP5VIWnd",
+          "compiled_body_bytes": 716
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7802,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_set_next.o",
+      "profile": "authored_cpp",
+      "sha256": "339d3076edacb8d7b61ce48ae98ba039919888d659186c7c6ddb12d0bc34dfef",
+      "source": "sources/w12-wnd-a-set-next/next.cpp",
+      "emitted_functions": [
+        {
+          "name": "Next__Ct5VISet1ZP5VIWndi",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7803,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_splash_locals.o",
+      "profile": "authored_cpp",
+      "sha256": "d34196ebdcbe18a6db11801d347e1c3595988ae1955a2f513f005c385cdde3f5",
+      "source": "sources/w12-wnd-a-splash-locals/last_pad_state.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7804,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_splash_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "77244e1712b18c9e759347d690604ab30a10ee79057d9a461579c9e24f9970d6",
+      "source": "sources/w12-wnd-a-splash-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__11VIWndSplash",
+          "compiled_body_bytes": 1544
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7805,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_splash_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "bb28180852e24056a4dca5198be7ef4e2459fdb887a709229590d1f1a1946307",
+      "source": "sources/w12-wnd-a-splash-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__11VIWndSplashi",
+          "compiled_body_bytes": 380
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7806,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_splash_onkeyup.o",
+      "profile": "authored_cpp",
+      "sha256": "1de122d673242bcbd89b3ee49fa0ecd4e2375be6d181a934407080d712faeb28",
+      "source": "sources/w12-wnd-a-splash-onkeyup/onkeyup.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyUp__11VIWndSplashi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7807,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_uiwindow_init.o",
+      "profile": "authored_cpp",
+      "sha256": "05de8b42d705724f0e9d655a97495fd8e94e72eeeb7194423a27d5a0e672f834",
+      "source": "sources/w12-wnd-a-uiwindow-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii",
+          "compiled_body_bytes": 188
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7808,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_wnd_ondraw.o",
+      "profile": "authored_cpp",
+      "sha256": "7b19eaa9abe52bbcbe4144bb5568dd72f0a9b26a8a0e05c2ecb747df2bba6427",
+      "source": "sources/w12-wnd-a-wnd-ondraw/ondraw.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDraw__5VIWnd",
+          "compiled_body_bytes": 192
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7809,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_wnd_ondrawself.o",
+      "profile": "authored_cpp",
+      "sha256": "0b983d196e02574ffbbb3f6f4f24dfa80d9732030c1a755466b37aa4edcc3769",
+      "source": "sources/w12-wnd-a-wnd-ondrawself/ondrawself.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnDrawSelf__5VIWnd",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7810,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w12_wnd_a_wnd_onkeydown.o",
+      "profile": "authored_cpp",
+      "sha256": "6588b0985194cb4aaccebba642cabe97a6d9967830351c2e779635b77cf11852",
+      "source": "sources/w12-wnd-a-wnd-onkeydown/onkeydown.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnKeyDown__5VIWndi",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7811,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w9_render_math_a_draw_character_call_back.o",
+      "profile": "authored_cpp",
+      "sha256": "d86b77cbbad76b0574fc51fb1dd600758a0839504690cfe7c83f2336569aed2e",
+      "source": "sources/w9-render-math-a-draw-character-call-back/draw_character_call_back.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawCharacterCallBack__FiP6Point3PsPiN23",
+          "compiled_body_bytes": 424
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7812,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w9_render_math_a_draw_up_from.o",
+      "profile": "authored_cpp",
+      "sha256": "27f5f91988f9deea3191d4692fc9923945717f4b587f8cad0cff46a82761c01a",
+      "source": "sources/w9-render-math-a-draw-up-from/draw_up_from.cpp",
+      "emitted_functions": [
+        {
+          "name": "drawUpFrom__FiiPCUcT2iUi",
+          "compiled_body_bytes": 556
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7813,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_get_ui_sound.o",
+      "profile": "authored_cpp",
+      "sha256": "d1898c40e7f75072ef2ab8371979f82dcb045ee626ac78fdae1fc8dbe6e2d7ff",
+      "source": "sources/w16-wnd-a-get-ui-sound/get_ui_sound.cpp",
+      "emitted_functions": [
+        {
+          "name": "GetUISound__F11VIUISoundId",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7814,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_hash_resource_id_icon.o",
+      "profile": "authored_cpp",
+      "sha256": "3fd870ed4aee7db583db39531c43d94e80ad124c7a225627bedd3f2c95c36ecb",
+      "source": "sources/w16-wnd-a-hash-resource-id-icon/hash_resource_id_icon.cpp",
+      "emitted_functions": [
+        {
+          "name": "VIHashResourceID_Icon__FPCc",
+          "compiled_body_bytes": 124
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7815,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_icon_ascii_string_to_sjis.o",
+      "profile": "authored_cpp",
+      "sha256": "feff7d654e25248b5e7da4326581eed18f9cf4fa3cd8ccc2b951b79ec433caba",
+      "source": "sources/w16-wnd-a-icon-ascii-string-to-sjis/ascii_string_to_sjis.cpp",
+      "emitted_functions": [
+        {
+          "name": "AsciiString2Sjis__16VIIconDefinitionPcPUs",
+          "compiled_body_bytes": 180
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7816,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_set_new_grid_position.o",
+      "profile": "authored_cpp",
+      "sha256": "baf1fcf24018a14c7620f0b6cc3e45aa17c77f78fce6c0d15a0bc340d834fe5c",
+      "source": "sources/w16-wnd-a-set-new-grid-position/set_new_grid_position.cpp",
+      "emitted_functions": [
+        {
+          "name": "setNewGridPosition__Fii",
+          "compiled_body_bytes": 620
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7817,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_ui_blitbar_narrow.o",
+      "profile": "authored_cpp",
+      "sha256": "80402d3682569e646e70877862fc682163e6871be5edd23abccb60bac2d9ba8e",
+      "source": "sources/w16-wnd-a-ui-blitbar-narrow/blitbar_narrow.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlitBar__4VIUIPCcG10VIColor32FG8VIVect2I9VIUITexIdT4i16VIAlphaBlendModefUii",
+          "compiled_body_bytes": 196
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7818,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_viui_sound_play_name.o",
+      "profile": "authored_cpp",
+      "sha256": "058f722af2f2cc70ccf5df91a015636ae4a6a6e09b8bfa6cd5fc61781236ef1d",
+      "source": "sources/w16-wnd-a-viui-sound-play-name/sound_play_name.cpp",
+      "emitted_functions": [
+        {
+          "name": "SoundPlay__4VIUIPCcf",
+          "compiled_body_bytes": 160
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7819,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_viuiwindow_drawprogress.o",
+      "profile": "authored_cpp",
+      "sha256": "22353d6f9cb2327bc370637586166097be02ee88303a7552f8895b857eca4dcc",
+      "source": "sources/w16-wnd-a-viuiwindow-drawprogress/drawprogress.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawProgress__10VIUIWindowiiif",
+          "compiled_body_bytes": 552
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7820,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_viuiwindow_drawvscroll.o",
+      "profile": "authored_cpp",
+      "sha256": "bc263720e4d0662bcec0fc4fd04f5a475af09238fe06a8bc2f6c1a8e1b789746",
+      "source": "sources/w16-wnd-a-viuiwindow-drawvscroll/drawvscroll.cpp",
+      "emitted_functions": [
+        {
+          "name": "DrawVScroll__10VIUIWindowG8VIVect2IifUi",
+          "compiled_body_bytes": 356
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7821,
+      "kind": "independently_authored_source",
+      "object_name": "w16wa_w16_wnd_a_viuiwindow_textbox.o",
+      "profile": "authored_cpp",
+      "sha256": "776ac8f75f11d6cc8fb12ed683198561020d1df5f9e5b149d10d330bad3bd645",
+      "source": "sources/w16-wnd-a-viuiwindow-textbox/textbox.cpp",
+      "emitted_functions": [
+        {
+          "name": "TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi",
+          "compiled_body_bytes": 1736
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -116245,7 +116881,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "0095dce2d2dd823c3df5ecc7b63e124e4cf5b41f5317511185faae7930ab14c6",
+  "snapshot_sha256": "a03f1edf9e96ad5a55350ffac0d72cec367ec61acccd3597e037d9ab89990d9a",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
