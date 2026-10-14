@@ -10084,3 +10084,19 @@ Closed: `__tf12SpellBlessed`, `__tf13FireBombletJr`, `__tf13WeatherFilter`, `__t
 
 Opened: `_$_14FireStormFlare`, `_$_18SpellHammerOfWrath`, `_$_19SpellSummonSkeleton`, `__tf13VISceneFilter`, `__tf14FireStormFlare`, `__tf19SpellSummonSkeleton`, `__ti13VISceneFilter`, `msg_draw__14FireStormFlare`, `msg_run__14FireStormFlare`, `run__18SpellHammerOfWrathG6Point3s`, `run__19SpellSummonSkeletonG6Point3s`
 - 2026-10-13 20:34 CDT — agents/w14-m-spell-ctors-b — 951 unresolved imports
+
+## agents/w14-m-sprite-dtors
+
+Merged (merge commit, branch tip `e96a1596`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). 35 units (30 emitting functions, the rest data or type-info units) with fresh `input_order` values 6605 through 6639, each with a committed host check; all pass here. Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. Full build with the final snapshot: zero COMMON.
+
+| | |
+|---|---|
+| Before | 951 |
+| After | 941 |
+| Closed | 35 |
+| Opened | 25 |
+
+Closed: `_$_11VILODSprite`, `_$_11VILightning`, `_$_12VINameSprite`, `_$_12VIPointLight`, `_$_12VISkinSprite`, `_$_13VIFloraSprite`, `_$_13VIGroupSprite`, `_$_13VIPointSprite`, `_$_13VISoundSprite`, `_$_14VISimpleSprite`, `_$_16VIParticleSprite`, `_$_19VIStreamAudioSprite`, `_$_20VIEffectVolumeSprite`, `_$_7VILList`, `_$_9VICSprite`, `_$_9VIHSprite`, `__tf11VILODSprite`, `__tf12VINameSprite`, `__tf12VIPointLight`, `__tf12VISkinSprite`, `__tf13VIFloraSprite`, `__tf13VIGroupSprite`, `__tf13VIPointSprite`, `__tf13VISoundSprite`, `__tf14VISimpleSprite`, `__tf16VIParticleSprite`, `__tf19VIStreamAudioSprite`, `__tf20VIEffectVolumeSprite`, `__tf9VICSprite`, `__tf9VIHSprite`, `_vt$13VIActorFilter`, `_vt$13VISceneFilter`, `_vt$19__builtin_type_info`, `_vt$8VIEnvRay`, `_vt$8VISprite`
+
+Opened: `Clear__9VICSprite`, `Clear__9VIHSprite`, `Collide__8VIEnvRayUifR7VIVect3`, `Collide__8VISpriteR12VICollSphereR13VISceneFilterR7VISceneR9VICollide`, `Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FilterActor__13VIActorFilterR7VIScenei`, `FilterActor__13VISceneFilterR7VIScenei`, `Pick__8VISpriteR13VIPickSegmentR13VISceneFilterR7VISceneR8VIRaster`, `Raster__8VISpriteR8VICameraR7VISceneR8VIRasterUi`, `Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `_$_14VIEffectVolume`, `_$_19__builtin_type_info`, `_$_8VISprite`, `_$_t6VIPool1Z13VIHSpritePlay`, `_$_t6VIPool1Z17VIHSpritePlayNode`, `_$_t6VIPool1Z19VIHSpriteAttachment`, `_$_t7VIArray1Z16VIHSpriteTrigger`, `_$_t7VIArray1Z20VICSpritePartEmitter`, `_$_t8VIVector1Z10VIMatrix44`, `_$_t8VIVector1Z13VIHSpriteNode`, `__tf13VIActorFilter`, `__tf19__builtin_type_info`, `__tf8VIEnvRay`, `__tf8VISprite`, `__ti8VISprite`
+- 2026-10-13 20:39 CDT — agents/w14-m-sprite-dtors — 941 unresolved imports
