@@ -97292,6 +97292,510 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp"
+    },
+    {
+      "input_order": 7516,
+      "component": "w16-prim-a-collbuffer-begin",
+      "object_name": "w16pa_collbuffer_begin.o",
+      "private_object_sha256": "27fbb65cb9efda7c1a1e98f9a8e74d90b3537c3d76cb5cbea270e59229859b57",
+      "emitted_functions": [
+        {
+          "name": "Begin__12VICollBufferi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-begin/begin.cpp"
+    },
+    {
+      "input_order": 7517,
+      "component": "w16-prim-a-collbuffer-begin-prim-group",
+      "object_name": "w16pa_collbuffer_begin_prim_group.o",
+      "private_object_sha256": "c0df20cc8309289c8889a58ee760dd951bbe15f61673e92adcab1e7fe2b75aac",
+      "emitted_functions": [
+        {
+          "name": "BeginPrimGroup__12VICollBuffer",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-begin-prim-group/begin_prim_group.cpp"
+    },
+    {
+      "input_order": 7518,
+      "component": "w16-prim-a-collbuffer-calc-bvolumes",
+      "object_name": "w16pa_collbuffer_calc_bvolumes.o",
+      "private_object_sha256": "8b6b28434f64d44d683a66f0ca8918298de8b61e87667218aa56ddb6ed2b894f",
+      "emitted_functions": [
+        {
+          "name": "CalcBVolumes__12VICollBufferiP7VIVect3",
+          "compiled_body_bytes": 940
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-calc-bvolumes/calc_bvolumes.cpp"
+    },
+    {
+      "input_order": 7519,
+      "component": "w16-prim-a-collbuffer-end",
+      "object_name": "w16pa_collbuffer_end.o",
+      "private_object_sha256": "06b0ab1ddc7486bcfa1e36ea2f1c2daba1e752d491d1bdbff1d983ae0a1cee11",
+      "emitted_functions": [
+        {
+          "name": "End__12VICollBuffer",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-end/end.cpp"
+    },
+    {
+      "input_order": 7520,
+      "component": "w16-prim-a-collbuffer-end-prim-group",
+      "object_name": "w16pa_collbuffer_end_prim_group.o",
+      "private_object_sha256": "f41f70463a3580d620b62ce498045e99a86b782028153ffedc2cb685bb161317",
+      "emitted_functions": [
+        {
+          "name": "EndPrimGroup__12VICollBuffer",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-end-prim-group/end_prim_group.cpp"
+    },
+    {
+      "input_order": 7521,
+      "component": "w16-prim-a-collbuffer-flora-type",
+      "object_name": "w16pa_collbuffer_flora_type.o",
+      "private_object_sha256": "9b4fb2eec47a42f309325ad9bce8cc63f242aa7b79babb3f74afea8ed93f1877",
+      "emitted_functions": [
+        {
+          "name": "FloraType__12VICollBufferSc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-flora-type/flora_type.cpp"
+    },
+    {
+      "input_order": 7522,
+      "component": "w16-prim-a-collbuffer-init",
+      "object_name": "w16pa_collbuffer_init.o",
+      "private_object_sha256": "5d72e3ecc729238ff5efc0cd449de7cb32b4342cecb276289744f51a7798139f",
+      "emitted_functions": [
+        {
+          "name": "Init__12VICollBuffer16VICollBufferTypeiii",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-init/init.cpp"
+    },
+    {
+      "input_order": 7523,
+      "component": "w16-prim-a-collbuffer-lock",
+      "object_name": "w16pa_collbuffer_lock.o",
+      "private_object_sha256": "7c71099b5bc9ad12c605ba0733117521004243236d19c0dfb85742d1097583f7",
+      "emitted_functions": [
+        {
+          "name": "Lock__12VICollBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collbuffer-lock/lock.cpp"
+    },
+    {
+      "input_order": 7524,
+      "component": "w16-prim-a-collide-coll-buffer",
+      "object_name": "w16pa_collide_coll_buffer.o",
+      "private_object_sha256": "07396f505d6a0312c8614cd11ae5e1e25679f0d3950276b254d30fa849581bd2",
+      "emitted_functions": [
+        {
+          "name": "CollBuffer__9VICollidei",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collide-coll-buffer/coll_buffer.cpp"
+    },
+    {
+      "input_order": 7525,
+      "component": "w16-prim-a-collide-create-coll-buffer",
+      "object_name": "w16pa_collide_create_coll_buffer.o",
+      "private_object_sha256": "756b8a2bf28f1abd32f7aae0bf4a93a322867386bf0de3c71fc0c9cd47e72a41",
+      "emitted_functions": [
+        {
+          "name": "CreateCollBuffer__9VICollidei",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collide-create-coll-buffer/create_coll_buffer.cpp"
+    },
+    {
+      "input_order": 7526,
+      "component": "w16-prim-a-collide-ray-buffer",
+      "object_name": "w16pa_collide_ray_buffer.o",
+      "private_object_sha256": "78e2567392ea6418e1191862bf52b3182641d113d313f0bebe1a8cba3ce7afb4",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR9VICollRayR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collide-ray-buffer/ray_buffer.cpp"
+    },
+    {
+      "input_order": 7527,
+      "component": "w16-prim-a-collide-sphere-buffer",
+      "object_name": "w16pa_collide_sphere_buffer.o",
+      "private_object_sha256": "d1cdaccfd1af2e698707556d2c9bddb9968e6e1ae5c329412f8c9242310b42e7",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR12VICollSphereR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collide-sphere-buffer/sphere_buffer.cpp"
+    },
+    {
+      "input_order": 7528,
+      "component": "w16-prim-a-collide-sphere-capsule",
+      "object_name": "w16pa_collide_sphere_capsule.o",
+      "private_object_sha256": "ed3abedb9606d5cdd4e06d260b85a4baf93265a3ac3e69a46eb2c11ec30c7fd1",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR12VICollSphereR9VICapsule",
+          "compiled_body_bytes": 900
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collide-sphere-capsule/sphere_capsule.cpp"
+    },
+    {
+      "input_order": 7529,
+      "component": "w16-prim-a-collray-init",
+      "object_name": "w16pa_collray_init.o",
+      "private_object_sha256": "ea4d8e342ff6d0dcda108fb1a35988b28831dd3a4fefccd57919403dfafa5d4d",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollRayRC9VICollRayRC10VIMatrix44",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collray-init/init.cpp"
+    },
+    {
+      "input_order": 7530,
+      "component": "w16-prim-a-collsphere-init",
+      "object_name": "w16pa_collsphere_init.o",
+      "private_object_sha256": "6b07476ab32b7db08981f33686bac915b4b2ae9f527290f82a16cb49a924324e",
+      "emitted_functions": [
+        {
+          "name": "Init__12VICollSphereRC12VICollSphereRC10VIMatrix44",
+          "compiled_body_bytes": 372
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-collsphere-init/init.cpp"
+    },
+    {
+      "input_order": 7531,
+      "component": "w16-prim-a-groupsprite-calc-member-transform",
+      "object_name": "w16pa_groupsprite_calc_member_transform.o",
+      "private_object_sha256": "e4a8f9ef1a921b502c260d7285d27e49fa825ebb9732ff31414c70345a4a2121",
+      "emitted_functions": [
+        {
+          "name": "CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-groupsprite-calc-member-transform/calc_member_transform.cpp"
+    },
+    {
+      "input_order": 7532,
+      "component": "w16-prim-a-pickseg-init",
+      "object_name": "w16pa_pickseg_init.o",
+      "private_object_sha256": "b71fabdbeb8854c94f275b40daa77cebd7b7cb1a4534ef525318c1192b5c4da3",
+      "emitted_functions": [
+        {
+          "name": "Init__13VIPickSegmentRC13VIPickSegmentRC10VIMatrix44",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-pickseg-init/init.cpp"
+    },
+    {
+      "input_order": 7533,
+      "component": "w16-prim-a-primbuffer-begin",
+      "object_name": "w16pa_primbuffer_begin.o",
+      "private_object_sha256": "cc3b6b187f9150315bff53d0fa21b976feb93cb92ad94fa9447837a208f7e946",
+      "emitted_functions": [
+        {
+          "name": "Begin__12VIPrimBufferi",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-begin/begin.cpp"
+    },
+    {
+      "input_order": 7534,
+      "component": "w16-prim-a-primbuffer-begin-material",
+      "object_name": "w16pa_primbuffer_begin_material.o",
+      "private_object_sha256": "f3aa180ba169a49adbc91406ac8297e0627a2d6f55c31b012395d72298054dcb",
+      "emitted_functions": [
+        {
+          "name": "BeginMaterial__12VIPrimBufferi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-begin-material/begin_material.cpp"
+    },
+    {
+      "input_order": 7535,
+      "component": "w16-prim-a-primbuffer-calc-bvolumes",
+      "object_name": "w16pa_primbuffer_calc_bvolumes.o",
+      "private_object_sha256": "64acca94f47abd551fa87c6ab4604f109c6a168ef069ee874458477bbdae1102",
+      "emitted_functions": [
+        {
+          "name": "CalcBVolumes__12VIPrimBufferiP7VIVect3",
+          "compiled_body_bytes": 1020
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-calc-bvolumes/calc_bvolumes.cpp"
+    },
+    {
+      "input_order": 7536,
+      "component": "w16-prim-a-primbuffer-color",
+      "object_name": "w16pa_primbuffer_color.o",
+      "private_object_sha256": "599a7b564473b4f9efd0f8e4cf3bacb1fecac2b12f83ff90657bba83c339c1da",
+      "emitted_functions": [
+        {
+          "name": "Color__12VIPrimBufferR9VIColor32",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-color/color.cpp"
+    },
+    {
+      "input_order": 7537,
+      "component": "w16-prim-a-primbuffer-end",
+      "object_name": "w16pa_primbuffer_end.o",
+      "private_object_sha256": "28cb273d77ebb844a225424e80723ca32880aaa77e9820e3ca140d35a23af6d8",
+      "emitted_functions": [
+        {
+          "name": "End__12VIPrimBuffer",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-end/end.cpp"
+    },
+    {
+      "input_order": 7538,
+      "component": "w16-prim-a-primbuffer-end-material",
+      "object_name": "w16pa_primbuffer_end_material.o",
+      "private_object_sha256": "83c093e7a20f29dba5ee22a3dcf8cf733eaa47da5ccb74a4ce9dfe39389fd203",
+      "emitted_functions": [
+        {
+          "name": "EndMaterial__12VIPrimBuffer",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-end-material/end_material.cpp"
+    },
+    {
+      "input_order": 7539,
+      "component": "w16-prim-a-primbuffer-init",
+      "object_name": "w16pa_primbuffer_init.o",
+      "private_object_sha256": "41f73250160d00d0e526309f65fcb0bb90ce8985e3aa833584517ffa8aa0ffaa",
+      "emitted_functions": [
+        {
+          "name": "Init__12VIPrimBufferR8VIRaster16VIPrimBufferTypeiii",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-init/init.cpp"
+    },
+    {
+      "input_order": 7540,
+      "component": "w16-prim-a-primbuffer-lock",
+      "object_name": "w16pa_primbuffer_lock.o",
+      "private_object_sha256": "c47b74fcfa61ac1bfe535a59fc6d484d685841b69004a8a123ef404d390a48d4",
+      "emitted_functions": [
+        {
+          "name": "Lock__12VIPrimBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-lock/lock.cpp"
+    },
+    {
+      "input_order": 7541,
+      "component": "w16-prim-a-primbuffer-normal",
+      "object_name": "w16pa_primbuffer_normal.o",
+      "private_object_sha256": "3b91a2e927d36916148b62b9b41374a7606f3ef808a8e094a42d049579c9184e",
+      "emitted_functions": [
+        {
+          "name": "Normal__12VIPrimBufferR7VIVect3",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-primbuffer-normal/normal.cpp"
+    },
+    {
+      "input_order": 7542,
+      "component": "w16-prim-a-raster-create-prim-buffer",
+      "object_name": "w16pa_raster_create_prim_buffer.o",
+      "private_object_sha256": "f5ed977ab91c51642edf3c18c661944f28fa5d409831d999006cc8982276a819",
+      "emitted_functions": [
+        {
+          "name": "CreatePrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-create-prim-buffer/create_prim_buffer.cpp"
+    },
+    {
+      "input_order": 7543,
+      "component": "w16-prim-a-raster-cull",
+      "object_name": "w16pa_raster_cull.o",
+      "private_object_sha256": "645bc75878bbc5a5a700b1898ebd6e308db43e293cf76356efdccc2b4075b612",
+      "emitted_functions": [
+        {
+          "name": "Cull__8VIRasterR13VIPickSegmentR6VIBBox",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-cull/cull.cpp"
+    },
+    {
+      "input_order": 7544,
+      "component": "w16-prim-a-raster-draw-primbuffer-packvu",
+      "object_name": "w16pa_raster_draw_primbuffer_packvu.o",
+      "private_object_sha256": "083da41768d08358bd2a59cd367e74dd1ec99d97ff18381d034137e1d30a4460",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVU__8VIRasteriifUi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvu/draw_packvu.cpp"
+    },
+    {
+      "input_order": 7545,
+      "component": "w16-prim-a-raster-draw-primbuffer-packvunbw",
+      "object_name": "w16pa_raster_draw_primbuffer_packvunbw.o",
+      "private_object_sha256": "12ba4f6d8fe0afec00bdd38ae38431d37099641b0fc60bf5e87b5be8beb3c13b",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNBW__8VIRasteriiUi",
+          "compiled_body_bytes": 448
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunbw/draw_packvunbw.cpp"
+    },
+    {
+      "input_order": 7546,
+      "component": "w16-prim-a-raster-draw-primbuffer-packvunc",
+      "object_name": "w16pa_raster_draw_primbuffer_packvunc.o",
+      "private_object_sha256": "87ae2b03fad9836ebd3249ecf040ed1abdcb44654f7ee1a6aa8a35014bfc579b",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNC__8VIRasteriiUi",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunc/draw_packvunc.cpp"
+    },
+    {
+      "input_order": 7547,
+      "component": "w16-prim-a-raster-draw-primbuffer-packvunc3",
+      "object_name": "w16pa_raster_draw_primbuffer_packvunc3.o",
+      "private_object_sha256": "76e83c0bbd67e0b8f8391b70606e268129f35907c6119c051dbe732d15ae2bad",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNC__8VIRasteriiiUi",
+          "compiled_body_bytes": 640
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunc3/draw_packvunc3.cpp"
+    },
+    {
+      "input_order": 7548,
+      "component": "w16-prim-a-raster-draw-primbuffer-packvuncg",
+      "object_name": "w16pa_raster_draw_primbuffer_packvuncg.o",
+      "private_object_sha256": "2d9ad8462e01fc4968b5f6943a4acdf741a0c9033d3aa733ea3d4092ccd010a9",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNCG__8VIRasteriiUi",
+          "compiled_body_bytes": 528
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/draw_packvuncg.cpp"
+    },
+    {
+      "input_order": 7549,
+      "component": "w16-prim-a-raster-draw-primbuffer-vunc",
+      "object_name": "w16pa_raster_draw_primbuffer_vunc.o",
+      "private_object_sha256": "0f039301dec458854d901187b567f75b1722e1ef46e1ab56f791133080a35518",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferVUNC__8VIRasteriiUi",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-vunc/draw_vunc.cpp"
+    },
+    {
+      "input_order": 7550,
+      "component": "w16-prim-a-zone-collide-env-ray",
+      "object_name": "w16pa_zone_collide_env_ray.o",
+      "private_object_sha256": "49622a916eccb821562804da7f239bc7f338cce59d4004da30508b0baaa09560",
+      "emitted_functions": [
+        {
+          "name": "Collide__6VIZoneR8VIEnvRayR7VIVect3T2",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-zone-collide-env-ray/collide_env_ray.cpp"
+    },
+    {
+      "input_order": 7551,
+      "component": "w16-prim-a-zone-collide-scene-vars",
+      "object_name": "w16pa_zone_collide_scene_vars.o",
+      "private_object_sha256": "885dbf1dada148fb3fe58f5d01c135cdddaa318429fc58ea7362278202e7291e",
+      "emitted_functions": [
+        {
+          "name": "Collide__6VIZoneR18VISceneCollRayVars",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-prim-a-zone-collide-scene-vars/collide_scene_vars.cpp"
     }
   ],
   "drafts": [
@@ -113142,7 +113646,79 @@
     "sources/w16-lib-a-vistring-vsnprintf16-narrow/host_check.cpp": "47807149f4a76561518fa163691b9983f40319e38f441c1cc620e57f2c666891",
     "sources/w16-lib-a-vistring-vsnprintf16-narrow/vsnprintf16.cpp": "e7b823e40a9c5ff959b8c7bae1848016f1bb4059f68aed93e1b554b6ee564e0c",
     "sources/w16-lib-a-vistring-vsnprintf16-wide/host_check.cpp": "134d4dec00332ee2a767cb9f1d7426e0fd21b4cdeb5d003fb9b6e871d1e83fc1",
-    "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514"
+    "sources/w16-lib-a-vistring-vsnprintf16-wide/vsnprintf16.cpp": "a74c33cd1a0deabd66e6e7d6f2a676fdf29c59c7d30bd959fe3a8b9e7db20514",
+    "sources/w16-prim-a-collbuffer-begin/begin.cpp": "07d3215e173d0b3538a00b4717a19634632f002e27cef48c7bb558b33a30ab8d",
+    "sources/w16-prim-a-collbuffer-begin/host_check.cpp": "559ea8d8f0d26f3953fb6c279be490638b9340b4c9face25c93906576f9ba981",
+    "sources/w16-prim-a-collbuffer-begin-prim-group/begin_prim_group.cpp": "53296530a5d7a29b6f8590a79d0618efb74bbfa2e1f25aab605ed410bb0d249b",
+    "sources/w16-prim-a-collbuffer-begin-prim-group/host_check.cpp": "4a61ab2587c89826c20bb91e053467fe66c59a4cb9a0e243aff9cff5cbdc3ab9",
+    "sources/w16-prim-a-collbuffer-calc-bvolumes/calc_bvolumes.cpp": "bc30aade706b0b2eed05b1c96f6daa21913d97d0087a2b41b61f82b1cb1cf56a",
+    "sources/w16-prim-a-collbuffer-calc-bvolumes/host_check.cpp": "ebcbfd392c52d6072f895ced9f79945c0c365465399671b834d5c417a5f57ea6",
+    "sources/w16-prim-a-collbuffer-end/end.cpp": "cbcca3e2950245c6fb91102b4d0b35039ee55b675f0a6edf7015b83dc38d8927",
+    "sources/w16-prim-a-collbuffer-end/host_check.cpp": "17ee04d2f794f828b363aebb45d9214b9852e2458005cd204ad099513855ac56",
+    "sources/w16-prim-a-collbuffer-end-prim-group/end_prim_group.cpp": "dbe728f87120fd84c5d4876751e242c7f710057d8c4f05b61bdb531f0bfafe00",
+    "sources/w16-prim-a-collbuffer-end-prim-group/host_check.cpp": "a58da4edbc805ac171153ebf2be5a2b33133750b120c225a50f4bf8493fd4bfd",
+    "sources/w16-prim-a-collbuffer-flora-type/flora_type.cpp": "30f100763dac4719c06cb9d56c35bf0adfa96b083f10844e5214b77f429e6550",
+    "sources/w16-prim-a-collbuffer-flora-type/host_check.cpp": "13960dbfd64cd1aefaf98d355a5fbfedab3f11fbe48e30f4e26ecd00d6d0f7cf",
+    "sources/w16-prim-a-collbuffer-init/host_check.cpp": "adbb7a5032b4c1ffdffd24d41af514bba23cd7dd0884410580eabb6c29d62978",
+    "sources/w16-prim-a-collbuffer-init/init.cpp": "af7caac06446ea947b55af6f08c3d8aedb80379645e74d56332e917533d323f8",
+    "sources/w16-prim-a-collbuffer-lock/host_check.cpp": "19b531eca9aff1e325bc7a0ef62f4aca2639b7ee4ffe44fe738841c468ce430d",
+    "sources/w16-prim-a-collbuffer-lock/lock.cpp": "140febe13d8e165fdc9d85e5035283b10383e8b6ee708ac59d5963f09f061857",
+    "sources/w16-prim-a-collide-coll-buffer/coll_buffer.cpp": "8ae068f630be57d711989f7296f06f5235789bd06ef605b1dc20c909319e8d4c",
+    "sources/w16-prim-a-collide-coll-buffer/host_check.cpp": "fb587dc48b1b1b55fcc2f1db4f7a2fb9fb92799bf360e657ae9a62ad8707e818",
+    "sources/w16-prim-a-collide-create-coll-buffer/create_coll_buffer.cpp": "631a65c81d037232ffe4bb2091588c642150341ba9cdba7e3c9e485d2b612a6a",
+    "sources/w16-prim-a-collide-create-coll-buffer/host_check.cpp": "e85798a4e8e1b2d8d4f5aff7e243f4a31a49cb7bbbad8cc872a6ad27a856c23c",
+    "sources/w16-prim-a-collide-ray-buffer/host_check.cpp": "011a916dd645541f99ba3150d93f1f1201680fbabf1d64323e44e1b11a496c00",
+    "sources/w16-prim-a-collide-ray-buffer/ray_buffer.cpp": "d1a9b78291d6e39a494484c704eee4976c4397dd6e30c1af2a96dcb89be8aa11",
+    "sources/w16-prim-a-collide-sphere-buffer/host_check.cpp": "cb028b6e05f8bb50b7ac436b3435148ca6b571e4d0b9fae157205a238ad6ec88",
+    "sources/w16-prim-a-collide-sphere-buffer/sphere_buffer.cpp": "c11b83c63f2ce02ca10499a97d4e36ccf20806acba6d30246a0a5c44bd6313b4",
+    "sources/w16-prim-a-collide-sphere-capsule/host_check.cpp": "6bd68c4cd55777ba4759490c3529c1d54fb5e7d24e5a530929616a6dbac9fdfd",
+    "sources/w16-prim-a-collide-sphere-capsule/sphere_capsule.cpp": "ab984166b65b728cd426ab53f1ab35ad3d561efef519e0f0b7fa6619c8b5f029",
+    "sources/w16-prim-a-collray-init/host_check.cpp": "a0756ad6851be253432c73d6b67510a2d7ac313422af56a633e5f0179424294a",
+    "sources/w16-prim-a-collray-init/init.cpp": "14871732065a74712daafb5c8111e0686d4677ba7d4110471edf62825e4879ba",
+    "sources/w16-prim-a-collsphere-init/host_check.cpp": "77f854eabfb48d0f924a4d3b183ec74046f8e93bf8f4b1d22b4c25f7749e3772",
+    "sources/w16-prim-a-collsphere-init/init.cpp": "3f1d99dc96babc04c126a68b60b8cd3a0b92e17575687428f2f200b92cde305d",
+    "sources/w16-prim-a-groupsprite-calc-member-transform/calc_member_transform.cpp": "48dadb015d6abaa29e7197d253a6d3d7047c027602e1a4928da3f69d9dbec7ff",
+    "sources/w16-prim-a-groupsprite-calc-member-transform/host_check.cpp": "8b9161b78de4ea3bc627fded74295dcd1d2470ea1f6388f954778eb90e8c1591",
+    "sources/w16-prim-a-pickseg-init/host_check.cpp": "a8a475fd81fc36c69f8967f8e00437113d21fc5e1b76a8cc396edc83d5db83b0",
+    "sources/w16-prim-a-pickseg-init/init.cpp": "1362fb6ed417f99157318b154e0ffc195177427b3a728b3a3106682857d4fb43",
+    "sources/w16-prim-a-primbuffer-begin/begin.cpp": "4b66b8e7a96cd0521220d46d5b5c499868f83e660b994cd9a87ca1c865204dea",
+    "sources/w16-prim-a-primbuffer-begin/host_check.cpp": "9a757b079ce54c28306fed76d0eb1a72297d3eceb49a314009016f7ed5f29268",
+    "sources/w16-prim-a-primbuffer-begin-material/begin_material.cpp": "10548a44fe913d7490b25883032b42f23f9dc6ec625492b532f10f975c014f8a",
+    "sources/w16-prim-a-primbuffer-begin-material/host_check.cpp": "54980fcf98b7dd1719ae9665e1eca851810e23dff7a1bc06c0ffeb14d9ce95e4",
+    "sources/w16-prim-a-primbuffer-calc-bvolumes/calc_bvolumes.cpp": "50c5d4ca57bffec956bbb626f5aceae5ce4288e87475eccfca0982e95429fedc",
+    "sources/w16-prim-a-primbuffer-calc-bvolumes/host_check.cpp": "175b2febbbf355e1993ea23e92f270adbb6c27b6a48d91807453649ea778a4d1",
+    "sources/w16-prim-a-primbuffer-color/color.cpp": "ef0cd44b058274e98679323ce070c70f02165cd93f3bfae651e0f4b6c71da856",
+    "sources/w16-prim-a-primbuffer-color/host_check.cpp": "028050fc9638abe5746368399bd013e5ebedbde6d06701b5cb884675db36d61b",
+    "sources/w16-prim-a-primbuffer-end/end.cpp": "1e8a4524e149316d94bde52220f13509196517e63d9e1b0b3f147c3c00b8ebb1",
+    "sources/w16-prim-a-primbuffer-end/host_check.cpp": "7759470c042ad1d5d460380500759ab4b6f762536677ec48b7d2efd1e79250e5",
+    "sources/w16-prim-a-primbuffer-end-material/end_material.cpp": "de04dc3aaf337738e6de9375c30db67bb5a3e41d92ec30c1715e217b93e171c0",
+    "sources/w16-prim-a-primbuffer-end-material/host_check.cpp": "fe74c13dcd344a40aae4867912ecd3ba5ba4340d122312ce749793d378f65690",
+    "sources/w16-prim-a-primbuffer-init/host_check.cpp": "6a8db54ed0d30511fe29a5cc7e43a04b3332e34b6c15e052f1e026f9d427e181",
+    "sources/w16-prim-a-primbuffer-init/init.cpp": "aa8f24b41e386a229f2d73aec6ba6b65ac27475e7d0827e4eb26a3534705ed29",
+    "sources/w16-prim-a-primbuffer-lock/host_check.cpp": "0f5ed6cf7311faa531e60c4a26effedb6f41223d5d75253ae560ee314ccecd06",
+    "sources/w16-prim-a-primbuffer-lock/lock.cpp": "f9aeee36b2aea37ebf8c5c5fbd434e9fddf92b51cdc40bff21d40777a73b15ca",
+    "sources/w16-prim-a-primbuffer-normal/host_check.cpp": "bbcd83b9e4c743c504cd3dcf16d0e55af12df42f84ec6d4ca773d5efa85f5a57",
+    "sources/w16-prim-a-primbuffer-normal/normal.cpp": "1dcd180f627a188fb4476bb7b06c63e06a6935f8e9f1ed2e2797814714bc04fd",
+    "sources/w16-prim-a-raster-create-prim-buffer/create_prim_buffer.cpp": "cd813379d7ae4e8aab1e70835b8fb345d895f5e90e045fc5cb6fdecdb2a33db4",
+    "sources/w16-prim-a-raster-create-prim-buffer/host_check.cpp": "a155c0fea9882658ec322b780a442da1c464add02a6737d8ea7d97955124e487",
+    "sources/w16-prim-a-raster-cull/cull.cpp": "84d605cabcccdc4979e73fd87bd420d43634c2121fa380603a273da7b9dfafe9",
+    "sources/w16-prim-a-raster-cull/host_check.cpp": "44f380e6e1294692eb311920bdcc7e47b8c4b333859cf1d8d493852393f8d65f",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvu/draw_packvu.cpp": "c2f2bdf43c4a4e1905cd401000c5f324ecd8d9adef93a8c6216740ecc7c59627",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvu/host_check.cpp": "82c524425e6ce2a66b6ddc0cc01c9b845eaae3004a391c97a68597ca78c8c0f9",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunbw/draw_packvunbw.cpp": "489396f207302872f595795085f6db5e0732001edbbfa0d5264aa1a8eed79efc",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunbw/host_check.cpp": "ba6c57edee5f7937e5a22426144733e187e7ee908dcd1d0fffba06ff0a508f7e",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunc/draw_packvunc.cpp": "cd1947b495e0aa9f41f4948ec615bf3450607c2b2f154dfff584678c5212aedf",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunc/host_check.cpp": "c7aa53a7463384dadb4ec578befa5424f62e38c9baf4d91bd5c673107dc6c75a",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunc3/draw_packvunc3.cpp": "b37f5688d9a189a9a75cdd9c12b8a5623819bc9f545dc1dcfd5a418c3bf7a6c1",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvunc3/host_check.cpp": "a6032d5ed5d88c20f5edcdea1bc9330f8f740d63ee8a724fca3694a31835ffa6",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/draw_packvuncg.cpp": "746324103d7d2e3b95851becbc4be440c267d9cc9aebed2ad6e6b935e460e843",
+    "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/host_check.cpp": "77648488b058f98e959332fb71643fcb5032aa1b7884a7883db71a5ab2fae2da",
+    "sources/w16-prim-a-raster-draw-primbuffer-vunc/draw_vunc.cpp": "bea6a6c4db108dc012e1b692c8973dc11684409362d1706b5bc77c32b9bd7fc4",
+    "sources/w16-prim-a-raster-draw-primbuffer-vunc/host_check.cpp": "5b302a4f763f5a34364d4d7b38b7a24efe261285c9f63a97bf2be031bbec7a87",
+    "sources/w16-prim-a-zone-collide-env-ray/collide_env_ray.cpp": "725bf4e39dfe0915a5b4ce14f2792467114a3e45c807ba76fd3eec27be34caca",
+    "sources/w16-prim-a-zone-collide-env-ray/host_check.cpp": "97ef7bc4a168ad16bf9127bb7381f6faed8133d6036177c7f2df754cabc9f6aa",
+    "sources/w16-prim-a-zone-collide-scene-vars/collide_scene_vars.cpp": "10fa093e100822b1d006dc95459c6c35267d9653caa937e3032daf13264a04e0",
+    "sources/w16-prim-a-zone-collide-scene-vars/host_check.cpp": "b0ea8f60f12c8cebc563c95a78eba792d769cec7cc3960d9d13202ada6dfb940"
   },
   "additional_implementations": [
     {
@@ -113584,11 +114160,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7516,
-    "authored_default_inputs": 7514,
+    "selected_inputs": 7552,
+    "authored_default_inputs": 7550,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5994,
-    "compiled_body_bytes_from_accepted_inputs": 2323592,
+    "emitted_function_definitions_including_helpers": 6030,
+    "compiled_body_bytes_from_accepted_inputs": 2333008,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -113601,7 +114177,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7203
+    "package_selected_inputs": 7239
   },
   "startup_implementations": [
     {
@@ -228006,6 +228582,618 @@
       ],
       "host_files": [
         "sources/w16-lib-a-vistring-vsnprintf16-wide/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-begin/begin.cpp",
+      "source_sha256": "07d3215e173d0b3538a00b4717a19634632f002e27cef48c7bb558b33a30ab8d",
+      "object_sha256": "27fbb65cb9efda7c1a1e98f9a8e74d90b3537c3d76cb5cbea270e59229859b57",
+      "emitted_functions": [
+        {
+          "name": "Begin__12VICollBufferi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-begin/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-begin-prim-group/begin_prim_group.cpp",
+      "source_sha256": "53296530a5d7a29b6f8590a79d0618efb74bbfa2e1f25aab605ed410bb0d249b",
+      "object_sha256": "c0df20cc8309289c8889a58ee760dd951bbe15f61673e92adcab1e7fe2b75aac",
+      "emitted_functions": [
+        {
+          "name": "BeginPrimGroup__12VICollBuffer",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-begin-prim-group/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-calc-bvolumes/calc_bvolumes.cpp",
+      "source_sha256": "bc30aade706b0b2eed05b1c96f6daa21913d97d0087a2b41b61f82b1cb1cf56a",
+      "object_sha256": "8b6b28434f64d44d683a66f0ca8918298de8b61e87667218aa56ddb6ed2b894f",
+      "emitted_functions": [
+        {
+          "name": "CalcBVolumes__12VICollBufferiP7VIVect3",
+          "compiled_body_bytes": 940
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-calc-bvolumes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-end/end.cpp",
+      "source_sha256": "cbcca3e2950245c6fb91102b4d0b35039ee55b675f0a6edf7015b83dc38d8927",
+      "object_sha256": "06b0ab1ddc7486bcfa1e36ea2f1c2daba1e752d491d1bdbff1d983ae0a1cee11",
+      "emitted_functions": [
+        {
+          "name": "End__12VICollBuffer",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-end-prim-group/end_prim_group.cpp",
+      "source_sha256": "dbe728f87120fd84c5d4876751e242c7f710057d8c4f05b61bdb531f0bfafe00",
+      "object_sha256": "f41f70463a3580d620b62ce498045e99a86b782028153ffedc2cb685bb161317",
+      "emitted_functions": [
+        {
+          "name": "EndPrimGroup__12VICollBuffer",
+          "compiled_body_bytes": 20
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-end-prim-group/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-flora-type/flora_type.cpp",
+      "source_sha256": "30f100763dac4719c06cb9d56c35bf0adfa96b083f10844e5214b77f429e6550",
+      "object_sha256": "9b4fb2eec47a42f309325ad9bce8cc63f242aa7b79babb3f74afea8ed93f1877",
+      "emitted_functions": [
+        {
+          "name": "FloraType__12VICollBufferSc",
+          "compiled_body_bytes": 12
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-flora-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-init/init.cpp",
+      "source_sha256": "af7caac06446ea947b55af6f08c3d8aedb80379645e74d56332e917533d323f8",
+      "object_sha256": "5d72e3ecc729238ff5efc0cd449de7cb32b4342cecb276289744f51a7798139f",
+      "emitted_functions": [
+        {
+          "name": "Init__12VICollBuffer16VICollBufferTypeiii",
+          "compiled_body_bytes": 144
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collbuffer-lock/lock.cpp",
+      "source_sha256": "140febe13d8e165fdc9d85e5035283b10383e8b6ee708ac59d5963f09f061857",
+      "object_sha256": "7c71099b5bc9ad12c605ba0733117521004243236d19c0dfb85742d1097583f7",
+      "emitted_functions": [
+        {
+          "name": "Lock__12VICollBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collbuffer-lock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collide-coll-buffer/coll_buffer.cpp",
+      "source_sha256": "8ae068f630be57d711989f7296f06f5235789bd06ef605b1dc20c909319e8d4c",
+      "object_sha256": "07396f505d6a0312c8614cd11ae5e1e25679f0d3950276b254d30fa849581bd2",
+      "emitted_functions": [
+        {
+          "name": "CollBuffer__9VICollidei",
+          "compiled_body_bytes": 28
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collide-coll-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collide-create-coll-buffer/create_coll_buffer.cpp",
+      "source_sha256": "631a65c81d037232ffe4bb2091588c642150341ba9cdba7e3c9e485d2b612a6a",
+      "object_sha256": "756b8a2bf28f1abd32f7aae0bf4a93a322867386bf0de3c71fc0c9cd47e72a41",
+      "emitted_functions": [
+        {
+          "name": "CreateCollBuffer__9VICollidei",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collide-create-coll-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collide-ray-buffer/ray_buffer.cpp",
+      "source_sha256": "d1a9b78291d6e39a494484c704eee4976c4397dd6e30c1af2a96dcb89be8aa11",
+      "object_sha256": "78e2567392ea6418e1191862bf52b3182641d113d313f0bebe1a8cba3ce7afb4",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR9VICollRayR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collide-ray-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collide-sphere-buffer/sphere_buffer.cpp",
+      "source_sha256": "c11b83c63f2ce02ca10499a97d4e36ccf20806acba6d30246a0a5c44bd6313b4",
+      "object_sha256": "d1cdaccfd1af2e698707556d2c9bddb9968e6e1ae5c329412f8c9242310b42e7",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR12VICollSphereR12VICollBuffer",
+          "compiled_body_bytes": 72
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collide-sphere-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collide-sphere-capsule/sphere_capsule.cpp",
+      "source_sha256": "ab984166b65b728cd426ab53f1ab35ad3d561efef519e0f0b7fa6619c8b5f029",
+      "object_sha256": "ed3abedb9606d5cdd4e06d260b85a4baf93265a3ac3e69a46eb2c11ec30c7fd1",
+      "emitted_functions": [
+        {
+          "name": "Collide__9VICollideR12VICollSphereR9VICapsule",
+          "compiled_body_bytes": 900
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collide-sphere-capsule/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collray-init/init.cpp",
+      "source_sha256": "14871732065a74712daafb5c8111e0686d4677ba7d4110471edf62825e4879ba",
+      "object_sha256": "ea4d8e342ff6d0dcda108fb1a35988b28831dd3a4fefccd57919403dfafa5d4d",
+      "emitted_functions": [
+        {
+          "name": "Init__9VICollRayRC9VICollRayRC10VIMatrix44",
+          "compiled_body_bytes": 324
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collray-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-collsphere-init/init.cpp",
+      "source_sha256": "3f1d99dc96babc04c126a68b60b8cd3a0b92e17575687428f2f200b92cde305d",
+      "object_sha256": "6b07476ab32b7db08981f33686bac915b4b2ae9f527290f82a16cb49a924324e",
+      "emitted_functions": [
+        {
+          "name": "Init__12VICollSphereRC12VICollSphereRC10VIMatrix44",
+          "compiled_body_bytes": 372
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-collsphere-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-groupsprite-calc-member-transform/calc_member_transform.cpp",
+      "source_sha256": "48dadb015d6abaa29e7197d253a6d3d7047c027602e1a4928da3f69d9dbec7ff",
+      "object_sha256": "e4a8f9ef1a921b502c260d7285d27e49fa825ebb9732ff31414c70345a4a2121",
+      "emitted_functions": [
+        {
+          "name": "CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-groupsprite-calc-member-transform/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-pickseg-init/init.cpp",
+      "source_sha256": "1362fb6ed417f99157318b154e0ffc195177427b3a728b3a3106682857d4fb43",
+      "object_sha256": "b71fabdbeb8854c94f275b40daa77cebd7b7cb1a4534ef525318c1192b5c4da3",
+      "emitted_functions": [
+        {
+          "name": "Init__13VIPickSegmentRC13VIPickSegmentRC10VIMatrix44",
+          "compiled_body_bytes": 284
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-pickseg-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-begin/begin.cpp",
+      "source_sha256": "4b66b8e7a96cd0521220d46d5b5c499868f83e660b994cd9a87ca1c865204dea",
+      "object_sha256": "cc3b6b187f9150315bff53d0fa21b976feb93cb92ad94fa9447837a208f7e946",
+      "emitted_functions": [
+        {
+          "name": "Begin__12VIPrimBufferi",
+          "compiled_body_bytes": 264
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-begin/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-begin-material/begin_material.cpp",
+      "source_sha256": "10548a44fe913d7490b25883032b42f23f9dc6ec625492b532f10f975c014f8a",
+      "object_sha256": "f3aa180ba169a49adbc91406ac8297e0627a2d6f55c31b012395d72298054dcb",
+      "emitted_functions": [
+        {
+          "name": "BeginMaterial__12VIPrimBufferi",
+          "compiled_body_bytes": 80
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-begin-material/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-calc-bvolumes/calc_bvolumes.cpp",
+      "source_sha256": "50c5d4ca57bffec956bbb626f5aceae5ce4288e87475eccfca0982e95429fedc",
+      "object_sha256": "64acca94f47abd551fa87c6ab4604f109c6a168ef069ee874458477bbdae1102",
+      "emitted_functions": [
+        {
+          "name": "CalcBVolumes__12VIPrimBufferiP7VIVect3",
+          "compiled_body_bytes": 1020
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-calc-bvolumes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-color/color.cpp",
+      "source_sha256": "ef0cd44b058274e98679323ce070c70f02165cd93f3bfae651e0f4b6c71da856",
+      "object_sha256": "599a7b564473b4f9efd0f8e4cf3bacb1fecac2b12f83ff90657bba83c339c1da",
+      "emitted_functions": [
+        {
+          "name": "Color__12VIPrimBufferR9VIColor32",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-color/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-end/end.cpp",
+      "source_sha256": "1e8a4524e149316d94bde52220f13509196517e63d9e1b0b3f147c3c00b8ebb1",
+      "object_sha256": "28cb273d77ebb844a225424e80723ca32880aaa77e9820e3ca140d35a23af6d8",
+      "emitted_functions": [
+        {
+          "name": "End__12VIPrimBuffer",
+          "compiled_body_bytes": 488
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-end-material/end_material.cpp",
+      "source_sha256": "de04dc3aaf337738e6de9375c30db67bb5a3e41d92ec30c1715e217b93e171c0",
+      "object_sha256": "83c093e7a20f29dba5ee22a3dcf8cf733eaa47da5ccb74a4ce9dfe39389fd203",
+      "emitted_functions": [
+        {
+          "name": "EndMaterial__12VIPrimBuffer",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-end-material/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-init/init.cpp",
+      "source_sha256": "aa8f24b41e386a229f2d73aec6ba6b65ac27475e7d0827e4eb26a3534705ed29",
+      "object_sha256": "41f73250160d00d0e526309f65fcb0bb90ce8985e3aa833584517ffa8aa0ffaa",
+      "emitted_functions": [
+        {
+          "name": "Init__12VIPrimBufferR8VIRaster16VIPrimBufferTypeiii",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-lock/lock.cpp",
+      "source_sha256": "f9aeee36b2aea37ebf8c5c5fbd434e9fddf92b51cdc40bff21d40777a73b15ca",
+      "object_sha256": "c47b74fcfa61ac1bfe535a59fc6d484d685841b69004a8a123ef404d390a48d4",
+      "emitted_functions": [
+        {
+          "name": "Lock__12VIPrimBuffer",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-lock/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-primbuffer-normal/normal.cpp",
+      "source_sha256": "1dcd180f627a188fb4476bb7b06c63e06a6935f8e9f1ed2e2797814714bc04fd",
+      "object_sha256": "3b91a2e927d36916148b62b9b41374a7606f3ef808a8e094a42d049579c9184e",
+      "emitted_functions": [
+        {
+          "name": "Normal__12VIPrimBufferR7VIVect3",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-primbuffer-normal/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-create-prim-buffer/create_prim_buffer.cpp",
+      "source_sha256": "cd813379d7ae4e8aab1e70835b8fb345d895f5e90e045fc5cb6fdecdb2a33db4",
+      "object_sha256": "f5ed977ab91c51642edf3c18c661944f28fa5d409831d999006cc8982276a819",
+      "emitted_functions": [
+        {
+          "name": "CreatePrimBuffer__8VIRasteri",
+          "compiled_body_bytes": 148
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-create-prim-buffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-cull/cull.cpp",
+      "source_sha256": "84d605cabcccdc4979e73fd87bd420d43634c2121fa380603a273da7b9dfafe9",
+      "object_sha256": "645bc75878bbc5a5a700b1898ebd6e308db43e293cf76356efdccc2b4075b612",
+      "emitted_functions": [
+        {
+          "name": "Cull__8VIRasterR13VIPickSegmentR6VIBBox",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-cull/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvu/draw_packvu.cpp",
+      "source_sha256": "c2f2bdf43c4a4e1905cd401000c5f324ecd8d9adef93a8c6216740ecc7c59627",
+      "object_sha256": "083da41768d08358bd2a59cd367e74dd1ec99d97ff18381d034137e1d30a4460",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVU__8VIRasteriifUi",
+          "compiled_body_bytes": 464
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-packvu/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunbw/draw_packvunbw.cpp",
+      "source_sha256": "489396f207302872f595795085f6db5e0732001edbbfa0d5264aa1a8eed79efc",
+      "object_sha256": "12ba4f6d8fe0afec00bdd38ae38431d37099641b0fc60bf5e87b5be8beb3c13b",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNBW__8VIRasteriiUi",
+          "compiled_body_bytes": 448
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-packvunbw/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunc/draw_packvunc.cpp",
+      "source_sha256": "cd1947b495e0aa9f41f4948ec615bf3450607c2b2f154dfff584678c5212aedf",
+      "object_sha256": "87ae2b03fad9836ebd3249ecf040ed1abdcb44654f7ee1a6aa8a35014bfc579b",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNC__8VIRasteriiUi",
+          "compiled_body_bytes": 592
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-packvunc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvunc3/draw_packvunc3.cpp",
+      "source_sha256": "b37f5688d9a189a9a75cdd9c12b8a5623819bc9f545dc1dcfd5a418c3bf7a6c1",
+      "object_sha256": "76e83c0bbd67e0b8f8391b70606e268129f35907c6119c051dbe732d15ae2bad",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNC__8VIRasteriiiUi",
+          "compiled_body_bytes": 640
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-packvunc3/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/draw_packvuncg.cpp",
+      "source_sha256": "746324103d7d2e3b95851becbc4be440c267d9cc9aebed2ad6e6b935e460e843",
+      "object_sha256": "2d9ad8462e01fc4968b5f6943a4acdf741a0c9033d3aa733ea3d4092ccd010a9",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferPackVUNCG__8VIRasteriiUi",
+          "compiled_body_bytes": 528
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-packvuncg/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-raster-draw-primbuffer-vunc/draw_vunc.cpp",
+      "source_sha256": "bea6a6c4db108dc012e1b692c8973dc11684409362d1706b5bc77c32b9bd7fc4",
+      "object_sha256": "0f039301dec458854d901187b567f75b1722e1ef46e1ab56f791133080a35518",
+      "emitted_functions": [
+        {
+          "name": "DrawPrimBufferVUNC__8VIRasteriiUi",
+          "compiled_body_bytes": 420
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-raster-draw-primbuffer-vunc/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-zone-collide-env-ray/collide_env_ray.cpp",
+      "source_sha256": "725bf4e39dfe0915a5b4ce14f2792467114a3e45c807ba76fd3eec27be34caca",
+      "object_sha256": "49622a916eccb821562804da7f239bc7f338cce59d4004da30508b0baaa09560",
+      "emitted_functions": [
+        {
+          "name": "Collide__6VIZoneR8VIEnvRayR7VIVect3T2",
+          "compiled_body_bytes": 52
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-zone-collide-env-ray/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-prim-a",
+      "source": "sources/w16-prim-a-zone-collide-scene-vars/collide_scene_vars.cpp",
+      "source_sha256": "10fa093e100822b1d006dc95459c6c35267d9653caa937e3032daf13264a04e0",
+      "object_sha256": "885dbf1dada148fb3fe58f5d01c135cdddaa318429fc58ea7362278202e7291e",
+      "emitted_functions": [
+        {
+          "name": "Collide__6VIZoneR18VISceneCollRayVars",
+          "compiled_body_bytes": 152
+        }
+      ],
+      "host_files": [
+        "sources/w16-prim-a-zone-collide-scene-vars/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

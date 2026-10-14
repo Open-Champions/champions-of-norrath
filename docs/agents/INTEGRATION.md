@@ -10836,3 +10836,21 @@ Opened: `WaitGetAddressAutoUpIf`, `WaitGetAddressNoAutoUpIf`, `_VIAssert`, `_VIA
 
 Full partial build: 7514 source compilations, one link, 5992 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 05:59 CDT — agents/w16-lib-a — 770 unresolved imports
+
+## agents/w16-prim-a
+
+Merged (merge commit). All 36 units in the notes are selected, each with a committed host check that I built with the line in its own header and ran (36 of 36 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 770 |
+| After | 769 |
+| Closed | 36 |
+| Opened | 35 |
+
+Closed: `BeginMaterial__12VIPrimBufferi`, `BeginPrimGroup__12VICollBuffer`, `Begin__12VICollBufferi`, `Begin__12VIPrimBufferi`, `CalcBVolumes__12VICollBufferiP7VIVect3`, `CalcBVolumes__12VIPrimBufferiP7VIVect3`, `CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44`, `CollBuffer__9VICollidei`, `Collide__6VIZoneR18VISceneCollRayVars`, `Collide__6VIZoneR8VIEnvRayR7VIVect3T2`, `Collide__9VICollideR12VICollSphereR12VICollBuffer`, `Collide__9VICollideR12VICollSphereR9VICapsule`, `Collide__9VICollideR9VICollRayR12VICollBuffer`, `Color__12VIPrimBufferR9VIColor32`, `CreateCollBuffer__9VICollidei`, `CreatePrimBuffer__8VIRasteri`, `Cull__8VIRasterR13VIPickSegmentR6VIBBox`, `DrawPrimBufferPackVUNBW__8VIRasteriiUi`, `DrawPrimBufferPackVUNCG__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiUi`, `DrawPrimBufferPackVUNC__8VIRasteriiiUi`, `DrawPrimBufferPackVU__8VIRasteriifUi`, `DrawPrimBufferVUNC__8VIRasteriiUi`, `EndMaterial__12VIPrimBuffer`, `EndPrimGroup__12VICollBuffer`, `End__12VICollBuffer`, `End__12VIPrimBuffer`, `FloraType__12VICollBufferSc`, `Init__12VICollBuffer16VICollBufferTypeiii`, `Init__12VICollSphereRC12VICollSphereRC10VIMatrix44`, `Init__12VIPrimBufferR8VIRaster16VIPrimBufferTypeiii`, `Init__13VIPickSegmentRC13VIPickSegmentRC10VIMatrix44`, `Init__9VICollRayRC9VICollRayRC10VIMatrix44`, `Lock__12VICollBuffer`, `Lock__12VIPrimBuffer`, `Normal__12VIPrimBufferR7VIVect3`
+
+Opened: `Add__t6VIPool1ZP12VICollBufferRCP12VICollBuffer`, `Add__t6VIPool1ZP12VIPrimBufferRCP12VIPrimBuffer`, `Allocate__12VICollBuffer`, `Allocate__12VIPrimBuffer`, `CalcDataSize__12VICollBuffer`, `CalcDataSize__12VIPrimBufferiii`, `CollideBufferPackVGF__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferPackVGF__9VICollideR9VICollRayR12VICollBuffer`, `CollideBufferPackV__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferPackV__9VICollideR9VICollRayR12VICollBuffer`, `CollideBufferV__9VICollideR12VICollSphereR12VICollBuffer`, `CollideBufferV__9VICollideR9VICollRayR12VICollBuffer`, `CollideNoCaps__9VICollideR9VICollRayRC10VICylinder`, `Collide__6VIZoneiR18VISceneCollRayVars`, `Collide__6VIZoneiR8VIEnvRayR7VIVect3T3`, `Collide__9VICollideR9VICollRayRC8VISphere`, `DrawPrimBufferTessPackVUNCG__8VIRasteriiUi`, `Intersects__C6VIBBoxRC8VISphere`, `PointInSolid__10VICylinderRC7VIVect3`, `PointInSolid__9VICapsuleRC7VIVect3`, `Precalc__12VICollSphere`, `Precalc__13VIPickSegment`, `SetPreTranslations__9VICollideiP7VIVect3`, `Union__6VIBBoxRC6VIBBoxT1`, `UploadPreTrans__8VIRasterPP10_sceDmaTag`, `_12VIPrimBuffer$PrimColor`, `_12VIPrimBuffer$PrimNormal`, `_12VIPrimBuffer$PrimVQStart`, `_8VIRaster$RStrip2Offset`, `_8VIRaster$RStrip3Offset`, `_8VIRaster$RStrip4Offset`, `_8VIRaster$RStrip6Offset`, `_8VIRaster$RStripOffset`, `__12VICollBuffer`, `__12VIPrimBuffer`
+
+Full partial build: 7550 source compilations, one link, 6028 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:11 CDT — agents/w16-prim-a — 769 unresolved imports
