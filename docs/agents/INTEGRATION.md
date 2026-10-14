@@ -10564,3 +10564,5 @@ Opened: `AddRoot__9VIHSprite`, `Add__9VIHSpritei`, `AttachSkin__9VIHSpriteiR7VIS
 
 Full partial build: 7263 source compilations, one link, 5777 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:38 CDT — agents/w15-vi-esfparse-a — 874 unresolved imports
+
+The notes claim 72 newly opened names; this build shows 71 (one of the claimed names resolves in the shared link).
