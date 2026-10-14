@@ -10420,3 +10420,20 @@ Opened: `Allocate__t8VIVector1Z10VIMatrix44`, `Begin__Ct6VIList1ZP10VIFlatFile`,
 
 Full partial build: 7044 source compilations, one link, 5573 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:46 CDT — agents/w15-vi-containers-a — 898 unresolved imports
+
+## agents/w15-vi-particle-a
+
+Merged (merge commit; tip over an hour old, notes complete). All 22 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 898 |
+| After | 893 |
+| Closed | 22 |
+| Opened | 17 |
+
+Closed: `AttachSurface__14VIEffectVolumeii`, `BlendMotifs__17VIParticleEmitter`, `ClampScale__12VIPointLightR10VIMatrix44`, `ClampScale__13VIPointSpriteR10VIMatrix44`, `ClampScale__19VIStreamAudioSpriteR10VIMatrix44`, `CreateParticleDefinition__16VIParticleSystemi`, `Free__14VIEffectVolume`, `Init__13VIPointSprite11VIPointType`, `Init__14VIEffectVolumeRC6VIBBox`, `Init__19VIStreamAudioSpriteRC6VIBBox`, `Init__20VIEffectVolumeSpriteRC6VIBBox`, `OnResize__14VIEffectVolumeRC6VIBBox`, `Process__14VIEffectVolumef`, `Purge__17VIParticleEmitter`, `RecomputeStaticBBox__17VIParticleEmitter`, `Render__14VIEffectVolumeR8VICameraR10VIMatrix44`, `SetDirection__17VIParticleEmitterRC10VIMatrix33`, `SetDirection__17VIParticleEmitterRC7VIVect3`, `SetFlags__14VIEffectVolumeUi`, `SetSpace__17VIParticleEmitterRC10VIMatrix44`, `SetType__14VIEffectVolume18VIEffectVolumeTypef`, `ShareParticleDefinition__16VIParticleSystemi`
+
+Opened: `Add__t6VIPool1ZP20VIParticleDefinitionRCP20VIParticleDefinition`, `AllocParticles__14VIEffectVolume`, `BlendMotifs__22VIParticleDefinitionExP20VIParticleAttributes`, `Create__20VIParticleDefinitionR8VIRaster`, `DetachAllResources__14VIEffectVolume`, `DetachSurface__14VIEffectVolumei`, `FreeParticles__14VIEffectVolume`, `NextMotif__C22VIParticleDefinitionExP15VIParticleMotif`, `ProcessDustStorm__14VIEffectVolumef`, `ProcessFallingLeaves__14VIEffectVolumef`, `ProcessGroundFog__14VIEffectVolumef`, `ProcessLightShafts__14VIEffectVolumef`, `RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderFallingLeaves__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44`, `RenderLightShafts__14VIEffectVolumeR8VICameraR10VIMatrix44`, `__22VIParticleDefinitionEx`
+
+Full partial build: 7066 source compilations, one link, 5595 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

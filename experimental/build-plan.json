@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7044,
+  "default_authored_inputs": 7066,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -7836,7 +7836,29 @@
     "sources/w15-vi-containers-a-udp-socket-dtor/dtor.cpp": "51d771689a67a2ca80821b90ce9ec48288800846b9458eaf342be60d59b32a00",
     "sources/w15-vi-containers-a-vector-copy-init-matrix44/init.cpp": "6a6c7c2b6b6a24524f29cec34e471bf140951c9af723a51f30cfab9daf30b387",
     "sources/w15-vi-containers-a-vector-dtor-hsprite-node/dtor.cpp": "b50992039ac3982aa7a7b21bcdb29165496689079aa3b1c9d8d8f9fbed0bc559",
-    "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp": "77bb77310c261adb803b82dc5e054beeb19d94b0aba0c69456a2bf1a9d8a0475"
+    "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp": "77bb77310c261adb803b82dc5e054beeb19d94b0aba0c69456a2bf1a9d8a0475",
+    "sources/w15-vi-particle-a-effectvolume-attach-surface/attach_surface.cpp": "4aa3f2f78a3df06ef6bcb01c5920303ce901e7532f6f37ea3fd3194bc5012adf",
+    "sources/w15-vi-particle-a-effectvolume-free/free.cpp": "756c2a8b55a42cb52422ce0aec8906d2e1d7f430e60287c46ad15601d0cfa6e8",
+    "sources/w15-vi-particle-a-effectvolume-init/init.cpp": "981ff0dd91727f446793c1842e2798591002b9e47145145085c96d511b2aa5d3",
+    "sources/w15-vi-particle-a-effectvolume-on-resize/on_resize.cpp": "fd21bb8f20b18a7257c6e09f12b170b2de0bab6cd7b8abd7835313d411843747",
+    "sources/w15-vi-particle-a-effectvolume-process/process.cpp": "3e917f182896d19af2027bc68e7db5824731fb087c605a11bb0e9d0bad2f94ed",
+    "sources/w15-vi-particle-a-effectvolume-render/render.cpp": "54e8e74d3307dbf02b4c5443fbbfa140158391e4e586378cb4ea47c55a214789",
+    "sources/w15-vi-particle-a-effectvolume-set-flags/set_flags.cpp": "85d83be9e5a1109f038fa9bd3f7bddb20328b13f9d08a673a87f63898d8aaba7",
+    "sources/w15-vi-particle-a-effectvolume-set-type/set_type.cpp": "679d6b49e7178920c11558b7a71d8eff0d3cacd772d7421cbd5bc47ab4736e94",
+    "sources/w15-vi-particle-a-effectvolume-sprite-init/init.cpp": "33a8a8eda18433b75c2a578cd576c56692674e2591c9124a9deb486d53e94aac",
+    "sources/w15-vi-particle-a-particle-emitter-blend-motifs/blend_motifs.cpp": "ea029e4b6e49932c460d0602d99450b39cd78e2eeb30411be7aab8c1d7aea739",
+    "sources/w15-vi-particle-a-particle-emitter-purge/purge.cpp": "e6ff0b2fcae80851f9f944379abb9b5cec6b8cd762674576c6dcac6eea04bcfd",
+    "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/recompute_static_bbox.cpp": "0f09f153354f56c5eb69c00c9ffec324c850e58a4185e325e33d20c3000af7b1",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/set_direction.cpp": "3575e73232c2ade152c892a5b54e418763dc69bd12e03704940a355319615e0d",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/set_direction.cpp": "bc1e733d8f164c978f946e59986f731764d1b880c6ef05f779031b602d487656",
+    "sources/w15-vi-particle-a-particle-emitter-set-space/set_space.cpp": "4203e6d10f020ddabb56e9d6e5bdfddebcd101661146905599980f39586a5a6b",
+    "sources/w15-vi-particle-a-particle-system-create-definition/create.cpp": "7541d7b95bb373b244bdfd2554680492323ebb603b1225729a15aac14ad507ae",
+    "sources/w15-vi-particle-a-particle-system-share-definition/share.cpp": "be509c74a0e5869db6b95afce29475d017d43ff55ecd1db9a610c96492f82e46",
+    "sources/w15-vi-particle-a-point-light-clamp-scale/clamp_scale.cpp": "27272516491a5d93c5d7e544a7b1097349cc02afae60adcc9c20e4bfaf986baf",
+    "sources/w15-vi-particle-a-point-sprite-clamp-scale/clamp_scale.cpp": "b8440960a85e781498397d295d8f06c0f04ace8c1fc38825eb517159df7c6952",
+    "sources/w15-vi-particle-a-point-sprite-init/init.cpp": "5c3a7cd8066597f8e79aa8f37d686a49b4d739c2bce40e5ddc1c99f38b5f9821",
+    "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/clamp_scale.cpp": "82a573be782b1b1b4435c3696bf01930103524fd736ce11f22398be4b31cc6b0",
+    "sources/w15-vi-particle-a-streamaudio-sprite-init/init.cpp": "66368f2fb99eb11ebd5afbc2632aa318ab684a63a10c8f0dde28a1111a2a1c25"
   },
   "inputs": [
     {
@@ -104599,6 +104621,336 @@
           "compiled_body_bytes": 148
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7046,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_attach_surface.o",
+      "profile": "authored_cpp",
+      "sha256": "4aa3f2f78a3df06ef6bcb01c5920303ce901e7532f6f37ea3fd3194bc5012adf",
+      "source": "sources/w15-vi-particle-a-effectvolume-attach-surface/attach_surface.cpp",
+      "emitted_functions": [
+        {
+          "name": "AttachSurface__14VIEffectVolumeii",
+          "compiled_body_bytes": 424
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7047,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_free.o",
+      "profile": "authored_cpp",
+      "sha256": "756c2a8b55a42cb52422ce0aec8906d2e1d7f430e60287c46ad15601d0cfa6e8",
+      "source": "sources/w15-vi-particle-a-effectvolume-free/free.cpp",
+      "emitted_functions": [
+        {
+          "name": "Free__14VIEffectVolume",
+          "compiled_body_bytes": 32
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7048,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_init.o",
+      "profile": "authored_cpp",
+      "sha256": "981ff0dd91727f446793c1842e2798591002b9e47145145085c96d511b2aa5d3",
+      "source": "sources/w15-vi-particle-a-effectvolume-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7049,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_on_resize.o",
+      "profile": "authored_cpp",
+      "sha256": "fd21bb8f20b18a7257c6e09f12b170b2de0bab6cd7b8abd7835313d411843747",
+      "source": "sources/w15-vi-particle-a-effectvolume-on-resize/on_resize.cpp",
+      "emitted_functions": [
+        {
+          "name": "OnResize__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7050,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_process.o",
+      "profile": "authored_cpp",
+      "sha256": "3e917f182896d19af2027bc68e7db5824731fb087c605a11bb0e9d0bad2f94ed",
+      "source": "sources/w15-vi-particle-a-effectvolume-process/process.cpp",
+      "emitted_functions": [
+        {
+          "name": "Process__14VIEffectVolumef",
+          "compiled_body_bytes": 340
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7051,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_render.o",
+      "profile": "authored_cpp",
+      "sha256": "54e8e74d3307dbf02b4c5443fbbfa140158391e4e586378cb4ea47c55a214789",
+      "source": "sources/w15-vi-particle-a-effectvolume-render/render.cpp",
+      "emitted_functions": [
+        {
+          "name": "Render__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1344
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7052,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_set_flags.o",
+      "profile": "authored_cpp",
+      "sha256": "85d83be9e5a1109f038fa9bd3f7bddb20328b13f9d08a673a87f63898d8aaba7",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-flags/set_flags.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetFlags__14VIEffectVolumeUi",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7053,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_set_type.o",
+      "profile": "authored_cpp",
+      "sha256": "679d6b49e7178920c11558b7a71d8eff0d3cacd772d7421cbd5bc47ab4736e94",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-type/set_type.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetType__14VIEffectVolume18VIEffectVolumeTypef",
+          "compiled_body_bytes": 96
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7054,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_effectvolume_sprite_init.o",
+      "profile": "authored_cpp",
+      "sha256": "33a8a8eda18433b75c2a578cd576c56692674e2591c9124a9deb486d53e94aac",
+      "source": "sources/w15-vi-particle-a-effectvolume-sprite-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__20VIEffectVolumeSpriteRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7055,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_blend_motifs.o",
+      "profile": "authored_cpp",
+      "sha256": "ea029e4b6e49932c460d0602d99450b39cd78e2eeb30411be7aab8c1d7aea739",
+      "source": "sources/w15-vi-particle-a-particle-emitter-blend-motifs/blend_motifs.cpp",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__17VIParticleEmitter",
+          "compiled_body_bytes": 244
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7056,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_purge.o",
+      "profile": "authored_cpp",
+      "sha256": "e6ff0b2fcae80851f9f944379abb9b5cec6b8cd762674576c6dcac6eea04bcfd",
+      "source": "sources/w15-vi-particle-a-particle-emitter-purge/purge.cpp",
+      "emitted_functions": [
+        {
+          "name": "Purge__17VIParticleEmitter",
+          "compiled_body_bytes": 76
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7057,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_recompute_static_bbox.o",
+      "profile": "authored_cpp",
+      "sha256": "0f09f153354f56c5eb69c00c9ffec324c850e58a4185e325e33d20c3000af7b1",
+      "source": "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/recompute_static_bbox.cpp",
+      "emitted_functions": [
+        {
+          "name": "RecomputeStaticBBox__17VIParticleEmitter",
+          "compiled_body_bytes": 1316
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7058,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_direction_m33.o",
+      "profile": "authored_cpp",
+      "sha256": "3575e73232c2ade152c892a5b54e418763dc69bd12e03704940a355319615e0d",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/set_direction.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC10VIMatrix33",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7059,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_direction_v3.o",
+      "profile": "authored_cpp",
+      "sha256": "bc1e733d8f164c978f946e59986f731764d1b880c6ef05f779031b602d487656",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/set_direction.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC7VIVect3",
+          "compiled_body_bytes": 328
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7060,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_space.o",
+      "profile": "authored_cpp",
+      "sha256": "4203e6d10f020ddabb56e9d6e5bdfddebcd101661146905599980f39586a5a6b",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-space/set_space.cpp",
+      "emitted_functions": [
+        {
+          "name": "SetSpace__17VIParticleEmitterRC10VIMatrix44",
+          "compiled_body_bytes": 8
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7061,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_system_create_definition.o",
+      "profile": "authored_cpp",
+      "sha256": "7541d7b95bb373b244bdfd2554680492323ebb603b1225729a15aac14ad507ae",
+      "source": "sources/w15-vi-particle-a-particle-system-create-definition/create.cpp",
+      "emitted_functions": [
+        {
+          "name": "CreateParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 224
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7062,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_particle_system_share_definition.o",
+      "profile": "authored_cpp",
+      "sha256": "be509c74a0e5869db6b95afce29475d017d43ff55ecd1db9a610c96492f82e46",
+      "source": "sources/w15-vi-particle-a-particle-system-share-definition/share.cpp",
+      "emitted_functions": [
+        {
+          "name": "ShareParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 44
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7063,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_point_light_clamp_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "27272516491a5d93c5d7e544a7b1097349cc02afae60adcc9c20e4bfaf986baf",
+      "source": "sources/w15-vi-particle-a-point-light-clamp-scale/clamp_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__12VIPointLightR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7064,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_point_sprite_clamp_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "b8440960a85e781498397d295d8f06c0f04ace8c1fc38825eb517159df7c6952",
+      "source": "sources/w15-vi-particle-a-point-sprite-clamp-scale/clamp_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__13VIPointSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7065,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_point_sprite_init.o",
+      "profile": "authored_cpp",
+      "sha256": "5c3a7cd8066597f8e79aa8f37d686a49b4d739c2bce40e5ddc1c99f38b5f9821",
+      "source": "sources/w15-vi-particle-a-point-sprite-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__13VIPointSprite11VIPointType",
+          "compiled_body_bytes": 68
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7066,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_streamaudio_sprite_clamp_scale.o",
+      "profile": "authored_cpp",
+      "sha256": "82a573be782b1b1b4435c3696bf01930103524fd736ce11f22398be4b31cc6b0",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/clamp_scale.cpp",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__19VIStreamAudioSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7067,
+      "kind": "independently_authored_source",
+      "object_name": "w15_vi_particle_a_streamaudio_sprite_init.o",
+      "profile": "authored_cpp",
+      "sha256": "66368f2fb99eb11ebd5afbc2632aa318ab684a63a10c8f0dde28a1111a2a1c25",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-init/init.cpp",
+      "emitted_functions": [
+        {
+          "name": "Init__19VIStreamAudioSpriteRC6VIBBox",
+          "compiled_body_bytes": 92
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -104698,7 +105050,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "77685c200c31884c4b595cb5f8a07c4b095a4337632d4368e8112436825d8ec7",
+  "snapshot_sha256": "805f44660bd401fc8ff2285b777e7fe213b00ea767853c9450b4ecb69d584ef6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {

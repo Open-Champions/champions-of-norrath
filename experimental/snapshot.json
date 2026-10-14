@@ -90977,6 +90977,314 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp"
+    },
+    {
+      "input_order": 7046,
+      "component": "w15-vi-particle-a-effectvolume-attach-surface",
+      "object_name": "w15_vi_particle_a_effectvolume_attach_surface.o",
+      "private_object_sha256": "2db69c7631b91f9ffdd576de536509e61a85f44c9770a04c8ff99689208b88bb",
+      "emitted_functions": [
+        {
+          "name": "AttachSurface__14VIEffectVolumeii",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-attach-surface/attach_surface.cpp"
+    },
+    {
+      "input_order": 7047,
+      "component": "w15-vi-particle-a-effectvolume-free",
+      "object_name": "w15_vi_particle_a_effectvolume_free.o",
+      "private_object_sha256": "a4dc344530d278925447875b094d78919e0834078b391e9fb80616ee27a313ac",
+      "emitted_functions": [
+        {
+          "name": "Free__14VIEffectVolume",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-free/free.cpp"
+    },
+    {
+      "input_order": 7048,
+      "component": "w15-vi-particle-a-effectvolume-init",
+      "object_name": "w15_vi_particle_a_effectvolume_init.o",
+      "private_object_sha256": "c16f68b5ec1f7c2c889c2fae0a255ee9aa23a2f2026b1de441371326243ca80f",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-init/init.cpp"
+    },
+    {
+      "input_order": 7049,
+      "component": "w15-vi-particle-a-effectvolume-on-resize",
+      "object_name": "w15_vi_particle_a_effectvolume_on_resize.o",
+      "private_object_sha256": "40d6b0407f26616e73b9c135c1054e1eb7d6260990ac6f1c652857a941423d8e",
+      "emitted_functions": [
+        {
+          "name": "OnResize__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-on-resize/on_resize.cpp"
+    },
+    {
+      "input_order": 7050,
+      "component": "w15-vi-particle-a-effectvolume-process",
+      "object_name": "w15_vi_particle_a_effectvolume_process.o",
+      "private_object_sha256": "b0e3e969eb4d9c4e167e91d0534479aab4c5657ebf425f707f2d2ba632e4f52a",
+      "emitted_functions": [
+        {
+          "name": "Process__14VIEffectVolumef",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-process/process.cpp"
+    },
+    {
+      "input_order": 7051,
+      "component": "w15-vi-particle-a-effectvolume-render",
+      "object_name": "w15_vi_particle_a_effectvolume_render.o",
+      "private_object_sha256": "134439c36b74ce27ba3d75c5d9b3cc0d5cedefc3d8006ce6f933e15ced29ef92",
+      "emitted_functions": [
+        {
+          "name": "Render__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-render/render.cpp"
+    },
+    {
+      "input_order": 7052,
+      "component": "w15-vi-particle-a-effectvolume-set-flags",
+      "object_name": "w15_vi_particle_a_effectvolume_set_flags.o",
+      "private_object_sha256": "f55d3c5dc9e5ea93fed9ed148b1a1cef01cf6443ff7a6ec7553801a27328a20a",
+      "emitted_functions": [
+        {
+          "name": "SetFlags__14VIEffectVolumeUi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-flags/set_flags.cpp"
+    },
+    {
+      "input_order": 7053,
+      "component": "w15-vi-particle-a-effectvolume-set-type",
+      "object_name": "w15_vi_particle_a_effectvolume_set_type.o",
+      "private_object_sha256": "58489382f26cb8a9d8d48db504fd2be551b96daaa7c8b20a9cff312060ac2648",
+      "emitted_functions": [
+        {
+          "name": "SetType__14VIEffectVolume18VIEffectVolumeTypef",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-type/set_type.cpp"
+    },
+    {
+      "input_order": 7054,
+      "component": "w15-vi-particle-a-effectvolume-sprite-init",
+      "object_name": "w15_vi_particle_a_effectvolume_sprite_init.o",
+      "private_object_sha256": "8e45d05536e00e032b6df75babaf66f9d1f4873411973df89b33c85a13067bcc",
+      "emitted_functions": [
+        {
+          "name": "Init__20VIEffectVolumeSpriteRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-effectvolume-sprite-init/init.cpp"
+    },
+    {
+      "input_order": 7055,
+      "component": "w15-vi-particle-a-particle-emitter-blend-motifs",
+      "object_name": "w15_vi_particle_a_particle_emitter_blend_motifs.o",
+      "private_object_sha256": "849e0d3cc031907a0a5d8559edfeb19fb1d9ba8301e794c2edda5fe422bcf234",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__17VIParticleEmitter",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-blend-motifs/blend_motifs.cpp"
+    },
+    {
+      "input_order": 7056,
+      "component": "w15-vi-particle-a-particle-emitter-purge",
+      "object_name": "w15_vi_particle_a_particle_emitter_purge.o",
+      "private_object_sha256": "078ae32a1b7a572682b3bd20e76440ddba8a725fd8ddb16fdb5543187776760b",
+      "emitted_functions": [
+        {
+          "name": "Purge__17VIParticleEmitter",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-purge/purge.cpp"
+    },
+    {
+      "input_order": 7057,
+      "component": "w15-vi-particle-a-particle-emitter-recompute-static-bbox",
+      "object_name": "w15_vi_particle_a_particle_emitter_recompute_static_bbox.o",
+      "private_object_sha256": "a64cef4bf1e0946df156b6e66319fae0ed39f8ddf89a152056d268448bde76ee",
+      "emitted_functions": [
+        {
+          "name": "RecomputeStaticBBox__17VIParticleEmitter",
+          "compiled_body_bytes": 1316
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/recompute_static_bbox.cpp"
+    },
+    {
+      "input_order": 7058,
+      "component": "w15-vi-particle-a-particle-emitter-set-direction-m33",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_direction_m33.o",
+      "private_object_sha256": "6cc577f4a39e81f269ad1c4a8f35d59ed718684261a368ff82a3055bff64ed90",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC10VIMatrix33",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/set_direction.cpp"
+    },
+    {
+      "input_order": 7059,
+      "component": "w15-vi-particle-a-particle-emitter-set-direction-v3",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_direction_v3.o",
+      "private_object_sha256": "8d2c981ff8e89e3119e88f9f9547da04e84be42ad7785aa4744529aef9f0f24b",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC7VIVect3",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/set_direction.cpp"
+    },
+    {
+      "input_order": 7060,
+      "component": "w15-vi-particle-a-particle-emitter-set-space",
+      "object_name": "w15_vi_particle_a_particle_emitter_set_space.o",
+      "private_object_sha256": "5944092b0605678c047748d0a2fdccd7071c59cbd37dfd9d5e86840f2ec69abd",
+      "emitted_functions": [
+        {
+          "name": "SetSpace__17VIParticleEmitterRC10VIMatrix44",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-space/set_space.cpp"
+    },
+    {
+      "input_order": 7061,
+      "component": "w15-vi-particle-a-particle-system-create-definition",
+      "object_name": "w15_vi_particle_a_particle_system_create_definition.o",
+      "private_object_sha256": "fa23b45b51ebcf70026d9367997d0c9508b66f43fadf7cea4682030fbd55f99f",
+      "emitted_functions": [
+        {
+          "name": "CreateParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-system-create-definition/create.cpp"
+    },
+    {
+      "input_order": 7062,
+      "component": "w15-vi-particle-a-particle-system-share-definition",
+      "object_name": "w15_vi_particle_a_particle_system_share_definition.o",
+      "private_object_sha256": "323c8dfa4085882df2ae35ac8f70b619a865cd13cea03572c6b38d4933dca16f",
+      "emitted_functions": [
+        {
+          "name": "ShareParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-particle-system-share-definition/share.cpp"
+    },
+    {
+      "input_order": 7063,
+      "component": "w15-vi-particle-a-point-light-clamp-scale",
+      "object_name": "w15_vi_particle_a_point_light_clamp_scale.o",
+      "private_object_sha256": "1d1819be7ced8e3793a4284b7f06c41b6fc261a107c78144dd9c3e9c58dd4467",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__12VIPointLightR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-point-light-clamp-scale/clamp_scale.cpp"
+    },
+    {
+      "input_order": 7064,
+      "component": "w15-vi-particle-a-point-sprite-clamp-scale",
+      "object_name": "w15_vi_particle_a_point_sprite_clamp_scale.o",
+      "private_object_sha256": "8fd6229ed4a813637ea64ca6f73b02dd884393fb7d66bcb6d68129026d3fb297",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__13VIPointSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-point-sprite-clamp-scale/clamp_scale.cpp"
+    },
+    {
+      "input_order": 7065,
+      "component": "w15-vi-particle-a-point-sprite-init",
+      "object_name": "w15_vi_particle_a_point_sprite_init.o",
+      "private_object_sha256": "3eedf80efc1d8c43c851a3a59f45b9ff6d066eb66e3c284807063f4b45272ff5",
+      "emitted_functions": [
+        {
+          "name": "Init__13VIPointSprite11VIPointType",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-point-sprite-init/init.cpp"
+    },
+    {
+      "input_order": 7066,
+      "component": "w15-vi-particle-a-streamaudio-sprite-clamp-scale",
+      "object_name": "w15_vi_particle_a_streamaudio_sprite_clamp_scale.o",
+      "private_object_sha256": "cba876bccc0f6062480084838467a8b91f92c84eb2f63f68cc33c3c96420a827",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__19VIStreamAudioSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/clamp_scale.cpp"
+    },
+    {
+      "input_order": 7067,
+      "component": "w15-vi-particle-a-streamaudio-sprite-init",
+      "object_name": "w15_vi_particle_a_streamaudio_sprite_init.o",
+      "private_object_sha256": "8386e163e38e2d3e18b5bb9ca29f0a4c785a67f35e5b18d8cbb9dcae3c9f916c",
+      "emitted_functions": [
+        {
+          "name": "Init__19VIStreamAudioSpriteRC6VIBBox",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-init/init.cpp"
     }
   ],
   "drafts": [
@@ -105787,7 +106095,51 @@
     "sources/w15-vi-containers-a-vector-dtor-hsprite-node/dtor.cpp": "b50992039ac3982aa7a7b21bcdb29165496689079aa3b1c9d8d8f9fbed0bc559",
     "sources/w15-vi-containers-a-vector-dtor-hsprite-node/host_check.cpp": "798908d6a08c530de1f0d1192a554ccf2d3ec0074816e0af99e7100f063df51d",
     "sources/w15-vi-containers-a-vector-dtor-matrix44/dtor.cpp": "77bb77310c261adb803b82dc5e054beeb19d94b0aba0c69456a2bf1a9d8a0475",
-    "sources/w15-vi-containers-a-vector-dtor-matrix44/host_check.cpp": "e2c055a95793d8663beebd49e94670ab8e58a24aa45be0759713ee81504b0328"
+    "sources/w15-vi-containers-a-vector-dtor-matrix44/host_check.cpp": "e2c055a95793d8663beebd49e94670ab8e58a24aa45be0759713ee81504b0328",
+    "sources/w15-vi-particle-a-effectvolume-attach-surface/attach_surface.cpp": "4aa3f2f78a3df06ef6bcb01c5920303ce901e7532f6f37ea3fd3194bc5012adf",
+    "sources/w15-vi-particle-a-effectvolume-attach-surface/host_check.cpp": "99381418cb766e329ab2906685cbe398aea29787c1e48161b6e01862e142cbed",
+    "sources/w15-vi-particle-a-effectvolume-free/free.cpp": "756c2a8b55a42cb52422ce0aec8906d2e1d7f430e60287c46ad15601d0cfa6e8",
+    "sources/w15-vi-particle-a-effectvolume-free/host_check.cpp": "38d874e6ffd4ec6bed9a36d492a8b113a81391920f18ee5996f6ff96baed41ef",
+    "sources/w15-vi-particle-a-effectvolume-init/host_check.cpp": "ff891136b6670c71823063e9a13e307dacdbd96c0b59eb66248664c3e5d270a9",
+    "sources/w15-vi-particle-a-effectvolume-init/init.cpp": "981ff0dd91727f446793c1842e2798591002b9e47145145085c96d511b2aa5d3",
+    "sources/w15-vi-particle-a-effectvolume-on-resize/host_check.cpp": "bf905463372409bcf7b95b9c011e1a2419ee4bbee6886bbb75d3469493d79e26",
+    "sources/w15-vi-particle-a-effectvolume-on-resize/on_resize.cpp": "fd21bb8f20b18a7257c6e09f12b170b2de0bab6cd7b8abd7835313d411843747",
+    "sources/w15-vi-particle-a-effectvolume-process/host_check.cpp": "7a3645e227ae860ac97feb7f682399d7ab32429c4e2d476ad66afdcf815cf273",
+    "sources/w15-vi-particle-a-effectvolume-process/process.cpp": "3e917f182896d19af2027bc68e7db5824731fb087c605a11bb0e9d0bad2f94ed",
+    "sources/w15-vi-particle-a-effectvolume-render/host_check.cpp": "00cb5de186a30e94dd1f3e6fa92a344b30ef39ef0d4e4d242691740cbd838717",
+    "sources/w15-vi-particle-a-effectvolume-render/render.cpp": "54e8e74d3307dbf02b4c5443fbbfa140158391e4e586378cb4ea47c55a214789",
+    "sources/w15-vi-particle-a-effectvolume-set-flags/host_check.cpp": "c40065007732b7ed856a30d718a3b08219bc80a682c1d9c92010af9372f7f102",
+    "sources/w15-vi-particle-a-effectvolume-set-flags/set_flags.cpp": "85d83be9e5a1109f038fa9bd3f7bddb20328b13f9d08a673a87f63898d8aaba7",
+    "sources/w15-vi-particle-a-effectvolume-set-type/host_check.cpp": "cc79a5411e4b4be357ab621f3286b3fa85498835736b076d312f1fa5d3087e27",
+    "sources/w15-vi-particle-a-effectvolume-set-type/set_type.cpp": "679d6b49e7178920c11558b7a71d8eff0d3cacd772d7421cbd5bc47ab4736e94",
+    "sources/w15-vi-particle-a-effectvolume-sprite-init/host_check.cpp": "c4f6ddf63f8df2c36ad86152d823c4dd249ba1c546597a16c8113addbf2165a0",
+    "sources/w15-vi-particle-a-effectvolume-sprite-init/init.cpp": "33a8a8eda18433b75c2a578cd576c56692674e2591c9124a9deb486d53e94aac",
+    "sources/w15-vi-particle-a-particle-emitter-blend-motifs/blend_motifs.cpp": "ea029e4b6e49932c460d0602d99450b39cd78e2eeb30411be7aab8c1d7aea739",
+    "sources/w15-vi-particle-a-particle-emitter-blend-motifs/host_check.cpp": "7d255e15a604f73b68f32c086ce1fa9a926b06ceda8384f55883eef723d3eb95",
+    "sources/w15-vi-particle-a-particle-emitter-purge/host_check.cpp": "093f23e79cad8e9b56611e03050b374ca00c49338944c6379a3c3a48325f5209",
+    "sources/w15-vi-particle-a-particle-emitter-purge/purge.cpp": "e6ff0b2fcae80851f9f944379abb9b5cec6b8cd762674576c6dcac6eea04bcfd",
+    "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/host_check.cpp": "928f46f37efe1d23a40ce351a45136e6c8f0f2d8547ce59b94857a58cff19132",
+    "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/recompute_static_bbox.cpp": "0f09f153354f56c5eb69c00c9ffec324c850e58a4185e325e33d20c3000af7b1",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/host_check.cpp": "c50a89edb9fb28d064b0043be3ad5c515b9d5d08bc22bfc107780a3268108d7f",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/set_direction.cpp": "3575e73232c2ade152c892a5b54e418763dc69bd12e03704940a355319615e0d",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/host_check.cpp": "1e38a14e80dee539435ea5f3ebb7f48c76725f4259c1c2e90cd660b71abff48a",
+    "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/set_direction.cpp": "bc1e733d8f164c978f946e59986f731764d1b880c6ef05f779031b602d487656",
+    "sources/w15-vi-particle-a-particle-emitter-set-space/host_check.cpp": "6ce774d50e647df7e489e2652612b47424ba6c6acb59894cc766b09117487bae",
+    "sources/w15-vi-particle-a-particle-emitter-set-space/set_space.cpp": "4203e6d10f020ddabb56e9d6e5bdfddebcd101661146905599980f39586a5a6b",
+    "sources/w15-vi-particle-a-particle-system-create-definition/create.cpp": "7541d7b95bb373b244bdfd2554680492323ebb603b1225729a15aac14ad507ae",
+    "sources/w15-vi-particle-a-particle-system-create-definition/host_check.cpp": "99c9a58ad0d72bf7a8dae0f7ec922e1d7b0d7b7b1f7875294e58f4747c10b49a",
+    "sources/w15-vi-particle-a-particle-system-share-definition/host_check.cpp": "2e2523b75954169c79f4bd40ae1a22a73a5af5cafcc3c6860c851682d07458b3",
+    "sources/w15-vi-particle-a-particle-system-share-definition/share.cpp": "be509c74a0e5869db6b95afce29475d017d43ff55ecd1db9a610c96492f82e46",
+    "sources/w15-vi-particle-a-point-light-clamp-scale/clamp_scale.cpp": "27272516491a5d93c5d7e544a7b1097349cc02afae60adcc9c20e4bfaf986baf",
+    "sources/w15-vi-particle-a-point-light-clamp-scale/host_check.cpp": "74e18e701c7a2ca13c9fb33e322ea7e1f3ae31aaad615110154035559831d258",
+    "sources/w15-vi-particle-a-point-sprite-clamp-scale/clamp_scale.cpp": "b8440960a85e781498397d295d8f06c0f04ace8c1fc38825eb517159df7c6952",
+    "sources/w15-vi-particle-a-point-sprite-clamp-scale/host_check.cpp": "909888b23c2d0ea62e01bd9fa0c8297462d3267bad9cede5909a44708a070a95",
+    "sources/w15-vi-particle-a-point-sprite-init/host_check.cpp": "e6b1a930ed265ea795ce75e6017319ff5790ea1f137eb876aff32688d0bd7751",
+    "sources/w15-vi-particle-a-point-sprite-init/init.cpp": "5c3a7cd8066597f8e79aa8f37d686a49b4d739c2bce40e5ddc1c99f38b5f9821",
+    "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/clamp_scale.cpp": "82a573be782b1b1b4435c3696bf01930103524fd736ce11f22398be4b31cc6b0",
+    "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/host_check.cpp": "a29568d6cfbf88e7fb9124041e0982a99b102cdc0ea47d98e40e98d2b91951b2",
+    "sources/w15-vi-particle-a-streamaudio-sprite-init/host_check.cpp": "23c4c584365682d4c25e2ef571fec02973bde6dbc37c419b6e9b0bf0a2cbfaf0",
+    "sources/w15-vi-particle-a-streamaudio-sprite-init/init.cpp": "66368f2fb99eb11ebd5afbc2632aa318ab684a63a10c8f0dde28a1111a2a1c25"
   },
   "additional_implementations": [
     {
@@ -106229,11 +106581,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7046,
-    "authored_default_inputs": 7044,
+    "selected_inputs": 7068,
+    "authored_default_inputs": 7066,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5575,
-    "compiled_body_bytes_from_accepted_inputs": 2216120,
+    "emitted_function_definitions_including_helpers": 5597,
+    "compiled_body_bytes_from_accepted_inputs": 2222108,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -106246,7 +106598,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6733
+    "package_selected_inputs": 6755
   },
   "startup_implementations": [
     {
@@ -212926,6 +213278,380 @@
       ],
       "host_files": [
         "sources/w15-vi-containers-a-vector-dtor-matrix44/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-attach-surface/attach_surface.cpp",
+      "source_sha256": "4aa3f2f78a3df06ef6bcb01c5920303ce901e7532f6f37ea3fd3194bc5012adf",
+      "object_sha256": "2db69c7631b91f9ffdd576de536509e61a85f44c9770a04c8ff99689208b88bb",
+      "emitted_functions": [
+        {
+          "name": "AttachSurface__14VIEffectVolumeii",
+          "compiled_body_bytes": 424
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-attach-surface/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-free/free.cpp",
+      "source_sha256": "756c2a8b55a42cb52422ce0aec8906d2e1d7f430e60287c46ad15601d0cfa6e8",
+      "object_sha256": "a4dc344530d278925447875b094d78919e0834078b391e9fb80616ee27a313ac",
+      "emitted_functions": [
+        {
+          "name": "Free__14VIEffectVolume",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-free/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-init/init.cpp",
+      "source_sha256": "981ff0dd91727f446793c1842e2798591002b9e47145145085c96d511b2aa5d3",
+      "object_sha256": "c16f68b5ec1f7c2c889c2fae0a255ee9aa23a2f2026b1de441371326243ca80f",
+      "emitted_functions": [
+        {
+          "name": "Init__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-on-resize/on_resize.cpp",
+      "source_sha256": "fd21bb8f20b18a7257c6e09f12b170b2de0bab6cd7b8abd7835313d411843747",
+      "object_sha256": "40d6b0407f26616e73b9c135c1054e1eb7d6260990ac6f1c652857a941423d8e",
+      "emitted_functions": [
+        {
+          "name": "OnResize__14VIEffectVolumeRC6VIBBox",
+          "compiled_body_bytes": 64
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-on-resize/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-process/process.cpp",
+      "source_sha256": "3e917f182896d19af2027bc68e7db5824731fb087c605a11bb0e9d0bad2f94ed",
+      "object_sha256": "b0e3e969eb4d9c4e167e91d0534479aab4c5657ebf425f707f2d2ba632e4f52a",
+      "emitted_functions": [
+        {
+          "name": "Process__14VIEffectVolumef",
+          "compiled_body_bytes": 340
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-process/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-render/render.cpp",
+      "source_sha256": "54e8e74d3307dbf02b4c5443fbbfa140158391e4e586378cb4ea47c55a214789",
+      "object_sha256": "134439c36b74ce27ba3d75c5d9b3cc0d5cedefc3d8006ce6f933e15ced29ef92",
+      "emitted_functions": [
+        {
+          "name": "Render__14VIEffectVolumeR8VICameraR10VIMatrix44",
+          "compiled_body_bytes": 1344
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-render/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-flags/set_flags.cpp",
+      "source_sha256": "85d83be9e5a1109f038fa9bd3f7bddb20328b13f9d08a673a87f63898d8aaba7",
+      "object_sha256": "f55d3c5dc9e5ea93fed9ed148b1a1cef01cf6443ff7a6ec7553801a27328a20a",
+      "emitted_functions": [
+        {
+          "name": "SetFlags__14VIEffectVolumeUi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-set-flags/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-set-type/set_type.cpp",
+      "source_sha256": "679d6b49e7178920c11558b7a71d8eff0d3cacd772d7421cbd5bc47ab4736e94",
+      "object_sha256": "58489382f26cb8a9d8d48db504fd2be551b96daaa7c8b20a9cff312060ac2648",
+      "emitted_functions": [
+        {
+          "name": "SetType__14VIEffectVolume18VIEffectVolumeTypef",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-set-type/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-effectvolume-sprite-init/init.cpp",
+      "source_sha256": "33a8a8eda18433b75c2a578cd576c56692674e2591c9124a9deb486d53e94aac",
+      "object_sha256": "8e45d05536e00e032b6df75babaf66f9d1f4873411973df89b33c85a13067bcc",
+      "emitted_functions": [
+        {
+          "name": "Init__20VIEffectVolumeSpriteRC6VIBBox",
+          "compiled_body_bytes": 168
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-effectvolume-sprite-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-blend-motifs/blend_motifs.cpp",
+      "source_sha256": "ea029e4b6e49932c460d0602d99450b39cd78e2eeb30411be7aab8c1d7aea739",
+      "object_sha256": "849e0d3cc031907a0a5d8559edfeb19fb1d9ba8301e794c2edda5fe422bcf234",
+      "emitted_functions": [
+        {
+          "name": "BlendMotifs__17VIParticleEmitter",
+          "compiled_body_bytes": 244
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-blend-motifs/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-purge/purge.cpp",
+      "source_sha256": "e6ff0b2fcae80851f9f944379abb9b5cec6b8cd762674576c6dcac6eea04bcfd",
+      "object_sha256": "078ae32a1b7a572682b3bd20e76440ddba8a725fd8ddb16fdb5543187776760b",
+      "emitted_functions": [
+        {
+          "name": "Purge__17VIParticleEmitter",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-purge/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/recompute_static_bbox.cpp",
+      "source_sha256": "0f09f153354f56c5eb69c00c9ffec324c850e58a4185e325e33d20c3000af7b1",
+      "object_sha256": "a64cef4bf1e0946df156b6e66319fae0ed39f8ddf89a152056d268448bde76ee",
+      "emitted_functions": [
+        {
+          "name": "RecomputeStaticBBox__17VIParticleEmitter",
+          "compiled_body_bytes": 1316
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-recompute-static-bbox/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/set_direction.cpp",
+      "source_sha256": "3575e73232c2ade152c892a5b54e418763dc69bd12e03704940a355319615e0d",
+      "object_sha256": "6cc577f4a39e81f269ad1c4a8f35d59ed718684261a368ff82a3055bff64ed90",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC10VIMatrix33",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-set-direction-m33/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/set_direction.cpp",
+      "source_sha256": "bc1e733d8f164c978f946e59986f731764d1b880c6ef05f779031b602d487656",
+      "object_sha256": "8d2c981ff8e89e3119e88f9f9547da04e84be42ad7785aa4744529aef9f0f24b",
+      "emitted_functions": [
+        {
+          "name": "SetDirection__17VIParticleEmitterRC7VIVect3",
+          "compiled_body_bytes": 328
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-set-direction-v3/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-emitter-set-space/set_space.cpp",
+      "source_sha256": "4203e6d10f020ddabb56e9d6e5bdfddebcd101661146905599980f39586a5a6b",
+      "object_sha256": "5944092b0605678c047748d0a2fdccd7071c59cbd37dfd9d5e86840f2ec69abd",
+      "emitted_functions": [
+        {
+          "name": "SetSpace__17VIParticleEmitterRC10VIMatrix44",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-emitter-set-space/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-system-create-definition/create.cpp",
+      "source_sha256": "7541d7b95bb373b244bdfd2554680492323ebb603b1225729a15aac14ad507ae",
+      "object_sha256": "fa23b45b51ebcf70026d9367997d0c9508b66f43fadf7cea4682030fbd55f99f",
+      "emitted_functions": [
+        {
+          "name": "CreateParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 224
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-system-create-definition/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-particle-system-share-definition/share.cpp",
+      "source_sha256": "be509c74a0e5869db6b95afce29475d017d43ff55ecd1db9a610c96492f82e46",
+      "object_sha256": "323c8dfa4085882df2ae35ac8f70b619a865cd13cea03572c6b38d4933dca16f",
+      "emitted_functions": [
+        {
+          "name": "ShareParticleDefinition__16VIParticleSystemi",
+          "compiled_body_bytes": 44
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-particle-system-share-definition/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-point-light-clamp-scale/clamp_scale.cpp",
+      "source_sha256": "27272516491a5d93c5d7e544a7b1097349cc02afae60adcc9c20e4bfaf986baf",
+      "object_sha256": "1d1819be7ced8e3793a4284b7f06c41b6fc261a107c78144dd9c3e9c58dd4467",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__12VIPointLightR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-point-light-clamp-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-point-sprite-clamp-scale/clamp_scale.cpp",
+      "source_sha256": "b8440960a85e781498397d295d8f06c0f04ace8c1fc38825eb517159df7c6952",
+      "object_sha256": "8fd6229ed4a813637ea64ca6f73b02dd884393fb7d66bcb6d68129026d3fb297",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__13VIPointSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-point-sprite-clamp-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-point-sprite-init/init.cpp",
+      "source_sha256": "5c3a7cd8066597f8e79aa8f37d686a49b4d739c2bce40e5ddc1c99f38b5f9821",
+      "object_sha256": "3eedf80efc1d8c43c851a3a59f45b9ff6d066eb66e3c284807063f4b45272ff5",
+      "emitted_functions": [
+        {
+          "name": "Init__13VIPointSprite11VIPointType",
+          "compiled_body_bytes": 68
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-point-sprite-init/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/clamp_scale.cpp",
+      "source_sha256": "82a573be782b1b1b4435c3696bf01930103524fd736ce11f22398be4b31cc6b0",
+      "object_sha256": "cba876bccc0f6062480084838467a8b91f92c84eb2f63f68cc33c3c96420a827",
+      "emitted_functions": [
+        {
+          "name": "ClampScale__19VIStreamAudioSpriteR10VIMatrix44",
+          "compiled_body_bytes": 312
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-streamaudio-sprite-clamp-scale/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-particle-a",
+      "source": "sources/w15-vi-particle-a-streamaudio-sprite-init/init.cpp",
+      "source_sha256": "66368f2fb99eb11ebd5afbc2632aa318ab684a63a10c8f0dde28a1111a2a1c25",
+      "object_sha256": "8386e163e38e2d3e18b5bb9ca29f0a4c785a67f35e5b18d8cbb9dcae3c9f916c",
+      "emitted_functions": [
+        {
+          "name": "Init__19VIStreamAudioSpriteRC6VIBBox",
+          "compiled_body_bytes": 92
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-particle-a-streamaudio-sprite-init/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false
