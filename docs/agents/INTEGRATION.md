@@ -10566,3 +10566,20 @@ Full partial build: 7263 source compilations, one link, 5777 function bodies, ze
 - 2026-10-14 01:38 CDT — agents/w15-vi-esfparse-a — 874 unresolved imports
 
 The notes claim 72 newly opened names; this build shows 71 (one of the claimed names resolves in the shared link).
+
+## agents/w15-vi-sprites-a
+
+Merged (merge commit; tip over 80 minutes old, notes complete). All 36 units have a `host_check.cpp` and are selected.
+
+| | |
+|---|---|
+| Before | 874 |
+| After | 868 |
+| Closed | 36 |
+| Opened | 30 |
+
+Closed: `AddPlay__9VIHSpriteiR7VIScene`, `Begin__Ct6VIPool1Z13VIHSpritePlay`, `Begin__Ct6VIPool1Z19VIHSpriteAttachment`, `CalcLODLevelIndex__9VIHSpriteRC10VIMatrix44`, `CalcLODOffDist__9VICSpriteR7VIScene`, `CalcTransAboutCenter__9VIHSpriteRC10VIMatrix44R7VISceneR10VIMatrix44`, `Clear__9VICSprite`, `Clear__9VIHSprite`, `CreateParticleEmitters__9VICSpriteR7VIScene`, `End__Ct6VIPool1Z13VIHSpritePlay`, `End__Ct6VIPool1Z19VIHSpriteAttachment`, `Init__13VIHSpriteAnim19VIHSpriteAnimFormatiiiff14VIPlaybackType`, `Init__9VICSprite17VICSpriteSkelType13VICSpriteRace12VICSpriteSexfi`, `Init__9VIHSprite`, `Init__t6VIPool1Z13VIHSpritePlayRCt6VIPool1Z13VIHSpritePlay`, `Init__t6VIPool1Z17VIHSpritePlayNodeRCt6VIPool1Z17VIHSpritePlayNode`, `Init__t6VIPool1Z19VIHSpriteAttachmentRCt6VIPool1Z19VIHSpriteAttachment`, `Init__t7VIArray1Z16VIHSpriteTriggerRCt7VIArray1Z16VIHSpriteTrigger`, `Init__t7VIArray1Z20VICSpritePartEmitteri`, `Init__t8VIVector1Z13VIHSpriteNodeRCt8VIVector1Z13VIHSpriteNode`, `Next__Ct6VIPool1Z13VIHSpritePlayi`, `Next__Ct6VIPool1Z19VIHSpriteAttachmenti`, `ProcessPlayList__9VIHSpriteiR7VIScene`, `ProcessUpHierarchy__9VIHSpritei`, `ProcessWeaponTrails__9VICSpriteR8VICameraR7VISceneR10VIMatrix44`, `Process__9VIHSpriteiR7VIScene`, `SetAnimPriorities__9VICSprite`, `SetAnimSoundChannels__9VICSprite`, `SetBindPose__9VIHSprite`, `SetDefaultEntries__9VICSprite`, `SetDefaults__9VICSpriteR7VIScene`, `SetKeyframe__13VIHSpriteAnimiif`, `SetNodeFrame__13VIHSpriteAnimiiR14VIHSpriteFrame`, `SetNodeFrame__13VIHSpriteAnimiiR18VIHSpritePackFrame`, `SetNodeRefID__13VIHSpriteAnimii`, `Size__Ct6VIPool1Z13VIHSpritePlay`
+
+Opened: `AddPlay__9VIHSpritei14VIPlaybackTypefR7VIScene`, `AddSegment__9VITrailFxRC7VIVect3T1RC10VIColor32FT3`, `Allocate__13VIHSpriteAnim`, `Allocate__t6VIPool1Z13VIHSpritePlay`, `Allocate__t6VIPool1Z17VIHSpritePlayNode`, `Allocate__t6VIPool1Z19VIHSpriteAttachment`, `Allocate__t7VIArray1Z16VIHSpriteTrigger`, `Allocate__t7VIArray1Z20VICSpritePartEmitter`, `Allocate__t8VIVector1Z13VIHSpriteNode`, `Begin__Ct6VIPool1Z17VIHSpritePlayNode`, `CalcDataSize__13VIHSpriteAnim`, `CalcMemberTransform__13VIGroupSpriteiR10VIMatrix44`, `Clear__t6VIPool1Z13VIHSpritePlay`, `Clear__t6VIPool1Z17VIHSpritePlayNode`, `Clear__t6VIPool1Z19VIHSpriteAttachment`, `Clear__t7VIArray1Z16VIHSpriteTrigger`, `Clear__t7VIArray1Z20VICSpritePartEmitter`, `Clear__t8VIVector1Z10VIMatrix44`, `Clear__t8VIVector1Z13VIHSpriteNode`, `End__Ct6VIPool1Z17VIHSpritePlayNode`, `GetAttachSprite__C9VIHSpritei`, `Next__Ct6VIPool1Z17VIHSpritePlayNodei`, `ProcessHierarchy__9VIHSprite`, `ProcessPlayTiming__9VIHSpriteiR7VIScene`, `SetHair__9VICSpriteiiiR7VIScene`, `Slerp__6VIQuatRC6VIQuatT1f`, `Transform__10VIMatrix44RC6VIQuatRC7VIVect3T2`, `Transform__10VIMatrix44RC6VIQuatfRC7VIVect3`, `UpdateCenterTransform__9VIHSpriteR7VIScene`, `VITrailFxBegin__Flif`
+
+Full partial build: 7299 source compilations, one link, 5813 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
