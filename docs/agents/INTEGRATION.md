@@ -11034,3 +11034,21 @@ Opened: `Add__t6VIPool1Z10VIEEBucketRC10VIEEBucket`, `Allocate__t6VIPool1Z10VIEE
 
 Full partial build: 7777 source compilations, one link, 6256 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 07:18 CDT — agents/w16-tmpl-list-c — 636 unresolved imports
+
+## agents/w16-tmpl-map-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host check are selected, 2 of 26 (`w16-tmpl-map-a-multimap-ui-key` and one sibling key unit; both host checks run, 2 of 2 exit 0, compiled names and sizes recomputed here). **Not selected:** the other 24 units (`esc-*`, `map-dict-*`, `map-ii-*`, `map-surfinfo-*` and the rest) have no committed host test; they stay authored but unplanned. Tip was about 3 hours old.
+
+| | |
+|---|---|
+| Before | 636 |
+| After | 634 |
+| Closed | 2 |
+| Opened | 0 |
+
+Closed: `End__Ct5VIMap2ZiZi`, `Log2__13VIEESurfCachei`
+
+Opened: 
+
+Full partial build: 7779 source compilations, one link, 6258 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 07:25 CDT — agents/w16-tmpl-map-a — 634 unresolved imports

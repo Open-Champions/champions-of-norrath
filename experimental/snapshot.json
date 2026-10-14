@@ -100978,6 +100978,34 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 7779,
+      "component": "w16-tmpl-map-a-esc-log2",
+      "object_name": "w16tma_esc_log2.o",
+      "private_object_sha256": "4510a5f74bb3497dd445d2319f7b9231a07c684da74bb211719f6b96f4e2b8d8",
+      "emitted_functions": [
+        {
+          "name": "Log2__13VIEESurfCachei",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-tmpl-map-a-esc-log2/log2.cpp"
+    },
+    {
+      "input_order": 7780,
+      "component": "w16-tmpl-map-a-map-ii-end",
+      "object_name": "w16tma_map_ii_end.o",
+      "private_object_sha256": "064fe6f241c28e965aebc82430e2da8ca945007756f162db76cdb2497aefff8a",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VIMap2ZiZi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w16-tmpl-map-a-map-ii-end/end.cpp"
     }
   ],
   "drafts": [
@@ -117356,7 +117384,35 @@
     "sources/w16-tmpl-list-c-vilnode-insertafter/host_check.cpp": "91b79053a36060dea7630ab6bc5c4ef9be7297a431f0ab7556da18a87063a787",
     "sources/w16-tmpl-list-c-vilnode-insertafter/insert_after.cpp": "feb8b31d282fce107ec1a310114e6299b6ac8a134455963b201f4ba9111216d3",
     "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c",
-    "sources/w16-tmpl-list-c-zoneroom-dtor/host_check.cpp": "373c07254d7f2da7d5813ce3f285b7cbea557a565cd6063e52cd153a1da8f3ba"
+    "sources/w16-tmpl-list-c-zoneroom-dtor/host_check.cpp": "373c07254d7f2da7d5813ce3f285b7cbea557a565cd6063e52cd153a1da8f3ba",
+    "sources/w16-tmpl-map-a-esc-addtofreemap/addtofreemap.cpp": "624a55ca72cfc9f593fc93e97d69120b7890dda3d2274b1431d725be6d08b96f",
+    "sources/w16-tmpl-map-a-esc-construct-dma-packet/construct.cpp": "5a5b6272b0668b26605950c4a7f5e8b8016ac591ffa696bcc7dd04a1c4683372",
+    "sources/w16-tmpl-map-a-esc-deallocate/deallocate.cpp": "cadb98a2030053063d04d13c9d472146ebcdfd27a8cb39c05aa8f004371c75ed",
+    "sources/w16-tmpl-map-a-esc-findfree/findfree.cpp": "5ab513af6419998c7f01637248a610d13254af169a61d4b4d4192dbbe86b87cb",
+    "sources/w16-tmpl-map-a-esc-log2/host_check.cpp": "a05087fdaff86cefdc39befaf8a54a4ea1be447036ba353336c3e8a95d9f2678",
+    "sources/w16-tmpl-map-a-esc-log2/log2.cpp": "c1c6a1ae57a44342d18e0af03a601881556ecd5096abc98f8d3117c59f113cf9",
+    "sources/w16-tmpl-map-a-map-dict-allocate/allocate.cpp": "b0323704a0796b73646bb00cde6b85042733a86ebdbc754c6c2548b1c29dd233",
+    "sources/w16-tmpl-map-a-map-dict-begin/begin.cpp": "cd619afb0921b3fb5d10c71632ac97685154f6ba58a6e5d3f53ed3bdb8ab0590",
+    "sources/w16-tmpl-map-a-map-dict-insert/insert.cpp": "c5b69bb9c6072e8518db70bd0c5bb53745de1abe1481034bc991fbe23ee25847",
+    "sources/w16-tmpl-map-a-map-ii-begin/begin.cpp": "2a831359a4c160364ed9376071a262e24e8c80e0a79ce0ce2268fea4ca02ce7f",
+    "sources/w16-tmpl-map-a-map-ii-end/end.cpp": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6",
+    "sources/w16-tmpl-map-a-map-ii-end/host_check.cpp": "81051ac4d467fa112897969aab49e5114dc655ad64eaa7663d05039e8b10432b",
+    "sources/w16-tmpl-map-a-map-ii-init/init.cpp": "11f770cad1f5f05ece4d06662fa3ba1f67c6c058d36ed94183d18294a6d095f4",
+    "sources/w16-tmpl-map-a-map-ii-insert/insert.cpp": "d4ea8d0baf5e2655d427898fba8db43e1780725ccbfb031423d060308fc5b457",
+    "sources/w16-tmpl-map-a-map-ii-next/next.cpp": "e47ba5a1d929183e4bfb0c7ab9ca55b431121e9af749c713bbf0eaab5e72cbcc",
+    "sources/w16-tmpl-map-a-map-surfinfo-addnode/addnode.cpp": "cb8f45fadd4910b7620ce249cba2cd4b9eede4614ecbe934c50c98b59013aa53",
+    "sources/w16-tmpl-map-a-map-surfinfo-erase/erase.cpp": "2bb907fc4b36774f315202037d88a8b555b46acd76323b506e1f3f7ca68936f6",
+    "sources/w16-tmpl-map-a-map-surfinfo-key/key.cpp": "08234a46f8046fba7bd4948b41fbd18b737a808fde4b384361142b24f5f6382c",
+    "sources/w16-tmpl-map-a-map-surfinfo-leftrotate/leftrotate.cpp": "5849ecb13e7c865c8db83993f719892d025547b824b797f66a5a06c743bb499b",
+    "sources/w16-tmpl-map-a-map-surfinfo-rightrotate/rightrotate.cpp": "b7bdf8b08e097fc4bf44f7d78cb15943a5ede29ef4e6dee42acaaddb6c490536",
+    "sources/w16-tmpl-map-a-multimap-emitter-addnode/addnode.cpp": "9d0b0a9a4b06fa8766ae7f35a634c758fdc1b4b680af26da9af7cf32550d6b0e",
+    "sources/w16-tmpl-map-a-multimap-emitter-erasefixup/erasefixup.cpp": "f4993bd5f1c0a035a85624607bccaac0e9ec361ab2e43cd0476213761690d8ff",
+    "sources/w16-tmpl-map-a-multimap-emitter-freenode/freenode.cpp": "2cb5c00dd0af574e04bdb5a4c0e411c0cc7a9ea18f56e74441c7a4ad098ced61",
+    "sources/w16-tmpl-map-a-multimap-emitter-leftrotate/leftrotate.cpp": "44c640044fd1240fc24341d557f4c4957b4782103e7aa1b64f860a6a65ddd81d",
+    "sources/w16-tmpl-map-a-multimap-emitter-linkfreechain/linkfreechain.cpp": "af83259fc3698b9148ddadec9ddfce58dca3e5dcd3a4f4ed7ab549a7eacda781",
+    "sources/w16-tmpl-map-a-multimap-emitter-rightrotate/rightrotate.cpp": "d69a806daee0801fdd9384289a4edc3c7060531286f38de0ead501f6629500c8",
+    "sources/w16-tmpl-map-a-multimap-ui-erase/erase.cpp": "332373f5e69e1396dbfe28917beed838129e008f0692192fed72fe468086ab16",
+    "sources/w16-tmpl-map-a-multimap-ui-key/key.cpp": "4bc75dd6272f907695a8d1b97a1c9f7d1640795532c914ae32f4ccb08e264154"
   },
   "additional_implementations": [
     {
@@ -117798,11 +117854,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7779,
-    "authored_default_inputs": 7777,
+    "selected_inputs": 7781,
+    "authored_default_inputs": 7779,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 6258,
-    "compiled_body_bytes_from_accepted_inputs": 2395960,
+    "emitted_function_definitions_including_helpers": 6260,
+    "compiled_body_bytes_from_accepted_inputs": 2396008,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -117815,7 +117871,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 7466
+    "package_selected_inputs": 7468
   },
   "startup_implementations": [
     {
@@ -236695,6 +236751,40 @@
       ],
       "host_files": [
         "sources/w16-tmpl-list-c-zoneroom-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-tmpl-map-a",
+      "source": "sources/w16-tmpl-map-a-esc-log2/log2.cpp",
+      "source_sha256": "c1c6a1ae57a44342d18e0af03a601881556ecd5096abc98f8d3117c59f113cf9",
+      "object_sha256": "4510a5f74bb3497dd445d2319f7b9231a07c684da74bb211719f6b96f4e2b8d8",
+      "emitted_functions": [
+        {
+          "name": "Log2__13VIEESurfCachei",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w16-tmpl-map-a-esc-log2/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w16-tmpl-map-a",
+      "source": "sources/w16-tmpl-map-a-map-ii-end/end.cpp",
+      "source_sha256": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6",
+      "object_sha256": "064fe6f241c28e965aebc82430e2da8ca945007756f162db76cdb2497aefff8a",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VIMap2ZiZi",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w16-tmpl-map-a-map-ii-end/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7777,
+  "default_authored_inputs": 7779,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8571,7 +8571,9 @@
     "sources/w16-tmpl-list-c-vector-init-hspritenode/init.cpp": "bc9b591270cbe6861b631b173502e5c46a98151ca14ab89b8b6f50b49c0b5c5c",
     "sources/w16-tmpl-list-c-vector-init-matrix44/init.cpp": "489c5d62db4d643db1e2bc9cd398ff11b39fc6616abe2a158a9007fc14de5383",
     "sources/w16-tmpl-list-c-vilnode-insertafter/insert_after.cpp": "feb8b31d282fce107ec1a310114e6299b6ac8a134455963b201f4ba9111216d3",
-    "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c"
+    "sources/w16-tmpl-list-c-zoneroom-dtor/dtor.cpp": "8025e6ccde4ee77b9bc1d9dd08b324df1e0a609c1263cefece39801bb8c33d0c",
+    "sources/w16-tmpl-map-a-esc-log2/log2.cpp": "c1c6a1ae57a44342d18e0af03a601881556ecd5096abc98f8d3117c59f113cf9",
+    "sources/w16-tmpl-map-a-map-ii-end/end.cpp": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6"
   },
   "inputs": [
     {
@@ -116114,6 +116116,36 @@
           "compiled_body_bytes": 112
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7779,
+      "kind": "independently_authored_source",
+      "object_name": "w16tma_esc_log2.o",
+      "profile": "authored_cpp",
+      "sha256": "c1c6a1ae57a44342d18e0af03a601881556ecd5096abc98f8d3117c59f113cf9",
+      "source": "sources/w16-tmpl-map-a-esc-log2/log2.cpp",
+      "emitted_functions": [
+        {
+          "name": "Log2__13VIEESurfCachei",
+          "compiled_body_bytes": 40
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7780,
+      "kind": "independently_authored_source",
+      "object_name": "w16tma_map_ii_end.o",
+      "profile": "authored_cpp",
+      "sha256": "464ca49c12dee41d93ad4ff9d2859106c42c225fea7ba0d46792b00b203a19c6",
+      "source": "sources/w16-tmpl-map-a-map-ii-end/end.cpp",
+      "emitted_functions": [
+        {
+          "name": "End__Ct5VIMap2ZiZi",
+          "compiled_body_bytes": 8
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -116213,7 +116245,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "7318e9ad16200b190864f73f0fb3ddd9d4ac40d24cf14f52657f36659114a52c",
+  "snapshot_sha256": "0095dce2d2dd823c3df5ecc7b63e124e4cf5b41f5317511185faae7930ab14c6",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
