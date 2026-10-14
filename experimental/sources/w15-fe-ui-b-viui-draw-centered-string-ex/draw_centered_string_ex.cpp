@@ -1,4 +1,4 @@
-// Observed: DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii at 0x0102ef30, 300 bytes. Arguments: the UI object,
+// Observed: DrawCenteredStringEx__4VIUIPCUsiiG10VIColor32FUii at 0x0102ef30, 304 bytes. Arguments: the UI object,
 // a 16-bit string, x, y, a four-float colour (passed by reference), an unsigned flags word and an int shadow
 // switch. The font lives at ui + 56; its first 16 bytes are the current text colour. The colour argument is
 // copied and the font's current colour is saved. When the shadow switch is nonzero, SetTextColor__6VIFontRC10VIColor32F
