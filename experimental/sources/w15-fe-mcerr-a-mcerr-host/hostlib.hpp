@@ -16,6 +16,7 @@ static unsigned char hl_self[1100] __attribute__((aligned(16)));
 static std::string trace;
 static int hl_status[16], hl_status_count, hl_status_next;
 static int hl_lines = 3;
+static int hl_card;  // value the card-status stub writes through its pointer
 static unsigned short hl_text[64][4];
 
 extern "C" char* norrath_host_translate(unsigned address) {
@@ -51,10 +52,16 @@ static void hl_reset(bool with_parent, int mode, int counter) {
     trace.clear();
     hl_status_next = 0;
 }
+static std::string hl_tid(const unsigned short* t) {
+    if (!t) return "0";
+    const unsigned short* lo = &hl_text[0][0];
+    if (t < lo || t >= lo + 64 * 4) return "L";  // a buffer owned by the caller
+    return "t" + std::to_string(reinterpret_cast<const unsigned short(*)[4]>(t) - hl_text);
+}
 static int* hl_words() { return reinterpret_cast<int*>(hl_self); }
 static int hl_check(const char* label, const std::string& expected) {
     if (trace == expected) return 0;
-    std::printf("MISMATCH %s\n  got:  %s\n  want: %s\n", label, trace.c_str(), expected.c_str());
+    std::fprintf(stdout, "MISMATCH %s\n  got:  %s\n  want: %s\n", label, trace.c_str(), expected.c_str());
     return 1;
 }
 
@@ -73,7 +80,7 @@ const unsigned short* GetString__13VIStringTableii(const void* table, int id, in
     return hl_text[id & 63];
 }
 int CountLines__10VIUIWindowPCUsi(void* window, const unsigned short* text, int width) {
-    trace += "cl(" + hl_off(window) + ",t" + std::to_string(reinterpret_cast<const unsigned short(*)[4]>(text) - hl_text) + "," + std::to_string(width) + ");";
+    trace += "cl(" + hl_off(window) + "," + hl_tid(text) + "," + std::to_string(width) + ");";
     return hl_lines;
 }
 void Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii(void* window, void* ui, const int* position, const int* size, int width, int a, int b) {
@@ -85,11 +92,38 @@ void Begin2D__4VIUI(void* ui) { trace += "begin(" + hl_off(ui) + ");"; }
 void End2D__4VIUI(void* ui) { trace += "end(" + hl_off(ui) + ");"; }
 void Draw__10VIUIWindow(void* window) { trace += "draw(" + hl_off(window) + ");"; }
 void TextBox__10VIUIWindowPCUsiiii9VIUICOLORUi(void* window, const unsigned short* text, int a, int b, int c, int d, int color, unsigned e) {
-    trace += "box(" + hl_off(window) + ",t" + std::to_string(reinterpret_cast<const unsigned short(*)[4]>(text) - hl_text) + "," + std::to_string(a) + "," +
+    trace += "box(" + hl_off(window) + "," + hl_tid(text) + "," + std::to_string(a) + "," +
              std::to_string(b) + "," + std::to_string(c) + "," + std::to_string(d) + "," + std::to_string(color) + "," + std::to_string(e) + ");";
+}
+void DrawPrompt__10VIWndMcErriPCUsT2(void* self, int a, const unsigned short* text, const unsigned short* text2) {
+    trace += "prompt(" + hl_off(self) + "," + std::to_string(a) + "," + hl_tid(text) + "," + hl_tid(text2) + ");";
+}
+int snprintf16__8VIStringPUsiPCce(unsigned short* buffer, int size, const char* format, ...) {
+    va_list args;
+    va_start(args, format);
+    const unsigned short* a = va_arg(args, const unsigned short*);
+    const unsigned short* b = va_arg(args, const unsigned short*);
+    const unsigned short* c = nullptr;
+    int specifiers = 0;
+    for (const char* f = format; *f; ++f) specifiers += f[0] == '%' && f[1] == 'S';
+    if (specifiers >= 3) c = va_arg(args, const unsigned short*);
+    va_end(args);
+    std::string f = format;
+    for (std::string::size_type i; (i = f.find('\n')) != std::string::npos;) f.replace(i, 1, "\\n");
+    trace += "snp(" + std::to_string(size) + "," + f + "," + hl_tid(a) + "," + hl_tid(b) + (specifiers >= 3 ? "," + hl_tid(c) : std::string()) + ");";
+    buffer[0] = 'x';
+    buffer[1] = 0;
+    return 1;
+}
+void DrawProgress__10VIUIWindowiiif(void* window, int a, int b, int c, float fraction) {
+    unsigned bits;
+    std::memcpy(&bits, &fraction, 4);
+    trace += "progress(" + hl_off(window) + "," + std::to_string(a) + "," + std::to_string(b) + "," + std::to_string(c) + ",0x" + [&] {
+        char buffer[16]; std::snprintf(buffer, sizeof buffer, "%08x", bits); return std::string(buffer); }() + ");";
 }
 int VIMemCardStatus__FPi(int* value) {
     trace += std::string("status(") + (value ? "ptr" : "0") + ");";
+    if (value) *value = hl_card;
     return hl_status_next < hl_status_count ? hl_status[hl_status_next++] : hl_status[hl_status_count - 1];
 }
 }
