@@ -12,7 +12,7 @@
 //      float triples (corner positions C and card corners L) are zeroed.
 //   3. phase = (1.0 - float44) * 0.5 + 0.5. If count <= 0 it skips to step 5. For each of the
 //      count 36-byte particles p (advancing by 36), skipping those whose word p[0] is zero:
-//      * s = sinf((p.f[28] / p.f[32]) * 3.14159274) * phase.
+//      * s = sinf((p.f[28] / p.f[32]) * 3.1415925026 (bits 0x40490fda)) * phase.
 //      * the 48-byte card at sFogCard (0x011b0dd8) + p.int[16] * 48 is copied into L (four triples);
 //        the x of each triple is multiplied by p.f[20] and the y of each by p.f[24]; z is unchanged.
 //      * M's translation row (floats 12, 13, 14) is set to (p.f[4], p.f[8] + s * 1.5, p.f[12]).
@@ -112,7 +112,7 @@ int RenderGroundFog__14VIEffectVolumeR8VICameraR10VIMatrix44(unsigned char* self
         for (int n = count; n != 0; --n, particle += 36) {
             if (*reinterpret_cast<int*>(particle) == 0)
                 continue;
-            float s = sinf(*reinterpret_cast<float*>(particle + 28) / *reinterpret_cast<float*>(particle + 32) * 3.14159274f) * phase;
+            float s = sinf(*reinterpret_cast<float*>(particle + 28) / *reinterpret_cast<float*>(particle + 32) * 0x1.921fb4p+1f) * phase;
             const float* src = reinterpret_cast<const float*>(sFogCard + *reinterpret_cast<int*>(particle + 16) * 48);
             for (int i = 0; i < 12; ++i)
                 card[i] = src[i];

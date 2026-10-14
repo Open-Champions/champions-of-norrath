@@ -92,7 +92,7 @@ int main() {
         // one active particle: 4 muls, color, begin, 6 uv/vertex pairs, end
         if (events.size() != 3 + 4 + 1 + 1 + 12 + 1 + 1) return 9;
         float phase = (1.0f - 0.5f) * 0.5f + 0.5f;
-        float s = (1.0f / 4.0f * 3.14159274f) * 2.0f * phase;
+        float s = (1.0f / 4.0f * 0x1.921fb4p+1f) * 2.0f * phase;
         const Event& color = events[3 + 4];
         if (color.name != "color" || color.f[3] != 3.0f * 2.0f * (0.5f * s)) return 10;
         const float* card = reinterpret_cast<const float*>(sFogCard + 48);
