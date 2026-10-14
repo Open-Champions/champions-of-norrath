@@ -87725,6 +87725,468 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w15-startup-a-vieeunloadirx/unload_irx.cpp"
+    },
+    {
+      "input_order": 6783,
+      "component": "w15-vi-io-sound-a-battle-music-preload",
+      "object_name": "w15_vi_io_sound_a_battle_music_preload.o",
+      "private_object_sha256": "fd72e0fe985648601b175cdf973e517986b4a67a95ceeff347a674f76b4b2b69",
+      "emitted_functions": [
+        {
+          "name": "Preload__13VIBattleMusici",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-battle-music-preload/preload.cpp"
+    },
+    {
+      "input_order": 6784,
+      "component": "w15-vi-io-sound-a-esfparse-particle-definition",
+      "object_name": "w15_vi_io_sound_a_esfparse_particle_definition.o",
+      "private_object_sha256": "a89ddd2114d8112c603847a289544963d0fd08ab12a8b6e8fced17e89c569945",
+      "emitted_functions": [
+        {
+          "name": "ParseParticleDefinition__10VIESFParseR9VIObjFileR20VIParticleDefinition",
+          "compiled_body_bytes": 1152
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-esfparse-particle-definition/particle_definition.cpp"
+    },
+    {
+      "input_order": 6785,
+      "component": "w15-vi-io-sound-a-file-buffer-clear",
+      "object_name": "w15_vi_io_sound_a_file_buffer_clear.o",
+      "private_object_sha256": "4d8cba6ebe0a7964b89991f8aa6b9ea340db724020fac6de5e0658738d06005b",
+      "emitted_functions": [
+        {
+          "name": "BufferClear__6VIFile",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-buffer-clear/buffer_clear.cpp"
+    },
+    {
+      "input_order": 6786,
+      "component": "w15-vi-io-sound-a-file-cd-disk-ready",
+      "object_name": "w15_vi_io_sound_a_file_cd_disk_ready.o",
+      "private_object_sha256": "8ef0806e9341684acaa2812359b89f186b4c792d8ff4bdb826489f056ce7046b",
+      "emitted_functions": [
+        {
+          "name": "CDDiskReady__6VIFilei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-cd-disk-ready/cd_disk_ready.cpp"
+    },
+    {
+      "input_order": 6787,
+      "component": "w15-vi-io-sound-a-file-cd-search-file",
+      "object_name": "w15_vi_io_sound_a_file_cd_search_file.o",
+      "private_object_sha256": "a716696ec4d2e5f10a6f8ab2e1f6b5a0d63d7f68c6b9563a31bb81f30c312453",
+      "emitted_functions": [
+        {
+          "name": "CDSearchFile__6VIFileP10sceCdlFILEPCc",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-cd-search-file/cd_search_file.cpp"
+    },
+    {
+      "input_order": 6788,
+      "component": "w15-vi-io-sound-a-file-flush",
+      "object_name": "w15_vi_io_sound_a_file_flush.o",
+      "private_object_sha256": "ccc8a2cdadae9dddefe35f1d36afd5a8b8a92d5821fdb32b350a90205a9b1ef6",
+      "emitted_functions": [
+        {
+          "name": "Flush__6VIFile",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-flush/flush.cpp"
+    },
+    {
+      "input_order": 6789,
+      "component": "w15-vi-io-sound-a-file-memory-segm-calc-segm",
+      "object_name": "w15_vi_io_sound_a_file_memory_segm_calc_segm.o",
+      "private_object_sha256": "220760acd4f69c552a26441be9b99a28fdfcb2bcd93d9987611964b07949c7cc",
+      "emitted_functions": [
+        {
+          "name": "MemorySegmCalcSegm__6VIFile",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-memory-segm-calc-segm/calc_segm.cpp"
+    },
+    {
+      "input_order": 6790,
+      "component": "w15-vi-io-sound-a-file-write",
+      "object_name": "w15_vi_io_sound_a_file_write.o",
+      "private_object_sha256": "a418318d01f25ddc4d13dd8384f70b9a0795612d83ff4838dcf75d44589f0b7b",
+      "emitted_functions": [
+        {
+          "name": "Write__6VIFilePCvi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-file-write/write.cpp"
+    },
+    {
+      "input_order": 6791,
+      "component": "w15-vi-io-sound-a-objfile-num-sub-objects",
+      "object_name": "w15_vi_io_sound_a_objfile_num_sub_objects.o",
+      "private_object_sha256": "9509a8d82a6bf9971e276323074cdf18cfc38820eb08d8f987243e93fdc97fbc",
+      "emitted_functions": [
+        {
+          "name": "NumSubObjects__9VIObjFile",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-num-sub-objects/num_sub_objects.cpp"
+    },
+    {
+      "input_order": 6792,
+      "component": "w15-vi-io-sound-a-objfile-object-size",
+      "object_name": "w15_vi_io_sound_a_objfile_object_size.o",
+      "private_object_sha256": "19a7a250952bea1c7301d6bcb694a8436c8ef79198db48a233423544a12194c2",
+      "emitted_functions": [
+        {
+          "name": "ObjectSize__9VIObjFile",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-object-size/object_size.cpp"
+    },
+    {
+      "input_order": 6793,
+      "component": "w15-vi-io-sound-a-objfile-object-version",
+      "object_name": "w15_vi_io_sound_a_objfile_object_version.o",
+      "private_object_sha256": "dcd5d094dd61cbb1791b9f81d438cb82274341d52fb2b131b8abc5b53fc43be0",
+      "emitted_functions": [
+        {
+          "name": "ObjectVersion__9VIObjFile",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-object-version/object_version.cpp"
+    },
+    {
+      "input_order": 6794,
+      "component": "w15-vi-io-sound-a-objfile-read-begin",
+      "object_name": "w15_vi_io_sound_a_objfile_read_begin.o",
+      "private_object_sha256": "2c669d4fee1ab75c694c73f67d25876285876f739ec5a65ad1ab23178bee0235",
+      "emitted_functions": [
+        {
+          "name": "ReadBegin__9VIObjFileRUsT1RUlRUi",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-begin/read_begin.cpp"
+    },
+    {
+      "input_order": 6795,
+      "component": "w15-vi-io-sound-a-objfile-read-bytes",
+      "object_name": "w15_vi_io_sound_a_objfile_read_bytes.o",
+      "private_object_sha256": "9f4027fe31aa4e9ab9ff3a6ed7c2f3719eb9a2ca09dec0dd220707f64c1a29aa",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFilePUci",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-bytes/read_bytes.cpp"
+    },
+    {
+      "input_order": 6796,
+      "component": "w15-vi-io-sound-a-objfile-read-float",
+      "object_name": "w15_vi_io_sound_a_objfile_read_float.o",
+      "private_object_sha256": "917a98559116df83aa463fc631711934b5482b8d733fd12504cca80cf4acf8e9",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRf",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-float/read_float.cpp"
+    },
+    {
+      "input_order": 6797,
+      "component": "w15-vi-io-sound-a-objfile-read-int",
+      "object_name": "w15_vi_io_sound_a_objfile_read_int.o",
+      "private_object_sha256": "c2e4bc1010ae03feeb412a392b6a8539cebc669d593404dc755334661c638a3d",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-int/read_int.cpp"
+    },
+    {
+      "input_order": 6798,
+      "component": "w15-vi-io-sound-a-objfile-read-short",
+      "object_name": "w15_vi_io_sound_a_objfile_read_short.o",
+      "private_object_sha256": "65d9957b7aa1c9468086ec7e9247b352ea8fca2d55df842d55748381b48a907b",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRs",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-short/read_short.cpp"
+    },
+    {
+      "input_order": 6799,
+      "component": "w15-vi-io-sound-a-objfile-read-string",
+      "object_name": "w15_vi_io_sound_a_objfile_read_string.o",
+      "private_object_sha256": "55561b8bd5c0f1688b10912b911b58ebcf1cad9f307967e4058d3641197a248d",
+      "emitted_functions": [
+        {
+          "name": "ReadString__9VIObjFilePcUs",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-string/read_string.cpp"
+    },
+    {
+      "input_order": 6800,
+      "component": "w15-vi-io-sound-a-objfile-read-uchar",
+      "object_name": "w15_vi_io_sound_a_objfile_read_uchar.o",
+      "private_object_sha256": "bde78ec7d3be4100807115e37fb799b45a717fc4b77e1193ae32f80b74442dd3",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUc",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-uchar/read_uchar.cpp"
+    },
+    {
+      "input_order": 6801,
+      "component": "w15-vi-io-sound-a-objfile-read-uint",
+      "object_name": "w15_vi_io_sound_a_objfile_read_uint.o",
+      "private_object_sha256": "fa920e062eb0007c889ad487310862d3af78e59e8f57acc80f47a18a3bac406f",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-uint/read_uint.cpp"
+    },
+    {
+      "input_order": 6802,
+      "component": "w15-vi-io-sound-a-objfile-read-ushort",
+      "object_name": "w15_vi_io_sound_a_objfile_read_ushort.o",
+      "private_object_sha256": "a85ff03c9d16ead12b8c26822b217c07d831f827056996c8ed787744428371a5",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUs",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-ushort/read_ushort.cpp"
+    },
+    {
+      "input_order": 6803,
+      "component": "w15-vi-io-sound-a-objfile-write-end",
+      "object_name": "w15_vi_io_sound_a_objfile_write_end.o",
+      "private_object_sha256": "7fadf145a74601ac66eee4e43218664ed8afa89146e24de5ab5db8db5a898026",
+      "emitted_functions": [
+        {
+          "name": "WriteEnd__9VIObjFileRUi",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-objfile-write-end/write_end.cpp"
+    },
+    {
+      "input_order": 6804,
+      "component": "w15-vi-io-sound-a-sound-device-bgm-buffer-size",
+      "object_name": "w15_vi_io_sound_a_sound_device_bgm_buffer_size.o",
+      "private_object_sha256": "7da11b2b69cdde48b00c983e8a4bf3cb5c870e983a17fb218de6fe87710809f7",
+      "emitted_functions": [
+        {
+          "name": "BgmBufferSize__13VISoundDevice",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-bgm-buffer-size/bgm_buffer_size.cpp"
+    },
+    {
+      "input_order": 6805,
+      "component": "w15-vi-io-sound-a-sound-device-channel-count",
+      "object_name": "w15_vi_io_sound_a_sound_device_channel_count.o",
+      "private_object_sha256": "e392a967ed0935a19592cf01201746b1c4145cf6470335dc92fe3e6a80053564",
+      "emitted_functions": [
+        {
+          "name": "ChannelCount__13VISoundDeviceUl",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-channel-count/channel_count.cpp"
+    },
+    {
+      "input_order": 6806,
+      "component": "w15-vi-io-sound-a-sound-device-first-playback",
+      "object_name": "w15_vi_io_sound_a_sound_device_first_playback.o",
+      "private_object_sha256": "9710b0470fe7e88652ff5b566e1ddcf5d7314dc91b78779cdf7f813cca3d3663",
+      "emitted_functions": [
+        {
+          "name": "FirstPlayback__13VISoundDevice",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-first-playback/first_playback.cpp"
+    },
+    {
+      "input_order": 6807,
+      "component": "w15-vi-io-sound-a-sound-device-free-spu-mem",
+      "object_name": "w15_vi_io_sound_a_sound_device_free_spu_mem.o",
+      "private_object_sha256": "f8024249f6a7efaee9fb349c8dd230a73bea91060d2f577724c172ade506af1c",
+      "emitted_functions": [
+        {
+          "name": "FreeSpuMem__13VISoundDeviceUii",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-free-spu-mem/free_spu_mem.cpp"
+    },
+    {
+      "input_order": 6808,
+      "component": "w15-vi-io-sound-a-sound-device-is-playing",
+      "object_name": "w15_vi_io_sound_a_sound_device_is_playing.o",
+      "private_object_sha256": "c251f7409840d9a00564624347d22b773ee54886962963e002ae5ac6f72a20ea",
+      "emitted_functions": [
+        {
+          "name": "IsPlaying__13VISoundDevicei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-is-playing/is_playing.cpp"
+    },
+    {
+      "input_order": 6809,
+      "component": "w15-vi-io-sound-a-sound-device-next-playback",
+      "object_name": "w15_vi_io_sound_a_sound_device_next_playback.o",
+      "private_object_sha256": "8eb5800f0a8334302a967a58327451e7dc003d1b6d08891163e74795aea6b639",
+      "emitted_functions": [
+        {
+          "name": "NextPlayback__13VISoundDeviceP10VIPlayback",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-next-playback/next_playback.cpp"
+    },
+    {
+      "input_order": 6810,
+      "component": "w15-vi-io-sound-a-sound-device-set-output-mode",
+      "object_name": "w15_vi_io_sound_a_sound_device_set_output_mode.o",
+      "private_object_sha256": "b27272e08447c8db191e896879785f8f64855eaf570ed0af89c46c7c391ae27b",
+      "emitted_functions": [
+        {
+          "name": "SetOutputMode__13VISoundDevicei",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-set-output-mode/set_output_mode.cpp"
+    },
+    {
+      "input_order": 6811,
+      "component": "w15-vi-io-sound-a-sound-device-share-sound",
+      "object_name": "w15_vi_io_sound_a_sound_device_share_sound.o",
+      "private_object_sha256": "d8990492d21c6ddaecdb8acf283a811ed00722b186e292d18160f50cf7b1b41d",
+      "emitted_functions": [
+        {
+          "name": "ShareSound__13VISoundDevicei",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-share-sound/share_sound.cpp"
+    },
+    {
+      "input_order": 6812,
+      "component": "w15-vi-io-sound-a-sound-device-sound",
+      "object_name": "w15_vi_io_sound_a_sound_device_sound.o",
+      "private_object_sha256": "00b00a5c4fbe6b6b8ad2d915af41626a4a98ffb9a34618288b2405d20f9dc495",
+      "emitted_functions": [
+        {
+          "name": "Sound__13VISoundDevicei",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-sound/sound.cpp"
+    },
+    {
+      "input_order": 6813,
+      "component": "w15-vi-io-sound-a-sound-device-stop-all-bgm",
+      "object_name": "w15_vi_io_sound_a_sound_device_stop_all_bgm.o",
+      "private_object_sha256": "06ace430fa6dbc2d6dc60b6124eedb04b98616c0bb7d0b965cafebfd14100ce1",
+      "emitted_functions": [
+        {
+          "name": "StopAllBgm__13VISoundDevice",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/stop_all_bgm.cpp"
+    },
+    {
+      "input_order": 6814,
+      "component": "w15-vi-io-sound-a-sprite-copy",
+      "object_name": "w15_vi_io_sound_a_sprite_copy.o",
+      "private_object_sha256": "4263d231f370ca169bf72dde54c229293b39654b8c17e7264e52c128cc94e8f6",
+      "emitted_functions": [
+        {
+          "name": "Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sprite-copy/copy.cpp"
+    },
+    {
+      "input_order": 6815,
+      "component": "w15-vi-io-sound-a-sprite-release",
+      "object_name": "w15_vi_io_sound_a_sprite_release.o",
+      "private_object_sha256": "8d959d2fe6fe062115be577b5e05e33db68e036777b4fcd990440ca897553e82",
+      "emitted_functions": [
+        {
+          "name": "Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w15-vi-io-sound-a-sprite-release/release.cpp"
     }
   ],
   "drafts": [
@@ -101995,7 +102457,73 @@
     "sources/w15-startup-a-vieeloadirx/host_contract.cpp": "7c4acda8054b7351405362985cd3e97bfde7ee70cbca58e1ba1303cd1429b722",
     "sources/w15-startup-a-vieeloadirx/load_irx.cpp": "494fbc63fbd4b1786aceb126e5a2a5dc907a130db3f0cff1db5fd79235f0130e",
     "sources/w15-startup-a-vieeunloadirx/host_contract.cpp": "ea117730b7bfe6057bad12fc9b61ee72ace48a20adb82642a32b474d3e241655",
-    "sources/w15-startup-a-vieeunloadirx/unload_irx.cpp": "cfd1b6dbb686b1aec716239f14c5b68a7ff2587627052b03eaf1dc40bb71fffb"
+    "sources/w15-startup-a-vieeunloadirx/unload_irx.cpp": "cfd1b6dbb686b1aec716239f14c5b68a7ff2587627052b03eaf1dc40bb71fffb",
+    "sources/w15-vi-io-sound-a-battle-music-preload/host_check.cpp": "dd569de230a69758d517c622191c9dd50ee45fe1a6258487f8f6cec18c4d5f63",
+    "sources/w15-vi-io-sound-a-battle-music-preload/preload.cpp": "d47b2f401ec45667d339ad6ad4e187c7065fa573ff8a7cc3aea1959ef3848d53",
+    "sources/w15-vi-io-sound-a-esfparse-particle-definition/host_check.cpp": "683f4aa706b29ecd720a8924de9f9966635342d23da6af284a6003a4c21b4155",
+    "sources/w15-vi-io-sound-a-esfparse-particle-definition/particle_definition.cpp": "17388d8852573c886164c715f741838ffe7815e62356745e8d47555503f7d691",
+    "sources/w15-vi-io-sound-a-file-buffer-clear/buffer_clear.cpp": "2c09fefa669cf3b6cfc9f649a860e9543cd418bfed9faee2b6fdf320dae2a577",
+    "sources/w15-vi-io-sound-a-file-buffer-clear/host_check.cpp": "ccbae3045f9a579c8c731656dccb80d3cf65e803f077865a080aab15a42de43d",
+    "sources/w15-vi-io-sound-a-file-cd-disk-ready/cd_disk_ready.cpp": "71faca86f043d3e5c470a42083ad4fc1272f1056ff6de6c52e78c17d12be8f48",
+    "sources/w15-vi-io-sound-a-file-cd-disk-ready/host_check.cpp": "9c733abe755a63a5221260a4189fe6e44705ab637c125e521d5c41285a03aedb",
+    "sources/w15-vi-io-sound-a-file-cd-search-file/cd_search_file.cpp": "1924afdd4a8d20c04117cf929fda798aec9f87e0c510ddeba4a50a2494a88d97",
+    "sources/w15-vi-io-sound-a-file-cd-search-file/host_check.cpp": "120831791dc08c2477af185824e6dcf0a19da03c4263b9bc32bed03e4ef10e27",
+    "sources/w15-vi-io-sound-a-file-flush/flush.cpp": "0b5b47e06c1f46f7383506b208a4277958983ae49b52750e3812e568dfc760db",
+    "sources/w15-vi-io-sound-a-file-flush/host_check.cpp": "a7471ee2ce7fd6a530d867313e6bd83329b91aab092e5160dee2187cd495d1c9",
+    "sources/w15-vi-io-sound-a-file-memory-segm-calc-segm/calc_segm.cpp": "7cfe9d4a552af836427f2926ac9200f80e8ddd54988e1b722448b37bef4d5bb5",
+    "sources/w15-vi-io-sound-a-file-memory-segm-calc-segm/host_check.cpp": "1c36f14ff6406adb25d625396b164decc55cac494376c78a610dfa4800921282",
+    "sources/w15-vi-io-sound-a-file-write/host_check.cpp": "a38f2318c6e8a0b9a2532b275e0c93469cf588ce47f28ec629ff4bf36c12ab12",
+    "sources/w15-vi-io-sound-a-file-write/write.cpp": "14895b9c6ed0598ea16fcdeb9b69125cdb859813449247d33bfa1df54073fe6c",
+    "sources/w15-vi-io-sound-a-objfile-num-sub-objects/host_check.cpp": "e143e56123e7150f33d506e23bf4b11e27ac7bf7004c283ddae2e22c2fc560de",
+    "sources/w15-vi-io-sound-a-objfile-num-sub-objects/num_sub_objects.cpp": "cfeab57aae4ba64a50c9be1f54d257499fd65d6490c0e36bd1a8fb88cf5ad69d",
+    "sources/w15-vi-io-sound-a-objfile-object-size/host_check.cpp": "5e4d057bea1be88a2ed05092f8929e665c11ad2f9524732a63737c0f7e6a469f",
+    "sources/w15-vi-io-sound-a-objfile-object-size/object_size.cpp": "8270c53a6e08838ef40ae558b6315e740b568373ec509a448715b55a5d8fd13b",
+    "sources/w15-vi-io-sound-a-objfile-object-version/host_check.cpp": "ab02fc2ab3addb92517950ec0f1130a6c9c20f0a40e1bd2ce5bd5b9a44164ddd",
+    "sources/w15-vi-io-sound-a-objfile-object-version/object_version.cpp": "9634179250266bf4af18b4e24f48f871ac9ee73ca43a0ee9c77c9f0f7043edc0",
+    "sources/w15-vi-io-sound-a-objfile-read-begin/host_check.cpp": "3ba77d000c7f006306068cad95ff7446e5102e7218931dcd28af5467af1cbee5",
+    "sources/w15-vi-io-sound-a-objfile-read-begin/read_begin.cpp": "2547b78d81b61225708320fc86816eb104aea4fc92fbc3cea46c0cc8bb43fd29",
+    "sources/w15-vi-io-sound-a-objfile-read-bytes/host_check.cpp": "45ad4527868f86386c30728621a533889ebbe7e93fa910c2479b12bf7376a076",
+    "sources/w15-vi-io-sound-a-objfile-read-bytes/read_bytes.cpp": "b062639d3fa7a71e88ae4dd6ee010d8cecde352d1866efd0c260c14100c12960",
+    "sources/w15-vi-io-sound-a-objfile-read-float/host_check.cpp": "87025a990336bc72098d5820b3af97b0792221354e34957f1568365a7464c600",
+    "sources/w15-vi-io-sound-a-objfile-read-float/read_float.cpp": "fb66a94034a2fe95961f0a1e6d0a6af80ff030cb349a667a91610f98cebd1ed3",
+    "sources/w15-vi-io-sound-a-objfile-read-int/host_check.cpp": "d4739ed5a2d589e83608d116fba94465a025ba751de4a6e99f53edfc9c329b16",
+    "sources/w15-vi-io-sound-a-objfile-read-int/read_int.cpp": "fe202ef85e73d90b8eec8ee6e0a60700da5cfb71209b3bc73989271421494541",
+    "sources/w15-vi-io-sound-a-objfile-read-short/host_check.cpp": "62cf14dc889a76d4d42e82c6182bc78c5bd69e1a8265a4342182472763d5779c",
+    "sources/w15-vi-io-sound-a-objfile-read-short/read_short.cpp": "024c7519a0b85c71af2addfc3a507e993ca15a99775d7084cd7ee868cb5b0331",
+    "sources/w15-vi-io-sound-a-objfile-read-string/host_check.cpp": "6821bc1e1ac33048d02bf57eb545d142b50bba13f3c078e2fc3a07e174defb0e",
+    "sources/w15-vi-io-sound-a-objfile-read-string/read_string.cpp": "29cdb07b40bcf033db466e9c22a0b357198c926caabec6b8105ee40f458003dd",
+    "sources/w15-vi-io-sound-a-objfile-read-uchar/host_check.cpp": "7c2b4106ba2ed230709b56b69de18f7489696bd0349e18c69f337477ae6064e8",
+    "sources/w15-vi-io-sound-a-objfile-read-uchar/read_uchar.cpp": "19fa1894e427b0ec872cfd1af34d823de1112255263b12bbe4d3b24897ef29ff",
+    "sources/w15-vi-io-sound-a-objfile-read-uint/host_check.cpp": "56e70694f69c0462ca56315f9d7e2eb14322561bd90ad6cae86f904b8d8c5fca",
+    "sources/w15-vi-io-sound-a-objfile-read-uint/read_uint.cpp": "2209396d907c88684c5ce935b03ca72cc09586ba3ad882c808e3556da7eb48b6",
+    "sources/w15-vi-io-sound-a-objfile-read-ushort/host_check.cpp": "db85633858403c89c7039618e435940f823db36cb3a521d257f514c0e2dc62f0",
+    "sources/w15-vi-io-sound-a-objfile-read-ushort/read_ushort.cpp": "3cbfccb4d1ba6228265e56d525869b3e813d43aff561c5a72b077d2e8cefb833",
+    "sources/w15-vi-io-sound-a-objfile-write-end/host_check.cpp": "41c08b88a1a968f4e18256212e86e6b131bdce99484353d4a5e9611d12c477d9",
+    "sources/w15-vi-io-sound-a-objfile-write-end/write_end.cpp": "3c4616dec04d553d4c55b0da6d3535e14dcdd263741c2ad9170a61bca5095b80",
+    "sources/w15-vi-io-sound-a-sound-device-bgm-buffer-size/bgm_buffer_size.cpp": "fa5bf9c1c05a16d65c05f7153aa0f90659ede6494c59a4cf7a78e01128ee8062",
+    "sources/w15-vi-io-sound-a-sound-device-bgm-buffer-size/host_check.cpp": "3a5d6cddc71694f29aa5c13a18bad85e6ceb8f1ae3d83cc692bde9cd32f579c3",
+    "sources/w15-vi-io-sound-a-sound-device-channel-count/channel_count.cpp": "f794f36352e5d1beb2ab11d8899949d083a74ead63e7524890a5989611dbbd70",
+    "sources/w15-vi-io-sound-a-sound-device-channel-count/host_check.cpp": "8dc648ff07ee085662aa52b6c11fcb35db8ced2e203b6c62980a5071a8934c8e",
+    "sources/w15-vi-io-sound-a-sound-device-first-playback/first_playback.cpp": "07e7eeb9bc3f1a11b0730a16a6d4a6daaa095888d6d6ea72a16699049f81c929",
+    "sources/w15-vi-io-sound-a-sound-device-first-playback/host_check.cpp": "ad06a046ede83380310c96b7d1c291e30d8e57cf408aaab4c96b3a84aad3a380",
+    "sources/w15-vi-io-sound-a-sound-device-free-spu-mem/free_spu_mem.cpp": "a9b5cb1918410c5f3025bd633f72ac734ef7bb0a6c150c61a8158077c4a527d2",
+    "sources/w15-vi-io-sound-a-sound-device-free-spu-mem/host_check.cpp": "c9cd71ffeec1e89394545f3981ccf706bff3e5e24d6e7348fb84d916cd8ac4ea",
+    "sources/w15-vi-io-sound-a-sound-device-is-playing/host_check.cpp": "9339ca2da3976c9e582e613fc9e2eaa11f54849e93c7c29b802f5c278d1d3f46",
+    "sources/w15-vi-io-sound-a-sound-device-is-playing/is_playing.cpp": "21d4c57104456f2e11015dd4cef97fad0e96a2f06de3f97118a7d4e80dad1fc0",
+    "sources/w15-vi-io-sound-a-sound-device-next-playback/host_check.cpp": "4c924baf23c35fe1b78469bee04b88bb21c8f21ed83abdfbb04f3c86caf5685d",
+    "sources/w15-vi-io-sound-a-sound-device-next-playback/next_playback.cpp": "232ab671b2fb7a82262114942a3ab81e6aa8413128cc8da49655341b62f1341d",
+    "sources/w15-vi-io-sound-a-sound-device-set-output-mode/host_check.cpp": "fcb449e4e9d628f3bbfaae983bc77003214fadfbad861346a627c7a8e019c124",
+    "sources/w15-vi-io-sound-a-sound-device-set-output-mode/set_output_mode.cpp": "86658bdef019f294a39b2bbf524204ec0952af955fcec5f11fbdb5bb4054365f",
+    "sources/w15-vi-io-sound-a-sound-device-share-sound/host_check.cpp": "c1a76e477def58190cac2bb8c18d83f48160495a82d47cc3772e37d55c7827e1",
+    "sources/w15-vi-io-sound-a-sound-device-share-sound/share_sound.cpp": "abbc947b8b9b99432039ed9620ebb69430a2dc1a55605b2c6a29bf4e0095232c",
+    "sources/w15-vi-io-sound-a-sound-device-sound/host_check.cpp": "7293136f7f1d6636d08c14f2500d09717821a7be17dd6c84191130fae7cf1b90",
+    "sources/w15-vi-io-sound-a-sound-device-sound/sound.cpp": "0c4f7f2fb3e4a40a1b2c4e4bcea868ef03a7dea1cb34ea72cbf87ab28783b067",
+    "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/host_check.cpp": "aa37e8364dced3301392698eea2a3d68258df34fad12da5169b23c52c537fe4b",
+    "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/stop_all_bgm.cpp": "9d49f533aec8b2ad5644545a78d45393f00bc5e52c899214ded6316aa7f4aa74",
+    "sources/w15-vi-io-sound-a-sprite-copy/copy.cpp": "37b6b0672d7fb1cb9597bd4c4e0fdc6a5697c78c877d74b0d6e80596c930e13c",
+    "sources/w15-vi-io-sound-a-sprite-copy/host_check.cpp": "8c25dfa41b9cee0da2827ec490c088089eadd9f1a4255cad2407f43e9a3d8366",
+    "sources/w15-vi-io-sound-a-sprite-release/host_check.cpp": "aa131e238fa0c6d7f9886e2d2a404e4288727e7676dc3d6b375140784892399b",
+    "sources/w15-vi-io-sound-a-sprite-release/release.cpp": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4"
   },
   "additional_implementations": [
     {
@@ -102437,11 +102965,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 6783,
-    "authored_default_inputs": 6781,
+    "selected_inputs": 6816,
+    "authored_default_inputs": 6814,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5398,
-    "compiled_body_bytes_from_accepted_inputs": 2165888,
+    "emitted_function_definitions_including_helpers": 5431,
+    "compiled_body_bytes_from_accepted_inputs": 2170932,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -102454,7 +102982,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6470
+    "package_selected_inputs": 6503
   },
   "startup_implementations": [
     {
@@ -205093,6 +205621,567 @@
       ],
       "host_files": [
         "sources/w15-startup-a-vieeunloadirx/host_contract.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-battle-music-preload/preload.cpp",
+      "source_sha256": "d47b2f401ec45667d339ad6ad4e187c7065fa573ff8a7cc3aea1959ef3848d53",
+      "object_sha256": "fd72e0fe985648601b175cdf973e517986b4a67a95ceeff347a674f76b4b2b69",
+      "emitted_functions": [
+        {
+          "name": "Preload__13VIBattleMusici",
+          "compiled_body_bytes": 236
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-battle-music-preload/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-esfparse-particle-definition/particle_definition.cpp",
+      "source_sha256": "17388d8852573c886164c715f741838ffe7815e62356745e8d47555503f7d691",
+      "object_sha256": "a89ddd2114d8112c603847a289544963d0fd08ab12a8b6e8fced17e89c569945",
+      "emitted_functions": [
+        {
+          "name": "ParseParticleDefinition__10VIESFParseR9VIObjFileR20VIParticleDefinition",
+          "compiled_body_bytes": 1152
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-esfparse-particle-definition/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-buffer-clear/buffer_clear.cpp",
+      "source_sha256": "2c09fefa669cf3b6cfc9f649a860e9543cd418bfed9faee2b6fdf320dae2a577",
+      "object_sha256": "4d8cba6ebe0a7964b89991f8aa6b9ea340db724020fac6de5e0658738d06005b",
+      "emitted_functions": [
+        {
+          "name": "BufferClear__6VIFile",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-buffer-clear/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-cd-disk-ready/cd_disk_ready.cpp",
+      "source_sha256": "71faca86f043d3e5c470a42083ad4fc1272f1056ff6de6c52e78c17d12be8f48",
+      "object_sha256": "8ef0806e9341684acaa2812359b89f186b4c792d8ff4bdb826489f056ce7046b",
+      "emitted_functions": [
+        {
+          "name": "CDDiskReady__6VIFilei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-cd-disk-ready/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-cd-search-file/cd_search_file.cpp",
+      "source_sha256": "1924afdd4a8d20c04117cf929fda798aec9f87e0c510ddeba4a50a2494a88d97",
+      "object_sha256": "a716696ec4d2e5f10a6f8ab2e1f6b5a0d63d7f68c6b9563a31bb81f30c312453",
+      "emitted_functions": [
+        {
+          "name": "CDSearchFile__6VIFileP10sceCdlFILEPCc",
+          "compiled_body_bytes": 280
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-cd-search-file/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-flush/flush.cpp",
+      "source_sha256": "0b5b47e06c1f46f7383506b208a4277958983ae49b52750e3812e568dfc760db",
+      "object_sha256": "ccc8a2cdadae9dddefe35f1d36afd5a8b8a92d5821fdb32b350a90205a9b1ef6",
+      "emitted_functions": [
+        {
+          "name": "Flush__6VIFile",
+          "compiled_body_bytes": 56
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-flush/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-memory-segm-calc-segm/calc_segm.cpp",
+      "source_sha256": "7cfe9d4a552af836427f2926ac9200f80e8ddd54988e1b722448b37bef4d5bb5",
+      "object_sha256": "220760acd4f69c552a26441be9b99a28fdfcb2bcd93d9987611964b07949c7cc",
+      "emitted_functions": [
+        {
+          "name": "MemorySegmCalcSegm__6VIFile",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-memory-segm-calc-segm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-file-write/write.cpp",
+      "source_sha256": "14895b9c6ed0598ea16fcdeb9b69125cdb859813449247d33bfa1df54073fe6c",
+      "object_sha256": "a418318d01f25ddc4d13dd8384f70b9a0795612d83ff4838dcf75d44589f0b7b",
+      "emitted_functions": [
+        {
+          "name": "Write__6VIFilePCvi",
+          "compiled_body_bytes": 112
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-file-write/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-num-sub-objects/num_sub_objects.cpp",
+      "source_sha256": "cfeab57aae4ba64a50c9be1f54d257499fd65d6490c0e36bd1a8fb88cf5ad69d",
+      "object_sha256": "9509a8d82a6bf9971e276323074cdf18cfc38820eb08d8f987243e93fdc97fbc",
+      "emitted_functions": [
+        {
+          "name": "NumSubObjects__9VIObjFile",
+          "compiled_body_bytes": 36
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-num-sub-objects/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-object-size/object_size.cpp",
+      "source_sha256": "8270c53a6e08838ef40ae558b6315e740b568373ec509a448715b55a5d8fd13b",
+      "object_sha256": "19a7a250952bea1c7301d6bcb694a8436c8ef79198db48a233423544a12194c2",
+      "emitted_functions": [
+        {
+          "name": "ObjectSize__9VIObjFile",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-object-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-object-version/object_version.cpp",
+      "source_sha256": "9634179250266bf4af18b4e24f48f871ac9ee73ca43a0ee9c77c9f0f7043edc0",
+      "object_sha256": "dcd5d094dd61cbb1791b9f81d438cb82274341d52fb2b131b8abc5b53fc43be0",
+      "emitted_functions": [
+        {
+          "name": "ObjectVersion__9VIObjFile",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-object-version/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-begin/read_begin.cpp",
+      "source_sha256": "2547b78d81b61225708320fc86816eb104aea4fc92fbc3cea46c0cc8bb43fd29",
+      "object_sha256": "2c669d4fee1ab75c694c73f67d25876285876f739ec5a65ad1ab23178bee0235",
+      "emitted_functions": [
+        {
+          "name": "ReadBegin__9VIObjFileRUsT1RUlRUi",
+          "compiled_body_bytes": 480
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-begin/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-bytes/read_bytes.cpp",
+      "source_sha256": "b062639d3fa7a71e88ae4dd6ee010d8cecde352d1866efd0c260c14100c12960",
+      "object_sha256": "9f4027fe31aa4e9ab9ff3a6ed7c2f3719eb9a2ca09dec0dd220707f64c1a29aa",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFilePUci",
+          "compiled_body_bytes": 136
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-bytes/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-float/read_float.cpp",
+      "source_sha256": "fb66a94034a2fe95961f0a1e6d0a6af80ff030cb349a667a91610f98cebd1ed3",
+      "object_sha256": "917a98559116df83aa463fc631711934b5482b8d733fd12504cca80cf4acf8e9",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRf",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-float/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-int/read_int.cpp",
+      "source_sha256": "fe202ef85e73d90b8eec8ee6e0a60700da5cfb71209b3bc73989271421494541",
+      "object_sha256": "c2e4bc1010ae03feeb412a392b6a8539cebc669d593404dc755334661c638a3d",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-int/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-short/read_short.cpp",
+      "source_sha256": "024c7519a0b85c71af2addfc3a507e993ca15a99775d7084cd7ee868cb5b0331",
+      "object_sha256": "65d9957b7aa1c9468086ec7e9247b352ea8fca2d55df842d55748381b48a907b",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRs",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-short/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-string/read_string.cpp",
+      "source_sha256": "29cdb07b40bcf033db466e9c22a0b357198c926caabec6b8105ee40f458003dd",
+      "object_sha256": "55561b8bd5c0f1688b10912b911b58ebcf1cad9f307967e4058d3641197a248d",
+      "emitted_functions": [
+        {
+          "name": "ReadString__9VIObjFilePcUs",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-string/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-uchar/read_uchar.cpp",
+      "source_sha256": "19fa1894e427b0ec872cfd1af34d823de1112255263b12bbe4d3b24897ef29ff",
+      "object_sha256": "bde78ec7d3be4100807115e37fb799b45a717fc4b77e1193ae32f80b74442dd3",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUc",
+          "compiled_body_bytes": 120
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-uchar/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-uint/read_uint.cpp",
+      "source_sha256": "2209396d907c88684c5ce935b03ca72cc09586ba3ad882c808e3556da7eb48b6",
+      "object_sha256": "fa920e062eb0007c889ad487310862d3af78e59e8f57acc80f47a18a3bac406f",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUi",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-uint/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-read-ushort/read_ushort.cpp",
+      "source_sha256": "3cbfccb4d1ba6228265e56d525869b3e813d43aff561c5a72b077d2e8cefb833",
+      "object_sha256": "a85ff03c9d16ead12b8c26822b217c07d831f827056996c8ed787744428371a5",
+      "emitted_functions": [
+        {
+          "name": "Read__9VIObjFileRUs",
+          "compiled_body_bytes": 184
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-read-ushort/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-objfile-write-end/write_end.cpp",
+      "source_sha256": "3c4616dec04d553d4c55b0da6d3535e14dcdd263741c2ad9170a61bca5095b80",
+      "object_sha256": "7fadf145a74601ac66eee4e43218664ed8afa89146e24de5ab5db8db5a898026",
+      "emitted_functions": [
+        {
+          "name": "WriteEnd__9VIObjFileRUi",
+          "compiled_body_bytes": 504
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-objfile-write-end/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-bgm-buffer-size/bgm_buffer_size.cpp",
+      "source_sha256": "fa5bf9c1c05a16d65c05f7153aa0f90659ede6494c59a4cf7a78e01128ee8062",
+      "object_sha256": "7da11b2b69cdde48b00c983e8a4bf3cb5c870e983a17fb218de6fe87710809f7",
+      "emitted_functions": [
+        {
+          "name": "BgmBufferSize__13VISoundDevice",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-bgm-buffer-size/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-channel-count/channel_count.cpp",
+      "source_sha256": "f794f36352e5d1beb2ab11d8899949d083a74ead63e7524890a5989611dbbd70",
+      "object_sha256": "e392a967ed0935a19592cf01201746b1c4145cf6470335dc92fe3e6a80053564",
+      "emitted_functions": [
+        {
+          "name": "ChannelCount__13VISoundDeviceUl",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-channel-count/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-first-playback/first_playback.cpp",
+      "source_sha256": "07e7eeb9bc3f1a11b0730a16a6d4a6daaa095888d6d6ea72a16699049f81c929",
+      "object_sha256": "9710b0470fe7e88652ff5b566e1ddcf5d7314dc91b78779cdf7f813cca3d3663",
+      "emitted_functions": [
+        {
+          "name": "FirstPlayback__13VISoundDevice",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-first-playback/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-free-spu-mem/free_spu_mem.cpp",
+      "source_sha256": "a9b5cb1918410c5f3025bd633f72ac734ef7bb0a6c150c61a8158077c4a527d2",
+      "object_sha256": "f8024249f6a7efaee9fb349c8dd230a73bea91060d2f577724c172ade506af1c",
+      "emitted_functions": [
+        {
+          "name": "FreeSpuMem__13VISoundDeviceUii",
+          "compiled_body_bytes": 176
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-free-spu-mem/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-is-playing/is_playing.cpp",
+      "source_sha256": "21d4c57104456f2e11015dd4cef97fad0e96a2f06de3f97118a7d4e80dad1fc0",
+      "object_sha256": "c251f7409840d9a00564624347d22b773ee54886962963e002ae5ac6f72a20ea",
+      "emitted_functions": [
+        {
+          "name": "IsPlaying__13VISoundDevicei",
+          "compiled_body_bytes": 32
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-is-playing/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-next-playback/next_playback.cpp",
+      "source_sha256": "232ab671b2fb7a82262114942a3ab81e6aa8413128cc8da49655341b62f1341d",
+      "object_sha256": "8eb5800f0a8334302a967a58327451e7dc003d1b6d08891163e74795aea6b639",
+      "emitted_functions": [
+        {
+          "name": "NextPlayback__13VISoundDeviceP10VIPlayback",
+          "compiled_body_bytes": 16
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-next-playback/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-set-output-mode/set_output_mode.cpp",
+      "source_sha256": "86658bdef019f294a39b2bbf524204ec0952af955fcec5f11fbdb5bb4054365f",
+      "object_sha256": "b27272e08447c8db191e896879785f8f64855eaf570ed0af89c46c7c391ae27b",
+      "emitted_functions": [
+        {
+          "name": "SetOutputMode__13VISoundDevicei",
+          "compiled_body_bytes": 96
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-set-output-mode/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-share-sound/share_sound.cpp",
+      "source_sha256": "abbc947b8b9b99432039ed9620ebb69430a2dc1a55605b2c6a29bf4e0095232c",
+      "object_sha256": "d8990492d21c6ddaecdb8acf283a811ed00722b186e292d18160f50cf7b1b41d",
+      "emitted_functions": [
+        {
+          "name": "ShareSound__13VISoundDevicei",
+          "compiled_body_bytes": 48
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-share-sound/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-sound/sound.cpp",
+      "source_sha256": "0c4f7f2fb3e4a40a1b2c4e4bcea868ef03a7dea1cb34ea72cbf87ab28783b067",
+      "object_sha256": "00b00a5c4fbe6b6b8ad2d915af41626a4a98ffb9a34618288b2405d20f9dc495",
+      "emitted_functions": [
+        {
+          "name": "Sound__13VISoundDevicei",
+          "compiled_body_bytes": 40
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-sound/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/stop_all_bgm.cpp",
+      "source_sha256": "9d49f533aec8b2ad5644545a78d45393f00bc5e52c899214ded6316aa7f4aa74",
+      "object_sha256": "06ace430fa6dbc2d6dc60b6124eedb04b98616c0bb7d0b965cafebfd14100ce1",
+      "emitted_functions": [
+        {
+          "name": "StopAllBgm__13VISoundDevice",
+          "compiled_body_bytes": 76
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sound-device-stop-all-bgm/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sprite-copy/copy.cpp",
+      "source_sha256": "37b6b0672d7fb1cb9597bd4c4e0fdc6a5697c78c877d74b0d6e80596c930e13c",
+      "object_sha256": "4263d231f370ca169bf72dde54c229293b39654b8c17e7264e52c128cc94e8f6",
+      "emitted_functions": [
+        {
+          "name": "Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sprite-copy/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w15-vi-io-sound-a",
+      "source": "sources/w15-vi-io-sound-a-sprite-release/release.cpp",
+      "source_sha256": "ad1eb9bf25a26013abaaa73b648bacf4879f617608f14ace3f3619d0591411a4",
+      "object_sha256": "8d959d2fe6fe062115be577b5e05e33db68e036777b4fcd990440ca897553e82",
+      "emitted_functions": [
+        {
+          "name": "Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide",
+          "compiled_body_bytes": 8
+        }
+      ],
+      "host_files": [
+        "sources/w15-vi-io-sound-a-sprite-release/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

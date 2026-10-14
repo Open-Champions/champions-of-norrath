@@ -10222,3 +10222,20 @@ Opened: `SetAlarm`, `VIInitUSocketExApi__Fv`, `hostname`, `pf`, `sceInetAddress2
 
 Full partial build: 6781 source compilations, one link, 5396 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-13 23:17 CDT — agents/w15-startup-a — 905 unresolved imports
+
+## agents/w15-vi-io-sound-a
+
+Merged (merge commit; tip more than 45 minutes old). All 33 units have a host check (`host_check.cpp`, not a plan input) and the notes record a private paired run per function; the notes say no full partial build was run, so the count below is from this integration. All 33 units are selected.
+
+| | |
+|---|---|
+| Before | 905 |
+| After | 895 |
+| Closed | 33 |
+| Opened | 23 |
+
+Closed: `BgmBufferSize__13VISoundDevice`, `BufferClear__6VIFile`, `CDDiskReady__6VIFilei`, `CDSearchFile__6VIFileP10sceCdlFILEPCc`, `ChannelCount__13VISoundDeviceUl`, `Copy__8VISpriteR7VISceneP8VIRasterP13VISoundDeviceR9VICollidei`, `FirstPlayback__13VISoundDevice`, `Flush__6VIFile`, `FreeSpuMem__13VISoundDeviceUii`, `IsPlaying__13VISoundDevicei`, `MemorySegmCalcSegm__6VIFile`, `NextPlayback__13VISoundDeviceP10VIPlayback`, `NumSubObjects__9VIObjFile`, `ObjectSize__9VIObjFile`, `ObjectVersion__9VIObjFile`, `ParseParticleDefinition__10VIESFParseR9VIObjFileR20VIParticleDefinition`, `Preload__13VIBattleMusici`, `ReadBegin__9VIObjFileRUsT1RUlRUi`, `ReadString__9VIObjFilePcUs`, `Read__9VIObjFilePUci`, `Read__9VIObjFileRUc`, `Read__9VIObjFileRUi`, `Read__9VIObjFileRUs`, `Read__9VIObjFileRf`, `Read__9VIObjFileRi`, `Read__9VIObjFileRs`, `Release__8VISpriteR7VISceneR12VIDictionaryP8VIRasterP13VISoundDeviceR9VICollide`, `SetOutputMode__13VISoundDevicei`, `ShareSound__13VISoundDevicei`, `Sound__13VISoundDevicei`, `StopAllBgm__13VISoundDevice`, `WriteEnd__9VIObjFileRUi`, `Write__6VIFilePCvi`
+
+Opened: `BufferedWrite__6VIFilePCvi`, `CreateMotif__22VIParticleDefinitionEx`, `Eof__6VIFile`, `InsertAfter__7VILNodeP7VILNode`, `MemorySegmWrite__6VIFilePCvi`, `MemoryWrite__6VIFilePCvi`, `MergeFreeSpuMem__13VISoundDevice`, `ParseSound__10VIESFParsePCcR7VIScene`, `ReadStringBody__9VIObjFilePcUsUs`, `ReadStringLength__9VIObjFileRUs`, `SetBlendMode__20VIParticleDefinitionQ222VIParticleDefinitionEx9BLENDMODE`, `SetInnerHprVar__20VIParticleAttributesRC7VIVect3`, `SetInnerOffset__20VIParticleAttributesRC7VIVect3`, `SetName__15VIParticleMotifPCc`, `SetOuterHprVar__20VIParticleAttributesRC7VIVect3`, `SetOuterOffset__20VIParticleAttributesRC7VIVect3`, `SetRepeat__4VIXmi`, `SetTextureConfiguration__20VIParticleDefinitioni`, `SetTexture__20VIParticleDefinitioniR8VIRasterR12VIDictionary`, `SetZTest__20VIParticleDefinitionb`, `SetZWrite__20VIParticleDefinitionb`, `VICdSearchFile__FPCcPUiT1`, `_13VISoundDevice$sBgmVersion`
+
+Full partial build: 6814 source compilations, one link, 5429 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
