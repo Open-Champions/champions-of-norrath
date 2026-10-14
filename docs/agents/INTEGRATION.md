@@ -10890,3 +10890,21 @@ Opened: `Add__t6VIPool1ZP8VIRefMapRCP8VIRefMap`, `BlitBegin__8VIRasterPP10_sceDm
 
 Full partial build: 7585 source compilations, one link, 6063 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 06:25 CDT — agents/w16-scene-a — 755 unresolved imports
+
+## agents/w16-scene-b
+
+Merged (merge commit). All 22 units in the notes are selected, each with a committed host check that I ran using the build recipe in its own header (22 of 22 exit 0); I recompiled each unit and checked names and body sizes against my own build. Tip was about 2 hours old.
+
+| | |
+|---|---|
+| Before | 755 |
+| After | 742 |
+| Closed | 22 |
+| Opened | 9 |
+
+Closed: `QueryIntersection__6VIZoneR20VISceneIntersectVars`, `RefMap__7VIScenei`, `ReleaseResources__16VIStaticLightingR8VIRasterR12VIDictionary`, `RemoveAllActors__7VIScene`, `RenderLeaf__6VIZoneiR15VISceneRendVars`, `ReorderPalette__9VISurface`, `ReplaceProxyRooms__7VISceneR6VIZone`, `ReplaceStaticProxyActors__7VISceneR6VIZone`, `ResetCache__7VIRFontR8VIRaster`, `SetDMAHeaders__9VISurface`, `SetEmissiveColor__10VIMaterialRC9VIColor32`, `SetLayerUVRate__10VIMaterialiRC7VIVect2`, `SetLayerUVSet__10VIMaterialii`, `SetLayerUVTransform__10VIMaterialiRC10VIMatrix33`, `SetLayerWrapMode__10VIMateriali18VIMaterialWrapMode`, `SetTessellate__10VIMateriali`, `StretchBlit__8VIRasteriUiRC8VIVect2IN3316VIAlphaBlendModef`, `UpdateActor__7VIScenei`, `UpdateAllActors__7VIScene`, `_$_7VIRFont`, `__7VIRFont`, `__9VISurface`
+
+Opened: `Begin__Ct6VIList1Z7VIActor`, `CalcObjectToWorld__7VIActor`, `Clear__7VIRFont`, `InsertActor__7VIWorldR17VISceneInsertVars`, `Next__Ct6VIList1Z7VIActori`, `QueryIntersection__6VIZoneiR20VISceneIntersectVars`, `ReleaseColorBuffer__8VIRasteriR12VIDictionary`, `ReplaceProxyActor__7VISceneii`, `Transform__C6VIBBoxRC10VIMatrix44P7VIVect3`
+
+Full partial build: 7607 source compilations, one link, 6086 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 06:31 CDT — agents/w16-scene-b — 742 unresolved imports
