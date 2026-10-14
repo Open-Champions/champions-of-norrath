@@ -9840,3 +9840,21 @@ Closed: `CDSync__6VIFilei`, `CheckforModifierKeyEvents`, `DequeueKeyEvent__10VIK
 
 Opened: `BufferClear__6VIFile`, `CDDiskReady__6VIFilei`, `CDSearchFile__6VIFileP10sceCdlFILEPCc`, `CombineDeadkey__10VIKeyboardUc`, `MemorySegmCalcSegm__6VIFile`, `QueueKeyEvent__10VIKeyboardP12VIConsoleKey`, `SetIcon__16VIIconDefinitionPvi`, `SetTitle__16VIIconDefinitionPCc`, `USEnglishKbdMapTable`, `VICdStreamDiskReady__Fv`, `VICdStreamRead__FUiUiPvi`, `VICdStreamStatus__Fv`, `VICdStreamSync__Fi`, `VIEEFileDelay__Fi`, `VIMemCardReadFileAsync__FPCcPvi`, `sAsyncFd`, `sFrDeadkey`, `sIconDefinition`, `sListIcon`, `sMemCardInitialized`, `sProductTitle`, `sUsDeadkeyCount`, `snprintf__8VIStringPciPCce`, `strupr__8VIStringPc`, `texNormalizedHeight__FP8_texture`, `texNormalizedWidth__FP8_texture`
 - 2026-10-13 18:45 CDT — agents/w14-startup-io-a — 962 unresolved imports
+
+## agents/w14-startup-io-b (partly selected)
+
+Merged (merge commit, branch tip `8def8c23`; the notes have the starting-point/functions with checks, observed/inferred/unknown, closed, opened, plan-entry, never-executed and not-done sections; the tip was over an hour old). The whole tree is in the snapshot, but only 4 units are in the build plan, with fresh `input_order` values 6258 through 6261, each with a committed host contract that builds and passes here (6 of 6 contracts in the package): `padChangeIndex__Fii`, `unet_startup_async__Fv`, `unet_startup_async_status__Fv` (324 compiled bytes, matching a fresh compile) and the `pad-mtap-state` data unit (twelve pad and multitap objects, republished with a host contract). The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed.
+
+NOT selected (files stay in the snapshot, with no plan entry): `w14-startup-io-b-loader-failure-word`, because the notes say it deliberately replaces an absolute symbol with real storage and needs the owner's decision; `w14-startup-io-b-receive-control-packet`, a revision of `receiveControlPacket__FPiib` that conflicts with the already planned `w11-game-a-receive-control-packet` (both define the name; the swap is the owner's call, so `norrath_net_flag_bytes_48681c` stays unresolved); and the `sony-cd-vblank-views` entry the notes mention, which belongs to another package. Full build with the final snapshot: 6260 authored inputs, zero COMMON.
+
+| | |
+|---|---|
+| Before | 962 |
+| After | 951 |
+| Closed | 15 |
+| Opened | 4 |
+
+Closed: `norrath_libmtap_change_priority_client_view`, `norrath_libmtap_get_connection_client_view`, `norrath_libmtap_module_version_client_view`, `norrath_libmtap_port_close_client_view`, `norrath_libmtap_port_open_client_view`, `norrath_libmtap_rpc_buffer_view`, `norrath_libpad_dma_info_view`, `norrath_libpad_is_init_word`, `norrath_libpad_is_warning_word`, `norrath_libpad_port_info_view`, `norrath_libpad_rpc_buffer_view`, `norrath_libpad_rpc_clients_view`, `padChangeIndex__Fii`, `unet_startup_async__Fv`, `unet_startup_async_status__Fv`
+
+Opened: `net_ready`, `unet_startup_thread__FPv`, `unet_startup_thread_id`, `unet_startup_thread_stack`
+- 2026-10-13 19:02 CDT — agents/w14-startup-io-b (partly selected) — 951 unresolved imports
