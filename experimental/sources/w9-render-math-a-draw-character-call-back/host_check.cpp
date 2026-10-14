@@ -12,7 +12,7 @@ static MapObject* list[8];
 MapObject** mapObjList = list;
 int gameShowEnemiesInMap;
 static MapObject objects[8];
-static unsigned char vtable_bytes[16];
+alignas(8) static unsigned char vtable_bytes[24];  // the table starts 4 bytes in, so the entry at +4 is aligned for a host pointer
 static int player_token_object, other_token_object;
 static void* player_token = &player_token_object;
 static void* other_token = &other_token_object;
@@ -31,7 +31,7 @@ int main() {
     typedef void* (*TypeFunction)(void*);
     const TypeFunction function = type_of;
     std::memset(vtable_bytes, 0, sizeof vtable_bytes);
-    std::memcpy(vtable_bytes + 4, &function, sizeof function);
+    std::memcpy(vtable_bytes + 8, &function, sizeof function);
     bool ok = true;
     long scenarios = 0;
     for (int index : {0, 3, 7}) for (int null_object : {0, 1}) for (int player : {0, 1}) for (int state : {-1, 0, 1, 2, 3, 4, 100})
@@ -39,7 +39,7 @@ int main() {
         std::memset(objects, 0x6b, sizeof objects);
         for (int i = 0; i < 8; ++i) list[i] = &objects[i];
         MapObject& object = objects[index];
-        object.vtable = vtable_bytes;
+        object.vtable = vtable_bytes + 4;
         object.flags = flags;
         object.position = Point3{1.5f, -2.25f, 3.125f};
         object.short_value = 0xfedc;
