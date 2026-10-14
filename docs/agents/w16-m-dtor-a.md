@@ -15,7 +15,7 @@ The seventeen names in the wave list are destructors of spell and projectile cla
 these seventeen addresses. The call-count ordering was therefore not usable, and the work is ordered by shared shape
 (GameObject base, Spell base, projectile, multi-step, global counter).
 
-Status: 16 of 17 units have sources and checks in this branch.
+Status: 17 of 17 units have sources and checks in this branch.
 
 ## What was done
 
@@ -27,6 +27,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 - Spell base: 12SpellHealing, 15SpellHolyShield, 17SpellMinorHealing
 - Projectile: 8HolyBolt, 8LostSoul, 10FrostShard, 10HolyStrike, 18DarknessProjectile
 - Spell with particle, sound, light or list: 13SpellEntangle, 15SpellClericRoot, 15SpellHateEffect, 16SpellCriticalHit, 16SpellConeOfFrost
+- Global counter: 13HammerOfWrath
 
 ## Units
 
@@ -48,6 +49,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 | `w16-m-dtor-a-dtor-15spellhateeffect` | `_$_15SpellHateEffect` | `0x00314638`, 124 bytes (weak) | 124 | `3c9fb09fa78910cfe99043e7639c39d5b7207f485a4011c30c3b4981f375c31e` |
 | `w16-m-dtor-a-dtor-16spellcriticalhit` | `_$_16SpellCriticalHit` | `0x00318f00`, 124 bytes (weak) | 128 | `92b1f5f32f7b76dd30736dcac2f48d827360ef16436d468021c6d0be49a8c749` |
 | `w16-m-dtor-a-dtor-16spellconeoffrost` | `_$_16SpellConeOfFrost` | `0x002aff00`, 132 bytes (global) | 136 | `2baa02481eda7e62b51c29917c7cfa9ddab1a81ea7318194cc78dd6ecee5437e` |
+| `w16-m-dtor-a-dtor-13hammerofwrath` | `_$_13HammerOfWrath` | `0x002b5610`, 148 bytes (global) | 144 | `876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54` |
 
 ## Observed behaviour worth knowing
 
@@ -63,7 +65,7 @@ Other flag bits do not free. The flags are read once, before the first call, as 
 
 ## Checks performed
 
-- **EE compile.** 16 of 16 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
+- **EE compile.** 17 of 17 sources compile with `/Users/case/norrath-agents/repo/work/toolchains/ee` (GCC 15.2.0)
   and the `authored_cpp` flags from `experimental/build-plan.json`, with `-c` into a private directory. Each object exports
   one function, under its image symbol, and leaves the callees and tables undefined.
 - **Host contract.** Each unit has `host_check.cpp`, built with `clang++ -std=c++17`. It runs the destructor over every
@@ -311,13 +313,27 @@ entries until the snapshot records the same inputs.
     "compiled_body_bytes": 136
    }
   ]
+ },
+ {
+  "header_closure": [],
+  "kind": "independently_authored_source",
+  "object_name": "w16mdb_dtor_13hammerofwrath.o",
+  "profile": "authored_cpp",
+  "sha256": "876af55ab3778618fbfc3c336c52d13100f2ddf81dd5e4e39e4e0e8f63b5ad54",
+  "source": "sources/w16-m-dtor-a-dtor-13hammerofwrath/dtor.cpp",
+  "emitted_functions": [
+   {
+    "name": "_$_13HammerOfWrath",
+    "compiled_body_bytes": 144
+   }
+  ]
  }
 ]
 ```
 
 ## Imports closed
 
-Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_16SpellCriticalHit`, `_$_16SpellConeOfFrost`.
+Defined by these units (one symbol each): `_$_12GlowingShaft`, `_$_18FrostStormIceShard`, `_$_19BlindingLightEffect`, `_$_12SpellHealing`, `_$_15SpellHolyShield`, `_$_17SpellMinorHealing`, `_$_8HolyBolt`, `_$_8LostSoul`, `_$_10FrostShard`, `_$_10HolyStrike`, `_$_18DarknessProjectile`, `_$_13SpellEntangle`, `_$_15SpellClericRoot`, `_$_15SpellHateEffect`, `_$_16SpellCriticalHit`, `_$_16SpellConeOfFrost`, `_$_13HammerOfWrath`.
 
 The partial build's unresolved list is checked in the section below.
 
