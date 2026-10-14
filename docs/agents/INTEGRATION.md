@@ -10708,3 +10708,21 @@ Opened: `__tfQ212RealmService15RealmGatewayAPI`, `__ti10FrostShard`, `__ti10Holy
 
 Full partial build: 7349 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 04:45 CDT — agents/w16-m-data-a — 838 unresolved imports
+
+## agents/w16-m-data-b
+
+Merged (merge commit). All 22 data units in the notes are selected; each has a committed host check that I rebuilt and ran (22 of 22 exit 0), and each compiles to zero function bodies as the notes say. Tip was about 88 minutes old. The notes' own list of 8 further imports closed by owner sources outside this package is not claimed here.
+
+| | |
+|---|---|
+| Before | 838 |
+| After | 816 |
+| Closed | 22 |
+| Opened | 0 |
+
+Closed: `_vt$10VIFlatFile`, `_vt$18SpellBlindingLight`, `_vt$9SpellRoot`, `_vt$Q212RealmService15RealmGatewayAPI`, `blueSpark`, `coldSmoke`, `coldSpeck`, `creditsText`, `firestormParticle1`, `firestormParticle2`, `firestormParticle3`, `harm1`, `harm2`, `mStarParticleDist`, `nameGridDstW`, `nameGridDstX`, `nameGridDstY`, `nameGridPos`, `nameGridSrcW`, `nameGridSrcX`, `nameGridSrcY`, `namePos`
+
+Opened: 
+
+Full partial build: 7371 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 04:53 CDT — agents/w16-m-data-b — 816 unresolved imports

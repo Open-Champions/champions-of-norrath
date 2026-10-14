@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7349,
+  "default_authored_inputs": 7371,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8143,7 +8143,29 @@
     "sources/w16-m-data-a-tf-9exception/typeinfo.cpp": "7a3e24b516ee8245cce7cd6b20d0c8032f0755ad9e5cdcf74f958212781a3839",
     "sources/w16-m-data-a-ti-10viresource/typeinfo_node.cpp": "6dd38d48851e906e1e79aef23daabe8e810dc83cf819cb40bbbdeee25dbec93d",
     "sources/w16-m-data-a-ti-9exception/typeinfo_node.cpp": "279f2a65a8f348f957b415e6017f5e8b108c77067daaa2f0fc006caa0fda404a",
-    "sources/w16-m-data-a-vi-eesurfcache-key/surface_cache_key.cpp": "61673bfeff4dbb851c30dc79097b84c17ed5af9eff4702b93979f4928ce9bbe8"
+    "sources/w16-m-data-a-vi-eesurfcache-key/surface_cache_key.cpp": "61673bfeff4dbb851c30dc79097b84c17ed5af9eff4702b93979f4928ce9bbe8",
+    "sources/w16-m-data-b-blue-spark/blueSpark.cpp": "a56b0278d2e43b5d0e079e9d4506adaeab3cb819b6eaf7b84dbfc59393b71ca4",
+    "sources/w16-m-data-b-cold-smoke/coldSmoke.cpp": "19324547a3d2c6129e6f7037a274458ede76e8fa5148f59d752946ba6451f518",
+    "sources/w16-m-data-b-cold-speck/coldSpeck.cpp": "ed70a4039e5598779d8166af4d317801d1102f3425ec391bafd804924be090de",
+    "sources/w16-m-data-b-credits-text/creditsText.cpp": "5aa9d6365ef45da32d6b595d0f932162f365ccf24aa24c13388e275a13e327c4",
+    "sources/w16-m-data-b-firestorm-particle-1/firestormParticle1.cpp": "390d2df051db47800085f332beb92f7709bcbc2d5c24f993098c7a78336f92c1",
+    "sources/w16-m-data-b-firestorm-particle-2/firestormParticle2.cpp": "dee10e8603aa1585edff3438644f08dd5d83dd6f8ed619c9626696cda762ad20",
+    "sources/w16-m-data-b-firestorm-particle-3/firestormParticle3.cpp": "92a959ec5006d1dd1ce266a26f1f9a6fe756d3aec7afeccc46dbae7e139428ea",
+    "sources/w16-m-data-b-harm-particle-1/harm1.cpp": "b7d9a2f997f277436b905e30d47c2f16e743a5c33d19f27ef9b3cb8c52409f3c",
+    "sources/w16-m-data-b-harm-particle-2/harm2.cpp": "fb513f3e9ff64eaaa7a33eb2cf38d3c57f2b8d260fe4153a540c94da26f8913e",
+    "sources/w16-m-data-b-name-grid-dst-w/nameGridDstW.cpp": "a966967d27006eab6c562ceaedc9ea4e70217b17404a3800fd03cd68f931b7eb",
+    "sources/w16-m-data-b-name-grid-dst-x/nameGridDstX.cpp": "102c50a1a329bab44dfd252109aeaedcb05344096f109edf5c3dc6b07201319f",
+    "sources/w16-m-data-b-name-grid-dst-y/nameGridDstY.cpp": "3846a040baf72d6125a0dc091facfee79f162808ac755bbb0781e5488b337dd9",
+    "sources/w16-m-data-b-name-grid-pos/nameGridPos.cpp": "26775b6c6f5e2d78c85f5edf6e9254648d7d6aaa7b6eaa2cc76dc4a846fb739c",
+    "sources/w16-m-data-b-name-grid-src-w/nameGridSrcW.cpp": "95a3a8267a77d7ba5bfbf262e5c5bf6ade0d865b379182a10c97635e1e7b24c3",
+    "sources/w16-m-data-b-name-grid-src-x/nameGridSrcX.cpp": "5eaa0092bed5e1348320681be9d6b2859d6530fbd9dcd4b718d3e04b8d7b3474",
+    "sources/w16-m-data-b-name-grid-src-y/nameGridSrcY.cpp": "a372b71db2be77ed249448f4b2d7f7ac8650ba55f1a90d296b5a85ef416d761b",
+    "sources/w16-m-data-b-name-pos/namePos.cpp": "0e1952ff9c1711c1c6e77480a4c3ab898fd6effc351b9d229bfb5cbdca381e83",
+    "sources/w16-m-data-b-star-particle-dist/mStarParticleDist.cpp": "3e87cebfcdf4da81764af54a79d962f28bac2d4627493b5e5cef42727959d2ea",
+    "sources/w16-m-data-b-vt-realmgatewayapi/vt_RealmGatewayAPI.cpp": "e9bda5e748262d2bd39a07eba7b4af2a70d7d0a2cd6caa796353f453595625d2",
+    "sources/w16-m-data-b-vt-spellblindinglight/vt_BlindingLight.cpp": "eb8061492e58d92c8861458f12d2ec888ba641c5451ae8fd66f8b5e55d22a352",
+    "sources/w16-m-data-b-vt-spellroot/vt_SpellRoot.cpp": "51cc4b0f10e1050fd662e9075a608585ca761486b2985ef43a68465bb9f70750",
+    "sources/w16-m-data-b-vt-viflatfile/vt_VIFlatFile.cpp": "c3b5972fa5755059041736b95b21333b8c76f7c1257a2db8ec579ffc1392e939"
   },
   "inputs": [
     {
@@ -109373,6 +109395,226 @@
       "sha256": "61673bfeff4dbb851c30dc79097b84c17ed5af9eff4702b93979f4928ce9bbe8",
       "source": "sources/w16-m-data-a-vi-eesurfcache-key/surface_cache_key.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7351,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_blue_spark.o",
+      "profile": "authored_cpp",
+      "sha256": "a56b0278d2e43b5d0e079e9d4506adaeab3cb819b6eaf7b84dbfc59393b71ca4",
+      "source": "sources/w16-m-data-b-blue-spark/blueSpark.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7352,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_cold_smoke.o",
+      "profile": "authored_cpp",
+      "sha256": "19324547a3d2c6129e6f7037a274458ede76e8fa5148f59d752946ba6451f518",
+      "source": "sources/w16-m-data-b-cold-smoke/coldSmoke.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7353,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_cold_speck.o",
+      "profile": "authored_cpp",
+      "sha256": "ed70a4039e5598779d8166af4d317801d1102f3425ec391bafd804924be090de",
+      "source": "sources/w16-m-data-b-cold-speck/coldSpeck.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7354,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_credits_text.o",
+      "profile": "authored_cpp",
+      "sha256": "5aa9d6365ef45da32d6b595d0f932162f365ccf24aa24c13388e275a13e327c4",
+      "source": "sources/w16-m-data-b-credits-text/creditsText.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7355,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_firestorm_particle_1.o",
+      "profile": "authored_cpp",
+      "sha256": "390d2df051db47800085f332beb92f7709bcbc2d5c24f993098c7a78336f92c1",
+      "source": "sources/w16-m-data-b-firestorm-particle-1/firestormParticle1.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7356,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_firestorm_particle_2.o",
+      "profile": "authored_cpp",
+      "sha256": "dee10e8603aa1585edff3438644f08dd5d83dd6f8ed619c9626696cda762ad20",
+      "source": "sources/w16-m-data-b-firestorm-particle-2/firestormParticle2.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7357,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_firestorm_particle_3.o",
+      "profile": "authored_cpp",
+      "sha256": "92a959ec5006d1dd1ce266a26f1f9a6fe756d3aec7afeccc46dbae7e139428ea",
+      "source": "sources/w16-m-data-b-firestorm-particle-3/firestormParticle3.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7358,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_harm_particle_1.o",
+      "profile": "authored_cpp",
+      "sha256": "b7d9a2f997f277436b905e30d47c2f16e743a5c33d19f27ef9b3cb8c52409f3c",
+      "source": "sources/w16-m-data-b-harm-particle-1/harm1.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7359,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_harm_particle_2.o",
+      "profile": "authored_cpp",
+      "sha256": "fb513f3e9ff64eaaa7a33eb2cf38d3c57f2b8d260fe4153a540c94da26f8913e",
+      "source": "sources/w16-m-data-b-harm-particle-2/harm2.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7360,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_dst_w.o",
+      "profile": "authored_cpp",
+      "sha256": "a966967d27006eab6c562ceaedc9ea4e70217b17404a3800fd03cd68f931b7eb",
+      "source": "sources/w16-m-data-b-name-grid-dst-w/nameGridDstW.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7361,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_dst_x.o",
+      "profile": "authored_cpp",
+      "sha256": "102c50a1a329bab44dfd252109aeaedcb05344096f109edf5c3dc6b07201319f",
+      "source": "sources/w16-m-data-b-name-grid-dst-x/nameGridDstX.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7362,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_dst_y.o",
+      "profile": "authored_cpp",
+      "sha256": "3846a040baf72d6125a0dc091facfee79f162808ac755bbb0781e5488b337dd9",
+      "source": "sources/w16-m-data-b-name-grid-dst-y/nameGridDstY.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7363,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "26775b6c6f5e2d78c85f5edf6e9254648d7d6aaa7b6eaa2cc76dc4a846fb739c",
+      "source": "sources/w16-m-data-b-name-grid-pos/nameGridPos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7364,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_src_w.o",
+      "profile": "authored_cpp",
+      "sha256": "95a3a8267a77d7ba5bfbf262e5c5bf6ade0d865b379182a10c97635e1e7b24c3",
+      "source": "sources/w16-m-data-b-name-grid-src-w/nameGridSrcW.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7365,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_src_x.o",
+      "profile": "authored_cpp",
+      "sha256": "5eaa0092bed5e1348320681be9d6b2859d6530fbd9dcd4b718d3e04b8d7b3474",
+      "source": "sources/w16-m-data-b-name-grid-src-x/nameGridSrcX.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7366,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_grid_src_y.o",
+      "profile": "authored_cpp",
+      "sha256": "a372b71db2be77ed249448f4b2d7f7ac8650ba55f1a90d296b5a85ef416d761b",
+      "source": "sources/w16-m-data-b-name-grid-src-y/nameGridSrcY.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7367,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_name_pos.o",
+      "profile": "authored_cpp",
+      "sha256": "0e1952ff9c1711c1c6e77480a4c3ab898fd6effc351b9d229bfb5cbdca381e83",
+      "source": "sources/w16-m-data-b-name-pos/namePos.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7368,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_star_particle_dist.o",
+      "profile": "authored_cpp",
+      "sha256": "3e87cebfcdf4da81764af54a79d962f28bac2d4627493b5e5cef42727959d2ea",
+      "source": "sources/w16-m-data-b-star-particle-dist/mStarParticleDist.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7369,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_vt_realmgatewayapi.o",
+      "profile": "authored_cpp",
+      "sha256": "e9bda5e748262d2bd39a07eba7b4af2a70d7d0a2cd6caa796353f453595625d2",
+      "source": "sources/w16-m-data-b-vt-realmgatewayapi/vt_RealmGatewayAPI.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7370,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_vt_spellblindinglight.o",
+      "profile": "authored_cpp",
+      "sha256": "eb8061492e58d92c8861458f12d2ec888ba641c5451ae8fd66f8b5e55d22a352",
+      "source": "sources/w16-m-data-b-vt-spellblindinglight/vt_BlindingLight.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7371,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_vt_spellroot.o",
+      "profile": "authored_cpp",
+      "sha256": "51cc4b0f10e1050fd662e9075a608585ca761486b2985ef43a68465bb9f70750",
+      "source": "sources/w16-m-data-b-vt-spellroot/vt_SpellRoot.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7372,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_b_vt_viflatfile.o",
+      "profile": "authored_cpp",
+      "sha256": "c3b5972fa5755059041736b95b21333b8c76f7c1257a2db8ec579ffc1392e939",
+      "source": "sources/w16-m-data-b-vt-viflatfile/vt_VIFlatFile.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109472,7 +109714,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "ae6199a8bfa8b8330af20896aff802fa342137ee4e84da85348d18c73e798947",
+  "snapshot_sha256": "da7431542b8133d9ff6bc9ddf1b2a4c1a43358422414780eae90a641c256a1d1",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
