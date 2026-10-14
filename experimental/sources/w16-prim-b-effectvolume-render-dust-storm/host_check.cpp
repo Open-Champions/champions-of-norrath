@@ -94,7 +94,7 @@ int main() {
         if (events.size() != 3 + 4 + 1 + 1 + 12 + 1 + 1) return 9;
         float phase = (1.0f - 0.5f) * 0.5f + 0.5f;
         float k = 0.5f * 0.5f;
-        float s = ((k * 3.14159274f) * 2.0f) * phase;
+        float s = ((k * 0x1.921fb4p+1f) * 2.0f) * phase;
         float t0 = ((50.0f - 10.0f) * k) + 10.0f, t1 = ((60.0f - 20.0f) * k) + 20.0f, t2 = ((70.0f - 30.0f) * k) + 30.0f;
         const Event& color = events[3 + 4];
         if (color.name != "color" || color.f[3] != 3.0f * 2.0f * (0.5f * s)) return 10;

@@ -6,7 +6,7 @@
 // hidden-return matrix destroyed at once, zeroed arrays of four float triples C and L, and a final
 // _$_10VIMatrix44(&M, 2)), with these differences. Particles are 60 bytes. phase = (1.0 - float44)
 // * 0.5 + 0.5 as there. For each particle p whose word p[0] is non-zero:
-//   * s = sinf((p.f[32] * p.f[44]) * 3.14159274) * phase.
+//   * s = sinf((p.f[32] * p.f[44]) * 3.1415925026 (bits 0x40490fda)) * phase.
 //   * with P = p.f[4..12] and E = p.f[48..56], k = p.f[32] * p.f[44]: T = ((E - P) * k) + P,
 //     component by component (T is a local triple).
 //   * the 48-byte card at sDustCard (0x011b0f58) + p.int[16] * 48 is copied into L; the x of each
@@ -105,7 +105,7 @@ int RenderDustStorm__14VIEffectVolumeR8VICameraR10VIMatrix44(unsigned char* self
             if (*reinterpret_cast<int*>(particle) == 0)
                 continue;
             float k = *reinterpret_cast<float*>(particle + 32) * *reinterpret_cast<float*>(particle + 44);
-            float s = sinf(k * 3.14159274f) * phase;
+            float s = sinf(k * 0x1.921fb4p+1f) * phase;
             float t[3];
             t[0] = *reinterpret_cast<float*>(particle + 48);
             t[1] = *reinterpret_cast<float*>(particle + 52);
