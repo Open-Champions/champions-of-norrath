@@ -11088,3 +11088,14 @@ Rejected (no committed host test in any source directory, so each function would
 
 Process note: while merging `w16-realm-a` I wrongly recorded one unit as failing because I built its host check without the flags in its header; it was corrected and selected in the `w16-realm-b` entry. I then re-ran every earlier check of the day with the flags in its own header.
 - 2026-10-14 07:33 CDT — fourth integrator pass complete, 21 branches merged, 12 untested branches rejected — 635 unresolved imports
+
+## Fifth integrator pass (2026-10-14)
+
+Before any merge I re-ran the shared branch at `9a92c326`: 214 tool tests and the snapshot check passed, and the full partial build gave 7820 source compilations, one link, 6295 function bodies, zero COMMON and **635** unresolved imports, so the recorded count reproduced. No repo-rule break found in the last ten entries.
+
+`git branch -r --no-merged` listed 12 `origin/agents/*` branches, all unchanged since the fourth pass (every tip is older than that pass). I re-checked the rejection reason against each branch's diff against the shared branch: none adds a test, check or verify file outside `docs/`. The only name match, `w11-creature-a`'s `check_if_spell_is_running.cpp`, is a game source file. Each stays rejected for the reason in the fourth-pass entry: `w10-actor-i`, `w10-startup-d`, `w11-creature-a`, `w11-vi-misc-a`, `w11-vi-render-b`, `w12-vicont-b`, `w13-m-spell-dtor-a`, `w14-spellevent`, `w16-game-a`, `w16-spellmsg-a`, `w16-tmpl-list-a`, `w8-spell-static-init-b`. No game code touched.
+
+Not merged because they are not worker branches: `origin/integration/wave` (an earlier integrator line, one commit) and `origin/codex/norrath-runtime-binding` (a separate line, one commit); neither carries a worker notes file.
+
+No merges this pass, so the count is unchanged.
+- 2026-10-14 07:50 CDT — fifth integrator pass, 0 branches merged, 12 untested branches re-rejected — 635 unresolved imports
