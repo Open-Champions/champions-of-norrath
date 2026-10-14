@@ -7,6 +7,12 @@
 // Inferred: this+24 is a pixel height built from b text lines of the font height plus 36 of
 // frame; ui+56 is an embedded font object, ui+72 and ui+80 are its raster and dictionary.
 // Unknown: meaning of a, c and the constant 18 (the first two are only stored).
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 int GetHeight__6VIFontP8VIRasterP12VIDictionary(void* font, void* raster, void* dictionary);
 void SetUiColors__10VIUIWindow(void* self);
@@ -22,8 +28,8 @@ int Init__10VIUIWindowP4VIUIRC8VIVect2IT2iii(void* self, void* ui, const Vect2I*
     *reinterpret_cast<unsigned*>(bytes) = static_cast<unsigned>(reinterpret_cast<__UINTPTR_TYPE__>(ui));
     const int height = GetHeight__6VIFontP8VIRasterP12VIDictionary(
         ui_bytes + 56,
-        reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(ui_bytes + 72))),
-        reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(ui_bytes + 80))));
+        reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(ui_bytes + 72))),
+        reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(ui_bytes + 80))));
     *reinterpret_cast<Vect2I*>(bytes + 4) = *position;
     *reinterpret_cast<Vect2I*>(bytes + 12) = *size;
     *reinterpret_cast<int*>(bytes + 20) = a;
