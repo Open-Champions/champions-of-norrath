@@ -1,4 +1,4 @@
-// Observed: Begin__12VICollBufferi at 0x0108bb38 is 112 bytes. The buffer type word at offset 8
+// Observed: Begin__12VICollBufferi at 0x0108bb38 is 116 bytes. The buffer type word at offset 8
 // must be 0, 1 or 3; any other value returns -1 and changes nothing. For an accepted type it
 // takes the current entry index (word at offset 52), addresses the 28-byte entry at
 // (pointer at offset 72) + index * 28, stores the low 16 bits of the argument at entry offset 0 and
