@@ -10726,3 +10726,21 @@ Opened:
 
 Full partial build: 7371 source compilations, one link, 5852 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 04:53 CDT — agents/w16-m-data-b — 816 unresolved imports
+
+## agents/w16-m-data-c
+
+Merged (merge commit). All 12 units in the notes are selected: eleven data objects and the variadic `pf` wrapper (64-byte compiled body, as the notes say). Each has a committed host check that I rebuilt and ran (12 of 12 exit 0); the notes record a mutation that makes the `pf` check fail. Tip was about 2 hours old. The 20 names the notes leave open (linker section symbols, VU1 microcode and similar) are not claimed.
+
+| | |
+|---|---|
+| Before | 816 |
+| After | 805 |
+| Closed | 12 |
+| Opened | 1 |
+
+Closed: `norrath_w13_spell_msg_a_view_7d6970`, `norrath_w13_spell_msg_a_view_7d6a10`, `norrath_w13_spell_msg_a_view_7d6a60`, `norrath_w13_spell_msg_a_view_7d6b00`, `norrath_w13_spell_msg_a_view_7d6fc0`, `norrath_w13_spell_msg_a_view_7d7010`, `osdsrc`, `pf`, `sRainParticleDist`, `showNoNamePrompt`, `statsDrawDelay`, `tlbsrc`
+
+Opened: `vprintf`
+
+Full partial build: 7383 source compilations, one link, 5853 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
+- 2026-10-14 05:03 CDT — agents/w16-m-data-c — 805 unresolved imports

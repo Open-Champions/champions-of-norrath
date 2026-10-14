@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7371,
+  "default_authored_inputs": 7383,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8165,7 +8165,19 @@
     "sources/w16-m-data-b-vt-realmgatewayapi/vt_RealmGatewayAPI.cpp": "e9bda5e748262d2bd39a07eba7b4af2a70d7d0a2cd6caa796353f453595625d2",
     "sources/w16-m-data-b-vt-spellblindinglight/vt_BlindingLight.cpp": "eb8061492e58d92c8861458f12d2ec888ba641c5451ae8fd66f8b5e55d22a352",
     "sources/w16-m-data-b-vt-spellroot/vt_SpellRoot.cpp": "51cc4b0f10e1050fd662e9075a608585ca761486b2985ef43a68465bb9f70750",
-    "sources/w16-m-data-b-vt-viflatfile/vt_VIFlatFile.cpp": "c3b5972fa5755059041736b95b21333b8c76f7c1257a2db8ec579ffc1392e939"
+    "sources/w16-m-data-b-vt-viflatfile/vt_VIFlatFile.cpp": "c3b5972fa5755059041736b95b21333b8c76f7c1257a2db8ec579ffc1392e939",
+    "sources/w16-m-data-c-pf/pf.cpp": "34a2d498de3ac3608792fd9854ca62f13737bbe6da9b77091e8e99bcb206085b",
+    "sources/w16-m-data-c-osdsrc/osdsrc.cpp": "e0aa5df8154eba164b67ff55eb4c79680b21a731e3c30df73abac9c0fceff767",
+    "sources/w16-m-data-c-tlbsrc/tlbsrc.cpp": "30a9f7ae2a7ff8efd9db3f863846882600d169dafaac0c07b56d4c4366636842",
+    "sources/w16-m-data-c-show-no-name-prompt/showNoNamePrompt.cpp": "d22e4dfee06cc2ddd714762a15c3b85dd2004b1dc9599af5a3520cdd1eb917a5",
+    "sources/w16-m-data-c-stats-draw-delay/statsDrawDelay.cpp": "36f380dbd761a1177996cd17c374077a07a4e9701869034fcaab41897b7a3880",
+    "sources/w16-m-data-c-s-rain-particle-dist/sRainParticleDist.cpp": "fd52130cd5659bb4e0159cab02758b51c66f9f728c5689c7f4b87749ee69a741",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d6970/norrath_w13_spell_msg_a_view_7d6970.cpp": "224d1781c67744255949706334e3b7ccd46d3f27b32e4d449f4382127f547ea3",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d6a10/norrath_w13_spell_msg_a_view_7d6a10.cpp": "8f5943f69e841e37deefdd7dd59d7ca794a27cde4599c02cfba1ffdcbf921da0",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d6a60/norrath_w13_spell_msg_a_view_7d6a60.cpp": "18035a10971aed47fb609de2100e2f4468e009ae5e620fe06fae0007507debbb",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d6b00/norrath_w13_spell_msg_a_view_7d6b00.cpp": "54b2a7258e54c70344291735f8cd2ae61a8f53769c0090e802959ef383a38ddd",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d6fc0/norrath_w13_spell_msg_a_view_7d6fc0.cpp": "5fab334b2ceb575b79e61ff423c9c374872314afce6985dd98501761d19e51b3",
+    "sources/w16-m-data-c-w13-spell-msg-a-view-7d7010/norrath_w13_spell_msg_a_view_7d7010.cpp": "07fbe565a2864e169ba9eaf6fbbf363a7792707d4ea93aa294d6dc5966a488fd"
   },
   "inputs": [
     {
@@ -109615,6 +109627,131 @@
       "sha256": "c3b5972fa5755059041736b95b21333b8c76f7c1257a2db8ec579ffc1392e939",
       "source": "sources/w16-m-data-b-vt-viflatfile/vt_VIFlatFile.cpp",
       "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7373,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_pf.o",
+      "profile": "authored_cpp",
+      "sha256": "34a2d498de3ac3608792fd9854ca62f13737bbe6da9b77091e8e99bcb206085b",
+      "source": "sources/w16-m-data-c-pf/pf.cpp",
+      "emitted_functions": [
+        {
+          "name": "pf",
+          "compiled_body_bytes": 64
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7374,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_osdsrc.o",
+      "profile": "authored_cpp",
+      "sha256": "e0aa5df8154eba164b67ff55eb4c79680b21a731e3c30df73abac9c0fceff767",
+      "source": "sources/w16-m-data-c-osdsrc/osdsrc.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7375,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_tlbsrc.o",
+      "profile": "authored_cpp",
+      "sha256": "30a9f7ae2a7ff8efd9db3f863846882600d169dafaac0c07b56d4c4366636842",
+      "source": "sources/w16-m-data-c-tlbsrc/tlbsrc.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7376,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_show_no_name_prompt.o",
+      "profile": "authored_cpp",
+      "sha256": "d22e4dfee06cc2ddd714762a15c3b85dd2004b1dc9599af5a3520cdd1eb917a5",
+      "source": "sources/w16-m-data-c-show-no-name-prompt/showNoNamePrompt.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7377,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_stats_draw_delay.o",
+      "profile": "authored_cpp",
+      "sha256": "36f380dbd761a1177996cd17c374077a07a4e9701869034fcaab41897b7a3880",
+      "source": "sources/w16-m-data-c-stats-draw-delay/statsDrawDelay.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7378,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_s_rain_particle_dist.o",
+      "profile": "authored_cpp",
+      "sha256": "fd52130cd5659bb4e0159cab02758b51c66f9f728c5689c7f4b87749ee69a741",
+      "source": "sources/w16-m-data-c-s-rain-particle-dist/sRainParticleDist.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7379,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d6970.o",
+      "profile": "authored_cpp",
+      "sha256": "224d1781c67744255949706334e3b7ccd46d3f27b32e4d449f4382127f547ea3",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d6970/norrath_w13_spell_msg_a_view_7d6970.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7380,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d6a10.o",
+      "profile": "authored_cpp",
+      "sha256": "8f5943f69e841e37deefdd7dd59d7ca794a27cde4599c02cfba1ffdcbf921da0",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d6a10/norrath_w13_spell_msg_a_view_7d6a10.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7381,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d6a60.o",
+      "profile": "authored_cpp",
+      "sha256": "18035a10971aed47fb609de2100e2f4468e009ae5e620fe06fae0007507debbb",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d6a60/norrath_w13_spell_msg_a_view_7d6a60.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7382,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d6b00.o",
+      "profile": "authored_cpp",
+      "sha256": "54b2a7258e54c70344291735f8cd2ae61a8f53769c0090e802959ef383a38ddd",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d6b00/norrath_w13_spell_msg_a_view_7d6b00.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7383,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d6fc0.o",
+      "profile": "authored_cpp",
+      "sha256": "5fab334b2ceb575b79e61ff423c9c374872314afce6985dd98501761d19e51b3",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d6fc0/norrath_w13_spell_msg_a_view_7d6fc0.cpp",
+      "emitted_functions": []
+    },
+    {
+      "header_closure": [],
+      "input_order": 7384,
+      "kind": "independently_authored_source",
+      "object_name": "w16_m_data_c_w13_spell_msg_a_view_7d7010.o",
+      "profile": "authored_cpp",
+      "sha256": "07fbe565a2864e169ba9eaf6fbbf363a7792707d4ea93aa294d6dc5966a488fd",
+      "source": "sources/w16-m-data-c-w13-spell-msg-a-view-7d7010/norrath_w13_spell_msg_a_view_7d7010.cpp",
+      "emitted_functions": []
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -109714,7 +109851,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "da7431542b8133d9ff6bc9ddf1b2a4c1a43358422414780eae90a641c256a1d1",
+  "snapshot_sha256": "b127037eeb2a2e2fc004ac00a1bc4bbfa936b604ecf27b4d3525a32288870a05",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
