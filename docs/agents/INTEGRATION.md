@@ -10330,3 +10330,20 @@ Opened:
 
 Full partial build: 6912 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 00:14 CDT — agents/w15-m-data-a — 846 unresolved imports
+
+## agents/w15-m-data-b
+
+Merged (merge commit; tip over an hour old, notes complete). 21 data units (alias views and resource tables), each with a `host_check.cpp`; all selected. No functions.
+
+| | |
+|---|---|
+| Before | 846 |
+| After | 826 |
+| Closed | 20 |
+| Opened | 0 |
+
+Closed: `norrath_w13_spell_msg_a_view_7d7260`, `norrath_w13_spell_msg_a_view_7d72b0`, `norrath_w13_spell_msg_a_view_7d7300`, `norrath_w13_spell_msg_a_view_8d6320`, `norrath_w13_spell_msg_a_view_8d6370`, `norrath_w13_spell_msg_a_view_8d67d0`, `norrath_w13_spell_msg_a_view_8d6820`, `norrath_w13_spell_msg_a_view_8d6870`, `norrath_w13_spell_msg_a_view_8d7b30`, `norrath_w13_spell_msg_a_view_8d7b80`, `norrath_w13_spell_msg_a_view_8d7bd0`, `norrath_w13_spell_msg_a_view_8d80a0`, `norrath_w13_spell_msg_a_view_8d80f0`, `norrath_w13_spell_msg_a_view_8d8140`, `norrath_w13_spell_msg_a_view_8d8190`, `norrath_w13_spell_msg_a_view_8d81e0`, `skeletonResourceMap`, `skelightName`, `skelightParams`, `skelightResourceMap`
+
+Opened: 
+
+Full partial build: 6933 source compilations, one link, 5512 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
