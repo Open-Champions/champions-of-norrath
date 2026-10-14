@@ -15,6 +15,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 |---|---|---|---|
 | `w15-m-spell-ctors-a-ctor-9spellroot` | `__9SpellRootiP8CreatureP5Skill` | `0x002ad058`, 164 bytes | authored, paired-checked |
 | `w15-m-spell-ctors-a-dtor-13firebomblet` | `_$_13FireBombletJr` | `0x003121b8`, 100 bytes | authored, paired-checked |
+| `w15-m-spell-ctors-a-dtor-14firestormflare` | `_$_14FireStormFlare` | `0x003179c0`, 100 bytes | authored, paired-checked |
 
 ## Checks performed
 
@@ -29,6 +30,10 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
   `_$_10GameObject` with flags 0, then `blockFree__FPv` when bit 0 is set. The host contract (7 flag values) prints
   `ok`. The paired comparison (8 flag values x 3 fills) has 0 mismatches, with no HALT. Mutation (bit 1 tested
   instead of bit 0) gives 12 mismatches.
+
+- **`_$_14FireStormFlare`.** The same shape as the fire-bomblet destructor, with `_vt$14FireStormFlare`. Host
+  contract `ok` (7 flag values). Paired comparison 0 mismatches (8 flag values x 3 fills), no HALT. Mutation
+  (bit 1 tested) gives 12 mismatches.
 
 ## Authored but never executed
 
