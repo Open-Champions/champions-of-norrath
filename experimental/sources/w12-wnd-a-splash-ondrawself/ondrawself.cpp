@@ -29,6 +29,12 @@
 // The original also builds an unused five-integer array from half the window width and a zero pair; those
 // stack stores are not reproduced.
 // Unknown: the names of the words at app+0xaeb0, this+9644/9648/9652/9656/9660, and the meaning of 4354 and 4358.
+#ifdef NORRATH_HOST_ARENA
+extern "C" unsigned char* norrath_host_pointer(unsigned address);
+#define NORRATH_WORD_ADDRESS(word) reinterpret_cast<__UINTPTR_TYPE__>(norrath_host_pointer(word))
+#else
+#define NORRATH_WORD_ADDRESS(word) static_cast<__UINTPTR_TYPE__>(word)
+#endif
 extern "C" {
 extern unsigned _5VIWnd$mUI;
 extern unsigned _5VIWnd$mFocus;
@@ -70,17 +76,29 @@ void TextBox__10VIUIWindowPCUsiiiiRC10VIColor32FUi(void* window, const unsigned 
                                                    int d, const Color32F* color, unsigned flags);
 void SelectPlay__11VIWndSplash(void* self);
 
+#ifdef NORRATH_HOST_ARENA
+extern "C" void* norrath_host_function(unsigned address);
+struct VtEntry {
+    short delta;
+    short index;
+    unsigned function;
+};
+#define NORRATH_ENTRY_FUNCTION(entry) \
+    reinterpret_cast<void (*)(void*, void*, int, int, int)>(norrath_host_function((entry)->function))
+#else
 struct VtEntry {
     short delta;
     short index;
     void (*function)(void*, void*, int, int, int);
 };
+#define NORRATH_ENTRY_FUNCTION(entry) ((entry)->function)
+#endif
 
 static inline int& word(void* base, int offset) {
     return *reinterpret_cast<int*>(static_cast<unsigned char*>(base) + offset);
 }
 static inline void* pointer_of(unsigned value) {
-    return reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(value));
+    return reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(value));
 }
 static inline const unsigned short* text(int id) {
     void* ui = pointer_of(_5VIWnd$mUI);
@@ -89,8 +107,8 @@ static inline const unsigned short* text(int id) {
 static inline void send_message(void* target, void* from, int message, int a, int b) {
     unsigned char* object = static_cast<unsigned char*>(target);
     const VtEntry* entry = reinterpret_cast<const VtEntry*>(
-        static_cast<__UINTPTR_TYPE__>(*reinterpret_cast<unsigned*>(object + 32))) + 6;
-    entry->function(object + entry->delta, from, message, a, b);
+        NORRATH_WORD_ADDRESS(*reinterpret_cast<unsigned*>(object + 32))) + 6;
+    NORRATH_ENTRY_FUNCTION(entry)(object + entry->delta, from, message, a, b);
 }
 static inline void show_message(void* self, int first, int second, int prompt, int width) {
     unsigned char* message = static_cast<unsigned char*>(self) + 4776;
@@ -113,7 +131,7 @@ void OnDrawSelf__11VIWndSplash(void* self) {
         void* connect = bytes + 416;
         EndConnect__12VIWndConnect(connect);
         word(connect, 28) = 0;
-        if (reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(_5VIWnd$mFocus)) == McErrWnd__Fv()) {
+        if (reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(_5VIWnd$mFocus)) == McErrWnd__Fv()) {
             send_message(self, McErrWnd__Fv(), 4354, 0, 0);
             send_message(self, McErrWnd__Fv(), 4358, 10, 0);
         }
@@ -121,7 +139,7 @@ void OnDrawSelf__11VIWndSplash(void* self) {
     }
     norrath_splash_last_pad_state = pad;
     void* window = bytes + 40;
-    if (reinterpret_cast<void*>(static_cast<__UINTPTR_TYPE__>(_5VIWnd$mFocus)) != self)
+    if (reinterpret_cast<void*>(NORRATH_WORD_ADDRESS(_5VIWnd$mFocus)) != self)
         ResetTickPulse__10VIUIWindow(window);
     if (word(self, 9648) != 0) {
         show_message(self, 272, 809, 0, 320);
