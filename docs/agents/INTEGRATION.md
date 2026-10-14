@@ -9892,3 +9892,19 @@ Opened: `Begin__Ct6VIPool1Z19VIHSpriteAttachment`, `CalcTransAboutCenter__9VIHSp
 - 2026-10-13 19:28 CDT — agents/w14-sprite-collide — 924 unresolved imports
 
 Process note (19:30 CDT): `cefa42cd` was pushed to the shared branch with the `w14-sprite-collide` merge commit but before its plan and snapshot entries were committed (an integrator scripting slip), so `check_source_snapshot.py` would have failed at that one commit for about a minute. `99a5172f` adds the entries; the checks above were run on that tree.
+
+## agents/w14-hud-a
+
+Merged (merge commit, branch tip `84c0fc0d`; the notes have the checks, units, closed, opened, plan-entry, never-executed and unknown sections). Partly selected: 9 function units with fresh `input_order` values 6328 through 6336 (HUD, item display, megatile entitize and model effect routines; 9 host checks, of which `display-item-stats` and `megatile-entitize` crash as arm64 and pass as x86_64 with statics below 4 GiB, the build line in their headers; all 9 pass here). Each selected unit has a committed host check that builds and passes here. The private paired runs and mutants in the notes were not re-run, nothing was executed on the EE, and no byte match is claimed. Plan entries, compiled sizes and object hashes come from this integrator's own compiles. NOT selected (files stay in the snapshot, no plan entry): the 9 data units (`cur-box-old`, `drew-bitmap`, `dwarf-reg-size-table`, `hide-ability-adjust-mouse`, `hud-quick-spell-on`, `icon-alpha`, `item-info-height`, `item-to-destroy`, `tex-copies`), which have no committed check of any kind; their names stay unresolved, and the owner can add checks. The notes' closed list is therefore 9 of 18. Full build with the final snapshot: 6335 authored inputs, zero COMMON. The count is unchanged because the 9 opened names are callees of the new bodies.
+
+| | |
+|---|---|
+| Before | 924 |
+| After | 924 |
+| Closed | 9 |
+| Opened | 9 |
+
+Closed: `_textureDrawFloat__FP8_textureffiUiff`, `commaString__FPc`, `displayItemStats__FiiiPQ24item11descriptioniii`, `floorPutSaveInfo__FPc`, `getAttackBonus__4itemPQ24item11description`, `getEnemyWord__Fi`, `hudGetRemappedButtonIcon__Fii`, `megatileEntitize__FPci`, `modelDrawEffect__FP12_modelHeaderP8_textureiP8Matrix34fP14AnimationStateUl`
+
+Opened: `doEntityDispatch__FP8MTObjDefiP13delayedEntityPib`, `dynlevelcount`, `instmap_bounds`, `kittencount`, `levsuffix`, `mt_ebx`, `mt_eby`, `objectProcessDeleteList__Fv`, `specialparse__FPPciiG6Point3Pc`
+- 2026-10-13 19:34 CDT — agents/w14-hud-a — 924 unresolved imports
