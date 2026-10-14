@@ -10602,3 +10602,20 @@ Opened: `BufferedRead__6VIFilePvi`, `BufferedSeek__6VIFilelQ26VIFile10SeekOrigin
 
 Full partial build: 7309 source compilations, one link, 5823 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.
 - 2026-10-14 01:50 CDT — agents/w12-vimath-b — 866 unresolved imports
+
+## agents/w12-vicont-a
+
+Merged (merge commit) as a **partial package**: only units with a committed host test are selected, 7 of 26. **Not selected (no committed host test):** the other 19 container units (`add-pool-sprite`, the `allocate-*` and `begin-*` units and the rest); they stay authored but unplanned. Tip was about 17 hours old. **Net count rises by 5** (7 closed, 12 opened): the pool destructors now reference the pool `Begin`/`Next`/`End` iterators, which no selected unit defines yet.
+
+| | |
+|---|---|
+| Before | 866 |
+| After | 871 |
+| Closed | 7 |
+| Opened | 12 |
+
+Closed: `DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `DestroyPool__t5VIMap2ZiZi`, `DestroyPool__t6VIPool1Z19VIRasterMaterialLRU`, `DestroyPool__t6VIPool1ZP12VICollBuffer`, `DestroyPool__t6VIPool1ZP12VIPrimBuffer`, `DestroyPool__t6VIPool1ZP13VIColorBuffer`, `DestroyPool__t6VIPool1ZP13VIHSpriteAnim`
+
+Opened: `Begin__Ct5VIMap2ZUiZQ212VIDictionary11VIDictEntry`, `Begin__Ct5VIMap2ZiZi`, `Begin__Ct6VIPool1ZP12VIPrimBuffer`, `Begin__Ct6VIPool1ZP13VIColorBuffer`, `End__Ct5VIMap2ZiZi`, `End__Ct6VIPool1ZP12VIPrimBuffer`, `End__Ct6VIPool1ZP13VIColorBuffer`, `Next__Ct5VIMap2ZiZii`, `Next__Ct6VIPool1Z19VIRasterMaterialLRUi`, `Next__Ct6VIPool1ZP12VICollBufferi`, `Next__Ct6VIPool1ZP12VIPrimBufferi`, `Next__Ct6VIPool1ZP13VIColorBufferi`
+
+Full partial build: 7316 source compilations, one link, 5830 function bodies, zero COMMON. 214 tool tests and the snapshot check pass.

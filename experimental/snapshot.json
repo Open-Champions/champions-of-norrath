@@ -94612,6 +94612,104 @@
       ],
       "kind": "independently_authored_source",
       "source": "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp"
+    },
+    {
+      "input_order": 7311,
+      "component": "w12-vicont-a-destroy-map-dictentry",
+      "object_name": "w12_vicont_a_destroy_map_dictentry.o",
+      "private_object_sha256": "9a831f01d60a1f93da41344984b5887f115383ba2762ae80957fae09d55b46a7",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-map-dictentry/destroy.cpp"
+    },
+    {
+      "input_order": 7312,
+      "component": "w12-vicont-a-destroy-map-int-int",
+      "object_name": "w12_vicont_a_destroy_map_int_int.o",
+      "private_object_sha256": "1e96817d513b46f98b0ff8f9cba416a310fddf28adf85deda9508ce04548dde1",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZiZi",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-map-int-int/destroy.cpp"
+    },
+    {
+      "input_order": 7313,
+      "component": "w12-vicont-a-destroy-pool-collbuffer",
+      "object_name": "w12_vicont_a_destroy_pool_collbuffer.o",
+      "private_object_sha256": "8c8feda4754213e0b40cec561cd5e2f3912b04cd9b891ed70a567bf6ba8565fb",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VICollBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-pool-collbuffer/destroy.cpp"
+    },
+    {
+      "input_order": 7314,
+      "component": "w12-vicont-a-destroy-pool-colorbuffer",
+      "object_name": "w12_vicont_a_destroy_pool_colorbuffer.o",
+      "private_object_sha256": "15094571050030dd348eaf2a33ec69f857321f14382e02636e9bcf911bdfc704",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIColorBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp"
+    },
+    {
+      "input_order": 7315,
+      "component": "w12-vicont-a-destroy-pool-hspriteanim",
+      "object_name": "w12_vicont_a_destroy_pool_hspriteanim.o",
+      "private_object_sha256": "86fc9d6700600ae41280b2d9b4ad8f3eb31e31d2c17ca32d4da5f89d769f3b76",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIHSpriteAnim",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp"
+    },
+    {
+      "input_order": 7316,
+      "component": "w12-vicont-a-destroy-pool-primbuffer",
+      "object_name": "w12_vicont_a_destroy_pool_primbuffer.o",
+      "private_object_sha256": "8efd68ec038d5b0371cd061cdfb97d44aa5402aca14a54715022d186ab245c45",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VIPrimBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp"
+    },
+    {
+      "input_order": 7317,
+      "component": "w12-vicont-a-destroy-pool-rastermaterial-lru",
+      "object_name": "w12_vicont_a_destroy_pool_rastermaterial_lru.o",
+      "private_object_sha256": "7a0137e9a9ca5e68ab7d775baff67c37260c5c38fa763aa33e02ce15f960036b",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1Z19VIRasterMaterialLRU",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "kind": "independently_authored_source",
+      "source": "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp"
     }
   ],
   "drafts": [
@@ -109979,7 +110077,40 @@
     "sources/w12-vimath-b-viobjfile-ctor/host_check.cpp": "a0583bb12d627cfbcef17ee8f0477db1e67ddba39bbb9cdb41b0095ba2acc0aa",
     "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp": "41af91b80c2006a37de65dba55b8180f562d6deb0c720244e920c5173eb5ed71",
     "sources/w12-vimath-b-viobjfile-dtor/host_check.cpp": "c0fb944e1d19a45e6a109aec1bffbba5fdf9bad84c4595fbe9baad865812aa30",
-    "sources/w12-vimath-b-vq-decompress/vq_decompress.cpp": "d757b98ff9e2843479c15602bc5ace52136aec6a1e3cf822bea646439bdea0f5"
+    "sources/w12-vimath-b-vq-decompress/vq_decompress.cpp": "d757b98ff9e2843479c15602bc5ace52136aec6a1e3cf822bea646439bdea0f5",
+    "sources/w12-vicont-a-add-pool-sprite/add.cpp": "cbab4de9201bd1004de29f0c875179021b9847f614e5496b1cecf9038dc4eb5f",
+    "sources/w12-vicont-a-allocate-array-int/allocate.cpp": "fb2f51ccb717e1067f6aa65560db3d3fea224e8b34ed2339709bd438ce6fbac7",
+    "sources/w12-vicont-a-allocate-map-dictentry/allocate.cpp": "16c7debe0c4e2577dc3269f46a360fae83b836f75c82b248e6287bbd9db5d6e3",
+    "sources/w12-vicont-a-allocate-pool-hspriteanim/allocate.cpp": "9a1c8051251771cb0813de81407d061b0cdc874ced6bba455db32d9ea022c855",
+    "sources/w12-vicont-a-allocate-pool-refmap/allocate.cpp": "fc1e0a8f69ccc55755779ea665ee6004cbfc0ca8ac57fb25eae130778f7b6a7c",
+    "sources/w12-vicont-a-allocate-pool-sprite/allocate.cpp": "31c4aac1dd204df78d8b13dcd85cc103f82a59aaaf9578a8125c87225a50316a",
+    "sources/w12-vicont-a-allocate-pool-staticlighting/allocate.cpp": "4177d2fb19d425b2c9073eec7e31defeeb8b64e7143a57313927019244b5e966",
+    "sources/w12-vicont-a-allocate-vector-scenedisplayelem/allocate.cpp": "4ececae5bdbff54527d06a837c5db1284a42c3e41505d721c24333db9615c686",
+    "sources/w12-vicont-a-begin-pool-collbuffer/begin.cpp": "a34639e7a3ded01689ad15f146ac4a099bd436c80cb0b9204aadcd11a9862830",
+    "sources/w12-vicont-a-clear-array-clipentry/clear.cpp": "7bef905a3a91b8720e44991a229127c26ea9289786a50e64f0af2440a43a6c77",
+    "sources/w12-vicont-a-clear-array-plane/clear.cpp": "1ef4346e7e1a70b17537cda6d4e88032463ff042e46bac6f8ddf7c771871b70b",
+    "sources/w12-vicont-a-clear-array-vect3/clear.cpp": "8238a543b2a443c54e1f0d0b53e67858bccdd0d2633264e83d72e165b24e0c20",
+    "sources/w12-vicont-a-clear-array-worldregion/clear.cpp": "2fdf16ba87d3a5080ca86a74a24e881b936fe4004628b428d816842786d55fc8",
+    "sources/w12-vicont-a-clear-array-zone/clear.cpp": "5819bafb4791b007a4ed1285236380cf25a7bf47dd355e17ee02a757fcaeae3e",
+    "sources/w12-vicont-a-clear-list-guipage/clear.cpp": "2c19100474e44e67455b64abcc0eafc1929d0df108a8f8b4f48b4a76bf413a81",
+    "sources/w12-vicont-a-clear-list-material/clear.cpp": "daaf4b41dd6df553047dd6377af28aaedb829e070b89fd0b78f0131d32c594d4",
+    "sources/w12-vicont-a-clear-list-primbuffer/clear.cpp": "610d34f6236a3007c2a3f562d7e79f2c8a1d3c35b9f72f775e59681f53039706",
+    "sources/w12-vicont-a-clear-list-surface/clear.cpp": "560b6ba5d1ca6af4cd559b71158d470f3a0f340d0fb25bdbd78aded366fedd5c",
+    "sources/w12-vicont-a-clear-pool-collbuffer/clear.cpp": "2fcdfd917dab5e01287e5e64eafb671cb640067fd20d94ef1c19408fae956fec",
+    "sources/w12-vicont-a-destroy-map-dictentry/destroy.cpp": "76fbaa2adf6d4796408c7159606d41cbe8c1286480d0cbde70552d364b70a8b1",
+    "sources/w12-vicont-a-destroy-map-dictentry/host_check.cpp": "dfa9bb1b721f6d8d0c93ab9957a825145444bfc74733f6cd65ba128ae6408ee0",
+    "sources/w12-vicont-a-destroy-map-int-int/destroy.cpp": "d4775ec4bdd38d4589467ec7b1a8f806ddc2c655ed691b5725be6b10120046ed",
+    "sources/w12-vicont-a-destroy-map-int-int/host_check.cpp": "362eda3eb24e9b83038d827137f442c82dfcb36bc66f5b2a020539e3874b8351",
+    "sources/w12-vicont-a-destroy-pool-collbuffer/destroy.cpp": "3615cc05c6dd8269f2d23084f03045c24abbe6607a12e4d0f73fc9a02bfaa62c",
+    "sources/w12-vicont-a-destroy-pool-collbuffer/host_check.cpp": "76ac483016753e5a82737ef6f7b25b98419775a2eefc6b7ad0409b0066eb6d1e",
+    "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp": "5733e1ec62e95feaa097ee2ef094f771251872171feab903f44b76498b2bfa28",
+    "sources/w12-vicont-a-destroy-pool-colorbuffer/host_check.cpp": "e4f084cd5b78c15f9ee7945a47880ab2a06d96f599bbde8ad323bfb55acb5f0d",
+    "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp": "fbfee6346e47bdea7b10aa027e023f9f2c80f8bf94deba1e982ad814dae354b3",
+    "sources/w12-vicont-a-destroy-pool-hspriteanim/host_check.cpp": "b8f96bcd3fc5403172e12dd1e2502c78792681d9a4135ab71787e40e719b1380",
+    "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
+    "sources/w12-vicont-a-destroy-pool-primbuffer/host_check.cpp": "0dea955d2abe9810ff72f85b9b57a47aa010d1da4e068641ceea75495b35c88b",
+    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a",
+    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/host_check.cpp": "044a558bcbf26cf361879ab22a8e3c448382f172deb3a2f0ceda0ef48fb73c25"
   },
   "additional_implementations": [
     {
@@ -110421,11 +110552,11 @@
     }
   },
   "selected_source_scope": {
-    "selected_inputs": 7311,
-    "authored_default_inputs": 7309,
+    "selected_inputs": 7318,
+    "authored_default_inputs": 7316,
     "optional_external_inputs": 2,
-    "emitted_function_definitions_including_helpers": 5825,
-    "compiled_body_bytes_from_accepted_inputs": 2281544,
+    "emitted_function_definitions_including_helpers": 5832,
+    "compiled_body_bytes_from_accepted_inputs": 2282160,
     "historical_prefix_inputs": 264,
     "historical_prefix_records_sha256": "cb104d50f455d2885603f1db57d4cecbb349dfce2575b0da56326f3301369af2",
     "additional_selected_inputs": 15,
@@ -110438,7 +110569,7 @@
     "expanded_build_receipt": "build-receipt-expanded.json",
     "expanded_build_receipt_sha256": "d7e91c970dee3c3c8f4e0b0a6d7527f8a1554dd611c25124d2db1f9b7ef2c3a0",
     "startup_selected_inputs": 34,
-    "package_selected_inputs": 6998
+    "package_selected_inputs": 7005
   },
   "startup_implementations": [
     {
@@ -221548,6 +221679,125 @@
       ],
       "host_files": [
         "sources/w12-vimath-b-viobjfile-dtor/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-map-dictentry/destroy.cpp",
+      "source_sha256": "76fbaa2adf6d4796408c7159606d41cbe8c1286480d0cbde70552d364b70a8b1",
+      "object_sha256": "9a831f01d60a1f93da41344984b5887f115383ba2762ae80957fae09d55b46a7",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-map-dictentry/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-map-int-int/destroy.cpp",
+      "source_sha256": "d4775ec4bdd38d4589467ec7b1a8f806ddc2c655ed691b5725be6b10120046ed",
+      "object_sha256": "1e96817d513b46f98b0ff8f9cba416a310fddf28adf85deda9508ce04548dde1",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZiZi",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-map-int-int/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-pool-collbuffer/destroy.cpp",
+      "source_sha256": "3615cc05c6dd8269f2d23084f03045c24abbe6607a12e4d0f73fc9a02bfaa62c",
+      "object_sha256": "8c8feda4754213e0b40cec561cd5e2f3912b04cd9b891ed70a567bf6ba8565fb",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VICollBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-pool-collbuffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp",
+      "source_sha256": "5733e1ec62e95feaa097ee2ef094f771251872171feab903f44b76498b2bfa28",
+      "object_sha256": "15094571050030dd348eaf2a33ec69f857321f14382e02636e9bcf911bdfc704",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIColorBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-pool-colorbuffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp",
+      "source_sha256": "fbfee6346e47bdea7b10aa027e023f9f2c80f8bf94deba1e982ad814dae354b3",
+      "object_sha256": "86fc9d6700600ae41280b2d9b4ad8f3eb31e31d2c17ca32d4da5f89d769f3b76",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIHSpriteAnim",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-pool-hspriteanim/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp",
+      "source_sha256": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
+      "object_sha256": "8efd68ec038d5b0371cd061cdfb97d44aa5402aca14a54715022d186ab245c45",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VIPrimBuffer",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-pool-primbuffer/host_check.cpp"
+      ],
+      "game_runtime_verified": false,
+      "exact_match_ledger_admission": false
+    },
+    {
+      "package": "w12-vicont-a",
+      "source": "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp",
+      "source_sha256": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a",
+      "object_sha256": "7a0137e9a9ca5e68ab7d775baff67c37260c5c38fa763aa33e02ce15f960036b",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1Z19VIRasterMaterialLRU",
+          "compiled_body_bytes": 88
+        }
+      ],
+      "host_files": [
+        "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/host_check.cpp"
       ],
       "game_runtime_verified": false,
       "exact_match_ledger_admission": false

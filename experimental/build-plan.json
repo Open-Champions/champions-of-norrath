@@ -1,5 +1,5 @@
 {
-  "default_authored_inputs": 7309,
+  "default_authored_inputs": 7316,
   "excluded_drafts": [
     {
       "component": "game-software-arithmetic-source-v2",
@@ -8103,7 +8103,14 @@
     "sources/w12-vimath-b-vimatrix44-rotate-z/rotate_z.cpp": "8fdd1a8b9415b34b600372cd6f1d834d569fabc13276b3cbb95784c22180eadc",
     "sources/w12-vimath-b-vimatrix44-scale/scale.cpp": "657ed6e797a0a814e598af398a566e8dc3e231c9ba41ee579202ffb9f7e49b54",
     "sources/w12-vimath-b-viobjfile-ctor/ctor.cpp": "92bc44834ce7882ff2cd4a4176c1ba2f5af311a698d287dcf897de19f285e71b",
-    "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp": "41af91b80c2006a37de65dba55b8180f562d6deb0c720244e920c5173eb5ed71"
+    "sources/w12-vimath-b-viobjfile-dtor/dtor.cpp": "41af91b80c2006a37de65dba55b8180f562d6deb0c720244e920c5173eb5ed71",
+    "sources/w12-vicont-a-destroy-map-dictentry/destroy.cpp": "76fbaa2adf6d4796408c7159606d41cbe8c1286480d0cbde70552d364b70a8b1",
+    "sources/w12-vicont-a-destroy-map-int-int/destroy.cpp": "d4775ec4bdd38d4589467ec7b1a8f806ddc2c655ed691b5725be6b10120046ed",
+    "sources/w12-vicont-a-destroy-pool-collbuffer/destroy.cpp": "3615cc05c6dd8269f2d23084f03045c24abbe6607a12e4d0f73fc9a02bfaa62c",
+    "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp": "5733e1ec62e95feaa097ee2ef094f771251872171feab903f44b76498b2bfa28",
+    "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp": "fbfee6346e47bdea7b10aa027e023f9f2c80f8bf94deba1e982ad814dae354b3",
+    "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
+    "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a"
   },
   "inputs": [
     {
@@ -108788,6 +108795,111 @@
           "compiled_body_bytes": 136
         }
       ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7311,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_map_dictentry.o",
+      "profile": "authored_cpp",
+      "sha256": "76fbaa2adf6d4796408c7159606d41cbe8c1286480d0cbde70552d364b70a8b1",
+      "source": "sources/w12-vicont-a-destroy-map-dictentry/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZUiZQ212VIDictionary11VIDictEntry",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7312,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_map_int_int.o",
+      "profile": "authored_cpp",
+      "sha256": "d4775ec4bdd38d4589467ec7b1a8f806ddc2c655ed691b5725be6b10120046ed",
+      "source": "sources/w12-vicont-a-destroy-map-int-int/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t5VIMap2ZiZi",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7313,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_pool_collbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "3615cc05c6dd8269f2d23084f03045c24abbe6607a12e4d0f73fc9a02bfaa62c",
+      "source": "sources/w12-vicont-a-destroy-pool-collbuffer/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VICollBuffer",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7314,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_pool_colorbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "5733e1ec62e95feaa097ee2ef094f771251872171feab903f44b76498b2bfa28",
+      "source": "sources/w12-vicont-a-destroy-pool-colorbuffer/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIColorBuffer",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7315,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_pool_hspriteanim.o",
+      "profile": "authored_cpp",
+      "sha256": "fbfee6346e47bdea7b10aa027e023f9f2c80f8bf94deba1e982ad814dae354b3",
+      "source": "sources/w12-vicont-a-destroy-pool-hspriteanim/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP13VIHSpriteAnim",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7316,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_pool_primbuffer.o",
+      "profile": "authored_cpp",
+      "sha256": "9ad1f1bcd0b7fc11de1b5a74cb7dff8b19a81a5a79029ec7458aebd400445561",
+      "source": "sources/w12-vicont-a-destroy-pool-primbuffer/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1ZP12VIPrimBuffer",
+          "compiled_body_bytes": 88
+        }
+      ]
+    },
+    {
+      "header_closure": [],
+      "input_order": 7317,
+      "kind": "independently_authored_source",
+      "object_name": "w12_vicont_a_destroy_pool_rastermaterial_lru.o",
+      "profile": "authored_cpp",
+      "sha256": "dad91d44dfa5f6bbea31a85d1f0f0bc16140df2f603804c1ea1073db8c3cf28a",
+      "source": "sources/w12-vicont-a-destroy-pool-rastermaterial-lru/destroy.cpp",
+      "emitted_functions": [
+        {
+          "name": "DestroyPool__t6VIPool1Z19VIRasterMaterialLRU",
+          "compiled_body_bytes": 88
+        }
+      ]
     }
   ],
   "license": "Original authored source MIT; external files retain upstream licenses.",
@@ -108887,7 +108999,7 @@
   },
   "schema": 1,
   "scope": "Source-only relocatable partial integration; no executable, original-byte-match, runtime or playable-game claim.",
-  "snapshot_sha256": "60ae65b145cc434ecdc4ec05b6c0d617a1fb9a358ed2381348cebe85b3198d10",
+  "snapshot_sha256": "b1e35b3af2c8e9a06c4bdc106d31f4bc57459f194061ec5ff09323bc020818c8",
   "symbol_aliases": {},
   "toolchain": {
     "binary_hashes": {
