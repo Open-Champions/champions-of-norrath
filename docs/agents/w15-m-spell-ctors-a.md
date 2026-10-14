@@ -18,6 +18,7 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
 | `w15-m-spell-ctors-a-dtor-14firestormflare` | `_$_14FireStormFlare` | `0x003179c0`, 100 bytes | authored, paired-checked |
 | `w15-m-spell-ctors-a-dtor-18hammerofwrath` | `_$_18SpellHammerOfWrath` | `0x00319768`, 116 bytes | authored, paired-checked |
 | `w15-m-spell-ctors-a-dtor-19summonskeleton` | `_$_19SpellSummonSkeleton` | `0x003188d8`, 116 bytes | authored, paired-checked |
+| `w15-m-spell-ctors-a-ctor-blinding-light` | `__18SpellBlindingLightiP8CreatureT2P5Skill` | `0x002ba028`, 184 bytes | authored, paired-checked |
 
 ## Checks performed
 
@@ -45,11 +46,23 @@ symbol values (`nm -S`). "Compiled bytes" is the size of the function compiled w
   Host contract `ok` (7 flag values). Paired comparison 0 mismatches (8 flag values x 3 fills), no HALT. Mutation
   (bit 1 tested) gives 12 mismatches.
 
+- **`__18SpellBlindingLightiP8CreatureT2P5Skill`.** Same Spell base and random step as the root constructor. It
+  stores the base table at +20, then the class table `_vt$18SpellBlindingLight`. The skill call receives
+  `S + adjustment`, the constant 2, and the full int kind. After the call it stores `frameNm + 60 * result` at +24
+  and the first creature at +28; the second creature is at +12. Host contract `ok`. Paired comparison: 210
+  scenarios, 0 mismatches, no HALT. The integer return register is excluded (`compare_ret=False`): the function is
+  `void`, and the authored build leaves a different value in `v0`; logs and memory match in every scenario. Mutation
+  (call argument 2 changed to 1) gives 210 mismatches.
+
 ## Authored but never executed
 
 Units were executed only by the private R5900 interpreter, against stub callees, not on the EE and not in the game.
 
 ## Unknown
+
+- Whether `__9SpellBash` and the other larger constructors share this family. `__9SpellBash` (`0x002a52c0`,
+  384 bytes) is not a clean match: it looks up a resource, starts an animation, and walks a sorted creature list.
+  It is not authored yet.
 
 - The class behind the skill's secondary table at +96 and the call target at +92 (shared with the cleric-root and
   entangle family).
